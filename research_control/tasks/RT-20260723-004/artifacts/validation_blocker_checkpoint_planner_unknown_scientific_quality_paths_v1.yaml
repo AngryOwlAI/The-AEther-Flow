@@ -1,0 +1,93 @@
+schema_id: "ordinary_route_control_failure_v1"
+failure_id: "OCF-P12-T05-CHECKPOINT-PLANNER-UNKNOWN-SCIENTIFIC-QUALITY-PATHS-001"
+task_id: "RT-20260723-004"
+job_id: "AJ-RT-20260723-004-001"
+plan_task_id: "P12-T05"
+failure_class: "failing_ci"
+status: "active_blocking"
+blocks_scientific_execution: true
+observed_at: "2026-07-23T10:25:43Z"
+failure_summary: "The one normal planner-compare checkpoint stopped before staging because six exact P12-T05 metric and reporting paths remain unknown_governed_path, so the shadow plan is not safe for checkpoint execution."
+remediation_route: "Run one separately governed exact-path classifier compatibility repair for the six blocker paths, preserve fail-closed handling for unrelated paths, then invoke one future normal checkpoint without legacy validation."
+
+checkpoint_evidence:
+  checkpoint_command: ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260723-004-001"
+  checkpoint_status: "FAIL"
+  validation_mode: "planner_compare"
+  failed_stage: "shadow_planner_preflight"
+  checkpoint_error: "checkpoint planner did not produce a safe shadow plan"
+  invocation_count: 1
+  legacy_validation_flag_used: false
+  validation_command_count: 0
+  staged: false
+  committed: false
+  entry_index_preserved: true
+  working_tree_preserved: true
+
+planner_root_cause:
+  classifier_path: "scripts/project_control/classify_project_changes.py"
+  classifier_sha256: "7c2df6a66cafa463bb0f8dc7a5580dc4e36a268093d814a8901ee5db596ee8ba"
+  requested_profile: "checkpoint"
+  effective_profile: "full"
+  plan_status: "READY"
+  execution_authority: "legacy"
+  comparison_required: true
+  shadow_checkpoint_rejects_unknown_paths: true
+  unknown_path_count: 6
+  unknown_paths:
+    - "output/ai_methodology_metrics_dashboard.json"
+    - "output/ai_methodology_metrics_dashboard.md"
+    - "output/physics_progress_metrics.json"
+    - "output/physics_progress_metrics.md"
+    - "scripts/research_control/report_physics_progress_metrics.py"
+    - "scripts/research_control/scientific_quality_metrics.py"
+  known_adjacent_path:
+    path: "scripts/research_control/render_ai_methodology_metrics_dashboard.py"
+    unknown_governed_path: false
+  required_recovery: "A separate bounded classifier packet must map only these governed metric-reporting surfaces to existing validation-family vocabulary, prove the checkpoint shadow plan contains no unknown path, and retain full fallback for an unrelated unknown control."
+
+preserved_p12_t05_evidence:
+  implementation_status: "PASS_PRECHECKPOINT"
+  metric_family_count: 8
+  measured_metric_count: 3
+  not_measured_metric_count: 5
+  invalid_metric_count: 0
+  aggregate_truth_score_emitted: false
+  raw_volume_primary_quality_surface: false
+  fixture_case_count: 14
+  task_local_check_count: 44
+  focused_test_count: 155
+  focused_test_status: "PASS"
+  research_control_diff_status: "PASS"
+  memory_bootstrap_status: "PASS"
+  documentation_impact_status: "PASS"
+  project_improvement_signal_status: "PASS"
+  claim_language_hard_failure_count: 0
+  git_diff_check_status: "PASS"
+
+required_recovery:
+  strategy_id: "classify_p12_t05_metric_reporting_paths_for_checkpoint_v1"
+  worker_skill: "improve-project-system"
+  work_item_id: "P12-T05"
+  next_plan_item_after_recovery: "P12-T06"
+  required_controls:
+    - "Classify only the four generated reporting outputs and two governed metric-reporting scripts named by unknown_paths using existing validation-family vocabulary."
+    - "Add focused classifier validation-plan and checkpoint-planner regressions that prove the P12-T05 dirty manifest yields a safe shadow plan."
+    - "Retain unknown_governed_path and full fallback for an unrelated unrecognized governed path."
+    - "Preserve every P12-T05 scientific-quality artifact completion record handoff and generated report byte except deterministic reseals required by the classifier change."
+    - "After focused and repository validation pass invoke one future normal governed checkpoint without --legacy-validation."
+  forbidden_changes:
+    - "No second checkpoint invocation in generation 70."
+    - "No wildcard classification that silently admits unrelated output or script paths."
+    - "No weakening of shadow-planner unknown-path rejection."
+    - "No P12-T06 execution before a committed P12-T05 transaction."
+    - "No canonical ontology science-source scientific-ledger Distance-to-GR or protected scientific-status mutation."
+
+authority_limits:
+  scientific_status_changed: false
+  distance_to_gr_delta_changed: false
+  ontology_or_source_law_adopted: false
+  benchmark_promotion_authorized: false
+  external_review_or_publication_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false

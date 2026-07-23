@@ -60,6 +60,22 @@ class ValidationPlannerTests(unittest.TestCase):
         self.assertIn("profile_full_research_control", plan.selected_gate_ids)
         self.assertIn("unknown_path_full_fallback", {entry["status"] for entry in plan.entries})
 
+    def test_scientific_quality_reporting_paths_have_no_unknowns(self) -> None:
+        paths = [
+            "output/ai_methodology_metrics_dashboard.json",
+            "output/ai_methodology_metrics_dashboard.md",
+            "output/physics_progress_metrics.json",
+            "output/physics_progress_metrics.md",
+            "scripts/research_control/report_physics_progress_metrics.py",
+            "scripts/research_control/scientific_quality_metrics.py",
+        ]
+        plan = self.plan_for(paths)
+
+        self.assertEqual(plan.status, "READY")
+        self.assertEqual(plan.effective_profile, "affected")
+        self.assertEqual(plan.unknown_paths, ())
+        self.assertIn("research_control_diff", plan.selected_gate_ids)
+
     def test_root_gitattributes_selects_safe_ci_orchestration_plan(self) -> None:
         plan = self.plan_for([".gitattributes"], profile="affected")
         self.assertEqual(plan.status, "READY")

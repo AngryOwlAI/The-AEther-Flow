@@ -324,6 +324,40 @@ class ProjectChangeClassifierTests(unittest.TestCase):
         self.assertNotIn("direct_generated_derivative_edit", transaction["reason_codes"])
         self.assertNotIn("unknown_governed_path", transaction["reason_codes"])
 
+    def test_scientific_quality_reporting_paths_use_exact_existing_families(self) -> None:
+        output_paths = [
+            "output/ai_methodology_metrics_dashboard.json",
+            "output/ai_methodology_metrics_dashboard.md",
+            "output/physics_progress_metrics.json",
+            "output/physics_progress_metrics.md",
+        ]
+        script_paths = [
+            "scripts/research_control/report_physics_progress_metrics.py",
+            "scripts/research_control/scientific_quality_metrics.py",
+        ]
+        result = self.classifier.classify_paths([*output_paths, *script_paths])
+        details = {
+            item["path"]: item for item in result["path_family_details"]
+        }
+
+        self.assertEqual(result["generated_derivatives"], output_paths)
+        self.assertTrue(
+            all(details[path]["tags"] == [] for path in output_paths)
+        )
+        self.assertTrue(
+            all(details[path]["tags"] == ["validator_code"] for path in script_paths)
+        )
+        self.assertNotIn("unknown_governed_path", result["reason_codes"])
+        self.assertNotIn("unknown_governed_path", result["path_family_tags"])
+
+        unrelated = self.classifier.classify_paths(["governed/new-format.bin"])
+        self.assertEqual(unrelated["recommended_validation_profile"], "full")
+        self.assertEqual(
+            unrelated["path_family_tags"],
+            ["unknown_governed_path"],
+        )
+        self.assertIn("unknown_governed_path", unrelated["reason_codes"])
+
     def test_path_family_taxonomy_covers_every_required_family(self) -> None:
         result = self.classifier.classify_paths(
             [

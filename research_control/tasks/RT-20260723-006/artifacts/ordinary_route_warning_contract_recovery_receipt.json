@@ -1,0 +1,93 @@
+{
+  "schema_id": "ordinary_route_warning_contract_recovery_receipt_v1",
+  "receipt_id": "P12-T05-ORDINARY-ROUTE-WARNING-CONTRACT-RECOVERY-001",
+  "task_id": "RT-20260723-006",
+  "job_id": "AJ-RT-20260723-006-001",
+  "plan_task_id": "P12-T05",
+  "status": "CONTRACT_PASS_CHECKPOINT_BLOCKED_STAGED_GIT_DIFF",
+  "created_at": "2026-07-23T12:40:00Z",
+  "strategy_id": "reconcile_ordinary_route_guard_threshold_warning_validation_contract_v1",
+  "source_blocker": {
+    "path": "research_control/tasks/RT-20260723-005/artifacts/validation_blocker_ordinary_route_guard_threshold_warning_contract_v1.yaml",
+    "sha256": "70e2cb4620a2d77ccd35de83611a6ccf5c6c664d92861b5f2195fda304bf0dd5",
+    "failed_test": "tests.test_research_control.ResearchControlTests.test_continue_research_reports_director_context_packet",
+    "observed_guard_status": "WARN",
+    "stale_expected_guard_status": "PASS"
+  },
+  "source_backed_contract": {
+    "policy_path": "research_control/tasks/RT-20260722-015/artifacts/ordinary_route_guard_policy_v1.md",
+    "policy_sha256": "c0c4df98c0020fbb274a4c895e6d5749c2166397e6e419a63c7b6737f2ee3a96",
+    "policy_threshold": 3,
+    "policy_warning_at": 2,
+    "warning_id": "ordinary_route_guard_threshold_next",
+    "warning_status": "WARN",
+    "warning_is_nonblocking": true,
+    "fail_is_blocking": true,
+    "threshold_three_hard_guard_preserved": true,
+    "all_ready_science_exception_preserved": true
+  },
+  "test_contract_change": {
+    "path": "tests/test_research_control.py",
+    "sha256": "7e11317d735d7a717e40469310c2d72795c69439277d9197abf604007ec4a9ea",
+    "scope": "live Director-context regression only",
+    "accepts_nonblocking_statuses": [
+      "PASS",
+      "WARN"
+    ],
+    "verifies_exact_warning_at_policy_boundary": true,
+    "verifies_empty_errors": true,
+    "verifies_continuation_ready": true,
+    "broad_skip_added": false
+  },
+  "protected_runtime_hashes": {
+    "ordinary_route_guard": {
+      "path": "scripts/research_control/ordinary_route_guard.py",
+      "sha256": "ff015c8906a244b2f25d81c2d278187995c76fe3e9e385f46a2cafc3cc1dac75",
+      "changed_by_recovery": false
+    },
+    "continuation_runtime": {
+      "path": "scripts/research_control/continue_research.py",
+      "sha256": "c29c5cb2b5f1cc5bf5abbb73c289c0695fc00003bf4317c37d7197c0b161ed6e",
+      "changed_by_recovery": false
+    }
+  },
+  "validation": {
+    "focused_director_context_test_count": 1,
+    "focused_director_context_status": "PASS",
+    "ordinary_route_guard_test_count": 8,
+    "ordinary_route_guard_status": "PASS",
+    "required_p12_shard_test_count": 155,
+    "required_p12_shard_status": "PASS",
+    "project_improvement_signal_status": "PASS",
+    "research_control_status_before_completion_records": "PASS"
+  },
+  "checkpoint": {
+    "command": ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260723-006-001",
+    "normal_planner_compare_mode": true,
+    "legacy_validation_used": false,
+    "invocation_count_before_checkpoint": 0,
+    "invocation_count_after_checkpoint": 1,
+    "status": "FAIL_STAGED_GIT_DIFF_CHECK",
+    "failed_command": "git diff --cached --check",
+    "failed_finding_count": 4,
+    "staged_after_failure": false,
+    "committed": false,
+    "entry_index_restored": true,
+    "blocker_path": "research_control/tasks/RT-20260723-006/artifacts/validation_blocker_checkpoint_staged_trailing_blank_line_eof_v1.yaml",
+    "blocker_sha256": "804492d85e989f83ab4886265f66fde117ed0f34b2e067696bb9641d82adb523"
+  },
+  "authority_limits": {
+    "route_history_changed": false,
+    "warning_suppressed": false,
+    "hard_guard_weakened": false,
+    "metric_semantics_changed": false,
+    "scientific_status_changed": false,
+    "distance_to_gr_changed": false,
+    "ontology_or_source_law_adopted": false,
+    "physics_promotion_authorized": false,
+    "benchmark_promotion_authorized": false,
+    "proof_authority": false,
+    "publication_authority": false,
+    "p12_t06_executed": false
+  }
+}

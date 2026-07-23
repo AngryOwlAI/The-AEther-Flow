@@ -21,6 +21,7 @@ if str(SCRIPT_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPT_DIR))
 
 import report_physics_progress_metrics as metrics_reporter  # noqa: E402
+import scientific_quality_metrics  # noqa: E402
 
 
 SCHEMA_ID = "ai_methodology_metrics_dashboard_v1"
@@ -36,6 +37,10 @@ SOURCE_PATHS = [
     "research_control/design/v18_recommendation_backlog.yaml",
     "research_control/design/ai_research_agent_metrics_taxonomy_v1.md",
     "research_control/design/physics_payload_ratio_policy_v1.md",
+    "research_control/tasks/RT-20260723-004/artifacts/scientific_quality_metric_taxonomy_v1.md",
+    "research_control/tasks/RT-20260723-004/artifacts/scientific_quality_calibration_warning_policy_v1.md",
+    "research_control/tasks/RT-20260721-006/artifacts/v21_research_attempt_ledger.json",
+    "research_control/tasks/RT-20260721-005/artifacts/v21_candidate_lineage_registry.json",
     "research_control/current_frontier.md",
     "research_control/handoffs/handoff-0667.yaml",
     "research_control/handoffs/handoff-0722.yaml",
@@ -51,6 +56,8 @@ REQUIRED_MARKDOWN_PHRASES = [
     "do not establish physics truth",
     "Payload-Ratio Diagnostics",
     "Route-Orbit Warnings",
+    "Durable Scientific-Quality Diagnostics",
+    "raw volume is operational context only",
     "support-only",
 ]
 FORBIDDEN_ROW_FIELDS = {
@@ -279,13 +286,108 @@ def route_orbit_warning_rows(
     return rows
 
 
+def load_durable_quality_diagnostics(report: dict[str, Any]) -> dict[str, Any]:
+    diagnostics = report.get("metrics", {}).get(
+        "durable_scientific_quality_metrics"
+    )
+    if not isinstance(diagnostics, dict):
+        raise DashboardError(
+            "metrics report missing durable_scientific_quality_metrics"
+        )
+    records = diagnostics.get("metrics")
+    if not isinstance(records, dict):
+        raise DashboardError(
+            "durable_scientific_quality_metrics.metrics must be a mapping"
+        )
+    if set(records) != set(scientific_quality_metrics.REQUIRED_METRIC_IDS):
+        raise DashboardError(
+            "durable scientific-quality metric identity set or order is invalid"
+        )
+    boundary = diagnostics.get("authority_boundary")
+    if not isinstance(boundary, dict):
+        raise DashboardError(
+            "durable scientific-quality diagnostics missing authority_boundary"
+        )
+    if boundary.get("aggregate_scientific_truth_score_created") is not False:
+        raise DashboardError(
+            "durable scientific-quality diagnostics cannot create a truth score"
+        )
+    if diagnostics.get("raw_volume_is_primary_quality") is not False:
+        raise DashboardError("raw volume cannot be the primary quality surface")
+    return diagnostics
+
+
+def durable_quality_metric_rows(
+    diagnostics: dict[str, Any],
+) -> list[dict[str, Any]]:
+    records = diagnostics["metrics"]
+    rows: list[dict[str, Any]] = []
+    for metric_id in scientific_quality_metrics.REQUIRED_METRIC_IDS:
+        record = records[metric_id]
+        numerator = record.get("numerator", {})
+        denominator = record.get("denominator", {})
+        row = {
+            "metric_id": metric_id,
+            "dashboard_label": "Primary scientific-quality diagnostic",
+            "diagnostic_label": "Durable scientific-quality diagnostic",
+            "family": record.get("family", ""),
+            "status": record.get("status", ""),
+            "value": record.get("value"),
+            "numerator_value": numerator.get("value"),
+            "denominator_value": denominator.get("value"),
+            "eligible_identity_count": len(denominator.get("eligible_ids", [])),
+            "qualifying_identity_count": len(
+                numerator.get("qualifying_ids", [])
+            ),
+            "warning_count": len(record.get("warnings", [])),
+            "diagnostic_interpretation": record.get("definition", ""),
+            "interpretation_guardrail": record.get(
+                "interpretation_guardrail",
+                "",
+            ),
+            "authority_boundary": record.get("authority_boundary", {}),
+        }
+        if FORBIDDEN_ROW_FIELDS.intersection(row):
+            raise DashboardError(
+                f"durable-quality row contains forbidden ranking field: {metric_id}"
+            )
+        rows.append(row)
+    return rows
+
+
+def durable_quality_warning_rows(
+    diagnostics: dict[str, Any],
+) -> list[dict[str, Any]]:
+    rows: list[dict[str, Any]] = []
+    for warning in diagnostics.get("warnings", []):
+        if not isinstance(warning, dict):
+            continue
+        rows.append(
+            {
+                "warning_id": warning.get("warning_id", ""),
+                "metric_id": warning.get("metric_id", ""),
+                "code": warning.get("code", ""),
+                "severity": warning.get("severity", ""),
+                "hard_gate": warning.get("hard_gate"),
+                "physics_claim_authority": warning.get(
+                    "physics_claim_authority"
+                ),
+                "message": warning.get("message", ""),
+            }
+        )
+    return rows
+
+
 def build_dashboard(repo_root: Path = REPO_ROOT) -> dict[str, Any]:
     repo_root = Path(repo_root)
     report = load_methodology_report(repo_root)
     methodology = report["metrics"]["ai_research_agent_methodology_metrics"]
     payload_diagnostics = load_payload_ratio_diagnostics(report)
+    durable_quality = load_durable_quality_diagnostics(report)
     rows = metric_rows(methodology)
     warnings = warning_rows(methodology)
+    durable_rows = durable_quality_metric_rows(durable_quality)
+    durable_warnings = durable_quality_warning_rows(durable_quality)
     payload_rows = payload_ratio_metric_rows(payload_diagnostics)
     route_warnings = route_orbit_warning_rows(
         report["metrics"].get("diagnostic_warnings", []),
@@ -295,12 +397,16 @@ def build_dashboard(repo_root: Path = REPO_ROOT) -> dict[str, Any]:
     for row in rows:
         status = str(row.get("status") or "unknown")
         status_counts[status] = status_counts.get(status, 0) + 1
+    durable_status_counts: dict[str, int] = {}
+    for row in durable_rows:
+        status = str(row.get("status") or "unknown")
+        durable_status_counts[status] = durable_status_counts.get(status, 0) + 1
 
     return {
         "schema_id": SCHEMA_ID,
         "dashboard_type": "support_only_ai_system_diagnostic",
         "plan_task_id": "P8-T04",
-        "plan_task_ids": ["P12-T04", "P8-T04"],
+        "plan_task_ids": ["P12-T05", "P12-T04", "P8-T04"],
         "title": "AI Methodology Metrics Dashboard",
         "source_metrics_report": {
             "report_id": report.get("report_id", ""),
@@ -322,7 +428,8 @@ def build_dashboard(repo_root: Path = REPO_ROOT) -> dict[str, Any]:
             "no_physics_truth_ranking": True,
             "boundary_statement": (
                 "This dashboard labels metrics as AI-system diagnostics and "
-                "does not rank physics truth by workflow activity. Payload-ratio "
+                "does not rank physics truth by workflow activity. Durable-quality "
+                "rows are identity-bound advisory diagnostics; payload-ratio "
                 "diagnostics and route-orbit warnings do not establish physics truth."
             ),
         },
@@ -343,7 +450,43 @@ def build_dashboard(repo_root: Path = REPO_ROOT) -> dict[str, Any]:
                 {},
             ).get("status"),
             "route_orbit_warning_count": len(route_warnings),
+            "durable_quality_metric_count": len(durable_rows),
+            "durable_quality_measured_count": durable_status_counts.get(
+                "measured",
+                0,
+            ),
+            "durable_quality_not_measured_count": durable_status_counts.get(
+                "not_measured",
+                0,
+            ),
+            "durable_quality_invalid_count": durable_status_counts.get(
+                "invalid",
+                0,
+            ),
+            "durable_quality_warning_count": len(durable_warnings),
         },
+        "durable_scientific_quality_metrics": {
+            "schema_id": durable_quality.get("schema_id"),
+            "status": durable_quality.get("status"),
+            "quality_surface": durable_quality.get("quality_surface"),
+            "raw_volume_is_primary_quality": durable_quality.get(
+                "raw_volume_is_primary_quality"
+            ),
+            "metric_count": durable_quality.get("metric_count"),
+            "status_counts": durable_quality.get("status_counts", {}),
+            "aggregate_metric": durable_quality.get("aggregate_metric"),
+            "aggregate_metric_reason": durable_quality.get(
+                "aggregate_metric_reason",
+                "",
+            ),
+            "source_basis": durable_quality.get("source_basis", []),
+            "authority_boundary": durable_quality.get(
+                "authority_boundary",
+                {},
+            ),
+        },
+        "durable_quality_metric_rows": durable_rows,
+        "durable_quality_warning_rows": durable_warnings,
         "metric_rows": rows,
         "advisory_warning_rows": warnings,
         "physics_payload_ratio_diagnostics": payload_diagnostics,
@@ -357,6 +500,10 @@ def build_dashboard(repo_root: Path = REPO_ROOT) -> dict[str, Any]:
             "dashboard_not_physics_proof": True,
             "dashboard_not_physics_truth_ranking": True,
             "dashboard_not_physics_truth_establishment": True,
+            "durable_quality_is_advisory": True,
+            "durable_quality_is_primary_quality_surface": True,
+            "raw_volume_is_primary_scientific_quality": False,
+            "aggregate_scientific_truth_score_created": False,
             "forbidden_overreads": [
                 "methodology metric success as physics proof",
                 "methodology dashboard as autonomous scientific authority",
@@ -366,6 +513,8 @@ def build_dashboard(repo_root: Path = REPO_ROOT) -> dict[str, Any]:
                 "route-orbit reduction as Einstein-equation derivation",
                 "human authorization as Gate Chair verdict",
                 "proof-to-process balance as completed derivation",
+                "durable-quality metric as theorem truth",
+                "raw packet or artifact volume as scientific quality",
             ],
         },
     }
@@ -388,6 +537,10 @@ def render_markdown(dashboard: dict[str, Any]) -> str:
             "physics truth, proof authority, benchmark status, Gate Chair verdicts, "
             "or completed derivations."
         ),
+        (
+            "Durable scientific-quality rows are the primary quality diagnostics; "
+            "raw volume is operational context only."
+        ),
         "",
         "## Summary",
         "",
@@ -406,12 +559,79 @@ def render_markdown(dashboard: dict[str, Any]) -> str:
         f"| Payload-ratio status | {markdown_cell(summary['payload_ratio_status'])} |",
         f"| Route-orbit warning status | {markdown_cell(summary['payload_ratio_route_orbit_status'])} |",
         f"| Route-orbit warnings | {markdown_cell(summary['route_orbit_warning_count'])} |",
+        f"| Durable-quality metrics | {markdown_cell(summary['durable_quality_metric_count'])} |",
+        f"| Durable-quality measured | {markdown_cell(summary['durable_quality_measured_count'])} |",
+        f"| Durable-quality not measured | {markdown_cell(summary['durable_quality_not_measured_count'])} |",
+        f"| Durable-quality invalid | {markdown_cell(summary['durable_quality_invalid_count'])} |",
+        f"| Durable-quality warnings | {markdown_cell(summary['durable_quality_warning_count'])} |",
         "",
-        "## Metric Rows",
+        "## Durable Scientific-Quality Diagnostics",
+        "",
+        (
+            "These eight identity-bound rows are the primary scientific-quality "
+            "diagnostic surface. They are advisory, use explicit eligible-set "
+            "denominators, preserve `not_measured`, and are never aggregated into "
+            "a scientific-truth score."
+        ),
+        "",
+        "| Metric | Family | Status | Numerator | Denominator | Value | Warnings | Guardrail |",
+        "| --- | --- | --- | ---: | ---: | ---: | ---: | --- |",
+    ]
+    for row in dashboard["durable_quality_metric_rows"]:
+        lines.append(
+            "| `{metric_id}` | {family} | {status} | {numerator} | "
+            "{denominator} | {value} | {warnings} | {guardrail} |".format(
+                metric_id=markdown_cell(row["metric_id"]),
+                family=markdown_cell(row.get("family", "")),
+                status=markdown_cell(row.get("status", "")),
+                numerator=markdown_cell(row.get("numerator_value")),
+                denominator=markdown_cell(row.get("denominator_value")),
+                value=markdown_cell(row.get("value")),
+                warnings=markdown_cell(row.get("warning_count")),
+                guardrail=markdown_cell(
+                    row.get("interpretation_guardrail", "")
+                ),
+            )
+        )
+
+    lines.extend(
+        [
+            "",
+            "### Durable-Quality Calibration Warnings",
+            "",
+            "| Warning | Metric | Code | Severity | Hard gate | Physics authority | Message |",
+            "| --- | --- | --- | --- | --- | --- | --- |",
+        ]
+    )
+    durable_warnings = dashboard["durable_quality_warning_rows"]
+    if durable_warnings:
+        for warning in durable_warnings:
+            lines.append(
+                "| `{warning_id}` | `{metric_id}` | `{code}` | {severity} | "
+                "{hard_gate} | {authority} | {message} |".format(
+                    warning_id=markdown_cell(warning.get("warning_id", "")),
+                    metric_id=markdown_cell(warning.get("metric_id", "")),
+                    code=markdown_cell(warning.get("code", "")),
+                    severity=markdown_cell(warning.get("severity", "")),
+                    hard_gate=markdown_cell(warning.get("hard_gate")),
+                    authority=markdown_cell(
+                        warning.get("physics_claim_authority")
+                    ),
+                    message=markdown_cell(warning.get("message", "")),
+                )
+            )
+    else:
+        lines.append("| none | none | none | none | false | false | none |")
+
+    lines.extend(
+        [
+        "",
+        "## AI Methodology Metric Rows",
         "",
         "| Metric | Family | Status | Value | Diagnostic interpretation | Guardrail |",
         "| --- | --- | --- | --- | --- | --- |",
-    ]
+        ]
+    )
     for row in dashboard["metric_rows"]:
         lines.append(
             "| `{metric_id}` | {family} | {status} | {value} | {interpretation} | {guardrail} |".format(
@@ -428,6 +648,11 @@ def render_markdown(dashboard: dict[str, Any]) -> str:
         [
             "",
             "## Payload-Ratio Diagnostics",
+            "",
+            (
+                "These raw counts and ratios are operational context only. They "
+                "are not the primary scientific-quality surface."
+            ),
             "",
             "| Metric | Status | Value | Diagnostic interpretation | Guardrail |",
             "| --- | --- | --- | --- | --- |",
@@ -622,6 +847,12 @@ def main() -> int:
                 "advisory_warning_count": len(dashboard["advisory_warning_rows"]),
                 "payload_ratio_metric_count": len(dashboard["payload_ratio_metric_rows"]),
                 "route_orbit_warning_count": len(dashboard["route_orbit_warning_rows"]),
+                "durable_quality_metric_count": len(
+                    dashboard["durable_quality_metric_rows"]
+                ),
+                "durable_quality_warning_count": len(
+                    dashboard["durable_quality_warning_rows"]
+                ),
                 "support_only": True,
                 "no_physics_truth_ranking": True,
             },

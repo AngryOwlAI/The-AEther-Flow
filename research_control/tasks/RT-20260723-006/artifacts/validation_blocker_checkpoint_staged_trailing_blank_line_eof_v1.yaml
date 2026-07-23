@@ -1,0 +1,101 @@
+schema_id: "ordinary_route_control_failure_v1"
+failure_id: "OCF-P12-T05-CHECKPOINT-STAGED-TRAILING-BLANK-LINE-EOF-001"
+task_id: "RT-20260723-006"
+job_id: "AJ-RT-20260723-006-001"
+plan_task_id: "P12-T05"
+failure_class: "failing_ci"
+status: "active_blocking"
+blocks_scientific_execution: true
+observed_at: "2026-07-23T12:59:07Z"
+failure_summary: "The advisory-WARN contract repair and every required working-tree gate pass, but the one normal planner-compare checkpoint stopped before commit because final staged git diff checking found one trailing blank line at EOF in each of four preserved P12-T05 files."
+remediation_route: "Run one separately governed project-system recovery that removes exactly the four staged trailing blank lines at EOF, proves file contents otherwise unchanged, reruns the required P12-T05 gates, and invokes one future normal checkpoint without legacy validation."
+
+checkpoint_evidence:
+  checkpoint_command: ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260723-006-001"
+  checkpoint_status: "FAIL"
+  validation_mode: "planner_compare"
+  failed_stage: "staged_acceptance_git_diff_check"
+  checkpoint_error: "planner staged acceptance or legacy comparison failed"
+  failed_command: "git diff --cached --check"
+  failed_command_returncode: 2
+  checkpoint_invocation_count: 1
+  legacy_validation_flag_used: false
+  staged_acceptance_status: "FAIL"
+  shadow_comparison_status: "PASS"
+  agentjob_allowlist_status: "PASS"
+  unstaged_residue_status: "PASS"
+  staged_tree_integrity_status: "PASS"
+  entry_index_restoration_status: "PASS"
+  entry_index_restored: true
+  staged_after_failure: false
+  committed: false
+  head_before_and_after: "1136e88b329fa9215017a20dd030607a98168503"
+  working_tree_preserved: true
+
+root_cause:
+  finding_class: "new_blank_line_at_eof"
+  finding_count: 4
+  working_tree_git_diff_check_limitation: "The four files are untracked in the cumulative transaction, so working-tree git diff --check did not inspect them; final staged acceptance did."
+  affected_paths:
+    - path: "research_control/tasks/RT-20260723-004/artifacts/fixtures/scientific_quality_metric_cases.json"
+      line: 217
+      sha256: "7253ac9138885061cd854fd61b69757ae78aa8c497ba1066ade2a0c19c62a4b8"
+      trailing_bytes_hex: "0a7d0a0a"
+    - path: "research_control/tasks/RT-20260723-004/artifacts/scientific_quality_calibration_warning_policy_v1.md"
+      line: 62
+      sha256: "25205ad3cf4f28492467bdd6343d52647c76ddfd67d7609bc9ce187ec06e8b75"
+      trailing_bytes_hex: "6e2e0a0a"
+    - path: "research_control/tasks/RT-20260723-004/artifacts/scientific_quality_metric_taxonomy_v1.md"
+      line: 127
+      sha256: "b7fc9ff6f6d55e2ec9462700f8c4f985ab77ff5ffcc9cfdd07923b60011c6436"
+      trailing_bytes_hex: "742e0a0a"
+    - path: "tests/test_scientific_quality_metrics.py"
+      line: 159
+      sha256: "5ec3ba1b5b4331a20a92173b79dfbd2c16a46e2fa98741146e1fa1e7eabd609d"
+      trailing_bytes_hex: "28290a0a"
+
+preserved_recovery_evidence:
+  advisory_warning_contract_recovery_status: "PASS"
+  focused_director_context_test_status: "PASS_1_OF_1"
+  ordinary_route_guard_test_status: "PASS_8_OF_8"
+  required_p12_shard_status: "PASS_155_OF_155"
+  project_improvement_signal_status: "PASS"
+  documentation_impact_status: "PASS_ZERO_FINDINGS"
+  memory_bootstrap_status: "PASS_WITH_9_LOCAL_CACHE_WARNINGS"
+  claim_language_status: "PASS_ZERO_HARD_FAILURES"
+  research_control_diff_status: "PASS_WITH_HISTORICAL_WARNINGS"
+  classifier_changed_path_count_before_checkpoint: 84
+  classifier_blocked_path_count: 0
+  policy_changed: false
+  evaluator_changed: false
+  continuation_runtime_changed: false
+  route_history_changed: false
+  p12_t05_metric_semantics_changed: false
+  p12_t06_executed: false
+
+required_recovery:
+  strategy_id: "normalize_p12_t05_trailing_blank_line_eof_for_checkpoint_v1"
+  worker_skill: "improve-project-system"
+  work_item_id: "P12-T05"
+  next_plan_item_after_recovery: "P12-T06"
+  required_controls:
+    - "Remove exactly one final blank line from each of the four affected paths and prove every other byte is preserved."
+    - "Do not alter scientific-quality metric identities, denominators, values, warnings, fixtures, or test semantics."
+    - "Re-run the focused advisory-WARN contract tests, ordinary-route guard suite, required 155-test shard, and every project-control gate."
+    - "Invoke at most one future normal governed checkpoint without legacy validation."
+    - "Preserve the existing classifier repair, warning-contract repair, route history, hard guard, and all scientific authority boundaries."
+  forbidden_changes:
+    - "No checkpoint retry in generation 72."
+    - "No legacy-validation fallback."
+    - "No broad whitespace formatting or unrelated cleanup."
+    - "No P12-T06 execution before a committed P12-T05 transaction."
+    - "No canonical ontology, science source, scientific ledger, Distance-to-GR, or protected scientific-status mutation."
+
+authority_limits:
+  scientific_status_changed: false
+  distance_to_gr_delta_changed: false
+  ontology_or_source_law_adopted: false
+  benchmark_promotion_authorized: false
+  external_review_or_publication_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false

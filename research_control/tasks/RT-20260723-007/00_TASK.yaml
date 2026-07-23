@@ -1,0 +1,72 @@
+validation_status: "FAIL"
+task_id: "RT-20260723-007"
+task_type: "project_system_p12_t05_eof_handoff_identity_checkpoint_recovery"
+title: "Repair handoff identity and four checkpoint EOF findings"
+task_taxonomy:
+  schema_id: "v21_task_taxonomy_v1"
+  work_kind: "benchmark_or_recovery"
+  milestone: "not_applicable"
+  candidate_family: "p12_t05_checkpoint_integrity_recovery"
+  result_kind: "completed_or_precisely_blocked"
+  authority: "project_control"
+  scope: "project_system"
+status: "blocked"
+created_at: "2026-07-23T13:36:01Z"
+updated_at: "2026-07-23T14:34:49Z"
+closed_at: "2026-07-23T14:34:49Z"
+parent_task_id: "RT-20260723-006"
+parent_handoff_id: "handoff-0839"
+supersedes_active_routing_task_id: "RT-20260723-006"
+current_decision_id: "DDR-20260723-007"
+current_job_id: "AJ-RT-20260723-007-001"
+role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260723-007"
+requires_human_gate: false
+human_authorization_note: "Generation 74 of the immutable user-requested relay routes exactly one improve-project-system frame to repair the hash-sealed handoff identity and four P12-T05 EOF checkpoint findings."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P12"
+  plan_task_id: "P12-T05"
+  recovery_for_plan_task_id: "P12-T05"
+  next_plan_task_id: "P12-T06"
+objective: "Add the canonical handoff-0839 identifier to the latest handoff Markdown, remove exactly one final blank line from each of four hash-sealed P12-T05 files, prove every other byte and all metric semantics unchanged, rerun the required gates, and invoke one normal governed checkpoint before any P12-T06 execution."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system checkpoint integrity repair only; no derivation milestone advances."
+route_label: "repair_handoff_0839_identity_and_normalize_p12_t05_eof_checkpoint_v1"
+project_system_change_only: true
+dual_budget_category: "system_bearing"
+primary_budget: "project_system"
+scientific_claims_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+claim_boundary_id: "CB-V21-P12-T05-EOF-HANDOFF-IDENTITY-CHECKPOINT-RECOVERY-001"
+claim_boundary:
+  allowed_scope: "One canonical handoff identifier may be added to handoff-0839.md; exactly one final newline may be removed from each of four named P12-T05 paths; task-local byte-equivalence evidence and one normal cumulative checkpoint may be created."
+  immutable_predecessor_task: "RT-20260723-006"
+  immutable_predecessor_job: "AJ-RT-20260723-006-001"
+  immutable_predecessor_handoff: "handoff-0839"
+  source_blocker_path: "research_control/tasks/RT-20260723-006/artifacts/validation_blocker_checkpoint_staged_trailing_blank_line_eof_v1.yaml"
+  source_blocker_sha256: "804492d85e989f83ab4886265f66fde117ed0f34b2e067696bb9641d82adb523"
+  source_handoff_markdown_sha256: "73f0b1fc0ca64fce77029538df2feaf307b8872fe390cd278680dc713586591d"
+  immutable_route_sha256: "aa1170219828e56f37667d488e57f05c1d0b3f6bb727b0e9150064c9d14ec8a8"
+  p12_t05_metric_semantics_changed: false
+  route_history_changed: false
+  p12_t06_executed: false
+  scientific_claims_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+documentation_impact_id: "DI-RT-20260723-007-001"
+completion_id: "AJC-AJ-RT-20260723-007-001"
+output_artifacts:
+  - "research_control/tasks/RT-20260723-007/artifacts/validate_p12_t05_checkpoint_recovery.py"
+  - "research_control/tasks/RT-20260723-007/artifacts/p12_t05_checkpoint_recovery_receipt.json"
+  - "research_control/tasks/RT-20260723-007/jobs/completions/AJC-AJ-RT-20260723-007-001.yaml"
+  - "research_control/handoffs/handoff-0840.yaml"
+  - "research_control/handoffs/handoff-0840.md"
+closure_status: "checkpoint_integrity_recovery_pass_checkpoint_blocked_p10_t05_architecture_dependency"
+summary: "Generation 74 repaired the canonical handoff identity and four exact EOF findings with hash- and byte-bounded evidence, but its only checkpoint invocation committed nothing after the 1,182-test repository shard exposed a distinct P10-T05 event-store architecture dependency."
+next_recommended_action: "Route one fresh bounded P12-T05 project-system recovery to inspect and repair only the exact P10-T05 event-store architecture checkpoint dependency; do not retry the checkpoint or execute P12-T06 in RT-20260723-007."
+project_improvement_signals: []
+notes: "The identity and EOF recovery passed. The entry index was restored after the distinct repository-shard blocker; no commit, retry, legacy validation, P12-T06 execution, or scientific authority change occurred."

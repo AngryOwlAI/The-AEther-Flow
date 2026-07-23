@@ -1,0 +1,78 @@
+schema_id: "validation_blocker_checkpoint_role_authority_delta_summary_parity_v1"
+blocker_id: "VB-RT-20260723-008-CHECKPOINT-ROLE-AUTHORITY-DELTA-SUMMARY-001"
+task_id: "RT-20260723-008"
+job_id: "AJ-RT-20260723-008-001"
+created_at: "2026-07-23T15:35:11Z"
+status: "active_blocking"
+failed_gate: "research_control_diff"
+failed_command: ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --staged-only --json"
+checkpoint_status: "blocked"
+checkpoint_reason: "planner staged acceptance or legacy comparison failed"
+checkpoint_invocation_count: 1
+checkpoint_committed: false
+checkpoint_staged_after_failure: false
+entry_index_restored: true
+legacy_validation_used: false
+staged_tree_sha1: "be5d4a1b493eb9c5a1fac363b1543dd47f3744ef"
+checkpoint_receipt_summary:
+  duration_seconds: "162.218232"
+  subprocess_count: 10
+  memory_sync_status: "PASS"
+  memory_core_status: "PASS"
+  classifier_status: "PASS"
+  project_improvement_signals_status: "PASS"
+  documentation_impact_status: "PASS"
+  research_control_diff_status: "FAIL"
+  git_diff_check_status: "PASS"
+  planner_shadow_comparison_status: "PASS"
+  agentjob_allowlist_status: "PASS"
+  unstaged_residue_status: "PASS"
+  staged_tree_integrity_status: "PASS"
+  entry_index_restoration_status: "PASS"
+  child_receipt_path: ".local/validation-receipts/5fdb4a94a5136a980b14c90b290edc80d5bffc547f521ef9a53db6c9866d794a/RUN-CHECKPOINT-3b4fb5de77cd3d2f/receipt.json"
+  child_receipt_sha256: "79fb9eaf4727ec01a9309de93686beba7e7d58e17092ea71674a6e29c0b84301"
+research_control_diff_result:
+  error_count: 1
+  warning_count: 1493
+  status: "FAIL"
+  exact_error: "research_control/tasks/RT-20260723-008/roles/validator-engineer@0.2.0--RT-20260723-008.yaml: authority_delta_summary does not match ROLE_EXECUTION_REGISTRY.csv"
+  role_record_path: "research_control/tasks/RT-20260723-008/roles/validator-engineer@0.2.0--RT-20260723-008.yaml"
+  role_record_value: "One-job Validator Engineer overlay for one exact P10-T05 source-binding reseal, five deterministic dependent outputs, predecessor-copy preservation, and one cumulative checkpoint"
+  registry_path: "registries/ROLE_EXECUTION_REGISTRY.csv"
+  registry_value: "One-job Validator Engineer overlay for one exact P10-T05 source-binding reseal five deterministic dependent outputs predecessor-copy preservation and one cumulative checkpoint"
+  semantic_delta_intended: false
+  punctuation_only_mismatch: true
+completed_repair_preservation:
+  p10_t05_architecture_status: "PASS_ZERO_DRIFT"
+  p10_t07_identity_status: "PASS_13_CHECKS_ZERO_DRIFT"
+  p10_migration_readiness_status: "PASS_8_TESTS_EXPECTED_TWO_LIFECYCLE_BLOCKERS"
+  predecessor_e22b_preserved: true
+  predecessor_cc7d_preserved: true
+  required_p12_shard_status: "PASS_155_OF_155"
+  event_store_activation_changed: false
+  p12_t05_metric_semantics_changed: false
+  p12_t06_executed: false
+required_recovery:
+  strategy_id: "reconcile_rt008_role_authority_delta_summary_registry_parity_and_checkpoint_v1"
+  route_label: "project-system-recovery"
+  role_family: "process-integrity-auditor@0.1.0"
+  worker_skill: "improve-project-system"
+  work_item_id: "P12-T05"
+  scope: "Reconcile only the punctuation-level authority_delta_summary parity defect between the RT-20260723-008 role overlay and ROLE_EXECUTION_REGISTRY.csv without changing authority semantics, prove exact role-registry parity, preserve the completed P10-T05 and P10-T07 recovery bytes, and invoke at most one future normal checkpoint."
+  next_plan_item_after_recovery: "P12-T06"
+  requires_human_gate: false
+  checkpoint_retry_in_current_worker_authorized: false
+  legacy_validation_authorized: false
+authority_limits:
+  authority_semantics_change_authorized: false
+  p10_t05_or_p10_t07_repair_rewrite_authorized: false
+  p12_t06_executed: false
+  scientific_status_changed: false
+  scientific_ledger_changed: false
+  distance_to_gr_changed: false
+  ontology_or_source_law_adopted: false
+  physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  proof_authority: false
+  publication_authority: false
+preservation_reason: "The single generation-75 checkpoint invocation is consumed. It exposed one punctuation-only role-registry parity defect after every intended content-address repair passed, so a fresh bounded recovery must own that parity correction and any future checkpoint before P12-T06."

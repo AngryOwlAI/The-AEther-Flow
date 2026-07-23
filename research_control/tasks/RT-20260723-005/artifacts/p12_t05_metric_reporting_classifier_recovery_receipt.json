@@ -1,0 +1,103 @@
+{
+  "schema_id": "p12_t05_metric_reporting_classifier_recovery_receipt_v1",
+  "receipt_id": "P12-T05-METRIC-REPORTING-CLASSIFIER-RECOVERY-001",
+  "task_id": "RT-20260723-005",
+  "job_id": "AJ-RT-20260723-005-001",
+  "plan_task_id": "P12-T05",
+  "status": "CLASSIFIER_PASS_CHECKPOINT_BLOCKED_VALIDATION_CONTRACT",
+  "created_at": "2026-07-23T11:43:31Z",
+  "strategy_id": "classify_p12_t05_metric_reporting_paths_for_checkpoint_v1",
+  "source_blocker": {
+    "path": "research_control/tasks/RT-20260723-004/artifacts/validation_blocker_checkpoint_planner_unknown_scientific_quality_paths_v1.yaml",
+    "sha256": "ab162996fbc7ced31f2fd6adb067a4ae2818448cb3db5ca67567621b6c1b9fba",
+    "predecessor_dirty_manifest_path_count": 61
+  },
+  "exact_classifications": {
+    "generated_derivative_paths": [
+      "output/ai_methodology_metrics_dashboard.json",
+      "output/ai_methodology_metrics_dashboard.md",
+      "output/physics_progress_metrics.json",
+      "output/physics_progress_metrics.md"
+    ],
+    "validator_code_paths": [
+      "scripts/research_control/report_physics_progress_metrics.py",
+      "scripts/research_control/scientific_quality_metrics.py"
+    ],
+    "unknown_path_count": 0,
+    "blocked_path_count_in_mixed_transaction": 0,
+    "arbitrary_output_prefix_admitted": false,
+    "arbitrary_research_control_script_prefix_admitted": false
+  },
+  "fail_closed_control": {
+    "path": "governed/new-format.bin",
+    "path_family": "unknown_governed_path",
+    "effective_validation_profile": "full",
+    "preserved": true
+  },
+  "shadow_plan": {
+    "requested_profile": "checkpoint",
+    "status": "READY",
+    "execution_authority": "legacy",
+    "comparison_required": true,
+    "predecessor_manifest_path_count": 61,
+    "unknown_path_count": 0,
+    "blocked_path_count": 0,
+    "safe_for_checkpoint": true
+  },
+  "validation": {
+    "classifier_syntax": "PASS",
+    "focused_classifier_validation_and_checkpoint_planner_test_count": 105,
+    "focused_classifier_validation_and_checkpoint_planner_status": "PASS",
+    "p12_t05_metric_check_count": 44,
+    "p12_t05_metric_fixture_count": 14,
+    "p12_t05_metric_status": "PASS",
+    "p12_t05_preserved_test_shard_count": 155,
+    "p12_t05_preserved_test_shard_status": "FAIL_1_OF_155_ORDINARY_ROUTE_GUARD_THRESHOLD_WARNING_CONTRACT",
+    "p12_t05_preserved_test_shard_semantic_failures": 0,
+    "p12_t05_preserved_test_shard_contract_failures": 1
+  },
+  "artifact_hashes": {
+    "classifier": {
+      "path": "scripts/project_control/classify_project_changes.py",
+      "sha256": "64987acf3e8fdf6331ef4dbae18ddb7246c679b552626f59110caf08316a106e"
+    },
+    "classifier_tests": {
+      "path": "tests/test_project_change_classifier.py",
+      "sha256": "5ffbe22f165cefc6b5fe5369274767b49dac61eb2952cea4511d6a739197cb31"
+    },
+    "validation_planner_tests": {
+      "path": "tests/test_validation_planner.py",
+      "sha256": "b152c75a973c5740df811d4eb040c2c1cf296c45621505aca7183b903150fd09"
+    },
+    "checkpoint_planner_tests": {
+      "path": "tests/test_checkpoint_validation_planner.py",
+      "sha256": "e16250457f33773f1ed7426a1cbd8d118da4fa5a2983eee0ec1395d410925e0b"
+    }
+  },
+  "checkpoint": {
+    "command": ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260723-005-001",
+    "normal_planner_compare_mode": true,
+    "legacy_validation_used": false,
+    "invocation_count_before_checkpoint": 0,
+    "status": "NOT_INVOKED_VALIDATION_BLOCKER"
+  },
+  "validation_blocker": {
+    "path": "research_control/tasks/RT-20260723-005/artifacts/validation_blocker_ordinary_route_guard_threshold_warning_contract_v1.yaml",
+    "sha256": "70e2cb4620a2d77ccd35de83611a6ccf5c6c664d92861b5f2195fda304bf0dd5",
+    "failed_test": "tests.test_research_control.ResearchControlTests.test_continue_research_reports_director_context_packet",
+    "observed_guard_status": "WARN",
+    "contract_expected_guard_status": "PASS",
+    "checkpoint_invoked": false
+  },
+  "authority_limits": {
+    "metric_semantics_changed": false,
+    "scientific_status_changed": false,
+    "distance_to_gr_changed": false,
+    "ontology_or_source_law_adopted": false,
+    "physics_promotion_authorized": false,
+    "benchmark_promotion_authorized": false,
+    "proof_authority": false,
+    "publication_authority": false,
+    "p12_t06_executed": false
+  }
+}

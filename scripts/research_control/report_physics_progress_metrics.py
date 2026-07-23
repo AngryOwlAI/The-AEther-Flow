@@ -22,6 +22,7 @@ if str(SCRIPT_DIR) not in sys.path:
 
 from strict_yaml import StrictYamlError, load as load_yaml  # noqa: E402
 import report_scientific_payload_density as scientific_payload_density  # noqa: E402
+import scientific_quality_metrics  # noqa: E402
 import task_taxonomy  # noqa: E402
 
 
@@ -530,6 +531,8 @@ def collect_physics_progress_integration_metrics(
         "authority_boundary": "operational_summary_only_not_physics_proof",
         "not_physics_proof": True,
         "physics_claim_promotion_authorized": False,
+        "reporting_role": "raw_volume_operational_context_only",
+        "primary_scientific_quality_surface": False,
         "distance_delta": {
             "records_read": len(completion_records),
             "effect_counts": dict(sorted(distance_effect_counts.items())),
@@ -2494,6 +2497,12 @@ def build_report(
         scientific_payload_density_report,
     )
     candidate_lineage_metrics = collect_candidate_lineage_metrics(repo_root)
+    durable_scientific_quality_metrics = (
+        scientific_quality_metrics.build_repository_report(
+            repo_root,
+            completion_records=completion_records,
+        )
+    )
     ai_research_agent_methodology_metrics = collect_ai_research_agent_methodology_metrics(
         completion_records,
         task_rows,
@@ -2520,6 +2529,7 @@ def build_report(
         "payload_density_metrics": payload_density_metrics,
         "route_orbit_risk_metrics": route_orbit_risk_metrics,
         "candidate_lineage_metrics": candidate_lineage_metrics,
+        "durable_scientific_quality_metrics": durable_scientific_quality_metrics,
         "physics_payload_ratio_diagnostics": physics_payload_ratio_diagnostics,
         "dual_budget_dashboard": dual_budget_dashboard,
         "physics_progress_integration_metrics": physics_progress_integration_metrics,
@@ -2562,6 +2572,9 @@ def build_report(
             DUAL_BUDGET_DASHBOARD_SCHEMA_PATH,
             ORDINARY_ROUTE_GUARD_POLICY_PATH,
             CANDIDATE_LINEAGE_REGISTRY_PATH,
+            scientific_quality_metrics.QUALITY_TAXONOMY_PATH,
+            scientific_quality_metrics.CALIBRATION_POLICY_PATH,
+            scientific_quality_metrics.ATTEMPT_LEDGER_PATH,
         ]
         + (
             [str(candidate_lineage_metrics["historical_seed_path"])]
@@ -2572,6 +2585,9 @@ def build_report(
             "metrics_are_operational": True,
             "scoreboards_are_separated": True,
             "ai_methodology_metrics_are_support_only": True,
+            "durable_scientific_quality_metrics_are_advisory": True,
+            "durable_scientific_quality_metrics_are_primary_quality_surface": True,
+            "raw_volume_is_primary_scientific_quality": False,
             "physics_payload_ratio_diagnostics_are_support_only": True,
             "dual_budget_dashboard_is_support_only": True,
             "physics_claim_promotion_authorized": False,
@@ -2586,6 +2602,8 @@ def build_report(
             "Obstruction reuse is measured by completion-level obstruction IDs and later completion references.",
             "AI research-agent methodology metrics are support-only diagnostics and cannot be used as proof, source-law adoption, benchmark promotion, or Gate Chair verdicts.",
             "Candidate-lineage metrics are keyed by immutable candidate IDs and preserve explicit historical absences; they remain support-only project-control evidence and do not adopt or reject a candidate.",
+            "Durable scientific-quality diagnostics use explicit eligible sets and immutable identities, leave absent denominators not_measured, and never aggregate scientific truth into one score.",
+            "Raw packet, artifact, task, and payload counts remain operational context only; they are not the primary scientific-quality surface.",
             "Physics-payload ratio diagnostics are AI-system diagnostics only; they do not rank physics truth.",
             "Dual-budget dashboard values are operational accounting; system success, missing-resource markers, and lane counts are not physics evidence or Distance-to-GR progress.",
             "Validator failure history is not a durable event log, so this report does not infer blocked violation counts from past terminal output.",
@@ -2616,11 +2634,37 @@ def render_warning_table(warnings: list[dict[str, Any]]) -> list[str]:
         lines.append(
             "| `{warning_id}` | `{metric_key}` | `{observed}` | `{threshold}` | `{hard_gate}` | `{authority}` |".format(
                 warning_id=warning.get("warning_id", ""),
-                metric_key=warning.get("metric_key", ""),
+                metric_key=warning.get("metric_key") or warning.get("metric_id", ""),
                 observed=warning.get("observed_value", ""),
                 threshold=warning.get("threshold", ""),
                 hard_gate=warning.get("hard_gate", False),
                 authority=warning.get("physics_claim_authority", False),
+            )
+        )
+    return lines
+
+
+def render_durable_quality_table(report: dict[str, Any]) -> list[str]:
+    lines = [
+        "| Metric | Family | Status | Numerator | Denominator | Value | Warning count |",
+        "| --- | --- | --- | ---: | ---: | ---: | ---: |",
+    ]
+    records = report.get("metrics", {})
+    for metric_id in scientific_quality_metrics.REQUIRED_METRIC_IDS:
+        record = records.get(metric_id, {})
+        numerator = record.get("numerator", {})
+        denominator = record.get("denominator", {})
+        value = record.get("value")
+        lines.append(
+            "| `{metric_id}` | {family} | {status} | {numerator} | "
+            "{denominator} | {value} | {warnings} |".format(
+                metric_id=markdown_cell(metric_id),
+                family=markdown_cell(record.get("family", "")),
+                status=markdown_cell(record.get("status", "")),
+                numerator=markdown_cell(numerator.get("value")),
+                denominator=markdown_cell(denominator.get("value")),
+                value=markdown_cell(value),
+                warnings=markdown_cell(len(record.get("warnings", []))),
             )
         )
     return lines
@@ -2705,7 +2749,23 @@ def render_markdown(report: dict[str, Any]) -> str:
             "",
             *render_table(metrics["scientific_progress_metrics"]),
             "",
+            "## Durable Scientific-Quality Diagnostics",
+            "",
+            "This is the primary scientific-quality diagnostic surface. Every measured value has an explicit eligible-set denominator and immutable identities. Unknown populations remain `not_measured`; the eight indicators are not combined into a scientific-truth score.",
+            "",
+            *render_durable_quality_table(
+                metrics["durable_scientific_quality_metrics"]
+            ),
+            "",
+            "### Durable-Quality Calibration Warnings",
+            "",
+            *render_warning_table(
+                metrics["durable_scientific_quality_metrics"]["warnings"]
+            ),
+            "",
             "## Payload-Density Metrics",
+            "",
+            "Raw volume is operational context only and is not the primary scientific-quality surface.",
             "",
             *render_table(metrics["payload_density_metrics"]),
             "",
@@ -2739,6 +2799,8 @@ def render_markdown(report: dict[str, Any]) -> str:
             ),
             "",
             "## Physics-Progress Integration Metrics",
+            "",
+            "The packet, artifact, and payload counts in this section are retained only as raw operational context. They do not measure scientific quality or create physics progress.",
             "",
             *render_table(metrics["physics_progress_integration_metrics"]),
             "",

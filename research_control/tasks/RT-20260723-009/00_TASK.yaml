@@ -1,0 +1,73 @@
+validation_status: "FAIL"
+task_id: "RT-20260723-009"
+task_type: "project_system_role_registry_authority_delta_summary_checkpoint_recovery"
+title: "Restore RT-008 execution-role registry parity"
+task_taxonomy:
+  schema_id: "v21_task_taxonomy_v1"
+  work_kind: "benchmark_or_recovery"
+  milestone: "not_applicable"
+  candidate_family: "role_registry_authority_delta_summary_checkpoint_recovery"
+  result_kind: "completed_or_precisely_blocked"
+  authority: "project_control"
+  scope: "project_system"
+status: "blocked"
+created_at: "2026-07-23T16:08:48Z"
+updated_at: "2026-07-23T16:53:37Z"
+closed_at: "2026-07-23T16:53:37Z"
+parent_task_id: "RT-20260723-008"
+parent_handoff_id: "handoff-0841"
+supersedes_active_routing_task_id: "RT-20260723-008"
+current_decision_id: "DDR-20260723-009"
+current_job_id: "AJ-RT-20260723-009-001"
+role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260723-009"
+requires_human_gate: false
+human_authorization_note: "Generation 76 of the immutable user-requested relay routes exactly one improve-project-system frame to repair the RT-008 execution-role registry parity defect and own one future normal checkpoint."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P12"
+  plan_task_id: "P12-T05"
+  recovery_for_plan_task_id: "P12-T05"
+  next_plan_task_id: "P12-T06"
+objective: "Make the RT-20260723-008 execution-role authority_delta_summary exactly equal to its ROLE_EXECUTION_REGISTRY.csv value by removing only three punctuation commas, prove authority semantics and completed P10-T05 and P10-T07 recovery bytes unchanged, and invoke one normal governed checkpoint before P12-T06."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system role-registry parity and checkpoint compatibility only; no derivation milestone advances."
+route_label: "reconcile_rt008_role_authority_delta_summary_registry_parity_and_checkpoint_v1"
+project_system_change_only: true
+dual_budget_category: "system_bearing"
+primary_budget: "project_system"
+scientific_claims_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+claim_boundary_id: "CB-V21-P12-T05-RT008-ROLE-REGISTRY-PARITY-RECOVERY-001"
+claim_boundary:
+  allowed_scope: "Remove exactly three ASCII commas from the RT-008 execution-role authority_delta_summary scalar so it equals the existing registry value; create task-local parity evidence and normal control closure; invoke one cumulative checkpoint."
+  immutable_predecessor_task: "RT-20260723-008"
+  immutable_predecessor_job: "AJ-RT-20260723-008-001"
+  immutable_predecessor_completion: "AJC-AJ-RT-20260723-008-001"
+  immutable_predecessor_handoff: "handoff-0841"
+  source_blocker_path: "research_control/tasks/RT-20260723-008/artifacts/validation_blocker_checkpoint_role_authority_delta_summary_parity_v1.yaml"
+  source_blocker_sha256: "cc0be4f906ddc236aff553907ce3d5c84ec8e867f53b7dfe898901e69c1e6abc"
+  immutable_route_sha256: "80b723ad15455ea695005277197f7d1918589d3127e4abaa0101670cb6093d7c"
+  expected_punctuation_removal_count: 3
+  authority_semantics_changed: false
+  p10_t05_or_p10_t07_repair_rewritten: false
+  p12_t06_executed: false
+  scientific_claims_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+documentation_impact_id: "DI-RT-20260723-009-001"
+completion_id: "AJC-AJ-RT-20260723-009-001"
+output_artifacts:
+  - "research_control/tasks/RT-20260723-009/artifacts/rt008_role_registry_parity_recovery_receipt.json"
+  - "research_control/tasks/RT-20260723-009/artifacts/validation_blocker_checkpoint_handoff_markdown_identity_v1.yaml"
+  - "research_control/tasks/RT-20260723-009/jobs/completions/AJC-AJ-RT-20260723-009-001.yaml"
+  - "research_control/handoffs/handoff-0842.yaml"
+  - "research_control/handoffs/handoff-0842.md"
+closure_status: "role_registry_parity_pass_checkpoint_blocked_handoff_markdown_identity"
+summary: "Generation 76 removed exactly three commas from the RT-008 execution-role summary, restored exact registry parity, and preserved all completed P10-T05 and P10-T07 recovery bytes. Its only checkpoint committed nothing because the handoff-0842 Markdown mirror lacks the exact canonical handoff-0842 identity literal; the entry index was restored."
+next_recommended_action: "Run one fresh bounded P12-T05 improve-project-system recovery to add the exact handoff-0842 identity literal to its Markdown mirror, preserve the completed parity recovery, validate the narrow routing snapshot and repository shard, and invoke at most one future checkpoint before P12-T06."
+project_improvement_signals: []
+notes: "No validator semantics, authority semantics, P10 recovery output, scientific source, ledger, P12-T06 work, or protected authority changed. The generation-76 checkpoint is consumed and may not be retried."

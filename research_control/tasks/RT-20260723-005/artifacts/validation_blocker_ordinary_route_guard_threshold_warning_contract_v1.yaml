@@ -1,0 +1,93 @@
+schema_id: "ordinary_route_control_failure_v1"
+failure_id: "OCF-P12-T05-CHECKPOINT-ORDINARY-ROUTE-GUARD-THRESHOLD-WARNING-001"
+task_id: "RT-20260723-005"
+job_id: "AJ-RT-20260723-005-001"
+plan_task_id: "P12-T05"
+failure_class: "failing_ci"
+status: "active_blocking"
+blocks_scientific_execution: true
+observed_at: "2026-07-23T11:43:31Z"
+failure_summary: "The exact six-path classifier recovery and diff-aware control validation pass, but the required 155-test P12-T05 shard stops on one continuation-contract assertion because the ordinary-route guard emits its designed threshold-next WARN after two consecutive project-system tasks while the test requires PASS."
+remediation_route: "Run one separately governed project-system recovery to reconcile the ordinary-route threshold-next warning with the continuation validation contract without falsifying route history, weakening the threshold-three hard guard, or executing P12-T06; then revalidate and invoke one future normal checkpoint."
+
+checkpoint_evidence:
+  checkpoint_command: ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260723-005-001"
+  checkpoint_status: "NOT_INVOKED"
+  checkpoint_invocation_count: 0
+  failed_precheckpoint_command: ".venv/bin/python -m unittest tests.test_scientific_quality_metrics tests.test_report_physics_progress_metrics tests.test_research_control"
+  failed_test: "tests.test_research_control.ResearchControlTests.test_continue_research_reports_director_context_packet"
+  assertion: "ordinary_route_guard.status expected PASS but observed WARN"
+  shard_test_count: 155
+  shard_failure_count: 1
+  shard_error_count: 0
+  staged: false
+  committed: false
+  legacy_validation_flag_used: false
+  working_tree_preserved: true
+
+root_cause:
+  policy_path: "scripts/research_control/ordinary_route_guard.py"
+  policy_id: "ordinary_route_guard_policy_v1"
+  policy_threshold: 3
+  policy_warning_at: 2
+  observed_run_length: 2
+  policy_evaluation_status: "WARN"
+  policy_errors: []
+  policy_warnings:
+    - "ordinary_route_guard_threshold_next"
+  expected_outcome: "below_threshold"
+  selected_plan_task_id: "P12-T06"
+  selected_route_class: "project_system"
+  ready_science_plan_task_ids:
+    - "P4-T05"
+  ready_science_route_requires_human_gate: true
+  continue_research_status: "ready"
+  contract_test_path: "tests/test_research_control.py"
+  contract_test_expected_status: "PASS"
+  incompatibility: "The warning is valid under the current policy and route history, while the continuation integration test permits no warning status."
+
+preserved_classifier_evidence:
+  classifier_recovery_status: "PASS"
+  exact_generated_output_count: 4
+  exact_validator_code_script_count: 2
+  predecessor_manifest_path_count: 61
+  predecessor_manifest_unknown_path_count: 0
+  predecessor_manifest_shadow_plan_safe: true
+  unrelated_unknown_path_fail_closed: true
+  focused_classifier_validation_checkpoint_test_count: 105
+  focused_classifier_validation_checkpoint_status: "PASS"
+  p12_t05_metric_check_count: 44
+  p12_t05_metric_fixture_count: 14
+  p12_t05_metric_status: "PASS"
+  research_control_diff_status: "PASS"
+  memory_bootstrap_status: "PASS"
+  memory_validate_only_status: "PASS"
+  checkpoint_invoked: false
+
+required_recovery:
+  strategy_id: "reconcile_ordinary_route_guard_threshold_warning_validation_contract_v1"
+  worker_skill: "improve-project-system"
+  work_item_id: "P12-T05"
+  next_plan_item_after_recovery: "P12-T06"
+  required_controls:
+    - "Preserve the observed project-system run length and the threshold-three prospective hard-failure policy."
+    - "Determine whether the continuation contract must accept a policy WARN at warning_at or whether route-state semantics require a different source-backed resolution."
+    - "Do not suppress ordinary_route_guard_threshold_next without an explicit deterministic policy rationale and regression coverage."
+    - "Preserve the exact six-path classifier repair, safe 61-path shadow plan, unrelated unknown-path full fallback, and all P12-T05 metric semantics."
+    - "Re-run the 155-test shard and all required project-control gates before one future normal checkpoint without legacy validation."
+  forbidden_changes:
+    - "No checkpoint invocation in generation 71."
+    - "No falsification of task scope, budget category, completion time, route history, or observed run length."
+    - "No weakening of the threshold-three hard failure or all-ready-science-blocked evidence exception."
+    - "No broad test skip or unconditional acceptance of ordinary-route failures."
+    - "No P12-T06 execution before a committed P12-T05 transaction."
+    - "No canonical ontology, science source, scientific ledger, Distance-to-GR, or protected scientific-status mutation."
+
+authority_limits:
+  scientific_status_changed: false
+  distance_to_gr_delta_changed: false
+  ontology_or_source_law_adopted: false
+  benchmark_promotion_authorized: false
+  external_review_or_publication_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false

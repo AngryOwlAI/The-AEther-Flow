@@ -1,0 +1,429 @@
+validation_status: "FAIL"
+job_id: "AJ-RT-20260723-004-001"
+completion_id: "AJC-AJ-RT-20260723-004-001"
+task_id: "RT-20260723-004"
+task_type: "v21_durable_scientific_quality_metrics"
+decision_id: "DDR-20260723-004"
+role_id: "project-control-maintainer"
+source_role_id: "project-control-maintainer"
+role_version: "0.2.0"
+execution_role_ref: "project-control-maintainer@0.2.0--RT-20260723-004"
+status: "completed"
+created_at: "2026-07-23T09:27:55Z"
+started_at: "2026-07-23T09:27:55Z"
+completed_at: "2026-07-23T10:25:43Z"
+objective: "Execute only v21 P12-T05 by implementing and validating denominator-bound durable scientific-quality metrics without treating a metric, dashboard, or validation result as theorem truth or Distance-to-GR progress."
+completion_summary: "P12-T05 implemented eight denominator-bound advisory scientific-quality metrics with immutable identity binding deterministic not_measured handling calibration warnings anti-splitting safeguards task-local fixtures reporting and dashboard integration and raw-volume demotion. All pre-checkpoint gates pass, but the one normal planner-compare checkpoint stopped before staging because six exact metric-reporting paths remain unknown_governed_path. Nothing was staged or committed, legacy validation was not used, and one fresh classifier compatibility recovery is required."
+objective_result: "implementation_met_checkpoint_blocked_unknown_scientific_quality_paths"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_task_id: "P12-T05"
+  phase_id: "P12"
+  recommendation_ids:
+    - "V21-R43"
+    - "V21-R51"
+    - "V21-R52"
+    - "V21-R53"
+    - "V21-R69"
+  expected_result_kind: "implemented_and_validated_or_precisely_blocked"
+  observed_result_kind: "implemented_and_validated"
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  generation: 70
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:70"
+  immutable_route_hash: "fd2a4167aa325053d8006b7297413a31d2ebeb1c1394178aafff4c6695f5a187"
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+transaction_status: "blocked_checkpoint_planner_classifier_recovery_required"
+result_disposition: "implementation_validated_checkpoint_planner_blocked"
+work_item_status: "blocked"
+checkpoint_commit: "none_shadow_planner_preflight_failed"
+project_system_change_only: true
+project_system_scope: "P12-T05 taxonomy evaluator calibration warnings fixtures tests report and methodology-dashboard integration standard control records and generated derivatives only."
+project_system_boundary_authorized_by_plan: true
+scientific_claims_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  observed_durable_outputs:
+    physics: []
+    project_system:
+      - "research_control/tasks/RT-20260723-004/artifacts/scientific_quality_metric_taxonomy_v1.md"
+      - "research_control/tasks/RT-20260723-004/artifacts/scientific_quality_calibration_warning_policy_v1.md"
+      - "scripts/research_control/scientific_quality_metrics.py"
+  accepted_criteria:
+    physics: []
+    project_system:
+      - "eight denominator-bound quality metrics validate"
+      - "unknown data is reported as not_measured"
+      - "immutable identity and range warnings are deterministic"
+      - "raw volume is demoted to operational context in primary dashboards"
+      - "no metric or validator result implies scientific truth or Distance-to-GR progress"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "measured"
+        value: 3468
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  metric_family_count: 8
+  measured_metric_count: 3
+  not_measured_metric_count: 5
+  invalid_metric_count: 0
+  fixture_case_count: 14
+  fixture_pass_count: 14
+  validation_check_count: 44
+  validation_failure_count: 0
+  expected_warning_count: 5
+  explicit_denominators_enforced: true
+  immutable_identity_binding_enforced: true
+  unknown_is_not_measured: true
+  aggregate_truth_score_emitted: false
+  raw_volume_primary_quality_surface: false
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+scientific_quality_metrics_result:
+  schema_id: "durable_scientific_quality_metrics_v1"
+  status: "PASS"
+  metric_family_count: 8
+  metric_ids:
+    - "assumption_reduction_rate"
+    - "theorem_generality_rate"
+    - "countermodel_novelty_rate"
+    - "obstruction_unification_and_reuse_rate"
+    - "independent_review_survival_rate"
+    - "benchmark_breadth_rate"
+    - "retraction_repair_visibility_rate"
+    - "ledger_durability_rate"
+  measured_metric_count: 3
+  not_measured_metric_count: 5
+  invalid_metric_count: 0
+  aggregate_metric: "not_defined"
+  primary_quality_surface: "durable_scientific_quality_metrics"
+  raw_volume_reporting_role: "raw_volume_operational_context_only"
+  live_report_boundary: "The three measured rates summarize only their exact declared eligible identity sets; the five absent authoritative denominators remain not_measured and no cross-metric aggregate is defined."
+  authority_limits:
+    scientific_truth_score: false
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+
+artifact_hashes:
+  taxonomy_path: "research_control/tasks/RT-20260723-004/artifacts/scientific_quality_metric_taxonomy_v1.md"
+  taxonomy_sha256: "b7fc9ff6f6d55e2ec9462700f8c4f985ab77ff5ffcc9cfdd07923b60011c6436"
+  calibration_policy_path: "research_control/tasks/RT-20260723-004/artifacts/scientific_quality_calibration_warning_policy_v1.md"
+  calibration_policy_sha256: "25205ad3cf4f28492467bdd6343d52647c76ddfd67d7609bc9ce187ec06e8b75"
+  fixture_path: "research_control/tasks/RT-20260723-004/artifacts/fixtures/scientific_quality_metric_cases.json"
+  fixture_sha256: "7253ac9138885061cd854fd61b69757ae78aa8c497ba1066ade2a0c19c62a4b8"
+  validator_path: "research_control/tasks/RT-20260723-004/artifacts/validate_scientific_quality_metrics.py"
+  validator_sha256: "e4102ac5ce28653e9c8195762aeb519c1f5c08e615aa03221d18b0906fd73260"
+  validation_report_path: "research_control/tasks/RT-20260723-004/artifacts/scientific_quality_validation_report.json"
+  validation_report_sha256: "6082c5c23d93741f01e61dcdf48c76fe4c7b723605440261dea95c94c399fd6e"
+  compact_receipt_path: "research_control/tasks/RT-20260723-004/artifacts/scientific_quality_compact_receipt.json"
+  compact_receipt_sha256: "5aeeb1c5b33b229843b5033d85b66098719b50ec1e775a8ae2e46df832801ffa"
+  evaluator_path: "scripts/research_control/scientific_quality_metrics.py"
+  evaluator_sha256: "2e9b443da0e9beeccd08a54936972a8438ba64b7fcc12dccd4d4793b7111ccc9"
+  metrics_reporter_path: "scripts/research_control/report_physics_progress_metrics.py"
+  metrics_reporter_sha256: "07cd220950e4b85632385da1dcaa932c8a6c48c50b33e2736dd6f181bc9abfd1"
+  dashboard_renderer_path: "scripts/research_control/render_ai_methodology_metrics_dashboard.py"
+  dashboard_renderer_sha256: "059ff7191575cb865fac020c010314901e04aa11e0054706866be62b81ac17af"
+  focused_test_path: "tests/test_scientific_quality_metrics.py"
+  focused_test_sha256: "5ec3ba1b5b4331a20a92173b79dfbd2c16a46e2fa98741146e1fa1e7eabd609d"
+  checkpoint_blocker_path: "research_control/tasks/RT-20260723-004/artifacts/validation_blocker_checkpoint_planner_unknown_scientific_quality_paths_v1.yaml"
+  checkpoint_blocker_sha256: "ab162996fbc7ced31f2fd6adb067a4ae2818448cb3db5ca67567621b6c1b9fba"
+
+dependency_completion_hashes:
+  - plan_task_id: "P10-T03"
+    task_id: "RT-20260721-005"
+    path: "research_control/tasks/RT-20260721-005/jobs/completions/AJC-AJ-RT-20260721-005-001.yaml"
+    sha256: "1d32a4bb55c2087f0be70b22a12cda3b77f3d45d645e67853f40c31d0c48cf7f"
+  - plan_task_id: "P10-T04"
+    task_id: "RT-20260721-006"
+    path: "research_control/tasks/RT-20260721-006/jobs/completions/AJC-AJ-RT-20260721-006-001.yaml"
+    sha256: "9fbd8bbda9b3ffaae441763a5874d7e78a4dfd189a612c4430e95fabb8a8f2d3"
+  - plan_task_id: "P11-T06"
+    task_id: "RT-20260722-008"
+    path: "research_control/tasks/RT-20260722-008/jobs/completions/AJC-AJ-RT-20260722-008-001.yaml"
+    sha256: "4a1a2c041b97c3e8c712bae9be55e0e08de64c712aaf5f6fc275f33f20cfa494"
+  - plan_task_id: "P12-T03"
+    task_id: "RT-20260722-014"
+    path: "research_control/tasks/RT-20260722-014/jobs/completions/AJC-AJ-RT-20260722-014-001.yaml"
+    sha256: "27d66ddaa5413acc4b4f86206996e87108c382aced8f2fe5fcbda88b066b91bd"
+
+canonical_source_hashes:
+  - path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+    sha256: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  - path: "research_control/design/physics_payload_ratio_policy_v1.md"
+    sha256: "0bf6b607a8f93b05e6e67c5a6676c0f889cb28f9a6c81db9c6c508e5f486d213"
+  - path: "research_control/design/ai_research_agent_metrics_taxonomy_v1.md"
+    sha256: "bb373ae346c855695d0002605410b2113e6aa9a703bce90604c549a66222e439"
+  - path: "research_control/design/frontier_theorem_inventory.md"
+    sha256: "5158603122dda2ec768293d5659e51b0d18cbc52689c2caf9a1c266a4d105fce"
+
+assumption_delta:
+  new_assumptions: []
+  removed_assumptions: []
+  changed_assumptions: []
+  project_control_assumption: "A reported scientific-quality rate is meaningful only inside a declared eligible evidence universe bound to immutable identities; absent authoritative denominators remain not_measured."
+candidate_or_theorem_identities:
+  created: []
+  adopted: []
+  rejected: []
+  promoted: []
+  note: "P12-T05 creates no physics candidate theorem source law or protected identity."
+mathematical_payload_manifest: []
+new_mathematical_payload: []
+
+outputs_created:
+  - "research_control/tasks/RT-20260723-004/00_TASK.yaml"
+  - "research_control/tasks/RT-20260723-004/DDR-20260723-004.md"
+  - "research_control/tasks/RT-20260723-004/roles/project-control-maintainer@0.2.0--RT-20260723-004.yaml"
+  - "research_control/tasks/RT-20260723-004/jobs/AJ-RT-20260723-004-001.yaml"
+  - "research_control/tasks/RT-20260723-004/artifacts/scientific_quality_metric_taxonomy_v1.md"
+  - "research_control/tasks/RT-20260723-004/artifacts/scientific_quality_calibration_warning_policy_v1.md"
+  - "research_control/tasks/RT-20260723-004/artifacts/fixtures/scientific_quality_metric_cases.json"
+  - "research_control/tasks/RT-20260723-004/artifacts/validate_scientific_quality_metrics.py"
+  - "research_control/tasks/RT-20260723-004/artifacts/scientific_quality_validation_report.json"
+  - "research_control/tasks/RT-20260723-004/artifacts/scientific_quality_compact_receipt.json"
+  - "research_control/tasks/RT-20260723-004/artifacts/validation_blocker_checkpoint_planner_unknown_scientific_quality_paths_v1.yaml"
+  - "scripts/research_control/scientific_quality_metrics.py"
+  - "tests/test_scientific_quality_metrics.py"
+  - "research_control/tasks/RT-20260723-004/documentation_impact.yaml"
+  - "research_control/handoffs/handoff-0837.yaml"
+  - "research_control/handoffs/handoff-0837.md"
+outputs_updated:
+  - "scripts/research_control/report_physics_progress_metrics.py"
+  - "scripts/research_control/render_ai_methodology_metrics_dashboard.py"
+  - "tests/test_report_physics_progress_metrics.py"
+  - "tests/test_research_control.py"
+  - "output/physics_progress_metrics.json"
+  - "output/physics_progress_metrics.md"
+  - "output/ai_methodology_metrics_dashboard.json"
+  - "output/ai_methodology_metrics_dashboard.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "policy-generated memory wiki graph and registry derivatives"
+
+physics_progress_status:
+  status: "no_distance_delta"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Reduce Goodhart pressure from packet counts."
+  explanation: "The metrics change project-control evidence accounting and reporting only; they add no physical assumption theorem source law metric coupling dynamics field equation or benchmark evidence."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "source_equivalence_eqsrc"
+  milestone: "source_equivalence_eqsrc"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "P12-T05 is project-system measurement governance and changes no scientific evidence or derivation burden status."
+  downstream_unlocked:
+    - "P12-T05 checkpoint-planner classifier compatibility recovery packet"
+  downstream_still_blocked:
+    - "P12-T06 until the P12-T05 transaction is committed"
+    - "P4-T05 protected ontology-regime decision pending explicit human gate"
+    - "source_ontology_derivation"
+    - "general_eqsrc"
+    - "source_manifold_m_src"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+    - "benchmark_promotion"
+    - "completed_derivation"
+
+authorization_layers:
+  project_control_change_authorized: true
+  project_control_change_scope: "P12-T05 only"
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  proof_authority: false
+  publication_authority: false
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 70 route lease repository identity max reasoning effort clean route manifest predecessor inactivity and single consumption were verified before work."
+      - "P10-T03 P10-T04 P11-T06 and P12-T03 are finalized at their exact dependency completion hashes."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The task-local validator passes 44 checks across 14 positive negative unknown range alias and anti-splitting fixtures."
+      - "The live report exposes three measured and five not_measured metrics with zero invalid metrics and no aggregate."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Focused metric reporter dashboard and research-control tests pass after closure records are present."
+      - "Affected documentation impact project-improvement claim-language and diff-aware research-control gates pass or retain only designed local retrieval warnings."
+  post_checkpoint:
+    status: "FAIL"
+    evidence:
+      - "The one normal planner-compare checkpoint stopped before staging because six exact metric-reporting paths remain unknown_governed_path and the shadow plan is therefore unsafe."
+      - "Nothing was staged or committed, the entry index and working tree were preserved, legacy validation was not used, and generation 70 does not authorize a second checkpoint."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Current-frontier task-index compact-frontier physics-progress metrics methodology dashboard and memory derivatives are regenerated from handoff-0837 and program state."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Memory bootstrap passes after registering the metric taxonomy and calibration warning policy as canonical project-control Markdown sources."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-path claim-language validation reports no blocking current-task finding."
+
+forbidden_conclusion_summary:
+  system_success_is_physics_progress: false
+  system_success_is_distance_to_gr_progress: false
+  validator_pass_is_physics_evidence: false
+  route_selection_is_physics_evidence: false
+  scientific_truth_score_created: false
+  theorem_truth_inferred: false
+  ontology_modified: false
+  source_law_adopted: false
+  candidate_adopted_or_rejected: false
+  physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  gate_chair_verdict_created: false
+  proof_authority: false
+  publication_authority: false
+  completed_derivation_authorized: false
+  summary: "The P12-T05 metrics and PASS receipts forbid M_src adoption, g_eff establishment, matter coupling derivation, Einstein-equation derivation, benchmark promotion, completed derivation, and global theory rejection."
+  forbidden_conclusions:
+    - "a measured rate or dashboard status presented as scientific truth theorem validity or physics evidence"
+    - "M_src adoption or source-law adoption"
+    - "g_eff establishment or physical metric interpretation"
+    - "matter coupling derivation"
+    - "Einstein equations derived from ontology"
+    - "benchmark promotion"
+    - "completed derivation"
+    - "global theory rejection"
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 999
+    relationship_row_count: 4937
+    semantic_row_count: 997
+    vault_row_count: 997
+    local_cache_only_warning_count: 7
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"scientific quality metrics assumption reduction theorem generality\" --limit 10 --json"
+      query_type: "search"
+      query_text: "scientific quality metrics assumption reduction theorem generality"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  authority_note: "Obsidian wiki semantic relationship and .local surfaces are retrieval layers only and not authority; registered canonical sources and tracked control state govern this task."
+
+command_results:
+  - command: ".venv/bin/python research_control/tasks/RT-20260723-004/artifacts/validate_scientific_quality_metrics.py --write --json"
+    status: "PASS"
+  - command: ".venv/bin/python research_control/tasks/RT-20260723-004/artifacts/validate_scientific_quality_metrics.py --check --json"
+    status: "PASS"
+  - command: ".venv/bin/python -m unittest -v tests.test_scientific_quality_metrics tests.test_report_physics_progress_metrics tests.test_research_control"
+    status: "PASS"
+  - command: ".venv/bin/python scripts/research_control/report_physics_progress_metrics.py --format json"
+    status: "PASS"
+  - command: ".venv/bin/python scripts/research_control/render_ai_methodology_metrics_dashboard.py --check"
+    status: "PASS"
+  - command: ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff"
+    status: "PASS"
+  - command: ".venv/bin/python scripts/project_control/validate_documentation_impact.py"
+    status: "PASS"
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+    status: "PASS"
+  - command: ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260723-004-001"
+    status: "FAIL_SHADOW_PLANNER_UNKNOWN_PATHS_NO_STAGE_NO_COMMIT"
+checkpoint_failure:
+  blocker_path: "research_control/tasks/RT-20260723-004/artifacts/validation_blocker_checkpoint_planner_unknown_scientific_quality_paths_v1.yaml"
+  blocker_sha256: "ab162996fbc7ced31f2fd6adb067a4ae2818448cb3db5ca67567621b6c1b9fba"
+  checkpoint_status: "FAIL"
+  failed_stage: "shadow_planner_preflight"
+  failure_class: "unknown_governed_path"
+  unknown_path_count: 6
+  checkpoint_committed: false
+  checkpoint_staged: false
+  entry_index_preserved: true
+  legacy_validation_used: false
+  preservation_reason: "Generation 70 authorizes only P12-T05 metric implementation and its normal checkpoint. Editing classifier policy or invoking a second checkpoint would exceed the immutable route."
+required_recovery:
+  strategy_id: "classify_p12_t05_metric_reporting_paths_for_checkpoint_v1"
+  route_label: "project-system-recovery"
+  role_family: "validator-engineer@0.2.0"
+  worker_skill: "improve-project-system"
+  plan_task_id: "P12-T05"
+  target_derivation_milestone: "none"
+  milestone_burden: "Restore checkpoint-planner compatibility for the implemented P12-T05 metric-reporting surface without changing its metric semantics or any scientific authority."
+  requires_human_gate: false
+  project_system_boundary_authorized_by_plan: false
+  physics_promotion_authorized: false
+  dependency_ready_after_checkpoint: false
+  executed: false
+selected_next_route:
+  route_id: "v21_p12_t06_attempt_rework_pass_saturation_dashboard"
+  route_label: "ordinary-research-packet"
+  role_family: "project-control-maintainer@0.2.0"
+  worker_skill: "improve-project-system"
+  plan_task_id: "P12-T06"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Make research-process selectivity observable."
+  requires_human_gate: false
+  project_system_boundary_authorized_by_plan: true
+  physics_promotion_authorized: false
+  dependency_ready_after_checkpoint: false
+  executed: false
+next_recommendation: "Continue the recursive relay with one fresh bounded improve-project-system generation to classify only the six exact blocker paths using existing validation-family vocabulary, preserve unrelated unknown-path fallback and all P12-T05 evidence, and invoke one future normal checkpoint without legacy validation; only after a committed checkpoint may P12-T06 run."
+project_improvement_signals: []
+notes: "P12-T05 establishes advisory evidence-accounting integrity only. Its implementation evidence is preserved, but the transaction remains blocked on exact classifier compatibility. P12-T06 remains unexecuted and no score validator dashboard route checkpoint failure or future repair changes scientific authority."

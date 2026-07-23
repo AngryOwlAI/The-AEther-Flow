@@ -1,0 +1,373 @@
+validation_status: "FAIL"
+job_id: "AJ-RT-20260723-007-001"
+completion_id: "AJC-AJ-RT-20260723-007-001"
+task_id: "RT-20260723-007"
+task_type: "project_system_p12_t05_eof_handoff_identity_checkpoint_recovery"
+decision_id: "DDR-20260723-007"
+role_id: "process-integrity-auditor"
+source_role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260723-007"
+status: "completed"
+final_repository_validation_status: "FAIL_CHECKPOINT_REPOSITORY_SHARD_P10_T05_EVENT_STORE_ARCHITECTURE"
+created_at: "2026-07-23T13:36:01Z"
+started_at: "2026-07-23T13:36:01Z"
+completed_at: "2026-07-23T14:34:49Z"
+objective: "Repair the handoff-0839 Markdown identity and four exact EOF findings, prove all other bytes and metric semantics unchanged, rerun the required gates, and checkpoint the cumulative P12-T05 transaction before P12-T06."
+completion_summary: "The paired handoff Markdown now identifies handoff-0839, and exactly one terminal newline byte was removed from each of the four hash-sealed P12-T05 targets. The byte validator, focused continuation regression, ordinary-route guard suite, required 155-test P12 shard, control, documentation, memory, claim-language, and Git-diff gates pass. The single normal checkpoint then stopped without commit when its 1,182-test repository shard found one P10-T05 event-store architecture validation failure and one cascading migration-readiness setup error. The entry index was restored, no retry or legacy validation was used, and the distinct dependency requires a fresh bounded recovery."
+objective_result: "handoff_identity_and_four_eof_findings_repaired_checkpoint_blocked_p10_t05_event_store_architecture"
+work_item_status: "blocked"
+result_disposition: "exact_integrity_recovery_pass_checkpoint_not_committed_fresh_dependency_recovery_required"
+transaction_status: "blocked_checkpoint_repository_p10_t05_event_store_architecture_recovery_required"
+checkpoint_commit: "none_checkpoint_blocked"
+checkpoint_invocation_count: 1
+checkpoint_staged: false
+legacy_validation_used: false
+project_system_change_only: true
+project_system_scope: "One canonical handoff identity marker, four exact one-byte EOF normalizations, task-local equivalence evidence, control closure, and one normal cumulative P12-T05 checkpoint."
+scientific_claims_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 74
+  passes_consumed: 71
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:74"
+  handoff_token: "3a559cc66a34bc6544221376dd799b6c5bb507591e7b8ba8"
+  relay_claim_token: "394dc66f98a627ab40bd3a46eb605fa2a5ff9ce5a3060e03"
+  immutable_route_hash: "aa1170219828e56f37667d488e57f05c1d0b3f6bb727b0e9150064c9d14ec8a8"
+  route_work_item_id: "P12-T05"
+  worker_skill: "improve-project-system"
+  authorized_worker_invocation_count: 1
+  consumed_worker_invocation_count: 1
+
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P12"
+  plan_task_id: "P12-T05"
+  recovery_for_plan_task_id: "P12-T05"
+  next_plan_task_id: "P12-T06"
+  implementation_status: "checkpoint_integrity_recovery_pass_checkpoint_blocked_distinct_p10_t05_dependency"
+  p12_t05_checkpoint_ready: false
+  p12_t06_dependency_ready_after_checkpoint: false
+  p12_t06_executed: false
+
+recovery_result:
+  schema_id: "p12_t05_checkpoint_recovery_result_v1"
+  status: "FAIL_CHECKPOINT_REPOSITORY_SHARD"
+  receipt_path: "research_control/tasks/RT-20260723-007/artifacts/p12_t05_checkpoint_recovery_receipt.json"
+  receipt_sha256: "3a3bb85e7c1b55a699bdbce2684b2f7ed0f6e4572ec72e890c1b310bb547ffac"
+  validator_path: "research_control/tasks/RT-20260723-007/artifacts/validate_p12_t05_checkpoint_recovery.py"
+  source_blocker_path: "research_control/tasks/RT-20260723-006/artifacts/validation_blocker_checkpoint_staged_trailing_blank_line_eof_v1.yaml"
+  source_blocker_sha256: "804492d85e989f83ab4886265f66fde117ed0f34b2e067696bb9641d82adb523"
+  handoff_identity_repair_count: 1
+  exact_eof_repair_count: 4
+  exact_removed_byte_count: 4
+  every_other_target_byte_unchanged: true
+  fixture_json_parse_status: "PASS"
+  p12_t05_metric_semantics_changed: false
+  validator_or_test_semantics_changed: false
+  route_history_changed: false
+  p12_t06_executed: false
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  observed_durable_outputs:
+    physics: []
+    project_system:
+      - "research_control/tasks/RT-20260723-007/artifacts/validate_p12_t05_checkpoint_recovery.py"
+      - "research_control/tasks/RT-20260723-007/artifacts/p12_t05_checkpoint_recovery_receipt.json"
+  accepted_criteria:
+    physics: []
+    project_system:
+      - "the paired latest handoff Markdown identifies handoff-0839"
+      - "the four EOF targets equal the deterministic one-byte-normalized hashes"
+      - "all other bytes and metric semantics remain unchanged"
+      - "the focused continuation and required 155-test P12 shard pass"
+      - "one normal governed checkpoint commits without legacy validation"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+physics_payload_admission_result:
+  status: "admitted"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed: false
+  physics_promotion_authorized: false
+
+ordinary_route_guard_admission_result:
+  status: "PASS"
+  source_handoff_id: "handoff-0836"
+  selected_plan_task_id: "P12-T05"
+  guard_outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  system_success_counts_as_physics: false
+
+outputs_created:
+  - "research_control/tasks/RT-20260723-007/00_TASK.yaml"
+  - "research_control/tasks/RT-20260723-007/DDR-20260723-007.md"
+  - "research_control/tasks/RT-20260723-007/roles/process-integrity-auditor@0.1.0--RT-20260723-007.yaml"
+  - "research_control/tasks/RT-20260723-007/jobs/AJ-RT-20260723-007-001.yaml"
+  - "research_control/tasks/RT-20260723-007/artifacts/validate_p12_t05_checkpoint_recovery.py"
+  - "research_control/tasks/RT-20260723-007/artifacts/p12_t05_checkpoint_recovery_receipt.json"
+  - "research_control/tasks/RT-20260723-007/artifacts/validation_blocker_checkpoint_repository_p10_t05_event_store_architecture_v1.yaml"
+  - "research_control/tasks/RT-20260723-007/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260723-007/jobs/completions/AJC-AJ-RT-20260723-007-001.yaml"
+  - "research_control/handoffs/handoff-0840.yaml"
+  - "research_control/handoffs/handoff-0840.md"
+outputs_updated:
+  - "research_control/handoffs/handoff-0839.md"
+  - "research_control/tasks/RT-20260723-004/artifacts/fixtures/scientific_quality_metric_cases.json"
+  - "research_control/tasks/RT-20260723-004/artifacts/scientific_quality_calibration_warning_policy_v1.md"
+  - "research_control/tasks/RT-20260723-004/artifacts/scientific_quality_metric_taxonomy_v1.md"
+  - "tests/test_scientific_quality_metrics.py"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "policy-generated memory and wiki derivatives"
+
+physics_progress_status:
+  status: "no_distance_delta"
+  target_derivation_milestone: "none"
+  milestone_burden: "Project-system checkpoint integrity repair only; no derivation milestone advances."
+  explanation: "Identity metadata and final-newline normalization provide no physics evidence and discharge no scientific derivation burden."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "source_equivalence_eqsrc"
+  milestone: "source_equivalence_eqsrc"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "The recovery changes no scientific evidence, source law, metric, coupling, field equation, benchmark, or derivation status."
+  downstream_unlocked:
+    - "P12-T06 project-system execution after the governed checkpoint commits and a separately claimed packet"
+  downstream_still_blocked:
+    - "P4-T05 protected ontology-regime decision pending explicit human gate"
+    - "source_ontology_derivation"
+    - "general_eqsrc"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+    - "benchmark_promotion"
+    - "completed_derivation"
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 74 repository identity, lease parity, immutable route, exact 85-path predecessor manifest, and one-time consumption were verified before the worker invocation."
+      - "The canonical policy row, paired handoff, hash-sealed blocker, and four target hashes were inspected."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The task-local validator checks all four deterministic post-repair hashes and sizes, one terminal newline per target, JSON parse, and canonical handoff identity."
+      - "The repair receipt records exactly four removed newline bytes and preserves runtime and test hashes."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "The byte validator passes all fourteen checks and the ordinary-route guard suite passes eight of eight."
+      - "The focused continuation regression passes one of one and the required P12 shard passes 155 of 155 in the stable closed control state."
+  post_checkpoint:
+    status: "FAIL"
+    evidence:
+      - "The single governed checkpoint stopped without commit when the full repository shard found one P10-T05 event-store architecture validation failure and one cascading migration-readiness setup error."
+      - "The entry index was restored, no retry was attempted, legacy validation was not used, and a fresh bounded dependency recovery is required."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "The current and compact frontier renderers are required to synchronize the completed task and handoff before checkpoint persistence."
+  memory_bootstrap:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "Tracked memory bootstrap and validate-only gates are required to pass; nine known local-cache-only warnings do not alter canonical authority."
+  claim_language_linter:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "Changed-surface claim-language validation may retain historical or calibration warnings but must have zero hard failures before checkpoint persistence."
+
+authorization_layers:
+  project_control_change_authorized: true
+  project_control_change_scope: "Exact generation-74 handoff identity and four-byte EOF recovery plus one normal cumulative P12-T05 checkpoint only."
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  proof_authority: false
+  publication_authority: false
+
+forbidden_conclusion_summary:
+  system_success_is_physics_progress: false
+  system_success_is_distance_to_gr_progress: false
+  validator_pass_is_physics_evidence: false
+  route_selection_is_physics_evidence: false
+  theorem_truth_inferred: false
+  ontology_modified: false
+  source_law_adopted: false
+  physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  proof_authority: false
+  publication_authority: false
+  completed_derivation_authorized: false
+  summary: "Identity, EOF, validator, checkpoint, and project-process results do not establish scientific truth, physics evidence, ontology, source law, effective metric, coupling, field equations, benchmark status, or completed derivation."
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: "999"
+    relationship_row_count: "4946"
+    semantic_row_count: "999"
+    vault_row_count: "999"
+    local_cache_only_warning_count: "9"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-TASKS-RT-20260722-015-ORDINARY-ROUTE-GUARD-POLICY-V1 --json"
+      query_type: "lookup"
+      query_text: "MD-RESEARCH-CONTROL-TASKS-RT-20260722-015-ORDINARY-ROUTE-GUARD-POLICY-V1"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-TASKS-RT-20260722-015-ORDINARY-ROUTE-GUARD-POLICY-V1"
+  canonical_inspections:
+    - object_id: "MD-RESEARCH-CONTROL-TASKS-RT-20260722-015-ORDINARY-ROUTE-GUARD-POLICY-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260722-015/artifacts/ordinary_route_guard_policy_v1.md"
+      source_hash: "c0c4df98c0020fbb274a4c895e6d5749c2166397e6e419a63c7b6737f2ee3a96"
+  authority_note: "The registered ordinary-route policy and tracked blocker are canonical project-control authority; Obsidian, semantic, SQLite, and .local retrieval outputs are not authority."
+
+command_results:
+  - command: ".venv/bin/python research_control/tasks/RT-20260723-007/artifacts/validate_p12_t05_checkpoint_recovery.py"
+    status: "PASS_14_CHECKS"
+  - command: ".venv/bin/python -m unittest -v tests.test_research_control.ResearchControlTests.test_continue_research_reports_director_context_packet"
+    status: "PASS_1_OF_1"
+  - command: ".venv/bin/python -m unittest -v tests.test_ordinary_route_guard"
+    status: "PASS_8_OF_8"
+  - command: ".venv/bin/python -m unittest tests.test_scientific_quality_metrics tests.test_report_physics_progress_metrics tests.test_research_control"
+    status: "PASS_155_OF_155"
+  - command: ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+    status: "PASS_ZERO_BLOCKED"
+  - command: ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json"
+    status: "PASS"
+  - command: ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted"
+    status: "PASS"
+  - command: ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260723-007-001"
+    status: "FAIL_REPOSITORY_SHARD_1182_TESTS_1_FAILURE_1_ERROR_INDEX_RESTORED_NO_COMMIT"
+
+validation_blocker:
+  blocker_path: "research_control/tasks/RT-20260723-007/artifacts/validation_blocker_checkpoint_repository_p10_t05_event_store_architecture_v1.yaml"
+  blocker_sha256: "10508a937373f316e9bd744f292f8e4a860857fc813a7751581c5d6b07862711"
+  failed_gate: "test_shard_repository"
+  failed_command: ".venv/bin/python -m unittest discover -s tests"
+  finding_class: "p10_t05_event_store_architecture_validator_not_pass"
+  repository_test_count: 1182
+  failure_count: 1
+  error_count: 1
+  checkpoint_invocation_count: 1
+  checkpoint_staged_after_failure: false
+  checkpoint_committed: false
+  entry_index_restored: true
+  legacy_validation_used: false
+  preservation_reason: "The only authorized checkpoint invocation is consumed, and the newly exposed P10-T05 architecture dependency is outside this AgentJob's immutable repair scope."
+
+required_recovery:
+  strategy_id: "diagnose_and_reseal_p10_t05_event_store_architecture_checkpoint_dependency_v1"
+  route_label: "project-system-recovery"
+  role_family: "process-integrity-auditor@0.1.0"
+  worker_skill: "improve-project-system"
+  plan_task_id: "P12-T05"
+  target_derivation_milestone: "none"
+  milestone_burden: "Inspect and repair only the exact P10-T05 event-store architecture validation dependency exposed by the cumulative checkpoint, then rerun one future normal checkpoint."
+  blocker_path: "research_control/tasks/RT-20260723-007/artifacts/validation_blocker_checkpoint_repository_p10_t05_event_store_architecture_v1.yaml"
+  blocker_sha256: "10508a937373f316e9bd744f292f8e4a860857fc813a7751581c5d6b07862711"
+  requires_human_gate: false
+  p12_t06_dependency_ready_after_checkpoint: false
+  p12_t06_executed: false
+
+selected_next_route:
+  route_id: "v21_p12_t06_attempt_rework_pass_saturation_dashboard"
+  route_label: "ordinary-research-packet"
+  role_family: "project-control-maintainer@0.2.0"
+  worker_skill: "improve-project-system"
+  plan_task_id: "P12-T06"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Make research-process selectivity observable."
+  requires_human_gate: false
+  dependency_independent_after_other_human_gates: true
+  project_system_boundary_authorized_by_plan: true
+  physics_promotion_authorized: false
+  dependency_ready_after_checkpoint: false
+  execution_ready_after_checkpoint: false
+  executed: false
+  next_action: "Aggregate append-only attempt events by task, candidate family, role, and work kind; distinguish syntax, validation, proof, interpretation, and physics failures; report repair and abandonment context; bind source hashes and freshness; suppress private prompt text and credentials."
+
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  sidecar_path: ""
+  recursive_goal_recovery_required: true
+  route: ""
+  blocker_path: "research_control/tasks/RT-20260723-007/artifacts/validation_blocker_checkpoint_repository_p10_t05_event_store_architecture_v1.yaml"
+  reason: "The exact identity and EOF defect is repaired, but the only checkpoint invocation exposed a distinct P10-T05 event-store architecture dependency that a fresh bounded recursive-goal recovery must own before P12-T06."
+
+handoff_authority_boundary:
+  this_handoff_authorizes: "Director consideration of one fresh bounded P12-T05 checkpoint-dependency recovery; P12-T06 remains conditional on a future committed checkpoint."
+  this_handoff_does_not_authorize:
+    - "P12-T06 execution inside RT-20260723-007"
+    - "checkpoint retry in generation 74 or legacy validation"
+    - "P10-T05 event-store architecture repair inside the consumed RT-20260723-007 worker"
+    - "validator, test, ordinary-route policy, evaluator, continuation runtime, route-history, threshold, or exception changes"
+    - "attempt, repair, abandonment, validation, or PASS counts treated as scientific truth, physics evidence, falsification, or Distance-to-GR progress"
+    - "private prompt, credential, personal, or sensitive-data exposure"
+    - "P4-T05 protected ontology decision without explicit human authority"
+    - "external contact, submission, publication, or outreach"
+    - "canonical ontology, source-law, scientific-ledger, or Distance-to-GR edits"
+    - "physical interpretation, ontology adoption, general EqSrc proof, benchmark promotion, publication, proof authority, completed derivation, or global no-go"
+
+verdict: "p12_t05_checkpoint_integrity_recovery_pass_checkpoint_blocked_p10_t05_architecture_dependency_no_physics_delta"
+coherent_resolution_summary: "The handoff identity and four EOF findings have one exact validated state, but the cumulative checkpoint remains uncommitted because the full repository shard exposed a distinct P10-T05 event-store architecture dependency."
+next_recommendation: "Continue the recursive relay with one fresh bounded improve-project-system recovery for the exact P10-T05 architecture dependency; only after a future committed checkpoint may P12-T06 run."

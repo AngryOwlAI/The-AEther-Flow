@@ -2,7 +2,7 @@
   "schema_id": "compact_current_frontier_v16",
   "generated_from": [
     "research_control/program_state.yaml",
-    "research_control/handoffs/handoff-0836.yaml",
+    "research_control/handoffs/handoff-0843.yaml",
     "registries/DISTANCE_TO_GR_LEDGER.csv",
     "registries/METRIC_USE_LEDGER.csv",
     "research_control/current_frontier.md",
@@ -11,17 +11,17 @@
     "research_control/design/active_state_bifurcation_policy_v1.md"
   ],
   "active_state": {
-    "active_task_id": "RT-20260723-003",
-    "latest_handoff_id": "handoff-0836",
-    "current_status": "p15_t03_selector_minimum_extension_theorem_manuscript_complete_p12_t05_selected",
+    "active_task_id": "RT-20260723-010",
+    "latest_handoff_id": "handoff-0843",
+    "current_status": "p12_t05_handoff_0842_markdown_identity_recovery_pass_checkpoint_ready",
     "v15_completed": false,
     "v16_completed": false,
     "v16_plan_registered": true
   },
   "active_state_bifurcation": {
-    "latest_research_task_id": "RT-20260723-003",
-    "latest_research_handoff_id": "handoff-0836",
-    "latest_research_next_action": "Run exactly one bounded v21 P12-T05 project-control-maintainer project-system AgentJob to replace misleading volume proxies with denominator-bound durable scientific-quality metrics without treating a score or system success as theorem truth or Distance-to-GR progress.",
+    "latest_research_task_id": "RT-20260723-010",
+    "latest_research_handoff_id": "handoff-0843",
+    "latest_research_next_action": "Run the one authorized governed checkpoint for AJ-RT-20260723-010-001. Only after it commits, continue the v21 relay with P12-T06 through one fresh bounded continue-research frame.",
     "latest_project_system_task_id": "none",
     "latest_project_system_status": "none",
     "latest_project_system_sidecar_task_id": "none",
@@ -30,10 +30,10 @@
     "next_research_route_source": "latest_research_handoff"
   },
   "next_route": {
-    "route_id": "v21_p12_t05_durable_scientific_quality_metrics",
+    "route_id": "continue_v21_p12_t06_after_checkpoint_v1",
     "role_family": "project-control-maintainer@0.2.0",
     "target_derivation_milestone": "source_equivalence_eqsrc",
-    "milestone_burden": "Reduce Goodhart pressure from packet counts.",
+    "milestone_burden": "Make research-process selectivity observable.",
     "requires_human_gate": false
   },
   "claim_boundary": {
@@ -607,7 +607,36 @@
   },
   "validation": {
     "latest_required_status": "PASS",
-    "pending_layers": []
+    "pending_layers": [
+      {
+        "layer": "post_checkpoint",
+        "status": "PENDING",
+        "evidence": [
+          "One normal governed checkpoint remains required before P12-T06."
+        ]
+      },
+      {
+        "layer": "renderer",
+        "status": "PENDING",
+        "evidence": [
+          "Task index current frontier compact frontier and memory derivatives remain to be synchronized."
+        ]
+      },
+      {
+        "layer": "memory_bootstrap",
+        "status": "PENDING",
+        "evidence": [
+          "Final tracked memory synchronization and validate-only remain required."
+        ]
+      },
+      {
+        "layer": "claim_language_linter",
+        "status": "PENDING",
+        "evidence": [
+          "Changed-source claim-language validation remains required on the finalized tree."
+        ]
+      }
+    ]
   },
   "authority_warning": {
     "snapshot_only_not_authority": true

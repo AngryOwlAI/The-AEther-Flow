@@ -1,0 +1,334 @@
+validation_status: "FAIL"
+job_id: "AJ-RT-20260723-005-001"
+completion_id: "AJC-AJ-RT-20260723-005-001"
+task_id: "RT-20260723-005"
+task_type: "project_system_p12_t05_metric_reporting_classifier_recovery"
+decision_id: "DDR-20260723-005"
+role_id: "validator-engineer"
+source_role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260723-005"
+status: "completed"
+final_repository_validation_status: "FAIL_REQUIRED_155_TEST_SHARD"
+created_at: "2026-07-23T11:03:47Z"
+started_at: "2026-07-23T11:03:47Z"
+completed_at: "2026-07-23T11:43:31Z"
+objective: "Classify exactly four P12-T05 metric-reporting outputs as generated derivatives and two metric-reporting scripts with existing validation-family vocabulary, prove the complete P12-T05 dirty manifest has a safe shadow plan while unrelated paths remain fail-closed, and run one normal governed checkpoint without legacy validation."
+completion_summary: "The classifier now recognizes the four exact P12-T05 report outputs as generated derivatives and the two exact metric-reporting scripts as validator_code. The exact 61-path predecessor manifest produces a safe checkpoint shadow plan, an unrelated path still falls back to unknown_governed_path and full validation, and all P12-T05 metric semantics are preserved. The required 155-test shard then passed 154 tests and failed one continuation-contract assertion because the ordinary-route guard emitted its designed threshold-next WARN while the test required PASS. The checkpoint was not invoked."
+objective_result: "exact_six_path_classification_pass_checkpoint_blocked_ordinary_route_guard_warning_contract"
+work_item_status: "blocked"
+result_disposition: "classifier_recovery_implemented_checkpoint_not_invoked_validation_contract_blocker"
+transaction_status: "blocked_ordinary_route_guard_threshold_warning_contract_recovery_required"
+checkpoint_commit: "none_not_invoked_required_validation_failed"
+project_system_change_only: true
+project_system_scope: "Exact P12-T05 metric-reporting classifier compatibility, focused regressions, task-local control records, generated derivatives, and one normal cumulative checkpoint only."
+scientific_claims_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  generation: 71
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:71"
+  immutable_route_hash: "919bb74f4ea10232c9d910a8bf86be6979c0f5501dc3b5960926bc14550b631e"
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_task_id: "P12-T05"
+  recovery_for_plan_task_id: "P12-T05"
+  next_plan_task_id: "P12-T06"
+  observed_result_kind: "classifier_recovery_validated_checkpoint_blocked"
+
+repair_result:
+  schema_id: "p12_t05_metric_reporting_classifier_recovery_result_v1"
+  status: "PASS"
+  receipt_path: "research_control/tasks/RT-20260723-005/artifacts/p12_t05_metric_reporting_classifier_recovery_receipt.json"
+  source_blocker_path: "research_control/tasks/RT-20260723-004/artifacts/validation_blocker_checkpoint_planner_unknown_scientific_quality_paths_v1.yaml"
+  source_blocker_sha256: "ab162996fbc7ced31f2fd6adb067a4ae2818448cb3db5ca67567621b6c1b9fba"
+  exact_generated_output_count: 4
+  exact_validator_code_script_count: 2
+  predecessor_manifest_path_count: 61
+  predecessor_manifest_unknown_path_count: 0
+  predecessor_manifest_blocked_path_count: 0
+  shadow_plan_status: "READY"
+  shadow_plan_execution_authority: "legacy"
+  shadow_plan_comparison_required: true
+  unrelated_unknown_path: "governed/new-format.bin"
+  unrelated_unknown_path_family: "unknown_governed_path"
+  unrelated_unknown_effective_profile: "full"
+  arbitrary_output_prefix_admitted: false
+  arbitrary_research_script_prefix_admitted: false
+  p12_t05_metric_semantics_changed: false
+  p12_t06_executed: false
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  observed_durable_outputs:
+    physics: []
+    project_system:
+      - "scripts/project_control/classify_project_changes.py"
+      - "tests/test_project_change_classifier.py"
+      - "tests/test_validation_planner.py"
+      - "tests/test_checkpoint_validation_planner.py"
+      - "research_control/tasks/RT-20260723-005/artifacts/p12_t05_metric_reporting_classifier_recovery_receipt.json"
+      - "research_control/tasks/RT-20260723-005/artifacts/validation_blocker_ordinary_route_guard_threshold_warning_contract_v1.yaml"
+  accepted_criteria:
+    physics: []
+    project_system:
+      - "the four exact reporting outputs are generated derivatives"
+      - "the two exact reporting scripts use validator_code without unknown_governed_path"
+      - "the exact 61-path P12-T05 manifest produces a safe checkpoint shadow plan"
+      - "an unrelated unrecognized path remains unknown_governed_path with full fallback"
+      - "P12-T05 metric semantics and all scientific authority remain unchanged"
+      - "one normal governed checkpoint commits without legacy validation"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+outputs_created:
+  - "research_control/tasks/RT-20260723-005/00_TASK.yaml"
+  - "research_control/tasks/RT-20260723-005/DDR-20260723-005.md"
+  - "research_control/tasks/RT-20260723-005/roles/validator-engineer@0.2.0--RT-20260723-005.yaml"
+  - "research_control/tasks/RT-20260723-005/jobs/AJ-RT-20260723-005-001.yaml"
+  - "research_control/tasks/RT-20260723-005/artifacts/p12_t05_metric_reporting_classifier_recovery_receipt.json"
+  - "research_control/tasks/RT-20260723-005/artifacts/validation_blocker_ordinary_route_guard_threshold_warning_contract_v1.yaml"
+  - "research_control/tasks/RT-20260723-005/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260723-005/jobs/completions/AJC-AJ-RT-20260723-005-001.yaml"
+  - "research_control/handoffs/handoff-0838.yaml"
+  - "research_control/handoffs/handoff-0838.md"
+outputs_updated:
+  - "scripts/project_control/classify_project_changes.py"
+  - "tests/test_project_change_classifier.py"
+  - "tests/test_validation_planner.py"
+  - "tests/test_checkpoint_validation_planner.py"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "policy-generated memory and wiki derivatives"
+
+physics_progress_status:
+  status: "no_distance_delta"
+  target_derivation_milestone: "none"
+  milestone_burden: "Project-system checkpoint-classifier compatibility only; no derivation milestone advances."
+  explanation: "The exact classifier repair changes only deterministic project-control routing for six already-authorized paths and supplies no physics evidence."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "source_equivalence_eqsrc"
+  milestone: "source_equivalence_eqsrc"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "Path classification and checkpoint compatibility change no scientific evidence, source law, metric, coupling, field equation, benchmark, or derivation burden."
+  downstream_unlocked:
+    - "P12-T05 ordinary-route warning-contract recovery packet"
+  downstream_still_blocked:
+    - "P12-T06 until the warning-contract recovery passes and one future normal P12-T05 checkpoint commits"
+    - "P4-T05 protected ontology-regime decision pending explicit human gate"
+    - "source_ontology_derivation"
+    - "general_eqsrc"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+    - "benchmark_promotion"
+    - "completed_derivation"
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 71 repository identity, immutable route, exact predecessor manifest, lease parity, and one-time consumption were verified before the worker invocation."
+      - "The source blocker, P12-T05 completion, handoff, metric taxonomy, classifier, planner, tests, registries, and prior exact-path recovery pattern were inspected."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Four exact outputs classify as generated derivatives and two exact scripts classify as validator_code with zero unknown paths."
+      - "The exact 61-path predecessor manifest produces a safe legacy-authority comparison-required shadow plan."
+      - "governed/new-format.bin remains unknown_governed_path and selects full validation."
+  post_write:
+    status: "FAIL"
+    evidence:
+      - "Classifier syntax and 105 focused classifier, validation-plan, and checkpoint-planner tests pass."
+      - "The preserved P12-T05 task-local metric validator passes 44 checks across 14 fixtures."
+      - "The required 155-test P12-T05 shard passed 154 tests and failed tests.test_research_control.ResearchControlTests.test_continue_research_reports_director_context_packet because ordinary_route_guard.status was WARN rather than the asserted PASS."
+  post_checkpoint:
+    status: "NOT_RUN"
+    evidence:
+      - "The checkpoint was not invoked because a required pre-checkpoint validation failed."
+      - "Nothing was staged or committed, and legacy validation was not used."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Current-frontier, task-index, compact-frontier, memory, and wiki derivatives were regenerated from the blocked control records."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "The project memory bootstrap and validate-only gates pass with nine known local-cache warnings."
+  claim_language_linter:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "Changed-surface claim-language validation preserves project-system-only, no-promotion, and no-completed-derivation boundaries."
+
+authorization_layers:
+  project_control_change_authorized: true
+  project_control_change_scope: "Exact generation-71 P12-T05 classifier recovery and one normal governed checkpoint only."
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  proof_authority: false
+  publication_authority: false
+
+forbidden_conclusion_summary:
+  system_success_is_physics_progress: false
+  system_success_is_distance_to_gr_progress: false
+  validator_pass_is_physics_evidence: false
+  route_selection_is_physics_evidence: false
+  scientific_truth_score_created: false
+  theorem_truth_inferred: false
+  ontology_modified: false
+  source_law_adopted: false
+  physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  proof_authority: false
+  publication_authority: false
+  completed_derivation_authorized: false
+  summary: "The classifier repair and future checkpoint do not alter P12-T05 metric semantics and do not establish theorem truth, scientific evidence, ontology, source law, effective metric, coupling, field equations, benchmark status, or completed derivation."
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: "999"
+    relationship_row_count: "4946"
+    semantic_row_count: "999"
+    vault_row_count: "999"
+    local_cache_only_warning_count: "9"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"checkpoint planner unknown_governed_path classifier metric reporting\" --limit 10 --json"
+      query_type: "search"
+      query_text: "checkpoint planner unknown_governed_path classifier metric reporting"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-TASKS-RT-20260723-004-SCIENTIFIC-QUALITY-METRIC-TAXONOMY-V1 --json"
+      query_type: "lookup"
+      query_text: "MD-RESEARCH-CONTROL-TASKS-RT-20260723-004-SCIENTIFIC-QUALITY-METRIC-TAXONOMY-V1"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-TASKS-RT-20260723-004-SCIENTIFIC-QUALITY-METRIC-TAXONOMY-V1"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+      source_hash: "a28c02150d17f3c39cf919fa305d585cbe1ea7a022dd81320fa2cb72c8126ebc"
+    - object_id: "MD-RESEARCH-CONTROL-TASKS-RT-20260723-004-SCIENTIFIC-QUALITY-METRIC-TAXONOMY-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260723-004/artifacts/scientific_quality_metric_taxonomy_v1.md"
+      source_hash: "b2e31738a445e68e4de6ea20381886bcd6c3747cccd693187f0904a7742ad308"
+  authority_note: "The registered P12-T05 taxonomy, implementation plan, and tracked blocker are canonical project-control authority; wiki, Obsidian, semantic, SQLite, and .local retrieval outputs are navigation layers and are not authority."
+
+command_results:
+  - command: ".venv/bin/python -m py_compile scripts/project_control/classify_project_changes.py"
+    status: "PASS"
+  - command: ".venv/bin/python -m unittest -v tests.test_project_change_classifier tests.test_validation_planner tests.test_checkpoint_validation_planner"
+    status: "PASS_105_OF_105"
+  - command: ".venv/bin/python scripts/project_control/classify_project_changes.py --json --paths output/ai_methodology_metrics_dashboard.json output/ai_methodology_metrics_dashboard.md output/physics_progress_metrics.json output/physics_progress_metrics.md scripts/research_control/report_physics_progress_metrics.py scripts/research_control/scientific_quality_metrics.py"
+    status: "PASS_ZERO_UNKNOWN_ZERO_BLOCKED"
+  - command: ".venv/bin/python -m scripts.validation.cli plan --profile checkpoint --paths output/ai_methodology_metrics_dashboard.json output/ai_methodology_metrics_dashboard.md output/physics_progress_metrics.json output/physics_progress_metrics.md scripts/research_control/report_physics_progress_metrics.py scripts/research_control/scientific_quality_metrics.py --explain"
+    status: "PASS_READY_AFFECTED_ZERO_UNKNOWN"
+  - command: ".venv/bin/python research_control/tasks/RT-20260723-004/artifacts/validate_scientific_quality_metrics.py --check --json"
+    status: "PASS_44_CHECKS_14_FIXTURES"
+  - command: ".venv/bin/python scripts/research_control/render_current_frontier.py --write"
+    status: "PASS"
+  - command: ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --write"
+    status: "PASS"
+  - command: ".venv/bin/python -m unittest tests.test_scientific_quality_metrics tests.test_report_physics_progress_metrics tests.test_research_control"
+    status: "FAIL_1_OF_155_ORDINARY_ROUTE_GUARD_THRESHOLD_WARNING_CONTRACT"
+  - command: ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260723-005-001"
+    status: "NOT_RUN_VALIDATION_BLOCKER"
+
+validation_blocker:
+  blocker_path: "research_control/tasks/RT-20260723-005/artifacts/validation_blocker_ordinary_route_guard_threshold_warning_contract_v1.yaml"
+  blocker_sha256: "70e2cb4620a2d77ccd35de83611a6ccf5c6c664d92861b5f2195fda304bf0dd5"
+  failed_validator: "task_selected_test_shard"
+  failed_test: "tests.test_research_control.ResearchControlTests.test_continue_research_reports_director_context_packet"
+  required_shard_status: "FAIL_1_OF_155_ORDINARY_ROUTE_GUARD_THRESHOLD_WARNING_CONTRACT"
+  checkpoint_invoked: false
+  checkpoint_staged: false
+  checkpoint_committed: false
+  legacy_validation_used: false
+  preservation_reason: "Generation 71 authorizes only the exact six-path classifier recovery. Reconciling the route-guard warning with the continuation contract is a distinct policy-contract repair requiring a fresh governed generation."
+
+required_recovery:
+  strategy_id: "reconcile_ordinary_route_guard_threshold_warning_validation_contract_v1"
+  route_label: "project-system-recovery"
+  role_family: "validator-engineer@0.2.0"
+  worker_skill: "improve-project-system"
+  plan_task_id: "P12-T05"
+  target_derivation_milestone: "none"
+  milestone_burden: "Restore continuation-contract compatibility while preserving exact route history, the threshold-next warning policy, the threshold-three hard guard, the completed classifier repair, and every scientific boundary."
+  requires_human_gate: false
+  project_system_boundary_authorized_by_plan: false
+  physics_promotion_authorized: false
+  dependency_ready_after_checkpoint: false
+  executed: false
+
+selected_next_route:
+  route_id: "v21_p12_t06_attempt_rework_pass_saturation_dashboard"
+  route_label: "ordinary-research-packet"
+  role_family: "project-control-maintainer@0.2.0"
+  worker_skill: "improve-project-system"
+  plan_task_id: "P12-T06"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: false
+  execution_ready_after_checkpoint: false
+  executed: false
+  next_action: "Aggregate append-only attempt events by task, candidate family, role, and work kind; distinguish syntax, validation, proof, interpretation, and physics failures; report repair and abandonment context; bind source hashes and freshness; suppress private prompt text and credentials."
+
+project_improvement_signals: []
+notes: "This completion preserves a successful exact classifier repair and a distinct validation blocker. One fresh P12-T05 warning-contract recovery is required before any checkpoint or P12-T06 execution."

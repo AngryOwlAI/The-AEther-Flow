@@ -1,0 +1,271 @@
+validation_status: "FAIL"
+handoff_id: "handoff-0842"
+task_id: "RT-20260723-009"
+job_id: "AJ-RT-20260723-009-001"
+completion_id: "AJC-AJ-RT-20260723-009-001"
+completion_path: "research_control/tasks/RT-20260723-009/jobs/completions/AJC-AJ-RT-20260723-009-001.yaml"
+completion_sha256: "276d5d315b13bf09861eeab88c6cdf06edc3b4a5cc7f1cabe29f2f109c9836c0"
+status: "ready_for_director"
+created_at: "2026-07-23T16:53:37Z"
+parent_handoff_id: "handoff-0841"
+plan_task_id: "P12-T05"
+source_role_id: "process-integrity-auditor"
+source_role_version: "0.1.0"
+source_execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260723-009"
+summary: "Generation 76 removed exactly three ASCII commas from the RT-008 execution-role authority_delta_summary, reached exact equality with its existing registry value, reconstructed the sealed pre-edit hash when those commas were restored, and preserved all completed P10-T05 and P10-T07 recovery hashes. Every staged checkpoint gate except the repository test shard passed. The single checkpoint committed nothing because the Handoff 0842 Markdown mirror lacks the exact canonical handoff-0842 identity literal required by the live narrow routing snapshot; the entry index was restored, and no retry or legacy validation is authorized. No authority semantics, validator behavior, scientific status, ontology, ledger, protected authority, or P12-T06 execution changed."
+next_action: "Run exactly one fresh bounded P12-T05 improve-project-system recovery to make the Handoff 0842 Markdown mirror contain its exact canonical handoff-0842 identity literal, preserve the completed role-registry parity and P10 recovery bytes, validate the live narrow routing snapshot and repository shard, and invoke at most one future checkpoint before P12-T06."
+current_claim_boundary: "CB-V21-P12-T05-RT008-ROLE-REGISTRY-PARITY-RECOVERY-001"
+loop_risk_route: "repair_handoff_0842_markdown_identity_and_checkpoint_v1"
+
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260723-009"
+  latest_research_handoff_id: "handoff-0842"
+  latest_research_next_action: "Run exactly one fresh bounded P12-T05 improve-project-system recovery to make the Handoff 0842 Markdown mirror contain its exact canonical handoff-0842 identity literal, preserve the completed role-registry parity and P10 recovery bytes, validate the live narrow routing snapshot and repository shard, and invoke at most one future checkpoint before P12-T06."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+
+claim_boundary:
+  allowed_next_scope: "One fresh bounded P12-T05 improve-project-system recovery may synchronize only the Handoff 0842 Markdown mirror with its exact canonical handoff-0842 identity literal, preserve the completed parity and P10 recovery bytes, and invoke at most one future normal checkpoint."
+  newly_completed_recovery_task: "RT-20260723-009"
+  recovery_for_plan_task_id: "P12-T05"
+  recovery_completion_path: "research_control/tasks/RT-20260723-009/jobs/completions/AJC-AJ-RT-20260723-009-001.yaml"
+  recovery_completion_sha256: "276d5d315b13bf09861eeab88c6cdf06edc3b4a5cc7f1cabe29f2f109c9836c0"
+  recovery_receipt_path: "research_control/tasks/RT-20260723-009/artifacts/rt008_role_registry_parity_recovery_receipt.json"
+  recovery_receipt_sha256: "905d15d24b5467acfdc435d525a1481a6cc26ca1b3ef297b2e8f4aec61b8108e"
+  source_blocker_path: "research_control/tasks/RT-20260723-008/artifacts/validation_blocker_checkpoint_role_authority_delta_summary_parity_v1.yaml"
+  source_blocker_sha256: "cc0be4f906ddc236aff553907ce3d5c84ec8e867f53b7dfe898901e69c1e6abc"
+  checkpoint_blocker_path: "research_control/tasks/RT-20260723-009/artifacts/validation_blocker_checkpoint_handoff_markdown_identity_v1.yaml"
+  checkpoint_blocker_sha256: "62cc1443ee47b0fa3b219b17c306156fd47fd4e138263a5d44bcf15eec0d1cef"
+  role_sha256_before: "b82db5556099ebea5fd05b174bc7d68d2807ffeb1de4bd813dc846d326f49218"
+  role_sha256_after: "7d9a91e1cffaa0a2aa3b75196118c9f4f56611f95e5997baf019371fa9cefdfa"
+  ascii_comma_count_removed: 3
+  total_byte_count_removed: 3
+  exact_role_registry_parity: true
+  non_target_role_bytes_unchanged: true
+  registry_value_changed: false
+  authority_semantics_changed: false
+  p10_t05_or_p10_t07_repair_rewritten: false
+  p10_t05_validation_status: "PASS_ZERO_DRIFT"
+  p10_t07_validation_status: "PASS_13_CHECKS_ZERO_DRIFT"
+  p10_migration_readiness_status: "PASS_30_FOCUSED_TESTS"
+  legacy_validation_used: false
+  event_store_activation_changed: false
+  p12_t05_metric_semantics_changed: false
+  p12_t05_checkpoint_ready: false
+  p12_t05_checkpoint_committed: false
+  checkpoint_invocation_count: 1
+  checkpoint_staged_after_failure: false
+  checkpoint_entry_index_restored: true
+  p12_t06_dependency_ready_after_checkpoint: false
+  p12_t06_selected_next: false
+  p12_t06_executed: false
+  p4_t05_dependency_ready: true
+  p4_t05_requires_human_gate: true
+  p4_t05_executed: false
+  scientific_ledger_change_count: 0
+  scientific_status_changed: false
+  distance_to_gr_delta_changed: false
+  ontology_adoption_authorized: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  blocked_claims:
+    - "attempt failure abandonment repair validation or PASS counts presented as physics falsification scientific proof or Distance-to-GR progress"
+    - "private prompt credential personal or sensitive text exposed in P12-T06 reporting"
+    - "checkpoint retry in generation 76 or legacy validation"
+    - "P12-T06 executed before a fresh recovery checkpoint commits"
+    - "P4-T05 protected ontology decision executed without exact human authority"
+    - "event-store activation pilot cutover authority transfer or SQLite tracking"
+    - "canonical ontology source-law scientific-ledger or Distance-to-GR edit"
+    - "general EqSrc effective metric matter coupling Einstein-equation derivation benchmark promotion proof publication completed derivation or global no-go"
+
+parity_recovery_result:
+  receipt_path: "research_control/tasks/RT-20260723-009/artifacts/rt008_role_registry_parity_recovery_receipt.json"
+  receipt_sha256: "905d15d24b5467acfdc435d525a1481a6cc26ca1b3ef297b2e8f4aec61b8108e"
+  role_record_path: "research_control/tasks/RT-20260723-008/roles/validator-engineer@0.2.0--RT-20260723-008.yaml"
+  role_record_sha256: "7d9a91e1cffaa0a2aa3b75196118c9f4f56611f95e5997baf019371fa9cefdfa"
+  exact_parity: true
+  comma_removal_count: 3
+  non_target_bytes_unchanged: true
+  current_contract_sha256: "299400cc29ec0b234cf6b8174272e687ca05618e65187136691d1950af2302b4"
+  architecture_validation_sha256: "b6d4d119539687e4566d90d67b4bbe8cab82cd754cfbd5b08f40848090ac244a"
+  architecture_receipt_sha256: "25773a9eabaaef9e7e2a747707889c0b5b4e4f038b84df22c2b02523dca4ee47"
+  artifact_manifest_sha256: "5e68c64aeab61103ea18345b449ff09c74ad08cac9995c8c94cef03dd2eac4c5"
+  artifact_compact_receipt_sha256: "22c8ed3c8c43798c2d837ed2ce7bce5d9e633ee4b5e17eff9a3b49f2df3f0e32"
+  prior_recovery_receipt_sha256: "37ded5d749861c56928007d6b325fb3d81cca1aa5b54d468b1d4f4ab4e710544"
+  prior_completion_sha256: "94f6cf06b05072019cf2f3d7849153e7f12b9a047238a41bae96fb2c8deea3da"
+  architecture_status: "PASS_ZERO_DRIFT"
+  identity_status: "PASS_13_CHECKS_ZERO_DRIFT"
+  migration_readiness_status: "PASS_30_FOCUSED_TESTS"
+  checkpoint_status: "FAIL_REPOSITORY_SHARD_HANDOFF_MARKDOWN_IDENTITY_INDEX_RESTORED_NO_COMMIT"
+  checkpoint_invocation_count: 1
+  checkpoint_staged_after_failure: false
+  checkpoint_committed: false
+  event_store_activation_changed: false
+  p12_t05_metric_semantics_changed: false
+  p12_t06_executed: false
+
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "none"
+  milestone: "none"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "The recovery removes three punctuation bytes from a project-control execution-role summary only."
+  downstream_unlocked:
+    - "P12-T05_handoff_0842_markdown_identity_recovery"
+  downstream_still_blocked:
+    - "P12-T06_until_fresh_recovery_checkpoint_commits"
+    - "source_ontology_derivation"
+    - "general_eqsrc"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+    - "benchmark_promotion"
+    - "external_publication"
+
+required_next_packet:
+  task_type: "project_system_handoff_markdown_identity_checkpoint_recovery"
+  task_taxonomy:
+    schema_id: "v21_task_taxonomy_v1"
+    work_kind: "benchmark_or_recovery"
+    milestone: "not_applicable"
+    candidate_family: "handoff_markdown_identity_checkpoint_recovery"
+    result_kind: "completed_or_precisely_blocked"
+    authority: "project_control"
+    scope: "project_system"
+
+selected_next_route:
+  route_id: "repair_handoff_0842_markdown_identity_and_checkpoint_v1"
+  route_label: "project-system-recovery"
+  role_family: "process-integrity-auditor@0.1.0"
+  worker_skill: "improve-project-system"
+  plan_task_id: "P12-T05"
+  target_derivation_milestone: "none"
+  milestone_burden: "Restore the exact handoff-0842 Markdown identity literal and preserve the completed cumulative P12-T05 transaction before any future checkpoint."
+  requires_human_gate: false
+  dependency_independent_after_other_human_gates: true
+  project_system_boundary_authorized_by_plan: true
+  physics_promotion_authorized: false
+  dependency_ready: true
+  execution_ready_after_checkpoint: false
+  executed: false
+  blocker_path: "research_control/tasks/RT-20260723-009/artifacts/validation_blocker_checkpoint_handoff_markdown_identity_v1.yaml"
+  blocker_sha256: "62cc1443ee47b0fa3b219b17c306156fd47fd4e138263a5d44bcf15eec0d1cef"
+  next_action: "Make the Handoff 0842 Markdown mirror contain the exact canonical handoff-0842 identity literal, validate live narrow routing and the full repository shard, preserve every completed parity and P10 recovery byte, and invoke at most one future checkpoint."
+  source_handoff: "research_control/handoffs/handoff-0842.yaml"
+
+ordinary_route_guard:
+  schema_id: "ordinary_route_guard_evaluation_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  evaluation_id: "ORE-HANDOFF-0842"
+  ordinary_handoff_id: "handoff-0842"
+  threshold: 3
+  consecutive_project_system_tasks_before_selection: 6
+  ready_science_plan_task_ids:
+    - "P4-T05"
+  selected_plan_task_id: "P12-T05"
+  selected_route_class: "project_system"
+  selected_worker_skill: "improve-project-system"
+  outcome: "all_ready_science_blocked_exception"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  exception_receipt:
+    active: true
+    schema_id: "ordinary_route_exception_receipt_v1"
+    exception_class: "all_ready_science_blocked"
+    ordinary_handoff_id: "handoff-0842"
+    ready_science_plan_task_ids:
+      - "P4-T05"
+    blocked_routes:
+      - plan_task_id: "P4-T05"
+        failure_class: "human_gate_required"
+        evidence_path: "research_control/design/v21_recommendation_backlog.yaml"
+        evidence_sha256: "849a4e8dfe848e80bc0c8236252b924e636e5c95ac1a090478a69f7f5377559f"
+        reason: "P4-T05 is dependency-ready but the registered backlog requires explicit human Gate Chair authority, which this relay generation does not possess."
+    authority_limits:
+      ordinary_research_handoff_authoritative: true
+      project_system_sidecar_supersedes: false
+      system_success_counts_as_physics: false
+      system_success_counts_as_distance_to_gr: false
+      scientific_status_changed: false
+      physics_promotion_authorized: false
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 76 was validated, claimed, and consumed exactly once before its one routed worker invocation."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Exact parity, exact byte-removal count, and non-target byte preservation are sealed in the task-local receipt."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Architecture and artifact-identity validators report zero drift and thirty focused tests pass."
+  post_checkpoint:
+    status: "FAIL"
+    evidence:
+      - "The single governed checkpoint failed the repository shard because the Handoff 0842 Markdown mirror lacks the exact canonical handoff-0842 literal."
+      - "The entry index was restored, no commit was created, and no retry or legacy validation is authorized."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Task-index, current-frontier, compact-frontier, and memory derivatives were regenerated from finalized state."
+  memory_bootstrap:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "Tracked memory synchronization and validate-only pass; nine warnings are confined to local retrieval-cache freshness."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation passes with zero hard failures and zero current warnings."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  push_authorized: false
+  publication_authorized: false
+  proof_authority: false
+
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  sidecar_path: ""
+  recursive_goal_recovery_required: true
+  blocker_path: "research_control/tasks/RT-20260723-009/artifacts/validation_blocker_checkpoint_handoff_markdown_identity_v1.yaml"
+  reason: "The exact parity recovery passed, but its only checkpoint exposed one exact Handoff 0842 Markdown identity-literal defect that a fresh bounded recursive-goal recovery must own before P12-T06."
+
+handoff_authority_boundary:
+  this_handoff_authorizes: "Director consideration of exactly one fresh bounded P12-T05 Handoff 0842 Markdown identity recovery."
+  this_handoff_does_not_authorize:
+    - "checkpoint retry in generation 76 or legacy validation"
+    - "role-registry parity or completed P10 recovery rewrite"
+    - "P12-T06 execution before a fresh recovery checkpoint commits"
+    - "private prompt credential personal or sensitive text disclosure"
+    - "failure abandonment repair validation or PASS counts treated as physics refutations scientific proof or Distance-to-GR progress"
+    - "P4-T05 protected ontology decision without exact human authority"
+    - "event-store activation pilot cutover authority transfer or SQLite tracking"
+    - "canonical ontology source-law scientific-ledger or Distance-to-GR edit"
+    - "physical interpretation establishment ontology adoption general EqSrc proof benchmark promotion publication proof authority completed derivation or global no-go"

@@ -1,0 +1,81 @@
+validation_status: "FAIL"
+task_id: "RT-20260723-008"
+task_type: "project_system_p10_t05_event_store_content_address_receipt_recovery"
+title: "Reseal the P10-T05 source binding and dependent P10-T07 identities"
+task_taxonomy:
+  schema_id: "v21_task_taxonomy_v1"
+  work_kind: "benchmark_or_recovery"
+  milestone: "not_applicable"
+  candidate_family: "p10_t05_event_store_content_address_receipt_recovery"
+  result_kind: "completed_or_precisely_blocked"
+  authority: "project_control"
+  scope: "project_system"
+status: "blocked"
+created_at: "2026-07-23T15:04:08Z"
+updated_at: "2026-07-23T15:35:11Z"
+closed_at: "2026-07-23T15:35:11Z"
+parent_task_id: "RT-20260723-007"
+parent_handoff_id: "handoff-0840"
+supersedes_active_routing_task_id: "RT-20260723-007"
+current_decision_id: "DDR-20260723-008"
+current_job_id: "AJ-RT-20260723-008-001"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260723-008"
+requires_human_gate: false
+human_authorization_note: "Generation 75 of the immutable user-requested relay routes exactly one improve-project-system frame to repair the exact P10-T05 checkpoint dependency and its deterministic P10-T07 identities."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P12"
+  plan_task_id: "P12-T05"
+  recovery_for_plan_task_id: "P12-T05"
+  next_plan_task_id: "P12-T06"
+objective: "Bind the design-only P10-T05 architecture contract to the current governed metrics consumer hash, regenerate its two deterministic receipts and exactly three dependent P10-T07 identity outputs, preserve both predecessor content copies byte-for-byte, and invoke one normal governed checkpoint before P12-T06."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system content-address and checkpoint compatibility only; preserve every P12-T05 scientific and Distance-to-GR boundary unchanged."
+route_label: "reseal_p10_t05_source_binding_and_p10_t07_identity_v1"
+project_system_change_only: true
+dual_budget_category: "system_bearing"
+primary_budget: "project_system"
+scientific_claims_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+claim_boundary_id: "CB-V21-P12-T05-P10-T05-EVENT-STORE-IDENTITY-RECOVERY-001"
+claim_boundary:
+  allowed_scope: "One exact P10-T05 source-binding hash; its deterministic validation and compact receipt; exactly three current P10-T07 identity outputs; preservation of both predecessor content copies; task-local recovery evidence; standard control closure and generated derivatives; one normal checkpoint for the cumulative P12-T05 transaction."
+  immutable_predecessor_task: "RT-20260723-007"
+  immutable_predecessor_job: "AJ-RT-20260723-007-001"
+  immutable_predecessor_completion: "AJC-AJ-RT-20260723-007-001"
+  immutable_predecessor_handoff: "handoff-0840"
+  source_blocker_path: "research_control/tasks/RT-20260723-007/artifacts/validation_blocker_checkpoint_repository_p10_t05_event_store_architecture_v1.yaml"
+  source_blocker_sha256: "10508a937373f316e9bd744f292f8e4a860857fc813a7751581c5d6b07862711"
+  p10_t05_source_binding_count_changed: 1
+  p10_t05_derived_receipt_count: 2
+  p10_t07_identity_output_count: 3
+  predecessor_content_copy_count: 2
+  event_store_activation_changed: false
+  p12_t05_scientific_payload_changed: false
+  p12_t06_executed: false
+  scientific_claims_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+documentation_impact_id: "DI-RT-20260723-008-001"
+completion_id: "AJC-AJ-RT-20260723-008-001"
+output_artifacts:
+  - "research_control/tasks/RT-20260723-008/artifacts/reseal_p10_t05_p10_t07_identity.py"
+  - "research_control/tasks/RT-20260723-008/artifacts/p10_t05_p10_t07_identity_recovery_receipt.json"
+  - "research_control/tasks/RT-20260723-008/artifacts/validation_blocker_checkpoint_role_authority_delta_summary_parity_v1.yaml"
+  - "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_contract.json"
+  - "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_validation.json"
+  - "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_compact_receipt.json"
+  - "research_control/tasks/RT-20260722-002/artifacts/artifact_refs.json"
+  - "research_control/tasks/RT-20260722-002/artifacts/ca/299400cc29ec0b234cf6b8174272e687ca05618e65187136691d1950af2302b4.json"
+  - "research_control/tasks/RT-20260722-002/artifacts/compact_receipt.json"
+  - "research_control/handoffs/handoff-0841.yaml"
+  - "research_control/handoffs/handoff-0841.md"
+closure_status: "content_address_recovery_pass_checkpoint_blocked_role_registry_authority_delta_summary_parity"
+summary: "Generation 75 resealed one exact P10-T05 source binding, its two receipts, and three P10-T07 identities with both predecessor copies and authority boundaries preserved, but its only checkpoint invocation committed nothing after staged research-control validation found one punctuation-only RT-008 role-registry authority_delta_summary mismatch."
+next_recommended_action: "Route one fresh bounded P12-T05 improve-project-system recovery to reconcile only the RT-008 role-registry authority_delta_summary parity defect, preserve the completed content-address repair, and invoke at most one future normal checkpoint; do not retry the checkpoint or execute P12-T06 in RT-20260723-008."
+project_improvement_signals: []
+notes: "The intended P10-T05 and P10-T07 recovery passed. The checkpoint restored the entry index and committed nothing; no retry, legacy validation, authority-semantics change, P12-T06 execution, or scientific authority change occurred."

@@ -1,0 +1,94 @@
+schema_id: "validation_blocker_checkpoint_handoff_markdown_identity_v1"
+blocker_id: "VB-RT-20260723-009-CHECKPOINT-HANDOFF-MARKDOWN-IDENTITY-001"
+task_id: "RT-20260723-009"
+job_id: "AJ-RT-20260723-009-001"
+created_at: "2026-07-23T16:53:37Z"
+status: "active_blocking"
+failed_gate: "test_shard_repository"
+failed_command: ".venv/bin/python -m unittest discover -s tests"
+checkpoint_status: "blocked"
+checkpoint_reason: "planner staged acceptance or legacy comparison failed"
+checkpoint_invocation_count: 1
+checkpoint_committed: false
+checkpoint_staged_after_failure: false
+entry_index_restored: true
+legacy_validation_used: false
+staged_tree_sha1: "b4cd7aad5f76893ef9135c9c7eb733e155252b44"
+checkpoint_receipt_summary:
+  duration_seconds: "794.24932"
+  subprocess_count: 11
+  memory_sync_status: "PASS"
+  memory_core_status: "PASS"
+  classifier_status: "PASS"
+  project_improvement_signals_status: "PASS"
+  documentation_impact_status: "PASS"
+  research_control_diff_status: "PASS"
+  repository_test_shard_status: "FAIL"
+  git_diff_check_status: "PASS"
+  planner_shadow_comparison_status: "PASS"
+  agentjob_allowlist_status: "PASS"
+  unstaged_residue_status: "PASS"
+  staged_tree_integrity_status: "PASS"
+  entry_index_restoration_status: "PASS"
+  child_receipt_path: ".local/validation-receipts/5fdb4a94a5136a980b14c90b290edc80d5bffc547f521ef9a53db6c9866d794a/RUN-CHECKPOINT-c72343e1e692f6f3/receipt.json"
+  child_receipt_sha256: "72f5ded7c6227ff174f1ba422c47b7839769ae5c742e077ad0df4058437c64a2"
+repository_test_result:
+  test_count: 1190
+  failure_count: 3
+  error_count: 1
+  duration_seconds: "622.717"
+  status: "FAIL"
+  failed_tests:
+    - "tests.test_research_control.ResearchControlTests.test_continue_research_reports_director_context_packet"
+    - "test_routing_snapshot.NarrowRoutingSnapshotTests.test_live_default_does_not_compute_advisory_metrics"
+    - "test_routing_snapshot.NarrowRoutingSnapshotTests.test_live_narrow_and_full_validation_agree_on_current_state"
+    - "test_routing_snapshot.NarrowRoutingSnapshotTests.test_live_narrow_snapshot_has_subsecond_python_runtime"
+  shared_root_cause: "The latest handoff Markdown mirror does not contain the exact canonical latest_handoff_id literal handoff-0842, so the narrow routing snapshot fails closed and the dependent Director-context test receives no live snapshot."
+  exact_error: "[latest_handoff] research_control/handoffs/handoff-0842.md does not identify handoff-0842"
+  validator_path: "scripts/research_control/validate_routing_snapshot.py"
+  validator_line: 772
+handoff_markdown_identity:
+  markdown_path: "research_control/handoffs/handoff-0842.md"
+  markdown_sha256: "f2a498ef6bbd06e9de8a97600fcc3033ec3bb906359cc4bc17f3a2b0619a81b2"
+  canonical_handoff_id: "handoff-0842"
+  canonical_literal_present: false
+  current_heading: "# Handoff 0842 — RT-008 role-registry parity restored"
+  semantic_handoff_identity_intended: true
+  punctuation_or_case_only_repair_available: true
+completed_parity_recovery_preservation:
+  parity_receipt_path: "research_control/tasks/RT-20260723-009/artifacts/rt008_role_registry_parity_recovery_receipt.json"
+  parity_receipt_sha256: "905d15d24b5467acfdc435d525a1481a6cc26ca1b3ef297b2e8f4aec61b8108e"
+  rt008_role_record_sha256: "7d9a91e1cffaa0a2aa3b75196118c9f4f56611f95e5997baf019371fa9cefdfa"
+  exact_role_registry_parity: true
+  ascii_comma_count_removed: 3
+  non_target_role_bytes_unchanged: true
+  p10_t05_architecture_status: "PASS_ZERO_DRIFT"
+  p10_t07_identity_status: "PASS_13_CHECKS_ZERO_DRIFT"
+  p10_migration_readiness_status: "PASS_30_FOCUSED_TESTS"
+  event_store_activation_changed: false
+  p12_t05_metric_semantics_changed: false
+  p12_t06_executed: false
+required_recovery:
+  strategy_id: "repair_handoff_0842_markdown_identity_and_checkpoint_v1"
+  route_label: "project-system-recovery"
+  role_family: "process-integrity-auditor@0.1.0"
+  worker_skill: "improve-project-system"
+  work_item_id: "P12-T05"
+  scope: "Make the handoff-0842 Markdown mirror contain the exact canonical handoff-0842 identity literal, preserve every other completed parity and P10 recovery byte unless a generated derivative must be refreshed, validate the live narrow routing snapshot and full repository shard, and invoke at most one future normal checkpoint."
+  next_plan_item_after_recovery: "P12-T06"
+  requires_human_gate: false
+  checkpoint_retry_in_current_worker_authorized: false
+  legacy_validation_authorized: false
+authority_limits:
+  parity_repair_rewrite_authorized: false
+  p10_t05_or_p10_t07_repair_rewrite_authorized: false
+  p12_t06_executed: false
+  scientific_status_changed: false
+  scientific_ledger_changed: false
+  distance_to_gr_changed: false
+  ontology_or_source_law_adopted: false
+  physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  proof_authority: false
+  publication_authority: false
+preservation_reason: "The single generation-76 checkpoint invocation is consumed. It exposed one exact handoff Markdown identity-literal defect after role-registry parity and every other staged gate passed, so a fresh bounded recovery must own the mirror correction and any future checkpoint before P12-T06."

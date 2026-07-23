@@ -1,0 +1,54 @@
+{
+  "schema_id": "rt008_role_registry_parity_recovery_receipt_v1",
+  "receipt_id": "RT008-ROLE-REGISTRY-PARITY-RECOVERY-20260723-001",
+  "task_id": "RT-20260723-009",
+  "job_id": "AJ-RT-20260723-009-001",
+  "created_at": "2026-07-23T16:17:04Z",
+  "status": "PASS",
+  "source_blocker": {
+    "path": "research_control/tasks/RT-20260723-008/artifacts/validation_blocker_checkpoint_role_authority_delta_summary_parity_v1.yaml",
+    "sha256": "cc0be4f906ddc236aff553907ce3d5c84ec8e867f53b7dfe898901e69c1e6abc"
+  },
+  "target": {
+    "execution_role_ref": "validator-engineer@0.2.0--RT-20260723-008",
+    "record_path": "research_control/tasks/RT-20260723-008/roles/validator-engineer@0.2.0--RT-20260723-008.yaml",
+    "registry_path": "registries/ROLE_EXECUTION_REGISTRY.csv",
+    "field": "authority_delta_summary",
+    "record_value_before": "One-job Validator Engineer overlay for one exact P10-T05 source-binding reseal, five deterministic dependent outputs, predecessor-copy preservation, and one cumulative checkpoint",
+    "record_value_after": "One-job Validator Engineer overlay for one exact P10-T05 source-binding reseal five deterministic dependent outputs predecessor-copy preservation and one cumulative checkpoint",
+    "registry_value": "One-job Validator Engineer overlay for one exact P10-T05 source-binding reseal five deterministic dependent outputs predecessor-copy preservation and one cumulative checkpoint",
+    "record_sha256_before": "b82db5556099ebea5fd05b174bc7d68d2807ffeb1de4bd813dc846d326f49218",
+    "record_sha256_after": "7d9a91e1cffaa0a2aa3b75196118c9f4f56611f95e5997baf019371fa9cefdfa",
+    "ascii_comma_count_removed": 3,
+    "total_byte_count_removed": 3,
+    "exact_parity_after": true,
+    "non_target_bytes_unchanged": true,
+    "registry_value_changed": false,
+    "authority_semantics_changed": false
+  },
+  "completed_recovery_preservation": {
+    "event_store_architecture_contract_sha256": "299400cc29ec0b234cf6b8174272e687ca05618e65187136691d1950af2302b4",
+    "event_store_architecture_validation_sha256": "b6d4d119539687e4566d90d67b4bbe8cab82cd754cfbd5b08f40848090ac244a",
+    "event_store_architecture_compact_receipt_sha256": "25773a9eabaaef9e7e2a747707889c0b5b4e4f038b84df22c2b02523dca4ee47",
+    "artifact_refs_sha256": "5e68c64aeab61103ea18345b449ff09c74ad08cac9995c8c94cef03dd2eac4c5",
+    "current_contract_copy_sha256": "299400cc29ec0b234cf6b8174272e687ca05618e65187136691d1950af2302b4",
+    "artifact_compact_receipt_sha256": "22c8ed3c8c43798c2d837ed2ce7bce5d9e633ee4b5e17eff9a3b49f2df3f0e32",
+    "rt008_recovery_receipt_sha256": "37ded5d749861c56928007d6b325fb3d81cca1aa5b54d468b1d4f4ab4e710544",
+    "rt008_completion_sha256": "94f6cf06b05072019cf2f3d7849153e7f12b9a047238a41bae96fb2c8deea3da",
+    "p10_t05_or_p10_t07_repair_rewritten": false,
+    "event_store_activation_changed": false,
+    "p12_t05_metric_semantics_changed": false
+  },
+  "authority_limits": {
+    "p12_t06_executed": false,
+    "scientific_status_changed": false,
+    "scientific_ledger_changed": false,
+    "distance_to_gr_changed": false,
+    "ontology_or_source_law_adopted": false,
+    "physics_promotion_authorized": false,
+    "benchmark_promotion_authorized": false,
+    "proof_authority": false,
+    "publication_authority": false
+  },
+  "verdict": "PASS_EXACT_THREE_COMMA_REMOVAL_ROLE_REGISTRY_PARITY_RECOVERY_BYTES_PRESERVED_CHECKPOINT_REQUIRED"
+}

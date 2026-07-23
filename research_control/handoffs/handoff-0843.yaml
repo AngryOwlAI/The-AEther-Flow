@@ -1,0 +1,258 @@
+validation_status: "PASS"
+handoff_id: "handoff-0843"
+task_id: "RT-20260723-010"
+job_id: "AJ-RT-20260723-010-001"
+completion_id: "AJC-AJ-RT-20260723-010-001"
+completion_path: "research_control/tasks/RT-20260723-010/jobs/completions/AJC-AJ-RT-20260723-010-001.yaml"
+completion_sha256: "4e9299c442b3ec2ca076499a63c748d9abdb62277fc4a2cfd095ea4711a88435"
+status: "ready_for_director"
+created_at: "2026-07-23T17:33:42Z"
+parent_handoff_id: "handoff-0842"
+plan_task_id: "P12-T05"
+source_role_id: "process-integrity-auditor"
+source_role_version: "0.1.0"
+source_execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260723-010"
+summary: "Generation 77 replaced exactly two heading bytes in handoff-0842.md, restored the exact canonical handoff-0842 literal, reconstructed the sealed pre-repair hash, and preserved every other Markdown byte, handoff-0842.yaml, the completed RT-008 parity receipt and role record, and every protected P10 recovery hash. The live routing snapshot and four focused regressions pass. No validator behavior, authority semantics, scientific status, ontology, ledger, protected authority, or P12-T06 execution changed."
+next_action: "Run the one authorized governed checkpoint for AJ-RT-20260723-010-001. Only after it commits, continue the v21 relay with P12-T06 through one fresh bounded continue-research frame."
+current_claim_boundary: "CB-V21-P12-T05-HANDOFF-0842-MARKDOWN-IDENTITY-RECOVERY-001"
+loop_risk_route: "continue_v21_p12_t06_after_checkpoint_v1"
+
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260723-010"
+  latest_research_handoff_id: "handoff-0843"
+  latest_research_next_action: "Run the one authorized governed checkpoint for AJ-RT-20260723-010-001. Only after it commits, continue the v21 relay with P12-T06 through one fresh bounded continue-research frame."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+
+claim_boundary:
+  allowed_next_scope: "After the AJ-RT-20260723-010-001 governed checkpoint commits, one fresh bounded continue-research frame may select P12-T06. Before that commit, only checkpoint validation is authorized."
+  newly_completed_recovery_task: "RT-20260723-010"
+  recovery_for_plan_task_id: "P12-T05"
+  recovery_completion_path: "research_control/tasks/RT-20260723-010/jobs/completions/AJC-AJ-RT-20260723-010-001.yaml"
+  recovery_completion_sha256: "4e9299c442b3ec2ca076499a63c748d9abdb62277fc4a2cfd095ea4711a88435"
+  recovery_receipt_path: "research_control/tasks/RT-20260723-010/artifacts/handoff_0842_markdown_identity_recovery_receipt.json"
+  recovery_receipt_sha256: "44c4bb5d412a7e1889cc7fdff3988dbc755b69cafdd314c2f1d211e25fc3fba7"
+  source_blocker_path: "research_control/tasks/RT-20260723-009/artifacts/validation_blocker_checkpoint_handoff_markdown_identity_v1.yaml"
+  source_blocker_sha256: "62cc1443ee47b0fa3b219b17c306156fd47fd4e138263a5d44bcf15eec0d1cef"
+  handoff_markdown_sha256_before: "f2a498ef6bbd06e9de8a97600fcc3033ec3bb906359cc4bc17f3a2b0619a81b2"
+  handoff_markdown_sha256_after: "50e033635b7daca95617e8639ab8d906a7b04009da8f28d3d209477f3029d049"
+  replacement_count: 2
+  exact_canonical_literal_present: true
+  length_unchanged: true
+  reconstructed_before_hash_matches: true
+  every_other_markdown_byte_unchanged: true
+  handoff_yaml_changed: false
+  handoff_yaml_sha256: "df4a5c0c81d87a6095564b62e5ee7303649982371434142f1424b27bf85ceb43"
+  rt009_parity_receipt_sha256: "905d15d24b5467acfdc435d525a1481a6cc26ca1b3ef297b2e8f4aec61b8108e"
+  rt008_role_record_sha256: "7d9a91e1cffaa0a2aa3b75196118c9f4f56611f95e5997baf019371fa9cefdfa"
+  p10_t05_contract_sha256: "299400cc29ec0b234cf6b8174272e687ca05618e65187136691d1950af2302b4"
+  p10_t05_validation_sha256: "b6d4d119539687e4566d90d67b4bbe8cab82cd754cfbd5b08f40848090ac244a"
+  p10_t05_receipt_sha256: "25773a9eabaaef9e7e2a747707889c0b5b4e4f038b84df22c2b02523dca4ee47"
+  p10_t07_artifact_refs_sha256: "5e68c64aeab61103ea18345b449ff09c74ad08cac9995c8c94cef03dd2eac4c5"
+  p10_t07_compact_receipt_sha256: "22c8ed3c8c43798c2d837ed2ce7bce5d9e633ee4b5e17eff9a3b49f2df3f0e32"
+  live_routing_snapshot_status: "PASS"
+  focused_routing_test_count: 4
+  focused_routing_status: "PASS"
+  legacy_validation_used: false
+  event_store_activation_changed: false
+  p12_t05_metric_semantics_changed: false
+  p12_t05_checkpoint_ready: true
+  p12_t05_checkpoint_committed: false
+  checkpoint_invocation_count: 0
+  p12_t06_dependency_ready_after_checkpoint: true
+  p12_t06_selected_next: true
+  p12_t06_executed: false
+  p4_t05_dependency_ready: true
+  p4_t05_requires_human_gate: true
+  p4_t05_executed: false
+  scientific_ledger_change_count: 0
+  scientific_status_changed: false
+  distance_to_gr_delta_changed: false
+  ontology_adoption_authorized: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  blocked_claims:
+    - "attempt failure abandonment repair validation or PASS counts presented as physics falsification scientific proof or Distance-to-GR progress"
+    - "private prompt credential personal or sensitive text exposed in P12-T06 reporting"
+    - "P12-T06 executed before the governed checkpoint commits"
+    - "P4-T05 protected ontology decision executed without exact human authority"
+    - "event-store activation pilot cutover authority transfer or SQLite tracking"
+    - "canonical ontology source-law scientific-ledger or Distance-to-GR edit"
+    - "general EqSrc effective metric matter coupling Einstein-equation derivation benchmark promotion proof publication completed derivation or global no-go"
+
+identity_recovery_result:
+  receipt_path: "research_control/tasks/RT-20260723-010/artifacts/handoff_0842_markdown_identity_recovery_receipt.json"
+  receipt_sha256: "44c4bb5d412a7e1889cc7fdff3988dbc755b69cafdd314c2f1d211e25fc3fba7"
+  markdown_path: "research_control/handoffs/handoff-0842.md"
+  markdown_sha256_before: "f2a498ef6bbd06e9de8a97600fcc3033ec3bb906359cc4bc17f3a2b0619a81b2"
+  markdown_sha256_after: "50e033635b7daca95617e8639ab8d906a7b04009da8f28d3d209477f3029d049"
+  canonical_handoff_id: "handoff-0842"
+  exact_identity_present: true
+  replacement_count: 2
+  every_other_byte_unchanged: true
+  yaml_handoff_unchanged: true
+  protected_recovery_hashes_unchanged: true
+  routing_snapshot_status: "PASS"
+  focused_routing_status: "PASS_4_TESTS"
+  checkpoint_status: "PENDING"
+  checkpoint_invocation_count: 0
+  checkpoint_committed: false
+  event_store_activation_changed: false
+  p12_t05_metric_semantics_changed: false
+  p12_t06_executed: false
+
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "none"
+  milestone: "none"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "The recovery replaces two bytes in a project-control handoff Markdown identity only."
+  downstream_unlocked:
+    - "P12-T05_cumulative_checkpoint"
+  downstream_still_blocked:
+    - "P12-T06_until_governed_checkpoint_commits"
+    - "source_ontology_derivation"
+    - "general_eqsrc"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+    - "benchmark_promotion"
+    - "external_publication"
+
+required_next_packet:
+  task_type: "v21_attempt_history_reporting"
+  plan_task_id: "P12-T06"
+  objective: "Render attempt history repair rate validation catches audit objections abandonment and final dispositions without exposing secrets or treating failures as physics refutations."
+  dependency_ready_after_checkpoint: true
+  executed: false
+
+selected_next_route:
+  route_id: "continue_v21_p12_t06_after_checkpoint_v1"
+  route_label: "ordinary-research-packet"
+  role_family: "project-control-maintainer@0.2.0"
+  worker_skill: "improve-project-system"
+  plan_task_id: "P12-T06"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Make research-process selectivity observable."
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  project_system_boundary_authorized_by_plan: true
+  physics_promotion_authorized: false
+  executed: false
+  next_action: "After checkpoint commit, route one bounded P12-T06 continue-research frame under the existing v21 scope and claim boundaries."
+  source_handoff: "research_control/handoffs/handoff-0843.yaml"
+
+ordinary_route_guard:
+  schema_id: "ordinary_route_guard_evaluation_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  evaluation_id: "ORE-HANDOFF-0843"
+  ordinary_handoff_id: "handoff-0843"
+  threshold: 3
+  consecutive_project_system_tasks_before_selection: 7
+  ready_science_plan_task_ids:
+    - "P4-T05"
+  selected_plan_task_id: "P12-T06"
+  selected_route_class: "project_system"
+  selected_worker_skill: "improve-project-system"
+  outcome: "all_ready_science_blocked_exception"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  exception_receipt:
+    active: true
+    schema_id: "ordinary_route_exception_receipt_v1"
+    exception_class: "all_ready_science_blocked"
+    ordinary_handoff_id: "handoff-0843"
+    ready_science_plan_task_ids:
+      - "P4-T05"
+    blocked_routes:
+      - plan_task_id: "P4-T05"
+        failure_class: "human_gate_required"
+        evidence_path: "research_control/design/v21_recommendation_backlog.yaml"
+        evidence_sha256: "849a4e8dfe848e80bc0c8236252b924e636e5c95ac1a090478a69f7f5377559f"
+        reason: "P4-T05 is dependency-ready but the registered backlog requires explicit human Gate Chair authority, which this relay generation does not possess."
+    authority_limits:
+      ordinary_research_handoff_authoritative: true
+      project_system_sidecar_supersedes: false
+      system_success_counts_as_physics: false
+      system_success_counts_as_distance_to_gr: false
+      scientific_status_changed: false
+      physics_promotion_authorized: false
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 77 was validated, claimed, and consumed exactly once before its one routed worker invocation."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Exact identity, exact byte-replacement count, reconstruction, and every-other-byte preservation are sealed in the task-local receipt."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "The live routing snapshot and all four focused tests pass, and protected recovery hashes remain unchanged."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "One normal governed checkpoint remains required before P12-T06."
+  renderer:
+    status: "PENDING"
+    evidence:
+      - "Task index current frontier compact frontier and memory derivatives remain to be synchronized."
+  memory_bootstrap:
+    status: "PENDING"
+    evidence:
+      - "Final tracked memory synchronization and validate-only remain required."
+  claim_language_linter:
+    status: "PENDING"
+    evidence:
+      - "Changed-source claim-language validation remains required on the finalized tree."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  push_authorized: false
+  publication_authorized: false
+  proof_authority: false
+
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  sidecar_path: ""
+  recursive_goal_recovery_required: false
+  reason: "The exact identity repair is complete; only the normal governed checkpoint remains before ordinary P12-T06 continuation."
+
+handoff_authority_boundary:
+  this_handoff_authorizes: "One governed checkpoint for AJ-RT-20260723-010-001, then Director consideration of one fresh bounded P12-T06 continue-research frame."
+  this_handoff_does_not_authorize:
+    - "P12-T06 before checkpoint commit"
+    - "handoff-0842 YAML completed parity or P10 recovery rewrite"
+    - "private prompt credential personal or sensitive text disclosure"
+    - "failure abandonment repair validation or PASS counts treated as physics refutations scientific proof or Distance-to-GR progress"
+    - "P4-T05 protected ontology decision without exact human authority"
+    - "event-store activation pilot cutover authority transfer or SQLite tracking"
+    - "canonical ontology source-law scientific-ledger or Distance-to-GR edit"
+    - "physical interpretation establishment ontology adoption general EqSrc proof benchmark promotion publication proof authority completed derivation or global no-go"
+
+next_plan_task_id: "P12-T06"
+next_plan_task_execution_ready_after_checkpoint: true
+next_plan_task_executed: false
+notes: "The exact handoff-0842 identity defect is repaired with two byte replacements and no scientific delta. The one governed checkpoint remains the only action before P12-T06."

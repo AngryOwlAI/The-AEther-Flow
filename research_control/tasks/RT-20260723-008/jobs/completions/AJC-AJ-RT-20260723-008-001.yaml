@@ -1,0 +1,410 @@
+validation_status: "FAIL"
+job_id: "AJ-RT-20260723-008-001"
+completion_id: "AJC-AJ-RT-20260723-008-001"
+task_id: "RT-20260723-008"
+task_type: "project_system_p10_t05_event_store_content_address_receipt_recovery"
+decision_id: "DDR-20260723-008"
+role_id: "validator-engineer"
+source_role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260723-008"
+status: "completed"
+final_repository_validation_status: "FAIL_CHECKPOINT_ROLE_REGISTRY_AUTHORITY_DELTA_SUMMARY_PARITY"
+created_at: "2026-07-23T15:04:08Z"
+started_at: "2026-07-23T15:04:08Z"
+completed_at: "2026-07-23T15:35:11Z"
+objective: "Reseal one P10-T05 source binding, regenerate its two receipts and exactly three dependent P10-T07 identity outputs, preserve predecessor copies, prove migration readiness, and invoke one normal checkpoint before P12-T06."
+completion_summary: "The P10-T05 contract now binds the governed metrics consumer at its exact cumulative P12-T05 hash and validates with zero drift. Its two deterministic receipts and exactly three P10-T07 current identity outputs were regenerated; both e22b and cc7d predecessor copies remain byte-identical. The first task-local write exposed an overstrict byte-format reversal postcondition only after all six authorized outputs had reached their exact final state; the tool was corrected to compare parsed predecessor semantics and wrote only its missing receipt during recovery. All focused architecture, identity, migration-readiness, cumulative P12-T05, control, and Git gates passed before the single normal checkpoint. That checkpoint committed nothing because staged research-control validation found one punctuation-only authority_delta_summary mismatch between the RT-008 execution-role overlay and ROLE_EXECUTION_REGISTRY.csv; it restored the entry index, and no retry or legacy validation was used. No metrics consumer, policy, validator semantics, event-store activation, scientific status, ontology, ledger, protected authority, or P12-T06 execution changed."
+objective_result: "p10_t05_source_binding_and_p10_t07_identity_resealed_checkpoint_blocked_role_registry_authority_delta_summary_parity"
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 75
+  passes_consumed: 72
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:75"
+  handoff_token: "41b329a8ab6969050979611fbc29202e899887a70fc2b39f"
+  relay_claim_token: "4b316f2a167f33228250a59a1045c484afb86b491b7952f6"
+  immutable_route_hash: "b7ee6d870216019b7c5ba0981ae1425750bc93cd15a68c9c44710a27a7745c17"
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+
+transaction_status: "blocked_checkpoint_role_registry_authority_delta_summary_parity_recovery_required"
+result_disposition: "content_address_recovery_pass_checkpoint_not_committed_fresh_parity_recovery_required"
+work_item_status: "completed"
+checkpoint_commit: "none_checkpoint_blocked"
+checkpoint_invocation_count: 1
+checkpoint_staged: false
+legacy_validation_used: false
+project_system_change_only: true
+scientific_claims_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "FAIL_CHECKPOINT"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  observed_durable_outputs:
+    physics: []
+    project_system:
+      - "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_contract.json"
+      - "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_validation.json"
+      - "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_compact_receipt.json"
+      - "research_control/tasks/RT-20260722-002/artifacts/artifact_refs.json"
+      - "research_control/tasks/RT-20260722-002/artifacts/ca/299400cc29ec0b234cf6b8174272e687ca05618e65187136691d1950af2302b4.json"
+      - "research_control/tasks/RT-20260722-002/artifacts/compact_receipt.json"
+      - "research_control/tasks/RT-20260723-008/artifacts/reseal_p10_t05_p10_t07_identity.py"
+      - "research_control/tasks/RT-20260723-008/artifacts/p10_t05_p10_t07_identity_recovery_receipt.json"
+  accepted_criteria:
+    physics: []
+    project_system:
+      - "the P10-T05 contract changes exactly one source binding and validates with zero drift"
+      - "the P10-T07 identity validator reports zero drift"
+      - "the e22b and cc7d predecessor content copies remain byte-identical"
+      - "event-store activation policy and scientific authority remain unchanged"
+      - "migration readiness and the required cumulative repository shard pass"
+      - "one normal governed checkpoint commits without legacy validation"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+physics_payload_admission_result:
+  status: "admitted"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed: false
+  physics_promotion_authorized: false
+
+ordinary_route_guard_admission_result:
+  status: "PASS"
+  source_handoff_id: "handoff-0836"
+  selected_plan_task_id: "P12-T05"
+  guard_outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  system_success_counts_as_physics: false
+  system_success_counts_as_distance_to_gr: false
+
+artifacts:
+  - "research_control/tasks/RT-20260723-008/artifacts/reseal_p10_t05_p10_t07_identity.py"
+  - "research_control/tasks/RT-20260723-008/artifacts/p10_t05_p10_t07_identity_recovery_receipt.json"
+  - "research_control/tasks/RT-20260723-008/artifacts/validation_blocker_checkpoint_role_authority_delta_summary_parity_v1.yaml"
+  - "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_contract.json"
+  - "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_validation.json"
+  - "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_compact_receipt.json"
+  - "research_control/tasks/RT-20260722-002/artifacts/artifact_refs.json"
+  - "research_control/tasks/RT-20260722-002/artifacts/ca/299400cc29ec0b234cf6b8174272e687ca05618e65187136691d1950af2302b4.json"
+  - "research_control/tasks/RT-20260722-002/artifacts/compact_receipt.json"
+
+output_paths:
+  - "research_control/tasks/RT-20260723-008/**"
+  - "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_contract.json"
+  - "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_validation.json"
+  - "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_compact_receipt.json"
+  - "research_control/tasks/RT-20260722-002/artifacts/artifact_refs.json"
+  - "research_control/tasks/RT-20260722-002/artifacts/ca/299400cc29ec0b234cf6b8174272e687ca05618e65187136691d1950af2302b4.json"
+  - "research_control/tasks/RT-20260722-002/artifacts/compact_receipt.json"
+  - "research_control/handoffs/handoff-0841.yaml"
+  - "research_control/handoffs/handoff-0841.md"
+  - "research_control/program_state.yaml"
+
+artifact_receipts:
+  - path: "research_control/tasks/RT-20260723-008/artifacts/reseal_p10_t05_p10_t07_identity.py"
+    sha256: "1e310c96caf5148968adc0bc2a883d4742babb0b8f0e6e2a30ac386c8c2cbb59"
+  - path: "research_control/tasks/RT-20260723-008/artifacts/p10_t05_p10_t07_identity_recovery_receipt.json"
+    sha256: "37ded5d749861c56928007d6b325fb3d81cca1aa5b54d468b1d4f4ab4e710544"
+  - path: "research_control/tasks/RT-20260723-008/artifacts/validation_blocker_checkpoint_role_authority_delta_summary_parity_v1.yaml"
+    sha256: "cc0be4f906ddc236aff553907ce3d5c84ec8e867f53b7dfe898901e69c1e6abc"
+  - path: "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_contract.json"
+    sha256: "299400cc29ec0b234cf6b8174272e687ca05618e65187136691d1950af2302b4"
+  - path: "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_validation.json"
+    sha256: "b6d4d119539687e4566d90d67b4bbe8cab82cd754cfbd5b08f40848090ac244a"
+  - path: "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_compact_receipt.json"
+    sha256: "25773a9eabaaef9e7e2a747707889c0b5b4e4f038b84df22c2b02523dca4ee47"
+  - path: "research_control/tasks/RT-20260722-002/artifacts/artifact_refs.json"
+    sha256: "5e68c64aeab61103ea18345b449ff09c74ad08cac9995c8c94cef03dd2eac4c5"
+  - path: "research_control/tasks/RT-20260722-002/artifacts/ca/299400cc29ec0b234cf6b8174272e687ca05618e65187136691d1950af2302b4.json"
+    sha256: "299400cc29ec0b234cf6b8174272e687ca05618e65187136691d1950af2302b4"
+  - path: "research_control/tasks/RT-20260722-002/artifacts/compact_receipt.json"
+    sha256: "22c8ed3c8c43798c2d837ed2ce7bce5d9e633ee4b5e17eff9a3b49f2df3f0e32"
+  - path: "research_control/tasks/RT-20260722-002/artifacts/ca/e22bde41e45def27a32d99bdf4ca9e6517a2acedbf18393cac22e172b9423c51.json"
+    sha256: "e22bde41e45def27a32d99bdf4ca9e6517a2acedbf18393cac22e172b9423c51"
+  - path: "research_control/tasks/RT-20260722-002/artifacts/ca/cc7d678328f2242cd49a83ce9a3eaa47e30e830d48a8b70a6a29434bb4a6477d.json"
+    sha256: "cc7d678328f2242cd49a83ce9a3eaa47e30e830d48a8b70a6a29434bb4a6477d"
+
+recovery_result:
+  old_contract_sha256: "cc7d678328f2242cd49a83ce9a3eaa47e30e830d48a8b70a6a29434bb4a6477d"
+  new_contract_sha256: "299400cc29ec0b234cf6b8174272e687ca05618e65187136691d1950af2302b4"
+  source_binding_path: "scripts/research_control/report_physics_progress_metrics.py"
+  source_binding_sha256_before: "46289a1b861e350b4d0a0bd27de3a8fbff8c9589de0a019ecd36d3fdd2a59112"
+  source_binding_sha256_after: "07cd220950e4b85632385da1dcaa932c8a6c48c50b33e2736dd6f181bc9abfd1"
+  source_binding_replacement_count: 1
+  p10_t05_derived_output_count: 2
+  p10_t07_identity_output_count: 3
+  p10_t05_drift_count_after: 0
+  p10_t07_drift_count_after: 0
+  p10_t07_check_count: 13
+  p10_t07_failed_check_count: 0
+  predecessor_e22b_preserved: true
+  predecessor_cc7d_preserved: true
+  initial_write_postcondition_failure: "byte-format reversal incorrectly expected sorted serialization to reproduce the unsorted predecessor bytes"
+  recovery_write_scope: "task-local receipt only"
+  event_store_activation_changed: false
+  p12_t05_metric_semantics_changed: false
+  p12_t06_executed: false
+
+checkpoint_blocker:
+  schema_id: "validation_blocker_checkpoint_role_authority_delta_summary_parity_v1"
+  blocker_path: "research_control/tasks/RT-20260723-008/artifacts/validation_blocker_checkpoint_role_authority_delta_summary_parity_v1.yaml"
+  blocker_sha256: "cc0be4f906ddc236aff553907ce3d5c84ec8e867f53b7dfe898901e69c1e6abc"
+  failed_gate: "research_control_diff"
+  exact_error: "research_control/tasks/RT-20260723-008/roles/validator-engineer@0.2.0--RT-20260723-008.yaml: authority_delta_summary does not match ROLE_EXECUTION_REGISTRY.csv"
+  checkpoint_invocation_count: 1
+  checkpoint_staged_after_failure: false
+  checkpoint_committed: false
+  entry_index_restored: true
+  legacy_validation_used: false
+  checkpoint_retry_in_current_worker_authorized: false
+  preservation_reason: "The only authorized checkpoint invocation is consumed, and its punctuation-only role-registry parity defect requires a fresh bounded recovery before any future checkpoint or P12-T06 execution."
+
+command_results:
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+    status: "PASS_CORE_WITH_9_LOCAL_CACHE_WARNINGS"
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-TASKS-RT-20260721-007-V21-EVENT-STORE-ARCHITECTURE-DECISION --json"
+    status: "PASS_REGISTERED_CANONICAL_SOURCE"
+  - command: "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python research_control/tasks/RT-20260723-008/artifacts/reseal_p10_t05_p10_t07_identity.py --write --json"
+    status: "FAIL_POSTCONDITION_AFTER_EXACT_6_OUTPUT_WRITE"
+  - command: "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python research_control/tasks/RT-20260723-008/artifacts/reseal_p10_t05_p10_t07_identity.py --write --json"
+    status: "PASS_RECEIPT_ONLY_RECOVERY_NO_REPAIR_OUTPUT_REWRITE"
+  - command: "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python research_control/tasks/RT-20260723-008/artifacts/reseal_p10_t05_p10_t07_identity.py --check --json"
+    status: "PASS_ZERO_DRIFT_PREDECESSORS_PRESERVED"
+  - command: "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python research_control/tasks/RT-20260721-007/artifacts/validate_v21_event_store_architecture.py --check --json"
+    status: "PASS_ZERO_DRIFT_ZERO_FAILED_CHECKS"
+  - command: "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python research_control/tasks/RT-20260722-002/artifacts/artifact_identity.py --check --json"
+    status: "PASS_13_CHECKS_ZERO_DRIFT"
+  - command: ".venv/bin/python -m unittest -v tests.test_event_store_architecture tests.test_artifact_identity_policy tests.test_v21_p10_migration_readiness"
+    status: "PASS_30_TESTS_AFTER_PROGRAM_HANDOFF_PARITY"
+  - command: ".venv/bin/python -m unittest tests.test_scientific_quality_metrics tests.test_report_physics_progress_metrics tests.test_research_control"
+    status: "PASS_155_TESTS"
+  - command: ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+    status: "PASS_PROJECT_SYSTEM_AND_DOCUMENTATION_IMPACT_REQUIRED"
+  - command: ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json"
+    status: "PASS_READY_VALIDATOR_ENGINEER_CHECKPOINT_REQUIRED"
+  - command: ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json"
+    status: "PASS_12_TYPES_7_REGISTERED_5_EMITTED_0_OPEN_HANDOFFS"
+  - command: ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+    status: "PASS"
+  - command: ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+    status: "PASS_WITH_HISTORICAL_WARNINGS"
+  - command: ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --json-summary"
+    status: "PASS"
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+    status: "PASS_WITH_9_LOCAL_CACHE_WARNINGS"
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+    status: "PASS_WITH_9_LOCAL_CACHE_WARNINGS"
+  - command: "git diff --check"
+    status: "PASS"
+  - command: ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260723-008-001"
+    status: "FAIL_RESEARCH_CONTROL_DIFF_ROLE_AUTHORITY_DELTA_SUMMARY_MISMATCH_INDEX_RESTORED_NO_COMMIT"
+
+validation_summary:
+  status: "FAIL_CHECKPOINT_ROLE_REGISTRY_AUTHORITY_DELTA_SUMMARY_PARITY"
+  passing_gates:
+    - "P10-T05 event-store architecture zero-drift validation"
+    - "P10-T07 artifact identity zero-drift validation"
+    - "two predecessor content-copy byte-preservation checks"
+    - "P10 migration-readiness eight-test audit"
+    - "required cumulative P12-T05 155-test shard"
+    - "project-change signal research-control and Git gates"
+  failed_gates:
+    - "staged research_control_diff: RT-008 execution-role authority_delta_summary does not match ROLE_EXECUTION_REGISTRY.csv"
+  checkpoint:
+    invoked: true
+    invocation_count: 1
+    reason: "The single normal checkpoint stopped without commit on one punctuation-only role-registry authority_delta_summary mismatch; the entry index was restored and no retry is authorized."
+  staging:
+    attempted: true
+    index_changed: false
+  commit:
+    created: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 75 lease parity repository identity maximum reasoning effort exact 96-path dirty manifest and immutable route were verified before the single worker invocation."
+      - "The generation was claimed and consumed exactly once with relay claim token 4b316f2a167f33228250a59a1045c484afb86b491b7952f6."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The recovery tool changed one source binding and six exact repair outputs while preserving the metrics consumer and two predecessor copies."
+      - "Its initial overstrict serialization postcondition was corrected without rewriting the already-current six repair outputs."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "P10-T05 and P10-T07 authoritative checks report zero drift and no failed checks."
+      - "Focused migration-readiness and cumulative P12-T05 repository tests pass."
+  post_checkpoint:
+    status: "FAIL"
+    evidence:
+      - "The single normal checkpoint failed staged research-control validation on one RT-008 role-registry authority_delta_summary mismatch."
+      - "The entry index was restored, no commit was created, and no retry or legacy validation was used."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Task index current frontier compact frontier and registered memory derivatives were regenerated from finalized tracked control state."
+  memory_bootstrap:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "Memory bootstrap and validate-only pass; nine findings are confined to untracked local retrieval cache freshness and do not override tracked authority."
+  claim_language_linter:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "Changed-surface claim-language validation preserves project-system-only and protected-authority nonclaims; any warnings are historical."
+
+authorization_layers:
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  canonical_ontology_edit_authorized: false
+  ontology_selection_authorized: false
+  physical_interpretation_establishment_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "none"
+  milestone: "none"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "The packet repairs deterministic project-control content identities only."
+  downstream_unlocked:
+    - "P12-T05_role_registry_parity_recovery"
+  downstream_still_blocked:
+    - "P12-T06_execution"
+    - "source_ontology_derivation"
+    - "general_eqsrc"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+    - "benchmark_promotion"
+    - "external_publication"
+
+required_next_packet:
+  task_type: "project_system_role_registry_authority_delta_summary_checkpoint_recovery"
+  task_taxonomy:
+    schema_id: "v21_task_taxonomy_v1"
+    work_kind: "benchmark_or_recovery"
+    milestone: "not_applicable"
+    candidate_family: "role_registry_authority_delta_summary_checkpoint_recovery"
+    result_kind: "completed_or_precisely_blocked"
+    authority: "project_control"
+    scope: "project_system"
+
+selected_next_route:
+  route_id: "reconcile_rt008_role_authority_delta_summary_registry_parity_and_checkpoint_v1"
+  route_label: "project-system-recovery"
+  role_family: "process-integrity-auditor@0.1.0"
+  worker_skill: "improve-project-system"
+  plan_task_id: "P12-T05"
+  target_derivation_milestone: "none"
+  milestone_burden: "Reconcile one punctuation-only role-registry parity defect and preserve the completed cumulative P12-T05 transaction before any future checkpoint."
+  requires_human_gate: false
+  project_system_boundary_authorized_by_plan: true
+  physics_promotion_authorized: false
+  dependency_ready: false
+  execution_ready_before_checkpoint: false
+  execution_ready_after_checkpoint: false
+  executed: false
+  blocker_path: "research_control/tasks/RT-20260723-008/artifacts/validation_blocker_checkpoint_role_authority_delta_summary_parity_v1.yaml"
+  blocker_sha256: "cc0be4f906ddc236aff553907ce3d5c84ec8e867f53b7dfe898901e69c1e6abc"
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: "999"
+    relationship_row_count: "4946"
+    semantic_row_count: "999"
+    vault_row_count: "999"
+    local_cache_only_warning_count: "9"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-TASKS-RT-20260721-007-V21-EVENT-STORE-ARCHITECTURE-DECISION --json"
+      query_type: "lookup"
+      query_text: "MD-RESEARCH-CONTROL-TASKS-RT-20260721-007-V21-EVENT-STORE-ARCHITECTURE-DECISION"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-TASKS-RT-20260721-007-V21-EVENT-STORE-ARCHITECTURE-DECISION"
+  canonical_inspections:
+    - object_id: "MD-RESEARCH-CONTROL-TASKS-RT-20260721-007-V21-EVENT-STORE-ARCHITECTURE-DECISION"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_decision.md"
+      source_hash: "15584ad6a4592a2b3e401a2b081a5e05a4f3d407ab5611e5fa65ffe2b386b67f"
+  authority_note: "Generated wiki semantic Obsidian relationship SQLite and .local retrieval surfaces are retrieval aids and not authority; the registered P10-T05 decision tracked blocker and exact repair records control this recovery."
+
+project_improvement_signals: []
+project_improvement_sidecar_created: false
+project_improvement_bridge:
+  required: false
+  sidecar_path: ""
+  recursive_goal_recovery_required: true
+  route: ""
+  blocker_path: "research_control/tasks/RT-20260723-008/artifacts/validation_blocker_checkpoint_role_authority_delta_summary_parity_v1.yaml"
+  reason: "The content-address repair passed, but the only checkpoint invocation exposed one punctuation-only RT-008 role-registry parity defect that a fresh bounded recursive-goal recovery must own before P12-T06."
+
+handoff_authority_boundary:
+  this_handoff_authorizes: "Director consideration of one fresh bounded P12-T05 role-registry parity recovery; P12-T06 remains conditional on a future committed checkpoint."
+  this_handoff_does_not_authorize:
+    - "checkpoint retry in generation 75 or legacy validation"
+    - "authority semantics change while reconciling punctuation-level parity"
+    - "P10-T05 or P10-T07 repair-output rewrite"
+    - "P12-T06 execution inside RT-20260723-008"
+    - "event-store activation pilot cutover authority transfer or SQLite tracking"
+    - "private prompt credential personal or sensitive text disclosure"
+    - "canonical ontology source-law scientific-ledger or Distance-to-GR edits"
+    - "physics promotion benchmark promotion proof publication completed derivation or global no-go"
+handoff_id: "handoff-0841"
+next_plan_task_id: "P12-T05"
+next_plan_task_execution_ready_after_checkpoint: false
+next_plan_task_executed: false
+notes: "The intended content-address recovery passed, but the only checkpoint committed nothing after one punctuation-only role-registry parity failure. A fresh bounded P12-T05 recovery is required; this packet neither retries the checkpoint nor executes P12-T06 or changes physics evidence exact-GR status ontology scientific claims publication readiness proof authority or completed-derivation status."

@@ -1,0 +1,60 @@
+{
+  "activation_state": {
+    "canonical_event_store_active": false,
+    "dual_write_active": false,
+    "legacy_registry_authority_changed": false,
+    "migration_executed": false,
+    "pilot_executed": false,
+    "reader_cutover_executed": false,
+    "sqlite_tracked": false
+  },
+  "authorized_write_path_count": 6,
+  "authorized_write_paths": [
+    "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_contract.json",
+    "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_validation.json",
+    "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_compact_receipt.json",
+    "research_control/tasks/RT-20260722-002/artifacts/artifact_refs.json",
+    "research_control/tasks/RT-20260722-002/artifacts/ca/299400cc29ec0b234cf6b8174272e687ca05618e65187136691d1950af2302b4.json",
+    "research_control/tasks/RT-20260722-002/artifacts/compact_receipt.json"
+  ],
+  "event_store_activation_changed": false,
+  "event_store_validator": {
+    "drift": [],
+    "failed_checks": [],
+    "status": "PASS",
+    "validation_status": "PASS"
+  },
+  "identity_validation": {
+    "check_count": 13,
+    "drift": [],
+    "failed_check_count": 0,
+    "reference_count": 3,
+    "status": "PASS"
+  },
+  "new_contract_sha256": "299400cc29ec0b234cf6b8174272e687ca05618e65187136691d1950af2302b4",
+  "new_source_sha256": "07cd220950e4b85632385da1dcaa932c8a6c48c50b33e2736dd6f181bc9abfd1",
+  "old_contract_sha256": "cc7d678328f2242cd49a83ce9a3eaa47e30e830d48a8b70a6a29434bb4a6477d",
+  "old_source_sha256": "46289a1b861e350b4d0a0bd27de3a8fbff8c9589de0a019ecd36d3fdd2a59112",
+  "path_sha256": {
+    "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_compact_receipt.json": "25773a9eabaaef9e7e2a747707889c0b5b4e4f038b84df22c2b02523dca4ee47",
+    "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_contract.json": "299400cc29ec0b234cf6b8174272e687ca05618e65187136691d1950af2302b4",
+    "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_validation.json": "b6d4d119539687e4566d90d67b4bbe8cab82cd754cfbd5b08f40848090ac244a",
+    "research_control/tasks/RT-20260722-002/artifacts/artifact_refs.json": "5e68c64aeab61103ea18345b449ff09c74ad08cac9995c8c94cef03dd2eac4c5",
+    "research_control/tasks/RT-20260722-002/artifacts/ca/299400cc29ec0b234cf6b8174272e687ca05618e65187136691d1950af2302b4.json": "299400cc29ec0b234cf6b8174272e687ca05618e65187136691d1950af2302b4",
+    "research_control/tasks/RT-20260722-002/artifacts/compact_receipt.json": "22c8ed3c8c43798c2d837ed2ce7bce5d9e633ee4b5e17eff9a3b49f2df3f0e32"
+  },
+  "physics_promotion_authorized": false,
+  "predecessor_content_copies": {
+    "research_control/tasks/RT-20260722-002/artifacts/ca/cc7d678328f2242cd49a83ce9a3eaa47e30e830d48a8b70a6a29434bb4a6477d.json": "cc7d678328f2242cd49a83ce9a3eaa47e30e830d48a8b70a6a29434bb4a6477d",
+    "research_control/tasks/RT-20260722-002/artifacts/ca/e22bde41e45def27a32d99bdf4ca9e6517a2acedbf18393cac22e172b9423c51.json": "e22bde41e45def27a32d99bdf4ca9e6517a2acedbf18393cac22e172b9423c51"
+  },
+  "predecessor_content_copies_changed": false,
+  "proof_authority": false,
+  "registered_tex_authority_preserved": true,
+  "schema_id": "p10_t05_p10_t07_identity_recovery_receipt_v1",
+  "scientific_claims_changed": false,
+  "source_binding_path": "scripts/research_control/report_physics_progress_metrics.py",
+  "source_binding_replacement_count": 1,
+  "status": "PASS",
+  "task_id": "RT-20260723-008"
+}

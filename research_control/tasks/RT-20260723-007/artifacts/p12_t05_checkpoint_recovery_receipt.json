@@ -1,0 +1,84 @@
+{
+  "schema_id": "p12_t05_checkpoint_recovery_receipt_v1",
+  "task_id": "RT-20260723-007",
+  "job_id": "AJ-RT-20260723-007-001",
+  "generated_at": "2026-07-23T13:57:55Z",
+  "status": "PASS",
+  "source_blocker": {
+    "path": "research_control/tasks/RT-20260723-006/artifacts/validation_blocker_checkpoint_staged_trailing_blank_line_eof_v1.yaml",
+    "sha256": "804492d85e989f83ab4886265f66fde117ed0f34b2e067696bb9641d82adb523"
+  },
+  "handoff_identity_repair": {
+    "path": "research_control/handoffs/handoff-0839.md",
+    "before_sha256": "73f0b1fc0ca64fce77029538df2feaf307b8872fe390cd278680dc713586591d",
+    "after_sha256": "3525628813cfc4eeb46a9db1157b1343666cd629c33436143d6f9b5391e5b3b6",
+    "required_identity": "handoff-0839",
+    "identity_present": true
+  },
+  "eof_repairs": [
+    {
+      "path": "research_control/tasks/RT-20260723-004/artifacts/fixtures/scientific_quality_metric_cases.json",
+      "before_size": 9576,
+      "after_size": 9575,
+      "removed_byte_count": 1,
+      "before_sha256": "7253ac9138885061cd854fd61b69757ae78aa8c497ba1066ade2a0c19c62a4b8",
+      "after_sha256": "60bcb8819734e5e565b08a46b29e85ebffde14f6c1e33dd13cfdd1c02628d003",
+      "single_final_newline": true
+    },
+    {
+      "path": "research_control/tasks/RT-20260723-004/artifacts/scientific_quality_calibration_warning_policy_v1.md",
+      "before_size": 3094,
+      "after_size": 3093,
+      "removed_byte_count": 1,
+      "before_sha256": "25205ad3cf4f28492467bdd6343d52647c76ddfd67d7609bc9ce187ec06e8b75",
+      "after_sha256": "b9b4e4fcc603c9eee508456999936a4e0378b188235f73f35c454009728648cb",
+      "single_final_newline": true
+    },
+    {
+      "path": "research_control/tasks/RT-20260723-004/artifacts/scientific_quality_metric_taxonomy_v1.md",
+      "before_size": 5240,
+      "after_size": 5239,
+      "removed_byte_count": 1,
+      "before_sha256": "b7fc9ff6f6d55e2ec9462700f8c4f985ab77ff5ffcc9cfdd07923b60011c6436",
+      "after_sha256": "b2e31738a445e68e4de6ea20381886bcd6c3747cccd693187f0904a7742ad308",
+      "single_final_newline": true
+    },
+    {
+      "path": "tests/test_scientific_quality_metrics.py",
+      "before_size": 5855,
+      "after_size": 5854,
+      "removed_byte_count": 1,
+      "before_sha256": "5ec3ba1b5b4331a20a92173b79dfbd2c16a46e2fa98741146e1fa1e7eabd609d",
+      "after_sha256": "3b3cf70b7169d17a4f5fb1c59947b470582d61449768a1d4570d8fb4f28ad87a",
+      "single_final_newline": true
+    }
+  ],
+  "equivalence_summary": {
+    "eof_target_count": 4,
+    "removed_byte_count": 4,
+    "removed_byte_value_hex": "0a",
+    "all_other_target_bytes_unchanged": true,
+    "fixture_json_parse_status": "PASS",
+    "metric_semantics_changed": false,
+    "test_semantics_changed": false,
+    "ordinary_route_runtime_changed": false,
+    "continuation_runtime_changed": false,
+    "route_history_changed": false,
+    "p12_t06_executed": false
+  },
+  "preserved_runtime_hashes": {
+    "scripts/research_control/scientific_quality_metrics.py": "2e9b443da0e9beeccd08a54936972a8438ba64b7fcc12dccd4d4793b7111ccc9",
+    "scripts/research_control/ordinary_route_guard.py": "ff015c8906a244b2f25d81c2d278187995c76fe3e9e385f46a2cafc3cc1dac75",
+    "scripts/research_control/continue_research.py": "c29c5cb2b5f1cc5bf5abbb73c289c0695fc00003bf4317c37d7197c0b161ed6e",
+    "tests/test_research_control.py": "7e11317d735d7a717e40469310c2d72795c69439277d9197abf604007ec4a9ea"
+  },
+  "authority_limits": {
+    "scientific_status_changed": false,
+    "distance_to_gr_changed": false,
+    "ontology_or_source_law_adopted": false,
+    "physics_promotion_authorized": false,
+    "benchmark_promotion_authorized": false,
+    "proof_authority": false,
+    "publication_authority": false
+  }
+}

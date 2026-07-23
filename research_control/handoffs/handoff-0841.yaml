@@ -1,0 +1,221 @@
+validation_status: "FAIL"
+handoff_id: "handoff-0841"
+handoff_number: 841
+handoff_kind: "ordinary_research"
+created_at: "2026-07-23T15:35:11Z"
+task_id: "RT-20260723-008"
+decision_id: "DDR-20260723-008"
+job_id: "AJ-RT-20260723-008-001"
+completion_path: "research_control/tasks/RT-20260723-008/jobs/completions/AJC-AJ-RT-20260723-008-001.yaml"
+completion_hash: "94f6cf06b05072019cf2f3d7849153e7f12b9a047238a41bae96fb2c8deea3da"
+source_task_id: "RT-20260723-008"
+source_job_id: "AJ-RT-20260723-008-001"
+source_completion_id: "AJC-AJ-RT-20260723-008-001"
+parent_handoff_id: "handoff-0840"
+plan_task_id: "P12-T05"
+source_role_id: "validator-engineer"
+source_role_version: "0.2.0"
+source_execution_role_ref: "validator-engineer@0.2.0--RT-20260723-008"
+status: "ready_for_director"
+summary: "RT-20260723-008 replaced one stale P10-T05 source binding with the exact current governed metrics-consumer digest, regenerated its two deterministic receipts and exactly three P10-T07 current identity outputs, and preserved both predecessor content copies byte-for-byte. Those intended repairs and their focused gates pass, but the single normal checkpoint committed nothing after staged research-control validation found one punctuation-only authority_delta_summary mismatch between the RT-008 execution-role overlay and ROLE_EXECUTION_REGISTRY.csv. The entry index was restored; no retry, legacy validation, metrics-consumer edit, activation, scientific-status change, protected authority, or P12-T06 execution occurred."
+next_action: "Run exactly one fresh bounded P12-T05 improve-project-system recovery to reconcile only the RT-008 role-registry authority_delta_summary parity defect without changing authority semantics, preserve the completed content-address repair, and invoke at most one future normal checkpoint before P12-T06."
+current_claim_boundary: "CB-V21-P12-T05-P10-T05-EVENT-STORE-IDENTITY-RECOVERY-001"
+loop_risk_route: "reconcile_rt008_role_authority_delta_summary_registry_parity_and_checkpoint_v1"
+
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260723-008"
+  latest_research_handoff_id: "handoff-0841"
+  latest_research_next_action: "Run exactly one fresh bounded P12-T05 improve-project-system recovery to reconcile only the RT-008 role-registry authority_delta_summary parity defect without changing authority semantics, preserve the completed content-address repair, and invoke at most one future normal checkpoint before P12-T06."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+
+ordinary_route_guard:
+  schema_id: "ordinary_route_guard_evaluation_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  evaluation_id: "ORE-HANDOFF-0841"
+  ordinary_handoff_id: "handoff-0841"
+  threshold: 3
+  consecutive_project_system_tasks_before_selection: 5
+  ready_science_plan_task_ids:
+    - "P4-T05"
+  selected_plan_task_id: "P12-T05"
+  selected_route_class: "project_system"
+  selected_worker_skill: "improve-project-system"
+  outcome: "all_ready_science_blocked_exception"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  exception_receipt:
+    active: true
+    schema_id: "ordinary_route_exception_receipt_v1"
+    exception_class: "all_ready_science_blocked"
+    ordinary_handoff_id: "handoff-0841"
+    ready_science_plan_task_ids:
+      - "P4-T05"
+    blocked_routes:
+      - plan_task_id: "P4-T05"
+        failure_class: "human_gate_required"
+        evidence_path: "research_control/design/v21_recommendation_backlog.yaml"
+        evidence_sha256: "849a4e8dfe848e80bc0c8236252b924e636e5c95ac1a090478a69f7f5377559f"
+        reason: "P4-T05 is dependency-ready but the registered backlog requires explicit human Gate Chair authority, which this relay generation does not possess."
+    authority_limits:
+      ordinary_research_handoff_authoritative: true
+      project_system_sidecar_supersedes: false
+      system_success_counts_as_physics: false
+      system_success_counts_as_distance_to_gr: false
+      scientific_status_changed: false
+      physics_promotion_authorized: false
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+claim_boundary:
+  allowed_next_scope: "One fresh bounded P12-T05 improve-project-system recovery may reconcile only the punctuation-level RT-008 role-registry authority_delta_summary parity defect, preserve the completed content-address outputs, and invoke at most one future normal checkpoint."
+  newly_completed_recovery_task: "RT-20260723-008"
+  recovery_for_plan_task_id: "P12-T05"
+  recovery_completion_path: "research_control/tasks/RT-20260723-008/jobs/completions/AJC-AJ-RT-20260723-008-001.yaml"
+  recovery_completion_sha256: "94f6cf06b05072019cf2f3d7849153e7f12b9a047238a41bae96fb2c8deea3da"
+  recovery_receipt_path: "research_control/tasks/RT-20260723-008/artifacts/p10_t05_p10_t07_identity_recovery_receipt.json"
+  recovery_receipt_sha256: "37ded5d749861c56928007d6b325fb3d81cca1aa5b54d468b1d4f4ab4e710544"
+  old_contract_sha256: "cc7d678328f2242cd49a83ce9a3eaa47e30e830d48a8b70a6a29434bb4a6477d"
+  new_contract_sha256: "299400cc29ec0b234cf6b8174272e687ca05618e65187136691d1950af2302b4"
+  source_binding_replacement_count: 1
+  p10_t05_derived_output_count: 2
+  p10_t07_identity_output_count: 3
+  predecessor_content_copy_count_preserved: 2
+  p10_t05_validation_status: "PASS_ZERO_DRIFT"
+  p10_t07_validation_status: "PASS_13_CHECKS_ZERO_DRIFT"
+  p10_migration_readiness_status: "PASS_8_TESTS_EXPECTED_TWO_LIFECYCLE_BLOCKERS"
+  legacy_validation_used: false
+  event_store_activation_changed: false
+  p12_t05_metric_semantics_changed: false
+  p12_t05_checkpoint_ready: false
+  p12_t05_checkpoint_committed: false
+  checkpoint_invocation_count: 1
+  checkpoint_staged_after_failure: false
+  checkpoint_entry_index_restored: true
+  checkpoint_blocker_path: "research_control/tasks/RT-20260723-008/artifacts/validation_blocker_checkpoint_role_authority_delta_summary_parity_v1.yaml"
+  checkpoint_blocker_sha256: "cc0be4f906ddc236aff553907ce3d5c84ec8e867f53b7dfe898901e69c1e6abc"
+  p12_t06_dependency_ready_after_checkpoint: false
+  p12_t06_selected_next: false
+  p12_t06_executed: false
+  p4_t05_dependency_ready: true
+  p4_t05_requires_human_gate: true
+  p4_t05_executed: false
+  scientific_ledger_change_count: 0
+  scientific_status_changed: false
+  distance_to_gr_delta_changed: false
+  ontology_adoption_authorized: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  blocked_claims:
+    - "content identity validator checkpoint dashboard or route success presented as theorem truth scientific evidence physics progress or Distance-to-GR progress"
+    - "attempt repair abandonment validation or pass counts presented as physics falsification or a global no-go"
+    - "private prompt credential personal or sensitive text exposed in P12-T06 reporting"
+    - "P4-T05 protected ontology decision executed without exact human authority"
+    - "event-store activation pilot cutover authority transfer or SQLite tracking"
+    - "canonical ontology source-law scientific-ledger or Distance-to-GR edit"
+    - "general EqSrc effective metric matter coupling Einstein-equation derivation benchmark promotion proof publication completed derivation or global no-go"
+
+p10_t05_p10_t07_identity_recovery:
+  receipt_path: "research_control/tasks/RT-20260723-008/artifacts/p10_t05_p10_t07_identity_recovery_receipt.json"
+  receipt_sha256: "37ded5d749861c56928007d6b325fb3d81cca1aa5b54d468b1d4f4ab4e710544"
+  reseal_tool_sha256: "1e310c96caf5148968adc0bc2a883d4742babb0b8f0e6e2a30ac386c8c2cbb59"
+  current_contract_sha256: "299400cc29ec0b234cf6b8174272e687ca05618e65187136691d1950af2302b4"
+  architecture_validation_sha256: "b6d4d119539687e4566d90d67b4bbe8cab82cd754cfbd5b08f40848090ac244a"
+  architecture_receipt_sha256: "25773a9eabaaef9e7e2a747707889c0b5b4e4f038b84df22c2b02523dca4ee47"
+  artifact_manifest_sha256: "5e68c64aeab61103ea18345b449ff09c74ad08cac9995c8c94cef03dd2eac4c5"
+  current_contract_copy_sha256: "299400cc29ec0b234cf6b8174272e687ca05618e65187136691d1950af2302b4"
+  artifact_compact_receipt_sha256: "22c8ed3c8c43798c2d837ed2ce7bce5d9e633ee4b5e17eff9a3b49f2df3f0e32"
+  predecessor_e22b_copy_sha256: "e22bde41e45def27a32d99bdf4ca9e6517a2acedbf18393cac22e172b9423c51"
+  predecessor_cc7d_copy_sha256: "cc7d678328f2242cd49a83ce9a3eaa47e30e830d48a8b70a6a29434bb4a6477d"
+  architecture_status: "PASS_ZERO_DRIFT"
+  identity_status: "PASS_13_CHECKS_ZERO_DRIFT"
+  migration_readiness_status: "PASS_8_TESTS_EXPECTED_TWO_LIFECYCLE_BLOCKERS"
+  checkpoint_status: "FAIL_RESEARCH_CONTROL_DIFF_ROLE_AUTHORITY_DELTA_SUMMARY_PARITY_INDEX_RESTORED_NO_COMMIT"
+  checkpoint_staged: false
+  checkpoint_committed: false
+  event_store_activation_changed: false
+  p12_t05_metric_semantics_changed: false
+  p12_t06_executed: false
+
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "none"
+  milestone: "none"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "The recovery changes deterministic project-control content identities only."
+  downstream_unlocked:
+    - "P12-T05_role_registry_parity_recovery"
+  downstream_still_blocked:
+    - "P12-T06_execution"
+    - "source_ontology_derivation"
+    - "general_eqsrc"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+    - "benchmark_promotion"
+    - "external_publication"
+
+required_next_packet:
+  task_type: "project_system_role_registry_authority_delta_summary_checkpoint_recovery"
+  task_taxonomy:
+    schema_id: "v21_task_taxonomy_v1"
+    work_kind: "benchmark_or_recovery"
+    milestone: "not_applicable"
+    candidate_family: "role_registry_authority_delta_summary_checkpoint_recovery"
+    result_kind: "completed_or_precisely_blocked"
+    authority: "project_control"
+    scope: "project_system"
+
+selected_next_route:
+  route_id: "reconcile_rt008_role_authority_delta_summary_registry_parity_and_checkpoint_v1"
+  route_label: "project-system-recovery"
+  role_family: "process-integrity-auditor@0.1.0"
+  worker_skill: "improve-project-system"
+  plan_task_id: "P12-T05"
+  target_derivation_milestone: "none"
+  milestone_burden: "Reconcile one punctuation-only role-registry parity defect and preserve the completed cumulative P12-T05 transaction before any future checkpoint."
+  requires_human_gate: false
+  project_system_boundary_authorized_by_plan: true
+  physics_promotion_authorized: false
+  dependency_ready: true
+  execution_ready_after_checkpoint: false
+  executed: false
+  blocker_path: "research_control/tasks/RT-20260723-008/artifacts/validation_blocker_checkpoint_role_authority_delta_summary_parity_v1.yaml"
+  blocker_sha256: "cc0be4f906ddc236aff553907ce3d5c84ec8e867f53b7dfe898901e69c1e6abc"
+  next_action: "Make the RT-008 execution-role authority_delta_summary and ROLE_EXECUTION_REGISTRY.csv value exactly equal without changing authority semantics, validate staged parity, preserve the content-address recovery bytes, and invoke at most one future normal checkpoint."
+  source_handoff: "research_control/handoffs/handoff-0841.yaml"
+
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  sidecar_path: ""
+  recursive_goal_recovery_required: true
+  blocker_path: "research_control/tasks/RT-20260723-008/artifacts/validation_blocker_checkpoint_role_authority_delta_summary_parity_v1.yaml"
+  reason: "The generation-75 content-address recovery passed, but its only checkpoint invocation exposed one punctuation-only RT-008 role-registry parity defect that a fresh bounded recursive-goal recovery must own before P12-T06."
+
+handoff_authority_boundary:
+  this_handoff_authorizes: "Director consideration of exactly one fresh bounded P12-T05 improve-project-system recovery for the RT-008 role-registry authority_delta_summary parity defect."
+  this_handoff_does_not_authorize:
+    - "checkpoint retry in generation 75 or legacy validation"
+    - "authority semantics change while reconciling punctuation-level parity"
+    - "P10-T05 or P10-T07 repair-output rewrite"
+    - "P12-T06 execution inside the completed RT-20260723-008 AgentJob"
+    - "event-store activation pilot cutover authority transfer or SQLite tracking"
+    - "private prompt credential personal or sensitive text disclosure"
+    - "P4-T05 protected ontology decision without exact human authority"
+    - "canonical ontology source-law scientific-ledger or Distance-to-GR edits"
+    - "attempt repair abandonment validation or pass counts presented as physics evidence or refutation"
+    - "physical interpretation establishment ontology adoption general EqSrc proof benchmark promotion publication proof authority completed derivation or global no-go"

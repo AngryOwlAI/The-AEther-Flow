@@ -119,6 +119,16 @@ COMPACT_FRONTIER_OUTPUT_PATHS = {
     "output/compact_current_frontier_v16.json",
     "output/compact_current_frontier_v16.yaml",
 }
+SCIENTIFIC_QUALITY_REPORT_OUTPUT_PATHS = {
+    "output/ai_methodology_metrics_dashboard.json",
+    "output/ai_methodology_metrics_dashboard.md",
+    "output/physics_progress_metrics.json",
+    "output/physics_progress_metrics.md",
+}
+SCIENTIFIC_QUALITY_REPORT_SCRIPT_PATHS = {
+    "scripts/research_control/report_physics_progress_metrics.py",
+    "scripts/research_control/scientific_quality_metrics.py",
+}
 VALIDATION_GATE_MANIFEST_PATH = (
     "research_control/design/validation_gate_manifest_v1.yaml"
 )
@@ -332,6 +342,7 @@ def is_generated_derivative(path: str) -> bool:
     return (
         path == "FOLDER_MAP.md"
         or path in COMPACT_FRONTIER_OUTPUT_PATHS
+        or path in SCIENTIFIC_QUALITY_REPORT_OUTPUT_PATHS
         or path.startswith("wiki/")
         or path.startswith("html/")
         or path.startswith("ontology/pdfs/")
@@ -530,6 +541,7 @@ def classify_path_family(path: str, registry: RegistryIndex) -> dict[str, object
         path.startswith("scripts/project_control/")
         or path.startswith("scripts/validation/")
         or (path.startswith("scripts/research_control/") and Path(path).name.startswith("validate"))
+        or path in SCIENTIFIC_QUALITY_REPORT_SCRIPT_PATHS
         or path.startswith("tests/")
     ):
         tags.add("validator_code")

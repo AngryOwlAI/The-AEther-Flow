@@ -1,0 +1,250 @@
+{
+  "check_count": 44,
+  "checks": [
+    {
+      "check_id": "fixture_schema",
+      "detail": "fixture suite identity is exact",
+      "status": "PASS"
+    },
+    {
+      "check_id": "fixture_case_count",
+      "detail": "fixture cases=14",
+      "status": "PASS"
+    },
+    {
+      "check_id": "fixture:assumption_reduction_measured",
+      "detail": "status=measured value=0.5 warnings=[]",
+      "status": "PASS"
+    },
+    {
+      "check_id": "fixture:theorem_generality_measured",
+      "detail": "status=measured value=0.5 warnings=[]",
+      "status": "PASS"
+    },
+    {
+      "check_id": "fixture:countermodel_novelty_measured",
+      "detail": "status=measured value=0.5 warnings=[]",
+      "status": "PASS"
+    },
+    {
+      "check_id": "fixture:obstruction_reuse_measured",
+      "detail": "status=measured value=0.5 warnings=[]",
+      "status": "PASS"
+    },
+    {
+      "check_id": "fixture:independent_survival_measured",
+      "detail": "status=measured value=0.5 warnings=[]",
+      "status": "PASS"
+    },
+    {
+      "check_id": "fixture:benchmark_breadth_measured",
+      "detail": "status=measured value=0.5 warnings=[]",
+      "status": "PASS"
+    },
+    {
+      "check_id": "fixture:retraction_visibility_measured",
+      "detail": "status=measured value=0.5 warnings=[]",
+      "status": "PASS"
+    },
+    {
+      "check_id": "fixture:ledger_durability_measured",
+      "detail": "status=measured value=0.5 warnings=[]",
+      "status": "PASS"
+    },
+    {
+      "check_id": "fixture:unknown_denominator_not_zero",
+      "detail": "status=not_measured value=None warnings=['unknown_denominator']",
+      "status": "PASS"
+    },
+    {
+      "check_id": "fixture:known_empty_not_zero",
+      "detail": "status=not_measured value=None warnings=['empty_eligible_set']",
+      "status": "PASS"
+    },
+    {
+      "check_id": "fixture:numerator_outside_denominator",
+      "detail": "status=invalid value=None warnings=['numerator_outside_denominator']",
+      "status": "PASS"
+    },
+    {
+      "check_id": "fixture:duplicate_identity_rejected",
+      "detail": "status=invalid value=None warnings=['duplicate_identity']",
+      "status": "PASS"
+    },
+    {
+      "check_id": "fixture:artifact_split_alias_rejected",
+      "detail": "status=invalid value=None warnings=['artifact_splitting_or_alias']",
+      "status": "PASS"
+    },
+    {
+      "check_id": "fixture:logical_range_violation_warns",
+      "detail": "status=invalid value=1.0 warnings=['logical_range_violation']",
+      "status": "PASS"
+    },
+    {
+      "check_id": "all_metric_families_covered",
+      "detail": "covered=['assumption_reduction_rate', 'benchmark_breadth_rate', 'countermodel_novelty_rate', 'independent_review_survival_rate', 'ledger_durability_rate', 'obstruction_unification_and_reuse_rate', 'retraction_repair_visibility_rate', 'theorem_generality_rate']",
+      "status": "PASS"
+    },
+    {
+      "check_id": "taxonomy_metric:assumption_reduction_rate",
+      "detail": "metric identity appears in canonical taxonomy",
+      "status": "PASS"
+    },
+    {
+      "check_id": "taxonomy_metric:theorem_generality_rate",
+      "detail": "metric identity appears in canonical taxonomy",
+      "status": "PASS"
+    },
+    {
+      "check_id": "taxonomy_metric:countermodel_novelty_rate",
+      "detail": "metric identity appears in canonical taxonomy",
+      "status": "PASS"
+    },
+    {
+      "check_id": "taxonomy_metric:obstruction_unification_and_reuse_rate",
+      "detail": "metric identity appears in canonical taxonomy",
+      "status": "PASS"
+    },
+    {
+      "check_id": "taxonomy_metric:independent_review_survival_rate",
+      "detail": "metric identity appears in canonical taxonomy",
+      "status": "PASS"
+    },
+    {
+      "check_id": "taxonomy_metric:benchmark_breadth_rate",
+      "detail": "metric identity appears in canonical taxonomy",
+      "status": "PASS"
+    },
+    {
+      "check_id": "taxonomy_metric:retraction_repair_visibility_rate",
+      "detail": "metric identity appears in canonical taxonomy",
+      "status": "PASS"
+    },
+    {
+      "check_id": "taxonomy_metric:ledger_durability_rate",
+      "detail": "metric identity appears in canonical taxonomy",
+      "status": "PASS"
+    },
+    {
+      "check_id": "taxonomy_boundary:96e874b7",
+      "detail": "No aggregate scientific-truth score is permitted.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "taxonomy_boundary:057179ab",
+      "detail": "not an artifact count",
+      "status": "PASS"
+    },
+    {
+      "check_id": "taxonomy_boundary:59b8c717",
+      "detail": "cannot substitute for an eligible-set quality diagnostic",
+      "status": "PASS"
+    },
+    {
+      "check_id": "policy_boundary:952617f8",
+      "detail": "`not_measured`: the denominator is unknown or known-empty",
+      "status": "PASS"
+    },
+    {
+      "check_id": "policy_boundary:617a1cc5",
+      "detail": "`artifact_splitting_or_alias`",
+      "status": "PASS"
+    },
+    {
+      "check_id": "policy_boundary:f3f80780",
+      "detail": "Raw volume is operational context only.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "policy_boundary:5dc8ad47",
+      "detail": "Keep all claim, ontology, benchmark, proof, Gate Chair, publication",
+      "status": "PASS"
+    },
+    {
+      "check_id": "live_report_status",
+      "detail": "live status=PASS",
+      "status": "PASS"
+    },
+    {
+      "check_id": "live_metric_count",
+      "detail": "metric_count=8",
+      "status": "PASS"
+    },
+    {
+      "check_id": "live_no_invalid_metrics",
+      "detail": "status_counts={'measured': 3, 'not_measured': 5, 'invalid': 0}",
+      "status": "PASS"
+    },
+    {
+      "check_id": "live_measured_and_not_measured_visible",
+      "detail": "status_counts={'measured': 3, 'not_measured': 5, 'invalid': 0}",
+      "status": "PASS"
+    },
+    {
+      "check_id": "live_logical_ranges",
+      "detail": "measured_values=[0.514286, 1.0, 1.0]",
+      "status": "PASS"
+    },
+    {
+      "check_id": "live_unknowns_not_zero_filled",
+      "detail": "every not_measured value is null",
+      "status": "PASS"
+    },
+    {
+      "check_id": "no_aggregate_metric",
+      "detail": "aggregate metric remains absent",
+      "status": "PASS"
+    },
+    {
+      "check_id": "volume_demoted",
+      "detail": "raw volume is operational context only",
+      "status": "PASS"
+    },
+    {
+      "check_id": "authority_boundary",
+      "detail": "all scientific and protected-authority flags remain false",
+      "status": "PASS"
+    },
+    {
+      "check_id": "dashboard_primary_quality_rows",
+      "detail": "dashboard carries eight primary durable-quality rows",
+      "status": "PASS"
+    },
+    {
+      "check_id": "dashboard_volume_context",
+      "detail": "dashboard explicitly demotes raw volume",
+      "status": "PASS"
+    },
+    {
+      "check_id": "dashboard_order",
+      "detail": "durable-quality diagnostics precede raw volume diagnostics",
+      "status": "PASS"
+    }
+  ],
+  "claim_boundary_summary": "Eight denominator-bound identity metrics remain advisory; unknown populations are not_measured, raw volume is operational context, no aggregate truth score exists, and no scientific or protected authority changes.",
+  "failure_count": 0,
+  "fixture_case_count": 14,
+  "live_status_counts": {
+    "invalid": 0,
+    "measured": 3,
+    "not_measured": 5
+  },
+  "metric_count": 8,
+  "plan_task_id": "P12-T05",
+  "schema_id": "p12_t05_scientific_quality_validation_report_v1",
+  "source_hashes": {
+    "research_control/tasks/RT-20260721-005/artifacts/v21_candidate_lineage_registry.json": "788289c942bdcc5fff2f1337998f50d2b6fe89ca541de65a0ae24a651da97489",
+    "research_control/tasks/RT-20260721-006/artifacts/v21_research_attempt_ledger.json": "f32e7d272d3d99a339a2cfd81e56b1d44e51e1449b2e34e9dd111161397c1ba2",
+    "research_control/tasks/RT-20260723-004/artifacts/fixtures/scientific_quality_metric_cases.json": "7253ac9138885061cd854fd61b69757ae78aa8c497ba1066ade2a0c19c62a4b8",
+    "research_control/tasks/RT-20260723-004/artifacts/scientific_quality_calibration_warning_policy_v1.md": "25205ad3cf4f28492467bdd6343d52647c76ddfd67d7609bc9ce187ec06e8b75",
+    "research_control/tasks/RT-20260723-004/artifacts/scientific_quality_metric_taxonomy_v1.md": "b7fc9ff6f6d55e2ec9462700f8c4f985ab77ff5ffcc9cfdd07923b60011c6436",
+    "research_control/tasks/RT-20260723-004/artifacts/validate_scientific_quality_metrics.py": "e4102ac5ce28653e9c8195762aeb519c1f5c08e615aa03221d18b0906fd73260",
+    "scripts/research_control/render_ai_methodology_metrics_dashboard.py": "059ff7191575cb865fac020c010314901e04aa11e0054706866be62b81ac17af",
+    "scripts/research_control/report_physics_progress_metrics.py": "07cd220950e4b85632385da1dcaa932c8a6c48c50b33e2736dd6f181bc9abfd1",
+    "scripts/research_control/scientific_quality_metrics.py": "2e9b443da0e9beeccd08a54936972a8438ba64b7fcc12dccd4d4793b7111ccc9"
+  },
+  "status": "PASS",
+  "task_id": "RT-20260723-004",
+  "warning_count": 5
+}

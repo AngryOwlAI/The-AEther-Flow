@@ -1,0 +1,216 @@
+{
+  "schema_id": "durable_scientific_quality_metric_fixture_suite_v1",
+  "cases": [
+    {
+      "case_id": "assumption_reduction_measured",
+      "metric_id": "assumption_reduction_rate",
+      "evidence": {
+        "denominator_status": "known",
+        "eligible_items": [
+          {"identity": "CMP-A", "identity_sha256": "1111111111111111111111111111111111111111111111111111111111111111", "identity_kind": "candidate_or_theorem_comparison", "source_path": "fixture/a"},
+          {"identity": "CMP-B", "identity_sha256": "2222222222222222222222222222222222222222222222222222222222222222", "identity_kind": "candidate_or_theorem_comparison", "source_path": "fixture/b"}
+        ],
+        "qualifying_ids": ["CMP-A"],
+        "reported_value": 0.5
+      },
+      "expected_status": "measured",
+      "expected_value": 0.5,
+      "expected_warning_codes": []
+    },
+    {
+      "case_id": "theorem_generality_measured",
+      "metric_id": "theorem_generality_rate",
+      "evidence": {
+        "denominator_status": "known",
+        "eligible_items": [
+          {"identity": "APP-A", "identity_sha256": "3333333333333333333333333333333333333333333333333333333333333333", "identity_kind": "declared_theorem_application", "source_path": "fixture/a"},
+          {"identity": "APP-B", "identity_sha256": "4444444444444444444444444444444444444444444444444444444444444444", "identity_kind": "declared_theorem_application", "source_path": "fixture/b"}
+        ],
+        "qualifying_ids": ["APP-A"],
+        "reported_value": 0.5
+      },
+      "expected_status": "measured",
+      "expected_value": 0.5,
+      "expected_warning_codes": []
+    },
+    {
+      "case_id": "countermodel_novelty_measured",
+      "metric_id": "countermodel_novelty_rate",
+      "evidence": {
+        "denominator_status": "known",
+        "eligible_items": [
+          {"identity": "CM-A", "identity_sha256": "5555555555555555555555555555555555555555555555555555555555555555", "identity_kind": "countermodel", "source_path": "fixture/a"},
+          {"identity": "CM-B", "identity_sha256": "6666666666666666666666666666666666666666666666666666666666666666", "identity_kind": "countermodel", "source_path": "fixture/b"}
+        ],
+        "qualifying_ids": ["CM-A"],
+        "reported_value": 0.5
+      },
+      "expected_status": "measured",
+      "expected_value": 0.5,
+      "expected_warning_codes": []
+    },
+    {
+      "case_id": "obstruction_reuse_measured",
+      "metric_id": "obstruction_unification_and_reuse_rate",
+      "evidence": {
+        "denominator_status": "known",
+        "eligible_items": [
+          {"identity": "OB-A", "identity_sha256": "7777777777777777777777777777777777777777777777777777777777777777", "identity_kind": "obstruction", "source_path": "fixture/a"},
+          {"identity": "OB-B", "identity_sha256": "8888888888888888888888888888888888888888888888888888888888888888", "identity_kind": "obstruction", "source_path": "fixture/b"}
+        ],
+        "qualifying_ids": ["OB-A"],
+        "reported_value": 0.5
+      },
+      "expected_status": "measured",
+      "expected_value": 0.5,
+      "expected_warning_codes": []
+    },
+    {
+      "case_id": "independent_survival_measured",
+      "metric_id": "independent_review_survival_rate",
+      "evidence": {
+        "denominator_status": "known",
+        "eligible_items": [
+          {"identity": "REV-A", "identity_sha256": "9999999999999999999999999999999999999999999999999999999999999999", "identity_kind": "reviewed_scientific_object", "source_path": "fixture/a"},
+          {"identity": "REV-B", "identity_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "identity_kind": "reviewed_scientific_object", "source_path": "fixture/b"}
+        ],
+        "qualifying_ids": ["REV-A"],
+        "reported_value": 0.5
+      },
+      "expected_status": "measured",
+      "expected_value": 0.5,
+      "expected_warning_codes": []
+    },
+    {
+      "case_id": "benchmark_breadth_measured",
+      "metric_id": "benchmark_breadth_rate",
+      "evidence": {
+        "denominator_status": "known",
+        "eligible_items": [
+          {"identity": "BENCH-A", "identity_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb", "identity_kind": "benchmark_case", "source_path": "fixture/a"},
+          {"identity": "BENCH-B", "identity_sha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc", "identity_kind": "benchmark_case", "source_path": "fixture/b"}
+        ],
+        "qualifying_ids": ["BENCH-A"],
+        "reported_value": 0.5
+      },
+      "expected_status": "measured",
+      "expected_value": 0.5,
+      "expected_warning_codes": []
+    },
+    {
+      "case_id": "retraction_visibility_measured",
+      "metric_id": "retraction_repair_visibility_rate",
+      "evidence": {
+        "denominator_status": "known",
+        "eligible_items": [
+          {"identity": "AEV-A", "identity_sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd", "identity_kind": "attempt_event", "source_path": "fixture/a"},
+          {"identity": "AEV-B", "identity_sha256": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee", "identity_kind": "attempt_event", "source_path": "fixture/b"}
+        ],
+        "qualifying_ids": ["AEV-A"],
+        "reported_value": 0.5
+      },
+      "expected_status": "measured",
+      "expected_value": 0.5,
+      "expected_warning_codes": []
+    },
+    {
+      "case_id": "ledger_durability_measured",
+      "metric_id": "ledger_durability_rate",
+      "evidence": {
+        "denominator_status": "known",
+        "eligible_items": [
+          {"identity": "AEV-C", "identity_sha256": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff", "identity_kind": "attempt_event", "source_path": "fixture/a"},
+          {"identity": "AEV-D", "identity_sha256": "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef", "identity_kind": "attempt_event", "source_path": "fixture/b"}
+        ],
+        "qualifying_ids": ["AEV-C"],
+        "reported_value": 0.5
+      },
+      "expected_status": "measured",
+      "expected_value": 0.5,
+      "expected_warning_codes": []
+    },
+    {
+      "case_id": "unknown_denominator_not_zero",
+      "metric_id": "assumption_reduction_rate",
+      "evidence": {
+        "denominator_status": "unknown",
+        "eligible_items": [],
+        "qualifying_ids": []
+      },
+      "expected_status": "not_measured",
+      "expected_value": null,
+      "expected_warning_codes": ["unknown_denominator"]
+    },
+    {
+      "case_id": "known_empty_not_zero",
+      "metric_id": "benchmark_breadth_rate",
+      "evidence": {
+        "denominator_status": "known",
+        "eligible_items": [],
+        "qualifying_ids": []
+      },
+      "expected_status": "not_measured",
+      "expected_value": null,
+      "expected_warning_codes": ["empty_eligible_set"]
+    },
+    {
+      "case_id": "numerator_outside_denominator",
+      "metric_id": "countermodel_novelty_rate",
+      "evidence": {
+        "denominator_status": "known",
+        "eligible_items": [
+          {"identity": "CM-C", "identity_sha256": "1010101010101010101010101010101010101010101010101010101010101010", "identity_kind": "countermodel", "source_path": "fixture/c"}
+        ],
+        "qualifying_ids": ["CM-OUTSIDE"]
+      },
+      "expected_status": "invalid",
+      "expected_value": null,
+      "expected_warning_codes": ["numerator_outside_denominator"]
+    },
+    {
+      "case_id": "duplicate_identity_rejected",
+      "metric_id": "obstruction_unification_and_reuse_rate",
+      "evidence": {
+        "denominator_status": "known",
+        "eligible_items": [
+          {"identity": "OB-DUP", "identity_sha256": "2020202020202020202020202020202020202020202020202020202020202020", "identity_kind": "obstruction", "source_path": "fixture/a"},
+          {"identity": "OB-DUP", "identity_sha256": "3030303030303030303030303030303030303030303030303030303030303030", "identity_kind": "obstruction", "source_path": "fixture/b"}
+        ],
+        "qualifying_ids": []
+      },
+      "expected_status": "invalid",
+      "expected_value": null,
+      "expected_warning_codes": ["duplicate_identity"]
+    },
+    {
+      "case_id": "artifact_split_alias_rejected",
+      "metric_id": "theorem_generality_rate",
+      "evidence": {
+        "denominator_status": "known",
+        "eligible_items": [
+          {"identity": "APP-C", "identity_sha256": "4040404040404040404040404040404040404040404040404040404040404040", "identity_kind": "declared_theorem_application", "source_path": "fixture/a"},
+          {"identity": "APP-D", "identity_sha256": "4040404040404040404040404040404040404040404040404040404040404040", "identity_kind": "declared_theorem_application", "source_path": "fixture/b"}
+        ],
+        "qualifying_ids": []
+      },
+      "expected_status": "invalid",
+      "expected_value": null,
+      "expected_warning_codes": ["artifact_splitting_or_alias"]
+    },
+    {
+      "case_id": "logical_range_violation_warns",
+      "metric_id": "ledger_durability_rate",
+      "evidence": {
+        "denominator_status": "known",
+        "eligible_items": [
+          {"identity": "AEV-RANGE", "identity_sha256": "5050505050505050505050505050505050505050505050505050505050505050", "identity_kind": "attempt_event", "source_path": "fixture/range"}
+        ],
+        "qualifying_ids": ["AEV-RANGE"],
+        "reported_value": 1.2
+      },
+      "expected_status": "invalid",
+      "expected_value": 1.0,
+      "expected_warning_codes": ["logical_range_violation"]
+    }
+  ]
+}

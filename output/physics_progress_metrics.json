@@ -1,11 +1,15 @@
 {
-  "as_of": "2026-07-22T02:38:48Z",
+  "as_of": "2026-07-23T10:25:43Z",
   "authority_boundary": {
     "ai_methodology_metrics_are_support_only": true,
+    "dual_budget_dashboard_is_support_only": true,
+    "durable_scientific_quality_metrics_are_advisory": true,
+    "durable_scientific_quality_metrics_are_primary_quality_surface": true,
     "metrics_are_operational": true,
     "metrics_report_not_physics_proof": true,
     "physics_claim_promotion_authorized": false,
     "physics_payload_ratio_diagnostics_are_support_only": true,
+    "raw_volume_is_primary_scientific_quality": false,
     "scoreboards_are_separated": true,
     "validation_status_is_not_physics_evidence": true
   },
@@ -16,7 +20,10 @@
     "Obstruction reuse is measured by completion-level obstruction IDs and later completion references.",
     "AI research-agent methodology metrics are support-only diagnostics and cannot be used as proof, source-law adoption, benchmark promotion, or Gate Chair verdicts.",
     "Candidate-lineage metrics are keyed by immutable candidate IDs and preserve explicit historical absences; they remain support-only project-control evidence and do not adopt or reject a candidate.",
+    "Durable scientific-quality diagnostics use explicit eligible sets and immutable identities, leave absent denominators not_measured, and never aggregate scientific truth into one score.",
+    "Raw packet, artifact, task, and payload counts remain operational context only; they are not the primary scientific-quality surface.",
     "Physics-payload ratio diagnostics are AI-system diagnostics only; they do not rank physics truth.",
+    "Dual-budget dashboard values are operational accounting; system success, missing-resource markers, and lane counts are not physics evidence or Distance-to-GR progress.",
     "Validator failure history is not a durable event log, so this report does not infer blocked violation counts from past terminal output."
   ],
   "metrics": {
@@ -266,12 +273,12 @@
               "per_phase_registered_task_rows": {
                 "P0": 34,
                 "P1": 29,
-                "P10": 30,
-                "P11": 25,
-                "P12": 14,
+                "P10": 39,
+                "P11": 32,
+                "P12": 19,
                 "P13": 13,
-                "P14": 10,
-                "P15": 6,
+                "P14": 15,
+                "P15": 11,
                 "P16": 6,
                 "P17": 6,
                 "P2": 43,
@@ -282,9 +289,9 @@
                 "P7": 64,
                 "P8": 31,
                 "P9": 26,
-                "unclassified": 520
+                "unclassified": 521
               },
-              "registered_task_rows": 1038
+              "registered_task_rows": 1070
             }
           },
           "diagnostic_interpretation": "Gate-load signals are governance workload diagnostics, not Gate Chair scientific verdicts.",
@@ -997,10 +1004,35 @@
               "research_control/tasks/RT-20260720-032/jobs/completions/AJC-AJ-RT-20260720-032-001.yaml",
               "research_control/tasks/RT-20260721-002/jobs/completions/AJC-AJ-RT-20260721-002-001.yaml",
               "research_control/tasks/RT-20260721-004/jobs/completions/AJC-AJ-RT-20260721-004-001.yaml",
-              "research_control/tasks/RT-20260721-005/jobs/completions/AJC-AJ-RT-20260721-005-001.yaml"
+              "research_control/tasks/RT-20260721-005/jobs/completions/AJC-AJ-RT-20260721-005-001.yaml",
+              "research_control/tasks/RT-20260721-006/jobs/completions/AJC-AJ-RT-20260721-006-001.yaml",
+              "research_control/tasks/RT-20260721-007/jobs/completions/AJC-AJ-RT-20260721-007-001.yaml",
+              "research_control/tasks/RT-20260721-008/jobs/completions/AJC-AJ-RT-20260721-008-001.yaml",
+              "research_control/tasks/RT-20260721-009/jobs/completions/AJC-AJ-RT-20260721-009-001.yaml",
+              "research_control/tasks/RT-20260722-002/jobs/completions/AJC-AJ-RT-20260722-002-001.yaml",
+              "research_control/tasks/RT-20260722-003/jobs/completions/AJC-AJ-RT-20260722-003-001.yaml",
+              "research_control/tasks/RT-20260722-004/jobs/completions/AJC-AJ-RT-20260722-004-001.yaml",
+              "research_control/tasks/RT-20260722-005/jobs/completions/AJC-AJ-RT-20260722-005-001.yaml",
+              "research_control/tasks/RT-20260722-006/jobs/completions/AJC-AJ-RT-20260722-006-001.yaml",
+              "research_control/tasks/RT-20260722-007/jobs/completions/AJC-AJ-RT-20260722-007-001.yaml",
+              "research_control/tasks/RT-20260722-008/jobs/completions/AJC-AJ-RT-20260722-008-001.yaml",
+              "research_control/tasks/RT-20260722-009/jobs/completions/AJC-AJ-RT-20260722-009-001.yaml",
+              "research_control/tasks/RT-20260722-010/jobs/completions/AJC-AJ-RT-20260722-010-001.yaml",
+              "research_control/tasks/RT-20260722-011/jobs/completions/AJC-AJ-RT-20260722-011-001.yaml",
+              "research_control/tasks/RT-20260722-012/jobs/completions/AJC-AJ-RT-20260722-012-001.yaml",
+              "research_control/tasks/RT-20260722-013/jobs/completions/AJC-AJ-RT-20260722-013-001.yaml",
+              "research_control/tasks/RT-20260722-014/jobs/completions/AJC-AJ-RT-20260722-014-001.yaml",
+              "research_control/tasks/RT-20260722-015/jobs/completions/AJC-AJ-RT-20260722-015-001.yaml",
+              "research_control/tasks/RT-20260722-016/jobs/completions/AJC-AJ-RT-20260722-016-001.yaml",
+              "research_control/tasks/RT-20260722-018/jobs/completions/AJC-AJ-RT-20260722-018-001.yaml",
+              "research_control/tasks/RT-20260722-019/jobs/completions/AJC-AJ-RT-20260722-019-001.yaml",
+              "research_control/tasks/RT-20260722-020/jobs/completions/AJC-AJ-RT-20260722-020-001.yaml",
+              "research_control/tasks/RT-20260722-021/jobs/completions/AJC-AJ-RT-20260722-021-001.yaml",
+              "research_control/tasks/RT-20260723-003/jobs/completions/AJC-AJ-RT-20260723-003-001.yaml",
+              "research_control/tasks/RT-20260723-004/jobs/completions/AJC-AJ-RT-20260723-004-001.yaml"
             ],
             "label": "Count of overclaim surfaces eligible for detection in the reviewed scope.",
-            "value": 467
+            "value": 492
           },
           "diagnostic_interpretation": "Forbidden-conclusion summaries are counted as eligible overclaim-control surfaces; caught means no physics promotion was authorized.",
           "family": "Claim-boundary control",
@@ -1475,14 +1507,39 @@
               "research_control/tasks/RT-20260720-032/jobs/completions/AJC-AJ-RT-20260720-032-001.yaml",
               "research_control/tasks/RT-20260721-002/jobs/completions/AJC-AJ-RT-20260721-002-001.yaml",
               "research_control/tasks/RT-20260721-004/jobs/completions/AJC-AJ-RT-20260721-004-001.yaml",
-              "research_control/tasks/RT-20260721-005/jobs/completions/AJC-AJ-RT-20260721-005-001.yaml"
+              "research_control/tasks/RT-20260721-005/jobs/completions/AJC-AJ-RT-20260721-005-001.yaml",
+              "research_control/tasks/RT-20260721-006/jobs/completions/AJC-AJ-RT-20260721-006-001.yaml",
+              "research_control/tasks/RT-20260721-007/jobs/completions/AJC-AJ-RT-20260721-007-001.yaml",
+              "research_control/tasks/RT-20260721-008/jobs/completions/AJC-AJ-RT-20260721-008-001.yaml",
+              "research_control/tasks/RT-20260721-009/jobs/completions/AJC-AJ-RT-20260721-009-001.yaml",
+              "research_control/tasks/RT-20260722-002/jobs/completions/AJC-AJ-RT-20260722-002-001.yaml",
+              "research_control/tasks/RT-20260722-003/jobs/completions/AJC-AJ-RT-20260722-003-001.yaml",
+              "research_control/tasks/RT-20260722-004/jobs/completions/AJC-AJ-RT-20260722-004-001.yaml",
+              "research_control/tasks/RT-20260722-005/jobs/completions/AJC-AJ-RT-20260722-005-001.yaml",
+              "research_control/tasks/RT-20260722-006/jobs/completions/AJC-AJ-RT-20260722-006-001.yaml",
+              "research_control/tasks/RT-20260722-007/jobs/completions/AJC-AJ-RT-20260722-007-001.yaml",
+              "research_control/tasks/RT-20260722-008/jobs/completions/AJC-AJ-RT-20260722-008-001.yaml",
+              "research_control/tasks/RT-20260722-009/jobs/completions/AJC-AJ-RT-20260722-009-001.yaml",
+              "research_control/tasks/RT-20260722-010/jobs/completions/AJC-AJ-RT-20260722-010-001.yaml",
+              "research_control/tasks/RT-20260722-011/jobs/completions/AJC-AJ-RT-20260722-011-001.yaml",
+              "research_control/tasks/RT-20260722-012/jobs/completions/AJC-AJ-RT-20260722-012-001.yaml",
+              "research_control/tasks/RT-20260722-013/jobs/completions/AJC-AJ-RT-20260722-013-001.yaml",
+              "research_control/tasks/RT-20260722-014/jobs/completions/AJC-AJ-RT-20260722-014-001.yaml",
+              "research_control/tasks/RT-20260722-015/jobs/completions/AJC-AJ-RT-20260722-015-001.yaml",
+              "research_control/tasks/RT-20260722-016/jobs/completions/AJC-AJ-RT-20260722-016-001.yaml",
+              "research_control/tasks/RT-20260722-018/jobs/completions/AJC-AJ-RT-20260722-018-001.yaml",
+              "research_control/tasks/RT-20260722-019/jobs/completions/AJC-AJ-RT-20260722-019-001.yaml",
+              "research_control/tasks/RT-20260722-020/jobs/completions/AJC-AJ-RT-20260722-020-001.yaml",
+              "research_control/tasks/RT-20260722-021/jobs/completions/AJC-AJ-RT-20260722-021-001.yaml",
+              "research_control/tasks/RT-20260723-003/jobs/completions/AJC-AJ-RT-20260723-003-001.yaml",
+              "research_control/tasks/RT-20260723-004/jobs/completions/AJC-AJ-RT-20260723-004-001.yaml"
             ],
             "label": "Count of overclaim surfaces flagged before checkpoint.",
-            "value": 440
+            "value": 465
           },
           "status": "measured",
           "uncertainty_note": "",
-          "value": 0.9422
+          "value": 0.9451
         },
         "proof_to_process_ratio": {
           "authority_boundary": {
@@ -2535,10 +2592,42 @@
               "research_control/tasks/RT-20260721-002/jobs/completions/AJC-AJ-RT-20260721-002-001.yaml",
               "research_control/tasks/RT-20260721-003/jobs/completions/AJC-AJ-RT-20260721-003-001.yaml",
               "research_control/tasks/RT-20260721-004/jobs/completions/AJC-AJ-RT-20260721-004-001.yaml",
-              "research_control/tasks/RT-20260721-005/jobs/completions/AJC-AJ-RT-20260721-005-001.yaml"
+              "research_control/tasks/RT-20260721-005/jobs/completions/AJC-AJ-RT-20260721-005-001.yaml",
+              "research_control/tasks/RT-20260721-006/jobs/completions/AJC-AJ-RT-20260721-006-001.yaml",
+              "research_control/tasks/RT-20260721-007/jobs/completions/AJC-AJ-RT-20260721-007-001.yaml",
+              "research_control/tasks/RT-20260721-008/jobs/completions/AJC-AJ-RT-20260721-008-001.yaml",
+              "research_control/tasks/RT-20260721-009/jobs/completions/AJC-AJ-RT-20260721-009-001.yaml",
+              "research_control/tasks/RT-20260722-001/jobs/completions/AJC-AJ-RT-20260722-001-001.yaml",
+              "research_control/tasks/RT-20260722-002/jobs/completions/AJC-AJ-RT-20260722-002-001.yaml",
+              "research_control/tasks/RT-20260722-003/jobs/completions/AJC-AJ-RT-20260722-003-001.yaml",
+              "research_control/tasks/RT-20260722-004/jobs/completions/AJC-AJ-RT-20260722-004-001.yaml",
+              "research_control/tasks/RT-20260722-005/jobs/completions/AJC-AJ-RT-20260722-005-001.yaml",
+              "research_control/tasks/RT-20260722-006/jobs/completions/AJC-AJ-RT-20260722-006-001.yaml",
+              "research_control/tasks/RT-20260722-007/jobs/completions/AJC-AJ-RT-20260722-007-001.yaml",
+              "research_control/tasks/RT-20260722-008/jobs/completions/AJC-AJ-RT-20260722-008-001.yaml",
+              "research_control/tasks/RT-20260722-009/jobs/completions/AJC-AJ-RT-20260722-009-001.yaml",
+              "research_control/tasks/RT-20260722-010/jobs/completions/AJC-AJ-RT-20260722-010-001.yaml",
+              "research_control/tasks/RT-20260722-011/jobs/completions/AJC-AJ-RT-20260722-011-001.yaml",
+              "research_control/tasks/RT-20260722-012/jobs/completions/AJC-AJ-RT-20260722-012-001.yaml",
+              "research_control/tasks/RT-20260722-013/jobs/completions/AJC-AJ-RT-20260722-013-001.yaml",
+              "research_control/tasks/RT-20260722-014/jobs/completions/AJC-AJ-RT-20260722-014-001.yaml",
+              "research_control/tasks/RT-20260722-015/jobs/completions/AJC-AJ-RT-20260722-015-001.yaml",
+              "research_control/tasks/RT-20260722-016/jobs/completions/AJC-AJ-RT-20260722-016-001.yaml",
+              "research_control/tasks/RT-20260722-017/jobs/completions/AJC-AJ-RT-20260722-017-001.yaml",
+              "research_control/tasks/RT-20260722-018/jobs/completions/AJC-AJ-RT-20260722-018-001.yaml",
+              "research_control/tasks/RT-20260722-019/jobs/completions/AJC-AJ-RT-20260722-019-001.yaml",
+              "research_control/tasks/RT-20260722-020/jobs/completions/AJC-AJ-RT-20260722-020-001.yaml",
+              "research_control/tasks/RT-20260722-021/jobs/completions/AJC-AJ-RT-20260722-021-001.yaml",
+              "research_control/tasks/RT-20260722-022/jobs/completions/AJC-AJ-RT-20260722-022-001.yaml",
+              "research_control/tasks/RT-20260722-023/jobs/completions/AJC-AJ-RT-20260722-023-001.yaml",
+              "research_control/tasks/RT-20260722-024/jobs/completions/AJC-AJ-RT-20260722-024-001.yaml",
+              "research_control/tasks/RT-20260723-001/jobs/completions/AJC-AJ-RT-20260723-001-001.yaml",
+              "research_control/tasks/RT-20260723-002/jobs/completions/AJC-AJ-RT-20260723-002-001.yaml",
+              "research_control/tasks/RT-20260723-003/jobs/completions/AJC-AJ-RT-20260723-003-001.yaml",
+              "research_control/tasks/RT-20260723-004/jobs/completions/AJC-AJ-RT-20260723-004-001.yaml"
             ],
             "label": "Count of process receipts.",
-            "value": 719
+            "value": 747
           },
           "diagnostic_interpretation": "Payload balance compares mathematical payload items to process-only items; it is not proof authority.",
           "family": "Payload balance",
@@ -3584,14 +3673,46 @@
               "research_control/tasks/RT-20260721-002/jobs/completions/AJC-AJ-RT-20260721-002-001.yaml",
               "research_control/tasks/RT-20260721-003/jobs/completions/AJC-AJ-RT-20260721-003-001.yaml",
               "research_control/tasks/RT-20260721-004/jobs/completions/AJC-AJ-RT-20260721-004-001.yaml",
-              "research_control/tasks/RT-20260721-005/jobs/completions/AJC-AJ-RT-20260721-005-001.yaml"
+              "research_control/tasks/RT-20260721-005/jobs/completions/AJC-AJ-RT-20260721-005-001.yaml",
+              "research_control/tasks/RT-20260721-006/jobs/completions/AJC-AJ-RT-20260721-006-001.yaml",
+              "research_control/tasks/RT-20260721-007/jobs/completions/AJC-AJ-RT-20260721-007-001.yaml",
+              "research_control/tasks/RT-20260721-008/jobs/completions/AJC-AJ-RT-20260721-008-001.yaml",
+              "research_control/tasks/RT-20260721-009/jobs/completions/AJC-AJ-RT-20260721-009-001.yaml",
+              "research_control/tasks/RT-20260722-001/jobs/completions/AJC-AJ-RT-20260722-001-001.yaml",
+              "research_control/tasks/RT-20260722-002/jobs/completions/AJC-AJ-RT-20260722-002-001.yaml",
+              "research_control/tasks/RT-20260722-003/jobs/completions/AJC-AJ-RT-20260722-003-001.yaml",
+              "research_control/tasks/RT-20260722-004/jobs/completions/AJC-AJ-RT-20260722-004-001.yaml",
+              "research_control/tasks/RT-20260722-005/jobs/completions/AJC-AJ-RT-20260722-005-001.yaml",
+              "research_control/tasks/RT-20260722-006/jobs/completions/AJC-AJ-RT-20260722-006-001.yaml",
+              "research_control/tasks/RT-20260722-007/jobs/completions/AJC-AJ-RT-20260722-007-001.yaml",
+              "research_control/tasks/RT-20260722-008/jobs/completions/AJC-AJ-RT-20260722-008-001.yaml",
+              "research_control/tasks/RT-20260722-009/jobs/completions/AJC-AJ-RT-20260722-009-001.yaml",
+              "research_control/tasks/RT-20260722-010/jobs/completions/AJC-AJ-RT-20260722-010-001.yaml",
+              "research_control/tasks/RT-20260722-011/jobs/completions/AJC-AJ-RT-20260722-011-001.yaml",
+              "research_control/tasks/RT-20260722-012/jobs/completions/AJC-AJ-RT-20260722-012-001.yaml",
+              "research_control/tasks/RT-20260722-013/jobs/completions/AJC-AJ-RT-20260722-013-001.yaml",
+              "research_control/tasks/RT-20260722-014/jobs/completions/AJC-AJ-RT-20260722-014-001.yaml",
+              "research_control/tasks/RT-20260722-015/jobs/completions/AJC-AJ-RT-20260722-015-001.yaml",
+              "research_control/tasks/RT-20260722-016/jobs/completions/AJC-AJ-RT-20260722-016-001.yaml",
+              "research_control/tasks/RT-20260722-017/jobs/completions/AJC-AJ-RT-20260722-017-001.yaml",
+              "research_control/tasks/RT-20260722-018/jobs/completions/AJC-AJ-RT-20260722-018-001.yaml",
+              "research_control/tasks/RT-20260722-019/jobs/completions/AJC-AJ-RT-20260722-019-001.yaml",
+              "research_control/tasks/RT-20260722-020/jobs/completions/AJC-AJ-RT-20260722-020-001.yaml",
+              "research_control/tasks/RT-20260722-021/jobs/completions/AJC-AJ-RT-20260722-021-001.yaml",
+              "research_control/tasks/RT-20260722-022/jobs/completions/AJC-AJ-RT-20260722-022-001.yaml",
+              "research_control/tasks/RT-20260722-023/jobs/completions/AJC-AJ-RT-20260722-023-001.yaml",
+              "research_control/tasks/RT-20260722-024/jobs/completions/AJC-AJ-RT-20260722-024-001.yaml",
+              "research_control/tasks/RT-20260723-001/jobs/completions/AJC-AJ-RT-20260723-001-001.yaml",
+              "research_control/tasks/RT-20260723-002/jobs/completions/AJC-AJ-RT-20260723-002-001.yaml",
+              "research_control/tasks/RT-20260723-003/jobs/completions/AJC-AJ-RT-20260723-003-001.yaml",
+              "research_control/tasks/RT-20260723-004/jobs/completions/AJC-AJ-RT-20260723-004-001.yaml"
             ],
             "label": "Count of new mathematical payload artifacts.",
-            "value": 1114
+            "value": 1132
           },
           "status": "measured",
           "uncertainty_note": "",
-          "value": 1.5494
+          "value": 1.5154
         },
         "route_orbit_rate": {
           "authority_boundary": {
@@ -3609,7 +3730,7 @@
               "research_control/design/ai_research_agent_metrics_taxonomy_v1.md"
             ],
             "label": "Count of bounded continuation packets in the measurement window.",
-            "value": 530
+            "value": 536
           },
           "diagnostic_interpretation": "Repeated-burden streaks are process warnings only and do not change Distance-to-GR status.",
           "family": "Route dynamics",
@@ -3624,7 +3745,7 @@
           },
           "status": "measured",
           "uncertainty_note": "",
-          "value": 0.0038
+          "value": 0.0037
         },
         "stress_survival_rate": {
           "authority_boundary": {
@@ -3949,9 +4070,9 @@
     },
     "claim_hygiene_metrics": {
       "claim_boundary_rows_active": 899,
-      "physics_promotion_authorized_false": 440,
+      "physics_promotion_authorized_false": 465,
       "physics_promotion_authorized_true": 27,
-      "tasks_with_forbidden_conclusion_summary": 467
+      "tasks_with_forbidden_conclusion_summary": 492
     },
     "diagnostic_warnings": [
       {
@@ -4089,7 +4210,13 @@
           "research_control/tasks/RT-20260720-030/jobs/completions/AJC-AJ-RT-20260720-030-001.yaml",
           "research_control/tasks/RT-20260720-031/jobs/completions/AJC-AJ-RT-20260720-031-001.yaml",
           "research_control/tasks/RT-20260720-032/jobs/completions/AJC-AJ-RT-20260720-032-001.yaml",
-          "research_control/tasks/RT-20260721-002/jobs/completions/AJC-AJ-RT-20260721-002-001.yaml"
+          "research_control/tasks/RT-20260721-002/jobs/completions/AJC-AJ-RT-20260721-002-001.yaml",
+          "research_control/tasks/RT-20260722-010/jobs/completions/AJC-AJ-RT-20260722-010-001.yaml",
+          "research_control/tasks/RT-20260722-016/jobs/completions/AJC-AJ-RT-20260722-016-001.yaml",
+          "research_control/tasks/RT-20260722-018/jobs/completions/AJC-AJ-RT-20260722-018-001.yaml",
+          "research_control/tasks/RT-20260722-019/jobs/completions/AJC-AJ-RT-20260722-019-001.yaml",
+          "research_control/tasks/RT-20260722-020/jobs/completions/AJC-AJ-RT-20260722-020-001.yaml",
+          "research_control/tasks/RT-20260723-003/jobs/completions/AJC-AJ-RT-20260723-003-001.yaml"
         ],
         "hard_gate": false,
         "metric_key": "candidate_construct_audit_stress_selector_cycles",
@@ -4496,11 +4623,16 @@
           "research_control/tasks/RT-20260720-030/jobs/completions/AJC-AJ-RT-20260720-030-001.yaml",
           "research_control/tasks/RT-20260720-031/jobs/completions/AJC-AJ-RT-20260720-031-001.yaml",
           "research_control/tasks/RT-20260720-032/jobs/completions/AJC-AJ-RT-20260720-032-001.yaml",
-          "research_control/tasks/RT-20260721-002/jobs/completions/AJC-AJ-RT-20260721-002-001.yaml"
+          "research_control/tasks/RT-20260721-002/jobs/completions/AJC-AJ-RT-20260721-002-001.yaml",
+          "research_control/tasks/RT-20260722-016/jobs/completions/AJC-AJ-RT-20260722-016-001.yaml",
+          "research_control/tasks/RT-20260722-018/jobs/completions/AJC-AJ-RT-20260722-018-001.yaml",
+          "research_control/tasks/RT-20260722-019/jobs/completions/AJC-AJ-RT-20260722-019-001.yaml",
+          "research_control/tasks/RT-20260722-020/jobs/completions/AJC-AJ-RT-20260722-020-001.yaml",
+          "research_control/tasks/RT-20260723-003/jobs/completions/AJC-AJ-RT-20260723-003-001.yaml"
         ],
         "hard_gate": false,
         "metric_key": "gate_ready_cycles_without_gate_verdict",
-        "observed_value": 356,
+        "observed_value": 361,
         "physics_claim_authority": false,
         "recommended_guard_action": "Route the next packet to Gate Chair, explain why Gate Chair is not yet lawful, or withdraw gate-ready wording.",
         "severity": "warning",
@@ -4508,13 +4640,1044 @@
         "warning_id": "gate_ready_without_gate"
       }
     ],
+    "dual_budget_dashboard": {
+      "advisory_route_ratio": {
+        "ordinary_route_guard_owner": "P12-T04",
+        "project_system_run_threshold": 3,
+        "separate_guard_policy_id": "ordinary_route_guard_policy_v1",
+        "separate_guard_policy_path": "research_control/tasks/RT-20260722-015/artifacts/ordinary_route_guard_policy_v1.md",
+        "separate_prospective_hard_guard_active": true,
+        "threshold_is_hard_gate_in_this_policy": false
+      },
+      "authority_boundary": {
+        "benchmark_promotion_authorized": false,
+        "completed_derivation_authorized": false,
+        "dashboard_is_support_only": true,
+        "does_not_rank_physics_truth": true,
+        "gate_chair_verdict_created": false,
+        "physics_claim_promotion_authorized": false,
+        "system_success_counts_as_distance_to_gr": false,
+        "system_success_counts_as_physics": false
+      },
+      "blocked_physics_exception_count": 0,
+      "category_counts": {
+        "mixed": 6,
+        "physics_bearing": 531,
+        "support_only": 107,
+        "system_bearing": 426
+      },
+      "dashboard_schema_path": "research_control/tasks/RT-20260722-014/artifacts/budget_dashboard_schema_v1.md",
+      "integrity": {
+        "missing_compute_zero_coercion_status": "pass",
+        "mixed_acceptance_disjointness_status": "pass",
+        "mixed_output_disjointness_status": "pass",
+        "single_primary_credit_status": "pass",
+        "system_science_authority_separation_status": "pass"
+      },
+      "lanes": {
+        "physics": {
+          "acceptance_criteria": {
+            "declared_count": 23,
+            "measured_record_count": 15,
+            "not_measured_record_count": 531,
+            "status": "partially_measured"
+          },
+          "compute": {
+            "measured_record_count": 0,
+            "not_measured_record_count": 546,
+            "status": "not_measured",
+            "values_by_unit": {}
+          },
+          "declared_acceptance_criterion_count": 23,
+          "declared_durable_output_count": 20,
+          "durable_outputs": {
+            "declared_count": 20,
+            "measured_record_count": 15,
+            "not_measured_record_count": 531,
+            "status": "partially_measured"
+          },
+          "elapsed_effort": {
+            "measured_record_count": 531,
+            "not_measured_record_count": 15,
+            "status": "partially_measured",
+            "value_seconds": 34702.0
+          },
+          "task_count_credit": 537
+        },
+        "project_system": {
+          "acceptance_criteria": {
+            "declared_count": 52,
+            "measured_record_count": 15,
+            "not_measured_record_count": 524,
+            "status": "partially_measured"
+          },
+          "compute": {
+            "measured_record_count": 0,
+            "not_measured_record_count": 539,
+            "status": "not_measured",
+            "values_by_unit": {}
+          },
+          "declared_acceptance_criterion_count": 52,
+          "declared_durable_output_count": 47,
+          "durable_outputs": {
+            "declared_count": 47,
+            "measured_record_count": 15,
+            "not_measured_record_count": 524,
+            "status": "partially_measured"
+          },
+          "elapsed_effort": {
+            "measured_record_count": 527,
+            "not_measured_record_count": 12,
+            "status": "partially_measured",
+            "value_seconds": 158075.0
+          },
+          "task_count_credit": 533
+        }
+      },
+      "legacy_classified_record_count": 1055,
+      "policy_source_path": "research_control/tasks/RT-20260722-014/artifacts/dual_budget_policy_v1.md",
+      "prospective_allocation_record_count": 15,
+      "record_count": 1070,
+      "schema_id": "dual_budget_dashboard_v1",
+      "status": "measured"
+    },
+    "durable_scientific_quality_metrics": {
+      "aggregate_metric": null,
+      "aggregate_metric_reason": "Scientific truth and durable quality are not reduced to a scalar score.",
+      "authority_boundary": {
+        "aggregate_scientific_truth_score_created": false,
+        "benchmark_promotion_authorized": false,
+        "candidate_adoption_authorized": false,
+        "candidate_rejection_authorized": false,
+        "completed_derivation_authorized": false,
+        "distance_to_gr_delta_changed": false,
+        "gate_chair_verdict_created": false,
+        "metrics_are_advisory": true,
+        "ontology_or_source_law_adopted": false,
+        "physics_promotion_authorized": false,
+        "proof_authority": false,
+        "publication_authority": false,
+        "record_kind": "project_control",
+        "scientific_claims_changed": false,
+        "theorem_truth_inferred": false
+      },
+      "errors": [],
+      "metric_count": 8,
+      "metrics": {
+        "assumption_reduction_rate": {
+          "authority_boundary": {
+            "aggregate_scientific_truth_score_created": false,
+            "benchmark_promotion_authorized": false,
+            "candidate_adoption_authorized": false,
+            "candidate_rejection_authorized": false,
+            "completed_derivation_authorized": false,
+            "distance_to_gr_delta_changed": false,
+            "gate_chair_verdict_created": false,
+            "metrics_are_advisory": true,
+            "ontology_or_source_law_adopted": false,
+            "physics_promotion_authorized": false,
+            "proof_authority": false,
+            "publication_authority": false,
+            "record_kind": "project_control",
+            "scientific_claims_changed": false,
+            "theorem_truth_inferred": false
+          },
+          "calculation_window": "tracked_repository_snapshot",
+          "definition": "Fraction of eligible identity-bound before/after comparisons that remove at least one declared assumption without adding an unaccounted stronger assumption.",
+          "denominator": {
+            "eligible_ids": [],
+            "eligible_items": [],
+            "status": "unknown",
+            "value": null
+          },
+          "errors": [],
+          "family": "assumption_reduction",
+          "interpretation_guardrail": "A reduction is scoped to the declared comparison and does not prove the resulting theorem, candidate, or physical interpretation.",
+          "metric_id": "assumption_reduction_rate",
+          "numerator": {
+            "label": "eligible comparisons with a validated net assumption reduction",
+            "qualifying_ids": [],
+            "value": null
+          },
+          "source_paths": [
+            "research_control/tasks/RT-20260721-005/artifacts/v21_candidate_lineage_registry.json"
+          ],
+          "status": "not_measured",
+          "uncertainty_note": "Candidate lineage binds assumption hashes but does not yet expose an authoritative before/after assumption-set eligibility corpus.",
+          "value": null,
+          "warnings": [
+            {
+              "code": "unknown_denominator",
+              "hard_gate": false,
+              "message": "No authoritative eligible-set population is available; the metric remains not_measured and is not treated as zero.",
+              "metric_id": "assumption_reduction_rate",
+              "physics_claim_authority": false,
+              "severity": "warning",
+              "warning_id": "assumption_reduction_rate:unknown_denominator"
+            }
+          ]
+        },
+        "benchmark_breadth_rate": {
+          "authority_boundary": {
+            "aggregate_scientific_truth_score_created": false,
+            "benchmark_promotion_authorized": false,
+            "candidate_adoption_authorized": false,
+            "candidate_rejection_authorized": false,
+            "completed_derivation_authorized": false,
+            "distance_to_gr_delta_changed": false,
+            "gate_chair_verdict_created": false,
+            "metrics_are_advisory": true,
+            "ontology_or_source_law_adopted": false,
+            "physics_promotion_authorized": false,
+            "proof_authority": false,
+            "publication_authority": false,
+            "record_kind": "project_control",
+            "scientific_claims_changed": false,
+            "theorem_truth_inferred": false
+          },
+          "calculation_window": "tracked_repository_snapshot",
+          "definition": "Fraction of a prospectively declared benchmark universe with identity-bound results under one fixed assumption contract.",
+          "denominator": {
+            "eligible_ids": [],
+            "eligible_items": [],
+            "status": "unknown",
+            "value": null
+          },
+          "errors": [],
+          "family": "benchmark_breadth",
+          "interpretation_guardrail": "Breadth does not establish benchmark recovery, physical adequacy, or promotion.",
+          "metric_id": "benchmark_breadth_rate",
+          "numerator": {
+            "label": "eligible benchmark cases with assumption-compatible results",
+            "qualifying_ids": [],
+            "value": null
+          },
+          "source_paths": [
+            "registries/AGENT_JOB_REGISTRY.csv"
+          ],
+          "status": "not_measured",
+          "uncertainty_note": "No prospectively fixed identity-bound benchmark universe is available for this measurement window.",
+          "value": null,
+          "warnings": [
+            {
+              "code": "unknown_denominator",
+              "hard_gate": false,
+              "message": "No authoritative eligible-set population is available; the metric remains not_measured and is not treated as zero.",
+              "metric_id": "benchmark_breadth_rate",
+              "physics_claim_authority": false,
+              "severity": "warning",
+              "warning_id": "benchmark_breadth_rate:unknown_denominator"
+            }
+          ]
+        },
+        "countermodel_novelty_rate": {
+          "authority_boundary": {
+            "aggregate_scientific_truth_score_created": false,
+            "benchmark_promotion_authorized": false,
+            "candidate_adoption_authorized": false,
+            "candidate_rejection_authorized": false,
+            "completed_derivation_authorized": false,
+            "distance_to_gr_delta_changed": false,
+            "gate_chair_verdict_created": false,
+            "metrics_are_advisory": true,
+            "ontology_or_source_law_adopted": false,
+            "physics_promotion_authorized": false,
+            "proof_authority": false,
+            "publication_authority": false,
+            "record_kind": "project_control",
+            "scientific_claims_changed": false,
+            "theorem_truth_inferred": false
+          },
+          "calculation_window": "tracked_repository_snapshot",
+          "definition": "Fraction of eligible countermodels with a distinct immutable witness identity and a non-duplicate falsified assumption set.",
+          "denominator": {
+            "eligible_ids": [],
+            "eligible_items": [],
+            "status": "unknown",
+            "value": null
+          },
+          "errors": [],
+          "family": "countermodel_novelty",
+          "interpretation_guardrail": "Novelty is relative to the declared comparison corpus and is not a global no-go theorem or theory rejection.",
+          "metric_id": "countermodel_novelty_rate",
+          "numerator": {
+            "label": "eligible countermodels with distinct witness and burden bindings",
+            "qualifying_ids": [],
+            "value": null
+          },
+          "source_paths": [
+            "registries/AGENT_JOB_REGISTRY.csv"
+          ],
+          "status": "not_measured",
+          "uncertainty_note": "No normalized countermodel witness-identity and falsified-burden comparison corpus is available.",
+          "value": null,
+          "warnings": [
+            {
+              "code": "unknown_denominator",
+              "hard_gate": false,
+              "message": "No authoritative eligible-set population is available; the metric remains not_measured and is not treated as zero.",
+              "metric_id": "countermodel_novelty_rate",
+              "physics_claim_authority": false,
+              "severity": "warning",
+              "warning_id": "countermodel_novelty_rate:unknown_denominator"
+            }
+          ]
+        },
+        "independent_review_survival_rate": {
+          "authority_boundary": {
+            "aggregate_scientific_truth_score_created": false,
+            "benchmark_promotion_authorized": false,
+            "candidate_adoption_authorized": false,
+            "candidate_rejection_authorized": false,
+            "completed_derivation_authorized": false,
+            "distance_to_gr_delta_changed": false,
+            "gate_chair_verdict_created": false,
+            "metrics_are_advisory": true,
+            "ontology_or_source_law_adopted": false,
+            "physics_promotion_authorized": false,
+            "proof_authority": false,
+            "publication_authority": false,
+            "record_kind": "project_control",
+            "scientific_claims_changed": false,
+            "theorem_truth_inferred": false
+          },
+          "calculation_window": "tracked_repository_snapshot",
+          "definition": "Fraction of eligible objects receiving a provenance-qualified independent review that retain a non-promotional scoped result after all recorded findings are dispositioned.",
+          "denominator": {
+            "eligible_ids": [],
+            "eligible_items": [],
+            "status": "unknown",
+            "value": null
+          },
+          "errors": [],
+          "family": "independent_review_survival",
+          "interpretation_guardrail": "Survival is not replication, adoption, proof authority, or a Gate Chair verdict.",
+          "metric_id": "independent_review_survival_rate",
+          "numerator": {
+            "label": "eligible independently reviewed objects retaining scoped status",
+            "qualifying_ids": [],
+            "value": null
+          },
+          "source_paths": [
+            "research_control/tasks/RT-20260722-008/artifacts/reviewer_agreement_calibration_report.json"
+          ],
+          "status": "not_measured",
+          "uncertainty_note": "Review calibration records do not constitute executed independent review, and no authoritative review-survival denominator is present.",
+          "value": null,
+          "warnings": [
+            {
+              "code": "unknown_denominator",
+              "hard_gate": false,
+              "message": "No authoritative eligible-set population is available; the metric remains not_measured and is not treated as zero.",
+              "metric_id": "independent_review_survival_rate",
+              "physics_claim_authority": false,
+              "severity": "warning",
+              "warning_id": "independent_review_survival_rate:unknown_denominator"
+            }
+          ]
+        },
+        "ledger_durability_rate": {
+          "authority_boundary": {
+            "aggregate_scientific_truth_score_created": false,
+            "benchmark_promotion_authorized": false,
+            "candidate_adoption_authorized": false,
+            "candidate_rejection_authorized": false,
+            "completed_derivation_authorized": false,
+            "distance_to_gr_delta_changed": false,
+            "gate_chair_verdict_created": false,
+            "metrics_are_advisory": true,
+            "ontology_or_source_law_adopted": false,
+            "physics_promotion_authorized": false,
+            "proof_authority": false,
+            "publication_authority": false,
+            "record_kind": "project_control",
+            "scientific_claims_changed": false,
+            "theorem_truth_inferred": false
+          },
+          "calculation_window": "2026-07-22T03:17:26Z",
+          "definition": "Fraction of eligible attempt events whose sequence, payload hash, event hash, and predecessor binding validate.",
+          "denominator": {
+            "eligible_ids": [
+              "AEV-0001",
+              "AEV-0002",
+              "AEV-0003",
+              "AEV-0004",
+              "AEV-0005",
+              "AEV-0006",
+              "AEV-0007",
+              "AEV-0008"
+            ],
+            "eligible_items": [
+              {
+                "identity": "AEV-0001",
+                "identity_kind": "attempt_event",
+                "identity_sha256": "71786faa840d21a2ee0e3688eea9bf6bfc4b83f12f5b86fcc728d125e963e597",
+                "source_path": "research_control/tasks/RT-20260721-006/artifacts/v21_research_attempt_ledger.json"
+              },
+              {
+                "identity": "AEV-0002",
+                "identity_kind": "attempt_event",
+                "identity_sha256": "b2193e20e4c44f28bc47d4642b2752112fff358479edfa94a8efbd766f3dea9d",
+                "source_path": "research_control/tasks/RT-20260721-006/artifacts/v21_research_attempt_ledger.json"
+              },
+              {
+                "identity": "AEV-0003",
+                "identity_kind": "attempt_event",
+                "identity_sha256": "5b444ed807912330c19b2e603c8235071e5747f269b93bd8fff4e17e9f7fdd45",
+                "source_path": "research_control/tasks/RT-20260721-006/artifacts/v21_research_attempt_ledger.json"
+              },
+              {
+                "identity": "AEV-0004",
+                "identity_kind": "attempt_event",
+                "identity_sha256": "003e57fb3f5ccb381e1e823f3bfb828bbde2c0e1dd5e0fa8b51f631e6987c32f",
+                "source_path": "research_control/tasks/RT-20260721-006/artifacts/v21_research_attempt_ledger.json"
+              },
+              {
+                "identity": "AEV-0005",
+                "identity_kind": "attempt_event",
+                "identity_sha256": "8bc9c64134b9be3eed46e875dbaa1177f37e467bb05d90822be79ccfd3c469f9",
+                "source_path": "research_control/tasks/RT-20260721-006/artifacts/v21_research_attempt_ledger.json"
+              },
+              {
+                "identity": "AEV-0006",
+                "identity_kind": "attempt_event",
+                "identity_sha256": "b277667d1269aa17cc87370c8d09477ac3ee8fdbca23d627e12ebc07341936af",
+                "source_path": "research_control/tasks/RT-20260721-006/artifacts/v21_research_attempt_ledger.json"
+              },
+              {
+                "identity": "AEV-0007",
+                "identity_kind": "attempt_event",
+                "identity_sha256": "641f7dc9d5e7f363cf56bc42913e7b2b22e682141fe0ad03b4243713b2c8554b",
+                "source_path": "research_control/tasks/RT-20260721-006/artifacts/v21_research_attempt_ledger.json"
+              },
+              {
+                "identity": "AEV-0008",
+                "identity_kind": "attempt_event",
+                "identity_sha256": "2fc6308820605d7f7cc752bff73c54b1f1d06ce3514df3aa4040904d20eeb3f7",
+                "source_path": "research_control/tasks/RT-20260721-006/artifacts/v21_research_attempt_ledger.json"
+              }
+            ],
+            "status": "known",
+            "value": 8
+          },
+          "errors": [],
+          "family": "ledger_durability",
+          "interpretation_guardrail": "Ledger integrity is project-control evidence only and does not make the recorded scientific content true.",
+          "metric_id": "ledger_durability_rate",
+          "numerator": {
+            "label": "eligible attempt events with a valid append-only hash chain",
+            "qualifying_ids": [
+              "AEV-0001",
+              "AEV-0002",
+              "AEV-0003",
+              "AEV-0004",
+              "AEV-0005",
+              "AEV-0006",
+              "AEV-0007",
+              "AEV-0008"
+            ],
+            "value": 8
+          },
+          "source_paths": [
+            "research_control/tasks/RT-20260721-006/artifacts/v21_research_attempt_ledger.json"
+          ],
+          "status": "measured",
+          "uncertainty_note": "Durability is evaluated against the recorded append-only event chain.",
+          "value": 1.0,
+          "warnings": []
+        },
+        "obstruction_unification_and_reuse_rate": {
+          "authority_boundary": {
+            "aggregate_scientific_truth_score_created": false,
+            "benchmark_promotion_authorized": false,
+            "candidate_adoption_authorized": false,
+            "candidate_rejection_authorized": false,
+            "completed_derivation_authorized": false,
+            "distance_to_gr_delta_changed": false,
+            "gate_chair_verdict_created": false,
+            "metrics_are_advisory": true,
+            "ontology_or_source_law_adopted": false,
+            "physics_promotion_authorized": false,
+            "proof_authority": false,
+            "publication_authority": false,
+            "record_kind": "project_control",
+            "scientific_claims_changed": false,
+            "theorem_truth_inferred": false
+          },
+          "calculation_window": "all_tracked_completion_records",
+          "definition": "Fraction of eligible immutable obstruction identities that are explicitly reused by a later tracked result or unified by a declared stronger scoped obstruction.",
+          "denominator": {
+            "eligible_ids": [
+              "CF-P4T03-001-no-nontrivial-compression-current-basis",
+              "CF-P4T05-001-current-basis-compression-stress",
+              "HFAIL-GEFF-CURRENT-ROUTE-TOKEN-VALUATION-MISSING",
+              "MS-CL-STRESS-001-current-basis-nonbottom-instantiation",
+              "MS-P5T03-001-source-intrinsic-discriminator-law-missing",
+              "MS-P5T05-001-current-basis-matter-semantics-stress",
+              "MSDISC-P7REPAIR-001-readout-response-nonuniqueness",
+              "MSQ-P7T03-REPAIR-STRESS-001-rr-retention-blocks-irrel",
+              "MSQ-P7T03-STRESS-001-quotient-nonuniqueness-fragility-degeneracy",
+              "OB-EQSRC-CANONICAL-CHOICE-FAMILY-QUALIFICATION-001",
+              "OB-EQSRC-CYCLE-BOUNDARY-DESCENT-001",
+              "OB-EQSRC-INTRINSIC-DISCRIMINATOR-DIFFERENTIAL-SELECTION-001",
+              "OB-EQSRC-ORDERED-MOTION-ROOT-SELECTION-001",
+              "OB-EQSRC-ORIENTATION-TORSOR-LINE-SELECTION-001",
+              "OB-EQSRC-QUOTIENT-SELECTOR-PRIMITIVE-ADMISSIBILITY-001",
+              "OB-GEFF-METRIC-DATA-TOKEN-VALUATION-MISSING",
+              "OB-GEFF-RECONVERGENT-BRANCH-DISCRIMINATOR-MISSING",
+              "OB-GEFF-RESPONSE-TOKEN-MISSING",
+              "OB-GEFF-SIGNATURE-SCALE-CONTINUUM-UNDERDETERMINED",
+              "OB-GEFF-SOURCE-METRIC-FORM-UNDERDETERMINED",
+              "OB-GEFF-TOKEN-VALUATION-MISSING",
+              "OB-MSRC-LOCAL-GLOBAL-GAP",
+              "OB-P3T02-MISSING-CERT-RRE-SEPARATION-DATA",
+              "OB-RRE-TRANSPORT-COMPLETENESS-INVARIANCE-MISSING",
+              "OBST-EQSRC-CLOSURE-SIGNATURE-001",
+              "OBST-EQSRC-CLOSURE-TOTALITY-001",
+              "OBST-EQSRC-CLOSURE-V3-VARIATION-SELECTOR-001",
+              "OBST-EQSRC-INTRINSIC-DISCRIMINATOR-CHAIN-MAP-REFLECTION-001",
+              "OBST-EQSRC-INTRINSIC-DISCRIMINATOR-RELATION-LABEL-001",
+              "OBST-EQSRC-P3T06-ARBITRARY-PARTITION-INTERFACE-COMPLETENESS-001",
+              "OBST-MSRC-GSC-CAND-REGULARITY-SOLDERING-001",
+              "OBST-P2T07-DETERMINISTIC-DOMAIN-OVERREAD-001",
+              "OBST-P3T03-RAW-SOURCE-READOUT-001",
+              "OBST-P3T04-FINITE-SYMMETRIC-PROBABILITY-DYNAMICS-001",
+              "RR_E_UNDERDETERMINATION_OBSTRUCTION_P5_T02_V1"
+            ],
+            "eligible_items": [
+              {
+                "identity": "CF-P4T03-001-no-nontrivial-compression-current-basis",
+                "identity_kind": "obstruction",
+                "identity_sha256": "4871780be24e99c6286a0fb43b8f6fa933bd1a0011056ab45292e67772505360",
+                "source_path": "research_control/tasks/RT-20260629-045/jobs/completions/AJC-AJ-RT-20260629-045-001.yaml"
+              },
+              {
+                "identity": "CF-P4T05-001-current-basis-compression-stress",
+                "identity_kind": "obstruction",
+                "identity_sha256": "d5b1ba53fa74656f824fd07b9c25dfc2875eff6575a8afd8aabf2fac9bb76203",
+                "source_path": "research_control/tasks/RT-20260629-047/jobs/completions/AJC-AJ-RT-20260629-047-001.yaml"
+              },
+              {
+                "identity": "HFAIL-GEFF-CURRENT-ROUTE-TOKEN-VALUATION-MISSING",
+                "identity_kind": "obstruction",
+                "identity_sha256": "4a8ae3ae265b15c3ab4136dc6f3f55ddfba693131a50063ceed7fef154faedc5",
+                "source_path": "research_control/tasks/RT-20260614-151/jobs/completions/AJC-AJ-RT-20260614-151-001.yaml"
+              },
+              {
+                "identity": "MS-CL-STRESS-001-current-basis-nonbottom-instantiation",
+                "identity_kind": "obstruction",
+                "identity_sha256": "5faff3b67e51cb88aff528a036f41e83f74cb0b1d1554f81ced33b2abd896a83",
+                "source_path": "research_control/tasks/RT-20260629-057/jobs/completions/AJC-AJ-RT-20260629-057-001.yaml"
+              },
+              {
+                "identity": "MS-P5T03-001-source-intrinsic-discriminator-law-missing",
+                "identity_kind": "obstruction",
+                "identity_sha256": "9474a9e2d8c5040d781e94150ecd44ed40fb1968815ce44ed51978228190aa6c",
+                "source_path": "research_control/tasks/RT-20260629-051/jobs/completions/AJC-AJ-RT-20260629-051-001.yaml"
+              },
+              {
+                "identity": "MS-P5T05-001-current-basis-matter-semantics-stress",
+                "identity_kind": "obstruction",
+                "identity_sha256": "58fac9cc8090539477de0c2bc9ee8fd4ffc478157de0d6f97b73a3ed59deeeae",
+                "source_path": "research_control/tasks/RT-20260629-053/jobs/completions/AJC-AJ-RT-20260629-053-001.yaml"
+              },
+              {
+                "identity": "MSDISC-P7REPAIR-001-readout-response-nonuniqueness",
+                "identity_kind": "obstruction",
+                "identity_sha256": "31a675c10b4bfd5ccab7ee08bcd05bca4df0f95b428292c27642fa3bdac5d0b9",
+                "source_path": "research_control/tasks/RT-20260630-035/jobs/completions/AJC-AJ-RT-20260630-035-001.yaml"
+              },
+              {
+                "identity": "MSQ-P7T03-REPAIR-STRESS-001-rr-retention-blocks-irrel",
+                "identity_kind": "obstruction",
+                "identity_sha256": "64bb00c0ddca18f095a28045c0ffa5151809b18ecbcf68e59fb231f794a0c8b5",
+                "source_path": "research_control/tasks/RT-20260630-044/jobs/completions/AJC-AJ-RT-20260630-044-001.yaml"
+              },
+              {
+                "identity": "MSQ-P7T03-STRESS-001-quotient-nonuniqueness-fragility-degeneracy",
+                "identity_kind": "obstruction",
+                "identity_sha256": "cd673ab9f3cd64367e52e3fb92332e8c9703bad5be5b683f6d6f479a2256e9a4",
+                "source_path": "research_control/tasks/RT-20260630-040/jobs/completions/AJC-AJ-RT-20260630-040-001.yaml"
+              },
+              {
+                "identity": "OB-EQSRC-CANONICAL-CHOICE-FAMILY-QUALIFICATION-001",
+                "identity_kind": "obstruction",
+                "identity_sha256": "e9a172e3487993793e1883c308bcfc73885083e5f257f18a6813093468eb6222",
+                "source_path": "research_control/tasks/RT-20260720-011/jobs/completions/AJC-AJ-RT-20260720-011-001.yaml"
+              },
+              {
+                "identity": "OB-EQSRC-CYCLE-BOUNDARY-DESCENT-001",
+                "identity_kind": "obstruction",
+                "identity_sha256": "8ee51c5650fa6cf7f93ab2c8dcc6caa425e00a23ba6d9524b10dc528f7d3ea9a",
+                "source_path": "research_control/tasks/RT-20260718-037/jobs/completions/AJC-AJ-RT-20260718-037-001.yaml"
+              },
+              {
+                "identity": "OB-EQSRC-INTRINSIC-DISCRIMINATOR-DIFFERENTIAL-SELECTION-001",
+                "identity_kind": "obstruction",
+                "identity_sha256": "aacbb51cc4a850e74b64969cdffe3fc37eb3951760dd43d0f29264066a53e3ae",
+                "source_path": "research_control/tasks/RT-20260718-033/jobs/completions/AJC-AJ-RT-20260718-033-001.yaml"
+              },
+              {
+                "identity": "OB-EQSRC-ORDERED-MOTION-ROOT-SELECTION-001",
+                "identity_kind": "obstruction",
+                "identity_sha256": "9b6c345e47d0772907257430f61d82b855daba1415a5c59c5e2b3d47dfd51be2",
+                "source_path": "research_control/tasks/RT-20260718-045/jobs/completions/AJC-AJ-RT-20260718-045-001.yaml"
+              },
+              {
+                "identity": "OB-EQSRC-ORIENTATION-TORSOR-LINE-SELECTION-001",
+                "identity_kind": "obstruction",
+                "identity_sha256": "7020a6f14af83568f1b92686b0af17fbb2897b0a43ae8e02a0429b2ab775a653",
+                "source_path": "research_control/tasks/RT-20260718-041/jobs/completions/AJC-AJ-RT-20260718-041-001.yaml"
+              },
+              {
+                "identity": "OB-EQSRC-QUOTIENT-SELECTOR-PRIMITIVE-ADMISSIBILITY-001",
+                "identity_kind": "obstruction",
+                "identity_sha256": "a33893f90128389bbee4566e6cfd5ebad5c465f32e0df907379ec3664ee52878",
+                "source_path": "research_control/tasks/RT-20260718-025/jobs/completions/AJC-AJ-RT-20260718-025-001.yaml"
+              },
+              {
+                "identity": "OB-GEFF-METRIC-DATA-TOKEN-VALUATION-MISSING",
+                "identity_kind": "obstruction",
+                "identity_sha256": "bf48c1abb554bdf5ff99e2e40201237d3be8027d68f068258adc6281da702c12",
+                "source_path": "research_control/tasks/RT-20260614-147/jobs/completions/AJC-AJ-RT-20260614-147-001.yaml"
+              },
+              {
+                "identity": "OB-GEFF-RECONVERGENT-BRANCH-DISCRIMINATOR-MISSING",
+                "identity_kind": "obstruction",
+                "identity_sha256": "762d42b04afead44b638c098d30273cd6a6671ffbade5bc4d051743e7b57e643",
+                "source_path": "research_control/tasks/RT-20260614-171/jobs/completions/AJC-AJ-RT-20260614-171-001.yaml"
+              },
+              {
+                "identity": "OB-GEFF-RESPONSE-TOKEN-MISSING",
+                "identity_kind": "obstruction",
+                "identity_sha256": "35698870a9b4557fb9f63a5816e670e24acbbd1de302ce8e7a8d893872f94738",
+                "source_path": "research_control/tasks/RT-20260614-141/jobs/completions/AJC-AJ-RT-20260614-141-001.yaml"
+              },
+              {
+                "identity": "OB-GEFF-SIGNATURE-SCALE-CONTINUUM-UNDERDETERMINED",
+                "identity_kind": "obstruction",
+                "identity_sha256": "e38987320da431dfb07b1db87051c6341b710fe8fab5abb7200daf63685d640a",
+                "source_path": "research_control/tasks/RT-20260614-200/jobs/completions/AJC-AJ-RT-20260614-200-001.yaml"
+              },
+              {
+                "identity": "OB-GEFF-SOURCE-METRIC-FORM-UNDERDETERMINED",
+                "identity_kind": "obstruction",
+                "identity_sha256": "373a9e3327ffa2eb553b68edc2293e3f389e5b74bffcfeff756c46e4bc4bea01",
+                "source_path": "research_control/tasks/RT-20260614-208/jobs/completions/AJC-AJ-RT-20260614-208-001.yaml"
+              },
+              {
+                "identity": "OB-GEFF-TOKEN-VALUATION-MISSING",
+                "identity_kind": "obstruction",
+                "identity_sha256": "8706247d1070454ba34e188a8faaaa9ef4f9cc6562cef24bdfefa8972e782a24",
+                "source_path": "research_control/tasks/RT-20260614-150/jobs/completions/AJC-AJ-RT-20260614-150-001.yaml"
+              },
+              {
+                "identity": "OB-MSRC-LOCAL-GLOBAL-GAP",
+                "identity_kind": "obstruction",
+                "identity_sha256": "d2edbda9ae94ce64a14def6796282392e1ccfdc11b3bfbc0be1003365e3dcbbb",
+                "source_path": "research_control/tasks/RT-20260614-127/jobs/completions/AJC-AJ-RT-20260614-127-001.yaml"
+              },
+              {
+                "identity": "OB-P3T02-MISSING-CERT-RRE-SEPARATION-DATA",
+                "identity_kind": "obstruction",
+                "identity_sha256": "18225259211a014caef2b00d6e887d064ca41c5087b0fd02b1cd40de85b19106",
+                "source_path": "research_control/tasks/RT-20260702-064/jobs/completions/AJC-AJ-RT-20260702-064-001.yaml"
+              },
+              {
+                "identity": "OB-RRE-TRANSPORT-COMPLETENESS-INVARIANCE-MISSING",
+                "identity_kind": "obstruction",
+                "identity_sha256": "adbe466f2995a1b7d182b6201ffd33b3c5e17a01bee5e50bc930ac4ed5b748fd",
+                "source_path": "research_control/tasks/RT-20260701-025/jobs/completions/AJC-AJ-RT-20260701-025-001.yaml"
+              },
+              {
+                "identity": "OBST-EQSRC-CLOSURE-SIGNATURE-001",
+                "identity_kind": "obstruction",
+                "identity_sha256": "8d0b78a8442f8de51bc2cf1f3edd18cb9a8cc0f4b1d175bfda65eef0f94f6025",
+                "source_path": "research_control/tasks/RT-20260718-019/jobs/completions/AJC-AJ-RT-20260718-019-001.yaml"
+              },
+              {
+                "identity": "OBST-EQSRC-CLOSURE-TOTALITY-001",
+                "identity_kind": "obstruction",
+                "identity_sha256": "bb24090adb25356bffd6d83aa05738194ead8774d04c1eb4b4da86b782b2e9c7",
+                "source_path": "research_control/tasks/RT-20260718-017/jobs/completions/AJC-AJ-RT-20260718-017-001.yaml"
+              },
+              {
+                "identity": "OBST-EQSRC-CLOSURE-V3-VARIATION-SELECTOR-001",
+                "identity_kind": "obstruction",
+                "identity_sha256": "55844ad90dfd917bd1637f57975a9305f497a2a464645a50925857f0a57484f6",
+                "source_path": "research_control/tasks/RT-20260718-022/jobs/completions/AJC-AJ-RT-20260718-022-001.yaml"
+              },
+              {
+                "identity": "OBST-EQSRC-INTRINSIC-DISCRIMINATOR-CHAIN-MAP-REFLECTION-001",
+                "identity_kind": "obstruction",
+                "identity_sha256": "6cd51902d427e8ac3e3ba82d24a7b99bab86e59aac523bcb5eca83581c08a0f3",
+                "source_path": "research_control/tasks/RT-20260718-030/jobs/completions/AJC-AJ-RT-20260718-030-001.yaml"
+              },
+              {
+                "identity": "OBST-EQSRC-INTRINSIC-DISCRIMINATOR-RELATION-LABEL-001",
+                "identity_kind": "obstruction",
+                "identity_sha256": "348853f3bcf33ea19e10c83cf58a47a969d99e93da48e29568b6c680b8f5a77f",
+                "source_path": "research_control/tasks/RT-20260718-028/jobs/completions/AJC-AJ-RT-20260718-028-001.yaml"
+              },
+              {
+                "identity": "OBST-EQSRC-P3T06-ARBITRARY-PARTITION-INTERFACE-COMPLETENESS-001",
+                "identity_kind": "obstruction",
+                "identity_sha256": "db24fee32dc5dd8391027e80578f06ea3d1c282a8b74bb9d398340288b648318",
+                "source_path": "research_control/tasks/RT-20260720-027/jobs/completions/AJC-AJ-RT-20260720-027-001.yaml"
+              },
+              {
+                "identity": "OBST-MSRC-GSC-CAND-REGULARITY-SOLDERING-001",
+                "identity_kind": "obstruction",
+                "identity_sha256": "a607cbcc3f0cfa324b84d2e000fbddd7503510a68ec18d1056455cbc5bf2a0fe",
+                "source_path": "research_control/tasks/RT-20260614-090/jobs/completions/AJC-AJ-RT-20260614-090-001.yaml"
+              },
+              {
+                "identity": "OBST-P2T07-DETERMINISTIC-DOMAIN-OVERREAD-001",
+                "identity_kind": "obstruction",
+                "identity_sha256": "95d847d1e305e83d583d56b4063469423af0795652994f54b938bb8c54ec626b",
+                "source_path": "research_control/tasks/RT-20260720-020/jobs/completions/AJC-AJ-RT-20260720-020-001.yaml"
+              },
+              {
+                "identity": "OBST-P3T03-RAW-SOURCE-READOUT-001",
+                "identity_kind": "obstruction",
+                "identity_sha256": "96be7e53bcec4934c0cd4e16619e66ea6ce6f03ffb0bb11f028017b3a9e48676",
+                "source_path": "research_control/tasks/RT-20260720-024/jobs/completions/AJC-AJ-RT-20260720-024-001.yaml"
+              },
+              {
+                "identity": "OBST-P3T04-FINITE-SYMMETRIC-PROBABILITY-DYNAMICS-001",
+                "identity_kind": "obstruction",
+                "identity_sha256": "07399cf755580bf60f2580279a4f2d72cd9c7a64da682b9c4cc21fea37d62616",
+                "source_path": "research_control/tasks/RT-20260720-025/jobs/completions/AJC-AJ-RT-20260720-025-001.yaml"
+              },
+              {
+                "identity": "RR_E_UNDERDETERMINATION_OBSTRUCTION_P5_T02_V1",
+                "identity_kind": "obstruction",
+                "identity_sha256": "5e97e0eaf60a43ba7330dc5beedfc8a8e81cfdb84983f194ee20577e1dba4e5e",
+                "source_path": "research_control/tasks/RT-20260701-023/jobs/completions/AJC-AJ-RT-20260701-023-001.yaml"
+              }
+            ],
+            "status": "known",
+            "value": 35
+          },
+          "errors": [],
+          "family": "obstruction_unification_and_reuse",
+          "interpretation_guardrail": "Reuse preserves the original obstruction scope and does not upgrade it into a global impossibility result.",
+          "metric_id": "obstruction_unification_and_reuse_rate",
+          "numerator": {
+            "label": "eligible obstructions with explicit later reuse or scoped unification",
+            "qualifying_ids": [
+              "CF-P4T03-001-no-nontrivial-compression-current-basis",
+              "CF-P4T05-001-current-basis-compression-stress",
+              "HFAIL-GEFF-CURRENT-ROUTE-TOKEN-VALUATION-MISSING",
+              "MS-P5T03-001-source-intrinsic-discriminator-law-missing",
+              "MS-P5T05-001-current-basis-matter-semantics-stress",
+              "MSDISC-P7REPAIR-001-readout-response-nonuniqueness",
+              "MSQ-P7T03-REPAIR-STRESS-001-rr-retention-blocks-irrel",
+              "MSQ-P7T03-STRESS-001-quotient-nonuniqueness-fragility-degeneracy",
+              "OB-GEFF-METRIC-DATA-TOKEN-VALUATION-MISSING",
+              "OB-GEFF-RECONVERGENT-BRANCH-DISCRIMINATOR-MISSING",
+              "OB-GEFF-RESPONSE-TOKEN-MISSING",
+              "OB-GEFF-SIGNATURE-SCALE-CONTINUUM-UNDERDETERMINED",
+              "OB-GEFF-SOURCE-METRIC-FORM-UNDERDETERMINED",
+              "OB-GEFF-TOKEN-VALUATION-MISSING",
+              "OB-MSRC-LOCAL-GLOBAL-GAP",
+              "OB-RRE-TRANSPORT-COMPLETENESS-INVARIANCE-MISSING",
+              "OBST-EQSRC-CLOSURE-SIGNATURE-001",
+              "OBST-EQSRC-CLOSURE-TOTALITY-001"
+            ],
+            "value": 18
+          },
+          "source_paths": [
+            "registries/AGENT_JOB_REGISTRY.csv",
+            "research_control/tasks/RT-20260614-090/jobs/completions/AJC-AJ-RT-20260614-090-001.yaml",
+            "research_control/tasks/RT-20260614-127/jobs/completions/AJC-AJ-RT-20260614-127-001.yaml",
+            "research_control/tasks/RT-20260614-141/jobs/completions/AJC-AJ-RT-20260614-141-001.yaml",
+            "research_control/tasks/RT-20260614-147/jobs/completions/AJC-AJ-RT-20260614-147-001.yaml",
+            "research_control/tasks/RT-20260614-150/jobs/completions/AJC-AJ-RT-20260614-150-001.yaml",
+            "research_control/tasks/RT-20260614-151/jobs/completions/AJC-AJ-RT-20260614-151-001.yaml",
+            "research_control/tasks/RT-20260614-171/jobs/completions/AJC-AJ-RT-20260614-171-001.yaml",
+            "research_control/tasks/RT-20260614-200/jobs/completions/AJC-AJ-RT-20260614-200-001.yaml",
+            "research_control/tasks/RT-20260614-208/jobs/completions/AJC-AJ-RT-20260614-208-001.yaml",
+            "research_control/tasks/RT-20260629-045/jobs/completions/AJC-AJ-RT-20260629-045-001.yaml",
+            "research_control/tasks/RT-20260629-047/jobs/completions/AJC-AJ-RT-20260629-047-001.yaml",
+            "research_control/tasks/RT-20260629-051/jobs/completions/AJC-AJ-RT-20260629-051-001.yaml",
+            "research_control/tasks/RT-20260629-053/jobs/completions/AJC-AJ-RT-20260629-053-001.yaml",
+            "research_control/tasks/RT-20260629-057/jobs/completions/AJC-AJ-RT-20260629-057-001.yaml",
+            "research_control/tasks/RT-20260630-035/jobs/completions/AJC-AJ-RT-20260630-035-001.yaml",
+            "research_control/tasks/RT-20260630-040/jobs/completions/AJC-AJ-RT-20260630-040-001.yaml",
+            "research_control/tasks/RT-20260630-044/jobs/completions/AJC-AJ-RT-20260630-044-001.yaml",
+            "research_control/tasks/RT-20260701-023/jobs/completions/AJC-AJ-RT-20260701-023-001.yaml",
+            "research_control/tasks/RT-20260701-025/jobs/completions/AJC-AJ-RT-20260701-025-001.yaml",
+            "research_control/tasks/RT-20260702-064/jobs/completions/AJC-AJ-RT-20260702-064-001.yaml",
+            "research_control/tasks/RT-20260718-017/jobs/completions/AJC-AJ-RT-20260718-017-001.yaml",
+            "research_control/tasks/RT-20260718-019/jobs/completions/AJC-AJ-RT-20260718-019-001.yaml",
+            "research_control/tasks/RT-20260718-022/jobs/completions/AJC-AJ-RT-20260718-022-001.yaml",
+            "research_control/tasks/RT-20260718-025/jobs/completions/AJC-AJ-RT-20260718-025-001.yaml",
+            "research_control/tasks/RT-20260718-028/jobs/completions/AJC-AJ-RT-20260718-028-001.yaml",
+            "research_control/tasks/RT-20260718-030/jobs/completions/AJC-AJ-RT-20260718-030-001.yaml",
+            "research_control/tasks/RT-20260718-033/jobs/completions/AJC-AJ-RT-20260718-033-001.yaml",
+            "research_control/tasks/RT-20260718-037/jobs/completions/AJC-AJ-RT-20260718-037-001.yaml",
+            "research_control/tasks/RT-20260718-041/jobs/completions/AJC-AJ-RT-20260718-041-001.yaml",
+            "research_control/tasks/RT-20260718-045/jobs/completions/AJC-AJ-RT-20260718-045-001.yaml",
+            "research_control/tasks/RT-20260720-011/jobs/completions/AJC-AJ-RT-20260720-011-001.yaml",
+            "research_control/tasks/RT-20260720-020/jobs/completions/AJC-AJ-RT-20260720-020-001.yaml",
+            "research_control/tasks/RT-20260720-024/jobs/completions/AJC-AJ-RT-20260720-024-001.yaml",
+            "research_control/tasks/RT-20260720-025/jobs/completions/AJC-AJ-RT-20260720-025-001.yaml",
+            "research_control/tasks/RT-20260720-027/jobs/completions/AJC-AJ-RT-20260720-027-001.yaml"
+          ],
+          "status": "measured",
+          "uncertainty_note": "The current structured corpus supports explicit later-reference reuse. It does not infer semantic unification from similar prose.",
+          "value": 0.514286,
+          "warnings": []
+        },
+        "retraction_repair_visibility_rate": {
+          "authority_boundary": {
+            "aggregate_scientific_truth_score_created": false,
+            "benchmark_promotion_authorized": false,
+            "candidate_adoption_authorized": false,
+            "candidate_rejection_authorized": false,
+            "completed_derivation_authorized": false,
+            "distance_to_gr_delta_changed": false,
+            "gate_chair_verdict_created": false,
+            "metrics_are_advisory": true,
+            "ontology_or_source_law_adopted": false,
+            "physics_promotion_authorized": false,
+            "proof_authority": false,
+            "publication_authority": false,
+            "record_kind": "project_control",
+            "scientific_claims_changed": false,
+            "theorem_truth_inferred": false
+          },
+          "calculation_window": "2026-07-22T03:17:26Z",
+          "definition": "Fraction of eligible failed, superseded, repaired, abandoned, or audit-finding events that remain visible as finalized immutable ledger records.",
+          "denominator": {
+            "eligible_ids": [
+              "AEV-0001",
+              "AEV-0004",
+              "AEV-0005",
+              "AEV-0007",
+              "AEV-0008"
+            ],
+            "eligible_items": [
+              {
+                "identity": "AEV-0001",
+                "identity_kind": "attempt_event",
+                "identity_sha256": "71786faa840d21a2ee0e3688eea9bf6bfc4b83f12f5b86fcc728d125e963e597",
+                "source_path": "research_control/tasks/RT-20260721-006/artifacts/v21_research_attempt_ledger.json"
+              },
+              {
+                "identity": "AEV-0004",
+                "identity_kind": "attempt_event",
+                "identity_sha256": "003e57fb3f5ccb381e1e823f3bfb828bbde2c0e1dd5e0fa8b51f631e6987c32f",
+                "source_path": "research_control/tasks/RT-20260721-006/artifacts/v21_research_attempt_ledger.json"
+              },
+              {
+                "identity": "AEV-0005",
+                "identity_kind": "attempt_event",
+                "identity_sha256": "8bc9c64134b9be3eed46e875dbaa1177f37e467bb05d90822be79ccfd3c469f9",
+                "source_path": "research_control/tasks/RT-20260721-006/artifacts/v21_research_attempt_ledger.json"
+              },
+              {
+                "identity": "AEV-0007",
+                "identity_kind": "attempt_event",
+                "identity_sha256": "641f7dc9d5e7f363cf56bc42913e7b2b22e682141fe0ad03b4243713b2c8554b",
+                "source_path": "research_control/tasks/RT-20260721-006/artifacts/v21_research_attempt_ledger.json"
+              },
+              {
+                "identity": "AEV-0008",
+                "identity_kind": "attempt_event",
+                "identity_sha256": "2fc6308820605d7f7cc752bff73c54b1f1d06ce3514df3aa4040904d20eeb3f7",
+                "source_path": "research_control/tasks/RT-20260721-006/artifacts/v21_research_attempt_ledger.json"
+              }
+            ],
+            "status": "known",
+            "value": 5
+          },
+          "errors": [],
+          "family": "retraction_repair_visibility",
+          "interpretation_guardrail": "Visibility measures process memory, not scientific merit or Distance-to-GR progress.",
+          "metric_id": "retraction_repair_visibility_rate",
+          "numerator": {
+            "label": "eligible rework events visible with valid immutable event bindings",
+            "qualifying_ids": [
+              "AEV-0001",
+              "AEV-0004",
+              "AEV-0005",
+              "AEV-0007",
+              "AEV-0008"
+            ],
+            "value": 5
+          },
+          "source_paths": [
+            "research_control/tasks/RT-20260721-006/artifacts/v21_research_attempt_ledger.json"
+          ],
+          "status": "measured",
+          "uncertainty_note": "The metric covers the sealed ledger population only; it does not infer unrecorded historical failures.",
+          "value": 1.0,
+          "warnings": []
+        },
+        "theorem_generality_rate": {
+          "authority_boundary": {
+            "aggregate_scientific_truth_score_created": false,
+            "benchmark_promotion_authorized": false,
+            "candidate_adoption_authorized": false,
+            "candidate_rejection_authorized": false,
+            "completed_derivation_authorized": false,
+            "distance_to_gr_delta_changed": false,
+            "gate_chair_verdict_created": false,
+            "metrics_are_advisory": true,
+            "ontology_or_source_law_adopted": false,
+            "physics_promotion_authorized": false,
+            "proof_authority": false,
+            "publication_authority": false,
+            "record_kind": "project_control",
+            "scientific_claims_changed": false,
+            "theorem_truth_inferred": false
+          },
+          "calculation_window": "tracked_repository_snapshot",
+          "definition": "Fraction of a theorem's declared eligible application universe that is covered by explicit, hypothesis-preserving subsumption records.",
+          "denominator": {
+            "eligible_ids": [],
+            "eligible_items": [],
+            "status": "unknown",
+            "value": null
+          },
+          "errors": [],
+          "family": "theorem_generality",
+          "interpretation_guardrail": "Subsuming a shared coordinate does not reopen, adopt, or prove an exact historical family.",
+          "metric_id": "theorem_generality_rate",
+          "numerator": {
+            "label": "eligible applications with explicit theorem subsumption",
+            "qualifying_ids": [],
+            "value": null
+          },
+          "source_paths": [
+            "research_control/design/frontier_theorem_inventory.md"
+          ],
+          "status": "not_measured",
+          "uncertainty_note": "The tracked theorem inventory is authoritative prose, but no normalized immutable theorem-application denominator is present.",
+          "value": null,
+          "warnings": [
+            {
+              "code": "unknown_denominator",
+              "hard_gate": false,
+              "message": "No authoritative eligible-set population is available; the metric remains not_measured and is not treated as zero.",
+              "metric_id": "theorem_generality_rate",
+              "physics_claim_authority": false,
+              "severity": "warning",
+              "warning_id": "theorem_generality_rate:unknown_denominator"
+            }
+          ]
+        }
+      },
+      "quality_surface": "primary_scientific_quality_diagnostic",
+      "raw_volume_is_primary_quality": false,
+      "schema_id": "durable_scientific_quality_metrics_v1",
+      "source_basis": [
+        "registries/AGENT_JOB_REGISTRY.csv",
+        "research_control/design/frontier_theorem_inventory.md",
+        "research_control/tasks/RT-20260614-090/jobs/completions/AJC-AJ-RT-20260614-090-001.yaml",
+        "research_control/tasks/RT-20260614-127/jobs/completions/AJC-AJ-RT-20260614-127-001.yaml",
+        "research_control/tasks/RT-20260614-141/jobs/completions/AJC-AJ-RT-20260614-141-001.yaml",
+        "research_control/tasks/RT-20260614-147/jobs/completions/AJC-AJ-RT-20260614-147-001.yaml",
+        "research_control/tasks/RT-20260614-150/jobs/completions/AJC-AJ-RT-20260614-150-001.yaml",
+        "research_control/tasks/RT-20260614-151/jobs/completions/AJC-AJ-RT-20260614-151-001.yaml",
+        "research_control/tasks/RT-20260614-171/jobs/completions/AJC-AJ-RT-20260614-171-001.yaml",
+        "research_control/tasks/RT-20260614-200/jobs/completions/AJC-AJ-RT-20260614-200-001.yaml",
+        "research_control/tasks/RT-20260614-208/jobs/completions/AJC-AJ-RT-20260614-208-001.yaml",
+        "research_control/tasks/RT-20260629-045/jobs/completions/AJC-AJ-RT-20260629-045-001.yaml",
+        "research_control/tasks/RT-20260629-047/jobs/completions/AJC-AJ-RT-20260629-047-001.yaml",
+        "research_control/tasks/RT-20260629-051/jobs/completions/AJC-AJ-RT-20260629-051-001.yaml",
+        "research_control/tasks/RT-20260629-053/jobs/completions/AJC-AJ-RT-20260629-053-001.yaml",
+        "research_control/tasks/RT-20260629-057/jobs/completions/AJC-AJ-RT-20260629-057-001.yaml",
+        "research_control/tasks/RT-20260630-035/jobs/completions/AJC-AJ-RT-20260630-035-001.yaml",
+        "research_control/tasks/RT-20260630-040/jobs/completions/AJC-AJ-RT-20260630-040-001.yaml",
+        "research_control/tasks/RT-20260630-044/jobs/completions/AJC-AJ-RT-20260630-044-001.yaml",
+        "research_control/tasks/RT-20260701-023/jobs/completions/AJC-AJ-RT-20260701-023-001.yaml",
+        "research_control/tasks/RT-20260701-025/jobs/completions/AJC-AJ-RT-20260701-025-001.yaml",
+        "research_control/tasks/RT-20260702-064/jobs/completions/AJC-AJ-RT-20260702-064-001.yaml",
+        "research_control/tasks/RT-20260718-017/jobs/completions/AJC-AJ-RT-20260718-017-001.yaml",
+        "research_control/tasks/RT-20260718-019/jobs/completions/AJC-AJ-RT-20260718-019-001.yaml",
+        "research_control/tasks/RT-20260718-022/jobs/completions/AJC-AJ-RT-20260718-022-001.yaml",
+        "research_control/tasks/RT-20260718-025/jobs/completions/AJC-AJ-RT-20260718-025-001.yaml",
+        "research_control/tasks/RT-20260718-028/jobs/completions/AJC-AJ-RT-20260718-028-001.yaml",
+        "research_control/tasks/RT-20260718-030/jobs/completions/AJC-AJ-RT-20260718-030-001.yaml",
+        "research_control/tasks/RT-20260718-033/jobs/completions/AJC-AJ-RT-20260718-033-001.yaml",
+        "research_control/tasks/RT-20260718-037/jobs/completions/AJC-AJ-RT-20260718-037-001.yaml",
+        "research_control/tasks/RT-20260718-041/jobs/completions/AJC-AJ-RT-20260718-041-001.yaml",
+        "research_control/tasks/RT-20260718-045/jobs/completions/AJC-AJ-RT-20260718-045-001.yaml",
+        "research_control/tasks/RT-20260720-011/jobs/completions/AJC-AJ-RT-20260720-011-001.yaml",
+        "research_control/tasks/RT-20260720-020/jobs/completions/AJC-AJ-RT-20260720-020-001.yaml",
+        "research_control/tasks/RT-20260720-024/jobs/completions/AJC-AJ-RT-20260720-024-001.yaml",
+        "research_control/tasks/RT-20260720-025/jobs/completions/AJC-AJ-RT-20260720-025-001.yaml",
+        "research_control/tasks/RT-20260720-027/jobs/completions/AJC-AJ-RT-20260720-027-001.yaml",
+        "research_control/tasks/RT-20260721-005/artifacts/v21_candidate_lineage_registry.json",
+        "research_control/tasks/RT-20260721-006/artifacts/v21_research_attempt_ledger.json",
+        "research_control/tasks/RT-20260722-008/artifacts/reviewer_agreement_calibration_report.json",
+        "research_control/tasks/RT-20260723-004/artifacts/scientific_quality_calibration_warning_policy_v1.md",
+        "research_control/tasks/RT-20260723-004/artifacts/scientific_quality_metric_taxonomy_v1.md"
+      ],
+      "status": "PASS",
+      "status_counts": {
+        "invalid": 0,
+        "measured": 3,
+        "not_measured": 5
+      },
+      "warnings": [
+        {
+          "code": "unknown_denominator",
+          "hard_gate": false,
+          "message": "No authoritative eligible-set population is available; the metric remains not_measured and is not treated as zero.",
+          "metric_id": "assumption_reduction_rate",
+          "physics_claim_authority": false,
+          "severity": "warning",
+          "warning_id": "assumption_reduction_rate:unknown_denominator"
+        },
+        {
+          "code": "unknown_denominator",
+          "hard_gate": false,
+          "message": "No authoritative eligible-set population is available; the metric remains not_measured and is not treated as zero.",
+          "metric_id": "theorem_generality_rate",
+          "physics_claim_authority": false,
+          "severity": "warning",
+          "warning_id": "theorem_generality_rate:unknown_denominator"
+        },
+        {
+          "code": "unknown_denominator",
+          "hard_gate": false,
+          "message": "No authoritative eligible-set population is available; the metric remains not_measured and is not treated as zero.",
+          "metric_id": "countermodel_novelty_rate",
+          "physics_claim_authority": false,
+          "severity": "warning",
+          "warning_id": "countermodel_novelty_rate:unknown_denominator"
+        },
+        {
+          "code": "unknown_denominator",
+          "hard_gate": false,
+          "message": "No authoritative eligible-set population is available; the metric remains not_measured and is not treated as zero.",
+          "metric_id": "independent_review_survival_rate",
+          "physics_claim_authority": false,
+          "severity": "warning",
+          "warning_id": "independent_review_survival_rate:unknown_denominator"
+        },
+        {
+          "code": "unknown_denominator",
+          "hard_gate": false,
+          "message": "No authoritative eligible-set population is available; the metric remains not_measured and is not treated as zero.",
+          "metric_id": "benchmark_breadth_rate",
+          "physics_claim_authority": false,
+          "severity": "warning",
+          "warning_id": "benchmark_breadth_rate:unknown_denominator"
+        }
+      ]
+    },
     "input_counts": {
       "active_claim_boundary_rows": 899,
-      "claim_boundary_rows": 995,
-      "completions_read": 1038,
-      "jobs_registered": 1038,
-      "physics_completions_read": 530,
-      "tasks_registered": 1038
+      "claim_boundary_rows": 1027,
+      "completions_read": 1070,
+      "jobs_registered": 1070,
+      "physics_completions_read": 536,
+      "tasks_registered": 1070
     },
     "metric_separation_guard": {
       "operational_metric_key_tokens": [
@@ -4550,21 +5713,21 @@
       "active_claim_boundary_rows": 899,
       "average_tasks_per_construct_audit_stress_cycle": 2.93,
       "candidate_constructor_tasks": 57,
-      "claim_boundary_rows": 995,
+      "claim_boundary_rows": 1027,
       "claim_boundary_rows_active": 899,
       "completion_validation_status_counts": {
-        "FAIL": 2,
-        "PASS": 1006,
+        "FAIL": 9,
+        "PASS": 1031,
         "PASS_WITH_SURFACE_AUDIT_FINDINGS": 1,
         "PENDING": 1,
         "unknown": 28
       },
-      "completions_read": 1038,
+      "completions_read": 1070,
       "construct_audit_stress_cycle_count": 42,
       "gate_chair_tasks": 31,
-      "jobs_registered": 1038,
-      "physics_completions_read": 530,
-      "physics_promotion_authorized_false": 440,
+      "jobs_registered": 1070,
+      "physics_completions_read": 536,
+      "physics_promotion_authorized_false": 465,
       "physics_promotion_authorized_true": 27,
       "refuter_tasks": 95,
       "selector_cycles_without_construction": 92,
@@ -4580,17 +5743,17 @@
         "pass_support_only": 2
       },
       "support_only_checker_tooling_error_reports": 0,
-      "tasks_registered": 1038,
-      "tasks_with_forbidden_conclusion_summary": 467
+      "tasks_registered": 1070,
+      "tasks_with_forbidden_conclusion_summary": 492
     },
     "payload_density_metrics": {
       "new_payload_items_per_cycle": 19.5,
-      "new_payload_items_per_physics_task": 2.31,
-      "physics_completions_read": 530,
+      "new_payload_items_per_physics_task": 2.32,
+      "physics_completions_read": 536,
       "selector_cycles_without_new_payload": 0,
-      "tasks_since_last_burden_discharged": 3,
-      "tasks_since_last_distance_to_gr_delta": 132,
-      "total_payload_items": 1224
+      "tasks_since_last_burden_discharged": 0,
+      "tasks_since_last_distance_to_gr_delta": 138,
+      "total_payload_items": 1244
     },
     "physics_payload_ratio_diagnostics": {
       "authority_boundary": {
@@ -4604,20 +5767,29 @@
       },
       "calculation_window": "all tracked completion records available at report generation",
       "classification_counts": {
-        "physics_bearing_task_count": 443,
-        "project_system_task_count": 503,
-        "route_history_records": 1038,
-        "support_only_task_count": 525
+        "physics_bearing_task_count": 449,
+        "project_system_task_count": 528,
+        "route_history_records": 1070,
+        "support_only_task_count": 550
       },
       "metrics": {
         "candidate_construction_count": 206,
-        "new_mathematical_payload_count": 1280,
-        "new_mathematical_payload_to_support_only_task_ratio": 2.4381,
-        "physics_bearing_task_count": 443,
+        "new_mathematical_payload_count": 1300,
+        "new_mathematical_payload_to_support_only_task_ratio": 2.3636,
+        "ordinary_route_guard_status": {
+          "current_run_requires_physics_route_or_exception": false,
+          "hard_threshold": 3,
+          "policy_id": "ordinary_route_guard_policy_v1",
+          "policy_source_path": "research_control/tasks/RT-20260722-015/artifacts/ordinary_route_guard_policy_v1.md",
+          "prospective_hard_gate_active": true,
+          "system_work_counts_as_physics": false,
+          "warning_at": 2
+        },
+        "physics_bearing_task_count": 449,
         "physics_bearing_task_run_length": 0,
-        "physics_bearing_to_project_system_task_ratio": 0.8807,
-        "project_system_task_count": 503,
-        "project_system_task_run_length": 3,
+        "physics_bearing_to_project_system_task_ratio": 0.8504,
+        "project_system_task_count": 528,
+        "project_system_task_run_length": 1,
         "route_orbit_same_burden_repetition_count": 2,
         "route_orbit_warning_status": {
           "advisory_only": true,
@@ -4629,63 +5801,19 @@
             "gate_ready_without_gate"
           ]
         },
-        "support_only_task_count": 525,
-        "support_only_task_count_since_last_physics_payload": 3,
-        "theorem_countermodel_candidate_count": 588
+        "support_only_task_count": 550,
+        "support_only_task_count_since_last_physics_payload": 1,
+        "theorem_countermodel_candidate_count": 594
       },
       "policy_source_path": "research_control/design/physics_payload_ratio_policy_v1.md",
       "route_history_tail": [
         {
           "authority": "science_draft",
           "candidate_construction_signal": false,
-          "candidate_family": "unknown",
-          "completed_at": "2026-07-21T17:15:44Z",
-          "completion_path": "research_control/tasks/RT-20260720-028/jobs/completions/AJC-AJ-RT-20260720-028-001.yaml",
-          "job_id": "AJ-RT-20260720-028-001",
-          "mathematical_payload_items": 3,
-          "milestone": "source_equivalence_eqsrc",
-          "physics_bearing_task": true,
-          "project_system_task": false,
-          "result_kind": "completed_or_precisely_blocked",
-          "role_id": "theoretical-continuation-selector",
-          "scope": "scientific",
-          "support_only_task": false,
-          "task_id": "RT-20260720-028",
-          "task_type": "v21_eqsrc_family_freeze_theorem_inventory_selector",
-          "taxonomy_confidence": "medium",
-          "taxonomy_source": "plan_metadata",
-          "theorem_countermodel_candidate_signal": false,
-          "work_kind": "integration_or_selection"
-        },
-        {
-          "authority": "project_control",
-          "candidate_construction_signal": false,
-          "candidate_family": "not_applicable",
-          "completed_at": "2026-07-21T17:55:35Z",
-          "completion_path": "research_control/tasks/RT-20260720-029/jobs/completions/AJC-AJ-RT-20260720-029-001.yaml",
-          "job_id": "AJ-RT-20260720-029-001",
-          "mathematical_payload_items": 0,
-          "milestone": "unknown",
-          "physics_bearing_task": false,
-          "project_system_task": true,
-          "result_kind": "completed_or_precisely_blocked",
-          "role_id": "validator-engineer",
-          "scope": "project_system",
-          "support_only_task": true,
-          "task_id": "RT-20260720-029",
-          "task_type": "project_system_mutable_frontier_inventory_memory_preflight_compatibility_recovery",
-          "taxonomy_confidence": "low",
-          "taxonomy_source": "legacy_compatibility",
-          "theorem_countermodel_candidate_signal": true,
-          "work_kind": "benchmark_or_recovery"
-        },
-        {
-          "authority": "science_draft",
-          "candidate_construction_signal": false,
-          "candidate_family": "unknown",
-          "completed_at": "2026-07-21T18:42:43Z",
-          "completion_path": "research_control/tasks/RT-20260720-030/jobs/completions/AJC-AJ-RT-20260720-030-001.yaml",
-          "job_id": "AJ-RT-20260720-030-001",
+          "candidate_family": "no_target_positive_readiness_logic",
+          "completed_at": "2026-07-22T23:15:35Z",
+          "completion_path": "research_control/tasks/RT-20260722-019/jobs/completions/AJC-AJ-RT-20260722-019-001.yaml",
+          "job_id": "AJ-RT-20260722-019-001",
           "mathematical_payload_items": 4,
           "milestone": "source_ontology",
           "physics_bearing_task": true,
@@ -4694,108 +5822,196 @@
           "role_id": "ontology-formalizer",
           "scope": "scientific",
           "support_only_task": false,
-          "task_id": "RT-20260720-030",
-          "task_type": "v21_comprehensive_source_assumption_ledger",
-          "taxonomy_confidence": "medium",
-          "taxonomy_source": "plan_metadata",
-          "theorem_countermodel_candidate_signal": false,
+          "task_id": "RT-20260722-019",
+          "task_type": "v21_no_target_positive_provenance_sufficiency_policy",
+          "taxonomy_confidence": "high",
+          "taxonomy_source": "explicit",
+          "theorem_countermodel_candidate_signal": true,
           "work_kind": "construction_or_implementation"
         },
         {
           "authority": "science_draft",
-          "candidate_construction_signal": true,
-          "candidate_family": "unknown",
-          "completed_at": "2026-07-21T19:46:25Z",
-          "completion_path": "research_control/tasks/RT-20260720-031/jobs/completions/AJC-AJ-RT-20260720-031-001.yaml",
-          "job_id": "AJ-RT-20260720-031-001",
-          "mathematical_payload_items": 3,
-          "milestone": "source_ontology",
+          "candidate_construction_signal": false,
+          "candidate_family": "negative_result_success_pathway",
+          "completed_at": "2026-07-23T00:16:09Z",
+          "completion_path": "research_control/tasks/RT-20260722-020/jobs/completions/AJC-AJ-RT-20260722-020-001.yaml",
+          "job_id": "AJ-RT-20260722-020-001",
+          "mathematical_payload_items": 4,
+          "milestone": "source_equivalence_eqsrc",
           "physics_bearing_task": true,
           "project_system_task": false,
           "result_kind": "completed_or_precisely_blocked",
           "role_id": "ontology-formalizer",
           "scope": "scientific",
           "support_only_task": false,
-          "task_id": "RT-20260720-031",
-          "task_type": "v21_continuum_first_premetric_ontology_option",
-          "taxonomy_confidence": "medium",
-          "taxonomy_source": "plan_metadata",
+          "task_id": "RT-20260722-020",
+          "task_type": "v21_scoped_negative_result_minimum_extension_success_pathway",
+          "taxonomy_confidence": "high",
+          "taxonomy_source": "explicit",
           "theorem_countermodel_candidate_signal": true,
           "work_kind": "formalization_or_theorem"
         },
         {
           "authority": "science_draft",
-          "candidate_construction_signal": true,
-          "candidate_family": "unknown",
-          "completed_at": "2026-07-21T20:59:12Z",
-          "completion_path": "research_control/tasks/RT-20260720-032/jobs/completions/AJC-AJ-RT-20260720-032-001.yaml",
-          "job_id": "AJ-RT-20260720-032-001",
-          "mathematical_payload_items": 5,
-          "milestone": "source_ontology",
-          "physics_bearing_task": true,
+          "candidate_construction_signal": false,
+          "candidate_family": "exact_gr_interpretive_manuscript",
+          "completed_at": "2026-07-23T01:19:19Z",
+          "completion_path": "research_control/tasks/RT-20260722-021/jobs/completions/AJC-AJ-RT-20260722-021-001.yaml",
+          "job_id": "AJ-RT-20260722-021-001",
+          "mathematical_payload_items": 0,
+          "milestone": "benchmark_promotion",
+          "physics_bearing_task": false,
           "project_system_task": false,
           "result_kind": "completed_or_precisely_blocked",
-          "role_id": "ontology-formalizer",
+          "role_id": "documentation-curator",
           "scope": "scientific",
           "support_only_task": false,
-          "task_id": "RT-20260720-032",
-          "task_type": "v21_emergence_first_pregeometric_ontology_option",
-          "taxonomy_confidence": "medium",
-          "taxonomy_source": "plan_metadata",
+          "task_id": "RT-20260722-021",
+          "task_type": "v21_exact_gr_interpretive_manuscript_package",
+          "taxonomy_confidence": "high",
+          "taxonomy_source": "explicit",
           "theorem_countermodel_candidate_signal": true,
-          "work_kind": "formalization_or_theorem"
+          "work_kind": "publication_preparation"
         },
         {
           "authority": "project_control",
           "candidate_construction_signal": false,
-          "candidate_family": "not_applicable",
-          "completed_at": "2026-07-21T22:49:01Z",
-          "completion_path": "research_control/tasks/RT-20260721-001/jobs/completions/AJC-AJ-RT-20260721-001-001.yaml",
-          "job_id": "AJ-RT-20260721-001-001",
+          "candidate_family": "continue_research_context_live_route_fixture",
+          "completed_at": "2026-07-23T03:00:44Z",
+          "completion_path": "research_control/tasks/RT-20260722-022/jobs/completions/AJC-AJ-RT-20260722-022-001.yaml",
+          "job_id": "AJ-RT-20260722-022-001",
           "mathematical_payload_items": 0,
-          "milestone": "unknown",
+          "milestone": "not_applicable",
           "physics_bearing_task": false,
           "project_system_task": true,
           "result_kind": "completed_or_precisely_blocked",
           "role_id": "validator-engineer",
           "scope": "project_system",
           "support_only_task": true,
-          "task_id": "RT-20260721-001",
-          "task_type": "project_system_user_modified_soul_guidance_integration",
-          "taxonomy_confidence": "low",
-          "taxonomy_source": "legacy_compatibility",
+          "task_id": "RT-20260722-022",
+          "task_type": "project_system_continue_research_context_live_route_fixture_recovery",
+          "taxonomy_confidence": "high",
+          "taxonomy_source": "explicit",
           "theorem_countermodel_candidate_signal": false,
-          "work_kind": "integration_or_selection"
+          "work_kind": "benchmark_or_recovery"
+        },
+        {
+          "authority": "project_control",
+          "candidate_construction_signal": false,
+          "candidate_family": "exact_path_whitespace_policy",
+          "completed_at": "2026-07-23T04:14:12Z",
+          "completion_path": "research_control/tasks/RT-20260722-023/jobs/completions/AJC-AJ-RT-20260722-023-001.yaml",
+          "job_id": "AJ-RT-20260722-023-001",
+          "mathematical_payload_items": 0,
+          "milestone": "not_applicable",
+          "physics_bearing_task": false,
+          "project_system_task": true,
+          "result_kind": "completed_or_precisely_blocked",
+          "role_id": "process-integrity-auditor",
+          "scope": "project_system",
+          "support_only_task": true,
+          "task_id": "RT-20260722-023",
+          "task_type": "project_system_hash_bound_blank_eof_exact_path_recovery",
+          "taxonomy_confidence": "high",
+          "taxonomy_source": "explicit",
+          "theorem_countermodel_candidate_signal": false,
+          "work_kind": "benchmark_or_recovery"
+        },
+        {
+          "authority": "project_control",
+          "candidate_construction_signal": false,
+          "candidate_family": "gitattributes_classifier_admission",
+          "completed_at": "2026-07-23T05:44:47Z",
+          "completion_path": "research_control/tasks/RT-20260722-024/jobs/completions/AJC-AJ-RT-20260722-024-001.yaml",
+          "job_id": "AJ-RT-20260722-024-001",
+          "mathematical_payload_items": 0,
+          "milestone": "not_applicable",
+          "physics_bearing_task": false,
+          "project_system_task": true,
+          "result_kind": "implemented_and_validated_or_precisely_blocked",
+          "role_id": "validator-engineer",
+          "scope": "project_system",
+          "support_only_task": true,
+          "task_id": "RT-20260722-024",
+          "task_type": "project_system_gitattributes_classifier_recovery",
+          "taxonomy_confidence": "high",
+          "taxonomy_source": "explicit",
+          "theorem_countermodel_candidate_signal": false,
+          "work_kind": "benchmark_or_recovery"
+        },
+        {
+          "authority": "project_control",
+          "candidate_construction_signal": false,
+          "candidate_family": "task_taxonomy_and_event_store_receipt_compatibility",
+          "completed_at": "2026-07-23T06:25:44Z",
+          "completion_path": "research_control/tasks/RT-20260723-001/jobs/completions/AJC-AJ-RT-20260723-001-001.yaml",
+          "job_id": "AJ-RT-20260723-001-001",
+          "mathematical_payload_items": 0,
+          "milestone": "not_applicable",
+          "physics_bearing_task": false,
+          "project_system_task": true,
+          "result_kind": "completed_or_precisely_blocked",
+          "role_id": "validator-engineer",
+          "scope": "project_system",
+          "support_only_task": true,
+          "task_id": "RT-20260723-001",
+          "task_type": "project_system_task_taxonomy_event_store_receipt_compatibility_recovery",
+          "taxonomy_confidence": "high",
+          "taxonomy_source": "explicit",
+          "theorem_countermodel_candidate_signal": false,
+          "work_kind": "benchmark_or_recovery"
+        },
+        {
+          "authority": "project_control",
+          "candidate_construction_signal": false,
+          "candidate_family": "p10_t07_identity_and_routing_snapshot_recovery",
+          "completed_at": "2026-07-23T07:12:45Z",
+          "completion_path": "research_control/tasks/RT-20260723-002/jobs/completions/AJC-AJ-RT-20260723-002-001.yaml",
+          "job_id": "AJ-RT-20260723-002-001",
+          "mathematical_payload_items": 0,
+          "milestone": "not_applicable",
+          "physics_bearing_task": false,
+          "project_system_task": true,
+          "result_kind": "completed_or_precisely_blocked",
+          "role_id": "validator-engineer",
+          "scope": "project_system",
+          "support_only_task": true,
+          "task_id": "RT-20260723-002",
+          "task_type": "project_system_p10_t07_identity_routing_snapshot_recovery",
+          "taxonomy_confidence": "high",
+          "taxonomy_source": "explicit",
+          "theorem_countermodel_candidate_signal": false,
+          "work_kind": "benchmark_or_recovery"
         },
         {
           "authority": "science_draft",
           "candidate_construction_signal": false,
-          "candidate_family": "unknown",
-          "completed_at": "2026-07-21T23:34:55Z",
-          "completion_path": "research_control/tasks/RT-20260721-002/jobs/completions/AJC-AJ-RT-20260721-002-001.yaml",
-          "job_id": "AJ-RT-20260721-002-001",
-          "mathematical_payload_items": 3,
-          "milestone": "source_ontology",
+          "candidate_family": "selector_minimum_extension_theorem_manuscript",
+          "completed_at": "2026-07-23T08:38:21Z",
+          "completion_path": "research_control/tasks/RT-20260723-003/jobs/completions/AJC-AJ-RT-20260723-003-001.yaml",
+          "job_id": "AJ-RT-20260723-003-001",
+          "mathematical_payload_items": 5,
+          "milestone": "source_equivalence_eqsrc",
           "physics_bearing_task": true,
           "project_system_task": false,
           "result_kind": "completed_or_precisely_blocked",
-          "role_id": "external-red-team-reviewer",
+          "role_id": "ontology-formalizer",
           "scope": "scientific",
           "support_only_task": false,
-          "task_id": "RT-20260721-002",
-          "task_type": "v21_ontology_regime_comparative_audit",
-          "taxonomy_confidence": "medium",
-          "taxonomy_source": "plan_metadata",
+          "task_id": "RT-20260723-003",
+          "task_type": "v21_selector_minimum_extension_theorem_manuscript",
+          "taxonomy_confidence": "high",
+          "taxonomy_source": "explicit",
           "theorem_countermodel_candidate_signal": true,
-          "work_kind": "integration_or_selection"
+          "work_kind": "publication_preparation"
         },
         {
           "authority": "project_control",
           "candidate_construction_signal": false,
           "candidate_family": "not_applicable",
-          "completed_at": "2026-07-22T00:35:30Z",
-          "completion_path": "research_control/tasks/RT-20260721-003/jobs/completions/AJC-AJ-RT-20260721-003-001.yaml",
-          "job_id": "AJ-RT-20260721-003-001",
+          "completed_at": "2026-07-23T10:25:43Z",
+          "completion_path": "research_control/tasks/RT-20260723-004/jobs/completions/AJC-AJ-RT-20260723-004-001.yaml",
+          "job_id": "AJ-RT-20260723-004-001",
           "mathematical_payload_items": 0,
           "milestone": "source_equivalence_eqsrc",
           "physics_bearing_task": false,
@@ -4804,56 +6020,12 @@
           "role_id": "project-control-maintainer",
           "scope": "project_system",
           "support_only_task": true,
-          "task_id": "RT-20260721-003",
-          "task_type": "v21_normalized_scientific_status_assumption_schemas",
-          "taxonomy_confidence": "high",
-          "taxonomy_source": "plan_metadata",
-          "theorem_countermodel_candidate_signal": false,
-          "work_kind": "formalization_or_theorem"
-        },
-        {
-          "authority": "project_control",
-          "candidate_construction_signal": false,
-          "candidate_family": "not_applicable",
-          "completed_at": "2026-07-22T01:38:23Z",
-          "completion_path": "research_control/tasks/RT-20260721-004/jobs/completions/AJC-AJ-RT-20260721-004-001.yaml",
-          "job_id": "AJ-RT-20260721-004-001",
-          "mathematical_payload_items": 0,
-          "milestone": "source_equivalence_eqsrc",
-          "physics_bearing_task": false,
-          "project_system_task": true,
-          "result_kind": "implemented_and_validated_or_precisely_blocked",
-          "role_id": "project-control-maintainer",
-          "scope": "project_system",
-          "support_only_task": true,
-          "task_id": "RT-20260721-004",
-          "task_type": "v21_orthogonal_task_taxonomy",
+          "task_id": "RT-20260723-004",
+          "task_type": "v21_durable_scientific_quality_metrics",
           "taxonomy_confidence": "high",
           "taxonomy_source": "explicit",
           "theorem_countermodel_candidate_signal": false,
           "work_kind": "integration_or_selection"
-        },
-        {
-          "authority": "project_control",
-          "candidate_construction_signal": false,
-          "candidate_family": "eqsrc_canonical_choice",
-          "completed_at": "2026-07-22T02:38:48Z",
-          "completion_path": "research_control/tasks/RT-20260721-005/jobs/completions/AJC-AJ-RT-20260721-005-001.yaml",
-          "job_id": "AJ-RT-20260721-005-001",
-          "mathematical_payload_items": 0,
-          "milestone": "source_equivalence_eqsrc",
-          "physics_bearing_task": false,
-          "project_system_task": true,
-          "result_kind": "implemented_and_validated_or_precisely_blocked",
-          "role_id": "project-control-maintainer",
-          "scope": "project_system",
-          "support_only_task": true,
-          "task_id": "RT-20260721-005",
-          "task_type": "v21_immutable_candidate_identity_lineage",
-          "taxonomy_confidence": "high",
-          "taxonomy_source": "explicit",
-          "theorem_countermodel_candidate_signal": false,
-          "work_kind": "construction_or_implementation"
         }
       ],
       "schema_id": "physics_payload_ratio_route_history_metrics_v1",
@@ -4868,64 +6040,67 @@
         "precise_obstruction": 10
       },
       "distance_delta": {
-        "changed_false_count": 535,
+        "changed_false_count": 567,
         "changed_true_count": 183,
         "effect_counts": {
           "conditional_theorem_candidate": 19,
           "decision_evidence_only": 1,
+          "evaluation_framework_only": 1,
           "frozen_negative": 1,
           "literature_basis_only": 1,
           "missing_effect": 718,
-          "no_distance_delta": 276,
+          "no_distance_delta": 307,
           "obstruction_recorded": 14,
           "review_calibration_only": 1,
           "scoped_evidence_precondition": 3,
           "scoped_source_extension_object": 4
         },
-        "records_read": 1038
+        "records_read": 1070
       },
       "not_physics_proof": true,
       "payload_density_summary": {
-        "classified_item_count": 1833,
-        "mathematical_payload_item_count": 1114,
-        "mathematical_payload_task_count": 455,
+        "classified_item_count": 1879,
+        "mathematical_payload_item_count": 1132,
+        "mathematical_payload_task_count": 461,
         "payload_class_counts": {
           "conditional_theorem": 32,
-          "countermodel": 85,
-          "dependency_map_update": 158,
-          "documentation_only": 106,
-          "finite_witness": 279,
-          "new_definition": 65,
-          "new_theorem_statement": 179,
+          "countermodel": 90,
+          "dependency_map_update": 162,
+          "documentation_only": 107,
+          "finite_witness": 283,
+          "new_definition": 69,
+          "new_theorem_statement": 180,
           "obstruction": 170,
           "proof_attempt": 0,
           "proved_theorem": 1,
-          "route_selector_only": 195,
+          "route_selector_only": 197,
           "source_extension_classification": 145,
-          "validator_tooling_only": 418
+          "validator_tooling_only": 443
         },
-        "payload_density": 0.607747,
-        "process_only_item_count": 719,
-        "process_only_task_count": 582,
-        "task_count": 1037,
-        "task_payload_density": 0.438766
+        "payload_density": 0.602448,
+        "process_only_item_count": 747,
+        "process_only_task_count": 608,
+        "task_count": 1069,
+        "task_payload_density": 0.431244
       },
       "physics_claim_promotion_authorized": false,
+      "primary_scientific_quality_surface": false,
+      "reporting_role": "raw_volume_operational_context_only",
       "separate_packet_counts": {
         "candidate_packet_count": 206,
-        "freeze_packet_count": 311,
+        "freeze_packet_count": 312,
         "obstruction_packet_count": 49,
-        "process_only_packet_count": 582,
-        "theorem_packet_count": 151
+        "process_only_packet_count": 608,
+        "theorem_packet_count": 152
       },
       "status": "pass"
     },
     "physics_progress_metrics": {
-      "burden_discharged_count": 20,
+      "burden_discharged_count": 25,
       "candidate_refuter_stress_pass_count": 34,
       "candidate_smuggling_audit_pass_count": 53,
       "constructed_candidate_count": 91,
-      "distance_to_gr_delta_false_count": 535,
+      "distance_to_gr_delta_false_count": 567,
       "distance_to_gr_delta_true_count": 183,
       "frozen_routes_reopened_by_human_gate": 16,
       "human_gate_required_count": 23,
@@ -4934,7 +6109,7 @@
       "obstruction_records_referenced_by_later_tasks": 26,
       "physics_progress_status_counts": {
         "burden_advanced": 2,
-        "burden_discharged": 20,
+        "burden_discharged": 25,
         "candidate_audit_passed_pending_stress": 1,
         "candidate_audited_pending_stress": 53,
         "candidate_constructed_pending_audit": 56,
@@ -4962,7 +6137,7 @@
         "detector_route_selected_no_adoption": 1,
         "docs_no_physics_delta": 1,
         "documentation_control_no_distance_delta": 16,
-        "documentation_or_control_only_no_physics_delta": 13,
+        "documentation_or_control_only_no_physics_delta": 25,
         "eqsrc_family_closure_audited_source_pure_as_written_no_promotion": 1,
         "eqsrc_family_stressed_no_promotion": 1,
         "external_review_no_distance_delta": 1,
@@ -4981,7 +6156,7 @@
         "methodology_memo_no_physics_delta": 1,
         "methodology_metrics_no_physics_delta": 1,
         "metrics_tool_update_no_physics_delta": 1,
-        "no_distance_delta": 33,
+        "no_distance_delta": 40,
         "ordinary_route_selected_no_promotion": 1,
         "precise_obstruction_found": 30,
         "precise_obstruction_found_no_distance_delta": 1,
@@ -5047,6 +6222,7 @@
         "project_system_validation_receipt_schema_no_physics_delta": 1,
         "project_system_validation_reporting_no_physics_delta": 1,
         "proposal_only_law_target_formalized_pending_audit": 1,
+        "publication_preparation_payload_complete_checkpoint_blocked_no_distance_delta": 1,
         "record_local_theorem_candidate_no_distance_delta": 1,
         "red_team_review_no_physics_delta": 3,
         "review_packet_created_no_outreach": 1,
@@ -5103,21 +6279,21 @@
       "bridge_attempts_since_last_gate": 23,
       "candidate_construct_audit_stress_selector_cycles": 16,
       "freeze_reviews_triggered_by_repetition": 280,
-      "gate_ready_cycles_without_gate_verdict": 356,
+      "gate_ready_cycles_without_gate_verdict": 361,
       "obstructions_created": 34,
       "obstructions_created_missing_id": 0,
       "obstructions_reused": 26,
-      "physics_promotion_authorized_false_count": 326,
+      "physics_promotion_authorized_false_count": 332,
       "physics_promotion_authorized_true_count": 27,
       "same_burden_repetition_count": 2,
       "support_only_tooling_reports": 2
     },
     "scientific_progress_metrics": {
-      "burden_discharged_count": 20,
+      "burden_discharged_count": 25,
       "candidate_refuter_stress_pass_count": 34,
       "candidate_smuggling_audit_pass_count": 53,
       "constructed_candidate_count": 91,
-      "distance_to_gr_delta_false_count": 535,
+      "distance_to_gr_delta_false_count": 567,
       "distance_to_gr_delta_true_count": 183,
       "frozen_routes_reopened_by_human_gate": 16,
       "human_gate_required_count": 23,
@@ -5126,7 +6302,7 @@
       "obstruction_records_referenced_by_later_tasks": 26,
       "physics_progress_status_counts": {
         "burden_advanced": 2,
-        "burden_discharged": 20,
+        "burden_discharged": 25,
         "candidate_audit_passed_pending_stress": 1,
         "candidate_audited_pending_stress": 53,
         "candidate_constructed_pending_audit": 56,
@@ -5154,7 +6330,7 @@
         "detector_route_selected_no_adoption": 1,
         "docs_no_physics_delta": 1,
         "documentation_control_no_distance_delta": 16,
-        "documentation_or_control_only_no_physics_delta": 13,
+        "documentation_or_control_only_no_physics_delta": 25,
         "eqsrc_family_closure_audited_source_pure_as_written_no_promotion": 1,
         "eqsrc_family_stressed_no_promotion": 1,
         "external_review_no_distance_delta": 1,
@@ -5173,7 +6349,7 @@
         "methodology_memo_no_physics_delta": 1,
         "methodology_metrics_no_physics_delta": 1,
         "metrics_tool_update_no_physics_delta": 1,
-        "no_distance_delta": 33,
+        "no_distance_delta": 40,
         "ordinary_route_selected_no_promotion": 1,
         "precise_obstruction_found": 30,
         "precise_obstruction_found_no_distance_delta": 1,
@@ -5239,6 +6415,7 @@
         "project_system_validation_receipt_schema_no_physics_delta": 1,
         "project_system_validation_reporting_no_physics_delta": 1,
         "proposal_only_law_target_formalized_pending_audit": 1,
+        "publication_preparation_payload_complete_checkpoint_blocked_no_distance_delta": 1,
         "record_local_theorem_candidate_no_distance_delta": 1,
         "red_team_review_no_physics_delta": 3,
         "review_packet_created_no_outreach": 1,
@@ -5301,7 +6478,13 @@
     "research_control/tasks/*/jobs/completions/*.yaml",
     "research_control/design/ai_research_agent_metrics_taxonomy_v1.md",
     "research_control/design/physics_payload_ratio_policy_v1.md",
+    "research_control/tasks/RT-20260722-014/artifacts/dual_budget_policy_v1.md",
+    "research_control/tasks/RT-20260722-014/artifacts/budget_dashboard_schema_v1.md",
+    "research_control/tasks/RT-20260722-015/artifacts/ordinary_route_guard_policy_v1.md",
     "research_control/tasks/RT-20260721-005/artifacts/v21_candidate_lineage_registry.json",
+    "research_control/tasks/RT-20260723-004/artifacts/scientific_quality_metric_taxonomy_v1.md",
+    "research_control/tasks/RT-20260723-004/artifacts/scientific_quality_calibration_warning_policy_v1.md",
+    "research_control/tasks/RT-20260721-006/artifacts/v21_research_attempt_ledger.json",
     "research_control/tasks/RT-20260721-005/artifacts/v21_candidate_lineage_historical_seed.json"
   ]
 }

@@ -1,0 +1,244 @@
+validation_status: "FAIL"
+handoff_id: "handoff-0838"
+handoff_number: 838
+handoff_kind: "ordinary_research"
+created_at: "2026-07-23T11:43:31Z"
+task_id: "RT-20260723-005"
+decision_id: "DDR-20260723-005"
+job_id: "AJ-RT-20260723-005-001"
+completion_path: "research_control/tasks/RT-20260723-005/jobs/completions/AJC-AJ-RT-20260723-005-001.yaml"
+completion_hash: "b627885b3a2fd5e829d29a9d4b19cb1ae40ca3b06bb949de5acfcb7c9279cd67"
+source_task_id: "RT-20260723-005"
+source_job_id: "AJ-RT-20260723-005-001"
+source_completion_id: "AJC-AJ-RT-20260723-005-001"
+parent_handoff_id: "handoff-0837"
+plan_task_id: "P12-T05"
+source_role_id: "validator-engineer"
+source_role_version: "0.2.0"
+source_execution_role_ref: "validator-engineer@0.2.0--RT-20260723-005"
+status: "blocked_validation"
+summary: "RT-20260723-005 completes the exact P12-T05 metric-reporting classifier repair. Four exact report outputs are generated derivatives, two exact scripts use validator_code, the predecessor 61-path manifest has a safe legacy-authority comparison-required shadow plan, and an unrelated path still fails closed to full validation. The preserved metric validator passes 44 checks across 14 fixtures and the focused classifier-planner suite passes 105 tests. The required 155-test shard then passed 154 tests and failed one continuation-contract assertion because the ordinary-route guard truthfully emitted its designed threshold-next WARN while the test required PASS. The checkpoint was not invoked."
+next_action: "Run one fresh bounded improve-project-system recovery to reconcile the ordinary-route threshold-next warning with the continuation validation contract without falsifying route history, weakening the threshold-three hard guard, or executing P12-T06; then revalidate before one future normal checkpoint."
+current_claim_boundary: "CB-V21-P12-T05-METRIC-REPORTING-CLASSIFIER-RECOVERY-001"
+loop_risk_route: "reconcile_ordinary_route_guard_threshold_warning_validation_contract_v1"
+
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260723-005"
+  latest_research_handoff_id: "handoff-0838"
+  latest_research_next_action: "Run one fresh bounded improve-project-system recovery to reconcile the ordinary-route threshold-next warning with the continuation validation contract without falsifying route history, weakening the threshold-three hard guard, or executing P12-T06; then revalidate before one future normal checkpoint."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+
+ordinary_route_guard:
+  schema_id: "ordinary_route_guard_evaluation_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  evaluation_id: "ORE-HANDOFF-0838"
+  ordinary_handoff_id: "handoff-0838"
+  threshold: 3
+  consecutive_project_system_tasks_before_selection: 2
+  ready_science_plan_task_ids:
+    - "P4-T05"
+  selected_plan_task_id: "P12-T06"
+  selected_route_class: "project_system"
+  selected_worker_skill: "improve-project-system"
+  outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  exception_receipt:
+    active: false
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+claim_boundary:
+  allowed_next_scope: "One fresh bounded project-system recovery may reconcile the ordinary-route threshold-next WARN with the continuation validation contract while preserving the observed run length, threshold-three hard guard, completed classifier repair, exact P12-T05 metric semantics, and every scientific authority boundary."
+  newly_completed_recovery_task: "RT-20260723-005"
+  recovery_for_plan_task_id: "P12-T05"
+  recovery_completion_path: "research_control/tasks/RT-20260723-005/jobs/completions/AJC-AJ-RT-20260723-005-001.yaml"
+  recovery_completion_sha256: "b627885b3a2fd5e829d29a9d4b19cb1ae40ca3b06bb949de5acfcb7c9279cd67"
+  recovery_receipt_path: "research_control/tasks/RT-20260723-005/artifacts/p12_t05_metric_reporting_classifier_recovery_receipt.json"
+  recovery_receipt_sha256: "001918afd59a1d8e66d29675994156906ef71bb5efc0a7ec71aff1529ad487d8"
+  validation_blocker_path: "research_control/tasks/RT-20260723-005/artifacts/validation_blocker_ordinary_route_guard_threshold_warning_contract_v1.yaml"
+  validation_blocker_sha256: "70e2cb4620a2d77ccd35de83611a6ccf5c6c664d92861b5f2195fda304bf0dd5"
+  source_blocker_path: "research_control/tasks/RT-20260723-004/artifacts/validation_blocker_checkpoint_planner_unknown_scientific_quality_paths_v1.yaml"
+  source_blocker_sha256: "ab162996fbc7ced31f2fd6adb067a4ae2818448cb3db5ca67567621b6c1b9fba"
+  exact_generated_output_count: 4
+  exact_validator_code_script_count: 2
+  predecessor_manifest_path_count: 61
+  predecessor_manifest_unknown_path_count: 0
+  predecessor_manifest_shadow_plan_safe: true
+  unrelated_unknown_path_fail_closed: true
+  arbitrary_output_or_script_prefix_admitted: false
+  p12_t05_implementation_complete: true
+  p12_t05_classifier_recovery_complete: true
+  p12_t05_checkpoint_ready: false
+  p12_t05_checkpoint_committed: false
+  p12_t05_metric_semantics_changed: false
+  p12_t06_dependency_ready: false
+  p12_t06_selected_next: false
+  p12_t06_execution_ready_after_checkpoint: false
+  p12_t06_executed: false
+  p4_t05_dependency_ready: true
+  p4_t05_requires_human_gate: true
+  p4_t05_executed: false
+  scientific_ledger_change_count: 0
+  scientific_status_changed: false
+  distance_to_gr_delta_changed: false
+  ontology_adoption_authorized: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  blocked_claims:
+    - "classifier repair checkpoint route or dashboard status presented as theorem truth scientific evidence physics progress or Distance-to-GR progress"
+    - "attempt repair validation-catch objection abandonment or failure count presented as a physics refutation or global no-go"
+    - "private prompt credential personal or sensitive text exposed in a generated dashboard"
+    - "P4-T05 protected ontology decision executed without exact human authority"
+    - "canonical ontology source-law scientific-ledger or Distance-to-GR edit"
+    - "general EqSrc effective metric matter coupling Einstein-equation derivation benchmark promotion proof publication completed derivation or global no-go"
+
+classifier_recovery_result:
+  receipt_path: "research_control/tasks/RT-20260723-005/artifacts/p12_t05_metric_reporting_classifier_recovery_receipt.json"
+  receipt_sha256: "001918afd59a1d8e66d29675994156906ef71bb5efc0a7ec71aff1529ad487d8"
+  classifier_path: "scripts/project_control/classify_project_changes.py"
+  classifier_sha256: "64987acf3e8fdf6331ef4dbae18ddb7246c679b552626f59110caf08316a106e"
+  classifier_test_path: "tests/test_project_change_classifier.py"
+  classifier_test_sha256: "5ffbe22f165cefc6b5fe5369274767b49dac61eb2952cea4511d6a739197cb31"
+  validation_planner_test_path: "tests/test_validation_planner.py"
+  validation_planner_test_sha256: "b152c75a973c5740df811d4eb040c2c1cf296c45621505aca7183b903150fd09"
+  checkpoint_planner_test_path: "tests/test_checkpoint_validation_planner.py"
+  checkpoint_planner_test_sha256: "e16250457f33773f1ed7426a1cbd8d118da4fa5a2983eee0ec1395d410925e0b"
+  focused_test_status: "PASS_105_OF_105"
+  exact_six_path_classification_status: "PASS_ZERO_UNKNOWN_ZERO_BLOCKED"
+  exact_61_path_shadow_plan_status: "PASS_READY"
+  unrelated_unknown_path_status: "PASS_FULL_FALLBACK"
+  p12_t05_metric_validation_status: "PASS_44_CHECKS_14_FIXTURES"
+  required_shard_status: "FAIL_1_OF_155_ORDINARY_ROUTE_GUARD_THRESHOLD_WARNING_CONTRACT"
+  checkpoint_status: "NOT_INVOKED_VALIDATION_BLOCKER"
+  checkpoint_invocation_count: 0
+  checkpoint_blocker_path: "research_control/tasks/RT-20260723-005/artifacts/validation_blocker_ordinary_route_guard_threshold_warning_contract_v1.yaml"
+  checkpoint_blocker_sha256: "70e2cb4620a2d77ccd35de83611a6ccf5c6c664d92861b5f2195fda304bf0dd5"
+  legacy_validation_used: false
+
+scientific_quality_metrics_result:
+  schema_id: "durable_scientific_quality_metrics_v1"
+  status: "PASS_IMPLEMENTATION_CHECKPOINT_BLOCKED"
+  metric_family_count: 8
+  measured_metric_count: 3
+  not_measured_metric_count: 5
+  invalid_metric_count: 0
+  aggregate_metric: "not_defined"
+  raw_volume_reporting_role: "raw_volume_operational_context_only"
+  result_boundary: "The classifier recovery preserves all P12-T05 metric identities, eligible sets, values, warnings, and nonclaims byte-for-byte except deterministic generated reseals."
+
+physics_progress_status:
+  status: "no_distance_delta"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Make research-process selectivity observable without confusing process evidence with physics evidence."
+  explanation: "Exact path classification and checkpoint compatibility are project-control operations only and do not discharge a scientific derivation burden."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "source_equivalence_eqsrc"
+  milestone: "source_equivalence_eqsrc"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "No source ontology law, general EqSrc result, metric, operational semantics, coupling, field equation, benchmark, or derivation status changed."
+  downstream_unlocked:
+    - "P12-T05 ordinary-route warning-contract recovery packet"
+  downstream_still_blocked:
+    - "P12-T06 until the warning-contract recovery passes and one future normal P12-T05 checkpoint commits"
+    - "P4-T05 protected ontology-regime decision pending explicit human gate"
+    - "source_ontology_derivation"
+    - "general_eqsrc"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+    - "benchmark_promotion"
+    - "completed_derivation"
+
+selected_next_route:
+  route_id: "v21_p12_t06_attempt_rework_pass_saturation_dashboard"
+  route_label: "ordinary-research-packet"
+  role_family: "project-control-maintainer@0.2.0"
+  worker_skill: "improve-project-system"
+  plan_task_id: "P12-T06"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Make research-process selectivity observable."
+  requires_human_gate: false
+  dependency_independent_after_other_human_gates: true
+  project_system_boundary_authorized_by_plan: true
+  physics_promotion_authorized: false
+  dependency_ready: false
+  execution_ready_after_checkpoint: false
+  executed: false
+  next_action: "Aggregate append-only attempt events by task candidate family role and work kind; distinguish syntax validation proof interpretation and physics failures; report repair and abandonment context; bind source hashes and freshness; suppress private prompt text and credentials."
+  source_handoff: "research_control/handoffs/handoff-0838.yaml"
+  dependency_evidence:
+    - plan_task_id: "P10-T04"
+      task_id: "RT-20260721-006"
+      completion_path: "research_control/tasks/RT-20260721-006/jobs/completions/AJC-AJ-RT-20260721-006-001.yaml"
+      completion_sha256: "9fbd8bbda9b3ffaae441763a5874d7e78a4dfd189a612c4430e95fabb8a8f2d3"
+    - plan_task_id: "P12-T05"
+      task_id: "RT-20260723-005"
+      completion_path: "research_control/tasks/RT-20260723-005/jobs/completions/AJC-AJ-RT-20260723-005-001.yaml"
+      completion_sha256: "b627885b3a2fd5e829d29a9d4b19cb1ae40ca3b06bb949de5acfcb7c9279cd67"
+
+required_recovery:
+  strategy_id: "reconcile_ordinary_route_guard_threshold_warning_validation_contract_v1"
+  route_label: "project-system-recovery"
+  role_family: "validator-engineer@0.2.0"
+  worker_skill: "improve-project-system"
+  work_item_id: "P12-T05"
+  blocker_path: "research_control/tasks/RT-20260723-005/artifacts/validation_blocker_ordinary_route_guard_threshold_warning_contract_v1.yaml"
+  blocker_sha256: "70e2cb4620a2d77ccd35de83611a6ccf5c6c664d92861b5f2195fda304bf0dd5"
+  next_plan_item_after_recovery: "P12-T06"
+  next_plan_item_executed: false
+
+authorization_layers:
+  project_control_change_authorized: true
+  project_control_change_scope: "P12-T05 classifier recovery, exact validation blocker preservation, and blocked handoff only."
+  p12_t06_project_system_packet_authorized: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  proof_authority: false
+  publication_authority: false
+
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  sidecar_path: ""
+  recursive_goal_recovery_required: true
+  route: ""
+  blocker_path: "research_control/tasks/RT-20260723-005/artifacts/validation_blocker_ordinary_route_guard_threshold_warning_contract_v1.yaml"
+  reason: "The exact classifier defect is repaired, but the required P12-T05 test shard exposed a distinct ordinary-route warning-contract incompatibility that the recursive goal must recover before any checkpoint or P12-T06 execution."
+
+handoff_authority_boundary:
+  this_handoff_authorizes: "Director consideration of one fresh bounded P12-T05 ordinary-route warning-contract recovery; P12-T06 remains conditional on a future committed checkpoint."
+  this_handoff_does_not_authorize:
+    - "checkpoint invocation in generation 71"
+    - "falsifying the observed project-system run length or suppressing the threshold-next warning without a deterministic source-backed contract repair"
+    - "weakening the threshold-three hard guard or all-ready-science-blocked evidence exception"
+    - "P12-T06 execution inside RT-20260723-005"
+    - "a second checkpoint invocation or legacy validation"
+    - "wildcard classification or weakening of unknown-path fail-closed behavior"
+    - "attempt repair abandonment validation or PASS counts treated as scientific truth physics evidence falsification or Distance-to-GR progress"
+    - "private prompt credential personal or sensitive-data exposure"
+    - "P4-T05 protected ontology decision without explicit human authority"
+    - "external contact submission publication or outreach"
+    - "canonical ontology source-law scientific-ledger or Distance-to-GR edits"
+    - "physical interpretation ontology adoption general EqSrc proof benchmark promotion publication proof authority completed derivation or global no-go"

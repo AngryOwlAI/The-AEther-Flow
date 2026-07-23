@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260723-003`
-- Latest handoff: `handoff-0836`
-- Current status: `p15_t03_selector_minimum_extension_theorem_manuscript_complete_p12_t05_selected`
+- Active task: `RT-20260723-010`
+- Latest handoff: `handoff-0843`
+- Current status: `p12_t05_handoff_0842_markdown_identity_recovery_pass_checkpoint_ready`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260723-003`
-- Latest research handoff: `handoff-0836`
-- Latest research next action: Run exactly one bounded v21 P12-T05 project-control-maintainer project-system AgentJob to replace misleading volume proxies with denominator-bound durable scientific-quality metrics without treating a score or system success as theorem truth or Distance-to-GR progress.
+- Latest research task: `RT-20260723-010`
+- Latest research handoff: `handoff-0843`
+- Latest research next action: Run the one authorized governed checkpoint for AJ-RT-20260723-010-001. Only after it commits, continue the v21 relay with P12-T06 through one fresh bounded continue-research frame.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p12_t05_durable_scientific_quality_metrics`
+- Route ID: `continue_v21_p12_t06_after_checkpoint_v1`
 - Role family: `project-control-maintainer@0.2.0`
 - Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Reduce Goodhart pressure from packet counts.
+- Milestone burden: Make research-process selectivity observable.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `b144e547d29d51433acf4f466778a63b73ad7b252b9275bed6c795a3a7ac6a11`
-- JSON SHA-256: `841cf9a40b82b0963fa9c937c1e64a1845463f73a63eeed6d75d36daea055257`
+- YAML SHA-256: `d9d1ca7e72d5244c6f8be3f438da9bf4035879e66a0dc7104f64be619b3787f9`
+- JSON SHA-256: `78a1acf12651d229ecede0d896bfa9c358d69ff9b9dce4832ac0fe0a6d4b8505`
 
 ## Authority Warning
 

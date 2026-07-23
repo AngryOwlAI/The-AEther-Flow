@@ -270,6 +270,7 @@ class ResearchControlTests(unittest.TestCase):
         self.assertEqual(dashboard["dashboard_labels"]["truth_ranking"], "none")
         self.assertEqual(dashboard["plan_task_id"], "P8-T04")
         self.assertIn("P12-T04", dashboard["plan_task_ids"])
+        self.assertIn("P12-T05", dashboard["plan_task_ids"])
         self.assertIn("P8-T04", dashboard["plan_task_ids"])
         self.assertEqual(
             len(dashboard["metric_rows"]),
@@ -277,6 +278,17 @@ class ResearchControlTests(unittest.TestCase):
         )
         self.assertGreater(len(dashboard["payload_ratio_metric_rows"]), 0)
         self.assertGreater(len(dashboard["route_orbit_warning_rows"]), 0)
+        self.assertEqual(len(dashboard["durable_quality_metric_rows"]), 8)
+        self.assertFalse(
+            dashboard["claim_boundary"][
+                "raw_volume_is_primary_scientific_quality"
+            ]
+        )
+        self.assertFalse(
+            dashboard["claim_boundary"][
+                "aggregate_scientific_truth_score_created"
+            ]
+        )
         self.assertEqual(
             dashboard["physics_payload_ratio_diagnostics"]["schema_id"],
             "physics_payload_ratio_route_history_metrics_v1",
@@ -316,6 +328,16 @@ class ResearchControlTests(unittest.TestCase):
             self.assertTrue(row["authority_boundary"]["does_not_rank_physics_truth"])
             self.assertTrue(row["authority_boundary"]["not_physics_proof"])
 
+        for row in dashboard["durable_quality_metric_rows"]:
+            self.assertEqual(
+                row["diagnostic_label"],
+                "Durable scientific-quality diagnostic",
+            )
+            self.assertFalse(forbidden_fields.intersection(row))
+            self.assertFalse(
+                row["authority_boundary"]["physics_promotion_authorized"]
+            )
+
         route_warning_ids = {
             row["warning_id"] for row in dashboard["route_orbit_warning_rows"]
         }
@@ -330,6 +352,8 @@ class ResearchControlTests(unittest.TestCase):
         self.assertIn("does not rank physics truth by workflow activity", rendered)
         self.assertIn("Payload-Ratio Diagnostics", rendered)
         self.assertIn("Route-Orbit Warnings", rendered)
+        self.assertIn("Durable Scientific-Quality Diagnostics", rendered)
+        self.assertIn("raw volume is operational context only", rendered)
         self.assertIn("do not establish physics truth", rendered)
 
     def test_support_only_checker_parse_errors_are_tooling_metrics(self) -> None:
@@ -1445,9 +1469,22 @@ class ResearchControlTests(unittest.TestCase):
             status["ordinary_route_guard_policy"]["enforcement"],
             "prospective_hard_failure",
         )
-        self.assertEqual(status["ordinary_route_guard"]["status"], "PASS")
+        ordinary_route_guard = status["ordinary_route_guard"]
+        self.assertIn(ordinary_route_guard["status"], {"PASS", "WARN"})
+        self.assertEqual(ordinary_route_guard["errors"], [])
+        if (
+            ordinary_route_guard["observed_run_length"]
+            == status["ordinary_route_guard_policy"]["warning_at"]
+        ):
+            self.assertEqual(ordinary_route_guard["status"], "WARN")
+            self.assertEqual(
+                ordinary_route_guard["warnings"],
+                ["ordinary_route_guard_threshold_next"],
+            )
+        else:
+            self.assertEqual(ordinary_route_guard["status"], "PASS")
         self.assertEqual(
-            status["ordinary_route_guard"]["selected_plan_task_id"],
+            ordinary_route_guard["selected_plan_task_id"],
             current_handoff["ordinary_route_guard"]["selected_plan_task_id"],
         )
         self.assertIn("dependency_graph_summary", status)

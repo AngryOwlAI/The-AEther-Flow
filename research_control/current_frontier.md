@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260723-003` and `handoff-0836`.
+`RT-20260723-010` and `handoff-0843`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260723-003` |
-| Latest handoff ID | `handoff-0836` |
-| Current status | `p15_t03_selector_minimum_extension_theorem_manuscript_complete_p12_t05_selected` |
+| Active task ID | `RT-20260723-010` |
+| Latest handoff ID | `handoff-0843` |
+| Current status | `p12_t05_handoff_0842_markdown_identity_recovery_pass_checkpoint_ready` |
 | V16 completed | false |
-| Current route family | publication preparation (scientific) |
+| Current route family | benchmark or recovery (project system) |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden is v21 durable scientific quality metrics |
-| Required next authority | One fresh P12-T05 project-system packet may define denominator-bound durable scientific-quality metrics, reporting, calibration, and warning policy without treating metrics, routing, or system validation as theorem truth or physics progress. |
-| Next recommended action | Run exactly one bounded v21 P12-T05 project-control-maintainer project-system AgentJob to replace misleading volume proxies with denominator-bound durable scientific-quality metrics without treating a score or system success as theorem truth or Distance-to-GR progress. |
+| Current burden | none for physics derivation; live control burden is v21 attempt history reporting |
+| Required next authority | After the AJ-RT-20260723-010-001 governed checkpoint commits, one fresh bounded continue-research frame may select P12-T06. Before that commit, only checkpoint validation is authorized. |
+| Next recommended action | Run the one authorized governed checkpoint for AJ-RT-20260723-010-001. Only after it commits, continue the v21 relay with P12-T06 through one fresh bounded continue-research frame. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260723-003` |
-| Latest research handoff ID | `handoff-0836` |
-| Latest research next action | Run exactly one bounded v21 P12-T05 project-control-maintainer project-system AgentJob to replace misleading volume proxies with denominator-bound durable scientific-quality metrics without treating a score or system success as theorem truth or Distance-to-GR progress. |
+| Latest research task ID | `RT-20260723-010` |
+| Latest research handoff ID | `handoff-0843` |
+| Latest research next action | Run the one authorized governed checkpoint for AJ-RT-20260723-010-001. Only after it commits, continue the v21 relay with P12-T06 through one fresh bounded continue-research frame. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260723-003/00_TASK.yaml`.
-- Active task objective: Integrate the general selector classification finite countermodels typed extension lattice minimum-extension theorem and conditional quotient implications into one source-grounded manuscript whose foundations interpretation and novelty language remain exactly scoped.
-- Latest handoff path: `research_control/handoffs/handoff-0836.yaml`.
-- Latest handoff summary: P15-T03 completed one registered proposal-only selector and minimum-extension theorem manuscript with a fixed-locus classification, relation-image distinction, finite countermodels, B8 declaration envelope, finite minimum-extension theorem, conditional quotient guards, eight-source literature boundary, and resolved two-child synthesis. The 103-check task-local validator and two-pass nine-page TeX build pass. General EqSrc, physical gauge, ontology adoption, scientific ledgers, Distance-to-GR, external review, publication, proof authority, and completed derivation remain unchanged.
-- Current route family: publication preparation (scientific).
-- Next recommended action: Run exactly one bounded v21 P12-T05 project-control-maintainer project-system AgentJob to replace misleading volume proxies with denominator-bound durable scientific-quality metrics without treating a score or system success as theorem truth or Distance-to-GR progress.
+- Active task path: `research_control/tasks/RT-20260723-010/00_TASK.yaml`.
+- Active task objective: Change only the case and separator bytes in the Handoff 0842 Markdown heading needed to contain the exact canonical handoff-0842 identity literal, prove every other source and protected recovery byte unchanged, and invoke one normal governed checkpoint before P12-T06.
+- Latest handoff path: `research_control/handoffs/handoff-0843.yaml`.
+- Latest handoff summary: Generation 77 replaced exactly two heading bytes in handoff-0842.md, restored the exact canonical handoff-0842 literal, reconstructed the sealed pre-repair hash, and preserved every other Markdown byte, handoff-0842.yaml, the completed RT-008 parity receipt and role record, and every protected P10 recovery hash. The live routing snapshot and four focused regressions pass. No validator behavior, authority semantics, scientific status, ontology, ledger, protected authority, or P12-T06 execution changed.
+- Current route family: benchmark or recovery (project system).
+- Next recommended action: Run the one authorized governed checkpoint for AJ-RT-20260723-010-001. Only after it commits, continue the v21 relay with P12-T06 through one fresh bounded continue-research frame.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -302,7 +302,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run exactly one bounded v21 P12-T05 project-control-maintainer project-system AgentJob to replace misleading volume proxies with denominator-bound durable scientific-quality metrics without treating a score or system success as theorem truth or Distance-to-GR progress.
+Run the one authorized governed checkpoint for AJ-RT-20260723-010-001. Only after it commits, continue the v21 relay with P12-T06 through one fresh bounded continue-research frame.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -318,11 +318,22 @@ completion or handoff says so.
 
 Layer status summary:
 
-No validation-layer status summary is available.
+| Status | Count | Meaning |
+| --- | --- | --- |
+| `PASS` | 3 | receipt complete |
+| `PENDING` | 4 | open item; evidence must explain why |
 
 Validation layers:
 
-No validation-layer split is recorded in the latest handoff.
+| Validation layer | Status | Meaning | Evidence |
+| --- | --- | --- | --- |
+| `pre_execution` | PASS | receipt complete | Generation 77 was validated, claimed, and consumed exactly once before its one routed worker invocation. |
+| `completion_internal` | PASS | receipt complete | Exact identity, exact byte-replacement count, reconstruction, and every-other-byte preservation are sealed in the task-local receipt. |
+| `post_write` | PASS | receipt complete | The live routing snapshot and all four focused tests pass, and protected recovery hashes remain unchanged. |
+| `post_checkpoint` | PENDING | open item; evidence must explain why | One normal governed checkpoint remains required before P12-T06. |
+| `renderer` | PENDING | open item; evidence must explain why | Task index current frontier compact frontier and memory derivatives remain to be synchronized. |
+| `memory_bootstrap` | PENDING | open item; evidence must explain why | Final tracked memory synchronization and validate-only remain required. |
+| `claim_language_linter` | PENDING | open item; evidence must explain why | Changed-source claim-language validation remains required on the finalized tree. |
 
 Authorization layers:
 
@@ -333,17 +344,15 @@ Authorization layers:
 | `downstream_physics_promotion_authorized` | false (not authorized) | authorizes downstream physics promotion only when true |
 | `benchmark_promotion_authorized` | false (not authorized) | authorizes benchmark promotion only when true |
 | `completed_derivation_authorized` | false (not authorized) | authorizes completed-derivation claim only when true |
-| `p12_t05_project_system_packet_authorized` | False | extension authorization field |
-| `project_control_change_authorized` | False | extension authorization field |
-| `project_control_change_scope` | P15-T03 completion only | extension authorization field |
 | `proof_authority` | False | extension authorization field |
-| `publication_authority` | False | extension authorization field |
+| `publication_authorized` | False | extension authorization field |
+| `push_authorized` | False | extension authorization field |
 
 Legacy compatibility records:
 
-- active task: `RT-20260723-003`;
-- latest handoff: `handoff-0836`;
-- current status: `p15_t03_selector_minimum_extension_theorem_manuscript_complete_p12_t05_selected`;
+- active task: `RT-20260723-010`;
+- latest handoff: `handoff-0843`;
+- current status: `p12_t05_handoff_0842_markdown_identity_recovery_pass_checkpoint_ready`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -353,8 +362,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0836.yaml`
-- `research_control/tasks/RT-20260723-003/00_TASK.yaml`
+- `research_control/handoffs/handoff-0843.yaml`
+- `research_control/tasks/RT-20260723-010/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -370,7 +379,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0836*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0843*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

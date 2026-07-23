@@ -61,7 +61,7 @@
       "status": "PASS"
     },
     {
-      "evidence": "sqlite_view=[{'id': 'sqlite_query_index', 'path': '.local/research_control/project_control_events.sqlite3', 'format': 'sqlite', 'projection_key': 'event_id', 'sort': ['sequence'], 'authority': False, 'deterministic': True, 'activation': 'future_pilot_local_only'}]",
+      "evidence": "sqlite_view=[{'activation': 'future_pilot_local_only', 'authority': False, 'deterministic': True, 'format': 'sqlite', 'id': 'sqlite_query_index', 'path': '.local/research_control/project_control_events.sqlite3', 'projection_key': 'event_id', 'sort': ['sequence']}]",
       "name": "sqlite_is_local_cache",
       "status": "PASS"
     },
@@ -96,7 +96,7 @@
       "status": "PASS"
     },
     {
-      "evidence": "next_route={'dependency_ready_task': 'P10-T06', 'task_name': 'Pilot one event-store slice and prove read compatibility', 'executed_by_this_packet': False, 'also_dependency_ready': ['P10-T07']}",
+      "evidence": "next_route={'also_dependency_ready': ['P10-T07'], 'dependency_ready_task': 'P10-T06', 'executed_by_this_packet': False, 'task_name': 'Pilot one event-store slice and prove read compatibility'}",
       "name": "next_route_is_unexecuted_p10_t06",
       "status": "PASS"
     },
@@ -151,7 +151,7 @@
       "status": "PASS"
     },
     {
-      "evidence": "expected=46289a1b861e350b4d0a0bd27de3a8fbff8c9589de0a019ecd36d3fdd2a59112 actual=46289a1b861e350b4d0a0bd27de3a8fbff8c9589de0a019ecd36d3fdd2a59112",
+      "evidence": "expected=07cd220950e4b85632385da1dcaa932c8a6c48c50b33e2736dd6f181bc9abfd1 actual=07cd220950e4b85632385da1dcaa932c8a6c48c50b33e2736dd6f181bc9abfd1",
       "name": "source_hash::scripts/research_control/report_physics_progress_metrics.py",
       "status": "PASS"
     },
@@ -191,7 +191,7 @@
       "status": "PASS"
     }
   ],
-  "contract_sha256": "cc7d678328f2242cd49a83ce9a3eaa47e30e830d48a8b70a6a29434bb4a6477d",
+  "contract_sha256": "299400cc29ec0b234cf6b8174272e687ca05618e65187136691d1950af2302b4",
   "event_domain_count": 8,
   "failed_check_count": 0,
   "failed_checks": [],

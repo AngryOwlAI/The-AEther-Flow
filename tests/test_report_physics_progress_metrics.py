@@ -314,6 +314,9 @@ class PhysicsProgressMetricsTests(unittest.TestCase):
     def test_markdown_renders_payload_ratio_non_truth_ranking_guard(self) -> None:
         markdown = self.reporter.render_markdown(self.reporter.build_report(self.make_repo()))
 
+        self.assertIn("## Durable Scientific-Quality Diagnostics", markdown)
+        self.assertIn("primary scientific-quality diagnostic surface", markdown)
+        self.assertIn("Raw volume is operational context only", markdown)
         self.assertIn("## Physics-Payload Ratio Diagnostics", markdown)
         self.assertIn("AI-system diagnostics only", markdown)
         self.assertIn("do not rank physics truth", markdown)
@@ -344,6 +347,31 @@ class PhysicsProgressMetricsTests(unittest.TestCase):
         )
         self.assertTrue(
             dashboard["advisory_route_ratio"]["separate_prospective_hard_guard_active"]
+        )
+
+    def test_durable_quality_metrics_are_primary_and_volume_is_context(self) -> None:
+        report = self.reporter.build_report(self.make_repo())
+        quality = report["metrics"]["durable_scientific_quality_metrics"]
+        integration = report["metrics"]["physics_progress_integration_metrics"]
+
+        self.assertEqual(quality["status"], "PASS")
+        self.assertEqual(quality["metric_count"], 8)
+        self.assertFalse(quality["raw_volume_is_primary_quality"])
+        self.assertIsNone(quality["aggregate_metric"])
+        self.assertFalse(integration["primary_scientific_quality_surface"])
+        self.assertEqual(
+            integration["reporting_role"],
+            "raw_volume_operational_context_only",
+        )
+        self.assertTrue(
+            report["authority_boundary"][
+                "durable_scientific_quality_metrics_are_primary_quality_surface"
+            ]
+        )
+        self.assertFalse(
+            report["authority_boundary"][
+                "raw_volume_is_primary_scientific_quality"
+            ]
         )
 
     def test_project_system_detection_prefers_explicit_normalized_scope(self) -> None:

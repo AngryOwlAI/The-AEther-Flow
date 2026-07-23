@@ -1,0 +1,84 @@
+validation_status: "FAIL"
+task_id: "RT-20260723-006"
+task_type: "project_system_p12_t05_ordinary_route_warning_contract_recovery"
+title: "Align the Director-context fixture with advisory ordinary-route warnings"
+task_taxonomy:
+  schema_id: "v21_task_taxonomy_v1"
+  work_kind: "benchmark_or_recovery"
+  milestone: "not_applicable"
+  candidate_family: "p12_t05_ordinary_route_warning_contract_recovery"
+  result_kind: "completed_or_precisely_blocked"
+  authority: "project_control"
+  scope: "project_system"
+status: "blocked"
+created_at: "2026-07-23T12:17:43Z"
+updated_at: "2026-07-23T12:59:07Z"
+closed_at: "2026-07-23T12:59:07Z"
+parent_task_id: "RT-20260723-005"
+parent_handoff_id: "handoff-0838"
+supersedes_active_routing_task_id: "RT-20260723-005"
+current_decision_id: "DDR-20260723-006"
+current_job_id: "AJ-RT-20260723-006-001"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260723-006"
+requires_human_gate: false
+human_authorization_note: "Generation 72 of the immutable user-requested relay routes exactly one improve-project-system frame to reconcile the hash-sealed P12-T05 ordinary-route warning contract and checkpoint the preserved cumulative transaction."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P12"
+  plan_task_id: "P12-T05"
+  recovery_for_plan_task_id: "P12-T05"
+  next_plan_task_id: "P12-T06"
+objective: "Replace the stale Director-context assertion that requires PASS with source-backed acceptance of the exact threshold-next WARN, prove that WARN remains nonblocking while FAIL remains blocking, preserve route history and the threshold-three hard guard, and run one normal governed checkpoint before any P12-T06 execution."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system continuation-contract compatibility only; no derivation milestone advances."
+route_label: "reconcile_ordinary_route_guard_threshold_warning_validation_contract_v1"
+project_system_change_only: true
+dual_budget_category: "system_bearing"
+primary_budget: "project_system"
+scientific_claims_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+claim_boundary_id: "CB-V21-P12-T05-ORDINARY-ROUTE-WARNING-CONTRACT-RECOVERY-001"
+claim_boundary:
+  allowed_scope: "One live Director-context test assertion may accept and verify the policy-defined advisory threshold-next WARN; task-local recovery records and one normal checkpoint may seal the preserved P12-T05 transaction."
+  immutable_predecessor_task: "RT-20260723-005"
+  immutable_predecessor_job: "AJ-RT-20260723-005-001"
+  immutable_predecessor_handoff: "handoff-0838"
+  source_blocker_path: "research_control/tasks/RT-20260723-005/artifacts/validation_blocker_ordinary_route_guard_threshold_warning_contract_v1.yaml"
+  source_blocker_sha256: "70e2cb4620a2d77ccd35de83611a6ccf5c6c664d92861b5f2195fda304bf0dd5"
+  policy_path: "research_control/tasks/RT-20260722-015/artifacts/ordinary_route_guard_policy_v1.md"
+  policy_sha256: "c0c4df98c0020fbb274a4c895e6d5749c2166397e6e419a63c7b6737f2ee3a96"
+  warning_status_is_nonblocking: true
+  fail_status_remains_blocking: true
+  threshold_three_hard_guard_changed: false
+  observed_route_history_changed: false
+  p12_t05_metric_semantics_changed: false
+  p12_t06_executed: false
+  scientific_claims_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+documentation_impact_id: "DI-RT-20260723-006-001"
+completion_id: "AJC-AJ-RT-20260723-006-001"
+output_artifacts:
+  - "tests/test_research_control.py"
+  - "research_control/tasks/RT-20260723-006/artifacts/ordinary_route_warning_contract_recovery_receipt.json"
+  - "research_control/tasks/RT-20260723-006/artifacts/validation_blocker_checkpoint_staged_trailing_blank_line_eof_v1.yaml"
+  - "research_control/tasks/RT-20260723-006/jobs/completions/AJC-AJ-RT-20260723-006-001.yaml"
+  - "research_control/handoffs/handoff-0839.yaml"
+  - "research_control/handoffs/handoff-0839.md"
+closure_status: "ordinary_route_warning_contract_recovery_pass_checkpoint_blocked_staged_eof_recovery_required"
+summary: "The generation-72 Validator Engineer recovery aligned the stale PASS-only assertion with the policy-defined advisory WARN contract and passed its required tests. Its only checkpoint invocation then failed closed on four staged trailing-blank-line-at-EOF findings; the index was restored and nothing was committed."
+next_recommended_action: "Run one fresh bounded improve-project-system recovery to remove exactly the four named P12-T05 EOF blank lines, preserve all other bytes and metric semantics, rerun the required gates, and invoke at most one future normal checkpoint before P12-T06."
+project_improvement_signals:
+  - signal_id: ""
+    signal_type: ""
+    severity: ""
+    evidence: ""
+    evidence_path: ""
+    recommended_skill: ""
+    recommended_role: ""
+    notes: ""
+notes: "The source policy already defines threshold-next as advisory and continue_research.py already blocks only FAIL. The test-contract drift is repaired, but the cumulative checkpoint remains blocked by the exact task-local EOF blocker."

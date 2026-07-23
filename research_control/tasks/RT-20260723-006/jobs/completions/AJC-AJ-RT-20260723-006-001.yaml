@@ -1,0 +1,328 @@
+validation_status: "FAIL"
+job_id: "AJ-RT-20260723-006-001"
+completion_id: "AJC-AJ-RT-20260723-006-001"
+task_id: "RT-20260723-006"
+task_type: "project_system_p12_t05_ordinary_route_warning_contract_recovery"
+decision_id: "DDR-20260723-006"
+role_id: "validator-engineer"
+source_role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260723-006"
+status: "completed"
+final_repository_validation_status: "FAIL_CHECKPOINT_STAGED_GIT_DIFF_CHECK"
+created_at: "2026-07-23T12:17:43Z"
+started_at: "2026-07-23T12:17:43Z"
+completed_at: "2026-07-23T12:59:07Z"
+objective: "Align the live Director-context regression with the policy-defined advisory threshold-next WARN, prove WARN remains nonblocking while FAIL remains blocking, preserve route history and hard-guard semantics, and checkpoint the cumulative P12-T05 transaction before P12-T06."
+completion_summary: "The live Director-context regression now accepts the policy-defined nonblocking PASS or WARN statuses and verifies the exact threshold-next warning only at warning_at. The focused regression, eight ordinary-route guard tests, and required 155-test P12 shard pass. The single normal checkpoint then stopped before commit because final staged git diff checking found one trailing blank line at EOF in each of four preserved P12-T05 files. The index was restored, nothing was committed, and no retry or legacy validation was used."
+objective_result: "ordinary_route_warning_contract_reconciled_checkpoint_blocked_staged_trailing_blank_line_eof"
+work_item_status: "blocked"
+result_disposition: "warning_contract_implemented_checkpoint_not_committed_fresh_recovery_required"
+transaction_status: "blocked_checkpoint_staged_git_diff_recovery_required"
+checkpoint_commit: "none_checkpoint_blocked"
+project_system_change_only: true
+project_system_scope: "One source-backed integration-test contract correction, task-local evidence, standard control records, and one normal cumulative P12-T05 checkpoint."
+scientific_claims_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  generation: 72
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:72"
+  immutable_route_hash: "adf7db122d41aea0e832631252adb16c335ea7e8ba1ba49e09704a142d0c6458"
+  relay_claim_token: "881e034b2156efe01f0d2aed6fe84bd9fdb9228f36a6b32a"
+  route_work_item_id: "P12-T05"
+  worker_skill: "improve-project-system"
+  authorized_worker_invocation_count: 1
+  consumed_worker_invocation_count: 1
+
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P12"
+  plan_task_id: "P12-T05"
+  recovery_for_plan_task_id: "P12-T05"
+  next_plan_task_id: "P12-T06"
+  implementation_status: "warning_contract_recovery_completed_checkpoint_blocked"
+  p12_t05_checkpoint_ready: false
+  p12_t06_dependency_ready_after_checkpoint: false
+  p12_t06_executed: false
+
+recovery_result:
+  schema_id: "ordinary_route_warning_contract_recovery_result_v1"
+  status: "PASS"
+  receipt_path: "research_control/tasks/RT-20260723-006/artifacts/ordinary_route_warning_contract_recovery_receipt.json"
+  receipt_sha256: "f8b9268d83c8f7eb3453acac4f77a55889a7b7377f2dea645bdc144b69babd6e"
+  source_blocker_path: "research_control/tasks/RT-20260723-005/artifacts/validation_blocker_ordinary_route_guard_threshold_warning_contract_v1.yaml"
+  source_blocker_sha256: "70e2cb4620a2d77ccd35de83611a6ccf5c6c664d92861b5f2195fda304bf0dd5"
+  policy_path: "research_control/tasks/RT-20260722-015/artifacts/ordinary_route_guard_policy_v1.md"
+  policy_sha256: "c0c4df98c0020fbb274a4c895e6d5749c2166397e6e419a63c7b6737f2ee3a96"
+  policy_threshold: 3
+  policy_warning_at: 2
+  warning_status_nonblocking: true
+  fail_status_blocking: true
+  threshold_three_hard_guard_changed: false
+  all_ready_science_exception_changed: false
+  route_history_changed: false
+  warning_suppressed: false
+  broad_test_skip_added: false
+  p12_t05_metric_semantics_changed: false
+  p12_t06_executed: false
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  observed_durable_outputs:
+    physics: []
+    project_system:
+      - "tests/test_research_control.py"
+      - "research_control/tasks/RT-20260723-006/artifacts/ordinary_route_warning_contract_recovery_receipt.json"
+  accepted_criteria:
+    physics: []
+    project_system:
+      - "the live Director-context regression accepts and verifies the exact threshold-next WARN"
+      - "the continuation boundary remains ready under WARN and continues to block FAIL"
+      - "the threshold-three hard guard and all-ready-science exception remain unchanged"
+      - "the required 155-test P12 shard passes"
+      - "one normal governed checkpoint commits without legacy validation"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+outputs_created:
+  - "research_control/tasks/RT-20260723-006/00_TASK.yaml"
+  - "research_control/tasks/RT-20260723-006/DDR-20260723-006.md"
+  - "research_control/tasks/RT-20260723-006/roles/validator-engineer@0.2.0--RT-20260723-006.yaml"
+  - "research_control/tasks/RT-20260723-006/jobs/AJ-RT-20260723-006-001.yaml"
+  - "research_control/tasks/RT-20260723-006/artifacts/ordinary_route_warning_contract_recovery_receipt.json"
+  - "research_control/tasks/RT-20260723-006/artifacts/validation_blocker_checkpoint_staged_trailing_blank_line_eof_v1.yaml"
+  - "research_control/tasks/RT-20260723-006/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260723-006/jobs/completions/AJC-AJ-RT-20260723-006-001.yaml"
+  - "research_control/handoffs/handoff-0839.yaml"
+  - "research_control/handoffs/handoff-0839.md"
+outputs_updated:
+  - "tests/test_research_control.py"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "policy-generated memory and wiki derivatives"
+
+physics_progress_status:
+  status: "no_distance_delta"
+  target_derivation_milestone: "none"
+  milestone_burden: "Project-system continuation-contract compatibility only; no derivation milestone advances."
+  explanation: "A test-contract correction and checkpoint eligibility provide no physics evidence and discharge no scientific derivation burden."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "source_equivalence_eqsrc"
+  milestone: "source_equivalence_eqsrc"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "The recovery changes no scientific evidence, source law, metric, coupling, field equation, benchmark, or derivation status."
+  downstream_unlocked:
+    - "P12-T06 project-system execution after one normal checkpoint and a separately claimed packet"
+  downstream_still_blocked:
+    - "P4-T05 protected ontology-regime decision pending explicit human gate"
+    - "source_ontology_derivation"
+    - "general_eqsrc"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+    - "benchmark_promotion"
+    - "completed_derivation"
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 72 repository identity, lease parity, immutable route, exact 75-path predecessor manifest, and one-time consumption were verified before the worker invocation."
+      - "The registered ordinary-route policy, runtime evaluator, continuation boundary, source blocker, and failing integration assertion were inspected."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The test accepts PASS or WARN, requires the exact warning only at warning_at, verifies empty errors, and preserves continuation readiness."
+      - "The ordinary-route evaluator and continuation runtime hashes are unchanged."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "The focused Director-context regression passes one of one."
+      - "The ordinary-route guard suite passes eight of eight."
+      - "The required P12 shard passes 155 of 155."
+      - "Project-improvement signal validation passes."
+  post_checkpoint:
+    status: "FAIL"
+    evidence:
+      - "The one normal governed checkpoint stopped at final staged git diff checking on four trailing blank lines at EOF."
+      - "The entry index was restored, nothing was committed, no retry was attempted, and legacy validation was not used."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "The current and compact frontier renderers completed before closure records."
+  memory_bootstrap:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "The project memory bootstrap and validate-only gate pass with nine known local-cache warning findings."
+  claim_language_linter:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "Changed-surface claim-language validation passes with historical and calibration warnings only and no hard failures."
+
+authorization_layers:
+  project_control_change_authorized: true
+  project_control_change_scope: "Exact generation-72 advisory-WARN contract recovery and one normal cumulative P12-T05 checkpoint only."
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  proof_authority: false
+  publication_authority: false
+
+forbidden_conclusion_summary:
+  system_success_is_physics_progress: false
+  system_success_is_distance_to_gr_progress: false
+  validator_pass_is_physics_evidence: false
+  route_selection_is_physics_evidence: false
+  theorem_truth_inferred: false
+  ontology_modified: false
+  source_law_adopted: false
+  physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  proof_authority: false
+  publication_authority: false
+  completed_derivation_authorized: false
+  summary: "The test correction and future checkpoint establish only project-control contract consistency. They do not establish scientific truth, physics evidence, ontology, source law, effective metric, coupling, field equations, benchmark status, or completed derivation."
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: "999"
+    relationship_row_count: "4946"
+    semantic_row_count: "999"
+    vault_row_count: "999"
+    local_cache_only_warning_count: "9"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \\\"ordinary route guard threshold warning\\\" --limit 10 --json"
+      query_type: "search"
+      query_text: "ordinary route guard threshold warning"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-TASKS-RT-20260722-015-ORDINARY-ROUTE-GUARD-POLICY-V1"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-TASKS-RT-20260722-015-ORDINARY-ROUTE-GUARD-POLICY-V1 --json"
+      query_type: "lookup"
+      query_text: "MD-RESEARCH-CONTROL-TASKS-RT-20260722-015-ORDINARY-ROUTE-GUARD-POLICY-V1"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-TASKS-RT-20260722-015-ORDINARY-ROUTE-GUARD-POLICY-V1"
+  canonical_inspections:
+    - object_id: "MD-RESEARCH-CONTROL-TASKS-RT-20260722-015-ORDINARY-ROUTE-GUARD-POLICY-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260722-015/artifacts/ordinary_route_guard_policy_v1.md"
+      source_hash: "c0c4df98c0020fbb274a4c895e6d5749c2166397e6e419a63c7b6737f2ee3a96"
+  authority_note: "The registered ordinary-route policy and tracked blocker are canonical project-control authority; Obsidian, semantic, SQLite, and .local retrieval outputs are not authority."
+
+command_results:
+  - command: ".venv/bin/python -m unittest -v tests.test_research_control.ResearchControlTests.test_continue_research_reports_director_context_packet"
+    status: "PASS_1_OF_1"
+  - command: ".venv/bin/python -m unittest -v tests.test_ordinary_route_guard"
+    status: "PASS_8_OF_8"
+  - command: ".venv/bin/python -m unittest tests.test_scientific_quality_metrics tests.test_report_physics_progress_metrics tests.test_research_control"
+    status: "PASS_155_OF_155"
+  - command: ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+    status: "PASS_ZERO_BLOCKED"
+  - command: ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json"
+    status: "PASS"
+  - command: ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted"
+    status: "PASS"
+  - command: ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260723-006-001"
+    status: "FAIL_STAGED_GIT_DIFF_CHECK_4_FINDINGS_INDEX_RESTORED_NO_COMMIT"
+
+validation_blocker:
+  blocker_path: "research_control/tasks/RT-20260723-006/artifacts/validation_blocker_checkpoint_staged_trailing_blank_line_eof_v1.yaml"
+  blocker_sha256: "804492d85e989f83ab4886265f66fde117ed0f34b2e067696bb9641d82adb523"
+  failed_gate: "git_diff_check"
+  failed_command: "git diff --cached --check"
+  finding_class: "new_blank_line_at_eof"
+  finding_count: 4
+  checkpoint_invocation_count: 1
+  checkpoint_staged_after_failure: false
+  checkpoint_committed: false
+  entry_index_restored: true
+  legacy_validation_used: false
+  preservation_reason: "The authorized checkpoint invocation is consumed. Correcting the four preserved P12-T05 EOF findings and retrying the checkpoint requires a fresh governed recovery generation."
+
+required_recovery:
+  strategy_id: "normalize_p12_t05_trailing_blank_line_eof_for_checkpoint_v1"
+  route_label: "project-system-recovery"
+  role_family: "process-integrity-auditor@0.1.0"
+  worker_skill: "improve-project-system"
+  plan_task_id: "P12-T05"
+  target_derivation_milestone: "none"
+  milestone_burden: "Remove exactly four final blank lines without changing P12-T05 semantics, then revalidate and invoke one future normal checkpoint."
+  requires_human_gate: false
+  project_system_boundary_authorized_by_plan: false
+  physics_promotion_authorized: false
+  dependency_ready_after_checkpoint: false
+  executed: false
+
+selected_next_route:
+  route_id: "v21_p12_t06_attempt_rework_pass_saturation_dashboard"
+  route_label: "ordinary-research-packet"
+  role_family: "project-control-maintainer@0.2.0"
+  worker_skill: "improve-project-system"
+  plan_task_id: "P12-T06"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Make research-process selectivity observable."
+  requires_human_gate: false
+  dependency_independent_after_other_human_gates: true
+  project_system_boundary_authorized_by_plan: true
+  physics_promotion_authorized: false
+  dependency_ready_after_checkpoint: false
+  execution_ready_after_checkpoint: false
+  executed: false
+  next_action: "Aggregate append-only attempt events by task, candidate family, role, and work kind; distinguish syntax, validation, proof, interpretation, and physics failures; report repair and abandonment context; bind source hashes and freshness; suppress private prompt text and credentials."
+
+project_improvement_signals: []
+notes: "The bounded worker completed the policy-consistent test repair, but its only checkpoint invocation failed closed on four staged EOF blank-line findings. A fresh P12-T05 recovery is required before P12-T06."

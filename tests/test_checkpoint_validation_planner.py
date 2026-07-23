@@ -11,6 +11,69 @@ from unittest import mock
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 SCRIPT_PATH = REPO_ROOT / "scripts/research_control/checkpoint_research_transaction.py"
+P12_T05_DIRTY_MANIFEST_PATHS = (
+    "FOLDER_MAP.md",
+    "output/ai_methodology_metrics_dashboard.json",
+    "output/ai_methodology_metrics_dashboard.md",
+    "output/compact_current_frontier_v16.json",
+    "output/compact_current_frontier_v16.yaml",
+    "output/physics_progress_metrics.json",
+    "output/physics_progress_metrics.md",
+    "registries/AGENT_JOB_REGISTRY.csv",
+    "registries/CLAIM_BOUNDARY_REGISTRY.csv",
+    "registries/CONTENT_SEMANTIC_REGISTRY.csv",
+    "registries/CONTENT_SEMANTIC_REGISTRY.meta.json",
+    "registries/DIRECTOR_DECISION_REGISTRY.csv",
+    "registries/FILE_OBJECT_REGISTRY.csv",
+    "registries/FILE_OBJECT_REGISTRY.meta.json",
+    "registries/MARKDOWN_SOURCE_REGISTRY.csv",
+    "registries/OBJECT_RELATIONSHIP_REGISTRY.csv",
+    "registries/OBJECT_RELATIONSHIP_REGISTRY.meta.json",
+    "registries/OBSIDIAN_VAULT_REGISTRY.csv",
+    "registries/OBSIDIAN_VAULT_REGISTRY.meta.json",
+    "registries/RESEARCH_TASK_REGISTRY.csv",
+    "registries/ROLE_EXECUTION_REGISTRY.csv",
+    "registries/WIKI_ARTIFACT_REGISTRY.csv",
+    "registries/WIKI_ARTIFACT_REGISTRY.meta.json",
+    "research_control/current_frontier.md",
+    "research_control/handoffs/handoff-0837.md",
+    "research_control/handoffs/handoff-0837.yaml",
+    "research_control/program_state.yaml",
+    "research_control/tasks/RT-20260723-004/00_TASK.yaml",
+    "research_control/tasks/RT-20260723-004/DDR-20260723-004.md",
+    "research_control/tasks/RT-20260723-004/artifacts/fixtures/scientific_quality_metric_cases.json",
+    "research_control/tasks/RT-20260723-004/artifacts/scientific_quality_calibration_warning_policy_v1.md",
+    "research_control/tasks/RT-20260723-004/artifacts/scientific_quality_compact_receipt.json",
+    "research_control/tasks/RT-20260723-004/artifacts/scientific_quality_metric_taxonomy_v1.md",
+    "research_control/tasks/RT-20260723-004/artifacts/scientific_quality_validation_report.json",
+    "research_control/tasks/RT-20260723-004/artifacts/validate_scientific_quality_metrics.py",
+    "research_control/tasks/RT-20260723-004/artifacts/validation_blocker_checkpoint_planner_unknown_scientific_quality_paths_v1.yaml",
+    "research_control/tasks/RT-20260723-004/documentation_impact.yaml",
+    "research_control/tasks/RT-20260723-004/jobs/AJ-RT-20260723-004-001.yaml",
+    "research_control/tasks/RT-20260723-004/jobs/completions/AJC-AJ-RT-20260723-004-001.yaml",
+    "research_control/tasks/RT-20260723-004/roles/project-control-maintainer@0.2.0--RT-20260723-004.yaml",
+    "research_control/tasks/TASK_INDEX.csv",
+    "research_control/tasks/TASK_INDEX.md",
+    "scripts/research_control/render_ai_methodology_metrics_dashboard.py",
+    "scripts/research_control/report_physics_progress_metrics.py",
+    "scripts/research_control/scientific_quality_metrics.py",
+    "tests/test_report_physics_progress_metrics.py",
+    "tests/test_research_control.py",
+    "tests/test_scientific_quality_metrics.py",
+    "wiki/indexes/ai_methodology_metrics_dashboard.md",
+    "wiki/indexes/by-authority-status.md",
+    "wiki/indexes/by-format.md",
+    "wiki/indexes/by-owner-skill.md",
+    "wiki/indexes/compact_current_frontier_v16.md",
+    "wiki/indexes/documentation-by-authority-status.md",
+    "wiki/indexes/documentation-by-format.md",
+    "wiki/indexes/documentation-by-owner-skill.md",
+    "wiki/indexes/research_control_task_index.md",
+    "wiki/markdown/md-research-control-current-frontier.md",
+    "wiki/markdown/md-research-control-task-index.md",
+    "wiki/markdown/md-research-control-tasks-rt-20260723-004-scientific-quality-calibration-warning-policy-v1.md",
+    "wiki/markdown/md-research-control-tasks-rt-20260723-004-scientific-quality-metric-taxonomy-v1.md",
+)
 
 
 def load_checkpoint_module():
@@ -133,6 +196,19 @@ class CheckpointPlannerIntegrationTests(unittest.TestCase):
             plan.classification["path_family_tags"],
         )
         self.assertIn("route_signature_diagnostic", plan.selected_gate_ids)
+
+    def test_p12_t05_dirty_manifest_has_safe_shadow_plan(self) -> None:
+        self.assertEqual(len(P12_T05_DIRTY_MANIFEST_PATHS), 61)
+        plan = self.checkpoint.plan_checkpoint_validation(
+            P12_T05_DIRTY_MANIFEST_PATHS
+        )
+
+        self.assertNotIn(
+            "unknown_governed_path",
+            plan.classification["path_family_tags"],
+        )
+        self.assertIn("checkpoint_transaction", plan.selected_gate_ids)
+        self.assertTrue(plan.generator_gate_ids)
 
     def test_planning_expands_git_collapsed_untracked_directory(self) -> None:
         command = [
