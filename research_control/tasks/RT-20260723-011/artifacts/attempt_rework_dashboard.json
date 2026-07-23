@@ -1,0 +1,410 @@
+{
+  "schema_id": "v21_attempt_rework_dashboard_v1",
+  "dashboard_id": "V21-ATTEMPT-REWORK-DASHBOARD-001",
+  "task_id": "RT-20260723-011",
+  "plan_task_id": "P12-T06",
+  "status": "draft/control",
+  "source_cutoff_at": "2026-07-22T03:17:26Z",
+  "bounded_scope": {
+    "ledger_id": "V21-RESEARCH-ATTEMPT-LEDGER-001",
+    "ledger_revision": 1,
+    "event_count": 8,
+    "finalized_event_count": 8,
+    "represented_task_count": 7,
+    "historical_completeness_claimed": false,
+    "summary_text_used_for_classification": false,
+    "raw_private_text_projected": false,
+    "legacy_work_kind_mapping_basis": "exact task_type allowlist"
+  },
+  "source_bindings": [
+    {
+      "path": "research_control/tasks/RT-20260712-005/00_TASK.yaml",
+      "sha256": "dc4217abd98d8016adb56ee69421009aa7a47f3ef73f38321f80bdb7163f70e2"
+    },
+    {
+      "path": "research_control/tasks/RT-20260712-007/00_TASK.yaml",
+      "sha256": "e30c59488ed3204c42f6d0f19d6cb8abf5556be45cbb0bc84bdde4c04f07a615"
+    },
+    {
+      "path": "research_control/tasks/RT-20260720-001/00_TASK.yaml",
+      "sha256": "c0a3e2e6d5f670fa7ae3fd2dd6044fdf3d46cab21dd7d696d04f101ba81a38d1"
+    },
+    {
+      "path": "research_control/tasks/RT-20260720-002/00_TASK.yaml",
+      "sha256": "1b671389986d28de86aff7547dfb100e3fb0f70502eb396180159a39d8cea40b"
+    },
+    {
+      "path": "research_control/tasks/RT-20260720-003/00_TASK.yaml",
+      "sha256": "692586b20ac93fe3f644409eb9e39f9b5eaacaedb486d5860c4cf257183fd4e5"
+    },
+    {
+      "path": "research_control/tasks/RT-20260720-004/00_TASK.yaml",
+      "sha256": "f94bff1d0b283c059e3fa520663a503a547eec45aeb63aa5f01445d16fc2900f"
+    },
+    {
+      "path": "research_control/tasks/RT-20260720-009/00_TASK.yaml",
+      "sha256": "99195b60a5bacef4b3867deb5ae99aa7d868b73e851fb4230a43dfd4601a82be"
+    },
+    {
+      "path": "research_control/tasks/RT-20260720-009/jobs/AJ-RT-20260720-009-001.yaml",
+      "sha256": "3417687bcbf2245e0bcb31db305fb8cfa0ff4d3f447beb4eb81c5e87a6d7e6f2"
+    },
+    {
+      "path": "research_control/tasks/RT-20260721-005/artifacts/v21_candidate_lineage_historical_seed.json",
+      "sha256": "8cf49a04b90d02f8439b54e138257cc5c56b2a72ba2b26c43c5b1b9a5dba78a0"
+    },
+    {
+      "path": "research_control/tasks/RT-20260721-006/artifacts/v21_attempt_event_schema.md",
+      "sha256": "92e91a4d89ee26a85d011fc1199feecf3fb9dc472337efb5f4a1d5c30b823202"
+    },
+    {
+      "path": "research_control/tasks/RT-20260721-006/artifacts/v21_attempt_history_redaction_policy.md",
+      "sha256": "40ec1d912b3771e564208ef1980d8f6fd5a39dbade3a986b38057d38c448197c"
+    },
+    {
+      "path": "research_control/tasks/RT-20260721-006/artifacts/v21_research_attempt_ledger.json",
+      "sha256": "f32e7d272d3d99a339a2cfd81e56b1d44e51e1449b2e34e9dd111161397c1ba2"
+    }
+  ],
+  "headline_counts": {
+    "observed_attempt_start_count": 1,
+    "validation_catch_count": 1,
+    "audit_objection_count": 1,
+    "repair_event_count": 2,
+    "explicit_abandoned_event_count": 0,
+    "completed_event_count": 2,
+    "superseded_event_count": 1
+  },
+  "failure_categories": {
+    "classification_basis": "typed event_type, evidence_domain, and physics_result fields only",
+    "syntax": 0,
+    "validation": 1,
+    "proof": 0,
+    "interpretation": 1,
+    "physics": 0,
+    "authority_note": "Counts describe bounded process or review records and do not constitute physics refutation, proof, or promotion."
+  },
+  "repair_metrics": {
+    "repair_event_share": {
+      "status": "measured",
+      "numerator": 2,
+      "denominator": 8,
+      "value": 0.25,
+      "interpretation": "operational event mix only"
+    },
+    "repair_events_per_recorded_issue": {
+      "status": "measured",
+      "numerator": 2,
+      "denominator": 2,
+      "value": 1.0,
+      "interpretation": "count ratio only; it does not assert one-to-one causal closure"
+    },
+    "median_repairs_per_represented_task": 0,
+    "median_repairs_per_task_with_repair": 1.0
+  },
+  "abandonment_metric": {
+    "status": "not_measured",
+    "numerator": 0,
+    "denominator": null,
+    "value": null,
+    "reason": "The ledger records one explicit bounded absence but does not define a complete closed-attempt population; zero observed abandoned events must not be overread as a zero abandonment rate.",
+    "explicit_absence_ids": [
+      "ABS-V21-ATTEMPT-ABANDONED-001"
+    ]
+  },
+  "pass_saturation_context": {
+    "status": "measured",
+    "pass_like_definition": "event disposition equals completed",
+    "numerator": 4,
+    "denominator": 8,
+    "value": 0.5,
+    "completed_event_type_share": {
+      "numerator": 2,
+      "denominator": 8,
+      "value": 0.25
+    },
+    "interpretation": "Operational saturation context only. PASS-like event share is not scientific success, theorem truth, or Distance-to-GR progress."
+  },
+  "final_dispositions": {
+    "active": 1,
+    "blocked": 1,
+    "completed": 4,
+    "finding_recorded": 1,
+    "superseded": 1
+  },
+  "aggregations": {
+    "by_task": [
+      {
+        "task_id": "RT-20260712-005",
+        "event_count": 1,
+        "attempt_started_count": 0,
+        "validation_catch_count": 0,
+        "audit_objection_count": 0,
+        "repair_count": 0,
+        "completed_event_count": 0,
+        "failure_counts": {
+          "syntax": 0,
+          "validation": 0,
+          "proof": 0,
+          "interpretation": 0,
+          "physics": 0
+        }
+      },
+      {
+        "task_id": "RT-20260712-007",
+        "event_count": 1,
+        "attempt_started_count": 0,
+        "validation_catch_count": 0,
+        "audit_objection_count": 0,
+        "repair_count": 0,
+        "completed_event_count": 1,
+        "failure_counts": {
+          "syntax": 0,
+          "validation": 0,
+          "proof": 0,
+          "interpretation": 0,
+          "physics": 0
+        }
+      },
+      {
+        "task_id": "RT-20260720-001",
+        "event_count": 2,
+        "attempt_started_count": 1,
+        "validation_catch_count": 1,
+        "audit_objection_count": 0,
+        "repair_count": 0,
+        "completed_event_count": 0,
+        "failure_counts": {
+          "syntax": 0,
+          "validation": 1,
+          "proof": 0,
+          "interpretation": 0,
+          "physics": 0
+        }
+      },
+      {
+        "task_id": "RT-20260720-002",
+        "event_count": 1,
+        "attempt_started_count": 0,
+        "validation_catch_count": 0,
+        "audit_objection_count": 0,
+        "repair_count": 1,
+        "completed_event_count": 0,
+        "failure_counts": {
+          "syntax": 0,
+          "validation": 0,
+          "proof": 0,
+          "interpretation": 0,
+          "physics": 0
+        }
+      },
+      {
+        "task_id": "RT-20260720-003",
+        "event_count": 1,
+        "attempt_started_count": 0,
+        "validation_catch_count": 0,
+        "audit_objection_count": 0,
+        "repair_count": 0,
+        "completed_event_count": 1,
+        "failure_counts": {
+          "syntax": 0,
+          "validation": 0,
+          "proof": 0,
+          "interpretation": 0,
+          "physics": 0
+        }
+      },
+      {
+        "task_id": "RT-20260720-004",
+        "event_count": 1,
+        "attempt_started_count": 0,
+        "validation_catch_count": 0,
+        "audit_objection_count": 0,
+        "repair_count": 1,
+        "completed_event_count": 0,
+        "failure_counts": {
+          "syntax": 0,
+          "validation": 0,
+          "proof": 0,
+          "interpretation": 0,
+          "physics": 0
+        }
+      },
+      {
+        "task_id": "RT-20260720-009",
+        "event_count": 1,
+        "attempt_started_count": 0,
+        "validation_catch_count": 0,
+        "audit_objection_count": 1,
+        "repair_count": 0,
+        "completed_event_count": 0,
+        "failure_counts": {
+          "syntax": 0,
+          "validation": 0,
+          "proof": 0,
+          "interpretation": 1,
+          "physics": 0
+        }
+      }
+    ],
+    "by_role": [
+      {
+        "role_id": "project-control-maintainer",
+        "event_count": 6,
+        "attempt_started_count": 1,
+        "validation_catch_count": 1,
+        "audit_objection_count": 0,
+        "repair_count": 1,
+        "completed_event_count": 2,
+        "failure_counts": {
+          "syntax": 0,
+          "validation": 1,
+          "proof": 0,
+          "interpretation": 0,
+          "physics": 0
+        }
+      },
+      {
+        "role_id": "smuggling-auditor",
+        "event_count": 1,
+        "attempt_started_count": 0,
+        "validation_catch_count": 0,
+        "audit_objection_count": 1,
+        "repair_count": 0,
+        "completed_event_count": 0,
+        "failure_counts": {
+          "syntax": 0,
+          "validation": 0,
+          "proof": 0,
+          "interpretation": 1,
+          "physics": 0
+        }
+      },
+      {
+        "role_id": "validator-engineer",
+        "event_count": 1,
+        "attempt_started_count": 0,
+        "validation_catch_count": 0,
+        "audit_objection_count": 0,
+        "repair_count": 1,
+        "completed_event_count": 0,
+        "failure_counts": {
+          "syntax": 0,
+          "validation": 0,
+          "proof": 0,
+          "interpretation": 0,
+          "physics": 0
+        }
+      }
+    ],
+    "by_work_kind": [
+      {
+        "work_kind_id": "audit_or_refutation",
+        "event_count": 1,
+        "attempt_started_count": 0,
+        "validation_catch_count": 0,
+        "audit_objection_count": 1,
+        "repair_count": 0,
+        "completed_event_count": 0,
+        "failure_counts": {
+          "syntax": 0,
+          "validation": 0,
+          "proof": 0,
+          "interpretation": 1,
+          "physics": 0
+        }
+      },
+      {
+        "work_kind_id": "construction_or_implementation",
+        "event_count": 2,
+        "attempt_started_count": 0,
+        "validation_catch_count": 0,
+        "audit_objection_count": 0,
+        "repair_count": 2,
+        "completed_event_count": 0,
+        "failure_counts": {
+          "syntax": 0,
+          "validation": 0,
+          "proof": 0,
+          "interpretation": 0,
+          "physics": 0
+        }
+      },
+      {
+        "work_kind_id": "integration_or_selection",
+        "event_count": 5,
+        "attempt_started_count": 1,
+        "validation_catch_count": 1,
+        "audit_objection_count": 0,
+        "repair_count": 0,
+        "completed_event_count": 2,
+        "failure_counts": {
+          "syntax": 0,
+          "validation": 1,
+          "proof": 0,
+          "interpretation": 0,
+          "physics": 0
+        }
+      }
+    ],
+    "by_candidate_family": [
+      {
+        "candidate_family_id": "EQSRC-CANONICAL-CHOICE-GRADED-ORBIT-ROOT",
+        "event_count": 1,
+        "attempt_started_count": 0,
+        "validation_catch_count": 0,
+        "audit_objection_count": 1,
+        "repair_count": 0,
+        "completed_event_count": 0,
+        "failure_counts": {
+          "syntax": 0,
+          "validation": 0,
+          "proof": 0,
+          "interpretation": 1,
+          "physics": 0
+        }
+      },
+      {
+        "candidate_family_id": "not_applicable",
+        "event_count": 7,
+        "attempt_started_count": 1,
+        "validation_catch_count": 1,
+        "audit_objection_count": 0,
+        "repair_count": 2,
+        "completed_event_count": 2,
+        "failure_counts": {
+          "syntax": 0,
+          "validation": 1,
+          "proof": 0,
+          "interpretation": 0,
+          "physics": 0
+        }
+      }
+    ]
+  },
+  "privacy": {
+    "projection_allowlist": [
+      "event identifiers",
+      "task identifiers",
+      "role identifiers",
+      "work-kind identifiers",
+      "candidate-family identifiers",
+      "typed counts",
+      "source paths and SHA-256 hashes"
+    ],
+    "summary_text_included": false,
+    "prompt_text_included": false,
+    "credential_material_included": false
+  },
+  "authority_boundary": {
+    "process_failures_are_physics_refutations": false,
+    "validator_pass_is_proof": false,
+    "scientific_claims_changed": false,
+    "distance_to_gr_changed": false,
+    "candidate_adoption_authorized": false,
+    "ontology_edit_authorized": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "publication_authority": false
+  }
+}

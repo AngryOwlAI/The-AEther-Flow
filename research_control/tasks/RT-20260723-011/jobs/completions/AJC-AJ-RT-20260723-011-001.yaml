@@ -1,0 +1,433 @@
+validation_status: "FAIL"
+job_id: "AJ-RT-20260723-011-001"
+completion_id: "AJC-AJ-RT-20260723-011-001"
+task_id: "RT-20260723-011"
+task_type: "v21_attempt_rework_pass_saturation_dashboard"
+decision_id: "DDR-20260723-011"
+role_id: "project-control-maintainer"
+source_role_id: "project-control-maintainer"
+role_version: "0.2.0"
+execution_role_ref: "project-control-maintainer@0.2.0--RT-20260723-011"
+status: "completed"
+final_repository_validation_status: "FAIL_CHECKPOINT_RESEARCH_CONTROL_CONTRACT_PARITY"
+created_at: "2026-07-23T18:31:14Z"
+started_at: "2026-07-23T18:31:14Z"
+completed_at: "2026-07-23T18:58:05Z"
+objective: "Implement and validate only v21 P12-T06 as a deterministic privacy-bounded content-addressed dashboard over the sealed P10-T04 attempt ledger."
+completion_summary: "The P12-T06 payload renders all eight finalized events in sealed ledger V21-RESEARCH-ATTEMPT-LEDGER-001 across seven tasks, three roles, three work kinds, and the one observed immutable candidate family. Its machine and Markdown views, typed failure separation, not_measured abandonment, operational-only PASS-like share, privacy rejection, stale-data rejection, and all six focused tests pass. The single normal checkpoint then failed closed: staged research-control validation recorded sixteen exact schema, receipt, role-registry, ordinary-route-guard, active-state, and frontier-parity errors. It restored the index and committed nothing. No process count is interpreted as physics refutation, scientific success, proof, ontology evidence, or Distance-to-GR progress."
+objective_result: "p12_t06_dashboard_payload_pass_checkpoint_blocked_research_control_contract_parity"
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 79
+  passes_consumed: 75
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:79"
+  handoff_token: "643548f8d296fa6bc8dbfe60cc9a63dbb19dc4ec6860c6a2"
+  relay_claim_token: "afd28e14f51509285d136992dc3935947b1e86396dedb923"
+  immutable_route_hash: "f3fede20234d30e71b8ddca25d413f3e2f7a43977964a39d4521c75348f217aa"
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+
+transaction_status: "completed_blocked_checkpoint"
+result_disposition: "p12_t06_payload_complete_checkpoint_failed_closed_recovery_required"
+work_item_status: "implemented_but_checkpoint_blocked"
+plan_task_id: "P12-T06"
+recommendation_ids:
+  - "V21-R42"
+  - "V21-R53"
+  - "V21-R69"
+recommendation_coverage:
+  - recommendation_id: "V21-R42"
+    coverage: "Direct implementation: durable failed-attempt and rework visibility from the sealed append-only ledger."
+  - recommendation_id: "V21-R53"
+    coverage: "Direct implementation: explicit denominators not_measured semantics and PASS-saturation context resist Goodhart overread."
+  - recommendation_id: "V21-R69"
+    coverage: "Direct implementation: content-addressed reproducibility privacy and operational evidence boundaries."
+checkpoint_commit: "none"
+checkpoint_invocation_count: 1
+checkpoint_staged: false
+legacy_validation_used: false
+project_system_change_only: true
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+
+checkpoint_blocker:
+  path: "research_control/tasks/RT-20260723-011/artifacts/validation_blocker_checkpoint_research_control_contract_parity_v1.yaml"
+  sha256: "393d98327e7667cb91a670cfa8cf469f05beb327afdb8be063943ea555b039e7"
+  failed_gate_id: "research_control_diff"
+  failed_gate_error_count: 16
+  failed_staged_tree: "0d3355e8c5227d3bcca994581eb325e0ba47656e"
+  checkpoint_child_receipt_sha256: "eb9a1deaa2623ffe11b1cfde343591a32ef435153218d699ca170aa53eeeddd0"
+  index_restored: true
+  commit_created: false
+  retry_authorized: false
+
+dashboard_result:
+  schema_id: "v21_attempt_rework_dashboard_v1"
+  dashboard_id: "V21-ATTEMPT-REWORK-DASHBOARD-001"
+  source_ledger_id: "V21-RESEARCH-ATTEMPT-LEDGER-001"
+  source_ledger_revision: 1
+  source_ledger_sha256: "f32e7d272d3d99a339a2cfd81e56b1d44e51e1449b2e34e9dd111161397c1ba2"
+  event_count: 8
+  finalized_event_count: 8
+  represented_task_count: 7
+  observed_attempt_start_count: 1
+  validation_catch_count: 1
+  audit_objection_count: 1
+  repair_event_count: 2
+  abandoned_event_count: 0
+  abandonment_status: "not_measured"
+  abandonment_denominator: "not_available"
+  median_repairs_per_represented_task: 0.0
+  median_repairs_per_task_with_repair: 1.0
+  pass_like_disposition_numerator: 4
+  pass_like_disposition_denominator: 8
+  pass_like_disposition_share: 0.5
+  final_dispositions:
+    active: 1
+    blocked: 1
+    completed: 4
+    finding_recorded: 1
+    superseded: 1
+  failure_categories:
+    syntax: 0
+    validation: 1
+    proof: 0
+    interpretation: 1
+    physics: 0
+  historical_completeness_claimed: false
+  summary_text_used_for_classification: false
+  private_text_projected: false
+  process_failure_as_physics_result: false
+  pass_saturation_as_scientific_success: false
+
+artifact_results:
+  builder:
+    path: "research_control/tasks/RT-20260723-011/artifacts/build_attempt_rework_dashboard.py"
+    sha256: "6963fb7331e074803dc92eb1cafebacc25b9008561c60d9b6d8e2a0d4e940f15"
+  machine_dashboard:
+    path: "research_control/tasks/RT-20260723-011/artifacts/attempt_rework_dashboard.json"
+    sha256: "5fc9a671fe5212d6623905dc7d4cef9a89d56ba9f189f42caf01c4c7587e1c32"
+  human_dashboard:
+    path: "research_control/tasks/RT-20260723-011/artifacts/attempt_rework_dashboard.md"
+    sha256: "9cf776a09870663a6ce7eca104b862ecc287edb18026b1e9fbab5fedb2d96a22"
+  privacy_authority_notice:
+    path: "research_control/tasks/RT-20260723-011/artifacts/attempt_rework_privacy_authority_notice.md"
+    sha256: "e3df4854d59e4679f4a564e8fc2dc5fff9bcb3302668b736419b3e05b6244b83"
+  freshness:
+    path: "research_control/tasks/RT-20260723-011/artifacts/attempt_rework_freshness.json"
+    sha256: "64074e6a073e22d69c0b0cb8198224f9f2058f38f4d49281cc81c1f9bd9b596a"
+  compact_receipt:
+    path: "research_control/tasks/RT-20260723-011/artifacts/attempt_rework_compact_receipt.json"
+    sha256: "4cc99fbe23855f6e59e21f46a66fe195d2f8a04c4239df5a003cd2bb2c5578e2"
+  validation:
+    path: "research_control/tasks/RT-20260723-011/artifacts/attempt_rework_validation.json"
+    sha256: "87c6eab0dd5515f0237b2c189bfe64767ae3575b24f1b08e9014d06eca9cf80f"
+
+privacy_and_freshness_result:
+  projection_allowlist_enforced: true
+  source_summary_text_excluded: true
+  prompt_and_private_reasoning_excluded: true
+  credential_material_excluded: true
+  private_field_injection_rejected: true
+  credential_pattern_injection_rejected: true
+  stale_source_hash_rejected: true
+  deterministic_regeneration_passed: true
+  wall_clock_used_as_freshness_authority: false
+
+candidate_and_theorem_identity_receipt:
+  observed_candidate_ids:
+    - "EQSRC-GRADED-ORBIT-ROOT-V1"
+  observed_candidate_family_ids:
+    - "EQSRC-CANONICAL-CHOICE-GRADED-ORBIT-ROOT"
+  candidate_identity_source: "research_control/tasks/RT-20260721-005/artifacts/v21_candidate_lineage_historical_seed.json"
+  candidate_identity_source_sha256: "8cf49a04b90d02f8439b54e138257cc5c56b2a72ba2b26c43c5b1b9a5dba78a0"
+  candidate_result_created: false
+  candidate_status_changed: false
+  theorem_identity_observed: false
+  theorem_result_created: false
+
+assumption_delta:
+  added_physical_assumptions: []
+  removed_physical_assumptions: []
+  reporting_assumption: "The projection is complete only for the eight sealed ledger events and makes no claim of complete project history."
+  scientific_status_changed: false
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS_PAYLOAD_CHECKPOINT_BLOCKED"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  observed_durable_outputs:
+    physics: []
+    project_system:
+      - "research_control/tasks/RT-20260723-011/artifacts/attempt_rework_dashboard.json"
+      - "research_control/tasks/RT-20260723-011/artifacts/attempt_rework_dashboard.md"
+      - "research_control/tasks/RT-20260723-011/artifacts/attempt_rework_privacy_authority_notice.md"
+      - "research_control/tasks/RT-20260723-011/artifacts/attempt_rework_freshness.json"
+  accepted_criteria:
+    physics: []
+    project_system:
+      - "dashboard exactly matches the sealed event ledger"
+      - "attempt events aggregate by task candidate family role and work kind"
+      - "five failure categories remain typed and non-promotional"
+      - "abandonment remains not_measured without a complete denominator"
+      - "privacy and stale-output tests reject unsafe projections"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+    dashboard_count_counts_as_physics: false
+
+physics_payload_result:
+  schema_id: "physics_payload_result_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "project_system"
+  status: "admitted"
+  payload_type: "not_applicable"
+  candidate_family: "not_applicable"
+  physics_payload_created: false
+  process_receipts_excluded_from_physics_credit: true
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+
+ordinary_route_guard_result:
+  schema_id: "ordinary_route_guard_result_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0843"
+  selected_plan_task_id: "P12-T06"
+  outcome: "all_ready_science_blocked_exception"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  system_success_counts_as_physics: false
+  system_success_counts_as_distance_to_gr: false
+  scientific_status_changed: false
+  physics_promotion_authorized: false
+
+dependency_evidence:
+  - plan_task_id: "P10-T04"
+    task_id: "RT-20260721-006"
+    completion_path: "research_control/tasks/RT-20260721-006/jobs/completions/AJC-AJ-RT-20260721-006-001.yaml"
+    completion_sha256: "9fbd8bbda9b3ffaae441763a5874d7e78a4dfd189a612c4430e95fabb8a8f2d3"
+    status: "completed"
+  - plan_task_id: "P12-T05"
+    task_id: "RT-20260723-004"
+    completion_path: "research_control/tasks/RT-20260723-004/jobs/completions/AJC-AJ-RT-20260723-004-001.yaml"
+    completion_sha256: "c0637a8bf448884b6bada691a5b9c9fab40cbc4e60de01854d6c93824f8ede65"
+    cumulative_checkpoint_task_id: "RT-20260723-010"
+    cumulative_checkpoint_completion_sha256: "4e9299c442b3ec2ca076499a63c748d9abdb62277fc4a2cfd095ea4711a88435"
+    cumulative_checkpoint_commit: "b9d738c5bf6d28f9fd053c0dab406d7394fb8e06"
+    status: "completed_and_checkpointed"
+
+validation_results:
+  memory_preflight:
+    status: "PASS_CORE_WITH_9_LOCAL_CACHE_WARNINGS"
+  canonical_source_inspection:
+    status: "PASS"
+  dashboard_builder_write:
+    status: "PASS"
+  dashboard_builder_check:
+    status: "PASS"
+  focused_unit_tests:
+    status: "PASS_6_TESTS"
+  dashboard_matches_event_ledger:
+    status: "PASS_8_OF_8"
+  failure_category_separation:
+    status: "PASS_5_CATEGORIES"
+  privacy_rejection:
+    status: "PASS_PRIVATE_KEY_AND_CREDENTIAL_INJECTIONS"
+  freshness_rejection:
+    status: "PASS_STALE_HASH_INJECTION"
+  classifier_preflight:
+    status: "PASS_PROJECT_SYSTEM_NO_BLOCKED_PATHS"
+  affected_validation_plan:
+    status: "READY_15_SELECTED_GATES"
+  governed_checkpoint:
+    status: "FAIL_RESEARCH_CONTROL_DIFF_16_ERRORS_INDEX_RESTORED_NO_COMMIT"
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 79 repository branch HEAD lease route and exact clean-manifest parity validated before one atomic claim and consume."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The builder projects eight sealed events with exact typed joins and no summary-text classification."
+      - "Six focused tests cover ledger agreement category separation abandonment privacy freshness and deterministic output."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Write and check modes pass with zero findings and exact content-addressed outputs."
+  post_checkpoint:
+    status: "FAIL"
+    evidence:
+      - "The only generation-79 checkpoint failed staged research-control validation on sixteen exact findings, restored the index, and committed nothing."
+  renderer:
+    status: "PENDING"
+    evidence:
+      - "Blocked-state task index current frontier compact frontier and memory derivatives require final synchronization."
+  memory_bootstrap:
+    status: "PENDING"
+    evidence:
+      - "Final tracked memory synchronization and validate-only remain required."
+  claim_language_linter:
+    status: "PENDING"
+    evidence:
+      - "Changed-source claim-language validation remains required on the finalized tree."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  push_authorized: false
+  publication_authorized: false
+  proof_authority: false
+
+command_results:
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+    status: "PASS_CORE_WITH_9_LOCAL_CACHE_WARNINGS"
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21 --json"
+    status: "PASS_REGISTERED_CANONICAL_SOURCE"
+  - command: ".venv/bin/python research_control/tasks/RT-20260723-011/artifacts/build_attempt_rework_dashboard.py --write --json"
+    status: "PASS_ZERO_FINDINGS"
+  - command: ".venv/bin/python research_control/tasks/RT-20260723-011/artifacts/build_attempt_rework_dashboard.py --check --json"
+    status: "PASS_ZERO_FINDINGS"
+  - command: ".venv/bin/python -m unittest -v tests.test_attempt_rework_dashboard"
+    status: "PASS_6_TESTS"
+  - command: ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+    status: "PASS_ZERO_FINDINGS"
+  - command: ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --json-summary"
+    status: "PASS_BEFORE_CHECKPOINT_STAGING"
+  - command: ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260723-011-001"
+    status: "FAIL_RESEARCH_CONTROL_DIFF_16_ERRORS_INDEX_RESTORED_NO_COMMIT"
+
+three_tier_claim_summary:
+  adopted_objects: []
+  accepted_evidence_preconditions:
+    - "The sealed P10-T04 ledger contains eight finalized events across seven represented tasks."
+    - "The task-local projection and six focused tests pass operational validation."
+  open_or_blocked_physical_targets:
+    - "source_ontology_derivation"
+    - "general_eqsrc"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+  forbidden_overread:
+    - "failure counts as physics refutations"
+    - "PASS-like share as scientific success or theorem truth"
+    - "zero observed abandonment as a zero abandonment rate"
+    - "dashboard validation as Distance-to-GR progress or promotion authority"
+
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "source_equivalence_eqsrc"
+  milestone: "source_equivalence_eqsrc"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "P12-T06 is a project-process dashboard and adds no mathematical or scientific payload."
+  downstream_unlocked:
+    - "P12-T06_research_control_contract_parity_recovery"
+  downstream_still_blocked:
+    - "P12-T07_until_future_governed_checkpoint_commits"
+    - "source_ontology_derivation"
+    - "general_eqsrc"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+    - "benchmark_promotion"
+    - "external_publication"
+
+next_work_item:
+  plan_task_id: "P12-T06"
+  title: "Repair the sealed P12-T06 staged research-control contract parity findings"
+  worker_skill: "improve-project-system"
+  role_family: "validator-engineer@0.2.0"
+  route_label: "project-system-recovery"
+  recovery_strategy_id: "repair_p12_t06_research_control_contract_parity_v1"
+  dependency_ready: true
+  executed: false
+  dependency_completion_evidence:
+    - plan_task_id: "P11-T08"
+      completion_sha256: "1c55cdfbe23f0e71f7301d5818dbedbfec688bb9799d84c18f1457921e9012e5"
+    - plan_task_id: "P12-T02"
+      completion_sha256: "d0e1862fb75cd4da247a874896a6cba94361206b3ec5e25cd56f2a8219ecebdf"
+    - plan_task_id: "P12-T04"
+      completion_sha256: "2905355e651980cb29a8a2f12542831113c2e93f5f4876b092ff85f975d86abc"
+    - plan_task_id: "P12-T06"
+      completion_sha256: "this_completion"
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 999
+    relationship_row_count: 4946
+    semantic_row_count: 999
+    vault_row_count: 999
+    local_cache_only_warning_count: 9
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  authority_note: "Obsidian wiki semantic relationship and .local retrieval layers are retrieval only and not authority; registered canonical sources and tracked research-control state govern this task."
+
+project_improvement_signals: []
+project_improvement_sidecar_created: false
+project_improvement_bridge:
+  required: false
+  sidecar_path: ""
+  recursive_goal_recovery_required: true
+  reason: "The single generation-79 checkpoint is consumed and its sixteen exact staged research-control findings require one fresh bounded P12-T06 recovery before P12-T07."
+
+forbidden_conclusion_summary: "This dashboard supplies no authority to expose private prompt or credential material, infer missing history, report a zero abandonment rate without a denominator, treat failure repair validation audit or PASS-like counts as physics refutation scientific success proof or Distance-to-GR progress, modify canonical ontology source laws scientific ledgers or candidates, promote benchmarks, publish, claim completed derivation, or execute P12-T07 before checkpoint."
+verdict: "p12_t06_payload_pass_checkpoint_failed_closed_research_control_contract_parity_recovery_required_no_physics_delta"
+next_recommendation: "Run one fresh bounded P12-T06 improve-project-system recovery for only the sixteen sealed staged findings. Do not retry the checkpoint or execute P12-T07 in generation 79."

@@ -1,0 +1,83 @@
+schema_id: "validation_blocker_checkpoint_research_control_contract_parity_v1"
+status: "FAIL_CHECKPOINT_RESEARCH_CONTROL_CONTRACT_PARITY"
+task_id: "RT-20260723-011"
+job_id: "AJ-RT-20260723-011-001"
+plan_task_id: "P12-T06"
+created_at: "2026-07-23T18:58:05Z"
+checkpoint_invocation_count: 1
+checkpoint_committed: false
+checkpoint_staged_after_failure: false
+checkpoint_entry_index_restored: true
+legacy_validation_used: false
+head_before: "b9d738c5bf6d28f9fd053c0dab406d7394fb8e06"
+head_after: "b9d738c5bf6d28f9fd053c0dab406d7394fb8e06"
+failed_staged_tree: "0d3355e8c5227d3bcca994581eb325e0ba47656e"
+failed_gate_id: "research_control_diff"
+failed_gate_command:
+  - ".venv/bin/python"
+  - "scripts/research_control/validate_research_control.py"
+  - "--check-diff"
+  - "--staged-only"
+  - "--json"
+failed_gate_returncode: 1
+failed_gate_error_count: 16
+failed_gate_errors:
+  - "research_control/tasks/RT-20260723-011/DDR-20260723-011.md: line 12: unquoted scalars cannot contain ':'"
+  - "research_control/tasks/RT-20260723-011/jobs/AJ-RT-20260723-011-001.yaml: memory_preflight.authority_note must preserve retrieval-only authority terms ['not authority']"
+  - "research_control/tasks/RT-20260723-011/jobs/AJ-RT-20260723-011-001.yaml: physics-payload admission: process_receipts_excluded_from_payload missing role_or_route_selection"
+  - "research_control/tasks/RT-20260723-011/jobs/completions/AJC-AJ-RT-20260723-011-001.yaml: missing command_results"
+  - "research_control/tasks/RT-20260723-011/jobs/completions/AJC-AJ-RT-20260723-011-001.yaml: memory_preflight.authority_note must preserve retrieval-only authority terms ['not authority']"
+  - "research_control/tasks/RT-20260723-011/jobs/completions/AJC-AJ-RT-20260723-011-001.yaml: authorization_layers map is required by validation-status schema split"
+  - "research_control/tasks/RT-20260723-011/jobs/completions/AJC-AJ-RT-20260723-011-001.yaml: dual-budget completion: completion missing project_system accepted criteria: ['abandonment remains not_measured without a complete denominator', 'attempt events aggregate by task candidate family role and work kind', 'dashboard exactly matches the sealed event ledger', 'five failure categories remain typed and non-promotional', 'privacy and stale-output tests reject unsafe projections']"
+  - "research_control/tasks/RT-20260723-011/jobs/completions/AJC-AJ-RT-20260723-011-001.yaml: dual-budget completion: dual_budget_result.authority_limits.route_selection_counts_as_physics must be false"
+  - "research_control/tasks/RT-20260723-011/roles/project-control-maintainer@0.2.0--RT-20260723-011.yaml: justification does not match ROLE_EXECUTION_REGISTRY.csv"
+  - "research_control/handoffs/handoff-0844.yaml: ordinary-route guard: consecutive_project_system_task_count_mismatch"
+  - "research_control/handoffs/handoff-0844.yaml: ordinary-route guard: ready_science_plan_task_ids_mismatch"
+  - "research_control/handoffs/handoff-0844.yaml: ordinary-route guard: selected_route_class_mismatch"
+  - "research_control/handoffs/handoff-0844.yaml: ordinary-route guard: authority_limits_ordinary_research_handoff_authoritative_must_be_true"
+  - "research_control/handoffs/handoff-0844.yaml: ordinary-route guard: authority_limits_project_system_sidecar_supersedes_must_be_false"
+  - "research_control/current_frontier.md: active-state drift field=next_recommended_action authoritative_value='Run the one governed checkpoint for AJ-RT-20260723-011-001. Only after it commits, route one separate bounded P12-T07 methodology-evaluation AgentJob through continue-research.' snapshot_value='Run the one authorized governed checkpoint for AJ-RT-20260723-011-001. Only after it commits, continue the v21 relay with one fresh bounded P12-T07 methodology-evaluation frame through continue-research.' authoritative_source=research_control/handoffs/handoff-0844.yaml suggested_repair_route=run one bounded current-frontier synchronization repair packet under continue-research before proceeding"
+  - "research_control/handoffs/handoff-0844.yaml: missing active_state_bifurcation suggested_repair_route=run one bounded current-frontier synchronization repair packet under continue-research before proceeding"
+checkpoint_gate_results:
+  classify_changes: "PASS"
+  project_improvement_signals: "PASS"
+  documentation_impact: "PASS"
+  memory_core: "PASS"
+  research_control_diff: "FAIL"
+  test_shard_repository: "SKIP_NOT_APPLICABLE"
+  git_diff_check: "PASS"
+checkpoint_integrity_checks:
+  agentjob_allowlist: "PASS"
+  unstaged_residue: "PASS"
+  staged_tree_integrity: "PASS"
+  entry_index_restoration: "PASS"
+checkpoint_child_receipt_sha256: "eb9a1deaa2623ffe11b1cfde343591a32ef435153218d699ca170aa53eeeddd0"
+failed_gate_stdout_sha256: "557210a058ef3add8d66a101598d64374c9a9c7f6c253464bbf985c26f299fcb"
+local_receipts_are_authority: false
+tracked_blocker_is_transaction_evidence: true
+dashboard_builder_status: "PASS"
+focused_test_status: "PASS_6_TESTS"
+privacy_status: "PASS"
+freshness_status: "PASS"
+scientific_status_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+repair_scope:
+  strategy_id: "repair_p12_t06_research_control_contract_parity_v1"
+  worker_skill: "improve-project-system"
+  role_family: "validator-engineer@0.2.0"
+  work_item_id: "P12-T06"
+  allowed_actions:
+    - "repair only the sixteen exact staged research-control findings"
+    - "preserve dashboard builder generated data privacy freshness and focused test semantics"
+    - "refresh exact completion hashes registries handoff program state frontier and generated derivatives after repairs"
+    - "invoke at most one future normal checkpoint in a fresh relay generation"
+  forbidden_actions:
+    - "retry the checkpoint in generation 79"
+    - "rerun the P12-T06 dashboard worker"
+    - "change the sealed P10-T04 ledger or any dependency source"
+    - "change dashboard metric privacy freshness or authority semantics except exact validator-required parity"
+    - "execute P12-T07 before a future checkpoint commits"
+    - "edit scientific sources ontology candidates or Distance-to-GR ledgers"
+preservation_reason: "The only generation-79 checkpoint invocation is consumed. It failed closed on sixteen exact staged research-control contract and parity findings after every task-local dashboard privacy freshness and focused test passed. A fresh bounded recovery must own any repair and future checkpoint."

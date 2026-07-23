@@ -1,0 +1,34 @@
+{
+  "schema_id": "v21_attempt_rework_validation_v1",
+  "task_id": "RT-20260723-011",
+  "plan_task_id": "P12-T06",
+  "status": "PASS",
+  "checks_run": [
+    "dashboard_matches_event_ledger",
+    "source_hash_exactness",
+    "candidate_family_join_exactness",
+    "task_role_work_kind_join_exactness",
+    "failure_category_separation",
+    "abandonment_unknown_is_not_measured",
+    "pass_saturation_context_only",
+    "privacy_forbidden_key_scan",
+    "privacy_credential_pattern_scan",
+    "freshness_source_hash_binding",
+    "freshness_output_determinism",
+    "physics_authority_nonpromotion"
+  ],
+  "check_count": 12,
+  "failure_count": 0,
+  "privacy_finding_count": 0,
+  "freshness_source_count": 12,
+  "dashboard_event_count": 8,
+  "dashboard_matches_event_ledger": true,
+  "freshness_matches_current_sources": true,
+  "artifact_hashes": {
+    "research_control/tasks/RT-20260723-011/artifacts/attempt_rework_dashboard.json": "5fc9a671fe5212d6623905dc7d4cef9a89d56ba9f189f42caf01c4c7587e1c32",
+    "research_control/tasks/RT-20260723-011/artifacts/attempt_rework_dashboard.md": "9cf776a09870663a6ce7eca104b862ecc287edb18026b1e9fbab5fedb2d96a22",
+    "research_control/tasks/RT-20260723-011/artifacts/attempt_rework_freshness.json": "64074e6a073e22d69c0b0cb8198224f9f2058f38f4d49281cc81c1f9bd9b596a",
+    "research_control/tasks/RT-20260723-011/artifacts/attempt_rework_compact_receipt.json": "4cc99fbe23855f6e59e21f46a66fe195d2f8a04c4239df5a003cd2bb2c5578e2"
+  },
+  "authority": "Operational validation only; not scientific proof or promotion."
+}

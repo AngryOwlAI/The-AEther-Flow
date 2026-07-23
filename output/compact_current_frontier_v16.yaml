@@ -1,7 +1,7 @@
 schema_id: "compact_current_frontier_v16"
 generated_from:
   - "research_control/program_state.yaml"
-  - "research_control/handoffs/handoff-0843.yaml"
+  - "research_control/handoffs/handoff-0845.yaml"
   - "registries/DISTANCE_TO_GR_LEDGER.csv"
   - "registries/METRIC_USE_LEDGER.csv"
   - "research_control/current_frontier.md"
@@ -9,16 +9,16 @@ generated_from:
   - "research_control/design/accepted_status_calibration_v2.yaml"
   - "research_control/design/active_state_bifurcation_policy_v1.md"
 active_state:
-  active_task_id: "RT-20260723-010"
-  latest_handoff_id: "handoff-0843"
-  current_status: "p12_t05_handoff_0842_markdown_identity_recovery_pass_checkpoint_ready"
+  active_task_id: "RT-20260723-012"
+  latest_handoff_id: "handoff-0845"
+  current_status: "p12_t06_contract_parity_recovery_pass_checkpoint_ready"
   v15_completed: false
   v16_completed: false
   v16_plan_registered: true
 active_state_bifurcation:
-  latest_research_task_id: "RT-20260723-010"
-  latest_research_handoff_id: "handoff-0843"
-  latest_research_next_action: "Run the one authorized governed checkpoint for AJ-RT-20260723-010-001. Only after it commits, continue the v21 relay with P12-T06 through one fresh bounded continue-research frame."
+  latest_research_task_id: "RT-20260723-012"
+  latest_research_handoff_id: "handoff-0845"
+  latest_research_next_action: "Run the one authorized governed checkpoint for AJ-RT-20260723-012-001. Only after it commits, continue the v21 relay with one fresh bounded P12-T07 methodology-evaluation frame through continue-research."
   latest_project_system_task_id: "none"
   latest_project_system_status: "none"
   latest_project_system_sidecar_task_id: "none"
@@ -26,10 +26,10 @@ active_state_bifurcation:
   sidecar_supersedes_research_handoff: false
   next_research_route_source: "latest_research_handoff"
 next_route:
-  route_id: "continue_v21_p12_t06_after_checkpoint_v1"
-  role_family: "project-control-maintainer@0.2.0"
+  route_id: "continue_v21_p12_t07_after_checkpoint_v1"
+  role_family: "external-red-team-reviewer@0.1.0"
   target_derivation_milestone: "source_equivalence_eqsrc"
-  milestone_burden: "Make research-process selectivity observable."
+  milestone_burden: "Assess the AI research system as a research object without promoting physics."
   requires_human_gate: false
 claim_boundary:
   physics_claim_authority: false
@@ -525,18 +525,6 @@ validation:
     - layer: "post_checkpoint"
       status: "PENDING"
       evidence:
-        - "One normal governed checkpoint remains required before P12-T06."
-    - layer: "renderer"
-      status: "PENDING"
-      evidence:
-        - "Task index current frontier compact frontier and memory derivatives remain to be synchronized."
-    - layer: "memory_bootstrap"
-      status: "PENDING"
-      evidence:
-        - "Final tracked memory synchronization and validate-only remain required."
-    - layer: "claim_language_linter"
-      status: "PENDING"
-      evidence:
-        - "Changed-source claim-language validation remains required on the finalized tree."
+        - "One normal governed checkpoint remains required before P12-T07."
 authority_warning:
   snapshot_only_not_authority: true

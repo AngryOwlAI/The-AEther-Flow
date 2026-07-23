@@ -1,0 +1,70 @@
+{
+  "schema_id": "v21_attempt_rework_freshness_v1",
+  "task_id": "RT-20260723-011",
+  "plan_task_id": "P12-T06",
+  "status": "fresh",
+  "generated_from_ledger_sealed_at": "2026-07-22T03:17:26Z",
+  "source_bindings": [
+    {
+      "path": "research_control/tasks/RT-20260712-005/00_TASK.yaml",
+      "sha256": "dc4217abd98d8016adb56ee69421009aa7a47f3ef73f38321f80bdb7163f70e2"
+    },
+    {
+      "path": "research_control/tasks/RT-20260712-007/00_TASK.yaml",
+      "sha256": "e30c59488ed3204c42f6d0f19d6cb8abf5556be45cbb0bc84bdde4c04f07a615"
+    },
+    {
+      "path": "research_control/tasks/RT-20260720-001/00_TASK.yaml",
+      "sha256": "c0a3e2e6d5f670fa7ae3fd2dd6044fdf3d46cab21dd7d696d04f101ba81a38d1"
+    },
+    {
+      "path": "research_control/tasks/RT-20260720-002/00_TASK.yaml",
+      "sha256": "1b671389986d28de86aff7547dfb100e3fb0f70502eb396180159a39d8cea40b"
+    },
+    {
+      "path": "research_control/tasks/RT-20260720-003/00_TASK.yaml",
+      "sha256": "692586b20ac93fe3f644409eb9e39f9b5eaacaedb486d5860c4cf257183fd4e5"
+    },
+    {
+      "path": "research_control/tasks/RT-20260720-004/00_TASK.yaml",
+      "sha256": "f94bff1d0b283c059e3fa520663a503a547eec45aeb63aa5f01445d16fc2900f"
+    },
+    {
+      "path": "research_control/tasks/RT-20260720-009/00_TASK.yaml",
+      "sha256": "99195b60a5bacef4b3867deb5ae99aa7d868b73e851fb4230a43dfd4601a82be"
+    },
+    {
+      "path": "research_control/tasks/RT-20260720-009/jobs/AJ-RT-20260720-009-001.yaml",
+      "sha256": "3417687bcbf2245e0bcb31db305fb8cfa0ff4d3f447beb4eb81c5e87a6d7e6f2"
+    },
+    {
+      "path": "research_control/tasks/RT-20260721-005/artifacts/v21_candidate_lineage_historical_seed.json",
+      "sha256": "8cf49a04b90d02f8439b54e138257cc5c56b2a72ba2b26c43c5b1b9a5dba78a0"
+    },
+    {
+      "path": "research_control/tasks/RT-20260721-006/artifacts/v21_attempt_event_schema.md",
+      "sha256": "92e91a4d89ee26a85d011fc1199feecf3fb9dc472337efb5f4a1d5c30b823202"
+    },
+    {
+      "path": "research_control/tasks/RT-20260721-006/artifacts/v21_attempt_history_redaction_policy.md",
+      "sha256": "40ec1d912b3771e564208ef1980d8f6fd5a39dbade3a986b38057d38c448197c"
+    },
+    {
+      "path": "research_control/tasks/RT-20260721-006/artifacts/v21_research_attempt_ledger.json",
+      "sha256": "f32e7d272d3d99a339a2cfd81e56b1d44e51e1449b2e34e9dd111161397c1ba2"
+    }
+  ],
+  "builder": {
+    "path": "research_control/tasks/RT-20260723-011/artifacts/build_attempt_rework_dashboard.py",
+    "sha256": "6963fb7331e074803dc92eb1cafebacc25b9008561c60d9b6d8e2a0d4e940f15"
+  },
+  "privacy_notice": {
+    "path": "research_control/tasks/RT-20260723-011/artifacts/attempt_rework_privacy_authority_notice.md",
+    "sha256": "e3df4854d59e4679f4a564e8fc2dc5fff9bcb3302668b736419b3e05b6244b83"
+  },
+  "outputs": {
+    "research_control/tasks/RT-20260723-011/artifacts/attempt_rework_dashboard.json": "5fc9a671fe5212d6623905dc7d4cef9a89d56ba9f189f42caf01c4c7587e1c32",
+    "research_control/tasks/RT-20260723-011/artifacts/attempt_rework_dashboard.md": "9cf776a09870663a6ce7eca104b862ecc287edb18026b1e9fbab5fedb2d96a22"
+  },
+  "freshness_rule": "Every listed source, builder, notice, and deterministic output hash must match current bytes."
+}

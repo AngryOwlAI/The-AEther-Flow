@@ -1,0 +1,223 @@
+handoff_id: "handoff-0844"
+created_at: "2026-07-23T18:38:54Z"
+task_id: "RT-20260723-011"
+decision_id: "DDR-20260723-011"
+job_id: "AJ-RT-20260723-011-001"
+completion_path: "research_control/tasks/RT-20260723-011/jobs/completions/AJC-AJ-RT-20260723-011-001.yaml"
+completion_sha256: "05b42f0277189be19fd73943f66d8a49747bff486c927c1023824b1374326884"
+status: "blocked"
+summary: "P12-T06 implemented one deterministic privacy-bounded content-addressed dashboard over all eight finalized P10-T04 ledger events, and its builder, freshness controls, privacy checks, and six focused tests pass. The single authorized checkpoint failed closed on sixteen exact staged research-control contract and parity findings, restored the index, and committed nothing. No scientific or protected authority changed."
+next_action: "Route one fresh bounded P12-T06 project-system recovery through improve-project-system using validator-engineer@0.2.0 and strategy repair_p12_t06_research_control_contract_parity_v1. Do not retry the checkpoint or execute P12-T07 in generation 79."
+loop_risk_route: "The recovery changes the object from dashboard construction to exact research-control contract parity. It must not rerun the P12-T06 dashboard worker, broaden the sixteen sealed findings, retry the consumed checkpoint, or execute P12-T07."
+
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260723-011"
+  latest_research_handoff_id: "handoff-0844"
+  latest_research_next_action: "Route one fresh bounded P12-T06 project-system recovery through improve-project-system using validator-engineer@0.2.0 and strategy repair_p12_t06_research_control_contract_parity_v1. Do not retry the checkpoint or execute P12-T07 in generation 79."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+
+plan_result:
+  plan_task_id: "P12-T06"
+  title: "Create the failed-attempt, rework, and PASS-saturation dashboard"
+  recommendation_ids:
+    - "V21-R42"
+    - "V21-R53"
+    - "V21-R69"
+  result_status: "FAIL_CHECKPOINT_RESEARCH_CONTROL_CONTRACT_PARITY"
+  work_item_status: "implemented_but_checkpoint_blocked"
+  checkpoint_invocation_count: 1
+  checkpoint_committed: false
+  checkpoint_staged_after_failure: false
+  checkpoint_entry_index_restored: true
+  failed_gate_id: "research_control_diff"
+  failed_gate_error_count: 16
+  failed_staged_tree: "0d3355e8c5227d3bcca994581eb325e0ba47656e"
+  checkpoint_child_receipt_sha256: "eb9a1deaa2623ffe11b1cfde343591a32ef435153218d699ca170aa53eeeddd0"
+  checkpoint_blocker_path: "research_control/tasks/RT-20260723-011/artifacts/validation_blocker_checkpoint_research_control_contract_parity_v1.yaml"
+  checkpoint_blocker_sha256: "393d98327e7667cb91a670cfa8cf469f05beb327afdb8be063943ea555b039e7"
+  legacy_validation_used: false
+  source_ledger_id: "V21-RESEARCH-ATTEMPT-LEDGER-001"
+  source_ledger_sha256: "f32e7d272d3d99a339a2cfd81e56b1d44e51e1449b2e34e9dd111161397c1ba2"
+  event_count: 8
+  represented_task_count: 7
+  observed_attempt_start_count: 1
+  validation_catch_count: 1
+  audit_objection_count: 1
+  repair_event_count: 2
+  abandonment_status: "not_measured"
+  pass_like_share: 0.5
+  privacy_status: "PASS"
+  freshness_status: "PASS"
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+artifacts:
+  dashboard_path: "research_control/tasks/RT-20260723-011/artifacts/attempt_rework_dashboard.json"
+  dashboard_sha256: "5fc9a671fe5212d6623905dc7d4cef9a89d56ba9f189f42caf01c4c7587e1c32"
+  dashboard_markdown_path: "research_control/tasks/RT-20260723-011/artifacts/attempt_rework_dashboard.md"
+  dashboard_markdown_sha256: "9cf776a09870663a6ce7eca104b862ecc287edb18026b1e9fbab5fedb2d96a22"
+  privacy_notice_path: "research_control/tasks/RT-20260723-011/artifacts/attempt_rework_privacy_authority_notice.md"
+  privacy_notice_sha256: "e3df4854d59e4679f4a564e8fc2dc5fff9bcb3302668b736419b3e05b6244b83"
+  freshness_path: "research_control/tasks/RT-20260723-011/artifacts/attempt_rework_freshness.json"
+  freshness_sha256: "64074e6a073e22d69c0b0cb8198224f9f2058f38f4d49281cc81c1f9bd9b596a"
+  compact_receipt_path: "research_control/tasks/RT-20260723-011/artifacts/attempt_rework_compact_receipt.json"
+  compact_receipt_sha256: "4cc99fbe23855f6e59e21f46a66fe195d2f8a04c4239df5a003cd2bb2c5578e2"
+  validation_path: "research_control/tasks/RT-20260723-011/artifacts/attempt_rework_validation.json"
+  validation_sha256: "87c6eab0dd5515f0237b2c189bfe64767ae3575b24f1b08e9014d06eca9cf80f"
+
+selected_next_route:
+  route_id: "repair_p12_t06_research_control_contract_parity_v1"
+  route_label: "project-system-recovery"
+  role_family: "validator-engineer@0.2.0"
+  worker_skill: "improve-project-system"
+  plan_task_id: "P12-T06"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Restore exact P12-T06 research-control contract parity without changing dashboard semantics or promoting physics."
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: false
+  executed: false
+  source_blocker_path: "research_control/tasks/RT-20260723-011/artifacts/validation_blocker_checkpoint_research_control_contract_parity_v1.yaml"
+  source_blocker_sha256: "393d98327e7667cb91a670cfa8cf469f05beb327afdb8be063943ea555b039e7"
+  completion_path: "research_control/tasks/RT-20260723-011/jobs/completions/AJC-AJ-RT-20260723-011-001.yaml"
+  completion_sha256: "05b42f0277189be19fd73943f66d8a49747bff486c927c1023824b1374326884"
+  next_action: "Repair only the sixteen sealed staged research-control findings in a fresh relay generation, preserve the passing P12-T06 payload semantics, and invoke at most one future normal checkpoint."
+
+ordinary_route_guard:
+  schema_id: "ordinary_route_guard_evaluation_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  evaluation_id: "ORE-HANDOFF-0844"
+  ordinary_handoff_id: "handoff-0844"
+  threshold: 3
+  consecutive_project_system_tasks_before_selection: 7
+  ready_science_plan_task_ids:
+    - "P4-T05"
+  selected_plan_task_id: "P12-T06"
+  selected_route_class: "project_system"
+  selected_worker_skill: "improve-project-system"
+  outcome: "all_ready_science_blocked_exception"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  exception_receipt:
+    active: true
+    schema_id: "ordinary_route_exception_receipt_v1"
+    exception_class: "all_ready_science_blocked"
+    ordinary_handoff_id: "handoff-0844"
+    ready_science_plan_task_ids:
+      - "P4-T05"
+    blocked_routes:
+      - plan_task_id: "P4-T05"
+        failure_class: "human_gate_required"
+        evidence_path: "research_control/design/v21_recommendation_backlog.yaml"
+        evidence_sha256: "849a4e8dfe848e80bc0c8236252b924e636e5c95ac1a090478a69f7f5377559f"
+        reason: "P4-T05 is dependency-ready but the registered backlog requires explicit human Gate Chair authority, which this relay generation does not possess."
+    authority_limits:
+      ordinary_research_handoff_authoritative: true
+      project_system_sidecar_supersedes: false
+      system_success_counts_as_physics: false
+      system_success_counts_as_distance_to_gr: false
+      scientific_status_changed: false
+      physics_promotion_authorized: false
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 79 exact route lease repository branch HEAD and clean-manifest parity passed before one claim and one consume."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The generated dashboard exactly projects all eight sealed events and keeps five failure categories distinct."
+      - "Six focused tests cover ledger agreement abandonment semantics private-field and credential rejection stale-source rejection and deterministic outputs."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Builder write and check modes pass with zero findings."
+  post_checkpoint:
+    status: "FAIL"
+    evidence:
+      - "The one generation-79 checkpoint failed research_control_diff with sixteen exact findings, restored the index, and created no commit."
+      - "The failure is sealed by validation_blocker_checkpoint_research_control_contract_parity_v1.yaml."
+  renderer:
+    status: "PENDING"
+    evidence:
+      - "Current frontier compact frontier task index and memory derivatives remain to be synchronized."
+  memory_bootstrap:
+    status: "PENDING"
+    evidence:
+      - "Final memory bootstrap and validate-only remain required."
+  claim_language_linter:
+    status: "PENDING"
+    evidence:
+      - "Changed-source claim-language validation remains required on the finalized tree."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  push_authorized: false
+  publication_authorized: false
+  proof_authority: false
+
+three_tier_claim_summary:
+  adopted_objects: []
+  accepted_evidence_preconditions:
+    - "Eight finalized sealed process events are reproducibly projected."
+    - "Privacy and content-addressed freshness controls pass focused validation."
+  open_or_blocked_physical_targets:
+    - "source_ontology_derivation"
+    - "general_eqsrc"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+  forbidden_overread:
+    - "failure or audit counts as physics refutations"
+    - "PASS-like share as scientific success theorem truth or Distance-to-GR progress"
+    - "zero observed abandonment as a zero abandonment rate"
+    - "methodology evaluation as autonomous scientific superiority"
+
+project_improvement_signals: []
+project_improvement_bridge:
+  required: true
+  improvement_handoff_path: "research_control/tasks/RT-20260723-011/artifacts/validation_blocker_checkpoint_research_control_contract_parity_v1.yaml"
+  signal_ids: []
+  bridge_status: "checkpoint_recovery_required"
+  recursive_goal_recovery_required: true
+  notes: "The payload is implemented, but P12-T06 remains open because the only checkpoint failed closed. A fresh bounded improve-project-system recovery must repair only the sixteen sealed findings."
+
+handoff_authority_boundary:
+  this_handoff_authorizes: "One fresh bounded P12-T06 project-system recovery using the sealed blocker, validator-engineer@0.2.0, improve-project-system, and strategy repair_p12_t06_research_control_contract_parity_v1."
+  this_handoff_does_not_authorize:
+    - "checkpoint retry or P12-T06 dashboard-worker rerun in generation 79"
+    - "repair outside the sixteen exact sealed checkpoint findings"
+    - "P12-T07 before a future checkpoint commit"
+    - "private prompt credential personal or sensitive text disclosure"
+    - "failure repair validation audit abandonment or PASS-like counts treated as physics evidence"
+    - "autonomous scientific superiority claimed from methodology metrics"
+    - "historical ledger rewrite or missing-history inference"
+    - "canonical ontology source-law candidate scientific-ledger or Distance-to-GR edit"
+    - "benchmark promotion publication proof authority completed derivation or global no-go"
+
+next_plan_task_id: "P12-T06"
+next_plan_task_execution_ready_after_checkpoint: false
+next_plan_task_executed: false
+notes: "P12-T06 is implemented but checkpoint-blocked with no scientific delta. Generation 79 consumed its one checkpoint; only a fresh bounded exact-parity recovery may proceed."

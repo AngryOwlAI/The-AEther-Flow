@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260723-010`
-- Latest handoff: `handoff-0843`
-- Current status: `p12_t05_handoff_0842_markdown_identity_recovery_pass_checkpoint_ready`
+- Active task: `RT-20260723-012`
+- Latest handoff: `handoff-0845`
+- Current status: `p12_t06_contract_parity_recovery_pass_checkpoint_ready`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260723-010`
-- Latest research handoff: `handoff-0843`
-- Latest research next action: Run the one authorized governed checkpoint for AJ-RT-20260723-010-001. Only after it commits, continue the v21 relay with P12-T06 through one fresh bounded continue-research frame.
+- Latest research task: `RT-20260723-012`
+- Latest research handoff: `handoff-0845`
+- Latest research next action: Run the one authorized governed checkpoint for AJ-RT-20260723-012-001. Only after it commits, continue the v21 relay with one fresh bounded P12-T07 methodology-evaluation frame through continue-research.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `continue_v21_p12_t06_after_checkpoint_v1`
-- Role family: `project-control-maintainer@0.2.0`
+- Route ID: `continue_v21_p12_t07_after_checkpoint_v1`
+- Role family: `external-red-team-reviewer@0.1.0`
 - Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Make research-process selectivity observable.
+- Milestone burden: Assess the AI research system as a research object without promoting physics.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `d9d1ca7e72d5244c6f8be3f438da9bf4035879e66a0dc7104f64be619b3787f9`
-- JSON SHA-256: `78a1acf12651d229ecede0d896bfa9c358d69ff9b9dce4832ac0fe0a6d4b8505`
+- YAML SHA-256: `65c61d1fb445d35c98a88529bd864ccc1a37acbb8b29abb4fed8bdee1789c441`
+- JSON SHA-256: `656bddfa7d4f1df3fca53e778726b2d6e6703339eb8e2a2c9c3b6a7e5f9e61dd`
 
 ## Authority Warning
 

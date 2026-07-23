@@ -1,0 +1,348 @@
+validation_status: "PASS"
+job_id: "AJ-RT-20260723-012-001"
+completion_id: "AJC-AJ-RT-20260723-012-001"
+task_id: "RT-20260723-012"
+task_type: "project_system_research_control_contract_parity_recovery"
+decision_id: "DDR-20260723-012"
+role_id: "validator-engineer"
+source_role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260723-012"
+status: "completed"
+final_repository_validation_status: "PASS_CHECKPOINT_READY"
+created_at: "2026-07-23T19:28:26Z"
+started_at: "2026-07-23T19:28:26Z"
+completed_at: "2026-07-23T19:28:27Z"
+objective: "Repair only the hash-sealed P12-T06 research-control contract and parity findings, preserve the passing dashboard payload and all authority boundaries, and checkpoint the cumulative transaction before P12-T07."
+completion_summary: "Generation 80 repaired the strict-YAML, memory-authority, payload-exclusion, command-result, authorization-layer, dual-budget, role-registry, ordinary-route, active-state, and exact-hash parity surfaces required by the sealed P12-T06 blocker. The final blocked handoff's 19 field-level diagnostics are the same sealed ordinary-route contract family rather than new scope. All six dashboard payload hashes, privacy and freshness semantics, validator behavior, scientific status, and protected authority boundaries remain unchanged."
+objective_result: "p12_t06_research_control_contract_parity_repaired_checkpoint_ready"
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 80
+  passes_consumed: 76
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:80"
+  handoff_token: "f77bf955421534dd0a58971ee7850c6c41646ca5a981740a"
+  relay_claim_token: "4b4a1757f02d0ad37027753e19f02d989f0bc3845a5f2817"
+  immutable_route_hash: "c1d2f44331b4e30388e26cd3a1a67f3c065adadc4b039ef517a0e736ebd978cc"
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+
+transaction_status: "completed_checkpoint_ready"
+result_disposition: "p12_t06_contract_parity_recovery_pass_one_checkpoint_pending"
+work_item_status: "repair_completed"
+plan_task_id: "P12-T06"
+recommendation_ids:
+  - "V21-R42"
+  - "V21-R53"
+  - "V21-R69"
+checkpoint_commit: "none_checkpoint_pending"
+checkpoint_invocation_count: 0
+checkpoint_staged: false
+legacy_validation_used: false
+project_system_change_only: true
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS_CHECKPOINT_READY"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  observed_durable_outputs:
+    physics: []
+    project_system:
+      - "research_control/tasks/RT-20260723-012/artifacts/p12_t06_research_control_contract_parity_recovery_receipt.json"
+  accepted_criteria:
+    physics: []
+    project_system:
+      - "the sealed P12-T06 strict-YAML and contract fields match current validator requirements"
+      - "handoff-0844 passes the ordinary-route guard and active-state bifurcation contracts"
+      - "all six P12-T06 dashboard payload hashes remain unchanged"
+      - "affected research-control validation reports zero errors"
+      - "one normal governed checkpoint commits without legacy validation"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+physics_payload_admission_result:
+  status: "admitted"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+
+ordinary_route_guard_admission_result:
+  status: "PASS"
+  source_handoff_id: "handoff-0843"
+  selected_plan_task_id: "P12-T06"
+  guard_outcome: "all_ready_science_blocked_exception"
+  ordinary_research_handoff_authoritative: true
+  system_success_counts_as_physics: false
+  system_success_counts_as_distance_to_gr: false
+
+artifacts:
+  - "research_control/tasks/RT-20260723-012/artifacts/p12_t06_research_control_contract_parity_recovery_receipt.json"
+output_paths:
+  - "research_control/tasks/RT-20260723-011/DDR-20260723-011.md"
+  - "research_control/tasks/RT-20260723-011/jobs/AJ-RT-20260723-011-001.yaml"
+  - "research_control/tasks/RT-20260723-011/jobs/completions/AJC-AJ-RT-20260723-011-001.yaml"
+  - "research_control/tasks/RT-20260723-011/roles/project-control-maintainer@0.2.0--RT-20260723-011.yaml"
+  - "research_control/handoffs/handoff-0844.yaml"
+  - "research_control/tasks/RT-20260723-012/**"
+  - "research_control/handoffs/handoff-0845.yaml"
+  - "research_control/handoffs/handoff-0845.md"
+  - "research_control/program_state.yaml"
+artifact_receipts:
+  - path: "research_control/tasks/RT-20260723-012/artifacts/p12_t06_research_control_contract_parity_recovery_receipt.json"
+    sha256: "4c3b8998fa86b48b65cc1fc0b531203d1f7ea771d5e46455c2795f6ab3651fcc"
+
+recovery_result:
+  source_blocker_path: "research_control/tasks/RT-20260723-011/artifacts/validation_blocker_checkpoint_research_control_contract_parity_v1.yaml"
+  source_blocker_sha256: "393d98327e7667cb91a670cfa8cf469f05beb327afdb8be063943ea555b039e7"
+  sealed_error_count: 16
+  live_field_level_error_count_before: 19
+  live_projection_same_contract_family: true
+  strict_yaml_repaired: true
+  memory_authority_terms_repaired: true
+  process_receipt_exclusion_repaired: true
+  command_results_repaired: true
+  authorization_layers_repaired: true
+  dual_budget_parity_repaired: true
+  role_registry_parity_repaired: true
+  ordinary_route_guard_repaired: true
+  active_state_bifurcation_repaired: true
+  exact_completion_hashes_refreshed: true
+  dashboard_worker_rerun: false
+  dashboard_semantics_changed: false
+  validator_semantics_changed: false
+  p12_t07_executed: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+
+preserved_hashes:
+  dashboard_sha256: "5fc9a671fe5212d6623905dc7d4cef9a89d56ba9f189f42caf01c4c7587e1c32"
+  dashboard_markdown_sha256: "9cf776a09870663a6ce7eca104b862ecc287edb18026b1e9fbab5fedb2d96a22"
+  privacy_notice_sha256: "e3df4854d59e4679f4a564e8fc2dc5fff9bcb3302668b736419b3e05b6244b83"
+  freshness_sha256: "64074e6a073e22d69c0b0cb8198224f9f2058f38f4d49281cc81c1f9bd9b596a"
+  compact_receipt_sha256: "4cc99fbe23855f6e59e21f46a66fe195d2f8a04c4239df5a003cd2bb2c5578e2"
+  dashboard_validation_sha256: "87c6eab0dd5515f0237b2c189bfe64767ae3575b24f1b08e9014d06eca9cf80f"
+
+command_results:
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+    status: "PASS_CORE_WITH_11_LOCAL_CACHE_WARNINGS"
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-SKILL-IMPROVE-PROJECT-SYSTEM --json"
+    status: "PASS_REGISTERED_CANONICAL_SOURCE"
+  - command: ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+    status: "PASS_PROJECT_SYSTEM_AND_DOCUMENTATION_IMPACT_REQUIRED"
+  - command: ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json"
+    status: "PASS_VALIDATOR_ENGINEER_CHECKPOINT_REQUIRED"
+  - command: ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted"
+    status: "PASS"
+  - command: ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --json-summary"
+    status: "FAIL_19_FIELD_LEVEL_FINDINGS_BEFORE_REPAIR"
+  - command: "scripts.research_control.ordinary_route_guard.evaluate_research_handoff_guard(handoff-0844)"
+    status: "PASS_AFTER_REPAIR"
+  - command: "jq empty research_control/tasks/RT-20260723-012/artifacts/p12_t06_research_control_contract_parity_recovery_receipt.json"
+    status: "PASS"
+  - command: ".venv/bin/python research_control/tasks/RT-20260723-011/artifacts/build_attempt_rework_dashboard.py --check --json"
+    status: "PASS"
+  - command: ".venv/bin/python -m unittest -v tests.test_attempt_rework_dashboard"
+    status: "PASS_6_TESTS"
+  - command: ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+    status: "PASS"
+  - command: ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+    status: "PASS_WITH_HISTORICAL_WARNINGS_ONLY"
+  - command: ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --json-summary"
+    status: "FAIL_14_CUMULATIVE_ALLOWLIST_TRACKED_ADMISSION_AND_ROLE_FIT_FINDINGS_THEN_REPAIRED"
+  - command: ".venv/bin/python scripts/research_control/render_task_index.py --write"
+    status: "PASS_FRESH"
+  - command: ".venv/bin/python scripts/research_control/render_current_frontier.py --write"
+    status: "PASS"
+  - command: ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --write"
+    status: "PASS"
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+    status: "PASS_CORE_WITH_11_LOCAL_CACHE_WARNINGS"
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+    status: "PASS_CORE_WITH_11_LOCAL_CACHE_WARNINGS"
+  - command: ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --json-summary"
+    status: "PASS_ZERO_ERRORS_HISTORICAL_WARNINGS_ONLY"
+
+validation_summary:
+  status: "PASS_CHECKPOINT_READY"
+  passing_gates:
+    - "exact source-backed repair map"
+    - "handoff-0844 ordinary-route evaluation"
+    - "six preserved P12-T06 dashboard payload hashes"
+    - "dashboard freshness and six focused regressions"
+    - "project-system classification resolver signal documentation and claim-language checks"
+    - "task-index current-frontier and compact-frontier rendering"
+    - "tracked memory synchronization and validate-only"
+    - "affected research-control validation with zero errors"
+  pending_gates:
+    - "one normal governed checkpoint"
+  checkpoint:
+    invoked: false
+    invocation_count: 0
+    reason: "One normal governed checkpoint remains authorized after all precheckpoint gates pass."
+  staging:
+    attempted: false
+    index_changed: false
+  commit:
+    created: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 80 lease parity repository identity maximum reasoning effort exact 51-path dirty manifest predecessor inactivity and immutable recovery route were verified before one claim and consume."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Every corrected value is uniquely fixed by strict YAML validator policy registry or tracked route state."
+      - "The task-local receipt binds before and after source hashes and all six preserved dashboard hashes."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "The dashboard freshness check and six focused regressions pass with all six protected hashes unchanged."
+      - "Classification resolver signal documentation-impact claim-language and diff checks pass."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "One normal governed checkpoint is authorized and has not yet been invoked."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Task index current frontier and compact frontier were rendered fresh from RT-20260723-012 and handoff-0845."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory derivatives were synchronized from canonical sources and registries and validate-only passed."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation passes with historical warnings only and no current hard failure."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  push_authorized: false
+  publication_authorized: false
+  proof_authority: false
+
+three_tier_claim_summary:
+  adopted_objects: []
+  accepted_evidence_preconditions:
+    - "The generation-79 blocker preserves one failed research-control gate after the dashboard payload passed."
+    - "Current validator and registry sources uniquely determine the repaired contract values."
+  open_or_blocked_physical_targets:
+    - "source_ontology_derivation"
+    - "general_eqsrc"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+  forbidden_overread:
+    - "contract repair as scientific progress"
+    - "dashboard validation as theorem truth or physics evidence"
+    - "checkpoint readiness as proof promotion or publication authority"
+
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "none"
+  milestone: "none"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "The recovery changes project-control contract fields and hashes only."
+  downstream_unlocked:
+    - "P12-T06_cumulative_checkpoint"
+  downstream_still_blocked:
+    - "P12-T07_until_governed_checkpoint_commits"
+    - "source_ontology_derivation"
+    - "general_eqsrc"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+    - "benchmark_promotion"
+    - "external_publication"
+
+next_work_item:
+  plan_task_id: "P12-T07"
+  title: "Evaluate the v21 governance and methodology reforms"
+  worker_skill: "continue-research"
+  role_family: "external-red-team-reviewer@0.1.0"
+  route_label: "methodology-evaluation-packet"
+  dependency_ready_after_checkpoint: true
+  executed: false
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1000
+    relationship_row_count: 4950
+    semantic_row_count: 1000
+    vault_row_count: 1000
+    local_cache_only_warning_count: 11
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-SKILL-IMPROVE-PROJECT-SYSTEM --json"
+      query_type: "lookup"
+      query_text: "MD-SKILL-IMPROVE-PROJECT-SYSTEM"
+      returned_object_ids:
+        - "MD-SKILL-IMPROVE-PROJECT-SYSTEM"
+  canonical_inspections:
+    - object_id: "MD-SKILL-IMPROVE-PROJECT-SYSTEM"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: ".codex/skills/improve-project-system/SKILL.md"
+      source_hash: "09396af30259f10892734eb12d00d89c1a68495f7ebfb01a67eb7f6af936e8f2"
+  authority_note: "Obsidian wiki semantic relationship and .local layers are retrieval only and not authority; tracked canonical sources registries and research-control state govern this recovery."
+
+project_improvement_signals: []
+project_improvement_sidecar_created: false
+project_improvement_bridge:
+  required: false
+  sidecar_path: ""
+  recursive_goal_recovery_required: false
+  reason: "The exact P12-T06 contract-parity repair is complete; only one normal governed checkpoint remains before P12-T07."
+
+forbidden_conclusion_summary: "This recovery supplies no authority to change validator semantics dashboard semantics scientific sources ontology candidates ledgers Distance-to-GR status benchmark status proof publication or Gate Chair decisions and does not execute P12-T07."
+verdict: "p12_t06_contract_parity_recovery_pass_checkpoint_ready_no_physics_delta"
+next_recommendation: "Run the one authorized governed checkpoint for AJ-RT-20260723-012-001. Only after it commits, route one fresh bounded P12-T07 continue-research frame."

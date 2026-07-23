@@ -1,0 +1,77 @@
+{
+  "schema_id": "p12_t06_research_control_contract_parity_recovery_receipt_v1",
+  "status": "PASS_CHECKPOINT_READY",
+  "task_id": "RT-20260723-012",
+  "job_id": "AJ-RT-20260723-012-001",
+  "plan_task_id": "P12-T06",
+  "strategy_id": "repair_p12_t06_research_control_contract_parity_v1",
+  "worker_skill": "improve-project-system",
+  "route_sha256": "c1d2f44331b4e30388e26cd3a1a67f3c065adadc4b039ef517a0e736ebd978cc",
+  "source_blocker": {
+    "path": "research_control/tasks/RT-20260723-011/artifacts/validation_blocker_checkpoint_research_control_contract_parity_v1.yaml",
+    "sha256": "393d98327e7667cb91a670cfa8cf469f05beb327afdb8be063943ea555b039e7",
+    "sealed_error_count": 16,
+    "failed_gate_id": "research_control_diff",
+    "failed_staged_tree": "0d3355e8c5227d3bcca994581eb325e0ba47656e"
+  },
+  "live_projection": {
+    "error_count_before": 19,
+    "relationship_to_sealed_blocker": "The final blocked handoff expands the same sealed ordinary-route contract family into additional field-level findings; it does not add a new repair scope.",
+    "validator_behavior_changed": false
+  },
+  "repaired_sources": [
+    {
+      "path": "research_control/tasks/RT-20260723-011/DDR-20260723-011.md",
+      "sha256_before": "34cde7839bc016ab21dd274087be11494aceb1fac272da79975a4ab027d5eb48",
+      "sha256_after": "f325e2e110656bb0d8f36b15190d5c06c6f8cf092c25b119d0d533d4727170ec",
+      "repair": "quote strict-YAML frontmatter scalars"
+    },
+    {
+      "path": "research_control/tasks/RT-20260723-011/jobs/AJ-RT-20260723-011-001.yaml",
+      "sha256_before": "32c2db3eb1d753f14060adb4905b967049287cad3df3830b6de935eead545f6e",
+      "sha256_after": "f0580105ad20f9d9e67e2a97d6a2bc1a7ece30bdf654fef6c9347cac6a933fb3",
+      "repair": "restore exact memory-authority and process-receipt exclusion terms"
+    },
+    {
+      "path": "research_control/tasks/RT-20260723-011/jobs/completions/AJC-AJ-RT-20260723-011-001.yaml",
+      "sha256_before": "822be21279df2e9b3edc2612f2f74a735834bc39ef54d994b019a0c0a06b76d3",
+      "sha256_after": "05b42f0277189be19fd73943f66d8a49747bff486c927c1023824b1374326884",
+      "repair": "restore command results memory authority authorization layers exact dual-budget acceptance and route-selection authority limits"
+    },
+    {
+      "path": "research_control/tasks/RT-20260723-011/roles/project-control-maintainer@0.2.0--RT-20260723-011.yaml",
+      "sha256_before": "4eb68c0a828478efe1e6abd3a6ea6c5e94d7231c5e7e268e7f88c3c2fb4246b3",
+      "sha256_after": "16e53ab07b5c3cc4cceb2d9d8a896f9af95e9f3be8609a31ada639a2b53eafd1",
+      "repair": "restore exact ROLE_EXECUTION_REGISTRY justification parity"
+    },
+    {
+      "path": "research_control/handoffs/handoff-0844.yaml",
+      "sha256_before": "82359a925baee97a6f1ed7bc175e74411154e6df2f574b77da6a29234f7bdbfe",
+      "sha256_after": "08311be82786edbee1575a54b07413ba134025b0992f103759d9867ab6f2d71b",
+      "repair": "restore source-valid ordinary-route guard active-state bifurcation and repaired completion identity"
+    }
+  ],
+  "preserved_payload_hashes": {
+    "dashboard": "5fc9a671fe5212d6623905dc7d4cef9a89d56ba9f189f42caf01c4c7587e1c32",
+    "dashboard_markdown": "9cf776a09870663a6ce7eca104b862ecc287edb18026b1e9fbab5fedb2d96a22",
+    "privacy_notice": "e3df4854d59e4679f4a564e8fc2dc5fff9bcb3302668b736419b3e05b6244b83",
+    "freshness": "64074e6a073e22d69c0b0cb8198224f9f2058f38f4d49281cc81c1f9bd9b596a",
+    "compact_receipt": "4cc99fbe23855f6e59e21f46a66fe195d2f8a04c4239df5a003cd2bb2c5578e2",
+    "validation": "87c6eab0dd5515f0237b2c189bfe64767ae3575b24f1b08e9014d06eca9cf80f"
+  },
+  "checkpoint": {
+    "invocation_count": 0,
+    "status": "PENDING_ONE_NORMAL_CHECKPOINT",
+    "legacy_validation_used": false
+  },
+  "authority_limits": {
+    "scientific_status_changed": false,
+    "distance_to_gr_changed": false,
+    "ontology_or_source_law_changed": false,
+    "dashboard_semantics_changed": false,
+    "validator_semantics_changed": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "publication_authorized": false
+  }
+}
