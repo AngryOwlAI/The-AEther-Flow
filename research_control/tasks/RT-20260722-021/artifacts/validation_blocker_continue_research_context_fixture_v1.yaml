@@ -1,0 +1,56 @@
+schema_id: "v21_continue_research_context_fixture_compatibility_blocker_v1"
+blocker_id: "BLOCK-P15-T01-CONTINUE-RESEARCH-CONTEXT-FIXTURE-001"
+task_id: "RT-20260722-021"
+job_id: "AJ-RT-20260722-021-001"
+plan_task_id: "P15-T01"
+detected_at: "2026-07-23T01:56:44Z"
+status: "blocked_precheckpoint_project_system_repair_required"
+failing_command: ".venv/bin/python -m unittest tests.test_publication_process_validation tests.test_research_control tests.test_family_freeze_admission tests.test_dual_budget_policy tests.test_ordinary_route_guard"
+observed_test_count: 171
+observed_failure_count: 1
+observed_error_count: 0
+failed_test: "tests.test_research_control.ResearchControlTests.test_continue_research_reports_director_context_packet"
+focused_reproduction_command: ".venv/bin/python -m unittest tests.test_research_control.ResearchControlTests.test_continue_research_reports_director_context_packet"
+focused_reproduction_status: "FAIL"
+defect:
+  location: "tests/test_research_control.py"
+  symbol: "ResearchControlTests.test_continue_research_reports_director_context_packet"
+  stale_expected_plan_task_id: "P14-T02"
+  live_selected_plan_task_id: "P15-T03"
+  live_handoff_id: "handoff-0830"
+  live_routing_snapshot_status: "PASS"
+  behavior: "The live-context integration test hard-codes an obsolete plan-task identifier instead of reading the selected task from the current authoritative handoff, so every lawful later handoff eventually makes the test shard fail."
+  scientific_or_research_payload_defect: false
+required_recovery:
+  route: "repair_continue_research_context_fixture_live_route_binding_v1"
+  worker_skill: "improve-project-system"
+  role_family: "validator-engineer@0.2.0"
+  exact_behavior_change: "Replace the hard-coded P14-T02 expectation with the current handoff ordinary_route_guard.selected_plan_task_id while retaining an explicit equality assertion for the continuation status packet."
+  focused_regression: "Prove the live-context test passes for handoff-0830 and remains bound to the handoff-declared route rather than a historical plan-task literal."
+  preserved_transaction: "Keep the complete RT-20260722-021 P15-T01 payload and all scientific boundaries unchanged, repair only the stale project-system fixture under a separately governed AgentJob, rerun every required gate, refresh derivatives, and checkpoint the combined transaction."
+  next_plan_item_after_recovery: "P15-T03"
+  next_plan_item_executed: false
+task_local_evidence:
+  exact_gr_package_validation_status: "PASS_161_CHECKS"
+  publication_process_validation_status: "PASS"
+  routing_snapshot_validation_status: "PASS"
+  research_control_validation_status: "PASS"
+  research_control_diff_validation_status: "PASS"
+  memory_bootstrap_status: "PASS"
+  memory_validate_only_status: "PASS"
+  documentation_impact_status: "PASS"
+  project_improvement_signal_validation_status: "PASS"
+  claim_language_status: "PASS"
+  git_diff_check_status: "PASS"
+authority_boundary:
+  p15_t01_payload_complete: true
+  p15_t01_checkpoint_complete: false
+  p15_t01_plan_completion_finalized: false
+  p15_t03_execution_ready: false
+  tests_or_shared_validator_edit_authorized_by_current_job: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  ontology_or_source_law_adopted: false
+  external_review_or_publication_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false

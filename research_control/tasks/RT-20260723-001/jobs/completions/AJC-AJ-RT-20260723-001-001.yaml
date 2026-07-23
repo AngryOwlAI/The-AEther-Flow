@@ -1,0 +1,360 @@
+validation_status: "FAIL"
+job_id: "AJ-RT-20260723-001-001"
+completion_id: "AJC-AJ-RT-20260723-001-001"
+task_id: "RT-20260723-001"
+task_type: "project_system_task_taxonomy_event_store_receipt_compatibility_recovery"
+decision_id: "DDR-20260723-001"
+role_id: "validator-engineer"
+source_role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260723-001"
+status: "completed"
+final_repository_validation_status: "FAIL_PRECHECKPOINT_P10_T07_CONTENT_ADDRESS_RESEAL_REQUIRED"
+created_at: "2026-07-23T06:17:10Z"
+started_at: "2026-07-23T06:17:10Z"
+completed_at: "2026-07-23T06:25:44Z"
+objective: "Normalize three explicit recovery-task taxonomies, reseal the design-only P10-T05 architecture packet to the current governed metrics consumer hash, regenerate its deterministic receipts, preserve P15-T01, and run one normal governed checkpoint before P15-T03."
+completion_summary: "All three explicit recovery-task taxonomies now use existing valid v21 values, and the P10-T05 architecture contract plus deterministic validation and compact receipt now bind the current governed metrics consumer hash with every activation and authority flag preserved. Focused taxonomy and P10-T05 tests pass, as do the exact-path policy and 161-check P15-T01 package. The pre-checkpoint P10 migration-readiness test then exposed three deterministic P10-T07 content-addressed identity drifts caused by the new P10-T05 contract hash. Those RT-20260722-002 artifacts are outside this immutable AgentJob write set, so the checkpoint was not invoked, no files were staged or committed, and one fresh bounded recovery is required before P15-T03."
+objective_result: "taxonomy_and_p10_t05_repaired_precheckpoint_blocked_p10_t07_content_address_identity"
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 66
+  passes_consumed: 65
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:66"
+  handoff_token: "6b6e7acd5b8f197d1f80051549bffbd6e632517e0d2b6811"
+  relay_claim_token: "7d4d7a932cf367cdf36c9326c7abbb026231b9f5fc82e365"
+  immutable_route_hash: "a3242e7bc177d3c273a68fe8ba0ef524769891106831322f31bd871f6d54eb5a"
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+
+transaction_status: "blocked_precheckpoint_p10_t07_content_address_reseal_required"
+result_disposition: "bounded_repairs_implemented_distinct_downstream_identity_blocker_recorded"
+work_item_status: "blocked"
+checkpoint_commit: "none_precheckpoint_gate_failed"
+checkpoint_invocation_count: 0
+checkpoint_staged: false
+legacy_validation_used: false
+project_system_change_only: true
+scientific_claims_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "FAIL_PRECISE_DOWNSTREAM_BLOCKER"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  observed_durable_outputs:
+    physics: []
+    project_system:
+      - "research_control/tasks/RT-20260722-022/00_TASK.yaml"
+      - "research_control/tasks/RT-20260722-023/00_TASK.yaml"
+      - "research_control/tasks/RT-20260722-024/00_TASK.yaml"
+      - "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_contract.json"
+      - "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_validation.json"
+      - "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_compact_receipt.json"
+      - "research_control/tasks/RT-20260723-001/artifacts/task_taxonomy_event_store_receipt_compatibility_recovery_receipt.json"
+  accepted_criteria:
+    physics: []
+    project_system:
+      - "RT-20260722-022 through RT-20260722-024 pass explicit v21 task-taxonomy validation"
+      - "the P10-T05 source binding equals the current governed metrics consumer SHA-256"
+      - "the P10-T05 validation and compact receipt are deterministic and pass"
+      - "event-store activation and authority flags remain unchanged"
+      - "all protected P15-T01 and exact-path policy bytes remain unchanged"
+      - "one normal governed checkpoint commits without legacy validation"
+  acceptance_outcomes:
+    - criterion: "RT-20260722-022 through RT-20260722-024 pass explicit v21 task-taxonomy validation"
+      status: "PASS"
+    - criterion: "the P10-T05 source binding equals the current governed metrics consumer SHA-256"
+      status: "PASS"
+    - criterion: "the P10-T05 validation and compact receipt are deterministic and pass"
+      status: "PASS"
+    - criterion: "event-store activation and authority flags remain unchanged"
+      status: "PASS"
+    - criterion: "all protected P15-T01 and exact-path policy bytes remain unchanged"
+      status: "PASS"
+    - criterion: "one normal governed checkpoint commits without legacy validation"
+      status: "BLOCKED_NOT_ATTEMPTED_P10_T07_PRECONDITION"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+physics_payload_admission_result:
+  status: "admitted"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed: false
+  physics_promotion_authorized: false
+
+ordinary_route_guard_admission_result:
+  status: "PASS"
+  source_handoff_id: "handoff-0829"
+  selected_plan_task_id: "P15-T01"
+  guard_outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  system_success_counts_as_physics: false
+  system_success_counts_as_distance_to_gr: false
+
+artifacts:
+  - "research_control/tasks/RT-20260722-022/00_TASK.yaml"
+  - "research_control/tasks/RT-20260722-023/00_TASK.yaml"
+  - "research_control/tasks/RT-20260722-024/00_TASK.yaml"
+  - "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_contract.json"
+  - "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_validation.json"
+  - "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_compact_receipt.json"
+  - "research_control/tasks/RT-20260723-001/artifacts/task_taxonomy_event_store_receipt_compatibility_recovery_receipt.json"
+  - "research_control/tasks/RT-20260723-001/artifacts/validation_blocker_p10_t07_content_address_reseal_v1.yaml"
+
+output_paths:
+  - "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_contract.json"
+  - "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_validation.json"
+  - "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_compact_receipt.json"
+  - "research_control/tasks/RT-20260722-022/00_TASK.yaml"
+  - "research_control/tasks/RT-20260722-023/00_TASK.yaml"
+  - "research_control/tasks/RT-20260722-024/00_TASK.yaml"
+  - "research_control/tasks/RT-20260723-001/**"
+  - "research_control/handoffs/handoff-0834.yaml"
+  - "research_control/handoffs/handoff-0834.md"
+  - "research_control/program_state.yaml"
+
+artifact_receipts:
+  - path: "research_control/tasks/RT-20260723-001/artifacts/task_taxonomy_event_store_receipt_compatibility_recovery_receipt.json"
+    sha256: "986ff62d58eed8e7b9d7ffc7b6308ac2fcc9cd284dbd82346861b84a48dabc9e"
+  - path: "research_control/tasks/RT-20260723-001/artifacts/validation_blocker_p10_t07_content_address_reseal_v1.yaml"
+    sha256: "5ca95570762d5993d73cde6f05d52a3a990b50e80941602918552d7e87542c97"
+  - path: "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_contract.json"
+    sha256: "cc7d678328f2242cd49a83ce9a3eaa47e30e830d48a8b70a6a29434bb4a6477d"
+  - path: "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_validation.json"
+    sha256: "89428e8b76587183ed595060a4f907060485406890d62c51b5c996373b89393a"
+  - path: "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_compact_receipt.json"
+    sha256: "dac6d03fcc3ebbdac38329f830ebf1706fa1d6be30ec315e433268dfdfc44ebf"
+
+compatibility_recovery_result:
+  normalized_task_ids:
+    - "RT-20260722-022"
+    - "RT-20260722-023"
+    - "RT-20260722-024"
+  normalized_work_kind: "benchmark_or_recovery"
+  normalized_milestone: "not_applicable"
+  taxonomy_repository_status: "PASS"
+  explicit_required_error_count: 0
+  stronger_science_inference_count: 0
+  p10_t05_source_path: "scripts/research_control/report_physics_progress_metrics.py"
+  p10_t05_source_sha256: "46289a1b861e350b4d0a0bd27de3a8fbff8c9589de0a019ecd36d3fdd2a59112"
+  p10_t05_contract_sha256: "cc7d678328f2242cd49a83ce9a3eaa47e30e830d48a8b70a6a29434bb4a6477d"
+  p10_t05_validation_status: "PASS"
+  event_store_activation_changed: false
+  authority_flags_changed: false
+  p15_t01_package_validation_status: "PASS_161_CHECKS"
+  exact_path_policy_validation_status: "PASS"
+  p10_t07_artifact_identity_status: "FAIL_DRIFT_3"
+  checkpoint_invoked: false
+  p15_t03_executed: false
+
+command_results:
+  - command: ".venv/bin/python scripts/research_control/task_taxonomy.py --validate-repository --json"
+    status: "PASS_EXPLICIT_REQUIRED_ERROR_COUNT_0"
+  - command: ".venv/bin/python research_control/tasks/RT-20260721-007/artifacts/validate_v21_event_store_architecture.py --write --json"
+    status: "PASS"
+  - command: ".venv/bin/python research_control/tasks/RT-20260721-007/artifacts/validate_v21_event_store_architecture.py --check --json"
+    status: "PASS"
+  - command: ".venv/bin/python -m unittest -v tests.test_task_taxonomy tests.test_event_store_architecture tests.test_v21_p10_migration_readiness"
+    status: "FAIL_16_PASSED_P10_T07_SETUP_ERROR"
+  - command: "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python research_control/tasks/RT-20260722-002/artifacts/artifact_identity.py --check --json"
+    status: "FAIL_DRIFT_3_FAILED_CHECK_COUNT_0"
+  - command: ".venv/bin/python research_control/tasks/RT-20260722-023/artifacts/validate_exact_path_whitespace_policy.py --check --json"
+    status: "PASS"
+  - command: ".venv/bin/python research_control/tasks/RT-20260722-021/artifacts/validate_exact_gr_interpretive_package.py --check --json"
+    status: "PASS_161_CHECKS"
+
+validation_summary:
+  status: "FAIL_PRECHECKPOINT_DISTINCT_DOWNSTREAM_IDENTITY_DRIFT"
+  passing_gates:
+    - "task taxonomy repository validation"
+    - "task taxonomy focused unit tests"
+    - "P10-T05 architecture validation and determinism"
+    - "event-store activation and authority preservation"
+    - "exact-path whitespace policy"
+    - "P15-T01 package 161-check validation"
+  failed_gates:
+    - gate: "P10-T07 artifact identity"
+      status: "FAIL_DRIFT_3"
+      blocker_path: "research_control/tasks/RT-20260723-001/artifacts/validation_blocker_p10_t07_content_address_reseal_v1.yaml"
+  checkpoint:
+    invoked: false
+    reason: "A required focused P10 migration-readiness prerequisite failed before checkpoint."
+  staging:
+    attempted: false
+    index_changed: false
+  commit:
+    created: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 66 lease parity repository identity maximum reasoning effort exact 90-path dirty manifest and immutable P15-T01 recovery route were verified before the single worker invocation."
+      - "The ordinary-route admission remains bound to tracked handoff-0829 while handoff-0833 and its exact blocker provide the recovery evidence."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "All three explicit recovery-task taxonomies pass the repository adapter with zero required explicit errors and zero stronger-science inferences."
+      - "The P10-T05 architecture contract validation and compact receipt deterministically pass with exactly one updated source binding and unchanged activation and authority flags."
+  post_write:
+    status: "FAIL"
+    evidence:
+      - "The pre-checkpoint P10 migration-readiness suite fails closed because P10-T07 has exactly three deterministic content-addressed identity drifts after the P10-T05 contract hash changed."
+      - "The exact-path policy P15-T01 package documentation-impact signal memory and direct research-control record gates otherwise pass or preserve their prior status."
+  post_checkpoint:
+    status: "NOT_RUN"
+    evidence:
+      - "The normal checkpoint was not invoked because the required P10-T07 focused prerequisite failed before staging and its repair paths are outside this immutable AgentJob."
+      - "No staging commit legacy-validation fallback or P15-T03 execution occurred."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Current-frontier compact-frontier and task-index derivatives were regenerated from finalized tracked control state."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "The project memory bootstrap and validate-only gates pass with five local-cache-only warnings and no blocking finding."
+  claim_language_linter:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "Changed-surface claim-language validation preserves project-system-only no-promotion no-event-store-activation and no-completed-derivation boundaries; remaining findings are historical warnings."
+
+authorization_layers:
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  canonical_ontology_edit_authorized: false
+  ontology_selection_authorized: false
+  physical_interpretation_establishment_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "none"
+  milestone: "none"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "The packet changes project-control taxonomy values and deterministic source-hash receipts only."
+  downstream_unlocked:
+    - "P10-T05_current_source_binding"
+    - "explicit_recovery_task_taxonomy_validation"
+  downstream_still_blocked:
+    - "P10-T07_current_content_address_identity"
+    - "P15-T01_checkpoint"
+    - "P15-T03_execution"
+    - "source_ontology_derivation"
+    - "general_eqsrc"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+    - "benchmark_promotion"
+    - "external_publication"
+
+required_next_packet:
+  task_type: "project_system_p10_t07_content_address_identity_recovery"
+  task_taxonomy:
+    schema_id: "v21_task_taxonomy_v1"
+    work_kind: "benchmark_or_recovery"
+    milestone: "not_applicable"
+    candidate_family: "p10_t07_content_address_identity_compatibility"
+    result_kind: "completed_or_precisely_blocked"
+    authority: "project_control"
+    scope: "project_system"
+
+required_recovery:
+  strategy_id: "reseal_p10_t07_content_addressed_identity_after_p10_t05_v1"
+  route_label: "project-system-recovery"
+  role_family: "validator-engineer@0.2.0"
+  worker_skill: "improve-project-system"
+  work_item_id: "P15-T01"
+  blocker_path: "research_control/tasks/RT-20260723-001/artifacts/validation_blocker_p10_t07_content_address_reseal_v1.yaml"
+  blocker_sha256: "5ca95570762d5993d73cde6f05d52a3a990b50e80941602918552d7e87542c97"
+  next_plan_item_after_recovery: "P15-T03"
+  next_plan_item_executed: false
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 996
+    relationship_row_count: 4919
+    semantic_row_count: 996
+    vault_row_count: 996
+    local_cache_only_warning_count: 5
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search 'task taxonomy event store source hash compatibility recovery' --limit 10 --json"
+      query_type: "search"
+      query_text: "task taxonomy event store source hash compatibility recovery"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-V21-TASK-TAXONOMY-POLICY"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/v21_task_taxonomy_policy.md"
+      source_hash: "7460702270a26079f39f64ced2b5934e6a67a721983d913e4d3d114917ecca0b"
+    - object_id: "MD-RESEARCH-CONTROL-TASKS-RT-20260721-007-V21-EVENT-STORE-ARCHITECTURE-DECISION"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_decision.md"
+      source_hash: "15584ad6a4592a2b3e401a2b081a5e05a4f3d407ab5611e5fa65ffe2b386b67f"
+  authority_note: "Generated wiki semantic Obsidian relationship and .local retrieval surfaces are retrieval aids and not authority; the registered v21 plan, task-taxonomy policy, P10-T05 design decision, tracked handoff-0833, and exact blocker controlled this recovery."
+
+project_improvement_signals: []
+project_improvement_sidecar_created: false
+handoff_id: "handoff-0834"
+next_plan_task_id: "P15-T03"
+next_plan_task_execution_ready: false
+next_plan_task_executed: false
+notes: "This generation makes bounded machine-verifiable progress and records a distinct deterministic downstream identity blocker. It does not claim checkpoint completion, scientific progress, event-store activation, publication authority, or P15-T03 execution."

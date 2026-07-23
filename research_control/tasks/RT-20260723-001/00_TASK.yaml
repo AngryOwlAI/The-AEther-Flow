@@ -1,0 +1,72 @@
+validation_status: "FAIL"
+task_id: "RT-20260723-001"
+task_type: "project_system_task_taxonomy_event_store_receipt_compatibility_recovery"
+title: "Normalize recovery taxonomy and reseal the P10-T05 source binding"
+task_taxonomy:
+  schema_id: "v21_task_taxonomy_v1"
+  work_kind: "benchmark_or_recovery"
+  milestone: "not_applicable"
+  candidate_family: "task_taxonomy_and_event_store_receipt_compatibility"
+  result_kind: "completed_or_precisely_blocked"
+  authority: "project_control"
+  scope: "project_system"
+status: "blocked"
+created_at: "2026-07-23T06:17:10Z"
+updated_at: "2026-07-23T06:25:44Z"
+closed_at: "2026-07-23T06:25:44Z"
+parent_task_id: "RT-20260722-024"
+parent_handoff_id: "handoff-0833"
+supersedes_active_routing_task_id: "RT-20260722-024"
+current_decision_id: "DDR-20260723-001"
+current_job_id: "AJ-RT-20260723-001-001"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260723-001"
+requires_human_gate: false
+human_authorization_note: "Generation 66 of the immutable user-requested relay routes exactly one improve-project-system frame to normalize three invalid explicit taxonomies, reseal one P10-T05 source binding, and retry the preserved P15-T01 checkpoint."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P15"
+  plan_task_id: "P15-T01"
+  recovery_for_plan_task_id: "P15-T01"
+  next_plan_task_id: "P15-T03"
+objective: "Normalize RT-20260722-022 through RT-20260722-024 to existing valid v21 taxonomy values, bind the design-only P10-T05 architecture packet to the current governed metrics consumer hash, regenerate its validation and compact receipt, and invoke one normal checkpoint without changing P15-T01 or executing P15-T03."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system repository-shard compatibility only; preserve every P15-T01 scientific and Distance-to-GR boundary unchanged."
+route_label: "normalize_recovery_task_taxonomy_and_reseal_p10_t05_source_hash_v1"
+project_system_change_only: true
+dual_budget_category: "system_bearing"
+primary_budget: "project_system"
+scientific_claims_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+claim_boundary_id: "CB-V21-P15-T01-TAXONOMY-EVENT-STORE-RECEIPT-RECOVERY-001"
+claim_boundary:
+  allowed_scope: "Three explicit task_taxonomy field normalizations; one P10-T05 contract source hash reseal; deterministic regeneration of its validation and compact receipt; one task-local recovery receipt; standard control records and generated derivatives; one normal checkpoint for the preserved P15-T01 transaction."
+  immutable_predecessor_task: "RT-20260722-024"
+  immutable_predecessor_job: "AJ-RT-20260722-024-001"
+  immutable_predecessor_handoff: "handoff-0833"
+  source_blocker_path: "research_control/tasks/RT-20260722-024/artifacts/validation_blocker_checkpoint_repository_shard_taxonomy_and_event_store_v1.yaml"
+  source_blocker_sha256: "5e79a9626bc8698b01a5f7fde84cace51e4ea3da21b259adb3a87d528c8c5a58"
+  next_control_handoff: "handoff-0834"
+  taxonomy_record_count: 3
+  event_store_source_binding_count_changed: 1
+  event_store_activation_changed: false
+  p15_t01_scientific_payload_changed: false
+  p15_t03_executed: false
+  scientific_claims_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+documentation_impact_id: "DI-RT-20260723-001-001"
+completion_id: "AJC-AJ-RT-20260723-001-001"
+output_artifacts:
+  - "research_control/tasks/RT-20260723-001/artifacts/task_taxonomy_event_store_receipt_compatibility_recovery_receipt.json"
+  - "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_contract.json"
+  - "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_validation.json"
+  - "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_compact_receipt.json"
+  - "research_control/handoffs/handoff-0834.yaml"
+  - "research_control/handoffs/handoff-0834.md"
+closure_status: "taxonomy_and_p10_t05_repaired_precheckpoint_blocked_p10_t07_content_address_identity_p15_t03_pending"
+summary: "Three explicit recovery-task taxonomies and the P10-T05 current source binding now pass their focused gates with authority unchanged. The pre-checkpoint migration-readiness gate exposed three deterministic P10-T07 content-addressed identity drifts outside this immutable job, so nothing was staged or committed and P15-T03 remains pending."
+next_recommended_action: "Run one fresh governed Validator Engineer recovery that regenerates the exact P10-T07 content-addressed identity outputs from the current P10-T05 contract, preserves the predecessor copy, proves migration readiness, and invokes one normal checkpoint without legacy validation before P15-T03."

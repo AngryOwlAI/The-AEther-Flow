@@ -1,0 +1,65 @@
+validation_status: "FAIL"
+task_id: "RT-20260722-022"
+task_type: "project_system_continue_research_context_live_route_fixture_recovery"
+title: "Bind the continue-research Director-context fixture to the live handoff route"
+task_taxonomy:
+  schema_id: "v21_task_taxonomy_v1"
+  work_kind: "benchmark_or_recovery"
+  milestone: "not_applicable"
+  candidate_family: "continue_research_context_live_route_fixture"
+  result_kind: "completed_or_precisely_blocked"
+  authority: "project_control"
+  scope: "project_system"
+status: "blocked"
+created_at: "2026-07-23T02:30:17Z"
+updated_at: "2026-07-23T03:00:44Z"
+closed_at: "2026-07-23T03:00:44Z"
+parent_task_id: "RT-20260722-021"
+parent_handoff_id: "handoff-0830"
+supersedes_active_routing_task_id: "RT-20260722-021"
+current_decision_id: "DDR-20260722-022"
+current_job_id: "AJ-RT-20260722-022-001"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260722-022"
+requires_human_gate: false
+human_authorization_note: "Generation 63 of the immutable user-requested relay routes exactly one improve-project-system frame to repair the stale live-route fixture and checkpoint the preserved P15-T01 transaction."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P15"
+  plan_task_id: "P15-T01"
+  recovery_for_plan_task_id: "P15-T01"
+  next_plan_task_id: "P15-T03"
+objective: "Replace the historical P14-T02 expectation with an explicit equality against the current authoritative handoff selection, prove the focused and 171-test regressions, preserve RT-20260722-021 and handoff-0830 bytes, and prepare their combined transaction for one governed checkpoint before P15-T03."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system fixture compatibility only; preserve every P15-T01 scientific and Distance-to-GR boundary unchanged."
+route_label: "repair_continue_research_context_fixture_live_route_binding_v1"
+project_system_change_only: true
+dual_budget_category: "system_bearing"
+primary_budget: "project_system"
+scientific_claims_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+claim_boundary_id: "CB-V21-P15-T01-LIVE-ROUTE-FIXTURE-REPAIR-001"
+claim_boundary:
+  allowed_scope: "One live-handoff test binding, one task-local receipt, standard recovery records, active routing supersession, generated derivative refresh, and atomic checkpoint preparation for the preserved RT-20260722-021 transaction."
+  immutable_predecessor_task: "RT-20260722-021"
+  immutable_predecessor_job: "AJ-RT-20260722-021-001"
+  immutable_predecessor_handoff: "handoff-0830"
+  next_control_handoff: "handoff-0831"
+  p15_t01_scientific_payload_changed: false
+  p15_t03_executed: false
+  scientific_claims_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+documentation_impact_id: "DI-RT-20260722-022-001"
+completion_id: "AJC-AJ-RT-20260722-022-001"
+output_artifacts:
+  - "research_control/tasks/RT-20260722-022/artifacts/continue_research_context_live_route_fixture_repair_receipt.json"
+  - "research_control/tasks/RT-20260722-022/artifacts/validation_blocker_hash_bound_blank_eof_checkpoint_v1.yaml"
+  - "research_control/handoffs/handoff-0831.yaml"
+  - "research_control/handoffs/handoff-0831.md"
+closure_status: "live_route_fixture_bound_full_shard_pass_checkpoint_blocked_four_hash_bound_blank_eof_paths_p15_t03_pending"
+summary: "The Director-context fixture repair and its focused and 171-test proofs pass while P15-T01 and handoff-0830 remain byte-preserved. The normal governed checkpoint did not commit because four immutable hash-bound P15-T01 files trigger blank-at-EOF findings; P15-T01 recovery remains selected and P15-T03 remains pending."
+next_recommended_action: "Run one fresh governed project-system recovery that preserves the four exact P15-T01 hashes while adding only an exact-path whitespace classification and then reruns the normal checkpoint; do not use legacy validation or execute P15-T03."

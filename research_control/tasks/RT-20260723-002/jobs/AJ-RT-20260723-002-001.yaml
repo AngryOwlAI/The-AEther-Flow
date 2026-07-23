@@ -1,0 +1,358 @@
+job_id: "AJ-RT-20260723-002-001"
+task_id: "RT-20260723-002"
+decision_id: "DDR-20260723-002"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260723-002"
+status: "completed"
+validation_status: "PASS"
+created_at: "2026-07-23T06:55:46Z"
+started_at: "2026-07-23T06:55:46Z"
+completed_at: "2026-07-23T07:12:45Z"
+requires_human_gate: false
+human_authorization_note: "The user-authorized recursive relay immutably routed generation 67 through improve-project-system for this exact P10-T07 identity and RT-001 routing-snapshot recovery."
+objective: "Reseal the three P10-T07 identity drifts from the current P10-T05 contract, preserve the predecessor copy, repair the RT-001 role and handoff routing snapshot, prove migration readiness, and run one normal governed checkpoint before P15-T03."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system identity and routing compatibility only; no derivation milestone advances."
+route_label: "reseal_p10_t07_identity_and_repair_rt001_routing_snapshot_v1"
+route_reason: "Generation 66 isolated three deterministic P10-T07 content-address drifts plus an RT-001 job-role allowlist mismatch and missing literal Markdown handoff identity."
+plan_task_id: "P15-T01"
+project_system_change_only: true
+scientific_claims_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  candidate_family: "not_applicable"
+  assumption_delta:
+    - "No scientific assumption changes; three deterministic identity outputs and two routing-snapshot records are repaired from already-authorized sources."
+  materiality_basis: "Restores repository validation for the already-authorized P15-T01 transaction without changing scientific payload, event-store activation, artifact-policy semantics, or authority."
+  source_basis:
+    - "MD-RESEARCH-CONTROL-TASKS-RT-20260722-002-ARTIFACT-PATH-POLICY"
+    - "research_control/handoffs/handoff-0834.yaml"
+    - "research_control/tasks/RT-20260723-001/artifacts/validation_blocker_p10_t07_content_address_reseal_v1.yaml"
+  expected_artifact_paths:
+    - "research_control/tasks/RT-20260722-002/artifacts/artifact_refs.json"
+    - "research_control/tasks/RT-20260722-002/artifacts/ca/cc7d678328f2242cd49a83ce9a3eaa47e30e830d48a8b70a6a29434bb4a6477d.json"
+    - "research_control/tasks/RT-20260722-002/artifacts/compact_receipt.json"
+    - "research_control/tasks/RT-20260723-001/roles/validator-engineer@0.2.0--RT-20260723-001.yaml"
+    - "research_control/handoffs/handoff-0834.md"
+    - "research_control/tasks/RT-20260723-002/artifacts/p10_t07_identity_routing_snapshot_recovery_receipt.json"
+  project_system_justification: "The packet repairs deterministic repository-control compatibility records only; it creates no physics result or publication action."
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  expected_durable_outputs:
+    physics: []
+    project_system:
+      - "research_control/tasks/RT-20260722-002/artifacts/artifact_refs.json"
+      - "research_control/tasks/RT-20260722-002/artifacts/ca/cc7d678328f2242cd49a83ce9a3eaa47e30e830d48a8b70a6a29434bb4a6477d.json"
+      - "research_control/tasks/RT-20260722-002/artifacts/compact_receipt.json"
+      - "research_control/tasks/RT-20260723-001/roles/validator-engineer@0.2.0--RT-20260723-001.yaml"
+      - "research_control/handoffs/handoff-0834.md"
+      - "research_control/tasks/RT-20260723-002/artifacts/p10_t07_identity_routing_snapshot_recovery_receipt.json"
+  acceptance_criteria:
+    physics: []
+    project_system:
+      - "the P10-T07 identity validator reports zero drift and thirteen passing checks"
+      - "the predecessor e22bde41 content-addressed copy remains byte-identical"
+      - "the RT-001 execution-role and registry write allowlists equal its immutable AgentJob allowlist"
+      - "the Markdown mirror identifies handoff-0834 literally"
+      - "P10 migration readiness and routing-snapshot validation pass"
+      - "one normal governed checkpoint commits without legacy validation"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: false
+    exception_id: ""
+    evidence_path: ""
+    evidence_sha256: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0829"
+  source_handoff_path: "research_control/handoffs/handoff-0829.yaml"
+  source_handoff_sha256: "c63b7909df2ea8c76849399bbe0ef6e5158284c69d2e753c860b1089b4fde99d"
+  selected_plan_task_id: "P15-T01"
+  guard_outcome: "below_threshold"
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+allowed_read_paths:
+  - "SOUL.md"
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research-continue-goal/SKILL.md"
+  - ".codex/skills/improve-project-system/SKILL.md"
+  - ".agents/roles/research_ops/validator-engineer.v0.2.0.md"
+  - ".agents/schemas/**"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  - "research_control/design/**"
+  - "research_control/program_state.yaml"
+  - "research_control/handoffs/handoff-0829.yaml"
+  - "research_control/handoffs/handoff-0830.yaml"
+  - "research_control/handoffs/handoff-0831.yaml"
+  - "research_control/handoffs/handoff-0832.yaml"
+  - "research_control/handoffs/handoff-0833.yaml"
+  - "research_control/handoffs/handoff-0834.yaml"
+  - "research_control/handoffs/handoff-0834.md"
+  - "research_control/tasks/RT-20260721-007/**"
+  - "research_control/tasks/RT-20260722-002/**"
+  - "research_control/tasks/RT-20260722-021/**"
+  - "research_control/tasks/RT-20260722-022/**"
+  - "research_control/tasks/RT-20260722-023/**"
+  - "research_control/tasks/RT-20260722-024/**"
+  - "research_control/tasks/RT-20260723-001/**"
+  - "scripts/project_control/**"
+  - "scripts/research_control/**"
+  - "scripts/validation/**"
+  - "tests/**"
+  - "registries/**"
+allowed_write_paths:
+  - "research_control/tasks/RT-20260722-002/artifacts/artifact_refs.json"
+  - "research_control/tasks/RT-20260722-002/artifacts/ca/cc7d678328f2242cd49a83ce9a3eaa47e30e830d48a8b70a6a29434bb4a6477d.json"
+  - "research_control/tasks/RT-20260722-002/artifacts/compact_receipt.json"
+  - "research_control/tasks/RT-20260722-002/artifacts/validation.json"
+  - "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_contract.json"
+  - "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_validation.json"
+  - "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_compact_receipt.json"
+  - "scripts/project_control/classify_project_changes.py"
+  - "tests/test_project_change_classifier.py"
+  - "tests/test_validation_planner.py"
+  - ".gitattributes"
+  - "tests/test_research_control.py"
+  - "research_control/tasks/RT-20260722-021/**"
+  - "research_control/tasks/RT-20260722-022/**"
+  - "research_control/tasks/RT-20260722-023/**"
+  - "research_control/tasks/RT-20260722-024/**"
+  - "research_control/tasks/RT-20260723-001/**"
+  - "research_control/tasks/RT-20260723-002/**"
+  - "research_control/handoffs/handoff-0830.yaml"
+  - "research_control/handoffs/handoff-0830.md"
+  - "research_control/handoffs/handoff-0831.yaml"
+  - "research_control/handoffs/handoff-0831.md"
+  - "research_control/handoffs/handoff-0832.yaml"
+  - "research_control/handoffs/handoff-0832.md"
+  - "research_control/handoffs/handoff-0833.yaml"
+  - "research_control/handoffs/handoff-0833.md"
+  - "research_control/handoffs/handoff-0834.yaml"
+  - "research_control/handoffs/handoff-0834.md"
+  - "research_control/handoffs/handoff-0835.yaml"
+  - "research_control/handoffs/handoff-0835.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/tex/**"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "FOLDER_MAP.md"
+allowed_generated_paths:
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/tex/**"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "FOLDER_MAP.md"
+forbidden_paths:
+  - "implementations_plans/**"
+  - "ontology/**"
+  - "legacy_ontology/**"
+  - "manuscripts/**"
+  - "markdown/publication-briefs/**"
+  - "markdown/html-explainer-specs/**"
+  - "github-facing/**"
+  - "html/**"
+  - "pdf/**"
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "registries/METRIC_USE_LEDGER.csv"
+  - ".agents/**"
+  - ".codex/skills/**"
+  - "scripts/research_control/report_physics_progress_metrics.py"
+  - "research_control/tasks/RT-20260722-020/**"
+allowed_source_classes:
+  - "task_control_record"
+  - "project_control_receipt"
+  - "project_control_contract_hash_binding"
+  - "registry"
+  - "generated_memory_derivative"
+  - "prior_authorized_transaction_checkpoint"
+forbidden_source_classes:
+  - "canonical_ontology_write"
+  - "science_source_mutation"
+  - "artifact_identity_policy_change"
+  - "event_store_activation"
+  - "event_store_pilot_or_cutover"
+  - "historical_content_copy_mutation"
+  - "source_law_adoption"
+  - "scientific_ledger_mutation"
+  - "P15_T03_execution"
+  - "physics_claim_promotion"
+  - "benchmark_promotion"
+  - "gate_chair_verdict"
+  - "proof_authority"
+  - "publication_authority"
+  - "completed_derivation_claim"
+approved_commands:
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-TASKS-RT-20260722-002-ARTIFACT-PATH-POLICY --json"
+  - "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python research_control/tasks/RT-20260723-002/artifacts/reseal_p10_t07_identity.py --write --json"
+  - "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python research_control/tasks/RT-20260723-002/artifacts/reseal_p10_t07_identity.py --check --json"
+  - "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python research_control/tasks/RT-20260722-002/artifacts/artifact_identity.py --check --json"
+  - ".venv/bin/python -m unittest -v tests.test_artifact_identity_policy tests.test_v21_p10_migration_readiness"
+  - ".venv/bin/python research_control/tasks/RT-20260722-023/artifacts/validate_exact_path_whitespace_policy.py --check --json"
+  - ".venv/bin/python research_control/tasks/RT-20260722-021/artifacts/validate_exact_gr_interpretive_package.py --check --json"
+  - ".venv/bin/python -m unittest tests.test_publication_process_validation tests.test_research_control tests.test_family_freeze_admission tests.test_dual_budget_policy tests.test_ordinary_route_guard"
+  - ".venv/bin/python -m unittest -v tests.test_project_change_classifier tests.test_validation_planner tests.test_checkpoint_validation_planner"
+  - ".venv/bin/python scripts/research_control/continue_research.py --summary"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+  - ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --json-summary"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --write"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+  - "git diff --check"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260723-002-001"
+required_validators:
+  - "memory_preflight"
+  - "physics_payload_admission"
+  - "dual_budget_allocation"
+  - "ordinary_route_guard_admission"
+  - "p10_t07_artifact_identity"
+  - "predecessor_content_copy_preservation"
+  - "p10_migration_readiness"
+  - "routing_snapshot_preflight"
+  - "exact_path_whitespace_policy"
+  - "p15_t01_task_local_preservation"
+  - "required_repository_test_shard"
+  - "affected_validation_plan"
+  - "project_change_classifier"
+  - "project_improvement_resolver"
+  - "project_improvement_signals"
+  - "documentation_impact"
+  - "claim_language_changed"
+  - "research_control_diff"
+  - "memory_sync"
+  - "memory_core"
+  - "git_diff_check"
+  - "checkpoint_transaction"
+expected_outputs:
+  - "research_control/tasks/RT-20260723-002/artifacts/reseal_p10_t07_identity.py"
+  - "research_control/tasks/RT-20260723-002/artifacts/p10_t07_identity_routing_snapshot_recovery_receipt.json"
+  - "research_control/tasks/RT-20260722-002/artifacts/artifact_refs.json"
+  - "research_control/tasks/RT-20260722-002/artifacts/ca/cc7d678328f2242cd49a83ce9a3eaa47e30e830d48a8b70a6a29434bb4a6477d.json"
+  - "research_control/tasks/RT-20260722-002/artifacts/compact_receipt.json"
+  - "research_control/tasks/RT-20260723-001/roles/validator-engineer@0.2.0--RT-20260723-001.yaml"
+  - "research_control/handoffs/handoff-0834.md"
+  - "research_control/tasks/RT-20260723-002/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260723-002/jobs/completions/AJC-AJ-RT-20260723-002-001.yaml"
+  - "research_control/handoffs/handoff-0835.yaml"
+  - "research_control/handoffs/handoff-0835.md"
+claim_boundary: "CB-V21-P15-T01-P10-T07-IDENTITY-ROUTING-SNAPSHOT-RECOVERY-001"
+resolves_signal_routing: false
+documentation_impact_id: "DI-RT-20260723-002-001"
+completion_id: "AJC-AJ-RT-20260723-002-001"
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 996
+    relationship_row_count: 4919
+    semantic_row_count: 996
+    vault_row_count: 996
+    local_cache_only_warning_count: 5
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-TASKS-RT-20260722-002-ARTIFACT-PATH-POLICY --json"
+      query_type: "lookup"
+      query_text: "MD-RESEARCH-CONTROL-TASKS-RT-20260722-002-ARTIFACT-PATH-POLICY"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-TASKS-RT-20260722-002-ARTIFACT-PATH-POLICY"
+  canonical_inspections:
+    - object_id: "MD-RESEARCH-CONTROL-TASKS-RT-20260722-002-ARTIFACT-PATH-POLICY"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260722-002/artifacts/artifact_path_policy.md"
+      source_hash: "43ced31d8740c7901b8818ce98b9ccc58050f9938580632687bac7169c6383cb"
+  authority_note: "Generated wiki semantic Obsidian relationship and .local retrieval surfaces are retrieval aids and not authority; the registered P10-T07 policy, tracked handoff-0834, current P10-T05 source, and exact blocker control this recovery."
+predecessor_evidence:
+  task_id: "RT-20260723-001"
+  job_id: "AJ-RT-20260723-001-001"
+  completion_sha256: "c892fb58b6b5a8d5d0c3a58eb38cde2958e217725f5488a3f8dacce45e282717"
+  handoff_id: "handoff-0834"
+  handoff_sha256: "9c8da6b23b0b700d90f8b35bb59a34a85f9844dd44891224e4a9a677c6f01e30"
+  blocker_sha256: "5ca95570762d5993d73cde6f05d52a3a990b50e80941602918552d7e87542c97"

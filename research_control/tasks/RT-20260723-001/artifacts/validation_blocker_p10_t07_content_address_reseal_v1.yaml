@@ -1,0 +1,61 @@
+schema_id: "validation_blocker_v1"
+blocker_id: "VB-RT-20260723-001-P10-T07-CONTENT-ADDRESS-RESEAL-001"
+task_id: "RT-20260723-001"
+job_id: "AJ-RT-20260723-001-001"
+created_at: "2026-07-23T06:23:30Z"
+status: "OPEN_MACHINE_SOLVABLE_DISTINCT_RECOVERY"
+blocking_stage: "pre_checkpoint_focused_validation"
+checkpoint_invoked: false
+checkpoint_commit: ""
+legacy_validation_used: false
+source_validator:
+  path: "research_control/tasks/RT-20260722-002/artifacts/artifact_identity.py"
+  command: "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python research_control/tasks/RT-20260722-002/artifacts/artifact_identity.py --check --json"
+  status: "FAIL"
+  check_count: 13
+  failed_check_count: 0
+  drift_count: 3
+exact_drift_paths:
+  - "research_control/tasks/RT-20260722-002/artifacts/artifact_refs.json"
+  - "research_control/tasks/RT-20260722-002/artifacts/ca/cc7d678328f2242cd49a83ce9a3eaa47e30e830d48a8b70a6a29434bb4a6477d.json"
+  - "research_control/tasks/RT-20260722-002/artifacts/compact_receipt.json"
+ca_transition:
+  predecessor_contract_sha256: "e22bde41e45def27a32d99bdf4ca9e6517a2acedbf18393cac22e172b9423c51"
+  current_contract_sha256: "cc7d678328f2242cd49a83ce9a3eaa47e30e830d48a8b70a6a29434bb4a6477d"
+  existing_predecessor_copy_path: "research_control/tasks/RT-20260722-002/artifacts/ca/e22bde41e45def27a32d99bdf4ca9e6517a2acedbf18393cac22e172b9423c51.json"
+  existing_predecessor_copy_sha256: "e22bde41e45def27a32d99bdf4ca9e6517a2acedbf18393cac22e172b9423c51"
+  required_current_copy_path: "research_control/tasks/RT-20260722-002/artifacts/ca/cc7d678328f2242cd49a83ce9a3eaa47e30e830d48a8b70a6a29434bb4a6477d.json"
+diagnosis: "The authorized P10-T05 source-binding reseal changes the architecture contract identity from e22bde41... to cc7d6783.... P10-T07 correctly fails closed because its content-addressed copy, manifest, and compact receipt still identify the predecessor contract. This is deterministic downstream identity drift, not a P10-T05 validation failure."
+why_not_repaired_in_this_job: "The immutable AJ-RT-20260723-001-001 write contract authorizes only the three explicit taxonomy records, the three P10-T05 JSON artifacts, task-local records, and normal generated control derivatives. RT-20260722-002 content-addressed artifacts are outside its write set, so mutating them would expand scope after job creation."
+completed_repairs:
+  taxonomy_repository_status: "PASS"
+  normalized_task_count: 3
+  p10_t05_architecture_status: "PASS"
+  p10_t05_failed_check_count: 0
+  p15_t01_package_status: "PASS_161_CHECKS"
+  exact_path_whitespace_policy_status: "PASS"
+required_next_recovery:
+  strategy_id: "reseal_p10_t07_content_addressed_identity_after_p10_t05_v1"
+  worker_skill: "improve-project-system"
+  role_family: "validator-engineer@0.2.0"
+  work_item_id: "P15-T01"
+  bounded_write_paths:
+    - "research_control/tasks/RT-20260722-002/artifacts/artifact_refs.json"
+    - "research_control/tasks/RT-20260722-002/artifacts/ca/cc7d678328f2242cd49a83ce9a3eaa47e30e830d48a8b70a6a29434bb4a6477d.json"
+    - "research_control/tasks/RT-20260722-002/artifacts/compact_receipt.json"
+    - "research_control/tasks/RT-20260722-002/artifacts/validation.json"
+  required_checks:
+    - "P10-T07 artifact_identity.py --check --json"
+    - "P10-T09 migration-readiness test suite"
+    - "full normal checkpoint without legacy validation"
+  preserve_predecessor_ca_copy: true
+  p15_t03_before_recovery: false
+authority_limits:
+  event_store_activation_changed: false
+  historical_predecessor_copy_deleted: false
+  p15_t01_scientific_payload_changed: false
+  p15_t03_executed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false

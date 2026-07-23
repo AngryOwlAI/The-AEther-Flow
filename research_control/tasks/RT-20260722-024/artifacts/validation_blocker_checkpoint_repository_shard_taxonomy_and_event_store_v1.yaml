@@ -1,0 +1,83 @@
+schema_id: "ordinary_route_control_failure_v1"
+task_id: "RT-20260722-024"
+job_id: "AJ-RT-20260722-024-001"
+plan_task_id: "P15-T01"
+failure_class: "failing_ci"
+status: "active_blocking"
+blocks_scientific_execution: true
+observed_at: "2026-07-23T05:44:47Z"
+checkpoint_command: ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260722-024-001"
+checkpoint_status: "FAIL"
+checkpoint_committed: false
+checkpoint_mode: "planner_compare"
+failed_stage: "repository_test_shard"
+failure_summary: "The one normal governed checkpoint reached the repository-wide test shard after the shadow planner and legacy comparison agreed, then stopped safely because three invalid task-taxonomy records and one stale P10-T05 event-store source hash produced two failures and one cascading setup error."
+checkpoint_evidence:
+  invocation_count: 1
+  legacy_validation_flag_used: false
+  staged: false
+  committed: false
+  index_restored: true
+  test_count: 1172
+  failure_count: 2
+  error_count: 1
+  checkpoint_error: "planner staged acceptance or legacy comparison failed"
+  planner_shadow_comparison_status: "PASS_BEFORE_REPOSITORY_TEST_SHARD"
+taxonomy_root_cause:
+  validator: "tests.test_task_taxonomy.TaskTaxonomyTests.test_repository_report_records_zero_mutation_and_strengthening"
+  status: "FAIL"
+  invalid_task_ids:
+    - "RT-20260722-022"
+    - "RT-20260722-023"
+    - "RT-20260722-024"
+  invalid_fields:
+    work_kind:
+      observed: "validator_repair"
+      allowed_vocabulary_excludes_observed: true
+    milestone:
+      observed: "project_system"
+      allowed_vocabulary_excludes_observed: true
+  required_recovery: "A separately governed normalization packet must choose valid existing v21 taxonomy values for all three recovery tasks, update their synchronized task and registry projections, and prove that no scientific scope or authority is strengthened."
+event_store_root_cause:
+  validator: "tests.test_event_store_architecture.EventStoreArchitectureTests.test_live_contract_sources_and_documents_pass"
+  status: "FAIL"
+  failed_check: "source_hash::scripts/research_control/report_physics_progress_metrics.py"
+  source_path: "scripts/research_control/report_physics_progress_metrics.py"
+  observed_source_sha256: "46289a1b861e350b4d0a0bd27de3a8fbff8c9589de0a019ecd36d3fdd2a59112"
+  sealed_source_sha256: "b594a23d4c688374e0c557552af715c302147586ffd035fb82b58aa558f922ae"
+  architecture_contract_sha256: "e22bde41e45def27a32d99bdf4ca9e6517a2acedbf18393cac22e172b9423c51"
+  validation_receipt_sha256: "4ccc01d886ca3207b5d693d127dacb69d65b6ed24b2882cc29c740dad64946d6"
+  compact_receipt_sha256: "85198d997113d90ecd71a250c59838f04380b12c3238ab5d4d2df5c3460c407b"
+  required_recovery: "A separately governed P10-T05 compatibility packet must determine whether the live source change is authorized, then regenerate or reseal the exact architecture validation and compact receipts without treating receipt synchronization as event-store cutover or scientific authority."
+cascade:
+  validator: "tests.test_v21_p10_migration_readiness.P10MigrationReadinessTests"
+  status: "ERROR_SETUP"
+  cause: "The P10 migration-readiness fixture aborts because the P10-T05 event-store architecture validator is not PASS."
+required_recovery:
+  strategy_id: "normalize_recovery_task_taxonomy_and_reseal_p10_t05_source_hash_v1"
+  worker_skill: "improve-project-system"
+  work_item_id: "P15-T01"
+  required_controls:
+    - "Normalize only RT-20260722-022 through RT-20260722-024 to valid existing v21 task-taxonomy vocabulary with synchronized registry projections and no claim strengthening."
+    - "Inspect the live report_physics_progress_metrics.py source change and the P10-T05 architecture contract before updating any sealed validation receipt."
+    - "Repair the direct event-store architecture failure first and verify that the P10 migration-readiness setup error clears as a cascade."
+    - "Preserve the exact .gitattributes policy, classifier predicate, focused tests, and protected P15-T01 scientific payload bytes."
+    - "After focused and full repository validation pass, invoke one future normal governed checkpoint without --legacy-validation."
+  forbidden_changes:
+    - "No second checkpoint invocation in generation 65."
+    - "No silent deletion or weakening of task-taxonomy validation."
+    - "No event-store cutover migration or authority change."
+    - "No P15-T03 execution before a committed P15-T01 transaction."
+    - "No canonical ontology science-source scientific-ledger Distance-to-GR or protected P15-T01 payload mutation."
+authority_boundary:
+  classifier_recovery_complete: true
+  p15_t01_task_local_payload_complete: true
+  p15_t01_checkpoint_complete: false
+  p15_t03_execution_ready: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  ontology_or_source_law_adopted: false
+  event_store_cutover_authorized: false
+  external_review_or_publication_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false

@@ -1,0 +1,235 @@
+validation_status: "FAIL"
+handoff_id: "handoff-0834"
+handoff_number: 834
+created_at: "2026-07-23T06:27:29Z"
+task_id: "RT-20260723-001"
+decision_id: "DDR-20260723-001"
+job_id: "AJ-RT-20260723-001-001"
+completion_path: "research_control/tasks/RT-20260723-001/jobs/completions/AJC-AJ-RT-20260723-001-001.yaml"
+completion_hash: "c892fb58b6b5a8d5d0c3a58eb38cde2958e217725f5488a3f8dacce45e282717"
+source_task_id: "RT-20260723-001"
+source_job_id: "AJ-RT-20260723-001-001"
+source_completion_id: "AJC-AJ-RT-20260723-001-001"
+status: "blocked_validation"
+summary: "RT-20260723-001 normalizes all three invalid explicit recovery-task taxonomies and reseals the design-only P10-T05 architecture packet to the current governed metrics consumer hash. Those focused gates pass with event-store activation and authority unchanged, and the P15-T01 package remains byte-preserved. The pre-checkpoint migration-readiness gate then fails closed on three P10-T07 content-addressed identity drifts caused by the new contract hash. Those downstream files are outside the immutable generation-66 AgentJob write set, so no checkpoint, staging, commit, or P15-T03 execution occurred."
+next_action: "Run one fresh governed improve-project-system recovery that regenerates only the P10-T07 content-addressed contract copy, artifact manifest, validation if changed, and compact receipt from the current P10-T05 contract; prove migration readiness, then invoke one normal checkpoint without legacy validation before P15-T03."
+loop_risk_route: "reseal_p10_t07_content_addressed_identity_after_p10_t05_v1"
+
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260723-001"
+  latest_research_handoff_id: "handoff-0834"
+  latest_research_next_action: "Run one fresh governed improve-project-system recovery that regenerates only the P10-T07 content-addressed contract copy, artifact manifest, validation if changed, and compact receipt from the current P10-T05 contract; prove migration readiness, then invoke one normal checkpoint without legacy validation before P15-T03."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+
+ordinary_route_guard:
+  schema_id: "ordinary_route_guard_evaluation_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  evaluation_id: "ORE-HANDOFF-0834"
+  ordinary_handoff_id: "handoff-0834"
+  threshold: 3
+  consecutive_project_system_tasks_before_selection: 4
+  ready_science_plan_task_ids:
+    - "P4-T05"
+    - "P15-T01"
+    - "P15-T03"
+  selected_plan_task_id: "P15-T03"
+  selected_route_class: "physics_bearing"
+  selected_worker_skill: "continue-research"
+  outcome: "physics_bearing_route_selected"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  exception_receipt:
+    active: false
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+claim_boundary:
+  allowed_next_scope: "No new science packet is execution-ready. One fresh bounded project-system recovery may regenerate the exact P10-T07 content-addressed identity outputs implied by the current P10-T05 contract, preserve the predecessor content-addressed copy and all P15-T01 bytes, prove P10 migration readiness, and invoke one future normal checkpoint."
+  newly_completed_recovery_task: "RT-20260723-001"
+  recovery_for_plan_task_id: "P15-T01"
+  recovery_completion_path: "research_control/tasks/RT-20260723-001/jobs/completions/AJC-AJ-RT-20260723-001-001.yaml"
+  recovery_completion_sha256: "c892fb58b6b5a8d5d0c3a58eb38cde2958e217725f5488a3f8dacce45e282717"
+  receipt_path: "research_control/tasks/RT-20260723-001/artifacts/task_taxonomy_event_store_receipt_compatibility_recovery_receipt.json"
+  receipt_sha256: "986ff62d58eed8e7b9d7ffc7b6308ac2fcc9cd284dbd82346861b84a48dabc9e"
+  blocker_path: "research_control/tasks/RT-20260723-001/artifacts/validation_blocker_p10_t07_content_address_reseal_v1.yaml"
+  blocker_sha256: "5ca95570762d5993d73cde6f05d52a3a990b50e80941602918552d7e87542c97"
+  normalized_task_count: 3
+  p10_t05_contract_sha256: "cc7d678328f2242cd49a83ce9a3eaa47e30e830d48a8b70a6a29434bb4a6477d"
+  p10_t05_validation_status: "PASS"
+  p10_t07_artifact_identity_status: "FAIL_DRIFT_3"
+  protected_p15_t01_hashes_preserved: true
+  legacy_validation_used: false
+  p15_t01_payload_complete: true
+  p15_t01_checkpoint_ready: false
+  p15_t01_scientific_payload_changed: false
+  p15_t03_dependency_ready: true
+  p15_t03_selected_next: true
+  p15_t03_executed: false
+  scientific_ledger_change_count: 0
+  scientific_status_changed: false
+  distance_to_gr_delta_changed: false
+  ontology_adoption_authorized: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  blocked_claims:
+    - "taxonomy receipt migration readiness checkpoint or route selection as physics evidence"
+    - "event-store source binding or content-address identity as event-store activation cutover or authority transfer"
+    - "effective GR adoption presented as source derivation formal source equivalence or genuine emergence"
+    - "scoped selector and minimum-extension results strengthened into a global no-go or future-extension impossibility"
+    - "same-context internal review presented as blind independent external human review peer review or replication"
+    - "internal manuscript preparation presented as submission public release outreach or publication authority"
+    - "canonical ontology source-law scientific-ledger or Distance-to-GR edit"
+    - "general EqSrc unscoped metric matter coupling Einstein-equation derivation benchmark promotion proof authority publication completed derivation or global no-go"
+
+taxonomy_and_p10_t05_recovery:
+  receipt_path: "research_control/tasks/RT-20260723-001/artifacts/task_taxonomy_event_store_receipt_compatibility_recovery_receipt.json"
+  receipt_sha256: "986ff62d58eed8e7b9d7ffc7b6308ac2fcc9cd284dbd82346861b84a48dabc9e"
+  normalized_task_ids:
+    - "RT-20260722-022"
+    - "RT-20260722-023"
+    - "RT-20260722-024"
+  normalized_work_kind: "benchmark_or_recovery"
+  normalized_milestone: "not_applicable"
+  taxonomy_repository_status: "PASS"
+  explicit_required_error_count: 0
+  stronger_science_inference_count: 0
+  p10_t05_source_path: "scripts/research_control/report_physics_progress_metrics.py"
+  p10_t05_source_sha256: "46289a1b861e350b4d0a0bd27de3a8fbff8c9589de0a019ecd36d3fdd2a59112"
+  p10_t05_contract_sha256_before: "e22bde41e45def27a32d99bdf4ca9e6517a2acedbf18393cac22e172b9423c51"
+  p10_t05_contract_sha256_after: "cc7d678328f2242cd49a83ce9a3eaa47e30e830d48a8b70a6a29434bb4a6477d"
+  p10_t05_validation_status: "PASS"
+  event_store_activation_changed: false
+  event_store_authority_changed: false
+  exact_path_policy_status: "PASS"
+  p15_t01_package_validation_status: "PASS_161_CHECKS"
+  checkpoint_status: "NOT_INVOKED_P10_T07_PRECONDITION_FAIL"
+  checkpoint_committed: false
+  checkpoint_staged: false
+  checkpoint_invocation_count: 0
+  predecessor_scientific_payload_changed: false
+
+p10_t07_identity_blocker:
+  validator_path: "research_control/tasks/RT-20260722-002/artifacts/artifact_identity.py"
+  validator_status: "FAIL_DRIFT_3_FAILED_CHECK_COUNT_0"
+  predecessor_contract_sha256: "e22bde41e45def27a32d99bdf4ca9e6517a2acedbf18393cac22e172b9423c51"
+  current_contract_sha256: "cc7d678328f2242cd49a83ce9a3eaa47e30e830d48a8b70a6a29434bb4a6477d"
+  exact_drift_paths:
+    - "research_control/tasks/RT-20260722-002/artifacts/artifact_refs.json"
+    - "research_control/tasks/RT-20260722-002/artifacts/ca/cc7d678328f2242cd49a83ce9a3eaa47e30e830d48a8b70a6a29434bb4a6477d.json"
+    - "research_control/tasks/RT-20260722-002/artifacts/compact_receipt.json"
+  existing_predecessor_copy_preserved: true
+  next_recovery_machine_solvable: true
+
+preserved_p15_t01_result:
+  task_id: "RT-20260722-021"
+  completion_path: "research_control/tasks/RT-20260722-021/jobs/completions/AJC-AJ-RT-20260722-021-001.yaml"
+  completion_sha256: "8ad277316593dfe63d8ec97805191e845490ddae6314a3dd40dca19a61e91bb1"
+  manuscript_path: "research_control/tasks/RT-20260722-021/artifacts/exact_gr_interpretive_manuscript_v1.md"
+  manuscript_sha256: "17d215509eb3f0ee4544c2f25eed56462d346106f41bc520fc27441c09c0add9"
+  claim_map_sha256: "e9283556dd03a08a37ddd55962884ad1cd57ec6c60f194d01bc37a13733eb679"
+  source_package_sha256: "e4f4e0cd9c2beff5ad4e9de90d33734d4d4a0f1719e05c4ef24649bd791d3c79"
+  internal_review_sha256: "25087b0dcacc1c07faff48e2ecddc6e57b026a352faf27ccbb5015774203479b"
+  validator_sha256: "ace6d4bd7b98da40af8632d1617d0c8f4126f0c272310d76cacf7affb7ef24cf"
+  task_local_validation_status: "PASS_161_CHECKS"
+  ontology_status: "proposed_interpretive_layer"
+  first_principles_substrate_derivation_status: "open"
+  formal_source_equivalence_established: false
+  genuine_emergence_established: false
+  external_human_review_present: false
+  publication_authorized: false
+
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "none"
+  milestone: "none"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "The recovery changes project-control taxonomy and deterministic source-hash receipts only."
+  downstream_unlocked:
+    - "P10-T05_current_source_binding"
+    - "explicit_recovery_task_taxonomy_validation"
+  downstream_still_blocked:
+    - "P10-T07_current_content_address_identity"
+    - "P15-T01_checkpoint"
+    - "P15-T03_execution"
+    - "source_ontology_derivation"
+    - "general_eqsrc"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+    - "benchmark_promotion"
+    - "external_publication"
+
+required_next_packet:
+  task_type: "project_system_p10_t07_content_address_identity_recovery"
+  task_taxonomy:
+    schema_id: "v21_task_taxonomy_v1"
+    work_kind: "benchmark_or_recovery"
+    milestone: "not_applicable"
+    candidate_family: "p10_t07_content_address_identity_compatibility"
+    result_kind: "completed_or_precisely_blocked"
+    authority: "project_control"
+    scope: "project_system"
+
+required_recovery:
+  strategy_id: "reseal_p10_t07_content_addressed_identity_after_p10_t05_v1"
+  route_label: "project-system-recovery"
+  role_family: "validator-engineer@0.2.0"
+  worker_skill: "improve-project-system"
+  work_item_id: "P15-T01"
+  blocker_path: "research_control/tasks/RT-20260723-001/artifacts/validation_blocker_p10_t07_content_address_reseal_v1.yaml"
+  blocker_sha256: "5ca95570762d5993d73cde6f05d52a3a990b50e80941602918552d7e87542c97"
+  next_plan_item_after_recovery: "P15-T03"
+  next_plan_item_executed: false
+
+selected_next_route:
+  route_id: "v21_p15_t03_no_natural_selector_minimum_extension_theorem_paper"
+  route_label: "publication-preparation-packet"
+  role_family: "ontology-formalizer@0.2.0"
+  worker_skill: "continue-research"
+  plan_task_id: "P15-T03"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Publish the strongest near-term general result rather than another candidate record."
+  requires_human_gate: false
+  dependency_independent_after_other_human_gates: true
+  project_system_boundary_authorized_by_plan: false
+  physics_promotion_authorized: false
+  dependency_ready: true
+  execution_ready_after_checkpoint: false
+  executed: false
+  next_action: "After the P10-T07 recovery and committed P15-T01 checkpoint, prepare the focused general-selector theorem manuscript while preserving exact scope and no-global-no-go boundaries."
+  source_handoff: "research_control/handoffs/handoff-0834.yaml"
+
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  sidecar_path: ""
+  recursive_goal_recovery_required: true
+  reason: "The bounded generation-66 repairs pass, but their necessary P10-T07 content-addressed projection is a distinct machine-solvable blocker that the recursive goal must recover before P15-T03."
+
+handoff_authority_boundary:
+  this_handoff_authorizes: "Director consideration of one bounded P10-T07 content-addressed identity recovery before any P15-T03 execution; the ordinary-route P15-T03 selection remains conditional on a future committed checkpoint."
+  this_handoff_does_not_authorize:
+    - "P10-T07 mutation inside the completed immutable RT-20260723-001 AgentJob"
+    - "deletion or mutation of the predecessor e22bde41 content-addressed copy"
+    - "event-store activation pilot cutover authority transfer or SQLite tracking"
+    - "P15-T03 execution before the recovery and committed checkpoint"
+    - "P4-T05 protected ontology decision without exact human authority"
+    - "P15-T06 before P15-T02 P15-T03 and P15-T04 all qualify"
+    - "P15-T07 reviewer contact submission public release or outreach"
+    - "canonical ontology source-law scientific-ledger or Distance-to-GR edits"
+    - "strengthening scoped selector minimum-extension or negative results beyond their proved quantifiers"
+    - "physical interpretation establishment ontology adoption emergence novelty general EqSrc proof benchmark promotion publication proof authority completed derivation or global no-go"

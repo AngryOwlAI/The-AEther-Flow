@@ -1,0 +1,79 @@
+{
+  "authority_effect": "operational_project_system_compatibility_only",
+  "checkpoint_attempted": false,
+  "checkpoint_commit": null,
+  "checkpoint_precondition_status": "FAIL_P10_T07_CONTENT_ADDRESS_RESEAL_REQUIRED",
+  "distance_to_gr_delta_changed": false,
+  "event_store_reseal": {
+    "architecture_status": "design_selected_not_activated",
+    "canonical_event_store_active": false,
+    "compact_receipt_path": "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_compact_receipt.json",
+    "compact_receipt_sha256": "dac6d03fcc3ebbdac38329f830ebf1706fa1d6be30ec315e433268dfdfc44ebf",
+    "contract_path": "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_contract.json",
+    "contract_sha256_after": "cc7d678328f2242cd49a83ce9a3eaa47e30e830d48a8b70a6a29434bb4a6477d",
+    "contract_sha256_before": "e22bde41e45def27a32d99bdf4ca9e6517a2acedbf18393cac22e172b9423c51",
+    "gate_chair_authority_preserved": true,
+    "generated_views_are_authority": false,
+    "legacy_registry_authority_changed": false,
+    "pilot_executed": false,
+    "reader_cutover_executed": false,
+    "registered_tex_authority_preserved": true,
+    "source_binding_count_changed": 1,
+    "source_path": "scripts/research_control/report_physics_progress_metrics.py",
+    "source_sha256_after": "46289a1b861e350b4d0a0bd27de3a8fbff8c9589de0a019ecd36d3fdd2a59112",
+    "source_sha256_before": "b594a23d4c688374e0c557552af715c302147586ffd035fb82b58aa558f922ae",
+    "validation_path": "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_validation.json",
+    "validation_sha256": "89428e8b76587183ed595060a4f907060485406890d62c51b5c996373b89393a",
+    "validation_status": "PASS"
+  },
+  "generated_at": "2026-07-23T06:23:30Z",
+  "legacy_validation_used": false,
+  "next_blocker": {
+    "drift_count": 3,
+    "drift_paths": [
+      "research_control/tasks/RT-20260722-002/artifacts/artifact_refs.json",
+      "research_control/tasks/RT-20260722-002/artifacts/ca/cc7d678328f2242cd49a83ce9a3eaa47e30e830d48a8b70a6a29434bb4a6477d.json",
+      "research_control/tasks/RT-20260722-002/artifacts/compact_receipt.json"
+    ],
+    "failed_check_count": 0,
+    "source_validator": "research_control/tasks/RT-20260722-002/artifacts/artifact_identity.py",
+    "status": "FAIL_P10_T07_CONTENT_ADDRESS_RESEAL_REQUIRED"
+  },
+  "p15_t01_package_validation_status": "PASS_161_CHECKS",
+  "p15_t01_scientific_payload_changed": false,
+  "p15_t03_executed": false,
+  "physics_promotion_authorized": false,
+  "proof_authority": false,
+  "protected_exact_path_policy_sha256": "5678e66fcb18bbc3d6e589d64277f02cd7c8a4ad0a263386ad0fb1ee795dbf67",
+  "protected_p15_t01_hashes": {
+    "research_control/tasks/RT-20260722-021/artifacts/exact_gr_claim_map_v1.yaml": "e9283556dd03a08a37ddd55962884ad1cd57ec6c60f194d01bc37a13733eb679",
+    "research_control/tasks/RT-20260722-021/artifacts/exact_gr_internal_review_packet_v1.md": "25087b0dcacc1c07faff48e2ecddc6e57b026a352faf27ccbb5015774203479b",
+    "research_control/tasks/RT-20260722-021/artifacts/exact_gr_reproducibility_source_package_v1.yaml": "e4f4e0cd9c2beff5ad4e9de90d33734d4d4a0f1719e05c4ef24649bd791d3c79",
+    "research_control/tasks/RT-20260722-021/artifacts/validate_exact_gr_interpretive_package.py": "ace6d4bd7b98da40af8632d1617d0c8f4126f0c272310d76cacf7affb7ef24cf"
+  },
+  "schema_id": "task_taxonomy_event_store_receipt_compatibility_recovery_receipt_v1",
+  "scientific_claims_changed": false,
+  "status": "PASS_BOUNDED_REPAIRS_PRECHECKPOINT_BLOCKED_DOWNSTREAM_IDENTITY",
+  "task_id": "RT-20260723-001",
+  "taxonomy_normalization": {
+    "candidate_families_preserved": [
+      "continue_research_context_live_route_fixture",
+      "exact_path_whitespace_policy",
+      "gitattributes_classifier_admission"
+    ],
+    "explicit_required_error_count": 0,
+    "historical_source_mutation_count": 0,
+    "normalized_field_count": 6,
+    "normalized_task_count": 3,
+    "normalized_task_ids": [
+      "RT-20260722-022",
+      "RT-20260722-023",
+      "RT-20260722-024"
+    ],
+    "replacement_milestone": "not_applicable",
+    "replacement_work_kind": "benchmark_or_recovery",
+    "repository_status": "PASS",
+    "stronger_science_inference_count": 0
+  },
+  "worker_invocation_count": 1
+}

@@ -1,0 +1,73 @@
+validation_status: "PASS"
+task_id: "RT-20260723-002"
+task_type: "project_system_p10_t07_identity_routing_snapshot_recovery"
+title: "Reseal P10-T07 identity and repair the RT-001 routing snapshot"
+task_taxonomy:
+  schema_id: "v21_task_taxonomy_v1"
+  work_kind: "benchmark_or_recovery"
+  milestone: "not_applicable"
+  candidate_family: "p10_t07_identity_and_routing_snapshot_recovery"
+  result_kind: "completed_or_precisely_blocked"
+  authority: "project_control"
+  scope: "project_system"
+status: "completed"
+created_at: "2026-07-23T06:55:46Z"
+updated_at: "2026-07-23T07:12:45Z"
+parent_task_id: "RT-20260723-001"
+parent_handoff_id: "handoff-0834"
+supersedes_active_routing_task_id: "RT-20260723-001"
+current_decision_id: "DDR-20260723-002"
+current_job_id: "AJ-RT-20260723-002-001"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260723-002"
+requires_human_gate: false
+human_authorization_note: "Generation 67 of the immutable user-requested relay routes exactly one improve-project-system frame to reseal the three P10-T07 identity drifts and repair the two RT-001 routing-snapshot defects before the preserved P15-T01 checkpoint."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P15"
+  plan_task_id: "P15-T01"
+  recovery_for_plan_task_id: "P15-T01"
+  next_plan_task_id: "P15-T03"
+objective: "Regenerate only the three drifted P10-T07 content-address identity outputs from the current P10-T05 contract, preserve the predecessor copy byte-for-byte, align the RT-001 execution-role write allowlist with its immutable AgentJob snapshot, identify handoff-0834 literally in its Markdown mirror, and complete one normal governed checkpoint without executing P15-T03."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system identity and routing-snapshot compatibility only; preserve every P15-T01 scientific and Distance-to-GR boundary unchanged."
+route_label: "reseal_p10_t07_identity_and_repair_rt001_routing_snapshot_v1"
+project_system_change_only: true
+dual_budget_category: "system_bearing"
+primary_budget: "project_system"
+scientific_claims_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+claim_boundary_id: "CB-V21-P15-T01-P10-T07-IDENTITY-ROUTING-SNAPSHOT-RECOVERY-001"
+claim_boundary:
+  allowed_scope: "Three exact P10-T07 deterministic identity outputs; one byte-preserving predecessor-copy proof; RT-001 execution-role and registry allowlist parity with its immutable AgentJob; literal handoff-0834 Markdown identity; task-local recovery records; standard generated derivatives; one normal checkpoint for the preserved cumulative P15-T01 transaction."
+  immutable_predecessor_task: "RT-20260723-001"
+  immutable_predecessor_job: "AJ-RT-20260723-001-001"
+  immutable_predecessor_completion: "AJC-AJ-RT-20260723-001-001"
+  immutable_predecessor_handoff: "handoff-0834"
+  source_blocker_path: "research_control/tasks/RT-20260723-001/artifacts/validation_blocker_p10_t07_content_address_reseal_v1.yaml"
+  source_blocker_sha256: "5ca95570762d5993d73cde6f05d52a3a990b50e80941602918552d7e87542c97"
+  p10_t07_drift_path_count: 3
+  routing_snapshot_defect_count: 2
+  event_store_activation_changed: false
+  predecessor_content_copy_changed: false
+  p15_t01_scientific_payload_changed: false
+  p15_t03_executed: false
+  scientific_claims_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+documentation_impact_id: "DI-RT-20260723-002-001"
+completion_id: "AJC-AJ-RT-20260723-002-001"
+output_artifacts:
+  - "research_control/tasks/RT-20260723-002/artifacts/reseal_p10_t07_identity.py"
+  - "research_control/tasks/RT-20260723-002/artifacts/p10_t07_identity_routing_snapshot_recovery_receipt.json"
+  - "research_control/tasks/RT-20260722-002/artifacts/artifact_refs.json"
+  - "research_control/tasks/RT-20260722-002/artifacts/ca/cc7d678328f2242cd49a83ce9a3eaa47e30e830d48a8b70a6a29434bb4a6477d.json"
+  - "research_control/tasks/RT-20260722-002/artifacts/compact_receipt.json"
+  - "research_control/handoffs/handoff-0835.yaml"
+  - "research_control/handoffs/handoff-0835.md"
+closure_status: "completed_ready_for_governed_checkpoint"
+summary: "Generation 67 repaired exactly three P10-T07 identity outputs and two RT-001 routing-snapshot defects, preserved the predecessor copy and every P15-T01 scientific boundary, and passed all pre-checkpoint gates."
+next_recommended_action: "Run exactly one bounded v21 P15-T03 ontology-formalizer publication-preparation AgentJob after the normal checkpoint commits."

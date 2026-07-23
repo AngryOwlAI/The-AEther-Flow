@@ -1,0 +1,371 @@
+validation_status: "PASS"
+job_id: "AJ-RT-20260723-002-001"
+completion_id: "AJC-AJ-RT-20260723-002-001"
+task_id: "RT-20260723-002"
+task_type: "project_system_p10_t07_identity_routing_snapshot_recovery"
+decision_id: "DDR-20260723-002"
+role_id: "validator-engineer"
+source_role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260723-002"
+status: "completed"
+final_repository_validation_status: "PASS_PRECHECKPOINT"
+created_at: "2026-07-23T06:55:46Z"
+started_at: "2026-07-23T06:55:46Z"
+completed_at: "2026-07-23T07:12:45Z"
+objective: "Reseal the three P10-T07 identity drifts from the current P10-T05 contract, preserve the predecessor copy, repair the RT-001 role and handoff routing snapshot, prove migration readiness, and run one normal governed checkpoint before P15-T03."
+completion_summary: "Exactly three P10-T07 deterministic identity outputs were resealed from the unchanged artifact-identity tool and current P10-T05 contract. All thirteen identity checks pass, the predecessor e22bde41 content copy is byte-identical, the expired RT-001 execution-role and registry allowlists now equal its immutable AgentJob allowlist, and the Markdown mirror identifies handoff-0834 literally. P10 migration readiness, exact-path policy, the protected P15-T01 161-check package, routing preflight, affected validation, repository tests, documentation, signal, memory, and claim-boundary gates pass before one normal governed checkpoint. No P15-T01 scientific byte, event-store activation flag, scientific status, ontology, Distance-to-GR ledger, publication authority, or P15-T03 execution changed."
+objective_result: "p10_t07_identity_and_rt001_routing_snapshot_repaired_ready_for_normal_checkpoint"
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 67
+  passes_consumed: 66
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:67"
+  handoff_token: "45634306d228c7cee870aab3d7f3b191e656e27be7032c55"
+  relay_claim_token: "6fbc7f79134513efaf90d6f6f39930915266a4edfd41175a"
+  immutable_route_hash: "0009ea9e0b26adea6bc0064c9dd48c758cc180f4784261869bca28b701bc0c6f"
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+
+transaction_status: "completed_ready_for_governed_checkpoint"
+result_disposition: "implemented"
+work_item_status: "completed"
+checkpoint_commit: "pending_governed_checkpoint"
+legacy_validation_used: false
+project_system_change_only: true
+scientific_claims_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS_PRECHECKPOINT"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  observed_durable_outputs:
+    physics: []
+    project_system:
+      - "research_control/tasks/RT-20260722-002/artifacts/artifact_refs.json"
+      - "research_control/tasks/RT-20260722-002/artifacts/ca/cc7d678328f2242cd49a83ce9a3eaa47e30e830d48a8b70a6a29434bb4a6477d.json"
+      - "research_control/tasks/RT-20260722-002/artifacts/compact_receipt.json"
+      - "research_control/tasks/RT-20260723-001/roles/validator-engineer@0.2.0--RT-20260723-001.yaml"
+      - "research_control/handoffs/handoff-0834.md"
+      - "research_control/tasks/RT-20260723-002/artifacts/p10_t07_identity_routing_snapshot_recovery_receipt.json"
+  accepted_criteria:
+    physics: []
+    project_system:
+      - "the P10-T07 identity validator reports zero drift and thirteen passing checks"
+      - "the predecessor e22bde41 content-addressed copy remains byte-identical"
+      - "the RT-001 execution-role and registry write allowlists equal its immutable AgentJob allowlist"
+      - "the Markdown mirror identifies handoff-0834 literally"
+      - "P10 migration readiness and routing-snapshot validation pass"
+      - "one normal governed checkpoint commits without legacy validation"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+physics_payload_admission_result:
+  status: "admitted"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed: false
+  physics_promotion_authorized: false
+
+ordinary_route_guard_admission_result:
+  status: "PASS"
+  source_handoff_id: "handoff-0829"
+  selected_plan_task_id: "P15-T01"
+  guard_outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  system_success_counts_as_physics: false
+  system_success_counts_as_distance_to_gr: false
+
+artifacts:
+  - "research_control/tasks/RT-20260723-002/artifacts/reseal_p10_t07_identity.py"
+  - "research_control/tasks/RT-20260723-002/artifacts/p10_t07_identity_routing_snapshot_recovery_receipt.json"
+  - "research_control/tasks/RT-20260722-002/artifacts/artifact_refs.json"
+  - "research_control/tasks/RT-20260722-002/artifacts/ca/cc7d678328f2242cd49a83ce9a3eaa47e30e830d48a8b70a6a29434bb4a6477d.json"
+  - "research_control/tasks/RT-20260722-002/artifacts/compact_receipt.json"
+  - "research_control/tasks/RT-20260723-001/roles/validator-engineer@0.2.0--RT-20260723-001.yaml"
+  - "research_control/handoffs/handoff-0834.md"
+
+output_paths:
+  - "research_control/tasks/RT-20260722-002/artifacts/artifact_refs.json"
+  - "research_control/tasks/RT-20260722-002/artifacts/ca/cc7d678328f2242cd49a83ce9a3eaa47e30e830d48a8b70a6a29434bb4a6477d.json"
+  - "research_control/tasks/RT-20260722-002/artifacts/compact_receipt.json"
+  - "research_control/tasks/RT-20260723-001/roles/validator-engineer@0.2.0--RT-20260723-001.yaml"
+  - "research_control/handoffs/handoff-0834.md"
+  - "research_control/tasks/RT-20260723-002/**"
+  - "research_control/handoffs/handoff-0835.yaml"
+  - "research_control/handoffs/handoff-0835.md"
+  - "research_control/program_state.yaml"
+
+artifact_receipts:
+  - path: "research_control/tasks/RT-20260723-002/artifacts/p10_t07_identity_routing_snapshot_recovery_receipt.json"
+    sha256: "126eff4554103a539e9ce77bb4f5251885559b31837db196cd1bab902ac77564"
+  - path: "research_control/tasks/RT-20260723-002/artifacts/reseal_p10_t07_identity.py"
+    sha256: "5b1c74fc4e770e15319133c062d225f974cc62244cf5439505c3a903b3e830b1"
+  - path: "research_control/tasks/RT-20260722-002/artifacts/artifact_refs.json"
+    sha256: "e6a79d1d44b0494d6799b2a750cdd09392f069fcb7602fe7ad60a449feea77ad"
+  - path: "research_control/tasks/RT-20260722-002/artifacts/ca/cc7d678328f2242cd49a83ce9a3eaa47e30e830d48a8b70a6a29434bb4a6477d.json"
+    sha256: "cc7d678328f2242cd49a83ce9a3eaa47e30e830d48a8b70a6a29434bb4a6477d"
+  - path: "research_control/tasks/RT-20260722-002/artifacts/compact_receipt.json"
+    sha256: "4f4ffc64ad0144090b14e373ed486e6c3f4b2ca39aa3c18f29fe1bd0b4b83910"
+  - path: "research_control/tasks/RT-20260722-002/artifacts/ca/e22bde41e45def27a32d99bdf4ca9e6517a2acedbf18393cac22e172b9423c51.json"
+    sha256: "e22bde41e45def27a32d99bdf4ca9e6517a2acedbf18393cac22e172b9423c51"
+  - path: "research_control/tasks/RT-20260723-001/jobs/AJ-RT-20260723-001-001.yaml"
+    sha256: "91faca3863659ccc5427ec06b101cd98ced6d73a347c6b92ba0aa4fa04050bdc"
+  - path: "research_control/tasks/RT-20260723-001/roles/validator-engineer@0.2.0--RT-20260723-001.yaml"
+    sha256: "faadf7c41f9471d5c3d48f7f1ba5ba60c8a9cc0b8d087a85510fb3b5f9c22e51"
+  - path: "research_control/handoffs/handoff-0834.md"
+    sha256: "77721f64c45ead7c160b479555e2f397265d5e903de24affea397ec4fa6ba27a"
+  - path: "research_control/handoffs/handoff-0834.yaml"
+    sha256: "9c8da6b23b0b700d90f8b35bb59a34a85f9844dd44891224e4a9a677c6f01e30"
+
+recovery_result:
+  authorized_drift_count_before: 3
+  p10_t07_drift_count_after: 0
+  p10_t07_check_count: 13
+  p10_t07_failed_check_count: 0
+  current_contract_sha256: "cc7d678328f2242cd49a83ce9a3eaa47e30e830d48a8b70a6a29434bb4a6477d"
+  predecessor_copy_sha256_before: "e22bde41e45def27a32d99bdf4ca9e6517a2acedbf18393cac22e172b9423c51"
+  predecessor_copy_sha256_after: "e22bde41e45def27a32d99bdf4ca9e6517a2acedbf18393cac22e172b9423c51"
+  predecessor_copy_preserved: true
+  rt001_job_changed: false
+  rt001_role_allowlist_equals_job: true
+  rt001_registry_allowlist_equals_job: true
+  handoff_0834_literal_identity_present: true
+  handoff_0834_yaml_changed: false
+  p10_migration_readiness_status: "PASS"
+  p15_t01_package_validation_status: "PASS_161_CHECKS"
+  exact_path_policy_validation_status: "PASS"
+  event_store_activation_changed: false
+  p15_t01_scientific_payload_changed: false
+  p15_t03_executed: false
+
+command_results:
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+    status: "PASS_CORE_WITH_5_LOCAL_CACHE_WARNINGS"
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-TASKS-RT-20260722-002-ARTIFACT-PATH-POLICY --json"
+    status: "PASS_REGISTERED_CANONICAL_SOURCE"
+  - command: "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python research_control/tasks/RT-20260723-002/artifacts/reseal_p10_t07_identity.py --write --json"
+    status: "PASS_EXACT_3_WRITTEN_DRIFT_AFTER_0"
+  - command: "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python research_control/tasks/RT-20260723-002/artifacts/reseal_p10_t07_identity.py --check --json"
+    status: "PASS_DRIFT_0_PREDECESSOR_PRESERVED"
+  - command: "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python research_control/tasks/RT-20260722-002/artifacts/artifact_identity.py --check --json"
+    status: "PASS_13_CHECKS_DRIFT_0"
+  - command: "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m unittest -v tests.test_artifact_identity_policy tests.test_v21_p10_migration_readiness"
+    status: "PASS_20_TESTS"
+  - command: ".venv/bin/python research_control/tasks/RT-20260722-023/artifacts/validate_exact_path_whitespace_policy.py --check --json"
+    status: "PASS"
+  - command: ".venv/bin/python research_control/tasks/RT-20260722-021/artifacts/validate_exact_gr_interpretive_package.py --check --json"
+    status: "PASS_161_CHECKS"
+  - command: ".venv/bin/python -m unittest tests.test_publication_process_validation tests.test_research_control tests.test_family_freeze_admission tests.test_dual_budget_policy tests.test_ordinary_route_guard"
+    status: "PASS"
+  - command: ".venv/bin/python -m unittest -v tests.test_project_change_classifier tests.test_validation_planner tests.test_checkpoint_validation_planner"
+    status: "PASS"
+  - command: ".venv/bin/python scripts/research_control/continue_research.py --summary"
+    status: "PASS_AFTER_FINAL_RENDER"
+  - command: ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+    status: "PASS_PROJECT_SYSTEM_AND_DOCUMENTATION_IMPACT_REQUIRED"
+  - command: ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json"
+    status: "PASS_READY_VALIDATOR_ENGINEER_CHECKPOINT_REQUIRED"
+  - command: ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json"
+    status: "PASS_12_TYPES_7_REGISTERED_5_EMITTED_0_OPEN_HANDOFFS"
+  - command: ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+    status: "PASS"
+  - command: ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+    status: "PASS_WITH_HISTORICAL_WARNINGS"
+  - command: ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --json-summary"
+    status: "PASS"
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+    status: "PASS_WITH_5_LOCAL_CACHE_WARNINGS"
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+    status: "PASS_WITH_5_LOCAL_CACHE_WARNINGS"
+  - command: "git diff --check"
+    status: "PASS"
+  - command: ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260723-002-001"
+    status: "PENDING_GOVERNED_CHECKPOINT"
+
+validation_summary:
+  status: "PASS_PRECHECKPOINT"
+  passing_gates:
+    - "P10-T07 artifact identity and exact three-path reseal"
+    - "predecessor content-copy byte preservation"
+    - "P10 migration readiness"
+    - "RT-001 role and registry allowlist parity"
+    - "literal handoff-0834 Markdown identity"
+    - "exact-path whitespace policy"
+    - "P15-T01 package 161-check validation"
+    - "required and affected repository test shards"
+    - "classifier resolver signal documentation claim-language research-control and memory gates"
+  failed_gates: []
+  checkpoint:
+    invoked: false
+    reason: "The tracked completion and handoff intentionally record the normal governed checkpoint as the next atomic step."
+  staging:
+    attempted: false
+    index_changed: false
+  commit:
+    created: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 67 lease parity, repository identity, maximum reasoning effort, exact 103-path dirty manifest, and immutable recovery route were verified before the single worker invocation."
+      - "The generation was claimed and consumed exactly once with relay claim token 6fbc7f79134513efaf90d6f6f39930915266a4edfd41175a."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The task-local reseal tool admitted exactly the three routed drift paths and wrote no predecessor or scientific source."
+      - "The expired RT-001 role and registry snapshots now equal the immutable job allowlist, and the handoff Markdown contains its literal ID."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "The authoritative P10-T07 validator reports thirteen checks, zero failures, three references, and zero drift."
+      - "P10 migration readiness, exact-path policy, protected P15-T01 package, required repository tests, and affected validation-planner tests pass."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "One normal governed checkpoint is pending after every pre-checkpoint record and validator is finalized; legacy validation is forbidden."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Task index, current frontier, compact frontier, dependency graph, and registered memory derivatives are regenerated from finalized tracked control state."
+  memory_bootstrap:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "Memory bootstrap and validate-only pass; five warnings are confined to untracked local retrieval cache freshness and do not affect authority."
+  claim_language_linter:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "Changed-surface claim-language validation preserves project-system-only, proposal-only, no-promotion, no-publication, and no-completed-derivation boundaries; any warnings are historical."
+
+authorization_layers:
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  canonical_ontology_edit_authorized: false
+  ontology_selection_authorized: false
+  physical_interpretation_establishment_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "none"
+  milestone: "none"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "The packet repairs deterministic project-control identity and routing snapshots only."
+  downstream_unlocked:
+    - "P10-T07_current_content_address_identity"
+    - "P15-T01_normal_checkpoint"
+    - "P15-T03_execution_after_checkpoint"
+  downstream_still_blocked:
+    - "source_ontology_derivation"
+    - "general_eqsrc"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+    - "benchmark_promotion"
+    - "external_publication"
+
+required_next_packet:
+  task_type: "v21_selector_minimum_extension_theorem_manuscript"
+  task_taxonomy:
+    schema_id: "v21_task_taxonomy_v1"
+    work_kind: "publication_preparation"
+    milestone: "source_equivalence_eqsrc"
+    candidate_family: "selector_minimum_extension_theorem_manuscript"
+    result_kind: "completed_or_precisely_blocked"
+    authority: "science_draft"
+    scope: "scientific"
+
+selected_next_route:
+  route_id: "v21_p15_t03_no_natural_selector_minimum_extension_theorem_paper"
+  route_label: "publication-preparation-packet"
+  role_family: "ontology-formalizer@0.2.0"
+  worker_skill: "continue-research"
+  plan_task_id: "P15-T03"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Publish the strongest near-term general result rather than another candidate record."
+  requires_human_gate: false
+  dependency_independent_after_other_human_gates: true
+  physics_promotion_authorized: false
+  dependency_ready: true
+  execution_ready_before_checkpoint: false
+  execution_ready_after_checkpoint: true
+  executed: false
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 996
+    relationship_row_count: 4919
+    semantic_row_count: 996
+    vault_row_count: 996
+    local_cache_only_warning_count: 5
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-TASKS-RT-20260722-002-ARTIFACT-PATH-POLICY --json"
+      query_type: "lookup"
+      query_text: "MD-RESEARCH-CONTROL-TASKS-RT-20260722-002-ARTIFACT-PATH-POLICY"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-TASKS-RT-20260722-002-ARTIFACT-PATH-POLICY"
+  canonical_inspections:
+    - object_id: "MD-RESEARCH-CONTROL-TASKS-RT-20260722-002-ARTIFACT-PATH-POLICY"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260722-002/artifacts/artifact_path_policy.md"
+      source_hash: "43ced31d8740c7901b8818ce98b9ccc58050f9938580632687bac7169c6383cb"
+  authority_note: "Generated wiki semantic Obsidian relationship and .local retrieval surfaces are retrieval aids and not authority; the registered P10-T07 policy, tracked handoff-0834, current P10-T05 source, and exact generation-67 blocker control this recovery."
+
+project_improvement_signals: []
+project_improvement_sidecar_created: false
+handoff_id: "handoff-0835"
+next_plan_task_id: "P15-T03"
+next_plan_task_execution_ready_after_checkpoint: true
+next_plan_task_executed: false
+notes: "This recovery is a project-system compatibility completion only. It neither executes P15-T03 nor upgrades the exact-GR manuscript, ontology, scientific status, publication readiness, proof authority, or completed-derivation status."

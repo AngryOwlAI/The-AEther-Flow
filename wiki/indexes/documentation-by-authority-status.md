@@ -56,6 +56,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 ## draft_control_artifact
 
 - `MD-V21-P1-T05-EQSRC-NATURALITY-PRIMARY-LITERATURE-REVIEW` `research_control/tasks/RT-20260720-013/artifacts/eqsrc_naturality_primary_literature_review.md`
+- `MD-V21-P15-T01-EXACT-GR-INTERPRETIVE-MANUSCRIPT-V1` `research_control/tasks/RT-20260722-021/artifacts/exact_gr_interpretive_manuscript_v1.md`
 - `MD-V21-P4-T01-SOURCE-ASSUMPTION-AMBIGUITIES` `research_control/tasks/RT-20260720-030/artifacts/source_assumption_unresolved_ambiguities_v1.md`
 - `MD-V21-P4-T04-ONTOLOGY-REGIME-COMPARISON-REPORT-V1` `research_control/tasks/RT-20260721-002/artifacts/ontology_regime_comparison_report_v1.md`
 
@@ -694,6 +695,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-V21-P11-T06-REVIEWER-AGREEMENT-METRIC-SPECIFICATION` `wiki/markdown/md-v21-p11-t06-reviewer-agreement-metric-specification.md`
 - `WIKI-MD-V21-P11-T08-ROLLOUT-OR-REPAIR-VERDICT` `wiki/markdown/md-v21-p11-t08-rollout-or-repair-verdict.md`
 - `WIKI-MD-V21-P11-T08-SCIENTIFIC-QA-INTEGRATION-AUDIT` `wiki/markdown/md-v21-p11-t08-scientific-qa-integration-audit.md`
+- `WIKI-MD-V21-P15-T01-EXACT-GR-INTERPRETIVE-MANUSCRIPT-V1` `wiki/markdown/md-v21-p15-t01-exact-gr-interpretive-manuscript-v1.md`
 - `WIKI-MD-V21-P4-T01-SOURCE-ASSUMPTION-AMBIGUITIES` `wiki/markdown/md-v21-p4-t01-source-assumption-ambiguities.md`
 - `WIKI-MD-V21-P4-T04-ONTOLOGY-REGIME-COMPARISON-REPORT-V1` `wiki/markdown/md-v21-p4-t04-ontology-regime-comparison-report-v1.md`
 - `WIKI-MD-VALIDATOR-OPERATOR-WORKFLOW-PUBLICATION-BRIEF` `wiki/markdown/md-validator-operator-workflow-publication-brief.md`

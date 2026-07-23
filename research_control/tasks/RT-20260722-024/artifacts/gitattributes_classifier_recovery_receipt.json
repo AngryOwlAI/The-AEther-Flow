@@ -1,0 +1,100 @@
+{
+  "schema_id": "gitattributes_classifier_recovery_receipt_v1",
+  "authority": "operational_validation_only",
+  "task_id": "RT-20260722-024",
+  "job_id": "AJ-RT-20260722-024-001",
+  "created_at": "2026-07-23T05:09:58Z",
+  "status": "PASS",
+  "route_id": "admit_root_gitattributes_to_validation_classifier_v1",
+  "classifier_change": {
+    "path": "scripts/project_control/classify_project_changes.py",
+    "sha256_before": "2985492a15cd874bd2bf806033bb94f3ab7224d6d6ae98675bc89b4d9d5a7eb9",
+    "sha256_after": "7c2df6a66cafa463bb0f8dc7a5580dc4e36a268093d814a8901ee5db596ee8ba",
+    "recognized_path": ".gitattributes",
+    "recognized_family": "ci_orchestration",
+    "literal_path_only": true,
+    "wildcard_added": false,
+    "unknown_path_fallback_changed": false
+  },
+  "focused_regressions": [
+    {
+      "path": "tests/test_project_change_classifier.py",
+      "sha256_before": "fae158176044b77a9db6b028a39c0d04ea50a0348b0aba116d15d0ffd33fb009",
+      "sha256_after": "416b9fa46c0ee2c664e002dc29faa3f8135aba16a251fc14a242b48600a04738",
+      "test": "ProjectChangeClassifierTests.test_root_gitattributes_is_exact_ci_orchestration",
+      "status": "PASS"
+    },
+    {
+      "path": "tests/test_validation_planner.py",
+      "sha256_before": "8ac63098048f519360aa71516805826905359b525a30bb6958f0d4c72310515e",
+      "sha256_after": "a2173db72dacc2fd80cb60a761bf6f71213cc567295e4783c89b25359e15bdc9",
+      "test": "ValidationPlannerTests.test_root_gitattributes_selects_safe_ci_orchestration_plan",
+      "status": "PASS"
+    }
+  ],
+  "positive_control": {
+    "path": ".gitattributes",
+    "path_family_tags": [
+      "ci_orchestration"
+    ],
+    "path_family_reasons": [
+      "path_rule:ci_orchestration"
+    ],
+    "recommended_validation_profile": "affected",
+    "unknown_governed_path_present": false,
+    "plan_status": "READY",
+    "plan_effective_profile": "affected",
+    "plan_unknown_paths": []
+  },
+  "negative_control": {
+    "path": "governed/new-format.bin",
+    "path_family_tags": [
+      "unknown_governed_path"
+    ],
+    "path_family_reasons": [
+      "fallback:unknown_governed_path"
+    ],
+    "recommended_validation_profile": "full",
+    "project_system_improvement_required": true,
+    "fail_closed_preserved": true
+  },
+  "preserved_policy": {
+    "path": ".gitattributes",
+    "required_sha256": "5678e66fcb18bbc3d6e589d64277f02cd7c8a4ad0a263386ad0fb1ee795dbf67",
+    "observed_sha256": "5678e66fcb18bbc3d6e589d64277f02cd7c8a4ad0a263386ad0fb1ee795dbf67",
+    "bytes_changed_by_this_recovery": false,
+    "exact_path_rule_count": 4,
+    "wildcard_rule_count": 0,
+    "adjacent_blank_at_eof_control_retained": true,
+    "validation_status": "PASS"
+  },
+  "preserved_predecessor": {
+    "completion_path": "research_control/tasks/RT-20260722-023/jobs/completions/AJC-AJ-RT-20260722-023-001.yaml",
+    "completion_sha256": "8199e2293e31c6791ca3f56a96cd35df54c98a12b8ffcfd83be72113cfb36165",
+    "handoff_yaml_path": "research_control/handoffs/handoff-0832.yaml",
+    "handoff_yaml_sha256": "50efe630dfbb7ed8b8776d1fedb33f0ac86fb71d476e4bdbbcf7e32e1452750a",
+    "handoff_markdown_path": "research_control/handoffs/handoff-0832.md",
+    "handoff_markdown_sha256": "6011858e47b68ea8cd60b17343f1732810828734e99ae25b32ca17ce7a9ba3bc",
+    "blocker_path": "research_control/tasks/RT-20260722-023/artifacts/validation_blocker_checkpoint_planner_unknown_gitattributes_v1.yaml",
+    "blocker_sha256": "157aba4e772c1522fbf92333a1f67d7116b2dd837457cc812f4a22b8058b2276",
+    "bytes_changed": false
+  },
+  "validation_results": {
+    "classifier_syntax": "PASS",
+    "focused_tests": "PASS_3_OF_3",
+    "classifier_and_planner_suite": "PASS_102_OF_102",
+    "exact_path_whitespace_policy": "PASS",
+    "p15_t01_package": "PASS_161_CHECKS",
+    "required_171_test_shard": "PASS_171_OF_171",
+    "governed_checkpoint": "PENDING"
+  },
+  "claim_limits": {
+    "scientific_claims_changed": false,
+    "scientific_ledger_changed": false,
+    "distance_to_gr_changed": false,
+    "p15_t03_executed": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "publication_authorized": false
+  }
+}

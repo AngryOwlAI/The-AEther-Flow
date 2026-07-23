@@ -1,0 +1,71 @@
+validation_status: "FAIL"
+task_id: "RT-20260722-024"
+task_type: "project_system_gitattributes_classifier_recovery"
+title: "Admit only root .gitattributes to governed checkpoint classification"
+task_taxonomy:
+  schema_id: "v21_task_taxonomy_v1"
+  work_kind: "benchmark_or_recovery"
+  milestone: "not_applicable"
+  candidate_family: "gitattributes_classifier_admission"
+  result_kind: "implemented_and_validated_or_precisely_blocked"
+  authority: "project_control"
+  scope: "project_system"
+status: "blocked"
+created_at: "2026-07-23T04:52:51Z"
+updated_at: "2026-07-23T05:44:47Z"
+closed_at: "2026-07-23T05:44:47Z"
+parent_task_id: "RT-20260722-023"
+parent_handoff_id: "handoff-0832"
+supersedes_active_routing_task_id: "RT-20260722-023"
+current_decision_id: "DDR-20260722-024"
+current_job_id: "AJ-RT-20260722-024-001"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260722-024"
+requires_human_gate: false
+human_authorization_note: "Generation 65 of the immutable user-requested relay routes exactly one improve-project-system frame to admit only root .gitattributes to the existing ci_orchestration validation family and retry the normal checkpoint."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P15"
+  plan_task_id: "P15-T01"
+  recovery_for_plan_task_id: "P15-T01"
+  next_plan_task_id: "P15-T03"
+objective: "Classify only the literal root .gitattributes path as ci_orchestration, prove an unrelated governed path remains fail-closed, preserve the four exact whitespace rules and protected P15-T01 hashes, and invoke one normal governed checkpoint without legacy validation."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system checkpoint classifier compatibility only; preserve every P15-T01 scientific and Distance-to-GR boundary unchanged."
+route_label: "admit_root_gitattributes_to_validation_classifier_v1"
+project_system_change_only: true
+dual_budget_category: "system_bearing"
+primary_budget: "project_system"
+scientific_claims_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+claim_boundary_id: "CB-V21-P15-T01-GITATTRIBUTES-CLASSIFIER-ADMISSION-001"
+claim_boundary:
+  allowed_scope: "One literal root .gitattributes classifier rule, focused classifier and validation-plan regressions, one task-local receipt, standard recovery records, generated derivative refresh, and one normal checkpoint for the preserved P15-T01 transaction."
+  immutable_predecessor_task: "RT-20260722-023"
+  immutable_predecessor_job: "AJ-RT-20260722-023-001"
+  immutable_predecessor_handoff: "handoff-0832"
+  current_classifier_family: "unknown_governed_path"
+  required_classifier_family: "ci_orchestration"
+  arbitrary_dotfile_classification_allowed: false
+  unknown_path_fail_closed_required: true
+  gitattributes_policy_mutation_allowed: false
+  legacy_validation_allowed: false
+  p15_t01_scientific_payload_changed: false
+  p15_t03_executed: false
+  scientific_claims_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+documentation_impact_id: "DI-RT-20260722-024-001"
+completion_id: "AJC-AJ-RT-20260722-024-001"
+output_artifacts:
+  - "scripts/project_control/classify_project_changes.py"
+  - "tests/test_project_change_classifier.py"
+  - "tests/test_validation_planner.py"
+  - "research_control/tasks/RT-20260722-024/artifacts/gitattributes_classifier_recovery_receipt.json"
+  - "research_control/tasks/RT-20260722-024/artifacts/validation_blocker_checkpoint_repository_shard_taxonomy_and_event_store_v1.yaml"
+closure_status: "literal_gitattributes_classifier_recovery_complete_checkpoint_blocked_repository_taxonomy_and_event_store_p15_t03_pending"
+summary: "The literal root .gitattributes classifier repair and focused regressions pass, but the one normal checkpoint stopped safely in the 1172-test repository shard on three invalid recovery-task taxonomy records plus one stale P10-T05 event-store source hash; nothing was staged or committed."
+next_recommended_action: "Run one fresh bounded improve-project-system recovery that normalizes RT-20260722-022 through RT-20260722-024 to valid existing task-taxonomy values, repairs the P10-T05 event-store source-hash receipts under their preserved authority, and invokes one future normal checkpoint; do not execute P15-T03 first."

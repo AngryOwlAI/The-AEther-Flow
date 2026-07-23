@@ -1,0 +1,136 @@
+schema_id: "exact_gr_reproducibility_source_package_v1"
+package_id: "RSP-V21-P15-T01-EXACT-GR-V1"
+status: "internal_source_package_complete"
+plan_task_id: "P15-T01"
+source_snapshot_git_head: "ef41c569efd01f3a5182f114c20dd6edb3ee9973"
+source_snapshot_repository: "The-AEther-Flow"
+external_primary_sources_added_by_task: []
+external_source_note: "P15-T01 introduced no new external literature claim; references already present in canonical TeX remain under those sources and were not independently re-audited here."
+
+license_and_notice:
+  research_prose_default: "CC BY 4.0 subject to LICENSE and narrower notices"
+  tooling_default: "Apache-2.0 subject to LICENSE and narrower notices"
+  attribution_notice: "Copyright (c) 2026 Alexander Samuel Ricciardi under the label AngryOwl."
+  source_paths:
+    - "LICENSE"
+    - "NOTICES"
+  scientific_status_effect: "none"
+
+canonical_sources:
+  - object_id: "TEX-ONTOLOGY-AETHER-FLOW-FOUNDATIONS"
+    path: "ontology/tex/aether_flow_foundations.tex"
+    sha256: "b14c99501bdb2b9fad0702df3a41230a4bf3bd279ee660c31329e1d33e577fa2"
+    authority_status: "canonical"
+    use: "exact-closure definition, effective action, field equation, null and proper-time rules, no independent low-energy signature"
+  - object_id: "TEX-ONTOLOGY-AETHER-FLOW-DYNAMICS"
+    path: "ontology/tex/aether_flow_dynamics.tex"
+    sha256: "ee3ae3298ab45111235388b305cbda2143b0314cb90f9b652115f71eb2fb8c6d"
+    authority_status: "canonical"
+    use: "effective action, universal matter coupling, single operational metric, benchmark dynamics"
+  - object_id: "TEX-ONTOLOGY-AETHER-FLOW-CONSISTENCY"
+    path: "ontology/tex/aether_flow_consistency.tex"
+    sha256: "d965519639ee8764a5c5a63798d15e8a9a380d7e208dffc43a0be02b6f245ba1"
+    authority_status: "canonical"
+    use: "ordinary GR gauge structure, constraints, and two tensor degrees of freedom at effective scope"
+  - object_id: "TEX-ONTOLOGY-AETHER-FLOW-RELATIVISTIC-RECOVERY"
+    path: "ontology/tex/aether_flow_relativistic_recovery.tex"
+    sha256: "77d5c2db56f122870343834f853bf2f375a912116a347d7c5710405c8707d69c"
+    authority_status: "canonical"
+    use: "fixed-input operational identity, measurement relations, adoption-versus-derivation boundary"
+  - object_id: "TEX-ONTOLOGY-AETHER-FLOW-GEOMETRY"
+    path: "ontology/tex/aether_flow_geometry.tex"
+    sha256: "ad43e3408fe2d9686a52a71de7ab8326668e8f04ebe2d2845986898b7d2c000f"
+    authority_status: "canonical"
+    use: "congruence interpretation, rest-space projector, nonunique observer-choice boundary"
+  - object_id: "TEX-ONTOLOGY-AETHER-FLOW-EXACT-CLOSURE-NOTE"
+    path: "ontology/tex/aether_flow_exact_closure_note.tex"
+    sha256: "c4a4e956ad5a10e6b3f4e661351bdeda2145b01e6e85d9df849e765c765eca35"
+    authority_status: "canonical"
+    use: "short exact-closure benchmark anchor"
+  - object_id: "TEX-ONTOLOGY-AETHER-FLOW-EXACT-CLOSURE-SEQUENCE-OVERVIEW"
+    path: "ontology/tex/aether_flow_exact_closure_sequence_overview.tex"
+    sha256: "356a5f65b0931914fdf9362ba544c2868bad7d33b828754b91c029bed96f86b1"
+    authority_status: "canonical"
+    use: "package sequence and reading boundary"
+  - object_id: "TEX-ONTOLOGY-AETHER-FLOW-EXACT-CLOSURE-FLAGSHIP-ARTICLE"
+    path: "ontology/tex/aether_flow_exact_closure_flagship_article.tex"
+    sha256: "900c799cb0c3d8f790c836196c136b3cec6944e46d41b89e511b85123fd30e40"
+    authority_status: "canonical"
+    use: "existing public synthesis inspected for consistency, not edited"
+
+dependency_sources:
+  - plan_task_id: "P14-T01"
+    object_id: "TEX-V21-P14-T01-PROJECT-SUCCESS-CATEGORIES"
+    artifact_path: "research_control/tasks/RT-20260722-016/artifacts/four_project_success_categories_v1.tex"
+    artifact_sha256: "03d2658ad7a1508776ed25f1b00b7446c04f8c76e16b2f1acfd7e6c06ddaf00e"
+    completion_path: "research_control/tasks/RT-20260722-016/jobs/completions/AJC-AJ-RT-20260722-016-001.yaml"
+    completion_sha256: "0cb2132e8fcc718f60bc84ea8ba2692a871bb30cd9cfb679d48214c1d4e7a699"
+    qualification: "completed draft/control four-category framework; no promotion authority"
+  - plan_task_id: "P14-T02"
+    object_id: "TEX-V21-P14-T02-NON-EMPIRICAL-ONTOLOGY-SUCCESS-CRITERIA-V1"
+    artifact_path: "research_control/tasks/RT-20260722-018/artifacts/non_empirical_ontology_success_criteria_v1.tex"
+    artifact_sha256: "261877bd01d1b405dd6a4a811ad04bc3a458210523227eb94b5aabd0104a53f9"
+    completion_path: "research_control/tasks/RT-20260722-018/jobs/completions/AJC-AJ-RT-20260722-018-001.yaml"
+    completion_sha256: "25b2735655acd19b520a3dc4d089ef5107891b6370cd6ffddbcdc963b1fe56ad"
+    qualification: "completed draft/control seven-coordinate audit; no ontology verdict"
+  - plan_task_id: "P14-T03"
+    object_id: "TEX-V21-P14-T03-NO-TARGET-POSITIVE-SUFFICIENCY-POLICY-V1"
+    artifact_path: "research_control/tasks/RT-20260722-019/artifacts/no_target_positive_provenance_sufficiency_policy_v1.tex"
+    artifact_sha256: "52c30a55019d38dbc5cb697749189dba4a0bc17db9566dd4c505b21f7db2e456"
+    completion_path: "research_control/tasks/RT-20260722-019/jobs/completions/AJC-AJ-RT-20260722-019-001.yaml"
+    completion_sha256: "1996cb234816a9043ea8928661314055570ec1c9c872a7331d0a2a0ef8da5eec"
+    qualification: "completed necessary-but-insufficient source-purity policy; no Gate verdict"
+
+control_sources:
+  - path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+    sha256: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+    use: "P15-T01 scope, outputs, validation, and human-review prerequisites"
+  - path: "research_control/handoffs/handoff-0829.yaml"
+    sha256: "c63b7909df2ea8c76849399bbe0ef6e5158284c69d2e753c860b1089b4fde99d"
+    use: "authorized dependency-ready route"
+  - path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+    use: "read-only current burden status"
+  - path: "research_control/design/gr_derivation_burden_map.md"
+    use: "read-only burden definitions"
+  - path: "markdown/publication-briefs/exact-gr-benchmark-boundary.publication-brief.md"
+    use: "adoption, compatibility, derivation, and promotion editorial boundary"
+  - path: "markdown/html-explainer-specs/exact-gr-benchmark-boundary-explainer.md"
+    use: "public-derivative authority boundary inspected only"
+
+equation_trace_ids:
+  - "EQ-001"
+  - "EQ-002"
+  - "EQ-003"
+  - "EQ-004"
+  - "EQ-005"
+  - "EQ-006"
+equation_trace_source: "research_control/tasks/RT-20260722-021/artifacts/exact_gr_claim_map_v1.yaml"
+
+package_files:
+  - "research_control/tasks/RT-20260722-021/artifacts/exact_gr_interpretive_manuscript_v1.md"
+  - "research_control/tasks/RT-20260722-021/artifacts/exact_gr_claim_map_v1.yaml"
+  - "research_control/tasks/RT-20260722-021/artifacts/exact_gr_reproducibility_source_package_v1.yaml"
+  - "research_control/tasks/RT-20260722-021/artifacts/exact_gr_internal_review_packet_v1.md"
+  - "research_control/tasks/RT-20260722-021/artifacts/exact_gr_interpretive_package_validation.json"
+  - "research_control/tasks/RT-20260722-021/artifacts/exact_gr_interpretive_package_compact_receipt.json"
+
+reproduction_commands:
+  - ".venv/bin/python research_control/tasks/RT-20260722-021/artifacts/validate_exact_gr_interpretive_package.py --write-report --json"
+  - ".venv/bin/python research_control/tasks/RT-20260722-021/artifacts/validate_exact_gr_interpretive_package.py --check --json"
+  - ".venv/bin/python scripts/validate_publication_process.py --root ."
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --json-summary"
+  - ".venv/bin/python -m unittest tests.test_publication_process_validation tests.test_research_control"
+  - "git diff --check"
+
+authority_limits:
+  manuscript_is_canonical_science_source: false
+  task_changes_canonical_ontology: false
+  task_changes_distance_to_gr_ledger: false
+  task_establishes_external_review: false
+  task_authorizes_reviewer_contact: false
+  task_authorizes_submission_or_release: false
+  task_authorizes_benchmark_promotion: false
+  task_authorizes_completed_derivation_claim: false
+

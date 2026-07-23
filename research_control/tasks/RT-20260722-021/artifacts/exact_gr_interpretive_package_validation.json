@@ -1,0 +1,827 @@
+{
+  "artifact_hashes": {
+    "claim_map_sha256": "e9283556dd03a08a37ddd55962884ad1cd57ec6c60f194d01bc37a13733eb679",
+    "manuscript_sha256": "17d215509eb3f0ee4544c2f25eed56462d346106f41bc520fc27441c09c0add9",
+    "review_packet_sha256": "25087b0dcacc1c07faff48e2ecddc6e57b026a352faf27ccbb5015774203479b",
+    "source_package_sha256": "e4f4e0cd9c2beff5ad4e9de90d33734d4d4a0f1719e05c4ef24649bd791d3c79"
+  },
+  "authority_effect": "operational_validation_only_no_scientific_or_publication_authority",
+  "canonical_source_count": 8,
+  "check_count": 161,
+  "checks": [
+    {
+      "check_id": "file_exists:exact_gr_interpretive_manuscript_v1.md",
+      "detail": "required package file must exist",
+      "pass": true
+    },
+    {
+      "check_id": "file_exists:exact_gr_claim_map_v1.yaml",
+      "detail": "required package file must exist",
+      "pass": true
+    },
+    {
+      "check_id": "file_exists:exact_gr_reproducibility_source_package_v1.yaml",
+      "detail": "required package file must exist",
+      "pass": true
+    },
+    {
+      "check_id": "file_exists:exact_gr_internal_review_packet_v1.md",
+      "detail": "required package file must exist",
+      "pass": true
+    },
+    {
+      "check_id": "required_boundary:adopted effective law",
+      "detail": "required boundary phrase missing: adopted effective law",
+      "pass": true
+    },
+    {
+      "check_id": "required_boundary:first-principles substrate derivation remains open",
+      "detail": "required boundary phrase missing: first-principles substrate derivation remains open",
+      "pass": true
+    },
+    {
+      "check_id": "required_boundary:no independent low-energy non-GR signature",
+      "detail": "required boundary phrase missing: no independent low-energy non-GR signature",
+      "pass": true
+    },
+    {
+      "check_id": "required_boundary:not blind independent human review",
+      "detail": "required boundary phrase missing: not blind independent human review",
+      "pass": true
+    },
+    {
+      "check_id": "required_boundary:explicit human authorization",
+      "detail": "required boundary phrase missing: explicit human authorization",
+      "pass": true
+    },
+    {
+      "check_id": "forbidden_phrase:completed_source_derivation",
+      "detail": "forbidden positive overclaim matched: completed_source_derivation",
+      "pass": true
+    },
+    {
+      "check_id": "forbidden_phrase:ontology_established",
+      "detail": "forbidden positive overclaim matched: ontology_established",
+      "pass": true
+    },
+    {
+      "check_id": "forbidden_phrase:independent_prediction_claim",
+      "detail": "forbidden positive overclaim matched: independent_prediction_claim",
+      "pass": true
+    },
+    {
+      "check_id": "forbidden_phrase:false_external_review",
+      "detail": "forbidden positive overclaim matched: false_external_review",
+      "pass": true
+    },
+    {
+      "check_id": "forbidden_phrase:publication_authority",
+      "detail": "forbidden positive overclaim matched: publication_authority",
+      "pass": true
+    },
+    {
+      "check_id": "claims_are_list",
+      "detail": "claims must be a list",
+      "pass": true
+    },
+    {
+      "check_id": "traces_are_list",
+      "detail": "equation_traces must be a list",
+      "pass": true
+    },
+    {
+      "check_id": "claim_count",
+      "detail": "claim map must contain exactly 13 claims",
+      "pass": true
+    },
+    {
+      "check_id": "trace_count",
+      "detail": "claim map must contain exactly six equation traces",
+      "pass": true
+    },
+    {
+      "check_id": "claim_ids_unique",
+      "detail": "claim IDs must be unique",
+      "pass": true
+    },
+    {
+      "check_id": "trace_ids_unique",
+      "detail": "equation trace IDs must be unique",
+      "pass": true
+    },
+    {
+      "check_id": "claim_declared_count",
+      "detail": "declared claim_count must equal actual claims",
+      "pass": true
+    },
+    {
+      "check_id": "trace_declared_count",
+      "detail": "declared equation_trace_count must equal actual traces",
+      "pass": true
+    },
+    {
+      "check_id": "claim_statement:C-001",
+      "detail": "claim needs a statement",
+      "pass": true
+    },
+    {
+      "check_id": "claim_status:C-001",
+      "detail": "claim needs a status",
+      "pass": true
+    },
+    {
+      "check_id": "claim_allowed:C-001",
+      "detail": "claim needs allowed_use",
+      "pass": true
+    },
+    {
+      "check_id": "claim_forbidden:C-001",
+      "detail": "claim needs forbidden_overread",
+      "pass": true
+    },
+    {
+      "check_id": "claim_sources:C-001",
+      "detail": "claim needs at least one source object ID",
+      "pass": true
+    },
+    {
+      "check_id": "claim_statement:C-002",
+      "detail": "claim needs a statement",
+      "pass": true
+    },
+    {
+      "check_id": "claim_status:C-002",
+      "detail": "claim needs a status",
+      "pass": true
+    },
+    {
+      "check_id": "claim_allowed:C-002",
+      "detail": "claim needs allowed_use",
+      "pass": true
+    },
+    {
+      "check_id": "claim_forbidden:C-002",
+      "detail": "claim needs forbidden_overread",
+      "pass": true
+    },
+    {
+      "check_id": "claim_sources:C-002",
+      "detail": "claim needs at least one source object ID",
+      "pass": true
+    },
+    {
+      "check_id": "claim_statement:C-003",
+      "detail": "claim needs a statement",
+      "pass": true
+    },
+    {
+      "check_id": "claim_status:C-003",
+      "detail": "claim needs a status",
+      "pass": true
+    },
+    {
+      "check_id": "claim_allowed:C-003",
+      "detail": "claim needs allowed_use",
+      "pass": true
+    },
+    {
+      "check_id": "claim_forbidden:C-003",
+      "detail": "claim needs forbidden_overread",
+      "pass": true
+    },
+    {
+      "check_id": "claim_sources:C-003",
+      "detail": "claim needs at least one source object ID",
+      "pass": true
+    },
+    {
+      "check_id": "claim_statement:C-004",
+      "detail": "claim needs a statement",
+      "pass": true
+    },
+    {
+      "check_id": "claim_status:C-004",
+      "detail": "claim needs a status",
+      "pass": true
+    },
+    {
+      "check_id": "claim_allowed:C-004",
+      "detail": "claim needs allowed_use",
+      "pass": true
+    },
+    {
+      "check_id": "claim_forbidden:C-004",
+      "detail": "claim needs forbidden_overread",
+      "pass": true
+    },
+    {
+      "check_id": "claim_sources:C-004",
+      "detail": "claim needs at least one source object ID",
+      "pass": true
+    },
+    {
+      "check_id": "claim_statement:C-005",
+      "detail": "claim needs a statement",
+      "pass": true
+    },
+    {
+      "check_id": "claim_status:C-005",
+      "detail": "claim needs a status",
+      "pass": true
+    },
+    {
+      "check_id": "claim_allowed:C-005",
+      "detail": "claim needs allowed_use",
+      "pass": true
+    },
+    {
+      "check_id": "claim_forbidden:C-005",
+      "detail": "claim needs forbidden_overread",
+      "pass": true
+    },
+    {
+      "check_id": "claim_sources:C-005",
+      "detail": "claim needs at least one source object ID",
+      "pass": true
+    },
+    {
+      "check_id": "claim_statement:C-006",
+      "detail": "claim needs a statement",
+      "pass": true
+    },
+    {
+      "check_id": "claim_status:C-006",
+      "detail": "claim needs a status",
+      "pass": true
+    },
+    {
+      "check_id": "claim_allowed:C-006",
+      "detail": "claim needs allowed_use",
+      "pass": true
+    },
+    {
+      "check_id": "claim_forbidden:C-006",
+      "detail": "claim needs forbidden_overread",
+      "pass": true
+    },
+    {
+      "check_id": "claim_sources:C-006",
+      "detail": "claim needs at least one source object ID",
+      "pass": true
+    },
+    {
+      "check_id": "claim_statement:C-007",
+      "detail": "claim needs a statement",
+      "pass": true
+    },
+    {
+      "check_id": "claim_status:C-007",
+      "detail": "claim needs a status",
+      "pass": true
+    },
+    {
+      "check_id": "claim_allowed:C-007",
+      "detail": "claim needs allowed_use",
+      "pass": true
+    },
+    {
+      "check_id": "claim_forbidden:C-007",
+      "detail": "claim needs forbidden_overread",
+      "pass": true
+    },
+    {
+      "check_id": "claim_sources:C-007",
+      "detail": "claim needs at least one source object ID",
+      "pass": true
+    },
+    {
+      "check_id": "claim_statement:C-008",
+      "detail": "claim needs a statement",
+      "pass": true
+    },
+    {
+      "check_id": "claim_status:C-008",
+      "detail": "claim needs a status",
+      "pass": true
+    },
+    {
+      "check_id": "claim_allowed:C-008",
+      "detail": "claim needs allowed_use",
+      "pass": true
+    },
+    {
+      "check_id": "claim_forbidden:C-008",
+      "detail": "claim needs forbidden_overread",
+      "pass": true
+    },
+    {
+      "check_id": "claim_sources:C-008",
+      "detail": "claim needs at least one source object ID",
+      "pass": true
+    },
+    {
+      "check_id": "claim_statement:C-009",
+      "detail": "claim needs a statement",
+      "pass": true
+    },
+    {
+      "check_id": "claim_status:C-009",
+      "detail": "claim needs a status",
+      "pass": true
+    },
+    {
+      "check_id": "claim_allowed:C-009",
+      "detail": "claim needs allowed_use",
+      "pass": true
+    },
+    {
+      "check_id": "claim_forbidden:C-009",
+      "detail": "claim needs forbidden_overread",
+      "pass": true
+    },
+    {
+      "check_id": "claim_sources:C-009",
+      "detail": "claim needs at least one source object ID",
+      "pass": true
+    },
+    {
+      "check_id": "claim_statement:C-010",
+      "detail": "claim needs a statement",
+      "pass": true
+    },
+    {
+      "check_id": "claim_status:C-010",
+      "detail": "claim needs a status",
+      "pass": true
+    },
+    {
+      "check_id": "claim_allowed:C-010",
+      "detail": "claim needs allowed_use",
+      "pass": true
+    },
+    {
+      "check_id": "claim_forbidden:C-010",
+      "detail": "claim needs forbidden_overread",
+      "pass": true
+    },
+    {
+      "check_id": "claim_sources:C-010",
+      "detail": "claim needs at least one source object ID",
+      "pass": true
+    },
+    {
+      "check_id": "claim_statement:C-011",
+      "detail": "claim needs a statement",
+      "pass": true
+    },
+    {
+      "check_id": "claim_status:C-011",
+      "detail": "claim needs a status",
+      "pass": true
+    },
+    {
+      "check_id": "claim_allowed:C-011",
+      "detail": "claim needs allowed_use",
+      "pass": true
+    },
+    {
+      "check_id": "claim_forbidden:C-011",
+      "detail": "claim needs forbidden_overread",
+      "pass": true
+    },
+    {
+      "check_id": "claim_sources:C-011",
+      "detail": "claim needs at least one source object ID",
+      "pass": true
+    },
+    {
+      "check_id": "claim_statement:C-012",
+      "detail": "claim needs a statement",
+      "pass": true
+    },
+    {
+      "check_id": "claim_status:C-012",
+      "detail": "claim needs a status",
+      "pass": true
+    },
+    {
+      "check_id": "claim_allowed:C-012",
+      "detail": "claim needs allowed_use",
+      "pass": true
+    },
+    {
+      "check_id": "claim_forbidden:C-012",
+      "detail": "claim needs forbidden_overread",
+      "pass": true
+    },
+    {
+      "check_id": "claim_sources:C-012",
+      "detail": "claim needs at least one source object ID",
+      "pass": true
+    },
+    {
+      "check_id": "claim_statement:C-013",
+      "detail": "claim needs a statement",
+      "pass": true
+    },
+    {
+      "check_id": "claim_status:C-013",
+      "detail": "claim needs a status",
+      "pass": true
+    },
+    {
+      "check_id": "claim_allowed:C-013",
+      "detail": "claim needs allowed_use",
+      "pass": true
+    },
+    {
+      "check_id": "claim_forbidden:C-013",
+      "detail": "claim needs forbidden_overread",
+      "pass": true
+    },
+    {
+      "check_id": "claim_sources:C-013",
+      "detail": "claim needs at least one source object ID",
+      "pass": true
+    },
+    {
+      "check_id": "displayed_equation_count",
+      "detail": "manuscript must contain six displayed equations",
+      "pass": true
+    },
+    {
+      "check_id": "manuscript_trace_count",
+      "detail": "each displayed equation needs one trace marker",
+      "pass": true
+    },
+    {
+      "check_id": "manuscript_trace_unique",
+      "detail": "trace markers must be unique",
+      "pass": true
+    },
+    {
+      "check_id": "trace_sets_match",
+      "detail": "manuscript and claim-map trace IDs must match",
+      "pass": true
+    },
+    {
+      "check_id": "trace_sources:EQ-001",
+      "detail": "trace needs sources",
+      "pass": true
+    },
+    {
+      "check_id": "trace_labels:EQ-001",
+      "detail": "trace needs labels",
+      "pass": true
+    },
+    {
+      "check_id": "trace_boundary:EQ-001",
+      "detail": "trace must preserve adoption boundary",
+      "pass": true
+    },
+    {
+      "check_id": "trace_sources:EQ-002",
+      "detail": "trace needs sources",
+      "pass": true
+    },
+    {
+      "check_id": "trace_labels:EQ-002",
+      "detail": "trace needs labels",
+      "pass": true
+    },
+    {
+      "check_id": "trace_boundary:EQ-002",
+      "detail": "trace must preserve adoption boundary",
+      "pass": true
+    },
+    {
+      "check_id": "trace_sources:EQ-003",
+      "detail": "trace needs sources",
+      "pass": true
+    },
+    {
+      "check_id": "trace_labels:EQ-003",
+      "detail": "trace needs labels",
+      "pass": true
+    },
+    {
+      "check_id": "trace_boundary:EQ-003",
+      "detail": "trace must preserve adoption boundary",
+      "pass": true
+    },
+    {
+      "check_id": "trace_sources:EQ-004",
+      "detail": "trace needs sources",
+      "pass": true
+    },
+    {
+      "check_id": "trace_labels:EQ-004",
+      "detail": "trace needs labels",
+      "pass": true
+    },
+    {
+      "check_id": "trace_boundary:EQ-004",
+      "detail": "trace must preserve adoption boundary",
+      "pass": true
+    },
+    {
+      "check_id": "trace_sources:EQ-005",
+      "detail": "trace needs sources",
+      "pass": true
+    },
+    {
+      "check_id": "trace_labels:EQ-005",
+      "detail": "trace needs labels",
+      "pass": true
+    },
+    {
+      "check_id": "trace_boundary:EQ-005",
+      "detail": "trace must preserve adoption boundary",
+      "pass": true
+    },
+    {
+      "check_id": "trace_sources:EQ-006",
+      "detail": "trace needs sources",
+      "pass": true
+    },
+    {
+      "check_id": "trace_labels:EQ-006",
+      "detail": "trace needs labels",
+      "pass": true
+    },
+    {
+      "check_id": "trace_boundary:EQ-006",
+      "detail": "trace must preserve adoption boundary",
+      "pass": true
+    },
+    {
+      "check_id": "canonical_sources_list",
+      "detail": "canonical source list incomplete",
+      "pass": true
+    },
+    {
+      "check_id": "dependency_sources_list",
+      "detail": "three P14 dependencies required",
+      "pass": true
+    },
+    {
+      "check_id": "canonical_exists:TEX-ONTOLOGY-AETHER-FLOW-FOUNDATIONS",
+      "detail": "canonical source missing: ontology/tex/aether_flow_foundations.tex",
+      "pass": true
+    },
+    {
+      "check_id": "canonical_hash:TEX-ONTOLOGY-AETHER-FLOW-FOUNDATIONS",
+      "detail": "canonical source hash mismatch: ontology/tex/aether_flow_foundations.tex",
+      "pass": true
+    },
+    {
+      "check_id": "canonical_exists:TEX-ONTOLOGY-AETHER-FLOW-DYNAMICS",
+      "detail": "canonical source missing: ontology/tex/aether_flow_dynamics.tex",
+      "pass": true
+    },
+    {
+      "check_id": "canonical_hash:TEX-ONTOLOGY-AETHER-FLOW-DYNAMICS",
+      "detail": "canonical source hash mismatch: ontology/tex/aether_flow_dynamics.tex",
+      "pass": true
+    },
+    {
+      "check_id": "canonical_exists:TEX-ONTOLOGY-AETHER-FLOW-CONSISTENCY",
+      "detail": "canonical source missing: ontology/tex/aether_flow_consistency.tex",
+      "pass": true
+    },
+    {
+      "check_id": "canonical_hash:TEX-ONTOLOGY-AETHER-FLOW-CONSISTENCY",
+      "detail": "canonical source hash mismatch: ontology/tex/aether_flow_consistency.tex",
+      "pass": true
+    },
+    {
+      "check_id": "canonical_exists:TEX-ONTOLOGY-AETHER-FLOW-RELATIVISTIC-RECOVERY",
+      "detail": "canonical source missing: ontology/tex/aether_flow_relativistic_recovery.tex",
+      "pass": true
+    },
+    {
+      "check_id": "canonical_hash:TEX-ONTOLOGY-AETHER-FLOW-RELATIVISTIC-RECOVERY",
+      "detail": "canonical source hash mismatch: ontology/tex/aether_flow_relativistic_recovery.tex",
+      "pass": true
+    },
+    {
+      "check_id": "canonical_exists:TEX-ONTOLOGY-AETHER-FLOW-GEOMETRY",
+      "detail": "canonical source missing: ontology/tex/aether_flow_geometry.tex",
+      "pass": true
+    },
+    {
+      "check_id": "canonical_hash:TEX-ONTOLOGY-AETHER-FLOW-GEOMETRY",
+      "detail": "canonical source hash mismatch: ontology/tex/aether_flow_geometry.tex",
+      "pass": true
+    },
+    {
+      "check_id": "canonical_exists:TEX-ONTOLOGY-AETHER-FLOW-EXACT-CLOSURE-NOTE",
+      "detail": "canonical source missing: ontology/tex/aether_flow_exact_closure_note.tex",
+      "pass": true
+    },
+    {
+      "check_id": "canonical_hash:TEX-ONTOLOGY-AETHER-FLOW-EXACT-CLOSURE-NOTE",
+      "detail": "canonical source hash mismatch: ontology/tex/aether_flow_exact_closure_note.tex",
+      "pass": true
+    },
+    {
+      "check_id": "canonical_exists:TEX-ONTOLOGY-AETHER-FLOW-EXACT-CLOSURE-SEQUENCE-OVERVIEW",
+      "detail": "canonical source missing: ontology/tex/aether_flow_exact_closure_sequence_overview.tex",
+      "pass": true
+    },
+    {
+      "check_id": "canonical_hash:TEX-ONTOLOGY-AETHER-FLOW-EXACT-CLOSURE-SEQUENCE-OVERVIEW",
+      "detail": "canonical source hash mismatch: ontology/tex/aether_flow_exact_closure_sequence_overview.tex",
+      "pass": true
+    },
+    {
+      "check_id": "canonical_exists:TEX-ONTOLOGY-AETHER-FLOW-EXACT-CLOSURE-FLAGSHIP-ARTICLE",
+      "detail": "canonical source missing: ontology/tex/aether_flow_exact_closure_flagship_article.tex",
+      "pass": true
+    },
+    {
+      "check_id": "canonical_hash:TEX-ONTOLOGY-AETHER-FLOW-EXACT-CLOSURE-FLAGSHIP-ARTICLE",
+      "detail": "canonical source hash mismatch: ontology/tex/aether_flow_exact_closure_flagship_article.tex",
+      "pass": true
+    },
+    {
+      "check_id": "dependency_exists:P14-T01:artifact_path",
+      "detail": "dependency file missing: research_control/tasks/RT-20260722-016/artifacts/four_project_success_categories_v1.tex",
+      "pass": true
+    },
+    {
+      "check_id": "dependency_hash:P14-T01:artifact_path",
+      "detail": "dependency hash mismatch: research_control/tasks/RT-20260722-016/artifacts/four_project_success_categories_v1.tex",
+      "pass": true
+    },
+    {
+      "check_id": "dependency_exists:P14-T01:completion_path",
+      "detail": "dependency file missing: research_control/tasks/RT-20260722-016/jobs/completions/AJC-AJ-RT-20260722-016-001.yaml",
+      "pass": true
+    },
+    {
+      "check_id": "dependency_hash:P14-T01:completion_path",
+      "detail": "dependency hash mismatch: research_control/tasks/RT-20260722-016/jobs/completions/AJC-AJ-RT-20260722-016-001.yaml",
+      "pass": true
+    },
+    {
+      "check_id": "dependency_exists:P14-T02:artifact_path",
+      "detail": "dependency file missing: research_control/tasks/RT-20260722-018/artifacts/non_empirical_ontology_success_criteria_v1.tex",
+      "pass": true
+    },
+    {
+      "check_id": "dependency_hash:P14-T02:artifact_path",
+      "detail": "dependency hash mismatch: research_control/tasks/RT-20260722-018/artifacts/non_empirical_ontology_success_criteria_v1.tex",
+      "pass": true
+    },
+    {
+      "check_id": "dependency_exists:P14-T02:completion_path",
+      "detail": "dependency file missing: research_control/tasks/RT-20260722-018/jobs/completions/AJC-AJ-RT-20260722-018-001.yaml",
+      "pass": true
+    },
+    {
+      "check_id": "dependency_hash:P14-T02:completion_path",
+      "detail": "dependency hash mismatch: research_control/tasks/RT-20260722-018/jobs/completions/AJC-AJ-RT-20260722-018-001.yaml",
+      "pass": true
+    },
+    {
+      "check_id": "dependency_exists:P14-T03:artifact_path",
+      "detail": "dependency file missing: research_control/tasks/RT-20260722-019/artifacts/no_target_positive_provenance_sufficiency_policy_v1.tex",
+      "pass": true
+    },
+    {
+      "check_id": "dependency_hash:P14-T03:artifact_path",
+      "detail": "dependency hash mismatch: research_control/tasks/RT-20260722-019/artifacts/no_target_positive_provenance_sufficiency_policy_v1.tex",
+      "pass": true
+    },
+    {
+      "check_id": "dependency_exists:P14-T03:completion_path",
+      "detail": "dependency file missing: research_control/tasks/RT-20260722-019/jobs/completions/AJC-AJ-RT-20260722-019-001.yaml",
+      "pass": true
+    },
+    {
+      "check_id": "dependency_hash:P14-T03:completion_path",
+      "detail": "dependency hash mismatch: research_control/tasks/RT-20260722-019/jobs/completions/AJC-AJ-RT-20260722-019-001.yaml",
+      "pass": true
+    },
+    {
+      "check_id": "global_boundary_mapping",
+      "detail": "global_boundary must be a mapping",
+      "pass": true
+    },
+    {
+      "check_id": "authority_limits_mapping",
+      "detail": "authority_limits must be a mapping",
+      "pass": true
+    },
+    {
+      "check_id": "global_false:first_principles_substrate_derivation_established",
+      "detail": "first_principles_substrate_derivation_established must be false",
+      "pass": true
+    },
+    {
+      "check_id": "global_false:ontology_established_as_physical_fact",
+      "detail": "ontology_established_as_physical_fact must be false",
+      "pass": true
+    },
+    {
+      "check_id": "global_false:independent_low_energy_novelty_present",
+      "detail": "independent_low_energy_novelty_present must be false",
+      "pass": true
+    },
+    {
+      "check_id": "global_false:external_human_review_present",
+      "detail": "external_human_review_present must be false",
+      "pass": true
+    },
+    {
+      "check_id": "global_false:publication_authorized",
+      "detail": "publication_authorized must be false",
+      "pass": true
+    },
+    {
+      "check_id": "global_false:benchmark_promotion_authorized",
+      "detail": "benchmark_promotion_authorized must be false",
+      "pass": true
+    },
+    {
+      "check_id": "global_false:physics_promotion_authorized",
+      "detail": "physics_promotion_authorized must be false",
+      "pass": true
+    },
+    {
+      "check_id": "authority_false:manuscript_is_canonical_science_source",
+      "detail": "authority limit manuscript_is_canonical_science_source must be false",
+      "pass": true
+    },
+    {
+      "check_id": "authority_false:task_changes_canonical_ontology",
+      "detail": "authority limit task_changes_canonical_ontology must be false",
+      "pass": true
+    },
+    {
+      "check_id": "authority_false:task_changes_distance_to_gr_ledger",
+      "detail": "authority limit task_changes_distance_to_gr_ledger must be false",
+      "pass": true
+    },
+    {
+      "check_id": "authority_false:task_establishes_external_review",
+      "detail": "authority limit task_establishes_external_review must be false",
+      "pass": true
+    },
+    {
+      "check_id": "authority_false:task_authorizes_reviewer_contact",
+      "detail": "authority limit task_authorizes_reviewer_contact must be false",
+      "pass": true
+    },
+    {
+      "check_id": "authority_false:task_authorizes_submission_or_release",
+      "detail": "authority limit task_authorizes_submission_or_release must be false",
+      "pass": true
+    },
+    {
+      "check_id": "authority_false:task_authorizes_benchmark_promotion",
+      "detail": "authority limit task_authorizes_benchmark_promotion must be false",
+      "pass": true
+    },
+    {
+      "check_id": "authority_false:task_authorizes_completed_derivation_claim",
+      "detail": "authority limit task_authorizes_completed_derivation_claim must be false",
+      "pass": true
+    },
+    {
+      "check_id": "review_marker:blind_review: false",
+      "detail": "review packet missing blind_review: false",
+      "pass": true
+    },
+    {
+      "check_id": "review_marker:independent_review: false",
+      "detail": "review packet missing independent_review: false",
+      "pass": true
+    },
+    {
+      "check_id": "review_marker:external_human_review: false",
+      "detail": "review packet missing external_human_review: false",
+      "pass": true
+    },
+    {
+      "check_id": "review_marker:peer_review: false",
+      "detail": "review packet missing peer_review: false",
+      "pass": true
+    },
+    {
+      "check_id": "review_marker:publication_authorized: false",
+      "detail": "review packet missing publication_authorized: false",
+      "pass": true
+    }
+  ],
+  "claim_count": 13,
+  "dependency_source_count": 3,
+  "equation_trace_count": 6,
+  "errors": [],
+  "failed_check_count": 0,
+  "passed_check_count": 161,
+  "schema_id": "exact_gr_interpretive_package_validation_v1",
+  "status": "PASS_161_CHECKS",
+  "validation_passed": true
+}

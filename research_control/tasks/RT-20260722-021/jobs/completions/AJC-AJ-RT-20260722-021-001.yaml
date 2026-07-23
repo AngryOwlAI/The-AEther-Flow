@@ -1,0 +1,502 @@
+validation_status: "FAIL"
+job_id: "AJ-RT-20260722-021-001"
+completion_id: "AJC-AJ-RT-20260722-021-001"
+task_id: "RT-20260722-021"
+task_type: "v21_exact_gr_interpretive_manuscript_package"
+decision_id: "DDR-20260722-021"
+role_id: "documentation-curator"
+role_version: "2.0.0"
+execution_role_ref: "documentation-curator@2.0.0--RT-20260722-021"
+status: "completed"
+final_repository_validation_status: "FAIL"
+created_at: "2026-07-23T01:11:58Z"
+started_at: "2026-07-23T01:11:58Z"
+completed_at: "2026-07-23T01:19:19Z"
+objective: "Execute only v21 P15-T01 by preparing a source-hash-bound internal exact-GR interpretive manuscript package with exact adoption-versus-derivation empirical-equivalence and review-authority boundaries."
+completion_summary: "P15-T01 produced a task-locally complete internal exact-GR interpretive manuscript, 13-claim map, six-equation registered-source trace, eight-source reproducibility package, and same-context internal review packet. The package preserves every scientific and authority boundary and passes 161 task-local checks. Required repository validation nevertheless fails because the live continuation-context test hard-codes obsolete plan task P14-T02 while handoff-0830 lawfully selects P15-T03. That fixture repair lies outside this AgentJob, no checkpoint ran, and P15-T03 remains selected but execution-pending."
+objective_result: "task_local_exact_gr_interpretive_package_complete_checkpoint_blocked"
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 62
+  passes_consumed: 61
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:62"
+  handoff_token: "fe0d14e9545ad5e38cede91b3ce95b54c8f64ce749f792d1"
+  relay_claim_token: "67e89f474fcd922b66aea5a529fc059dbdf06b534a032a36"
+  route_hash: "e64aa2135145462630d093b3f127c0a06298289c77aed0fdf88db1261831a02c"
+  route_work_item_id: "P15-T01"
+  worker_skill: "continue-research"
+  authorized_worker_invocation_count: 1
+  consumed_worker_invocation_count: 1
+
+transaction_status: "blocked_precheckpoint_project_system_repair_required"
+result_disposition: "scientific_payload_complete_control_checkpoint_blocked"
+checkpoint_commit: "none_validation_failed"
+is_physics_task: true
+payload_class: "source_model"
+minimum_payload:
+  payload_class: "source_hash_bound_publication_synthesis"
+  payload_artifact_path: "research_control/tasks/RT-20260722-021/artifacts/exact_gr_interpretive_manuscript_v1.md"
+  payload_summary: "A noncanonical internal manuscript consolidates registered exact-GR equations and P14 claim boundaries into a reviewable source model without new physics or protected status."
+has_new_mathematical_payload: false
+has_finite_local_witness: false
+has_countermodel: false
+physics_promotion_authorized: false
+proof_authority: false
+
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P15"
+  plan_task_id: "P15-T01"
+  recommendation_ids:
+    - "V21-R61"
+    - "V21-R62"
+    - "V21-R65"
+    - "V21-R66"
+    - "V21-R70"
+  implementation_status: "validation_blocked"
+  implemented_task_scope: "One task-local internal exact-GR manuscript, claim map, reproducibility/source package, internal review packet, checker, compact receipt, standard records, and one next route only."
+  p14_t01_completed: true
+  p14_t02_completed: true
+  p14_t03_completed: true
+  p15_t01_payload_complete: true
+  p15_t01_completed: false
+  p15_t01_checkpoint_complete: false
+  p15_t06_dependency_ready: false
+  p15_t06_blocked_by:
+    - "P15-T02"
+    - "P15-T03"
+    - "P15-T04"
+  p15_t03_dependency_ready: true
+  p15_t03_executed: false
+  selected_next_plan_task: "P15-T03"
+
+recommendation_coverage:
+  - recommendation_id: "V21-R61"
+    status: "implemented_at_internal_publication_preparation_scope"
+    evidence: "The exact-GR manuscript distinguishes interpretive benchmark success from open source derivation and novelty."
+  - recommendation_id: "V21-R62"
+    status: "implemented_at_internal_publication_preparation_scope"
+    evidence: "Thirteen claims and six equations are mapped to exact registered sources and forbidden overreads."
+  - recommendation_id: "V21-R65"
+    status: "implemented_at_internal_publication_preparation_scope"
+    evidence: "The reproducibility package records source paths hashes version head license notice and reproduction commands."
+  - recommendation_id: "V21-R66"
+    status: "implemented_at_internal_publication_preparation_scope"
+    evidence: "A same-context internal review packet and explicit later blind-review gate are recorded without false independence wording."
+  - recommendation_id: "V21-R70"
+    status: "implemented_at_internal_publication_preparation_scope"
+    evidence: "Every external action remains human-authorized and no public release or outreach occurred."
+
+artifacts:
+  - "research_control/tasks/RT-20260722-021/artifacts/exact_gr_interpretive_manuscript_v1.md"
+  - "research_control/tasks/RT-20260722-021/artifacts/exact_gr_claim_map_v1.yaml"
+  - "research_control/tasks/RT-20260722-021/artifacts/exact_gr_reproducibility_source_package_v1.yaml"
+  - "research_control/tasks/RT-20260722-021/artifacts/exact_gr_internal_review_packet_v1.md"
+  - "research_control/tasks/RT-20260722-021/artifacts/validate_exact_gr_interpretive_package.py"
+  - "research_control/tasks/RT-20260722-021/artifacts/exact_gr_interpretive_package_validation.json"
+  - "research_control/tasks/RT-20260722-021/artifacts/exact_gr_interpretive_package_compact_receipt.json"
+  - "research_control/tasks/RT-20260722-021/artifacts/validation_blocker_continue_research_context_fixture_v1.yaml"
+output_paths:
+  - "research_control/tasks/RT-20260722-021/**"
+  - "research_control/handoffs/handoff-0830.yaml"
+  - "research_control/handoffs/handoff-0830.md"
+  - "research_control/program_state.yaml"
+
+artifact_receipts:
+  - path: "research_control/tasks/RT-20260722-021/artifacts/exact_gr_interpretive_manuscript_v1.md"
+    sha256: "17d215509eb3f0ee4544c2f25eed56462d346106f41bc520fc27441c09c0add9"
+    object_id: "MD-V21-P15-T01-EXACT-GR-INTERPRETIVE-MANUSCRIPT-V1"
+  - path: "research_control/tasks/RT-20260722-021/artifacts/exact_gr_claim_map_v1.yaml"
+    sha256: "e9283556dd03a08a37ddd55962884ad1cd57ec6c60f194d01bc37a13733eb679"
+  - path: "research_control/tasks/RT-20260722-021/artifacts/exact_gr_reproducibility_source_package_v1.yaml"
+    sha256: "e4f4e0cd9c2beff5ad4e9de90d33734d4d4a0f1719e05c4ef24649bd791d3c79"
+  - path: "research_control/tasks/RT-20260722-021/artifacts/exact_gr_internal_review_packet_v1.md"
+    sha256: "25087b0dcacc1c07faff48e2ecddc6e57b026a352faf27ccbb5015774203479b"
+  - path: "research_control/tasks/RT-20260722-021/artifacts/exact_gr_interpretive_package_validation.json"
+    sha256: "b8356b717a4291c00b62c598b19683adb45bcebbc7f5a87868d1d75b993e6115"
+  - path: "research_control/tasks/RT-20260722-021/artifacts/exact_gr_interpretive_package_compact_receipt.json"
+    sha256: "63cff2af267036a063e61c5f8740b39154908a44e65d3c4e83e973d9b4f935aa"
+
+exact_gr_interpretive_package_result:
+  object_id: "MD-V21-P15-T01-EXACT-GR-INTERPRETIVE-MANUSCRIPT-V1"
+  claim_count: 13
+  displayed_equation_count: 6
+  equation_trace_count: 6
+  canonical_source_count: 8
+  dependency_source_count: 3
+  new_external_primary_source_count: 0
+  exact_effective_gr_adoption_stated: true
+  fixed_input_operational_identity_stated: true
+  ontology_status: "proposed_interpretive_layer"
+  first_principles_substrate_derivation_status: "open"
+  formal_source_equivalence_status: "not_established"
+  genuine_emergence_status: "not_established"
+  independent_low_energy_novelty_status: "absent_at_exact_effective_scope"
+  review_context: "same_context_internal_ai_assisted"
+  external_human_review_present: false
+  publication_submission_eligible: false
+  validation_status: "PASS_161_CHECKS"
+
+assumption_delta:
+  changed: false
+  retained_assumptions:
+    - "Einstein-Hilbert plus matter is the adopted effective benchmark action."
+    - "One operative metric universally couples to the benchmark matter sector."
+    - "Operational identity is conditional on fixed matter sector initial data and boundary conditions."
+    - "The Æther-flow ontology is proposed interpretation rather than an established source derivation."
+  new_assumptions: []
+  removed_assumptions: []
+  narrowed_assumptions:
+    - "No-novelty language is explicitly restricted to the exact effective low-energy scope."
+  authority_effect: "none"
+
+physics_progress_status:
+  status: "publication_preparation_payload_complete_checkpoint_blocked_no_distance_delta"
+  target_derivation_milestone: "benchmark_promotion"
+  milestone_burden: "Prepare a defensible publication without changing benchmark or derivation authority."
+  explanation: "The source-backed internal manuscript burden is complete, but source derivation and benchmark promotion are unchanged."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "benchmark_promotion"
+  milestone: "benchmark_promotion"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "No source law metric operational semantics coupling field-equation derivation external review or benchmark status changed."
+  downstream_unlocked:
+    - "P15-T01 internal publication package complete"
+  downstream_still_blocked:
+    - "source_ontology_derivation"
+    - "general_eqsrc"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+    - "benchmark_promotion"
+    - "external_publication"
+
+distance_to_gr_status:
+  - burden: "source_ontology"
+    status: "not_derived"
+    task_effect: "none"
+  - burden: "source_equivalence_eqsrc"
+    status: "general_eqsrc_undischarged"
+    task_effect: "none"
+  - burden: "effective_metric_g_eff"
+    status: "blocked"
+    task_effect: "none"
+  - burden: "matter_coupling"
+    status: "blocked"
+    task_effect: "none"
+  - burden: "einstein_equations_derivation"
+    status: "blocked"
+    task_effect: "none"
+  - burden: "exact_gr_recovery"
+    status: "adopted_effective_closure_not_substrate_derivation"
+    task_effect: "manuscript_synthesis_only"
+  - burden: "benchmark_promotion"
+    status: "not_authorized"
+    task_effect: "internal_package_only"
+
+route_cycle_control:
+  cycle_family: "v21_publication_preparation"
+  current_cycle_step: "p15_t01_payload_complete_checkpoint_blocked_fixture_repair_required_p15_t03_pending"
+  prior_related_tasks:
+    - "RT-20260722-016 P14-T01 four success categories"
+    - "RT-20260722-018 P14-T02 non-empirical ontology criteria"
+    - "RT-20260722-019 P14-T03 no-target sufficiency policy"
+    - "RT-20260722-020 P14-T05 negative-result success pathway"
+  cycle_risk: "low"
+  orbit_avoidance_reason: "P15-T01 adds a distinct manuscript claim map equation trace source package and review gate; P15-T03 must synthesize selector theorem results rather than repeat exact-GR interpretation."
+  next_role_consequence: "separately selected P15-T03 role under the next handoff"
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  observed_durable_outputs:
+    physics:
+      - "research_control/tasks/RT-20260722-021/artifacts/exact_gr_interpretive_manuscript_v1.md"
+      - "research_control/tasks/RT-20260722-021/artifacts/exact_gr_claim_map_v1.yaml"
+      - "research_control/tasks/RT-20260722-021/artifacts/exact_gr_reproducibility_source_package_v1.yaml"
+      - "research_control/tasks/RT-20260722-021/artifacts/exact_gr_internal_review_packet_v1.md"
+    project_system:
+      - "research_control/tasks/RT-20260722-021/artifacts/validate_exact_gr_interpretive_package.py"
+      - "research_control/tasks/RT-20260722-021/artifacts/exact_gr_interpretive_package_validation.json"
+      - "research_control/tasks/RT-20260722-021/artifacts/exact_gr_interpretive_package_compact_receipt.json"
+  accepted_criteria:
+    physics:
+      - "exact operational identity is stated with fixed-input scope and adoption-versus-derivation separation"
+      - "all displayed equations trace to registered sources"
+      - "P14 category criterion and provenance results retain their draft-control boundaries"
+      - "no independent low-energy novelty external review or publication authority is claimed"
+    project_system:
+      - "task-local checker validates source hashes claim map equation traces and authority flags"
+      - "compact receipt preserves counts hashes and false authority flags"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+physics_payload_admission_result:
+  status: "PASS"
+  admission_path: "physics"
+  payload_type: "source_model"
+  payload_material: true
+  process_receipts_excluded: true
+  authority_limits_preserved: true
+
+family_freeze_admission_result:
+  status: "PASS"
+  family_id: "V21-P15-EXACT-GR-INTERPRETIVE-MANUSCRIPT-V1"
+  exact_historical_family_freeze_preserved: true
+  detected_match_basis: []
+  reopening_requested: false
+  general_eqsrc_open: true
+
+ordinary_route_guard_admission_result:
+  status: "PASS"
+  source_handoff_id: "handoff-0829"
+  source_handoff_sha256: "c63b7909df2ea8c76849399bbe0ef6e5158284c69d2e753c860b1089b4fde99d"
+  selected_plan_task_id: "P15-T01"
+  guard_outcome: "below_threshold"
+
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+  forbidden_conclusions:
+    - "effective GR adoption presented as a source-side substrate derivation"
+    - "operational identity presented as formal source equivalence or genuine emergence"
+    - "exact-GR agreement presented as empirical support for the proposed ontology"
+    - "the congruence dictionary presented as a uniquely source-derived physical field"
+    - "P14 task-local results presented as protected verdicts or canonical ontology"
+    - "same-context internal AI-assisted checks presented as blind independent external or peer review"
+    - "validator checkpoint registry or source-package completeness presented as scientific proof"
+    - "no independent low-energy novelty expanded into impossibility of every future extension"
+    - "scientific-ledger or Distance-to-GR change"
+    - "reviewer contact submission release outreach benchmark promotion proof authority or completed derivation"
+  summary: "The internal manuscript is a noncanonical source synthesis; every physics and protected authority status remains unchanged."
+
+authorization_layers:
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  canonical_ontology_edit_authorized: false
+  ontology_selection_authorized: false
+  physical_interpretation_establishment_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 995
+    relationship_row_count: 4915
+    semantic_row_count: 995
+    vault_row_count: 995
+    local_cache_only_warning_count: 0
+  local_retrieval_refresh:
+    refresh_needed: true
+    refresh_performed: true
+    refresh_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    before_core_validation_status: "PASS"
+    before_freshness_status: "WARN"
+    before_local_retrieval_status: "WARN"
+    after_core_validation_status: "PASS"
+    after_freshness_status: "PASS"
+    after_local_retrieval_status: "PASS"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-V21-P14-T05-NEGATIVE-RESULT-SUCCESS-PATHWAY-V1 --json"
+      query_type: "lookup"
+      query_text: "TEX-V21-P14-T05-NEGATIVE-RESULT-SUCCESS-PATHWAY-V1"
+      returned_object_ids:
+        - "TEX-V21-P14-T05-NEGATIVE-RESULT-SUCCESS-PATHWAY-V1"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search 'exact operational identity' --json"
+      query_type: "search"
+      query_text: "exact operational identity"
+      returned_object_ids:
+        - "TEX-V21-P14-T01-PROJECT-SUCCESS-CATEGORIES"
+        - "TEX-ONTOLOGY-AETHER-FLOW-RELATIVISTIC-RECOVERY"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search 'publication readiness internal manuscript' --json"
+      query_type: "search"
+      query_text: "publication readiness internal manuscript"
+      returned_object_ids:
+        - "TEX-V21-P14-T05-NEGATIVE-RESULT-SUCCESS-PATHWAY-V1"
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  no_hit_queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search 'P15-T01 exact-GR interpretive manuscript package' --json"
+      query_type: "search"
+      query_text: "P15-T01 exact-GR interpretive manuscript package"
+      returned_object_ids: []
+      result_note: "No direct object hit; route remained controlled by tracked plan and handoff."
+  canonical_inspections:
+    - object_id: "TEX-V21-P14-T05-NEGATIVE-RESULT-SUCCESS-PATHWAY-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260722-020/artifacts/negative_result_success_pathway_v1.tex"
+      source_hash: "a5b59ddf497659097783e8e8dcd9c4de1726652265b0b53cab007da233f34aa3"
+    - object_id: "TEX-V21-P14-T01-PROJECT-SUCCESS-CATEGORIES"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260722-016/artifacts/four_project_success_categories_v1.tex"
+      source_hash: "03d2658ad7a1508776ed25f1b00b7446c04f8c76e16b2f1acfd7e6c06ddaf00e"
+    - object_id: "TEX-ONTOLOGY-AETHER-FLOW-RELATIVISTIC-RECOVERY"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "ontology/tex/aether_flow_relativistic_recovery.tex"
+      source_hash: "77d5c2db56f122870343834f853bf2f375a912116a347d7c5710405c8707d69c"
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  authority_note: "Generated Obsidian wiki registry metadata and .local surfaces are retrieval or diagnostic layers only and are not authority; registered sources and tracked control state govern the task."
+
+command_results:
+  - command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    status: "PASS"
+    summary: "Core memory freshness and local retrieval pass after one bounded refresh with 995 indexed sources and 4915 relationships."
+  - command: ".venv/bin/python research_control/tasks/RT-20260722-021/artifacts/validate_exact_gr_interpretive_package.py --write-report --json"
+    status: "PASS"
+    summary: "All 161 file source-hash claim-map equation-trace boundary and authority checks pass."
+  - command: ".venv/bin/python scripts/validate_publication_process.py --root ."
+    status: "PASS"
+    summary: "Existing governed publication briefs specs and public derivatives remain valid; P15-T01 changes no public surface."
+  - command: "post-write repository validation and governed checkpoint"
+    status: "FAIL"
+    summary: "All task-local and repository control gates pass except the required focused test shard, whose live-context test hard-codes obsolete P14-T02 instead of handoff-0830 selected P15-T03; no governed checkpoint ran."
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 62 lease parity repository identity maximum reasoning effort clean start predecessor completion and immutable P15-T01 route were verified before the single worker invocation."
+      - "The ordinary-route admission is bound to tracked handoff-0829 and exact dependency hashes."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The manuscript maps thirteen claims and all six displayed equations to registered source objects."
+      - "The task-local checker passes 161 checks and the internal review packet records same-context limitations."
+  post_write:
+    status: "FAIL"
+    evidence:
+      - "The 171-test required shard has one failure in test_continue_research_reports_director_context_packet because its expected plan task is the obsolete literal P14-T02 while the authoritative handoff selects P15-T03."
+  post_checkpoint:
+    status: "NOT_RUN"
+    evidence:
+      - "No governed checkpoint ran because the required task-selected test shard failed."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Current-frontier compact-frontier task-index claim-graph and dependency-graph derivatives were regenerated from tracked control state."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "The project memory bootstrap and validate-only pass after registering the task-local Markdown source and generated metadata note."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-surface claim-language validation preserves adoption derivation review and no-promotion boundaries."
+
+required_validators:
+  - "memory_preflight"
+  - "dependency_completion_hashes"
+  - "canonical_source_hashes"
+  - "physics_payload_admission"
+  - "family_freeze_admission"
+  - "dual_budget_allocation"
+  - "ordinary_route_guard_admission"
+  - "manuscript_claim_scan"
+  - "equation_source_trace"
+  - "adoption_derivation_boundary"
+  - "empirical_equivalence_novelty_boundary"
+  - "internal_review_independence_boundary"
+  - "publication_process_validation"
+  - "task_local_validator"
+  - "memory_bootstrap"
+  - "memory_validate_only"
+  - "renderers"
+  - "graph_freshness"
+  - "project_change_classifier"
+  - "project_improvement_signals"
+  - "documentation_impact"
+  - "claim_language_changed"
+  - "research_control_validation"
+  - "research_control_test_shard"
+  - "git_diff_check"
+  - "checkpoint_transaction"
+project_improvement_signals: []
+
+project_improvement_bridge:
+  required: false
+  sidecar_path: ""
+  recursive_goal_recovery_required: true
+  route: "continue-goal recovery via improve-project-system"
+  blocker_path: "research_control/tasks/RT-20260722-021/artifacts/validation_blocker_continue_research_context_fixture_v1.yaml"
+  reason: "The P15-T01 AgentJob does not authorize tests or shared project-system edits. The recursive goal recovery helper must preserve the exact dirty P15-T01 transaction and carry the stale live-route fixture into one governed repair."
+
+selected_next_route:
+  plan_task_id: "P15-T03"
+  worker_skill: "improve-project-system"
+  role_family: "validator-engineer@0.2.0"
+  route_label: "project-system-recovery"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Publish the strongest near-term general result rather than another candidate record."
+  dependency_ready: true
+  execution_ready: false
+  pending_after_repair_and_checkpoint: true
+  requires_human_gate: false
+  dependency_independent_after_other_human_gates: true
+  project_system_boundary_authorized_by_plan: false
+  physics_promotion_authorized: false
+  executed: false
+  dependency_evidence:
+    - plan_task_id: "P2-T08"
+      task_id: "RT-20260720-021"
+      qualification: "completed qualifying internal blind review dependency"
+    - plan_task_id: "P3-T07"
+      task_id: "RT-20260720-029"
+      qualification: "completed historical EqSrc family-freeze dependency"
+    - plan_task_id: "P14-T05"
+      task_id: "RT-20260722-020"
+      completion_sha256: "ebaa7b3bc5ff0d8b5da67e4bedec1838b7756be0cda9e89e9fcb09da1a2cd93a"
+  selection_reason: "P15-T03 remains the selected dependency-ready science item, but it may not execute until one separately governed validator-engineer repair binds the live continuation-context test to handoff-0830, all required gates pass, and the preserved P15-T01 transaction is checkpointed."
+
+next_recommended_action: "Run one governed improve-project-system recovery for the stale continuation-context live-route fixture, then revalidate and checkpoint the preserved P15-T01 transaction; only afterward execute P15-T03."

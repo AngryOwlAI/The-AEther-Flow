@@ -565,6 +565,7 @@ def classify_path_family(path: str, registry: RegistryIndex) -> dict[str, object
         reasons.add("path_rule:scientific_checker")
     if (
         path.startswith(".github/workflows/")
+        or path == ".gitattributes"
         or path == "Makefile"
         or path.startswith("scripts/validation/")
         or Path(path).name.startswith(("checkpoint_", "continue_", "run_full_"))

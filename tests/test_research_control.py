@@ -1316,6 +1316,14 @@ class ResearchControlTests(unittest.TestCase):
                 encoding="utf-8"
             )
         )
+        current_handoff = self.strict_yaml.loads(
+            (
+                REPO_ROOT
+                / "research_control"
+                / "handoffs"
+                / f"{program_state['latest_handoff_id']}.yaml"
+            ).read_text(encoding="utf-8")
+        )
         validation_reports = []
         routing_snapshots = []
         real_live_routing_snapshot = self.continue_research.live_routing_snapshot
@@ -1440,7 +1448,7 @@ class ResearchControlTests(unittest.TestCase):
         self.assertEqual(status["ordinary_route_guard"]["status"], "PASS")
         self.assertEqual(
             status["ordinary_route_guard"]["selected_plan_task_id"],
-            "P14-T02",
+            current_handoff["ordinary_route_guard"]["selected_plan_task_id"],
         )
         self.assertIn("dependency_graph_summary", status)
         graph_summary = status["dependency_graph_summary"]

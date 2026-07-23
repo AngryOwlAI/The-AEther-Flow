@@ -1,0 +1,71 @@
+schema_id: "hash_bound_blank_eof_checkpoint_blocker_v1"
+task_id: "RT-20260722-022"
+job_id: "AJ-RT-20260722-022-001"
+observed_at: "2026-07-23T02:50:00Z"
+checkpoint_command: ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260722-022-001"
+checkpoint_status: "FAIL"
+checkpoint_committed: false
+checkpoint_mode: "planner_compare"
+failed_gate: "git_diff_check"
+failed_command: "git diff --cached --check"
+failed_command_exit_code: 2
+failure_summary: "The normal governed checkpoint rejected four untracked P15-T01 files because each has one extra blank line at EOF."
+findings:
+  - path: "research_control/tasks/RT-20260722-021/artifacts/exact_gr_claim_map_v1.yaml"
+    line: 201
+    finding: "new blank line at EOF"
+    sha256: "e9283556dd03a08a37ddd55962884ad1cd57ec6c60f194d01bc37a13733eb679"
+  - path: "research_control/tasks/RT-20260722-021/artifacts/exact_gr_internal_review_packet_v1.md"
+    line: 93
+    finding: "new blank line at EOF"
+    sha256: "25087b0dcacc1c07faff48e2ecddc6e57b026a352faf27ccbb5015774203479b"
+  - path: "research_control/tasks/RT-20260722-021/artifacts/exact_gr_reproducibility_source_package_v1.yaml"
+    line: 136
+    finding: "new blank line at EOF"
+    sha256: "e4f4e0cd9c2beff5ad4e9de90d33734d4d4a0f1719e05c4ef24649bd791d3c79"
+  - path: "research_control/tasks/RT-20260722-021/artifacts/validate_exact_gr_interpretive_package.py"
+    line: 290
+    finding: "new blank line at EOF"
+    sha256: "ace6d4bd7b98da40af8632d1617d0c8f4126f0c272310d76cacf7affb7ef24cf"
+preservation_constraint:
+  predecessor_task_id: "RT-20260722-021"
+  predecessor_completion_path: "research_control/tasks/RT-20260722-021/jobs/completions/AJC-AJ-RT-20260722-021-001.yaml"
+  predecessor_completion_sha256: "8ad277316593dfe63d8ec97805191e845490ddae6314a3dd40dca19a61e91bb1"
+  predecessor_handoff_path: "research_control/handoffs/handoff-0830.yaml"
+  predecessor_handoff_sha256: "e5ffd21e82ad41626c80d886e16aebfd9dfbe34fd61338178254a20a4c520766"
+  reason_bytes_must_not_be_normalized_in_this_frame: "The four hashes are embedded in activated P15-T01 source packages completions and handoffs. Normalizing the bytes here would exceed the immutable generation-63 fixture-repair route and invalidate preservation claims."
+  predecessor_bytes_changed: false
+required_recovery:
+  strategy_id: "preserve_hash_bound_p15_t01_blank_eof_via_exact_path_whitespace_policy_v1"
+  worker_skill: "improve-project-system"
+  role_family: "process-integrity-auditor@0.1.0"
+  work_item_id: "P15-T01"
+  exact_behavior_change: "Add a narrowly governed exact-path Git whitespace classification for only the four immutable hash-bound files so blank-at-EOF is intentionally admitted without changing their bytes or weakening whitespace checks for any other path."
+  required_controls:
+    - "Use four exact repository-relative paths with no wildcard or directory-wide exemption."
+    - "Preserve the four file hashes and the RT-20260722-021 completion and handoff hashes exactly."
+    - "Prove git check-attr resolves only the intended exception for the four paths."
+    - "Prove a control fixture outside the four paths still fails blank-at-EOF checking."
+    - "Run the normal governed checkpoint without --legacy-validation."
+  fallback_forbidden: "Do not use --legacy-validation to bypass the failed staged whitespace gate."
+  next_plan_item_after_recovery: "P15-T03"
+  next_plan_item_executed: false
+validation_evidence:
+  fixture_repair_focused_test: "PASS_1_OF_1"
+  required_repository_shard: "PASS_171_OF_171"
+  p15_t01_task_local_checker: "PASS_161_CHECKS"
+  documentation_impact: "PASS"
+  memory_validation: "PASS_WITH_5_LOCAL_CACHE_WARNINGS"
+  research_control_diff: "PASS_ZERO_ERRORS_1723_HISTORICAL_WARNINGS"
+  checkpoint_git_diff_check: "FAIL_4_BLANK_AT_EOF"
+authority_boundary:
+  fixture_repair_complete: true
+  checkpoint_complete: false
+  p15_t01_plan_completion_finalized: false
+  p15_t03_execution_ready: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  ontology_or_source_law_adopted: false
+  external_review_or_publication_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false

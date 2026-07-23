@@ -1,0 +1,80 @@
+validation_status: "FAIL"
+task_id: "RT-20260722-021"
+task_type: "v21_exact_gr_interpretive_manuscript_package"
+title: "Prepare the exact-GR interpretive manuscript package"
+task_taxonomy:
+  schema_id: "v21_task_taxonomy_v1"
+  work_kind: "publication_preparation"
+  milestone: "benchmark_promotion"
+  candidate_family: "exact_gr_interpretive_manuscript"
+  result_kind: "completed_or_precisely_blocked"
+  authority: "science_draft"
+  scope: "scientific"
+status: "blocked"
+created_at: "2026-07-23T01:11:58Z"
+updated_at: "2026-07-23T01:19:19Z"
+closed_at: "2026-07-23T01:19:19Z"
+parent_task_id: "RT-20260722-020"
+parent_handoff_id: "handoff-0829"
+current_decision_id: "DDR-20260722-021"
+current_job_id: "AJ-RT-20260722-021-001"
+role_id: "documentation-curator"
+role_version: "2.0.0"
+execution_role_ref: "documentation-curator@2.0.0--RT-20260722-021"
+requires_human_gate: false
+human_authorization_note: "Generation 62 of the immutable user-requested relay and handoff-0829 authorize exactly one dependency-ready P15-T01 internal publication-preparation packet; they do not authorize external contact or release."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P15"
+  plan_task_id: "P15-T01"
+  plan_task_name: "Prepare the exact-GR interpretive manuscript package"
+  recommendation_ids:
+    - "V21-R61"
+    - "V21-R62"
+    - "V21-R65"
+    - "V21-R66"
+    - "V21-R70"
+objective: "Prepare a source-hash-bound internal manuscript package that states exact operational identity with GR, the proposed interpretive role of the ontology, and the open derivation and no-novelty boundaries without submission or promotion authority."
+target_derivation_milestone: "benchmark_promotion"
+milestone_burden: "Prepare a defensible publication without changing benchmark or derivation authority."
+route_label: "publication-preparation-packet"
+dual_budget_category: "mixed"
+primary_budget: "physics"
+claim_boundary_id: "CB-V21-P15-T01-EXACT-GR-MANUSCRIPT-001"
+claim_boundary:
+  allowed_scope: "One task-local internal exact-GR interpretive manuscript, claim map, reproducibility/source package, internal review packet, deterministic validator, compact receipt, standard control records, and one next handoff."
+  dependency_task_ids:
+    - "RT-20260722-016"
+    - "RT-20260722-018"
+    - "RT-20260722-019"
+  current_handoff: "handoff-0829"
+  exact_operational_identity_may_be_stated: true
+  effective_gr_adoption_may_be_stated: true
+  ontology_interpretive_proposal_may_be_stated: true
+  first_principles_substrate_derivation_established: false
+  formal_source_equivalence_established: false
+  genuine_emergence_established: false
+  independent_low_energy_novelty_established: false
+  external_human_review_present: false
+  public_submission_eligible: false
+  scientific_status_changed: false
+  distance_to_gr_delta_changed: false
+  ontology_adoption_authorized: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  publication_authorized: false
+  proof_authority: false
+output_artifacts:
+  - "research_control/tasks/RT-20260722-021/artifacts/exact_gr_interpretive_manuscript_v1.md"
+  - "research_control/tasks/RT-20260722-021/artifacts/exact_gr_claim_map_v1.yaml"
+  - "research_control/tasks/RT-20260722-021/artifacts/exact_gr_reproducibility_source_package_v1.yaml"
+  - "research_control/tasks/RT-20260722-021/artifacts/exact_gr_internal_review_packet_v1.md"
+  - "research_control/tasks/RT-20260722-021/artifacts/exact_gr_interpretive_package_compact_receipt.json"
+  - "research_control/tasks/RT-20260722-021/artifacts/validation_blocker_continue_research_context_fixture_v1.yaml"
+documentation_impact_id: "DI-RT-20260722-021-001"
+completion_id: "AJC-AJ-RT-20260722-021-001"
+project_improvement_signals: []
+closure_status: "p15_t01_payload_complete_checkpoint_blocked_stale_live_route_fixture_p15_t03_pending"
+summary: "P15-T01 completed its internal source-traced exact-GR payload with 13 mapped claims and six traced equations while every scientific boundary remains unchanged, but the required repository test shard fails on a stale hard-coded live-route fixture; no checkpoint ran and P15-T03 is pending."
+next_recommended_action: "Run one governed improve-project-system recovery for the stale continuation-context live-route fixture, then revalidate and checkpoint the preserved P15-T01 transaction; only afterward execute P15-T03."

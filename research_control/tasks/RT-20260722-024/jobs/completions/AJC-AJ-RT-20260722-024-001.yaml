@@ -1,0 +1,348 @@
+validation_status: "FAIL"
+job_id: "AJ-RT-20260722-024-001"
+completion_id: "AJC-AJ-RT-20260722-024-001"
+task_id: "RT-20260722-024"
+task_type: "project_system_gitattributes_classifier_recovery"
+decision_id: "DDR-20260722-024"
+role_id: "validator-engineer"
+source_role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260722-024"
+status: "completed"
+final_repository_validation_status: "FAIL_REPOSITORY_SHARD"
+created_at: "2026-07-23T04:52:51Z"
+started_at: "2026-07-23T04:52:51Z"
+completed_at: "2026-07-23T05:44:47Z"
+objective: "Classify only the literal root .gitattributes path as ci_orchestration, retain fail-closed handling for unrelated unknown paths, preserve the existing P15-T01 transaction byte boundaries, and run one normal governed checkpoint before P15-T03."
+completion_summary: "The classifier now recognizes only the literal repository-root .gitattributes path as ci_orchestration. Focused classifier and planner regressions pass, an unrelated governed path remains unknown and selects full validation, and the four exact Git rules and protected P15-T01 hashes remain unchanged. The one normal governed checkpoint reached the full repository shard and stopped safely on three invalid recovery-task taxonomy records plus one stale P10-T05 event-store source hash, producing two failures and one cascading setup error across 1,172 tests. Nothing was staged or committed, the index was restored, and P15-T03 remains unexecuted."
+objective_result: "literal_root_gitattributes_admitted_checkpoint_blocked_repository_taxonomy_and_event_store"
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 65
+  passes_consumed: 64
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:65"
+  handoff_token: "5f26fd9811384923a2c87f51581c1db96d492acc4540b69c"
+  relay_claim_token: "60c7442a7a9eded10ec213029776eb005bbf3b29fdf2156d"
+  immutable_route_hash: "f41b7f7f20f2f4a7222d73292b59ce7d351257255b8201d85da554574f17743e"
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+
+transaction_status: "blocked_repository_shard_taxonomy_and_event_store_recovery_required"
+result_disposition: "classifier_repair_implemented_checkpoint_blocked"
+work_item_status: "blocked"
+checkpoint_commit: "none_repository_shard_failed"
+project_system_change_only: true
+scientific_claims_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  observed_durable_outputs:
+    physics: []
+    project_system:
+      - "scripts/project_control/classify_project_changes.py"
+      - "tests/test_project_change_classifier.py"
+      - "tests/test_validation_planner.py"
+      - "research_control/tasks/RT-20260722-024/artifacts/gitattributes_classifier_recovery_receipt.json"
+  accepted_criteria:
+    physics: []
+    project_system:
+      - "literal root .gitattributes has ci_orchestration and no unknown_governed_path"
+      - "the affected validation plan is safe and bounded for .gitattributes"
+      - "an unrelated governed path remains unknown and falls back to full"
+      - "the existing four Git rules and protected P15-T01 hashes remain unchanged"
+      - "one normal governed checkpoint commits without legacy validation"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+physics_payload_admission_result:
+  status: "admitted"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed: false
+  physics_promotion_authorized: false
+
+ordinary_route_guard_admission_result:
+  status: "PASS"
+  source_handoff_id: "handoff-0829"
+  selected_plan_task_id: "P15-T01"
+  guard_outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  system_success_counts_as_physics: false
+  system_success_counts_as_distance_to_gr: false
+
+artifacts:
+  - "scripts/project_control/classify_project_changes.py"
+  - "tests/test_project_change_classifier.py"
+  - "tests/test_validation_planner.py"
+  - "research_control/tasks/RT-20260722-024/artifacts/gitattributes_classifier_recovery_receipt.json"
+  - "research_control/tasks/RT-20260722-024/artifacts/validation_blocker_checkpoint_repository_shard_taxonomy_and_event_store_v1.yaml"
+
+output_paths:
+  - "scripts/project_control/classify_project_changes.py"
+  - "tests/test_project_change_classifier.py"
+  - "tests/test_validation_planner.py"
+  - "research_control/tasks/RT-20260722-024/**"
+  - "research_control/handoffs/handoff-0833.yaml"
+  - "research_control/handoffs/handoff-0833.md"
+  - "research_control/program_state.yaml"
+
+artifact_receipts:
+  - path: "research_control/tasks/RT-20260722-024/artifacts/gitattributes_classifier_recovery_receipt.json"
+    sha256: "e75cb4963c13455b176bcbbe92d44c1773cfe002d53eb67c6bd84ba41297f776"
+  - path: "scripts/project_control/classify_project_changes.py"
+    sha256: "7c2df6a66cafa463bb0f8dc7a5580dc4e36a268093d814a8901ee5db596ee8ba"
+  - path: "tests/test_project_change_classifier.py"
+    sha256: "416b9fa46c0ee2c664e002dc29faa3f8135aba16a251fc14a242b48600a04738"
+  - path: "tests/test_validation_planner.py"
+    sha256: "a2173db72dacc2fd80cb60a761bf6f71213cc567295e4783c89b25359e15bdc9"
+  - path: "research_control/tasks/RT-20260722-024/artifacts/validation_blocker_checkpoint_repository_shard_taxonomy_and_event_store_v1.yaml"
+    sha256: "5e79a9626bc8698b01a5f7fde84cace51e4ea3da21b259adb3a87d528c8c5a58"
+
+classifier_recovery_result:
+  classifier_path: "scripts/project_control/classify_project_changes.py"
+  classifier_sha256_before: "2985492a15cd874bd2bf806033bb94f3ab7224d6d6ae98675bc89b4d9d5a7eb9"
+  classifier_sha256_after: "7c2df6a66cafa463bb0f8dc7a5580dc4e36a268093d814a8901ee5db596ee8ba"
+  exact_path: ".gitattributes"
+  exact_path_family: "ci_orchestration"
+  exact_path_validation_profile: "affected"
+  exact_path_plan_status: "READY"
+  wildcard_added: false
+  arbitrary_dotfile_classification_added: false
+  unrelated_unknown_path: "governed/new-format.bin"
+  unrelated_unknown_path_family: "unknown_governed_path"
+  unrelated_unknown_validation_profile: "full"
+  unknown_path_fail_closed_preserved: true
+  policy_sha256_preserved: "5678e66fcb18bbc3d6e589d64277f02cd7c8a4ad0a263386ad0fb1ee795dbf67"
+  protected_p15_t01_hashes_preserved: true
+  p15_t01_package_validation_status: "PASS_161_CHECKS"
+  classifier_planner_suite_status: "PASS_102_OF_102"
+  required_shard_status: "PASS_171_OF_171"
+  legacy_validation_used: false
+  p15_t03_executed: false
+
+command_results:
+  - command: ".venv/bin/python -m py_compile scripts/project_control/classify_project_changes.py"
+    status: "PASS"
+  - command: ".venv/bin/python -m unittest -v tests.test_project_change_classifier.ProjectChangeClassifierTests.test_root_gitattributes_is_exact_ci_orchestration tests.test_validation_planner.ValidationPlannerTests.test_root_gitattributes_selects_safe_ci_orchestration_plan tests.test_project_change_classifier.ProjectChangeClassifierTests.test_unknown_governed_path_selects_full_without_silent_skip"
+    status: "PASS_3_OF_3"
+  - command: ".venv/bin/python scripts/project_control/classify_project_changes.py --json --paths .gitattributes"
+    status: "PASS_CI_ORCHESTRATION_AFFECTED"
+  - command: ".venv/bin/python scripts/project_control/classify_project_changes.py --json --paths governed/new-format.bin"
+    status: "PASS_UNKNOWN_GOVERNED_PATH_FULL"
+  - command: ".venv/bin/python -m scripts.validation.cli plan --profile affected --paths .gitattributes --explain"
+    status: "PASS_READY_AFFECTED"
+  - command: ".venv/bin/python research_control/tasks/RT-20260722-023/artifacts/validate_exact_path_whitespace_policy.py --check --json"
+    status: "PASS"
+  - command: ".venv/bin/python research_control/tasks/RT-20260722-021/artifacts/validate_exact_gr_interpretive_package.py --check --json"
+    status: "PASS_161_CHECKS"
+  - command: ".venv/bin/python -m unittest -v tests.test_project_change_classifier tests.test_validation_planner tests.test_checkpoint_validation_planner"
+    status: "PASS_102_OF_102"
+  - command: ".venv/bin/python -m unittest tests.test_publication_process_validation tests.test_research_control tests.test_family_freeze_admission tests.test_dual_budget_policy tests.test_ordinary_route_guard"
+    status: "PASS_171_OF_171"
+  - command: "post-write repository validation"
+    status: "PASS_PRECHECKPOINT"
+    summary: "Classifier resolver signal documentation research-control memory frontier claim-language exact 171-test shard and Git-diff gates pass before the governed checkpoint."
+  - command: ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260722-024-001"
+    status: "FAIL_REPOSITORY_SHARD_1172_TESTS_2_FAILURES_1_ERROR_NO_STAGE_NO_COMMIT"
+
+checkpoint_failure:
+  blocker_path: "research_control/tasks/RT-20260722-024/artifacts/validation_blocker_checkpoint_repository_shard_taxonomy_and_event_store_v1.yaml"
+  blocker_sha256: "5e79a9626bc8698b01a5f7fde84cace51e4ea3da21b259adb3a87d528c8c5a58"
+  checkpoint_status: "FAIL"
+  failed_stage: "repository_test_shard"
+  test_count: 1172
+  failure_count: 2
+  error_count: 1
+  direct_failure_classes:
+    - "task_taxonomy_invalid_vocabulary"
+    - "p10_t05_event_store_source_hash_drift"
+  cascading_error: "p10_migration_readiness_setup"
+  checkpoint_committed: false
+  checkpoint_staged: false
+  index_restored: true
+  legacy_validation_used: false
+  preservation_reason: "Generation 65 authorizes only the exact root .gitattributes classifier admission and its proof. Normalizing three task-taxonomy records or resealing P10-T05 event-store receipts would exceed the immutable route, and a second checkpoint invocation is forbidden."
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 65 lease parity repository identity maximum reasoning effort exact 77-path dirty manifest and immutable P15-T01 recovery route were verified before the single worker invocation."
+      - "The ordinary-route admission remains bound to tracked handoff-0829 while handoff-0832 and its exact blocker provide recovery evidence."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The exact literal classifier predicate and both focused regression modules pass."
+      - "The unrelated unknown-path negative control still selects full validation and the broader 102-test classifier planner checkpoint suite passes."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "The exact 171-test shard passes after completion handoff registry and documentation-impact synchronization."
+      - "Classifier resolver signal documentation research-control memory frontier and Git-diff gates pass."
+  post_checkpoint:
+    status: "FAIL"
+    evidence:
+      - "The one normal governed checkpoint reached the full repository test shard, where three invalid task-taxonomy records and one stale P10-T05 event-store source hash produced two failures and one cascading setup error."
+      - "Nothing was staged or committed, the index was restored, legacy validation was not used, and generation 65 does not authorize a second checkpoint."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Current-frontier compact-frontier task-index claim-graph dependency-graph and memory derivatives are synchronized from finalized tracked control state."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "The project memory bootstrap and validate-only gates pass after all canonical task records are finalized."
+  claim_language_linter:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "Changed-surface claim-language validation passes with historical warnings only and preserves project-system-only no-promotion and no-completed-derivation boundaries."
+
+authorization_layers:
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  canonical_ontology_edit_authorized: false
+  ontology_selection_authorized: false
+  physical_interpretation_establishment_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"
+  rationale: "The recursive goal route directly carries the exact repository-shard blocker; no separate project-improvement signal sidecar is required."
+
+distance_to_gr_delta:
+  effect: "no_distance_delta"
+  changed: false
+  ledger_row_updated: false
+  milestone: "none"
+  burden_id: "none"
+  rationale: "Literal validation-path classification is project-system work only."
+  downstream_unlocked:
+    - "P15-T01_repository_shard_recovery_packet"
+  downstream_still_blocked:
+    - "source_ontology_derivation"
+    - "general_eqsrc"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+    - "benchmark_promotion"
+    - "external_publication"
+
+required_recovery:
+  strategy_id: "normalize_recovery_task_taxonomy_and_reseal_p10_t05_source_hash_v1"
+  route_label: "project-system-recovery"
+  role_family: "validator-engineer@0.2.0"
+  worker_skill: "improve-project-system"
+  plan_task_id: "P15-T01"
+  target_derivation_milestone: "none"
+  milestone_burden: "Restore repository-shard compatibility without changing the completed classifier repair, protected P15-T01 payload, event-store authority, or scientific claims."
+  requires_human_gate: false
+  project_system_boundary_authorized_by_plan: false
+  physics_promotion_authorized: false
+  dependency_ready_after_checkpoint: false
+  executed: false
+
+selected_next_route:
+  route_id: "v21_p15_t03_no_natural_selector_minimum_extension_theorem_paper"
+  route_label: "publication-preparation-packet"
+  role_family: "ontology-formalizer@0.2.0"
+  worker_skill: "continue-research"
+  plan_task_id: "P15-T03"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Publish the strongest near-term general result rather than another candidate record."
+  requires_human_gate: false
+  project_system_boundary_authorized_by_plan: false
+  physics_promotion_authorized: false
+  dependency_ready_after_checkpoint: false
+  executed: false
+
+next_recommendation: "Continue the recursive relay with one fresh bounded improve-project-system generation to normalize the three invalid recovery-task taxonomies, repair the P10-T05 event-store source-hash receipts under their existing authority, and invoke one future normal checkpoint; only after a committed checkpoint may P15-T03 run."
+forbidden_conclusion_summary: "Classifier validation checkpoint failure or future receipt synchronization is not scientific proof and does not authorize event-store cutover ontology adoption physical interpretation general EqSrc external review publication benchmark promotion Gate Chair verdict proof authority completed derivation or global no-go."
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 996
+    relationship_row_count: 4919
+    semantic_row_count: 996
+    vault_row_count: 996
+    local_cache_only_warning_count: 5
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search 'checkpoint planner unknown governed path validation classifier' --limit 10 --json"
+      query_type: "search"
+      query_text: "checkpoint planner unknown governed path validation classifier"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-DESIGN-VALIDATION-CHANGE-FAMILY-TAXONOMY-V1"
+        - "MD-RESEARCH-CONTROL-DESIGN-VALIDATION-PROFILE-POLICY-V1"
+        - "MD-RESEARCH-CONTROL-DESIGN-VALIDATION-CHANGE-MATRIX-V1"
+        - "MD-RESEARCH-CONTROL-DESIGN-CI-VALIDATION-SHARD-POLICY-V1"
+  canonical_inspections:
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-VALIDATION-CHANGE-FAMILY-TAXONOMY-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/validation_change_family_taxonomy_v1.md"
+      source_hash: "a7e22d8bdd67992599b09e4ad22deae8be3979666e8ec58129e561af6e002329"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-VALIDATION-PROFILE-POLICY-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/validation_profile_policy_v1.md"
+      source_hash: "3e33c486484a8242563cc47d32a10c67f565d0324fc0f4fc171144a0d03e41fd"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-VALIDATION-CHANGE-MATRIX-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/validation_change_matrix_v1.md"
+      source_hash: "b230528e77d3ea55d989ed9bf28b4b797e68dd664aab60e6048312b37fc17803"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-CI-VALIDATION-SHARD-POLICY-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/ci_validation_shard_policy_v1.md"
+      source_hash: "3c4b3239dd36f1736480470e1d421034553764e8bf4ef6e207612ca89bbe2e2e"
+  authority_note: "Generated wiki semantic Obsidian relationship and .local retrieval surfaces are retrieval aids and not authority; registered canonical validation sources plus tracked handoff-0829 handoff-0832 and the exact blocker govern this recovery."

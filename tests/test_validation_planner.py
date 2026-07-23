@@ -60,6 +60,14 @@ class ValidationPlannerTests(unittest.TestCase):
         self.assertIn("profile_full_research_control", plan.selected_gate_ids)
         self.assertIn("unknown_path_full_fallback", {entry["status"] for entry in plan.entries})
 
+    def test_root_gitattributes_selects_safe_ci_orchestration_plan(self) -> None:
+        plan = self.plan_for([".gitattributes"], profile="affected")
+        self.assertEqual(plan.status, "READY")
+        self.assertEqual(plan.effective_profile, "affected")
+        self.assertEqual(plan.unknown_paths, ())
+        self.assertIn("documentation_impact", plan.selected_gate_ids)
+        self.assertIn("research_control_diff", plan.selected_gate_ids)
+
     def test_generated_only_edit_is_blocked_and_uses_full_fallback(self) -> None:
         plan = self.plan_for(["wiki/markdown/unregistered.md"], profile="affected")
         self.assertEqual(plan.status, "BLOCKED_CONFIGURATION")

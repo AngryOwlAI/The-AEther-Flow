@@ -1,0 +1,80 @@
+schema_id: "checkpoint_planner_unknown_gitattributes_blocker_v1"
+task_id: "RT-20260722-023"
+job_id: "AJ-RT-20260722-023-001"
+observed_at: "2026-07-23T04:10:00Z"
+checkpoint_command: ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260722-023-001"
+checkpoint_status: "FAIL"
+checkpoint_committed: false
+checkpoint_mode: "planner_compare"
+failed_stage: "checkpoint_planner_preflight"
+failed_predicate: "plan.unknown_paths_nonempty"
+failure_summary: "The normal governed checkpoint stopped before staging because the validation classifier reports the root .gitattributes file as unknown_governed_path, so the shadow checkpoint plan is not safe."
+planner_evidence:
+  planner_status: "READY"
+  requested_profile: "checkpoint"
+  effective_profile: "full"
+  execution_authority: "legacy"
+  comparison_required: true
+  unknown_paths:
+    - ".gitattributes"
+  path_family_tags:
+    - "unknown_governed_path"
+  path_family_reasons:
+    - "fallback:unknown_governed_path"
+  checkpoint_error: "checkpoint planner did not produce a safe shadow plan"
+checkpoint_side_effects:
+  staged: false
+  committed: false
+  staged_path_count: 0
+  planner_command_count: 0
+  generator_command_count: 0
+  validation_command_count: 0
+  index_restoration_required: false
+  legacy_validation_used: false
+completed_repair_evidence:
+  exact_path_policy_status: "PASS"
+  exact_path_policy_path: ".gitattributes"
+  exact_path_policy_sha256: "5678e66fcb18bbc3d6e589d64277f02cd7c8a4ad0a263386ad0fb1ee795dbf67"
+  exact_path_rule_count: 4
+  wildcard_rule_count: 0
+  adjacent_control_unclassified: true
+  adjacent_blank_at_eof_control_retained: true
+  p15_t01_task_local_checker: "PASS_161_CHECKS"
+  required_repository_shard: "PASS_171_OF_171"
+  protected_p15_t01_hashes:
+    exact_gr_claim_map_v1.yaml: "e9283556dd03a08a37ddd55962884ad1cd57ec6c60f194d01bc37a13733eb679"
+    exact_gr_internal_review_packet_v1.md: "25087b0dcacc1c07faff48e2ecddc6e57b026a352faf27ccbb5015774203479b"
+    exact_gr_reproducibility_source_package_v1.yaml: "e4f4e0cd9c2beff5ad4e9de90d33734d4d4a0f1719e05c4ef24649bd791d3c79"
+    validate_exact_gr_interpretive_package.py: "ace6d4bd7b98da40af8632d1617d0c8f4126f0c272310d76cacf7affb7ef24cf"
+required_recovery:
+  strategy_id: "admit_root_gitattributes_to_validation_classifier_v1"
+  worker_skill: "improve-project-system"
+  role_family: "validator-engineer@0.2.0"
+  work_item_id: "P15-T01"
+  exact_behavior_change: "Classify only the root .gitattributes path as the existing ci_orchestration validation family so checkpoint planning selects its governed control gates without treating unrelated unknown paths as known."
+  required_controls:
+    - "Add one literal root-path classifier rule for .gitattributes; do not use a suffix wildcard or classify arbitrary dotfiles."
+    - "Add focused classifier and validation-plan regressions proving .gitattributes has ci_orchestration and no unknown_governed_path."
+    - "Retain a focused negative control proving an unrelated unknown governed path still falls back to full and remains unknown."
+    - "Preserve the four exact .gitattributes rules and all four protected P15-T01 hashes."
+    - "Update the registered validation change matrix and deterministic fixture only if their canonical contract requires the new exact-path case."
+    - "Run the normal governed checkpoint once in the fresh recovery generation without --legacy-validation."
+  forbidden_changes:
+    - "No additional .gitattributes rule or protected P15-T01 byte change."
+    - "No relaxation of checkpoint unknown-path fail-closed behavior."
+    - "No wildcard classifier admission for root dotfiles or Git policy files."
+    - "No P15-T03 execution."
+    - "No scientific source registry or Distance-to-GR ledger change."
+  next_plan_item_after_recovery: "P15-T03"
+  next_plan_item_executed: false
+authority_boundary:
+  exact_path_whitespace_policy_complete: true
+  checkpoint_complete: false
+  p15_t01_plan_completion_finalized: false
+  p15_t03_execution_ready: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  ontology_or_source_law_adopted: false
+  external_review_or_publication_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false

@@ -1,0 +1,221 @@
+validation_status: "FAIL"
+handoff_id: "handoff-0833"
+handoff_number: 833
+created_at: "2026-07-23T05:44:48Z"
+task_id: "RT-20260722-024"
+decision_id: "DDR-20260722-024"
+job_id: "AJ-RT-20260722-024-001"
+completion_path: "research_control/tasks/RT-20260722-024/jobs/completions/AJC-AJ-RT-20260722-024-001.yaml"
+completion_hash: "bc0f142e41c5bcf1bf1851e6822759ff84d560646e42d498aa7d38e1d8e2a86c"
+source_task_id: "RT-20260722-024"
+source_job_id: "AJ-RT-20260722-024-001"
+source_completion_id: "AJC-AJ-RT-20260722-024-001"
+status: "blocked_validation"
+summary: "RT-20260722-024 completes the exact root .gitattributes classifier admission and its focused fail-closed proof, but the one normal checkpoint stopped safely in the 1,172-test repository shard. Three recovery tasks use invalid v21 taxonomy vocabulary and the P10-T05 event-store receipts seal an older report_physics_progress_metrics.py source hash, producing two failures and one cascading setup error. Nothing was staged or committed, the index was restored, and P15-T03 remains unexecuted."
+next_action: "Run one fresh governed improve-project-system recovery that normalizes RT-20260722-022 through RT-20260722-024 to valid existing task-taxonomy values, repairs the P10-T05 event-store source-hash receipts under their existing authority, and invokes one future normal checkpoint without legacy validation; do not execute P15-T03 first."
+loop_risk_route: "normalize_recovery_task_taxonomy_and_reseal_p10_t05_source_hash_v1"
+
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260722-024"
+  latest_research_handoff_id: "handoff-0833"
+  latest_research_next_action: "Run one fresh governed improve-project-system recovery that normalizes RT-20260722-022 through RT-20260722-024 to valid existing task-taxonomy values, repairs the P10-T05 event-store source-hash receipts under their existing authority, and invokes one future normal checkpoint without legacy validation; do not execute P15-T03 first."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+
+ordinary_route_guard:
+  schema_id: "ordinary_route_guard_evaluation_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  evaluation_id: "ORE-HANDOFF-0833"
+  ordinary_handoff_id: "handoff-0833"
+  threshold: 3
+  consecutive_project_system_tasks_before_selection: 3
+  ready_science_plan_task_ids:
+    - "P4-T05"
+    - "P15-T01"
+    - "P15-T03"
+  selected_plan_task_id: "P15-T03"
+  selected_route_class: "physics_bearing"
+  selected_worker_skill: "continue-research"
+  outcome: "physics_bearing_route_selected"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  exception_receipt:
+    active: false
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+claim_boundary:
+  allowed_next_scope: "No new science packet is execution-ready. One fresh bounded project-system recovery may normalize the three invalid recovery-task taxonomies, repair the P10-T05 sealed source-hash receipts without event-store cutover, preserve the completed classifier repair and protected P15-T01 bytes, and invoke one future normal checkpoint."
+  newly_completed_recovery_task: "RT-20260722-024"
+  recovery_for_plan_task_id: "P15-T01"
+  recovery_completion_path: "research_control/tasks/RT-20260722-024/jobs/completions/AJC-AJ-RT-20260722-024-001.yaml"
+  recovery_completion_sha256: "bc0f142e41c5bcf1bf1851e6822759ff84d560646e42d498aa7d38e1d8e2a86c"
+  classifier_path: "scripts/project_control/classify_project_changes.py"
+  exact_classifier_path: ".gitattributes"
+  exact_classifier_family: "ci_orchestration"
+  exact_validation_profile: "affected"
+  exact_plan_status: "READY"
+  wildcard_added: false
+  arbitrary_dotfile_classification_added: false
+  unrelated_unknown_path_fail_closed: true
+  policy_sha256_preserved: "5678e66fcb18bbc3d6e589d64277f02cd7c8a4ad0a263386ad0fb1ee795dbf67"
+  protected_p15_t01_hashes_preserved: true
+  legacy_validation_used: false
+  p15_t01_payload_complete: true
+  p15_t01_checkpoint_ready: false
+  p15_t01_scientific_payload_changed: false
+  p15_t03_dependency_ready: true
+  p15_t03_selected_next: true
+  p15_t03_executed: false
+  scientific_ledger_change_count: 0
+  scientific_status_changed: false
+  distance_to_gr_delta_changed: false
+  ontology_adoption_authorized: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  blocked_claims:
+    - "classifier validation checkpoint or route selection as physics evidence"
+    - "effective GR adoption presented as source derivation formal source equivalence or genuine emergence"
+    - "scoped selector and minimum-extension results strengthened into a global no-go or future-extension impossibility"
+    - "same-context internal review presented as blind independent external human review peer review or replication"
+    - "internal manuscript preparation presented as submission public release outreach or publication authority"
+    - "canonical ontology source-law scientific-ledger or Distance-to-GR edit"
+    - "general EqSrc unscoped metric matter coupling Einstein-equation derivation benchmark promotion proof authority publication completed derivation or global no-go"
+
+gitattributes_classifier_recovery:
+  receipt_path: "research_control/tasks/RT-20260722-024/artifacts/gitattributes_classifier_recovery_receipt.json"
+  receipt_sha256: "e75cb4963c13455b176bcbbe92d44c1773cfe002d53eb67c6bd84ba41297f776"
+  classifier_path: "scripts/project_control/classify_project_changes.py"
+  classifier_sha256_before: "2985492a15cd874bd2bf806033bb94f3ab7224d6d6ae98675bc89b4d9d5a7eb9"
+  classifier_sha256_after: "7c2df6a66cafa463bb0f8dc7a5580dc4e36a268093d814a8901ee5db596ee8ba"
+  classifier_test_path: "tests/test_project_change_classifier.py"
+  classifier_test_sha256: "416b9fa46c0ee2c664e002dc29faa3f8135aba16a251fc14a242b48600a04738"
+  planner_test_path: "tests/test_validation_planner.py"
+  planner_test_sha256: "a2173db72dacc2fd80cb60a761bf6f71213cc567295e4783c89b25359e15bdc9"
+  focused_test_status: "PASS_3_OF_3"
+  classifier_planner_suite_status: "PASS_102_OF_102"
+  exact_path_policy_status: "PASS"
+  p15_t01_package_validation_status: "PASS_161_CHECKS"
+  required_shard_status: "PASS_171_OF_171"
+  checkpoint_status: "FAIL_REPOSITORY_SHARD_1172_TESTS_2_FAILURES_1_ERROR"
+  checkpoint_committed: false
+  checkpoint_staged: false
+  checkpoint_index_restored: true
+  checkpoint_invocation_count: 1
+  checkpoint_blocker_path: "research_control/tasks/RT-20260722-024/artifacts/validation_blocker_checkpoint_repository_shard_taxonomy_and_event_store_v1.yaml"
+  checkpoint_blocker_sha256: "5e79a9626bc8698b01a5f7fde84cace51e4ea3da21b259adb3a87d528c8c5a58"
+  predecessor_scientific_payload_changed: false
+
+preserved_p15_t01_result:
+  task_id: "RT-20260722-021"
+  completion_path: "research_control/tasks/RT-20260722-021/jobs/completions/AJC-AJ-RT-20260722-021-001.yaml"
+  completion_sha256: "8ad277316593dfe63d8ec97805191e845490ddae6314a3dd40dca19a61e91bb1"
+  manuscript_path: "research_control/tasks/RT-20260722-021/artifacts/exact_gr_interpretive_manuscript_v1.md"
+  manuscript_sha256: "17d215509eb3f0ee4544c2f25eed56462d346106f41bc520fc27441c09c0add9"
+  claim_map_sha256: "e9283556dd03a08a37ddd55962884ad1cd57ec6c60f194d01bc37a13733eb679"
+  source_package_sha256: "e4f4e0cd9c2beff5ad4e9de90d33734d4d4a0f1719e05c4ef24649bd791d3c79"
+  internal_review_sha256: "25087b0dcacc1c07faff48e2ecddc6e57b026a352faf27ccbb5015774203479b"
+  validator_sha256: "ace6d4bd7b98da40af8632d1617d0c8f4126f0c272310d76cacf7affb7ef24cf"
+  task_local_validation_status: "PASS_161_CHECKS"
+  ontology_status: "proposed_interpretive_layer"
+  first_principles_substrate_derivation_status: "open"
+  formal_source_equivalence_established: false
+  genuine_emergence_established: false
+  external_human_review_present: false
+  publication_authorized: false
+
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "none"
+  milestone: "none"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "The recovery changes one literal project-control path classification and focused tests only."
+  downstream_unlocked:
+    - "P15-T01_repository_shard_recovery_packet"
+  downstream_still_blocked:
+    - "source_ontology_derivation"
+    - "general_eqsrc"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+    - "benchmark_promotion"
+    - "external_publication"
+
+required_next_packet:
+  task_type: "project_system_repository_shard_compatibility_recovery"
+  task_taxonomy:
+    schema_id: "v21_task_taxonomy_v1"
+    work_kind: "benchmark_or_recovery"
+    milestone: "not_applicable"
+    candidate_family: "task_taxonomy_and_event_store_receipt_compatibility"
+    result_kind: "completed_or_precisely_blocked"
+    authority: "project_control"
+    scope: "project_system"
+
+required_recovery:
+  strategy_id: "normalize_recovery_task_taxonomy_and_reseal_p10_t05_source_hash_v1"
+  route_label: "project-system-recovery"
+  role_family: "validator-engineer@0.2.0"
+  worker_skill: "improve-project-system"
+  work_item_id: "P15-T01"
+  blocker_path: "research_control/tasks/RT-20260722-024/artifacts/validation_blocker_checkpoint_repository_shard_taxonomy_and_event_store_v1.yaml"
+  blocker_sha256: "5e79a9626bc8698b01a5f7fde84cace51e4ea3da21b259adb3a87d528c8c5a58"
+  next_plan_item_after_recovery: "P15-T03"
+  next_plan_item_executed: false
+
+selected_next_route:
+  route_id: "v21_p15_t03_no_natural_selector_minimum_extension_theorem_paper"
+  route_label: "publication-preparation-packet"
+  role_family: "ontology-formalizer@0.2.0"
+  worker_skill: "continue-research"
+  plan_task_id: "P15-T03"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Publish the strongest near-term general result rather than another candidate record."
+  requires_human_gate: false
+  dependency_independent_after_other_human_gates: true
+  project_system_boundary_authorized_by_plan: false
+  physics_promotion_authorized: false
+  dependency_ready: true
+  execution_ready_after_checkpoint: false
+  executed: false
+  next_action: "Prepare a focused mathematics or philosophy-of-physics manuscript containing the general selector theorem finite examples extension lattice quotient EqSrc implications and foundations interpretation; preserve exact scope and do not claim a global no-go."
+  source_handoff: "research_control/handoffs/handoff-0833.yaml"
+  dependency_evidence:
+    - plan_task_id: "P2-T08"
+      status: "qualifying_finalized"
+    - plan_task_id: "P3-T07"
+      status: "qualifying_finalized"
+    - plan_task_id: "P14-T05"
+      task_id: "RT-20260722-020"
+      completion_sha256: "ebaa7b3bc5ff0d8b5da67e4bedec1838b7756be0cda9e89e9fcb09da1a2cd93a"
+
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  sidecar_path: ""
+  recursive_goal_recovery_required: true
+  reason: "The exact classifier omission is repaired, but the one normal checkpoint exposed a precise repository-shard compatibility blocker that the recursive goal must recover before any P15-T03 execution."
+
+handoff_authority_boundary:
+  this_handoff_authorizes: "Director consideration of one bounded project-system repository-shard recovery before any P15-T03 execution; the ordinary-route P15-T03 selection remains conditional on a future committed checkpoint."
+  this_handoff_does_not_authorize:
+    - "P15-T03 execution inside the completed RT-20260722-024 AgentJob"
+    - "P4-T05 protected ontology decision without exact human authority"
+    - "P15-T06 before P15-T02 P15-T03 and P15-T04 all qualify"
+    - "P15-T07 reviewer contact submission public release or outreach"
+    - "canonical ontology source-law scientific-ledger or Distance-to-GR edits"
+    - "strengthening scoped selector minimum-extension or negative results beyond their proved quantifiers"
+    - "physical interpretation establishment ontology adoption emergence novelty general EqSrc proof benchmark promotion publication proof authority completed derivation or global no-go"

@@ -1,0 +1,489 @@
+job_id: "AJ-RT-20260722-021-001"
+task_id: "RT-20260722-021"
+decision_id: "DDR-20260722-021"
+role_id: "documentation-curator"
+role_version: "2.0.0"
+execution_role_ref: "documentation-curator@2.0.0--RT-20260722-021"
+status: "completed"
+validation_status: "FAIL"
+created_at: "2026-07-23T01:11:58Z"
+started_at: "2026-07-23T01:11:58Z"
+completed_at: "2026-07-23T01:19:19Z"
+requires_human_gate: false
+human_authorization_id: ""
+objective: "Execute only v21 P15-T01 by preparing a source-hash-bound internal exact-GR interpretive manuscript package with exact adoption-versus-derivation empirical-equivalence and review-authority boundaries."
+target_derivation_milestone: "benchmark_promotion"
+milestone_burden: "Prepare a defensible publication without changing benchmark or derivation authority."
+route_label: "publication-preparation-packet"
+route_reason: "Handoff-0829 and the ordinary-route guard select dependency-ready P15-T01 after P14-T01 P14-T02 and P14-T03 completed."
+plan_task_id: "P15-T01"
+recommendation_ids:
+  - "V21-R61"
+  - "V21-R62"
+  - "V21-R65"
+  - "V21-R66"
+  - "V21-R70"
+
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "physics"
+  payload_type: "source_model"
+  candidate_family: "V21-P15-EXACT-GR-INTERPRETIVE-MANUSCRIPT-V1"
+  assumption_delta:
+    - "Keeps the registered exact-GR effective action one-metric universal-coupling and fixed-input observable assumptions unchanged while adding only a task-local source-trace and publication-boundary synthesis."
+    - "Adds no source-side ontology law metric selector matter semantics coupling law field-equation derivation empirical deviation or protected decision."
+  materiality_basis: "Creates the first v21 P15-T01 source-hash-bound manuscript package that jointly maps exact-GR equations P14 success categories open derivational burdens and review gates without altering their status."
+  source_basis:
+    - "TEX-ONTOLOGY-AETHER-FLOW-FOUNDATIONS"
+    - "TEX-ONTOLOGY-AETHER-FLOW-DYNAMICS"
+    - "TEX-ONTOLOGY-AETHER-FLOW-CONSISTENCY"
+    - "TEX-ONTOLOGY-AETHER-FLOW-RELATIVISTIC-RECOVERY"
+    - "TEX-ONTOLOGY-AETHER-FLOW-GEOMETRY"
+    - "TEX-V21-P14-T01-PROJECT-SUCCESS-CATEGORIES"
+    - "TEX-V21-P14-T02-NON-EMPIRICAL-ONTOLOGY-SUCCESS-CRITERIA-V1"
+    - "TEX-V21-P14-T03-NO-TARGET-POSITIVE-SUFFICIENCY-POLICY-V1"
+  expected_artifact_paths:
+    - "research_control/tasks/RT-20260722-021/artifacts/exact_gr_interpretive_manuscript_v1.md"
+    - "research_control/tasks/RT-20260722-021/artifacts/exact_gr_claim_map_v1.yaml"
+    - "research_control/tasks/RT-20260722-021/artifacts/exact_gr_reproducibility_source_package_v1.yaml"
+    - "research_control/tasks/RT-20260722-021/artifacts/exact_gr_internal_review_packet_v1.md"
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+
+family_freeze_admission:
+  schema_id: "family_freeze_route_admission_v1"
+  policy_id: "family_freeze_reopening_policy_v1"
+  route_id: "v21_p15_t01_exact_gr_interpretive_manuscript"
+  family_id: "V21-P15-EXACT-GR-INTERPRETIVE-MANUSCRIPT-V1"
+  family_identity_sha256: "17d215509eb3f0ee4544c2f25eed56462d346106f41bc520fc27441c09c0add9"
+  assumption_sha256es:
+    - "e4f4e0cd9c2beff5ad4e9de90d33734d4d4a0f1719e05c4ef24649bd791d3c79"
+  route_kind: "theorem_investigation"
+  detected_match_basis: []
+  reopening:
+    requested: false
+    class: "none"
+  authority_limits:
+    local_family_freeze_preserved: true
+    global_no_go_claimed: false
+    automatic_candidate_adoption: false
+    theorem_truth_inferred: false
+    ontology_modified: false
+    physics_promotion_authorized: false
+
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  expected_durable_outputs:
+    physics:
+      - "research_control/tasks/RT-20260722-021/artifacts/exact_gr_interpretive_manuscript_v1.md"
+      - "research_control/tasks/RT-20260722-021/artifacts/exact_gr_claim_map_v1.yaml"
+      - "research_control/tasks/RT-20260722-021/artifacts/exact_gr_reproducibility_source_package_v1.yaml"
+      - "research_control/tasks/RT-20260722-021/artifacts/exact_gr_internal_review_packet_v1.md"
+    project_system:
+      - "research_control/tasks/RT-20260722-021/artifacts/validate_exact_gr_interpretive_package.py"
+      - "research_control/tasks/RT-20260722-021/artifacts/exact_gr_interpretive_package_validation.json"
+      - "research_control/tasks/RT-20260722-021/artifacts/exact_gr_interpretive_package_compact_receipt.json"
+  acceptance_criteria:
+    physics:
+      - "exact operational identity is stated with fixed-input scope and adoption-versus-derivation separation"
+      - "all displayed equations trace to registered sources"
+      - "P14 category criterion and provenance results retain their draft-control boundaries"
+      - "no independent low-energy novelty external review or publication authority is claimed"
+    project_system:
+      - "task-local checker validates source hashes claim map equation traces and authority flags"
+      - "compact receipt preserves counts hashes and false authority flags"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: false
+    exception_id: ""
+    evidence_path: ""
+    evidence_sha256: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0829"
+  source_handoff_path: "research_control/handoffs/handoff-0829.yaml"
+  source_handoff_sha256: "c63b7909df2ea8c76849399bbe0ef6e5158284c69d2e753c860b1089b4fde99d"
+  selected_plan_task_id: "P15-T01"
+  guard_outcome: "below_threshold"
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+allowed_read_paths:
+  - "SOUL.md"
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - ".agents/roles/research_ops/documentation-curator.v2.0.0.md"
+  - ".agents/schemas/**"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  - "research_control/design/**"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0829.yaml"
+  - "research_control/handoffs/handoff-0829.md"
+  - "research_control/tasks/RT-20260722-016/**"
+  - "research_control/tasks/RT-20260722-018/**"
+  - "research_control/tasks/RT-20260722-019/**"
+  - "research_control/tasks/RT-20260722-020/**"
+  - "README.md"
+  - "LICENSE"
+  - "NOTICES"
+  - "ontology/tex/**"
+  - "markdown/publication-briefs/**"
+  - "markdown/html-explainer-specs/**"
+  - "registries/**"
+allowed_write_paths:
+  - "research_control/tasks/RT-20260722-021/**"
+  - "research_control/handoffs/handoff-0830.yaml"
+  - "research_control/handoffs/handoff-0830.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "FOLDER_MAP.md"
+allowed_generated_paths:
+  - ".local/**"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+forbidden_paths:
+  - "ontology/**"
+  - "legacy_ontology/**"
+  - "manuscripts/**"
+  - "markdown/publication-briefs/**"
+  - "markdown/html-explainer-specs/**"
+  - "github-facing/**"
+  - "html/**"
+  - "pdf/**"
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "registries/METRIC_USE_LEDGER.csv"
+  - ".agents/roles/**"
+  - "research_control/tasks/RT-20260722-016/**"
+  - "research_control/tasks/RT-20260722-018/**"
+  - "research_control/tasks/RT-20260722-019/**"
+  - "research_control/tasks/RT-20260722-020/**"
+allowed_source_classes:
+  - "registered_science_sources_read_only"
+  - "registered_control_sources"
+  - "tracked_research_control_state"
+  - "task_local_internal_publication_draft"
+  - "task_local_control_evidence"
+  - "role_contract"
+  - "registry"
+  - "generated_memory_derivative"
+forbidden_source_classes:
+  - "canonical_ontology_write"
+  - "candidate_reconstruction"
+  - "source_law_adoption"
+  - "M_src_adoption"
+  - "effective_metric_adoption"
+  - "matter_coupling_derivation_or_adoption"
+  - "einstein_equation_derivation"
+  - "formal_similarity_as_equivalence_proof"
+  - "equivalence_as_emergence"
+  - "redescription_as_empirical_novelty"
+  - "gr_evidence_as_ontology_evidence"
+  - "internal_ai_review_as_external_human_review"
+  - "validator_or_checkpoint_as_physics_evidence"
+  - "scientific_ledger_mutation"
+  - "benchmark_promotion"
+  - "physics_claim_promotion"
+  - "gate_chair_verdict"
+  - "publication_authority"
+  - "completed_derivation_claim"
+  - "global_theory_rejection"
+  - "generated_derivative_authority"
+
+approved_commands:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  - ".venv/bin/python research_control/tasks/RT-20260722-021/artifacts/validate_exact_gr_interpretive_package.py --write-report --json"
+  - ".venv/bin/python research_control/tasks/RT-20260722-021/artifacts/validate_exact_gr_interpretive_package.py --check --json"
+  - ".venv/bin/python scripts/validate_publication_process.py --root ."
+  - ".venv/bin/python -m scripts.validation.cli plan --profile affected --paths research_control/tasks/RT-20260722-021 research_control/program_state.yaml research_control/handoffs/handoff-0830.yaml --explain"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --check"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --write"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --check"
+  - ".venv/bin/python scripts/research_control/validate_compact_current_frontier_v16.py --json"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --check"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --json output/research_dependency_graph.json --markdown wiki/indexes/research_dependency_graph.md --dot output/research_dependency_graph.dot"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --check"
+  - ".venv/bin/python scripts/research_control/generate_claim_graph_v1.py"
+  - ".venv/bin/python scripts/research_control/generate_claim_graph_v1.py --check"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --json-summary"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+  - ".venv/bin/python -m unittest tests.test_publication_process_validation tests.test_research_control tests.test_family_freeze_admission tests.test_dual_budget_policy tests.test_ordinary_route_guard"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260722-021-001"
+  - "git diff --check"
+
+required_validators:
+  - "memory_preflight"
+  - "dependency_completion_hashes"
+  - "canonical_source_hashes"
+  - "physics_payload_admission"
+  - "family_freeze_admission"
+  - "dual_budget_allocation"
+  - "ordinary_route_guard_admission"
+  - "manuscript_claim_scan"
+  - "equation_source_trace"
+  - "adoption_derivation_boundary"
+  - "empirical_equivalence_novelty_boundary"
+  - "internal_review_independence_boundary"
+  - "publication_process_validation"
+  - "task_local_validator"
+  - "memory_bootstrap"
+  - "project_change_classifier"
+  - "project_improvement_signals"
+  - "documentation_impact"
+  - "claim_language_changed"
+  - "research_control_validation"
+  - "research_control_test_shard"
+  - "git_diff_check"
+  - "checkpoint_transaction"
+
+expected_outputs:
+  - "research_control/tasks/RT-20260722-021/artifacts/exact_gr_interpretive_manuscript_v1.md"
+  - "research_control/tasks/RT-20260722-021/artifacts/exact_gr_claim_map_v1.yaml"
+  - "research_control/tasks/RT-20260722-021/artifacts/exact_gr_reproducibility_source_package_v1.yaml"
+  - "research_control/tasks/RT-20260722-021/artifacts/exact_gr_internal_review_packet_v1.md"
+  - "research_control/tasks/RT-20260722-021/artifacts/validate_exact_gr_interpretive_package.py"
+  - "research_control/tasks/RT-20260722-021/artifacts/exact_gr_interpretive_package_validation.json"
+  - "research_control/tasks/RT-20260722-021/artifacts/exact_gr_interpretive_package_compact_receipt.json"
+  - "research_control/tasks/RT-20260722-021/jobs/completions/AJC-AJ-RT-20260722-021-001.yaml"
+  - "research_control/handoffs/handoff-0830.yaml"
+  - "research_control/handoffs/handoff-0830.md"
+
+claim_boundary:
+  allowed_claims:
+    - "registered exact-GR effective action and field equation"
+    - "fixed-input effective observable identity with GR"
+    - "one operative metric universal matter coupling and ordinary causal measurement rules"
+    - "proposed interpretive ontology and congruence dictionary"
+    - "P14 task-local category criterion and provenance statuses without upgrade"
+    - "open derivational burdens and internal review prerequisites"
+  forbidden_claims:
+    - "completed first-principles substrate derivation"
+    - "formal source equivalence or genuine emergence"
+    - "ontology establishment adoption or empirical confirmation"
+    - "independent low-energy novelty at exact effective scope"
+    - "external human review peer review or independent replication"
+    - "submission public release outreach benchmark promotion or proof authority"
+
+dependency_evidence:
+  - plan_task_id: "P14-T01"
+    task_id: "RT-20260722-016"
+    completion_path: "research_control/tasks/RT-20260722-016/jobs/completions/AJC-AJ-RT-20260722-016-001.yaml"
+    completion_sha256: "0cb2132e8fcc718f60bc84ea8ba2692a871bb30cd9cfb679d48214c1d4e7a699"
+    qualification: "completed four-category draft-control framework with interpretive redescription only at current exact-GR scope"
+  - plan_task_id: "P14-T02"
+    task_id: "RT-20260722-018"
+    completion_path: "research_control/tasks/RT-20260722-018/jobs/completions/AJC-AJ-RT-20260722-018-001.yaml"
+    completion_sha256: "25b2735655acd19b520a3dc4d089ef5107891b6370cd6ffddbcdc963b1fe56ad"
+    qualification: "completed noncompensatory seven-coordinate assessment without ontology verdict"
+  - plan_task_id: "P14-T03"
+    task_id: "RT-20260722-019"
+    completion_path: "research_control/tasks/RT-20260722-019/jobs/completions/AJC-AJ-RT-20260722-019-001.yaml"
+    completion_sha256: "1996cb234816a9043ea8928661314055570ec1c9c872a7331d0a2a0ef8da5eec"
+    qualification: "completed necessary-but-insufficient no-target policy without protected verdict"
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 995
+    relationship_row_count: 4915
+    semantic_row_count: 995
+    vault_row_count: 995
+    local_cache_only_warning_count: 0
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: true
+    refresh_performed: true
+    before_core_validation_status: "PASS"
+    before_freshness_status: "WARN"
+    before_local_retrieval_status: "WARN"
+    after_core_validation_status: "PASS"
+    after_freshness_status: "PASS"
+    after_local_retrieval_status: "PASS"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-V21-P14-T05-NEGATIVE-RESULT-SUCCESS-PATHWAY-V1 --json"
+      query_type: "lookup"
+      query_text: "TEX-V21-P14-T05-NEGATIVE-RESULT-SUCCESS-PATHWAY-V1"
+      returned_object_ids:
+        - "TEX-V21-P14-T05-NEGATIVE-RESULT-SUCCESS-PATHWAY-V1"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search 'exact operational identity' --json"
+      query_type: "search"
+      query_text: "exact operational identity"
+      returned_object_ids:
+        - "TEX-V21-P14-T01-PROJECT-SUCCESS-CATEGORIES"
+        - "TEX-ONTOLOGY-AETHER-FLOW-RELATIVISTIC-RECOVERY"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search 'publication readiness internal manuscript' --json"
+      query_type: "search"
+      query_text: "publication readiness internal manuscript"
+      returned_object_ids:
+        - "TEX-V21-P14-T05-NEGATIVE-RESULT-SUCCESS-PATHWAY-V1"
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      result_note: "Mutable generated frontier hit was excluded from canonical returns and inspected directly as tracked control state."
+  no_hit_queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search 'P15-T01 exact-GR interpretive manuscript package' --json"
+      query_type: "search"
+      query_text: "P15-T01 exact-GR interpretive manuscript package"
+      returned_object_ids: []
+      result_note: "No direct object hit; route remained controlled by tracked plan and handoff."
+  canonical_inspections:
+    - object_id: "TEX-V21-P14-T05-NEGATIVE-RESULT-SUCCESS-PATHWAY-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260722-020/artifacts/negative_result_success_pathway_v1.tex"
+      source_hash: "a5b59ddf497659097783e8e8dcd9c4de1726652265b0b53cab007da233f34aa3"
+    - object_id: "TEX-V21-P14-T01-PROJECT-SUCCESS-CATEGORIES"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260722-016/artifacts/four_project_success_categories_v1.tex"
+      source_hash: "03d2658ad7a1508776ed25f1b00b7446c04f8c76e16b2f1acfd7e6c06ddaf00e"
+    - object_id: "TEX-ONTOLOGY-AETHER-FLOW-RELATIVISTIC-RECOVERY"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "ontology/tex/aether_flow_relativistic_recovery.tex"
+      source_hash: "77d5c2db56f122870343834f853bf2f375a912116a347d7c5710405c8707d69c"
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  authority_note: "Obsidian wiki semantic relationship and .local surfaces are retrieval layers only and are not authority; registered canonical sources and tracked control state govern this task."
+
+canonical_source_evidence:
+  - path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+    sha256: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  - path: "research_control/handoffs/handoff-0829.yaml"
+    sha256: "c63b7909df2ea8c76849399bbe0ef6e5158284c69d2e753c860b1089b4fde99d"
+  - path: "ontology/tex/aether_flow_foundations.tex"
+    sha256: "b14c99501bdb2b9fad0702df3a41230a4bf3bd279ee660c31329e1d33e577fa2"
+  - path: "ontology/tex/aether_flow_dynamics.tex"
+    sha256: "ee3ae3298ab45111235388b305cbda2143b0314cb90f9b652115f71eb2fb8c6d"
+  - path: "ontology/tex/aether_flow_consistency.tex"
+    sha256: "d965519639ee8764a5c5a63798d15e8a9a380d7e208dffc43a0be02b6f245ba1"
+  - path: "ontology/tex/aether_flow_relativistic_recovery.tex"
+    sha256: "77d5c2db56f122870343834f853bf2f375a912116a347d7c5710405c8707d69c"
+  - path: "ontology/tex/aether_flow_geometry.tex"
+    sha256: "ad43e3408fe2d9686a52a71de7ab8326668e8f04ebe2d2845986898b7d2c000f"
+
+result_artifact:
+  object_id: "MD-V21-P15-T01-EXACT-GR-INTERPRETIVE-MANUSCRIPT-V1"
+  manuscript_path: "research_control/tasks/RT-20260722-021/artifacts/exact_gr_interpretive_manuscript_v1.md"
+  manuscript_sha256: "17d215509eb3f0ee4544c2f25eed56462d346106f41bc520fc27441c09c0add9"
+  claim_map_path: "research_control/tasks/RT-20260722-021/artifacts/exact_gr_claim_map_v1.yaml"
+  claim_map_sha256: "e9283556dd03a08a37ddd55962884ad1cd57ec6c60f194d01bc37a13733eb679"
+  source_package_path: "research_control/tasks/RT-20260722-021/artifacts/exact_gr_reproducibility_source_package_v1.yaml"
+  source_package_sha256: "e4f4e0cd9c2beff5ad4e9de90d33734d4d4a0f1719e05c4ef24649bd791d3c79"
+  internal_review_path: "research_control/tasks/RT-20260722-021/artifacts/exact_gr_internal_review_packet_v1.md"
+  internal_review_sha256: "25087b0dcacc1c07faff48e2ecddc6e57b026a352faf27ccbb5015774203479b"
+  validation_report_path: "research_control/tasks/RT-20260722-021/artifacts/exact_gr_interpretive_package_validation.json"
+  validation_report_sha256: "b8356b717a4291c00b62c598b19683adb45bcebbc7f5a87868d1d75b993e6115"
+  compact_receipt_path: "research_control/tasks/RT-20260722-021/artifacts/exact_gr_interpretive_package_compact_receipt.json"
+  compact_receipt_sha256: "63cff2af267036a063e61c5f8740b39154908a44e65d3c4e83e973d9b4f935aa"
+  validation_status: "PASS_161_CHECKS"
+
+completion_criteria:
+  - "internal exact-GR manuscript states adoption versus derivation in abstract body equations limitations and conclusion"
+  - "all six displayed equations trace to registered canonical TeX"
+  - "all thirteen mapped claims have sources allowed uses and forbidden overreads"
+  - "P14 task-local findings retain their exact status and authority boundary"
+  - "source package binds canonical and dependency hashes and records zero new external sources"
+  - "internal review is explicitly not blind independent external or peer review"
+  - "submission release outreach benchmark promotion and physics promotion remain unauthorized"
+  - "all task-local and governed validators pass"
+
+stop_conditions:
+  - "stop on source hash or dependency mismatch"
+  - "stop if exact-GR adoption is presented as source derivation ontology truth emergence or novelty"
+  - "stop if same-context internal review would be labeled independent external human or peer review"
+  - "stop if external contact release submission or protected authority becomes necessary"
+  - "stop on validator checkpoint lease repository branch or HEAD failure"
+  - "do not execute P15-T03 P15-T06 P15-T07 or any other work item"
+
+project_improvement_signals: []
+notes: "Completed one bounded P15-T01 outer AgentJob only; P15-T03 is selected for a separate successor and remains unexecuted."

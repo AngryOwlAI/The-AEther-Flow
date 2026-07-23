@@ -443,6 +443,20 @@ class ProjectChangeClassifierTests(unittest.TestCase):
         self.assertEqual(result["path_family_tags"], ["unknown_governed_path"])
         self.assertIn("unknown_governed_path", result["reason_codes"])
 
+    def test_root_gitattributes_is_exact_ci_orchestration(self) -> None:
+        result = self.classifier.classify_paths([".gitattributes"])
+        self.assertEqual(result["path_family_tags"], ["ci_orchestration"])
+        self.assertEqual(result["recommended_validation_profile"], "affected")
+        self.assertNotIn("unknown_governed_path", result["reason_codes"])
+        self.assertEqual(
+            result["path_family_details"][0]["reasons"],
+            ["path_rule:ci_orchestration"],
+        )
+
+        unrelated = self.classifier.classify_paths([".gitpolicy"])
+        self.assertEqual(unrelated["path_family_tags"], ["unknown_governed_path"])
+        self.assertIn("unknown_governed_path", unrelated["reason_codes"])
+
     def test_legacy_classifier_fields_remain_exact_for_validator_change(self) -> None:
         path = "scripts/project_control/validate_documentation_impact.py"
         result = self.classifier.classify_paths([path])

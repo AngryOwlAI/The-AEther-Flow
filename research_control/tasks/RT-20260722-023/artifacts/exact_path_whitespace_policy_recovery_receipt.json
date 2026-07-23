@@ -1,0 +1,81 @@
+{
+  "schema_id": "exact_path_whitespace_policy_recovery_receipt_v1",
+  "authority": "operational_validation_only",
+  "task_id": "RT-20260722-023",
+  "job_id": "AJ-RT-20260722-023-001",
+  "created_at": "2026-07-23T03:47:48Z",
+  "status": "PASS",
+  "route_id": "preserve_hash_bound_p15_t01_blank_eof_via_exact_path_whitespace_policy_v1",
+  "policy": {
+    "path": ".gitattributes",
+    "sha256_before": "bfef387cf176380aa15997ccd520f2b8848d56c5ff68ac4dc1ae15191d6f5ab2",
+    "sha256_after": "5678e66fcb18bbc3d6e589d64277f02cd7c8a4ad0a263386ad0fb1ee795dbf67",
+    "rule_count": 4,
+    "attribute_value": "-blank-at-eof",
+    "literal_paths_only": true,
+    "wildcard_rule_count": 0,
+    "directory_wide_rule_count": 0
+  },
+  "validator": {
+    "path": "research_control/tasks/RT-20260722-023/artifacts/validate_exact_path_whitespace_policy.py",
+    "sha256": "6fdff62103b4a42a65c0fe637ca48d1a682b0f82392de09589a34867c65d9e79",
+    "status": "PASS",
+    "isolated_intended_returncode": 0,
+    "isolated_control_returncode": 2,
+    "isolated_control_finding": "new blank line at EOF",
+    "repository_git_diff_check": "PASS"
+  },
+  "protected_files": [
+    {
+      "path": "research_control/tasks/RT-20260722-021/artifacts/exact_gr_claim_map_v1.yaml",
+      "sha256_before": "e9283556dd03a08a37ddd55962884ad1cd57ec6c60f194d01bc37a13733eb679",
+      "sha256_after": "e9283556dd03a08a37ddd55962884ad1cd57ec6c60f194d01bc37a13733eb679",
+      "git_whitespace_attribute": "-blank-at-eof",
+      "bytes_changed": false
+    },
+    {
+      "path": "research_control/tasks/RT-20260722-021/artifacts/exact_gr_internal_review_packet_v1.md",
+      "sha256_before": "25087b0dcacc1c07faff48e2ecddc6e57b026a352faf27ccbb5015774203479b",
+      "sha256_after": "25087b0dcacc1c07faff48e2ecddc6e57b026a352faf27ccbb5015774203479b",
+      "git_whitespace_attribute": "-blank-at-eof",
+      "bytes_changed": false
+    },
+    {
+      "path": "research_control/tasks/RT-20260722-021/artifacts/exact_gr_reproducibility_source_package_v1.yaml",
+      "sha256_before": "e4f4e0cd9c2beff5ad4e9de90d33734d4d4a0f1719e05c4ef24649bd791d3c79",
+      "sha256_after": "e4f4e0cd9c2beff5ad4e9de90d33734d4d4a0f1719e05c4ef24649bd791d3c79",
+      "git_whitespace_attribute": "-blank-at-eof",
+      "bytes_changed": false
+    },
+    {
+      "path": "research_control/tasks/RT-20260722-021/artifacts/validate_exact_gr_interpretive_package.py",
+      "sha256_before": "ace6d4bd7b98da40af8632d1617d0c8f4126f0c272310d76cacf7affb7ef24cf",
+      "sha256_after": "ace6d4bd7b98da40af8632d1617d0c8f4126f0c272310d76cacf7affb7ef24cf",
+      "git_whitespace_attribute": "-blank-at-eof",
+      "bytes_changed": false
+    }
+  ],
+  "adjacent_control": {
+    "path": "research_control/tasks/RT-20260722-021/artifacts/exact_gr_interpretive_manuscript_v1.md",
+    "git_whitespace_attribute": "unspecified",
+    "isolated_blank_at_eof_finding_retained": true
+  },
+  "preserved_predecessor": {
+    "completion_path": "research_control/tasks/RT-20260722-022/jobs/completions/AJC-AJ-RT-20260722-022-001.yaml",
+    "completion_sha256": "95ff0395615017e5829934356c729b62ab073e8e057f39c4f1bf73d6d1d4136a",
+    "handoff_yaml_path": "research_control/handoffs/handoff-0831.yaml",
+    "handoff_yaml_sha256": "7dee8cfd13fde6e0296cc05179407884adffc0ef58a9dbc40d62078366926eec",
+    "handoff_markdown_path": "research_control/handoffs/handoff-0831.md",
+    "handoff_markdown_sha256": "10cd285c7d9121fa9948e675a5f471db0a2cb789181eca8d5bb96d0a903b1ee6",
+    "bytes_changed": false
+  },
+  "claim_limits": {
+    "scientific_claims_changed": false,
+    "scientific_ledger_changed": false,
+    "distance_to_gr_changed": false,
+    "p15_t03_executed": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "publication_authorized": false
+  }
+}

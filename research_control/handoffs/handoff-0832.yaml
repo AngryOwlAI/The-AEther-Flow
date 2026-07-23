@@ -1,0 +1,218 @@
+validation_status: "FAIL"
+handoff_id: "handoff-0832"
+handoff_number: 832
+created_at: "2026-07-23T04:14:11Z"
+task_id: "RT-20260722-023"
+decision_id: "DDR-20260722-023"
+job_id: "AJ-RT-20260722-023-001"
+completion_path: "research_control/tasks/RT-20260722-023/jobs/completions/AJC-AJ-RT-20260722-023-001.yaml"
+completion_hash: "8199e2293e31c6791ca3f56a96cd35df54c98a12b8ffcfd83be72113cfb36165"
+source_task_id: "RT-20260722-023"
+source_job_id: "AJ-RT-20260722-023-001"
+source_completion_id: "AJC-AJ-RT-20260722-023-001"
+status: "blocked_validation"
+summary: "RT-20260722-023 adds four literal Git whitespace rules for the four immutable P15-T01 files and proves their hashes unchanged. An adjacent control path remains unclassified and still fails blank-at-EOF in an isolated Git proof. The P15-T01 package and exact 171-test shard pass, but the one normal checkpoint invocation stopped before staging because root .gitattributes is unknown to the validation classifier. P15-T03 remains pending."
+next_action: "Run one fresh governed improve-project-system recovery that classifies only root .gitattributes as the existing ci_orchestration validation family, proves unrelated unknown paths still fail closed, preserves the four exact rules and protected hashes, and invokes the normal checkpoint once without legacy validation; do not execute P15-T03."
+loop_risk_route: "admit_root_gitattributes_to_validation_classifier_v1"
+
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260722-023"
+  latest_research_handoff_id: "handoff-0832"
+  latest_research_next_action: "Run one fresh governed improve-project-system recovery that classifies only root .gitattributes as the existing ci_orchestration validation family, proves unrelated unknown paths still fail closed, preserves the four exact rules and protected hashes, and invokes the normal checkpoint once without legacy validation; do not execute P15-T03."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+
+ordinary_route_guard:
+  schema_id: "ordinary_route_guard_evaluation_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  evaluation_id: "ORE-HANDOFF-0832"
+  ordinary_handoff_id: "handoff-0832"
+  threshold: 3
+  consecutive_project_system_tasks_before_selection: 1
+  ready_science_plan_task_ids:
+    - "P4-T05"
+    - "P15-T01"
+    - "P15-T03"
+  selected_plan_task_id: "P15-T01"
+  selected_route_class: "physics_bearing"
+  selected_worker_skill: "continue-research"
+  outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  exception_receipt:
+    active: false
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+claim_boundary:
+  allowed_next_scope: "No new plan packet is execution-ready. Preserve the completed exact-path Git policy and immutable P15-T01 bytes while one fresh Validator Engineer recovery admits only root .gitattributes to safe checkpoint planning; P15-T03 remains dependency-ready and pending."
+  newly_completed_recovery_task: "RT-20260722-023"
+  recovery_for_plan_task_id: "P15-T01"
+  recovery_completion_path: "research_control/tasks/RT-20260722-023/jobs/completions/AJC-AJ-RT-20260722-023-001.yaml"
+  recovery_completion_sha256: "8199e2293e31c6791ca3f56a96cd35df54c98a12b8ffcfd83be72113cfb36165"
+  exact_path_rule_count: 4
+  wildcard_rule_count: 0
+  protected_file_count: 4
+  protected_file_hashes_preserved: true
+  adjacent_control_unclassified: true
+  adjacent_blank_at_eof_control_retained: true
+  legacy_validation_used: false
+  p15_t01_payload_complete: true
+  p15_t01_checkpoint_ready: false
+  p15_t01_scientific_payload_changed: false
+  p15_t03_dependency_ready: true
+  p15_t01_selected_recovery: true
+  p15_t03_selected_next: false
+  p15_t03_execution_ready_after_checkpoint: false
+  p15_t03_executed: false
+  scientific_ledger_change_count: 0
+  scientific_status_changed: false
+  distance_to_gr_delta_changed: false
+  ontology_adoption_authorized: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  blocked_claims:
+    - "Git policy validation checkpoint or route selection as physics evidence"
+    - "effective GR adoption presented as source derivation formal source equivalence or genuine emergence"
+    - "scoped selector and minimum-extension results strengthened into a global no-go or future-extension impossibility"
+    - "same-context internal review presented as blind independent external human review peer review or replication"
+    - "internal manuscript preparation presented as submission public release outreach or publication authority"
+    - "canonical ontology source-law scientific-ledger or Distance-to-GR edit"
+    - "general EqSrc unscoped metric matter coupling Einstein-equation derivation benchmark promotion proof authority publication completed derivation or global no-go"
+
+exact_path_whitespace_recovery:
+  receipt_path: "research_control/tasks/RT-20260722-023/artifacts/exact_path_whitespace_policy_recovery_receipt.json"
+  receipt_sha256: "d3522930bc2515afe277de19498ce63ea4cb5dd46adba1aed873e557a58749cf"
+  policy_path: ".gitattributes"
+  policy_sha256_before: "bfef387cf176380aa15997ccd520f2b8848d56c5ff68ac4dc1ae15191d6f5ab2"
+  policy_sha256_after: "5678e66fcb18bbc3d6e589d64277f02cd7c8a4ad0a263386ad0fb1ee795dbf67"
+  validator_path: "research_control/tasks/RT-20260722-023/artifacts/validate_exact_path_whitespace_policy.py"
+  validator_sha256: "6fdff62103b4a42a65c0fe637ca48d1a682b0f82392de09589a34867c65d9e79"
+  validator_status: "PASS"
+  exact_rule_count: 4
+  wildcard_rule_count: 0
+  adjacent_control_attribute: "unspecified"
+  isolated_intended_git_diff_status: "PASS"
+  isolated_adjacent_control_status: "FAIL_NEW_BLANK_LINE_AT_EOF_EXPECTED"
+  p15_t01_package_validation_status: "PASS_161_CHECKS"
+  required_shard_status: "PASS_171_OF_171"
+  checkpoint_status: "FAIL_CHECKPOINT_PLANNER_UNKNOWN_GITATTRIBUTES"
+  checkpoint_committed: false
+  checkpoint_staged: false
+  predecessor_scientific_payload_changed: false
+
+checkpoint_planner_blocker:
+  blocker_path: "research_control/tasks/RT-20260722-023/artifacts/validation_blocker_checkpoint_planner_unknown_gitattributes_v1.yaml"
+  blocker_sha256: "157aba4e772c1522fbf92333a1f67d7116b2dd837457cc812f4a22b8058b2276"
+  checkpoint_status: "FAIL"
+  failed_stage: "checkpoint_planner_preflight"
+  failed_predicate: "plan.unknown_paths_nonempty"
+  unknown_path: ".gitattributes"
+  current_path_family: "unknown_governed_path"
+  required_path_family: "ci_orchestration"
+  checkpoint_committed: false
+  checkpoint_staged: false
+  legacy_validation_used: false
+  exact_path_policy_complete: true
+  exact_path_policy_changed_by_recovery: false
+  protected_p15_t01_hashes_changed: false
+
+preserved_p15_t01_result:
+  task_id: "RT-20260722-021"
+  completion_path: "research_control/tasks/RT-20260722-021/jobs/completions/AJC-AJ-RT-20260722-021-001.yaml"
+  completion_sha256: "8ad277316593dfe63d8ec97805191e845490ddae6314a3dd40dca19a61e91bb1"
+  manuscript_path: "research_control/tasks/RT-20260722-021/artifacts/exact_gr_interpretive_manuscript_v1.md"
+  manuscript_sha256: "17d215509eb3f0ee4544c2f25eed56462d346106f41bc520fc27441c09c0add9"
+  claim_map_sha256: "e9283556dd03a08a37ddd55962884ad1cd57ec6c60f194d01bc37a13733eb679"
+  source_package_sha256: "e4f4e0cd9c2beff5ad4e9de90d33734d4d4a0f1719e05c4ef24649bd791d3c79"
+  internal_review_sha256: "25087b0dcacc1c07faff48e2ecddc6e57b026a352faf27ccbb5015774203479b"
+  validator_sha256: "ace6d4bd7b98da40af8632d1617d0c8f4126f0c272310d76cacf7affb7ef24cf"
+  task_local_validation_status: "PASS_161_CHECKS"
+  ontology_status: "proposed_interpretive_layer"
+  first_principles_substrate_derivation_status: "open"
+  formal_source_equivalence_established: false
+  genuine_emergence_established: false
+  external_human_review_present: false
+  publication_authorized: false
+
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "none"
+  milestone: "none"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "The recovery changes exact-path Git whitespace classification and control evidence only."
+  downstream_unlocked:
+    - "P15-T01_checkpoint_compatibility"
+  downstream_still_blocked:
+    - "source_ontology_derivation"
+    - "general_eqsrc"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+    - "benchmark_promotion"
+    - "external_publication"
+
+required_next_packet:
+  task_type: "v21_selector_minimum_extension_theorem_manuscript"
+  task_taxonomy:
+    schema_id: "v21_task_taxonomy_v1"
+    work_kind: "publication_preparation"
+    milestone: "source_equivalence_eqsrc"
+    candidate_family: "selector_minimum_extension_theorem_manuscript"
+    result_kind: "completed_or_precisely_blocked"
+    authority: "science_draft"
+    scope: "scientific"
+
+selected_next_route:
+  route_id: "admit_root_gitattributes_to_validation_classifier_v1"
+  route_label: "project-system-recovery"
+  role_family: "validator-engineer@0.2.0"
+  worker_skill: "improve-project-system"
+  plan_task_id: "P15-T01"
+  next_plan_task_after_recovery: "P15-T03"
+  target_derivation_milestone: "none"
+  milestone_burden: "Preserve the completed exact-path policy while admitting only root .gitattributes to safe checkpoint planning."
+  requires_human_gate: false
+  dependency_independent_after_other_human_gates: true
+  project_system_boundary_authorized_by_plan: false
+  physics_promotion_authorized: false
+  dependency_ready: false
+  execution_ready_after_checkpoint: false
+  executed: false
+  next_action: "Add one literal root .gitattributes classifier mapping to the existing ci_orchestration family, add focused positive and unknown-path negative regressions, preserve the four exact rules and protected hashes, and invoke the normal checkpoint once without legacy validation."
+  source_handoff: "research_control/handoffs/handoff-0832.yaml"
+  blocker_path: "research_control/tasks/RT-20260722-023/artifacts/validation_blocker_checkpoint_planner_unknown_gitattributes_v1.yaml"
+  blocker_sha256: "157aba4e772c1522fbf92333a1f67d7116b2dd837457cc812f4a22b8058b2276"
+
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  sidecar_path: ""
+  recursive_goal_recovery_required: true
+  route: "continue-goal recovery via improve-project-system"
+  blocker_path: "research_control/tasks/RT-20260722-023/artifacts/validation_blocker_checkpoint_planner_unknown_gitattributes_v1.yaml"
+  reason: "The normal checkpoint found a distinct exact-path classifier omission that generation 64 cannot repair without exceeding its immutable Process Integrity Auditor route."
+
+handoff_authority_boundary:
+  this_handoff_authorizes: "No new plan packet. It preserves the completed exact-path policy and P15-T01 transaction while the recursive relay seeks one literal root .gitattributes classifier admission and normal checkpoint."
+  this_handoff_does_not_authorize:
+    - "P15-T03 execution before the classifier recovery and committed normal checkpoint"
+    - "P4-T05 protected ontology decision without exact human authority"
+    - "P15-T06 before P15-T02 P15-T03 and P15-T04 all qualify"
+    - "P15-T07 reviewer contact submission public release or outreach"
+    - "canonical ontology source-law scientific-ledger or Distance-to-GR edits"
+    - "strengthening scoped selector minimum-extension or negative results beyond their proved quantifiers"
+    - "physical interpretation establishment ontology adoption emergence novelty general EqSrc proof benchmark promotion publication proof authority completed derivation or global no-go"

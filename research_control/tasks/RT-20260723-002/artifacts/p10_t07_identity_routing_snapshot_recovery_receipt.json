@@ -1,0 +1,76 @@
+{
+  "authority": "project_control_validation_only",
+  "claim_boundary_id": "CB-V21-P15-T01-P10-T07-IDENTITY-ROUTING-SNAPSHOT-RECOVERY-001",
+  "completed_at": "2026-07-23T07:10:35Z",
+  "goal_receipt": {
+    "generation": 67,
+    "goal_id": "crg-20260720T161354Z-96bc2664ce31bfe0",
+    "handoff_token": "45634306d228c7cee870aab3d7f3b191e656e27be7032c55",
+    "idempotency_key": "crg-20260720T161354Z-96bc2664ce31bfe0:67",
+    "immutable_route_hash": "0009ea9e0b26adea6bc0064c9dd48c758cc180f4784261869bca28b701bc0c6f",
+    "relay_claim_token": "6fbc7f79134513efaf90d6f6f39930915266a4edfd41175a",
+    "worker_skill": "improve-project-system"
+  },
+  "identity_reseal": {
+    "authorized_drift_count": 3,
+    "check_count": 13,
+    "drift_count_after": 0,
+    "drift_count_before": 3,
+    "failed_check_count": 0,
+    "identity_tool_path": "research_control/tasks/RT-20260722-002/artifacts/artifact_identity.py",
+    "identity_tool_sha256": "55472b473fc7c626cb1bd777f76acdb5d91493740443ac93749461835ad04754",
+    "output_hashes": {
+      "research_control/tasks/RT-20260722-002/artifacts/artifact_refs.json": "e6a79d1d44b0494d6799b2a750cdd09392f069fcb7602fe7ad60a449feea77ad",
+      "research_control/tasks/RT-20260722-002/artifacts/ca/cc7d678328f2242cd49a83ce9a3eaa47e30e830d48a8b70a6a29434bb4a6477d.json": "cc7d678328f2242cd49a83ce9a3eaa47e30e830d48a8b70a6a29434bb4a6477d",
+      "research_control/tasks/RT-20260722-002/artifacts/compact_receipt.json": "4f4ffc64ad0144090b14e373ed486e6c3f4b2ca39aa3c18f29fe1bd0b4b83910"
+    },
+    "predecessor_copy_path": "research_control/tasks/RT-20260722-002/artifacts/ca/e22bde41e45def27a32d99bdf4ca9e6517a2acedbf18393cac22e172b9423c51.json",
+    "predecessor_sha256_after": "e22bde41e45def27a32d99bdf4ca9e6517a2acedbf18393cac22e172b9423c51",
+    "predecessor_sha256_before": "e22bde41e45def27a32d99bdf4ca9e6517a2acedbf18393cac22e172b9423c51",
+    "reference_count": 3,
+    "reseal_tool_path": "research_control/tasks/RT-20260723-002/artifacts/reseal_p10_t07_identity.py",
+    "reseal_tool_sha256": "5b1c74fc4e770e15319133c062d225f974cc62244cf5439505c3a903b3e830b1",
+    "source_contract_path": "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_contract.json",
+    "source_contract_sha256": "cc7d678328f2242cd49a83ce9a3eaa47e30e830d48a8b70a6a29434bb4a6477d",
+    "status": "PASS"
+  },
+  "job_id": "AJ-RT-20260723-002-001",
+  "legacy_validation_used": false,
+  "p15_t01_preservation": {
+    "exact_path_policy_status": "PASS",
+    "package_check_count": 161,
+    "package_failed_check_count": 0,
+    "package_status": "PASS_161_CHECKS",
+    "scientific_payload_changed": false
+  },
+  "p15_t03_executed": false,
+  "physics_promotion_authorized": false,
+  "proof_authority": false,
+  "routing_snapshot_repair": {
+    "handoff_markdown_path": "research_control/handoffs/handoff-0834.md",
+    "handoff_markdown_sha256_after": "77721f64c45ead7c160b479555e2f397265d5e903de24affea397ec4fa6ba27a",
+    "handoff_markdown_sha256_before": "362416b4616701d7177eced6d9c99fc20632392124364363b10756954c6792f5",
+    "handoff_yaml_sha256_unchanged": "9c8da6b23b0b700d90f8b35bb59a34a85f9844dd44891224e4a9a677c6f01e30",
+    "immutable_rt001_job_path": "research_control/tasks/RT-20260723-001/jobs/AJ-RT-20260723-001-001.yaml",
+    "immutable_rt001_job_sha256": "91faca3863659ccc5427ec06b101cd98ced6d73a347c6b92ba0aa4fa04050bdc",
+    "literal_handoff_identity_present": true,
+    "role_allowlist_equals_job": true,
+    "role_path": "research_control/tasks/RT-20260723-001/roles/validator-engineer@0.2.0--RT-20260723-001.yaml",
+    "role_registry_allowlist_equals_job": true,
+    "role_sha256_after": "faadf7c41f9471d5c3d48f7f1ba5ba60c8a9cc0b8d087a85510fb3b5f9c22e51",
+    "role_sha256_before": "0f0b910db26fc25a27bdc9f9d39ba11b7e141250e611dfed5225bf3747300853",
+    "status": "PASS"
+  },
+  "schema_id": "p10_t07_identity_routing_snapshot_recovery_receipt_v1",
+  "scientific_claims_changed": false,
+  "status": "PASS_PRECHECKPOINT",
+  "task_id": "RT-20260723-002",
+  "validation_summary": {
+    "affected_validation_plan_status": "PASS",
+    "artifact_identity_status": "PASS",
+    "p10_migration_readiness_test_count": 20,
+    "p10_migration_readiness_status": "PASS",
+    "required_repository_test_shard_status": "PASS",
+    "routing_snapshot_status": "PASS"
+  }
+}
