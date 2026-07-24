@@ -386,6 +386,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-V21-RECOMMENDATION-BACKLOG-SCHEMA` `wiki/markdown/md-research-control-design-v21-recommendation-backlog-schema.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-V21-SCIENTIFIC-STATUS-SCHEMA` `wiki/markdown/md-research-control-design-v21-scientific-status-schema.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-V21-TASK-TAXONOMY-POLICY` `wiki/markdown/md-research-control-design-v21-task-taxonomy-policy.md`
+- `WIKI-MD-RESEARCH-CONTROL-DESIGN-VALIDATION-ASSURANCE-POLICY-V1` `wiki/markdown/md-research-control-design-validation-assurance-policy-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-VALIDATION-CACHE-CONTRACT-V1` `wiki/markdown/md-research-control-design-validation-cache-contract-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-VALIDATION-CHANGE-FAMILY-TAXONOMY-V1` `wiki/markdown/md-research-control-design-validation-change-family-taxonomy-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-VALIDATION-CHANGE-MATRIX-V1` `wiki/markdown/md-research-control-design-validation-change-matrix-v1.md`
@@ -748,6 +749,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-V21-P12-T07-METHODOLOGY-LIMITATIONS-NEXT-STUDY` `wiki/markdown/md-v21-p12-t07-methodology-limitations-next-study.md`
 - `WIKI-MD-V21-P13-T04-QUALITY-PORTABILITY-POLICY-V1` `wiki/markdown/md-v21-p13-t04-quality-portability-policy-v1.md`
 - `WIKI-MD-V21-P13-T04-VALIDATOR-API-CONTRACT-V1` `wiki/markdown/md-v21-p13-t04-validator-api-contract-v1.md`
+- `WIKI-MD-V21-P13-T05-SECURITY-SCAN-POLICY-V1` `wiki/markdown/md-v21-p13-t05-security-scan-policy-v1.md`
 - `WIKI-MD-V21-P15-T01-EXACT-GR-INTERPRETIVE-MANUSCRIPT-V1` `wiki/markdown/md-v21-p15-t01-exact-gr-interpretive-manuscript-v1.md`
 - `WIKI-MD-V21-P4-T01-SOURCE-ASSUMPTION-AMBIGUITIES` `wiki/markdown/md-v21-p4-t01-source-assumption-ambiguities.md`
 - `WIKI-MD-V21-P4-T04-ONTOLOGY-REGIME-COMPARISON-REPORT-V1` `wiki/markdown/md-v21-p4-t04-ontology-regime-comparison-report-v1.md`
@@ -1320,6 +1322,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-DESIGN-V21-RECOMMENDATION-BACKLOG-SCHEMA` `research_control/design/v21_recommendation_backlog_schema.md`
 - `MD-RESEARCH-CONTROL-DESIGN-V21-SCIENTIFIC-STATUS-SCHEMA` `research_control/design/v21_scientific_status_schema.md`
 - `MD-RESEARCH-CONTROL-DESIGN-V21-TASK-TAXONOMY-POLICY` `research_control/design/v21_task_taxonomy_policy.md`
+- `MD-RESEARCH-CONTROL-DESIGN-VALIDATION-ASSURANCE-POLICY-V1` `research_control/design/validation_assurance_policy_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-VALIDATION-CACHE-CONTRACT-V1` `research_control/design/validation_cache_contract_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-VALIDATION-CHANGE-FAMILY-TAXONOMY-V1` `research_control/design/validation_change_family_taxonomy_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-VALIDATION-CHANGE-MATRIX-V1` `research_control/design/validation_change_matrix_v1.md`
@@ -1638,6 +1641,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-V21-P12-T07-METHODOLOGY-LIMITATIONS-NEXT-STUDY` `research_control/tasks/RT-20260723-013/artifacts/p12_t07_limitations_and_next_study.md`
 - `MD-V21-P13-T04-QUALITY-PORTABILITY-POLICY-V1` `research_control/tasks/RT-20260723-020/artifacts/quality_portability_policy_v1.md`
 - `MD-V21-P13-T04-VALIDATOR-API-CONTRACT-V1` `research_control/tasks/RT-20260723-020/artifacts/validator_api_contract_v1.md`
+- `MD-V21-P13-T05-SECURITY-SCAN-POLICY-V1` `research_control/tasks/RT-20260724-002/artifacts/security_scan_policy_v1.md`
 - `MD-V21-P15-T01-EXACT-GR-INTERPRETIVE-MANUSCRIPT-V1` `research_control/tasks/RT-20260722-021/artifacts/exact_gr_interpretive_manuscript_v1.md`
 - `MD-V21-P4-T01-SOURCE-ASSUMPTION-AMBIGUITIES` `research_control/tasks/RT-20260720-030/artifacts/source_assumption_unresolved_ambiguities_v1.md`
 - `MD-V21-P4-T04-ONTOLOGY-REGIME-COMPARISON-REPORT-V1` `research_control/tasks/RT-20260721-002/artifacts/ontology_regime_comparison_report_v1.md`

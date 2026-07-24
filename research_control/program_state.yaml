@@ -1,9 +1,90 @@
 mode: "director_led_research_control"
-active_task_id: "RT-20260724-001"
-latest_handoff_id: "handoff-0851"
-current_status: "p13_t04_frontier_sync_pass_checkpoint_ready"
-claim_boundary_summary: "RT-20260724-001 preserved the exact generation-92 P13-T04 payload and synchronized finalized tracked control state into the task index, current frontier, compact frontier YAML and JSON, and compact Markdown mirror. The inherited quality target, 48 focused tests, all renderer checks, compact schema validation, project-system gates, research-control validation, memory validation, and Git checks pass before one governed checkpoint. P13-T05 and P13-T06 remain unexecuted, P13-T02 remains blocked, P13-T01 remains held, and no scientific Distance-to-GR ontology benchmark proof publication push hosted-workflow or external authority changed."
-next_recommended_action: "Run the one authorized governed checkpoint for AJ-RT-20260724-001-001. After commit, route one fresh bounded P13-T05 improve-project-system frame for coverage, property-based, mutation, dependency, and security testing. Keep P13-T06 unexecuted until separately routed, P13-T02 blocked, and P13-T01 held."
+active_task_id: "RT-20260724-002"
+latest_handoff_id: "handoff-0852"
+current_status: "p13_t05_assurance_pass_checkpoint_ready"
+claim_boundary_summary: "RT-20260724-002 completed the bounded P13-T05 assurance packet. Exact hash-locked quality dependencies, deterministic assurance evaluation, property tests, an 85 percent branch-aware coverage floor, a 34-mutant exact acceptance campaign, dependency-vulnerability and code-security audits, registered policy sources, CI wiring, and tracked receipts are complete. Measured coverage is 89.595 percent, all 34 target mutants were killed, 50 distributions had no known vulnerability, five low code-security findings were individually dispositioned, no medium or high finding remained, and all focused non-regression gates pass before one governed checkpoint. P13-T06 and P13-T08 remain unexecuted, P13-T02 remains blocked, P13-T01 remains held, and no scientific Distance-to-GR ontology benchmark proof publication push hosted-workflow or external authority changed."
+next_recommended_action: "Run the one authorized governed checkpoint for AJ-RT-20260724-002-001. After commit, route one fresh bounded P13-T06 improve-project-system frame to provide a reproducible container or equivalent development environment. Do not execute P13-T08 in this packet; keep P13-T02 blocked and P13-T01 held."
+
+p13_t05_validation_assurance:
+  task_id: "RT-20260724-002"
+  parent_task_id: "RT-20260724-001"
+  parent_handoff_id: "handoff-0851"
+  plan_task_id: "P13-T05"
+  next_plan_task_id: "P13-T06"
+  recommendation_ids:
+    - "V21-R55"
+    - "V21-R59"
+  claim_boundary_id: "CB-V21-P13-T05-ASSURANCE-001"
+  status: "PASS_CHECKPOINT_READY"
+  work_item_status: "completed"
+  route_label: "route_p13_t05_after_p13_t04_recovery_checkpoint_v1"
+  selected_role_family: "validator-engineer@0.2.0"
+  selected_worker_skill: "improve-project-system"
+  immutable_route_sha256: "e59e9cb23dd99bab2958ac9e9ccb37497b652a35f5900a21ac9ae8fd9f75e94d"
+  completion_path: "research_control/tasks/RT-20260724-002/jobs/completions/AJC-AJ-RT-20260724-002-001.yaml"
+  completion_sha256: "77e41842b1530fea579955d57f3fefe99b9800bac2aa9147cb8ca9b5443bd8ea"
+  assurance_policy_path: "research_control/design/validation_assurance_policy_v1.md"
+  assurance_policy_sha256: "191fe1a8fe186d8f5086720caa76c4bc61c2d677a44213f233412e3cfb9fd4b0"
+  dependency_lock_path: "research_control/tasks/RT-20260724-002/artifacts/quality-assurance-requirements.lock"
+  dependency_lock_sha256: "44878248acae3a2a05fd88ec99e171047db038ccb0a95d924aa3219055cc5870"
+  coverage_baseline_path: "research_control/tasks/RT-20260724-002/artifacts/coverage_baseline.json"
+  coverage_baseline_sha256: "ba01c620f78d297975a47192340690b5c64a4951d015701beb4b4e2b4edff8b0"
+  mutation_report_path: "research_control/tasks/RT-20260724-002/artifacts/mutation_report.json"
+  mutation_report_sha256: "51189302bf24390be33df3a43ca36c5a1bc4176fa046f4b468d90233714cf0b0"
+  security_policy_path: "research_control/tasks/RT-20260724-002/artifacts/security_scan_policy_v1.md"
+  security_policy_sha256: "2d0dd8a2acf3a09ea728f10e4dbdae06a9eb435271c7699c2243f3149bb5079e"
+  security_dispositions_path: "research_control/tasks/RT-20260724-002/artifacts/security_dispositions.json"
+  security_dispositions_sha256: "d8b1dbad004fa62e6b86963f629e6d7fbc30da7937c5b39cc7ade9b4edc90584"
+  receipt_path: "research_control/tasks/RT-20260724-002/artifacts/p13_t05_assurance_receipt.json"
+  receipt_sha256: "93c23396c9c862600fc7244378c4975529229f934272aa8e1906a327ed1ae05a"
+  coverage_floor_percent: 85.0
+  observed_total_coverage_percent: 89.59537572254335
+  covered_branch_count: 73
+  total_branch_count: 86
+  property_and_unit_test_status: "PASS_24_WITH_1_GENERATED_CASE_SKIPPED"
+  exact_mutation_target_count: 34
+  exact_mutation_killed_count: 34
+  exact_mutation_survivor_count: 0
+  exact_mutation_status: "PASS_100_PERCENT"
+  dependency_audited_distribution_count: 50
+  dependency_known_vulnerability_count: 0
+  dependency_audit_status: "PASS"
+  code_security_low_finding_count: 5
+  code_security_medium_finding_count: 0
+  code_security_high_finding_count: 0
+  code_security_dispositioned_finding_count: 5
+  code_security_status: "PASS"
+  p11_t04_adversarial_test_status: "PASS_10_OF_10"
+  p13_t04_quality_non_regression_status: "PASS_13_OF_13"
+  p13_t04_portability_ci_checkpoint_non_regression_status: "PASS_36_OF_36"
+  checkpoint_invocation_count: 0
+  checkpoint_committed: false
+  checkpoint_staged: false
+  legacy_validation_used: false
+  p13_t05_executed: true
+  p13_t06_dependency_ready_after_checkpoint: true
+  p13_t06_executed: false
+  p13_t08_executed: false
+  p13_t02_executed: false
+  p13_t01_reopened: false
+  scientific_status_changed: false
+  scientific_ledger_change_count: 0
+  distance_to_gr_delta_changed: false
+  ontology_adoption_authorized: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_performed: false
+  workflow_dispatch_performed: false
+  handoff_id: "handoff-0852"
+  handoff_yaml_sha256: "3e7c40fe42bdc37da5838838016542af38bdd6d918540ad055c66e00944c9a47"
+  handoff_markdown_sha256: "3d2c4dc0d9eff710bfca4431bcf4561cd35eaffb37fc1ca31cc8a492e044ed54"
+  selected_next_work_item: "P13-T06"
+  selected_next_worker_skill: "improve-project-system"
+  selected_next_role_family: "validator-engineer@0.2.0"
+  selected_next_route_label: "ordinary-research-packet"
+  selected_next_strategy_id: "route_p13_t06_after_p13_t05_checkpoint_v1"
 
 p13_t04_generated_frontier_checkpoint_recovery:
   task_id: "RT-20260724-001"
@@ -4545,18 +4626,18 @@ project_improvement_bridge:
   recursive_goal_recovery_required: false
   checkpoint_recovery_precedes_sidecar: false
   route: "continue-goal ordinary continuation via improve-project-system"
-  blocker_path: "research_control/tasks/RT-20260723-020/artifacts/validation_blocker_precheckpoint_frontier_sync_v1.yaml"
-  blocker_sha256: "ccdbf95c4b9912b288e3a1dbfd6702bbbfcb0e4a31d31ef96bf4d066dae45c4b"
+  blocker_path: ""
+  blocker_sha256: ""
   signal_ids: []
   sidecar_supersedes_research_handoff: false
   status: "resolved_checkpoint_pending"
-  resolution_job_id: "AJ-RT-20260724-001-001"
-  resolution_evidence_path: "research_control/tasks/RT-20260724-001/jobs/completions/AJC-AJ-RT-20260724-001-001.yaml"
+  resolution_job_id: "AJ-RT-20260724-002-001"
+  resolution_evidence_path: "research_control/tasks/RT-20260724-002/jobs/completions/AJC-AJ-RT-20260724-002-001.yaml"
 
 active_state_bifurcation:
-  latest_research_task_id: "RT-20260724-001"
-  latest_research_handoff_id: "handoff-0851"
-  latest_research_next_action: "Run the one authorized governed checkpoint for AJ-RT-20260724-001-001. After commit, route one fresh bounded P13-T05 improve-project-system frame for coverage, property-based, mutation, dependency, and security testing. Keep P13-T06 unexecuted until separately routed, P13-T02 blocked, and P13-T01 held."
+  latest_research_task_id: "RT-20260724-002"
+  latest_research_handoff_id: "handoff-0852"
+  latest_research_next_action: "Run the one authorized governed checkpoint for AJ-RT-20260724-002-001. After commit, route one fresh bounded P13-T06 improve-project-system frame to provide a reproducible container or equivalent development environment. Do not execute P13-T08 in this packet; keep P13-T02 blocked and P13-T01 held."
   latest_project_system_task_id: "none"
   latest_project_system_status: "none"
   latest_project_system_sidecar_task_id: "none"

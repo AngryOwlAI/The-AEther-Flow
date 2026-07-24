@@ -1,0 +1,85 @@
+validation_status: "PASS_CHECKPOINT_READY"
+task_id: "RT-20260724-002"
+task_type: "project_system_p13_t05_assurance"
+title: "Add bounded coverage, property, mutation, dependency, and security assurance"
+task_taxonomy:
+  schema_id: "v21_task_taxonomy_v1"
+  work_kind: "construction_or_implementation"
+  milestone: "source_equivalence_eqsrc"
+  candidate_family: "p13_t05_assurance"
+  result_kind: "implemented_and_validated_or_precisely_blocked"
+  authority: "project_control"
+  scope: "project_system"
+status: "completed"
+created_at: "2026-07-24T07:45:06Z"
+updated_at: "2026-07-24T08:09:35Z"
+closed_at: "2026-07-24T08:09:35Z"
+parent_task_id: "RT-20260724-001"
+parent_handoff_id: "handoff-0851"
+supersedes_active_routing_task_id: "RT-20260724-001"
+current_decision_id: "DDR-20260724-002"
+current_job_id: "AJ-RT-20260724-002-001"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260724-002"
+requires_human_gate: false
+human_authorization_note: "Generation 95 of the immutable user-requested relay routes exactly one improve-project-system frame to dependency-ready P13-T05 under handoff-0851."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P13"
+  plan_task_id: "P13-T05"
+  next_plan_task_id: "P13-T06"
+  recommendation_ids:
+    - "V21-R55"
+    - "V21-R59"
+objective: "Measure bounded critical-path coverage and add property-based, mutation, dependency-vulnerability, code-security, and adversarial scientific-fixture assurance without treating any tool score as proof."
+target_derivation_milestone: "source_equivalence_eqsrc"
+milestone_burden: "Test whether validators and state machinery fail for the right reasons."
+route_label: "route_p13_t05_after_p13_t04_recovery_checkpoint_v1"
+project_system_change_only: true
+dual_budget_category: "system_bearing"
+primary_budget: "project_system"
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+claim_boundary_id: "CB-V21-P13-T05-ASSURANCE-001"
+claim_boundary:
+  allowed_scope: "Add exact quality-tool pins, bounded assurance configuration, property tests, a targeted mutation campaign, dependency and code-security scans, task-local policies and receipts, focused validation, and one governed checkpoint."
+  source_handoff_id: "handoff-0851"
+  source_handoff_sha256: "dee9c14c8447f78aa52e362a59b73631d89f73e2cf97198447fbb9e665057491"
+  immutable_route_sha256: "e59e9cb23dd99bab2958ac9e9ccb37497b652a35f5900a21ac9ae8fd9f75e94d"
+  p13_t06_executed: false
+  p13_t02_executed: false
+  p13_t01_reopened: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+documentation_impact_id: "DI-RT-20260724-002-001"
+completion_id: "AJC-AJ-RT-20260724-002-001"
+output_artifacts:
+  - "pyproject.toml"
+  - "requirements-dev.txt"
+  - "Makefile"
+  - ".github/workflows/project-control-validation.yml"
+  - ".github/workflows/scheduled-full-validation.yml"
+  - "scripts/validation/assurance.py"
+  - "tests/test_validation_assurance.py"
+  - "tests/test_p13_t05_assurance_properties.py"
+  - "research_control/design/validation_assurance_policy_v1.md"
+  - "research_control/tasks/RT-20260724-002/artifacts/quality-assurance-requirements.lock"
+  - "research_control/tasks/RT-20260724-002/artifacts/coverage_baseline.json"
+  - "research_control/tasks/RT-20260724-002/artifacts/mutation_report.json"
+  - "research_control/tasks/RT-20260724-002/artifacts/security_scan_policy_v1.md"
+  - "research_control/tasks/RT-20260724-002/artifacts/security_dispositions.json"
+  - "research_control/tasks/RT-20260724-002/artifacts/p13_t05_assurance_receipt.json"
+  - "research_control/tasks/RT-20260724-002/jobs/completions/AJC-AJ-RT-20260724-002-001.yaml"
+  - "research_control/handoffs/handoff-0852.yaml"
+  - "research_control/handoffs/handoff-0852.md"
+closure_status: "p13_t05_assurance_pass_checkpoint_ready"
+summary: "P13-T05 completed a bounded assurance surface with 89.595 percent total branch-aware coverage against an 85 percent floor, 34 of 34 exact-target mutants killed, 50 dependencies audited with no known vulnerability, five low code-security findings dispositioned, and every focused non-regression gate passing."
+next_recommended_action: "Run one governed checkpoint for AJ-RT-20260724-002-001, then route one fresh bounded P13-T06 environment-reproduction frame without executing P13-T08."
+project_improvement_signals: []
+notes: "Coverage, property, mutation, dependency, and security results are operational project-system evidence only."

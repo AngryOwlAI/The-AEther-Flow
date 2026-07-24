@@ -2,12 +2,18 @@ PYTHON ?= .venv/bin/python
 MEMORY_SCRIPT_DIR := .codex/skills/project-memory-system/scripts
 MEMORY_TEST_MODULES := tests.test_memory_operations tests.test_memory_cli_modes tests.test_memory_system_unit tests.test_obsidian_wiki_unit tests.test_validation_orchestration tests.test_validation_doctor
 VALIDATION_PYTHON_SERIES := 3.12
-VALIDATION_REQUIREMENT_FILES := pyproject.toml research_control/tasks/RT-20260723-019/artifacts/requirements.lock research_control/tasks/RT-20260723-020/artifacts/quality-requirements.lock requirements.txt requirements-dev.txt
+VALIDATION_REQUIREMENT_FILES := pyproject.toml research_control/tasks/RT-20260723-019/artifacts/requirements.lock research_control/tasks/RT-20260724-002/artifacts/quality-assurance-requirements.lock requirements.txt requirements-dev.txt
 VALIDATION_REQUIRED_DISTRIBUTIONS := PyMuPDF==1.27.2.3 PyYAML==6.0.3
 QUALITY_REQUIRED_DISTRIBUTIONS := mypy==2.3.0 ruff==0.16.0
 QUALITY_PYTHON_PATHS := scripts/validation/api.py scripts/validation/portability.py scripts/validation/models.py
 QUALITY_TEST_PATHS := tests/test_validation_api.py tests/test_validation_portability.py
 QUALITY_PORTABILITY_PATHS := $(QUALITY_PYTHON_PATHS) $(QUALITY_TEST_PATHS)
+ASSURANCE_REQUIRED_DISTRIBUTIONS := bandit==1.9.4 coverage==7.15.2 hypothesis==6.161.2 mutmut==3.6.0 pip-audit==2.10.1
+ASSURANCE_PYTHON_PATHS := scripts/validation/assurance.py scripts/validation/portability.py
+ASSURANCE_TEST_PATHS := tests/test_validation_assurance.py tests/test_p13_t05_assurance_properties.py
+ASSURANCE_TEST_MODULES := tests.test_validation_assurance tests.test_p13_t05_assurance_properties tests.test_validation_portability
+ASSURANCE_BANDIT_PATHS := scripts/validation/assurance.py scripts/validation/portability.py scripts/research_control/checkpoint_research_transaction.py .codex/skills/continue-research-goal/scripts/goal_state.py
+ASSURANCE_COVERAGE_FLOOR := 85
 VALIDATION_PATHS ?=
 VALIDATION_DOCTOR_SCOPE ?= local_retrieval
 VALIDATION_DOCTOR_FLAGS ?=
@@ -138,8 +144,49 @@ print(
 endef
 export QUALITY_ENVIRONMENT_CHECK
 
-.PHONY: setup-dev validation-environment quality-environment quality-lint quality-type quality-portability quality-tests validate-quality memory-sync memory-validate-core memory-doctor test-memory validate-memory validate-memory-full validate-fast validate-affected validate-checkpoint-plan validate-full validate-doctor validate-project-control validate-project-control-legacy validate-html-explainers audit-documentation-surfaces
-.NOTPARALLEL: validate-project-control validate-quality
+define ASSURANCE_ENVIRONMENT_CHECK
+import importlib.metadata as metadata
+import json
+import os
+import sys
+
+installed = {}
+problems = []
+for requirement in os.environ["ASSURANCE_REQUIRED_DISTRIBUTIONS"].split():
+    distribution, _, expected_version = requirement.partition("==")
+    try:
+        actual_version = metadata.version(distribution)
+    except metadata.PackageNotFoundError:
+        problems.append(f"missing {requirement}")
+        continue
+    installed[distribution] = actual_version
+    if actual_version != expected_version:
+        problems.append(f"{distribution}=={actual_version} (expected {expected_version})")
+if problems:
+    print(
+        "Assurance dependency check failed: "
+        + ", ".join(problems)
+        + f". Run make setup-dev PYTHON={sys.executable}.",
+        file=sys.stderr,
+    )
+    raise SystemExit(2)
+print(
+    json.dumps(
+        {
+            "gate_id": "assurance_environment",
+            "installed_distributions": installed,
+            "provisioning": False,
+            "status": "PASS",
+        },
+        sort_keys=True,
+        separators=(",", ":"),
+    )
+)
+endef
+export ASSURANCE_ENVIRONMENT_CHECK
+
+.PHONY: setup-dev validation-environment quality-environment quality-lint quality-type quality-portability quality-tests validate-quality assurance-environment assurance-lint assurance-type assurance-coverage assurance-adversarial assurance-code-security validate-assurance audit-assurance-dependencies audit-assurance-mutations memory-sync memory-validate-core memory-doctor test-memory validate-memory validate-memory-full validate-fast validate-affected validate-checkpoint-plan validate-full validate-doctor validate-project-control validate-project-control-legacy validate-html-explainers audit-documentation-surfaces
+.NOTPARALLEL: validate-project-control validate-quality validate-assurance
 
 setup-dev:
 	@test -x "$(PYTHON)" || { printf '%s\n' "Missing $(PYTHON). Create the local environment with: python3 -m venv .venv"; exit 1; }
@@ -167,6 +214,44 @@ quality-tests: quality-environment
 
 validate-quality: quality-lint quality-type quality-portability quality-tests
 	@printf '%s\n' '{"target":"validate-quality","status":"PASS","python_series":"$(VALIDATION_PYTHON_SERIES)","scope":"incremental"}'
+
+assurance-environment: validation-environment
+	@ASSURANCE_REQUIRED_DISTRIBUTIONS="$(ASSURANCE_REQUIRED_DISTRIBUTIONS)" $(PYTHON) -c "$$ASSURANCE_ENVIRONMENT_CHECK"
+
+assurance-lint: assurance-environment
+	$(PYTHON) -m ruff check $(ASSURANCE_PYTHON_PATHS) $(ASSURANCE_TEST_PATHS)
+
+assurance-type: assurance-environment
+	$(PYTHON) -m mypy scripts/validation/assurance.py
+
+assurance-coverage: assurance-environment
+	@mkdir -p .local/assurance
+	$(PYTHON) -m coverage erase
+	$(PYTHON) -m coverage run -m unittest -v $(ASSURANCE_TEST_MODULES)
+	$(PYTHON) -m coverage json --fail-under=$(ASSURANCE_COVERAGE_FLOOR) -o .local/assurance/coverage.json
+	$(PYTHON) -m scripts.validation.assurance coverage --input .local/assurance/coverage.json --minimum-percent $(ASSURANCE_COVERAGE_FLOOR)
+
+assurance-adversarial: assurance-environment
+	$(PYTHON) -m unittest -v tests.test_semantic_smuggling_adversarial_suite
+
+assurance-code-security: assurance-environment
+	@mkdir -p .local/assurance
+	$(PYTHON) -m bandit -q -lll -f json -o .local/assurance/bandit-high.json $(ASSURANCE_BANDIT_PATHS)
+	$(PYTHON) -m scripts.validation.assurance bandit --input .local/assurance/bandit-high.json
+
+validate-assurance: assurance-lint assurance-type assurance-coverage assurance-adversarial assurance-code-security
+	@printf '%s\n' '{"target":"validate-assurance","status":"PASS","coverage_floor":$(ASSURANCE_COVERAGE_FLOOR),"scope":"bounded"}'
+
+audit-assurance-dependencies: assurance-environment
+	@mkdir -p .local/assurance
+	$(PYTHON) -m pip_audit --require-hashes -r requirements-dev.txt -f json -o .local/assurance/pip-audit.json
+	$(PYTHON) -m scripts.validation.assurance pip-audit --input .local/assurance/pip-audit.json
+
+audit-assurance-mutations: assurance-environment
+	@mkdir -p .local/assurance
+	$(PYTHON) -m mutmut run 'scripts.validation.assurance.x_evaluate_mutation*'
+	$(PYTHON) -m mutmut results --all true > .local/assurance/mutmut-results-all.txt
+	$(PYTHON) -m scripts.validation.assurance mutmut --input .local/assurance/mutmut-results-all.txt --target-prefix scripts.validation.assurance.x_evaluate_mutation__ --minimum-percent 100
 
 memory-sync: validation-environment
 	PYTHONPATH="$(MEMORY_SCRIPT_DIR)" $(PYTHON) -c 'import json; from bootstrap_memory_system import memory_sync; receipt = memory_sync().to_dict(); print(json.dumps({"gate_id": "memory_sync", "status": "PASS", "mutated": receipt["mutated"], "local_retrieval_enabled": receipt["local_retrieval_enabled"], "counts": receipt["counts"], "changed": receipt["changed"], "created": receipt["created"], "pruned": receipt["pruned"]}, sort_keys=True))'

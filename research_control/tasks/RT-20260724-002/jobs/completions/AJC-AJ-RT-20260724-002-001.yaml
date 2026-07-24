@@ -1,0 +1,466 @@
+validation_status: "PASS"
+job_id: "AJ-RT-20260724-002-001"
+completion_id: "AJC-AJ-RT-20260724-002-001"
+task_id: "RT-20260724-002"
+task_type: "project_system_p13_t05_assurance"
+decision_id: "DDR-20260724-002"
+role_id: "validator-engineer"
+source_role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260724-002"
+status: "completed"
+final_repository_validation_status: "PASS_CHECKPOINT_READY"
+created_at: "2026-07-24T07:45:06Z"
+started_at: "2026-07-24T07:45:06Z"
+completed_at: "2026-07-24T08:09:35Z"
+objective: "Implement and validate bounded coverage, property-based, mutation, dependency, code-security, and adversarial-fixture assurance for critical project-control paths."
+completion_summary: "P13-T05 adds exact hash-locked assurance dependencies, one deterministic assurance evaluator, property-based invariants, an 85 percent branch-aware coverage floor, an exact 34-mutant acceptance campaign, dependency-vulnerability and full selected-code security audits, registered policy sources, CI wiring, and compact receipts. The measured total coverage is 89.595 percent, all 34 exact-target mutants were killed, 50 distributions had no known vulnerability, five low Bandit findings were individually dispositioned, no medium or high finding remained, and all focused non-regression tests passed."
+objective_result: "p13_t05_assurance_pass_checkpoint_ready"
+
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P13"
+  plan_task_id: "P13-T05"
+  recommendation_ids:
+    - "V21-R55"
+    - "V21-R59"
+  implementation_status: "completed"
+  completed_v21_tasks_added:
+    - "P13-T05"
+  next_dependency_ready_work_item: "P13-T06"
+  next_work_item_executed: false
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 95
+  passes_consumed: 87
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:95"
+  handoff_token: "d3b0ae8ce4d95a77f8b48f9169deb22d566c02794ec40b94"
+  relay_claim_token: "e51c22da3510753adc832fec49ad3ead2750f5ee4761d03b"
+  immutable_route_hash: "e59e9cb23dd99bab2958ac9e9ccb37497b652a35f5900a21ac9ae8fd9f75e94d"
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+
+transaction_status: "completed_checkpoint_ready"
+result_disposition: "implemented"
+work_item_status: "completed"
+plan_task_id: "P13-T05"
+recommendation_ids:
+  - "V21-R55"
+  - "V21-R59"
+checkpoint_commit: "none_checkpoint_pending"
+checkpoint_invocation_count: 0
+checkpoint_staged: false
+legacy_validation_used: false
+project_system_change_only: true
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS_CHECKPOINT_READY"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  observed_durable_outputs:
+    physics: []
+    project_system:
+      - "quality assurance lock and configuration"
+      - "property-based test suite"
+      - "coverage baseline"
+      - "mutation report"
+      - "security scan policy and scan receipts"
+      - "compact P13-T05 receipt"
+  accepted_criteria:
+    physics: []
+    project_system:
+      - "critical property tests pass deterministically"
+      - "coverage meets the declared incremental floor"
+      - "targeted mutation survivors are zero or explicitly dispositioned"
+      - "dependency and code-security findings have explicit dispositions"
+      - "P11-T04 adversarial fixtures remain passing"
+      - "project-system research-control memory and Git gates pass"
+      - "one governed checkpoint commits"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+physics_payload_admission_result:
+  status: "admitted"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+
+ordinary_route_guard_admission_result:
+  status: "PASS"
+  source_handoff_id: "handoff-0851"
+  selected_plan_task_id: "P13-T05"
+  guard_outcome: "all_ready_science_blocked_exception"
+  ordinary_research_handoff_authoritative: true
+  system_success_counts_as_physics: false
+  system_success_counts_as_distance_to_gr: false
+
+assurance_results:
+  dependency_lock:
+    path: "research_control/tasks/RT-20260724-002/artifacts/quality-assurance-requirements.lock"
+    sha256: "44878248acae3a2a05fd88ec99e171047db038ccb0a95d924aa3219055cc5870"
+    resolved_distribution_count: 54
+    installation_status: "PASS_HASH_ENFORCED"
+  coverage:
+    baseline_path: "research_control/tasks/RT-20260724-002/artifacts/coverage_baseline.json"
+    baseline_sha256: "ba01c620f78d297975a47192340690b5c64a4951d015701beb4b4e2b4edff8b0"
+    branch_aware_floor_percent: 85.0
+    observed_total_percent: 89.59537572254335
+    covered_branches: 73
+    total_branches: 86
+    status: "PASS"
+  properties:
+    focused_tests_run: 24
+    skipped_generated_case_count: 1
+    status: "PASS"
+  mutation:
+    report_path: "research_control/tasks/RT-20260724-002/artifacts/mutation_report.json"
+    report_sha256: "51189302bf24390be33df3a43ca36c5a1bc4176fa046f4b468d90233714cf0b0"
+    exact_target: "scripts.validation.assurance.x_evaluate_mutation__*"
+    killed: 34
+    survived: 0
+    total: 34
+    observed_percent: 100.0
+    status: "PASS"
+  dependency_vulnerability_audit:
+    audited_distribution_count: 50
+    known_vulnerability_count: 0
+    raw_evidence_sha256: "a75f90066bf8a9c2b9524e27868bd491b0fef6a4c1488788dd34b37b0acba2d7"
+    status: "PASS"
+  code_security_scan:
+    scanned_lines_of_code: 5223
+    low_finding_count: 5
+    medium_finding_count: 0
+    high_finding_count: 0
+    dispositioned_finding_count: 5
+    raw_evidence_sha256: "c95feb24fe7b52043918ded623d0c86315755f7503bb229ff3a16e8dd0faa513"
+    status: "PASS"
+  p11_t04_adversarial_fixtures:
+    tests_run: 10
+    status: "PASS"
+  p13_t04_non_regression:
+    quality_tests_run: 13
+    portability_ci_checkpoint_tests_run: 36
+    status: "PASS"
+
+artifacts:
+  - "research_control/tasks/RT-20260724-002/artifacts/quality-assurance-requirements.lock"
+  - "research_control/tasks/RT-20260724-002/artifacts/coverage_baseline.json"
+  - "research_control/tasks/RT-20260724-002/artifacts/mutation_report.json"
+  - "research_control/tasks/RT-20260724-002/artifacts/security_scan_policy_v1.md"
+  - "research_control/tasks/RT-20260724-002/artifacts/security_dispositions.json"
+  - "research_control/tasks/RT-20260724-002/artifacts/p13_t05_assurance_receipt.json"
+  - "research_control/design/validation_assurance_policy_v1.md"
+  - "scripts/validation/assurance.py"
+  - "tests/test_validation_assurance.py"
+  - "tests/test_p13_t05_assurance_properties.py"
+output_paths:
+  - "pyproject.toml"
+  - "requirements-dev.txt"
+  - "Makefile"
+  - ".github/workflows/project-control-validation.yml"
+  - ".github/workflows/scheduled-full-validation.yml"
+  - "scripts/validation/assurance.py"
+  - "tests/test_validation_assurance.py"
+  - "tests/test_p13_t05_assurance_properties.py"
+  - "research_control/design/validation_assurance_policy_v1.md"
+  - "research_control/tasks/RT-20260724-002/**"
+  - "research_control/handoffs/handoff-0852.yaml"
+  - "research_control/handoffs/handoff-0852.md"
+  - "research_control/program_state.yaml"
+artifact_receipts:
+  - path: "pyproject.toml"
+    sha256: "c30be88711317ef594cdee96755d6a5df302bc8094e32c483cf24fa5d760a52e"
+  - path: "requirements-dev.txt"
+    sha256: "82a813d1634eac117b7783137e71d11bf3b587ba32bd77e2d3313d983315d05e"
+  - path: "Makefile"
+    sha256: "be5d0f8a743654c5fe3a713f2608dc93188610599b9e664da3bc0ec1896878be"
+  - path: ".github/workflows/project-control-validation.yml"
+    sha256: "73b670a6f09a23e7bbc8a7fe6d5eb0dce8b01f6f87dd58e7e0319c3ba0d69e0b"
+  - path: ".github/workflows/scheduled-full-validation.yml"
+    sha256: "a438f74cd41bb53a6efb11ff038795d3fcb29fc6b2a28a75e1f1a3fdb2841cf2"
+  - path: "scripts/validation/assurance.py"
+    sha256: "6a078eacc0f4beda16cc05f0579f744c7bf4e679dacb9fce77bb4aa4e5507088"
+  - path: "tests/test_validation_assurance.py"
+    sha256: "c65bd5e446aa212503205e7ac8e436a1c743cf36d4cd1ad3347afa3348a0c76f"
+  - path: "tests/test_p13_t05_assurance_properties.py"
+    sha256: "d1a0fc4d97f758874f8cc0fc78e0bfe8e9418d47aa9d296f365037457a3efd2d"
+  - path: "research_control/design/validation_assurance_policy_v1.md"
+    sha256: "191fe1a8fe186d8f5086720caa76c4bc61c2d677a44213f233412e3cfb9fd4b0"
+  - path: "research_control/tasks/RT-20260724-002/artifacts/quality-assurance-requirements.lock"
+    sha256: "44878248acae3a2a05fd88ec99e171047db038ccb0a95d924aa3219055cc5870"
+  - path: "research_control/tasks/RT-20260724-002/artifacts/coverage_baseline.json"
+    sha256: "ba01c620f78d297975a47192340690b5c64a4951d015701beb4b4e2b4edff8b0"
+  - path: "research_control/tasks/RT-20260724-002/artifacts/mutation_report.json"
+    sha256: "51189302bf24390be33df3a43ca36c5a1bc4176fa046f4b468d90233714cf0b0"
+  - path: "research_control/tasks/RT-20260724-002/artifacts/security_scan_policy_v1.md"
+    sha256: "2d0dd8a2acf3a09ea728f10e4dbdae06a9eb435271c7699c2243f3149bb5079e"
+  - path: "research_control/tasks/RT-20260724-002/artifacts/security_dispositions.json"
+    sha256: "d8b1dbad004fa62e6b86963f629e6d7fbc30da7937c5b39cc7ade9b4edc90584"
+  - path: "research_control/tasks/RT-20260724-002/artifacts/p13_t05_assurance_receipt.json"
+    sha256: "93c23396c9c862600fc7244378c4975529229f934272aa8e1906a327ed1ae05a"
+
+command_results:
+  - "make PYTHON=.venv/bin/python validate-assurance | exit_code=0 | 24 assurance and property tests PASS 1 generated case skipped 89.595 percent total coverage 10 adversarial fixtures PASS and selected high-severity Bandit scan PASS"
+  - "make PYTHON=.venv/bin/python audit-assurance-dependencies | exit_code=0 | 50 distributions audited and zero known vulnerabilities"
+  - "make PYTHON=.venv/bin/python audit-assurance-mutations | exit_code=0 | 34 of 34 exact-target mutants killed and evaluator PASS at 100 percent"
+  - ".venv/bin/python -m scripts.validation.assurance bandit --report .local/assurance/bandit-full.json --dispositions research_control/tasks/RT-20260724-002/artifacts/security_dispositions.json --minimum-severity low | exit_code=0 | five low findings dispositioned zero medium zero high"
+  - "make PYTHON=.venv/bin/python validate-quality | exit_code=0 | Ruff mypy and 13 focused quality tests PASS"
+  - ".venv/bin/python -m unittest -v tests.test_validation_assurance tests.test_p13_t05_assurance_properties tests.test_semantic_smuggling_adversarial_suite | exit_code=0 | 27 tests PASS 1 generated case skipped"
+  - ".venv/bin/python -m unittest -v tests.test_validation_portability tests.test_ci_validation_plan tests.test_checkpoint_research_transaction | exit_code=0 | 36 tests PASS"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json | exit_code=0 | project-system and documentation impact required with no blocked path"
+  - ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json | exit_code=0 | advisory resolver ready for current bounded project-system transaction"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted | exit_code=0 | no open emitted signal"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py | exit_code=0 | zero findings"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json | exit_code=0 | zero hard failures with historical warnings only"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --check | exit_code=0 | task index and Markdown mirror fresh"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --check | exit_code=0 | current frontier fresh at RT-20260724-002 handoff-0852"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --check | exit_code=0 | compact YAML JSON and Markdown mirror fresh"
+  - ".venv/bin/python scripts/research_control/validate_compact_current_frontier_v16.py --json | exit_code=0 | no errors or warnings"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --json-summary | exit_code=0 | zero errors and 1727 historical or extension warnings"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py | exit_code=0 | core PASS with 18 local-cache-only findings"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only | exit_code=0 | core PASS with 18 local-cache-only findings"
+  - ".venv/bin/python -m scripts.validation.cli plan --profile affected | exit_code=0 | READY with 15 selected gates and no blocked or unknown path"
+  - "git diff --check | exit_code=0 | no whitespace error"
+
+validation_summary:
+  status: "PASS_CHECKPOINT_READY"
+  passing_gates:
+    - "exact hash-locked assurance environment"
+    - "89.595 percent branch-aware coverage against an 85 percent floor"
+    - "24 focused assurance and property tests with one generated case skipped"
+    - "34 of 34 exact-target mutants killed"
+    - "50 dependencies with zero known vulnerabilities"
+    - "five low code-security findings dispositioned with zero medium or high findings"
+    - "10 P11-T04 adversarial fixtures"
+    - "13 P13-T04 quality tests"
+    - "36 portability CI and checkpoint non-regression tests"
+    - "registered assurance and security policy sources"
+    - "documentation impact and project-improvement signal parity"
+    - "task index current frontier and compact frontier freshness"
+    - "research-control diff with zero errors"
+    - "memory bootstrap and validate-only"
+    - "Git diff check"
+  pending_gates:
+    - "one governed checkpoint"
+  checkpoint:
+    invoked: false
+    invocation_count: 0
+    reason: "One governed checkpoint remains authorized after all precheckpoint gates pass."
+  staging:
+    attempted: false
+    index_changed: false
+  commit:
+    created: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 95 repository lease branch clean routed manifest reasoning and P13-T05 dependency parity passed before one atomic claim and consume."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Tracked receipts bind exact source hashes, coverage, mutation, dependency, code-security, property, and non-regression results."
+      - "The initially broad mutation diagnostic was retained only as calibration; the declared exact evaluator target killed all 34 measured mutants."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Focused assurance, dependency, mutation, code-security, adversarial, quality, portability, CI, and checkpoint regression gates pass."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "One governed checkpoint is authorized and has not yet been invoked."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Task index current frontier compact YAML compact JSON and compact Markdown mirror are synchronized from tracked state."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory synchronization and validate-only pass with local-cache-only warnings."
+  claim_language_linter:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "Changed-source claim-language validation has no hard failure and all assurance claims remain operational rather than scientific."
+
+assumption_delta:
+  changed: false
+  assumptions_added: []
+  assumptions_removed: []
+  assumptions_adopted: 0
+  exact_reason: "P13-T05 changes only project-system assurance and adds no scientific assumption."
+
+candidate_or_theorem_identities:
+  candidate_ids_created: []
+  candidate_ids_linked: []
+  theorem_ids_created: []
+  identity_note: "No scientific candidate or theorem identity is created or changed."
+
+mathematical_payload_manifest: []
+new_mathematical_payload: []
+
+physics_progress_status:
+  status: "documentation_or_control_only_no_physics_delta"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Test whether validators and state machinery fail for the right reasons."
+  explanation: "P13-T05 supplies bounded project-system assurance only and adds no mathematical or physics payload."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  publication_authorized: false
+  proof_authority: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  canonical_ontology_edit_authorized: false
+  ontology_selection_authorized: false
+  physical_interpretation_establishment_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+three_tier_claim_summary:
+  adopted_objects: []
+  accepted_evidence_preconditions:
+    - "The declared bounded assurance commands and their exact receipts pass."
+    - "Every measured mutation survivor and security finding is absent or individually dispositioned."
+  open_or_blocked_physical_targets:
+    - "source_ontology_derivation"
+    - "general_eqsrc"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+  forbidden_overread:
+    - "coverage or mutation score as proof correctness or semantic completeness"
+    - "security-tool PASS as scientific evidence or theorem truth"
+    - "validator or checkpoint PASS as Distance-to-GR movement publication or proof authority"
+
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "none"
+  milestone: "source_equivalence_eqsrc"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "P13-T05 changes project-system assurance only."
+  downstream_unlocked:
+    - "P13-T06_after_governed_checkpoint_and_separate_route"
+  downstream_still_blocked:
+    - "P13-T08_until_dependencies_and_separate_route"
+    - "P13-T02_until_p13_t01_cutover_evidence_complete"
+    - "source_ontology_derivation"
+    - "general_eqsrc"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+    - "benchmark_promotion"
+    - "external_publication"
+
+resolved_project_improvement_signals: []
+project_improvement_signals: []
+project_improvement_sidecar_created: false
+project_improvement_bridge:
+  required: false
+  sidecar_path: ""
+  recursive_goal_recovery_required: false
+  reason: "P13-T05 completed its bounded project-system objective without discovering a separate repair signal."
+
+selected_next_route:
+  route_id: "route_p13_t06_after_p13_t05_checkpoint_v1"
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  phase_id: "P13"
+  plan_task_id: "P13-T06"
+  task_name: "Provide a reproducible container or equivalent development environment"
+  role_family: "validator-engineer@0.2.0"
+  worker_skill: "improve-project-system"
+  task_type: "reproducible_local_development_environment"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Make local and external reproduction practical."
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  dependencies:
+    - plan_task_id: "P13-T03"
+      completion_path: "research_control/tasks/RT-20260723-019/jobs/completions/AJC-AJ-RT-20260723-019-001.yaml"
+      status: "completed"
+    - plan_task_id: "P13-T04"
+      completion_path: "research_control/tasks/RT-20260724-001/jobs/completions/AJC-AJ-RT-20260724-001-001.yaml"
+      completion_sha256: "113c9b769c000fa594a8060c6aac5712e8c786f58367de529178e397101d014a"
+      status: "completed"
+  p13_t08_executed: false
+  p13_t02_remains_blocked: true
+  p13_t01_reopening_criteria: "Explicit user authority to publish the exact P13-T01 checkpoint followed by matched current-head hosted CI and scheduled-full evidence."
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1006
+    relationship_row_count: 4977
+    semantic_row_count: 1006
+    vault_row_count: 1006
+    local_cache_only_warning_count: 14
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  authority_note: "Generated wiki, Obsidian, SQLite, semantic, relationship, and .local retrieval outputs were navigation layers only and are not authority; the registered v21 plan, tracked handoff-0851, and immutable generation-95 route control this packet."
+
+forbidden_conclusion_summary: "This packet does not prove correctness or semantic completeness, promote any physics claim, evaluate theorem truth, change ontology or a source law, move Distance-to-GR, authorize proof or benchmark status, issue a Gate Chair verdict, publish or push, execute P13-T06, or complete the derivation."
+verdict: "p13_t05_assurance_pass_checkpoint_ready"
+coherent_resolution_summary: "The bounded project-system assurance surface is exact, hash-locked, measured, dispositioned, documented, and passing before one governed checkpoint; P13-T06 remains a separately routed next packet."

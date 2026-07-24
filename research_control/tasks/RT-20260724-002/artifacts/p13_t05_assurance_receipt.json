@@ -1,0 +1,107 @@
+{
+  "authority": {
+    "benchmark_promotion_authorized": false,
+    "distance_to_gr_changed": false,
+    "operational_evidence_only": true,
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "publication_authorized": false,
+    "scientific_claims_changed": false
+  },
+  "created_at": "2026-07-24T08:09:35Z",
+  "dependency_audit": {
+    "audited_distribution_count": 50,
+    "known_vulnerability_count": 0,
+    "raw_evidence_path": ".local/assurance/pip-audit.json",
+    "raw_evidence_sha256": "a75f90066bf8a9c2b9524e27868bd491b0fef6a4c1488788dd34b37b0acba2d7",
+    "status": "PASS"
+  },
+  "evidence_artifacts": {
+    "coverage_baseline": {
+      "path": "research_control/tasks/RT-20260724-002/artifacts/coverage_baseline.json",
+      "sha256": "ba01c620f78d297975a47192340690b5c64a4951d015701beb4b4e2b4edff8b0"
+    },
+    "dependency_lock": {
+      "path": "research_control/tasks/RT-20260724-002/artifacts/quality-assurance-requirements.lock",
+      "sha256": "44878248acae3a2a05fd88ec99e171047db038ccb0a95d924aa3219055cc5870"
+    },
+    "mutation_report": {
+      "path": "research_control/tasks/RT-20260724-002/artifacts/mutation_report.json",
+      "sha256": "51189302bf24390be33df3a43ca36c5a1bc4176fa046f4b468d90233714cf0b0"
+    },
+    "security_dispositions": {
+      "path": "research_control/tasks/RT-20260724-002/artifacts/security_dispositions.json",
+      "sha256": "d8b1dbad004fa62e6b86963f629e6d7fbc30da7937c5b39cc7ade9b4edc90584"
+    },
+    "security_policy": {
+      "path": "research_control/tasks/RT-20260724-002/artifacts/security_scan_policy_v1.md",
+      "sha256": "2d0dd8a2acf3a09ea728f10e4dbdae06a9eb435271c7699c2243f3149bb5079e"
+    }
+  },
+  "full_code_security_scan": {
+    "finding_count": 5,
+    "high_severity_count": 0,
+    "lines_of_code_scanned": 5223,
+    "low_severity_count": 5,
+    "medium_severity_count": 0,
+    "raw_evidence_path": ".local/assurance/bandit-full.json",
+    "raw_evidence_sha256": "c95feb24fe7b52043918ded623d0c86315755f7503bb229ff3a16e8dd0faa513",
+    "resolved_or_dispositioned_count": 5,
+    "status": "PASS"
+  },
+  "goal_receipt": {
+    "generation": 95,
+    "goal_id": "crg-20260720T161354Z-96bc2664ce31bfe0",
+    "idempotency_key": "crg-20260720T161354Z-96bc2664ce31bfe0:95",
+    "passes_consumed": 87,
+    "worker_invocation_count": 1,
+    "worker_skill": "improve-project-system"
+  },
+  "plan_task_id": "P13-T05",
+  "quality_results": {
+    "branch_coverage": {
+      "covered_branches": 73,
+      "floor_percent": 85.0,
+      "num_branches": 86,
+      "observed_total_percent": 89.59537572254335,
+      "status": "PASS"
+    },
+    "focused_assurance_tests": {
+      "run": 24,
+      "skipped": 1,
+      "status": "PASS"
+    },
+    "mutation_campaign": {
+      "killed": 34,
+      "minimum_percent": 100.0,
+      "observed_percent": 100.0,
+      "status": "PASS",
+      "survived": 0,
+      "target": "scripts.validation.assurance.x_evaluate_mutation__*",
+      "total": 34
+    },
+    "p11_t04_adversarial_fixtures": {
+      "run": 10,
+      "status": "PASS"
+    },
+    "p13_t04_non_regression": {
+      "portability_ci_checkpoint_tests_run": 36,
+      "quality_tests_run": 13,
+      "status": "PASS"
+    }
+  },
+  "schema_id": "p13_t05_assurance_receipt_v1",
+  "source_sha256": {
+    ".github/workflows/project-control-validation.yml": "73b670a6f09a23e7bbc8a7fe6d5eb0dce8b01f6f87dd58e7e0319c3ba0d69e0b",
+    ".github/workflows/scheduled-full-validation.yml": "a438f74cd41bb53a6efb11ff038795d3fcb29fc6b2a28a75e1f1a3fdb2841cf2",
+    "Makefile": "be5d0f8a743654c5fe3a713f2608dc93188610599b9e664da3bc0ec1896878be",
+    "pyproject.toml": "c30be88711317ef594cdee96755d6a5df302bc8094e32c483cf24fa5d760a52e",
+    "requirements-dev.txt": "82a813d1634eac117b7783137e71d11bf3b587ba32bd77e2d3313d983315d05e",
+    "research_control/design/validation_assurance_policy_v1.md": "191fe1a8fe186d8f5086720caa76c4bc61c2d677a44213f233412e3cfb9fd4b0",
+    "scripts/validation/assurance.py": "6a078eacc0f4beda16cc05f0579f744c7bf4e679dacb9fce77bb4aa4e5507088",
+    "tests/test_p13_t05_assurance_properties.py": "d1a0fc4d97f758874f8cc0fc78e0bfe8e9418d47aa9d296f365037457a3efd2d",
+    "tests/test_semantic_smuggling_adversarial_suite.py": "2e0df150c9046eebcc9fdd831e93cf9a736c2e2fbb730499133bb9c8761bfcfc",
+    "tests/test_validation_assurance.py": "c65bd5e446aa212503205e7ac8e436a1c743cf36d4cd1ad3347afa3348a0c76f"
+  },
+  "status": "PASS"
+}

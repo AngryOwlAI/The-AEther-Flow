@@ -18,7 +18,12 @@ documentation = []
 
 [dependency-groups]
 dev = [
+  "bandit==1.9.4",
+  "coverage==7.15.2",
+  "hypothesis==6.161.2",
   "mypy==2.3.0",
+  "mutmut==3.6.0",
+  "pip-audit==2.10.1",
   "ruff==0.16.0",
 ]
 
@@ -31,14 +36,14 @@ required-version = ">=0.10,<0.11"
 schema-id = "aether_flow_environment_v1"
 python-series = "3.12"
 lock-file = "research_control/tasks/RT-20260723-019/artifacts/requirements.lock"
-quality-lock-file = "research_control/tasks/RT-20260723-020/artifacts/quality-requirements.lock"
+quality-lock-file = "research_control/tasks/RT-20260724-002/artifacts/quality-assurance-requirements.lock"
 compatibility-requirements = [
   "requirements.txt",
   "requirements-dev.txt",
 ]
 ordinary-install-command = "python -m pip install --require-hashes -r requirements-dev.txt"
 lock-maintenance-command = "uv pip compile pyproject.toml --all-extras --universal --generate-hashes --output-file research_control/tasks/RT-20260723-019/artifacts/requirements.lock"
-quality-lock-maintenance-command = "uv pip compile pyproject.toml --group dev --all-extras --universal --generate-hashes --output-file research_control/tasks/RT-20260723-020/artifacts/quality-requirements.lock"
+quality-lock-maintenance-command = "uv pip compile pyproject.toml --group dev --all-extras --universal --generate-hashes --output-file research_control/tasks/RT-20260724-002/artifacts/quality-assurance-requirements.lock"
 
 [tool.ruff]
 target-version = "py312"
@@ -57,6 +62,33 @@ follow_imports = "skip"
 warn_unused_configs = true
 show_error_codes = true
 pretty = true
+
+[tool.coverage.run]
+branch = true
+data_file = ".local/assurance/.coverage"
+source = [
+  "scripts.validation.assurance",
+  "scripts.validation.portability",
+]
+
+[tool.coverage.report]
+fail_under = 85
+precision = 2
+show_missing = true
+skip_covered = false
+
+[tool.coverage.json]
+output = ".local/assurance/coverage.json"
+pretty_print = true
+
+[tool.mutmut]
+source_paths = [
+  "scripts/validation/assurance.py",
+]
+pytest_add_cli_args_test_selection = [
+  "tests/test_validation_assurance.py",
+]
+mutate_only_covered_lines = true
 
 [[tool.aether-flow.external-tools]]
 name = "git"

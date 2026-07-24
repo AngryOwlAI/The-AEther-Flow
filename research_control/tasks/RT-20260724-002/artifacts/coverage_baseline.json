@@ -1,0 +1,61 @@
+{
+  "authority": {
+    "operational_evidence_only": true,
+    "proof_authority": false,
+    "scientific_claim_authority": false
+  },
+  "branch_coverage": true,
+  "command": "make PYTHON=.venv/bin/python validate-assurance",
+  "coverage_version": "7.15.2",
+  "created_at": "2026-07-24T08:02:41Z",
+  "files": {
+    "scripts/validation/assurance.py": {
+      "covered_branches": 42,
+      "covered_lines": 155,
+      "missing_branches": 6,
+      "missing_lines": 8,
+      "num_branches": 48,
+      "num_statements": 163,
+      "percent_covered": 93.36492890995261
+    },
+    "scripts/validation/portability.py": {
+      "covered_branches": 31,
+      "covered_lines": 82,
+      "missing_branches": 7,
+      "missing_lines": 15,
+      "num_branches": 38,
+      "num_statements": 97,
+      "percent_covered": 83.70370370370371
+    }
+  },
+  "floor_percent": 85.0,
+  "raw_evidence": {
+    "path": ".local/assurance/coverage.json",
+    "sha256": "5826cb8529d4edc21f2db9c3b4f3b7c5d3681f57d502f009d4ad6cd0b55ef2a6",
+    "tracked": false
+  },
+  "schema_id": "p13_t05_coverage_baseline_v1",
+  "source_sha256": {
+    "scripts/validation/assurance.py": "6a078eacc0f4beda16cc05f0579f744c7bf4e679dacb9fce77bb4aa4e5507088",
+    "scripts/validation/portability.py": "60bb14d60c31704e0a2d155dd8b5a33019559e613e1246f155cd8473ff9e7c5e",
+    "tests/test_p13_t05_assurance_properties.py": "d1a0fc4d97f758874f8cc0fc78e0bfe8e9418d47aa9d296f365037457a3efd2d",
+    "tests/test_validation_assurance.py": "c65bd5e446aa212503205e7ac8e436a1c743cf36d4cd1ad3347afa3348a0c76f"
+  },
+  "status": "PASS",
+  "test_observation": {
+    "property_and_unit_tests_run": 24,
+    "property_and_unit_tests_skipped": 1,
+    "semantic_smuggling_tests_run_separately": 10
+  },
+  "totals": {
+    "covered_branches": 73,
+    "covered_lines": 237,
+    "missing_branches": 13,
+    "missing_lines": 23,
+    "num_branches": 86,
+    "num_statements": 260,
+    "percent_branches_covered": 84.88372093023256,
+    "percent_covered": 89.59537572254335,
+    "percent_statements_covered": 91.15384615384616
+  }
+}

@@ -1,7 +1,7 @@
 schema_id: "compact_current_frontier_v16"
 generated_from:
   - "research_control/program_state.yaml"
-  - "research_control/handoffs/handoff-0851.yaml"
+  - "research_control/handoffs/handoff-0852.yaml"
   - "registries/DISTANCE_TO_GR_LEDGER.csv"
   - "registries/METRIC_USE_LEDGER.csv"
   - "research_control/current_frontier.md"
@@ -9,16 +9,16 @@ generated_from:
   - "research_control/design/accepted_status_calibration_v2.yaml"
   - "research_control/design/active_state_bifurcation_policy_v1.md"
 active_state:
-  active_task_id: "RT-20260724-001"
-  latest_handoff_id: "handoff-0851"
-  current_status: "p13_t04_frontier_sync_pass_checkpoint_ready"
+  active_task_id: "RT-20260724-002"
+  latest_handoff_id: "handoff-0852"
+  current_status: "p13_t05_assurance_pass_checkpoint_ready"
   v15_completed: false
   v16_completed: false
   v16_plan_registered: true
 active_state_bifurcation:
-  latest_research_task_id: "RT-20260724-001"
-  latest_research_handoff_id: "handoff-0851"
-  latest_research_next_action: "Run the one authorized governed checkpoint for AJ-RT-20260724-001-001. After commit, route one fresh bounded P13-T05 improve-project-system frame for coverage, property-based, mutation, dependency, and security testing. Keep P13-T06 unexecuted until separately routed, P13-T02 blocked, and P13-T01 held."
+  latest_research_task_id: "RT-20260724-002"
+  latest_research_handoff_id: "handoff-0852"
+  latest_research_next_action: "Run the one authorized governed checkpoint for AJ-RT-20260724-002-001. After commit, route one fresh bounded P13-T06 improve-project-system frame to provide a reproducible container or equivalent development environment. Do not execute P13-T08 in this packet; keep P13-T02 blocked and P13-T01 held."
   latest_project_system_task_id: "none"
   latest_project_system_status: "none"
   latest_project_system_sidecar_task_id: "none"
@@ -26,10 +26,10 @@ active_state_bifurcation:
   sidecar_supersedes_research_handoff: false
   next_research_route_source: "latest_research_handoff"
 next_route:
-  route_id: "route_p13_t05_after_p13_t04_recovery_checkpoint_v1"
+  route_id: "route_p13_t06_after_p13_t05_checkpoint_v1"
   role_family: "validator-engineer@0.2.0"
   target_derivation_milestone: "source_equivalence_eqsrc"
-  milestone_burden: "Test whether validators and state machinery fail for the right reasons."
+  milestone_burden: "Make local and external reproduction practical."
   requires_human_gate: false
 claim_boundary:
   physics_claim_authority: false
@@ -525,6 +525,6 @@ validation:
     - layer: "post_checkpoint"
       status: "PENDING"
       evidence:
-        - "One normal governed checkpoint remains required before P13-T05."
+        - "One governed checkpoint remains required before P13-T06."
 authority_warning:
   snapshot_only_not_authority: true

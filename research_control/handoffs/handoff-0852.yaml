@@ -1,0 +1,283 @@
+validation_status: "PASS"
+handoff_id: "handoff-0852"
+task_id: "RT-20260724-002"
+job_id: "AJ-RT-20260724-002-001"
+completion_id: "AJC-AJ-RT-20260724-002-001"
+completion_path: "research_control/tasks/RT-20260724-002/jobs/completions/AJC-AJ-RT-20260724-002-001.yaml"
+completion_sha256: "77e41842b1530fea579955d57f3fefe99b9800bac2aa9147cb8ca9b5443bd8ea"
+status: "ready_for_director"
+created_at: "2026-07-24T08:09:35Z"
+parent_handoff_id: "handoff-0851"
+plan_task_id: "P13-T05"
+source_role_id: "validator-engineer"
+source_role_version: "0.2.0"
+source_execution_role_ref: "validator-engineer@0.2.0--RT-20260724-002"
+summary: "Generation 95 completed the bounded P13-T05 assurance packet. Exact hash-locked quality dependencies, deterministic evaluators, property tests, registered policy sources, CI wiring, and compact receipts now enforce an 85 percent branch-aware coverage floor, a 34-mutant exact acceptance campaign, dependency-vulnerability and code-security audits, and P11-T04 adversarial-fixture non-regression. Measured coverage is 89.595 percent, all 34 target mutants were killed, 50 distributions had no known vulnerability, five low security findings were dispositioned, no medium or high finding remained, and all focused regression gates pass before one governed checkpoint."
+next_action: "Run the one authorized governed checkpoint for AJ-RT-20260724-002-001. After commit, route one fresh bounded P13-T06 improve-project-system frame to provide a reproducible container or equivalent development environment. Do not execute P13-T08 in this packet; keep P13-T02 blocked and P13-T01 held."
+current_claim_boundary: "CB-V21-P13-T05-ASSURANCE-001"
+loop_risk_route: "route_p13_t06_after_p13_t05_checkpoint_v1"
+
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260724-002"
+  latest_research_handoff_id: "handoff-0852"
+  latest_research_next_action: "Run the one authorized governed checkpoint for AJ-RT-20260724-002-001. After commit, route one fresh bounded P13-T06 improve-project-system frame to provide a reproducible container or equivalent development environment. Do not execute P13-T08 in this packet; keep P13-T02 blocked and P13-T01 held."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+
+claim_boundary:
+  allowed_next_scope: "One governed checkpoint may commit the completed P13-T05 transaction. After commit, one fresh bounded P13-T06 improve-project-system frame may implement a reproducible container or equivalent development environment. P13-T08 requires later dependency completion and a separate route, P13-T02 remains blocked, and P13-T01 remains held."
+  completed_task: "RT-20260724-002"
+  completed_completion_path: "research_control/tasks/RT-20260724-002/jobs/completions/AJC-AJ-RT-20260724-002-001.yaml"
+  completed_completion_sha256: "77e41842b1530fea579955d57f3fefe99b9800bac2aa9147cb8ca9b5443bd8ea"
+  source_handoff_id: "handoff-0851"
+  source_handoff_path: "research_control/handoffs/handoff-0851.yaml"
+  source_handoff_sha256: "dee9c14c8447f78aa52e362a59b73631d89f73e2cf97198447fbb9e665057491"
+  immutable_route_sha256: "e59e9cb23dd99bab2958ac9e9ccb37497b652a35f5900a21ac9ae8fd9f75e94d"
+  result_status: "PASS_CHECKPOINT_READY"
+  coverage_floor_percent: 85.0
+  observed_total_coverage_percent: 89.59537572254335
+  mutation_killed_count: 34
+  mutation_survivor_count: 0
+  dependency_audited_distribution_count: 50
+  dependency_known_vulnerability_count: 0
+  security_low_finding_count: 5
+  security_medium_finding_count: 0
+  security_high_finding_count: 0
+  security_dispositioned_finding_count: 5
+  p11_t04_adversarial_test_count: 10
+  p13_t05_executed: true
+  p13_t06_dependency_ready_after_checkpoint: true
+  p13_t06_executed: false
+  p13_t08_executed: false
+  p13_t02_executed: false
+  p13_t01_reopened: false
+  checkpoint_invocation_count: 0
+  checkpoint_committed: false
+  checkpoint_staged: false
+  legacy_validation_used: false
+  push_performed: false
+  workflow_dispatch_performed: false
+  scientific_status_changed: false
+  distance_to_gr_delta_changed: false
+  ontology_adoption_authorized: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  blocked_claims:
+    - "coverage mutation dependency or security score presented as proof correctness semantic completeness scientific evidence theorem truth or Distance-to-GR progress"
+    - "P13-T06 executed before the P13-T05 checkpoint or without a fresh routed frame"
+    - "P13-T08 executed without qualifying dependencies and a separate route"
+    - "P13-T02 executed while P13-T01 cutover evidence remains incomplete"
+    - "push publication hosted-workflow dispatch or external authority inferred from this relay"
+    - "canonical ontology source-law scientific-ledger or Distance-to-GR edit"
+    - "benchmark promotion proof authority Gate Chair verdict completed derivation or global no-go"
+
+plan_result:
+  plan_task_id: "P13-T05"
+  title: "Add coverage, property-based, mutation, and security testing"
+  recommendation_ids:
+    - "V21-R55"
+    - "V21-R59"
+  result_status: "PASS_CHECKPOINT_READY"
+  work_item_status: "completed"
+  payload_complete: true
+  coverage_status: "PASS"
+  mutation_status: "PASS"
+  dependency_audit_status: "PASS"
+  code_security_status: "PASS"
+  adversarial_fixture_status: "PASS"
+  checkpoint_invocation_count: 0
+  checkpoint_committed: false
+  legacy_validation_used: false
+  p13_t06_dependency_ready_after_checkpoint: true
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+distance_to_gr:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "none"
+  milestone: "source_equivalence_eqsrc"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "P13-T05 concerns project-system test and security assurance only."
+  downstream_unlocked:
+    - "P13-T06_after_governed_checkpoint_and_separate_route"
+  downstream_still_blocked:
+    - "P13-T08_until_dependencies_and_separate_route"
+    - "P13-T02_until_p13_t01_cutover_evidence_complete"
+    - "source_ontology_derivation"
+    - "general_eqsrc"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+    - "benchmark_promotion"
+    - "external_publication"
+
+required_next_packet:
+  task_type: "reproducible_container_or_equivalent_development_environment"
+  plan_task_id: "P13-T06"
+  objective: "Create a devcontainer, container, Nix flake, or equivalent fresh-machine environment for research-control, proof, and benchmark workflows."
+  dependency_ready_after_checkpoint: true
+  executed: false
+
+selected_next_route:
+  route_id: "route_p13_t06_after_p13_t05_checkpoint_v1"
+  route_label: "ordinary-research-packet"
+  role_family: "validator-engineer@0.2.0"
+  worker_skill: "improve-project-system"
+  plan_task_id: "P13-T06"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Make local and external reproduction practical."
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  physics_promotion_authorized: false
+  executed: false
+  next_action: "After checkpoint commit, route one bounded P13-T06 improve-project-system frame under the existing v21 scope and claim boundaries."
+  source_handoff: "research_control/handoffs/handoff-0852.yaml"
+
+ordinary_route_guard:
+  schema_id: "ordinary_route_guard_evaluation_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  evaluation_id: "ORE-HANDOFF-0852"
+  ordinary_handoff_id: "handoff-0852"
+  threshold: 3
+  consecutive_project_system_tasks_before_selection: 9
+  ready_science_plan_task_ids:
+    - "P4-T05"
+  selected_plan_task_id: "P13-T06"
+  selected_route_class: "project_system"
+  selected_worker_skill: "improve-project-system"
+  outcome: "all_ready_science_blocked_exception"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  exception_receipt:
+    active: true
+    schema_id: "ordinary_route_exception_receipt_v1"
+    exception_id: "ORE-HANDOFF-0852-EXCEPTION-001"
+    exception_class: "all_ready_science_blocked"
+    ordinary_handoff_id: "handoff-0852"
+    ready_science_plan_task_ids:
+      - "P4-T05"
+    blocked_routes:
+      - plan_task_id: "P4-T05"
+        failure_class: "human_gate_required"
+        evidence_path: "research_control/design/v21_recommendation_backlog.yaml"
+        evidence_sha256: "849a4e8dfe848e80bc0c8236252b924e636e5c95ac1a090478a69f7f5377559f"
+        reason: "P4-T05 remains dependency-ready but requires explicit human Gate Chair authority that this relay does not possess."
+    authority_limits:
+      ordinary_research_handoff_authoritative: true
+      project_system_sidecar_supersedes: false
+      system_success_counts_as_physics: false
+      system_success_counts_as_distance_to_gr: false
+      scientific_status_changed: false
+      physics_promotion_authorized: false
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 95 was validated, claimed, and consumed exactly once before its one routed improve-project-system invocation."
+      - "The routed clean manifest immutable strategy blocker and lease identities matched before writes."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Tracked receipts bind exact source hashes and measured coverage mutation dependency security property and non-regression results."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Assurance dependency mutation security adversarial quality portability CI checkpoint project-system research-control memory and Git gates pass."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "One governed checkpoint remains required before P13-T06."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Task index current frontier compact YAML compact JSON and compact Markdown mirror are current."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory synchronization and validate-only pass with local-cache-only warnings."
+  claim_language_linter:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "Changed-source validation has no hard claim-language failure."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  publication_authorized: false
+  proof_authority: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  canonical_ontology_edit_authorized: false
+  ontology_selection_authorized: false
+  physical_interpretation_establishment_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+three_tier_claim_summary:
+  adopted_objects: []
+  accepted_evidence_preconditions:
+    - "The bounded P13-T05 assurance configuration tests and tracked receipts pass."
+    - "Every measured mutation survivor and security finding is absent or individually dispositioned."
+  open_or_blocked_physical_targets:
+    - "source_ontology_derivation"
+    - "general_eqsrc"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+  forbidden_overread:
+    - "quality-tool score as proof correctness or semantic completeness"
+    - "security-tool PASS as scientific evidence or theorem truth"
+    - "validator PASS as Distance-to-GR movement"
+    - "checkpoint PASS as publication proof or hosted-CI evidence"
+
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  sidecar_path: ""
+  recursive_goal_recovery_required: false
+  reason: "The bounded P13-T05 objective is resolved and dependency-ready P13-T06 remains available after checkpoint."
+
+handoff_authority_boundary:
+  this_handoff_authorizes: "One governed checkpoint for AJ-RT-20260724-002-001 and after commit Director consideration of one fresh bounded P13-T06 improve-project-system frame."
+  this_handoff_does_not_authorize:
+    - "P13-T06 before the P13-T05 checkpoint commits"
+    - "P13-T08 without qualifying dependencies and a separately routed frame"
+    - "P13-T02 while P13-T01 cutover evidence remains incomplete"
+    - "P13-T01 re-audit before explicit publication authority and matched current-head hosted-CI plus scheduled-full evidence"
+    - "coverage mutation dependency or security scores as proof scientific evidence or Distance-to-GR progress"
+    - "push publication hosted-workflow dispatch or external-system mutation"
+    - "canonical ontology source-law scientific-ledger or Distance-to-GR edit"
+    - "physics promotion benchmark promotion proof authority Gate Chair verdict completed derivation or global no-go"
+
+next_plan_task_id: "P13-T06"
+next_plan_task_execution_ready_after_checkpoint: true
+next_plan_task_executed: false
+notes: "P13-T05 is payload-complete and precheckpoint-valid. P13-T06 is the selected next included route after checkpoint; P13-T08 remains unexecuted and separately routed, while P13-T02 and P13-T01 cutover remain held."

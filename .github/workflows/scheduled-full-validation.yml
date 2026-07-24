@@ -13,6 +13,48 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  scheduled_assurance:
+    name: Scheduled dependency and mutation assurance
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      PYTHON: .venv/bin/python
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up supported Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Create virtual environment
+        run: python -m venv .venv
+
+      - name: Install exact assurance dependencies
+        run: |
+          .venv/bin/python -m pip install --upgrade pip
+          .venv/bin/python -m pip install --require-hashes -r requirements-dev.txt
+
+      - name: Run bounded assurance gates
+        run: make PYTHON=.venv/bin/python validate-assurance
+
+      - name: Audit exact dependencies
+        run: make PYTHON=.venv/bin/python audit-assurance-dependencies
+
+      - name: Run targeted mutation campaign
+        run: make PYTHON=.venv/bin/python audit-assurance-mutations
+
+      - name: Upload assurance evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: scheduled-assurance-${{ github.run_id }}-${{ github.run_attempt }}
+          path: .local/assurance/
+          if-no-files-found: error
+          retention-days: 30
+
   plan_scheduled_full:
     name: Plan unfiltered scheduled validation
     runs-on: ubuntu-latest

@@ -1,0 +1,27 @@
+{
+  "B101:./scripts/research_control/checkpoint_research_transaction.py:1166": {
+    "disposition": "accepted_low_operational_risk",
+    "reason": "The assertion checks an internal compare-mode invariant after planner initialization; it is not an authentication, authorization, or input-validation boundary, and later typed access still fails closed if the invariant is absent.",
+    "severity": "LOW"
+  },
+  "B105:./.codex/skills/continue-research-goal/scripts/goal_state.py:115": {
+    "disposition": "false_positive",
+    "reason": "terminal_guard_exhausted is a public finite-state phase label, not a password or credential.",
+    "severity": "LOW"
+  },
+  "B105:./.codex/skills/continue-research-goal/scripts/goal_state.py:1629": {
+    "disposition": "false_positive",
+    "reason": "None initializes an absent handoff token before a successor reservation; it is not a hardcoded secret.",
+    "severity": "LOW"
+  },
+  "B404:./scripts/research_control/checkpoint_research_transaction.py:13": {
+    "disposition": "accepted_required_module",
+    "reason": "The checkpoint requires subprocess execution for governed validator and Git commands; the import alone is not an exploitable call.",
+    "severity": "LOW"
+  },
+  "B603:./scripts/research_control/checkpoint_research_transaction.py:138": {
+    "disposition": "accepted_bounded_execution",
+    "reason": "The checkpoint passes an argument vector with shell disabled from controlled gate adapters, uses the fixed repository root as cwd, captures output, and applies its separate AgentJob allowlist and checkpoint transaction validation.",
+    "severity": "LOW"
+  }
+}

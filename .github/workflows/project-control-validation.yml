@@ -50,6 +50,9 @@ jobs:
       - name: Run incremental quality and portability gates
         run: make PYTHON=.venv/bin/python validate-quality
 
+      - name: Run bounded assurance gates
+        run: make PYTHON=.venv/bin/python validate-assurance
+
   validation_plan_shadow:
     name: Plan validation shards (shadow)
     continue-on-error: true

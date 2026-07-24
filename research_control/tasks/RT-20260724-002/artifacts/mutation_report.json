@@ -1,0 +1,43 @@
+{
+  "authority": {
+    "operational_evidence_only": true,
+    "proof_authority": false,
+    "scientific_claim_authority": false
+  },
+  "calibration_observation": {
+    "counts": {
+      "killed": 356,
+      "survived": 177,
+      "total": 533
+    },
+    "interpretation": "An initial module-wide diagnostic exposed weak assertions outside the declared final campaign. It was not used as the acceptance baseline; the exact mutation evaluator was strengthened and selected as the fixed bounded target.",
+    "not_final_campaign": true,
+    "raw_evidence_sha256": "49bef4073d1d00faf1146e8565b09b85550de6e9f700e733b7a53c527a4f67ec"
+  },
+  "command": ".venv/bin/python -m mutmut run 'scripts.validation.assurance.x_evaluate_mutation*'",
+  "counts": {
+    "killed": 34,
+    "skipped": 0,
+    "survived": 0,
+    "suspicious": 0,
+    "timeout": 0,
+    "untested": 0
+  },
+  "created_at": "2026-07-24T08:02:41Z",
+  "minimum_percent": 100.0,
+  "mutmut_version": "3.6.0",
+  "observed_percent": 100.0,
+  "raw_evidence": {
+    "path": ".local/assurance/mutmut-results-all.txt",
+    "sha256": "4d25ee80bbc4802b540303c39fad67dc5c889929981cdfac8bc0f6ee4f83674c",
+    "tracked": false
+  },
+  "schema_id": "p13_t05_mutation_report_v1",
+  "source_sha256": {
+    "scripts/validation/assurance.py": "6a078eacc0f4beda16cc05f0579f744c7bf4e679dacb9fce77bb4aa4e5507088",
+    "tests/test_validation_assurance.py": "c65bd5e446aa212503205e7ac8e436a1c743cf36d4cd1ad3347afa3348a0c76f"
+  },
+  "status": "PASS",
+  "survivor_dispositions": [],
+  "target_prefix": "scripts.validation.assurance.x_evaluate_mutation__"
+}
