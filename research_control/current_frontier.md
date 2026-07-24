@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260723-018` and `handoff-0848`.
+`RT-20260723-019` and `handoff-0849`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260723-018` |
-| Latest handoff ID | `handoff-0848` |
-| Current status | `p13_t01_local_equivalence_pass_live_cutover_hold_legacy_authority_retained_p13_t03_next` |
+| Active task ID | `RT-20260723-019` |
+| Latest handoff ID | `handoff-0849` |
+| Current status | `p13_t03_packaging_contract_pass_checkpoint_ready_p13_t04_next` |
 | V16 completed | false |
-| Current route family | integration or selection (project system) |
+| Current route family | construction or implementation (project system) |
 | Target derivation milestone | `source_equivalence_eqsrc` |
-| Current burden | none for physics derivation; live control burden is reproducible packaging and dependency contract |
-| Required next authority | One governed checkpoint may commit the evidence-only P13-T01 transaction. After commit, one fresh bounded P13-T03 improve-project-system frame may implement the independent packaging and dependency contract. P13-T02 remains blocked and P13-T01 may reopen only after explicit publication authority plus matched current-head hosted-CI and scheduled-full evidence. |
-| Next recommended action | Run the one authorized governed checkpoint for AJ-RT-20260723-018-001. After commit, route the independent dependency-ready P13-T03 packaging task through improve-project-system; keep P13-T02 blocked and do not reopen P13-T01 without explicit publication authority plus matched current-head hosted-CI and scheduled-full evidence. |
+| Current burden | none for physics derivation; live control burden is lint type matrix and validator api contract |
+| Required next authority | One governed checkpoint may commit the completed P13-T03 transaction. After commit, one fresh bounded P13-T04 improve-project-system frame may incrementally add linting, typing, version matrices, path-portability fixtures, and validator API contracts. P13-T02 remains blocked and P13-T01 may reopen only after explicit publication authority plus matched current-head hosted-CI and scheduled-full evidence. |
+| Next recommended action | Run the one authorized governed checkpoint for AJ-RT-20260723-019-001. After commit, route one fresh bounded P13-T04 improve-project-system frame for incremental linting, typing, version matrices, path portability, and validator API contracts. Keep P13-T02 blocked and do not reopen P13-T01 without explicit publication authority plus matched current-head hosted-CI and scheduled-full evidence. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260723-018` |
-| Latest research handoff ID | `handoff-0848` |
-| Latest research next action | Run the one authorized governed checkpoint for AJ-RT-20260723-018-001. After commit, route the independent dependency-ready P13-T03 packaging task through improve-project-system; keep P13-T02 blocked and do not reopen P13-T01 without explicit publication authority plus matched current-head hosted-CI and scheduled-full evidence. |
+| Latest research task ID | `RT-20260723-019` |
+| Latest research handoff ID | `handoff-0849` |
+| Latest research next action | Run the one authorized governed checkpoint for AJ-RT-20260723-019-001. After commit, route one fresh bounded P13-T04 improve-project-system frame for incremental linting, typing, version matrices, path portability, and validator API contracts. Keep P13-T02 blocked and do not reopen P13-T01 without explicit publication authority plus matched current-head hosted-CI and scheduled-full evidence. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260723-018/00_TASK.yaml`.
-- Active task objective: Compare legacy and planner validation on the fixed representative corpus, investigate every hard mismatch, verify rollback and non-negotiable gates, and authorize live cutover only if every required evidence class is complete.
-- Latest handoff path: `research_control/handoffs/handoff-0848.yaml`.
-- Latest handoff summary: Generation 88 completed the bounded P13-T01 local burn-in with all 11 fixed fixtures and five representative planner-selection families matching, 98 focused tests passing, zero unexplained hard mismatches, complete candidate adapter coverage, and rollback controls retained. Live cutover remains precisely blocked by ten missing current-head evidence classes, so the manifest stays shadow_planner with legacy authority.
-- Current route family: integration or selection (project system).
-- Next recommended action: Run the one authorized governed checkpoint for AJ-RT-20260723-018-001. After commit, route the independent dependency-ready P13-T03 packaging task through improve-project-system; keep P13-T02 blocked and do not reopen P13-T01 without explicit publication authority plus matched current-head hosted-CI and scheduled-full evidence.
+- Active task path: `research_control/tasks/RT-20260723-019/00_TASK.yaml`.
+- Active task objective: Create one reproducible packaging and dependency contract for repository scripts, tests, validators, and proof-tool metadata while preserving current commands through hash-locked compatibility wrappers.
+- Latest handoff path: `research_control/handoffs/handoff-0849.yaml`.
+- Latest handoff summary: Generation 90 completed P13-T03 with root pyproject metadata, two exact already-used distributions, a reproducible universal lock carrying 82 package-index SHA-256 hashes, lock-only requirements wrappers, hash-enforced Make and CI setup paths, external-tool and migration policy, and deterministic classifier coverage. A clean CPython 3.12 installation and both 87-test focused runs pass; one governed checkpoint remains before P13-T04.
+- Current route family: construction or implementation (project system).
+- Next recommended action: Run the one authorized governed checkpoint for AJ-RT-20260723-019-001. After commit, route one fresh bounded P13-T04 improve-project-system frame for incremental linting, typing, version matrices, path portability, and validator API contracts. Keep P13-T02 blocked and do not reopen P13-T01 without explicit publication authority plus matched current-head hosted-CI and scheduled-full evidence.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -96,9 +96,9 @@ No open or blocked physical target entries are listed.
 
 Forbidden overreads:
 
-- validation equivalence as scientific evidence or theorem truth
-- local burn-in PASS as live cutover authority
-- checkpoint PASS as publication or hosted-CI evidence
+- dependency reproducibility as scientific evidence or theorem truth
+- validator PASS as Distance-to-GR movement
+- checkpoint PASS as publication proof or hosted-CI evidence
 
 ## Matter-Coupling Boundary
 
@@ -296,7 +296,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run the one authorized governed checkpoint for AJ-RT-20260723-018-001. After commit, route the independent dependency-ready P13-T03 packaging task through improve-project-system; keep P13-T02 blocked and do not reopen P13-T01 without explicit publication authority plus matched current-head hosted-CI and scheduled-full evidence.
+Run the one authorized governed checkpoint for AJ-RT-20260723-019-001. After commit, route one fresh bounded P13-T04 improve-project-system frame for incremental linting, typing, version matrices, path portability, and validator API contracts. Keep P13-T02 blocked and do not reopen P13-T01 without explicit publication authority plus matched current-head hosted-CI and scheduled-full evidence.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -321,10 +321,10 @@ Validation layers:
 
 | Validation layer | Status | Meaning | Evidence |
 | --- | --- | --- | --- |
-| `pre_execution` | PASS | receipt complete | Generation 88 was validated claimed and consumed exactly once before its one routed improve-project-system invocation. |
-| `completion_internal` | PASS | receipt complete | All 11 fixed fixtures and five representative selection families match with zero unexplained hard mismatches.<br>The compact receipt binds the source hashes result counts and authority boundary. |
-| `post_write` | PASS | receipt complete | The task-local validator and 98-test focused equivalence and rollback shard pass. |
-| `post_checkpoint` | PENDING | open item; evidence must explain why | One normal governed checkpoint remains required before P13-T03. |
+| `pre_execution` | PASS | receipt complete | Generation 90 was validated claimed and consumed exactly once before its one routed improve-project-system invocation. |
+| `completion_internal` | PASS | receipt complete | The exact metadata lock wrappers policy migration validator and compact receipt are complete and hash-bound. |
+| `post_write` | PASS | receipt complete | Lock reproduction clean hash installation both 87-test focused runs Make environment parity and classifier coverage pass. |
+| `post_checkpoint` | PENDING | open item; evidence must explain why | One normal governed checkpoint remains required before P13-T04. |
 | `renderer` | PENDING | open item; evidence must explain why | Task index current frontier and compact frontier will be rendered from finalized control sources before checkpoint. |
 | `memory_bootstrap` | PENDING | open item; evidence must explain why | Tracked memory synchronization and validate-only remain required before checkpoint. |
 | `claim_language_linter` | PENDING | open item; evidence must explain why | Changed-source claim-language validation remains required on the finalized tree. |
@@ -348,9 +348,9 @@ Authorization layers:
 
 Legacy compatibility records:
 
-- active task: `RT-20260723-018`;
-- latest handoff: `handoff-0848`;
-- current status: `p13_t01_local_equivalence_pass_live_cutover_hold_legacy_authority_retained_p13_t03_next`;
+- active task: `RT-20260723-019`;
+- latest handoff: `handoff-0849`;
+- current status: `p13_t03_packaging_contract_pass_checkpoint_ready_p13_t04_next`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -360,8 +360,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0848.yaml`
-- `research_control/tasks/RT-20260723-018/00_TASK.yaml`
+- `research_control/handoffs/handoff-0849.yaml`
+- `research_control/tasks/RT-20260723-019/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -377,7 +377,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0848*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0849*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

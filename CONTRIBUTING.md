@@ -20,16 +20,19 @@ Create a repository-local virtual environment from the repository root:
 ```zsh
 python3.12 -m venv .venv
 .venv/bin/python -m pip install --upgrade pip
-.venv/bin/python -m pip install -r requirements-dev.txt
+.venv/bin/python -m pip install --require-hashes -r requirements-dev.txt
 ```
 
 If `python3.12` is not installed, use the local command that resolves to
 CPython 3.12 on your machine. Keep `.venv/` untracked.
 
-Provisioning is an explicit setup operation. Validators inspect the selected
-environment and never install or upgrade packages. GitHub Actions follows the
-same boundary by creating its environment and installing requirements before
-it invokes any validation target.
+Provisioning is an explicit setup operation. `pyproject.toml` owns project
+metadata and dependency groups. The P13-T03 task-local `requirements.lock`
+owns exact Python versions and SHA-256 hashes; `requirements.txt` and
+`requirements-dev.txt` are compatibility wrappers over that lock. Validators
+inspect the selected environment and never install or upgrade packages.
+GitHub Actions follows the same boundary by creating its environment and
+installing the same hash-locked requirements before it invokes validation.
 
 ## Validation Commands
 
@@ -45,8 +48,10 @@ validation entry point. It requires CPython 3.12 and the distributions named by
 the validation contract, then emits a compact JSON receipt containing the
 Python version, exact installed dependency versions, a deterministic digest of
 `requirements.txt` plus `requirements-dev.txt`, and an environment fingerprint.
-The fingerprint is suitable as one input to later exact-tree cache keys; it is
-not scientific evidence or proof authority.
+The digest covers `pyproject.toml`, the exact lock, and both compatibility
+wrappers. The environment gate also rejects an installed distribution whose
+version differs from the lock. The fingerprint is suitable as one input to
+later exact-tree cache keys; it is not scientific evidence or proof authority.
 
 If the interpreter or a required distribution is missing, validation stops
 before running a gate and prints one setup command. Create the environment if
@@ -91,6 +96,20 @@ provisioning. `memory-doctor` may refresh ignored `.local/` retrieval state,
 but its results are operational diagnostics and cannot satisfy checkpoint or
 physics authority. The normative environment and fingerprint rules are in
 `research_control/design/validation_environment_contract_v1.md`.
+
+Maintainers regenerate the lock only when a bounded task authorizes dependency
+changes:
+
+```zsh
+uv pip compile pyproject.toml --all-extras --universal \
+  --generate-hashes \
+  --output-file research_control/tasks/RT-20260723-019/artifacts/requirements.lock
+```
+
+Ordinary contributors do not need `uv`; pip consumes the committed lock through
+the compatibility wrappers. External tools such as Git, Make, Lean, TeX,
+Node.js, and Playwright are recorded in `pyproject.toml` but are not Python
+dependencies and are required only by workflows that explicitly name them.
 
 For read-only generated-surface validation:
 

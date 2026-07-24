@@ -33,7 +33,12 @@ MEMORY_SCRIPT_PATH = (
     ROOT
     / ".codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
 )
-REQUIREMENT_PATHS = (ROOT / "requirements.txt", ROOT / "requirements-dev.txt")
+REQUIREMENT_PATHS = (
+    ROOT / "pyproject.toml",
+    ROOT / "research_control/tasks/RT-20260723-019/artifacts/requirements.lock",
+    ROOT / "requirements.txt",
+    ROOT / "requirements-dev.txt",
+)
 MEMORY_IMPLEMENTATION_PATHS = (
     ROOT / "Makefile",
     RUNNER_PATH,

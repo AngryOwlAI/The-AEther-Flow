@@ -1,0 +1,225 @@
+{
+  "authority_limits": {
+    "physics_progress_inferred": false,
+    "proof_authority": false,
+    "publication_or_push_authority": false
+  },
+  "checks": [
+    {
+      "check_id": "python_series",
+      "evidence": "requires-python=>=3.12,<3.13",
+      "status": "PASS"
+    },
+    {
+      "check_id": "direct_dependency",
+      "evidence": "dependencies=['PyMuPDF==1.27.2.3', 'PyYAML==6.0.3']",
+      "status": "PASS"
+    },
+    {
+      "check_id": "named_dependency_groups",
+      "evidence": "validation,test,proof,documentation,dev groups declared",
+      "status": "PASS"
+    },
+    {
+      "check_id": "lock_metadata",
+      "evidence": "pyproject environment commands and lock path match policy",
+      "status": "PASS"
+    },
+    {
+      "check_id": "external_tool_metadata",
+      "evidence": "external_tools=['Lean', 'Node.js and Playwright', 'TeX', 'git', 'make', 'uv']",
+      "status": "PASS"
+    },
+    {
+      "check_id": "exact_hash_lock",
+      "evidence": "requirements=['pymupdf==1.27.2.3 \\\\', 'pyyaml==6.0.3 \\\\']; unique_sha256_hashes=82",
+      "status": "PASS"
+    },
+    {
+      "check_id": "compatibility_wrappers",
+      "evidence": "runtime wrapper includes lock; dev wrapper includes runtime wrapper",
+      "status": "PASS"
+    },
+    {
+      "check_id": "make_parity",
+      "evidence": "Make setup and validation environment use the exact contract",
+      "status": "PASS"
+    },
+    {
+      "check_id": "ci_dependency_parity",
+      "evidence": "hash_enforced_ci_provisioning_steps=6",
+      "status": "PASS"
+    },
+    {
+      "check_id": "classifier_coverage",
+      "evidence": "root dependency surfaces have an explicit classifier family",
+      "status": "PASS"
+    },
+    {
+      "check_id": "policy_and_migration",
+      "evidence": "task-local policy and migration guide are present",
+      "status": "PASS"
+    },
+    {
+      "check_id": "license_boundary",
+      "evidence": "no new dependency; repository third-party notice remains explicit",
+      "status": "PASS"
+    },
+    {
+      "check_id": "lock_reproducibility",
+      "evidence": "uv resolution matches committed normalized lock body",
+      "status": "PASS"
+    },
+    {
+      "check_id": "clean_install",
+      "evidence": "environment={'implementation': 'CPython', 'pymupdf': '1.27.2.3', 'python_series': '3.12', 'pyyaml': '6.0.3'}; install_exit=0; focused_tests_exit=0",
+      "status": "PASS"
+    }
+  ],
+  "clean_environment": {
+    "create": {
+      "command": [
+        "/Volumes/P-SSD/AngryOwl/The-AEther-Flow/.venv/bin/python",
+        "-m",
+        "venv",
+        "/var/folders/2k/jj9s1zzs5sxdb_7g557y533c0000gn/T/aether-p13-t03-env-g9s2z3m5/.venv"
+      ],
+      "duration_seconds": 1.020993,
+      "label": "clean-venv-create",
+      "returncode": 0,
+      "status": "PASS",
+      "stderr": {
+        "bytes": 0,
+        "path": ".local/v21_p13_t03/clean-venv-create.stderr.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 0,
+        "path": ".local/v21_p13_t03/clean-venv-create.stdout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "environment": {
+      "implementation": "CPython",
+      "pymupdf": "1.27.2.3",
+      "python_series": "3.12",
+      "pyyaml": "6.0.3"
+    },
+    "focused_tests": {
+      "command": [
+        "/var/folders/2k/jj9s1zzs5sxdb_7g557y533c0000gn/T/aether-p13-t03-env-g9s2z3m5/.venv/bin/python",
+        "-m",
+        "unittest",
+        "-v",
+        "tests.test_project_change_classifier",
+        "tests.test_validation_orchestration",
+        "tests.test_ci_validation_plan"
+      ],
+      "duration_seconds": 3.002716,
+      "label": "clean-focused-tests",
+      "returncode": 0,
+      "status": "PASS",
+      "stderr": {
+        "bytes": 16995,
+        "path": ".local/v21_p13_t03/clean-focused-tests.stderr.log",
+        "sha256": "dd9f577fadbcbf7cbc765c9ad2c6b3fd69ab17a7e2def6456dbb6fb48009775e"
+      },
+      "stdout": {
+        "bytes": 654,
+        "path": ".local/v21_p13_t03/clean-focused-tests.stdout.log",
+        "sha256": "b8ad489463c301bdc474e4bfc7a12aab504fe4b5246336d45ecec897a85484e4"
+      }
+    },
+    "install": {
+      "command": [
+        "/var/folders/2k/jj9s1zzs5sxdb_7g557y533c0000gn/T/aether-p13-t03-env-g9s2z3m5/.venv/bin/python",
+        "-m",
+        "pip",
+        "install",
+        "--disable-pip-version-check",
+        "--require-hashes",
+        "-r",
+        "requirements-dev.txt"
+      ],
+      "duration_seconds": 0.819363,
+      "environment_probe": {
+        "implementation": "CPython",
+        "pymupdf": "1.27.2.3",
+        "python_series": "3.12",
+        "pyyaml": "6.0.3"
+      },
+      "label": "clean-hash-install",
+      "returncode": 0,
+      "status": "PASS",
+      "stderr": {
+        "bytes": 0,
+        "path": ".local/v21_p13_t03/clean-hash-install.stderr.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 554,
+        "path": ".local/v21_p13_t03/clean-hash-install.stdout.log",
+        "sha256": "791dfa531f862e0e87e07673c278a246ba11cce52346567e3b965d9bf111b6fa"
+      }
+    },
+    "status": "PASS"
+  },
+  "dependency_delta": {
+    "exact_distributions": [
+      "PyMuPDF==1.27.2.3",
+      "PyYAML==6.0.3"
+    ],
+    "license_waiver": false,
+    "new_operational_distributions": [],
+    "newly_declared_existing_distributions": [
+      "PyYAML"
+    ],
+    "removed_distributions": []
+  },
+  "distance_to_gr_delta_changed": false,
+  "generated_at": "2026-07-24T04:25:07+00:00",
+  "job_id": "AJ-RT-20260723-019-001",
+  "lock_reproduction": {
+    "command": [
+      "/Users/alex.omegapy/.local/bin/uv",
+      "pip",
+      "compile",
+      "pyproject.toml",
+      "--all-extras",
+      "--universal",
+      "--generate-hashes",
+      "--no-header",
+      "--output-file",
+      "/var/folders/2k/jj9s1zzs5sxdb_7g557y533c0000gn/T/aether-p13-t03-lock-ub5m3evl/requirements.lock"
+    ],
+    "committed_lock_body_sha256": "91720a4437bf0e23567c26c9695d3c8c546b30d77a77bdf38f43ea82419a105e",
+    "duration_seconds": 0.026916,
+    "label": "lock-reproduction",
+    "reproduced_lock_body_sha256": "91720a4437bf0e23567c26c9695d3c8c546b30d77a77bdf38f43ea82419a105e",
+    "returncode": 0,
+    "status": "PASS",
+    "stderr": {
+      "bytes": 27,
+      "path": ".local/v21_p13_t03/lock-reproduction.stderr.log",
+      "sha256": "534cf5152ef1a17e8f808d9e0f20362b4e1be77a30a1569c2bbfe9826a5a2ad9"
+    },
+    "stdout": {
+      "bytes": 7114,
+      "path": ".local/v21_p13_t03/lock-reproduction.stdout.log",
+      "sha256": "91720a4437bf0e23567c26c9695d3c8c546b30d77a77bdf38f43ea82419a105e"
+    }
+  },
+  "schema_id": "p13_t03_packaging_receipt_v1",
+  "scientific_claims_changed": false,
+  "scope": "project_system",
+  "static_contract": {
+    "lock_body_sha256": "91720a4437bf0e23567c26c9695d3c8c546b30d77a77bdf38f43ea82419a105e",
+    "lock_hash_count": 82,
+    "lock_sha256": "41eef32d4fa96913e21d9a27339d8bec67ba27aa80148e97528038e21b242ad8",
+    "pyproject_sha256": "2544a427118ba9719573b36ba8e9f9f041aa2034c2787cc96dd6f16be840cebb",
+    "requirements_dev_sha256": "a9c9017cd95764f9e28280a524c34a6d3a43f69c350c91cd232f7f2e8eea9f73",
+    "requirements_sha256": "e74839bd2ea007c2c9ce1a267c74c376a0603591c8943b0e4e45de7f29f21080"
+  },
+  "status": "PASS",
+  "task_id": "RT-20260723-019"
+}

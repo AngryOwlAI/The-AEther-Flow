@@ -1,9 +1,74 @@
 mode: "director_led_research_control"
-active_task_id: "RT-20260723-018"
-latest_handoff_id: "handoff-0848"
-current_status: "p13_t01_local_equivalence_pass_live_cutover_hold_legacy_authority_retained_p13_t03_next"
-claim_boundary_summary: "RT-20260723-018 completed the bounded P13-T01 local burn-in with all 11 fixed fixtures and five representative planner-selection families matching, 98 focused tests passing, zero unexplained hard mismatches, and rollback controls retained. Live cutover remains precisely blocked by ten missing current-head evidence classes, the manifest remains shadow_planner with legacy authority, P13-T02 remains blocked, and no scientific Distance-to-GR ontology benchmark proof publication or external authority changed."
-next_recommended_action: "Run the one authorized governed checkpoint for AJ-RT-20260723-018-001. After commit, route the independent dependency-ready P13-T03 packaging task through improve-project-system; keep P13-T02 blocked and do not reopen P13-T01 without explicit publication authority plus matched current-head hosted-CI and scheduled-full evidence."
+active_task_id: "RT-20260723-019"
+latest_handoff_id: "handoff-0849"
+current_status: "p13_t03_packaging_contract_pass_checkpoint_ready_p13_t04_next"
+claim_boundary_summary: "RT-20260723-019 completed bounded P13-T03 with exact pyproject metadata, two already-used exact distributions, a reproducible lock carrying 82 package-index SHA-256 hashes, lock-only compatibility wrappers, hash-enforced Make and CI setup, migration and external-tool policy, clean CPython 3.12 installation, and two 87-test focused passes. This is project-system evidence only; no scientific Distance-to-GR ontology benchmark proof publication or external authority changed."
+next_recommended_action: "Run the one authorized governed checkpoint for AJ-RT-20260723-019-001. After commit, route one fresh bounded P13-T04 improve-project-system frame for incremental linting, typing, version matrices, path portability, and validator API contracts. Keep P13-T02 blocked and do not reopen P13-T01 without explicit publication authority plus matched current-head hosted-CI and scheduled-full evidence."
+
+p13_t03_reproducible_packaging_dependency_contract:
+  task_id: "RT-20260723-019"
+  parent_task_id: "RT-20260723-018"
+  parent_handoff_id: "handoff-0848"
+  plan_task_id: "P13-T03"
+  recommendation_ids:
+    - "V21-R57"
+    - "V21-R60"
+  claim_boundary_id: "CB-V21-P13-T03-REPRODUCIBLE-PACKAGING-DEPENDENCY-CONTRACT-001"
+  status: "PASS_CHECKPOINT_READY"
+  work_item_status: "completed"
+  route_label: "v21_p13_t03_reproducible_packaging_dependency_contract"
+  selected_role_family: "validator-engineer@0.2.0"
+  selected_worker_skill: "improve-project-system"
+  immutable_route_sha256: "65d287836b5164304ea785e89d4ebbcaa508bff26a41c3a0e5a1c1e59ea4d2e9"
+  completion_path: "research_control/tasks/RT-20260723-019/jobs/completions/AJC-AJ-RT-20260723-019-001.yaml"
+  completion_sha256: "10e7ecebced8832e7106f3ec174fcae9aa4560d76178f4b595b94de303291869"
+  pyproject_path: "pyproject.toml"
+  pyproject_sha256: "2544a427118ba9719573b36ba8e9f9f041aa2034c2787cc96dd6f16be840cebb"
+  lock_path: "research_control/tasks/RT-20260723-019/artifacts/requirements.lock"
+  lock_sha256: "41eef32d4fa96913e21d9a27339d8bec67ba27aa80148e97528038e21b242ad8"
+  lock_body_sha256: "91720a4437bf0e23567c26c9695d3c8c546b30d77a77bdf38f43ea82419a105e"
+  policy_path: "research_control/tasks/RT-20260723-019/artifacts/packaging_environment_policy_v1.md"
+  policy_sha256: "7a0745a03c3751417a965d8772a384aaa2e3a28a8a7d6acb8465c5d24fb968be"
+  migration_path: "research_control/tasks/RT-20260723-019/artifacts/packaging_migration_guide.md"
+  migration_sha256: "8f3f42f1808579bcf4b3f686d354adbb7ba662018a39ab2ecb555d6d02c8e62b"
+  receipt_path: "research_control/tasks/RT-20260723-019/artifacts/p13_t03_packaging_receipt.json"
+  receipt_sha256: "36d95662b756faa37a4d58adad02309b3379036f69c6989e83939b4d3706049c"
+  supported_python_series: "3.12"
+  exact_distribution_count: 2
+  exact_distributions:
+    - "PyMuPDF==1.27.2.3"
+    - "PyYAML==6.0.3"
+  newly_declared_existing_distributions:
+    - "PyYAML"
+  new_operational_distribution_count: 0
+  package_index_sha256_hash_count: 82
+  lock_reproduction_status: "PASS"
+  clean_install_status: "PASS"
+  clean_environment_focused_test_status: "PASS_87_OF_87"
+  active_environment_focused_test_status: "PASS_87_OF_87"
+  ci_hash_enforced_provisioning_step_count: 6
+  checkpoint_invocation_count: 0
+  checkpoint_committed: false
+  legacy_validation_used: false
+  p13_t02_dependency_ready: false
+  p13_t04_dependency_ready_after_checkpoint: true
+  scientific_status_changed: false
+  scientific_ledger_change_count: 0
+  distance_to_gr_delta_changed: false
+  ontology_adoption_authorized: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_performed: false
+  workflow_dispatch_performed: false
+  handoff_id: "handoff-0849"
+  selected_next_work_item: "P13-T04"
+  selected_next_worker_skill: "improve-project-system"
+  selected_next_role_family: "validator-engineer@0.2.0"
+  selected_next_route_label: "ordinary-research-packet"
+  selected_next_strategy_id: "route_p13_t04_after_p13_t03_checkpoint_v1"
+  p13_t01_reopening_criteria: "Explicit user authority to publish the exact P13-T01 checkpoint followed by matched current-head hosted-CI and scheduled-full evidence."
 
 p13_t01_validation_planner_equivalence_burn_in:
   task_id: "RT-20260723-018"
@@ -4358,14 +4423,14 @@ project_improvement_bridge:
   resolution_evidence_path: "research_control/tasks/RT-20260723-017/jobs/completions/AJC-AJ-RT-20260723-017-001.yaml"
 
 active_state_bifurcation:
-  latest_research_task_id: "RT-20260723-013"
-  latest_research_handoff_id: "handoff-0846"
-  latest_research_next_action: "Preserve handoff-0847 and continue to P13-T01 only after the one pending AJ-RT-20260723-017-001 checkpoint commits."
-  latest_project_system_task_id: "RT-20260723-017"
-  latest_project_system_status: "PASS_CHECKPOINT_READY"
-  latest_project_system_sidecar_task_id: "RT-20260723-017"
-  latest_project_system_sidecar_status: "resolved_checkpoint_ready"
-  next_research_route_source: "handoff-0847"
+  latest_research_task_id: "RT-20260723-019"
+  latest_research_handoff_id: "handoff-0849"
+  latest_research_next_action: "Run the one authorized governed checkpoint for AJ-RT-20260723-019-001. After commit, route one fresh bounded P13-T04 improve-project-system frame for incremental linting, typing, version matrices, path portability, and validator API contracts. Keep P13-T02 blocked and do not reopen P13-T01 without explicit publication authority plus matched current-head hosted-CI and scheduled-full evidence."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
   sidecar_supersedes_research_handoff: false
 
 source_assumption_ledger:

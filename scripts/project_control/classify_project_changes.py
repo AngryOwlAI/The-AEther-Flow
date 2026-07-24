@@ -129,6 +129,11 @@ SCIENTIFIC_QUALITY_REPORT_SCRIPT_PATHS = {
     "scripts/research_control/report_physics_progress_metrics.py",
     "scripts/research_control/scientific_quality_metrics.py",
 }
+DEPENDENCY_ENVIRONMENT_PATHS = {
+    "pyproject.toml",
+    "requirements.txt",
+    "requirements-dev.txt",
+}
 VALIDATION_GATE_MANIFEST_PATH = (
     "research_control/design/validation_gate_manifest_v1.yaml"
 )
@@ -579,6 +584,7 @@ def classify_path_family(path: str, registry: RegistryIndex) -> dict[str, object
         path.startswith(".github/workflows/")
         or path == ".gitattributes"
         or path == "Makefile"
+        or path in DEPENDENCY_ENVIRONMENT_PATHS
         or path.startswith("scripts/validation/")
         or Path(path).name.startswith(("checkpoint_", "continue_", "run_full_"))
     ):

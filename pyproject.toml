@@ -1,0 +1,66 @@
+[project]
+name = "aether-flow-research-control"
+version = "0.0.0"
+description = "Project-system tooling for the AEther-Flow research-control repository"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+license = { file = "LICENSE" }
+dependencies = [
+  "PyMuPDF==1.27.2.3",
+  "PyYAML==6.0.3",
+]
+
+[project.optional-dependencies]
+validation = []
+test = []
+proof = []
+documentation = []
+
+[dependency-groups]
+dev = []
+
+[tool.uv]
+package = false
+default-groups = ["dev"]
+required-version = ">=0.10,<0.11"
+
+[tool.aether-flow.environment]
+schema-id = "aether_flow_environment_v1"
+python-series = "3.12"
+lock-file = "research_control/tasks/RT-20260723-019/artifacts/requirements.lock"
+compatibility-requirements = [
+  "requirements.txt",
+  "requirements-dev.txt",
+]
+ordinary-install-command = "python -m pip install --require-hashes -r requirements-dev.txt"
+lock-maintenance-command = "uv pip compile pyproject.toml --all-extras --universal --generate-hashes --output-file research_control/tasks/RT-20260723-019/artifacts/requirements.lock"
+
+[[tool.aether-flow.external-tools]]
+name = "git"
+required-for = ["checkpoint", "repository identity"]
+managed-by-python-lock = false
+
+[[tool.aether-flow.external-tools]]
+name = "make"
+required-for = ["compatibility validation entry points"]
+managed-by-python-lock = false
+
+[[tool.aether-flow.external-tools]]
+name = "uv"
+required-for = ["maintainer lock regeneration only"]
+managed-by-python-lock = false
+
+[[tool.aether-flow.external-tools]]
+name = "Lean"
+required-for = ["formal proof packets that explicitly name Lean"]
+managed-by-python-lock = false
+
+[[tool.aether-flow.external-tools]]
+name = "TeX"
+required-for = ["PDF derivative tasks that explicitly authorize compilation"]
+managed-by-python-lock = false
+
+[[tool.aether-flow.external-tools]]
+name = "Node.js and Playwright"
+required-for = ["diagram or browser tasks that explicitly authorize those runtimes"]
+managed-by-python-lock = false

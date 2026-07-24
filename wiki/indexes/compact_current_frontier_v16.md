@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260723-018`
-- Latest handoff: `handoff-0848`
-- Current status: `p13_t01_local_equivalence_pass_live_cutover_hold_legacy_authority_retained_p13_t03_next`
+- Active task: `RT-20260723-019`
+- Latest handoff: `handoff-0849`
+- Current status: `p13_t03_packaging_contract_pass_checkpoint_ready_p13_t04_next`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260723-018`
-- Latest research handoff: `handoff-0848`
-- Latest research next action: Run the one authorized governed checkpoint for AJ-RT-20260723-018-001. After commit, route the independent dependency-ready P13-T03 packaging task through improve-project-system; keep P13-T02 blocked and do not reopen P13-T01 without explicit publication authority plus matched current-head hosted-CI and scheduled-full evidence.
+- Latest research task: `RT-20260723-019`
+- Latest research handoff: `handoff-0849`
+- Latest research next action: Run the one authorized governed checkpoint for AJ-RT-20260723-019-001. After commit, route one fresh bounded P13-T04 improve-project-system frame for incremental linting, typing, version matrices, path portability, and validator API contracts. Keep P13-T02 blocked and do not reopen P13-T01 without explicit publication authority plus matched current-head hosted-CI and scheduled-full evidence.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `route_independent_p13_t03_while_p13_t01_cutover_remains_held_v1`
+- Route ID: `route_p13_t04_after_p13_t03_checkpoint_v1`
 - Role family: `validator-engineer@0.2.0`
 - Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Reduce environment drift and bootstrap ambiguity.
+- Milestone burden: Improve software portability and maintainability.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `ed575a83623d965d3c674b839ff03edbaee62d5407dbc77f0162052f327d75c4`
-- JSON SHA-256: `bfe60cd37e6158b1ba690f802c9a369bce5298c6dfb85ff8fae876b1cdb667ad`
+- YAML SHA-256: `750b2d05e47fb129abc11059eb34ab660f06301f47a9341f805a471f85544f39`
+- JSON SHA-256: `cdb65dac883c107a7c30d289eb7f5ce3e08ddcd019d0998bb5541d6eb13c7bfd`
 
 ## Authority Warning
 

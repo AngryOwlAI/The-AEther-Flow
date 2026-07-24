@@ -74,7 +74,10 @@ class MakeValidationOrchestrationTests(unittest.TestCase):
         shard = "\n".join(self.make_plan("test-memory"))
         full = "\n".join(self.make_plan("validate-memory-full"))
 
-        self.assertIn("pip install -r requirements-dev.txt", setup)
+        self.assertIn(
+            "pip install --require-hashes -r requirements-dev.txt",
+            setup,
+        )
         self.assertIn("memory_sync().to_dict()", sync)
         self.assertNotIn("memory_validate_core", sync)
         self.assertIn("memory_validate_core", core)

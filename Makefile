@@ -2,8 +2,8 @@ PYTHON ?= .venv/bin/python
 MEMORY_SCRIPT_DIR := .codex/skills/project-memory-system/scripts
 MEMORY_TEST_MODULES := tests.test_memory_operations tests.test_memory_cli_modes tests.test_memory_system_unit tests.test_obsidian_wiki_unit tests.test_validation_orchestration tests.test_validation_doctor
 VALIDATION_PYTHON_SERIES := 3.12
-VALIDATION_REQUIREMENT_FILES := requirements.txt requirements-dev.txt
-VALIDATION_REQUIRED_DISTRIBUTIONS := PyMuPDF
+VALIDATION_REQUIREMENT_FILES := pyproject.toml research_control/tasks/RT-20260723-019/artifacts/requirements.lock requirements.txt requirements-dev.txt
+VALIDATION_REQUIRED_DISTRIBUTIONS := PyMuPDF==1.27.2.3 PyYAML==6.0.3
 VALIDATION_PATHS ?=
 VALIDATION_DOCTOR_SCOPE ?= local_retrieval
 VALIDATION_DOCTOR_FLAGS ?=
@@ -31,15 +31,30 @@ if actual_series != expected_series:
 required_distributions = os.environ["VALIDATION_REQUIRED_DISTRIBUTIONS"].split()
 installed_distributions = {}
 missing_distributions = []
-for distribution in required_distributions:
+version_mismatches = []
+for requirement in required_distributions:
+    distribution, separator, expected_version = requirement.partition("==")
     try:
-        installed_distributions[distribution] = metadata.version(distribution)
+        actual_version = metadata.version(distribution)
+        installed_distributions[distribution] = actual_version
+        if separator and actual_version != expected_version:
+            version_mismatches.append(
+                f"{distribution}=={actual_version} (expected {expected_version})"
+            )
     except metadata.PackageNotFoundError:
-        missing_distributions.append(distribution)
+        missing_distributions.append(requirement)
 if missing_distributions:
     print(
         "Missing validation dependencies: "
         + ", ".join(missing_distributions)
+        + f". Run make setup-dev PYTHON={sys.executable}.",
+        file=sys.stderr,
+    )
+    raise SystemExit(2)
+if version_mismatches:
+    print(
+        "Validation dependency version mismatch: "
+        + ", ".join(version_mismatches)
         + f". Run make setup-dev PYTHON={sys.executable}.",
         file=sys.stderr,
     )
@@ -83,7 +98,7 @@ export VALIDATION_ENVIRONMENT_CHECK
 
 setup-dev:
 	@test -x "$(PYTHON)" || { printf '%s\n' "Missing $(PYTHON). Create the local environment with: python3 -m venv .venv"; exit 1; }
-	$(PYTHON) -m pip install -r requirements-dev.txt
+	$(PYTHON) -m pip install --require-hashes -r requirements-dev.txt
 	@printf '%s\n' '{"target":"setup-dev","status":"PASS","provisioning":true}'
 
 validation-environment:

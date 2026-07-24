@@ -1,0 +1,74 @@
+task_id: "RT-20260723-019"
+task_type: "project_system_reproducible_packaging_dependency_contract"
+title: "Adopt pyproject packaging and a locked dependency environment"
+task_taxonomy:
+  schema_id: "v21_task_taxonomy_v1"
+  work_kind: "construction_or_implementation"
+  milestone: "source_equivalence_eqsrc"
+  candidate_family: "reproducible_packaging_dependency_contract"
+  result_kind: "implemented_and_validated_or_precisely_blocked"
+  authority: "project_control"
+  scope: "project_system"
+validation_status: "PASS"
+status: "completed"
+created_at: "2026-07-24T04:14:10Z"
+updated_at: "2026-07-24T04:26:32Z"
+closed_at: "2026-07-24T04:26:32Z"
+parent_task_id: "RT-20260723-018"
+parent_handoff_id: "handoff-0848"
+supersedes_active_routing_task_id: "RT-20260723-018"
+current_decision_id: "DDR-20260723-019"
+current_job_id: "AJ-RT-20260723-019-001"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260723-019"
+requires_human_gate: false
+human_authorization_note: "Generation 90 of the user-authorized recursive relay immutably routes exactly one improve-project-system frame to dependency-ready v21 P13-T03."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P13"
+  plan_task_id: "P13-T03"
+  recommendation_ids:
+    - "V21-R57"
+    - "V21-R60"
+objective: "Create one reproducible packaging and dependency contract for repository scripts, tests, validators, and proof-tool metadata while preserving current commands through hash-locked compatibility wrappers."
+target_derivation_milestone: "source_equivalence_eqsrc"
+milestone_burden: "Reduce environment drift and bootstrap ambiguity."
+route_label: "v21_p13_t03_reproducible_packaging_dependency_contract"
+project_system_change_only: true
+dual_budget_category: "system_bearing"
+primary_budget: "project_system"
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+claim_boundary_id: "CB-V21-P13-T03-REPRODUCIBLE-PACKAGING-DEPENDENCY-CONTRACT-001"
+claim_boundary:
+  allowed_scope: "Add pyproject metadata, an exact hash-locked dependency surface, compatibility wrappers, environment policy and migration documentation, deterministic packaging validation, required classifier coverage, normal control records, generated derivatives, and one governed checkpoint."
+  source_handoff_id: "handoff-0848"
+  source_handoff_sha256: "d8f2efeb2220bd41b7c01ca14450143c28c3cb55fcfeabe4d51eb27d0a03f1ca"
+  immutable_route_sha256: "65d287836b5164304ea785e89d4ebbcaa508bff26a41c3a0e5a1c1e59ea4d2e9"
+  dependency_plan_task_id: "P0-T05"
+  dependency_completion_path: "research_control/tasks/RT-20260720-008/jobs/completions/AJC-AJ-RT-20260720-008-001.yaml"
+  dependency_completion_sha256: "58f143cce059bb0d28c19f2542b3f7d7892e04c3b7573c468220c41dc932d2fc"
+  p13_t02_executed: false
+  p13_t01_reopened: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+documentation_impact_id: "DI-RT-20260723-019-001"
+completion_id: "AJC-AJ-RT-20260723-019-001"
+output_artifacts:
+  - "research_control/tasks/RT-20260723-019/artifacts/requirements.lock"
+  - "research_control/tasks/RT-20260723-019/artifacts/packaging_environment_policy_v1.md"
+  - "research_control/tasks/RT-20260723-019/artifacts/packaging_migration_guide.md"
+  - "research_control/tasks/RT-20260723-019/artifacts/validate_p13_t03_packaging.py"
+  - "research_control/tasks/RT-20260723-019/artifacts/p13_t03_packaging_receipt.json"
+  - "research_control/tasks/RT-20260723-019/jobs/completions/AJC-AJ-RT-20260723-019-001.yaml"
+closure_status: "p13_t03_packaging_contract_pass_checkpoint_ready"
+summary: "P13-T03 created an exact hash-locked and reproducible CPython 3.12 dependency contract, closed the legacy undeclared PyYAML dependency, preserved existing setup paths, and passed clean-install plus 87-test focused validation."
+next_recommended_action: "Run the one authorized governed checkpoint for AJ-RT-20260723-019-001. After commit, route one fresh bounded P13-T04 improve-project-system frame; keep P13-T02 blocked and P13-T01 held."
+project_improvement_signals: []
+notes: "This completed task changes project-system dependency and environment controls only; it creates no scientific, ontology, proof, benchmark, publication, or Gate Chair authority, and P13-T04 remains unexecuted until after checkpoint."

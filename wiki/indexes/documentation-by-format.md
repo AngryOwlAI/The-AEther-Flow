@@ -496,6 +496,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260723-004-SCIENTIFIC-QUALITY-CALIBRATION-WARNING-POLICY-V1` `research_control/tasks/RT-20260723-004/artifacts/scientific_quality_calibration_warning_policy_v1.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260723-004-SCIENTIFIC-QUALITY-METRIC-TAXONOMY-V1` `research_control/tasks/RT-20260723-004/artifacts/scientific_quality_metric_taxonomy_v1.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260723-011-ATTEMPT-REWORK-PRIVACY-AUTHORITY-NOTICE` `research_control/tasks/RT-20260723-011/artifacts/attempt_rework_privacy_authority_notice.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260723-019-P13-T03-PACKAGING-ENVIRONMENT-POLICY-V1` `research_control/tasks/RT-20260723-019/artifacts/packaging_environment_policy_v1.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260723-019-P13-T03-PACKAGING-MIGRATION-GUIDE` `research_control/tasks/RT-20260723-019/artifacts/packaging_migration_guide.md`
 - `MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `research_control/templates/post_stress_selector_task_template.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `.agents/roles/physics/candidate-constructor.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `.agents/roles/physics/candidate-constructor.v0.2.0.md`
@@ -1078,6 +1080,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260723-004-SCIENTIFIC-QUALITY-CALIBRATION-WARNING-POLICY-V1` `wiki/markdown/md-research-control-tasks-rt-20260723-004-scientific-quality-calibration-warning-policy-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260723-004-SCIENTIFIC-QUALITY-METRIC-TAXONOMY-V1` `wiki/markdown/md-research-control-tasks-rt-20260723-004-scientific-quality-metric-taxonomy-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260723-011-ATTEMPT-REWORK-PRIVACY-AUTHORITY-NOTICE` `wiki/markdown/md-research-control-tasks-rt-20260723-011-attempt-rework-privacy-authority-notice.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260723-019-P13-T03-PACKAGING-ENVIRONMENT-POLICY-V1` `wiki/markdown/md-research-control-tasks-rt-20260723-019-p13-t03-packaging-environment-policy-v1.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260723-019-P13-T03-PACKAGING-MIGRATION-GUIDE` `wiki/markdown/md-research-control-tasks-rt-20260723-019-p13-t03-packaging-migration-guide.md`
 - `WIKI-MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `wiki/markdown/md-research-control-templates-post-stress-selector-task-template.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-2-0-md.md`

@@ -35,7 +35,7 @@ jobs:
       - name: Install Python dependencies
         run: |
           .venv/bin/python -m pip install --upgrade pip
-          .venv/bin/python -m pip install -r requirements.txt
+          .venv/bin/python -m pip install --require-hashes -r requirements.txt
 
       - name: Emit unfiltered full and local-retrieval plans
         shell: bash
@@ -100,7 +100,7 @@ jobs:
       - name: Install Python dependencies
         run: |
           .venv/bin/python -m pip install --upgrade pip
-          .venv/bin/python -m pip install -r requirements.txt
+          .venv/bin/python -m pip install --require-hashes -r requirements.txt
 
       - name: Download scheduled validation plans
         uses: actions/download-artifact@v4

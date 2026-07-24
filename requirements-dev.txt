@@ -1,5 +1,5 @@
-# Development and validation dependencies.
+# Compatibility wrapper for development and validation setup.
 #
-# Keep this file conservative. It should install the dependencies needed to
-# run local validation without adding unreviewed tooling packages.
+# P13-T03 adds no development-only third-party dependency. This wrapper keeps
+# existing commands stable while consuming the same hash-locked runtime set.
 -r requirements.txt

@@ -1,0 +1,333 @@
+job_id: "AJ-RT-20260723-019-001"
+task_id: "RT-20260723-019"
+decision_id: "DDR-20260723-019"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260723-019"
+status: "completed"
+validation_status: "PASS"
+created_at: "2026-07-24T04:14:10Z"
+started_at: "2026-07-24T04:14:10Z"
+completed_at: "2026-07-24T04:26:32Z"
+completion_path: "research_control/tasks/RT-20260723-019/jobs/completions/AJC-AJ-RT-20260723-019-001.yaml"
+requires_human_gate: false
+human_authorization_note: "The user-authorized recursive relay immutably routed generation 90 through improve-project-system for exactly v21 P13-T03."
+objective: "Create and validate one hash-locked Python packaging and environment contract while preserving existing setup and CI entry points."
+target_derivation_milestone: "source_equivalence_eqsrc"
+milestone_burden: "Reduce environment drift and bootstrap ambiguity."
+route_label: "v21_p13_t03_reproducible_packaging_dependency_contract"
+route_reason: "P0-T05 is qualifying-finalized, the P13-T01 checkpoint is committed, and handoff-0848 selects dependency-ready P13-T03 through improve-project-system."
+immutable_route_sha256: "65d287836b5164304ea785e89d4ebbcaa508bff26a41c3a0e5a1c1e59ea4d2e9"
+plan_task_id: "P13-T03"
+recommendation_ids:
+  - "V21-R57"
+  - "V21-R60"
+project_system_change_only: true
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 90
+  passes_consumed: 84
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:90"
+  handoff_token: "ee1d362e7e2ef33951c0afd700a19a3f01a76a4c3cef8d0d"
+  relay_claim_token: "3a20931bdc29402625a4b75c994b1eb1325ab7bd2c28b0e5"
+  immutable_route_hash: "65d287836b5164304ea785e89d4ebbcaa508bff26a41c3a0e5a1c1e59ea4d2e9"
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  candidate_family: "not_applicable"
+  assumption_delta:
+    - "The already-used PyMuPDF and PyYAML distributions are declared, exact-pinned, and hash-locked; no new operational Python dependency, scientific assumption, ontology, or Distance-to-GR status is introduced."
+  materiality_basis: "Provides the v21 P13-T03 project metadata, dependency lock, environment policy, compatibility migration, and clean-install evidence."
+  source_basis:
+    - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+    - "research_control/handoffs/handoff-0848.yaml"
+    - "research_control/design/validation_environment_contract_v1.md"
+    - "requirements.txt"
+    - "requirements-dev.txt"
+  expected_artifact_paths:
+    - "pyproject.toml"
+    - "research_control/tasks/RT-20260723-019/artifacts/requirements.lock"
+    - "research_control/tasks/RT-20260723-019/artifacts/packaging_environment_policy_v1.md"
+    - "research_control/tasks/RT-20260723-019/artifacts/packaging_migration_guide.md"
+    - "research_control/tasks/RT-20260723-019/artifacts/p13_t03_packaging_receipt.json"
+  project_system_justification: "The work concerns dependency reproducibility and project-system validation only."
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "clean_install_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  expected_durable_outputs:
+    physics: []
+    project_system:
+      - "pyproject.toml"
+      - "research_control/tasks/RT-20260723-019/artifacts/requirements.lock"
+      - "research_control/tasks/RT-20260723-019/artifacts/packaging_environment_policy_v1.md"
+      - "research_control/tasks/RT-20260723-019/artifacts/packaging_migration_guide.md"
+      - "research_control/tasks/RT-20260723-019/artifacts/p13_t03_packaging_receipt.json"
+  acceptance_criteria:
+    physics: []
+    project_system:
+      - "all normal-path Python dependencies are exact and hash-locked"
+      - "clean CPython 3.12 installation passes with hash enforcement"
+      - "existing setup and CI entry points consume the same lock"
+      - "environment metadata and external tool requirements are documented"
+      - "focused packaging and classifier tests pass"
+      - "one governed checkpoint commits"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: false
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0848"
+  source_handoff_path: "research_control/handoffs/handoff-0848.yaml"
+  source_handoff_sha256: "d8f2efeb2220bd41b7c01ca14450143c28c3cb55fcfeabe4d51eb27d0a03f1ca"
+  selected_plan_task_id: "P13-T03"
+  guard_outcome: "all_ready_science_blocked_exception"
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+allowed_read_paths:
+  - "SOUL.md"
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research-goal/SKILL.md"
+  - ".codex/skills/continue-research-goal/references/goal-file-schema.md"
+  - ".codex/skills/continue-research-continue-goal/SKILL.md"
+  - ".codex/skills/improve-project-system/SKILL.md"
+  - ".agents/roles/research_ops/project-system-director.v0.2.0.md"
+  - ".agents/roles/research_ops/validator-engineer.v0.2.0.md"
+  - ".agents/schemas/**"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  - "research_control/design/**"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0848.yaml"
+  - "research_control/handoffs/handoff-0848.md"
+  - "research_control/tasks/RT-20260720-008/**"
+  - "research_control/tasks/RT-20260723-018/**"
+  - ".github/workflows/**"
+  - "scripts/project_control/**"
+  - "scripts/research_control/**"
+  - "scripts/validation/**"
+  - "tests/**"
+  - "registries/**"
+  - "Makefile"
+  - "README.md"
+  - "CONTRIBUTING.md"
+  - "requirements.txt"
+  - "requirements-dev.txt"
+allowed_write_paths:
+  - "pyproject.toml"
+  - "requirements.txt"
+  - "requirements-dev.txt"
+  - "Makefile"
+  - "README.md"
+  - "CONTRIBUTING.md"
+  - ".github/workflows/project-control-validation.yml"
+  - ".github/workflows/scheduled-full-validation.yml"
+  - "scripts/project_control/classify_project_changes.py"
+  - "tests/test_project_change_classifier.py"
+  - "tests/test_validation_orchestration.py"
+  - "tests/test_ci_validation_plan.py"
+  - "research_control/design/validation_environment_contract_v1.md"
+  - "research_control/tasks/RT-20260723-019/**"
+  - "research_control/handoffs/handoff-0849.yaml"
+  - "research_control/handoffs/handoff-0849.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "FOLDER_MAP.md"
+allowed_generated_paths:
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "FOLDER_MAP.md"
+forbidden_paths:
+  - ".agents/**"
+  - ".codex/skills/**"
+  - "implementations_plans/**"
+  - "ontology/**"
+  - "legacy_ontology/**"
+  - "manuscripts/**"
+  - "tex/**"
+  - "markdown/publication-briefs/**"
+  - "markdown/html-explainer-specs/**"
+  - "github-facing/**"
+  - "html/**"
+  - "pdf/**"
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "registries/METRIC_USE_LEDGER.csv"
+allowed_source_classes:
+  - "project_control"
+  - "registry"
+  - "validator"
+  - "test"
+  - "tooling"
+  - "task_evidence_artifact"
+  - "generated_memory_derivative"
+forbidden_source_classes:
+  - "new_unreviewed_third_party_dependency"
+  - "dependency_license_waiver"
+  - "validation_planner_cutover"
+  - "legacy_fallback_retirement"
+  - "canonical_ontology_write"
+  - "science_source_mutation"
+  - "scientific_ledger_mutation"
+  - "source_law_adoption"
+  - "physics_claim_promotion"
+  - "benchmark_promotion"
+  - "gate_chair_verdict"
+  - "proof_authority"
+  - "publication_or_push_authority"
+  - "completed_derivation_claim"
+approved_commands:
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search reproducible packaging dependency contract --limit 10 --json"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+  - ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted"
+  - "uv pip compile pyproject.toml --all-extras --universal --generate-hashes --output-file research_control/tasks/RT-20260723-019/artifacts/requirements.lock"
+  - ".venv/bin/python research_control/tasks/RT-20260723-019/artifacts/validate_p13_t03_packaging.py --write-report --json"
+  - ".venv/bin/python -m unittest -v tests.test_project_change_classifier tests.test_validation_orchestration tests.test_ci_validation_plan"
+  - ".venv/bin/python -m scripts.validation.cli plan --profile affected --paths pyproject.toml requirements.txt requirements-dev.txt Makefile README.md CONTRIBUTING.md .github/workflows/project-control-validation.yml .github/workflows/scheduled-full-validation.yml scripts/project_control/classify_project_changes.py tests/test_project_change_classifier.py tests/test_validation_orchestration.py tests/test_ci_validation_plan.py research_control/design/validation_environment_contract_v1.md research_control/tasks/RT-20260723-019 research_control/handoffs/handoff-0849.yaml research_control/program_state.yaml --json"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --json-summary"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+  - "git diff --check"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260723-019-001"
+required_validators:
+  - "p13_t03_packaging_contract"
+  - "p13_t03_clean_install"
+  - "dependency_lock_reproducibility"
+  - "requirements_compatibility"
+  - "ci_dependency_parity"
+  - "project_change_classifier"
+  - "project_improvement_signals"
+  - "documentation_impact"
+  - "claim_language_changed"
+  - "research_control_diff"
+  - "memory_sync"
+  - "memory_core"
+  - "git_diff_check"
+  - "checkpoint_transaction"
+expected_outputs:
+  - "pyproject.toml"
+  - "research_control/tasks/RT-20260723-019/artifacts/requirements.lock"
+  - "research_control/tasks/RT-20260723-019/artifacts/packaging_environment_policy_v1.md"
+  - "research_control/tasks/RT-20260723-019/artifacts/packaging_migration_guide.md"
+  - "research_control/tasks/RT-20260723-019/artifacts/validate_p13_t03_packaging.py"
+  - "research_control/tasks/RT-20260723-019/artifacts/p13_t03_packaging_receipt.json"
+  - "research_control/tasks/RT-20260723-019/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260723-019/jobs/completions/AJC-AJ-RT-20260723-019-001.yaml"
+  - "research_control/handoffs/handoff-0849.yaml"
+  - "research_control/handoffs/handoff-0849.md"
+claim_boundary: "CB-V21-P13-T03-REPRODUCIBLE-PACKAGING-DEPENDENCY-CONTRACT-001"
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1002
+    relationship_row_count: 4960
+    semantic_row_count: 1002
+    vault_row_count: 1002
+    local_cache_only_warning_count: 3
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search reproducible packaging dependency contract --limit 10 --json"
+      query_type: "search"
+      query_text: "reproducible packaging dependency contract"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  authority_note: "Generated wiki, Obsidian, SQLite, semantic, and .local retrieval outputs were navigation layers only and are not authority."

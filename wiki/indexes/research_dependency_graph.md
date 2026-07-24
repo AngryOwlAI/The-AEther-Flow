@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-07-23T02:34:48Z`
-- Source fingerprint: `991ec85d91d7f935f7779301fa98f10bb728b41c3fd563f00a3a8c81f8321f79`
-- Nodes: `21159`
-- Edges: `71082`
+- Generated from tracked state as of: `2026-07-24T04:26:32Z`
+- Source fingerprint: `c13df7ec2f31dfa365618a2f480081be89bea5c6d112c3a80b9a8162ef225970`
+- Nodes: `21596`
+- Edges: `72030`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 1064 |
+| `completion_yaml` | 1085 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 831 |
+| `handoff_yaml` | 849 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,18 +33,18 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 7 |
-| `agent_job` | `support_only` | 1064 |
+| `agent_job` | `support_only` | 1085 |
 | `artifact` | `canonical_source` | 86 |
-| `artifact` | `support_only` | 10818 |
-| `blocked_burden` | `blocked` | 4190 |
-| `claim_boundary` | `support_only` | 1021 |
-| `draft_control_candidate` | `draft_control` | 717 |
+| `artifact` | `support_only` | 11001 |
+| `blocked_burden` | `blocked` | 4347 |
+| `claim_boundary` | `support_only` | 1042 |
+| `draft_control_candidate` | `draft_control` | 722 |
 | `draft_control_candidate` | `proposal_only` | 110 |
 | `draft_control_candidate` | `science_draft` | 64 |
-| `frozen_negative` | `frozen_negative` | 131 |
+| `frozen_negative` | `frozen_negative` | 132 |
 | `gate_chair_verdict` | `human_gated` | 31 |
-| `handoff` | `support_only` | 831 |
-| `human_gated_object` | `human_gated` | 478 |
+| `handoff` | `support_only` | 849 |
+| `human_gated_object` | `human_gated` | 487 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
 | `ledger_row` | `frozen_negative` | 1 |
@@ -55,10 +55,10 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `source_extension_evidence_precondition` | `source_extension_evidence` | 37 |
 | `source_ontology_object` | `canonical_source` | 23 |
 | `source_ontology_object` | `rejected` | 50 |
-| `source_ontology_object` | `support_only` | 340 |
+| `source_ontology_object` | `support_only` | 341 |
 | `task` | `human_gated` | 29 |
 | `task` | `science_draft` | 32 |
-| `task` | `support_only` | 1003 |
+| `task` | `support_only` | 1024 |
 
 ## Frontier Table
 
@@ -100,11 +100,13 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `blocked_claim:agent_native_authority` | Blocked claim: Agent-Native authority | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:agentjob_allowlist_change` | Blocked claim: AgentJob allowlist change | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:agentjob_allowlist_expansion` | Blocked claim: AgentJob allowlist expansion | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:aggregate_truth_score` | Blocked claim: aggregate truth score | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:agreement_or_consensus_as_truth` | Blocked claim: agreement or consensus as truth | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:ai_validator_pass_as_physics_proof` | Blocked claim: AI validator PASS as physics proof | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:alias_map_as_ledger_authority` | Blocked claim: alias map as ledger authority | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:alias_map_as_physics_proof` | Blocked claim: alias map as physics proof | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:alias_or_status_language_as_physics_authority` | Blocked claim: alias or status language as physics authority | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:another_plan_task_or_successor_execution` | Blocked permission: another plan task or successor execution | `registries/ROLE_EXECUTION_REGISTRY.csv` |
 | `blocked_claim:approval_as_claim_promotion` | Blocked claim: approval as claim promotion | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:approval_as_proof` | Blocked claim: approval as proof | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:arbitrary_encodability_as_explicit_target_import` | Blocked claim: arbitrary encodability as explicit target import | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
@@ -116,9 +118,13 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `blocked_claim:arbitrary_finite_variation_robustness_proof` | Blocked claim: arbitrary finite-variation robustness proof | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:arbitrary_mutable_source_classification` | Blocked permission: arbitrary mutable-source classification | `registries/ROLE_EXECUTION_REGISTRY.csv` |
 | `blocked_claim:arbitrary_mutable_source_exemption` | Blocked claim: arbitrary mutable-source exemption | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:arbitrary_output_or_research_script_admission` | Blocked claim: arbitrary output or research-script admission | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:arbitrary_output_path_generated_classification` | Blocked claim: arbitrary output-path generated classification | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:article_body_content_change` | Blocked claim: article body content change | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:artifact_body_scanning` | Blocked claim: artifact-body scanning | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:artifact_identity_policy_or_source_change` | Blocked claim: artifact identity policy or source change | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:artifact_identity_policy_or_tool_semantics_change` | Blocked permission: artifact identity policy or tool semantics change | `registries/ROLE_EXECUTION_REGISTRY.csv` |
+| `blocked_claim:artifact_splitting_as_progress` | Blocked claim: artifact splitting as progress | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:assumption_removal` | Blocked claim: assumption removal | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:assumption_upgrade_by_documentation` | Blocked claim: assumption upgrade by documentation | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:atlasglue_src_plus_adoption` | Blocked claim: AtlasGlue_src^+ adoption | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
@@ -154,18 +160,12 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `blocked_claim:audit_proposition_as_einstein_equations` | Blocked claim: audit proposition as Einstein equations | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:audit_ready_as_adoption` | Blocked claim: audit_ready as adoption | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:authored_judgment_overwrite` | Blocked claim: authored judgment overwrite | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:authority_expansion_through_role_decomposition` | Blocked claim: authority expansion through role decomposition | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:authority_label_as_physics_evidence` | Blocked claim: authority label as physics evidence | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:authority_or_hash_check_weakening` | Blocked claim: authority or hash check weakening | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:autonomous_gate_chair_route` | Blocked claim: autonomous Gate Chair route | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:autonomous_scientific_authority` | Blocked claim: autonomous scientific authority | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:autonomous_scientific_authority_claim` | Blocked claim: autonomous scientific authority claim | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 
 ## Route Continuity
 
-- Active task: `RT-20260722-022`
-- Latest handoff: `handoff-0831`
-- Handoff path: `research_control/handoffs/handoff-0831.yaml`
-- Next action: Run one governed improve-project-system recovery that preserves the four exact P15-T01 hashes while adding only an exact-path whitespace classification and then reruns the normal checkpoint; do not use legacy validation or execute P15-T03.
+- Active task: `RT-20260723-019`
+- Latest handoff: `handoff-0849`
+- Handoff path: `research_control/handoffs/handoff-0849.yaml`
+- Next action: Run the one authorized governed checkpoint for AJ-RT-20260723-019-001. After commit, route one fresh bounded P13-T04 improve-project-system frame for incremental linting, typing, version matrices, path portability, and validator API contracts. Keep P13-T02 blocked and do not reopen P13-T01 without explicit publication authority plus matched current-head hosted-CI and scheduled-full evidence.
 
 This graph is navigational support only; inspect the cited sources before using any claim.

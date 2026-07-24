@@ -1,0 +1,398 @@
+validation_status: "PASS"
+job_id: "AJ-RT-20260723-019-001"
+completion_id: "AJC-AJ-RT-20260723-019-001"
+task_id: "RT-20260723-019"
+task_type: "project_system_reproducible_packaging_dependency_contract"
+decision_id: "DDR-20260723-019"
+role_id: "validator-engineer"
+source_role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260723-019"
+status: "completed"
+final_repository_validation_status: "PASS_CHECKPOINT_READY"
+created_at: "2026-07-24T04:14:10Z"
+started_at: "2026-07-24T04:14:10Z"
+completed_at: "2026-07-24T04:26:32Z"
+objective: "Create and validate one reproducible packaging and dependency contract for repository scripts, tests, validators, and proof-tool metadata while preserving existing setup and CI entry points."
+completion_summary: "P13-T03 now provides root pyproject metadata, named dependency groups, one reproducible universal lock with exact versions and 82 package-index SHA-256 hashes, lock-only requirements compatibility wrappers, hash-enforced Make and CI provisioning, external-tool metadata, migration guidance, classifier coverage, and a deterministic task-local validator. The clean CPython 3.12 install identified and closed the legacy undeclared PyYAML dependency: both already-used distributions installed from hashes, the normalized lock reproduced exactly, and 87 focused tests passed in both the clean and active environments."
+objective_result: "p13_t03_packaging_contract_pass_checkpoint_ready"
+
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P13"
+  plan_task_id: "P13-T03"
+  recommendation_ids:
+    - "V21-R57"
+    - "V21-R60"
+  implementation_status: "completed"
+  completed_v21_tasks_added:
+    - "P13-T03"
+  next_dependency_ready_work_item: "P13-T04"
+  next_work_item_executed: false
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 90
+  passes_consumed: 84
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:90"
+  handoff_token: "ee1d362e7e2ef33951c0afd700a19a3f01a76a4c3cef8d0d"
+  relay_claim_token: "3a20931bdc29402625a4b75c994b1eb1325ab7bd2c28b0e5"
+  immutable_route_hash: "65d287836b5164304ea785e89d4ebbcaa508bff26a41c3a0e5a1c1e59ea4d2e9"
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+
+transaction_status: "completed_checkpoint_ready"
+result_disposition: "implemented"
+work_item_status: "completed"
+plan_task_id: "P13-T03"
+recommendation_ids:
+  - "V21-R57"
+  - "V21-R60"
+checkpoint_commit: "none_checkpoint_pending"
+checkpoint_invocation_count: 0
+checkpoint_staged: false
+legacy_validation_used: false
+project_system_change_only: true
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS_CHECKPOINT_READY"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  observed_durable_outputs:
+    physics: []
+    project_system:
+      - "pyproject.toml"
+      - "research_control/tasks/RT-20260723-019/artifacts/requirements.lock"
+      - "research_control/tasks/RT-20260723-019/artifacts/packaging_environment_policy_v1.md"
+      - "research_control/tasks/RT-20260723-019/artifacts/packaging_migration_guide.md"
+      - "research_control/tasks/RT-20260723-019/artifacts/p13_t03_packaging_receipt.json"
+  accepted_criteria:
+    physics: []
+    project_system:
+      - "all normal-path Python dependencies are exact and hash-locked"
+      - "clean CPython 3.12 installation passes with hash enforcement"
+      - "existing setup and CI entry points consume the same lock"
+      - "environment metadata and external tool requirements are documented"
+      - "focused packaging and classifier tests pass"
+      - "one governed checkpoint commits"
+      - "the normalized lock reproduces exactly from pyproject metadata"
+      - "87 focused tests pass in clean and active environments"
+      - "legacy validation is not used"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+physics_payload_admission_result:
+  status: "admitted"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+
+ordinary_route_guard_admission_result:
+  status: "PASS"
+  source_handoff_id: "handoff-0848"
+  selected_plan_task_id: "P13-T03"
+  guard_outcome: "all_ready_science_blocked_exception"
+  ordinary_research_handoff_authoritative: true
+  system_success_counts_as_physics: false
+  system_success_counts_as_distance_to_gr: false
+
+dependency_inventory:
+  python_implementation: "CPython"
+  supported_python_series: "3.12"
+  direct_distribution_count: 2
+  exact_distributions:
+    - "PyMuPDF==1.27.2.3"
+    - "PyYAML==6.0.3"
+  newly_declared_existing_distributions:
+    - "PyYAML"
+  new_operational_distributions: []
+  removed_distributions: []
+  package_index_sha256_hash_count: 82
+  lock_body_sha256: "91720a4437bf0e23567c26c9695d3c8c546b30d77a77bdf38f43ea82419a105e"
+  lock_reproduction_status: "PASS"
+  clean_hash_install_status: "PASS"
+  clean_environment_focused_test_status: "PASS_87_OF_87"
+  active_environment_focused_test_status: "PASS_87_OF_87"
+  license_review:
+    new_dependency_license_review_required: false
+    license_waiver: false
+    pymupdf_distribution_metadata: "Dual Licensed - GNU AFFERO GPL 3.0 or Artifex Commercial License"
+    pyyaml_distribution_metadata: "MIT"
+    repository_notice_boundary_preserved: true
+  authority_note: "PyYAML was already imported by tracked repository validators and installed in the active environment; P13-T03 makes that hidden operational dependency explicit rather than introducing a new use."
+
+artifacts:
+  - "pyproject.toml"
+  - "research_control/tasks/RT-20260723-019/artifacts/requirements.lock"
+  - "research_control/tasks/RT-20260723-019/artifacts/packaging_environment_policy_v1.md"
+  - "research_control/tasks/RT-20260723-019/artifacts/packaging_migration_guide.md"
+  - "research_control/tasks/RT-20260723-019/artifacts/validate_p13_t03_packaging.py"
+  - "research_control/tasks/RT-20260723-019/artifacts/p13_t03_packaging_receipt.json"
+output_paths:
+  - "pyproject.toml"
+  - "requirements.txt"
+  - "requirements-dev.txt"
+  - "Makefile"
+  - "README.md"
+  - "CONTRIBUTING.md"
+  - ".github/workflows/project-control-validation.yml"
+  - ".github/workflows/scheduled-full-validation.yml"
+  - "scripts/project_control/classify_project_changes.py"
+  - "tests/test_project_change_classifier.py"
+  - "tests/test_validation_orchestration.py"
+  - "tests/test_ci_validation_plan.py"
+  - "research_control/design/validation_environment_contract_v1.md"
+  - "research_control/tasks/RT-20260723-019/**"
+  - "research_control/handoffs/handoff-0849.yaml"
+  - "research_control/handoffs/handoff-0849.md"
+  - "research_control/program_state.yaml"
+artifact_receipts:
+  - path: "pyproject.toml"
+    sha256: "2544a427118ba9719573b36ba8e9f9f041aa2034c2787cc96dd6f16be840cebb"
+  - path: "requirements.txt"
+    sha256: "e74839bd2ea007c2c9ce1a267c74c376a0603591c8943b0e4e45de7f29f21080"
+  - path: "requirements-dev.txt"
+    sha256: "a9c9017cd95764f9e28280a524c34a6d3a43f69c350c91cd232f7f2e8eea9f73"
+  - path: "research_control/tasks/RT-20260723-019/artifacts/requirements.lock"
+    sha256: "41eef32d4fa96913e21d9a27339d8bec67ba27aa80148e97528038e21b242ad8"
+  - path: "research_control/tasks/RT-20260723-019/artifacts/packaging_environment_policy_v1.md"
+    sha256: "7a0745a03c3751417a965d8772a384aaa2e3a28a8a7d6acb8465c5d24fb968be"
+  - path: "research_control/tasks/RT-20260723-019/artifacts/packaging_migration_guide.md"
+    sha256: "8f3f42f1808579bcf4b3f686d354adbb7ba662018a39ab2ecb555d6d02c8e62b"
+  - path: "research_control/tasks/RT-20260723-019/artifacts/validate_p13_t03_packaging.py"
+    sha256: "b5758acb566cd2f535a5e0c0ca83c7531abe5549b53205f18eb415a9dfe0aefa"
+  - path: "research_control/tasks/RT-20260723-019/artifacts/p13_t03_packaging_receipt.json"
+    sha256: "36d95662b756faa37a4d58adad02309b3379036f69c6989e83939b4d3706049c"
+
+command_results:
+  - "uv pip compile pyproject.toml --all-extras --universal --generate-hashes --output-file research_control/tasks/RT-20260723-019/artifacts/requirements.lock | exit_code=0 | two exact distributions and 82 unique SHA-256 hashes"
+  - ".venv/bin/python research_control/tasks/RT-20260723-019/artifacts/validate_p13_t03_packaging.py --write-report --json | exit_code=0 | 14 contract checks PASS including normalized lock reproduction clean hash install and 87 focused tests"
+  - ".venv/bin/python -m unittest -v tests.test_project_change_classifier tests.test_validation_orchestration tests.test_ci_validation_plan | exit_code=0 | 87 tests PASS in 2.648 seconds"
+  - "make PYTHON=.venv/bin/python validation-environment | exit_code=0 | CPython 3.12.13 PyMuPDF 1.27.2.3 PyYAML 6.0.3 PASS"
+
+validation_summary:
+  status: "PASS_CHECKPOINT_READY"
+  passing_gates:
+    - "14 of 14 task-local packaging checks"
+    - "two exact normal-path distributions"
+    - "82 unique package-index SHA-256 hashes"
+    - "normalized lock-body reproduction"
+    - "clean CPython 3.12 hash-enforced installation"
+    - "87 of 87 focused tests in the clean environment"
+    - "87 of 87 focused tests in the active environment"
+    - "Make validation-environment exact-version gate"
+    - "six of six repository-owned CI provisioning steps use hash enforcement"
+    - "root dependency surfaces classify as ci_orchestration"
+    - "migration, external-tool, failure, and license boundaries documented"
+  pending_gates:
+    - "one governed checkpoint"
+  checkpoint:
+    invoked: false
+    invocation_count: 0
+    reason: "One governed checkpoint remains authorized after all precheckpoint gates pass."
+  staging:
+    attempted: false
+    index_changed: false
+  commit:
+    created: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 90 route lease repository branch exact clean manifest reasoning and P13-T03 dependency parity passed before one claim and consume."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The task-local receipt binds exact metadata lock wrapper clean-install and focused-test results."
+      - "A clean environment exposed and the packet closed the previously undeclared already-used PyYAML dependency."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "The task-local validator, lock reproduction, clean hash install, 87-test shard, Make environment gate, and classifier pass."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "One governed checkpoint is authorized and has not yet been invoked."
+  renderer:
+    status: "PENDING"
+    evidence:
+      - "Task index, current frontier, compact frontier, and memory derivatives remain to be rendered from finalized control sources."
+  memory_bootstrap:
+    status: "PENDING"
+    evidence:
+      - "Tracked memory synchronization and validate-only remain required before checkpoint."
+  claim_language_linter:
+    status: "PENDING"
+    evidence:
+      - "Changed-source claim-language validation remains required on the finalized tree."
+
+assumption_delta:
+  changed: false
+  assumptions_added: []
+  assumptions_removed: []
+  assumptions_adopted: 0
+  exact_reason: "P13-T03 changes only project-system environment declarations and does not add a scientific assumption."
+
+candidate_or_theorem_identities:
+  candidate_ids_created: []
+  candidate_ids_linked: []
+  theorem_ids_created: []
+  identity_note: "No scientific candidate or theorem identity is created or changed."
+
+mathematical_payload_manifest: []
+new_mathematical_payload: []
+
+physics_progress_status:
+  status: "documentation_or_control_only_no_physics_delta"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Reduce environment drift and bootstrap ambiguity."
+  explanation: "P13-T03 supplies reproducible project-system dependency controls only and adds no mathematical or physics payload."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  push_authorized: false
+  publication_authorized: false
+  proof_authority: false
+
+three_tier_claim_summary:
+  adopted_objects: []
+  accepted_evidence_preconditions:
+    - "The repository project-system Python dependency set is exact and hash-locked."
+    - "The clean CPython 3.12 install and focused project-system tests pass."
+  open_or_blocked_physical_targets:
+    - "source_ontology_derivation"
+    - "general_eqsrc"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+  forbidden_overread:
+    - "dependency reproducibility as scientific evidence or theorem truth"
+    - "validator PASS as Distance-to-GR movement"
+    - "checkpoint PASS as publication or proof authority"
+
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "none"
+  milestone: "source_equivalence_eqsrc"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "P13-T03 changes project-system packaging and environment controls only."
+  downstream_unlocked:
+    - "P13-T04_after_governed_checkpoint"
+  downstream_still_blocked:
+    - "P13-T02_until_p13_t01_cutover_evidence_complete"
+    - "source_ontology_derivation"
+    - "general_eqsrc"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+    - "benchmark_promotion"
+    - "external_publication"
+
+resolved_project_improvement_signals: []
+project_improvement_signals: []
+project_improvement_sidecar_created: false
+project_improvement_bridge:
+  required: false
+  sidecar_path: ""
+  recursive_goal_recovery_required: false
+  reason: "P13-T03 completed its bounded project-system objective without discovering a separate repair signal."
+
+selected_next_route:
+  route_id: "route_p13_t04_after_p13_t03_checkpoint_v1"
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  phase_id: "P13"
+  plan_task_id: "P13-T04"
+  task_name: "Add linting, static typing, version matrices, and validator API contracts"
+  role_family: "validator-engineer@0.2.0"
+  worker_skill: "improve-project-system"
+  task_type: "lint_type_matrix_and_validator_api_contract"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Improve software portability and maintainability."
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  dependencies:
+    - plan_task_id: "P13-T03"
+      completion_path: "research_control/tasks/RT-20260723-019/jobs/completions/AJC-AJ-RT-20260723-019-001.yaml"
+      status: "completed_checkpoint_pending"
+    - plan_task_id: "P10-T07"
+      completion_path: "research_control/tasks/RT-20260722-002/jobs/completions/AJC-AJ-RT-20260722-002-001.yaml"
+      completion_sha256: "71595f97c4b3c8ed06d5e735a0f23269d210e40909b09301818af011e551b2a4"
+      status: "completed"
+  p13_t02_remains_blocked: true
+  p13_t01_reopening_criteria: "Explicit user authority to publish the exact P13-T01 checkpoint followed by matched current-head hosted CI and scheduled-full evidence."
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1002
+    relationship_row_count: 4960
+    semantic_row_count: 1002
+    vault_row_count: 1002
+    local_cache_only_warning_count: 3
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search reproducible packaging dependency contract --limit 10 --json"
+      query_type: "search"
+      query_text: "reproducible packaging dependency contract"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  authority_note: "Generated wiki, Obsidian, SQLite, semantic, and .local retrieval outputs were navigation layers only and are not authority."
+
+forbidden_conclusion_summary: "This packet does not promote any physics claim, evaluate theorem truth, change ontology or a source law, move Distance-to-GR, authorize proof or benchmark status, issue a Gate Chair verdict, publish or push, execute P13-T04, or complete the derivation."
+verdict: "p13_t03_packaging_contract_pass_checkpoint_ready"
+coherent_resolution_summary: "The Python dependency surface is exact, hash-locked, reproducible, clean-installable, documented, and consumed consistently by existing setup paths; one governed checkpoint remains before P13-T04."
