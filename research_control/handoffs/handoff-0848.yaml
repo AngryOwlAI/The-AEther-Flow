@@ -1,0 +1,262 @@
+validation_status: "PASS"
+handoff_id: "handoff-0848"
+task_id: "RT-20260723-018"
+job_id: "AJ-RT-20260723-018-001"
+completion_id: "AJC-AJ-RT-20260723-018-001"
+completion_path: "research_control/tasks/RT-20260723-018/jobs/completions/AJC-AJ-RT-20260723-018-001.yaml"
+completion_sha256: "0a99a53f681dd965cc12117ebfc5e38815a777f365830fee31fc961960b46956"
+status: "ready_for_director"
+created_at: "2026-07-24T03:16:07Z"
+parent_handoff_id: "handoff-0847"
+plan_task_id: "P13-T01"
+source_role_id: "process-integrity-auditor"
+source_role_version: "0.1.0"
+source_execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260723-018"
+summary: "Generation 88 completed the bounded P13-T01 local burn-in with all 11 fixed fixtures and five representative planner-selection families matching, 98 focused tests passing, zero unexplained hard mismatches, complete candidate adapter coverage, and rollback controls retained. Live cutover remains precisely blocked by ten missing current-head evidence classes, so the manifest stays shadow_planner with legacy authority."
+next_action: "Run the one authorized governed checkpoint for AJ-RT-20260723-018-001. After commit, route the independent dependency-ready P13-T03 packaging task through improve-project-system; keep P13-T02 blocked and do not reopen P13-T01 without explicit publication authority plus matched current-head hosted-CI and scheduled-full evidence."
+current_claim_boundary: "CB-V21-P13-T01-VALIDATION-PLANNER-CUTOVER-AUDIT-001"
+loop_risk_route: "route_independent_p13_t03_while_p13_t01_cutover_remains_held_v1"
+
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260723-018"
+  latest_research_handoff_id: "handoff-0848"
+  latest_research_next_action: "Run the one authorized governed checkpoint for AJ-RT-20260723-018-001. After commit, route the independent dependency-ready P13-T03 packaging task through improve-project-system; keep P13-T02 blocked and do not reopen P13-T01 without explicit publication authority plus matched current-head hosted-CI and scheduled-full evidence."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+
+claim_boundary:
+  allowed_next_scope: "One governed checkpoint may commit the evidence-only P13-T01 transaction. After commit, one fresh bounded P13-T03 improve-project-system frame may implement the independent packaging and dependency contract. P13-T02 remains blocked and P13-T01 may reopen only after explicit publication authority plus matched current-head hosted-CI and scheduled-full evidence."
+  completed_audit_task: "RT-20260723-018"
+  completed_audit_completion_path: "research_control/tasks/RT-20260723-018/jobs/completions/AJC-AJ-RT-20260723-018-001.yaml"
+  completed_audit_completion_sha256: "0a99a53f681dd965cc12117ebfc5e38815a777f365830fee31fc961960b46956"
+  equivalence_corpus_path: "research_control/tasks/RT-20260723-018/artifacts/p13_t01_validation_planner_equivalence_corpus.json"
+  equivalence_corpus_sha256: "0d0ea76d3f00d159fb34ddd4706d57c210e58e2ace4ac5a5610ff9f4e4f1a190"
+  mismatch_ledger_path: "research_control/tasks/RT-20260723-018/artifacts/p13_t01_mismatch_disposition_ledger.json"
+  mismatch_ledger_sha256: "e431b5bbe898c44d2834db2864f0c222161d4258610bdcbf9edac0b2fc992424"
+  cutover_decision_path: "research_control/tasks/RT-20260723-018/artifacts/p13_t01_cutover_decision.md"
+  cutover_decision_sha256: "2acce239f9c8a9d2b5e7df3d2f681afb64fd2db96e61e9cc456785e64e0f71b3"
+  compact_receipt_path: "research_control/tasks/RT-20260723-018/artifacts/p13_t01_compact_receipt.json"
+  compact_receipt_sha256: "4cb9c8f25dec79b3254446af4fb8245bd8e219e57c34a37a478f0fb52be97149"
+  result_status: "HOLD_LEGACY_REPAIR_REQUIRED"
+  fixed_fixture_count: 11
+  representative_change_family_count: 5
+  focused_test_count: 98
+  unexplained_hard_mismatch_count: 0
+  safety_failure_count: 0
+  evidence_gap_count: 10
+  live_manifest_migration_epoch: "shadow_planner"
+  live_manifest_execution_authority: "legacy"
+  live_authority_changed: false
+  legacy_authority_retained: true
+  p13_t02_dependency_ready: false
+  p13_t03_dependency_ready_after_checkpoint: true
+  push_performed: false
+  workflow_dispatch_performed: false
+  scientific_status_changed: false
+  distance_to_gr_delta_changed: false
+  ontology_adoption_authorized: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  blocked_claims:
+    - "local equivalence PASS presented as live cutover authority"
+    - "P13-T02 executed while current-head cutover evidence remains incomplete"
+    - "push publication or hosted-workflow authority inferred from this relay"
+    - "validation evidence presented as scientific evidence theorem truth or Distance-to-GR progress"
+    - "canonical ontology source-law scientific-ledger or Distance-to-GR edit"
+    - "benchmark promotion proof authority Gate Chair verdict completed derivation or global no-go"
+
+plan_result:
+  plan_task_id: "P13-T01"
+  title: "Complete validation-planner equivalence burn-in and cutover decision"
+  recommendation_ids:
+    - "V21-R54"
+  result_status: "HOLD_LEGACY_REPAIR_REQUIRED"
+  work_item_status: "precisely_blocked"
+  cutover_authorized: false
+  local_burn_in_status: "PASS"
+  legacy_authority_retained: true
+  checkpoint_invocation_count: 0
+  checkpoint_committed: false
+  legacy_validation_used: false
+  p13_t02_dependency_ready: false
+  p13_t03_dependency_ready_after_checkpoint: true
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+distance_to_gr:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "none"
+  milestone: "source_equivalence_eqsrc"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "P13-T01 audits validation orchestration only and provides no scientific or derivational evidence."
+  downstream_unlocked:
+    - "P13-T03_after_governed_checkpoint"
+  downstream_still_blocked:
+    - "P13-T02_until_p13_t01_cutover_evidence_complete"
+    - "source_ontology_derivation"
+    - "general_eqsrc"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+    - "benchmark_promotion"
+    - "external_publication"
+
+required_next_packet:
+  task_type: "reproducible_packaging_and_dependency_contract"
+  plan_task_id: "P13-T03"
+  objective: "Create one reproducible packaging and dependency contract for scripts, tests, validators, and proof tools."
+  dependency_ready_after_checkpoint: true
+  executed: false
+
+selected_next_route:
+  route_id: "route_independent_p13_t03_while_p13_t01_cutover_remains_held_v1"
+  route_label: "ordinary-research-packet"
+  role_family: "validator-engineer@0.2.0"
+  worker_skill: "improve-project-system"
+  plan_task_id: "P13-T03"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Reduce environment drift and bootstrap ambiguity."
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  physics_promotion_authorized: false
+  executed: false
+  next_action: "After checkpoint commit, route one bounded P13-T03 improve-project-system frame under the existing v21 scope and claim boundaries."
+  source_handoff: "research_control/handoffs/handoff-0848.yaml"
+
+ordinary_route_guard:
+  schema_id: "ordinary_route_guard_evaluation_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  evaluation_id: "ORE-HANDOFF-0848"
+  ordinary_handoff_id: "handoff-0848"
+  threshold: 3
+  consecutive_project_system_tasks_before_selection: 5
+  ready_science_plan_task_ids:
+    - "P4-T05"
+  selected_plan_task_id: "P13-T03"
+  selected_route_class: "project_system"
+  selected_worker_skill: "improve-project-system"
+  outcome: "all_ready_science_blocked_exception"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  exception_receipt:
+    active: true
+    schema_id: "ordinary_route_exception_receipt_v1"
+    exception_id: "ORE-HANDOFF-0848-EXCEPTION-001"
+    exception_class: "all_ready_science_blocked"
+    ordinary_handoff_id: "handoff-0848"
+    ready_science_plan_task_ids:
+      - "P4-T05"
+    blocked_routes:
+      - plan_task_id: "P4-T05"
+        failure_class: "human_gate_required"
+        evidence_path: "research_control/design/v21_recommendation_backlog.yaml"
+        evidence_sha256: "849a4e8dfe848e80bc0c8236252b924e636e5c95ac1a090478a69f7f5377559f"
+        reason: "P4-T05 remains dependency-ready but requires explicit human Gate Chair authority that this relay does not possess."
+    authority_limits:
+      ordinary_research_handoff_authoritative: true
+      project_system_sidecar_supersedes: false
+      system_success_counts_as_physics: false
+      system_success_counts_as_distance_to_gr: false
+      scientific_status_changed: false
+      physics_promotion_authorized: false
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 88 was validated claimed and consumed exactly once before its one routed improve-project-system invocation."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "All 11 fixed fixtures and five representative selection families match with zero unexplained hard mismatches."
+      - "The compact receipt binds the source hashes result counts and authority boundary."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "The task-local validator and 98-test focused equivalence and rollback shard pass."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "One normal governed checkpoint remains required before P13-T03."
+  renderer:
+    status: "PENDING"
+    evidence:
+      - "Task index current frontier and compact frontier will be rendered from finalized control sources before checkpoint."
+  memory_bootstrap:
+    status: "PENDING"
+    evidence:
+      - "Tracked memory synchronization and validate-only remain required before checkpoint."
+  claim_language_linter:
+    status: "PENDING"
+    evidence:
+      - "Changed-source claim-language validation remains required on the finalized tree."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  push_authorized: false
+  publication_authorized: false
+  proof_authority: false
+
+three_tier_claim_summary:
+  adopted_objects: []
+  accepted_evidence_preconditions:
+    - "The fixed local validation equivalence corpus and representative planner-selection families match."
+    - "Rollback and non-negotiable gate preservation checks pass."
+  open_or_blocked_physical_targets:
+    - "source_ontology_derivation"
+    - "general_eqsrc"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+  forbidden_overread:
+    - "validation equivalence as scientific evidence or theorem truth"
+    - "local burn-in PASS as live cutover authority"
+    - "checkpoint PASS as publication or hosted-CI evidence"
+
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  sidecar_path: ""
+  recursive_goal_recovery_required: false
+  reason: "P13-T01 reached a precise external-evidence hold; the independent dependency-ready P13-T03 route remains available without crossing that boundary."
+
+handoff_authority_boundary:
+  this_handoff_authorizes: "One governed checkpoint for AJ-RT-20260723-018-001 and after commit Director consideration of one fresh bounded P13-T03 improve-project-system frame."
+  this_handoff_does_not_authorize:
+    - "P13-T02 while P13-T01 cutover evidence remains incomplete"
+    - "P13-T01 re-audit before explicit publication authority and matched current-head hosted-CI plus scheduled-full evidence"
+    - "validation implementation manifest workflow checkpoint or branch-protection mutation in generation 88"
+    - "push publication hosted-workflow dispatch or external-system mutation"
+    - "legacy rollback retirement"
+    - "canonical ontology source-law scientific-ledger or Distance-to-GR edit"
+    - "physics promotion benchmark promotion proof authority Gate Chair verdict completed derivation or global no-go"
+
+next_plan_task_id: "P13-T03"
+next_plan_task_execution_ready_after_checkpoint: true
+next_plan_task_executed: false
+notes: "P13-T01 local equivalence passes but live cutover remains precisely blocked. Legacy authority is retained; P13-T03 is the next independent included route after checkpoint."

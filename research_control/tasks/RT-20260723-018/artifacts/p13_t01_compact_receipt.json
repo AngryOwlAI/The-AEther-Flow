@@ -1,0 +1,52 @@
+{
+  "artifacts": {
+    "cutover_decision": {
+      "path": "research_control/tasks/RT-20260723-018/artifacts/p13_t01_cutover_decision.md",
+      "sha256": "2acce239f9c8a9d2b5e7df3d2f681afb64fd2db96e61e9cc456785e64e0f71b3"
+    },
+    "equivalence_corpus_results": {
+      "path": "research_control/tasks/RT-20260723-018/artifacts/p13_t01_validation_planner_equivalence_corpus.json",
+      "sha256": "0d0ea76d3f00d159fb34ddd4706d57c210e58e2ace4ac5a5610ff9f4e4f1a190"
+    },
+    "mismatch_disposition_ledger": {
+      "path": "research_control/tasks/RT-20260723-018/artifacts/p13_t01_mismatch_disposition_ledger.json",
+      "sha256": "e431b5bbe898c44d2834db2864f0c222161d4258610bdcbf9edac0b2fc992424"
+    }
+  },
+  "claim_boundary_summary": "Operational validation-planner equivalence and cutover readiness only; no scientific, ontology, benchmark, proof, Gate Chair, or publication authority.",
+  "evidence_gap_count": 10,
+  "fixed_fixture_count": 11,
+  "hard_mismatch_count": 0,
+  "job_id": "AJ-RT-20260723-018-001",
+  "live_legacy_authority_retained": true,
+  "physics_promotion_authorized": false,
+  "plan_task_id": "P13-T01",
+  "recommendation_ids": [
+    "V21-R54"
+  ],
+  "representative_family_count": 5,
+  "result_status": "HOLD_LEGACY_REPAIR_REQUIRED",
+  "safety_failure_count": 0,
+  "schema_id": "v21_p13_t01_compact_receipt_v1",
+  "source_hashes": {
+    "adapter_bindings_sha256": "583f1cae9a4a32800feb49d5361256213de66ad37c72f1bb68554beced73546f",
+    "checkpoint_sha256": "f4be0da0308f2d93768e9816d05c0576193f51a47d767dbeda2bdb271bf4319c",
+    "equivalence_test_sha256": "b0af0e098ccc8300f9a421bb6b71bf6059268b3ecb28464eb17962990d536825",
+    "implementation_plan_sha256": "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087",
+    "manifest_sha256": "0e757d206b2529a00a2e60cc2b725ab4b10188321a14c75e885cce429de23842",
+    "migration_policy_sha256": "54f0103a73fe0239b43d2d014ef31075d3115b7572c00fd9adb03a1362eea7e0",
+    "project_control_workflow_sha256": "6529469894198a7edb5eb3003d56d150859ec5be9bbf1781b416df26ad475eab",
+    "recommendation_backlog_sha256": "849a4e8dfe848e80bc0c8236252b924e636e5c95ac1a090478a69f7f5377559f",
+    "scheduled_full_workflow_sha256": "3e6730babc97077555956d48a6995fa6ab5c17ea94928eac62b558aa9d0c04c5"
+  },
+  "status": "PASS",
+  "task_id": "RT-20260723-018",
+  "unexplained_hard_mismatch_count": 0,
+  "validator_ids": [
+    "validation_equivalence_fixed_corpus",
+    "validation_planner_representative_selection",
+    "checkpoint_planner_rollback_drill",
+    "current_head_hosted_ci_presence",
+    "non_negotiable_gate_preservation"
+  ]
+}

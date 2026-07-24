@@ -1,0 +1,323 @@
+validation_status: "PASS"
+job_id: "AJ-RT-20260723-018-001"
+completion_id: "AJC-AJ-RT-20260723-018-001"
+task_id: "RT-20260723-018"
+task_type: "project_system_validation_planner_equivalence_burn_in_and_cutover_decision"
+decision_id: "DDR-20260723-018"
+role_id: "process-integrity-auditor"
+source_role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260723-018"
+status: "completed"
+final_repository_validation_status: "PASS_CHECKPOINT_READY"
+created_at: "2026-07-24T03:08:35Z"
+started_at: "2026-07-24T03:08:35Z"
+completed_at: "2026-07-24T03:16:06Z"
+objective: "Compare legacy and planner validation on the fixed representative corpus and authorize cutover only after zero unexplained hard mismatches and complete current-head authority evidence."
+completion_summary: "P13-T01 completed the fixed local validation-planner burn-in. All 11 corpus fixtures and five representative planner-selection families match, 98 focused equivalence and rollback tests pass, candidate adapter coverage is complete, and zero unexplained hard mismatches remain. Live cutover is held because the manifest remains shadow_planner with legacy authority, the current head is not published on origin/main, no current-head hosted-CI run exists, and planner CI jobs remain advisory."
+objective_result: "p13_t01_local_equivalence_pass_live_cutover_hold_legacy_authority_retained"
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 88
+  passes_consumed: 83
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:88"
+  handoff_token: "5031fda479f85ee0812059448e0fb170c7585a0a6a6fb01e"
+  relay_claim_token: "4ba0180e34bb30d01ff04b576bfa436ed1145aa254134a46"
+  immutable_route_hash: "5d0d201317b3f54b39e9350ae70f9cef29d1b893f52f273b1763d1a9fb8b525e"
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+
+transaction_status: "completed_checkpoint_ready"
+result_disposition: "hold_legacy_repair_required_current_head_hosted_ci_evidence_absent"
+work_item_status: "precisely_blocked"
+plan_task_id: "P13-T01"
+recommendation_ids:
+  - "V21-R54"
+checkpoint_commit: "none_checkpoint_pending"
+checkpoint_invocation_count: 0
+checkpoint_staged: false
+legacy_validation_used: false
+project_system_change_only: true
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS_CHECKPOINT_READY"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  observed_durable_outputs:
+    physics: []
+    project_system:
+      - "research_control/tasks/RT-20260723-018/artifacts/p13_t01_validation_planner_equivalence_corpus.json"
+      - "research_control/tasks/RT-20260723-018/artifacts/p13_t01_mismatch_disposition_ledger.json"
+      - "research_control/tasks/RT-20260723-018/artifacts/p13_t01_cutover_decision.md"
+      - "research_control/tasks/RT-20260723-018/artifacts/p13_t01_compact_receipt.json"
+  accepted_criteria:
+    physics: []
+    project_system:
+      - "zero unexplained hard mismatches on the fixed corpus"
+      - "rollback drill passes"
+      - "non-negotiable gates remain present"
+      - "cutover or hold decision exists"
+      - "legacy remains authoritative when current-head evidence is incomplete"
+      - "one governed checkpoint commits without legacy validation"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+physics_payload_admission_result:
+  status: "admitted"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+
+ordinary_route_guard_admission_result:
+  status: "PASS"
+  source_handoff_id: "handoff-0847"
+  selected_plan_task_id: "P13-T01"
+  guard_outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  system_success_counts_as_physics: false
+  system_success_counts_as_distance_to_gr: false
+
+artifacts:
+  - "research_control/tasks/RT-20260723-018/artifacts/validate_p13_t01_planner_cutover.py"
+  - "research_control/tasks/RT-20260723-018/artifacts/p13_t01_validation_planner_equivalence_corpus.json"
+  - "research_control/tasks/RT-20260723-018/artifacts/p13_t01_mismatch_disposition_ledger.json"
+  - "research_control/tasks/RT-20260723-018/artifacts/p13_t01_cutover_decision.md"
+  - "research_control/tasks/RT-20260723-018/artifacts/p13_t01_compact_receipt.json"
+output_paths:
+  - "research_control/tasks/RT-20260723-018/**"
+  - "research_control/handoffs/handoff-0848.yaml"
+  - "research_control/handoffs/handoff-0848.md"
+  - "research_control/program_state.yaml"
+artifact_receipts:
+  - path: "research_control/tasks/RT-20260723-018/artifacts/validate_p13_t01_planner_cutover.py"
+    sha256: "b01b216a03cff50a43c29c1575489b8a2f2b5169efa4eb0aa9570cb9d7fb3fb6"
+  - path: "research_control/tasks/RT-20260723-018/artifacts/p13_t01_validation_planner_equivalence_corpus.json"
+    sha256: "0d0ea76d3f00d159fb34ddd4706d57c210e58e2ace4ac5a5610ff9f4e4f1a190"
+  - path: "research_control/tasks/RT-20260723-018/artifacts/p13_t01_mismatch_disposition_ledger.json"
+    sha256: "e431b5bbe898c44d2834db2864f0c222161d4258610bdcbf9edac0b2fc992424"
+  - path: "research_control/tasks/RT-20260723-018/artifacts/p13_t01_cutover_decision.md"
+    sha256: "2acce239f9c8a9d2b5e7df3d2f681afb64fd2db96e61e9cc456785e64e0f71b3"
+  - path: "research_control/tasks/RT-20260723-018/artifacts/p13_t01_compact_receipt.json"
+    sha256: "4cb9c8f25dec79b3254446af4fb8245bd8e219e57c34a37a478f0fb52be97149"
+
+p13_t01_result:
+  verdict: "HOLD_LEGACY_REPAIR_REQUIRED"
+  fixed_fixture_count: 11
+  representative_change_family_count: 5
+  focused_test_count: 98
+  hard_mismatch_count: 0
+  unexplained_hard_mismatch_count: 0
+  safety_failure_count: 0
+  evidence_gap_count: 10
+  candidate_full_gate_count: 25
+  candidate_missing_binding_count: 0
+  candidate_missing_non_negotiable_gate_count: 0
+  rollback_drill_status: "PASS"
+  live_manifest_migration_epoch: "shadow_planner"
+  live_manifest_execution_authority: "legacy"
+  current_head: "80b0566d63f1d0b7ed0578f94ac0000f4e296502"
+  origin_main: "e43eb709ce8e85a5e41445c59119de1053f64636"
+  current_head_published_on_origin_main: false
+  matched_current_head_hosted_ci_run_count: 0
+  planner_ci_advisory: true
+  cutover_authorized: false
+  live_authority_changed: false
+  legacy_authority_retained: true
+  push_performed: false
+  workflow_dispatch_performed: false
+
+command_results:
+  - ".venv/bin/python research_control/tasks/RT-20260723-018/artifacts/validate_p13_t01_planner_cutover.py --write-report --json | exit_code=0 | HOLD_LEGACY_REPAIR_REQUIRED with zero hard mismatches and ten evidence gaps"
+  - ".venv/bin/python -m unittest -v tests.test_validation_equivalence tests.test_checkpoint_validation_planner tests.test_validation_profiles tests.test_validation_precheck tests.test_staged_validation tests.test_ci_validation_plan tests.test_validation_executor tests.test_validation_orchestration | exit_code=0 | 98 tests PASS in 6.321 seconds"
+  - "gh run list --commit 80b0566d63f1d0b7ed0578f94ac0000f4e296502 --limit 20 --json databaseId,workflowName,status,conclusion,headSha,url | exit_code=0 | zero current-head runs"
+
+validation_summary:
+  status: "PASS_CHECKPOINT_READY"
+  passing_gates:
+    - "11 of 11 fixed corpus fixtures match"
+    - "five of five representative planner-selection families match"
+    - "zero unexplained hard mismatches"
+    - "98 focused equivalence and rollback tests"
+    - "25 candidate full gates with complete adapter coverage"
+    - "all named non-negotiable gates retained"
+    - "checkpoint compare mode and explicit legacy rollback switch retained"
+    - "scheduled full workflow retained"
+  pending_gates:
+    - "one governed checkpoint"
+  checkpoint:
+    invoked: false
+    invocation_count: 0
+    reason: "One governed checkpoint remains authorized after all precheckpoint gates pass."
+  staging:
+    attempted: false
+    index_changed: false
+  commit:
+    created: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 88 route lease repository branch clean-manifest reasoning and P0-T05 dependency parity passed before one claim and consume."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The fixed corpus and representative selection comparisons contain zero hard mismatches."
+      - "The compact receipt binds all required output and source hashes."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "The task-local audit and 98-test focused burn-in pass with no safety failure."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "One governed checkpoint is authorized and has not yet been invoked."
+  renderer:
+    status: "PENDING"
+    evidence:
+      - "Task index, current frontier, compact frontier, and memory derivatives remain to be rendered from finalized control sources."
+  memory_bootstrap:
+    status: "PENDING"
+    evidence:
+      - "Tracked memory synchronization and validate-only remain required before checkpoint."
+  claim_language_linter:
+    status: "PENDING"
+    evidence:
+      - "Changed-source claim-language validation remains required on the finalized tree."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  push_authorized: false
+  publication_authorized: false
+  proof_authority: false
+
+three_tier_claim_summary:
+  adopted_objects: []
+  accepted_evidence_preconditions:
+    - "The fixed component corpus and representative selection families match locally."
+    - "Rollback and non-negotiable gate preservation checks pass."
+  open_or_blocked_physical_targets:
+    - "source_ontology_derivation"
+    - "general_eqsrc"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+  forbidden_overread:
+    - "validation equivalence as scientific evidence or theorem truth"
+    - "local burn-in PASS as live cutover authority"
+    - "checkpoint PASS as publication or hosted-CI evidence"
+
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "none"
+  milestone: "source_equivalence_eqsrc"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "P13-T01 audits project-system validation orchestration only."
+  downstream_unlocked: []
+  downstream_still_blocked:
+    - "P13-T02_until_p13_t01_cutover_evidence_complete"
+    - "source_ontology_derivation"
+    - "general_eqsrc"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+    - "benchmark_promotion"
+    - "external_publication"
+
+resolved_project_improvement_signals: []
+project_improvement_signals: []
+project_improvement_sidecar_created: false
+project_improvement_bridge:
+  required: false
+  sidecar_path: ""
+  recursive_goal_recovery_required: false
+  reason: "The task reached a precise external-evidence hold rather than discovering a project-system implementation defect."
+
+selected_next_route:
+  route_id: "route_independent_p13_t03_while_p13_t01_cutover_remains_held_v1"
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  phase_id: "P13"
+  plan_task_id: "P13-T03"
+  task_name: "Adopt pyproject packaging and a locked dependency environment"
+  role_family: "validator-engineer@0.2.0"
+  worker_skill: "improve-project-system"
+  task_type: "reproducible_packaging_and_dependency_contract"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Reduce environment drift and bootstrap ambiguity."
+  requires_human_gate: false
+  dependency_independent_of_p13_t01: true
+  p13_t02_remains_blocked: true
+  p13_t01_reopening_criteria: "Explicit user authority to publish the exact checkpoint followed by matched current-head hosted CI and scheduled-full evidence."
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1002
+    relationship_row_count: 4960
+    semantic_row_count: 1002
+    vault_row_count: 1002
+    local_cache_only_warning_count: 0
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  authority_note: "Generated wiki, Obsidian, SQLite, semantic, and .local retrieval outputs were navigation layers only and are not authority."
+
+forbidden_conclusion_summary: "This packet does not make the planner authoritative, change validation defaults or workflows, retire legacy rollback, perform a push or hosted workflow dispatch, create publication authority, alter scientific status or Distance-to-GR, adopt ontology or a source law, promote a benchmark, issue a Gate Chair verdict, prove a theorem, or complete the derivation."
+verdict: "p13_t01_local_equivalence_pass_live_cutover_hold_legacy_authority_retained"
+coherent_resolution_summary: "Local equivalence and rollback evidence passes with zero hard mismatches, but live cutover remains precisely blocked by absent exact-current-head publication and hosted-CI evidence; legacy authority is retained."

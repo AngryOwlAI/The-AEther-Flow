@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260723-014`
-- Latest handoff: `handoff-0847`
-- Current status: `p12_t05_folder_map_documentation_impact_recovery_pass_checkpoint_ready_signal_resolved_p13_t01_unexecuted`
+- Active task: `RT-20260723-018`
+- Latest handoff: `handoff-0848`
+- Current status: `p13_t01_local_equivalence_pass_live_cutover_hold_legacy_authority_retained_p13_t03_next`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260723-014`
-- Latest research handoff: `handoff-0847`
-- Latest research next action: Run the one authorized governed checkpoint for AJ-RT-20260723-014-001. After commit, process PIS-RT-20260723-013-001 in one separate improve-project-system packet before P13-T01.
+- Latest research task: `RT-20260723-018`
+- Latest research handoff: `handoff-0848`
+- Latest research next action: Run the one authorized governed checkpoint for AJ-RT-20260723-018-001. After commit, route the independent dependency-ready P13-T03 packaging task through improve-project-system; keep P13-T02 blocked and do not reopen P13-T01 without explicit publication authority plus matched current-head hosted-CI and scheduled-full evidence.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `p13_t01_validation_planner_equivalence_burn_in_v1`
-- Role family: `process-integrity-auditor@0.1.0`
+- Route ID: `route_independent_p13_t03_while_p13_t01_cutover_remains_held_v1`
+- Role family: `validator-engineer@0.2.0`
 - Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Compare legacy and planner validation on a fixed representative corpus without promoting physics.
+- Milestone burden: Reduce environment drift and bootstrap ambiguity.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `ac99eda4bf5ca8c2be88ba357755da9ad814d6159037d054dfd912bc17541e92`
-- JSON SHA-256: `5215d0bb391593c51169145cd55687c729059ea18e3ca472bd4a63c2c1e02c32`
+- YAML SHA-256: `ed575a83623d965d3c674b839ff03edbaee62d5407dbc77f0162052f327d75c4`
+- JSON SHA-256: `bfe60cd37e6158b1ba690f802c9a369bce5298c6dfb85ff8fae876b1cdb667ad`
 
 ## Authority Warning
 

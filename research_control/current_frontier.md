@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260723-014` and `handoff-0847`.
+`RT-20260723-018` and `handoff-0848`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260723-014` |
-| Latest handoff ID | `handoff-0847` |
-| Current status | `p12_t05_folder_map_documentation_impact_recovery_pass_checkpoint_ready_signal_resolved_p13_t01_unexecuted` |
+| Active task ID | `RT-20260723-018` |
+| Latest handoff ID | `handoff-0848` |
+| Current status | `p13_t01_local_equivalence_pass_live_cutover_hold_legacy_authority_retained_p13_t03_next` |
 | V16 completed | false |
-| Current route family | benchmark or recovery (project system) |
-| Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden is p12 t05 generated artifact source integrity reseal |
-| Required next authority | One governed checkpoint may commit the cumulative P12-T07 transaction. Only after that commit may one separate improve-project-system packet resolve PIS-RT-20260723-013-001 by resealing the exact P12-T05 generated outputs and downstream hashes without changing metric semantics; P13-T01 remains the normal included continuation after that prerequisite. |
-| Next recommended action | Run the one authorized governed checkpoint for AJ-RT-20260723-014-001. After commit, process PIS-RT-20260723-013-001 in one separate improve-project-system packet before P13-T01. |
+| Current route family | integration or selection (project system) |
+| Target derivation milestone | `source_equivalence_eqsrc` |
+| Current burden | none for physics derivation; live control burden is reproducible packaging and dependency contract |
+| Required next authority | One governed checkpoint may commit the evidence-only P13-T01 transaction. After commit, one fresh bounded P13-T03 improve-project-system frame may implement the independent packaging and dependency contract. P13-T02 remains blocked and P13-T01 may reopen only after explicit publication authority plus matched current-head hosted-CI and scheduled-full evidence. |
+| Next recommended action | Run the one authorized governed checkpoint for AJ-RT-20260723-018-001. After commit, route the independent dependency-ready P13-T03 packaging task through improve-project-system; keep P13-T02 blocked and do not reopen P13-T01 without explicit publication authority plus matched current-head hosted-CI and scheduled-full evidence. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260723-014` |
-| Latest research handoff ID | `handoff-0847` |
-| Latest research next action | Run the one authorized governed checkpoint for AJ-RT-20260723-014-001. After commit, process PIS-RT-20260723-013-001 in one separate improve-project-system packet before P13-T01. |
+| Latest research task ID | `RT-20260723-018` |
+| Latest research handoff ID | `handoff-0848` |
+| Latest research next action | Run the one authorized governed checkpoint for AJ-RT-20260723-018-001. After commit, route the independent dependency-ready P13-T03 packaging task through improve-project-system; keep P13-T02 blocked and do not reopen P13-T01 without explicit publication authority plus matched current-head hosted-CI and scheduled-full evidence. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260723-014/00_TASK.yaml`.
-- Active task objective: Make the resolver skill-contract test supply an explicit empty open-signal set, preserve the two intentional live-signal precedence regressions and the complete P12-T07 transaction, and prepare the cumulative transaction for one normal governed checkpoint.
-- Latest handoff path: `research_control/handoffs/handoff-0847.yaml`.
-- Latest handoff summary: Generation 82 isolated the resolver skill-contract no-signal fixture with one explicit empty open-signal set. The fixture's boundary assertions and resolver implementation are unchanged, both intentional live-signal regressions still pass, the full 63-test classifier module passes, and all 21 protected P12-T07 payload handoff and signal-sidecar paths retain their routed hashes. Only the predecessor documentation-impact receipt was synchronized for the cumulative gate. The transaction is ready for one governed checkpoint.
-- Current route family: benchmark or recovery (project system).
-- Next recommended action: Run the one authorized governed checkpoint for AJ-RT-20260723-014-001. After commit, process PIS-RT-20260723-013-001 in one separate improve-project-system packet before P13-T01.
+- Active task path: `research_control/tasks/RT-20260723-018/00_TASK.yaml`.
+- Active task objective: Compare legacy and planner validation on the fixed representative corpus, investigate every hard mismatch, verify rollback and non-negotiable gates, and authorize live cutover only if every required evidence class is complete.
+- Latest handoff path: `research_control/handoffs/handoff-0848.yaml`.
+- Latest handoff summary: Generation 88 completed the bounded P13-T01 local burn-in with all 11 fixed fixtures and five representative planner-selection families matching, 98 focused tests passing, zero unexplained hard mismatches, complete candidate adapter coverage, and rollback controls retained. Live cutover remains precisely blocked by ten missing current-head evidence classes, so the manifest stays shadow_planner with legacy authority.
+- Current route family: integration or selection (project system).
+- Next recommended action: Run the one authorized governed checkpoint for AJ-RT-20260723-018-001. After commit, route the independent dependency-ready P13-T03 packaging task through improve-project-system; keep P13-T02 blocked and do not reopen P13-T01 without explicit publication authority plus matched current-head hosted-CI and scheduled-full evidence.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -88,23 +88,17 @@ Adopted source-only or source-extension objects:
 
 Scoped accepted evidence/preconditions:
 
-| Evidence or precondition | Status | Supports target | Does not establish | Authority |
-| --- | --- | --- | --- | --- |
-| matter_coupling burden evidence/preconditions | accepted only as scoped source-extension evidence/precondition | matter-semantics and matter-coupling continuation only | no_source_law_adoption<br>no_metricdata_e_adoption<br>no_geff_scope_expansion<br>no_coupling_law_adoption<br>no_matter_coupling_derivation<br>no_matter_coupling_adoption<br>no_stress_energy_semantics<br>no_stress_energy_tensor<br>no_matter_action<br>no_detector_semantics<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation<br>no_future_source_extension_impossibility<br>no_global_theory_rejection | `research_control/tasks/RT-20260702-064/artifacts/source_certificate_operation_laws_v1.tex` |
+No accepted evidence or precondition entries are listed.
 
 Open or blocked physical targets:
 
-| Physical target | Status | Missing burden or authority | Evidence not to overread | Next lawful route or evidence |
-| --- | --- | --- | --- | --- |
-| matter_coupling | accepted_as_scoped_evidence_precondition | PositiveMSProfile_v1 RR_ETransportCompletenessOrInvarianceLaw_v1 NarrowMSCertEq_v1 SourceCertificateAlgebraPrimitives_v1 and SourceCertificateOperationLaws_v1 are accepted or drafted only as scoped source-extension evidence/preconditions evidence-status draft/control certificate primitives or draft/control operation-law support under declared source-side and fail-closed scope while no source-law adoption no RR_ETransportCompletenessOrInvarianceLaw_v1 adoption no PositiveMSProfile_v1 adoption no SourceMatterSemanticsAdoptionReadinessLaw_v1 law adoption no source-extension data adoption beyond exact scoped gate result no matter-semantics adoption no detector-semantics adoption no coupling-law adoption no matter-coupling derivation no stress-energy semantics no matter action no MetricData(E) adoption no g_eff scope expansion no Einstein-equation premise no benchmark fit and no downstream promotion occurred | no_source_law_adoption<br>no_metricdata_e_adoption<br>no_geff_scope_expansion<br>no_coupling_law_adoption<br>no_matter_coupling_derivation<br>no_matter_coupling_adoption<br>no_stress_energy_semantics<br>no_stress_energy_tensor<br>no_matter_action<br>no_detector_semantics<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation<br>no_future_source_extension_impossibility<br>no_global_theory_rejection | research_control/tasks/RT-20260702-064/artifacts/source_certificate_operation_laws_v1.tex |
-| einstein_equations | not_started | dynamics action or variation | no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | research_control/program_state.yaml |
-| benchmark_promotion | blocked | all upstream derivation burdens | no_benchmark_promotion<br>no_benchmark_gate_chair_closure<br>no_completed_derivation | research_control/program_state.yaml |
+No open or blocked physical target entries are listed.
 
 Forbidden overreads:
 
-- three-tier summary as physics proof
-- accepted evidence/preconditions as adopted objects
-- current-frontier rendering as downstream promotion
+- validation equivalence as scientific evidence or theorem truth
+- local burn-in PASS as live cutover authority
+- checkpoint PASS as publication or hosted-CI evidence
 
 ## Matter-Coupling Boundary
 
@@ -302,7 +296,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run the one authorized governed checkpoint for AJ-RT-20260723-014-001. After commit, process PIS-RT-20260723-013-001 in one separate improve-project-system packet before P13-T01.
+Run the one authorized governed checkpoint for AJ-RT-20260723-018-001. After commit, route the independent dependency-ready P13-T03 packaging task through improve-project-system; keep P13-T02 blocked and do not reopen P13-T01 without explicit publication authority plus matched current-head hosted-CI and scheduled-full evidence.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -327,13 +321,13 @@ Validation layers:
 
 | Validation layer | Status | Meaning | Evidence |
 | --- | --- | --- | --- |
-| `pre_execution` | PASS | receipt complete | Generation 82 was validated claimed and consumed exactly once before its one routed worker invocation. |
-| `completion_internal` | PASS | receipt complete | The task-local receipt binds the exact fixture repair and 21 protected predecessor payload handoff and sidecar hashes. |
-| `post_write` | PASS | receipt complete | Three focused regressions and the full 63-test project-change-classifier module pass. |
-| `post_checkpoint` | PENDING | open item; evidence must explain why | One normal governed checkpoint remains required before the existing signal sidecar may be processed. |
-| `renderer` | PENDING | open item; evidence must explain why | Task index current frontier and compact frontier must be rendered from finalized control sources before checkpoint. |
-| `memory_bootstrap` | PENDING | open item; evidence must explain why | Tracked memory derivatives must be synchronized and validate-only must pass before checkpoint. |
-| `claim_language_linter` | PENDING | open item; evidence must explain why | Changed-source claim-language validation remains required before checkpoint. |
+| `pre_execution` | PASS | receipt complete | Generation 88 was validated claimed and consumed exactly once before its one routed improve-project-system invocation. |
+| `completion_internal` | PASS | receipt complete | All 11 fixed fixtures and five representative selection families match with zero unexplained hard mismatches.<br>The compact receipt binds the source hashes result counts and authority boundary. |
+| `post_write` | PASS | receipt complete | The task-local validator and 98-test focused equivalence and rollback shard pass. |
+| `post_checkpoint` | PENDING | open item; evidence must explain why | One normal governed checkpoint remains required before P13-T03. |
+| `renderer` | PENDING | open item; evidence must explain why | Task index current frontier and compact frontier will be rendered from finalized control sources before checkpoint. |
+| `memory_bootstrap` | PENDING | open item; evidence must explain why | Tracked memory synchronization and validate-only remain required before checkpoint. |
+| `claim_language_linter` | PENDING | open item; evidence must explain why | Changed-source claim-language validation remains required on the finalized tree. |
 
 Authorization layers:
 
@@ -354,9 +348,9 @@ Authorization layers:
 
 Legacy compatibility records:
 
-- active task: `RT-20260723-014`;
-- latest handoff: `handoff-0847`;
-- current status: `p12_t05_folder_map_documentation_impact_recovery_pass_checkpoint_ready_signal_resolved_p13_t01_unexecuted`;
+- active task: `RT-20260723-018`;
+- latest handoff: `handoff-0848`;
+- current status: `p13_t01_local_equivalence_pass_live_cutover_hold_legacy_authority_retained_p13_t03_next`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -366,8 +360,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0847.yaml`
-- `research_control/tasks/RT-20260723-014/00_TASK.yaml`
+- `research_control/handoffs/handoff-0848.yaml`
+- `research_control/tasks/RT-20260723-018/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -383,7 +377,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0847*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0848*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

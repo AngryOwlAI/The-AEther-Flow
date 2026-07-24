@@ -1,0 +1,73 @@
+task_id: "RT-20260723-018"
+task_type: "project_system_validation_planner_equivalence_burn_in_and_cutover_decision"
+title: "Complete P13-T01 validation-planner equivalence burn-in and hold decision"
+task_taxonomy:
+  schema_id: "v21_task_taxonomy_v1"
+  work_kind: "integration_or_selection"
+  milestone: "source_equivalence_eqsrc"
+  candidate_family: "validation_planner_equivalence_burn_in"
+  result_kind: "implemented_and_validated_or_precisely_blocked"
+  authority: "project_control"
+  scope: "project_system"
+validation_status: "PASS"
+status: "blocked"
+created_at: "2026-07-24T03:08:35Z"
+updated_at: "2026-07-24T03:16:06Z"
+closed_at: "2026-07-24T03:16:06Z"
+parent_task_id: "RT-20260723-017"
+parent_handoff_id: "handoff-0847"
+supersedes_active_routing_task_id: "RT-20260723-017"
+current_decision_id: "DDR-20260723-018"
+current_job_id: "AJ-RT-20260723-018-001"
+role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260723-018"
+requires_human_gate: false
+human_authorization_note: "Generation 88 of the user-authorized recursive relay immutably routes exactly one improve-project-system frame to v21 P13-T01."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P13"
+  plan_task_id: "P13-T01"
+  recommendation_ids:
+    - "V21-R54"
+objective: "Compare legacy and planner validation on the fixed representative corpus, investigate every hard mismatch, verify rollback and non-negotiable gates, and authorize live cutover only if every required evidence class is complete."
+target_derivation_milestone: "source_equivalence_eqsrc"
+milestone_burden: "Finish the shadow-to-authoritative migration without weakening safeguards."
+route_label: "v21_p13_t01_validation_planner_equivalence_burn_in_and_cutover_decision"
+project_system_change_only: true
+dual_budget_category: "system_bearing"
+primary_budget: "project_system"
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+claim_boundary_id: "CB-V21-P13-T01-VALIDATION-PLANNER-CUTOVER-AUDIT-001"
+claim_boundary:
+  allowed_scope: "P13-T01 task-local equivalence corpus results, mismatch disposition ledger, cutover or hold decision, compact receipt, control records, generated derivatives, and one governed checkpoint."
+  source_handoff_id: "handoff-0847"
+  source_handoff_sha256: "7472af1b615b7c76405bcea2c63bc17490837c0412a58a61edfdd84690252dd2"
+  immutable_route_sha256: "5d0d201317b3f54b39e9350ae70f9cef29d1b893f52f273b1763d1a9fb8b525e"
+  fixed_corpus_path: "tests/fixtures/validation_equivalence/corpus.json"
+  live_execution_authority_changed: false
+  legacy_authority_retained: true
+  push_authorized: false
+  publication_authorized: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+documentation_impact_id: "DI-RT-20260723-018-001"
+completion_id: "AJC-AJ-RT-20260723-018-001"
+output_artifacts:
+  - "research_control/tasks/RT-20260723-018/artifacts/validate_p13_t01_planner_cutover.py"
+  - "research_control/tasks/RT-20260723-018/artifacts/p13_t01_validation_planner_equivalence_corpus.json"
+  - "research_control/tasks/RT-20260723-018/artifacts/p13_t01_mismatch_disposition_ledger.json"
+  - "research_control/tasks/RT-20260723-018/artifacts/p13_t01_cutover_decision.md"
+  - "research_control/tasks/RT-20260723-018/artifacts/p13_t01_compact_receipt.json"
+  - "research_control/tasks/RT-20260723-018/jobs/completions/AJC-AJ-RT-20260723-018-001.yaml"
+closure_status: "p13_t01_local_equivalence_pass_live_cutover_hold_legacy_authority_retained"
+summary: "P13-T01 completed its fixed local burn-in with 11 of 11 corpus fixtures and five representative change families matching, 98 focused tests passing, zero unexplained hard mismatches, and rollback controls retained. The work item is precisely blocked with ten missing current-head cutover evidence classes and legacy authority unchanged."
+next_recommended_action: "Preserve legacy execution authority and keep P13-T02 blocked. Continue the independent dependency-ready P13-T03 packaging task; P13-T01 may reopen only after the exact checkpoint is published with explicit user authority and matched current-head hosted CI plus scheduled-full evidence exists."
+project_improvement_signals: []
+notes: "The audit changes no validation implementation, manifest, workflow, checkpoint, scientific source, ledger, or external system."

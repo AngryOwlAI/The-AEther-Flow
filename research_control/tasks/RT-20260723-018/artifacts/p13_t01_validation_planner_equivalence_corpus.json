@@ -1,0 +1,835 @@
+{
+  "authority": {
+    "distance_to_gr_changed": false,
+    "operational_validation_only": true,
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "publication_authority": false,
+    "scientific_claims_changed": false,
+    "source_authority": false
+  },
+  "burn_in_window": {
+    "branch": "main",
+    "head": "80b0566d63f1d0b7ed0578f94ac0000f4e296502",
+    "head_published_on_origin_main": false,
+    "kind": "fixed_current_head_local_window",
+    "origin_main": "e43eb709ce8e85a5e41445c59119de1053f64636",
+    "tree_basis": "same repository checkout, Python environment, manifest, and fixed fixtures"
+  },
+  "cutover_decision": {
+    "cutover_authorized": false,
+    "evidence_gaps": [
+      "live_manifest_epoch_remains_shadow_planner",
+      "live_manifest_execution_authority_remains_legacy",
+      "current_head_is_not_published_on_origin_main",
+      "no_hosted_ci_run_for_current_head",
+      "no_scheduled_full_run_for_current_head",
+      "project_control_planner_jobs_remain_shadow_advisory",
+      "three_clean_current_head_shadow_transactions_not_recorded",
+      "affected_checkpoint_full_matched_execution_set_not_recorded",
+      "uncached_current_head_final_staged_tree_comparison_pending",
+      "current_head_safety_budget_receipt_not_recorded"
+    ],
+    "live_authority_changed": false,
+    "live_legacy_authority_retained": true,
+    "reopening_criteria": "Re-run one fresh bounded P13-T01 authority audit only after the exact candidate checkpoint is published with explicit user authority and matched current-head hosted CI plus scheduled-full evidence is available; do not infer publication authority from this relay.",
+    "safety_failures": [],
+    "summary": "The bounded local burn-in has zero unexplained hard mismatches and the rollback path passes, but live cutover evidence is incomplete. Legacy execution remains authoritative.",
+    "unexplained_hard_mismatch_count": 0,
+    "verdict": "HOLD_LEGACY_REPAIR_REQUIRED"
+  },
+  "fixed_component_corpus": {
+    "fixture_count": 11,
+    "hard_mismatch_count": 0,
+    "path": "tests/fixtures/validation_equivalence/corpus.json",
+    "results": [
+      {
+        "disposition": "matched_no_disposition_required",
+        "fixture_id": "clean_pass",
+        "hard_mismatch": false,
+        "legacy": {
+          "authority_fields": [],
+          "hard_finding_ids": [],
+          "selected_paths": [
+            "README.md"
+          ],
+          "status": "PASS",
+          "warning_finding_ids": []
+        },
+        "mismatch_fields": [],
+        "planner_candidate": {
+          "authority_fields": [],
+          "hard_finding_ids": [],
+          "selected_paths": [
+            "README.md"
+          ],
+          "status": "PASS",
+          "warning_finding_ids": []
+        }
+      },
+      {
+        "disposition": "matched_no_disposition_required",
+        "fixture_id": "malformed_registry",
+        "hard_mismatch": false,
+        "legacy": {
+          "authority_fields": [
+            {
+              "finding_id": "research_control_core:malformed_registry",
+              "severity": "blocking"
+            }
+          ],
+          "hard_finding_ids": [
+            "research_control_core:malformed_registry"
+          ],
+          "selected_paths": [],
+          "status": "FAIL",
+          "warning_finding_ids": []
+        },
+        "mismatch_fields": [],
+        "planner_candidate": {
+          "authority_fields": [
+            {
+              "finding_id": "research_control_core:malformed_registry",
+              "severity": "blocking"
+            }
+          ],
+          "hard_finding_ids": [
+            "research_control_core:malformed_registry"
+          ],
+          "selected_paths": [],
+          "status": "FAIL",
+          "warning_finding_ids": []
+        }
+      },
+      {
+        "disposition": "matched_no_disposition_required",
+        "fixture_id": "missing_active_agentjob",
+        "hard_mismatch": false,
+        "legacy": {
+          "authority_fields": [
+            {
+              "context": "surface_policy",
+              "finding_id": "claim_language_changed:einstein_equation_overclaim",
+              "finding_kind": "overclaim_hard_fail",
+              "severity": "hard_fail_current_public",
+              "surface_class": "current_public_surfaces"
+            },
+            {
+              "finding_id": "research_control_diff:missing_active_agentjob",
+              "severity": "blocking"
+            }
+          ],
+          "hard_finding_ids": [
+            "claim_language_changed:einstein_equation_overclaim",
+            "research_control_diff:missing_active_agentjob"
+          ],
+          "selected_paths": [
+            "README.md"
+          ],
+          "status": "FAIL",
+          "warning_finding_ids": []
+        },
+        "mismatch_fields": [],
+        "planner_candidate": {
+          "authority_fields": [
+            {
+              "context": "surface_policy",
+              "finding_id": "claim_language_changed:einstein_equation_overclaim",
+              "finding_kind": "overclaim_hard_fail",
+              "severity": "hard_fail_current_public",
+              "surface_class": "current_public_surfaces"
+            },
+            {
+              "finding_id": "research_control_diff:missing_active_agentjob",
+              "severity": "blocking"
+            }
+          ],
+          "hard_finding_ids": [
+            "claim_language_changed:einstein_equation_overclaim",
+            "research_control_diff:missing_active_agentjob"
+          ],
+          "selected_paths": [
+            "README.md"
+          ],
+          "status": "FAIL",
+          "warning_finding_ids": []
+        }
+      },
+      {
+        "disposition": "matched_no_disposition_required",
+        "fixture_id": "disallowed_path",
+        "hard_mismatch": false,
+        "legacy": {
+          "authority_fields": [
+            {
+              "finding_id": "research_control_diff:disallowed_path",
+              "severity": "blocking"
+            }
+          ],
+          "hard_finding_ids": [
+            "research_control_diff:disallowed_path"
+          ],
+          "selected_paths": [],
+          "status": "FAIL",
+          "warning_finding_ids": []
+        },
+        "mismatch_fields": [],
+        "planner_candidate": {
+          "authority_fields": [
+            {
+              "finding_id": "research_control_diff:disallowed_path",
+              "severity": "blocking"
+            }
+          ],
+          "hard_finding_ids": [
+            "research_control_diff:disallowed_path"
+          ],
+          "selected_paths": [],
+          "status": "FAIL",
+          "warning_finding_ids": []
+        }
+      },
+      {
+        "disposition": "matched_no_disposition_required",
+        "fixture_id": "overly_broad_allowlist",
+        "hard_mismatch": false,
+        "legacy": {
+          "authority_fields": [
+            {
+              "finding_id": "research_control_diff:overly_broad_allowlist",
+              "severity": "blocking"
+            }
+          ],
+          "hard_finding_ids": [
+            "research_control_diff:overly_broad_allowlist"
+          ],
+          "selected_paths": [],
+          "status": "FAIL",
+          "warning_finding_ids": []
+        },
+        "mismatch_fields": [],
+        "planner_candidate": {
+          "authority_fields": [
+            {
+              "finding_id": "research_control_diff:overly_broad_allowlist",
+              "severity": "blocking"
+            }
+          ],
+          "hard_finding_ids": [
+            "research_control_diff:overly_broad_allowlist"
+          ],
+          "selected_paths": [],
+          "status": "FAIL",
+          "warning_finding_ids": []
+        }
+      },
+      {
+        "disposition": "matched_no_disposition_required",
+        "fixture_id": "markdown_authority_violation",
+        "hard_mismatch": false,
+        "legacy": {
+          "authority_fields": [
+            {
+              "finding_id": "research_control_diff:markdown_authority_violation",
+              "severity": "blocking"
+            }
+          ],
+          "hard_finding_ids": [
+            "research_control_diff:markdown_authority_violation"
+          ],
+          "selected_paths": [
+            "README.md"
+          ],
+          "status": "FAIL",
+          "warning_finding_ids": []
+        },
+        "mismatch_fields": [],
+        "planner_candidate": {
+          "authority_fields": [
+            {
+              "finding_id": "research_control_diff:markdown_authority_violation",
+              "severity": "blocking"
+            }
+          ],
+          "hard_finding_ids": [
+            "research_control_diff:markdown_authority_violation"
+          ],
+          "selected_paths": [
+            "README.md"
+          ],
+          "status": "FAIL",
+          "warning_finding_ids": []
+        }
+      },
+      {
+        "disposition": "matched_no_disposition_required",
+        "fixture_id": "public_overclaim",
+        "hard_mismatch": false,
+        "legacy": {
+          "authority_fields": [
+            {
+              "context": "surface_policy",
+              "finding_id": "claim_language_changed:einstein_equation_overclaim",
+              "finding_kind": "overclaim_hard_fail",
+              "severity": "hard_fail_current_public",
+              "surface_class": "current_public_surfaces"
+            }
+          ],
+          "hard_finding_ids": [
+            "claim_language_changed:einstein_equation_overclaim"
+          ],
+          "selected_paths": [
+            "README.md"
+          ],
+          "status": "FAIL",
+          "warning_finding_ids": []
+        },
+        "mismatch_fields": [],
+        "planner_candidate": {
+          "authority_fields": [
+            {
+              "context": "surface_policy",
+              "finding_id": "claim_language_changed:einstein_equation_overclaim",
+              "finding_kind": "overclaim_hard_fail",
+              "severity": "hard_fail_current_public",
+              "surface_class": "current_public_surfaces"
+            }
+          ],
+          "hard_finding_ids": [
+            "claim_language_changed:einstein_equation_overclaim"
+          ],
+          "selected_paths": [
+            "README.md"
+          ],
+          "status": "FAIL",
+          "warning_finding_ids": []
+        }
+      },
+      {
+        "disposition": "matched_no_disposition_required",
+        "fixture_id": "reviewed_historical_warning",
+        "hard_mismatch": false,
+        "legacy": {
+          "authority_fields": [
+            {
+              "context": "historical_provenance",
+              "finding_id": "claim_language_changed:benchmark_overclaim",
+              "finding_kind": "overclaim_warning",
+              "severity": "warn_historical",
+              "surface_class": "historical_artifacts"
+            }
+          ],
+          "hard_finding_ids": [],
+          "selected_paths": [
+            "research_control/tasks/RT-LEGACY/artifacts/legacy_note.md"
+          ],
+          "status": "PASS",
+          "warning_finding_ids": [
+            "claim_language_changed:benchmark_overclaim"
+          ]
+        },
+        "mismatch_fields": [],
+        "planner_candidate": {
+          "authority_fields": [
+            {
+              "context": "historical_provenance",
+              "finding_id": "claim_language_changed:benchmark_overclaim",
+              "finding_kind": "overclaim_warning",
+              "severity": "warn_historical",
+              "surface_class": "historical_artifacts"
+            }
+          ],
+          "hard_finding_ids": [],
+          "selected_paths": [
+            "research_control/tasks/RT-LEGACY/artifacts/legacy_note.md"
+          ],
+          "status": "PASS",
+          "warning_finding_ids": [
+            "claim_language_changed:benchmark_overclaim"
+          ]
+        }
+      },
+      {
+        "disposition": "matched_no_disposition_required",
+        "fixture_id": "target_import",
+        "hard_mismatch": false,
+        "legacy": {
+          "authority_fields": [
+            {
+              "context": "surface_policy",
+              "finding_id": "claim_language_changed:source_certificate_overread",
+              "finding_kind": "overclaim_hard_fail",
+              "severity": "hard_fail_current_public",
+              "surface_class": "current_public_surfaces"
+            },
+            {
+              "context": "surface_policy",
+              "finding_id": "claim_language_changed:target_metric_used_as_source_certificate",
+              "finding_kind": "overclaim_hard_fail",
+              "severity": "hard_fail_current_public",
+              "surface_class": "current_public_surfaces"
+            }
+          ],
+          "hard_finding_ids": [
+            "claim_language_changed:source_certificate_overread",
+            "claim_language_changed:target_metric_used_as_source_certificate"
+          ],
+          "selected_paths": [
+            "README.md"
+          ],
+          "status": "FAIL",
+          "warning_finding_ids": []
+        },
+        "mismatch_fields": [],
+        "planner_candidate": {
+          "authority_fields": [
+            {
+              "context": "surface_policy",
+              "finding_id": "claim_language_changed:source_certificate_overread",
+              "finding_kind": "overclaim_hard_fail",
+              "severity": "hard_fail_current_public",
+              "surface_class": "current_public_surfaces"
+            },
+            {
+              "context": "surface_policy",
+              "finding_id": "claim_language_changed:target_metric_used_as_source_certificate",
+              "finding_kind": "overclaim_hard_fail",
+              "severity": "hard_fail_current_public",
+              "surface_class": "current_public_surfaces"
+            }
+          ],
+          "hard_finding_ids": [
+            "claim_language_changed:source_certificate_overread",
+            "claim_language_changed:target_metric_used_as_source_certificate"
+          ],
+          "selected_paths": [
+            "README.md"
+          ],
+          "status": "FAIL",
+          "warning_finding_ids": []
+        }
+      },
+      {
+        "disposition": "matched_no_disposition_required",
+        "fixture_id": "stale_sidecar",
+        "hard_mismatch": false,
+        "legacy": {
+          "authority_fields": [
+            {
+              "finding_id": "research_control_core:stale_sidecar",
+              "severity": "blocking"
+            }
+          ],
+          "hard_finding_ids": [
+            "research_control_core:stale_sidecar"
+          ],
+          "selected_paths": [],
+          "status": "FAIL",
+          "warning_finding_ids": []
+        },
+        "mismatch_fields": [],
+        "planner_candidate": {
+          "authority_fields": [
+            {
+              "finding_id": "research_control_core:stale_sidecar",
+              "severity": "blocking"
+            }
+          ],
+          "hard_finding_ids": [
+            "research_control_core:stale_sidecar"
+          ],
+          "selected_paths": [],
+          "status": "FAIL",
+          "warning_finding_ids": []
+        }
+      },
+      {
+        "disposition": "matched_no_disposition_required",
+        "fixture_id": "unrelated_path",
+        "hard_mismatch": false,
+        "legacy": {
+          "authority_fields": [
+            {
+              "finding_id": "research_control_diff:unrelated_path",
+              "severity": "blocking"
+            }
+          ],
+          "hard_finding_ids": [
+            "research_control_diff:unrelated_path"
+          ],
+          "selected_paths": [],
+          "status": "FAIL",
+          "warning_finding_ids": []
+        },
+        "mismatch_fields": [],
+        "planner_candidate": {
+          "authority_fields": [
+            {
+              "finding_id": "research_control_diff:unrelated_path",
+              "severity": "blocking"
+            }
+          ],
+          "hard_finding_ids": [
+            "research_control_diff:unrelated_path"
+          ],
+          "selected_paths": [],
+          "status": "FAIL",
+          "warning_finding_ids": []
+        }
+      }
+    ],
+    "sha256": "2764b50456afec0308aecd39bd24c1229b4d9241bd058ccbf5a66a27871829e7"
+  },
+  "hosted_ci": {
+    "matched_current_head_run_count": 0,
+    "query_receipt": {
+      "command": [
+        "gh",
+        "run",
+        "list",
+        "--commit",
+        "80b0566d63f1d0b7ed0578f94ac0000f4e296502",
+        "--limit",
+        "20",
+        "--json",
+        "databaseId,workflowName,status,conclusion,headSha,url"
+      ],
+      "duration_seconds": 0.598686,
+      "label": "current-head-ci",
+      "returncode": 0,
+      "status": "PASS",
+      "stderr": {
+        "bytes": 0,
+        "path": ".local/v21_p13_t01/current-head-ci.stderr.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 3,
+        "path": ".local/v21_p13_t01/current-head-ci.stdout.log",
+        "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      }
+    },
+    "runs": []
+  },
+  "job_id": "AJ-RT-20260723-018-001",
+  "observed_at": "2026-07-24T03:27:42Z",
+  "plan_task_id": "P13-T01",
+  "planner_candidate": {
+    "execution_authority": "manifest_planner",
+    "full_plan_gate_count": 25,
+    "full_plan_status": "READY",
+    "live_authority_changed": false,
+    "migration_epoch": "planner_authoritative",
+    "missing_binding_gate_ids": [],
+    "missing_non_negotiable_gate_ids": [],
+    "planner_executes_commands": true
+  },
+  "prior_evidence": {
+    "candidate_execution_binding": {
+      "observed_head": "b373c0c74f1649a0f1536a6337feb6d25b2c7f27",
+      "path": "research_control/tasks/RT-20260718-007/artifacts/planner_execution_binding_report.json",
+      "sha256": "9244c94c88c836efc0c2954123d5a487da50213fb11de1afc8da7911f3ecbf15",
+      "status": "PASS"
+    },
+    "hosted_ci_authority_boundary": {
+      "path": "research_control/tasks/RT-20260718-008/artifacts/planner_hosted_ci_authority_evidence.json",
+      "sha256": "ad5eea123cd5d1601008921adb4074a984630a0ac6db3e85380f3d4efad6814e",
+      "status": "BLOCKED_EXTERNAL_PUBLICATION_AUTHORITY"
+    }
+  },
+  "recommendation_ids": [
+    "V21-R54"
+  ],
+  "representative_change_families": {
+    "family_count": 5,
+    "hard_mismatch_count": 0,
+    "results": [
+      {
+        "disposition": "matched_no_disposition_required",
+        "family_id": "explanatory_markdown",
+        "hard_mismatch": false,
+        "legacy": {
+          "planner_executes_commands": false,
+          "selected_gate_ids": [
+            "classify_changes",
+            "resolve_project_improvement",
+            "documentation_impact",
+            "memory_sync",
+            "memory_core",
+            "spec_depth",
+            "research_control_diff",
+            "current_frontier_freshness",
+            "compact_frontier_freshness",
+            "claim_graph_validation",
+            "git_diff_check",
+            "continue_memory_preflight",
+            "mermaid_sources"
+          ],
+          "status": "READY"
+        },
+        "mismatch_fields": [],
+        "paths": [
+          "README.md"
+        ],
+        "planner_candidate": {
+          "planner_executes_commands": true,
+          "selected_gate_ids": [
+            "classify_changes",
+            "resolve_project_improvement",
+            "documentation_impact",
+            "memory_sync",
+            "memory_core",
+            "spec_depth",
+            "research_control_diff",
+            "current_frontier_freshness",
+            "compact_frontier_freshness",
+            "claim_graph_validation",
+            "git_diff_check",
+            "continue_memory_preflight",
+            "mermaid_sources"
+          ],
+          "status": "READY"
+        }
+      },
+      {
+        "disposition": "matched_no_disposition_required",
+        "family_id": "research_control_state",
+        "hard_mismatch": false,
+        "legacy": {
+          "planner_executes_commands": false,
+          "selected_gate_ids": [
+            "classify_changes",
+            "resolve_project_improvement",
+            "documentation_impact",
+            "memory_sync",
+            "memory_core",
+            "spec_depth",
+            "research_control_diff",
+            "current_frontier_freshness",
+            "compact_frontier_freshness",
+            "dependency_graph_freshness",
+            "claim_graph_validation",
+            "git_diff_check",
+            "continue_memory_preflight"
+          ],
+          "status": "READY"
+        },
+        "mismatch_fields": [],
+        "paths": [
+          "research_control/program_state.yaml"
+        ],
+        "planner_candidate": {
+          "planner_executes_commands": true,
+          "selected_gate_ids": [
+            "classify_changes",
+            "resolve_project_improvement",
+            "documentation_impact",
+            "memory_sync",
+            "memory_core",
+            "spec_depth",
+            "research_control_diff",
+            "current_frontier_freshness",
+            "compact_frontier_freshness",
+            "dependency_graph_freshness",
+            "claim_graph_validation",
+            "git_diff_check",
+            "continue_memory_preflight"
+          ],
+          "status": "READY"
+        }
+      },
+      {
+        "disposition": "matched_no_disposition_required",
+        "family_id": "canonical_registry",
+        "hard_mismatch": false,
+        "legacy": {
+          "planner_executes_commands": false,
+          "selected_gate_ids": [
+            "classify_changes",
+            "resolve_project_improvement",
+            "documentation_impact",
+            "memory_sync",
+            "memory_core",
+            "spec_depth",
+            "research_control_diff",
+            "current_frontier_freshness",
+            "compact_frontier_freshness",
+            "dependency_graph_freshness",
+            "task_index_freshness",
+            "claim_graph_validation",
+            "git_diff_check",
+            "continue_memory_preflight"
+          ],
+          "status": "READY"
+        },
+        "mismatch_fields": [],
+        "paths": [
+          "registries/AGENT_JOB_REGISTRY.csv"
+        ],
+        "planner_candidate": {
+          "planner_executes_commands": true,
+          "selected_gate_ids": [
+            "classify_changes",
+            "resolve_project_improvement",
+            "documentation_impact",
+            "memory_sync",
+            "memory_core",
+            "spec_depth",
+            "research_control_diff",
+            "current_frontier_freshness",
+            "compact_frontier_freshness",
+            "dependency_graph_freshness",
+            "task_index_freshness",
+            "claim_graph_validation",
+            "git_diff_check",
+            "continue_memory_preflight"
+          ],
+          "status": "READY"
+        }
+      },
+      {
+        "disposition": "matched_no_disposition_required",
+        "family_id": "validation_implementation",
+        "hard_mismatch": false,
+        "legacy": {
+          "planner_executes_commands": false,
+          "selected_gate_ids": [
+            "classify_changes",
+            "resolve_project_improvement",
+            "documentation_impact",
+            "memory_sync",
+            "memory_core",
+            "spec_depth",
+            "research_control_diff",
+            "current_frontier_freshness",
+            "compact_frontier_freshness",
+            "claim_graph_validation",
+            "route_signature_diagnostic",
+            "git_diff_check",
+            "continue_memory_preflight"
+          ],
+          "status": "READY"
+        },
+        "mismatch_fields": [],
+        "paths": [
+          "scripts/validation/cli.py"
+        ],
+        "planner_candidate": {
+          "planner_executes_commands": true,
+          "selected_gate_ids": [
+            "classify_changes",
+            "resolve_project_improvement",
+            "documentation_impact",
+            "memory_sync",
+            "memory_core",
+            "spec_depth",
+            "research_control_diff",
+            "current_frontier_freshness",
+            "compact_frontier_freshness",
+            "claim_graph_validation",
+            "route_signature_diagnostic",
+            "git_diff_check",
+            "continue_memory_preflight"
+          ],
+          "status": "READY"
+        }
+      },
+      {
+        "disposition": "matched_no_disposition_required",
+        "family_id": "validation_test",
+        "hard_mismatch": false,
+        "legacy": {
+          "planner_executes_commands": false,
+          "selected_gate_ids": [
+            "classify_changes",
+            "resolve_project_improvement",
+            "documentation_impact",
+            "memory_sync",
+            "memory_core",
+            "spec_depth",
+            "research_control_diff",
+            "current_frontier_freshness",
+            "compact_frontier_freshness",
+            "claim_graph_validation",
+            "route_signature_diagnostic",
+            "git_diff_check",
+            "continue_memory_preflight"
+          ],
+          "status": "READY"
+        },
+        "mismatch_fields": [],
+        "paths": [
+          "tests/test_validation_equivalence.py"
+        ],
+        "planner_candidate": {
+          "planner_executes_commands": true,
+          "selected_gate_ids": [
+            "classify_changes",
+            "resolve_project_improvement",
+            "documentation_impact",
+            "memory_sync",
+            "memory_core",
+            "spec_depth",
+            "research_control_diff",
+            "current_frontier_freshness",
+            "compact_frontier_freshness",
+            "claim_graph_validation",
+            "route_signature_diagnostic",
+            "git_diff_check",
+            "continue_memory_preflight"
+          ],
+          "status": "READY"
+        }
+      }
+    ]
+  },
+  "rollback_drill": {
+    "checkpoint_compare_default": true,
+    "explicit_legacy_switch": true,
+    "focused_test_receipt": {
+      "command": [
+        "/Volumes/P-SSD/AngryOwl/The-AEther-Flow/.venv/bin/python",
+        "-m",
+        "unittest",
+        "-v",
+        "tests.test_validation_equivalence",
+        "tests.test_checkpoint_validation_planner",
+        "tests.test_validation_profiles",
+        "tests.test_validation_precheck",
+        "tests.test_staged_validation",
+        "tests.test_ci_validation_plan",
+        "tests.test_validation_executor",
+        "tests.test_validation_orchestration"
+      ],
+      "duration_seconds": 6.414273,
+      "label": "focused-planner-burn-in",
+      "returncode": 0,
+      "status": "PASS",
+      "stderr": {
+        "bytes": 17767,
+        "path": ".local/v21_p13_t01/focused-planner-burn-in.stderr.log",
+        "sha256": "1aea5593c0bb5be4058e7dd06f663cef10e8f2fb620821d6c4331f9957b02213"
+      },
+      "stdout": {
+        "bytes": 654,
+        "path": ".local/v21_p13_t01/focused-planner-burn-in.stdout.log",
+        "sha256": "9bd8075f0efe6f952308a9228e6a2ca80485953377ba5f30ef51c1091b39bf22"
+      }
+    },
+    "scheduled_full_present": true,
+    "status": "PASS"
+  },
+  "schema_id": "v21_p13_t01_validation_planner_equivalence_corpus_v1",
+  "source_hashes": {
+    "adapter_bindings_sha256": "583f1cae9a4a32800feb49d5361256213de66ad37c72f1bb68554beced73546f",
+    "checkpoint_sha256": "f4be0da0308f2d93768e9816d05c0576193f51a47d767dbeda2bdb271bf4319c",
+    "equivalence_test_sha256": "b0af0e098ccc8300f9a421bb6b71bf6059268b3ecb28464eb17962990d536825",
+    "implementation_plan_sha256": "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087",
+    "manifest_sha256": "0e757d206b2529a00a2e60cc2b725ab4b10188321a14c75e885cce429de23842",
+    "migration_policy_sha256": "54f0103a73fe0239b43d2d014ef31075d3115b7572c00fd9adb03a1362eea7e0",
+    "project_control_workflow_sha256": "6529469894198a7edb5eb3003d56d150859ec5be9bbf1781b416df26ad475eab",
+    "recommendation_backlog_sha256": "849a4e8dfe848e80bc0c8236252b924e636e5c95ac1a090478a69f7f5377559f",
+    "scheduled_full_workflow_sha256": "3e6730babc97077555956d48a6995fa6ab5c17ea94928eac62b558aa9d0c04c5"
+  },
+  "task_id": "RT-20260723-018"
+}

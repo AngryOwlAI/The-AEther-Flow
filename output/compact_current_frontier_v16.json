@@ -2,7 +2,7 @@
   "schema_id": "compact_current_frontier_v16",
   "generated_from": [
     "research_control/program_state.yaml",
-    "research_control/handoffs/handoff-0847.yaml",
+    "research_control/handoffs/handoff-0848.yaml",
     "registries/DISTANCE_TO_GR_LEDGER.csv",
     "registries/METRIC_USE_LEDGER.csv",
     "research_control/current_frontier.md",
@@ -11,17 +11,17 @@
     "research_control/design/active_state_bifurcation_policy_v1.md"
   ],
   "active_state": {
-    "active_task_id": "RT-20260723-014",
-    "latest_handoff_id": "handoff-0847",
-    "current_status": "p12_t05_folder_map_documentation_impact_recovery_pass_checkpoint_ready_signal_resolved_p13_t01_unexecuted",
+    "active_task_id": "RT-20260723-018",
+    "latest_handoff_id": "handoff-0848",
+    "current_status": "p13_t01_local_equivalence_pass_live_cutover_hold_legacy_authority_retained_p13_t03_next",
     "v15_completed": false,
     "v16_completed": false,
     "v16_plan_registered": true
   },
   "active_state_bifurcation": {
-    "latest_research_task_id": "RT-20260723-014",
-    "latest_research_handoff_id": "handoff-0847",
-    "latest_research_next_action": "Run the one authorized governed checkpoint for AJ-RT-20260723-014-001. After commit, process PIS-RT-20260723-013-001 in one separate improve-project-system packet before P13-T01.",
+    "latest_research_task_id": "RT-20260723-018",
+    "latest_research_handoff_id": "handoff-0848",
+    "latest_research_next_action": "Run the one authorized governed checkpoint for AJ-RT-20260723-018-001. After commit, route the independent dependency-ready P13-T03 packaging task through improve-project-system; keep P13-T02 blocked and do not reopen P13-T01 without explicit publication authority plus matched current-head hosted-CI and scheduled-full evidence.",
     "latest_project_system_task_id": "none",
     "latest_project_system_status": "none",
     "latest_project_system_sidecar_task_id": "none",
@@ -30,10 +30,10 @@
     "next_research_route_source": "latest_research_handoff"
   },
   "next_route": {
-    "route_id": "p13_t01_validation_planner_equivalence_burn_in_v1",
-    "role_family": "process-integrity-auditor@0.1.0",
+    "route_id": "route_independent_p13_t03_while_p13_t01_cutover_remains_held_v1",
+    "role_family": "validator-engineer@0.2.0",
     "target_derivation_milestone": "source_equivalence_eqsrc",
-    "milestone_burden": "Compare legacy and planner validation on a fixed representative corpus without promoting physics.",
+    "milestone_burden": "Reduce environment drift and bootstrap ambiguity.",
     "requires_human_gate": false
   },
   "claim_boundary": {
@@ -325,7 +325,7 @@
     "delta": {
       "effect": "no_distance_delta",
       "changed": false,
-      "milestone": "matter_coupling",
+      "milestone": "source_equivalence_eqsrc",
       "burden_id": "none"
     },
     "high_risk_rows": [
@@ -612,28 +612,28 @@
         "layer": "post_checkpoint",
         "status": "PENDING",
         "evidence": [
-          "One normal governed checkpoint remains required before the existing signal sidecar may be processed."
+          "One normal governed checkpoint remains required before P13-T03."
         ]
       },
       {
         "layer": "renderer",
         "status": "PENDING",
         "evidence": [
-          "Task index current frontier and compact frontier must be rendered from finalized control sources before checkpoint."
+          "Task index current frontier and compact frontier will be rendered from finalized control sources before checkpoint."
         ]
       },
       {
         "layer": "memory_bootstrap",
         "status": "PENDING",
         "evidence": [
-          "Tracked memory derivatives must be synchronized and validate-only must pass before checkpoint."
+          "Tracked memory synchronization and validate-only remain required before checkpoint."
         ]
       },
       {
         "layer": "claim_language_linter",
         "status": "PENDING",
         "evidence": [
-          "Changed-source claim-language validation remains required before checkpoint."
+          "Changed-source claim-language validation remains required on the finalized tree."
         ]
       }
     ]

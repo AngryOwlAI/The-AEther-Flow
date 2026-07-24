@@ -1,0 +1,318 @@
+job_id: "AJ-RT-20260723-018-001"
+task_id: "RT-20260723-018"
+decision_id: "DDR-20260723-018"
+role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260723-018"
+status: "completed"
+validation_status: "PASS"
+created_at: "2026-07-24T03:08:35Z"
+started_at: "2026-07-24T03:08:35Z"
+completed_at: "2026-07-24T03:16:06Z"
+completion_path: "research_control/tasks/RT-20260723-018/jobs/completions/AJC-AJ-RT-20260723-018-001.yaml"
+requires_human_gate: false
+human_authorization_note: "The user-authorized recursive relay immutably routed generation 88 through improve-project-system for exactly v21 P13-T01."
+objective: "Compare legacy and planner validation on the fixed representative corpus and authorize cutover only after zero unexplained hard mismatches and complete current-head authority evidence."
+target_derivation_milestone: "source_equivalence_eqsrc"
+milestone_burden: "Finish the shadow-to-authoritative migration without weakening safeguards."
+route_label: "v21_p13_t01_validation_planner_equivalence_burn_in_and_cutover_decision"
+route_reason: "P0-T05 is qualifying-finalized, prerequisite project-system recovery is checkpointed, and the immutable generation-88 route selects P13-T01."
+immutable_route_sha256: "5d0d201317b3f54b39e9350ae70f9cef29d1b893f52f273b1763d1a9fb8b525e"
+plan_task_id: "P13-T01"
+recommendation_ids:
+  - "V21-R54"
+project_system_change_only: true
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 88
+  passes_consumed: 83
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:88"
+  handoff_token: "5031fda479f85ee0812059448e0fb170c7585a0a6a6fb01e"
+  relay_claim_token: "4ba0180e34bb30d01ff04b576bfa436ed1145aa254134a46"
+  immutable_route_hash: "5d0d201317b3f54b39e9350ae70f9cef29d1b893f52f273b1763d1a9fb8b525e"
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  candidate_family: "not_applicable"
+  assumption_delta:
+    - "No validation implementation, gate semantics, scientific assumption, ontology, or Distance-to-GR status changes; this packet audits operational equivalence and cutover evidence only."
+  materiality_basis: "Provides the v21 P13-T01 equivalence burn-in, mismatch ledger, rollback evidence, and safe cutover hold decision."
+  source_basis:
+    - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+    - "tests/fixtures/validation_equivalence/corpus.json"
+    - "research_control/design/validation_gate_manifest_v1.yaml"
+    - "research_control/handoffs/handoff-0847.yaml"
+  expected_artifact_paths:
+    - "research_control/tasks/RT-20260723-018/artifacts/p13_t01_validation_planner_equivalence_corpus.json"
+    - "research_control/tasks/RT-20260723-018/artifacts/p13_t01_mismatch_disposition_ledger.json"
+    - "research_control/tasks/RT-20260723-018/artifacts/p13_t01_cutover_decision.md"
+    - "research_control/tasks/RT-20260723-018/artifacts/p13_t01_compact_receipt.json"
+  project_system_justification: "The work concerns validation orchestration and creates no physics payload."
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "cutover_hold_decision"
+    - "role_or_route_selection"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  expected_durable_outputs:
+    physics: []
+    project_system:
+      - "research_control/tasks/RT-20260723-018/artifacts/p13_t01_validation_planner_equivalence_corpus.json"
+      - "research_control/tasks/RT-20260723-018/artifacts/p13_t01_mismatch_disposition_ledger.json"
+      - "research_control/tasks/RT-20260723-018/artifacts/p13_t01_cutover_decision.md"
+      - "research_control/tasks/RT-20260723-018/artifacts/p13_t01_compact_receipt.json"
+  acceptance_criteria:
+    physics: []
+    project_system:
+      - "zero unexplained hard mismatches on the fixed corpus"
+      - "rollback drill passes"
+      - "non-negotiable gates remain present"
+      - "cutover or hold decision exists"
+      - "legacy remains authoritative when current-head evidence is incomplete"
+      - "one governed checkpoint commits without legacy validation"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: false
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0847"
+  source_handoff_path: "research_control/handoffs/handoff-0847.yaml"
+  source_handoff_sha256: "7472af1b615b7c76405bcea2c63bc17490837c0412a58a61edfdd84690252dd2"
+  selected_plan_task_id: "P13-T01"
+  guard_outcome: "below_threshold"
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+allowed_read_paths:
+  - "SOUL.md"
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research-goal/SKILL.md"
+  - ".codex/skills/continue-research-goal/references/goal-file-schema.md"
+  - ".codex/skills/continue-research-continue-goal/SKILL.md"
+  - ".codex/skills/improve-project-system/SKILL.md"
+  - ".agents/roles/research_ops/project-system-director.v0.2.0.md"
+  - ".agents/roles/research_ops/process-integrity-auditor.v0.1.0.md"
+  - ".agents/schemas/**"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  - "research_control/design/**"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0847.yaml"
+  - "research_control/handoffs/handoff-0847.md"
+  - "research_control/tasks/RT-20260720-008/**"
+  - "research_control/tasks/RT-20260718-006/**"
+  - "research_control/tasks/RT-20260718-007/**"
+  - "research_control/tasks/RT-20260718-008/**"
+  - "research_control/tasks/RT-20260723-017/**"
+  - ".github/workflows/project-control-validation.yml"
+  - ".github/workflows/scheduled-full-validation.yml"
+  - "scripts/project_control/**"
+  - "scripts/research_control/**"
+  - "scripts/validation/**"
+  - "tests/**"
+  - "registries/**"
+allowed_write_paths:
+  - "research_control/tasks/RT-20260723-018/**"
+  - "research_control/handoffs/handoff-0848.yaml"
+  - "research_control/handoffs/handoff-0848.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "FOLDER_MAP.md"
+allowed_generated_paths:
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "FOLDER_MAP.md"
+forbidden_paths:
+  - ".github/workflows/**"
+  - "Makefile"
+  - "scripts/project_control/**"
+  - "scripts/research_control/**"
+  - "scripts/validation/**"
+  - "tests/**"
+  - ".agents/**"
+  - ".codex/skills/**"
+  - "research_control/design/**"
+  - "implementations_plans/**"
+  - "ontology/**"
+  - "legacy_ontology/**"
+  - "manuscripts/**"
+  - "tex/**"
+  - "markdown/publication-briefs/**"
+  - "markdown/html-explainer-specs/**"
+  - "github-facing/**"
+  - "html/**"
+  - "pdf/**"
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "registries/METRIC_USE_LEDGER.csv"
+allowed_source_classes:
+  - "task_evidence_artifact"
+  - "task_control_record"
+  - "registry"
+  - "generated_memory_derivative"
+  - "read_only_external_metadata"
+forbidden_source_classes:
+  - "validation_or_test_semantics_change"
+  - "manifest_execution_authority_change"
+  - "workflow_or_checkpoint_default_change"
+  - "legacy_fallback_retirement"
+  - "canonical_ontology_write"
+  - "science_source_mutation"
+  - "scientific_ledger_mutation"
+  - "source_law_adoption"
+  - "physics_claim_promotion"
+  - "benchmark_promotion"
+  - "gate_chair_verdict"
+  - "proof_authority"
+  - "publication_or_push_authority"
+  - "completed_derivation_claim"
+approved_commands:
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21 --json"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+  - ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted"
+  - ".venv/bin/python research_control/tasks/RT-20260723-018/artifacts/validate_p13_t01_planner_cutover.py --write-report --json"
+  - ".venv/bin/python -m unittest -v tests.test_validation_equivalence tests.test_checkpoint_validation_planner tests.test_validation_profiles tests.test_validation_precheck tests.test_staged_validation tests.test_ci_validation_plan tests.test_validation_executor tests.test_validation_orchestration"
+  - "gh run list --commit 80b0566d63f1d0b7ed0578f94ac0000f4e296502 --limit 20 --json databaseId,workflowName,status,conclusion,headSha,url"
+  - ".venv/bin/python -m scripts.validation.cli plan --profile affected --paths research_control/tasks/RT-20260723-018 research_control/handoffs/handoff-0848.yaml research_control/program_state.yaml --json"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --json-summary"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+  - "git diff --check"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260723-018-001"
+required_validators:
+  - "validation_equivalence_fixed_corpus"
+  - "validation_planner_representative_selection"
+  - "checkpoint_planner_rollback_drill"
+  - "current_head_hosted_ci_presence"
+  - "non_negotiable_gate_preservation"
+  - "project_improvement_signals"
+  - "documentation_impact"
+  - "claim_language_changed"
+  - "research_control_diff"
+  - "memory_sync"
+  - "memory_core"
+  - "git_diff_check"
+  - "checkpoint_transaction"
+expected_outputs:
+  - "research_control/tasks/RT-20260723-018/artifacts/validate_p13_t01_planner_cutover.py"
+  - "research_control/tasks/RT-20260723-018/artifacts/p13_t01_validation_planner_equivalence_corpus.json"
+  - "research_control/tasks/RT-20260723-018/artifacts/p13_t01_mismatch_disposition_ledger.json"
+  - "research_control/tasks/RT-20260723-018/artifacts/p13_t01_cutover_decision.md"
+  - "research_control/tasks/RT-20260723-018/artifacts/p13_t01_compact_receipt.json"
+  - "research_control/tasks/RT-20260723-018/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260723-018/jobs/completions/AJC-AJ-RT-20260723-018-001.yaml"
+  - "research_control/handoffs/handoff-0848.yaml"
+  - "research_control/handoffs/handoff-0848.md"
+claim_boundary: "CB-V21-P13-T01-VALIDATION-PLANNER-CUTOVER-AUDIT-001"
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1002
+    relationship_row_count: 4960
+    semantic_row_count: 1002
+    vault_row_count: 1002
+    local_cache_only_warning_count: 0
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  authority_note: "Generated wiki, Obsidian, SQLite, semantic, and .local retrieval outputs were navigation layers only and are not authority."
