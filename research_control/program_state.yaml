@@ -1,9 +1,139 @@
 mode: "director_led_research_control"
-active_task_id: "RT-20260723-019"
-latest_handoff_id: "handoff-0849"
-current_status: "p13_t03_packaging_contract_pass_checkpoint_ready_p13_t04_next"
-claim_boundary_summary: "RT-20260723-019 completed bounded P13-T03 with exact pyproject metadata, two already-used exact distributions, a reproducible lock carrying 82 package-index SHA-256 hashes, lock-only compatibility wrappers, hash-enforced Make and CI setup, migration and external-tool policy, clean CPython 3.12 installation, and two 87-test focused passes. This is project-system evidence only; no scientific Distance-to-GR ontology benchmark proof publication or external authority changed."
-next_recommended_action: "Run the one authorized governed checkpoint for AJ-RT-20260723-019-001. After commit, route one fresh bounded P13-T04 improve-project-system frame for incremental linting, typing, version matrices, path portability, and validator API contracts. Keep P13-T02 blocked and do not reopen P13-T01 without explicit publication authority plus matched current-head hosted-CI and scheduled-full evidence."
+active_task_id: "RT-20260724-001"
+latest_handoff_id: "handoff-0851"
+current_status: "p13_t04_frontier_sync_pass_checkpoint_ready"
+claim_boundary_summary: "RT-20260724-001 preserved the exact generation-92 P13-T04 payload and synchronized finalized tracked control state into the task index, current frontier, compact frontier YAML and JSON, and compact Markdown mirror. The inherited quality target, 48 focused tests, all renderer checks, compact schema validation, project-system gates, research-control validation, memory validation, and Git checks pass before one governed checkpoint. P13-T05 and P13-T06 remain unexecuted, P13-T02 remains blocked, P13-T01 remains held, and no scientific Distance-to-GR ontology benchmark proof publication push hosted-workflow or external authority changed."
+next_recommended_action: "Run the one authorized governed checkpoint for AJ-RT-20260724-001-001. After commit, route one fresh bounded P13-T05 improve-project-system frame for coverage, property-based, mutation, dependency, and security testing. Keep P13-T06 unexecuted until separately routed, P13-T02 blocked, and P13-T01 held."
+
+p13_t04_generated_frontier_checkpoint_recovery:
+  task_id: "RT-20260724-001"
+  parent_task_id: "RT-20260723-020"
+  parent_handoff_id: "handoff-0850"
+  recovery_for_plan_task_id: "P13-T04"
+  next_plan_task_id: "P13-T05"
+  claim_boundary_id: "CB-V21-P13-T04-FRONTIER-CHECKPOINT-RECOVERY-001"
+  status: "PASS_CHECKPOINT_READY"
+  work_item_status: "completed"
+  route_label: "repair_p13_t04_frontier_compact_sync_then_revalidate_checkpoint_v1"
+  selected_role_family: "validator-engineer@0.2.0"
+  selected_worker_skill: "improve-project-system"
+  immutable_route_sha256: "0b3788e73c9814273db14d5e1b17fed6e93042be5217d110cb70c4c81aed7554"
+  protected_input_manifest_sha256: "77e563ce6f01905fb6cb0d8c49551846eeec465e9a711ad6619d70990a2a3fc9"
+  protected_input_path_count: 53
+  protected_input_hash_mismatch_count: 0
+  source_blocker_path: "research_control/tasks/RT-20260723-020/artifacts/validation_blocker_precheckpoint_frontier_sync_v1.yaml"
+  source_blocker_sha256: "ccdbf95c4b9912b288e3a1dbfd6702bbbfcb0e4a31d31ef96bf4d066dae45c4b"
+  completion_path: "research_control/tasks/RT-20260724-001/jobs/completions/AJC-AJ-RT-20260724-001-001.yaml"
+  completion_sha256: "113c9b769c000fa594a8060c6aac5712e8c786f58367de529178e397101d014a"
+  failed_frontier_finding_count_before: 16
+  failed_frontier_finding_count_after: 0
+  task_index_renderer_status: "PASS"
+  current_frontier_renderer_status: "PASS"
+  compact_frontier_renderer_status: "PASS"
+  compact_frontier_validation_status: "PASS"
+  p13_t04_quality_status: "PASS"
+  p13_t04_focused_test_status: "PASS_48_OF_48"
+  p13_t04_payload_changed: false
+  checkpoint_invocation_count: 0
+  checkpoint_committed: false
+  checkpoint_staged: false
+  legacy_validation_used: false
+  p13_t05_dependency_ready_after_checkpoint: true
+  p13_t06_dependency_ready_after_checkpoint: true
+  p13_t05_executed: false
+  p13_t06_executed: false
+  p13_t02_executed: false
+  p13_t01_reopened: false
+  scientific_status_changed: false
+  scientific_ledger_change_count: 0
+  distance_to_gr_delta_changed: false
+  ontology_adoption_authorized: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_performed: false
+  workflow_dispatch_performed: false
+  handoff_id: "handoff-0851"
+  handoff_yaml_sha256: "dee9c14c8447f78aa52e362a59b73631d89f73e2cf97198447fbb9e665057491"
+  handoff_markdown_sha256: "cf6e480eb126b9b3a5f8d001dac2b4f2a051099f41eafa45ac63686d5b830b46"
+  selected_next_work_item: "P13-T05"
+  selected_next_worker_skill: "improve-project-system"
+  selected_next_role_family: "validator-engineer@0.2.0"
+  selected_next_route_label: "ordinary-research-packet"
+  selected_next_strategy_id: "route_p13_t05_after_p13_t04_recovery_checkpoint_v1"
+
+p13_t04_quality_portability_validator_api_contract:
+  task_id: "RT-20260723-020"
+  parent_task_id: "RT-20260723-019"
+  parent_handoff_id: "handoff-0849"
+  plan_task_id: "P13-T04"
+  recommendation_ids:
+    - "V21-R48"
+    - "V21-R58"
+  claim_boundary_id: "CB-V21-P13-T04-QUALITY-PORTABILITY-VALIDATOR-API-001"
+  status: "FAIL_PRECHECKPOINT_FRONTIER_SYNC_REPAIR_REQUIRED"
+  work_item_status: "blocked"
+  route_label: "v21_p13_t04_quality_portability_validator_api_contract"
+  selected_role_family: "validator-engineer@0.2.0"
+  selected_worker_skill: "improve-project-system"
+  immutable_route_sha256: "83385527d2b7baac8854239d890d4133f82fd09bcef221e898977b4fa0141380"
+  completion_path: "research_control/tasks/RT-20260723-020/jobs/completions/AJC-AJ-RT-20260723-020-001.yaml"
+  completion_sha256: "5000870cf1835cc09f79c799f1a5c4aeea5a66df454d80f2faea6ad26a9c30ee"
+  blocker_path: "research_control/tasks/RT-20260723-020/artifacts/validation_blocker_precheckpoint_frontier_sync_v1.yaml"
+  blocker_sha256: "ccdbf95c4b9912b288e3a1dbfd6702bbbfcb0e4a31d31ef96bf4d066dae45c4b"
+  quality_lock_path: "research_control/tasks/RT-20260723-020/artifacts/quality-requirements.lock"
+  quality_lock_sha256: "3544c77e7db65595424a20f15bf64381faec66e0f44cf3cedc29ba0e20fc1323"
+  validator_api_path: "scripts/validation/api.py"
+  validator_api_sha256: "468037fad003883851afe83fcd001aed5ef23182fe5281a10b5e43be98a9281a"
+  path_linter_path: "scripts/validation/portability.py"
+  path_linter_sha256: "60bb14d60c31704e0a2d155dd8b5a33019559e613e1246f155cd8473ff9e7c5e"
+  api_contract_path: "research_control/tasks/RT-20260723-020/artifacts/validator_api_contract_v1.md"
+  api_contract_sha256: "47fa0afc7c56b75462595d2c7c494d1cc893c965356e2f4460d46bf1725039bb"
+  portability_policy_path: "research_control/tasks/RT-20260723-020/artifacts/quality_portability_policy_v1.md"
+  portability_policy_sha256: "ab39bae565c7a778d29438f6b1b8534a0e074f28f5735a2f912d273bf7528c6d"
+  receipt_path: "research_control/tasks/RT-20260723-020/artifacts/p13_t04_quality_receipt.json"
+  receipt_sha256: "5b08e74e619d60e13c2262d8624b550a71ed9e9cd77054a2c55c829c27919d10"
+  supported_python_series: "3.12"
+  exact_quality_distributions:
+    - "mypy==2.3.0"
+    - "ruff==0.16.0"
+  cumulative_exact_distribution_count: 9
+  package_index_sha256_hash_count: 277
+  typed_module_count: 3
+  new_contract_test_status: "PASS_13_OF_13"
+  combined_focused_test_status: "PASS_48_OF_48"
+  declared_matrix_cell_count: 2
+  local_matrix_cell_count: 1
+  hosted_matrix_cell_count_observed: 0
+  hosted_matrix_execution_claimed: false
+  p10_t07_finding_parity_status: "PASS"
+  historical_paths_changed: false
+  checkpoint_invocation_count: 0
+  checkpoint_committed: false
+  checkpoint_staged: false
+  legacy_validation_used: false
+  p13_t04_payload_complete: true
+  p13_t05_dependency_ready_after_checkpoint: false
+  p13_t06_dependency_ready_after_checkpoint: false
+  scientific_status_changed: false
+  scientific_ledger_change_count: 0
+  distance_to_gr_delta_changed: false
+  ontology_adoption_authorized: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_performed: false
+  workflow_dispatch_performed: false
+  handoff_id: "handoff-0850"
+  handoff_yaml_sha256: "40a62cef45dcd25cce843cc0d92d8429d1405eb84d4a2ae1e0daa42ea3bd2fdb"
+  handoff_markdown_sha256: "99336cb4c7d5d56437b6bc5a2b14ef48a90df69bed992b7897d7a6846f09a190"
+  selected_next_work_item: "P13-T04"
+  selected_next_worker_skill: "improve-project-system"
+  selected_next_role_family: "validator-engineer@0.2.0"
+  selected_next_route_label: "project-system-recovery"
+  selected_next_strategy_id: "repair_p13_t04_frontier_compact_sync_then_revalidate_checkpoint_v1"
 
 p13_t03_reproducible_packaging_dependency_contract:
   task_id: "RT-20260723-019"
@@ -4414,18 +4544,19 @@ project_improvement_bridge:
   required: false
   recursive_goal_recovery_required: false
   checkpoint_recovery_precedes_sidecar: false
-  route: "research_control/project_improvement_handoffs/improve-project-handoff_20260723_013.yaml"
-  signal_ids:
-    - "PIS-RT-20260723-013-001"
+  route: "continue-goal ordinary continuation via improve-project-system"
+  blocker_path: "research_control/tasks/RT-20260723-020/artifacts/validation_blocker_precheckpoint_frontier_sync_v1.yaml"
+  blocker_sha256: "ccdbf95c4b9912b288e3a1dbfd6702bbbfcb0e4a31d31ef96bf4d066dae45c4b"
+  signal_ids: []
   sidecar_supersedes_research_handoff: false
-  status: "resolved_checkpoint_ready"
-  resolution_job_id: "AJ-RT-20260723-017-001"
-  resolution_evidence_path: "research_control/tasks/RT-20260723-017/jobs/completions/AJC-AJ-RT-20260723-017-001.yaml"
+  status: "resolved_checkpoint_pending"
+  resolution_job_id: "AJ-RT-20260724-001-001"
+  resolution_evidence_path: "research_control/tasks/RT-20260724-001/jobs/completions/AJC-AJ-RT-20260724-001-001.yaml"
 
 active_state_bifurcation:
-  latest_research_task_id: "RT-20260723-019"
-  latest_research_handoff_id: "handoff-0849"
-  latest_research_next_action: "Run the one authorized governed checkpoint for AJ-RT-20260723-019-001. After commit, route one fresh bounded P13-T04 improve-project-system frame for incremental linting, typing, version matrices, path portability, and validator API contracts. Keep P13-T02 blocked and do not reopen P13-T01 without explicit publication authority plus matched current-head hosted-CI and scheduled-full evidence."
+  latest_research_task_id: "RT-20260724-001"
+  latest_research_handoff_id: "handoff-0851"
+  latest_research_next_action: "Run the one authorized governed checkpoint for AJ-RT-20260724-001-001. After commit, route one fresh bounded P13-T05 improve-project-system frame for coverage, property-based, mutation, dependency, and security testing. Keep P13-T06 unexecuted until separately routed, P13-T02 blocked, and P13-T01 held."
   latest_project_system_task_id: "none"
   latest_project_system_status: "none"
   latest_project_system_sidecar_task_id: "none"

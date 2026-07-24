@@ -2,8 +2,12 @@ PYTHON ?= .venv/bin/python
 MEMORY_SCRIPT_DIR := .codex/skills/project-memory-system/scripts
 MEMORY_TEST_MODULES := tests.test_memory_operations tests.test_memory_cli_modes tests.test_memory_system_unit tests.test_obsidian_wiki_unit tests.test_validation_orchestration tests.test_validation_doctor
 VALIDATION_PYTHON_SERIES := 3.12
-VALIDATION_REQUIREMENT_FILES := pyproject.toml research_control/tasks/RT-20260723-019/artifacts/requirements.lock requirements.txt requirements-dev.txt
+VALIDATION_REQUIREMENT_FILES := pyproject.toml research_control/tasks/RT-20260723-019/artifacts/requirements.lock research_control/tasks/RT-20260723-020/artifacts/quality-requirements.lock requirements.txt requirements-dev.txt
 VALIDATION_REQUIRED_DISTRIBUTIONS := PyMuPDF==1.27.2.3 PyYAML==6.0.3
+QUALITY_REQUIRED_DISTRIBUTIONS := mypy==2.3.0 ruff==0.16.0
+QUALITY_PYTHON_PATHS := scripts/validation/api.py scripts/validation/portability.py scripts/validation/models.py
+QUALITY_TEST_PATHS := tests/test_validation_api.py tests/test_validation_portability.py
+QUALITY_PORTABILITY_PATHS := $(QUALITY_PYTHON_PATHS) $(QUALITY_TEST_PATHS)
 VALIDATION_PATHS ?=
 VALIDATION_DOCTOR_SCOPE ?= local_retrieval
 VALIDATION_DOCTOR_FLAGS ?=
@@ -93,8 +97,49 @@ print(json.dumps(receipt, sort_keys=True, separators=(",", ":")))
 endef
 export VALIDATION_ENVIRONMENT_CHECK
 
-.PHONY: setup-dev validation-environment memory-sync memory-validate-core memory-doctor test-memory validate-memory validate-memory-full validate-fast validate-affected validate-checkpoint-plan validate-full validate-doctor validate-project-control validate-project-control-legacy validate-html-explainers audit-documentation-surfaces
-.NOTPARALLEL: validate-project-control
+define QUALITY_ENVIRONMENT_CHECK
+import importlib.metadata as metadata
+import json
+import os
+import sys
+
+installed = {}
+problems = []
+for requirement in os.environ["QUALITY_REQUIRED_DISTRIBUTIONS"].split():
+    distribution, _, expected_version = requirement.partition("==")
+    try:
+        actual_version = metadata.version(distribution)
+    except metadata.PackageNotFoundError:
+        problems.append(f"missing {requirement}")
+        continue
+    installed[distribution] = actual_version
+    if actual_version != expected_version:
+        problems.append(f"{distribution}=={actual_version} (expected {expected_version})")
+if problems:
+    print(
+        "Quality dependency check failed: "
+        + ", ".join(problems)
+        + f". Run make setup-dev PYTHON={sys.executable}.",
+        file=sys.stderr,
+    )
+    raise SystemExit(2)
+print(
+    json.dumps(
+        {
+            "gate_id": "quality_environment",
+            "installed_distributions": installed,
+            "provisioning": False,
+            "status": "PASS",
+        },
+        sort_keys=True,
+        separators=(",", ":"),
+    )
+)
+endef
+export QUALITY_ENVIRONMENT_CHECK
+
+.PHONY: setup-dev validation-environment quality-environment quality-lint quality-type quality-portability quality-tests validate-quality memory-sync memory-validate-core memory-doctor test-memory validate-memory validate-memory-full validate-fast validate-affected validate-checkpoint-plan validate-full validate-doctor validate-project-control validate-project-control-legacy validate-html-explainers audit-documentation-surfaces
+.NOTPARALLEL: validate-project-control validate-quality
 
 setup-dev:
 	@test -x "$(PYTHON)" || { printf '%s\n' "Missing $(PYTHON). Create the local environment with: python3 -m venv .venv"; exit 1; }
@@ -104,6 +149,24 @@ setup-dev:
 validation-environment:
 	@test -x "$(PYTHON)" || { printf '%s\n' "Missing validation Python $(PYTHON). Create a CPython $(VALIDATION_PYTHON_SERIES) virtual environment and run make setup-dev with its Python." >&2; exit 2; }
 	@VALIDATION_PYTHON_SERIES="$(VALIDATION_PYTHON_SERIES)" VALIDATION_REQUIREMENT_FILES="$(VALIDATION_REQUIREMENT_FILES)" VALIDATION_REQUIRED_DISTRIBUTIONS="$(VALIDATION_REQUIRED_DISTRIBUTIONS)" $(PYTHON) -c "$$VALIDATION_ENVIRONMENT_CHECK"
+
+quality-environment: validation-environment
+	@QUALITY_REQUIRED_DISTRIBUTIONS="$(QUALITY_REQUIRED_DISTRIBUTIONS)" $(PYTHON) -c "$$QUALITY_ENVIRONMENT_CHECK"
+
+quality-lint: quality-environment
+	$(PYTHON) -m ruff check $(QUALITY_PYTHON_PATHS) $(QUALITY_TEST_PATHS)
+
+quality-type: quality-environment
+	$(PYTHON) -m mypy $(QUALITY_PYTHON_PATHS)
+
+quality-portability: quality-environment
+	$(PYTHON) -m scripts.validation.portability $(foreach path,$(QUALITY_PORTABILITY_PATHS),--path $(path)) --json
+
+quality-tests: quality-environment
+	$(PYTHON) -m unittest -v tests.test_validation_api tests.test_validation_portability
+
+validate-quality: quality-lint quality-type quality-portability quality-tests
+	@printf '%s\n' '{"target":"validate-quality","status":"PASS","python_series":"$(VALIDATION_PYTHON_SERIES)","scope":"incremental"}'
 
 memory-sync: validation-environment
 	PYTHONPATH="$(MEMORY_SCRIPT_DIR)" $(PYTHON) -c 'import json; from bootstrap_memory_system import memory_sync; receipt = memory_sync().to_dict(); print(json.dumps({"gate_id": "memory_sync", "status": "PASS", "mutated": receipt["mutated"], "local_retrieval_enabled": receipt["local_retrieval_enabled"], "counts": receipt["counts"], "changed": receipt["changed"], "created": receipt["created"], "pruned": receipt["pruned"]}, sort_keys=True))'

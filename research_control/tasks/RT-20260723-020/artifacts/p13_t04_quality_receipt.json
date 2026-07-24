@@ -1,0 +1,150 @@
+{
+  "authority": {
+    "benchmark_authority": false,
+    "distance_to_gr_changed": false,
+    "gate_chair_authority": false,
+    "ontology_authority": false,
+    "operational_validation_only": true,
+    "physics_claim_authority": false,
+    "proof_authority": false,
+    "publication_authority": false
+  },
+  "claim_boundary_id": "CB-V21-P13-T04-QUALITY-PORTABILITY-VALIDATOR-API-001",
+  "ci_matrix": {
+    "declared_cells": [
+      {
+        "os": "ubuntu-latest",
+        "python": "3.12"
+      },
+      {
+        "os": "macos-latest",
+        "python": "3.12"
+      }
+    ],
+    "hosted_cells_observed": [],
+    "hosted_execution_claimed": false,
+    "local_cell": {
+      "architecture": "arm64",
+      "operating_system": "Darwin 25.5.0",
+      "python": "CPython 3.12.13",
+      "status": "PASS"
+    },
+    "supported_python_series": "3.12",
+    "workflow_contract_status": "PASS"
+  },
+  "dependency_lock": {
+    "direct_quality_distributions": [
+      "mypy==2.3.0",
+      "ruff==0.16.0"
+    ],
+    "exact_distribution_count": 9,
+    "lock_path": "research_control/tasks/RT-20260723-020/artifacts/quality-requirements.lock",
+    "lock_sha256": "3544c77e7db65595424a20f15bf64381faec66e0f44cf3cedc29ba0e20fc1323",
+    "package_index_sha256_hash_count": 277,
+    "require_hashes_install_status": "PASS"
+  },
+  "finding_counts": {
+    "casefold_collision_count": 0,
+    "mypy_error_count": 0,
+    "portable_path_finding_count": 0,
+    "ruff_violation_count": 0,
+    "test_failure_count": 0
+  },
+  "goal_receipt": {
+    "generation": 92,
+    "goal_id": "crg-20260720T161354Z-96bc2664ce31bfe0",
+    "goal_sha256": "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a",
+    "idempotency_key": "crg-20260720T161354Z-96bc2664ce31bfe0:92",
+    "immutable_route_hash": "83385527d2b7baac8854239d890d4133f82fd09bcef221e898977b4fa0141380",
+    "passes_consumed": 85,
+    "relay_claim_token": "7a83713b43d6e3e103886983b2b5d78459e898335923c928",
+    "worker_invocation_count": 1,
+    "worker_skill": "improve-project-system"
+  },
+  "path_policy": {
+    "casefold_fixture_status": "PASS",
+    "historical_paths_changed": false,
+    "p10_t07_exact_finding_parity_status": "PASS",
+    "prospective_only": true,
+    "shared_module": "scripts/validation/portability.py"
+  },
+  "plan_task_id": "P13-T04",
+  "recommendation_ids": [
+    "V21-R48",
+    "V21-R58"
+  ],
+  "schema_id": "p13_t04_quality_portability_validator_api_receipt_v1",
+  "source_hashes": [
+    {
+      "path": "pyproject.toml",
+      "sha256": "271af8775974ce2fd5cac43f0ff2000787c23552ad033d2ea9912e9f94a1031c"
+    },
+    {
+      "path": "requirements-dev.txt",
+      "sha256": "0a4b786195b653ff85223ee3fbf4c8bd03ad8c5f0e3b96e7bce2fb93ec4ddf5d"
+    },
+    {
+      "path": "Makefile",
+      "sha256": "15cb94af2932e278d7c38b317b58126476f718e2eb27f4e9fe8646b7b0015d5a"
+    },
+    {
+      "path": ".github/workflows/project-control-validation.yml",
+      "sha256": "c270171ef5b21421792d94051979c391718a5388b4d85cf17b2fe311f841b8c0"
+    },
+    {
+      "path": "scripts/validation/api.py",
+      "sha256": "468037fad003883851afe83fcd001aed5ef23182fe5281a10b5e43be98a9281a"
+    },
+    {
+      "path": "scripts/validation/portability.py",
+      "sha256": "60bb14d60c31704e0a2d155dd8b5a33019559e613e1246f155cd8473ff9e7c5e"
+    },
+    {
+      "path": "tests/test_validation_api.py",
+      "sha256": "75d5acaca8a8028960bf8297b1405847446d14624f93eba747022a1ceafeb774"
+    },
+    {
+      "path": "tests/test_validation_portability.py",
+      "sha256": "17ed16eb9de4a17b60a97f19bf3974f1eadba1de2dd865b48af1ab1017248d02"
+    },
+    {
+      "path": "research_control/design/validation_environment_contract_v1.md",
+      "sha256": "45f36b6fd05849d2f95ab1be8d2e446544aefe4875e6e515cd72477df19fa1c6"
+    },
+    {
+      "path": "research_control/tasks/RT-20260723-020/artifacts/validator_api_contract_v1.md",
+      "sha256": "47fa0afc7c56b75462595d2c7c494d1cc893c965356e2f4460d46bf1725039bb"
+    },
+    {
+      "path": "research_control/tasks/RT-20260723-020/artifacts/quality_portability_policy_v1.md",
+      "sha256": "ab39bae565c7a778d29438f6b1b8534a0e074f28f5735a2f912d273bf7528c6d"
+    }
+  ],
+  "status": "PASS_CHECKPOINT_READY",
+  "task_id": "RT-20260723-020",
+  "test_evidence": {
+    "combined_focused_test_count": 48,
+    "combined_focused_test_status": "PASS_48_OF_48",
+    "new_contract_test_count": 13,
+    "new_contract_test_status": "PASS_13_OF_13",
+    "p10_t07_regression_included": true
+  },
+  "validator_api": {
+    "configuration_error_exit_code": 2,
+    "execution_failure_exit_code": 1,
+    "planning_parity_status": "PASS",
+    "ready_or_success_exit_code": 0,
+    "stable_module": "scripts/validation/api.py",
+    "typed_module_count": 3
+  },
+  "validator_ids": [
+    "quality_dependency_lock",
+    "ruff_incremental",
+    "mypy_incremental",
+    "validator_api_contract",
+    "portable_path_linter",
+    "casefold_collision_fixtures",
+    "ci_quality_matrix_contract",
+    "p10_t07_non_regression"
+  ]
+}

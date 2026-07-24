@@ -1,0 +1,345 @@
+job_id: "AJ-RT-20260723-020-001"
+task_id: "RT-20260723-020"
+decision_id: "DDR-20260723-020"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260723-020"
+status: "completed"
+validation_status: "PASS"
+created_at: "2026-07-24T05:27:33Z"
+started_at: "2026-07-24T05:27:33Z"
+completed_at: "2026-07-24T05:44:42Z"
+completion_path: "research_control/tasks/RT-20260723-020/jobs/completions/AJC-AJ-RT-20260723-020-001.yaml"
+requires_human_gate: false
+human_authorization_note: "The user-authorized recursive relay immutably routed generation 92 through improve-project-system for exactly v21 P13-T04."
+objective: "Implement and validate one incremental quality, portability, CI-matrix, and programmatic validator API contract."
+target_derivation_milestone: "source_equivalence_eqsrc"
+milestone_burden: "Improve software portability and maintainability."
+route_label: "v21_p13_t04_quality_portability_validator_api_contract"
+route_reason: "P13-T03 and P10-T07 are qualifying-finalized, checkpoint 72eee307 is clean, and handoff-0849 selects dependency-ready P13-T04 through improve-project-system."
+immutable_route_sha256: "83385527d2b7baac8854239d890d4133f82fd09bcef221e898977b4fa0141380"
+plan_task_id: "P13-T04"
+recommendation_ids:
+  - "V21-R48"
+  - "V21-R58"
+project_system_change_only: true
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 92
+  passes_consumed: 85
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:92"
+  handoff_token: "087386b75fbf5a6dd2dc578ca233540492e8f5073acf9295"
+  relay_claim_token: "7a83713b43d6e3e103886983b2b5d78459e898335923c928"
+  immutable_route_hash: "83385527d2b7baac8854239d890d4133f82fd09bcef221e898977b4fa0141380"
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  candidate_family: "not_applicable"
+  assumption_delta:
+    - "Ruff and mypy become exact hash-locked development tools for a bounded validation surface; no scientific assumption ontology or Distance-to-GR status changes."
+    - "The shared path linter preserves the P10-T07 prospective-only limits and does not migrate historical paths."
+    - "The supported Python series remains CPython 3.12; the CI matrix makes that version axis explicit across Linux and macOS without claiming unobserved hosted results."
+  materiality_basis: "Provides v21 P13-T04 quality tooling, portability linting, CI matrix, and stable validator API contracts."
+  source_basis:
+    - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+    - "research_control/handoffs/handoff-0849.yaml"
+    - "research_control/tasks/RT-20260722-002/artifacts/artifact_path_policy.md"
+    - "research_control/design/validation_environment_contract_v1.md"
+    - "scripts/validation/"
+  expected_artifact_paths:
+    - "scripts/validation/api.py"
+    - "scripts/validation/portability.py"
+    - "research_control/tasks/RT-20260723-020/artifacts/quality-requirements.lock"
+    - "research_control/tasks/RT-20260723-020/artifacts/validator_api_contract_v1.md"
+    - "research_control/tasks/RT-20260723-020/artifacts/quality_portability_policy_v1.md"
+    - "research_control/tasks/RT-20260723-020/artifacts/p13_t04_quality_receipt.json"
+  project_system_justification: "The work concerns software validation quality and portability only."
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  expected_durable_outputs:
+    physics: []
+    project_system:
+      - "scripts/validation/api.py"
+      - "scripts/validation/portability.py"
+      - "research_control/tasks/RT-20260723-020/artifacts/validator_api_contract_v1.md"
+      - "research_control/tasks/RT-20260723-020/artifacts/quality_portability_policy_v1.md"
+      - "research_control/tasks/RT-20260723-020/artifacts/p13_t04_quality_receipt.json"
+  acceptance_criteria:
+    physics: []
+    project_system:
+      - "Ruff and mypy pass on the declared incremental validation surface"
+      - "programmatic planning API examples and exit semantics pass"
+      - "portable-path and casefold-collision fixtures pass"
+      - "the Python and OS CI matrix contract is deterministic"
+      - "the local macOS CPython 3.12 matrix-equivalent command passes"
+      - "one governed checkpoint commits"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: false
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0849"
+  source_handoff_path: "research_control/handoffs/handoff-0849.yaml"
+  source_handoff_sha256: "109b22e78cb176f4f502bdc8a9e5c01566c3ac41e7f4ab4c906b4f497c282551"
+  selected_plan_task_id: "P13-T04"
+  guard_outcome: "all_ready_science_blocked_exception"
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+allowed_read_paths:
+  - "SOUL.md"
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research-goal/SKILL.md"
+  - ".codex/skills/continue-research-goal/references/goal-file-schema.md"
+  - ".codex/skills/continue-research-continue-goal/SKILL.md"
+  - ".codex/skills/improve-project-system/SKILL.md"
+  - ".agents/roles/research_ops/project-system-director.v0.2.0.md"
+  - ".agents/roles/research_ops/validator-engineer.v0.2.0.md"
+  - ".agents/schemas/**"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  - "research_control/design/**"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0849.yaml"
+  - "research_control/handoffs/handoff-0849.md"
+  - "research_control/tasks/RT-20260722-002/**"
+  - "research_control/tasks/RT-20260723-019/**"
+  - ".github/workflows/**"
+  - "scripts/project_control/**"
+  - "scripts/research_control/**"
+  - "scripts/validation/**"
+  - "tests/**"
+  - "registries/**"
+  - "Makefile"
+  - "README.md"
+  - "CONTRIBUTING.md"
+  - "pyproject.toml"
+  - "requirements.txt"
+  - "requirements-dev.txt"
+allowed_write_paths:
+  - "pyproject.toml"
+  - "requirements-dev.txt"
+  - "Makefile"
+  - "README.md"
+  - "CONTRIBUTING.md"
+  - ".github/workflows/project-control-validation.yml"
+  - "scripts/validation/api.py"
+  - "scripts/validation/portability.py"
+  - "tests/test_validation_api.py"
+  - "tests/test_validation_portability.py"
+  - "research_control/design/validation_environment_contract_v1.md"
+  - "research_control/tasks/RT-20260723-020/**"
+  - "research_control/handoffs/handoff-0850.yaml"
+  - "research_control/handoffs/handoff-0850.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "FOLDER_MAP.md"
+allowed_generated_paths:
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "FOLDER_MAP.md"
+forbidden_paths:
+  - ".agents/**"
+  - ".codex/skills/**"
+  - "implementations_plans/**"
+  - "ontology/**"
+  - "legacy_ontology/**"
+  - "manuscripts/**"
+  - "tex/**"
+  - "markdown/publication-briefs/**"
+  - "markdown/html-explainer-specs/**"
+  - "github-facing/**"
+  - "html/**"
+  - "pdf/**"
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "registries/METRIC_USE_LEDGER.csv"
+allowed_source_classes:
+  - "project_control"
+  - "registry"
+  - "validator"
+  - "test"
+  - "tooling"
+  - "task_evidence_artifact"
+  - "generated_memory_derivative"
+forbidden_source_classes:
+  - "mass_formatting"
+  - "historical_path_migration"
+  - "validation_planner_cutover"
+  - "legacy_fallback_retirement"
+  - "canonical_ontology_write"
+  - "science_source_mutation"
+  - "scientific_ledger_mutation"
+  - "source_law_adoption"
+  - "physics_claim_promotion"
+  - "benchmark_promotion"
+  - "gate_chair_verdict"
+  - "proof_authority"
+  - "publication_or_push_authority"
+  - "completed_derivation_claim"
+approved_commands:
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search validator API portability typing matrix --limit 10 --json"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+  - ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted"
+  - "uv pip compile pyproject.toml --group dev --all-extras --universal --generate-hashes --output-file research_control/tasks/RT-20260723-020/artifacts/quality-requirements.lock"
+  - ".venv/bin/python -m pip install --require-hashes -r requirements-dev.txt"
+  - ".venv/bin/python -m ruff check scripts/validation/api.py scripts/validation/portability.py scripts/validation/models.py tests/test_validation_api.py tests/test_validation_portability.py"
+  - ".venv/bin/python -m mypy scripts/validation/api.py scripts/validation/portability.py scripts/validation/models.py"
+  - ".venv/bin/python -m scripts.validation.portability --path scripts/validation/api.py --path scripts/validation/portability.py --path tests/test_validation_api.py --path tests/test_validation_portability.py --json"
+  - ".venv/bin/python -m unittest -v tests.test_validation_api tests.test_validation_portability tests.test_artifact_identity_policy tests.test_validation_orchestration tests.test_ci_validation_plan"
+  - ".venv/bin/python -m scripts.validation.cli plan --profile affected --paths pyproject.toml requirements-dev.txt Makefile README.md CONTRIBUTING.md .github/workflows/project-control-validation.yml scripts/validation/api.py scripts/validation/portability.py tests/test_validation_api.py tests/test_validation_portability.py research_control/design/validation_environment_contract_v1.md research_control/tasks/RT-20260723-020 research_control/handoffs/handoff-0850.yaml research_control/program_state.yaml --json"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --json-summary"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+  - "git diff --check"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260723-020-001"
+required_validators:
+  - "quality_dependency_lock"
+  - "ruff_incremental"
+  - "mypy_incremental"
+  - "validator_api_contract"
+  - "portable_path_linter"
+  - "casefold_collision_fixtures"
+  - "ci_quality_matrix_contract"
+  - "p10_t07_non_regression"
+  - "project_improvement_signals"
+  - "documentation_impact"
+  - "claim_language_changed"
+  - "research_control_diff"
+  - "memory_sync"
+  - "memory_core"
+  - "git_diff_check"
+  - "checkpoint_transaction"
+expected_outputs:
+  - "pyproject.toml"
+  - "requirements-dev.txt"
+  - "Makefile"
+  - ".github/workflows/project-control-validation.yml"
+  - "scripts/validation/api.py"
+  - "scripts/validation/portability.py"
+  - "tests/test_validation_api.py"
+  - "tests/test_validation_portability.py"
+  - "research_control/tasks/RT-20260723-020/artifacts/quality-requirements.lock"
+  - "research_control/tasks/RT-20260723-020/artifacts/validator_api_contract_v1.md"
+  - "research_control/tasks/RT-20260723-020/artifacts/quality_portability_policy_v1.md"
+  - "research_control/tasks/RT-20260723-020/artifacts/p13_t04_quality_receipt.json"
+  - "research_control/tasks/RT-20260723-020/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260723-020/jobs/completions/AJC-AJ-RT-20260723-020-001.yaml"
+  - "research_control/handoffs/handoff-0850.yaml"
+  - "research_control/handoffs/handoff-0850.md"
+claim_boundary: "CB-V21-P13-T04-QUALITY-PORTABILITY-VALIDATOR-API-001"
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1004
+    relationship_row_count: 4969
+    semantic_row_count: 1004
+    vault_row_count: 1004
+    local_cache_only_warning_count: 10
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search validator API portability typing matrix --limit 10 --json"
+      query_type: "search"
+      query_text: "validator API portability typing matrix"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  authority_note: "Generated wiki, Obsidian, SQLite, semantic, and .local retrieval outputs were navigation layers only and are not authority."

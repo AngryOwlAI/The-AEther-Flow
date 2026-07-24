@@ -1,0 +1,81 @@
+validation_status: "PASS"
+task_id: "RT-20260724-001"
+task_type: "project_system_p13_t04_generated_frontier_checkpoint_recovery"
+title: "Synchronize the P13-T04 generated frontiers and recover the checkpoint"
+task_taxonomy:
+  schema_id: "v21_task_taxonomy_v1"
+  work_kind: "benchmark_or_recovery"
+  milestone: "source_equivalence_eqsrc"
+  candidate_family: "p13_t04_generated_frontier_checkpoint_recovery"
+  result_kind: "completed_or_precisely_blocked"
+  authority: "project_control"
+  scope: "project_system"
+status: "completed"
+created_at: "2026-07-24T06:38:28Z"
+updated_at: "2026-07-24T06:38:28Z"
+closed_at: "2026-07-24T06:38:28Z"
+parent_task_id: "RT-20260723-020"
+parent_handoff_id: "handoff-0850"
+supersedes_active_routing_task_id: "RT-20260723-020"
+current_decision_id: "DDR-20260724-001"
+current_job_id: "AJ-RT-20260724-001-001"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260724-001"
+requires_human_gate: false
+human_authorization_note: "Generation 93 of the immutable user-requested relay routes exactly one improve-project-system frame to the P13-T04 generated-frontier and checkpoint recovery selected by handoff-0850."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P13"
+  plan_task_id: "P13-T04"
+  recovery_for_plan_task_id: "P13-T04"
+  next_plan_task_id: "P13-T05"
+  recommendation_ids:
+    - "V21-R48"
+    - "V21-R58"
+objective: "Render the current and compact frontier derivatives from finalized P13-T04 control state, repeat the required validation gates, and invoke one normal governed checkpoint only on a full pass."
+target_derivation_milestone: "source_equivalence_eqsrc"
+milestone_burden: "Improve software portability and maintainability."
+route_label: "repair_p13_t04_frontier_compact_sync_then_revalidate_checkpoint_v1"
+project_system_change_only: true
+dual_budget_category: "system_bearing"
+primary_budget: "project_system"
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+claim_boundary_id: "CB-V21-P13-T04-FRONTIER-CHECKPOINT-RECOVERY-001"
+claim_boundary:
+  allowed_scope: "Preserve the exact generation-92 P13-T04 payload, add only bounded recovery control records, synchronize task-index current-frontier compact-frontier and normal memory derivatives, repeat required validation, and invoke one governed checkpoint."
+  source_handoff_id: "handoff-0850"
+  source_handoff_sha256: "40a62cef45dcd25cce843cc0d92d8429d1405eb84d4a2ae1e0daa42ea3bd2fdb"
+  source_blocker_path: "research_control/tasks/RT-20260723-020/artifacts/validation_blocker_precheckpoint_frontier_sync_v1.yaml"
+  source_blocker_sha256: "ccdbf95c4b9912b288e3a1dbfd6702bbbfcb0e4a31d31ef96bf4d066dae45c4b"
+  immutable_route_sha256: "0b3788e73c9814273db14d5e1b17fed6e93042be5217d110cb70c4c81aed7554"
+  protected_dirty_manifest_sha256: "77e563ce6f01905fb6cb0d8c49551846eeec465e9a711ad6619d70990a2a3fc9"
+  protected_path_count: 53
+  p13_t04_payload_mutated: false
+  p13_t05_executed: false
+  p13_t06_executed: false
+  p13_t02_executed: false
+  p13_t01_reopened: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+documentation_impact_id: "DI-RT-20260724-001-001"
+completion_id: "AJC-AJ-RT-20260724-001-001"
+output_artifacts:
+  - "research_control/tasks/RT-20260724-001/jobs/completions/AJC-AJ-RT-20260724-001-001.yaml"
+  - "research_control/handoffs/handoff-0851.yaml"
+  - "research_control/handoffs/handoff-0851.md"
+  - "research_control/current_frontier.md"
+  - "output/compact_current_frontier_v16.yaml"
+  - "output/compact_current_frontier_v16.json"
+  - "wiki/indexes/compact_current_frontier_v16.md"
+closure_status: "p13_t04_frontier_sync_pass_checkpoint_ready"
+summary: "The finalized P13-T04 control state now renders consistently into the task index, current frontier, and compact frontier. The quality gate, 48-test shard, renderer checks, compact-frontier validation, project-system gates, research-control validation, and memory validation pass before one governed checkpoint."
+next_recommended_action: "Run the one authorized governed checkpoint for AJ-RT-20260724-001-001. After commit, route one fresh bounded P13-T05 improve-project-system frame; keep P13-T06 unexecuted until separately routed, P13-T02 blocked, and P13-T01 held."
+project_improvement_signals: []
+notes: "This recovery makes no P13-T04 payload, hosted-CI, scientific, ontology, Distance-to-GR, benchmark, proof, Gate Chair, publication, push, or external-system claim."

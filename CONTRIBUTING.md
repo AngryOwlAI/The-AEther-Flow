@@ -10,8 +10,8 @@ or completed-derivation status.
 
 ## Supported Python
 
-Use CPython 3.12 for local validation. The GitHub Actions project-control
-workflow also runs Python 3.12.
+Use CPython 3.12 for local validation. The GitHub Actions quality matrix makes
+that supported version explicit on Linux and macOS.
 
 ## Local Environment
 
@@ -28,11 +28,13 @@ CPython 3.12 on your machine. Keep `.venv/` untracked.
 
 Provisioning is an explicit setup operation. `pyproject.toml` owns project
 metadata and dependency groups. The P13-T03 task-local `requirements.lock`
-owns exact Python versions and SHA-256 hashes; `requirements.txt` and
-`requirements-dev.txt` are compatibility wrappers over that lock. Validators
-inspect the selected environment and never install or upgrade packages.
-GitHub Actions follows the same boundary by creating its environment and
-installing the same hash-locked requirements before it invokes validation.
+owns the exact runtime set and SHA-256 hashes; the P13-T04
+`quality-requirements.lock` owns the cumulative runtime, Ruff, and mypy set.
+`requirements.txt` and `requirements-dev.txt` are the runtime and development
+compatibility wrappers, respectively. Validators inspect the selected
+environment and never install or upgrade packages. GitHub Actions follows the
+same boundary by creating its environment and installing the applicable
+hash-locked requirements before it invokes validation.
 
 ## Validation Commands
 
@@ -40,6 +42,7 @@ Use the same Python executable consistently:
 
 ```zsh
 make PYTHON=.venv/bin/python validation-environment
+make PYTHON=.venv/bin/python validate-quality
 make PYTHON=.venv/bin/python validate-project-control
 ```
 
@@ -49,9 +52,12 @@ the validation contract, then emits a compact JSON receipt containing the
 Python version, exact installed dependency versions, a deterministic digest of
 `requirements.txt` plus `requirements-dev.txt`, and an environment fingerprint.
 The digest covers `pyproject.toml`, the exact lock, and both compatibility
-wrappers. The environment gate also rejects an installed distribution whose
-version differs from the lock. The fingerprint is suitable as one input to
-later exact-tree cache keys; it is not scientific evidence or proof authority.
+wrappers, including both exact locks. The environment gate also rejects an
+installed runtime distribution whose version differs from the lock.
+`quality-environment` separately requires exact Ruff and mypy versions before
+the incremental quality profile runs. The fingerprint is suitable as one input
+to later exact-tree cache keys; it is not scientific evidence or proof
+authority.
 
 If the interpreter or a required distribution is missing, validation stops
 before running a gate and prints one setup command. Create the environment if
@@ -104,6 +110,14 @@ changes:
 uv pip compile pyproject.toml --all-extras --universal \
   --generate-hashes \
   --output-file research_control/tasks/RT-20260723-019/artifacts/requirements.lock
+```
+
+The cumulative quality lock uses the same discipline:
+
+```zsh
+uv pip compile pyproject.toml --group dev --all-extras --universal \
+  --generate-hashes \
+  --output-file research_control/tasks/RT-20260723-020/artifacts/quality-requirements.lock
 ```
 
 Ordinary contributors do not need `uv`; pip consumes the committed lock through

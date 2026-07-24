@@ -1,0 +1,77 @@
+receipt_id: "RT-20260723-020-PRECHECKPOINT-FRONTIER-SYNC-BLOCKER-V1"
+schema_id: "precheckpoint_generated_frontier_sync_blocker_v1"
+status: "blocked_precheckpoint_confirmed"
+created_at: "2026-07-24T06:00:43Z"
+task_id: "RT-20260723-020"
+job_id: "AJ-RT-20260723-020-001"
+completion_id: "AJC-AJ-RT-20260723-020-001"
+plan_id: "recommendations_implementation_plan_continue_task-v21"
+plan_task_id: "P13-T04"
+failed_gate: "research_control_diff_validation"
+failed_command: ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --json-summary"
+blocker_class: "generated_current_and_compact_frontier_synchronization"
+blocker_fingerprint: "p13_t04_payload_passes_but_current_frontier_and_compact_frontier_remain_bound_to_handoff_0849"
+payload_status:
+  implementation_status: "complete_pending_control_repair_and_checkpoint"
+  quality_validation_status: "PASS"
+  new_contract_test_status: "PASS_13_OF_13"
+  combined_focused_test_status: "PASS_48_OF_48"
+  local_matrix_cell_status: "PASS_DARWIN_CPYTHON_3_12"
+  hosted_matrix_execution_claimed: false
+  historical_paths_changed: false
+observed_facts:
+  - "The P13-T04 exact dependency lock, Ruff gate, mypy gate, validator API, prospective portable-path policy, local matrix-equivalent cell, and focused tests pass."
+  - "The final pre-checkpoint research-control diff validator reports 25 errors and 1727 historical warnings."
+  - "Five errors are current completion or role-registry contract mismatches that generation 92 may repair within its immutable control surfaces."
+  - "The remaining errors require generated research_control/current_frontier.md and output/compact_current_frontier_v16.json and .yaml to be rendered from finalized handoff-0850 and program state."
+  - "The immutable generation-92 AgentJob does not authorize the direct current-frontier or compact-frontier renderer commands."
+  - "Generated frontier artifacts must not be hand-edited and the consumed worker invocation must not be rerun."
+generated_paths_requiring_fresh_recovery:
+  - "research_control/current_frontier.md"
+  - "output/compact_current_frontier_v16.json"
+  - "output/compact_current_frontier_v16.yaml"
+authority_boundary:
+  current_agent_job_may_run_frontier_renderers: false
+  current_agent_job_may_hand_edit_generated_frontiers: false
+  current_agent_job_may_checkpoint_with_failed_required_validation: false
+  worker_invocation_may_be_repeated: false
+  checkpoint_may_be_invoked_in_generation_92: false
+  push_authorized: false
+  publication_authorized: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+recommended_recovery:
+  worker_skill: "improve-project-system"
+  role_family: "validator-engineer@0.2.0"
+  strategy_id: "repair_p13_t04_frontier_compact_sync_then_revalidate_checkpoint_v1"
+  plan_task_id: "P13-T04"
+  objective: "Under one fresh immutable recovery AgentJob, render the current frontier and compact frontier from finalized P13-T04 control state, re-run the required pre-checkpoint validation, and invoke one governed checkpoint only if every required gate passes."
+  preserve_dirty_transaction: true
+  preserve_payload_bytes: true
+  preserve_scientific_claim_boundaries: true
+  next_plan_item_after_recovery: "P13-T05"
+  next_plan_item_executed: false
+checkpoint:
+  attempted: false
+  invocation_count: 0
+  staged: false
+  commit: "none_validation_failed"
+final_strict_validation:
+  status: "FAIL"
+  exit_code: 1
+  error_count: 25
+  warning_count: 1727
+  finding_count: 1752
+  run_id: "RESEARCH-CONTROL-DIFF-A98A9A7103964DEC"
+  tree_hash: "a98a9a7103964dec40521599dbe0c30011060f8ee28172933a6b436d68d915aa"
+  diagnostic_receipt_path: ".local/validation-receipts/working-sha256-a98a9a7103964dec40521599dbe0c30011060f8ee28172933a6b436d68d915aa/RESEARCH-CONTROL-DIFF-A98A9A7103964DEC/full.json"
+  diagnostic_receipt_sha256: "10152ebb1cd6d56199c0a239c96fd098b4a7b6a8768f27a07bfd678876c383c4"
+  diagnostic_receipt_is_untracked_non_authority: true
+  source_mismatch_partition:
+    completion_contract_mismatch: 2
+    role_registry_parity_mismatch: 4
+    active_state_handoff_parity_mismatch: 1
+    generated_frontier_or_compact_frontier_drift: 18
+  conclusion: "The P13-T04 payload is locally valid, but the governed transaction is not checkpoint-ready until a fresh authorized recovery synchronizes the generated current and compact frontiers and repeats final validation."

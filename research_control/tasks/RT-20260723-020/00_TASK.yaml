@@ -1,0 +1,75 @@
+task_id: "RT-20260723-020"
+task_type: "project_system_quality_portability_validator_api_contract"
+title: "Add linting, static typing, version matrices, and validator API contracts"
+task_taxonomy:
+  schema_id: "v21_task_taxonomy_v1"
+  work_kind: "construction_or_implementation"
+  milestone: "source_equivalence_eqsrc"
+  candidate_family: "quality_portability_validator_api_contract"
+  result_kind: "implemented_and_validated_or_precisely_blocked"
+  authority: "project_control"
+  scope: "project_system"
+validation_status: "FAIL"
+status: "blocked"
+created_at: "2026-07-24T05:27:33Z"
+updated_at: "2026-07-24T05:44:42Z"
+closed_at: "2026-07-24T05:44:42Z"
+parent_task_id: "RT-20260723-019"
+parent_handoff_id: "handoff-0849"
+supersedes_active_routing_task_id: "RT-20260723-019"
+current_decision_id: "DDR-20260723-020"
+current_job_id: "AJ-RT-20260723-020-001"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260723-020"
+requires_human_gate: false
+human_authorization_note: "Generation 92 of the user-authorized recursive relay immutably routes exactly one improve-project-system frame to dependency-ready v21 P13-T04."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P13"
+  plan_task_id: "P13-T04"
+  recommendation_ids:
+    - "V21-R48"
+    - "V21-R58"
+objective: "Introduce incremental Ruff and mypy gates, a declared Python and operating-system CI matrix, a shared prospective portable-path linter, and a documented typed programmatic validation API."
+target_derivation_milestone: "source_equivalence_eqsrc"
+milestone_burden: "Improve software portability and maintainability."
+route_label: "v21_p13_t04_quality_portability_validator_api_contract"
+project_system_change_only: true
+dual_budget_category: "system_bearing"
+primary_budget: "project_system"
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+claim_boundary_id: "CB-V21-P13-T04-QUALITY-PORTABILITY-VALIDATOR-API-001"
+claim_boundary:
+  allowed_scope: "Add incremental lint and type configuration, exact hash-locked quality-tool dependencies, a bounded Python and OS CI matrix, a shared prospective portable-path linter and fixtures, a typed programmatic validation API and documentation, normal control records, generated derivatives, and one governed checkpoint."
+  source_handoff_id: "handoff-0849"
+  source_handoff_sha256: "109b22e78cb176f4f502bdc8a9e5c01566c3ac41e7f4ab4c906b4f497c282551"
+  immutable_route_sha256: "83385527d2b7baac8854239d890d4133f82fd09bcef221e898977b4fa0141380"
+  p13_t03_dependency_completion_path: "research_control/tasks/RT-20260723-019/jobs/completions/AJC-AJ-RT-20260723-019-001.yaml"
+  p13_t03_dependency_completion_sha256: "10e7ecebced8832e7106f3ec174fcae9aa4560d76178f4b595b94de303291869"
+  p10_t07_dependency_completion_path: "research_control/tasks/RT-20260722-002/jobs/completions/AJC-AJ-RT-20260722-002-001.yaml"
+  p10_t07_dependency_completion_sha256: "71595f97c4b3c8ed06d5e735a0f23269d210e40909b09301818af011e551b2a4"
+  p13_t02_executed: false
+  p13_t01_reopened: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+documentation_impact_id: "DI-RT-20260723-020-001"
+completion_id: "AJC-AJ-RT-20260723-020-001"
+output_artifacts:
+  - "research_control/tasks/RT-20260723-020/artifacts/quality-requirements.lock"
+  - "research_control/tasks/RT-20260723-020/artifacts/validator_api_contract_v1.md"
+  - "research_control/tasks/RT-20260723-020/artifacts/quality_portability_policy_v1.md"
+  - "research_control/tasks/RT-20260723-020/artifacts/p13_t04_quality_receipt.json"
+  - "research_control/tasks/RT-20260723-020/artifacts/validation_blocker_precheckpoint_frontier_sync_v1.yaml"
+  - "research_control/tasks/RT-20260723-020/jobs/completions/AJC-AJ-RT-20260723-020-001.yaml"
+closure_status: "p13_t04_payload_pass_precheckpoint_frontier_sync_repair_required"
+summary: "The P13-T04 quality tooling, typed validator API, prospective path linting, two-cell source matrix, and 48 focused tests pass locally. Required pre-checkpoint validation fails because generated current and compact frontier artifacts remain stale and their direct renderer commands are outside this immutable AgentJob; no checkpoint staging or commit occurred."
+next_recommended_action: "Run one fresh governed Validator Engineer recovery for P13-T04 that synchronizes the generated current and compact frontiers, repeats required pre-checkpoint validation, and invokes one checkpoint only if every gate passes."
+project_improvement_signals: []
+notes: "Payload-complete but blocked before checkpoint on a distinct generated-frontier synchronization repair. No hosted workflow dispatch, historical path migration, scientific claim, ontology, proof, benchmark, publication, push, or Gate Chair authority."

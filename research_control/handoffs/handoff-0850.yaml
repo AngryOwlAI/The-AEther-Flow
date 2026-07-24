@@ -1,0 +1,303 @@
+validation_status: "FAIL"
+handoff_id: "handoff-0850"
+task_id: "RT-20260723-020"
+job_id: "AJ-RT-20260723-020-001"
+completion_id: "AJC-AJ-RT-20260723-020-001"
+completion_path: "research_control/tasks/RT-20260723-020/jobs/completions/AJC-AJ-RT-20260723-020-001.yaml"
+completion_sha256: "5000870cf1835cc09f79c799f1a5c4aeea5a66df454d80f2faea6ad26a9c30ee"
+status: "blocked_validation"
+created_at: "2026-07-24T06:00:43Z"
+parent_handoff_id: "handoff-0849"
+plan_task_id: "P13-T04"
+source_role_id: "validator-engineer"
+source_role_version: "0.2.0"
+source_execution_role_ref: "validator-engineer@0.2.0--RT-20260723-020"
+summary: "Generation 92 implemented the bounded P13-T04 quality, portability, matrix-source, and validator API payload. Exact Ruff and mypy gates, 13 new contract tests, the 48-test combined shard, and the local Darwin CPython 3.12 matrix-equivalent cell pass. Required pre-checkpoint research-control validation then failed because generated current and compact frontier artifacts remain bound to handoff-0849. Their direct renderer commands are outside this immutable AgentJob, so the worker was not rerun and no checkpoint, staging, commit, P13-T05, or P13-T06 execution occurred."
+next_action: "Run one fresh governed Validator Engineer recovery for P13-T04 that renders the current and compact frontiers from finalized tracked state, repeats required pre-checkpoint validation, and invokes one governed checkpoint only if every gate passes. Keep P13-T05 and P13-T06 unexecuted, P13-T02 blocked, and P13-T01 held."
+current_claim_boundary: "CB-V21-P13-T04-QUALITY-PORTABILITY-VALIDATOR-API-001"
+loop_risk_route: "repair_p13_t04_frontier_compact_sync_then_revalidate_checkpoint_v1"
+
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260723-020"
+  latest_research_handoff_id: "handoff-0850"
+  latest_research_next_action: "Run one fresh governed Validator Engineer recovery for P13-T04 that renders the current and compact frontiers from finalized tracked state, repeats required pre-checkpoint validation, and invokes one governed checkpoint only if every gate passes. Keep P13-T05 and P13-T06 unexecuted, P13-T02 blocked, and P13-T01 held."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+
+claim_boundary:
+  allowed_next_scope: "One fresh bounded Validator Engineer recovery may run the generated current-frontier and compact-frontier renderers from finalized P13-T04 control state, repeat required validation, and invoke one governed checkpoint only on a full pass. It must preserve the implemented P13-T04 payload, leave P13-T05 and P13-T06 unexecuted, and make no scientific or external-authority change."
+  blocked_task: "RT-20260723-020"
+  blocked_completion_path: "research_control/tasks/RT-20260723-020/jobs/completions/AJC-AJ-RT-20260723-020-001.yaml"
+  blocked_completion_sha256: "5000870cf1835cc09f79c799f1a5c4aeea5a66df454d80f2faea6ad26a9c30ee"
+  blocker_path: "research_control/tasks/RT-20260723-020/artifacts/validation_blocker_precheckpoint_frontier_sync_v1.yaml"
+  blocker_sha256: "ccdbf95c4b9912b288e3a1dbfd6702bbbfcb0e4a31d31ef96bf4d066dae45c4b"
+  quality_lock_path: "research_control/tasks/RT-20260723-020/artifacts/quality-requirements.lock"
+  quality_lock_sha256: "3544c77e7db65595424a20f15bf64381faec66e0f44cf3cedc29ba0e20fc1323"
+  validator_api_path: "scripts/validation/api.py"
+  validator_api_sha256: "468037fad003883851afe83fcd001aed5ef23182fe5281a10b5e43be98a9281a"
+  path_linter_path: "scripts/validation/portability.py"
+  path_linter_sha256: "60bb14d60c31704e0a2d155dd8b5a33019559e613e1246f155cd8473ff9e7c5e"
+  api_contract_path: "research_control/tasks/RT-20260723-020/artifacts/validator_api_contract_v1.md"
+  api_contract_sha256: "47fa0afc7c56b75462595d2c7c494d1cc893c965356e2f4460d46bf1725039bb"
+  portability_policy_path: "research_control/tasks/RT-20260723-020/artifacts/quality_portability_policy_v1.md"
+  portability_policy_sha256: "ab39bae565c7a778d29438f6b1b8534a0e074f28f5735a2f912d273bf7528c6d"
+  receipt_path: "research_control/tasks/RT-20260723-020/artifacts/p13_t04_quality_receipt.json"
+  receipt_sha256: "5b08e74e619d60e13c2262d8624b550a71ed9e9cd77054a2c55c829c27919d10"
+  result_status: "FAIL_PRECHECKPOINT_FRONTIER_SYNC_REPAIR_REQUIRED"
+  supported_python_series: "3.12"
+  exact_quality_distribution_count: 2
+  package_index_sha256_hash_count: 277
+  typed_module_count: 3
+  new_contract_test_count: 13
+  combined_focused_test_count: 48
+  declared_matrix_cell_count: 2
+  local_matrix_cell_count: 1
+  hosted_matrix_cell_count_observed: 0
+  p13_t04_payload_complete: true
+  p13_t04_checkpoint_ready: false
+  p13_t05_dependency_ready_after_checkpoint: false
+  p13_t06_dependency_ready_after_checkpoint: false
+  checkpoint_invocation_count: 0
+  checkpoint_committed: false
+  checkpoint_staged: false
+  push_performed: false
+  workflow_dispatch_performed: false
+  historical_paths_changed: false
+  scientific_status_changed: false
+  distance_to_gr_delta_changed: false
+  ontology_adoption_authorized: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  blocked_claims:
+    - "local Darwin validation presented as hosted Linux or macOS GitHub Actions execution"
+    - "quality or portability PASS presented as scientific evidence theorem truth or Distance-to-GR progress"
+    - "P13-T04 presented as checkpoint-complete before generated-frontier recovery and a full required validation pass"
+    - "P13-T05 or P13-T06 executed before the P13-T04 recovery checkpoint"
+    - "P13-T02 executed while P13-T01 cutover evidence remains incomplete"
+    - "push publication hosted-workflow dispatch or external authority inferred from this relay"
+    - "canonical ontology source-law scientific-ledger or Distance-to-GR edit"
+    - "benchmark promotion proof authority Gate Chair verdict completed derivation or global no-go"
+
+plan_result:
+  plan_task_id: "P13-T04"
+  title: "Add linting, static typing, version matrices, and validator API contracts"
+  recommendation_ids:
+    - "V21-R48"
+    - "V21-R58"
+  result_status: "FAIL_PRECHECKPOINT_FRONTIER_SYNC_REPAIR_REQUIRED"
+  work_item_status: "blocked"
+  payload_complete: true
+  checkpoint_invocation_count: 0
+  checkpoint_committed: false
+  checkpoint_staged: false
+  legacy_validation_used: false
+  p13_t05_dependency_ready_after_checkpoint: false
+  p13_t06_dependency_ready_after_checkpoint: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+distance_to_gr:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "none"
+  milestone: "source_equivalence_eqsrc"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "P13-T04 and its required generated-frontier recovery concern project-system quality, portability, and control synchronization only."
+  downstream_unlocked:
+    - "P13-T04_generated_frontier_recovery"
+  downstream_still_blocked:
+    - "P13-T05_until_p13_t04_recovery_checkpoint"
+    - "P13-T06_until_p13_t04_recovery_checkpoint"
+    - "P13-T02_until_p13_t01_cutover_evidence_complete"
+    - "source_ontology_derivation"
+    - "general_eqsrc"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+    - "benchmark_promotion"
+    - "external_publication"
+
+required_next_packet:
+  task_type: "project_system_p13_t04_generated_frontier_checkpoint_recovery"
+  plan_task_id: "P13-T04"
+  objective: "Synchronize the generated current and compact frontiers to finalized P13-T04 state, repeat required validation, and checkpoint only on a full pass."
+  dependency_ready: true
+  executed: false
+
+required_recovery:
+  strategy_id: "repair_p13_t04_frontier_compact_sync_then_revalidate_checkpoint_v1"
+  route_label: "project-system-recovery"
+  role_family: "validator-engineer@0.2.0"
+  worker_skill: "improve-project-system"
+  work_item_id: "P13-T04"
+  blocker_path: "research_control/tasks/RT-20260723-020/artifacts/validation_blocker_precheckpoint_frontier_sync_v1.yaml"
+  blocker_sha256: "ccdbf95c4b9912b288e3a1dbfd6702bbbfcb0e4a31d31ef96bf4d066dae45c4b"
+  next_plan_item_after_recovery: "P13-T05"
+  next_plan_item_executed: false
+
+selected_next_route:
+  route_id: "repair_p13_t04_frontier_compact_sync_then_revalidate_checkpoint_v1"
+  route_label: "project-system-recovery"
+  role_family: "validator-engineer@0.2.0"
+  worker_skill: "improve-project-system"
+  plan_task_id: "P13-T04"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Improve software portability and maintainability."
+  requires_human_gate: false
+  dependency_ready: true
+  project_system_boundary_authorized_by_plan: true
+  physics_promotion_authorized: false
+  executed: false
+  next_action: "Render current and compact frontier derivatives from finalized P13-T04 control state, repeat the required pre-checkpoint gates, and invoke one governed checkpoint only if every gate passes."
+  source_handoff: "research_control/handoffs/handoff-0850.yaml"
+  blocker_path: "research_control/tasks/RT-20260723-020/artifacts/validation_blocker_precheckpoint_frontier_sync_v1.yaml"
+  blocker_sha256: "ccdbf95c4b9912b288e3a1dbfd6702bbbfcb0e4a31d31ef96bf4d066dae45c4b"
+
+ordinary_route_guard:
+  schema_id: "ordinary_route_guard_evaluation_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  evaluation_id: "ORE-HANDOFF-0850"
+  ordinary_handoff_id: "handoff-0850"
+  threshold: 3
+  consecutive_project_system_tasks_before_selection: 7
+  ready_science_plan_task_ids:
+    - "P4-T05"
+  selected_plan_task_id: "P13-T04"
+  selected_route_class: "project_system"
+  selected_worker_skill: "improve-project-system"
+  outcome: "all_ready_science_blocked_exception"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  exception_receipt:
+    active: true
+    schema_id: "ordinary_route_exception_receipt_v1"
+    exception_id: "ORE-HANDOFF-0850-EXCEPTION-001"
+    exception_class: "all_ready_science_blocked"
+    ordinary_handoff_id: "handoff-0850"
+    ready_science_plan_task_ids:
+      - "P4-T05"
+    blocked_routes:
+      - plan_task_id: "P4-T05"
+        failure_class: "human_gate_required"
+        evidence_path: "research_control/design/v21_recommendation_backlog.yaml"
+        evidence_sha256: "849a4e8dfe848e80bc0c8236252b924e636e5c95ac1a090478a69f7f5377559f"
+        reason: "P4-T05 remains dependency-ready but requires explicit human Gate Chair authority that this relay does not possess."
+    authority_limits:
+      ordinary_research_handoff_authoritative: true
+      project_system_sidecar_supersedes: false
+      system_success_counts_as_physics: false
+      system_success_counts_as_distance_to_gr: false
+      scientific_status_changed: false
+      physics_promotion_authorized: false
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 92 was validated, claimed, and consumed exactly once before its one routed improve-project-system invocation."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The exact lock, modules, tests, API, portability policy, and local matrix evidence are complete and hash-bound."
+  post_write:
+    status: "FAIL"
+    evidence:
+      - "Ruff, mypy, API, path parity, matrix-source checks, and 48 focused tests pass."
+      - "Required research-control diff validation fails because generated current and compact frontier artifacts remain stale."
+  post_checkpoint:
+    status: "NOT_RUN"
+    evidence:
+      - "No checkpoint was invoked because a required pre-checkpoint gate failed."
+  renderer:
+    status: "FAIL"
+    evidence:
+      - "Current and compact frontier derivatives remain bound to handoff-0849 and require a fresh authorized renderer packet."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory bootstrap and validate-only pass after canonical source-registry synchronization."
+  claim_language_linter:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "Changed-source claim-language validation has zero hard failures and preserves every scientific and external-authority boundary."
+
+authorization_layers:
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  canonical_ontology_edit_authorized: false
+  ontology_selection_authorized: false
+  physical_interpretation_establishment_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+  publication_authorized: false
+  proof_authority: false
+
+three_tier_claim_summary:
+  adopted_objects: []
+  accepted_evidence_preconditions:
+    - "The bounded local quality and portability profile passes."
+    - "The hosted matrix source contract declares Linux and macOS CPython 3.12 cells."
+  open_or_blocked_physical_targets:
+    - "source_ontology_derivation"
+    - "general_eqsrc"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+  forbidden_overread:
+    - "local validation as hosted CI execution"
+    - "quality controls as scientific evidence or theorem truth"
+    - "a repair-required control handoff as checkpoint completion or physics promotion"
+
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  sidecar_path: ""
+  recursive_goal_recovery_required: true
+  route: "continue-goal recovery via improve-project-system"
+  blocker_path: "research_control/tasks/RT-20260723-020/artifacts/validation_blocker_precheckpoint_frontier_sync_v1.yaml"
+  reason: "The generation-92 payload passes, but generated current and compact frontier synchronization is a distinct machine-solvable pre-checkpoint blocker outside the consumed AgentJob command set."
+
+handoff_authority_boundary:
+  this_handoff_authorizes: "Director consideration of one bounded P13-T04 generated-frontier synchronization and checkpoint recovery under a fresh immutable improve-project-system AgentJob."
+  this_handoff_does_not_authorize:
+    - "repeating the consumed generation-92 worker invocation"
+    - "hand-editing generated current or compact frontier artifacts"
+    - "P13-T05 or P13-T06 before the P13-T04 recovery checkpoint commits"
+    - "P13-T02 while P13-T01 cutover evidence remains incomplete"
+    - "mass formatting canonical science or historical path migration"
+    - "push publication hosted-workflow dispatch or external-system mutation"
+    - "canonical ontology source-law scientific-ledger or Distance-to-GR edit"
+    - "physics promotion benchmark promotion proof authority Gate Chair verdict completed derivation or global no-go"
+
+next_plan_task_id: "P13-T04"
+next_plan_task_execution_ready: true
+next_plan_task_executed: false
+notes: "P13-T04 is payload-complete but blocked before checkpoint on generated current and compact frontier drift. P13-T05 and P13-T06 remain unexecuted, while P13-T02 and the P13-T01 cutover remain held."

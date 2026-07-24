@@ -1,5 +1,4 @@
-# Compatibility wrapper for development and validation setup.
+# Compatibility wrapper for development and quality-validation setup.
 #
-# P13-T03 adds no development-only third-party dependency. This wrapper keeps
-# existing commands stable while consuming the same hash-locked runtime set.
--r requirements.txt
+# The P13-T04 quality lock contains the exact runtime and development tool set.
+-r research_control/tasks/RT-20260723-020/artifacts/quality-requirements.lock

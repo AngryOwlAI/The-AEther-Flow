@@ -1,0 +1,370 @@
+job_id: "AJ-RT-20260724-001-001"
+task_id: "RT-20260724-001"
+decision_id: "DDR-20260724-001"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260724-001"
+status: "completed"
+validation_status: "PASS"
+created_at: "2026-07-24T06:38:28Z"
+started_at: "2026-07-24T06:38:28Z"
+completed_at: "2026-07-24T06:38:28Z"
+completion_path: "research_control/tasks/RT-20260724-001/jobs/completions/AJC-AJ-RT-20260724-001-001.yaml"
+requires_human_gate: false
+human_authorization_note: "The user-authorized recursive relay immutably routed generation 93 through improve-project-system for exactly the P13-T04 generated-frontier and checkpoint recovery selected by handoff-0850."
+objective: "Synchronize generated task-index, current-frontier, and compact-frontier outputs to finalized P13-T04 control state, repeat required validation, and run one normal governed checkpoint only on a full pass."
+target_derivation_milestone: "source_equivalence_eqsrc"
+milestone_burden: "Improve software portability and maintainability."
+route_label: "repair_p13_t04_frontier_compact_sync_then_revalidate_checkpoint_v1"
+route_reason: "Generation 92 completed the bounded P13-T04 payload but isolated stale generated current and compact frontiers as the only pre-checkpoint blocker."
+immutable_route_sha256: "0b3788e73c9814273db14d5e1b17fed6e93042be5217d110cb70c4c81aed7554"
+plan_task_id: "P13-T04"
+recommendation_ids:
+  - "V21-R48"
+  - "V21-R58"
+project_system_change_only: true
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 93
+  passes_consumed: 86
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:93"
+  immutable_route_hash: "0b3788e73c9814273db14d5e1b17fed6e93042be5217d110cb70c4c81aed7554"
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  candidate_family: "not_applicable"
+  assumption_delta:
+    - "No scientific assumption changes; this packet only synchronizes generated navigation snapshots to already-finalized tracked P13-T04 control state."
+    - "The generation-92 quality, portability, validator API, workflow, test, and documentation payload remains byte-preserved."
+  materiality_basis: "Clears the exact generated-frontier freshness blocker required before the already-authorized cumulative P13-T04 transaction can checkpoint."
+  source_basis:
+    - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+    - "research_control/handoffs/handoff-0850.yaml"
+    - "research_control/tasks/RT-20260723-020/artifacts/validation_blocker_precheckpoint_frontier_sync_v1.yaml"
+    - "research_control/tasks/RT-20260723-020/jobs/completions/AJC-AJ-RT-20260723-020-001.yaml"
+  expected_artifact_paths:
+    - "research_control/current_frontier.md"
+    - "output/compact_current_frontier_v16.yaml"
+    - "output/compact_current_frontier_v16.json"
+    - "wiki/indexes/compact_current_frontier_v16.md"
+    - "research_control/tasks/RT-20260724-001/jobs/completions/AJC-AJ-RT-20260724-001-001.yaml"
+  project_system_justification: "The packet repairs deterministic generated project-control snapshots and transaction readiness only."
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  expected_durable_outputs:
+    physics: []
+    project_system:
+      - "research_control/current_frontier.md"
+      - "output/compact_current_frontier_v16.yaml"
+      - "output/compact_current_frontier_v16.json"
+      - "wiki/indexes/compact_current_frontier_v16.md"
+      - "research_control/tasks/RT-20260724-001/jobs/completions/AJC-AJ-RT-20260724-001-001.yaml"
+  acceptance_criteria:
+    physics: []
+    project_system:
+      - "the routed 53-path generation-92 input manifest is preserved before recovery writes"
+      - "task-index current-frontier and compact-frontier renderer write/check parity passes"
+      - "compact-current-frontier schema and tracked-state freshness validation passes"
+      - "the P13-T04 quality target and 48-test focused shard pass unchanged"
+      - "project-system research-control memory and Git gates pass"
+      - "one normal governed checkpoint commits without legacy validation"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: true
+    exception_id: "ORE-HANDOFF-0850-EXCEPTION-001"
+    evidence_path: "research_control/handoffs/handoff-0850.yaml"
+    evidence_sha256: "40a62cef45dcd25cce843cc0d92d8429d1405eb84d4a2ae1e0daa42ea3bd2fdb"
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0849"
+  source_handoff_path: "research_control/handoffs/handoff-0849.yaml"
+  source_handoff_sha256: "109b22e78cb176f4f502bdc8a9e5c01566c3ac41e7f4ab4c906b4f497c282551"
+  selected_plan_task_id: "P13-T04"
+  guard_outcome: "all_ready_science_blocked_exception"
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+allowed_read_paths:
+  - "SOUL.md"
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research-goal/SKILL.md"
+  - ".codex/skills/continue-research-goal/references/goal-file-schema.md"
+  - ".codex/skills/continue-research-continue-goal/SKILL.md"
+  - ".codex/skills/improve-project-system/SKILL.md"
+  - ".agents/roles/research_ops/project-system-director.v0.2.0.md"
+  - ".agents/roles/research_ops/validator-engineer.v0.2.0.md"
+  - ".agents/schemas/**"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  - "research_control/design/**"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0850.yaml"
+  - "research_control/handoffs/handoff-0850.md"
+  - "research_control/tasks/RT-20260723-020/**"
+  - "scripts/project_control/**"
+  - "scripts/research_control/**"
+  - "scripts/validation/**"
+  - "tests/**"
+  - "registries/**"
+  - ".github/workflows/project-control-validation.yml"
+  - "Makefile"
+  - "README.md"
+  - "CONTRIBUTING.md"
+  - "pyproject.toml"
+  - "requirements-dev.txt"
+allowed_write_paths:
+  - ".github/workflows/project-control-validation.yml"
+  - "CONTRIBUTING.md"
+  - "FOLDER_MAP.md"
+  - "Makefile"
+  - "README.md"
+  - "pyproject.toml"
+  - "requirements-dev.txt"
+  - "scripts/validation/api.py"
+  - "scripts/validation/portability.py"
+  - "tests/test_validation_api.py"
+  - "tests/test_validation_portability.py"
+  - "research_control/design/validation_environment_contract_v1.md"
+  - "research_control/tasks/RT-20260723-020/**"
+  - "research_control/tasks/RT-20260724-001/**"
+  - "research_control/handoffs/handoff-0850.yaml"
+  - "research_control/handoffs/handoff-0850.md"
+  - "research_control/handoffs/handoff-0851.yaml"
+  - "research_control/handoffs/handoff-0851.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+allowed_generated_paths:
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "FOLDER_MAP.md"
+forbidden_paths:
+  - ".agents/**"
+  - ".codex/skills/**"
+  - "implementations_plans/**"
+  - "ontology/**"
+  - "legacy_ontology/**"
+  - "manuscripts/**"
+  - "tex/**"
+  - "markdown/publication-briefs/**"
+  - "markdown/html-explainer-specs/**"
+  - "github-facing/**"
+  - "html/**"
+  - "pdf/**"
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "registries/METRIC_USE_LEDGER.csv"
+allowed_source_classes:
+  - "task_control_record"
+  - "project_control_receipt"
+  - "registry"
+  - "generated_memory_derivative"
+  - "prior_authorized_transaction_checkpoint"
+forbidden_source_classes:
+  - "p13_t04_payload_mutation"
+  - "validator_or_test_mutation"
+  - "workflow_or_dependency_mutation"
+  - "P13_T05_execution"
+  - "P13_T06_execution"
+  - "canonical_ontology_write"
+  - "science_source_mutation"
+  - "scientific_ledger_mutation"
+  - "source_law_adoption"
+  - "physics_claim_promotion"
+  - "benchmark_promotion"
+  - "gate_chair_verdict"
+  - "proof_authority"
+  - "publication_or_push_authority"
+  - "completed_derivation_claim"
+approved_commands:
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search P13-T04 current frontier compact frontier Validator Engineer recovery --limit 10 --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21 --json"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+  - ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted"
+  - "make PYTHON=.venv/bin/python validate-quality"
+  - ".venv/bin/python -m unittest -v tests.test_validation_api tests.test_validation_portability tests.test_artifact_identity_policy tests.test_validation_orchestration tests.test_ci_validation_plan"
+  - ".venv/bin/python -m scripts.validation.cli plan --profile affected --paths pyproject.toml requirements-dev.txt Makefile README.md CONTRIBUTING.md .github/workflows/project-control-validation.yml scripts/validation/api.py scripts/validation/portability.py tests/test_validation_api.py tests/test_validation_portability.py research_control/design/validation_environment_contract_v1.md research_control/tasks/RT-20260723-020 research_control/tasks/RT-20260724-001 research_control/handoffs/handoff-0850.yaml research_control/handoffs/handoff-0851.yaml research_control/program_state.yaml --json"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --check"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --check"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --write"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --check"
+  - ".venv/bin/python scripts/research_control/validate_compact_current_frontier_v16.py --json"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --json-summary"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+  - "git diff --check"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260724-001-001"
+required_validators:
+  - "memory_preflight"
+  - "physics_payload_admission"
+  - "dual_budget_allocation"
+  - "ordinary_route_guard_admission"
+  - "protected_input_manifest"
+  - "p13_t04_quality"
+  - "p13_t04_focused_tests"
+  - "task_index_renderer"
+  - "current_frontier_renderer"
+  - "compact_frontier_renderer"
+  - "compact_frontier_schema"
+  - "affected_validation_plan"
+  - "project_change_classifier"
+  - "project_improvement_resolver"
+  - "project_improvement_signals"
+  - "documentation_impact"
+  - "claim_language_changed"
+  - "research_control_diff"
+  - "memory_sync"
+  - "memory_core"
+  - "git_diff_check"
+  - "checkpoint_transaction"
+expected_outputs:
+  - "research_control/tasks/RT-20260724-001/00_TASK.yaml"
+  - "research_control/tasks/RT-20260724-001/DDR-20260724-001.md"
+  - "research_control/tasks/RT-20260724-001/roles/validator-engineer@0.2.0--RT-20260724-001.yaml"
+  - "research_control/tasks/RT-20260724-001/jobs/AJ-RT-20260724-001-001.yaml"
+  - "research_control/tasks/RT-20260724-001/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260724-001/jobs/completions/AJC-AJ-RT-20260724-001-001.yaml"
+  - "research_control/handoffs/handoff-0851.yaml"
+  - "research_control/handoffs/handoff-0851.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "output/compact_current_frontier_v16.yaml"
+  - "output/compact_current_frontier_v16.json"
+  - "wiki/indexes/compact_current_frontier_v16.md"
+claim_boundary: "CB-V21-P13-T04-FRONTIER-CHECKPOINT-RECOVERY-001"
+resolves_signal_routing: false
+documentation_impact_id: "DI-RT-20260724-001-001"
+completion_id: "AJC-AJ-RT-20260724-001-001"
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1006
+    relationship_row_count: 4977
+    semantic_row_count: 1006
+    vault_row_count: 1006
+    local_cache_only_warning_count: 14
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  authority_note: "Generated wiki, Obsidian, SQLite, semantic, relationship, and .local retrieval outputs were navigation layers only and are not authority; the registered v21 plan, tracked handoff-0850, exact blocker, and immutable route control this recovery."
+predecessor_evidence:
+  task_id: "RT-20260723-020"
+  job_id: "AJ-RT-20260723-020-001"
+  completion_sha256: "5000870cf1835cc09f79c799f1a5c4aeea5a66df454d80f2faea6ad26a9c30ee"
+  handoff_id: "handoff-0850"
+  handoff_sha256: "40a62cef45dcd25cce843cc0d92d8429d1405eb84d4a2ae1e0daa42ea3bd2fdb"
+  blocker_sha256: "ccdbf95c4b9912b288e3a1dbfd6702bbbfcb0e4a31d31ef96bf4d066dae45c4b"
+protected_input_manifest:
+  source_head: "72eee30706c4002d3336e3f264ed363a1cfb05a5"
+  path_count: 53
+  canonical_sha256: "77e563ce6f01905fb6cb0d8c49551846eeec465e9a711ad6619d70990a2a3fc9"
+  file_hash_mismatch_count: 0
+  failed_gate: "research_control_diff"
+  failed_gate_status: "FAIL_16_STALE_GENERATED_FRONTIER_FINDINGS"
+  failed_gate_evidence_sha256: "7fed9afa751fd9987c5a167caed6c27ed3217f497c22047bed145f292a6c5de7"

@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260723-019` and `handoff-0849`.
+`RT-20260724-001` and `handoff-0851`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260723-019` |
-| Latest handoff ID | `handoff-0849` |
-| Current status | `p13_t03_packaging_contract_pass_checkpoint_ready_p13_t04_next` |
+| Active task ID | `RT-20260724-001` |
+| Latest handoff ID | `handoff-0851` |
+| Current status | `p13_t04_frontier_sync_pass_checkpoint_ready` |
 | V16 completed | false |
-| Current route family | construction or implementation (project system) |
+| Current route family | benchmark or recovery (project system) |
 | Target derivation milestone | `source_equivalence_eqsrc` |
-| Current burden | none for physics derivation; live control burden is lint type matrix and validator api contract |
-| Required next authority | One governed checkpoint may commit the completed P13-T03 transaction. After commit, one fresh bounded P13-T04 improve-project-system frame may incrementally add linting, typing, version matrices, path-portability fixtures, and validator API contracts. P13-T02 remains blocked and P13-T01 may reopen only after explicit publication authority plus matched current-head hosted-CI and scheduled-full evidence. |
-| Next recommended action | Run the one authorized governed checkpoint for AJ-RT-20260723-019-001. After commit, route one fresh bounded P13-T04 improve-project-system frame for incremental linting, typing, version matrices, path portability, and validator API contracts. Keep P13-T02 blocked and do not reopen P13-T01 without explicit publication authority plus matched current-head hosted-CI and scheduled-full evidence. |
+| Current burden | none for physics derivation; live control burden is coverage property mutation and security testing |
+| Required next authority | One governed checkpoint may commit the completed P13-T04 cumulative transaction. After commit, one fresh bounded P13-T05 improve-project-system frame may implement coverage, property-based, mutation, dependency, and security testing. P13-T06 requires a separate route, P13-T02 remains blocked, and P13-T01 remains held. |
+| Next recommended action | Run the one authorized governed checkpoint for AJ-RT-20260724-001-001. After commit, route one fresh bounded P13-T05 improve-project-system frame for coverage, property-based, mutation, dependency, and security testing. Keep P13-T06 unexecuted until separately routed, P13-T02 blocked, and P13-T01 held. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260723-019` |
-| Latest research handoff ID | `handoff-0849` |
-| Latest research next action | Run the one authorized governed checkpoint for AJ-RT-20260723-019-001. After commit, route one fresh bounded P13-T04 improve-project-system frame for incremental linting, typing, version matrices, path portability, and validator API contracts. Keep P13-T02 blocked and do not reopen P13-T01 without explicit publication authority plus matched current-head hosted-CI and scheduled-full evidence. |
+| Latest research task ID | `RT-20260724-001` |
+| Latest research handoff ID | `handoff-0851` |
+| Latest research next action | Run the one authorized governed checkpoint for AJ-RT-20260724-001-001. After commit, route one fresh bounded P13-T05 improve-project-system frame for coverage, property-based, mutation, dependency, and security testing. Keep P13-T06 unexecuted until separately routed, P13-T02 blocked, and P13-T01 held. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260723-019/00_TASK.yaml`.
-- Active task objective: Create one reproducible packaging and dependency contract for repository scripts, tests, validators, and proof-tool metadata while preserving current commands through hash-locked compatibility wrappers.
-- Latest handoff path: `research_control/handoffs/handoff-0849.yaml`.
-- Latest handoff summary: Generation 90 completed P13-T03 with root pyproject metadata, two exact already-used distributions, a reproducible universal lock carrying 82 package-index SHA-256 hashes, lock-only requirements wrappers, hash-enforced Make and CI setup paths, external-tool and migration policy, and deterministic classifier coverage. A clean CPython 3.12 installation and both 87-test focused runs pass; one governed checkpoint remains before P13-T04.
-- Current route family: construction or implementation (project system).
-- Next recommended action: Run the one authorized governed checkpoint for AJ-RT-20260723-019-001. After commit, route one fresh bounded P13-T04 improve-project-system frame for incremental linting, typing, version matrices, path portability, and validator API contracts. Keep P13-T02 blocked and do not reopen P13-T01 without explicit publication authority plus matched current-head hosted-CI and scheduled-full evidence.
+- Active task path: `research_control/tasks/RT-20260724-001/00_TASK.yaml`.
+- Active task objective: Render the current and compact frontier derivatives from finalized P13-T04 control state, repeat the required validation gates, and invoke one normal governed checkpoint only on a full pass.
+- Latest handoff path: `research_control/handoffs/handoff-0851.yaml`.
+- Latest handoff summary: Generation 93 preserved the exact generation-92 P13-T04 payload and synchronized finalized tracked control state into the task index, current frontier, compact frontier YAML and JSON, and compact Markdown mirror. The inherited quality target and 48-test shard, every renderer check, compact schema validation, and all required project-system, research-control, memory, and Git gates pass before one governed checkpoint.
+- Current route family: benchmark or recovery (project system).
+- Next recommended action: Run the one authorized governed checkpoint for AJ-RT-20260724-001-001. After commit, route one fresh bounded P13-T05 improve-project-system frame for coverage, property-based, mutation, dependency, and security testing. Keep P13-T06 unexecuted until separately routed, P13-T02 blocked, and P13-T01 held.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -96,7 +96,7 @@ No open or blocked physical target entries are listed.
 
 Forbidden overreads:
 
-- dependency reproducibility as scientific evidence or theorem truth
+- generated frontier freshness as scientific evidence or theorem truth
 - validator PASS as Distance-to-GR movement
 - checkpoint PASS as publication proof or hosted-CI evidence
 
@@ -296,7 +296,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run the one authorized governed checkpoint for AJ-RT-20260723-019-001. After commit, route one fresh bounded P13-T04 improve-project-system frame for incremental linting, typing, version matrices, path portability, and validator API contracts. Keep P13-T02 blocked and do not reopen P13-T01 without explicit publication authority plus matched current-head hosted-CI and scheduled-full evidence.
+Run the one authorized governed checkpoint for AJ-RT-20260724-001-001. After commit, route one fresh bounded P13-T05 improve-project-system frame for coverage, property-based, mutation, dependency, and security testing. Keep P13-T06 unexecuted until separately routed, P13-T02 blocked, and P13-T01 held.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -314,20 +314,21 @@ Layer status summary:
 
 | Status | Count | Meaning |
 | --- | --- | --- |
-| `PASS` | 3 | receipt complete |
-| `PENDING` | 4 | open item; evidence must explain why |
+| `PASS` | 5 | receipt complete |
+| `PASS_WITH_WARNINGS` | 1 | receipt complete with stated warnings |
+| `PENDING` | 1 | open item; evidence must explain why |
 
 Validation layers:
 
 | Validation layer | Status | Meaning | Evidence |
 | --- | --- | --- | --- |
-| `pre_execution` | PASS | receipt complete | Generation 90 was validated claimed and consumed exactly once before its one routed improve-project-system invocation. |
-| `completion_internal` | PASS | receipt complete | The exact metadata lock wrappers policy migration validator and compact receipt are complete and hash-bound. |
-| `post_write` | PASS | receipt complete | Lock reproduction clean hash installation both 87-test focused runs Make environment parity and classifier coverage pass. |
-| `post_checkpoint` | PENDING | open item; evidence must explain why | One normal governed checkpoint remains required before P13-T04. |
-| `renderer` | PENDING | open item; evidence must explain why | Task index current frontier and compact frontier will be rendered from finalized control sources before checkpoint. |
-| `memory_bootstrap` | PENDING | open item; evidence must explain why | Tracked memory synchronization and validate-only remain required before checkpoint. |
-| `claim_language_linter` | PENDING | open item; evidence must explain why | Changed-source claim-language validation remains required on the finalized tree. |
+| `pre_execution` | PASS | receipt complete | Generation 93 was validated, claimed, and consumed exactly once before its one routed improve-project-system invocation.<br>The exact 53-path route manifest and all file hashes matched before recovery writes. |
+| `completion_internal` | PASS | receipt complete | The recovery records exact source blocker route and manifest identities and preserves the generation-92 P13-T04 payload. |
+| `post_write` | PASS | receipt complete | Quality, 48 focused tests, renderer, compact schema, project-system, research-control, memory, and Git gates pass. |
+| `post_checkpoint` | PENDING | open item; evidence must explain why | One normal governed checkpoint remains required before P13-T05. |
+| `renderer` | PASS | receipt complete | Task index current frontier compact YAML compact JSON and compact Markdown mirror are current. |
+| `memory_bootstrap` | PASS | receipt complete | Tracked memory synchronization and validate-only pass with local-cache-only warnings. |
+| `claim_language_linter` | PASS_WITH_WARNINGS | receipt complete with stated warnings | Changed-source validation has no hard claim-language failure. |
 
 Authorization layers:
 
@@ -342,15 +343,23 @@ Authorization layers:
 | `benchmark_promotion_authority_source_path` | none | tracked source for benchmark authority |
 | `completed_derivation_authorized` | false (not authorized) | authorizes completed-derivation claim only when true |
 | `completed_derivation_authority_source_path` | none | tracked source for completed-derivation authority |
-| `proof_authority` | False | extension authorization field |
+| `Gate_Chair_verdict_authorized` | False | extension authorization field |
+| `canonical_ontology_edit_authorized` | False | extension authorization field |
+| `external_outreach_authorized` | False | extension authorization field |
+| `external_publication_authorized` | False | extension authorization field |
+| `global_no_go_claim_authorized` | False | extension authorization field |
+| `ontology_selection_authorized` | False | extension authorization field |
+| `physical_interpretation_establishment_authorized` | False | extension authorization field |
 | `publication_authorized` | False | extension authorization field |
 | `push_authorized` | False | extension authorization field |
+| `source_law_adoption_authorized` | False | extension authorization field |
+| `source_law_rejection_authorized` | False | extension authorization field |
 
 Legacy compatibility records:
 
-- active task: `RT-20260723-019`;
-- latest handoff: `handoff-0849`;
-- current status: `p13_t03_packaging_contract_pass_checkpoint_ready_p13_t04_next`;
+- active task: `RT-20260724-001`;
+- latest handoff: `handoff-0851`;
+- current status: `p13_t04_frontier_sync_pass_checkpoint_ready`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -360,8 +369,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0849.yaml`
-- `research_control/tasks/RT-20260723-019/00_TASK.yaml`
+- `research_control/handoffs/handoff-0851.yaml`
+- `research_control/tasks/RT-20260724-001/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -377,7 +386,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0849*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0851*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

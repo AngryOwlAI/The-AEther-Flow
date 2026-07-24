@@ -1,0 +1,364 @@
+validation_status: "FAIL"
+job_id: "AJ-RT-20260723-020-001"
+completion_id: "AJC-AJ-RT-20260723-020-001"
+task_id: "RT-20260723-020"
+task_type: "project_system_quality_portability_validator_api_contract"
+decision_id: "DDR-20260723-020"
+role_id: "validator-engineer"
+source_role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260723-020"
+status: "completed"
+final_repository_validation_status: "FAIL_PRECHECKPOINT_FRONTIER_SYNC_REPAIR_REQUIRED"
+created_at: "2026-07-24T05:27:33Z"
+started_at: "2026-07-24T05:27:33Z"
+completed_at: "2026-07-24T05:44:42Z"
+objective: "Implement and validate one incremental quality, portability, CI-matrix, and programmatic validator API contract."
+completion_summary: "P13-T04 now provides exact hash-locked Ruff 0.16.0 and mypy 2.3.0 tooling, bounded lint and strict type targets, a stable typed adapter over the existing validation planner and executor, a shared prospective P10-T07-compatible path linter, explicit Linux and macOS CPython 3.12 workflow cells, contributor and environment documentation, and deterministic focused tests. The local Darwin CPython 3.12 cell, 13 new contract tests, and 48-test combined shard pass; hosted matrix execution remains unobserved and is not claimed. Final pre-checkpoint research-control validation fails because generated current and compact frontier artifacts remain bound to handoff-0849, and their direct renderer commands are outside this immutable AgentJob. No checkpoint, staging, or commit occurred."
+objective_result: "p13_t04_payload_pass_precheckpoint_frontier_sync_repair_required"
+
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P13"
+  plan_task_id: "P13-T04"
+  recommendation_ids:
+    - "V21-R48"
+    - "V21-R58"
+  implementation_status: "blocked_precheckpoint_payload_complete"
+  completed_v21_tasks_added: []
+  next_dependency_ready_work_item: "none_until_frontier_sync_recovery_and_checkpoint"
+  next_work_item_executed: false
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 92
+  passes_consumed: 85
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:92"
+  handoff_token: "087386b75fbf5a6dd2dc578ca233540492e8f5073acf9295"
+  relay_claim_token: "7a83713b43d6e3e103886983b2b5d78459e898335923c928"
+  immutable_route_hash: "83385527d2b7baac8854239d890d4133f82fd09bcef221e898977b4fa0141380"
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+
+transaction_status: "blocked_precheckpoint_frontier_sync_repair_required"
+result_disposition: "payload_implemented_distinct_generated_frontier_sync_blocker_recorded"
+work_item_status: "blocked"
+plan_task_id: "P13-T04"
+recommendation_ids:
+  - "V21-R48"
+  - "V21-R58"
+checkpoint_commit: "none_validation_failed"
+checkpoint_invocation_count: 0
+checkpoint_staged: false
+legacy_validation_used: false
+project_system_change_only: true
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "FAIL_PRECHECKPOINT_REPAIR_REQUIRED"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  observed_durable_outputs:
+    physics: []
+    project_system:
+      - "scripts/validation/api.py"
+      - "scripts/validation/portability.py"
+      - "research_control/tasks/RT-20260723-020/artifacts/validator_api_contract_v1.md"
+      - "research_control/tasks/RT-20260723-020/artifacts/quality_portability_policy_v1.md"
+      - "research_control/tasks/RT-20260723-020/artifacts/p13_t04_quality_receipt.json"
+  accepted_criteria:
+    physics: []
+    project_system:
+      - "Ruff and mypy pass on the declared incremental validation surface"
+      - "programmatic planning API examples and exit semantics pass"
+      - "portable-path and casefold-collision fixtures pass"
+      - "the Python and OS CI matrix contract is deterministic"
+      - "the local macOS CPython 3.12 matrix-equivalent command passes"
+      - "one governed checkpoint commits"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+physics_payload_admission_result:
+  status: "admitted"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+
+ordinary_route_guard_admission_result:
+  status: "PASS"
+  source_handoff_id: "handoff-0849"
+  selected_plan_task_id: "P13-T04"
+  guard_outcome: "all_ready_science_blocked_exception"
+  ordinary_research_handoff_authoritative: true
+  system_success_counts_as_physics: false
+  system_success_counts_as_distance_to_gr: false
+
+quality_contract_result:
+  supported_python_series: "3.12"
+  exact_quality_distributions:
+    - "mypy==2.3.0"
+    - "ruff==0.16.0"
+  cumulative_exact_distribution_count: 9
+  package_index_sha256_hash_count: 277
+  lock_sha256: "3544c77e7db65595424a20f15bf64381faec66e0f44cf3cedc29ba0e20fc1323"
+  ruff_status: "PASS"
+  mypy_status: "PASS_3_MODULES"
+  shared_path_linter_status: "PASS"
+  p10_t07_finding_parity_status: "PASS"
+  api_contract_status: "PASS"
+  api_exit_codes:
+    success_or_warn: 0
+    validation_failure: 1
+    blocked_configuration: 2
+  new_contract_test_status: "PASS_13_OF_13"
+  combined_focused_test_status: "PASS_48_OF_48"
+  declared_matrix_cells:
+    - "ubuntu-latest|CPython 3.12"
+    - "macos-latest|CPython 3.12"
+  local_matrix_cell: "Darwin 25.5.0 arm64|CPython 3.12.13|PASS"
+  hosted_matrix_cells_observed: []
+  hosted_matrix_execution_claimed: false
+  historical_paths_changed: false
+
+artifacts:
+  - "research_control/tasks/RT-20260723-020/artifacts/quality-requirements.lock"
+  - "research_control/tasks/RT-20260723-020/artifacts/validator_api_contract_v1.md"
+  - "research_control/tasks/RT-20260723-020/artifacts/quality_portability_policy_v1.md"
+  - "research_control/tasks/RT-20260723-020/artifacts/p13_t04_quality_receipt.json"
+  - "research_control/tasks/RT-20260723-020/artifacts/validation_blocker_precheckpoint_frontier_sync_v1.yaml"
+artifact_receipts:
+  - path: "research_control/tasks/RT-20260723-020/artifacts/quality-requirements.lock"
+    sha256: "3544c77e7db65595424a20f15bf64381faec66e0f44cf3cedc29ba0e20fc1323"
+  - path: "research_control/tasks/RT-20260723-020/artifacts/validator_api_contract_v1.md"
+    sha256: "47fa0afc7c56b75462595d2c7c494d1cc893c965356e2f4460d46bf1725039bb"
+  - path: "research_control/tasks/RT-20260723-020/artifacts/quality_portability_policy_v1.md"
+    sha256: "ab39bae565c7a778d29438f6b1b8534a0e074f28f5735a2f912d273bf7528c6d"
+  - path: "research_control/tasks/RT-20260723-020/artifacts/p13_t04_quality_receipt.json"
+    sha256: "5b08e74e619d60e13c2262d8624b550a71ed9e9cd77054a2c55c829c27919d10"
+  - path: "research_control/tasks/RT-20260723-020/artifacts/validation_blocker_precheckpoint_frontier_sync_v1.yaml"
+    sha256: "ccdbf95c4b9912b288e3a1dbfd6702bbbfcb0e4a31d31ef96bf4d066dae45c4b"
+
+command_results:
+  - "uv pip compile pyproject.toml --group dev --all-extras --universal --generate-hashes --output-file research_control/tasks/RT-20260723-020/artifacts/quality-requirements.lock | exit_code=0 | 9 exact distributions and 277 unique package-index SHA-256 hashes"
+  - ".venv/bin/python -m pip install --require-hashes -r requirements-dev.txt | exit_code=0 | exact cumulative development environment installed"
+  - "make PYTHON=.venv/bin/python validate-quality | exit_code=0 | local Darwin CPython 3.12 incremental quality profile PASS"
+  - ".venv/bin/python -m unittest -v tests.test_validation_api tests.test_validation_portability tests.test_artifact_identity_policy tests.test_validation_orchestration tests.test_ci_validation_plan | exit_code=0 | 48 tests PASS"
+
+validation_summary:
+  status: "FAIL_PRECHECKPOINT_FRONTIER_SYNC_REPAIR_REQUIRED"
+  passing_gates:
+    - "exact quality dependency lock and hash-enforced installation"
+    - "Ruff incremental surface"
+    - "mypy strict typed module surface"
+    - "validator API planning parity and exit semantics"
+    - "portable path and casefold collision fixtures"
+    - "P10-T07 exact finding parity"
+    - "declared two-cell OS and Python matrix contract"
+    - "local Darwin CPython 3.12 matrix-equivalent run"
+    - "13 of 13 new contract tests"
+    - "48 of 48 combined focused tests"
+  pending_gates:
+    - "fresh authorized current-frontier and compact-frontier synchronization"
+    - "repeat final research-control validation"
+    - "one governed checkpoint after every required gate passes"
+  failed_gates:
+    - gate: "research-control diff validation"
+      status: "FAIL_25_ERRORS"
+      blocker_path: "research_control/tasks/RT-20260723-020/artifacts/validation_blocker_precheckpoint_frontier_sync_v1.yaml"
+  checkpoint:
+    invoked: false
+    invocation_count: 0
+    reason: "Required pre-checkpoint research-control validation failed before staging, and the generated-frontier renderer commands are outside this immutable AgentJob."
+  hosted_ci:
+    observed: false
+    claimed: false
+    reason: "No push or workflow dispatch is authorized by this frame."
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 92 route lease repository branch exact clean manifest reasoning and dependency parity passed before one claim and consume."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The compact receipt binds exact source hashes quality versions path findings tests matrix declaration and authority flags."
+  post_write:
+    status: "FAIL"
+    evidence:
+      - "Ruff mypy portable paths API parity P10-T07 non-regression matrix source contract and 48 focused tests pass."
+      - "Final research-control diff validation fails on current and compact frontier drift after the in-scope completion and registry contract defects are separated."
+  post_checkpoint:
+    status: "NOT_RUN"
+    evidence:
+      - "The governed checkpoint was not invoked because required pre-checkpoint validation failed."
+  renderer:
+    status: "FAIL"
+    evidence:
+      - "The current frontier and compact frontier remain bound to handoff-0849; their direct renderer commands require one fresh authorized recovery."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory bootstrap and validate-only pass after the registered CONTRIBUTING source hash was synchronized."
+  claim_language_linter:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "Changed-source claim-language validation has zero hard failures; remaining findings are historical warnings."
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1004
+    relationship_row_count: 4969
+    semantic_row_count: 1004
+    vault_row_count: 1004
+    local_cache_only_warning_count: 10
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search validator API portability typing matrix --limit 10 --json"
+      query_type: "search"
+      query_text: "validator API portability typing matrix"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  authority_note: "Generated wiki, Obsidian, SQLite, semantic, and .local retrieval outputs were navigation layers only and are not authority."
+
+assumption_delta:
+  changed: false
+  assumptions_added: []
+  assumptions_removed: []
+  assumptions_adopted: 0
+  exact_reason: "P13-T04 changes project-system quality and portability controls only and adds no scientific assumption."
+
+candidate_or_theorem_identities:
+  candidate_ids_created: []
+  candidate_ids_linked: []
+  theorem_ids_created: []
+  identity_note: "No scientific candidate or theorem identity is created or changed."
+mathematical_payload_manifest: []
+new_mathematical_payload: []
+
+physics_progress_status:
+  status: "documentation_or_control_only_no_physics_delta"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Improve software portability and maintainability."
+  explanation: "P13-T04 supplies project-system quality and portability controls only and adds no mathematical or physics payload."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "none"
+  milestone: "source_equivalence_eqsrc"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "P13-T04 changes software quality portability and validation interfaces only."
+  downstream_unlocked:
+    - "P13-T05_after_governed_checkpoint"
+    - "P13-T06_after_governed_checkpoint"
+  downstream_still_blocked:
+    - "P13-T02_until_p13_t01_cutover_evidence_complete"
+    - "source_ontology_derivation"
+    - "general_eqsrc"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+    - "benchmark_promotion"
+    - "external_publication"
+
+three_tier_claim_summary:
+  adopted_objects: []
+  accepted_evidence_preconditions:
+    - "The bounded quality and portability profile passes locally on Darwin CPython 3.12."
+    - "The two-cell hosted workflow matrix is declared and source-validated."
+  open_or_blocked_physical_targets:
+    - "source_ontology_derivation"
+    - "general_eqsrc"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+  forbidden_overread:
+    - "local quality PASS as hosted GitHub Actions execution"
+    - "validator PASS as scientific evidence or Distance-to-GR movement"
+    - "checkpoint PASS as publication or proof authority"
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  push_authorized: false
+  publication_authorized: false
+  proof_authority: false
+
+resolved_project_improvement_signals: []
+project_improvement_signals: []
+project_improvement_sidecar_created: false
+project_improvement_bridge:
+  required: false
+  sidecar_path: ""
+  recursive_goal_recovery_required: true
+  route: "continue-goal recovery via improve-project-system"
+  blocker_path: "research_control/tasks/RT-20260723-020/artifacts/validation_blocker_precheckpoint_frontier_sync_v1.yaml"
+  reason: "The bounded P13-T04 payload passes, but generated current and compact frontier synchronization is a distinct machine-solvable pre-checkpoint blocker outside the immutable generation-92 command set."
+
+documentation_impact_id: "DI-RT-20260723-020-001"
+required_recovery:
+  strategy_id: "repair_p13_t04_frontier_compact_sync_then_revalidate_checkpoint_v1"
+  route_label: "project-system-recovery"
+  role_family: "validator-engineer@0.2.0"
+  worker_skill: "improve-project-system"
+  work_item_id: "P13-T04"
+  blocker_path: "research_control/tasks/RT-20260723-020/artifacts/validation_blocker_precheckpoint_frontier_sync_v1.yaml"
+  blocker_sha256: "ccdbf95c4b9912b288e3a1dbfd6702bbbfcb0e4a31d31ef96bf4d066dae45c4b"
+  next_plan_item_after_recovery: "P13-T05"
+  next_plan_item_executed: false
+
+next_recommended_action: "Run one fresh governed Validator Engineer recovery for P13-T04 that renders the current and compact frontiers from finalized tracked state, repeats required pre-checkpoint validation, and invokes one governed checkpoint only if every gate passes. Keep P13-T05 and P13-T06 unexecuted, P13-T02 blocked, and P13-T01 held."
+notes: "Hosted CI cells were declared but not executed by this frame. The required checkpoint was not invoked. No staging push publication workflow dispatch scientific source mutation or physics promotion occurred."

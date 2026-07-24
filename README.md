@@ -270,13 +270,16 @@ This repository uses a local Python virtual environment for scripts.
 
 - Runtime: Python 3.12.13 in `.venv/`
 - Project metadata and dependency groups: `pyproject.toml`
-- Exact Python lock: `research_control/tasks/RT-20260723-019/artifacts/requirements.lock`
+- Exact runtime lock: `research_control/tasks/RT-20260723-019/artifacts/requirements.lock`
+- Exact cumulative quality lock:
+  `research_control/tasks/RT-20260723-020/artifacts/quality-requirements.lock`
 - Compatibility wrappers: `requirements.txt` and `requirements-dev.txt`
 - Environment directory: `.venv/`, ignored by `.gitignore`
 - Current dependency status: PyMuPDF and PyYAML are exact-pinned with
   package-index SHA-256 hashes. PyMuPDF supports direct PDF text extraction in
   the local semantic memory system; PyYAML supports tracked YAML control
-  parsing in repository validators.
+  parsing in repository validators. The development wrapper also installs
+  exact-pinned Ruff and mypy for the bounded quality profile.
 
 Create or refresh the environment from the repository root:
 
@@ -300,10 +303,11 @@ Or run scripts without activating the shell:
 
 When a Python script requires an external package, update `pyproject.toml` and
 regenerate the committed lock through an authorized project-system task. The
-requirements files remain compatibility wrappers. Reinstall with:
+requirements files remain compatibility wrappers. Use `requirements.txt` for
+the runtime-only set or provision the cumulative development set with:
 
 ```zsh
-.venv/bin/python -m pip install --require-hashes -r requirements.txt
+make PYTHON=.venv/bin/python setup-dev
 ```
 
 ### Requirement tiers
@@ -313,6 +317,9 @@ requirements files remain compatibility wrappers. Reinstall with:
   `.codex/` skills, prompts, and agent configuration files.
 - Run validators and memory scripts: Python `.venv`, the committed dependency
   lock through `requirements.txt`, PyMuPDF, and PyYAML.
+- Run the bounded lint, type, path-portability, and API-contract profile:
+  provision `requirements-dev.txt`, then run
+  `make PYTHON=.venv/bin/python validate-quality`.
 - Regenerate memory/wiki/registry surfaces:
   `.codex/skills/project-memory-system/scripts/bootstrap_memory_system.py` and
   `make validate-memory`.

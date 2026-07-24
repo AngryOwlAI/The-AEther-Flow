@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260723-019`
-- Latest handoff: `handoff-0849`
-- Current status: `p13_t03_packaging_contract_pass_checkpoint_ready_p13_t04_next`
+- Active task: `RT-20260724-001`
+- Latest handoff: `handoff-0851`
+- Current status: `p13_t04_frontier_sync_pass_checkpoint_ready`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260723-019`
-- Latest research handoff: `handoff-0849`
-- Latest research next action: Run the one authorized governed checkpoint for AJ-RT-20260723-019-001. After commit, route one fresh bounded P13-T04 improve-project-system frame for incremental linting, typing, version matrices, path portability, and validator API contracts. Keep P13-T02 blocked and do not reopen P13-T01 without explicit publication authority plus matched current-head hosted-CI and scheduled-full evidence.
+- Latest research task: `RT-20260724-001`
+- Latest research handoff: `handoff-0851`
+- Latest research next action: Run the one authorized governed checkpoint for AJ-RT-20260724-001-001. After commit, route one fresh bounded P13-T05 improve-project-system frame for coverage, property-based, mutation, dependency, and security testing. Keep P13-T06 unexecuted until separately routed, P13-T02 blocked, and P13-T01 held.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `route_p13_t04_after_p13_t03_checkpoint_v1`
+- Route ID: `route_p13_t05_after_p13_t04_recovery_checkpoint_v1`
 - Role family: `validator-engineer@0.2.0`
 - Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Improve software portability and maintainability.
+- Milestone burden: Test whether validators and state machinery fail for the right reasons.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `750b2d05e47fb129abc11059eb34ab660f06301f47a9341f805a471f85544f39`
-- JSON SHA-256: `cdb65dac883c107a7c30d289eb7f5ce3e08ddcd019d0998bb5541d6eb13c7bfd`
+- YAML SHA-256: `2089c04c22e8f0d857bc68dfeee063f7e1e6f13a62de8678c65444c254fa8680`
+- JSON SHA-256: `6c227a45135d1bd4e428998d395d66ac4c44c9033a86da2a2c2506907cfd6277`
 
 ## Authority Warning
 
