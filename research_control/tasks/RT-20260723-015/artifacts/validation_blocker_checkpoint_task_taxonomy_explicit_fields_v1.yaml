@@ -1,0 +1,161 @@
+schema_id: "checkpoint_validation_blocker_v1"
+blocker_id: "BLOCK-RT-20260723-015-TASK-TAXONOMY-EXPLICIT-FIELDS-001"
+created_at: "2026-07-24T00:09:17Z"
+status: "checkpoint_blocked_recovery_required"
+source_task_id: "RT-20260723-015"
+source_job_id: "AJ-RT-20260723-015-001"
+source_completion_path: "research_control/tasks/RT-20260723-015/jobs/completions/AJC-AJ-RT-20260723-015-001.yaml"
+source_goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+source_goal_generation: 84
+source_goal_route_sha256: "9af4f67a6700efec64ee1d2854262d2fca8427a4674b9c756f159f6793419a4f"
+checkpoint:
+  command: ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260723-015-001"
+  invocation_count: 1
+  legacy_validation_used: false
+  status: "FAIL_CLOSED"
+  committed: false
+  staged_after_failure: false
+  index_restored: true
+  failed_gate_id: "test_shard_repository"
+  failed_test: "test_task_taxonomy.TaskTaxonomyTests.test_repository_report_records_zero_mutation_and_strengthening"
+  repository_test_count: 1196
+  repository_test_failure_count: 1
+  repository_test_duration_seconds: 788.288
+  checkpoint_duration_seconds: 991.99608
+  checkpoint_reported_staged_tree: "71a908e6e5591bc903097a1e50880367c7c9ce64"
+  live_head_commit: "d1a20d67cf49131e656152384309ff666f2feeca"
+  live_head_tree: "5ef89de1859dc28b3b02013eeaec9443b1d1eade"
+  live_index_tree_after_restoration: "5ef89de1859dc28b3b02013eeaec9443b1d1eade"
+  checkpoint_child_receipt_path: ".local/validation-receipts/5fdb4a94a5136a980b14c90b290edc80d5bffc547f521ef9a53db6c9866d794a/RUN-CHECKPOINT-252c82eefcf8db06/receipt.json"
+  checkpoint_child_receipt_sha256: "3a64333c44e7a635d2a65601a545322335b302d99adf8cb8572652effc477aff"
+staged_gate_results:
+  classify_changes: "PASS"
+  project_improvement_signals: "PASS"
+  documentation_impact: "PASS"
+  memory_core: "PASS"
+  research_control_diff: "PASS"
+  test_shard_repository: "FAIL_1_OF_1196"
+  git_diff_check: "PASS"
+  planner_shadow_comparison: "PASS_NO_MISMATCHES"
+root_cause:
+  validator: "scripts/research_control/task_taxonomy.py"
+  report_status: "FAIL"
+  explicit_required_task_count: 45
+  explicit_required_error_count: 1
+  failing_task_id: "RT-20260723-015"
+  failing_errors:
+    - "required_explicit_task_taxonomy_missing"
+    - "required_top_level_field_missing:title"
+  historical_source_mutation_count: 0
+  stronger_science_inference_count: 0
+  explanation: "RT-20260723-015 was created after the v21 task-taxonomy effective timestamp but its 00_TASK.yaml omitted the required readable title and explicit task_taxonomy mapping. The reseal payload itself and all scientific-authority boundaries passed."
+failure_manifest:
+  head_commit: "d1a20d67cf49131e656152384309ff666f2feeca"
+  branch: "main"
+  staged_path_count_after_failure: 0
+  changed_path_count_before_blocker_record: 43
+  blocked_path_count: 0
+  changed_paths:
+    - "FOLDER_MAP.md"
+    - "output/ai_methodology_metrics_dashboard.json"
+    - "output/ai_methodology_metrics_dashboard.md"
+    - "output/compact_current_frontier_v16.json"
+    - "output/compact_current_frontier_v16.yaml"
+    - "output/physics_progress_metrics.json"
+    - "output/physics_progress_metrics.md"
+    - "registries/AGENT_JOB_REGISTRY.csv"
+    - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+    - "registries/CONTENT_SEMANTIC_REGISTRY.csv"
+    - "registries/CONTENT_SEMANTIC_REGISTRY.meta.json"
+    - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+    - "registries/FILE_OBJECT_REGISTRY.csv"
+    - "registries/FILE_OBJECT_REGISTRY.meta.json"
+    - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+    - "registries/OBJECT_RELATIONSHIP_REGISTRY.meta.json"
+    - "registries/OBSIDIAN_VAULT_REGISTRY.csv"
+    - "registries/OBSIDIAN_VAULT_REGISTRY.meta.json"
+    - "registries/PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv"
+    - "registries/RESEARCH_TASK_REGISTRY.csv"
+    - "registries/ROLE_EXECUTION_REGISTRY.csv"
+    - "registries/WIKI_ARTIFACT_REGISTRY.csv"
+    - "registries/WIKI_ARTIFACT_REGISTRY.meta.json"
+    - "research_control/current_frontier.md"
+    - "research_control/program_state.yaml"
+    - "research_control/project_improvement_handoffs/improve-project-handoff_20260723_013.md"
+    - "research_control/project_improvement_handoffs/improve-project-handoff_20260723_013.yaml"
+    - "research_control/tasks/RT-20260723-004/artifacts/scientific_quality_compact_receipt.json"
+    - "research_control/tasks/RT-20260723-004/artifacts/scientific_quality_validation_report.json"
+    - "research_control/tasks/RT-20260723-015/00_TASK.yaml"
+    - "research_control/tasks/RT-20260723-015/DDR-20260723-015.md"
+    - "research_control/tasks/RT-20260723-015/artifacts/p12_t05_scientific_quality_source_integrity_reseal_receipt.json"
+    - "research_control/tasks/RT-20260723-015/documentation_impact.yaml"
+    - "research_control/tasks/RT-20260723-015/jobs/AJ-RT-20260723-015-001.yaml"
+    - "research_control/tasks/RT-20260723-015/jobs/completions/AJC-AJ-RT-20260723-015-001.yaml"
+    - "research_control/tasks/RT-20260723-015/roles/validator-engineer@0.2.0--RT-20260723-015.yaml"
+    - "research_control/tasks/TASK_INDEX.csv"
+    - "research_control/tasks/TASK_INDEX.md"
+    - "wiki/indexes/ai_methodology_metrics_dashboard.md"
+    - "wiki/indexes/compact_current_frontier_v16.md"
+    - "wiki/indexes/research_control_task_index.md"
+    - "wiki/markdown/md-research-control-current-frontier.md"
+    - "wiki/markdown/md-research-control-task-index.md"
+protected_hashes:
+  taxonomy_sha256: "b2e31738a445e68e4de6ea20381886bcd6c3747cccd693187f0904a7742ad308"
+  calibration_policy_sha256: "b9b4e4fcc603c9eee508456999936a4e0378b188235f73f35c454009728648cb"
+  fixture_corpus_sha256: "60bcb8819734e5e565b08a46b29e85ebffde14f6c1e33dd13cfdd1c02628d003"
+  validator_sha256: "e4102ac5ce28653e9c8195762aeb519c1f5c08e615aa03221d18b0906fd73260"
+  handoff_0847_yaml_sha256: "7472af1b615b7c76405bcea2c63bc17490837c0412a58a61edfdd84690252dd2"
+  p12_t07_result_sha256: "a262ba7b1c12dc133b32e4ae81f0aadd9132981b18e51c5ebe372bab6a8a5089"
+recovery_contract:
+  worker_skill: "improve-project-system"
+  recommended_role: "validator-engineer"
+  strategy_id: "add_rt015_explicit_task_taxonomy_then_revalidate_and_checkpoint_v1"
+  objective: "Preserve the exact cumulative reseal transaction; add only the required readable title and explicit v21 task_taxonomy mapping to RT-20260723-015/00_TASK.yaml; synchronize its bounded failure and recovery control evidence; revalidate; and invoke at most one fresh governed checkpoint."
+  required_title: "Reseal the P12-T05 scientific-quality source-integrity artifacts"
+  required_task_taxonomy:
+    schema_id: "v21_task_taxonomy_v1"
+    work_kind: "benchmark_or_recovery"
+    milestone: "not_applicable"
+    candidate_family: "p12_t05_scientific_quality_source_integrity_reseal"
+    result_kind: "completed_or_precisely_blocked"
+    authority: "project_control"
+    scope: "project_system"
+  allowed_primary_repair_paths:
+    - "research_control/tasks/RT-20260723-015/00_TASK.yaml"
+    - "research_control/tasks/RT-20260723-015/**"
+    - "registries/RESEARCH_TASK_REGISTRY.csv"
+    - "registries/AGENT_JOB_REGISTRY.csv"
+    - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+    - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+    - "registries/ROLE_EXECUTION_REGISTRY.csv"
+    - "registries/PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv"
+    - "research_control/project_improvement_handoffs/improve-project-handoff_20260723_013.yaml"
+    - "research_control/project_improvement_handoffs/improve-project-handoff_20260723_013.md"
+    - "research_control/program_state.yaml"
+    - "research_control/current_frontier.md"
+    - "research_control/tasks/TASK_INDEX.csv"
+    - "research_control/tasks/TASK_INDEX.md"
+    - "output/**"
+    - "wiki/indexes/**"
+    - "wiki/markdown/**"
+    - "registries/CONTENT_SEMANTIC_REGISTRY*"
+    - "registries/FILE_OBJECT_REGISTRY*"
+    - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+    - "registries/OBSIDIAN_VAULT_REGISTRY*"
+    - "registries/WIKI_ARTIFACT_REGISTRY*"
+    - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+    - "FOLDER_MAP.md"
+  forbidden_changes:
+    - "P12-T05 taxonomy calibration policy fixture validator or metric semantics"
+    - "handoff-0847 or P12-T07 methodology evidence"
+    - "task-taxonomy policy adapter or tests"
+    - "P13-T01 execution"
+    - "scientific source ontology ledger Distance-to-GR or promotion status"
+    - "legacy validation"
+    - "more than one future checkpoint"
+retry_authorized_in_current_job: false
+fresh_recovery_required: true
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false

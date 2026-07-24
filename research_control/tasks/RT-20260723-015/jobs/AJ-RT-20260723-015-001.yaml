@@ -1,0 +1,352 @@
+job_id: "AJ-RT-20260723-015-001"
+task_id: "RT-20260723-015"
+decision_id: "DDR-20260723-015"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260723-015"
+status: "completed"
+validation_status: "FAIL"
+created_at: "2026-07-23T23:27:47Z"
+started_at: "2026-07-23T23:27:47Z"
+completed_at: "2026-07-23T23:33:40Z"
+completion_path: "research_control/tasks/RT-20260723-015/jobs/completions/AJC-AJ-RT-20260723-015-001.yaml"
+requires_human_gate: false
+human_authorization_note: "The user-authorized recursive relay immutably routed generation 84 through improve-project-system to process PIS-RT-20260723-013-001 before P13-T01."
+objective: "Resolve PIS-RT-20260723-013-001 by invoking the established P12-T05 generator to reseal only its stale validation report, compact receipt, and two established metrics projections against unchanged sources, then record exact validation evidence and checkpoint once."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system generated validation-artifact source-integrity reseal only; no derivation milestone advances."
+route_label: "p12_t05_scientific_quality_source_integrity_reseal_v1"
+route_reason: "The live P12-T05 validation calculation passes all logical checks, while only its generated report and receipt retain stale source hashes."
+immutable_route_sha256: "9af4f67a6700efec64ee1d2854262d2fca8427a4674b9c756f159f6793419a4f"
+plan_task_id: "P13-T01"
+recovery_for_plan_task_id: "P12-T05"
+next_plan_task_id: "P13-T01"
+next_plan_task_execution_authorized: false
+project_improvement_signal_id: "PIS-RT-20260723-013-001"
+project_system_change_only: true
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  candidate_family: "not_applicable"
+  assumption_delta:
+    - "No scientific-quality metric, taxonomy, calibration, fixture, reporting, scientific-status, or Distance-to-GR assumption changes; only generated source bindings are refreshed."
+  materiality_basis: "Restores deterministic current-source validation and clears the registered project-system prerequisite for P13-T01."
+  source_basis:
+    - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+    - "research_control/handoffs/handoff-0847.yaml"
+    - "research_control/project_improvement_handoffs/improve-project-handoff_20260723_013.yaml"
+    - "research_control/tasks/RT-20260723-013/artifacts/p12_t07_methodology_ablation_results.json"
+  expected_artifact_paths:
+    - "research_control/tasks/RT-20260723-004/artifacts/scientific_quality_validation_report.json"
+    - "research_control/tasks/RT-20260723-004/artifacts/scientific_quality_compact_receipt.json"
+    - "output/physics_progress_metrics.json"
+    - "output/physics_progress_metrics.md"
+    - "research_control/tasks/RT-20260723-015/artifacts/p12_t05_scientific_quality_source_integrity_reseal_receipt.json"
+  project_system_justification: "The packet repairs generated validation evidence and signal state only; it creates no physics payload or scientific claim."
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  expected_durable_outputs:
+    physics: []
+    project_system:
+      - "research_control/tasks/RT-20260723-004/artifacts/scientific_quality_validation_report.json"
+      - "research_control/tasks/RT-20260723-004/artifacts/scientific_quality_compact_receipt.json"
+      - "research_control/tasks/RT-20260723-015/artifacts/p12_t05_scientific_quality_source_integrity_reseal_receipt.json"
+  acceptance_criteria:
+    physics: []
+    project_system:
+      - "the taxonomy calibration policy fixture corpus and validator implementation hashes are unchanged"
+      - "the regenerated P12-T05 report and compact receipt match current generator output"
+      - "the P12-T05 check reports PASS with 44 logical checks and 14 fixtures"
+      - "PIS-RT-20260723-013-001 and its sidecar close with matching PASS completion evidence"
+      - "handoff-0847 remains ordinary research authority and P13-T01 remains unexecuted"
+      - "one normal governed checkpoint commits without legacy validation"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: true
+    exception_id: "BLOCK-P12-T05-GENERATED-SOURCE-INTEGRITY-001"
+    evidence_path: "research_control/project_improvement_handoffs/improve-project-handoff_20260723_013.yaml"
+    evidence_sha256: "72b111031f2dc58d2e02b2e990e67ecb341bfc034bab8591cdfadd758021685d"
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0847"
+  source_handoff_path: "research_control/handoffs/handoff-0847.yaml"
+  source_handoff_sha256: "7472af1b615b7c76405bcea2c63bc17490837c0412a58a61edfdd84690252dd2"
+  selected_plan_task_id: "P13-T01"
+  guard_outcome: "below_threshold"
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+allowed_read_paths:
+  - "SOUL.md"
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research-goal/SKILL.md"
+  - ".codex/skills/continue-research-goal/references/goal-file-schema.md"
+  - ".codex/skills/continue-research-continue-goal/SKILL.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".codex/skills/improve-project-system/SKILL.md"
+  - ".agents/roles/research_ops/project-system-director.v0.2.0.md"
+  - ".agents/roles/research_ops/validator-engineer.v0.2.0.md"
+  - ".agents/roles/research_ops/documentation-curator.v2.0.0.md"
+  - ".agents/schemas/**"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  - "research_control/design/**"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0847.yaml"
+  - "research_control/handoffs/handoff-0847.md"
+  - "research_control/project_improvement_handoffs/improve-project-handoff_20260723_013.yaml"
+  - "research_control/project_improvement_handoffs/improve-project-handoff_20260723_013.md"
+  - "research_control/tasks/RT-20260723-004/**"
+  - "research_control/tasks/RT-20260723-013/**"
+  - "scripts/project_control/**"
+  - "scripts/research_control/**"
+  - "scripts/validation/**"
+  - "tests/test_scientific_quality_metrics.py"
+  - "tests/test_report_physics_progress_metrics.py"
+  - "registries/**"
+allowed_write_paths:
+  - "research_control/tasks/RT-20260723-004/artifacts/scientific_quality_validation_report.json"
+  - "research_control/tasks/RT-20260723-004/artifacts/scientific_quality_compact_receipt.json"
+  - "research_control/tasks/RT-20260723-015/**"
+  - "research_control/project_improvement_handoffs/improve-project-handoff_20260723_013.yaml"
+  - "research_control/project_improvement_handoffs/improve-project-handoff_20260723_013.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "output/physics_progress_metrics.json"
+  - "output/physics_progress_metrics.md"
+  - "output/ai_methodology_metrics_dashboard.json"
+  - "output/ai_methodology_metrics_dashboard.md"
+  - "wiki/indexes/ai_methodology_metrics_dashboard.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "FOLDER_MAP.md"
+allowed_generated_paths:
+  - "research_control/tasks/RT-20260723-004/artifacts/scientific_quality_validation_report.json"
+  - "research_control/tasks/RT-20260723-004/artifacts/scientific_quality_compact_receipt.json"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "output/physics_progress_metrics.json"
+  - "output/physics_progress_metrics.md"
+  - "output/ai_methodology_metrics_dashboard.json"
+  - "output/ai_methodology_metrics_dashboard.md"
+  - "wiki/indexes/ai_methodology_metrics_dashboard.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "FOLDER_MAP.md"
+forbidden_paths:
+  - "research_control/tasks/RT-20260723-004/artifacts/scientific_quality_metric_taxonomy_v1.md"
+  - "research_control/tasks/RT-20260723-004/artifacts/scientific_quality_calibration_warning_policy_v1.md"
+  - "research_control/tasks/RT-20260723-004/artifacts/fixtures/**"
+  - "research_control/tasks/RT-20260723-004/artifacts/validate_scientific_quality_metrics.py"
+  - "research_control/tasks/RT-20260723-004/jobs/**"
+  - "research_control/tasks/RT-20260723-013/**"
+  - "research_control/handoffs/**"
+  - "scripts/project_control/**"
+  - "scripts/research_control/**"
+  - "scripts/validation/**"
+  - "tests/**"
+  - ".agents/**"
+  - ".codex/skills/**"
+  - "implementations_plans/**"
+  - "ontology/**"
+  - "legacy_ontology/**"
+  - "manuscripts/**"
+  - "tex/**"
+  - "markdown/publication-briefs/**"
+  - "markdown/html-explainer-specs/**"
+  - "github-facing/**"
+  - "html/**"
+  - "pdf/**"
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "registries/METRIC_USE_LEDGER.csv"
+allowed_source_classes:
+  - "generated_validation_artifact"
+  - "task_control_record"
+  - "signal_resolution"
+  - "registry"
+  - "generated_memory_derivative"
+forbidden_source_classes:
+  - "validator_or_metric_semantics_change"
+  - "source_taxonomy_policy_or_fixture_change"
+  - "historical_completion_or_handoff_rewrite"
+  - "canonical_ontology_write"
+  - "science_draft_write"
+  - "scientific_ledger_change"
+  - "P13_T01_execution"
+  - "physics_claim_promotion"
+  - "benchmark_promotion"
+  - "gate_chair_verdict"
+  - "proof_or_publication_authority"
+  - "completed_derivation_claim"
+  - "external_system_mutation"
+approved_commands:
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search 'generated artifact drift stale hashes' --limit 10 --json"
+  - ".venv/bin/python research_control/tasks/RT-20260723-004/artifacts/validate_scientific_quality_metrics.py --write --json"
+  - ".venv/bin/python research_control/tasks/RT-20260723-004/artifacts/validate_scientific_quality_metrics.py --check --json"
+  - ".venv/bin/python -m unittest -v tests.test_scientific_quality_metrics tests.test_report_physics_progress_metrics"
+  - ".venv/bin/python -m scripts.validation.cli plan --profile affected --paths research_control/tasks/RT-20260723-004/artifacts/scientific_quality_validation_report.json research_control/tasks/RT-20260723-004/artifacts/scientific_quality_compact_receipt.json research_control/tasks/RT-20260723-015 research_control/program_state.yaml --explain"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+  - ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --json-summary"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --check"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --check"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --write"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --check"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+  - "git diff --check"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260723-015-001"
+required_validators:
+  - "memory_preflight"
+  - "physics_payload_admission"
+  - "dual_budget_allocation"
+  - "ordinary_route_guard_admission"
+  - "p12_t05_scientific_quality_check"
+  - "focused_scientific_quality_tests"
+  - "source_hash_preservation"
+  - "affected_validation_plan"
+  - "project_change_classifier"
+  - "project_improvement_resolver"
+  - "project_improvement_signals"
+  - "documentation_impact"
+  - "claim_language"
+  - "research_control_diff"
+  - "task_index_renderer"
+  - "current_frontier_renderer"
+  - "compact_frontier_renderer"
+  - "memory_sync"
+  - "memory_core"
+  - "git_diff_check"
+  - "checkpoint"
+expected_outputs:
+  - "research_control/tasks/RT-20260723-004/artifacts/scientific_quality_validation_report.json"
+  - "research_control/tasks/RT-20260723-004/artifacts/scientific_quality_compact_receipt.json"
+  - "output/physics_progress_metrics.json"
+  - "output/physics_progress_metrics.md"
+  - "research_control/tasks/RT-20260723-015/artifacts/p12_t05_scientific_quality_source_integrity_reseal_receipt.json"
+  - "research_control/tasks/RT-20260723-015/jobs/completions/AJC-AJ-RT-20260723-015-001.yaml"
+  - "research_control/project_improvement_handoffs/improve-project-handoff_20260723_013.yaml"
+  - "research_control/project_improvement_handoffs/improve-project-handoff_20260723_013.md"
+  - "research_control/program_state.yaml"
+stop_conditions:
+  - "the live validator reports any logical failure after regeneration"
+  - "the repair requires taxonomy calibration policy fixture validator or metric-semantics changes"
+  - "any historical completion handoff scientific ledger or Distance-to-GR record would change"
+  - "a required write path is outside the AgentJob allowlist"
+  - "the signal cannot close with matching PASS completion evidence"
+  - "P13-T01 execution or any scientific protected authority would be required"
+  - "more than one AgentJob generator invocation or checkpoint would be required"
+claim_boundary: "Invoke the established generator once to reseal four generated outputs, preserve all source and scientific authority, close exactly one registered signal with exact evidence, and invoke at most one checkpoint; no validator semantics, historical handoff, P13-T01, science, promotion, proof, publication, or Gate Chair authority."
+resolves_signal_routing: false
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1002
+    relationship_row_count: 4960
+    semantic_row_count: 1002
+    vault_row_count: 1002
+    local_cache_only_warning_count: 7
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search 'generated artifact drift stale hashes' --limit 10 --json"
+      query_type: "search"
+      query_text: "generated artifact drift stale hashes"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  authority_note: "Generated wiki Obsidian semantic relationship and .local retrieval layers are retrieval only and are not authority; the registered v21 plan, tracked sidecar, live source files, registries, and research-control state govern this repair."

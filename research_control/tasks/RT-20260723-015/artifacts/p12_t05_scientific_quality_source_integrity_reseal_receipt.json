@@ -1,0 +1,106 @@
+{
+  "authority_boundary": {
+    "benchmark_promotion_authorized": false,
+    "distance_to_gr_delta_changed": false,
+    "generated_outputs_are_scientific_authority": false,
+    "metric_semantics_changed": false,
+    "ontology_adoption_authorized": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "scientific_claims_changed": false
+  },
+  "completed_at": "2026-07-23T23:32:17Z",
+  "generated_artifacts": [
+    {
+      "after_sha256": "d7118e6f27fbbbc7f30178f1248340cebc1871062a3301a4dcae5def4944da01",
+      "before_sha256": "6082c5c23d93741f01e61dcdf48c76fe4c7b723605440261dea95c94c399fd6e",
+      "path": "research_control/tasks/RT-20260723-004/artifacts/scientific_quality_validation_report.json"
+    },
+    {
+      "after_sha256": "2dc0b48fc32bfd0d1a2d0ed48d65701e449317f7378ad47b7ff709fdc68fe3b8",
+      "before_sha256": "5aeeb1c5b33b229843b5033d85b66098719b50ec1e775a8ae2e46df832801ffa",
+      "path": "research_control/tasks/RT-20260723-004/artifacts/scientific_quality_compact_receipt.json"
+    },
+    {
+      "after_sha256": "1466d1d806c1d3d6aac36c5789fa6a8af2539c6fa3e8e5f56323aafa4ac12bbb",
+      "before_sha256": "af3f3e52d53fd14b4de6d54fafda86a579fded51e24a502dcf599f1b0e08e4ef",
+      "path": "output/physics_progress_metrics.json"
+    },
+    {
+      "after_sha256": "a9969c2994599adf09c7d320185bd3001323005029e9bc5eedb09f1332c20553",
+      "before_sha256": "83c76089cfeac3a90240bee931bc51164d59d09c890383b5a9530ca199d29156",
+      "path": "output/physics_progress_metrics.md"
+    },
+    {
+      "after_sha256": "5c45eb49558451047b6a1a0887fdaa2147d831c5a99d8d93e3b3bdf928762002",
+      "before_sha256": "f124dce98f3ffe93f333c1072c4e8f6579f74aecc30c96838075638f06d4b559",
+      "path": "output/ai_methodology_metrics_dashboard.json"
+    },
+    {
+      "after_sha256": "f3ff6cc2e77c565148851af762e4d76614bbac5057a471ee7d3f156fc9434c6c",
+      "before_sha256": "9beae8324b2e60f1532f0845801351642479da22a1d7b53270af22dd682d8cc3",
+      "path": "output/ai_methodology_metrics_dashboard.md"
+    },
+    {
+      "after_sha256": "f3ff6cc2e77c565148851af762e4d76614bbac5057a471ee7d3f156fc9434c6c",
+      "before_sha256": "9beae8324b2e60f1532f0845801351642479da22a1d7b53270af22dd682d8cc3",
+      "path": "wiki/indexes/ai_methodology_metrics_dashboard.md"
+    }
+  ],
+  "generator": {
+    "check_count": 44,
+    "check_failure_count": 0,
+    "check_status": "PASS",
+    "check_warning_count": 5,
+    "fixture_case_count": 14,
+    "invocation_count": 1,
+    "metric_count": 8,
+    "stale_finding_count_after": 0,
+    "write_command": ".venv/bin/python research_control/tasks/RT-20260723-004/artifacts/validate_scientific_quality_metrics.py --write --json"
+  },
+  "job_id": "AJ-RT-20260723-015-001",
+  "ordinary_route_preservation": {
+    "handoff_id": "handoff-0847",
+    "handoff_sha256_after": "7472af1b615b7c76405bcea2c63bc17490837c0412a58a61edfdd84690252dd2",
+    "handoff_sha256_before": "7472af1b615b7c76405bcea2c63bc17490837c0412a58a61edfdd84690252dd2",
+    "next_plan_task_executed": false,
+    "next_plan_task_id": "P13-T01",
+    "sidecar_supersedes_research_handoff": false
+  },
+  "resolved_project_improvement_signal_id": "PIS-RT-20260723-013-001",
+  "schema_id": "p12_t05_scientific_quality_source_integrity_reseal_receipt_v1",
+  "source_preservation": [
+    {
+      "after_sha256": "b2e31738a445e68e4de6ea20381886bcd6c3747cccd693187f0904a7742ad308",
+      "before_sha256": "b2e31738a445e68e4de6ea20381886bcd6c3747cccd693187f0904a7742ad308",
+      "path": "research_control/tasks/RT-20260723-004/artifacts/scientific_quality_metric_taxonomy_v1.md",
+      "preserved": true
+    },
+    {
+      "after_sha256": "b9b4e4fcc603c9eee508456999936a4e0378b188235f73f35c454009728648cb",
+      "before_sha256": "b9b4e4fcc603c9eee508456999936a4e0378b188235f73f35c454009728648cb",
+      "path": "research_control/tasks/RT-20260723-004/artifacts/scientific_quality_calibration_warning_policy_v1.md",
+      "preserved": true
+    },
+    {
+      "after_sha256": "60bcb8819734e5e565b08a46b29e85ebffde14f6c1e33dd13cfdd1c02628d003",
+      "before_sha256": "60bcb8819734e5e565b08a46b29e85ebffde14f6c1e33dd13cfdd1c02628d003",
+      "path": "research_control/tasks/RT-20260723-004/artifacts/fixtures/scientific_quality_metric_cases.json",
+      "preserved": true
+    },
+    {
+      "after_sha256": "e4102ac5ce28653e9c8195762aeb519c1f5c08e615aa03221d18b0906fd73260",
+      "before_sha256": "e4102ac5ce28653e9c8195762aeb519c1f5c08e615aa03221d18b0906fd73260",
+      "path": "research_control/tasks/RT-20260723-004/artifacts/validate_scientific_quality_metrics.py",
+      "preserved": true
+    },
+    {
+      "after_sha256": "a262ba7b1c12dc133b32e4ae81f0aadd9132981b18e51c5ebe372bab6a8a5089",
+      "before_sha256": "a262ba7b1c12dc133b32e4ae81f0aadd9132981b18e51c5ebe372bab6a8a5089",
+      "path": "research_control/tasks/RT-20260723-013/artifacts/p12_t07_methodology_ablation_results.json",
+      "preserved": true
+    }
+  ],
+  "status": "PASS",
+  "task_id": "RT-20260723-015"
+}

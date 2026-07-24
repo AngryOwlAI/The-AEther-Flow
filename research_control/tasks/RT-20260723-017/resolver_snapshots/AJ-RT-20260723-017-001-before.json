@@ -1,0 +1,29 @@
+{
+  "status": "ready",
+  "boundary": "project_improvement_signal_ready",
+  "reason": "The open high-severity generated-artifact-drift signal selected one bounded improve-project-system recovery before P13-T01.",
+  "resolver_is_advisory": true,
+  "hard_checkpoint_gate": false,
+  "checkpoint_gate_source": "validators",
+  "selected_signal": {
+    "signal_id": "PIS-RT-20260723-013-001",
+    "status": "open",
+    "signal_type": "generated_artifact_drift",
+    "severity": "high",
+    "recommended_skill": "improve-project-system"
+  },
+  "open_signals": [
+    {
+      "signal_id": "PIS-RT-20260723-013-001",
+      "status": "open",
+      "signal_type": "generated_artifact_drift",
+      "severity": "high"
+    }
+  ],
+  "change_classification": {
+    "docs_impact_required": true,
+    "project_system_improvement_required": true,
+    "blocked_paths": [],
+    "changed_path_count": 51
+  }
+}

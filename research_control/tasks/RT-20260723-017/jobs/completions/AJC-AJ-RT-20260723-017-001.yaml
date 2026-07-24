@@ -1,0 +1,330 @@
+validation_status: "PASS"
+job_id: "AJ-RT-20260723-017-001"
+completion_id: "AJC-AJ-RT-20260723-017-001"
+task_id: "RT-20260723-017"
+task_type: "project_system_documentation_impact_folder_map_checkpoint_recovery"
+decision_id: "DDR-20260723-017"
+role_id: "process-integrity-auditor"
+source_role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260723-017"
+status: "completed"
+final_repository_validation_status: "PASS_CHECKPOINT_READY"
+created_at: "2026-07-24T01:46:00Z"
+started_at: "2026-07-24T01:46:00Z"
+completed_at: "2026-07-24T02:00:31Z"
+objective: "Add only FOLDER_MAP.md to RT-016's documentation-impact generated_derivatives list; prove the cumulative transaction and protected hashes unchanged; close PIS-RT-20260723-013-001 with matching PASS evidence; and invoke one governed checkpoint before P13-T01."
+completion_summary: "Generation 86 added exactly one FOLDER_MAP.md item to RT-016's generated_derivatives coverage and synchronized only the bounded cumulative documentation-impact receipts. The focused regression, repository task taxonomy, documentation-impact, claim-language, signal, and preservation checks pass. The RT-016 blocker and eight protected hashes remain unchanged. PIS-RT-20260723-013-001 and its sidecar close against this PASS completion, P13-T01 remains unexecuted, and one governed checkpoint remains pending."
+objective_result: "folder_map_documentation_impact_coverage_repaired_checkpoint_ready"
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 86
+  passes_consumed: 81
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:86"
+  handoff_token: "810046fb85cc6c020ab4bf01dfeb8446176a5841b65d30a4"
+  relay_claim_token: "2139201970761119972da7a34403a7d397951823841455cb"
+  immutable_route_hash: "c3b48b780ffca144f008bd20c752d8119597b74d71241a37dffb11e13fc9e223"
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+
+transaction_status: "completed_checkpoint_ready"
+result_disposition: "folder_map_documentation_impact_coverage_pass_one_checkpoint_pending"
+work_item_status: "repair_completed"
+plan_task_id: "P13-T01"
+recovery_for_plan_task_id: "P12-T05"
+checkpoint_commit: "none_checkpoint_pending"
+checkpoint_invocation_count: 0
+checkpoint_staged: false
+legacy_validation_used: false
+project_system_change_only: true
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS_CHECKPOINT_READY"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  observed_durable_outputs:
+    physics: []
+    project_system:
+      - "research_control/tasks/RT-20260723-016/documentation_impact.yaml"
+      - "research_control/tasks/RT-20260723-017/artifacts/folder_map_documentation_impact_checkpoint_recovery_receipt.json"
+  accepted_criteria:
+    physics: []
+    project_system:
+      - "RT-016 generated_derivatives includes exactly FOLDER_MAP.md coverage"
+      - "the staged documentation-impact validator accepts the cumulative transaction"
+      - "the RT-016 blocker and protected source hashes remain unchanged"
+      - "PIS-RT-20260723-013-001 and its sidecar close with matching PASS completion evidence"
+      - "P13-T01 remains unexecuted"
+      - "one governed checkpoint commits without legacy validation"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+physics_payload_admission_result:
+  status: "admitted"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+
+ordinary_route_guard_admission_result:
+  status: "PASS"
+  source_handoff_id: "handoff-0847"
+  selected_plan_task_id: "P13-T01"
+  guard_outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  system_success_counts_as_physics: false
+  system_success_counts_as_distance_to_gr: false
+
+artifacts:
+  - "research_control/tasks/RT-20260723-017/artifacts/folder_map_documentation_impact_checkpoint_recovery_receipt.json"
+  - "research_control/tasks/RT-20260723-017/resolver_snapshots/AJ-RT-20260723-017-001-before.json"
+  - "research_control/tasks/RT-20260723-017/resolver_snapshots/AJ-RT-20260723-017-001-after.json"
+output_paths:
+  - "research_control/tasks/RT-20260723-016/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260723-017/**"
+  - "research_control/project_improvement_handoffs/improve-project-handoff_20260723_013.yaml"
+  - "research_control/project_improvement_handoffs/improve-project-handoff_20260723_013.md"
+  - "research_control/program_state.yaml"
+artifact_receipts:
+  - path: "research_control/tasks/RT-20260723-017/artifacts/folder_map_documentation_impact_checkpoint_recovery_receipt.json"
+    sha256: "40bcea291337578695906091437653d18fe297c7479ad6875b2ea300b21ed08e"
+  - path: "research_control/tasks/RT-20260723-017/resolver_snapshots/AJ-RT-20260723-017-001-before.json"
+    sha256: "105086f17e15d5852ca2e99e73be2d9d89b9971516f3a4b1192d5599cec3a569"
+  - path: "research_control/tasks/RT-20260723-017/resolver_snapshots/AJ-RT-20260723-017-001-after.json"
+    sha256: "375768a23eff97356b3574151d7766ca810e4107b5ce50d0b638c26048d50d70"
+
+folder_map_documentation_impact_recovery_result:
+  source_blocker_path: "research_control/tasks/RT-20260723-016/artifacts/validation_blocker_checkpoint_documentation_impact_folder_map_v1.yaml"
+  source_blocker_sha256: "92456dfce4685d9440f72839d960056273c5c84ef1668b5e602a955487d3d5cc"
+  target_path: "research_control/tasks/RT-20260723-016/documentation_impact.yaml"
+  target_sha256_before: "23995f5238bd944a8fb5da83483fd4dd085348517dab210904dc44d13641631b"
+  target_sha256_after: "748467fe135f80e1552680ee402989525074f433df37549b1ccc9ee221c62fe7"
+  required_generated_derivative_item: "FOLDER_MAP.md"
+  required_item_occurrence_count: 1
+  primary_repair_status: "PASS_EXACT_ITEM_PRESENT"
+  predecessor_documentation_impact_updated_for_cumulative_gate: true
+  focused_documentation_impact_regression_status: "PASS_1_OF_1"
+  repository_task_taxonomy_status: "PASS_47_REQUIRED_ZERO_ERRORS_ZERO_MUTATIONS_ZERO_STRENGTHENING"
+  protected_hash_mismatch_count: 0
+  signal_resolved: "PIS-RT-20260723-013-001"
+  p13_t01_executed: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+
+preserved_hashes:
+  task_taxonomy_policy_sha256: "7460702270a26079f39f64ced2b5934e6a67a721983d913e4d3d114917ecca0b"
+  scientific_quality_taxonomy_sha256: "b2e31738a445e68e4de6ea20381886bcd6c3747cccd693187f0904a7742ad308"
+  scientific_quality_calibration_policy_sha256: "b9b4e4fcc603c9eee508456999936a4e0378b188235f73f35c454009728648cb"
+  scientific_quality_fixture_corpus_sha256: "60bcb8819734e5e565b08a46b29e85ebffde14f6c1e33dd13cfdd1c02628d003"
+  scientific_quality_validator_sha256: "e4102ac5ce28653e9c8195762aeb519c1f5c08e615aa03221d18b0906fd73260"
+  p12_t07_result_sha256: "a262ba7b1c12dc133b32e4ae81f0aadd9132981b18e51c5ebe372bab6a8a5089"
+  handoff_0847_yaml_sha256: "7472af1b615b7c76405bcea2c63bc17490837c0412a58a61edfdd84690252dd2"
+  rt015_source_blocker_sha256: "7898bfdfdf1b42a4c8794bca406566e1c10e8b1bc76ad80a38f40d29cc9c88fd"
+
+command_results:
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+    status: "PASS_CORE_WITH_7_LOCAL_CACHE_WARNINGS"
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21 --json"
+    status: "PASS_REGISTERED_CANONICAL_SOURCE"
+  - command: ".venv/bin/python scripts/research_control/task_taxonomy.py --validate-repository --json"
+    status: "PASS_47_REQUIRED_ZERO_ERRORS_ZERO_MUTATIONS_ZERO_STRENGTHENING"
+  - command: ".venv/bin/python -m unittest -v tests.test_project_change_classifier.ProjectChangeClassifierTests.test_documentation_impact_validator_accepts_current_record"
+    status: "PASS_1_OF_1"
+  - command: ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+    status: "PASS_ZERO_ERRORS_ZERO_WARNINGS_THREE_RECEIPTS"
+  - command: ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+    status: "PASS_ZERO_HARD_FAILURES"
+  - command: ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json"
+    status: "PASS"
+
+validation_summary:
+  status: "PASS_CHECKPOINT_READY"
+  passing_gates:
+    - "exact FOLDER_MAP.md generated-derivative coverage"
+    - "one focused documentation-impact regression"
+    - "47 required tasks with zero explicit-field errors"
+    - "zero historical task-source mutations"
+    - "zero stronger-science inferences"
+    - "eight protected hashes"
+    - "matching project-improvement signal and sidecar closure evidence"
+  pending_gates:
+    - "one governed checkpoint"
+  checkpoint:
+    invoked: false
+    invocation_count: 0
+    reason: "One governed checkpoint remains authorized after all precheckpoint gates pass."
+  staging:
+    attempted: false
+    index_changed: false
+  commit:
+    created: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 86 lease parity repository identity maximum reasoning effort exact 51-path dirty manifest predecessor inactivity and immutable improve-project-system route were verified before one claim and consume."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The target receipt contains exactly one FOLDER_MAP.md generated-derivative item."
+      - "The task-local receipt binds the before and after target hashes plus the source blocker and eight protected hashes."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "The focused documentation-impact regression, repository task-taxonomy gate, documentation-impact gate, signal validator, and claim-language linter pass."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "One governed checkpoint is authorized and has not yet been invoked."
+  renderer:
+    status: "PENDING"
+    evidence:
+      - "Task index current frontier and compact frontier will be rendered from finalized control sources before checkpoint."
+  memory_bootstrap:
+    status: "PENDING"
+    evidence:
+      - "Tracked memory synchronization and validate-only remain required before checkpoint."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation reports zero hard failures."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  push_authorized: false
+  publication_authorized: false
+  proof_authority: false
+
+three_tier_claim_summary:
+  adopted_objects: []
+  accepted_evidence_preconditions:
+    - "The RT-016 blocker identifies one missing FOLDER_MAP.md generated-derivative declaration."
+    - "The exact declaration and cumulative documentation-impact checks restore checkpoint eligibility."
+  open_or_blocked_physical_targets:
+    - "source_ontology_derivation"
+    - "general_eqsrc"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+  forbidden_overread:
+    - "documentation-impact coverage as scientific progress"
+    - "validator pass or checkpoint readiness as physics evidence or theorem truth"
+    - "project-improvement signal closure as scientific status"
+
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "none"
+  milestone: "none"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "The recovery changes one project-control documentation-impact declaration and bounded control evidence only."
+  downstream_unlocked:
+    - "P13-T01_after_governed_checkpoint"
+  downstream_still_blocked:
+    - "P13-T01_until_governed_checkpoint"
+    - "source_ontology_derivation"
+    - "general_eqsrc"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+    - "benchmark_promotion"
+    - "external_publication"
+
+resolved_project_improvement_signals:
+  - "PIS-RT-20260723-013-001"
+coherent_resolution_summary: "The generator-backed reseal, explicit RT-015 task-taxonomy mapping, and exact RT-016 FOLDER_MAP.md generated-derivative coverage now pass their cumulative project-control checks. This closes only the project-system drift signal and changes no scientific status."
+resolver_snapshots:
+  before: "research_control/tasks/RT-20260723-017/resolver_snapshots/AJ-RT-20260723-017-001-before.json"
+  after: "research_control/tasks/RT-20260723-017/resolver_snapshots/AJ-RT-20260723-017-001-after.json"
+routing_delta_summary: "Closed one existing project-system signal with matching PASS evidence; no resolver policy or skill contract changed, and handoff-0847 remains ordinary research authority."
+project_improvement_signals: []
+project_improvement_sidecar_created: false
+project_improvement_bridge:
+  required: false
+  sidecar_path: "research_control/project_improvement_handoffs/improve-project-handoff_20260723_013.yaml"
+  recursive_goal_recovery_required: false
+  reason: "The pre-existing sidecar is resolved by this PASS completion. It does not replace handoff-0847, and P13-T01 remains the ordinary research continuation after checkpoint."
+
+next_work_item:
+  plan_task_id: "P13-T01"
+  source_handoff_id: "handoff-0847"
+  worker_skill: "continue-research"
+  dependency_ready_after_checkpoint: true
+  executed: false
+  physics_promotion_authorized: false
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1002
+    relationship_row_count: 4960
+    semantic_row_count: 1002
+    vault_row_count: 1002
+    local_cache_only_warning_count: 7
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  authority_note: "Generated wiki Obsidian semantic relationship and .local retrieval layers are navigation only and not authority; tracked canonical sources registries control state the blocker and the immutable relay route govern this recovery."
+
+out_of_scope_remaining_work:
+  - "One governed checkpoint remains pending for the cumulative project-system transaction."
+  - "P13-T01 remains unexecuted until that checkpoint commits."
+  - "No scientific source ontology ledger Distance-to-GR promotion benchmark promotion proof publication push or protected human-gated decision is authorized."
+forbidden_conclusion_summary: "This recovery supplies no authority to change validation semantics scientific-quality meanings methodology results scientific sources ontology candidates ledgers Distance-to-GR status benchmark status proof publication or Gate Chair decisions and does not execute P13-T01."
+verdict: "folder_map_documentation_impact_coverage_repaired_checkpoint_ready_no_physics_delta"
+next_recommendation: "Run the one authorized governed checkpoint for AJ-RT-20260723-017-001. After commit, continue from handoff-0847 to P13-T01."

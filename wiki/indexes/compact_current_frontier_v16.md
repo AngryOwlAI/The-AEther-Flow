@@ -8,7 +8,7 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 - Active task: `RT-20260723-014`
 - Latest handoff: `handoff-0847`
-- Current status: `p12_t07_resolver_fixture_isolated_checkpoint_ready_signal_reseal_then_p13_t01`
+- Current status: `p12_t05_folder_map_documentation_impact_recovery_pass_checkpoint_ready_signal_resolved_p13_t01_unexecuted`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `ccfe165629fa8527a0c7abdfb087ce289f06b60e9cb410a82da8f0b0f47ec558`
-- JSON SHA-256: `86e406033faf70389e48d4be76f09ec91429bc03fcff511ba60cdac02795f6e2`
+- YAML SHA-256: `ac99eda4bf5ca8c2be88ba357755da9ad814d6159037d054dfd912bc17541e92`
+- JSON SHA-256: `5215d0bb391593c51169145cd55687c729059ea18e3ca472bd4a63c2c1e02c32`
 
 ## Authority Warning
 

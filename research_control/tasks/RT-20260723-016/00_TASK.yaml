@@ -1,0 +1,69 @@
+task_id: "RT-20260723-016"
+task_type: "project_system_rt015_task_taxonomy_checkpoint_recovery"
+title: "Restore RT-015 explicit task taxonomy and checkpoint eligibility"
+task_taxonomy:
+  schema_id: "v21_task_taxonomy_v1"
+  work_kind: "benchmark_or_recovery"
+  milestone: "not_applicable"
+  candidate_family: "p12_t05_task_taxonomy_checkpoint_recovery"
+  result_kind: "completed_or_precisely_blocked"
+  authority: "project_control"
+  scope: "project_system"
+validation_status: "FAIL"
+status: "blocked"
+created_at: "2026-07-24T00:34:19Z"
+updated_at: "2026-07-24T01:12:58Z"
+closed_at: "2026-07-24T01:12:58Z"
+closure_status: "rt015_task_taxonomy_recovery_pass_checkpoint_blocked_documentation_impact_folder_map_coverage_recovery_required"
+parent_task_id: "RT-20260723-015"
+parent_handoff_id: "handoff-0847"
+supersedes_active_routing_task_id: "RT-20260723-015"
+current_decision_id: "DDR-20260723-016"
+current_job_id: "AJ-RT-20260723-016-001"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260723-016"
+requires_human_gate: false
+human_authorization_note: "Generation 85 of the immutable user-requested relay routes exactly one improve-project-system frame to restore RT-015 explicit task-taxonomy fields and own one cumulative checkpoint before P13-T01."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P13"
+  plan_task_id: "P13-T01"
+  recovery_for_plan_task_id: "P12-T05"
+  next_plan_task_id: "P13-T01"
+objective: "Add only the blocker-prescribed readable title and explicit v21 task_taxonomy mapping to RT-20260723-015/00_TASK.yaml, preserve the cumulative reseal transaction and all protected hashes, close PIS-RT-20260723-013-001 with matching PASS completion evidence, and invoke one governed checkpoint before P13-T01."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system task-record taxonomy compatibility and checkpoint recovery only; no derivation milestone advances."
+route_label: "add_rt015_explicit_task_taxonomy_then_revalidate_and_checkpoint_v1"
+project_system_change_only: true
+dual_budget_category: "system_bearing"
+primary_budget: "project_system"
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+claim_boundary_id: "CB-V21-P13-T01-RT015-TASK-TAXONOMY-CHECKPOINT-RECOVERY-001"
+claim_boundary:
+  allowed_scope: "Add exactly the required title and seven-key v21 task_taxonomy mapping to RT-20260723-015/00_TASK.yaml; synchronize its documentation-impact receipt only for cumulative validation; create task-local recovery evidence; close the existing signal and sidecar only with matching PASS completion evidence; refresh normal generated derivatives; and invoke one cumulative checkpoint."
+  immutable_predecessor_task: "RT-20260723-015"
+  immutable_predecessor_job: "AJ-RT-20260723-015-001"
+  immutable_predecessor_completion: "AJC-AJ-RT-20260723-015-001"
+  immutable_research_handoff: "handoff-0847"
+  source_blocker_path: "research_control/tasks/RT-20260723-015/artifacts/validation_blocker_checkpoint_task_taxonomy_explicit_fields_v1.yaml"
+  source_blocker_sha256: "7898bfdfdf1b42a4c8794bca406566e1c10e8b1bc76ad80a38f40d29cc9c88fd"
+  immutable_route_sha256: "3e3cd26d198dc98753f0ad2225615e3cf910dbe2c38e1d1a5360e667624804d5"
+  p13_t01_executed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+documentation_impact_id: "DI-RT-20260723-016-001"
+completion_id: "AJC-AJ-RT-20260723-016-001"
+output_artifacts:
+  - "research_control/tasks/RT-20260723-016/artifacts/rt015_task_taxonomy_checkpoint_recovery_receipt.json"
+  - "research_control/tasks/RT-20260723-016/artifacts/validation_blocker_checkpoint_documentation_impact_folder_map_v1.yaml"
+  - "research_control/tasks/RT-20260723-016/jobs/completions/AJC-AJ-RT-20260723-016-001.yaml"
+next_recommended_action: "Route one fresh bounded improve-project-system recovery to add only FOLDER_MAP.md coverage to RT-016's documentation-impact generated_derivatives list, preserve the cumulative transaction, and invoke at most one future governed checkpoint before P13-T01."
+project_improvement_signals: []
+notes: "The exact RT-015 title and taxonomy pass the repository gate, but this job's only checkpoint failed closed at staged documentation-impact validation because memory sync made FOLDER_MAP.md live and the RT-016 generated_derivatives list did not cover it. The index was restored, no commit exists, this job may not retry, and all protected scientific and handoff boundaries remain unchanged."

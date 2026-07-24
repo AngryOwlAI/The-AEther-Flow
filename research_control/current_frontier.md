@@ -16,7 +16,7 @@ tracked authority files govern.
 | --- | --- |
 | Active task ID | `RT-20260723-014` |
 | Latest handoff ID | `handoff-0847` |
-| Current status | `p12_t07_resolver_fixture_isolated_checkpoint_ready_signal_reseal_then_p13_t01` |
+| Current status | `p12_t05_folder_map_documentation_impact_recovery_pass_checkpoint_ready_signal_resolved_p13_t01_unexecuted` |
 | V16 completed | false |
 | Current route family | benchmark or recovery (project system) |
 | Target derivation milestone | none; this is project-control tooling work |
@@ -356,7 +356,7 @@ Legacy compatibility records:
 
 - active task: `RT-20260723-014`;
 - latest handoff: `handoff-0847`;
-- current status: `p12_t07_resolver_fixture_isolated_checkpoint_ready_signal_reseal_then_p13_t01`;
+- current status: `p12_t05_folder_map_documentation_impact_recovery_pass_checkpoint_ready_signal_resolved_p13_t01_unexecuted`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.

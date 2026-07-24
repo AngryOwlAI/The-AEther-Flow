@@ -429,9 +429,9 @@
     "source_hashes": {
       "implementations_plans/recommendations_implementation_plan_continue_task-v17.md": "b83a27c7dec0323bea5bfd154590d906de98b4a950aa39b6219c8e5add810e2a",
       "implementations_plans/recommendations_implementation_plan_continue_task-v18.md": "e4486e706d73542dacc72c297cad22cb17d5e5165c9a2afa67168b7e94bb112d",
-      "output/physics_progress_metrics.json": "af3f3e52d53fd14b4de6d54fafda86a579fded51e24a502dcf599f1b0e08e4ef",
-      "output/physics_progress_metrics.md": "83c76089cfeac3a90240bee931bc51164d59d09c890383b5a9530ca199d29156",
-      "research_control/current_frontier.md": "2ab83cacdae76b334f67a9f5656f6f921e3b3fd9552304ce60359a7f471222f1",
+      "output/physics_progress_metrics.json": "1466d1d806c1d3d6aac36c5789fa6a8af2539c6fa3e8e5f56323aafa4ac12bbb",
+      "output/physics_progress_metrics.md": "a9969c2994599adf09c7d320185bd3001323005029e9bc5eedb09f1332c20553",
+      "research_control/current_frontier.md": "99ab95c4261712de3fb4a4905acf6a5ec99844e238b84d30c11b4db550fa99c3",
       "research_control/design/ai_research_agent_metrics_taxonomy_v1.md": "bb373ae346c855695d0002605410b2113e6aa9a703bce90604c549a66222e439",
       "research_control/design/physics_payload_ratio_policy_v1.md": "0bf6b607a8f93b05e6e67c5a6676c0f889cb28f9a6c81db9c6c508e5f486d213",
       "research_control/design/v17_recommendation_backlog.yaml": "4323df2cd41e3af4eec00594ab1103635b1c5c9bae705721973c3d59c81b248d",
@@ -443,8 +443,8 @@
       "research_control/tasks/RT-20260708-029/artifacts/payload_ratio_validator_pilot_report_v1.md": "349e6e6350be00bfe673132e3e363a9844f74bf94043da9f6da7b435e9146947",
       "research_control/tasks/RT-20260721-005/artifacts/v21_candidate_lineage_registry.json": "788289c942bdcc5fff2f1337998f50d2b6fe89ca541de65a0ae24a651da97489",
       "research_control/tasks/RT-20260721-006/artifacts/v21_research_attempt_ledger.json": "f32e7d272d3d99a339a2cfd81e56b1d44e51e1449b2e34e9dd111161397c1ba2",
-      "research_control/tasks/RT-20260723-004/artifacts/scientific_quality_calibration_warning_policy_v1.md": "25205ad3cf4f28492467bdd6343d52647c76ddfd67d7609bc9ce187ec06e8b75",
-      "research_control/tasks/RT-20260723-004/artifacts/scientific_quality_metric_taxonomy_v1.md": "b7fc9ff6f6d55e2ec9462700f8c4f985ab77ff5ffcc9cfdd07923b60011c6436"
+      "research_control/tasks/RT-20260723-004/artifacts/scientific_quality_calibration_warning_policy_v1.md": "b9b4e4fcc603c9eee508456999936a4e0378b188235f73f35c454009728648cb",
+      "research_control/tasks/RT-20260723-004/artifacts/scientific_quality_metric_taxonomy_v1.md": "b2e31738a445e68e4de6ea20381886bcd6c3747cccd693187f0904a7742ad308"
     },
     "source_paths": [
       "implementations_plans/recommendations_implementation_plan_continue_task-v17.md",
@@ -477,16 +477,16 @@
         "physics_promotion_authorized": false
       },
       "dashboard_label": "AI-system diagnostic",
-      "denominator_value": 492,
+      "denominator_value": 495,
       "diagnostic_interpretation": "Forbidden-conclusion summaries are counted as eligible overclaim-control surfaces; caught means no physics promotion was authorized.",
       "diagnostic_label": "AI-system diagnostic",
       "family": "Claim-boundary control",
       "interpretation_guardrail": "A high rate means better boundary control; it does not prove any physics claim.",
       "metric_id": "overclaim_catch_rate",
-      "numerator_value": 465,
+      "numerator_value": 468,
       "status": "measured",
       "uncertainty_note": "",
-      "value": 0.9451
+      "value": 0.9455
     },
     {
       "authority_boundary": {
@@ -537,7 +537,7 @@
         "physics_promotion_authorized": false
       },
       "dashboard_label": "AI-system diagnostic",
-      "denominator_value": 536,
+      "denominator_value": 537,
       "diagnostic_interpretation": "Repeated-burden streaks are process warnings only and do not change Distance-to-GR status.",
       "diagnostic_label": "AI-system diagnostic",
       "family": "Route dynamics",
@@ -621,9 +621,9 @@
         "per_phase_registered_task_rows": {
           "P0": 34,
           "P1": 29,
-          "P10": 39,
+          "P10": 40,
           "P11": 32,
-          "P12": 19,
+          "P12": 22,
           "P13": 13,
           "P14": 15,
           "P15": 11,
@@ -637,9 +637,9 @@
           "P7": 64,
           "P8": 31,
           "P9": 26,
-          "unclassified": 521
+          "unclassified": 527
         },
-        "registered_task_rows": 1070
+        "registered_task_rows": 1080
       },
       "diagnostic_interpretation": "Gate-load signals are governance workload diagnostics, not Gate Chair scientific verdicts.",
       "diagnostic_label": "AI-system diagnostic",
@@ -669,16 +669,16 @@
         "physics_promotion_authorized": false
       },
       "dashboard_label": "AI-system diagnostic",
-      "denominator_value": 747,
+      "denominator_value": 756,
       "diagnostic_interpretation": "Payload balance compares mathematical payload items to process-only items; it is not proof authority.",
       "diagnostic_label": "AI-system diagnostic",
       "family": "Payload balance",
       "interpretation_guardrail": "This ratio is a productivity and balance signal; neither numerator nor denominator creates proof authority by itself.",
       "metric_id": "proof_to_process_ratio",
-      "numerator_value": 1132,
+      "numerator_value": 1133,
       "status": "measured",
       "uncertainty_note": "",
-      "value": 1.5154
+      "value": 1.4987
     }
   ],
   "payload_ratio_metric_rows": [
@@ -737,7 +737,7 @@
       "interpretation_guardrail": "Does not establish physics truth, proof authority, benchmark status, Gate Chair verdicts, or completed derivations.",
       "metric_id": "new_mathematical_payload_count",
       "status": "measured",
-      "value": 1300
+      "value": 1301
     },
     {
       "authority_boundary": {
@@ -756,7 +756,7 @@
       "interpretation_guardrail": "Does not establish physics truth, proof authority, benchmark status, Gate Chair verdicts, or completed derivations.",
       "metric_id": "theorem_countermodel_candidate_count",
       "status": "measured",
-      "value": 594
+      "value": 595
     },
     {
       "authority_boundary": {
@@ -841,7 +841,7 @@
       "interpretation_guardrail": "Does not establish physics truth, proof authority, benchmark status, Gate Chair verdicts, or completed derivations.",
       "metric_id": "project_system_task_count",
       "status": "measured",
-      "value": 528
+      "value": 537
     },
     {
       "authority_boundary": {
@@ -860,7 +860,7 @@
       "interpretation_guardrail": "Does not establish physics truth, proof authority, benchmark status, Gate Chair verdicts, or completed derivations.",
       "metric_id": "physics_bearing_task_count",
       "status": "measured",
-      "value": 449
+      "value": 450
     },
     {
       "authority_boundary": {
@@ -879,7 +879,7 @@
       "interpretation_guardrail": "Does not establish physics truth, proof authority, benchmark status, Gate Chair verdicts, or completed derivations.",
       "metric_id": "support_only_task_count",
       "status": "measured",
-      "value": 550
+      "value": 559
     },
     {
       "authority_boundary": {
@@ -898,7 +898,7 @@
       "interpretation_guardrail": "Does not establish physics truth, proof authority, benchmark status, Gate Chair verdicts, or completed derivations.",
       "metric_id": "physics_bearing_to_project_system_task_ratio",
       "status": "measured",
-      "value": 0.8504
+      "value": 0.838
     },
     {
       "authority_boundary": {
@@ -917,7 +917,7 @@
       "interpretation_guardrail": "Does not establish physics truth, proof authority, benchmark status, Gate Chair verdicts, or completed derivations.",
       "metric_id": "new_mathematical_payload_to_support_only_task_ratio",
       "status": "measured",
-      "value": 2.3636
+      "value": 2.3274
     },
     {
       "authority_boundary": {
@@ -978,15 +978,15 @@
     },
     "calculation_window": "all tracked completion records available at report generation",
     "classification_counts": {
-      "physics_bearing_task_count": 449,
-      "project_system_task_count": 528,
-      "route_history_records": 1070,
-      "support_only_task_count": 550
+      "physics_bearing_task_count": 450,
+      "project_system_task_count": 537,
+      "route_history_records": 1080,
+      "support_only_task_count": 559
     },
     "metrics": {
       "candidate_construction_count": 206,
-      "new_mathematical_payload_count": 1300,
-      "new_mathematical_payload_to_support_only_task_ratio": 2.3636,
+      "new_mathematical_payload_count": 1301,
+      "new_mathematical_payload_to_support_only_task_ratio": 2.3274,
       "ordinary_route_guard_status": {
         "current_run_requires_physics_route_or_exception": false,
         "hard_threshold": 3,
@@ -996,10 +996,10 @@
         "system_work_counts_as_physics": false,
         "warning_at": 2
       },
-      "physics_bearing_task_count": 449,
+      "physics_bearing_task_count": 450,
       "physics_bearing_task_run_length": 0,
-      "physics_bearing_to_project_system_task_ratio": 0.8504,
-      "project_system_task_count": 528,
+      "physics_bearing_to_project_system_task_ratio": 0.838,
+      "project_system_task_count": 537,
       "project_system_task_run_length": 1,
       "route_orbit_same_burden_repetition_count": 2,
       "route_orbit_warning_status": {
@@ -1012,85 +1012,19 @@
           "gate_ready_without_gate"
         ]
       },
-      "support_only_task_count": 550,
+      "support_only_task_count": 559,
       "support_only_task_count_since_last_physics_payload": 1,
-      "theorem_countermodel_candidate_count": 594
+      "theorem_countermodel_candidate_count": 595
     },
     "policy_source_path": "research_control/design/physics_payload_ratio_policy_v1.md",
     "route_history_tail": [
       {
-        "authority": "science_draft",
-        "candidate_construction_signal": false,
-        "candidate_family": "no_target_positive_readiness_logic",
-        "completed_at": "2026-07-22T23:15:35Z",
-        "completion_path": "research_control/tasks/RT-20260722-019/jobs/completions/AJC-AJ-RT-20260722-019-001.yaml",
-        "job_id": "AJ-RT-20260722-019-001",
-        "mathematical_payload_items": 4,
-        "milestone": "source_ontology",
-        "physics_bearing_task": true,
-        "project_system_task": false,
-        "result_kind": "completed_or_precisely_blocked",
-        "role_id": "ontology-formalizer",
-        "scope": "scientific",
-        "support_only_task": false,
-        "task_id": "RT-20260722-019",
-        "task_type": "v21_no_target_positive_provenance_sufficiency_policy",
-        "taxonomy_confidence": "high",
-        "taxonomy_source": "explicit",
-        "theorem_countermodel_candidate_signal": true,
-        "work_kind": "construction_or_implementation"
-      },
-      {
-        "authority": "science_draft",
-        "candidate_construction_signal": false,
-        "candidate_family": "negative_result_success_pathway",
-        "completed_at": "2026-07-23T00:16:09Z",
-        "completion_path": "research_control/tasks/RT-20260722-020/jobs/completions/AJC-AJ-RT-20260722-020-001.yaml",
-        "job_id": "AJ-RT-20260722-020-001",
-        "mathematical_payload_items": 4,
-        "milestone": "source_equivalence_eqsrc",
-        "physics_bearing_task": true,
-        "project_system_task": false,
-        "result_kind": "completed_or_precisely_blocked",
-        "role_id": "ontology-formalizer",
-        "scope": "scientific",
-        "support_only_task": false,
-        "task_id": "RT-20260722-020",
-        "task_type": "v21_scoped_negative_result_minimum_extension_success_pathway",
-        "taxonomy_confidence": "high",
-        "taxonomy_source": "explicit",
-        "theorem_countermodel_candidate_signal": true,
-        "work_kind": "formalization_or_theorem"
-      },
-      {
-        "authority": "science_draft",
-        "candidate_construction_signal": false,
-        "candidate_family": "exact_gr_interpretive_manuscript",
-        "completed_at": "2026-07-23T01:19:19Z",
-        "completion_path": "research_control/tasks/RT-20260722-021/jobs/completions/AJC-AJ-RT-20260722-021-001.yaml",
-        "job_id": "AJ-RT-20260722-021-001",
-        "mathematical_payload_items": 0,
-        "milestone": "benchmark_promotion",
-        "physics_bearing_task": false,
-        "project_system_task": false,
-        "result_kind": "completed_or_precisely_blocked",
-        "role_id": "documentation-curator",
-        "scope": "scientific",
-        "support_only_task": false,
-        "task_id": "RT-20260722-021",
-        "task_type": "v21_exact_gr_interpretive_manuscript_package",
-        "taxonomy_confidence": "high",
-        "taxonomy_source": "explicit",
-        "theorem_countermodel_candidate_signal": true,
-        "work_kind": "publication_preparation"
-      },
-      {
         "authority": "project_control",
         "candidate_construction_signal": false,
-        "candidate_family": "continue_research_context_live_route_fixture",
-        "completed_at": "2026-07-23T03:00:44Z",
-        "completion_path": "research_control/tasks/RT-20260722-022/jobs/completions/AJC-AJ-RT-20260722-022-001.yaml",
-        "job_id": "AJ-RT-20260722-022-001",
+        "candidate_family": "p12_t05_metric_reporting_classifier_recovery",
+        "completed_at": "2026-07-23T11:43:31Z",
+        "completion_path": "research_control/tasks/RT-20260723-005/jobs/completions/AJC-AJ-RT-20260723-005-001.yaml",
+        "job_id": "AJ-RT-20260723-005-001",
         "mathematical_payload_items": 0,
         "milestone": "not_applicable",
         "physics_bearing_task": false,
@@ -1099,8 +1033,8 @@
         "role_id": "validator-engineer",
         "scope": "project_system",
         "support_only_task": true,
-        "task_id": "RT-20260722-022",
-        "task_type": "project_system_continue_research_context_live_route_fixture_recovery",
+        "task_id": "RT-20260723-005",
+        "task_type": "project_system_p12_t05_metric_reporting_classifier_recovery",
         "taxonomy_confidence": "high",
         "taxonomy_source": "explicit",
         "theorem_countermodel_candidate_signal": false,
@@ -1109,10 +1043,32 @@
       {
         "authority": "project_control",
         "candidate_construction_signal": false,
-        "candidate_family": "exact_path_whitespace_policy",
-        "completed_at": "2026-07-23T04:14:12Z",
-        "completion_path": "research_control/tasks/RT-20260722-023/jobs/completions/AJC-AJ-RT-20260722-023-001.yaml",
-        "job_id": "AJ-RT-20260722-023-001",
+        "candidate_family": "p12_t05_ordinary_route_warning_contract_recovery",
+        "completed_at": "2026-07-23T12:59:07Z",
+        "completion_path": "research_control/tasks/RT-20260723-006/jobs/completions/AJC-AJ-RT-20260723-006-001.yaml",
+        "job_id": "AJ-RT-20260723-006-001",
+        "mathematical_payload_items": 0,
+        "milestone": "not_applicable",
+        "physics_bearing_task": false,
+        "project_system_task": true,
+        "result_kind": "completed_or_precisely_blocked",
+        "role_id": "validator-engineer",
+        "scope": "project_system",
+        "support_only_task": true,
+        "task_id": "RT-20260723-006",
+        "task_type": "project_system_p12_t05_ordinary_route_warning_contract_recovery",
+        "taxonomy_confidence": "high",
+        "taxonomy_source": "explicit",
+        "theorem_countermodel_candidate_signal": false,
+        "work_kind": "benchmark_or_recovery"
+      },
+      {
+        "authority": "project_control",
+        "candidate_construction_signal": false,
+        "candidate_family": "p12_t05_checkpoint_integrity_recovery",
+        "completed_at": "2026-07-23T14:34:49Z",
+        "completion_path": "research_control/tasks/RT-20260723-007/jobs/completions/AJC-AJ-RT-20260723-007-001.yaml",
+        "job_id": "AJ-RT-20260723-007-001",
         "mathematical_payload_items": 0,
         "milestone": "not_applicable",
         "physics_bearing_task": false,
@@ -1121,8 +1077,8 @@
         "role_id": "process-integrity-auditor",
         "scope": "project_system",
         "support_only_task": true,
-        "task_id": "RT-20260722-023",
-        "task_type": "project_system_hash_bound_blank_eof_exact_path_recovery",
+        "task_id": "RT-20260723-007",
+        "task_type": "project_system_p12_t05_eof_handoff_identity_checkpoint_recovery",
         "taxonomy_confidence": "high",
         "taxonomy_source": "explicit",
         "theorem_countermodel_candidate_signal": false,
@@ -1131,20 +1087,20 @@
       {
         "authority": "project_control",
         "candidate_construction_signal": false,
-        "candidate_family": "gitattributes_classifier_admission",
-        "completed_at": "2026-07-23T05:44:47Z",
-        "completion_path": "research_control/tasks/RT-20260722-024/jobs/completions/AJC-AJ-RT-20260722-024-001.yaml",
-        "job_id": "AJ-RT-20260722-024-001",
+        "candidate_family": "p10_t05_event_store_content_address_receipt_recovery",
+        "completed_at": "2026-07-23T15:35:11Z",
+        "completion_path": "research_control/tasks/RT-20260723-008/jobs/completions/AJC-AJ-RT-20260723-008-001.yaml",
+        "job_id": "AJ-RT-20260723-008-001",
         "mathematical_payload_items": 0,
         "milestone": "not_applicable",
         "physics_bearing_task": false,
         "project_system_task": true,
-        "result_kind": "implemented_and_validated_or_precisely_blocked",
+        "result_kind": "completed_or_precisely_blocked",
         "role_id": "validator-engineer",
         "scope": "project_system",
         "support_only_task": true,
-        "task_id": "RT-20260722-024",
-        "task_type": "project_system_gitattributes_classifier_recovery",
+        "task_id": "RT-20260723-008",
+        "task_type": "project_system_p10_t05_event_store_content_address_receipt_recovery",
         "taxonomy_confidence": "high",
         "taxonomy_source": "explicit",
         "theorem_countermodel_candidate_signal": false,
@@ -1153,20 +1109,20 @@
       {
         "authority": "project_control",
         "candidate_construction_signal": false,
-        "candidate_family": "task_taxonomy_and_event_store_receipt_compatibility",
-        "completed_at": "2026-07-23T06:25:44Z",
-        "completion_path": "research_control/tasks/RT-20260723-001/jobs/completions/AJC-AJ-RT-20260723-001-001.yaml",
-        "job_id": "AJ-RT-20260723-001-001",
+        "candidate_family": "role_registry_authority_delta_summary_checkpoint_recovery",
+        "completed_at": "2026-07-23T16:53:37Z",
+        "completion_path": "research_control/tasks/RT-20260723-009/jobs/completions/AJC-AJ-RT-20260723-009-001.yaml",
+        "job_id": "AJ-RT-20260723-009-001",
         "mathematical_payload_items": 0,
         "milestone": "not_applicable",
         "physics_bearing_task": false,
         "project_system_task": true,
         "result_kind": "completed_or_precisely_blocked",
-        "role_id": "validator-engineer",
+        "role_id": "process-integrity-auditor",
         "scope": "project_system",
         "support_only_task": true,
-        "task_id": "RT-20260723-001",
-        "task_type": "project_system_task_taxonomy_event_store_receipt_compatibility_recovery",
+        "task_id": "RT-20260723-009",
+        "task_type": "project_system_role_registry_authority_delta_summary_checkpoint_recovery",
         "taxonomy_confidence": "high",
         "taxonomy_source": "explicit",
         "theorem_countermodel_candidate_signal": false,
@@ -1175,54 +1131,32 @@
       {
         "authority": "project_control",
         "candidate_construction_signal": false,
-        "candidate_family": "p10_t07_identity_and_routing_snapshot_recovery",
-        "completed_at": "2026-07-23T07:12:45Z",
-        "completion_path": "research_control/tasks/RT-20260723-002/jobs/completions/AJC-AJ-RT-20260723-002-001.yaml",
-        "job_id": "AJ-RT-20260723-002-001",
+        "candidate_family": "handoff_markdown_identity_checkpoint_recovery",
+        "completed_at": "2026-07-23T17:31:49Z",
+        "completion_path": "research_control/tasks/RT-20260723-010/jobs/completions/AJC-AJ-RT-20260723-010-001.yaml",
+        "job_id": "AJ-RT-20260723-010-001",
         "mathematical_payload_items": 0,
         "milestone": "not_applicable",
         "physics_bearing_task": false,
         "project_system_task": true,
         "result_kind": "completed_or_precisely_blocked",
-        "role_id": "validator-engineer",
+        "role_id": "process-integrity-auditor",
         "scope": "project_system",
         "support_only_task": true,
-        "task_id": "RT-20260723-002",
-        "task_type": "project_system_p10_t07_identity_routing_snapshot_recovery",
+        "task_id": "RT-20260723-010",
+        "task_type": "project_system_handoff_markdown_identity_checkpoint_recovery",
         "taxonomy_confidence": "high",
         "taxonomy_source": "explicit",
         "theorem_countermodel_candidate_signal": false,
         "work_kind": "benchmark_or_recovery"
-      },
-      {
-        "authority": "science_draft",
-        "candidate_construction_signal": false,
-        "candidate_family": "selector_minimum_extension_theorem_manuscript",
-        "completed_at": "2026-07-23T08:38:21Z",
-        "completion_path": "research_control/tasks/RT-20260723-003/jobs/completions/AJC-AJ-RT-20260723-003-001.yaml",
-        "job_id": "AJ-RT-20260723-003-001",
-        "mathematical_payload_items": 5,
-        "milestone": "source_equivalence_eqsrc",
-        "physics_bearing_task": true,
-        "project_system_task": false,
-        "result_kind": "completed_or_precisely_blocked",
-        "role_id": "ontology-formalizer",
-        "scope": "scientific",
-        "support_only_task": false,
-        "task_id": "RT-20260723-003",
-        "task_type": "v21_selector_minimum_extension_theorem_manuscript",
-        "taxonomy_confidence": "high",
-        "taxonomy_source": "explicit",
-        "theorem_countermodel_candidate_signal": true,
-        "work_kind": "publication_preparation"
       },
       {
         "authority": "project_control",
         "candidate_construction_signal": false,
         "candidate_family": "not_applicable",
-        "completed_at": "2026-07-23T10:25:43Z",
-        "completion_path": "research_control/tasks/RT-20260723-004/jobs/completions/AJC-AJ-RT-20260723-004-001.yaml",
-        "job_id": "AJ-RT-20260723-004-001",
+        "completed_at": "2026-07-23T18:58:05Z",
+        "completion_path": "research_control/tasks/RT-20260723-011/jobs/completions/AJC-AJ-RT-20260723-011-001.yaml",
+        "job_id": "AJ-RT-20260723-011-001",
         "mathematical_payload_items": 0,
         "milestone": "source_equivalence_eqsrc",
         "physics_bearing_task": false,
@@ -1231,12 +1165,78 @@
         "role_id": "project-control-maintainer",
         "scope": "project_system",
         "support_only_task": true,
-        "task_id": "RT-20260723-004",
-        "task_type": "v21_durable_scientific_quality_metrics",
+        "task_id": "RT-20260723-011",
+        "task_type": "v21_attempt_rework_pass_saturation_dashboard",
         "taxonomy_confidence": "high",
         "taxonomy_source": "explicit",
         "theorem_countermodel_candidate_signal": false,
+        "work_kind": "construction_or_implementation"
+      },
+      {
+        "authority": "project_control",
+        "candidate_construction_signal": false,
+        "candidate_family": "research_control_contract_parity_recovery",
+        "completed_at": "2026-07-23T19:28:27Z",
+        "completion_path": "research_control/tasks/RT-20260723-012/jobs/completions/AJC-AJ-RT-20260723-012-001.yaml",
+        "job_id": "AJ-RT-20260723-012-001",
+        "mathematical_payload_items": 0,
+        "milestone": "not_applicable",
+        "physics_bearing_task": false,
+        "project_system_task": true,
+        "result_kind": "completed_or_precisely_blocked",
+        "role_id": "validator-engineer",
+        "scope": "project_system",
+        "support_only_task": true,
+        "task_id": "RT-20260723-012",
+        "task_type": "project_system_research_control_contract_parity_recovery",
+        "taxonomy_confidence": "high",
+        "taxonomy_source": "explicit",
+        "theorem_countermodel_candidate_signal": false,
+        "work_kind": "benchmark_or_recovery"
+      },
+      {
+        "authority": "science_draft",
+        "candidate_construction_signal": false,
+        "candidate_family": "v21_governance_methodology_ablation",
+        "completed_at": "2026-07-23T20:36:23Z",
+        "completion_path": "research_control/tasks/RT-20260723-013/jobs/completions/AJC-AJ-RT-20260723-013-001.yaml",
+        "job_id": "AJ-RT-20260723-013-001",
+        "mathematical_payload_items": 1,
+        "milestone": "source_equivalence_eqsrc",
+        "physics_bearing_task": true,
+        "project_system_task": false,
+        "result_kind": "completed_or_precisely_blocked",
+        "role_id": "external-red-team-reviewer",
+        "scope": "scientific_audit",
+        "support_only_task": false,
+        "task_id": "RT-20260723-013",
+        "task_type": "v21_governance_methodology_evaluation",
+        "taxonomy_confidence": "high",
+        "taxonomy_source": "explicit",
+        "theorem_countermodel_candidate_signal": true,
         "work_kind": "integration_or_selection"
+      },
+      {
+        "authority": "project_control",
+        "candidate_construction_signal": false,
+        "candidate_family": "resolver_skill_contract_fixture_isolation",
+        "completed_at": "2026-07-23T22:26:02Z",
+        "completion_path": "research_control/tasks/RT-20260723-014/jobs/completions/AJC-AJ-RT-20260723-014-001.yaml",
+        "job_id": "AJ-RT-20260723-014-001",
+        "mathematical_payload_items": 0,
+        "milestone": "not_applicable",
+        "physics_bearing_task": false,
+        "project_system_task": true,
+        "result_kind": "completed_or_precisely_blocked",
+        "role_id": "validator-engineer",
+        "scope": "project_system",
+        "support_only_task": true,
+        "task_id": "RT-20260723-014",
+        "task_type": "project_system_resolver_skill_contract_fixture_recovery",
+        "taxonomy_confidence": "high",
+        "taxonomy_source": "explicit",
+        "theorem_countermodel_candidate_signal": false,
+        "work_kind": "benchmark_or_recovery"
       }
     ],
     "schema_id": "physics_payload_ratio_route_history_metrics_v1",
@@ -1251,7 +1251,7 @@
   "route_orbit_warning_rows": [
     {
       "diagnostic_label": "Route-orbit warning",
-      "evidence_path_count": 140,
+      "evidence_path_count": 141,
       "first_evidence_path": "research_control/tasks/RT-20260702-063/jobs/completions/AJC-AJ-RT-20260702-063-001.yaml",
       "hard_gate": false,
       "metric_key": "candidate_construct_audit_stress_selector_cycles",
@@ -1264,11 +1264,11 @@
     },
     {
       "diagnostic_label": "Route-orbit warning",
-      "evidence_path_count": 361,
+      "evidence_path_count": 362,
       "first_evidence_path": "research_control/tasks/RT-20260608-004/jobs/completions/AJC-AJ-RT-20260608-004-001.yaml",
       "hard_gate": false,
       "metric_key": "gate_ready_cycles_without_gate_verdict",
-      "observed_value": 361,
+      "observed_value": 362,
       "physics_claim_authority": false,
       "recommended_guard_action": "Route the next packet to Gate Chair, explain why Gate Chair is not yet lawful, or withdraw gate-ready wording.",
       "severity": "warning",
@@ -1278,7 +1278,7 @@
   ],
   "schema_id": "ai_methodology_metrics_dashboard_v1",
   "source_metrics_report": {
-    "as_of": "2026-07-23T10:25:43Z",
+    "as_of": "2026-07-23T22:26:02Z",
     "metric_separation_guard_status": "pass",
     "report_id": "research_control_metrics_separation",
     "source_basis": [

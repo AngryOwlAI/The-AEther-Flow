@@ -1,0 +1,51 @@
+{
+  "schema_id": "folder_map_documentation_impact_checkpoint_recovery_receipt_v1",
+  "task_id": "RT-20260723-017",
+  "job_id": "AJ-RT-20260723-017-001",
+  "decision_id": "DDR-20260723-017",
+  "goal_id": "crg-20260720T161354Z-96bc2664ce31bfe0",
+  "goal_generation": 86,
+  "goal_route_sha256": "c3b48b780ffca144f008bd20c752d8119597b74d71241a37dffb11e13fc9e223",
+  "source_task_id": "RT-20260723-016",
+  "source_job_id": "AJ-RT-20260723-016-001",
+  "source_blocker_path": "research_control/tasks/RT-20260723-016/artifacts/validation_blocker_checkpoint_documentation_impact_folder_map_v1.yaml",
+  "source_blocker_sha256": "92456dfce4685d9440f72839d960056273c5c84ef1668b5e602a955487d3d5cc",
+  "target_path": "research_control/tasks/RT-20260723-016/documentation_impact.yaml",
+  "target_sha256_before": "23995f5238bd944a8fb5da83483fd4dd085348517dab210904dc44d13641631b",
+  "target_sha256_after": "748467fe135f80e1552680ee402989525074f433df37549b1ccc9ee221c62fe7",
+  "required_generated_derivative_item": "FOLDER_MAP.md",
+  "required_item_occurrence_count": 1,
+  "primary_repair_status": "PASS_EXACT_ITEM_PRESENT",
+  "predecessor_receipt_synchronization": {
+    "rt015_documentation_impact_covers_rt017": true,
+    "rt016_documentation_impact_covers_rt017": true,
+    "shared_explanatory_source_changed": false
+  },
+  "protected_hashes": {
+    "task_taxonomy_policy_sha256": "7460702270a26079f39f64ced2b5934e6a67a721983d913e4d3d114917ecca0b",
+    "scientific_quality_taxonomy_sha256": "b2e31738a445e68e4de6ea20381886bcd6c3747cccd693187f0904a7742ad308",
+    "scientific_quality_calibration_policy_sha256": "b9b4e4fcc603c9eee508456999936a4e0378b188235f73f35c454009728648cb",
+    "scientific_quality_fixture_corpus_sha256": "60bcb8819734e5e565b08a46b29e85ebffde14f6c1e33dd13cfdd1c02628d003",
+    "scientific_quality_validator_sha256": "e4102ac5ce28653e9c8195762aeb519c1f5c08e615aa03221d18b0906fd73260",
+    "p12_t07_result_sha256": "a262ba7b1c12dc133b32e4ae81f0aadd9132981b18e51c5ebe372bab6a8a5089",
+    "handoff_0847_yaml_sha256": "7472af1b615b7c76405bcea2c63bc17490837c0412a58a61edfdd84690252dd2",
+    "rt015_source_blocker_sha256": "7898bfdfdf1b42a4c8794bca406566e1c10e8b1bc76ad80a38f40d29cc9c88fd"
+  },
+  "protected_hash_mismatch_count": 0,
+  "validation_results": {
+    "affected_validation_plan": "READY_14_SELECTED_GATES",
+    "documentation_impact": "PASS_ZERO_ERRORS_ZERO_WARNINGS_THREE_RECEIPTS",
+    "focused_documentation_impact_regression": "PASS_1_OF_1",
+    "task_taxonomy_repository": "PASS_47_REQUIRED_ZERO_ERRORS_ZERO_MUTATIONS_ZERO_STRENGTHENING",
+    "task_taxonomy_report_sha256": "013189328a35a8aef2ff910099028706724433b6bc942efa63684aa46f4cc1de",
+    "git_diff_check": "PASS"
+  },
+  "checkpoint_invocation_count": 0,
+  "checkpoint_status": "PENDING_ONE_GOVERNED_CHECKPOINT",
+  "p13_t01_executed": false,
+  "scientific_claims_changed": false,
+  "distance_to_gr_delta_changed": false,
+  "physics_promotion_authorized": false,
+  "proof_authority": false,
+  "publication_authorized": false
+}

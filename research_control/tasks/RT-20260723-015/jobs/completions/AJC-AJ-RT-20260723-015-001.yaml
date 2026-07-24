@@ -1,0 +1,361 @@
+validation_status: "FAIL"
+job_id: "AJ-RT-20260723-015-001"
+completion_id: "AJC-AJ-RT-20260723-015-001"
+task_id: "RT-20260723-015"
+task_type: "p12_t05_scientific_quality_source_integrity_reseal"
+decision_id: "DDR-20260723-015"
+role_id: "validator-engineer"
+source_role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260723-015"
+status: "completed"
+final_repository_validation_status: "FAIL_CHECKPOINT_TASK_TAXONOMY_EXPLICIT_FIELDS"
+created_at: "2026-07-23T23:27:47Z"
+started_at: "2026-07-23T23:27:47Z"
+completed_at: "2026-07-23T23:33:40Z"
+objective: "Resolve PIS-RT-20260723-013-001 by invoking the established P12-T05 generator to reseal only its stale validation report, compact receipt, and established downstream projections against unchanged sources, then record exact validation evidence and checkpoint once."
+completion_summary: "Generation 84 invoked the existing P12-T05 generator exactly once. The regenerated report and compact receipt bind the current sources, all 44 logical checks and 14 focused tests pass, and seven established projections were refreshed without scientific or ordinary-route change. The single governed checkpoint then failed closed on 1 of 1196 repository tests because this post-effective task's 00_TASK.yaml lacks the required readable title and explicit v21 task_taxonomy mapping. Every other staged gate passed, the index was restored, and no commit was created."
+objective_result: "p12_t05_source_integrity_resealed_checkpoint_blocked_task_taxonomy_explicit_fields"
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 84
+  passes_consumed: 79
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:84"
+  handoff_token: "e54f22ae84df08f276a7e0a6a47d6e97983745767ec9175a"
+  relay_claim_token: "f0d6b38117885a96e07c58c4b889c8a441c3a5841164af40"
+  immutable_route_hash: "9af4f67a6700efec64ee1d2854262d2fca8427a4674b9c756f159f6793419a4f"
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+
+transaction_status: "completed_blocked_checkpoint"
+result_disposition: "p12_t05_reseal_payload_pass_checkpoint_failed_closed_recovery_required"
+work_item_status: "implemented_but_checkpoint_blocked"
+plan_task_id: "P13-T01"
+recovery_for_plan_task_id: "P12-T05"
+checkpoint_commit: "none"
+checkpoint_invocation_count: 1
+checkpoint_staged: false
+legacy_validation_used: false
+project_system_change_only: true
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "FAIL_CHECKPOINT_TASK_TAXONOMY_EXPLICIT_FIELDS"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  observed_durable_outputs:
+    physics: []
+    project_system:
+      - "research_control/tasks/RT-20260723-004/artifacts/scientific_quality_validation_report.json"
+      - "research_control/tasks/RT-20260723-004/artifacts/scientific_quality_compact_receipt.json"
+      - "research_control/tasks/RT-20260723-015/artifacts/p12_t05_scientific_quality_source_integrity_reseal_receipt.json"
+  accepted_criteria:
+    physics: []
+    project_system:
+      - "the taxonomy calibration policy fixture corpus and validator implementation hashes are unchanged"
+      - "the regenerated P12-T05 report and compact receipt match current generator output"
+      - "the P12-T05 check reports PASS with 44 logical checks and 14 fixtures"
+      - "PIS-RT-20260723-013-001 and its sidecar close with matching PASS completion evidence"
+      - "handoff-0847 remains ordinary research authority and P13-T01 remains unexecuted"
+      - "one normal governed checkpoint commits without legacy validation"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+physics_payload_admission_result:
+  status: "admitted"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+
+ordinary_route_guard_admission_result:
+  status: "PASS"
+  source_handoff_id: "handoff-0847"
+  selected_plan_task_id: "P13-T01"
+  guard_outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  system_success_counts_as_physics: false
+  system_success_counts_as_distance_to_gr: false
+
+artifacts:
+  - "research_control/tasks/RT-20260723-015/artifacts/p12_t05_scientific_quality_source_integrity_reseal_receipt.json"
+  - "research_control/tasks/RT-20260723-015/artifacts/validation_blocker_checkpoint_task_taxonomy_explicit_fields_v1.yaml"
+output_paths:
+  - "research_control/tasks/RT-20260723-004/artifacts/scientific_quality_validation_report.json"
+  - "research_control/tasks/RT-20260723-004/artifacts/scientific_quality_compact_receipt.json"
+  - "output/physics_progress_metrics.json"
+  - "output/physics_progress_metrics.md"
+  - "output/ai_methodology_metrics_dashboard.json"
+  - "output/ai_methodology_metrics_dashboard.md"
+  - "wiki/indexes/ai_methodology_metrics_dashboard.md"
+  - "research_control/tasks/RT-20260723-015/**"
+  - "research_control/project_improvement_handoffs/improve-project-handoff_20260723_013.yaml"
+  - "research_control/project_improvement_handoffs/improve-project-handoff_20260723_013.md"
+  - "research_control/program_state.yaml"
+artifact_receipts:
+  - path: "research_control/tasks/RT-20260723-015/artifacts/p12_t05_scientific_quality_source_integrity_reseal_receipt.json"
+    sha256: "d09a9aa437238460550a4b9a75f780ff4a22370784613812d22857fd69afa609"
+
+checkpoint_blocker:
+  path: "research_control/tasks/RT-20260723-015/artifacts/validation_blocker_checkpoint_task_taxonomy_explicit_fields_v1.yaml"
+  sha256: "7898bfdfdf1b42a4c8794bca406566e1c10e8b1bc76ad80a38f40d29cc9c88fd"
+  failed_gate_id: "test_shard_repository"
+  failed_test: "test_task_taxonomy.TaskTaxonomyTests.test_repository_report_records_zero_mutation_and_strengthening"
+  failed_test_count: 1
+  repository_test_count: 1196
+  failed_staged_tree: "71a908e6e5591bc903097a1e50880367c7c9ce64"
+  checkpoint_child_receipt_sha256: "3a64333c44e7a635d2a65601a545322335b302d99adf8cb8572652effc477aff"
+  root_cause_errors:
+    - "required_explicit_task_taxonomy_missing"
+    - "required_top_level_field_missing:title"
+  index_restored: true
+  commit_created: false
+  retry_authorized: false
+
+source_integrity_reseal_result:
+  generator_invocation_count: 1
+  generator_write_status: "PASS"
+  generator_check_status: "PASS"
+  validation_check_count: 44
+  validation_failure_count: 0
+  validation_warning_count: 5
+  fixture_case_count: 14
+  metric_count: 8
+  stale_finding_count_after: 0
+  focused_test_status: "PASS_14_OF_14"
+  taxonomy_sha256_before: "b2e31738a445e68e4de6ea20381886bcd6c3747cccd693187f0904a7742ad308"
+  taxonomy_sha256_after: "b2e31738a445e68e4de6ea20381886bcd6c3747cccd693187f0904a7742ad308"
+  calibration_policy_sha256_before: "b9b4e4fcc603c9eee508456999936a4e0378b188235f73f35c454009728648cb"
+  calibration_policy_sha256_after: "b9b4e4fcc603c9eee508456999936a4e0378b188235f73f35c454009728648cb"
+  fixture_corpus_sha256_before: "60bcb8819734e5e565b08a46b29e85ebffde14f6c1e33dd13cfdd1c02628d003"
+  fixture_corpus_sha256_after: "60bcb8819734e5e565b08a46b29e85ebffde14f6c1e33dd13cfdd1c02628d003"
+  validator_sha256_before: "e4102ac5ce28653e9c8195762aeb519c1f5c08e615aa03221d18b0906fd73260"
+  validator_sha256_after: "e4102ac5ce28653e9c8195762aeb519c1f5c08e615aa03221d18b0906fd73260"
+  report_sha256_before: "6082c5c23d93741f01e61dcdf48c76fe4c7b723605440261dea95c94c399fd6e"
+  report_sha256_after: "d7118e6f27fbbbc7f30178f1248340cebc1871062a3301a4dcae5def4944da01"
+  compact_receipt_sha256_before: "5aeeb1c5b33b229843b5033d85b66098719b50ec1e775a8ae2e46df832801ffa"
+  compact_receipt_sha256_after: "2dc0b48fc32bfd0d1a2d0ed48d65701e449317f7378ad47b7ff709fdc68fe3b8"
+  generated_projection_count: 7
+  p12_t07_evidence_changed: false
+  p13_t01_executed: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+
+preserved_hashes:
+  handoff_0847_yaml_sha256: "7472af1b615b7c76405bcea2c63bc17490837c0412a58a61edfdd84690252dd2"
+  p12_t07_result_sha256: "a262ba7b1c12dc133b32e4ae81f0aadd9132981b18e51c5ebe372bab6a8a5089"
+  v21_plan_sha256: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+
+command_results:
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+    status: "PASS_CORE_WITH_7_LOCAL_CACHE_WARNINGS"
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search 'generated artifact drift stale hashes' --limit 10 --json"
+    status: "PASS_REGISTERED_V21_PLAN_SOURCE_RETURNED"
+  - command: ".venv/bin/python research_control/tasks/RT-20260723-004/artifacts/validate_scientific_quality_metrics.py --write --json"
+    status: "PASS_44_CHECKS_14_FIXTURES_NO_STALE_FINDINGS"
+  - command: ".venv/bin/python research_control/tasks/RT-20260723-004/artifacts/validate_scientific_quality_metrics.py --check --json"
+    status: "PASS_44_CHECKS_14_FIXTURES_NO_STALE_FINDINGS"
+  - command: ".venv/bin/python -m unittest -v tests.test_scientific_quality_metrics tests.test_report_physics_progress_metrics"
+    status: "PASS_14_OF_14"
+
+validation_summary:
+  status: "FAIL_CHECKPOINT_TASK_TAXONOMY_EXPLICIT_FIELDS"
+  passing_gates:
+    - "one exact generator invocation"
+    - "44 logical validation checks and 14 fixture cases"
+    - "14 focused scientific-quality and reporting tests"
+    - "four exact source-preservation hashes"
+    - "handoff-0847 and P12-T07 methodology evidence preservation"
+  failed_gates:
+    - "test_shard_repository: 1 of 1196 tests failed"
+  pending_gates:
+    - "fresh exact task-taxonomy recovery"
+    - "one future normal governed checkpoint"
+  checkpoint:
+    invoked: true
+    invocation_count: 1
+    reason: "The only current-job checkpoint failed closed on the task-taxonomy repository regression and may not be retried."
+  staging:
+    attempted: false
+    index_changed: false
+  commit:
+    created: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 84 lease parity, repository identity, maximum reasoning effort, exact clean manifest, predecessor inactivity, and immutable improve-project-system route were verified before one claim and consume."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The generator check passes all 44 checks with zero stale findings."
+      - "The task-local receipt binds every source and generated-artifact hash."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Fourteen focused scientific-quality and reporting tests pass."
+      - "Source, scientific, Distance-to-GR, and ordinary-route hashes are preserved."
+  post_checkpoint:
+    status: "FAIL"
+    evidence:
+      - "The staged test_shard_repository gate failed 1 of 1196 tests on RT-20260723-015 missing title and explicit task_taxonomy."
+      - "The checkpoint restored the index and created no commit."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Task index, current frontier, and compact frontier freshness passed on the staged tree."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory synchronization and final staged validate-only both passed."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation passed with historical warnings only."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  push_authorized: false
+  publication_authorized: false
+  proof_authority: false
+
+three_tier_claim_summary:
+  adopted_objects: []
+  accepted_evidence_preconditions:
+    - "The current source hashes differ from the stale embedded hashes identified by P12-T07."
+    - "The existing generator deterministically emits current-source report, receipt, and established projections."
+  open_or_blocked_physical_targets:
+    - "source_ontology_derivation"
+    - "general_eqsrc"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+  forbidden_overread:
+    - "current-source validation as scientific progress or theorem truth"
+    - "operational metrics as an aggregate scientific-truth score"
+    - "signal resolution as scientific status"
+
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "none"
+  milestone: "none"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "The repair regenerates source-bound project-system validation artifacts only."
+  downstream_unlocked:
+    - "none_checkpoint_failed"
+  downstream_still_blocked:
+    - "P13-T01_until_task_taxonomy_recovery_checkpoint"
+    - "source_ontology_derivation"
+    - "general_eqsrc"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+    - "benchmark_promotion"
+    - "external_publication"
+
+resolved_project_improvement_signals: []
+project_improvement_signals: []
+project_improvement_sidecar_created: false
+project_improvement_bridge:
+  required: true
+  sidecar_path: "research_control/project_improvement_handoffs/improve-project-handoff_20260723_013.yaml"
+  recursive_goal_recovery_required: true
+  reason: "The reseal payload passes but its signal transaction remains open until a fresh exact task-taxonomy recovery checkpoints the cumulative tree; the sidecar does not replace handoff-0847."
+
+selected_next_route:
+  route_id: "add_rt015_explicit_task_taxonomy_then_revalidate_and_checkpoint_v1"
+  task_type: "project_system_checkpoint_task_taxonomy_recovery"
+  role_family: "validator-engineer@0.2.0"
+  worker_skill: "improve-project-system"
+  source_handoff_id: "handoff-0847"
+  requires_human_gate: false
+  project_system_bridge_resolved: false
+  executed: false
+next_work_item:
+  plan_task_id: "P13-T01"
+  recovery_for_task_id: "RT-20260723-015"
+  title: "Add the missing RT-20260723-015 title and explicit task taxonomy"
+  worker_skill: "improve-project-system"
+  recommended_role: "validator-engineer@0.2.0"
+  dependency_ready_after_checkpoint: false
+  executed: false
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1002
+    relationship_row_count: 4960
+    semantic_row_count: 1002
+    vault_row_count: 1002
+    local_cache_only_warning_count: 7
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search 'generated artifact drift stale hashes' --limit 10 --json"
+      query_type: "search"
+      query_text: "generated artifact drift stale hashes"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  authority_note: "Generated wiki Obsidian semantic relationship and .local layers are retrieval only and not authority; tracked canonical sources, registries, sidecar, and research-control state govern this repair."
+
+project_state_transition:
+  previous_task: "RT-20260723-014 resolver-fixture recovery checkpointed with PIS-RT-20260723-013-001 still open"
+  completed_task: "RT-20260723-015 P12-T05 reseal payload complete with checkpoint blocked"
+  next_task: "Fresh RT-20260723-015 explicit task-taxonomy checkpoint recovery"
+  research_program_state_changed: false
+out_of_scope_remaining_work:
+  - "P13-T01 remains unexecuted until the exact task-taxonomy recovery checkpoints the cumulative transaction."
+  - "No scientific source, ontology, ledger, Distance-to-GR, promotion, benchmark, proof, publication, push, or protected human-gated decision is authorized."
+forbidden_conclusion_summary: "This repair supplies no authority to change metric semantics, scientific sources, ontology candidates, scientific ledgers, Distance-to-GR status, benchmark status, proof, publication, or Gate Chair decisions and does not execute P13-T01."
+verdict: "p12_t05_source_integrity_reseal_payload_pass_checkpoint_blocked_task_taxonomy_recovery_required_no_physics_delta"
+next_recommendation: "Route one fresh bounded improve-project-system recovery to add only the required title and explicit task_taxonomy mapping to RT-20260723-015/00_TASK.yaml, preserve the cumulative transaction, and invoke at most one future governed checkpoint before P13-T01."

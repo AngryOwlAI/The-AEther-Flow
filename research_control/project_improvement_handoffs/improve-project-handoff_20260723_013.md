@@ -65,11 +65,21 @@ evidence.
 
 ## Resolution
 
-- Resolved by job: none.
-- Resolution evidence: none.
-- Resolved at: none.
+- Resolved by job: `AJ-RT-20260723-017-001`.
+- Resolution evidence: `research_control/tasks/RT-20260723-017/jobs/completions/AJC-AJ-RT-20260723-017-001.yaml`.
+- Resolved at: `2026-07-24T02:00:31Z`.
 
 ## Notes
 
-This Markdown mirror is operator-facing. The YAML sidecar remains the
-machine-readable control artifact.
+The established P12-T05 generator was invoked exactly once and its reseal
+payload passes all 44 checks with zero stale findings. Generation 85 added the
+blocker-prescribed readable title and explicit v21 `task_taxonomy` mapping to
+`RT-20260723-015/00_TASK.yaml`; generation 86 then added exactly
+`FOLDER_MAP.md` to RT-016's `generated_derivatives` coverage. The cumulative
+documentation-impact and preservation checks pass, so
+`PIS-RT-20260723-013-001` closes against the matching PASS completion. One
+governed checkpoint remains pending and P13-T01 remains unexecuted.
+Scientific, Distance-to-GR, ontology, benchmark, proof, publication, and
+`handoff-0847` authority remain unchanged. This Markdown mirror is
+operator-facing; the YAML sidecar remains the machine-readable control
+artifact.

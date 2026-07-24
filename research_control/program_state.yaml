@@ -1,8 +1,8 @@
 mode: "director_led_research_control"
 active_task_id: "RT-20260723-014"
 latest_handoff_id: "handoff-0847"
-current_status: "p12_t07_resolver_fixture_isolated_checkpoint_ready_signal_reseal_then_p13_t01"
-claim_boundary_summary: "RT-20260723-014 isolated only the skill-contract no-signal fixture with an explicit empty open-signal set. Three focused regressions and the complete 63-test classifier module pass while all 21 protected P12-T07 payload handoff and sidecar hashes, resolver semantics, signal status, methodology evidence, scientific status, and Distance-to-GR boundaries remain unchanged. Only the predecessor documentation-impact receipt was synchronized for the cumulative gate."
+current_status: "p12_t05_folder_map_documentation_impact_recovery_pass_checkpoint_ready_signal_resolved_p13_t01_unexecuted"
+claim_boundary_summary: "RT-20260723-017 added exactly FOLDER_MAP.md to RT-016's generated-derivative coverage. The focused regression cumulative documentation-impact task-taxonomy signal and preservation checks pass; the RT-016 blocker and eight protected hashes remain unchanged. PIS-RT-20260723-013-001 closes only against the matching PASS completion, one governed checkpoint remains pending, P13-T01 remains unexecuted, and every scientific Distance-to-GR ontology benchmark proof publication and handoff-0847 boundary is unchanged."
 next_recommended_action: "Run the one authorized governed checkpoint for AJ-RT-20260723-014-001. After commit, process PIS-RT-20260723-013-001 in one separate improve-project-system packet before P13-T01."
 
 p12_t07_resolver_skill_contract_fixture_isolation:
@@ -12,7 +12,7 @@ p12_t07_resolver_skill_contract_fixture_isolation:
   recovery_for_plan_task_id: "P12-T07"
   next_plan_task_id: "P13-T01"
   claim_boundary_id: "CB-V21-P12-T07-RESOLVER-SKILL-CONTRACT-FIXTURE-ISOLATION-001"
-  status: "PASS_CHECKPOINT_READY"
+  status: "PASS_CHECKPOINT_COMMITTED_SIGNAL_OPEN_RT015_TASK_TAXONOMY_PASS_DOCUMENTATION_IMPACT_RECOVERY_REQUIRED"
   route_label: "isolate_resolver_skill_contract_fixture_from_live_signals_v1"
   selected_role_family: "validator-engineer@0.2.0"
   selected_worker_skill: "improve-project-system"
@@ -36,8 +36,8 @@ p12_t07_resolver_skill_contract_fixture_isolation:
   protected_predecessor_hash_mismatch_count: 0
   predecessor_documentation_impact_updated_for_cumulative_gate: true
   p12_t07_payload_changed: false
-  checkpoint_invocation_count: 0
-  checkpoint_committed: false
+  checkpoint_invocation_count: 1
+  checkpoint_committed: true
   legacy_validation_used: false
   project_improvement_signal_id: "PIS-RT-20260723-013-001"
   project_improvement_signal_processed: false
@@ -54,11 +54,186 @@ p12_t07_resolver_skill_contract_fixture_isolation:
   handoff_id: "handoff-0847"
   handoff_yaml_sha256: "7472af1b615b7c76405bcea2c63bc17490837c0412a58a61edfdd84690252dd2"
   handoff_markdown_sha256: "c7638927297421d2cef668b6ac361db1c9964dc3a28f66f179127babd831466b"
-  selected_next_work_item: "PIS-RT-20260723-013-001"
+  selected_next_work_item: "RT-20260723-016_FOLDER_MAP_DOCUMENTATION_IMPACT_RECOVERY"
   selected_next_worker_skill: "improve-project-system"
-  selected_next_role_family: "documentation-curator"
-  selected_next_route_label: "generated-artifact-source-integrity-reseal"
-  selected_next_strategy_id: "p12_t07_checkpoint_then_p12_t05_source_integrity_reseal_then_p13_t01_v1"
+  selected_next_role_family: "validator-engineer@0.2.0"
+  selected_next_route_label: "project-system-checkpoint-documentation-impact-recovery"
+  selected_next_strategy_id: "add_folder_map_generated_derivative_coverage_then_revalidate_and_checkpoint_v1"
+
+p12_t05_scientific_quality_source_integrity_reseal:
+  task_id: "RT-20260723-015"
+  parent_task_id: "RT-20260723-013"
+  parent_handoff_id: "handoff-0847"
+  recovery_for_plan_task_id: "P12-T05"
+  next_plan_task_id: "P13-T01"
+  claim_boundary_id: "CB-P12-T05-SCIENTIFIC-QUALITY-SOURCE-INTEGRITY-RESEAL-001"
+  status: "RESEAL_PAYLOAD_PASS_RT015_TASK_TAXONOMY_PASS_SIGNAL_OPEN_DOCUMENTATION_IMPACT_RECOVERY_REQUIRED"
+  route_label: "p12_t05_scientific_quality_source_integrity_reseal_v1"
+  selected_role_family: "validator-engineer@0.2.0"
+  selected_worker_skill: "improve-project-system"
+  immutable_route_sha256: "9af4f67a6700efec64ee1d2854262d2fca8427a4674b9c756f159f6793419a4f"
+  project_improvement_signal_id: "PIS-RT-20260723-013-001"
+  project_improvement_signal_status: "open"
+  completion_path: "research_control/tasks/RT-20260723-015/jobs/completions/AJC-AJ-RT-20260723-015-001.yaml"
+  completion_sha256: "a02d14787d6d882fe6ad502379ec1428a28c198fbb9d158531b422d7a2291df2"
+  receipt_path: "research_control/tasks/RT-20260723-015/artifacts/p12_t05_scientific_quality_source_integrity_reseal_receipt.json"
+  receipt_sha256: "d09a9aa437238460550a4b9a75f780ff4a22370784613812d22857fd69afa609"
+  generator_invocation_count: 1
+  validation_check_count: 44
+  validation_failure_count: 0
+  validation_warning_count: 5
+  fixture_case_count: 14
+  stale_finding_count_after: 0
+  focused_test_status: "PASS_14_OF_14"
+  source_hash_preservation_status: "PASS_4_OF_4"
+  generated_projection_count: 7
+  report_sha256_before: "6082c5c23d93741f01e61dcdf48c76fe4c7b723605440261dea95c94c399fd6e"
+  report_sha256_after: "d7118e6f27fbbbc7f30178f1248340cebc1871062a3301a4dcae5def4944da01"
+  compact_receipt_sha256_before: "5aeeb1c5b33b229843b5033d85b66098719b50ec1e775a8ae2e46df832801ffa"
+  compact_receipt_sha256_after: "2dc0b48fc32bfd0d1a2d0ed48d65701e449317f7378ad47b7ff709fdc68fe3b8"
+  handoff_id: "handoff-0847"
+  handoff_yaml_sha256: "7472af1b615b7c76405bcea2c63bc17490837c0412a58a61edfdd84690252dd2"
+  checkpoint_invocation_count: 1
+  checkpoint_committed: false
+  checkpoint_staged_after_failure: false
+  checkpoint_entry_index_restored: true
+  checkpoint_failed_gate_id: "test_shard_repository"
+  checkpoint_failed_test: "test_task_taxonomy.TaskTaxonomyTests.test_repository_report_records_zero_mutation_and_strengthening"
+  checkpoint_failed_test_count: 1
+  checkpoint_repository_test_count: 1196
+  checkpoint_failed_staged_tree: "71a908e6e5591bc903097a1e50880367c7c9ce64"
+  checkpoint_child_receipt_sha256: "3a64333c44e7a635d2a65601a545322335b302d99adf8cb8572652effc477aff"
+  checkpoint_blocker_path: "research_control/tasks/RT-20260723-015/artifacts/validation_blocker_checkpoint_task_taxonomy_explicit_fields_v1.yaml"
+  checkpoint_blocker_sha256: "7898bfdfdf1b42a4c8794bca406566e1c10e8b1bc76ad80a38f40d29cc9c88fd"
+  legacy_validation_used: false
+  recursive_goal_recovery_required: true
+  recursive_goal_recovery_strategy_id: "add_rt015_explicit_task_taxonomy_then_revalidate_and_checkpoint_v1"
+  recursive_goal_recovery_worker_skill: "improve-project-system"
+  p13_t01_dependency_ready_after_checkpoint: false
+  p13_t01_executed: false
+  scientific_status_changed: false
+  scientific_ledger_change_count: 0
+  distance_to_gr_delta_changed: false
+  ontology_adoption_authorized: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  selected_next_work_item: "RT-20260723-016_FOLDER_MAP_DOCUMENTATION_IMPACT_RECOVERY"
+  selected_next_worker_skill: "improve-project-system"
+  selected_next_role_family: "process-integrity-auditor@0.1.0"
+  selected_next_route_label: "project-system-checkpoint-documentation-impact-recovery"
+  selected_next_strategy_id: "add_folder_map_generated_derivative_coverage_then_revalidate_and_checkpoint_v1"
+
+p12_t05_rt015_task_taxonomy_checkpoint_recovery:
+  task_id: "RT-20260723-016"
+  parent_task_id: "RT-20260723-015"
+  parent_handoff_id: "handoff-0847"
+  recovery_for_plan_task_id: "P12-T05"
+  next_plan_task_id: "P13-T01"
+  claim_boundary_id: "CB-V21-P13-T01-RT015-TASK-TAXONOMY-CHECKPOINT-RECOVERY-001"
+  status: "FAIL_CHECKPOINT_DOCUMENTATION_IMPACT_FOLDER_MAP_COVERAGE_RECOVERY_REQUIRED"
+  route_label: "add_rt015_explicit_task_taxonomy_then_revalidate_and_checkpoint_v1"
+  selected_role_family: "validator-engineer@0.2.0"
+  selected_worker_skill: "improve-project-system"
+  immutable_route_sha256: "3e3cd26d198dc98753f0ad2225615e3cf910dbe2c38e1d1a5360e667624804d5"
+  source_blocker_path: "research_control/tasks/RT-20260723-015/artifacts/validation_blocker_checkpoint_task_taxonomy_explicit_fields_v1.yaml"
+  source_blocker_sha256: "7898bfdfdf1b42a4c8794bca406566e1c10e8b1bc76ad80a38f40d29cc9c88fd"
+  completion_path: "research_control/tasks/RT-20260723-016/jobs/completions/AJC-AJ-RT-20260723-016-001.yaml"
+  completion_sha256: "b5c2fb6639fa206e8103ec113e3c716f82e792b7363a8be2c788d24879606893"
+  receipt_path: "research_control/tasks/RT-20260723-016/artifacts/rt015_task_taxonomy_checkpoint_recovery_receipt.json"
+  receipt_sha256: "2105fbb66ed7777d7b372d89f7d056233ac66bbb1179cdaa89bb002badf72f8a"
+  target_task_path: "research_control/tasks/RT-20260723-015/00_TASK.yaml"
+  target_task_sha256_before: "9884aa8775fd49bd45feb854503490974db3ce0e026f1b492c58994568dbc2f2"
+  target_task_sha256_after: "7045bb95a4069d2bc9fa378e352653e5b37566e30bf8765d2c57bd744689922a"
+  explicit_required_task_count: 46
+  explicit_required_error_count: 0
+  historical_source_mutation_count: 0
+  stronger_science_inference_count: 0
+  focused_test_status: "PASS_1_OF_1"
+  protected_hash_count: 8
+  protected_hash_mismatch_count: 0
+  project_improvement_signal_id: "PIS-RT-20260723-013-001"
+  project_improvement_signal_status: "open"
+  checkpoint_invocation_count: 1
+  checkpoint_committed: false
+  checkpoint_staged: false
+  checkpoint_entry_index_restored: true
+  checkpoint_failed_gate_id: "documentation_impact"
+  checkpoint_failed_error: "generated_derivatives missing live generated change FOLDER_MAP.md"
+  checkpoint_failed_staged_tree: "231a5ed279e038f3996e38000534ef2c002d7c0c"
+  checkpoint_child_receipt_sha256: "035725741ade2d8eacb1e398aa7b506b72cf178e37012785bdd32813b0dd5f4b"
+  checkpoint_blocker_path: "research_control/tasks/RT-20260723-016/artifacts/validation_blocker_checkpoint_documentation_impact_folder_map_v1.yaml"
+  checkpoint_blocker_sha256: "92456dfce4685d9440f72839d960056273c5c84ef1668b5e602a955487d3d5cc"
+  legacy_validation_used: false
+  recursive_goal_recovery_required: true
+  recursive_goal_recovery_strategy_id: "add_folder_map_generated_derivative_coverage_then_revalidate_and_checkpoint_v1"
+  recursive_goal_recovery_worker_skill: "improve-project-system"
+  p13_t01_dependency_ready_after_checkpoint: false
+  p13_t01_executed: false
+  scientific_status_changed: false
+  scientific_ledger_change_count: 0
+  distance_to_gr_delta_changed: false
+  ontology_adoption_authorized: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  selected_next_work_item: "RT-20260723-016_FOLDER_MAP_DOCUMENTATION_IMPACT_RECOVERY"
+  selected_next_worker_skill: "improve-project-system"
+  selected_next_role_family: "process-integrity-auditor@0.1.0"
+  selected_next_route_label: "project-system-checkpoint-documentation-impact-recovery"
+  selected_next_strategy_id: "add_folder_map_generated_derivative_coverage_then_revalidate_and_checkpoint_v1"
+
+p12_t05_folder_map_documentation_impact_checkpoint_recovery:
+  task_id: "RT-20260723-017"
+  parent_task_id: "RT-20260723-016"
+  parent_handoff_id: "handoff-0847"
+  recovery_for_plan_task_id: "P12-T05"
+  next_plan_task_id: "P13-T01"
+  claim_boundary_id: "CB-V21-P13-T01-FOLDER-MAP-DOCUMENTATION-IMPACT-CHECKPOINT-RECOVERY-001"
+  status: "PASS_CHECKPOINT_READY"
+  route_label: "add_folder_map_generated_derivative_coverage_then_revalidate_and_checkpoint_v1"
+  selected_role_family: "process-integrity-auditor@0.1.0"
+  selected_worker_skill: "improve-project-system"
+  immutable_route_sha256: "c3b48b780ffca144f008bd20c752d8119597b74d71241a37dffb11e13fc9e223"
+  source_blocker_path: "research_control/tasks/RT-20260723-016/artifacts/validation_blocker_checkpoint_documentation_impact_folder_map_v1.yaml"
+  source_blocker_sha256: "92456dfce4685d9440f72839d960056273c5c84ef1668b5e602a955487d3d5cc"
+  completion_path: "research_control/tasks/RT-20260723-017/jobs/completions/AJC-AJ-RT-20260723-017-001.yaml"
+  completion_sha256: "d5c62958e3e0add2c6011c3d9702d02dbd85267b95e4376bcc43137d334a63cc"
+  receipt_path: "research_control/tasks/RT-20260723-017/artifacts/folder_map_documentation_impact_checkpoint_recovery_receipt.json"
+  receipt_sha256: "40bcea291337578695906091437653d18fe297c7479ad6875b2ea300b21ed08e"
+  target_path: "research_control/tasks/RT-20260723-016/documentation_impact.yaml"
+  target_sha256_before: "23995f5238bd944a8fb5da83483fd4dd085348517dab210904dc44d13641631b"
+  target_sha256_after: "748467fe135f80e1552680ee402989525074f433df37549b1ccc9ee221c62fe7"
+  required_generated_derivative_item: "FOLDER_MAP.md"
+  required_item_occurrence_count: 1
+  task_taxonomy_required_task_count: 47
+  task_taxonomy_error_count: 0
+  historical_source_mutation_count: 0
+  stronger_science_inference_count: 0
+  focused_documentation_impact_regression_status: "PASS_1_OF_1"
+  protected_hash_count: 8
+  protected_hash_mismatch_count: 0
+  project_improvement_signal_id: "PIS-RT-20260723-013-001"
+  project_improvement_signal_status: "resolved"
+  checkpoint_invocation_count: 0
+  checkpoint_committed: false
+  checkpoint_staged: false
+  legacy_validation_used: false
+  p13_t01_dependency_ready_after_checkpoint: true
+  p13_t01_executed: false
+  scientific_status_changed: false
+  scientific_ledger_change_count: 0
+  distance_to_gr_delta_changed: false
+  ontology_adoption_authorized: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  selected_next_work_item: "P13-T01"
+  selected_next_worker_skill: "continue-research"
+  selected_next_route_label: "continue-from-handoff-0847-after-checkpoint"
 
 p12_t07_governance_methodology_evaluation:
   task_id: "RT-20260723-013"
@@ -66,7 +241,7 @@ p12_t07_governance_methodology_evaluation:
   parent_handoff_id: "handoff-0845"
   plan_task_id: "P12-T07"
   claim_boundary_id: "CB-V21-P12-T07-GOVERNANCE-METHODOLOGY-EVALUATION-001"
-  status: "PASS_CALIBRATED_WITH_SOURCE_INTEGRITY_DEFECT_PAYLOAD_COMPLETE_CHECKPOINT_BLOCKED"
+  status: "PASS_CALIBRATED_SOURCE_INTEGRITY_SIGNAL_OPEN_CUMULATIVE_DOCUMENTATION_IMPACT_RECOVERY_REQUIRED"
   route_label: "methodology-evaluation-packet"
   selected_role_family: "external-red-team-reviewer@0.1.0"
   selected_worker_skill: "continue-research"
@@ -591,7 +766,7 @@ p12_t05_durable_scientific_quality_metrics:
   parent_handoff_id: "handoff-0836"
   plan_task_id: "P12-T05"
   claim_boundary_id: "CB-V21-P12-T05-DURABLE-SCIENTIFIC-QUALITY-METRICS-001"
-  status: "PASS_IMPLEMENTATION_CLASSIFIER_AND_WARNING_CONTRACT_COMPLETE_CHECKPOINT_BLOCKED_STAGED_EOF"
+  status: "PASS_CURRENT_SOURCE_INTEGRITY_RESEALED_SIGNAL_OPEN_RT015_TASK_TAXONOMY_PASS_DOCUMENTATION_IMPACT_RECOVERY_REQUIRED"
   route_label: "ordinary-research-packet"
   selected_role_family: "project-control-maintainer@0.2.0"
   selected_worker_skill: "improve-project-system"
@@ -604,13 +779,18 @@ p12_t05_durable_scientific_quality_metrics:
     - "P11-T06"
     - "P12-T03"
   taxonomy_path: "research_control/tasks/RT-20260723-004/artifacts/scientific_quality_metric_taxonomy_v1.md"
-  taxonomy_sha256: "b7fc9ff6f6d55e2ec9462700f8c4f985ab77ff5ffcc9cfdd07923b60011c6436"
+  taxonomy_sha256: "b2e31738a445e68e4de6ea20381886bcd6c3747cccd693187f0904a7742ad308"
   calibration_policy_path: "research_control/tasks/RT-20260723-004/artifacts/scientific_quality_calibration_warning_policy_v1.md"
-  calibration_policy_sha256: "25205ad3cf4f28492467bdd6343d52647c76ddfd67d7609bc9ce187ec06e8b75"
+  calibration_policy_sha256: "b9b4e4fcc603c9eee508456999936a4e0378b188235f73f35c454009728648cb"
   validation_report_path: "research_control/tasks/RT-20260723-004/artifacts/scientific_quality_validation_report.json"
-  validation_report_sha256: "6082c5c23d93741f01e61dcdf48c76fe4c7b723605440261dea95c94c399fd6e"
+  validation_report_sha256: "d7118e6f27fbbbc7f30178f1248340cebc1871062a3301a4dcae5def4944da01"
   compact_receipt_path: "research_control/tasks/RT-20260723-004/artifacts/scientific_quality_compact_receipt.json"
-  compact_receipt_sha256: "5aeeb1c5b33b229843b5033d85b66098719b50ec1e775a8ae2e46df832801ffa"
+  compact_receipt_sha256: "2dc0b48fc32bfd0d1a2d0ed48d65701e449317f7378ad47b7ff709fdc68fe3b8"
+  source_integrity_reseal_task_id: "RT-20260723-015"
+  source_integrity_reseal_receipt_path: "research_control/tasks/RT-20260723-015/artifacts/p12_t05_scientific_quality_source_integrity_reseal_receipt.json"
+  source_integrity_reseal_receipt_sha256: "d09a9aa437238460550a4b9a75f780ff4a22370784613812d22857fd69afa609"
+  source_integrity_signal_id: "PIS-RT-20260723-013-001"
+  source_integrity_signal_status: "open"
   completion_path: "research_control/tasks/RT-20260723-004/jobs/completions/AJC-AJ-RT-20260723-004-001.yaml"
   completion_sha256: "c0637a8bf448884b6bada691a5b9c9fab40cbc4e60de01854d6c93824f8ede65"
   handoff_id: "handoff-0837"
@@ -3681,28 +3861,30 @@ preserved_scientific_route:
   source_handoff: "research_control/handoffs/handoff-0798.yaml"
 
 checkpoint_recovery:
-  route_id: "isolate_resolver_skill_contract_fixture_from_live_signals_v1"
-  route_label: "project-system-checkpoint-recovery"
+  route_id: "add_rt015_explicit_task_taxonomy_then_revalidate_and_checkpoint_v1"
+  route_label: "project-system-checkpoint-task-taxonomy-recovery"
   worker_skill: "improve-project-system"
   role_family: "validator-engineer@0.2.0"
-  source_blocker_path: "research_control/tasks/RT-20260723-013/artifacts/validation_blocker_checkpoint_project_improvement_signal_fixture_v1.yaml"
-  source_blocker_sha256: "dd3d503192805cf15573e4da39738035302233acf43e98a7112dc6aa82a972a5"
-  preserved_transaction_path_count: 58
+  source_blocker_path: "research_control/tasks/RT-20260723-015/artifacts/validation_blocker_checkpoint_task_taxonomy_explicit_fields_v1.yaml"
+  source_blocker_sha256: "7898bfdfdf1b42a4c8794bca406566e1c10e8b1bc76ad80a38f40d29cc9c88fd"
+  preserved_transaction_path_count: 44
   checkpoint_invocation_count: 1
   checkpoint_committed: false
   checkpoint_staged: false
   checkpoint_entry_index_restored: true
   p12_t07_payload_complete: true
-  p12_t07_checkpoint_complete: false
-  p12_t05_reseal_executed: false
+  p12_t07_checkpoint_complete: true
+  p12_t05_reseal_executed: true
+  rt015_title_present: false
+  rt015_explicit_task_taxonomy_present: false
   p13_t01_execution_ready: false
   physics_promotion_authorized: false
   proof_authority: false
 
 selected_next_route:
-  route_id: "p13_t01_validation_planner_equivalence_burn_in_v1"
-  route_label: "validation-planner-equivalence-burn-in"
-  role_family: "process-integrity-auditor@0.1.0"
+  route_id: "add_rt015_explicit_task_taxonomy_then_revalidate_and_checkpoint_v1"
+  route_label: "project-system-checkpoint-task-taxonomy-recovery"
+  role_family: "validator-engineer@0.2.0"
   worker_skill: "improve-project-system"
   plan_task_id: "P13-T01"
   target_derivation_milestone: "source_equivalence_eqsrc"
@@ -3714,8 +3896,9 @@ selected_next_route:
   pending_after_recovery_and_checkpoint: true
   executed: false
   prerequisite_project_improvement_signal_id: "PIS-RT-20260723-013-001"
-  next_action: "After the separate P12-T05 source-integrity reseal, compare legacy and planner validation on the fixed P13-T01 corpus."
-  source_handoff: "research_control/handoffs/handoff-0846.yaml"
+  recovery_for_task_id: "RT-20260723-015"
+  next_action: "Add only the missing RT-20260723-015 title and explicit task_taxonomy mapping, revalidate the preserved cumulative transaction, and checkpoint once before P13-T01."
+  source_handoff: "research_control/handoffs/handoff-0847.yaml"
 
 preserved_scientific_next_packet:
   role_id: "ontology-formalizer"
@@ -4087,28 +4270,34 @@ project_improvement_signals:
   - signal_id: "PIS-RT-20260723-013-001"
     signal_type: "generated_artifact_drift"
     severity: "high"
-    status: "open"
+    status: "resolved"
     evidence_path: "research_control/tasks/RT-20260723-013/artifacts/p12_t07_methodology_ablation_results.json"
     recommended_skill: "improve-project-system"
     recommended_role: "documentation-curator"
+    resolved_by_job_id: "AJ-RT-20260723-017-001"
+    resolution_evidence_path: "research_control/tasks/RT-20260723-017/jobs/completions/AJC-AJ-RT-20260723-017-001.yaml"
+    resolved_at: "2026-07-24T02:00:31Z"
 project_improvement_bridge:
-  required: true
-  recursive_goal_recovery_required: true
-  checkpoint_recovery_precedes_sidecar: true
+  required: false
+  recursive_goal_recovery_required: false
+  checkpoint_recovery_precedes_sidecar: false
   route: "research_control/project_improvement_handoffs/improve-project-handoff_20260723_013.yaml"
   signal_ids:
     - "PIS-RT-20260723-013-001"
   sidecar_supersedes_research_handoff: false
+  status: "resolved_checkpoint_ready"
+  resolution_job_id: "AJ-RT-20260723-017-001"
+  resolution_evidence_path: "research_control/tasks/RT-20260723-017/jobs/completions/AJC-AJ-RT-20260723-017-001.yaml"
 
 active_state_bifurcation:
   latest_research_task_id: "RT-20260723-013"
   latest_research_handoff_id: "handoff-0846"
-  latest_research_next_action: "Run one exact-manifest improve-project-system recovery that isolates the resolver skill-contract fixture from live open signals, then checkpoint the preserved P12-T07 transaction; only afterward process PIS-RT-20260723-013-001 and resume P13-T01."
-  latest_project_system_task_id: "none"
-  latest_project_system_status: "none"
-  latest_project_system_sidecar_task_id: "none"
-  latest_project_system_sidecar_status: "none"
-  next_research_route_source: "latest_research_handoff"
+  latest_research_next_action: "Preserve handoff-0847 and continue to P13-T01 only after the one pending AJ-RT-20260723-017-001 checkpoint commits."
+  latest_project_system_task_id: "RT-20260723-017"
+  latest_project_system_status: "PASS_CHECKPOINT_READY"
+  latest_project_system_sidecar_task_id: "RT-20260723-017"
+  latest_project_system_sidecar_status: "resolved_checkpoint_ready"
+  next_research_route_source: "handoff-0847"
   sidecar_supersedes_research_handoff: false
 
 source_assumption_ledger:

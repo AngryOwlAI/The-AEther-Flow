@@ -58,7 +58,7 @@ These eight identity-bound rows are the primary scientific-quality diagnostic su
 
 | Metric | Family | Status | Value | Diagnostic interpretation | Guardrail |
 | --- | --- | --- | --- | --- | --- |
-| `overclaim_catch_rate` | Claim-boundary control | measured | 0.9451 | Forbidden-conclusion summaries are counted as eligible overclaim-control surfaces; caught means no physics promotion was authorized. | A high rate means better boundary control; it does not prove any physics claim. |
+| `overclaim_catch_rate` | Claim-boundary control | measured | 0.9455 | Forbidden-conclusion summaries are counted as eligible overclaim-control surfaces; caught means no physics promotion was authorized. | A high rate means better boundary control; it does not prove any physics claim. |
 | `underclaim_warning_rate` | Claim-boundary control | not_measured | not measured | The current registries do not deterministically encode high-risk positive scoped-status omission events. | This metric prevents pessimistic status collapse; it does not promote scoped evidence into adoption. |
 | `obstruction_precision` | Obstruction quality | measured | 1 | This deterministic proxy counts obstruction records with IDs plus milestone, burden, or status context as locally scoped. | A precise obstruction remains local unless a separate theorem and protected authority establish a stronger no-go result. |
 | `route_orbit_rate` | Route dynamics | measured | 0.0037 | Repeated-burden streaks are process warnings only and do not change Distance-to-GR status. | This is a process-warning metric; it is advisory unless a separate validator or policy makes a gate. |
@@ -66,7 +66,7 @@ These eight identity-bound rows are the primary scientific-quality diagnostic su
 | `audit_to_stress_survival` | Candidate life cycle | measured | 0.5714 | Exact candidate-keyed lineage counts only observed stress stages; the explicit graded-orbit stress absence is not inferred as a pass or failure. | Reaching stress means the candidate remains testable; it does not mean the candidate is true or adopted. |
 | `stress_survival_rate` | Candidate life cycle | measured | 0 | The seeded stressed candidates all carry scoped obstruction dispositions; local freeze remains preserved and is not relabeled as survival adoption rejection or global no-go. | Survival is candidate-status only; it does not authorize canonical ontology, source-law, metric, or coupling adoption. |
 | `human_gate_load` | Governance load | measured | not measured | Gate-load signals are governance workload diagnostics, not Gate Chair scientific verdicts. | Human authorization for a task is not a Gate Chair verdict unless the protected gate itself states that verdict. |
-| `proof_to_process_ratio` | Payload balance | measured | 1.5154 | Payload balance compares mathematical payload items to process-only items; it is not proof authority. | This ratio is a productivity and balance signal; neither numerator nor denominator creates proof authority by itself. |
+| `proof_to_process_ratio` | Payload balance | measured | 1.4987 | Payload balance compares mathematical payload items to process-only items; it is not proof authority. | This ratio is a productivity and balance signal; neither numerator nor denominator creates proof authority by itself. |
 
 ## Payload-Ratio Diagnostics
 
@@ -76,16 +76,16 @@ These raw counts and ratios are operational context only. They are not the prima
 | --- | --- | --- | --- | --- |
 | `project_system_task_run_length` | measured | 1 | Trailing project-system packet run length. | Does not establish physics truth, proof authority, benchmark status, Gate Chair verdicts, or completed derivations. |
 | `physics_bearing_task_run_length` | measured | 0 | Trailing physics-bearing packet run length. | Does not establish physics truth, proof authority, benchmark status, Gate Chair verdicts, or completed derivations. |
-| `new_mathematical_payload_count` | measured | 1300 | Total tracked mathematical payload items in route history. | Does not establish physics truth, proof authority, benchmark status, Gate Chair verdicts, or completed derivations. |
-| `theorem_countermodel_candidate_count` | measured | 594 | Tasks carrying theorem, countermodel, or candidate signals. | Does not establish physics truth, proof authority, benchmark status, Gate Chair verdicts, or completed derivations. |
+| `new_mathematical_payload_count` | measured | 1301 | Total tracked mathematical payload items in route history. | Does not establish physics truth, proof authority, benchmark status, Gate Chair verdicts, or completed derivations. |
+| `theorem_countermodel_candidate_count` | measured | 595 | Tasks carrying theorem, countermodel, or candidate signals. | Does not establish physics truth, proof authority, benchmark status, Gate Chair verdicts, or completed derivations. |
 | `candidate_construction_count` | measured | 206 | Tasks carrying candidate-construction signals. | Does not establish physics truth, proof authority, benchmark status, Gate Chair verdicts, or completed derivations. |
 | `support_only_task_count_since_last_physics_payload` | measured | 1 | Support-only packets since the last recorded physics payload. | Does not establish physics truth, proof authority, benchmark status, Gate Chair verdicts, or completed derivations. |
 | `route_orbit_warning_status` | measured | {"advisory_only": true, "hard_gate": false, "physics_claim_authority": false, "status": "warning", "warning_ids": ["post_gate_cycle_repeat", "gate_ready_without_gate"]} | Current route-orbit warning bundle. | Does not establish physics truth, proof authority, benchmark status, Gate Chair verdicts, or completed derivations. |
-| `project_system_task_count` | measured | 528 | Tracked project-system task count. | Does not establish physics truth, proof authority, benchmark status, Gate Chair verdicts, or completed derivations. |
-| `physics_bearing_task_count` | measured | 449 | Tracked physics-bearing task count. | Does not establish physics truth, proof authority, benchmark status, Gate Chair verdicts, or completed derivations. |
-| `support_only_task_count` | measured | 550 | Tracked support-only task count. | Does not establish physics truth, proof authority, benchmark status, Gate Chair verdicts, or completed derivations. |
-| `physics_bearing_to_project_system_task_ratio` | measured | 0.8504 | Ratio of physics-bearing tasks to project-system tasks. | Does not establish physics truth, proof authority, benchmark status, Gate Chair verdicts, or completed derivations. |
-| `new_mathematical_payload_to_support_only_task_ratio` | measured | 2.3636 | Ratio of mathematical payload items to support-only tasks. | Does not establish physics truth, proof authority, benchmark status, Gate Chair verdicts, or completed derivations. |
+| `project_system_task_count` | measured | 537 | Tracked project-system task count. | Does not establish physics truth, proof authority, benchmark status, Gate Chair verdicts, or completed derivations. |
+| `physics_bearing_task_count` | measured | 450 | Tracked physics-bearing task count. | Does not establish physics truth, proof authority, benchmark status, Gate Chair verdicts, or completed derivations. |
+| `support_only_task_count` | measured | 559 | Tracked support-only task count. | Does not establish physics truth, proof authority, benchmark status, Gate Chair verdicts, or completed derivations. |
+| `physics_bearing_to_project_system_task_ratio` | measured | 0.838 | Ratio of physics-bearing tasks to project-system tasks. | Does not establish physics truth, proof authority, benchmark status, Gate Chair verdicts, or completed derivations. |
+| `new_mathematical_payload_to_support_only_task_ratio` | measured | 2.3274 | Ratio of mathematical payload items to support-only tasks. | Does not establish physics truth, proof authority, benchmark status, Gate Chair verdicts, or completed derivations. |
 | `route_orbit_same_burden_repetition_count` | measured | 2 | Repeated-burden route-orbit diagnostic count. | Does not establish physics truth, proof authority, benchmark status, Gate Chair verdicts, or completed derivations. |
 | `ordinary_route_guard_status` | measured | {"current_run_requires_physics_route_or_exception": false, "hard_threshold": 3, "policy_id": "ordinary_route_guard_policy_v1", "policy_source_path": "research_control/tasks/RT-20260722-015/artifacts/ordinary_route_guard_policy_v1.md", "prospective_hard_gate_active": true, "system_work_counts_as_physics": false, "warning_at": 2} | Support-only route-history diagnostic. | Does not establish physics truth, proof authority, benchmark status, Gate Chair verdicts, or completed derivations. |
 
@@ -94,7 +94,7 @@ These raw counts and ratios are operational context only. They are not the prima
 | Warning | Metric key | Severity | Observed | Threshold | Hard gate | Physics authority | Recommended guard action |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | `post_gate_cycle_repeat` | `candidate_construct_audit_stress_selector_cycles` | warning | 6 | 0 | False | False | Require a harder target, broader finite family, explicit bridge attempt, or freeze-review rationale. |
-| `gate_ready_without_gate` | `gate_ready_cycles_without_gate_verdict` | warning | 361 | 0 | False | False | Route the next packet to Gate Chair, explain why Gate Chair is not yet lawful, or withdraw gate-ready wording. |
+| `gate_ready_without_gate` | `gate_ready_cycles_without_gate_verdict` | warning | 362 | 0 | False | False | Route the next packet to Gate Chair, explain why Gate Chair is not yet lawful, or withdraw gate-ready wording. |
 
 ## AI Methodology Advisory Warnings
 
@@ -114,7 +114,7 @@ These raw counts and ratios are operational context only. They are not the prima
 
 ## Source Basis
 
-- Metrics report as-of: `2026-07-23T10:25:43Z`
+- Metrics report as-of: `2026-07-23T22:26:02Z`
 - Generated source paths:
   - `implementations_plans/recommendations_implementation_plan_continue_task-v17.md`
   - `implementations_plans/recommendations_implementation_plan_continue_task-v18.md`
