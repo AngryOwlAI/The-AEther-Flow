@@ -1,0 +1,23 @@
+schema_id: "ordinary_route_control_failure_v1"
+failure_id: "ORCF-P4-T06-HANDOFF-0858-001"
+plan_task_id: "P4-T06"
+failure_class: "failing_ci"
+status: "active_blocking"
+blocks_scientific_execution: true
+observed_at: "2026-07-24T21:46:11Z"
+source_task_id: "RT-20260724-008"
+source_job_id: "AJ-RT-20260724-008-001"
+source_handoff_id: "handoff-0858"
+failed_gate: "research_control_diff"
+source_blocker_path: "research_control/tasks/RT-20260724-008/artifacts/validation_blocker_precheckpoint_handoff_0857_route_guard_dependency_drift_v1.yaml"
+source_blocker_sha256: "ba90f9bb7c8fd9a8b1e989f2fc94fb8b8227c7b735064070e6907d359743bcb7"
+summary: "P4-T06 remains blocked because the accumulated P4-T05 transaction has no checkpoint commit and the prospective staged research-control audit exposes historical handoff-0857 dependency-state drift."
+recovery_strategy_id: "reconcile_p4_t05_implemented_checkpoint_blocked_status_with_handoff_0857_route_guard_v1"
+recovery_worker_skill: "improve-project-system"
+authority_limits:
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  p4_t06_executed: false
+validation_status: "FAIL"

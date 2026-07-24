@@ -1,0 +1,108 @@
+schema_id: "checkpoint_active_job_allowlist_contract_drift_blocker_v1"
+task_id: "RT-20260724-007"
+job_id: "AJ-RT-20260724-007-001"
+plan_task_id: "P4-T05"
+observed_at: "2026-07-24T20:13:35Z"
+checkpoint_command: ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260724-007-001"
+checkpoint_status: "FAIL"
+checkpoint_committed: false
+checkpoint_staged: false
+checkpoint_mode: "planner_compare"
+failed_gate: "test_shard_repository"
+failed_stage: "staged_acceptance"
+failure_summary: "Every non-test staged acceptance gate and the planner shadow comparison passed, but the one normal checkpoint stopped before commit because the repository-wide 1239-test shard found one active-job allowlist contract mismatch, three narrow-routing failures, and one cascading director-context error."
+test_summary:
+  tests_run: 1239
+  failures: 3
+  errors: 1
+  skipped: 1
+  duration_seconds: 1134.9714610410156
+  status: "FAIL"
+root_finding:
+  finding_class: "active_job_allowlist_contract_drift"
+  job_id: "AJ-RT-20260724-007-001"
+  job_path: "research_control/tasks/RT-20260724-007/jobs/AJ-RT-20260724-007-001.yaml"
+  role_path: "research_control/tasks/RT-20260724-007/roles/validator-engineer@0.2.0--RT-20260724-007.yaml"
+  registry_path: "registries/AGENT_JOB_REGISTRY.csv"
+  finding: "The AgentJob uses explicit least-privilege registry paths, while its execution-role overlay and AGENT_JOB_REGISTRY row replace those paths with the broader registries/** pattern."
+  validator_errors:
+    - "[allowlist] job AJ-RT-20260724-007-001 write allowlist differs from its registry row"
+    - "[allowlist] job AJ-RT-20260724-007-001 write allowlist differs from its registry row"
+    - "[allowlist] job AJ-RT-20260724-007-001 and its execution role have different write allowlists"
+cascading_findings:
+  - test_id: "test_routing_snapshot.NarrowRoutingSnapshotTests.test_live_default_does_not_compute_advisory_metrics"
+    finding_class: "narrow_router_fail_closed"
+    finding: "continuation_status returned blocked rather than ready because live allowlist validation failed."
+  - test_id: "test_routing_snapshot.NarrowRoutingSnapshotTests.test_live_narrow_and_full_validation_agree_on_current_state"
+    finding_class: "narrow_and_full_validation_error"
+    finding: "The narrow report exposed the three allowlist contract errors."
+  - test_id: "test_routing_snapshot.NarrowRoutingSnapshotTests.test_live_narrow_snapshot_has_subsecond_python_runtime"
+    finding_class: "narrow_snapshot_validation_error"
+    finding: "The performance test reached the same allowlist errors before its timing assertion."
+  - test_id: "tests.test_research_control.ResearchControlTests.test_continue_research_reports_director_context_packet"
+    finding_class: "cascading_snapshot_capture_error"
+    finding: "The blocked continuation status returned before invoking live_routing_snapshot, so the test's captured snapshot list remained empty."
+    upstream_finding_class: "active_job_allowlist_contract_drift"
+staged_acceptance:
+  staged_tree_sha1: "bf6f37698ce45f3c6b2b0313280e51f1f97d1cec"
+  passed_gate_ids:
+    - "classify_changes"
+    - "project_improvement_signals"
+    - "documentation_impact"
+    - "memory_core"
+    - "research_control_diff"
+    - "git_diff_check"
+  failed_gate_ids:
+    - "test_shard_repository"
+  shadow_comparison_status: "PASS"
+  agentjob_allowlist_status: "PASS"
+  unstaged_residue_status: "PASS"
+  staged_tree_integrity_status: "PASS"
+  entry_index_restoration_status: "PASS"
+checkpoint_receipt:
+  child_receipt_path: ".local/validation-receipts/5fdb4a94a5136a980b14c90b290edc80d5bffc547f521ef9a53db6c9866d794a/RUN-CHECKPOINT-999f0a41a36c5bd5/receipt.json"
+  child_receipt_sha256: "aeae2d021141167bcdf5ab59d63cc2022dd085eedf75da6cf85619d0caea9ba4"
+  checkpoint_duration_seconds: 1424.206261
+  entry_index_restored: true
+  staged_after_failure: false
+  legacy_validation_used: false
+preservation_constraint:
+  repository_test_contract_recovery_status: "PASS"
+  event_contract_recovered_sha256: "d5fa22e7bbc1d92f29acd6c8418d06ce7d81a042589ade77c7ba4fdebb0eda44"
+  recovery_receipt_sha256: "76560fa286a58aa57e322105da8c746e0c3a871b261556911dede242e3a8bd1c"
+  exact_path_policy_status: "PASS"
+  protected_p4_t05_hash_mismatch_count: 0
+  preserved_anchor_hash_mismatch_count: 0
+  p10_readiness_status: "PASS_PRESERVED_FREEZE"
+  approval_reused: false
+  p4_t05_gate_reexecuted: false
+  p4_t05_payload_changed: false
+  p4_t06_executed: false
+required_recovery:
+  strategy_id: "repair_p4_t05_checkpoint_active_job_allowlist_contract_drift_v1"
+  worker_skill: "improve-project-system"
+  role_family: "process-integrity-auditor@0.1.0"
+  work_item_id: "P4-T05"
+  exact_behavior_change: "Reconcile the active AgentJob, execution-role overlay, and AGENT_JOB_REGISTRY allowed-write contracts to the same least-privilege ordered path set; prove narrow and full routing validation agree, then invoke one future normal checkpoint."
+  required_controls:
+    - "Preserve the AgentJob's explicit least-privilege registry paths rather than broadening it to registries/**."
+    - "Make the execution-role overlay and AGENT_JOB_REGISTRY row exactly match the AgentJob allowed_write_paths in content and order."
+    - "Prove the live narrow router is ready and agrees with full research-control validation."
+    - "Prove the director-context packet captures exactly one validation report and one live routing snapshot."
+    - "Preserve the completed four-finding repository-test recovery, P10 freeze, six exact-path rules, six protected payload hashes, six control anchors, approval consumption, and P4-T06 nonexecution."
+    - "Run one future normal governed checkpoint without legacy validation."
+  fallback_forbidden: "Do not rerun generation 102, rerun its checkpoint, use --legacy-validation, weaken the repository test shard, broaden the active job to registries/**, rewrite protected P4-T05 evidence, or execute P4-T06."
+  next_plan_item_after_recovery: "P4-T06"
+  next_plan_item_executed: false
+authority_boundary:
+  repository_test_contract_recovery_complete: true
+  checkpoint_complete: false
+  p4_t05_plan_completion_finalized: false
+  p4_t06_execution_ready: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  ontology_or_source_law_adopted: false
+  external_review_or_publication_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+validation_status: "FAIL"

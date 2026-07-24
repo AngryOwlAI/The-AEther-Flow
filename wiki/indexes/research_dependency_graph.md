@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-07-24T04:26:32Z`
-- Source fingerprint: `c13df7ec2f31dfa365618a2f480081be89bea5c6d112c3a80b9a8162ef225970`
-- Nodes: `21596`
-- Edges: `72030`
+- Generated from tracked state as of: `2026-07-24T22:35:23Z`
+- Source fingerprint: `d5942b475e9dd8aa98be6b606dc5a615937329fa86fd8ec9dbec0881e7a679c2`
+- Nodes: `21815`
+- Edges: `72449`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 1085 |
+| `completion_yaml` | 1095 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 849 |
+| `handoff_yaml` | 859 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -32,33 +32,33 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 | Node class | State label | Count |
 | --- | --- | ---: |
-| `accepted_scoped_object` | `accepted_scoped` | 7 |
-| `agent_job` | `support_only` | 1085 |
+| `accepted_scoped_object` | `accepted_scoped` | 8 |
+| `agent_job` | `support_only` | 1095 |
 | `artifact` | `canonical_source` | 86 |
-| `artifact` | `support_only` | 11001 |
-| `blocked_burden` | `blocked` | 4347 |
-| `claim_boundary` | `support_only` | 1042 |
+| `artifact` | `support_only` | 11083 |
+| `blocked_burden` | `blocked` | 4413 |
+| `claim_boundary` | `support_only` | 1052 |
 | `draft_control_candidate` | `draft_control` | 722 |
 | `draft_control_candidate` | `proposal_only` | 110 |
-| `draft_control_candidate` | `science_draft` | 64 |
+| `draft_control_candidate` | `science_draft` | 63 |
 | `frozen_negative` | `frozen_negative` | 132 |
-| `gate_chair_verdict` | `human_gated` | 31 |
-| `handoff` | `support_only` | 849 |
-| `human_gated_object` | `human_gated` | 487 |
-| `ledger_row` | `accepted_scoped` | 5 |
+| `gate_chair_verdict` | `human_gated` | 32 |
+| `handoff` | `support_only` | 859 |
+| `human_gated_object` | `human_gated` | 514 |
+| `ledger_row` | `accepted_scoped` | 6 |
 | `ledger_row` | `blocked` | 4 |
 | `ledger_row` | `frozen_negative` | 1 |
 | `ledger_row` | `human_gated` | 1 |
-| `ledger_row` | `science_draft` | 4 |
+| `ledger_row` | `science_draft` | 3 |
 | `obstruction` | `blocked` | 79 |
 | `obstruction` | `rejected` | 3 |
 | `source_extension_evidence_precondition` | `source_extension_evidence` | 37 |
-| `source_ontology_object` | `canonical_source` | 23 |
+| `source_ontology_object` | `canonical_source` | 25 |
 | `source_ontology_object` | `rejected` | 50 |
-| `source_ontology_object` | `support_only` | 341 |
+| `source_ontology_object` | `support_only` | 342 |
 | `task` | `human_gated` | 29 |
 | `task` | `science_draft` | 32 |
-| `task` | `support_only` | 1024 |
+| `task` | `support_only` | 1034 |
 
 ## Frontier Table
 
@@ -109,6 +109,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `blocked_claim:another_plan_task_or_successor_execution` | Blocked permission: another plan task or successor execution | `registries/ROLE_EXECUTION_REGISTRY.csv` |
 | `blocked_claim:approval_as_claim_promotion` | Blocked claim: approval as claim promotion | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:approval_as_proof` | Blocked claim: approval as proof | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:approval_reuse_gate_chair_reexecution_or_p4_t06_execution` | Blocked permission: approval reuse Gate Chair reexecution or P4-T06 execution | `registries/ROLE_EXECUTION_REGISTRY.csv` |
+| `blocked_claim:approval_reuse_or_gate_chair_re_execution` | Blocked claim: approval reuse or Gate Chair re-execution | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:approval_reuse_or_gate_chair_reexecution` | Blocked claim: approval reuse or Gate Chair reexecution | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:arbitrary_encodability_as_explicit_target_import` | Blocked claim: arbitrary encodability as explicit target import | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:arbitrary_explanatory_rewriting` | Blocked permission: arbitrary explanatory rewriting | `registries/ROLE_EXECUTION_REGISTRY.csv` |
 | `blocked_claim:arbitrary_finite_dag_witness_theorem` | Blocked claim: arbitrary finite-DAG witness theorem | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
@@ -157,15 +160,12 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `blocked_claim:audit_pass_as_stress_energy_semantics` | Blocked claim: audit pass as stress-energy semantics | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:audit_pass_as_stress_energy_tensor` | Blocked claim: audit pass as stress-energy tensor | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:audit_pass_as_theorem_proof` | Blocked claim: audit pass as theorem proof | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:audit_proposition_as_einstein_equations` | Blocked claim: audit proposition as Einstein equations | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:audit_ready_as_adoption` | Blocked claim: audit_ready as adoption | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:authored_judgment_overwrite` | Blocked claim: authored judgment overwrite | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 
 ## Route Continuity
 
-- Active task: `RT-20260723-019`
-- Latest handoff: `handoff-0849`
-- Handoff path: `research_control/handoffs/handoff-0849.yaml`
-- Next action: Run the one authorized governed checkpoint for AJ-RT-20260723-019-001. After commit, route one fresh bounded P13-T04 improve-project-system frame for incremental linting, typing, version matrices, path portability, and validator API contracts. Keep P13-T02 blocked and do not reopen P13-T01 without explicit publication authority plus matched current-head hosted-CI and scheduled-full evidence.
+- Active task: `RT-20260724-009`
+- Latest handoff: `handoff-0859`
+- Handoff path: `research_control/handoffs/handoff-0859.yaml`
+- Next action: After the generation-104 governed checkpoint commits, run one fresh bounded continue-research packet for P4-T06 to integrate the already approved narrow continuum-first source boundary without importing physical semantics or promoting claims.
 
 This graph is navigational support only; inspect the cited sources before using any claim.

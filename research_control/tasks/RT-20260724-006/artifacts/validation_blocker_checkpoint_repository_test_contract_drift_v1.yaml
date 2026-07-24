@@ -1,0 +1,102 @@
+schema_id: "checkpoint_repository_test_contract_drift_blocker_v1"
+task_id: "RT-20260724-006"
+job_id: "AJ-RT-20260724-006-001"
+plan_task_id: "P4-T05"
+observed_at: "2026-07-24T18:27:12Z"
+checkpoint_command: ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260724-006-001"
+checkpoint_status: "FAIL"
+checkpoint_committed: false
+checkpoint_staged: false
+checkpoint_mode: "planner_compare"
+failed_gate: "test_shard_repository"
+failed_stage: "staged_acceptance"
+failure_summary: "The exact-path policy and every non-test staged acceptance gate pass, but the one normal checkpoint stopped before commit because the repository-wide 1231-test shard reported three failures and one cascading setup error from live contract drift."
+test_summary:
+  tests_run: 1231
+  failures: 3
+  errors: 1
+  skipped: 1
+  duration_seconds: 1028.745
+  status: "FAIL"
+findings:
+  - test_id: "test_event_store_architecture.EventStoreArchitectureTests.test_live_contract_sources_and_documents_pass"
+    finding_class: "stale_source_hash_binding"
+    finding: "The P10-T05 event-store architecture contract binds an older DISTANCE_TO_GR_LEDGER.csv SHA-256."
+    expected_sha256: "0ec3266d708398acde6f380515c37751c0db8ce03bbb135f8aa60fb0f494ce61"
+    observed_sha256: "6028992fbba90b631808cd51e2ea9f2f6a5258e115667ef4256ad3a55a88894c"
+    source_path: "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_contract.json"
+  - test_id: "tests.test_research_control.ResearchControlTests.test_ai_methodology_dashboard_is_support_only_and_not_truth_ranking"
+    finding_class: "route_orbit_diagnostic_expectation_drift"
+    finding: "The live methodology dashboard contains gate_ready_without_gate but no post_gate_cycle_repeat warning after the P4-T05 route history advanced."
+    observed_warning_ids:
+      - "gate_ready_without_gate"
+    missing_expected_warning_id: "post_gate_cycle_repeat"
+  - test_id: "test_task_taxonomy.TaskTaxonomyTests.test_repository_report_records_zero_mutation_and_strengthening"
+    finding_class: "taxonomy_enum_contract_drift"
+    finding: "RT-20260724-004 uses explicit protected-gate taxonomy values not admitted by the current taxonomy enum contract."
+    task_id: "RT-20260724-004"
+    invalid_values:
+      - "authority:human_gate"
+      - "result_kind:protected_verdict"
+  - test_id: "test_v21_p10_migration_readiness.P10MigrationReadinessTests.setUpClass"
+    finding_class: "cascading_component_failure"
+    finding: "The P10 migration readiness audit raises because its P10-T05 event-store architecture component is not PASS."
+    upstream_finding_test_id: "test_event_store_architecture.EventStoreArchitectureTests.test_live_contract_sources_and_documents_pass"
+staged_acceptance:
+  staged_tree_sha1: "b43a947ceef3a213010262798d36a484a83e9f4e"
+  passed_gate_ids:
+    - "classify_changes"
+    - "project_improvement_signals"
+    - "documentation_impact"
+    - "memory_core"
+    - "research_control_diff"
+    - "git_diff_check"
+  failed_gate_ids:
+    - "test_shard_repository"
+  shadow_comparison_status: "PASS"
+  agentjob_allowlist_status: "PASS"
+  unstaged_residue_status: "PASS"
+  staged_tree_integrity_status: "PASS"
+  entry_index_restoration_status: "PASS"
+checkpoint_receipt:
+  child_receipt_path: ".local/validation-receipts/5fdb4a94a5136a980b14c90b290edc80d5bffc547f521ef9a53db6c9866d794a/RUN-CHECKPOINT-66ddefcc4298f0f4/receipt.json"
+  child_receipt_sha256: "ea86e1d3be469a57b640dd1db4b138ddce22bf5f6f74296678ab16f52fb9b339"
+  checkpoint_duration_seconds: 1292.33903
+  entry_index_restored: true
+  staged_after_failure: false
+  legacy_validation_used: false
+preservation_constraint:
+  exact_path_policy_status: "PASS"
+  protected_p4_t05_hash_mismatch_count: 0
+  preserved_anchor_hash_mismatch_count: 0
+  approval_reused: false
+  p4_t05_gate_reexecuted: false
+  p4_t05_payload_changed: false
+  p4_t06_executed: false
+required_recovery:
+  strategy_id: "repair_p4_t05_checkpoint_repository_test_contract_drift_v1"
+  worker_skill: "improve-project-system"
+  role_family: "validator-engineer@0.2.0"
+  work_item_id: "P4-T05"
+  exact_behavior_change: "Repair only the four checkpoint-observed test-contract drifts while preserving the completed six-path whitespace policy and every P4-T05 protected hash, then invoke one future normal checkpoint."
+  required_controls:
+    - "Rebind the P10-T05 event-store source contract only to the authorized live DISTANCE_TO_GR_LEDGER.csv identity and regenerate its task-local receipts."
+    - "Make the task-taxonomy contract and RT-20260724-004 explicit protected-gate values consistent without changing the protected verdict or scientific status."
+    - "Restore a deterministic support-only route-orbit dashboard contract for the current route history without fabricating scientific progress or Gate Chair activity."
+    - "Prove the P10 migration readiness error is only the upstream event-store cascade and returns to its preserved freeze disposition."
+    - "Preserve the six exact-path rules, six protected payload hashes, six preserved control anchors, approval consumption, and P4-T06 nonexecution."
+    - "Run one future normal governed checkpoint without legacy validation."
+  fallback_forbidden: "Do not rerun generation 101, rerun its checkpoint, use --legacy-validation, weaken the repository test shard, fabricate route history, rewrite protected P4-T05 evidence, or execute P4-T06."
+  next_plan_item_after_recovery: "P4-T06"
+  next_plan_item_executed: false
+authority_boundary:
+  exact_path_policy_complete: true
+  checkpoint_complete: false
+  p4_t05_plan_completion_finalized: false
+  p4_t06_execution_ready: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  ontology_or_source_law_adopted: false
+  external_review_or_publication_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false

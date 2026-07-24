@@ -1,0 +1,339 @@
+validation_status: "PASS"
+final_repository_validation_status: "PASS_PRECHECKPOINT"
+job_id: "AJ-RT-20260724-009-001"
+completion_id: "AJC-AJ-RT-20260724-009-001"
+task_id: "RT-20260724-009"
+task_type: "project_system_p4_t05_handoff_route_guard_dependency_state_recovery"
+decision_id: "DDR-20260724-009"
+role_id: "process-integrity-auditor"
+source_role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260724-009"
+status: "completed"
+created_at: "2026-07-24T22:20:24Z"
+started_at: "2026-07-24T22:20:24Z"
+completed_at: "2026-07-24T22:35:23Z"
+objective: "Change only the RT-20260724-007 task and research-task-registry lifecycle status from blocked to completed while preserving validation FAIL and immutable checkpoint evidence; prove handoff-0857 and RT-20260724-008 route admission pass; preserve P4-T06 nonexecution; and invoke one cumulative checkpoint."
+completion_summary: "RT-20260724-007 now records implementation completion in both its task and registry status while retaining validation FAIL, its checkpoint-failed closure, and all immutable evidence. Under the prospective staged index, handoff-0857 passes with P4-T06 as its sole ready science task and the RT-20260724-008 ordinary-route admission passes. Seven protected hashes remain exact and P4-T06 remains unexecuted."
+objective_result: "p4_t05_handoff_route_guard_status_reconciliation_pass_ready_for_cumulative_checkpoint"
+
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P4"
+  plan_task_id: "P4-T05"
+  recovery_for_plan_task_id: "P4-T05"
+  implementation_status: "status_reconciliation_completed_ready_for_checkpoint"
+  protected_p4_t05_status: "implementation_completed_validation_fail_preserved"
+  completed_v21_tasks_added:
+    - "P4-T05"
+  next_dependency_ready_work_item: "P4-T06"
+  next_work_item_executed: false
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 104
+  passes_consumed: 94
+  route_work_item_id: "P4-T05"
+  route_worker_skill: "improve-project-system"
+  route_sha256: "2457ca061ce4234064c801da4b641d12a9519b208270e306b70879550c07a646"
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:104"
+  handoff_token: "63561ffd5935048eac7e1afcaf9358114032efad6890c4d2"
+  relay_claim_token: "891efd2fd0ae9f278915d8b00add969d2c1aaf4d3d725db7"
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+
+transaction_status: "completed_ready_for_governed_checkpoint"
+result_disposition: "implemented_checkpoint_pending"
+work_item_status: "completed"
+plan_task_id: "P4-T05"
+recovery_for_plan_task_id: "P4-T05"
+checkpoint_commit: "pending_governed_checkpoint"
+checkpoint_invocation_count: 0
+checkpoint_staged: false
+legacy_validation_used: false
+project_system_change_only: true
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS_PRECHECKPOINT"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  observed_durable_outputs:
+    physics: []
+    project_system:
+      - "research_control/tasks/RT-20260724-007/00_TASK.yaml"
+      - "registries/RESEARCH_TASK_REGISTRY.csv"
+      - "research_control/tasks/RT-20260724-009/artifacts/p4_t05_handoff_route_guard_status_reconciliation_receipt.json"
+  accepted_criteria:
+    physics: []
+    project_system:
+      - "RT-20260724-007 task and registry statuses are completed"
+      - "RT-20260724-007 validation remains FAIL with checkpoint evidence preserved"
+      - "handoff-0857 route guard passes with ready task P4-T06"
+      - "RT-20260724-008 ordinary-route admission passes"
+      - "P4-T06 remains unexecuted through the cumulative checkpoint"
+      - "one governed checkpoint commits without legacy validation"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+physics_payload_admission_result:
+  status: "admitted"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+
+ordinary_route_guard_admission_result:
+  status: "PASS"
+  source_handoff_id: "handoff-0858"
+  selected_plan_task_id: "P4-T06"
+  guard_outcome: "physics_bearing_route_selected"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  system_success_counts_as_physics: false
+  system_success_counts_as_distance_to_gr: false
+  scientific_status_changed: false
+  physics_promotion_authorized: false
+
+recovery_result:
+  status: "PASS"
+  strategy_id: "reconcile_p4_t05_implemented_checkpoint_blocked_status_with_handoff_0857_route_guard_v1"
+  repaired_task_path: "research_control/tasks/RT-20260724-007/00_TASK.yaml"
+  repaired_task_status: "completed"
+  repaired_registry_path: "registries/RESEARCH_TASK_REGISTRY.csv"
+  repaired_registry_status: "completed"
+  preserved_validation_status: "FAIL"
+  source_handoff_path: "research_control/handoffs/handoff-0857.yaml"
+  source_handoff_sha256: "c4a4621f6cf027c7dc909a9c2414824f2817ae522864a474972c13c382051c4d"
+  recovery_validator_path: "research_control/tasks/RT-20260724-009/artifacts/validate_p4_t05_handoff_route_guard_status_reconciliation.py"
+  recovery_validator_sha256: "241726570836cf0404cbf5a971621f478dea7d29954cf0d5fbeec873a5dca4c3"
+  recovery_receipt_path: "research_control/tasks/RT-20260724-009/artifacts/p4_t05_handoff_route_guard_status_reconciliation_receipt.json"
+  recovery_receipt_sha256: "922c74a06ec8fc29ef2ea33e4f00e038f4658461ad9eef1ae28e1e75ba1359b2"
+  handoff_0857_guard_status: "PASS"
+  handoff_0857_ready_science_plan_task_ids:
+    - "P4-T06"
+  rt008_admission_status: "PASS"
+  protected_hash_mismatch_count: 0
+  p4_t06_executed: false
+
+artifacts:
+  - "research_control/tasks/RT-20260724-007/00_TASK.yaml"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "research_control/tasks/RT-20260724-009/artifacts/validate_p4_t05_handoff_route_guard_status_reconciliation.py"
+  - "research_control/tasks/RT-20260724-009/artifacts/p4_t05_handoff_route_guard_status_reconciliation_receipt.json"
+
+output_paths:
+  - "research_control/tasks/RT-20260724-007/00_TASK.yaml"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "research_control/tasks/RT-20260724-009/**"
+  - "research_control/handoffs/handoff-0859.yaml"
+  - "research_control/handoffs/handoff-0859.md"
+  - "research_control/program_state.yaml"
+
+artifact_receipts:
+  - path: "research_control/tasks/RT-20260724-007/jobs/AJ-RT-20260724-007-001.yaml"
+    sha256: "e459320a6cf27f7b52aa1448371b78c847b41c0aaf03e4b5fb7e759494172737"
+  - path: "research_control/tasks/RT-20260724-007/jobs/completions/AJC-AJ-RT-20260724-007-001.yaml"
+    sha256: "8ee9d5b739b25a95907660118d1b857c3cf4bd0d015336da2610d063d335ec7d"
+  - path: "research_control/handoffs/handoff-0857.yaml"
+    sha256: "c4a4621f6cf027c7dc909a9c2414824f2817ae522864a474972c13c382051c4d"
+  - path: "research_control/tasks/RT-20260724-008/jobs/AJ-RT-20260724-008-001.yaml"
+    sha256: "83ca2e5e3cdecfbe01cd36f2e6227fe4fea7272fa94197949e0b29a6c3fd9c62"
+  - path: "research_control/tasks/RT-20260724-008/jobs/completions/AJC-AJ-RT-20260724-008-001.yaml"
+    sha256: "05a29a627ba393e78166c4b41a84d2851496c80ef5e18c0d542f8b69db887fd5"
+  - path: "research_control/tasks/RT-20260724-008/artifacts/validation_blocker_precheckpoint_handoff_0857_route_guard_dependency_drift_v1.yaml"
+    sha256: "ba90f9bb7c8fd9a8b1e989f2fc94fb8b8227c7b735064070e6907d359743bcb7"
+  - path: "research_control/tasks/RT-20260724-008/artifacts/p4_t06_precheckpoint_handoff_0857_route_guard_control_failure_v1.yaml"
+    sha256: "7e1b1e6454446d11656b0008954bccdc0045488e0fcb117da9af8490b9f154e7"
+  - path: "research_control/tasks/RT-20260724-009/artifacts/validate_p4_t05_handoff_route_guard_status_reconciliation.py"
+    sha256: "241726570836cf0404cbf5a971621f478dea7d29954cf0d5fbeec873a5dca4c3"
+  - path: "research_control/tasks/RT-20260724-009/artifacts/p4_t05_handoff_route_guard_status_reconciliation_receipt.json"
+    sha256: "922c74a06ec8fc29ef2ea33e4f00e038f4658461ad9eef1ae28e1e75ba1359b2"
+
+command_results:
+  - command: "GIT_INDEX_FILE=<isolated-index> .venv/bin/python research_control/tasks/RT-20260724-009/artifacts/validate_p4_t05_handoff_route_guard_status_reconciliation.py --check --json"
+    status: "PASS"
+  - command: "GIT_INDEX_FILE=<isolated-index> .venv/bin/python research_control/tasks/RT-20260724-009/artifacts/validate_p4_t05_handoff_route_guard_status_reconciliation.py --write-report --json"
+    status: "PASS"
+  - command: "GIT_INDEX_FILE=<isolated-index> .venv/bin/python scripts/research_control/validate_research_control.py --check-diff --json-summary"
+    status: "PASS_0_ERRORS_1732_WARNING_CLASS_FINDINGS"
+  - command: "GIT_INDEX_FILE=<isolated-index> .venv/bin/python -m unittest -v tests.test_routing_snapshot.NarrowRoutingSnapshotTests.test_live_default_does_not_compute_advisory_metrics tests.test_routing_snapshot.NarrowRoutingSnapshotTests.test_live_narrow_and_full_validation_agree_on_current_state tests.test_routing_snapshot.NarrowRoutingSnapshotTests.test_live_narrow_snapshot_has_subsecond_python_runtime tests.test_research_control.ResearchControlTests.test_continue_research_reports_director_context_packet"
+    status: "PASS_4_TESTS"
+  - command: ".venv/bin/python scripts/project_control/validate_documentation_impact.py"
+    status: "PASS"
+  - command: ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted"
+    status: "PASS"
+  - command: ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+    status: "PASS_0_HARD_FAILURES_1496_HISTORICAL_WARNINGS"
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+    status: "PASS_CORE_WITH_9_LOCAL_CACHE_WARNINGS"
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+    status: "PASS_CORE_WITH_9_LOCAL_CACHE_WARNINGS"
+  - command: "git diff --check"
+    status: "PASS"
+  - command: ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260724-009-001"
+    status: "PENDING_SINGLE_INVOCATION"
+
+validation_summary:
+  status: "PASS_RECOVERY_READY_FOR_CHECKPOINT"
+  passing_gates:
+    - "exact RT-20260724-007 task and registry lifecycle reconciliation"
+    - "independent validation FAIL and checkpoint-failure semantics preserved"
+    - "immutable handoff-0857 and seven protected hashes preserved"
+    - "handoff-0857 route guard and RT-20260724-008 route admission pass in prospective staged view"
+    - "P4-T06 nonexecution and all scientific authority boundaries preserved"
+  pending_gates:
+    - "one governed checkpoint"
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 104 validated, claimed, and consumed the exact immutable route once before its one improve-project-system invocation."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The task-local receipt proves the two lifecycle statuses, seven protected hashes, route-guard recovery, and P4-T06 nonexecution."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "The prospective staged task-local validator, narrow routing gates, full research-control validator, and four focused routing tests pass while preserving the independent checkpoint FAIL layer."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "Exactly one governed checkpoint remains to be invoked after the final staged audit passes."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Current frontier, task index, compact frontier, dependency graph, and claim graph were refreshed from tracked authority."
+  memory_bootstrap:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "Tracked memory synchronization and validate-only passed with nine nonblocking local-cache findings."
+  claim_language_linter:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "Changed-source claim-language validation passed with zero hard failures and 1,496 historical warnings."
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1010
+    relationship_row_count: 4993
+    semantic_row_count: 1010
+    vault_row_count: 1010
+    local_cache_only_warning_count: 9
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  authority_note: "The canonical plan is navigation context only. Obsidian, generated wiki, semantic, relationship, SQLite, and .local surfaces are retrieval only and not authority; tracked task, registry, blocker, handoff, validator, and relay records govern this repair."
+
+assumption_delta:
+  changed: false
+  assumptions_added: []
+  assumptions_removed: []
+  assumptions_adopted: []
+  exact_reason: "Only two project-control lifecycle status representations changed."
+
+physics_progress_status:
+  status: "not_applicable_project_system_recovery"
+  target_derivation_milestone: "none"
+  milestone_burden: "Project-system status reconciliation and checkpoint recovery only; no scientific derivation milestone advances."
+  explanation: "Lifecycle reconciliation does not count as physics payload or Distance-to-GR progress."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "none"
+  milestone: "source_ontology"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "The scientific ledger bytes remain unchanged."
+  downstream_unlocked:
+    - "P4-T06 after governed checkpoint"
+  downstream_still_blocked:
+    - "P4-T06 until the governed checkpoint commits"
+    - "source_dynamics"
+    - "physical_source_manifold_identity"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+    - "benchmark_promotion"
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  publication_authorized: false
+  proof_authority: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  canonical_ontology_edit_authorized: false
+  ontology_selection_authorized: false
+  physical_interpretation_establishment_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"
+  rationale: "The deterministic lifecycle reconciliation is complete and emits no new project-system defect signal."

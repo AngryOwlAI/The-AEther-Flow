@@ -1,0 +1,338 @@
+job_id: "AJ-RT-20260724-006-001"
+task_id: "RT-20260724-006"
+decision_id: "DDR-20260724-006"
+role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260724-006"
+status: "completed"
+validation_status: "FAIL"
+created_at: "2026-07-24T17:28:18Z"
+started_at: "2026-07-24T17:28:18Z"
+completed_at: "2026-07-24T18:27:12Z"
+completion_path: "research_control/tasks/RT-20260724-006/jobs/completions/AJC-AJ-RT-20260724-006-001.yaml"
+requires_human_gate: false
+human_authorization_note: "Generation 101 is a user-authorized recursive project-system recovery route. It carries no new human-gate decision and does not reuse approval-20260724-001."
+objective: "Preserve six immutable P4-T05 file hashes while adding only their literal Git whitespace classifications, prove unrelated paths remain protected by blank-at-EOF, and invoke one normal governed checkpoint before P4-T06."
+target_derivation_milestone: "source_ontology"
+milestone_burden: "Project-system checkpoint compatibility repair only; no scientific derivation milestone advances."
+route_label: "preserve_hash_bound_p4_t05_blank_eof_via_exact_path_whitespace_policy_v1"
+route_reason: "The P4-T05 protected payload and admission recovery pass, but the normal staged checkpoint rejects six immutable hash-bound files solely for blank-at-EOF."
+plan_task_id: "P4-T05"
+project_system_change_only: true
+scientific_claims_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  candidate_family: "not_applicable"
+  assumption_delta:
+    - "No scientific assumption changes; six immutable existing files receive exact-path Git whitespace classifications only."
+    - "The protected P4-T05 selection, approval, source identities, Distance-to-GR status, and P4-T06 boundary remain byte-preserved."
+  materiality_basis: "Restores normal staged-checkpoint compatibility without changing a hash-bound P4-T05 byte or reducing blank-at-EOF protection on unrelated paths."
+  source_basis:
+    - "research_control/tasks/RT-20260724-005/artifacts/validation_blocker_checkpoint_hash_bound_p4_t05_blank_eof_v1.yaml"
+    - "research_control/handoffs/handoff-0855.yaml"
+    - ".gitattributes"
+  expected_artifact_paths:
+    - ".gitattributes"
+    - "research_control/tasks/RT-20260724-006/artifacts/validate_exact_path_whitespace_policy.py"
+    - "research_control/tasks/RT-20260724-006/artifacts/exact_path_whitespace_policy_recovery_receipt.json"
+  project_system_justification: "The packet changes Git path classification and control evidence only; it creates no physics result or P4-T06 execution."
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  expected_durable_outputs:
+    physics: []
+    project_system:
+      - ".gitattributes"
+      - "research_control/tasks/RT-20260724-006/artifacts/validate_exact_path_whitespace_policy.py"
+      - "research_control/tasks/RT-20260724-006/artifacts/exact_path_whitespace_policy_recovery_receipt.json"
+  acceptance_criteria:
+    physics: []
+    project_system:
+      - "all six protected P4-T05 files retain their blocker-recorded SHA-256 identities"
+      - "git check-attr reports -blank-at-eof only for the six literal intended paths"
+      - "an unrelated control path remains unclassified and still fails blank-at-EOF in an isolated Git proof"
+      - "the consumed approval, protected completion and handoff, parent recovery completion and handoff, and blocker retain exact hashes"
+      - "one normal governed checkpoint commits without legacy validation"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: false
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0855"
+  source_handoff_path: "research_control/handoffs/handoff-0855.yaml"
+  source_handoff_sha256: "828de27d9c7bcdf7e5a8ed1ae728297d0f912dc7cb0964aa6433f34a04ee5a40"
+  selected_plan_task_id: "P4-T05"
+  guard_outcome: "below_threshold"
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+allowed_read_paths:
+  - "SOUL.md"
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research-goal/SKILL.md"
+  - ".codex/skills/continue-research-goal/references/goal-file-schema.md"
+  - ".codex/skills/continue-research-continue-goal/SKILL.md"
+  - ".codex/skills/improve-project-system/SKILL.md"
+  - ".agents/roles/research_ops/project-system-director.v0.2.0.md"
+  - ".agents/roles/research_ops/process-integrity-auditor.v0.1.0.md"
+  - ".agents/schemas/**"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  - "research_control/approvals/**"
+  - "research_control/design/**"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0853.yaml"
+  - "research_control/handoffs/handoff-0854.yaml"
+  - "research_control/handoffs/handoff-0855.yaml"
+  - "research_control/tasks/RT-20260722-015/**"
+  - "research_control/tasks/RT-20260722-023/**"
+  - "research_control/tasks/RT-20260722-024/**"
+  - "research_control/tasks/RT-20260724-004/**"
+  - "research_control/tasks/RT-20260724-005/**"
+  - "scripts/project_control/**"
+  - "scripts/research_control/**"
+  - "tests/**"
+  - "registries/**"
+  - ".gitattributes"
+allowed_write_paths:
+  - ".gitattributes"
+  - ".agents/schemas/AGENT_JOB_SCHEMA.md"
+  - "scripts/research_control/ordinary_route_guard.py"
+  - "scripts/research_control/validate_research_control.py"
+  - "tests/test_ordinary_route_guard.py"
+  - "research_control/approvals/approval-20260724-001.yaml"
+  - "research_control/tasks/RT-20260722-015/**"
+  - "research_control/tasks/RT-20260724-004/**"
+  - "research_control/tasks/RT-20260724-005/**"
+  - "research_control/tasks/RT-20260724-006/**"
+  - "research_control/handoffs/handoff-0854.yaml"
+  - "research_control/handoffs/handoff-0854.md"
+  - "research_control/handoffs/handoff-0855.yaml"
+  - "research_control/handoffs/handoff-0855.md"
+  - "research_control/handoffs/handoff-0856.yaml"
+  - "research_control/handoffs/handoff-0856.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/tex/**"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "registries/TEX_SOURCE_REGISTRY.csv"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "FOLDER_MAP.md"
+allowed_generated_paths:
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/tex/**"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "FOLDER_MAP.md"
+forbidden_paths:
+  - ".agents/roles/**"
+  - ".codex/skills/**"
+  - "implementations_plans/**"
+  - "ontology/**"
+  - "legacy_ontology/**"
+  - "manuscripts/**"
+  - "markdown/publication-briefs/**"
+  - "markdown/html-explainer-specs/**"
+  - "github-facing/**"
+  - "html/**"
+  - "pdf/**"
+  - "registries/METRIC_USE_LEDGER.csv"
+forbidden_source_classes:
+  - "immutable_predecessor_scientific_payload_mutation"
+  - "canonical_ontology_write"
+  - "source_law_adoption_or_rejection"
+  - "scientific_ledger_change"
+  - "P4_T06_execution"
+  - "physics_claim_promotion"
+  - "benchmark_promotion"
+  - "gate_chair_verdict"
+  - "approval_reuse"
+  - "proof_authority"
+  - "publication_or_push_authority"
+  - "completed_derivation_claim"
+allowed_source_classes:
+  - "git_attribute_policy"
+  - "task_control_record"
+  - "active_routing_supersession"
+  - "registry"
+  - "generated_memory_derivative"
+  - "prior_authorized_transaction_checkpoint"
+approved_commands:
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"hash bound blank at EOF exact path gitattributes checkpoint recovery\" --limit 10 --json"
+  - "git check-attr whitespace -- <six intended paths plus unrelated control>"
+  - ".venv/bin/python research_control/tasks/RT-20260724-006/artifacts/validate_exact_path_whitespace_policy.py --check --json"
+  - ".venv/bin/python research_control/tasks/RT-20260724-006/artifacts/validate_exact_path_whitespace_policy.py --write-report --json"
+  - ".venv/bin/python research_control/tasks/RT-20260724-005/artifacts/validate_p4_t05_override_recovery.py --write-report --json"
+  - ".venv/bin/python -m unittest -v tests.test_ordinary_route_guard"
+  - ".venv/bin/python -m scripts.validation.cli plan --profile affected --paths .gitattributes research_control/tasks/RT-20260724-006 research_control/program_state.yaml research_control/handoffs/handoff-0856.yaml --explain"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+  - ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --json-summary"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --write"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --json output/research_dependency_graph.json --markdown wiki/indexes/research_dependency_graph.md --dot output/research_dependency_graph.dot"
+  - ".venv/bin/python scripts/research_control/generate_claim_graph_v1.py --json output/claim_graph_v1.json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+  - "git diff --check"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260724-006-001"
+required_validators:
+  - "memory_preflight"
+  - "physics_payload_admission"
+  - "dual_budget_allocation"
+  - "ordinary_route_guard_admission"
+  - "exact_path_whitespace_policy"
+  - "immutable_hash_preservation"
+  - "unrelated_blank_at_eof_control"
+  - "p4_t05_parent_recovery_preservation"
+  - "project_change_classifier"
+  - "project_improvement_resolver"
+  - "project_improvement_signals"
+  - "documentation_impact"
+  - "claim_language_changed"
+  - "research_control_diff"
+  - "memory_sync"
+  - "memory_core"
+  - "git_diff_check"
+  - "checkpoint_transaction"
+expected_outputs:
+  - ".gitattributes"
+  - "research_control/tasks/RT-20260724-006/00_TASK.yaml"
+  - "research_control/tasks/RT-20260724-006/DDR-20260724-006.md"
+  - "research_control/tasks/RT-20260724-006/artifacts/validate_exact_path_whitespace_policy.py"
+  - "research_control/tasks/RT-20260724-006/artifacts/exact_path_whitespace_policy_recovery_receipt.json"
+  - "research_control/tasks/RT-20260724-006/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260724-006/jobs/completions/AJC-AJ-RT-20260724-006-001.yaml"
+  - "research_control/tasks/RT-20260724-006/roles/process-integrity-auditor@0.1.0--RT-20260724-006.yaml"
+  - "research_control/handoffs/handoff-0856.yaml"
+  - "research_control/handoffs/handoff-0856.md"
+  - "research_control/program_state.yaml"
+claim_boundary: "CB-V21-P4-T05-HASH-BOUND-BLANK-EOF-EXACT-PATH-001"
+resolves_signal_routing: false
+documentation_impact_id: "DI-RT-20260724-006-001"
+completion_id: "AJC-AJ-RT-20260724-006-001"
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 101
+  passes_consumed: 91
+  route_work_item_id: "P4-T05"
+  route_worker_skill: "improve-project-system"
+  route_sha256: "a3cecf4420194935a7c22f77a7028fb6536e438459a064bbc49872a8f8c2ef4b"
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:101"
+  handoff_token: "f8a086a7dd8d8aa20928780552e58d00c03356fd238e346e"
+  relay_claim_token: "a8a0f7a468eea763906342244b573d4a1539264ac221d0a6"
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1010
+    relationship_row_count: 4993
+    semantic_row_count: 1010
+    vault_row_count: 1010
+    local_cache_only_warning_count: 9
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"hash bound blank at EOF exact path gitattributes checkpoint recovery\" --limit 10 --json"
+      query_type: "search"
+      query_text: "hash bound blank at EOF exact path gitattributes checkpoint recovery"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-TASK-INDEX"
+  canonical_inspections:
+    - object_id: "MD-RESEARCH-CONTROL-TASK-INDEX"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/TASK_INDEX.md"
+      source_hash: "22be6774558e6a5260453203361b466b0388f907599954f149de94dc5b68318f"
+  authority_note: "Generated task-index, wiki, Obsidian, SQLite, semantic, and .local retrieval outputs are navigation only and not authority; the tracked blocker, handoff, AgentJob, registries, protected hashes, and validators govern."

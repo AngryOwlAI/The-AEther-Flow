@@ -1,0 +1,72 @@
+validation_status: "FAIL"
+task_id: "RT-20260724-006"
+task_type: "project_system_hash_bound_blank_eof_exact_path_recovery"
+title: "Preserve the six P4-T05 hashes through exact-path whitespace policy"
+task_taxonomy:
+  schema_id: "v21_task_taxonomy_v1"
+  work_kind: "benchmark_or_recovery"
+  milestone: "source_ontology"
+  candidate_family: "p4_t05_exact_path_whitespace_policy"
+  result_kind: "implemented_and_validated_or_precisely_blocked"
+  authority: "project_control"
+  scope: "project_system"
+status: "blocked"
+created_at: "2026-07-24T17:28:18Z"
+updated_at: "2026-07-24T18:27:12Z"
+closed_at: "2026-07-24T18:27:12Z"
+parent_task_id: "RT-20260724-005"
+parent_handoff_id: "handoff-0855"
+supersedes_active_routing_task_id: "RT-20260724-005"
+current_decision_id: "DDR-20260724-006"
+current_job_id: "AJ-RT-20260724-006-001"
+role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260724-006"
+requires_human_gate: false
+human_authorization_note: "Generation 101 of the immutable user-requested relay routes exactly one improve-project-system frame to the hash-bound P4-T05 blank-at-EOF recovery. It does not reuse approval-20260724-001 or reopen the Gate Chair decision."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P4"
+  plan_task_id: "P4-T05"
+  recovery_for_plan_task_id: "P4-T05"
+  next_plan_task_id: "P4-T06"
+objective: "Preserve the exact bytes and SHA-256 identities of six immutable P4-T05 artifacts while adding only their literal repository-relative paths to Git whitespace classification, prove that no wildcard or unrelated path is exempted, and invoke one normal governed checkpoint without legacy validation before P4-T06."
+target_derivation_milestone: "source_ontology"
+milestone_burden: "Checkpoint the already authorized P4-T05 transaction without changing its protected selection, ontology boundary, scientific burden, or downstream promotion gates."
+route_label: "preserve_hash_bound_p4_t05_blank_eof_via_exact_path_whitespace_policy_v1"
+project_system_change_only: true
+dual_budget_category: "system_bearing"
+primary_budget: "project_system"
+scientific_claims_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+claim_boundary_id: "CB-V21-P4-T05-HASH-BOUND-BLANK-EOF-EXACT-PATH-001"
+claim_boundary:
+  allowed_scope: "Six literal .gitattributes classifications, one task-local validator and receipt, task control records, generated derivative refresh, and one normal combined checkpoint for the preserved P4-T05 transaction."
+  immutable_parent_task: "RT-20260724-005"
+  immutable_parent_job: "AJ-RT-20260724-005-001"
+  immutable_parent_handoff: "handoff-0855"
+  immutable_p4_t05_file_count: 6
+  wildcard_classification_allowed: false
+  legacy_validation_allowed: false
+  p4_t05_scientific_payload_changed: false
+  p4_t06_executed: false
+  scientific_claims_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+documentation_impact_id: "DI-RT-20260724-006-001"
+completion_id: "AJC-AJ-RT-20260724-006-001"
+output_artifacts:
+  - ".gitattributes"
+  - "research_control/tasks/RT-20260724-006/artifacts/validate_exact_path_whitespace_policy.py"
+  - "research_control/tasks/RT-20260724-006/artifacts/exact_path_whitespace_policy_recovery_receipt.json"
+  - "research_control/tasks/RT-20260724-006/artifacts/validation_blocker_checkpoint_repository_test_contract_drift_v1.yaml"
+  - "research_control/tasks/RT-20260724-006/jobs/completions/AJC-AJ-RT-20260724-006-001.yaml"
+  - "research_control/handoffs/handoff-0856.yaml"
+  - "research_control/handoffs/handoff-0856.md"
+closure_status: "p4_t05_exact_path_policy_pass_checkpoint_blocked_repository_test_contract_drift"
+summary: "Generation 101 completed the six-literal-path policy and preserved every protected hash. Its only normal checkpoint passed every non-test staged gate but stopped on three repository-test failures and one cascading setup error; the index was restored and no commit was created."
+next_recommended_action: "Run one fresh bounded Validator Engineer recovery for the exact repository-test contract drift; do not rerun generation 101 or execute P4-T06."
+project_improvement_signals: []
+notes: "This packet creates no new Gate Chair verdict, approval use, ontology edit, physical interpretation, Distance-to-GR movement, benchmark promotion, publication, push, or completed-derivation authority."

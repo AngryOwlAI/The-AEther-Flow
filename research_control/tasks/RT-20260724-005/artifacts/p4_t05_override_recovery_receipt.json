@@ -1,0 +1,80 @@
+{
+  "approval_reused": false,
+  "check_count": 10,
+  "checks": [
+    {
+      "check_id": "protected_execution_exact_chain",
+      "detail": "{\"errors\": [], \"policy_required\": true, \"status\": \"PASS\", \"warnings\": []}",
+      "status": "PASS"
+    },
+    {
+      "check_id": "checkpoint_recovery_exact_chain",
+      "detail": "{\"errors\": [], \"policy_required\": true, \"status\": \"PASS\", \"warnings\": []}",
+      "status": "PASS"
+    },
+    {
+      "check_id": "ordinary_equality_without_override",
+      "detail": "{\"errors\": [\"job_plan_task_id_not_selected_by_handoff\"], \"policy_required\": true, \"status\": \"FAIL\", \"warnings\": []}",
+      "status": "PASS"
+    },
+    {
+      "check_id": "fixed_activated_hash_approval",
+      "detail": "research_control/approvals/approval-20260724-001.yaml expected=37038157b5deb23a3ae8249dcf5562ac8e9be37f6fa4ae8704c47b0eeb24a412 observed=37038157b5deb23a3ae8249dcf5562ac8e9be37f6fa4ae8704c47b0eeb24a412",
+      "status": "PASS"
+    },
+    {
+      "check_id": "fixed_activated_hash_protected_ddr",
+      "detail": "research_control/tasks/RT-20260724-004/DDR-20260724-004.md expected=5b262a37de7b37b2244bc112584d1321807ebb5d9ca46907d897e5e4689fb24e observed=5b262a37de7b37b2244bc112584d1321807ebb5d9ca46907d897e5e4689fb24e",
+      "status": "PASS"
+    },
+    {
+      "check_id": "fixed_activated_hash_protected_job",
+      "detail": "research_control/tasks/RT-20260724-004/jobs/AJ-RT-20260724-004-001.yaml expected=835b97cf022fb8ce5845467d6703b0d3e6dc167b0f7ffff5706c8c4a6bd2decd observed=835b97cf022fb8ce5845467d6703b0d3e6dc167b0f7ffff5706c8c4a6bd2decd",
+      "status": "PASS"
+    },
+    {
+      "check_id": "fixed_activated_hash_protected_completion",
+      "detail": "research_control/tasks/RT-20260724-004/jobs/completions/AJC-AJ-RT-20260724-004-001.yaml expected=d248a2abfe6a2571b7ebb6a930c720f64af7f3d39cdf0e497a5e194308a055bf observed=d248a2abfe6a2571b7ebb6a930c720f64af7f3d39cdf0e497a5e194308a055bf",
+      "status": "PASS"
+    },
+    {
+      "check_id": "fixed_activated_hash_source_handoff",
+      "detail": "research_control/handoffs/handoff-0853.yaml expected=c231cdfc621a809d95069e9889d87bfcb7c9c4807576ba0c6407b7c83cc8d0a4 observed=c231cdfc621a809d95069e9889d87bfcb7c9c4807576ba0c6407b7c83cc8d0a4",
+      "status": "PASS"
+    },
+    {
+      "check_id": "fixed_activated_hash_blocked_handoff",
+      "detail": "research_control/handoffs/handoff-0854.yaml expected=19be01044894e6611cf11d8f7ce91cbff04a93e0bd88f8a6d353eca7fbf4acda observed=19be01044894e6611cf11d8f7ce91cbff04a93e0bd88f8a6d353eca7fbf4acda",
+      "status": "PASS"
+    },
+    {
+      "check_id": "fixed_activated_hash_blocker",
+      "detail": "research_control/tasks/RT-20260724-004/artifacts/validation_blocker_ordinary_route_human_override_admission_v1.yaml expected=54f12b8a481253b2482f2525573c09213fbf72d121c75d04ef630abd22c3db4c observed=54f12b8a481253b2482f2525573c09213fbf72d121c75d04ef630abd22c3db4c",
+      "status": "PASS"
+    }
+  ],
+  "distance_to_gr_changed": false,
+  "failure_count": 0,
+  "focused_regression_count": 20,
+  "generated_at": "2026-07-24T16:09:13Z",
+  "job_id": "AJ-RT-20260724-005-001",
+  "p4_t05_gate_reexecuted": false,
+  "p4_t06_executed": false,
+  "pass_count": 10,
+  "physics_promotion_authorized": false,
+  "proof_authority": false,
+  "protected_completion_mutated": false,
+  "protected_job_mutated": false,
+  "schema_id": "p4_t05_protected_human_override_recovery_receipt_v1",
+  "scientific_claims_changed": false,
+  "source_hashes": {
+    "agent_job_schema": "321f74b79c2dc644f51965282ab5e821a89b0339039a0e19685b474c831bdb6d",
+    "checkpoint_recovery_receipt": "67386ab8627b360df1b4dfd9820ddc1ab722c6011f6dbd13d97607aad41b6011",
+    "evaluator": "d8925866089dce6e8fe147e2666f07c413a3a92669d909c38065ca33054cdecd",
+    "focused_tests": "e4dfd902be009a7a3f5a2628df6f4b8e128f8dd3db981659e905320462948b6b",
+    "ordinary_route_policy": "7e74e55d2f836e653d3aa8cfb9954b889bea4702146933415a2992300b1f8f4f",
+    "protected_execution_receipt": "cacd703248067a597166395589b65cfacf75d22e42719596cf2eb3a533e486af"
+  },
+  "status": "PASS",
+  "task_id": "RT-20260724-005"
+}

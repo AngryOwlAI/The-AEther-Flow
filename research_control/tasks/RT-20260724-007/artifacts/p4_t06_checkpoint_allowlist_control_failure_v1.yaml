@@ -1,0 +1,22 @@
+schema_id: "ordinary_route_control_failure_v1"
+failure_id: "ORCF-P4-T06-HANDOFF-0857-001"
+plan_task_id: "P4-T06"
+failure_class: "failing_ci"
+status: "active_blocking"
+blocks_scientific_execution: true
+observed_at: "2026-07-24T20:13:35Z"
+source_task_id: "RT-20260724-007"
+source_job_id: "AJ-RT-20260724-007-001"
+source_handoff_id: "handoff-0857"
+failed_gate: "test_shard_repository"
+source_blocker_path: "research_control/tasks/RT-20260724-007/artifacts/validation_blocker_checkpoint_active_job_allowlist_contract_drift_v1.yaml"
+source_blocker_sha256: "504d0c5682060fbb1b17bea4c1bd79c09b20b1cf4398cb773ff8d73401087cfd"
+summary: "P4-T06 remains blocked because the accumulated P4-T05 transaction has no checkpoint commit; generation 102's only normal checkpoint failed the repository test shard on active-job allowlist contract drift."
+recovery_strategy_id: "repair_p4_t05_checkpoint_active_job_allowlist_contract_drift_v1"
+recovery_worker_skill: "improve-project-system"
+authority_limits:
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  p4_t06_executed: false

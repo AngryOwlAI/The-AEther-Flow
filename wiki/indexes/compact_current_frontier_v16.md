@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260724-003`
-- Latest handoff: `handoff-0853`
-- Current status: `p13_t06_reproducible_environment_pass_checkpoint_ready`
+- Active task: `RT-20260724-009`
+- Latest handoff: `handoff-0859`
+- Current status: `p4_t05_handoff_route_guard_status_reconciliation_pass_ready_for_checkpoint`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260724-003`
-- Latest research handoff: `handoff-0853`
-- Latest research next action: Run the one authorized governed checkpoint for AJ-RT-20260724-003-001. After commit, hold P13-T02 until explicit publication authority and matched current-head hosted CI plus scheduled-full evidence satisfy the P13-T01 cutover precondition; P4-T05 separately requires explicit human Gate Chair authority. Do not execute P13-T08, P13-T02, or P4-T05 without their exact missing authority and evidence.
+- Latest research task: `RT-20260724-009`
+- Latest research handoff: `handoff-0859`
+- Latest research next action: After the generation-104 governed checkpoint commits, run one fresh bounded continue-research packet for P4-T06 to integrate the already approved narrow continuum-first source boundary without importing physical semantics or promoting claims.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `hold_p13_t02_until_p13_t01_external_cutover_evidence_v1`
-- Role family: `validator-engineer@0.2.0`
-- Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Complete the v19 validation architecture transition.
+- Route ID: `v21_p4_t06_narrow_continuum_first_canonical_integration`
+- Role family: `ontology-formalizer@0.2.0`
+- Target milestone: `source_ontology`
+- Milestone burden: Make tracked sources consistent with the human-approved ontology regime.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `8226d2e6b87aad1082013e6e729d583055d997c623ece857cda8c68185767dd5`
-- JSON SHA-256: `a9c103af8548425859dd1324a16b5d66664b10a6378f64fc73f1d66d870ccc24`
+- YAML SHA-256: `0b1f5e4fe22274fab9f88176ba009432c1a4f9412d99dfe14bce9697192240bc`
+- JSON SHA-256: `7a3fe3e7623e907ca3984dc880950ce3a7a64321fd57ad467c82e3d5c83455ba`
 
 ## Authority Warning
 

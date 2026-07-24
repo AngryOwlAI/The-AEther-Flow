@@ -1,0 +1,288 @@
+validation_status: "FAIL"
+handoff_id: "handoff-0857"
+task_id: "RT-20260724-007"
+job_id: "AJ-RT-20260724-007-001"
+completion_id: "AJC-AJ-RT-20260724-007-001"
+completion_path: "research_control/tasks/RT-20260724-007/jobs/completions/AJC-AJ-RT-20260724-007-001.yaml"
+completion_sha256: "8ee9d5b739b25a95907660118d1b857c3cf4bd0d015336da2610d063d335ec7d"
+status: "blocked_validation"
+created_at: "2026-07-24T20:13:35Z"
+parent_handoff_id: "handoff-0856"
+plan_task_id: "P4-T05"
+source_role_id: "validator-engineer"
+source_role_version: "0.2.0"
+source_execution_role_ref: "validator-engineer@0.2.0--RT-20260724-007"
+summary: "Generation 102 preserves its completed four-finding repository-test recovery, P10 freeze, protected P4-T05 hashes, control anchors, historical identities, and exact-path rules. Its only normal checkpoint passed every non-test staged gate but stopped before commit because the active AgentJob's explicit least-privilege registry paths differ from the broader registries/** entry in its role overlay and registry row. Three narrow-routing failures and one director-context error cascade from that single mismatch. The index was restored, nothing remains staged, and P4-T06 remains unexecuted."
+next_action: "Run one fresh bounded improve-project-system recovery for repair_p4_t05_checkpoint_active_job_allowlist_contract_drift_v1. Align the active AgentJob, role overlay, and registry row to the same least-privilege ordered write-path set, prove narrow and full routing agree, and invoke one future normal checkpoint; do not rerun generation 102 or execute P4-T06."
+current_claim_boundary: "CB-V21-P4-T05-REPOSITORY-TEST-CONTRACT-DRIFT-RECOVERY-001"
+loop_risk_route: "repair_p4_t05_checkpoint_active_job_allowlist_contract_drift_v1"
+
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260724-007"
+  latest_research_handoff_id: "handoff-0857"
+  latest_research_next_action: "Run one fresh bounded improve-project-system recovery for repair_p4_t05_checkpoint_active_job_allowlist_contract_drift_v1. Align the active AgentJob, role overlay, and registry row to the same least-privilege ordered write-path set, prove narrow and full routing agree, and invoke one future normal checkpoint; do not rerun generation 102 or execute P4-T06."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+
+claim_boundary:
+  allowed_next_scope: "One fresh bounded project-system recovery may align only the active AgentJob, execution-role overlay, and AGENT_JOB_REGISTRY allowed-write contracts to the same least-privilege ordered set, prove narrow/full routing agreement, and invoke one future normal checkpoint. P4-T06 remains conditional and unexecuted."
+  completed_task: "RT-20260724-007"
+  completed_completion_path: "research_control/tasks/RT-20260724-007/jobs/completions/AJC-AJ-RT-20260724-007-001.yaml"
+  completed_completion_sha256: "8ee9d5b739b25a95907660118d1b857c3cf4bd0d015336da2610d063d335ec7d"
+  source_handoff_id: "handoff-0856"
+  source_handoff_path: "research_control/handoffs/handoff-0856.yaml"
+  source_handoff_sha256: "582ff5207d8a61f2b3e49fa561b99f6356c618c7a14d39f6eba0aa8bd8b57fc9"
+  immutable_route_sha256: "e0d449ee94e812d142a7ad85d4a8b47d21127165fb2c271002c253c7d6308ba5"
+  result_status: "PASS_IMPLEMENTATION_CHECKPOINT_BLOCKED"
+  blocker_path: "research_control/tasks/RT-20260724-006/artifacts/validation_blocker_checkpoint_repository_test_contract_drift_v1.yaml"
+  blocker_sha256: "fa0be9a6eeb3097172a440c09dd754b4898ed37bc48f5618d6c7ea82ce73b953"
+  recovery_validator_path: "research_control/tasks/RT-20260724-007/artifacts/validate_repository_test_contract_recovery.py"
+  recovery_validator_sha256: "4c25a2cff55bc8871af9f3382c79b8ac00a9d987c58cc2cdda873c3d2955f3a4"
+  recovery_receipt_path: "research_control/tasks/RT-20260724-007/artifacts/repository_test_contract_recovery_receipt.json"
+  recovery_receipt_sha256: "76560fa286a58aa57e322105da8c746e0c3a871b261556911dede242e3a8bd1c"
+  checkpoint_blocker_path: "research_control/tasks/RT-20260724-007/artifacts/validation_blocker_checkpoint_active_job_allowlist_contract_drift_v1.yaml"
+  checkpoint_blocker_sha256: "504d0c5682060fbb1b17bea4c1bd79c09b20b1cf4398cb773ff8d73401087cfd"
+  p4_t06_control_failure_path: "research_control/tasks/RT-20260724-007/artifacts/p4_t06_checkpoint_allowlist_control_failure_v1.yaml"
+  p4_t06_control_failure_sha256: "b424062a2ab7b4b0d352649bfd8ebe704e2a3f680084c27745525001830b8fd0"
+  event_contract_predecessor_sha256: "299400cc29ec0b234cf6b8174272e687ca05618e65187136691d1950af2302b4"
+  event_contract_recovered_sha256: "d5fa22e7bbc1d92f29acd6c8418d06ce7d81a042589ade77c7ba4fdebb0eda44"
+  distance_to_gr_ledger_sha256: "6028992fbba90b631808cd51e2ea9f2f6a5258e115667ef4256ad3a55a88894c"
+  focused_test_count: 11
+  p10_readiness_status: "PASS_PRESERVED_FREEZE"
+  protected_hash_mismatch_count: 0
+  preserved_anchor_hash_mismatch_count: 0
+  exact_path_rule_count: 6
+  historical_content_identity_count_preserved: 3
+  p4_t05_payload_changed: false
+  p4_t06_executed: false
+  checkpoint_invocation_count: 1
+  checkpoint_committed: false
+  checkpoint_staged: false
+  legacy_validation_used: false
+  scientific_status_changed: false
+  distance_to_gr_delta_changed: false
+  ontology_adoption_authorized: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_performed: false
+  blocked_claims:
+    - "repository-test PASS presented as scientific evidence theorem truth or Distance-to-GR progress"
+    - "source-binding reseal presented as scientific-ledger mutation"
+    - "taxonomy normalization presented as a new protected verdict"
+    - "dashboard warning parity presented as fabricated physics or Gate Chair history"
+    - "approval reuse or Gate Chair reexecution"
+    - "P4-T06 execution before checkpoint"
+    - "physical-spacetime identity source-law metric matter Einstein-equation or benchmark promotion"
+    - "proof publication push or completed derivation"
+
+plan_result:
+  plan_task_id: "P4-T05"
+  title: "Resolve the ontology-regime gate and preserve its accumulated transaction"
+  result_status: "PASS_IMPLEMENTATION_CHECKPOINT_BLOCKED_ACTIVE_JOB_ALLOWLIST_CONTRACT_DRIFT"
+  work_item_status: "blocked"
+  protected_payload_complete: true
+  admission_recovery_complete: true
+  exact_path_recovery_complete: true
+  repository_test_contract_recovery_complete: true
+  checkpoint_finding_count: 4
+  checkpoint_findings_resolved: 4
+  p10_readiness_status: "PASS_PRESERVED_FREEZE"
+  checkpoint_invocation_count: 1
+  checkpoint_committed: false
+  p4_t06_dependency_ready_after_checkpoint: false
+  p4_t06_executed: false
+  scientific_claims_changed_by_recovery: false
+  distance_to_gr_delta_changed_by_recovery: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+distance_to_gr:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "none"
+  milestone: "source_ontology"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "The ledger bytes are preserved; its existing live identity was rebound into a project-control source contract."
+  downstream_unlocked:
+    - "active_job_allowlist_contract_recovery"
+  downstream_still_blocked:
+    - "P4-T06_until_governed_checkpoint"
+    - "source_dynamics"
+    - "physical_source_manifold_identity"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+    - "benchmark_promotion"
+
+required_recovery:
+  task_type: "project_system_p4_t05_checkpoint_active_job_allowlist_contract_drift_recovery"
+  plan_task_id: "P4-T05"
+  strategy_id: "repair_p4_t05_checkpoint_active_job_allowlist_contract_drift_v1"
+  worker_skill: "improve-project-system"
+  role_family: "process-integrity-auditor@0.1.0"
+  objective: "Align the active AgentJob, execution-role overlay, and registry row to one least-privilege ordered write-path contract, prove live routing consistency, and invoke one future normal checkpoint."
+  blocker_path: "research_control/tasks/RT-20260724-007/artifacts/validation_blocker_checkpoint_active_job_allowlist_contract_drift_v1.yaml"
+  blocker_sha256: "504d0c5682060fbb1b17bea4c1bd79c09b20b1cf4398cb773ff8d73401087cfd"
+  executed: false
+
+required_next_packet:
+  task_type: "v21_p4_t06_integrate_selected_ontology_regime"
+  plan_task_id: "P4-T06"
+  objective: "Integrate the human-approved narrow continuum-first source boundary into tracked canonical sources without importing physical semantics or promoting claims."
+  dependency_ready_after_checkpoint: true
+  executed: false
+
+selected_next_route:
+  route_id: "v21_p4_t06_narrow_continuum_first_canonical_integration"
+  route_label: "ontology-law-research-packet"
+  role_family: "ontology-formalizer@0.2.0"
+  worker_skill: "continue-research"
+  task_type: "v21_p4_t06_integrate_selected_ontology_regime"
+  plan_task_id: "P4-T06"
+  target_derivation_milestone: "source_ontology"
+  milestone_burden: "Make tracked sources consistent with the human-approved ontology regime."
+  strategy_id: "integrate_narrow_continuum_first_boundary_without_physical_promotion_v1"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  physics_promotion_authorized: false
+  executed: false
+  next_action: "Remain unexecuted until the required allowlist recovery and a future AJ-RT-20260724-007 transaction checkpoint commit."
+  source_authorization_path: "research_control/tasks/RT-20260724-004/artifacts/canonical_next_route_authorization_v1.yaml"
+  source_authorization_sha256: "52edb6e43e024b09de58d2fc9242a6747630678800e91d47d6c4195203cd8c86"
+  source_handoff: "research_control/handoffs/handoff-0857.yaml"
+
+ordinary_route_guard:
+  schema_id: "ordinary_route_guard_evaluation_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  evaluation_id: "ORE-HANDOFF-0857"
+  ordinary_handoff_id: "handoff-0857"
+  threshold: 3
+  consecutive_project_system_tasks_before_selection: 3
+  ready_science_plan_task_ids:
+    - "P4-T06"
+  selected_plan_task_id: "P4-T06"
+  selected_route_class: "physics_bearing"
+  selected_worker_skill: "continue-research"
+  outcome: "physics_bearing_route_selected"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 102 validated, claimed, and consumed the exact immutable route once before its one improve-project-system invocation."
+      - "The exact 95-path manifest, blocker, lease, repository identity, source plan, and predecessor thread state matched before writes."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The task-local receipt reverse-reconstructs each predecessor identity and proves only the admitted contract changes."
+      - "Every protected P4-T05 payload hash, control anchor, exact-path rule, historical content identity, and P4-T06 nonexecution boundary remains exact."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "The four checkpoint findings and all eight P10 readiness tests pass."
+      - "Event-store and content-address outputs are deterministic with no drift."
+  post_checkpoint:
+    status: "FAIL"
+    evidence:
+      - "Every non-test staged acceptance gate and the planner shadow comparison passed."
+      - "The repository-wide 1239-test shard found one active-job allowlist contract mismatch with three narrow-routing failures and one cascading director-context error."
+      - "The checkpoint restored the entry index, left nothing staged, and created no commit."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Task index, current frontier, compact frontier, dependency graph, and claim graph were deterministically synchronized."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory synchronization and validate-only pass with local-cache-only warnings."
+  claim_language_linter:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "Changed-source validation has no hard claim-language failure."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  publication_authorized: false
+  proof_authority: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  canonical_ontology_edit_authorized: false
+  ontology_selection_authorized: false
+  physical_interpretation_establishment_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+three_tier_claim_summary:
+  adopted_objects: []
+  accepted_evidence_preconditions:
+    - "All four checkpoint-observed repository-test contract findings pass."
+    - "P10 readiness returns to its preserved freeze."
+    - "All protected P4-T05 payload hashes, control anchors, exact-path rules, and historical content identities remain exact."
+  open_or_blocked_physical_targets:
+    - "P4-T06 canonical narrow ontology integration after checkpoint"
+    - "source_ontology_derivation"
+    - "source_dynamics"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+  forbidden_overread:
+    - "repository-test PASS as scientific evidence theorem truth or Distance-to-GR movement"
+    - "source-binding reseal as a scientific-ledger change"
+    - "taxonomy normalization as a new protected verdict"
+    - "dashboard warning parity as fabricated physics or Gate Chair history"
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"
+  rationale: "The recursive goal route must carry the exact deterministic allowlist blocker to a fresh project-system recovery; no separate signal sidecar is needed."
+
+handoff_authority_boundary:
+  this_handoff_authorizes:
+    - "one fresh bounded improve-project-system recovery for the exact active-job allowlist contract drift"
+    - "one future normal checkpoint after the allowlist identities and routing tests agree"
+  this_handoff_does_not_authorize:
+    - "approval reuse or Gate Chair reexecution"
+    - "generation 102 or its checkpoint rerun"
+    - "broadening the active job to registries/**"
+    - "P4-T06 execution before a future checkpoint commit"
+    - "physical interpretation source-law metric matter Einstein-equation or benchmark promotion"
+    - "proof publication push external outreach or completed derivation"
+
+next_plan_task_id: "P4-T06"
+next_plan_task_execution_ready_after_checkpoint: false
+next_plan_task_executed: false
+next_recommendation: "Continue the recursive relay with one fresh bounded Process Integrity Auditor generation for the exact active-job allowlist contract drift. Do not rerun generation 102, retry its checkpoint, broaden the allowlist, or execute P4-T06 first."
+forbidden_conclusion_summary: "Repository-test contract recovery does not alter the protected P4-T05 selection, consume or broaden human authority, execute P4-T06, edit canonical ontology or science sources, move Distance-to-GR, establish source ontology or dynamics, promote a benchmark or physics claim, authorize proof publication or push, or complete a derivation."
+notes: "This is the ordinary research handoff. No project-improvement sidecar supersedes it."

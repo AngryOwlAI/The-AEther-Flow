@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260724-003` and `handoff-0853`.
+`RT-20260724-009` and `handoff-0859`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260724-003` |
-| Latest handoff ID | `handoff-0853` |
-| Current status | `p13_t06_reproducible_environment_pass_checkpoint_ready` |
+| Active task ID | `RT-20260724-009` |
+| Latest handoff ID | `handoff-0859` |
+| Current status | `p4_t05_handoff_route_guard_status_reconciliation_pass_ready_for_checkpoint` |
 | V16 completed | false |
-| Current route family | integration or selection (project system) |
-| Target derivation milestone | `source_equivalence_eqsrc` |
-| Current burden | none for physics derivation; live control burden is validation planner cutover |
-| Required next authority | One governed checkpoint may commit the completed P13-T06 transaction. No subsequent plan task is executable without new protected authority or external evidence: P13-T02 remains held by the P13-T01 cutover condition, P4-T05 requires explicit Gate Chair authority, and P13-T08 still lacks P13-T07. |
-| Next recommended action | Run the one authorized governed checkpoint for AJ-RT-20260724-003-001. After commit, hold P13-T02 until explicit publication authority and matched current-head hosted CI plus scheduled-full evidence satisfy the P13-T01 cutover precondition; P4-T05 separately requires explicit human Gate Chair authority. Do not execute P13-T08, P13-T02, or P4-T05 without their exact missing authority and evidence. |
+| Current route family | benchmark or recovery (project system) |
+| Target derivation milestone | `source_ontology` |
+| Current burden | none for physics derivation; live control burden is v21 p4 t06 integrate selected ontology regime |
+| Required next authority | After the governed checkpoint commits, one fresh P4-T06 continue-research packet may integrate only the already human-approved narrow continuum-first source boundary without physical interpretation or promotion. |
+| Next recommended action | After the generation-104 governed checkpoint commits, run one fresh bounded continue-research packet for P4-T06 to integrate the already approved narrow continuum-first source boundary without importing physical semantics or promoting claims. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260724-003` |
-| Latest research handoff ID | `handoff-0853` |
-| Latest research next action | Run the one authorized governed checkpoint for AJ-RT-20260724-003-001. After commit, hold P13-T02 until explicit publication authority and matched current-head hosted CI plus scheduled-full evidence satisfy the P13-T01 cutover precondition; P4-T05 separately requires explicit human Gate Chair authority. Do not execute P13-T08, P13-T02, or P4-T05 without their exact missing authority and evidence. |
+| Latest research task ID | `RT-20260724-009` |
+| Latest research handoff ID | `handoff-0859` |
+| Latest research next action | After the generation-104 governed checkpoint commits, run one fresh bounded continue-research packet for P4-T06 to integrate the already approved narrow continuum-first source boundary without importing physical semantics or promoting claims. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260724-003/00_TASK.yaml`.
-- Active task objective: Provide a hash-bound clean bootstrap that reproduces research-control, proof, scientific-checker, and benchmark-equivalence workflows from an external CPython 3.12 environment without embedding credentials, local caches, or relay goal state.
-- Latest handoff path: `research_control/handoffs/handoff-0853.yaml`.
-- Latest handoff summary: Generation 97 completed the bounded P13-T06 environment packet. A task-local external CPython 3.12 bootstrap binds ten tracked source hashes and the hash-locked development dependency graph, installed 52 exact distributions, passed the research-control, proof/scientific-checker, and benchmark-equivalence profiles, reproduced the tracked Lean proof object byte-for-byte with the pinned 4.30.0 toolchain, preserved all source hashes before and after, and selected no credential, cache, Git-metadata, checkout, or relay-goal input. Three platform limitations remain explicit and every result is project-system evidence only.
-- Current route family: integration or selection (project system).
-- Next recommended action: Run the one authorized governed checkpoint for AJ-RT-20260724-003-001. After commit, hold P13-T02 until explicit publication authority and matched current-head hosted CI plus scheduled-full evidence satisfy the P13-T01 cutover precondition; P4-T05 separately requires explicit human Gate Chair authority. Do not execute P13-T08, P13-T02, or P4-T05 without their exact missing authority and evidence.
+- Active task path: `research_control/tasks/RT-20260724-009/00_TASK.yaml`.
+- Active task objective: Represent RT-20260724-007 as implementation-completed while preserving validation FAIL and every checkpoint-failure receipt; prove immutable handoff-0857 then exposes P4-T06 as dependency-ready; preserve P4-T06 nonexecution; and invoke one governed cumulative checkpoint.
+- Latest handoff path: `research_control/handoffs/handoff-0859.yaml`.
+- Latest handoff summary: Generation 104 reconciles only the P4-T05 lifecycle layer: RT-20260724-007 is implementation-completed while validation and checkpoint status remain FAIL. The prospective staged receipt preserves seven immutable hashes, passes handoff-0857 and the RT-20260724-008 admission, exposes P4-T06 as dependency-ready after checkpoint, and confirms P4-T06 remains unexecuted.
+- Current route family: benchmark or recovery (project system).
+- Next recommended action: After the generation-104 governed checkpoint commits, run one fresh bounded continue-research packet for P4-T06 to integrate the already approved narrow continuum-first source boundary without importing physical semantics or promoting claims.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -88,18 +88,23 @@ Adopted source-only or source-extension objects:
 
 Scoped accepted evidence/preconditions:
 
-No accepted evidence or precondition entries are listed.
+| Evidence or precondition | Status | Supports target | Does not establish | Authority |
+| --- | --- | --- | --- | --- |
+| matter_coupling burden evidence/preconditions | accepted only as scoped source-extension evidence/precondition | matter-semantics and matter-coupling continuation only | no_source_law_adoption<br>no_metricdata_e_adoption<br>no_geff_scope_expansion<br>no_coupling_law_adoption<br>no_matter_coupling_derivation<br>no_matter_coupling_adoption<br>no_stress_energy_semantics<br>no_stress_energy_tensor<br>no_matter_action<br>no_detector_semantics<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation<br>no_future_source_extension_impossibility<br>no_global_theory_rejection | `research_control/tasks/RT-20260702-064/artifacts/source_certificate_operation_laws_v1.tex` |
 
 Open or blocked physical targets:
 
-No open or blocked physical target entries are listed.
+| Physical target | Status | Missing burden or authority | Evidence not to overread | Next lawful route or evidence |
+| --- | --- | --- | --- | --- |
+| matter_coupling | accepted_as_scoped_evidence_precondition | PositiveMSProfile_v1 RR_ETransportCompletenessOrInvarianceLaw_v1 NarrowMSCertEq_v1 SourceCertificateAlgebraPrimitives_v1 and SourceCertificateOperationLaws_v1 are accepted or drafted only as scoped source-extension evidence/preconditions evidence-status draft/control certificate primitives or draft/control operation-law support under declared source-side and fail-closed scope while no source-law adoption no RR_ETransportCompletenessOrInvarianceLaw_v1 adoption no PositiveMSProfile_v1 adoption no SourceMatterSemanticsAdoptionReadinessLaw_v1 law adoption no source-extension data adoption beyond exact scoped gate result no matter-semantics adoption no detector-semantics adoption no coupling-law adoption no matter-coupling derivation no stress-energy semantics no matter action no MetricData(E) adoption no g_eff scope expansion no Einstein-equation premise no benchmark fit and no downstream promotion occurred | no_source_law_adoption<br>no_metricdata_e_adoption<br>no_geff_scope_expansion<br>no_coupling_law_adoption<br>no_matter_coupling_derivation<br>no_matter_coupling_adoption<br>no_stress_energy_semantics<br>no_stress_energy_tensor<br>no_matter_action<br>no_detector_semantics<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation<br>no_future_source_extension_impossibility<br>no_global_theory_rejection | research_control/tasks/RT-20260702-064/artifacts/source_certificate_operation_laws_v1.tex |
+| einstein_equations | not_started | dynamics action or variation | no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | research_control/program_state.yaml |
+| benchmark_promotion | blocked | all upstream derivation burdens | no_benchmark_promotion<br>no_benchmark_gate_chair_closure<br>no_completed_derivation | research_control/program_state.yaml |
 
 Forbidden overreads:
 
-- environment or validator PASS as scientific evidence theorem truth or Distance-to-GR movement
-- proof-object reproduction as proof authority or physical interpretation
-- benchmark-equivalence PASS as exact-GR benchmark promotion
-- checkpoint PASS as publication proof or hosted-CI evidence
+- three-tier summary as physics proof
+- accepted evidence/preconditions as adopted objects
+- current-frontier rendering as downstream promotion
 
 ## Matter-Coupling Boundary
 
@@ -277,7 +282,7 @@ preserves the raw ledger `current_status` field for continuity.
 
 | Burden ID | Milestone | Reader-facing status | Legacy status | Control status | Mathematical status | Physical status | Promotion status | Overread guard | Last evidence |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| `source_ontology_primitives` | `source_ontology` | draft source-ontology primitives only | draft object exists | draft_control_object_exists | definition_only_or_draft_object | no_canonical_ontology_adoption | draft_control_only | no_canonical_ontology_edit<br>no_benchmark_promotion<br>no_completed_derivation | `AGENTS.md` |
+| `source_ontology_primitives` | `source_ontology` | draft source-ontology primitives only | accepted | gate_review_completed | definition_only_or_draft_object | no_physical_interpretation_authorized | scoped_source_evidence_only | no_canonical_ontology_edit<br>no_source_law_adoption<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/tasks/RT-20260724-004/artifacts/ontology_regime_gate_chair_decision_v1.tex` |
 | `source_equivalence_eqsrc` | `source_equivalence_eqsrc` | draft source-equivalence object only | draft object exists | draft_control_object_exists | general_equivalence_theorem_missing | downstream_gr_blocked | draft_control_only | no_source_law_adoption<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/program_state.yaml` |
 | `retain_h` | `source_equivalence_eqsrc` | blocked by missing primitive | blocked by missing primitive | blocked | primitive_missing | no_retention_law_adoption | none | no_source_law_adoption<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/program_state.yaml` |
 | `gen_h` | `source_equivalence_eqsrc` | blocked by missing primitive | blocked by missing primitive | blocked | primitive_missing | no_generator_law_adoption | none | no_source_law_adoption<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/program_state.yaml` |
@@ -297,7 +302,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run the one authorized governed checkpoint for AJ-RT-20260724-003-001. After commit, hold P13-T02 until explicit publication authority and matched current-head hosted CI plus scheduled-full evidence satisfy the P13-T01 cutover precondition; P4-T05 separately requires explicit human Gate Chair authority. Do not execute P13-T08, P13-T02, or P4-T05 without their exact missing authority and evidence.
+After the generation-104 governed checkpoint commits, run one fresh bounded continue-research packet for P4-T06 to integrate the already approved narrow continuum-first source boundary without importing physical semantics or promoting claims.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -315,21 +320,21 @@ Layer status summary:
 
 | Status | Count | Meaning |
 | --- | --- | --- |
-| `PASS` | 5 | receipt complete |
-| `PASS_WITH_WARNINGS` | 1 | receipt complete with stated warnings |
+| `PASS` | 4 | receipt complete |
+| `PASS_WITH_WARNINGS` | 2 | receipt complete with stated warnings |
 | `PENDING` | 1 | open item; evidence must explain why |
 
 Validation layers:
 
 | Validation layer | Status | Meaning | Evidence |
 | --- | --- | --- | --- |
-| `pre_execution` | PASS | receipt complete | Generation 97 was validated, claimed, and consumed exactly once before its one routed improve-project-system invocation.<br>The routed clean manifest immutable strategy blocker and lease identities matched before writes. |
-| `completion_internal` | PASS | receipt complete | Tracked receipts bind exact source hashes clean-bootstrap inventory profile exclusions and proof-object reproduction results. |
-| `post_write` | PASS | receipt complete | Environment definition contract bootstrap proof benchmark project-system research-control memory and Git gates pass. |
-| `post_checkpoint` | PENDING | open item; evidence must explain why | One governed checkpoint remains required before any later Director action. |
-| `renderer` | PASS | receipt complete | Task index current frontier compact YAML compact JSON and compact Markdown mirror are current. |
-| `memory_bootstrap` | PASS | receipt complete | Tracked memory synchronization and validate-only pass with local-cache-only warnings. |
-| `claim_language_linter` | PASS_WITH_WARNINGS | receipt complete with stated warnings | Changed-source validation has no hard claim-language failure. |
+| `pre_execution` | PASS | receipt complete | Generation 104 validated, claimed, and consumed the exact immutable route once. |
+| `completion_internal` | PASS | receipt complete | The task-local receipt proves lifecycle reconciliation, seven immutable hashes, and P4-T06 nonexecution. |
+| `post_write` | PASS | receipt complete | The prospective staged task-local gate, narrow routing gates, full research-control validator, and four focused tests pass with handoff-0857 and RT-20260724-008 route admission recovered. |
+| `post_checkpoint` | PENDING | open item; evidence must explain why | One governed checkpoint remains to be invoked in the same generation-104 transaction. |
+| `renderer` | PASS | receipt complete | Current frontier, task index, compact frontier, dependency graph, and claim graph were refreshed from tracked authority. |
+| `memory_bootstrap` | PASS_WITH_WARNINGS | receipt complete with stated warnings | Tracked memory synchronization and validate-only passed with nine nonblocking local-cache findings. |
+| `claim_language_linter` | PASS_WITH_WARNINGS | receipt complete with stated warnings | Changed-source claim-language validation passed with zero hard failures and 1,496 historical warnings. |
 
 Authorization layers:
 
@@ -359,9 +364,9 @@ Authorization layers:
 
 Legacy compatibility records:
 
-- active task: `RT-20260724-003`;
-- latest handoff: `handoff-0853`;
-- current status: `p13_t06_reproducible_environment_pass_checkpoint_ready`;
+- active task: `RT-20260724-009`;
+- latest handoff: `handoff-0859`;
+- current status: `p4_t05_handoff_route_guard_status_reconciliation_pass_ready_for_checkpoint`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -371,8 +376,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0853.yaml`
-- `research_control/tasks/RT-20260724-003/00_TASK.yaml`
+- `research_control/handoffs/handoff-0859.yaml`
+- `research_control/tasks/RT-20260724-009/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -388,7 +393,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0853*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0859*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

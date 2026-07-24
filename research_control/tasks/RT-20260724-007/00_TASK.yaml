@@ -1,0 +1,79 @@
+validation_status: "FAIL"
+task_id: "RT-20260724-007"
+task_type: "project_system_p4_t05_checkpoint_repository_test_contract_drift_recovery"
+title: "Repair the P4-T05 checkpoint repository-test contract drift"
+task_taxonomy:
+  schema_id: "v21_task_taxonomy_v1"
+  work_kind: "benchmark_or_recovery"
+  milestone: "source_ontology"
+  candidate_family: "p4_t05_repository_test_contract_recovery"
+  result_kind: "implemented_and_validated_or_precisely_blocked"
+  authority: "project_control"
+  scope: "project_system"
+status: "completed"
+created_at: "2026-07-24T18:55:34Z"
+updated_at: "2026-07-24T20:13:35Z"
+closed_at: "2026-07-24T20:13:35Z"
+parent_task_id: "RT-20260724-006"
+parent_handoff_id: "handoff-0856"
+supersedes_active_routing_task_id: "RT-20260724-006"
+current_decision_id: "DDR-20260724-007"
+current_job_id: "AJ-RT-20260724-007-001"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260724-007"
+requires_human_gate: false
+human_authorization_note: "Generation 102 of the immutable user-requested relay routes exactly one improve-project-system frame to the repository-test contract-drift recovery. It does not reuse approval-20260724-001 or reopen the Gate Chair decision."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P4"
+  plan_task_id: "P4-T05"
+  recovery_for_plan_task_id: "P4-T05"
+  next_plan_task_id: "P4-T06"
+objective: "Repair only the four checkpoint-observed repository-test contract drifts, preserve all protected P4-T05 and exact-path evidence, restore the preserved P10 readiness freeze, and invoke one normal governed checkpoint before P4-T06."
+target_derivation_milestone: "source_ontology"
+milestone_burden: "Project-system checkpoint compatibility repair only; the protected P4-T05 selection, ontology boundary, scientific burden, and downstream promotion gates remain unchanged."
+route_label: "repair_p4_t05_checkpoint_repository_test_contract_drift_v1"
+project_system_change_only: true
+dual_budget_category: "system_bearing"
+primary_budget: "project_system"
+scientific_claims_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+claim_boundary_id: "CB-V21-P4-T05-REPOSITORY-TEST-CONTRACT-DRIFT-RECOVERY-001"
+claim_boundary:
+  allowed_scope: "One live Distance-to-GR source-binding reseal with dependent task-local receipts, two canonical project-control taxonomy values, one deterministic support-only dashboard test contract, one task-local validator and receipt, control records, generated derivative refresh, and one normal combined checkpoint."
+  immutable_parent_task: "RT-20260724-006"
+  immutable_parent_job: "AJ-RT-20260724-006-001"
+  immutable_parent_handoff: "handoff-0856"
+  protected_p4_t05_file_count: 6
+  preserved_control_anchor_count: 6
+  exact_path_rule_count: 6
+  checkpoint_rerun_of_generation_101_allowed: false
+  legacy_validation_allowed: false
+  p4_t05_scientific_payload_changed: false
+  p4_t06_executed: false
+  scientific_claims_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+documentation_impact_id: "DI-RT-20260724-007-001"
+completion_id: "AJC-AJ-RT-20260724-007-001"
+output_artifacts:
+  - "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_contract.json"
+  - "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_validation.json"
+  - "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_compact_receipt.json"
+  - "research_control/tasks/RT-20260722-002/artifacts/artifact_refs.json"
+  - "research_control/tasks/RT-20260722-002/artifacts/ca/d5fa22e7bbc1d92f29acd6c8418d06ce7d81a042589ade77c7ba4fdebb0eda44.json"
+  - "research_control/tasks/RT-20260722-002/artifacts/compact_receipt.json"
+  - "research_control/tasks/RT-20260724-007/artifacts/validate_repository_test_contract_recovery.py"
+  - "research_control/tasks/RT-20260724-007/artifacts/repository_test_contract_recovery_receipt.json"
+  - "research_control/tasks/RT-20260724-007/artifacts/validation_blocker_checkpoint_active_job_allowlist_contract_drift_v1.yaml"
+  - "research_control/tasks/RT-20260724-007/artifacts/p4_t06_checkpoint_allowlist_control_failure_v1.yaml"
+  - "research_control/handoffs/handoff-0857.yaml"
+  - "research_control/handoffs/handoff-0857.md"
+closure_status: "p4_t05_repository_test_contract_recovery_pass_checkpoint_blocked_active_job_allowlist_contract_drift"
+summary: "Generation 102 preserved its completed four-finding recovery, P10 freeze, protected hashes, control anchors, historical identities, and exact-path rules. Its only checkpoint passed every non-test staged gate but failed the repository test shard on one active-job allowlist contract mismatch with three narrow-routing failures and one cascading director-context error; the index was restored and no commit was created."
+next_recommended_action: "Run one fresh bounded Process Integrity Auditor recovery for the exact active-job allowlist contract drift; do not rerun generation 102, retry its checkpoint, broaden the allowlist, or execute P4-T06."
+project_improvement_signals: []
+notes: "This packet creates no new Gate Chair verdict, approval use, ontology edit, physical interpretation, Distance-to-GR movement, benchmark promotion, publication, push, or completed-derivation authority."

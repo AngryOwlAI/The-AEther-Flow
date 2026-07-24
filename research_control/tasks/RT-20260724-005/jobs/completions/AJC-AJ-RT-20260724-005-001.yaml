@@ -1,0 +1,418 @@
+validation_status: "FAIL"
+final_repository_validation_status: "FAIL_CHECKPOINT_STAGED_GIT_DIFF_CHECK"
+job_id: "AJ-RT-20260724-005-001"
+completion_id: "AJC-AJ-RT-20260724-005-001"
+task_id: "RT-20260724-005"
+task_type: "project_system_p4_t05_protected_human_override_admission_recovery"
+decision_id: "DDR-20260724-005"
+role_id: "validator-engineer"
+source_role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260724-005"
+status: "completed"
+created_at: "2026-07-24T16:00:01Z"
+started_at: "2026-07-24T16:00:01Z"
+completed_at: "2026-07-24T16:46:54Z"
+objective: "Implement and validate one fail-closed protected human-route override admission for the exact P4-T05 execution and its immediate checkpoint recovery, preserving the ordinary handoff equality rule and every noninference boundary."
+completion_summary: "The ordinary-route guard now recognizes exactly one hash-bound protected human-route mismatch contract. It validates the preserved P4-T05 execution and its immediate generation-100 Validator Engineer checkpoint recovery, requires the one-time consumed approval plus matching Director decision human-authorization source handoff and recursive routes, and rejects missing stale mismatched reused broadened unconsumed non-immediate or inference-widening chains. Jobs without the exact receipt still require plan-task equality with the ordinary handoff. All focused and working-tree gates pass, but the only governed checkpoint invocation failed closed on six staged blank-at-EOF findings in immutable P4-T05 artifacts; the index was restored and nothing was committed."
+objective_result: "p4_t05_protected_human_override_admission_pass_checkpoint_blocked_hash_bound_eof"
+
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P4"
+  plan_task_id: "P4-T05"
+  recovery_for_plan_task_id: "P4-T05"
+  recommendation_ids:
+    - "V21-R10"
+    - "V21-R11"
+    - "V21-R31"
+    - "V21-R61"
+    - "V21-R64"
+    - "V21-R67"
+  implementation_status: "recovery_completed_checkpoint_blocked"
+  protected_p4_t05_status: "payload_complete_and_admission_valid"
+  next_dependency_ready_work_item_after_checkpoint: "P4-T06"
+  next_work_item_executed: false
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 100
+  passes_consumed: 90
+  route_work_item_id: "P4-T05"
+  route_worker_skill: "improve-project-system"
+  route_sha256: "5d95a304c6763863564c271e00dfab0c1761c5411aabfc3e0098f5f4a81ea4a3"
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:100"
+  handoff_token: "efd2e2711f201cb40ea423160a4b5936b2b809fcc0e7c887"
+  relay_claim_token: "625f98af79f06201e24d3cd6e2a9961e36c46144bdd92adc"
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+
+transaction_status: "blocked_checkpoint_hash_bound_eof_recovery_required"
+result_disposition: "implemented_checkpoint_blocked"
+work_item_status: "blocked"
+plan_task_id: "P4-T05"
+checkpoint_commit: "none_checkpoint_staged_gate_failed"
+checkpoint_invocation_count: 1
+checkpoint_staged: false
+legacy_validation_used: false
+project_system_change_only: true
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS_IMPLEMENTATION_CHECKPOINT_BLOCKED"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  observed_durable_outputs:
+    physics: []
+    project_system:
+      - "scripts/research_control/ordinary_route_guard.py"
+      - "tests/test_ordinary_route_guard.py"
+      - "research_control/tasks/RT-20260722-015/artifacts/ordinary_route_guard_policy_v1.md"
+      - "research_control/tasks/RT-20260724-004/artifacts/protected_human_route_override_admission_v1.yaml"
+      - "research_control/tasks/RT-20260724-005/artifacts/protected_human_route_override_admission_v1.yaml"
+      - "research_control/tasks/RT-20260724-005/artifacts/p4_t05_override_recovery_receipt.json"
+  accepted_criteria:
+    physics: []
+    project_system:
+      - "the exact P4-T05 protected execution and generation-100 recovery pass"
+      - "missing stale mismatched reused broadened unconsumed and non-immediate chains fail"
+      - "jobs without the exact override retain ordinary handoff equality"
+      - "all ordinary-handoff and scientific noninference limits remain false"
+      - "the preserved P4-T05 transaction passes required validation"
+      - "one governed combined checkpoint commits"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+physics_payload_admission_result:
+  status: "admitted"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+
+ordinary_route_guard_admission_result:
+  status: "PASS_PROTECTED_HUMAN_ROUTE_OVERRIDE_CHECKPOINT_RECOVERY"
+  source_handoff_id: "handoff-0853"
+  source_selected_plan_task_id: "P13-T02"
+  job_plan_task_id: "P4-T05"
+  guard_outcome: "all_ready_science_blocked_exception"
+  override_schema_id: "protected_human_route_override_admission_v1"
+  protected_job_id: "AJ-RT-20260724-004-001"
+  protected_generation: 99
+  recovery_generation: 100
+  approval_id: "approval-20260724-001"
+  approval_reused: false
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  system_success_counts_as_physics: false
+  system_success_counts_as_distance_to_gr: false
+  scientific_status_changed: false
+  physics_promotion_authorized: false
+
+artifacts:
+  - ".agents/schemas/AGENT_JOB_SCHEMA.md"
+  - "scripts/research_control/ordinary_route_guard.py"
+  - "tests/test_ordinary_route_guard.py"
+  - "research_control/tasks/RT-20260722-015/artifacts/ordinary_route_guard_policy_v1.md"
+  - "research_control/tasks/RT-20260722-015/artifacts/ordinary_route_guard_validation_report.json"
+  - "research_control/tasks/RT-20260722-015/artifacts/ordinary_route_guard_compact_receipt.json"
+  - "research_control/tasks/RT-20260724-004/artifacts/protected_human_route_override_admission_v1.yaml"
+  - "research_control/tasks/RT-20260724-005/artifacts/protected_human_route_override_admission_v1.yaml"
+  - "research_control/tasks/RT-20260724-005/artifacts/validate_p4_t05_override_recovery.py"
+  - "research_control/tasks/RT-20260724-005/artifacts/p4_t05_override_recovery_receipt.json"
+  - "research_control/tasks/RT-20260724-005/artifacts/validation_blocker_checkpoint_hash_bound_p4_t05_blank_eof_v1.yaml"
+output_paths:
+  - ".agents/schemas/AGENT_JOB_SCHEMA.md"
+  - "scripts/research_control/ordinary_route_guard.py"
+  - "tests/test_ordinary_route_guard.py"
+  - "research_control/tasks/RT-20260722-015/artifacts/ordinary_route_guard_policy_v1.md"
+  - "research_control/tasks/RT-20260724-004/artifacts/protected_human_route_override_admission_v1.yaml"
+  - "research_control/tasks/RT-20260724-005/**"
+  - "research_control/handoffs/handoff-0855.yaml"
+  - "research_control/handoffs/handoff-0855.md"
+  - "research_control/program_state.yaml"
+
+artifact_receipts:
+  - path: "scripts/research_control/ordinary_route_guard.py"
+    sha256: "d8925866089dce6e8fe147e2666f07c413a3a92669d909c38065ca33054cdecd"
+  - path: "tests/test_ordinary_route_guard.py"
+    sha256: "e4dfd902be009a7a3f5a2628df6f4b8e128f8dd3db981659e905320462948b6b"
+  - path: ".agents/schemas/AGENT_JOB_SCHEMA.md"
+    sha256: "321f74b79c2dc644f51965282ab5e821a89b0339039a0e19685b474c831bdb6d"
+  - path: "research_control/tasks/RT-20260722-015/artifacts/ordinary_route_guard_policy_v1.md"
+    sha256: "7e74e55d2f836e653d3aa8cfb9954b889bea4702146933415a2992300b1f8f4f"
+  - path: "research_control/tasks/RT-20260722-015/artifacts/ordinary_route_guard_validation_report.json"
+    sha256: "ff08fa1999e7e2f821162aa25f94d085e3ca5ee8efbc0009474510671764d6df"
+  - path: "research_control/tasks/RT-20260722-015/artifacts/ordinary_route_guard_compact_receipt.json"
+    sha256: "e18a9074cddc431829c81cea29ae398818f6900678db4e9d5d5729637ff91ca9"
+  - path: "research_control/tasks/RT-20260724-004/artifacts/protected_human_route_override_admission_v1.yaml"
+    sha256: "cacd703248067a597166395589b65cfacf75d22e42719596cf2eb3a533e486af"
+  - path: "research_control/tasks/RT-20260724-005/artifacts/protected_human_route_override_admission_v1.yaml"
+    sha256: "67386ab8627b360df1b4dfd9820ddc1ab722c6011f6dbd13d97607aad41b6011"
+  - path: "research_control/tasks/RT-20260724-005/artifacts/validate_p4_t05_override_recovery.py"
+    sha256: "520cff65182fd9e35b48cb9a4f676347be9f270d1ee55a37f34e612c88fac764"
+  - path: "research_control/tasks/RT-20260724-005/artifacts/p4_t05_override_recovery_receipt.json"
+    sha256: "ffccffb6ad1322bb3a503b4f01a1eacb5e501e7e4cd20b1a1cff3c8ee0584a69"
+  - path: "research_control/tasks/RT-20260724-005/artifacts/validation_blocker_checkpoint_hash_bound_p4_t05_blank_eof_v1.yaml"
+    sha256: "e78a29f97da516d72ddd08c711509bd6e68bb63362ddb7a4457ad90754afd364"
+
+preserved_activated_records:
+  - path: "research_control/approvals/approval-20260724-001.yaml"
+    sha256: "37038157b5deb23a3ae8249dcf5562ac8e9be37f6fa4ae8704c47b0eeb24a412"
+  - path: "research_control/tasks/RT-20260724-004/DDR-20260724-004.md"
+    sha256: "5b262a37de7b37b2244bc112584d1321807ebb5d9ca46907d897e5e4689fb24e"
+  - path: "research_control/tasks/RT-20260724-004/jobs/AJ-RT-20260724-004-001.yaml"
+    sha256: "835b97cf022fb8ce5845467d6703b0d3e6dc167b0f7ffff5706c8c4a6bd2decd"
+  - path: "research_control/tasks/RT-20260724-004/jobs/completions/AJC-AJ-RT-20260724-004-001.yaml"
+    sha256: "d248a2abfe6a2571b7ebb6a930c720f64af7f3d39cdf0e497a5e194308a055bf"
+  - path: "research_control/handoffs/handoff-0853.yaml"
+    sha256: "c231cdfc621a809d95069e9889d87bfcb7c9c4807576ba0c6407b7c83cc8d0a4"
+  - path: "research_control/handoffs/handoff-0854.yaml"
+    sha256: "19be01044894e6611cf11d8f7ce91cbff04a93e0bd88f8a6d353eca7fbf4acda"
+
+command_results:
+  - ".venv/bin/python -m unittest -v tests.test_ordinary_route_guard | exit_code=0 | 20 tests PASS in 27.556 seconds"
+  - ".venv/bin/python research_control/tasks/RT-20260722-015/artifacts/validate_ordinary_route_guard.py --write --json | exit_code=0 | 12 of 12 base guard fixtures PASS"
+  - ".venv/bin/python research_control/tasks/RT-20260724-005/artifacts/validate_p4_t05_override_recovery.py --write-report --json | exit_code=0 | 10 of 10 exact recovery checks PASS"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --json-summary | exit_code=0 | PASS with zero errors and 1730 historical warnings"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260724-005-001 | exit_code=1 | FAIL staged git diff check on six hash-bound blank-at-EOF findings; index restored; no commit"
+
+validation_summary:
+  status: "FAIL_CHECKPOINT_STAGED_GIT_DIFF_CHECK"
+  passing_gates:
+    - "the protected P4-T05 execution admission passes"
+    - "the immediate generation-100 checkpoint recovery admission passes"
+    - "20 focused ordinary-route tests pass"
+    - "12 inherited ordinary-route fixtures pass"
+    - "10 exact activated-record and recovery checks pass"
+    - "ordinary plan-task equality remains required without the override"
+    - "documentation-impact and signal parity pass on finalized precheckpoint control records"
+    - "research-control diff passes with zero errors"
+    - "tracked memory synchronization and validate-only pass"
+  pending_gates:
+    - "one fresh bounded exact-path whitespace-policy recovery"
+    - "one future normal governed checkpoint"
+  checkpoint:
+    invoked: true
+    invocation_count: 1
+    reason: "The only checkpoint invocation failed closed on six staged blank-at-EOF findings in immutable hash-bound P4-T05 artifacts; a distinct recovery must preserve those bytes."
+  staging:
+    attempted: true
+    index_changed: false
+  commit:
+    created: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 100 validated the exact route lease repository branch protected 61-path manifest and blocker receipt before one claim and consume."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Both exact protected admission chains and all fixed activated-record hashes pass the task-local validator."
+      - "Twenty focused tests cover the positive chains and required negative classes."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "The focused unit suite inherited fixture suite and task-local receipt pass after the final validator and policy writes."
+  post_checkpoint:
+    status: "FAIL"
+    evidence:
+      - "The only governed checkpoint invocation failed at staged git diff checking on six blank-at-EOF findings."
+      - "The entry index was restored, no paths remain staged, and no commit was created."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Task index current frontier compact frontier and graph surfaces were rendered before checkpoint; blocker-state derivatives will be refreshed for handoff."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory synchronization and validate-only passed before checkpoint with local-cache warnings only; blocker-state derivatives will be refreshed for handoff."
+  claim_language_linter:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "Changed-source claim-language validation passed with zero hard failures and historical warnings only."
+
+assumption_delta:
+  changed: false
+  assumptions_added: []
+  assumptions_removed: []
+  assumptions_adopted: 0
+  exact_reason: "The packet changes project-control admission mechanics only and does not add or remove a scientific assumption."
+
+candidate_or_theorem_identities:
+  candidate_ids_created: []
+  candidate_ids_linked: []
+  theorem_ids_created: []
+  identity_note: "No scientific candidate theorem source-law or ontology identity is created or changed."
+
+mathematical_payload_manifest: []
+new_mathematical_payload: []
+
+physics_progress_status:
+  status: "documentation_or_control_only_no_physics_delta"
+  target_derivation_milestone: "source_ontology"
+  milestone_burden: "Repair the project-control admission blocker without changing the completed protected selection or any scientific burden."
+  explanation: "The packet closes a validator gap and creates no mathematical or physics payload."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "none"
+  milestone: "source_ontology"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "The recovery changes project-control validation only; the existing protected P4-T05 control delta is preserved unchanged."
+  downstream_unlocked:
+    - "P4-T06_after_combined_governed_checkpoint"
+  downstream_still_blocked:
+    - "P4-T06_until_combined_checkpoint"
+    - "source_dynamics"
+    - "physical_source_manifold_identity"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+    - "benchmark_promotion"
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  push_authorized: false
+  publication_authorized: false
+  proof_authority: false
+
+three_tier_claim_summary:
+  adopted_objects: []
+  accepted_evidence_preconditions:
+    - "The exact P4-T05 protected execution and immediate recovery admission chains validate at fixed hashes."
+    - "Ordinary handoff equality remains the default rule."
+  open_or_blocked_physical_targets:
+    - "P4-T06 canonical source integration"
+    - "source_ontology_derivation"
+    - "source_dynamics"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+  forbidden_overread:
+    - "validator PASS as scientific evidence theorem truth or Distance-to-GR movement"
+    - "recovery admission as approval reuse or a new Gate Chair verdict"
+    - "checkpoint PASS as P4-T06 execution publication proof or physics promotion"
+
+resolved_project_improvement_signals: []
+project_improvement_signals: []
+project_improvement_sidecar_created: false
+project_improvement_bridge:
+  required: true
+  sidecar_path: ""
+  recursive_goal_recovery_required: true
+  reason: "The admission blocker is resolved, but the only checkpoint invocation exposed a distinct exact six-path staged blank-at-EOF blocker that requires one fresh improve-project-system recovery generation."
+
+selected_next_route:
+  route_id: "preserve_hash_bound_p4_t05_blank_eof_via_exact_path_whitespace_policy_v1"
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  phase_id: "P4"
+  plan_task_id: "P4-T05"
+  task_name: "Preserve six hash-bound P4-T05 artifacts through exact-path blank-at-EOF policy"
+  role_family: "process-integrity-auditor@0.1.0"
+  worker_skill: "improve-project-system"
+  task_type: "project_system_p4_t05_hash_bound_blank_eof_exact_path_recovery"
+  target_derivation_milestone: "source_ontology"
+  milestone_burden: "Preserve the consumed approval and protected P4-T05 evidence bytes while making the cumulative transaction checkpointable."
+  route_label: "project-system-recovery"
+  strategy_id: "preserve_hash_bound_p4_t05_blank_eof_via_exact_path_whitespace_policy_v1"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: false
+  p4_t05_gate_reexecution_required: false
+  approval_reuse_required: false
+  source_blocker_path: "research_control/tasks/RT-20260724-005/artifacts/validation_blocker_checkpoint_hash_bound_p4_t05_blank_eof_v1.yaml"
+  source_blocker_sha256: "e78a29f97da516d72ddd08c711509bd6e68bb63362ddb7a4457ad90754afd364"
+  next_plan_task_after_recovery: "P4-T06"
+
+checkpoint_failure:
+  blocker_path: "research_control/tasks/RT-20260724-005/artifacts/validation_blocker_checkpoint_hash_bound_p4_t05_blank_eof_v1.yaml"
+  blocker_sha256: "e78a29f97da516d72ddd08c711509bd6e68bb63362ddb7a4457ad90754afd364"
+  checkpoint_status: "FAIL"
+  failed_stage: "staged_acceptance_git_diff_check"
+  failure_class: "hash_bound_blank_at_eof"
+  finding_count: 6
+  checkpoint_committed: false
+  checkpoint_staged: false
+  entry_index_preserved: true
+  legacy_validation_used: false
+  preservation_reason: "Generation 100 authorized one admission repair and one checkpoint only. Rewriting protected P4-T05 bytes or invoking a second checkpoint would violate the immutable route; the exact-path whitespace policy requires a fresh bounded recovery."
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1010
+    relationship_row_count: 4993
+    semantic_row_count: 1010
+    vault_row_count: 1010
+    local_cache_only_warning_count: 9
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"ordinary route guard policy\" --limit 10 --json"
+      query_type: "search"
+      query_text: "ordinary route guard policy"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-TASKS-RT-20260722-015-ORDINARY-ROUTE-GUARD-POLICY-V1"
+  canonical_inspections:
+    - object_id: "MD-RESEARCH-CONTROL-TASKS-RT-20260722-015-ORDINARY-ROUTE-GUARD-POLICY-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260722-015/artifacts/ordinary_route_guard_policy_v1.md"
+      source_hash: "7e74e55d2f836e653d3aa8cfb9954b889bea4702146933415a2992300b1f8f4f"
+    - object_id: "MD-SCHEMA-AGENT-JOB-SCHEMA"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: ".agents/schemas/AGENT_JOB_SCHEMA.md"
+      source_hash: "321f74b79c2dc644f51965282ab5e821a89b0339039a0e19685b474c831bdb6d"
+  authority_note: "Generated wiki Obsidian SQLite semantic and .local retrieval outputs are retrieval layers only and not authority; the registered schema policy ordinary handoff approval decision completion blocker and recursive-goal route receipts govern."
+
+forbidden_conclusion_summary: "This packet does not reuse or amend the approval, reexecute P4-T05, execute P4-T06, edit canonical ontology or science sources, change Distance-to-GR, establish physics or proof authority, promote a benchmark, publish, push, or complete the derivation."
+verdict: "p4_t05_protected_human_override_admission_pass_checkpoint_blocked_hash_bound_eof"
+coherent_resolution_summary: "The prospective ordinary-route blocker now has an exact fail-closed admission path, but the sole checkpoint invocation exposed a distinct six-path hash-bound blank-at-EOF blocker. One fresh exact-path whitespace-policy recovery is required before P4-T06."

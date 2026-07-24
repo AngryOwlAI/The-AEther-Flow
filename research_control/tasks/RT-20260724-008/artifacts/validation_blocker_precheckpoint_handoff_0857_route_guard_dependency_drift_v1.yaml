@@ -1,0 +1,103 @@
+schema_id: "precheckpoint_handoff_route_guard_dependency_drift_blocker_v1"
+task_id: "RT-20260724-008"
+job_id: "AJ-RT-20260724-008-001"
+plan_task_id: "P4-T05"
+next_plan_task_id: "P4-T06"
+observed_at: "2026-07-24T21:46:11Z"
+checkpoint_command: ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260724-008-001"
+checkpoint_status: "NOT_INVOKED_PRECHECKPOINT_GATE_FAILED"
+checkpoint_committed: false
+checkpoint_staged: false
+checkpoint_invocation_count: 0
+legacy_validation_used: false
+failed_gate: "research_control_diff"
+failed_stage: "precheckpoint_isolated_staged_audit"
+failure_summary: "The exact four-way allowlist repair passes, but an isolated prospective staged-index audit fails with four ordinary-route errors. Handoff-0857 selects P4-T06 while its as-of completed-plan set still exposes P4-T05 because RT-20260724-007 is recorded as blocked after its checkpoint failure. The same two route-guard errors cascade into AJ-RT-20260724-008-001 source-handoff admission. The real index remained untouched and no checkpoint was invoked."
+
+root_finding:
+  finding_class: "handoff_route_guard_dependency_state_drift"
+  handoff_id: "handoff-0857"
+  handoff_path: "research_control/handoffs/handoff-0857.yaml"
+  handoff_sha256: "c4a4621f6cf027c7dc909a9c2414824f2817ae522864a474972c13c382051c4d"
+  predecessor_task_id: "RT-20260724-007"
+  predecessor_task_path: "research_control/tasks/RT-20260724-007/00_TASK.yaml"
+  predecessor_task_sha256: "28450b7d867012c43ea8a505b52fdaf0e76e72c4f86b48fc648a1f64c2928ad8"
+  predecessor_task_status: "blocked"
+  predecessor_completion_result: "PASS_IMPLEMENTATION_CHECKPOINT_BLOCKED"
+  declared_ready_science_plan_task_ids:
+    - "P4-T06"
+  observed_ready_science_plan_task_ids:
+    - "P4-T05"
+  selected_plan_task_id: "P4-T06"
+  finding: "The historical handoff's P4-T06 selection assumes P4-T05 implementation completion, while completed_plan_task_ids excludes the blocked RT-20260724-007 task even though its completion separately preserves a passing implementation and a failing checkpoint."
+
+isolated_staged_audit:
+  mechanism: "alternate_git_index"
+  alternate_index_directory: "/tmp/rt008-alt-index.MHGn7a"
+  real_index_changed: false
+  real_index_staged_after_audit: false
+  real_index_lock_present_after_audit: false
+  validation_command: ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --json-summary"
+  error_count: 4
+  warning_count: 1732
+  errors:
+    - "research_control/handoffs/handoff-0857.yaml: ordinary-route guard: ready_science_plan_task_ids_mismatch"
+    - "research_control/handoffs/handoff-0857.yaml: ordinary-route guard: selected_physics_route_not_dependency_ready"
+    - "AJ-RT-20260724-008-001 source handoff: ready_science_plan_task_ids_mismatch"
+    - "AJ-RT-20260724-008-001 source handoff: selected_physics_route_not_dependency_ready"
+  receipt_path: ".local/validation-receipts/working-sha256-b22a1202ad0d9b58a295cad8c79f048f9be7b886efeb1a1a864274bf31501635/RESEARCH-CONTROL-DIFF-B22A1202AD0D9B58/full.json"
+  status: "FAIL"
+
+focused_test_summary:
+  command: ".venv/bin/python -m unittest -v tests.test_routing_snapshot.NarrowRoutingSnapshotTests.test_live_default_does_not_compute_advisory_metrics tests.test_routing_snapshot.NarrowRoutingSnapshotTests.test_live_narrow_and_full_validation_agree_on_current_state tests.test_routing_snapshot.NarrowRoutingSnapshotTests.test_live_narrow_snapshot_has_subsecond_python_runtime tests.test_research_control.ResearchControlTests.test_continue_research_reports_director_context_packet"
+  tests_run: 4
+  passes: 2
+  failures: 1
+  errors: 1
+  status: "FAIL"
+  root_cascade: "The narrow router and subsecond snapshot pass; full parity exposes the four staged route-guard errors, and the blocked full validation prevents director-context snapshot capture."
+
+preservation_constraint:
+  allowlist_recovery_status: "PASS"
+  source_job_sha256: "e459320a6cf27f7b52aa1448371b78c847b41c0aaf03e4b5fb7e759494172737"
+  allowlist_recovery_receipt_sha256: "6c7754b64613a624b6d9cea0edbb209f78dbb45aa505374c900ab767d0b479b2"
+  representation_count: 4
+  allowed_write_path_count: 49
+  explicit_registry_path_count: 14
+  broad_registry_glob_present: false
+  protected_hash_mismatch_count: 0
+  approval_reused: false
+  p4_t05_gate_reexecuted: false
+  p4_t05_payload_changed: false
+  p4_t06_executed: false
+
+required_recovery:
+  strategy_id: "reconcile_p4_t05_implemented_checkpoint_blocked_status_with_handoff_0857_route_guard_v1"
+  worker_skill: "improve-project-system"
+  role_family: "process-integrity-auditor@0.1.0"
+  work_item_id: "P4-T05"
+  exact_behavior_change: "Reconcile the RT-20260724-007 task and registry completion-state representation with its own PASS_IMPLEMENTATION_CHECKPOINT_BLOCKED completion and active P4-T06 control failure so the immutable handoff-0857 route guard and the generation-103 source-handoff admission agree without editing handoff-0857 or weakening ordinary-route validation; then rerun the focused routing tests, full isolated staged audit, and one future governed checkpoint."
+  required_controls:
+    - "Preserve handoff-0857, its completion, blockers, and the generation-103 predecessor AgentJob byte-for-byte."
+    - "Do not treat implementation-complete status as a checkpoint commit or scientific execution authorization."
+    - "Keep the active P4-T06 failing-CI control failure authoritative until a governed checkpoint commits."
+    - "Make completed-plan dependency accounting and the task/registry status vocabulary agree without weakening the ordinary-route guard."
+    - "Prove the prospective staged full validator and the four focused routing/director-context tests pass."
+    - "Preserve the exact 49-item allowlist repair, all protected predecessor hashes, approval consumption, and P4-T06 nonexecution."
+    - "Run one future normal governed checkpoint without legacy validation."
+  fallback_forbidden: "Do not edit hash-protected handoff-0857, infer checkpoint success, rerun generation 103, invoke its unconsumed checkpoint, weaken the ordinary-route guard or tests, broaden allowed writes, execute P4-T06, or change scientific authority."
+  next_plan_item_after_recovery: "P4-T06"
+  next_plan_item_executed: false
+
+authority_boundary:
+  allowlist_recovery_complete: true
+  checkpoint_complete: false
+  p4_t05_plan_completion_finalized: false
+  p4_t06_execution_ready: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  ontology_or_source_law_adopted: false
+  external_review_or_publication_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+validation_status: "FAIL"

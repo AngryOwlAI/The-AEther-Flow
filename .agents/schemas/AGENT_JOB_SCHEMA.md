@@ -305,6 +305,60 @@ ordinary_route_guard_admission:
     physics_promotion_authorized: false
 ```
 
+An exact protected human-route override is the only admission branch that may
+permit a job's `plan_task_id` to differ from the source handoff selection. It
+is fail-closed and applies only when a deterministic task-local
+`protected_human_route_override_admission_v1.yaml` receipt binds all of the
+following:
+
+- the admitted job, protected job, exact plan task, and source ordinary
+  handoff;
+- one repository approval at its exact SHA-256, with `one_time_use: true`,
+  `status: consumed`, and `consumed_by` plus `expires_at` equal to the
+  protected job;
+- the matching Director decision and consumed human-authorization artifact at
+  exact hashes;
+- the protected recursive-goal route receipt, including goal identity,
+  generation, worker skill, plan task, route SHA-256, and idempotency key;
+- for a separately routed checkpoint recovery, the immediate next recursive
+  generation, `improve-project-system` worker identity, exact blocker hash,
+  matching recovery strategy, and no approval reuse;
+- the ordinary-route authority limits with every scientific, physics,
+  Distance-to-GR, sidecar-supersedence, and promotion inference disabled.
+
+The receipt path is deterministic:
+`research_control/tasks/<task_id>/artifacts/protected_human_route_override_admission_v1.yaml`.
+Jobs created after `2026-07-24T16:00:00Z` must also bind that receipt through
+`ordinary_route_guard_admission.override_authority.receipt_path` and
+`receipt_sha256`. The final staged checkpoint validation must see every bound
+record in the Git index. A missing, ignored, symlinked, stale, mismatched,
+broadened, unconsumed, reused, or non-immediate recovery chain fails.
+
+```yaml
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0000"
+  source_handoff_path: "research_control/handoffs/handoff-0000.yaml"
+  source_handoff_sha256: "lowercase sha256"
+  selected_plan_task_id: "the source handoff selection"
+  guard_outcome: "the source handoff guard outcome"
+  override_authority:
+    present: true
+    schema_id: "protected_human_route_override_admission_v1"
+    exact_plan_task_id: "the admitted protected plan task"
+    receipt_path: "research_control/tasks/<task_id>/artifacts/protected_human_route_override_admission_v1.yaml"
+    receipt_sha256: "lowercase sha256"
+    validator_support_status: "protected_human_route_override_admission_v1"
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+```
+
 After three consecutive completed project-system tasks, the ordinary handoff
 must select a dependency-ready physics-bearing v21 task. A project-system task
 may instead be selected only with an `ordinary_route_exception_receipt_v1`

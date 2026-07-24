@@ -591,6 +591,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-V21-P15-T01-EXACT-GR-INTERPRETIVE-MANUSCRIPT-V1` `research_control/tasks/RT-20260722-021/artifacts/exact_gr_interpretive_manuscript_v1.md`
 - `MD-V21-P4-T01-SOURCE-ASSUMPTION-AMBIGUITIES` `research_control/tasks/RT-20260720-030/artifacts/source_assumption_unresolved_ambiguities_v1.md`
 - `MD-V21-P4-T04-ONTOLOGY-REGIME-COMPARISON-REPORT-V1` `research_control/tasks/RT-20260721-002/artifacts/ontology_regime_comparison_report_v1.md`
+- `MD-V21-P4-T05-ONTOLOGY-REGIME-GATE-CHAIR-PARENT-FUSION-V1` `research_control/tasks/RT-20260724-004/artifacts/parent_fusion_notes_ontology_regime_gate_chair_review.md`
 - `MD-VALIDATOR-OPERATOR-WORKFLOW-PUBLICATION-BRIEF` `markdown/publication-briefs/validator-operator-workflow.publication-brief.md`
 
 ## pdf
@@ -1021,6 +1022,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V21-P4-T01-COMPREHENSIVE-SOURCE-ASSUMPTION-LEDGER` `research_control/tasks/RT-20260720-030/artifacts/comprehensive_source_assumption_ledger_v1.tex`
 - `TEX-V21-P4-T02-CONTINUUM-FIRST-PREMETRIC-ONTOLOGY-OPTION-V1` `research_control/tasks/RT-20260720-031/artifacts/continuum_first_premetric_ontology_option_v1.tex`
 - `TEX-V21-P4-T03-EMERGENCE-FIRST-PROCESS-ORDER-ONTOLOGY-OPTION-V1` `research_control/tasks/RT-20260720-032/artifacts/emergence_first_process_order_ontology_option_v1.tex`
+- `TEX-V21-P4-T05-ONTOLOGY-REGIME-GATE-CHAIR-DECISION-V1` `research_control/tasks/RT-20260724-004/artifacts/ontology_regime_gate_chair_decision_v1.tex`
 
 ## wiki_markdown
 
@@ -1608,6 +1610,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-V21-P15-T01-EXACT-GR-INTERPRETIVE-MANUSCRIPT-V1` `wiki/markdown/md-v21-p15-t01-exact-gr-interpretive-manuscript-v1.md`
 - `WIKI-MD-V21-P4-T01-SOURCE-ASSUMPTION-AMBIGUITIES` `wiki/markdown/md-v21-p4-t01-source-assumption-ambiguities.md`
 - `WIKI-MD-V21-P4-T04-ONTOLOGY-REGIME-COMPARISON-REPORT-V1` `wiki/markdown/md-v21-p4-t04-ontology-regime-comparison-report-v1.md`
+- `WIKI-MD-V21-P4-T05-ONTOLOGY-REGIME-GATE-CHAIR-PARENT-FUSION-V1` `wiki/markdown/md-v21-p4-t05-ontology-regime-gate-chair-parent-fusion-v1.md`
 - `WIKI-MD-VALIDATOR-OPERATOR-WORKFLOW-PUBLICATION-BRIEF` `wiki/markdown/md-validator-operator-workflow-publication-brief.md`
 - `WIKI-PDF-LEGACY-ONTOLOGY-AETHER-FLOW-CONSISTENCY` `wiki/pdf/pdf-legacy-ontology-aether-flow-consistency.md`
 - `WIKI-PDF-LEGACY-ONTOLOGY-AETHER-FLOW-DYNAMICS` `wiki/pdf/pdf-legacy-ontology-aether-flow-dynamics.md`
@@ -2032,3 +2035,4 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-V21-P4-T01-COMPREHENSIVE-SOURCE-ASSUMPTION-LEDGER` `wiki/tex/tex-v21-p4-t01-comprehensive-source-assumption-ledger.md`
 - `WIKI-TEX-V21-P4-T02-CONTINUUM-FIRST-PREMETRIC-ONTOLOGY-OPTION-V1` `wiki/tex/tex-v21-p4-t02-continuum-first-premetric-ontology-option-v1.md`
 - `WIKI-TEX-V21-P4-T03-EMERGENCE-FIRST-PROCESS-ORDER-ONTOLOGY-OPTION-V1` `wiki/tex/tex-v21-p4-t03-emergence-first-process-order-ontology-option-v1.md`
+- `WIKI-TEX-V21-P4-T05-ONTOLOGY-REGIME-GATE-CHAIR-DECISION-V1` `wiki/tex/tex-v21-p4-t05-ontology-regime-gate-chair-decision-v1.md`

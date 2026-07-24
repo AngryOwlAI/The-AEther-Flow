@@ -1,0 +1,93 @@
+schema_id: "hash_bound_blank_eof_checkpoint_blocker_v1"
+task_id: "RT-20260724-005"
+job_id: "AJ-RT-20260724-005-001"
+plan_task_id: "P4-T05"
+observed_at: "2026-07-24T16:46:54Z"
+checkpoint_command: ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260724-005-001"
+checkpoint_status: "FAIL"
+checkpoint_committed: false
+checkpoint_mode: "planner_compare"
+failed_gate: "git_diff_check"
+failed_stage: "staged_acceptance_git_diff_check"
+failed_command: "git diff --cached --check"
+failed_command_exit_code: 2
+failure_summary: "The protected-human-route admission recovery and every required working-tree gate pass, but the one normal planner-compare checkpoint stopped before commit because final staged Git diff checking found one extra blank line at EOF in each of six preserved hash-bound P4-T05 artifacts."
+findings:
+  - path: "research_control/tasks/RT-20260724-004/artifacts/child_phys_math_ontology_regime_gate_chair_review.yaml"
+    line: 42
+    finding: "new blank line at EOF"
+    sha256: "c86d80fea5916fd17aff2136506b4c7844b16fb5ee0d9591993b78cb70ec0d82"
+    trailing_bytes_hex: "31220a0a"
+  - path: "research_control/tasks/RT-20260724-004/artifacts/child_phys_phil_ontology_regime_gate_chair_review.yaml"
+    line: 34
+    finding: "new blank line at EOF"
+    sha256: "c39c5cd7ca47606bbc07c703c266aa2e79e152a349e9c9db4deef7bb0400c971"
+    trailing_bytes_hex: "2e220a0a"
+  - path: "research_control/tasks/RT-20260724-004/artifacts/human_authorization_p4_t05_continuum_first_v1.yaml"
+    line: 45
+    finding: "new blank line at EOF"
+    sha256: "3421808c71a64279ef5ba62df5376ab4999d2c67978d4f7ceabbeb0ae9b2bde6"
+    trailing_bytes_hex: "53220a0a"
+  - path: "research_control/tasks/RT-20260724-004/artifacts/ontology_regime_gate_chair_decision_v1.tex"
+    line: 162
+    finding: "new blank line at EOF"
+    sha256: "20ea795bbe93333b489e4f13601fd6bb1623f318b7847f9d2d24402c7490c934"
+    trailing_bytes_hex: "747d0a0a"
+  - path: "research_control/tasks/RT-20260724-004/artifacts/parent_conflict_review_ontology_regime_gate_chair_review.yaml"
+    line: 28
+    finding: "new blank line at EOF"
+    sha256: "c3b86e3a3dee6c4f6a4f6f7fc3a93333151c40277e7b9d8a9ad6bc1ae0463d21"
+    trailing_bytes_hex: "65220a0a"
+  - path: "research_control/tasks/RT-20260724-004/artifacts/parent_fusion_notes_ontology_regime_gate_chair_review.md"
+    line: 50
+    finding: "new blank line at EOF"
+    sha256: "7fd0427102dd471b02b9b068492bac276369193a84c6f5c25d04698a8f8218c7"
+    trailing_bytes_hex: "652e0a0a"
+preservation_constraint:
+  approval_path: "research_control/approvals/approval-20260724-001.yaml"
+  approval_sha256: "37038157b5deb23a3ae8249dcf5562ac8e9be37f6fa4ae8704c47b0eeb24a412"
+  protected_completion_path: "research_control/tasks/RT-20260724-004/jobs/completions/AJC-AJ-RT-20260724-004-001.yaml"
+  protected_completion_sha256: "d248a2abfe6a2571b7ebb6a930c720f64af7f3d39cdf0e497a5e194308a055bf"
+  protected_handoff_path: "research_control/handoffs/handoff-0854.yaml"
+  protected_handoff_sha256: "19be01044894e6611cf11d8f7ce91cbff04a93e0bd88f8a6d353eca7fbf4acda"
+  reason_bytes_must_not_be_normalized_in_this_frame: "The six hashes are embedded in the consumed human-approval, Gate Chair decision, completion, compact receipt, authorization, and handoff chain. Normalizing the bytes here would exceed generation 100, invalidate exact preservation claims, and mutate protected evidence after activation."
+  protected_bytes_changed: false
+required_recovery:
+  strategy_id: "preserve_hash_bound_p4_t05_blank_eof_via_exact_path_whitespace_policy_v1"
+  worker_skill: "improve-project-system"
+  role_family: "process-integrity-auditor@0.1.0"
+  work_item_id: "P4-T05"
+  exact_behavior_change: "Add narrowly governed exact-path Git whitespace classifications for only the six immutable hash-bound files so blank-at-EOF is intentionally admitted without changing their bytes or weakening whitespace checks for any other path."
+  required_controls:
+    - "Use six exact repository-relative .gitattributes paths with no wildcard or directory-wide exemption."
+    - "Preserve the six file hashes and the approval, protected completion, and protected handoff hashes exactly."
+    - "Prove git check-attr resolves -blank-at-eof only for the six intended paths."
+    - "Prove a control fixture outside the six paths still fails blank-at-EOF checking."
+    - "Run the normal governed checkpoint once without --legacy-validation."
+  fallback_forbidden: "Do not use --legacy-validation or rewrite the consumed approval and protected P4-T05 evidence to bypass the staged whitespace gate."
+  next_plan_item_after_recovery: "P4-T06"
+  next_plan_item_executed: false
+validation_evidence:
+  focused_ordinary_route_test_status: "PASS_20_OF_20"
+  inherited_fixture_status: "PASS_12_OF_12"
+  exact_recovery_check_status: "PASS_10_OF_10"
+  documentation_impact_status: "PASS_ZERO_FINDINGS"
+  project_improvement_signal_status: "PASS"
+  memory_validation_status: "PASS_WITH_9_LOCAL_CACHE_WARNINGS"
+  claim_language_status: "PASS_ZERO_HARD_FAILURES"
+  research_control_diff_status: "PASS_ZERO_ERRORS_1730_HISTORICAL_WARNINGS"
+  checkpoint_git_diff_check: "FAIL_6_BLANK_AT_EOF"
+  checkpoint_invocation_count: 1
+  entry_index_restored: true
+  staged_after_failure: false
+authority_boundary:
+  protected_human_route_admission_recovery_complete: true
+  checkpoint_complete: false
+  p4_t05_plan_completion_finalized: false
+  p4_t06_execution_ready: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  ontology_or_source_law_adopted: false
+  external_review_or_publication_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false

@@ -1,0 +1,88 @@
+schema_id: "v21_ordinary_route_human_override_admission_blocker_v1"
+blocker_id: "BLOCK-P4-T05-ORDINARY-ROUTE-HUMAN-OVERRIDE-001"
+task_id: "RT-20260724-004"
+job_id: "AJ-RT-20260724-004-001"
+completion_id: "AJC-AJ-RT-20260724-004-001"
+plan_task_id: "P4-T05"
+detected_at: "2026-07-24T14:39:10Z"
+status: "blocked_precheckpoint_project_system_repair_required"
+failed_gate: "research_control_validation"
+failing_command: ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --json-summary"
+failing_predicate: "ordinary_route_guard.evaluate_agent_job_route_admission"
+exact_error: "job_plan_task_id_not_selected_by_handoff"
+diagnostic_receipt:
+  run_id: "RESEARCH-CONTROL-DIFF-060C13766A36A1E7"
+  receipt_path: ".local/validation-receipts/working-sha256-060c13766a36a1e764d86b2cddfc038c3700182070f0b193066123d9dc88ed50/RESEARCH-CONTROL-DIFF-060C13766A36A1E7/full.json"
+  receipt_is_untracked_non_authority: true
+  observed_error_count: 2
+  independently_corrected_nonblocker: "DISTANCE_TO_GR_LEDGER accepted-row promotion_status vocabulary was corrected to scoped_source_evidence_only."
+  remaining_error_count: 1
+  remaining_error: "job_plan_task_id_not_selected_by_handoff"
+final_strict_validation:
+  status: "FAIL"
+  exit_code: 1
+  error_count: 1
+  warning_count: 1730
+  finding_count: 1731
+  run_id: "RESEARCH-CONTROL-DIFF-A2379CC328209D03"
+  receipt_path: ".local/validation-receipts/working-sha256-a2379cc328209d03b66f5adfd641cbae2f83c822ee494b457de1dc2cfc7ae691/RESEARCH-CONTROL-DIFF-A2379CC328209D03/full.json"
+  receipt_is_untracked_non_authority: true
+  sole_error: "research_control/tasks/RT-20260724-004/jobs/AJ-RT-20260724-004-001.yaml: ordinary-route admission: job_plan_task_id_not_selected_by_handoff"
+  conclusion: "All other task, handoff, active-state, layered-status, renderer, documentation-impact, signal-parity, graph, and control findings are nonblocking or pass; the prospective protected-human-override admission gap is the sole checkpoint blocker."
+source_authority:
+  predecessor_handoff_path: "research_control/handoffs/handoff-0853.yaml"
+  predecessor_handoff_sha256: "c231cdfc621a809d95069e9889d87bfcb7c9c4807576ba0c6407b7c83cc8d0a4"
+  predecessor_selected_plan_task_id: "P13-T02"
+  predecessor_guard_outcome: "all_ready_science_blocked_exception"
+  tracked_approval_path: "research_control/approvals/approval-20260724-001.yaml"
+  tracked_approval_sha256: "37038157b5deb23a3ae8249dcf5562ac8e9be37f6fa4ae8704c47b0eeb24a412"
+  human_authorization_id: "HUMAN-P4-T05-20260722-CONTINUUM-FIRST-01"
+  immutable_goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  immutable_generation: 99
+  immutable_route_plan_task_id: "P4-T05"
+  immutable_route_sha256: "e3516b2144233b26ea4e5f5de144c01f76b3ca810a49e8a41850bfe53289d47f"
+defect:
+  location: "scripts/research_control/ordinary_route_guard.py"
+  symbol: "evaluate_agent_job_route_admission"
+  current_behavior: "Every prospective job must have a plan_task_id exactly equal to the predecessor handoff selected_next_route.plan_task_id."
+  missing_control_case: "No prospective admission branch can validate a later exact protected human authorization plus matching tracked approval Director decision and immutable recursive-goal route."
+  protected_stop_reason: "Changing the job plan_task_id to P13-T02, substituting an unrelated historical handoff, backdating the job, or rewriting handoff-0853 would misstate the actual protected P4-T05 authority chain."
+required_recovery:
+  strategy_id: "repair_prospective_ordinary_route_human_override_admission_v1"
+  worker_skill: "improve-project-system"
+  role_family: "validator-engineer@0.2.0"
+  objective: "Add one fail-closed prospective admission contract for an exact protected human-route override, requiring a tracked approval, matching Director decision, matching immutable recursive-goal route, exact plan-task identity, consumed approval evidence, and preserved ordinary-handoff authority limits."
+  focused_regressions:
+    - "Admit this exact P4-T05 authority chain only when every protected source identity and hash matches."
+    - "Reject a missing, stale, mismatched, reused, broadened, or unconsumed approval."
+    - "Reject a route whose plan task, generation, goal identity, Director decision, or source handoff does not match."
+    - "Preserve the ordinary handoff equality rule for jobs without the protected override contract."
+    - "Preserve all system-success, physics-promotion, Distance-to-GR, and scientific-status noninference limits."
+  preserved_transaction: "Keep the complete RT-20260724-004 P4-T05 payload, consumed approval, decision artifacts, ledger delta, and handoff bytes source-bounded; rerun every required gate and checkpoint the combined transaction once."
+  next_plan_item_after_recovery: "P4-T06"
+  next_plan_item_executed: false
+scientific_payload_status:
+  status: "complete_pending_control_checkpoint"
+  task_local_validation_status: "PASS"
+  protected_decision_completed: true
+  canonical_ontology_files_changed: false
+  p4_t06_dependency_ready_after_checkpoint: true
+  p4_t06_execution_ready_now: false
+authority_boundary:
+  current_agent_job_may_edit_shared_validator: false
+  current_agent_job_may_rewrite_predecessor_handoff: false
+  current_agent_job_may_substitute_an_unrelated_handoff: false
+  current_agent_job_may_checkpoint_with_failed_required_validation: false
+  approval_may_be_reused: false
+  p4_t05_gate_may_be_reexecuted: false
+  p4_t06_may_execute_before_recovery_checkpoint: false
+  scientific_claims_changed_by_recovery: false
+  distance_to_gr_changed_by_recovery: false
+  physics_promotion_authorized: false
+  proof_authority: false
+checkpoint:
+  attempted: false
+  invocation_count: 0
+  staged: false
+  committed: false
+  commit: "none_validation_failed"

@@ -1,0 +1,242 @@
+validation_status: "FAIL"
+handoff_id: "handoff-0856"
+task_id: "RT-20260724-006"
+job_id: "AJ-RT-20260724-006-001"
+completion_id: "AJC-AJ-RT-20260724-006-001"
+completion_path: "research_control/tasks/RT-20260724-006/jobs/completions/AJC-AJ-RT-20260724-006-001.yaml"
+completion_sha256: "857cc74b9cbf904a02c83e51c743b13b14393e5bddb2ed29d0a129bf957d541a"
+status: "blocked_validation"
+created_at: "2026-07-24T18:27:12Z"
+parent_handoff_id: "handoff-0855"
+plan_task_id: "P4-T05"
+source_role_id: "process-integrity-auditor"
+source_role_version: "0.1.0"
+source_execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260724-006"
+summary: "Generation 101 completed the exact-path P4-T05 policy and preserved every protected hash. Its only normal checkpoint passed every non-test staged gate but stopped before commit because the repository-wide 1231-test shard reported three failures and one cascading setup error. The entry index was restored, nothing remains staged, and P4-T06 remains unexecuted."
+next_action: "Run one fresh bounded improve-project-system recovery for repair_p4_t05_checkpoint_repository_test_contract_drift_v1. Repair only the four recorded test-contract drifts, preserve every protected P4-T05 hash and exact-path rule, and invoke one future normal checkpoint; do not rerun generation 101 or execute P4-T06."
+current_claim_boundary: "CB-V21-P4-T05-HASH-BOUND-BLANK-EOF-EXACT-PATH-001"
+loop_risk_route: "repair_p4_t05_checkpoint_repository_test_contract_drift_v1"
+
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260724-006"
+  latest_research_handoff_id: "handoff-0856"
+  latest_research_next_action: "Run one fresh bounded improve-project-system recovery for repair_p4_t05_checkpoint_repository_test_contract_drift_v1. Repair only the four recorded test-contract drifts, preserve every protected P4-T05 hash and exact-path rule, and invoke one future normal checkpoint; do not rerun generation 101 or execute P4-T06."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+
+claim_boundary:
+  allowed_next_scope: "One fresh bounded project-system recovery may repair only the four checkpoint-observed repository-test contract drifts, preserve the exact-path policy and every protected P4-T05 hash, and invoke one future normal checkpoint. P4-T06 remains conditional and unexecuted."
+  completed_task: "RT-20260724-006"
+  completed_completion_path: "research_control/tasks/RT-20260724-006/jobs/completions/AJC-AJ-RT-20260724-006-001.yaml"
+  completed_completion_sha256: "857cc74b9cbf904a02c83e51c743b13b14393e5bddb2ed29d0a129bf957d541a"
+  source_handoff_id: "handoff-0855"
+  source_handoff_path: "research_control/handoffs/handoff-0855.yaml"
+  source_handoff_sha256: "828de27d9c7bcdf7e5a8ed1ae728297d0f912dc7cb0964aa6433f34a04ee5a40"
+  immutable_route_sha256: "a3cecf4420194935a7c22f77a7028fb6536e438459a064bbc49872a8f8c2ef4b"
+  gitattributes_sha256: "34089430a0c826871432018cd36ae5452c7571b2a3d26ce1eceb7aaeb9e7c04b"
+  exact_path_rule_count: 6
+  total_literal_whitespace_rule_count: 10
+  wildcard_rule_count: 0
+  protected_hash_mismatch_count: 0
+  preserved_anchor_hash_mismatch_count: 0
+  intended_isolated_git_diff_check_passed: true
+  unrelated_control_attribute: "unspecified"
+  unrelated_control_blank_at_eof_failed_as_required: true
+  p4_t05_payload_changed: false
+  p4_t06_executed: false
+  checkpoint_invocation_count: 1
+  checkpoint_committed: false
+  checkpoint_staged: false
+  legacy_validation_used: false
+  scientific_status_changed: false
+  distance_to_gr_delta_changed: false
+  ontology_adoption_authorized: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_performed: false
+  checkpoint_blocker_path: "research_control/tasks/RT-20260724-006/artifacts/validation_blocker_checkpoint_repository_test_contract_drift_v1.yaml"
+  checkpoint_blocker_sha256: "fa0be9a6eeb3097172a440c09dd754b4898ed37bc48f5618d6c7ea82ce73b953"
+  blocked_claims:
+    - "Git policy or validator PASS presented as scientific evidence theorem truth or Distance-to-GR progress"
+    - "the exact-path recovery presented as approval reuse a new Gate Chair verdict or P4-T05 reexecution"
+    - "P4-T06 executed before the governed checkpoint and a fresh route"
+    - "source manifold identified with physical spacetime"
+    - "Phi parameter algebra invertibility stochastic gauge or physical-time semantics"
+    - "source dynamics metric causal clocks scale matter coupling stress-energy or Einstein equations"
+    - "exact-GR derivation benchmark promotion publication push proof authority or completed derivation"
+
+plan_result:
+  plan_task_id: "P4-T05"
+  title: "Human Gate Chair decision on the ontology regime"
+  result_status: "PASS_EXACT_PATH_POLICY_CHECKPOINT_BLOCKED_REPOSITORY_TEST_CONTRACT_DRIFT"
+  work_item_status: "blocked"
+  protected_payload_complete: true
+  admission_recovery_complete: true
+  exact_path_recovery_complete: true
+  checkpoint_invocation_count: 1
+  checkpoint_committed: false
+  p4_t06_dependency_ready_after_checkpoint: false
+  p4_t06_executed: false
+  scientific_claims_changed_by_recovery: false
+  distance_to_gr_delta_changed_by_recovery: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+distance_to_gr:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "none"
+  milestone: "source_ontology"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "Generation 101 changes Git path classification and project-control evidence only."
+  downstream_unlocked:
+    - "repository_test_contract_drift_recovery"
+  downstream_still_blocked:
+    - "P4-T06_until_repository_test_recovery_and_governed_checkpoint"
+    - "source_dynamics"
+    - "physical_source_manifold_identity"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+    - "benchmark_promotion"
+
+required_next_packet:
+  task_type: "project_system_p4_t05_checkpoint_repository_test_contract_drift_recovery"
+  plan_task_id: "P4-T05"
+  objective: "Repair only the four checkpoint-observed repository-test contract drifts while preserving the exact-path policy and every protected P4-T05 hash."
+  dependency_ready_after_checkpoint: false
+  executed: false
+
+selected_next_route:
+  route_id: "repair_p4_t05_checkpoint_repository_test_contract_drift_v1"
+  route_label: "project-system-recovery"
+  role_family: "validator-engineer@0.2.0"
+  worker_skill: "improve-project-system"
+  plan_task_id: "P4-T05"
+  target_derivation_milestone: "source_ontology"
+  milestone_burden: "Repair only the checkpoint-observed repository-test contract drift while preserving the protected P4-T05 transaction."
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: false
+  execution_ready_now: false
+  physics_promotion_authorized: false
+  executed: false
+  next_action: "Repair the exact stale event-store binding, protected-gate taxonomy enum mismatch, support-only route-orbit diagnostic expectation, and cascading P10 readiness failure, then invoke one future normal checkpoint."
+  source_blocker_path: "research_control/tasks/RT-20260724-006/artifacts/validation_blocker_checkpoint_repository_test_contract_drift_v1.yaml"
+  source_blocker_sha256: "fa0be9a6eeb3097172a440c09dd754b4898ed37bc48f5618d6c7ea82ce73b953"
+  source_handoff: "research_control/handoffs/handoff-0856.yaml"
+
+ordinary_route_guard:
+  schema_id: "ordinary_route_guard_evaluation_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  evaluation_id: "ORE-HANDOFF-0856"
+  ordinary_handoff_id: "handoff-0856"
+  threshold: 3
+  consecutive_project_system_tasks_before_selection: 2
+  ready_science_plan_task_ids:
+    - "P4-T05"
+  selected_plan_task_id: "P4-T05"
+  selected_route_class: "physics_bearing"
+  selected_worker_skill: "none_until_human_authorization"
+  outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 101 validated claimed and consumed the exact route once before its one improve-project-system invocation."
+      - "The exact 83-path manifest immutable strategy blocker lease and repository identities matched before writes."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Six literal rules preserve every protected hash and exempt no wildcard or unrelated path."
+      - "The isolated intended paths pass while the unrelated control retains the expected blank-at-EOF failure."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Task-local exact-path proof inherited P4-T05 recovery focused tests project-system research-control memory documentation claim-language and Git gates pass."
+  post_checkpoint:
+    status: "FAIL"
+    evidence:
+      - "The only checkpoint passed every non-test staged acceptance gate."
+      - "The repository-wide 1231-test shard reported three failures and one cascading setup error."
+      - "The entry index was restored, nothing remains staged, and no commit was created."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Task index current frontier compact frontier dependency graph and claim graph are synchronized."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory synchronization and validate-only pass with local-cache-only warnings."
+  claim_language_linter:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "Changed-source validation has no hard claim-language failure."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  publication_authorized: false
+  proof_authority: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  canonical_ontology_edit_authorized: false
+  ontology_selection_authorized: false
+  physical_interpretation_establishment_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+three_tier_claim_summary:
+  adopted_objects: []
+  accepted_evidence_preconditions:
+    - "The six exact-path Git classifications and negative control pass."
+    - "All six payload hashes and six preserved control anchors remain exact."
+    - "The prior protected continuum-first research-architecture selection remains unchanged."
+  open_or_blocked_physical_targets:
+    - "canonical P4-T06 ontology integration"
+    - "source_ontology_derivation"
+    - "source_dynamics"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+  forbidden_overread:
+    - "Git path-policy or validator PASS as scientific evidence theorem truth or Distance-to-GR movement"
+    - "P4-T05 selection as physical-spacetime identity source-law adoption benchmark promotion or completed derivation"
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"
+  rationale: "The recursive goal route directly carries the exact deterministic repository-test blocker and no separate project-improvement sidecar is needed."
+
+next_recommendation: "Continue the recursive relay with one fresh bounded Validator Engineer generation for the exact repository-test contract-drift blocker. Do not rerun generation 101, retry its checkpoint, weaken the test shard, or execute P4-T06 first."
+forbidden_conclusion_summary: "Git policy compatibility, checkpoint readiness, or the protected P4-T05 selection is not scientific proof and does not authorize physical-spacetime identity, Phi semantics, source dynamics, metric or causal structure, matter coupling, Einstein equations, exact-GR derivation, benchmark promotion, publication, push, proof authority, or a completed derivation."

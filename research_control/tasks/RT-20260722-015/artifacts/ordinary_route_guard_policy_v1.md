@@ -122,6 +122,22 @@ hash through `ordinary_route_guard_admission_v1`. The job's plan task must be
 the handoff selection. Project-improvement handoff sidecars remain separate
 signal-routing artifacts and cannot supersede the ordinary research handoff.
 
+The sole mismatch branch is
+`protected_human_route_override_admission_v1`. It requires a deterministic
+task-local receipt that hash-binds the admitted and protected jobs, the exact
+plan task and ordinary source handoff, a one-time consumed repository approval,
+the matching Director decision, the consumed human-authorization artifact, and
+the immutable recursive-goal route identity. A separately routed checkpoint
+recovery must use the immediate next generation through
+`improve-project-system`, bind the exact blocker and strategy, and prove that it
+does not reuse the protected approval.
+
+Jobs created after `2026-07-24T16:00:00Z` must name the deterministic receipt
+path and SHA-256 inside `override_authority`. Final staged validation requires
+all bound records in the Git index. Missing, ignored, symlinked, stale,
+mismatched, broadened, unconsumed, reused, or non-immediate chains fail. Jobs
+without this exact receipt remain under the ordinary handoff-equality rule.
+
 This entire policy is project-control evidence only. A passing route guard
 does not imply scientific quality, correctness, ontology adoption, physical
 interpretation, Distance-to-GR progress, proof authority, publication, or a

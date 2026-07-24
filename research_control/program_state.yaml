@@ -1,9 +1,387 @@
 mode: "director_led_research_control"
-active_task_id: "RT-20260724-003"
-latest_handoff_id: "handoff-0853"
-current_status: "p13_t06_reproducible_environment_pass_checkpoint_ready"
-claim_boundary_summary: "RT-20260724-003 completed the bounded P13-T06 environment packet. A task-local external CPython 3.12 bootstrap binds ten tracked source hashes and the hash-locked development dependency graph, installed 52 exact distributions, passed the research-control proof/scientific-checker and benchmark-equivalence profiles, reproduced the tracked Lean proof object byte-for-byte with the pinned 4.30.0 toolchain, preserved source hashes before and after, and selected no credential cache Git-metadata checkout or relay-goal input. Three platform limitations remain explicit. P13-T02 remains held by the P13-T01 cutover evidence requirement, P4-T05 requires explicit Gate Chair authority, P13-T08 still lacks P13-T07, and no scientific Distance-to-GR ontology benchmark proof publication push hosted-workflow or external authority changed."
-next_recommended_action: "Run the one authorized governed checkpoint for AJ-RT-20260724-003-001. After commit, hold P13-T02 until explicit publication authority and matched current-head hosted CI plus scheduled-full evidence satisfy the P13-T01 cutover precondition; P4-T05 separately requires explicit human Gate Chair authority. Do not execute P13-T08, P13-T02, or P4-T05 without their exact missing authority and evidence."
+active_task_id: "RT-20260724-009"
+latest_handoff_id: "handoff-0859"
+current_status: "p4_t05_handoff_route_guard_status_reconciliation_pass_ready_for_checkpoint"
+claim_boundary_summary: "RT-20260724-009 records RT-20260724-007 as implementation-completed while preserving validation FAIL and every immutable checkpoint receipt. The prospective staged reconciliation passes with P4-T06 dependency-ready after checkpoint and still unexecuted."
+next_recommended_action: "After the generation-104 governed checkpoint commits, run one fresh bounded continue-research packet for P4-T06 to integrate the already approved narrow continuum-first source boundary without importing physical semantics or promoting claims."
+
+p4_t05_handoff_route_guard_status_reconciliation:
+  task_id: "RT-20260724-009"
+  parent_task_id: "RT-20260724-008"
+  parent_handoff_id: "handoff-0858"
+  plan_task_id: "P4-T06"
+  recovery_for_plan_task_id: "P4-T05"
+  claim_boundary_id: "CB-V21-P4-T05-HANDOFF-ROUTE-GUARD-STATUS-RECONCILIATION-001"
+  status: "PASS_STATUS_RECONCILIATION_READY_FOR_CHECKPOINT"
+  work_item_status: "completed"
+  target_derivation_milestone: "none"
+  milestone_burden: "Project-system status reconciliation and checkpoint recovery only; no derivation milestone advances."
+  route_label: "reconcile_p4_t05_implemented_checkpoint_blocked_status_with_handoff_0857_route_guard_v1"
+  selected_role_family: "process-integrity-auditor@0.1.0"
+  selected_worker_skill: "improve-project-system"
+  immutable_route_sha256: "2457ca061ce4234064c801da4b641d12a9519b208270e306b70879550c07a646"
+  mutable_task_path: "research_control/tasks/RT-20260724-007/00_TASK.yaml"
+  mutable_registry_path: "registries/RESEARCH_TASK_REGISTRY.csv"
+  source_handoff_path: "research_control/handoffs/handoff-0857.yaml"
+  source_handoff_sha256: "c4a4621f6cf027c7dc909a9c2414824f2817ae522864a474972c13c382051c4d"
+  blocker_path: "research_control/tasks/RT-20260724-008/artifacts/validation_blocker_precheckpoint_handoff_0857_route_guard_dependency_drift_v1.yaml"
+  blocker_sha256: "ba90f9bb7c8fd9a8b1e989f2fc94fb8b8227c7b735064070e6907d359743bcb7"
+  control_failure_path: "research_control/tasks/RT-20260724-008/artifacts/p4_t06_precheckpoint_handoff_0857_route_guard_control_failure_v1.yaml"
+  control_failure_sha256: "7e1b1e6454446d11656b0008954bccdc0045488e0fcb117da9af8490b9f154e7"
+  completion_path: "research_control/tasks/RT-20260724-009/jobs/completions/AJC-AJ-RT-20260724-009-001.yaml"
+  completion_sha256: "58bde0ab8c95797fef15323cf9d6ae12a2b45f0d18de7b2f016d5bef525dc3c4"
+  validator_path: "research_control/tasks/RT-20260724-009/artifacts/validate_p4_t05_handoff_route_guard_status_reconciliation.py"
+  validator_sha256: "241726570836cf0404cbf5a971621f478dea7d29954cf0d5fbeec873a5dca4c3"
+  receipt_path: "research_control/tasks/RT-20260724-009/artifacts/p4_t05_handoff_route_guard_status_reconciliation_receipt.json"
+  receipt_sha256: "922c74a06ec8fc29ef2ea33e4f00e038f4658461ad9eef1ae28e1e75ba1359b2"
+  handoff_id: "handoff-0859"
+  handoff_yaml_sha256: "513919a1785d78a190e30b4734737e61f3aede829820337dfbe9b07f0abcbcd7"
+  handoff_markdown_sha256: "787435d5e7f3ba8fcf91fbeb40303c72f321cad0730268b359c29f883d558b9f"
+  repaired_task_status: "completed"
+  repaired_registry_status: "completed"
+  preserved_validation_status: "FAIL"
+  handoff_0857_guard_status: "PASS"
+  rt008_admission_status: "PASS"
+  protected_hash_mismatch_count: 0
+  p4_t06_executed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  checkpoint_invocation_count: 0
+  checkpoint_committed: false
+  selected_next_work_item: "P4-T06"
+  selected_next_worker_skill: "continue-research"
+  selected_next_role_family: "ontology-formalizer@0.2.0"
+  selected_next_route_label: "ontology-law-research-packet"
+  selected_next_strategy_id: "integrate_narrow_continuum_first_boundary_without_physical_promotion_v1"
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
+
+p4_t05_active_job_allowlist_contract_recovery:
+  task_id: "RT-20260724-008"
+  parent_task_id: "RT-20260724-007"
+  parent_handoff_id: "handoff-0857"
+  plan_task_id: "P4-T06"
+  recovery_for_plan_task_id: "P4-T05"
+  claim_boundary_id: "CB-V21-P4-T05-ACTIVE-JOB-ALLOWLIST-CONTRACT-RECOVERY-001"
+  status: "PASS_ALLOWLIST_RECOVERY_PRECHECKPOINT_BLOCKED_HANDOFF_ROUTE_GUARD"
+  work_item_status: "blocked"
+  target_derivation_milestone: "none"
+  milestone_burden: "Project-system allowlist identity and checkpoint recovery only; no derivation milestone advances."
+  route_label: "repair_p4_t05_checkpoint_active_job_allowlist_contract_drift_v1"
+  selected_role_family: "process-integrity-auditor@0.1.0"
+  selected_worker_skill: "improve-project-system"
+  immutable_route_sha256: "27752a4c8f112863736551e488074305532f04cf639cba2efc01e62bc04ad22c"
+  source_job_path: "research_control/tasks/RT-20260724-007/jobs/AJ-RT-20260724-007-001.yaml"
+  source_job_sha256: "e459320a6cf27f7b52aa1448371b78c847b41c0aaf03e4b5fb7e759494172737"
+  blocker_path: "research_control/tasks/RT-20260724-007/artifacts/validation_blocker_checkpoint_active_job_allowlist_contract_drift_v1.yaml"
+  blocker_sha256: "504d0c5682060fbb1b17bea4c1bd79c09b20b1cf4398cb773ff8d73401087cfd"
+  control_failure_path: "research_control/tasks/RT-20260724-007/artifacts/p4_t06_checkpoint_allowlist_control_failure_v1.yaml"
+  control_failure_sha256: "b424062a2ab7b4b0d352649bfd8ebe704e2a3f680084c27745525001830b8fd0"
+  completion_path: "research_control/tasks/RT-20260724-008/jobs/completions/AJC-AJ-RT-20260724-008-001.yaml"
+  completion_sha256: "05a29a627ba393e78166c4b41a84d2851496c80ef5e18c0d542f8b69db887fd5"
+  validator_path: "research_control/tasks/RT-20260724-008/artifacts/validate_active_job_allowlist_contract_recovery.py"
+  validator_sha256: "b87227b348a82bb0bb25dc12772460c78391f9c68b24506773141f9bf5d0f563"
+  receipt_path: "research_control/tasks/RT-20260724-008/artifacts/active_job_allowlist_contract_recovery_receipt.json"
+  receipt_sha256: "6c7754b64613a624b6d9cea0edbb209f78dbb45aa505374c900ab767d0b479b2"
+  precheckpoint_blocker_path: "research_control/tasks/RT-20260724-008/artifacts/validation_blocker_precheckpoint_handoff_0857_route_guard_dependency_drift_v1.yaml"
+  precheckpoint_blocker_sha256: "ba90f9bb7c8fd9a8b1e989f2fc94fb8b8227c7b735064070e6907d359743bcb7"
+  p4_t06_control_failure_path: "research_control/tasks/RT-20260724-008/artifacts/p4_t06_precheckpoint_handoff_0857_route_guard_control_failure_v1.yaml"
+  p4_t06_control_failure_sha256: "7e1b1e6454446d11656b0008954bccdc0045488e0fcb117da9af8490b9f154e7"
+  required_allowed_write_path_count: 49
+  representation_count: 4
+  explicit_registry_path_count: 14
+  broad_registry_glob_present: false
+  protected_hash_mismatch_count: 0
+  p4_t06_executed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  checkpoint_invocation_count: 0
+  checkpoint_committed: false
+  selected_next_work_item: "P4-T06"
+  selected_next_worker_skill: "continue-research"
+  selected_next_execution_ready_after_checkpoint: false
+  selected_next_execution_ready_now: false
+  required_recovery_work_item: "P4-T05"
+  required_recovery_worker_skill: "improve-project-system"
+  required_recovery_role_family: "process-integrity-auditor@0.1.0"
+  required_recovery_strategy_id: "reconcile_p4_t05_implemented_checkpoint_blocked_status_with_handoff_0857_route_guard_v1"
+
+p4_t05_repository_test_contract_recovery:
+  task_id: "RT-20260724-007"
+  parent_task_id: "RT-20260724-006"
+  parent_handoff_id: "handoff-0856"
+  plan_task_id: "P4-T05"
+  next_plan_task_id: "P4-T06"
+  claim_boundary_id: "CB-V21-P4-T05-REPOSITORY-TEST-CONTRACT-DRIFT-RECOVERY-001"
+  status: "PASS_IMPLEMENTATION_CHECKPOINT_BLOCKED_ACTIVE_JOB_ALLOWLIST_CONTRACT_DRIFT"
+  work_item_status: "blocked"
+  target_derivation_milestone: "source_ontology"
+  milestone_burden: "Project-system checkpoint compatibility repair only; the protected P4-T05 selection, ontology boundary, scientific burden, and downstream promotion gates remain unchanged."
+  route_label: "repair_p4_t05_checkpoint_repository_test_contract_drift_v1"
+  selected_role_family: "validator-engineer@0.2.0"
+  selected_worker_skill: "improve-project-system"
+  immutable_route_sha256: "e0d449ee94e812d142a7ad85d4a8b47d21127165fb2c271002c253c7d6308ba5"
+  completion_path: "research_control/tasks/RT-20260724-007/jobs/completions/AJC-AJ-RT-20260724-007-001.yaml"
+  completion_sha256: "8ee9d5b739b25a95907660118d1b857c3cf4bd0d015336da2610d063d335ec7d"
+  blocker_path: "research_control/tasks/RT-20260724-006/artifacts/validation_blocker_checkpoint_repository_test_contract_drift_v1.yaml"
+  blocker_sha256: "fa0be9a6eeb3097172a440c09dd754b4898ed37bc48f5618d6c7ea82ce73b953"
+  validator_path: "research_control/tasks/RT-20260724-007/artifacts/validate_repository_test_contract_recovery.py"
+  validator_sha256: "4c25a2cff55bc8871af9f3382c79b8ac00a9d987c58cc2cdda873c3d2955f3a4"
+  receipt_path: "research_control/tasks/RT-20260724-007/artifacts/repository_test_contract_recovery_receipt.json"
+  receipt_sha256: "76560fa286a58aa57e322105da8c746e0c3a871b261556911dede242e3a8bd1c"
+  checkpoint_blocker_path: "research_control/tasks/RT-20260724-007/artifacts/validation_blocker_checkpoint_active_job_allowlist_contract_drift_v1.yaml"
+  checkpoint_blocker_sha256: "504d0c5682060fbb1b17bea4c1bd79c09b20b1cf4398cb773ff8d73401087cfd"
+  p4_t06_control_failure_path: "research_control/tasks/RT-20260724-007/artifacts/p4_t06_checkpoint_allowlist_control_failure_v1.yaml"
+  p4_t06_control_failure_sha256: "b424062a2ab7b4b0d352649bfd8ebe704e2a3f680084c27745525001830b8fd0"
+  event_contract_predecessor_sha256: "299400cc29ec0b234cf6b8174272e687ca05618e65187136691d1950af2302b4"
+  event_contract_recovered_sha256: "d5fa22e7bbc1d92f29acd6c8418d06ce7d81a042589ade77c7ba4fdebb0eda44"
+  event_validation_sha256: "6358f829c9e07adc6095a471621664830b37e7797c10b321b562b3f894b68b23"
+  event_compact_receipt_sha256: "04cc34d38b1b0125fb77c38f639895bfc49e0864ad62bfc43aba78666bef72b3"
+  artifact_refs_sha256: "321b470f2c03dcba402300b9d9e03bf387a3e8b4aa00d4272dda008965e6cccd"
+  artifact_identity_receipt_sha256: "0fef04187d465489e977ab93cd372ac8d254de5c6f4fcf3f75a177ca8a53bae5"
+  distance_to_gr_ledger_sha256: "6028992fbba90b631808cd51e2ea9f2f6a5258e115667ef4256ad3a55a88894c"
+  taxonomy_predecessor_sha256: "8f356e0faee842497e2b951d4fce81cc61501c5da77df6d2067cd5df625dba47"
+  taxonomy_recovered_sha256: "2dd31dcd422dfc88f1c2c7cad1ab79959817c352a02825ba8d2e1247edf8bf49"
+  dashboard_test_predecessor_sha256: "7e11317d735d7a717e40469310c2d72795c69439277d9197abf604007ec4a9ea"
+  dashboard_test_recovered_sha256: "83464024e5acfc9267c126a7893cab90781ca8d26558d0bb754a2aa654c6a346"
+  checkpoint_finding_count: 4
+  checkpoint_findings_resolved: 4
+  focused_test_count: 11
+  p10_readiness_status: "PASS_PRESERVED_FREEZE"
+  protected_hash_mismatch_count: 0
+  preserved_anchor_hash_mismatch_count: 0
+  exact_path_rule_count: 6
+  historical_content_identity_count_preserved: 3
+  p4_t05_payload_changed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  p4_t06_executed: false
+  checkpoint_invocation_count: 1
+  checkpoint_committed: false
+  checkpoint_staged: false
+  legacy_validation_used: false
+  checkpoint_failure_class: "active_job_allowlist_contract_drift"
+  checkpoint_test_count: 1239
+  checkpoint_failure_count: 3
+  checkpoint_error_count: 1
+  checkpoint_skipped_count: 1
+  checkpoint_entry_index_preserved: true
+  handoff_id: "handoff-0857"
+  handoff_yaml_sha256: "c4a4621f6cf027c7dc909a9c2414824f2817ae522864a474972c13c382051c4d"
+  handoff_markdown_sha256: "4a4964beb7864773e2f71bbf884a89b8dd22af7cbe3531fac4cd4829284ebd04"
+  selected_next_work_item: "P4-T06"
+  selected_next_worker_skill: "continue-research"
+  selected_next_role_family: "ontology-formalizer@0.2.0"
+  selected_next_route_label: "ontology-law-research-packet"
+  selected_next_strategy_id: "integrate_narrow_continuum_first_boundary_without_physical_promotion_v1"
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
+  required_recovery_work_item: "P4-T05"
+  required_recovery_worker_skill: "improve-project-system"
+  required_recovery_role_family: "process-integrity-auditor@0.1.0"
+  required_recovery_strategy_id: "repair_p4_t05_checkpoint_active_job_allowlist_contract_drift_v1"
+
+p4_t05_hash_bound_exact_path_whitespace_recovery:
+  task_id: "RT-20260724-006"
+  parent_task_id: "RT-20260724-005"
+  parent_handoff_id: "handoff-0855"
+  plan_task_id: "P4-T05"
+  next_plan_task_id: "P4-T06"
+  claim_boundary_id: "CB-V21-P4-T05-HASH-BOUND-BLANK-EOF-EXACT-PATH-001"
+  status: "PASS_EXACT_PATH_POLICY_CHECKPOINT_BLOCKED_REPOSITORY_TEST_CONTRACT_DRIFT"
+  work_item_status: "blocked"
+  target_derivation_milestone: "source_ontology"
+  milestone_burden: "Checkpoint the already authorized P4-T05 transaction without changing its protected selection, ontology boundary, scientific burden, or downstream promotion gates."
+  route_label: "preserve_hash_bound_p4_t05_blank_eof_via_exact_path_whitespace_policy_v1"
+  selected_role_family: "process-integrity-auditor@0.1.0"
+  selected_worker_skill: "improve-project-system"
+  immutable_route_sha256: "a3cecf4420194935a7c22f77a7028fb6536e438459a064bbc49872a8f8c2ef4b"
+  completion_path: "research_control/tasks/RT-20260724-006/jobs/completions/AJC-AJ-RT-20260724-006-001.yaml"
+  completion_sha256: "857cc74b9cbf904a02c83e51c743b13b14393e5bddb2ed29d0a129bf957d541a"
+  gitattributes_path: ".gitattributes"
+  gitattributes_sha256: "34089430a0c826871432018cd36ae5452c7571b2a3d26ce1eceb7aaeb9e7c04b"
+  validator_path: "research_control/tasks/RT-20260724-006/artifacts/validate_exact_path_whitespace_policy.py"
+  validator_sha256: "c5417c449416b25ce4c55eda4ebd32f7af7a7f107d70fe60bc469b9748466e25"
+  receipt_path: "research_control/tasks/RT-20260724-006/artifacts/exact_path_whitespace_policy_recovery_receipt.json"
+  receipt_sha256: "30a05486bcc6b1b07e2858d200b1eeb439678c68ca3509b170977680cdaceed7"
+  exact_path_rule_count: 6
+  total_literal_whitespace_rule_count: 10
+  wildcard_rule_count: 0
+  protected_hash_mismatch_count: 0
+  preserved_anchor_hash_mismatch_count: 0
+  intended_isolated_git_diff_check_status: "PASS"
+  unrelated_control_attribute: "unspecified"
+  unrelated_control_git_diff_check_status: "FAIL_EXPECTED_BLANK_LINE_AT_EOF"
+  protected_payload_changed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  checkpoint_invocation_count: 1
+  checkpoint_committed: false
+  checkpoint_staged: false
+  legacy_validation_used: false
+  checkpoint_blocker_path: "research_control/tasks/RT-20260724-006/artifacts/validation_blocker_checkpoint_repository_test_contract_drift_v1.yaml"
+  checkpoint_blocker_sha256: "fa0be9a6eeb3097172a440c09dd754b4898ed37bc48f5618d6c7ea82ce73b953"
+  checkpoint_failure_class: "repository_test_contract_drift"
+  checkpoint_test_count: 1231
+  checkpoint_failure_count: 3
+  checkpoint_error_count: 1
+  checkpoint_skipped_count: 1
+  checkpoint_entry_index_preserved: true
+  handoff_id: "handoff-0856"
+  handoff_yaml_sha256: "582ff5207d8a61f2b3e49fa561b99f6356c618c7a14d39f6eba0aa8bd8b57fc9"
+  handoff_markdown_sha256: "0f9e021ebdc3d1a4a786a8794de99c0a3762adaf40e708c45043a1a8d5b520d2"
+  selected_next_work_item: "P4-T05"
+  selected_next_worker_skill: "improve-project-system"
+  selected_next_role_family: "validator-engineer@0.2.0"
+  selected_next_route_label: "project-system-recovery"
+  selected_next_strategy_id: "repair_p4_t05_checkpoint_repository_test_contract_drift_v1"
+  selected_next_execution_ready_after_checkpoint: false
+  selected_next_execution_ready_now: false
+
+p4_t05_protected_human_override_admission_recovery:
+  task_id: "RT-20260724-005"
+  parent_task_id: "RT-20260724-004"
+  parent_handoff_id: "handoff-0854"
+  plan_task_id: "P4-T05"
+  next_plan_task_id: "P4-T06"
+  claim_boundary_id: "CB-V21-P4-T05-PROTECTED-HUMAN-OVERRIDE-ADMISSION-RECOVERY-001"
+  status: "PASS_PROTECTED_HUMAN_OVERRIDE_ADMISSION_CHECKPOINT_BLOCKED_HASH_BOUND_EOF"
+  work_item_status: "blocked"
+  target_derivation_milestone: "source_ontology"
+  milestone_burden: "Repair the project-control admission blocker without changing the completed protected selection or any scientific burden."
+  route_label: "repair_prospective_ordinary_route_human_override_admission_v1"
+  selected_role_family: "validator-engineer@0.2.0"
+  selected_worker_skill: "improve-project-system"
+  immutable_route_sha256: "5d95a304c6763863564c271e00dfab0c1761c5411aabfc3e0098f5f4a81ea4a3"
+  protected_dirty_manifest_sha256: "d9157387103ce44d1c5ed696892b90fb1f05926d617ef7d939b54c85aefea1f7"
+  protected_path_count: 61
+  protected_job_id: "AJ-RT-20260724-004-001"
+  protected_completion_path: "research_control/tasks/RT-20260724-004/jobs/completions/AJC-AJ-RT-20260724-004-001.yaml"
+  protected_completion_sha256: "d248a2abfe6a2571b7ebb6a930c720f64af7f3d39cdf0e497a5e194308a055bf"
+  completion_path: "research_control/tasks/RT-20260724-005/jobs/completions/AJC-AJ-RT-20260724-005-001.yaml"
+  completion_sha256: "a8da857a9759d8bb0021b42585adca3ea8c41b6d5b3b394a3e74e5d9b0d9b7c0"
+  protected_execution_receipt_path: "research_control/tasks/RT-20260724-004/artifacts/protected_human_route_override_admission_v1.yaml"
+  protected_execution_receipt_sha256: "cacd703248067a597166395589b65cfacf75d22e42719596cf2eb3a533e486af"
+  checkpoint_recovery_receipt_path: "research_control/tasks/RT-20260724-005/artifacts/protected_human_route_override_admission_v1.yaml"
+  checkpoint_recovery_receipt_sha256: "67386ab8627b360df1b4dfd9820ddc1ab722c6011f6dbd13d97607aad41b6011"
+  compact_receipt_path: "research_control/tasks/RT-20260724-005/artifacts/p4_t05_override_recovery_receipt.json"
+  compact_receipt_sha256: "ffccffb6ad1322bb3a503b4f01a1eacb5e501e7e4cd20b1a1cff3c8ee0584a69"
+  focused_test_count: 20
+  task_local_check_count: 10
+  protected_execution_admission_status: "PASS"
+  checkpoint_recovery_admission_status: "PASS"
+  ordinary_equality_nonregression_status: "PASS"
+  approval_reused: false
+  p4_t05_gate_reexecuted: false
+  protected_payload_changed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  checkpoint_invocation_count: 1
+  checkpoint_committed: false
+  checkpoint_staged: false
+  checkpoint_blocker_path: "research_control/tasks/RT-20260724-005/artifacts/validation_blocker_checkpoint_hash_bound_p4_t05_blank_eof_v1.yaml"
+  checkpoint_blocker_sha256: "e78a29f97da516d72ddd08c711509bd6e68bb63362ddb7a4457ad90754afd364"
+  checkpoint_failure_class: "hash_bound_blank_at_eof"
+  checkpoint_finding_count: 6
+  checkpoint_entry_index_preserved: true
+  handoff_id: "handoff-0855"
+  handoff_yaml_sha256: "828de27d9c7bcdf7e5a8ed1ae728297d0f912dc7cb0964aa6433f34a04ee5a40"
+  handoff_markdown_sha256: "b11d2ebcdecc8f876b36d4dcc7731b196cfa03e3a77bb08e612abe9cac50393c"
+  selected_next_work_item: "P4-T05"
+  selected_next_worker_skill: "improve-project-system"
+  selected_next_role_family: "process-integrity-auditor@0.1.0"
+  selected_next_route_label: "project-system-recovery"
+  selected_next_strategy_id: "preserve_hash_bound_p4_t05_blank_eof_via_exact_path_whitespace_policy_v1"
+  selected_next_execution_ready_after_checkpoint: false
+  selected_next_execution_ready_now: false
+
+p4_t05_ontology_regime_gate_chair_decision:
+  task_id: "RT-20260724-004"
+  parent_task_id: "RT-20260721-002"
+  parent_handoff_id: "handoff-0853"
+  plan_task_id: "P4-T05"
+  next_plan_task_id: "P4-T06"
+  recommendation_ids:
+    - "V21-R10"
+    - "V21-R11"
+    - "V21-R31"
+    - "V21-R61"
+    - "V21-R64"
+    - "V21-R67"
+  claim_boundary_id: "CB-V21-P4-T05-ONTOLOGY-REGIME-GATE-001"
+  status: "PASS_PAYLOAD_COMPLETE_PROTECTED_OVERRIDE_ADMISSION_RECOVERED_CHECKPOINT_BLOCKED_HASH_BOUND_EOF"
+  work_item_status: "blocked"
+  target_derivation_milestone: "source_ontology"
+  milestone_burden: "Make the protected ontology-regime decision required before source dynamics can become canonical."
+  route_label: "human-gated-ontology-decision"
+  selected_role_family: "gate-chair@0.1.0"
+  selected_worker_skill: "continue-research"
+  immutable_route_sha256: "e3516b2144233b26ea4e5f5de144c01f76b3ca810a49e8a41850bfe53289d47f"
+  approval_id: "approval-20260724-001"
+  human_authorization_id: "HUMAN-P4-T05-20260722-CONTINUUM-FIRST-01"
+  human_authorization_attachment_sha256: "3c56ee51588a9957f8b5e93e99660d390e16e789b74582f66dd595bc8d161e91"
+  decision_code: "SELECT_CONTINUUM_FIRST_WITH_NARROW_PREMETRIC_BOUNDARY"
+  completion_path: "research_control/tasks/RT-20260724-004/jobs/completions/AJC-AJ-RT-20260724-004-001.yaml"
+  completion_sha256: "d248a2abfe6a2571b7ebb6a930c720f64af7f3d39cdf0e497a5e194308a055bf"
+  decision_artifact_path: "research_control/tasks/RT-20260724-004/artifacts/ontology_regime_gate_chair_decision_v1.tex"
+  decision_artifact_sha256: "20ea795bbe93333b489e4f13601fd6bb1623f318b7847f9d2d24402c7490c934"
+  next_route_authorization_path: "research_control/tasks/RT-20260724-004/artifacts/canonical_next_route_authorization_v1.yaml"
+  next_route_authorization_sha256: "52edb6e43e024b09de58d2fc9242a6747630678800e91d47d6c4195203cd8c86"
+  compact_receipt_path: "research_control/tasks/RT-20260724-004/artifacts/p4_t05_gate_chair_compact_receipt_v1.json"
+  compact_receipt_sha256: "9071b3d51b31be93e3c8b36d21a91514bfca77f970b0c81026ae6e604beaa9cd"
+  selected_mainline: "continuum-first"
+  primitive_source_arena: "four-dimensional smooth manifold"
+  primitive_status: "explicit primitive debt not derived"
+  abstract_phi_slot_status: "retained unresolved"
+  emergence_first_status: "proposal-only noncanonical fallback"
+  canonical_ontology_files_changed: false
+  physical_spacetime_identity_adopted: false
+  phi_semantics_adopted: false
+  source_dynamics_adopted: false
+  metric_adopted: false
+  matter_coupling_adopted: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  checkpoint_invocation_count: 1
+  checkpoint_committed: false
+  checkpoint_staged: false
+  validation_status: "FAIL_CHECKPOINT_STAGED_GIT_DIFF_CHECK_AFTER_SEPARATE_RT_20260724_005_RECOVERY"
+  validation_blocker_path: "research_control/tasks/RT-20260724-004/artifacts/validation_blocker_ordinary_route_human_override_admission_v1.yaml"
+  validation_blocker_class: "project_system_prospective_ordinary_route_human_override_admission_gap"
+  validation_error: "job_plan_task_id_not_selected_by_handoff"
+  recovery_worker_skill: "improve-project-system"
+  recovery_strategy_id: "repair_prospective_ordinary_route_human_override_admission_v1"
+  recovery_task_id: "RT-20260724-005"
+  recovery_completion_path: "research_control/tasks/RT-20260724-005/jobs/completions/AJC-AJ-RT-20260724-005-001.yaml"
+  recovery_completion_sha256: "a8da857a9759d8bb0021b42585adca3ea8c41b6d5b3b394a3e74e5d9b0d9b7c0"
+  checkpoint_blocker_path: "research_control/tasks/RT-20260724-005/artifacts/validation_blocker_checkpoint_hash_bound_p4_t05_blank_eof_v1.yaml"
+  checkpoint_blocker_sha256: "e78a29f97da516d72ddd08c711509bd6e68bb63362ddb7a4457ad90754afd364"
+  distance_to_gr_delta_changed: true
+  distance_to_gr_delta_scope: "protected regime selection only"
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_performed: false
+  handoff_id: "handoff-0854"
+  handoff_yaml_sha256: "19be01044894e6611cf11d8f7ce91cbff04a93e0bd88f8a6d353eca7fbf4acda"
+  handoff_markdown_sha256: "531aea276532d7f16a0889fb5371e9b4384453ab0e8a77308e84a2d900196228"
+  selected_next_work_item: "P4-T06"
+  selected_next_worker_skill: "continue-research"
+  selected_next_role_family: "ontology-formalizer@0.2.0"
+  selected_next_route_label: "ontology-law-research-packet"
+  selected_next_strategy_id: "integrate_narrow_continuum_first_boundary_without_physical_promotion_v1"
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
 
 p13_t06_reproducible_environment:
   task_id: "RT-20260724-003"
@@ -4694,22 +5072,22 @@ project_improvement_signals:
     resolution_evidence_path: "research_control/tasks/RT-20260723-017/jobs/completions/AJC-AJ-RT-20260723-017-001.yaml"
     resolved_at: "2026-07-24T02:00:31Z"
 project_improvement_bridge:
-  required: false
-  recursive_goal_recovery_required: false
+  required: true
+  recursive_goal_recovery_required: true
   checkpoint_recovery_precedes_sidecar: false
-  route: "continue-goal ordinary continuation via improve-project-system"
-  blocker_path: ""
-  blocker_sha256: ""
+  route: "continue-goal recovery via improve-project-system"
+  blocker_path: "research_control/tasks/RT-20260724-005/artifacts/validation_blocker_checkpoint_hash_bound_p4_t05_blank_eof_v1.yaml"
+  blocker_sha256: "e78a29f97da516d72ddd08c711509bd6e68bb63362ddb7a4457ad90754afd364"
   signal_ids: []
   sidecar_supersedes_research_handoff: false
-  status: "resolved_checkpoint_pending"
-  resolution_job_id: "AJ-RT-20260724-002-001"
-  resolution_evidence_path: "research_control/tasks/RT-20260724-002/jobs/completions/AJC-AJ-RT-20260724-002-001.yaml"
+  status: "hash_bound_blank_eof_checkpoint_recovery_required"
+  resolution_job_id: "AJ-RT-20260724-005-001"
+  resolution_evidence_path: "research_control/tasks/RT-20260724-005/jobs/completions/AJC-AJ-RT-20260724-005-001.yaml"
 
 active_state_bifurcation:
-  latest_research_task_id: "RT-20260724-003"
-  latest_research_handoff_id: "handoff-0853"
-  latest_research_next_action: "Run the one authorized governed checkpoint for AJ-RT-20260724-003-001. After commit, hold P13-T02 until explicit publication authority and matched current-head hosted CI plus scheduled-full evidence satisfy the P13-T01 cutover precondition; P4-T05 separately requires explicit human Gate Chair authority. Do not execute P13-T08, P13-T02, or P4-T05 without their exact missing authority and evidence."
+  latest_research_task_id: "RT-20260724-005"
+  latest_research_handoff_id: "handoff-0855"
+  latest_research_next_action: "Run one fresh bounded improve-project-system recovery that adds -blank-at-eof only for the six exact blocker paths, preserves the six artifact hashes plus the consumed approval protected completion and handoff hashes, proves unrelated paths still fail closed, and invokes one future normal checkpoint without legacy validation; do not execute P4-T06 first."
   latest_project_system_task_id: "none"
   latest_project_system_status: "none"
   latest_project_system_sidecar_task_id: "none"

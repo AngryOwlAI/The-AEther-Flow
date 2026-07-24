@@ -1,0 +1,338 @@
+validation_status: "FAIL"
+final_repository_validation_status: "FAIL_CHECKPOINT_REPOSITORY_TEST_CONTRACT_DRIFT"
+job_id: "AJ-RT-20260724-006-001"
+completion_id: "AJC-AJ-RT-20260724-006-001"
+task_id: "RT-20260724-006"
+task_type: "project_system_hash_bound_blank_eof_exact_path_recovery"
+decision_id: "DDR-20260724-006"
+role_id: "process-integrity-auditor"
+source_role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260724-006"
+status: "completed"
+created_at: "2026-07-24T17:28:18Z"
+started_at: "2026-07-24T17:28:18Z"
+completed_at: "2026-07-24T18:27:12Z"
+objective: "Preserve six immutable P4-T05 file hashes while adding only their literal Git whitespace classifications, prove unrelated paths remain protected by blank-at-EOF, and invoke one normal governed checkpoint before P4-T06."
+completion_summary: "Six literal .gitattributes rules disable only blank-at-EOF for the six immutable P4-T05 files. Their hashes and all six control anchors remain exact, and an unrelated control remains unclassified and fails as required. The one normal checkpoint passed every non-test staged gate but stopped before commit because the repository-wide 1231-test shard reported three failures and one cascading setup error. The index was restored, nothing remains staged, and P4-T06 remains unexecuted."
+objective_result: "six_literal_rules_pass_protected_hashes_preserved_checkpoint_blocked_repository_test_contract_drift"
+
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P4"
+  plan_task_id: "P4-T05"
+  recovery_for_plan_task_id: "P4-T05"
+  implementation_status: "recovery_implemented_checkpoint_blocked"
+  protected_p4_t05_status: "payload_complete_admission_valid_and_exact_path_compatible"
+  next_dependency_ready_work_item_after_checkpoint: "P4-T06"
+  next_work_item_executed: false
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 101
+  passes_consumed: 91
+  route_work_item_id: "P4-T05"
+  route_worker_skill: "improve-project-system"
+  route_sha256: "a3cecf4420194935a7c22f77a7028fb6536e438459a064bbc49872a8f8c2ef4b"
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:101"
+  handoff_token: "f8a086a7dd8d8aa20928780552e58d00c03356fd238e346e"
+  relay_claim_token: "a8a0f7a468eea763906342244b573d4a1539264ac221d0a6"
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+
+transaction_status: "blocked_checkpoint_repository_test_contract_drift_recovery_required"
+result_disposition: "implemented_checkpoint_blocked"
+work_item_status: "blocked"
+plan_task_id: "P4-T05"
+checkpoint_commit: "none_checkpoint_staged_acceptance_failed"
+checkpoint_invocation_count: 1
+checkpoint_staged: false
+legacy_validation_used: false
+project_system_change_only: true
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS_IMPLEMENTATION_CHECKPOINT_BLOCKED"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  observed_durable_outputs:
+    physics: []
+    project_system:
+      - ".gitattributes"
+      - "research_control/tasks/RT-20260724-006/artifacts/validate_exact_path_whitespace_policy.py"
+      - "research_control/tasks/RT-20260724-006/artifacts/exact_path_whitespace_policy_recovery_receipt.json"
+  accepted_criteria:
+    physics: []
+    project_system:
+      - "all six protected P4-T05 files retain their blocker-recorded SHA-256 identities"
+      - "git check-attr reports -blank-at-eof only for the six literal intended paths"
+      - "an unrelated control path remains unclassified and still fails blank-at-EOF in an isolated Git proof"
+      - "the consumed approval, protected completion and handoff, parent recovery completion and handoff, and blocker retain exact hashes"
+      - "one normal governed checkpoint commits without legacy validation"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "measured"
+        unit: "isolated_git_proofs"
+        value: 1
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+physics_payload_admission_result:
+  status: "admitted"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+
+ordinary_route_guard_admission_result:
+  status: "PASS"
+  source_handoff_id: "handoff-0855"
+  selected_plan_task_id: "P4-T05"
+  guard_outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  system_success_counts_as_physics: false
+  system_success_counts_as_distance_to_gr: false
+
+exact_path_policy_result:
+  status: "PASS"
+  gitattributes_path: ".gitattributes"
+  gitattributes_sha256: "34089430a0c826871432018cd36ae5452c7571b2a3d26ce1eceb7aaeb9e7c04b"
+  new_literal_rule_count: 6
+  total_literal_whitespace_rule_count: 10
+  wildcard_rule_count: 0
+  intended_git_attribute: "-blank-at-eof"
+  intended_isolated_git_diff_check_status: "PASS"
+  unrelated_control_attribute: "unspecified"
+  unrelated_control_isolated_git_diff_check_status: "FAIL_EXPECTED_BLANK_LINE_AT_EOF"
+  protected_hash_mismatch_count: 0
+  preserved_anchor_hash_mismatch_count: 0
+
+artifacts:
+  - ".gitattributes"
+  - "research_control/tasks/RT-20260724-006/artifacts/validate_exact_path_whitespace_policy.py"
+  - "research_control/tasks/RT-20260724-006/artifacts/exact_path_whitespace_policy_recovery_receipt.json"
+  - "research_control/tasks/RT-20260724-006/artifacts/validation_blocker_checkpoint_repository_test_contract_drift_v1.yaml"
+output_paths:
+  - ".gitattributes"
+  - "research_control/tasks/RT-20260724-006/**"
+  - "research_control/handoffs/handoff-0856.yaml"
+  - "research_control/handoffs/handoff-0856.md"
+  - "research_control/program_state.yaml"
+artifact_receipts:
+  - path: ".gitattributes"
+    sha256: "34089430a0c826871432018cd36ae5452c7571b2a3d26ce1eceb7aaeb9e7c04b"
+  - path: "research_control/tasks/RT-20260724-006/artifacts/validate_exact_path_whitespace_policy.py"
+    sha256: "c5417c449416b25ce4c55eda4ebd32f7af7a7f107d70fe60bc469b9748466e25"
+  - path: "research_control/tasks/RT-20260724-006/artifacts/exact_path_whitespace_policy_recovery_receipt.json"
+    sha256: "30a05486bcc6b1b07e2858d200b1eeb439678c68ca3509b170977680cdaceed7"
+  - path: "research_control/tasks/RT-20260724-006/artifacts/validation_blocker_checkpoint_repository_test_contract_drift_v1.yaml"
+    sha256: "fa0be9a6eeb3097172a440c09dd754b4898ed37bc48f5618d6c7ea82ce73b953"
+
+preserved_activated_records:
+  - path: "research_control/approvals/approval-20260724-001.yaml"
+    sha256: "37038157b5deb23a3ae8249dcf5562ac8e9be37f6fa4ae8704c47b0eeb24a412"
+  - path: "research_control/tasks/RT-20260724-004/jobs/completions/AJC-AJ-RT-20260724-004-001.yaml"
+    sha256: "d248a2abfe6a2571b7ebb6a930c720f64af7f3d39cdf0e497a5e194308a055bf"
+  - path: "research_control/handoffs/handoff-0854.yaml"
+    sha256: "19be01044894e6611cf11d8f7ce91cbff04a93e0bd88f8a6d353eca7fbf4acda"
+  - path: "research_control/tasks/RT-20260724-005/jobs/completions/AJC-AJ-RT-20260724-005-001.yaml"
+    sha256: "a8da857a9759d8bb0021b42585adca3ea8c41b6d5b3b394a3e74e5d9b0d9b7c0"
+  - path: "research_control/handoffs/handoff-0855.yaml"
+    sha256: "828de27d9c7bcdf7e5a8ed1ae728297d0f912dc7cb0964aa6433f34a04ee5a40"
+  - path: "research_control/tasks/RT-20260724-005/artifacts/validation_blocker_checkpoint_hash_bound_p4_t05_blank_eof_v1.yaml"
+    sha256: "e78a29f97da516d72ddd08c711509bd6e68bb63362ddb7a4457ad90754afd364"
+
+command_results:
+  - command: ".venv/bin/python research_control/tasks/RT-20260724-006/artifacts/validate_exact_path_whitespace_policy.py --write-report --json"
+    status: "PASS"
+  - command: ".venv/bin/python research_control/tasks/RT-20260724-005/artifacts/validate_p4_t05_override_recovery.py --write-report --json"
+    status: "PASS_10_OF_10"
+  - command: ".venv/bin/python -m unittest -v tests.test_ordinary_route_guard"
+    status: "PASS_20_OF_20"
+  - command: ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260724-006-001"
+    status: "FAIL_REPOSITORY_TEST_SHARD_1231_RUN_3_FAILURES_1_ERROR_INDEX_RESTORED_NO_COMMIT"
+
+checkpoint_failure:
+  blocker_path: "research_control/tasks/RT-20260724-006/artifacts/validation_blocker_checkpoint_repository_test_contract_drift_v1.yaml"
+  blocker_sha256: "fa0be9a6eeb3097172a440c09dd754b4898ed37bc48f5618d6c7ea82ce73b953"
+  checkpoint_status: "FAIL"
+  failed_stage: "staged_acceptance"
+  failed_gate: "test_shard_repository"
+  tests_run: 1231
+  failures: 3
+  errors: 1
+  skipped: 1
+  checkpoint_committed: false
+  checkpoint_staged: false
+  entry_index_restored: true
+  legacy_validation_used: false
+  preservation_reason: "Generation 101 was consumed and its one checkpoint invocation completed; a fresh route must repair the newly observed contract drift without rerunning this frame."
+
+validation_summary:
+  status: "FAIL_CHECKPOINT_REPOSITORY_TEST_CONTRACT_DRIFT"
+  passing_gates:
+    - "six exact-path classifications with no wildcard"
+    - "six immutable P4-T05 artifact hashes"
+    - "six immutable approval completion handoff and blocker anchors"
+    - "intended isolated Git diff proof"
+    - "unrelated blank-at-EOF negative control"
+    - "inherited P4-T05 protected-route recovery proof"
+    - "project-system research-control memory documentation claim-language and Git precheckpoint gates"
+  failing_gates:
+    - "repository-wide test shard: 1231 run, 3 failures, 1 cascading setup error, 1 skipped"
+  pending_gates: []
+  checkpoint:
+    invoked: true
+    invocation_count: 1
+    reason: "The single authorized checkpoint stopped at staged test acceptance and must not be rerun in generation 101."
+  staging:
+    attempted: true
+    index_changed: false
+    entry_index_restored: true
+  commit:
+    created: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 101 lease identity reasoning repository identity exact 83-path manifest and immutable route matched before one atomic claim and consume."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The exact-path receipt binds six protected hashes six preserved anchors six literal Git attribute results and one unrelated negative control."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Task-local exact-path proof inherited P4-T05 recovery focused tests project-system research-control memory documentation claim-language and Git gates pass."
+  post_checkpoint:
+    status: "FAIL"
+    evidence:
+      - "Every non-test staged acceptance gate passed."
+      - "The repository-wide 1231-test shard reported three failures and one cascading setup error."
+      - "The checkpoint restored the entry index, left nothing staged, and created no commit."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Task index current frontier compact frontier dependency graph and claim graph are synchronized."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory synchronization and validate-only pass with local-cache-only warnings."
+  claim_language_linter:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "Changed-source validation has no hard claim-language failure."
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"
+  rationale: "The checkpoint exposed a new deterministic repository-test contract-drift blocker, which the recursive goal route carries directly to a fresh project-system recovery."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  publication_authorized: false
+  proof_authority: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  canonical_ontology_edit_authorized: false
+  ontology_selection_authorized: false
+  physical_interpretation_establishment_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+distance_to_gr_delta:
+  effect: "no_distance_delta"
+  changed: false
+  ledger_row_updated: false
+  milestone: "source_ontology"
+  burden_id: "none"
+  rationale: "Exact-path Git whitespace classification is project-system validation work."
+
+selected_next_route:
+  route_id: "repair_p4_t05_checkpoint_repository_test_contract_drift_v1"
+  route_label: "project-system-recovery"
+  role_family: "validator-engineer@0.2.0"
+  worker_skill: "improve-project-system"
+  plan_task_id: "P4-T05"
+  next_plan_task_after_completion: "P4-T06"
+  target_derivation_milestone: "source_ontology"
+  milestone_burden: "Repair only the checkpoint-observed repository-test contract drift while preserving the protected P4-T05 transaction."
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: false
+  execution_ready_now: false
+  physics_promotion_authorized: false
+  executed: false
+  source_blocker_path: "research_control/tasks/RT-20260724-006/artifacts/validation_blocker_checkpoint_repository_test_contract_drift_v1.yaml"
+  source_blocker_sha256: "fa0be9a6eeb3097172a440c09dd754b4898ed37bc48f5618d6c7ea82ce73b953"
+
+next_recommendation: "Continue with one fresh bounded Validator Engineer recovery that repairs the exact event-store source binding, protected-gate taxonomy contract, support-only route-orbit diagnostic expectation, and cascading P10 readiness failure. Preserve every protected P4-T05 hash and invoke one future normal checkpoint; do not rerun generation 101 or execute P4-T06."
+forbidden_conclusion_summary: "Exact-path Git policy compatibility, checkpoint readiness, or the protected P4-T05 selection is not scientific proof and does not authorize physical-spacetime identity, Phi semantics, source dynamics, metric or causal structure, matter coupling, Einstein equations, exact-GR derivation, benchmark promotion, publication, push, proof authority, or a completed derivation."
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1010
+    relationship_row_count: 4993
+    semantic_row_count: 1010
+    vault_row_count: 1010
+    local_cache_only_warning_count: 9
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"hash bound blank at EOF exact path gitattributes checkpoint recovery\" --limit 10 --json"
+      query_type: "search"
+      query_text: "hash bound blank at EOF exact path gitattributes checkpoint recovery"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-TASK-INDEX"
+  canonical_inspections:
+    - object_id: "MD-RESEARCH-CONTROL-TASK-INDEX"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/TASK_INDEX.md"
+      source_hash: "22be6774558e6a5260453203361b466b0388f907599954f149de94dc5b68318f"
+  authority_note: "Generated task-index wiki Obsidian SQLite semantic and .local retrieval outputs are navigation only and not authority; tracked control state registries hashes and validators govern."

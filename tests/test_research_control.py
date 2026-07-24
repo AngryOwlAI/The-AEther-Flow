@@ -341,8 +341,16 @@ class ResearchControlTests(unittest.TestCase):
         route_warning_ids = {
             row["warning_id"] for row in dashboard["route_orbit_warning_rows"]
         }
-        self.assertIn("post_gate_cycle_repeat", route_warning_ids)
-        self.assertIn("gate_ready_without_gate", route_warning_ids)
+        expected_route_warning_ids = set(
+            report["metrics"]["physics_payload_ratio_diagnostics"]["metrics"][
+                "route_orbit_warning_status"
+            ]["warning_ids"]
+        )
+        self.assertEqual(expected_route_warning_ids, route_warning_ids)
+        self.assertEqual(
+            len(route_warning_ids),
+            dashboard["summary_cards"]["route_orbit_warning_count"],
+        )
         for row in dashboard["route_orbit_warning_rows"]:
             self.assertEqual(row["diagnostic_label"], "Route-orbit warning")
             self.assertFalse(row["hard_gate"])

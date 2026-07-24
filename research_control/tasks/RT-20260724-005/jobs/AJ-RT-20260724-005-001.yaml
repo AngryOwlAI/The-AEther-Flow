@@ -1,0 +1,355 @@
+job_id: "AJ-RT-20260724-005-001"
+task_id: "RT-20260724-005"
+decision_id: "DDR-20260724-005"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260724-005"
+status: "completed"
+validation_status: "FAIL"
+created_at: "2026-07-24T16:00:01Z"
+started_at: "2026-07-24T16:00:01Z"
+completed_at: "2026-07-24T16:46:54Z"
+completion_path: "research_control/tasks/RT-20260724-005/jobs/completions/AJC-AJ-RT-20260724-005-001.yaml"
+checkpoint_blocker_path: "research_control/tasks/RT-20260724-005/artifacts/validation_blocker_checkpoint_hash_bound_p4_t05_blank_eof_v1.yaml"
+checkpoint_blocker_sha256: "e78a29f97da516d72ddd08c711509bd6e68bb63362ddb7a4457ad90754afd364"
+requires_human_gate: false
+human_authorization_note: "Generation 100 is a user-authorized recursive recovery route. It carries no new human-gate decision and does not reuse approval-20260724-001."
+objective: "Implement and validate one fail-closed protected human-route override admission for the exact P4-T05 execution and its immediate checkpoint recovery, preserving the ordinary handoff equality rule and every noninference boundary."
+target_derivation_milestone: "source_ontology"
+milestone_burden: "Repair the project-control admission blocker without changing the completed protected selection or any scientific burden."
+route_label: "repair_prospective_ordinary_route_human_override_admission_v1"
+route_reason: "Generation 99 completed P4-T05 but isolated one prospective ordinary-route validator gap; generation 100 immutably routes only that repair and combined checkpoint recovery."
+immutable_route_sha256: "5d95a304c6763863564c271e00dfab0c1761c5411aabfc3e0098f5f4a81ea4a3"
+plan_task_id: "P4-T05"
+recommendation_ids:
+  - "V21-R10"
+  - "V21-R11"
+  - "V21-R31"
+  - "V21-R61"
+  - "V21-R64"
+  - "V21-R67"
+project_system_change_only: true
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 100
+  passes_consumed: 90
+  route_work_item_id: "P4-T05"
+  route_worker_skill: "improve-project-system"
+  route_sha256: "5d95a304c6763863564c271e00dfab0c1761c5411aabfc3e0098f5f4a81ea4a3"
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:100"
+  handoff_token: "efd2e2711f201cb40ea423160a4b5936b2b809fcc0e7c887"
+  relay_claim_token: "625f98af79f06201e24d3cd6e2a9961e36c46144bdd92adc"
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  candidate_family: "not_applicable"
+  assumption_delta:
+    - "No scientific assumption changes; the packet adds a project-control admission predicate and exact authorization receipts only."
+    - "The P4-T05 protected result, consumed approval, science artifacts, Distance-to-GR delta, and selected P4-T06 boundary remain byte-preserved."
+  materiality_basis: "Closes the sole exact precheckpoint validator error while preserving ordinary-route equality and all protected authority limits."
+  source_basis:
+    - "MD-RESEARCH-CONTROL-TASKS-RT-20260722-015-ORDINARY-ROUTE-GUARD-POLICY-V1"
+    - "MD-SCHEMA-AGENT-JOB-SCHEMA"
+    - "research_control/tasks/RT-20260724-004/artifacts/validation_blocker_ordinary_route_human_override_admission_v1.yaml"
+    - "research_control/approvals/approval-20260724-001.yaml"
+    - "research_control/handoffs/handoff-0853.yaml"
+  expected_artifact_paths:
+    - "scripts/research_control/ordinary_route_guard.py"
+    - "tests/test_ordinary_route_guard.py"
+    - "research_control/tasks/RT-20260724-004/artifacts/protected_human_route_override_admission_v1.yaml"
+    - "research_control/tasks/RT-20260724-005/artifacts/protected_human_route_override_admission_v1.yaml"
+    - "research_control/tasks/RT-20260724-005/artifacts/p4_t05_override_recovery_receipt.json"
+  project_system_justification: "The work repairs deterministic prospective routing validation and does not create physics payload."
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  expected_durable_outputs:
+    physics: []
+    project_system:
+      - "scripts/research_control/ordinary_route_guard.py"
+      - "tests/test_ordinary_route_guard.py"
+      - "research_control/tasks/RT-20260722-015/artifacts/ordinary_route_guard_policy_v1.md"
+      - "research_control/tasks/RT-20260724-004/artifacts/protected_human_route_override_admission_v1.yaml"
+      - "research_control/tasks/RT-20260724-005/artifacts/protected_human_route_override_admission_v1.yaml"
+      - "research_control/tasks/RT-20260724-005/artifacts/p4_t05_override_recovery_receipt.json"
+  acceptance_criteria:
+    physics: []
+    project_system:
+      - "the exact P4-T05 protected execution and generation-100 recovery pass"
+      - "missing stale mismatched reused broadened unconsumed and non-immediate chains fail"
+      - "jobs without the exact override retain ordinary handoff equality"
+      - "all ordinary-handoff and scientific noninference limits remain false"
+      - "the preserved P4-T05 transaction passes required validation"
+      - "one governed combined checkpoint commits"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: false
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0853"
+  source_handoff_path: "research_control/handoffs/handoff-0853.yaml"
+  source_handoff_sha256: "c231cdfc621a809d95069e9889d87bfcb7c9c4807576ba0c6407b7c83cc8d0a4"
+  selected_plan_task_id: "P13-T02"
+  guard_outcome: "all_ready_science_blocked_exception"
+  override_authority:
+    present: true
+    schema_id: "protected_human_route_override_admission_v1"
+    source: "approval-20260724-001 protected execution plus immutable generation-100 recovery route"
+    exact_plan_task_id: "P4-T05"
+    receipt_path: "research_control/tasks/RT-20260724-005/artifacts/protected_human_route_override_admission_v1.yaml"
+    receipt_sha256: "67386ab8627b360df1b4dfd9820ddc1ab722c6011f6dbd13d97607aad41b6011"
+    validator_support_status: "protected_human_route_override_admission_v1"
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+allowed_read_paths:
+  - "SOUL.md"
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research-goal/SKILL.md"
+  - ".codex/skills/continue-research-goal/references/goal-file-schema.md"
+  - ".codex/skills/continue-research-continue-goal/SKILL.md"
+  - ".codex/skills/improve-project-system/SKILL.md"
+  - ".agents/roles/research_ops/project-system-director.v0.2.0.md"
+  - ".agents/roles/research_ops/validator-engineer.v0.2.0.md"
+  - ".agents/schemas/**"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  - "research_control/approvals/**"
+  - "research_control/design/**"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0853.yaml"
+  - "research_control/handoffs/handoff-0853.md"
+  - "research_control/handoffs/handoff-0854.yaml"
+  - "research_control/handoffs/handoff-0854.md"
+  - "research_control/tasks/RT-20260722-015/**"
+  - "research_control/tasks/RT-20260724-004/**"
+  - "scripts/project_control/**"
+  - "scripts/research_control/**"
+  - "tests/**"
+  - "registries/**"
+allowed_write_paths:
+  - ".agents/schemas/AGENT_JOB_SCHEMA.md"
+  - "scripts/research_control/ordinary_route_guard.py"
+  - "scripts/research_control/validate_research_control.py"
+  - "tests/test_ordinary_route_guard.py"
+  - "research_control/approvals/approval-20260724-001.yaml"
+  - "research_control/tasks/RT-20260722-015/artifacts/ordinary_route_guard_policy_v1.md"
+  - "research_control/tasks/RT-20260722-015/artifacts/ordinary_route_guard_validation_report.json"
+  - "research_control/tasks/RT-20260722-015/artifacts/ordinary_route_guard_compact_receipt.json"
+  - "research_control/tasks/RT-20260724-004/**"
+  - "research_control/tasks/RT-20260724-005/**"
+  - "research_control/handoffs/handoff-0854.yaml"
+  - "research_control/handoffs/handoff-0854.md"
+  - "research_control/handoffs/handoff-0855.yaml"
+  - "research_control/handoffs/handoff-0855.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/tex/**"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "registries/TEX_SOURCE_REGISTRY.csv"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "FOLDER_MAP.md"
+allowed_generated_paths:
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/tex/**"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "FOLDER_MAP.md"
+forbidden_paths:
+  - ".agents/roles/**"
+  - ".codex/skills/**"
+  - "implementations_plans/**"
+  - "ontology/**"
+  - "legacy_ontology/**"
+  - "manuscripts/**"
+  - "tex/**"
+  - "markdown/publication-briefs/**"
+  - "markdown/html-explainer-specs/**"
+  - "github-facing/**"
+  - "html/**"
+  - "pdf/**"
+  - "registries/METRIC_USE_LEDGER.csv"
+allowed_source_classes:
+  - "project_control"
+  - "registry"
+  - "validator"
+  - "test"
+  - "tooling"
+  - "task_evidence_artifact"
+  - "generated_memory_derivative"
+forbidden_source_classes:
+  - "canonical_ontology_write"
+  - "science_source_mutation"
+  - "scientific_ledger_mutation"
+  - "source_law_adoption"
+  - "physics_claim_promotion"
+  - "benchmark_promotion"
+  - "gate_chair_verdict"
+  - "approval_reuse"
+  - "proof_authority"
+  - "publication_or_push_authority"
+  - "completed_derivation_claim"
+approved_commands:
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"ordinary route guard policy\" --limit 10 --json"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+  - ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted"
+  - ".venv/bin/python -m unittest -v tests.test_ordinary_route_guard"
+  - ".venv/bin/python research_control/tasks/RT-20260722-015/artifacts/validate_ordinary_route_guard.py --write --json"
+  - ".venv/bin/python research_control/tasks/RT-20260724-005/artifacts/validate_p4_t05_override_recovery.py --write-report --json"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --write"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --json output/research_dependency_graph.json --markdown wiki/indexes/research_dependency_graph.md --dot output/research_dependency_graph.dot"
+  - ".venv/bin/python scripts/research_control/generate_claim_graph_v1.py --json output/claim_graph_v1.json"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --json-summary"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+  - "git diff --check"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260724-005-001"
+required_validators:
+  - "protected_human_route_override_exact_chain"
+  - "protected_human_route_override_negative_matrix"
+  - "ordinary_route_equality_nonregression"
+  - "project_improvement_signals"
+  - "documentation_impact"
+  - "claim_language_changed"
+  - "research_control_diff"
+  - "memory_sync"
+  - "memory_core"
+  - "git_diff_check"
+  - "checkpoint_transaction"
+expected_outputs:
+  - ".agents/schemas/AGENT_JOB_SCHEMA.md"
+  - "scripts/research_control/ordinary_route_guard.py"
+  - "scripts/research_control/validate_research_control.py"
+  - "tests/test_ordinary_route_guard.py"
+  - "research_control/tasks/RT-20260722-015/artifacts/ordinary_route_guard_policy_v1.md"
+  - "research_control/tasks/RT-20260724-004/artifacts/protected_human_route_override_admission_v1.yaml"
+  - "research_control/tasks/RT-20260724-005/artifacts/protected_human_route_override_admission_v1.yaml"
+  - "research_control/tasks/RT-20260724-005/artifacts/validate_p4_t05_override_recovery.py"
+  - "research_control/tasks/RT-20260724-005/artifacts/p4_t05_override_recovery_receipt.json"
+  - "research_control/tasks/RT-20260724-005/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260724-005/jobs/completions/AJC-AJ-RT-20260724-005-001.yaml"
+  - "research_control/handoffs/handoff-0855.yaml"
+  - "research_control/handoffs/handoff-0855.md"
+claim_boundary: "CB-V21-P4-T05-PROTECTED-HUMAN-OVERRIDE-ADMISSION-RECOVERY-001"
+resolves_signal_routing: false
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1010
+    relationship_row_count: 4993
+    semantic_row_count: 1010
+    vault_row_count: 1010
+    local_cache_only_warning_count: 9
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"ordinary route guard policy\" --limit 10 --json"
+      query_type: "search"
+      query_text: "ordinary route guard policy"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-TASKS-RT-20260722-015-ORDINARY-ROUTE-GUARD-POLICY-V1"
+  canonical_inspections:
+    - object_id: "MD-RESEARCH-CONTROL-TASKS-RT-20260722-015-ORDINARY-ROUTE-GUARD-POLICY-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260722-015/artifacts/ordinary_route_guard_policy_v1.md"
+      source_hash: "7e74e55d2f836e653d3aa8cfb9954b889bea4702146933415a2992300b1f8f4f"
+    - object_id: "MD-SCHEMA-AGENT-JOB-SCHEMA"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: ".agents/schemas/AGENT_JOB_SCHEMA.md"
+      source_hash: "321f74b79c2dc644f51965282ab5e821a89b0339039a0e19685b474c831bdb6d"
+  authority_note: "Generated wiki Obsidian SQLite semantic and .local retrieval outputs are retrieval layers only and not authority; the registered schema policy ordinary handoff approval decision completion blocker and recursive-goal route receipts govern."

@@ -1,0 +1,466 @@
+validation_status: "FAIL"
+final_repository_validation_status: "FAIL_CHECKPOINT_ACTIVE_JOB_ALLOWLIST_CONTRACT_DRIFT"
+job_id: "AJ-RT-20260724-007-001"
+completion_id: "AJC-AJ-RT-20260724-007-001"
+task_id: "RT-20260724-007"
+task_type: "project_system_p4_t05_checkpoint_repository_test_contract_drift_recovery"
+decision_id: "DDR-20260724-007"
+role_id: "validator-engineer"
+source_role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260724-007"
+status: "completed"
+created_at: "2026-07-24T18:55:34Z"
+started_at: "2026-07-24T18:55:34Z"
+completed_at: "2026-07-24T20:13:35Z"
+objective: "Repair only the four handoff-0856 checkpoint-observed repository-test contract drifts, preserve all protected P4-T05 and exact-path evidence, and invoke one normal governed checkpoint before P4-T06."
+completion_summary: "The four inherited repository-test contract findings remain repaired, P10 readiness retains its preserved freeze, and every protected P4-T05 hash, control anchor, and exact-path rule remains exact. The one normal checkpoint passed every non-test staged gate but stopped before commit because the active AgentJob's explicit registry paths differ from the broader registries/** entry in its role overlay and registry row. Three narrow-routing failures and one director-context error cascade from that single allowlist mismatch. The index was restored, nothing remains staged, and P4-T06 remains unexecuted."
+objective_result: "p4_t05_repository_test_contract_recovery_pass_checkpoint_blocked_active_job_allowlist_contract_drift"
+
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P4"
+  plan_task_id: "P4-T05"
+  recovery_for_plan_task_id: "P4-T05"
+  implementation_status: "recovery_implemented_checkpoint_blocked"
+  protected_p4_t05_status: "complete_preserved"
+  completed_v21_tasks_added: []
+  next_dependency_ready_work_item: "P4-T06_after_future_governed_checkpoint"
+  next_work_item_executed: false
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 102
+  passes_consumed: 92
+  route_work_item_id: "P4-T05"
+  route_worker_skill: "improve-project-system"
+  route_sha256: "e0d449ee94e812d142a7ad85d4a8b47d21127165fb2c271002c253c7d6308ba5"
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:102"
+  handoff_token: "5e77ea897279c0854c49a1ddd64dca1444647a62f5d7627f"
+  relay_claim_token: "557bfa3f1cde90751ab0c12bc14a8697018ad6dbe545a681"
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+
+transaction_status: "blocked_checkpoint_active_job_allowlist_contract_drift_recovery_required"
+result_disposition: "implemented_checkpoint_blocked"
+work_item_status: "blocked"
+plan_task_id: "P4-T05"
+checkpoint_commit: "none_checkpoint_staged_acceptance_failed"
+checkpoint_invocation_count: 1
+checkpoint_staged: false
+legacy_validation_used: false
+project_system_change_only: true
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS_IMPLEMENTATION_CHECKPOINT_BLOCKED"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  observed_durable_outputs:
+    physics: []
+    project_system:
+      - "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_contract.json"
+      - "research_control/tasks/RT-20260722-002/artifacts/artifact_refs.json"
+      - "research_control/tasks/RT-20260724-004/00_TASK.yaml"
+      - "tests/test_research_control.py"
+      - "research_control/tasks/RT-20260724-007/artifacts/validate_repository_test_contract_recovery.py"
+      - "research_control/tasks/RT-20260724-007/artifacts/repository_test_contract_recovery_receipt.json"
+  accepted_criteria:
+    physics: []
+    project_system:
+      - "the event-store contract binds the current protected Distance-to-GR ledger hash and all dependent receipts are deterministic"
+      - "RT-20260724-004 uses the existing canonical protected-verdict and human-gated taxonomy enum values without changing protected evidence"
+      - "the methodology dashboard test proves exact report-to-dashboard warning-set parity without requiring stale route history"
+      - "P10 migration readiness returns to its preserved freeze"
+      - "all protected P4-T05 hashes, control anchors, and six exact-path rules remain exact"
+      - "one normal governed checkpoint commits without legacy validation"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "measured"
+        unit: "focused_tests"
+        value: 11
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+physics_payload_admission_result:
+  status: "admitted"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+
+ordinary_route_guard_admission_result:
+  status: "PASS"
+  source_handoff_id: "handoff-0856"
+  selected_plan_task_id: "P4-T05"
+  guard_outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  system_success_counts_as_physics: false
+  system_success_counts_as_distance_to_gr: false
+  scientific_status_changed: false
+  physics_promotion_authorized: false
+
+recovery_result:
+  status: "PASS"
+  blocker_path: "research_control/tasks/RT-20260724-006/artifacts/validation_blocker_checkpoint_repository_test_contract_drift_v1.yaml"
+  blocker_sha256: "fa0be9a6eeb3097172a440c09dd754b4898ed37bc48f5618d6c7ea82ce73b953"
+  recovery_validator_path: "research_control/tasks/RT-20260724-007/artifacts/validate_repository_test_contract_recovery.py"
+  recovery_validator_sha256: "4c25a2cff55bc8871af9f3382c79b8ac00a9d987c58cc2cdda873c3d2955f3a4"
+  recovery_receipt_path: "research_control/tasks/RT-20260724-007/artifacts/repository_test_contract_recovery_receipt.json"
+  recovery_receipt_sha256: "76560fa286a58aa57e322105da8c746e0c3a871b261556911dede242e3a8bd1c"
+  event_contract_predecessor_sha256: "299400cc29ec0b234cf6b8174272e687ca05618e65187136691d1950af2302b4"
+  event_contract_recovered_sha256: "d5fa22e7bbc1d92f29acd6c8418d06ce7d81a042589ade77c7ba4fdebb0eda44"
+  distance_to_gr_ledger_sha256: "6028992fbba90b631808cd51e2ea9f2f6a5258e115667ef4256ad3a55a88894c"
+  taxonomy_predecessor_sha256: "8f356e0faee842497e2b951d4fce81cc61501c5da77df6d2067cd5df625dba47"
+  taxonomy_recovered_sha256: "2dd31dcd422dfc88f1c2c7cad1ab79959817c352a02825ba8d2e1247edf8bf49"
+  dashboard_test_predecessor_sha256: "7e11317d735d7a717e40469310c2d72795c69439277d9197abf604007ec4a9ea"
+  dashboard_test_recovered_sha256: "83464024e5acfc9267c126a7893cab90781ca8d26558d0bb754a2aa654c6a346"
+  checkpoint_finding_count: 4
+  focused_test_count: 11
+  p10_readiness_status: "PASS_PRESERVED_FREEZE"
+  protected_hash_mismatch_count: 0
+  preserved_anchor_hash_mismatch_count: 0
+  exact_path_rule_count: 6
+  historical_content_identity_count_preserved: 3
+  p4_t06_executed: false
+
+artifacts:
+  - "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_contract.json"
+  - "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_validation.json"
+  - "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_compact_receipt.json"
+  - "research_control/tasks/RT-20260722-002/artifacts/artifact_refs.json"
+  - "research_control/tasks/RT-20260722-002/artifacts/ca/d5fa22e7bbc1d92f29acd6c8418d06ce7d81a042589ade77c7ba4fdebb0eda44.json"
+  - "research_control/tasks/RT-20260722-002/artifacts/compact_receipt.json"
+  - "research_control/tasks/RT-20260724-004/00_TASK.yaml"
+  - "tests/test_research_control.py"
+  - "research_control/tasks/RT-20260724-007/artifacts/validate_repository_test_contract_recovery.py"
+  - "research_control/tasks/RT-20260724-007/artifacts/repository_test_contract_recovery_receipt.json"
+  - "research_control/tasks/RT-20260724-007/artifacts/validation_blocker_checkpoint_active_job_allowlist_contract_drift_v1.yaml"
+  - "research_control/tasks/RT-20260724-007/artifacts/p4_t06_checkpoint_allowlist_control_failure_v1.yaml"
+
+output_paths:
+  - "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_contract.json"
+  - "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_validation.json"
+  - "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_compact_receipt.json"
+  - "research_control/tasks/RT-20260722-002/artifacts/artifact_refs.json"
+  - "research_control/tasks/RT-20260722-002/artifacts/ca/d5fa22e7bbc1d92f29acd6c8418d06ce7d81a042589ade77c7ba4fdebb0eda44.json"
+  - "research_control/tasks/RT-20260722-002/artifacts/compact_receipt.json"
+  - "research_control/tasks/RT-20260724-004/00_TASK.yaml"
+  - "tests/test_research_control.py"
+  - "research_control/tasks/RT-20260724-007/**"
+  - "research_control/handoffs/handoff-0857.yaml"
+  - "research_control/handoffs/handoff-0857.md"
+  - "research_control/program_state.yaml"
+
+artifact_receipts:
+  - path: "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_contract.json"
+    sha256: "d5fa22e7bbc1d92f29acd6c8418d06ce7d81a042589ade77c7ba4fdebb0eda44"
+  - path: "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_validation.json"
+    sha256: "6358f829c9e07adc6095a471621664830b37e7797c10b321b562b3f894b68b23"
+  - path: "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_compact_receipt.json"
+    sha256: "04cc34d38b1b0125fb77c38f639895bfc49e0864ad62bfc43aba78666bef72b3"
+  - path: "research_control/tasks/RT-20260722-002/artifacts/artifact_refs.json"
+    sha256: "321b470f2c03dcba402300b9d9e03bf387a3e8b4aa00d4272dda008965e6cccd"
+  - path: "research_control/tasks/RT-20260722-002/artifacts/ca/d5fa22e7bbc1d92f29acd6c8418d06ce7d81a042589ade77c7ba4fdebb0eda44.json"
+    sha256: "d5fa22e7bbc1d92f29acd6c8418d06ce7d81a042589ade77c7ba4fdebb0eda44"
+  - path: "research_control/tasks/RT-20260722-002/artifacts/compact_receipt.json"
+    sha256: "0fef04187d465489e977ab93cd372ac8d254de5c6f4fcf3f75a177ca8a53bae5"
+  - path: "research_control/tasks/RT-20260724-004/00_TASK.yaml"
+    sha256: "2dd31dcd422dfc88f1c2c7cad1ab79959817c352a02825ba8d2e1247edf8bf49"
+  - path: "tests/test_research_control.py"
+    sha256: "83464024e5acfc9267c126a7893cab90781ca8d26558d0bb754a2aa654c6a346"
+  - path: "research_control/tasks/RT-20260724-007/artifacts/validate_repository_test_contract_recovery.py"
+    sha256: "4c25a2cff55bc8871af9f3382c79b8ac00a9d987c58cc2cdda873c3d2955f3a4"
+  - path: "research_control/tasks/RT-20260724-007/artifacts/repository_test_contract_recovery_receipt.json"
+    sha256: "76560fa286a58aa57e322105da8c746e0c3a871b261556911dede242e3a8bd1c"
+  - path: "research_control/tasks/RT-20260724-007/artifacts/validation_blocker_checkpoint_active_job_allowlist_contract_drift_v1.yaml"
+    sha256: "504d0c5682060fbb1b17bea4c1bd79c09b20b1cf4398cb773ff8d73401087cfd"
+  - path: "research_control/tasks/RT-20260724-007/artifacts/p4_t06_checkpoint_allowlist_control_failure_v1.yaml"
+    sha256: "b424062a2ab7b4b0d352649bfd8ebe704e2a3f680084c27745525001830b8fd0"
+
+preserved_activated_records:
+  - path: "research_control/approvals/approval-20260724-001.yaml"
+    sha256: "37038157b5deb23a3ae8249dcf5562ac8e9be37f6fa4ae8704c47b0eeb24a412"
+  - path: "research_control/tasks/RT-20260724-004/jobs/completions/AJC-AJ-RT-20260724-004-001.yaml"
+    sha256: "d248a2abfe6a2571b7ebb6a930c720f64af7f3d39cdf0e497a5e194308a055bf"
+  - path: "research_control/handoffs/handoff-0854.yaml"
+    sha256: "19be01044894e6611cf11d8f7ce91cbff04a93e0bd88f8a6d353eca7fbf4acda"
+  - path: "research_control/tasks/RT-20260724-005/jobs/completions/AJC-AJ-RT-20260724-005-001.yaml"
+    sha256: "a8da857a9759d8bb0021b42585adca3ea8c41b6d5b3b394a3e74e5d9b0d9b7c0"
+  - path: "research_control/handoffs/handoff-0855.yaml"
+    sha256: "828de27d9c7bcdf7e5a8ed1ae728297d0f912dc7cb0964aa6433f34a04ee5a40"
+  - path: "research_control/tasks/RT-20260724-005/artifacts/validation_blocker_checkpoint_hash_bound_p4_t05_blank_eof_v1.yaml"
+    sha256: "e78a29f97da516d72ddd08c711509bd6e68bb63362ddb7a4457ad90754afd364"
+  - path: "research_control/tasks/RT-20260724-004/artifacts/child_phys_math_ontology_regime_gate_chair_review.yaml"
+    sha256: "c86d80fea5916fd17aff2136506b4c7844b16fb5ee0d9591993b78cb70ec0d82"
+  - path: "research_control/tasks/RT-20260724-004/artifacts/child_phys_phil_ontology_regime_gate_chair_review.yaml"
+    sha256: "c39c5cd7ca47606bbc07c703c266aa2e79e152a349e9c9db4deef7bb0400c971"
+  - path: "research_control/tasks/RT-20260724-004/artifacts/human_authorization_p4_t05_continuum_first_v1.yaml"
+    sha256: "3421808c71a64279ef5ba62df5376ab4999d2c67978d4f7ceabbeb0ae9b2bde6"
+  - path: "research_control/tasks/RT-20260724-004/artifacts/ontology_regime_gate_chair_decision_v1.tex"
+    sha256: "20ea795bbe93333b489e4f13601fd6bb1623f318b7847f9d2d24402c7490c934"
+  - path: "research_control/tasks/RT-20260724-004/artifacts/parent_conflict_review_ontology_regime_gate_chair_review.yaml"
+    sha256: "c3b86e3a3dee6c4f6a4f6f7fc3a93333151c40277e7b9d8a9ad6bc1ae0463d21"
+  - path: "research_control/tasks/RT-20260724-004/artifacts/parent_fusion_notes_ontology_regime_gate_chair_review.md"
+    sha256: "7fd0427102dd471b02b9b068492bac276369193a84c6f5c25d04698a8f8218c7"
+
+command_results:
+  - command: ".venv/bin/python research_control/tasks/RT-20260721-007/artifacts/validate_v21_event_store_architecture.py --write --json"
+    status: "PASS"
+  - command: ".venv/bin/python research_control/tasks/RT-20260722-002/artifacts/artifact_identity.py --write --json"
+    status: "PASS"
+  - command: ".venv/bin/python research_control/tasks/RT-20260724-007/artifacts/validate_repository_test_contract_recovery.py --write-report --json"
+    status: "PASS"
+  - command: ".venv/bin/python -m unittest -v tests.test_event_store_architecture.EventStoreArchitectureTests.test_live_contract_sources_and_documents_pass tests.test_task_taxonomy.TaskTaxonomyTests.test_repository_report_records_zero_mutation_and_strengthening tests.test_research_control.ResearchControlTests.test_ai_methodology_dashboard_is_support_only_and_not_truth_ranking tests.test_v21_p10_migration_readiness.P10MigrationReadinessTests"
+    status: "PASS_11_TESTS"
+  - command: ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260724-007-001"
+    status: "FAIL_REPOSITORY_TEST_SHARD_1239_RUN_3_FAILURES_1_ERROR_INDEX_RESTORED_NO_COMMIT"
+
+checkpoint_failure:
+  blocker_path: "research_control/tasks/RT-20260724-007/artifacts/validation_blocker_checkpoint_active_job_allowlist_contract_drift_v1.yaml"
+  blocker_sha256: "504d0c5682060fbb1b17bea4c1bd79c09b20b1cf4398cb773ff8d73401087cfd"
+  checkpoint_status: "FAIL"
+  failed_stage: "staged_acceptance"
+  failed_gate: "test_shard_repository"
+  tests_run: 1239
+  failures: 3
+  errors: 1
+  skipped: 1
+  checkpoint_committed: false
+  checkpoint_staged: false
+  entry_index_restored: true
+  legacy_validation_used: false
+  preservation_reason: "Generation 102 was consumed and its one checkpoint invocation completed; a fresh route must repair the newly observed allowlist contract drift without rerunning this frame."
+
+validation_summary:
+  status: "FAIL_CHECKPOINT_ACTIVE_JOB_ALLOWLIST_CONTRACT_DRIFT"
+  passing_gates:
+    - "repository_test_contract_recovery"
+    - "event_store_architecture"
+    - "content_addressed_artifact_identity"
+    - "task_taxonomy"
+    - "ai_methodology_dashboard_support_only"
+    - "p10_migration_readiness"
+    - "exact_path_whitespace_policy"
+    - "immutable_hash_preservation"
+  failing_gates:
+    - "repository-wide test shard: 1239 run, 3 failures, 1 cascading error, 1 skipped"
+  pending_gates: []
+  checkpoint: "failed"
+  staging: "none"
+  commit: "none"
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 102 validated, claimed, and consumed the exact immutable route once before its one improve-project-system invocation."
+      - "The exact 95-path manifest, blocker, lease, repository identity, source plan, and predecessor thread state matched before writes."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The task-local receipt reverse-reconstructs each predecessor identity and proves only the admitted contract changes."
+      - "Every protected P4-T05 payload hash, control anchor, exact-path rule, historical content identity, and P4-T06 nonexecution boundary remains exact."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "The four checkpoint findings and all eight P10 readiness tests pass."
+      - "Event-store and content-address outputs are deterministic with no drift."
+  post_checkpoint:
+    status: "FAIL"
+    evidence:
+      - "Every non-test staged acceptance gate and the planner shadow comparison passed."
+      - "The repository-wide 1239-test shard found one active-job allowlist contract mismatch with three narrow-routing failures and one cascading director-context error."
+      - "The checkpoint restored the entry index, left nothing staged, and created no commit."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Task index, current frontier, compact frontier, dependency graph, and claim graph were deterministically synchronized."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory synchronization and validate-only pass with local-cache-only warnings."
+  claim_language_linter:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "Changed-source validation has no hard claim-language failure."
+
+assumption_delta:
+  changed: false
+  assumptions_added: []
+  assumptions_removed: []
+  assumptions_adopted: []
+  exact_reason: "Only project-control source identity, taxonomy enum, and support-only test contracts changed."
+
+candidate_or_theorem_identities:
+  candidate_ids_created: []
+  candidate_ids_linked: []
+  theorem_ids_created: []
+  identity_note: "No scientific candidate or theorem identity was created or changed."
+
+physics_progress_status:
+  status: "not_applicable_project_system_recovery"
+  target_derivation_milestone: "source_ontology"
+  milestone_burden: "Project-system checkpoint compatibility repair only; no scientific derivation milestone advances."
+  explanation: "Repository-test compatibility does not count as physics payload or Distance-to-GR progress."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "none"
+  milestone: "source_ontology"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "The ledger bytes are preserved; its existing live identity was rebound into a project-control source contract."
+  downstream_unlocked:
+    - "active_job_allowlist_contract_recovery"
+  downstream_still_blocked:
+    - "P4-T06_until_governed_checkpoint"
+    - "source_dynamics"
+    - "physical_source_manifold_identity"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+    - "benchmark_promotion"
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  publication_authorized: false
+  proof_authority: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  canonical_ontology_edit_authorized: false
+  ontology_selection_authorized: false
+  physical_interpretation_establishment_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+three_tier_claim_summary:
+  adopted_objects: []
+  accepted_evidence_preconditions:
+    - "All four checkpoint-observed repository-test contract findings pass."
+    - "P10 readiness returns to its preserved freeze."
+    - "All protected P4-T05 payload hashes, control anchors, exact-path rules, and historical content identities remain exact."
+  open_or_blocked_physical_targets:
+    - "P4-T06 canonical narrow ontology integration after checkpoint"
+    - "source_ontology_derivation"
+    - "source_dynamics"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+  forbidden_overread:
+    - "repository-test PASS as scientific evidence theorem truth or Distance-to-GR movement"
+    - "source-binding reseal as a scientific-ledger change"
+    - "taxonomy normalization as a new protected verdict"
+    - "dashboard warning parity as fabricated physics or Gate Chair history"
+
+resolved_project_improvement_signals: []
+project_improvement_signals: []
+project_improvement_sidecar_created: false
+project_improvement_bridge:
+  required: false
+  sidecar_path: ""
+  recursive_goal_recovery_required: true
+  reason: "The recursive goal route must carry the exact deterministic allowlist blocker to a fresh project-system recovery; no separate signal sidecar is needed."
+
+required_recovery:
+  strategy_id: "repair_p4_t05_checkpoint_active_job_allowlist_contract_drift_v1"
+  worker_skill: "improve-project-system"
+  role_family: "process-integrity-auditor@0.1.0"
+  work_item_id: "P4-T05"
+  blocker_path: "research_control/tasks/RT-20260724-007/artifacts/validation_blocker_checkpoint_active_job_allowlist_contract_drift_v1.yaml"
+  blocker_sha256: "504d0c5682060fbb1b17bea4c1bd79c09b20b1cf4398cb773ff8d73401087cfd"
+  exact_scope: "Align only the active AgentJob, role overlay, and registry row to one least-privilege ordered allowed-write contract, prove narrow/full routing agreement, and invoke one future normal checkpoint."
+  executed: false
+
+selected_next_route:
+  route_id: "v21_p4_t06_narrow_continuum_first_canonical_integration"
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  phase_id: "P4"
+  plan_task_id: "P4-T06"
+  task_name: "Integrate the selected ontology regime under the narrow approved boundary"
+  role_family: "ontology-formalizer@0.2.0"
+  worker_skill: "continue-research"
+  task_type: "v21_p4_t06_integrate_selected_ontology_regime"
+  target_derivation_milestone: "source_ontology"
+  milestone_burden: "Make tracked sources consistent with the human-approved ontology regime."
+  route_label: "ontology-law-research-packet"
+  strategy_id: "integrate_narrow_continuum_first_boundary_without_physical_promotion_v1"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_authorized: false
+  blocked_reason: "The generation-102 checkpoint failed the repository test shard on active-job allowlist contract drift; the required project-system recovery and a future checkpoint commit must occur first."
+  p4_t06_executed: false
+  source_authorization_path: "research_control/tasks/RT-20260724-004/artifacts/canonical_next_route_authorization_v1.yaml"
+  source_authorization_sha256: "52edb6e43e024b09de58d2fc9242a6747630678800e91d47d6c4195203cd8c86"
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1010
+    relationship_row_count: 4993
+    semantic_row_count: 1010
+    vault_row_count: 1010
+    local_cache_only_warning_count: 9
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  authority_note: "The implementation plan was inspected only for the P4-T05 dependency and source-first boundary. Generated task-index, wiki, Obsidian, SQLite, semantic, and .local retrieval outputs are navigation only and not authority; the tracked blocker, handoff, registries, protected hashes, and validators govern."
+
+forbidden_conclusion_summary: "This project-system recovery does not alter the protected P4-T05 selection, consume or broaden human authority, execute P4-T06, edit canonical ontology or science sources, move Distance-to-GR, establish source ontology or dynamics, promote a benchmark or physics claim, authorize proof publication or push, or complete a derivation."
+verdict: "p4_t05_repository_test_contract_recovery_pass_checkpoint_blocked_active_job_allowlist_contract_drift"
+coherent_resolution_summary: "The inherited four-finding recovery remains complete and protected, but the only checkpoint found one active-job allowlist identity mismatch. A fresh project-system recovery must align the AgentJob, role overlay, and registry row before any future checkpoint or P4-T06 work."

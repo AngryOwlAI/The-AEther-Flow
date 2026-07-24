@@ -1,0 +1,83 @@
+schema_id: "protected_human_route_override_admission_v1"
+policy_id: "ordinary_route_guard_policy_v1"
+receipt_id: "PHROA-AJ-RT-20260724-005-001"
+status: "active"
+admission_purpose: "checkpoint_recovery"
+created_at: "2026-07-24T16:00:01Z"
+
+admitted_job:
+  job_id: "AJ-RT-20260724-005-001"
+  task_id: "RT-20260724-005"
+  decision_id: "DDR-20260724-005"
+  plan_task_id: "P4-T05"
+
+protected_job:
+  job_id: "AJ-RT-20260724-004-001"
+  task_id: "RT-20260724-004"
+  decision_id: "DDR-20260724-004"
+  plan_task_id: "P4-T05"
+
+source_handoff:
+  handoff_id: "handoff-0853"
+  path: "research_control/handoffs/handoff-0853.yaml"
+  sha256: "c231cdfc621a809d95069e9889d87bfcb7c9c4807576ba0c6407b7c83cc8d0a4"
+  selected_plan_task_id: "P13-T02"
+  guard_outcome: "all_ready_science_blocked_exception"
+
+approval:
+  approval_id: "approval-20260724-001"
+  path: "research_control/approvals/approval-20260724-001.yaml"
+  sha256: "37038157b5deb23a3ae8249dcf5562ac8e9be37f6fa4ae8704c47b0eeb24a412"
+
+director_decision:
+  decision_id: "DDR-20260724-004"
+  path: "research_control/tasks/RT-20260724-004/DDR-20260724-004.md"
+  sha256: "5b262a37de7b37b2244bc112584d1321807ebb5d9ca46907d897e5e4689fb24e"
+
+human_authorization:
+  human_authorization_id: "HUMAN-P4-T05-20260722-CONTINUUM-FIRST-01"
+  path: "research_control/tasks/RT-20260724-004/artifacts/human_authorization_p4_t05_continuum_first_v1.yaml"
+  sha256: "3421808c71a64279ef5ba62df5376ab4999d2c67978d4f7ceabbeb0ae9b2bde6"
+
+protected_route:
+  evidence_path: "research_control/tasks/RT-20260724-004/jobs/completions/AJC-AJ-RT-20260724-004-001.yaml"
+  evidence_sha256: "d248a2abfe6a2571b7ebb6a930c720f64af7f3d39cdf0e497a5e194308a055bf"
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  generation: 99
+  plan_task_id: "P4-T05"
+  worker_skill: "continue-research"
+  route_sha256: "e3516b2144233b26ea4e5f5de144c01f76b3ca810a49e8a41850bfe53289d47f"
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:99"
+
+admitted_route:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  generation: 100
+  plan_task_id: "P4-T05"
+  worker_skill: "improve-project-system"
+  route_sha256: "5d95a304c6763863564c271e00dfab0c1761c5411aabfc3e0098f5f4a81ea4a3"
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:100"
+
+recovery:
+  strategy_id: "repair_prospective_ordinary_route_human_override_admission_v1"
+  blocker_path: "research_control/tasks/RT-20260724-004/artifacts/validation_blocker_ordinary_route_human_override_admission_v1.yaml"
+  blocker_sha256: "54f12b8a481253b2482f2525573c09213fbf72d121c75d04ef630abd22c3db4c"
+  protected_dirty_manifest_sha256: "d9157387103ce44d1c5ed696892b90fb1f05926d617ef7d939b54c85aefea1f7"
+  protected_receipt_sha256: "3ffe545b951c5d6d705c6c63c3fb84d1eb368bf24ea33f3740bfcdc9c3f15130"
+  source_generation: 99
+  admitted_generation: 100
+
+approval_consumption:
+  one_time_use: true
+  consumed: true
+  consumed_by: "AJ-RT-20260724-004-001"
+  reused_for_admitted_job: false
+
+authority_limits:
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  system_success_counts_as_physics: false
+  system_success_counts_as_distance_to_gr: false
+  scientific_status_changed: false
+  physics_promotion_authorized: false
+
+notes: "Generation 100 authorizes only the validator repair and combined checkpoint recovery for the exact generation-99 P4-T05 transaction. The consumed approval remains bound solely to the protected Gate Chair job."
