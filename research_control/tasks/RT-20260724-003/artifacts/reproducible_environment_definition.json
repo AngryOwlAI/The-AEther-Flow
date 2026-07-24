@@ -1,0 +1,142 @@
+{
+  "authority": {
+    "benchmark_promotion_authorized": false,
+    "completed_derivation_authorized": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "scientific_claims_changed": false,
+    "source_authoritative": false
+  },
+  "environment": {
+    "mechanism": "external_python_venv_equivalent_fresh_machine_v1",
+    "pip_install": {
+      "arguments": [
+        "--disable-pip-version-check",
+        "--require-hashes",
+        "-r",
+        "requirements-dev.txt"
+      ],
+      "requirements_path": "requirements-dev.txt"
+    },
+    "python": {
+      "implementation": "CPython",
+      "supported_series": "3.12"
+    },
+    "supported_hosts": [
+      "Darwin-arm64",
+      "Linux-x86_64"
+    ],
+    "target_must_be_outside_checkout": true
+  },
+  "exclusions": {
+    "forbidden_path_fragments": [
+      "/.git/",
+      "/.local/",
+      "/.venv/",
+      "/goals/",
+      ".env",
+      "credential",
+      "secret",
+      "token"
+    ],
+    "forbidden_repo_prefixes": [
+      ".codex/skills/continue-research-goal/goals/",
+      ".git/",
+      ".local/",
+      ".venv/"
+    ],
+    "policy": "Only the named hash-bound tracked inputs may influence provisioning. The checkout, local caches, relay goal state, environment variables, and credentials are not copied into the external environment."
+  },
+  "profiles": {
+    "required": [
+      {
+        "command": [
+          "{python}",
+          "-m",
+          "unittest",
+          "-v",
+          "tests.test_validation_api",
+          "tests.test_validation_portability"
+        ],
+        "profile_id": "research_control_smoke"
+      },
+      {
+        "command": [
+          "{python}",
+          "-m",
+          "unittest",
+          "-v",
+          "tests.test_proof_normal_form_registry",
+          "tests.test_finite_source_cover_model_checker"
+        ],
+        "profile_id": "proof_and_scientific_checker_control"
+      },
+      {
+        "command": [
+          "{python}",
+          "-m",
+          "unittest",
+          "-v",
+          "tests.test_validation_equivalence"
+        ],
+        "profile_id": "benchmark_equivalence"
+      }
+    ],
+    "formal_proof_build": {
+      "build_script": "research_control/tasks/RT-20260720-018/artifacts/proof/build_proof.sh",
+      "expected_proof_object_sha256": "3fff7e0bff2e331400ba52305a2f34e3deb93f2b85ac1e3850a1625ef6bd468a",
+      "expected_source_sha256": "6f23c92d72779e4fc5b13f56b34a8709ece2dfec27f7ce767170ed54d3d9f356",
+      "expected_tool_commit": "d024af099ca4bf2c86f649261ebf59565dc8c622",
+      "expected_tool_version": "4.30.0",
+      "profile_id": "lean_formal_proof_build",
+      "source_path": "research_control/tasks/RT-20260720-018/artifacts/proof/SelectorKernel.lean",
+      "toolchain_lock_path": "research_control/tasks/RT-20260720-018/artifacts/proof/toolchain-lock.json",
+      "toolchain_selector_path": "research_control/tasks/RT-20260720-018/artifacts/proof/lean-toolchain"
+    }
+  },
+  "schema_id": "p13_t06_reproducible_environment_v1",
+  "source_manifest": [
+    {
+      "path": "pyproject.toml",
+      "sha256": "c30be88711317ef594cdee96755d6a5df302bc8094e32c483cf24fa5d760a52e"
+    },
+    {
+      "path": "requirements.txt",
+      "sha256": "e74839bd2ea007c2c9ce1a267c74c376a0603591c8943b0e4e45de7f29f21080"
+    },
+    {
+      "path": "requirements-dev.txt",
+      "sha256": "82a813d1634eac117b7783137e71d11bf3b587ba32bd77e2d3313d983315d05e"
+    },
+    {
+      "path": "research_control/tasks/RT-20260723-019/artifacts/requirements.lock",
+      "sha256": "41eef32d4fa96913e21d9a27339d8bec67ba27aa80148e97528038e21b242ad8"
+    },
+    {
+      "path": "research_control/tasks/RT-20260724-002/artifacts/quality-assurance-requirements.lock",
+      "sha256": "44878248acae3a2a05fd88ec99e171047db038ccb0a95d924aa3219055cc5870"
+    },
+    {
+      "path": "research_control/design/validation_environment_contract_v1.md",
+      "sha256": "45f36b6fd05849d2f95ab1be8d2e446544aefe4875e6e515cd72477df19fa1c6"
+    },
+    {
+      "path": "research_control/tasks/RT-20260720-018/artifacts/proof/lean-toolchain",
+      "sha256": "54727eec5cba149c18842e6deb5c41b369d66455c93ce135d7d5347c782b2325"
+    },
+    {
+      "path": "research_control/tasks/RT-20260720-018/artifacts/proof/toolchain-lock.json",
+      "sha256": "bad311d77fc08c7d5347156401dcd565d1d96d8b8177e13713bbec1f1e78905d"
+    },
+    {
+      "path": "research_control/tasks/RT-20260720-018/artifacts/proof/SelectorKernel.lean",
+      "sha256": "6f23c92d72779e4fc5b13f56b34a8709ece2dfec27f7ce767170ed54d3d9f356"
+    },
+    {
+      "path": "research_control/tasks/RT-20260720-018/artifacts/proof/build_proof.sh",
+      "sha256": "ed5d4d63b803737aafa4761a740aa4f3046e61f678a1c5d1841d94cc5cbf0e36"
+    }
+  ],
+  "task_id": "RT-20260724-003",
+  "work_item_id": "P13-T06"
+}

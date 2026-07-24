@@ -1,0 +1,63 @@
+{
+  "artifact_hashes": {
+    "bootstrap_fresh_environment.py": "ac268eeee29121d4aaeb72509154020f543687ccff561bfe80d00a22ba66b350",
+    "OPERATIONS.md": "69265d44702d8aef8934b0b72864e460ebecb9a5e53e0916d9da232629253737",
+    "reproducible_environment_definition.json": "b2b566c4f8e4c677ab11c26a3886e16966014b081d9d9e176b0f48ee74bf4e8c",
+    "reproduction_receipt.json": "8f1a4301871568392223901330c8f664ce95bf6d98b57f00908ce1fb2e0ae133",
+    "test_bootstrap_fresh_environment.py": "daef7c2c70d8f2412a44270f05ab2476066832414a192127b0276ee30f5eb1c4"
+  },
+  "authority": {
+    "benchmark_promotion_authorized": false,
+    "completed_derivation_authorized": false,
+    "distance_to_gr_delta_changed": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "scientific_claims_changed": false
+  },
+  "claim_boundary_id": "CB-V21-P13-T06-REPRODUCIBLE-ENVIRONMENT-001",
+  "finding_counts": {
+    "definition_errors": 0,
+    "exclusion_findings": 0,
+    "platform_limitations": 3,
+    "profile_failures": 0,
+    "source_hash_mismatches": 0
+  },
+  "job_id": "AJ-RT-20260724-003-001",
+  "mechanism": "external_python_venv_equivalent_fresh_machine_v1",
+  "plan_task_id": "P13-T06",
+  "recorded_at": "2026-07-24T09:34:49Z",
+  "recommendation_ids": [
+    "V21-R57",
+    "V21-R60",
+    "V21-R66"
+  ],
+  "result": {
+    "bootstrap_python": "CPython 3.12.13",
+    "command_count": 6,
+    "failure_count": 0,
+    "installed_distribution_count": 52,
+    "installed_inventory_sha256": "1b73420511b97fc29de558c408274946291f13846ab2f4a638e701b3160822b9",
+    "proof_object_reproduced": true,
+    "proof_object_sha256": "3fff7e0bff2e331400ba52305a2f34e3deb93f2b85ac1e3850a1625ef6bd468a",
+    "required_profile_count": 3,
+    "source_count": 10,
+    "source_hashes_match_after": true,
+    "source_hashes_match_before": true,
+    "source_manifest_sha256": "b976210a148c98ed8dfcacad247cf0d3e5ea535f6a061bfea4b3797cbb25ba12"
+  },
+  "schema_id": "p13_t06_reproducible_environment_compact_receipt_v1",
+  "status": "PASS_PRECHECKPOINT",
+  "task_id": "RT-20260724-003",
+  "validator_ids": [
+    "environment_definition",
+    "fresh_environment_contract_tests",
+    "hash_locked_clean_bootstrap",
+    "source_hash_before_after_parity",
+    "secret_cache_goal_state_exclusion",
+    "research_control_smoke",
+    "proof_and_scientific_checker_control",
+    "pinned_lean_formal_proof_reproduction",
+    "benchmark_equivalence"
+  ],
+  "work_item_id": "P13-T06"
+}

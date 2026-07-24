@@ -1,0 +1,287 @@
+validation_status: "PASS"
+handoff_id: "handoff-0853"
+task_id: "RT-20260724-003"
+job_id: "AJ-RT-20260724-003-001"
+completion_id: "AJC-AJ-RT-20260724-003-001"
+completion_path: "research_control/tasks/RT-20260724-003/jobs/completions/AJC-AJ-RT-20260724-003-001.yaml"
+completion_sha256: "bc36815f27a56bcde5d757c730c557164755d786c248c3b21bdc8f8e4fbe237a"
+status: "ready_for_director"
+created_at: "2026-07-24T09:34:49Z"
+parent_handoff_id: "handoff-0852"
+plan_task_id: "P13-T06"
+source_role_id: "validator-engineer"
+source_role_version: "0.2.0"
+source_execution_role_ref: "validator-engineer@0.2.0--RT-20260724-003"
+summary: "Generation 97 completed the bounded P13-T06 environment packet. A task-local external CPython 3.12 bootstrap binds ten tracked source hashes and the hash-locked development dependency graph, installed 52 exact distributions, passed the research-control, proof/scientific-checker, and benchmark-equivalence profiles, reproduced the tracked Lean proof object byte-for-byte with the pinned 4.30.0 toolchain, preserved all source hashes before and after, and selected no credential, cache, Git-metadata, checkout, or relay-goal input. Three platform limitations remain explicit and every result is project-system evidence only."
+next_action: "Run the one authorized governed checkpoint for AJ-RT-20260724-003-001. After commit, hold P13-T02 until explicit publication authority and matched current-head hosted CI plus scheduled-full evidence satisfy the P13-T01 cutover precondition; P4-T05 separately requires explicit human Gate Chair authority. Do not execute P13-T08, P13-T02, or P4-T05 without their exact missing authority and evidence."
+current_claim_boundary: "CB-V21-P13-T06-REPRODUCIBLE-ENVIRONMENT-001"
+loop_risk_route: "hold_p13_t02_until_p13_t01_external_cutover_evidence_v1"
+
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260724-003"
+  latest_research_handoff_id: "handoff-0853"
+  latest_research_next_action: "Run the one authorized governed checkpoint for AJ-RT-20260724-003-001. After commit, hold P13-T02 until explicit publication authority and matched current-head hosted CI plus scheduled-full evidence satisfy the P13-T01 cutover precondition; P4-T05 separately requires explicit human Gate Chair authority. Do not execute P13-T08, P13-T02, or P4-T05 without their exact missing authority and evidence."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+
+claim_boundary:
+  allowed_next_scope: "One governed checkpoint may commit the completed P13-T06 transaction. No subsequent plan task is executable without new protected authority or external evidence: P13-T02 remains held by the P13-T01 cutover condition, P4-T05 requires explicit Gate Chair authority, and P13-T08 still lacks P13-T07."
+  completed_task: "RT-20260724-003"
+  completed_completion_path: "research_control/tasks/RT-20260724-003/jobs/completions/AJC-AJ-RT-20260724-003-001.yaml"
+  completed_completion_sha256: "bc36815f27a56bcde5d757c730c557164755d786c248c3b21bdc8f8e4fbe237a"
+  source_handoff_id: "handoff-0852"
+  source_handoff_path: "research_control/handoffs/handoff-0852.yaml"
+  source_handoff_sha256: "3e7c40fe42bdc37da5838838016542af38bdd6d918540ad055c66e00944c9a47"
+  immutable_route_sha256: "0f7fe52aebb9a058cb14d7c7bf1291093c7baf28205822db8dd2dcdf741aa7df"
+  result_status: "PASS_CHECKPOINT_READY"
+  environment_mechanism: "external_python_venv_equivalent_fresh_machine_v1"
+  source_manifest_count: 10
+  source_hash_mismatch_count: 0
+  installed_distribution_count: 52
+  profile_failure_count: 0
+  exclusion_finding_count: 0
+  explicit_platform_limitation_count: 3
+  proof_object_reproduced: true
+  proof_object_sha256: "3fff7e0bff2e331400ba52305a2f34e3deb93f2b85ac1e3850a1625ef6bd468a"
+  p13_t06_executed: true
+  p13_t08_executed: false
+  p13_t02_executed: false
+  p13_t01_reopened: false
+  checkpoint_invocation_count: 0
+  checkpoint_committed: false
+  checkpoint_staged: false
+  legacy_validation_used: false
+  push_performed: false
+  workflow_dispatch_performed: false
+  scientific_status_changed: false
+  distance_to_gr_delta_changed: false
+  ontology_adoption_authorized: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  blocked_claims:
+    - "clean bootstrap or test PASS presented as scientific evidence theorem truth or Distance-to-GR progress"
+    - "byte-identical proof object presented as proof authority physical interpretation or ontology adoption"
+    - "benchmark-equivalence test PASS presented as exact-GR benchmark promotion"
+    - "P13-T08 executed without P13-T07 and a separate route"
+    - "P13-T02 executed while P13-T01 cutover evidence remains incomplete"
+    - "P4-T05 executed without explicit human Gate Chair authority"
+    - "push publication hosted-workflow dispatch or external authority inferred from this relay"
+    - "canonical ontology source-law scientific-ledger or Distance-to-GR edit"
+
+plan_result:
+  plan_task_id: "P13-T06"
+  title: "Provide a reproducible container or equivalent development environment"
+  recommendation_ids:
+    - "V21-R57"
+    - "V21-R60"
+    - "V21-R66"
+  result_status: "PASS_CHECKPOINT_READY"
+  work_item_status: "completed"
+  payload_complete: true
+  definition_status: "PASS"
+  clean_bootstrap_status: "PASS"
+  source_hash_parity_status: "PASS"
+  exclusion_status: "PASS"
+  research_control_profile_status: "PASS"
+  proof_and_scientific_checker_profile_status: "PASS"
+  benchmark_equivalence_profile_status: "PASS"
+  lean_formal_proof_reproduction_status: "PASS_OPERATIONAL_EVIDENCE_ONLY"
+  checkpoint_invocation_count: 0
+  checkpoint_committed: false
+  legacy_validation_used: false
+  p13_t08_dependency_ready_after_checkpoint: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+distance_to_gr:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "none"
+  milestone: "source_equivalence_eqsrc"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "P13-T06 concerns project-system environment reproduction only."
+  downstream_unlocked:
+    - "P13-T08_environment_dependency_after_governed_checkpoint"
+  downstream_still_blocked:
+    - "P13-T08_until_P13-T07_and_separate_route"
+    - "P13-T02_until_p13_t01_cutover_evidence_complete"
+    - "P4-T05_until_explicit_human_Gate_Chair_authority"
+    - "source_ontology_derivation"
+    - "general_eqsrc"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+    - "benchmark_promotion"
+    - "external_publication"
+
+required_next_packet:
+  task_type: "validation_planner_cutover"
+  plan_task_id: "P13-T02"
+  objective: "Make the validated planner the single orchestration owner while retaining scheduled full validation and rollback controls."
+  dependency_ready_after_checkpoint: false
+  executed: false
+  held_reason: "P13-T01 retained legacy authority because matched current-head hosted CI and scheduled-full evidence is absent and this relay has no publication or workflow-dispatch authority."
+
+selected_next_route:
+  route_id: "hold_p13_t02_until_p13_t01_external_cutover_evidence_v1"
+  route_label: "ordinary-research-packet"
+  role_family: "validator-engineer@0.2.0"
+  worker_skill: "improve-project-system"
+  plan_task_id: "P13-T02"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Complete the v19 validation architecture transition."
+  requires_human_gate: false
+  blocked_by_protected_external_evidence: true
+  dependency_ready_after_checkpoint: false
+  physics_promotion_authorized: false
+  executed: false
+  next_action: "Do not create or invoke a P13-T02 AgentJob until explicit publication authority and matched current-head hosted CI plus scheduled-full evidence satisfy the retained P13-T01 cutover condition."
+  source_handoff: "research_control/handoffs/handoff-0853.yaml"
+
+ordinary_route_guard:
+  schema_id: "ordinary_route_guard_evaluation_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  evaluation_id: "ORE-HANDOFF-0853"
+  ordinary_handoff_id: "handoff-0853"
+  threshold: 3
+  consecutive_project_system_tasks_before_selection: 10
+  ready_science_plan_task_ids:
+    - "P4-T05"
+  selected_plan_task_id: "P13-T02"
+  selected_route_class: "project_system"
+  selected_worker_skill: "improve-project-system"
+  outcome: "all_ready_science_blocked_exception"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  exception_receipt:
+    active: true
+    schema_id: "ordinary_route_exception_receipt_v1"
+    exception_id: "ORE-HANDOFF-0853-EXCEPTION-001"
+    exception_class: "all_ready_science_blocked"
+    ordinary_handoff_id: "handoff-0853"
+    ready_science_plan_task_ids:
+      - "P4-T05"
+    blocked_routes:
+      - plan_task_id: "P4-T05"
+        failure_class: "human_gate_required"
+        evidence_path: "research_control/design/v21_recommendation_backlog.yaml"
+        evidence_sha256: "849a4e8dfe848e80bc0c8236252b924e636e5c95ac1a090478a69f7f5377559f"
+        reason: "P4-T05 remains dependency-ready but requires explicit human Gate Chair authority that this relay does not possess."
+    authority_limits:
+      ordinary_research_handoff_authoritative: true
+      project_system_sidecar_supersedes: false
+      system_success_counts_as_physics: false
+      system_success_counts_as_distance_to_gr: false
+      scientific_status_changed: false
+      physics_promotion_authorized: false
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 97 was validated, claimed, and consumed exactly once before its one routed improve-project-system invocation."
+      - "The routed clean manifest immutable strategy blocker and lease identities matched before writes."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Tracked receipts bind exact source hashes clean-bootstrap inventory profile exclusions and proof-object reproduction results."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Environment definition contract bootstrap proof benchmark project-system research-control memory and Git gates pass."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "One governed checkpoint remains required before any later Director action."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Task index current frontier compact YAML compact JSON and compact Markdown mirror are current."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory synchronization and validate-only pass with local-cache-only warnings."
+  claim_language_linter:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "Changed-source validation has no hard claim-language failure."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  publication_authorized: false
+  proof_authority: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  canonical_ontology_edit_authorized: false
+  ontology_selection_authorized: false
+  physical_interpretation_establishment_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+three_tier_claim_summary:
+  adopted_objects: []
+  accepted_evidence_preconditions:
+    - "The named P13-T06 clean bootstrap profiles source-parity checks exclusions and tracked receipts pass."
+    - "The existing pinned Lean proof object reproduced byte-for-byte under the recorded toolchain."
+  open_or_blocked_physical_targets:
+    - "source_ontology_derivation"
+    - "general_eqsrc"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+  forbidden_overread:
+    - "environment or validator PASS as scientific evidence theorem truth or Distance-to-GR movement"
+    - "proof-object reproduction as proof authority or physical interpretation"
+    - "benchmark-equivalence PASS as exact-GR benchmark promotion"
+    - "checkpoint PASS as publication proof or hosted-CI evidence"
+
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  sidecar_path: ""
+  recursive_goal_recovery_required: false
+  reason: "The bounded P13-T06 objective is resolved and the remaining holds require authority or external evidence rather than a project-system repair signal."
+
+handoff_authority_boundary:
+  this_handoff_authorizes: "One governed checkpoint for AJ-RT-20260724-003-001 and preservation of the exact P13-T02 and P4-T05 protected holds."
+  this_handoff_does_not_authorize:
+    - "P13-T02 before explicit publication authority and matched current-head hosted CI plus scheduled-full evidence"
+    - "P4-T05 without explicit human Gate Chair authority"
+    - "P13-T08 without P13-T07 and a separately routed frame"
+    - "P13-T01 re-audit before the exact external-authority evidence changes"
+    - "environment test or proof-object reproduction as scientific evidence or Distance-to-GR progress"
+    - "push publication hosted-workflow dispatch or external-system mutation"
+    - "canonical ontology source-law scientific-ledger or Distance-to-GR edit"
+    - "physics promotion benchmark promotion proof authority Gate Chair verdict completed derivation or global no-go"
+
+next_plan_task_id: "P13-T02"
+next_plan_task_execution_ready_after_checkpoint: false
+next_plan_task_executed: false
+notes: "P13-T06 is payload-complete and precheckpoint-valid. P13-T02 remains the nearest project-system route but is held by the retained P13-T01 external cutover evidence requirement; P4-T05 requires explicit Gate Chair authority, and P13-T08 remains blocked by P13-T07."

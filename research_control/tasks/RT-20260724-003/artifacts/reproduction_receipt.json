@@ -1,0 +1,212 @@
+{
+  "authority": {
+    "benchmark_authority": false,
+    "physics_promotion_authorized": false,
+    "project_system_evidence_only": true,
+    "proof_authority": false,
+    "scientific_claims_changed": false
+  },
+  "bootstrap_python": {
+    "implementation": "CPython",
+    "series": "3.12",
+    "version": "3.12.13"
+  },
+  "command_count": 6,
+  "commands": [
+    {
+      "command_id": "create_venv",
+      "duration_seconds": 1.42904,
+      "exit_code": 0,
+      "log_paths": [
+        "logs/create_venv.stdout.log",
+        "logs/create_venv.stderr.log"
+      ],
+      "status": "PASS",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command_id": "install_hash_locked_dependencies",
+      "duration_seconds": 5.910559,
+      "exit_code": 0,
+      "log_paths": [
+        "logs/install_hash_locked_dependencies.stdout.log",
+        "logs/install_hash_locked_dependencies.stderr.log"
+      ],
+      "status": "PASS",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_bytes": 14185,
+      "stdout_sha256": "d481164dd56737544c6c0731093c9c84638f961ae1637502fc08d24d9548b1ad"
+    },
+    {
+      "command_id": "research_control_smoke",
+      "duration_seconds": 0.98674,
+      "exit_code": 0,
+      "log_paths": [
+        "logs/research_control_smoke.stdout.log",
+        "logs/research_control_smoke.stderr.log"
+      ],
+      "status": "PASS",
+      "stderr_bytes": 2057,
+      "stderr_sha256": "e9b8a33d726ac8d7f5b5c6829768d8c7647106b0e9adaaa00cfa87f432a56604",
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command_id": "proof_and_scientific_checker_control",
+      "duration_seconds": 0.350643,
+      "exit_code": 0,
+      "log_paths": [
+        "logs/proof_and_scientific_checker_control.stdout.log",
+        "logs/proof_and_scientific_checker_control.stderr.log"
+      ],
+      "status": "PASS",
+      "stderr_bytes": 2553,
+      "stderr_sha256": "6f061278cb2096547d41a57c84e3b7b96ae834048578e3d565f39a107dfa6dce",
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command_id": "benchmark_equivalence",
+      "duration_seconds": 1.091134,
+      "exit_code": 0,
+      "log_paths": [
+        "logs/benchmark_equivalence.stdout.log",
+        "logs/benchmark_equivalence.stderr.log"
+      ],
+      "status": "PASS",
+      "stderr_bytes": 1903,
+      "stderr_sha256": "4068eaa8c0aa19cdc1445e2a2241d1b236727bc9b3a7daabf731a47fe2790e19",
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command_id": "lean_formal_proof_build",
+      "duration_seconds": 1.666571,
+      "exit_code": 0,
+      "log_paths": [
+        "logs/lean_formal_proof_build.stdout.log",
+        "logs/lean_formal_proof_build.stderr.log"
+      ],
+      "proof_object_reproduced": true,
+      "proof_object_sha256": "3fff7e0bff2e331400ba52305a2f34e3deb93f2b85ac1e3850a1625ef6bd468a",
+      "source_sha256": "6f23c92d72779e4fc5b13f56b34a8709ece2dfec27f7ce767170ed54d3d9f356",
+      "status": "PASS",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tool_version_sha256": "9888ff18b575109daacbcb69d41430386e535d04f73ff9df501fe85499cc9754",
+      "toolchain_origin": "operator_supplied_external_to_environment"
+    }
+  ],
+  "definition_path": "research_control/tasks/RT-20260724-003/artifacts/reproducible_environment_definition.json",
+  "definition_sha256": "b2b566c4f8e4c677ab11c26a3886e16966014b081d9d9e176b0f48ee74bf4e8c",
+  "exclusion_checks": {
+    "checkout_copied_into_environment": false,
+    "credential_material_embedded": false,
+    "local_cache_embedded": false,
+    "relay_goal_state_embedded": false,
+    "selected_input_finding_count": 0
+  },
+  "failure_count": 0,
+  "formal_proof_profile": {
+    "command_id": "lean_formal_proof_build",
+    "duration_seconds": 1.666571,
+    "exit_code": 0,
+    "log_paths": [
+      "logs/lean_formal_proof_build.stdout.log",
+      "logs/lean_formal_proof_build.stderr.log"
+    ],
+    "proof_object_reproduced": true,
+    "proof_object_sha256": "3fff7e0bff2e331400ba52305a2f34e3deb93f2b85ac1e3850a1625ef6bd468a",
+    "source_sha256": "6f23c92d72779e4fc5b13f56b34a8709ece2dfec27f7ce767170ed54d3d9f356",
+    "status": "PASS",
+    "stderr_bytes": 0,
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_bytes": 0,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tool_version_sha256": "9888ff18b575109daacbcb69d41430386e535d04f73ff9df501fe85499cc9754",
+    "toolchain_origin": "operator_supplied_external_to_environment"
+  },
+  "host": {
+    "machine": "arm64",
+    "system": "Darwin"
+  },
+  "installed_inventory": {
+    "count": 52,
+    "packages": {
+      "CacheControl": "0.14.4",
+      "PyMuPDF": "1.27.2.3",
+      "PyYAML": "6.0.3",
+      "Pygments": "2.20.0",
+      "ast_serialize": "0.6.0",
+      "bandit": "1.9.4",
+      "boolean.py": "5.0",
+      "certifi": "2026.7.22",
+      "charset-normalizer": "3.4.9",
+      "click": "8.4.2",
+      "coverage": "7.15.2",
+      "cyclonedx-python-lib": "11.11.0",
+      "defusedxml": "0.7.1",
+      "filelock": "3.32.0",
+      "hypothesis": "6.161.2",
+      "idna": "3.18",
+      "iniconfig": "2.3.0",
+      "libcst": "1.8.6",
+      "librt": "0.13.0",
+      "license-expression": "30.4.4",
+      "linkify-it-py": "2.1.0",
+      "markdown-it-py": "4.2.0",
+      "mdit-py-plugins": "0.6.1",
+      "mdurl": "0.1.2",
+      "msgpack": "1.2.1",
+      "mutmut": "3.6.0",
+      "mypy": "2.3.0",
+      "mypy_extensions": "1.1.0",
+      "packageurl-python": "0.17.6",
+      "packaging": "26.2",
+      "pathspec": "1.1.1",
+      "pip": "26.1.2",
+      "pip-api": "0.0.34",
+      "pip-requirements-parser": "32.0.1",
+      "pip_audit": "2.10.1",
+      "platformdirs": "4.11.0",
+      "pluggy": "1.6.0",
+      "py-serializable": "2.1.0",
+      "pyparsing": "3.3.2",
+      "pytest": "9.1.1",
+      "requests": "2.34.2",
+      "rich": "15.0.0",
+      "ruff": "0.16.0",
+      "setproctitle": "1.3.7",
+      "sortedcontainers": "2.4.0",
+      "stevedore": "5.9.0",
+      "textual": "8.2.8",
+      "tomli": "2.4.1",
+      "tomli_w": "1.2.0",
+      "typing_extensions": "4.16.0",
+      "uc-micro-py": "2.0.0",
+      "urllib3": "2.7.0"
+    },
+    "sha256": "1b73420511b97fc29de558c408274946291f13846ab2f4a638e701b3160822b9"
+  },
+  "mechanism": "external_python_venv_equivalent_fresh_machine_v1",
+  "platform_limitations": [
+    "The equivalent environment pins CPython to the 3.12 series rather than an operating-system image.",
+    "Formal Lean reproduction requires an operator-supplied binary matching the tracked 4.30.0 toolchain lock.",
+    "The existing Lean archive lock is Darwin-arm64; another host needs a separately tracked archive lock before formal-build parity can be claimed."
+  ],
+  "schema_id": "p13_t06_reproduction_receipt_v1",
+  "source_count": 10,
+  "source_hashes_match_after": true,
+  "source_hashes_match_before": true,
+  "source_manifest_sha256": "b976210a148c98ed8dfcacad247cf0d3e5ea535f6a061bfea4b3797cbb25ba12",
+  "status": "PASS",
+  "target_class": "external_ephemeral_directory",
+  "task_id": "RT-20260724-003",
+  "work_item_id": "P13-T06"
+}

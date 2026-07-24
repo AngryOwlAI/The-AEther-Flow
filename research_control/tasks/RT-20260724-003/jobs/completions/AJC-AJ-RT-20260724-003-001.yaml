@@ -1,0 +1,421 @@
+validation_status: "PASS"
+job_id: "AJ-RT-20260724-003-001"
+completion_id: "AJC-AJ-RT-20260724-003-001"
+task_id: "RT-20260724-003"
+task_type: "project_system_p13_t06_reproducible_environment"
+decision_id: "DDR-20260724-003"
+role_id: "validator-engineer"
+source_role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260724-003"
+status: "completed"
+final_repository_validation_status: "PASS_CHECKPOINT_READY"
+created_at: "2026-07-24T09:20:09Z"
+started_at: "2026-07-24T09:20:09Z"
+completed_at: "2026-07-24T09:34:49Z"
+objective: "Implement and validate one task-local hash-bound external fresh-machine equivalent for representative research-control, proof, scientific-checker, and benchmark-equivalence workflows."
+completion_summary: "P13-T06 provides an external CPython 3.12 virtual-environment bootstrap bound to ten tracked source hashes and the hash-locked development dependency graph. A clean bootstrap installed 52 exact distributions, passed all three required workflow profiles, reproduced the tracked Lean proof object byte-for-byte with the pinned 4.30.0 toolchain, preserved source hashes before and after, and selected no credential, local-cache, Git-metadata, checkout, or relay-goal input."
+objective_result: "p13_t06_reproducible_environment_pass_checkpoint_ready"
+
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P13"
+  plan_task_id: "P13-T06"
+  recommendation_ids:
+    - "V21-R57"
+    - "V21-R60"
+    - "V21-R66"
+  implementation_status: "completed"
+  completed_v21_tasks_added:
+    - "P13-T06"
+  next_dependency_ready_work_item: "P13-T02_held_pending_external_cutover_evidence"
+  next_work_item_executed: false
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 97
+  passes_consumed: 88
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:97"
+  handoff_token: "65cedff3f01e02fae32cf101fb142b391b3ee4fcf3e9cd4c"
+  relay_claim_token: "7c8b73ed95641c0b40146636b9129e4c914996e452c00d8e"
+  immutable_route_hash: "0f7fe52aebb9a058cb14d7c7bf1291093c7baf28205822db8dd2dcdf741aa7df"
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+
+transaction_status: "completed_checkpoint_ready"
+result_disposition: "implemented"
+work_item_status: "completed"
+plan_task_id: "P13-T06"
+recommendation_ids:
+  - "V21-R57"
+  - "V21-R60"
+  - "V21-R66"
+checkpoint_commit: "none_checkpoint_pending"
+checkpoint_invocation_count: 0
+checkpoint_staged: false
+legacy_validation_used: false
+project_system_change_only: true
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS_CHECKPOINT_READY"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  observed_durable_outputs:
+    physics: []
+    project_system:
+      - "hash-bound environment definition"
+      - "external fresh-bootstrap script"
+      - "focused environment contract tests"
+      - "operator documentation"
+      - "reproduction and compact receipts"
+  accepted_criteria:
+    physics: []
+    project_system:
+      - "fresh CPython 3.12 environment builds from hash-locked requirements"
+      - "source hashes match before and after reproduction"
+      - "credentials local caches and relay goal state are excluded"
+      - "research-control proof/scientific-checker and benchmark-equivalence profiles pass"
+      - "supplied pinned Lean build reproduces the tracked proof object"
+      - "project-system research-control memory and Git gates pass"
+      - "one governed checkpoint commits"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "measured"
+        unit: "seconds"
+        value: 11.444409
+      compute:
+        status: "measured"
+        unit: "fresh_bootstrap_commands"
+        value: 6
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+physics_payload_admission_result:
+  status: "admitted"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+
+ordinary_route_guard_admission_result:
+  status: "PASS"
+  source_handoff_id: "handoff-0852"
+  selected_plan_task_id: "P13-T06"
+  guard_outcome: "all_ready_science_blocked_exception"
+  ordinary_research_handoff_authoritative: true
+  system_success_counts_as_physics: false
+  system_success_counts_as_distance_to_gr: false
+
+environment_results:
+  definition:
+    path: "research_control/tasks/RT-20260724-003/artifacts/reproducible_environment_definition.json"
+    sha256: "b2b566c4f8e4c677ab11c26a3886e16966014b081d9d9e176b0f48ee74bf4e8c"
+    source_manifest_sha256: "b976210a148c98ed8dfcacad247cf0d3e5ea535f6a061bfea4b3797cbb25ba12"
+    source_count: 10
+    validation_error_count: 0
+    status: "PASS"
+  bootstrap:
+    receipt_path: "research_control/tasks/RT-20260724-003/artifacts/reproduction_receipt.json"
+    receipt_sha256: "8f1a4301871568392223901330c8f664ce95bf6d98b57f00908ce1fb2e0ae133"
+    mechanism: "external_python_venv_equivalent_fresh_machine_v1"
+    host: "Darwin-arm64"
+    bootstrap_python: "CPython 3.12.13"
+    installed_distribution_count: 52
+    installed_inventory_sha256: "1b73420511b97fc29de558c408274946291f13846ab2f4a638e701b3160822b9"
+    command_count: 6
+    failure_count: 0
+    status: "PASS"
+  profiles:
+    research_control_smoke: "PASS"
+    proof_and_scientific_checker_control: "PASS"
+    benchmark_equivalence: "PASS"
+    lean_formal_proof_build: "PASS"
+  proof_reproduction:
+    lean_version: "4.30.0"
+    lean_commit: "d024af099ca4bf2c86f649261ebf59565dc8c622"
+    source_sha256: "6f23c92d72779e4fc5b13f56b34a8709ece2dfec27f7ce767170ed54d3d9f356"
+    expected_proof_object_sha256: "3fff7e0bff2e331400ba52305a2f34e3deb93f2b85ac1e3850a1625ef6bd468a"
+    observed_proof_object_sha256: "3fff7e0bff2e331400ba52305a2f34e3deb93f2b85ac1e3850a1625ef6bd468a"
+    byte_reproduced: true
+    status: "PASS_OPERATIONAL_EVIDENCE_ONLY"
+  exclusions:
+    selected_input_finding_count: 0
+    credential_material_embedded: false
+    local_cache_embedded: false
+    relay_goal_state_embedded: false
+    checkout_copied_into_environment: false
+    status: "PASS"
+  source_parity:
+    source_hashes_match_before: true
+    source_hashes_match_after: true
+    mismatch_count: 0
+    status: "PASS"
+  platform_limitations:
+    - "The equivalent environment pins CPython to the 3.12 series rather than an operating-system image."
+    - "Formal Lean reproduction requires an operator-supplied binary matching the tracked 4.30.0 toolchain lock."
+    - "The existing Lean archive lock is Darwin-arm64; another host needs a separately tracked archive lock before formal-build parity can be claimed."
+
+artifacts:
+  - "research_control/tasks/RT-20260724-003/artifacts/reproducible_environment_definition.json"
+  - "research_control/tasks/RT-20260724-003/artifacts/bootstrap_fresh_environment.py"
+  - "research_control/tasks/RT-20260724-003/artifacts/test_bootstrap_fresh_environment.py"
+  - "research_control/tasks/RT-20260724-003/artifacts/OPERATIONS.md"
+  - "research_control/tasks/RT-20260724-003/artifacts/reproduction_receipt.json"
+  - "research_control/tasks/RT-20260724-003/artifacts/p13_t06_reproducible_environment_receipt.json"
+output_paths:
+  - "research_control/tasks/RT-20260724-003/**"
+  - "research_control/handoffs/handoff-0853.yaml"
+  - "research_control/handoffs/handoff-0853.md"
+  - "research_control/program_state.yaml"
+artifact_receipts:
+  - path: "research_control/tasks/RT-20260724-003/artifacts/reproducible_environment_definition.json"
+    sha256: "b2b566c4f8e4c677ab11c26a3886e16966014b081d9d9e176b0f48ee74bf4e8c"
+  - path: "research_control/tasks/RT-20260724-003/artifacts/bootstrap_fresh_environment.py"
+    sha256: "ac268eeee29121d4aaeb72509154020f543687ccff561bfe80d00a22ba66b350"
+  - path: "research_control/tasks/RT-20260724-003/artifacts/test_bootstrap_fresh_environment.py"
+    sha256: "daef7c2c70d8f2412a44270f05ab2476066832414a192127b0276ee30f5eb1c4"
+  - path: "research_control/tasks/RT-20260724-003/artifacts/OPERATIONS.md"
+    sha256: "69265d44702d8aef8934b0b72864e460ebecb9a5e53e0916d9da232629253737"
+  - path: "research_control/tasks/RT-20260724-003/artifacts/reproduction_receipt.json"
+    sha256: "8f1a4301871568392223901330c8f664ce95bf6d98b57f00908ce1fb2e0ae133"
+  - path: "research_control/tasks/RT-20260724-003/artifacts/p13_t06_reproducible_environment_receipt.json"
+    sha256: "b526f7228ad833e266557581fcb44f3d524c5bdb552de2a157fb4120cac172eb"
+
+command_results:
+  - ".venv/bin/python research_control/tasks/RT-20260724-003/artifacts/bootstrap_fresh_environment.py validate --json | exit_code=0 | ten source hashes exact zero definition errors and zero excluded-input findings"
+  - ".venv/bin/python research_control/tasks/RT-20260724-003/artifacts/test_bootstrap_fresh_environment.py | exit_code=0 | six contract and negative tests PASS"
+  - "/opt/homebrew/bin/python3.12 ... bootstrap --target <external-new-path> --lean-bin <pinned-lean-path> | exit_code=0 | clean environment installed 52 exact distributions all three required profiles PASS and Lean proof object reproduced"
+  - ".venv/bin/python -m unittest -v tests.test_validation_api tests.test_validation_portability tests.test_proof_normal_form_registry tests.test_finite_source_cover_model_checker tests.test_validation_equivalence | exit_code=0 | 38 representative tests PASS"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json | exit_code=0 | project-system and documentation impact required with no blocked path"
+  - ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json | exit_code=0 | advisory resolver ready with no open signal"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted | exit_code=0 | no open emitted signal"
+  - ".venv/bin/python scripts/research_control/continue_research.py --summary | exit_code=0 | authoritative pre-write handoff selected P13-T06 and kept P13-T08 P13-T02 P13-T01 held"
+  - ".venv/bin/python -m scripts.validation.cli plan --profile affected | exit_code=0 | affected plan ready with no blocked or unknown path"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py | exit_code=0 | zero findings"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json | exit_code=0 | zero hard failures"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --json-summary | exit_code=0 | zero errors"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py | exit_code=0 | tracked memory synchronization PASS with local-cache-only warnings"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only | exit_code=0 | core memory validation PASS with local-cache-only warnings"
+  - "git diff --check | exit_code=0 | no whitespace error"
+
+validation_summary:
+  status: "PASS_CHECKPOINT_READY"
+  passing_gates:
+    - "ten-source environment definition and live hash parity"
+    - "six focused environment contract and negative tests"
+    - "external CPython 3.12 clean environment and 52-distribution exact inventory"
+    - "three required research-control proof/scientific-checker and benchmark-equivalence profiles"
+    - "pinned Lean 4.30.0 formal proof-object byte reproduction"
+    - "zero selected credential cache Git metadata checkout or relay-goal input"
+    - "documentation impact and project-improvement signal parity"
+    - "task index current frontier and compact frontier freshness"
+    - "research-control diff with zero errors"
+    - "memory bootstrap and validate-only"
+    - "Git diff check"
+  pending_gates:
+    - "one governed checkpoint"
+  checkpoint:
+    invoked: false
+    invocation_count: 0
+    reason: "One governed checkpoint remains authorized after all precheckpoint gates pass."
+  staging:
+    attempted: false
+    index_changed: false
+  commit:
+    created: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 97 repository lease branch clean routed manifest reasoning and P13-T06 dependency parity passed before one atomic claim and consume."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Tracked receipts bind the definition source manifest installed inventory profiles exclusions and formal proof-object result."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Definition negative clean-bootstrap profile source-parity exclusion and project-system repository gates pass."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "One governed checkpoint is authorized and has not yet been invoked."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Task index current frontier compact YAML compact JSON and compact Markdown mirror are synchronized from tracked state."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory synchronization and validate-only pass with local-cache-only warnings."
+  claim_language_linter:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "Changed-source claim-language validation has no hard failure and all reproduction claims remain operational rather than scientific."
+
+assumption_delta:
+  changed: false
+  assumptions_added: []
+  assumptions_removed: []
+  assumptions_adopted: 0
+  exact_reason: "P13-T06 changes only project-system reproduction machinery and adds no scientific assumption."
+
+candidate_or_theorem_identities:
+  candidate_ids_created: []
+  candidate_ids_linked: []
+  theorem_ids_created: []
+  identity_note: "No scientific candidate or theorem identity is created or changed; the existing Lean object is reproduced without altering its scientific status."
+
+physics_progress_status:
+  status: "documentation_or_control_only_no_physics_delta"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Make local and external reproduction practical."
+  explanation: "P13-T06 supplies bounded project-system reproduction only and adds no mathematical or physics payload."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  publication_authorized: false
+  proof_authority: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  canonical_ontology_edit_authorized: false
+  ontology_selection_authorized: false
+  physical_interpretation_establishment_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+three_tier_claim_summary:
+  adopted_objects: []
+  accepted_evidence_preconditions:
+    - "The named hash-bound clean-bootstrap and representative profile commands pass on the recorded Darwin-arm64 host."
+    - "The existing pinned Lean proof object reproduces byte-for-byte under the recorded toolchain."
+  open_or_blocked_physical_targets:
+    - "source_ontology_derivation"
+    - "general_eqsrc"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+  forbidden_overread:
+    - "clean bootstrap as scientific evidence or theorem truth"
+    - "byte-identical proof object as proof authority or physical interpretation"
+    - "benchmark-equivalence test PASS as exact-GR benchmark promotion"
+    - "validator or checkpoint PASS as Distance-to-GR movement publication or completed derivation"
+
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "none"
+  milestone: "source_equivalence_eqsrc"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "P13-T06 changes project-system reproduction machinery only."
+  downstream_unlocked:
+    - "P13-T08_environment_dependency_satisfied_after_checkpoint"
+  downstream_still_blocked:
+    - "P13-T08_until_P13-T07_and_separate_route"
+    - "P13-T02_until_p13_t01_cutover_evidence_complete"
+    - "source_ontology_derivation"
+    - "general_eqsrc"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+    - "benchmark_promotion"
+    - "external_publication"
+
+resolved_project_improvement_signals: []
+project_improvement_signals: []
+project_improvement_sidecar_created: false
+project_improvement_bridge:
+  required: false
+  sidecar_path: ""
+  recursive_goal_recovery_required: false
+  reason: "P13-T06 completed its bounded project-system objective without discovering a separate repair signal."
+
+selected_next_route:
+  route_id: "hold_p13_t02_until_p13_t01_external_cutover_evidence_v1"
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  phase_id: "P13"
+  plan_task_id: "P13-T02"
+  task_name: "Cut CI, checkpointing, and local wrappers over to the authoritative planner"
+  role_family: "validator-engineer@0.2.0"
+  worker_skill: "improve-project-system"
+  task_type: "validation_planner_cutover"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Complete the v19 validation architecture transition."
+  requires_human_gate: true
+  dependency_ready_after_checkpoint: false
+  execution_authorized: false
+  blocked_reason: "P13-T01 retained legacy authority because matched current-head hosted CI and scheduled-full evidence is absent; this relay has no publication or workflow-dispatch authority."
+  p13_t08_executed: false
+  p13_t08_still_requires: "P13-T07 qualifying completion and a separately routed frame"
+  p13_t02_remains_blocked: true
+  p13_t01_reopening_criteria: "Explicit user authority to publish the exact P13-T01 checkpoint followed by matched current-head hosted CI and scheduled-full evidence."
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1008
+    relationship_row_count: 4985
+    semantic_row_count: 1008
+    vault_row_count: 1008
+    local_cache_only_warning_count: 18
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  authority_note: "Generated wiki, Obsidian, SQLite, semantic, relationship, and .local retrieval outputs were navigation layers only and are not authority; the registered v21 plan, tracked handoff-0852, and immutable generation-97 route control this packet."
+
+forbidden_conclusion_summary: "This packet does not promote any physics claim, evaluate theorem truth, change ontology or a source law, move Distance-to-GR, authorize proof or exact-GR benchmark status, issue a Gate Chair verdict, publish or push, execute P13-T08, or complete the derivation."
+verdict: "p13_t06_reproducible_environment_pass_checkpoint_ready"
+coherent_resolution_summary: "The bounded project-system environment is hash-bound, externally bootstrapped, profile-tested, exclusion-checked, explicitly limited by platform, and passing before one governed checkpoint; P13-T02 and P4-T05 are both protected holds requiring authority unavailable to this relay."

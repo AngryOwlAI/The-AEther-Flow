@@ -1,0 +1,374 @@
+job_id: "AJ-RT-20260724-003-001"
+task_id: "RT-20260724-003"
+decision_id: "DDR-20260724-003"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260724-003"
+status: "completed"
+validation_status: "PASS"
+created_at: "2026-07-24T09:20:09Z"
+started_at: "2026-07-24T09:20:09Z"
+completed_at: "2026-07-24T09:34:49Z"
+completion_path: "research_control/tasks/RT-20260724-003/jobs/completions/AJC-AJ-RT-20260724-003-001.yaml"
+requires_human_gate: false
+human_authorization_note: "The user-authorized recursive relay immutably routed generation 97 through improve-project-system for exactly P13-T06 under handoff-0852."
+objective: "Implement and validate one task-local hash-bound external fresh-machine equivalent for representative research-control, proof, scientific-checker, and benchmark-equivalence workflows."
+target_derivation_milestone: "source_equivalence_eqsrc"
+milestone_burden: "Make local and external reproduction practical."
+route_label: "route_p13_t06_via_authoritative_improve_project_system_v1"
+route_reason: "P13-T03 and P13-T04 have qualifying checkpointed completions and handoff-0852 selects dependency-ready P13-T06 after the P13-T05 checkpoint."
+immutable_route_sha256: "0f7fe52aebb9a058cb14d7c7bf1291093c7baf28205822db8dd2dcdf741aa7df"
+plan_task_id: "P13-T06"
+recommendation_ids:
+  - "V21-R57"
+  - "V21-R60"
+  - "V21-R66"
+project_system_change_only: true
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 97
+  passes_consumed: 88
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:97"
+  immutable_route_hash: "0f7fe52aebb9a058cb14d7c7bf1291093c7baf28205822db8dd2dcdf741aa7df"
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  candidate_family: "not_applicable"
+  assumption_delta:
+    - "No scientific assumption changes; P13-T06 adds project-system reproduction machinery only."
+    - "A test PASS or byte-identical proof object remains operational evidence and does not establish theorem truth or scientific status."
+  materiality_basis: "Adds the executable clean-bootstrap and reproduction evidence required by v21 recommendations V21-R57, V21-R60, and the environment portion of V21-R66."
+  source_basis:
+    - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+    - "research_control/handoffs/handoff-0852.yaml"
+    - "research_control/design/validation_environment_contract_v1.md"
+    - "research_control/tasks/RT-20260723-019/jobs/completions/AJC-AJ-RT-20260723-019-001.yaml"
+    - "research_control/tasks/RT-20260724-001/jobs/completions/AJC-AJ-RT-20260724-001-001.yaml"
+  expected_artifact_paths:
+    - "research_control/tasks/RT-20260724-003/artifacts/reproducible_environment_definition.json"
+    - "research_control/tasks/RT-20260724-003/artifacts/bootstrap_fresh_environment.py"
+    - "research_control/tasks/RT-20260724-003/artifacts/OPERATIONS.md"
+    - "research_control/tasks/RT-20260724-003/artifacts/reproduction_receipt.json"
+    - "research_control/tasks/RT-20260724-003/artifacts/p13_t06_reproducible_environment_receipt.json"
+  project_system_justification: "The packet makes controlled software reproduction practical without changing science."
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  expected_durable_outputs:
+    physics: []
+    project_system:
+      - "hash-bound environment definition"
+      - "external fresh-bootstrap script"
+      - "focused environment contract tests"
+      - "operator documentation"
+      - "reproduction and compact receipts"
+  acceptance_criteria:
+    physics: []
+    project_system:
+      - "fresh CPython 3.12 environment builds from hash-locked requirements"
+      - "source hashes match before and after reproduction"
+      - "credentials local caches and relay goal state are excluded"
+      - "research-control proof/scientific-checker and benchmark-equivalence profiles pass"
+      - "supplied pinned Lean build reproduces the tracked proof object"
+      - "project-system research-control memory and Git gates pass"
+      - "one governed checkpoint commits"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: true
+    exception_id: "ORE-HANDOFF-0852-EXCEPTION-001"
+    evidence_path: "research_control/handoffs/handoff-0852.yaml"
+    evidence_sha256: "3e7c40fe42bdc37da5838838016542af38bdd6d918540ad055c66e00944c9a47"
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0852"
+  source_handoff_path: "research_control/handoffs/handoff-0852.yaml"
+  source_handoff_sha256: "3e7c40fe42bdc37da5838838016542af38bdd6d918540ad055c66e00944c9a47"
+  selected_plan_task_id: "P13-T06"
+  guard_outcome: "all_ready_science_blocked_exception"
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+allowed_read_paths:
+  - "SOUL.md"
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/**"
+  - ".agents/roles/research_ops/project-system-director.v0.2.0.md"
+  - ".agents/roles/research_ops/validator-engineer.v0.2.0.md"
+  - ".agents/schemas/**"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  - "research_control/design/**"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0852.yaml"
+  - "research_control/handoffs/handoff-0852.md"
+  - "research_control/tasks/RT-20260720-018/**"
+  - "research_control/tasks/RT-20260723-019/**"
+  - "research_control/tasks/RT-20260723-020/**"
+  - "research_control/tasks/RT-20260724-001/**"
+  - "research_control/tasks/RT-20260724-002/**"
+  - "scripts/**"
+  - "tests/**"
+  - "registries/**"
+  - ".github/workflows/**"
+  - "Makefile"
+  - "README.md"
+  - "CONTRIBUTING.md"
+  - "pyproject.toml"
+  - "requirements.txt"
+  - "requirements-dev.txt"
+allowed_write_paths:
+  - "research_control/tasks/RT-20260724-003/**"
+  - "research_control/handoffs/handoff-0853.yaml"
+  - "research_control/handoffs/handoff-0853.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "FOLDER_MAP.md"
+allowed_generated_paths:
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "FOLDER_MAP.md"
+forbidden_paths:
+  - ".agents/**"
+  - ".codex/skills/**"
+  - "implementations_plans/**"
+  - "pyproject.toml"
+  - "requirements.txt"
+  - "requirements-dev.txt"
+  - "research_control/tasks/RT-20260723-019/artifacts/requirements.lock"
+  - "research_control/tasks/RT-20260724-002/artifacts/quality-assurance-requirements.lock"
+  - "ontology/**"
+  - "legacy_ontology/**"
+  - "manuscripts/**"
+  - "tex/**"
+  - "markdown/publication-briefs/**"
+  - "markdown/html-explainer-specs/**"
+  - "github-facing/**"
+  - "html/**"
+  - "pdf/**"
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "registries/METRIC_USE_LEDGER.csv"
+allowed_source_classes:
+  - "project_system_environment_reproduction"
+  - "hash_locked_dependency_installation"
+  - "source_hash_validation"
+  - "secret_and_cache_exclusion"
+  - "research_control_smoke_validation"
+  - "proof_control_and_formal_build_reproduction"
+  - "benchmark_equivalence_validation"
+  - "control_documentation"
+  - "task_control_state"
+  - "generated_derivative_sync"
+forbidden_source_classes:
+  - "P13_T08_execution"
+  - "dependency_lock_mutation"
+  - "validation_policy_change"
+  - "canonical_ontology_write"
+  - "science_source_mutation"
+  - "scientific_ledger_mutation"
+  - "source_law_adoption"
+  - "physics_claim_promotion"
+  - "benchmark_promotion"
+  - "gate_chair_verdict"
+  - "proof_authority"
+  - "publication_or_push_authority"
+  - "completed_derivation_claim"
+approved_commands:
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search reproducible container development environment --limit 10 --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21 --json"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+  - ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted"
+  - ".venv/bin/python research_control/tasks/RT-20260724-003/artifacts/bootstrap_fresh_environment.py validate --json"
+  - ".venv/bin/python research_control/tasks/RT-20260724-003/artifacts/test_bootstrap_fresh_environment.py"
+  - "/opt/homebrew/bin/python3.12 research_control/tasks/RT-20260724-003/artifacts/bootstrap_fresh_environment.py bootstrap --python /opt/homebrew/bin/python3.12 --target <external-new-path> --receipt research_control/tasks/RT-20260724-003/artifacts/reproduction_receipt.json --lean-bin <pinned-lean-path> --json"
+  - ".venv/bin/python -m unittest -v tests.test_validation_api tests.test_validation_portability tests.test_proof_normal_form_registry tests.test_finite_source_cover_model_checker tests.test_validation_equivalence"
+  - ".venv/bin/python -m scripts.validation.cli plan --profile affected"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --check"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --check"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --write"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --check"
+  - ".venv/bin/python scripts/research_control/validate_compact_current_frontier_v16.py --json"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --json-summary"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260724-003-001"
+  - "git diff --check"
+required_validators:
+  - "memory_preflight"
+  - "physics_payload_admission"
+  - "dual_budget_allocation"
+  - "ordinary_route_guard_admission"
+  - "environment_definition"
+  - "fresh_environment_contract_tests"
+  - "hash_locked_clean_bootstrap"
+  - "source_hash_before_after_parity"
+  - "secret_cache_goal_state_exclusion"
+  - "research_control_smoke"
+  - "proof_and_scientific_checker_control"
+  - "pinned_lean_formal_proof_reproduction"
+  - "benchmark_equivalence"
+  - "task_index_renderer"
+  - "current_frontier_renderer"
+  - "compact_frontier_renderer"
+  - "compact_frontier_schema"
+  - "affected_validation_plan"
+  - "project_change_classifier"
+  - "project_improvement_resolver"
+  - "project_improvement_signals"
+  - "documentation_impact"
+  - "claim_language_changed"
+  - "research_control_diff"
+  - "memory_sync"
+  - "memory_core"
+  - "git_diff_check"
+  - "checkpoint_transaction"
+expected_outputs:
+  - "research_control/tasks/RT-20260724-003/00_TASK.yaml"
+  - "research_control/tasks/RT-20260724-003/DDR-20260724-003.md"
+  - "research_control/tasks/RT-20260724-003/roles/validator-engineer@0.2.0--RT-20260724-003.yaml"
+  - "research_control/tasks/RT-20260724-003/jobs/AJ-RT-20260724-003-001.yaml"
+  - "research_control/tasks/RT-20260724-003/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260724-003/jobs/completions/AJC-AJ-RT-20260724-003-001.yaml"
+  - "research_control/tasks/RT-20260724-003/artifacts/reproducible_environment_definition.json"
+  - "research_control/tasks/RT-20260724-003/artifacts/bootstrap_fresh_environment.py"
+  - "research_control/tasks/RT-20260724-003/artifacts/test_bootstrap_fresh_environment.py"
+  - "research_control/tasks/RT-20260724-003/artifacts/OPERATIONS.md"
+  - "research_control/tasks/RT-20260724-003/artifacts/reproduction_receipt.json"
+  - "research_control/tasks/RT-20260724-003/artifacts/p13_t06_reproducible_environment_receipt.json"
+  - "research_control/handoffs/handoff-0853.yaml"
+  - "research_control/handoffs/handoff-0853.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "output/compact_current_frontier_v16.yaml"
+  - "output/compact_current_frontier_v16.json"
+  - "wiki/indexes/compact_current_frontier_v16.md"
+claim_boundary: "CB-V21-P13-T06-REPRODUCIBLE-ENVIRONMENT-001"
+resolves_signal_routing: false
+documentation_impact_id: "DI-RT-20260724-003-001"
+completion_id: "AJC-AJ-RT-20260724-003-001"
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1008
+    relationship_row_count: 4985
+    semantic_row_count: 1008
+    vault_row_count: 1008
+    local_cache_only_warning_count: 18
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  authority_note: "Generated wiki, Obsidian, SQLite, semantic, relationship, and .local retrieval outputs were navigation layers only and are not authority; the registered v21 plan, tracked handoff-0852, and immutable generation-97 route control this packet."
+stop_conditions:
+  - "source hash mismatch before or after bootstrap"
+  - "credential local cache Git metadata or relay goal-state input selected"
+  - "hash-locked installation or representative profile failure"
+  - "pinned Lean version commit source or proof-object mismatch"
+  - "write outside the AgentJob allowlist"
+  - "validation or checkpoint failure"
+  - "human policy decision required"

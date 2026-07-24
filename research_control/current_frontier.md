@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260724-002` and `handoff-0852`.
+`RT-20260724-003` and `handoff-0853`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260724-002` |
-| Latest handoff ID | `handoff-0852` |
-| Current status | `p13_t05_assurance_pass_checkpoint_ready` |
+| Active task ID | `RT-20260724-003` |
+| Latest handoff ID | `handoff-0853` |
+| Current status | `p13_t06_reproducible_environment_pass_checkpoint_ready` |
 | V16 completed | false |
-| Current route family | construction or implementation (project system) |
+| Current route family | integration or selection (project system) |
 | Target derivation milestone | `source_equivalence_eqsrc` |
-| Current burden | none for physics derivation; live control burden is reproducible container or equivalent development environment |
-| Required next authority | One governed checkpoint may commit the completed P13-T05 transaction. After commit, one fresh bounded P13-T06 improve-project-system frame may implement a reproducible container or equivalent development environment. P13-T08 requires later dependency completion and a separate route, P13-T02 remains blocked, and P13-T01 remains held. |
-| Next recommended action | Run the one authorized governed checkpoint for AJ-RT-20260724-002-001. After commit, route one fresh bounded P13-T06 improve-project-system frame to provide a reproducible container or equivalent development environment. Do not execute P13-T08 in this packet; keep P13-T02 blocked and P13-T01 held. |
+| Current burden | none for physics derivation; live control burden is validation planner cutover |
+| Required next authority | One governed checkpoint may commit the completed P13-T06 transaction. No subsequent plan task is executable without new protected authority or external evidence: P13-T02 remains held by the P13-T01 cutover condition, P4-T05 requires explicit Gate Chair authority, and P13-T08 still lacks P13-T07. |
+| Next recommended action | Run the one authorized governed checkpoint for AJ-RT-20260724-003-001. After commit, hold P13-T02 until explicit publication authority and matched current-head hosted CI plus scheduled-full evidence satisfy the P13-T01 cutover precondition; P4-T05 separately requires explicit human Gate Chair authority. Do not execute P13-T08, P13-T02, or P4-T05 without their exact missing authority and evidence. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260724-002` |
-| Latest research handoff ID | `handoff-0852` |
-| Latest research next action | Run the one authorized governed checkpoint for AJ-RT-20260724-002-001. After commit, route one fresh bounded P13-T06 improve-project-system frame to provide a reproducible container or equivalent development environment. Do not execute P13-T08 in this packet; keep P13-T02 blocked and P13-T01 held. |
+| Latest research task ID | `RT-20260724-003` |
+| Latest research handoff ID | `handoff-0853` |
+| Latest research next action | Run the one authorized governed checkpoint for AJ-RT-20260724-003-001. After commit, hold P13-T02 until explicit publication authority and matched current-head hosted CI plus scheduled-full evidence satisfy the P13-T01 cutover precondition; P4-T05 separately requires explicit human Gate Chair authority. Do not execute P13-T08, P13-T02, or P4-T05 without their exact missing authority and evidence. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260724-002/00_TASK.yaml`.
-- Active task objective: Measure bounded critical-path coverage and add property-based, mutation, dependency-vulnerability, code-security, and adversarial scientific-fixture assurance without treating any tool score as proof.
-- Latest handoff path: `research_control/handoffs/handoff-0852.yaml`.
-- Latest handoff summary: Generation 95 completed the bounded P13-T05 assurance packet. Exact hash-locked quality dependencies, deterministic evaluators, property tests, registered policy sources, CI wiring, and compact receipts now enforce an 85 percent branch-aware coverage floor, a 34-mutant exact acceptance campaign, dependency-vulnerability and code-security audits, and P11-T04 adversarial-fixture non-regression. Measured coverage is 89.595 percent, all 34 target mutants were killed, 50 distributions had no known vulnerability, five low security findings were dispositioned, no medium or high finding remained, and all focused regression gates pass before one governed checkpoint.
-- Current route family: construction or implementation (project system).
-- Next recommended action: Run the one authorized governed checkpoint for AJ-RT-20260724-002-001. After commit, route one fresh bounded P13-T06 improve-project-system frame to provide a reproducible container or equivalent development environment. Do not execute P13-T08 in this packet; keep P13-T02 blocked and P13-T01 held.
+- Active task path: `research_control/tasks/RT-20260724-003/00_TASK.yaml`.
+- Active task objective: Provide a hash-bound clean bootstrap that reproduces research-control, proof, scientific-checker, and benchmark-equivalence workflows from an external CPython 3.12 environment without embedding credentials, local caches, or relay goal state.
+- Latest handoff path: `research_control/handoffs/handoff-0853.yaml`.
+- Latest handoff summary: Generation 97 completed the bounded P13-T06 environment packet. A task-local external CPython 3.12 bootstrap binds ten tracked source hashes and the hash-locked development dependency graph, installed 52 exact distributions, passed the research-control, proof/scientific-checker, and benchmark-equivalence profiles, reproduced the tracked Lean proof object byte-for-byte with the pinned 4.30.0 toolchain, preserved all source hashes before and after, and selected no credential, cache, Git-metadata, checkout, or relay-goal input. Three platform limitations remain explicit and every result is project-system evidence only.
+- Current route family: integration or selection (project system).
+- Next recommended action: Run the one authorized governed checkpoint for AJ-RT-20260724-003-001. After commit, hold P13-T02 until explicit publication authority and matched current-head hosted CI plus scheduled-full evidence satisfy the P13-T01 cutover precondition; P4-T05 separately requires explicit human Gate Chair authority. Do not execute P13-T08, P13-T02, or P4-T05 without their exact missing authority and evidence.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -96,9 +96,9 @@ No open or blocked physical target entries are listed.
 
 Forbidden overreads:
 
-- quality-tool score as proof correctness or semantic completeness
-- security-tool PASS as scientific evidence or theorem truth
-- validator PASS as Distance-to-GR movement
+- environment or validator PASS as scientific evidence theorem truth or Distance-to-GR movement
+- proof-object reproduction as proof authority or physical interpretation
+- benchmark-equivalence PASS as exact-GR benchmark promotion
 - checkpoint PASS as publication proof or hosted-CI evidence
 
 ## Matter-Coupling Boundary
@@ -297,7 +297,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run the one authorized governed checkpoint for AJ-RT-20260724-002-001. After commit, route one fresh bounded P13-T06 improve-project-system frame to provide a reproducible container or equivalent development environment. Do not execute P13-T08 in this packet; keep P13-T02 blocked and P13-T01 held.
+Run the one authorized governed checkpoint for AJ-RT-20260724-003-001. After commit, hold P13-T02 until explicit publication authority and matched current-head hosted CI plus scheduled-full evidence satisfy the P13-T01 cutover precondition; P4-T05 separately requires explicit human Gate Chair authority. Do not execute P13-T08, P13-T02, or P4-T05 without their exact missing authority and evidence.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -323,10 +323,10 @@ Validation layers:
 
 | Validation layer | Status | Meaning | Evidence |
 | --- | --- | --- | --- |
-| `pre_execution` | PASS | receipt complete | Generation 95 was validated, claimed, and consumed exactly once before its one routed improve-project-system invocation.<br>The routed clean manifest immutable strategy blocker and lease identities matched before writes. |
-| `completion_internal` | PASS | receipt complete | Tracked receipts bind exact source hashes and measured coverage mutation dependency security property and non-regression results. |
-| `post_write` | PASS | receipt complete | Assurance dependency mutation security adversarial quality portability CI checkpoint project-system research-control memory and Git gates pass. |
-| `post_checkpoint` | PENDING | open item; evidence must explain why | One governed checkpoint remains required before P13-T06. |
+| `pre_execution` | PASS | receipt complete | Generation 97 was validated, claimed, and consumed exactly once before its one routed improve-project-system invocation.<br>The routed clean manifest immutable strategy blocker and lease identities matched before writes. |
+| `completion_internal` | PASS | receipt complete | Tracked receipts bind exact source hashes clean-bootstrap inventory profile exclusions and proof-object reproduction results. |
+| `post_write` | PASS | receipt complete | Environment definition contract bootstrap proof benchmark project-system research-control memory and Git gates pass. |
+| `post_checkpoint` | PENDING | open item; evidence must explain why | One governed checkpoint remains required before any later Director action. |
 | `renderer` | PASS | receipt complete | Task index current frontier compact YAML compact JSON and compact Markdown mirror are current. |
 | `memory_bootstrap` | PASS | receipt complete | Tracked memory synchronization and validate-only pass with local-cache-only warnings. |
 | `claim_language_linter` | PASS_WITH_WARNINGS | receipt complete with stated warnings | Changed-source validation has no hard claim-language failure. |
@@ -359,9 +359,9 @@ Authorization layers:
 
 Legacy compatibility records:
 
-- active task: `RT-20260724-002`;
-- latest handoff: `handoff-0852`;
-- current status: `p13_t05_assurance_pass_checkpoint_ready`;
+- active task: `RT-20260724-003`;
+- latest handoff: `handoff-0853`;
+- current status: `p13_t06_reproducible_environment_pass_checkpoint_ready`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -371,8 +371,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0852.yaml`
-- `research_control/tasks/RT-20260724-002/00_TASK.yaml`
+- `research_control/handoffs/handoff-0853.yaml`
+- `research_control/tasks/RT-20260724-003/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -388,7 +388,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0852*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0853*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

@@ -1,0 +1,77 @@
+validation_status: "PASS_CHECKPOINT_READY"
+task_id: "RT-20260724-003"
+task_type: "project_system_p13_t06_reproducible_environment"
+title: "Provide a reproducible fresh-machine equivalent environment"
+task_taxonomy:
+  schema_id: "v21_task_taxonomy_v1"
+  work_kind: "integration_or_selection"
+  milestone: "source_equivalence_eqsrc"
+  candidate_family: "p13_t06_reproducible_environment"
+  result_kind: "implemented_and_validated_or_precisely_blocked"
+  authority: "project_control"
+  scope: "project_system"
+status: "completed"
+created_at: "2026-07-24T09:20:09Z"
+updated_at: "2026-07-24T09:34:49Z"
+closed_at: "2026-07-24T09:34:49Z"
+parent_task_id: "RT-20260724-002"
+parent_handoff_id: "handoff-0852"
+supersedes_active_routing_task_id: "RT-20260724-002"
+current_decision_id: "DDR-20260724-003"
+current_job_id: "AJ-RT-20260724-003-001"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260724-003"
+requires_human_gate: false
+human_authorization_note: "Generation 97 of the immutable user-requested relay routes exactly one improve-project-system frame to dependency-ready P13-T06 under handoff-0852."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P13"
+  plan_task_id: "P13-T06"
+  next_plan_task_id: "P13-T08"
+  recommendation_ids:
+    - "V21-R57"
+    - "V21-R60"
+    - "V21-R66"
+objective: "Provide a hash-bound clean bootstrap that reproduces research-control, proof, scientific-checker, and benchmark-equivalence workflows from an external CPython 3.12 environment without embedding credentials, local caches, or relay goal state."
+target_derivation_milestone: "source_equivalence_eqsrc"
+milestone_burden: "Make local and external reproduction practical."
+route_label: "route_p13_t06_via_authoritative_improve_project_system_v1"
+project_system_change_only: true
+dual_budget_category: "system_bearing"
+primary_budget: "project_system"
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+claim_boundary_id: "CB-V21-P13-T06-REPRODUCIBLE-ENVIRONMENT-001"
+claim_boundary:
+  allowed_scope: "Create and validate one task-local fresh-machine equivalent environment definition, bootstrap, operator guide, focused tests, reproduction receipt, compact receipt, and normal control records."
+  source_handoff_id: "handoff-0852"
+  source_handoff_sha256: "3e7c40fe42bdc37da5838838016542af38bdd6d918540ad055c66e00944c9a47"
+  immutable_route_sha256: "0f7fe52aebb9a058cb14d7c7bf1291093c7baf28205822db8dd2dcdf741aa7df"
+  p13_t08_executed: false
+  p13_t02_executed: false
+  p13_t01_reopened: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+documentation_impact_id: "DI-RT-20260724-003-001"
+completion_id: "AJC-AJ-RT-20260724-003-001"
+output_artifacts:
+  - "research_control/tasks/RT-20260724-003/artifacts/reproducible_environment_definition.json"
+  - "research_control/tasks/RT-20260724-003/artifacts/bootstrap_fresh_environment.py"
+  - "research_control/tasks/RT-20260724-003/artifacts/test_bootstrap_fresh_environment.py"
+  - "research_control/tasks/RT-20260724-003/artifacts/OPERATIONS.md"
+  - "research_control/tasks/RT-20260724-003/artifacts/reproduction_receipt.json"
+  - "research_control/tasks/RT-20260724-003/artifacts/p13_t06_reproducible_environment_receipt.json"
+  - "research_control/tasks/RT-20260724-003/jobs/completions/AJC-AJ-RT-20260724-003-001.yaml"
+  - "research_control/handoffs/handoff-0853.yaml"
+  - "research_control/handoffs/handoff-0853.md"
+closure_status: "p13_t06_reproducible_environment_pass_checkpoint_ready"
+summary: "P13-T06 completed a hash-bound external CPython 3.12 bootstrap with 52 exact distributions, all required profiles, zero excluded-input findings, before/after source parity, and a byte-identical pinned Lean proof object."
+next_recommended_action: "Run one governed checkpoint for AJ-RT-20260724-003-001, then recompute the next lawful v21 route; P13-T08 remains blocked on P13-T07 and a separate route."
+project_improvement_signals: []
+notes: "All environment and tool results are operational project-system evidence only."
