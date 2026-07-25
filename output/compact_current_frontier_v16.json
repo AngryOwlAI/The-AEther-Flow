@@ -2,7 +2,7 @@
   "schema_id": "compact_current_frontier_v16",
   "generated_from": [
     "research_control/program_state.yaml",
-    "research_control/handoffs/handoff-0859.yaml",
+    "research_control/handoffs/handoff-0862.yaml",
     "registries/DISTANCE_TO_GR_LEDGER.csv",
     "registries/METRIC_USE_LEDGER.csv",
     "research_control/current_frontier.md",
@@ -11,17 +11,17 @@
     "research_control/design/active_state_bifurcation_policy_v1.md"
   ],
   "active_state": {
-    "active_task_id": "RT-20260724-009",
-    "latest_handoff_id": "handoff-0859",
-    "current_status": "p4_t05_handoff_route_guard_status_reconciliation_pass_ready_for_checkpoint",
+    "active_task_id": "RT-20260725-002",
+    "latest_handoff_id": "handoff-0862",
+    "current_status": "p4_t06_dependent_repository_contract_recovery_pass_ready_for_checkpoint",
     "v15_completed": false,
     "v16_completed": false,
     "v16_plan_registered": true
   },
   "active_state_bifurcation": {
-    "latest_research_task_id": "RT-20260724-009",
-    "latest_research_handoff_id": "handoff-0859",
-    "latest_research_next_action": "After the generation-104 governed checkpoint commits, run one fresh bounded continue-research packet for P4-T06 to integrate the already approved narrow continuum-first source boundary without importing physical semantics or promoting claims.",
+    "latest_research_task_id": "RT-20260725-002",
+    "latest_research_handoff_id": "handoff-0862",
+    "latest_research_next_action": "After the governed combined checkpoint commits, run exactly one bounded P5-T01 ontology-formalizer AgentJob to define the compact source-theory tuple and object model while preserving open dynamics and reconstruction slots and all no-promotion boundaries.",
     "latest_project_system_task_id": "none",
     "latest_project_system_status": "none",
     "latest_project_system_sidecar_task_id": "none",
@@ -30,10 +30,10 @@
     "next_research_route_source": "latest_research_handoff"
   },
   "next_route": {
-    "route_id": "v21_p4_t06_narrow_continuum_first_canonical_integration",
+    "route_id": "v21_p5_t01_compact_source_theory_tuple_and_object_model",
     "role_family": "ontology-formalizer@0.2.0",
     "target_derivation_milestone": "source_ontology",
-    "milestone_burden": "Make tracked sources consistent with the human-approved ontology regime.",
+    "milestone_burden": "Replace dispersed source records with one coherent theory target.",
     "requires_human_gate": false
   },
   "claim_boundary": {
@@ -326,7 +326,7 @@
       "effect": "no_distance_delta",
       "changed": false,
       "milestone": "source_ontology",
-      "burden_id": "none"
+      "burden_id": "source_ontology_primitives"
     },
     "high_risk_rows": [
       {
@@ -612,7 +612,7 @@
         "layer": "post_checkpoint",
         "status": "PENDING",
         "evidence": [
-          "One governed checkpoint remains to be invoked in the same generation-104 transaction."
+          "One governed checkpoint remains to be invoked in this generation-107 transaction."
         ]
       }
     ]

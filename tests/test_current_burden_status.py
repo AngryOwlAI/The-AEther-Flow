@@ -105,9 +105,9 @@ class CurrentBurdenStatusTests(unittest.TestCase):
         path = self.repo_root / renderer.DEFINITIONS_PATH
         text = path.read_text(encoding="utf-8")
         text = text.replace(
-            '    required_object: "primitive substrate data"',
+            '    required_object: "selected primitive source arena and unresolved source-order or evolution slot"',
             '    current_status: "stale fixture"\n'
-            '    required_object: "primitive substrate data"',
+            '    required_object: "selected primitive source arena and unresolved source-order or evolution slot"',
             1,
         )
         path.write_text(text, encoding="utf-8")

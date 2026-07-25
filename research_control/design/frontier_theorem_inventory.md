@@ -27,6 +27,10 @@ snapshots, generated dependency graphs, semantic extracts, Obsidian notes, and
 - P3-T07 v21 EqSrc integration: `RT-20260720-028`, synchronizing the
   registered selector theorem, exact historical-family freezes, quotient
   adequacy freeze, and one non-promotional P4-T01 route selection.
+- P4-T06 v21 source-architecture integration: `RT-20260724-010`,
+  synchronizing Item 1 with the protected continuum-first mainline,
+  four-dimensional smooth source arena as explicit primitive debt, unresolved
+  `Phi_src` slot, and preserved emergence-first fallback.
 - Schema source:
   `research_control/design/frontier_theorem_inventory_schema_v1.md`.
 - Inventory source:
@@ -35,7 +39,8 @@ snapshots, generated dependency graphs, semantic extracts, Obsidian notes, and
 - New science-bearing theorem statements: none.
 - Distance-to-GR ledger edit: control next-action wording only; no scientific
   Distance-to-GR status delta.
-- TeX physics source edit: none.
+- TeX physics source edit: P4-T06 updates only the three registered ontology
+  manuscripts under the exact P4-T05 canonical-integration authorization.
 
 The phrases `accepted`, `scoped`, `blocked`, `frozen negative`, and
 `human-gated` below are copied or summarized from tracked sources. They must
@@ -51,59 +56,90 @@ benchmark closure, or completed derivation.
 - `frontier_item_class`: `definition;missing_theorem`
 - `milestone`: `source_ontology`
 - `object_type`: `definition;missing_theorem`
-- `object_or_claim_name`: Source ontology primitives draft status.
+- `object_or_claim_name`: Selected continuum-first source research architecture and remaining physical-bridge burden.
 - `status_layer_summary`:
-  - `control_status`: `draft_control_object_exists`
-  - `mathematical_status`: `definition_only_or_draft_object`
-  - `physical_status`: `no_canonical_ontology_adoption`
-  - `promotion_status`: `draft_control_only`
-  - `overread_guard`: `no_canonical_ontology_edit;no_benchmark_promotion;no_completed_derivation`
+  - `control_status`: `accepted_as_scoped_source_object`
+  - `mathematical_status`: `source_only_adopted_object`
+  - `physical_status`: `no_physical_interpretation_authorized`
+  - `promotion_status`: `scoped_source_object_only`
+  - `overread_guard`: `no_source_law_adoption;no_metricdata_e_adoption;no_matter_coupling_adoption;no_benchmark_promotion;no_completed_derivation`
 - `three_tier_classification`: `open_or_blocked_physical_target`.
-- `linter_status`: `PASS`; P7-T02 inventory population claim-language scan.
-- `overread_guard`: `no_canonical_ontology_edit;no_benchmark_promotion;no_completed_derivation`
-- `source_artifact_path`: `AGENTS.md`;
+- `linter_status`: `PASS`; P4-T06 task-local and changed-claim scans.
+- `overread_guard`: `no_source_law_adoption;no_metricdata_e_adoption;no_matter_coupling_adoption;no_benchmark_promotion;no_completed_derivation`
+- `source_artifact_path`:
+  `ontology/tex/aether_flow_foundations.tex`;
+  `ontology/tex/aether_flow_dynamics.tex`;
+  `ontology/tex/aether_flow_geometry.tex`;
+  `research_control/tasks/RT-20260724-004/artifacts/ontology_regime_gate_chair_decision_v1.tex`;
   `registries/DISTANCE_TO_GR_LEDGER.csv` row `source_ontology_primitives`.
-- `authority_level`: `registered_control_markdown;registry_row;draft_control`
-- `source_authority_type`: `registered_markdown_control;distance_to_gr_ledger_row`
+- `authority_level`: `canonical_registered_TeX;protected_gate_decision;registered_control_markdown;registry_row`
+- `source_authority_type`: `registered_tex_artifact;gate_chair_artifact;registered_markdown_control;distance_to_gr_ledger_row`
 - `assumptions`:
   - The project keeps canonical physics claims in registered TeX and routing
     state in control registries.
-  - The source ontology exists only as draft/control guidance unless protected
-    ontology adoption is explicitly authorized.
-- `definitions_used`: `source_ontology`; `primitive substrate data`;
-  `canonical adoption rules`; `draft/control`.
-- `definitions_introduced`: `none`; this row summarizes draft/control ontology-boundary material.
-- `theorem_like_claims`: `none`; this is a missing-theorem and draft-control boundary row.
-- `statement_or_decision`: The current ontology primitive layer is recorded as
-  draft material with canonical adoption rules still open.
-- `mathematical_conclusion`: No accepted canonical source-ontology primitive
-  theorem is supplied by the current frontier.
-- `audits_passed`: `none`.
-- `stress_results`: `none`.
-- `gate_chair_results`: `none`; canonical ontology adoption remains protected and absent.
-- `fail_closed_branches`: `none`.
-- `known_obstructions`: Canonical ontology adoption rule and derivation-critical primitives remain missing.
+  - The protected P4-T05 decision selects continuum-first only as the canonical
+    mainline research architecture.
+  - A smooth four-dimensional source arena is explicit primitive debt, not a
+    derived result or physical spacetime.
+  - `Phi_src` is only an unresolved abstract source-order or evolution slot;
+    no domain, algebra, invertibility, stochastic status, gauge status,
+    physical-time meaning, source law, or source dynamics is adopted.
+  - Emergence-first remains a proposal-only noncanonical fallback under the
+    exact P4-T05 reopening conditions.
+- `definitions_used`: `source_ontology`; `canonical mainline research architecture`;
+  `explicit primitive debt`; `unresolved source-order or evolution slot`.
+- `definitions_introduced`: The P4-T06 integrated source boundary
+  `(\mathcal A, Phi_src unresolved)` at research-architecture scope.
+- `theorem_like_claims`: `none`; the selection and integration are tracked
+  definitions and authority decisions, not a theorem that continuum-first is
+  true or derived.
+- `statement_or_decision`: The canonical mainline uses a smooth
+  four-dimensional source arena as explicit primitive debt and retains
+  `Phi_src` unresolved, while every physical bridge remains open.
+- `mathematical_conclusion`: The source arena is now typed for downstream
+  formalization, but no source dynamics, physical metric, clock, matter
+  semantics, coupling, or GR-recovery theorem follows.
+- `audits_passed`: P4-T04 comparative audit and P4-T06 no-target-import,
+  claim-language, source-authority, and historical-preservation checks.
+- `stress_results`: P4-T04 found no scientific dominance; the selected route
+  is a protected research choice rather than a truth theorem.
+- `gate_chair_results`: P4-T05 selected the narrow continuum-first mainline
+  and authorized the separate P4-T06 integration.
+- `fail_closed_branches`: `Phi_src` semantics, source dynamics, and every
+  source-to-target physical bridge remain open.
+- `known_obstructions`: The current architecture does not derive its
+  four-dimensional smooth arena, type `Phi_src`, or supply a physical
+  source-to-target reconstruction law.
 - `physical_non_conclusions`:
-  - No canonical ontology edit is made.
+  - The source arena is not physical spacetime or the exact-GR target manifold.
+  - `Phi_src` is not physical time, gauge, a source law, or source dynamics.
+  - The protected research-architecture selection is not a physical-ontology truth claim.
   - No benchmark promotion or completed derivation follows.
-- `forbidden_overread`: Draft ontology language as canonical ontology, benchmark recovery, or completed derivation.
+- `forbidden_overread`: Canonical research architecture as physical ontology,
+  source-target identity, `Phi_src` semantics, benchmark recovery, or completed
+  derivation.
 - `downstream_blocked_targets`: Source-law adoption, downstream GR recovery, benchmark promotion, and completed derivation.
 - `allowed_reuse`:
-  - Use as a boundary reminder for future source-law, selector, or ontology-law
-    packets.
-  - Cite only with the ledger row and root authority hierarchy.
+  - Use the selected smooth source arena as the exact primitive-debt boundary
+    for P5-T01 source-theory typing.
+  - Use the unresolved `Phi_src` slot as the P5-T02 semantics burden.
+  - Cite only with the P4-T05 decision, the three canonical ontology sources,
+    the ledger row, and the root authority hierarchy.
 - `blocked_reuse`:
-  - Do not treat draft ontology language as adopted ontology.
-  - Do not use this row as a source-law or benchmark premise.
-- `dependency_items`: `none`
-- `missing_theorem_or_primitive`: Canonical ontology adoption rule and any
-  derivation-critical primitive not yet human-gated.
-- `next_theorem_needed`: Canonical ontology adoption rule or derivation-critical source primitive under protected authority.
-- `candidate_next_task`: `none`; route only if a later packet needs protected
-  ontology adoption or a derivation-critical missing source law.
-- `overread_guard`: `no_canonical_ontology_edit;no_benchmark_promotion;no_completed_derivation`
-- `external_review_notes`: Reviewers should check whether later packets
-  launder draft ontology language into adopted source authority.
+  - Do not identify the source arena with physical spacetime or import the
+    target atlas, metric, clocks, matter, or benchmark behavior.
+  - Do not infer any property of `Phi_src` beyond its unresolved slot status.
+  - Do not treat this row as a source-law, source-dynamics, or benchmark premise.
+- `dependency_items`: `P4-T05`; `P4-T06`
+- `missing_theorem_or_primitive`: A compact source-theory tuple, exact
+  `Phi_src` semantics, source dynamics, and lawful source-to-target bridge.
+- `next_theorem_needed`: P5-T01 compact source-theory object definition,
+  followed by P5-T02 resolution of the `Phi_src` semantics.
+- `candidate_next_task`: `P5-T01`
+- `overread_guard`: `no_source_law_adoption;no_metricdata_e_adoption;no_matter_coupling_adoption;no_benchmark_promotion;no_completed_derivation`
+- `external_review_notes`: Reviewers should check that later packets preserve
+  explicit primitive debt, do not import target structure, and do not treat a
+  protected research choice as empirical or metaphysical proof.
 
 ### Item 2: source_equivalence_eqsrc
 

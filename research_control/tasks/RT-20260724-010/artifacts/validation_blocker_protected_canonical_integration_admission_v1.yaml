@@ -1,0 +1,131 @@
+schema_id: "v21_protected_canonical_integration_admission_blocker_v1"
+blocker_id: "BLOCK-P4-T06-PROTECTED-CANONICAL-INTEGRATION-001"
+task_id: "RT-20260724-010"
+job_id: "AJ-RT-20260724-010-001"
+completion_id: "AJC-AJ-RT-20260724-010-001"
+plan_task_id: "P4-T06"
+detected_at: "2026-07-25T01:19:27Z"
+status: "blocked_precheckpoint_project_system_repair_required"
+failed_gate: "research_control_diff"
+failing_command: ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --json-summary"
+failing_predicates:
+  - "validate_future_physics_job_authority"
+  - "validate_memory_preflight"
+exact_errors:
+  - "future physics AgentJob may not allow direct write path ontology/tex/aether_flow_foundations.tex"
+  - "future physics AgentJob may not allow direct write path ontology/tex/aether_flow_dynamics.tex"
+  - "future physics AgentJob may not allow direct write path ontology/tex/aether_flow_geometry.tex"
+  - "future physics AgentJob may not allow direct write path ontology/pdfs/aether_flow_foundations.pdf"
+  - "future physics AgentJob may not allow direct write path ontology/pdfs/aether_flow_dynamics.pdf"
+  - "future physics AgentJob may not allow direct write path ontology/pdfs/aether_flow_geometry.pdf"
+  - "historical memory_preflight source_hash records for the changed canonical ontology sources and epistemic-category glossary no longer match the current registry row or file bytes"
+diagnostic_receipt:
+  run_id: "RESEARCH-CONTROL-DIFF-8D589AFB328DA59E"
+  receipt_path: ".local/validation-receipts/working-sha256-8d589afb328da59e6f6277b66d15c74279642ed5c7e5f2f333a6225135eaee5e/RESEARCH-CONTROL-DIFF-8D589AFB328DA59E/full.json"
+  receipt_is_untracked_non_authority: true
+  observed_error_count: 156
+  observed_warning_count: 1735
+  observed_finding_count: 1891
+  independently_corrected_current_record_issues:
+    - "Distance-to-GR controlled status vocabulary"
+    - "frontier inventory authority labels and matter-coupling guard"
+    - "parent-child fused-output declarations"
+    - "physics-payload admission vocabulary and noninference flags"
+    - "dual-budget completion parity"
+    - "role-execution registry parity"
+    - "memory-preflight canonical inspection completeness"
+    - "active-state next-action and ordinary-route outcome parity"
+  conclusion: "The diagnostic count includes correctable current-record findings that were repaired after this snapshot. The protected canonical-write admission and immutable historical memory-preflight hash findings require a separately governed project-system change and remain the controlling checkpoint blocker."
+final_strict_validation:
+  run_id: "RESEARCH-CONTROL-DIFF-BA1CD00C47BC9431"
+  receipt_path: ".local/validation-receipts/working-sha256-ba1cd00c47bc9431837a957dcc79c7be33d4390adf98deb7f847b8600f95bc51/RESEARCH-CONTROL-DIFF-BA1CD00C47BC9431/full.json"
+  receipt_is_untracked_non_authority: true
+  observed_error_count: 120
+  observed_warning_count: 1735
+  observed_finding_count: 1855
+  canonical_write_admission_error_count: 6
+  historical_memory_preflight_stale_file_error_count: 57
+  historical_memory_preflight_registry_hash_error_count: 57
+  other_error_count: 0
+  affected_current_job_paths:
+    - "ontology/tex/aether_flow_foundations.tex"
+    - "ontology/tex/aether_flow_dynamics.tex"
+    - "ontology/tex/aether_flow_geometry.tex"
+    - "ontology/pdfs/aether_flow_foundations.pdf"
+    - "ontology/pdfs/aether_flow_dynamics.pdf"
+    - "ontology/pdfs/aether_flow_geometry.pdf"
+  affected_historical_source_objects:
+    - "TEX-ONTOLOGY-AETHER-FLOW-FOUNDATIONS"
+    - "TEX-ONTOLOGY-AETHER-FLOW-DYNAMICS"
+    - "TEX-ONTOLOGY-AETHER-FLOW-GEOMETRY"
+    - "MD-RESEARCH-CONTROL-DESIGN-EPISTEMIC-CATEGORY-GLOSSARY"
+  conclusion: "All 120 live errors belong to the two protected project-system contract gaps. No additional current-record or scientific-payload error remains in this run."
+source_authority:
+  predecessor_handoff_path: "research_control/handoffs/handoff-0859.yaml"
+  predecessor_handoff_sha256: "513919a1785d78a190e30b4734737e61f3aede829820337dfbe9b07f0abcbcd7"
+  predecessor_selected_plan_task_id: "P4-T06"
+  tracked_approval_path: "research_control/approvals/approval-20260724-001.yaml"
+  tracked_approval_sha256: "37038157b5deb23a3ae8249dcf5562ac8e9be37f6fa4ae8704c47b0eeb24a412"
+  human_authorization_id: "HUMAN-P4-T05-20260722-CONTINUUM-FIRST-01"
+  gate_decision_path: "research_control/tasks/RT-20260724-004/artifacts/ontology_regime_gate_chair_decision_v1.tex"
+  gate_decision_sha256: "20ea795581b9571389fc3a1a60b20a4237ca976b2bcc570b4552bb1d8f641231"
+  route_authorization_path: "research_control/tasks/RT-20260724-004/artifacts/canonical_next_route_authorization_v1.yaml"
+  route_authorization_sha256: "52edb6e43e024b09de58d2fc9242a6747630678800e91d47d6c4195203cd8c86"
+  immutable_goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  immutable_generation: 105
+  immutable_route_plan_task_id: "P4-T06"
+  immutable_route_sha256: "9a2b999614960a98f24905d34fce79340aa0b2b636e8ac8ba6ccd127065dd4d9"
+defect:
+  canonical_write_admission:
+    location: "scripts/research_control/validate_research_control.py"
+    symbol: "validate_future_physics_job_authority"
+    current_behavior: "Every post-policy physics AgentJob is rejected when allowed_write_paths contains an ontology prefix."
+    missing_control_case: "No fail-closed branch recognizes a separately human-authorized canonical integration whose exact paths and non-authorizations are bound by a consumed Gate Chair decision and immutable downstream route authorization."
+  historical_hash_semantics:
+    location: "scripts/research_control/validate_research_control.py"
+    symbol: "memory_preflight_hash_must_be_current"
+    current_behavior: "The changed canonical ontology TeX object IDs and epistemic-category glossary are treated as immutable for every historical memory-preflight receipt, so authorized source edits make earlier receipts fail current-hash equality."
+    missing_control_case: "No versioned or mutable-source history rule preserves immutable historical inspection evidence while requiring the active task to inspect the current canonical bytes."
+  protected_stop_reason: "Removing the authorized ontology edits, disguising canonical sources as generated outputs, rewriting historical job or completion receipts, weakening the path prohibition globally, or checkpointing with failed required validation would misstate or bypass the exact P4-T06 authority chain."
+required_recovery:
+  strategy_id: "repair_protected_canonical_ontology_integration_admission_and_historical_hash_semantics_v1"
+  worker_skill: "improve-project-system"
+  role_family: "validator-engineer@0.2.0"
+  objective: "Add one fail-closed admission path for this separately authorized P4-T06 canonical integration and one history-preserving canonical-source hash rule, without broadening physics authority or rewriting historical receipts."
+  focused_regressions:
+    - "Admit canonical ontology paths only when an exact tracked Gate Chair decision and downstream route authorization bind the same task, plan item, files, non-authorizations, and immutable goal route."
+    - "Reject missing, stale, mismatched, broadened, reused, or unrelated protected authority."
+    - "Keep the general post-policy prohibition on direct ontology writes for physics jobs without the exact protected integration contract."
+    - "Keep active-task memory-preflight inspections bound to current registry and file hashes."
+    - "Preserve historical memory-preflight receipts as immutable observations without editing their bytes."
+    - "Preserve all system-success, scientific-status, physics-promotion, Distance-to-GR, proof, publication, and benchmark noninference limits."
+  preserved_transaction: "Keep the complete dirty RT-20260724-010 P4-T06 payload, exact protected source edits, task-local evidence, generated derivatives, completion, handoff, and registry changes source-bounded; rerun every required gate and checkpoint the combined transaction once."
+  next_plan_item_after_recovery: "P5-T01"
+  next_plan_item_executed: false
+scientific_payload_status:
+  status: "complete_pending_control_recovery_and_checkpoint"
+  task_local_validation_status: "PASS"
+  canonical_ontology_files_changed: 3
+  canonical_control_sources_synchronized: 5
+  physical_structures_adopted: 0
+  distance_to_gr_delta_changed: false
+  p5_t01_dependency_ready_after_checkpoint: true
+  p5_t01_execution_ready_now: false
+authority_boundary:
+  current_agent_job_may_edit_shared_validator: false
+  current_agent_job_may_rewrite_historical_receipts: false
+  current_agent_job_may_disguise_canonical_sources_as_generated_outputs: false
+  current_agent_job_may_checkpoint_with_failed_required_validation: false
+  protected_p4_t06_route_may_be_reexecuted: false
+  canonical_edit_scope_may_be_broadened: false
+  scientific_claims_changed_by_recovery: false
+  distance_to_gr_changed_by_recovery: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_or_push_authorized: false
+checkpoint:
+  attempted: false
+  invocation_count: 0
+  staged: false
+  committed: false
+  commit: "none_validation_failed"

@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260724-009`
-- Latest handoff: `handoff-0859`
-- Current status: `p4_t05_handoff_route_guard_status_reconciliation_pass_ready_for_checkpoint`
+- Active task: `RT-20260725-002`
+- Latest handoff: `handoff-0862`
+- Current status: `p4_t06_dependent_repository_contract_recovery_pass_ready_for_checkpoint`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260724-009`
-- Latest research handoff: `handoff-0859`
-- Latest research next action: After the generation-104 governed checkpoint commits, run one fresh bounded continue-research packet for P4-T06 to integrate the already approved narrow continuum-first source boundary without importing physical semantics or promoting claims.
+- Latest research task: `RT-20260725-002`
+- Latest research handoff: `handoff-0862`
+- Latest research next action: After the governed combined checkpoint commits, run exactly one bounded P5-T01 ontology-formalizer AgentJob to define the compact source-theory tuple and object model while preserving open dynamics and reconstruction slots and all no-promotion boundaries.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p4_t06_narrow_continuum_first_canonical_integration`
+- Route ID: `v21_p5_t01_compact_source_theory_tuple_and_object_model`
 - Role family: `ontology-formalizer@0.2.0`
 - Target milestone: `source_ontology`
-- Milestone burden: Make tracked sources consistent with the human-approved ontology regime.
+- Milestone burden: Replace dispersed source records with one coherent theory target.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `0b1f5e4fe22274fab9f88176ba009432c1a4f9412d99dfe14bce9697192240bc`
-- JSON SHA-256: `7a3fe3e7623e907ca3984dc880950ce3a7a64321fd57ad467c82e3d5c83455ba`
+- YAML SHA-256: `2af304181ac14cf1d1516a6f8840a435688e5818dad9ada48cf3fcd5fd6a98d3`
+- JSON SHA-256: `a8691cdcc5e2fd864efd13b14bf6d93ac5d57e24b4688f8efcdf541afa6b3637`
 
 ## Authority Warning
 

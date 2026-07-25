@@ -1,0 +1,105 @@
+{
+  "authority_boundary": {
+    "distance_to_gr_changed": false,
+    "historical_observations_rewritten": false,
+    "operational_validation_only": true,
+    "p4_t06_reexecuted": false,
+    "p5_t01_executed": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "publication_or_push_authorized": false,
+    "scientific_claims_changed": false
+  },
+  "check_count": 7,
+  "checks": [
+    {
+      "check_id": "historical_and_protected_bytes_preserved",
+      "evidence": {
+        "mismatches": {},
+        "path_count": 14
+      },
+      "status": "PASS"
+    },
+    {
+      "check_id": "candidate_lineage_current_authority_pass",
+      "evidence": {
+        "failed_check_count": 0,
+        "validation_status": "PASS"
+      },
+      "status": "PASS"
+    },
+    {
+      "check_id": "event_store_historical_and_current_authority_pass",
+      "evidence": {
+        "current_ledger": "current_sha256=69a513d1c737f7c6b49ec03bbcb51dfc8a5a6b4063c5f2d88bb663eea286dccf rows=14",
+        "failed_check_count": 0,
+        "validation_status": "PASS"
+      },
+      "status": "PASS"
+    },
+    {
+      "check_id": "burden_status_fixture_targets_current_definition",
+      "evidence": {
+        "current_required_object_present": true
+      },
+      "status": "PASS"
+    },
+    {
+      "check_id": "p4_t06_title_and_taxonomy_exact",
+      "evidence": {
+        "task_taxonomy": {
+          "authority": "science_draft",
+          "candidate_family": "unknown",
+          "milestone": "source_ontology",
+          "result_kind": "completed_or_precisely_blocked",
+          "schema_id": "v21_task_taxonomy_v1",
+          "scope": "scientific",
+          "work_kind": "integration_or_selection"
+        },
+        "title": "Integrate the selected ontology regime and retire hybrid language"
+      },
+      "status": "PASS"
+    },
+    {
+      "check_id": "protected_admission_accepts_exact_metadata_repair",
+      "evidence": {
+        "errors": []
+      },
+      "status": "PASS"
+    },
+    {
+      "check_id": "p10_migration_readiness_restored",
+      "evidence": {
+        "receipt_status": "PASS_AUDIT_FREEZE_BROADER_ROLLOUT",
+        "validation_status": "PASS"
+      },
+      "status": "PASS"
+    }
+  ],
+  "fail_count": 0,
+  "generated_at": "2026-07-25T03:41:05Z",
+  "job_id": "AJ-RT-20260725-002-001",
+  "pass_count": 7,
+  "plan_task_id": "P4-T06",
+  "schema_id": "p4_t06_dependent_contract_recovery_receipt_v1",
+  "source_hashes": {
+    "ontology/pdfs/aether_flow_dynamics.pdf": "3af0e28bb55cee17ec820cbe5b7551c5b60e662bc53f8bb48dc7e23ea36763e0",
+    "ontology/pdfs/aether_flow_foundations.pdf": "d20d56e71f7c91230649219216fba45c3078ac4d59dd355ade6bf682923d657c",
+    "ontology/pdfs/aether_flow_geometry.pdf": "f71b08bead7217bd3606a5ddd2591871beaae183367fc001f9cac9f80cd513b9",
+    "ontology/tex/aether_flow_dynamics.tex": "fd6e579e71ef7f2ac4c9668ceede051ad57033ee52357b2552a9e3a5a53939c7",
+    "ontology/tex/aether_flow_foundations.tex": "4749d9e8b6858a43230e99029cccc3274b55fc2ae2a2cdf45a983a60c98e5b59",
+    "ontology/tex/aether_flow_geometry.tex": "f60a81b63f814b03cca7190b3ac6285842a55317f4aed058cc6e75154cc0b4d7",
+    "registries/DISTANCE_TO_GR_LEDGER.csv": "69a513d1c737f7c6b49ec03bbcb51dfc8a5a6b4063c5f2d88bb663eea286dccf",
+    "research_control/tasks/RT-20260721-005/artifacts/v21_candidate_lineage_compact_receipt.json": "92a0a538cd7a1bd8cd8b4b996976a9a5c0f23bb129ca49a322b1ef3f4d21825d",
+    "research_control/tasks/RT-20260721-005/artifacts/v21_candidate_lineage_historical_seed.json": "8cf49a04b90d02f8439b54e138257cc5c56b2a72ba2b26c43c5b1b9a5dba78a0",
+    "research_control/tasks/RT-20260721-005/artifacts/v21_candidate_lineage_validation.json": "9323760e532acf2560342eeb1c47bd558dc861ab6d05c8db1ed40cb117c3ef8d",
+    "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_compact_receipt.json": "04cc34d38b1b0125fb77c38f639895bfc49e0864ad62bfc43aba78666bef72b3",
+    "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_contract.json": "d5fa22e7bbc1d92f29acd6c8418d06ce7d81a042589ade77c7ba4fdebb0eda44",
+    "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_validation.json": "6358f829c9e07adc6095a471621664830b37e7797c10b321b562b3f894b68b23",
+    "research_control/tasks/RT-20260721-009/artifacts/v21_burden_definitions_v1.yaml": "67b8053baa60db4b11ee20582633d6279523d40b2ee853a6c570e2fdc1d113f5"
+  },
+  "source_job_id": "AJ-RT-20260725-001-001",
+  "source_task_id": "RT-20260725-001",
+  "status": "PASS",
+  "task_id": "RT-20260725-002"
+}

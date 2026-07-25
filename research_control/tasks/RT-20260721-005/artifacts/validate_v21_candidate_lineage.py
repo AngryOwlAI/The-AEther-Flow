@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import csv
 import argparse
 import hashlib
 import json
@@ -28,6 +29,13 @@ SOURCE_GRAPH_PATH = Path(
     "research_control/tasks/RT-20260720-010/artifacts/eqsrc_candidate_lineage_graph.json"
 )
 SNAPSHOT_AS_OF = "2026-07-22T02:21:42Z"
+MUTABLE_REGISTERED_HISTORICAL_SOURCES = {
+    "ontology/tex/aether_flow_foundations.tex": {
+        "registry_path": "registries/TEX_SOURCE_REGISTRY.csv",
+        "object_id": "TEX-ONTOLOGY-AETHER-FLOW-FOUNDATIONS",
+        "authority_status": "canonical",
+    },
+}
 
 
 def load_json(relative_path: Path) -> dict[str, Any]:
@@ -39,6 +47,46 @@ def load_json(relative_path: Path) -> dict[str, Any]:
 
 def file_sha256(relative_path: str | Path) -> str:
     return hashlib.sha256((REPO_ROOT / Path(relative_path)).read_bytes()).hexdigest()
+
+
+def file_sha256_at(repo_root: Path, relative_path: str | Path) -> str:
+    return hashlib.sha256((repo_root / Path(relative_path)).read_bytes()).hexdigest()
+
+
+def historical_source_binding_matches(
+    source_path: str,
+    historical_sha256: str,
+    repo_root: Path = REPO_ROOT,
+) -> bool:
+    """Validate one historical observation without confusing it with live authority."""
+
+    source = repo_root / source_path
+    if not source.is_file():
+        return False
+    current_sha256 = file_sha256_at(repo_root, source_path)
+    if current_sha256 == historical_sha256:
+        return True
+
+    current_authority = MUTABLE_REGISTERED_HISTORICAL_SOURCES.get(source_path)
+    if not current_authority:
+        return False
+    registry_path = repo_root / current_authority["registry_path"]
+    if not registry_path.is_file():
+        return False
+    with registry_path.open(newline="", encoding="utf-8") as handle:
+        matches = [
+            row
+            for row in csv.DictReader(handle)
+            if row.get("object_id", "").strip() == current_authority["object_id"]
+            and row.get("path", "").strip() == source_path
+        ]
+    return (
+        len(matches) == 1
+        and matches[0].get("source_hash", "").strip() == current_sha256
+        and matches[0].get("authority_status", "").strip()
+        == current_authority["authority_status"]
+        and matches[0].get("validation_status", "").strip() == "PASS"
+    )
 
 
 def canonical_sha256(value: Any) -> str:
@@ -139,11 +187,10 @@ def validate() -> tuple[dict[str, Any], dict[str, Any]]:
     )
 
     for source_path, expected_hash in seed.get("source_hashes", {}).items():
-        path = REPO_ROOT / source_path
         record(
             "historical_source_hashes",
-            path.is_file() and file_sha256(source_path) == expected_hash,
-            f"source hash drift for {source_path}",
+            historical_source_binding_matches(source_path, expected_hash),
+            f"historical observation or current registered authority mismatch for {source_path}",
         )
 
     families = seed.get("families", [])

@@ -1,0 +1,67 @@
+artifact_id: "V21-P4-T06-CHILD-PHYS-MATH-ONTOLOGY-INTEGRATION"
+task_id: "RT-20260724-010"
+job_id: "AJ-RT-20260724-010-001"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+claim_status: "research_architecture_integration_only"
+question: "What is the narrowest type-consistent canonical source boundary licensed by P4-T05, and which former source-to-target inferences must fail closed?"
+fixed_inputs:
+  - path: "research_control/tasks/RT-20260724-004/artifacts/ontology_regime_gate_chair_decision_v1.tex"
+    sha256: "20ea795bbe93333b489e4f13601fd6bb1623f318b7847f9d2d24402c7490c934"
+  - path: "research_control/tasks/RT-20260724-004/artifacts/canonical_next_route_authorization_v1.yaml"
+    sha256: "52edb6e43e024b09de58d2fc9242a6747630678800e91d47d6c4195203cd8c86"
+typed_source_boundary:
+  source_arena:
+    symbol: "A"
+    type: "smooth four-dimensional manifold"
+    status: "canonical mainline research-architecture primitive debt"
+    derived: false
+    physical_spacetime: false
+    target_manifold_identity: false
+  source_order_or_evolution_slot:
+    symbol: "Phi_src"
+    status: "unresolved abstract slot"
+    parameter_domain_adopted: false
+    algebra_adopted: false
+    invertibility_adopted: false
+    stochastic_status_adopted: false
+    gauge_status_adopted: false
+    physical_time_status_adopted: false
+    source_law_adopted: false
+    source_dynamics_adopted: false
+typed_target_boundary:
+  exact_gr_metric: "adopted target-side benchmark only"
+  observer_congruence: "target-side interpretive dictionary only"
+  clocks_and_causal_structure: "target-side benchmark structure; no source derivation"
+  matter_and_coupling: "target-side benchmark structure; no source derivation"
+non_inference_checks:
+  - check_id: "smooth_dimension_identity"
+    result: "PASS"
+    conclusion: "Shared dimension or smoothness does not establish A equals physical spacetime or the exact-GR target manifold."
+  - check_id: "Phi_src_typing"
+    result: "PASS"
+    conclusion: "The protected selection does not license Phi_lambda:A->A or any parameter-action law."
+  - check_id: "slice_and_clock"
+    result: "PASS"
+    conclusion: "No observer-slice embedding, induced source metric, S-time functional, or monotonicity law is adopted."
+  - check_id: "congruence_separation"
+    result: "PASS"
+    conclusion: "The target-side observer congruence u^mu is not Phi_src and no bridge between them is supplied."
+new_mathematical_payload:
+  payload_type: "definition_and_dependency_map_update"
+  definition_id: "V21-P4-T06-CONTINUUM-FIRST-SOURCE-ARCHITECTURE-BOUNDARY-V1"
+  definition: "The canonical source research architecture is the pair consisting of a smooth four-dimensional source arena as explicit primitive debt and an unresolved Phi_src slot, with all physical bridge structure excluded."
+  dependency_delta:
+    - "P4-T06 closes regime integration."
+    - "P5-T01 must type the compact source-theory object."
+    - "P5-T02 must resolve Phi_src semantics."
+    - "Metric, clock, matter, coupling, source dynamics, Einstein equations, and benchmark recovery remain downstream."
+forbidden_conclusions:
+  - "physical spacetime identity"
+  - "emergence or derivation of the smooth four-dimensional arena"
+  - "Phi_src parameter action gauge clock law or dynamics"
+  - "metric causal matter coupling or Einstein-equation derivation"
+  - "emergence-first rejection"
+  - "benchmark promotion or completed derivation"
+recommendation: "Apply this exact type boundary to the three canonical ontology sources and synchronized control rows; do not add a source law."

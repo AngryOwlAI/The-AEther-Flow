@@ -1,0 +1,88 @@
+validation_status: "PASS"
+task_id: "RT-20260725-002"
+task_type: "project_system_p4_t06_dependent_repository_contract_recovery"
+title: "Repair the P4-T06 dependent repository-contract drift"
+task_taxonomy:
+  schema_id: "v21_task_taxonomy_v1"
+  work_kind: "benchmark_or_recovery"
+  milestone: "source_ontology"
+  candidate_family: "p4_t06_dependent_repository_contract_recovery"
+  result_kind: "implemented_and_validated_or_precisely_blocked"
+  authority: "project_control"
+  scope: "project_system"
+status: "completed"
+created_at: "2026-07-25T03:41:05Z"
+updated_at: "2026-07-25T04:18:28Z"
+closed_at: "2026-07-25T04:18:28Z"
+parent_task_id: "RT-20260725-001"
+parent_handoff_id: "handoff-0861"
+supersedes_active_routing_task_id: "RT-20260725-001"
+current_decision_id: "DDR-20260725-002"
+current_job_id: "AJ-RT-20260725-002-001"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260725-002"
+requires_human_gate: false
+human_authorization_note: "Generation 107 of the user-authorized recursive relay immutably routes exactly one improve-project-system frame to the five recorded P4-T06 dependent repository-contract findings. It does not reuse the consumed Gate Chair approval, reexecute P4-T06, or execute P5-T01."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P4"
+  plan_task_id: "P4-T06"
+  recovery_for_plan_task_id: "P4-T06"
+  next_plan_task_id: "P5-T01"
+  next_plan_task_execution_authorized: false
+  recommendation_ids:
+    - "V21-R10"
+    - "V21-R11"
+    - "V21-R31"
+    - "V21-R50"
+    - "V21-R61"
+objective: "Repair only the five dependent repository-contract findings recorded by RT-20260725-001, preserve the historical candidate-lineage seed and event-store contract as immutable observations, validate the current ontology source and Distance-to-GR ledger through current authority, repair the burden-status fixture and P4-T06 taxonomy metadata, rerun every required gate, and invoke one governed combined checkpoint only on a full pass."
+target_derivation_milestone: "source_ontology"
+milestone_burden: "Repair dependent project-system contracts without changing the completed P4-T06 scientific payload or any Distance-to-GR burden."
+route_label: "repair_p4_t06_dependent_repository_contract_drift_v1"
+project_system_change_only: true
+dual_budget_category: "system_bearing"
+primary_budget: "project_system"
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+claim_boundary_id: "CB-V21-P4-T06-DEPENDENT-REPOSITORY-CONTRACT-RECOVERY-001"
+claim_boundary:
+  allowed_scope: "Repair candidate-lineage active-versus-historical source binding, event-store historical-versus-current ledger validation, one burden-status test fixture, and the missing P4-T06 title and explicit taxonomy; add focused fail-closed regressions and task-local recovery evidence; synchronize normal control derivatives; invoke one combined governed checkpoint."
+  source_handoff_id: "handoff-0861"
+  source_handoff_sha256: "dcdbdb05d1fcf50e772321a9319f2f9dc5685e5138e14e61c3fd85241a379e2f"
+  source_blocker_path: "research_control/tasks/RT-20260725-001/artifacts/validation_blocker_p4_t06_dependent_repository_contract_drift_v1.yaml"
+  source_blocker_sha256: "6edb1a23bdc9ac2c9178e15230d0704355f0ce338f8ab1a67686067efa5081f9"
+  immutable_route_sha256: "a00716a350d1b668a28a77379da665c15a91acd7245498e7dd67c42c022ef233"
+  protected_dirty_manifest_sha256: "546e488e0dc39d9b24f337c4e816d9b7bf3313c8302438824fd99fe8d673060f"
+  protected_path_count: 99
+  p4_t06_reexecuted: false
+  p4_t06_payload_mutated_by_recovery: false
+  historical_seed_or_contract_rewritten: false
+  p5_t01_executed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+documentation_impact_id: "DI-RT-20260725-002-001"
+completion_id: "AJC-AJ-RT-20260725-002-001"
+output_artifacts:
+  - "research_control/tasks/RT-20260721-005/artifacts/validate_v21_candidate_lineage.py"
+  - "research_control/tasks/RT-20260721-007/artifacts/validate_v21_event_store_architecture.py"
+  - "tests/test_candidate_lineage.py"
+  - "tests/test_current_burden_status.py"
+  - "tests/test_event_store_architecture.py"
+  - "research_control/tasks/RT-20260724-010/00_TASK.yaml"
+  - "research_control/tasks/RT-20260725-002/artifacts/validate_p4_t06_dependent_contract_recovery.py"
+  - "research_control/tasks/RT-20260725-002/artifacts/p4_t06_dependent_contract_recovery_receipt.json"
+  - "research_control/tasks/RT-20260725-002/jobs/completions/AJC-AJ-RT-20260725-002-001.yaml"
+  - "research_control/handoffs/handoff-0862.yaml"
+  - "research_control/handoffs/handoff-0862.md"
+closure_status: "p4_t06_dependent_repository_contract_recovery_pass_ready_for_checkpoint"
+summary: "All five dependent repository-contract findings are repaired. Historical candidate-lineage and event-store observations remain byte-identical, current ontology and ledger authority checks fail closed, the burden mutation fixture targets the current definition, P4-T06 has the exact required taxonomy metadata, and the dependent P10 audit returns to its bounded PASS/freeze disposition. The inherited P4-T06 science payload is unchanged and one combined checkpoint remains."
+next_recommended_action: "After the governed combined checkpoint commits, run one separately claimed P5-T01 ontology-formalizer packet. Do not execute P5-T01 before checkpoint or treat this project-system repair as scientific progress."
+project_improvement_signals: []
+notes: "This project-system recovery creates no new Gate Chair verdict, approval use, ontology selection, ontology edit, scientific evidence, Distance-to-GR movement, benchmark promotion, publication, push, or completed-derivation authority."

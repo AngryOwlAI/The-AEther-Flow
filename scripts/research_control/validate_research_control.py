@@ -277,6 +277,15 @@ CURRENT_FRONTIER_REPAIR_ROUTE = (
     "continue-research before proceeding"
 )
 
+IMMUTABLE_HISTORICAL_ORDINARY_ROUTE_GUARD_COMPATIBILITY = {
+    "handoff-0861.yaml": {
+        "sha256": "dcdbdb05d1fcf50e772321a9319f2f9dc5685e5138e14e61c3fd85241a379e2f",
+        "evaluation_id": "ORE-HANDOFF-0861",
+        "declared_count": 1,
+        "errors": ("consecutive_project_system_task_count_mismatch",),
+    },
+}
+
 PHYSICS_PAYLOAD_RATIO_POLICY_ID = "physics_payload_ratio_policy_v1"
 PHYSICS_PAYLOAD_RATIO_THRESHOLD_DEFAULT = 3
 PHYSICS_PAYLOAD_RATIO_REQUIRED_TASK_TYPES = {
@@ -472,6 +481,7 @@ MUTABLE_MEMORY_PREFLIGHT_SOURCE_OBJECT_IDS = {
     "MD-RESEARCH-CONTROL-CURRENT-FRONTIER",
     "MD-RESEARCH-CONTROL-DESIGN-FRONTIER-THEOREM-INVENTORY",
     "MD-RESEARCH-CONTROL-DESIGN-GR-DERIVATION-BURDEN-MAP",
+    "MD-RESEARCH-CONTROL-DESIGN-EPISTEMIC-CATEGORY-GLOSSARY",
     "MD-RESEARCH-CONTROL-DESIGN-VALIDATION-COMMAND-INVENTORY-V16",
     "MD-RESEARCH-CONTROL-TASKS-RT-20260722-015-ORDINARY-ROUTE-GUARD-POLICY-V1",
     "MD-SCHEMA-AGENT-JOB-SCHEMA",
@@ -482,6 +492,9 @@ MUTABLE_MEMORY_PREFLIGHT_SOURCE_OBJECT_IDS = {
     "MD-SKILL-IMPROVE-PROJECT-SYSTEM",
     "MD-SKILL-PROJECT-MEMORY-SYSTEM",
     "MD-SKILL-USER-MODIFIED-PROJECT",
+    "TEX-ONTOLOGY-AETHER-FLOW-DYNAMICS",
+    "TEX-ONTOLOGY-AETHER-FLOW-FOUNDATIONS",
+    "TEX-ONTOLOGY-AETHER-FLOW-GEOMETRY",
 }
 SELF_REFERENTIAL_GENERATED_MEMORY_PREFLIGHT_SOURCE_OBJECT_IDS = {
     "MD-RESEARCH-CONTROL-TASK-INDEX",
@@ -968,6 +981,42 @@ PHYSICS_JOB_FORBIDDEN_WRITE_PREFIXES = (
     "ontology/",
     "manuscripts/",
     "html/",
+)
+
+PROTECTED_CANONICAL_INTEGRATION_SCHEMA_ID = (
+    "protected_canonical_ontology_integration_admission_v1"
+)
+PROTECTED_CANONICAL_INTEGRATION_PLAN_TASK_ID = "P4-T06"
+PROTECTED_CANONICAL_INTEGRATION_TASK_PATH = (
+    "research_control/tasks/RT-20260724-010/00_TASK.yaml"
+)
+PROTECTED_CANONICAL_INTEGRATION_TASK_HISTORICAL_SHA256 = (
+    "dea29e8ec6ba79a8c17cf0e2c0ae0be7a275db9845cae16f4f07eea508ada6ff"
+)
+PROTECTED_CANONICAL_INTEGRATION_TASK_METADATA_REPAIR_SHA256 = (
+    "d105660a4fa96c961820f53a7904a5737c764de488a28e782a628cbdc67b46ed"
+)
+PROTECTED_CANONICAL_INTEGRATION_TASK_METADATA_REPAIR = {
+    "title": "Integrate the selected ontology regime and retire hybrid language",
+    "task_taxonomy": {
+        "schema_id": "v21_task_taxonomy_v1",
+        "work_kind": "integration_or_selection",
+        "milestone": "source_ontology",
+        "candidate_family": "unknown",
+        "result_kind": "completed_or_precisely_blocked",
+        "authority": "science_draft",
+        "scope": "scientific",
+    },
+}
+PROTECTED_CANONICAL_INTEGRATION_PATHS = frozenset(
+    {
+        "ontology/tex/aether_flow_foundations.tex",
+        "ontology/tex/aether_flow_dynamics.tex",
+        "ontology/tex/aether_flow_geometry.tex",
+        "ontology/pdfs/aether_flow_foundations.pdf",
+        "ontology/pdfs/aether_flow_dynamics.pdf",
+        "ontology/pdfs/aether_flow_geometry.pdf",
+    }
 )
 
 DISTANCE_TO_GR_REQUIRED_BURDENS = (
@@ -2508,12 +2557,369 @@ def validate_future_physics_job_authority(
             f"{path_text}: future physics AgentJob missing forbidden_source_classes {missing}"
         )
 
+    protected_canonical_paths_admitted = (
+        validate_protected_canonical_integration_admission(
+            report,
+            job_row,
+            job_contract,
+        )
+    )
     for item in _listish_values(job_contract.get("allowed_write_paths", [])):
         normalized = item.strip().lstrip("./")
         if any(normalized.startswith(prefix) for prefix in PHYSICS_JOB_FORBIDDEN_WRITE_PREFIXES):
+            if (
+                protected_canonical_paths_admitted
+                and normalized in PROTECTED_CANONICAL_INTEGRATION_PATHS
+            ):
+                continue
             report.error(
                 f"{path_text}: future physics AgentJob may not allow direct write path {item}"
             )
+
+
+def _protected_canonical_bound_file(
+    record: dict[str, Any],
+    section_name: str,
+    errors: list[str],
+) -> Path | None:
+    section = record.get(section_name)
+    if not isinstance(section, dict):
+        errors.append(f"{section_name}_must_be_a_map")
+        return None
+    path_text = str(section.get("path", "")).strip()
+    expected_sha256 = str(section.get("sha256", "")).strip()
+    if validate_relative_path(path_text) is not None:
+        errors.append(f"{section_name}_path_invalid")
+        return None
+    if not re.fullmatch(r"[0-9a-f]{64}", expected_sha256):
+        errors.append(f"{section_name}_sha256_invalid")
+        return None
+    path = repo_path(path_text)
+    try:
+        path.resolve().relative_to(REPO_ROOT.resolve())
+    except (OSError, ValueError):
+        errors.append(f"{section_name}_path_outside_repository")
+        return None
+    if not path.is_file() or path.is_symlink():
+        errors.append(f"{section_name}_path_not_regular")
+        return None
+    if sha256_file(path) != expected_sha256:
+        errors.append(f"{section_name}_hash_mismatch")
+        return None
+    return path
+
+
+def _protected_canonical_bound_yaml(
+    record: dict[str, Any],
+    section_name: str,
+    errors: list[str],
+) -> dict[str, Any]:
+    path = _protected_canonical_bound_file(record, section_name, errors)
+    if path is None:
+        return {}
+    try:
+        loaded = load_yaml(path)
+    except StrictYamlError:
+        errors.append(f"{section_name}_yaml_invalid")
+        return {}
+    if not isinstance(loaded, dict):
+        errors.append(f"{section_name}_yaml_not_mapping")
+        return {}
+    return loaded
+
+
+def _protected_canonical_bound_task(
+    admitted: dict[str, Any],
+    errors: list[str],
+) -> dict[str, Any]:
+    """Load the historical task or its one exact metadata-only compatibility repair."""
+
+    path_text = str(admitted.get("task_path", "")).strip()
+    expected_sha256 = str(admitted.get("task_sha256", "")).strip()
+    if path_text != PROTECTED_CANONICAL_INTEGRATION_TASK_PATH:
+        errors.append("bound_task_path_mismatch")
+        return {}
+    if expected_sha256 != PROTECTED_CANONICAL_INTEGRATION_TASK_HISTORICAL_SHA256:
+        errors.append("bound_task_historical_hash_mismatch")
+        return {}
+    path = repo_path(path_text)
+    if not path.is_file() or path.is_symlink():
+        errors.append("bound_task_path_not_regular")
+        return {}
+    actual_sha256 = sha256_file(path)
+    if actual_sha256 not in {
+        expected_sha256,
+        PROTECTED_CANONICAL_INTEGRATION_TASK_METADATA_REPAIR_SHA256,
+    }:
+        errors.append("bound_task_hash_mismatch")
+        return {}
+    try:
+        loaded = load_yaml(path)
+    except StrictYamlError:
+        errors.append("bound_task_yaml_invalid")
+        return {}
+    if not isinstance(loaded, dict):
+        errors.append("bound_task_yaml_not_mapping")
+        return {}
+    if actual_sha256 == PROTECTED_CANONICAL_INTEGRATION_TASK_METADATA_REPAIR_SHA256:
+        for field_name, expected in (
+            PROTECTED_CANONICAL_INTEGRATION_TASK_METADATA_REPAIR.items()
+        ):
+            if loaded.get(field_name) != expected:
+                errors.append(f"bound_task_metadata_repair_{field_name}_mismatch")
+    return loaded
+
+
+def validate_protected_canonical_integration_admission(
+    report: ValidationReport,
+    job_row: dict[str, str],
+    job_contract: dict[str, Any],
+) -> bool:
+    allowed_paths = {
+        item.strip().lstrip("./")
+        for item in _listish_values(job_contract.get("allowed_write_paths", []))
+    }
+    protected_paths = {
+        path
+        for path in allowed_paths
+        if any(path.startswith(prefix) for prefix in PHYSICS_JOB_FORBIDDEN_WRITE_PREFIXES)
+    }
+    if not protected_paths:
+        return False
+
+    task_id = str(job_row.get("task_id", "")).strip()
+    receipt_path = repo_path(
+        f"research_control/tasks/{task_id}/artifacts/"
+        "protected_canonical_ontology_integration_admission_v1.yaml"
+    )
+    if not receipt_path.is_file() or receipt_path.is_symlink():
+        return False
+
+    errors: list[str] = []
+    try:
+        receipt = load_yaml(receipt_path)
+    except StrictYamlError:
+        receipt = {}
+        errors.append("receipt_yaml_invalid")
+    if not isinstance(receipt, dict):
+        receipt = {}
+        errors.append("receipt_must_be_a_map")
+
+    if receipt.get("schema_id") != PROTECTED_CANONICAL_INTEGRATION_SCHEMA_ID:
+        errors.append("schema_id_invalid")
+    if receipt.get("status") != "active":
+        errors.append("status_not_active")
+    if receipt.get("validation_status") != "PASS":
+        errors.append("validation_status_not_pass")
+    if protected_paths != PROTECTED_CANONICAL_INTEGRATION_PATHS:
+        errors.append("protected_paths_not_exact")
+    if set(_listish_values(receipt.get("exact_allowed_write_paths", []))) != (
+        PROTECTED_CANONICAL_INTEGRATION_PATHS
+    ):
+        errors.append("receipt_paths_not_exact")
+
+    admitted = receipt.get("admitted_job")
+    if not isinstance(admitted, dict):
+        admitted = {}
+        errors.append("admitted_job_must_be_a_map")
+    expected_identity = {
+        "task_id": task_id,
+        "job_id": str(job_row.get("job_id", "")).strip(),
+        "plan_task_id": PROTECTED_CANONICAL_INTEGRATION_PLAN_TASK_ID,
+        "role_id": str(job_row.get("role_id", "")).strip(),
+    }
+    for field_name, expected in expected_identity.items():
+        if str(admitted.get(field_name, "")).strip() != expected:
+            errors.append(f"admitted_job_{field_name}_mismatch")
+
+    expected_job_path = str(job_row.get("job_path", "")).strip()
+    if str(admitted.get("job_path", "")).strip() != expected_job_path:
+        errors.append("admitted_job_path_mismatch")
+    job_binding = {
+        "path": admitted.get("job_path", ""),
+        "sha256": admitted.get("job_sha256", ""),
+    }
+    bound_job = _protected_canonical_bound_yaml(
+        {"bound_job": job_binding},
+        "bound_job",
+        errors,
+    )
+    if bound_job and bound_job != job_contract:
+        errors.append("bound_job_content_mismatch")
+
+    task_record = _protected_canonical_bound_task(admitted, errors)
+    if task_record:
+        for field_name, expected in (
+            ("task_id", task_id),
+            ("current_job_id", expected_identity["job_id"]),
+            ("plan_task_id", PROTECTED_CANONICAL_INTEGRATION_PLAN_TASK_ID),
+            ("approval_id", "approval-20260724-001"),
+            (
+                "human_authorization_id",
+                "HUMAN-P4-T05-20260722-CONTINUUM-FIRST-01",
+            ),
+        ):
+            if str(task_record.get(field_name, "")).strip() != expected:
+                errors.append(f"bound_task_{field_name}_mismatch")
+
+    completion_binding = {
+        "path": admitted.get("completion_path", ""),
+        "sha256": admitted.get("completion_sha256", ""),
+    }
+    completion = _protected_canonical_bound_yaml(
+        {"bound_completion": completion_binding},
+        "bound_completion",
+        errors,
+    )
+    if completion:
+        for field_name, expected in (
+            ("job_id", expected_identity["job_id"]),
+            ("task_id", task_id),
+            ("completion_id", str(admitted.get("completion_id", "")).strip()),
+        ):
+            if str(completion.get(field_name, "")).strip() != expected:
+                errors.append(f"bound_completion_{field_name}_mismatch")
+
+    goal_route = receipt.get("immutable_goal_route")
+    job_goal = job_contract.get("goal_receipt")
+    if not isinstance(goal_route, dict) or not isinstance(job_goal, dict):
+        errors.append("immutable_goal_route_missing")
+    else:
+        goal_expectations = {
+            "goal_id": str(job_goal.get("goal_id", "")).strip(),
+            "generation": job_goal.get("generation"),
+            "plan_task_id": str(job_goal.get("route_work_item_id", "")).strip(),
+            "worker_skill": str(job_goal.get("route_worker_skill", "")).strip(),
+            "route_sha256": str(job_goal.get("route_sha256", "")).strip(),
+        }
+        for field_name, expected in goal_expectations.items():
+            if goal_route.get(field_name) != expected:
+                errors.append(f"immutable_goal_route_{field_name}_mismatch")
+        if str(goal_route.get("generation", "")).strip() != "105":
+            errors.append("immutable_goal_route_generation_not_105")
+        if goal_route.get("plan_task_id") != PROTECTED_CANONICAL_INTEGRATION_PLAN_TASK_ID:
+            errors.append("immutable_goal_route_plan_task_mismatch")
+        if goal_route.get("worker_skill") != "continue-research":
+            errors.append("immutable_goal_route_worker_mismatch")
+        if str(job_contract.get("immutable_route_sha256", "")).strip() != str(
+            goal_route.get("route_sha256", "")
+        ).strip():
+            errors.append("job_immutable_route_hash_mismatch")
+
+    job_authority = job_contract.get("authorization_layers")
+    if not isinstance(job_authority, dict):
+        errors.append("job_authorization_layers_missing")
+    else:
+        if job_authority.get("canonical_ontology_edit_authorized") is not True:
+            errors.append("canonical_ontology_edit_not_authorized")
+        for field_name in (
+            "downstream_physics_promotion_authorized",
+            "benchmark_promotion_authorized",
+            "completed_derivation_authorized",
+            "source_law_adoption_authorized",
+            "ontology_regime_selection_authorized",
+            "physical_gauge_claim_authorized",
+            "Gate_Chair_verdict_authorized",
+            "global_no_go_claim_authorized",
+        ):
+            if job_authority.get(field_name) is not False:
+                errors.append(f"job_authority_{field_name}_must_be_false")
+
+    approval = _protected_canonical_bound_yaml(receipt, "approval", errors)
+    if approval:
+        for field_name, expected in (
+            ("approval_id", "approval-20260724-001"),
+            ("status", "consumed"),
+            ("consumed_by", "AJ-RT-20260724-004-001"),
+            ("expires_at", "AJ-RT-20260724-004-001"),
+        ):
+            if str(approval.get(field_name, "")).strip() != expected:
+                errors.append(f"approval_{field_name}_mismatch")
+        if approval.get("one_time_use") is not True:
+            errors.append("approval_not_one_time_use")
+
+    human_authorization = _protected_canonical_bound_yaml(
+        receipt,
+        "human_authorization",
+        errors,
+    )
+    if human_authorization:
+        if (
+            human_authorization.get("human_authorization_id")
+            != "HUMAN-P4-T05-20260722-CONTINUUM-FIRST-01"
+        ):
+            errors.append("human_authorization_id_mismatch")
+        boundary = human_authorization.get("canonical_integration_boundary")
+        if not isinstance(boundary, dict) or boundary.get("p4_t06_authorized") is not True:
+            errors.append("human_authorization_p4_t06_not_authorized")
+        if not _listish_values(human_authorization.get("non_authorizations", [])):
+            errors.append("human_authorization_non_authorizations_missing")
+
+    _protected_canonical_bound_file(receipt, "gate_decision", errors)
+    route_authorization = _protected_canonical_bound_yaml(
+        receipt,
+        "route_authorization",
+        errors,
+    )
+    if route_authorization:
+        for field_name, expected in (
+            ("status", "authorized_after_recovery_and_checkpoint"),
+            ("approval_id", "approval-20260724-001"),
+            (
+                "human_authorization_id",
+                "HUMAN-P4-T05-20260722-CONTINUUM-FIRST-01",
+            ),
+            ("selected_next_plan_task_id", PROTECTED_CANONICAL_INTEGRATION_PLAN_TASK_ID),
+            ("selected_next_worker_skill", "continue-research"),
+            ("validation_status", "PASS"),
+        ):
+            if str(route_authorization.get(field_name, "")).strip() != expected:
+                errors.append(f"route_authorization_{field_name}_mismatch")
+        if not _listish_values(route_authorization.get("forbidden_scope", [])):
+            errors.append("route_authorization_forbidden_scope_missing")
+
+    source_handoff = _protected_canonical_bound_yaml(receipt, "source_handoff", errors)
+    if source_handoff:
+        selected_route = source_handoff.get("selected_next_route")
+        if (
+            not isinstance(selected_route, dict)
+            or selected_route.get("plan_task_id")
+            != PROTECTED_CANONICAL_INTEGRATION_PLAN_TASK_ID
+            or selected_route.get("worker_skill") != "continue-research"
+        ):
+            errors.append("source_handoff_route_mismatch")
+
+    limits = receipt.get("authority_limits")
+    if not isinstance(limits, dict):
+        errors.append("authority_limits_missing")
+    else:
+        if limits.get("exact_scope_satisfied") is not True:
+            errors.append("exact_scope_not_satisfied")
+        for field_name in (
+            "authority_expanded_beyond_scope",
+            "approval_reused",
+            "p4_t06_reexecuted",
+            "physical_status_changed",
+            "source_law_adopted",
+            "distance_to_gr_changed",
+            "benchmark_promotion_authorized",
+            "physics_promotion_authorized",
+            "proof_authority",
+            "publication_authorized",
+            "push_authorized",
+            "completed_derivation_authorized",
+        ):
+            if limits.get(field_name) is not False:
+                errors.append(f"authority_limit_{field_name}_must_be_false")
+
+    if errors:
+        path_text = job_row.get("job_path", job_row.get("job_id", ""))
+        report.error(
+            f"{path_text}: protected canonical integration admission invalid: "
+            + ", ".join(sorted(set(errors)))
+        )
+        return False
+    return True
 
 
 def active_program_task_id() -> str:
@@ -5504,6 +5910,32 @@ def handoff_number(path: Path) -> int | None:
     return int(match.group(1)) if match else None
 
 
+def immutable_historical_ordinary_route_guard_is_compatible(
+    yaml_path: Path,
+    data: dict[str, Any],
+    errors: list[str],
+) -> bool:
+    """Preserve one exact predecessor observation finalized after its timestamp."""
+
+    compatibility = IMMUTABLE_HISTORICAL_ORDINARY_ROUTE_GUARD_COMPATIBILITY.get(
+        yaml_path.name
+    )
+    if not compatibility:
+        return False
+    if sha256_file(yaml_path) != compatibility["sha256"]:
+        return False
+    if tuple(errors) != compatibility["errors"]:
+        return False
+    guard = data.get("ordinary_route_guard")
+    if not isinstance(guard, dict):
+        return False
+    return (
+        guard.get("evaluation_id") == compatibility["evaluation_id"]
+        and str(guard.get("consecutive_project_system_tasks_before_selection", ""))
+        == str(compatibility["declared_count"])
+    )
+
+
 def validate_handoffs(
     report: ValidationReport,
     tasks: dict[str, dict[str, str]],
@@ -5543,11 +5975,23 @@ def validate_handoffs(
             yaml_path.relative_to(REPO_ROOT).as_posix(),
         )
         ordinary_route = evaluate_research_handoff_guard(data, REPO_ROOT)
-        for error in ordinary_route["errors"]:
-            report.error(
-                f"{yaml_path.relative_to(REPO_ROOT).as_posix()}: "
-                f"ordinary-route guard: {error}"
+        ordinary_route_errors = list(ordinary_route["errors"])
+        if immutable_historical_ordinary_route_guard_is_compatible(
+            yaml_path,
+            data,
+            ordinary_route_errors,
+        ):
+            report.warn(
+                f"{yaml_path.relative_to(REPO_ROOT).as_posix()}: ordinary-route guard: "
+                "immutable historical count preserved because the predecessor lifecycle "
+                "completed after the handoff timestamp"
             )
+        else:
+            for error in ordinary_route_errors:
+                report.error(
+                    f"{yaml_path.relative_to(REPO_ROOT).as_posix()}: "
+                    f"ordinary-route guard: {error}"
+                )
         for warning in ordinary_route.get("warnings", []):
             report.warn(
                 f"{yaml_path.relative_to(REPO_ROOT).as_posix()}: "

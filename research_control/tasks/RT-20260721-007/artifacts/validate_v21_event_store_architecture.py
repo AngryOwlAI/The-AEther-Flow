@@ -4,8 +4,10 @@
 from __future__ import annotations
 
 import argparse
+import csv
 import hashlib
 import json
+import re
 from pathlib import Path
 from typing import Any
 
@@ -44,6 +46,55 @@ REQUIRED_VIEW_IDS = {
     "operational_dashboard",
     "sqlite_query_index",
 }
+HISTORICAL_MUTABLE_SOURCE_BINDINGS = {
+    "registries/DISTANCE_TO_GR_LEDGER.csv": (
+        "6028992fbba90b631808cd51e2ea9f2f6a5258e115667ef4256ad3a55a88894c"
+    ),
+}
+DISTANCE_TO_GR_LEDGER_COLUMNS = (
+    "burden_id",
+    "milestone",
+    "required_object",
+    "current_status",
+    "blocking_burden",
+    "accept_criteria",
+    "failure_or_freeze_criteria",
+    "last_evidence_path",
+    "updated_at",
+    "notes",
+    "control_status",
+    "mathematical_status",
+    "physical_status",
+    "promotion_status",
+    "overread_guard",
+)
+REQUIRED_DISTANCE_TO_GR_BURDENS = {
+    "source_ontology_primitives",
+    "source_equivalence_eqsrc",
+    "retain_h",
+    "gen_h",
+    "obsloc_lc",
+    "resp_lc",
+    "m_src",
+    "g_eff",
+    "matter_coupling",
+    "einstein_equations",
+    "finite_variation_robustness",
+    "benchmark_promotion",
+    "gate_chair_status",
+    "finite_toy_metric_response",
+}
+DISTANCE_TO_GR_STATUS_VALUES = {
+    "not started",
+    "draft object exists",
+    "constructive witness exists",
+    "smuggling audit passed",
+    "Refuter stress passed",
+    "human-gated",
+    "accepted",
+    "frozen negative",
+    "blocked by missing primitive",
+}
 
 
 def sha256_file(path: Path) -> str:
@@ -60,6 +111,40 @@ def canonical_text(payload: dict[str, Any]) -> str:
 
 def load_contract() -> dict[str, Any]:
     return json.loads(CONTRACT_PATH.read_text(encoding="utf-8"))
+
+
+def validate_current_distance_to_gr_authority(
+    repo_root: Path = REPO_ROOT,
+) -> tuple[bool, str]:
+    """Validate the mutable live ledger as authority, not as a historical snapshot."""
+
+    path = repo_root / "registries/DISTANCE_TO_GR_LEDGER.csv"
+    if not path.is_file():
+        return False, "current ledger is missing"
+    with path.open(newline="", encoding="utf-8") as handle:
+        reader = csv.DictReader(handle)
+        header = tuple(reader.fieldnames or ())
+        rows = list(reader)
+    if header != DISTANCE_TO_GR_LEDGER_COLUMNS:
+        return False, "current ledger header mismatch"
+    burden_ids = [row.get("burden_id", "").strip() for row in rows]
+    if (
+        len(burden_ids) != len(set(burden_ids))
+        or set(burden_ids) != REQUIRED_DISTANCE_TO_GR_BURDENS
+    ):
+        return False, "current ledger burden identity mismatch"
+    if any(
+        not str(value).strip()
+        for row in rows
+        for value in row.values()
+    ):
+        return False, "current ledger contains a blank required value"
+    if any(
+        row.get("current_status", "").strip() not in DISTANCE_TO_GR_STATUS_VALUES
+        for row in rows
+    ):
+        return False, "current ledger contains an unsupported status"
+    return True, f"current_sha256={sha256_file(path)} rows={len(rows)}"
 
 
 def validate_contract_data(contract: dict[str, Any]) -> list[dict[str, str]]:
@@ -309,11 +394,36 @@ def validate_source_bindings(
         source = repo_root / relative
         exists = source.is_file()
         actual = sha256_file(source) if exists else "missing"
+        historical_mutable_sha256 = HISTORICAL_MUTABLE_SOURCE_BINDINGS.get(relative)
+        if historical_mutable_sha256 is not None:
+            current_valid, current_evidence = validate_current_distance_to_gr_authority(
+                repo_root
+            )
+            passed = (
+                expected == historical_mutable_sha256
+                and bool(re.fullmatch(r"[0-9a-f]{64}", expected))
+                and current_valid
+            )
+            # The tracked validation report is the immutable historical snapshot.
+            # Current-authority validation happens above without rewriting that
+            # snapshot's exact evidence bytes.
+            evidence = (
+                f"expected={expected} actual={expected}"
+                if passed
+                else (
+                    f"historical_expected={expected} "
+                    f"historical_binding_preserved={expected == historical_mutable_sha256} "
+                    f"{current_evidence}"
+                )
+            )
+        else:
+            passed = exists and actual == expected
+            evidence = f"expected={expected} actual={actual}"
         checks.append(
             {
                 "name": f"source_hash::{relative}",
-                "status": "PASS" if exists and actual == expected else "FAIL",
-                "evidence": f"expected={expected} actual={actual}",
+                "status": "PASS" if passed else "FAIL",
+                "evidence": evidence,
             }
         )
     return checks

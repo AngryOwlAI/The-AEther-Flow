@@ -1,0 +1,78 @@
+{
+  "authority_boundary": {
+    "distance_to_gr_changed": false,
+    "operational_validation_only": true,
+    "p4_t06_reexecuted": false,
+    "p5_t01_executed": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "publication_or_push_authorized": false,
+    "scientific_claims_changed": false
+  },
+  "check_count": 6,
+  "checks": [
+    {
+      "check_id": "protected_p4_t06_payload_hashes_preserved",
+      "evidence": {
+        "mismatches": {},
+        "protected_path_count": 30
+      },
+      "status": "PASS"
+    },
+    {
+      "check_id": "exact_protected_canonical_integration_admitted",
+      "evidence": {
+        "errors": []
+      },
+      "status": "PASS"
+    },
+    {
+      "check_id": "exact_six_path_contract",
+      "evidence": [
+        "ontology/pdfs/aether_flow_dynamics.pdf",
+        "ontology/pdfs/aether_flow_foundations.pdf",
+        "ontology/pdfs/aether_flow_geometry.pdf",
+        "ontology/tex/aether_flow_dynamics.tex",
+        "ontology/tex/aether_flow_foundations.tex",
+        "ontology/tex/aether_flow_geometry.tex"
+      ],
+      "status": "PASS"
+    },
+    {
+      "check_id": "ordinary_direct_ontology_write_still_rejected",
+      "evidence": {
+        "errors": [
+          "research_control/tasks/RT-NEGATIVE-CONTROL/jobs/AJ-NEGATIVE-CONTROL.yaml: future physics AgentJob may not allow direct write path ontology/tex/unrelated.tex"
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "check_id": "four_changed_objects_use_history_preserving_rule",
+      "evidence": [
+        "MD-RESEARCH-CONTROL-DESIGN-EPISTEMIC-CATEGORY-GLOSSARY",
+        "TEX-ONTOLOGY-AETHER-FLOW-DYNAMICS",
+        "TEX-ONTOLOGY-AETHER-FLOW-FOUNDATIONS",
+        "TEX-ONTOLOGY-AETHER-FLOW-GEOMETRY"
+      ],
+      "status": "PASS"
+    },
+    {
+      "check_id": "active_current_and_historical_immutable_semantics",
+      "evidence": {
+        "active_task_requires_current_hash": true,
+        "historical_task_preserves_observed_hash": true
+      },
+      "status": "PASS"
+    }
+  ],
+  "fail_count": 0,
+  "generated_at": "2026-07-25T02:15:00Z",
+  "job_id": "AJ-RT-20260725-001-001",
+  "pass_count": 6,
+  "schema_id": "p4_t06_protected_canonical_recovery_receipt_v1",
+  "source_job_id": "AJ-RT-20260724-010-001",
+  "source_task_id": "RT-20260724-010",
+  "status": "PASS",
+  "task_id": "RT-20260725-001"
+}

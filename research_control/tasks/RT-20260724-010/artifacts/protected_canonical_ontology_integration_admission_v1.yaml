@@ -1,0 +1,82 @@
+schema_id: "protected_canonical_ontology_integration_admission_v1"
+status: "active"
+admission_purpose: "completed_protected_p4_t06_canonical_integration"
+created_by_task_id: "RT-20260725-001"
+created_by_job_id: "AJ-RT-20260725-001-001"
+
+admitted_job:
+  task_id: "RT-20260724-010"
+  job_id: "AJ-RT-20260724-010-001"
+  decision_id: "DDR-20260724-010"
+  completion_id: "AJC-AJ-RT-20260724-010-001"
+  plan_task_id: "P4-T06"
+  role_id: "ontology-formalizer"
+  task_path: "research_control/tasks/RT-20260724-010/00_TASK.yaml"
+  task_sha256: "dea29e8ec6ba79a8c17cf0e2c0ae0be7a275db9845cae16f4f07eea508ada6ff"
+  decision_path: "research_control/tasks/RT-20260724-010/DDR-20260724-010.md"
+  decision_sha256: "677649c6d617d5dce6221f204e6081903158ceef72a496196f7bc71ed3610e7e"
+  job_path: "research_control/tasks/RT-20260724-010/jobs/AJ-RT-20260724-010-001.yaml"
+  job_sha256: "ac923add390dee54363ff21bea39b340386de5910cbbe961caf7bb03afdb3194"
+  completion_path: "research_control/tasks/RT-20260724-010/jobs/completions/AJC-AJ-RT-20260724-010-001.yaml"
+  completion_sha256: "aadf750c91486d1085a1ec99294add8d26008e0382176ee17aa74da74591c402"
+
+exact_allowed_write_paths:
+  - "ontology/tex/aether_flow_foundations.tex"
+  - "ontology/tex/aether_flow_dynamics.tex"
+  - "ontology/tex/aether_flow_geometry.tex"
+  - "ontology/pdfs/aether_flow_foundations.pdf"
+  - "ontology/pdfs/aether_flow_dynamics.pdf"
+  - "ontology/pdfs/aether_flow_geometry.pdf"
+
+immutable_goal_route:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  generation: 105
+  plan_task_id: "P4-T06"
+  worker_skill: "continue-research"
+  route_sha256: "9a2b999614960a98f24905d34fce79340aa0b2b636e8ac8ba6ccd127065dd4d9"
+
+source_handoff:
+  handoff_id: "handoff-0859"
+  path: "research_control/handoffs/handoff-0859.yaml"
+  sha256: "513919a1785d78a190e30b4734737e61f3aede829820337dfbe9b07f0abcbcd7"
+  selected_plan_task_id: "P4-T06"
+
+approval:
+  approval_id: "approval-20260724-001"
+  path: "research_control/approvals/approval-20260724-001.yaml"
+  sha256: "37038157b5deb23a3ae8249dcf5562ac8e9be37f6fa4ae8704c47b0eeb24a412"
+  status: "consumed"
+  consumed_by: "AJ-RT-20260724-004-001"
+  reused_by_p4_t06: false
+
+human_authorization:
+  human_authorization_id: "HUMAN-P4-T05-20260722-CONTINUUM-FIRST-01"
+  path: "research_control/tasks/RT-20260724-004/artifacts/human_authorization_p4_t05_continuum_first_v1.yaml"
+  sha256: "3421808c71a64279ef5ba62df5376ab4999d2c67978d4f7ceabbeb0ae9b2bde6"
+
+gate_decision:
+  path: "research_control/tasks/RT-20260724-004/artifacts/ontology_regime_gate_chair_decision_v1.tex"
+  sha256: "20ea795bbe93333b489e4f13601fd6bb1623f318b7847f9d2d24402c7490c934"
+
+route_authorization:
+  path: "research_control/tasks/RT-20260724-004/artifacts/canonical_next_route_authorization_v1.yaml"
+  sha256: "52edb6e43e024b09de58d2fc9242a6747630678800e91d47d6c4195203cd8c86"
+  selected_plan_task_id: "P4-T06"
+  selected_worker_skill: "continue-research"
+
+authority_limits:
+  exact_scope_satisfied: true
+  authority_expanded_beyond_scope: false
+  approval_reused: false
+  p4_t06_reexecuted: false
+  physical_status_changed: false
+  source_law_adopted: false
+  distance_to_gr_changed: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false
+  completed_derivation_authorized: false
+
+validation_status: "PASS"

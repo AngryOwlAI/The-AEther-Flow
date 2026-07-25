@@ -10,10 +10,11 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 - Role: `ontology_source`
 - Authority status: `canonical`
 - Owner skill: `tex-wiki`
-- Source hash: `b14c99501bdb2b9fad0702df3a41230a4bf3bd279ee660c31329e1d33e577fa2`
+- Source hash: `4749d9e8b6858a43230e99029cccc3274b55fc2ae2a2cdf45a983a60c98e5b59`
 
 ## Related Objects
 
+- Related source: `TEX-V21-P4-T05-ONTOLOGY-REGIME-GATE-CHAIR-DECISION-V1` `research_control/tasks/RT-20260724-004/artifacts/ontology_regime_gate_chair_decision_v1.tex`
 - Generated output path: `ontology/pdfs/aether_flow_foundations.pdf`
 - Generated output path: `wiki/tex/tex-ontology-aether-flow-foundations.md`
 - Backlink from `PDF-ONTOLOGY-AETHER-FLOW-FOUNDATIONS` `ontology/pdfs/aether_flow_foundations.pdf`
@@ -21,4 +22,4 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 ## Validation
 
 - Validation status: `PASS`
-- Last validated at: `2026-06-27T17:25:22Z`
+- Last validated at: `2026-07-25T00:15:25Z`

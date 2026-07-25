@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-07-24T22:35:23Z`
-- Source fingerprint: `d5942b475e9dd8aa98be6b606dc5a615937329fa86fd8ec9dbec0881e7a679c2`
-- Nodes: `21815`
-- Edges: `72449`
+- Generated from tracked state as of: `2026-07-25T00:20:26Z`
+- Source fingerprint: `04268440312630d633a0b9144ce9fd96383c67a954bf9338ea2f19d5952c0060`
+- Nodes: `21843`
+- Edges: `72498`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 1095 |
+| `completion_yaml` | 1096 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 859 |
+| `handoff_yaml` | 860 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,18 +33,18 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 8 |
-| `agent_job` | `support_only` | 1095 |
+| `agent_job` | `support_only` | 1096 |
 | `artifact` | `canonical_source` | 86 |
-| `artifact` | `support_only` | 11083 |
-| `blocked_burden` | `blocked` | 4413 |
-| `claim_boundary` | `support_only` | 1052 |
+| `artifact` | `support_only` | 11094 |
+| `blocked_burden` | `blocked` | 4421 |
+| `claim_boundary` | `support_only` | 1053 |
 | `draft_control_candidate` | `draft_control` | 722 |
 | `draft_control_candidate` | `proposal_only` | 110 |
-| `draft_control_candidate` | `science_draft` | 63 |
+| `draft_control_candidate` | `science_draft` | 64 |
 | `frozen_negative` | `frozen_negative` | 132 |
 | `gate_chair_verdict` | `human_gated` | 32 |
-| `handoff` | `support_only` | 859 |
-| `human_gated_object` | `human_gated` | 514 |
+| `handoff` | `support_only` | 860 |
+| `human_gated_object` | `human_gated` | 516 |
 | `ledger_row` | `accepted_scoped` | 6 |
 | `ledger_row` | `blocked` | 4 |
 | `ledger_row` | `frozen_negative` | 1 |
@@ -53,12 +53,12 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `obstruction` | `blocked` | 79 |
 | `obstruction` | `rejected` | 3 |
 | `source_extension_evidence_precondition` | `source_extension_evidence` | 37 |
-| `source_ontology_object` | `canonical_source` | 25 |
+| `source_ontology_object` | `canonical_source` | 26 |
 | `source_ontology_object` | `rejected` | 50 |
-| `source_ontology_object` | `support_only` | 342 |
+| `source_ontology_object` | `support_only` | 343 |
 | `task` | `human_gated` | 29 |
 | `task` | `science_draft` | 32 |
-| `task` | `support_only` | 1034 |
+| `task` | `support_only` | 1035 |
 
 ## Frontier Table
 
@@ -163,9 +163,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 ## Route Continuity
 
-- Active task: `RT-20260724-009`
-- Latest handoff: `handoff-0859`
-- Handoff path: `research_control/handoffs/handoff-0859.yaml`
-- Next action: After the generation-104 governed checkpoint commits, run one fresh bounded continue-research packet for P4-T06 to integrate the already approved narrow continuum-first source boundary without importing physical semantics or promoting claims.
+- Active task: `RT-20260724-010`
+- Latest handoff: `handoff-0860`
+- Handoff path: `research_control/handoffs/handoff-0860.yaml`
+- Next action: Run one governed improve-project-system recovery for the protected canonical-ontology integration admission and historical memory-preflight hash contract, revalidate and checkpoint the preserved P4-T06 transaction, and only then execute one fresh P5-T01 continue-research packet. Do not reexecute P4-T06, broaden the human-approved boundary, rewrite historical receipts, add physical semantics, publish, push, or claim a completed derivation.
 
 This graph is navigational support only; inspect the cited sources before using any claim.

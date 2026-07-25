@@ -2,7 +2,9 @@ from __future__ import annotations
 
 import importlib.util
 import json
+import shutil
 import sys
+import tempfile
 import unittest
 from pathlib import Path
 
@@ -45,6 +47,63 @@ class CandidateLineageTests(unittest.TestCase):
         self.assertEqual(validation["record_counts"]["rejection_events"], 0)
         self.assertEqual(receipt["result_status"], "PASS")
         self.assertFalse(receipt["authority_boundary"]["physics_promotion_authorized"])
+
+    def test_historical_registered_source_drift_uses_current_authority(self) -> None:
+        seed = json.loads(
+            (
+                REPO_ROOT
+                / "research_control/tasks/RT-20260721-005/artifacts/v21_candidate_lineage_historical_seed.json"
+            ).read_text(encoding="utf-8")
+        )
+        source_path = "ontology/tex/aether_flow_foundations.tex"
+        historical_sha256 = seed["source_hashes"][source_path]
+
+        self.assertNotEqual(
+            historical_sha256,
+            self.validator.file_sha256(source_path),
+        )
+        self.assertTrue(
+            self.validator.historical_source_binding_matches(
+                source_path,
+                historical_sha256,
+            )
+        )
+
+    def test_historical_registered_source_drift_rejects_stale_current_registry(self) -> None:
+        seed = json.loads(
+            (
+                REPO_ROOT
+                / "research_control/tasks/RT-20260721-005/artifacts/v21_candidate_lineage_historical_seed.json"
+            ).read_text(encoding="utf-8")
+        )
+        source_path = "ontology/tex/aether_flow_foundations.tex"
+        historical_sha256 = seed["source_hashes"][source_path]
+        registry_path = "registries/TEX_SOURCE_REGISTRY.csv"
+
+        with tempfile.TemporaryDirectory() as tempdir:
+            repo_root = Path(tempdir)
+            for relative in (source_path, registry_path):
+                destination = repo_root / relative
+                destination.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copy2(REPO_ROOT / relative, destination)
+            current_sha256 = self.validator.file_sha256(source_path)
+            registry = repo_root / registry_path
+            registry.write_text(
+                registry.read_text(encoding="utf-8").replace(
+                    current_sha256,
+                    "0" * 64,
+                    1,
+                ),
+                encoding="utf-8",
+            )
+
+            self.assertFalse(
+                self.validator.historical_source_binding_matches(
+                    source_path,
+                    historical_sha256,
+                    repo_root=repo_root,
+                )
+            )
 
     def test_changed_identity_content_changes_digest(self) -> None:
         seed = json.loads(

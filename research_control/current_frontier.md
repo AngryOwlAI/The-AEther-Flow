@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260724-009` and `handoff-0859`.
+`RT-20260725-002` and `handoff-0862`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260724-009` |
-| Latest handoff ID | `handoff-0859` |
-| Current status | `p4_t05_handoff_route_guard_status_reconciliation_pass_ready_for_checkpoint` |
+| Active task ID | `RT-20260725-002` |
+| Latest handoff ID | `handoff-0862` |
+| Current status | `p4_t06_dependent_repository_contract_recovery_pass_ready_for_checkpoint` |
 | V16 completed | false |
 | Current route family | benchmark or recovery (project system) |
 | Target derivation milestone | `source_ontology` |
-| Current burden | none for physics derivation; live control burden is v21 p4 t06 integrate selected ontology regime |
-| Required next authority | After the governed checkpoint commits, one fresh P4-T06 continue-research packet may integrate only the already human-approved narrow continuum-first source boundary without physical interpretation or promotion. |
-| Next recommended action | After the generation-104 governed checkpoint commits, run one fresh bounded continue-research packet for P4-T06 to integrate the already approved narrow continuum-first source boundary without importing physical semantics or promoting claims. |
+| Current burden | `source_ontology_primitives` |
+| Required next authority | After the governed checkpoint commits, one fresh bounded P5-T01 ontology-formalizer packet may define only the compact source-theory tuple and object model with explicit open dynamics and reconstruction slots. |
+| Next recommended action | After the governed combined checkpoint commits, run exactly one bounded P5-T01 ontology-formalizer AgentJob to define the compact source-theory tuple and object model while preserving open dynamics and reconstruction slots and all no-promotion boundaries. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260724-009` |
-| Latest research handoff ID | `handoff-0859` |
-| Latest research next action | After the generation-104 governed checkpoint commits, run one fresh bounded continue-research packet for P4-T06 to integrate the already approved narrow continuum-first source boundary without importing physical semantics or promoting claims. |
+| Latest research task ID | `RT-20260725-002` |
+| Latest research handoff ID | `handoff-0862` |
+| Latest research next action | After the governed combined checkpoint commits, run exactly one bounded P5-T01 ontology-formalizer AgentJob to define the compact source-theory tuple and object model while preserving open dynamics and reconstruction slots and all no-promotion boundaries. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260724-009/00_TASK.yaml`.
-- Active task objective: Represent RT-20260724-007 as implementation-completed while preserving validation FAIL and every checkpoint-failure receipt; prove immutable handoff-0857 then exposes P4-T06 as dependency-ready; preserve P4-T06 nonexecution; and invoke one governed cumulative checkpoint.
-- Latest handoff path: `research_control/handoffs/handoff-0859.yaml`.
-- Latest handoff summary: Generation 104 reconciles only the P4-T05 lifecycle layer: RT-20260724-007 is implementation-completed while validation and checkpoint status remain FAIL. The prospective staged receipt preserves seven immutable hashes, passes handoff-0857 and the RT-20260724-008 admission, exposes P4-T06 as dependency-ready after checkpoint, and confirms P4-T06 remains unexecuted.
+- Active task path: `research_control/tasks/RT-20260725-002/00_TASK.yaml`.
+- Active task objective: Repair only the five dependent repository-contract findings recorded by RT-20260725-001, preserve the historical candidate-lineage seed and event-store contract as immutable observations, validate the current ontology source and Distance-to-GR ledger through current authority, repair the burden-status fixture and P4-T06 taxonomy metadata, rerun every required gate, and invoke one governed combined checkpoint only on a full pass.
+- Latest handoff path: `research_control/handoffs/handoff-0862.yaml`.
+- Latest handoff summary: Generation 107 repairs all five P4-T06 dependent repository-contract findings. The candidate-lineage and event-store validators preserve exact historical observations while requiring fail-closed current authority, the burden mutation fixture targets the current definition, RT-20260724-010 has the required taxonomy, and the dependent P10 audit returns to its bounded PASS/freeze result. The inherited P4-T06 science payload, ontology TeX and PDFs, burden definitions, and Distance-to-GR ledger remain byte-preserved; P5-T01 is unexecuted.
 - Current route family: benchmark or recovery (project system).
-- Next recommended action: After the generation-104 governed checkpoint commits, run one fresh bounded continue-research packet for P4-T06 to integrate the already approved narrow continuum-first source boundary without importing physical semantics or promoting claims.
+- Next recommended action: After the governed combined checkpoint commits, run exactly one bounded P5-T01 ontology-formalizer AgentJob to define the compact source-theory tuple and object model while preserving open dynamics and reconstruction slots and all no-promotion boundaries.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -282,7 +282,7 @@ preserves the raw ledger `current_status` field for continuity.
 
 | Burden ID | Milestone | Reader-facing status | Legacy status | Control status | Mathematical status | Physical status | Promotion status | Overread guard | Last evidence |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| `source_ontology_primitives` | `source_ontology` | draft source-ontology primitives only | accepted | gate_review_completed | definition_only_or_draft_object | no_physical_interpretation_authorized | scoped_source_evidence_only | no_canonical_ontology_edit<br>no_source_law_adoption<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/tasks/RT-20260724-004/artifacts/ontology_regime_gate_chair_decision_v1.tex` |
+| `source_ontology_primitives` | `source_ontology` | draft source-ontology primitives only | accepted | accepted_as_scoped_source_object | source_only_adopted_object | no_physical_interpretation_authorized | scoped_source_object_only | no_source_law_adoption<br>no_metricdata_e_adoption<br>no_matter_coupling_adoption<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/tasks/RT-20260724-010/artifacts/selected_ontology_regime_integration_v1.tex` |
 | `source_equivalence_eqsrc` | `source_equivalence_eqsrc` | draft source-equivalence object only | draft object exists | draft_control_object_exists | general_equivalence_theorem_missing | downstream_gr_blocked | draft_control_only | no_source_law_adoption<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/program_state.yaml` |
 | `retain_h` | `source_equivalence_eqsrc` | blocked by missing primitive | blocked by missing primitive | blocked | primitive_missing | no_retention_law_adoption | none | no_source_law_adoption<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/program_state.yaml` |
 | `gen_h` | `source_equivalence_eqsrc` | blocked by missing primitive | blocked by missing primitive | blocked | primitive_missing | no_generator_law_adoption | none | no_source_law_adoption<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/program_state.yaml` |
@@ -302,7 +302,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-After the generation-104 governed checkpoint commits, run one fresh bounded continue-research packet for P4-T06 to integrate the already approved narrow continuum-first source boundary without importing physical semantics or promoting claims.
+After the governed combined checkpoint commits, run exactly one bounded P5-T01 ontology-formalizer AgentJob to define the compact source-theory tuple and object model while preserving open dynamics and reconstruction slots and all no-promotion boundaries.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -328,20 +328,20 @@ Validation layers:
 
 | Validation layer | Status | Meaning | Evidence |
 | --- | --- | --- | --- |
-| `pre_execution` | PASS | receipt complete | Generation 104 validated, claimed, and consumed the exact immutable route once. |
-| `completion_internal` | PASS | receipt complete | The task-local receipt proves lifecycle reconciliation, seven immutable hashes, and P4-T06 nonexecution. |
-| `post_write` | PASS | receipt complete | The prospective staged task-local gate, narrow routing gates, full research-control validator, and four focused tests pass with handoff-0857 and RT-20260724-008 route admission recovered. |
-| `post_checkpoint` | PENDING | open item; evidence must explain why | One governed checkpoint remains to be invoked in the same generation-104 transaction. |
-| `renderer` | PASS | receipt complete | Current frontier, task index, compact frontier, dependency graph, and claim graph were refreshed from tracked authority. |
-| `memory_bootstrap` | PASS_WITH_WARNINGS | receipt complete with stated warnings | Tracked memory synchronization and validate-only passed with nine nonblocking local-cache findings. |
-| `claim_language_linter` | PASS_WITH_WARNINGS | receipt complete with stated warnings | Changed-source claim-language validation passed with zero hard failures and 1,496 historical warnings. |
+| `pre_execution` | PASS | receipt complete | Generation 107 validated, atomically claimed, and consumed the exact immutable improve-project-system route once. |
+| `completion_internal` | PASS | receipt complete | The task-local receipt passes seven checks and all five dependent findings are repaired. |
+| `post_write` | PASS | receipt complete | Stable-state repository discovery passes 1,251 tests with one expected skip and zero failures or errors.<br>Research-control diff documentation signal renderer recovery and whitespace gates pass. |
+| `post_checkpoint` | PENDING | open item; evidence must explain why | One governed checkpoint remains to be invoked in this generation-107 transaction. |
+| `renderer` | PASS | receipt complete | Tracked frontier, task-index, and compact-frontier derivatives are fresh from handoff-0862. |
+| `memory_bootstrap` | PASS_WITH_WARNINGS | receipt complete with stated warnings | Tracked memory synchronization and validate-only pass with 14 nonblocking local-cache findings. |
+| `claim_language_linter` | PASS_WITH_WARNINGS | receipt complete with stated warnings | Changed-source claim-language validation passes with zero hard failures and 1,499 historical warnings. |
 
 Authorization layers:
 
 | Authorization field | Value | Meaning |
 | --- | --- | --- |
 | `protected_scoped_gate_review_authorized` | false (not authorized) | scoped review authority only |
-| `protected_scoped_gate_review_scope` | not_applicable | exact scope of protected review authority |
+| `protected_scoped_gate_review_scope` | not_applicable_project_system_recovery_only | exact scope of protected review authority |
 | `protected_scoped_gate_review_authority_source_path` | none | tracked source for scoped review authority |
 | `downstream_physics_promotion_authorized` | false (not authorized) | authorizes downstream physics promotion only when true |
 | `downstream_physics_promotion_authority_source_path` | none | tracked source for downstream promotion authority |
@@ -364,9 +364,9 @@ Authorization layers:
 
 Legacy compatibility records:
 
-- active task: `RT-20260724-009`;
-- latest handoff: `handoff-0859`;
-- current status: `p4_t05_handoff_route_guard_status_reconciliation_pass_ready_for_checkpoint`;
+- active task: `RT-20260725-002`;
+- latest handoff: `handoff-0862`;
+- current status: `p4_t06_dependent_repository_contract_recovery_pass_ready_for_checkpoint`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -376,8 +376,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0859.yaml`
-- `research_control/tasks/RT-20260724-009/00_TASK.yaml`
+- `research_control/handoffs/handoff-0862.yaml`
+- `research_control/tasks/RT-20260725-002/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -393,7 +393,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0859*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0862*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

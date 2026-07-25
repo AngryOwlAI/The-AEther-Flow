@@ -1,0 +1,92 @@
+schema_id: "validation_blocker_v1"
+blocker_id: "VB-RT-20260725-001-P4-T06-DEPENDENT-REPOSITORY-CONTRACT-DRIFT-001"
+task_id: "RT-20260725-001"
+job_id: "AJ-RT-20260725-001-001"
+source_task_id: "RT-20260724-010"
+plan_task_id: "P4-T06"
+status: "open"
+created_at: "2026-07-25T03:13:37Z"
+blocker_class: "project_system_p4_t06_dependent_repository_contract_drift"
+failed_gate: "full_repository_unittest_discovery"
+gate_command: ".venv/bin/python -m unittest discover -s tests"
+gate_result: "FAIL_1236_TESTS_4_FAILURES_1_ERROR_1_SKIPPED"
+core_recovery_status: "PASS"
+core_recovery_receipt_path: "research_control/tasks/RT-20260725-001/artifacts/p4_t06_protected_canonical_recovery_receipt.json"
+core_recovery_receipt_sha256: "a5afa10b5ed9987864b9a19e21726ef5ebe30f7adde9d2321149fea6cc971358"
+repository_research_control_diff_status: "PASS_ZERO_ERRORS_1735_WARNINGS"
+documentation_impact_status: "PASS"
+memory_bootstrap_status: "PASS_WITH_14_LOCAL_CACHE_FINDINGS"
+claim_language_status: "PASS_ZERO_HARD_FAILURES_1499_WARNINGS"
+git_diff_check_status: "PASS"
+
+findings:
+  - finding_id: "P4-T06-DEPENDENT-CONTRACT-F001"
+    component: "candidate_lineage"
+    test: "tests.test_candidate_lineage.CandidateLineageTests.test_live_snapshot_passes_exact_seed_checks"
+    status: "FAIL"
+    exact_error: "historical_source_hashes: source hash drift for ontology/tex/aether_flow_foundations.tex"
+    historical_contract_path: "research_control/tasks/RT-20260721-005/artifacts/v21_candidate_lineage_historical_seed.json"
+    historical_contract_sha256: "8cf49a04b90d02f8439b54e138257cc5c56b2a72ba2b26c43c5b1b9a5dba78a0"
+    observed_source_path: "ontology/tex/aether_flow_foundations.tex"
+    expected_historical_sha256: "b14c99501bdb2b9fad0702df3a41230a4bf3bd279ee660c31329e1d33e577fa2"
+    observed_current_sha256: "4749d9e8b6858a43230e99029cccc3274b55fc2ae2a2cdf45a983a60c98e5b59"
+    required_repair: "Preserve the historical observation while distinguishing it from the current canonical source hash; do not rewrite the historical seed to impersonate current authority."
+  - finding_id: "P4-T06-DEPENDENT-CONTRACT-F002"
+    component: "current_burden_status"
+    test: "tests.test_current_burden_status.CurrentBurdenStatusTests.test_stable_definition_status_field_fails_closed"
+    status: "FAIL"
+    exact_error: "The mutation fixture no longer inserts current_status because its obsolete required_object anchor is absent from the authorized P4-T06 definition."
+    definition_path: "research_control/tasks/RT-20260721-009/artifacts/v21_burden_definitions_v1.yaml"
+    definition_sha256: "67b8053baa60db4b11ee20582633d6279523d40b2ee853a6c570e2fdc1d113f5"
+    test_path: "tests/test_current_burden_status.py"
+    test_sha256: "337f10b57dc9ae63f519d27db15ab1d62ee1d0bfe1249f8b4249fa20c097d743"
+    required_repair: "Update the fail-closed fixture to mutate a stable current definition identity without changing the authorized P4-T06 definition bytes or weakening mutable-status rejection."
+  - finding_id: "P4-T06-DEPENDENT-CONTRACT-F003"
+    component: "event_store_architecture"
+    test: "tests.test_event_store_architecture.EventStoreArchitectureTests.test_live_contract_sources_and_documents_pass"
+    status: "FAIL"
+    exact_error: "source_hash::registries/DISTANCE_TO_GR_LEDGER.csv expected 6028992fbba90b631808cd51e2ea9f2f6a5258e115667ef4256ad3a55a88894c actual 69a513d1c737f7c6b49ec03bbcb51dfc8a5a6b4063c5f2d88bb663eea286dccf"
+    historical_contract_path: "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_contract.json"
+    historical_contract_sha256: "d5fa22e7bbc1d92f29acd6c8418d06ce7d81a042589ade77c7ba4fdebb0eda44"
+    observed_source_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+    expected_historical_sha256: "6028992fbba90b631808cd51e2ea9f2f6a5258e115667ef4256ad3a55a88894c"
+    observed_current_sha256: "69a513d1c737f7c6b49ec03bbcb51dfc8a5a6b4063c5f2d88bb663eea286dccf"
+    required_repair: "Preserve the architecture contract's historical observation while validating the current ledger through current authority; do not rewrite the historical contract as if it observed future bytes."
+  - finding_id: "P4-T06-DEPENDENT-CONTRACT-F004"
+    component: "task_taxonomy"
+    test: "tests.test_task_taxonomy.TaskTaxonomyTests.test_repository_report_records_zero_mutation_and_strengthening"
+    status: "FAIL"
+    exact_error: "RT-20260724-010 requires explicit task_taxonomy and title fields but the live uncheckpointed task record lacks both."
+    task_path: "research_control/tasks/RT-20260724-010/00_TASK.yaml"
+    task_sha256: "dea29e8ec6ba79a8c17cf0e2c0ae0be7a275db9845cae16f4f07eea508ada6ff"
+    required_repair: "Add only the required explicit taxonomy and readable title consistent with the existing P4-T06 plan metadata, science-draft authority, and exact claim boundary."
+  - finding_id: "P4-T06-DEPENDENT-CONTRACT-F005"
+    component: "p10_migration_readiness"
+    test: "tests.test_v21_p10_migration_readiness.P10MigrationReadinessTests.setUpClass"
+    status: "ERROR"
+    exact_error: "P10-T03 validator is not PASS because candidate lineage fails finding F001."
+    required_repair: "Resolve F001 without mutating historical observations; the dependent P10 migration readiness audit must then return to its prior bounded PASS/freeze disposition."
+
+required_recovery:
+  worker_skill: "improve-project-system"
+  role_family: "validator-engineer@0.2.0"
+  strategy_id: "repair_p4_t06_dependent_repository_contract_drift_v1"
+  objective: "Repair only the five repository-contract findings exposed after the exact P4-T06 admission recovery, preserving historical observations, authorized P4-T06 source and definition bytes, current-authority checks, fail-closed mutation tests, and every scientific nonpromotion boundary; then rerun all gates and invoke one governed combined checkpoint only on a full pass."
+  checkpoint_may_run_before_recovery: false
+  p5_t01_may_run_before_checkpoint: false
+
+authority_limits:
+  core_recovery_reexecuted: false
+  p4_t06_reexecuted: false
+  p4_t06_payload_mutated_by_this_blocker_record: false
+  historical_receipts_rewritten: false
+  p5_t01_executed: false
+  scientific_claims_changed: false
+  distance_to_gr_changed: false
+  ontology_or_source_law_adopted: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false
+  completed_derivation_authorized: false

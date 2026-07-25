@@ -2,6 +2,8 @@ from __future__ import annotations
 
 import copy
 import importlib.util
+import shutil
+import tempfile
 import unittest
 from pathlib import Path
 
@@ -30,6 +32,54 @@ class EventStoreArchitectureTests(unittest.TestCase):
         self.assertEqual("PASS", report["status"])
         self.assertEqual([], report["failed_checks"])
         self.assertEqual("PASS", receipt["validation_status"])
+
+    def test_historical_ledger_binding_uses_current_ledger_authority(self) -> None:
+        binding = next(
+            item
+            for item in self.contract["source_bindings"]
+            if item["path"] == "registries/DISTANCE_TO_GR_LEDGER.csv"
+        )
+        current_path = REPO_ROOT / binding["path"]
+
+        self.assertNotEqual(binding["sha256"], MODULE.sha256_file(current_path))
+        self.assertNotIn(
+            f"source_hash::{binding['path']}",
+            self.failed_names(MODULE.validate_source_bindings(self.contract)),
+        )
+
+    def test_historical_ledger_binding_rejects_changed_observation(self) -> None:
+        mutated = copy.deepcopy(self.contract)
+        binding = next(
+            item
+            for item in mutated["source_bindings"]
+            if item["path"] == "registries/DISTANCE_TO_GR_LEDGER.csv"
+        )
+        binding["sha256"] = "0" * 64
+
+        self.assertIn(
+            f"source_hash::{binding['path']}",
+            self.failed_names(MODULE.validate_source_bindings(mutated)),
+        )
+
+    def test_historical_ledger_binding_rejects_invalid_current_authority(self) -> None:
+        relative = "registries/DISTANCE_TO_GR_LEDGER.csv"
+        with tempfile.TemporaryDirectory() as tempdir:
+            repo_root = Path(tempdir)
+            destination = repo_root / relative
+            destination.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(REPO_ROOT / relative, destination)
+            lines = destination.read_text(encoding="utf-8").splitlines()
+            destination.write_text("\n".join(lines[:-1]) + "\n", encoding="utf-8")
+
+            self.assertIn(
+                f"source_hash::{relative}",
+                self.failed_names(
+                    MODULE.validate_source_bindings(
+                        self.contract,
+                        repo_root=repo_root,
+                    )
+                ),
+            )
 
     def test_architecture_selection_is_exclusive(self) -> None:
         mutated = copy.deepcopy(self.contract)

@@ -4,7 +4,8 @@
 
 ## Scope
 
-This glossary implements v15 P14-T02. It defines the project-control
+This glossary implements v15 P14-T02 and carries the bounded v21 P4-T06
+source-architecture vocabulary synchronization. It defines the project-control
 categories that public and agent-facing surfaces must keep separate when
 describing the AEther-Flow research program.
 
@@ -17,6 +18,7 @@ promote any scientific claim.
 | Category | Meaning in this project | Public-safe use | Forbidden overread |
 | --- | --- | --- | --- |
 | Interpretation | A proposed explanatory frame for how source-side structures might organize a relativistic account. | Use for AEther-flow as a research interpretation or explanatory frame. | Do not present interpretation as a completed derivation or established physical ontology. |
+| Canonical mainline research architecture | The tracked source-side architecture selected for current mainline research. The P4-T05/P4-T06 architecture is continuum-first: a smooth four-dimensional source arena is explicit primitive debt and `Phi_src` is an unresolved abstract source-order or evolution slot. | Use to describe the current research route, source typing boundary, and downstream dependency order. | Do not shorten this to established physical ontology, physical spacetime, derived manifold, source law, source dynamics, or proof that continuum-first is true, unique, fundamental, or empirically established. |
 | Model | A specified mathematical or computational construction with declared assumptions, scope, and outputs. | Use for scoped source objects, finite witnesses, toy routes, and control-side constructions. | Do not present a model as a physical theory unless tracked authority establishes the missing physical semantics and empirical connection. |
 | Physical theory | A physically interpreted framework with adopted semantics, dynamics, observables, and empirical commitments. | Use only when the project has tracked authority for those semantics and commitments. | Do not infer physical theory status from scoped source objects, source-extension evidence, or validator receipts. |
 | Exact-GR benchmark compatibility | Compatibility with exact-GR benchmark obligations or an exact-GR comparison target. | Use only when describing a benchmark target, burden, or blocked promotion route. | Do not treat compatibility language as first-principles recovery or benchmark promotion. |
@@ -40,6 +42,18 @@ An interpretation is an explanatory frame or research ontology proposal. A
 derivation is a source-backed argument that establishes a target statement from
 declared assumptions. Public text may say AEther-flow is a proposed
 interpretation. It must not say the interpretation itself derives GR.
+
+### Research Architecture Versus Physical Ontology
+
+A canonical mainline research architecture fixes which source assumptions and
+open slots current work will use. It does not establish that those assumptions
+describe reality. For the selected continuum-first mainline, the smooth
+four-dimensional source arena is primitive debt rather than an emergent or
+physical-spacetime result. `Phi_src` remains unresolved: no parameter domain,
+algebra, invertibility, stochastic status, gauge status, source law, source
+dynamics, or physical-time meaning is adopted. Public text may describe this
+tracked architecture selection, but it must not call the selection an
+established physical ontology or a derivation.
 
 ### Model Versus Physical Theory
 
@@ -91,6 +105,15 @@ Public text derived from this glossary must preserve these negative guards:
 
 - GR is not derived.
 - AEther-flow is a proposed research interpretation / explanatory frame, not an established physical ontology.
+- Continuum-first is the canonical mainline research architecture, not proof
+  of a true, unique, fundamental, empirical, or derived physical ontology.
+- The smooth four-dimensional source arena is explicit primitive debt and is
+  not identified with physical spacetime or the exact-GR target manifold.
+- `Phi_src` is an unresolved abstract source-order or evolution slot, not an
+  adopted map, action, generator, gauge structure, clock, source law, or
+  source dynamics.
+- Emergence-first remains a proposal-only noncanonical fallback under the
+  tracked P4-T05 reopening conditions; it is not rejected or erased.
 - `M_src` is not a target manifold, metric, or GR derivation.
 - `g_eff` is not an unscoped Lorentzian metric, matter coupling, or Einstein
   equations.

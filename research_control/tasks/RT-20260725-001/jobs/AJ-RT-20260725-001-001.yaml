@@ -1,0 +1,402 @@
+job_id: "AJ-RT-20260725-001-001"
+task_id: "RT-20260725-001"
+decision_id: "DDR-20260725-001"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260725-001"
+status: "completed"
+validation_status: "FAIL"
+created_at: "2026-07-25T01:54:39Z"
+started_at: "2026-07-25T01:54:39Z"
+completed_at: "2026-07-25T03:13:37Z"
+completion_path: "research_control/tasks/RT-20260725-001/jobs/completions/AJC-AJ-RT-20260725-001-001.yaml"
+requires_human_gate: false
+human_authorization_note: "Generation 106 is a user-authorized recursive project-system recovery route. It carries no new human-gate decision, does not reuse approval-20260724-001, and does not reexecute P4-T06."
+objective: "Implement and validate one fail-closed exact admission for the protected P4-T06 canonical integration and one active-versus-historical hash rule for the four changed canonical sources, then revalidate and checkpoint the preserved transaction once."
+target_derivation_milestone: "source_ontology"
+milestone_burden: "Repair the project-system admission blocker without changing the completed P4-T06 payload or any scientific burden."
+route_label: "repair_protected_canonical_ontology_integration_admission_and_historical_hash_semantics_v1"
+route_reason: "Generation 105 completed P4-T06 but isolated exactly six protected canonical-path admission errors and 114 immutable historical memory-preflight source-hash errors; generation 106 immutably routes only that repair and combined checkpoint recovery."
+immutable_route_sha256: "af787012ab266789dcce623726427e9dc618028b48be6fdc8b5b49232db00f4b"
+plan_task_id: "P4-T06"
+recovery_for_plan_task_id: "P4-T06"
+next_plan_task_id: "P5-T01"
+next_plan_task_execution_authorized: false
+recommendation_ids:
+  - "V21-R10"
+  - "V21-R11"
+  - "V21-R31"
+  - "V21-R50"
+  - "V21-R61"
+project_system_change_only: true
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 106
+  passes_consumed: 96
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:106"
+  handoff_token: "c58462cc595958d0efd9e644b7b4b597d5425fb2097930e6"
+  relay_claim_token: "fe4d4708f2253f45ce51e912aa567afb40a7fc1b6010e3aa"
+  route_work_item_id: "P4-T06"
+  route_worker_skill: "improve-project-system"
+  route_sha256: "af787012ab266789dcce623726427e9dc618028b48be6fdc8b5b49232db00f4b"
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  candidate_family: "not_applicable"
+  assumption_delta:
+    - "No scientific assumption changes; the packet repairs two project-control validator predicates only."
+    - "The protected P4-T06 science payload, authorization chain, source bytes, Distance-to-GR state, and P5-T01 dependency boundary remain preserved."
+  materiality_basis: "Closes the only 120 strict validation findings while retaining fail-closed protected-path and active-current-hash enforcement."
+  source_basis:
+    - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+    - "research_control/tasks/RT-20260724-010/artifacts/validation_blocker_protected_canonical_integration_admission_v1.yaml"
+    - "research_control/handoffs/handoff-0860.yaml"
+    - "research_control/tasks/RT-20260724-004/artifacts/canonical_next_route_authorization_v1.yaml"
+  expected_artifact_paths:
+    - "scripts/research_control/validate_research_control.py"
+    - "tests/test_p4_t06_protected_canonical_recovery.py"
+    - "research_control/tasks/RT-20260724-010/artifacts/protected_canonical_ontology_integration_admission_v1.yaml"
+    - "research_control/tasks/RT-20260725-001/artifacts/validate_p4_t06_protected_canonical_recovery.py"
+    - "research_control/tasks/RT-20260725-001/artifacts/p4_t06_protected_canonical_recovery_receipt.json"
+  project_system_justification: "The work changes deterministic project-control validation and no physics payload."
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  expected_durable_outputs:
+    physics: []
+    project_system:
+      - "exact protected canonical-integration admission receipt"
+      - "fail-closed validator branch"
+      - "active-versus-historical canonical source hash rule"
+      - "focused positive and negative regression tests"
+      - "combined validation and checkpoint receipt"
+  acceptance_criteria:
+    physics: []
+    project_system:
+      - "the exact P4-T06 six-path authorization chain passes"
+      - "missing stale mismatched broadened reused and unrelated authority fails"
+      - "ordinary direct ontology writes remain rejected"
+      - "active-task memory inspections require current registry and file hashes"
+      - "historical observations for exactly four mutable canonical objects remain valid without rewriting receipts"
+      - "the preserved P4-T06 transaction passes all required gates"
+      - "one governed combined checkpoint commits"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: false
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0859"
+  source_handoff_path: "research_control/handoffs/handoff-0859.yaml"
+  source_handoff_sha256: "513919a1785d78a190e30b4734737e61f3aede829820337dfbe9b07f0abcbcd7"
+  selected_plan_task_id: "P4-T06"
+  guard_outcome: "physics_bearing_route_selected"
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+allowed_read_paths:
+  - "SOUL.md"
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research-goal/SKILL.md"
+  - ".codex/skills/continue-research-goal/references/goal-file-schema.md"
+  - ".codex/skills/continue-research-continue-goal/SKILL.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".codex/skills/improve-project-system/SKILL.md"
+  - ".agents/roles/research_ops/project-system-director.v0.2.0.md"
+  - ".agents/roles/research_ops/validator-engineer.v0.2.0.md"
+  - ".agents/schemas/**"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  - "research_control/approvals/**"
+  - "research_control/design/**"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0859.yaml"
+  - "research_control/handoffs/handoff-0860.yaml"
+  - "research_control/tasks/RT-20260724-004/**"
+  - "research_control/tasks/RT-20260724-010/**"
+  - "scripts/project_control/**"
+  - "scripts/research_control/**"
+  - "tests/**"
+  - "registries/**"
+  - "ontology/tex/**"
+  - "ontology/pdfs/**"
+
+allowed_write_paths:
+  - "scripts/research_control/validate_research_control.py"
+  - "tests/test_research_control.py"
+  - "tests/test_p4_t06_protected_canonical_recovery.py"
+  - "research_control/tasks/RT-20260724-010/artifacts/protected_canonical_ontology_integration_admission_v1.yaml"
+  - "research_control/tasks/RT-20260725-001/**"
+  - "research_control/handoffs/handoff-0861.yaml"
+  - "research_control/handoffs/handoff-0861.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/pdf/**"
+  - "wiki/tex/**"
+  - "ontology/tex/aether_flow_foundations.tex"
+  - "ontology/tex/aether_flow_dynamics.tex"
+  - "ontology/tex/aether_flow_geometry.tex"
+  - "ontology/pdfs/aether_flow_foundations.pdf"
+  - "ontology/pdfs/aether_flow_dynamics.pdf"
+  - "ontology/pdfs/aether_flow_geometry.pdf"
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "registries/PDF_DERIVATIVE_REGISTRY.csv"
+  - "registries/TEX_SOURCE_REGISTRY.csv"
+  - "research_control/design/epistemic_category_glossary.md"
+  - "research_control/design/frontier_theorem_inventory.md"
+  - "research_control/design/gr_derivation_burden_map.md"
+  - "research_control/tasks/RT-20260721-009/**"
+  - "research_control/tasks/RT-20260724-010/**"
+  - "research_control/handoffs/handoff-0860.yaml"
+  - "research_control/handoffs/handoff-0860.md"
+
+allowed_generated_paths:
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/pdf/**"
+  - "wiki/tex/**"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+
+forbidden_paths:
+  - ".agents/**"
+  - ".codex/skills/**"
+  - "implementations_plans/**"
+  - "legacy_ontology/**"
+  - "manuscripts/**"
+  - "html/**"
+  - "markdown/publication-briefs/**"
+  - "markdown/html-explainer-specs/**"
+  - "github-facing/**"
+  - "research_control/approvals/**"
+  - "research_control/tasks/RT-20260724-004/**"
+  - "research_control/tasks/RT-20260724-010/00_TASK.yaml"
+  - "research_control/tasks/RT-20260724-010/DDR-20260724-010.md"
+  - "research_control/tasks/RT-20260724-010/jobs/**"
+  - "research_control/tasks/RT-20260724-010/roles/**"
+  - "research_control/tasks/RT-20260724-010/artifacts/selected_ontology_regime_*"
+  - "research_control/tasks/RT-20260724-010/artifacts/hybrid_ontology_language_deprecation_v1.yaml"
+  - "research_control/tasks/RT-20260724-010/artifacts/child_*"
+  - "research_control/tasks/RT-20260724-010/artifacts/parent_*"
+
+allowed_source_classes:
+  - "project_control_validator"
+  - "project_control_test"
+  - "protected_authority_identity_receipt"
+  - "historical_receipt_validation_semantics"
+  - "task_control_state"
+  - "control_registry"
+  - "generated_derivative_sync"
+  - "preserved_inherited_transaction_checkpoint"
+
+forbidden_source_classes:
+  - "P4_T06_reexecution"
+  - "P5_T01_execution"
+  - "canonical_ontology_mutation"
+  - "historical_receipt_rewrite"
+  - "approval_reuse"
+  - "gate_chair_reexecution"
+  - "source_law_adoption"
+  - "physics_claim_promotion"
+  - "benchmark_promotion"
+  - "proof_authority"
+  - "publication_or_push_authority"
+  - "completed_derivation_claim"
+
+approved_commands:
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search protected canonical ontology integration admission historical memory preflight --limit 10 --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21 --json"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+  - ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted"
+  - ".venv/bin/python -m unittest -v tests.test_p4_t06_protected_canonical_recovery"
+  - ".venv/bin/python -m unittest discover -s tests"
+  - ".venv/bin/python research_control/tasks/RT-20260725-001/artifacts/validate_p4_t06_protected_canonical_recovery.py --write-report --json"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --json-summary"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260725-001-001"
+  - "git diff --check"
+  - "git status --short --untracked-files=all"
+  - "git diff -- ontology/tex/aether_flow_foundations.tex ontology/tex/aether_flow_dynamics.tex ontology/tex/aether_flow_geometry.tex"
+
+required_validators:
+  - "focused protected canonical-integration admission regressions"
+  - "focused active-versus-historical memory-preflight regressions"
+  - "task-local exact recovery validator"
+  - "full repository unittest discovery"
+  - "project-improvement signal validation"
+  - "documentation-impact validation"
+  - "changed claim-language validation"
+  - "research-control diff validation"
+  - "memory-system bootstrap and validate-only"
+  - "git diff check"
+  - "one governed combined checkpoint"
+
+expected_outputs:
+  - "scripts/research_control/validate_research_control.py"
+  - "tests/test_p4_t06_protected_canonical_recovery.py"
+  - "research_control/tasks/RT-20260724-010/artifacts/protected_canonical_ontology_integration_admission_v1.yaml"
+  - "research_control/tasks/RT-20260725-001/artifacts/validate_p4_t06_protected_canonical_recovery.py"
+  - "research_control/tasks/RT-20260725-001/artifacts/p4_t06_protected_canonical_recovery_receipt.json"
+  - "research_control/tasks/RT-20260725-001/00_TASK.yaml"
+  - "research_control/tasks/RT-20260725-001/DDR-20260725-001.md"
+  - "research_control/tasks/RT-20260725-001/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260725-001/jobs/completions/AJC-AJ-RT-20260725-001-001.yaml"
+  - "research_control/tasks/RT-20260725-001/roles/validator-engineer@0.2.0--RT-20260725-001.yaml"
+  - "research_control/handoffs/handoff-0861.yaml"
+  - "research_control/handoffs/handoff-0861.md"
+
+preservation_contract:
+  protected_manifest_sha256: "1fd6ff84ec121469b301a8ef2b0e3343bdbe24510d7660641441489b3f98a0e1"
+  protected_path_count: 85
+  inherited_ontology_paths_may_be_checkpointed: true
+  inherited_ontology_paths_may_be_modified: false
+  p4_t06_may_be_reexecuted: false
+  historical_receipts_may_be_rewritten: false
+  p5_t01_may_be_executed: false
+  approval_may_be_reused: false
+
+claim_boundary:
+  allowed:
+    - "one exact-hash P4-T06 protected canonical-integration admission receipt and deterministic validator branch"
+    - "exactly four additions to the existing mutable memory-preflight canonical source object set"
+    - "focused fail-closed regression tests"
+    - "task-local recovery validation and compact receipt"
+    - "normal task control registry and generated-derivative synchronization"
+    - "one governed combined checkpoint including the byte-preserved inherited transaction"
+  blocked:
+    - "any change to inherited P4-T06 ontology TeX PDF or science artifact bytes"
+    - "any generalized ontology-write exception"
+    - "any historical receipt rewrite"
+    - "approval reuse or Gate Chair reexecution"
+    - "P4-T06 reexecution or P5-T01 execution"
+    - "scientific status Distance-to-GR proof benchmark promotion publication push or completed-derivation authority"
+  completion_requires:
+    - "the exact protected six-path chain passes"
+    - "negative authority and path variants fail"
+    - "general direct ontology write prohibition remains"
+    - "active mutable source hash staleness fails"
+    - "historical mutable source hash staleness passes without receipt edits"
+    - "all required repository gates pass"
+    - "one governed checkpoint commits"
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1011
+    relationship_row_count: 5000
+    semantic_row_count: 1011
+    vault_row_count: 1011
+    local_cache_only_warning_count: 14
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"protected canonical ontology integration admission historical memory preflight\" --limit 10 --json"
+      query_type: "search"
+      query_text: "protected canonical ontology integration admission historical memory preflight"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+        - "MD-RESEARCH-CONTROL-TASK-INDEX"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+    - object_id: "MD-RESEARCH-CONTROL-TASK-INDEX"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/TASK_INDEX.md"
+      source_hash: "8ce3dc1606fb2fab493f1e3926c4b64abd4ad9b7199b87029ea7330623a1e3f1"
+  authority_note: "The canonical plan is navigation context only. The generated task index, Obsidian, wiki, semantic, relationship, SQLite, and .local surfaces are retrieval only and not authority; tracked task, registry, blocker, handoff, validator, authorization, and relay records govern this repair."
