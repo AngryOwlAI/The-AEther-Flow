@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260725-002`
-- Latest handoff: `handoff-0862`
-- Current status: `p4_t06_dependent_repository_contract_recovery_pass_ready_for_checkpoint`
+- Active task: `RT-20260725-006`
+- Latest handoff: `handoff-0866`
+- Current status: `p5_t01_rt005_allowlist_checkpoint_recovery_pass_ready_for_checkpoint`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260725-002`
-- Latest research handoff: `handoff-0862`
-- Latest research next action: After the governed combined checkpoint commits, run exactly one bounded P5-T01 ontology-formalizer AgentJob to define the compact source-theory tuple and object model while preserving open dynamics and reconstruction slots and all no-promotion boundaries.
+- Latest research task: `RT-20260725-006`
+- Latest research handoff: `handoff-0866`
+- Latest research next action: Run the one governed cumulative checkpoint for AJ-RT-20260725-006-001. Only after it commits may one fresh bounded P5-T02 ontology-law packet select the semantic kind of Phi_src and prove its basic source-side laws without target import.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p5_t01_compact_source_theory_tuple_and_object_model`
+- Route ID: `v21_p5_t02_fix_phi_src_semantics`
 - Role family: `ontology-formalizer@0.2.0`
 - Target milestone: `source_ontology`
-- Milestone burden: Replace dispersed source records with one coherent theory target.
+- Milestone burden: Remove ambiguity in the central Æflow kinematic primitive.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `2af304181ac14cf1d1516a6f8840a435688e5818dad9ada48cf3fcd5fd6a98d3`
-- JSON SHA-256: `a8691cdcc5e2fd864efd13b14bf6d93ac5d57e24b4688f8efcdf541afa6b3637`
+- YAML SHA-256: `7e07afb405ebb13db0b8356b62e0f26d1135463f1a5dc4f10484099d62d9e328`
+- JSON SHA-256: `4e453f2c1039dba76380342e49aa70a2fb19410681659e384621e20804f5e542`
 
 ## Authority Warning
 

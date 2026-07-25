@@ -1,0 +1,26 @@
+schema_id: "parent_child_output_v1"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+task_id: "RT-20260725-003"
+findings:
+  - finding_id: "MATH-001"
+    status: "accepted"
+    summary: "Use a tagged Slot(X) sum type so open Phi, dynamics, and reconstruction components are mathematically present but carry no hidden values."
+  - finding_id: "MATH-002"
+    status: "accepted"
+    summary: "Represent source isomorphisms as a groupoid and declared redundancies as a wide subgroupoid; gauge equivalence is then an internal orbit relation."
+  - finding_id: "MATH-003"
+    status: "accepted"
+    summary: "Require observables to be invariant only under declared Red_src arrows, avoiding an unsupported physical-gauge claim."
+  - finding_id: "MATH-004"
+    status: "accepted"
+    summary: "The torus amplitude family supplies a nontrivial typed witness with distinct states, a separating observable, and an admissible variation."
+  - finding_id: "MATH-005"
+    status: "accepted"
+    summary: "Groupoid, invariance, target-import, and open-slot evaluation defects each have a deterministic fail-closed result."
+unresolved_mathematical_obligations:
+  - "P5-T02 must select the Phi_src semantic kind and prove its laws."
+  - "Later packets must construct dynamics, robustness, and reconstruction rather than treating open slots as values."
+claim_boundary_preserved: true
+physics_promotion_authorized: false

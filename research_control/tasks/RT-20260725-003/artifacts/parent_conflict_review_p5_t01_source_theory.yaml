@@ -1,0 +1,26 @@
+schema_id: "parent_child_conflict_review_v1"
+task_id: "RT-20260725-003"
+status: "resolved"
+resolution_rounds: 1
+child_outputs:
+  - "research_control/tasks/RT-20260725-003/artifacts/child_phys_math_p5_t01_source_theory.yaml"
+  - "research_control/tasks/RT-20260725-003/artifacts/child_phys_phil_p5_t01_source_theory.yaml"
+resolved_conflicts:
+  - conflict_id: "CONFLICT-001"
+    type: "scope"
+    severity: "nonblocking"
+    summary: "Calling Red_src gauge could imply a physical interpretation."
+    resolution: "Define Red_src as declared source redundancy and reserve physical-gauge language for a later authorized interpretation."
+  - conflict_id: "CONFLICT-002"
+    type: "formalism"
+    severity: "nonblocking"
+    summary: "A reconstruction codomain could smuggle target objects."
+    resolution: "Use an abstract codomain type with a provenance certificate and leave the entire reconstruction slot open."
+  - conflict_id: "CONFLICT-003"
+    type: "epistemic_status"
+    severity: "nonblocking"
+    summary: "A concrete witness could be overread as ontology adoption."
+    resolution: "Label both witnesses proposal-only and restrict their consequence to non-emptiness and type consistency."
+unresolved_conflicts: []
+claim_boundary_preserved: true
+physics_promotion_authorized: false

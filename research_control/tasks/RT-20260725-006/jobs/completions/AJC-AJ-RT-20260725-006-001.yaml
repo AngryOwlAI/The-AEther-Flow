@@ -1,0 +1,312 @@
+validation_status: "PASS"
+final_repository_validation_status: "PASS_PRECHECKPOINT_READY"
+job_id: "AJ-RT-20260725-006-001"
+completion_id: "AJC-AJ-RT-20260725-006-001"
+task_id: "RT-20260725-006"
+task_type: "project_system_p5_t01_rt005_allowlist_and_checkpoint_recovery"
+decision_id: "DDR-20260725-006"
+role_id: "process-integrity-auditor"
+source_role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260725-006"
+status: "completed"
+created_at: "2026-07-25T16:05:50Z"
+started_at: "2026-07-25T16:05:50Z"
+completed_at: "2026-07-25T16:17:46Z"
+objective: "Preserve AJ-RT-20260725-005-001 byte-for-byte; align its execution-role overlay and ROLE_EXECUTION_REGISTRY row to the AgentJob's exact ordered 37-item write list; prove protected-byte and four-way parity; then invoke one fresh governed cumulative checkpoint before P5-T02."
+completion_summary: "The immutable RT-005 AgentJob remains byte-identical. Its execution-role overlay, AGENT_JOB_REGISTRY row, and ROLE_EXECUTION_REGISTRY row now equal the exact ordered 37-item list. The task-local receipt preserves the RT-005 completion, handoff, P5-T01 science, prior recovery, and Distance-to-GR ledger hashes. P5-T02 remains unexecuted pending the one governed cumulative checkpoint."
+objective_result: "p5_t01_rt005_allowlist_checkpoint_recovery_pass_ready_for_checkpoint"
+
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P5"
+  plan_task_id: "P5-T01"
+  recovery_for_plan_task_id: "P5-T01"
+  implementation_status: "recovery_implemented_checkpoint_ready"
+  protected_p5_t01_status: "complete_preserved"
+  completed_v21_tasks_added: []
+  next_dependency_ready_work_item: "P5-T02_after_checkpoint"
+  next_work_item_executed: false
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 111
+  passes_consumed: 101
+  route_work_item_id: "P5-T01"
+  route_worker_skill: "improve-project-system"
+  route_sha256: "ebc7136e9003c50ac0317e7f01ba1cb97cffc82fde69b9f1f36505119b42df09"
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:111"
+  handoff_token: "4ca24599d24c35222844aff8520bbe300622736036f76b41"
+  relay_claim_token: "bb293d32853c2dd77306a8e1bd5464a0afc1b82a96dd7e46"
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+
+transaction_status: "ready_for_governed_checkpoint"
+result_disposition: "repair_implemented_and_validated"
+work_item_status: "completed"
+plan_task_id: "P5-T01"
+recovery_for_plan_task_id: "P5-T01"
+next_plan_task_id: "P5-T02"
+checkpoint_commit: "none_checkpoint_pending"
+checkpoint_invocation_count: 0
+checkpoint_staged: false
+legacy_validation_used: false
+project_system_change_only: true
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS_PRECHECKPOINT_READY"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  observed_durable_outputs:
+    physics: []
+    project_system:
+      - "exact RT-005 execution-role allowlist order"
+      - "exact RT-005 ROLE_EXECUTION_REGISTRY allowlist order"
+      - "task-local four-way parity and protected-byte receipt"
+      - "one governed cumulative checkpoint"
+  accepted_criteria:
+    physics: []
+    project_system:
+      - "AJ-RT-20260725-005-001 remains byte-identical"
+      - "all four allowlist representations equal the exact ordered 37-item AgentJob list"
+      - "P5-T01 science, prior recovery, handoff, completion, and ledger hashes remain exact"
+      - "all required working-tree gates pass"
+      - "one governed cumulative checkpoint commits"
+      - "P5-T02 remains unexecuted until checkpoint success"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+physics_payload_admission_result:
+  status: "admitted"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+
+ordinary_route_guard_admission_result:
+  status: "PASS"
+  source_handoff_id: "handoff-0862"
+  selected_plan_task_id: "P5-T01"
+  guard_outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  system_success_counts_as_physics: false
+  system_success_counts_as_distance_to_gr: false
+  scientific_status_changed: false
+  physics_promotion_authorized: false
+
+recovery_result:
+  status: "PASS"
+  strategy_id: "repair_p5_t01_rt005_allowlist_order_and_interrupted_checkpoint_v1"
+  source_job_path: "research_control/tasks/RT-20260725-005/jobs/AJ-RT-20260725-005-001.yaml"
+  source_job_sha256: "8b505634e9b7cbff6b047c4b153159a8dbea4c8aac17cb523f6257ffd4f6a1c0"
+  repaired_role_path: "research_control/tasks/RT-20260725-005/roles/validator-engineer@0.2.0--RT-20260725-005.yaml"
+  repaired_role_sha256: "77530def5100f868f80c35fd8547ce4830388aff6b1c27e282eb306c73446353"
+  recovery_validator_path: "research_control/tasks/RT-20260725-006/artifacts/validate_rt005_allowlist_checkpoint_recovery.py"
+  recovery_validator_sha256: "3322d771e98ef38b6b534bc901775278b110a26a64754d44af5480551243a154"
+  recovery_receipt_path: "research_control/tasks/RT-20260725-006/artifacts/rt005_allowlist_checkpoint_recovery_receipt.json"
+  recovery_receipt_sha256: "678eed3df4e1f2fbf9c88dbde0b6b9dd495f51ca11bf1819332a23940425f692"
+  representation_count: 4
+  allowed_write_path_count: 37
+  predecessor_protected_hash_mismatch_count: 0
+  source_job_byte_preserved: true
+  p5_t01_science_payload_modified: false
+  p5_t02_executed: false
+
+artifacts:
+  - "research_control/tasks/RT-20260725-005/roles/validator-engineer@0.2.0--RT-20260725-005.yaml"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "research_control/tasks/RT-20260725-006/artifacts/validate_rt005_allowlist_checkpoint_recovery.py"
+  - "research_control/tasks/RT-20260725-006/artifacts/rt005_allowlist_checkpoint_recovery_receipt.json"
+
+output_paths:
+  - "research_control/tasks/RT-20260725-005/roles/validator-engineer@0.2.0--RT-20260725-005.yaml"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "research_control/tasks/RT-20260725-006/**"
+  - "research_control/handoffs/handoff-0866.yaml"
+  - "research_control/handoffs/handoff-0866.md"
+  - "research_control/program_state.yaml"
+
+command_results:
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/project_control/resolve_next_project_improvement.py --json | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json | exit_code=0 | status=pass"
+  - ".venv/bin/python research_control/tasks/RT-20260725-006/artifacts/validate_rt005_allowlist_checkpoint_recovery.py --write-report --json | exit_code=0 | status=pass"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py | exit_code=0 | status=pass"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | exit_code=0 | status=pass"
+  - "git diff --check | exit_code=0 | status=pass"
+
+validation_summary:
+  status: "PASS_PRECHECKPOINT_READY"
+  task_local_error_count: 0
+  allowed_write_path_count: 37
+  ordered_representation_count: 4
+  protected_hash_mismatch_count: 0
+  checkpoint_invocation_count: 0
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 111 validated, atomically claimed, and consumed the exact immutable recovery route once."
+      - "The exact 80-path manifest, repository identity, lease, route, and predecessor state matched before writes."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The tracked recovery receipt proves exact ordered identity across four representations and preserves all named predecessor hashes."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Task-local, documentation-impact, signal, integrated control, diff allowlist, memory, and whitespace gates pass."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "The one governed cumulative checkpoint is the next authorized action; P5-T02 remains unexecuted until it commits."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Tracked frontier, task-index, graph, registry, and wiki derivatives are fresh."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory synchronization and validate-only both pass."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Integrated research-control validation passes without hard claim-language errors."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not authorized; ordinary project-system recovery validation only"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  publication_authorized: false
+  proof_authority: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  canonical_ontology_edit_authorized: false
+  ontology_selection_authorized: false
+  physical_interpretation_establishment_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+distance_to_gr_delta:
+  changed: false
+  effect: "none_project_system_recovery"
+  burden_id: "source_ontology_primitives"
+  milestone: "source_ontology"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "The inherited P5-T01 scoped source-only delta is byte-preserved; this recovery contributes no physics movement."
+
+physics_progress_status:
+  status: "none_project_system_only"
+  new_mathematical_payload: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+
+selected_next_route:
+  route_id: "v21_p5_t02_fix_phi_src_semantics"
+  route_label: "ontology-law-research-packet"
+  role_family: "ontology-formalizer@0.2.0"
+  worker_skill: "continue-research"
+  task_type: "v21_p5_t02_fix_phi_src_semantics_and_ordered_source_evolution"
+  plan_task_id: "P5-T02"
+  target_derivation_milestone: "source_ontology"
+  milestone_burden: "Remove ambiguity in the central Æflow kinematic primitive."
+  strategy_id: "select_phi_src_semantic_kind_and_prove_basic_laws_v1"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  blocked_by: "governed cumulative P5-T01 checkpoint"
+  physics_promotion_authorized: false
+  executed: false
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required_no_nonblank_signals"
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1012
+    relationship_row_count: 5004
+    semantic_row_count: 1012
+    vault_row_count: 1012
+    local_cache_only_warning_count: 0
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"write allowlist order mismatch interrupted checkpoint\" --limit 10 --json"
+      query_type: "search"
+      query_text: "write allowlist order mismatch interrupted checkpoint"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-DESIGN-VALIDATION-OBLIGATION-RESOLUTION-POLICY-V1 --json"
+      query_type: "lookup"
+      query_text: "MD-RESEARCH-CONTROL-DESIGN-VALIDATION-OBLIGATION-RESOLUTION-POLICY-V1"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-DESIGN-VALIDATION-OBLIGATION-RESOLUTION-POLICY-V1"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+      source_hash: "a28c02150d17f3c39cf919fa305d585cbe1ea7a022dd81320fa2cb72c8126ebc"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-VALIDATION-OBLIGATION-RESOLUTION-POLICY-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/validation_obligation_resolution_policy_v1.md"
+      source_hash: "baea9d8b4b67c4c8bceb73da34dfbc562fe285c087992198295a177058c4cfc2"
+  authority_note: "Generated Obsidian, wiki, semantic, relationship, SQLite, and .local surfaces are retrieval-only navigation layers and not authority."

@@ -1,0 +1,352 @@
+validation_status: "PASS"
+final_repository_validation_status: "PASS_PRECHECKPOINT_STABLE_FINAL_STATE"
+job_id: "AJ-RT-20260725-005-001"
+completion_id: "AJC-AJ-RT-20260725-005-001"
+task_id: "RT-20260725-005"
+task_type: "project_system_p5_t01_staged_control_contract_recovery"
+decision_id: "DDR-20260725-005"
+role_id: "validator-engineer"
+source_role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260725-005"
+status: "completed"
+created_at: "2026-07-25T08:48:42Z"
+started_at: "2026-07-25T08:48:42Z"
+completed_at: "2026-07-25T09:12:14Z"
+objective: "Repair exactly the sealed P5-T01 staged research-control contract and generated-frontier findings, prove all scientific and prior recovery payload bytes remain exact, then revalidate and checkpoint the cumulative transaction once."
+completion_summary: "Generation 110 restores the source-determined RT-004 decision, memory-preflight, ordinary-route, authorization-layer, dual-budget, and role-registry contracts and refreshes the stale tracked frontier surfaces. The four protected P5-T01 source-theory artifacts, prior P5-T01 recovery artifacts, historical P10 audit outputs, and Distance-to-GR ledger retain their entry hashes. Working-tree validation is operational evidence only; one cumulative governed checkpoint remains the staged acceptance authority."
+objective_result: "p5_t01_staged_control_contract_recovery_pass_ready_for_governed_checkpoint"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P5"
+  plan_task_id: "P5-T01"
+  recovery_for_plan_task_id: "P5-T01"
+  implementation_status: "staged_control_contract_recovery_implemented"
+  protected_p5_t01_payload_status: "completed_and_byte_preserved"
+  completed_v21_tasks_added: 0
+  next_dependency_ready_work_item: "P5-T02"
+  next_work_item_executed: false
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 110
+  passes_consumed: 100
+  route_work_item_id: "P5-T01"
+  route_worker_skill: "improve-project-system"
+  route_sha256: "1e6d5a4e3d22431e581805c741077486ac4d497cad5b290840af3fc6f419f62b"
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:110"
+  handoff_token: "5fa2f036375335783efeaa7119a21c5dfd259684f72d8b32"
+  relay_claim_token: "c81b443456650ab439d0d9b39375fdc7757e7f478905ba59"
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+transaction_status: "completed_ready_for_governed_checkpoint"
+result_disposition: "implemented_and_validated_precheckpoint"
+work_item_status: "completed"
+plan_task_id: "P5-T01"
+recovery_for_plan_task_id: "P5-T01"
+next_plan_task_id: "P5-T02"
+checkpoint_commit: "pending_single_governed_invocation"
+checkpoint_invocation_count: 0
+checkpoint_staged: false
+legacy_validation_used: false
+project_system_change_only: true
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  observed_durable_outputs:
+    physics: []
+    project_system:
+      - "one tracked P5-T01 staged control-contract recovery receipt"
+      - "source-determined RT-004 contract parity"
+      - "fresh tracked frontier derivatives"
+      - "cumulative validation and checkpoint receipt"
+  accepted_criteria:
+    physics: []
+    project_system:
+      - "all 40 sealed research-control errors are eliminated"
+      - "every P5-T01 science and prior recovery payload retains its entry hash"
+      - "working-tree precheckpoint validation passes"
+      - "all required repository gates pass"
+      - "one governed cumulative checkpoint commits"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+physics_payload_admission_result:
+  status: "PASS_NOT_APPLICABLE_PROJECT_SYSTEM"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+ordinary_route_guard_admission_result:
+  status: "PASS"
+  source_handoff_id: "handoff-0862"
+  selected_plan_task_id: "P5-T01"
+  guard_outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  system_success_counts_as_physics: false
+  system_success_counts_as_distance_to_gr: false
+  scientific_status_changed: false
+  physics_promotion_authorized: false
+recovery_result:
+  status: "PASS"
+  strategy_id: "repair_p5_t01_checkpoint_staged_control_contract_drift_v1"
+  source_task_id: "RT-20260725-004"
+  source_handoff_id: "handoff-0864"
+  source_checkpoint_run_id: "RUN-CHECKPOINT-427e14b8d48940a4"
+  source_checkpoint_receipt_sha256: "990241f3d0eca70ab35b45488afb1ee0fed2c84b978482f5dc27f6b143836af4"
+  protected_dirty_fingerprint: "f4a81119a8c7fa683142658b6f32b6c140d80728c402f368633fed182fab1573"
+  finding_count: 40
+  repaired_finding_groups:
+    - "DDR role-fit heading"
+    - "memory-preflight evidence shape and retrieval-only authority language"
+    - "ordinary-route guard outcome parity"
+    - "completion protected-scope and dual-budget parity"
+    - "execution-role registry parity"
+    - "current-frontier and compact-frontier freshness"
+  receipt_path: "research_control/tasks/RT-20260725-005/artifacts/p5_t01_staged_control_contract_recovery_receipt.json"
+  receipt_sha256: "1d3a3541b0ecbf20d6ef188c2756d2a360956f10a6e2f30480659b77b6612a99"
+  sealed_error_count_before: 40
+  field_level_error_count_after: 0
+  sealed_warning_count: 1740
+  repaired_ddr_sha256: "5273b311ca90bd56e3885fc4f5938f335f85a606e3c8132b1d7ffb4e9bc814be"
+  repaired_job_sha256: "f591657ac97dbd5dc472cd7a13ed083b846d3d0cd779f1d87f0d83a165e0b720"
+  repaired_completion_sha256: "7e671b29d93cfe89a4ce4118dde3b8c40fe0c3bb29c6e797f504439286b49f2a"
+  repaired_role_sha256: "903bea84216290a08af376dea2d45aa8f6241194bb9008fd8abeb5431586fd8b"
+  p5_t01_object_sha256: "2520f82e54edcb2668446579ceed7a7dfc7a8abf995572aa9889a3d9a3a4467c"
+  p5_t01_spec_sha256: "a381549ac6eb37346c1469f1157bdfa8417fbc010a19c087cf099b1368ab1b9c"
+  p5_t01_type_dependency_sha256: "559d6fd77f5f4fc93e97e3429cbc87a09acf91b39099f56ef7ba00fbf3c3dd2f"
+  p5_t01_validation_sha256: "838a0fb827e2912d4452bd19556b3c96a7ea5a6a814e23defa3401ff649b9432"
+  prior_recovery_validator_sha256: "7c92b72282bbb7a6d5dd1ca823c6f043b145b5105117149034b79d9c7a84eaba"
+  prior_recovery_receipt_sha256: "45f6e7687b08c95ef5c74cacc845a6ecf1533bf55225179a08db459caf7949bc"
+  historical_p10_validation_sha256: "cdcd907f4ad237118eab65f06f364263da08285456514605a0308bc203f7a6e6"
+  historical_p10_compact_receipt_sha256: "db3410f2c166562a4cc8636011eeda15b7cb8f051c3917fea21b370e4da2ddb6"
+  p5_t01_completion_sha256: "e047845dc6ff48aa8e44e1667aba94961554190293393eb9346d915f29f9eb9d"
+  p5_t01_handoff_sha256: "7b15de2879b87d8c418bdc074f828e463e8a380ea2f93970960df9eab2e2d2cb"
+  distance_to_gr_ledger_sha256: "7bb5c01a9f893c192cc98408f22176ec8d1e8162c6b645b483c6053200ed136d"
+  p5_t01_science_payload_modified_by_recovery: false
+  prior_p5_t01_recovery_semantics_changed: false
+  historical_p10_audit_rewritten: false
+  distance_to_gr_ledger_modified_by_recovery: false
+  p5_t01_reexecuted: false
+  p5_t02_executed: false
+artifacts:
+  - path: "research_control/tasks/RT-20260725-004/DDR-20260725-004.md"
+    sha256: "5273b311ca90bd56e3885fc4f5938f335f85a606e3c8132b1d7ffb4e9bc814be"
+  - path: "research_control/tasks/RT-20260725-004/jobs/AJ-RT-20260725-004-001.yaml"
+    sha256: "f591657ac97dbd5dc472cd7a13ed083b846d3d0cd779f1d87f0d83a165e0b720"
+  - path: "research_control/tasks/RT-20260725-004/jobs/completions/AJC-AJ-RT-20260725-004-001.yaml"
+    sha256: "7e671b29d93cfe89a4ce4118dde3b8c40fe0c3bb29c6e797f504439286b49f2a"
+  - path: "research_control/tasks/RT-20260725-004/roles/validator-engineer@0.2.0--RT-20260725-004.yaml"
+    sha256: "903bea84216290a08af376dea2d45aa8f6241194bb9008fd8abeb5431586fd8b"
+  - path: "research_control/tasks/RT-20260725-005/artifacts/p5_t01_staged_control_contract_recovery_receipt.json"
+    sha256: "1d3a3541b0ecbf20d6ef188c2756d2a360956f10a6e2f30480659b77b6612a99"
+output_paths:
+  - "research_control/tasks/RT-20260725-004/DDR-20260725-004.md"
+  - "research_control/tasks/RT-20260725-004/jobs/AJ-RT-20260725-004-001.yaml"
+  - "research_control/tasks/RT-20260725-004/jobs/completions/AJC-AJ-RT-20260725-004-001.yaml"
+  - "research_control/tasks/RT-20260725-004/roles/validator-engineer@0.2.0--RT-20260725-004.yaml"
+  - "research_control/tasks/RT-20260725-005/artifacts/p5_t01_staged_control_contract_recovery_receipt.json"
+  - "research_control/tasks/RT-20260725-005/jobs/completions/AJC-AJ-RT-20260725-005-001.yaml"
+  - "research_control/handoffs/handoff-0865.yaml"
+  - "research_control/handoffs/handoff-0865.md"
+command_results:
+  - command: ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+    status: "PASS"
+    summary: "project-system and documentation impact required with no blocked paths"
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+    status: "PASS"
+    summary: "one memory gate passed with zero findings"
+  - command: ".venv/bin/python scripts/project_control/validate_documentation_impact.py"
+    status: "PASS"
+    summary: "documentation-impact gate passed with zero findings"
+  - command: ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json"
+    status: "PASS"
+    summary: "signal registry and emitted-signal parity passed with zero open handoffs"
+  - command: ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff"
+    status: "PASS"
+    summary: "all sealed errors are eliminated and the active-job diff allowlist passes"
+validation_summary:
+  status: "PASS_PRECHECKPOINT_STABLE_FINAL_STATE"
+  passing_gates:
+    - "tracked recovery receipt hash checks"
+    - "renderer freshness checks"
+    - "memory synchronization"
+    - "documentation-impact validation"
+    - "project-improvement signal parity"
+    - "integrated research-control and diff allowlist"
+    - "Git whitespace check"
+  pending_gates:
+    - "governed checkpoint"
+  blocking_gates: []
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 110 validated, claimed, and consumed the exact immutable route once."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Every source-determined RT-004 field and protected P5-T01 payload hash is recorded in the tracked recovery receipt."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Renderer, memory, documentation, signal, integrated control, diff allowlist, and whitespace gates pass."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "One governed checkpoint remains."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Tracked frontier, task-index, graph, registry, and wiki derivatives are fresh."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Memory bootstrap passes one gate with zero findings."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Integrated research-control validation passes without errors."
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not authorized; ordinary project-system recovery validation only"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  publication_authorized: false
+  proof_authority: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  canonical_ontology_edit_authorized: false
+  ontology_selection_authorized: false
+  physical_interpretation_establishment_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+distance_to_gr_delta:
+  changed: false
+  effect: "none_project_system_recovery"
+  burden_id: "source_ontology_primitives"
+  milestone: "source_ontology"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "The inherited P5-T01 scoped source-only delta is byte-preserved; this recovery contributes no physics movement."
+physics_progress_status:
+  status: "none_project_system_only"
+  new_mathematical_payload: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+selected_next_route:
+  route_id: "v21_p5_t02_fix_phi_src_semantics"
+  route_label: "ontology-law-research-packet"
+  role_family: "ontology-formalizer@0.2.0"
+  worker_skill: "continue-research"
+  task_type: "v21_p5_t02_fix_phi_src_semantics_and_ordered_source_evolution"
+  plan_task_id: "P5-T02"
+  target_derivation_milestone: "source_ontology"
+  milestone_burden: "Remove ambiguity in the central Æflow kinematic primitive."
+  strategy_id: "select_phi_src_semantic_kind_and_prove_basic_laws_v1"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  blocked_by: "governed cumulative P5-T01 checkpoint"
+  physics_promotion_authorized: false
+  executed: false
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required_no_nonblank_signals"
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1012
+    relationship_row_count: 5004
+    semantic_row_count: 1012
+    vault_row_count: 1012
+    local_cache_only_warning_count: 0
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"staged control contract\" --limit 10 --json"
+      query_type: "search"
+      query_text: "staged control contract"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-DESIGN-VALIDATION-CACHE-CONTRACT-V1"
+        - "MD-RESEARCH-CONTROL-DESIGN-VALIDATION-PROFILE-POLICY-V1"
+        - "MD-RESEARCH-CONTROL-DESIGN-VALIDATION-OBLIGATION-RESOLUTION-POLICY-V1"
+  canonical_inspections:
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-VALIDATION-OBLIGATION-RESOLUTION-POLICY-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/validation_obligation_resolution_policy_v1.md"
+      source_hash: "baea9d8b4b67c4c8bceb73da34dfbc562fe285c087992198295a177058c4cfc2"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-VALIDATION-CACHE-CONTRACT-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/validation_cache_contract_v1.md"
+      source_hash: "ef92aa55602b1e8cd9e2aaa73a08d3272fc58a311ac69fe1ee65c6b773e21aee"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-VALIDATION-PROFILE-POLICY-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/validation_profile_policy_v1.md"
+      source_hash: "3e33c486484a8242563cc47d32a10c67f565d0324fc0f4fc171144a0d03e41fd"
+    - object_id: "MD-SKILL-IMPROVE-PROJECT-SYSTEM"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: ".codex/skills/improve-project-system/SKILL.md"
+      source_hash: "09396af30259f10892734eb12d00d89c1a68495f7ebfb01a67eb7f6af936e8f2"
+    - object_id: "MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-VALIDATOR-ENGINEER-V0-2-0-MD"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: ".agents/roles/research_ops/validator-engineer.v0.2.0.md"
+      source_hash: "424e68bb9b741f031479cd1f507209a90ccdda7c2e82a58652879e4c2c2beccd"
+    - object_id: "MD-RESEARCH-CONTROL-TASKS-RT-20260722-015-ORDINARY-ROUTE-GUARD-POLICY-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260722-015/artifacts/ordinary_route_guard_policy_v1.md"
+      source_hash: "7e74e55d2f836e653d3aa8cfb9954b889bea4702146933415a2992300b1f8f4f"
+  authority_note: "Generated Obsidian wiki, semantic SQLite, and .local surfaces are retrieval-only navigation layers and not authority."

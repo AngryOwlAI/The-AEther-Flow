@@ -1,0 +1,84 @@
+validation_status: "PASS"
+task_id: "RT-20260725-004"
+task_type: "project_system_p5_t01_dependent_repository_test_contract_recovery"
+title: "Repair the P5-T01 dependent repository-test contracts"
+task_taxonomy:
+  schema_id: "v21_task_taxonomy_v1"
+  work_kind: "benchmark_or_recovery"
+  milestone: "source_ontology"
+  candidate_family: "p5_t01_dependent_repository_test_contract_recovery"
+  result_kind: "implemented_and_validated_or_precisely_blocked"
+  authority: "project_control"
+  scope: "project_system"
+status: "completed"
+created_at: "2026-07-25T07:55:00Z"
+updated_at: "2026-07-25T08:00:02Z"
+closed_at: "2026-07-25T08:00:02Z"
+parent_task_id: "RT-20260725-003"
+parent_handoff_id: "handoff-0863"
+supersedes_active_routing_task_id: "RT-20260725-003"
+current_decision_id: "DDR-20260725-004"
+current_job_id: "AJ-RT-20260725-004-001"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260725-004"
+requires_human_gate: false
+human_authorization_note: "Generation 109 of the user-authorized recursive relay immutably routes exactly one improve-project-system frame to the two recorded P5-T01 dependent repository-test failures. It does not reexecute P5-T01 or execute P5-T02."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P5"
+  plan_task_id: "P5-T01"
+  recovery_for_plan_task_id: "P5-T01"
+  next_plan_task_id: "P5-T02"
+  next_plan_task_execution_authorized: false
+  recommendation_ids:
+    - "V21-R12"
+    - "V21-R13"
+    - "V21-R14"
+    - "V21-R15"
+    - "V21-R16"
+objective: "Repair only the invalid P5-T01 candidate-family slug and the P10-T08 same-task finalization compatibility branch exposed by full repository discovery, preserve the P5-T01 science payload and historical P10 audit result, rerun every required gate, and invoke one governed cumulative checkpoint only on a full pass."
+target_derivation_milestone: "source_ontology"
+milestone_burden: "Repair dependent project-system contracts without changing the completed P5-T01 scientific payload or its scoped source-only Distance-to-GR result."
+route_label: "repair_p5_t01_dependent_repository_test_contract_drift_v1"
+project_system_change_only: true
+dual_budget_category: "system_bearing"
+primary_budget: "project_system"
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+claim_boundary_id: "CB-V21-P5-T01-DEPENDENT-REPOSITORY-TEST-CONTRACT-RECOVERY-001"
+claim_boundary:
+  allowed_scope: "Normalize one P5-T01 task-taxonomy slug, recognize one exact same-task program-state finalization transition while preserving the historical P10 audit payload, add focused fail-closed regression and task-local evidence, synchronize normal control derivatives, and invoke one cumulative governed checkpoint."
+  source_handoff_id: "handoff-0863"
+  source_handoff_sha256: "7b15de2879b87d8c418bdc074f828e463e8a380ea2f93970960df9eab2e2d2cb"
+  immutable_route_sha256: "36027e15e16ba42e5c41d3d7b6cf7cb34405306f3694664d41e9de9dfd82371d"
+  source_checkpoint_receipt_sha256: "951fbdcb04c7dd7ceb124cd9a8571dd7571a31e0cb3fc5ab68b59caeb0741e1b"
+  protected_dirty_fingerprint: "1b84e8539a7b62c38193f3e4eb7700b02d7f2b966beab53b2b87bfab588a106f"
+  protected_path_count: 59
+  p5_t01_reexecuted: false
+  p5_t01_science_payload_mutated_by_recovery: false
+  historical_p10_audit_rewritten: false
+  p5_t02_executed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+documentation_impact_id: "DI-RT-20260725-004-001"
+completion_id: "AJC-AJ-RT-20260725-004-001"
+output_artifacts:
+  - "research_control/tasks/RT-20260725-003/00_TASK.yaml"
+  - "research_control/tasks/RT-20260722-003/artifacts/validate_v21_p10_migration_readiness.py"
+  - "tests/test_v21_p10_migration_readiness.py"
+  - "research_control/tasks/RT-20260725-004/artifacts/validate_p5_t01_dependent_contract_recovery.py"
+  - "research_control/tasks/RT-20260725-004/artifacts/p5_t01_dependent_contract_recovery_receipt.json"
+  - "research_control/tasks/RT-20260725-004/jobs/completions/AJC-AJ-RT-20260725-004-001.yaml"
+  - "research_control/handoffs/handoff-0864.yaml"
+  - "research_control/handoffs/handoff-0864.md"
+closure_status: "p5_t01_dependent_repository_test_contract_recovery_pass_ready_for_checkpoint"
+summary: "Both P5-T01 dependent repository-test findings are repaired. The candidate-family value now uses the existing lowercase-slug grammar, and P10-T08 recognizes the exact same-task finalization transition while preserving its historical audit outputs and freeze disposition byte-for-byte. The P5-T01 science payload remains unchanged and one cumulative checkpoint remains."
+next_recommended_action: "After the governed cumulative checkpoint commits, run one separately claimed P5-T02 ontology-law research packet. Do not execute P5-T02 before checkpoint or treat this project-system repair as scientific progress."
+project_improvement_signals: []
+notes: "This project-system recovery creates no new ontology, source law, scientific evidence, Distance-to-GR movement, benchmark promotion, publication, push, proof, or completed-derivation authority."

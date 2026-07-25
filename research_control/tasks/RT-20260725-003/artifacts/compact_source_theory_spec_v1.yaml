@@ -1,0 +1,190 @@
+schema_id: "compact_source_theory_spec_v1"
+object_id: "V21-P5-T01-COMPACT-SOURCE-THEORY-TUPLE-V1"
+status_label: "draft/control"
+authority: "science_draft"
+plan_task_id: "P5-T01"
+target_derivation_milestone: "source_ontology"
+milestone_burden: "Replace dispersed source records with one coherent theory target."
+claim_boundary:
+  source_only: true
+  physical_ontology_adopted: false
+  source_law_adopted: false
+  dynamics_selected: false
+  reconstruction_selected: false
+  target_import_allowed: false
+  physics_promotion_authorized: false
+
+tagged_slot_type:
+  notation: "Slot(X) = {open} disjoint_union {filled(x) | x in X}"
+  open_tag: "open"
+  filled_tag: "filled"
+  rule: "An open tag carries no element of X and may not be evaluated as a law or map."
+
+source_theory_tuple:
+  notation: "T_src^0 = (A, pi:E->A, Q_adm, Iso_src, Red_src, O_src, Var_src, S_Phi, S_dyn, S_rec, tau)"
+  components:
+    - name: "A"
+      mathematical_type: "smooth connected four-manifold"
+      status: "primitive_debt"
+      definition: "The P4-T06 source arena; it is not identified with physical spacetime."
+      depends_on: []
+    - name: "pi:E->A"
+      mathematical_type: "smooth source bundle supplied by each instance"
+      status: "proposal-only"
+      definition: "A carrier type for source configurations; no physical field semantics are adopted."
+      depends_on:
+        - "A"
+    - name: "Q_adm"
+      mathematical_type: "nonempty subset of smooth sections Gamma(E)"
+      status: "proposal-only"
+      definition: "Admissible source configurations, specified without target-side success criteria."
+      depends_on:
+        - "pi:E->A"
+    - name: "Iso_src"
+      mathematical_type: "groupoid whose objects are Q_adm"
+      status: "derived_from_declared_source_isomorphisms"
+      definition: "Typed source isomorphisms; composition, identities, and inverses are required."
+      depends_on:
+        - "Q_adm"
+    - name: "Red_src"
+      mathematical_type: "wide subgroupoid of Iso_src"
+      status: "proposal-only"
+      definition: "Declared source redundancy. No claim is made that every source diffeomorphism is physical gauge."
+      depends_on:
+        - "Iso_src"
+    - name: "O_src"
+      mathematical_type: "unital real algebra of Red_src-invariant functionals Q_adm->R"
+      status: "derived_from_declared_redundancy"
+      definition: "Allowed source observables; invariance is checked only against Red_src."
+      depends_on:
+        - "Q_adm"
+        - "Red_src"
+    - name: "Var_src"
+      mathematical_type: "assignment q |-> Var_src(q) subset T_q Gamma(E)"
+      status: "proposal-only"
+      definition: "Admissible source variations, equivariant under Iso_src arrows."
+      depends_on:
+        - "pi:E->A"
+        - "Q_adm"
+        - "Iso_src"
+    - name: "S_Phi"
+      mathematical_type: "Slot(PhiSpec(Q_adm, Iso_src, Red_src))"
+      status: "open"
+      definition: "The Phi_src semantics slot; P5-T02 must select a kind and prove its laws."
+      depends_on:
+        - "Q_adm"
+        - "Iso_src"
+        - "Red_src"
+    - name: "S_dyn"
+      mathematical_type: "Slot(DynSpec(Q_adm, Var_src, S_Phi))"
+      status: "open"
+      definition: "The source-dynamics slot; no evolution equation, action, generator, or stochastic law is supplied."
+      depends_on:
+        - "Q_adm"
+        - "Var_src"
+        - "S_Phi"
+    - name: "S_rec"
+      mathematical_type: "Slot(ReconIfc(Q_adm/Red_src))"
+      status: "open"
+      definition: "A certified partial-interface slot with abstract codomain; no target value or benchmark object is filled."
+      depends_on:
+        - "Q_adm"
+        - "Red_src"
+        - "O_src"
+    - name: "tau"
+      mathematical_type: "component-status and provenance map"
+      status: "derived"
+      definition: "Records primitive_debt, proposal-only, derived, or open status for every component."
+      depends_on:
+        - "all tuple components"
+
+source_isomorphism_and_gauge:
+  source_isomorphism: "An arrow in the Iso_src groupoid is a declared bundle isomorphism carrying one admissible section to another."
+  gauge_equivalence: "q is gauge-equivalent to q' exactly when Red_src contains an arrow q->q'."
+  quotient: "Q_adm/Red_src denotes the orbit set or groupoid quotient at this draft/control scope."
+  nonclaim: "The definition does not establish physical gauge symmetry or identify source redundancy with target diffeomorphism invariance."
+
+reconstruction_interface:
+  notation: "ReconIfc(Qbar) = (Y, Dom(r) subset Qbar, r:Dom(r)->Y, provenance)"
+  rules:
+    - "Y is an abstract output type and is not a target atlas, target metric, or benchmark object."
+    - "Every filled interface must include source-only provenance and a no-target-import certificate."
+    - "The P5-T01 object sets S_rec=open, so no r or Y is selected."
+    - "Evaluation of an open reconstruction slot returns fail_closed_open_slot."
+
+instantiations:
+  - instantiation_id: "CONTINUUM-TORUS-AMPLITUDE-V1"
+    kind: "continuum"
+    status_label: "proposal-only"
+    arena: "A = T^4"
+    bundle: "E = T^4 x R"
+    states: "Q_adm = {q_a(theta)=a sin(theta_1) | a in R}"
+    source_isomorphisms: "identity arrows only"
+    redundancy: "identity arrows only"
+    observables:
+      - "1"
+      - "F(q_a)=a"
+    variations: "Var_src(q_a)=span{sin(theta_1)}"
+    Phi_slot: "open"
+    dynamics_slot: "open"
+    reconstruction_slot: "open"
+    nontriviality_witness: "q_0 and q_1 are distinct, and F(q_0)=0 differs from F(q_1)=1."
+    authority_note: "This witness shows non-emptiness and internal typing only; it is not an adopted source ontology."
+  - instantiation_id: "FINITE-TWO-STATE-REDUCTION-V1"
+    kind: "finite"
+    status_label: "proposal-only"
+    states:
+      - "q_0"
+      - "q_1"
+    source_isomorphisms: "identity arrows only"
+    redundancy: "identity arrows only"
+    observables:
+      - "f(q_0)=0 and f(q_1)=1"
+    variations: "zero tangent assignment on the finite reduction"
+    Phi_slot: "open"
+    dynamics_slot: "open"
+    reconstruction_slot: "open"
+    authority_note: "The finite reduction is a type witness, not a physical discretization claim."
+
+malformed_fail_closed_branches:
+  - branch_id: "MALFORMED-TARGET-IMPORT-001"
+    malformed_condition: "A tuple component is defined from a target atlas, target metric, benchmark success, or candidate reconstruction."
+    result: "fail_closed_target_import"
+    accepted: false
+  - branch_id: "MALFORMED-GROUPOID-001"
+    malformed_condition: "Iso_src lacks an identity, inverse, or closed composition, or Red_src is not a wide subgroupoid."
+    result: "fail_closed_type_error"
+    accepted: false
+  - branch_id: "MALFORMED-OBSERVABLE-001"
+    malformed_condition: "A declared source observable is not invariant under Red_src."
+    result: "fail_closed_invariance_error"
+    accepted: false
+  - branch_id: "MALFORMED-OPEN-SLOT-EVALUATION-001"
+    malformed_condition: "An open Phi, dynamics, or reconstruction slot is evaluated as if filled."
+    result: "fail_closed_open_slot"
+    accepted: false
+
+dependency_consequence:
+  discharged_here:
+    - "one coherent draft/control source-theory target with typed primitive, derived, proposal-only, and open components"
+    - "source isomorphism and declared redundancy definitions"
+    - "source observable and admissible-variation interfaces"
+    - "nontrivial continuum and finite type witnesses"
+    - "fail-closed malformed branches"
+  remains_open:
+    - "Phi_src semantic kind and its laws"
+    - "source dynamics"
+    - "physical gauge interpretation"
+    - "source-to-target reconstruction"
+    - "M_src adoption"
+    - "g_eff"
+    - "matter coupling"
+    - "Einstein equations"
+    - "exact-GR benchmark promotion"
+
+exact_gr_recovery_obligations:
+  - "Select and justify Phi_src semantics without target import."
+  - "Construct source dynamics and show compatibility with admissible variations and declared redundancies."
+  - "Construct a source-to-target bridge with explicit provenance, robustness, and uniqueness or controlled nonuniqueness."
+  - "Recover metric, causal, clock, matter, coupling, and Einstein-equation structure in a stated regime."
+  - "Obtain separate human-gated authority before ontology adoption or benchmark promotion."

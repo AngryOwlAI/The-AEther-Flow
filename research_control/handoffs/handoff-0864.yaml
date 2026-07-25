@@ -1,0 +1,262 @@
+validation_status: "PASS"
+handoff_id: "handoff-0864"
+handoff_number: 864
+task_id: "RT-20260725-004"
+decision_id: "DDR-20260725-004"
+job_id: "AJ-RT-20260725-004-001"
+completion_id: "AJC-AJ-RT-20260725-004-001"
+completion_path: "research_control/tasks/RT-20260725-004/jobs/completions/AJC-AJ-RT-20260725-004-001.yaml"
+completion_sha256: "ff6ef8b39030b1bc64e3d977de6f9644f551c80a9315fec98c62caba6f9c6d72"
+status: "ready_after_checkpoint"
+created_at: "2026-07-25T08:00:02Z"
+parent_handoff_id: "handoff-0863"
+plan_task_id: "P5-T02"
+recovery_for_plan_task_id: "P5-T01"
+source_role_id: "validator-engineer"
+source_role_version: "0.2.0"
+source_execution_role_ref: "validator-engineer@0.2.0--RT-20260725-004"
+summary: "Generation 109 repairs both P5-T01 dependent repository-test failures. The task taxonomy now uses the existing lowercase-slug grammar. P10-T08 recognizes the exact same-task finalization transition while preserving the historical audit validation, compact receipt, two-blocker finding set, and rollout freeze byte-for-byte. Every P5-T01 science artifact and the Distance-to-GR ledger remain exact."
+next_action: "After the governed cumulative checkpoint commits, run exactly one bounded P5-T02 ontology-formalizer packet to select the semantic kind of Phi_src and prove its basic laws without target import."
+current_claim_boundary: "CB-V21-P5-T01-DEPENDENT-REPOSITORY-TEST-CONTRACT-RECOVERY-001"
+loop_risk_route: "ontology-law-research-packet"
+
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260725-004"
+  latest_research_handoff_id: "handoff-0864"
+  latest_research_next_action: "After the governed cumulative checkpoint commits, run exactly one bounded P5-T02 ontology-formalizer packet to select the semantic kind of Phi_src and prove its basic laws without target import."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+
+claim_boundary:
+  allowed_next_scope: "After the governed cumulative checkpoint commits, one fresh bounded P5-T02 ontology-law packet may select one Phi_src semantic kind and prove only its corresponding source-side basic laws."
+  completed_task: "RT-20260725-004"
+  completed_completion_path: "research_control/tasks/RT-20260725-004/jobs/completions/AJC-AJ-RT-20260725-004-001.yaml"
+  completed_completion_sha256: "ff6ef8b39030b1bc64e3d977de6f9644f551c80a9315fec98c62caba6f9c6d72"
+  source_handoff_id: "handoff-0863"
+  source_handoff_path: "research_control/handoffs/handoff-0863.yaml"
+  source_handoff_sha256: "7b15de2879b87d8c418bdc074f828e463e8a380ea2f93970960df9eab2e2d2cb"
+  immutable_route_sha256: "36027e15e16ba42e5c41d3d7b6cf7cb34405306f3694664d41e9de9dfd82371d"
+  result_status: "PASS_P5_T01_DEPENDENT_CONTRACT_RECOVERY_READY_FOR_CHECKPOINT"
+  source_checkpoint_receipt_sha256: "951fbdcb04c7dd7ceb124cd9a8571dd7571a31e0cb3fc5ab68b59caeb0741e1b"
+  protected_dirty_fingerprint: "1b84e8539a7b62c38193f3e4eb7700b02d7f2b966beab53b2b87bfab588a106f"
+  recovery_validator_path: "research_control/tasks/RT-20260725-004/artifacts/validate_p5_t01_dependent_contract_recovery.py"
+  recovery_validator_sha256: "7c92b72282bbb7a6d5dd1ca823c6f043b145b5105117149034b79d9c7a84eaba"
+  recovery_receipt_path: "research_control/tasks/RT-20260725-004/artifacts/p5_t01_dependent_contract_recovery_receipt.json"
+  recovery_receipt_sha256: "45f6e7687b08c95ef5c74cacc845a6ecf1533bf55225179a08db459caf7949bc"
+  repaired_finding_count: 2
+  recovery_check_count: 6
+  focused_test_count: 15
+  checkpoint_invocation_count_before_handoff: 0
+  checkpoint_committed_before_handoff: false
+  p5_t01_science_payload_modified_by_recovery: false
+  historical_p10_audit_rewritten: false
+  distance_to_gr_ledger_modified_by_recovery: false
+  p5_t01_reexecuted: false
+  p5_t02_executed: false
+  scientific_status_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  ontology_adoption_authorized: false
+  source_law_adoption_authorized: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_performed: false
+  blocked_claims:
+    - "project-system compatibility presented as scientific progress"
+    - "P5-T01 draft/control source-theory object presented as physical ontology"
+    - "historical P10 audit presented as current cutover authority"
+    - "P5-T02 presented as executed before checkpoint"
+    - "source law physical gauge metric coupling Einstein equations benchmark proof publication push or completed derivation"
+
+plan_result:
+  plan_task_id: "P5-T01"
+  recovery_for_plan_task_id: "P5-T01"
+  next_plan_task_id: "P5-T02"
+  title: "Repair the P5-T01 dependent repository-test contracts"
+  result_status: "P5_T01_DEPENDENT_CONTRACT_RECOVERY_PASS"
+  work_item_status: "completed"
+  protected_p5_t01_payload_complete: true
+  protected_p5_t01_payload_byte_preserved: true
+  dependent_repository_test_contract_recovery_complete: true
+  p5_t02_dependency_ready_after_checkpoint: true
+  p5_t02_dependency_ready_now: false
+  p5_t02_executed: false
+  scientific_claims_changed_by_recovery: false
+  distance_to_gr_delta_changed_by_recovery: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+distance_to_gr:
+  changed: false
+  effect: "none_project_system_recovery"
+  burden_id: "source_ontology_primitives"
+  milestone: "source_ontology"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "The inherited P5-T01 scoped source-only delta is byte-preserved; this recovery contributes no physics movement."
+  downstream_unlocked:
+    - "P5-T02 only after the governed cumulative checkpoint"
+  downstream_still_blocked:
+    - "P5-T02 until the governed cumulative checkpoint commits"
+    - "physical gauge interpretation"
+    - "source dynamics"
+    - "physical source manifold M_src"
+    - "effective metric g_eff"
+    - "matter coupling"
+    - "Einstein equations derivation"
+    - "benchmark promotion"
+
+required_next_packet:
+  task_type: "v21_p5_t02_fix_phi_src_semantics_and_ordered_source_evolution"
+  plan_task_id: "P5-T02"
+  objective: "Determine whether Phi_src is a group semigroup category action gauge flow physical evolution stochastic process or emergent ordering relation and prove the basic laws appropriate to the choice."
+  dependency_ready_after_checkpoint: true
+  dependency_ready_now: false
+  executed: false
+
+selected_next_route:
+  route_id: "v21_p5_t02_fix_phi_src_semantics"
+  route_label: "ontology-law-research-packet"
+  role_family: "ontology-formalizer@0.2.0"
+  worker_skill: "continue-research"
+  task_type: "v21_p5_t02_fix_phi_src_semantics_and_ordered_source_evolution"
+  plan_task_id: "P5-T02"
+  target_derivation_milestone: "source_ontology"
+  milestone_burden: "Remove ambiguity in the central Æflow kinematic primitive."
+  strategy_id: "select_phi_src_semantic_kind_and_prove_basic_laws_v1"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  physics_promotion_authorized: false
+  executed: false
+  next_action: "Remain unexecuted until the generation-109 governed cumulative checkpoint commits."
+  source_handoff: "research_control/handoffs/handoff-0864.yaml"
+
+ordinary_route_guard:
+  schema_id: "ordinary_route_guard_evaluation_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  evaluation_id: "ORE-HANDOFF-0864"
+  ordinary_handoff_id: "handoff-0864"
+  threshold: 3
+  consecutive_project_system_tasks_before_selection: 1
+  ready_science_plan_task_ids:
+    - "P5-T02"
+  selected_plan_task_id: "P5-T02"
+  selected_route_class: "physics_bearing"
+  selected_worker_skill: "continue-research"
+  outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  exception_receipt:
+    active: false
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+active_state_boundary:
+  active_task_id: "RT-20260725-004"
+  active_job_id: "AJ-RT-20260725-004-001"
+  current_status: "p5_t01_dependent_repository_test_contract_recovery_pass_ready_for_checkpoint"
+  checkpoint_required: true
+  checkpoint_completed: false
+  checkpoint_invocation_count: 0
+  project_system_recovery_completed: true
+  p5_t01_payload_complete: true
+  p5_t01_payload_byte_preserved: true
+  selected_next_plan_task_id: "P5-T02"
+  selected_next_worker_skill: "continue-research"
+  selected_next_role_family: "ontology-formalizer@0.2.0"
+  selected_next_route_label: "ontology-law-research-packet"
+  selected_next_strategy_id: "select_phi_src_semantic_kind_and_prove_basic_laws_v1"
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 109 validated, atomically claimed, and consumed the exact immutable recovery route once."
+      - "Memory preflight and canonical plan, registry, task, handoff, and validator sources were inspected."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The task-local validator passes six checks and fifteen focused tests pass."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Memory, documentation, signal, integrated control, diff allowlist, focused, and the 1,252-test repository suite pass."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "One governed cumulative checkpoint remains."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Tracked frontier, task-index, graph, registry, and wiki derivatives are fresh."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Memory bootstrap passes one gate with zero findings."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Integrated research-control validation passes without errors."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: ""
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  publication_authorized: false
+  proof_authority: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  canonical_ontology_edit_authorized: false
+  ontology_selection_authorized: false
+  physical_interpretation_establishment_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required_no_nonblank_signals"
+  rationale: "The recovery emits no new project-improvement signal."
+
+handoff_authority_boundary:
+  this_handoff_authorizes:
+    - "one governed cumulative checkpoint for AJ-RT-20260725-004-001"
+    - "after that checkpoint only, one fresh bounded P5-T02 packet"
+  this_handoff_does_not_authorize:
+    - "P5-T02 before checkpoint"
+    - "P5-T01 reexecution or science-payload mutation"
+    - "historical P10 audit rewrite or rollout cutover"
+    - "ontology source law physical gauge metric coupling Einstein equations benchmark proof publication push or completed derivation"
+
+next_plan_task_id: "P5-T02"
+next_worker_skill: "continue-research"
+next_role_family: "ontology-formalizer@0.2.0"
+next_route_label: "ontology-law-research-packet"
+next_strategy_id: "select_phi_src_semantic_kind_and_prove_basic_laws_v1"
+notes: "Generation 109 is project-system control work only. P5-T02 remains unexecuted until the governed cumulative checkpoint commits."

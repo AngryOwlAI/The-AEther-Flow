@@ -1024,6 +1024,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V21-P4-T03-EMERGENCE-FIRST-PROCESS-ORDER-ONTOLOGY-OPTION-V1` `research_control/tasks/RT-20260720-032/artifacts/emergence_first_process_order_ontology_option_v1.tex`
 - `TEX-V21-P4-T05-ONTOLOGY-REGIME-GATE-CHAIR-DECISION-V1` `research_control/tasks/RT-20260724-004/artifacts/ontology_regime_gate_chair_decision_v1.tex`
 - `TEX-V21-P4-T06-SELECTED-ONTOLOGY-REGIME-INTEGRATION-V1` `research_control/tasks/RT-20260724-010/artifacts/selected_ontology_regime_integration_v1.tex`
+- `TEX-V21-P5-T01-COMPACT-SOURCE-THEORY-OBJECT-V1` `research_control/tasks/RT-20260725-003/artifacts/compact_source_theory_object_v1.tex`
 
 ## wiki_markdown
 
@@ -2038,3 +2039,4 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-V21-P4-T03-EMERGENCE-FIRST-PROCESS-ORDER-ONTOLOGY-OPTION-V1` `wiki/tex/tex-v21-p4-t03-emergence-first-process-order-ontology-option-v1.md`
 - `WIKI-TEX-V21-P4-T05-ONTOLOGY-REGIME-GATE-CHAIR-DECISION-V1` `wiki/tex/tex-v21-p4-t05-ontology-regime-gate-chair-decision-v1.md`
 - `WIKI-TEX-V21-P4-T06-SELECTED-ONTOLOGY-REGIME-INTEGRATION-V1` `wiki/tex/tex-v21-p4-t06-selected-ontology-regime-integration-v1.md`
+- `WIKI-TEX-V21-P5-T01-COMPACT-SOURCE-THEORY-OBJECT-V1` `wiki/tex/tex-v21-p5-t01-compact-source-theory-object-v1.md`

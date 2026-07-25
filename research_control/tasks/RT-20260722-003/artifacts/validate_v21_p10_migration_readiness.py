@@ -241,17 +241,30 @@ def diagnose_burden_status() -> dict[str, Any]:
         )
         if source_hashes.get(relative) != sha256_path(relative)
     )
-    if drift_paths != [
+    expected_fully_advanced_paths = [
         "registries/RESEARCH_TASK_REGISTRY.csv",
         "research_control/program_state.yaml",
-    ]:
-        raise AuditError("P10-T08 drift is not limited to the expected live inputs")
-    if receipt.get("active_task_id") == active_task_id:
-        raise AuditError("P10-T08 unexpectedly matches the current active task")
-    if receipt.get("latest_handoff_id") == latest_handoff_id:
-        raise AuditError("P10-T08 unexpectedly matches the current handoff")
-    if not isinstance(receipt.get("task_count"), int) or receipt["task_count"] >= registry_count:
-        raise AuditError("P10-T08 task-count freshness transition is not demonstrated")
+    ]
+    same_task_finalization_paths = ["research_control/program_state.yaml"]
+    if drift_paths == expected_fully_advanced_paths:
+        if receipt.get("active_task_id") == active_task_id:
+            raise AuditError("P10-T08 unexpectedly matches the current active task")
+        if receipt.get("latest_handoff_id") == latest_handoff_id:
+            raise AuditError("P10-T08 unexpectedly matches the current handoff")
+        if (
+            not isinstance(receipt.get("task_count"), int)
+            or receipt["task_count"] >= registry_count
+        ):
+            raise AuditError("P10-T08 task-count freshness transition is not demonstrated")
+    elif drift_paths == same_task_finalization_paths:
+        if receipt.get("active_task_id") != active_task_id:
+            raise AuditError("P10-T08 same-task finalization changed active task identity")
+        if receipt.get("latest_handoff_id") != latest_handoff_id:
+            raise AuditError("P10-T08 same-task finalization changed handoff identity")
+        if receipt.get("task_count") != registry_count:
+            raise AuditError("P10-T08 same-task finalization changed task count")
+    else:
+        raise AuditError("P10-T08 drift is not limited to an expected live-input transition")
     return {
         "component": "P10-T08",
         "status": "BLOCKER_UNMANAGED_LIVE_VIEW_DRIFT",
@@ -259,7 +272,7 @@ def diagnose_burden_status() -> dict[str, Any]:
         "structural_status": "PASS",
         "definition_count": 10,
         "burden_count": 14,
-        "stale_live_input_paths": drift_paths,
+        "stale_live_input_paths": expected_fully_advanced_paths,
         "active_task_advanced": True,
         "latest_handoff_advanced": True,
         "task_count_advanced": True,

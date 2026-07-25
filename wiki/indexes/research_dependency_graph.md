@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-07-25T00:20:26Z`
-- Source fingerprint: `04268440312630d633a0b9144ce9fd96383c67a954bf9338ea2f19d5952c0060`
-- Nodes: `21843`
-- Edges: `72498`
+- Generated from tracked state as of: `2026-07-25T16:17:46Z`
+- Source fingerprint: `c3a157d7e075f661f37170e5053c957e83e3cd7299632a793b18a117fb0f0025`
+- Nodes: `21977`
+- Edges: `72705`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 1096 |
+| `completion_yaml` | 1102 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 860 |
+| `handoff_yaml` | 866 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,32 +33,32 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 8 |
-| `agent_job` | `support_only` | 1096 |
+| `agent_job` | `support_only` | 1102 |
 | `artifact` | `canonical_source` | 86 |
-| `artifact` | `support_only` | 11094 |
-| `blocked_burden` | `blocked` | 4421 |
-| `claim_boundary` | `support_only` | 1053 |
-| `draft_control_candidate` | `draft_control` | 722 |
-| `draft_control_candidate` | `proposal_only` | 110 |
+| `artifact` | `support_only` | 11154 |
+| `blocked_burden` | `blocked` | 4458 |
+| `claim_boundary` | `support_only` | 1059 |
+| `draft_control_candidate` | `draft_control` | 723 |
+| `draft_control_candidate` | `proposal_only` | 112 |
 | `draft_control_candidate` | `science_draft` | 64 |
-| `frozen_negative` | `frozen_negative` | 132 |
+| `frozen_negative` | `frozen_negative` | 133 |
 | `gate_chair_verdict` | `human_gated` | 32 |
-| `handoff` | `support_only` | 860 |
-| `human_gated_object` | `human_gated` | 516 |
+| `handoff` | `support_only` | 866 |
+| `human_gated_object` | `human_gated` | 522 |
 | `ledger_row` | `accepted_scoped` | 6 |
 | `ledger_row` | `blocked` | 4 |
 | `ledger_row` | `frozen_negative` | 1 |
 | `ledger_row` | `human_gated` | 1 |
 | `ledger_row` | `science_draft` | 3 |
 | `obstruction` | `blocked` | 79 |
-| `obstruction` | `rejected` | 3 |
+| `obstruction` | `rejected` | 4 |
 | `source_extension_evidence_precondition` | `source_extension_evidence` | 37 |
-| `source_ontology_object` | `canonical_source` | 26 |
+| `source_ontology_object` | `canonical_source` | 27 |
 | `source_ontology_object` | `rejected` | 50 |
-| `source_ontology_object` | `support_only` | 343 |
+| `source_ontology_object` | `support_only` | 344 |
 | `task` | `human_gated` | 29 |
 | `task` | `science_draft` | 32 |
-| `task` | `support_only` | 1035 |
+| `task` | `support_only` | 1041 |
 
 ## Frontier Table
 
@@ -109,6 +109,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `blocked_claim:another_plan_task_or_successor_execution` | Blocked permission: another plan task or successor execution | `registries/ROLE_EXECUTION_REGISTRY.csv` |
 | `blocked_claim:approval_as_claim_promotion` | Blocked claim: approval as claim promotion | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:approval_as_proof` | Blocked claim: approval as proof | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:approval_reuse` | Blocked claim: approval reuse | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:approval_reuse_gate_chair_reexecution_or_p4_t06_execution` | Blocked permission: approval reuse Gate Chair reexecution or P4-T06 execution | `registries/ROLE_EXECUTION_REGISTRY.csv` |
 | `blocked_claim:approval_reuse_or_gate_chair_re_execution` | Blocked claim: approval reuse or Gate Chair re-execution | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:approval_reuse_or_gate_chair_reexecution` | Blocked claim: approval reuse or Gate Chair reexecution | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
@@ -159,13 +160,12 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `blocked_claim:audit_pass_as_source_law_adoption` | Blocked claim: audit pass as source-law adoption | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:audit_pass_as_stress_energy_semantics` | Blocked claim: audit pass as stress-energy semantics | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:audit_pass_as_stress_energy_tensor` | Blocked claim: audit pass as stress-energy tensor | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:audit_pass_as_theorem_proof` | Blocked claim: audit pass as theorem proof | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 
 ## Route Continuity
 
-- Active task: `RT-20260724-010`
-- Latest handoff: `handoff-0860`
-- Handoff path: `research_control/handoffs/handoff-0860.yaml`
-- Next action: Run one governed improve-project-system recovery for the protected canonical-ontology integration admission and historical memory-preflight hash contract, revalidate and checkpoint the preserved P4-T06 transaction, and only then execute one fresh P5-T01 continue-research packet. Do not reexecute P4-T06, broaden the human-approved boundary, rewrite historical receipts, add physical semantics, publish, push, or claim a completed derivation.
+- Active task: `RT-20260725-006`
+- Latest handoff: `handoff-0866`
+- Handoff path: `research_control/handoffs/handoff-0866.yaml`
+- Next action: Run the one governed cumulative checkpoint for AJ-RT-20260725-006-001. Only after it commits may one fresh bounded P5-T02 ontology-law packet select the semantic kind of Phi_src and prove its basic source-side laws without target import.
 
 This graph is navigational support only; inspect the cited sources before using any claim.

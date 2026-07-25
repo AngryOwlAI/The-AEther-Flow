@@ -1,0 +1,305 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,longtable,array,enumitem}
+\newcommand{\A}{\mathcal A}
+\newcommand{\Esrc}{E_{\mathrm{src}}}
+\newcommand{\Qadm}{\mathcal Q_{\mathrm{adm}}}
+\newcommand{\Isosrc}{\mathsf{Iso}_{\mathrm{src}}}
+\newcommand{\Redsrc}{\mathsf{Red}_{\mathrm{src}}}
+\newcommand{\Osrc}{\mathcal O_{\mathrm{src}}}
+\newcommand{\Varsrc}{\mathsf{Var}_{\mathrm{src}}}
+\newcommand{\PhiSrc}{\Phi_{\mathrm{src}}}
+\newcommand{\Slot}{\mathsf{Slot}}
+\newcommand{\Open}{\mathsf{open}}
+\newcommand{\Filled}{\mathsf{filled}}
+\newcommand{\Recon}{\mathsf{ReconIfc}}
+\newtheorem{definition}{Definition}
+\newtheorem{proposition}{Proposition}
+\newtheorem{boundary}{Boundary}
+\title{V21 P5-T01: Compact Source-Theory Tuple and Object Model}
+\author{Ontology Formalizer parent--child synthesis}
+\date{2026-07-25}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+\fbox{\parbox{0.93\linewidth}{\textbf{Status and authority.}
+This object is \texttt{draft/control}. It gives later source-theory work one
+coherent mathematical target. It is not adopted physical ontology, an adopted
+source law, a selected dynamics, a source-to-target reconstruction, or an
+exact-GR derivation. It creates no metric, clock, matter, coupling, Einstein
+equations, benchmark-promotion, proof, publication, push, or
+completed-derivation authority.}}
+\end{center}
+
+\section{Source basis and narrow aim}
+
+P4-T06 fixes the mainline research architecture as a smooth
+four-dimensional source arena \(\A\), carried as explicit primitive debt,
+together with an unresolved source-order or evolution slot \(\PhiSrc\).
+Neither object is identified with physical spacetime. P5-T01 does not revise
+that protected boundary. It defines the smallest coherent object in which
+source configurations, declared redundancy, observables, variations, and
+explicitly open law interfaces can be discussed without importing a desired
+target result.
+
+\section{A tagged type for open structure}
+
+\begin{definition}[Tagged slot]
+For any mathematical type \(X\), define the disjoint sum
+\[
+  \Slot(X)
+  =
+  \{\Open_X\}\;\sqcup\;
+  \{\Filled_X(x):x\in X\}.
+\]
+The tag \(\Open_X\) carries no element of \(X\). Evaluating it as a map, law,
+generator, action, or relation is a type error and returns the fail-closed
+result \(\bot_{\mathrm{open}}\).
+\end{definition}
+
+This construction distinguishes ``a slot exists'' from ``a value has been
+selected.'' It therefore prevents an unresolved \(\PhiSrc\), dynamics, or
+reconstruction component from acquiring hidden semantics merely because it
+appears in a tuple.
+
+\section{The compact source-theory object}
+
+\begin{definition}[P5-T01 compact source-theory tuple]
+A draft/control source-theory object is
+\[
+ \mathfrak T_{\mathrm{src}}^{(0)}
+ =
+ \bigl(
+   \A,\,
+   \pi:\Esrc\!\to\!\A,\,
+   \Qadm,\,
+   \Isosrc,\,
+   \Redsrc,\,
+   \Osrc,\,
+   \Varsrc,\,
+   S_{\Phi},\,
+   S_{\mathrm{dyn}},\,
+   S_{\mathrm{rec}},\,
+   \tau
+ \bigr),
+\]
+subject to the following types.
+
+\begin{enumerate}[label=(\roman*)]
+  \item \(\A\) is the smooth connected four-manifold retained from P4-T06 as
+  explicit primitive debt.
+  \item \(\pi:\Esrc\to\A\) is a smooth source bundle supplied by an
+  instance, and
+  \(\varnothing\ne\Qadm\subseteq\Gamma^\infty(\Esrc)\) is its set of
+  admissible source configurations.
+  \item \(\Isosrc\rightrightarrows\Qadm\) is a groupoid of declared source
+  isomorphisms. Its arrows have typed sources and targets, identities,
+  associative composition, and inverses.
+  \item \(\Redsrc\subseteq\Isosrc\) is a wide subgroupoid of declared source
+  redundancies.
+  \item \(\Osrc\) is a unital real algebra of functionals
+  \(F:\Qadm\to\mathbb R\) satisfying
+  \(F(q)=F(q')\) whenever \(\Redsrc(q,q')\ne\varnothing\).
+  \item \(\Varsrc(q)\subseteq T_q\Gamma^\infty(\Esrc)\) is a declared
+  admissible-variation subspace, equivariant under \(\Isosrc\) arrows.
+  \item
+  \(S_{\Phi}\in\Slot(\mathsf{PhiSpec}(\Qadm,\Isosrc,\Redsrc))\) is the
+  \(\PhiSrc\)-semantics slot.
+  \item
+  \(S_{\mathrm{dyn}}\in
+    \Slot(\mathsf{DynSpec}(\Qadm,\Varsrc,S_{\Phi}))\)
+  is the source-dynamics slot.
+  \item
+  \(S_{\mathrm{rec}}\in
+    \Slot(\Recon(\Qadm/\Redsrc))\)
+  is the reconstruction-interface slot.
+  \item \(\tau\) records, for every component, whether its status is
+  primitive debt, proposal-only, derived, or open, together with its
+  provenance.
+\end{enumerate}
+\end{definition}
+
+For the P5-T01 object,
+\[
+ S_{\Phi}=\Open,\qquad
+ S_{\mathrm{dyn}}=\Open,\qquad
+ S_{\mathrm{rec}}=\Open.
+\]
+Thus the tuple contains three typed interfaces but supplies no
+\(\PhiSrc\) kind, evolution law, source action, stochastic kernel,
+reconstruction map, or target value.
+
+\section{Source isomorphism, declared redundancy, and observables}
+
+An arrow \(g:q\to q'\) in \(\Isosrc\) is a declared bundle isomorphism that
+carries one admissible section to another. Define
+\[
+  q\sim_{\mathrm{red}}q'
+  \quad\Longleftrightarrow\quad
+  \Redsrc(q,q')\ne\varnothing .
+\]
+Because \(\Redsrc\) is a wide subgroupoid, this is an equivalence relation on
+objects, or equivalently an orbit relation for the declared redundancy
+groupoid. The notation \(\Qadm/\Redsrc\) denotes the resulting orbit set or
+groupoid quotient at this draft/control scope.
+
+\begin{boundary}[No physical-gauge promotion]
+The phrase ``gauge equivalence'' in this object names only the quotient by
+declared source redundancy. P5-T01 does not prove that every source
+diffeomorphism is redundant, that \(\Redsrc\) is a physical gauge symmetry,
+or that it matches target-side diffeomorphism invariance.
+\end{boundary}
+
+The invariant-observable rule is intentionally relative to \(\Redsrc\).
+It neither assumes a target metric nor uses benchmark success to select
+functionals. The admissible-variation assignment is similarly source-side:
+an isomorphism arrow must carry allowed variations at \(q\) to allowed
+variations at \(q'\), but no dynamics is inferred from that covariance.
+
+\section{Open reconstruction interface}
+
+For a source quotient \(\overline{\Qadm}=\Qadm/\Redsrc\), define an interface
+record
+\[
+  \Recon(\overline{\Qadm})
+  =
+  \bigl(
+    Y,\,
+    D\subseteq\overline{\Qadm},\,
+    r:D\to Y,\,
+    \mathsf{prov}
+  \bigr).
+\]
+Here \(Y\) is an abstract output type and \(\mathsf{prov}\) is a
+source-provenance and no-target-import obligation. No target atlas, target
+metric, observer field, benchmark success condition, or candidate
+reconstruction may define a source component. P5-T01 sets
+\(S_{\mathrm{rec}}=\Open\), so it selects neither \(Y\), \(D\), \(r\), nor
+target values.
+
+\section{Nontrivial continuum witness}
+
+Let \(\A=\mathbb T^4\), let
+\(\Esrc=\mathbb T^4\times\mathbb R\), and define
+\[
+  q_a(\theta_1,\theta_2,\theta_3,\theta_4)
+  = a\sin\theta_1,
+  \qquad
+  \Qadm=\{q_a:a\in\mathbb R\}.
+\]
+Take \(\Isosrc=\Redsrc\) to contain identity arrows only. Let
+\(\Osrc\) contain the constant functional and
+\[
+  F(q_a)=a,
+\]
+and take
+\[
+  \Varsrc(q_a)
+  =
+  \operatorname{span}\{\sin\theta_1\}.
+\]
+Set all three tagged slots to \(\Open\).
+
+\begin{proposition}[Typed non-emptiness witness]
+The torus-amplitude family is a valid instance of
+\(\mathfrak T_{\mathrm{src}}^{(0)}\), and it is nontrivial because
+\(q_0\ne q_1\) and \(F(q_0)=0\ne1=F(q_1)\).
+\end{proposition}
+
+\begin{proof}
+The trivial real line bundle over \(\mathbb T^4\) is smooth, and every \(q_a\)
+is a smooth section. The identity groupoid and its identical wide subgroupoid
+satisfy the groupoid axioms. Every functional is invariant under identity
+arrows, and the stated one-dimensional variation space is carried to itself.
+The tagged slots are well typed by definition. Distinct amplitudes give the
+displayed nontriviality witness.
+\end{proof}
+
+This proposition is a type-consistency result for a proposal-only instance.
+It is not an empirical model, a physical discretization, or an adopted source
+ontology. A finite two-state reduction
+\(\{q_0,q_1\}\) with identity arrows, the separating observable
+\(f(q_i)=i\), zero finite-state variations, and open slots gives a second
+minimal type witness.
+
+\section{Fail-closed malformed branches}
+
+\begin{longtable}{p{0.32\linewidth}p{0.45\linewidth}p{0.15\linewidth}}
+\toprule
+Malformed input & Exact defect & Result \\
+\midrule
+\endhead
+A source component is defined from a target atlas, target metric, benchmark
+success, or candidate reconstruction
+& Hidden target import
+& \(\bot_{\mathrm{target}}\) \\
+\(\Isosrc\) lacks an identity, inverse, or closed composition, or
+\(\Redsrc\) is not a wide subgroupoid
+& Groupoid type failure
+& \(\bot_{\mathrm{type}}\) \\
+A declared \(F\in\Osrc\) changes along a \(\Redsrc\) arrow
+& Invariance failure
+& \(\bot_{\mathrm{inv}}\) \\
+An open \(\PhiSrc\), dynamics, or reconstruction slot is evaluated
+& Open slot used as a value
+& \(\bot_{\mathrm{open}}\) \\
+\bottomrule
+\end{longtable}
+
+These failures reject the malformed object. They do not prove that every
+future source theory is impossible.
+
+\section{Type and dependency map}
+
+The source-only dependency order is
+\[
+\begin{aligned}
+  \A &\longrightarrow \Esrc \longrightarrow \Qadm,\\
+  \Qadm &\longrightarrow \Isosrc \longrightarrow \Redsrc,\\
+  (\Qadm,\Redsrc) &\longrightarrow \Osrc,\\
+  (\Esrc,\Qadm,\Isosrc) &\longrightarrow \Varsrc,\\
+  (\Qadm,\Isosrc,\Redsrc) &\longrightarrow S_{\Phi},\\
+  (\Qadm,\Varsrc,S_{\Phi}) &\longrightarrow S_{\mathrm{dyn}},\\
+  (\Qadm/\Redsrc,\Osrc) &\longrightarrow S_{\mathrm{rec}}.
+\end{aligned}
+\]
+Target atlas, target metric, benchmark success, and candidate reconstruction
+have no incoming edge to any source component. The machine-readable companion
+records the same graph and its forbidden edges.
+
+\section{Burden disposition and next task}
+
+P5-T01 discharges one narrow burden: the selected research architecture now
+has a coherent, typed, source-only theory target whose primitive,
+proposal-only, derived, and open components are explicit. This is a scoped
+source-only mathematical payload. It does not reduce the physical
+Distance-to-GR burden.
+
+P5-T02 must select whether \(\PhiSrc\) is, for example, a group action,
+semigroup action, category action, gauge flow, physical evolution,
+stochastic process, or ordering relation and prove the laws appropriate to
+the selected kind. Later packets must construct source dynamics, robustness,
+and a source-to-target reconstruction with explicit provenance.
+
+\section{Explicit non-conclusions}
+
+The tuple and its witnesses do not establish:
+\begin{itemize}
+  \item canonical ontology adoption or a physical source manifold \(M_{\rm src}\);
+  \item physical gauge symmetry;
+  \item any filled \(\PhiSrc\), dynamics, or reconstruction law;
+  \item an effective Lorentzian metric \(g_{\rm eff}\), causal structure,
+  clocks, or scale;
+  \item matter semantics, universal matter coupling, stress energy, or
+  backreaction;
+  \item Einstein-equation recovery or exact-GR benchmark promotion;
+  \item proof, publication, push, or completed-derivation authority.
+\end{itemize}
+
+\end{document}

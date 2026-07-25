@@ -1,0 +1,101 @@
+{
+  "authority_flags": {
+    "canonical_ontology_modified": false,
+    "distance_to_gr_delta_changed": false,
+    "distance_to_gr_ledger_modified_by_recovery": false,
+    "historical_p10_audit_outputs_modified": false,
+    "p5_t01_reexecuted": false,
+    "p5_t01_science_payload_modified": false,
+    "p5_t02_executed": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "publication_authorized": false,
+    "push_performed": false,
+    "scientific_claims_changed": false
+  },
+  "check_count": 6,
+  "checks": [
+    {
+      "check_id": "exact_source_and_protected_hashes",
+      "mismatch_paths": [],
+      "status": "PASS"
+    },
+    {
+      "candidate_family": "p5_t01_compact_source_theory_tuple",
+      "check_id": "p5_t01_candidate_family_slug",
+      "status": "PASS"
+    },
+    {
+      "check_id": "repository_task_taxonomy",
+      "historical_mutation_count": 0,
+      "required_task_error_count": 0,
+      "status": "PASS",
+      "stronger_science_inference_count": 0
+    },
+    {
+      "audit_status": "PASS",
+      "check_id": "p10_historical_audit_preserved",
+      "finding_ids": [
+        "P10-AUDIT-F001",
+        "P10-AUDIT-F002"
+      ],
+      "rollout_disposition": "FREEZE_BROADER_ROLLOUT_REPAIR_REQUIRED",
+      "status": "PASS"
+    },
+    {
+      "check_id": "p5_t01_science_payload_still_valid",
+      "status": "PASS",
+      "task_check_count": 17,
+      "task_failure_count": 0
+    },
+    {
+      "check_id": "authority_boundary",
+      "status": "PASS"
+    }
+  ],
+  "claim_boundary_summary": "The recovery changes one control slug and one deterministic lifecycle predicate only. P5-T01 science and the P10 historical audit remain exact; P5-T02 and every promotion layer remain blocked until checkpoint.",
+  "failed_check_count": 0,
+  "immutable_route_sha256": "36027e15e16ba42e5c41d3d7b6cf7cb34405306f3694664d41e9de9dfd82371d",
+  "job_id": "AJ-RT-20260725-004-001",
+  "next_plan_task_id": "P5-T02",
+  "plan_task_id": "P5-T01",
+  "protected_dirty_fingerprint": "1b84e8539a7b62c38193f3e4eb7700b02d7f2b966beab53b2b87bfab588a106f",
+  "recovery_for_plan_task_id": "P5-T01",
+  "repaired_findings": [
+    {
+      "finding_id": "P5-T01-DEPENDENT-F001",
+      "repair": "normalized candidate_family to the existing lowercase-slug grammar",
+      "status": "PASS"
+    },
+    {
+      "finding_id": "P5-T01-DEPENDENT-F002",
+      "repair": "recognized the exact same-task finalization lifecycle while preserving historical P10 output",
+      "status": "PASS"
+    }
+  ],
+  "result_status": "PASS_P5_T01_DEPENDENT_CONTRACT_RECOVERY",
+  "schema_id": "p5_t01_dependent_contract_recovery_receipt_v1",
+  "source_checkpoint_receipt_sha256": "951fbdcb04c7dd7ceb124cd9a8571dd7571a31e0cb3fc5ab68b59caeb0741e1b",
+  "source_hashes": {
+    "registries/DISTANCE_TO_GR_LEDGER.csv": "7bb5c01a9f893c192cc98408f22176ec8d1e8162c6b645b483c6053200ed136d",
+    "research_control/handoffs/handoff-0863.md": "85cd72f15e9380687dd58ae14e2c5d04b21c8898a527c0b162b48c834b39da5e",
+    "research_control/handoffs/handoff-0863.yaml": "7b15de2879b87d8c418bdc074f828e463e8a380ea2f93970960df9eab2e2d2cb",
+    "research_control/tasks/RT-20260722-003/artifacts/v21_p10_migration_readiness_compact_receipt.json": "db3410f2c166562a4cc8636011eeda15b7cb8f051c3917fea21b370e4da2ddb6",
+    "research_control/tasks/RT-20260722-003/artifacts/v21_p10_migration_readiness_validation.json": "cdcd907f4ad237118eab65f06f364263da08285456514605a0308bc203f7a6e6",
+    "research_control/tasks/RT-20260722-003/artifacts/validate_v21_p10_migration_readiness.py": "28193e920f246707f421a3e85c4a0122f345e5ffc2b19852d1ab901ab84a6d9a",
+    "research_control/tasks/RT-20260725-003/00_TASK.yaml": "e7dc30de998eb92576ae68dac68b92e8f9f6334c88f7cd990964520781aa0590",
+    "research_control/tasks/RT-20260725-003/artifacts/child_phys_math_p5_t01_source_theory.yaml": "037d479f8b5285bf4180f956ad99c8158ddfc57adbcef00adc754085520bb50e",
+    "research_control/tasks/RT-20260725-003/artifacts/child_phys_phil_p5_t01_source_theory.yaml": "18e24c5fcefbc5981cba7ccd6e613be32d7d33534c4f39acf4ee131bf909ce92",
+    "research_control/tasks/RT-20260725-003/artifacts/compact_source_theory_object_v1.tex": "2520f82e54edcb2668446579ceed7a7dfc7a8abf995572aa9889a3d9a3a4467c",
+    "research_control/tasks/RT-20260725-003/artifacts/compact_source_theory_spec_v1.yaml": "a381549ac6eb37346c1469f1157bdfa8417fbc010a19c087cf099b1368ab1b9c",
+    "research_control/tasks/RT-20260725-003/artifacts/compact_source_theory_type_dependency_v1.yaml": "559d6fd77f5f4fc93e97e3429cbc87a09acf91b39099f56ef7ba00fbf3c3dd2f",
+    "research_control/tasks/RT-20260725-003/artifacts/compact_source_theory_validation_receipt_v1.json": "838a0fb827e2912d4452bd19556b3c96a7ea5a6a814e23defa3401ff649b9432",
+    "research_control/tasks/RT-20260725-003/artifacts/parent_conflict_review_p5_t01_source_theory.yaml": "6bcec4104d73d0190850b36abd9c9604816af3d1adb3b82f7bdb503215bf8778",
+    "research_control/tasks/RT-20260725-003/artifacts/parent_fusion_notes_p5_t01_source_theory.md": "75b6fec9d87070dc66b0e342aa2b191593c9869146bc3809a7dbbec28945f779",
+    "research_control/tasks/RT-20260725-003/artifacts/validate_compact_source_theory.py": "0b06a81d649abe885b6a5c76020207b927004a459b79ebed0f8799c1dd7f41ba",
+    "research_control/tasks/RT-20260725-003/jobs/completions/AJC-AJ-RT-20260725-003-001.yaml": "e047845dc6ff48aa8e44e1667aba94961554190293393eb9346d915f29f9eb9d",
+    "tests/test_v21_p10_migration_readiness.py": "34c903161275ce7d04cc85e8001cf40bc85e4a5f52eb17bc96de5f02568772d4"
+  },
+  "status": "PASS",
+  "task_id": "RT-20260725-004"
+}

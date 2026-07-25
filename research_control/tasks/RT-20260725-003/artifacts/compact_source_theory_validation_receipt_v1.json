@@ -1,0 +1,115 @@
+{
+  "checks": [
+    {
+      "check_id": "file:compact_source_theory_spec_v1.yaml",
+      "detail": "required regular artifact exists",
+      "status": "PASS"
+    },
+    {
+      "check_id": "file:compact_source_theory_type_dependency_v1.yaml",
+      "detail": "required regular artifact exists",
+      "status": "PASS"
+    },
+    {
+      "check_id": "file:compact_source_theory_object_v1.tex",
+      "detail": "required regular artifact exists",
+      "status": "PASS"
+    },
+    {
+      "check_id": "file:child_phys_math_p5_t01_source_theory.yaml",
+      "detail": "required regular artifact exists",
+      "status": "PASS"
+    },
+    {
+      "check_id": "file:child_phys_phil_p5_t01_source_theory.yaml",
+      "detail": "required regular artifact exists",
+      "status": "PASS"
+    },
+    {
+      "check_id": "file:parent_conflict_review_p5_t01_source_theory.yaml",
+      "detail": "required regular artifact exists",
+      "status": "PASS"
+    },
+    {
+      "check_id": "file:parent_fusion_notes_p5_t01_source_theory.md",
+      "detail": "required regular artifact exists",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tuple_component_types",
+      "detail": "all eleven tuple components have the exact primitive, proposal-only, derived, or open status",
+      "status": "PASS"
+    },
+    {
+      "check_id": "open_slots_explicit",
+      "detail": "Phi, dynamics, and reconstruction slots are tagged open",
+      "status": "PASS"
+    },
+    {
+      "check_id": "source_isomorphism_and_redundancy",
+      "detail": "source isomorphism, redundancy quotient, and physical-gauge nonclaim are explicit",
+      "status": "PASS"
+    },
+    {
+      "check_id": "nontrivial_continuum_witness",
+      "detail": "continuum witness has distinct states, a separating observable, and three open slots",
+      "status": "PASS"
+    },
+    {
+      "check_id": "finite_type_witness",
+      "detail": "finite two-state reduction is explicitly proposal-only and open-slot preserving",
+      "status": "PASS"
+    },
+    {
+      "check_id": "malformed_fail_closed",
+      "detail": "target import, groupoid, invariance, and open-slot errors each fail closed",
+      "status": "PASS"
+    },
+    {
+      "check_id": "no_target_import_dependency_graph",
+      "detail": "dependency graph forbids target atlas, target metric, benchmark success, and candidate reconstruction imports",
+      "status": "PASS"
+    },
+    {
+      "check_id": "registered_source_object_content",
+      "detail": "TeX source contains the tuple, open-slot equations, fail-closed branch, next burden, and status boundary",
+      "status": "PASS"
+    },
+    {
+      "check_id": "parent_child_synthesis",
+      "detail": "both child perspectives completed, conflicts resolved, and fusion preserved the next obligation",
+      "status": "PASS"
+    },
+    {
+      "check_id": "claim_boundary",
+      "detail": "source-only draft/control status and all no-promotion booleans are explicit",
+      "status": "PASS"
+    }
+  ],
+  "claim_boundary_summary": "One coherent source-only theory target is typed with open Phi, dynamics, and reconstruction slots. No physical ontology, source law, target object, physics promotion, benchmark promotion, or completed derivation is authorized.",
+  "claim_status": "draft/control",
+  "finding_counts": {
+    "fail": 0,
+    "pass": 17,
+    "warning": 0
+  },
+  "object_id": "V21-P5-T01-COMPACT-SOURCE-THEORY-TUPLE-V1",
+  "plan_task_id": "P5-T01",
+  "result_status": "PASS",
+  "schema_id": "compact_source_theory_validation_receipt_v1",
+  "source_hashes": {
+    "research_control/tasks/RT-20260725-003/artifacts/child_phys_math_p5_t01_source_theory.yaml": "037d479f8b5285bf4180f956ad99c8158ddfc57adbcef00adc754085520bb50e",
+    "research_control/tasks/RT-20260725-003/artifacts/child_phys_phil_p5_t01_source_theory.yaml": "18e24c5fcefbc5981cba7ccd6e613be32d7d33534c4f39acf4ee131bf909ce92",
+    "research_control/tasks/RT-20260725-003/artifacts/compact_source_theory_object_v1.tex": "2520f82e54edcb2668446579ceed7a7dfc7a8abf995572aa9889a3d9a3a4467c",
+    "research_control/tasks/RT-20260725-003/artifacts/compact_source_theory_spec_v1.yaml": "a381549ac6eb37346c1469f1157bdfa8417fbc010a19c087cf099b1368ab1b9c",
+    "research_control/tasks/RT-20260725-003/artifacts/compact_source_theory_type_dependency_v1.yaml": "559d6fd77f5f4fc93e97e3429cbc87a09acf91b39099f56ef7ba00fbf3c3dd2f",
+    "research_control/tasks/RT-20260725-003/artifacts/parent_conflict_review_p5_t01_source_theory.yaml": "6bcec4104d73d0190850b36abd9c9604816af3d1adb3b82f7bdb503215bf8778",
+    "research_control/tasks/RT-20260725-003/artifacts/parent_fusion_notes_p5_t01_source_theory.md": "75b6fec9d87070dc66b0e342aa2b191593c9869146bc3809a7dbbec28945f779"
+  },
+  "validator_ids": [
+    "p5_t01_compact_source_theory_validator_v1",
+    "p5_t01_type_and_dependency_review_v1",
+    "p5_t01_no_target_import_audit_v1",
+    "p5_t01_parent_child_synthesis_review_v1"
+  ]
+}

@@ -1,0 +1,508 @@
+job_id: "AJ-RT-20260725-003-001"
+task_id: "RT-20260725-003"
+decision_id: "DDR-20260725-003"
+role_id: "ontology-formalizer"
+role_version: "0.2.0"
+execution_role_ref: "ontology-formalizer@0.2.0--RT-20260725-003"
+status: "completed"
+validation_status: "PASS"
+created_at: "2026-07-25T06:02:54Z"
+started_at: "2026-07-25T06:02:54Z"
+completed_at: "2026-07-25T06:07:01Z"
+completion_path: "research_control/tasks/RT-20260725-003/jobs/completions/AJC-AJ-RT-20260725-003-001.yaml"
+requires_human_gate: false
+objective: "Execute only v21 P5-T01: define one coherent source-only theory target with typed source states, isomorphisms, declared redundancies, observables, admissible variations, and explicitly open Phi_src, dynamics, and reconstruction slots."
+target_derivation_milestone: "source_ontology"
+milestone_burden: "Replace dispersed source records with one coherent theory target."
+route_label: "ontology-law-research-packet"
+route_reason: "Handoff-0862 and the immutable generation-108 route uniquely select P5-T01 after the committed P4-T06 checkpoint."
+immutable_route_sha256: "78dfe6f0ead764eb0362c094c5b2326d83a2d088ce73fc1c50ca4fc4c25b5c7e"
+plan_task_id: "P5-T01"
+recommendation_ids:
+  - "V21-R12"
+  - "V21-R13"
+  - "V21-R14"
+  - "V21-R15"
+  - "V21-R16"
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 108
+  passes_consumed: 98
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:108"
+  handoff_token: "9cd51ab842328dca62588caeb2499828568396a0727fd67b"
+  relay_claim_token: "4ee3fb5682cca3a2479609d594cd28b99903080198ab2c63"
+  route_work_item_id: "P5-T01"
+  route_worker_skill: "continue-research"
+  route_sha256: "78dfe6f0ead764eb0362c094c5b2326d83a2d088ce73fc1c50ca4fc4c25b5c7e"
+  worker_skill: "continue-research"
+  worker_invocation_count: 1
+
+mathematical_decisiveness_contract:
+  contract_path: "research_control/design/mathematical_decisiveness_completion_contract.md"
+  schema_path: ".agents/schemas/PHYSICS_COMPLETION_DECISIVENESS_SCHEMA.md"
+  enforcement_mode: "hard_failure"
+  active_after: "2026-06-21T02:32:39Z"
+
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "physics"
+  payload_type: "source_model"
+  candidate_family: "V21-P5-T01-COMPACT-SOURCE-THEORY-TUPLE-V1"
+  assumption_delta:
+    - "A source bundle and admissible source-state set are introduced only as proposal-only components of a draft/control object."
+    - "Source isomorphisms form a groupoid and declared redundancies form a wide subgroupoid; physical gauge interpretation remains open."
+    - "Phi_src dynamics and reconstruction are typed through tagged open slots and carry no hidden values."
+  materiality_basis: "P4-T06 supplied a stable source-architecture boundary but left source states, equivalence, observables, variations, dynamics, and reconstruction dispersed or open. P5-T01 creates the one coherent typed target required by later P5 tasks."
+  payload_details:
+    definition_identity: "V21-P5-T01-COMPACT-SOURCE-THEORY-TUPLE-V1"
+    typed_component_count: 11
+    continuum_witness_present: true
+    finite_witness_present: true
+    malformed_fail_closed_branch_count: 4
+    theorem_claimed: false
+  source_basis:
+    - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+    - "TEX-V21-P4-T06-SELECTED-ONTOLOGY-REGIME-INTEGRATION-V1"
+    - "TEX-ONTOLOGY-AETHER-FLOW-FOUNDATIONS"
+    - "TEX-ONTOLOGY-AETHER-FLOW-DYNAMICS"
+    - "TEX-ONTOLOGY-AETHER-FLOW-GEOMETRY"
+    - "research_control/design/gr_derivation_burden_map.md"
+    - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  expected_artifact_paths:
+    - "research_control/tasks/RT-20260725-003/artifacts/compact_source_theory_object_v1.tex"
+    - "research_control/tasks/RT-20260725-003/artifacts/compact_source_theory_spec_v1.yaml"
+    - "research_control/tasks/RT-20260725-003/artifacts/compact_source_theory_type_dependency_v1.yaml"
+    - "research_control/tasks/RT-20260725-003/artifacts/compact_source_theory_validation_receipt_v1.json"
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+
+family_freeze_admission:
+  schema_id: "family_freeze_route_admission_v1"
+  policy_id: "family_freeze_reopening_policy_v1"
+  route_id: "v21_p5_t01_compact_source_theory_tuple"
+  family_id: "V21-P5-T01-COMPACT-SOURCE-THEORY-TUPLE-V1"
+  family_identity_sha256: "5c4905535063c02b2490da0ef363339e48fd48148c20e33e248a06008c63640f"
+  assumption_sha256es:
+    - "6ec168cf9a05362d54f4398e3808748c98b7d4801725fd71c4e7bb91c1499572"
+  route_kind: "primitive_investigation"
+  detected_match_basis: []
+  reopening:
+    requested: false
+    class: "none"
+  authority_limits:
+    local_family_freeze_preserved: true
+    global_no_go_claimed: false
+    automatic_candidate_adoption: false
+    theorem_truth_inferred: false
+    ontology_modified: false
+    physics_promotion_authorized: false
+
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  expected_durable_outputs:
+    physics:
+      - "registered compact source-theory object definition"
+      - "typed source-theory machine specification"
+      - "source-only type and dependency diagram"
+      - "continuum and finite proposal-only type witnesses"
+    project_system:
+      - "task-local validator and compact receipt"
+      - "parent-child synthesis records"
+      - "standard control records and generated memory derivatives"
+  acceptance_criteria:
+    physics:
+      - "each tuple component has an explicit mathematical type and epistemic status"
+      - "source isomorphism redundancy observables and variations are defined"
+      - "Phi_src dynamics and reconstruction remain tagged open"
+      - "malformed target-import groupoid invariance and open-slot branches fail closed"
+    project_system:
+      - "task-local validation and claim-language checks pass"
+      - "registered source hashes and generated derivatives are synchronized"
+      - "one governed checkpoint records the bounded transaction"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: false
+    exception_id: ""
+    evidence_path: ""
+    evidence_sha256: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0862"
+  source_handoff_path: "research_control/handoffs/handoff-0862.yaml"
+  source_handoff_sha256: "3c4590a2855ed8a41e487a92cf95defd6574c6b689292f213abbaed6f22a4a36"
+  selected_plan_task_id: "P5-T01"
+  guard_outcome: "below_threshold"
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  parent:
+    execution_unit_id: "parent"
+    perspective: "physicist_mathematician_philosopher"
+    responsibilities:
+      - "verify the exact P5-T01 source-only claim boundary"
+      - "fuse type consistency with epistemic status discipline"
+      - "preserve open slots and fail-closed target-import boundaries"
+  children:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260725-003/artifacts/child_phys_math_p5_t01_source_theory.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260725-003/artifacts/child_phys_phil_p5_t01_source_theory.yaml"
+      status: "completed"
+  conflict_policy:
+    review_path: "research_control/tasks/RT-20260725-003/artifacts/parent_conflict_review_p5_t01_source_theory.yaml"
+    max_resolution_rounds: 2
+    require_parallel_child_revision: true
+    unresolved_conflict_status: "blocked"
+  fusion_policy:
+    fusion_notes_path: "research_control/tasks/RT-20260725-003/artifacts/parent_fusion_notes_p5_t01_source_theory.md"
+    fused_output_path: "research_control/tasks/RT-20260725-003/artifacts/compact_source_theory_object_v1.tex"
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+    final_output_replaces_old_single_role_artifact: true
+
+allowed_read_paths:
+  - "SOUL.md"
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - ".agents/roles/physics/ontology-formalizer.v0.2.0.md"
+  - ".agents/schemas/**"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  - "research_control/design/**"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0862.yaml"
+  - "research_control/handoffs/handoff-0862.md"
+  - "research_control/tasks/RT-20260724-010/**"
+  - "ontology/tex/aether_flow_foundations.tex"
+  - "ontology/tex/aether_flow_dynamics.tex"
+  - "ontology/tex/aether_flow_geometry.tex"
+  - "registries/**"
+
+allowed_write_paths:
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_burden_status_migration_receipt.json"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status.md"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_validation.json"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_compact_receipt.json"
+  - "research_control/tasks/RT-20260725-003/**"
+  - "research_control/handoffs/handoff-0863.yaml"
+  - "research_control/handoffs/handoff-0863.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/PDF_DERIVATIVE_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "registries/TEX_SOURCE_REGISTRY.csv"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/pdf/**"
+  - "wiki/tex/**"
+
+allowed_generated_paths:
+  - ".local/**"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_burden_status_migration_receipt.json"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status.md"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_validation.json"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_compact_receipt.json"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/pdf/**"
+  - "wiki/tex/**"
+
+forbidden_paths:
+  - "ontology/**"
+  - "manuscripts/**"
+  - "legacy_ontology/**"
+  - "html/**"
+  - "implementations_plans/**"
+  - ".agents/roles/**"
+  - ".codex/skills/**"
+  - "registries/METRIC_USE_LEDGER.csv"
+  - "research_control/tasks/RT-20260724-010/**"
+
+allowed_source_classes:
+  - "science_draft"
+  - "task_local_source_definition"
+  - "task_local_type_witness"
+  - "project_control"
+  - "registry"
+  - "role_contract"
+  - "generated_memory_derivative"
+
+forbidden_source_classes:
+  - "canonical_ontology_write"
+  - "benchmark_promotion"
+  - "candidate_reconstruction"
+  - "gate_chair_verdict"
+  - "completed_derivation_claim"
+  - "global_theory_rejection"
+  - "generated_derivative_authority"
+  - "source_law_adoption"
+  - "physical_ontology_adoption"
+  - "physical_gauge_claim"
+  - "filled_Phi_dynamics_or_reconstruction"
+  - "M_src_or_g_eff_adoption"
+  - "matter_coupling_or_Einstein_equations"
+  - "proof_publication_or_push"
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1011
+    relationship_row_count: 5000
+    semantic_row_count: 1011
+    vault_row_count: 1011
+    local_cache_only_warning_count: 0
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: true
+    refresh_performed: true
+    before_core_validation_status: "PASS"
+    before_freshness_status: "WARN"
+    before_local_retrieval_status: "WARN"
+    before_local_cache_only_warning_count: 14
+    after_core_validation_status: "PASS"
+    after_freshness_status: "PASS"
+    after_local_retrieval_status: "PASS"
+    after_local_cache_only_warning_count: 0
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"compact source theory tuple\" --limit 10 --json"
+      query_type: "search"
+      query_text: "compact source theory tuple"
+      returned_object_ids:
+        - "TEX-V21-P4-T06-SELECTED-ONTOLOGY-REGIME-INTEGRATION-V1"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"selected ontology regime integration\" --limit 10 --json"
+      query_type: "search"
+      query_text: "selected ontology regime integration"
+      returned_object_ids:
+        - "TEX-V21-P4-T06-SELECTED-ONTOLOGY-REGIME-INTEGRATION-V1"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-V21-P4-T06-SELECTED-ONTOLOGY-REGIME-INTEGRATION-V1 --json"
+      query_type: "lookup"
+      query_text: "TEX-V21-P4-T06-SELECTED-ONTOLOGY-REGIME-INTEGRATION-V1"
+      returned_object_ids:
+        - "TEX-V21-P4-T06-SELECTED-ONTOLOGY-REGIME-INTEGRATION-V1"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+    - object_id: "TEX-V21-P4-T06-SELECTED-ONTOLOGY-REGIME-INTEGRATION-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260724-010/artifacts/selected_ontology_regime_integration_v1.tex"
+      source_hash: "02e624b1e79f0212c5c295ec2df9a9d4d42720708e724101194090175e5bc03e"
+    - object_id: "TEX-ONTOLOGY-AETHER-FLOW-FOUNDATIONS"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "ontology/tex/aether_flow_foundations.tex"
+      source_hash: "4749d9e8b6858a43230e99029cccc3274b55fc2ae2a2cdf45a983a60c98e5b59"
+    - object_id: "TEX-ONTOLOGY-AETHER-FLOW-DYNAMICS"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "ontology/tex/aether_flow_dynamics.tex"
+      source_hash: "fd6e579e71ef7f2ac4c9668ceede051ad57033ee52357b2552a9e3a5a53939c7"
+    - object_id: "TEX-ONTOLOGY-AETHER-FLOW-GEOMETRY"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "ontology/tex/aether_flow_geometry.tex"
+      source_hash: "f60a81b63f814b03cca7190b3ac6285842a55317f4aed058cc6e75154cc0b4d7"
+  authority_note: "Generated Obsidian wiki semantic SQLite and .local surfaces are retrieval-only navigation layers and not authority."
+
+approved_commands:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  - "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python research_control/tasks/RT-20260725-003/artifacts/validate_compact_source_theory.py --write-report --json"
+  - "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python research_control/tasks/RT-20260725-003/artifacts/validate_compact_source_theory.py --check --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/build_pdf_derivatives.py --scratch research_control/tasks/RT-20260725-003/artifacts/compact_source_theory_object_v1.tex"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --check"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --check"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --write"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --check"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --json output/research_dependency_graph.json --markdown wiki/indexes/research_dependency_graph.md --dot output/research_dependency_graph.dot"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --check"
+  - ".venv/bin/python scripts/research_control/generate_claim_graph_v1.py --json output/claim_graph_v1.json"
+  - ".venv/bin/python scripts/research_control/generate_claim_graph_v1.py --check"
+  - ".venv/bin/python scripts/research_control/validate_claim_graph_v1.py --json"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --json-summary"
+  - ".venv/bin/python scripts/research_control/run_full_research_control_validation.py --json --tail-chars 2500"
+  - "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m unittest -v tests.test_research_control"
+  - "git diff --check"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260725-003-001"
+
+required_validators:
+  - "memory_preflight"
+  - "physics_payload_admission"
+  - "family_freeze_admission"
+  - "dual_budget_allocation"
+  - "ordinary_route_guard_admission"
+  - "task_local_type_checker"
+  - "continuum_and_finite_instantiation"
+  - "malformed_fail_closed"
+  - "no_target_import"
+  - "parent_child_synthesis"
+  - "scratch_tex_build"
+  - "memory_bootstrap"
+  - "memory_validate_only"
+  - "renderers"
+  - "graph_freshness"
+  - "project_change_classifier"
+  - "project_improvement_signals"
+  - "documentation_impact"
+  - "claim_language_changed"
+  - "research_control_validation"
+  - "full_research_control_validation"
+  - "research_control_test_shard"
+  - "git_diff_check"
+  - "checkpoint_research_transaction"
+
+expected_outputs:
+  - "research_control/tasks/RT-20260725-003/artifacts/compact_source_theory_object_v1.tex"
+  - "research_control/tasks/RT-20260725-003/artifacts/compact_source_theory_spec_v1.yaml"
+  - "research_control/tasks/RT-20260725-003/artifacts/compact_source_theory_type_dependency_v1.yaml"
+  - "research_control/tasks/RT-20260725-003/artifacts/compact_source_theory_validation_receipt_v1.json"
+  - "research_control/tasks/RT-20260725-003/artifacts/child_phys_math_p5_t01_source_theory.yaml"
+  - "research_control/tasks/RT-20260725-003/artifacts/child_phys_phil_p5_t01_source_theory.yaml"
+  - "research_control/tasks/RT-20260725-003/artifacts/parent_conflict_review_p5_t01_source_theory.yaml"
+  - "research_control/tasks/RT-20260725-003/artifacts/parent_fusion_notes_p5_t01_source_theory.md"
+  - "research_control/tasks/RT-20260725-003/**"
+  - "research_control/handoffs/handoff-0863.yaml"
+  - "research_control/handoffs/handoff-0863.md"
+  - "research_control/program_state.yaml"
+
+claim_boundary: "CB-V21-P5-T01-COMPACT-SOURCE-THEORY-001"
+documentation_impact_id: "DI-RT-20260725-003-001"
+completion_id: "AJC-AJ-RT-20260725-003-001"
+resolves_signal_routing: false
+
+stop_conditions:
+  - "the tuple imports a target atlas metric benchmark success or candidate reconstruction"
+  - "an open slot would be evaluated as a filled value"
+  - "physical gauge source law physical ontology M_src g_eff matter coupling Einstein equations or benchmark promotion would be claimed"
+  - "a path outside the task-local and standard control allowlist is required"
+  - "validation scratch build or governed checkpoint fails"
+
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+  forbidden_conclusions:
+    - "canonical ontology or M_src adoption"
+    - "physical gauge symmetry"
+    - "filled Phi_src source dynamics or reconstruction"
+    - "g_eff claim"
+    - "matter coupling claim"
+    - "Einstein-equation claim"
+    - "benchmark promotion"
+    - "proof publication push or completed derivation"
+    - "unscoped impossibility conclusion"
+  summary: "P5-T01 creates one coherent draft/control source-only theory target and type witnesses; it adopts no physical object or law."
+
+authorization_layers:
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: ""
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  canonical_ontology_edit_authorized: false
+  ontology_regime_selection_authorized: false
+  physical_gauge_claim_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false

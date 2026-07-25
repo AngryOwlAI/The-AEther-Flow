@@ -4,6 +4,7 @@ import importlib.util
 import re
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -68,6 +69,59 @@ class P10MigrationReadinessTests(unittest.TestCase):
         self.assertTrue(component["active_task_advanced"])
         self.assertTrue(component["latest_handoff_advanced"])
         self.assertTrue(component["task_count_advanced"])
+
+    def test_same_task_finalization_preserves_the_historical_audit(self) -> None:
+        registry_count = sum(
+            1
+            for line in (
+                REPO_ROOT / "registries/RESEARCH_TASK_REGISTRY.csv"
+            ).read_text(encoding="utf-8").splitlines()[1:]
+            if line.strip()
+        )
+        receipt = {
+            "source_hashes": {
+                "registries/RESEARCH_TASK_REGISTRY.csv": "registry-live",
+                "research_control/program_state.yaml": "program-before-finalization",
+            },
+            "active_task_id": "RT-SAME-TASK",
+            "latest_handoff_id": "handoff-same-task",
+            "task_count": registry_count,
+        }
+        live_hashes = {
+            "registries/RESEARCH_TASK_REGISTRY.csv": "registry-live",
+            "research_control/program_state.yaml": "program-after-finalization",
+        }
+        with (
+            patch.object(
+                self.module,
+                "run_json_command",
+                return_value=(
+                    1,
+                    {"status": "FAIL", "error": "generated Markdown is stale"},
+                ),
+            ),
+            patch.object(self.module, "load_json", return_value=receipt),
+            patch.object(
+                self.module,
+                "program_identity",
+                return_value=("RT-SAME-TASK", "handoff-same-task"),
+            ),
+            patch.object(
+                self.module,
+                "sha256_path",
+                side_effect=lambda relative: live_hashes[relative],
+            ),
+        ):
+            component = self.module.diagnose_burden_status()
+
+        self.assertEqual(component["finding_id"], "P10-AUDIT-F002")
+        self.assertEqual(
+            component["stale_live_input_paths"],
+            [
+                "registries/RESEARCH_TASK_REGISTRY.csv",
+                "research_control/program_state.yaml",
+            ],
+        )
 
     def test_all_declared_historical_samples_resolve(self) -> None:
         samples = self.validation["historical_samples"]

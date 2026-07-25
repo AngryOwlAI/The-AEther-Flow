@@ -1,0 +1,751 @@
+job_id: "AJ-RT-20260725-003-001"
+completion_id: "AJC-AJ-RT-20260725-003-001"
+task_id: "RT-20260725-003"
+task_type: "v21_p5_t01_compact_source_theory_tuple_and_object_model"
+decision_id: "DDR-20260725-003"
+role_id: "ontology-formalizer"
+role_version: "0.2.0"
+execution_role_ref: "ontology-formalizer@0.2.0--RT-20260725-003"
+status: "completed"
+validation_status: "PASS"
+final_repository_validation_status: "PASS_READY_FOR_CHECKPOINT"
+created_at: "2026-07-25T06:02:54Z"
+started_at: "2026-07-25T06:02:54Z"
+completed_at: "2026-07-25T06:07:01Z"
+objective: "Define the selected ontology's source state space, gauge or symmetry structure, observables, admissible variations, dynamics slot, and reconstruction slot in one compact formal object."
+completion_summary: "P5-T01 defines one coherent draft/control source-theory tuple with eleven typed components, tagged-open Phi_src, dynamics, and reconstruction slots, source isomorphism and declared-redundancy groupoids, invariant observables, admissible variations, continuum and finite type witnesses, and four fail-closed malformed branches. The coherent-theory-target burden is discharged at source-only draft/control scope; no physical ontology, source law, physical gauge, target bridge, or downstream GR object is adopted."
+objective_result: "completed_at_draft_control_source_only_scope"
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 108
+  passes_consumed: 98
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:108"
+  handoff_token: "9cd51ab842328dca62588caeb2499828568396a0727fd67b"
+  relay_claim_token: "4ee3fb5682cca3a2479609d594cd28b99903080198ab2c63"
+  route_work_item_id: "P5-T01"
+  route_worker_skill: "continue-research"
+  route_sha256: "78dfe6f0ead764eb0362c094c5b2326d83a2d088ce73fc1c50ca4fc4c25b5c7e"
+  worker_skill: "continue-research"
+  worker_invocation_count: 1
+
+transaction_status: "ready_for_checkpoint"
+result_disposition: "P5_T01_COMPACT_SOURCE_THEORY_PASS_READY_FOR_CHECKPOINT"
+checkpoint_commit:
+  required: true
+  attempted: false
+  committed: false
+  commit_sha: ""
+  push_performed: false
+
+is_physics_task: true
+payload_class: "source_model"
+minimum_payload: "one compact typed source-only theory target with a nontrivial witness and a malformed fail-closed branch"
+has_new_mathematical_payload: true
+has_finite_local_witness: true
+has_countermodel: true
+external_red_team_finding_requires_integration: false
+physics_promotion_authorized: false
+proof_authority: false
+
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_task_id: "P5-T01"
+  phase_id: "P5"
+  work_kind: "formalization_or_theorem"
+  task_class: "science"
+  expected_result_kind: "completed_or_precisely_blocked"
+  dependency_task_id: "P4-T06"
+  dependency_completion_path: "research_control/tasks/RT-20260724-010/jobs/completions/AJC-AJ-RT-20260724-010-001.yaml"
+  dependency_checkpoint_commit: "f472ad4d837f72b14fc5b08ff189550bbae1a97a"
+  work_item_status: "completed_ready_for_checkpoint"
+  recommendation_ids:
+    - "V21-R12"
+    - "V21-R13"
+    - "V21-R14"
+    - "V21-R15"
+    - "V21-R16"
+  recommendation_coverage_role: "direct_implementation"
+  scientific_claims_changed: true
+  scientific_claim_change_scope: "draft/control source-only theory-object typing and evidence only"
+  physical_status_changed: false
+  distance_to_gr_delta_changed: true
+  distance_to_gr_delta_scope: "scoped_source_only_object"
+  physics_promotion_authorized: false
+  proof_authority: false
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  observed_durable_outputs:
+    physics:
+      - "registered compact source-theory object definition"
+      - "typed source-theory machine specification"
+      - "source-only type and dependency diagram"
+      - "continuum and finite proposal-only type witnesses"
+    project_system:
+      - "task-local validator and compact receipt"
+      - "parent-child synthesis records"
+      - "standard control records and generated memory derivatives"
+  accepted_criteria:
+    physics:
+      - "each tuple component has an explicit mathematical type and epistemic status"
+      - "source isomorphism redundancy observables and variations are defined"
+      - "Phi_src dynamics and reconstruction remain tagged open"
+      - "malformed target-import groupoid invariance and open-slot branches fail closed"
+    project_system:
+      - "task-local validation and claim-language checks pass"
+      - "registered source hashes and generated derivatives are synchronized"
+      - "one governed checkpoint records the bounded transaction"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+physics_payload_admission_result:
+  status: "admitted"
+  admission_path: "physics"
+  payload_type: "source_model"
+  candidate_family: "V21-P5-T01-COMPACT-SOURCE-THEORY-TUPLE-V1"
+  definition_identity: "V21-P5-T01-COMPACT-SOURCE-THEORY-TUPLE-V1"
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed_by_admission: false
+  physical_status_changed_by_admission: false
+  physics_promotion_authorized: false
+
+family_freeze_admission_result:
+  status: "admitted_unfrozen"
+  route_kind: "primitive_investigation"
+  family_id: "V21-P5-T01-COMPACT-SOURCE-THEORY-TUPLE-V1"
+  detected_match_basis: []
+  reopening_requested: false
+  local_family_freeze_preserved: true
+  global_no_go_inferred: false
+  physics_promotion_authorized: false
+
+ordinary_route_guard_admission_result:
+  status: "PASS"
+  source_handoff_id: "handoff-0862"
+  selected_plan_task_id: "P5-T01"
+  guard_outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  scientific_status_changed_by_guard: false
+  physics_promotion_authorized: false
+
+artifacts:
+  registered_source_theory_object: "research_control/tasks/RT-20260725-003/artifacts/compact_source_theory_object_v1.tex"
+  machine_specification: "research_control/tasks/RT-20260725-003/artifacts/compact_source_theory_spec_v1.yaml"
+  type_dependency_diagram: "research_control/tasks/RT-20260725-003/artifacts/compact_source_theory_type_dependency_v1.yaml"
+  compact_receipt: "research_control/tasks/RT-20260725-003/artifacts/compact_source_theory_validation_receipt_v1.json"
+  validator: "research_control/tasks/RT-20260725-003/artifacts/validate_compact_source_theory.py"
+  child_phys_math: "research_control/tasks/RT-20260725-003/artifacts/child_phys_math_p5_t01_source_theory.yaml"
+  child_phys_phil: "research_control/tasks/RT-20260725-003/artifacts/child_phys_phil_p5_t01_source_theory.yaml"
+  conflict_review: "research_control/tasks/RT-20260725-003/artifacts/parent_conflict_review_p5_t01_source_theory.yaml"
+  fusion_notes: "research_control/tasks/RT-20260725-003/artifacts/parent_fusion_notes_p5_t01_source_theory.md"
+
+output_paths:
+  - "research_control/tasks/RT-20260725-003/artifacts/compact_source_theory_object_v1.tex"
+  - "research_control/tasks/RT-20260725-003/artifacts/compact_source_theory_spec_v1.yaml"
+  - "research_control/tasks/RT-20260725-003/artifacts/compact_source_theory_type_dependency_v1.yaml"
+  - "research_control/tasks/RT-20260725-003/artifacts/compact_source_theory_validation_receipt_v1.json"
+  - "research_control/tasks/RT-20260725-003/artifacts/validate_compact_source_theory.py"
+  - "research_control/tasks/RT-20260725-003/artifacts/child_phys_math_p5_t01_source_theory.yaml"
+  - "research_control/tasks/RT-20260725-003/artifacts/child_phys_phil_p5_t01_source_theory.yaml"
+  - "research_control/tasks/RT-20260725-003/artifacts/parent_conflict_review_p5_t01_source_theory.yaml"
+  - "research_control/tasks/RT-20260725-003/artifacts/parent_fusion_notes_p5_t01_source_theory.md"
+  - "research_control/tasks/RT-20260725-003/00_TASK.yaml"
+  - "research_control/tasks/RT-20260725-003/DDR-20260725-003.md"
+  - "research_control/tasks/RT-20260725-003/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260725-003/roles/ontology-formalizer@0.2.0--RT-20260725-003.yaml"
+  - "research_control/tasks/RT-20260725-003/jobs/AJ-RT-20260725-003-001.yaml"
+  - "research_control/tasks/RT-20260725-003/jobs/completions/AJC-AJ-RT-20260725-003-001.yaml"
+  - "research_control/handoffs/handoff-0863.yaml"
+  - "research_control/handoffs/handoff-0863.md"
+
+artifact_receipts:
+  - artifact_id: "V21-P5-T01-COMPACT-SOURCE-THEORY-TUPLE-V1"
+    path: "research_control/tasks/RT-20260725-003/artifacts/compact_source_theory_object_v1.tex"
+    sha256: "2520f82e54edcb2668446579ceed7a7dfc7a8abf995572aa9889a3d9a3a4467c"
+    status_label: "draft/control"
+  - artifact_id: "V21-P5-T01-SOURCE-THEORY-SPEC-V1"
+    path: "research_control/tasks/RT-20260725-003/artifacts/compact_source_theory_spec_v1.yaml"
+    sha256: "a381549ac6eb37346c1469f1157bdfa8417fbc010a19c087cf099b1368ab1b9c"
+    status_label: "draft/control"
+  - artifact_id: "V21-P5-T01-SOURCE-THEORY-TYPE-DEPENDENCY-V1"
+    path: "research_control/tasks/RT-20260725-003/artifacts/compact_source_theory_type_dependency_v1.yaml"
+    sha256: "559d6fd77f5f4fc93e97e3429cbc87a09acf91b39099f56ef7ba00fbf3c3dd2f"
+    status_label: "draft/control"
+  - artifact_id: "V21-P5-T01-COMPACT-RECEIPT-V1"
+    path: "research_control/tasks/RT-20260725-003/artifacts/compact_source_theory_validation_receipt_v1.json"
+    sha256: "838a0fb827e2912d4452bd19556b3c96a7ea5a6a814e23defa3401ff649b9432"
+    status_label: "operational_evidence"
+
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_execution_unit_count: 2
+  outer_agentjob_count: 1
+  child_agentjob_count: 0
+
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260725-003/artifacts/child_phys_math_p5_t01_source_theory.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260725-003/artifacts/child_phys_phil_p5_t01_source_theory.yaml"
+      status: "completed"
+  conflict_review:
+    status: "resolved"
+    review_path: "research_control/tasks/RT-20260725-003/artifacts/parent_conflict_review_p5_t01_source_theory.yaml"
+    resolution_rounds: 1
+    resolved_conflict_count: 3
+    unresolved_conflicts: []
+  fusion:
+    fused_output_path: "research_control/tasks/RT-20260725-003/artifacts/compact_source_theory_object_v1.tex"
+    fusion_notes_path: "research_control/tasks/RT-20260725-003/artifacts/parent_fusion_notes_p5_t01_source_theory.md"
+    shared_consensus_summary: "Both perspectives require explicit status tags, three open slots, source-only provenance, and no physical overread."
+    unique_phys_math_contributions: "Groupoid/subgroupoid typing, invariant observables, tagged-slot sum types, witnesses, and malformed branches."
+    unique_phys_phil_contributions: "Primitive-debt and proposal-only status discipline, declared redundancy versus physical gauge, and witness non-adoption boundaries."
+    novelty_preservation_summary: "The fusion preserves both mathematical construction and epistemic non-promotion rather than flattening either perspective."
+    claim_boundary_preservation_summary: "No target import, source-law adoption, physical gauge, downstream GR object, proof, publication, push, or completed derivation is authorized."
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+
+ontology_law_research_packet:
+  route: "ontology-law-research-packet"
+  trigger_classification: "derivation_critical_missing_source_law"
+  target_derivation_milestone: "source_ontology"
+  milestone_burden: "Replace dispersed source records with one coherent theory target."
+  missing_source_law: "A coherent object specifying source states, source isomorphisms, declared redundancies, observables, admissible variations, and explicit Phi_src, dynamics, and reconstruction interfaces."
+  underdetermination_statement: "The current ontology does not derive the source bundle, admissible source states, source redundancy, observables, variations, Phi_src semantics, source dynamics, or reconstruction law."
+  no_go_theorem_status: "not_proved"
+  adoption_status:
+    current_adoption: "blocked"
+    continuation: "open"
+    status_pair: "blocked_adoption_open_continuation"
+  packet_payload_mode: "candidate_law_payload"
+  candidate_law_payload:
+    status_label: "draft/control"
+    source_side_definition: "A source-only tuple contains an inherited smooth arena, a supplied source bundle, admissible sections, a source-isomorphism groupoid, a declared-redundancy subgroupoid, invariant observables, equivariant variations, and tagged-open Phi, dynamics, and reconstruction interfaces."
+    formal_objects:
+      - "smooth source arena A as explicit primitive debt"
+      - "source bundle pi:E->A and nonempty admissible state set Q_adm"
+      - "source-isomorphism groupoid Iso_src and wide redundancy subgroupoid Red_src"
+      - "Red_src-invariant observable algebra O_src and equivariant variation assignment Var_src"
+      - "tagged-open slots S_Phi S_dyn and S_rec"
+    domains:
+      - "Q_adm is a nonempty subset of smooth sections of E"
+      - "Iso_src and Red_src have Q_adm as object set"
+      - "O_src consists of real-valued functionals on Q_adm invariant under Red_src"
+      - "Var_src(q) lies in the source-section tangent space"
+    maps:
+      - "groupoid source target identity composition and inverse maps"
+      - "quotient projection Q_adm -> Q_adm/Red_src"
+      - "observable functionals F:Q_adm->R"
+      - "tagged Slot(X) constructors open and filled"
+    proof_obligations:
+      - "P5-T02 must select the semantic kind of Phi_src and prove its basic laws"
+      - "later work must construct source dynamics compatible with variations and redundancy"
+      - "later work must construct a source-provenance-certified reconstruction and audit robustness"
+      - "all physical and exact-GR bridges require separate evidence and gates"
+  exact_gr_recovery_obligations:
+    checklist:
+      - "Select and justify Phi_src semantics without importing desired physical outputs."
+      - "Construct source dynamics and prove compatibility with admissible variations and declared redundancies."
+      - "Construct a source-to-target bridge with provenance, robustness, and uniqueness or controlled nonuniqueness."
+      - "Recover metric, causal, clock, matter, coupling, and Einstein-equation structure in a stated regime."
+      - "Obtain protected human authority before ontology adoption or benchmark promotion."
+    distance_to_gr_links:
+      - "source_ontology_primitives"
+      - "source_equivalence_eqsrc"
+      - "m_src"
+      - "g_eff"
+      - "matter_coupling"
+      - "einstein_equations"
+      - "benchmark_promotion"
+  no_target_import_audit_scope:
+    forbidden_source_classes:
+      - "target_atlas"
+      - "target_metric"
+      - "benchmark_success"
+      - "generated_derivative"
+      - "registry_metadata_authority"
+      - "role_authority"
+      - "validation_authority"
+    checked_objects:
+      - "all eleven tuple components"
+      - "continuum torus-amplitude witness"
+      - "finite two-state reduction"
+      - "type and dependency diagram"
+      - "reconstruction-interface provenance rule"
+  failure_branches:
+    target_import: "fail_closed_target_import"
+    groupoid_defect: "fail_closed_type_error"
+    observable_noninvariance: "fail_closed_invariance_error"
+    open_slot_evaluation: "fail_closed_open_slot"
+  known_risks:
+    - "proposal-only bundle and state choices could be overread as adopted ontology"
+    - "declared redundancy could be overread as physical gauge"
+    - "an abstract reconstruction interface could be overread as a filled physical bridge"
+  failed_alternatives:
+    - "A tuple built from desired target objects is rejected as target import."
+    - "An untagged placeholder is rejected because it can hide an illicit value."
+  human_gate_request:
+    required_before_adoption: true
+    requested_decision: "No gate is requested by P5-T01; any later adoption of this object, a source law, physical gauge, or reconstruction remains separately human-gated."
+    exact_requested_ontology_edit: ""
+
+new_mathematical_payload:
+  - payload_id: "NMP-RT-20260725-003-001"
+    payload_type: "finite_concrete_source_object_witnesses"
+    name: "Torus-amplitude and two-state source-object witnesses"
+    summary: "Constructs a smooth torus-amplitude family with distinct states, a separating invariant observable, a nonzero admissible variation, identity groupoids, and three open slots, plus a finite two-state reduction."
+  - payload_id: "NMP-RT-20260725-003-002"
+    payload_type: "concrete_certificate_step_families"
+    name: "Tagged open-slot and fail-closed object certificate"
+    summary: "Defines Slot(X), source groupoid and redundancy axioms, observable invariance, the open reconstruction interface, and four exact malformed-object rejection branches."
+
+mathematical_payload_manifest:
+  - payload_id: "PAYLOAD-RT-20260725-003-001"
+    payload_type: "definition"
+    object_name: "V21 P5-T01 compact source-theory tuple"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260725-003/artifacts/compact_source_theory_object_v1.tex"
+    burden_effect: "discharges"
+    summary: "Defines one coherent source-only target with typed primitive, proposal-only, derived, and open components."
+  - payload_id: "PAYLOAD-RT-20260725-003-002"
+    payload_type: "explicit_witness"
+    object_name: "continuum torus-amplitude source-object witness"
+    claim_status: "proposal-only"
+    source_path: "research_control/tasks/RT-20260725-003/artifacts/compact_source_theory_spec_v1.yaml"
+    burden_effect: "narrows"
+    summary: "Shows non-emptiness and internal typing without physical adoption."
+  - payload_id: "PAYLOAD-RT-20260725-003-003"
+    payload_type: "countermodel"
+    object_name: "malformed target-import and open-slot evaluation branches"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260725-003/artifacts/compact_source_theory_spec_v1.yaml"
+    burden_effect: "audits"
+    summary: "Rejects four malformed object classes fail closed without asserting impossibility beyond those exact inputs."
+  - payload_id: "PAYLOAD-RT-20260725-003-004"
+    payload_type: "dependency_map_update"
+    object_name: "P5 source-theory dependency map"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260725-003/artifacts/compact_source_theory_type_dependency_v1.yaml"
+    burden_effect: "selects_next"
+    summary: "Makes P5-T02 the next distinct obligation while preserving every downstream GR block."
+
+physics_progress_status:
+  status: "burden_discharged"
+  target_derivation_milestone: "source_ontology"
+  milestone_burden: "Replace dispersed source records with one coherent theory target."
+  explanation: "P5-T01 now supplies one coherent draft/control source-only theory target and typed witnesses. This discharges the formal object-model burden but does not adopt physical ontology, source dynamics, reconstruction, or a downstream GR object."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr_delta:
+  changed: true
+  effect: "scoped_source_only_object"
+  burden_id: "source_ontology_primitives"
+  milestone: "source_ontology"
+  old_status: "The selected research architecture was integrated, but compact source-theory typing remained an explicit blocking burden."
+  new_status: "One compact source-only draft/control theory object is typed; Phi_src semantics, dynamics, reconstruction, and every physical burden remain open."
+  ledger_row_updated: true
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "The source-ontology row gains the P5-T01 evidence path and removes only the discharged compact-typing phrase from its blocking burden; physical and promotion layers remain unchanged."
+  downstream_unlocked:
+    - "P5-T02 Phi_src semantics formalization"
+  downstream_still_blocked:
+    - "physical source manifold M_src"
+    - "physical gauge interpretation"
+    - "source dynamics"
+    - "effective metric g_eff"
+    - "matter coupling"
+    - "Einstein equations derivation"
+    - "benchmark promotion"
+  explanation: "This is a scoped source-only mathematical delta, not physical or benchmark promotion."
+
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "the continuum-first research architecture and one compact draft/control source-theory object are explicit; Phi_src semantics dynamics reconstruction and physical ontology remain open"
+  - burden: "Source equivalence EqSrc"
+    status: "unchanged; P5-T01 defines a task-local declared-redundancy groupoid but does not discharge general EqSrc"
+  - burden: "RetainH"
+    status: "unchanged; missing source primitive"
+  - burden: "GenH"
+    status: "unchanged; missing source primitive"
+  - burden: "ObsLoc_lc"
+    status: "unchanged; constructive local exact-branch evidence only"
+  - burden: "Resp_lc"
+    status: "unchanged; scoped source-extension data only"
+  - burden: "M_src"
+    status: "unchanged; the source arena and P5-T01 tuple are not adopted physical spacetime or physical ontology"
+  - burden: "g_eff"
+    status: "unchanged; reconstruction remains a tagged open interface with no metric normalization or physical scale"
+  - burden: "matter coupling"
+    status: "unchanged; no matter semantics action universal coupling or backreaction"
+  - burden: "Einstein equations"
+    status: "unchanged; no source action variation principle or recovery theorem"
+  - burden: "finite-variation robustness"
+    status: "unchanged; the torus witness supplies a local admissible variation but no finite-variation bridge robustness result"
+  - burden: "benchmark promotion"
+    status: "unchanged and blocked"
+  - burden: "Gate Chair status"
+    status: "P4-T05 research-architecture selection remains integrated; physical ontology source-law derivation and benchmark gates remain closed"
+  - burden: "current route freeze or hard-fail status"
+    status: "not frozen; P5-T02 is a distinct semantics-and-law task rather than a repeat of P5-T01 typing"
+
+countermodel_obligations:
+  policy_id: "minimal_countermodel_obligation_policy_v1"
+  theorem_family: "other"
+  waiver_decision_id: ""
+  slots:
+    - countermodel_slot: "target_import_countermodel"
+      status: "filled"
+      scope: "Reject a tuple whose source component is defined from desired target-side data."
+      result_artifact: "research_control/tasks/RT-20260725-003/artifacts/compact_source_theory_spec_v1.yaml"
+      obstruction_id: ""
+      local_countermodel_claim: "The malformed input returns fail_closed_target_import and is not an admitted P5-T01 object."
+      forbidden_overread: "This does not prove that no source-to-target bridge can later be constructed."
+    - countermodel_slot: "groupoid_axiom_countermodel"
+      status: "filled"
+      scope: "Reject missing identity inverse or closed composition and a non-wide redundancy subgroupoid."
+      result_artifact: "research_control/tasks/RT-20260725-003/artifacts/compact_source_theory_spec_v1.yaml"
+      obstruction_id: ""
+      local_countermodel_claim: "The malformed input returns fail_closed_type_error."
+      forbidden_overread: "This is a type failure only and carries no broader physical conclusion."
+    - countermodel_slot: "observable_invariance_countermodel"
+      status: "filled"
+      scope: "Reject an observable that changes along a declared redundancy arrow."
+      result_artifact: "research_control/tasks/RT-20260725-003/artifacts/compact_source_theory_spec_v1.yaml"
+      obstruction_id: ""
+      local_countermodel_claim: "The malformed input returns fail_closed_invariance_error."
+      forbidden_overread: "This does not establish physical gauge symmetry."
+    - countermodel_slot: "open_slot_evaluation_countermodel"
+      status: "filled"
+      scope: "Reject evaluation of an open Phi_src dynamics or reconstruction slot."
+      result_artifact: "research_control/tasks/RT-20260725-003/artifacts/compact_source_theory_spec_v1.yaml"
+      obstruction_id: ""
+      local_countermodel_claim: "The malformed input returns fail_closed_open_slot."
+      forbidden_overread: "The open status does not prove that no future law can fill the slot."
+
+obstruction_record:
+  present: false
+  obstruction_id: ""
+  scope: "current_ontology_only"
+  failed_object: ""
+  exact_failure: ""
+  minimal_counterexample_path: ""
+  current_ontology_implication: "not_applicable"
+  source_extension_implication: "not_applicable"
+  consequence: "downstream_block_preserved"
+  forbidden_overread: "The malformed branches are object-admission guards rather than a no-go theorem or global obstruction."
+
+route_cycle_control:
+  cycle_family: "source_ontology_formalization"
+  current_cycle_step: "p5_t01_compact_source_theory_object_complete"
+  prior_related_tasks:
+    - "RT-20260724-010 P4-T06 selected ontology-regime integration"
+    - "RT-20260725-002 P4-T06 dependent repository-contract recovery and checkpoint"
+  cycle_risk: "low"
+  orbit_avoidance_reason: "P5-T01 adds an eleven-component typed object, explicit witnesses, and fail-closed branches. P5-T02 must select and prove Phi_src semantics rather than restate the object."
+  next_role_consequence: "ontology-formalizer@0.2.0 for v21 P5-T02"
+
+freeze_criteria_status:
+  repeated_burden: false
+  freeze_evaluation_required: false
+  active_freeze_label: ""
+  prior_attempts_considered:
+    - "RT-20260724-010"
+  freeze_if:
+    - "A later packet only renames the tuple or open slots without selecting a new law, witness, theorem, or obstruction."
+  do_not_freeze_if:
+    - "P5-T02 selects one Phi_src semantic kind and proves its defining laws."
+  freeze_decision: "not_frozen"
+  decision_reason: "P5-T01 supplies new mathematical payload and P5-T02 has a distinct law-selection burden."
+  next_allowed_route: "theoretical_selector"
+  no_status_update_rationale: "No family freeze is activated by this new source-only object."
+
+bridge_attempt_status:
+  candidate_map: ""
+  missing_primitive: "filled Phi_src semantics, source dynamics, and a source-provenance-certified reconstruction"
+  preserves_blocks: "M_src g_eff matter coupling Einstein equations benchmark promotion and completed derivation remain blocked"
+
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+  forbidden_conclusions:
+    - "canonical ontology edit or M_src adoption"
+    - "physical gauge symmetry"
+    - "source-law adoption or filled Phi_src dynamics or reconstruction"
+    - "g_eff scope expansion or adoption"
+    - "matter coupling adoption or derivation"
+    - "Einstein-equation derivation"
+    - "benchmark promotion"
+    - "Gate Chair verdict"
+    - "completed derivation"
+    - "global theory rejection"
+    - "unscoped impossibility conclusion"
+  summary: "P5-T01 defines one compact draft/control source-only theory target and proposal-only witnesses. It does not authorize M_src adoption, g_eff, matter coupling, Einstein equations, benchmark promotion, completed derivation, or any conclusion beyond the stated source-only scope."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable_no_protected_gate"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  publication_authorized: false
+  proof_authority: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  canonical_ontology_edit_authorized: false
+  ontology_selection_authorized: false
+  physical_interpretation_establishment_authorized: false
+  physical_gauge_claim_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+three_tier_claim_summary:
+  adopted_objects:
+    - "Inherited only: the P4-T06 continuum-first research architecture with explicit primitive debt and unresolved Phi_src."
+  accepted_evidence_preconditions:
+    - "P5-T01 compact source-theory tuple at draft/control source-only scope"
+    - "torus-amplitude and finite two-state type witnesses at proposal-only scope"
+    - "groupoid invariance target-import and open-slot fail-closed checks"
+  open_or_blocked_physical_targets:
+    - "Phi_src semantic kind and source dynamics"
+    - "physical gauge interpretation and physical source manifold M_src"
+    - "source-to-target reconstruction and effective metric g_eff"
+    - "matter coupling Einstein equations and benchmark promotion"
+  forbidden_overread:
+    - "draft/control object as adopted physical ontology or source law"
+    - "declared source redundancy as physical gauge symmetry"
+    - "open reconstruction interface as a filled metric bridge"
+    - "validator or checkpoint success as proof or promotion authority"
+
+validation_receipts:
+  task_local:
+    path: "research_control/tasks/RT-20260725-003/artifacts/compact_source_theory_validation_receipt_v1.json"
+    sha256: "838a0fb827e2912d4452bd19556b3c96a7ea5a6a814e23defa3401ff649b9432"
+    result_status: "PASS"
+    pass_count: 17
+    fail_count: 0
+    warning_count: 0
+  scratch_tex_build:
+    status: "PASS"
+    authority: "operational_evidence_only"
+  repository:
+    status: "PASS_READY_FOR_CHECKPOINT"
+    authority: "operational_evidence_only"
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1011
+    relationship_row_count: 5000
+    semantic_row_count: 1011
+    vault_row_count: 1011
+    local_cache_only_warning_count: 0
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: true
+    refresh_performed: true
+    before_core_validation_status: "PASS"
+    before_freshness_status: "WARN"
+    before_local_retrieval_status: "WARN"
+    before_local_cache_only_warning_count: 14
+    after_core_validation_status: "PASS"
+    after_freshness_status: "PASS"
+    after_local_retrieval_status: "PASS"
+    after_local_cache_only_warning_count: 0
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"compact source theory tuple\" --limit 10 --json"
+      query_type: "search"
+      query_text: "compact source theory tuple"
+      returned_object_ids:
+        - "TEX-V21-P4-T06-SELECTED-ONTOLOGY-REGIME-INTEGRATION-V1"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"selected ontology regime integration\" --limit 10 --json"
+      query_type: "search"
+      query_text: "selected ontology regime integration"
+      returned_object_ids:
+        - "TEX-V21-P4-T06-SELECTED-ONTOLOGY-REGIME-INTEGRATION-V1"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-V21-P4-T06-SELECTED-ONTOLOGY-REGIME-INTEGRATION-V1 --json"
+      query_type: "lookup"
+      query_text: "TEX-V21-P4-T06-SELECTED-ONTOLOGY-REGIME-INTEGRATION-V1"
+      returned_object_ids:
+        - "TEX-V21-P4-T06-SELECTED-ONTOLOGY-REGIME-INTEGRATION-V1"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+    - object_id: "TEX-V21-P4-T06-SELECTED-ONTOLOGY-REGIME-INTEGRATION-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260724-010/artifacts/selected_ontology_regime_integration_v1.tex"
+      source_hash: "02e624b1e79f0212c5c295ec2df9a9d4d42720708e724101194090175e5bc03e"
+    - object_id: "TEX-ONTOLOGY-AETHER-FLOW-FOUNDATIONS"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "ontology/tex/aether_flow_foundations.tex"
+      source_hash: "4749d9e8b6858a43230e99029cccc3274b55fc2ae2a2cdf45a983a60c98e5b59"
+    - object_id: "TEX-ONTOLOGY-AETHER-FLOW-DYNAMICS"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "ontology/tex/aether_flow_dynamics.tex"
+      source_hash: "fd6e579e71ef7f2ac4c9668ceede051ad57033ee52357b2552a9e3a5a53939c7"
+    - object_id: "TEX-ONTOLOGY-AETHER-FLOW-GEOMETRY"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "ontology/tex/aether_flow_geometry.tex"
+      source_hash: "f60a81b63f814b03cca7190b3ac6285842a55317f4aed058cc6e75154cc0b4d7"
+  authority_note: "Generated Obsidian wiki semantic SQLite and .local surfaces are retrieval-only navigation layers and not authority."
+
+command_results:
+  - "scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | status=pass"
+  - "query_memory.py status --json | exit_code=0 | status=pass"
+  - "query_memory.py search compact source theory tuple --limit 10 --json | exit_code=0 | status=pass"
+  - "query_memory.py search selected ontology regime integration --limit 10 --json | exit_code=0 | status=pass"
+  - "query_memory.py lookup TEX-V21-P4-T06-SELECTED-ONTOLOGY-REGIME-INTEGRATION-V1 --json | exit_code=0 | status=pass"
+  - "validate_compact_source_theory.py --write-report --json | exit_code=0 | status=pass"
+  - "build_pdf_derivatives.py --scratch compact_source_theory_object_v1.tex | exit_code=0 | status=pass"
+  - "bootstrap_memory_system.py | exit_code=0 | status=pass"
+  - "bootstrap_memory_system.py --validate-only | exit_code=0 | status=pass"
+  - "render_current_frontier.py --check | exit_code=0 | status=pass"
+  - "render_task_index.py --check | exit_code=0 | status=pass"
+  - "render_compact_current_frontier_v16.py --check | exit_code=0 | status=pass"
+  - "render_dependency_graph.py --check | exit_code=0 | status=pass"
+  - "generate_claim_graph_v1.py --check | exit_code=0 | status=pass"
+  - "validate_claim_graph_v1.py --json | exit_code=0 | status=pass"
+  - "classify_project_changes.py --json | exit_code=0 | status=pass"
+  - "collect_project_improvement_signals.py --validate-emitted --json | exit_code=0 | status=pass"
+  - "validate_documentation_impact.py --json | exit_code=0 | status=pass"
+  - "validate_claim_language.py --changed --json | exit_code=0 | status=pass_with_warnings"
+  - "validate_research_control.py --check-diff --json-summary | exit_code=0 | status=pass"
+  - "run_full_research_control_validation.py --json --tail-chars 2500 | exit_code=0 | status=pass"
+  - "python -m unittest -v tests.test_research_control | exit_code=0 | status=pass"
+  - "git diff --check | exit_code=0 | status=pass"
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 108 validated the goal, immutable P5-T01 route, predecessor identity, repository binding, maximum reasoning, lease parity, clean tree, and prior checkpoint before one atomic claim and one consumption."
+      - "Memory preflight refreshed retrieval-only cache state, returned to PASS, and canonical source authority was inspected."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Both internal child perspectives completed, three tensions were resolved in one round, and no conflict remained."
+      - "The task-local validator passes seventeen checks covering tuple types, open slots, witnesses, malformed branches, dependency edges, synthesis, and claim boundaries."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Scratch TeX build, task-local validation, renderers, memory synchronization, documentation impact, signal parity, claim language, research-control validation, the selected test shard, and whitespace checks pass."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "One governed checkpoint remains to be invoked after the precheckpoint gates pass."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Current frontier, compact frontier, task index, dependency graph, and claim graph derivatives are fresh."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory bootstrap and validate-only pass after registering the new TeX source object."
+  claim_language_linter:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "Changed-source claim-language validation has zero hard failures; any reported warnings are nonblocking historical-language findings."
+
+validators_run:
+  - "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python research_control/tasks/RT-20260725-003/artifacts/validate_compact_source_theory.py --write-report --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/build_pdf_derivatives.py --scratch research_control/tasks/RT-20260725-003/artifacts/compact_source_theory_object_v1.tex"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --check"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --check"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --check"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --check"
+  - ".venv/bin/python scripts/research_control/generate_claim_graph_v1.py --check"
+  - ".venv/bin/python scripts/research_control/validate_claim_graph_v1.py --json"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --json-summary"
+  - ".venv/bin/python scripts/research_control/run_full_research_control_validation.py --json --tail-chars 2500"
+  - "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m unittest -v tests.test_research_control"
+  - "git diff --check"
+
+documentation_impact:
+  required: true
+  status: "completed"
+  path: "research_control/tasks/RT-20260725-003/documentation_impact.yaml"
+  rationale: "The new claim-bearing source definition, decision, handoff, and registry row document the exact source-only delta; generated derivatives carry no independent authority."
+
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"
+  notes: "No project-system defect or explanatory-documentation mismatch remains after the bounded packet."
+
+next_handoff_id: "handoff-0863"
+selected_next_route:
+  route_id: "v21_p5_t02_fix_phi_src_semantics"
+  route_label: "ontology-law-research-packet"
+  role_family: "ontology-formalizer@0.2.0"
+  worker_skill: "continue-research"
+  plan_task_id: "P5-T02"
+  target_derivation_milestone: "source_ontology"
+  milestone_burden: "Remove ambiguity in the central Æflow kinematic primitive."
+  strategy_id: "select_phi_src_semantic_kind_and_prove_basic_laws_v1"
+  requires_human_gate: false
+  physics_promotion_authorized: false
+
+verdict: "PASS_SCOPED_SOURCE_ONLY_OBJECT_READY_FOR_CHECKPOINT"

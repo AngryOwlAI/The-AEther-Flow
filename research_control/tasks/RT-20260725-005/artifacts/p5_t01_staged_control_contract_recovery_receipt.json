@@ -1,0 +1,94 @@
+{
+  "schema_id": "p5_t01_staged_control_contract_recovery_receipt_v1",
+  "task_id": "RT-20260725-005",
+  "job_id": "AJ-RT-20260725-005-001",
+  "status": "PASS_PRECHECKPOINT",
+  "created_at": "2026-07-25T08:48:42Z",
+  "route": {
+    "goal_id": "crg-20260720T161354Z-96bc2664ce31bfe0",
+    "generation": 110,
+    "worker_skill": "improve-project-system",
+    "strategy_id": "repair_p5_t01_checkpoint_staged_control_contract_drift_v1",
+    "route_sha256": "1e6d5a4e3d22431e581805c741077486ac4d497cad5b290840af3fc6f419f62b",
+    "source_checkpoint_run_id": "RUN-CHECKPOINT-427e14b8d48940a4",
+    "source_checkpoint_receipt_sha256": "990241f3d0eca70ab35b45488afb1ee0fed2c84b978482f5dc27f6b143836af4",
+    "protected_dirty_fingerprint": "f4a81119a8c7fa683142658b6f32b6c140d80728c402f368633fed182fab1573"
+  },
+  "source_failure": {
+    "gate_id": "research_control_diff",
+    "gate_status": "FAIL_40_ERRORS_1740_WARNINGS",
+    "sealed_error_count": 40,
+    "sealed_warning_count": 1740,
+    "checkpoint_commit_created": false
+  },
+  "repairs": [
+    {
+      "finding_group": "DDR role-fit heading",
+      "path": "research_control/tasks/RT-20260725-004/DDR-20260725-004.md",
+      "before_sha256": "058ece5c0cd517667d1a107d5f0c671a300c066368d16b3db38a7c297fab0612",
+      "after_sha256": "5273b311ca90bd56e3885fc4f5938f335f85a606e3c8132b1d7ffb4e9bc814be",
+      "source_of_truth": "AGENT_JOB_SCHEMA.md required DDR heading"
+    },
+    {
+      "finding_group": "memory preflight and ordinary-route admission",
+      "path": "research_control/tasks/RT-20260725-004/jobs/AJ-RT-20260725-004-001.yaml",
+      "before_sha256": "957f6a83bb25d41125676860d347b147659f0e945c114906f31d11c334e9c10e",
+      "after_sha256": "f591657ac97dbd5dc472cd7a13ed083b846d3d0cd779f1d87f0d83a165e0b720",
+      "source_of_truth": "memory preflight schema, registered canonical rows, and handoff-0862 ordinary_route_guard.outcome"
+    },
+    {
+      "finding_group": "memory preflight, authorization scope, ordinary-route admission, and dual-budget parity",
+      "path": "research_control/tasks/RT-20260725-004/jobs/completions/AJC-AJ-RT-20260725-004-001.yaml",
+      "before_sha256": "ff6ef8b39030b1bc64e3d977de6f9644f551c80a9315fec98c62caba6f9c6d72",
+      "after_sha256": "7e671b29d93cfe89a4ce4118dde3b8c40fe0c3bb29c6e797f504439286b49f2a",
+      "source_of_truth": "completion schema and AJ-RT-20260725-004-001 dual_budget_allocation"
+    },
+    {
+      "finding_group": "execution-role registry parity",
+      "path": "research_control/tasks/RT-20260725-004/roles/validator-engineer@0.2.0--RT-20260725-004.yaml",
+      "before_sha256": "7475975f35268fcc18031c7e92c50d09b7a5a9e379b3e91bf6240b20e53ac37a",
+      "after_sha256": "903bea84216290a08af376dea2d45aa8f6241194bb9008fd8abeb5431586fd8b",
+      "source_of_truth": "registries/ROLE_EXECUTION_REGISTRY.csv"
+    },
+    {
+      "finding_group": "generated frontier freshness",
+      "paths": [
+        "research_control/current_frontier.md",
+        "output/compact_current_frontier_v16.json",
+        "output/compact_current_frontier_v16.yaml"
+      ],
+      "source_of_truth": "research_control/program_state.yaml and the latest tracked handoff",
+      "generated_only": true
+    }
+  ],
+  "protected_payload_hashes": {
+    "research_control/tasks/RT-20260725-003/artifacts/compact_source_theory_object_v1.tex": "2520f82e54edcb2668446579ceed7a7dfc7a8abf995572aa9889a3d9a3a4467c",
+    "research_control/tasks/RT-20260725-003/artifacts/compact_source_theory_spec_v1.yaml": "a381549ac6eb37346c1469f1157bdfa8417fbc010a19c087cf099b1368ab1b9c",
+    "research_control/tasks/RT-20260725-003/artifacts/compact_source_theory_type_dependency_v1.yaml": "559d6fd77f5f4fc93e97e3429cbc87a09acf91b39099f56ef7ba00fbf3c3dd2f",
+    "research_control/tasks/RT-20260725-003/artifacts/compact_source_theory_validation_receipt_v1.json": "838a0fb827e2912d4452bd19556b3c96a7ea5a6a814e23defa3401ff649b9432",
+    "research_control/tasks/RT-20260725-004/artifacts/validate_p5_t01_dependent_contract_recovery.py": "7c92b72282bbb7a6d5dd1ca823c6f043b145b5105117149034b79d9c7a84eaba",
+    "research_control/tasks/RT-20260725-004/artifacts/p5_t01_dependent_contract_recovery_receipt.json": "45f6e7687b08c95ef5c74cacc845a6ecf1533bf55225179a08db459caf7949bc",
+    "research_control/tasks/RT-20260722-003/artifacts/v21_p10_migration_readiness_validation.json": "cdcd907f4ad237118eab65f06f364263da08285456514605a0308bc203f7a6e6",
+    "research_control/tasks/RT-20260722-003/artifacts/v21_p10_migration_readiness_compact_receipt.json": "db3410f2c166562a4cc8636011eeda15b7cb8f051c3917fea21b370e4da2ddb6",
+    "registries/DISTANCE_TO_GR_LEDGER.csv": "7bb5c01a9f893c192cc98408f22176ec8d1e8162c6b645b483c6053200ed136d"
+  },
+  "validation": {
+    "working_tree_evidence_authority": "operational_validation_only",
+    "staged_acceptance_authority": "single governed cumulative checkpoint",
+    "research_control_error_count_before": 40,
+    "research_control_error_count_after": 0,
+    "required_checkpoint_invocation_count": 1,
+    "checkpoint_invocation_count_at_receipt": 0
+  },
+  "authority_limits": {
+    "scientific_claims_changed": false,
+    "distance_to_gr_changed": false,
+    "p5_t01_reexecuted": false,
+    "p5_t02_executed": false,
+    "ontology_or_source_law_adopted": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "publication_authorized": false,
+    "push_performed": false
+  }
+}

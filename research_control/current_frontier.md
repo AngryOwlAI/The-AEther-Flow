@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260725-002` and `handoff-0862`.
+`RT-20260725-006` and `handoff-0866`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260725-002` |
-| Latest handoff ID | `handoff-0862` |
-| Current status | `p4_t06_dependent_repository_contract_recovery_pass_ready_for_checkpoint` |
+| Active task ID | `RT-20260725-006` |
+| Latest handoff ID | `handoff-0866` |
+| Current status | `p5_t01_rt005_allowlist_checkpoint_recovery_pass_ready_for_checkpoint` |
 | V16 completed | false |
 | Current route family | benchmark or recovery (project system) |
 | Target derivation milestone | `source_ontology` |
 | Current burden | `source_ontology_primitives` |
-| Required next authority | After the governed checkpoint commits, one fresh bounded P5-T01 ontology-formalizer packet may define only the compact source-theory tuple and object model with explicit open dynamics and reconstruction slots. |
-| Next recommended action | After the governed combined checkpoint commits, run exactly one bounded P5-T01 ontology-formalizer AgentJob to define the compact source-theory tuple and object model while preserving open dynamics and reconstruction slots and all no-promotion boundaries. |
+| Required next authority | After the governed cumulative checkpoint commits, one fresh bounded P5-T02 ontology-law packet may select one Phi_src semantic kind and prove only its corresponding source-side basic laws. |
+| Next recommended action | Run the one governed cumulative checkpoint for AJ-RT-20260725-006-001. Only after it commits may one fresh bounded P5-T02 ontology-law packet select the semantic kind of Phi_src and prove its basic source-side laws without target import. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260725-002` |
-| Latest research handoff ID | `handoff-0862` |
-| Latest research next action | After the governed combined checkpoint commits, run exactly one bounded P5-T01 ontology-formalizer AgentJob to define the compact source-theory tuple and object model while preserving open dynamics and reconstruction slots and all no-promotion boundaries. |
+| Latest research task ID | `RT-20260725-006` |
+| Latest research handoff ID | `handoff-0866` |
+| Latest research next action | Run the one governed cumulative checkpoint for AJ-RT-20260725-006-001. Only after it commits may one fresh bounded P5-T02 ontology-law packet select the semantic kind of Phi_src and prove its basic source-side laws without target import. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260725-002/00_TASK.yaml`.
-- Active task objective: Repair only the five dependent repository-contract findings recorded by RT-20260725-001, preserve the historical candidate-lineage seed and event-store contract as immutable observations, validate the current ontology source and Distance-to-GR ledger through current authority, repair the burden-status fixture and P4-T06 taxonomy metadata, rerun every required gate, and invoke one governed combined checkpoint only on a full pass.
-- Latest handoff path: `research_control/handoffs/handoff-0862.yaml`.
-- Latest handoff summary: Generation 107 repairs all five P4-T06 dependent repository-contract findings. The candidate-lineage and event-store validators preserve exact historical observations while requiring fail-closed current authority, the burden mutation fixture targets the current definition, RT-20260724-010 has the required taxonomy, and the dependent P10 audit returns to its bounded PASS/freeze result. The inherited P4-T06 science payload, ontology TeX and PDFs, burden definitions, and Distance-to-GR ledger remain byte-preserved; P5-T01 is unexecuted.
+- Active task path: `research_control/tasks/RT-20260725-006/00_TASK.yaml`.
+- Active task objective: Preserve AJ-RT-20260725-005-001 byte-for-byte; align its execution-role overlay and ROLE_EXECUTION_REGISTRY row to the AgentJob's exact ordered 37-item write-path contract; prove four-way parity and protected-byte preservation; then invoke one fresh governed cumulative checkpoint before P5-T02.
+- Latest handoff path: `research_control/handoffs/handoff-0866.yaml`.
+- Latest handoff summary: Generation 111 restores exact ordered allowlist identity across the completed RT-005 AgentJob, its execution-role overlay, and both registry representations. The immutable 37-item AgentJob list remains unchanged, all protected predecessor and P5-T01 payload hashes match, and P5-T02 remains unexecuted pending one governed cumulative checkpoint.
 - Current route family: benchmark or recovery (project system).
-- Next recommended action: After the governed combined checkpoint commits, run exactly one bounded P5-T01 ontology-formalizer AgentJob to define the compact source-theory tuple and object model while preserving open dynamics and reconstruction slots and all no-promotion boundaries.
+- Next recommended action: Run the one governed cumulative checkpoint for AJ-RT-20260725-006-001. Only after it commits may one fresh bounded P5-T02 ontology-law packet select the semantic kind of Phi_src and prove its basic source-side laws without target import.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -282,7 +282,7 @@ preserves the raw ledger `current_status` field for continuity.
 
 | Burden ID | Milestone | Reader-facing status | Legacy status | Control status | Mathematical status | Physical status | Promotion status | Overread guard | Last evidence |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| `source_ontology_primitives` | `source_ontology` | draft source-ontology primitives only | accepted | accepted_as_scoped_source_object | source_only_adopted_object | no_physical_interpretation_authorized | scoped_source_object_only | no_source_law_adoption<br>no_metricdata_e_adoption<br>no_matter_coupling_adoption<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/tasks/RT-20260724-010/artifacts/selected_ontology_regime_integration_v1.tex` |
+| `source_ontology_primitives` | `source_ontology` | draft source-ontology primitives only | accepted | accepted_as_scoped_source_object | definition_only_or_draft_object | no_physical_interpretation_authorized | scoped_source_object_only | no_source_law_adoption<br>no_metricdata_e_adoption<br>no_matter_coupling_adoption<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/tasks/RT-20260725-003/artifacts/compact_source_theory_object_v1.tex` |
 | `source_equivalence_eqsrc` | `source_equivalence_eqsrc` | draft source-equivalence object only | draft object exists | draft_control_object_exists | general_equivalence_theorem_missing | downstream_gr_blocked | draft_control_only | no_source_law_adoption<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/program_state.yaml` |
 | `retain_h` | `source_equivalence_eqsrc` | blocked by missing primitive | blocked by missing primitive | blocked | primitive_missing | no_retention_law_adoption | none | no_source_law_adoption<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/program_state.yaml` |
 | `gen_h` | `source_equivalence_eqsrc` | blocked by missing primitive | blocked by missing primitive | blocked | primitive_missing | no_generator_law_adoption | none | no_source_law_adoption<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/program_state.yaml` |
@@ -302,7 +302,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-After the governed combined checkpoint commits, run exactly one bounded P5-T01 ontology-formalizer AgentJob to define the compact source-theory tuple and object model while preserving open dynamics and reconstruction slots and all no-promotion boundaries.
+Run the one governed cumulative checkpoint for AJ-RT-20260725-006-001. Only after it commits may one fresh bounded P5-T02 ontology-law packet select the semantic kind of Phi_src and prove its basic source-side laws without target import.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -320,28 +320,27 @@ Layer status summary:
 
 | Status | Count | Meaning |
 | --- | --- | --- |
-| `PASS` | 4 | receipt complete |
-| `PASS_WITH_WARNINGS` | 2 | receipt complete with stated warnings |
+| `PASS` | 6 | receipt complete |
 | `PENDING` | 1 | open item; evidence must explain why |
 
 Validation layers:
 
 | Validation layer | Status | Meaning | Evidence |
 | --- | --- | --- | --- |
-| `pre_execution` | PASS | receipt complete | Generation 107 validated, atomically claimed, and consumed the exact immutable improve-project-system route once. |
-| `completion_internal` | PASS | receipt complete | The task-local receipt passes seven checks and all five dependent findings are repaired. |
-| `post_write` | PASS | receipt complete | Stable-state repository discovery passes 1,251 tests with one expected skip and zero failures or errors.<br>Research-control diff documentation signal renderer recovery and whitespace gates pass. |
-| `post_checkpoint` | PENDING | open item; evidence must explain why | One governed checkpoint remains to be invoked in this generation-107 transaction. |
-| `renderer` | PASS | receipt complete | Tracked frontier, task-index, and compact-frontier derivatives are fresh from handoff-0862. |
-| `memory_bootstrap` | PASS_WITH_WARNINGS | receipt complete with stated warnings | Tracked memory synchronization and validate-only pass with 14 nonblocking local-cache findings. |
-| `claim_language_linter` | PASS_WITH_WARNINGS | receipt complete with stated warnings | Changed-source claim-language validation passes with zero hard failures and 1,499 historical warnings. |
+| `pre_execution` | PASS | receipt complete | Generation 111 validated, atomically claimed, and consumed its exact immutable recovery route once. |
+| `completion_internal` | PASS | receipt complete | The tracked recovery receipt proves exact four-way ordered allowlist identity and protected-byte preservation. |
+| `post_write` | PASS | receipt complete | Task-local, documentation, signal, research-control, memory, and whitespace gates pass. |
+| `post_checkpoint` | PENDING | open item; evidence must explain why | One governed cumulative checkpoint remains; P5-T02 is not executed before it. |
+| `renderer` | PASS | receipt complete | Tracked frontier, task-index, graph, registry, and wiki derivatives are fresh. |
+| `memory_bootstrap` | PASS | receipt complete | Tracked memory synchronization and validate-only pass. |
+| `claim_language_linter` | PASS | receipt complete | Integrated research-control validation has no hard claim-language error. |
 
 Authorization layers:
 
 | Authorization field | Value | Meaning |
 | --- | --- | --- |
 | `protected_scoped_gate_review_authorized` | false (not authorized) | scoped review authority only |
-| `protected_scoped_gate_review_scope` | not_applicable_project_system_recovery_only | exact scope of protected review authority |
+| `protected_scoped_gate_review_scope` | not authorized; ordinary project-system recovery validation only | exact scope of protected review authority |
 | `protected_scoped_gate_review_authority_source_path` | none | tracked source for scoped review authority |
 | `downstream_physics_promotion_authorized` | false (not authorized) | authorizes downstream physics promotion only when true |
 | `downstream_physics_promotion_authority_source_path` | none | tracked source for downstream promotion authority |
@@ -364,9 +363,9 @@ Authorization layers:
 
 Legacy compatibility records:
 
-- active task: `RT-20260725-002`;
-- latest handoff: `handoff-0862`;
-- current status: `p4_t06_dependent_repository_contract_recovery_pass_ready_for_checkpoint`;
+- active task: `RT-20260725-006`;
+- latest handoff: `handoff-0866`;
+- current status: `p5_t01_rt005_allowlist_checkpoint_recovery_pass_ready_for_checkpoint`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -376,8 +375,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0862.yaml`
-- `research_control/tasks/RT-20260725-002/00_TASK.yaml`
+- `research_control/handoffs/handoff-0866.yaml`
+- `research_control/tasks/RT-20260725-006/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -393,7 +392,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0862*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0866*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations
