@@ -1,0 +1,224 @@
+schema_id: "phi_src_semiflow_spec_v1"
+object_id: "V21-P5-T02-PHI-SRC-CONTINUOUS-UNITAL-FORWARD-MONOID-ACTION-V1"
+status_label: "draft/control"
+candidate_status: "proposal-only"
+artifact_class: "source-extension data"
+authority: "science_draft"
+plan_task_id: "P5-T02"
+target_derivation_milestone: "source_ontology"
+milestone_burden: "Remove ambiguity in the central Æflow kinematic primitive."
+
+claim_boundary:
+  source_only: true
+  target_import_allowed: false
+  canonical_ontology_modified: false
+  canonical_ontology_candidate_status_claimed: false
+  source_law_adopted: false
+  source_law_rejected: false
+  physical_time_claimed: false
+  physical_clock_scale_fixed: false
+  physical_gauge_claimed: false
+  physical_dynamics_selected: false
+  global_invertibility_assumed: false
+  generator_assumed: false
+  reconstruction_selected: false
+  physics_promotion_authorized: false
+
+dependency_binding:
+  source_theory_object_id: "V21-P5-T01-COMPACT-SOURCE-THEORY-TUPLE-V1"
+  filled_slot: "S_Phi"
+  filled_slot_status: "proposal-only"
+  still_open_slots:
+    - "S_dyn"
+    - "S_rec"
+  inherited_types:
+    - "Q_adm"
+    - "Red_src"
+    - "O_src"
+    - "Var_src"
+
+selected_semantics:
+  semantic_kind: "continuous_unital_forward_monoid_action"
+  conventional_name: "topological_semiflow"
+  parameter_object:
+    notation: "Lambda_+"
+    carrier: "R_ge_0"
+    operation: "addition"
+    identity: 0
+    order: "usual_total_order"
+    topology: "euclidean"
+    algebraic_type: "commutative_ordered_topological_monoid"
+    negative_parameters_included: false
+  state_object:
+    notation: "Q_adm"
+    type: "P5-T01 admissible source-configuration space"
+    topology: "declared source-only topology T_adm"
+    target_defined: false
+  action:
+    notation: "Phi_src: Lambda_+ x Q_adm -> Q_adm"
+    orientation: "conventional left action: apply mu then lambda equals Phi_(lambda+mu) = Phi_lambda after Phi_mu"
+    functional: true
+    deterministic: true
+
+axioms:
+  - axiom_id: "S1_IDENTITY"
+    statement: "Phi_0(q)=q for every q in Q_adm."
+  - axiom_id: "S2_FORWARD_COMPOSITION"
+    statement: "Phi_(lambda+mu)(q)=Phi_mu(Phi_lambda(q)) for all nonnegative lambda and mu."
+  - axiom_id: "S3_ADMISSIBILITY"
+    statement: "Phi_lambda(q) belongs to Q_adm for every lambda and admissible q."
+  - axiom_id: "S4_REDUNDANCY_COMPATIBILITY"
+    statement: "q ~_red q' implies Phi_lambda(q) ~_red Phi_lambda(q') for every lambda."
+  - axiom_id: "S5_JOINT_CONTINUITY"
+    statement: "The map (lambda,q) |-> Phi_lambda(q) is continuous for the Euclidean and declared source-only topologies."
+
+theorem_payload:
+  - theorem_id: "P5-T02-THM-QUOTIENT-DESCENT"
+    title: "Redundancy-quotient descent"
+    hypotheses:
+      - "S1 identity"
+      - "S2 forward composition"
+      - "S4 redundancy compatibility"
+    conclusion: "bar_Phi_lambda([q])=[Phi_lambda(q)] is a unique well-defined unital forward monoid action on Q_adm/~_red."
+    continuity_clause:
+      claimed_unconditionally: false
+      additional_hypothesis: "id_Lambda x quotient_projection is a quotient map; an open quotient projection is one sufficient condition."
+      conclusion_with_hypothesis: "The induced quotient action is continuous."
+    proof_status: "proved_in_task_local_tex"
+    status_scope: "draft/control mathematical result"
+  - theorem_id: "P5-T02-THM-REPARAMETERIZATION"
+    title: "Continuous additive order-preserving reparameterization classification"
+    hypotheses:
+      - "r:R_ge_0->R_ge_0 is continuous"
+      - "r is additive and maps 0 to 0"
+      - "r is order-preserving"
+    conclusion: "r(lambda)=c lambda for one c>=0; it is a monoid automorphism exactly when c>0."
+    physical_nonconclusion: "The action laws do not select c, a unit, rate normalization, or physical clock."
+    proof_status: "proved_in_task_local_tex"
+    status_scope: "draft/control mathematical result"
+
+invertibility_and_generator:
+  global_group_action_selected: false
+  inverse_required: false
+  group_extension_condition: "A bi-infinite R-action exists only on a separately proved invariant subdomain with consistent negative-parameter maps."
+  differentiability_required_by_selected_kind: false
+  generator_selected: false
+  generator_condition: "A generator requires separately declared differentiable or functional-analytic structure, derivative existence, and domain control."
+  dynamics_equation_inferred: false
+
+witnesses:
+  - witness_id: "CONTINUOUS-ABSORBING-TRANSLATION-V1"
+    parameter_monoid: "R_ge_0"
+    states: "Q_adm=R_ge_0"
+    topology: "usual topology"
+    redundancy: "identity only"
+    action: "Phi_lambda(x)=max(x-lambda,0)"
+    identity: true
+    composition: true
+    joint_continuity: true
+    invertible_for_positive_parameter: false
+    purpose: "Shows consistency of the selected continuous laws and that they do not imply a group."
+    authority_note: "Mathematical witness only; not an empirical or adopted source model."
+  - witness_id: "DISCRETE-THREE-STATE-SPECIALIZATION-V1"
+    parameter_monoid: "N_0"
+    states:
+      - "a"
+      - "b"
+      - "c"
+    one_step_map:
+      a: "b"
+      b: "b"
+      c: "c"
+    action: "Phi_n=F^n"
+    redundancy_classes:
+      - ["a", "b"]
+      - ["c"]
+    identity: true
+    composition: true
+    redundancy_compatible: true
+    invertible: false
+    purpose: "Discrete algebraic specialization and finite quotient-descent witness."
+    authority_note: "Not a continuous R_ge_0 instance and not a physical discretization."
+
+exceptional_case_matrix:
+  - case_id: "CONTINUOUS"
+    admitted_by_mainline: true
+    disposition: "Selected R_ge_0 mainline with joint continuity."
+    nonconclusion: "No physical clock rate generator or evolution."
+  - case_id: "DISCRETE"
+    admitted_by_mainline: false
+    disposition: "N_0 specialization; equivalence to the continuous law needs a separate extension theorem."
+    nonconclusion: "A step label is not a physical time interval."
+  - case_id: "PERIODIC"
+    admitted_by_mainline: true
+    disposition: "Allowed when Phi_p(q)=q for some p>0."
+    nonconclusion: "p is not established as an observed physical period."
+  - case_id: "BI_INFINITE"
+    admitted_by_mainline: false
+    disposition: "Requires a separately proved R-action extension on an invariant subdomain."
+    nonconclusion: "Backward physical evolution and reversibility do not follow."
+  - case_id: "DENSE"
+    admitted_by_mainline: true
+    disposition: "Compatible with a continuous orbit, including torus examples."
+    nonconclusion: "Density does not establish ergodicity physical topology or a clock."
+  - case_id: "BRANCHING"
+    admitted_by_mainline: false
+    disposition: "Excluded by the single-valued action; would require a relation, multiflow, or category extension."
+    nonconclusion: "Exclusion from this candidate is not a global impossibility theorem."
+  - case_id: "STOCHASTIC"
+    admitted_by_mainline: false
+    disposition: "Excluded by the deterministic action; would require transition kernels and a Chapman-Kolmogorov law."
+    nonconclusion: "No probability noise measurement or stochastic physics is inferred."
+
+malformed_fail_closed_branches:
+  - branch_id: "MALFORMED-TARGET-IMPORT-001"
+    malformed_condition: "A source component or law is selected from a target atlas, target metric, benchmark success, or candidate reconstruction."
+    result: "fail_closed_target_import"
+    accepted: false
+  - branch_id: "MALFORMED-ACTION-LAW-001"
+    malformed_condition: "Identity, forward composition, or admissibility fails."
+    result: "fail_closed_action_law"
+    accepted: false
+  - branch_id: "MALFORMED-REDUNDANCY-001"
+    malformed_condition: "The action does not respect declared source redundancy."
+    result: "fail_closed_redundancy"
+    accepted: false
+  - branch_id: "MALFORMED-CONTINUITY-001"
+    malformed_condition: "Continuity is claimed without a declared source topology."
+    result: "fail_closed_topology"
+    accepted: false
+  - branch_id: "MALFORMED-QUOTIENT-CONTINUITY-001"
+    malformed_condition: "Continuity of the quotient action is claimed without the required quotient-map hypothesis."
+    result: "fail_closed_quotient_continuity"
+    accepted: false
+  - branch_id: "MALFORMED-INVERSE-GENERATOR-001"
+    malformed_condition: "A global inverse, group extension, or generator is asserted without its extra hypotheses."
+    result: "fail_closed_unproved_structure"
+    accepted: false
+  - branch_id: "MALFORMED-PHYSICAL-OVERREAD-001"
+    malformed_condition: "The parameter is identified with physical time, clock scale, gauge, dynamics, or reconstruction from the action axioms alone."
+    result: "fail_closed_physical_overread"
+    accepted: false
+
+burden_disposition:
+  trigger_classification: "derivation_critical_missing_source_law"
+  result_language: "Current adoption is blocked while same-milestone continuation remains open."
+  discharged_here:
+    - "one explicit proposal-only mathematical kind for Phi_src"
+    - "identity composition admissibility redundancy and continuity law set"
+    - "algebraic quotient-descent theorem with exact continuity hypothesis"
+    - "continuous additive reparameterization classification"
+    - "continuum and discrete witnesses"
+    - "exceptional-case and fail-closed classifications"
+  remains_open:
+    - "canonical ontology adoption or rejection"
+    - "physical interpretation of the parameter"
+    - "physical gauge interpretation"
+    - "source dynamics and generator"
+    - "source-to-target reconstruction"
+    - "M_src and g_eff"
+    - "matter coupling"
+    - "Einstein equations"
+    - "exact-GR benchmark promotion"
+  next_plan_task_id: "P5-T03"
+  next_task_scope: "Construct source dynamics compatible with the selected proposal-only Phi_src structure or precisely motivate a different source-side law."

@@ -1,0 +1,413 @@
+schema_id: "v21_p5_t02_child_phys_phil_phi_src_semiflow_v1"
+artifact_id: "V21-P5-T02-CHILD-PHYS-PHIL-PHI-SRC-SEMIFLOW-V1"
+authority: "science_draft"
+status: "completed"
+created_at: "2026-07-25T17:36:56Z"
+task_id: "RT-20260725-007"
+job_id: "AJ-RT-20260725-007-001"
+decision_id: "DDR-20260725-007"
+plan_task_id: "P5-T02"
+execution_unit_id: "child_phys_phil"
+perspective: "physicist_philosopher"
+route_label: "ontology-law-research-packet"
+trigger_classification: "derivation_critical_missing_source_law"
+target_derivation_milestone: "source_ontology"
+milestone_burden: "Remove ambiguity in the central Æflow kinematic primitive."
+
+scope:
+  question: "What interpretation and epistemic status may lawfully be assigned when Phi_src is tested as a continuous unital forward monoid action of (R_ge_0,+,0) on admissible source configurations?"
+  output_status: "draft/control"
+  ontology_status: "proposal-only"
+  law_status: "source-extension data"
+  adoption_status: "blocked_adoption_open_continuation"
+  canonical_ontology_candidate: false
+  adopted: false
+  rejected: false
+  human_gated_for_adoption: true
+  source_only: true
+  target_import_allowed: false
+  claim_boundary: "This record audits one task-local candidate semantics and its internal implications. It neither edits nor fills the canonical ontology slot, supplies physical dynamics, nor reconstructs target-side relativistic structure."
+
+source_bounded_consensus:
+  - consensus_id: "PHIL-CONSENSUS-001"
+    statement: "The protected architecture and P5-T01 object leave S_Phi open; the current ontology does not derive a parameter domain, action kind, invertibility rule, stochastic law, generator, gauge meaning, or physical-time meaning for Phi_src."
+    consequence: "The forward-monoid semantics is a new conservative proposal, not an unpacking of already-adopted content."
+  - consensus_id: "PHIL-CONSENSUS-002"
+    statement: "The narrow coherent candidate is a jointly continuous unital action Phi_src:R_ge_0 x Q_adm -> Q_adm on admissible source configurations."
+    consequence: "Its primary mathematical kind is a continuous forward monoid action, conventionally called a semiflow."
+  - consensus_id: "PHIL-CONSENSUS-003"
+    statement: "Identity, composition, admissibility preservation, declared-redundancy compatibility, and continuity are the minimum laws needed for later work to refer to the candidate without semantic drift."
+    consequence: "No physical interpretation follows from those laws alone."
+  - consensus_id: "PHIL-CONSENSUS-004"
+    statement: "Redundancy compatibility permits a well-defined induced action on Q_adm/Red_src."
+    consequence: "Quotient descent is a source-side mathematical theorem, not a reconstruction theorem or proof of physical gauge."
+  - consensus_id: "PHIL-CONSENSUS-005"
+    statement: "The parameter-monoid choice and the topology needed for continuity must be declared as proposal assumptions."
+    consequence: "Neither may be presented as derived from the P5-T01 tuple or the exact-GR benchmark."
+
+semantic_verdict:
+  selected_mathematical_kind:
+    name: "continuous unital forward monoid action"
+    conventional_term: "semiflow"
+    parameter_object: "Lambda_plus = (R_ge_0,+,0,standard_order,standard_topology)"
+    state_object: "(Q_adm,T_adm), where T_adm is an explicitly declared source-only topology"
+    action_signature: "Phi_src:Lambda_plus x Q_adm -> Q_adm"
+    primary_status: "task-local proposal-only source-law candidate"
+    category_reformulation: "Because a monoid is a one-object category, the same data admit a categorical restatement; that reformulation is not a second selected semantic kind and adds no physical content."
+  core_laws:
+    identity:
+      formula: "Phi_0 = id_Q_adm"
+      interpretation: "Zero is the neutral source-order increment."
+    composition:
+      formula: "Phi_(lambda+mu) = Phi_lambda o Phi_mu"
+      interpretation: "Successive source-order increments compose additively; commutativity of addition makes the family mutually commuting."
+    admissibility:
+      formula: "Phi_lambda(Q_adm) subseteq Q_adm for every lambda in R_ge_0"
+      interpretation: "The candidate is closed on the declared admissible source configurations."
+    redundancy_compatibility:
+      formula: "q ~_red q' implies Phi_lambda(q) ~_red Phi_lambda(q')"
+      interpretation: "The candidate respects the already-declared source quotient."
+    continuity:
+      formula: "(lambda,q) |-> Phi_lambda(q) is continuous from R_ge_0 x (Q_adm,T_adm) to (Q_adm,T_adm)"
+      interpretation: "This is joint source-side continuity only; it carries no metric, unit, differentiability, or physical regularity by itself."
+  declared_physical_status:
+    status: "uninterpreted source kinematics only"
+    positive_content: "The parameter gives a mathematical forward order and the maps give consistent source-configuration succession."
+    noncontent: "No physical clock, causal time orientation, gauge symmetry, physical history, source equation of motion, probability law, or target-side flow is established."
+
+precedent_migration_audit:
+  p4_t02_precedent: "P4-T02 proposed the same ordered additive monoid acting by smooth self-maps on the source arena A."
+  p4_t06_protected_result: "P4-T06 expressly declined to adopt that parameter monoid or action law and retained only the unresolved Phi_src slot."
+  p5_t01_type_change: "P5-T01 types S_Phi through PhiSpec(Q_adm,Iso_src,Red_src), so the current candidate acts on Q_adm rather than silently reinstating an action on A."
+  required_guard: "An action on A, a lift to the source bundle, or an induced action on sections would be additional structure requiring an explicit construction and compatibility proof."
+  prohibited_overread: "The P4-T02 precedent is motivation and consistency evidence, not adoption authority or a proof that the configuration-space action exists."
+
+epistemic_distinctions:
+  mathematical_order_parameter_vs_physical_time:
+    mathematical_statement: "lambda is an element of an ordered additive topological monoid and labels composable source-order increments."
+    blocked_identifications:
+      - "lambda is physical coordinate time"
+      - "lambda is proper time"
+      - "lambda is S-time or experienced duration"
+      - "lambda is a calibrated clock reading"
+      - "the standard order on R_ge_0 is a derived causal orientation"
+    missing_bridge:
+      - "operational clock degrees of freedom and detector semantics"
+      - "a causal structure and time orientation"
+      - "a dimensional unit and calibration law"
+      - "a demonstrated source-to-target relation"
+    philosophical_result: "Formal succession is weaker than physical temporality. A law may order source configurations without explaining clocks, duration, causality, or experienced time."
+  declared_redundancy_vs_physical_gauge:
+    mathematical_statement: "Red_src is a declared wide subgroupoid and compatibility makes Phi_src well defined on its orbit quotient."
+    blocked_identifications:
+      - "every Red_src arrow is a physical gauge transformation"
+      - "Red_src exhausts all physical gauge equivalence"
+      - "quotient-related configurations are operationally indistinguishable"
+      - "Red_src matches target diffeomorphism invariance"
+    missing_bridge:
+      - "adopted operational observable semantics"
+      - "matter and detector semantics"
+      - "a theorem establishing physical equivalence rather than declared redundancy"
+    philosophical_result: "A quotient records which distinctions the source model chooses to suppress; it does not, by notation alone, establish that nature or measurement suppresses them."
+  source_kinematics_vs_physical_dynamics:
+    mathematical_statement: "The semiflow supplies a succession algebra on source configurations."
+    blocked_identifications:
+      - "Phi_src is a source equation of motion"
+      - "Phi_src is generated by an action principle"
+      - "Phi_src carries energy, entropy, conservation laws, or probabilities"
+      - "Phi_src is the adopted effective GR dynamics"
+    missing_bridge:
+      - "a source action or evolution equation"
+      - "admissible variations linked to a variational principle"
+      - "initial-data and solution semantics"
+      - "observables, conservation rules, and physical interpretation"
+    terminology_guard: "Use semiflow as a mathematical term and qualify evolution as source-order evolution. Do not let dynamical-systems vocabulary imply adopted physical dynamics."
+  candidate_law_vs_adoption:
+    candidate_statement: "The packet constructs one source-law candidate and may prove its internal laws."
+    adoption_statement: "Adoption would change protected ontology or law status and requires separate human-gated authority."
+    prohibited_status_laundering:
+      - "internal consistency as canonical truth"
+      - "a witness as empirical evidence"
+      - "validator PASS as theorem truth or adoption"
+      - "task completion as Gate Chair approval"
+    status_rule: "Keep draft/control, proposal-only, source-extension data, and blocked_adoption_open_continuation adjacent to the definition and every result summary."
+  quotient_structure_vs_reconstruction:
+    quotient_statement: "Redundancy compatibility defines bar_Phi_lambda([q])=[Phi_lambda(q)] on Q_adm/Red_src."
+    reconstruction_statement: "S_rec remains open; no codomain Y, domain D, reconstruction map r, target atlas, metric, congruence, or benchmark object is supplied."
+    prohibited_inferences:
+      - "the quotient is physical spacetime"
+      - "the quotient carries g_eff"
+      - "bar_Phi is a target-side observer flow"
+      - "quotient descent is source-to-target reconstruction"
+    philosophical_result: "Removing declared representational multiplicity is not the same task as constructing emergent physical structure."
+
+invertibility_and_arrow_audit:
+  mainline_rule: "No inverse maps or negative parameters are assumed."
+  allowed_maps: "Individual Phi_lambda may be injective, surjective, bijective, or noninvertible, provided the stated candidate laws hold."
+  group_status: "A group action may be claimed only after a coherent action of (R,+,0) is constructed, or after an invariant subdomain is proved to carry compatible inverse maps for all parameters."
+  individual_bijection_guard: "Even if every forward map in one witness is bijective as a set map, the selected parameter object remains R_ge_0 and does not thereby become a group action."
+  irreversibility_guard: "Noninvertibility is mathematical information loss or failure of backward extension at candidate scope; it is not yet a thermodynamic arrow, causal arrow, entropy law, or proof of fundamental temporal irreversibility."
+  totality_guard: "A total action on R_ge_0 x Q_adm is globally defined for every declared forward parameter. This is forward totality on the candidate state space, not geodesic completeness, infinite physical duration, or physical global existence."
+
+generator_audit:
+  current_status: "not supplied and not implied"
+  reason: "Joint continuity does not by itself provide differentiability in lambda, differentiable structure on Q_adm, a tangent vector field, or the analytic domain required for an infinitesimal generator."
+  additional_burdens:
+    - "choose and justify a smooth, Banach, Frechet, or other suitable structure on Q_adm"
+    - "state the differentiability or strong-continuity class actually needed"
+    - "prove existence, domain, closure, and uniqueness properties of the generator appropriate to that class"
+  blocked_inferences:
+    - "a generator is a Hamiltonian"
+    - "a generator is a physical energy"
+    - "a generator supplies a Lagrangian or field equation"
+    - "generator existence follows from the word flow"
+
+reparameterization_audit:
+  theorem_scope: "For continuous additive order-preserving endomorphisms r:R_ge_0->R_ge_0, r(lambda)=c lambda with c>=0. Such a map is an order-preserving monoid automorphism exactly when c>0."
+  induced_candidate: "For c>0, Phi^c_lambda := Phi_(c lambda) satisfies the same monoid-action laws."
+  physical_consequence: "The action algebra alone does not select a normalization or physical unit for lambda."
+  null_endomorphism_guard: "The c=0 endomorphism collapses all parameters to zero and is not an automorphism or a faithful regraduation."
+  scope_guard: "Rigidity within additive reparameterizations does not prove that a future operational clock must be linearly related to lambda; such a clock relation is not yet constructed."
+  prohibited_overread: "Reparameterization freedom is not physical gauge unless a separate theorem gives it that operational meaning."
+
+exceptional_case_matrix:
+  - case_id: "PHIL-CASE-PERIODIC"
+    case: "periodic return orbit"
+    treatment: "Allowed. If Phi_p(q)=q for p>0, the forward orbit repeats algebraically from that state."
+    nonconclusion: "p is not thereby a measured period, proper-time interval, cosmological cycle, or physical recurrence."
+  - case_id: "PHIL-CASE-BI-INFINITE"
+    case: "bi-infinite orbit"
+    treatment: "Not part of the global R_ge_0 law. A specific orbit or invariant subdomain may admit a separately proved extension to an R-action."
+    nonconclusion: "Failure to assume a backward extension does not prove that the physical world has a beginning or that all source histories are irreversible."
+  - case_id: "PHIL-CASE-DENSE"
+    case: "dense parameter order or dense orbit"
+    treatment: "R_ge_0 is densely ordered. Whether an orbit is dense in Q_adm or its quotient depends on T_adm and must be separately shown."
+    nonconclusion: "Density does not imply ergodicity, mixing, recurrence, probability, observability, or physical temporal continuity."
+  - case_id: "PHIL-CASE-BRANCHING"
+    case: "branching succession"
+    treatment: "Excluded by the selected single-valued action. A branching model would require a relation, multiflow, transition category, or comparable extension with new composition laws."
+    nonconclusion: "Exclusion from this candidate is not a no-go theorem against branching source theories."
+  - case_id: "PHIL-CASE-STOCHASTIC"
+    case: "stochastic succession"
+    treatment: "Excluded by the selected deterministic self-maps. A stochastic alternative needs measurable structure, probability kernels, and a Chapman-Kolmogorov or equivalent composition law."
+    nonconclusion: "The deterministic candidate neither derives probabilities nor refutes stochastic source extensions."
+  - case_id: "PHIL-CASE-DISCRETE"
+    case: "discrete specialization"
+    treatment: "Restriction to N_0 gives a discrete monoid action, and an iterated map F may define Phi_n=F^n."
+    nonconclusion: "A finite or discrete witness does not establish joint continuity of an R_ge_0 action, a physical discretization, or a fundamental time step."
+
+witness_interpretation_audit:
+  continuum_contraction:
+    candidate: "Q=R with Phi_lambda(x)=exp(-lambda)x"
+    legitimate_use: "A transparent consistency witness for identity, composition, continuity, and forward-monoid semantics."
+    caveat: "Each map has a set-theoretic inverse outside the selected forward parameter domain, so the witness illustrates nonselection of a group law rather than impossibility of group extension."
+    prohibited_overread: "Contraction is not evidence of physical damping, dissipation, entropy production, cosmological expansion, or relaxation."
+  discrete_noninvertible_map:
+    candidate: "Phi_n=F^n for a noninvertible self-map F on a finite source set"
+    legitimate_use: "A discrete specialization showing that monoid actions need not be invertible."
+    caveat: "It is not itself a witness of a jointly continuous R_ge_0 action."
+    prohibited_overread: "The finite example is not empirical evidence, a physical cellular substrate, or a discretization of spacetime."
+
+topology_and_regularization_debt:
+  p5_t01_status: "P5-T01 defines Q_adm as a nonempty subset of smooth sections but does not select a topology on that set."
+  present_requirement: "P5-T02 must explicitly declare T_adm before continuity is meaningful."
+  candidate_options: "A subspace topology inherited from a declared topology on Gamma-infinity(E_src), such as a suitable Whitney or Frechet topology, may be tested, but no option is adopted by this child record."
+  no_silent_inference:
+    - "smoothness of each section does not automatically fix topology on the set of sections"
+    - "continuity of Phi_src is not differentiability"
+    - "topological continuity is not physical smoothness or empirical regularity"
+  fusion_requirement: "The parent artifact should name the topology or mark it as an explicit proposal parameter; otherwise the continuity claim is under-typed."
+
+underdetermination_language:
+  allowed:
+    - "The current ontology does not derive Phi_src as a continuous unital forward monoid action."
+    - "The candidate supplies one coherent source-only semantic filling for task-local study."
+    - "The monoid laws do not determine physical clock normalization, physical gauge meaning, source dynamics, or reconstruction."
+    - "Current adoption is blocked while same-milestone continuation remains open."
+    - "A branching, stochastic, group-action, or other source-side extension remains possible unless separately obstructed."
+  prohibited:
+    - "Phi_src is therefore physically a semiflow."
+    - "Physical time is derived."
+    - "Declared redundancy is physical gauge."
+    - "Noninvertibility proves a fundamental arrow of time."
+    - "The deterministic candidate proves branching or stochastic semantics impossible."
+    - "The quotient is emergent spacetime."
+    - "The candidate derives GR or explains benchmark success."
+
+prohibited_overreads:
+  - overread_id: "PHIL-OVERREAD-001"
+    claim: "Mathematical semiflow means physical flow or physical evolution."
+    correction: "It means only a continuous monoid action on the declared source state space."
+  - overread_id: "PHIL-OVERREAD-002"
+    claim: "The forward orientation supplies causal or thermodynamic time."
+    correction: "It supplies only the chosen order of the parameter monoid."
+  - overread_id: "PHIL-OVERREAD-003"
+    claim: "Redundancy compatibility proves gauge invariance."
+    correction: "It proves descent through a declared source equivalence relation."
+  - overread_id: "PHIL-OVERREAD-004"
+    claim: "Acting on Q_adm also defines motion of points in A."
+    correction: "No base-manifold action, bundle lift, or source-point trajectory follows without added structure."
+  - overread_id: "PHIL-OVERREAD-005"
+    claim: "A theorem about the quotient constructs target spacetime or g_eff."
+    correction: "The reconstruction slot remains open and source and target types remain separate."
+  - overread_id: "PHIL-OVERREAD-006"
+    claim: "A successful witness or validator adopts the law."
+    correction: "Witnesses show scoped consistency and validators show operational conformance only."
+  - overread_id: "PHIL-OVERREAD-007"
+    claim: "The candidate is uniquely selected among all semantic kinds."
+    correction: "This packet tests one admitted family and supplies no uniqueness or best-explanation theorem."
+  - overread_id: "PHIL-OVERREAD-008"
+    claim: "Exact-GR target clocks, congruences, or dynamics interpret Phi_src automatically."
+    correction: "They remain target-side benchmark structures and cannot be reused as source premises."
+
+epistemic_ladder:
+  levels:
+    - level: 1
+      name: "typed_candidate"
+      current_result: "The action signature and laws can be stated without target import."
+    - level: 2
+      name: "internal_theorem"
+      current_result: "Quotient descent and restricted reparameterization results may be proved under the stated assumptions."
+    - level: 3
+      name: "model_witness"
+      current_result: "Continuum and discrete examples may demonstrate consistency at their stated scopes."
+    - level: 4
+      name: "source_law_adoption"
+      current_result: "not authorized"
+    - level: 5
+      name: "physical_interpretation"
+      current_result: "not established"
+    - level: 6
+      name: "source_to_target_reconstruction"
+      current_result: "open"
+    - level: 7
+      name: "empirical_or_exact_gr_recovery"
+      current_result: "open"
+  anti_laundering_rule: "Evidence at a lower level may not be reported as satisfying a higher level."
+
+unique_contributions:
+  - contribution_id: "PHIL-UNIQUE-001"
+    contribution: "Separate the mathematical term semiflow from any claim of physical dynamics and require source-order qualifiers in narrative prose."
+  - contribution_id: "PHIL-UNIQUE-002"
+    contribution: "Treat positive parameter scaling as clock-normalization underdetermination, not as physical gauge."
+  - contribution_id: "PHIL-UNIQUE-003"
+    contribution: "Distinguish mathematical noninvertibility from causal, thermodynamic, and metaphysical arrows of time."
+  - contribution_id: "PHIL-UNIQUE-004"
+    contribution: "Distinguish quotient descent from physical-gauge equivalence and from reconstruction."
+  - contribution_id: "PHIL-UNIQUE-005"
+    contribution: "Identify the unfilled topology T_adm as an explicit semantic prerequisite for continuity."
+  - contribution_id: "PHIL-UNIQUE-006"
+    contribution: "Guard the shift from P4-T02's arena action to P5-T02's configuration-space action so that no base action or bundle lift is silently imported."
+  - contribution_id: "PHIL-UNIQUE-007"
+    contribution: "Classify deterministic exclusion of branching and stochastic behavior as a family limitation, not a global impossibility claim."
+
+unresolved_limitations:
+  - limitation_id: "PHIL-LIMIT-001"
+    statement: "The parameter monoid is selected by proposal; the current ontology supplies no derivation or uniqueness theorem for it."
+  - limitation_id: "PHIL-LIMIT-002"
+    statement: "The topology on Q_adm is not fixed by P5-T01 and must be declared before continuity is well typed."
+  - limitation_id: "PHIL-LIMIT-003"
+    statement: "No discriminator establishes that a deterministic continuous forward action is physically preferable to group, branching, stochastic, categorical, or purely order-theoretic alternatives."
+  - limitation_id: "PHIL-LIMIT-004"
+    statement: "Redundancy compatibility is relative to the declared Red_src and inherits any incompleteness or misclassification in that declaration."
+  - limitation_id: "PHIL-LIMIT-005"
+    statement: "No theorem connects action orbits to physical histories, clocks, causal order, entropy, matter, or detector observations."
+  - limitation_id: "PHIL-LIMIT-006"
+    statement: "No generator, source action, equation of motion, conservation law, stability theorem, or robustness theorem is supplied."
+  - limitation_id: "PHIL-LIMIT-007"
+    statement: "No source-to-target reconstruction, g_eff, matter coupling, Einstein-equation recovery, or exact-GR benchmark promotion follows."
+  - limitation_id: "PHIL-LIMIT-008"
+    statement: "The candidate's global forward totality may be stronger than later local existence models; changing to a local semiflow would require a new typed domain and modified laws."
+
+fusion_recommendations:
+  - recommendation_id: "PHIL-FUSE-001"
+    action: "State the status quartet draft/control, proposal-only, source-extension data, and blocked_adoption_open_continuation next to the main definition."
+  - recommendation_id: "PHIL-FUSE-002"
+    action: "Define T_adm explicitly and state whether continuity is joint or only separate; prefer joint continuity for the admitted family."
+  - recommendation_id: "PHIL-FUSE-003"
+    action: "State the action on Q_adm, not A, and add a no-base-action or no-bundle-lift nonconclusion."
+  - recommendation_id: "PHIL-FUSE-004"
+    action: "Give quotient descent and reparameterization rigidity as source-only theorems with explicit assumption and scope clauses."
+  - recommendation_id: "PHIL-FUSE-005"
+    action: "Place clock, gauge, dynamics, generator, reconstruction, and adoption nonconclusions immediately after the positive laws."
+  - recommendation_id: "PHIL-FUSE-006"
+    action: "Use a six-row exceptional-case matrix covering periodic, bi-infinite, dense, branching, stochastic, and discrete cases."
+  - recommendation_id: "PHIL-FUSE-007"
+    action: "Qualify the continuum contraction and finite iterative examples so they cannot be read as empirical, dissipative, or spacetime models."
+  - recommendation_id: "PHIL-FUSE-008"
+    action: "Use the exact statement current ontology does not derive X; do not convert local underdetermination into impossibility, rejection, or uniqueness."
+  - recommendation_id: "PHIL-FUSE-009"
+    action: "Record that later P5-T03 dynamics may depend on this candidate only at proposal scope and cannot treat it as adopted ontology."
+
+authority_flags:
+  theorem_truth_inferred_from_validation: false
+  canonical_ontology_modified: false
+  canonical_ontology_candidate_declared: false
+  source_law_adopted: false
+  source_law_rejected: false
+  physical_time_derived: false
+  physical_gauge_established: false
+  source_dynamics_adopted: false
+  source_generator_constructed: false
+  source_to_target_reconstruction_constructed: false
+  source_arena_identified_with_spacetime: false
+  m_src_adopted: false
+  g_eff_constructed_or_adopted: false
+  matter_or_detector_semantics_adopted: false
+  matter_coupling_derived: false
+  einstein_equations_derived: false
+  exact_gr_benchmark_promoted: false
+  gate_chair_verdict_issued: false
+  completed_derivation_claimed: false
+  physics_promotion_authorized: false
+  publication_or_push_authorized: false
+
+source_basis:
+  - source_id: "V21-P5-T02-PLAN"
+    path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+    inspected_scope: "P5-T02 lines 5533-5665"
+    use: "task objective, required laws, edge cases, validation, and claim boundary"
+  - source_id: "AJ-RT-20260725-007-001"
+    path: "research_control/tasks/RT-20260725-007/jobs/AJ-RT-20260725-007-001.yaml"
+    inspected_scope: "complete active AgentJob"
+    use: "route, candidate family, decomposition, allowed scope, expected outputs, and authority limits"
+  - source_id: "TEX-V21-P5-T01-COMPACT-SOURCE-THEORY-OBJECT-V1"
+    path: "research_control/tasks/RT-20260725-003/artifacts/compact_source_theory_object_v1.tex"
+    inspected_scope: "complete source"
+    use: "Q_adm, Red_src, open S_Phi, open dynamics, open reconstruction, and source-target boundary"
+  - source_id: "V21-P5-T01-COMPACT-SOURCE-THEORY-SPEC-V1"
+    path: "research_control/tasks/RT-20260725-003/artifacts/compact_source_theory_spec_v1.yaml"
+    inspected_scope: "complete companion specification"
+    use: "machine-readable types, statuses, and remaining burdens"
+  - source_id: "TEX-V21-P4-T06-SELECTED-ONTOLOGY-REGIME-INTEGRATION-V1"
+    path: "research_control/tasks/RT-20260724-010/artifacts/selected_ontology_regime_integration_v1.tex"
+    inspected_scope: "complete source"
+    use: "protected mainline boundary and non-adoption of the P4-T02 action law"
+  - source_id: "TEX-V21-P4-T02-CONTINUUM-FIRST-PREMETRIC-ONTOLOGY-OPTION-V1"
+    path: "research_control/tasks/RT-20260720-031/artifacts/continuum_first_premetric_ontology_option_v1.tex"
+    inspected_scope: "complete source"
+    use: "proposal-only ordered-monoid precedent and clock/gauge nonconclusions"
+  - source_id: "V21-P4-T02-CHILD-PHYS-PHIL-CONTINUUM-FIRST-OPTION"
+    path: "research_control/tasks/RT-20260720-031/artifacts/child_phys_phil_continuum_first_option.yaml"
+    inspected_scope: "complete evidence record"
+    use: "epistemic distinctions, underdetermination vocabulary, and source-target guard"
+  - source_id: "TEX-ONTOLOGY-AETHER-FLOW-FOUNDATIONS"
+    path: "ontology/tex/aether_flow_foundations.tex"
+    inspected_scope: "complete canonical source"
+    use: "unresolved Phi_src, S-time, source-target separation, and exact-GR benchmark boundary"
+  - source_id: "TEX-ONTOLOGY-AETHER-FLOW-DYNAMICS"
+    path: "ontology/tex/aether_flow_dynamics.tex"
+    inspected_scope: "complete canonical source"
+    use: "separation of unresolved source semantics from adopted target-side Einsteinian dynamics"
+  - source_id: "TEX-ONTOLOGY-AETHER-FLOW-GEOMETRY"
+    path: "ontology/tex/aether_flow_geometry.tex"
+    inspected_scope: "source-target and Phi_src boundary sections"
+    use: "target-side congruence is not Phi_src and supplies no source bridge"
+  - source_id: "GR-DERIVATION-BURDEN-MAP"
+    path: "research_control/design/gr_derivation_burden_map.md"
+    inspected_scope: "source_ontology milestone row"
+    use: "milestone burden, no-target-import acceptance, and physical-overread guard"
+
+source_attribution_note: "All evidence is repository-internal and source-bounded. No external source is used, and no generated derivative is treated as scientific authority."
+validation_status: "PASS"
+validation_scope: "YAML syntax and physicist-philosopher epistemic self-audit only; not theorem proof, source-law adoption, or physics promotion."

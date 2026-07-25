@@ -1,9 +1,66 @@
 mode: "director_led_research_control"
-active_task_id: "RT-20260725-006"
-latest_handoff_id: "handoff-0866"
-current_status: "p5_t01_rt005_allowlist_checkpoint_recovery_pass_ready_for_checkpoint"
-claim_boundary_summary: "RT-20260725-006 preserves the completed RT-005 AgentJob, completion, handoff, P5-T01 science, prior recovery, and Distance-to-GR bytes while restoring exact ordered allowlist identity across the role and role registry; it carries no scientific or promotion authority."
-next_recommended_action: "Run the one governed cumulative checkpoint for AJ-RT-20260725-006-001. Only after it commits may one fresh bounded P5-T02 ontology-law packet select the semantic kind of Phi_src and prove its basic source-side laws without target import."
+active_task_id: "RT-20260725-007"
+latest_handoff_id: "handoff-0867"
+current_status: "p5_t02_phi_src_semiflow_pass_ready_for_checkpoint"
+claim_boundary_summary: "RT-20260725-007 may construct and validate only one task-local draft/control proposal-only Phi_src continuous-forward-monoid-action candidate with source-side laws, witnesses, and nonconclusions; it cannot adopt the law or establish physical time, gauge, dynamics, reconstruction, downstream GR, promotion, proof, publication, or push authority."
+next_recommended_action: "After the governed checkpoint commits, run exactly one bounded P5-T03 candidate-construction packet to build a nontrivial source dynamics candidate compatible with the proposal-only Phi_src semantics or return a precise obstruction."
+
+p5_t02_phi_src_semiflow_source_law:
+  task_id: "RT-20260725-007"
+  parent_task_id: "RT-20260725-006"
+  parent_handoff_id: "handoff-0866"
+  plan_task_id: "P5-T02"
+  next_plan_task_id: "P5-T03"
+  claim_boundary_id: "CB-V21-P5-T02-PHI-SRC-SEMIFLOW-001"
+  status: "PASS_PHI_SRC_SEMIFLOW_SOURCE_SEMANTICS_READY_FOR_CHECKPOINT"
+  work_item_status: "completed"
+  target_derivation_milestone: "source_ontology"
+  milestone_burden: "Remove ambiguity in the central Æflow kinematic primitive."
+  route_label: "ontology-law-research-packet"
+  trigger_classification: "derivation_critical_missing_source_law"
+  selected_role_family: "ontology-formalizer@0.2.0"
+  selected_worker_skill: "continue-research"
+  immutable_route_sha256: "1e1c56a680930409548f438873481b79d78472bdca5900c37f7201340775f2e2"
+  source_handoff_path: "research_control/handoffs/handoff-0866.yaml"
+  source_handoff_sha256: "9f3fb762568ebb57e879db6d218ae5f261782bc90292fa80572f63c8b6ebe41e"
+  dependency_checkpoint_commit: "1c51bba10a6732347734dcd39bec3d1f520b7c45"
+  candidate_law_status: "draft/control proposal-only source-extension data"
+  selected_semantic_kind: "continuous_unital_forward_monoid_action_semiflow"
+  definition_path: "research_control/tasks/RT-20260725-007/artifacts/phi_src_semiflow_semantics_v1.tex"
+  definition_sha256: "60f7358e0643195d4e2b79f7fda921da223ef940d00968588a4175d23cc0b70f"
+  specification_path: "research_control/tasks/RT-20260725-007/artifacts/phi_src_semiflow_spec_v1.yaml"
+  specification_sha256: "425fbdc96c0720680e19a8189d2fa1e83e879b84596e4e7ad2420d8f2197852d"
+  validation_path: "research_control/tasks/RT-20260725-007/artifacts/phi_src_semiflow_validation_receipt_v1.json"
+  validation_sha256: "0d21bed3159dde482ec757171f6f9da61e70e40b5618870423a749c8592eb358"
+  completion_path: "research_control/tasks/RT-20260725-007/jobs/completions/AJC-AJ-RT-20260725-007-001.yaml"
+  completion_sha256: "15e08c1429dd1d9174dde83e5aa9d5ca2341e41c365b481c825679737554b41f"
+  handoff_id: "handoff-0867"
+  handoff_yaml_sha256: "ccbcfbe366d7884eef943d6b9de507e59254789fc1aefb9c71809137f8da46f5"
+  basic_law_count: 5
+  theorem_count: 2
+  continuum_witness_count: 1
+  discrete_specialization_count: 1
+  exceptional_case_count: 7
+  malformed_fail_closed_branch_count: 7
+  task_local_check_count: 15
+  unresolved_conflict_count: 0
+  canonical_ontology_modified: false
+  source_law_adopted: false
+  physical_time_claimed: false
+  physical_gauge_claimed: false
+  source_dynamics_selected: false
+  reconstruction_selected: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  checkpoint_invocation_count: 0
+  checkpoint_committed: false
+  selected_next_work_item: "P5-T03"
+  selected_next_worker_skill: "continue-research"
+  selected_next_role_family: "candidate-constructor@0.2.0"
+  selected_next_route_label: "candidate-construction-packet"
+  selected_next_strategy_id: "construct_first_explicit_source_dynamics_candidate_v1"
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
 
 p5_t01_rt005_allowlist_checkpoint_recovery:
   task_id: "RT-20260725-006"

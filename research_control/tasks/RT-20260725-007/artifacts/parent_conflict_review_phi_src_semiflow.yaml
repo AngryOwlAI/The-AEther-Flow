@@ -1,0 +1,74 @@
+schema_id: "parent_conflict_review_v1"
+artifact_id: "V21-P5-T02-PARENT-CONFLICT-REVIEW-PHI-SRC-SEMIFLOW-V1"
+task_id: "RT-20260725-007"
+job_id: "AJ-RT-20260725-007-001"
+plan_task_id: "P5-T02"
+status: "resolved"
+created_at: "2026-07-25T17:41:00Z"
+review_rounds: 1
+child_artifacts:
+  - execution_unit_id: "child_phys_math"
+    path: "research_control/tasks/RT-20260725-007/artifacts/child_phys_math_phi_src_semiflow.yaml"
+    status: "completed"
+  - execution_unit_id: "child_phys_phil"
+    path: "research_control/tasks/RT-20260725-007/artifacts/child_phys_phil_phi_src_semiflow.yaml"
+    status: "completed"
+
+shared_consensus:
+  - "The current ontology does not derive the semantic kind of Phi_src."
+  - "The narrow candidate is a jointly continuous unital action of (R_ge_0,+,0) on the P5-T01 admissible source-configuration space Q_adm."
+  - "Identity, composition, admissibility, redundancy compatibility, and joint continuity are the basic laws."
+  - "The candidate is draft/control, proposal-only, source-extension data, and blocked_adoption_open_continuation."
+  - "Redundancy compatibility gives algebraic quotient descent but does not establish physical gauge or reconstruction."
+  - "Continuous additive order-preserving parameter automorphisms are positive scalings, leaving clock normalization underdetermined."
+  - "Neither global inverse, generator, physical time, gauge, dynamics, adoption, nor source-to-target bridge follows."
+
+resolved_conflicts:
+  - conflict_id: "P5T02-CONFLICT-ORIENTATION-001"
+    issue: "The early parent draft narrated chronological composition as Phi_mu after Phi_lambda, while both child records used the conventional left-action formula Phi_(lambda+mu)=Phi_lambda after Phi_mu."
+    resolution: "Use the conventional left-action formula everywhere. Since the additive monoid is commutative, the action law also proves that fixed-parameter maps commute, so no mathematical result changes."
+    changed_output: true
+  - conflict_id: "P5T02-CONFLICT-QUOTIENT-TOPOLOGY-001"
+    issue: "The mathematical child notes that the standard locally-compact-Hausdorff parameter setting supplies a product-quotient result, while the philosophical child requires the topology and its status to remain explicit."
+    resolution: "State algebraic descent unconditionally and joint quotient continuity only when id_Lambda x pi is a quotient map, naming an open quotient projection as one sufficient condition. This is the conservative portable theorem statement."
+    changed_output: false
+  - conflict_id: "P5T02-CONFLICT-WITNESS-001"
+    issue: "One child discussed an exponential contraction whose maps are individually invertible outside the forward family; the other supplied an absorbing-amplitude witness with genuinely noninjective forward maps."
+    resolution: "Use the absorbing-translation continuum witness as the primary example because it directly proves that the selected laws do not imply a group. Retain the contraction observation only as an interpretive caution, not as a required artifact."
+    changed_output: false
+  - conflict_id: "P5T02-CONFLICT-PRECEDENT-001"
+    issue: "P4-T02 proposed a monoid action on the source arena, whereas P5-T02 needs an action on P5-T01 source configurations."
+    resolution: "Treat P4-T02 only as proposal precedent. Define the P5-T02 action on Q_adm and explicitly deny any inferred base-manifold action or bundle lift."
+    changed_output: true
+
+unique_math_contributions_preserved:
+  - "reachability is at most a preorder without extra antisymmetry"
+  - "fixed-parameter quotient maps are continuous by the quotient final topology"
+  - "the continuous witness is genuinely noninjective"
+  - "N_0 restriction does not guarantee a continuous interpolation"
+  - "branching and stochastic alternatives require distinct typed law families"
+
+unique_philosophy_contributions_preserved:
+  - "semiflow is mathematical source-order language rather than physical dynamics"
+  - "parameter scaling freedom is clock-normalization underdetermination rather than physical gauge"
+  - "noninvertibility is not a thermodynamic causal or metaphysical arrow of time"
+  - "quotient descent is neither physical-gauge identification nor reconstruction"
+  - "T_adm is a proposal parameter and P4-T02 does not authorize a base action"
+  - "candidate success does not establish uniqueness among semantic families"
+
+unresolved_conflicts: []
+remaining_limitations:
+  - "The current ontology does not derive or uniquely select the parameter monoid, topology, or deterministic functional family."
+  - "No discriminator yet prefers this candidate physically to group, branching, stochastic, categorical, or order-only alternatives."
+  - "No generator, source dynamics, reconstruction, physical clock, metric, matter, or exact-GR result is supplied."
+
+authority_flags:
+  canonical_ontology_modified: false
+  canonical_ontology_candidate_declared: false
+  source_law_adopted: false
+  source_law_rejected: false
+  physical_time_derived: false
+  physical_gauge_established: false
+  source_dynamics_adopted: false
+  physics_promotion_authorized: false
+  proof_publication_or_push_authorized: false

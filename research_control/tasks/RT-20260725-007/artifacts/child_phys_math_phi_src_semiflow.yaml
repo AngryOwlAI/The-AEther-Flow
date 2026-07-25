@@ -1,0 +1,457 @@
+schema_id: "parent_child_output_v1"
+artifact_id: "V21-P5-T02-CHILD-PHYS-MATH-PHI-SRC-SEMIFLOW-V1"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+task_id: "RT-20260725-007"
+job_id: "AJ-RT-20260725-007-001"
+plan_task_id: "P5-T02"
+created_at: "2026-07-25T17:37:31Z"
+target_derivation_milestone: "source_ontology"
+milestone_burden: "Remove ambiguity in the central Æflow kinematic primitive."
+
+scientific_status:
+  authority: "science_draft"
+  status_label: "draft/control"
+  candidate_status: "proposal-only"
+  material_class: "source-extension data"
+  adoption_status: "blocked_adoption_open_continuation"
+  canonical_ontology_candidate: false
+  source_law_adopted: false
+  theorem_authority_created: false
+  physics_promotion_authorized: false
+  scope_statement: >-
+    This child record supplies a task-local mathematical analysis of one
+    conservative source-side candidate. The current ontology does not derive
+    this Phi_src law. The analysis neither adopts nor rejects it and leaves
+    same-milestone continuation open.
+
+source_basis:
+  - object_id: "AJ-RT-20260725-007-001"
+    path: "research_control/tasks/RT-20260725-007/jobs/AJ-RT-20260725-007-001.yaml"
+    sha256: "3959c827a2ff4105d498ec3400213ba37ed89cf6132c07c12a00190788672992"
+    use: "active immutable scope, candidate family, and claim boundary"
+  - object_id: "TEX-V21-P5-T01-COMPACT-SOURCE-THEORY-OBJECT-V1"
+    path: "research_control/tasks/RT-20260725-003/artifacts/compact_source_theory_object_v1.tex"
+    sha256: "2520f82e54edcb2668446579ceed7a7dfc7a8abf995572aa9889a3d9a3a4467c"
+    use: "typed Q_adm, Red_src, and open S_Phi dependency"
+  - object_id: "V21-P5-T01-COMPACT-SOURCE-THEORY-TUPLE-V1"
+    path: "research_control/tasks/RT-20260725-003/artifacts/compact_source_theory_spec_v1.yaml"
+    sha256: "a381549ac6eb37346c1469f1157bdfa8417fbc010a19c087cf099b1368ab1b9c"
+    use: "machine-readable predecessor typing and open-slot boundary"
+  - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+    path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+    sha256: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+    use: "P5-T02 required laws, cases, outputs, and nonconclusions"
+  - object_id: "TEX-V21-P4-T02-CONTINUUM-FIRST-PREMETRIC-ONTOLOGY-OPTION-V1"
+    path: "research_control/tasks/RT-20260720-031/artifacts/continuum_first_premetric_ontology_option_v1.tex"
+    sha256: "7d408e527015f4e7c09df90277282c284f299fb705cbd4917a22e62ab3e0d1f8"
+    use: "proposal-only structural precedent, not adoption authority"
+  - object_id: "TEX-ONTOLOGY-AETHER-FLOW-FOUNDATIONS"
+    path: "ontology/tex/aether_flow_foundations.tex"
+    sha256: "4749d9e8b6858a43230e99029cccc3274b55fc2ae2a2cdf45a983a60c98e5b59"
+    use: "canonical unresolved-Phi_src and source-target boundary"
+  - object_id: "TEX-ONTOLOGY-AETHER-FLOW-DYNAMICS"
+    path: "ontology/tex/aether_flow_dynamics.tex"
+    sha256: "fd6e579e71ef7f2ac4c9668ceede051ad57033ee52357b2552a9e3a5a53939c7"
+    use: "separation from adopted target-side GR dynamics"
+  - object_id: "TEX-ONTOLOGY-AETHER-FLOW-GEOMETRY"
+    path: "ontology/tex/aether_flow_geometry.tex"
+    sha256: "f60a81b63f814b03cca7190b3ac6285842a55317f4aed058cc6e75154cc0b4d7"
+    use: "separation from target-side congruence u"
+  - object_id: "MD-GR-DERIVATION-BURDEN-MAP"
+    path: "research_control/design/gr_derivation_burden_map.md"
+    use: "source_ontology milestone and exact remaining burden"
+
+precedent_disposition:
+  p4_t02_status: "proposal-only structural precedent"
+  inherited_from_p4_t02:
+    - "the usefulness of the ordered additive parameter monoid (R_ge_0,+,0)"
+    - "the explicit nonassumption of inverses, generators, and physical time"
+  not_inherited:
+    - "P4-T02's action on the source arena A"
+    - "any source law or ontology adoption"
+    - "any physical interpretation of the parameter"
+  p5_t02_refinement: >-
+    The present candidate acts on the P5-T01 admissible configuration space
+    Q_adm, not on target spacetime and not by importing the P4-T02
+    proposal as canonical law.
+
+semantic_selection:
+  candidate_family: "V21-P5-T02-PHI-SRC-CONTINUOUS-UNITAL-FORWARD-MONOID-ACTION-V1"
+  selected_mathematical_kind: "continuous_unital_forward_monoid_action"
+  standard_short_name: "semiflow"
+  selected_physical_status: "structural source-order kinematics only"
+  primary_notation: "Phi_src(lambda,q) = Phi_lambda(q)"
+  parameter_object:
+    carrier: "Lambda_+ = R_ge_0"
+    operation: "ordinary addition"
+    identity: "0"
+    order: "ordinary total order, equivalently lambda <= mu iff mu=lambda+nu for some nu in R_ge_0"
+    topology: "Euclidean subspace topology"
+    exact_type: "ordered commutative topological monoid"
+  state_object:
+    carrier: "Q_adm"
+    topology: "T_adm, supplied by each source-only instance"
+    topology_rule: >-
+      T_adm must be declared without a target atlas, target metric, benchmark
+      success condition, candidate reconstruction, or target-side observer
+      field. Joint continuity is interpreted in the product topology on
+      R_ge_0 x Q_adm.
+  action_type: "Phi_src: R_ge_0 x Q_adm -> Q_adm"
+  composition_orientation:
+    convention: "Phi_(lambda+mu) = Phi_lambda o Phi_mu"
+    evaluation_order: "Phi_(lambda+mu)(q) = Phi_lambda(Phi_mu(q))"
+    orientation_note: >-
+      This is the left-action convention used in the P4-T02 precedent.
+      Because addition is commutative, the two fixed-parameter maps commute,
+      but the evaluation convention is nevertheless recorded to prevent
+      later notational drift.
+  axioms:
+    identity: "Phi_0(q)=q for every q in Q_adm"
+    composition: "Phi_(lambda+mu)(q)=Phi_lambda(Phi_mu(q))"
+    admissibility: "Phi_lambda(q) is in Q_adm for every lambda in R_ge_0 and q in Q_adm"
+    redundancy_compatibility: >-
+      If q is Red_src-equivalent to q', then Phi_lambda(q) is
+      Red_src-equivalent to Phi_lambda(q') for every lambda.
+    joint_continuity: >-
+      The map (lambda,q) |-> Phi_lambda(q) is continuous from
+      R_ge_0 x (Q_adm,T_adm) to (Q_adm,T_adm).
+  order_scope:
+    parameter_order_selected: true
+    state_order_selected: false
+    reachability_preorder_available: >-
+      One may define q <=_Phi q' when q'=Phi_lambda(q) for some lambda, but
+      this is generally only a preorder: periodicity can violate
+      antisymmetry and noninjectivity can merge histories.
+    interpretation: >-
+      Forward indexing orders compositions. It does not by itself order all
+      states, select a physical clock, or establish causal order.
+
+basic_law_analysis:
+  identity:
+    status: "satisfied_by_definition"
+    consequence: "Phi_0 is the identity self-map of Q_adm."
+  associativity:
+    status: "proved_within_candidate_assumptions"
+    derivation:
+      - "Phi_lambda o (Phi_mu o Phi_nu) = (Phi_lambda o Phi_mu) o Phi_nu by associativity of function composition."
+      - "(Phi_lambda o Phi_mu) o Phi_nu = Phi_(lambda+mu) o Phi_nu by the action law."
+      - "Phi_(lambda+mu) o Phi_nu = Phi_(lambda+mu+nu) by the action law."
+      - "Associativity of real addition makes the result independent of parenthesization."
+  commutation:
+    status: "derived"
+    derivation: >-
+      Phi_lambda o Phi_mu = Phi_(lambda+mu) =
+      Phi_(mu+lambda) = Phi_mu o Phi_lambda.
+    limitation: "Commutation is algebraic and does not imply a physical symmetry or gauge flow."
+  admissibility:
+    status: "required_axiom"
+    failure_result: "fail_closed_outside_Q_adm"
+  joint_continuity:
+    status: "required_axiom"
+    limitation: >-
+      Continuity neither implies differentiability nor supplies a generator,
+      equation of motion, invariant measure, clock calibration, or physical
+      evolution interpretation.
+
+quotient_descent_theorem:
+  theorem_id: "V21-P5-T02-THM-PHI-SRC-QUOTIENT-DESCENT-V1"
+  status: "proved_within_candidate_assumptions"
+  statement: >-
+    Let p:Q_adm->Qbar be the quotient by the Red_src orbit relation, endowed
+    with the quotient topology. If Phi is a unital forward monoid action and
+    preserves that orbit relation, then
+    Phi_bar_lambda([q])=[Phi_lambda(q)] is a unique well-defined unital
+    forward monoid action on Qbar. Each Phi_bar_lambda is continuous.
+    Joint continuity follows whenever id_R_ge_0 x p is a quotient map; this
+    holds for the ordinary topological setting used here because R_ge_0 is
+    locally compact Hausdorff. Recording the product-quotient hypothesis
+    explicitly is an acceptable fail-closed formulation if a different
+    topological category is later selected.
+  proof:
+    - step: "well_definedness"
+      argument: >-
+        If [q]=[q'], redundancy compatibility gives
+        Phi_lambda(q) ~_red Phi_lambda(q'), so the displayed orbit class is
+        independent of the representative.
+    - step: "uniqueness"
+      argument: >-
+        Surjectivity of p forces any descended map satisfying
+        Phi_bar_lambda o p = p o Phi_lambda to take [q] to
+        [Phi_lambda(q)].
+    - step: "identity"
+      argument: >-
+        Phi_bar_0([q])=[Phi_0(q)]=[q].
+    - step: "composition"
+      argument: >-
+        Phi_bar_lambda(Phi_bar_mu([q])) =
+        [Phi_lambda(Phi_mu(q))] =
+        [Phi_(lambda+mu)(q)] =
+        Phi_bar_(lambda+mu)([q]).
+    - step: "fixed_parameter_continuity"
+      argument: >-
+        p o Phi_lambda is continuous and constant on the fibers of the
+        quotient map p, hence its unique factor Phi_bar_lambda is continuous
+        by the defining final-topology property of p.
+    - step: "joint_continuity"
+      argument: >-
+        The continuous map p o Phi on R_ge_0 x Q_adm is constant on the
+        fibers of id x p. Factoring it through the quotient map id x p gives
+        the jointly continuous Phi_bar. Local compactness and Hausdorffness of
+        R_ge_0 supply the standard product-quotient condition in ordinary
+        topological spaces.
+  scope_limits:
+    - "No unique lift on Red_src arrows is proved; orbit compatibility is sufficient for object-quotient descent."
+    - "No physical gauge quotient is established."
+    - "No source observable is proved conserved along Phi."
+
+reparameterization_theorem:
+  theorem_id: "V21-P5-T02-THM-ADDITIVE-REPARAMETERIZATION-RIGIDITY-V1"
+  status: "proved_within_candidate_assumptions"
+  statement: >-
+    Every continuous additive order-preserving monoid endomorphism
+    r:R_ge_0->R_ge_0 has the form r(lambda)=c lambda with c>=0.
+    It is an ordered topological-monoid automorphism exactly when c>0.
+  proof:
+    - "Set c=r(1), which is nonnegative because the codomain is R_ge_0."
+    - "Additivity gives r(n)=nc for every n in N_0."
+    - "For m,n positive integers, n r(m/n)=r(m)=mc, hence r(m/n)=(m/n)c."
+    - "For arbitrary lambda in R_ge_0, take nonnegative rationals q_k->lambda; continuity yields r(lambda)=lim r(q_k)=c lambda."
+    - "For c>0 the inverse lambda |-> lambda/c is continuous, additive, and order-preserving; c=0 is the nonbijective collapse endomorphism."
+  action_consequence: >-
+    Psi_lambda=Phi_(r(lambda)) is again a forward monoid action for every
+    endomorphism r. Only c>0 gives a nondegenerate equivalent relabeling of
+    the parameter. The c=0 case collapses the family to Phi_0 and is not an
+    equivalent parametrization.
+  clock_nonconclusion: >-
+    The positive scale c remains arbitrary. Therefore the semiflow laws do
+    not select a clock unit, elapsed physical time, lapse, proper time, or an
+    operational calibration.
+
+invertibility_and_group_status:
+  global_inverse_assumed: false
+  individual_map_bijectivity_assumed: false
+  selected_kind_is_group_action: false
+  reasoning:
+    - "R_ge_0 has no additive inverse for lambda>0, so the selected parameter object is not a group."
+    - "A particular Phi_lambda may happen to be bijective, but neither bijectivity nor inclusion of its inverse in the family follows."
+    - "Noninjective or nonsurjective Phi_lambda are permitted and occur in the continuum witness below."
+  conditional_group_extension: >-
+    A bi-infinite R-action may be defined only on a separately proved
+    invariant domain where every Phi_lambda is bijective, the inverse maps
+    satisfy the compatible composition laws, and the extended map is jointly
+    continuous. No such global domain or extension is selected here.
+
+differentiability_and_generator_status:
+  differentiability_assumed: false
+  generator_assumed: false
+  reason: >-
+    Q_adm is only supplied with source-side topological structure at this
+    stage. The expression d/dlambda Phi_lambda(q) at lambda=0 is not typed
+    without a differentiable or linear ambient structure and a domain on
+    which the limit exists.
+  conditional_generator_form: >-
+    If a later packet equips Q_adm with suitable differentiable or
+    functional-analytic structure and proves the one-sided limit, it may
+    define X(q)=lim_(h downarrow 0)(Phi_h(q)-q)/h on its exact domain.
+  nonconclusion: >-
+    Even existence of such an X would not by itself make lambda physical time
+    or make X an adopted source dynamics, variational law, Hamiltonian, or
+    physical generator.
+
+witnesses:
+  continuum_absorbing_amplitude:
+    witness_id: "V21-P5-T02-WITNESS-CONTINUUM-ABSORBING-AMPLITUDE-V1"
+    status: "proposal-only"
+    arena: "A = T^4"
+    bundle: "E = T^4 x R"
+    configurations: "Q_adm^+ = {q_a(theta)=a sin(theta_1) | a in R_ge_0}"
+    topology: "the topology transported from R_ge_0 by a |-> q_a"
+    source_isomorphisms: "identity arrows only"
+    redundancy: "identity arrows only"
+    action: "Phi_lambda(q_a)=q_max(a-lambda,0)"
+    checks:
+      identity: "max(a-0,0)=a"
+      composition: >-
+        max(max(a-mu,0)-lambda,0)=max(a-(lambda+mu),0)
+      admissibility: "max(a-lambda,0) is in R_ge_0"
+      joint_continuity: "subtraction and the positive-part map x |-> max(x,0) are continuous"
+      redundancy_compatibility: "automatic for the identity relation"
+      noninvertibility: >-
+        For every lambda>0, all q_a with 0<=a<=lambda map to q_0, so
+        Phi_lambda is not injective.
+    generator_warning: >-
+      This witness has a piecewise one-sided amplitude derivative, but it does
+      not establish a general generator theorem; its candidate velocity is
+      discontinuous at the absorbing state.
+    authority_note: "A consistency witness, not a physical decay, clock, relaxation, or dynamics model."
+  discrete_natural_number_specialization:
+    witness_id: "V21-P5-T02-WITNESS-DISCRETE-N0-SPECIALIZATION-V1"
+    status: "proposal-only"
+    construction: "Restrict any candidate semiflow to n in N_0, defining Phi^disc_n=Phi_n."
+    parameter_object: "(N_0,+,0) with the discrete topology"
+    laws: "Phi^disc_0=id and Phi^disc_(m+n)=Phi^disc_m o Phi^disc_n"
+    limitation: >-
+      A bare N_0 action need not possess a unique or any continuous
+      R_ge_0 interpolation. It therefore cannot silently replace the selected
+      continuous candidate.
+    finite_reduction:
+      states: ["x_0", "x_1", "x_2"]
+      step_map: "F(x_0)=x_0, F(x_1)=x_0, F(x_2)=x_1"
+      action: "Phi^disc_n=F^n"
+      redundancy_classes: ["{x_0,x_1}", "{x_2}"]
+      compatibility_check: "F maps Red-equivalent x_0 and x_1 to the same state x_0."
+      noninvertibility_check: "F is not injective and reaches the absorbing x_0 in at most two positive steps."
+      authority_note: "A finite algebraic reduction, not a physical discretization or empirical model."
+
+exceptional_case_matrix:
+  - case_id: "CASE-PERIODIC"
+    admissibility: "allowed as a special orbit"
+    exact_handling: >-
+      A point q is periodic when Phi_p(q)=q for some p>0. Then
+      Phi_(lambda+p)(q)=Phi_lambda(q). This does not make every map globally
+      invertible and does not turn p into a measured physical period.
+  - case_id: "CASE-BI-INFINITE"
+    admissibility: "not part of the main candidate"
+    exact_handling: >-
+      Negative parameters require a separately proved invariant subdomain and
+      continuous inverse family. If those data exist, that restricted orbit
+      may admit an R-action extension; no global extension is inferred.
+  - case_id: "CASE-DENSE"
+    admissibility: "allowed but semantically nonpromotional"
+    exact_handling: >-
+      A dense orbit under the R_ge_0 action is compatible with the candidate
+      but does not supply causality, recurrence, ergodicity, or a clock.
+      A dense parameter submonoid such as Q_ge_0 determines a continuous
+      extension only when the required limits exist uniquely in the declared
+      topology; density alone is insufficient.
+  - case_id: "CASE-BRANCHING"
+    admissibility: "excluded by the selected single-valued deterministic type"
+    exact_handling: >-
+      Branching needs a relation-valued transition, nondeterministic system,
+      or suitable category action. Introducing it would be a distinct
+      source-extension family, not an exceptional instance of this function
+      Phi_src.
+  - case_id: "CASE-STOCHASTIC"
+    admissibility: "excluded except for the degenerate Dirac embedding"
+    exact_handling: >-
+      A stochastic alternative requires Markov kernels K_lambda and a
+      Chapman-Kolmogorov composition law. The deterministic candidate embeds
+      only as K_lambda(q,.)=delta_(Phi_lambda(q)); no probability law,
+      stochastic source dynamics, or empirical measure is selected.
+  - case_id: "CASE-DISCRETE-N0"
+    admissibility: "allowed as a restriction or separate specialization"
+    exact_handling: >-
+      Integer sampling preserves identity and composition. Continuity in the
+      parameter becomes vacuous in the discrete topology, and interpolation
+      back to R_ge_0 is not automatic.
+
+alternative_kind_classification:
+  group_action:
+    selected: false
+    reason: "negative parameters and global inverses are not supplied"
+  category_action:
+    selected: false
+    reason: >-
+      Every monoid action can be repackaged as a functor from a one-object
+      category, but no extra objects, arrows, or branching data justify making
+      this the primary semantic kind.
+  gauge_flow:
+    selected: false
+    reason: >-
+      Red_src compatibility ensures quotient well-definedness only; it does
+      not show that Phi_lambda(q) is Red_src-equivalent to q or that the
+      action is physically unobservable.
+  physical_evolution:
+    selected: false
+    reason: "no operational clock, dynamics law, empirical semantics, or source-to-target bridge is proved"
+  stochastic_process:
+    selected: false
+    reason: "no probability space, kernel, measure, or Chapman-Kolmogorov law is adopted"
+  emergent_ordering_relation:
+    selected: false
+    reason: >-
+      The action induces a reachability preorder, but antisymmetry and a
+      physical or causal interpretation are not established.
+
+fail_closed_conditions:
+  - condition: "Phi_0 is not the identity"
+    result: "reject_candidate_identity_failure"
+  - condition: "Phi_(lambda+mu) differs from Phi_lambda o Phi_mu"
+    result: "reject_candidate_composition_failure"
+  - condition: "some Phi_lambda leaves Q_adm"
+    result: "reject_candidate_admissibility_failure"
+  - condition: "Red_src-equivalent inputs are sent to inequivalent outputs"
+    result: "reject_candidate_quotient_failure"
+  - condition: "joint continuity is claimed without a declared source-side topology"
+    result: "reject_candidate_topology_gap"
+  - condition: "a target atlas, metric, congruence, benchmark result, or reconstruction is used to define Phi_src"
+    result: "reject_candidate_target_import"
+  - condition: "lambda is identified with physical time or gauge solely from the monoid laws"
+    result: "reject_physical_overread"
+  - condition: "a generator or inverse is used without its exact domain and proof"
+    result: "reject_unproved_structure"
+
+findings:
+  - finding_id: "MATH-PHI-001"
+    status: "accepted_child_recommendation"
+    summary: >-
+      Select a jointly continuous unital action of (R_ge_0,+,0) on the
+      source-only topological configuration space Q_adm as the narrowest
+      deterministic forward semantic kind.
+  - finding_id: "MATH-PHI-002"
+    status: "accepted_child_recommendation"
+    summary: >-
+      Require admissibility and Red_src orbit compatibility; these conditions
+      yield a unique action on Q_adm/Red_src, with continuity governed by the
+      quotient topology.
+  - finding_id: "MATH-PHI-003"
+    status: "accepted_child_recommendation"
+    summary: >-
+      Continuous additive order-preserving reparameterizations are exactly
+      positive scalings for automorphisms, so the candidate leaves clock
+      normalization undetermined.
+  - finding_id: "MATH-PHI-004"
+    status: "accepted_child_recommendation"
+    summary: >-
+      The absorbing-amplitude witness proves consistency with genuine
+      noninvertibility, while N_0 sampling records the discrete
+      specialization without claiming a unique continuum interpolation.
+  - finding_id: "MATH-PHI-005"
+    status: "accepted_child_recommendation"
+    summary: >-
+      Periodic and dense orbits fit within the action; bi-infinite,
+      branching, and stochastic structures require additional independently
+      typed assumptions or a distinct candidate family.
+
+explicit_nonconclusions:
+  no_target_import: true
+  no_physical_time: true
+  no_clock_calibration: true
+  no_physical_gauge: true
+  no_source_dynamics_adoption: true
+  no_generator_assumption: true
+  no_global_inverse_assumption: true
+  no_canonical_ontology_edit: true
+  no_source_law_adoption: true
+  no_source_to_target_bridge: true
+  no_target_congruence_identification: true
+  no_M_src_or_g_eff: true
+  no_matter_coupling: true
+  no_Einstein_equation_derivation: true
+  no_exact_GR_benchmark_promotion: true
+  no_completed_derivation: true
+  boundary_note: >-
+    In particular, Phi_src is not the target-side timelike congruence u used
+    by the geometry manuscript, and target-side GR dynamics supply no premise
+    for this source candidate.
+
+remaining_obligations:
+  - "Parent synthesis must compare the mathematical and philosophical child records and resolve any semantic conflict."
+  - "The task-local validator must check the action laws, theorem identifiers, witness equations, case coverage, and blocked conclusions."
+  - "P5-T03 must independently construct or precisely obstruct a source dynamics candidate; this semiflow alone is not that dynamics."
+  - "Later work must supply a source-to-target reconstruction, operational clock and causal interpretation, metric and matter recovery, and exact-GR derivation evidence."
+
+claim_boundary_preserved: true
+physics_promotion_authorized: false

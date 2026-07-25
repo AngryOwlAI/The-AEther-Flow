@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260725-006`
-- Latest handoff: `handoff-0866`
-- Current status: `p5_t01_rt005_allowlist_checkpoint_recovery_pass_ready_for_checkpoint`
+- Active task: `RT-20260725-007`
+- Latest handoff: `handoff-0867`
+- Current status: `p5_t02_phi_src_semiflow_pass_ready_for_checkpoint`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260725-006`
-- Latest research handoff: `handoff-0866`
-- Latest research next action: Run the one governed cumulative checkpoint for AJ-RT-20260725-006-001. Only after it commits may one fresh bounded P5-T02 ontology-law packet select the semantic kind of Phi_src and prove its basic source-side laws without target import.
+- Latest research task: `RT-20260725-007`
+- Latest research handoff: `handoff-0867`
+- Latest research next action: After the governed checkpoint commits, run exactly one bounded P5-T03 candidate-construction packet to build a nontrivial source dynamics candidate compatible with the proposal-only Phi_src semantics or return a precise obstruction.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p5_t02_fix_phi_src_semantics`
-- Role family: `ontology-formalizer@0.2.0`
+- Route ID: `v21_p5_t03_construct_source_dynamics_candidate`
+- Role family: `candidate-constructor@0.2.0`
 - Target milestone: `source_ontology`
-- Milestone burden: Remove ambiguity in the central Æflow kinematic primitive.
+- Milestone burden: Move the program from kinematic records to a genuine dynamical candidate.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `7e07afb405ebb13db0b8356b62e0f26d1135463f1a5dc4f10484099d62d9e328`
-- JSON SHA-256: `4e453f2c1039dba76380342e49aa70a2fb19410681659e384621e20804f5e542`
+- YAML SHA-256: `57576b723a0a25dc033ba466379355cfc3edd5708ec67b6852d80f17f17a0ac0`
+- JSON SHA-256: `6cdb8664127fb11bd2cea163e32e6aba250980f88fedf07dac3962f8ea1d99e8`
 
 ## Authority Warning
 

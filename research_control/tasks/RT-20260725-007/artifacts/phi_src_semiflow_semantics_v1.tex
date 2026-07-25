@@ -1,0 +1,332 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,longtable,array,enumitem}
+\newcommand{\Qadm}{\mathcal Q_{\mathrm{adm}}}
+\newcommand{\Red}{\mathsf{Red}_{\mathrm{src}}}
+\newcommand{\PhiSrc}{\Phi_{\mathrm{src}}}
+\newcommand{\Lam}{\Lambda_+}
+\newcommand{\Qbar}{\overline{\mathcal Q}_{\mathrm{adm}}}
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{boundary}{Boundary}
+\title{V21 P5-T02: Proposal-Only Semantics for \(\Phi_{\mathrm{src}}\)}
+\author{Ontology Formalizer parent--child synthesis}
+\date{2026-07-25}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+\fbox{\parbox{0.93\linewidth}{\textbf{Status and authority.}
+This source is \texttt{draft/control}, \texttt{proposal-only}, and
+\texttt{source-extension data}, with disposition
+\texttt{blocked\_adoption\_open\_continuation}. It tests one source-side
+candidate law; it does not adopt, reject, or modify canonical ontology. The
+parameter below is not established as physical time, a clock, a gauge
+parameter, or physical evolution. No source dynamics, reconstruction, metric,
+matter coupling, Einstein equation, benchmark promotion, proof publication,
+push, or completed derivation follows.}}
+\end{center}
+
+\section{Source basis and exact question}
+
+The P5-T01 compact source-theory object contains admissible source
+configurations \(\Qadm\), declared source redundancy \(\Red\), and a tagged
+open semantics slot \(S_\Phi\). It deliberately provides no value for that
+slot. P5-T02 asks which mathematical kind is sufficiently definite to support
+later source-dynamics work without importing a target atlas, target metric,
+benchmark behavior, or physical interpretation.
+
+This packet tests one conservative answer: \(\PhiSrc\) is a continuous unital
+forward action of an ordered additive topological monoid. The word
+``semiflow'' below names this mathematical structure only. It is not a claim
+that the configurations are physical states or that the parameter is time.
+
+\section{Selected candidate semantic type}
+
+\begin{definition}[Forward parameter monoid]
+Let
+\[
+  \Lam=(\mathbb R_{\geq 0},+,0,\leq)
+\]
+with its Euclidean topology. This is a commutative, ordered, topological
+monoid. It contains no negative parameters.
+\end{definition}
+
+\begin{definition}[P5-T02 source semiflow candidate]
+Give \(\Qadm\) a declared source-only topology \(\mathcal T_{\mathrm{adm}}\).
+A P5-T02 candidate is a map
+\[
+  \PhiSrc:\Lam\times\Qadm\longrightarrow\Qadm,
+  \qquad (\lambda,q)\longmapsto\Phi_\lambda(q),
+\]
+with the following laws:
+\begin{enumerate}[label=(S\arabic*)]
+  \item \textbf{Identity:} \(\Phi_0(q)=q\).
+  \item \textbf{Forward composition:}
+  \[
+    \Phi_{\lambda+\mu}(q)
+    =\Phi_\lambda(\Phi_\mu(q)).
+  \]
+  Thus applying \(\mu\) and then \(\lambda\) agrees with the summed
+  parameter. This is the conventional left-action notation. Commutativity of
+  addition also implies
+  \(\Phi_\lambda\circ\Phi_\mu=\Phi_\mu\circ\Phi_\lambda\), but the displayed
+  convention is fixed to prevent later notational drift.
+  \item \textbf{Admissibility:}
+  \(\Phi_\lambda(q)\in\Qadm\) for every
+  \((\lambda,q)\in\Lam\times\Qadm\).
+  \item \textbf{Redundancy compatibility:}
+  \[
+    q\sim_{\mathrm{red}}q'
+    \Longrightarrow
+    \Phi_\lambda(q)\sim_{\mathrm{red}}\Phi_\lambda(q')
+  \]
+  for every \(\lambda\geq0\).
+  \item \textbf{Joint continuity:} \(\PhiSrc\) is continuous as a map from
+  \(\Lam\times(\Qadm,\mathcal T_{\mathrm{adm}})\) to
+  \((\Qadm,\mathcal T_{\mathrm{adm}})\).
+\end{enumerate}
+\end{definition}
+
+The candidate fills only the mathematical value of \(S_\Phi\), and only at
+proposal scope. The P5-T01 slots \(S_{\mathrm{dyn}}\) and
+\(S_{\mathrm{rec}}\) remain tagged open. The selected kind is a monoid action,
+not a group action: the domain contains no negative parameter and the laws do
+not require any \(\Phi_\lambda\) to be invertible.
+
+\begin{boundary}[Source topology and no target import]
+The topology \(\mathcal T_{\mathrm{adm}}\), admissibility rule, parameter
+order, and redundancy relation must be supplied from source-side definitions.
+They may not be chosen by matching a target atlas, target metric, exact-GR
+solution, benchmark success, or candidate reconstruction.
+\end{boundary}
+
+\section{Basic law consequences}
+
+\begin{proposition}[Finite composition]
+For every \(n\geq1\), \(\lambda_1,\ldots,\lambda_n\in\Lam\), and
+\(q\in\Qadm\),
+\[
+  \Phi_{\lambda_n}\circ\cdots\circ\Phi_{\lambda_1}(q)
+  =
+  \Phi_{\lambda_1+\cdots+\lambda_n}(q).
+\]
+\end{proposition}
+
+\begin{proof}
+The case \(n=1\) is immediate. If the formula holds for \(n\), axiom (S2)
+gives
+\[
+ \Phi_{\lambda_{n+1}}
+ \bigl(\Phi_{\lambda_1+\cdots+\lambda_n}(q)\bigr)
+ =
+ \Phi_{\lambda_1+\cdots+\lambda_{n+1}}(q).
+\]
+This proves the result by induction.
+\end{proof}
+
+\begin{theorem}[Redundancy-quotient descent]
+Let \(\pi:\Qadm\to\Qbar=\Qadm/{\sim_{\mathrm{red}}}\) be the orbit projection.
+Under (S4), the formula
+\[
+  \overline\Phi_\lambda([q])
+  =
+  [\Phi_\lambda(q)]
+\]
+defines a unique action of \(\Lam\) on the quotient set \(\Qbar\). It obeys
+identity and forward composition. If \(\Qbar\) has the quotient topology and
+\(\mathrm{id}_{\Lam}\times\pi\) is a quotient map---for example, under a
+separately checked sufficient condition such as an open orbit
+projection---then the induced map
+\(\overline\Phi:\Lam\times\Qbar\to\Qbar\) is continuous.
+\end{theorem}
+
+\begin{proof}
+If \([q]=[q']\), axiom (S4) gives
+\([\Phi_\lambda(q)]=[\Phi_\lambda(q')]\), so the formula is well defined.
+Surjectivity of \(\pi\) makes it unique. Applying (S1) and (S2) before taking
+equivalence classes proves identity and composition. For the topological
+claim,
+\[
+ \overline\Phi\circ(\mathrm{id}_{\Lam}\times\pi)
+ =
+ \pi\circ\PhiSrc .
+\]
+The right side is continuous. The stated quotient-map hypothesis therefore
+gives continuity of \(\overline\Phi\). Without that extra topological
+hypothesis only the algebraic descent is claimed.
+\end{proof}
+
+This theorem is relative to the declared redundancy relation. It does not
+prove that \(\Red\) is a physical gauge symmetry or that the quotient is
+physical state space. Because the action is on \(\Qadm\), it also supplies no
+action on the source arena, no bundle lift, and no trajectory of source
+points.
+
+\section{Reparameterization and the clock nonconclusion}
+
+\begin{theorem}[Continuous additive reparameterization classification]
+Let \(r:\mathbb R_{\geq0}\to\mathbb R_{\geq0}\) be a continuous,
+order-preserving monoid endomorphism:
+\[
+ r(0)=0,\qquad r(\lambda+\mu)=r(\lambda)+r(\mu).
+\]
+Then there is \(c\geq0\) such that \(r(\lambda)=c\lambda\) for all
+\(\lambda\geq0\). It is an order-preserving monoid automorphism exactly when
+\(c>0\).
+\end{theorem}
+
+\begin{proof}
+Set \(c=r(1)\). Additivity gives \(r(n)=nc\) for
+\(n\in\mathbb N_0\), and \(n\,r(m/n)=r(m)=mc\), so
+\(r(m/n)=c(m/n)\) for nonnegative rationals. Approximate any
+\(\lambda\geq0\) by nonnegative rationals and use continuity to obtain
+\(r(\lambda)=c\lambda\). Nonnegativity gives \(c\geq0\). For \(c>0\), the
+inverse is \(\lambda\mapsto\lambda/c\); \(c=0\) collapses every parameter and
+is not an automorphism.
+\end{proof}
+
+The reparameterized family
+\(\Phi^{(c)}_\lambda=\Phi_{c\lambda}\) therefore obeys the same monoid laws
+for \(c\geq0\), with faithful scale change for \(c>0\). The selected semantics
+does not determine \(c\), a unit, a rate normalization, or any relation to a
+physical clock. This residual scaling freedom is a mathematical reason not to
+read the parameter as measured time.
+
+\section{Invertibility and generator boundaries}
+
+The mainline candidate requires no inverse. A particular
+\(\Phi_\lambda:\Qadm\to\Qadm\) may happen to be bijective, but its inverse
+need not occur at a parameter in \(\Lam\). A global group action is available
+only on a separately proved invariant domain \(D\subseteq\Qadm\) when the
+forward family extends consistently to
+\(\widetilde\Phi:\mathbb R\times D\to D\). Neither bijectivity nor such an
+extension is supplied here.
+
+Continuity alone also gives no infinitesimal generator. A generator such as
+\[
+ X(q)=\left.\frac{d}{d\lambda}\Phi_\lambda(q)\right|_{\lambda=0^+}
+\]
+requires a separately declared differentiable or functional-analytic
+structure, existence of the derivative, and domain control. Those are later
+burdens. No equation of motion follows from the present action laws.
+
+\section{Witnesses and specializations}
+
+\subsection{Continuous absorbing-translation witness}
+
+Take \(\Qadm=\mathbb R_{\geq0}\) with its ordinary topology, identity-only
+declared redundancy, and
+\[
+  \Phi_\lambda(x)=\max\{x-\lambda,0\}.
+\]
+Then \(\Phi_0=\mathrm{id}\),
+\[
+ \max\{\max\{x-\lambda,0\}-\mu,0\}
+ =\max\{x-(\lambda+\mu),0\},
+\]
+and the map is jointly continuous. For every \(\lambda>0\), distinct points
+in \([0,\lambda]\) map to \(0\), so the action is not invertible. This proves
+that the selected axioms are consistent and do not secretly imply a group.
+It is a mathematical witness, not an empirical source model.
+
+\subsection{Discrete specialization}
+
+For the discrete parameter monoid \((\mathbb N_0,+,0)\), take
+\(\Qadm=\{a,b,c\}\) and
+\[
+ F(a)=b,\qquad F(b)=b,\qquad F(c)=c,\qquad \Phi_n=F^n.
+\]
+Let declared redundancy identify \(a\sim_{\mathrm{red}}b\) and leave \(c\)
+alone. The action is unital, associative, noninvertible, and compatible with
+the redundancy, so it descends to the two-class quotient. This is a discrete
+specialization of the algebraic law, not a continuous instance of the
+\(\mathbb R_{\geq0}\) mainline and not a physical discretization claim.
+
+\section{Required exceptional-case classification}
+
+\begin{longtable}{p{0.18\linewidth}p{0.40\linewidth}p{0.32\linewidth}}
+\toprule
+Case & Mathematical disposition & Forbidden overread \\
+\midrule
+\endhead
+Continuous parameter
+& Selected mainline: \(\mathbb R_{\geq0}\) with joint continuity.
+& Continuity does not supply a clock, rate, generator, or physical evolution.\\
+Discrete parameter
+& Admissible specialization using \(\mathbb N_0\); not equivalent to the
+continuous mainline without an embedding or extension theorem.
+& A step label is not a physical time interval.\\
+Periodic orbit
+& Allowed when \(\Phi_p(q)=q\) for some \(p>0\); a circle rotation gives a
+simple mathematical example.
+& The return parameter is not an observed physical period.\\
+Bi-infinite orbit
+& Not part of the forward mainline; it requires a separately proved
+\(\mathbb R\)-action extension on an invariant subdomain.
+& Backward physical evolution or reversibility is not inferred.\\
+Dense orbit
+& Compatible with a continuous action, for example on a torus with
+incommensurate rotation rates.
+& Density does not fix physical topology, ergodicity, or a clock.\\
+Branching
+& Excluded by the selected single-valued map. It requires a relation,
+multiflow, or categorical extension and a new law packet.
+& Exclusion from this candidate is not a global impossibility theorem.\\
+Stochastic
+& Excluded by the deterministic map. It requires transition kernels and a
+Chapman--Kolmogorov or equivalent composition law.
+& No probability, noise, measurement, or stochastic physics is inferred.\\
+\bottomrule
+\end{longtable}
+
+\section{Fail-closed conditions}
+
+The candidate is rejected as malformed for this packet if any of the
+following occurs:
+\begin{enumerate}
+  \item target atlas, target metric, benchmark success, or candidate
+  reconstruction defines a source component;
+  \item identity, composition, admissibility, or redundancy compatibility
+  fails;
+  \item continuity is claimed without a declared source topology;
+  \item quotient continuity is claimed without the required quotient-map
+  hypothesis;
+  \item a global inverse, group extension, or generator is asserted without
+  its additional hypotheses;
+  \item \(\lambda\) is identified with physical time, clock scale, gauge,
+  physical dynamics, or a reconstruction parameter by the action axioms
+  alone.
+\end{enumerate}
+Failure is scoped to this candidate or claim. It does not establish that a
+different source-side extension is impossible.
+
+\section{Burden disposition and exact nonconclusions}
+
+At draft/control source-only scope, P5-T02 removes one kind of ambiguity:
+it gives \(S_\Phi\) a precise candidate type and law set and proves two basic
+structural results. The action remains proposal-only source-extension data.
+Current adoption is blocked while same-milestone continuation remains open.
+P5-T03 must supply a source-dynamics candidate compatible with this structure
+or explain precisely why a different \(\PhiSrc\) law is required.
+
+Nothing here establishes:
+\begin{itemize}
+  \item a canonical-ontology candidate, adopted or rejected source law, or
+  physical source manifold \(M_{\mathrm{src}}\);
+  \item physical time, clock normalization, gauge symmetry, reversibility,
+  an infinitesimal generator, or an equation of motion;
+  \item a source-to-target reconstruction, effective metric
+  \(g_{\mathrm{eff}}\), causal structure, or target diffeomorphism symmetry;
+  \item matter semantics, universal coupling, stress energy, or backreaction;
+  \item Einstein-equation recovery or exact-GR benchmark promotion;
+  \item proof publication, push, or completed-derivation authority.
+\end{itemize}
+
+\end{document}

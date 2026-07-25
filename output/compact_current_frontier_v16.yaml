@@ -1,7 +1,7 @@
 schema_id: "compact_current_frontier_v16"
 generated_from:
   - "research_control/program_state.yaml"
-  - "research_control/handoffs/handoff-0866.yaml"
+  - "research_control/handoffs/handoff-0867.yaml"
   - "registries/DISTANCE_TO_GR_LEDGER.csv"
   - "registries/METRIC_USE_LEDGER.csv"
   - "research_control/current_frontier.md"
@@ -9,16 +9,16 @@ generated_from:
   - "research_control/design/accepted_status_calibration_v2.yaml"
   - "research_control/design/active_state_bifurcation_policy_v1.md"
 active_state:
-  active_task_id: "RT-20260725-006"
-  latest_handoff_id: "handoff-0866"
-  current_status: "p5_t01_rt005_allowlist_checkpoint_recovery_pass_ready_for_checkpoint"
+  active_task_id: "RT-20260725-007"
+  latest_handoff_id: "handoff-0867"
+  current_status: "p5_t02_phi_src_semiflow_pass_ready_for_checkpoint"
   v15_completed: false
   v16_completed: false
   v16_plan_registered: true
 active_state_bifurcation:
-  latest_research_task_id: "RT-20260725-006"
-  latest_research_handoff_id: "handoff-0866"
-  latest_research_next_action: "Run the one governed cumulative checkpoint for AJ-RT-20260725-006-001. Only after it commits may one fresh bounded P5-T02 ontology-law packet select the semantic kind of Phi_src and prove its basic source-side laws without target import."
+  latest_research_task_id: "RT-20260725-007"
+  latest_research_handoff_id: "handoff-0867"
+  latest_research_next_action: "After the governed checkpoint commits, run exactly one bounded P5-T03 candidate-construction packet to build a nontrivial source dynamics candidate compatible with the proposal-only Phi_src semantics or return a precise obstruction."
   latest_project_system_task_id: "none"
   latest_project_system_status: "none"
   latest_project_system_sidecar_task_id: "none"
@@ -26,10 +26,10 @@ active_state_bifurcation:
   sidecar_supersedes_research_handoff: false
   next_research_route_source: "latest_research_handoff"
 next_route:
-  route_id: "v21_p5_t02_fix_phi_src_semantics"
-  role_family: "ontology-formalizer@0.2.0"
+  route_id: "v21_p5_t03_construct_source_dynamics_candidate"
+  role_family: "candidate-constructor@0.2.0"
   target_derivation_milestone: "source_ontology"
-  milestone_burden: "Remove ambiguity in the central Æflow kinematic primitive."
+  milestone_burden: "Move the program from kinematic records to a genuine dynamical candidate."
   requires_human_gate: false
 claim_boundary:
   physics_claim_authority: false
@@ -274,8 +274,8 @@ blocked_physical_targets:
       - "no_completed_derivation"
 distance_to_gr:
   delta:
-    effect: "none_project_system_recovery"
-    changed: false
+    effect: "scoped_source_semantics_only"
+    changed: true
     milestone: "source_ontology"
     burden_id: "source_ontology_primitives"
   high_risk_rows:
@@ -525,6 +525,6 @@ validation:
     - layer: "post_checkpoint"
       status: "PENDING"
       evidence:
-        - "One governed cumulative checkpoint remains; P5-T02 is not executed before it."
+        - "One governed checkpoint remains to be invoked in generation 112."
 authority_warning:
   snapshot_only_not_authority: true
