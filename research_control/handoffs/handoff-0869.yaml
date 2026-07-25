@@ -1,0 +1,258 @@
+validation_status: "PASS"
+handoff_id: "handoff-0869"
+handoff_number: 869
+task_id: "RT-20260725-009"
+decision_id: "DDR-20260725-009"
+job_id: "AJ-RT-20260725-009-001"
+completion_id: "AJC-AJ-RT-20260725-009-001"
+completion_path: "research_control/tasks/RT-20260725-009/jobs/completions/AJC-AJ-RT-20260725-009-001.yaml"
+completion_sha256: "0710ab8c96d5ba6e1b227412f4981edd9d0ae61f4641427a678bf5f962e277ae"
+status: "ready_after_checkpoint"
+created_at: "2026-07-25T20:47:55Z"
+parent_handoff_id: "handoff-0868"
+plan_task_id: "P5-T04"
+recovery_for_plan_task_id: "P5-T03"
+source_role_id: "process-integrity-auditor"
+source_role_version: "0.1.0"
+source_execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260725-009"
+summary: "Generation 114 removes exactly one terminal newline from each of four checkpoint-named P5-T03 YAML files. The sealed receipt records zero drift across the other 51 dirty-manifest paths at the repair boundary, matches the failed checkpoint and gate evidence hashes, and preserves all protected P5-T03 science and authority. P5-T04 remains unexecuted pending one governed cumulative checkpoint."
+next_action: "Run the one governed cumulative checkpoint for AJ-RT-20260725-009-001. Only after it commits may one fresh bounded P5-T04 ontology-law packet analyze the exact unchanged cubic-amplitude candidate for locality, composition, constraints, and conserved structure."
+current_claim_boundary: "CB-V21-P5-T03-FOUR-EOF-CHECKPOINT-RECOVERY-001"
+loop_risk_route: "ontology-law-research-packet"
+
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260725-009"
+  latest_research_handoff_id: "handoff-0869"
+  latest_research_next_action: "Run the one governed cumulative checkpoint for AJ-RT-20260725-009-001. Only after it commits may one fresh bounded P5-T04 ontology-law packet analyze the exact unchanged cubic-amplitude candidate for locality, composition, constraints, and conserved structure."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+
+claim_boundary:
+  allowed_next_scope: "After the governed cumulative checkpoint commits, one fresh bounded P5-T04 ontology-law packet may analyze the exact unchanged cubic-amplitude dynamics candidate for source locality, composition, constraints, and conserved structure."
+  completed_task: "RT-20260725-009"
+  completed_completion_path: "research_control/tasks/RT-20260725-009/jobs/completions/AJC-AJ-RT-20260725-009-001.yaml"
+  completed_completion_sha256: "0710ab8c96d5ba6e1b227412f4981edd9d0ae61f4641427a678bf5f962e277ae"
+  source_handoff_id: "handoff-0868"
+  source_handoff_path: "research_control/handoffs/handoff-0868.yaml"
+  source_handoff_sha256: "51fd10d660bb680f66a19f5e442b608bc72598486e453c5aff5ac75fda794d76"
+  immutable_route_sha256: "7d890c50eabed262d8891ca971ae8af771bc9758b51788163e4f3207c6ee0782"
+  result_status: "PASS_P5_T03_FOUR_EOF_CHECKPOINT_RECOVERY_READY_FOR_CHECKPOINT"
+  dirty_state_manifest_sha256: "12623c97f8e7a24cd5ff2b3f2320a74f890abc5f5dae2b7db2e9e04023db5517"
+  failed_checkpoint_receipt_sha256: "39b13b993728ae16dd298e34f8c85abbff60591cef01749d38eef0adc338ba4c"
+  failed_gate_evidence_sha256: "e7b1fa1516c822f090cddf435be01e1e6ab23d605fe7fdbd45cc8eb000111a11"
+  recovery_receipt_path: "research_control/tasks/RT-20260725-009/artifacts/p5_t03_eof_checkpoint_recovery_receipt.json"
+  recovery_receipt_sha256: "e30e00a4c990e7acbfb8523ba472f7363d5dab70dece6488f610b72136a4373e"
+  manifest_path_count: 55
+  target_path_count: 4
+  non_target_path_count: 51
+  non_target_hash_mismatch_count: 0
+  exact_terminal_newline_deletion_count: 4
+  checkpoint_invocation_count_before_handoff: 0
+  checkpoint_committed_before_handoff: false
+  p5_t03_science_payload_modified_by_recovery: false
+  p5_t03_reexecuted: false
+  p5_t04_executed: false
+  scientific_status_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  ontology_adoption_authorized: false
+  source_law_adoption_authorized: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_performed: false
+  blocked_claims:
+    - "EOF normalization presented as scientific progress"
+    - "P5-T03 draft/control source dynamics presented as adopted or physically interpreted"
+    - "P5-T04 presented as executed before checkpoint"
+    - "ontology source law physical time energy locality reconstruction downstream GR benchmark proof publication push or completed derivation"
+
+plan_result:
+  plan_task_id: "P5-T03"
+  recovery_for_plan_task_id: "P5-T03"
+  next_plan_task_id: "P5-T04"
+  title: "Repair four P5-T03 EOF blanks and recover checkpoint eligibility"
+  result_status: "P5_T03_FOUR_EOF_CHECKPOINT_RECOVERY_PASS"
+  work_item_status: "completed"
+  protected_p5_t03_payload_complete: true
+  protected_p5_t03_payload_byte_preserved_except_four_terminal_newlines: true
+  exact_terminal_newline_repair_complete: true
+  p5_t04_dependency_ready_after_checkpoint: true
+  p5_t04_dependency_ready_now: false
+  p5_t04_executed: false
+  scientific_claims_changed_by_recovery: false
+  distance_to_gr_delta_changed_by_recovery: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+distance_to_gr:
+  changed: false
+  effect: "none_project_system_recovery"
+  burden_id: "source_ontology_primitives"
+  milestone: "source_ontology"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "The inherited P5-T03 scoped source-dynamics delta is preserved; this recovery contributes no physics movement."
+  downstream_unlocked:
+    - "P5-T04 only after the governed cumulative checkpoint"
+  downstream_still_blocked:
+    - "P5-T04 until the governed cumulative checkpoint commits"
+    - "generic or adopted source dynamics"
+    - "physical time energy locality gauge or irreversibility"
+    - "physical source manifold M_src"
+    - "source-to-target reconstruction and effective metric g_eff"
+    - "matter coupling"
+    - "Einstein equations derivation"
+    - "benchmark promotion"
+
+required_next_packet:
+  task_type: "v21_p5_t04_derive_locality_composition_constraints_and_conserved_structure"
+  plan_task_id: "P5-T04"
+  objective: "Analyze the exact unchanged cubic-amplitude source-dynamics candidate for local composition, constraints, conserved quantities, gauge generators, or probabilistic normalization without target import."
+  dependency_ready_after_checkpoint: true
+  dependency_ready_now: false
+  executed: false
+
+selected_next_route:
+  route_id: "v21_p5_t04_analyze_cubic_amplitude_dynamics_structure"
+  route_label: "ontology-law-research-packet"
+  role_family: "ontology-formalizer@0.2.0"
+  worker_skill: "continue-research"
+  task_type: "v21_p5_t04_derive_locality_composition_constraints_and_conserved_structure"
+  plan_task_id: "P5-T04"
+  target_derivation_milestone: "source_ontology"
+  milestone_burden: "Establish the structural properties required for a predictive source theory."
+  strategy_id: "analyze_cubic_amplitude_dynamics_structure_v1"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  physics_promotion_authorized: false
+  executed: false
+  next_action: "Remain unexecuted until the generation-114 governed cumulative checkpoint commits."
+  source_handoff: "research_control/handoffs/handoff-0869.yaml"
+
+ordinary_route_guard:
+  schema_id: "ordinary_route_guard_evaluation_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  evaluation_id: "ORE-HANDOFF-0869"
+  ordinary_handoff_id: "handoff-0869"
+  threshold: 3
+  consecutive_project_system_tasks_before_selection: 1
+  ready_science_plan_task_ids:
+    - "P5-T04"
+  selected_plan_task_id: "P5-T04"
+  selected_route_class: "physics_bearing"
+  selected_worker_skill: "continue-research"
+  outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  exception_receipt:
+    active: false
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+active_state_boundary:
+  active_task_id: "RT-20260725-009"
+  active_job_id: "AJ-RT-20260725-009-001"
+  current_status: "p5_t03_four_eof_checkpoint_recovery_pass_ready_for_checkpoint"
+  checkpoint_required: true
+  checkpoint_completed: false
+  checkpoint_invocation_count: 0
+  project_system_recovery_completed: true
+  p5_t03_payload_complete: true
+  selected_next_plan_task_id: "P5-T04"
+  selected_next_worker_skill: "continue-research"
+  selected_next_role_family: "ontology-formalizer@0.2.0"
+  selected_next_route_label: "ontology-law-research-packet"
+  selected_next_strategy_id: "analyze_cubic_amplitude_dynamics_structure_v1"
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 114 validated, atomically claimed, and consumed its exact immutable recovery route once."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The tracked receipt proves four exact terminal-newline deletions, 51 non-target hash matches, and protected P5-T03 preservation."
+  post_write:
+    status: "PENDING"
+    evidence:
+      - "Integrated control, documentation, signal, memory, and test validation remains before checkpoint."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "One governed cumulative checkpoint remains; P5-T04 is not executed before it."
+  renderer:
+    status: "PENDING"
+    evidence:
+      - "Tracked frontier, task-index, graph, registry, and wiki derivatives remain to be synchronized."
+  memory_bootstrap:
+    status: "PENDING"
+    evidence:
+      - "Tracked memory synchronization remains before checkpoint."
+  claim_language_linter:
+    status: "PENDING"
+    evidence:
+      - "Integrated research-control validation remains before checkpoint."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not authorized; ordinary project-system EOF recovery validation only"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  publication_authorized: false
+  proof_authority: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  canonical_ontology_edit_authorized: false
+  ontology_selection_authorized: false
+  physical_interpretation_establishment_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required_no_nonblank_signals"
+  rationale: "The bounded recovery emits no new project-improvement signal."
+
+handoff_authority_boundary:
+  this_handoff_authorizes:
+    - "one governed cumulative checkpoint for AJ-RT-20260725-009-001"
+    - "after that checkpoint only, one fresh bounded P5-T04 packet"
+  this_handoff_does_not_authorize:
+    - "P5-T04 before checkpoint"
+    - "P5-T03 reexecution or semantic science-payload mutation"
+    - "validator or test behavior change"
+    - "ontology source law physical interpretation reconstruction downstream GR benchmark proof publication push or completed derivation"
+
+next_plan_task_id: "P5-T04"
+next_worker_skill: "continue-research"
+next_role_family: "ontology-formalizer@0.2.0"
+next_route_label: "ontology-law-research-packet"
+next_strategy_id: "analyze_cubic_amplitude_dynamics_structure_v1"
+notes: "Generation 114 is project-system control work only. P5-T04 remains unexecuted until the governed cumulative checkpoint commits."

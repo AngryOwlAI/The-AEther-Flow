@@ -1,0 +1,312 @@
+validation_status: "PASS"
+final_repository_validation_status: "PASS_PRECHECKPOINT_RECOVERY_READY"
+job_id: "AJ-RT-20260725-009-001"
+completion_id: "AJC-AJ-RT-20260725-009-001"
+task_id: "RT-20260725-009"
+task_type: "project_system_p5_t03_four_eof_blank_lines_and_checkpoint_recovery"
+decision_id: "DDR-20260725-009"
+role_id: "process-integrity-auditor"
+source_role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260725-009"
+status: "completed"
+created_at: "2026-07-25T20:41:54Z"
+started_at: "2026-07-25T20:41:54Z"
+completed_at: "2026-07-25T20:41:54Z"
+objective: "Under the sealed generation-114 dirty-state manifest, remove exactly one final newline from each of the four checkpoint-named P5-T03 YAML files, prove every non-target manifest and protected scientific byte remained exact at the repair boundary, synchronize normal control derivatives, and invoke one fresh governed cumulative checkpoint before P5-T04."
+completion_summary: "Generation 114 deletes exactly one terminal newline from each of four checkpoint-named P5-T03 YAML files. The sealed receipt records zero drift across the other 51 dirty-manifest paths at the repair boundary, matches the failed checkpoint and gate evidence hashes, and preserves the P5-T03 scientific payload. P5-T04 remains unexecuted pending one governed cumulative checkpoint."
+objective_result: "p5_t03_four_eof_checkpoint_recovery_pass_ready_for_checkpoint"
+
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P5"
+  plan_task_id: "P5-T03"
+  recovery_for_plan_task_id: "P5-T03"
+  implementation_status: "eof_recovery_implemented_checkpoint_ready"
+  protected_p5_t03_status: "complete_preserved"
+  completed_v21_tasks_added: []
+  next_dependency_ready_work_item: "P5-T04_after_checkpoint"
+  next_work_item_executed: false
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 114
+  passes_consumed: 104
+  route_work_item_id: "P5-T03"
+  route_worker_skill: "improve-project-system"
+  route_sha256: "7d890c50eabed262d8891ca971ae8af771bc9758b51788163e4f3207c6ee0782"
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:114"
+  handoff_token: "576b172d351f844fc405f51fd1f9c540e3edb8ac0c2af245"
+  relay_claim_token: "65ee6f2f0f1f07c43b8e967006c855d1337fd04d5cdedf70"
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+
+transaction_status: "ready_for_governed_checkpoint"
+result_disposition: "repair_implemented_and_validated"
+work_item_status: "completed"
+plan_task_id: "P5-T03"
+recovery_for_plan_task_id: "P5-T03"
+next_plan_task_id: "P5-T04"
+checkpoint_commit: "none_checkpoint_pending"
+checkpoint_invocation_count: 0
+checkpoint_staged: false
+legacy_validation_used: false
+project_system_change_only: true
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS_PRECHECKPOINT_READY"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  observed_durable_outputs:
+    physics: []
+    project_system:
+      - "four exact P5-T03 terminal-newline deletions"
+      - "sealed 55-path repair-preservation receipt"
+      - "one governed cumulative checkpoint"
+  accepted_criteria:
+    physics: []
+    project_system:
+      - "each target differs from its sealed hash by exactly one deleted final newline"
+      - "all 51 non-target dirty-manifest paths match at the repair boundary"
+      - "protected P5-T03 scientific and authority hashes remain exact"
+      - "all required working-tree gates pass"
+      - "one governed cumulative checkpoint commits"
+      - "P5-T04 remains unexecuted until checkpoint success"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+physics_payload_admission_result:
+  status: "admitted"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+
+ordinary_route_guard_admission_result:
+  status: "PASS"
+  source_handoff_id: "handoff-0867"
+  selected_plan_task_id: "P5-T03"
+  guard_outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  system_success_counts_as_physics: false
+  system_success_counts_as_distance_to_gr: false
+  scientific_status_changed: false
+  physics_promotion_authorized: false
+
+recovery_result:
+  status: "PASS"
+  strategy_id: "repair_p5_t03_four_eof_blank_lines_and_checkpoint_v1"
+  source_task_id: "RT-20260725-008"
+  source_job_id: "AJ-RT-20260725-008-001"
+  source_handoff_id: "handoff-0868"
+  source_head: "48799f729758a06efd31c234c1724f590516ebcd"
+  dirty_state_manifest_sha256: "12623c97f8e7a24cd5ff2b3f2320a74f890abc5f5dae2b7db2e9e04023db5517"
+  failed_checkpoint_receipt_sha256: "39b13b993728ae16dd298e34f8c85abbff60591cef01749d38eef0adc338ba4c"
+  failed_gate_evidence_sha256: "e7b1fa1516c822f090cddf435be01e1e6ab23d605fe7fdbd45cc8eb000111a11"
+  recovery_validator_path: "research_control/tasks/RT-20260725-009/artifacts/validate_p5_t03_eof_checkpoint_recovery.py"
+  recovery_validator_sha256: "26e3ec4fd4da6db4186a466179c7ddea0b20a4740dc6503a4dba15c3e6420819"
+  recovery_receipt_path: "research_control/tasks/RT-20260725-009/artifacts/p5_t03_eof_checkpoint_recovery_receipt.json"
+  recovery_receipt_sha256: "e30e00a4c990e7acbfb8523ba472f7363d5dab70dece6488f610b72136a4373e"
+  manifest_path_count: 55
+  target_path_count: 4
+  non_target_path_count: 51
+  non_target_hash_mismatch_count: 0
+  exact_terminal_newline_deletion_count: 4
+  target_hashes_after:
+    - path: "research_control/tasks/RT-20260725-008/00_TASK.yaml"
+      sha256: "b0a7e73210d5192682bcedc98508a1a4f54da32ebf0ee446208a65eedae4889c"
+    - path: "research_control/tasks/RT-20260725-008/artifacts/child_phys_math_cubic_amplitude_dynamics.yaml"
+      sha256: "2869bedb14e959fffd52ebd1089320c597c2d53070d7c91d97eae82be8505c50"
+    - path: "research_control/tasks/RT-20260725-008/artifacts/child_phys_phil_cubic_amplitude_dynamics.yaml"
+      sha256: "51056e2dae4183832b7b99bbc307223b0a95c95bd202d7ff8125a67ca4346652"
+    - path: "research_control/tasks/RT-20260725-008/artifacts/parent_conflict_review_cubic_amplitude_dynamics.yaml"
+      sha256: "d72c09e472984ae7bcf9b4d6860d2f84878878c4ba64776469d2dbad8ba3fd02"
+  p5_t03_science_payload_modified: false
+  p5_t03_reexecuted: false
+  p5_t04_executed: false
+
+artifacts:
+  - path: "research_control/tasks/RT-20260725-009/artifacts/validate_p5_t03_eof_checkpoint_recovery.py"
+    sha256: "26e3ec4fd4da6db4186a466179c7ddea0b20a4740dc6503a4dba15c3e6420819"
+  - path: "research_control/tasks/RT-20260725-009/artifacts/p5_t03_eof_checkpoint_recovery_receipt.json"
+    sha256: "e30e00a4c990e7acbfb8523ba472f7363d5dab70dece6488f610b72136a4373e"
+
+output_paths:
+  - "research_control/tasks/RT-20260725-008/00_TASK.yaml"
+  - "research_control/tasks/RT-20260725-008/artifacts/child_phys_math_cubic_amplitude_dynamics.yaml"
+  - "research_control/tasks/RT-20260725-008/artifacts/child_phys_phil_cubic_amplitude_dynamics.yaml"
+  - "research_control/tasks/RT-20260725-008/artifacts/parent_conflict_review_cubic_amplitude_dynamics.yaml"
+  - "research_control/tasks/RT-20260725-009/**"
+  - "research_control/handoffs/handoff-0869.yaml"
+  - "research_control/handoffs/handoff-0869.md"
+  - "research_control/program_state.yaml"
+
+command_results:
+  - command: ".venv/bin/python research_control/tasks/RT-20260725-009/artifacts/validate_p5_t03_eof_checkpoint_recovery.py --write-report --json"
+    status: "PASS"
+    summary: "four exact terminal-newline deletions; 51 non-target manifest hashes and protected P5-T03 hashes match"
+  - command: "git diff --check"
+    status: "PASS"
+    summary: "working-tree whitespace validation passes after the exact four-file repair"
+
+validation_summary:
+  status: "PASS_PRECHECKPOINT_RECOVERY_READY"
+  task_local_error_count: 0
+  manifest_path_count: 55
+  target_path_count: 4
+  non_target_hash_mismatch_count: 0
+  checkpoint_invocation_count: 0
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 114 validated, atomically claimed, and consumed the exact immutable recovery route once."
+      - "The exact 55-path manifest, repository identity, lease, route, and predecessor state matched before writes."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The sealed receipt proves four exact terminal-newline deletions, zero drift across 51 non-target paths, and protected P5-T03 hashes."
+  post_write:
+    status: "PENDING"
+    evidence:
+      - "Integrated control, documentation, signal, memory, and test validation remains to be consumed before checkpoint."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "The one governed cumulative checkpoint is pending; P5-T04 remains unexecuted."
+  renderer:
+    status: "PENDING"
+    evidence:
+      - "Tracked frontier, task index, registry, and wiki derivatives remain to be synchronized."
+  memory_bootstrap:
+    status: "PENDING"
+    evidence:
+      - "Tracked memory synchronization remains to be run after final control records are present."
+  claim_language_linter:
+    status: "PENDING"
+    evidence:
+      - "Integrated research-control validation remains to confirm no hard claim-language errors."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not authorized; ordinary project-system EOF recovery validation only"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  publication_authorized: false
+  proof_authority: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  canonical_ontology_edit_authorized: false
+  ontology_selection_authorized: false
+  physical_interpretation_establishment_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+distance_to_gr_delta:
+  changed: false
+  effect: "none_project_system_recovery"
+  burden_id: "source_ontology_primitives"
+  milestone: "source_ontology"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "The inherited P5-T03 scoped source-dynamics delta is preserved; this recovery contributes no physics movement."
+
+physics_progress_status:
+  status: "none_project_system_only"
+  new_mathematical_payload: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+
+selected_next_route:
+  route_id: "v21_p5_t04_analyze_cubic_amplitude_dynamics_structure"
+  route_label: "ontology-law-research-packet"
+  role_family: "ontology-formalizer@0.2.0"
+  worker_skill: "continue-research"
+  task_type: "v21_p5_t04_derive_locality_composition_constraints_and_conserved_structure"
+  plan_task_id: "P5-T04"
+  target_derivation_milestone: "source_ontology"
+  milestone_burden: "Establish the structural properties required for a predictive source theory."
+  strategy_id: "analyze_cubic_amplitude_dynamics_structure_v1"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  blocked_by: "governed cumulative P5-T03 checkpoint"
+  physics_promotion_authorized: false
+  executed: false
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required_no_nonblank_signals"
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1014
+    relationship_row_count: 5016
+    semantic_row_count: 1014
+    vault_row_count: 1014
+    local_cache_only_warning_count: 5
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/design/validation_obligation_resolution_policy_v1.md --json"
+      query_type: "lookup"
+      query_text: "research_control/design/validation_obligation_resolution_policy_v1.md"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-DESIGN-VALIDATION-OBLIGATION-RESOLUTION-POLICY-V1"
+  canonical_inspections:
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-VALIDATION-OBLIGATION-RESOLUTION-POLICY-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/validation_obligation_resolution_policy_v1.md"
+      source_hash: "baea9d8b4b67c4c8bceb73da34dfbc562fe285c087992198295a177058c4cfc2"
+  authority_note: "Generated Obsidian, wiki, semantic, relationship, SQLite, and .local surfaces are retrieval-only navigation layers and not authority; tracked canonical sources, registries, and research-control state govern this recovery."

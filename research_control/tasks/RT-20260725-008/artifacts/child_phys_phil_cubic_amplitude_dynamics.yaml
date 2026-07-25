@@ -1,0 +1,133 @@
+schema_id: "parent_child_output_v1"
+artifact_id: "V21-P5-T03-CHILD-PHYS-PHIL-CUBIC-AMPLITUDE-DYNAMICS-V1"
+execution_unit_id: "child_phys_phil"
+perspective: "physicist_philosopher"
+status: "completed"
+task_id: "RT-20260725-008"
+job_id: "AJ-RT-20260725-008-001"
+plan_task_id: "P5-T03"
+created_at: "2026-07-25T19:24:00Z"
+target_derivation_milestone: "source_ontology"
+milestone_burden: "Move the program from kinematic records to a genuine dynamical candidate."
+
+scientific_status:
+  authority: "science_draft"
+  status_label: "draft/control"
+  candidate_status: "proposal-only"
+  material_class: "source-extension data"
+  adoption_status: "blocked_adoption_open_continuation"
+  canonical_ontology_candidate: false
+  adopted: false
+  rejected: false
+  human_gated_for_adoption: true
+  source_dynamics_candidate_constructed: true
+  source_dynamics_adopted: false
+  physical_dynamics_selected: false
+  physics_promotion_authorized: false
+
+candidate_typing:
+  state_space: "Q_amp={q_a(theta)=a sin(theta_1) | a in R}"
+  smooth_structure: "ordinary smooth structure of R transported through a |-> q_a"
+  admissible_variations: "Var_src(q_a)=span{sin(theta_1)}"
+  parameter: "lambda in Lambda_+=(R_ge_0,+,0), source order only"
+  coefficient: "gamma>0 with formal units [lambda]^-1[a]^-2"
+  generator: "X_gamma(q_a)=-gamma a^3 sin(theta_1)"
+  update_law: "da/dlambda=-gamma a^3"
+  solution: "a(lambda)=a0/sqrt(1+2 gamma a0^2 lambda)"
+  redundancy_scope: "identity-only Red_src"
+  slot_scope: "task-local S_dyn witness instance only"
+
+interpretive_verdict:
+  - "P5-T03 adds differentiable structure and one particular generator whose integrated maps realize the P5-T02 semantic type."
+  - "The generic P5-T02 topological semiflow did not already contain this generator."
+  - "The current ontology does not derive the cubic power, positive sign, coefficient, or preference for this candidate."
+  - "The result establishes source-only constructibility on one witness, not uniqueness, physical adequacy, or adoption."
+
+forward_structure_audit:
+  injective: true
+  surjective_for_positive_parameter: false
+  inverse_status: "inverse exists only on the proper image, not as a self-map of all Q_amp"
+  backward_status: "nonzero backward trajectories blow up at finite negative parameter"
+  allowed_description: "genuinely forward-only global semiflow on Q_amp"
+  prohibited_descriptions:
+    - "information loss"
+    - "physical irreversibility"
+    - "entropy production"
+    - "causal orientation"
+    - "physical beginning"
+    - "spacetime singularity"
+
+control_functional_audit:
+  definition: "L(q_a)=F(q_a)^2/2=a^2/2"
+  derivative: "dL/dlambda=-gamma a^4=-4 gamma L^2<=0"
+  legitimate_status: "source control or Lyapunov functional"
+  forbidden_statuses:
+    - "physical energy"
+    - "Hamiltonian"
+    - "action"
+    - "entropy"
+    - "thermodynamic potential"
+  metric_guard: "No state-space metric or gradient operator is selected; X=-grad L is not claimed."
+  applicability_guard: "Physical-energy and probability consistency are not applicable because neither belongs to the candidate."
+
+scale_audit:
+  invariant_combination: "gamma a0^2 lambda"
+  active_reparameterization: "Phi^gamma_(c lambda)=Phi^(c gamma)_lambda"
+  passive_regraduation: "lambda'=c lambda gives gamma'=gamma/c"
+  amplitude_regraduation: "a'=d a gives gamma'=gamma/d^2"
+  conclusion: "No absolute rate, physical unit, dimensionful physical scale, or clock calibration is fixed."
+
+parent_conflict_recommendations:
+  - conflict_id: "P5T03-PHIL-DIRECT-RULE"
+    issue: "gradient-flow language would require an added state-space pairing"
+    recommendation: "present X_gamma as a direct autonomous update rule and retain L as diagnostic only"
+  - conflict_id: "P5T03-PHIL-INVERSE"
+    issue: "nonsurjectivity could be overread as information loss or physical irreversibility"
+    recommendation: "state injectivity and the exact proper range before denying those overreads"
+  - conflict_id: "P5T03-PHIL-NEGATIVE-GAMMA"
+    issue: "gamma<0 could be called merely an unstable total candidate"
+    recommendation: "record finite forward blowup, so it fails the selected total P5-T02 action on Q_amp"
+  - conflict_id: "P5T03-PHIL-LOCALITY"
+    issue: "amplitude autonomy could be overread as source-manifold locality"
+    recommendation: "call it an amplitude-sector update and defer locality to P5-T04"
+  - conflict_id: "P5T03-PHIL-MINIMALITY"
+    issue: "the cubic form could be presented as uniquely minimal"
+    recommendation: "call it one conservative smooth odd-polynomial candidate and leave alternatives open"
+
+alternatives_not_ruled_out:
+  - "linear exponential generators with a global group extension"
+  - "other nonlinear autonomous vector fields"
+  - "noninjective absorbing semiflows"
+  - "local rather than globally total semiflows"
+  - "group discrete branching stochastic categorical or order-only source laws"
+  - "different state spaces topologies redundancies and control functionals"
+  - "future action or Hamiltonian candidates after independently supplying the needed structure"
+
+prohibited_overreads:
+  - "lambda is physical time proper time S-time or a clock reading"
+  - "gamma is a measured decay rate"
+  - "L is physical energy action Hamiltonian or entropy"
+  - "backward blowup is a physical beginning causal boundary or spacetime singularity"
+  - "nonsurjectivity proves thermodynamic irreversibility"
+  - "the torus witness is physical spacetime"
+  - "identity-only redundancy proves physical gauge robustness"
+  - "the generator constructs g_eff matter coupling Einstein equations or exact-GR recovery"
+  - "validator success supplies theorem truth ontology adoption or Gate Chair authority"
+
+p5_t04_boundary:
+  owned_here:
+    - "explicit generator parameter initial data and global forward solution"
+    - "direct semiflow variation range scale and Lyapunov checks"
+    - "malformed controls and exact claim boundaries"
+  deferred:
+    - "systematic source-manifold locality"
+    - "extension beyond the one-dimensional witness"
+    - "nontrivial redundancy constraints and symmetry"
+    - "conserved-structure classification"
+    - "robustness perturbation and mode analysis"
+
+candidate_constructor_result:
+  result_type: "constructed_candidate"
+  no_fog_check: true
+  no_fog_explanation: "One explicit nonlinear source-order generator and its global forward solution were constructed on the P5-T01 torus-amplitude witness."
+  claim_boundary_preserved: true

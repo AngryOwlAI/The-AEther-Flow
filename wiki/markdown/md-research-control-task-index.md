@@ -10,7 +10,7 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 - Role: `generated_task_index`
 - Authority status: `generated_noncanonical`
 - Owner skill: `project-memory-system`
-- Source hash: `002cb898a216b7aec942f85e25b5391c4b75a86bebb02c23c6981abcc83e9a21`
+- Source hash: `1572059333897961e9da8b27bbd9bf32da67652a58a51f38cb294d368bb8d2cf`
 
 ## Related Objects
 
@@ -22,4 +22,4 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 ## Validation
 
 - Validation status: `PASS`
-- Last validated at: `2026-07-25T18:26:56Z`
+- Last validated at: `2026-07-25T21:04:13Z`

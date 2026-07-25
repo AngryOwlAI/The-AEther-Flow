@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260725-007`
-- Latest handoff: `handoff-0867`
-- Current status: `p5_t02_phi_src_semiflow_pass_ready_for_checkpoint`
+- Active task: `RT-20260725-009`
+- Latest handoff: `handoff-0869`
+- Current status: `p5_t03_four_eof_checkpoint_recovery_pass_ready_for_checkpoint`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260725-007`
-- Latest research handoff: `handoff-0867`
-- Latest research next action: After the governed checkpoint commits, run exactly one bounded P5-T03 candidate-construction packet to build a nontrivial source dynamics candidate compatible with the proposal-only Phi_src semantics or return a precise obstruction.
+- Latest research task: `RT-20260725-009`
+- Latest research handoff: `handoff-0869`
+- Latest research next action: Run the one governed cumulative checkpoint for AJ-RT-20260725-009-001. Only after it commits may one fresh bounded P5-T04 ontology-law packet analyze the exact unchanged cubic-amplitude candidate for locality, composition, constraints, and conserved structure.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p5_t03_construct_source_dynamics_candidate`
-- Role family: `candidate-constructor@0.2.0`
+- Route ID: `v21_p5_t04_analyze_cubic_amplitude_dynamics_structure`
+- Role family: `ontology-formalizer@0.2.0`
 - Target milestone: `source_ontology`
-- Milestone burden: Move the program from kinematic records to a genuine dynamical candidate.
+- Milestone burden: Establish the structural properties required for a predictive source theory.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `57576b723a0a25dc033ba466379355cfc3edd5708ec67b6852d80f17f17a0ac0`
-- JSON SHA-256: `6cdb8664127fb11bd2cea163e32e6aba250980f88fedf07dac3962f8ea1d99e8`
+- YAML SHA-256: `4a01494974086477f660ba01cadff3cea3c970ee7b531d0356477bd7a34abf70`
+- JSON SHA-256: `b274739550c7821d4123e3fd805f6245696b61f34121ae11dfbc7e578d7f8d68`
 
 ## Authority Warning
 

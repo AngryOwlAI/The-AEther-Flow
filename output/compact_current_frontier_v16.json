@@ -2,7 +2,7 @@
   "schema_id": "compact_current_frontier_v16",
   "generated_from": [
     "research_control/program_state.yaml",
-    "research_control/handoffs/handoff-0867.yaml",
+    "research_control/handoffs/handoff-0869.yaml",
     "registries/DISTANCE_TO_GR_LEDGER.csv",
     "registries/METRIC_USE_LEDGER.csv",
     "research_control/current_frontier.md",
@@ -11,17 +11,17 @@
     "research_control/design/active_state_bifurcation_policy_v1.md"
   ],
   "active_state": {
-    "active_task_id": "RT-20260725-007",
-    "latest_handoff_id": "handoff-0867",
-    "current_status": "p5_t02_phi_src_semiflow_pass_ready_for_checkpoint",
+    "active_task_id": "RT-20260725-009",
+    "latest_handoff_id": "handoff-0869",
+    "current_status": "p5_t03_four_eof_checkpoint_recovery_pass_ready_for_checkpoint",
     "v15_completed": false,
     "v16_completed": false,
     "v16_plan_registered": true
   },
   "active_state_bifurcation": {
-    "latest_research_task_id": "RT-20260725-007",
-    "latest_research_handoff_id": "handoff-0867",
-    "latest_research_next_action": "After the governed checkpoint commits, run exactly one bounded P5-T03 candidate-construction packet to build a nontrivial source dynamics candidate compatible with the proposal-only Phi_src semantics or return a precise obstruction.",
+    "latest_research_task_id": "RT-20260725-009",
+    "latest_research_handoff_id": "handoff-0869",
+    "latest_research_next_action": "Run the one governed cumulative checkpoint for AJ-RT-20260725-009-001. Only after it commits may one fresh bounded P5-T04 ontology-law packet analyze the exact unchanged cubic-amplitude candidate for locality, composition, constraints, and conserved structure.",
     "latest_project_system_task_id": "none",
     "latest_project_system_status": "none",
     "latest_project_system_sidecar_task_id": "none",
@@ -30,10 +30,10 @@
     "next_research_route_source": "latest_research_handoff"
   },
   "next_route": {
-    "route_id": "v21_p5_t03_construct_source_dynamics_candidate",
-    "role_family": "candidate-constructor@0.2.0",
+    "route_id": "v21_p5_t04_analyze_cubic_amplitude_dynamics_structure",
+    "role_family": "ontology-formalizer@0.2.0",
     "target_derivation_milestone": "source_ontology",
-    "milestone_burden": "Move the program from kinematic records to a genuine dynamical candidate.",
+    "milestone_burden": "Establish the structural properties required for a predictive source theory.",
     "requires_human_gate": false
   },
   "claim_boundary": {
@@ -323,8 +323,8 @@
   ],
   "distance_to_gr": {
     "delta": {
-      "effect": "scoped_source_semantics_only",
-      "changed": true,
+      "effect": "none_project_system_recovery",
+      "changed": false,
       "milestone": "source_ontology",
       "burden_id": "source_ontology_primitives"
     },
@@ -609,10 +609,38 @@
     "latest_required_status": "PASS",
     "pending_layers": [
       {
+        "layer": "post_write",
+        "status": "PENDING",
+        "evidence": [
+          "Integrated control, documentation, signal, memory, and test validation remains before checkpoint."
+        ]
+      },
+      {
         "layer": "post_checkpoint",
         "status": "PENDING",
         "evidence": [
-          "One governed checkpoint remains to be invoked in generation 112."
+          "One governed cumulative checkpoint remains; P5-T04 is not executed before it."
+        ]
+      },
+      {
+        "layer": "renderer",
+        "status": "PENDING",
+        "evidence": [
+          "Tracked frontier, task-index, graph, registry, and wiki derivatives remain to be synchronized."
+        ]
+      },
+      {
+        "layer": "memory_bootstrap",
+        "status": "PENDING",
+        "evidence": [
+          "Tracked memory synchronization remains before checkpoint."
+        ]
+      },
+      {
+        "layer": "claim_language_linter",
+        "status": "PENDING",
+        "evidence": [
+          "Integrated research-control validation remains before checkpoint."
         ]
       }
     ]

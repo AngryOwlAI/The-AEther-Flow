@@ -1,0 +1,328 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,booktabs,longtable}
+
+\newcommand{\Qamp}{\mathcal Q_{\mathrm{amp}}}
+\newcommand{\Var}{\mathsf{Var}_{\mathrm{src}}}
+\newcommand{\Red}{\mathsf{Red}_{\mathrm{src}}}
+\newcommand{\PhiSrc}{\Phi_{\mathrm{src}}}
+
+\title{P5-T03 Cubic-Amplitude Source-Dynamics Candidate}
+\author{The \AE ther-Flow Research Project}
+\date{2026-07-25}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+\fbox{\parbox{0.92\linewidth}{
+\textbf{Status.} This object is \texttt{draft/control},
+\texttt{proposal-only}, and \texttt{source-extension data}.  It is one
+task-local dynamics candidate, not a canonical-ontology candidate, adopted
+source law, physical dynamics, physical clock, Hamiltonian, energy model, or
+source-to-target reconstruction.  Current adoption is blocked while
+same-milestone continuation remains open.
+}}
+\end{center}
+
+\section{Exact scope and source basis}
+
+P5-T01 supplies a typed source-theory tuple with an open source-dynamics slot
+\[
+ S_{\mathrm{dyn}}\in
+ \mathsf{Slot}\!\left(
+   \mathsf{DynSpec}(\mathcal Q_{\mathrm{adm}},
+                    \mathsf{Var}_{\mathrm{src}},S_\Phi)
+ \right)
+\]
+and the continuum witness
+\[
+ \mathcal A=\mathbb T^4,\qquad
+ E_{\mathrm{src}}=\mathbb T^4\times\mathbb R,\qquad
+ q_a(\theta)=a\sin\theta_1,\qquad
+ \Qamp=\{q_a:a\in\mathbb R\}.
+\]
+On this witness,
+\[
+ F(q_a)=a,\qquad
+ \Var(q_a)=\operatorname{span}\{\sin\theta_1\},
+\]
+and source isomorphisms and declared redundancies contain identity arrows
+only.  P5-T02 supplies the proposal-only semantic type of a jointly continuous
+unital forward action of
+\((\mathbb R_{\geq0},+,0)\) on admissible configurations.  It does not supply a
+generator or dynamics.
+
+The present packet fills \(S_{\mathrm{dyn}}\) only in this named witness
+instance.  It does not edit the P5-T01 object, fill a generic dynamics slot, or
+fill the reconstruction slot.  The absent planned path
+\texttt{research\_control/support\_formalization/} supplies no premise or
+authority to this construction.
+
+\section{Candidate definition}
+
+Transport the ordinary topology and smooth structure of \(\mathbb R\) to
+\(\Qamp\) through \(a\mapsto q_a\).  Write
+\(e(\theta)=\sin\theta_1\).  For one proposal parameter \(\gamma>0\), define
+\[
+ X_\gamma:\Qamp\longrightarrow T\Qamp,\qquad
+ X_\gamma(q_a)=-\gamma a^3e .
+\]
+The assignment is well typed because
+\[
+ X_\gamma(q_a)\in
+ \operatorname{span}\{e\}=\Var(q_a)=T_{q_a}\Qamp .
+\]
+The autonomous source-order update rule is
+\begin{equation}
+ \frac{d^+q}{d\lambda}=X_\gamma(q),
+ \qquad
+ q(0)=q_{a_0},
+ \qquad
+ \lambda\in\mathbb R_{\geq0}.
+ \label{eq:update}
+\end{equation}
+The superscript \(+\) records the one-sided derivative at the parameter
+boundary.  The source base \(\mathbb T^4\) is compact and boundaryless, so the
+only data selected here are \(a_0\), \(\gamma\), and the forward parameter
+domain.  No target atlas, metric, volume form, connection, congruence, clock,
+or benchmark datum enters.
+
+\section{Equation and explicit nontrivial solution}
+
+Writing \(q(\lambda)=q_{a(\lambda)}\), equation~\eqref{eq:update} becomes
+\begin{equation}
+ \frac{da}{d\lambda}=-\gamma a^3,
+ \qquad a(0)=a_0 .
+ \label{eq:amplitude}
+\end{equation}
+The right-hand side is smooth and locally Lipschitz.  Separation gives the
+unique global forward solution
+\begin{equation}
+ a(\lambda)
+ =
+ \frac{a_0}{\sqrt{1+2\gamma a_0^2\lambda}},
+ \label{eq:solution}
+\end{equation}
+with the \(a_0=0\) case included directly.  The denominator is positive for
+every \(\lambda\geq0\), so the solution remains in \(\Qamp\).
+
+For \(a_0\neq0\), the orbit is not constant.  For example, with
+\(\gamma=1\), \(a_0=1\), and \(\lambda=1\),
+\[
+ a(1)=\frac1{\sqrt3}\neq1 .
+\]
+This is the positive control required by P5-T03; the fixed point \(a_0=0\) is
+only an identity control.
+
+\section{Compatibility with the P5-T02 semiflow}
+
+Define
+\[
+ f^\gamma_\lambda(a)
+ =\frac{a}{\sqrt{1+2\gamma a^2\lambda}},
+ \qquad
+ \Phi^\gamma_\lambda(q_a)=q_{f^\gamma_\lambda(a)} .
+\]
+Identity is immediate.  If \(b=f^\gamma_\mu(a)\), then
+\[
+ \begin{aligned}
+ f^\gamma_\lambda(b)
+ &=
+ \frac{a}{
+   \sqrt{1+2\gamma\mu a^2}
+   \sqrt{1+\frac{2\gamma\lambda a^2}
+                  {1+2\gamma\mu a^2}}}\\
+ &=
+ \frac{a}{\sqrt{1+2\gamma(\lambda+\mu)a^2}}
+ =f^\gamma_{\lambda+\mu}(a).
+ \end{aligned}
+\]
+Therefore
+\[
+ \Phi^\gamma_{\lambda+\mu}
+ =
+ \Phi^\gamma_\lambda\circ\Phi^\gamma_\mu .
+\]
+The displayed formula is jointly smooth on
+\(\mathbb R_{\geq0}\times\mathbb R\), preserves \(\Qamp\), and respects the
+identity-only \(\Red\).  Its right generator is exactly
+\[
+ \left.\frac{d^+}{d\lambda}
+ \Phi^\gamma_\lambda(q_a)\right|_{\lambda=0}
+ =-\gamma a^3e=X_\gamma(q_a).
+\]
+
+\section{Genuinely forward-only behavior}
+
+For \(\gamma,\lambda>0\),
+\[
+ \frac{\partial f^\gamma_\lambda}{\partial a}
+ =
+ (1+2\gamma\lambda a^2)^{-3/2}>0,
+\]
+so the map is injective.  Its exact range is
+\[
+ \operatorname{ran}f^\gamma_\lambda
+ =
+ \left(
+ -\frac1{\sqrt{2\gamma\lambda}},
+  \frac1{\sqrt{2\gamma\lambda}}
+ \right),
+\]
+which is a proper subset of \(\mathbb R\).  Hence no positive-parameter map
+has an inverse self-map on all of \(\Qamp\).  Equivalently, a nonzero backward
+solution reaches a zero denominator at
+\[
+ \lambda_*=-\frac1{2\gamma a_0^2}.
+\]
+Thus this candidate has no global \(\mathbb R\)-action extension on
+\(\Qamp\).  The forward maps remain injective, so this result is not
+information loss.  It is also not physical irreversibility, entropy
+production, causal orientation, a physical beginning, or a spacetime
+singularity.
+
+\section{Source control functional}
+
+Define
+\[
+ L(q_a)=\frac12a^2 .
+\]
+Along a candidate orbit,
+\[
+ \frac{dL}{d\lambda}
+ =a\frac{da}{d\lambda}
+ =-\gamma a^4
+ =-4\gamma L^2\leq0,
+\qquad
+ L(\lambda)=\frac{L_0}{1+4\gamma L_0\lambda}.
+\]
+Thus \(L\) is a source control or Lyapunov functional and decreases strictly
+on nonzero orbits.  No state-space metric or gradient operator is selected;
+in particular this packet does not assert \(X_\gamma=-\nabla L\).
+\(L\) is not physical energy, an action, a Hamiltonian, entropy, a
+thermodynamic potential, or a Noether charge.  Physical-energy and probability
+consistency are inapplicable because neither physical energy nor probability
+is part of the candidate.
+
+\section{Scale and provenance}
+
+The formal unit relation is
+\[
+ [\gamma]=[\lambda]^{-1}[a]^{-2}.
+\]
+P5-T01 assigns no physical dimension to \(a\), and P5-T02 assigns no physical
+unit to \(\lambda\).  Consequently this packet introduces no calibrated
+dimensionful physical scale.  Under the active reparameterization
+\(\Phi^\gamma_{c\lambda}\), the coefficient is \(c\gamma\); under the passive
+regraduation \(\lambda'=c\lambda\), it is \(\gamma/c\).  Under
+\(a'=d a\), it is \(\gamma/d^2\).  Only the corresponding dimensionless
+combination \(\gamma a_0^2\lambda\) controls the displayed orbit.  The
+numerical value of \(\gamma\) is a proposal convention, not a measured decay
+rate or clock calibration.
+
+\section{Controls and fail-closed branches}
+
+\begin{longtable}{p{0.23\linewidth}p{0.50\linewidth}p{0.19\linewidth}}
+\toprule
+Control & Exact result & Disposition\\
+\midrule
+\endhead
+\(\gamma<0\) &
+Writing \(\gamma=-\beta\), the solution
+\(a_0/\sqrt{1-2\beta a_0^2\lambda}\) blows up at finite positive parameter for
+\(a_0\neq0\). &
+Fails a total forward action on all \(\Qamp\).\\
+\(\gamma=0\) &
+The identity action is well typed but supplies no nontrivial orbit. &
+Fails the P5-T03 nontriviality requirement.\\
+\(\widehat f_\lambda(a)=e^{-\gamma\lambda^2}a\) &
+\(\widehat f_\lambda\widehat f_\mu\neq
+\widehat f_{\lambda+\mu}\) when
+\(\gamma\lambda\mu a\neq0\). &
+Fail closed: composition.\\
+\(X_{\mathrm{bad}}=-\gamma a^3\sin\theta_1+
+\epsilon\cos\theta_2\) &
+For \(\epsilon\neq0\), the added term is outside
+\(\Var(q_a)\) and leaves \(\Qamp\). &
+Fail closed: variation and admissibility.\\
+Target-derived \(\gamma\) or \(X_\gamma\) &
+A coefficient or rule selected from a target metric, curvature, exact-GR
+solution, target congruence, or benchmark fit imports the target. &
+Fail closed: target import.\\
+Physical interpretation of \(L\) or \(\lambda\) &
+Calling \(L\) energy, action, Hamiltonian, or entropy, or calling
+\(\lambda\) physical time, adds untyped structure. &
+Fail closed: physical overread.\\
+\bottomrule
+\end{longtable}
+
+\section{Distance-to-GR disposition}
+
+The new mathematical payload is a typed cubic source-order generator, its
+global forward solution, a jointly smooth semiflow, an exact range theorem, a
+backward-extension obstruction, and a Lyapunov control.  This moves the
+program from a kinematic semantic type to one genuine task-local dynamics
+candidate.  It does not adopt a source law or alter physical status.
+
+\begin{longtable}{p{0.30\linewidth}p{0.62\linewidth}}
+\toprule
+Burden & Status after this packet\\
+\midrule
+\endhead
+Source ontology primitives &
+One audit-ready proposal-only dynamics candidate now exists on the P5-T01
+amplitude witness; genericity, preference, and adoption remain open.\\
+Source equivalence \(\mathsf{EqSrc}\), RetainH, GenH &
+Unchanged; identity-only witness compatibility does not discharge general
+source-equivalence or retention/generation laws.\\
+\(\mathsf{ObsLoc}_{lc}\), \(\mathsf{Resp}_{lc}\) &
+Unchanged; no localization, detector, or response semantics is supplied.\\
+\(M_{\mathrm{src}}\), \(g_{\mathrm{eff}}\) &
+Unchanged; the torus witness is not physical spacetime and no reconstruction
+or metric is constructed.\\
+Matter coupling, Einstein equations &
+Unchanged and blocked; no matter semantics, coupling, action, stress energy,
+or field-equation derivation is supplied.\\
+Finite-variation robustness &
+Unchanged; only the exact one-dimensional admissible-variation sector is
+checked.\\
+Benchmark promotion, Gate Chair status &
+Unchanged and human-gated; exact GR remains a separate target-side benchmark.\\
+Route freeze or hard-fail &
+Not frozen; the construction adds a new named mathematical object and routes
+its unchanged structural analysis to P5-T04.\\
+\bottomrule
+\end{longtable}
+
+\section{P5-T04 boundary}
+
+P5-T03 proves the composition identity only because compatibility with P5-T02
+is required.  P5-T04 should analyze this exact, unchanged
+\(D_\gamma\): source-arena locality or its absence, constraints, smooth first
+integrals, identity-only symmetry, nontrivial-redundancy extension burdens,
+and conserved-structure claims.  This packet does not perform that systematic
+analysis, replace the cubic rule, or infer conservation from target covariance.
+
+\section{Explicit non-conclusions}
+
+The construction does not establish:
+\begin{itemize}
+  \item extension to arbitrary \(\mathcal Q_{\mathrm{adm}}\), arbitrary source
+  arena, or nontrivial redundancy;
+  \item source-manifold locality, uniqueness, empirical preference, or a
+  derivation of the cubic power, sign, or coefficient;
+  \item a Hamiltonian, symplectic form, variational action, physical energy,
+  probability law, physical gauge generator, or physical time;
+  \item canonical ontology or source-law adoption or rejection;
+  \item reconstruction, \(M_{\mathrm{src}}\), \(g_{\mathrm{eff}}\), matter
+  coupling, Einstein equations, benchmark promotion, proof, publication,
+  push, or completed derivation.
+\end{itemize}
+Linear, nonlinear, noninjective, discrete, branching, stochastic,
+categorical, and order-only alternatives remain unruled out.
+
+\end{document}

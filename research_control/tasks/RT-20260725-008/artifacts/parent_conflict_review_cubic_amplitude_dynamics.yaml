@@ -1,0 +1,84 @@
+schema_id: "parent_conflict_review_v1"
+artifact_id: "V21-P5-T03-PARENT-CONFLICT-REVIEW-CUBIC-AMPLITUDE-DYNAMICS-V1"
+task_id: "RT-20260725-008"
+job_id: "AJ-RT-20260725-008-001"
+plan_task_id: "P5-T03"
+status: "resolved"
+created_at: "2026-07-25T19:24:00Z"
+review_rounds: 1
+
+child_artifacts:
+  - execution_unit_id: "child_phys_math"
+    path: "research_control/tasks/RT-20260725-008/artifacts/child_phys_math_cubic_amplitude_dynamics.yaml"
+    status: "completed"
+  - execution_unit_id: "child_phys_phil"
+    path: "research_control/tasks/RT-20260725-008/artifacts/child_phys_phil_cubic_amplitude_dynamics.yaml"
+    status: "completed"
+
+shared_consensus:
+  - "The narrow candidate is the cubic amplitude rule da/dlambda=-gamma a^3 on the exact P5-T01 torus witness."
+  - "Its closed-form maps form a jointly smooth global forward P5-T02 action."
+  - "Positive-parameter maps are injective but nonsurjective and have no global inverse self-map on Q_amp."
+  - "L=a^2/2 is a source control or Lyapunov functional only."
+  - "The candidate is draft/control proposal-only source-extension data with blocked_adoption_open_continuation."
+  - "No target structure physical interpretation source-law adoption or downstream GR claim follows."
+
+resolved_conflicts:
+  - conflict_id: "P5T03-CONFLICT-FORMALISM-001"
+    issue: "Whether to describe the candidate as a gradient flow or a direct update rule."
+    resolution: "Use a direct autonomous generator and update rule. Keep L diagnostic because no state-space metric is selected."
+    changed_output: true
+  - conflict_id: "P5T03-CONFLICT-INVERTIBILITY-001"
+    issue: "Whether nonsurjectivity may be described as information loss or physical irreversibility."
+    resolution: "State the exact injectivity and proper range. Conclude only that no inverse self-map or global R-action exists on all Q_amp."
+    changed_output: true
+  - conflict_id: "P5T03-CONFLICT-UNSTABLE-001"
+    issue: "Whether gamma<0 is merely another unstable total semiflow."
+    resolution: "Its finite positive-parameter blowup prevents a total R_ge_0 action on Q_amp; a separately typed local-semiflow candidate remains possible."
+    changed_output: true
+  - conflict_id: "P5T03-CONFLICT-LOCALITY-001"
+    issue: "Whether autonomous amplitude evolution establishes source-manifold locality."
+    resolution: "Call it an amplitude-sector update law and defer systematic locality to P5-T04."
+    changed_output: true
+  - conflict_id: "P5T03-CONFLICT-MINIMALITY-001"
+    issue: "Whether the cubic law is uniquely minimal or preferred."
+    resolution: "Present one conservative smooth odd-polynomial candidate and explicitly retain alternatives."
+    changed_output: true
+  - conflict_id: "P5T03-CONFLICT-SCALE-001"
+    issue: "Active action rescaling and passive parameter regraduation use reciprocal coefficient transformations."
+    resolution: "State both conventions explicitly and identify gamma a0^2 lambda as the orbit combination; infer no physical scale."
+    changed_output: true
+
+unique_math_contributions_preserved:
+  - "explicit global forward solution and semigroup calculation"
+  - "exact proper range and injectivity proof"
+  - "finite backward blowup and no global R-action on Q_amp"
+  - "Lyapunov derivative and closed form"
+  - "unstable noncomposing off-tangent and target-import controls"
+
+unique_philosophy_contributions_preserved:
+  - "generator construction is not already contained in generic P5-T02 kinematics"
+  - "Lyapunov control is not physical energy action Hamiltonian or entropy"
+  - "nonsurjectivity is not physical irreversibility or information loss"
+  - "amplitude autonomy is not source-manifold locality"
+  - "candidate construction is separate from adoption physical adequacy and preference"
+
+unresolved_conflicts: []
+remaining_limitations:
+  - "The candidate applies only to the one-dimensional P5-T01 amplitude witness."
+  - "The current ontology does not derive gamma its positive sign or the cubic power."
+  - "Nontrivial redundancy locality constraints conservation robustness and source-law preference remain unanalyzed."
+  - "No physical clock reconstruction metric matter Einstein-equation or benchmark result is supplied."
+
+authority_flags:
+  canonical_ontology_modified: false
+  canonical_ontology_candidate_declared: false
+  source_law_adopted: false
+  source_law_rejected: false
+  physical_time_derived: false
+  physical_energy_established: false
+  source_manifold_locality_established: false
+  physical_dynamics_selected: false
+  reconstruction_selected: false
+  physics_promotion_authorized: false
+  proof_publication_or_push_authorized: false

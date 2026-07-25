@@ -410,6 +410,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V21-P4-T03-EMERGENCE-FIRST-PROCESS-ORDER-ONTOLOGY-OPTION-V1` `research_control/tasks/RT-20260720-032/artifacts/emergence_first_process_order_ontology_option_v1.tex`
 - `TEX-V21-P5-T01-COMPACT-SOURCE-THEORY-OBJECT-V1` `research_control/tasks/RT-20260725-003/artifacts/compact_source_theory_object_v1.tex`
 - `TEX-V21-P5-T02-PHI-SRC-SEMIFLOW-SEMANTICS-V1` `research_control/tasks/RT-20260725-007/artifacts/phi_src_semiflow_semantics_v1.tex`
+- `TEX-V21-P5-T03-CUBIC-AMPLITUDE-SOURCE-DYNAMICS-V1` `research_control/tasks/RT-20260725-008/artifacts/cubic_amplitude_source_dynamics_v1.tex`
 
 ## superseded
 

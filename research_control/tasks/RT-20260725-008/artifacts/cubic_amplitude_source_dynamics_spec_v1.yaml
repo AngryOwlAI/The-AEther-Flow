@@ -1,0 +1,274 @@
+schema_id: "cubic_amplitude_source_dynamics_spec_v1"
+object_id: "V21-P5-T03-CUBIC-AMPLITUDE-SOURCE-DYNAMICS-V1"
+authority: "science_draft"
+status_label: "draft/control"
+candidate_status: "proposal-only"
+material_class: "source-extension data"
+adoption_status: "blocked_adoption_open_continuation"
+plan_task_id: "P5-T03"
+target_derivation_milestone: "source_ontology"
+milestone_burden: "Move the program from kinematic records to a genuine dynamical candidate."
+
+claim_boundary:
+  source_only: true
+  task_local_witness_only: true
+  target_import_allowed: false
+  canonical_ontology_modified: false
+  canonical_ontology_candidate: false
+  source_law_adopted: false
+  source_law_rejected: false
+  source_dynamics_candidate_constructed: true
+  source_dynamics_adopted: false
+  physical_dynamics_selected: false
+  physical_time_claimed: false
+  physical_clock_scale_fixed: false
+  physical_energy_claimed: false
+  Hamiltonian_claimed: false
+  source_manifold_locality_claimed: false
+  reconstruction_selected: false
+  metric_constructed: false
+  matter_coupling_constructed: false
+  Einstein_equations_derived: false
+  benchmark_promoted: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+source_basis:
+  - object_id: "TEX-V21-P5-T01-COMPACT-SOURCE-THEORY-OBJECT-V1"
+    path: "research_control/tasks/RT-20260725-003/artifacts/compact_source_theory_object_v1.tex"
+    sha256: "2520f82e54edcb2668446579ceed7a7dfc7a8abf995572aa9889a3d9a3a4467c"
+    use: "typed torus-amplitude witness, admissible variations, and open S_dyn slot"
+  - object_id: "V21-P5-T01-COMPACT-SOURCE-THEORY-TUPLE-V1"
+    path: "research_control/tasks/RT-20260725-003/artifacts/compact_source_theory_spec_v1.yaml"
+    sha256: "a381549ac6eb37346c1469f1157bdfa8417fbc010a19c087cf099b1368ab1b9c"
+    use: "machine-readable tuple and source-only dependency boundary"
+  - object_id: "TEX-V21-P5-T02-PHI-SRC-SEMIFLOW-SEMANTICS-V1"
+    path: "research_control/tasks/RT-20260725-007/artifacts/phi_src_semiflow_semantics_v1.tex"
+    sha256: "60f7358e0643195d4e2b79f7fda921da223ef940d00968588a4175d23cc0b70f"
+    use: "proposal-only forward monoid action semantics and reparameterization boundary"
+  - object_id: "V21-P5-T02-PHI-SRC-SEMIFLOW-SPEC-V1"
+    path: "research_control/tasks/RT-20260725-007/artifacts/phi_src_semiflow_spec_v1.yaml"
+    sha256: "425fbdc96c0720680e19a8189d2fa1e83e879b84596e4e7ad2420d8f2197852d"
+    use: "machine-readable P5-T02 law and nonconclusion contract"
+  - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+    path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+    sha256: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+    use: "P5-T03 construction, control, validation, and handoff requirements"
+  - object_id: "MD-RESEARCH-CONTROL-DESIGN-GR-DERIVATION-BURDEN-MAP"
+    path: "research_control/design/gr_derivation_burden_map.md"
+    sha256: "8e9d44e3a18ecc8a2430a9c42497da3eb9911c2cf6cd714c1525c5d91551835e"
+    use: "source_ontology milestone and expanded Distance-to-GR obligations"
+
+selected_candidate:
+  candidate_id: "V21-P5-T03-CUBIC-AMPLITUDE-SOURCE-DYNAMICS-V1"
+  candidate_name: "cubic_amplitude_source_order_dynamics"
+  formalism: "autonomous_first_order_amplitude_update_rule"
+  rationale: >-
+    A one-dimensional autonomous generator is the narrowest formalism that
+    uses only the P5-T01 admissible amplitude witness, creates a differentiable
+    P5-T02 semiflow with a nontrivial global forward solution, and avoids a
+    source-arena metric, volume form, action, symplectic form, or target import.
+  state_space:
+    notation: "Q_amp={q_a(theta)=a sin(theta_1) | a in R}"
+    smooth_model: "R transported through a |-> q_a"
+    topology: "transported Euclidean topology"
+    tangent_space: "T_(q_a)Q_amp=span{sin(theta_1)}"
+    admissible_variations: "Var_src(q_a)=span{sin(theta_1)}"
+    observable: "F(q_a)=a"
+  source_base:
+    arena: "T^4"
+    boundary: "compact and boundaryless"
+    status: "P5-T01 proposal-only witness, not physical spacetime"
+  parameter:
+    carrier: "R_ge_0"
+    operation: "addition"
+    identity: "0"
+    interpretation: "source order only"
+    physical_time: false
+  coefficient:
+    symbol: "gamma"
+    domain: "gamma>0"
+    status: "new proposal assumption"
+    derived_by_current_ontology: false
+  redundancy:
+    Red_src: "identity arrows only"
+    compatibility_scope: "exact witness only"
+    physical_gauge_claimed: false
+  initial_data: "q(0)=q_(a0), a0 in R"
+  generator:
+    signature: "X_gamma:Q_amp->TQ_amp"
+    rule: "X_gamma(q_a)=-gamma a^3 sin(theta_1)"
+    all_domain: true
+    admissible_variation_compatible: true
+  equation:
+    configuration_form: "d^+q/dlambda=X_gamma(q)"
+    amplitude_form: "da/dlambda=-gamma a^3"
+  solution:
+    formula: "a(lambda)=a0/sqrt(1+2 gamma a0^2 lambda)"
+    domain: "lambda in R_ge_0, a0 in R"
+    global_forward: true
+    unique: true
+    nontrivial_for_nonzero_a0: true
+  induced_action:
+    signature: "Phi^gamma:R_ge_0 x Q_amp->Q_amp"
+    formula: "Phi^gamma_lambda(q_a)=q_[a/sqrt(1+2 gamma a^2 lambda)]"
+    identity: true
+    composition: true
+    joint_smoothness: true
+    admissibility: true
+    redundancy_compatibility: true
+    generator_recovered: true
+
+derivation:
+  - step_id: "D1_TYPE_REDUCTION"
+    statement: "q(lambda)=a(lambda) sin(theta_1) and X_gamma(q_a) is in the exact admitted variation line."
+  - step_id: "D2_AMPLITUDE_EQUATION"
+    statement: "Equality of the sin(theta_1) coefficients gives da/dlambda=-gamma a^3."
+  - step_id: "D3_GLOBAL_SOLUTION"
+    statement: "Separation gives a(lambda)=a0/sqrt(1+2 gamma a0^2 lambda), whose denominator is positive for every forward parameter."
+  - step_id: "D4_SEMIGROUP"
+    statement: "Direct substitution gives f_lambda(f_mu(a))=f_(lambda+mu)(a)."
+  - step_id: "D5_GENERATOR"
+    statement: "The right derivative of Phi_lambda at lambda=0 is X_gamma."
+
+proved_properties:
+  - property_id: "P5T03-PROP-GLOBAL-FORWARD"
+    result: "unique_global_forward_solution"
+  - property_id: "P5T03-PROP-PHI-COMPATIBILITY"
+    result: "P5_T02_identity_composition_admissibility_redundancy_and_smoothness"
+  - property_id: "P5T03-PROP-RANGE"
+    result: "injective_not_surjective_for_every_positive_parameter"
+    exact_range: "(-1/sqrt(2 gamma lambda),1/sqrt(2 gamma lambda))"
+  - property_id: "P5T03-PROP-NO-GLOBAL-R-ACTION"
+    result: "nonzero backward trajectories blow up at lambda=-1/(2 gamma a0^2)"
+    nonconclusion: "not information loss physical irreversibility entropy causality or spacetime singularity"
+  - property_id: "P5T03-PROP-LYAPUNOV"
+    result: "dL/dlambda=-gamma a^4=-4 gamma L^2<=0"
+
+source_control_functional:
+  notation: "L(q_a)=a^2/2"
+  status: "source_control_Lyapunov_functional"
+  monotone: true
+  strict_on_nonzero_orbits: true
+  physical_energy: false
+  action: false
+  Hamiltonian: false
+  entropy: false
+  gradient_claimed: false
+  state_space_metric_selected: false
+
+scale_and_provenance:
+  formal_unit_relation: "[gamma]=[lambda]^-1[a]^-2"
+  amplitude_physical_dimension_selected: false
+  parameter_physical_unit_selected: false
+  physical_dimensionful_scale_introduced: false
+  invariant_orbit_combination: "gamma a0^2 lambda"
+  active_parameter_rescaling: "Phi^gamma_(c lambda)=Phi^(c gamma)_lambda"
+  passive_parameter_regraduation: "lambda'=c lambda gives gamma'=gamma/c"
+  amplitude_regraduation: "a'=d a gives gamma'=gamma/d^2"
+  clock_nonconclusion: "gamma fixes no absolute rate, physical unit, or clock calibration"
+
+positive_control:
+  control_id: "P5T03-POSITIVE-NONZERO-ORBIT"
+  inputs: "gamma=1, a0=1, lambda=1"
+  expected_amplitude: "1/sqrt(3)"
+  symbolic_checks:
+    - "differentiate the closed form and recover da/dlambda=-gamma a^3"
+    - "verify f_lambda(f_mu(a))=f_(lambda+mu)(a)"
+    - "verify dL/dlambda=-gamma a^4"
+    - "verify the orbit is nonconstant for a0!=0"
+
+controls:
+  - control_id: "P5T03-CONTROL-ZERO-RATE"
+    kind: "trivial"
+    condition: "gamma=0"
+    exact_failure: "identity action supplies no nontrivial orbit"
+    result: "fail_closed_nontriviality"
+  - control_id: "P5T03-CONTROL-NEGATIVE-RATE"
+    kind: "unstable"
+    condition: "gamma=-beta with beta>0"
+    exact_failure: "a(lambda)=a0/sqrt(1-2 beta a0^2 lambda) blows up at finite positive parameter"
+    result: "fail_closed_global_forward_totality"
+  - control_id: "P5T03-CONTROL-LAMBDA-SQUARED"
+    kind: "malformed"
+    condition: "hat_f_lambda(a)=exp(-gamma lambda^2)a"
+    exact_failure: "hat_f_lambda after hat_f_mu differs from hat_f_(lambda+mu) when gamma lambda mu a is nonzero"
+    result: "fail_closed_composition"
+  - control_id: "P5T03-CONTROL-OFF-TANGENT"
+    kind: "malformed"
+    condition: "X_bad=-gamma a^3 sin(theta_1)+epsilon cos(theta_2), epsilon!=0"
+    exact_failure: "cos(theta_2) lies outside Var_src(q_a) and the update leaves Q_amp"
+    result: "fail_closed_variation_and_admissibility"
+  - control_id: "P5T03-CONTROL-TARGET-IMPORT"
+    kind: "malformed"
+    condition: "gamma or X_gamma is selected from target metric curvature congruence exact-GR solution or benchmark fit"
+    exact_failure: "hidden target import"
+    result: "fail_closed_target_import"
+  - control_id: "P5T03-CONTROL-PHYSICAL-OVERREAD"
+    kind: "malformed_interpretation"
+    condition: "L is called energy action Hamiltonian or entropy, or lambda is called physical time"
+    exact_failure: "untyped physical structure is asserted"
+    result: "fail_closed_physical_overread"
+
+alternatives_not_ruled_out:
+  - "linear exponential generators"
+  - "other nonlinear autonomous vector fields"
+  - "noninjective absorbing semiflows"
+  - "local rather than globally total semiflows"
+  - "group discrete branching stochastic categorical or order-only source laws"
+  - "different admissible configuration spaces topologies redundancies and control functionals"
+  - "future action or Hamiltonian candidates after independently supplying typed variational or symplectic structure"
+
+p5_t04_boundary:
+  owned_here:
+    - "explicit state space generator parameter initial data and forward solution"
+    - "direct P5-T02 compatibility and generator recovery checks"
+    - "positive solution malformed controls scale provenance and Lyapunov check"
+  deferred:
+    - "systematic source-manifold locality analysis"
+    - "extension beyond the one-dimensional amplitude witness"
+    - "nontrivial redundancy quotient constraint and symmetry analysis"
+    - "conserved-structure classification"
+    - "robustness perturbation and mode analysis"
+  next_plan_task_id: "P5-T04"
+  next_role: "ontology-formalizer@0.2.0"
+
+distance_to_gr:
+  advancement: "one genuine task-local source dynamics candidate constructed"
+  physical_status_changed: false
+  unchanged_burdens:
+    - "canonical source-law adoption"
+    - "source equivalence EqSrc RetainH and GenH"
+    - "ObsLoc_lc and Resp_lc"
+    - "physical clock and causal interpretation"
+    - "source-to-target reconstruction"
+    - "M_src"
+    - "g_eff"
+    - "matter coupling"
+    - "Einstein equations"
+    - "benchmark promotion"
+
+candidate_constructor_result:
+  result_type: "constructed_candidate"
+  constructed_candidate_path: "research_control/tasks/RT-20260725-008/artifacts/cubic_amplitude_source_dynamics_v1.tex"
+  minimal_countermodel_path: ""
+  obstruction_id: ""
+  formal_objects:
+    - "Q_amp"
+    - "Lambda_+"
+    - "X_gamma"
+    - "Phi^gamma"
+    - "L"
+  maps:
+    - "X_gamma:Q_amp->TQ_amp"
+    - "Phi^gamma:Lambda_+ x Q_amp->Q_amp"
+  proof_obligations:
+    - "P5-T04 locality constraint and conserved-structure analysis"
+    - "nontrivial-redundancy extension audit"
+    - "later source-law preference and adoption gate"
+  failed_components: []
+  next_required_role: "ontology-formalizer@0.2.0"
+  no_fog_check: true
+  no_fog_explanation: "A complete explicit cubic-amplitude forward source dynamics was constructed on the exact P5-T01 continuum witness; its generator global solution semiflow laws range Lyapunov behavior and failure controls are explicit."
+  claim_boundary_preserved: true
+  claim_boundary_citation: "CB-V21-P5-T03-CUBIC-AMPLITUDE-DYNAMICS-001"

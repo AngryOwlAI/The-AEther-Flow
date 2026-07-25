@@ -1,9 +1,132 @@
 mode: "director_led_research_control"
-active_task_id: "RT-20260725-007"
-latest_handoff_id: "handoff-0867"
-current_status: "p5_t02_phi_src_semiflow_pass_ready_for_checkpoint"
-claim_boundary_summary: "RT-20260725-007 may construct and validate only one task-local draft/control proposal-only Phi_src continuous-forward-monoid-action candidate with source-side laws, witnesses, and nonconclusions; it cannot adopt the law or establish physical time, gauge, dynamics, reconstruction, downstream GR, promotion, proof, publication, or push authority."
-next_recommended_action: "After the governed checkpoint commits, run exactly one bounded P5-T03 candidate-construction packet to build a nontrivial source dynamics candidate compatible with the proposal-only Phi_src semantics or return a precise obstruction."
+active_task_id: "RT-20260725-009"
+latest_handoff_id: "handoff-0869"
+current_status: "p5_t03_four_eof_checkpoint_recovery_pass_ready_for_checkpoint"
+claim_boundary_summary: "RT-20260725-009 may remove exactly one terminal newline from each of four checkpoint-named P5-T03 YAML files, preserve all semantic and scientific payload bytes, create bounded recovery evidence and normal control derivatives, and invoke one cumulative checkpoint; it cannot reexecute P5-T03, execute P5-T04 before checkpoint, or create scientific, interpretive, promotion, proof, publication, or push authority."
+next_recommended_action: "Run the one governed cumulative checkpoint for AJ-RT-20260725-009-001. Only after it commits may one fresh bounded P5-T04 ontology-law packet analyze the exact unchanged cubic-amplitude candidate for locality, composition, constraints, and conserved structure."
+
+p5_t03_four_eof_checkpoint_recovery:
+  task_id: "RT-20260725-009"
+  parent_task_id: "RT-20260725-008"
+  parent_handoff_id: "handoff-0868"
+  plan_task_id: "P5-T03"
+  recovery_for_plan_task_id: "P5-T03"
+  next_plan_task_id: "P5-T04"
+  claim_boundary_id: "CB-V21-P5-T03-FOUR-EOF-CHECKPOINT-RECOVERY-001"
+  status: "PASS_P5_T03_FOUR_EOF_CHECKPOINT_RECOVERY_READY_FOR_CHECKPOINT"
+  work_item_status: "completed"
+  target_derivation_milestone: "none"
+  milestone_burden: "Project-system EOF normalization and cumulative checkpoint recovery only; no scientific derivation milestone advances."
+  route_label: "repair_p5_t03_four_eof_blank_lines_and_checkpoint_v1"
+  selected_role_family: "process-integrity-auditor@0.1.0"
+  selected_worker_skill: "improve-project-system"
+  immutable_route_sha256: "7d890c50eabed262d8891ca971ae8af771bc9758b51788163e4f3207c6ee0782"
+  source_handoff_path: "research_control/handoffs/handoff-0868.yaml"
+  source_handoff_sha256: "51fd10d660bb680f66a19f5e442b608bc72598486e453c5aff5ac75fda794d76"
+  source_completion_sha256: "6fd8e2360cc543505c3cb85fcab5f9e7e1f050a3bcc6d9d838ad53bcbbe91ec6"
+  source_checkpoint_receipt_sha256: "39b13b993728ae16dd298e34f8c85abbff60591cef01749d38eef0adc338ba4c"
+  failed_gate_evidence_sha256: "e7b1fa1516c822f090cddf435be01e1e6ab23d605fe7fdbd45cc8eb000111a11"
+  dirty_state_manifest_sha256: "12623c97f8e7a24cd5ff2b3f2320a74f890abc5f5dae2b7db2e9e04023db5517"
+  recovery_validator_path: "research_control/tasks/RT-20260725-009/artifacts/validate_p5_t03_eof_checkpoint_recovery.py"
+  recovery_validator_sha256: "26e3ec4fd4da6db4186a466179c7ddea0b20a4740dc6503a4dba15c3e6420819"
+  recovery_receipt_path: "research_control/tasks/RT-20260725-009/artifacts/p5_t03_eof_checkpoint_recovery_receipt.json"
+  recovery_receipt_sha256: "e30e00a4c990e7acbfb8523ba472f7363d5dab70dece6488f610b72136a4373e"
+  completion_path: "research_control/tasks/RT-20260725-009/jobs/completions/AJC-AJ-RT-20260725-009-001.yaml"
+  completion_sha256: "0710ab8c96d5ba6e1b227412f4981edd9d0ae61f4641427a678bf5f962e277ae"
+  handoff_id: "handoff-0869"
+  handoff_yaml_sha256: "48d0373995088621b685f3c4fff7e0e43484057a32b5f59dc934573417274466"
+  handoff_markdown_sha256: "8b7ce15fc5502c941fb8ca9fa6ca52c56df578e4bfe8ae28b6719c5c691f311f"
+  manifest_path_count: 55
+  target_path_count: 4
+  non_target_path_count: 51
+  non_target_hash_mismatch_count: 0
+  exact_terminal_newline_deletion_count: 4
+  p5_t03_science_payload_modified_by_recovery: false
+  p5_t03_reexecuted: false
+  p5_t04_executed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  checkpoint_invocation_count: 0
+  checkpoint_committed: false
+  selected_next_work_item: "P5-T04"
+  selected_next_worker_skill: "continue-research"
+  selected_next_role_family: "ontology-formalizer@0.2.0"
+  selected_next_route_label: "ontology-law-research-packet"
+  selected_next_strategy_id: "analyze_cubic_amplitude_dynamics_structure_v1"
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
+
+p5_t03_cubic_amplitude_source_dynamics:
+  task_id: "RT-20260725-008"
+  parent_task_id: "RT-20260725-007"
+  parent_handoff_id: "handoff-0867"
+  plan_task_id: "P5-T03"
+  next_plan_task_id: "P5-T04"
+  claim_boundary_id: "CB-V21-P5-T03-CUBIC-AMPLITUDE-DYNAMICS-001"
+  status: "PASS_CUBIC_AMPLITUDE_SOURCE_DYNAMICS_CANDIDATE_READY_FOR_CHECKPOINT"
+  work_item_status: "completed"
+  target_derivation_milestone: "source_ontology"
+  milestone_burden: "Move the program from kinematic records to a genuine dynamical candidate."
+  route_label: "candidate-construction-packet"
+  selected_role_family: "candidate-constructor@0.2.0"
+  selected_worker_skill: "continue-research"
+  immutable_route_sha256: "54f3f08ec402d38a548fa7e43eae12e198531b750e1122345a9ecac9328cabe4"
+  source_handoff_path: "research_control/handoffs/handoff-0867.yaml"
+  source_handoff_sha256: "ccbcfbe366d7884eef943d6b9de507e59254789fc1aefb9c71809137f8da46f5"
+  dependency_checkpoint_commit: "48799f729758a06efd31c234c1724f590516ebcd"
+  candidate_status: "draft/control proposal-only source-extension data"
+  candidate_id: "V21-P5-T03-CUBIC-AMPLITUDE-SOURCE-DYNAMICS-V1"
+  generator: "X_gamma(q_a)=-gamma a^3 sin(theta_1)"
+  explicit_solution: "a(lambda)=a0/sqrt(1+2 gamma a0^2 lambda)"
+  definition_path: "research_control/tasks/RT-20260725-008/artifacts/cubic_amplitude_source_dynamics_v1.tex"
+  definition_sha256: "98ce6833f6e4d8be22837d25845d7fa62d6886049e168d121de5de0093703f6a"
+  specification_path: "research_control/tasks/RT-20260725-008/artifacts/cubic_amplitude_source_dynamics_spec_v1.yaml"
+  specification_sha256: "2007c7a5b9f3ffa5cc43d8a82f8de685428b75075195ee1ca16e7fa4889c64f9"
+  validation_path: "research_control/tasks/RT-20260725-008/artifacts/cubic_amplitude_source_dynamics_validation_receipt_v1.json"
+  validation_sha256: "22f2eff6b0fe2c9898511c43b7626ccdd5c91323f19e220ae5d081d3fd9dd0f5"
+  completion_path: "research_control/tasks/RT-20260725-008/jobs/completions/AJC-AJ-RT-20260725-008-001.yaml"
+  completion_sha256: "6fd8e2360cc543505c3cb85fcab5f9e7e1f050a3bcc6d9d838ad53bcbbe91ec6"
+  handoff_id: "handoff-0868"
+  handoff_yaml_sha256: "51fd10d660bb680f66a19f5e442b608bc72598486e453c5aff5ac75fda794d76"
+  handoff_markdown_sha256: "701942a5895aff28ca7362c156ea0ec7f7dba74aec3095c64071ef32e997128d"
+  task_local_check_count: 19
+  positive_control_count: 1
+  fail_closed_control_count: 6
+  unresolved_conflict_count: 0
+  generator_typed: true
+  nontrivial_global_forward_solution_present: true
+  P5_T02_semiflow_compatibility_proved: true
+  positive_parameter_maps_injective: true
+  positive_parameter_maps_surjective: false
+  global_R_action_extension_present: false
+  Lyapunov_control_present: true
+  physical_scale_selected: false
+  source_dynamics_candidate_constructed: true
+  source_dynamics_adopted: false
+  physical_time_claimed: false
+  physical_energy_claimed: false
+  physical_irreversibility_claimed: false
+  source_manifold_locality_claimed: false
+  canonical_ontology_modified: false
+  source_law_adopted: false
+  scientific_claims_changed: true
+  scientific_claim_change_scope: "draft/control task-local source-dynamics candidate"
+  distance_to_gr_delta_changed: true
+  distance_to_gr_delta_scope: "scoped_source_dynamics_candidate_only"
+  physical_status_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  checkpoint_invocation_count: 0
+  checkpoint_committed: false
+  selected_next_work_item: "P5-T04"
+  selected_next_worker_skill: "continue-research"
+  selected_next_role_family: "ontology-formalizer@0.2.0"
+  selected_next_route_label: "ontology-law-research-packet"
+  selected_next_strategy_id: "analyze_cubic_amplitude_dynamics_structure_v1"
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
 
 p5_t02_phi_src_semiflow_source_law:
   task_id: "RT-20260725-007"

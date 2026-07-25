@@ -1,0 +1,764 @@
+job_id: "AJ-RT-20260725-008-001"
+completion_id: "AJC-AJ-RT-20260725-008-001"
+task_id: "RT-20260725-008"
+task_type: "v21_p5_t03_construct_first_explicit_source_dynamics_candidate"
+decision_id: "DDR-20260725-008"
+role_id: "candidate-constructor"
+role_version: "0.2.0"
+execution_role_ref: "candidate-constructor@0.2.0--RT-20260725-008"
+status: "completed"
+validation_status: "PASS"
+final_repository_validation_status: "PASS_READY_FOR_CHECKPOINT"
+created_at: "2026-07-25T19:22:12Z"
+started_at: "2026-07-25T19:22:12Z"
+completed_at: "2026-07-25T19:39:08Z"
+objective: "Construct one explicit source-only dynamics candidate compatible with the P5-T01 amplitude witness and proposal-only P5-T02 forward-action semantics, derive its nontrivial solution, and preserve every adoption, physical-interpretation, and downstream-GR nonconclusion."
+completion_summary: "P5-T03 constructs one task-local draft/control proposal-only cubic-amplitude dynamics candidate on the exact P5-T01 torus witness. X_gamma(q_a)=-gamma a^3 sin(theta_1) yields the unique global forward solution a(lambda)=a0/sqrt(1+2 gamma a0^2 lambda), a jointly smooth P5-T02 semiflow, an exact proper-range result, finite backward-extension obstruction, Lyapunov control, explicit scale provenance, and six fail-closed controls. The result is a genuine audit-ready source-dynamics candidate, not an adopted or physical law."
+objective_result: "constructed_candidate_at_draft_control_proposal_only_source_dynamics_scope"
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 113
+  passes_consumed: 103
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:113"
+  handoff_token: "88121788e3821f82edcb9bd20c1e9b4a4d3edf409922cc41"
+  relay_claim_token: "fd36743ecdf7dd7a72274edf64e1c79d2b6013a9001dff4f"
+  route_work_item_id: "P5-T03"
+  route_worker_skill: "continue-research"
+  route_sha256: "54f3f08ec402d38a548fa7e43eae12e198531b750e1122345a9ecac9328cabe4"
+  worker_skill: "continue-research"
+  worker_invocation_count: 1
+
+transaction_status: "ready_for_checkpoint"
+result_disposition: "P5_T03_CUBIC_AMPLITUDE_DYNAMICS_CANDIDATE_PASS_READY_FOR_CHECKPOINT"
+checkpoint_commit:
+  required: true
+  attempted: false
+  committed: false
+  commit_sha: ""
+  push_performed: false
+
+is_physics_task: true
+payload_class: "candidate_construction"
+minimum_payload: "one explicit typed source dynamics rule with derived equation nontrivial solution P5-T02 compatibility positive and negative controls scale provenance and exact nonconclusions"
+has_new_mathematical_payload: true
+has_finite_local_witness: true
+has_countermodel: true
+external_red_team_finding_requires_integration: false
+physics_promotion_authorized: false
+proof_authority: false
+ontology_law_research_packet:
+  route: "ontology-law-research-packet"
+  trigger_classification: "derivation_critical_missing_source_law"
+  target_derivation_milestone: "source_ontology"
+  milestone_burden: "Move the program from kinematic records to a genuine dynamical candidate."
+  missing_source_law: "A source-derived dynamics rule on admissible configurations that supplies a nontrivial forward action without target import."
+  underdetermination_statement: "Current ontology does not derive the cubic-amplitude dynamics rule or any preferred source-dynamics law."
+  no_go_theorem_status: "none; conservative same-milestone source-side continuation remains open"
+  adoption_status:
+    current_adoption: "blocked"
+    continuation: "open"
+    status_pair: "blocked_adoption_open_continuation"
+  packet_payload_mode: "candidate_law_payload"
+  candidate_law_payload:
+    status_label: "proposal-only"
+    source_side_definition: "On the exact P5-T01 amplitude witness define X_gamma(q_a)=-gamma a^3 sin(theta_1) for gamma>0 and use its global forward solution as a task-local source-order action."
+    formal_objects:
+      - "Q_amp"
+      - "Lambda_+"
+      - "X_gamma"
+      - "Phi^gamma"
+      - "L"
+    domains:
+      - "the exact P5-T01 torus-amplitude witness"
+      - "the proposal-only P5-T02 forward source-order parameter"
+    maps:
+      - "X_gamma:Q_amp->TQ_amp"
+      - "Phi^gamma:Lambda_+ x Q_amp->Q_amp"
+    proof_obligations:
+      - "P5-T04 locality constraint and conserved-structure analysis"
+      - "extension beyond identity-only redundancy and the one-dimensional witness"
+      - "source-law preference and protected adoption review"
+  exact_gr_recovery_obligations:
+    checklist:
+      - "Preserve exact-GR benchmark separation and the no-target-import boundary."
+      - "Analyze source locality constraints and conserved structure before any physical reading."
+      - "Construct and audit a source-to-target bridge before metric matter or Einstein-equation claims."
+      - "Require protected human authority before source-law or canonical ontology adoption."
+    distance_to_gr_links:
+      - "source_ontology_primitives"
+      - "M_src"
+      - "g_eff"
+      - "matter coupling"
+      - "Einstein equations"
+      - "benchmark promotion"
+  no_target_import_audit_scope:
+    forbidden_source_classes:
+      - "target_atlas"
+      - "target_metric"
+      - "benchmark_success"
+      - "generated_derivative"
+      - "registry_metadata_authority"
+      - "role_authority"
+      - "validation_authority"
+    checked_objects:
+      - "the cubic-amplitude generator"
+      - "the explicit forward solution"
+      - "the Lyapunov control and scale relations"
+    audit_result: "The candidate uses only the exact source witness and proposal-only source-order semantics; no target datum selects its rule or coefficient."
+  human_gate_request:
+    required_before_adoption: true
+    requested_decision: "No gate is requested now. Protected human authority is required before adopting this or any other source-dynamics law."
+    exact_requested_ontology_edit: ""
+
+bridge_attempt_status:
+  status: "not_applicable_source_only_candidate_construction"
+  candidate_map: "Phi^gamma maps the P5-T01 amplitude witness forward in the proposal-only P5-T02 source-order parameter."
+  missing_primitive: "A derived generic source-dynamics law and a source-to-target reconstruction remain absent."
+  preserves_blocks: "Preserves canonical ontology adoption physical time energy locality M_src g_eff matter coupling Einstein equations benchmark promotion proof publication push completed derivation and global theory rejection blocks."
+  explanation: "This packet constructs a source-only candidate and does not attempt a target reconstruction or downstream GR bridge."
+
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_task_id: "P5-T03"
+  phase_id: "P5"
+  work_kind: "construction_or_implementation"
+  task_class: "science"
+  expected_result_kind: "candidate_or_precise_obstruction"
+  dependency_task_id: "P5-T02"
+  dependency_completion_path: "research_control/tasks/RT-20260725-007/jobs/completions/AJC-AJ-RT-20260725-007-001.yaml"
+  dependency_checkpoint_commit: "48799f729758a06efd31c234c1724f590516ebcd"
+  work_item_status: "completed_ready_for_checkpoint"
+  recommendation_ids:
+    - "V21-R12"
+    - "V21-R14"
+    - "V21-R15"
+    - "V21-R30"
+  recommendation_coverage_role: "direct_implementation"
+  scientific_claims_changed: true
+  scientific_claim_change_scope: "draft/control proposal-only task-local cubic-amplitude source dynamics candidate and scoped mathematical results"
+  physical_status_changed: false
+  distance_to_gr_delta_changed: true
+  distance_to_gr_delta_scope: "scoped_source_dynamics_candidate_only"
+  physics_promotion_authorized: false
+  proof_authority: false
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  observed_durable_outputs:
+    physics:
+      - "registered proposal-only cubic-amplitude source-dynamics candidate"
+      - "explicit generator equation global solution and forward semigroup"
+      - "range backward-extension Lyapunov scale and failure-control results"
+    project_system:
+      - "task-local validator and compact receipt"
+      - "parent-child synthesis records"
+      - "standard control records and generated memory derivatives"
+  accepted_criteria:
+    physics:
+      - "the generator and update equation are exactly typed"
+      - "a nontrivial global forward solution is derived"
+      - "P5-T02 action compatibility and proper range are checked"
+      - "Lyapunov scale and malformed-control boundaries are explicit"
+    project_system:
+      - "task-local validation and claim-language checks pass"
+      - "registered source hashes and generated derivatives synchronize"
+      - "one governed checkpoint records the bounded transaction"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+physics_payload_admission_result:
+  status: "admitted"
+  admission_path: "physics"
+  payload_type: "candidate_construction"
+  candidate_family: "V21-P5-T03-CUBIC-AMPLITUDE-SOURCE-DYNAMICS-V1"
+  definition_identity: "V21-P5-T03-CUBIC-AMPLITUDE-SOURCE-DYNAMICS-V1"
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed_by_admission: false
+  physical_status_changed_by_admission: false
+  physics_promotion_authorized: false
+
+family_freeze_admission_result:
+  status: "admitted_unfrozen"
+  route_kind: "candidate_construction"
+  family_id: "V21-P5-T03-CUBIC-AMPLITUDE-SOURCE-DYNAMICS-V1"
+  detected_match_basis: []
+  reopening_requested: false
+  local_family_freeze_preserved: true
+  global_no_go_inferred: false
+  physics_promotion_authorized: false
+
+ordinary_route_guard_admission_result:
+  status: "PASS"
+  source_handoff_id: "handoff-0867"
+  selected_plan_task_id: "P5-T03"
+  guard_outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  scientific_status_changed_by_guard: false
+  physics_promotion_authorized: false
+
+artifacts:
+  registered_dynamics_candidate: "research_control/tasks/RT-20260725-008/artifacts/cubic_amplitude_source_dynamics_v1.tex"
+  machine_specification: "research_control/tasks/RT-20260725-008/artifacts/cubic_amplitude_source_dynamics_spec_v1.yaml"
+  compact_receipt: "research_control/tasks/RT-20260725-008/artifacts/cubic_amplitude_source_dynamics_validation_receipt_v1.json"
+  validator: "research_control/tasks/RT-20260725-008/artifacts/validate_cubic_amplitude_source_dynamics.py"
+  child_phys_math: "research_control/tasks/RT-20260725-008/artifacts/child_phys_math_cubic_amplitude_dynamics.yaml"
+  child_phys_phil: "research_control/tasks/RT-20260725-008/artifacts/child_phys_phil_cubic_amplitude_dynamics.yaml"
+  conflict_review: "research_control/tasks/RT-20260725-008/artifacts/parent_conflict_review_cubic_amplitude_dynamics.yaml"
+  fusion_notes: "research_control/tasks/RT-20260725-008/artifacts/parent_fusion_notes_cubic_amplitude_dynamics.md"
+
+output_paths:
+  - "research_control/tasks/RT-20260725-008/artifacts/cubic_amplitude_source_dynamics_v1.tex"
+  - "research_control/tasks/RT-20260725-008/artifacts/cubic_amplitude_source_dynamics_spec_v1.yaml"
+  - "research_control/tasks/RT-20260725-008/artifacts/cubic_amplitude_source_dynamics_validation_receipt_v1.json"
+  - "research_control/tasks/RT-20260725-008/artifacts/validate_cubic_amplitude_source_dynamics.py"
+  - "research_control/tasks/RT-20260725-008/artifacts/child_phys_math_cubic_amplitude_dynamics.yaml"
+  - "research_control/tasks/RT-20260725-008/artifacts/child_phys_phil_cubic_amplitude_dynamics.yaml"
+  - "research_control/tasks/RT-20260725-008/artifacts/parent_conflict_review_cubic_amplitude_dynamics.yaml"
+  - "research_control/tasks/RT-20260725-008/artifacts/parent_fusion_notes_cubic_amplitude_dynamics.md"
+  - "research_control/tasks/RT-20260725-008/00_TASK.yaml"
+  - "research_control/tasks/RT-20260725-008/DDR-20260725-008.md"
+  - "research_control/tasks/RT-20260725-008/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260725-008/roles/candidate-constructor@0.2.0--RT-20260725-008.yaml"
+  - "research_control/tasks/RT-20260725-008/jobs/AJ-RT-20260725-008-001.yaml"
+  - "research_control/tasks/RT-20260725-008/jobs/completions/AJC-AJ-RT-20260725-008-001.yaml"
+  - "research_control/handoffs/handoff-0868.yaml"
+  - "research_control/handoffs/handoff-0868.md"
+
+artifact_receipts:
+  - artifact_id: "V21-P5-T03-CUBIC-AMPLITUDE-SOURCE-DYNAMICS-V1"
+    path: "research_control/tasks/RT-20260725-008/artifacts/cubic_amplitude_source_dynamics_v1.tex"
+    sha256: "98ce6833f6e4d8be22837d25845d7fa62d6886049e168d121de5de0093703f6a"
+    status_label: "draft/control"
+    candidate_status: "proposal-only"
+    material_class: "source-extension data"
+  - artifact_id: "V21-P5-T03-CUBIC-AMPLITUDE-SOURCE-DYNAMICS-SPEC-V1"
+    path: "research_control/tasks/RT-20260725-008/artifacts/cubic_amplitude_source_dynamics_spec_v1.yaml"
+    sha256: "2007c7a5b9f3ffa5cc43d8a82f8de685428b75075195ee1ca16e7fa4889c64f9"
+    status_label: "draft/control"
+  - artifact_id: "V21-P5-T03-CUBIC-AMPLITUDE-SOURCE-DYNAMICS-VALIDATION-V1"
+    path: "research_control/tasks/RT-20260725-008/artifacts/cubic_amplitude_source_dynamics_validation_receipt_v1.json"
+    sha256: "22f2eff6b0fe2c9898511c43b7626ccdd5c91323f19e220ae5d081d3fd9dd0f5"
+    status_label: "operational_evidence"
+
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_execution_unit_count: 2
+  outer_agentjob_count: 1
+  child_agentjob_count: 0
+
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260725-008/artifacts/child_phys_math_cubic_amplitude_dynamics.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260725-008/artifacts/child_phys_phil_cubic_amplitude_dynamics.yaml"
+      status: "completed"
+  conflict_review:
+    status: "resolved"
+    review_path: "research_control/tasks/RT-20260725-008/artifacts/parent_conflict_review_cubic_amplitude_dynamics.yaml"
+    resolution_rounds: 1
+    resolved_conflict_count: 6
+    unresolved_conflicts: []
+  fusion:
+    fused_output_path: "research_control/tasks/RT-20260725-008/artifacts/cubic_amplitude_source_dynamics_v1.tex"
+    fusion_notes_path: "research_control/tasks/RT-20260725-008/artifacts/parent_fusion_notes_cubic_amplitude_dynamics.md"
+    shared_consensus_summary: "Both perspectives select the cubic amplitude rule and require exact forward-only, Lyapunov-control, scale, locality, physical-interpretation, and adoption boundaries."
+    unique_phys_math_contributions: "Typed generator explicit solution semigroup range injectivity backward blowup Lyapunov law and failure controls."
+    unique_phys_phil_contributions: "Source order versus time Lyapunov versus physical energy nonsurjectivity versus irreversibility amplitude autonomy versus locality and construction versus adoption."
+    novelty_preservation_summary: "The fusion preserves theorem-level construction and epistemic nonpromotion without flattening either perspective."
+    claim_boundary_preservation_summary: "No target import canonical adoption physical time energy locality gauge reconstruction downstream GR object proof publication push or completed derivation is authorized."
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+
+candidate_construction_packet:
+  route: "candidate-construction-packet"
+  target_derivation_milestone: "source_ontology"
+  milestone_burden: "Move the program from kinematic records to a genuine dynamical candidate."
+  candidate_id: "V21-P5-T03-CUBIC-AMPLITUDE-SOURCE-DYNAMICS-V1"
+  status_label: "draft/control"
+  candidate_status: "proposal-only"
+  material_class: "source-extension data"
+  adoption_status: "blocked_adoption_open_continuation"
+  formal_objects:
+    - "Q_amp={q_a=a sin(theta_1):a in R}"
+    - "Lambda_+=(R_ge_0,+,0)"
+    - "X_gamma(q_a)=-gamma a^3 sin(theta_1)"
+    - "Phi^gamma_lambda(q_a)=q_[a/sqrt(1+2 gamma a^2 lambda)]"
+    - "L(q_a)=a^2/2"
+  maps:
+    - "X_gamma:Q_amp->TQ_amp"
+    - "Phi^gamma:Lambda_+ x Q_amp->Q_amp"
+  assumptions:
+    - "transported smooth structure on Q_amp"
+    - "gamma>0"
+    - "identity-only inherited redundancy"
+    - "proposal-only P5-T02 source-order parameter"
+  proof_obligations_discharged:
+    - "global forward existence and uniqueness"
+    - "nontrivial explicit solution"
+    - "P5-T02 identity composition admissibility redundancy and smoothness"
+    - "generator recovery"
+    - "injectivity proper range and no global R-action extension"
+    - "Lyapunov monotonicity scale provenance and malformed controls"
+  proof_obligations_remaining:
+    - "generic source-manifold locality or nonlocality"
+    - "nontrivial redundancy constraints and conserved structure"
+    - "robustness and extension beyond the one-dimensional witness"
+    - "source-law preference and human-gated adoption"
+  exact_gr_recovery_obligations:
+    - "Analyze source locality composition constraints and conserved structure."
+    - "Construct a source-to-target bridge with provenance robustness and uniqueness or controlled nonuniqueness."
+    - "Recover metric causal clock matter coupling and Einstein-equation structure in a stated regime."
+    - "Obtain protected human authority before ontology adoption or benchmark promotion."
+  no_target_import_audit:
+    checked: true
+    target_atlas_used: false
+    target_metric_used: false
+    benchmark_behavior_used: false
+    candidate_reconstruction_used: false
+  failure_branches:
+    zero_rate: "fail_closed_nontriviality"
+    negative_rate: "fail_closed_global_forward_totality"
+    composition_defect: "fail_closed_composition"
+    off_tangent_rule: "fail_closed_variation_and_admissibility"
+    target_import: "fail_closed_target_import"
+    physical_overread: "fail_closed_physical_overread"
+
+candidate_constructor_result:
+  result_type: "constructed_candidate"
+  constructed_candidate_path: "research_control/tasks/RT-20260725-008/artifacts/cubic_amplitude_source_dynamics_v1.tex"
+  minimal_countermodel_path: ""
+  obstruction_id: ""
+  formal_objects:
+    - "Q_amp"
+    - "Lambda_+"
+    - "X_gamma"
+    - "Phi^gamma"
+    - "L"
+  maps:
+    - "X_gamma:Q_amp->TQ_amp"
+    - "Phi^gamma:Lambda_+ x Q_amp->Q_amp"
+  proof_obligations:
+    - "P5-T04 locality constraint and conserved-structure analysis"
+    - "nontrivial-redundancy extension audit"
+    - "later source-law preference and adoption gate"
+  failed_components: []
+  next_required_role: "none"
+  no_fog_check: true
+  no_fog_explanation: "A complete explicit cubic-amplitude forward source dynamics was constructed on the exact P5-T01 continuum witness; its generator global solution semiflow laws range Lyapunov behavior scale provenance and failure controls are explicit."
+  claim_boundary_preserved: true
+  claim_boundary_citation: "CB-V21-P5-T03-CUBIC-AMPLITUDE-DYNAMICS-001"
+
+new_mathematical_payload:
+  - payload_id: "NMP-RT-20260725-008-001"
+    payload_type: "definition"
+    name: "Cubic amplitude source-order generator"
+    summary: "Defines X_gamma(q_a)=-gamma a^3 sin(theta_1) as a task-local tangent generator on the P5-T01 continuum witness."
+  - payload_id: "NMP-RT-20260725-008-002"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    name: "Global forward solution and proper-range semiflow"
+    summary: "Derives the explicit global forward solution, proves additive composition, gives the exact positive-parameter range, and records the finite backward-extension obstruction."
+  - payload_id: "NMP-RT-20260725-008-003"
+    payload_type: "finite_model"
+    name: "Lyapunov scale and failure controls"
+    summary: "Proves source-control monotonicity, records scale transformation laws, and classifies six exact negative or malformed controls."
+
+mathematical_payload_manifest:
+  - payload_id: "PAYLOAD-RT-20260725-008-001"
+    payload_type: "construction"
+    object_name: "V21 P5-T03 cubic amplitude source dynamics"
+    claim_status: "draft/control proposal-only source-extension data"
+    source_path: "research_control/tasks/RT-20260725-008/artifacts/cubic_amplitude_source_dynamics_v1.tex"
+    burden_effect: "narrows"
+    summary: "Fills S_dyn in one exact witness instance with a typed nontrivial generator and global forward solution."
+  - payload_id: "PAYLOAD-RT-20260725-008-002"
+    payload_type: "theorem"
+    object_name: "cubic amplitude forward-semigroup and proper-range result"
+    claim_status: "draft/control mathematical result"
+    source_path: "research_control/tasks/RT-20260725-008/artifacts/cubic_amplitude_source_dynamics_v1.tex"
+    burden_effect: "narrows"
+    summary: "Proves P5-T02 compatibility, injectivity, nonsurjectivity, and absence of a global real-action extension on Q_amp."
+  - payload_id: "PAYLOAD-RT-20260725-008-003"
+    payload_type: "explicit_witness"
+    object_name: "nonzero cubic amplitude orbit and Lyapunov control"
+    claim_status: "proposal-only"
+    source_path: "research_control/tasks/RT-20260725-008/artifacts/cubic_amplitude_source_dynamics_spec_v1.yaml"
+    burden_effect: "audits"
+    summary: "Reproduces a nonconstant orbit and strict decrease of the source control functional."
+  - payload_id: "PAYLOAD-RT-20260725-008-004"
+    payload_type: "countermodel"
+    object_name: "six fail-closed dynamics controls"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260725-008/artifacts/cubic_amplitude_source_dynamics_spec_v1.yaml"
+    burden_effect: "audits"
+    summary: "Fails closed on triviality finite forward blowup composition defect off-tangent motion target import and physical overread."
+
+physics_progress_status:
+  status: "candidate_constructed_pending_audit"
+  target_derivation_milestone: "source_ontology"
+  milestone_burden: "Move the program from kinematic records to a genuine dynamical candidate."
+  explanation: "P5-T03 supplies the first explicit source-only dynamics candidate on the P5-T01 amplitude witness with a generator, nontrivial global forward solution, action laws, range theorem, Lyapunov control, scale provenance, and negative controls. P5-T04 structural audit, extension, preference, and adoption remain open."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr_delta:
+  changed: true
+  effect: "scoped_source_extension_object"
+  burden_id: "source_ontology_primitives"
+  milestone: "source_ontology"
+  old_status: "A compact source-theory object and proposal-only Phi_src semantics existed, but S_dyn remained open."
+  new_status: "One audit-ready proposal-only cubic-amplitude source dynamics candidate fills S_dyn in the exact P5-T01 witness instance; genericity locality preference adoption reconstruction and all downstream physical burdens remain open."
+  ledger_row_updated: true
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "The source-ontology row gains the P5-T03 candidate evidence and narrows only the source-dynamics construction burden. Physical and promotion layers remain unchanged."
+  downstream_unlocked:
+    - "P5-T04 structural analysis after the governed checkpoint"
+  downstream_still_blocked:
+    - "P5-T04 until the governed checkpoint commits"
+    - "generic source dynamics beyond the exact witness"
+    - "canonical source-law adoption"
+    - "physical time energy gauge irreversibility and source-manifold locality"
+    - "physical source manifold M_src"
+    - "source-to-target reconstruction"
+    - "effective metric g_eff"
+    - "matter coupling"
+    - "Einstein equations derivation"
+    - "benchmark promotion"
+  explanation: "This is a scoped source-only candidate delta, not physical or benchmark promotion."
+
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "one proposal-only cubic-amplitude dynamics candidate now fills S_dyn in the exact witness; genericity locality preference and adoption remain open"
+  - burden: "Source equivalence EqSrc"
+    status: "unchanged; identity-only compatibility does not discharge general source equivalence"
+  - burden: "RetainH"
+    status: "unchanged; no adopted source retention law is supplied"
+  - burden: "GenH"
+    status: "unchanged; no adopted source generation law is supplied"
+  - burden: "ObsLoc_lc"
+    status: "unchanged; the amplitude law does not establish constructive localization"
+  - burden: "Resp_lc"
+    status: "unchanged; no detector response or readout semantics is supplied"
+  - burden: "M_src"
+    status: "unchanged; the torus witness and its configuration family are not adopted physical spacetime"
+  - burden: "g_eff"
+    status: "unchanged; reconstruction remains open and no metric law or physical scale is derived"
+  - burden: "matter coupling"
+    status: "unchanged; no matter semantics action universal coupling stress energy or backreaction"
+  - burden: "Einstein equations"
+    status: "unchanged; no target-side field-equation derivation follows"
+  - burden: "finite-variation robustness"
+    status: "unchanged; only the exact one-dimensional variation sector is checked"
+  - burden: "benchmark promotion"
+    status: "unchanged; exact GR remains separate target-side benchmark authority"
+  - burden: "Gate Chair status"
+    status: "unchanged and human-gated; no verdict is requested or inferred"
+  - burden: "current route freeze or hard-fail status"
+    status: "not frozen; a genuinely new named dynamics object was constructed and the exact P5-T04 analysis route is selected"
+
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  forbidden_conclusions:
+    - "canonical ontology edit or canonical-ontology candidate status"
+    - "source-law adoption or rejection"
+    - "physical time clock rate energy entropy irreversibility gauge or source-manifold locality"
+    - "general source dynamics beyond the exact witness"
+    - "M_src adoption or source-to-target reconstruction"
+    - "g_eff metric causal or physical scale claim"
+    - "matter coupling or Einstein equations"
+    - "benchmark promotion Gate Chair verdict proof publication push or completed derivation"
+    - "global theory rejection or future source-extension impossibility"
+  summary: "Operational validation and checkpoint evidence cannot promote the task-local cubic-amplitude construction into an adopted, physical, target-side, or protected claim."
+
+three_tier_claim_summary:
+  adopted_objects:
+    - "Inherited only: P4-T06 continuum-first research architecture with explicit primitive debt and unresolved physical source ontology."
+  accepted_evidence_preconditions:
+    - "P5-T01 compact source-theory object and torus-amplitude witness"
+    - "P5-T02 proposal-only continuous forward-action semantics"
+    - "P5-T03 task-local cubic generator solution semigroup range and control results"
+  open_or_blocked_physical_targets:
+    - "generic and adopted source dynamics"
+    - "physical time energy locality gauge and history interpretation"
+    - "M_src reconstruction and g_eff"
+    - "matter coupling Einstein equations and benchmark promotion"
+  forbidden_overread:
+    - "injective nonsurjective maps as physical irreversibility or information loss"
+    - "Lyapunov control as physical energy action Hamiltonian or entropy"
+    - "torus amplitude autonomy as physical spacetime locality"
+    - "validation or checkpoint as theorem adoption or promotion"
+
+authorization_layers:
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  source_law_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  physical_interpretation_establishment_authorized: false
+  physical_gauge_claim_authorized: false
+  source_manifold_locality_claim_authorized: false
+  M_src_adoption_authorized: false
+  g_eff_construction_authorized: false
+  matter_coupling_derivation_authorized: false
+  einstein_equation_derivation_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 113 lease parity immutable route identity repository binding and one-shot consumption were verified before work."
+      - "Memory preflight refreshed retrieval-only state and the registered P5-T02 P5-T01 burden-map frontier and canonical dynamics sources were inspected."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Both required internal perspectives completed and six mathematical versus interpretive tensions were resolved in one parent synthesis round."
+      - "The task-local validator passes all nineteen typing solution action range Lyapunov scale failure-control synthesis and claim-boundary checks."
+      - "The registered TeX source compiles through the approved scratch builder to a five-page local PDF."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Documentation impact signal parity generated freshness memory claim-language research-control selected-test and whitespace gates pass before checkpoint."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "One governed checkpoint remains to run after stable completed-state validation."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Current frontier compact frontier task index dependency graph claim graph and burden-status derivatives are fresh."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory bootstrap and validate-only pass after source registration."
+  claim_language_linter:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "Changed-source claim-language validation has zero hard failures and only nonblocking historical warnings."
+
+validation_summary:
+  task_local:
+    status: "PASS"
+    check_count: 19
+    failure_count: 0
+    warning_count: 0
+    evidence_path: "research_control/tasks/RT-20260725-008/artifacts/cubic_amplitude_source_dynamics_validation_receipt_v1.json"
+  parent_child:
+    status: "PASS"
+    child_count: 2
+    resolved_conflict_count: 6
+    unresolved_conflict_count: 0
+  latex_scratch:
+    status: "PASS"
+  memory_bootstrap:
+    status: "PASS"
+  documentation_impact:
+    status: "PASS"
+  project_improvement_signal_parity:
+    status: "PASS"
+    open_signal_count: 0
+  claim_language:
+    status: "PASS_WITH_WARNINGS"
+    hard_failure_count: 0
+  research_control:
+    status: "PASS"
+  full_validation:
+    status: "PASS"
+  selected_tests:
+    status: "PASS"
+  git_diff_check:
+    status: "PASS"
+
+validation_commands:
+  - "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python research_control/tasks/RT-20260725-008/artifacts/validate_cubic_amplitude_source_dynamics.py --write-report --json"
+  - "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python research_control/tasks/RT-20260725-008/artifacts/validate_cubic_amplitude_source_dynamics.py --check --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/build_pdf_derivatives.py --scratch research_control/tasks/RT-20260725-008/artifacts/cubic_amplitude_source_dynamics_v1.tex"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --json-summary"
+  - ".venv/bin/python scripts/research_control/run_full_research_control_validation.py --json --tail-chars 2500"
+  - "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m unittest -v tests.test_research_control"
+  - "git diff --check"
+
+command_results:
+  - command: "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python research_control/tasks/RT-20260725-008/artifacts/validate_cubic_amplitude_source_dynamics.py --write-report --json"
+    status: "PASS"
+    summary: "Passed all nineteen task-local construction and claim-boundary checks."
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/build_pdf_derivatives.py --scratch research_control/tasks/RT-20260725-008/artifacts/cubic_amplitude_source_dynamics_v1.tex"
+    status: "PASS"
+    summary: "Compiled the registered TeX source to a five-page local scratch PDF after adding the repository-standard Latin Modern font package."
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py and --validate-only"
+    status: "PASS"
+    summary: "Regenerated and validated tracked memory and wiki derivatives without creating independent authority."
+  - command: "current frontier task index compact frontier burden-status dependency graph and claim graph write/check commands"
+    status: "PASS"
+    summary: "All generated control and navigation surfaces are fresh."
+  - command: "classify_project_changes.py collect_project_improvement_signals.py validate_documentation_impact.py and validate_claim_language.py"
+    status: "PASS_WITH_WARNINGS"
+    summary: "Documentation and signal parity pass; claim-language validation has zero hard failures and historical warnings only."
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1013
+    relationship_row_count: 5008
+    semantic_row_count: 1013
+    vault_row_count: 1013
+    local_cache_only_warning_count: 0
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: true
+    refresh_performed: true
+    before_core_validation_status: "PASS"
+    before_freshness_status: "WARN"
+    before_local_retrieval_status: "WARN"
+    before_local_cache_only_warning_count: 5
+    after_core_validation_status: "PASS"
+    after_freshness_status: "PASS"
+    after_local_retrieval_status: "PASS"
+    after_local_cache_only_warning_count: 0
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-V21-P5-T02-PHI-SRC-SEMIFLOW-SEMANTICS-V1 --json"
+      query_type: "lookup"
+      query_text: "TEX-V21-P5-T02-PHI-SRC-SEMIFLOW-SEMANTICS-V1"
+      returned_object_ids:
+        - "TEX-V21-P5-T02-PHI-SRC-SEMIFLOW-SEMANTICS-V1"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"source dynamics candidate Phi src\" --limit 10 --json"
+      query_type: "search"
+      query_text: "source dynamics candidate Phi src"
+      returned_object_ids:
+        - "TEX-V21-P5-T02-PHI-SRC-SEMIFLOW-SEMANTICS-V1"
+        - "TEX-V21-P5-T01-COMPACT-SOURCE-THEORY-OBJECT-V1"
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+        - "MD-RESEARCH-CONTROL-DESIGN-GR-DERIVATION-BURDEN-MAP"
+        - "TEX-ONTOLOGY-AETHER-FLOW-DYNAMICS"
+  canonical_inspections:
+    - object_id: "TEX-V21-P5-T02-PHI-SRC-SEMIFLOW-SEMANTICS-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260725-007/artifacts/phi_src_semiflow_semantics_v1.tex"
+      source_hash: "60f7358e0643195d4e2b79f7fda921da223ef940d00968588a4175d23cc0b70f"
+    - object_id: "TEX-V21-P5-T01-COMPACT-SOURCE-THEORY-OBJECT-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260725-003/artifacts/compact_source_theory_object_v1.tex"
+      source_hash: "2520f82e54edcb2668446579ceed7a7dfc7a8abf995572aa9889a3d9a3a4467c"
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "9aace958c302f64a90f15e0887f3c8e2a945e6c803a129e20dc821b6c9c892d1"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-GR-DERIVATION-BURDEN-MAP"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/gr_derivation_burden_map.md"
+      source_hash: "8e9d44e3a18ecc8a2430a9c42497da3eb9911c2cf6cd714c1525c5d91551835e"
+    - object_id: "TEX-ONTOLOGY-AETHER-FLOW-DYNAMICS"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "ontology/tex/aether_flow_dynamics.tex"
+      source_hash: "fd6e579e71ef7f2ac4c9668ceede051ad57033ee52357b2552a9e3a5a53939c7"
+  failed_queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"P5-T03 source dynamics candidate Phi_src\" --limit 10 --json"
+      result: "FTS parser treated the hyphen as a column operator; no result influenced routing or claims"
+  required_source_path_inspection:
+    requested_path: "research_control/support_formalization/"
+    exists: false
+    disposition: "ordinary absent path; no premise or authority inferred"
+  authority_note: "Generated Obsidian, wiki, semantic, relationship, and .local retrieval surfaces are navigation or diagnostics only and are not authority."
+
+documentation_impact:
+  receipt_path: "research_control/tasks/RT-20260725-008/documentation_impact.yaml"
+  status: "completed"
+  source_documentation_updated: true
+  explanatory_sources:
+    - "research_control/tasks/RT-20260725-008/DDR-20260725-008.md"
+    - "research_control/tasks/RT-20260725-008/artifacts/parent_fusion_notes_cubic_amplitude_dynamics.md"
+    - "research_control/handoffs/handoff-0868.md"
+  project_improvement_signal_count: 0
+
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"
+  rationale: "No project-system defect or explanatory-documentation mismatch is identified."
+
+next_recommendation:
+  plan_task_id: "P5-T04"
+  route_label: "ontology-law-research-packet"
+  role_family: "ontology-formalizer@0.2.0"
+  worker_skill: "continue-research"
+  strategy_id: "analyze_cubic_amplitude_dynamics_structure_v1"
+  action: "After the governed checkpoint commits, analyze this exact unchanged candidate for source-manifold locality or its absence, composition, constraints, and conserved structure."
+  p5_t04_executed: false
+
+state_change_summary:
+  canonical_ontology_modified: false
+  source_law_adopted: false
+  source_dynamics_candidate_constructed: true
+  source_dynamics_adopted: false
+  physical_time_claimed: false
+  physical_energy_claimed: false
+  source_manifold_locality_claimed: false
+  reconstruction_selected: false
+  scientific_claims_changed: true
+  scientific_claim_change_scope: "draft/control task-local source-dynamics candidate only"
+  physical_status_changed: false
+  distance_to_gr_delta_changed: true
+  distance_to_gr_delta_scope: "scoped_source_dynamics_candidate_only"
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_performed: false

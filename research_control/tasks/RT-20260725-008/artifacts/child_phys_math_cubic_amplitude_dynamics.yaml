@@ -1,0 +1,146 @@
+schema_id: "parent_child_output_v1"
+artifact_id: "V21-P5-T03-CHILD-PHYS-MATH-CUBIC-AMPLITUDE-DYNAMICS-V1"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+task_id: "RT-20260725-008"
+job_id: "AJ-RT-20260725-008-001"
+plan_task_id: "P5-T03"
+created_at: "2026-07-25T19:24:00Z"
+target_derivation_milestone: "source_ontology"
+milestone_burden: "Move the program from kinematic records to a genuine dynamical candidate."
+
+scientific_status:
+  authority: "science_draft"
+  status_label: "draft/control"
+  candidate_status: "proposal-only"
+  material_class: "source-extension data"
+  adoption_status: "blocked_adoption_open_continuation"
+  canonical_ontology_candidate: false
+  source_law_adopted: false
+  physical_dynamics_selected: false
+  theorem_authority_created: false
+  physics_promotion_authorized: false
+
+source_basis:
+  - object_id: "TEX-V21-P5-T01-COMPACT-SOURCE-THEORY-OBJECT-V1"
+    path: "research_control/tasks/RT-20260725-003/artifacts/compact_source_theory_object_v1.tex"
+    sha256: "2520f82e54edcb2668446579ceed7a7dfc7a8abf995572aa9889a3d9a3a4467c"
+  - object_id: "TEX-V21-P5-T02-PHI-SRC-SEMIFLOW-SEMANTICS-V1"
+    path: "research_control/tasks/RT-20260725-007/artifacts/phi_src_semiflow_semantics_v1.tex"
+    sha256: "60f7358e0643195d4e2b79f7fda921da223ef940d00968588a4175d23cc0b70f"
+  - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+    path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+    sha256: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+
+recommended_candidate:
+  candidate_id: "V21-P5-T03-CUBIC-AMPLITUDE-SOURCE-DYNAMICS-V1"
+  state_space: "Q_amp={q_a=a sin(theta_1) | a in R}"
+  parameter_monoid: "Lambda_+=(R_ge_0,+,0)"
+  coefficient: "gamma>0"
+  generator: "X_gamma(q_a)=-gamma a^3 sin(theta_1)"
+  update_rule: "da/dlambda=-gamma a^3"
+  solution: "a(lambda)=a0/sqrt(1+2 gamma a0^2 lambda)"
+  induced_action: "Phi^gamma_lambda(q_a)=q_[a/sqrt(1+2 gamma a^2 lambda)]"
+  Lyapunov_functional: "L(q_a)=a^2/2"
+  formalism_choice_reason: >-
+    The cubic one-dimensional autonomous rule is source-only, tangent to the
+    exact P5-T01 amplitude witness, globally forward complete for both signs
+    of a, and not globally backward complete. It therefore supplies a
+    genuinely forward P5-T02 action without a source-arena metric or target
+    structure.
+
+typing:
+  topology: "Euclidean topology transported from R through a |-> q_a"
+  tangent_space: "T_(q_a)Q_amp=span{sin(theta_1)}"
+  admissible_variations: "Var_src(q_a)=span{sin(theta_1)}"
+  source_observable: "F(q_a)=a"
+  source_isomorphisms: "identity arrows only"
+  declared_redundancy: "identity arrows only"
+  source_base_boundary: "T^4 is compact and boundaryless"
+  initial_data: "q(0)=q_(a0), a0 in R"
+  parameter_boundary: "right derivative at lambda=0"
+
+derivation:
+  local_well_posedness: "The polynomial vector field is smooth and locally Lipschitz."
+  reduction: "Equality in the one-dimensional sin(theta_1) variation line gives da/dlambda=-gamma a^3."
+  separated_solution: "a(lambda)=a0/sqrt(1+2 gamma a0^2 lambda)."
+  global_forward_reason: "The denominator is strictly positive for gamma>0 and lambda>=0."
+  identity: "f_0(a)=a."
+  composition: "Direct substitution gives f_lambda(f_mu(a))=f_(lambda+mu)(a)."
+  joint_regularization: "The formula is jointly smooth on R_ge_0 x R."
+  generator_recovery: "The right derivative at lambda=0 equals X_gamma."
+
+range_and_backward_analysis:
+  derivative: "d f_lambda/da=(1+2 gamma lambda a^2)^(-3/2)>0"
+  injective: true
+  surjective_for_positive_parameter: false
+  exact_range: "(-1/sqrt(2 gamma lambda),1/sqrt(2 gamma lambda))"
+  backward_blowup_parameter: "-1/(2 gamma a0^2) for a0!=0"
+  global_R_action_extension: false
+  precise_nonconclusion: "The maps are injective, so this is not information loss; no physical irreversibility entropy causal or singularity claim follows."
+
+Lyapunov_analysis:
+  functional: "L=a^2/2"
+  derivative: "dL/dlambda=-gamma a^4=-4 gamma L^2"
+  closed_form: "L(lambda)=L0/(1+4 gamma L0 lambda)"
+  strict_decay_for_nonzero_orbit: true
+  physical_energy_claimed: false
+  Hamiltonian_claimed: false
+
+scale_analysis:
+  formal_unit_relation: "[gamma]=[lambda]^-1[a]^-2"
+  invariant_combination: "gamma a0^2 lambda"
+  active_parameter_rescaling: "Phi^gamma_(c lambda)=Phi^(c gamma)_lambda"
+  passive_parameter_regraduation: "lambda'=c lambda gives gamma'=gamma/c"
+  amplitude_regraduation: "a'=d a gives gamma'=gamma/d^2"
+  physical_scale_selected: false
+
+controls:
+  - control_id: "POSITIVE"
+    result: "gamma=1 a0=1 lambda=1 gives a=1/sqrt(3), a nonconstant orbit with lower L"
+  - control_id: "ZERO_RATE"
+    result: "gamma=0 is the identity and fails nontriviality"
+  - control_id: "NEGATIVE_RATE"
+    result: "gamma<0 yields finite positive-parameter blowup and fails total forward action"
+  - control_id: "NONCOMPOSING"
+    result: "exp(-gamma lambda^2)a violates additive composition"
+  - control_id: "OFF_TANGENT"
+    result: "a cos(theta_2) term leaves Var_src and Q_amp"
+  - control_id: "TARGET_IMPORT"
+    result: "target-derived gamma or generator fails closed"
+
+proved_here:
+  - "exact typing on the P5-T01 torus-amplitude witness"
+  - "unique global forward solution and a nonconstant positive control"
+  - "P5-T02 identity composition admissibility redundancy and smoothness"
+  - "right-generator recovery"
+  - "injective nonsurjective positive-parameter maps"
+  - "finite backward blowup and no global R-action on Q_amp"
+  - "Lyapunov monotonicity"
+  - "malformed unstable off-tangent and target-import controls"
+
+not_proved:
+  - "extension to arbitrary Q_adm or nontrivial Red_src"
+  - "source-manifold locality"
+  - "candidate uniqueness preference or derivation of gamma and the cubic power"
+  - "Hamiltonian symplectic variational physical-energy probability or gauge structure"
+  - "physical time reconstruction M_src g_eff matter coupling Einstein equations or exact-GR recovery"
+
+candidate_constructor_result:
+  result_type: "constructed_candidate"
+  no_fog_check: true
+  no_fog_explanation: "A typed cubic generator, explicit global forward solution, semiflow, range theorem, backward-extension obstruction, Lyapunov result, and controls were constructed."
+  next_required_role: "ontology-formalizer@0.2.0"
+  next_plan_task_id: "P5-T04"
+
+p5_t04_boundary:
+  allowed_next_analysis:
+    - "systematic locality or nonlocality"
+    - "constraints and smooth first integrals"
+    - "identity-only and nontrivial-redundancy structure"
+    - "conserved-structure classification"
+  prohibited_overreach_here:
+    - "performing that systematic analysis inside P5-T03"
+    - "changing the candidate before analysis"
+    - "interpreting L as physical energy"

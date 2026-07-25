@@ -13,9 +13,9 @@ state, or latest handoff, those sources govern and this file is stale.
 | Field | Value |
 | --- | --- |
 | Schema | `v21_current_burden_status_v1` |
-| Source commit at generation | `f472ad4d837f72b14fc5b08ff189550bbae1a97a` |
-| Status generation time | `2026-07-25T06:16:26Z` |
-| Tracked task count | 1099 |
+| Source commit at generation | `48799f729758a06efd31c234c1724f590516ebcd` |
+| Status generation time | `2026-07-25T19:39:08Z` |
+| Tracked task count | 1104 |
 | Stable definition count | 10 |
 | Distance-to-GR burden count | 14 |
 | Historical authored-map commit | `2c5fb02fd8fff9b449ab10a328d7c881b13ef546` |
@@ -23,21 +23,21 @@ state, or latest handoff, those sources govern and this file is stale.
 
 ### Exact source hashes
 
-- `registries/DISTANCE_TO_GR_LEDGER.csv`: `7bb5c01a9f893c192cc98408f22176ec8d1e8162c6b645b483c6053200ed136d`
-- `registries/RESEARCH_TASK_REGISTRY.csv`: `99d4f22134876ee4cc33f74c8d7b4c7b0475fbc86cf571be761f527b5aa323a1`
+- `registries/DISTANCE_TO_GR_LEDGER.csv`: `d7ce32f59d0e66e6b06dcfc85a13398c3f4c72210596bbbf4a86b0c297e5633b`
+- `registries/RESEARCH_TASK_REGISTRY.csv`: `6e3d766f0d35de2a9474699c57d875c2347f1b819fcd3bdb56c0a947365ff678`
 - `research_control/design/gr_derivation_burden_map.md`: `8e9d44e3a18ecc8a2430a9c42497da3eb9911c2cf6cd714c1525c5d91551835e`
-- `research_control/handoffs/handoff-0863.yaml`: `348aecbfd805575898fc92066fccefdf21c65f89cf10751225ce6fb739b4dd95`
-- `research_control/program_state.yaml`: `a5ef998f85b05781ce69e972d5f092ecfa162888644eff3c3be9b92945dd35d8`
+- `research_control/handoffs/handoff-0868.yaml`: `51fd10d660bb680f66a19f5e442b608bc72598486e453c5aff5ac75fda794d76`
+- `research_control/program_state.yaml`: `209300aeb4322be73b75c3aa7b475fa2bfda2a921070345ebe4c640f97b1a73f`
 - `research_control/tasks/RT-20260721-009/artifacts/v21_burden_definitions_v1.yaml`: `67b8053baa60db4b11ee20582633d6279523d40b2ee853a6c570e2fdc1d113f5`
 
 ## Live control state
 
 | Field | Value |
 | --- | --- |
-| Active task | `RT-20260725-003` |
-| Latest handoff | `handoff-0863` |
-| Current status | `p5_t01_compact_source_theory_pass_ready_for_checkpoint` |
-| Next recommended action | After the governed checkpoint commits, run exactly one bounded P5-T02 ontology-formalizer packet to select the semantic kind of Phi_src and prove its basic laws without target import. |
+| Active task | `RT-20260725-008` |
+| Latest handoff | `handoff-0868` |
+| Current status | `p5_t03_cubic_amplitude_dynamics_candidate_pass_ready_for_checkpoint` |
+| Next recommended action | After the governed checkpoint commits, run exactly one bounded P5-T04 ontology-formalizer packet to analyze this exact unchanged cubic-amplitude candidate for source-manifold locality or its absence, composition, constraints, and conserved structure. |
 
 ## Authored stable definitions with generated current values
 
@@ -52,15 +52,15 @@ state, or latest handoff, those sources govern and this file is stale.
 
 | Burden ID | Required object | Current status | Control status | Mathematical status | Physical status | Promotion status | Updated at |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| `source_ontology_primitives` | selected primitive source arena compact draft/control theory target and unresolved source-order or evolution slot | `accepted` | `accepted_as_scoped_source_object` | `definition_only_or_draft_object` | `no_physical_interpretation_authorized` | `scoped_source_object_only` | `2026-07-25T06:07:01Z` |
+| `source_ontology_primitives` | selected primitive source arena compact draft/control theory target proposal-only Phi_src semantics and one cubic amplitude dynamics candidate | `accepted` | `accepted_as_source_extension_data` | `scoped_source_extension_object` | `no_physical_interpretation_authorized` | `scoped_source_object_only` | `2026-07-25T19:39:08Z` |
 
 #### `source_ontology_primitives` generated detail
 
-- Current blocking burden: Phi_src semantics lawful source dynamics and source-to-target reconstruction
+- Current blocking burden: structural audit generic source dynamics and source-to-target reconstruction
 - Current next evidence or action: canonical source-only boundary with explicit primitive debt no target import and no physical overread
 - Current failure/freeze criterion: P4-T05 reopening gate or scoped obstruction tied to the continuum primitive
-- Current evidence: `research_control/tasks/RT-20260725-003/artifacts/compact_source_theory_object_v1.tex`
-- Exact overread guard: `no_source_law_adoption;no_metricdata_e_adoption;no_matter_coupling_adoption;no_benchmark_promotion;no_completed_derivation`
+- Current evidence: `research_control/tasks/RT-20260725-008/artifacts/cubic_amplitude_source_dynamics_v1.tex`
+- Exact overread guard: `no_source_law_adoption;no_canonical_ontology_edit;no_metricdata_e_adoption;no_matter_coupling_adoption;no_benchmark_promotion;no_completed_derivation`
 
 ### `source_equivalence_eqsrc`
 

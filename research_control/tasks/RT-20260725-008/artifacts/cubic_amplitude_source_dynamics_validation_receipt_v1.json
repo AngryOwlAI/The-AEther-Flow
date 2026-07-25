@@ -1,0 +1,126 @@
+{
+  "checks": [
+    {
+      "check_id": "file:cubic_amplitude_source_dynamics_spec_v1.yaml",
+      "detail": "required regular artifact exists",
+      "status": "PASS"
+    },
+    {
+      "check_id": "file:cubic_amplitude_source_dynamics_v1.tex",
+      "detail": "required regular artifact exists",
+      "status": "PASS"
+    },
+    {
+      "check_id": "file:child_phys_math_cubic_amplitude_dynamics.yaml",
+      "detail": "required regular artifact exists",
+      "status": "PASS"
+    },
+    {
+      "check_id": "file:child_phys_phil_cubic_amplitude_dynamics.yaml",
+      "detail": "required regular artifact exists",
+      "status": "PASS"
+    },
+    {
+      "check_id": "file:parent_conflict_review_cubic_amplitude_dynamics.yaml",
+      "detail": "required regular artifact exists",
+      "status": "PASS"
+    },
+    {
+      "check_id": "file:parent_fusion_notes_cubic_amplitude_dynamics.md",
+      "detail": "required regular artifact exists",
+      "status": "PASS"
+    },
+    {
+      "check_id": "candidate_typing",
+      "detail": "generator and equation are typed on the exact P5-T01 amplitude witness",
+      "status": "PASS"
+    },
+    {
+      "check_id": "explicit_solution",
+      "detail": "the declared equation has a unique global nontrivial forward solution",
+      "status": "PASS"
+    },
+    {
+      "check_id": "p5_t02_compatibility",
+      "detail": "the induced maps satisfy the P5-T02 forward-action requirements",
+      "status": "PASS"
+    },
+    {
+      "check_id": "property_manifest",
+      "detail": "globality, action compatibility, range, backward extension, and Lyapunov results are explicit",
+      "status": "PASS"
+    },
+    {
+      "check_id": "finite_semigroup_checks",
+      "detail": "finite symbolic-surrogate evaluations reproduce forward composition",
+      "status": "PASS"
+    },
+    {
+      "check_id": "positive_control",
+      "detail": "gamma=1, a0=1, lambda=1 yields 1/sqrt(3) and decreases the control functional",
+      "status": "PASS"
+    },
+    {
+      "check_id": "range_and_forward_only",
+      "detail": "positive-parameter maps are injective and remain inside their proper bounded range",
+      "status": "PASS"
+    },
+    {
+      "check_id": "control_matrix",
+      "detail": "trivial, unstable, composition, off-tangent, target-import, and overread controls fail closed",
+      "status": "PASS"
+    },
+    {
+      "check_id": "scale_provenance",
+      "detail": "all formal scales and their nonphysical provenance are explicit",
+      "status": "PASS"
+    },
+    {
+      "check_id": "claim_boundary",
+      "detail": "candidate construction is separated from adoption, physical interpretation, and downstream GR claims",
+      "status": "PASS"
+    },
+    {
+      "check_id": "no_fog_result",
+      "detail": "Candidate Constructor ends with one decisive constructed-candidate result",
+      "status": "PASS"
+    },
+    {
+      "check_id": "source_tex_content",
+      "detail": "registered TeX contains the generator, solution, laws, range, Lyapunov result, status, and successor boundary",
+      "status": "PASS"
+    },
+    {
+      "check_id": "parent_child_synthesis",
+      "detail": "both internal perspectives completed and the parent resolved mathematical and interpretive tensions",
+      "status": "PASS"
+    }
+  ],
+  "claim_boundary_summary": "One task-local cubic-amplitude source-order dynamics candidate is constructed. No canonical adoption, physical time, energy, locality, reconstruction, metric, matter, Einstein-equation, benchmark, proof, publication, push, or completed-derivation authority follows.",
+  "claim_status": "draft/control proposal-only source-extension data",
+  "finding_counts": {
+    "fail": 0,
+    "pass": 19,
+    "warning": 0
+  },
+  "object_id": "V21-P5-T03-CUBIC-AMPLITUDE-SOURCE-DYNAMICS-V1",
+  "plan_task_id": "P5-T03",
+  "result_status": "PASS",
+  "schema_id": "cubic_amplitude_source_dynamics_validation_receipt_v1",
+  "source_hashes": {
+    "research_control/tasks/RT-20260725-008/artifacts/child_phys_math_cubic_amplitude_dynamics.yaml": "f9d413f216a036ffa62865a46afa743d58c066ba7bceeba0baca0e933d05c82c",
+    "research_control/tasks/RT-20260725-008/artifacts/child_phys_phil_cubic_amplitude_dynamics.yaml": "7608ba0d0f10a574f8656291c539d3189499cd8c2a3d8b0a91015876f10ed6d3",
+    "research_control/tasks/RT-20260725-008/artifacts/cubic_amplitude_source_dynamics_spec_v1.yaml": "2007c7a5b9f3ffa5cc43d8a82f8de685428b75075195ee1ca16e7fa4889c64f9",
+    "research_control/tasks/RT-20260725-008/artifacts/cubic_amplitude_source_dynamics_v1.tex": "98ce6833f6e4d8be22837d25845d7fa62d6886049e168d121de5de0093703f6a",
+    "research_control/tasks/RT-20260725-008/artifacts/parent_conflict_review_cubic_amplitude_dynamics.yaml": "69e60a055a0148b3b3a770184784f07efa31d6f80e94dadb4ab7342de30594ea",
+    "research_control/tasks/RT-20260725-008/artifacts/parent_fusion_notes_cubic_amplitude_dynamics.md": "9253ea792f3dde14612223654da10bce974a70193febae4feb3fd250588ada36"
+  },
+  "validator_ids": [
+    "p5_t03_cubic_amplitude_dynamics_validator_v1",
+    "p5_t03_forward_semigroup_symbolic_check_v1",
+    "p5_t03_range_and_backward_extension_review_v1",
+    "p5_t03_lyapunov_and_scale_review_v1",
+    "p5_t03_parent_child_synthesis_review_v1",
+    "p5_t03_no_physical_overread_audit_v1"
+  ]
+}

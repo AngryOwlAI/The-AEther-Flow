@@ -1026,6 +1026,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V21-P4-T06-SELECTED-ONTOLOGY-REGIME-INTEGRATION-V1` `research_control/tasks/RT-20260724-010/artifacts/selected_ontology_regime_integration_v1.tex`
 - `TEX-V21-P5-T01-COMPACT-SOURCE-THEORY-OBJECT-V1` `research_control/tasks/RT-20260725-003/artifacts/compact_source_theory_object_v1.tex`
 - `TEX-V21-P5-T02-PHI-SRC-SEMIFLOW-SEMANTICS-V1` `research_control/tasks/RT-20260725-007/artifacts/phi_src_semiflow_semantics_v1.tex`
+- `TEX-V21-P5-T03-CUBIC-AMPLITUDE-SOURCE-DYNAMICS-V1` `research_control/tasks/RT-20260725-008/artifacts/cubic_amplitude_source_dynamics_v1.tex`
 
 ## wiki_markdown
 
@@ -2042,3 +2043,4 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-V21-P4-T06-SELECTED-ONTOLOGY-REGIME-INTEGRATION-V1` `wiki/tex/tex-v21-p4-t06-selected-ontology-regime-integration-v1.md`
 - `WIKI-TEX-V21-P5-T01-COMPACT-SOURCE-THEORY-OBJECT-V1` `wiki/tex/tex-v21-p5-t01-compact-source-theory-object-v1.md`
 - `WIKI-TEX-V21-P5-T02-PHI-SRC-SEMIFLOW-SEMANTICS-V1` `wiki/tex/tex-v21-p5-t02-phi-src-semiflow-semantics-v1.md`
+- `WIKI-TEX-V21-P5-T03-CUBIC-AMPLITUDE-SOURCE-DYNAMICS-V1` `wiki/tex/tex-v21-p5-t03-cubic-amplitude-source-dynamics-v1.md`
