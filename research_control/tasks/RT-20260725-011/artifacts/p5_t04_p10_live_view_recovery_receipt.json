@@ -1,0 +1,98 @@
+{
+  "authority_flags": {
+    "canonical_ontology_modified": false,
+    "distance_to_gr_delta_changed": false,
+    "distance_to_gr_ledger_modified_by_recovery": false,
+    "historical_p10_audit_outputs_modified": false,
+    "p5_t04_reexecuted": false,
+    "p5_t04_science_payload_modified_by_recovery": false,
+    "p5_t05_executed": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "publication_authorized": false,
+    "push_performed": false,
+    "scientific_claims_changed": false
+  },
+  "check_count": 6,
+  "checks": [
+    {
+      "check_id": "exact_recovery_sources_and_protected_bytes",
+      "mismatch_paths": [],
+      "status": "PASS"
+    },
+    {
+      "authority_note": "The local receipt is route-identity evidence only; tracked control state and protected source bytes remain authoritative.",
+      "check_id": "source_checkpoint_failure_identity",
+      "checkpoint_receipt_sha256": "8bb81d90bea681faaa0223b81013b69bcd43de7ef32ceaff80e4df9e13145863",
+      "failed_gate_sha256": "330bb5e2e2d5b091b93f3d1220da8bbfead4f44c762c9bf904fafa1bce9cfc93",
+      "status": "PASS"
+    },
+    {
+      "check_id": "live_burden_view_converged",
+      "status": "PASS",
+      "validator_returncode": 0,
+      "validator_status": "PASS"
+    },
+    {
+      "check_id": "historical_p10_audit_semantics_preserved",
+      "finding_ids": [
+        "P10-AUDIT-F001",
+        "P10-AUDIT-F002"
+      ],
+      "rollout_disposition": "FREEZE_BROADER_ROLLOUT_REPAIR_REQUIRED",
+      "status": "PASS"
+    },
+    {
+      "check_id": "p5_t04_science_payload_still_valid",
+      "status": "PASS",
+      "task_check_count": 21,
+      "task_failure_count": 0
+    },
+    {
+      "check_id": "authority_boundary",
+      "status": "PASS"
+    }
+  ],
+  "claim_boundary_summary": "The recovery adds one deterministic P10-T08 convergence branch and focused fail-closed coverage only. P5-T04 science and the historical P10 audit remain exact; P5-T05 and every promotion layer remain blocked until the governed cumulative checkpoint commits.",
+  "failed_check_count": 0,
+  "immutable_route_sha256": "c8856b79b9a4c42767056ec31221f9f7de7b9d8e8e9efbc85be41fc53194372b",
+  "job_id": "AJ-RT-20260725-011-001",
+  "next_plan_task_id": "P5-T05",
+  "plan_task_id": "P5-T04",
+  "protected_dirty_fingerprint": "6ebdd994096cb5048faca83d264a3c9f655b1e8cd140cdecbc93ab84426a5636",
+  "recovery_for_plan_task_id": "P5-T04",
+  "repaired_finding": {
+    "finding_id": "P5-T04-DEPENDENT-P10-T08-F001",
+    "repair": "recognized the exact fully converged live burden view only when the burden-status validator passes and both receipt identities match",
+    "status": "PASS"
+  },
+  "result_status": "PASS_P5_T04_P10_LIVE_VIEW_RECOVERY",
+  "schema_id": "p5_t04_p10_live_view_recovery_receipt_v1",
+  "source_checkpoint_receipt_sha256": "8bb81d90bea681faaa0223b81013b69bcd43de7ef32ceaff80e4df9e13145863",
+  "source_failed_gate_sha256": "330bb5e2e2d5b091b93f3d1220da8bbfead4f44c762c9bf904fafa1bce9cfc93",
+  "source_hashes": {
+    "registries/DISTANCE_TO_GR_LEDGER.csv": "0d3e50acacadd279b29b25aab73cf73c23dfe8e09896b7f86559e648f8f4bfbc",
+    "research_control/handoffs/handoff-0870.md": "db224c6bfc376434113ce6e4a5a03b253ee24c30bb6f83ff97fa8edff1c0e6a6",
+    "research_control/handoffs/handoff-0870.yaml": "f0066caea64803fa9c9394b635de3fb592d35b22c529ff737b468799d15541b9",
+    "research_control/tasks/RT-20260722-003/artifacts/v21_p10_integration_audit.md": "721351dfa0d3268d26bfbaee4409f84b487b755c9c5c185fd9c41130db3856ff",
+    "research_control/tasks/RT-20260722-003/artifacts/v21_p10_migration_readiness_compact_receipt.json": "db3410f2c166562a4cc8636011eeda15b7cb8f051c3917fea21b370e4da2ddb6",
+    "research_control/tasks/RT-20260722-003/artifacts/v21_p10_migration_readiness_validation.json": "cdcd907f4ad237118eab65f06f364263da08285456514605a0308bc203f7a6e6",
+    "research_control/tasks/RT-20260722-003/artifacts/validate_v21_p10_migration_readiness.py": "9983b57a58eb618621cef210ff150badb525922b02a7f89d24e8bea8f9500ad6",
+    "research_control/tasks/RT-20260725-010/00_TASK.yaml": "7bee0ffd1bd8264c331ab4d415e16da3bf995a49ce36fa4772da626f0a7dc66e",
+    "research_control/tasks/RT-20260725-010/DDR-20260725-010.md": "e9189cac4330b14083c8efc6c82093b3eca9d7c3df3a21cfc32eb094b2e36d9d",
+    "research_control/tasks/RT-20260725-010/artifacts/child_phys_math_cubic_amplitude_structure.yaml": "494371b88f3ce97401e5a8decb5ba51b8f16bb006be6f1944dc216ecb41b03a0",
+    "research_control/tasks/RT-20260725-010/artifacts/child_phys_phil_cubic_amplitude_structure.yaml": "39b5f02dade395c90e43f409b556593ae3fbca0e0ba96960aa3e482431a6ef95",
+    "research_control/tasks/RT-20260725-010/artifacts/cubic_amplitude_structural_analysis_spec_v1.yaml": "1c2b16d06254b96b5051acfbfcf0884ff85fab1903cb2fa964d4c957cd9d0044",
+    "research_control/tasks/RT-20260725-010/artifacts/cubic_amplitude_structural_analysis_v1.tex": "a9a9f42ff016febc0f40a8a4db32b09f670084bda2248704e290cf5bee02a06b",
+    "research_control/tasks/RT-20260725-010/artifacts/cubic_amplitude_structural_analysis_validation_receipt_v1.json": "ed69e89906d7f3a67251e51f20d6d2ac75175a53025bbdc83450043df5b92774",
+    "research_control/tasks/RT-20260725-010/artifacts/parent_conflict_review_cubic_amplitude_structure.yaml": "c3feb37f1959a1f9635900c787722cbbea822dfd15664b11812c8a308f25246e",
+    "research_control/tasks/RT-20260725-010/artifacts/parent_fusion_notes_cubic_amplitude_structure.md": "0b6a4d541fce825da3386653df8d7abf036ab03f8b58576f83277150f4e8fcee",
+    "research_control/tasks/RT-20260725-010/artifacts/validate_cubic_amplitude_structure.py": "e9b882b4fca6b572a2bd043bb17665c59a60ae096661c9181769447428abbff2",
+    "research_control/tasks/RT-20260725-010/jobs/AJ-RT-20260725-010-001.yaml": "b9e87fab312360058222cf72909d34e5d2ecb3f1b75602b840cf33d18251f97c",
+    "research_control/tasks/RT-20260725-010/jobs/completions/AJC-AJ-RT-20260725-010-001.yaml": "ce4e0348bbf558bc49eeac1589a4099c7f7bdc7a7d418f4ed4d827d4bd728f81",
+    "research_control/tasks/RT-20260725-010/roles/ontology-formalizer@0.2.0--RT-20260725-010.yaml": "daa72746ede1c73a70ab7925d9b13b5f63ba35aab1a6266a370c465c4cc9f5fc",
+    "tests/test_v21_p10_migration_readiness.py": "4389eed2d85b30e87974eabc5d2be3c1e07e7436d4c658d6486846e47b674c4c"
+  },
+  "status": "PASS",
+  "task_id": "RT-20260725-011"
+}

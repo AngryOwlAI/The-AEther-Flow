@@ -212,12 +212,16 @@ def diagnose_attempt_history() -> dict[str, Any]:
 
 def diagnose_burden_status() -> dict[str, Any]:
     return_code, command_result = run_json_command(COMMANDS["burden_status"])
-    if (
-        return_code != 1
-        or command_result.get("status") != "FAIL"
-        or command_result.get("error") != "generated Markdown is stale"
-    ):
-        raise AuditError("P10-T08 no longer exposes the bounded expected live-view drift")
+    stale_live_view = (
+        return_code == 1
+        and command_result.get("status") == "FAIL"
+        and command_result.get("error") == "generated Markdown is stale"
+    )
+    converged_live_view = (
+        return_code == 0 and command_result.get("status") == "PASS"
+    )
+    if not stale_live_view and not converged_live_view:
+        raise AuditError("P10-T08 burden-status validator returned an unrecognized result")
 
     receipt_path = (
         "research_control/tasks/RT-20260721-009/artifacts/"
@@ -247,6 +251,8 @@ def diagnose_burden_status() -> dict[str, Any]:
     ]
     same_task_finalization_paths = ["research_control/program_state.yaml"]
     if drift_paths == expected_fully_advanced_paths:
+        if not stale_live_view:
+            raise AuditError("P10-T08 advanced inputs unexpectedly report a fresh live view")
         if receipt.get("active_task_id") == active_task_id:
             raise AuditError("P10-T08 unexpectedly matches the current active task")
         if receipt.get("latest_handoff_id") == latest_handoff_id:
@@ -257,12 +263,25 @@ def diagnose_burden_status() -> dict[str, Any]:
         ):
             raise AuditError("P10-T08 task-count freshness transition is not demonstrated")
     elif drift_paths == same_task_finalization_paths:
+        if not stale_live_view:
+            raise AuditError(
+                "P10-T08 same-task finalization unexpectedly reports a fresh live view"
+            )
         if receipt.get("active_task_id") != active_task_id:
             raise AuditError("P10-T08 same-task finalization changed active task identity")
         if receipt.get("latest_handoff_id") != latest_handoff_id:
             raise AuditError("P10-T08 same-task finalization changed handoff identity")
         if receipt.get("task_count") != registry_count:
             raise AuditError("P10-T08 same-task finalization changed task count")
+    elif not drift_paths:
+        if not converged_live_view:
+            raise AuditError("P10-T08 converged inputs do not report a fresh live view")
+        if receipt.get("active_task_id") != active_task_id:
+            raise AuditError("P10-T08 converged view changed active task identity")
+        if receipt.get("latest_handoff_id") != latest_handoff_id:
+            raise AuditError("P10-T08 converged view changed handoff identity")
+        if receipt.get("task_count") != registry_count:
+            raise AuditError("P10-T08 converged view changed task count")
     else:
         raise AuditError("P10-T08 drift is not limited to an expected live-input transition")
     return {

@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260725-009` and `handoff-0869`.
+`RT-20260725-011` and `handoff-0871`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260725-009` |
-| Latest handoff ID | `handoff-0869` |
-| Current status | `p5_t03_four_eof_checkpoint_recovery_pass_ready_for_checkpoint` |
+| Active task ID | `RT-20260725-011` |
+| Latest handoff ID | `handoff-0871` |
+| Current status | `p5_t04_p10_live_view_convergence_recovery_pass_ready_for_checkpoint` |
 | V16 completed | false |
 | Current route family | benchmark or recovery (project system) |
 | Target derivation milestone | `source_ontology` |
 | Current burden | `source_ontology_primitives` |
-| Required next authority | After the governed cumulative checkpoint commits, one fresh bounded P5-T04 ontology-law packet may analyze the exact unchanged cubic-amplitude dynamics candidate for source locality, composition, constraints, and conserved structure. |
-| Next recommended action | Run the one governed cumulative checkpoint for AJ-RT-20260725-009-001. Only after it commits may one fresh bounded P5-T04 ontology-law packet analyze the exact unchanged cubic-amplitude candidate for locality, composition, constraints, and conserved structure. |
+| Required next authority | After the governed cumulative checkpoint commits, one fresh bounded P5-T05 Candidate Constructor packet may identify source-defined backgrounds or phases and derive their perturbative modes, stability conditions, and symmetry-breaking structure. |
+| Next recommended action | Run the one governed cumulative checkpoint for AJ-RT-20260725-011-001. Only after it commits may one fresh bounded P5-T05 Candidate Constructor packet identify source-defined backgrounds or phases and derive their perturbative modes, stability, and symmetry-breaking structure without target import. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260725-009` |
-| Latest research handoff ID | `handoff-0869` |
-| Latest research next action | Run the one governed cumulative checkpoint for AJ-RT-20260725-009-001. Only after it commits may one fresh bounded P5-T04 ontology-law packet analyze the exact unchanged cubic-amplitude candidate for locality, composition, constraints, and conserved structure. |
+| Latest research task ID | `RT-20260725-011` |
+| Latest research handoff ID | `handoff-0871` |
+| Latest research next action | Run the one governed cumulative checkpoint for AJ-RT-20260725-011-001. Only after it commits may one fresh bounded P5-T05 Candidate Constructor packet identify source-defined backgrounds or phases and derive their perturbative modes, stability, and symmetry-breaking structure without target import. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260725-009/00_TASK.yaml`.
-- Active task objective: Under the sealed generation-114 dirty-state manifest, remove exactly one final newline from each of the four checkpoint-named P5-T03 YAML files, prove all 51 non-target manifest paths and protected scientific payloads remained exact at the repair boundary, synchronize normal control derivatives, and invoke one fresh governed cumulative checkpoint before P5-T04.
-- Latest handoff path: `research_control/handoffs/handoff-0869.yaml`.
-- Latest handoff summary: Generation 114 removes exactly one terminal newline from each of four checkpoint-named P5-T03 YAML files. The sealed receipt records zero drift across the other 51 dirty-manifest paths at the repair boundary, matches the failed checkpoint and gate evidence hashes, and preserves all protected P5-T03 science and authority. P5-T04 remains unexecuted pending one governed cumulative checkpoint.
+- Active task path: `research_control/tasks/RT-20260725-011/00_TASK.yaml`.
+- Active task objective: Repair only the stale P10-T08 migration-readiness expectation by recognizing the exact fully converged live burden view when its validator and receipt identities agree, preserve the historical P10 audit and all P5-T04 science and authority bytes, rerun every required gate, and invoke one governed cumulative checkpoint only on a full pass.
+- Latest handoff path: `research_control/handoffs/handoff-0871.yaml`.
+- Latest handoff summary: Generation 116 adds the exact fully converged P10-T08 live-view lifecycle branch, requiring a passing burden-status validator plus matching active-task, handoff, task-count, and both source hashes. Focused positive and fail-closed controls pass, the historical P10 audit outputs and all protected P5-T04 bytes remain exact, and P5-T05 remains unexecuted pending one governed cumulative checkpoint.
 - Current route family: benchmark or recovery (project system).
-- Next recommended action: Run the one governed cumulative checkpoint for AJ-RT-20260725-009-001. Only after it commits may one fresh bounded P5-T04 ontology-law packet analyze the exact unchanged cubic-amplitude candidate for locality, composition, constraints, and conserved structure.
+- Next recommended action: Run the one governed cumulative checkpoint for AJ-RT-20260725-011-001. Only after it commits may one fresh bounded P5-T05 Candidate Constructor packet identify source-defined backgrounds or phases and derive their perturbative modes, stability, and symmetry-breaking structure without target import.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -282,7 +282,7 @@ preserves the raw ledger `current_status` field for continuity.
 
 | Burden ID | Milestone | Reader-facing status | Legacy status | Control status | Mathematical status | Physical status | Promotion status | Overread guard | Last evidence |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| `source_ontology_primitives` | `source_ontology` | draft source-ontology primitives only | accepted | accepted_as_source_extension_data | scoped_source_extension_object | no_physical_interpretation_authorized | scoped_source_object_only | no_source_law_adoption<br>no_canonical_ontology_edit<br>no_metricdata_e_adoption<br>no_matter_coupling_adoption<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/tasks/RT-20260725-008/artifacts/cubic_amplitude_source_dynamics_v1.tex` |
+| `source_ontology_primitives` | `source_ontology` | draft source-ontology primitives only | accepted | accepted_as_source_extension_data | scoped_obstruction | no_physical_interpretation_authorized | scoped_source_object_only | no_source_law_adoption<br>no_canonical_ontology_edit<br>no_metricdata_e_adoption<br>no_matter_coupling_adoption<br>no_benchmark_promotion<br>no_completed_derivation<br>no_global_theory_rejection<br>no_future_source_extension_impossibility | `research_control/tasks/RT-20260725-010/artifacts/cubic_amplitude_structural_analysis_v1.tex` |
 | `source_equivalence_eqsrc` | `source_equivalence_eqsrc` | draft source-equivalence object only | draft object exists | draft_control_object_exists | general_equivalence_theorem_missing | downstream_gr_blocked | draft_control_only | no_source_law_adoption<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/program_state.yaml` |
 | `retain_h` | `source_equivalence_eqsrc` | blocked by missing primitive | blocked by missing primitive | blocked | primitive_missing | no_retention_law_adoption | none | no_source_law_adoption<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/program_state.yaml` |
 | `gen_h` | `source_equivalence_eqsrc` | blocked by missing primitive | blocked by missing primitive | blocked | primitive_missing | no_generator_law_adoption | none | no_source_law_adoption<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/program_state.yaml` |
@@ -302,7 +302,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run the one governed cumulative checkpoint for AJ-RT-20260725-009-001. Only after it commits may one fresh bounded P5-T04 ontology-law packet analyze the exact unchanged cubic-amplitude candidate for locality, composition, constraints, and conserved structure.
+Run the one governed cumulative checkpoint for AJ-RT-20260725-011-001. Only after it commits may one fresh bounded P5-T05 Candidate Constructor packet identify source-defined backgrounds or phases and derive their perturbative modes, stability, and symmetry-breaking structure without target import.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -327,10 +327,10 @@ Validation layers:
 
 | Validation layer | Status | Meaning | Evidence |
 | --- | --- | --- | --- |
-| `pre_execution` | PASS | receipt complete | Generation 114 validated, atomically claimed, and consumed its exact immutable recovery route once. |
-| `completion_internal` | PASS | receipt complete | The tracked receipt proves four exact terminal-newline deletions, 51 non-target hash matches, and protected P5-T03 preservation. |
-| `post_write` | PENDING | open item; evidence must explain why | Integrated control, documentation, signal, memory, and test validation remains before checkpoint. |
-| `post_checkpoint` | PENDING | open item; evidence must explain why | One governed cumulative checkpoint remains; P5-T04 is not executed before it. |
+| `pre_execution` | PASS | receipt complete | Generation 116 validated, atomically claimed, and consumed its exact immutable recovery route once. |
+| `completion_internal` | PASS | receipt complete | The tracked receipt proves the exact converged branch, eleven focused regressions, historical P10 preservation, and protected P5-T04 preservation. |
+| `post_write` | PENDING | open item; evidence must explain why | Integrated control, documentation, signal, memory, and repository-test validation remains before checkpoint. |
+| `post_checkpoint` | PENDING | open item; evidence must explain why | One governed cumulative checkpoint remains; P5-T05 is not executed before it. |
 | `renderer` | PENDING | open item; evidence must explain why | Tracked frontier, task-index, graph, registry, and wiki derivatives remain to be synchronized. |
 | `memory_bootstrap` | PENDING | open item; evidence must explain why | Tracked memory synchronization remains before checkpoint. |
 | `claim_language_linter` | PENDING | open item; evidence must explain why | Integrated research-control validation remains before checkpoint. |
@@ -340,7 +340,7 @@ Authorization layers:
 | Authorization field | Value | Meaning |
 | --- | --- | --- |
 | `protected_scoped_gate_review_authorized` | false (not authorized) | scoped review authority only |
-| `protected_scoped_gate_review_scope` | not authorized; ordinary project-system EOF recovery validation only | exact scope of protected review authority |
+| `protected_scoped_gate_review_scope` | not authorized; ordinary project-system validator recovery only | exact scope of protected review authority |
 | `protected_scoped_gate_review_authority_source_path` | none | tracked source for scoped review authority |
 | `downstream_physics_promotion_authorized` | false (not authorized) | authorizes downstream physics promotion only when true |
 | `downstream_physics_promotion_authority_source_path` | none | tracked source for downstream promotion authority |
@@ -363,9 +363,9 @@ Authorization layers:
 
 Legacy compatibility records:
 
-- active task: `RT-20260725-009`;
-- latest handoff: `handoff-0869`;
-- current status: `p5_t03_four_eof_checkpoint_recovery_pass_ready_for_checkpoint`;
+- active task: `RT-20260725-011`;
+- latest handoff: `handoff-0871`;
+- current status: `p5_t04_p10_live_view_convergence_recovery_pass_ready_for_checkpoint`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -375,8 +375,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0869.yaml`
-- `research_control/tasks/RT-20260725-009/00_TASK.yaml`
+- `research_control/handoffs/handoff-0871.yaml`
+- `research_control/tasks/RT-20260725-011/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -392,7 +392,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0869*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0871*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

@@ -1,0 +1,346 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,longtable}
+
+\newcommand{\Qamp}{\mathcal Q_{\mathrm{amp}}}
+\newcommand{\PhiSrc}{\Phi_{\mathrm{src}}}
+\newcommand{\Red}{\mathsf{Red}_{\mathrm{src}}}
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newtheorem{obstruction}{Scoped obstruction}
+\newtheorem{boundary}{Boundary}
+
+\title{P5-T04 Structural Analysis of the Cubic-Amplitude Source Dynamics}
+\author{Ontology Formalizer parent--child synthesis}
+\date{2026-07-25}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+\fbox{\parbox{0.92\linewidth}{
+\textbf{Status and authority.} This object is \texttt{draft/control},
+\texttt{proposal-only}, and \texttt{source-extension data}.  It analyzes the
+exact unchanged P5-T03 cubic-amplitude candidate.  It is not a
+canonical-ontology candidate, an adopted or rejected source law, a physical
+theory, a proof publication, or a source-to-target reconstruction.  Current
+adoption remains blocked while same-milestone continuation remains open.
+}}
+\end{center}
+
+\section{Source basis and unchanged candidate}
+
+Let
+\[
+ \mathcal A=\mathbb T^4,\qquad
+ e(\theta)=\sin\theta_1,\qquad
+ q_a=a e,\qquad
+ \Qamp=\{q_a:a\in\mathbb R\}.
+\]
+P5-T01 supplies this amplitude witness, the observable \(F(q_a)=a\), the
+variation line \(\operatorname{span}\{e\}\), and identity-only declared
+redundancy.  P5-T02 supplies only the proposal-level semantic type of a
+continuous unital forward monoid action.  P5-T03 fixes the candidate
+\[
+ X_\gamma(q_a)=-\gamma a^3e,\qquad
+ \Phi^\gamma_\lambda(q_a)
+ =q_{f^\gamma_\lambda(a)},\qquad
+ f^\gamma_\lambda(a)
+ =\frac{a}{\sqrt{1+2\gamma a^2\lambda}},
+ \label{eq:candidate}
+\]
+for \(\gamma>0\) and \(\lambda\geq0\).  This packet does not alter the state
+family, generator, coefficient, parameter domain, or action.
+
+No target atlas, target metric, exact-GR solution, target covariance,
+benchmark success, generated derivative, registry metadata, role authority,
+or validator result is used as a premise.  The planned path
+\texttt{research\_control/support\_formalization/} is absent and supplies no
+authority.
+
+\section{Declared structural tests}
+
+\begin{definition}[Patch-independence locality test]
+For the present candidate family, call disjoint nonempty open sets
+\(U,V\subset\mathbb T^4\) independently patchable if, for every
+\(q_a,q_b\in\Qamp\), there is \(q_c\in\Qamp\) such that
+\[
+ q_c|_U=q_a|_U,\qquad q_c|_V=q_b|_V.
+\]
+This is a deliberately narrow source-side test of independent local degrees
+of freedom.  Failure of this test is not a theorem that every possible source
+extension is nonlocal.
+\end{definition}
+
+\begin{definition}[Three distinct composition questions]
+We distinguish:
+\begin{enumerate}
+ \item parameter composition
+ \(\Phi^\gamma_{\lambda+\mu}
+ =\Phi^\gamma_\lambda\circ\Phi^\gamma_\mu\);
+ \item closure of the state family under addition,
+ \(q_a+q_b=q_{a+b}\);
+ \item dynamical additivity,
+ \(X_\gamma(q_a+q_b)=X_\gamma(q_a)+X_\gamma(q_b)\).
+\end{enumerate}
+Only the first two hold generally.  Parameter composition is not a substitute
+for independent state composition.
+\end{definition}
+
+\section{Local patching and composition}
+
+\begin{theorem}[Global-mode patching theorem]
+\label{thm:patching}
+Let \(U,V\subset\mathbb T^4\) be nonempty open sets.  If
+\(q_c|_U=q_a|_U\), then \(c=a\).  Consequently, if also
+\(q_c|_V=q_b|_V\), then \(a=b=c\).  Hence disjoint nonempty patches carrying
+different amplitudes cannot be glued inside \(\Qamp\).
+\end{theorem}
+
+\begin{proof}
+The zero set of \(e(\theta)=\sin\theta_1\) has empty interior.  Thus every
+nonempty open \(U\) contains a point \(\theta\) with \(e(\theta)\neq0\).
+At that point,
+\[
+ (c-a)e(\theta)=q_c(\theta)-q_a(\theta)=0,
+\]
+so \(c=a\).  Apply the same argument on \(V\) to obtain \(c=b\).
+\end{proof}
+
+\begin{obstruction}[Candidate-specific locality obstruction]
+\label{obs:locality}
+The P5-T03 state family fails the declared patch-independence locality test:
+choose \(a\neq b\) on two disjoint nonempty open patches.  Theorem
+\ref{thm:patching} rules out a glued state in \(\Qamp\).  The exact failure is
+the single global amplitude shared by every patch, not a contradiction in
+the forward-action law.
+\end{obstruction}
+
+\begin{proposition}[Nonlinear composition defect]
+\label{prop:additivity}
+Although \(\Qamp\) is closed under addition,
+\[
+ X_\gamma(q_{a+b})-X_\gamma(q_a)-X_\gamma(q_b)
+ =-3\gamma ab(a+b)e.
+ \label{eq:generator-defect}
+\]
+Thus dynamical additivity fails unless \(ab(a+b)=0\).  For
+\(\lambda>0\), the integrated map is likewise nonadditive in general:
+\[
+ f^\gamma_\lambda(a+b)\neq
+ f^\gamma_\lambda(a)+f^\gamma_\lambda(b).
+\]
+\end{proposition}
+
+\begin{proof}
+Expand \((a+b)^3-a^3-b^3=3ab(a+b)\).  The integrated claim follows, for
+example, from \(a=b=1\), since
+\[
+ f^\gamma_\lambda(2)
+ =\frac{2}{\sqrt{1+8\gamma\lambda}}
+ \neq
+ \frac{2}{\sqrt{1+2\gamma\lambda}}
+ =2f^\gamma_\lambda(1).
+\]
+\end{proof}
+
+The exact P5-T03 parameter-semigroup law remains valid.  Proposition
+\ref{prop:additivity} does not invalidate that law; it denies only
+superposition compatibility.  No tensor product, disjoint union, factorized
+state space, or independent subsystem operation is supplied by the current
+candidate, so no stronger composition property is inferred.
+
+\section{Constraints and their classification}
+
+Let \(\mathcal V=C^\infty(\mathbb T^4,\mathbb R)\) be a task-local ambient
+configuration space used only to state the membership condition.  Let
+\[
+ \pi_e:\mathcal V\longrightarrow\mathcal V/\operatorname{span}\{e\}
+\]
+be the quotient map and define the kinematic constraint
+\[
+ C_e(q)=\pi_e(q).
+ \label{eq:kinematic-constraint}
+\]
+Then \(\Qamp=C_e^{-1}(0)\), and
+\[
+ C_e(X_\gamma(q_a))=0.
+\]
+Thus the candidate vector field is tangent to the ansatz and preserves its
+membership constraint.
+
+\begin{boundary}[Not a Dirac constraint analysis]
+Equation \eqref{eq:kinematic-constraint} is a configuration-family membership
+condition.  P5-T03 supplies no action, Legendre map, phase space, symplectic or
+presymplectic form, Poisson bracket, Hamiltonian, or multiplier.  Therefore
+the notions of primary, secondary, first-class, and second-class constraints
+are not instantiated.  Their counts are \emph{not applicable}, rather than
+zero physical constraints.  No Noether theorem or Hamiltonian conservation
+law may be invoked from the available structure.
+\end{boundary}
+
+\section{Smooth first integrals and orbit labels}
+
+\begin{theorem}[Triviality of global smooth first integrals]
+\label{thm:first-integrals}
+Let \(I:\Qamp\to\mathbb R\) be \(C^1\), and write \(i(a)=I(q_a)\).  If \(I\)
+is conserved along every P5-T03 orbit, equivalently
+\[
+ dI_{q_a}\!\left(X_\gamma(q_a)\right)=0
+ \quad\text{for all }a\in\mathbb R,
+\]
+then \(I\) is constant on \(\Qamp\).
+\end{theorem}
+
+\begin{proof}
+The conservation condition is
+\[
+ -\gamma a^3 i'(a)=0.
+\]
+For \(a\neq0\), \(i'(a)=0\), so \(i\) is constant separately on
+\((-\infty,0)\) and \((0,\infty)\).  Continuity at \(a=0\) makes the two
+constants equal to \(i(0)\).
+\end{proof}
+
+The sign of \(a\) and the fixed-point stratum \(\{0\}\) label forward orbits,
+but those labels do not define a nonconstant continuous global first
+integral.  The P5-T03 functional \(L=a^2/2\) satisfies
+\(dL/d\lambda=-\gamma a^4\), so it is monotone rather than conserved.  It is
+not a physical energy, Hamiltonian, entropy, or Noether charge.
+
+\section{Declared redundancy and an explicit discrete symmetry}
+
+The P5-T01 witness declares identity arrows only.  Its infinitesimal
+redundancy algebra is therefore the zero algebra, with no nonzero gauge
+generator.  The dynamics vector field is an update generator, not a gauge
+generator.
+
+There is nevertheless an explicit global \(\mathbb Z_2\) state-space
+symmetry
+\[
+ R(q_a)=q_{-a},\qquad
+ R\circ\Phi^\gamma_\lambda
+ =\Phi^\gamma_\lambda\circ R.
+\]
+This follows because \(f^\gamma_\lambda(-a)=-f^\gamma_\lambda(a)\).
+The reflection is discrete, has no infinitesimal generator, and is not
+declared redundancy.  Accordingly it supplies no Noether charge.
+
+\section{Admitted finite-variation stability}
+
+\begin{theorem}[Nonexpansion of the admitted tangent variation]
+\label{thm:variation}
+For an initial tangent variation \(\eta_0e\) at \(q_{a_0}\), the linearized
+amplitude variation is
+\[
+ \eta(\lambda)
+ =D f^\gamma_\lambda(a_0)\eta_0
+ =\frac{\eta_0}
+ {(1+2\gamma a_0^2\lambda)^{3/2}}.
+\]
+Hence \(|\eta(\lambda)|\leq|\eta_0|\) for all \(\lambda\geq0\), with strict
+decay for \(a_0\neq0\) and \(\lambda>0\).
+\end{theorem}
+
+\begin{proof}
+Differentiate the exact P5-T03 map with respect to \(a_0\).  Its derivative
+is \((1+2\gamma a_0^2\lambda)^{-3/2}\), which lies in \((0,1]\).
+\end{proof}
+
+This theorem concerns only the admitted one-dimensional tangent sector.
+It does not establish robustness against off-family perturbations, arbitrary
+source variations, mode coupling, or source-to-target reconstruction.
+
+\section{Conditional probabilistic normalization}
+
+\begin{proposition}[Pushforward normalization and unique invariant measure]
+\label{prop:probability}
+If a Borel probability measure \(\mu\) on \(\mathbb R\cong\Qamp\) is added
+as extra structure, every measurable map \(f^\gamma_\lambda\) preserves total
+mass under pushforward.  For any fixed \(\lambda>0\), the only invariant Borel
+probability measure is \(\delta_0\).
+\end{proposition}
+
+\begin{proof}
+Pushforward gives
+\((f^\gamma_\lambda{}_\ast\mu)(\mathbb R)
+=\mu((f^\gamma_\lambda)^{-1}(\mathbb R))=\mu(\mathbb R)=1\).
+For uniqueness, set
+\[
+ h(a)=\frac{a^2}{1+a^2}.
+\]
+For \(\lambda>0\),
+\(h(f^\gamma_\lambda(a))<h(a)\) whenever \(a\neq0\), and equality holds at
+zero.  If \(\mu\) is invariant, then
+\[
+ \int h(a)\,d\mu(a)
+ =\int h(f^\gamma_\lambda(a))\,d\mu(a).
+\]
+The nonnegative difference is strictly positive off zero, so it vanishes
+\(\mu\)-almost surely only when \(\mu(\{0\})=1\).  Thus
+\(\mu=\delta_0\), which is invariant.
+\end{proof}
+
+The current ontology and P5-T03 candidate select no probability law,
+measure, stochastic semantics, or ensemble.  Proposition
+\ref{prop:probability} is conditional mathematics: normalization is automatic
+after a probability measure is supplied, and the only stationary probability
+for the deterministic candidate is the fixed-point mass.
+
+\section{Failure branches and exact dispositions}
+
+\begin{longtable}{p{0.25\linewidth}p{0.47\linewidth}p{0.20\linewidth}}
+\toprule
+Branch & Exact finding & Disposition\\
+\midrule
+\endhead
+Different patch amplitudes &
+Theorem \ref{thm:patching} forces equal amplitudes on every nonempty open
+patch. &
+\texttt{scoped\_obstruction}; future extensions remain open.\\
+Independent-state superposition &
+Equation \eqref{eq:generator-defect} is nonzero generically. &
+No additive dynamics or independent-subsystem law.\\
+Hamiltonian constraint labels &
+No phase-space or bracket structure is supplied. &
+\texttt{not\_applicable}; do not report physical constraint counts.\\
+Nonconstant smooth conservation &
+Theorem \ref{thm:first-integrals} permits only constants. &
+No nontrivial global \(C^1\) first integral.\\
+Gauge generator &
+Declared redundancy is identity-only. &
+Zero infinitesimal redundancy algebra; no physical gauge claim.\\
+Probability normalization &
+Probability is not part of the candidate. &
+Conditional pushforward result only; no selected ensemble.\\
+Target-derived conservation &
+Target covariance or exact-GR behavior is not a source premise. &
+Fail closed as target import.\\
+\bottomrule
+\end{longtable}
+
+\section{Distance-to-GR disposition}
+
+This packet completes the planned P5-T04 analysis of this exact candidate:
+patch locality fails in a precise scoped way; parameter composition holds
+while superposition compatibility fails; the amplitude-family membership
+constraint is preserved but has no Hamiltonian classification; global
+\(C^1\) first integrals are constant; declared gauge generators are absent;
+the admitted tangent variation is nonexpanding; and probabilistic
+normalization is conditional with unique invariant measure \(\delta_0\).
+
+The result is a candidate-specific structural audit pending the planned P5-T05
+background and perturbation construction.  It does not discharge generic
+source ontology, select a physical background, adopt a law, or establish
+physical locality, energy, probability, gauge, \(M_{\mathrm{src}}\),
+\(g_{\mathrm{eff}}\), matter coupling, Einstein equations, exact-GR recovery,
+benchmark promotion, Gate Chair closure, proof publication, push, completed
+derivation, global theory rejection, or future source-extension
+impossibility.
+
+\end{document}

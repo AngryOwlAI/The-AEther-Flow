@@ -1,9 +1,130 @@
 mode: "director_led_research_control"
-active_task_id: "RT-20260725-009"
-latest_handoff_id: "handoff-0869"
-current_status: "p5_t03_four_eof_checkpoint_recovery_pass_ready_for_checkpoint"
-claim_boundary_summary: "RT-20260725-009 may remove exactly one terminal newline from each of four checkpoint-named P5-T03 YAML files, preserve all semantic and scientific payload bytes, create bounded recovery evidence and normal control derivatives, and invoke one cumulative checkpoint; it cannot reexecute P5-T03, execute P5-T04 before checkpoint, or create scientific, interpretive, promotion, proof, publication, or push authority."
-next_recommended_action: "Run the one governed cumulative checkpoint for AJ-RT-20260725-009-001. Only after it commits may one fresh bounded P5-T04 ontology-law packet analyze the exact unchanged cubic-amplitude candidate for locality, composition, constraints, and conserved structure."
+active_task_id: "RT-20260725-011"
+latest_handoff_id: "handoff-0871"
+current_status: "p5_t04_p10_live_view_convergence_recovery_pass_ready_for_checkpoint"
+claim_boundary_summary: "RT-20260725-011 repairs only the deterministic P10-T08 lifecycle contract for an exactly converged live burden view. It preserves the historical P10 audit outputs, every protected P5-T04 science and authority byte, and the inherited Distance-to-GR result. It cannot reexecute P5-T04, execute P5-T05 before checkpoint, modify or adopt canonical ontology or source law, create scientific or physical interpretation, promote the benchmark, publish, push, prove, or claim completed derivation."
+next_recommended_action: "Run the one governed cumulative checkpoint for AJ-RT-20260725-011-001. Only after it commits may one fresh bounded P5-T05 Candidate Constructor packet identify source-defined backgrounds or phases and derive their perturbative modes, stability, and symmetry-breaking structure without target import."
+
+p5_t04_p10_live_view_convergence_recovery:
+  task_id: "RT-20260725-011"
+  parent_task_id: "RT-20260725-010"
+  parent_handoff_id: "handoff-0870"
+  plan_task_id: "P5-T04"
+  recovery_for_plan_task_id: "P5-T04"
+  next_plan_task_id: "P5-T05"
+  claim_boundary_id: "CB-V21-P5-T04-P10-LIVE-VIEW-CONVERGENCE-RECOVERY-001"
+  status: "PASS_P5_T04_P10_LIVE_VIEW_RECOVERY_READY_FOR_CHECKPOINT"
+  work_item_status: "completed"
+  target_derivation_milestone: "none"
+  milestone_burden: "Project-system validator compatibility and cumulative checkpoint recovery only; no scientific derivation milestone advances."
+  route_label: "repair_p10_t08_migration_readiness_after_live_view_convergence_and_checkpoint_v1"
+  selected_role_family: "validator-engineer@0.2.0"
+  selected_worker_skill: "improve-project-system"
+  immutable_route_sha256: "c8856b79b9a4c42767056ec31221f9f7de7b9d8e8e9efbc85be41fc53194372b"
+  source_handoff_path: "research_control/handoffs/handoff-0870.yaml"
+  source_handoff_sha256: "f0066caea64803fa9c9394b635de3fb592d35b22c529ff737b468799d15541b9"
+  source_completion_sha256: "ce4e0348bbf558bc49eeac1589a4099c7f7bdc7a7d418f4ed4d827d4bd728f81"
+  source_checkpoint_receipt_sha256: "8bb81d90bea681faaa0223b81013b69bcd43de7ef32ceaff80e4df9e13145863"
+  failed_gate_evidence_sha256: "330bb5e2e2d5b091b93f3d1220da8bbfead4f44c762c9bf904fafa1bce9cfc93"
+  protected_dirty_fingerprint: "6ebdd994096cb5048faca83d264a3c9f655b1e8cd140cdecbc93ab84426a5636"
+  p10_validator_path: "research_control/tasks/RT-20260722-003/artifacts/validate_v21_p10_migration_readiness.py"
+  p10_validator_sha256: "9983b57a58eb618621cef210ff150badb525922b02a7f89d24e8bea8f9500ad6"
+  p10_regression_test_path: "tests/test_v21_p10_migration_readiness.py"
+  p10_regression_test_sha256: "4389eed2d85b30e87974eabc5d2be3c1e07e7436d4c658d6486846e47b674c4c"
+  recovery_validator_path: "research_control/tasks/RT-20260725-011/artifacts/validate_p5_t04_p10_live_view_recovery.py"
+  recovery_validator_sha256: "509c8b928bdc0e8d22acf997bec57d0aaf129c36530faa04120e657a0bd21fe5"
+  recovery_receipt_path: "research_control/tasks/RT-20260725-011/artifacts/p5_t04_p10_live_view_recovery_receipt.json"
+  recovery_receipt_sha256: "607ca9ed701134acb674c004652415654644413f2a05ac46cb8e75c70b52fc06"
+  completion_path: "research_control/tasks/RT-20260725-011/jobs/completions/AJC-AJ-RT-20260725-011-001.yaml"
+  completion_sha256: "8d3f1aa588dacf8e3b5f70b6a8301c9aa77dbb1d94f63e3561af11a980c6d977"
+  handoff_id: "handoff-0871"
+  handoff_yaml_sha256: "2dddc947cb70d8833fffb471d71dce698db565b4b8da0d4d78edf8efab850389"
+  handoff_markdown_sha256: "e676ab6ca6873a4b1a4a65dd067732cd4f4cfc54d2b72ef9ee54d07dbbc33e4a"
+  task_local_check_count: 6
+  focused_test_count: 11
+  historical_p10_audit_outputs_modified: false
+  p5_t04_science_payload_modified_by_recovery: false
+  p5_t04_reexecuted: false
+  p5_t05_executed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  checkpoint_invocation_count: 0
+  checkpoint_committed: false
+  selected_next_work_item: "P5-T05"
+  selected_next_worker_skill: "continue-research"
+  selected_next_role_family: "candidate-constructor@0.2.0"
+  selected_next_route_label: "candidate-construction-packet"
+  selected_next_strategy_id: "identify_stable_backgrounds_phases_and_modes_v1"
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
+
+p5_t04_cubic_amplitude_structural_analysis:
+  task_id: "RT-20260725-010"
+  parent_task_id: "RT-20260725-008"
+  parent_handoff_id: "handoff-0869"
+  plan_task_id: "P5-T04"
+  next_plan_task_id: "P5-T05"
+  claim_boundary_id: "CB-V21-P5-T04-CUBIC-AMPLITUDE-STRUCTURE-001"
+  status: "PASS_CUBIC_AMPLITUDE_STRUCTURAL_AUDIT_READY_FOR_CHECKPOINT"
+  work_item_status: "completed"
+  target_derivation_milestone: "source_ontology"
+  milestone_burden: "Establish the structural properties required for a predictive source theory."
+  route_label: "ontology-law-research-packet"
+  selected_role_family: "ontology-formalizer@0.2.0"
+  selected_worker_skill: "continue-research"
+  immutable_route_sha256: "ee3933ea2970a1f6118a666481fcb06ff140cec3fea0c546b22acf3d4b71bf8f"
+  source_handoff_path: "research_control/handoffs/handoff-0869.yaml"
+  source_handoff_sha256: "48d0373995088621b685f3c4fff7e0e43484057a32b5f59dc934573417274466"
+  dependency_checkpoint_commit: "0ad7210aa50b7ef3262cab425561924efdc9783a"
+  candidate_status: "draft/control proposal-only source-extension data"
+  source_candidate_id: "V21-P5-T03-CUBIC-AMPLITUDE-SOURCE-DYNAMICS-V1"
+  source_candidate_unchanged: true
+  definition_path: "research_control/tasks/RT-20260725-010/artifacts/cubic_amplitude_structural_analysis_v1.tex"
+  definition_sha256: "a9a9f42ff016febc0f40a8a4db32b09f670084bda2248704e290cf5bee02a06b"
+  specification_path: "research_control/tasks/RT-20260725-010/artifacts/cubic_amplitude_structural_analysis_spec_v1.yaml"
+  specification_sha256: "1c2b16d06254b96b5051acfbfcf0884ff85fab1903cb2fa964d4c957cd9d0044"
+  validation_path: "research_control/tasks/RT-20260725-010/artifacts/cubic_amplitude_structural_analysis_validation_receipt_v1.json"
+  validation_sha256: "ed69e89906d7f3a67251e51f20d6d2ac75175a53025bbdc83450043df5b92774"
+  completion_path: "research_control/tasks/RT-20260725-010/jobs/completions/AJC-AJ-RT-20260725-010-001.yaml"
+  completion_sha256: "ce4e0348bbf558bc49eeac1589a4099c7f7bdc7a7d418f4ed4d827d4bd728f81"
+  handoff_id: "handoff-0870"
+  handoff_yaml_sha256: "f0066caea64803fa9c9394b635de3fb592d35b22c529ff737b468799d15541b9"
+  handoff_markdown_sha256: "db224c6bfc376434113ce6e4a5a03b253ee24c30bb6f83ff97fa8edff1c0e6a6"
+  task_local_check_count: 21
+  theorem_count: 4
+  proposition_count: 2
+  scoped_obstruction_count: 1
+  unresolved_conflict_count: 0
+  patch_independence_result: "candidate_specific_failure"
+  generic_generator_additivity_result: "FAIL"
+  Hamiltonian_constraint_classification: "not_applicable"
+  global_C1_first_integral_result: "constant_only"
+  nonzero_gauge_generator_count: 0
+  admitted_tangent_variations_nonexpanding: true
+  selected_probability_law: false
+  canonical_ontology_modified: false
+  source_law_adopted: false
+  source_law_rejected: false
+  generic_source_locality_established: false
+  physical_nonlocality_claimed: false
+  physical_status_changed: false
+  scientific_claims_changed: true
+  scientific_claim_change_scope: "draft/control candidate-specific source-only structural theorems and failure evidence"
+  distance_to_gr_delta_changed: true
+  distance_to_gr_delta_scope: "candidate_specific_source_ontology_structural_audit_only"
+  physics_promotion_authorized: false
+  proof_authority: false
+  checkpoint_invocation_count: 0
+  checkpoint_committed: false
+  selected_next_work_item: "P5-T05"
+  selected_next_worker_skill: "continue-research"
+  selected_next_role_family: "candidate-constructor@0.2.0"
+  selected_next_route_label: "candidate-construction-packet"
+  selected_next_strategy_id: "identify_stable_backgrounds_phases_and_modes_v1"
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
 
 p5_t03_four_eof_checkpoint_recovery:
   task_id: "RT-20260725-009"

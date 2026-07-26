@@ -123,6 +123,107 @@ class P10MigrationReadinessTests(unittest.TestCase):
             ],
         )
 
+    def test_converged_live_view_preserves_the_historical_audit(self) -> None:
+        registry_count = sum(
+            1
+            for line in (
+                REPO_ROOT / "registries/RESEARCH_TASK_REGISTRY.csv"
+            ).read_text(encoding="utf-8").splitlines()[1:]
+            if line.strip()
+        )
+        receipt = {
+            "source_hashes": {
+                "registries/RESEARCH_TASK_REGISTRY.csv": "registry-live",
+                "research_control/program_state.yaml": "program-live",
+            },
+            "active_task_id": "RT-CONVERGED",
+            "latest_handoff_id": "handoff-converged",
+            "task_count": registry_count,
+        }
+        live_hashes = {
+            "registries/RESEARCH_TASK_REGISTRY.csv": "registry-live",
+            "research_control/program_state.yaml": "program-live",
+        }
+        with (
+            patch.object(
+                self.module,
+                "run_json_command",
+                return_value=(0, {"status": "PASS"}),
+            ),
+            patch.object(self.module, "load_json", return_value=receipt),
+            patch.object(
+                self.module,
+                "program_identity",
+                return_value=("RT-CONVERGED", "handoff-converged"),
+            ),
+            patch.object(
+                self.module,
+                "sha256_path",
+                side_effect=lambda relative: live_hashes[relative],
+            ),
+        ):
+            component = self.module.diagnose_burden_status()
+
+        self.assertEqual(component["finding_id"], "P10-AUDIT-F002")
+        self.assertEqual(
+            component["stale_live_input_paths"],
+            [
+                "registries/RESEARCH_TASK_REGISTRY.csv",
+                "research_control/program_state.yaml",
+            ],
+        )
+        self.assertTrue(component["active_task_advanced"])
+        self.assertTrue(component["latest_handoff_advanced"])
+        self.assertTrue(component["task_count_advanced"])
+
+    def test_converged_inputs_fail_closed_when_live_validator_reports_stale(self) -> None:
+        registry_count = sum(
+            1
+            for line in (
+                REPO_ROOT / "registries/RESEARCH_TASK_REGISTRY.csv"
+            ).read_text(encoding="utf-8").splitlines()[1:]
+            if line.strip()
+        )
+        receipt = {
+            "source_hashes": {
+                "registries/RESEARCH_TASK_REGISTRY.csv": "registry-live",
+                "research_control/program_state.yaml": "program-live",
+            },
+            "active_task_id": "RT-CONVERGED",
+            "latest_handoff_id": "handoff-converged",
+            "task_count": registry_count,
+        }
+        live_hashes = {
+            "registries/RESEARCH_TASK_REGISTRY.csv": "registry-live",
+            "research_control/program_state.yaml": "program-live",
+        }
+        with (
+            patch.object(
+                self.module,
+                "run_json_command",
+                return_value=(
+                    1,
+                    {"status": "FAIL", "error": "generated Markdown is stale"},
+                ),
+            ),
+            patch.object(self.module, "load_json", return_value=receipt),
+            patch.object(
+                self.module,
+                "program_identity",
+                return_value=("RT-CONVERGED", "handoff-converged"),
+            ),
+            patch.object(
+                self.module,
+                "sha256_path",
+                side_effect=lambda relative: live_hashes[relative],
+            ),
+        ):
+            with self.assertRaisesRegex(
+                self.module.AuditError,
+                "converged inputs do not report a fresh live view",
+            ):
+                self.module.diagnose_burden_status()
+
     def test_all_declared_historical_samples_resolve(self) -> None:
         samples = self.validation["historical_samples"]
         self.assertEqual(samples["status"], "PASS")

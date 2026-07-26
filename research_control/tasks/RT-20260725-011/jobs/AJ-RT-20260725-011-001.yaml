@@ -1,0 +1,338 @@
+job_id: "AJ-RT-20260725-011-001"
+task_id: "RT-20260725-011"
+decision_id: "DDR-20260725-011"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260725-011"
+status: "completed"
+validation_status: "PASS"
+created_at: "2026-07-25T23:30:00Z"
+started_at: "2026-07-25T23:30:00Z"
+completed_at: "2026-07-25T23:30:00Z"
+completion_path: "research_control/tasks/RT-20260725-011/jobs/completions/AJC-AJ-RT-20260725-011-001.yaml"
+requires_human_gate: false
+human_authorization_note: "Generation 116 is a user-authorized recursive project-system recovery route. It carries no new protected decision, does not reexecute P5-T04, and does not execute P5-T05."
+objective: "Recognize only the exact fully converged P10-T08 live burden view, preserve the historical P10 audit and every protected P5-T04 byte, synchronize normal control derivatives, and invoke one fresh governed cumulative checkpoint before P5-T05."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system validator compatibility and cumulative checkpoint recovery only; no scientific derivation milestone advances."
+route_label: "repair_p10_t08_migration_readiness_after_live_view_convergence_and_checkpoint_v1"
+route_reason: "The generation-115 checkpoint passed six earlier staged gates and failed only because P10-T08 still required live-view drift after the governed burden view had legitimately converged."
+immutable_route_sha256: "c8856b79b9a4c42767056ec31221f9f7de7b9d8e8e9efbc85be41fc53194372b"
+plan_task_id: "P5-T04"
+recovery_for_plan_task_id: "P5-T04"
+next_plan_task_id: "P5-T05"
+next_plan_task_execution_authorized: false
+project_system_change_only: true
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 116
+  passes_consumed: 106
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:116"
+  handoff_token: "a001eadd6e95045bf63061f31b377644d18314f8486295ba"
+  relay_claim_token: "6e1afe74d92b223f0348dbe6908c239549de74a4959f475e"
+  route_work_item_id: "P5-T04"
+  route_worker_skill: "improve-project-system"
+  route_sha256: "c8856b79b9a4c42767056ec31221f9f7de7b9d8e8e9efbc85be41fc53194372b"
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  candidate_family: "not_applicable"
+  assumption_delta:
+    - "No scientific assumption changes; the packet repairs one deterministic lifecycle predicate and checkpoint compatibility only."
+    - "The P5-T04 scientific payload, historical P10 audit, Distance-to-GR result, and P5-T05 dependency boundary remain unchanged."
+  materiality_basis: "Restores repository compatibility for the exact fully converged P10-T08 live-view state while preserving historical audit evidence."
+  source_basis:
+    - "research_control/handoffs/handoff-0870.yaml"
+    - "research_control/tasks/RT-20260725-010/jobs/completions/AJC-AJ-RT-20260725-010-001.yaml"
+    - "research_control/tasks/RT-20260722-003/artifacts/validate_v21_p10_migration_readiness.py"
+    - ".local/validation-receipts/5fdb4a94a5136a980b14c90b290edc80d5bffc547f521ef9a53db6c9866d794a/RUN-CHECKPOINT-9b50828f6b157ffc/receipt.json"
+  expected_artifact_paths:
+    - "research_control/tasks/RT-20260722-003/artifacts/validate_v21_p10_migration_readiness.py"
+    - "tests/test_v21_p10_migration_readiness.py"
+    - "research_control/tasks/RT-20260725-011/artifacts/p5_t04_p10_live_view_recovery_receipt.json"
+  project_system_justification: "The work changes deterministic validation, regression coverage, and task-local control evidence; it creates no physics payload."
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  expected_durable_outputs:
+    physics: []
+    project_system:
+      - "one exact P10-T08 fully converged lifecycle branch"
+      - "focused pass and fail-closed regression coverage"
+      - "task-local preservation evidence"
+      - "one governed cumulative checkpoint"
+  acceptance_criteria:
+    physics: []
+    project_system:
+      - "the live burden-status validator passes and both tracked live inputs match its receipt"
+      - "the historical P10 validation audit and compact receipt remain byte-identical"
+      - "fully advanced same-task-finalization and fully converged lifecycle shapes pass while inconsistent shapes fail closed"
+      - "all protected P5-T04 science and authority bytes remain exact"
+      - "all required repository gates pass"
+      - "one governed cumulative checkpoint commits"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: false
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0869"
+  source_handoff_path: "research_control/handoffs/handoff-0869.yaml"
+  source_handoff_sha256: "48d0373995088621b685f3c4fff7e0e43484057a32b5f59dc934573417274466"
+  selected_plan_task_id: "P5-T04"
+  guard_outcome: "below_threshold"
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+allowed_read_paths:
+  - "SOUL.md"
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research-goal/SKILL.md"
+  - ".codex/skills/continue-research-goal/references/goal-file-schema.md"
+  - ".codex/skills/continue-research-continue-goal/SKILL.md"
+  - ".codex/skills/improve-project-system/SKILL.md"
+  - ".agents/roles/research_ops/project-system-director.v0.2.0.md"
+  - ".agents/roles/research_ops/validator-engineer.v0.2.0.md"
+  - ".agents/schemas/**"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  - "research_control/design/**"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0869.yaml"
+  - "research_control/handoffs/handoff-0870.yaml"
+  - "research_control/tasks/RT-20260721-009/**"
+  - "research_control/tasks/RT-20260722-003/**"
+  - "research_control/tasks/RT-20260725-010/**"
+  - "scripts/project_control/**"
+  - "scripts/research_control/**"
+  - "scripts/validation/**"
+  - "tests/test_v21_p10_migration_readiness.py"
+  - "registries/**"
+  - ".local/validation-receipts/**"
+
+allowed_write_paths:
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/PDF_DERIVATIVE_REGISTRY.csv"
+  - "registries/PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "registries/TEX_SOURCE_REGISTRY.csv"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0870.yaml"
+  - "research_control/handoffs/handoff-0870.md"
+  - "research_control/handoffs/handoff-0871.yaml"
+  - "research_control/handoffs/handoff-0871.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260721-009/**"
+  - "research_control/tasks/RT-20260722-003/artifacts/validate_v21_p10_migration_readiness.py"
+  - "research_control/tasks/RT-20260725-010/**"
+  - "research_control/tasks/RT-20260725-011/**"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "tests/test_v21_p10_migration_readiness.py"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/pdf/**"
+  - "wiki/tex/**"
+
+allowed_generated_paths:
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/RT-20260721-009/**"
+  - "research_control/tasks/RT-20260725-011/artifacts/p5_t04_p10_live_view_recovery_receipt.json"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/pdf/**"
+  - "wiki/tex/**"
+
+forbidden_paths:
+  - ".agents/roles/**"
+  - ".codex/skills/**"
+  - "scripts/research_control/**"
+  - "scripts/project_control/**"
+  - "scripts/validation/**"
+  - "implementations_plans/**"
+  - "ontology/**"
+  - "legacy_ontology/**"
+  - "manuscripts/**"
+  - "markdown/publication-briefs/**"
+  - "markdown/html-explainer-specs/**"
+
+allowed_source_classes:
+  - "project_system_validator"
+  - "focused_regression_test"
+  - "task_local_recovery_evidence"
+  - "task_control_record"
+  - "active_routing_supersession"
+  - "registry"
+  - "normal_generated_derivative"
+  - "prior_authorized_transaction_checkpoint"
+
+forbidden_source_classes:
+  - "historical_p10_audit_output_rewrite"
+  - "semantic_p5_t04_task_artifact_job_completion_handoff_or_science_rewrite"
+  - "P5_T04_reexecution"
+  - "P5_T05_execution_before_checkpoint"
+  - "canonical_ontology_write"
+  - "science_source_or_scientific_ledger_mutation"
+  - "physics_claim_or_interpretation_promotion"
+  - "benchmark_promotion"
+  - "proof_authority"
+  - "publication_or_push_authority"
+  - "completed_derivation_claim"
+
+approved_commands:
+  - ".venv/bin/python -m unittest -v tests.test_v21_p10_migration_readiness"
+  - ".venv/bin/python research_control/tasks/RT-20260725-011/artifacts/validate_p5_t04_p10_live_view_recovery.py --write --json"
+  - ".venv/bin/python research_control/tasks/RT-20260725-011/artifacts/validate_p5_t04_p10_live_view_recovery.py --check --json"
+  - ".venv/bin/python research_control/tasks/RT-20260725-010/artifacts/validate_cubic_amplitude_structure.py --check --json"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+  - ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --json-summary"
+  - ".venv/bin/python -m unittest -v tests.test_research_control"
+  - ".venv/bin/python -m unittest discover -s tests"
+  - "git diff --check"
+  - "git diff --cached --check"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260725-011-001"
+
+required_validators:
+  - "task_local_p5_t04_p10_live_view_recovery"
+  - "p10_migration_readiness_regressions"
+  - "p5_t04_task_local_validator"
+  - "project_change_classifier"
+  - "project_improvement_resolver"
+  - "project_improvement_signals"
+  - "documentation_impact"
+  - "memory_bootstrap_and_validate_only"
+  - "research_control_diff"
+  - "focused_research_control_tests"
+  - "repository_test_shard"
+  - "git_diff_check"
+  - "checkpoint_transaction"
+
+expected_outputs:
+  - "research_control/tasks/RT-20260722-003/artifacts/validate_v21_p10_migration_readiness.py"
+  - "tests/test_v21_p10_migration_readiness.py"
+  - "research_control/tasks/RT-20260725-011/artifacts/validate_p5_t04_p10_live_view_recovery.py"
+  - "research_control/tasks/RT-20260725-011/artifacts/p5_t04_p10_live_view_recovery_receipt.json"
+  - "research_control/tasks/RT-20260725-011/jobs/completions/AJC-AJ-RT-20260725-011-001.yaml"
+  - "research_control/handoffs/handoff-0871.yaml"
+  - "research_control/handoffs/handoff-0871.md"
+
+stop_conditions:
+  - "the fully converged branch accepts a non-PASS burden-status validator"
+  - "the fully converged branch accepts mismatched task handoff task-count or source-hash identity"
+  - "a historical P10 audit output changes"
+  - "a protected P5-T04 scientific or authority hash changes"
+  - "a required write path is outside the AgentJob allowlist"
+  - "validation or the single governed checkpoint fails"
+  - "the repair would change scientific semantics ontology adoption promotion or protected authority"
+  - "more than one AgentJob or checkpoint would be required"
+
+claim_boundary: "Repair only the exact P10-T08 fully converged live-view lifecycle predicate, preserve historical P10 and P5-T04 evidence, create normal recovery evidence and derivatives, and invoke at most one checkpoint; no P5-T05, science, interpretation, promotion, proof, publication, or Gate Chair authority."
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1015
+    relationship_row_count: 5035
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"P10 T08 migration readiness live view drift\" --limit 10 --json"
+      query_type: "search"
+      query_text: "P10 T08 migration readiness live view drift"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-TASKS-RT-20260722-003-V21-P10-INTEGRATION-AUDIT"
+  canonical_inspections:
+    - object_id: "MD-RESEARCH-CONTROL-TASKS-RT-20260722-003-V21-P10-INTEGRATION-AUDIT"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260722-003/artifacts/v21_p10_integration_audit.md"
+      source_hash: "721351dfa0d3268d26bfbaee4409f84b487b755c9c5c185fd9c41130db3856ff"
+  authority_note: "Generated Obsidian, wiki, semantic, relationship, SQLite, and .local surfaces are retrieval-only navigation layers and not authority; tracked canonical sources, registries, research-control state, and the immutable relay route govern this recovery."

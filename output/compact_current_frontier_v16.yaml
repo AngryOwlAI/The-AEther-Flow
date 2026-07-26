@@ -1,7 +1,7 @@
 schema_id: "compact_current_frontier_v16"
 generated_from:
   - "research_control/program_state.yaml"
-  - "research_control/handoffs/handoff-0869.yaml"
+  - "research_control/handoffs/handoff-0871.yaml"
   - "registries/DISTANCE_TO_GR_LEDGER.csv"
   - "registries/METRIC_USE_LEDGER.csv"
   - "research_control/current_frontier.md"
@@ -9,16 +9,16 @@ generated_from:
   - "research_control/design/accepted_status_calibration_v2.yaml"
   - "research_control/design/active_state_bifurcation_policy_v1.md"
 active_state:
-  active_task_id: "RT-20260725-009"
-  latest_handoff_id: "handoff-0869"
-  current_status: "p5_t03_four_eof_checkpoint_recovery_pass_ready_for_checkpoint"
+  active_task_id: "RT-20260725-011"
+  latest_handoff_id: "handoff-0871"
+  current_status: "p5_t04_p10_live_view_convergence_recovery_pass_ready_for_checkpoint"
   v15_completed: false
   v16_completed: false
   v16_plan_registered: true
 active_state_bifurcation:
-  latest_research_task_id: "RT-20260725-009"
-  latest_research_handoff_id: "handoff-0869"
-  latest_research_next_action: "Run the one governed cumulative checkpoint for AJ-RT-20260725-009-001. Only after it commits may one fresh bounded P5-T04 ontology-law packet analyze the exact unchanged cubic-amplitude candidate for locality, composition, constraints, and conserved structure."
+  latest_research_task_id: "RT-20260725-011"
+  latest_research_handoff_id: "handoff-0871"
+  latest_research_next_action: "Run the one governed cumulative checkpoint for AJ-RT-20260725-011-001. Only after it commits may one fresh bounded P5-T05 Candidate Constructor packet identify source-defined backgrounds or phases and derive their perturbative modes, stability, and symmetry-breaking structure without target import."
   latest_project_system_task_id: "none"
   latest_project_system_status: "none"
   latest_project_system_sidecar_task_id: "none"
@@ -26,10 +26,10 @@ active_state_bifurcation:
   sidecar_supersedes_research_handoff: false
   next_research_route_source: "latest_research_handoff"
 next_route:
-  route_id: "v21_p5_t04_analyze_cubic_amplitude_dynamics_structure"
-  role_family: "ontology-formalizer@0.2.0"
+  route_id: "v21_p5_t05_construct_source_backgrounds_and_perturbations"
+  role_family: "candidate-constructor@0.2.0"
   target_derivation_milestone: "source_ontology"
-  milestone_burden: "Establish the structural properties required for a predictive source theory."
+  milestone_burden: "Supply the background and perturbation data needed for effective geometry."
   requires_human_gate: false
 claim_boundary:
   physics_claim_authority: false
@@ -525,11 +525,11 @@ validation:
     - layer: "post_write"
       status: "PENDING"
       evidence:
-        - "Integrated control, documentation, signal, memory, and test validation remains before checkpoint."
+        - "Integrated control, documentation, signal, memory, and repository-test validation remains before checkpoint."
     - layer: "post_checkpoint"
       status: "PENDING"
       evidence:
-        - "One governed cumulative checkpoint remains; P5-T04 is not executed before it."
+        - "One governed cumulative checkpoint remains; P5-T05 is not executed before it."
     - layer: "renderer"
       status: "PENDING"
       evidence:

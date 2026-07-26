@@ -1,0 +1,262 @@
+validation_status: "PASS"
+handoff_id: "handoff-0871"
+handoff_number: 871
+task_id: "RT-20260725-011"
+decision_id: "DDR-20260725-011"
+job_id: "AJ-RT-20260725-011-001"
+completion_id: "AJC-AJ-RT-20260725-011-001"
+completion_path: "research_control/tasks/RT-20260725-011/jobs/completions/AJC-AJ-RT-20260725-011-001.yaml"
+completion_sha256: "8d3f1aa588dacf8e3b5f70b6a8301c9aa77dbb1d94f63e3561af11a980c6d977"
+status: "ready_after_checkpoint"
+created_at: "2026-07-25T23:30:00Z"
+parent_handoff_id: "handoff-0870"
+plan_task_id: "P5-T05"
+recovery_for_plan_task_id: "P5-T04"
+source_role_id: "validator-engineer"
+source_role_version: "0.2.0"
+source_execution_role_ref: "validator-engineer@0.2.0--RT-20260725-011"
+summary: "Generation 116 adds the exact fully converged P10-T08 live-view lifecycle branch, requiring a passing burden-status validator plus matching active-task, handoff, task-count, and both source hashes. Focused positive and fail-closed controls pass, the historical P10 audit outputs and all protected P5-T04 bytes remain exact, and P5-T05 remains unexecuted pending one governed cumulative checkpoint."
+next_action: "Run the one governed cumulative checkpoint for AJ-RT-20260725-011-001. Only after it commits may one fresh bounded P5-T05 Candidate Constructor packet identify source-defined backgrounds or phases and derive their perturbative modes, stability, and symmetry-breaking structure without target import."
+current_claim_boundary: "CB-V21-P5-T04-P10-LIVE-VIEW-CONVERGENCE-RECOVERY-001"
+loop_risk_route: "candidate-construction-packet"
+
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260725-011"
+  latest_research_handoff_id: "handoff-0871"
+  latest_research_next_action: "Run the one governed cumulative checkpoint for AJ-RT-20260725-011-001. Only after it commits may one fresh bounded P5-T05 Candidate Constructor packet identify source-defined backgrounds or phases and derive their perturbative modes, stability, and symmetry-breaking structure without target import."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+
+claim_boundary:
+  allowed_next_scope: "After the governed cumulative checkpoint commits, one fresh bounded P5-T05 Candidate Constructor packet may identify source-defined backgrounds or phases and derive their perturbative modes, stability conditions, and symmetry-breaking structure."
+  completed_task: "RT-20260725-011"
+  completed_completion_path: "research_control/tasks/RT-20260725-011/jobs/completions/AJC-AJ-RT-20260725-011-001.yaml"
+  completed_completion_sha256: "8d3f1aa588dacf8e3b5f70b6a8301c9aa77dbb1d94f63e3561af11a980c6d977"
+  source_handoff_id: "handoff-0870"
+  source_handoff_path: "research_control/handoffs/handoff-0870.yaml"
+  source_handoff_sha256: "f0066caea64803fa9c9394b635de3fb592d35b22c529ff737b468799d15541b9"
+  immutable_route_sha256: "c8856b79b9a4c42767056ec31221f9f7de7b9d8e8e9efbc85be41fc53194372b"
+  result_status: "PASS_P5_T04_P10_LIVE_VIEW_RECOVERY_READY_FOR_CHECKPOINT"
+  protected_dirty_fingerprint: "6ebdd994096cb5048faca83d264a3c9f655b1e8cd140cdecbc93ab84426a5636"
+  failed_checkpoint_receipt_sha256: "8bb81d90bea681faaa0223b81013b69bcd43de7ef32ceaff80e4df9e13145863"
+  failed_gate_evidence_sha256: "330bb5e2e2d5b091b93f3d1220da8bbfead4f44c762c9bf904fafa1bce9cfc93"
+  recovery_receipt_path: "research_control/tasks/RT-20260725-011/artifacts/p5_t04_p10_live_view_recovery_receipt.json"
+  recovery_receipt_sha256: "607ca9ed701134acb674c004652415654644413f2a05ac46cb8e75c70b52fc06"
+  p10_validator_path: "research_control/tasks/RT-20260722-003/artifacts/validate_v21_p10_migration_readiness.py"
+  p10_validator_sha256: "9983b57a58eb618621cef210ff150badb525922b02a7f89d24e8bea8f9500ad6"
+  p10_regression_test_path: "tests/test_v21_p10_migration_readiness.py"
+  p10_regression_test_sha256: "4389eed2d85b30e87974eabc5d2be3c1e07e7436d4c658d6486846e47b674c4c"
+  task_local_check_count: 6
+  focused_test_count: 11
+  checkpoint_invocation_count_before_handoff: 0
+  checkpoint_committed_before_handoff: false
+  p5_t04_science_payload_modified_by_recovery: false
+  historical_p10_audit_outputs_modified: false
+  p5_t04_reexecuted: false
+  p5_t05_executed: false
+  scientific_status_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  ontology_adoption_authorized: false
+  source_law_adoption_authorized: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_performed: false
+  blocked_claims:
+    - "validator compatibility presented as scientific progress"
+    - "the historical P10 F002 finding presented as resolved or rewritten"
+    - "P5-T04 draft/control structural results presented as adopted or physically interpreted"
+    - "P5-T05 presented as executed before checkpoint"
+    - "ontology source law physical interpretation reconstruction downstream GR benchmark proof publication push or completed derivation"
+
+plan_result:
+  plan_task_id: "P5-T04"
+  recovery_for_plan_task_id: "P5-T04"
+  next_plan_task_id: "P5-T05"
+  title: "Repair P10-T08 after live-view convergence and recover checkpoint eligibility"
+  result_status: "P5_T04_P10_LIVE_VIEW_CONVERGENCE_RECOVERY_PASS"
+  work_item_status: "completed"
+  protected_p5_t04_payload_complete: true
+  protected_p5_t04_payload_byte_preserved: true
+  historical_p10_audit_outputs_byte_preserved: true
+  exact_converged_lifecycle_branch_complete: true
+  p5_t05_dependency_ready_after_checkpoint: true
+  p5_t05_dependency_ready_now: false
+  p5_t05_executed: false
+  scientific_claims_changed_by_recovery: false
+  distance_to_gr_delta_changed_by_recovery: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+distance_to_gr:
+  changed: false
+  effect: "none_project_system_recovery"
+  burden_id: "source_ontology_primitives"
+  milestone: "source_ontology"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "The inherited P5-T04 candidate-specific structural delta is preserved; this recovery contributes no physics movement."
+  downstream_unlocked:
+    - "P5-T05 only after the governed cumulative checkpoint"
+  downstream_still_blocked:
+    - "P5-T05 until the governed cumulative checkpoint commits"
+    - "generic source locality composition constraints conservation gauge and probability"
+    - "canonical source-law adoption"
+    - "physical source manifold M_src"
+    - "source-to-target reconstruction and effective metric g_eff"
+    - "matter coupling"
+    - "Einstein equations"
+    - "benchmark promotion"
+
+required_next_packet:
+  task_type: "v21_p5_t05_identify_stable_backgrounds_phases_and_perturbative_degrees_of_freedom"
+  plan_task_id: "P5-T05"
+  objective: "Find source-defined backgrounds or phases suitable for later continuum reconstruction and determine linearized modes, stability conditions, and symmetry-breaking structure without selecting by GR target matching."
+  dependency_ready_after_checkpoint: true
+  dependency_ready_now: false
+  executed: false
+
+selected_next_route:
+  route_id: "v21_p5_t05_construct_source_backgrounds_and_perturbations"
+  route_label: "candidate-construction-packet"
+  role_family: "candidate-constructor@0.2.0"
+  worker_skill: "continue-research"
+  task_type: "v21_p5_t05_identify_stable_backgrounds_phases_and_perturbative_degrees_of_freedom"
+  plan_task_id: "P5-T05"
+  target_derivation_milestone: "source_ontology"
+  milestone_burden: "Supply the background and perturbation data needed for effective geometry."
+  strategy_id: "identify_stable_backgrounds_phases_and_modes_v1"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  physics_promotion_authorized: false
+  executed: false
+  next_action: "Remain unexecuted until the generation-116 governed cumulative checkpoint commits."
+  source_handoff: "research_control/handoffs/handoff-0871.yaml"
+
+ordinary_route_guard:
+  schema_id: "ordinary_route_guard_evaluation_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  evaluation_id: "ORE-HANDOFF-0871"
+  ordinary_handoff_id: "handoff-0871"
+  threshold: 3
+  consecutive_project_system_tasks_before_selection: 1
+  ready_science_plan_task_ids:
+    - "P5-T05"
+  selected_plan_task_id: "P5-T05"
+  selected_route_class: "physics_bearing"
+  selected_worker_skill: "continue-research"
+  outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  exception_receipt:
+    active: false
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+active_state_boundary:
+  active_task_id: "RT-20260725-011"
+  active_job_id: "AJ-RT-20260725-011-001"
+  current_status: "p5_t04_p10_live_view_convergence_recovery_pass_ready_for_checkpoint"
+  checkpoint_required: true
+  checkpoint_completed: false
+  checkpoint_invocation_count: 0
+  project_system_recovery_completed: true
+  p5_t04_payload_complete: true
+  selected_next_plan_task_id: "P5-T05"
+  selected_next_worker_skill: "continue-research"
+  selected_next_role_family: "candidate-constructor@0.2.0"
+  selected_next_route_label: "candidate-construction-packet"
+  selected_next_strategy_id: "identify_stable_backgrounds_phases_and_modes_v1"
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 116 validated, atomically claimed, and consumed its exact immutable recovery route once."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The tracked receipt proves the exact converged branch, eleven focused regressions, historical P10 preservation, and protected P5-T04 preservation."
+  post_write:
+    status: "PENDING"
+    evidence:
+      - "Integrated control, documentation, signal, memory, and repository-test validation remains before checkpoint."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "One governed cumulative checkpoint remains; P5-T05 is not executed before it."
+  renderer:
+    status: "PENDING"
+    evidence:
+      - "Tracked frontier, task-index, graph, registry, and wiki derivatives remain to be synchronized."
+  memory_bootstrap:
+    status: "PENDING"
+    evidence:
+      - "Tracked memory synchronization remains before checkpoint."
+  claim_language_linter:
+    status: "PENDING"
+    evidence:
+      - "Integrated research-control validation remains before checkpoint."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not authorized; ordinary project-system validator recovery only"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  publication_authorized: false
+  proof_authority: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  canonical_ontology_edit_authorized: false
+  ontology_selection_authorized: false
+  physical_interpretation_establishment_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required_no_nonblank_signals"
+  rationale: "The bounded recovery emits no new project-improvement signal."
+
+handoff_authority_boundary:
+  this_handoff_authorizes:
+    - "one governed cumulative checkpoint for AJ-RT-20260725-011-001"
+    - "after that checkpoint only, one fresh bounded P5-T05 packet"
+  this_handoff_does_not_authorize:
+    - "P5-T05 before checkpoint"
+    - "P5-T04 reexecution or semantic science-payload mutation"
+    - "historical P10 audit output rewrite"
+    - "ontology source law physical interpretation reconstruction downstream GR benchmark proof publication push or completed derivation"
+
+next_plan_task_id: "P5-T05"
+next_worker_skill: "continue-research"
+next_role_family: "candidate-constructor@0.2.0"
+next_route_label: "candidate-construction-packet"
+next_strategy_id: "identify_stable_backgrounds_phases_and_modes_v1"
+notes: "Generation 116 is project-system control work only. P5-T05 remains unexecuted until the governed cumulative checkpoint commits."

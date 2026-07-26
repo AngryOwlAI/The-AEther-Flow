@@ -1,0 +1,169 @@
+schema_id: "cubic_amplitude_structural_analysis_spec_v1"
+artifact_id: "V21-P5-T04-CUBIC-AMPLITUDE-STRUCTURAL-ANALYSIS-SPEC-V1"
+task_id: "RT-20260725-010"
+job_id: "AJ-RT-20260725-010-001"
+plan_task_id: "P5-T04"
+status: "completed"
+status_label: "draft/control"
+candidate_status: "proposal-only"
+material_class: "source-extension data"
+adoption_status: "blocked_adoption_open_continuation"
+candidate_unchanged: true
+
+source_candidate:
+  candidate_id: "V21-P5-T03-CUBIC-AMPLITUDE-SOURCE-DYNAMICS-V1"
+  state_family: "Q_amp={q_a=a sin(theta_1) | a in R}"
+  generator: "X_gamma(q_a)=-gamma a^3 sin(theta_1)"
+  flow: "f_lambda(a)=a/sqrt(1+2 gamma a^2 lambda)"
+  coefficient_domain: "gamma>0"
+  parameter_domain: "lambda>=0"
+  source_observable: "F(q_a)=a"
+  admitted_variation: "span{sin(theta_1)}"
+  declared_redundancy: "identity arrows only"
+
+locality:
+  test_id: "P5T04-PATCH-INDEPENDENCE"
+  definition: "Disjoint nonempty open patches U and V are independently patchable when arbitrary q_a and q_b restrictions admit one q_c in Q_amp."
+  theorem_id: "P5T04-THM-GLOBAL-MODE-PATCHING"
+  theorem_statement: "If q_c|U=q_a|U on a nonempty open U then c=a; two patch restrictions imply a=b=c."
+  proof_key: "The zero set of sin(theta_1) has empty interior, so coefficient equality follows at a nonzero point in every nonempty open patch."
+  result: "scoped_obstruction"
+  obstruction_id: "OBST-P5T04-QAMP-PATCH-INDEPENDENCE-001"
+  exact_failure: "Different amplitudes on disjoint nonempty source patches cannot be glued inside Q_amp."
+  source_extension_continuation: "open"
+
+composition:
+  parameter_composition:
+    status: "PASS"
+    identity: "Phi_(lambda+mu)=Phi_lambda o Phi_mu"
+  state_addition_closure:
+    status: "PASS"
+    identity: "q_a+q_b=q_(a+b)"
+  generator_additivity:
+    status: "FAIL_GENERIC"
+    defect: "X(q_(a+b))-X(q_a)-X(q_b)=-3 gamma a b (a+b) sin(theta_1)"
+    exceptional_zero_set: "a b (a+b)=0"
+  flow_additivity:
+    status: "FAIL_GENERIC"
+    positive_control: "a=b=1 and lambda>0"
+  independent_subsystem_operation:
+    status: "ABSENT"
+    reason: "No tensor product disjoint-union factorization or subsystem product is defined."
+
+constraints:
+  ambient_configuration_space: "C^infinity(T^4,R), introduced task-locally only for the membership test"
+  quotient_constraint: "C_e(q)=pi_e(q) in C^infinity(T^4,R)/span{sin(theta_1)}"
+  zero_set: "Q_amp"
+  preserved: true
+  preservation_identity: "C_e(X_gamma(q_a))=0"
+  classification: "kinematic_ansatz_membership_constraint"
+  Hamiltonian_formalism_present: false
+  Dirac_constraint_counts:
+    primary: "not_applicable"
+    secondary: "not_applicable"
+    first_class: "not_applicable"
+    second_class: "not_applicable"
+
+conservation:
+  theorem_id: "P5T04-THM-SMOOTH-FIRST-INTEGRALS"
+  hypothesis: "I:Q_amp->R is C1 and dI(X_gamma)=0 on every state"
+  reduction: "-gamma a^3 I'(a)=0"
+  conclusion: "Every global C1 first integral is constant."
+  nonsmooth_orbit_labels:
+    - "sign(a)"
+    - "fixed-point stratum {0}"
+  Lyapunov_functional:
+    expression: "L=a^2/2"
+    derivative: "-gamma a^4"
+    conserved: false
+    physical_energy: false
+  Noether_analysis:
+    applicable: false
+    reason: "No action and no continuous variational symmetry are supplied."
+
+symmetry_and_redundancy:
+  declared_redundancy: "identity arrows only"
+  infinitesimal_redundancy_algebra: "zero"
+  nonzero_gauge_generators: 0
+  update_generator_is_gauge: false
+  explicit_global_symmetry:
+    group: "Z2"
+    action: "R(q_a)=q_(-a)"
+    commutes_with_flow: true
+    declared_as_redundancy: false
+    infinitesimal_generator: false
+    Noether_charge: false
+
+finite_variation:
+  theorem_id: "P5T04-THM-ADMITTED-TANGENT-NONEXPANSION"
+  linearized_map: "eta(lambda)=eta0/(1+2 gamma a0^2 lambda)^(3/2)"
+  nonexpanding: true
+  strict_decay_when: "a0!=0 and lambda>0"
+  scope: "only the admitted one-dimensional tangent sector"
+  generic_source_robustness_claimed: false
+
+probability:
+  structure_present_in_candidate: false
+  conditional_space: "Borel probability measures on R isomorphic to Q_amp"
+  pushforward_preserves_total_mass: true
+  invariant_measure_theorem:
+    fixed_positive_parameter: "lambda>0"
+    unique_invariant_probability: "delta_0"
+    test_function: "h(a)=a^2/(1+a^2)"
+    proof_key: "h(f_lambda(a))<h(a) off zero, so invariance forces support at zero."
+  selected_probability_law: false
+
+finding_manifest:
+  theorem_count: 4
+  proposition_count: 2
+  scoped_obstruction_count: 1
+  applicable_Hamiltonian_constraint_count: 0
+  applicable_Hamiltonian_constraint_count_status: "not_applicable"
+  nonzero_gauge_generator_count: 0
+  unresolved_conflict_count: 0
+
+failure_branches:
+  - branch_id: "P5T04-FAIL-PATCH-INDEPENDENCE"
+    result: "scoped_obstruction"
+    exact_failure: "Different patch amplitudes cannot be glued."
+  - branch_id: "P5T04-FAIL-SUPERPOSITION"
+    result: "fail_closed"
+    exact_failure: "The cubic generator and integrated flow are nonadditive."
+  - branch_id: "P5T04-FAIL-DIRAC-OVERREAD"
+    result: "fail_closed"
+    exact_failure: "Hamiltonian constraint labels lack phase-space and bracket premises."
+  - branch_id: "P5T04-FAIL-NOETHER-OVERREAD"
+    result: "fail_closed"
+    exact_failure: "No action or continuous variational symmetry is supplied."
+  - branch_id: "P5T04-FAIL-PROBABILITY-OVERREAD"
+    result: "fail_closed"
+    exact_failure: "The candidate selects no probability law."
+  - branch_id: "P5T04-FAIL-TARGET-IMPORT"
+    result: "fail_closed"
+    exact_failure: "Target covariance or benchmark behavior cannot supply source conservation."
+
+result:
+  result_kind: "theorem_and_precise_scoped_obstruction"
+  candidate_audit_status: "candidate_audited_pending_background_and_perturbation_construction"
+  plan_task_status: "completed_ready_for_checkpoint"
+  next_plan_task_id: "P5-T05"
+  next_role_family: "candidate-constructor@0.2.0"
+  route_frozen: false
+  canonical_ontology_modified: false
+  source_law_adopted: false
+  source_law_rejected: false
+  physical_status_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+forbidden_conclusions:
+  - "generic or physical nonlocality theorem"
+  - "future source-extension impossibility"
+  - "global theory rejection"
+  - "physical constraint count"
+  - "physical gauge or Noether charge"
+  - "physical energy or probability interpretation"
+  - "M_src adoption"
+  - "g_eff construction"
+  - "matter coupling or Einstein equations"
+  - "benchmark promotion or completed derivation"

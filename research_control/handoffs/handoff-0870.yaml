@@ -1,0 +1,306 @@
+validation_status: "PASS"
+handoff_id: "handoff-0870"
+handoff_number: 870
+task_id: "RT-20260725-010"
+decision_id: "DDR-20260725-010"
+job_id: "AJ-RT-20260725-010-001"
+completion_id: "AJC-AJ-RT-20260725-010-001"
+completion_path: "research_control/tasks/RT-20260725-010/jobs/completions/AJC-AJ-RT-20260725-010-001.yaml"
+completion_sha256: "ce4e0348bbf558bc49eeac1589a4099c7f7bdc7a7d418f4ed4d827d4bd728f81"
+status: "ready_after_checkpoint"
+created_at: "2026-07-25T22:11:47Z"
+parent_handoff_id: "handoff-0869"
+plan_task_id: "P5-T04"
+next_plan_task_id: "P5-T05"
+source_role_id: "ontology-formalizer"
+source_role_version: "0.2.0"
+source_execution_role_ref: "ontology-formalizer@0.2.0--RT-20260725-010"
+summary: "P5-T04 completes the first candidate-specific structural audit of the exact unchanged P5-T03 cubic-amplitude dynamics. The packet proves patch-amplitude rigidity, the exact cubic additivity defect, global smooth first-integral triviality, admitted tangent nonexpansion, and a conditional invariant-probability result; it also classifies the preserved family condition as kinematic and the declared infinitesimal redundancy algebra as zero. These results remain draft/control, proposal-only source-extension data and create no adoption, physical interpretation, reconstruction, or downstream GR authority."
+next_action: "After the governed checkpoint commits, run exactly one bounded P5-T05 Candidate Constructor packet to identify source-defined backgrounds or phases, derive their linearized modes, test stability and symmetry breaking, and preserve the current candidate-specific patch-amplitude finding without importing GR target data."
+current_claim_boundary: "CB-V21-P5-T04-CUBIC-AMPLITUDE-STRUCTURE-001"
+loop_risk_route: "candidate-construction-packet"
+
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260725-010"
+  latest_research_handoff_id: "handoff-0870"
+  latest_research_next_action: "After the governed checkpoint commits, run exactly one bounded P5-T05 Candidate Constructor packet to identify source-defined backgrounds or phases, derive their linearized modes, test stability and symmetry breaking, and preserve the current candidate-specific patch-amplitude finding without importing GR target data."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+
+claim_boundary:
+  allowed_next_scope: "After the governed checkpoint commits, one fresh bounded P5-T05 candidate-construction packet may identify source-defined backgrounds or phases and derive their perturbative modes, stability conditions, and symmetry-breaking structure."
+  completed_task: "RT-20260725-010"
+  completed_completion_path: "research_control/tasks/RT-20260725-010/jobs/completions/AJC-AJ-RT-20260725-010-001.yaml"
+  completed_completion_sha256: "ce4e0348bbf558bc49eeac1589a4099c7f7bdc7a7d418f4ed4d827d4bd728f81"
+  source_handoff_id: "handoff-0869"
+  source_handoff_path: "research_control/handoffs/handoff-0869.yaml"
+  source_handoff_sha256: "48d0373995088621b685f3c4fff7e0e43484057a32b5f59dc934573417274466"
+  immutable_route_sha256: "ee3933ea2970a1f6118a666481fcb06ff140cec3fea0c546b22acf3d4b71bf8f"
+  result_status: "PASS_CUBIC_AMPLITUDE_STRUCTURAL_AUDIT_READY_FOR_CHECKPOINT"
+  definition_path: "research_control/tasks/RT-20260725-010/artifacts/cubic_amplitude_structural_analysis_v1.tex"
+  definition_sha256: "a9a9f42ff016febc0f40a8a4db32b09f670084bda2248704e290cf5bee02a06b"
+  specification_path: "research_control/tasks/RT-20260725-010/artifacts/cubic_amplitude_structural_analysis_spec_v1.yaml"
+  specification_sha256: "1c2b16d06254b96b5051acfbfcf0884ff85fab1903cb2fa964d4c957cd9d0044"
+  validation_path: "research_control/tasks/RT-20260725-010/artifacts/cubic_amplitude_structural_analysis_validation_receipt_v1.json"
+  validation_sha256: "ed69e89906d7f3a67251e51f20d6d2ac75175a53025bbdc83450043df5b92774"
+  source_candidate_id: "V21-P5-T03-CUBIC-AMPLITUDE-SOURCE-DYNAMICS-V1"
+  source_candidate_unchanged: true
+  task_local_check_count: 21
+  theorem_count: 4
+  proposition_count: 2
+  scoped_obstruction_count: 1
+  unresolved_conflict_count: 0
+  patch_independence_result: "candidate_specific_failure"
+  parameter_composition_result: "PASS"
+  generic_generator_additivity_result: "FAIL"
+  Hamiltonian_constraint_classification: "not_applicable"
+  global_C1_first_integral_result: "constant_only"
+  nonzero_gauge_generator_count: 0
+  admitted_tangent_variations_nonexpanding: true
+  selected_probability_law: false
+  checkpoint_invocation_count_before_handoff: 0
+  checkpoint_committed_before_handoff: false
+  canonical_ontology_modified: false
+  canonical_ontology_candidate_declared: false
+  source_law_adopted: false
+  source_law_rejected: false
+  generic_source_locality_established: false
+  physical_nonlocality_claimed: false
+  physical_constraint_count_claimed: false
+  physical_energy_claimed: false
+  physical_probability_claimed: false
+  physical_gauge_claimed: false
+  reconstruction_selected: false
+  scientific_status_changed: true
+  scientific_status_change_scope: "draft/control proposal-only candidate-specific structural mathematics"
+  physical_status_changed: false
+  distance_to_gr_delta_changed: true
+  distance_to_gr_delta_scope: "candidate_specific_source_ontology_structural_audit_only"
+  ontology_adoption_authorized: false
+  source_law_adoption_authorized: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_performed: false
+  blocked_claims:
+    - "candidate-specific patch-amplitude rigidity presented as generic or physical nonlocality"
+    - "kinematic family membership presented as a physical or Dirac constraint count"
+    - "Lyapunov monotonicity presented as physical energy action Hamiltonian or entropy"
+    - "reflection symmetry presented as gauge or a source of a Noether charge"
+    - "conditional Borel pushforward presented as a selected physical probability law"
+    - "future source extension presented as impossible"
+    - "M_src g_eff matter coupling Einstein equations or benchmark promotion"
+    - "proof publication push unscoped rejection or completed derivation"
+
+plan_result:
+  plan_task_id: "P5-T04"
+  next_plan_task_id: "P5-T05"
+  title: "Derive locality, composition, constraints, and conserved structure"
+  result_status: "P5_T04_CUBIC_AMPLITUDE_STRUCTURAL_AUDIT_PASS"
+  work_item_status: "completed_ready_for_checkpoint"
+  expected_result_kind: "theorem_or_precise_obstruction"
+  new_mathematical_payload_present: true
+  unchanged_candidate_verified: true
+  patching_theorem_present: true
+  exact_composition_defect_present: true
+  constraint_applicability_classified: true
+  conservation_theorem_present: true
+  redundancy_and_symmetry_classified: true
+  finite_variation_theorem_present: true
+  probability_boundary_and_conditional_theorem_present: true
+  p5_t05_dependency_ready_after_checkpoint: true
+  p5_t05_dependency_ready_now: false
+  p5_t05_executed: false
+  physical_status_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+distance_to_gr:
+  changed: true
+  effect: "candidate_specific_source_ontology_structural_audit"
+  burden_id: "source_ontology_primitives"
+  milestone: "source_ontology"
+  status: "accepted"
+  ledger_row_updated: true
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "The source-ontology row gains the P5-T04 candidate-specific structural theorem and failure evidence. Physical and promotion layers remain unchanged."
+  downstream_unlocked:
+    - "P5-T05 background and perturbation construction after the governed checkpoint"
+  downstream_still_blocked:
+    - "P5-T05 until the governed checkpoint commits"
+    - "generic source locality composition constraints conservation gauge and probability"
+    - "canonical source-law adoption"
+    - "physical source manifold M_src"
+    - "source-to-target reconstruction and effective metric g_eff"
+    - "matter coupling"
+    - "Einstein equations"
+    - "benchmark promotion"
+
+required_next_packet:
+  task_type: "v21_p5_t05_identify_stable_backgrounds_phases_and_perturbative_degrees_of_freedom"
+  plan_task_id: "P5-T05"
+  objective: "Find source-defined backgrounds or phases suitable for later continuum reconstruction and determine linearized modes, stability conditions, and symmetry-breaking structure without selecting by GR target matching."
+  dependency_ready_after_checkpoint: true
+  dependency_ready_now: false
+  executed: false
+
+selected_next_route:
+  route_id: "v21_p5_t05_construct_source_backgrounds_and_perturbations"
+  route_label: "candidate-construction-packet"
+  role_family: "candidate-constructor@0.2.0"
+  worker_skill: "continue-research"
+  task_type: "v21_p5_t05_identify_stable_backgrounds_phases_and_perturbative_degrees_of_freedom"
+  plan_task_id: "P5-T05"
+  target_derivation_milestone: "source_ontology"
+  milestone_burden: "Supply the background and perturbation data needed for effective geometry."
+  strategy_id: "identify_stable_backgrounds_phases_and_modes_v1"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  physics_promotion_authorized: false
+  executed: false
+  next_action: "Remain unexecuted until the generation-115 governed checkpoint commits."
+  source_handoff: "research_control/handoffs/handoff-0870.yaml"
+
+ordinary_route_guard:
+  schema_id: "ordinary_route_guard_evaluation_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  evaluation_id: "ORE-HANDOFF-0870"
+  ordinary_handoff_id: "handoff-0870"
+  threshold: 3
+  consecutive_project_system_tasks_before_selection: 0
+  ready_science_plan_task_ids:
+    - "P5-T05"
+  selected_plan_task_id: "P5-T05"
+  selected_route_class: "physics_bearing"
+  selected_worker_skill: "continue-research"
+  outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  exception_receipt:
+    active: false
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+active_state_boundary:
+  active_task_id: "RT-20260725-010"
+  active_job_id: "AJ-RT-20260725-010-001"
+  current_status: "p5_t04_cubic_amplitude_structural_audit_pass_ready_for_checkpoint"
+  checkpoint_required: true
+  checkpoint_completed: false
+  checkpoint_invocation_count: 0
+  p5_t04_completed: true
+  selected_next_plan_task_id: "P5-T05"
+  selected_next_worker_skill: "continue-research"
+  selected_next_role_family: "candidate-constructor@0.2.0"
+  selected_next_route_label: "candidate-construction-packet"
+  selected_next_strategy_id: "identify_stable_backgrounds_phases_and_modes_v1"
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 115 validated and atomically claimed the exact immutable P5-T04 route before consuming its one worker invocation."
+      - "The generation-114 checkpoint commit and clean repository dependency boundary were verified before execution."
+      - "Memory preflight refreshed retrieval-only cache state and the canonical P5-T03 source was inspected."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Both child perspectives completed and the parent synthesis resolved all recorded tensions."
+      - "The task-local validator passes 21 checks."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Scratch TeX, renderer, memory, documentation, signal, claim-language, research-control, selected-test, and whitespace gates pass."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "One governed checkpoint remains to be invoked in generation 115."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Current frontier, compact frontier, task index, dependency graph, claim graph, and burden-status derivatives are fresh."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory bootstrap and validate-only pass after source registration."
+  claim_language_linter:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "Changed-source claim-language validation has zero hard failures."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  publication_authorized: false
+  proof_authority: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  canonical_ontology_edit_authorized: false
+  ontology_selection_authorized: false
+  physical_interpretation_establishment_authorized: false
+  physical_gauge_claim_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+three_tier_claim_summary:
+  adopted_objects:
+    - "Inherited only: P4-T06 continuum-first research architecture with explicit primitive debt."
+  accepted_evidence_preconditions:
+    - "P5-T01 compact source-theory object and exact torus-amplitude witness"
+    - "P5-T02 proposal-only continuous forward-action semantics"
+    - "P5-T03 task-local cubic-amplitude dynamics candidate"
+    - "P5-T04 candidate-specific structural theorems and preserved failure evidence"
+  open_or_blocked_physical_targets:
+    - "generic source locality composition constraints conservation gauge and probability"
+    - "source-defined backgrounds phases and perturbative modes"
+    - "physical source manifold M_src and reconstruction"
+    - "g_eff matter coupling Einstein equations and benchmark promotion"
+  forbidden_overread:
+    - "candidate-specific patch failure as generic or physical nonlocality"
+    - "kinematic membership as a physical Dirac constraint"
+    - "Lyapunov control as energy and reflection as gauge"
+    - "conditional normalization as a selected physical probability"
+    - "validation or checkpoint as theorem proof adoption or promotion"
+
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"
+  rationale: "No project-system defect or explanatory-documentation mismatch is identified."
+
+handoff_authority_boundary:
+  this_handoff_authorizes:
+    - "Director consideration of one bounded P5-T05 continue-research packet only after the generation-115 checkpoint commits"
+  this_handoff_does_not_authorize:
+    - "P5-T05 execution inside generation 115"
+    - "changing or adopting the cubic candidate"
+    - "selecting a source background solely because it matches GR"
+    - "canonical ontology or source-law adoption rejection physical interpretation or reconstruction"
+    - "M_src g_eff matter coupling Einstein equations or benchmark promotion"
+    - "proof publication push unscoped rejection or completed derivation"
+
+next_worker_skill: "continue-research"
+next_role_family: "candidate-constructor@0.2.0"
+next_route_label: "candidate-construction-packet"
+next_strategy_id: "identify_stable_backgrounds_phases_and_modes_v1"
+notes: "Generation 115 completes only P5-T04 candidate-specific structural analysis and leaves P5-T05 unexecuted until the governed checkpoint."

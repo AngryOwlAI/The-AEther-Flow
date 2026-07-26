@@ -477,6 +477,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V21-P5-T01-COMPACT-SOURCE-THEORY-OBJECT-V1` `research_control/tasks/RT-20260725-003/artifacts/compact_source_theory_object_v1.tex`
 - `TEX-V21-P5-T02-PHI-SRC-SEMIFLOW-SEMANTICS-V1` `research_control/tasks/RT-20260725-007/artifacts/phi_src_semiflow_semantics_v1.tex`
 - `TEX-V21-P5-T03-CUBIC-AMPLITUDE-SOURCE-DYNAMICS-V1` `research_control/tasks/RT-20260725-008/artifacts/cubic_amplitude_source_dynamics_v1.tex`
+- `TEX-V21-P5-T04-CUBIC-AMPLITUDE-STRUCTURAL-ANALYSIS-V1` `research_control/tasks/RT-20260725-010/artifacts/cubic_amplitude_structural_analysis_v1.tex`
 
 ## explanatory_noncanonical
 
@@ -1573,6 +1574,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-V21-P5-T01-COMPACT-SOURCE-THEORY-OBJECT-V1` `wiki/tex/tex-v21-p5-t01-compact-source-theory-object-v1.md`
 - `WIKI-TEX-V21-P5-T02-PHI-SRC-SEMIFLOW-SEMANTICS-V1` `wiki/tex/tex-v21-p5-t02-phi-src-semiflow-semantics-v1.md`
 - `WIKI-TEX-V21-P5-T03-CUBIC-AMPLITUDE-SOURCE-DYNAMICS-V1` `wiki/tex/tex-v21-p5-t03-cubic-amplitude-source-dynamics-v1.md`
+- `WIKI-TEX-V21-P5-T04-CUBIC-AMPLITUDE-STRUCTURAL-ANALYSIS-V1` `wiki/tex/tex-v21-p5-t04-cubic-amplitude-structural-analysis-v1.md`
 
 ## project_control
 

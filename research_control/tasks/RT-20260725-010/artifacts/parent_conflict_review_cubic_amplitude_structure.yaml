@@ -1,0 +1,87 @@
+schema_id: "parent_conflict_review_v1"
+artifact_id: "V21-P5-T04-PARENT-CONFLICT-REVIEW-CUBIC-AMPLITUDE-STRUCTURE-V1"
+task_id: "RT-20260725-010"
+job_id: "AJ-RT-20260725-010-001"
+plan_task_id: "P5-T04"
+status: "resolved"
+created_at: "2026-07-25T22:00:17Z"
+review_rounds: 1
+
+child_artifacts:
+  - execution_unit_id: "child_phys_math"
+    path: "research_control/tasks/RT-20260725-010/artifacts/child_phys_math_cubic_amplitude_structure.yaml"
+    status: "completed"
+  - execution_unit_id: "child_phys_phil"
+    path: "research_control/tasks/RT-20260725-010/artifacts/child_phys_phil_cubic_amplitude_structure.yaml"
+    status: "completed"
+
+shared_consensus:
+  - "The P5-T03 candidate remains exactly unchanged."
+  - "The global-amplitude family fails a declared patch-independence test."
+  - "Parameter composition survives while additive superposition fails generically."
+  - "The preserved family-membership constraint has no Hamiltonian classification."
+  - "All global C1 first integrals are constant and L is not conserved."
+  - "Declared gauge algebra is zero and reflection is a discrete non-gauge symmetry."
+  - "Probability conclusions are conditional on adding a Borel probability."
+  - "No generic source extension physical interpretation adoption or downstream GR claim follows."
+
+resolved_conflicts:
+  - conflict_id: "P5T04-CONFLICT-LOCALITY-001"
+    issue: "Whether the patching result should be called nonlocality."
+    resolution: "Call it a scoped failure of the explicitly defined patch-independence locality test on Q_amp."
+    changed_output: true
+  - conflict_id: "P5T04-CONFLICT-COMPOSITION-001"
+    issue: "Whether the P5-T02 semigroup law supplies independent-state composition."
+    resolution: "Separate parameter composition, state addition closure, and dynamical additivity."
+    changed_output: true
+  - conflict_id: "P5T04-CONFLICT-CONSTRAINT-001"
+    issue: "Whether the ansatz membership condition has zero Dirac constraints."
+    resolution: "Mark Dirac classifications not applicable because no Hamiltonian formalism is instantiated."
+    changed_output: true
+  - conflict_id: "P5T04-CONFLICT-CONSERVATION-001"
+    issue: "Whether sign or L is a conserved smooth quantity."
+    resolution: "Prove every global C1 first integral is constant; sign is discontinuous and L is strictly monotone off zero."
+    changed_output: true
+  - conflict_id: "P5T04-CONFLICT-GAUGE-001"
+    issue: "Whether reflection or X_gamma is a gauge generator."
+    resolution: "Reflection is a discrete global symmetry, declared redundancy is identity-only, and X_gamma is an update generator."
+    changed_output: true
+  - conflict_id: "P5T04-CONFLICT-PROBABILITY-001"
+    issue: "Whether mass preservation selects a probability law."
+    resolution: "Keep the probability theorem conditional and record that no ensemble is part of the candidate."
+    changed_output: true
+
+unique_math_contributions_preserved:
+  - "global-mode patching theorem and explicit two-patch obstruction"
+  - "generator and flow additivity defects"
+  - "quotient-valued kinematic membership constraint"
+  - "global C1 first-integral triviality theorem"
+  - "admitted tangent nonexpansion formula"
+  - "unique invariant Borel probability theorem"
+
+unique_philosophy_contributions_preserved:
+  - "candidate-specific patch failure is not generic or physical nonlocality"
+  - "kinematic membership is not a physical Dirac constraint"
+  - "Lyapunov control is not energy or a Noether charge"
+  - "discrete symmetry is not declared gauge redundancy"
+  - "conditional normalization is not selected probability"
+
+unresolved_conflicts: []
+remaining_limitations:
+  - "The analysis is confined to one global amplitude mode."
+  - "No off-family perturbation dynamics is defined."
+  - "No action Hamiltonian nontrivial redundancy probability law background phase or reconstruction is supplied."
+  - "P5-T05 must construct and test background and perturbation data without changing these conclusions."
+
+authority_flags:
+  canonical_ontology_modified: false
+  canonical_ontology_candidate_declared: false
+  source_law_adopted: false
+  source_law_rejected: false
+  physical_locality_established: false
+  physical_constraint_structure_established: false
+  physical_energy_established: false
+  physical_gauge_established: false
+  physical_probability_selected: false
+  physics_promotion_authorized: false
+  proof_publication_or_push_authorized: false

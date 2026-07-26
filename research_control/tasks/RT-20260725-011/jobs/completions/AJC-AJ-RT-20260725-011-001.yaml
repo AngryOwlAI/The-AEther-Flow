@@ -1,0 +1,310 @@
+validation_status: "PASS"
+final_repository_validation_status: "PASS_PRECHECKPOINT_RECOVERY_READY"
+job_id: "AJ-RT-20260725-011-001"
+completion_id: "AJC-AJ-RT-20260725-011-001"
+task_id: "RT-20260725-011"
+task_type: "project_system_p5_t04_p10_live_view_convergence_checkpoint_recovery"
+decision_id: "DDR-20260725-011"
+role_id: "validator-engineer"
+source_role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260725-011"
+status: "completed"
+created_at: "2026-07-25T23:30:00Z"
+started_at: "2026-07-25T23:30:00Z"
+completed_at: "2026-07-25T23:30:00Z"
+objective: "Recognize only the exact fully converged P10-T08 live burden view, preserve the historical P10 audit and every protected P5-T04 byte, synchronize normal control derivatives, and invoke one fresh governed cumulative checkpoint before P5-T05."
+completion_summary: "Generation 116 adds one P10-T08 lifecycle branch for the exact fully converged live burden view. The branch requires a passing burden-status validator plus matching active-task, handoff, task-count, and both source hashes. Focused positive and fail-closed controls pass, the historical P10 audit outputs and all protected P5-T04 bytes remain exact, and P5-T05 remains unexecuted pending one governed cumulative checkpoint."
+objective_result: "p5_t04_p10_live_view_convergence_recovery_pass_ready_for_checkpoint"
+
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P5"
+  plan_task_id: "P5-T04"
+  recovery_for_plan_task_id: "P5-T04"
+  implementation_status: "p10_live_view_convergence_recovery_implemented_checkpoint_ready"
+  protected_p5_t04_status: "complete_preserved"
+  completed_v21_tasks_added: []
+  next_dependency_ready_work_item: "P5-T05_after_checkpoint"
+  next_work_item_executed: false
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 116
+  passes_consumed: 106
+  route_work_item_id: "P5-T04"
+  route_worker_skill: "improve-project-system"
+  route_sha256: "c8856b79b9a4c42767056ec31221f9f7de7b9d8e8e9efbc85be41fc53194372b"
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:116"
+  handoff_token: "a001eadd6e95045bf63061f31b377644d18314f8486295ba"
+  relay_claim_token: "6e1afe74d92b223f0348dbe6908c239549de74a4959f475e"
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+
+transaction_status: "ready_for_governed_checkpoint"
+result_disposition: "repair_implemented_and_validated"
+work_item_status: "completed"
+plan_task_id: "P5-T04"
+recovery_for_plan_task_id: "P5-T04"
+next_plan_task_id: "P5-T05"
+checkpoint_commit: "none_checkpoint_pending"
+checkpoint_invocation_count: 0
+checkpoint_staged: false
+legacy_validation_used: false
+project_system_change_only: true
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS_PRECHECKPOINT_READY"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  observed_durable_outputs:
+    physics: []
+    project_system:
+      - "one exact P10-T08 fully converged lifecycle branch"
+      - "focused pass and fail-closed regression coverage"
+      - "task-local preservation evidence"
+      - "one governed cumulative checkpoint"
+  accepted_criteria:
+    physics: []
+    project_system:
+      - "the live burden-status validator passes and both tracked live inputs match its receipt"
+      - "the historical P10 validation audit and compact receipt remain byte-identical"
+      - "fully advanced same-task-finalization and fully converged lifecycle shapes pass while inconsistent shapes fail closed"
+      - "all protected P5-T04 science and authority bytes remain exact"
+      - "all required repository gates pass"
+      - "one governed cumulative checkpoint commits"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+physics_payload_admission_result:
+  status: "admitted"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+
+ordinary_route_guard_admission_result:
+  status: "PASS"
+  source_handoff_id: "handoff-0869"
+  selected_plan_task_id: "P5-T04"
+  guard_outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  system_success_counts_as_physics: false
+  system_success_counts_as_distance_to_gr: false
+  scientific_status_changed: false
+  physics_promotion_authorized: false
+
+recovery_result:
+  status: "PASS"
+  strategy_id: "repair_p10_t08_migration_readiness_after_live_view_convergence_and_checkpoint_v1"
+  source_task_id: "RT-20260725-010"
+  source_job_id: "AJ-RT-20260725-010-001"
+  source_handoff_id: "handoff-0870"
+  source_head: "0ad7210aa50b7ef3262cab425561924efdc9783a"
+  protected_dirty_fingerprint: "6ebdd994096cb5048faca83d264a3c9f655b1e8cd140cdecbc93ab84426a5636"
+  failed_checkpoint_receipt_sha256: "8bb81d90bea681faaa0223b81013b69bcd43de7ef32ceaff80e4df9e13145863"
+  failed_gate_evidence_sha256: "330bb5e2e2d5b091b93f3d1220da8bbfead4f44c762c9bf904fafa1bce9cfc93"
+  recovery_validator_path: "research_control/tasks/RT-20260725-011/artifacts/validate_p5_t04_p10_live_view_recovery.py"
+  recovery_validator_sha256: "509c8b928bdc0e8d22acf997bec57d0aaf129c36530faa04120e657a0bd21fe5"
+  recovery_receipt_path: "research_control/tasks/RT-20260725-011/artifacts/p5_t04_p10_live_view_recovery_receipt.json"
+  recovery_receipt_sha256: "607ca9ed701134acb674c004652415654644413f2a05ac46cb8e75c70b52fc06"
+  historical_p10_validation_sha256: "cdcd907f4ad237118eab65f06f364263da08285456514605a0308bc203f7a6e6"
+  historical_p10_receipt_sha256: "db3410f2c166562a4cc8636011eeda15b7cb8f051c3917fea21b370e4da2ddb6"
+  historical_p10_audit_sha256: "721351dfa0d3268d26bfbaee4409f84b487b755c9c5c185fd9c41130db3856ff"
+  p10_validator_sha256: "9983b57a58eb618621cef210ff150badb525922b02a7f89d24e8bea8f9500ad6"
+  p10_regression_test_sha256: "4389eed2d85b30e87974eabc5d2be3c1e07e7436d4c658d6486846e47b674c4c"
+  task_local_check_count: 6
+  focused_test_count: 11
+  p5_t04_science_payload_modified: false
+  historical_p10_audit_outputs_modified: false
+  p5_t04_reexecuted: false
+  p5_t05_executed: false
+
+artifacts:
+  - path: "research_control/tasks/RT-20260722-003/artifacts/validate_v21_p10_migration_readiness.py"
+    sha256: "9983b57a58eb618621cef210ff150badb525922b02a7f89d24e8bea8f9500ad6"
+  - path: "tests/test_v21_p10_migration_readiness.py"
+    sha256: "4389eed2d85b30e87974eabc5d2be3c1e07e7436d4c658d6486846e47b674c4c"
+  - path: "research_control/tasks/RT-20260725-011/artifacts/validate_p5_t04_p10_live_view_recovery.py"
+    sha256: "509c8b928bdc0e8d22acf997bec57d0aaf129c36530faa04120e657a0bd21fe5"
+  - path: "research_control/tasks/RT-20260725-011/artifacts/p5_t04_p10_live_view_recovery_receipt.json"
+    sha256: "607ca9ed701134acb674c004652415654644413f2a05ac46cb8e75c70b52fc06"
+
+output_paths:
+  - "research_control/tasks/RT-20260722-003/artifacts/validate_v21_p10_migration_readiness.py"
+  - "tests/test_v21_p10_migration_readiness.py"
+  - "research_control/tasks/RT-20260725-011/**"
+  - "research_control/handoffs/handoff-0871.yaml"
+  - "research_control/handoffs/handoff-0871.md"
+  - "research_control/program_state.yaml"
+
+command_results:
+  - command: ".venv/bin/python -m unittest -v tests.test_v21_p10_migration_readiness"
+    status: "PASS"
+    summary: "11 focused tests passed"
+  - command: ".venv/bin/python research_control/tasks/RT-20260725-011/artifacts/validate_p5_t04_p10_live_view_recovery.py --write --json"
+    status: "PASS"
+    summary: "six task-local checks passed and the recovery receipt is fresh"
+  - command: ".venv/bin/python research_control/tasks/RT-20260725-010/artifacts/validate_cubic_amplitude_structure.py --check --json"
+    status: "PASS"
+    summary: "21 P5-T04 scientific checks remain PASS"
+
+validation_summary:
+  status: "PASS_PRECHECKPOINT_RECOVERY_READY"
+  task_local_error_count: 0
+  task_local_check_count: 6
+  focused_test_count: 11
+  protected_hash_mismatch_count: 0
+  checkpoint_invocation_count: 0
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 116 validated, atomically claimed, and consumed the exact immutable recovery route once."
+      - "The exact 58-path manifest, repository identity, lease, route, failed gate, and predecessor state matched before writes."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Six task-local checks and eleven focused regressions pass."
+      - "The exact P10 historical outputs and all protected P5-T04 hashes remain unchanged."
+  post_write:
+    status: "PENDING"
+    evidence:
+      - "Integrated control, documentation, signal, memory, and repository-test validation remains to be consumed before checkpoint."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "The one governed cumulative checkpoint is pending; P5-T05 remains unexecuted."
+  renderer:
+    status: "PENDING"
+    evidence:
+      - "Tracked frontier, task index, registry, and wiki derivatives remain to be synchronized."
+  memory_bootstrap:
+    status: "PENDING"
+    evidence:
+      - "Tracked memory synchronization remains to be run after final control records are present."
+  claim_language_linter:
+    status: "PENDING"
+    evidence:
+      - "Integrated research-control validation remains to confirm no hard claim-language errors."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not authorized; ordinary project-system validator recovery only"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  publication_authorized: false
+  proof_authority: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  canonical_ontology_edit_authorized: false
+  ontology_selection_authorized: false
+  physical_interpretation_establishment_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+distance_to_gr_delta:
+  changed: false
+  effect: "none_project_system_recovery"
+  burden_id: "source_ontology_primitives"
+  milestone: "source_ontology"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "The inherited P5-T04 candidate-specific structural delta is preserved; this recovery contributes no physics movement."
+
+physics_progress_status:
+  status: "none_project_system_only"
+  new_mathematical_payload: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+
+selected_next_route:
+  route_id: "v21_p5_t05_construct_source_backgrounds_and_perturbations"
+  route_label: "candidate-construction-packet"
+  role_family: "candidate-constructor@0.2.0"
+  worker_skill: "continue-research"
+  task_type: "v21_p5_t05_identify_stable_backgrounds_phases_and_perturbative_degrees_of_freedom"
+  plan_task_id: "P5-T05"
+  target_derivation_milestone: "source_ontology"
+  milestone_burden: "Supply the background and perturbation data needed for effective geometry."
+  strategy_id: "identify_stable_backgrounds_phases_and_modes_v1"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  blocked_by: "governed cumulative P5-T04 checkpoint"
+  physics_promotion_authorized: false
+  executed: false
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required_no_nonblank_signals"
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1015
+    relationship_row_count: 5035
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"P10 T08 migration readiness live view drift\" --limit 10 --json"
+      query_type: "search"
+      query_text: "P10 T08 migration readiness live view drift"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-TASKS-RT-20260722-003-V21-P10-INTEGRATION-AUDIT"
+  canonical_inspections:
+    - object_id: "MD-RESEARCH-CONTROL-TASKS-RT-20260722-003-V21-P10-INTEGRATION-AUDIT"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260722-003/artifacts/v21_p10_integration_audit.md"
+      source_hash: "721351dfa0d3268d26bfbaee4409f84b487b755c9c5c185fd9c41130db3856ff"
+  authority_note: "Generated Obsidian, wiki, semantic, relationship, SQLite, and .local surfaces are retrieval-only navigation layers and not authority; tracked canonical sources, registries, research-control state, and the immutable relay route govern this recovery."

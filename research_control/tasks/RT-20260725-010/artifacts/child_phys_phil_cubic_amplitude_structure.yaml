@@ -1,0 +1,82 @@
+schema_id: "parent_child_output_v1"
+artifact_id: "V21-P5-T04-CHILD-PHYS-PHIL-CUBIC-AMPLITUDE-STRUCTURE-V1"
+execution_unit_id: "child_phys_phil"
+perspective: "physicist_philosopher"
+status: "completed"
+task_id: "RT-20260725-010"
+job_id: "AJ-RT-20260725-010-001"
+plan_task_id: "P5-T04"
+created_at: "2026-07-25T22:00:17Z"
+target_derivation_milestone: "source_ontology"
+milestone_burden: "Establish the structural properties required for a predictive source theory."
+
+scientific_status:
+  authority: "science_draft"
+  status_label: "draft/control"
+  candidate_status: "proposal-only"
+  material_class: "source-extension data"
+  adoption_status: "blocked_adoption_open_continuation"
+  canonical_ontology_candidate: false
+  adopted: false
+  rejected: false
+  human_gated_for_adoption: true
+  physics_promotion_authorized: false
+
+interpretive_findings:
+  locality:
+    legitimate_statement: "The present global-amplitude family fails one explicit patch-independence test."
+    blocked_overread: "This is not a generic nonlocality theorem or future source-extension impossibility."
+  composition:
+    legitimate_statement: "Forward-parameter composition survives while additive superposition fails."
+    blocked_overread: "Semigroup composition is not independent subsystem composition."
+  constraints:
+    legitimate_statement: "Membership in span{sin(theta_1)} is a preserved kinematic ansatz constraint."
+    blocked_overread: "No primary secondary first-class or second-class physical constraint count exists without Hamiltonian structure."
+  conservation:
+    legitimate_statement: "Global C1 first integrals are constant and L is monotone."
+    blocked_overread: "L is not energy and target covariance cannot import conservation."
+  gauge:
+    legitimate_statement: "Identity-only declared redundancy has zero infinitesimal algebra; reflection is a non-gauge discrete symmetry."
+    blocked_overread: "The update generator is not a gauge generator and Z2 supplies no Noether charge."
+  probability:
+    legitimate_statement: "If Borel probabilities are adjoined, normalization is preserved and delta_0 is the sole invariant probability."
+    blocked_overread: "The current candidate selects no stochastic semantics, probability law, or ensemble."
+
+parent_conflict_recommendations:
+  - conflict_id: "P5T04-PHIL-LOCALITY"
+    issue: "A patching failure could be overread as generic or physical nonlocality."
+    recommendation: "Name the exact patch-independence test and scope the obstruction to Q_amp."
+  - conflict_id: "P5T04-PHIL-CONSTRAINT"
+    issue: "A preserved ansatz condition could be mislabeled a Dirac constraint."
+    recommendation: "Use kinematic membership constraint and mark Hamiltonian counts not applicable."
+  - conflict_id: "P5T04-PHIL-CONSERVATION"
+    issue: "L could be relabeled conserved energy despite strict decay."
+    recommendation: "Prove smooth first-integral triviality and retain L only as Lyapunov control."
+  - conflict_id: "P5T04-PHIL-GAUGE"
+    issue: "Reflection or dynamics could be called gauge."
+    recommendation: "Separate identity-only redundancy, discrete global symmetry, and update generator."
+  - conflict_id: "P5T04-PHIL-PROBABILITY"
+    issue: "Pushforward normalization could be read as a selected physical measure."
+    recommendation: "State the theorem conditionally and record absence of probabilistic structure."
+
+alternatives_not_ruled_out:
+  - "multi-mode or sheaf-like source configuration spaces with independent patch data"
+  - "different nonlinear or coupled source dynamics"
+  - "action Hamiltonian or stochastic extensions supplied independently"
+  - "nontrivial source redundancies and gauge structures"
+  - "future source-side locality laws and background phases"
+
+prohibited_overreads:
+  - "the candidate proves physical spacetime nonlocality"
+  - "future conservative source extensions are impossible"
+  - "the model is globally rejected"
+  - "the ansatz constraint is a physical Dirac constraint"
+  - "L is physical energy or a Noether charge"
+  - "Z2 is gauge redundancy"
+  - "delta_0 is a selected physical probability"
+  - "M_src g_eff matter coupling Einstein equations or exact-GR recovery follows"
+
+ontology_formalizer_result:
+  result_type: "theorem_and_countermodel_or_obstruction"
+  no_fog_check: true
+  claim_boundary_preserved: true

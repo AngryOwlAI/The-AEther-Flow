@@ -1,0 +1,79 @@
+validation_status: "PASS"
+task_id: "RT-20260725-011"
+task_type: "project_system_p5_t04_p10_live_view_convergence_checkpoint_recovery"
+title: "Repair P10-T08 after live-view convergence and recover the P5-T04 checkpoint"
+task_taxonomy:
+  schema_id: "v21_task_taxonomy_v1"
+  work_kind: "benchmark_or_recovery"
+  milestone: "source_ontology"
+  candidate_family: "p5_t04_p10_live_view_convergence_checkpoint_recovery"
+  result_kind: "implemented_and_validated_or_precisely_blocked"
+  authority: "project_control"
+  scope: "project_system"
+status: "completed"
+created_at: "2026-07-25T23:30:00Z"
+updated_at: "2026-07-25T23:30:00Z"
+closed_at: "2026-07-25T23:30:00Z"
+parent_task_id: "RT-20260725-010"
+parent_handoff_id: "handoff-0870"
+supersedes_active_routing_task_id: "RT-20260725-010"
+current_decision_id: "DDR-20260725-011"
+current_job_id: "AJ-RT-20260725-011-001"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260725-011"
+requires_human_gate: false
+human_authorization_note: "Generation 116 of the user-authorized recursive relay immutably routes exactly one improve-project-system frame to the stale P10-T08 live-view expectation and one cumulative P5-T04 checkpoint retry. It does not reexecute P5-T04 or execute P5-T05."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P5"
+  plan_task_id: "P5-T04"
+  recovery_for_plan_task_id: "P5-T04"
+  next_plan_task_id: "P5-T05"
+  next_plan_task_execution_authorized: false
+objective: "Repair only the stale P10-T08 migration-readiness expectation by recognizing the exact fully converged live burden view when its validator and receipt identities agree, preserve the historical P10 audit and all P5-T04 science and authority bytes, rerun every required gate, and invoke one governed cumulative checkpoint only on a full pass."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system validator compatibility and cumulative checkpoint recovery only; no scientific derivation milestone advances."
+route_label: "repair_p10_t08_migration_readiness_after_live_view_convergence_and_checkpoint_v1"
+project_system_change_only: true
+dual_budget_category: "system_bearing"
+primary_budget: "project_system"
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+claim_boundary_id: "CB-V21-P5-T04-P10-LIVE-VIEW-CONVERGENCE-RECOVERY-001"
+claim_boundary:
+  allowed_scope: "Add one exact P10-T08 fully converged live-view lifecycle branch, focused pass and fail-closed regression coverage, task-local preservation evidence, normal control synchronization, and one cumulative checkpoint."
+  immutable_predecessor_task: "RT-20260725-010"
+  immutable_predecessor_job: "AJ-RT-20260725-010-001"
+  immutable_predecessor_handoff: "handoff-0870"
+  immutable_route_sha256: "c8856b79b9a4c42767056ec31221f9f7de7b9d8e8e9efbc85be41fc53194372b"
+  protected_dirty_fingerprint: "6ebdd994096cb5048faca83d264a3c9f655b1e8cd140cdecbc93ab84426a5636"
+  source_checkpoint_receipt_sha256: "8bb81d90bea681faaa0223b81013b69bcd43de7ef32ceaff80e4df9e13145863"
+  failed_gate_evidence_sha256: "330bb5e2e2d5b091b93f3d1220da8bbfead4f44c762c9bf904fafa1bce9cfc93"
+  protected_path_count: 58
+  p5_t04_science_payload_mutated_by_recovery: false
+  historical_p10_audit_rewritten: false
+  p5_t04_reexecuted: false
+  p5_t05_executed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+documentation_impact_id: "DI-RT-20260725-011-001"
+completion_id: "AJC-AJ-RT-20260725-011-001"
+output_artifacts:
+  - "research_control/tasks/RT-20260722-003/artifacts/validate_v21_p10_migration_readiness.py"
+  - "tests/test_v21_p10_migration_readiness.py"
+  - "research_control/tasks/RT-20260725-011/artifacts/validate_p5_t04_p10_live_view_recovery.py"
+  - "research_control/tasks/RT-20260725-011/artifacts/p5_t04_p10_live_view_recovery_receipt.json"
+  - "research_control/tasks/RT-20260725-011/jobs/completions/AJC-AJ-RT-20260725-011-001.yaml"
+  - "research_control/handoffs/handoff-0871.yaml"
+  - "research_control/handoffs/handoff-0871.md"
+closure_status: "p5_t04_p10_live_view_convergence_recovery_pass_ready_for_checkpoint"
+summary: "The P10-T08 audit now recognizes the exact fully converged live burden view only when the live validator passes and receipt identity, handoff, task count, and both tracked input hashes agree. The historical P10 finding and every P5-T04 science and authority byte remain exact."
+next_recommended_action: "Invoke the one governed cumulative checkpoint. P5-T05 remains unexecuted until that checkpoint commits."
+project_improvement_signals: []
+notes: "This project-system recovery creates no ontology, source law, scientific evidence, Distance-to-GR movement, physical interpretation, promotion, proof, publication, push, or completed-derivation authority."

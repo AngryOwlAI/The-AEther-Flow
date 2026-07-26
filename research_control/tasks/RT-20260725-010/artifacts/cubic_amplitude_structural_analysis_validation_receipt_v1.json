@@ -1,0 +1,148 @@
+{
+  "artifact_sha256": {
+    "research_control/tasks/RT-20260725-010/artifacts/child_phys_math_cubic_amplitude_structure.yaml": "494371b88f3ce97401e5a8decb5ba51b8f16bb006be6f1944dc216ecb41b03a0",
+    "research_control/tasks/RT-20260725-010/artifacts/child_phys_phil_cubic_amplitude_structure.yaml": "39b5f02dade395c90e43f409b556593ae3fbca0e0ba96960aa3e482431a6ef95",
+    "research_control/tasks/RT-20260725-010/artifacts/cubic_amplitude_structural_analysis_spec_v1.yaml": "1c2b16d06254b96b5051acfbfcf0884ff85fab1903cb2fa964d4c957cd9d0044",
+    "research_control/tasks/RT-20260725-010/artifacts/cubic_amplitude_structural_analysis_v1.tex": "a9a9f42ff016febc0f40a8a4db32b09f670084bda2248704e290cf5bee02a06b",
+    "research_control/tasks/RT-20260725-010/artifacts/parent_conflict_review_cubic_amplitude_structure.yaml": "c3feb37f1959a1f9635900c787722cbbea822dfd15664b11812c8a308f25246e",
+    "research_control/tasks/RT-20260725-010/artifacts/parent_fusion_notes_cubic_amplitude_structure.md": "0b6a4d541fce825da3386653df8d7abf036ab03f8b58576f83277150f4e8fcee"
+  },
+  "candidate_id": "V21-P5-T03-CUBIC-AMPLITUDE-SOURCE-DYNAMICS-V1",
+  "candidate_unchanged": true,
+  "checks": [
+    {
+      "check_id": "file:cubic_amplitude_structural_analysis_spec_v1.yaml",
+      "detail": "required regular artifact exists",
+      "status": "PASS"
+    },
+    {
+      "check_id": "file:cubic_amplitude_structural_analysis_v1.tex",
+      "detail": "required regular artifact exists",
+      "status": "PASS"
+    },
+    {
+      "check_id": "file:child_phys_math_cubic_amplitude_structure.yaml",
+      "detail": "required regular artifact exists",
+      "status": "PASS"
+    },
+    {
+      "check_id": "file:child_phys_phil_cubic_amplitude_structure.yaml",
+      "detail": "required regular artifact exists",
+      "status": "PASS"
+    },
+    {
+      "check_id": "file:parent_conflict_review_cubic_amplitude_structure.yaml",
+      "detail": "required regular artifact exists",
+      "status": "PASS"
+    },
+    {
+      "check_id": "file:parent_fusion_notes_cubic_amplitude_structure.md",
+      "detail": "required regular artifact exists",
+      "status": "PASS"
+    },
+    {
+      "check_id": "candidate_lock",
+      "detail": "the exact P5-T03 state family, generator, and flow remain unchanged",
+      "status": "PASS"
+    },
+    {
+      "check_id": "patching_theorem",
+      "detail": "the locality finding is exact, candidate-specific, and continuation-open",
+      "status": "PASS"
+    },
+    {
+      "check_id": "composition_classification",
+      "detail": "parameter composition is separated from generic superposition failure",
+      "status": "PASS"
+    },
+    {
+      "check_id": "generator_defect_numeric",
+      "detail": "finite evaluations reproduce the exact cubic additivity defect",
+      "status": "PASS"
+    },
+    {
+      "check_id": "flow_nonadditivity_control",
+      "detail": "a=b=1 supplies a nonzero integrated superposition defect",
+      "status": "PASS"
+    },
+    {
+      "check_id": "constraint_applicability",
+      "detail": "the kinematic membership constraint is preserved without inventing Dirac counts",
+      "status": "PASS"
+    },
+    {
+      "check_id": "first_integral_theorem",
+      "detail": "smooth first-integral triviality is distinct from Lyapunov decay",
+      "status": "PASS"
+    },
+    {
+      "check_id": "gauge_symmetry_classification",
+      "detail": "identity-only redundancy, update dynamics, and discrete reflection are separated",
+      "status": "PASS"
+    },
+    {
+      "check_id": "reflection_equivariance",
+      "detail": "finite evaluations verify the Z2 reflection commutes with the flow",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tangent_nonexpansion",
+      "detail": "the exact admitted tangent multiplier is positive and no larger than one",
+      "status": "PASS"
+    },
+    {
+      "check_id": "probability_conditional",
+      "detail": "bounded test function decreases off zero without selecting a probability law",
+      "status": "PASS"
+    },
+    {
+      "check_id": "failure_branch_manifest",
+      "detail": "all six planned failure and overread branches are explicit",
+      "status": "PASS"
+    },
+    {
+      "check_id": "parent_child_synthesis",
+      "detail": "both internal perspectives are complete and all conflicts are resolved",
+      "status": "PASS"
+    },
+    {
+      "check_id": "fused_tex_markers",
+      "detail": "the fused theorem artifact contains every decisive result and status boundary",
+      "status": "PASS"
+    },
+    {
+      "check_id": "claim_boundary",
+      "detail": "the packet contains no adoption, physical, global-no-go, or downstream-GR promotion",
+      "status": "PASS"
+    }
+  ],
+  "claim_boundary_summary": "Candidate-specific draft/control theorem and obstruction only; no canonical ontology or source-law adoption, physical locality, constraint, energy, probability, gauge, reconstruction, downstream GR, promotion, global theory rejection, or future-extension impossibility authority.",
+  "finding_counts": {
+    "fail": 0,
+    "pass": 21,
+    "propositions": 2,
+    "scoped_obstructions": 1,
+    "theorems": 4,
+    "unresolved_conflicts": 0
+  },
+  "job_id": "AJ-RT-20260725-010-001",
+  "obstruction_scope": "current candidate family only",
+  "plan_task_id": "P5-T04",
+  "result_kind": "theorem_and_precise_scoped_obstruction",
+  "result_status": "PASS",
+  "route_frozen": false,
+  "schema_id": "cubic_amplitude_structural_analysis_validation_receipt_v1",
+  "task_id": "RT-20260725-010",
+  "validator_ids": [
+    "candidate_lock",
+    "patching_theorem",
+    "composition_classification",
+    "constraint_applicability",
+    "first_integral_theorem",
+    "gauge_symmetry_classification",
+    "tangent_nonexpansion",
+    "probability_conditional",
+    "parent_child_synthesis",
+    "claim_boundary"
+  ]
+}

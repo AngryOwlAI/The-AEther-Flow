@@ -1,0 +1,68 @@
+schema_id: "parent_child_output_v1"
+artifact_id: "V21-P5-T04-CHILD-PHYS-MATH-CUBIC-AMPLITUDE-STRUCTURE-V1"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+task_id: "RT-20260725-010"
+job_id: "AJ-RT-20260725-010-001"
+plan_task_id: "P5-T04"
+created_at: "2026-07-25T22:00:17Z"
+target_derivation_milestone: "source_ontology"
+milestone_burden: "Establish the structural properties required for a predictive source theory."
+
+candidate_lock:
+  unchanged: true
+  state_family: "Q_amp={q_a=a sin(theta_1)}"
+  generator: "X_gamma(q_a)=-gamma a^3 sin(theta_1)"
+  flow: "f_lambda(a)=a/sqrt(1+2 gamma a^2 lambda)"
+
+derived_results:
+  - result_id: "P5T04-MATH-PATCHING"
+    type: "theorem_with_hypotheses_and_proof"
+    statement: "Restriction equality on any nonempty open patch fixes the global amplitude, so different amplitudes on disjoint patches cannot be glued in Q_amp."
+    consequence: "candidate-specific patch-independence locality obstruction"
+  - result_id: "P5T04-MATH-COMPOSITION"
+    type: "theorem_with_hypotheses_and_proof"
+    statement: "Parameter composition holds, state addition closes, and generator additivity has defect -3 gamma a b(a+b)e."
+    consequence: "superposition compatibility fails generically"
+  - result_id: "P5T04-MATH-FIRST-INTEGRALS"
+    type: "theorem_with_hypotheses_and_proof"
+    statement: "Every global C1 first integral of the cubic flow is constant."
+    consequence: "L is monotone and no nontrivial smooth conserved quantity is supplied"
+  - result_id: "P5T04-MATH-VARIATION"
+    type: "theorem_with_hypotheses_and_proof"
+    statement: "The admitted linearized variation is eta0(1+2 gamma a0^2 lambda)^(-3/2)."
+    consequence: "the one-dimensional tangent sector is nonexpanding"
+  - result_id: "P5T04-MATH-PROBABILITY"
+    type: "theorem_with_hypotheses_and_proof"
+    statement: "After adjoining Borel probabilities, pushforward preserves mass and delta_0 is the unique invariant probability for any fixed lambda>0."
+    consequence: "normalization is conditional and no ensemble is selected"
+
+constraint_analysis:
+  kinematic_membership_constraint: "pi_e(q)=0 in C^infinity(T^4,R)/span{e}"
+  preserved_by_generator: true
+  Hamiltonian_structure_present: false
+  primary_secondary_first_second_class_counts: "not_applicable"
+
+symmetry_analysis:
+  declared_redundancy_algebra: "zero"
+  nonzero_gauge_generator_count: 0
+  explicit_discrete_symmetry: "R(q_a)=q_(-a), group Z2"
+  continuous_Noether_generator: false
+
+controls:
+  patch_control: "a=1 and b=2 on disjoint open patches has no glued q_c in Q_amp"
+  additivity_control: "a=b=1 yields nonzero generator and flow defects"
+  first_integral_control: "sign(a) is not continuous at zero"
+  probability_control: "h(a)=a^2/(1+a^2) decreases strictly off zero"
+
+limitations:
+  - "The patching theorem concerns only the one-global-mode family."
+  - "The variation theorem concerns only the admitted tangent line."
+  - "No action Hamiltonian Poisson structure or source probability is supplied."
+  - "No generic source extension or physical interpretation is decided."
+
+ontology_formalizer_result:
+  result_type: "theorem_and_countermodel_or_obstruction"
+  no_fog_check: true
+  claim_boundary_preserved: true
