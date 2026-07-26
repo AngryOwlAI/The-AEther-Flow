@@ -1,0 +1,318 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[hidelinks]{hyperref}
+
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{remark}{Remark}
+\newcommand{\Sub}{\mathcal S}
+\newcommand{\Lie}{\mathcal L}
+\newcommand{\Char}{\operatorname{Char}}
+\newcommand{\Ann}{\operatorname{Ann}}
+\newcommand{\supp}{\operatorname{supp}}
+
+\title{A Proposal-Only Source-Local Transport Characteristic\\
+\large P6-T02 registered draft/control construction}
+\author{The AEther-Flow Research Project}
+\date{2026-07-26}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This registered draft/control manuscript executes v21 work item P6-T02.  It
+adds one materially new but proposal-only source extension to the canonical
+smooth four-dimensional source arena: a scalar amplitude field, a nowhere-zero
+source vector field, and the local transport--reaction equation
+\(\Lie_V a+\gamma a^3=0\).  The equation exactly reproduces the P5 cubic flow
+along integral curves.  Its linearized principal polynomial
+\(P_x(\xi)=\xi(V_x)\), characteristic covectors, hyperbolicity half-space,
+dual propagation ray, and forward reachability preorder are calculated from
+the equation without a target metric or GR null cone.  An exact response
+formula, a nontrivial flow-box example, an \(O(\varepsilon)\) upwind
+consistency bound, and zero-field, closed-orbit, competing-generator, and
+multi-sector controls are supplied.  The result is a constructed formal
+source-extension candidate, not a physical causal structure: the current
+ontology does not derive or select \(V\), its orientation, normalization,
+global chronology, operational signal meaning, or universality.  No
+effective conformal class, metric scale, matter coupling, Einstein equation,
+ontology adoption, or benchmark promotion follows.
+\end{abstract}
+
+\section{Authority and status boundary}
+
+The canonical source architecture carries a smooth four-dimensional manifold
+\(\Sub\) as explicit primitive debt and leaves \(\Phi_{\mathrm{src}}\) as an
+unresolved source-order or evolution slot.  It does not identify \(\Sub\)
+with physical spacetime and does not adopt a generator, source field,
+localization law, causal order, metric, or source-to-target bridge.
+
+P5 supplies only the proposal-only scalar flow
+\[
+ \phi_s(z)=\frac{z}{\sqrt{1+2\gamma s z^2}},
+ \qquad
+ D\phi_s(z)=(1+2\gamma s z^2)^{-3/2},
+ \qquad \gamma>0,\ s\geq0.
+\]
+P6-T01 defines a metric-free characteristic target and proves that these
+unchanged diagonal data do not select a unique region-resolved influence
+relation.  The present packet does not reopen that inference.  It introduces
+new source-local law data and derives their consequences conditionally.
+
+Every new object below has status
+\texttt{draft/control}, \texttt{proposal-only}, and
+\texttt{source-extension data}.  In particular, the vector field \(V\) is
+not a target-side congruence, preferred physical frame, ordinary wind,
+physical clock, or canonical-ontology candidate.
+
+\section{Candidate and characteristic calculation}
+
+\begin{definition}[Source-local transport candidate]
+\label{def:candidate}
+Let \(\Sub\) be a smooth four-dimensional source manifold.  On an open set
+\(U\subseteq\Sub\), propose:
+\begin{enumerate}
+  \item a scalar source field \(a\in C^\infty(U,\mathbb R)\);
+  \item a smooth nowhere-zero source vector field \(V\in\Gamma(TU)\);
+  \item a source-side orientation selecting the positive ray of \(V\); and
+  \item a constant \(\gamma>0\).
+\end{enumerate}
+Define the local equation
+\[
+ \mathcal E_V[a]
+ :=\Lie_Va+\gamma a^3
+ =V^A\partial_Aa+\gamma a^3=0.
+\tag{1}\label{eq:candidate}
+\]
+These are proposed source data.  No target coordinate, metric, connection,
+volume form, null cone, matter equation, or benchmark solution enters
+\eqref{eq:candidate}.
+\end{definition}
+
+\begin{theorem}[P6T02-THM-FLOW-BOX-RECOVERY]
+\label{thm:flowbox}
+Let \(\chi_s\) be a positive integral curve of \(V\), with
+\(\chi_0=x_0\), on an interval containing \(s\geq0\).  A solution of
+\eqref{eq:candidate} obeys
+\[
+ a(\chi_s)
+ =\frac{a(x_0)}{\sqrt{1+2\gamma s\,a(x_0)^2}}.
+\tag{2}\label{eq:solution}
+\]
+Thus the restriction of the proposed local equation to every integral curve
+is exactly the P5 cubic forward flow.  In a flow box
+\((s,y^1,y^2,y^3)\) with \(V=\partial_s\), initial data \(a_0(y)\) on
+\(s=0\) give
+\[
+ a(s,y)=\frac{a_0(y)}
+ {\sqrt{1+2\gamma s\,a_0(y)^2}}.
+\tag{3}\label{eq:flowboxsolution}
+\]
+\end{theorem}
+
+\begin{proof}
+Along an integral curve,
+\(\frac{d}{ds}a(\chi_s)=\Lie_Va=-\gamma a^3\).  Separation and the
+initial condition give \eqref{eq:solution}.  The flow-box expression follows
+pointwise in the transverse labels \(y\).
+\end{proof}
+
+\begin{theorem}[P6T02-THM-PRINCIPAL-RAY]
+\label{thm:principal}
+Linearization about any smooth background \(\bar a\) satisfying
+\eqref{eq:candidate} gives
+\[
+ \Lie_Vu+3\gamma\bar a^2u=0.
+\tag{4}\label{eq:linearized}
+\]
+Its scalar principal symbol and principal polynomial are
+\[
+ \sigma_x(\xi)u=\xi(V_x)u,
+ \qquad
+ P_x(\xi)=\xi(V_x).
+\tag{5}\label{eq:principal}
+\]
+Consequently,
+\[
+ \Char_x^*=\{\xi\in T_x^*\Sub\setminus\{0\}:\xi(V_x)=0\}
+ =\Ann(V_x)\setminus\{0\}.
+\tag{6}\label{eq:char}
+\]
+For any covector \(h\) with \(h(V_x)>0\), the degree-one polynomial
+\(P_x\) is hyperbolic with respect to \(h\), its selected hyperbolicity
+ component is
+\[
+ \Gamma_x=\{\xi:\xi(V_x)>0\},
+\tag{7}\label{eq:halfspace}
+\]
+and the closed dual cone under the natural tangent--cotangent pairing is the
+single ray
+\[
+ \Gamma_x^\circ=\{rV_x:r\geq0\}.
+\tag{8}\label{eq:dualray}
+\]
+The base projection of the principal Hamiltonian direction is \(V\).
+Therefore the equation supplies one formal oriented source propagation ray,
+not a Lorentzian cone or metric.
+\end{theorem}
+
+\begin{proof}
+The cubic term is zeroth order, so only \(\Lie_Vu\) contributes to the
+principal symbol.  For fixed \(\xi\),
+\[
+ \lambda\longmapsto P_x(\xi+\lambda h)
+ =\xi(V_x)+\lambda h(V_x)
+\]
+has one real root because \(h(V_x)\neq0\).  The selected component is the
+positive half-space \eqref{eq:halfspace}.  If a tangent vector pairs
+nonnegatively with every covector in that half-space, separation of a vector
+from the line spanned by \(V_x\) shows that it must be a nonnegative multiple
+of \(V_x\), proving \eqref{eq:dualray}.  Finally,
+\(\partial P/\partial\xi=V\), which gives the base propagation direction.
+\end{proof}
+
+\begin{proposition}[P6T02-PROP-RESPONSE-SUPPORT]
+\label{prop:response}
+In a flow box, the solution of the linearized equation with initial
+perturbation \(u_0(y)\) is
+\[
+ u(s,y)=u_0(y)
+ \bigl(1+2\gamma s\,a_0(y)^2\bigr)^{-3/2}.
+\tag{9}\label{eq:response}
+\]
+Hence perturbation support is transported only along the positive \(V\)-flow:
+\[
+ \supp u(s,\cdot)
+ =\chi_s\bigl(\supp u_0\bigr)
+\]
+whenever the flow map is defined and the nonzero multiplier is interpreted
+on corresponding flow lines.  The relation
+\[
+ x\preceq_V y
+ \quad\Longleftrightarrow\quad
+ y=\chi_s(x)\ \text{for some }s\geq0
+\tag{10}\label{eq:preorder}
+\]
+is therefore the candidate's formal forward influence preorder.
+\end{proposition}
+
+\begin{proof}
+Differentiate \eqref{eq:solution} with respect to its initial value.  The
+multiplier is exactly the P5 tangent response and is strictly positive for
+finite \(s\geq0\), so it neither creates nor cancels support between distinct
+flow lines.  Flow composition makes \(\preceq_V\) reflexive and transitive.
+\end{proof}
+
+\section{Covariance, normalization, and sector count}
+
+The construction is source-diffeomorphism covariant when \(a\) is transported
+as a scalar and \(V\) as a vector field.  The characteristic set and ray are
+also invariant under positive rescaling \(V\mapsto fV\), \(f>0\), because
+\(P\mapsto fP\).  The full equation is multiplied by \(f\) only if the
+reaction coefficient is simultaneously treated as the source function
+\(\gamma\mapsto f\gamma\).  Thus the unparameterized oriented line field
+determines the formal characteristic ray, but the exact P5 parameterization
+still requires an independent normalization or scale law.  No such law is
+derived here.
+
+The scalar candidate has one propagation ray at each regular point.  A
+proposal-only two-sector direct sum with vector fields \(V\) and \(W\) has
+principal determinant
+\[
+ P^{(2)}_x(\xi)=\xi(V_x)\xi(W_x),
+\tag{11}\label{eq:twosector}
+\]
+and two characteristic hyperplanes or propagation rays when \(V_x\) and
+\(W_x\) are noncollinear.  The present sources contain no universality rule
+that selects a common ray across such sectors.
+
+\section{Nontrivial and pathological controls}
+
+\paragraph{Nontrivial flow-box witness.}
+On \(\Sub=\mathbb R^4\) with coordinates \((s,y^1,y^2,y^3)\), choose
+\(V=\partial_s\) and
+\(a_0(y)=A\exp[-((y^1)^2+(y^2)^2+(y^3)^2)]\), \(A\neq0\).
+Equation~\eqref{eq:flowboxsolution} is a smooth, nonconstant exact solution.
+Its characteristic covectors satisfy \(\xi_s=0\), and its formal forward
+propagation ray is the positive \(s\)-direction.
+
+\paragraph{Zero-field degeneracy.}
+If \(V_x=0\), then \(P_x\equiv0\) on \(T_x^*\Sub\).  There is no
+hyperbolicity direction and no nondegenerate propagation ray at \(x\).
+Nowhere-vanishing is therefore a genuine candidate hypothesis, not a
+conclusion.  Some global four-manifolds do not admit such a vector field
+without additional topology assumptions.
+
+\paragraph{Closed-orbit chronology failure.}
+On \(S^1\times\mathbb R^3\), take \(V=\partial_\theta\).  Distinct points on
+the same periodic orbit satisfy both \(x\preceq_Vy\) and
+\(y\preceq_Vx\).  The relation is a preorder but not an antisymmetric causal
+order.  A no-closed-orbit or source-time function condition is an additional
+global hypothesis.
+
+\paragraph{Competing-generator nonselection.}
+On \(\mathbb R^4\), both
+\(V=\partial_s\) and \(W=\partial_s+\kappa\partial_{y^1}\),
+\(\kappa\neq0\), recover the same P5 equation on fields independent of the
+transverse coordinates, but their characteristic hyperplanes and propagation
+rays differ.  The unchanged P5 data and current ontology do not select
+between them.  This is not a global impossibility theorem; it precisely
+locates the missing selector.
+
+\section{Finite approximation and error}
+
+In the flow-box witness, approximate \(\partial_sa\) by the backward
+source-oriented difference
+\[
+ D^-_\varepsilon a(s,y)
+ =\frac{a(s,y)-a(s-\varepsilon,y)}{\varepsilon}.
+\tag{12}\label{eq:upwind}
+\]
+For \(a\in C^2\) on the sampled segment, Taylor's theorem gives
+\[
+ \left|D^-_\varepsilon a-\partial_sa\right|
+ \leq
+ \frac{\varepsilon}{2}
+ \sup_{\rho\in[s-\varepsilon,s]}
+ |\partial_s^2a(\rho,y)|.
+\tag{13}\label{eq:error}
+\]
+Thus the local source-operator reconstruction is first-order accurate,
+\(O(\varepsilon)\).  This is not an effective-metric reconstruction error.
+No source-to-target reconstruction map is available, so a target conformal
+class or metric error is undefined rather than silently set to zero.
+
+\section{Disposition}
+
+The decisive result is \texttt{constructed\_candidate}.  The proposed local
+equation yields, by calculation, one principal polynomial, characteristic
+hyperplane, hyperbolicity half-space, dual ray, exact response-support law,
+and formal forward preorder.  This is materially new source-local law content
+and does not repeat the P6-T01 two-site inference.
+
+Physical Gate B remains not ready.  The current ontology does not derive or
+select the scalar field, \(V\), its positive orientation, normalization,
+global nonvanishing, absence of closed orbits, signal-sector universality, or
+operational meaning.  The one-ray cone is also too degenerate by itself to be
+called a four-dimensional Lorentzian conformal structure.  P6-T03 may test
+that conformal insufficiency after the governed checkpoint.
+
+\section{Explicit nonclaims}
+
+This packet does not edit canonical ontology; adopt or reject a source law;
+identify \(\Sub\) with physical spacetime; identify the integral-curve
+parameter with physical time; establish physical locality, causality,
+chronology, a clock, or a signal; select \(V\) uniquely; import a target
+atlas, GR null cone, proper time, detector, metric, or benchmark solution;
+construct an unscoped \(g_{\mathrm{eff}}\); alter the historical scoped
+\(g_{\mathrm{eff}}\) object; couple matter; derive Einstein equations;
+promote the exact-GR benchmark; issue a Gate Chair verdict; prove a global
+no-go theorem; declare future source extensions impossible; publish; push; or
+claim a completed derivation.
+
+\end{document}

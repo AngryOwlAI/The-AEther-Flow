@@ -1,0 +1,180 @@
+schema_id: "v21_p6_t02_source_local_transport_candidate_v1"
+candidate_id: "V21-P6-T02-SOURCE-LOCAL-TRANSPORT-CHARACTERISTIC-V1"
+task_id: "RT-20260726-003"
+plan_task_id: "P6-T02"
+status_label: "draft/control"
+candidate_status: "proposal-only"
+material_class: "source-extension data"
+adoption_status: "blocked_adoption_open_continuation"
+target_derivation_milestone: "effective_metric_g_eff"
+milestone_burden: "Produce the first source-derived physical propagation structure."
+
+source_boundary:
+  canonical_source_arena: "smooth four-dimensional source manifold S carried as explicit primitive debt"
+  unresolved_slot: "Phi_src remains an unresolved abstract source-order or evolution slot"
+  physical_spacetime_identified: false
+  target_metric_imported: false
+  gr_null_cone_imported: false
+  benchmark_fit_used: false
+  historical_scoped_g_eff_status_changed: false
+
+assumption_delta:
+  new_proposal_only_primitives:
+    - "a smooth scalar source field a on an open set U subset S"
+    - "a smooth nowhere-zero source vector field V on U"
+    - "a selected positive source-side orientation of the V ray"
+    - "a positive source reaction coefficient gamma"
+  inherited_exact_input:
+    - "the P5 cubic amplitude flow"
+    - "the P5 exact tangent response"
+    - "the P6-T01 metric-free characteristic target and local inference freeze"
+  not_assumed:
+    - "target coordinates"
+    - "target metric or GR null cone"
+    - "physical time or clock calibration"
+    - "matter equation or detector response"
+    - "source-to-target reconstruction map"
+    - "canonical ontology adoption"
+
+candidate_equation:
+  equation: "E_V[a] = L_V a + gamma a^3 = 0"
+  local_coordinate_form: "V^A partial_A a + gamma a^3 = 0"
+  equation_order: 1
+  field_count: 1
+  source_side_only: true
+  metric_required: false
+  connection_required: false
+
+exact_flow_box_solution:
+  flow_parameter_status: "proposal-only source-order parameter, not physical time"
+  solution: "a(s,y)=a_0(y)/(1+2 gamma s a_0(y)^2)^(1/2)"
+  p5_flow_recovered_on_each_integral_curve: true
+  linearized_equation: "L_V u + 3 gamma a_bar^2 u = 0"
+  linearized_solution: "u(s,y)=u_0(y)(1+2 gamma s a_0(y)^2)^(-3/2)"
+  p5_tangent_response_recovered: true
+
+characteristic_calculation:
+  principal_symbol: "sigma_x(xi) u = xi(V_x) u"
+  principal_polynomial: "P_x(xi)=xi(V_x)"
+  characteristic_set: "Char_x^*=Ann(V_x) minus the zero covector"
+  polynomial_degree: 1
+  hyperbolic: true
+  hyperbolicity_condition: "choose h with h(V_x)>0"
+  hyperbolicity_component: "Gamma_x={xi:xi(V_x)>0}"
+  closed_dual_propagation_cone: "Gamma_x^circ={r V_x:r>=0}"
+  propagation_sector_count: 1
+  lorentzian_cone_claimed: false
+  conformal_metric_reconstructed: false
+
+formal_influence:
+  relation: "x preceq_V y iff y=chi_s(x) for some s>=0"
+  relation_type: "forward reachability preorder"
+  response_support: "support is transported along positive V-flow lines with the exact nonzero P5 tangent multiplier"
+  physical_causality_claimed: false
+  antisymmetry_requires: "absence of distinct points on common closed positive V-orbits"
+
+covariance_and_normalization:
+  source_diffeomorphism_covariant: true
+  positive_rescaling_characteristic_invariant: true
+  positive_rescaling_rule: "V maps to fV and P maps to fP for f>0"
+  equation_rescaling_requires: "gamma maps to f gamma if the whole equation is to scale by f"
+  unparameterized_ray_selected_by_characteristics: true
+  parameter_scale_derived: false
+
+controls:
+  nontrivial:
+    source_arena: "R^4 with coordinates (s,y1,y2,y3)"
+    vector_field: "V=partial_s"
+    initial_data: "a_0(y)=A exp(-|y|^2), A nonzero"
+    characteristic_condition: "xi_s=0"
+    propagation_ray: "positive partial_s ray"
+    result: "PASS_NONTRIVIAL_EXACT_SOLUTION"
+  zero_field:
+    condition: "V_x=0"
+    result: "FAIL_CLOSED_PRINCIPAL_POLYNOMIAL_IDENTICALLY_ZERO"
+    failed_obligation: "nondegeneracy and hyperbolicity direction"
+  closed_orbit:
+    source_arena: "S^1 x R^3"
+    vector_field: "V=partial_theta"
+    result: "FAIL_CLOSED_ANTISYMMETRIC_CAUSAL_ORDER"
+    failed_obligation: "global chronology or source time function"
+  competing_generators:
+    first: "V=partial_s"
+    second: "W=partial_s+kappa partial_y1, kappa nonzero"
+    common_restricted_data: "same P5 cubic equation on transverse-constant fields"
+    different_output: "different characteristic hyperplanes and propagation rays"
+    result: "PRECISE_SELECTOR_NONSELECTION"
+  multiple_sectors:
+    equation: "diag(L_V,L_W) u + lower-order terms = 0"
+    determinant: "P_x^(2)(xi)=xi(V_x)xi(W_x)"
+    result: "TWO_RAYS_WHEN_V_AND_W_ARE_NONCOLLINEAR"
+    universality_derived: false
+
+approximation:
+  method: "backward source-oriented finite difference"
+  formula: "D^-_epsilon a(s,y)=[a(s,y)-a(s-epsilon,y)]/epsilon"
+  consistency_order: "O(epsilon)"
+  error_bound: "|D^-_epsilon a-partial_s a| <= epsilon/2 sup |partial_s^2 a|"
+  effective_metric_reconstruction_error: "undefined because no source-to-target reconstruction map is supplied"
+
+candidate_constructor_result:
+  result_type: "constructed_candidate"
+  no_fog_result: "One explicit proposal-only source-local equation produces one reproducible principal polynomial, characteristic hyperplane, hyperbolicity half-space, dual propagation ray, exact response-support law, and forward preorder."
+  proof_obligations_remaining:
+    - "derive or select V from current source ontology"
+    - "derive orientation and normalization without target import"
+    - "establish global nonvanishing and chronology conditions"
+    - "supply operational signal meaning"
+    - "establish common-sector universality and robustness"
+    - "test whether the one-ray data can determine any conformal geometry"
+
+gate_b:
+  formal_characteristic_candidate_constructed: true
+  physical_gate_b_ready: false
+  source_provenance_for_V: false
+  orientation_derived: false
+  normalization_derived: false
+  global_chronology_established: false
+  operational_signal_meaning: false
+  universality_across_signal_sectors: false
+  robustness_under_admissible_source_extensions: false
+  effective_conformal_class_fixed: false
+
+fixed_sources:
+  - object_id: "TEX-V21-P6-T01-CAUSAL-CHARACTERISTIC-TARGET-V1"
+    path: "research_control/tasks/RT-20260726-002/artifacts/causal_characteristic_target_v1.tex"
+    sha256: "32a055bc5c851f0a36d726343cb5be1f1d68cf72a5a32fccead12b3488f04273"
+  - object_id: "TEX-V21-P5-T08-SOURCE-DYNAMICS-MILESTONE-SYNTHESIS-V1"
+    path: "research_control/tasks/RT-20260726-001/artifacts/source_dynamics_milestone_synthesis_v1.tex"
+    sha256: "a2b9c6670cdb0e09ca2e19ff30f71d9bb954e3ab2fc73a5c9727a2df10db93aa"
+  - object_id: "TEX-ONTOLOGY-AETHER-FLOW-FOUNDATIONS"
+    path: "ontology/tex/aether_flow_foundations.tex"
+    sha256: "4749d9e8b6858a43230e99029cccc3274b55fc2ae2a2cdf45a983a60c98e5b59"
+  - object_id: "TEX-ONTOLOGY-AETHER-FLOW-DYNAMICS"
+    path: "ontology/tex/aether_flow_dynamics.tex"
+    sha256: "fd6e579e71ef7f2ac4c9668ceede051ad57033ee52357b2552a9e3a5a53939c7"
+  - object_id: "TEX-ONTOLOGY-AETHER-FLOW-GEOMETRY"
+    path: "ontology/tex/aether_flow_geometry.tex"
+    sha256: "f60a81b63f814b03cca7190b3ac6285842a55317f4aed058cc6e75154cc0b4d7"
+  - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+    path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+    sha256: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  - object_id: "MD-RESEARCH-CONTROL-DESIGN-GR-DERIVATION-BURDEN-MAP"
+    path: "research_control/design/gr_derivation_burden_map.md"
+    sha256: "8e9d44e3a18ecc8a2430a9c42497da3eb9911c2cf6cd714c1525c5d91551835e"
+
+authority:
+  canonical_ontology_modified: false
+  source_law_adopted: false
+  source_law_rejected: false
+  physical_time_established: false
+  physical_causality_established: false
+  metric_or_conformal_class_reconstructed: false
+  historical_scoped_g_eff_expanded: false
+  matter_coupling_derived: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false

@@ -1,0 +1,261 @@
+validation_status: "PASS"
+handoff_id: "handoff-0878"
+handoff_number: 878
+task_id: "RT-20260726-004"
+decision_id: "DDR-20260726-004"
+job_id: "AJ-RT-20260726-004-001"
+completion_id: "AJC-AJ-RT-20260726-004-001"
+completion_path: "research_control/tasks/RT-20260726-004/jobs/completions/AJC-AJ-RT-20260726-004-001.yaml"
+completion_sha256: "6f59d7c7584660ef652d309eccf41db3c6292ef4d3652cc54ff9274ba46fe937"
+status: "ready_after_checkpoint"
+created_at: "2026-07-26T12:26:56Z"
+parent_handoff_id: "handoff-0877"
+plan_task_id: "P6-T03"
+recovery_for_plan_task_id: "P6-T02"
+source_role_id: "process-integrity-auditor"
+source_role_version: "0.1.0"
+source_execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260726-004"
+summary: "Generation 123 removes exactly one terminal newline from the checkpoint-named P6-T02 Director decision. The sealed receipt records zero drift across the other 63 dirty-manifest paths at the repair boundary, matches the failed checkpoint and gate evidence hashes, and preserves all protected P6-T02 science and authority. P6-T03 remains unexecuted pending one governed cumulative checkpoint."
+next_action: "Run the one governed cumulative checkpoint for AJ-RT-20260726-004-001. Only after it commits may one fresh bounded P6-T03 Ontology Formalizer packet determine whether the proposal-only one-ray characteristic data fix any effective conformal class or prove a precise insufficiency."
+current_claim_boundary: "CB-V21-P6-T02-SINGLE-EOF-CHECKPOINT-RECOVERY-001"
+loop_risk_route: "ontology-law-research-packet"
+
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260726-004"
+  latest_research_handoff_id: "handoff-0878"
+  latest_research_next_action: "Run the one governed cumulative checkpoint for AJ-RT-20260726-004-001. Only after it commits may one fresh bounded P6-T03 Ontology Formalizer packet determine whether the proposal-only one-ray characteristic data fix any effective conformal class or prove a precise insufficiency."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+
+claim_boundary:
+  allowed_next_scope: "After the governed cumulative checkpoint commits, one fresh bounded P6-T03 Ontology Formalizer packet may determine whether the proposal-only one-ray characteristic data fix an effective conformal class under declared regularity and causality assumptions or prove a precise insufficiency."
+  completed_task: "RT-20260726-004"
+  completed_completion_path: "research_control/tasks/RT-20260726-004/jobs/completions/AJC-AJ-RT-20260726-004-001.yaml"
+  completed_completion_sha256: "6f59d7c7584660ef652d309eccf41db3c6292ef4d3652cc54ff9274ba46fe937"
+  source_handoff_id: "handoff-0877"
+  source_handoff_path: "research_control/handoffs/handoff-0877.yaml"
+  source_handoff_sha256: "594d9b485507bac3e82fd04b1f04defd8d366dbe2f9054f2429f11e855dc07db"
+  immutable_route_sha256: "56b77727400bb9731c5f3d4656fb86ab790faab8b70509410f23b4fceaab1816"
+  result_status: "PASS_P6_T02_SINGLE_EOF_CHECKPOINT_RECOVERY_READY_FOR_CHECKPOINT"
+  dirty_state_manifest_sha256: "f39a2c8856ffc11442fc79648de2bcc67ff6767a70ea68b8f6dca566f7244767"
+  failed_checkpoint_receipt_sha256: "7b6c139a4b1f43557665e6856e09041447f08fb1fd4af5b4a083a13c61af416e"
+  failed_gate_evidence_sha256: "67fe7ce5b1678c0faa618457e783aded2c7fa684e770195ded793cabd5fb6330"
+  recovery_receipt_path: "research_control/tasks/RT-20260726-004/artifacts/p6_t02_eof_checkpoint_recovery_receipt.json"
+  recovery_receipt_sha256: "e4d8741b9d2bf8c3990783af789fcfe452940507d419ee3af9ba1ed828c1253f"
+  manifest_path_count: 64
+  target_path_count: 1
+  non_target_path_count: 63
+  non_target_hash_mismatch_count: 0
+  exact_terminal_newline_deletion_count: 1
+  checkpoint_invocation_count_before_handoff: 0
+  checkpoint_committed_before_handoff: false
+  p6_t02_science_payload_modified_by_recovery: false
+  p6_t02_reexecuted: false
+  p6_t03_executed: false
+  scientific_status_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  ontology_adoption_authorized: false
+  source_law_adoption_authorized: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_performed: false
+  blocked_claims:
+    - "EOF normalization presented as scientific progress"
+    - "P6-T02 draft/control source characteristic presented as adopted physical causality or geometry"
+    - "P6-T03 presented as executed before checkpoint"
+    - "ontology source law physical time causal cone conformal geometry metric reconstruction downstream GR benchmark proof publication push or completed derivation"
+
+plan_result:
+  plan_task_id: "P6-T02"
+  recovery_for_plan_task_id: "P6-T02"
+  next_plan_task_id: "P6-T03"
+  title: "Repair one P6-T02 EOF blank and recover checkpoint eligibility"
+  result_status: "P6_T02_SINGLE_EOF_CHECKPOINT_RECOVERY_PASS"
+  work_item_status: "completed"
+  protected_p6_t02_payload_complete: true
+  protected_p6_t02_payload_byte_preserved_except_one_terminal_newline: true
+  exact_terminal_newline_repair_complete: true
+  p6_t03_dependency_ready_after_checkpoint: true
+  p6_t03_dependency_ready_now: false
+  p6_t03_executed: false
+  scientific_claims_changed_by_recovery: false
+  distance_to_gr_delta_changed_by_recovery: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+distance_to_gr:
+  changed: false
+  effect: "none_project_system_recovery"
+  burden_id: "g_eff"
+  milestone: "effective_metric_g_eff"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "The inherited P6-T02 proposal-only formal source-characteristic delta is preserved; this recovery contributes no physics movement."
+  downstream_unlocked:
+    - "P6-T03 only after the governed cumulative checkpoint"
+  downstream_still_blocked:
+    - "P6-T03 until the governed cumulative checkpoint commits"
+    - "physical source-derived characteristic structure"
+    - "effective conformal class and metric scale"
+    - "unscoped effective metric g_eff"
+    - "matter coupling"
+    - "Einstein equations derivation"
+    - "benchmark promotion"
+
+required_next_packet:
+  task_type: "v21_p6_t03_reconstruct_conformal_geometry_or_prove_insufficiency"
+  plan_task_id: "P6-T03"
+  objective: "Determine whether the proposal-only one-ray characteristic data fix an effective conformal class under declared regularity and causality assumptions or prove a precise insufficiency."
+  dependency_ready_after_checkpoint: true
+  dependency_ready_now: false
+  executed: false
+
+selected_next_route:
+  route_id: "v21_p6_t03_reconstruct_conformal_geometry_or_prove_insufficiency"
+  route_label: "ontology-law-research-packet"
+  role_family: "ontology-formalizer@0.2.0"
+  worker_skill: "continue-research"
+  task_type: "v21_p6_t03_reconstruct_conformal_geometry_or_prove_insufficiency"
+  plan_task_id: "P6-T03"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Advance from propagation structure to conformal geometry without yet choosing scale."
+  strategy_id: "test_one_ray_characteristic_conformal_sufficiency_v1"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  formal_source_characteristic_candidate_available: true
+  physical_characteristic_structure_available: false
+  conformal_class_available: false
+  physics_promotion_authorized: false
+  executed: false
+  next_action: "Remain unexecuted until the generation-123 governed cumulative checkpoint commits."
+  source_handoff: "research_control/handoffs/handoff-0878.yaml"
+
+ordinary_route_guard:
+  schema_id: "ordinary_route_guard_evaluation_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  evaluation_id: "ORE-HANDOFF-0878"
+  ordinary_handoff_id: "handoff-0878"
+  threshold: 3
+  consecutive_project_system_tasks_before_selection: 1
+  ready_science_plan_task_ids:
+    - "P6-T03"
+    - "P14-T04"
+  selected_plan_task_id: "P6-T03"
+  selected_route_class: "physics_bearing"
+  selected_worker_skill: "continue-research"
+  outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  exception_receipt:
+    active: false
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+active_state_boundary:
+  active_task_id: "RT-20260726-004"
+  active_job_id: "AJ-RT-20260726-004-001"
+  current_status: "p6_t02_single_eof_checkpoint_recovery_pass_ready_for_checkpoint"
+  checkpoint_required: true
+  checkpoint_completed: false
+  checkpoint_invocation_count: 0
+  project_system_recovery_completed: true
+  p6_t02_payload_complete: true
+  selected_next_plan_task_id: "P6-T03"
+  selected_next_worker_skill: "continue-research"
+  selected_next_role_family: "ontology-formalizer@0.2.0"
+  selected_next_route_label: "ontology-law-research-packet"
+  selected_next_strategy_id: "test_one_ray_characteristic_conformal_sufficiency_v1"
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 123 validated, atomically claimed, and consumed its exact immutable recovery route once."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The tracked receipt proves one exact terminal-newline deletion, 63 non-target hash matches, and protected P6-T02 preservation."
+  post_write:
+    status: "PENDING"
+    evidence:
+      - "Integrated control, documentation, signal, memory, and test validation remains before checkpoint."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "One governed cumulative checkpoint remains; P6-T03 is not executed before it."
+  renderer:
+    status: "PENDING"
+    evidence:
+      - "Tracked frontier, task-index, graph, registry, and wiki derivatives remain to be synchronized."
+  memory_bootstrap:
+    status: "PENDING"
+    evidence:
+      - "Tracked memory synchronization remains before checkpoint."
+  claim_language_linter:
+    status: "PENDING"
+    evidence:
+      - "Integrated research-control validation remains before checkpoint."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not authorized; ordinary project-system EOF recovery validation only"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  publication_authorized: false
+  proof_authority: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  canonical_ontology_edit_authorized: false
+  ontology_selection_authorized: false
+  physical_interpretation_establishment_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required_no_nonblank_signals"
+  rationale: "The bounded recovery emits no new project-improvement signal."
+
+handoff_authority_boundary:
+  this_handoff_authorizes:
+    - "one governed cumulative checkpoint for AJ-RT-20260726-004-001"
+    - "after that checkpoint only, one fresh bounded P6-T03 packet"
+  this_handoff_does_not_authorize:
+    - "P6-T03 before checkpoint"
+    - "P6-T02 reexecution or semantic science-payload mutation"
+    - "validator or test behavior change"
+    - "ontology source law physical interpretation reconstruction downstream GR benchmark proof publication push or completed derivation"
+
+next_plan_task_id: "P6-T03"
+next_worker_skill: "continue-research"
+next_role_family: "ontology-formalizer@0.2.0"
+next_route_label: "ontology-law-research-packet"
+next_strategy_id: "test_one_ray_characteristic_conformal_sufficiency_v1"
+notes: "Generation 123 is project-system control work only. P6-T03 remains unexecuted until the governed cumulative checkpoint commits."

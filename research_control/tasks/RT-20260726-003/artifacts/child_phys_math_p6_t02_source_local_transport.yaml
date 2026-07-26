@@ -1,0 +1,36 @@
+schema_id: "parent_child_perspective_output_v1"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+task_id: "RT-20260726-003"
+job_id: "AJ-RT-20260726-003-001"
+plan_task_id: "P6-T02"
+status: "completed"
+target_derivation_milestone: "effective_metric_g_eff"
+milestone_burden: "Produce the first source-derived physical propagation structure."
+independent_result:
+  candidate_equation: "L_V a + gamma a^3 = 0"
+  exact_curve_solution: "a(s)=a_0/(1+2 gamma s a_0^2)^(1/2)"
+  linearized_equation: "L_V u + 3 gamma a_bar^2 u = 0"
+  principal_polynomial: "P_x(xi)=xi(V_x)"
+  characteristic_set: "Ann(V_x) minus zero"
+  hyperbolicity_component: "{xi:xi(V_x)>0}"
+  dual_propagation_ray: "{rV_x:r>=0}"
+  response_multiplier: "(1+2 gamma s a_0^2)^(-3/2)"
+  approximation_order: "O(epsilon)"
+proof_checks:
+  - "The lower-order cubic reaction does not alter the principal symbol."
+  - "Every degree-one principal polynomial is hyperbolic with respect to any h satisfying h(V)>0."
+  - "The dual of the selected cotangent half-space is exactly the nonnegative V ray."
+  - "The exact linearized response preserves support along integral curves."
+  - "The backward difference has the Taylor remainder bound epsilon/2 sup |partial_s^2 a|."
+controls:
+  - "nonzero Gaussian transverse profile on R^4"
+  - "V=0 principal degeneracy"
+  - "closed V-orbit antisymmetry failure"
+  - "noncollinear V and W selector nonuniqueness"
+  - "two-sector determinant with two characteristic branches"
+decisive_result:
+  result_type: "constructed_candidate"
+  statement: "The proposal-only local equation yields one exact formal characteristic ray and reachability preorder; physical selection and interpretation are not proved."
+claim_boundary_preserved: true
+physics_promotion_authorized: false

@@ -13,9 +13,9 @@ state, or latest handoff, those sources govern and this file is stale.
 | Field | Value |
 | --- | --- |
 | Schema | `v21_current_burden_status_v1` |
-| Source commit at generation | `8ad0c556ef08ece8483758646b1eacd66838ded9` |
-| Status generation time | `2026-07-26T09:33:36Z` |
-| Tracked task count | 1112 |
+| Source commit at generation | `6f50f4997ae97e870b317616c8a895fe641b00f1` |
+| Status generation time | `2026-07-26T10:56:59Z` |
+| Tracked task count | 1113 |
 | Stable definition count | 10 |
 | Distance-to-GR burden count | 14 |
 | Historical authored-map commit | `2c5fb02fd8fff9b449ab10a328d7c881b13ef546` |
@@ -23,21 +23,21 @@ state, or latest handoff, those sources govern and this file is stale.
 
 ### Exact source hashes
 
-- `registries/DISTANCE_TO_GR_LEDGER.csv`: `3297567acef2ede8675e85d80b84d042df9553538a688be035e0b344bda4e40b`
-- `registries/RESEARCH_TASK_REGISTRY.csv`: `e90c46bcc45768734460131874169f180fea4e716ec960d667e6df7ac9cefed7`
+- `registries/DISTANCE_TO_GR_LEDGER.csv`: `80f6b84fa3745ed8f48be7fd227b08de5935026a6d9b6d9085a13dab3efa1dc7`
+- `registries/RESEARCH_TASK_REGISTRY.csv`: `5bf93b43ec8efcebe4d2086c315317494169128a0d823bcdc9df4aa72a56bd83`
 - `research_control/design/gr_derivation_burden_map.md`: `8e9d44e3a18ecc8a2430a9c42497da3eb9911c2cf6cd714c1525c5d91551835e`
-- `research_control/handoffs/handoff-0876.yaml`: `763dd064c4831894d124ba17e700e8d119101459ef48eb25d45e7da3e7b14f24`
-- `research_control/program_state.yaml`: `f99108fd52748f3968917c4aeb8c2094c2fa0060d5c78e610cd324991d0f233d`
+- `research_control/handoffs/handoff-0877.yaml`: `594d9b485507bac3e82fd04b1f04defd8d366dbe2f9054f2429f11e855dc07db`
+- `research_control/program_state.yaml`: `12afac817170bf3765ac8cb5a5ea8ecaeff648e37447caa1578995131d416f44`
 - `research_control/tasks/RT-20260721-009/artifacts/v21_burden_definitions_v1.yaml`: `67b8053baa60db4b11ee20582633d6279523d40b2ee853a6c570e2fdc1d113f5`
 
 ## Live control state
 
 | Field | Value |
 | --- | --- |
-| Active task | `RT-20260726-002` |
-| Latest handoff | `handoff-0876` |
-| Current status | `p6_t01_metric_free_target_response_composition_and_two_site_nonselection_obstruction_ready_for_checkpoint` |
-| Next recommended action | Run the one governed checkpoint for AJ-RT-20260726-002-001. Only after it commits may one fresh bounded P6-T02 Candidate Constructor packet construct or precisely obstruct one source-derived propagation relation principal polynomial or causal order without reopening the frozen P5-diagonal inference or importing the target GR cone. |
+| Active task | `RT-20260726-003` |
+| Latest handoff | `handoff-0877` |
+| Current status | `p6_t02_source_local_transport_characteristic_candidate_ready_for_checkpoint` |
+| Next recommended action | Run the one governed checkpoint for AJ-RT-20260726-003-001. Only after it commits may one fresh bounded P6-T03 Ontology Formalizer packet determine whether the proposal-only one-ray characteristic data fix any effective conformal class or prove a precise insufficiency without physical or metric promotion. |
 
 ## Authored stable definitions with generated current values
 
@@ -184,14 +184,14 @@ state, or latest handoff, those sources govern and this file is stale.
 
 | Burden ID | Required object | Current status | Control status | Mathematical status | Physical status | Promotion status | Updated at |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| `g_eff` | g_eff | `accepted` | `gate_review_completed` | `scoped_source_extension_geff_object` | `not_unscoped_lorentzian_metric_not_matter_coupling_not_einstein_equations` | `scoped_source_object_only` | `2026-07-26T09:33:36Z` |
+| `g_eff` | g_eff | `accepted` | `gate_review_completed` | `scoped_source_extension_geff_object` | `not_unscoped_lorentzian_metric_not_matter_coupling_not_einstein_equations` | `scoped_source_object_only` | `2026-07-26T10:56:59Z` |
 
 #### `g_eff` generated detail
 
-- Current blocking burden: Historical scoped source-extension g_eff object remains adopted only under declared source-side scope while P6-T01 defines a metric-free influence and characteristic target and shows unchanged P5 diagonal response does not select unique local influence
-- Current next evidence or action: Derive one source-local propagation relation principal polynomial or causal order with provenance orientation operational meaning covariance robustness and no target-metric import
-- Current failure/freeze criterion: Freeze inference from unchanged P5 diagonal flow or symmetric response to unique region influence unless materially new source-local law data theorem variation class or protected decision is supplied
-- Current evidence: `research_control/tasks/RT-20260726-002/artifacts/causal_characteristic_target_v1.tex`
+- Current blocking burden: Historical scoped source-extension g_eff object remains adopted only under declared source-side scope while P6-T02 adds one proposal-only local equation and derives one formal characteristic polynomial hyperbolicity half-space propagation ray exact response and preorder
+- Current next evidence or action: Determine whether the one-ray characteristic data fix any effective conformal class under declared regularity chronology and causality assumptions or prove a precise insufficiency without choosing scale
+- Current failure/freeze criterion: Freeze reuse of the same proposal-only V-ray data if P6-T03 adds no conformal reconstruction theorem precise insufficiency new source law variation class or protected decision
+- Current evidence: `research_control/tasks/RT-20260726-003/artifacts/source_local_transport_candidate_v1.tex`
 - Exact overread guard: `no_source_law_adoption;no_metricdata_e_adoption;no_unscoped_geff_adoption;no_matter_coupling_derivation;no_einstein_equations;no_benchmark_promotion;no_completed_derivation;no_global_theory_rejection;no_future_source_extension_impossibility`
 
 ### `matter_coupling`

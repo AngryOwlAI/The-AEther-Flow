@@ -1,0 +1,38 @@
+schema_id: "parent_child_conflict_review_v1"
+task_id: "RT-20260726-003"
+job_id: "AJ-RT-20260726-003-001"
+plan_task_id: "P6-T02"
+status: "resolved"
+review_rounds: 1
+child_outputs:
+  - "research_control/tasks/RT-20260726-003/artifacts/child_phys_math_p6_t02_source_local_transport.yaml"
+  - "research_control/tasks/RT-20260726-003/artifacts/child_phys_phil_p6_t02_source_local_transport.yaml"
+resolved_conflicts:
+  - conflict_id: "P6T02-CONFLICT-001"
+    mathematical_position: "P_x(xi)=xi(V_x) is a hyperbolic principal polynomial."
+    interpretive_risk: "Hyperbolicity could be overread as physical causality."
+    resolution: "Retain the calculation and label its dual ray a formal source characteristic candidate only."
+  - conflict_id: "P6T02-CONFLICT-002"
+    mathematical_position: "Positive V flow orients the exact solution."
+    interpretive_risk: "The flow parameter could be overread as physical time."
+    resolution: "Record orientation and parameterization as proposal-only source-extension assumptions."
+  - conflict_id: "P6T02-CONFLICT-003"
+    mathematical_position: "The characteristic set is invariant under V-to-fV for f positive."
+    interpretive_risk: "Normalization could be treated as irrelevant to the full dynamics."
+    resolution: "Separate ray invariance from the missing normalization law needed for the exact P5 parameter."
+  - conflict_id: "P6T02-CONFLICT-004"
+    mathematical_position: "Forward reachability is reflexive and transitive."
+    interpretive_risk: "It could be called a causal order globally."
+    resolution: "Call it a preorder and expose the closed-orbit antisymmetry counterexample."
+  - conflict_id: "P6T02-CONFLICT-005"
+    mathematical_position: "One scalar sector has one propagation ray."
+    interpretive_risk: "The ray could be treated as universal across matter or signals."
+    resolution: "Add the noncollinear two-sector determinant control and leave universality false."
+  - conflict_id: "P6T02-CONFLICT-006"
+    mathematical_position: "The source derivative has a first-order finite approximation."
+    interpretive_risk: "The bound could be called a metric reconstruction error."
+    resolution: "Limit the O(epsilon) bound to the source operator and mark target reconstruction error undefined."
+unresolved_conflicts: []
+fusion_authorized: true
+claim_boundary_preserved: true
+physics_promotion_authorized: false

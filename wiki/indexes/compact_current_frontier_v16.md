@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260726-002`
-- Latest handoff: `handoff-0876`
-- Current status: `p6_t01_metric_free_target_response_composition_and_two_site_nonselection_obstruction_ready_for_checkpoint`
+- Active task: `RT-20260726-004`
+- Latest handoff: `handoff-0878`
+- Current status: `p6_t02_single_eof_checkpoint_recovery_pass_ready_for_checkpoint`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260726-002`
-- Latest research handoff: `handoff-0876`
-- Latest research next action: Run the one governed checkpoint for AJ-RT-20260726-002-001. Only after it commits may one fresh bounded P6-T02 Candidate Constructor packet construct or precisely obstruct one source-derived propagation relation principal polynomial or causal order without reopening the frozen P5-diagonal inference or importing the target GR cone.
+- Latest research task: `RT-20260726-004`
+- Latest research handoff: `handoff-0878`
+- Latest research next action: Run the one governed cumulative checkpoint for AJ-RT-20260726-004-001. Only after it commits may one fresh bounded P6-T03 Ontology Formalizer packet determine whether the proposal-only one-ray characteristic data fix any effective conformal class or prove a precise insufficiency.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p6_t02_derive_or_obstruct_source_characteristic_structure`
-- Role family: `candidate-constructor@0.2.0`
+- Route ID: `v21_p6_t03_reconstruct_conformal_geometry_or_prove_insufficiency`
+- Role family: `ontology-formalizer@0.2.0`
 - Target milestone: `effective_metric_g_eff`
-- Milestone burden: Produce the first source-derived physical propagation structure.
+- Milestone burden: Advance from propagation structure to conformal geometry without yet choosing scale.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `14c171f666fc32f9caf840e555b74c06606b25dcfeb701ab94bd21ede86f7eb7`
-- JSON SHA-256: `1d5d7cd29cf1f05dbee1c4e0260719a9477397b1150da80bdfbaaf05dd887a94`
+- YAML SHA-256: `11f9649474763b0a7e025e6c05497f862c6afd477564bec94012e59239859f5c`
+- JSON SHA-256: `aea47b6f1d3a39de4a912214b765033ce5a30a2ab8b37b664d98830044ac062f`
 
 ## Authority Warning
 

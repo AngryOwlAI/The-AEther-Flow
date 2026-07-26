@@ -1,0 +1,77 @@
+validation_status: "PASS"
+task_id: "RT-20260726-004"
+task_type: "project_system_p6_t02_single_eof_blank_line_checkpoint_recovery"
+title: "Repair one P6-T02 EOF blank and recover the cumulative checkpoint"
+task_taxonomy:
+  schema_id: "v21_task_taxonomy_v1"
+  work_kind: "benchmark_or_recovery"
+  milestone: "effective_metric_g_eff"
+  candidate_family: "p6_t02_single_eof_checkpoint_recovery"
+  result_kind: "implemented_and_validated_or_precisely_blocked"
+  authority: "project_control"
+  scope: "project_system"
+status: "completed"
+created_at: "2026-07-26T12:26:56Z"
+updated_at: "2026-07-26T12:26:56Z"
+closed_at: "2026-07-26T12:26:56Z"
+parent_task_id: "RT-20260726-003"
+parent_handoff_id: "handoff-0877"
+supersedes_active_routing_task_id: "RT-20260726-003"
+current_decision_id: "DDR-20260726-004"
+current_job_id: "AJ-RT-20260726-004-001"
+role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260726-004"
+requires_human_gate: false
+human_authorization_note: "Generation 123 of the user-authorized recursive relay immutably routes one improve-project-system frame to remove exactly one final blank line and retry the cumulative P6-T02 checkpoint. It does not reexecute P6-T02 or execute P6-T03."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P6"
+  plan_task_id: "P6-T02"
+  recovery_for_plan_task_id: "P6-T02"
+  next_plan_task_id: "P6-T03"
+  next_plan_task_execution_authorized: false
+objective: "Under the sealed generation-123 dirty-state manifest, remove exactly one final newline from the checkpoint-named P6-T02 Director decision, prove all 63 non-target manifest paths and protected P6-T02 payloads remained exact at the repair boundary, synchronize normal control derivatives, and invoke one fresh governed cumulative checkpoint before P6-T03."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system EOF normalization and cumulative checkpoint recovery only; no scientific derivation milestone advances."
+route_label: "repair_p6_t02_single_eof_blank_line_and_checkpoint_v1"
+project_system_change_only: true
+dual_budget_category: "system_bearing"
+primary_budget: "project_system"
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+claim_boundary_id: "CB-V21-P6-T02-SINGLE-EOF-CHECKPOINT-RECOVERY-001"
+claim_boundary:
+  allowed_scope: "Delete exactly one terminal newline from the named P6-T02 Director decision, create bounded recovery evidence and ordinary control records, preserve all other P6-T02 scientific and authority bytes, and invoke one cumulative checkpoint."
+  immutable_predecessor_task: "RT-20260726-003"
+  immutable_predecessor_job: "AJ-RT-20260726-003-001"
+  immutable_predecessor_handoff: "handoff-0877"
+  immutable_route_sha256: "56b77727400bb9731c5f3d4656fb86ab790faab8b70509410f23b4fceaab1816"
+  dirty_state_manifest_sha256: "f39a2c8856ffc11442fc79648de2bcc67ff6767a70ea68b8f6dca566f7244767"
+  failed_checkpoint_receipt_sha256: "7b6c139a4b1f43557665e6856e09041447f08fb1fd4af5b4a083a13c61af416e"
+  failed_gate_evidence_sha256: "67fe7ce5b1678c0faa618457e783aded2c7fa684e770195ded793cabd5fb6330"
+  target_path_count: 1
+  non_target_path_count: 63
+  p6_t02_reexecuted: false
+  p6_t03_executed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+documentation_impact_id: "DI-RT-20260726-004-001"
+completion_id: "AJC-AJ-RT-20260726-004-001"
+output_artifacts:
+  - "research_control/tasks/RT-20260726-003/DDR-20260726-003.md"
+  - "research_control/tasks/RT-20260726-004/artifacts/validate_p6_t02_eof_checkpoint_recovery.py"
+  - "research_control/tasks/RT-20260726-004/artifacts/p6_t02_eof_checkpoint_recovery_receipt.json"
+  - "research_control/tasks/RT-20260726-004/jobs/completions/AJC-AJ-RT-20260726-004-001.yaml"
+  - "research_control/handoffs/handoff-0878.yaml"
+  - "research_control/handoffs/handoff-0878.md"
+closure_status: "p6_t02_single_eof_checkpoint_recovery_pass_ready_for_checkpoint"
+summary: "Generation 123 normalizes exactly one terminal blank line while preserving the P6-T02 scientific payload and cumulative transaction."
+next_recommended_action: "Invoke the one governed cumulative checkpoint. P6-T03 remains unexecuted until that checkpoint commits."
+project_improvement_signals: []
+notes: "This packet creates no ontology, source law, scientific evidence, Distance-to-GR movement, physical interpretation, promotion, proof, publication, push, or completed-derivation authority."
