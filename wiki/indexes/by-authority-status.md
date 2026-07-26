@@ -81,6 +81,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-V21-P4-T01-SOURCE-ASSUMPTION-AMBIGUITIES` `research_control/tasks/RT-20260720-030/artifacts/source_assumption_unresolved_ambiguities_v1.md`
 - `MD-V21-P4-T04-ONTOLOGY-REGIME-COMPARISON-REPORT-V1` `research_control/tasks/RT-20260721-002/artifacts/ontology_regime_comparison_report_v1.md`
 - `MD-V21-P4-T05-ONTOLOGY-REGIME-GATE-CHAIR-PARENT-FUSION-V1` `research_control/tasks/RT-20260724-004/artifacts/parent_fusion_notes_ontology_regime_gate_chair_review.md`
+- `MD-V21-P5-T05-PARENT-FUSION-CUBIC-AMPLITUDE-BACKGROUNDS-V1` `research_control/tasks/RT-20260725-012/artifacts/parent_fusion_notes_cubic_amplitude_backgrounds.md`
 - `TEX-EQSRC-CLOSURE-SOURCE-LAW-SMUGGLING-AUDIT-V1` `research_control/tasks/RT-20260718-017/artifacts/eqsrc_closure_source_law_smuggling_audit_v1.tex`
 - `TEX-EQSRC-CLOSURE-SOURCE-LAW-V2-SMUGGLING-AUDIT` `research_control/tasks/RT-20260718-019/artifacts/eqsrc_closure_source_law_v2_smuggling_audit.tex`
 - `TEX-EQSRC-CLOSURE-SOURCE-LAW-V3-REFUTER-STRESS` `research_control/tasks/RT-20260718-022/artifacts/eqsrc_closure_source_law_v3_refuter_stress.tex`
@@ -478,6 +479,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V21-P5-T02-PHI-SRC-SEMIFLOW-SEMANTICS-V1` `research_control/tasks/RT-20260725-007/artifacts/phi_src_semiflow_semantics_v1.tex`
 - `TEX-V21-P5-T03-CUBIC-AMPLITUDE-SOURCE-DYNAMICS-V1` `research_control/tasks/RT-20260725-008/artifacts/cubic_amplitude_source_dynamics_v1.tex`
 - `TEX-V21-P5-T04-CUBIC-AMPLITUDE-STRUCTURAL-ANALYSIS-V1` `research_control/tasks/RT-20260725-010/artifacts/cubic_amplitude_structural_analysis_v1.tex`
+- `TEX-V21-P5-T05-CUBIC-AMPLITUDE-BACKGROUND-PHASE-ANALYSIS-V1` `research_control/tasks/RT-20260725-012/artifacts/cubic_amplitude_background_phase_analysis_v1.tex`
 
 ## explanatory_noncanonical
 
@@ -1145,6 +1147,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-V21-P4-T01-SOURCE-ASSUMPTION-AMBIGUITIES` `wiki/markdown/md-v21-p4-t01-source-assumption-ambiguities.md`
 - `WIKI-MD-V21-P4-T04-ONTOLOGY-REGIME-COMPARISON-REPORT-V1` `wiki/markdown/md-v21-p4-t04-ontology-regime-comparison-report-v1.md`
 - `WIKI-MD-V21-P4-T05-ONTOLOGY-REGIME-GATE-CHAIR-PARENT-FUSION-V1` `wiki/markdown/md-v21-p4-t05-ontology-regime-gate-chair-parent-fusion-v1.md`
+- `WIKI-MD-V21-P5-T05-PARENT-FUSION-CUBIC-AMPLITUDE-BACKGROUNDS-V1` `wiki/markdown/md-v21-p5-t05-parent-fusion-cubic-amplitude-backgrounds-v1.md`
 - `WIKI-MD-VALIDATOR-OPERATOR-WORKFLOW-PUBLICATION-BRIEF` `wiki/markdown/md-validator-operator-workflow-publication-brief.md`
 - `WIKI-PDF-LEGACY-ONTOLOGY-AETHER-FLOW-CONSISTENCY` `wiki/pdf/pdf-legacy-ontology-aether-flow-consistency.md`
 - `WIKI-PDF-LEGACY-ONTOLOGY-AETHER-FLOW-DYNAMICS` `wiki/pdf/pdf-legacy-ontology-aether-flow-dynamics.md`
@@ -1575,6 +1578,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-V21-P5-T02-PHI-SRC-SEMIFLOW-SEMANTICS-V1` `wiki/tex/tex-v21-p5-t02-phi-src-semiflow-semantics-v1.md`
 - `WIKI-TEX-V21-P5-T03-CUBIC-AMPLITUDE-SOURCE-DYNAMICS-V1` `wiki/tex/tex-v21-p5-t03-cubic-amplitude-source-dynamics-v1.md`
 - `WIKI-TEX-V21-P5-T04-CUBIC-AMPLITUDE-STRUCTURAL-ANALYSIS-V1` `wiki/tex/tex-v21-p5-t04-cubic-amplitude-structural-analysis-v1.md`
+- `WIKI-TEX-V21-P5-T05-CUBIC-AMPLITUDE-BACKGROUND-PHASE-ANALYSIS-V1` `wiki/tex/tex-v21-p5-t05-cubic-amplitude-background-phase-analysis-v1.md`
 
 ## project_control
 

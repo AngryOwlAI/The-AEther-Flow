@@ -1,0 +1,86 @@
+schema_id: "parent_conflict_review_v1"
+artifact_id: "V21-P5-T05-PARENT-CONFLICT-REVIEW-CUBIC-AMPLITUDE-BACKGROUNDS-V1"
+task_id: "RT-20260725-012"
+job_id: "AJ-RT-20260725-012-001"
+plan_task_id: "P5-T05"
+status: "resolved"
+created_at: "2026-07-26T00:43:25Z"
+review_rounds: 1
+
+child_artifacts:
+  - execution_unit_id: "child_phys_math"
+    path: "research_control/tasks/RT-20260725-012/artifacts/child_phys_math_cubic_amplitude_backgrounds.yaml"
+    status: "completed"
+  - execution_unit_id: "child_phys_phil"
+    path: "research_control/tasks/RT-20260725-012/artifacts/child_phys_phil_cubic_amplitude_backgrounds.yaml"
+    status: "completed"
+
+shared_consensus:
+  - "The P5-T03 candidate and P5-T04 structural results remain exactly unchanged."
+  - "q_0 is the unique stationary background for gamma>0."
+  - "Positive and negative sign sectors are invariant but transient and reflection-related."
+  - "The exact admitted tangent solution decays off zero and is neutral at q_0."
+  - "q_0 is nonlinearly globally asymptotically stable with polynomial decay."
+  - "No nontrivial local reconstruction-suitable phase exists inside Q_amp."
+  - "The obstruction is candidate-specific and conservative source extensions remain open."
+
+resolved_conflicts:
+  - conflict_id: "P5T05-CONFLICT-LINEAR-NONLINEAR-001"
+    issue: "Whether the zero linearized eigenvalue makes q_0 unstable."
+    resolution: "Report neutral linearization and separately prove global nonlinear asymptotic stability with polynomial decay."
+    changed_output: true
+  - conflict_id: "P5T05-CONFLICT-PHASE-001"
+    issue: "Whether sign-invariant sectors are symmetry-broken phases."
+    resolution: "Classify them as transient invariant strata; the sole stationary state preserves Z2."
+    changed_output: true
+  - conflict_id: "P5T05-CONFLICT-PHYSICAL-MODES-001"
+    issue: "Whether the one tangent dimension is one physical degree of freedom."
+    resolution: "Count one admitted source-tangent mode while marking physical classification unavailable."
+    changed_output: true
+  - conflict_id: "P5T05-CONFLICT-CONSTRAINED-MODES-001"
+    issue: "Whether off-family directions should count as constrained modes."
+    resolution: "Mark Hamiltonian constraint counts not applicable and off-family dynamics undefined."
+    changed_output: true
+  - conflict_id: "P5T05-CONFLICT-ORIENTATION-001"
+    issue: "Whether forward parameter orientation establishes physical time."
+    resolution: "Retain mathematical source order only and block physical time, causality, and entropy readings."
+    changed_output: true
+  - conflict_id: "P5T05-CONFLICT-RECONSTRUCTION-001"
+    issue: "Whether failure of local modes rules out all reconstruction."
+    resolution: "Record one exact Q_amp obstruction and leave distinct conservative source extensions and the P5-T06 typed-map test open."
+    changed_output: true
+
+unique_math_contributions_preserved:
+  - "unique fixed-point and invariant-strata theorem"
+  - "exact time-dependent linearized equation and solution"
+  - "global nonlinear asymptotic-stability proof"
+  - "polynomial nonexponential decay classification"
+  - "gamma zero and negative parameter controls"
+  - "exact candidate-specific reconstruction-phase obstruction"
+
+unique_philosophy_contributions_preserved:
+  - "source background is not physical vacuum or target spacetime"
+  - "invariant sign sectors are not persistent symmetry-broken phases"
+  - "source-tangent dimension is not a physical mode count"
+  - "source order is not physical time orientation"
+  - "candidate-specific obstruction is not future-extension impossibility"
+
+unresolved_conflicts: []
+remaining_limitations:
+  - "Only the one-dimensional admitted tangent sector has dynamics."
+  - "No local characteristic operator or propagation spectrum exists in the current candidate."
+  - "No coarse-graining or reconstruction map is constructed in P5-T05."
+  - "No physical phase mode time geometry matter or downstream GR result is supplied."
+
+authority_flags:
+  canonical_ontology_modified: false
+  canonical_ontology_candidate_declared: false
+  source_law_adopted: false
+  source_law_rejected: false
+  physical_background_selected: false
+  physical_phase_established: false
+  physical_mode_count_established: false
+  physical_time_derived: false
+  reconstruction_selected: false
+  physics_promotion_authorized: false
+  proof_publication_or_push_authorized: false

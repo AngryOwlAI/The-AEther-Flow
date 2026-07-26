@@ -1,0 +1,254 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,longtable}
+
+\newcommand{\Qamp}{\mathcal Q_{\mathrm{amp}}}
+\newcommand{\PhiSrc}{\Phi_{\mathrm{src}}}
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{obstruction}{Scoped obstruction}
+\newtheorem{boundary}{Boundary}
+
+\title{P5-T05 Backgrounds, Phases, and Perturbative Modes of the
+Cubic-Amplitude Source Dynamics}
+\author{Candidate Constructor parent--child synthesis}
+\date{2026-07-25}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+\fbox{\parbox{0.92\linewidth}{
+\textbf{Status and authority.} This object is \texttt{draft/control},
+\texttt{proposal-only}, and \texttt{source-extension data}.  It analyzes the
+exact unchanged P5-T03 cubic-amplitude candidate using the P5-T04 structural
+results.  It is not a canonical-ontology candidate, an adopted or rejected
+source law, a physical phase, a physical mode count, or a source-to-target
+reconstruction.  Current adoption remains blocked while same-milestone
+continuation remains open.
+}}
+\end{center}
+
+\section{Source basis and candidate lock}
+
+Let
+\[
+ \mathcal A=\mathbb T^4,\qquad
+ e(\theta)=\sin\theta_1,\qquad
+ q_a=a e,\qquad
+ \Qamp=\{q_a:a\in\mathbb R\}.
+\]
+The exact unchanged candidate is
+\begin{equation}
+ X_\gamma(q_a)=-\gamma a^3e,\qquad
+ \frac{da}{d\lambda}=-\gamma a^3,\qquad
+ f^\gamma_\lambda(a)
+ =\frac{a}{\sqrt{1+2\gamma a^2\lambda}},
+ \label{eq:candidate}
+\end{equation}
+for \(\gamma>0\) and \(\lambda\geq0\).  P5-T04 proved that this is a
+one-global-mode family: independent patch amplitudes cannot be glued inside
+\(\Qamp\).  It also established identity-only declared redundancy, the
+non-gauge reflection \(a\mapsto-a\), and the admitted tangent multiplier.
+This packet neither alters those results nor supplies off-family dynamics.
+
+No target atlas, target metric, exact-GR solution, target covariance,
+benchmark fit, generated derivative, registry metadata, role authority, or
+validator result is used as a scientific premise.  The planned path
+\texttt{research\_control/support\_formalization/} is absent and supplies no
+authority.
+
+\section{Background and phase catalog}
+
+\begin{definition}[Source background]
+A stationary background for this candidate is a state \(q_{\bar a}\in\Qamp\)
+for which \(X_\gamma(q_{\bar a})=0\).  An exact trajectory background is a
+solution \(q_{a_b(\lambda)}\) of equation~\eqref{eq:candidate}.  A
+\emph{reconstruction-suitable phase} would additionally need source-defined
+local perturbative data capable of supporting a controlled coarse-graining
+or reconstruction map.  That last property is tested here; it is not assumed.
+\end{definition}
+
+\begin{theorem}[Unique stationary background and invariant sectors]
+\label{thm:backgrounds}
+For \(\gamma>0\), the unique stationary background is
+\[
+ B_0=q_0.
+\]
+The three strata
+\[
+ \Qamp^+=\{q_a:a>0\},\qquad
+ \Qamp^0=\{q_0\},\qquad
+ \Qamp^-=\{q_a:a<0\}
+\]
+are forward invariant.  Reflection exchanges \(\Qamp^+\) and
+\(\Qamp^-\), fixes \(\Qamp^0\), and the dynamics selects neither nonzero
+sign.  Every nonzero trajectory remains in its sign stratum and converges to
+\(B_0\).
+\end{theorem}
+
+\begin{proof}
+The fixed-point equation is \(-\gamma\bar a^3=0\), hence
+\(\bar a=0\).  Equation~\eqref{eq:candidate} preserves the sign of \(a\), and
+its denominator diverges as \(\lambda\to\infty\) for nonzero \(a\), so
+\(a(\lambda)\to0\).  Oddness of the flow gives the reflection statement.
+\end{proof}
+
+The nonzero strata are transient invariant sectors, not stationary
+thermodynamic or physical phases.  If Borel probabilities are adjoined as
+extra structure, the P5-T04 theorem supplies the sole invariant probability
+\(\delta_0\); the candidate itself selects no ensemble.
+
+\section{Linearized equations}
+
+Let \(a_b(\lambda)\) be an exact trajectory background with initial amplitude
+\(a_{b0}\).  Write
+\[
+ a(\lambda)=a_b(\lambda)+\epsilon\eta(\lambda)+O(\epsilon^2).
+\]
+Linearization gives
+\begin{equation}
+ \frac{d\eta}{d\lambda}
+ =-3\gamma a_b(\lambda)^2\eta,
+ \qquad
+ \eta(\lambda)
+ =\frac{\eta_0}
+ {(1+2\gamma a_{b0}^2\lambda)^{3/2}}.
+ \label{eq:linearized}
+\end{equation}
+This is the complete linearized equation on the admitted tangent line
+\(T_{q_a}\Qamp=\operatorname{span}\{e\}\).
+
+\begin{theorem}[Mode and stability classification]
+\label{thm:modes}
+For the admitted candidate domain \(\gamma>0\):
+\begin{enumerate}
+ \item about any nonzero trajectory background, the one admitted tangent mode
+ is strictly decaying for positive parameter;
+ \item about \(B_0\), the linearized generator is zero, so the one admitted
+ tangent mode is neutral at linear order;
+ \item \(B_0\) is nevertheless globally Lyapunov stable and globally
+ asymptotically attractive under the nonlinear flow;
+ \item the attraction is polynomial, not exponential; and
+ \item there are no admitted growing or oscillatory modes.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+Equation~\eqref{eq:linearized} is positive and strictly smaller in magnitude
+than its initial value when \(a_{b0}\neq0\) and \(\lambda>0\).  At
+\(a_{b0}=0\), it reduces to \(\eta' =0\).  For the nonlinear flow,
+\[
+ |f^\gamma_\lambda(a_0)|\leq |a_0|,\qquad
+ \lim_{\lambda\to\infty}f^\gamma_\lambda(a_0)=0,
+\]
+which proves stability and global attraction.  For \(a_0\neq0\),
+\[
+ |f^\gamma_\lambda(a_0)|
+ \sim (2\gamma\lambda)^{-1/2},
+\]
+so no uniform positive exponential decay rate exists.
+\end{proof}
+
+\begin{boundary}[What is and is not counted]
+The candidate has one admitted source-tangent degree of freedom.  Declared
+redundancy is identity-only, so there are zero gauge modes.  Hamiltonian
+constrained-mode counts are not applicable because no Hamiltonian formalism
+exists.  Off-family perturbations are excluded by the current state-space
+definition but have no supplied dynamics, so they are not counted as zero
+physical or constrained modes.  The one admitted mode is not thereby a
+physical mode.
+\end{boundary}
+
+\section{Symmetry, order, and parameter controls}
+
+The reflection symmetry is unbroken by the unique stationary background.
+The sign strata retain initial-condition labels, but neither is dynamically
+preferred and both decay to the symmetric fixed point.  Thus the current
+candidate supplies no persistent ordered or symmetry-broken stationary
+phase.
+
+The forward parameter and nonsurjective action define a mathematical
+source-order orientation only.  They do not establish physical time,
+causality, entropy production, or a time-oriented physical phase.
+
+\begin{longtable}{p{0.20\linewidth}p{0.53\linewidth}p{0.19\linewidth}}
+\toprule
+Parameter branch & Exact result & Disposition\\
+\midrule
+\endhead
+\(\gamma>0\) &
+One fixed point, global forward totality, nonexpanding admitted tangent
+dynamics, polynomial attraction to zero. &
+Admitted candidate branch.\\
+\(\gamma=0\) &
+Every amplitude is stationary and every tangent mode is neutral. &
+Degenerate identity control; excluded by P5-T03 nontriviality.\\
+\(\gamma<0\) &
+For nonzero \(a_0\), the solution blows up at
+\(\lambda_\ast=(2|\gamma|a_0^2)^{-1}\); \(B_0\) is nonlinearly unstable. &
+Fails global forward totality.\\
+Target-selected background &
+A background chosen because it resembles a GR solution or desired metric
+imports target information. &
+Fail closed: target import.\\
+Off-family mode claim &
+No update equation exists for perturbations outside
+\(\operatorname{span}\{e\}\). &
+Fail closed: undefined dynamics.\\
+\bottomrule
+\end{longtable}
+
+\section{Reconstruction-suitability test}
+
+The unique source-selected stationary background is \(B_0\), but its
+linearized operator on the complete admitted tangent space is the zero
+operator.  The nonzero exact trajectory backgrounds supply only one global
+decaying amplitude variation.  By the P5-T04 patching theorem, no independent
+local perturbations occur inside \(\Qamp\).  Consequently the current family
+contains no momentum-indexed spectrum, local characteristic operator,
+propagating sector, or source-defined resolution hierarchy from which a
+continuum reconstruction phase could be selected.
+
+\begin{obstruction}[No nontrivial reconstruction-suitable phase in
+\(\Qamp\)]
+\label{obs:reconstruction-phase}
+\texttt{OBST-P5T05-QAMP-NO-RECONSTRUCTION-PHASE-001}: within the exact
+unchanged P5-T03 candidate, no stationary nonzero phase exists, the sole
+stationary background has a degenerate zero linearized generator, and the
+only admitted nonzero-background perturbation is a single global decaying
+amplitude mode.  Together with the preserved patch-amplitude obstruction,
+these facts block identification of a nontrivial local
+reconstruction-suitable phase in this candidate family.
+\end{obstruction}
+
+This is a precise candidate-specific obstruction.  It does not prove that a
+conservative multi-mode, locally patchable, coupled, stochastic, or other
+source extension cannot supply backgrounds and local modes.  It does not
+reject the wider project or establish a no-go theorem.
+
+\section{Distance-to-GR disposition and next obligation}
+
+P5-T05 is complete for the exact candidate: its stationary backgrounds,
+trajectory sectors, linearized equations, admitted mode counts, nonlinear
+stability, symmetry behavior, and parameter controls are explicit.  The
+result narrows the source-ontology burden by recording the exact background
+and mode structure, while adding the scoped reconstruction-phase obstruction.
+
+P5-T06 may use this negative datum to attempt a fully typed source-only
+coarse-graining or reconstruction map with explicit domain, codomain, scale,
+information loss, and error.  It must not erase the obstruction or manufacture
+local degrees of freedom, a characteristic cone, or a target metric from the
+zero background.
+
+Canonical ontology or source-law adoption, a physical phase or mode count,
+physical time, \(M_{\mathrm{src}}\), \(g_{\mathrm{eff}}\), matter coupling,
+Einstein equations, exact-GR recovery, benchmark promotion, Gate Chair
+closure, proof publication, push, completed derivation, global theory
+rejection, and future source-extension impossibility remain blocked.
+
+\end{document}

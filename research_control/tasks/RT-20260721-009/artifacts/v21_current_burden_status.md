@@ -13,9 +13,9 @@ state, or latest handoff, those sources govern and this file is stale.
 | Field | Value |
 | --- | --- |
 | Schema | `v21_current_burden_status_v1` |
-| Source commit at generation | `0ad7210aa50b7ef3262cab425561924efdc9783a` |
-| Status generation time | `2026-07-25T23:30:00Z` |
-| Tracked task count | 1107 |
+| Source commit at generation | `dd7197d40794b529f06d805840d5e228ee0792c4` |
+| Status generation time | `2026-07-26T00:43:25Z` |
+| Tracked task count | 1108 |
 | Stable definition count | 10 |
 | Distance-to-GR burden count | 14 |
 | Historical authored-map commit | `2c5fb02fd8fff9b449ab10a328d7c881b13ef546` |
@@ -23,21 +23,21 @@ state, or latest handoff, those sources govern and this file is stale.
 
 ### Exact source hashes
 
-- `registries/DISTANCE_TO_GR_LEDGER.csv`: `0d3e50acacadd279b29b25aab73cf73c23dfe8e09896b7f86559e648f8f4bfbc`
-- `registries/RESEARCH_TASK_REGISTRY.csv`: `d229844169661a4e1cd62c4d765a1dbc5fcb1fead402330620b2264fbc18409f`
+- `registries/DISTANCE_TO_GR_LEDGER.csv`: `4de4829c385731325e5ef6bd69bbfdcee528a0d0955a6536a1f3f33cf8bc370e`
+- `registries/RESEARCH_TASK_REGISTRY.csv`: `1c9c85e54cc3c6ba69d1cf76f05a0e100038af7dfcfe71ecfda3892909e01192`
 - `research_control/design/gr_derivation_burden_map.md`: `8e9d44e3a18ecc8a2430a9c42497da3eb9911c2cf6cd714c1525c5d91551835e`
-- `research_control/handoffs/handoff-0871.yaml`: `2dddc947cb70d8833fffb471d71dce698db565b4b8da0d4d78edf8efab850389`
-- `research_control/program_state.yaml`: `10a11254a33c63fc954dd645e46f979056271ad691fcd14c9cedb2e6d0dc37f7`
+- `research_control/handoffs/handoff-0872.yaml`: `039adcf946f030747e59aac63093411a50a1c3ce179cc5b85553141a9403937d`
+- `research_control/program_state.yaml`: `b64e47fa0b9bc1cad82e641f55cff218c256b0653da10305b0db49ea623ac635`
 - `research_control/tasks/RT-20260721-009/artifacts/v21_burden_definitions_v1.yaml`: `67b8053baa60db4b11ee20582633d6279523d40b2ee853a6c570e2fdc1d113f5`
 
 ## Live control state
 
 | Field | Value |
 | --- | --- |
-| Active task | `RT-20260725-011` |
-| Latest handoff | `handoff-0871` |
-| Current status | `p5_t04_p10_live_view_convergence_recovery_pass_ready_for_checkpoint` |
-| Next recommended action | Run the one governed cumulative checkpoint for AJ-RT-20260725-011-001. Only after it commits may one fresh bounded P5-T05 Candidate Constructor packet identify source-defined backgrounds or phases and derive their perturbative modes, stability, and symmetry-breaking structure without target import. |
+| Active task | `RT-20260725-012` |
+| Latest handoff | `handoff-0872` |
+| Current status | `p5_t05_background_mode_precise_obstruction_pass_ready_for_checkpoint` |
+| Next recommended action | Run the one governed checkpoint for AJ-RT-20260725-012-001. Only after it commits may one fresh bounded P5-T06 Ontology Formalizer packet define a typed source-only coarse-graining or reconstruction map with explicit scale approximation information loss and error, or return a distinct precise map obstruction without target fitting. |
 
 ## Authored stable definitions with generated current values
 
@@ -52,14 +52,14 @@ state, or latest handoff, those sources govern and this file is stale.
 
 | Burden ID | Required object | Current status | Control status | Mathematical status | Physical status | Promotion status | Updated at |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| `source_ontology_primitives` | selected primitive source arena compact draft/control theory target proposal-only Phi_src semantics one cubic amplitude dynamics candidate and its candidate-specific structural audit | `accepted` | `accepted_as_source_extension_data` | `scoped_obstruction` | `no_physical_interpretation_authorized` | `scoped_source_object_only` | `2026-07-25T22:00:17Z` |
+| `source_ontology_primitives` | selected primitive source arena compact draft/control theory target proposal-only Phi_src semantics one cubic amplitude dynamics candidate its structural audit and its candidate-specific background-mode analysis | `accepted` | `accepted_as_source_extension_data` | `scoped_obstruction` | `no_physical_interpretation_authorized` | `scoped_source_object_only` | `2026-07-26T00:43:25Z` |
 
 #### `source_ontology_primitives` generated detail
 
-- Current blocking burden: generic source locality composition constraints conservation gauge probability backgrounds and source-to-target reconstruction
+- Current blocking burden: generic source locality composition constraints conservation gauge probability independent local modes viable reconstruction phase and source-to-target reconstruction
 - Current next evidence or action: canonical source-only boundary with explicit primitive debt no target import candidate-specific obstruction scope and no physical overread
 - Current failure/freeze criterion: P4-T05 reopening gate or a qualifying scoped obstruction that blocks all same-milestone continuation
-- Current evidence: `research_control/tasks/RT-20260725-010/artifacts/cubic_amplitude_structural_analysis_v1.tex`
+- Current evidence: `research_control/tasks/RT-20260725-012/artifacts/cubic_amplitude_background_phase_analysis_v1.tex`
 - Exact overread guard: `no_source_law_adoption;no_canonical_ontology_edit;no_metricdata_e_adoption;no_matter_coupling_adoption;no_benchmark_promotion;no_completed_derivation;no_global_theory_rejection;no_future_source_extension_impossibility`
 
 ### `source_equivalence_eqsrc`

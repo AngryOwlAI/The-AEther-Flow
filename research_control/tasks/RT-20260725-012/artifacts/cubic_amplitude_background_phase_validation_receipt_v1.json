@@ -1,0 +1,166 @@
+{
+  "artifact_sha256": {
+    "research_control/tasks/RT-20260725-012/artifacts/child_phys_math_cubic_amplitude_backgrounds.yaml": "2d6e522b42f6f5731666514e1dfb2b8726d7dbc5e9c2b7c517e3d4b0634f3662",
+    "research_control/tasks/RT-20260725-012/artifacts/child_phys_phil_cubic_amplitude_backgrounds.yaml": "401bdc6ea08b3361180fc1f5fe823b980e06d24d3e2baff6311082765f7349ad",
+    "research_control/tasks/RT-20260725-012/artifacts/cubic_amplitude_background_phase_analysis_v1.tex": "73895f1325fa83799c343e0c88d525e1d9e006254844b8f8bd7bb8fe2286f48d",
+    "research_control/tasks/RT-20260725-012/artifacts/cubic_amplitude_background_phase_catalog_v1.yaml": "d21e10c745d4da9691ad48fe4d5902e316667a3fd916d763c058c2e72796575b",
+    "research_control/tasks/RT-20260725-012/artifacts/cubic_amplitude_linearized_modes_v1.yaml": "14c74c808d75204d897e23c4554517a751aa2b45342e09ce241c41dcb6a10e1a",
+    "research_control/tasks/RT-20260725-012/artifacts/parent_conflict_review_cubic_amplitude_backgrounds.yaml": "499c2281778b03009139738a8ecc3465a69b94c30fba641fd5a3ee52509ea29b",
+    "research_control/tasks/RT-20260725-012/artifacts/parent_fusion_notes_cubic_amplitude_backgrounds.md": "84636c9c6e4b2a20b853759d6af831ebde256c792d6af939055860c8ba1e3020"
+  },
+  "candidate_id": "V21-P5-T03-CUBIC-AMPLITUDE-SOURCE-DYNAMICS-V1",
+  "candidate_unchanged": true,
+  "checks": [
+    {
+      "check_id": "file:cubic_amplitude_background_phase_catalog_v1.yaml",
+      "detail": "required regular artifact exists",
+      "status": "PASS"
+    },
+    {
+      "check_id": "file:cubic_amplitude_linearized_modes_v1.yaml",
+      "detail": "required regular artifact exists",
+      "status": "PASS"
+    },
+    {
+      "check_id": "file:cubic_amplitude_background_phase_analysis_v1.tex",
+      "detail": "required regular artifact exists",
+      "status": "PASS"
+    },
+    {
+      "check_id": "file:child_phys_math_cubic_amplitude_backgrounds.yaml",
+      "detail": "required regular artifact exists",
+      "status": "PASS"
+    },
+    {
+      "check_id": "file:child_phys_phil_cubic_amplitude_backgrounds.yaml",
+      "detail": "required regular artifact exists",
+      "status": "PASS"
+    },
+    {
+      "check_id": "file:parent_conflict_review_cubic_amplitude_backgrounds.yaml",
+      "detail": "required regular artifact exists",
+      "status": "PASS"
+    },
+    {
+      "check_id": "file:parent_fusion_notes_cubic_amplitude_backgrounds.md",
+      "detail": "required regular artifact exists",
+      "status": "PASS"
+    },
+    {
+      "check_id": "candidate_lock",
+      "detail": "the exact P5-T03 candidate remains unchanged",
+      "status": "PASS"
+    },
+    {
+      "check_id": "stationary_background_catalog",
+      "detail": "solving the fixed-point equation yields only q_0",
+      "status": "PASS"
+    },
+    {
+      "check_id": "invariant_strata",
+      "detail": "positive, zero, and negative amplitude strata are complete and invariant",
+      "status": "PASS"
+    },
+    {
+      "check_id": "flow_sign_and_attraction",
+      "detail": "finite controls preserve sign, contract amplitude, and approach zero",
+      "status": "PASS"
+    },
+    {
+      "check_id": "linearized_equation",
+      "detail": "the time-dependent tangent equation and exact solution are recorded",
+      "status": "PASS"
+    },
+    {
+      "check_id": "linearization_numeric",
+      "detail": "centered finite differences reproduce the exact tangent multiplier",
+      "status": "PASS"
+    },
+    {
+      "check_id": "mode_count_boundary",
+      "detail": "source, physical, gauge, constrained, and off-family counts remain distinct",
+      "status": "PASS"
+    },
+    {
+      "check_id": "growth_decay_zero_modes",
+      "detail": "the one admitted mode is decaying off zero and neutral at zero",
+      "status": "PASS"
+    },
+    {
+      "check_id": "nonlinear_stability",
+      "detail": "neutral linearization is separated from nonlinear polynomial attraction",
+      "status": "PASS"
+    },
+    {
+      "check_id": "polynomial_decay",
+      "detail": "sqrt(lambda)|a(lambda)| approaches the nonzero polynomial-decay limit",
+      "status": "PASS"
+    },
+    {
+      "check_id": "symmetry_and_orientation",
+      "detail": "reflection, ordering, and physical-time boundaries are explicit",
+      "status": "PASS"
+    },
+    {
+      "check_id": "parameter_regions",
+      "detail": "positive, zero, and negative coefficient controls have exact dispositions",
+      "status": "PASS"
+    },
+    {
+      "check_id": "precise_obstruction",
+      "detail": "the reconstruction-phase failure is decisive and candidate-specific",
+      "status": "PASS"
+    },
+    {
+      "check_id": "parent_child_synthesis",
+      "detail": "both internal perspectives return the same decisive result with no unresolved conflict",
+      "status": "PASS"
+    },
+    {
+      "check_id": "fused_tex_markers",
+      "detail": "the fused TeX source contains every decisive theorem and boundary",
+      "status": "PASS"
+    },
+    {
+      "check_id": "claim_boundary",
+      "detail": "the packet contains no adoption, physical, global-no-go, or downstream-GR promotion",
+      "status": "PASS"
+    }
+  ],
+  "claim_boundary_summary": "Candidate-specific draft/control background, mode, stability, and precise reconstruction-phase obstruction only; no canonical ontology or source-law adoption, physical background, phase, mode, time, reconstruction, downstream GR, promotion, global theory rejection, or future-extension impossibility authority.",
+  "finding_counts": {
+    "admitted_source_tangent_modes": 1,
+    "fail": 0,
+    "pass": 23,
+    "scoped_obstructions": 1,
+    "stationary_backgrounds": 1,
+    "theorems": 3,
+    "trajectory_background_families": 1,
+    "unresolved_conflicts": 0
+  },
+  "job_id": "AJ-RT-20260725-012-001",
+  "obstruction_id": "OBST-P5T05-QAMP-NO-RECONSTRUCTION-PHASE-001",
+  "obstruction_scope": "current candidate family only",
+  "plan_task_id": "P5-T05",
+  "result_kind": "precise_scoped_obstruction",
+  "result_status": "PASS",
+  "route_frozen": false,
+  "schema_id": "cubic_amplitude_background_phase_validation_receipt_v1",
+  "task_id": "RT-20260725-012",
+  "validator_ids": [
+    "candidate_lock",
+    "stationary_background_catalog",
+    "invariant_strata",
+    "linearized_equation",
+    "linearization_numeric",
+    "mode_count_boundary",
+    "growth_decay_zero_modes",
+    "nonlinear_stability",
+    "polynomial_decay",
+    "symmetry_and_orientation",
+    "parameter_regions",
+    "precise_obstruction",
+    "parent_child_synthesis",
+    "claim_boundary"
+  ]
+}

@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260725-011` and `handoff-0871`.
+`RT-20260725-012` and `handoff-0872`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260725-011` |
-| Latest handoff ID | `handoff-0871` |
-| Current status | `p5_t04_p10_live_view_convergence_recovery_pass_ready_for_checkpoint` |
+| Active task ID | `RT-20260725-012` |
+| Latest handoff ID | `handoff-0872` |
+| Current status | `p5_t05_background_mode_precise_obstruction_pass_ready_for_checkpoint` |
 | V16 completed | false |
-| Current route family | benchmark or recovery (project system) |
+| Current route family | integration or selection (scientific) |
 | Target derivation milestone | `source_ontology` |
-| Current burden | `source_ontology_primitives` |
-| Required next authority | After the governed cumulative checkpoint commits, one fresh bounded P5-T05 Candidate Constructor packet may identify source-defined backgrounds or phases and derive their perturbative modes, stability conditions, and symmetry-breaking structure. |
-| Next recommended action | Run the one governed cumulative checkpoint for AJ-RT-20260725-011-001. Only after it commits may one fresh bounded P5-T05 Candidate Constructor packet identify source-defined backgrounds or phases and derive their perturbative modes, stability, and symmetry-breaking structure without target import. |
+| Current burden | `source_ontology_primitives`; status: accepted |
+| Required next authority | After the governed checkpoint commits, one fresh bounded P5-T06 ontology-law-research packet may define and test a typed source-only coarse-graining or reconstruction map with declared scale approximation information loss and error, or return a distinct precise obstruction. |
+| Next recommended action | Run the one governed checkpoint for AJ-RT-20260725-012-001. Only after it commits may one fresh bounded P5-T06 Ontology Formalizer packet define a typed source-only coarse-graining or reconstruction map with explicit scale approximation information loss and error, or return a distinct precise map obstruction without target fitting. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260725-011` |
-| Latest research handoff ID | `handoff-0871` |
-| Latest research next action | Run the one governed cumulative checkpoint for AJ-RT-20260725-011-001. Only after it commits may one fresh bounded P5-T05 Candidate Constructor packet identify source-defined backgrounds or phases and derive their perturbative modes, stability, and symmetry-breaking structure without target import. |
+| Latest research task ID | `RT-20260725-012` |
+| Latest research handoff ID | `handoff-0872` |
+| Latest research next action | Run the one governed checkpoint for AJ-RT-20260725-012-001. Only after it commits may one fresh bounded P5-T06 Ontology Formalizer packet define a typed source-only coarse-graining or reconstruction map with explicit scale approximation information loss and error, or return a distinct precise map obstruction without target fitting. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260725-011/00_TASK.yaml`.
-- Active task objective: Repair only the stale P10-T08 migration-readiness expectation by recognizing the exact fully converged live burden view when its validator and receipt identities agree, preserve the historical P10 audit and all P5-T04 science and authority bytes, rerun every required gate, and invoke one governed cumulative checkpoint only on a full pass.
-- Latest handoff path: `research_control/handoffs/handoff-0871.yaml`.
-- Latest handoff summary: Generation 116 adds the exact fully converged P10-T08 live-view lifecycle branch, requiring a passing burden-status validator plus matching active-task, handoff, task-count, and both source hashes. Focused positive and fail-closed controls pass, the historical P10 audit outputs and all protected P5-T04 bytes remain exact, and P5-T05 remains unexecuted pending one governed cumulative checkpoint.
-- Current route family: benchmark or recovery (project system).
-- Next recommended action: Run the one governed cumulative checkpoint for AJ-RT-20260725-011-001. Only after it commits may one fresh bounded P5-T05 Candidate Constructor packet identify source-defined backgrounds or phases and derive their perturbative modes, stability, and symmetry-breaking structure without target import.
+- Active task path: `research_control/tasks/RT-20260725-012/00_TASK.yaml`.
+- Active task objective: Find source-defined backgrounds or phases for the exact unchanged cubic-amplitude candidate, derive and classify its linearized modes and nonlinear stability, test symmetry and parameter branches, and return a viable reconstruction phase or a precise scoped obstruction without target import.
+- Latest handoff path: `research_control/handoffs/handoff-0872.yaml`.
+- Latest handoff summary: P5-T05 completes the first background and perturbation analysis of the exact unchanged P5-T03 cubic-amplitude dynamics. q_0 is the unique stationary background, the two nonzero sign strata are transient and reflection-related, the exact admitted tangent mode decays along nonzero trajectories and is neutral at q_0, and nonlinear flow makes q_0 globally asymptotically stable with polynomial decay. The family has zero gauge modes, no classified physical modes, no applicable Hamiltonian constrained-mode count, and no defined off-family dynamics. A precise candidate-specific obstruction records the absence of a nontrivial local reconstruction-suitable phase while conservative source extensions remain open.
+- Current route family: integration or selection (scientific).
+- Next recommended action: Run the one governed checkpoint for AJ-RT-20260725-012-001. Only after it commits may one fresh bounded P5-T06 Ontology Formalizer packet define a typed source-only coarse-graining or reconstruction map with explicit scale approximation information loss and error, or return a distinct precise map obstruction without target fitting.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -81,30 +81,22 @@ This pilot separates source-side object status from evidence/precondition status
 
 Adopted source-only or source-extension objects:
 
-| Object | Status | Authority | Scope qualifier | Blocked overread | Downstream promotion authorized |
-| --- | --- | --- | --- | --- | --- |
-| M_src | adopted only as scoped source-only M_src object | `research_control/tasks/RT-20260614-134/artifacts/165_M_SRC_GSC_INTEGRATED_SOURCE_ONLY_ADOPTION_THEOREM_GATE_CHAIR_REVIEW.tex` | not_target_manifold_not_metric_not_gr_derivation | no_metricdata_e_adoption<br>no_geff_scope_expansion<br>no_matter_coupling_derivation<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | false |
-| g_eff | adopted only as scoped source-extension g_eff object | `research_control/tasks/RT-20260614-222/artifacts/251_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_GEFF_CANDIDATE_SCOPED_SOURCE_EXTENSION_ADOPTION_GATE_CHAIR_REVIEW.tex` | not_unscoped_lorentzian_metric_not_matter_coupling_not_einstein_equations | no_source_law_adoption<br>no_metricdata_e_adoption<br>no_unscoped_geff_adoption<br>no_matter_coupling_derivation<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | false |
+No adopted source-only or source-extension objects are listed.
 
 Scoped accepted evidence/preconditions:
 
-| Evidence or precondition | Status | Supports target | Does not establish | Authority |
-| --- | --- | --- | --- | --- |
-| matter_coupling burden evidence/preconditions | accepted only as scoped source-extension evidence/precondition | matter-semantics and matter-coupling continuation only | no_source_law_adoption<br>no_metricdata_e_adoption<br>no_geff_scope_expansion<br>no_coupling_law_adoption<br>no_matter_coupling_derivation<br>no_matter_coupling_adoption<br>no_stress_energy_semantics<br>no_stress_energy_tensor<br>no_matter_action<br>no_detector_semantics<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation<br>no_future_source_extension_impossibility<br>no_global_theory_rejection | `research_control/tasks/RT-20260702-064/artifacts/source_certificate_operation_laws_v1.tex` |
+No accepted evidence or precondition entries are listed.
 
 Open or blocked physical targets:
 
-| Physical target | Status | Missing burden or authority | Evidence not to overread | Next lawful route or evidence |
-| --- | --- | --- | --- | --- |
-| matter_coupling | accepted_as_scoped_evidence_precondition | PositiveMSProfile_v1 RR_ETransportCompletenessOrInvarianceLaw_v1 NarrowMSCertEq_v1 SourceCertificateAlgebraPrimitives_v1 and SourceCertificateOperationLaws_v1 are accepted or drafted only as scoped source-extension evidence/preconditions evidence-status draft/control certificate primitives or draft/control operation-law support under declared source-side and fail-closed scope while no source-law adoption no RR_ETransportCompletenessOrInvarianceLaw_v1 adoption no PositiveMSProfile_v1 adoption no SourceMatterSemanticsAdoptionReadinessLaw_v1 law adoption no source-extension data adoption beyond exact scoped gate result no matter-semantics adoption no detector-semantics adoption no coupling-law adoption no matter-coupling derivation no stress-energy semantics no matter action no MetricData(E) adoption no g_eff scope expansion no Einstein-equation premise no benchmark fit and no downstream promotion occurred | no_source_law_adoption<br>no_metricdata_e_adoption<br>no_geff_scope_expansion<br>no_coupling_law_adoption<br>no_matter_coupling_derivation<br>no_matter_coupling_adoption<br>no_stress_energy_semantics<br>no_stress_energy_tensor<br>no_matter_action<br>no_detector_semantics<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation<br>no_future_source_extension_impossibility<br>no_global_theory_rejection | research_control/tasks/RT-20260702-064/artifacts/source_certificate_operation_laws_v1.tex |
-| einstein_equations | not_started | dynamics action or variation | no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | research_control/program_state.yaml |
-| benchmark_promotion | blocked | all upstream derivation burdens | no_benchmark_promotion<br>no_benchmark_gate_chair_closure<br>no_completed_derivation | research_control/program_state.yaml |
+No open or blocked physical target entries are listed.
 
 Forbidden overreads:
 
-- three-tier summary as physics proof
-- accepted evidence/preconditions as adopted objects
-- current-frontier rendering as downstream promotion
+- unique source fixed point as physical vacuum or target spacetime
+- one source-tangent dimension as physical mode count
+- candidate-specific phase obstruction overread beyond exact candidate scope or as closing conservative source-extension continuation
+- validation or checkpoint as theorem proof adoption or promotion
 
 ## Matter-Coupling Boundary
 
@@ -282,7 +274,7 @@ preserves the raw ledger `current_status` field for continuity.
 
 | Burden ID | Milestone | Reader-facing status | Legacy status | Control status | Mathematical status | Physical status | Promotion status | Overread guard | Last evidence |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| `source_ontology_primitives` | `source_ontology` | draft source-ontology primitives only | accepted | accepted_as_source_extension_data | scoped_obstruction | no_physical_interpretation_authorized | scoped_source_object_only | no_source_law_adoption<br>no_canonical_ontology_edit<br>no_metricdata_e_adoption<br>no_matter_coupling_adoption<br>no_benchmark_promotion<br>no_completed_derivation<br>no_global_theory_rejection<br>no_future_source_extension_impossibility | `research_control/tasks/RT-20260725-010/artifacts/cubic_amplitude_structural_analysis_v1.tex` |
+| `source_ontology_primitives` | `source_ontology` | draft source-ontology primitives only | accepted | accepted_as_source_extension_data | scoped_obstruction | no_physical_interpretation_authorized | scoped_source_object_only | no_source_law_adoption<br>no_canonical_ontology_edit<br>no_metricdata_e_adoption<br>no_matter_coupling_adoption<br>no_benchmark_promotion<br>no_completed_derivation<br>no_global_theory_rejection<br>no_future_source_extension_impossibility | `research_control/tasks/RT-20260725-012/artifacts/cubic_amplitude_background_phase_analysis_v1.tex` |
 | `source_equivalence_eqsrc` | `source_equivalence_eqsrc` | draft source-equivalence object only | draft object exists | draft_control_object_exists | general_equivalence_theorem_missing | downstream_gr_blocked | draft_control_only | no_source_law_adoption<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/program_state.yaml` |
 | `retain_h` | `source_equivalence_eqsrc` | blocked by missing primitive | blocked by missing primitive | blocked | primitive_missing | no_retention_law_adoption | none | no_source_law_adoption<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/program_state.yaml` |
 | `gen_h` | `source_equivalence_eqsrc` | blocked by missing primitive | blocked by missing primitive | blocked | primitive_missing | no_generator_law_adoption | none | no_source_law_adoption<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/program_state.yaml` |
@@ -302,7 +294,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run the one governed cumulative checkpoint for AJ-RT-20260725-011-001. Only after it commits may one fresh bounded P5-T05 Candidate Constructor packet identify source-defined backgrounds or phases and derive their perturbative modes, stability, and symmetry-breaking structure without target import.
+Run the one governed checkpoint for AJ-RT-20260725-012-001. Only after it commits may one fresh bounded P5-T06 Ontology Formalizer packet define a typed source-only coarse-graining or reconstruction map with explicit scale approximation information loss and error, or return a distinct precise map obstruction without target fitting.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -320,41 +312,40 @@ Layer status summary:
 
 | Status | Count | Meaning |
 | --- | --- | --- |
-| `PASS` | 2 | receipt complete |
-| `PENDING` | 5 | open item; evidence must explain why |
+| `PASS` | 5 | receipt complete |
+| `PASS_WITH_WARNINGS` | 1 | receipt complete with stated warnings |
+| `PENDING` | 1 | open item; evidence must explain why |
 
 Validation layers:
 
 | Validation layer | Status | Meaning | Evidence |
 | --- | --- | --- | --- |
-| `pre_execution` | PASS | receipt complete | Generation 116 validated, atomically claimed, and consumed its exact immutable recovery route once. |
-| `completion_internal` | PASS | receipt complete | The tracked receipt proves the exact converged branch, eleven focused regressions, historical P10 preservation, and protected P5-T04 preservation. |
-| `post_write` | PENDING | open item; evidence must explain why | Integrated control, documentation, signal, memory, and repository-test validation remains before checkpoint. |
-| `post_checkpoint` | PENDING | open item; evidence must explain why | One governed cumulative checkpoint remains; P5-T05 is not executed before it. |
-| `renderer` | PENDING | open item; evidence must explain why | Tracked frontier, task-index, graph, registry, and wiki derivatives remain to be synchronized. |
-| `memory_bootstrap` | PENDING | open item; evidence must explain why | Tracked memory synchronization remains before checkpoint. |
-| `claim_language_linter` | PENDING | open item; evidence must explain why | Integrated research-control validation remains before checkpoint. |
+| `pre_execution` | PASS | receipt complete | Generation 117 validated and atomically claimed the exact immutable P5-T05 route before consuming its one worker invocation.<br>The generation-116 checkpoint commit and clean repository dependency boundary were verified before execution.<br>Memory preflight refreshed retrieval-only state and the registered P5-T04 source was inspected. |
+| `completion_internal` | PASS | receipt complete | Both child perspectives completed and the parent synthesis resolved all recorded tensions.<br>The task-local validator passes 23 checks. |
+| `post_write` | PASS | receipt complete | Scratch TeX, renderer, memory, documentation, signal, claim-language, research-control, selected-test, and whitespace gates pass. |
+| `post_checkpoint` | PENDING | open item; evidence must explain why | One governed checkpoint remains to be invoked in generation 117. |
+| `renderer` | PASS | receipt complete | Current frontier, compact frontier, task index, dependency graph, claim graph, and burden-status derivatives are fresh. |
+| `memory_bootstrap` | PASS | receipt complete | Tracked memory bootstrap and validate-only pass after source registration. |
+| `claim_language_linter` | PASS_WITH_WARNINGS | receipt complete with stated warnings | Changed-source claim-language validation has zero hard failures. |
 
 Authorization layers:
 
 | Authorization field | Value | Meaning |
 | --- | --- | --- |
 | `protected_scoped_gate_review_authorized` | false (not authorized) | scoped review authority only |
-| `protected_scoped_gate_review_scope` | not authorized; ordinary project-system validator recovery only | exact scope of protected review authority |
-| `protected_scoped_gate_review_authority_source_path` | none | tracked source for scoped review authority |
 | `downstream_physics_promotion_authorized` | false (not authorized) | authorizes downstream physics promotion only when true |
-| `downstream_physics_promotion_authority_source_path` | none | tracked source for downstream promotion authority |
 | `benchmark_promotion_authorized` | false (not authorized) | authorizes benchmark promotion only when true |
-| `benchmark_promotion_authority_source_path` | none | tracked source for benchmark authority |
 | `completed_derivation_authorized` | false (not authorized) | authorizes completed-derivation claim only when true |
-| `completed_derivation_authority_source_path` | none | tracked source for completed-derivation authority |
 | `Gate_Chair_verdict_authorized` | False | extension authorization field |
 | `canonical_ontology_edit_authorized` | False | extension authorization field |
 | `external_outreach_authorized` | False | extension authorization field |
 | `external_publication_authorized` | False | extension authorization field |
 | `global_no_go_claim_authorized` | False | extension authorization field |
 | `ontology_selection_authorized` | False | extension authorization field |
+| `physical_background_or_phase_claim_authorized` | False | extension authorization field |
 | `physical_interpretation_establishment_authorized` | False | extension authorization field |
+| `physical_mode_count_claim_authorized` | False | extension authorization field |
+| `physical_time_claim_authorized` | False | extension authorization field |
 | `proof_authority` | False | extension authorization field |
 | `publication_authorized` | False | extension authorization field |
 | `push_authorized` | False | extension authorization field |
@@ -363,9 +354,9 @@ Authorization layers:
 
 Legacy compatibility records:
 
-- active task: `RT-20260725-011`;
-- latest handoff: `handoff-0871`;
-- current status: `p5_t04_p10_live_view_convergence_recovery_pass_ready_for_checkpoint`;
+- active task: `RT-20260725-012`;
+- latest handoff: `handoff-0872`;
+- current status: `p5_t05_background_mode_precise_obstruction_pass_ready_for_checkpoint`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -375,8 +366,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0871.yaml`
-- `research_control/tasks/RT-20260725-011/00_TASK.yaml`
+- `research_control/handoffs/handoff-0872.yaml`
+- `research_control/tasks/RT-20260725-012/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -392,7 +383,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0871*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0872*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

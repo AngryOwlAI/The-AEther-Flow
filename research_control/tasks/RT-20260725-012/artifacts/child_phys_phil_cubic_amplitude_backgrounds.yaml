@@ -1,0 +1,81 @@
+schema_id: "parent_child_output_v1"
+artifact_id: "V21-P5-T05-CHILD-PHYS-PHIL-CUBIC-AMPLITUDE-BACKGROUNDS-V1"
+execution_unit_id: "child_phys_phil"
+perspective: "physicist_philosopher"
+status: "completed"
+task_id: "RT-20260725-012"
+job_id: "AJ-RT-20260725-012-001"
+plan_task_id: "P5-T05"
+created_at: "2026-07-26T00:43:25Z"
+target_derivation_milestone: "source_ontology"
+milestone_burden: "Supply the background and perturbation data needed for effective geometry."
+
+scientific_status:
+  authority: "science_draft"
+  status_label: "draft/control"
+  candidate_status: "proposal-only"
+  material_class: "source-extension data"
+  adoption_status: "blocked_adoption_open_continuation"
+  canonical_ontology_candidate: false
+  adopted: false
+  rejected: false
+  human_gated_for_adoption: true
+  physics_promotion_authorized: false
+
+interpretive_findings:
+  background:
+    legitimate_statement: "q_0 is the unique stationary source background of the exact candidate."
+    blocked_overread: "It is not thereby a physical vacuum, spacetime, or preferred GR background."
+  phase:
+    legitimate_statement: "Positive and negative amplitudes are invariant transient sign sectors related by reflection."
+    blocked_overread: "They are not persistent ordered thermodynamic phases and neither is dynamically selected."
+  stability:
+    legitimate_statement: "q_0 is nonlinearly globally asymptotically stable even though its linearized mode is neutral."
+    blocked_overread: "The candidate has no exponential spectral gap or physical relaxation rate."
+  modes:
+    legitimate_statement: "The admitted tangent line has one decaying mode along nonzero trajectories and one zero mode at q_0."
+    blocked_overread: "This is not a physical polarization, particle, gauge-fixed mode, or GR mode count."
+  orientation:
+    legitimate_statement: "The forward action has mathematical source-order orientation."
+    blocked_overread: "It does not derive physical time, causality, entropy, or an arrow of time."
+  reconstruction:
+    legitimate_statement: "The exact family has no nontrivial local reconstruction-suitable phase."
+    blocked_overread: "This candidate-specific obstruction is not future source-extension impossibility or global theory rejection."
+
+parent_conflict_recommendations:
+  - conflict_id: "P5T05-PHIL-ZERO-MODE"
+    issue: "A zero linear eigenvalue could be mislabeled instability or marginal physical excitation."
+    recommendation: "Separate neutral linearization from global nonlinear polynomial attraction."
+  - conflict_id: "P5T05-PHIL-PHASE"
+    issue: "Sign-invariant sectors could be mislabeled symmetry-broken phases."
+    recommendation: "Call them transient invariant strata and record that the unique fixed point preserves reflection."
+  - conflict_id: "P5T05-PHIL-MODE-COUNT"
+    issue: "Excluded off-family directions could be counted as zero physical or constrained modes."
+    recommendation: "Mark physical modes unclassified, Hamiltonian constraints not applicable, and off-family dynamics undefined."
+  - conflict_id: "P5T05-PHIL-TIME"
+    issue: "Forward source order could be promoted to physical time orientation."
+    recommendation: "Preserve the P5-T02 source-order boundary."
+  - conflict_id: "P5T05-PHIL-RECONSTRUCTION"
+    issue: "The absence of local modes could be generalized beyond Q_amp."
+    recommendation: "Bind the obstruction to the exact unchanged candidate and keep conservative extensions open."
+
+alternatives_not_ruled_out:
+  - "multi-mode or locally patchable source configuration spaces"
+  - "coupled source fields with nonzero stationary backgrounds"
+  - "source-defined stochastic or measure-valued phases"
+  - "other nonlinear generators with propagating perturbative sectors"
+  - "later source-only coarse-graining candidates that preserve this obstruction"
+
+prohibited_overreads:
+  - "q_0 is physical vacuum or Minkowski spacetime"
+  - "sign sectors spontaneously break a physical symmetry"
+  - "the admitted amplitude mode is a physical degree of freedom"
+  - "forward parameter is physical time"
+  - "off-family perturbations are proved absent"
+  - "all conservative source extensions are impossible"
+  - "M_src g_eff matter coupling Einstein equations or exact-GR recovery follows"
+
+candidate_constructor_result:
+  result_type: "precise_obstruction"
+  no_fog_check: true
+  claim_boundary_preserved: true

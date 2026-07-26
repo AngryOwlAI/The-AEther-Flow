@@ -1,0 +1,67 @@
+schema_id: "parent_child_output_v1"
+artifact_id: "V21-P5-T05-CHILD-PHYS-MATH-CUBIC-AMPLITUDE-BACKGROUNDS-V1"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+task_id: "RT-20260725-012"
+job_id: "AJ-RT-20260725-012-001"
+plan_task_id: "P5-T05"
+created_at: "2026-07-26T00:43:25Z"
+target_derivation_milestone: "source_ontology"
+milestone_burden: "Supply the background and perturbation data needed for effective geometry."
+
+candidate_lock:
+  unchanged: true
+  state_family: "Q_amp={q_a=a sin(theta_1)}"
+  generator: "X_gamma(q_a)=-gamma a^3 sin(theta_1)"
+  flow: "f_lambda(a)=a/sqrt(1+2 gamma a^2 lambda)"
+
+derived_results:
+  - result_id: "P5T05-MATH-BACKGROUNDS"
+    type: "theorem_with_hypotheses_and_proof"
+    statement: "For gamma>0, q_0 is the unique stationary state; the positive, zero, and negative amplitude strata are forward invariant, and every nonzero orbit converges to q_0."
+    consequence: "complete stationary and trajectory background catalog"
+  - result_id: "P5T05-MATH-LINEARIZATION"
+    type: "theorem_with_hypotheses_and_proof"
+    statement: "Along an exact background, eta'=-3 gamma a_b^2 eta and eta=eta0(1+2 gamma a_b0^2 lambda)^(-3/2)."
+    consequence: "one decaying admitted mode off zero and one zero linear mode at q_0"
+  - result_id: "P5T05-MATH-NONLINEAR-STABILITY"
+    type: "theorem_with_hypotheses_and_proof"
+    statement: "q_0 is globally Lyapunov stable and globally asymptotically attractive with polynomial rather than exponential decay."
+    consequence: "resolves the zero-eigenvalue degeneracy without claiming linear exponential stability"
+  - result_id: "P5T05-MATH-PARAMETER-CONTROLS"
+    type: "finite_model"
+    statement: "gamma=0 is a neutral identity control; gamma<0 has finite positive-parameter blowup and nonlinear instability."
+    consequence: "gamma>0 is the exact total nontrivial candidate region"
+
+mode_classification:
+  admitted_source_tangent_dimension: 1
+  nonzero_gauge_mode_count: 0
+  physical_mode_count: "not_classified"
+  Hamiltonian_constrained_mode_count: "not_applicable"
+  off_family_mode_count: "not_defined"
+  admitted_growing_mode_count_gamma_positive: 0
+
+scoped_obstruction:
+  obstruction_id: "OBST-P5T05-QAMP-NO-RECONSTRUCTION-PHASE-001"
+  exact_failure: "The sole stationary background has zero linearized generator and the candidate has only one global amplitude mode with no independent local perturbations."
+  global_no_go_claimed: false
+  future_source_extensions_open: true
+
+controls:
+  fixed_point_control: "solve -gamma a^3=0"
+  tangent_control: "differentiate the exact flow with respect to a_b0"
+  nonlinear_control: "|f_lambda(a0)|<=|a0| and f_lambda(a0)->0"
+  nonexponential_control: "sqrt(lambda)|f_lambda(a0)| has a nonzero limit"
+  negative_gamma_control: "lambda_star=1/(2 |gamma| a0^2)"
+
+limitations:
+  - "The complete mode count is only for the one-dimensional admitted tangent sector."
+  - "No dynamics exists for off-family perturbations."
+  - "No local characteristic operator or propagating spectrum is supplied."
+  - "No physical mode, phase, time, or reconstruction is established."
+
+candidate_constructor_result:
+  result_type: "precise_obstruction"
+  no_fog_check: true
+  claim_boundary_preserved: true

@@ -1,0 +1,96 @@
+schema_id: "cubic_amplitude_linearized_modes_v1"
+artifact_id: "V21-P5-T05-CUBIC-AMPLITUDE-LINEARIZED-MODES-V1"
+task_id: "RT-20260725-012"
+job_id: "AJ-RT-20260725-012-001"
+plan_task_id: "P5-T05"
+status: "completed"
+status_label: "draft/control"
+candidate_unchanged: true
+
+linearization:
+  background_solution: "a_b(lambda)=a_b0/sqrt(1+2 gamma a_b0^2 lambda)"
+  perturbation_ansatz: "a(lambda)=a_b(lambda)+epsilon eta(lambda)+O(epsilon^2)"
+  equation: "d eta/dlambda=-3 gamma a_b(lambda)^2 eta"
+  solution: "eta(lambda)=eta0/(1+2 gamma a_b0^2 lambda)^(3/2)"
+  tangent_space: "span{sin(theta_1)}"
+  reproducibility_method: "differentiate the exact flow with respect to initial amplitude"
+
+mode_counts:
+  admitted_source_tangent_dimension: 1
+  physical_modes:
+    count: "not_classified"
+    reason: "the candidate supplies no physical phase space or physical interpretation"
+  gauge_modes:
+    count: 0
+    reason: "declared redundancy contains identity arrows only"
+  Hamiltonian_constrained_modes:
+    count: "not_applicable"
+    reason: "no Hamiltonian formalism is instantiated"
+  off_family_modes:
+    count: "not_defined"
+    reason: "the current state space excludes them and supplies no off-family dynamics"
+  around_nonzero_trajectory:
+    growing: 0
+    decaying: 1
+    zero: 0
+    oscillatory: 0
+  around_zero_stationary_background:
+    growing: 0
+    decaying: 0
+    zero: 1
+    oscillatory: 0
+
+stability:
+  zero_background:
+    linear: "neutral"
+    nonlinear: "globally_asymptotically_stable"
+    Lyapunov_stable: true
+    globally_attractive: true
+    exponentially_stable: false
+    asymptotic_rate: "|a(lambda)|~(2 gamma lambda)^(-1/2) for nonzero initial amplitude"
+  nonzero_trajectory:
+    admitted_tangent_nonexpanding: true
+    admitted_tangent_strictly_decaying_for_positive_parameter: true
+    multiplier: "(1+2 gamma a_b0^2 lambda)^(-3/2)"
+
+parameter_regions:
+  - region_id: "P5T05-GAMMA-POSITIVE"
+    condition: "gamma>0"
+    candidate_admitted: true
+    forward_total: true
+    zero_background_nonlinear_stability: "globally_asymptotically_stable"
+    mode_behavior: "nonexpanding; strict decay off zero"
+  - region_id: "P5T05-GAMMA-ZERO"
+    condition: "gamma=0"
+    candidate_admitted: false
+    forward_total: true
+    zero_background_nonlinear_stability: "neutral member of a continuum of fixed points"
+    mode_behavior: "all admitted modes neutral"
+    failure_reason: "fails P5-T03 nontriviality"
+  - region_id: "P5T05-GAMMA-NEGATIVE"
+    condition: "gamma<0"
+    candidate_admitted: false
+    forward_total: false
+    zero_background_nonlinear_stability: "unstable"
+    mode_behavior: "nonlinear growth and finite positive-parameter blowup off zero"
+    blowup_parameter: "lambda_star=1/(2 |gamma| a0^2)"
+    failure_reason: "fails global forward totality"
+
+finding_counts:
+  stationary_backgrounds: 1
+  trajectory_background_families: 1
+  invariant_strata: 3
+  admitted_source_tangent_modes: 1
+  nonzero_gauge_modes: 0
+  admitted_growing_modes_for_gamma_positive: 0
+  scoped_obstructions: 1
+  unresolved_conflicts: 0
+
+forbidden_overreads:
+  - "the admitted source-tangent mode is a physical propagating degree of freedom"
+  - "the zero linearized eigenvalue is an instability"
+  - "nonlinear attraction is exponential"
+  - "sign preservation is spontaneous symmetry breaking"
+  - "forward source order is physical time orientation"
+  - "off-family modes have been proved absent"
+  - "the scoped reconstruction-phase obstruction is a global no-go theorem"

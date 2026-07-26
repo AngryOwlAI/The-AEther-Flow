@@ -1,0 +1,108 @@
+schema_id: "cubic_amplitude_background_phase_catalog_v1"
+artifact_id: "V21-P5-T05-CUBIC-AMPLITUDE-BACKGROUND-PHASE-CATALOG-V1"
+task_id: "RT-20260725-012"
+job_id: "AJ-RT-20260725-012-001"
+plan_task_id: "P5-T05"
+status: "completed"
+status_label: "draft/control"
+candidate_status: "proposal-only"
+material_class: "source-extension data"
+adoption_status: "blocked_adoption_open_continuation"
+candidate_unchanged: true
+
+source_candidate:
+  candidate_id: "V21-P5-T03-CUBIC-AMPLITUDE-SOURCE-DYNAMICS-V1"
+  state_family: "Q_amp={q_a=a sin(theta_1) | a in R}"
+  generator: "X_gamma(q_a)=-gamma a^3 sin(theta_1)"
+  flow: "f_lambda(a)=a/sqrt(1+2 gamma a^2 lambda)"
+  coefficient_domain: "gamma>0"
+  parameter_domain: "lambda>=0"
+  declared_redundancy: "identity arrows only"
+
+background_definition:
+  stationary: "q_a is stationary exactly when X_gamma(q_a)=0"
+  trajectory: "q_[a_b(lambda)] with a_b(lambda)=a_b0/sqrt(1+2 gamma a_b0^2 lambda)"
+  reconstruction_suitable: "a source-defined background with local perturbative data sufficient for a controlled later coarse-graining or reconstruction test"
+
+stationary_backgrounds:
+  count: 1
+  entries:
+    - background_id: "P5T05-B0"
+      state: "q_0"
+      amplitude: 0
+      fixed: true
+      reflection_invariant: true
+      nonlinear_stability: "globally_asymptotically_stable"
+      linear_stability: "neutral_zero_mode"
+      decay_class: "polynomial_nonlinear"
+      reconstruction_suitability: "precisely_obstructed"
+      source_selection_basis: "unique root of -gamma a^3=0"
+
+trajectory_backgrounds:
+  family_id: "P5T05-BTRAJ"
+  initial_amplitude_domain: "a_b0 in R"
+  solution: "a_b(lambda)=a_b0/sqrt(1+2 gamma a_b0^2 lambda)"
+  nonzero_members_stationary: false
+  nonzero_members_asymptote_to: "P5T05-B0"
+  source_selection_preference: "none among nonzero initial amplitudes"
+
+invariant_strata:
+  - stratum_id: "P5T05-QPLUS"
+    amplitude_domain: "a>0"
+    forward_invariant: true
+    stationary_phase: false
+    reflection_partner: "P5T05-QMINUS"
+    asymptotic_state: "P5T05-B0"
+  - stratum_id: "P5T05-QZERO"
+    amplitude_domain: "a=0"
+    forward_invariant: true
+    stationary_phase: true
+    reflection_partner: "self"
+    asymptotic_state: "P5T05-B0"
+  - stratum_id: "P5T05-QMINUS"
+    amplitude_domain: "a<0"
+    forward_invariant: true
+    stationary_phase: false
+    reflection_partner: "P5T05-QPLUS"
+    asymptotic_state: "P5T05-B0"
+
+symmetry_and_order:
+  symmetry_group: "Z2"
+  action: "q_a -> q_(-a)"
+  unique_stationary_background_preserves_symmetry: true
+  sign_sectors_dynamically_selected: false
+  persistent_ordered_phase_present: false
+  spontaneous_symmetry_breaking_present: false
+  physical_time_orientation_present: false
+  source_order_orientation_only: true
+
+conditional_stationary_distribution:
+  probability_structure_present_in_candidate: false
+  if_Borel_probabilities_adjoined: "delta_0 is the unique invariant probability"
+  selected_ensemble: false
+  physical_probability_claimed: false
+
+reconstruction_phase_result:
+  result_kind: "precise_scoped_obstruction"
+  obstruction_id: "OBST-P5T05-QAMP-NO-RECONSTRUCTION-PHASE-001"
+  viable_reconstruction_phase_count: 0
+  failed_components:
+    - "stationary nonzero phase"
+    - "independent local perturbative degrees of freedom"
+    - "nondegenerate linearized operator at the sole stationary background"
+    - "momentum-indexed or propagating mode spectrum"
+    - "source-defined resolution hierarchy"
+  future_source_extension_continuation: "open"
+  global_no_go_claimed: false
+
+authority_flags:
+  canonical_ontology_modified: false
+  canonical_ontology_candidate_declared: false
+  source_law_adopted: false
+  source_law_rejected: false
+  physical_background_selected: false
+  physical_phase_established: false
+  physical_time_derived: false
+  reconstruction_selected: false
+  physics_promotion_authorized: false
+  proof_publication_or_push_authorized: false

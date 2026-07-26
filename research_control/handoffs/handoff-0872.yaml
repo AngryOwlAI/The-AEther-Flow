@@ -1,0 +1,318 @@
+validation_status: "PASS"
+handoff_id: "handoff-0872"
+handoff_number: 872
+task_id: "RT-20260725-012"
+decision_id: "DDR-20260725-012"
+job_id: "AJ-RT-20260725-012-001"
+completion_id: "AJC-AJ-RT-20260725-012-001"
+completion_path: "research_control/tasks/RT-20260725-012/jobs/completions/AJC-AJ-RT-20260725-012-001.yaml"
+completion_sha256: "815ca807497d33f6fc9377b4e5c30ca578514975075e436ae413865aec1164b6"
+status: "ready_after_checkpoint"
+created_at: "2026-07-26T00:43:25Z"
+parent_handoff_id: "handoff-0871"
+plan_task_id: "P5-T05"
+next_plan_task_id: "P5-T06"
+source_role_id: "candidate-constructor"
+source_role_version: "0.2.0"
+source_execution_role_ref: "candidate-constructor@0.2.0--RT-20260725-012"
+summary: "P5-T05 completes the first background and perturbation analysis of the exact unchanged P5-T03 cubic-amplitude dynamics. q_0 is the unique stationary background, the two nonzero sign strata are transient and reflection-related, the exact admitted tangent mode decays along nonzero trajectories and is neutral at q_0, and nonlinear flow makes q_0 globally asymptotically stable with polynomial decay. The family has zero gauge modes, no classified physical modes, no applicable Hamiltonian constrained-mode count, and no defined off-family dynamics. A precise candidate-specific obstruction records the absence of a nontrivial local reconstruction-suitable phase while conservative source extensions remain open."
+next_action: "Run the one governed checkpoint for AJ-RT-20260725-012-001. Only after it commits may one fresh bounded P5-T06 Ontology Formalizer packet define a typed source-only coarse-graining or reconstruction map with explicit scale approximation information loss and error, or return a distinct precise map obstruction without target fitting."
+current_claim_boundary: "CB-V21-P5-T05-CUBIC-AMPLITUDE-BACKGROUND-PHASE-001"
+loop_risk_route: "ontology-law-research-packet"
+
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260725-012"
+  latest_research_handoff_id: "handoff-0872"
+  latest_research_next_action: "Run the one governed checkpoint for AJ-RT-20260725-012-001. Only after it commits may one fresh bounded P5-T06 Ontology Formalizer packet define a typed source-only coarse-graining or reconstruction map with explicit scale approximation information loss and error, or return a distinct precise map obstruction without target fitting."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+
+claim_boundary:
+  allowed_next_scope: "After the governed checkpoint commits, one fresh bounded P5-T06 ontology-law-research packet may define and test a typed source-only coarse-graining or reconstruction map with declared scale approximation information loss and error, or return a distinct precise obstruction."
+  completed_task: "RT-20260725-012"
+  completed_completion_path: "research_control/tasks/RT-20260725-012/jobs/completions/AJC-AJ-RT-20260725-012-001.yaml"
+  completed_completion_sha256: "815ca807497d33f6fc9377b4e5c30ca578514975075e436ae413865aec1164b6"
+  source_handoff_id: "handoff-0871"
+  source_handoff_path: "research_control/handoffs/handoff-0871.yaml"
+  source_handoff_sha256: "2dddc947cb70d8833fffb471d71dce698db565b4b8da0d4d78edf8efab850389"
+  immutable_route_sha256: "21c86698a15825f3d694dc3f4e74d3e832a593efc66e12109bf48aa433371875"
+  dependency_checkpoint_commit: "dd7197d40794b529f06d805840d5e228ee0792c4"
+  dependency_checkpoint_receipt_sha256: "931d3701fa18cde754b84236e6ca9a60af5651a2ee517d46a477c13b12c11cb8"
+  result_status: "PASS_CUBIC_AMPLITUDE_BACKGROUND_MODE_PRECISE_OBSTRUCTION_READY_FOR_CHECKPOINT"
+  definition_path: "research_control/tasks/RT-20260725-012/artifacts/cubic_amplitude_background_phase_analysis_v1.tex"
+  definition_sha256: "73895f1325fa83799c343e0c88d525e1d9e006254844b8f8bd7bb8fe2286f48d"
+  background_catalog_path: "research_control/tasks/RT-20260725-012/artifacts/cubic_amplitude_background_phase_catalog_v1.yaml"
+  background_catalog_sha256: "d21e10c745d4da9691ad48fe4d5902e316667a3fd916d763c058c2e72796575b"
+  mode_report_path: "research_control/tasks/RT-20260725-012/artifacts/cubic_amplitude_linearized_modes_v1.yaml"
+  mode_report_sha256: "14c74c808d75204d897e23c4554517a751aa2b45342e09ce241c41dcb6a10e1a"
+  validation_path: "research_control/tasks/RT-20260725-012/artifacts/cubic_amplitude_background_phase_validation_receipt_v1.json"
+  validation_sha256: "bffe0658e96c68aab26bf9637bafeb4d0cd6413630278b349576f832b7115724"
+  source_candidate_id: "V21-P5-T03-CUBIC-AMPLITUDE-SOURCE-DYNAMICS-V1"
+  source_candidate_unchanged: true
+  task_local_check_count: 23
+  theorem_count: 3
+  stationary_background_count: 1
+  trajectory_background_family_count: 1
+  admitted_source_tangent_mode_count: 1
+  nonzero_gauge_mode_count: 0
+  physical_mode_count_status: "not_classified"
+  Hamiltonian_constrained_mode_count_status: "not_applicable"
+  off_family_mode_count_status: "not_defined"
+  admitted_growing_mode_count_gamma_positive: 0
+  scoped_obstruction_count: 1
+  obstruction_id: "OBST-P5T05-QAMP-NO-RECONSTRUCTION-PHASE-001"
+  unresolved_conflict_count: 0
+  zero_background_linear_stability: "neutral"
+  zero_background_nonlinear_stability: "globally_asymptotically_stable"
+  zero_background_decay_class: "polynomial_not_exponential"
+  persistent_ordered_phase_present: false
+  physical_time_orientation_present: false
+  viable_local_reconstruction_phase_count: 0
+  future_source_extension_continuation: "open"
+  checkpoint_invocation_count_before_handoff: 0
+  checkpoint_committed_before_handoff: false
+  canonical_ontology_modified: false
+  canonical_ontology_candidate_declared: false
+  source_law_adopted: false
+  source_law_rejected: false
+  physical_background_selected: false
+  physical_phase_established: false
+  physical_mode_count_established: false
+  physical_time_derived: false
+  reconstruction_selected: false
+  scientific_status_changed: true
+  scientific_status_change_scope: "draft/control proposal-only candidate-specific background mode stability mathematics and precise scoped obstruction"
+  physical_status_changed: false
+  distance_to_gr_delta_changed: true
+  distance_to_gr_delta_scope: "candidate_specific_source_ontology_background_mode_obstruction_only"
+  ontology_adoption_authorized: false
+  source_law_adoption_authorized: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_performed: false
+  blocked_claims:
+    - "q_0 presented as physical vacuum Minkowski spacetime or preferred GR background"
+    - "sign strata presented as persistent physical symmetry-broken phases"
+    - "one admitted source-tangent dimension presented as a physical GR or particle mode count"
+    - "forward source order presented as physical time causality or entropy"
+    - "off-family modes presented as proved absent"
+    - "candidate-specific reconstruction-phase obstruction overread beyond the exact candidate or as closing conservative source-extension continuation"
+    - "M_src g_eff matter coupling Einstein equations or benchmark promotion"
+    - "proof publication push or completed derivation"
+
+plan_result:
+  plan_task_id: "P5-T05"
+  next_plan_task_id: "P5-T06"
+  title: "Identify stable backgrounds, phases, and perturbative degrees of freedom"
+  result_status: "P5_T05_CUBIC_AMPLITUDE_BACKGROUND_MODE_PRECISE_OBSTRUCTION_PASS"
+  work_item_status: "completed_ready_for_checkpoint"
+  expected_result_kind: "completed_or_precisely_blocked"
+  new_mathematical_payload_present: true
+  unchanged_candidate_verified: true
+  complete_background_catalog_present: true
+  exact_linearization_present: true
+  exact_admitted_mode_count_present: true
+  nonlinear_stability_classified: true
+  symmetry_and_parameter_regions_classified: true
+  precise_reconstruction_phase_obstruction_present: true
+  p5_t06_dependency_ready_after_checkpoint: true
+  p5_t06_dependency_ready_now: false
+  p5_t06_executed: false
+  physical_status_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+distance_to_gr:
+  changed: true
+  effect: "candidate_specific_source_ontology_background_mode_obstruction"
+  burden_id: "source_ontology_primitives"
+  milestone: "source_ontology"
+  status: "accepted"
+  ledger_row_updated: true
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "The source-ontology row gains the P5-T05 candidate-specific background, mode, stability, and precise reconstruction-phase obstruction evidence. Physical and promotion layers remain unchanged."
+  downstream_unlocked:
+    - "P5-T06 typed source-only coarse-graining or reconstruction-map attempt after the governed checkpoint"
+  downstream_still_blocked:
+    - "P5-T06 until the governed checkpoint commits"
+    - "independent local source degrees and a viable reconstruction phase for the current candidate"
+    - "canonical source-law adoption"
+    - "physical source manifold M_src"
+    - "effective metric g_eff"
+    - "matter coupling"
+    - "Einstein equations"
+    - "benchmark promotion"
+
+required_next_packet:
+  task_type: "v21_p5_t06_define_source_coarse_graining_and_reconstruction_map"
+  plan_task_id: "P5-T06"
+  objective: "Construct a controlled source-only map from the exact source state and perturbation data to effective fields, observables, or geometry with declared domain, codomain, scale, approximation, information loss, and error, or return a distinct precise obstruction without target fitting."
+  dependency_ready_after_checkpoint: true
+  dependency_ready_now: false
+  executed: false
+
+selected_next_route:
+  route_id: "v21_p5_t06_define_source_coarse_graining_and_reconstruction_map"
+  route_label: "ontology-law-research-packet"
+  role_family: "ontology-formalizer@0.2.0"
+  worker_skill: "continue-research"
+  task_type: "v21_p5_t06_define_source_coarse_graining_and_reconstruction_map"
+  plan_task_id: "P5-T06"
+  target_derivation_milestone: "source_ontology"
+  milestone_burden: "Provide the mathematical bridge from source dynamics to effective structure."
+  strategy_id: "define_typed_source_coarse_graining_or_precise_map_obstruction_v1"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  physics_promotion_authorized: false
+  executed: false
+  next_action: "Remain unexecuted until the generation-117 governed checkpoint commits."
+  source_handoff: "research_control/handoffs/handoff-0872.yaml"
+
+ordinary_route_guard:
+  schema_id: "ordinary_route_guard_evaluation_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  evaluation_id: "ORE-HANDOFF-0872"
+  ordinary_handoff_id: "handoff-0872"
+  threshold: 3
+  consecutive_project_system_tasks_before_selection: 0
+  ready_science_plan_task_ids:
+    - "P5-T06"
+  selected_plan_task_id: "P5-T06"
+  selected_route_class: "physics_bearing"
+  selected_worker_skill: "continue-research"
+  outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  exception_receipt:
+    active: false
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+active_state_boundary:
+  active_task_id: "RT-20260725-012"
+  active_job_id: "AJ-RT-20260725-012-001"
+  current_status: "p5_t05_background_mode_precise_obstruction_pass_ready_for_checkpoint"
+  checkpoint_required: true
+  checkpoint_completed: false
+  checkpoint_invocation_count: 0
+  p5_t05_completed: true
+  selected_next_plan_task_id: "P5-T06"
+  selected_next_worker_skill: "continue-research"
+  selected_next_role_family: "ontology-formalizer@0.2.0"
+  selected_next_route_label: "ontology-law-research-packet"
+  selected_next_strategy_id: "define_typed_source_coarse_graining_or_precise_map_obstruction_v1"
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 117 validated and atomically claimed the exact immutable P5-T05 route before consuming its one worker invocation."
+      - "The generation-116 checkpoint commit and clean repository dependency boundary were verified before execution."
+      - "Memory preflight refreshed retrieval-only state and the registered P5-T04 source was inspected."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Both child perspectives completed and the parent synthesis resolved all recorded tensions."
+      - "The task-local validator passes 23 checks."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Scratch TeX, renderer, memory, documentation, signal, claim-language, research-control, selected-test, and whitespace gates pass."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "One governed checkpoint remains to be invoked in generation 117."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Current frontier, compact frontier, task index, dependency graph, claim graph, and burden-status derivatives are fresh."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory bootstrap and validate-only pass after source registration."
+  claim_language_linter:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "Changed-source claim-language validation has zero hard failures."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  publication_authorized: false
+  proof_authority: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  canonical_ontology_edit_authorized: false
+  ontology_selection_authorized: false
+  physical_interpretation_establishment_authorized: false
+  physical_background_or_phase_claim_authorized: false
+  physical_mode_count_claim_authorized: false
+  physical_time_claim_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+three_tier_claim_summary:
+  adopted_objects:
+    - "Inherited only: P4-T06 continuum-first research architecture with explicit primitive debt."
+  accepted_evidence_preconditions:
+    - "P5-T01 compact source-theory object and exact torus-amplitude witness"
+    - "P5-T02 proposal-only continuous forward-action semantics"
+    - "P5-T03 task-local cubic-amplitude dynamics candidate"
+    - "P5-T04 candidate-specific structural theorems and patch-amplitude obstruction"
+    - "P5-T05 candidate-specific background mode stability results and reconstruction-phase obstruction"
+  open_or_blocked_physical_targets:
+    - "generic source backgrounds local degrees and reconstruction"
+    - "physical source manifold M_src and effective geometry"
+    - "physical phase mode time gauge and constraint interpretation"
+    - "g_eff matter coupling Einstein equations and benchmark promotion"
+  forbidden_overread:
+    - "unique source fixed point as physical vacuum or target spacetime"
+    - "one source-tangent dimension as physical mode count"
+    - "candidate-specific phase obstruction overread beyond exact candidate scope or as closing conservative source-extension continuation"
+    - "validation or checkpoint as theorem proof adoption or promotion"
+
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"
+  rationale: "No project-system defect or explanatory-documentation mismatch is identified."
+
+handoff_authority_boundary:
+  this_handoff_authorizes:
+    - "Director consideration of one bounded P5-T06 continue-research packet only after the generation-117 checkpoint commits"
+  this_handoff_does_not_authorize:
+    - "P5-T06 execution inside generation 117"
+    - "changing or adopting the cubic-amplitude candidate"
+    - "erasing the P5-T04 patching or P5-T05 reconstruction-phase obstruction"
+    - "fabricating local modes a characteristic operator or a target metric from q_0"
+    - "selecting a map because it fits GR"
+    - "canonical ontology or source-law adoption rejection or physical interpretation"
+    - "M_src g_eff matter coupling Einstein equations or benchmark promotion"
+    - "proof publication push global rejection future-extension impossibility or completed derivation"
+
+next_worker_skill: "continue-research"
+next_role_family: "ontology-formalizer@0.2.0"
+next_route_label: "ontology-law-research-packet"
+next_strategy_id: "define_typed_source_coarse_graining_or_precise_map_obstruction_v1"
+notes: "Generation 117 completes only P5-T05 candidate-specific background and mode analysis with one precise scoped obstruction and leaves P5-T06 unexecuted until the governed checkpoint."

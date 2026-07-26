@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260725-011`
-- Latest handoff: `handoff-0871`
-- Current status: `p5_t04_p10_live_view_convergence_recovery_pass_ready_for_checkpoint`
+- Active task: `RT-20260725-012`
+- Latest handoff: `handoff-0872`
+- Current status: `p5_t05_background_mode_precise_obstruction_pass_ready_for_checkpoint`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260725-011`
-- Latest research handoff: `handoff-0871`
-- Latest research next action: Run the one governed cumulative checkpoint for AJ-RT-20260725-011-001. Only after it commits may one fresh bounded P5-T05 Candidate Constructor packet identify source-defined backgrounds or phases and derive their perturbative modes, stability, and symmetry-breaking structure without target import.
+- Latest research task: `RT-20260725-012`
+- Latest research handoff: `handoff-0872`
+- Latest research next action: Run the one governed checkpoint for AJ-RT-20260725-012-001. Only after it commits may one fresh bounded P5-T06 Ontology Formalizer packet define a typed source-only coarse-graining or reconstruction map with explicit scale approximation information loss and error, or return a distinct precise map obstruction without target fitting.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p5_t05_construct_source_backgrounds_and_perturbations`
-- Role family: `candidate-constructor@0.2.0`
+- Route ID: `v21_p5_t06_define_source_coarse_graining_and_reconstruction_map`
+- Role family: `ontology-formalizer@0.2.0`
 - Target milestone: `source_ontology`
-- Milestone burden: Supply the background and perturbation data needed for effective geometry.
+- Milestone burden: Provide the mathematical bridge from source dynamics to effective structure.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `bb029e7911e45adad9861023d803f4d2e266c3f54b0ebe713c3ddadf9d76c511`
-- JSON SHA-256: `8126af9f9ac4f0bfc1912ce8b5e7ea9a926149d63146b1ec5b2e6a91a16868dc`
+- YAML SHA-256: `9a3fd9c32711d3c51c126159318983ec6c7aae54a727337a6c3a24143d1c9907`
+- JSON SHA-256: `c741fa6f3ff77d9f58741282039c70cda2c0d6705ed17a5852af4e7db64fd438`
 
 ## Authority Warning
 

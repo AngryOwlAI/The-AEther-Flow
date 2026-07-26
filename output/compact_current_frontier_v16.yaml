@@ -1,7 +1,7 @@
 schema_id: "compact_current_frontier_v16"
 generated_from:
   - "research_control/program_state.yaml"
-  - "research_control/handoffs/handoff-0871.yaml"
+  - "research_control/handoffs/handoff-0872.yaml"
   - "registries/DISTANCE_TO_GR_LEDGER.csv"
   - "registries/METRIC_USE_LEDGER.csv"
   - "research_control/current_frontier.md"
@@ -9,16 +9,16 @@ generated_from:
   - "research_control/design/accepted_status_calibration_v2.yaml"
   - "research_control/design/active_state_bifurcation_policy_v1.md"
 active_state:
-  active_task_id: "RT-20260725-011"
-  latest_handoff_id: "handoff-0871"
-  current_status: "p5_t04_p10_live_view_convergence_recovery_pass_ready_for_checkpoint"
+  active_task_id: "RT-20260725-012"
+  latest_handoff_id: "handoff-0872"
+  current_status: "p5_t05_background_mode_precise_obstruction_pass_ready_for_checkpoint"
   v15_completed: false
   v16_completed: false
   v16_plan_registered: true
 active_state_bifurcation:
-  latest_research_task_id: "RT-20260725-011"
-  latest_research_handoff_id: "handoff-0871"
-  latest_research_next_action: "Run the one governed cumulative checkpoint for AJ-RT-20260725-011-001. Only after it commits may one fresh bounded P5-T05 Candidate Constructor packet identify source-defined backgrounds or phases and derive their perturbative modes, stability, and symmetry-breaking structure without target import."
+  latest_research_task_id: "RT-20260725-012"
+  latest_research_handoff_id: "handoff-0872"
+  latest_research_next_action: "Run the one governed checkpoint for AJ-RT-20260725-012-001. Only after it commits may one fresh bounded P5-T06 Ontology Formalizer packet define a typed source-only coarse-graining or reconstruction map with explicit scale approximation information loss and error, or return a distinct precise map obstruction without target fitting."
   latest_project_system_task_id: "none"
   latest_project_system_status: "none"
   latest_project_system_sidecar_task_id: "none"
@@ -26,10 +26,10 @@ active_state_bifurcation:
   sidecar_supersedes_research_handoff: false
   next_research_route_source: "latest_research_handoff"
 next_route:
-  route_id: "v21_p5_t05_construct_source_backgrounds_and_perturbations"
-  role_family: "candidate-constructor@0.2.0"
+  route_id: "v21_p5_t06_define_source_coarse_graining_and_reconstruction_map"
+  role_family: "ontology-formalizer@0.2.0"
   target_derivation_milestone: "source_ontology"
-  milestone_burden: "Supply the background and perturbation data needed for effective geometry."
+  milestone_burden: "Provide the mathematical bridge from source dynamics to effective structure."
   requires_human_gate: false
 claim_boundary:
   physics_claim_authority: false
@@ -274,8 +274,8 @@ blocked_physical_targets:
       - "no_completed_derivation"
 distance_to_gr:
   delta:
-    effect: "none_project_system_recovery"
-    changed: false
+    effect: "candidate_specific_source_ontology_background_mode_obstruction"
+    changed: true
     milestone: "source_ontology"
     burden_id: "source_ontology_primitives"
   high_risk_rows:
@@ -522,25 +522,9 @@ metric_use_ledger:
 validation:
   latest_required_status: "PASS"
   pending_layers:
-    - layer: "post_write"
-      status: "PENDING"
-      evidence:
-        - "Integrated control, documentation, signal, memory, and repository-test validation remains before checkpoint."
     - layer: "post_checkpoint"
       status: "PENDING"
       evidence:
-        - "One governed cumulative checkpoint remains; P5-T05 is not executed before it."
-    - layer: "renderer"
-      status: "PENDING"
-      evidence:
-        - "Tracked frontier, task-index, graph, registry, and wiki derivatives remain to be synchronized."
-    - layer: "memory_bootstrap"
-      status: "PENDING"
-      evidence:
-        - "Tracked memory synchronization remains before checkpoint."
-    - layer: "claim_language_linter"
-      status: "PENDING"
-      evidence:
-        - "Integrated research-control validation remains before checkpoint."
+        - "One governed checkpoint remains to be invoked in generation 117."
 authority_warning:
   snapshot_only_not_authority: true
