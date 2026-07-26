@@ -1,0 +1,304 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{array,longtable,booktabs}
+\usepackage[hidelinks]{hyperref}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}[theorem]{Example}
+\newcommand{\Ann}{\operatorname{Ann}}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\GL}{\operatorname{GL}}
+
+\title{P6-T05: Signature, Nondegeneracy, and Source Covariance Remain Unselected}
+\author{The AEther-Flow Research Project}
+\date{2026-07-26}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+\fbox{\parbox{0.92\textwidth}{
+\textbf{Status and authority.}
+This is a task-local \emph{draft/control} result about proposal-only
+source-extension burdens. It proves exact comparison countermodels, a scoped
+source-naturality obstruction, and a conditional coframe-gluing theorem. It
+is not a canonical-ontology edit, source-law adoption or rejection, physical
+metric or causal-cone construction, Gate Chair verdict, global no-go theorem,
+publication, or completed derivation.
+}}
+\end{center}
+
+\section{Question and fixed input}
+
+P6-T03 leaves as its complete source-side geometric input
+\[
+  \mathcal D_1(S,V)=\bigl([V]_+,\Ann(V),\preceq_V\bigr),
+\]
+and proves that this one-ray datum does not select a Lorentzian conformal
+class. P6-T04 tests the enlarged package
+\[
+  \mathcal D_{\rm cal}
+  =\bigl(\mathcal D_1,\mu,\{\theta_A\}_{A\in\mathcal A}\bigr),
+\]
+where \(\mu\) is an independent positive source density and the
+\(\theta_A\) are dimensionless scalar phases. It proves that these carriers
+do not select conformal shape, physical metric scale, absolute clocks, or
+rods.
+
+P6-T05 asks whether the same package nevertheless fixes three remaining
+mathematical obligations:
+\begin{enumerate}
+\item a Lorentzian rather than Euclidean or split signature;
+\item nondegeneracy separated from a singular boundary; and
+\item a natural transformation law under source-induced frame changes.
+\end{enumerate}
+No target atlas, target metric, GR null cone, matter response, \(G\), \(c\),
+operational readout normalization, or benchmark fit is admitted. The historical scoped
+\(g_{\rm eff}\) source-extension object is not a premise and its status is
+unchanged.
+
+\section{Typed assumption audit}
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.10\textwidth}
+                  >{\raggedright\arraybackslash}p{0.38\textwidth}
+                  >{\raggedright\arraybackslash}p{0.41\textwidth}}
+\toprule
+ID & Test assumption & Status and consequence\\
+\midrule
+\endhead
+A1 & \(S\) is smooth and four dimensional and \(V\) is smooth, nonzero, and
+positively oriented. & Inherited candidate scope; not a physical spacetime or
+clock conclusion.\\
+A2 & Only \(\mathcal D_{\rm cal}\) is supplied unconditionally. & No hidden
+coframe, bilinear form, connection, target chart, or metric-volume identity.\\
+A3 & \(\mu\) is independent source density data. & It is not assumed equal to
+the volume density of any comparison form.\\
+A4 & Scalar phases may be chosen constant on the exact countermodel datum. &
+They then add no frame discriminator, while remaining valid admitted data.\\
+A5 & A reconstruction rule must be source-natural: automorphisms of its input
+must act equivariantly on its output. & This is a consistency burden, not an
+extra geometric premise.\\
+A6 & Comparison forms are mathematical controls only. & Their signatures,
+cones, and volumes are not adopted physical geometry.\\
+A7 & Any source coframe, internal Lorentzian form, transition representation,
+determinant bound, or robustness rule is conditional additional data. &
+Current ontology does not derive those objects.\\
+A8 & Target geometry, matter, detectors, benchmark success, generated
+derivatives, registries, roles, and validators are not scientific premises. &
+No target fitting or process-authority smuggling is allowed.\\
+\bottomrule
+\end{longtable}
+
+\section{Signature and nondegeneracy countermodels}
+
+Work at a source point with an adapted basis
+\((e_0,e_1,e_2,e_3)\), oriented ray \(L=[e_0]_+\), standard positive density
+\(\mu_0=|e^0\wedge e^1\wedge e^2\wedge e^3|\), and constant scalar phases.
+
+\begin{theorem}[Signature nonselection]
+\label{thm:signature}
+The symmetric forms
+\[
+ q_L=\diag(-1,1,1,1),
+ \qquad
+ q_S=\diag(-1,-1,1,1)
+\]
+carry identical \(\mathcal D_{\rm cal}\) input and have
+\(|\det q_L|=|\det q_S|=1\), but their inertias are respectively
+\((1,3)\) and \((2,2)\). Hence the admitted source package does not select
+Lorentzian signature, even if determinant magnitude one is imposed as an
+additional numerical comparison constraint.
+\end{theorem}
+
+\begin{proof}
+The ray, annihilator, forward order, independent density, and scalar phases
+are defined without either bilinear form and are therefore identical. Direct
+diagonalization gives one negative eigenvalue for \(q_L\) and two for
+\(q_S\). Their determinants are \(-1\) and \(+1\), respectively. Equal
+absolute determinant therefore does not determine inertia.
+\end{proof}
+
+\begin{proposition}[Nondegeneracy is not certified]
+\label{prop:degeneracy}
+For \(\varepsilon>0\),
+\[
+ q_\varepsilon=\diag(-1,1,1,\varepsilon^2)
+\]
+is Lorentzian and nondegenerate, but it converges to the degenerate form
+\(q_0=\diag(-1,1,1,0)\) as \(\varepsilon\to0\), with
+\(\det q_\varepsilon=-\varepsilon^2\). The unchanged source package carries
+no lower bound separating this family from the singular boundary.
+\end{proposition}
+
+\begin{proof}
+The eigenvalues and determinant are displayed explicitly. The independent
+density \(\mu_0\) is part of the input for every \(\varepsilon\), but P6-T04
+does not identify it with \(|\operatorname{vol}_{q_\varepsilon}|\).
+Consequently \(\mu_0\) supplies no metric-determinant certificate. A
+conditional law such as \(|\det q|\geq\delta>0\) in a source-derived coframe
+would separate the singular boundary, but no such law or coframe is derived.
+\end{proof}
+
+\section{A source-naturality obstruction}
+
+A source reconstruction \(F\) is natural only if every automorphism \(A\) of
+the complete input satisfies
+\[
+ F(A\cdot\mathcal D_{\rm cal})=A^*F(\mathcal D_{\rm cal}).
+\]
+At a fixed input, every input automorphism must therefore preserve the
+selected output.
+
+\begin{theorem}[Volume-preserving source naturality obstruction]
+\label{thm:naturality}
+On \(\mathbb R^4\), take the maximally symmetric datum above and the
+determinant-one diagonal source automorphisms
+\[
+ A(a,b,c)=
+ \diag\!\left(e^a,e^b,e^c,e^{-a-b-c}\right).
+\]
+These maps preserve \(L\), its positive orientation and forward order,
+\(\Ann(e_0)\), \(\mu_0\), and the constant phases. The only symmetric
+bilinear form satisfying
+\[
+ A(a,b,c)^TqA(a,b,c)=q
+ \quad\hbox{for all }a,b,c\in\mathbb R
+\]
+is \(q=0\). Therefore no nonzero, and hence no nondegenerate Lorentzian,
+bilinear form can be naturally selected on this admitted datum.
+\end{theorem}
+
+\begin{proof}
+The determinant is
+\(e^{a+b+c-a-b-c}=1\), so \(\mu_0\) is preserved. Each map rescales
+\(e_0\) by a positive factor and preserves its oriented ray and line order.
+The four weights of the representation are
+\[
+ w_0=(1,0,0),\quad
+ w_1=(0,1,0),\quad
+ w_2=(0,0,1),\quad
+ w_3=(-1,-1,-1).
+\]
+For a component \(q_{ij}\), invariance gives
+\[
+ e^{(w_i+w_j)\cdot(a,b,c)}q_{ij}=q_{ij}
+\]
+for every \((a,b,c)\). No pair \(w_i+w_j\) is zero, including the diagonal
+pairs. Thus every \(q_{ij}\) vanishes.
+\end{proof}
+
+\begin{corollary}
+This theorem is a scoped obstruction for the exact admitted datum and
+naturality requirement. It is not a theorem that no richer source ontology
+can select geometry. Additional source-derived coframes, constitutive
+tensors, discriminators, or transition data can shrink the automorphism group
+and reopen the same milestone.
+\end{corollary}
+
+\section{Conditional source-coframe gluing theorem}
+
+\begin{theorem}[Conditional Lorentz-coframe gluing]
+\label{thm:gluing}
+Suppose a source-side construction independently supplies, on each source
+domain \(U\), a coframe column
+\(\vartheta_U=(\vartheta_U^0,\ldots,\vartheta_U^3)^T\) and a fixed
+nondegenerate internal form \(\eta\) of Lorentzian inertia. Define
+\[
+ q_U=\vartheta_U^T\eta\,\vartheta_U.
+\]
+If on overlaps
+\(\vartheta_V=\Lambda_{VU}\vartheta_U\), then \(q_V=q_U\) exactly when
+\[
+ \Lambda_{VU}^T\eta\Lambda_{VU}=\eta.
+\]
+Consistent triple overlaps require
+\[
+ \Lambda_{WV}\Lambda_{VU}=\Lambda_{WU},
+\]
+and inverse overlaps require
+\(\Lambda_{UV}=\Lambda_{VU}^{-1}\).
+\end{theorem}
+
+\begin{proof}
+Substitution gives
+\[
+ q_V=\vartheta_U^T\Lambda_{VU}^T\eta\Lambda_{VU}\vartheta_U.
+\]
+Because \(\vartheta_U\) is a coframe, equality with \(q_U\) is equivalent to
+the displayed Lorentz-preservation identity. Applying two overlap relations
+in succession gives
+\(\vartheta_W=\Lambda_{WV}\Lambda_{VU}\vartheta_U\); equality with the direct
+relation is the cocycle identity. Reversing an overlap gives the inverse
+identity.
+\end{proof}
+
+The theorem states a genuine positive conditional result. It does not derive
+\(\vartheta_U\), \(\eta\), their source locality, a signature discriminator,
+the overlap maps, their cocycle, or finite-variation stability. Supplying
+these objects would be a proposal-only source-extension law unless separately
+derived from current ontology.
+
+\begin{proposition}[Conditional time orientation]
+If a connected source region is already equipped with a Lorentzian \(q\) and
+the oriented field \(V\) is everywhere \(q\)-timelike, then \([V]_+\)
+selects one of the two timelike-cone components and hence a time orientation.
+The current input derives neither \(q\) nor \(q(V,V)<0\), so it does not yet
+establish a physical time orientation.
+\end{proposition}
+
+\section{Precise obstruction and reopening burden}
+
+The exact disposition is
+\texttt{OBST-P6T05-SIGNATURE-COVARIANCE-NATURALITY-001}. Identical admitted
+source carriers allow different signatures and approach degeneracy, while a
+determinant-one automorphism subgroup of one admissible datum forces every
+natural symmetric bilinear form to vanish. Current ontology does not derive:
+\begin{enumerate}
+\item a source coframe or equivalent transverse comparison object;
+\item a Lorentzian signature selector or internal form;
+\item a metric-volume identity or uniform determinant lower bound;
+\item a source-derived Lorentz transition representation with inverse and
+cocycle laws; or
+\item a finite-variation compatibility and robustness theorem.
+\end{enumerate}
+
+A compact proposal-only burden template is therefore:
+derive source-local coframes \(\vartheta_U=\mathfrak F_U(\mathcal D)\), a
+source discriminator fixing the inertia of \(\eta\), source-induced
+\(\Lambda_{VU}\in O(\eta)\) satisfying inverse and cocycle identities, and a
+nondegeneracy/robustness certificate. This is \emph{not} a
+canonical-ontology candidate or adoption. Any adoption or ontology edit
+remains human-gated.
+
+The unchanged route from \(\mathcal D_{\rm cal}\) to signature,
+nondegeneracy, and covariant metric selection is locally frozen.
+This is not a theorem that the project can never derive those objects. Materially richer
+source-side continuation remains open. Current adoption is
+\texttt{blocked\_adoption\_open\_continuation}.
+
+\section{Distance-to-GR disposition}
+
+P6-T05 meets its theorem-or-precise-obstruction burden within the exact input
+tested. It sharpens Gate B: a source-derived metric would need not merely a
+tensorial formula, but a signature discriminator, nondegeneracy certificate,
+natural source coframe or equivalent representation, Lorentz-valued
+transitions, cocycle and inverse checks, and finite-variation robustness.
+Gate B is not passed. The historical scoped \(g_{\rm eff}\) object remains
+unchanged. Physical causal geometry, unscoped \(g_{\rm eff}\), matter
+coupling, Einstein equations, benchmark promotion, proof authority,
+publication, push, and completed derivation remain blocked.
+
+\section{Project source note}
+
+The fixed project basis is the registered P6-T03 and P6-T04 theorem packets,
+canonical target-side geometry dictionary, historical scoped source-extension
+\(g_{\rm eff}\) candidate and Gate Chair record, v21 implementation plan,
+Distance-to-GR burden map, and handoff-0882. These sources are held at the
+exact hashes recorded in the accompanying machine-readable specification.
+The inertia, determinant, automorphism-weight, and transition calculations are
+reproduced directly; no external physical datum is used.
+
+\end{document}

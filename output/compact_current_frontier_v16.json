@@ -2,7 +2,7 @@
   "schema_id": "compact_current_frontier_v16",
   "generated_from": [
     "research_control/program_state.yaml",
-    "research_control/handoffs/handoff-0882.yaml",
+    "research_control/handoffs/handoff-0883.yaml",
     "registries/DISTANCE_TO_GR_LEDGER.csv",
     "registries/METRIC_USE_LEDGER.csv",
     "research_control/current_frontier.md",
@@ -11,17 +11,17 @@
     "research_control/design/active_state_bifurcation_policy_v1.md"
   ],
   "active_state": {
-    "active_task_id": "RT-20260726-008",
-    "latest_handoff_id": "handoff-0882",
-    "current_status": "p6_t04_traceability_legacy_checkpoint_recovery_pass_ready_for_checkpoint",
+    "active_task_id": "RT-20260726-009",
+    "latest_handoff_id": "handoff-0883",
+    "current_status": "p6_t05_conditional_coframe_gluing_and_signature_covariance_naturality_obstruction_ready_for_checkpoint",
     "v15_completed": false,
     "v16_completed": false,
     "v16_plan_registered": true
   },
   "active_state_bifurcation": {
-    "latest_research_task_id": "RT-20260726-008",
-    "latest_research_handoff_id": "handoff-0882",
-    "latest_research_next_action": "Run the one governed cumulative checkpoint for AJ-RT-20260726-008-001 with --legacy-validation. Only after it commits may one fresh bounded P6-T05 Ontology Formalizer packet test Lorentzian signature, nondegeneracy, and source-induced transformation-law obligations under the P6-T03 and P6-T04 nonselection results or return its own precise obstruction.",
+    "latest_research_task_id": "RT-20260726-009",
+    "latest_research_handoff_id": "handoff-0883",
+    "latest_research_next_action": "Run one governed checkpoint for AJ-RT-20260726-009-001. Only after it commits may one fresh bounded P6-T06 Refuter packet stress the cumulative P6-T03 through P6-T05 package for uniqueness, source covariance, finite and infinitesimal variation robustness, and physical-admissibility overreads or return a precise obstruction.",
     "latest_project_system_task_id": "none",
     "latest_project_system_status": "none",
     "latest_project_system_sidecar_task_id": "none",
@@ -30,10 +30,10 @@
     "next_research_route_source": "latest_research_handoff"
   },
   "next_route": {
-    "route_id": "v21_p6_t05_signature_nondegeneracy_transformation_law",
-    "role_family": "ontology-formalizer@0.2.0",
+    "route_id": "v21_p6_t06_uniqueness_covariance_variation_physical_admissibility",
+    "role_family": "refuter@0.2.0",
     "target_derivation_milestone": "effective_metric_g_eff",
-    "milestone_burden": "Meet the mathematical core of Gate B.",
+    "milestone_burden": "Close the remaining Gate B theorem burdens before naming an unscoped metric.",
     "requires_human_gate": false
   },
   "claim_boundary": {
@@ -236,7 +236,7 @@
     {
       "object_id": "g_eff",
       "reader_facing_status": "adopted only as scoped source-extension g_eff object",
-      "authority_path": "research_control/tasks/RT-20260726-007/artifacts/source_scale_calibration_nonselection_v1.tex",
+      "authority_path": "research_control/tasks/RT-20260726-009/artifacts/signature_covariance_naturality_obstruction_v1.tex",
       "scope_qualifier": "not_unscoped_lorentzian_metric_not_matter_coupling_not_einstein_equations",
       "blocked_overread": [
         "no_source_law_adoption",
@@ -325,8 +325,8 @@
   ],
   "distance_to_gr": {
     "delta": {
-      "effect": "none_project_system_recovery",
-      "changed": false,
+      "effect": "obstruction_recorded",
+      "changed": true,
       "milestone": "effective_metric_g_eff",
       "burden_id": "g_eff"
     },
@@ -400,7 +400,7 @@
           "no_global_theory_rejection",
           "no_future_source_extension_impossibility"
         ],
-        "last_evidence_path": "research_control/tasks/RT-20260726-007/artifacts/source_scale_calibration_nonselection_v1.tex",
+        "last_evidence_path": "research_control/tasks/RT-20260726-009/artifacts/signature_covariance_naturality_obstruction_v1.tex",
         "high_risk_status_card": {
           "object_id": "g_eff",
           "positive_status": "g_eff is adopted only as a scoped source-extension g_eff object.",
@@ -613,38 +613,10 @@
     "latest_required_status": "PASS",
     "pending_layers": [
       {
-        "layer": "post_write",
-        "status": "PENDING",
-        "evidence": [
-          "Integrated control, documentation, signal, memory, and test validation remains before checkpoint."
-        ]
-      },
-      {
         "layer": "post_checkpoint",
         "status": "PENDING",
         "evidence": [
-          "One governed cumulative legacy-validation checkpoint remains; P6-T05 is not executed before it."
-        ]
-      },
-      {
-        "layer": "renderer",
-        "status": "PENDING",
-        "evidence": [
-          "Tracked frontier, task-index, graph, registry, and wiki derivatives remain to be synchronized."
-        ]
-      },
-      {
-        "layer": "memory_bootstrap",
-        "status": "PENDING",
-        "evidence": [
-          "Tracked memory synchronization remains before checkpoint."
-        ]
-      },
-      {
-        "layer": "claim_language_linter",
-        "status": "PENDING",
-        "evidence": [
-          "Integrated research-control validation remains to confirm no hard claim-language errors."
+          "One governed checkpoint remains; P6-T06 is not executed before it."
         ]
       }
     ]

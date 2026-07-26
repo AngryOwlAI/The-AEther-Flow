@@ -1,0 +1,235 @@
+schema_id: "v21_p6_t05_signature_covariance_naturality_obstruction_v1"
+result_id: "V21-P6-T05-SIGNATURE-COVARIANCE-NATURALITY-V1"
+task_id: "RT-20260726-009"
+plan_task_id: "P6-T05"
+status_label: "draft/control"
+result_status: "conditional theorem plus precise candidate-scoped obstruction"
+material_class: "source-extension analysis"
+adoption_status: "blocked_adoption_open_continuation"
+target_derivation_milestone: "effective_metric_g_eff"
+milestone_burden: "Meet the mathematical core of Gate B."
+
+typed_input:
+  one_ray_bundle: "D_1(S,V)=([V]_+,Ann(V),preceq_V)"
+  proposed_density: "smooth positive source density mu independent of any metric volume"
+  proposed_phase_carriers: "dimensionless scalar phases theta_A"
+  calibration_bundle: "D_cal=(D_1,mu,{theta_A})"
+  source_coframe_supplied: false
+  lorentzian_form_supplied: false
+  metric_volume_identity_supplied: false
+  transition_representation_supplied: false
+  target_metric_imported: false
+
+typed_output_target:
+  desired_map: "G_sig:D_cal->q"
+  output_type: "natural nondegenerate Lorentzian symmetric bilinear form with consistent source-frame transformations"
+  signature_required: "Lorentzian inertia"
+  determinant_bound_required: true
+  inverse_and_cocycle_required: true
+  finite_variation_robustness_required: true
+  target_fit_allowed: false
+
+assumption_table:
+  - id: "A1"
+    statement: "S is smooth and four dimensional and V is smooth nonzero and positively oriented."
+    status: "inherited_candidate_scope"
+  - id: "A2"
+    statement: "Only D_cal is supplied unconditionally."
+    status: "exact_enlarged_test_scope"
+  - id: "A3"
+    statement: "mu is independent source density rather than metric volume."
+    status: "proposal_only_not_derived"
+  - id: "A4"
+    statement: "Scalar phases may be constant on the exact countermodel datum."
+    status: "admissible_nondiscriminating_data"
+  - id: "A5"
+    statement: "A reconstruction must be natural under automorphisms of the complete source input."
+    status: "consistency_requirement"
+  - id: "A6"
+    statement: "Comparison forms are task-local mathematical controls only."
+    status: "not_adopted_geometry"
+  - id: "A7"
+    statement: "Coframe eta transitions determinant bound and robustness law are conditional additional data."
+    status: "missing_source_laws"
+  - id: "A8"
+    statement: "No target geometry process authority or generated derivative is a scientific premise."
+    status: "no_target_import_enforced"
+
+theorems:
+  - theorem_id: "P6T05-THM-SIGNATURE-NONSELECTION"
+    claim: "q_L and q_S have equal determinant magnitude and identical admitted source data but different inertia."
+    lorentzian_witness: "q_L=diag(-1,1,1,1)"
+    split_witness: "q_S=diag(-1,-1,1,1)"
+    determinant_magnitudes: [1, 1]
+    burden_effect: "signature is not selected"
+  - theorem_id: "P6T05-PROP-NONDEGENERACY-NONCERTIFICATION"
+    claim: "q_epsilon remains Lorentzian for epsilon>0 and approaches a degenerate boundary with no source-derived determinant lower bound."
+    witness_family: "q_epsilon=diag(-1,1,1,epsilon^2)"
+    determinant: "-epsilon^2"
+    burden_effect: "nondegeneracy is not certified"
+  - theorem_id: "P6T05-THM-SOURCE-NATURALITY-OBSTRUCTION"
+    claim: "The determinant-one diagonal automorphism subgroup of a maximally symmetric admitted datum forces every invariant symmetric bilinear form to vanish."
+    automorphism: "A(a,b,c)=diag(exp(a),exp(b),exp(c),exp(-a-b-c))"
+    weights:
+      - [1, 0, 0]
+      - [0, 1, 0]
+      - [0, 0, 1]
+      - [-1, -1, -1]
+    invariant_form_dimension: 0
+    burden_effect: "no natural nonzero bilinear selector exists on the exact admitted datum"
+  - theorem_id: "P6T05-THM-CONDITIONAL-COFRAME-GLUING"
+    claim: "Supplied source coframes and Lorentzian eta glue a global bilinear form exactly under eta-preserving transitions with inverse and cocycle identities."
+    local_definition: "q_U=theta_U^T eta theta_U"
+    overlap_condition: "Lambda_VU^T eta Lambda_VU=eta"
+    inverse_condition: "Lambda_UV=Lambda_VU^-1"
+    cocycle_condition: "Lambda_WV Lambda_VU=Lambda_WU"
+    burden_effect: "states exact positive conditional covariance burden"
+  - theorem_id: "P6T05-PROP-CONDITIONAL-TIME-ORIENTATION"
+    claim: "An oriented everywhere timelike V selects time orientation only after a Lorentzian q and timelikeness are supplied."
+    burden_effect: "oriented source flow alone is not physical time orientation"
+
+signature_countermodel:
+  shared_data:
+    - "L=[e0]_+"
+    - "Ann(e0)"
+    - "forward line order"
+    - "mu_0=|e0 dual wedge e1 dual wedge e2 dual wedge e3 dual|"
+    - "constant scalar phases"
+  first_form: "q_L=diag(-1,1,1,1)"
+  second_form: "q_S=diag(-1,-1,1,1)"
+  determinant_magnitude_equal: true
+  signature_equal: false
+  source_data_equal: true
+
+degeneracy_family:
+  form: "q_epsilon=diag(-1,1,1,epsilon^2)"
+  domain: "epsilon>0"
+  limit_form: "q_0=diag(-1,1,1,0)"
+  determinant: "-epsilon^2"
+  source_density_identified_with_metric_volume: false
+  determinant_lower_bound_derived: false
+
+naturality_obstruction:
+  source_datum: "maximally symmetric constant one-ray density phase datum on R4"
+  automorphism_subgroup: "positive diagonal determinant-one transformations"
+  preserves_oriented_ray: true
+  preserves_density: true
+  preserves_constant_phases: true
+  pair_weight_zero_count: 0
+  invariant_symmetric_bilinear_dimension: 0
+  global_no_go_claimed: false
+
+conditional_coframe_theorem:
+  premises:
+    - "source-derived coframe theta_U on each source domain"
+    - "fixed nondegenerate Lorentzian internal form eta"
+    - "source-induced overlap maps Lambda_VU"
+  local_metric: "q_U=theta_U^T eta theta_U"
+  transition_law: "Lambda_VU^T eta Lambda_VU=eta"
+  inverse_law: "Lambda_UV=Lambda_VU^-1"
+  cocycle_law: "Lambda_WV Lambda_VU=Lambda_WU"
+  finite_variation_robustness_derived: false
+  premises_derived_by_current_ontology: false
+  physical_interpretation_established: false
+
+proposal_only_burden_template:
+  template_id: "SRC-P6T05-COFRAME-COVARIANCE-BURDEN-001"
+  status_label: "proposal-only"
+  source_side_definition: "derive theta_U=F_U(D) eta signature discriminator source-induced Lambda_VU and a determinant robustness certificate without target data"
+  canonical_ontology_candidate: false
+  adopted: false
+  rejected: false
+  human_gate_required_before_adoption: true
+
+precise_obstruction:
+  obstruction_id: "OBST-P6T05-SIGNATURE-COVARIANCE-NATURALITY-001"
+  scope: "source_extension_candidate"
+  failed_object: "a natural nondegenerate Lorentzian covariant metric selection from only D_cal"
+  exact_failure: "identical admitted carriers allow different inertia and approach degeneracy while an admitted datum has a source-automorphism subgroup whose only invariant symmetric bilinear form is zero"
+  current_ontology_implication: "does_not_derive"
+  source_extension_implication: "new_primitive_required"
+  consequence: "new_primitive_required"
+  global_no_go_claimed: false
+  forbidden_overread: "The obstruction does not rule out materially richer source-side coframe constitutive discriminator transition determinant or robustness laws."
+
+reopening:
+  criteria:
+    - "source-derived coframe or equivalent transverse comparison structure"
+    - "source-derived Lorentzian signature discriminator and nondegeneracy certificate"
+    - "source-derived eta-preserving transition representation with inverse cocycle and finite-variation robustness"
+  protected_authority_required_before_adoption: true
+
+freeze:
+  active_freeze_label: "P6T05-ONE-RAY-DENSITY-PHASE-TO-SIGNATURE-COVARIANT-METRIC"
+  frozen_scope: "selection from unchanged D_1 plus independent unnormalized positive density and dimensionless phase carriers"
+  materially_richer_continuation_open: true
+  global_theory_rejection: false
+
+distance_to_gr:
+  changed: true
+  effect: "conditional_coframe_gluing_theorem_and_precise_signature_covariance_obstruction_recorded"
+  burden_id: "g_eff"
+  narrowed_burden: "Gate B additionally requires a source-derived signature discriminator nondegeneracy certificate natural coframe or equivalent transition representation inverse cocycle and robustness laws"
+  gate_b_ready: false
+  missing_primitives:
+    - "source-derived coframe or transverse comparison object"
+    - "Lorentzian signature selector"
+    - "metric-volume identity or determinant lower bound"
+    - "Lorentz-valued transition representation"
+    - "inverse cocycle compatibility and finite-variation robustness"
+  downstream_still_blocked:
+    - "physical causal cone"
+    - "unscoped effective metric g_eff"
+    - "physical time orientation"
+    - "matter coupling"
+    - "Einstein equations"
+    - "benchmark promotion"
+
+fixed_sources:
+  - object_id: "TEX-V21-P6-T03-ONE-RAY-CONFORMAL-INSUFFICIENCY-V1"
+    path: "research_control/tasks/RT-20260726-005/artifacts/one_ray_conformal_insufficiency_v1.tex"
+    sha256: "007ae324872868b9eb9cdf0ebc4f1131737c71eda9ce301c805acd5041a52bac"
+  - object_id: "TEX-V21-P6-T04-SOURCE-SCALE-CALIBRATION-NONSELECTION-V1"
+    path: "research_control/tasks/RT-20260726-007/artifacts/source_scale_calibration_nonselection_v1.tex"
+    sha256: "96a527cccb8e7a6a614debc5110902b1587848178af8444fc02acda52caf4d28"
+  - object_id: "TEX-ONTOLOGY-AETHER-FLOW-GEOMETRY"
+    path: "ontology/tex/aether_flow_geometry.tex"
+    sha256: "f60a81b63f814b03cca7190b3ac6285842a55317f4aed058cc6e75154cc0b4d7"
+  - object_id: "TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-METRICFORMASSIGN-GEFF-CANDIDATE-OR-OBSTRUCTION"
+    path: "research_control/tasks/RT-20260614-216/artifacts/245_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_METRICFORMASSIGN_GEFF_CANDIDATE_OR_OBSTRUCTION.tex"
+    sha256: "dd30573519ed1df66b3800d29ee0adc9fcc94d9c8d3b9b5a7fcffde503d5f0ef"
+  - object_id: "TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-GEFF-CANDIDATE-SCOPED-SOURCE-EXTENSION-ADOPTION-GATE-CHAIR-REVIEW"
+    path: "research_control/tasks/RT-20260614-222/artifacts/251_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_GEFF_CANDIDATE_SCOPED_SOURCE_EXTENSION_ADOPTION_GATE_CHAIR_REVIEW.tex"
+    sha256: "3ce8cbc6cd79c6852d78f81045633beea44c4dfc6e2912c604b08e3c8bdb0257"
+  - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+    path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+    sha256: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  - object_id: "MD-RESEARCH-CONTROL-DESIGN-GR-DERIVATION-BURDEN-MAP"
+    path: "research_control/design/gr_derivation_burden_map.md"
+    sha256: "8e9d44e3a18ecc8a2430a9c42497da3eb9911c2cf6cd714c1525c5d91551835e"
+  - object_id: "HANDOFF-0882"
+    path: "research_control/handoffs/handoff-0882.yaml"
+    sha256: "e0ce2d60cf6f2a4a4aabb79aff921d4c69a32b088900edd44556013039cb4940"
+
+authority:
+  canonical_ontology_modified: false
+  canonical_ontology_candidate_promoted: false
+  source_law_adopted: false
+  source_law_rejected: false
+  physical_metric_established: false
+  physical_causality_established: false
+  physical_time_orientation_established: false
+  lorentzian_signature_reconstructed: false
+  nondegeneracy_reconstructed: false
+  source_coframe_reconstructed: false
+  transition_law_reconstructed: false
+  historical_scoped_g_eff_expanded: false
+  matter_coupling_derived: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false

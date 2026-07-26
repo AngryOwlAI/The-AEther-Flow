@@ -731,6 +731,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-V21-P6-T02-SOURCE-LOCAL-TRANSPORT-CHARACTERISTIC-RECEIPT-V1` `wiki/markdown/md-v21-p6-t02-source-local-transport-characteristic-receipt-v1.md`
 - `WIKI-MD-V21-P6-T03-ONE-RAY-CONFORMAL-INSUFFICIENCY-RECEIPT-V1` `wiki/markdown/md-v21-p6-t03-one-ray-conformal-insufficiency-receipt-v1.md`
 - `WIKI-MD-V21-P6-T04-SOURCE-SCALE-CALIBRATION-NONSELECTION-RECEIPT-V1` `wiki/markdown/md-v21-p6-t04-source-scale-calibration-nonselection-receipt-v1.md`
+- `WIKI-MD-V21-P6-T05-SIGNATURE-COVARIANCE-NATURALITY-OBSTRUCTION-RECEIPT-V1` `wiki/markdown/md-v21-p6-t05-signature-covariance-naturality-obstruction-receipt-v1.md`
 - `WIKI-MD-VALIDATOR-OPERATOR-WORKFLOW-PUBLICATION-BRIEF` `wiki/markdown/md-validator-operator-workflow-publication-brief.md`
 
 ## project_control
@@ -1215,3 +1216,4 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-V21-P6-T02-SOURCE-LOCAL-TRANSPORT-CHARACTERISTIC-RECEIPT-V1` `research_control/tasks/RT-20260726-003/artifacts/source_local_transport_candidate_receipt.md`
 - `MD-V21-P6-T03-ONE-RAY-CONFORMAL-INSUFFICIENCY-RECEIPT-V1` `research_control/tasks/RT-20260726-005/artifacts/one_ray_conformal_insufficiency_receipt.md`
 - `MD-V21-P6-T04-SOURCE-SCALE-CALIBRATION-NONSELECTION-RECEIPT-V1` `research_control/tasks/RT-20260726-007/artifacts/source_scale_calibration_nonselection_receipt.md`
+- `MD-V21-P6-T05-SIGNATURE-COVARIANCE-NATURALITY-OBSTRUCTION-RECEIPT-V1` `research_control/tasks/RT-20260726-009/artifacts/signature_covariance_naturality_obstruction_receipt.md`

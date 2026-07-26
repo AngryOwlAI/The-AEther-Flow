@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-07-26T19:35:37Z`
-- Source fingerprint: `54d5dff9df3b691152b26656f383ec7de7a39996884e96a24efd6fa1f13db8de`
-- Nodes: `22496`
-- Edges: `73445`
+- Generated from tracked state as of: `2026-07-26T21:10:13Z`
+- Source fingerprint: `8271f0705d2b101a4b8369a39caf77a2ed5b6a1d7e767c32f87cc325de02b9ae`
+- Nodes: `22535`
+- Edges: `73499`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 1118 |
+| `completion_yaml` | 1119 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 882 |
+| `handoff_yaml` | 883 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,32 +33,32 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 8 |
-| `agent_job` | `support_only` | 1118 |
+| `agent_job` | `support_only` | 1119 |
 | `artifact` | `canonical_source` | 86 |
-| `artifact` | `support_only` | 11416 |
-| `blocked_burden` | `blocked` | 4568 |
-| `claim_boundary` | `support_only` | 1075 |
-| `draft_control_candidate` | `draft_control` | 753 |
-| `draft_control_candidate` | `proposal_only` | 120 |
-| `draft_control_candidate` | `science_draft` | 71 |
-| `frozen_negative` | `frozen_negative` | 138 |
+| `artifact` | `support_only` | 11435 |
+| `blocked_burden` | `blocked` | 4576 |
+| `claim_boundary` | `support_only` | 1076 |
+| `draft_control_candidate` | `draft_control` | 755 |
+| `draft_control_candidate` | `proposal_only` | 121 |
+| `draft_control_candidate` | `science_draft` | 73 |
+| `frozen_negative` | `frozen_negative` | 139 |
 | `gate_chair_verdict` | `human_gated` | 32 |
-| `handoff` | `support_only` | 882 |
+| `handoff` | `support_only` | 883 |
 | `human_gated_object` | `human_gated` | 535 |
 | `ledger_row` | `accepted_scoped` | 6 |
 | `ledger_row` | `blocked` | 4 |
 | `ledger_row` | `frozen_negative` | 1 |
 | `ledger_row` | `human_gated` | 1 |
 | `ledger_row` | `science_draft` | 3 |
-| `obstruction` | `blocked` | 87 |
+| `obstruction` | `blocked` | 88 |
 | `obstruction` | `rejected` | 4 |
 | `source_extension_evidence_precondition` | `source_extension_evidence` | 38 |
 | `source_ontology_object` | `canonical_source` | 27 |
 | `source_ontology_object` | `rejected` | 50 |
-| `source_ontology_object` | `support_only` | 355 |
+| `source_ontology_object` | `support_only` | 356 |
 | `task` | `human_gated` | 29 |
 | `task` | `science_draft` | 32 |
-| `task` | `support_only` | 1057 |
+| `task` | `support_only` | 1058 |
 
 ## Frontier Table
 
@@ -66,7 +66,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | --- | --- | --- | --- |
 | Resp_lc | `ledger:resp_lc` | `ledger_row` | `accepted_scoped` | Xi_X^R adopted only as admissible source-extension data for Resp_lc continuation through S_X^+; old S_X selector obstruction remains valid and downstream M_src |
 | M_src | `ledger:m_src` | `ledger_row` | `accepted_scoped` | Updated by RT-20260614-134 Phase 9 Gate Chair review to record scoped M_src adoption while g_eff matter coupling Einstein equations benchmark promotion and comp |
-| scoped g_eff | `ledger:g_eff` | `ledger_row` | `accepted_scoped` | P6-T04 proves a conditional four-dimensional volume-gauge theorem and an explicit determinant-one g_a family plus clock reparameterization obstruction while pre |
+| scoped g_eff | `ledger:g_eff` | `ledger_row` | `accepted_scoped` | P6-T05 proves an equal-determinant Lorentzian versus split-signature countermodel a near-degenerate Lorentzian family a zero-invariant-form source-naturality th |
 | B_E^{rec} | `object:b_e_rec` | `source_extension_evidence_precondition` | `source_extension_evidence` | Constructs the recovery-bridge candidate map on a declared finite/local source family with explicit bottom branches. |
 | BridgeCert | `object:bridgecert` | `source_extension_evidence_precondition` | `source_extension_evidence` | Required frontier object exposed in completion text: BridgeCert. |
 | SEI-MC criteria | `object:sei_mc_criteria` | `draft_control_candidate` | `draft_control` | Required frontier object exposed in completion text: SEI-MC criteria. |
@@ -163,9 +163,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 ## Route Continuity
 
-- Active task: `RT-20260726-008`
-- Latest handoff: `handoff-0882`
-- Handoff path: `research_control/handoffs/handoff-0882.yaml`
-- Next action: Run the one governed cumulative checkpoint for AJ-RT-20260726-008-001 with --legacy-validation. Only after it commits may one fresh bounded P6-T05 Ontology Formalizer packet test Lorentzian signature, nondegeneracy, and source-induced transformation-law obligations under the P6-T03 and P6-T04 nonselection results or return its own precise obstruction.
+- Active task: `RT-20260726-009`
+- Latest handoff: `handoff-0883`
+- Handoff path: `research_control/handoffs/handoff-0883.yaml`
+- Next action: Run one governed checkpoint for AJ-RT-20260726-009-001. Only after it commits may one fresh bounded P6-T06 Refuter packet stress the cumulative P6-T03 through P6-T05 package for uniqueness, source covariance, finite and infinitesimal variation robustness, and physical-admissibility overreads or return a precise obstruction.
 
 This graph is navigational support only; inspect the cited sources before using any claim.

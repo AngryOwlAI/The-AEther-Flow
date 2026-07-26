@@ -420,6 +420,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V21-P6-T02-SOURCE-LOCAL-TRANSPORT-CHARACTERISTIC-V1` `research_control/tasks/RT-20260726-003/artifacts/source_local_transport_candidate_v1.tex`
 - `TEX-V21-P6-T03-ONE-RAY-CONFORMAL-INSUFFICIENCY-V1` `research_control/tasks/RT-20260726-005/artifacts/one_ray_conformal_insufficiency_v1.tex`
 - `TEX-V21-P6-T04-SOURCE-SCALE-CALIBRATION-NONSELECTION-V1` `research_control/tasks/RT-20260726-007/artifacts/source_scale_calibration_nonselection_v1.tex`
+- `TEX-V21-P6-T05-SIGNATURE-COVARIANCE-NATURALITY-OBSTRUCTION-V1` `research_control/tasks/RT-20260726-009/artifacts/signature_covariance_naturality_obstruction_v1.tex`
 
 ## superseded
 
