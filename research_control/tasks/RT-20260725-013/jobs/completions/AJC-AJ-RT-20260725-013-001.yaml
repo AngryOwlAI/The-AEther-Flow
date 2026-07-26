@@ -1,0 +1,859 @@
+job_id: "AJ-RT-20260725-013-001"
+completion_id: "AJC-AJ-RT-20260725-013-001"
+task_id: "RT-20260725-013"
+task_type: "v21_p5_t06_define_source_coarse_graining_and_reconstruction_map"
+decision_id: "DDR-20260725-013"
+role_id: "ontology-formalizer"
+role_version: "0.2.0"
+execution_role_ref: "ontology-formalizer@0.2.0--RT-20260725-013"
+status: "completed"
+validation_status: "PASS"
+final_repository_validation_status: "PASS_READY_FOR_CHECKPOINT"
+created_at: "2026-07-26T02:38:13Z"
+started_at: "2026-07-26T02:38:13Z"
+completed_at: "2026-07-26T02:38:13Z"
+objective: "Define and test one controlled source-only coarse-graining and source-state reconstruction map for the exact unchanged cubic-amplitude candidate with explicit domain, codomain, resolution, approximation, information loss, surviving observables, covariance, dynamic error, smoothness, negative controls, local-reconstruction obstruction, and path to causal structure."
+completion_summary: "P5-T06 constructs an odd nearest-lattice coarse-graining C_epsilon of the declared global amplitude and an exact lattice decoder R_epsilon back into Q_amp. The source-state round trip has uniform amplitude and C0 error at most epsilon/2; information loss, surviving observables, reflection covariance, bounded-observable error, coded-dynamics errors, semigroup defect, dimension, smoothness, analytic examples, and negative controls are explicit. Every C1 effective-coordinate map from Q_amp has differential rank at most one, and together with P5-T04 patch rigidity and the P5-T05 phase obstruction this yields one precise current-family obstruction to reconstructing independent local fields, characteristic structure, or geometry. The path to causal structure is explicit but unmet, and conservative source extensions remain open."
+objective_result: "source_amplitude_coarse_graining_candidate_complete_with_precise_local_reconstruction_obstruction"
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 118
+  passes_consumed: 108
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:118"
+  handoff_token: "e9749fd9bf96b3a1cd80f90b38a9adf2cb1d6e5d0b267d86"
+  relay_claim_token: "d7f49406984fe5396ccd01b2540d115bac1a77910fc306a6"
+  route_work_item_id: "P5-T06"
+  route_worker_skill: "continue-research"
+  route_sha256: "33570b7a4f7d725ee2b9171c61635b4b5eb7a3ce736aa96acc75bc0fe5d2b762"
+  worker_skill: "continue-research"
+  worker_invocation_count: 1
+
+transaction_status: "ready_for_checkpoint"
+result_disposition: "P5_T06_SOURCE_AMPLITUDE_MAP_WITH_LOCAL_RECONSTRUCTION_OBSTRUCTION_PASS_READY_FOR_CHECKPOINT"
+checkpoint_commit:
+  required: true
+  attempted: false
+  committed: false
+  commit_sha: ""
+  push_performed: false
+
+is_physics_task: true
+payload_class: "bridge_map_candidate_and_precise_obstruction"
+minimum_payload: "one well-typed source-only map with explicit resolution approximation information loss surviving observables covariance convergence examples negative controls error ledger and either a viable geometry path or precise scoped obstruction"
+has_new_mathematical_payload: true
+has_finite_local_witness: true
+has_countermodel: true
+external_red_team_finding_requires_integration: false
+physics_promotion_authorized: false
+proof_authority: false
+
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_task_id: "P5-T06"
+  phase_id: "P5"
+  work_kind: "formalization_or_theorem"
+  task_class: "science"
+  expected_result_kind: "candidate_or_precise_obstruction"
+  dependency_task_id: "P5-T05"
+  dependency_completion_path: "research_control/tasks/RT-20260725-012/jobs/completions/AJC-AJ-RT-20260725-012-001.yaml"
+  dependency_checkpoint_commit: "895c5f2fa7bf15445ca88ba11a67878f098c30c1"
+  work_item_status: "completed_ready_for_checkpoint"
+  recommendation_ids:
+    - "V21-R12"
+    - "V21-R16"
+    - "V21-R17"
+    - "V21-R43"
+  recommendation_coverage_role: "direct_implementation"
+  scientific_claims_changed: true
+  scientific_claim_change_scope: "draft/control candidate-specific source-amplitude map approximation theorems information ledger and precise local-reconstruction obstruction"
+  physical_status_changed: false
+  distance_to_gr_delta_changed: true
+  distance_to_gr_delta_scope: "scoped_source_ontology_bridge_map_and_local_reconstruction_obstruction_only"
+  physics_promotion_authorized: false
+  proof_authority: false
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  observed_durable_outputs:
+    physics:
+      - "registered source-amplitude resolution coarse-graining and source-state reconstruction artifact"
+      - "coarse-graining specification with map typing information loss covariance and causal-path boundary"
+      - "scale and approximation-error ledger with precise local-reconstruction obstruction"
+    project_system:
+      - "task-local validator and compact receipt"
+      - "parent-child synthesis records"
+      - "standard control records and generated memory derivatives"
+  accepted_criteria:
+    physics:
+      - "the exact unchanged candidate and inherited obstructions are preserved"
+      - "domain codomain resolution reconstruction approximation and information loss are explicit"
+      - "declared source covariance dynamic error dimension smoothness examples and negative controls are correct in scope"
+      - "the local-reconstruction obstruction and causal dependency path preserve same-milestone continuation"
+    project_system:
+      - "task-local validation and claim-language checks pass"
+      - "registered source hashes and generated derivatives synchronize"
+      - "one governed checkpoint records the bounded transaction"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+physics_payload_admission_result:
+  status: "admitted"
+  admission_path: "physics"
+  payload_type: "candidate_construction"
+  candidate_family: "V21-P5-T03-CUBIC-AMPLITUDE-SOURCE-DYNAMICS-V1"
+  definition_identity: "V21-P5-T06-SOURCE-AMPLITUDE-RESOLUTION-COARSE-GRAINING-V1"
+  obstruction_id: "OBST-P5T06-QAMP-LOCAL-FIELD-RANK-001"
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed_by_admission: false
+  physical_status_changed_by_admission: false
+  physics_promotion_authorized: false
+
+family_freeze_admission_result:
+  status: "admitted_unfrozen"
+  route_kind: "candidate_construction"
+  family_id: "V21-P5-T03-CUBIC-AMPLITUDE-SOURCE-DYNAMICS-V1"
+  detected_match_basis: []
+  reopening_requested: false
+  local_family_freeze_preserved: true
+  global_no_go_inferred: false
+  physics_promotion_authorized: false
+
+ordinary_route_guard_admission_result:
+  status: "PASS"
+  source_handoff_id: "handoff-0872"
+  selected_plan_task_id: "P5-T06"
+  guard_outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  scientific_status_changed_by_guard: false
+  physics_promotion_authorized: false
+
+artifacts:
+  registered_coarse_graining: "research_control/tasks/RT-20260725-013/artifacts/source_amplitude_resolution_coarse_graining_v1.tex"
+  map_specification: "research_control/tasks/RT-20260725-013/artifacts/source_amplitude_coarse_graining_spec_v1.yaml"
+  scale_error_ledger: "research_control/tasks/RT-20260725-013/artifacts/source_amplitude_scale_error_ledger_v1.yaml"
+  compact_receipt: "research_control/tasks/RT-20260725-013/artifacts/source_amplitude_coarse_graining_validation_receipt_v1.json"
+  validator: "research_control/tasks/RT-20260725-013/artifacts/validate_source_amplitude_coarse_graining.py"
+  child_phys_math: "research_control/tasks/RT-20260725-013/artifacts/child_phys_math_source_amplitude_coarse_graining.yaml"
+  child_phys_phil: "research_control/tasks/RT-20260725-013/artifacts/child_phys_phil_source_amplitude_coarse_graining.yaml"
+  conflict_review: "research_control/tasks/RT-20260725-013/artifacts/parent_conflict_review_source_amplitude_coarse_graining.yaml"
+  fusion_notes: "research_control/tasks/RT-20260725-013/artifacts/parent_fusion_notes_source_amplitude_coarse_graining.md"
+
+output_paths:
+  - "research_control/tasks/RT-20260725-013/artifacts/source_amplitude_resolution_coarse_graining_v1.tex"
+  - "research_control/tasks/RT-20260725-013/artifacts/source_amplitude_coarse_graining_spec_v1.yaml"
+  - "research_control/tasks/RT-20260725-013/artifacts/source_amplitude_scale_error_ledger_v1.yaml"
+  - "research_control/tasks/RT-20260725-013/artifacts/source_amplitude_coarse_graining_validation_receipt_v1.json"
+  - "research_control/tasks/RT-20260725-013/artifacts/validate_source_amplitude_coarse_graining.py"
+  - "research_control/tasks/RT-20260725-013/artifacts/child_phys_math_source_amplitude_coarse_graining.yaml"
+  - "research_control/tasks/RT-20260725-013/artifacts/child_phys_phil_source_amplitude_coarse_graining.yaml"
+  - "research_control/tasks/RT-20260725-013/artifacts/parent_conflict_review_source_amplitude_coarse_graining.yaml"
+  - "research_control/tasks/RT-20260725-013/artifacts/parent_fusion_notes_source_amplitude_coarse_graining.md"
+  - "research_control/tasks/RT-20260725-013/00_TASK.yaml"
+  - "research_control/tasks/RT-20260725-013/DDR-20260725-013.md"
+  - "research_control/tasks/RT-20260725-013/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260725-013/roles/ontology-formalizer@0.2.0--RT-20260725-013.yaml"
+  - "research_control/tasks/RT-20260725-013/jobs/AJ-RT-20260725-013-001.yaml"
+  - "research_control/tasks/RT-20260725-013/jobs/completions/AJC-AJ-RT-20260725-013-001.yaml"
+  - "research_control/handoffs/handoff-0873.yaml"
+  - "research_control/handoffs/handoff-0873.md"
+
+artifact_receipts:
+  - artifact_id: "V21-P5-T06-SOURCE-AMPLITUDE-RESOLUTION-COARSE-GRAINING-V1"
+    path: "research_control/tasks/RT-20260725-013/artifacts/source_amplitude_resolution_coarse_graining_v1.tex"
+    sha256: "a798e69875603ec3d0f9202ea67de18fcbc3dabf1cb1a178713f8dde9aefd074"
+    status_label: "draft/control"
+    candidate_status: "proposal-only"
+    material_class: "source-extension data"
+  - artifact_id: "V21-P5-T06-SOURCE-AMPLITUDE-COARSE-GRAINING-SPEC-V1"
+    path: "research_control/tasks/RT-20260725-013/artifacts/source_amplitude_coarse_graining_spec_v1.yaml"
+    sha256: "47e863230b89a9a3034a9383b182b7ffb6860bc9e966817163cc52f8e3484d97"
+    status_label: "draft/control"
+  - artifact_id: "V21-P5-T06-SOURCE-AMPLITUDE-SCALE-ERROR-LEDGER-V1"
+    path: "research_control/tasks/RT-20260725-013/artifacts/source_amplitude_scale_error_ledger_v1.yaml"
+    sha256: "2980c9b572d8b8aada0311f7e1d8976ef061c4063bc7387154a0906e56b51eff"
+    status_label: "draft/control"
+  - artifact_id: "V21-P5-T06-SOURCE-AMPLITUDE-COARSE-GRAINING-VALIDATION-V1"
+    path: "research_control/tasks/RT-20260725-013/artifacts/source_amplitude_coarse_graining_validation_receipt_v1.json"
+    sha256: "e2be8a0c33cee932414f1e882ae3a31d9734e8da86f1561e4b237928f52d2b5a"
+    status_label: "operational_evidence"
+
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_execution_unit_count: 2
+  outer_agentjob_count: 1
+  child_agentjob_count: 0
+
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260725-013/artifacts/child_phys_math_source_amplitude_coarse_graining.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260725-013/artifacts/child_phys_phil_source_amplitude_coarse_graining.yaml"
+      status: "completed"
+  conflict_review:
+    status: "resolved"
+    review_path: "research_control/tasks/RT-20260725-013/artifacts/parent_conflict_review_source_amplitude_coarse_graining.yaml"
+    resolution_rounds: 1
+    resolved_conflict_count: 6
+    unresolved_conflicts: []
+  fusion:
+    fused_output_path: "research_control/tasks/RT-20260725-013/artifacts/source_amplitude_resolution_coarse_graining_v1.tex"
+    fusion_notes_path: "research_control/tasks/RT-20260725-013/artifacts/parent_fusion_notes_source_amplitude_coarse_graining.md"
+    shared_consensus_summary: "Both perspectives preserve the unchanged candidate and agree on the map typing, uniform source-state error, information loss, declared source covariance, coded-dynamics errors, smoothness boundary, averaging control, scoped local-reconstruction obstruction, causal dependency path, and nonpromotion boundary."
+    unique_phys_math_contributions: "Odd quantizer and decoder, uniform error theorem, bounded-observable error, reflection covariance, dynamic compatibility and semigroup-defect bounds, averaging dichotomy, and differential-rank proposition."
+    unique_phys_phil_contributions: "Resolution-versus-physical-scale, source-decoding-versus-geometry, source-versus-target covariance, information provenance, source-order-versus-causality, adoption, and downstream-GR boundaries."
+    novelty_preservation_summary: "The fusion preserves the bridge-map candidate and theorem-level error payload while retaining every exact epistemic and information boundary."
+    claim_boundary_preservation_summary: "No target import canonical adoption physical scale field locality covariance causal geometry downstream GR object proof publication push global rejection or completed derivation is authorized."
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+
+ontology_law_research_packet:
+  route: "ontology-law-research-packet"
+  trigger_classification: "derivation_critical_missing_source_law"
+  target_derivation_milestone: "source_ontology"
+  milestone_burden: "Provide the mathematical bridge from source dynamics to effective structure."
+  missing_source_law: "A typed source-only coarse-graining or reconstruction law with explicit domain, codomain, resolution scale, approximation regime, information loss, surviving observables, covariance, convergence, and controlled error."
+  underdetermination_statement: "Current ontology does not derive a typed source-only coarse-graining or reconstruction law with scale, approximation, information-loss, covariance, convergence, and error semantics."
+  no_go_theorem_status: "scoped_obstruction_only; no general no-go theorem"
+  adoption_status:
+    current_adoption: "blocked"
+    continuation: "open"
+    status_pair: "blocked_adoption_open_continuation"
+  packet_payload_mode: "candidate_law_payload"
+  candidate_law_payload:
+    status_label: "draft/control"
+    candidate_status: "proposal-only"
+    material_class: "source-extension data"
+    source_side_definition: "For epsilon>0, C_epsilon(q_a)=epsilon sgn(a) floor(|a|/epsilon+1/2) maps Q_amp to epsilon Z and R_epsilon(c)=q_c decodes the source code, with declared information loss and error bounds."
+    formal_objects:
+      - "Q_amp and coefficient observable F(q_a)=a"
+      - "resolution parameter epsilon>0"
+      - "effective observable lattice O_epsilon=epsilon Z"
+      - "odd nearest-lattice quantizer N_epsilon"
+      - "coarse map C_epsilon and source-state decoder R_epsilon"
+      - "raw and lattice effective evolutions"
+      - "information-loss fibers and scale-error ledger"
+      - "obstruction OBST-P5T06-QAMP-LOCAL-FIELD-RANK-001"
+    domains:
+      - "the exact P5-T03 Q_amp source family"
+      - "positive dimensionless source-amplitude resolutions"
+      - "the proposal-only nonnegative source-order parameter"
+      - "bounded amplitude regions only when the quadratic-observable error is invoked"
+    maps:
+      - "C_epsilon:Q_amp->epsilon Z"
+      - "R_epsilon:epsilon Z->Q_amp"
+      - "Pi_epsilon=R_epsilon o C_epsilon"
+      - "rho_epsilon(c)=-c"
+      - "F_tilde_(epsilon,lambda)(c)=f_lambda(c)"
+      - "F_(epsilon,lambda)(c)=N_epsilon(f_lambda(c))"
+    proof_obligations:
+      - "P5-T07 must audit target import information creation covariance overread and every error bound"
+      - "any smoother or local source map requires independently supplied local source data and regularity"
+      - "a characteristic operator and source-invariant cone theorem must precede causal claims"
+      - "M_src g_eff matter coupling Einstein equations and exact-GR recovery remain separate burdens"
+  exact_gr_recovery_obligations:
+    checklist:
+      - "Preserve exact-GR benchmark separation and forbid using target success to choose source thresholds or maps."
+      - "Audit the source-only map and its error semantics before any geometry packet."
+      - "Construct local source data and characteristic structure before causal or metric claims."
+      - "Recover scale signature operational response matter coupling and Einstein-equation structure under separate burdens."
+      - "Require protected human authority before canonical ontology or source-law adoption and benchmark promotion."
+    distance_to_gr_links:
+      - "source_ontology_primitives"
+      - "ObsLoc_lc"
+      - "Resp_lc"
+      - "M_src"
+      - "g_eff"
+      - "matter coupling"
+      - "Einstein equations"
+      - "benchmark promotion"
+  no_target_import_audit_scope:
+    forbidden_source_classes:
+      - "target_atlas"
+      - "target_metric"
+      - "benchmark_success"
+      - "candidate_reconstruction"
+      - "generated_derivative"
+      - "registry_metadata_authority"
+      - "role_authority"
+      - "validation_authority"
+    checked_objects:
+      - "source-amplitude observable and quantizer thresholds"
+      - "source-state decoder"
+      - "reflection covariance statement"
+      - "exact and coded source evolutions"
+      - "information-loss and error ledger"
+      - "rank and patching obstruction"
+    audit_result: "Every mathematical premise is source-side or explicitly task-local; no target datum selects a threshold, code, decoder, symmetry, evolution, error, local field, causal structure, or geometry."
+  atlas_glue_obligations:
+    profile_law: "not_supplied; independent local source profiles remain absent"
+    selector_law: "not_supplied"
+    transition_law: "not_supplied"
+    inverse_checks: "not_applicable to the global amplitude lattice"
+    cocycle_checks: "not_applicable to the global amplitude lattice"
+    finite_variation_robustness: "only the inherited one-dimensional admitted tangent sector is available"
+  failure_branches:
+    target_threshold_import: "fail_closed_target_import"
+    local_field_overread: "scoped_obstruction"
+    physical_scale_overread: "fail_closed_source_amplitude_resolution_only"
+    smoothness_overread: "fail_closed_half_grid_discontinuity"
+    information_creation: "fail_closed_absent_local_data"
+    averaging_collapse: "negative_control"
+  known_risks:
+    - "a dimensionless amplitude resolution could be overread as physical length energy time or target scale"
+    - "source-state decoding could be relabeled local-field or geometry reconstruction"
+    - "reflection equivariance could be broadened to target diffeomorphism covariance"
+    - "a discontinuous scalar code could be misused to label absent local information"
+    - "the source torus or flow parameter could be relabeled spacetime or physical time"
+  failed_alternatives:
+    - "Source spatial probes either recover the same one global amplitude or collapse the family."
+    - "Independent patch codes remain impossible inside Q_amp by P5-T04."
+    - "The exact current family supplies no characteristic operator or local reconstruction phase."
+  human_gate_request:
+    required_before_adoption: true
+    requested_decision: "No gate is requested now. Protected human authority is required before adopting, rejecting, or canonically promoting this or any replacement source law."
+    exact_requested_ontology_edit: ""
+
+new_mathematical_payload:
+  - payload_id: "NMP-RT-20260725-013-001"
+    payload_type: "bridge_map_candidate"
+    name: "source-amplitude resolution coarse-graining and decoder"
+    summary: "Defines C_epsilon:Q_amp->epsilon Z and R_epsilon:epsilon Z->Q_amp with exact code decoding, uniform source-state error, explicit information fibers, and declared source-only scale."
+  - payload_id: "NMP-RT-20260725-013-002"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    name: "declared source covariance and controlled dynamics"
+    summary: "Proves reflection equivariance and derives uniform raw, lattice, and semigroup-defect bounds from the exact source flow's 1-Lipschitz property."
+  - payload_id: "NMP-RT-20260725-013-003"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    name: "source-probe averaging dichotomy"
+    summary: "Shows each linear source probe recovers the same global amplitude or collapses it and cannot create local data."
+  - payload_id: "NMP-RT-20260725-013-004"
+    payload_type: "countermodel_or_obstruction"
+    name: "current-family local-field and geometry reconstruction obstruction"
+    summary: "Combines the one-dimensional differential-rank bound, P5-T04 patch rigidity, and P5-T05 phase obstruction to block local-field and geometry reconstruction from exact current Q_amp while leaving source extensions open."
+
+mathematical_payload_manifest:
+  - payload_id: "PAYLOAD-RT-20260725-013-001"
+    payload_type: "construction"
+    object_name: "source-amplitude resolution coarse-graining and source-state decoder"
+    claim_status: "draft/control proposal-only bridge-map candidate"
+    source_path: "research_control/tasks/RT-20260725-013/artifacts/source_amplitude_resolution_coarse_graining_v1.tex"
+    burden_effect: "narrows"
+    summary: "Provides the first typed map and controlled source-state reconstruction for the exact candidate."
+  - payload_id: "PAYLOAD-RT-20260725-013-002"
+    payload_type: "theorem"
+    object_name: "uniform reconstruction source-covariance and dynamic-error theorem package"
+    claim_status: "draft/control candidate-specific mathematical result"
+    source_path: "research_control/tasks/RT-20260725-013/artifacts/source_amplitude_resolution_coarse_graining_v1.tex"
+    burden_effect: "narrows"
+    summary: "Makes scale convergence information loss covariance and dynamic error auditable."
+  - payload_id: "PAYLOAD-RT-20260725-013-003"
+    payload_type: "obstruction"
+    object_name: "Q_amp local-field and geometry reconstruction obstruction"
+    claim_status: "draft/control precise scoped obstruction"
+    source_path: "research_control/tasks/RT-20260725-013/artifacts/source_amplitude_resolution_coarse_graining_v1.tex"
+    burden_effect: "obstructs"
+    summary: "Shows why the exact one-mode family cannot provide independent local or characteristic data."
+  - payload_id: "PAYLOAD-RT-20260725-013-004"
+    payload_type: "dependency_map_update"
+    object_name: "explicit path from local source data to causal structure"
+    claim_status: "draft/control unmet dependency chain"
+    source_path: "research_control/tasks/RT-20260725-013/artifacts/source_amplitude_coarse_graining_spec_v1.yaml"
+    burden_effect: "narrows"
+    summary: "Orders the missing local-data gluing operator characteristic cone regularity response and later geometry burdens."
+
+physics_progress_status:
+  status: "candidate_constructed_pending_audit"
+  target_derivation_milestone: "source_ontology"
+  milestone_burden: "Provide the mathematical bridge from source dynamics to effective structure."
+  explanation: "The exact P5-T03 candidate now has a first typed source-observable coarse-graining and source-state decoder with explicit approximation and information semantics plus a precise obstruction to local-field or geometry reconstruction from the current family. P5-T07 source-purity audit and refuter stress remain required."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr_delta:
+  changed: true
+  effect: "obstruction_recorded"
+  burden_id: "source_ontology_primitives"
+  milestone: "source_ontology"
+  old_status: "accepted source-extension candidate with complete candidate-specific background and admitted-mode analysis plus a precise obstruction to a nontrivial local reconstruction phase"
+  new_status: "accepted source-extension candidate with an audit-ready global-amplitude coarse-graining and source-state decoder plus a precise obstruction to local-field or geometry reconstruction from the current one-mode family"
+  ledger_row_updated: true
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  downstream_unlocked:
+    - "P5-T07 source-purity audit and refuter stress after the governed checkpoint"
+  downstream_still_blocked:
+    - "P5-T07 until the governed checkpoint commits"
+    - "independent local source data and characteristic operator"
+    - "source-invariant causal structure"
+    - "canonical source-law adoption"
+    - "physical source manifold M_src"
+    - "effective metric g_eff"
+    - "matter coupling"
+    - "Einstein equations"
+    - "benchmark promotion"
+  explanation: "The source-ontology row gains a candidate-specific global-amplitude map, explicit error ledger, and local-reconstruction obstruction. Physical and promotion layers remain unchanged."
+
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "P5-T06 supplies an audit-ready global-amplitude coarse-graining and source-state decoder with explicit information and error semantics plus a current-family local-reconstruction obstruction; generic local source structure and adoption remain open"
+  - burden: "Source equivalence EqSrc"
+    status: "unchanged; identity-only witness covariance does not discharge general EqSrc"
+  - burden: "RetainH"
+    status: "unchanged; no adopted source retention law is supplied"
+  - burden: "GenH"
+    status: "unchanged; no adopted source generation law is supplied"
+  - burden: "ObsLoc_lc"
+    status: "unchanged and blocked; the amplitude code supplies no observer localization or local readout semantics"
+  - burden: "Resp_lc"
+    status: "unchanged and blocked; no detector response or operational semantics is constructed"
+  - burden: "M_src"
+    status: "unchanged and blocked; the torus witness amplitude lattice and decoded q_c are not adopted physical spacetime"
+  - burden: "g_eff"
+    status: "unchanged and blocked; no local characteristic data causal structure or effective metric is constructed"
+  - burden: "matter coupling"
+    status: "unchanged; no matter semantics action universal coupling stress energy or backreaction"
+  - burden: "Einstein equations"
+    status: "unchanged; no target-side field-equation derivation follows"
+  - burden: "finite-variation robustness"
+    status: "coded-dynamics errors are controlled in the inherited amplitude sector; arbitrary off-family and local source variations remain undefined"
+  - burden: "benchmark promotion"
+    status: "unchanged; exact GR remains separate target-side benchmark authority"
+  - burden: "Gate Chair status"
+    status: "unchanged and human-gated; no adoption rejection or promotion decision is requested or inferred"
+  - burden: "current route freeze or hard-fail status"
+    status: "not frozen; P5-T06 adds a materially new typed map error ledger and rank obstruction and P5-T07 is a distinct audit burden"
+
+ontology_formalizer_result:
+  result_type: "bridge_map_candidate_with_scoped_obstruction"
+  bridge_map_candidate_path: "research_control/tasks/RT-20260725-013/artifacts/source_amplitude_resolution_coarse_graining_v1.tex"
+  obstruction_id: "OBST-P5T06-QAMP-LOCAL-FIELD-RANK-001"
+  formal_objects:
+    - "epsilon>0"
+    - "O_epsilon=epsilon Z"
+    - "N_epsilon C_epsilon R_epsilon Pi_epsilon"
+    - "raw and lattice effective evolutions"
+    - "information-loss fibers"
+  maps:
+    - "C_epsilon:Q_amp->O_epsilon"
+    - "R_epsilon:O_epsilon->Q_amp"
+    - "Pi_epsilon=R_epsilon o C_epsilon"
+    - "rho_epsilon(c)=-c"
+    - "F_tilde_(epsilon,lambda) and F_(epsilon,lambda)"
+  proof_obligations:
+    - "P5-T07 source-purity and refuter-stress audit"
+    - "independent local source data and gluing before local reconstruction"
+    - "characteristic operator and invariant-cone theorem before causal structure"
+    - "protected adoption and later downstream GR gates"
+  failed_components:
+    - "independent local effective-field data"
+    - "characteristic operator and causal cone"
+    - "physical or target-geometric scale"
+    - "M_src or g_eff reconstruction"
+  next_required_role: "smuggling-auditor@0.2.0"
+  no_fog_check: true
+  no_fog_explanation: "A complete source-amplitude map exists with exact typing and controlled approximation. It reconstructs only one quantized source state. The exact current domain has one tangent dimension and no independent patch or phase data, so it cannot supply local fields, characteristic structure, or geometry."
+  claim_boundary_preserved: true
+  claim_boundary_citation: "CB-V21-P5-T06-SOURCE-AMPLITUDE-COARSE-GRAINING-001"
+
+bridge_attempt_status:
+  status: "global_source_observable_map_constructed_local_geometry_obstructed"
+  candidate_map: "C_epsilon:Q_amp->epsilon Z with source-state decoder R_epsilon:epsilon Z->Q_amp and uniform source-state error at most epsilon/2."
+  missing_primitive: "Independent local source data, a gluing law, characteristic operator, source-invariant cone, operational response, M_src, and g_eff remain absent."
+  preserves_blocks: "Preserves canonical ontology adoption physical scale locality covariance time causal structure M_src g_eff matter coupling Einstein equations benchmark promotion proof publication push completed derivation global theory rejection and future source-extension impossibility blocks."
+  explanation: "P5-T06 constructs a controlled global source-observable map but proves a precise current-family obstruction to interpreting it as a local field or geometry bridge."
+
+countermodel_obligations:
+  policy_id: "minimal_countermodel_obligation_policy_v1"
+  theorem_family: "other"
+  waiver_decision_id: ""
+  slots:
+    - countermodel_slot: "half_grid_and_zero_bin"
+      status: "filled"
+      scope: "Expose tie handling and near-zero sign information loss."
+      result_artifact: "research_control/tasks/RT-20260725-013/artifacts/source_amplitude_scale_error_ledger_v1.yaml"
+      obstruction_id: ""
+      local_countermodel_claim: "At a=-2.5 epsilon the code is -3 epsilon, while any nonzero |a|<epsilon/2 maps to zero."
+      forbidden_overread: "This does not invalidate the exact source amplitude or assign physical significance to the code."
+    - countermodel_slot: "source_probe_collapse"
+      status: "filled"
+      scope: "Test whether source spatial averaging creates local information."
+      result_artifact: "research_control/tasks/RT-20260725-013/artifacts/source_amplitude_resolution_coarse_graining_v1.tex"
+      obstruction_id: ""
+      local_countermodel_claim: "A source probe orthogonal to sin(theta_1) sends every q_a to zero; a nonorthogonal probe recovers only the same one amplitude."
+      forbidden_overread: "This is a current-family control, not a theorem against every source averaging law."
+    - countermodel_slot: "local_reconstruction"
+      status: "filled"
+      scope: "Test the exact candidate for a local effective-field or geometry reconstruction map."
+      result_artifact: "research_control/tasks/RT-20260725-013/artifacts/source_amplitude_resolution_coarse_graining_v1.tex"
+      obstruction_id: "OBST-P5T06-QAMP-LOCAL-FIELD-RANK-001"
+      local_countermodel_claim: "Every C1 effective-coordinate map has differential rank at most one and Q_amp has no independent patch or characteristic data."
+      forbidden_overread: "The candidate-specific obstruction is not future source-extension impossibility or global theory rejection."
+
+obstruction_record:
+  present: true
+  obstruction_id: "OBST-P5T06-QAMP-LOCAL-FIELD-RANK-001"
+  scope: "source_extension_candidate"
+  failed_object: "local effective-field or geometry reconstruction from the exact current Q_amp candidate"
+  exact_failure: "Q_amp has one admitted tangent dimension, P5-T04 forbids independent patch amplitudes, and P5-T05 supplies no local reconstruction-suitable phase; therefore every C1 effective-coordinate map has rank at most one and no characteristic or local field data can be recovered."
+  minimal_counterexample_path: "research_control/tasks/RT-20260725-013/artifacts/source_amplitude_resolution_coarse_graining_v1.tex"
+  current_ontology_implication: "does_not_derive"
+  source_extension_implication: "repair_allowed"
+  consequence: "repair_candidate_allowed"
+  forbidden_overread: "The scoped obstruction does not establish physical impossibility, a general source no-go, global theory rejection, or future source-extension impossibility."
+
+route_cycle_control:
+  cycle_family: "source_ontology_cubic_amplitude_candidate"
+  current_cycle_step: "p5_t06_source_amplitude_map_complete"
+  prior_related_tasks:
+    - "RT-20260725-003 P5-T01 compact source-theory object"
+    - "RT-20260725-007 P5-T02 forward-action semantics"
+    - "RT-20260725-008 P5-T03 cubic-amplitude dynamics candidate"
+    - "RT-20260725-010 P5-T04 structural audit"
+    - "RT-20260725-012 P5-T05 background and mode analysis"
+  cycle_risk: "low"
+  orbit_avoidance_reason: "P5-T06 adds a first typed map, exact code and error semantics, dynamic approximation theorem, scale ledger, and a distinct rank obstruction. P5-T07 must audit these exact new objects rather than restate prior candidate findings."
+  next_role_consequence: "smuggling-auditor@0.2.0 for v21 P5-T07"
+
+freeze_criteria_status:
+  repeated_burden: false
+  freeze_evaluation_required: true
+  active_freeze_label: "P5T06_QAMP_LOCAL_RECONSTRUCTION_OBSTRUCTION_NOT_FROZEN"
+  prior_attempts_considered:
+    - "RT-20260725-008"
+    - "RT-20260725-010"
+    - "RT-20260725-012"
+  freeze_if:
+    - "A later packet relabels the same amplitude lattice as local fields or geometry without independent source data."
+    - "A later packet repeats the rank and patching obstruction without a new audit finding theorem source extension or distinct map."
+    - "P5-T07 finds target import information creation or an unrepaired error-bound failure in the exact candidate map."
+  do_not_freeze_if:
+    - "P5-T07 supplies a materially new source-purity audit or refuter-stress result for the exact map."
+    - "A later authorized source extension supplies independently variable local data a gluing law or characteristic operator."
+  freeze_decision: "not_frozen"
+  decision_reason: "This is the first typed P5-T06 map and error ledger, contains materially new bridge-map and theorem payload, and leaves the distinct planned P5-T07 audit available."
+  criteria_evaluated:
+    - "new typed bridge-map candidate present"
+    - "new uniform error and dynamic compatibility theorems present"
+    - "new information-loss and scale ledger present"
+    - "candidate-specific rather than global local-reconstruction obstruction"
+    - "distinct audit and stress continuation available"
+  rationale: "The local-reconstruction obstruction is preserved but does not freeze the wider source-extension family or the materially distinct P5-T07 audit."
+  next_allowed_route: "smuggling_auditor"
+  status_update_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  no_status_update_rationale: ""
+  candidate_freeze_label: "none_not_frozen"
+
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  forbidden_conclusions:
+    - "canonical ontology edit or canonical-ontology candidate status"
+    - "source-law adoption or rejection"
+    - "epsilon as physical length time energy detector or target-geometric scale"
+    - "the amplitude lattice as physical spacetime or source manifold"
+    - "source-state decoder as local field causal structure or effective geometry"
+    - "reflection equivariance as target diffeomorphism covariance"
+    - "coded source evolution as physical time or adopted replacement law"
+    - "absent local information reconstructed by arbitrary coding"
+    - "M_src adoption or g_eff reconstruction"
+    - "matter coupling or Einstein equations"
+    - "benchmark promotion Gate Chair verdict proof publication push or completed derivation"
+    - "global theory rejection or future source-extension impossibility"
+  summary: "Operational validation and checkpoint evidence cannot promote the task-local source-observable map or scoped obstruction into an adopted, physical, target-side, global-no-go, or protected claim."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable_no_protected_gate"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  publication_authorized: false
+  proof_authority: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  canonical_ontology_edit_authorized: false
+  ontology_selection_authorized: false
+  physical_interpretation_establishment_authorized: false
+  physical_scale_or_coarse_graining_claim_authorized: false
+  physical_local_field_or_covariance_claim_authorized: false
+  physical_time_or_causal_structure_claim_authorized: false
+  M_src_adoption_authorized: false
+  g_eff_construction_authorized: false
+  matter_coupling_derivation_authorized: false
+  einstein_equation_derivation_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+three_tier_claim_summary:
+  adopted_objects:
+    - "Inherited only: P4-T06 continuum-first research architecture with explicit primitive debt."
+  accepted_evidence_preconditions:
+    - "P5-T01 compact source-theory object and torus-amplitude witness"
+    - "P5-T02 proposal-only continuous forward-action semantics"
+    - "P5-T03 task-local cubic-amplitude dynamics candidate"
+    - "P5-T04 candidate-specific structural theorems and patch-amplitude obstruction"
+    - "P5-T05 candidate-specific background mode stability results and reconstruction-phase obstruction"
+    - "P5-T06 task-local source-amplitude map error ledger and local-reconstruction obstruction"
+  open_or_blocked_physical_targets:
+    - "independent local source data gluing and characteristic operator"
+    - "source-invariant causal structure and operational response"
+    - "physical source manifold M_src and effective geometry"
+    - "g_eff matter coupling Einstein equations and benchmark promotion"
+  forbidden_overread:
+    - "dimensionless amplitude resolution as physical scale"
+    - "quantized source state as local field or target geometry"
+    - "one-dimensional map as physical mode or spacetime dimension"
+    - "candidate-specific local obstruction as global theory rejection"
+    - "validation or checkpoint as theorem proof adoption or promotion"
+
+validation_receipts:
+  task_local:
+    path: "research_control/tasks/RT-20260725-013/artifacts/source_amplitude_coarse_graining_validation_receipt_v1.json"
+    sha256: "e2be8a0c33cee932414f1e882ae3a31d9734e8da86f1561e4b237928f52d2b5a"
+    result_status: "PASS"
+    pass_count: 27
+    fail_count: 0
+    warning_count: 0
+  scratch_tex_build:
+    status: "PASS"
+    page_count: 5
+    authority: "operational_evidence_only"
+  repository:
+    status: "PASS_READY_FOR_CHECKPOINT"
+    authority: "operational_evidence_only"
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1017
+    relationship_row_count: 5050
+    semantic_row_count: 1017
+    vault_row_count: 1017
+    local_cache_only_warning_count: 0
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: true
+    refresh_performed: true
+    before_core_validation_status: "PASS"
+    before_freshness_status: "WARN"
+    before_local_retrieval_status: "WARN"
+    before_local_cache_only_warning_count: 7
+    after_core_validation_status: "PASS"
+    after_freshness_status: "PASS"
+    after_local_retrieval_status: "PASS"
+    after_local_cache_only_warning_count: 0
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"source coarse graining reconstruction map\" --limit 10 --json"
+      query_type: "search"
+      query_text: "source coarse graining reconstruction map"
+      returned_object_ids:
+        - "TEX-V21-P5-T05-CUBIC-AMPLITUDE-BACKGROUND-PHASE-ANALYSIS-V1"
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"cubic amplitude reconstruction phase obstruction\" --limit 10 --json"
+      query_type: "search"
+      query_text: "cubic amplitude reconstruction phase obstruction"
+      returned_object_ids:
+        - "TEX-V21-P5-T05-CUBIC-AMPLITUDE-BACKGROUND-PHASE-ANALYSIS-V1"
+        - "MD-V21-P5-T05-PARENT-FUSION-CUBIC-AMPLITUDE-BACKGROUNDS-V1"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"typed source only map scale approximation error\" --limit 10 --json"
+      query_type: "search"
+      query_text: "typed source only map scale approximation error"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+  canonical_inspections:
+    - object_id: "TEX-V21-P5-T05-CUBIC-AMPLITUDE-BACKGROUND-PHASE-ANALYSIS-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260725-012/artifacts/cubic_amplitude_background_phase_analysis_v1.tex"
+      source_hash: "73895f1325fa83799c343e0c88d525e1d9e006254844b8f8bd7bb8fe2286f48d"
+    - object_id: "MD-V21-P5-T05-PARENT-FUSION-CUBIC-AMPLITUDE-BACKGROUNDS-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260725-012/artifacts/parent_fusion_notes_cubic_amplitude_backgrounds.md"
+      source_hash: "84636c9c6e4b2a20b853759d6af831ebde256c792d6af939055860c8ba1e3020"
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "b29a5dcb06665065a2810721fa86a31c81e694a2e01e70bc996dd3abad9c853d"
+  failed_queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"P5-T06 source map\" --limit 10 --json"
+      result: "FTS parser treated the hyphen as a column operator; no result influenced routing or claims"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"source-only coarse-graining\" --limit 10 --json"
+      result: "FTS parser treated hyphenated terms as operators; no result influenced routing or claims"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/handoffs/handoff-0872.yaml --json"
+      result: "No canonical source object matched the control path; the tracked handoff was inspected directly"
+  required_source_path_inspection:
+    requested_path: "research_control/support_formalization/"
+    exists: false
+    disposition: "ordinary absent path; no premise or authority inferred"
+  authority_note: "Generated Obsidian, wiki, semantic, relationship, and .local retrieval surfaces are navigation or diagnostics only and are not authority."
+
+command_results:
+  - "scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | status=pass"
+  - "query_memory.py status --json | exit_code=0 | status=pass"
+  - "query_memory.py search source coarse graining reconstruction map --limit 10 --json | exit_code=0 | status=pass"
+  - "query_memory.py search cubic amplitude reconstruction phase obstruction --limit 10 --json | exit_code=0 | status=pass"
+  - "query_memory.py search typed source only map scale approximation error --limit 10 --json | exit_code=0 | status=pass"
+  - "query_memory.py search P5-T06 source map --limit 10 --json | exit_code=1 | status=failed_no_result_used"
+  - "query_memory.py search source-only coarse-graining --limit 10 --json | exit_code=1 | status=failed_no_result_used"
+  - "query_memory.py lookup research_control/handoffs/handoff-0872.yaml --json | exit_code=0 | status=no_canonical_result_used"
+  - "validate_source_amplitude_coarse_graining.py --write-report --json | exit_code=0 | status=pass"
+  - "validate_source_amplitude_coarse_graining.py --check --json | exit_code=0 | status=pass"
+  - "build_pdf_derivatives.py --scratch source_amplitude_resolution_coarse_graining_v1.tex | exit_code=0 | status=pass"
+  - "bootstrap_memory_system.py | exit_code=0 | status=pass"
+  - "bootstrap_memory_system.py --validate-only | exit_code=0 | status=pass"
+  - "render_current_frontier.py --check | exit_code=0 | status=pass"
+  - "render_task_index.py --check | exit_code=0 | status=pass"
+  - "render_compact_current_frontier_v16.py --check | exit_code=0 | status=pass"
+  - "render_dependency_graph.py --check | exit_code=0 | status=pass"
+  - "generate_claim_graph_v1.py --check | exit_code=0 | status=pass"
+  - "validate_claim_graph_v1.py --json | exit_code=0 | status=pass"
+  - "classify_project_changes.py --json | exit_code=0 | status=pass"
+  - "collect_project_improvement_signals.py --validate-emitted --json | exit_code=0 | status=pass"
+  - "validate_documentation_impact.py --json | exit_code=0 | status=pass"
+  - "validate_claim_language.py --changed --json | exit_code=0 | status=pass_with_warnings"
+  - "validate_research_control.py --check-diff --json-summary | exit_code=0 | status=pass"
+  - "run_full_research_control_validation.py --json --tail-chars 2500 | exit_code=2 | status=prestage_expected_untracked_registered_paths; governed_checkpoint_staged_validation_required"
+  - "python -m unittest -v tests.test_research_control | exit_code=0 | status=pass"
+  - "python -m unittest discover -s tests | exit_code=0 | status=pass"
+  - "git diff --check | exit_code=0 | status=pass"
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 118 validated and atomically claimed the exact immutable P5-T06 route before consuming its one worker invocation."
+      - "The generation-117 checkpoint commit and clean repository dependency boundary were verified before execution."
+      - "Memory preflight refreshed retrieval-only state and the registered P5-T05 source and companion authority surfaces were inspected."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Both internal perspectives completed and six tensions were resolved in one parent round with no conflict remaining."
+      - "The task-local validator passes 27 checks covering the unchanged candidate, map, errors, information, covariance, dynamics, smoothness, obstruction, causal path, synthesis, and claim boundaries."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Scratch TeX build, task-local validation, renderers, memory synchronization, documentation impact, signal parity, claim language, research-control validation, selected tests, and whitespace checks pass."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "One governed checkpoint remains after all precheckpoint gates pass."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Current frontier, compact frontier, task index, dependency graph, claim graph, and burden-status derivatives are fresh."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory bootstrap and validate-only pass after registering the P5-T06 TeX and fusion-note sources."
+  claim_language_linter:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "Changed-source claim-language validation has zero hard failures; any reported findings are nonblocking boundary-language warnings."
+
+validators_run:
+  - "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python research_control/tasks/RT-20260725-013/artifacts/validate_source_amplitude_coarse_graining.py --write-report --json"
+  - "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python research_control/tasks/RT-20260725-013/artifacts/validate_source_amplitude_coarse_graining.py --check --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/build_pdf_derivatives.py --scratch research_control/tasks/RT-20260725-013/artifacts/source_amplitude_resolution_coarse_graining_v1.tex"
+  - ".venv/bin/python research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_renderer.py --write --json"
+  - ".venv/bin/python research_control/tasks/RT-20260721-009/artifacts/validate_v21_current_burden_status.py --write --json"
+  - ".venv/bin/python research_control/tasks/RT-20260721-009/artifacts/validate_v21_current_burden_status.py --check --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --check"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --check"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --check"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --check"
+  - ".venv/bin/python scripts/research_control/generate_claim_graph_v1.py --check"
+  - ".venv/bin/python scripts/research_control/validate_claim_graph_v1.py --json"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --json-summary"
+  - ".venv/bin/python scripts/research_control/run_full_research_control_validation.py --json --tail-chars 2500"
+  - "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m unittest -v tests.test_research_control"
+  - ".venv/bin/python -m unittest discover -s tests"
+  - "git diff --check"
+
+documentation_impact:
+  required: true
+  status: "completed"
+  path: "research_control/tasks/RT-20260725-013/documentation_impact.yaml"
+  rationale: "The new claim-bearing map source, decision, fusion notes, handoff, ledger, and source-registry rows document the exact candidate-specific scientific delta; generated derivatives carry no independent authority."
+
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"
+  notes: "Classifier impact is satisfied by synchronized control and generated-memory surfaces; signal collection found no project-system repair signal."
+
+next_handoff_id: "handoff-0873"
+selected_next_route:
+  route_id: "v21_p5_t07_audit_and_refuter_stress_source_dynamics_and_reconstruction"
+  route_label: "ontology-law-research-packet"
+  role_family: "smuggling-auditor@0.2.0"
+  worker_skill: "continue-research"
+  plan_task_id: "P5-T07"
+  target_derivation_milestone: "source_ontology"
+  milestone_burden: "Determine whether the package is genuinely source-derived and robust enough to support geometry work."
+  strategy_id: "audit_and_refuter_stress_source_dynamics_reconstruction_v1"
+  requires_human_gate: false
+  physics_promotion_authorized: false
+
+verdict: "PASS_SOURCE_AMPLITUDE_MAP_WITH_SCOPED_LOCAL_RECONSTRUCTION_OBSTRUCTION_READY_FOR_CHECKPOINT"

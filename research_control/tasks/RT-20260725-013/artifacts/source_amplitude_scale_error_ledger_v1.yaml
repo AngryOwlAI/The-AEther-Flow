@@ -1,0 +1,111 @@
+schema_id: "source_amplitude_scale_error_ledger_v1"
+artifact_id: "V21-P5-T06-SOURCE-AMPLITUDE-SCALE-ERROR-LEDGER-V1"
+task_id: "RT-20260725-013"
+job_id: "AJ-RT-20260725-013-001"
+plan_task_id: "P5-T06"
+status: "completed"
+status_label: "draft/control"
+candidate_status: "proposal-only"
+material_class: "source-extension data"
+
+scale_registry:
+  - scale_id: "epsilon_amplitude_resolution"
+    symbol: "epsilon"
+    domain: "epsilon>0"
+    units: "dimensionless source-amplitude coefficient"
+    controls: "nearest-lattice resolution in the declared F(q_a)=a observable"
+    does_not_mean:
+      - "physical length"
+      - "physical time"
+      - "energy"
+      - "detector resolution"
+      - "renormalization-group scale"
+      - "target metric scale"
+  - scale_id: "A_bounded_amplitude_envelope"
+    symbol: "A"
+    domain: "A>=0"
+    units: "dimensionless source-amplitude coefficient"
+    controls: "optional bounded regime |a|<=A for the quadratic-observable error"
+    does_not_mean:
+      - "physical field cutoff"
+      - "experimental range"
+      - "target-selected prior"
+
+error_ledger:
+  - error_id: "P5T06-ERR-AMPLITUDE"
+    object: "source amplitude"
+    exact_bound: "|N_epsilon(a)-a|<=epsilon/2"
+    regime: "all a in R"
+    convergence: "uniform as epsilon->0"
+    sharp: true
+  - error_id: "P5T06-ERR-SOURCE-STATE"
+    object: "round-trip source state in amplitude and C0 norm"
+    exact_bound: "||R_epsilon(C_epsilon(q_a))-q_a||<=epsilon/2"
+    regime: "all q_a in Q_amp"
+    convergence: "uniform as epsilon->0"
+    sharp: true
+  - error_id: "P5T06-ERR-QUADRATIC-OBSERVABLE"
+    object: "L(q_a)=a^2/2"
+    exact_bound: "A epsilon/2+epsilon^2/8"
+    regime: "|a|<=A"
+    convergence: "uniform on each declared bounded-amplitude region"
+    sharp: false
+  - error_id: "P5T06-ERR-RAW-DYNAMICS"
+    object: "raw effective evolution semiconjugacy"
+    exact_bound: "epsilon"
+    regime: "gamma>0 lambda>=0 all a in R"
+    convergence: "uniform in a and lambda for fixed gamma domain"
+    sharp: false
+  - error_id: "P5T06-ERR-LATTICE-DYNAMICS"
+    object: "lattice effective evolution semiconjugacy"
+    exact_bound: "3 epsilon/2"
+    regime: "gamma>0 lambda>=0 all a in R"
+    convergence: "uniform in a and lambda for fixed gamma domain"
+    sharp: false
+  - error_id: "P5T06-ERR-LATTICE-SEMIGROUP"
+    object: "lattice effective evolution semigroup defect"
+    exact_bound: "3 epsilon/2"
+    regime: "gamma>0 lambda>=0 mu>=0 all c in epsilon Z"
+    convergence: "uniform as epsilon->0"
+    sharp: false
+
+information_loss_ledger:
+  - loss_id: "P5T06-LOSS-BIN-RESIDUAL"
+    lost: "a-N_epsilon(a)"
+    recoverable_from_code: false
+    maximum_magnitude: "epsilon/2"
+  - loss_id: "P5T06-LOSS-NEAR-ZERO-SIGN"
+    lost: "sign of nonzero a when |a|<epsilon/2"
+    recoverable_from_code: false
+    maximum_magnitude: "not_applicable"
+  - loss_id: "P5T06-ABSENT-LOCAL-DATA"
+    lost: "not a loss caused by C_epsilon; independent patch and characteristic data are absent from Q_amp before coarse-graining"
+    recoverable_from_code: false
+    maximum_magnitude: "not_defined"
+
+negative_controls:
+  - control_id: "P5T06-CTRL-HALF-TIE"
+    input: "a=-2.5 epsilon"
+    expected: "N_epsilon(a)=-3 epsilon"
+    purpose: "verify odd away-from-zero tie handling"
+  - control_id: "P5T06-CTRL-ZERO-PROBE"
+    input: "kappa_w=0"
+    expected: "A_w(q_a)=0 for every a"
+    purpose: "verify source averaging can collapse rather than create local information"
+  - control_id: "P5T06-CTRL-TARGET-IMPORT"
+    input: "thresholds chosen by target metric agreement"
+    expected: "fail_closed"
+    purpose: "preserve source-only construction"
+
+authority_flags:
+  canonical_ontology_modified: false
+  canonical_ontology_candidate_declared: false
+  source_law_adopted: false
+  physical_scale_established: false
+  physical_coarse_graining_established: false
+  local_field_reconstructed: false
+  causal_structure_reconstructed: false
+  M_src_reconstructed: false
+  g_eff_reconstructed: false
+  physics_promotion_authorized: false
+  proof_publication_or_push_authorized: false

@@ -1,0 +1,191 @@
+{
+  "artifact_sha256": {
+    "research_control/tasks/RT-20260725-013/artifacts/child_phys_math_source_amplitude_coarse_graining.yaml": "8d598e7270522281aa63459300b77cdf306181288b727ba67c0815a4d4a4da8c",
+    "research_control/tasks/RT-20260725-013/artifacts/child_phys_phil_source_amplitude_coarse_graining.yaml": "768883455a9670757dd2214c614447942440b7deeee93261618beca0279e24a7",
+    "research_control/tasks/RT-20260725-013/artifacts/parent_conflict_review_source_amplitude_coarse_graining.yaml": "a2087500d3ef6b7f1c0a789a7ed0dde312ccb6ceb49d2ec4b04230093578aaf4",
+    "research_control/tasks/RT-20260725-013/artifacts/parent_fusion_notes_source_amplitude_coarse_graining.md": "f137167572bfec5546f0efe8ba46f70056f161d7b1c1129cb9ffd0f8e92b4e8a",
+    "research_control/tasks/RT-20260725-013/artifacts/source_amplitude_coarse_graining_spec_v1.yaml": "47e863230b89a9a3034a9383b182b7ffb6860bc9e966817163cc52f8e3484d97",
+    "research_control/tasks/RT-20260725-013/artifacts/source_amplitude_resolution_coarse_graining_v1.tex": "a798e69875603ec3d0f9202ea67de18fcbc3dabf1cb1a178713f8dde9aefd074",
+    "research_control/tasks/RT-20260725-013/artifacts/source_amplitude_scale_error_ledger_v1.yaml": "2980c9b572d8b8aada0311f7e1d8976ef061c4063bc7387154a0906e56b51eff"
+  },
+  "candidate_id": "V21-P5-T03-CUBIC-AMPLITUDE-SOURCE-DYNAMICS-V1",
+  "candidate_unchanged": true,
+  "checks": [
+    {
+      "check_id": "file:source_amplitude_coarse_graining_spec_v1.yaml",
+      "detail": "required regular artifact exists",
+      "status": "PASS"
+    },
+    {
+      "check_id": "file:source_amplitude_scale_error_ledger_v1.yaml",
+      "detail": "required regular artifact exists",
+      "status": "PASS"
+    },
+    {
+      "check_id": "file:source_amplitude_resolution_coarse_graining_v1.tex",
+      "detail": "required regular artifact exists",
+      "status": "PASS"
+    },
+    {
+      "check_id": "file:child_phys_math_source_amplitude_coarse_graining.yaml",
+      "detail": "required regular artifact exists",
+      "status": "PASS"
+    },
+    {
+      "check_id": "file:child_phys_phil_source_amplitude_coarse_graining.yaml",
+      "detail": "required regular artifact exists",
+      "status": "PASS"
+    },
+    {
+      "check_id": "file:parent_conflict_review_source_amplitude_coarse_graining.yaml",
+      "detail": "required regular artifact exists",
+      "status": "PASS"
+    },
+    {
+      "check_id": "file:parent_fusion_notes_source_amplitude_coarse_graining.md",
+      "detail": "required regular artifact exists",
+      "status": "PASS"
+    },
+    {
+      "check_id": "candidate_lock",
+      "detail": "the exact P5-T03 state family, generator, and flow remain unchanged",
+      "status": "PASS"
+    },
+    {
+      "check_id": "map_typing",
+      "detail": "domain, codomain, coarse map, decoder, and source-only boundary are explicit",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tie_and_threshold_controls",
+      "detail": "analytic examples reproduce the odd away-from-zero tie convention",
+      "status": "PASS"
+    },
+    {
+      "check_id": "uniform_amplitude_error",
+      "detail": "a dense finite grid satisfies the exact global half-bin error bound",
+      "status": "PASS"
+    },
+    {
+      "check_id": "exact_code_round_trip",
+      "detail": "every sampled lattice code decodes and re-encodes exactly",
+      "status": "PASS"
+    },
+    {
+      "check_id": "declared_source_covariance",
+      "detail": "reflection equivariance is exact and no broader covariance is inferred",
+      "status": "PASS"
+    },
+    {
+      "check_id": "information_loss",
+      "detail": "fibers, zero-bin sign loss, and absent local data are explicit",
+      "status": "PASS"
+    },
+    {
+      "check_id": "bounded_quadratic_error",
+      "detail": "bounded-amplitude samples satisfy the declared quadratic-observable error",
+      "status": "PASS"
+    },
+    {
+      "check_id": "dynamic_compatibility",
+      "detail": "finite controls satisfy raw and lattice semiconjugacy bounds",
+      "status": "PASS"
+    },
+    {
+      "check_id": "lattice_semigroup_defect",
+      "detail": "finite controls satisfy the declared lattice semigroup-defect bound",
+      "status": "PASS"
+    },
+    {
+      "check_id": "averaging_dichotomy",
+      "detail": "linear source probes recover one amplitude or collapse it",
+      "status": "PASS"
+    },
+    {
+      "check_id": "dimension_and_smoothness",
+      "detail": "source dimension, discrete codomain, discontinuities, and nonconclusions are explicit",
+      "status": "PASS"
+    },
+    {
+      "check_id": "rank_locality_obstruction",
+      "detail": "the exact current-family obstruction combines rank, patching, and phase evidence",
+      "status": "PASS"
+    },
+    {
+      "check_id": "causal_structure_path",
+      "detail": "the route to causal structure is explicit and remains unmet",
+      "status": "PASS"
+    },
+    {
+      "check_id": "scale_error_ledger",
+      "detail": "all declared scales and six approximation errors have ledger entries",
+      "status": "PASS"
+    },
+    {
+      "check_id": "failure_branch_manifest",
+      "detail": "target import, locality, scale, smoothness, information, and averaging failures are fail closed",
+      "status": "PASS"
+    },
+    {
+      "check_id": "parent_child_synthesis",
+      "detail": "both internal perspectives agree on the map and scoped obstruction",
+      "status": "PASS"
+    },
+    {
+      "check_id": "fused_tex_markers",
+      "detail": "the fused TeX source contains the map, errors, obstruction, and causal path",
+      "status": "PASS"
+    },
+    {
+      "check_id": "claim_boundary",
+      "detail": "the packet contains no adoption, physical-scale, geometry, global-no-go, or downstream-GR promotion",
+      "status": "PASS"
+    },
+    {
+      "check_id": "decisive_result",
+      "detail": "P5-T06 has a decisive map-plus-obstruction result and a distinct audit successor",
+      "status": "PASS"
+    }
+  ],
+  "claim_boundary_summary": "Candidate-specific draft/control source-amplitude resolution map, source-state reconstruction, error bounds, and precise local-field obstruction only; no canonical ontology or source-law adoption, physical scale, local field, causal structure, M_src, g_eff, downstream GR, promotion, global theory rejection, or future-extension impossibility authority.",
+  "finding_counts": {
+    "analytic_examples": 4,
+    "fail": 0,
+    "negative_controls": 3,
+    "pass": 27,
+    "propositions": 2,
+    "scoped_obstructions": 1,
+    "theorems": 3,
+    "unresolved_conflicts": 0
+  },
+  "job_id": "AJ-RT-20260725-013-001",
+  "obstruction_id": "OBST-P5T06-QAMP-LOCAL-FIELD-RANK-001",
+  "obstruction_scope": "exact current Q_amp family only",
+  "plan_task_id": "P5-T06",
+  "result_kind": "source_observable_coarse_graining_candidate_with_precise_local_reconstruction_obstruction",
+  "result_status": "PASS",
+  "route_frozen": false,
+  "schema_id": "source_amplitude_coarse_graining_validation_receipt_v1",
+  "task_id": "RT-20260725-013",
+  "validator_ids": [
+    "candidate_lock",
+    "map_typing",
+    "tie_and_threshold_controls",
+    "uniform_amplitude_error",
+    "exact_code_round_trip",
+    "declared_source_covariance",
+    "information_loss",
+    "bounded_quadratic_error",
+    "dynamic_compatibility",
+    "lattice_semigroup_defect",
+    "averaging_dichotomy",
+    "dimension_and_smoothness",
+    "rank_locality_obstruction",
+    "causal_structure_path",
+    "scale_error_ledger",
+    "failure_branch_manifest",
+    "parent_child_synthesis",
+    "claim_boundary",
+    "decisive_result"
+  ]
+}

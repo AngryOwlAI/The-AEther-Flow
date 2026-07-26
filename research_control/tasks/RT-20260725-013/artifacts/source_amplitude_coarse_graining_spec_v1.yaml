@@ -1,0 +1,198 @@
+schema_id: "source_amplitude_coarse_graining_spec_v1"
+artifact_id: "V21-P5-T06-SOURCE-AMPLITUDE-COARSE-GRAINING-SPEC-V1"
+task_id: "RT-20260725-013"
+job_id: "AJ-RT-20260725-013-001"
+plan_task_id: "P5-T06"
+status: "completed"
+status_label: "draft/control"
+candidate_status: "proposal-only"
+material_class: "source-extension data"
+adoption_status: "blocked_adoption_open_continuation"
+candidate_unchanged: true
+
+source_candidate:
+  candidate_id: "V21-P5-T03-CUBIC-AMPLITUDE-SOURCE-DYNAMICS-V1"
+  state_family: "Q_amp={q_a=a sin(theta_1) | a in R}"
+  coefficient_observable: "F(q_a)=a"
+  generator: "X_gamma(q_a)=-gamma a^3 sin(theta_1)"
+  flow: "f_lambda(a)=a/sqrt(1+2 gamma a^2 lambda)"
+  coefficient_domain: "gamma>0"
+  parameter_domain: "lambda>=0"
+  admitted_variation_dimension: 1
+  declared_redundancy: "identity arrows only"
+  discrete_source_symmetry: "R(q_a)=q_(-a)"
+
+resolution_map:
+  map_id: "P5T06-SOURCE-AMPLITUDE-RESOLUTION-MAP"
+  resolution_parameter: "epsilon>0"
+  scale_semantics: "dimensionless source-amplitude resolution only"
+  domain: "Q_amp"
+  codomain: "O_epsilon=epsilon Z with discrete topology"
+  quantizer: "N_epsilon(a)=epsilon sgn(a) floor(|a|/epsilon+1/2)"
+  tie_rule: "half-grid ties round away from zero"
+  coarse_graining_map: "C_epsilon(q_a)=N_epsilon(a)"
+  reconstruction_map: "R_epsilon(c)=q_c"
+  source_round_trip: "Pi_epsilon=R_epsilon o C_epsilon"
+  exact_code_round_trip: "C_epsilon o R_epsilon=id_(O_epsilon)"
+  operation_class: "resolution projection; not a spatial average or adopted renormalization law"
+  target_data_consumed: false
+
+approximation:
+  theorem_id: "P5T06-THM-UNIFORM-AMPLITUDE-RECONSTRUCTION"
+  amplitude_error: "|N_epsilon(a)-a|<=epsilon/2"
+  source_norm: "||q_a||_amp=|a|=||q_a||_C0"
+  source_state_error: "||Pi_epsilon(q_a)-q_a||_amp<=epsilon/2"
+  convergence: "Pi_epsilon converges uniformly to identity on Q_amp as epsilon->0"
+  bounded_quadratic_observable:
+    observable: "L(q_a)=a^2/2"
+    regime: "|a|<=A"
+    error: "|L(q_a)-L(Pi_epsilon(q_a))|<=A epsilon/2+epsilon^2/8"
+
+information_loss:
+  fiber: "F_(epsilon,c)={q_a in Q_amp | N_epsilon(a)=c}"
+  discarded_datum: "within-bin residual a-N_epsilon(a)"
+  noninjective_for_positive_resolution: true
+  zero_fiber: "|a|<epsilon/2"
+  half_grid_endpoints_in_zero_fiber: false
+  surviving_observables:
+    - "lattice amplitude N_epsilon(a)"
+    - "source reflection covariance"
+    - "amplitude and source C0 reconstruction within epsilon/2"
+    - "sign when |a|>=epsilon/2"
+    - "bounded quadratic amplitude functional within its declared error"
+  lost_or_absent_observables:
+    - "nonzero sign inside the open zero bin"
+    - "within-bin amplitude residual"
+    - "independent patch data"
+    - "spatial localization or momentum label"
+    - "characteristic direction or causal cone"
+    - "source manifold or metric data"
+
+covariance:
+  theorem_id: "P5T06-THM-DECLARED-SOURCE-COVARIANCE"
+  identity_redundancy_covariance: true
+  reflection_action_source: "R(q_a)=q_(-a)"
+  reflection_action_effective: "rho_epsilon(c)=-c"
+  coarse_map_identity: "C_epsilon o R=rho_epsilon o C_epsilon"
+  reconstruction_identity: "R_epsilon o rho_epsilon=R o R_epsilon"
+  target_diffeomorphism_covariance_claimed: false
+  undeclared_source_isomorphism_covariance_claimed: false
+
+dynamics:
+  theorem_id: "P5T06-THM-CONTROLLED-DYNAMIC-COMPATIBILITY"
+  source_flow_lipschitz_constant: 1
+  derivative: "(1+2 gamma a^2 lambda)^(-3/2)"
+  raw_effective_evolution: "F_tilde_(epsilon,lambda)(c)=f_lambda(c) in R"
+  lattice_effective_evolution: "F_(epsilon,lambda)(c)=N_epsilon(f_lambda(c)) in O_epsilon"
+  raw_semiconjugacy_error: "|C_epsilon(Phi_lambda(q_a))-F_tilde_(epsilon,lambda)(C_epsilon(q_a))|<=epsilon"
+  lattice_semiconjugacy_error: "|C_epsilon(Phi_lambda(q_a))-F_(epsilon,lambda)(C_epsilon(q_a))|<=3 epsilon/2"
+  lattice_semigroup_defect: "|F_(epsilon,lambda)(F_(epsilon,mu)(c))-F_(epsilon,lambda+mu)(c)|<=3 epsilon/2"
+  exact_source_flow_remains_authoritative: true
+
+averaging_control:
+  source_measure: "normalized Haar measure on T^4"
+  source_probe: "A_w(q_a)=integral w q_a dnu=a kappa_w"
+  nonzero_probe_result: "if kappa_w!=0 the same one global amplitude is exactly recoverable"
+  zero_probe_result: "if kappa_w=0 the entire family collapses to zero"
+  independent_local_modes_created: false
+  interpretation: "spatial averaging cannot create a scale hierarchy or local degrees inside the one-global-mode family"
+
+dimension_and_smoothness:
+  domain_dimension: 1
+  codomain_topology: "countable zero-dimensional discrete lattice"
+  coarse_map_regular_on_bins: "piecewise constant"
+  discontinuity_set: "half-grid amplitude thresholds"
+  reconstructed_image_dimension: 1
+  convergence_topology: "source amplitude norm and C0 norm only"
+  physical_dimension_inferred: false
+  smooth_effective_geometry_inferred: false
+
+local_reconstruction_obstruction:
+  obstruction_id: "OBST-P5T06-QAMP-LOCAL-FIELD-RANK-001"
+  theorem_id: "P5T06-PROP-ONE-DIMENSIONAL-RANK-BOUND"
+  exact_statement: "Every C1 effective-coordinate map K:Q_amp->E has differential rank at most one."
+  combined_basis:
+    - "Q_amp has one admitted tangent dimension"
+    - "P5-T04 forbids independent patch amplitudes"
+    - "P5-T05 supplies no local reconstruction-suitable phase"
+  failed_object: "local effective-field or geometry reconstruction from the exact current Q_amp family"
+  source_extension_continuation: "open"
+  global_no_go_claimed: false
+
+path_to_causal_structure:
+  status: "explicit_unmet_dependency_chain"
+  required_steps:
+    - "independently variable local source data and a source-defined gluing law"
+    - "source-defined evolution or linearized operator on local variations"
+    - "characteristic set and source-invariant cone or propagation theorem"
+    - "scale regularity robustness and operational-response semantics"
+    - "separate later M_src g_eff matter-coupling and exact-GR recovery burdens"
+  supplied_by_current_map: false
+
+analytic_examples:
+  - input: "a=2.3 epsilon"
+    output: "2 epsilon"
+    error: "0.3 epsilon"
+  - input: "a=-2.5 epsilon"
+    output: "-3 epsilon"
+    error: "0.5 epsilon"
+  - input: "a=0.49 epsilon"
+    output: "0"
+    finding: "sign loss in zero bin"
+  - input: "a=0.51 epsilon"
+    output: "epsilon"
+    finding: "threshold branch"
+
+failure_branches:
+  - branch_id: "P5T06-FAIL-TARGET-THRESHOLDS"
+    result: "fail_closed"
+    exact_failure: "Thresholds fitted to a target atlas metric or exact-GR solution are forbidden target import."
+  - branch_id: "P5T06-FAIL-LOCAL-FIELD-OVERREAD"
+    result: "precise_scoped_obstruction"
+    exact_failure: "One global amplitude code cannot supply independent patch or characteristic data."
+  - branch_id: "P5T06-FAIL-PHYSICAL-SCALE-OVERREAD"
+    result: "fail_closed"
+    exact_failure: "epsilon is only a dimensionless source-amplitude resolution."
+  - branch_id: "P5T06-FAIL-SMOOTHNESS-OVERREAD"
+    result: "fail_closed"
+    exact_failure: "The fixed-resolution quantizer is discontinuous at half-grid thresholds."
+  - branch_id: "P5T06-FAIL-INFORMATION-CREATION"
+    result: "fail_closed"
+    exact_failure: "A deterministic source map cannot create local degrees absent from Q_amp."
+  - branch_id: "P5T06-FAIL-AVERAGING-COLLAPSE"
+    result: "negative_control"
+    exact_failure: "A source probe orthogonal to sin(theta_1) collapses the whole family."
+
+finding_manifest:
+  theorem_count: 3
+  proposition_count: 2
+  scoped_obstruction_count: 1
+  analytic_example_count: 4
+  negative_control_count: 3
+  unresolved_conflict_count: 0
+
+result:
+  result_kind: "source_observable_coarse_graining_candidate_with_precise_local_reconstruction_obstruction"
+  candidate_map_status: "audit_ready_pending_smuggling_and_refuter_stress"
+  plan_task_status: "completed_ready_for_checkpoint"
+  next_plan_task_id: "P5-T07"
+  next_role_family: "smuggling-auditor@0.2.0"
+  route_frozen: false
+  local_geometry_reconstruction_obstructed: true
+  canonical_ontology_modified: false
+  source_law_adopted: false
+  source_law_rejected: false
+  physical_status_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+forbidden_conclusions:
+  - "epsilon is a physical length energy time detector or renormalization scale"
+  - "the amplitude lattice is physical spacetime or a source manifold"
+  - "the reconstructed q_c is an effective metric or geometry"
+  - "target diffeomorphism covariance is established"
+  - "independent local fields or characteristic cones are reconstructed"
+  - "canonical ontology or source law is adopted or rejected"
+  - "M_src g_eff matter coupling or Einstein equations are derived"
+  - "benchmark promotion proof publication push or completed derivation"
+  - "global theory rejection or future source-extension impossibility"

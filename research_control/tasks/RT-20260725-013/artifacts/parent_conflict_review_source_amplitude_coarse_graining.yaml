@@ -1,0 +1,89 @@
+schema_id: "parent_conflict_review_v1"
+artifact_id: "V21-P5-T06-PARENT-CONFLICT-REVIEW-SOURCE-AMPLITUDE-COARSE-GRAINING-V1"
+task_id: "RT-20260725-013"
+job_id: "AJ-RT-20260725-013-001"
+plan_task_id: "P5-T06"
+status: "resolved"
+created_at: "2026-07-26T02:38:13Z"
+review_rounds: 1
+
+child_artifacts:
+  - execution_unit_id: "child_phys_math"
+    path: "research_control/tasks/RT-20260725-013/artifacts/child_phys_math_source_amplitude_coarse_graining.yaml"
+    status: "completed"
+  - execution_unit_id: "child_phys_phil"
+    path: "research_control/tasks/RT-20260725-013/artifacts/child_phys_phil_source_amplitude_coarse_graining.yaml"
+    status: "completed"
+
+shared_consensus:
+  - "The exact P5-T03 candidate and all P5-T04 and P5-T05 obstructions remain unchanged."
+  - "The amplitude quantizer and source-state decoder are well typed and source only."
+  - "Amplitude and source-state error is uniformly at most epsilon/2."
+  - "Information loss, symmetry covariance, dynamic error, and smoothness boundaries are explicit."
+  - "The map reconstructs only one quantized source amplitude."
+  - "Rank and patching precisely obstruct local-field or geometry reconstruction from the exact current family."
+  - "Conservative source extensions and same-milestone audit remain open."
+
+resolved_conflicts:
+  - conflict_id: "P5T06-CONFLICT-SCALE-001"
+    issue: "Whether epsilon may be called a physical coarse-graining scale."
+    resolution: "Call it only a dimensionless source-amplitude resolution and list every blocked physical scale interpretation."
+    changed_output: true
+  - conflict_id: "P5T06-CONFLICT-RECONSTRUCTION-001"
+    issue: "Whether decoding q_c constitutes effective geometry reconstruction."
+    resolution: "Name it source-state reconstruction inside Q_amp and expressly deny M_src g_eff and geometry."
+    changed_output: true
+  - conflict_id: "P5T06-CONFLICT-DYNAMICS-001"
+    issue: "Whether quantized evolution must be an exact semigroup."
+    resolution: "Keep the exact source flow authoritative and state the lattice semigroup defect at most 3 epsilon/2."
+    changed_output: true
+  - conflict_id: "P5T06-CONFLICT-COVARIANCE-001"
+    issue: "Whether reflection equivariance establishes general covariance."
+    resolution: "Limit covariance to identity redundancy and the explicit source Z2 reflection."
+    changed_output: true
+  - conflict_id: "P5T06-CONFLICT-LOCALITY-001"
+    issue: "Whether one scalar may encode multiple local coordinates by a discontinuous rule."
+    resolution: "Require source regularity and information provenance; use the C1 rank bound plus patch rigidity and do not interpret arbitrary codes as recovered local fields."
+    changed_output: true
+  - conflict_id: "P5T06-CONFLICT-CAUSALITY-001"
+    issue: "Whether the torus and source-flow parameter already supply causal structure."
+    resolution: "Record an explicit unmet chain through local variations characteristic operator source-invariant cone and operational semantics."
+    changed_output: true
+
+unique_math_contributions_preserved:
+  - "odd nearest-lattice source-amplitude map and exact decoder"
+  - "uniform amplitude and source-state reconstruction theorem"
+  - "bounded quadratic-observable error"
+  - "reflection covariance theorem"
+  - "raw and lattice dynamical compatibility bounds"
+  - "source-probe averaging dichotomy"
+  - "one-dimensional differential rank bound"
+
+unique_philosophy_contributions_preserved:
+  - "resolution is not automatically a physical scale"
+  - "source-state decoding is not geometry reconstruction"
+  - "declared source covariance is not target diffeomorphism covariance"
+  - "a deterministic map cannot create absent local information"
+  - "the scoped obstruction leaves conservative source extensions open"
+  - "the causal-structure path is explicit and unmet"
+
+unresolved_conflicts: []
+remaining_limitations:
+  - "The map concerns only the one global amplitude observable."
+  - "The fixed-resolution coarse map is discontinuous at half-grid thresholds."
+  - "No independent patch data characteristic operator causal cone M_src or g_eff is supplied."
+  - "P5-T07 must audit source purity and refuter-stress the complete dynamics and reconstruction package."
+
+authority_flags:
+  canonical_ontology_modified: false
+  canonical_ontology_candidate_declared: false
+  source_law_adopted: false
+  source_law_rejected: false
+  physical_coarse_graining_established: false
+  physical_scale_established: false
+  local_field_reconstructed: false
+  causal_structure_reconstructed: false
+  M_src_reconstructed: false
+  g_eff_reconstructed: false
+  physics_promotion_authorized: false
+  proof_publication_or_push_authorized: false

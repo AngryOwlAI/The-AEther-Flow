@@ -1,0 +1,59 @@
+schema_id: "parent_child_output_v1"
+artifact_id: "V21-P5-T06-CHILD-PHYS-MATH-SOURCE-AMPLITUDE-COARSE-GRAINING-V1"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+task_id: "RT-20260725-013"
+job_id: "AJ-RT-20260725-013-001"
+plan_task_id: "P5-T06"
+created_at: "2026-07-26T02:38:13Z"
+target_derivation_milestone: "source_ontology"
+milestone_burden: "Provide the mathematical bridge from source dynamics to effective structure."
+
+candidate_lock:
+  unchanged: true
+  state_family: "Q_amp={q_a=a sin(theta_1)}"
+  coefficient_observable: "F(q_a)=a"
+  flow: "f_lambda(a)=a/sqrt(1+2 gamma a^2 lambda)"
+
+derived_results:
+  - result_id: "P5T06-MATH-TYPING-ERROR"
+    type: "bridge_map_candidate"
+    statement: "C_epsilon:Q_amp->epsilon Z and R_epsilon:epsilon Z->Q_amp are well typed, C_epsilon R_epsilon is identity, and the source round-trip error is at most epsilon/2."
+    consequence: "audit-ready source-observable coarse-graining and source-state reconstruction"
+  - result_id: "P5T06-MATH-COVARIANCE"
+    type: "theorem_with_hypotheses_and_proof"
+    statement: "The odd quantizer is exactly equivariant under the declared amplitude reflection and trivially covariant under identity redundancy."
+    consequence: "declared source symmetry is preserved without target covariance import"
+  - result_id: "P5T06-MATH-DYNAMICS"
+    type: "theorem_with_hypotheses_and_proof"
+    statement: "The exact source flow is 1-Lipschitz, giving raw semiconjugacy error epsilon, lattice error 3 epsilon/2, and lattice semigroup defect 3 epsilon/2."
+    consequence: "approximate dynamics has explicit uniform error"
+  - result_id: "P5T06-MATH-AVERAGING"
+    type: "theorem_with_hypotheses_and_proof"
+    statement: "Every linear source probe on Q_amp either recovers the same one amplitude or collapses it; it cannot create independent local data."
+    consequence: "spatial averaging is a negative control rather than a local-field bridge"
+  - result_id: "P5T06-MATH-RANK"
+    type: "countermodel_or_obstruction"
+    statement: "Every C1 effective-coordinate map from Q_amp has differential rank at most one."
+    consequence: "precise local-field and geometry reconstruction obstruction for the exact current family"
+
+finite_controls:
+  quantizer_cases:
+    - "N_epsilon(2.3 epsilon)=2 epsilon"
+    - "N_epsilon(-2.5 epsilon)=-3 epsilon"
+    - "N_epsilon(0.49 epsilon)=0"
+    - "N_epsilon(0.51 epsilon)=epsilon"
+  dynamic_control: "finite sampled amplitudes parameters and gamma values satisfy all analytic error bounds"
+  collapse_control: "kappa_w=0 sends every q_a to zero"
+
+limitations:
+  - "epsilon is only a dimensionless source-amplitude resolution."
+  - "The fixed-resolution map is discontinuous at half-grid thresholds."
+  - "The map reconstructs a source state q_c, not M_src g_eff or geometry."
+  - "The rank obstruction concerns the exact one-global-mode family and leaves conservative source extensions open."
+
+ontology_formalizer_result:
+  result_type: "bridge_map_candidate_with_scoped_obstruction"
+  no_fog_check: true
+  claim_boundary_preserved: true

@@ -413,6 +413,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V21-P5-T03-CUBIC-AMPLITUDE-SOURCE-DYNAMICS-V1` `research_control/tasks/RT-20260725-008/artifacts/cubic_amplitude_source_dynamics_v1.tex`
 - `TEX-V21-P5-T04-CUBIC-AMPLITUDE-STRUCTURAL-ANALYSIS-V1` `research_control/tasks/RT-20260725-010/artifacts/cubic_amplitude_structural_analysis_v1.tex`
 - `TEX-V21-P5-T05-CUBIC-AMPLITUDE-BACKGROUND-PHASE-ANALYSIS-V1` `research_control/tasks/RT-20260725-012/artifacts/cubic_amplitude_background_phase_analysis_v1.tex`
+- `TEX-V21-P5-T06-SOURCE-AMPLITUDE-RESOLUTION-COARSE-GRAINING-V1` `research_control/tasks/RT-20260725-013/artifacts/source_amplitude_resolution_coarse_graining_v1.tex`
 
 ## superseded
 

@@ -1,0 +1,505 @@
+job_id: "AJ-RT-20260725-013-001"
+task_id: "RT-20260725-013"
+decision_id: "DDR-20260725-013"
+role_id: "ontology-formalizer"
+role_version: "0.2.0"
+execution_role_ref: "ontology-formalizer@0.2.0--RT-20260725-013"
+status: "completed"
+validation_status: "PASS"
+requires_human_gate: false
+created_at: "2026-07-26T02:38:13Z"
+started_at: "2026-07-26T02:38:13Z"
+completed_at: "2026-07-26T02:38:13Z"
+completion_path: "research_control/tasks/RT-20260725-013/jobs/completions/AJC-AJ-RT-20260725-013-001.yaml"
+objective: "Execute only v21 P5-T06: define and test one controlled source-only coarse-graining and source-state reconstruction map for the exact unchanged P5-T03 cubic-amplitude dynamics with explicit typing, resolution, approximation, information loss, covariance, dynamic error, smoothness, examples, negative controls, local-reconstruction obstruction, and path to causal structure."
+target_derivation_milestone: "source_ontology"
+milestone_burden: "Provide the mathematical bridge from source dynamics to effective structure."
+route_label: "ontology-law-research-packet"
+route_reason: "Handoff-0872, the successful generation-117 checkpoint, the v21 P5-T06 plan item, and immutable generation 118 select one bounded source map and obstruction packet."
+immutable_route_sha256: "33570b7a4f7d725ee2b9171c61635b4b5eb7a3ce736aa96acc75bc0fe5d2b762"
+plan_task_id: "P5-T06"
+recommendation_ids:
+  - "V21-R12"
+  - "V21-R16"
+  - "V21-R17"
+  - "V21-R43"
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 118
+  passes_consumed: 108
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:118"
+  handoff_token: "e9749fd9bf96b3a1cd80f90b38a9adf2cb1d6e5d0b267d86"
+  relay_claim_token: "d7f49406984fe5396ccd01b2540d115bac1a77910fc306a6"
+  route_work_item_id: "P5-T06"
+  route_worker_skill: "continue-research"
+  route_sha256: "33570b7a4f7d725ee2b9171c61635b4b5eb7a3ce736aa96acc75bc0fe5d2b762"
+  worker_skill: "continue-research"
+  worker_invocation_count: 1
+
+mathematical_decisiveness_contract:
+  contract_path: "research_control/design/mathematical_decisiveness_completion_contract.md"
+  schema_path: ".agents/schemas/PHYSICS_COMPLETION_DECISIVENESS_SCHEMA.md"
+  enforcement_mode: "hard_failure"
+  active_after: "2026-06-21T02:32:39Z"
+
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "physics"
+  payload_type: "candidate_construction"
+  candidate_family: "V21-P5-T03-CUBIC-AMPLITUDE-SOURCE-DYNAMICS-V1"
+  assumption_delta:
+    - "The exact P5-T03 candidate and every P5-T04 and P5-T05 theorem and obstruction remain unchanged."
+    - "A dimensionless source-amplitude resolution epsilon>0 and odd nearest-lattice code are introduced task-locally as proposal-only map data."
+    - "The source-state decoder returns only q_c inside Q_amp; no target field manifold metric or geometry is assumed."
+    - "Covariance is evaluated only for identity redundancy and the explicit source reflection."
+    - "Approximate effective dynamics is compared to the exact source flow with explicit error and does not replace it."
+    - "Local reconstruction requires information already present in the source domain; target fitting and information creation are barred."
+  materiality_basis: "P5-T06 adds the first typed source-amplitude coarse-graining and source-state reconstruction pair, exact convergence and information-loss ledger, source-symmetry covariance, dynamic approximation bounds, averaging controls, and a distinct rank-based obstruction to local-field or geometry reconstruction from the current family."
+  payload_details:
+    definition_identity: "V21-P5-T06-SOURCE-AMPLITUDE-RESOLUTION-COARSE-GRAINING-V1"
+    map_id: "P5T06-SOURCE-AMPLITUDE-RESOLUTION-MAP"
+    theorem_ids:
+      - "P5T06-THM-UNIFORM-AMPLITUDE-RECONSTRUCTION"
+      - "P5T06-THM-DECLARED-SOURCE-COVARIANCE"
+      - "P5T06-THM-CONTROLLED-DYNAMIC-COMPATIBILITY"
+      - "P5T06-PROP-ONE-DIMENSIONAL-RANK-BOUND"
+    obstruction_id: "OBST-P5T06-QAMP-LOCAL-FIELD-RANK-001"
+    obstruction_scope: "exact unchanged P5-T03 Q_amp candidate family only"
+    global_no_go_claimed: false
+  source_basis:
+    - "TEX-V21-P5-T05-CUBIC-AMPLITUDE-BACKGROUND-PHASE-ANALYSIS-V1"
+    - "TEX-V21-P5-T04-CUBIC-AMPLITUDE-STRUCTURAL-ANALYSIS-V1"
+    - "TEX-V21-P5-T03-CUBIC-AMPLITUDE-SOURCE-DYNAMICS-V1"
+    - "TEX-V21-P5-T02-PHI-SRC-SEMIFLOW-SEMANTICS-V1"
+    - "TEX-V21-P5-T01-COMPACT-SOURCE-THEORY-OBJECT-V1"
+    - "TEX-V21-P4-T06-SELECTED-ONTOLOGY-REGIME-INTEGRATION-V1"
+    - "TEX-ONTOLOGY-AETHER-FLOW-FOUNDATIONS"
+    - "TEX-ONTOLOGY-AETHER-FLOW-DYNAMICS"
+    - "TEX-ONTOLOGY-AETHER-FLOW-GEOMETRY"
+    - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+    - "research_control/design/gr_derivation_burden_map.md"
+    - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  expected_artifact_paths:
+    - "research_control/tasks/RT-20260725-013/artifacts/source_amplitude_resolution_coarse_graining_v1.tex"
+    - "research_control/tasks/RT-20260725-013/artifacts/source_amplitude_coarse_graining_spec_v1.yaml"
+    - "research_control/tasks/RT-20260725-013/artifacts/source_amplitude_scale_error_ledger_v1.yaml"
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+
+family_freeze_admission:
+  schema_id: "family_freeze_route_admission_v1"
+  policy_id: "family_freeze_reopening_policy_v1"
+  route_id: "v21_p5_t06_source_amplitude_coarse_graining_construction"
+  family_id: "V21-P5-T03-CUBIC-AMPLITUDE-SOURCE-DYNAMICS-V1"
+  family_identity_sha256: "51883bdaaf3feaa9c5338959832d465a0d141da09fc85ba7af8053aee165243b"
+  assumption_sha256es:
+    - "96f48102287fae9f7815823d158a2ba8c6a6e9b0f9e1ae2b6d3a72bfbabd82bd"
+  route_kind: "candidate_construction"
+  detected_match_basis: []
+  reopening:
+    requested: false
+    class: "none"
+  authority_limits:
+    local_family_freeze_preserved: true
+    global_no_go_claimed: false
+    automatic_candidate_adoption: false
+    theorem_truth_inferred: false
+    ontology_modified: false
+    physics_promotion_authorized: false
+
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  expected_durable_outputs:
+    physics:
+      - "registered source-amplitude resolution coarse-graining and source-state reconstruction artifact"
+      - "coarse-graining specification with map typing information loss covariance and causal-path boundary"
+      - "scale and approximation-error ledger with precise local-reconstruction obstruction"
+    project_system:
+      - "task-local validator and compact receipt"
+      - "parent-child synthesis records"
+      - "standard control records and generated memory derivatives"
+  acceptance_criteria:
+    physics:
+      - "the exact unchanged candidate and inherited obstructions are preserved"
+      - "domain codomain resolution reconstruction approximation and information loss are explicit"
+      - "declared source covariance dynamic error dimension smoothness examples and negative controls are correct in scope"
+      - "the local-reconstruction obstruction and causal dependency path preserve same-milestone continuation"
+    project_system:
+      - "task-local validation and claim-language checks pass"
+      - "registered source hashes and generated derivatives synchronize"
+      - "one governed checkpoint records the bounded transaction"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: false
+    exception_id: ""
+    evidence_path: ""
+    evidence_sha256: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0872"
+  source_handoff_path: "research_control/handoffs/handoff-0872.yaml"
+  source_handoff_sha256: "039adcf946f030747e59aac63093411a50a1c3ce179cc5b85553141a9403937d"
+  selected_plan_task_id: "P5-T06"
+  guard_outcome: "below_threshold"
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  parent:
+    execution_unit_id: "parent"
+    perspective: "physicist_mathematician_philosopher"
+    responsibilities:
+      - "verify the exact unchanged candidate and inherited P5-T04 and P5-T05 boundaries"
+      - "fuse map typing approximation information covariance dynamics smoothness obstruction and causal-path findings"
+      - "preserve every adoption physical-scale target-import global-no-go and downstream-GR nonconclusion"
+  children:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260725-013/artifacts/child_phys_math_source_amplitude_coarse_graining.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260725-013/artifacts/child_phys_phil_source_amplitude_coarse_graining.yaml"
+      status: "completed"
+  conflict_policy:
+    review_path: "research_control/tasks/RT-20260725-013/artifacts/parent_conflict_review_source_amplitude_coarse_graining.yaml"
+    max_resolution_rounds: 2
+    require_parallel_child_revision: true
+    unresolved_conflict_status: "blocked"
+  fusion_policy:
+    fusion_notes_path: "research_control/tasks/RT-20260725-013/artifacts/parent_fusion_notes_source_amplitude_coarse_graining.md"
+    fused_output_path: "research_control/tasks/RT-20260725-013/artifacts/source_amplitude_resolution_coarse_graining_v1.tex"
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+    final_output_replaces_old_single_role_artifact: true
+
+allowed_read_paths:
+  - "SOUL.md"
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - ".agents/roles/physics/ontology-formalizer.v0.2.0.md"
+  - ".agents/schemas/**"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  - "research_control/design/**"
+  - "research_control/formalization/**"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0872.yaml"
+  - "research_control/handoffs/handoff-0872.md"
+  - "research_control/tasks/RT-20260724-010/**"
+  - "research_control/tasks/RT-20260725-003/**"
+  - "research_control/tasks/RT-20260725-007/**"
+  - "research_control/tasks/RT-20260725-008/**"
+  - "research_control/tasks/RT-20260725-010/**"
+  - "research_control/tasks/RT-20260725-012/**"
+  - "ontology/tex/aether_flow_foundations.tex"
+  - "ontology/tex/aether_flow_dynamics.tex"
+  - "ontology/tex/aether_flow_geometry.tex"
+  - "registries/**"
+
+allowed_write_paths:
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_burden_status_migration_receipt.json"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status.md"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_validation.json"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_compact_receipt.json"
+  - "research_control/tasks/RT-20260725-013/**"
+  - "research_control/handoffs/handoff-0873.yaml"
+  - "research_control/handoffs/handoff-0873.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/PDF_DERIVATIVE_REGISTRY.csv"
+  - "registries/PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "registries/TEX_SOURCE_REGISTRY.csv"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/pdf/**"
+  - "wiki/tex/**"
+
+allowed_generated_paths:
+  - ".local/**"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_burden_status_migration_receipt.json"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status.md"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_validation.json"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_compact_receipt.json"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/pdf/**"
+  - "wiki/tex/**"
+
+forbidden_paths:
+  - "ontology/**"
+  - "manuscripts/**"
+  - "legacy_ontology/**"
+  - "html/**"
+  - "implementations_plans/**"
+  - ".agents/roles/**"
+  - ".codex/skills/**"
+  - "registries/METRIC_USE_LEDGER.csv"
+  - "research_control/tasks/RT-20260724-010/**"
+  - "research_control/tasks/RT-20260725-003/**"
+  - "research_control/tasks/RT-20260725-007/**"
+  - "research_control/tasks/RT-20260725-008/**"
+  - "research_control/tasks/RT-20260725-010/**"
+  - "research_control/tasks/RT-20260725-012/**"
+
+allowed_source_classes:
+  - "science_draft"
+  - "task_local_bridge_map_candidate"
+  - "task_local_scale_error_ledger"
+  - "task_local_precise_obstruction"
+  - "task_local_mathematical_result"
+  - "project_control"
+  - "registry"
+  - "role_contract"
+  - "generated_memory_derivative"
+
+forbidden_source_classes:
+  - "canonical_ontology_write"
+  - "benchmark_promotion"
+  - "physics_claim_promotion"
+  - "source_law_adoption"
+  - "candidate_reconstruction"
+  - "physical_ontology_adoption"
+  - "physical_scale_or_coarse_graining_claim"
+  - "target_atlas_or_metric_import"
+  - "physical_local_field_or_covariance_claim"
+  - "physical_clock_or_causal_structure_claim"
+  - "information_creation_claim"
+  - "M_src_adoption"
+  - "candidate_target_reconstruction"
+  - "g_eff_adoption"
+  - "matter_coupling_or_Einstein_equations"
+  - "gate_chair_verdict"
+  - "completed_derivation_claim"
+  - "global_theory_rejection"
+  - "future_source_extension_impossibility"
+  - "generated_derivative_authority"
+  - "proof_publication_or_push"
+
+approved_commands:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"source coarse graining reconstruction map\" --limit 10 --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"cubic amplitude reconstruction phase obstruction\" --limit 10 --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"typed source only map scale approximation error\" --limit 10 --json"
+  - "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python research_control/tasks/RT-20260725-013/artifacts/validate_source_amplitude_coarse_graining.py --write-report --json"
+  - "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python research_control/tasks/RT-20260725-013/artifacts/validate_source_amplitude_coarse_graining.py --check --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/build_pdf_derivatives.py --scratch research_control/tasks/RT-20260725-013/artifacts/source_amplitude_resolution_coarse_graining_v1.tex"
+  - ".venv/bin/python research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_renderer.py --write --json"
+  - ".venv/bin/python research_control/tasks/RT-20260721-009/artifacts/validate_v21_current_burden_status.py --write --json"
+  - ".venv/bin/python research_control/tasks/RT-20260721-009/artifacts/validate_v21_current_burden_status.py --check --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --check"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --check"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --write"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --check"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --json output/research_dependency_graph.json --markdown wiki/indexes/research_dependency_graph.md --dot output/research_dependency_graph.dot"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --check"
+  - ".venv/bin/python scripts/research_control/generate_claim_graph_v1.py --json output/claim_graph_v1.json"
+  - ".venv/bin/python scripts/research_control/generate_claim_graph_v1.py --check"
+  - ".venv/bin/python scripts/research_control/validate_claim_graph_v1.py --json"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --json-summary"
+  - ".venv/bin/python scripts/research_control/run_full_research_control_validation.py --json --tail-chars 2500"
+  - "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m unittest -v tests.test_research_control"
+  - ".venv/bin/python -m unittest discover -s tests"
+  - "git diff --check"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260725-013-001"
+
+required_validators:
+  - "memory_preflight"
+  - "validate_source_amplitude_coarse_graining"
+  - "latex_scratch_build"
+  - "map_typing_and_round_trip_checks"
+  - "scale_information_and_error_review"
+  - "covariance_dynamics_and_smoothness_checks"
+  - "rank_locality_and_causal_path_review"
+  - "parent_child_synthesis_review"
+  - "classify_project_changes"
+  - "collect_project_improvement_signals"
+  - "validate_documentation_impact"
+  - "validate_claim_language"
+  - "validate_research_control"
+  - "run_full_research_control_validation"
+  - "bootstrap_memory_system"
+  - "checkpoint_research_transaction"
+
+expected_outputs:
+  - "research_control/tasks/RT-20260725-013/artifacts/source_amplitude_resolution_coarse_graining_v1.tex"
+  - "research_control/tasks/RT-20260725-013/artifacts/source_amplitude_coarse_graining_spec_v1.yaml"
+  - "research_control/tasks/RT-20260725-013/artifacts/source_amplitude_scale_error_ledger_v1.yaml"
+  - "research_control/tasks/RT-20260725-013/artifacts/source_amplitude_coarse_graining_validation_receipt_v1.json"
+  - "research_control/tasks/RT-20260725-013/artifacts/validate_source_amplitude_coarse_graining.py"
+  - "research_control/tasks/RT-20260725-013/artifacts/child_phys_math_source_amplitude_coarse_graining.yaml"
+  - "research_control/tasks/RT-20260725-013/artifacts/child_phys_phil_source_amplitude_coarse_graining.yaml"
+  - "research_control/tasks/RT-20260725-013/artifacts/parent_conflict_review_source_amplitude_coarse_graining.yaml"
+  - "research_control/tasks/RT-20260725-013/artifacts/parent_fusion_notes_source_amplitude_coarse_graining.md"
+  - "research_control/tasks/RT-20260725-013/jobs/completions/AJC-AJ-RT-20260725-013-001.yaml"
+  - "research_control/handoffs/handoff-0873.yaml"
+  - "research_control/handoffs/handoff-0873.md"
+
+claim_boundary: "Create and test only one candidate-specific draft/control source-amplitude resolution map, source-state decoder, scale and error ledger, information-loss and surviving-observable classifications, declared source-symmetry covariance, approximate coded dynamics, examples, negative controls, and one precise local-field reconstruction obstruction for the exact unchanged P5-T03 cubic-amplitude dynamics. Do not edit canonical ontology; modify adopt or reject the candidate; claim a physical scale coarse-graining locality covariance field time causal structure or geometry; fit target data; create absent local information; reconstruct M_src or g_eff; couple matter; derive Einstein equations; promote the benchmark; publish; push; claim completed derivation; globally reject the theory; or declare future source extensions impossible."
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1017
+    relationship_row_count: 5050
+    semantic_row_count: 1017
+    vault_row_count: 1017
+    local_cache_only_warning_count: 0
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: true
+    refresh_performed: true
+    before_core_validation_status: "PASS"
+    before_freshness_status: "WARN"
+    before_local_retrieval_status: "WARN"
+    before_local_cache_only_warning_count: 7
+    after_core_validation_status: "PASS"
+    after_freshness_status: "PASS"
+    after_local_retrieval_status: "PASS"
+    after_local_cache_only_warning_count: 0
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"source coarse graining reconstruction map\" --limit 10 --json"
+      query_type: "search"
+      query_text: "source coarse graining reconstruction map"
+      returned_object_ids:
+        - "TEX-V21-P5-T05-CUBIC-AMPLITUDE-BACKGROUND-PHASE-ANALYSIS-V1"
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"cubic amplitude reconstruction phase obstruction\" --limit 10 --json"
+      query_type: "search"
+      query_text: "cubic amplitude reconstruction phase obstruction"
+      returned_object_ids:
+        - "TEX-V21-P5-T05-CUBIC-AMPLITUDE-BACKGROUND-PHASE-ANALYSIS-V1"
+        - "MD-V21-P5-T05-PARENT-FUSION-CUBIC-AMPLITUDE-BACKGROUNDS-V1"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"typed source only map scale approximation error\" --limit 10 --json"
+      query_type: "search"
+      query_text: "typed source only map scale approximation error"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+  canonical_inspections:
+    - object_id: "TEX-V21-P5-T05-CUBIC-AMPLITUDE-BACKGROUND-PHASE-ANALYSIS-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260725-012/artifacts/cubic_amplitude_background_phase_analysis_v1.tex"
+      source_hash: "73895f1325fa83799c343e0c88d525e1d9e006254844b8f8bd7bb8fe2286f48d"
+    - object_id: "MD-V21-P5-T05-PARENT-FUSION-CUBIC-AMPLITUDE-BACKGROUNDS-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260725-012/artifacts/parent_fusion_notes_cubic_amplitude_backgrounds.md"
+      source_hash: "84636c9c6e4b2a20b853759d6af831ebde256c792d6af939055860c8ba1e3020"
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "b29a5dcb06665065a2810721fa86a31c81e694a2e01e70bc996dd3abad9c853d"
+  failed_queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"P5-T06 source map\" --limit 10 --json"
+      result: "FTS parser treated the hyphen as a column operator; no result influenced routing or claims"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"source-only coarse-graining\" --limit 10 --json"
+      result: "FTS parser treated hyphenated terms as operators; no result influenced routing or claims"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/handoffs/handoff-0872.yaml --json"
+      result: "No canonical source object matched the control path; the tracked handoff was inspected directly"
+  required_source_path_inspection:
+    requested_path: "research_control/support_formalization/"
+    exists: false
+    disposition: "ordinary absent path; no premise or authority inferred"
+  authority_note: "Generated Obsidian, wiki, semantic, relationship, and .local retrieval surfaces are navigation or diagnostics only and are not authority."

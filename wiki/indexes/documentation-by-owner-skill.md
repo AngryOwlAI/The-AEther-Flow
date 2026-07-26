@@ -755,6 +755,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-V21-P4-T04-ONTOLOGY-REGIME-COMPARISON-REPORT-V1` `wiki/markdown/md-v21-p4-t04-ontology-regime-comparison-report-v1.md`
 - `WIKI-MD-V21-P4-T05-ONTOLOGY-REGIME-GATE-CHAIR-PARENT-FUSION-V1` `wiki/markdown/md-v21-p4-t05-ontology-regime-gate-chair-parent-fusion-v1.md`
 - `WIKI-MD-V21-P5-T05-PARENT-FUSION-CUBIC-AMPLITUDE-BACKGROUNDS-V1` `wiki/markdown/md-v21-p5-t05-parent-fusion-cubic-amplitude-backgrounds-v1.md`
+- `WIKI-MD-V21-P5-T06-PARENT-FUSION-SOURCE-AMPLITUDE-COARSE-GRAINING-V1` `wiki/markdown/md-v21-p5-t06-parent-fusion-source-amplitude-coarse-graining-v1.md`
 - `WIKI-MD-VALIDATOR-OPERATOR-WORKFLOW-PUBLICATION-BRIEF` `wiki/markdown/md-validator-operator-workflow-publication-brief.md`
 
 ## obsidian-wiki
@@ -1210,6 +1211,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-V21-P4-T04-ONTOLOGY-REGIME-COMPARISON-REPORT-V1` `research_control/tasks/RT-20260721-002/artifacts/ontology_regime_comparison_report_v1.md`
 - `MD-V21-P4-T05-ONTOLOGY-REGIME-GATE-CHAIR-PARENT-FUSION-V1` `research_control/tasks/RT-20260724-004/artifacts/parent_fusion_notes_ontology_regime_gate_chair_review.md`
 - `MD-V21-P5-T05-PARENT-FUSION-CUBIC-AMPLITUDE-BACKGROUNDS-V1` `research_control/tasks/RT-20260725-012/artifacts/parent_fusion_notes_cubic_amplitude_backgrounds.md`
+- `MD-V21-P5-T06-PARENT-FUSION-SOURCE-AMPLITUDE-COARSE-GRAINING-V1` `research_control/tasks/RT-20260725-013/artifacts/parent_fusion_notes_source_amplitude_coarse_graining.md`
 
 ## tex-wiki
 

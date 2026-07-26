@@ -1,0 +1,382 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,longtable}
+
+\newcommand{\Qamp}{\mathcal Q_{\mathrm{amp}}}
+\newcommand{\Oeps}{\mathcal O_\varepsilon}
+\newcommand{\Ceps}{\mathsf C_\varepsilon}
+\newcommand{\Reps}{\mathsf R_\varepsilon}
+\newcommand{\Neps}{\mathsf N_\varepsilon}
+\newcommand{\PhiSrc}{\Phi_{\mathrm{src}}}
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{obstruction}{Scoped obstruction}
+\newtheorem{boundary}{Boundary}
+
+\title{P5-T06 Source-Amplitude Resolution Coarse-Graining and Reconstruction}
+\author{Ontology Formalizer parent--child synthesis}
+\date{2026-07-26}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+\fbox{\parbox{0.92\linewidth}{
+\textbf{Status and authority.} This object is \texttt{draft/control},
+\texttt{proposal-only}, and \texttt{source-extension data}.  It defines and
+tests one source-only resolution map for the exact unchanged P5-T03
+cubic-amplitude candidate.  It is not a canonical-ontology candidate, an
+adopted or rejected source law, a physical coarse-graining law, a source
+manifold, an effective metric, a proof publication, or a completed
+source-to-GR derivation.  Current adoption is blocked while same-milestone
+continuation remains open.
+}}
+\end{center}
+
+\section{Source basis and exact scope}
+
+The exact unchanged candidate is
+\[
+ \mathcal A=\mathbb T^4,\qquad e(\theta)=\sin\theta_1,\qquad
+ q_a=a e,\qquad \Qamp=\{q_a:a\in\mathbb R\},
+\]
+with identity-only declared redundancy and source amplitude observable
+\(F(q_a)=a\).  For \(\gamma>0\) and \(\lambda\geq0\), P5-T03 fixes
+\[
+ X_\gamma(q_a)=-\gamma a^3e,\qquad
+ \Phi^\gamma_\lambda(q_a)=q_{f^\gamma_\lambda(a)},\qquad
+ f^\gamma_\lambda(a)=\frac{a}{\sqrt{1+2\gamma a^2\lambda}}.
+ \label{eq:source-flow}
+\]
+P5-T04 proves that different amplitudes cannot be glued on independent
+nonempty source patches.  P5-T05 proves that \(q_0\) is the unique stationary
+background, that the admitted tangent sector is one-dimensional, and that
+the exact family contains no nontrivial local reconstruction-suitable phase.
+This packet preserves all of those results.
+
+No target atlas, target metric, exact-GR solution, desired benchmark behavior,
+candidate target reconstruction, generated derivative, registry metadata,
+role authority, or validator result is used as a premise.  The planned path
+\texttt{research\_control/support\_formalization/} is absent and supplies no
+authority.
+
+\section{Resolution-indexed source map}
+
+\begin{definition}[Odd nearest-lattice quantizer]
+Fix a source-amplitude resolution \(\varepsilon>0\).  With
+\(\operatorname{sgn}(0)=0\), define
+\[
+ \Neps(a)
+ =\varepsilon\,\operatorname{sgn}(a)
+   \left\lfloor\frac{|a|}{\varepsilon}+\frac12\right\rfloor.
+ \label{eq:quantizer}
+\]
+Half-grid ties are resolved away from zero.  The effective observable space is
+\[
+ \Oeps=\varepsilon\mathbb Z
+\]
+with its discrete topology.  Define
+\[
+ \Ceps:\Qamp\longrightarrow\Oeps,\qquad
+ \Ceps(q_a)=\Neps(a),
+ \label{eq:coarse-map}
+\]
+and the source-state reconstruction
+\[
+ \Reps:\Oeps\longrightarrow\Qamp,\qquad
+ \Reps(c)=q_c.
+ \label{eq:reconstruction}
+\]
+The round-trip source projection is
+\(\Pi_\varepsilon=\Reps\circ\Ceps\).
+\end{definition}
+
+The parameter \(\varepsilon\) is a resolution in the already declared
+dimensionless amplitude coefficient.  It is not a physical length, time,
+energy, detector resolution, renormalization scale, or target-geometric
+scale.  Equation \eqref{eq:quantizer} is a resolution projection, not a
+spatial average: the current state family contains only one global amplitude.
+
+\begin{theorem}[Typing, exact decoding, and uniform reconstruction error]
+\label{thm:error}
+For every \(\varepsilon>0\), \(\Ceps\) and \(\Reps\) are well typed,
+\[
+ \Ceps\circ\Reps=\operatorname{id}_{\Oeps},
+\]
+and
+\[
+ |\Neps(a)-a|\leq\frac{\varepsilon}{2}.
+ \label{eq:amplitude-error}
+\]
+Using the source-amplitude norm
+\(\|q_a\|_{\mathrm{amp}}=|a|\), which equals the \(C^0\) norm because
+\(\|e\|_\infty=1\),
+\[
+ \|\Pi_\varepsilon(q_a)-q_a\|_{\mathrm{amp}}
+ \leq\frac{\varepsilon}{2}.
+ \label{eq:source-error}
+\]
+Consequently \(\Pi_\varepsilon\to\operatorname{id}_{\Qamp}\) uniformly as
+\(\varepsilon\downarrow0\).
+\end{theorem}
+
+\begin{proof}
+Nearest-lattice rounding with the declared tie convention gives
+\eqref{eq:amplitude-error}.  Every \(c\in\varepsilon\mathbb Z\) is fixed by
+\(\Neps\), proving exact decoding.  Equation \eqref{eq:source-error} follows
+from \(q_{\Neps(a)}-q_a=(\Neps(a)-a)e\).  The bound is independent of \(a\).
+\end{proof}
+
+\section{Information loss and surviving observables}
+
+The information-loss fiber at \(c\in\Oeps\) is
+\[
+ \mathcal F_{\varepsilon,c}
+ =\{q_a\in\Qamp:\Neps(a)=c\}.
+\]
+All amplitudes in one fiber have the same coarse code.  Thus the residual
+\(a-\Neps(a)\) is discarded, and \(\Ceps\) is noninjective for every positive
+\(\varepsilon\).  The zero fiber is
+\[
+ \mathcal F_{\varepsilon,0}
+ =\{q_a:|a|<\varepsilon/2\};
+\]
+the exact half-grid endpoints are sent to \(\pm\varepsilon\).
+
+The following data survive with stated scope:
+\begin{enumerate}
+ \item the lattice amplitude \(\Neps(a)\);
+ \item reflection parity, except that the sign of a nonzero amplitude is lost
+ inside the open zero bin;
+ \item source-state amplitude and \(C^0\) reconstruction to error at most
+ \(\varepsilon/2\);
+ \item on a declared bounded region \(|a|\leq A\), the source functional
+ \(L(q_a)=a^2/2\) to the controlled error
+ \[
+  |L(q_a)-L(\Pi_\varepsilon q_a)|
+  \leq \frac{A\varepsilon}{2}+\frac{\varepsilon^2}{8}.
+  \label{eq:quadratic-error}
+ \]
+\end{enumerate}
+No spatial localization, independent patch datum, momentum label,
+characteristic direction, causal cone, manifold dimension, metric component,
+or matter observable survives because none is present in the input.
+
+\section{Source covariance and dynamics}
+
+\begin{theorem}[Declared source symmetry covariance]
+\label{thm:covariance}
+Let \(R(q_a)=q_{-a}\) be the P5-T04 amplitude reflection and let
+\(\rho_\varepsilon(c)=-c\) on \(\Oeps\).  Then
+\[
+ \Ceps\circ R=\rho_\varepsilon\circ\Ceps,\qquad
+ \Reps\circ\rho_\varepsilon=R\circ\Reps.
+\]
+Covariance under the declared identity redundancy is exact and trivial.
+\end{theorem}
+
+\begin{proof}
+The quantizer is odd:
+\(\Neps(-a)=-\Neps(a)\).  The two identities follow directly.
+\end{proof}
+
+This is covariance only under the source transformations actually supplied by
+the candidate: identity redundancy and the discrete non-gauge reflection.  It
+does not establish target diffeomorphism covariance or covariance under an
+undeclared source-isomorphism group.
+
+For comparison with the exact source flow, define the raw effective evolution
+\[
+ \widetilde F^\varepsilon_\lambda(c)=f^\gamma_\lambda(c)
+ \quad\text{in }\mathbb R
+\]
+and the lattice evolution
+\[
+ F^\varepsilon_\lambda(c)
+ =\Neps(f^\gamma_\lambda(c))
+ \quad\text{in }\Oeps.
+\]
+
+\begin{theorem}[Controlled dynamical compatibility]
+\label{thm:dynamics}
+For all \(\gamma>0\), \(\lambda,\mu\geq0\), and \(a\in\mathbb R\),
+\[
+ \left|
+ \Ceps(\Phi^\gamma_\lambda q_a)
+ -\widetilde F^\varepsilon_\lambda(\Ceps q_a)
+ \right|\leq\varepsilon,
+ \label{eq:raw-dynamics-error}
+\]
+and
+\[
+ \left|
+ \Ceps(\Phi^\gamma_\lambda q_a)
+ -F^\varepsilon_\lambda(\Ceps q_a)
+ \right|\leq\frac{3\varepsilon}{2}.
+ \label{eq:lattice-dynamics-error}
+\]
+The lattice evolution has controlled semigroup defect
+\[
+ \left|
+ F^\varepsilon_\lambda(F^\varepsilon_\mu(c))
+ -F^\varepsilon_{\lambda+\mu}(c)
+ \right|\leq\frac{3\varepsilon}{2}
+ \quad(c\in\Oeps).
+ \label{eq:semigroup-defect}
+\]
+\end{theorem}
+
+\begin{proof}
+Differentiation gives
+\[
+ \left|(f^\gamma_\lambda)'(a)\right|
+ =(1+2\gamma a^2\lambda)^{-3/2}\leq1,
+\]
+so every \(f^\gamma_\lambda\) is \(1\)-Lipschitz.  Combine this with
+\eqref{eq:amplitude-error}.  For \eqref{eq:raw-dynamics-error}, the output
+rounding and propagated input rounding each contribute at most
+\(\varepsilon/2\).  Requantizing the raw effective output adds at most one
+further half-bin, proving \eqref{eq:lattice-dynamics-error}.  Apply the same
+argument to the exact source semigroup law to obtain
+\eqref{eq:semigroup-defect}.
+\end{proof}
+
+The exact flow remains the authoritative candidate dynamics.  The lattice
+evolution is an approximate task-local code, not an adopted replacement law.
+
+\section{Averaging control and smoothness}
+
+Let \(\nu\) be normalized Haar measure on the source torus and let \(w\) be
+any declared integrable source probe.  The linear average
+\[
+ A_w(q_a)=\int_{\mathbb T^4}w(\theta)q_a(\theta)\,d\nu
+ =a\kappa_w,\qquad
+ \kappa_w=\int_{\mathbb T^4}w(\theta)e(\theta)\,d\nu
+\]
+has only two dispositions: if \(\kappa_w\neq0\), it recovers the same one
+global amplitude after division by \(\kappa_w\); if \(\kappa_w=0\), it
+collapses the entire family to zero.  Spatial averaging therefore neither
+creates a nontrivial scale hierarchy nor supplies independent local degrees
+inside \(\Qamp\).
+
+For fixed \(\varepsilon\), \(\Ceps\) is piecewise constant and discontinuous
+at half-grid thresholds.  The codomain \(\Oeps\) is countable and
+zero-dimensional as a discrete space.  The reconstruction image remains the
+one-dimensional source family.  Smooth convergence refers only to the
+reconstructed source states in the amplitude or \(C^0\) norm as
+\(\varepsilon\downarrow0\); no physical dimension or smooth effective
+geometry is inferred.
+
+\section{Finite examples and negative controls}
+
+\begin{longtable}{p{0.22\linewidth}p{0.43\linewidth}p{0.27\linewidth}}
+\toprule
+Input or branch & Exact result & Disposition\\
+\midrule
+\endhead
+\(a=2.3\varepsilon\) &
+\(\Neps(a)=2\varepsilon\), error \(0.3\varepsilon\). &
+Ordinary in-bin information loss.\\
+\(a=-2.5\varepsilon\) &
+\(\Neps(a)=-3\varepsilon\), error \(0.5\varepsilon\). &
+Away-from-zero tie control.\\
+\(a=0.49\varepsilon\) &
+\(\Neps(a)=0\). &
+Nonzero sign is lost in the zero bin.\\
+\(a=0.51\varepsilon\) &
+\(\Neps(a)=\varepsilon\). &
+Threshold branch is explicit.\\
+Source reflection &
+\(\Neps(-a)=-\Neps(a)\). &
+Exact \(\mathbb Z_2\) covariance.\\
+Spatial probe with \(\kappa_w=0\) &
+Every \(q_a\) maps to zero. &
+Collapse negative control.\\
+Independent patch codes &
+P5-T04 forces the same global amplitude. &
+No local field reconstruction.\\
+Target-selected thresholds &
+Thresholds fitted to a desired metric or exact-GR solution. &
+Fail closed as target import.\\
+\bottomrule
+\end{longtable}
+
+\section{Scoped rank and locality obstruction}
+
+\begin{proposition}[One-dimensional differential rank bound]
+\label{prop:rank}
+Let \(K:\Qamp\to E\) be any \(C^1\) source-derived effective-coordinate map
+into a finite-dimensional smooth space \(E\).  Then
+\[
+ \operatorname{rank}(dK_{q_a})\leq1
+\]
+at every \(q_a\).  In particular, such a map cannot obtain two independent
+infinitesimal local effective degrees from the present one-dimensional input.
+\end{proposition}
+
+\begin{proof}
+The tangent space \(T_{q_a}\Qamp=\operatorname{span}\{e\}\) is
+one-dimensional, so the image of its differential has dimension at most one.
+\end{proof}
+
+\begin{obstruction}[No local-field or geometry reconstruction from the exact
+current family]
+\label{obs:local-field}
+\texttt{OBST-P5T06-QAMP-LOCAL-FIELD-RANK-001}.  The map
+\((\Ceps,\Reps)\) is a controlled coarse code and reconstruction of the one
+global source amplitude.  Proposition \ref{prop:rank}, the P5-T04
+patch-amplitude rigidity theorem, and the P5-T05 absence of a local
+reconstruction-suitable phase jointly prevent this exact current family from
+supplying independent local effective-field data, a characteristic operator,
+or a source-derived geometry.  A deterministic code cannot add information
+absent from its domain.
+\end{obstruction}
+
+This is a precise obstruction for local-field and geometry reconstruction
+from the exact current \(\Qamp\) family.  It is not a theorem that conservative
+multi-mode, patchable, coupled, stochastic, or other source extensions are
+impossible.
+
+\section{The explicit path to causal structure}
+
+The present global-scalar code does not produce causal structure.  A later
+same-milestone source extension would have to supply, in order:
+\begin{enumerate}
+ \item independently variable local source data with a source-defined gluing
+ or compatibility law;
+ \item a source-defined evolution or linearized operator on those local
+ variations;
+ \item a characteristic set and a theorem establishing a source-invariant
+ cone or propagation relation;
+ \item scale, regularity, robustness, and operational-response semantics;
+ \item only then, under separate burdens, a candidate \(M_{\mathrm{src}}\),
+ \(g_{\mathrm{eff}}\), matter coupling, and exact-GR recovery test.
+\end{enumerate}
+This dependency chain is the explicit path to causal structure; none of its
+missing objects is filled by relabeling \(\varepsilon\), the torus, the
+amplitude lattice, or the source-flow parameter.
+
+\section{Distance-to-GR disposition}
+
+P5-T06 is complete for the exact current candidate in the following narrow
+sense: an audit-ready, well-typed source-only amplitude coarse-graining and
+source-state reconstruction pair exists; its resolution, convergence,
+information loss, surviving observables, symmetry covariance, dynamic error,
+smoothness boundary, examples, and negative controls are explicit.  A
+distinct rank-and-patching obstruction records why this map is not a local
+field or geometry reconstruction.
+
+The result narrows the source-ontology burden but does not discharge generic
+source ontology or any downstream geometry burden.  It does not establish or
+adopt a physical coarse-graining law, canonical ontology, source manifold,
+causal structure, \(g_{\mathrm{eff}}\), matter coupling, Einstein equations,
+exact-GR recovery, benchmark promotion, Gate Chair closure, proof
+publication, push, completed derivation, global theory rejection, or future
+source-extension impossibility.  The next honest step is the planned P5-T07
+source-purity and refuter-stress audit after a governed checkpoint.
+
+\end{document}
