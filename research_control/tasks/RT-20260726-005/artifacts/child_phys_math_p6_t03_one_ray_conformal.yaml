@@ -1,0 +1,37 @@
+schema_id: "parent_child_perspective_output_v1"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+task_id: "RT-20260726-005"
+job_id: "AJ-RT-20260726-005-001"
+plan_task_id: "P6-T03"
+status: "completed"
+target_derivation_milestone: "effective_metric_g_eff"
+milestone_burden: "Advance from propagation structure to conformal geometry without yet choosing scale."
+independent_result:
+  input_datum: "P_x(xi)=xi(V_x), Char_x^*=Ann(V_x) minus zero, the oriented ray {rV_x:r>=0}, and the forward V-flow preorder"
+  desired_output: "a nondegenerate Lorentzian conformal class on the four-dimensional source arena"
+  hyperplane_mismatch: "Ann(V_x) is a three-dimensional linear hyperplane and cannot equal the null cone of a Lorentzian quadratic form."
+  mismatch_proof: "If the quadratic form vanished on all of Ann(V_x), polarization would make that three-dimensional space totally isotropic, contradicting Lorentzian Witt index one."
+  comparison_family: "In flow-box coordinates V=partial_s, g_H=-ds^2+H_ij dy^i dy^j for arbitrary positive-definite H."
+  explicit_pair: "H_0=diag(1,1,1) and H_1=diag(2,1,1)"
+  nonconformality_proof: "The common ds^2 coefficient forces any conformal factor to be one, while the first transverse coefficient differs."
+  null_cone_separation: "partial_s+partial_y1 is null for H_0 and not null for H_1."
+  scale_status: "unselected"
+proof_checks:
+  - "Each g_H is nondegenerate with Lorentzian signature."
+  - "The vector V is future unit timelike for every g_H in the comparison family."
+  - "Every g_H shares the complete oriented one-ray annihilator and flow-preorder input under test."
+  - "The positive-definite H family contains infinitely many pairwise nonconformal members."
+  - "The obstruction is to a single-valued reconstruction from the unchanged P6-T02 datum, not to every richer source extension."
+controls:
+  - "chosen-null-ray family"
+  - "zero-field degeneracy"
+  - "disconnected-component conformal freedom"
+  - "finite multiple-sector ray nonuniqueness"
+decisive_result:
+  result_type: "precise_obstruction"
+  obstruction_id: "OBST-P6T03-ONE-RAY-CONFORMAL-NONSELECTION-001"
+  statement: "The proposal-only P6-T02 one-ray datum does not select a Lorentzian conformal class; a full cone, quadratic form, transverse conformal shape, or materially distinct uniqueness law is required."
+claim_boundary_preserved: true
+global_no_go_claimed: false
+physics_promotion_authorized: false

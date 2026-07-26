@@ -1,0 +1,364 @@
+job_id: "AJ-RT-20260726-006-001"
+task_id: "RT-20260726-006"
+decision_id: "DDR-20260726-006"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260726-006"
+status: "completed"
+validation_status: "PASS"
+created_at: "2026-07-26T16:04:01Z"
+started_at: "2026-07-26T16:04:01Z"
+completed_at: "2026-07-26T16:04:01Z"
+completion_path: "research_control/tasks/RT-20260726-006/jobs/completions/AJC-AJ-RT-20260726-006-001.yaml"
+requires_human_gate: false
+human_authorization_note: "Generation 125 is a user-authorized recursive project-system recovery route. It carries no new protected decision, does not reexecute P6-T03, and does not execute P6-T04."
+objective: "Under the sealed generation-125 dirty-state manifest, replace exactly one stale METRIC_USE_LEDGER source hash in the v18 support-formalization traceability registry, prove all inherited and protected P6-T03 bytes remained exact at the repair boundary, synchronize normal control derivatives, and invoke one fresh governed cumulative checkpoint before P6-T04."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system support-traceability hash synchronization and cumulative checkpoint recovery only; no scientific derivation milestone advances."
+route_label: "repair_p6_t03_support_traceability_metric_ledger_hash_and_checkpoint_v1"
+route_reason: "The generation-124 validation gate found exactly one stale METRIC_USE_LEDGER source hash in the v18 support-formalization traceability registry while preserving the staged P6-T03 transaction."
+immutable_route_sha256: "e0eb5c75a60db368e3d4fbd96ad76c29976246b852b6d39cb671ac4e691aae2c"
+plan_task_id: "P6-T03"
+recovery_for_plan_task_id: "P6-T03"
+next_plan_task_id: "P6-T04"
+next_plan_task_execution_authorized: false
+project_system_change_only: true
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 125
+  passes_consumed: 115
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:125"
+  handoff_token: "a5da441ac2b368e6fdd74d5813a84bdb19035c84d7bb1b24"
+  relay_claim_token: "f6bf72d70ad73a3546bc002cfd84e6f6a10db15681392a67"
+  route_work_item_id: "P6-T03"
+  route_worker_skill: "improve-project-system"
+  route_sha256: "e0eb5c75a60db368e3d4fbd96ad76c29976246b852b6d39cb671ac4e691aae2c"
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  candidate_family: "not_applicable"
+  assumption_delta:
+    - "No scientific assumption changes; the packet synchronizes one support-traceability source hash to already-authorized ledger bytes."
+    - "The P6-T03 theorem, precise obstruction, Distance-to-GR status, and P6-T04 dependency boundary remain unchanged."
+  materiality_basis: "Repairs one validator-proven one-field traceability defect without changing validator behavior or scientific authority."
+  source_basis:
+    - "research_control/handoffs/handoff-0879.yaml"
+    - "research_control/tasks/RT-20260726-005/jobs/completions/AJC-AJ-RT-20260726-005-001.yaml"
+    - "research_control/design/support_formalization_traceability_registry_v18.yaml"
+    - "registries/METRIC_USE_LEDGER.csv"
+    - "research_control/design/support_traceability_v1_v18_parity_assessment.md"
+  expected_artifact_paths:
+    - "research_control/design/support_formalization_traceability_registry_v18.yaml"
+    - "research_control/tasks/RT-20260726-006/artifacts/p6_t03_traceability_hash_recovery_receipt.json"
+  project_system_justification: "This is deterministic source-hash traceability synchronization and cumulative checkpoint recovery; it creates no physics payload or P6-T04 execution."
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  expected_durable_outputs:
+    physics: []
+    project_system:
+      - "one exact v18 support-traceability source-hash synchronization"
+      - "sealed 64-path repair-preservation receipt"
+      - "one governed cumulative checkpoint"
+  acceptance_criteria:
+    physics: []
+    project_system:
+      - "the target differs from its sealed hash by exactly one authorized ledger-hash substitution"
+      - "all 64 inherited dirty-manifest paths match at the repair boundary"
+      - "protected P6-T03 scientific and authority hashes remain exact"
+      - "the existing v18 validator and focused tests pass without behavior changes"
+      - "all required working-tree gates pass"
+      - "one governed cumulative checkpoint commits"
+      - "P6-T04 remains unexecuted until checkpoint success"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: false
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0878"
+  source_handoff_path: "research_control/handoffs/handoff-0878.yaml"
+  source_handoff_sha256: "ffe8e6135327c47347770cdcc450b16f760b6741e7095e746d4c615cf9b5347c"
+  selected_plan_task_id: "P6-T03"
+  guard_outcome: "below_threshold"
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+allowed_read_paths:
+  - "SOUL.md"
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research-goal/SKILL.md"
+  - ".codex/skills/continue-research-goal/references/goal-file-schema.md"
+  - ".codex/skills/continue-research-continue-goal/SKILL.md"
+  - ".codex/skills/improve-project-system/SKILL.md"
+  - ".agents/roles/research_ops/project-system-director.v0.2.0.md"
+  - ".agents/roles/research_ops/validator-engineer.v0.2.0.md"
+  - ".agents/schemas/**"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  - "research_control/design/**"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0878.yaml"
+  - "research_control/handoffs/handoff-0879.yaml"
+  - "research_control/handoffs/handoff-0879.md"
+  - "research_control/tasks/RT-20260726-005/**"
+  - "scripts/project_control/**"
+  - "scripts/research_control/**"
+  - "scripts/validation/**"
+  - "tests/**"
+  - "registries/**"
+
+allowed_write_paths:
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/METRIC_USE_LEDGER.csv"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/PDF_DERIVATIVE_REGISTRY.csv"
+  - "registries/PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "registries/TEX_SOURCE_REGISTRY.csv"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "research_control/design/support_formalization_traceability_registry_v18.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0879.yaml"
+  - "research_control/handoffs/handoff-0879.md"
+  - "research_control/handoffs/handoff-0880.yaml"
+  - "research_control/handoffs/handoff-0880.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260721-009/**"
+  - "research_control/tasks/RT-20260726-005/**"
+  - "research_control/tasks/RT-20260726-006/**"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/pdf/**"
+  - "wiki/tex/**"
+
+allowed_generated_paths:
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/RT-20260721-009/**"
+  - "research_control/tasks/RT-20260726-006/artifacts/p6_t03_traceability_hash_recovery_receipt.json"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/pdf/**"
+  - "wiki/tex/**"
+
+forbidden_paths:
+  - ".agents/roles/**"
+  - ".codex/skills/**"
+  - "scripts/research_control/**"
+  - "scripts/project_control/**"
+  - "scripts/validation/**"
+  - "tests/**"
+  - "implementations_plans/**"
+  - "ontology/**"
+  - "legacy_ontology/**"
+  - "manuscripts/**"
+  - "markdown/publication-briefs/**"
+  - "markdown/html-explainer-specs/**"
+
+allowed_source_classes:
+  - "exact_support_traceability_hash_synchronization"
+  - "control_state"
+  - "registry"
+  - "validator_evidence"
+  - "execution_role_contract"
+  - "task_control_record"
+  - "active_routing_supersession"
+  - "generated_memory_derivative"
+  - "prior_authorized_transaction_checkpoint"
+
+forbidden_source_classes:
+  - "validator_test_schema_skill_or_base_role_behavior_change"
+  - "semantic_predecessor_task_artifact_job_completion_handoff_or_science_rewrite"
+  - "write_path_broadening"
+  - "P6_T03_reexecution"
+  - "P6_T04_execution_before_checkpoint"
+  - "canonical_ontology_write"
+  - "science_source_or_scientific_ledger_mutation"
+  - "physics_claim_or_interpretation_promotion"
+  - "benchmark_promotion"
+  - "proof_authority"
+  - "publication_or_push_authority"
+  - "completed_derivation_claim"
+  - "generated_derivative_authority"
+
+approved_commands:
+  - ".venv/bin/python research_control/tasks/RT-20260726-006/artifacts/validate_p6_t03_traceability_hash_recovery.py --write-report --json"
+  - ".venv/bin/python research_control/tasks/RT-20260726-006/artifacts/validate_p6_t03_traceability_hash_recovery.py --check --json"
+  - ".venv/bin/python scripts/research_control/support_formalization/validate_traceability_registry_v18.py --json"
+  - ".venv/bin/python -m unittest -v tests.test_support_formalization_traceability_registry_v18"
+  - ".venv/bin/python research_control/tasks/RT-20260726-005/artifacts/validate_one_ray_conformal_insufficiency.py --check --json"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+  - ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --check"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --check"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --write"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --check"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --json output/research_dependency_graph.json --markdown wiki/indexes/research_dependency_graph.md --dot output/research_dependency_graph.dot"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --check"
+  - ".venv/bin/python scripts/research_control/generate_claim_graph_v1.py --json output/claim_graph_v1.json"
+  - ".venv/bin/python scripts/research_control/generate_claim_graph_v1.py --check"
+  - ".venv/bin/python scripts/research_control/validate_claim_graph_v1.py --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --json-summary"
+  - ".venv/bin/python scripts/research_control/run_full_research_control_validation.py --json --tail-chars 2500"
+  - ".venv/bin/python -m unittest -v tests.test_research_control"
+  - ".venv/bin/python -m unittest discover -s tests"
+  - "git diff --check"
+  - "git diff --cached --check"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260726-006-001"
+
+required_validators:
+  - "task_local_p6_t03_traceability_hash_recovery"
+  - "support_formalization_traceability_registry_v18"
+  - "focused_support_traceability_tests"
+  - "p6_t03_task_local_validator"
+  - "project_change_classifier"
+  - "project_improvement_resolver"
+  - "project_improvement_signals"
+  - "documentation_impact"
+  - "claim_language"
+  - "current_frontier_render_and_check"
+  - "task_index_render_and_check"
+  - "compact_current_frontier_render_and_check"
+  - "dependency_graph_render_and_check"
+  - "claim_graph_generate_and_check"
+  - "memory_bootstrap_and_validate_only"
+  - "research_control_diff"
+  - "full_research_control_validation"
+  - "focused_research_control_tests"
+  - "repository_test_shard"
+  - "git_diff_check"
+  - "checkpoint_transaction"
+
+expected_outputs:
+  - "research_control/design/support_formalization_traceability_registry_v18.yaml"
+  - "research_control/tasks/RT-20260726-006/artifacts/validate_p6_t03_traceability_hash_recovery.py"
+  - "research_control/tasks/RT-20260726-006/artifacts/p6_t03_traceability_hash_recovery_receipt.json"
+  - "research_control/tasks/RT-20260726-006/jobs/completions/AJC-AJ-RT-20260726-006-001.yaml"
+  - "research_control/handoffs/handoff-0880.yaml"
+  - "research_control/handoffs/handoff-0880.md"
+
+stop_conditions:
+  - "the target differs by more than the one authorized ledger-hash substitution"
+  - "any of the 64 inherited manifest paths drifts at the repair boundary"
+  - "a protected P6-T03 scientific or authority hash changes"
+  - "the existing v18 validator or focused tests would require behavior changes"
+  - "a required write path is outside the AgentJob allowlist"
+  - "validation or the single governed checkpoint fails"
+  - "the repair would edit scientific semantics ontology ledgers tests validators or protected authority"
+  - "more than one AgentJob or checkpoint would be required"
+
+claim_boundary: "Repair only the one stale v18 support-traceability ledger hash under the sealed manifest, preserve all P6-T03 science and authority, create normal recovery evidence and derivatives, and invoke at most one checkpoint; no P6-T04, science, interpretation, promotion, proof, publication, or Gate Chair authority."
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1033
+    relationship_row_count: 5189
+    semantic_row_count: 1033
+    vault_row_count: 1033
+    local_cache_only_warning_count: 7
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/design/support_traceability_v1_v18_parity_assessment.md --json"
+      query_type: "lookup"
+      query_text: "research_control/design/support_traceability_v1_v18_parity_assessment.md"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-DESIGN-SUPPORT-TRACEABILITY-V1-V18-PARITY-ASSESSMENT"
+  canonical_inspections:
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-SUPPORT-TRACEABILITY-V1-V18-PARITY-ASSESSMENT"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/support_traceability_v1_v18_parity_assessment.md"
+      source_hash: "630a9b7ae901cae36373456db09dcfff15c7c2f1519400f0f7edd82cd3ef94be"
+  authority_note: "Generated Obsidian, wiki, semantic, relationship, SQLite, and .local surfaces are retrieval-only navigation layers and not authority; tracked canonical sources, registries, and research-control state govern this recovery."

@@ -1,0 +1,304 @@
+{
+  "artifact_hashes": {
+    "one_ray_conformal_insufficiency_spec_v1.yaml": "92a01504ab891643172720e8a99ff3209517311e39382292bc40895b5c4ca207",
+    "one_ray_conformal_insufficiency_v1.tex": "007ae324872868b9eb9cdf0ebc4f1131737c71eda9ce301c805acd5041a52bac"
+  },
+  "assumption_count": 7,
+  "check_count": 47,
+  "checks": [
+    {
+      "check_id": "SPEC-SCHEMA",
+      "detail": "Expected bounded P6-T03 specification schema.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "SPEC-TASK",
+      "detail": "Specification is bound to the exact task.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "SPEC-PLAN",
+      "detail": "Specification is bound to the exact v21 work item.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "SPEC-ADOPTION",
+      "detail": "Adoption remains blocked while continuation stays open.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "INPUT-PRINCIPAL-POLYNOMIAL",
+      "detail": "The P6-T02 principal polynomial is exact.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "INPUT-CHARACTERISTIC",
+      "detail": "The characteristic annihilator is retained.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "INPUT-RAY",
+      "detail": "The one-ray propagation datum is retained.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "ASSUMPTION-TABLE",
+      "detail": "Seven explicit assumptions are present.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "ASSUMPTION-SCALE",
+      "detail": "Overall scale is explicitly deferred.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "ASSUMPTION-NO-TARGET",
+      "detail": "No-target-import boundary is explicit.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "THEOREM-HYPERPLANE",
+      "detail": "Hyperplane/null-cone mismatch theorem is present.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "THEOREM-NONSELECTION",
+      "detail": "One-ray conformal nonselection theorem is present.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "MODEL-NONDEGENERATE",
+      "detail": "Both diagonal witnesses are nondegenerate Lorentzian.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "MODEL-SIGNATURE",
+      "detail": "Each witness has exactly one negative direction.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "MODEL-NONCONFORMAL",
+      "detail": "Time coefficient fixes factor one while first spatial coefficient differs.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "MODEL-SHARED-TIMELIKE-RAY",
+      "detail": "V is unit timelike for both witnesses.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "MODEL-DIFFERENT-NULL-CONES",
+      "detail": "partial_s+partial_y1 is null only for the first witness.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "EXAMPLE-UNIQUENESS",
+      "detail": "Explicit conformal uniqueness failure is recorded.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "EXAMPLE-NULL-RAY",
+      "detail": "Chosen-null-ray insufficiency is recorded.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "EXAMPLE-ZERO-FIELD",
+      "detail": "Zero-field degeneracy is fail-closed.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "EXAMPLE-DISCONNECTED",
+      "detail": "Disconnected-component nonselection is explicit.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "EXAMPLE-MULTI-SECTOR",
+      "detail": "Finite-ray control blocks overread.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "OBSTRUCTION-ID",
+      "detail": "Stable obstruction identity is present.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "OBSTRUCTION-SCOPE",
+      "detail": "Obstruction remains candidate-scoped.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "OBSTRUCTION-ONTOLOGY",
+      "detail": "Underdetermination language is precise.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "OBSTRUCTION-CONTINUATION",
+      "detail": "A materially new source primitive can reopen continuation.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "OBSTRUCTION-NO-GLOBAL-NOGO",
+      "detail": "No global no-go is claimed.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "REOPENING-CRITERIA",
+      "detail": "Three materially new reopening classes are named.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "AUTHORITY-ALL-FALSE",
+      "detail": "Every promotion, adoption, and publication authority flag is false.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "TEX-MARKER-01",
+      "detail": "Required TeX marker is present: Hyperplane/null-cone mismatch",
+      "status": "PASS"
+    },
+    {
+      "check_id": "TEX-MARKER-02",
+      "detail": "Required TeX marker is present: One-ray conformal nonselection",
+      "status": "PASS"
+    },
+    {
+      "check_id": "TEX-MARKER-03",
+      "detail": "Required TeX marker is present: g_H=-ds^2+H_{ij}",
+      "status": "PASS"
+    },
+    {
+      "check_id": "TEX-MARKER-04",
+      "detail": "Required TeX marker is present: blocked\\_adoption\\_open\\_continuation",
+      "status": "PASS"
+    },
+    {
+      "check_id": "TEX-MARKER-05",
+      "detail": "Required TeX marker is present: not a theorem that the project can never derive",
+      "status": "PASS"
+    },
+    {
+      "check_id": "TEX-MARKER-06",
+      "detail": "Required TeX marker is present: No Lorentzian scale is fixed",
+      "status": "PASS"
+    },
+    {
+      "check_id": "TEX-FORBIDDEN-01",
+      "detail": "Forbidden promotion marker is absent: canonical ontology is hereby",
+      "status": "PASS"
+    },
+    {
+      "check_id": "TEX-FORBIDDEN-02",
+      "detail": "Forbidden promotion marker is absent: physical causality is established",
+      "status": "PASS"
+    },
+    {
+      "check_id": "TEX-FORBIDDEN-03",
+      "detail": "Forbidden promotion marker is absent: effective metric is derived",
+      "status": "PASS"
+    },
+    {
+      "check_id": "TEX-FORBIDDEN-04",
+      "detail": "Forbidden promotion marker is absent: Einstein equations are derived",
+      "status": "PASS"
+    },
+    {
+      "check_id": "TEX-FORBIDDEN-05",
+      "detail": "Forbidden promotion marker is absent: the theory is impossible",
+      "status": "PASS"
+    },
+    {
+      "check_id": "TEX-FORBIDDEN-06",
+      "detail": "Forbidden promotion marker is absent: this is a completed derivation",
+      "status": "PASS"
+    },
+    {
+      "check_id": "SOURCE-HASH-TEX-V21-P6-T02-SOURCE-LOCAL-TRANSPORT-CHARACTERISTIC-V1",
+      "detail": "Fixed source hash matches.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "SOURCE-HASH-TEX-ONTOLOGY-AETHER-FLOW-GEOMETRY",
+      "detail": "Fixed source hash matches.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "SOURCE-HASH-TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-METRICFORMASSIGN-GEFF-CANDIDATE-OR-OBSTRUCTION",
+      "detail": "Fixed source hash matches.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "SOURCE-HASH-TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-GEFF-CANDIDATE-SCOPED-SOURCE-EXTENSION-ADOPTION-GATE-CHAIR-REVIEW",
+      "detail": "Fixed source hash matches.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "SOURCE-HASH-MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21",
+      "detail": "Fixed source hash matches.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "SOURCE-HASH-MD-RESEARCH-CONTROL-DESIGN-GR-DERIVATION-BURDEN-MAP",
+      "detail": "Fixed source hash matches.",
+      "status": "PASS"
+    }
+  ],
+  "claim_boundary_summary": "Candidate-scoped one-ray conformal nonselection only; no ontology or source-law adoption, physical causality, metric scale, downstream GR promotion, global no-go, publication, push, or completed derivation.",
+  "degeneracy_control_count": 3,
+  "fail_count": 0,
+  "fixed_sources": [
+    {
+      "actual_sha256": "7b446c8660410e655166c0b3124fc37aad9edb8e49b7df2afdc9911c6f560958",
+      "expected_sha256": "7b446c8660410e655166c0b3124fc37aad9edb8e49b7df2afdc9911c6f560958",
+      "object_id": "TEX-V21-P6-T02-SOURCE-LOCAL-TRANSPORT-CHARACTERISTIC-V1",
+      "path": "research_control/tasks/RT-20260726-003/artifacts/source_local_transport_candidate_v1.tex",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "f60a81b63f814b03cca7190b3ac6285842a55317f4aed058cc6e75154cc0b4d7",
+      "expected_sha256": "f60a81b63f814b03cca7190b3ac6285842a55317f4aed058cc6e75154cc0b4d7",
+      "object_id": "TEX-ONTOLOGY-AETHER-FLOW-GEOMETRY",
+      "path": "ontology/tex/aether_flow_geometry.tex",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "dd30573519ed1df66b3800d29ee0adc9fcc94d9c8d3b9b5a7fcffde503d5f0ef",
+      "expected_sha256": "dd30573519ed1df66b3800d29ee0adc9fcc94d9c8d3b9b5a7fcffde503d5f0ef",
+      "object_id": "TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-METRICFORMASSIGN-GEFF-CANDIDATE-OR-OBSTRUCTION",
+      "path": "research_control/tasks/RT-20260614-216/artifacts/245_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_METRICFORMASSIGN_GEFF_CANDIDATE_OR_OBSTRUCTION.tex",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "3ce8cbc6cd79c6852d78f81045633beea44c4dfc6e2912c604b08e3c8bdb0257",
+      "expected_sha256": "3ce8cbc6cd79c6852d78f81045633beea44c4dfc6e2912c604b08e3c8bdb0257",
+      "object_id": "TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-GEFF-CANDIDATE-SCOPED-SOURCE-EXTENSION-ADOPTION-GATE-CHAIR-REVIEW",
+      "path": "research_control/tasks/RT-20260614-222/artifacts/251_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_GEFF_CANDIDATE_SCOPED_SOURCE_EXTENSION_ADOPTION_GATE_CHAIR_REVIEW.tex",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087",
+      "expected_sha256": "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087",
+      "object_id": "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21",
+      "path": "implementations_plans/recommendations_implementation_plan_continue_task-v21.md",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "8e9d44e3a18ecc8a2430a9c42497da3eb9911c2cf6cd714c1525c5d91551835e",
+      "expected_sha256": "8e9d44e3a18ecc8a2430a9c42497da3eb9911c2cf6cd714c1525c5d91551835e",
+      "object_id": "MD-RESEARCH-CONTROL-DESIGN-GR-DERIVATION-BURDEN-MAP",
+      "path": "research_control/design/gr_derivation_burden_map.md",
+      "status": "PASS"
+    }
+  ],
+  "global_no_go_count": 0,
+  "pass_count": 47,
+  "physical_conformal_class_count": 0,
+  "plan_task_id": "P6-T03",
+  "precise_obstruction_count": 1,
+  "result_id": "V21-P6-T03-ONE-RAY-CONFORMAL-INSUFFICIENCY-V1",
+  "schema_id": "v21_p6_t03_one_ray_conformal_insufficiency_validation_v1",
+  "status": "PASS",
+  "target_metric_premise_count": 0,
+  "task_id": "RT-20260726-005",
+  "theorem_count": 2,
+  "uniqueness_example_count": 2
+}

@@ -1,0 +1,495 @@
+job_id: "AJ-RT-20260726-005-001"
+task_id: "RT-20260726-005"
+decision_id: "DDR-20260726-005"
+role_id: "ontology-formalizer"
+role_version: "0.2.0"
+execution_role_ref: "ontology-formalizer@0.2.0--RT-20260726-005"
+status: "completed"
+validation_status: "PASS"
+requires_human_gate: false
+created_at: "2026-07-26T14:23:48Z"
+started_at: "2026-07-26T14:23:48Z"
+completed_at: "2026-07-26T14:33:44Z"
+completion_path: "research_control/tasks/RT-20260726-005/jobs/completions/AJC-AJ-RT-20260726-005-001.yaml"
+objective: "Execute only v21 P6-T03: determine whether the proposal-only P6-T02 one-ray characteristic data fix a Lorentzian conformal class under declared regularity and causal stipulations or prove a precise candidate-scoped insufficiency without choosing scale or importing target geometry."
+target_derivation_milestone: "effective_metric_g_eff"
+milestone_burden: "Advance from propagation structure to conformal geometry without yet choosing scale."
+route_label: "ontology-law-research-packet"
+trigger_classification: "derivation_critical_missing_source_law"
+route_reason: "Handoff-0878, committed cumulative P6-T02 checkpoint 2c5d8ec75f4c921065945309a77270ea4c4affde, v21 P6-T03, and immutable generation 124 select one bounded one-ray conformal reconstruction-or-obstruction packet."
+immutable_route_sha256: "e808c779d0da82e5cde29da65a4a30110527e0ba041dc2335ff51e33295306e7"
+plan_task_id: "P6-T03"
+recommendation_ids:
+  - "V21-R17"
+  - "V21-R19"
+  - "V21-R22"
+  - "V21-R30"
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 124
+  passes_consumed: 114
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:124"
+  handoff_token: "83c456b8c46c50c62264c19db3884783f92d7a637b5d3aaa"
+  relay_claim_token: "f144e9437ac830c9df94a5641b803513b83df64181db43ee"
+  route_work_item_id: "P6-T03"
+  route_worker_skill: "continue-research"
+  route_sha256: "e808c779d0da82e5cde29da65a4a30110527e0ba041dc2335ff51e33295306e7"
+  worker_skill: "continue-research"
+  worker_invocation_count: 1
+
+mathematical_decisiveness_contract:
+  contract_path: "research_control/design/mathematical_decisiveness_completion_contract.md"
+  schema_path: ".agents/schemas/PHYSICS_COMPLETION_DECISIVENESS_SCHEMA.md"
+  enforcement_mode: "hard_failure"
+  active_after: "2026-06-21T02:32:39Z"
+
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "physics"
+  payload_type: "precise_obstruction"
+  candidate_family: "V21-P6-T02-SOURCE-LOCAL-TRANSPORT-CHARACTERISTIC-V1"
+  assumption_delta:
+    - "The P6-T02 proposal-only one-ray characteristic datum remains unchanged and is the complete reconstruction input under test."
+    - "A favorable future-timelike stipulation is added only inside the countermodel to strengthen the insufficiency result; it is not a physical conclusion."
+    - "A smooth positive-definite transverse matrix H parameterizes comparison metrics only as task-local countermodels."
+    - "Overall Lorentzian scale remains unselected."
+    - "The historical scoped source-extension g_eff object remains unchanged and is not a premise."
+    - "No target atlas metric GR null cone proper time detector matter benchmark generated derivative registry metadata role authority or validator result is admitted as a source premise."
+  materiality_basis: "P6-T03 proves exact characteristic-hyperplane mismatch and constructs an infinite pairwise nonconformal g_H family that shares the complete P6-T02 one-ray annihilator and flow-preorder input, thereby locating a precise missing conformal-shape primitive."
+  payload_details:
+    obstruction_id: "OBST-P6T03-ONE-RAY-CONFORMAL-NONSELECTION-001"
+    obstruction_scope: "a conformal reconstruction whose complete input is only the proposal-only P6-T02 oriented ray annihilator and forward flow preorder"
+    theorem_ids:
+      - "P6T03-THM-CHARACTERISTIC-HYPERPLANE-MISMATCH"
+      - "P6T03-THM-ONE-RAY-CONFORMAL-NONSELECTION"
+    global_no_go_claimed: false
+  source_basis:
+    - "TEX-V21-P6-T02-SOURCE-LOCAL-TRANSPORT-CHARACTERISTIC-V1"
+    - "TEX-ONTOLOGY-AETHER-FLOW-GEOMETRY"
+    - "TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-METRICFORMASSIGN-GEFF-CANDIDATE-OR-OBSTRUCTION"
+    - "TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-GEFF-CANDIDATE-SCOPED-SOURCE-EXTENSION-ADOPTION-GATE-CHAIR-REVIEW"
+    - "registries/METRIC_USE_LEDGER.csv"
+    - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+    - "research_control/design/gr_derivation_burden_map.md"
+  expected_artifact_paths:
+    - "research_control/tasks/RT-20260726-005/artifacts/one_ray_conformal_insufficiency_v1.tex"
+    - "research_control/tasks/RT-20260726-005/artifacts/one_ray_conformal_insufficiency_spec_v1.yaml"
+    - "research_control/tasks/RT-20260726-005/artifacts/one_ray_conformal_insufficiency_validation_receipt_v1.json"
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+
+family_freeze_admission:
+  schema_id: "family_freeze_route_admission_v1"
+  policy_id: "family_freeze_reopening_policy_v1"
+  route_id: "v21_p6_t03_one_ray_conformal_nonselection"
+  family_id: "V21-P6-T02-SOURCE-LOCAL-TRANSPORT-CHARACTERISTIC-V1"
+  family_identity_sha256: "7b446c8660410e655166c0b3124fc37aad9edb8e49b7df2afdc9911c6f560958"
+  assumption_sha256es:
+    - "6c9ae2f1f4e3d68ad31940a396ac427e4cdc5744235ea9da1f4edaab6e673c91"
+  route_kind: "precise_obstruction"
+  detected_match_basis: []
+  reopening:
+    requested: false
+    class: "none"
+  distinct_branch:
+    branch_identity: "V21-P6-T03-ONE-RAY-CONFORMAL-INSUFFICIENCY-V1"
+    material_difference_basis: "Adds a new hyperplane-versus-null-cone theorem and infinite nonconformal countermodel family rather than reconstructing or repackaging the P6-T02 transport candidate."
+    reconstructs_frozen_candidate: false
+    expected_artifact_paths:
+      - "research_control/tasks/RT-20260726-005/artifacts/one_ray_conformal_insufficiency_v1.tex"
+      - "research_control/tasks/RT-20260726-005/artifacts/one_ray_conformal_insufficiency_spec_v1.yaml"
+  authority_limits:
+    local_family_freeze_preserved: true
+    global_no_go_claimed: false
+    automatic_candidate_adoption: false
+    theorem_truth_inferred: false
+    ontology_modified: false
+    physics_promotion_authorized: false
+
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  expected_durable_outputs:
+    physics:
+      - "registered one-ray characteristic-hyperplane mismatch theorem"
+      - "infinite nonconformal Lorentzian countermodel family"
+      - "precise candidate-scoped obstruction with assumption uniqueness degeneracy and reopening controls"
+    project_system:
+      - "task-local deterministic validation receipt"
+      - "compact source and claim-boundary receipt"
+      - "standard control records metric-use entry and generated memory derivatives"
+  acceptance_criteria:
+    physics:
+      - "conformal reconstruction input and output are typed"
+      - "hyperplane mismatch and nonconformal family proofs are explicit"
+      - "timelike null zero-field disconnected and multiple-sector controls are explicit"
+      - "scale no-target and candidate-scoped no-global-no-go boundaries are preserved"
+    project_system:
+      - "task-local validation and scratch TeX build pass"
+      - "claim-language source-authority documentation signal and research-control checks pass"
+      - "one governed checkpoint records the bounded transaction"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: false
+    exception_id: ""
+    evidence_path: ""
+    evidence_sha256: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0878"
+  source_handoff_path: "research_control/handoffs/handoff-0878.yaml"
+  source_handoff_sha256: "ffe8e6135327c47347770cdcc450b16f760b6741e7095e746d4c615cf9b5347c"
+  selected_plan_task_id: "P6-T03"
+  guard_outcome: "below_threshold"
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  parent:
+    execution_unit_id: "parent"
+    perspective: "physicist_mathematician_philosopher"
+    responsibilities:
+      - "hold the P6-T02 input canonical ontology historical scoped g_eff and no-target boundary fixed"
+      - "test exact Lorentzian conformal selection and construct a precise candidate-scoped obstruction"
+      - "fuse theorem countermodel degeneracy and interpretation audits without choosing scale"
+  children:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260726-005/artifacts/child_phys_math_p6_t03_one_ray_conformal.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260726-005/artifacts/child_phys_phil_p6_t03_one_ray_conformal.yaml"
+      status: "completed"
+  conflict_policy:
+    review_path: "research_control/tasks/RT-20260726-005/artifacts/parent_conflict_review_p6_t03_one_ray_conformal.yaml"
+    max_resolution_rounds: 2
+    require_parallel_child_revision: true
+    unresolved_conflict_status: "blocked"
+  fusion_policy:
+    fusion_notes_path: "research_control/tasks/RT-20260726-005/artifacts/parent_fusion_notes_p6_t03_one_ray_conformal.md"
+    fused_output_path: "research_control/tasks/RT-20260726-005/artifacts/one_ray_conformal_insufficiency_v1.tex"
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+    final_output_replaces_old_single_role_artifact: true
+  outer_agentjob_count: 1
+  child_agentjob_count: 0
+  subagent_count: 0
+  rationale: "Two internal analytical perspectives independently audit the mathematical obstruction and its interpretation within one immutable worker invocation and one outer AgentJob; no child AgentJob or subagent is created."
+
+allowed_read_paths:
+  - "SOUL.md"
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".codex/skills/continue-research-continue-goal/SKILL.md"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - ".agents/roles/physics/ontology-formalizer.v0.2.0.md"
+  - ".agents/schemas/**"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  - "research_control/design/**"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0878.yaml"
+  - "research_control/handoffs/handoff-0878.md"
+  - "research_control/tasks/RT-20260726-004/**"
+  - "research_control/tasks/RT-20260726-003/**"
+  - "research_control/tasks/RT-20260614-216/**"
+  - "research_control/tasks/RT-20260614-222/**"
+  - "ontology/tex/aether_flow_geometry.tex"
+  - "registries/**"
+
+allowed_write_paths:
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "registries/METRIC_USE_LEDGER.csv"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_burden_status_migration_receipt.json"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status.md"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_validation.json"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_compact_receipt.json"
+  - "research_control/tasks/RT-20260726-005/**"
+  - "research_control/handoffs/handoff-0879.yaml"
+  - "research_control/handoffs/handoff-0879.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/PDF_DERIVATIVE_REGISTRY.csv"
+  - "registries/PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "registries/TEX_SOURCE_REGISTRY.csv"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/pdf/**"
+  - "wiki/tex/**"
+
+allowed_generated_paths:
+  - ".local/**"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_burden_status_migration_receipt.json"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status.md"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_validation.json"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_compact_receipt.json"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/pdf/**"
+  - "wiki/tex/**"
+
+forbidden_paths:
+  - "ontology/**"
+  - "manuscripts/**"
+  - "legacy_ontology/**"
+  - "html/**"
+  - "implementations_plans/**"
+  - ".agents/roles/**"
+  - ".codex/skills/**"
+  - "research_control/tasks/RT-20260726-004/**"
+  - "research_control/tasks/RT-20260726-003/**"
+  - "research_control/tasks/RT-20260614-216/**"
+  - "research_control/tasks/RT-20260614-222/**"
+
+allowed_source_classes:
+  - "science_draft"
+  - "task_local_theorem"
+  - "task_local_countermodel"
+  - "task_local_precise_obstruction"
+  - "task_local_assumption_and_degeneracy_control"
+  - "scoped_metric_use_audit"
+  - "project_control"
+  - "registry"
+  - "role_contract"
+  - "generated_memory_derivative"
+
+forbidden_source_classes:
+  - "canonical_ontology_write"
+  - "benchmark_promotion"
+  - "physics_claim_promotion"
+  - "source_law_adoption"
+  - "canonical_ontology_candidate_promotion"
+  - "physical_ontology_adoption"
+  - "physical_time_scale_or_locality_claim"
+  - "target_atlas_or_metric_import"
+  - "target_gr_null_cone_import"
+  - "physical_causality_or_characteristic_claim"
+  - "positive_geometry_claim"
+  - "M_src_adoption"
+  - "candidate_reconstruction"
+  - "g_eff_adoption_or_scope_expansion"
+  - "matter_coupling_or_Einstein_equations"
+  - "gate_chair_verdict"
+  - "completed_derivation_claim"
+  - "global_theory_rejection"
+  - "future_source_extension_impossibility"
+  - "generated_derivative_authority"
+  - "proof_publication_or_push"
+
+approved_commands:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-V21-P6-T02-SOURCE-LOCAL-TRANSPORT-CHARACTERISTIC-V1 --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"NONBOTTOM METRICDATA GEFF candidate obstruction\" --limit 10 --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"conformal geometry insufficiency characteristic ray\" --limit 10 --json"
+  - "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python research_control/tasks/RT-20260726-005/artifacts/validate_one_ray_conformal_insufficiency.py --write-report --json"
+  - "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python research_control/tasks/RT-20260726-005/artifacts/validate_one_ray_conformal_insufficiency.py --check --json"
+  - "PATH=/Users/alex.omegapy/texlive/2026/bin/universal-darwin:$PATH .venv/bin/python .codex/skills/project-memory-system/scripts/build_pdf_derivatives.py --scratch research_control/tasks/RT-20260726-005/artifacts/one_ray_conformal_insufficiency_v1.tex"
+  - ".venv/bin/python research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_renderer.py --write --json"
+  - ".venv/bin/python research_control/tasks/RT-20260721-009/artifacts/validate_v21_current_burden_status.py --write --json"
+  - ".venv/bin/python research_control/tasks/RT-20260721-009/artifacts/validate_v21_current_burden_status.py --check --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --check"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --check"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --write"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --check"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --json output/research_dependency_graph.json --markdown wiki/indexes/research_dependency_graph.md --dot output/research_dependency_graph.dot"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --check"
+  - ".venv/bin/python scripts/research_control/generate_claim_graph_v1.py --json output/claim_graph_v1.json"
+  - ".venv/bin/python scripts/research_control/generate_claim_graph_v1.py --check"
+  - ".venv/bin/python scripts/research_control/validate_claim_graph_v1.py --json"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --json-summary"
+  - ".venv/bin/python scripts/research_control/run_full_research_control_validation.py --json --tail-chars 2500"
+  - "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m unittest -v tests.test_research_control"
+  - ".venv/bin/python -m unittest discover -s tests"
+  - "git diff --check"
+  - "git diff --cached --check"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260726-005-001"
+
+required_validators:
+  - "task_local_one_ray_conformal_insufficiency"
+  - "scratch_tex_build"
+  - "v21_burden_status"
+  - "project_memory_bootstrap"
+  - "current_frontier_render_and_check"
+  - "task_index_render_and_check"
+  - "compact_frontier_render_and_check"
+  - "dependency_graph_render_and_check"
+  - "claim_graph_generate_and_validate"
+  - "project_change_classifier"
+  - "project_improvement_signals"
+  - "documentation_impact"
+  - "claim_language"
+  - "research_control_diff"
+  - "full_research_control_validation"
+  - "focused_research_control_tests"
+  - "repository_test_shard"
+  - "git_diff_check"
+  - "checkpoint_transaction"
+
+expected_outputs:
+  - "research_control/tasks/RT-20260726-005/artifacts/child_phys_math_p6_t03_one_ray_conformal.yaml"
+  - "research_control/tasks/RT-20260726-005/artifacts/child_phys_phil_p6_t03_one_ray_conformal.yaml"
+  - "research_control/tasks/RT-20260726-005/artifacts/parent_conflict_review_p6_t03_one_ray_conformal.yaml"
+  - "research_control/tasks/RT-20260726-005/artifacts/parent_fusion_notes_p6_t03_one_ray_conformal.md"
+  - "research_control/tasks/RT-20260726-005/artifacts/one_ray_conformal_insufficiency_v1.tex"
+  - "research_control/tasks/RT-20260726-005/artifacts/one_ray_conformal_insufficiency_spec_v1.yaml"
+  - "research_control/tasks/RT-20260726-005/artifacts/one_ray_conformal_insufficiency_validation_receipt_v1.json"
+  - "research_control/tasks/RT-20260726-005/artifacts/one_ray_conformal_insufficiency_receipt.md"
+  - "research_control/tasks/RT-20260726-005/artifacts/validate_one_ray_conformal_insufficiency.py"
+  - "research_control/tasks/RT-20260726-005/00_TASK.yaml"
+  - "research_control/tasks/RT-20260726-005/DDR-20260726-005.md"
+  - "research_control/tasks/RT-20260726-005/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260726-005/roles/ontology-formalizer@0.2.0--RT-20260726-005.yaml"
+  - "research_control/tasks/RT-20260726-005/jobs/completions/AJC-AJ-RT-20260726-005-001.yaml"
+  - "research_control/handoffs/handoff-0879.yaml"
+  - "research_control/handoffs/handoff-0879.md"
+
+stop_conditions:
+  - "the proof imports target geometry or assumes the desired conformal class"
+  - "the result cannot distinguish candidate-scoped nonselection from global impossibility"
+  - "overall scale is silently selected"
+  - "a required write path is outside the AgentJob allowlist"
+  - "validation or the single governed checkpoint fails"
+  - "more than one AgentJob or checkpoint would be required"
+
+claim_boundary: "Prove or obstruct Lorentzian conformal reconstruction from only the P6-T02 proposal-only one-ray characteristic datum, record assumptions explicit nonconformal and degeneracy controls and source-side reopening criteria, keep scale and every physical interpretation open, and create no ontology source-law g_eff downstream GR promotion proof publication push global no-go or completed-derivation authority."
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1031
+    relationship_row_count: 5178
+    semantic_row_count: 1031
+    vault_row_count: 1031
+    local_cache_only_warning_count: 0
+    refresh_performed: true
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-V21-P6-T02-SOURCE-LOCAL-TRANSPORT-CHARACTERISTIC-V1 --json"
+      query_type: "lookup"
+      query_text: "TEX-V21-P6-T02-SOURCE-LOCAL-TRANSPORT-CHARACTERISTIC-V1"
+      returned_object_ids:
+        - "TEX-V21-P6-T02-SOURCE-LOCAL-TRANSPORT-CHARACTERISTIC-V1"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"NONBOTTOM METRICDATA GEFF candidate obstruction\" --limit 10 --json"
+      query_type: "search"
+      query_text: "NONBOTTOM METRICDATA GEFF candidate obstruction"
+      returned_object_ids:
+        - "TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-METRICFORMASSIGN-GEFF-CANDIDATE-OR-OBSTRUCTION"
+        - "TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-GEFF-CANDIDATE-SCOPED-SOURCE-EXTENSION-ADOPTION-GATE-CHAIR-REVIEW"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"conformal geometry insufficiency characteristic ray\" --limit 10 --json"
+      query_type: "search"
+      query_text: "conformal geometry insufficiency characteristic ray"
+      returned_object_ids:
+        - "TEX-V21-P6-T02-SOURCE-LOCAL-TRANSPORT-CHARACTERISTIC-V1"
+  canonical_inspections:
+    - object_id: "TEX-V21-P6-T02-SOURCE-LOCAL-TRANSPORT-CHARACTERISTIC-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260726-003/artifacts/source_local_transport_candidate_v1.tex"
+      source_hash: "7b446c8660410e655166c0b3124fc37aad9edb8e49b7df2afdc9911c6f560958"
+    - object_id: "TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-METRICFORMASSIGN-GEFF-CANDIDATE-OR-OBSTRUCTION"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260614-216/artifacts/245_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_METRICFORMASSIGN_GEFF_CANDIDATE_OR_OBSTRUCTION.tex"
+      source_hash: "dd30573519ed1df66b3800d29ee0adc9fcc94d9c8d3b9b5a7fcffde503d5f0ef"
+    - object_id: "TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-GEFF-CANDIDATE-SCOPED-SOURCE-EXTENSION-ADOPTION-GATE-CHAIR-REVIEW"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260614-222/artifacts/251_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_GEFF_CANDIDATE_SCOPED_SOURCE_EXTENSION_ADOPTION_GATE_CHAIR_REVIEW.tex"
+      source_hash: "3ce8cbc6cd79c6852d78f81045633beea44c4dfc6e2912c604b08e3c8bdb0257"
+    - object_id: "TEX-ONTOLOGY-AETHER-FLOW-GEOMETRY"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "ontology/tex/aether_flow_geometry.tex"
+      source_hash: "f60a81b63f814b03cca7190b3ac6285842a55317f4aed058cc6e75154cc0b4d7"
+  authority_note: "Generated Obsidian wiki semantic relationship SQLite and .local surfaces are retrieval-only navigation layers and not authority; tracked canonical sources registries and research-control state govern this packet."

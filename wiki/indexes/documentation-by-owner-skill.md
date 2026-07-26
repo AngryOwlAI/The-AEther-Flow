@@ -764,6 +764,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-V21-P6-T01-PARENT-FUSION-CAUSAL-CHARACTERISTIC-TARGET-V1` `wiki/markdown/md-v21-p6-t01-parent-fusion-causal-characteristic-target-v1.md`
 - `WIKI-MD-V21-P6-T02-PARENT-FUSION-SOURCE-LOCAL-TRANSPORT-V1` `wiki/markdown/md-v21-p6-t02-parent-fusion-source-local-transport-v1.md`
 - `WIKI-MD-V21-P6-T02-SOURCE-LOCAL-TRANSPORT-CHARACTERISTIC-RECEIPT-V1` `wiki/markdown/md-v21-p6-t02-source-local-transport-characteristic-receipt-v1.md`
+- `WIKI-MD-V21-P6-T03-ONE-RAY-CONFORMAL-INSUFFICIENCY-RECEIPT-V1` `wiki/markdown/md-v21-p6-t03-one-ray-conformal-insufficiency-receipt-v1.md`
 - `WIKI-MD-VALIDATOR-OPERATOR-WORKFLOW-PUBLICATION-BRIEF` `wiki/markdown/md-validator-operator-workflow-publication-brief.md`
 
 ## obsidian-wiki
@@ -1228,6 +1229,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-V21-P6-T01-PARENT-FUSION-CAUSAL-CHARACTERISTIC-TARGET-V1` `research_control/tasks/RT-20260726-002/artifacts/parent_fusion_notes_p6_t01_causal_characteristic_target.md`
 - `MD-V21-P6-T02-PARENT-FUSION-SOURCE-LOCAL-TRANSPORT-V1` `research_control/tasks/RT-20260726-003/artifacts/parent_fusion_notes_p6_t02_source_local_transport.md`
 - `MD-V21-P6-T02-SOURCE-LOCAL-TRANSPORT-CHARACTERISTIC-RECEIPT-V1` `research_control/tasks/RT-20260726-003/artifacts/source_local_transport_candidate_receipt.md`
+- `MD-V21-P6-T03-ONE-RAY-CONFORMAL-INSUFFICIENCY-RECEIPT-V1` `research_control/tasks/RT-20260726-005/artifacts/one_ray_conformal_insufficiency_receipt.md`
 
 ## tex-wiki
 

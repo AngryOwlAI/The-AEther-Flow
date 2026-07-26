@@ -418,6 +418,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V21-P5-T08-SOURCE-DYNAMICS-MILESTONE-SYNTHESIS-V1` `research_control/tasks/RT-20260726-001/artifacts/source_dynamics_milestone_synthesis_v1.tex`
 - `TEX-V21-P6-T01-CAUSAL-CHARACTERISTIC-TARGET-V1` `research_control/tasks/RT-20260726-002/artifacts/causal_characteristic_target_v1.tex`
 - `TEX-V21-P6-T02-SOURCE-LOCAL-TRANSPORT-CHARACTERISTIC-V1` `research_control/tasks/RT-20260726-003/artifacts/source_local_transport_candidate_v1.tex`
+- `TEX-V21-P6-T03-ONE-RAY-CONFORMAL-INSUFFICIENCY-V1` `research_control/tasks/RT-20260726-005/artifacts/one_ray_conformal_insufficiency_v1.tex`
 
 ## superseded
 

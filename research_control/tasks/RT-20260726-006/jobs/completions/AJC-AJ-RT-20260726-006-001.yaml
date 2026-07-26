@@ -1,0 +1,317 @@
+validation_status: "PASS"
+final_repository_validation_status: "PASS_PRECHECKPOINT_RECOVERY_READY"
+job_id: "AJ-RT-20260726-006-001"
+completion_id: "AJC-AJ-RT-20260726-006-001"
+task_id: "RT-20260726-006"
+task_type: "project_system_p6_t03_support_traceability_metric_ledger_hash_checkpoint_recovery"
+decision_id: "DDR-20260726-006"
+role_id: "validator-engineer"
+source_role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260726-006"
+status: "completed"
+created_at: "2026-07-26T16:04:01Z"
+started_at: "2026-07-26T16:04:01Z"
+completed_at: "2026-07-26T16:04:01Z"
+objective: "Under the sealed generation-125 dirty-state manifest, replace exactly one stale METRIC_USE_LEDGER source hash in the v18 support-formalization traceability registry, prove all inherited and protected P6-T03 bytes remained exact at the repair boundary, synchronize normal control derivatives, and invoke one fresh governed cumulative checkpoint before P6-T04."
+completion_summary: "Generation 125 synchronizes exactly one stale traceability source hash to the already-authorized metric-use ledger hash. The sealed receipt records zero drift across all 64 inherited dirty-manifest paths, validates the exact one-token transition, and preserves the P6-T03 scientific packet. P6-T04 remains unexecuted pending one governed cumulative checkpoint."
+objective_result: "p6_t03_support_traceability_hash_recovery_pass_ready_for_checkpoint"
+
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P6"
+  plan_task_id: "P6-T03"
+  recovery_for_plan_task_id: "P6-T03"
+  implementation_status: "traceability_hash_recovery_implemented_checkpoint_ready"
+  protected_p6_t03_status: "complete_preserved"
+  completed_v21_tasks_added: []
+  next_dependency_ready_work_item: "P6-T04_after_checkpoint"
+  next_work_item_executed: false
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 125
+  passes_consumed: 115
+  route_work_item_id: "P6-T03"
+  route_worker_skill: "improve-project-system"
+  route_sha256: "e0eb5c75a60db368e3d4fbd96ad76c29976246b852b6d39cb671ac4e691aae2c"
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:125"
+  handoff_token: "a5da441ac2b368e6fdd74d5813a84bdb19035c84d7bb1b24"
+  relay_claim_token: "f6bf72d70ad73a3546bc002cfd84e6f6a10db15681392a67"
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+
+transaction_status: "ready_for_governed_checkpoint"
+result_disposition: "repair_implemented_and_validated"
+work_item_status: "completed"
+plan_task_id: "P6-T03"
+recovery_for_plan_task_id: "P6-T03"
+next_plan_task_id: "P6-T04"
+checkpoint_commit: "none_checkpoint_pending"
+checkpoint_invocation_count: 0
+checkpoint_staged: false
+legacy_validation_used: false
+project_system_change_only: true
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS_PRECHECKPOINT_READY"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  observed_durable_outputs:
+    physics: []
+    project_system:
+      - "one exact v18 support-traceability source-hash synchronization"
+      - "sealed 64-path repair-preservation receipt"
+      - "one governed cumulative checkpoint"
+  accepted_criteria:
+    physics: []
+    project_system:
+      - "the target differs from its sealed hash by exactly one authorized ledger-hash substitution"
+      - "all 64 inherited dirty-manifest paths match at the repair boundary"
+      - "protected P6-T03 scientific and authority hashes remain exact"
+      - "the existing v18 validator and focused tests pass without behavior changes"
+      - "all required working-tree gates pass"
+      - "one governed cumulative checkpoint commits"
+      - "P6-T04 remains unexecuted until checkpoint success"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+physics_payload_admission_result:
+  status: "admitted"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+
+ordinary_route_guard_admission_result:
+  status: "PASS"
+  source_handoff_id: "handoff-0878"
+  selected_plan_task_id: "P6-T03"
+  guard_outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  system_success_counts_as_physics: false
+  system_success_counts_as_distance_to_gr: false
+  scientific_status_changed: false
+  physics_promotion_authorized: false
+
+recovery_result:
+  status: "PASS"
+  strategy_id: "repair_p6_t03_support_traceability_metric_ledger_hash_and_checkpoint_v1"
+  source_task_id: "RT-20260726-005"
+  source_job_id: "AJ-RT-20260726-005-001"
+  source_handoff_id: "handoff-0879"
+  source_head: "2c5d8ec75f4c921065945309a77270ea4c4affde"
+  dirty_state_manifest_sha256: "b5d69eafafae08c13ee2d095cd8278ddf619ec42ce6b70a7969ec48a50ab6c0a"
+  failed_gate_evidence_sha256: "92fed2839b743cc4dc3c83fa697089eb123f93bcbed44e0b701f3b351ba55f15"
+  recovery_validator_path: "research_control/tasks/RT-20260726-006/artifacts/validate_p6_t03_traceability_hash_recovery.py"
+  recovery_validator_sha256: "196de8be9516f982cdf4219020c8eb325e10e2a8840a6de37462b72eef0a4a77"
+  recovery_receipt_path: "research_control/tasks/RT-20260726-006/artifacts/p6_t03_traceability_hash_recovery_receipt.json"
+  recovery_receipt_sha256: "cf7eceafd93e36c8b0a91ef2ebd87710850125819283e4c6445412665b15033f"
+  manifest_path_count: 64
+  manifest_hash_mismatch_count: 0
+  target_path_count: 1
+  target_path: "research_control/design/support_formalization_traceability_registry_v18.yaml"
+  target_before_sha256: "19c88963181ddbbf62c28a676d990a9583a17b6e47ac8fe25f1a7d5cce5823d3"
+  target_after_sha256: "768c0af4236c8793d233aefea6e5a253c1c5ba8f3eecc75f993a67f8392dd7dc"
+  stale_ledger_sha256: "a33349c7a153c4fbadb70c7c38b17cf0eebb7672b8e1f692702fc91edf17efcf"
+  authorized_ledger_sha256: "b63efbe32b6681bbe093c41ec92a2bfe0989fbd2a94a605387bdcd5a9e440720"
+  exact_hash_substitution_count: 1
+  support_traceability_entry_count: 5
+  focused_test_count: 6
+  p6_t03_science_payload_modified: false
+  p6_t03_reexecuted: false
+  p6_t04_executed: false
+
+artifacts:
+  - path: "research_control/tasks/RT-20260726-006/artifacts/validate_p6_t03_traceability_hash_recovery.py"
+    sha256: "196de8be9516f982cdf4219020c8eb325e10e2a8840a6de37462b72eef0a4a77"
+  - path: "research_control/tasks/RT-20260726-006/artifacts/p6_t03_traceability_hash_recovery_receipt.json"
+    sha256: "cf7eceafd93e36c8b0a91ef2ebd87710850125819283e4c6445412665b15033f"
+  - path: "research_control/design/support_formalization_traceability_registry_v18.yaml"
+    sha256: "768c0af4236c8793d233aefea6e5a253c1c5ba8f3eecc75f993a67f8392dd7dc"
+
+output_paths:
+  - "research_control/design/support_formalization_traceability_registry_v18.yaml"
+  - "research_control/tasks/RT-20260726-006/**"
+  - "research_control/handoffs/handoff-0880.yaml"
+  - "research_control/handoffs/handoff-0880.md"
+  - "research_control/program_state.yaml"
+
+command_results:
+  - command: ".venv/bin/python research_control/tasks/RT-20260726-006/artifacts/validate_p6_t03_traceability_hash_recovery.py --write-report --json"
+    status: "PASS"
+    summary: "one exact source-hash substitution; all 64 inherited manifest paths and protected P6-T03 hashes match"
+  - command: ".venv/bin/python scripts/research_control/support_formalization/validate_traceability_registry_v18.py --json"
+    status: "PASS"
+    summary: "five support-only entries pass with no proof or promotion authority"
+  - command: ".venv/bin/python -m unittest -v tests.test_support_formalization_traceability_registry_v18"
+    status: "PASS"
+    summary: "six focused tests pass"
+  - command: "git diff --check"
+    status: "PASS"
+    summary: "working-tree whitespace validation passes after the exact one-field repair"
+
+validation_summary:
+  status: "PASS_PRECHECKPOINT_RECOVERY_READY"
+  task_local_error_count: 0
+  manifest_path_count: 64
+  manifest_hash_mismatch_count: 0
+  target_path_count: 1
+  exact_hash_substitution_count: 1
+  support_traceability_entry_count: 5
+  focused_test_count: 6
+  checkpoint_invocation_count: 0
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 125 validated, atomically claimed, and consumed the exact immutable recovery route once."
+      - "The exact 64-path manifest, repository identity, lease, route, effort contract, and predecessor state matched before writes."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The sealed receipt proves one exact traceability-hash substitution, zero inherited drift, protected P6-T03 hashes, and a passing v18 validator."
+  post_write:
+    status: "PENDING"
+    evidence:
+      - "Integrated control, documentation, signal, memory, and test validation remains to be consumed before checkpoint."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "The one governed cumulative checkpoint is pending; P6-T04 remains unexecuted."
+  renderer:
+    status: "PENDING"
+    evidence:
+      - "Tracked frontier, task index, registry, graph, and wiki derivatives remain to be synchronized."
+  memory_bootstrap:
+    status: "PENDING"
+    evidence:
+      - "Tracked memory synchronization remains after final control records are present."
+  claim_language_linter:
+    status: "PENDING"
+    evidence:
+      - "Integrated research-control validation remains to confirm no hard claim-language errors."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not authorized; ordinary project-system traceability-hash recovery validation only"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  publication_authorized: false
+  proof_authority: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  canonical_ontology_edit_authorized: false
+  ontology_selection_authorized: false
+  physical_interpretation_establishment_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+distance_to_gr_delta:
+  changed: false
+  effect: "none_project_system_recovery"
+  burden_id: "g_eff"
+  milestone: "effective_metric_g_eff"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "The inherited P6-T03 precise one-ray conformal nonselection obstruction and Distance-to-GR delta are preserved; this recovery contributes no physics movement."
+
+physics_progress_status:
+  status: "none_project_system_only"
+  new_mathematical_payload: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+
+selected_next_route:
+  route_id: "v21_p6_t04_derive_metric_scale_volume_clock_and_rod_calibration"
+  route_label: "candidate-construction-packet"
+  role_family: "candidate-constructor@0.2.0"
+  worker_skill: "continue-research"
+  task_type: "v21_p6_t04_derive_metric_scale_volume_clock_and_rod_calibration"
+  plan_task_id: "P6-T04"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Supply the missing scale and operational calibration burden."
+  strategy_id: "test_source_defined_scale_and_calibration_under_conformal_nonselection_v1"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  blocked_by: "governed cumulative P6-T03 checkpoint"
+  physics_promotion_authorized: false
+  executed: false
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required_no_nonblank_signals"
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1033
+    relationship_row_count: 5189
+    semantic_row_count: 1033
+    vault_row_count: 1033
+    local_cache_only_warning_count: 7
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/design/support_traceability_v1_v18_parity_assessment.md --json"
+      query_type: "lookup"
+      query_text: "research_control/design/support_traceability_v1_v18_parity_assessment.md"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-DESIGN-SUPPORT-TRACEABILITY-V1-V18-PARITY-ASSESSMENT"
+  canonical_inspections:
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-SUPPORT-TRACEABILITY-V1-V18-PARITY-ASSESSMENT"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/support_traceability_v1_v18_parity_assessment.md"
+      source_hash: "630a9b7ae901cae36373456db09dcfff15c7c2f1519400f0f7edd82cd3ef94be"
+  authority_note: "Generated Obsidian, wiki, semantic, relationship, SQLite, and .local surfaces are retrieval-only navigation layers and not authority; tracked canonical sources, registries, and research-control state govern this recovery."

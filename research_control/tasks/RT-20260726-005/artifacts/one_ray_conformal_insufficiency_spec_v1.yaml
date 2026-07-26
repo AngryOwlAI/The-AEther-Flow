@@ -1,0 +1,172 @@
+schema_id: "v21_p6_t03_one_ray_conformal_insufficiency_v1"
+result_id: "V21-P6-T03-ONE-RAY-CONFORMAL-INSUFFICIENCY-V1"
+task_id: "RT-20260726-005"
+plan_task_id: "P6-T03"
+status_label: "draft/control"
+result_status: "precise candidate-scoped obstruction"
+material_class: "source-extension analysis"
+adoption_status: "blocked_adoption_open_continuation"
+target_derivation_milestone: "effective_metric_g_eff"
+milestone_burden: "Advance from propagation structure to conformal geometry without yet choosing scale."
+
+typed_input:
+  source_arena: "smooth four-dimensional source manifold S carried as explicit primitive debt"
+  proposal_only_vector_field: "smooth nowhere-zero positively oriented V"
+  principal_polynomial: "P_x(xi)=xi(V_x)"
+  characteristic_covectors: "Ann(V_x) minus zero"
+  hyperbolicity_component: "Gamma_x={xi:xi(V_x)>0}"
+  dual_propagation_ray: "Gamma_x^circ={r V_x:r>=0}"
+  source_order: "forward V-flow reachability preorder"
+  input_bundle: "D_1(S,V)=([V]_+,Ann(V),preceq_V)"
+
+typed_output_target:
+  desired_map: "C:D_1(S,V)->[g]"
+  output_type: "nondegenerate Lorentzian conformal class"
+  scale_selected: false
+  target_metric_imported: false
+  gr_null_cone_imported: false
+
+assumption_table:
+  - id: "A1"
+    statement: "S is a smooth four-dimensional source manifold."
+    provenance: "current project source-arena primitive debt"
+    status: "inherited_not_physical_spacetime_identity"
+  - id: "A2"
+    statement: "V is smooth nowhere zero and positively oriented."
+    provenance: "P6-T02 proposal-only source-extension candidate"
+    status: "not_derived_not_adopted"
+  - id: "A3"
+    statement: "Only [V]_+, Ann(V), and the forward V-flow preorder are reconstruction inputs."
+    provenance: "P6-T02 characteristic calculation"
+    status: "exact_candidate_scope"
+  - id: "A4"
+    statement: "V may additionally be stipulated future timelike in the strongest countermodel."
+    provenance: "task-local favorable test assumption"
+    status: "not_physical_conclusion"
+  - id: "A5"
+    statement: "Overall Lorentzian scale is not selected."
+    provenance: "P6-T03 plan boundary"
+    status: "deferred_to_later_burden"
+  - id: "A6"
+    statement: "Historical scoped source-extension g_eff is not a premise."
+    provenance: "protected prior Gate Chair boundary"
+    status: "scope_preserved"
+  - id: "A7"
+    statement: "No target atlas metric cone clock detector matter or benchmark data are premises."
+    provenance: "no-target-import boundary"
+    status: "enforced"
+
+theorems:
+  - theorem_id: "P6T03-THM-CHARACTERISTIC-HYPERPLANE-MISMATCH"
+    claim: "Ann(V_x), a three-dimensional linear hyperplane, cannot be the null cone of a nondegenerate Lorentzian inverse form."
+    hypotheses:
+      - "dim T_x S=4"
+      - "V_x is nonzero"
+      - "the comparison form is real nondegenerate Lorentzian"
+    proof_basis:
+      - "polarization would make Ann(V_x) totally isotropic"
+      - "Lorentzian Witt index is one"
+    burden_effect: "obstructs direct null-cone identification"
+  - theorem_id: "P6T03-THM-ONE-RAY-CONFORMAL-NONSELECTION"
+    claim: "D_1(S,V) admits infinitely many pairwise nonconformal Lorentzian realizations even when V is stipulated future timelike."
+    hypotheses:
+      - "flow-box coordinates with V=partial_s"
+      - "H is any smooth positive-definite symmetric 3x3 field"
+    witness_family: "g_H=-ds^2+H_ij dy^i dy^j"
+    separating_pair:
+      H_0: "diag(1,1,1)"
+      H_1: "diag(2,1,1)"
+    burden_effect: "proves candidate-scoped nonselection"
+
+examples:
+  uniqueness_failure:
+    shared_input: "[V]_+, Ann(V), and preceq_V"
+    first_metric: "diag(-1,1,1,1)"
+    second_metric: "diag(-1,2,1,1)"
+    conformally_related: false
+    differing_null_vector: "partial_s+partial_y1 is null only for the first metric"
+  null_ray_failure:
+    family: "2 ds du + a^2(dy1)^2+(dy2)^2 for a>0"
+    shared_object: "null ray [partial_s]"
+    conformally_unique: false
+  zero_field_degeneracy:
+    condition: "V_x=0"
+    result: "P_x is identically zero and no hyperbolicity direction or ray survives"
+  disconnected_control:
+    condition: "multiple connected components"
+    result: "independent transverse conformal shapes remain compatible with componentwise one-ray data"
+  multiple_sector_control:
+    condition: "finitely many noncollinear sector rays"
+    result: "no full smooth quadratic cone signature universality or uniqueness law follows from rays alone"
+
+precise_obstruction:
+  obstruction_id: "OBST-P6T03-ONE-RAY-CONFORMAL-NONSELECTION-001"
+  scope: "source_extension_candidate"
+  failed_object: "a well-defined conformal reconstruction map from only D_1(S,V)"
+  exact_failure: "identical P6-T02 one-ray input data admit nonconformal Lorentzian outputs"
+  current_ontology_implication: "does_not_derive"
+  source_extension_implication: "new_primitive_required"
+  consequence: "new_primitive_required"
+  global_no_go_claimed: false
+  forbidden_overread: "The obstruction does not rule out a materially richer source-side cone quadratic-form transverse-shape or multi-sector law."
+
+reopening:
+  criteria:
+    - "source-derived smooth nondegenerate Lorentzian cone or quadratic-form law"
+    - "source-derived transverse positive-definite conformal shape with compatibility covariance and universality selectors"
+    - "distinct theorem showing richer multi-sector characteristic data uniquely determine a conformal class"
+  protected_authority_required_before_adoption: true
+
+distance_to_gr:
+  changed: true
+  effect: "precise_obstruction_recorded"
+  burden_id: "g_eff"
+  narrowed_burden: "one ray and its annihilator do not select conformal shape"
+  missing_primitive: "source-derived full cone or transverse conformal-shape law plus selector compatibility and universality"
+  scale_remains_open: true
+  downstream_still_blocked:
+    - "physical causal cone"
+    - "unscoped effective metric g_eff"
+    - "metric scale and calibration"
+    - "matter coupling"
+    - "Einstein equations"
+    - "benchmark promotion"
+
+fixed_sources:
+  - object_id: "TEX-V21-P6-T02-SOURCE-LOCAL-TRANSPORT-CHARACTERISTIC-V1"
+    path: "research_control/tasks/RT-20260726-003/artifacts/source_local_transport_candidate_v1.tex"
+    sha256: "7b446c8660410e655166c0b3124fc37aad9edb8e49b7df2afdc9911c6f560958"
+  - object_id: "TEX-ONTOLOGY-AETHER-FLOW-GEOMETRY"
+    path: "ontology/tex/aether_flow_geometry.tex"
+    sha256: "f60a81b63f814b03cca7190b3ac6285842a55317f4aed058cc6e75154cc0b4d7"
+  - object_id: "TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-METRICFORMASSIGN-GEFF-CANDIDATE-OR-OBSTRUCTION"
+    path: "research_control/tasks/RT-20260614-216/artifacts/245_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_METRICFORMASSIGN_GEFF_CANDIDATE_OR_OBSTRUCTION.tex"
+    sha256: "dd30573519ed1df66b3800d29ee0adc9fcc94d9c8d3b9b5a7fcffde503d5f0ef"
+  - object_id: "TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-GEFF-CANDIDATE-SCOPED-SOURCE-EXTENSION-ADOPTION-GATE-CHAIR-REVIEW"
+    path: "research_control/tasks/RT-20260614-222/artifacts/251_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_GEFF_CANDIDATE_SCOPED_SOURCE_EXTENSION_ADOPTION_GATE_CHAIR_REVIEW.tex"
+    sha256: "3ce8cbc6cd79c6852d78f81045633beea44c4dfc6e2912c604b08e3c8bdb0257"
+  - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+    path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+    sha256: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  - object_id: "MD-RESEARCH-CONTROL-DESIGN-GR-DERIVATION-BURDEN-MAP"
+    path: "research_control/design/gr_derivation_burden_map.md"
+    sha256: "8e9d44e3a18ecc8a2430a9c42497da3eb9911c2cf6cd714c1525c5d91551835e"
+
+authority:
+  canonical_ontology_modified: false
+  source_law_adopted: false
+  source_law_rejected: false
+  physical_time_established: false
+  physical_causality_established: false
+  conformal_class_reconstructed: false
+  metric_scale_reconstructed: false
+  historical_scoped_g_eff_expanded: false
+  matter_coupling_derived: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false

@@ -1,0 +1,246 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{array,longtable,booktabs}
+\usepackage[hidelinks]{hyperref}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}[theorem]{Example}
+\newcommand{\Ann}{\operatorname{Ann}}
+\newcommand{\Char}{\operatorname{Char}}
+
+\title{P6-T03: One-Ray Characteristic Data Do Not Select a Lorentzian Conformal Class}
+\author{The AEther-Flow Research Project}
+\date{2026-07-26}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+\fbox{\parbox{0.92\textwidth}{
+\textbf{Status and authority.}
+This is a task-local \emph{draft/control} result about the proposal-only
+P6-T02 source-extension candidate.  It is a precise candidate-scoped
+obstruction, not a canonical-ontology edit, source-law adoption, physical
+causality result, effective-metric construction, Gate Chair verdict, global
+no-go theorem, publication, or completed derivation.
+}}
+\end{center}
+
+\section{Question and fixed source input}
+
+Let \(S\) be the smooth four-dimensional source arena carried as explicit
+primitive debt in the current project, and let \(V\) be the nowhere-zero,
+positively oriented source vector field introduced only by the P6-T02
+proposal.  The linearized principal polynomial of that proposal is
+\[
+   P_x(\xi)=\xi(V_x).
+\]
+Consequently,
+\[
+   \Char_x^*=\Ann(V_x)\setminus\{0\},\qquad
+   \Gamma_x=\{\xi\in T_x^*S:\xi(V_x)>0\},\qquad
+   \Gamma_x^\circ=\{rV_x:r\geq 0\}.
+\]
+The source-order datum is the forward \(V\)-flow reachability preorder.
+Denote this collection by
+\[
+   \mathcal D_1(S,V)
+   =\bigl([V]_+,\Ann(V),\preceq_V\bigr).
+\]
+Here \([V]_+\) is an oriented ray, not a Lorentzian null cone.  A putative
+conformal reconstructor would have to define a source-natural assignment
+\[
+   \mathfrak C:\mathcal D_1(S,V)\longmapsto[g],
+\]
+where \([g]\) is a nondegenerate Lorentzian conformal class, without importing
+a target atlas, target metric, general-relativistic null cone, physical clock,
+detector response, or benchmark behavior.
+
+\section{Assumption table}
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.12\textwidth}
+                  >{\raggedright\arraybackslash}p{0.34\textwidth}
+                  >{\raggedright\arraybackslash}p{0.43\textwidth}}
+\toprule
+ID & Assumption & Status and consequence\\
+\midrule
+\endhead
+A1 & \(S\) is a smooth four-dimensional source manifold. &
+Inherited as explicit primitive debt.  It is not identified with physical
+spacetime.\\
+A2 & \(V\) is smooth, nowhere zero, and has a chosen positive orientation. &
+Proposal-only P6-T02 source-extension data.  Current ontology does not derive
+or select it.\\
+A3 & Only \([V]_+\), \(\Ann(V)\), and the \(V\)-flow preorder are available. &
+This is the exact one-ray characteristic information used by the
+reconstruction test.\\
+A4 & For the strongest countermodel, \(V\) is additionally stipulated to be
+future timelike for every comparison metric. &
+This favorable causal stipulation still does not select a transverse
+conformal shape.  It is a test assumption, not a physical conclusion.\\
+A5 & No Lorentzian scale is fixed. &
+P6-T03 addresses conformal selection only; clock, rod, volume, and scale
+calibration remain open.\\
+A6 & The historical scoped source-extension \(g_{\rm eff}\) object is not
+used as a premise. &
+Its protected scope is preserved and is not expanded into an unscoped
+physical metric.\\
+A7 & No target-side geometric data are imported. &
+The result is source-side and candidate-scoped.\\
+\bottomrule
+\end{longtable}
+
+\section{Exact mismatch with a Lorentzian null cone}
+
+\begin{theorem}[Hyperplane/null-cone mismatch]
+\label{thm:hyperplane}
+At any \(x\in S\) with \(V_x\neq0\), the three-dimensional linear hyperplane
+\(\Ann(V_x)\subset T_x^*S\) cannot equal the null cone of any nondegenerate
+Lorentzian inverse bilinear form on \(T_x^*S\).
+\end{theorem}
+
+\begin{proof}
+Assume that a Lorentzian inverse form \(q\) vanishes on every covector in
+\(\Ann(V_x)\).  Because \(\Ann(V_x)\) is a linear subspace, for any
+\(\alpha,\beta\in\Ann(V_x)\) the polarization identity gives
+\[
+  2q(\alpha,\beta)
+  =q(\alpha+\beta,\alpha+\beta)-q(\alpha,\alpha)-q(\beta,\beta)=0.
+\]
+Thus \(\Ann(V_x)\) would be a three-dimensional totally isotropic subspace.
+A nondegenerate real bilinear form of Lorentzian signature has Witt index one,
+so every totally isotropic subspace has dimension at most one.  This is a
+contradiction.  Equivalently, a Lorentzian null cone is quadratic and
+nonlinear, whereas \(\Ann(V_x)\) is a linear hyperplane.
+\end{proof}
+
+\begin{corollary}
+The equation \(P_x(\xi)=\xi(V_x)\) does not itself provide the quadratic
+principal polynomial whose zero locus could determine a Lorentzian conformal
+class.  Treating \(\Ann(V_x)\) as such a null cone would import structure not
+contained in P6-T02.
+\end{corollary}
+
+\section{Infinite conformal nonselection family}
+
+\begin{theorem}[One-ray conformal nonselection]
+\label{thm:nonselection}
+Even after stipulating that the oriented ray \([V]_+\) is future timelike, the
+data \(\mathcal D_1(S,V)\) do not determine a Lorentzian conformal class.
+Locally, infinitely many pairwise nonconformal Lorentzian metrics realize the
+same \([V]_+\), \(\Ann(V)\), and forward \(V\)-flow preorder.
+\end{theorem}
+
+\begin{proof}
+By the flow-box theorem, choose local source coordinates
+\((s,y^1,y^2,y^3)\) with \(V=\partial_s\).  Let \(H=(H_{ij})\) be any smooth
+positive-definite symmetric \(3\times3\) matrix field and define
+\[
+   g_H=-ds^2+H_{ij}\,dy^i\,dy^j.
+\]
+Each \(g_H\) is Lorentzian, \(g_H(V,V)=-1\), and it has the same oriented
+timelike ray \([V]_+\).  The covector hyperplane \(\Ann(V)\) and the forward
+flow preorder depend only on \(V\), so they also agree for every \(H\).
+
+Take
+\[
+   H_0=\operatorname{diag}(1,1,1),\qquad
+   H_1=\operatorname{diag}(2,1,1).
+\]
+If \(g_{H_1}=\Omega^2g_{H_0}\), evaluation on \((V,V)\) gives
+\(\Omega^2=1\).  Evaluation on
+\((\partial_{y^1},\partial_{y^1})\) would then require \(2=1\), a
+contradiction.  Hence the two metrics are not conformally related.
+Continuous positive-definite families of \(H\) give infinitely many such
+classes.
+\end{proof}
+
+\begin{example}[Different null cones with identical P6-T02 data]
+For \(H_0\), the vector
+\(\partial_s+\partial_{y^1}\) is null.  For \(H_1\), its squared norm is
+\(-1+2=1\).  Thus the null cones differ even though the P6-T02 ray,
+annihilator, and preorder agree exactly.
+\end{example}
+
+\begin{example}[A chosen null ray is also insufficient]
+If one instead stipulates that \(V=\partial_s\) is null, the family
+\[
+   \widetilde g_a=2\,ds\,du+a^2(dy^1)^2+(dy^2)^2,\qquad a>0,
+\]
+is Lorentzian and shares the null ray \([V]\).  Distinct constant values of
+\(a\) are not conformally related once the \(ds\,du\) coefficient is fixed.
+One selected null generator therefore does not determine a full null cone.
+\end{example}
+
+\section{Uniqueness, degeneracy, and topology controls}
+
+\begin{enumerate}
+\item \textbf{Nonzero one-ray control.}  The family \(g_H\) proves
+nonuniqueness even under the favorable timelike stipulation and smooth
+positive-definite transverse geometry.
+\item \textbf{Zero-field degeneracy.}  If \(V_x=0\), then
+\(P_x\equiv0\), \(\Ann(V_x)=T_x^*S\), and neither a hyperbolicity direction nor
+a distinguished propagation ray survives.
+\item \textbf{Disconnected source control.}  On distinct connected
+components, independent choices of \(H\) preserve the same componentwise
+one-ray data; no cross-component conformal compatibility rule follows.
+\item \textbf{Multiple-sector control.}  Two noncollinear sector rays may
+improve directional information, but a finite set of rays still does not by
+itself supply a smooth nondegenerate quadratic cone, signature law,
+universality rule, or uniqueness theorem.
+\item \textbf{Scale control.}  Even a successfully selected conformal class
+would leave multiplication by a positive scalar field open.  No clock, rod,
+volume, or duration calibration is introduced here.
+\end{enumerate}
+
+\section{Precise obstruction and reopening criterion}
+
+\begin{proposition}[Candidate-scoped obstruction]
+There is no well-defined conformal reconstruction map
+\(\mathfrak C\) from only the P6-T02 datum \(\mathcal D_1(S,V)\): identical
+input data admit nonconformal outputs.  The obstruction scope is the
+proposal-only one-ray candidate and any reconstruction rule whose complete
+input is only \([V]_+\), \(\Ann(V)\), and \(\preceq_V\).
+\end{proposition}
+
+This is not a theorem that the project can never derive effective conformal
+geometry.  Same-milestone continuation remains open if it supplies materially
+new source-side input, for example:
+\begin{itemize}
+\item a source-derived smooth, nondegenerate Lorentzian cone or quadratic-form
+law;
+\item a source-derived transverse positive-definite conformal shape together
+with compatibility, covariance, and universality selectors; or
+\item a distinct theorem showing that richer multi-sector characteristic data
+uniquely determine a conformal class under explicit source-derived
+hypotheses.
+\end{itemize}
+Any such input remains \emph{draft/control}, \emph{proposal-only}, and
+\emph{source-extension data} until a separate protected human decision.
+Current adoption is therefore
+\texttt{blocked\_adoption\_open\_continuation}.
+
+\section{Distance-to-GR disposition}
+
+P6-T03 is mathematically decisive within its stated scope: it proves exact
+hyperplane mismatch and conformal nonselection for the P6-T02 input.  It
+narrows the \(g_{\rm eff}\) burden by identifying the missing conformal-shape
+primitive, but it does not construct or adopt \(g_{\rm eff}\), discharge
+metric scale, establish physical causality, couple matter, derive Einstein
+equations, or promote the exact-GR benchmark.
+
+\section{Project source note}
+
+The fixed source basis is the registered P6-T02 transport candidate, the
+canonical target-side geometry dictionary, the historical scoped
+source-extension \(g_{\rm eff}\) candidate and Gate Chair record, the v21
+implementation plan, and the Distance-to-GR burden map.  Those project
+sources are held at the exact hashes recorded in the accompanying
+machine-readable specification.  The linear-algebra and counterexample
+arguments above are proved directly and use no external theorem beyond
+standard finite-dimensional bilinear-form facts reproduced in the proof.
+
+\end{document}
