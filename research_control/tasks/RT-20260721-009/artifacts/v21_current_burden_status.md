@@ -13,9 +13,9 @@ state, or latest handoff, those sources govern and this file is stale.
 | Field | Value |
 | --- | --- |
 | Schema | `v21_current_burden_status_v1` |
-| Source commit at generation | `895c5f2fa7bf15445ca88ba11a67878f098c30c1` |
-| Status generation time | `2026-07-26T02:38:13Z` |
-| Tracked task count | 1109 |
+| Source commit at generation | `043a66fa5915300c61a2f5e45c23978e6164ff05` |
+| Status generation time | `2026-07-26T05:25:02Z` |
+| Tracked task count | 1110 |
 | Stable definition count | 10 |
 | Distance-to-GR burden count | 14 |
 | Historical authored-map commit | `2c5fb02fd8fff9b449ab10a328d7c881b13ef546` |
@@ -23,21 +23,21 @@ state, or latest handoff, those sources govern and this file is stale.
 
 ### Exact source hashes
 
-- `registries/DISTANCE_TO_GR_LEDGER.csv`: `95434020a709979a8bc36d369c6caf1b89ecc7d5fff36f20a610cda9e6b80743`
-- `registries/RESEARCH_TASK_REGISTRY.csv`: `67e85d6c9fb7aa3b6f0305249f3f2d463be85f6808e16ab1f42ba47dadb20798`
+- `registries/DISTANCE_TO_GR_LEDGER.csv`: `35d0c0928bdbc0ec17bc9552e153f8c964efa13ccea5c97d9ac523470f3b05d3`
+- `registries/RESEARCH_TASK_REGISTRY.csv`: `6ef4b783d0e8562533d0f3c02d2e6bb86cea168bc1979500e44c4dfa9b751000`
 - `research_control/design/gr_derivation_burden_map.md`: `8e9d44e3a18ecc8a2430a9c42497da3eb9911c2cf6cd714c1525c5d91551835e`
-- `research_control/handoffs/handoff-0873.yaml`: `a22f50ae80a2d3a5d923649fbdc27f02f38ec2b51ad17821c4893bd0f580bee9`
-- `research_control/program_state.yaml`: `b99650993c0109ad8adcfb58693565046d5f5963ede411d231b3252c1be91a94`
+- `research_control/handoffs/handoff-0874.yaml`: `1e4bf08da3dacf22c686042cdb06f130618b055a8065d16cbbfaf795d9a8ef66`
+- `research_control/program_state.yaml`: `599516131f99f2dafe2f410cbf1fced5a2c131e7f5c00c28c778699117dab871`
 - `research_control/tasks/RT-20260721-009/artifacts/v21_burden_definitions_v1.yaml`: `67b8053baa60db4b11ee20582633d6279523d40b2ee853a6c570e2fdc1d113f5`
 
 ## Live control state
 
 | Field | Value |
 | --- | --- |
-| Active task | `RT-20260725-013` |
-| Latest handoff | `handoff-0873` |
-| Current status | `p5_t06_source_amplitude_map_local_reconstruction_obstruction_pass_ready_for_checkpoint` |
-| Next recommended action | Run the one governed checkpoint for AJ-RT-20260725-013-001. Only after it commits may one fresh bounded P5-T07 Smuggling Auditor packet audit and refuter-stress the source dynamics and reconstruction package for target import, information creation, covariance and physical-scale overread, error-bound defects, and claim-boundary smuggling. |
+| Active task | `RT-20260725-014` |
+| Latest handoff | `handoff-0874` |
+| Current status | `p5_t07_precise_scoped_obstruction_and_local_geometry_route_freeze_ready_for_checkpoint` |
+| Next recommended action | Run the one governed checkpoint for AJ-RT-20260725-014-001. Only after it commits may one fresh bounded P5-T08 Ontology Formalizer packet integrate the surviving source-dynamics mathematics, scoped obstruction, local freeze, and milestone decision without repairing or reopening the frozen route. |
 
 ## Authored stable definitions with generated current values
 
@@ -52,14 +52,14 @@ state, or latest handoff, those sources govern and this file is stale.
 
 | Burden ID | Required object | Current status | Control status | Mathematical status | Physical status | Promotion status | Updated at |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| `source_ontology_primitives` | selected primitive source arena compact draft/control theory target proposal-only Phi_src semantics one cubic amplitude dynamics candidate its structural audit candidate-specific background-mode analysis and one audit-ready global-amplitude coarse-graining and source-state decoder | `accepted` | `accepted_as_source_extension_data` | `scoped_obstruction` | `no_physical_interpretation_authorized` | `scoped_source_object_only` | `2026-07-26T02:38:13Z` |
+| `source_ontology_primitives` | selected primitive source arena compact draft/control theory target proposal-only Phi_src semantics one cubic amplitude dynamics candidate its structural and background-mode analysis one global-amplitude coarse-graining and one exact P5-T07 provenance audit with odd-power counterfamily relabeling obstruction and local geometry-route freeze | `accepted` | `accepted_as_source_extension_data` | `scoped_obstruction` | `no_physical_interpretation_authorized` | `scoped_source_object_only` | `2026-07-26T05:25:02Z` |
 
 #### `source_ontology_primitives` generated detail
 
-- Current blocking burden: generic source locality composition constraints conservation gauge probability independent local modes viable reconstruction phase local source data gluing characteristic operator source-invariant causal structure and source-to-target reconstruction
-- Current next evidence or action: canonical source-only boundary with explicit primitive debt no target import candidate-specific obstruction scope explicit approximation and information loss and no physical overread
-- Current failure/freeze criterion: P4-T05 reopening gate or a qualifying scoped obstruction that blocks all same-milestone continuation
-- Current evidence: `research_control/tasks/RT-20260725-013/artifacts/source_amplitude_resolution_coarse_graining_v1.tex`
+- Current blocking burden: generic source locality composition constraints conservation gauge probability independent local modes viable reconstruction phase local source data gluing characteristic operator source-invariant causal structure source-derived law and normalization selection and source-to-target reconstruction
+- Current next evidence or action: canonical source-only boundary with explicit primitive debt no target import candidate-specific obstruction scope exact counterfamily reproducible stress explicit approximation and information loss local-freeze scope and no physical overread
+- Current failure/freeze criterion: P5-T08 integration is allowed but reopening the exact unchanged Q_amp geometry-support route requires a new source primitive theorem variation class or protected decision
+- Current evidence: `research_control/tasks/RT-20260725-014/artifacts/source_dynamics_package_audit_v1.tex`
 - Exact overread guard: `no_source_law_adoption;no_canonical_ontology_edit;no_metricdata_e_adoption;no_matter_coupling_adoption;no_benchmark_promotion;no_completed_derivation;no_global_theory_rejection;no_future_source_extension_impossibility`
 
 ### `source_equivalence_eqsrc`

@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-07-26T02:38:13Z`
-- Source fingerprint: `4459c8d5047852b63ec1a7e5cedefbc9be8c12f26d3994bb08dcaa4ab11f644a`
-- Nodes: `22196`
-- Edges: `73016`
+- Generated from tracked state as of: `2026-07-26T05:25:02Z`
+- Source fingerprint: `c0e5bbabbf9f0e30b1f792a6925f02068bd057cbbea54d268eed5cac7f61a8e4`
+- Nodes: `22237`
+- Edges: `73072`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 1109 |
+| `completion_yaml` | 1110 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 873 |
+| `handoff_yaml` | 874 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,32 +33,32 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 8 |
-| `agent_job` | `support_only` | 1109 |
+| `agent_job` | `support_only` | 1110 |
 | `artifact` | `canonical_source` | 86 |
-| `artifact` | `support_only` | 11260 |
-| `blocked_burden` | `blocked` | 4504 |
-| `claim_boundary` | `support_only` | 1066 |
-| `draft_control_candidate` | `draft_control` | 739 |
+| `artifact` | `support_only` | 11282 |
+| `blocked_burden` | `blocked` | 4512 |
+| `claim_boundary` | `support_only` | 1067 |
+| `draft_control_candidate` | `draft_control` | 742 |
 | `draft_control_candidate` | `proposal_only` | 117 |
-| `draft_control_candidate` | `science_draft` | 64 |
+| `draft_control_candidate` | `science_draft` | 65 |
 | `frozen_negative` | `frozen_negative` | 137 |
 | `gate_chair_verdict` | `human_gated` | 32 |
-| `handoff` | `support_only` | 873 |
+| `handoff` | `support_only` | 874 |
 | `human_gated_object` | `human_gated` | 528 |
 | `ledger_row` | `accepted_scoped` | 6 |
 | `ledger_row` | `blocked` | 4 |
 | `ledger_row` | `frozen_negative` | 1 |
 | `ledger_row` | `human_gated` | 1 |
 | `ledger_row` | `science_draft` | 3 |
-| `obstruction` | `blocked` | 82 |
+| `obstruction` | `blocked` | 83 |
 | `obstruction` | `rejected` | 4 |
-| `source_extension_evidence_precondition` | `source_extension_evidence` | 37 |
+| `source_extension_evidence_precondition` | `source_extension_evidence` | 38 |
 | `source_ontology_object` | `canonical_source` | 27 |
 | `source_ontology_object` | `rejected` | 50 |
-| `source_ontology_object` | `support_only` | 349 |
+| `source_ontology_object` | `support_only` | 350 |
 | `task` | `human_gated` | 29 |
 | `task` | `science_draft` | 32 |
-| `task` | `support_only` | 1048 |
+| `task` | `support_only` | 1049 |
 
 ## Frontier Table
 
@@ -163,9 +163,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 ## Route Continuity
 
-- Active task: `RT-20260725-013`
-- Latest handoff: `handoff-0873`
-- Handoff path: `research_control/handoffs/handoff-0873.yaml`
-- Next action: Run the one governed checkpoint for AJ-RT-20260725-013-001. Only after it commits may one fresh bounded P5-T07 Smuggling Auditor packet audit and refuter-stress the source dynamics and reconstruction package for target import, information creation, covariance and physical-scale overread, error-bound defects, and claim-boundary smuggling.
+- Active task: `RT-20260725-014`
+- Latest handoff: `handoff-0874`
+- Handoff path: `research_control/handoffs/handoff-0874.yaml`
+- Next action: Run the one governed checkpoint for AJ-RT-20260725-014-001. Only after it commits may one fresh bounded P5-T08 Ontology Formalizer packet integrate the surviving source-dynamics mathematics, scoped obstruction, local freeze, and milestone decision without repairing or reopening the frozen route.
 
 This graph is navigational support only; inspect the cited sources before using any claim.

@@ -1,0 +1,59 @@
+schema_id: "p5_t07_candidate_disposition_freeze_v1"
+status: "draft/control"
+task_id: "RT-20260725-014"
+job_id: "AJ-RT-20260725-014-001"
+candidate_family: "V21-P5-T03-CUBIC-AMPLITUDE-SOURCE-DYNAMICS-V1"
+candidate_status_before: "draft/control proposal-only source-extension data"
+candidate_status_after: "draft/control proposal-only source-extension data; exact unchanged geometry-support route locally frozen"
+audit_verdict: "source_pure_as_written_but_not_intrinsically_selected_or_geometry_robust"
+disposition: "preserve_candidate_specific_mathematics_and_freeze_exact_unchanged_geometry_support_route"
+freeze_criteria_status:
+  repeated_burden: true
+  freeze_evaluation_required: true
+  active_freeze_label: "P5-QAMP-INTRINSIC-LAW-SCALE-LOCAL-ROBUSTNESS"
+  prior_attempts_considered:
+    - "RT-20260725-003"
+    - "RT-20260725-007"
+    - "RT-20260725-008"
+    - "RT-20260725-010"
+    - "RT-20260725-012"
+    - "RT-20260725-013"
+    - "RT-20260725-014"
+  freeze_if:
+    - "The completed package still lacks a source-derived law selector, normalization, intrinsic resolution, or independent local variation data."
+    - "Another packet repeats the same one-mode qualitative claims without a materially new source object or theorem."
+  do_not_freeze_if:
+    - "A future separately authorized candidate supplies independently justified local source data and a source-side law or selector."
+    - "A materially distinct theorem changes the exact obstruction premises without reconstructing the frozen route."
+  freeze_decision: "locally_frozen"
+  decision_reason: "The P5-T07 odd-power counterfamily and relabeling identities show nonselection, while inherited patch, phase, and rank obstructions block local geometry support under the unchanged one-mode assumptions."
+  next_allowed_route: "none"
+  status_update_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  no_status_update_rationale: ""
+route_cycle_control:
+  cycle_family: "v21_p5_cubic_amplitude_to_geometry"
+  current_cycle_step: "audit_stress_complete_local_freeze"
+  prior_related_tasks:
+    - "P5-T01"
+    - "P5-T02"
+    - "P5-T03"
+    - "P5-T04"
+    - "P5-T05"
+    - "P5-T06"
+  cycle_risk: "high"
+  orbit_avoidance_reason: "The exact new counterfamily and scale-covariance identities support a local freeze instead of another construct-audit-stress orbit."
+  next_role_consequence: "P5-T08 ontology-formalizer integration only; no unchanged-route continuation"
+reopening_criteria:
+  - "new source-side primitive or selector with explicit protected status"
+  - "new theorem selecting the law or normalization from source assumptions"
+  - "materially new variation class with local source degrees and dynamics"
+  - "protected human decision with exact authority identity"
+local_freeze_scope: "The exact unchanged Q_amp cubic-flow and nearest-lattice reconstruction route as support for geometry."
+not_frozen:
+  - "all future source extensions"
+  - "all source-ontology research"
+  - "candidate-specific mathematical statements that survived audit"
+  - "P5-T08 integration of the scoped result"
+global_no_go_claim_authorized: false
+future_source_extension_impossibility_authorized: false
+physics_promotion_authorized: false

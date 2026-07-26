@@ -1,0 +1,26 @@
+schema_id: "parent_child_science_output_v1"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+task_id: "RT-20260725-014"
+job_id: "AJ-RT-20260725-014-001"
+status: "completed"
+findings:
+  - finding_id: "MATH-001"
+    result: "The family da/dlambda=-gamma a^(2m+1), m>=1, has an exact total attractive forward semiflow and reproduces the relevant qualitative candidate properties."
+    consequence: "The cubic exponent is not selected."
+  - finding_id: "MATH-002"
+    result: "Under b=d a and lambda_prime=c lambda, gamma_prime=gamma/(c d^(2m))."
+    consequence: "The coefficient is not intrinsic without normalization data."
+  - finding_id: "MATH-003"
+    result: "N_(d epsilon)(d a)=d N_epsilon(a)."
+    consequence: "Resolution covariance requires epsilon to transform as amplitude-coordinate data."
+  - finding_id: "MATH-004"
+    result: "The P5-T06 approximation and coded-dynamics bounds survive deterministic boundary and trajectory checks."
+    consequence: "The valid bounds remain candidate-specific and do not reconstruct local information."
+  - finding_id: "MATH-005"
+    result: "No generator is defined for transverse variations outside Q_amp."
+    consequence: "Finite-variation robustness for local geometry support is not established."
+recommended_disposition: "precise_scoped_obstruction_and_local_freeze"
+unresolved_conflicts: []
+claim_boundary_preserved: true
+physics_promotion_authorized: false

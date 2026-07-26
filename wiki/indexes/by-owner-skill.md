@@ -756,6 +756,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-V21-P4-T05-ONTOLOGY-REGIME-GATE-CHAIR-PARENT-FUSION-V1` `wiki/markdown/md-v21-p4-t05-ontology-regime-gate-chair-parent-fusion-v1.md`
 - `WIKI-MD-V21-P5-T05-PARENT-FUSION-CUBIC-AMPLITUDE-BACKGROUNDS-V1` `wiki/markdown/md-v21-p5-t05-parent-fusion-cubic-amplitude-backgrounds-v1.md`
 - `WIKI-MD-V21-P5-T06-PARENT-FUSION-SOURCE-AMPLITUDE-COARSE-GRAINING-V1` `wiki/markdown/md-v21-p5-t06-parent-fusion-source-amplitude-coarse-graining-v1.md`
+- `WIKI-MD-V21-P5-T07-PARENT-FUSION-SOURCE-DYNAMICS-AUDIT-V1` `wiki/markdown/md-v21-p5-t07-parent-fusion-source-dynamics-audit-v1.md`
+- `WIKI-MD-V21-P5-T07-SOURCE-DYNAMICS-AUDIT-RECEIPT-V1` `wiki/markdown/md-v21-p5-t07-source-dynamics-audit-receipt-v1.md`
 - `WIKI-MD-VALIDATOR-OPERATOR-WORKFLOW-PUBLICATION-BRIEF` `wiki/markdown/md-validator-operator-workflow-publication-brief.md`
 - `WIKI-PDF-LEGACY-ONTOLOGY-AETHER-FLOW-CONSISTENCY` `wiki/pdf/pdf-legacy-ontology-aether-flow-consistency.md`
 - `WIKI-PDF-LEGACY-ONTOLOGY-AETHER-FLOW-DYNAMICS` `wiki/pdf/pdf-legacy-ontology-aether-flow-dynamics.md`
@@ -1188,6 +1190,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-V21-P5-T04-CUBIC-AMPLITUDE-STRUCTURAL-ANALYSIS-V1` `wiki/tex/tex-v21-p5-t04-cubic-amplitude-structural-analysis-v1.md`
 - `WIKI-TEX-V21-P5-T05-CUBIC-AMPLITUDE-BACKGROUND-PHASE-ANALYSIS-V1` `wiki/tex/tex-v21-p5-t05-cubic-amplitude-background-phase-analysis-v1.md`
 - `WIKI-TEX-V21-P5-T06-SOURCE-AMPLITUDE-RESOLUTION-COARSE-GRAINING-V1` `wiki/tex/tex-v21-p5-t06-source-amplitude-resolution-coarse-graining-v1.md`
+- `WIKI-TEX-V21-P5-T07-SOURCE-DYNAMICS-PACKAGE-AUDIT-V1` `wiki/tex/tex-v21-p5-t07-source-dynamics-package-audit-v1.md`
 
 ## obsidian-wiki
 
@@ -1659,6 +1662,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-V21-P4-T05-ONTOLOGY-REGIME-GATE-CHAIR-PARENT-FUSION-V1` `research_control/tasks/RT-20260724-004/artifacts/parent_fusion_notes_ontology_regime_gate_chair_review.md`
 - `MD-V21-P5-T05-PARENT-FUSION-CUBIC-AMPLITUDE-BACKGROUNDS-V1` `research_control/tasks/RT-20260725-012/artifacts/parent_fusion_notes_cubic_amplitude_backgrounds.md`
 - `MD-V21-P5-T06-PARENT-FUSION-SOURCE-AMPLITUDE-COARSE-GRAINING-V1` `research_control/tasks/RT-20260725-013/artifacts/parent_fusion_notes_source_amplitude_coarse_graining.md`
+- `MD-V21-P5-T07-PARENT-FUSION-SOURCE-DYNAMICS-AUDIT-V1` `research_control/tasks/RT-20260725-014/artifacts/parent_fusion_notes_source_dynamics_audit.md`
+- `MD-V21-P5-T07-SOURCE-DYNAMICS-AUDIT-RECEIPT-V1` `research_control/tasks/RT-20260725-014/artifacts/source_dynamics_audit_receipt.md`
 
 ## tex-wiki
 
@@ -2078,6 +2083,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V21-P5-T04-CUBIC-AMPLITUDE-STRUCTURAL-ANALYSIS-V1` `research_control/tasks/RT-20260725-010/artifacts/cubic_amplitude_structural_analysis_v1.tex`
 - `TEX-V21-P5-T05-CUBIC-AMPLITUDE-BACKGROUND-PHASE-ANALYSIS-V1` `research_control/tasks/RT-20260725-012/artifacts/cubic_amplitude_background_phase_analysis_v1.tex`
 - `TEX-V21-P5-T06-SOURCE-AMPLITUDE-RESOLUTION-COARSE-GRAINING-V1` `research_control/tasks/RT-20260725-013/artifacts/source_amplitude_resolution_coarse_graining_v1.tex`
+- `TEX-V21-P5-T07-SOURCE-DYNAMICS-PACKAGE-AUDIT-V1` `research_control/tasks/RT-20260725-014/artifacts/source_dynamics_package_audit_v1.tex`
 
 ## user-modified-project
 

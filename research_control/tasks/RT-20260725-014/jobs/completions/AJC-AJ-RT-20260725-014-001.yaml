@@ -1,0 +1,908 @@
+job_id: "AJ-RT-20260725-014-001"
+completion_id: "AJC-AJ-RT-20260725-014-001"
+task_id: "RT-20260725-014"
+task_type: "v21_p5_t07_audit_and_refuter_stress_source_dynamics_and_reconstruction_package"
+decision_id: "DDR-20260725-014"
+role_id: "smuggling-auditor"
+role_version: "0.2.0"
+execution_role_ref: "smuggling-auditor@0.2.0--RT-20260725-014"
+status: "completed"
+validation_status: "PASS"
+final_repository_validation_status: "PASS_READY_FOR_CHECKPOINT"
+created_at: "2026-07-26T05:25:02Z"
+started_at: "2026-07-26T05:25:02Z"
+completed_at: "2026-07-26T05:25:02Z"
+objective: "Perform a fresh source-provenance audit and adversarial stress of the exact unchanged P5-T01 through P5-T06 source theory, dynamics, backgrounds, and reconstruction map under source relabeling, finite variation, boundary, phase, parameter, target-import, information-creation, covariance, error-bound, and process-authority attacks."
+completion_summary: "P5-T07 finds no explicit target or process import and independently preserves the candidate-specific source-flow formulas, structural results, backgrounds, and P5-T06 error bounds. A fresh exact family da/dlambda=-gamma a^(2m+1), m>=1, satisfies the same qualitative forward-semiflow, reflection, stationary-background, attraction, and backward-horizon properties, so those burdens do not select the cubic exponent. Under b=d a and lambda'=c lambda, gamma'=gamma/(c d^(2m)); the P5-T06 quantizer is covariant only with epsilon'=d epsilon. The current ontology and unchanged package therefore do not derive a unique generator, coefficient normalization, intrinsic resolution, or transverse local dynamics. This is a precise source-extension-candidate obstruction. The exact unchanged one-mode route as support for geometry is locally frozen; candidate-specific mathematics survives and future conservative source extensions remain open."
+objective_result: "precise_scoped_obstruction_and_local_freeze"
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 119
+  passes_consumed: 109
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:119"
+  handoff_token: "62e9ba524984d38d77ba4fa721905d8fa234d0c22e77b404"
+  relay_claim_token: "4c9667b49b7815af46c0cbdde311f955ec224908cae4c56b"
+  route_work_item_id: "P5-T07"
+  route_worker_skill: "continue-research"
+  route_sha256: "f201000db919cde84892decdecd34ea734a4c32b72cab0656cfc298669f8ceb6"
+  worker_skill: "continue-research"
+  worker_invocation_count: 1
+
+transaction_status: "ready_for_checkpoint"
+result_disposition: "P5_T07_PRECISE_SCOPED_OBSTRUCTION_AND_LOCAL_GEOMETRY_ROUTE_FREEZE_READY_FOR_CHECKPOINT"
+audit_verdict: "source_pure_as_written_but_not_intrinsically_selected_or_geometry_robust"
+checkpoint_commit:
+  status: "pending_governed_checkpoint"
+  dependency_checkpoint_commit: "043a66fa5915300c61a2f5e45c23978e6164ff05"
+  invocation_count_before_completion: 0
+  push_authorized: false
+  push_performed: false
+is_physics_task: true
+payload_class: "minimal_countermodel"
+minimum_payload:
+  payload_class: "minimal_countermodel"
+  payload_artifact_path: "research_control/tasks/RT-20260725-014/artifacts/source_dynamics_package_audit_v1.tex"
+  payload_summary: "An exact odd-power counterfamily and two relabeling identities show that the unchanged package does not select the cubic exponent, coefficient normalization, or intrinsic resolution, yielding one precise scoped obstruction."
+has_new_mathematical_payload: true
+has_finite_local_witness: true
+has_countermodel: true
+external_red_team_finding_requires_integration: false
+physics_promotion_authorized: false
+proof_authority: false
+
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P5"
+  plan_task_id: "P5-T07"
+  recommendation_ids:
+    - "V21-R14"
+    - "V21-R15"
+    - "V21-R16"
+    - "V21-R30"
+    - "V21-R55"
+    - "V21-R63"
+  implementation_status: "completed"
+  dependency_evidence:
+    P5_T06:
+      task_id: "RT-20260725-013"
+      completion_path: "research_control/tasks/RT-20260725-013/jobs/completions/AJC-AJ-RT-20260725-013-001.yaml"
+      completion_sha256: "f216ed8d48f22d24c74e35959741e63fd385ee7bf9c42b878dcf79756ab21624"
+      checkpoint_commit: "043a66fa5915300c61a2f5e45c23978e6164ff05"
+      qualifying_status: true
+  next_dependency_work_item: "P5-T08"
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  observed_durable_outputs:
+    physics:
+      - "registered source-dynamics package audit with odd-power counterfamily and relabeling results"
+      - "refuter stress record with precise obstruction"
+      - "candidate disposition and local-freeze record"
+    project_system:
+      - "task-local deterministic validation receipt"
+      - "parent-child synthesis records"
+      - "standard control records and generated memory derivatives"
+  accepted_criteria:
+    physics:
+      - "every P5-T01 through P5-T06 candidate hash remains unchanged"
+      - "stress cases are exact, reproducible, and map to named assumptions"
+      - "surviving mathematics and failed geometry-support premise are separated"
+      - "the obstruction and freeze remain candidate-scoped with future source extensions open"
+    project_system:
+      - "task-local validation and scratch TeX build pass"
+      - "claim-language, source-authority, documentation, signal, and research-control checks pass"
+      - "one governed checkpoint records the bounded transaction"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+physics_payload_admission_result:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "physics"
+  declared_payload_type: "precise_obstruction"
+  realized_payload_type: "precise_obstruction"
+  candidate_family: "V21-P5-T03-CUBIC-AMPLITUDE-SOURCE-DYNAMICS-V1"
+  result: "PASS"
+  material_payload_present: true
+  process_receipts_counted_as_payload: false
+  physics_promotion_authorized: false
+
+family_freeze_admission_result:
+  schema_id: "family_freeze_route_admission_v1"
+  policy_id: "family_freeze_reopening_policy_v1"
+  route_id: "v21_p5_t07_source_dynamics_package_audit_stress"
+  family_id: "V21-P5-T03-CUBIC-AMPLITUDE-SOURCE-DYNAMICS-V1"
+  detected_match_basis: []
+  reopening_requested: false
+  result: "PASS_UNMATCHED_SEEDED_EQSRC_FREEZE_FAMILY"
+  local_family_freeze_preserved: true
+  new_local_freeze_scope: "exact unchanged Q_amp cubic-flow and nearest-lattice route as support for geometry"
+  global_no_go_claimed: false
+
+ordinary_route_guard_admission_result:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0873"
+  selected_plan_task_id: "P5-T07"
+  guard_outcome: "below_threshold"
+  result: "PASS"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+
+artifacts:
+  - "research_control/tasks/RT-20260725-014/artifacts/source_dynamics_package_audit_v1.tex"
+  - "research_control/tasks/RT-20260725-014/artifacts/refuter_stress_source_dynamics_v1.yaml"
+  - "research_control/tasks/RT-20260725-014/artifacts/candidate_disposition_freeze_v1.yaml"
+  - "research_control/tasks/RT-20260725-014/artifacts/source_dynamics_audit_validation_receipt_v1.json"
+  - "research_control/tasks/RT-20260725-014/artifacts/validate_source_dynamics_audit.py"
+  - "research_control/tasks/RT-20260725-014/artifacts/child_phys_math_source_dynamics_audit.yaml"
+  - "research_control/tasks/RT-20260725-014/artifacts/child_phys_phil_source_dynamics_audit.yaml"
+  - "research_control/tasks/RT-20260725-014/artifacts/parent_conflict_review_source_dynamics_audit.yaml"
+  - "research_control/tasks/RT-20260725-014/artifacts/parent_fusion_notes_source_dynamics_audit.md"
+  - "research_control/tasks/RT-20260725-014/artifacts/source_dynamics_audit_receipt.md"
+
+output_paths:
+  - "research_control/tasks/RT-20260725-014/artifacts/source_dynamics_package_audit_v1.tex"
+  - "research_control/tasks/RT-20260725-014/artifacts/refuter_stress_source_dynamics_v1.yaml"
+  - "research_control/tasks/RT-20260725-014/artifacts/candidate_disposition_freeze_v1.yaml"
+  - "research_control/tasks/RT-20260725-014/artifacts/source_dynamics_audit_validation_receipt_v1.json"
+  - "research_control/tasks/RT-20260725-014/artifacts/validate_source_dynamics_audit.py"
+  - "research_control/tasks/RT-20260725-014/artifacts/child_phys_math_source_dynamics_audit.yaml"
+  - "research_control/tasks/RT-20260725-014/artifacts/child_phys_phil_source_dynamics_audit.yaml"
+  - "research_control/tasks/RT-20260725-014/artifacts/parent_conflict_review_source_dynamics_audit.yaml"
+  - "research_control/tasks/RT-20260725-014/artifacts/parent_fusion_notes_source_dynamics_audit.md"
+  - "research_control/tasks/RT-20260725-014/artifacts/source_dynamics_audit_receipt.md"
+  - "research_control/tasks/RT-20260725-014/00_TASK.yaml"
+  - "research_control/tasks/RT-20260725-014/DDR-20260725-014.md"
+  - "research_control/tasks/RT-20260725-014/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260725-014/roles/smuggling-auditor@0.2.0--RT-20260725-014.yaml"
+  - "research_control/tasks/RT-20260725-014/jobs/AJ-RT-20260725-014-001.yaml"
+  - "research_control/tasks/RT-20260725-014/jobs/completions/AJC-AJ-RT-20260725-014-001.yaml"
+  - "research_control/handoffs/handoff-0874.yaml"
+  - "research_control/handoffs/handoff-0874.md"
+
+artifact_receipts:
+  source_audit:
+    path: "research_control/tasks/RT-20260725-014/artifacts/source_dynamics_package_audit_v1.tex"
+    sha256: "f2f7d51db7eb2ebe8c7bb266d150a3a0d4f7f8bf1c0edcf9020cccc70973e394"
+  refuter_stress:
+    path: "research_control/tasks/RT-20260725-014/artifacts/refuter_stress_source_dynamics_v1.yaml"
+    sha256: "6f3252768d3de6e8849a10bd3d8ad9cb90434be888226e7b383c1d3bdf79d231"
+  disposition_freeze:
+    path: "research_control/tasks/RT-20260725-014/artifacts/candidate_disposition_freeze_v1.yaml"
+    sha256: "b1dd18f05c3920d2f5ca54f4c3a7a4d5012b2bb34db13c1d50505d9174f13ed3"
+  validation:
+    path: "research_control/tasks/RT-20260725-014/artifacts/source_dynamics_audit_validation_receipt_v1.json"
+    sha256: "497eebebbacdc7981819b1b05ac3a10810276041c45528b77ad78340e72ee7e7"
+  validator:
+    path: "research_control/tasks/RT-20260725-014/artifacts/validate_source_dynamics_audit.py"
+    sha256: "367a3c167746a539f367b8127ef9becd4e5d4003bdd4fb0d258ab6ff3c5ac297"
+  parent_fusion:
+    path: "research_control/tasks/RT-20260725-014/artifacts/parent_fusion_notes_source_dynamics_audit.md"
+    sha256: "a7b011f99199d8ab2c854e1330968aaa8219e277273d7b83666b2d8a07fe7aac"
+  compact_receipt:
+    path: "research_control/tasks/RT-20260725-014/artifacts/source_dynamics_audit_receipt.md"
+    sha256: "cd123e82cd1f820e6ff52831669d5652f735cb136269e3357c76f4924efd75f7"
+
+source_hash_receipts:
+  - object_id: "TEX-V21-P5-T01-COMPACT-SOURCE-THEORY-OBJECT-V1"
+    path: "research_control/tasks/RT-20260725-003/artifacts/compact_source_theory_object_v1.tex"
+    sha256: "2520f82e54edcb2668446579ceed7a7dfc7a8abf995572aa9889a3d9a3a4467c"
+    unchanged: true
+  - object_id: "TEX-V21-P5-T02-PHI-SRC-SEMIFLOW-SEMANTICS-V1"
+    path: "research_control/tasks/RT-20260725-007/artifacts/phi_src_semiflow_semantics_v1.tex"
+    sha256: "60f7358e0643195d4e2b79f7fda921da223ef940d00968588a4175d23cc0b70f"
+    unchanged: true
+  - object_id: "TEX-V21-P5-T03-CUBIC-AMPLITUDE-SOURCE-DYNAMICS-V1"
+    path: "research_control/tasks/RT-20260725-008/artifacts/cubic_amplitude_source_dynamics_v1.tex"
+    sha256: "98ce6833f6e4d8be22837d25845d7fa62d6886049e168d121de5de0093703f6a"
+    unchanged: true
+  - object_id: "TEX-V21-P5-T04-CUBIC-AMPLITUDE-STRUCTURAL-ANALYSIS-V1"
+    path: "research_control/tasks/RT-20260725-010/artifacts/cubic_amplitude_structural_analysis_v1.tex"
+    sha256: "a9a9f42ff016febc0f40a8a4db32b09f670084bda2248704e290cf5bee02a06b"
+    unchanged: true
+  - object_id: "TEX-V21-P5-T05-CUBIC-AMPLITUDE-BACKGROUND-PHASE-ANALYSIS-V1"
+    path: "research_control/tasks/RT-20260725-012/artifacts/cubic_amplitude_background_phase_analysis_v1.tex"
+    sha256: "73895f1325fa83799c343e0c88d525e1d9e006254844b8f8bd7bb8fe2286f48d"
+    unchanged: true
+  - object_id: "TEX-V21-P5-T06-SOURCE-AMPLITUDE-RESOLUTION-COARSE-GRAINING-V1"
+    path: "research_control/tasks/RT-20260725-013/artifacts/source_amplitude_resolution_coarse_graining_v1.tex"
+    sha256: "a798e69875603ec3d0f9202ea67de18fcbc3dabf1cb1a178713f8dde9aefd074"
+    unchanged: true
+
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260725-014/artifacts/child_phys_math_source_dynamics_audit.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260725-014/artifacts/child_phys_phil_source_dynamics_audit.yaml"
+      status: "completed"
+  conflict_review:
+    status: "resolved"
+    review_path: "research_control/tasks/RT-20260725-014/artifacts/parent_conflict_review_source_dynamics_audit.yaml"
+    resolution_rounds: 0
+    unresolved_conflicts: []
+    summary: "Both perspectives preserve the candidate-specific mathematics and support a precise scoped obstruction. The parent resolved the only scope tension by freezing the exact unchanged geometry-support route, not the candidate formulas, global ontology, project, or future source extensions."
+  fusion:
+    fused_output_path: "research_control/tasks/RT-20260725-014/artifacts/source_dynamics_package_audit_v1.tex"
+    fusion_notes_path: "research_control/tasks/RT-20260725-014/artifacts/parent_fusion_notes_source_dynamics_audit.md"
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+
+audit_scope:
+  candidate_family: "V21-P5-T03-CUBIC-AMPLITUDE-SOURCE-DYNAMICS-V1"
+  exact_sources_fixed: true
+  primitive_and_parameter_audit_complete: true
+  source_relabeling_stress_complete: true
+  finite_variation_stress_complete: true
+  boundary_change_stress_complete: true
+  phase_change_stress_complete: true
+  parameter_perturbation_stress_complete: true
+  target_metric_or_causal_encoding_found: false
+  information_creation_found: false
+  validator_or_process_proof_authority_found: false
+  repair_performed: false
+  finding_count: 9
+  new_exact_mathematical_finding_count: 3
+  scoped_obstruction_count: 1
+  local_freeze_count: 1
+  unresolved_conflict_count: 0
+
+ontology_law_research_packet:
+  route: "ontology-law-research-packet"
+  trigger_classification: "derivation_critical_missing_source_law"
+  target_derivation_milestone: "source_ontology"
+  milestone_burden: "Determine whether the package is genuinely source-derived and robust enough to support geometry work."
+  missing_source_law: "A current-ontology derivation or source-side selector for the generator exponent, coefficient and amplitude normalization, intrinsic resolution, and local variation dynamics."
+  underdetermination_statement: "Current ontology does not derive a unique odd-power law, coefficient normalization, amplitude normalization, intrinsic resolution rule, or transverse local dynamics for this candidate."
+  no_go_theorem_status: "not_proved"
+  adoption_status:
+    current_adoption: "blocked"
+    continuation: "open"
+    status_pair: "blocked_adoption_open_continuation"
+  packet_payload_mode: "candidate_law_refutation"
+  candidate_law_refutation:
+    refuted_candidate: "The overread that the unchanged P5 package intrinsically selects the cubic generator and fixed resolution and is robust enough to support geometry work."
+    refuted_overread: "Qualitative total-forward attraction, reflection, stationary-state, and error-bound results uniquely select the cubic source law and intrinsic resolution."
+    refutation_basis: "The exact odd-power counterfamily, coefficient relabeling law, resolution relabeling identity, and absence of transverse local dynamics."
+    surviving_obligations:
+      - "P5-T08 durable integration of the source-dynamics phase and local freeze"
+      - "future separately authorized source-side selector or local-data construction if the milestone is reopened"
+      - "all downstream source-manifold, effective-metric, matter, Einstein-equation, and benchmark burdens"
+  human_gate_precondition:
+    blocks_payload_definition: false
+    reason: "Proposal-only audit, stress, scoped obstruction, and local route freeze require no ontology adoption gate."
+  exact_gr_recovery_obligations:
+    checklist:
+      - "derive a source law and local structure without target atlas, metric, causal order, detector, or benchmark import"
+      - "derive M_src, g_eff, matter coupling, and Einstein-equation links before promotion"
+      - "recover the exact-GR benchmark within the final declared validity regime"
+    distance_to_gr_links:
+      - "source_ontology"
+  no_target_import_audit_scope:
+    forbidden_source_classes:
+      - "target_atlas"
+      - "target_topology"
+      - "target_smooth_atlas"
+      - "target_metric"
+      - "proper_time"
+      - "empirical_detector_semantics"
+      - "benchmark_success"
+      - "generated_derivative"
+      - "generated_derivative_authority"
+      - "registry_metadata_authority"
+      - "validation_authority"
+      - "validator_authority"
+      - "role_authority"
+      - "handoff_authority"
+      - "file_order_authority"
+  no_target_import_audit:
+    result: "pass"
+    explicit_target_import_found: false
+    explicit_process_import_found: false
+    limitation: "A source-purity pass is hygiene evidence and does not establish positive dynamics selection, local robustness, or geometry."
+  human_gate_request:
+    required_before_adoption: true
+    requested_decision: "none in P5-T07"
+    exact_requested_ontology_edit: ""
+
+source_extension_category: "source_extension_smuggling_audit_and_refuter_stress"
+source_extension_classification_required: true
+source_extension_classification:
+  checklist_id: "source_extension_classification_checklist_v1"
+  claim_boundary_id: "CB-V21-P5-T07-SOURCE-DYNAMICS-AUDIT-STRESS-001"
+  item_id: "V21-P5-T01-THROUGH-P5-T06-SOURCE-DYNAMICS-PACKAGE"
+  item_source_path: "research_control/tasks/RT-20260725-014/artifacts/source_dynamics_package_audit_v1.tex"
+  item_kind: "obstruction"
+  classification: "blocked_adoption_open_continuation"
+  evidence_paths:
+    - "research_control/tasks/RT-20260725-014/artifacts/source_dynamics_package_audit_v1.tex"
+    - "research_control/tasks/RT-20260725-014/artifacts/refuter_stress_source_dynamics_v1.yaml"
+    - "research_control/tasks/RT-20260725-014/artifacts/candidate_disposition_freeze_v1.yaml"
+  relation_to_current_ontology: "blocked_open"
+  relation_to_target_structures: "No explicit target structure is a premise; the exact source package still lacks intrinsic law selection and local data needed before geometry."
+  protected_authority_required: true
+  physics_promotion_authorized: false
+  downstream_promotion_authorized: false
+  allowed_conclusion: "The unchanged package is source-pure as written but its exact one-mode route is locally frozen for geometry support; candidate-specific mathematics survives and future source-extension continuation remains open."
+  forbidden_overreads:
+    - "source-law or canonical ontology adoption or rejection"
+    - "physical scale, time, locality, covariance, causality, or geometry established"
+    - "global no-go theorem or future source-extension impossibility"
+    - "M_src, g_eff, matter coupling, Einstein equations, or benchmark promotion"
+    - "completed derivation or global theory rejection"
+  next_route_if_blocked: "P5-T08 ontology-formalizer@0.2.0 integration after checkpoint"
+
+component_source_extension_classifications:
+  - item_id: "P5-T01-SOURCE-ARENA-AND-AMPLITUDE-WITNESS"
+    classification: "new_ontology_primitive_candidate"
+    relation_to_current_ontology: "missing_primitive"
+    allowed_conclusion: "proposal-only source-extension candidate"
+  - item_id: "P5-T02-FORWARD-MONOID-ACTION-SEMANTICS"
+    classification: "new_ontology_primitive_candidate"
+    relation_to_current_ontology: "missing_primitive"
+    allowed_conclusion: "proposal-only source-extension candidate"
+  - item_id: "P5-T03-CUBIC-GENERATOR"
+    classification: "new_ontology_primitive_candidate"
+    relation_to_current_ontology: "missing_primitive"
+    allowed_conclusion: "proposal-only source-extension candidate with nonselection obstruction"
+  - item_id: "P5-T04-THROUGH-P5-T06-CONDITIONAL-RESULTS"
+    classification: "status_boundary_evidence_only"
+    relation_to_current_ontology: "evidence_only"
+    allowed_conclusion: "candidate-specific conditional mathematics and scoped obstruction evidence only"
+
+new_mathematical_payload:
+  - payload_id: "NMP-RT-20260725-014-001"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    name: "Odd-power nonselection counterfamily"
+    summary: "For every integer m>=1 and gamma>0, the exact flow a/(1+2m gamma a^(2m) lambda)^(1/(2m)) is a total odd attractive forward semiflow with the same relevant qualitative properties as the cubic candidate."
+  - payload_id: "NMP-RT-20260725-014-002"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    name: "Combined coefficient relabeling law"
+    summary: "Under b=d a and lambda'=c lambda, gamma'=gamma/(c d^(2m))."
+  - payload_id: "NMP-RT-20260725-014-003"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    name: "Resolution relabeling identity"
+    summary: "The odd nearest-lattice quantizer obeys N_(d epsilon)(d a)=d N_epsilon(a), so resolution is coordinate data absent an intrinsic source normalization."
+  - payload_id: "NMP-RT-20260725-014-004"
+    payload_type: "countermodel_or_obstruction"
+    name: "Intrinsic-law, scale, and local-robustness obstruction"
+    summary: "The unchanged package lacks a source-derived generator selector, normalization, resolution, and transverse local dynamics needed for geometry support."
+
+mathematical_payload_manifest:
+  - payload_id: "PAYLOAD-RT014-001"
+    payload_type: "theorem"
+    object_name: "Odd-power nonselection counterfamily"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260725-014/artifacts/source_dynamics_package_audit_v1.tex"
+    burden_effect: "stress_tests"
+    summary: "Shows that the qualitative source-flow burdens do not uniquely select the cubic exponent."
+  - payload_id: "PAYLOAD-RT014-002"
+    payload_type: "countermodel"
+    object_name: "m=2 quintic-flow comparison member"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260725-014/artifacts/source_dynamics_package_audit_v1.tex"
+    burden_effect: "obstructs"
+    summary: "A minimal explicit noncubic member satisfies the same relevant qualitative requirements."
+  - payload_id: "PAYLOAD-RT014-003"
+    payload_type: "theorem"
+    object_name: "Coefficient and resolution relabeling identities"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260725-014/artifacts/source_dynamics_package_audit_v1.tex"
+    burden_effect: "audits"
+    summary: "Separates form covariance from intrinsic normalization and scale selection."
+  - payload_id: "PAYLOAD-RT014-004"
+    payload_type: "obstruction"
+    object_name: "P5 intrinsic-law, scale, and local-robustness obstruction"
+    claim_status: "negative result"
+    source_path: "research_control/tasks/RT-20260725-014/artifacts/refuter_stress_source_dynamics_v1.yaml"
+    burden_effect: "freezes"
+    summary: "Locally freezes the exact unchanged one-mode route as geometry support while preserving open future source extensions."
+  - payload_id: "PAYLOAD-RT014-005"
+    payload_type: "source_extension_classification"
+    object_name: "P5 source-package provenance boundary"
+    claim_status: "source-extension data"
+    source_path: "research_control/tasks/RT-20260725-014/artifacts/candidate_disposition_freeze_v1.yaml"
+    burden_effect: "narrows"
+    summary: "Classifies the package as blocked adoption with open continuation."
+
+physics_progress_status:
+  status: "route_frozen"
+  target_derivation_milestone: "source_ontology"
+  milestone_burden: "Determine whether the package is genuinely source-derived and robust enough to support geometry work."
+  explanation: "The exact unchanged one-mode cubic-flow and fixed-resolution route is locally frozen for geometry support after a completed construct-analysis-map-audit cycle produced a counterfamily, relabeling nonidentifiability, and missing-local-dynamics obstruction."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr_delta:
+  changed: true
+  effect: "obstruction_recorded"
+  burden_id: "source_ontology_primitives"
+  milestone: "source_ontology"
+  old_status: "accepted"
+  new_status: "accepted"
+  ledger_row_updated: true
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  downstream_unlocked:
+    - "P5-T08 source-dynamics integration and milestone decision after governed checkpoint"
+  downstream_still_blocked:
+    - "unchanged one-mode route to geometry support"
+    - "source-derived law selector and intrinsic normalization"
+    - "independent local source data and transverse dynamics"
+    - "characteristic operator and source-invariant causal structure"
+    - "canonical source-law adoption"
+    - "physical source manifold M_src"
+    - "effective metric g_eff"
+    - "matter coupling"
+    - "Einstein equations"
+    - "benchmark promotion"
+  explanation: "The ledger gains exact counterfamily, relabeling, and local-freeze evidence while retaining the accepted candidate-specific source mathematics and all physical and promotion blocks."
+
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "candidate-specific mathematics accepted as source-extension data; exact unchanged one-mode geometry-support route locally frozen by law-scale-local-robustness obstruction"
+  - burden: "Source equivalence EqSrc"
+    status: "unchanged; not discharged by this packet"
+  - burden: "RetainH"
+    status: "unchanged; not supplied or adopted"
+  - burden: "GenH"
+    status: "unchanged; not supplied or adopted"
+  - burden: "ObsLoc_lc"
+    status: "unchanged; one global amplitude supplies no localization structure"
+  - burden: "Resp_lc"
+    status: "unchanged; no transverse local response operator"
+  - burden: "M_src"
+    status: "blocked; no adopted source manifold or local atlas data"
+  - burden: "g_eff"
+    status: "blocked; no causal or geometry reconstruction"
+  - burden: "matter coupling"
+    status: "blocked; no derivation"
+  - burden: "Einstein equations"
+    status: "not started; unchanged"
+  - burden: "finite-variation robustness"
+    status: "tangent Q_amp variations controlled; transverse local variations undefined"
+  - burden: "benchmark promotion"
+    status: "blocked by missing source-law selection local structure downstream derivations and protected authority"
+  - burden: "Gate Chair status"
+    status: "human-gated; unchanged"
+  - burden: "current route freeze or hard-fail status"
+    status: "exact unchanged Q_amp cubic-flow and fixed-resolution geometry-support route locally frozen; P5-T08 integration remains eligible after checkpoint"
+
+smuggling_auditor_result:
+  result_type: "source_pure_with_precise_scoped_obstruction_and_local_freeze"
+  source_purity_result: "pass"
+  explicit_target_import_found: false
+  explicit_process_import_found: false
+  status_laundering_found: false
+  candidate_repair_performed: false
+  surviving_content:
+    - "candidate-specific exact flow and structural mathematics"
+    - "candidate-specific background and stability results"
+    - "candidate-specific coarse-map typing, information loss, and error bounds"
+  failed_content:
+    - "intrinsic selection of cubic exponent and coefficient normalization"
+    - "intrinsic selection of resolution scale"
+    - "off-family local robustness and geometry support"
+  next_required_role: "ontology-formalizer@0.2.0 for P5-T08 integration after checkpoint"
+  claim_boundary_preserved: true
+
+countermodel_obligations:
+  policy_id: "minimal_countermodel_obligation_policy_v1"
+  theorem_family: "other"
+  waiver_decision_id: ""
+  slots:
+    - countermodel_slot: "odd_power_law_nonselection_countermodel"
+      status: "filled"
+      scope: "exact unchanged one-dimensional P5 source-extension candidate"
+      result_artifact: "research_control/tasks/RT-20260725-014/artifacts/source_dynamics_package_audit_v1.tex"
+      obstruction_id: "OBST-P5T07-QAMP-INTRINSIC-LAW-SCALE-ROBUSTNESS-001"
+      local_countermodel_claim: "The m=2 quintic member satisfies the same audited qualitative properties and therefore defeats unique cubic selection by those properties."
+      forbidden_overread: "This does not prove every future source law impossible, reject the project, adopt ontology, or unlock downstream GR claims."
+    - countermodel_slot: "normalization_and_resolution_relabeling_countermodel"
+      status: "filled"
+      scope: "positive amplitude and monoid-parameter relabelings of the exact source coefficient and quantizer"
+      result_artifact: "research_control/tasks/RT-20260725-014/artifacts/source_dynamics_package_audit_v1.tex"
+      obstruction_id: "OBST-P5T07-QAMP-INTRINSIC-LAW-SCALE-ROBUSTNESS-001"
+      local_countermodel_claim: "Coefficient and resolution values change unless normalization and resolution data transform."
+      forbidden_overread: "Coordinate dependence does not itself prove target import, a global no-go, source-law rejection, or completed derivation."
+    - countermodel_slot: "transverse_local_variation_gap"
+      status: "filled"
+      scope: "variations outside the one-dimensional Q_amp candidate"
+      result_artifact: "research_control/tasks/RT-20260725-014/artifacts/refuter_stress_source_dynamics_v1.yaml"
+      obstruction_id: "OBST-P5T07-QAMP-INTRINSIC-LAW-SCALE-ROBUSTNESS-001"
+      local_countermodel_claim: "No transverse generator or characteristic operator is defined, so off-family local robustness cannot be inferred."
+      forbidden_overread: "The missing datum does not make every conservative local source extension impossible."
+
+obstruction_record:
+  present: true
+  obstruction_id: "OBST-P5T07-QAMP-INTRINSIC-LAW-SCALE-ROBUSTNESS-001"
+  scope: "source_extension_candidate"
+  failed_object: "intrinsic source-law, normalization, resolution, and local-robustness selection for the unchanged one-mode geometry-support route"
+  exact_failure: "An infinite odd-power family shares the audited qualitative dynamics; coefficient and resolution values transform under source relabeling; and no transverse local dynamics or characteristic operator is supplied."
+  minimal_counterexample_path: "research_control/tasks/RT-20260725-014/artifacts/source_dynamics_package_audit_v1.tex"
+  current_ontology_implication: "does_not_derive"
+  source_extension_implication: "repair_allowed"
+  consequence: "route_frozen"
+  forbidden_overread: "This locally freezes only the exact unchanged candidate route as geometry support; it does not establish a global no-go, future source-extension impossibility, ontology rejection, or downstream GR result."
+
+refuter_obstruction_record:
+  obstruction_id: "OBST-P5T07-QAMP-INTRINSIC-LAW-SCALE-ROBUSTNESS-001"
+  target_claim: "The unchanged one-mode source package intrinsically selects robust dynamics and resolution data sufficient to support geometry work."
+  target_milestone: "source_ontology"
+  failed_premise: "The current ontology and unchanged package do not derive a unique odd-power law, coefficient normalization, intrinsic resolution scale, or off-family local dynamics."
+  minimal_countermodel_available: true
+  countermodel_path: "research_control/tasks/RT-20260725-014/artifacts/source_dynamics_package_audit_v1.tex"
+  countermodel_scope: "source_extension_candidate"
+  certificate_gap: "missing law-selection, normalization, intrinsic-resolution, and local-variation provenance"
+  source_extension_repair_possible: "repair_possible"
+  global_no_go_claim_authorized: false
+  future_source_extension_impossibility_authorized: false
+  freeze_criteria_status:
+    freeze_decision: "locally_frozen"
+    decision_reason: "The exact unchanged route completed its construct-analysis-map-audit cycle and now has a counterfamily plus missing-local-dynamics obstruction."
+    next_allowed_route: "none"
+  route_cycle_control:
+    cycle_family: "v21_p5_cubic_amplitude_to_geometry"
+    current_cycle_step: "p5_t07_audit_and_refuter_stress"
+    prior_related_tasks:
+      - "RT-20260725-003"
+      - "RT-20260725-007"
+      - "RT-20260725-008"
+      - "RT-20260725-010"
+      - "RT-20260725-012"
+      - "RT-20260725-013"
+    cycle_risk: "high"
+    orbit_avoidance_reason: "The counterfamily and relabeling formulas replace another qualitative cycle with an exact scoped obstruction and local freeze."
+    next_role_consequence: "ontology-formalizer@0.2.0 for P5-T08 negative-result integration, not same-route repair"
+  forbidden_conclusions:
+    - "canonical ontology or source-law adoption or rejection"
+    - "global no-go theorem or global theory rejection"
+    - "future source-extension impossibility"
+    - "physical scale locality causality or geometry established"
+    - "M_src or g_eff reconstruction"
+    - "matter coupling or Einstein equations"
+    - "benchmark promotion or completed derivation"
+
+route_cycle_control:
+  cycle_family: "v21_p5_cubic_amplitude_to_geometry"
+  current_cycle_step: "p5_t07_audit_stress_complete_local_freeze"
+  prior_related_tasks:
+    - "RT-20260725-003"
+    - "RT-20260725-007"
+    - "RT-20260725-008"
+    - "RT-20260725-010"
+    - "RT-20260725-012"
+    - "RT-20260725-013"
+    - "RT-20260725-014"
+  cycle_risk: "high"
+  orbit_avoidance_reason: "P5-T07 adds exact new counterfamily and relabeling mathematics, resolves the advertised robustness question, and freezes the unchanged route instead of routing another construct-audit-stress repetition."
+  next_role_consequence: "ontology-formalizer@0.2.0 for P5-T08 integration after checkpoint"
+
+freeze_criteria_status:
+  repeated_burden: true
+  freeze_evaluation_required: true
+  active_freeze_label: "P5-QAMP-INTRINSIC-LAW-SCALE-LOCAL-ROBUSTNESS"
+  prior_attempts_considered:
+    - "P5-T01 through P5-T07 completed construct, semantics, candidate, analysis, background, map, and audit-stress sequence"
+  freeze_if:
+    - "The package lacks a source-derived law selector, normalization, intrinsic resolution, or independent local variation data after the completed cycle."
+    - "Another packet repeats the same one-mode qualitative claims without a materially new source object or theorem."
+  do_not_freeze_if:
+    - "A future separately authorized candidate supplies independently justified local source data and a source-side law or selector."
+    - "A materially distinct theorem changes the exact obstruction premises without reconstructing the frozen route."
+  freeze_decision: "locally_frozen"
+  decision_reason: "The exact odd-power counterfamily and relabeling identities establish nonselection, while inherited patch, phase, and rank obstructions preserve the missing-local-geometry block."
+  next_allowed_route: "none"
+  status_update_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  no_status_update_rationale: ""
+  global_theory_rejection: false
+  future_source_extension_impossibility: false
+
+candidate_disposition:
+  candidate_family: "V21-P5-T03-CUBIC-AMPLITUDE-SOURCE-DYNAMICS-V1"
+  candidate_mutated: false
+  candidate_adopted: false
+  candidate_rejected: false
+  surviving_status: "draft/control proposal-only source-extension data"
+  exact_route_status: "locally_frozen_for_geometry_support"
+  local_freeze_scope: "the exact unchanged Q_amp cubic-flow and nearest-lattice reconstruction route as support for geometry"
+  not_frozen:
+    - "candidate-specific source mathematics that survived audit"
+    - "all future conservative source extensions"
+    - "all source-ontology research outside the exact route"
+    - "P5-T08 integration of the scoped result"
+  reopening_requires:
+    - "new source-side primitive or selector with explicit protected status"
+    - "new theorem selecting the law or normalization from source assumptions"
+    - "materially new variation class with local source degrees and dynamics"
+    - "protected human decision with exact authority identity"
+
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+  summary: "The audit, counterfamily, obstruction, validator, and local freeze are scoped draft/control evidence. They do not adopt or reject ontology or a source law, establish physical scale or geometry, prove a global no-go, close future source extensions, or unlock downstream GR."
+  forbidden_conclusions:
+    - "canonical ontology edit"
+    - "source-law or candidate adoption or rejection"
+    - "physical time scale coarse-graining locality covariance causality or geometry"
+    - "target import inferred solely from coordinate nonidentifiability"
+    - "global no-go theorem"
+    - "future source-extension impossibility"
+    - "global theory rejection"
+    - "M_src adoption"
+    - "g_eff adoption or scope expansion"
+    - "matter coupling or Einstein-equation claim"
+    - "benchmark promotion or Gate Chair verdict"
+    - "proof publication push or completed derivation"
+
+authorization_layers:
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  canonical_ontology_edit_authorized: false
+  physical_admissibility_claim_authorized: false
+  physical_scale_or_geometry_claim_authorized: false
+  M_src_adoption_authorized: false
+  g_eff_adoption_authorized: false
+  matter_coupling_derivation_authorized: false
+  einstein_equation_derivation_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_authorized: false
+  future_source_extension_impossibility_authorized: false
+
+three_tier_claim_summary:
+  adopted_objects: []
+  accepted_evidence_preconditions:
+    - object: "P5-T07 odd-power counterfamily, relabeling identities, and scoped obstruction"
+      status: "accepted only as task-local draft/control negative-result evidence"
+      authority_path: "research_control/tasks/RT-20260725-014/artifacts/source_dynamics_package_audit_v1.tex"
+      supports_target: "source-ontology milestone disposition and local route freeze"
+      does_not_establish:
+        - "canonical ontology or source-law adoption or rejection"
+        - "physical scale, locality, causality, or geometry"
+        - "global no-go or future source-extension impossibility"
+        - "downstream GR objects"
+    - object: "surviving P5-T03 through P5-T06 candidate-specific mathematics"
+      status: "accepted as proposal-only source-extension data within exact candidate scope"
+      authority_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+      supports_target: "P5-T08 source-dynamics integration"
+      does_not_establish:
+        - "intrinsic law selection or normalization"
+        - "local robustness"
+        - "physical ontology or geometry"
+  open_or_blocked_physical_targets:
+    - target: "source manifold M_src"
+      status: "blocked"
+      missing_burden_or_authority: "adopted local source structure, law selection, and characteristic data"
+      evidence_not_to_overread:
+        - "global amplitude flow and quantizer"
+        - "validator PASS"
+      next_lawful_route: "P5-T08 integration only; any reopening requires a new authorized source construction"
+    - target: "effective metric g_eff"
+      status: "blocked"
+      missing_burden_or_authority: "M_src, source-invariant causal structure, and reconstruction"
+      evidence_not_to_overread:
+        - "source-purity pass"
+        - "candidate-specific approximation bounds"
+      next_lawful_route: "none from the exact frozen route"
+    - target: "matter coupling, Einstein equations, and benchmark promotion"
+      status: "blocked"
+      missing_burden_or_authority: "all upstream derivation burdens and protected promotion authority"
+      evidence_not_to_overread:
+        - "scoped obstruction"
+        - "local freeze"
+        - "checkpoint commit"
+      next_lawful_route: "not unlocked"
+  forbidden_overread:
+    - "No validator, registry, handoff, generated derivative, or checkpoint is proof authority."
+    - "No local freeze becomes a program-wide rejection or future source-extension impossibility."
+
+validation_receipts:
+  task_local_validator_report: "research_control/tasks/RT-20260725-014/artifacts/source_dynamics_audit_validation_receipt_v1.json"
+  task_local_validator_report_hash: "497eebebbacdc7981819b1b05ac3a10810276041c45528b77ad78340e72ee7e7"
+  audit_artifact_hash: "f2f7d51db7eb2ebe8c7bb266d150a3a0d4f7f8bf1c0edcf9020cccc70973e394"
+  stress_artifact_hash: "6f3252768d3de6e8849a10bd3d8ad9cb90434be888226e7b383c1d3bdf79d231"
+  freeze_artifact_hash: "b1dd18f05c3920d2f5ca54f4c3a7a4d5012b2bb34db13c1d50505d9174f13ed3"
+  task_local_check_count: 40
+  task_local_failure_count: 0
+  stress_family_members_checked: 4
+  scratch_tex_build_status: "PASS"
+  validation_status: "PASS"
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1019
+    relationship_row_count: 5080
+    semantic_row_count: 1019
+    vault_row_count: 1019
+    local_cache_only_warning_count: 0
+  local_retrieval_refresh:
+    refresh_needed: false
+    refresh_performed: false
+    before_core_validation_status: "PASS"
+    before_freshness_status: "PASS"
+    before_local_retrieval_status: "PASS"
+    after_core_validation_status: "PASS"
+    after_freshness_status: "PASS"
+    after_local_retrieval_status: "PASS"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-V21-P5-T06-SOURCE-AMPLITUDE-RESOLUTION-COARSE-GRAINING-V1 --json"
+      query_type: "lookup"
+      query_text: "TEX-V21-P5-T06-SOURCE-AMPLITUDE-RESOLUTION-COARSE-GRAINING-V1"
+      returned_object_ids:
+        - "TEX-V21-P5-T06-SOURCE-AMPLITUDE-RESOLUTION-COARSE-GRAINING-V1"
+  contextual_queries_not_used_as_authority:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"source provenance audit reconstruction stress\" --limit 10 --json"
+      result: "Related historical audits and stress artifacts were navigational only and did not influence routing, premises, or claims."
+  failed_queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"P5-T07\" --limit 10 --json"
+      result: "FTS parser treated the hyphen as an operator; no result influenced routing or claims."
+  canonical_inspections:
+    - object_id: "TEX-V21-P5-T06-SOURCE-AMPLITUDE-RESOLUTION-COARSE-GRAINING-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260725-013/artifacts/source_amplitude_resolution_coarse_graining_v1.tex"
+      source_hash: "a798e69875603ec3d0f9202ea67de18fcbc3dabf1cb1a178713f8dde9aefd074"
+  required_source_path_inspection:
+    requested_path: "research_control/support_formalization/"
+    exists: false
+    disposition: "ordinary absent path; no premise or authority inferred"
+  authority_note: "Generated Obsidian, wiki, semantic, relationship, and .local retrieval surfaces are navigation or diagnostics only and are not authority."
+
+command_results:
+  - "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python research_control/tasks/RT-20260725-014/artifacts/validate_source_dynamics_audit.py --write-report --json | exit_code=0 | PASS checks=40 failures=0 family_members=4"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/build_pdf_derivatives.py --scratch research_control/tasks/RT-20260725-014/artifacts/source_dynamics_package_audit_v1.tex | exit_code=0 | PASS 4-page scratch PDF"
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 119 validated and atomically claimed the exact immutable P5-T07 route before consuming its one worker invocation."
+      - "The generation-118 governed checkpoint commit, clean repository, repo binding, branch, model effort, lease parity, and predecessor completion were verified before execution."
+      - "Memory preflight passed and the registered P5-T06 source plus companion canonical sources were inspected."
+  task_local_validator:
+    status: "PASS"
+    evidence:
+      - "All six P5 source hashes, artifact presence, four odd-power members, semigroup and reflection identities, attraction, coefficient relabeling, resolution relabeling, quantizer error, and boundary markers pass 40 deterministic checks."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Both required perspectives completed and the parent conflict review resolved all scope tensions without revision."
+      - "The fused result separates surviving candidate mathematics from the failed intrinsic-selection and geometry-support premise."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Repository, documentation, signal, claim-language, source-authority, generated-freshness, selected-test, and whitespace gates are required before checkpoint."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "One governed checkpoint remains to be invoked in generation 119."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Current frontier, compact frontier, task index, dependency graph, claim graph, and burden-status derivatives are required to be regenerated and checked."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory bootstrap and validate-only are required after source registration."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation is required before checkpoint."
+
+validators_run:
+  - "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python research_control/tasks/RT-20260725-014/artifacts/validate_source_dynamics_audit.py --write-report --json"
+  - "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python research_control/tasks/RT-20260725-014/artifacts/validate_source_dynamics_audit.py --check --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/build_pdf_derivatives.py --scratch research_control/tasks/RT-20260725-014/artifacts/source_dynamics_package_audit_v1.tex"
+  - ".venv/bin/python research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_renderer.py --write --json"
+  - ".venv/bin/python research_control/tasks/RT-20260721-009/artifacts/validate_v21_current_burden_status.py --write --json"
+  - ".venv/bin/python research_control/tasks/RT-20260721-009/artifacts/validate_v21_current_burden_status.py --check --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --check"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --check"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --write"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --check"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --json output/research_dependency_graph.json --markdown wiki/indexes/research_dependency_graph.md --dot output/research_dependency_graph.dot"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --check"
+  - ".venv/bin/python scripts/research_control/generate_claim_graph_v1.py --json output/claim_graph_v1.json"
+  - ".venv/bin/python scripts/research_control/generate_claim_graph_v1.py --check"
+  - ".venv/bin/python scripts/research_control/validate_claim_graph_v1.py --json"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --json-summary"
+  - ".venv/bin/python scripts/research_control/run_full_research_control_validation.py --json --tail-chars 2500"
+  - "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m unittest -v tests.test_research_control"
+  - ".venv/bin/python -m unittest discover -s tests"
+  - "git diff --check"
+
+documentation_impact:
+  required: true
+  status: "completed"
+  path: "research_control/tasks/RT-20260725-014/documentation_impact.yaml"
+  rationale: "The registered proposal-only audit TeX, parent fusion, compact receipt, decision, completion, handoff, local-freeze ledger update, and generated memory derivatives expose the scoped result and all nonconclusions."
+
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"
+  rationale: "P5-T07 found a scientific provenance and robustness obstruction owned by the P5 source-ontology route, not a shared project-system defect."
+
+next_handoff_id: "handoff-0874"
+selected_next_route:
+  route_id: "v21_p5_t08_integrate_source_dynamics_manuscript_and_milestone_decision"
+  route_label: "ontology-law-research-packet"
+  role_family: "ontology-formalizer@0.2.0"
+  worker_skill: "continue-research"
+  task_type: "v21_p5_t08_integrate_source_dynamics_manuscript_and_milestone_decision"
+  plan_task_id: "P5-T08"
+  target_derivation_milestone: "source_ontology"
+  milestone_burden: "Close the source-dynamics phase with a durable theorem-level synthesis."
+  strategy_id: "integrate_source_dynamics_scoped_obstruction_and_milestone_decision_v1"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  local_freeze_preserved: true
+  physics_promotion_authorized: false
+  next_action: "After the governed checkpoint, integrate the surviving source-dynamics mathematics, exact scoped obstruction, local freeze, and milestone decision without repairing or reopening the frozen route."
+  source_handoff: "research_control/handoffs/handoff-0874.yaml"
+
+next_recommended_action: "Run one governed checkpoint. Only after it commits may one fresh bounded P5-T08 Ontology Formalizer packet integrate the source-dynamics manuscript and milestone decision while preserving the local freeze and downstream blocks."
+verdict: "PASS_SOURCE_PURITY_WITH_PRECISE_LAW_SCALE_ROBUSTNESS_OBSTRUCTION_AND_LOCAL_GEOMETRY_ROUTE_FREEZE_READY_FOR_CHECKPOINT"

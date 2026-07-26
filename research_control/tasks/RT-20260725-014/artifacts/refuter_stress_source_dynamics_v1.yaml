@@ -1,0 +1,101 @@
+schema_id: "p5_t07_refuter_stress_v1"
+status: "draft/control"
+task_id: "RT-20260725-014"
+job_id: "AJ-RT-20260725-014-001"
+candidate_family: "V21-P5-T03-CUBIC-AMPLITUDE-SOURCE-DYNAMICS-V1"
+candidate_unchanged: true
+result_status: "PRECISE_SCOPED_OBSTRUCTION_AND_LOCAL_FREEZE"
+bridge_result_classification: "scoped_obstruction"
+obstruction_id: "OBST-P5T07-QAMP-INTRINSIC-LAW-SCALE-ROBUSTNESS-001"
+target_claim: "The unchanged one-mode source package intrinsically selects robust dynamics and resolution data sufficient to support geometry work."
+failed_premise: "No source-derived selector fixes the odd exponent, coefficient normalization, amplitude normalization, resolution scale, or off-family local dynamics."
+stress_cases:
+  - stress_id: "P5T07-STRESS-ODD-POWER-FAMILY"
+    perturbation: "replace the cubic exponent 3 by any odd exponent 2m+1 with m>=1"
+    exact_result: "Every member is a total odd attractive forward semiflow with the same unique stationary state and finite backward horizon."
+    disposition: "minimal_countermodel_to_unique_cubic_selection"
+  - stress_id: "P5T07-STRESS-AMPLITUDE-PARAMETER-RELABEL"
+    perturbation: "b=d a and lambda_prime=c lambda for c,d>0"
+    exact_result: "gamma_prime=gamma/(c d^(2m))"
+    disposition: "coefficient_is_not_intrinsic_without_normalization"
+  - stress_id: "P5T07-STRESS-RESOLUTION-RELABEL"
+    perturbation: "b=d a with resolution epsilon"
+    exact_result: "N_(d epsilon)(d a)=d N_epsilon(a)"
+    disposition: "resolution_must_transform_as_coordinate_data"
+  - stress_id: "P5T07-STRESS-SIGN-BOUNDARY"
+    perturbation: "gamma positive, zero, or negative"
+    exact_result: "positive is total attractive, zero is identity, negative has finite forward blow-up for nonzero states"
+    disposition: "total_nontrivial_attraction_selects_sign_not_exponent_or_scale"
+  - stress_id: "P5T07-STRESS-OFF-FAMILY-VARIATION"
+    perturbation: "source variations transverse to Q_amp"
+    exact_result: "the unchanged package defines no transverse generator or characteristic operator"
+    disposition: "robustness_not_established"
+  - stress_id: "P5T07-STRESS-ERROR-BOUNDS"
+    perturbation: "half-grid boundaries and coded trajectories"
+    exact_result: "epsilon/2, epsilon, 3epsilon/2, and 3epsilon/2 bounds survive"
+    disposition: "candidate_specific_bounds_survive"
+no_target_import_audit:
+  result: "pass"
+  explicit_target_import_found: false
+  explicit_process_import_found: false
+  checked_imports:
+    - "target topology or smooth atlas"
+    - "target metric or causal order"
+    - "proper time or detector semantics"
+    - "benchmark fit"
+    - "validator, registry, role, handoff, generated derivative, or checkpoint authority"
+  limitation: "Absence of target import is hygiene evidence only and is not positive geometry evidence."
+information_creation_audit:
+  result: "pass"
+  created_local_information: false
+  rationale: "The quantizer and decoder factor through one global amplitude and cannot add patch, characteristic, causal, or geometric data."
+refuter_obstruction_record:
+  obstruction_id: "OBST-P5T07-QAMP-INTRINSIC-LAW-SCALE-ROBUSTNESS-001"
+  target_claim: "Intrinsic and robust source-dynamics and reconstruction support for geometry from the unchanged P5 package."
+  target_milestone: "source_ontology"
+  failed_premise: "The current ontology and unchanged package do not derive a unique odd-power law, coefficient normalization, intrinsic resolution scale, or off-family local dynamics."
+  minimal_countermodel_available: true
+  countermodel_path: "research_control/tasks/RT-20260725-014/artifacts/source_dynamics_package_audit_v1.tex"
+  countermodel_scope: "source_extension_candidate"
+  certificate_gap: "missing law-selection, normalization, intrinsic-resolution, and local-variation provenance"
+  source_extension_repair_possible: "repair_possible"
+  global_no_go_claim_authorized: false
+  future_source_extension_impossibility_authorized: false
+  freeze_criteria_status:
+    freeze_decision: "locally_frozen"
+    decision_reason: "The completed construct-analysis-map-audit cycle shows that the exact unchanged one-mode route cannot supply intrinsic dynamics selection or local geometry-support data."
+    next_allowed_route: "none"
+  route_cycle_control:
+    cycle_family: "v21_p5_cubic_amplitude_to_geometry"
+    current_cycle_step: "p5_t07_audit_and_refuter_stress"
+    prior_related_tasks:
+      - "RT-20260725-003"
+      - "RT-20260725-007"
+      - "RT-20260725-008"
+      - "RT-20260725-010"
+      - "RT-20260725-012"
+      - "RT-20260725-013"
+    cycle_risk: "high"
+    orbit_avoidance_reason: "The counterfamily and relabeling formulas replace further qualitative restatement with an exact scoped obstruction and local freeze."
+    next_role_consequence: "ontology-formalizer@0.2.0 for P5-T08 negative-result integration, not same-route repair"
+  forbidden_conclusions:
+    - "canonical ontology or source-law adoption or rejection"
+    - "global no-go theorem"
+    - "future source-extension impossibility"
+    - "global theory rejection"
+    - "M_src or g_eff reconstruction"
+    - "matter coupling or Einstein equations"
+    - "benchmark promotion or completed derivation"
+surviving_content:
+  - "P5-T03 exact cubic-flow formulas as candidate-specific mathematics"
+  - "P5-T04 structural and patch-rigidity results within Q_amp"
+  - "P5-T05 background, mode, and stability results within Q_amp"
+  - "P5-T06 map typing, information-loss statements, and error bounds"
+blocked_content:
+  - "unique source derivation of cubic exponent"
+  - "intrinsic coefficient normalization"
+  - "intrinsic physical or geometric resolution scale"
+  - "off-family local robustness"
+  - "characteristic, causal, or geometry reconstruction"
+physics_promotion_authorized: false
+proof_authority: false

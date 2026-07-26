@@ -1,0 +1,263 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1in]{geometry}
+\usepackage[hidelinks]{hyperref}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}{Definition}
+\newcommand{\Qamp}{\mathcal Q_{\mathrm{amp}}}
+\newcommand{\Neps}{\mathsf N_\varepsilon}
+\newcommand{\Flow}{\Phi}
+
+\title{P5-T07 Source-Dynamics Package Audit and Refuter Stress}
+\author{The \AE ther-Flow Research Project}
+\date{2026-07-26}
+
+\begin{document}
+\maketitle
+
+\section*{Control status and verdict}
+
+This document is a task-local \emph{draft/control}, proposal-only audit and
+negative-result artifact.  It audits the exact, unchanged P5-T01 through
+P5-T06 package.  It does not edit canonical ontology, adopt or reject a source
+law, construct a physical scale, reconstruct a source manifold or effective
+metric, couple matter, derive Einstein equations, promote the exact-GR
+benchmark, claim proof authority, authorize publication, or complete the
+derivation.
+
+The package passes the textual no-target-import and no-information-creation
+audits within the inspected sources.  Its candidate-specific mathematics and
+explicit error bounds survive.  It fails the stronger premise that the
+unchanged package intrinsically selects a robust source dynamics and
+resolution scale sufficient to support geometry work.  The exact unchanged
+one-mode route is therefore \emph{locally frozen for geometry support}.  This
+is a scoped obstruction, not a global no-go theorem; conservative source extensions remain possible.
+
+\section{Fixed audited package}
+
+The audited source chain is held byte-for-byte fixed:
+\begin{enumerate}
+  \item the P5-T01 compact source-theory object and its one-dimensional
+  amplitude witness \(q_a=a\sin\theta_1\);
+  \item the P5-T02 continuous unital forward-monoid semantics;
+  \item the P5-T03 cubic generator
+  \[
+      \frac{da}{d\lambda}=-\gamma a^3,\qquad \gamma>0;
+  \]
+  \item the P5-T04 structural, patch-rigidity, and tangent results;
+  \item the P5-T05 background, mode, stability, and reconstruction-phase
+  obstruction;
+  \item the P5-T06 odd nearest-lattice quantizer, decoder, error ledger, and
+  rank/locality obstruction.
+\end{enumerate}
+No target atlas, target metric, causal order, proper time, detector semantics,
+benchmark fit, validator result, registry row, generated derivative, role, or
+handoff is used as a source-side premise.
+
+\section{Fresh mathematical stress payload}
+
+\begin{definition}[Odd-power stress family]
+For an integer \(m\geq1\) and \(\gamma>0\), define
+\[
+  X_{m,\gamma}(a)=-\gamma a^{2m+1}
+\]
+and
+\[
+  \Flow^{(m,\gamma)}_\lambda(a)
+  =
+  \frac{a}{\left(1+2m\gamma a^{2m}\lambda\right)^{1/(2m)}},
+  \qquad \lambda\geq0 .
+  \tag{1}
+\]
+The P5-T03 candidate is the member \(m=1\).
+\end{definition}
+
+\begin{theorem}[Odd-power nonselection counterfamily]
+\label{thm:counterfamily}
+Every \(m\geq1\) and \(\gamma>0\) in (1) gives a total continuous unital
+forward semiflow on \(\mathbb R\).  It is odd under \(a\mapsto-a\), has the
+unique stationary amplitude \(a=0\), strictly decreases \(|a|\) along every
+nonzero forward orbit, converges to zero polynomially, and has a finite
+backward horizon for every nonzero state.  Consequently the qualitative
+P5-T02 through P5-T05 requirements do not select the cubic exponent \(3\).
+\end{theorem}
+
+\begin{proof}
+Direct differentiation gives
+\[
+ \frac{d}{d\lambda}\Flow^{(m,\gamma)}_\lambda(a)
+ =-\gamma\left(\Flow^{(m,\gamma)}_\lambda(a)\right)^{2m+1}.
+\]
+Uniqueness for this smooth scalar vector field gives the semigroup law, which
+also follows by substituting (1) twice.  The denominator is positive for all
+\(\lambda\geq0\), so the forward action is total.  Oddness is immediate.
+For \(a\neq0\),
+\[
+ \frac{d}{d\lambda}\frac{a(\lambda)^2}{2}
+ =-\gamma a(\lambda)^{2m+2}<0,
+\]
+and (1) gives convergence to zero.  Backward continuation reaches a
+denominator zero at
+\(-1/(2m\gamma a^{2m})\).  The stationary equation has only \(a=0\).
+All conclusions hold for every \(m\), so none selects \(m=1\).
+\end{proof}
+
+\begin{proposition}[Relabeling law and coefficient nonidentifiability]
+\label{prop:relabel}
+Let \(b=d\,a\) and \(\lambda'=c\,\lambda\), with \(c,d>0\).  Then the
+odd-power generator becomes
+\[
+ \frac{db}{d\lambda'}
+ =-\gamma' b^{2m+1},
+ \qquad
+ \gamma'=\frac{\gamma}{c\,d^{2m}}.
+ \tag{2}
+\]
+Thus neither the numerical coefficient \(\gamma\) nor its separation from
+amplitude and monoid-parameter normalization is intrinsic to the unchanged
+package.
+\end{proposition}
+
+\begin{proof}
+Use \(db/d\lambda'=(d/c)\,da/d\lambda\) and \(a=b/d\).
+\end{proof}
+
+\begin{proposition}[Resolution covariance requires transforming resolution]
+\label{prop:resolution}
+For \(d>0\), the P5-T06 odd nearest-lattice quantizer satisfies
+\[
+   \mathsf N_{d\varepsilon}(d a)=d\,\mathsf N_\varepsilon(a).
+   \tag{3}
+\]
+Hence \(\varepsilon\) is covariant only as amplitude-coordinate data with
+\(\varepsilon'=d\varepsilon\).  Holding its numerical value fixed under an
+amplitude relabeling changes the coarse code and is not an intrinsic
+source-scale prescription.
+\end{proposition}
+
+\begin{proof}
+Insert \(da\) and \(d\varepsilon\) into
+\[
+ \mathsf N_\varepsilon(a)
+ =\varepsilon\,\operatorname{sgn}(a)
+ \left\lfloor |a|/\varepsilon+1/2\right\rfloor .
+\]
+The ratio and away-from-zero tie rule are unchanged.
+\end{proof}
+
+\section{Adversarial stress matrix}
+
+\begin{center}
+\begin{tabular}{p{0.18\linewidth}p{0.35\linewidth}p{0.36\linewidth}}
+\hline
+Stress & Exact result & Disposition\\
+\hline
+Source relabeling &
+Equation (2) changes \(\gamma\); equation (3) requires
+\(\varepsilon'=d\varepsilon\). &
+The form is covariant with transformed task-local data, but no intrinsic
+normalization or scale is derived.\\
+Parameter perturbation &
+Every \(\gamma>0\) is a total attractive forward flow; \(\gamma=0\) is the
+identity; \(\gamma<0\) blows up forward for nonzero amplitudes. &
+Total nontrivial attraction selects the sign sector, not the coefficient or
+odd exponent.\\
+Law perturbation &
+Theorem~\ref{thm:counterfamily} supplies every odd exponent \(2m+1\). &
+The cubic member is not uniquely selected by the advertised qualitative
+burdens.\\
+Boundary change &
+Relaxing total-forward action admits additional local branches; retaining it
+excludes \(\gamma<0\). &
+The forward-domain boundary is explicit and internally consistent, but it is
+a stipulated task-local selection.\\
+Phase change &
+Every odd-power member has only the zero stationary background and the same
+one-dimensional admitted tangent family. &
+The P5-T05 no-local-reconstruction result is robust across the stress family,
+but supplies no unique dynamics.\\
+Finite variation &
+Variations tangent to \(\Qamp\) are controlled; transverse source
+variations have no defined evolution in the package. &
+Off-family robustness cannot be established from the unchanged one-mode
+candidate.\\
+Map errors &
+The P5-T06 \(\varepsilon/2\), \(\varepsilon\),
+\(3\varepsilon/2\), and \(3\varepsilon/2\) bounds survive deterministic
+boundary and trajectory tests. &
+The bounds are valid source-amplitude statements and create no local or
+geometric information.\\
+Target import &
+No target metric, target causal order, proper time, detector semantics, or
+benchmark fit occurs in the inspected mathematical premises. &
+Textual source-purity pass only; absence of target import is not positive
+geometry evidence.\\
+Process authority &
+Validators, registries, handoffs, generated derivatives, and checkpoint
+status are excluded from the proof premises. &
+Operational PASS remains non-promotional.\\
+\hline
+\end{tabular}
+\end{center}
+
+\section{Provenance classification}
+
+The current canonical ontology does not derive the smooth source arena, the
+forward-action law, the cubic exponent, the coefficient normalization, or the
+resolution prescription.  P5-T01 through P5-T03 and P5-T06 therefore remain
+proposal-only new-primitive or source-extension data, while the theorems in
+P5-T04 through P5-T06 are derived only conditionally inside that task-local
+candidate.  No inspected item is a forbidden target import.  The overall
+status is \texttt{blocked\_adoption\_open\_continuation}.
+
+\section{Precise obstruction and freeze}
+
+The obstruction identifier is
+\[
+ \texttt{OBST-P5T07-QAMP-INTRINSIC-LAW-SCALE-ROBUSTNESS-001}.
+\]
+The failed premise is:
+
+\begin{quote}
+The unchanged P5-T01 through P5-T06 package supplies an intrinsic,
+source-relabeling-independent selection of the cubic generator, its
+coefficient, the amplitude-resolution scale, and enough off-family local
+variation data to support geometry work.
+\end{quote}
+
+Theorem~\ref{thm:counterfamily} and
+Propositions~\ref{prop:relabel}--\ref{prop:resolution} refute that premise
+within the exact source-extension candidate.  The P5-T04 patch-rigidity,
+P5-T05 reconstruction-phase, and P5-T06 rank/locality obstructions then
+preserve the downstream block: a global amplitude code cannot manufacture
+independent local data, a characteristic operator, a causal cone, or
+geometric structure.
+
+The exact unchanged route
+\[
+ \text{one global amplitude}
+ \longrightarrow
+ \text{cubic flow and fixed-resolution code}
+ \longrightarrow
+ \text{geometry support}
+\]
+is locally frozen.  The source-side flow formulas, structural theorems, and
+error bounds survive as candidate-specific draft/control mathematics.  A
+future conservative source extension may introduce independently justified
+local data, a law selector, normalization data, or a characteristic
+structure, but that would be a new bounded construction rather than repair
+inside this audit.
+
+\section*{Distance-to-GR and nonconclusions}
+
+This audit sharpens the source-ontology burden by adding a minimal
+counterfamily and a precise scoped obstruction.  It unlocks only P5-T08
+integration of the source-dynamics phase and milestone decision after a
+governed checkpoint.  It does not unlock \(M_{\mathrm{src}}\),
+\(g_{\mathrm{eff}}\), matter coupling, Einstein equations, benchmark
+promotion, or a Gate Chair verdict.  It does not prove that every future
+source extension fails and does not reject the global project.
+
+\end{document}

@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260725-013`
-- Latest handoff: `handoff-0873`
-- Current status: `p5_t06_source_amplitude_map_local_reconstruction_obstruction_pass_ready_for_checkpoint`
+- Active task: `RT-20260725-014`
+- Latest handoff: `handoff-0874`
+- Current status: `p5_t07_precise_scoped_obstruction_and_local_geometry_route_freeze_ready_for_checkpoint`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260725-013`
-- Latest research handoff: `handoff-0873`
-- Latest research next action: Run the one governed checkpoint for AJ-RT-20260725-013-001. Only after it commits may one fresh bounded P5-T07 Smuggling Auditor packet audit and refuter-stress the source dynamics and reconstruction package for target import, information creation, covariance and physical-scale overread, error-bound defects, and claim-boundary smuggling.
+- Latest research task: `RT-20260725-014`
+- Latest research handoff: `handoff-0874`
+- Latest research next action: Run the one governed checkpoint for AJ-RT-20260725-014-001. Only after it commits may one fresh bounded P5-T08 Ontology Formalizer packet integrate the surviving source-dynamics mathematics, scoped obstruction, local freeze, and milestone decision without repairing or reopening the frozen route.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p5_t07_audit_and_refuter_stress_source_dynamics_and_reconstruction_package`
-- Role family: `smuggling-auditor@0.2.0`
+- Route ID: `v21_p5_t08_integrate_source_dynamics_manuscript_and_milestone_decision`
+- Role family: `ontology-formalizer@0.2.0`
 - Target milestone: `source_ontology`
-- Milestone burden: Determine whether the package is genuinely source-derived and robust enough to support geometry work.
+- Milestone burden: Close the source-dynamics phase with a durable theorem-level synthesis.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `1a80639dab13da2b702ec24b11bfc96eba16f4bdc356fb4b9dacc694fd48ab42`
-- JSON SHA-256: `d5bfabc909acccbd3f0821ab7d49b989874c7fa5e153af01b8509aa593c379df`
+- YAML SHA-256: `33acb9f36765936ecbd0b2b9e1890a7254fc3b05b1ebd81f6fa1401b290ba24e`
+- JSON SHA-256: `849e8200144ecef3f3fb9c184f0e03255561ad94d02080c8d5f406825b2a5b4d`
 
 ## Authority Warning
 

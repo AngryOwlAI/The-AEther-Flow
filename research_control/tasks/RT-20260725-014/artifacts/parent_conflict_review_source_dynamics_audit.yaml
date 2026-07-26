@@ -1,0 +1,24 @@
+schema_id: "parent_child_conflict_review_v1"
+task_id: "RT-20260725-014"
+job_id: "AJ-RT-20260725-014-001"
+status: "resolved"
+resolution_rounds: 0
+child_outputs:
+  - execution_unit_id: "child_phys_math"
+    path: "research_control/tasks/RT-20260725-014/artifacts/child_phys_math_source_dynamics_audit.yaml"
+    status: "completed"
+  - execution_unit_id: "child_phys_phil"
+    path: "research_control/tasks/RT-20260725-014/artifacts/child_phys_phil_source_dynamics_audit.yaml"
+    status: "completed"
+tensions:
+  - tension_id: "TENSION-001"
+    mathematical_view: "The exact error bounds and semiflow formulas survive."
+    philosophical_view: "Survival inside a stipulated candidate does not establish intrinsic source derivation."
+    resolution: "Record both: preserve the candidate-specific mathematics and locally freeze only the stronger unchanged geometry-support route."
+  - tension_id: "TENSION-002"
+    mathematical_view: "The odd-power family is an infinite counterfamily."
+    philosophical_view: "It is not a countermodel to every possible future source law."
+    resolution: "Scope the obstruction to law selection by the current ontology and exact package; forbid global no-go language."
+unresolved_conflicts: []
+final_disposition: "precise_scoped_obstruction_and_local_freeze_with_open_future_source_extension"
+claim_boundary_preserved: true
