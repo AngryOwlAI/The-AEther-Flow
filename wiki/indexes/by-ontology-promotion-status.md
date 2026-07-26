@@ -416,6 +416,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V21-P5-T06-SOURCE-AMPLITUDE-RESOLUTION-COARSE-GRAINING-V1` `research_control/tasks/RT-20260725-013/artifacts/source_amplitude_resolution_coarse_graining_v1.tex`
 - `TEX-V21-P5-T07-SOURCE-DYNAMICS-PACKAGE-AUDIT-V1` `research_control/tasks/RT-20260725-014/artifacts/source_dynamics_package_audit_v1.tex`
 - `TEX-V21-P5-T08-SOURCE-DYNAMICS-MILESTONE-SYNTHESIS-V1` `research_control/tasks/RT-20260726-001/artifacts/source_dynamics_milestone_synthesis_v1.tex`
+- `TEX-V21-P6-T01-CAUSAL-CHARACTERISTIC-TARGET-V1` `research_control/tasks/RT-20260726-002/artifacts/causal_characteristic_target_v1.tex`
 
 ## superseded
 

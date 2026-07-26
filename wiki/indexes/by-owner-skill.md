@@ -760,6 +760,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-V21-P5-T07-SOURCE-DYNAMICS-AUDIT-RECEIPT-V1` `wiki/markdown/md-v21-p5-t07-source-dynamics-audit-receipt-v1.md`
 - `WIKI-MD-V21-P5-T08-PARENT-FUSION-SOURCE-DYNAMICS-MILESTONE-V1` `wiki/markdown/md-v21-p5-t08-parent-fusion-source-dynamics-milestone-v1.md`
 - `WIKI-MD-V21-P5-T08-SOURCE-DYNAMICS-MILESTONE-RECEIPT-V1` `wiki/markdown/md-v21-p5-t08-source-dynamics-milestone-receipt-v1.md`
+- `WIKI-MD-V21-P6-T01-CAUSAL-CHARACTERISTIC-TARGET-RECEIPT-V1` `wiki/markdown/md-v21-p6-t01-causal-characteristic-target-receipt-v1.md`
+- `WIKI-MD-V21-P6-T01-PARENT-FUSION-CAUSAL-CHARACTERISTIC-TARGET-V1` `wiki/markdown/md-v21-p6-t01-parent-fusion-causal-characteristic-target-v1.md`
 - `WIKI-MD-VALIDATOR-OPERATOR-WORKFLOW-PUBLICATION-BRIEF` `wiki/markdown/md-validator-operator-workflow-publication-brief.md`
 - `WIKI-PDF-LEGACY-ONTOLOGY-AETHER-FLOW-CONSISTENCY` `wiki/pdf/pdf-legacy-ontology-aether-flow-consistency.md`
 - `WIKI-PDF-LEGACY-ONTOLOGY-AETHER-FLOW-DYNAMICS` `wiki/pdf/pdf-legacy-ontology-aether-flow-dynamics.md`
@@ -1194,6 +1196,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-V21-P5-T06-SOURCE-AMPLITUDE-RESOLUTION-COARSE-GRAINING-V1` `wiki/tex/tex-v21-p5-t06-source-amplitude-resolution-coarse-graining-v1.md`
 - `WIKI-TEX-V21-P5-T07-SOURCE-DYNAMICS-PACKAGE-AUDIT-V1` `wiki/tex/tex-v21-p5-t07-source-dynamics-package-audit-v1.md`
 - `WIKI-TEX-V21-P5-T08-SOURCE-DYNAMICS-MILESTONE-SYNTHESIS-V1` `wiki/tex/tex-v21-p5-t08-source-dynamics-milestone-synthesis-v1.md`
+- `WIKI-TEX-V21-P6-T01-CAUSAL-CHARACTERISTIC-TARGET-V1` `wiki/tex/tex-v21-p6-t01-causal-characteristic-target-v1.md`
 
 ## obsidian-wiki
 
@@ -1669,6 +1672,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-V21-P5-T07-SOURCE-DYNAMICS-AUDIT-RECEIPT-V1` `research_control/tasks/RT-20260725-014/artifacts/source_dynamics_audit_receipt.md`
 - `MD-V21-P5-T08-PARENT-FUSION-SOURCE-DYNAMICS-MILESTONE-V1` `research_control/tasks/RT-20260726-001/artifacts/parent_fusion_notes_source_dynamics_milestone.md`
 - `MD-V21-P5-T08-SOURCE-DYNAMICS-MILESTONE-RECEIPT-V1` `research_control/tasks/RT-20260726-001/artifacts/source_dynamics_milestone_receipt.md`
+- `MD-V21-P6-T01-CAUSAL-CHARACTERISTIC-TARGET-RECEIPT-V1` `research_control/tasks/RT-20260726-002/artifacts/causal_characteristic_target_receipt.md`
+- `MD-V21-P6-T01-PARENT-FUSION-CAUSAL-CHARACTERISTIC-TARGET-V1` `research_control/tasks/RT-20260726-002/artifacts/parent_fusion_notes_p6_t01_causal_characteristic_target.md`
 
 ## tex-wiki
 
@@ -2090,6 +2095,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V21-P5-T06-SOURCE-AMPLITUDE-RESOLUTION-COARSE-GRAINING-V1` `research_control/tasks/RT-20260725-013/artifacts/source_amplitude_resolution_coarse_graining_v1.tex`
 - `TEX-V21-P5-T07-SOURCE-DYNAMICS-PACKAGE-AUDIT-V1` `research_control/tasks/RT-20260725-014/artifacts/source_dynamics_package_audit_v1.tex`
 - `TEX-V21-P5-T08-SOURCE-DYNAMICS-MILESTONE-SYNTHESIS-V1` `research_control/tasks/RT-20260726-001/artifacts/source_dynamics_milestone_synthesis_v1.tex`
+- `TEX-V21-P6-T01-CAUSAL-CHARACTERISTIC-TARGET-V1` `research_control/tasks/RT-20260726-002/artifacts/causal_characteristic_target_v1.tex`
 
 ## user-modified-project
 

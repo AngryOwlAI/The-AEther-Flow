@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-07-26T07:41:26Z`
-- Source fingerprint: `0983b89628ddbbfe01f6d267f8f9c6c3327976fb6fa47a450edcdee7ca55793e`
-- Nodes: `22276`
-- Edges: `73125`
+- Generated from tracked state as of: `2026-07-26T09:33:36Z`
+- Source fingerprint: `67b064fc37bcc5eed2a4231d9c43722d9c0e45aa5ee2730ea33b271fe00fdcd1`
+- Nodes: `22323`
+- Edges: `73175`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 1111 |
+| `completion_yaml` | 1112 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 875 |
+| `handoff_yaml` | 876 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,32 +33,32 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 8 |
-| `agent_job` | `support_only` | 1111 |
+| `agent_job` | `support_only` | 1112 |
 | `artifact` | `canonical_source` | 86 |
-| `artifact` | `support_only` | 11302 |
-| `blocked_burden` | `blocked` | 4520 |
-| `claim_boundary` | `support_only` | 1068 |
-| `draft_control_candidate` | `draft_control` | 744 |
-| `draft_control_candidate` | `proposal_only` | 118 |
-| `draft_control_candidate` | `science_draft` | 66 |
+| `artifact` | `support_only` | 11324 |
+| `blocked_burden` | `blocked` | 4534 |
+| `claim_boundary` | `support_only` | 1069 |
+| `draft_control_candidate` | `draft_control` | 746 |
+| `draft_control_candidate` | `proposal_only` | 119 |
+| `draft_control_candidate` | `science_draft` | 67 |
 | `frozen_negative` | `frozen_negative` | 137 |
 | `gate_chair_verdict` | `human_gated` | 32 |
-| `handoff` | `support_only` | 875 |
-| `human_gated_object` | `human_gated` | 529 |
+| `handoff` | `support_only` | 876 |
+| `human_gated_object` | `human_gated` | 530 |
 | `ledger_row` | `accepted_scoped` | 6 |
 | `ledger_row` | `blocked` | 4 |
 | `ledger_row` | `frozen_negative` | 1 |
 | `ledger_row` | `human_gated` | 1 |
 | `ledger_row` | `science_draft` | 3 |
-| `obstruction` | `blocked` | 84 |
+| `obstruction` | `blocked` | 85 |
 | `obstruction` | `rejected` | 4 |
 | `source_extension_evidence_precondition` | `source_extension_evidence` | 38 |
 | `source_ontology_object` | `canonical_source` | 27 |
 | `source_ontology_object` | `rejected` | 50 |
-| `source_ontology_object` | `support_only` | 351 |
+| `source_ontology_object` | `support_only` | 352 |
 | `task` | `human_gated` | 29 |
 | `task` | `science_draft` | 32 |
-| `task` | `support_only` | 1050 |
+| `task` | `support_only` | 1051 |
 
 ## Frontier Table
 
@@ -66,7 +66,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | --- | --- | --- | --- |
 | Resp_lc | `ledger:resp_lc` | `ledger_row` | `accepted_scoped` | Xi_X^R adopted only as admissible source-extension data for Resp_lc continuation through S_X^+; old S_X selector obstruction remains valid and downstream M_src |
 | M_src | `ledger:m_src` | `ledger_row` | `accepted_scoped` | Updated by RT-20260614-134 Phase 9 Gate Chair review to record scoped M_src adoption while g_eff matter coupling Einstein equations benchmark promotion and comp |
-| scoped g_eff | `ledger:g_eff` | `ledger_row` | `accepted_scoped` | Gate Chair adopted g_eff^{GSC-cand}(E;G^beta,T_src(E)) only as scoped source-extension g_eff object. No canonical ontology edit no MetricData(E) adoption no sou |
+| scoped g_eff | `ledger:g_eff` | `ledger_row` | `accepted_scoped` | P6-T01 adds a metric-free target response-support composition theorem exact proposal-only two-site nonselection theorem and Gate B obligation record while prese |
 | B_E^{rec} | `object:b_e_rec` | `source_extension_evidence_precondition` | `source_extension_evidence` | Constructs the recovery-bridge candidate map on a declared finite/local source family with explicit bottom branches. |
 | BridgeCert | `object:bridgecert` | `source_extension_evidence_precondition` | `source_extension_evidence` | Required frontier object exposed in completion text: BridgeCert. |
 | SEI-MC criteria | `object:sei_mc_criteria` | `draft_control_candidate` | `draft_control` | Required frontier object exposed in completion text: SEI-MC criteria. |
@@ -163,9 +163,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 ## Route Continuity
 
-- Active task: `RT-20260726-001`
-- Latest handoff: `handoff-0875`
-- Handoff path: `research_control/handoffs/handoff-0875.yaml`
-- Next action: Run the one governed checkpoint for AJ-RT-20260726-001-001. Only after it commits may one fresh bounded P6-T01 Ontology Formalizer packet define the causal influence or characteristic target and test the exact conditional P5 response without inferring a physical cone or metric.
+- Active task: `RT-20260726-002`
+- Latest handoff: `handoff-0876`
+- Handoff path: `research_control/handoffs/handoff-0876.yaml`
+- Next action: Run the one governed checkpoint for AJ-RT-20260726-002-001. Only after it commits may one fresh bounded P6-T02 Candidate Constructor packet construct or precisely obstruct one source-derived propagation relation principal polynomial or causal order without reopening the frozen P5-diagonal inference or importing the target GR cone.
 
 This graph is navigational support only; inspect the cited sources before using any claim.

@@ -1,0 +1,123 @@
+schema_id: "v21_p6_gate_b_readiness_checklist_v1"
+checklist_id: "P6T01-GATE-B-READINESS-V1"
+task_id: "RT-20260726-002"
+plan_task_id: "P6-T01"
+status: "draft/control"
+gate_name: "Gate B source-derived causal and characteristic readiness"
+overall_result: "NOT_READY_PRECISE_SCOPED_OBSTRUCTION"
+physical_gate_passed: false
+metric_scale_deferred: true
+
+status_vocabulary:
+  - "PASS"
+  - "DEFINED_CONDITIONALLY"
+  - "PARTIAL"
+  - "FAIL_MISSING_SOURCE_LAW"
+  - "FAIL_MISSING_PROVENANCE"
+  - "FAIL_MISSING_OPERATIONAL_MEANING"
+  - "NOT_EVALUATED"
+  - "DEFERRED_TO_LATER_WORK_ITEM"
+
+fields:
+  metric_free_target_definition:
+    status: "PASS"
+    evidence: "P6T01-SOURCE-INFLUENCE-CHARACTERISTIC-TARGET-V1"
+    note: "The target uses source regions, response blocks, principal symbols, and hyperbolicity data without a metric premise."
+  source_localization_provenance:
+    status: "FAIL_MISSING_PROVENANCE"
+    evidence: "P5T08-CONDITIONAL-P6-RESPONSE-INPUT-V1"
+    note: "The current input has one global amplitude and no derived region system."
+  local_state_restriction_and_gluing:
+    status: "FAIL_MISSING_SOURCE_LAW"
+    evidence: "P5T08-CONDITIONAL-P6-RESPONSE-INPUT-V1"
+    note: "No source-derived local state assignment, restriction, or gluing law is supplied."
+  local_source_evolution:
+    status: "PARTIAL"
+    evidence: "P5T08-THM-CONDITIONAL-TANGENT-RESPONSE"
+    note: "A conditional global scalar flow exists; a local source evolution law does not."
+  block_resolved_linear_response:
+    status: "PARTIAL"
+    evidence: "P6T01-THM-DIAGONAL-RESPONSE-NONSELECTION"
+    note: "The P5 diagonal response is exact, but transverse blocks depend on proposal-only extension data."
+  formal_influence_relation:
+    status: "DEFINED_CONDITIONALLY"
+    evidence: "P6T01-SOURCE-INFLUENCE-CHARACTERISTIC-TARGET-V1"
+    note: "The relation is precise whenever the required local response datum exists."
+  response_composition:
+    status: "PASS"
+    evidence: "P6T01-THM-RESPONSE-SUPPORT-COMPOSITION"
+    note: "Support of a response product is contained in relational composition."
+  characteristic_operator:
+    status: "FAIL_MISSING_SOURCE_LAW"
+    evidence: "P6T01-PROP-PRECISE-SCOPED-OBSTRUCTION"
+    note: "No source-derived differential operator or characteristic extractor is supplied."
+  principal_symbol_or_polynomial:
+    status: "FAIL_MISSING_SOURCE_LAW"
+    evidence: "P6T01-PROP-PRECISE-SCOPED-OBSTRUCTION"
+    note: "No source-derived principal symbol or polynomial is supplied."
+  hyperbolicity:
+    status: "NOT_EVALUATED"
+    evidence: "none"
+    note: "Hyperbolicity cannot be evaluated before a principal polynomial exists."
+  orientation:
+    status: "FAIL_MISSING_SOURCE_LAW"
+    evidence: "P6T01-PROP-PRECISE-SCOPED-OBSTRUCTION"
+    note: "The P5 parameter is not physical time and no source orientation law is derived."
+  nondegeneracy:
+    status: "NOT_EVALUATED"
+    evidence: "none"
+    note: "No characteristic candidate exists on which to test nondegeneracy."
+  covariance_or_naturality:
+    status: "FAIL_MISSING_SOURCE_LAW"
+    evidence: "P6T01-PROP-PRECISE-SCOPED-OBSTRUCTION"
+    note: "No source morphism law for the target is supplied."
+  robustness:
+    status: "FAIL_MISSING_SOURCE_LAW"
+    evidence: "P6T01-PROP-PRECISE-SCOPED-OBSTRUCTION"
+    note: "The response relation is not shown stable under admissible source variations."
+  operational_signal_meaning:
+    status: "FAIL_MISSING_OPERATIONAL_MEANING"
+    evidence: "P6T01-PROP-PRECISE-SCOPED-OBSTRUCTION"
+    note: "Formal influence has not been tied to source-defined signals or detectors."
+  common_signal_structure:
+    status: "NOT_EVALUATED"
+    evidence: "none"
+    note: "No independently defined signal sectors exist for a universality test."
+  conformal_class:
+    status: "DEFERRED_TO_LATER_WORK_ITEM"
+    evidence: "P6-T03"
+    note: "P6-T01 does not infer a conformal metric class."
+  metric_scale:
+    status: "DEFERRED_TO_LATER_WORK_ITEM"
+    evidence: "P6-T04"
+    note: "Scale, clocks, rods, and measured duration are later burdens."
+  target_metric_import_guard:
+    status: "PASS"
+    evidence: "P6T01-SOURCE-INFLUENCE-CHARACTERISTIC-TARGET-V1"
+    note: "No target metric component, GR null cone, proper time, or benchmark behavior is a premise."
+
+controls:
+  positive:
+    status: "PASS"
+    fixture: "P6T01-TWO-SITE-CUBIC-COUPLING-CONTROLS-V1 with c>0"
+    expected: "formal influence detected but physical gate remains failed"
+  degenerate:
+    status: "PASS"
+    fixture: "P6T01-TWO-SITE-CUBIC-COUPLING-CONTROLS-V1 with c=0"
+    expected: "cross influence absent with same diagonal P5 data"
+  acausal:
+    status: "PASS"
+    fixture: "synthetic orientation-inconsistent relation"
+    expected: "orientation gate fails"
+  multi_cone:
+    status: "PASS"
+    fixture: "two inequivalent unselected hyperbolicity branches"
+    expected: "uniqueness and common-signal gates fail"
+
+completion_boundary:
+  p6_t01_target_precise: true
+  p6_t01_physical_reconstruction_complete: false
+  p6_t02_dependency_ready_after_checkpoint: true
+  physical_causal_structure_available: false
+  effective_geometry_available: false
+  physics_promotion_authorized: false

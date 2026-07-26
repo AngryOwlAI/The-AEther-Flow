@@ -1,0 +1,23 @@
+schema_id: "parent_child_output_v1"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+task_id: "RT-20260726-002"
+findings:
+  - finding_id: "MATH-001"
+    status: "accepted"
+    summary: "A metric-free formal influence relation is the support relation of source-local linear response blocks; it does not require or imply a metric."
+  - finding_id: "MATH-002"
+    status: "accepted"
+    summary: "The response cocycle implies support inclusion under relational composition, while equality can fail by cancellation."
+  - finding_id: "MATH-003"
+    status: "accepted"
+    summary: "The exact two-site cubic family preserves the P5 diagonal flow and symmetric tangent response for every coupling c but changes cross-site influence between c=0 and c>0."
+  - finding_id: "MATH-004"
+    status: "accepted"
+    summary: "The two-site calculation proves nonselection by the unchanged P5 data; it does not prove that every source extension lacks a characteristic structure."
+unresolved_mathematical_obligations:
+  - "Construct or obstruct one source-derived localization and propagation law."
+  - "Derive a principal symbol or order relation and test hyperbolicity, orientation, covariance, robustness, and universality."
+claim_boundary_preserved: true
+physics_promotion_authorized: false

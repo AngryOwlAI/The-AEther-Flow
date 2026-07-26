@@ -1,0 +1,158 @@
+schema_id: "v21_p6_t01_source_influence_characteristic_spec_v1"
+spec_id: "P6T01-SOURCE-INFLUENCE-CHARACTERISTIC-TARGET-V1"
+task_id: "RT-20260726-002"
+plan_task_id: "P6-T01"
+status: "draft/control"
+result_status: "target_defined_with_precise_scoped_nonselection_obstruction"
+target_derivation_milestone: "effective_metric_g_eff"
+milestone_burden: "Define the first physical effective-geometry burden without importing a metric."
+target_kind: "metric_free_source_influence_and_characteristic_target"
+
+source_local_response_datum:
+  tuple: "(B,Q_src,res,glue,Phi_src,DPhi_src,{V_i(q)})"
+  components:
+    localization_base:
+      symbol: "B"
+      requirement: "source-defined regions or finite source-site index"
+      supplied_by_current_ontology: false
+      target_atlas: false
+    local_state_assignment:
+      symbol: "Q_src(U)"
+      requirement: "admissible source states on each source region"
+      supplied_by_current_ontology: false
+    restriction_and_gluing:
+      symbols:
+        - "res"
+        - "glue"
+      requirement: "consistent restriction and declared gluing or descent"
+      supplied_by_current_ontology: false
+    source_evolution:
+      symbol: "Phi_src_tau"
+      requirement: "source-local evolution with source-side parameter provenance"
+      supplied_by_current_ontology: false
+      supplied_conditionally_by_p5_at_global_amplitude_level: true
+    linearized_response:
+      symbol: "L_(tau,q)=DPhi_src_tau(q)"
+      requirement: "block-resolved response on independently variable local perturbations"
+      supplied_by_current_ontology: false
+      supplied_conditionally_by_p5_at_global_amplitude_level: true
+    tangent_blocks:
+      symbol: "T_q Q_src = direct_sum_i V_i(q)"
+      requirement: "finite test interface or a justified local analogue"
+      supplied_by_current_ontology: false
+
+formal_influence_relation:
+  relation: "i R_(tau,q) j iff L_(tau,q)^(ji) is nonzero"
+  interpretation: "some perturbation in source block i has nonzero linear response in source block j"
+  physical_causality_claimed: false
+  metric_required: false
+  target_metric_allowed_as_premise: false
+  gr_null_cone_allowed_as_premise: false
+
+infinitesimal_influence_relation:
+  relation: "i R^X_q j iff the ji block of DX(q) is nonzero"
+  precondition: "a source-derived local generator X and tangent blocks"
+  supplied_by_current_ontology: false
+
+characteristic_target:
+  differential_operator_branch:
+    preconditions:
+      - "source-local differential equation E(q)=0"
+      - "source-defined derivative and covector syntax"
+      - "admissible square reduced principal symbol sigma_q(xi)"
+    characteristic_set: "Char_q^*={xi != 0 : det sigma_q(xi)=0}"
+  principal_polynomial_branch:
+    preconditions:
+      - "source-derived scalar principal polynomial P_q(xi)"
+      - "source-derived hyperbolicity covector h"
+    characteristic_set: "Char_q^*={xi != 0 : P_q(xi)=0}"
+    hyperbolicity_component: "Gamma_h(P_q)"
+    dual_propagation_candidate: "the justified dual of Gamma_h(P_q)"
+  supplied_by_current_ontology: false
+  physical_cone_claimed: false
+  conformal_class_claimed: false
+  metric_scale_claimed: false
+
+causal_qualification_obligations:
+  - "source provenance"
+  - "orientation"
+  - "local consistency and composition"
+  - "hyperbolicity when a principal polynomial is used"
+  - "nondegeneracy"
+  - "covariance or naturality under source morphisms"
+  - "robustness under admissible source variations"
+  - "operational signal meaning"
+  - "one common structure across admissible signal sectors"
+  - "no target metric or benchmark import"
+
+theorems:
+  - theorem_id: "P6T01-THM-RESPONSE-SUPPORT-COMPOSITION"
+    statement: "R_(tau+sigma,q) is a subset of R_(sigma,Phi_tau(q)) composed with R_(tau,q)."
+    hypotheses:
+      - "finite tangent-block response datum"
+      - "linear response cocycle"
+    equality_claimed: false
+    reason_equality_not_claimed: "intermediate block contributions may cancel"
+  - theorem_id: "P6T01-THM-DIAGONAL-RESPONSE-NONSELECTION"
+    statement: "The two-site c=0 and c>0 extensions have identical diagonal P5 evolution and symmetric tangent response but different cross-site influence relations."
+    scope: "proposal-only two-site source-extension controls sharing the exact unchanged P5 diagonal restriction"
+    global_no_go_claimed: false
+  - theorem_id: "P6T01-PROP-PRECISE-SCOPED-OBSTRUCTION"
+    statement: "The current ontology and unchanged P5 input do not derive a unique region-resolved influence relation or characteristic structure."
+    implication: "blocked_adoption_open_continuation"
+    global_no_go_claimed: false
+
+two_site_countermodel_family:
+  family_id: "P6T01-TWO-SITE-CUBIC-COUPLING-CONTROLS-V1"
+  status: "proposal-only source-extension data"
+  equations:
+    da: "-gamma*a^3+c*(b-a)"
+    db: "-gamma*b^3+c*(a-b)"
+  domain: "gamma>0, c>=0"
+  diagonal_invariant: true
+  diagonal_restriction: "dx/dtau=-gamma*x^3"
+  diagonal_response: "Dphi_tau(x0)=(1+2*gamma*tau*x0^2)^(-3/2)"
+  exact_response_matrix: "Dphi_tau(x0)/2 * [[1+exp(-2*c*tau),1-exp(-2*c*tau)],[1-exp(-2*c*tau),1+exp(-2*c*tau)]]"
+  symmetric_response_independent_of_c: true
+  cross_site_influence:
+    c_zero: false
+    c_positive_and_tau_positive: true
+  current_ontology_derives_sites_or_c: false
+  candidate_adopted: false
+
+controls:
+  positive:
+    fixture: "two-site family with c>0 and tau>0"
+    expected_result: "formal cross-site influence detected"
+    physical_gate_result: "FAIL_PROVENANCE_AND_OPERATIONAL_MEANING"
+  degenerate:
+    fixture: "two-site family with c=0"
+    expected_result: "no cross-site influence with unchanged diagonal P5 response"
+  acausal:
+    fixture: "synthetic relation inconsistent with an asserted source-derived orientation"
+    expected_result: "FAIL_ORIENTATION_CONSISTENCY"
+    applies_to_two_site_family_as_physical_claim: false
+  multi_cone:
+    fixture: "two inequivalent hyperbolicity branches with no source selector"
+    expected_result: "FAIL_UNIQUENESS_AND_COMMON_SIGNAL_UNIVERSALITY"
+
+disposition:
+  p6_t01_work_item: "completed_with_precise_scoped_obstruction"
+  adoption_status: "blocked_adoption_open_continuation"
+  exact_locally_frozen_inference: "unique region influence inferred solely from unchanged P5 diagonal flow and tangent response"
+  next_plan_task_id: "P6-T02"
+  next_role_family: "candidate-constructor@0.2.0"
+  next_allowed_route: "candidate_constructor"
+
+authority:
+  target_atlas_imported: false
+  target_metric_imported: false
+  gr_null_cone_imported: false
+  canonical_ontology_modified: false
+  source_law_adopted: false
+  physical_causality_established: false
+  effective_metric_reconstructed: false
+  historical_scoped_g_eff_status_changed: false
+  physics_promotion_authorized: false
+  global_no_go_claimed: false
+  future_source_extension_continuation: "open"

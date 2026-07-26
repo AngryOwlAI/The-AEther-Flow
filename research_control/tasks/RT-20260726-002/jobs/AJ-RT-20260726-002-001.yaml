@@ -1,0 +1,484 @@
+job_id: "AJ-RT-20260726-002-001"
+task_id: "RT-20260726-002"
+decision_id: "DDR-20260726-002"
+role_id: "ontology-formalizer"
+role_version: "0.2.0"
+execution_role_ref: "ontology-formalizer@0.2.0--RT-20260726-002"
+status: "completed"
+validation_status: "PASS"
+requires_human_gate: false
+created_at: "2026-07-26T09:33:36Z"
+started_at: "2026-07-26T09:33:36Z"
+completed_at: "2026-07-26T09:33:36Z"
+completion_path: "research_control/tasks/RT-20260726-002/jobs/completions/AJC-AJ-RT-20260726-002-001.yaml"
+objective: "Execute only v21 P6-T01: define a precise metric-free source influence and characteristic target, source provenance and operational obligations, positive degenerate acausal and multi-cone controls, and test the exact conditional P5 response against that target without importing or inferring a target metric."
+target_derivation_milestone: "effective_metric_g_eff"
+milestone_burden: "Define the first physical effective-geometry burden without importing a metric."
+route_label: "ontology-law-research-packet"
+route_reason: "Handoff-0875, committed P5-T08 checkpoint 8ad0c556ef08ece8483758646b1eacd66838ded9, v21 P6-T01, and immutable generation 121 select one bounded metric-free target formalization and precise-obstruction packet."
+immutable_route_sha256: "9bea3f705849d1dcce7cad65aafa260c0ea930f963e71b07f17a25054b827599"
+plan_task_id: "P6-T01"
+recommendation_ids:
+  - "V21-R17"
+  - "V21-R22"
+  - "V21-R63"
+  - "V21-R67"
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 121
+  passes_consumed: 111
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:121"
+  handoff_token: "6c58425801828c8c9206a8f794e99f45b1ba46cdb9dea062"
+  relay_claim_token: "e1e24365a3d931abfcc097b648b99266511ed871ba4c2a59"
+  route_work_item_id: "P6-T01"
+  route_worker_skill: "continue-research"
+  route_sha256: "9bea3f705849d1dcce7cad65aafa260c0ea930f963e71b07f17a25054b827599"
+  worker_skill: "continue-research"
+  worker_invocation_count: 1
+
+mathematical_decisiveness_contract:
+  contract_path: "research_control/design/mathematical_decisiveness_completion_contract.md"
+  schema_path: ".agents/schemas/PHYSICS_COMPLETION_DECISIVENESS_SCHEMA.md"
+  enforcement_mode: "hard_failure"
+  active_after: "2026-06-21T02:32:39Z"
+
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "physics"
+  payload_type: "theorem"
+  candidate_family: "V21-P6-METRIC-FREE-SOURCE-INFLUENCE-CHARACTERISTIC-TARGET-V1"
+  assumption_delta:
+    - "The exact registered P5-T08 conditional response and obstruction input remains unchanged."
+    - "No source localization law, local evolution law, characteristic operator, orientation, physical signal semantics, metric, or source-to-target bridge is adopted."
+    - "A source-local response datum and characteristic target are introduced only as draft/control requirement definitions."
+    - "The two-site system and its coupling c are proposal-only finite source-extension controls, not current-ontology consequences."
+    - "The countermodel comparison holds the P5 diagonal flow and symmetric tangent response fixed while varying only transverse source-extension response."
+    - "The historical scoped g_eff object remains unchanged and is not treated as a physical Lorentzian metric."
+    - "No target atlas, metric, GR null cone, proper time, detector semantics, benchmark behavior, generated derivative, registry metadata, role authority, or validator result is admitted as a source premise."
+  materiality_basis: "P6-T01 adds the first explicit metric-free source influence and characteristic target, proves response-support composition, and proves by an exact two-site response family that the unchanged P5 diagonal data do not select a unique region-resolved influence relation."
+  payload_details:
+    theorem_ids:
+      - "P6T01-THM-RESPONSE-SUPPORT-COMPOSITION"
+      - "P6T01-THM-DIAGONAL-RESPONSE-NONSELECTION"
+    obstruction_id: "OBST-P6T01-P5-DIAGONAL-INFLUENCE-NONSELECTION-001"
+    obstruction_scope: "unique region-resolved source influence inferred solely from the unchanged P5 diagonal flow and tangent response"
+    global_no_go_claimed: false
+  source_basis:
+    - "TEX-V21-P5-T08-SOURCE-DYNAMICS-MILESTONE-SYNTHESIS-V1"
+    - "research_control/tasks/RT-20260726-001/artifacts/p6_geometry_input_contract_v1.yaml"
+    - "TEX-ONTOLOGY-AETHER-FLOW-FOUNDATIONS"
+    - "TEX-ONTOLOGY-AETHER-FLOW-DYNAMICS"
+    - "TEX-ONTOLOGY-AETHER-FLOW-GEOMETRY"
+    - "research_control/tasks/RT-20260614-216/artifacts/245_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_METRICFORMASSIGN_GEFF_CANDIDATE_OR_OBSTRUCTION.tex"
+    - "research_control/tasks/RT-20260614-222/artifacts/251_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_GEFF_CANDIDATE_SCOPED_SOURCE_EXTENSION_ADOPTION_GATE_CHAIR_REVIEW.tex"
+    - "registries/METRIC_USE_LEDGER.csv"
+    - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+    - "research_control/design/gr_derivation_burden_map.md"
+  expected_artifact_paths:
+    - "research_control/tasks/RT-20260726-002/artifacts/causal_characteristic_target_v1.tex"
+    - "research_control/tasks/RT-20260726-002/artifacts/source_influence_characteristic_spec_v1.yaml"
+    - "research_control/tasks/RT-20260726-002/artifacts/gate_b_readiness_checklist_v1.yaml"
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+
+family_freeze_admission:
+  schema_id: "family_freeze_route_admission_v1"
+  policy_id: "family_freeze_reopening_policy_v1"
+  route_id: "v21_p6_t01_metric_free_target_and_p5_diagonal_nonselection"
+  family_id: "V21-P5-T03-CUBIC-AMPLITUDE-SOURCE-DYNAMICS-V1"
+  family_identity_sha256: "51883bdaaf3feaa9c5338959832d465a0d141da09fc85ba7af8053aee165243b"
+  assumption_sha256es:
+    - "96f48102287fae9f7815823d158a2ba8c6a6e9b0f9e1ae2b6d3a72bfbabd82bd"
+  route_kind: "precise_obstruction"
+  detected_match_basis: []
+  reopening:
+    requested: false
+    class: "none"
+  authority_limits:
+    local_family_freeze_preserved: true
+    global_no_go_claimed: false
+    automatic_candidate_adoption: false
+    theorem_truth_inferred: false
+    ontology_modified: false
+    physics_promotion_authorized: false
+
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  expected_durable_outputs:
+    physics:
+      - "registered metric-free source influence and characteristic target"
+      - "response-support composition and exact two-site diagonal-response nonselection theorems"
+      - "machine-readable Gate B readiness checklist and precise scoped obstruction"
+    project_system:
+      - "task-local deterministic validation receipt"
+      - "compact source and claim-boundary receipt"
+      - "standard control records and generated memory derivatives"
+  acceptance_criteria:
+    physics:
+      - "target is expressible without target metric or GR null-cone premises"
+      - "formal influence is separated from physical causality"
+      - "two-site response calculation preserves exact P5 diagonal data and distinguishes cross-site response"
+      - "positive degenerate acausal and multi-cone controls are explicit"
+    project_system:
+      - "task-local validation and scratch TeX build pass"
+      - "claim-language source-authority documentation signal and research-control checks pass"
+      - "one governed checkpoint records the bounded transaction"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: false
+    exception_id: ""
+    evidence_path: ""
+    evidence_sha256: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0875"
+  source_handoff_path: "research_control/handoffs/handoff-0875.yaml"
+  source_handoff_sha256: "fd9cbbc8c28d44179a33c1ac63631d47bb9843cfeb113e8294d33d712dbe2a70"
+  selected_plan_task_id: "P6-T01"
+  guard_outcome: "below_threshold"
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  parent:
+    execution_unit_id: "parent"
+    perspective: "physicist_mathematician_philosopher"
+    responsibilities:
+      - "hold P5-T08 canonical ontology and historical scoped g_eff boundaries fixed"
+      - "define formal influence and conditional characteristic targets without a metric"
+      - "derive response-support composition and the exact two-site nonselection theorem"
+      - "fuse mathematical target control cases and physical-interpretation boundaries"
+  children:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260726-002/artifacts/child_phys_math_p6_t01_causal_characteristic_target.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260726-002/artifacts/child_phys_phil_p6_t01_causal_characteristic_target.yaml"
+      status: "completed"
+  conflict_policy:
+    review_path: "research_control/tasks/RT-20260726-002/artifacts/parent_conflict_review_p6_t01_causal_characteristic_target.yaml"
+    max_resolution_rounds: 2
+    require_parallel_child_revision: true
+    unresolved_conflict_status: "blocked"
+  fusion_policy:
+    fusion_notes_path: "research_control/tasks/RT-20260726-002/artifacts/parent_fusion_notes_p6_t01_causal_characteristic_target.md"
+    fused_output_path: "research_control/tasks/RT-20260726-002/artifacts/causal_characteristic_target_v1.tex"
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+    final_output_replaces_old_single_role_artifact: true
+
+allowed_read_paths:
+  - "SOUL.md"
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - ".agents/roles/physics/ontology-formalizer.v0.2.0.md"
+  - ".agents/schemas/**"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  - "research_control/design/**"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0875.yaml"
+  - "research_control/handoffs/handoff-0875.md"
+  - "research_control/tasks/RT-20260726-001/**"
+  - "research_control/tasks/RT-20260614-216/**"
+  - "research_control/tasks/RT-20260614-222/**"
+  - "ontology/tex/aether_flow_foundations.tex"
+  - "ontology/tex/aether_flow_dynamics.tex"
+  - "ontology/tex/aether_flow_geometry.tex"
+  - "registries/**"
+
+allowed_write_paths:
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_burden_status_migration_receipt.json"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status.md"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_validation.json"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_compact_receipt.json"
+  - "research_control/tasks/RT-20260726-002/**"
+  - "research_control/handoffs/handoff-0876.yaml"
+  - "research_control/handoffs/handoff-0876.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/PDF_DERIVATIVE_REGISTRY.csv"
+  - "registries/PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "registries/TEX_SOURCE_REGISTRY.csv"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/pdf/**"
+  - "wiki/tex/**"
+
+allowed_generated_paths:
+  - ".local/**"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_burden_status_migration_receipt.json"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status.md"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_validation.json"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_compact_receipt.json"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/pdf/**"
+  - "wiki/tex/**"
+
+forbidden_paths:
+  - "ontology/**"
+  - "manuscripts/**"
+  - "legacy_ontology/**"
+  - "html/**"
+  - "implementations_plans/**"
+  - ".agents/roles/**"
+  - ".codex/skills/**"
+  - "registries/METRIC_USE_LEDGER.csv"
+  - "research_control/tasks/RT-20260726-001/**"
+  - "research_control/tasks/RT-20260614-216/**"
+  - "research_control/tasks/RT-20260614-222/**"
+
+allowed_source_classes:
+  - "science_draft"
+  - "task_local_target_formalization"
+  - "task_local_theorem"
+  - "task_local_countermodel"
+  - "task_local_gate_b_checklist"
+  - "task_local_precise_obstruction"
+  - "project_control"
+  - "registry"
+  - "role_contract"
+  - "generated_memory_derivative"
+
+forbidden_source_classes:
+  - "canonical_ontology_write"
+  - "benchmark_promotion"
+  - "physics_claim_promotion"
+  - "source_law_adoption"
+  - "candidate_reconstruction"
+  - "physical_ontology_adoption"
+  - "physical_time_scale_or_locality_claim"
+  - "target_atlas_or_metric_import"
+  - "target_gr_null_cone_import"
+  - "physical_causality_or_characteristic_claim"
+  - "positive_geometry_claim"
+  - "M_src_adoption"
+  - "g_eff_adoption_or_scope_expansion"
+  - "matter_coupling_or_Einstein_equations"
+  - "gate_chair_verdict"
+  - "completed_derivation_claim"
+  - "global_theory_rejection"
+  - "future_source_extension_impossibility"
+  - "generated_derivative_authority"
+  - "proof_publication_or_push"
+
+approved_commands:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/tasks/RT-20260726-001/artifacts/source_dynamics_milestone_synthesis_v1.tex --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"effective metric g_eff characteristic influence relation P6\" --limit 10 --json"
+  - "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python research_control/tasks/RT-20260726-002/artifacts/validate_causal_characteristic_target.py --write-report --json"
+  - "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python research_control/tasks/RT-20260726-002/artifacts/validate_causal_characteristic_target.py --check --json"
+  - "PATH=/Users/alex.omegapy/texlive/2026/bin/universal-darwin:$PATH .venv/bin/python .codex/skills/project-memory-system/scripts/build_pdf_derivatives.py --scratch research_control/tasks/RT-20260726-002/artifacts/causal_characteristic_target_v1.tex"
+  - ".venv/bin/python research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_renderer.py --write --json"
+  - ".venv/bin/python research_control/tasks/RT-20260721-009/artifacts/validate_v21_current_burden_status.py --write --json"
+  - ".venv/bin/python research_control/tasks/RT-20260721-009/artifacts/validate_v21_current_burden_status.py --check --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --check"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --check"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --write"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --check"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --json output/research_dependency_graph.json --markdown wiki/indexes/research_dependency_graph.md --dot output/research_dependency_graph.dot"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --check"
+  - ".venv/bin/python scripts/research_control/generate_claim_graph_v1.py --json output/claim_graph_v1.json"
+  - ".venv/bin/python scripts/research_control/generate_claim_graph_v1.py --check"
+  - ".venv/bin/python scripts/research_control/validate_claim_graph_v1.py --json"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --json-summary"
+  - ".venv/bin/python scripts/research_control/run_full_research_control_validation.py --json --tail-chars 2500"
+  - "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m unittest -v tests.test_research_control"
+  - ".venv/bin/python -m unittest discover -s tests"
+  - "git diff --check"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260726-002-001"
+
+required_validators:
+  - "memory_preflight"
+  - "validate_causal_characteristic_target"
+  - "latex_scratch_build"
+  - "source_hash_and_target_definition_checks"
+  - "response_support_composition_review"
+  - "two_site_diagonal_response_nonselection_checks"
+  - "gate_b_control_and_no_target_import_review"
+  - "classify_project_changes"
+  - "collect_project_improvement_signals"
+  - "validate_documentation_impact"
+  - "validate_claim_language"
+  - "validate_research_control"
+  - "run_full_research_control_validation"
+  - "bootstrap_memory_system"
+  - "checkpoint_research_transaction"
+
+expected_outputs:
+  - "research_control/tasks/RT-20260726-002/artifacts/causal_characteristic_target_v1.tex"
+  - "research_control/tasks/RT-20260726-002/artifacts/source_influence_characteristic_spec_v1.yaml"
+  - "research_control/tasks/RT-20260726-002/artifacts/gate_b_readiness_checklist_v1.yaml"
+  - "research_control/tasks/RT-20260726-002/artifacts/child_phys_math_p6_t01_causal_characteristic_target.yaml"
+  - "research_control/tasks/RT-20260726-002/artifacts/child_phys_phil_p6_t01_causal_characteristic_target.yaml"
+  - "research_control/tasks/RT-20260726-002/artifacts/parent_conflict_review_p6_t01_causal_characteristic_target.yaml"
+  - "research_control/tasks/RT-20260726-002/artifacts/parent_fusion_notes_p6_t01_causal_characteristic_target.md"
+  - "research_control/tasks/RT-20260726-002/artifacts/causal_characteristic_target_receipt.md"
+  - "research_control/tasks/RT-20260726-002/artifacts/causal_characteristic_target_validation_receipt_v1.json"
+  - "research_control/tasks/RT-20260726-002/artifacts/validate_causal_characteristic_target.py"
+  - "research_control/tasks/RT-20260726-002/jobs/completions/AJC-AJ-RT-20260726-002-001.yaml"
+  - "research_control/handoffs/handoff-0876.yaml"
+  - "research_control/handoffs/handoff-0876.md"
+
+claim_boundary: "Formalize only a task-local draft/control metric-free source influence and characteristic target, response-support composition theorem, exact proposal-only two-site diagonal-response nonselection countermodel and theorem, Gate B readiness checklist, and precise scoped obstruction. Do not edit or adopt canonical ontology or a source law; interpret formal influence as physical causality; adopt the two-site controls; import target coordinates a GR null cone a Lorentzian metric proper time detector benchmark or matter semantics; reconstruct M_src or unscoped g_eff; expand the historical scoped g_eff status; couple matter; derive Einstein equations; promote the benchmark; publish; push; claim completed derivation; globally reject the theory; or declare future source extensions impossible."
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1025
+    relationship_row_count: 5117
+    semantic_row_count: 1025
+    vault_row_count: 1025
+    local_cache_only_warning_count: 0
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: true
+    refresh_performed: true
+    before_core_validation_status: "PASS"
+    before_freshness_status: "WARN"
+    before_local_retrieval_status: "WARN"
+    before_local_cache_only_warning_count: 9
+    after_core_validation_status: "PASS"
+    after_freshness_status: "PASS"
+    after_local_retrieval_status: "PASS"
+    after_local_cache_only_warning_count: 0
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/tasks/RT-20260726-001/artifacts/source_dynamics_milestone_synthesis_v1.tex --json"
+      query_type: "lookup"
+      query_text: "research_control/tasks/RT-20260726-001/artifacts/source_dynamics_milestone_synthesis_v1.tex"
+      returned_object_ids:
+        - "TEX-V21-P5-T08-SOURCE-DYNAMICS-MILESTONE-SYNTHESIS-V1"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"effective metric g_eff characteristic influence relation P6\" --limit 10 --json"
+      query_type: "search"
+      query_text: "effective metric g_eff characteristic influence relation P6"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "TEX-V21-P5-T08-SOURCE-DYNAMICS-MILESTONE-SYNTHESIS-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260726-001/artifacts/source_dynamics_milestone_synthesis_v1.tex"
+      source_hash: "a2b9c6670cdb0e09ca2e19ff30f71d9bb954e3ab2fc73a5c9727a2df10db93aa"
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  excluded_generated_returns:
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      reason: "Generated mutable frontier navigation result; excluded from canonical returns and did not provide a scientific premise."
+    - object_id: "MD-RESEARCH-CONTROL-TASK-INDEX"
+      reason: "Generated noncanonical navigation result; excluded from canonical returns and did not influence routing or claims."
+  failed_queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"P6-T01 characteristic target\" --limit 10 --json"
+      result: "FTS parser treated the hyphen as a column operator; no result influenced routing or claims."
+  authority_note: "Generated Obsidian, wiki, semantic, relationship, task-index, and .local retrieval surfaces are navigation or diagnostics only and are not authority."
+
+claim_boundary_id: "CB-V21-P6-T01-CAUSAL-CHARACTERISTIC-TARGET-001"
+documentation_impact_id: "DI-RT-20260726-002-001"
+completion_id: "AJC-AJ-RT-20260726-002-001"
+stop_conditions:
+  - "stop before any canonical ontology edit source-law adoption physical-causality claim or historical scoped g_eff expansion"
+  - "stop if the target requires a target metric component or GR null cone as a premise"
+  - "stop if the two-site controls cannot be kept proposal-only and distinct from physical spacetime"
+  - "stop if a theorem requires an unregistered source premise"
+  - "stop on source-hash repository branch lease reasoning-effort or allowlist mismatch"
+  - "stop on validation checkpoint or exact-path residue failure"
+  - "do not publish push or claim completed derivation"

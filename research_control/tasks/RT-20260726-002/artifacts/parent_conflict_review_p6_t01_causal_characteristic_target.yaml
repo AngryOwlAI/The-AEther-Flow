@@ -1,0 +1,36 @@
+schema_id: "parent_child_conflict_review_v1"
+conflict_review_id: "PCR-RT-20260726-002-001"
+task_id: "RT-20260726-002"
+job_id: "AJ-RT-20260726-002-001"
+parent_execution_unit_id: "parent"
+mode: "parent_child_parallel_synthesis"
+decomposition_version: "0.1.0"
+status: "resolved"
+reviewed_outputs:
+  - "research_control/tasks/RT-20260726-002/artifacts/child_phys_math_p6_t01_causal_characteristic_target.yaml"
+  - "research_control/tasks/RT-20260726-002/artifacts/child_phys_phil_p6_t01_causal_characteristic_target.yaml"
+resolved_conflicts:
+  - conflict_id: "CONFLICT-001"
+    type: "terminology"
+    severity: "nonblocking"
+    summary: "A response-support relation could be called causal before physical qualification."
+    resolution: "Use formal influence for the mathematical relation and reserve causal for Gate B-qualified structures."
+  - conflict_id: "CONFLICT-002"
+    type: "claim_boundary"
+    severity: "nonblocking"
+    summary: "Principal-symbol and hyperbolicity definitions could be read as construction of those objects."
+    resolution: "Type them as target definitions with explicit missing source-law preconditions and no positive characteristic claim."
+  - conflict_id: "CONFLICT-003"
+    type: "scope"
+    severity: "nonblocking"
+    summary: "The exact two-site family could be read as a selected physical model."
+    resolution: "Retain it only as proposal-only finite source-extension countermodel data proving P5 nonselection."
+  - conflict_id: "CONFLICT-004"
+    type: "status"
+    severity: "nonblocking"
+    summary: "P6-T01 completion could be confused with Gate B readiness."
+    resolution: "Complete the formalization work item while recording Gate B NOT_READY_PRECISE_SCOPED_OBSTRUCTION."
+resolution_rounds: 1
+unresolved_conflicts: []
+claim_boundary_preserved: true
+physics_promotion_authorized: false

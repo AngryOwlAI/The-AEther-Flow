@@ -1,0 +1,330 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[hidelinks]{hyperref}
+
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{remark}{Remark}
+\newcommand{\Qsrc}{\mathcal Q_{\mathrm{src}}}
+\newcommand{\Rel}{\mathsf R}
+\newcommand{\Char}{\operatorname{Char}}
+\newcommand{\supp}{\operatorname{supp}}
+
+\title{Metric-Free Source Influence and Characteristic Target\\
+\large P6-T01 registered draft/control formalization}
+\author{The AEther-Flow Research Project}
+\date{2026-07-26}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This registered draft/control manuscript executes v21 work item P6-T01.  It
+defines a metric-free target for source-local influence, characteristic data,
+and later causal qualification; proves a response-support composition
+theorem; and gives an exact two-site countermodel family showing that the
+unchanged P5 scalar flow and its diagonal tangent response do not select a
+unique region-resolved influence relation.  The target is precise, but the
+current ontology does not derive the localization, local evolution,
+characteristic-extraction, orientation, operational, universality, or
+robustness laws needed to realize it physically.  The result is therefore
+\texttt{blocked\_adoption\_open\_continuation}, with P6-T02 permitted to
+construct or obstruct one source-derived propagation structure.  No target
+metric, GR null cone, physical causal cone, effective metric, source-law
+adoption, or downstream promotion is supplied.
+\end{abstract}
+
+\section{Authority and source boundary}
+
+The canonical ontology sources remain
+\texttt{ontology/tex/aether\_flow\_foundations.tex},
+\texttt{aether\_flow\_dynamics.tex}, and
+\texttt{aether\_flow\_geometry.tex}.  The geometry manuscript is explicitly a
+target-side exact-GR dictionary and states that no source-to-congruence or
+source-to-metric bridge is supplied.  Its metric, null cones, proper time,
+observer fields, and benchmark equations are therefore prohibited as premises
+of the present source-side formalization.
+
+P5-T08 supplies only the proposal-only one-amplitude family
+\(\mathcal Q_{\mathrm{amp}}\), its conditional cubic forward flow
+\[
+ \phi_\tau(x)=\frac{x}{\sqrt{1+2\gamma\tau x^2}},
+ \qquad \gamma>0,\quad \tau\geq0,
+\]
+the exact diagonal tangent response
+\[
+ D\phi_\tau(x)=(1+2\gamma\tau x^2)^{-3/2},
+\]
+and scoped obstruction data.  The parameter \(\tau\) is not identified with
+physical time.  The scoped historical
+\(g_{\mathrm{eff}}^{\mathrm{GSC\mbox{-}cand}}\) record remains exactly within
+its declared source-extension status and is not a physical Lorentzian metric
+or a premise here.
+
+\section{Metric-free target}
+
+\begin{definition}[Source-local response datum]
+\label{def:datum}
+A \emph{source-local response datum} is a tuple
+\[
+ \mathfrak C_{\mathrm{src}}=
+ (\mathfrak B,\Qsrc,\operatorname{res},\operatorname{glue},
+ \Phi_{\mathrm{src}},D\Phi_{\mathrm{src}},\{V_i(q)\}_{i\in I}),
+\]
+with the following roles.
+\begin{enumerate}
+  \item \(\mathfrak B\) is a source-defined localization base or finite region
+  index set \(I\).  It is not a target spacetime atlas.
+  \item \(\Qsrc(U)\) gives admissible source states on a source region \(U\),
+  with declared restriction and gluing operations.
+  \item \(\Phi_{\mathrm{src},\tau}\) is a declared local source evolution and
+  \(D\Phi_{\mathrm{src},\tau}(q)\) its linearized response.  The parameter and its
+  composition law must be derived or explicitly proposed on the source side.
+  \item At a finite test state \(q\), the tangent data decompose as
+  \(T_q\Qsrc=\bigoplus_{i\in I}V_i(q)\).  This finite block form is a test
+  interface; it is not asserted to exist in the current ontology.
+\end{enumerate}
+No metric, norm, angle, target coordinate, or GR causal structure occurs in
+this definition.
+\end{definition}
+
+\begin{definition}[Formal influence relation]
+\label{def:influence}
+For a datum in Definition~\ref{def:datum}, let
+\[
+ L_{\tau,q}=D\Phi_{\mathrm{src},\tau}(q),\qquad
+ L_{\tau,q}^{\,ji}:V_i(q)\longrightarrow
+ V_j(\Phi_{\mathrm{src},\tau}q)
+\]
+be its block response.  Define
+\[
+ i\;\Rel_{\tau,q}\;j
+ \quad\Longleftrightarrow\quad
+ L_{\tau,q}^{\,ji}\neq0.
+\]
+Thus \(i\Rel_{\tau,q}j\) means that some infinitesimal source perturbation in
+block \(i\) has nonzero linear response in block \(j\).  This is a
+\emph{formal source influence} relation.  It is not yet physical causality.
+\end{definition}
+
+\begin{definition}[Infinitesimal and characteristic targets]
+\label{def:characteristic}
+If a source generator \(X\) exists, its infinitesimal influence relation is
+defined from the nonzero blocks of \(DX(q)\).  If, in addition, a source-local
+differential equation \(\mathcal E(q)=0\) of order \(m\) and an admissible
+square reduced principal symbol \(\sigma_q(\xi)\) are source-derived, define
+\[
+ \Char_q^*=
+ \{\xi\neq0:\det\sigma_q(\xi)=0\}.
+\]
+Equivalently, a source-derived scalar principal polynomial
+\(P_q(\xi)\) may define \(\Char_q^*=\{P_q=0\}\).  If \(P_q\) is hyperbolic
+with respect to a source-derived covector \(h\), its hyperbolicity component
+\(\Gamma_h(P_q)\) and the appropriate dual propagation cone are eligible
+\emph{characteristic candidates}.  Their orientation, branch selection,
+nondegeneracy, covariance, robustness, and operational signal meaning remain
+separate obligations.
+\end{definition}
+
+\begin{remark}[Causal qualification]
+The word \emph{causal} is reserved for a formal influence or characteristic
+candidate that also passes the Gate B obligations: source provenance,
+orientation, local consistency, hyperbolicity where applicable,
+nondegeneracy, naturality, robustness, operational signal meaning, and
+single-structure universality across admissible signal sectors.  Metric scale
+is intentionally deferred.  A GR null cone or target metric cannot satisfy
+these obligations by being copied into source notation.
+\end{remark}
+
+\section{Response-support composition}
+
+\begin{theorem}[P6T01-THM-RESPONSE-SUPPORT-COMPOSITION]
+\label{thm:composition}
+Assume a finite source-local response datum and the response cocycle
+\[
+ L_{\tau+\sigma,q}
+ =L_{\sigma,\Phi_{\mathrm{src},\tau}q}\,L_{\tau,q}.
+\]
+Then
+\[
+ \Rel_{\tau+\sigma,q}
+ \subseteq
+ \Rel_{\sigma,\Phi_{\mathrm{src},\tau}q}\circ\Rel_{\tau,q}.
+\]
+In words, every nonzero block of a composed response has at least one
+intermediate block through which both component responses are nonzero.
+Equality need not hold because different intermediate contributions can
+cancel.
+\end{theorem}
+
+\begin{proof}
+The \(ki\) block of the cocycle is
+\[
+ L_{\tau+\sigma,q}^{\,ki}
+ =\sum_{j\in I}
+ L_{\sigma,\Phi_{\mathrm{src},\tau}q}^{\,kj}
+ L_{\tau,q}^{\,ji}.
+\]
+If the left side is nonzero, at least one summand is nonzero.  For that
+intermediate \(j\), both factors are nonzero, so
+\(i\Rel_{\tau,q}j\) and
+ \(j\Rel_{\sigma,\Phi_{\mathrm{src},\tau}q}k\).  This proves the inclusion.  The reverse
+inclusion can fail by cancellation and is not asserted.
+\end{proof}
+
+\section{Exact two-site nonselection countermodel}
+
+\begin{definition}[Proposal-only two-site extension family]
+\label{def:twosite}
+For \(\gamma>0\) and \(c\geq0\), consider the source-side finite system
+\[
+\begin{aligned}
+ \dot a&=-\gamma a^3+c(b-a),\\
+ \dot b&=-\gamma b^3+c(a-b).
+\end{aligned}
+\tag{1}\label{eq:twosite}
+\]
+The two sites and the coupling \(c\) are proposal-only source-extension data
+used as a finite countermodel family.  They are not derived from or adopted
+by the current ontology.
+\end{definition}
+
+\begin{theorem}[P6T01-THM-DIAGONAL-RESPONSE-NONSELECTION]
+\label{thm:nonselection}
+For every \(c\geq0\), the diagonal \(a=b=x\) is invariant under
+\eqref{eq:twosite}, and its restricted evolution is exactly
+\(\dot x=-\gamma x^3\), the P5 cubic candidate.  Along the diagonal solution
+\(x(\tau)=\phi_\tau(x_0)\), the two-site tangent response is
+\[
+ \mathcal R_c(\tau;x_0)
+ =
+ D\phi_\tau(x_0)\,
+ \frac12
+ \begin{pmatrix}
+  1+e^{-2c\tau} & 1-e^{-2c\tau}\\
+  1-e^{-2c\tau} & 1+e^{-2c\tau}
+ \end{pmatrix}.
+\tag{2}\label{eq:response}
+\]
+Consequently:
+\begin{enumerate}
+  \item the diagonal response on the symmetric perturbation \((1,1)\) is
+  \(D\phi_\tau(x_0)(1,1)\) for every \(c\);
+  \item when \(c=0\), both cross-site response blocks vanish;
+  \item when \(c>0\) and \(\tau>0\), both cross-site response blocks are
+  strictly positive.
+\end{enumerate}
+Thus the exact P5 scalar evolution and diagonal tangent response are
+compatible with distinct region-resolved influence relations.  They do not
+select a unique one.
+\end{theorem}
+
+\begin{proof}
+Substituting \(a=b=x\) into \eqref{eq:twosite} cancels the coupling terms and
+gives \(\dot x=-\gamma x^3\).  The Jacobian along the diagonal is
+\[
+ A_c(\tau)=
+ -3\gamma x(\tau)^2 I+
+ cK,\qquad
+ K=
+ \begin{pmatrix}-1&1\\1&-1\end{pmatrix}.
+\]
+The scalar multiple of \(I\) commutes with \(K\) at all parameter values.
+Moreover,
+\[
+ \exp\!\left(-\int_0^\tau3\gamma x(s)^2\,ds\right)
+ =D\phi_\tau(x_0),
+\]
+while \(K\) has eigenvalue \(0\) on \((1,1)\) and eigenvalue \(-2\) on
+\((1,-1)\).  Therefore the fundamental response is
+\(D\phi_\tau(x_0)e^{c\tau K}\), which is exactly
+\eqref{eq:response}.  The three consequences follow immediately.
+\end{proof}
+
+\begin{proposition}[P6T01-PROP-PRECISE-SCOPED-OBSTRUCTION]
+\label{prop:obstruction}
+The current ontology and unchanged P5 input do not derive a unique
+region-resolved influence relation, characteristic operator, principal
+polynomial, hyperbolicity cone, time orientation, or operational causal
+structure.  In particular, Theorem~\ref{thm:nonselection} blocks the exact
+route that would infer a unique local influence relation solely from the P5
+diagonal flow and tangent response.
+\end{proposition}
+
+\begin{proof}
+The \(c=0\) and \(c>0\) members have the same restricted P5 flow and the same
+diagonal response, but different cross-site influence relations.  Therefore
+those P5 data do not select a unique local relation.  The remaining listed
+objects require additional source definitions and laws not present in the
+input.  This conclusion is scoped to the unchanged P5 data and the displayed
+finite extensions; it does not rule out conservative source extensions or
+prove a global no-go theorem.
+\end{proof}
+
+\section{Controls and Gate B}
+
+The task-local Gate B checklist records four required controls.
+\begin{enumerate}
+  \item \textbf{Positive influence control:} \(c>0\) makes cross-site formal
+  influence detectable, while failing source-provenance and physical-
+  interpretation gates because the sites and \(c\) were proposed for the
+  control.
+  \item \textbf{Degenerate control:} \(c=0\) preserves the same diagonal P5
+  response but has no cross-site influence.
+  \item \textbf{Acausal control:} a synthetic relation that violates an
+  asserted source-derived orientation must fail orientation consistency.  It
+  is a test fixture, not a claim that \eqref{eq:twosite} is physically
+  acausal.
+  \item \textbf{Multi-cone control:} two inequivalent hyperbolicity branches
+  with no source selector must fail uniqueness and common-signal
+  universality.
+\end{enumerate}
+
+The metric-free target definition, response-support theorem, controls, and
+no-target-import check pass at P6-T01.  Gate B as a physical reconstruction
+gate does not pass: localization provenance, restriction and gluing, local
+source law, characteristic extraction, orientation, hyperbolicity,
+naturality, robustness, operational signal meaning, and universality are
+absent or untested.  Scale remains a later burden by design.
+
+\section{Disposition and next bounded route}
+
+P6-T01 is complete as a target formalization with a precise scoped
+nonselection obstruction.  Adoption remains blocked and same-milestone
+continuation remains open:
+\[
+\texttt{blocked\_adoption\_open\_continuation}.
+\]
+This is not a global no-go theorem.
+The exact branch ``infer a unique region influence relation from the
+unchanged P5 diagonal response'' is locally frozen.  P6-T02 may instead make
+one bounded Candidate Constructor attempt to supply a source-derived
+propagation relation, principal polynomial, characteristic order, or a new
+precise obstruction.  Such a packet must add source-side localization or law
+content and cannot reopen the frozen inference by relabeling it.
+
+\section{Explicit nonclaims}
+
+This manuscript does not:
+\begin{itemize}
+  \item edit, adopt, reject, or modify canonical ontology or a source law;
+  \item identify \(\tau\) as physical time or the two-site family as physical
+  spacetime;
+  \item construct or adopt a physical causal relation, characteristic cone,
+  conformal class, \(M_{\mathrm{src}}\), or unscoped \(g_{\mathrm{eff}}\);
+  \item alter the protected scoped status of the historical
+  \(g_{\mathrm{eff}}^{\mathrm{GSC\mbox{-}cand}}\) record;
+  \item import target coordinates, a GR null cone, a Lorentzian metric,
+  proper time, detector semantics, matter coupling, or Einstein equations;
+  \item prove a global no-go theorem, reject the program, or close future
+  source extensions;
+  \item promote the exact-GR benchmark or create proof, Gate Chair,
+  publication, push, or completed-derivation authority.
+\end{itemize}
+
+\end{document}

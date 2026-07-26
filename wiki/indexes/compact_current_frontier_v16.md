@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260726-001`
-- Latest handoff: `handoff-0875`
-- Current status: `p5_t08_theorem_level_synthesis_precise_source_ontology_obstruction_and_conditional_p6_input_ready_for_checkpoint`
+- Active task: `RT-20260726-002`
+- Latest handoff: `handoff-0876`
+- Current status: `p6_t01_metric_free_target_response_composition_and_two_site_nonselection_obstruction_ready_for_checkpoint`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260726-001`
-- Latest research handoff: `handoff-0875`
-- Latest research next action: Run the one governed checkpoint for AJ-RT-20260726-001-001. Only after it commits may one fresh bounded P6-T01 Ontology Formalizer packet define the causal influence or characteristic target and test the exact conditional P5 response without inferring a physical cone or metric.
+- Latest research task: `RT-20260726-002`
+- Latest research handoff: `handoff-0876`
+- Latest research next action: Run the one governed checkpoint for AJ-RT-20260726-002-001. Only after it commits may one fresh bounded P6-T02 Candidate Constructor packet construct or precisely obstruct one source-derived propagation relation principal polynomial or causal order without reopening the frozen P5-diagonal inference or importing the target GR cone.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p6_t01_formalize_source_derived_causal_characteristic_target`
-- Role family: `ontology-formalizer@0.2.0`
+- Route ID: `v21_p6_t02_derive_or_obstruct_source_characteristic_structure`
+- Role family: `candidate-constructor@0.2.0`
 - Target milestone: `effective_metric_g_eff`
-- Milestone burden: Define the first physical effective-geometry burden without importing a metric.
+- Milestone burden: Produce the first source-derived physical propagation structure.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `ee180f274ebc5e65e27542ae9789f87407d855cce526bf1edf511ff92ee67c99`
-- JSON SHA-256: `a92f7b1a65ce15578712e7bb578571d4226d5c6e4b2ef4956f2c80fc35ee2996`
+- YAML SHA-256: `14c171f666fc32f9caf840e555b74c06606b25dcfeb701ab94bd21ede86f7eb7`
+- JSON SHA-256: `1d5d7cd29cf1f05dbee1c4e0260719a9477397b1150da80bdfbaaf05dd887a94`
 
 ## Authority Warning
 

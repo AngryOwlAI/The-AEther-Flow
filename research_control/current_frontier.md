@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260726-001` and `handoff-0875`.
+`RT-20260726-002` and `handoff-0876`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260726-001` |
-| Latest handoff ID | `handoff-0875` |
-| Current status | `p5_t08_theorem_level_synthesis_precise_source_ontology_obstruction_and_conditional_p6_input_ready_for_checkpoint` |
+| Active task ID | `RT-20260726-002` |
+| Latest handoff ID | `handoff-0876` |
+| Current status | `p6_t01_metric_free_target_response_composition_and_two_site_nonselection_obstruction_ready_for_checkpoint` |
 | V16 completed | false |
-| Current route family | integration or selection (scientific) |
-| Target derivation milestone | `source_ontology` |
-| Current burden | `source_ontology_primitives`; status: completed_with_precise_scoped_obstruction |
-| Required next authority | After the governed checkpoint commits, one fresh bounded P6-T01 ontology-law-research packet may formalize the exact causal influence or characteristic target and test the conditional P5 response-and-obstruction input without importing or inferring positive geometry. |
-| Next recommended action | Run the one governed checkpoint for AJ-RT-20260726-001-001. Only after it commits may one fresh bounded P6-T01 Ontology Formalizer packet define the causal influence or characteristic target and test the exact conditional P5 response without inferring a physical cone or metric. |
+| Current route family | formalization or theorem (scientific) |
+| Target derivation milestone | `effective_metric_g_eff` |
+| Current burden | `g_eff`; status: historical scoped g_eff preserved_metric_free_target_defined_physical_gate_b_not_ready |
+| Required next authority | After the governed checkpoint commits, one fresh bounded P6-T02 Candidate Constructor packet may add materially new source-local law content and construct or precisely obstruct one propagation relation principal polynomial or causal order without importing target geometry. |
+| Next recommended action | Run the one governed checkpoint for AJ-RT-20260726-002-001. Only after it commits may one fresh bounded P6-T02 Candidate Constructor packet construct or precisely obstruct one source-derived propagation relation principal polynomial or causal order without reopening the frozen P5-diagonal inference or importing the target GR cone. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260726-001` |
-| Latest research handoff ID | `handoff-0875` |
-| Latest research next action | Run the one governed checkpoint for AJ-RT-20260726-001-001. Only after it commits may one fresh bounded P6-T01 Ontology Formalizer packet define the causal influence or characteristic target and test the exact conditional P5 response without inferring a physical cone or metric. |
+| Latest research task ID | `RT-20260726-002` |
+| Latest research handoff ID | `handoff-0876` |
+| Latest research next action | Run the one governed checkpoint for AJ-RT-20260726-002-001. Only after it commits may one fresh bounded P6-T02 Candidate Constructor packet construct or precisely obstruct one source-derived propagation relation principal polynomial or causal order without reopening the frozen P5-diagonal inference or importing the target GR cone. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260726-001/00_TASK.yaml`.
-- Active task objective: Integrate the exact registered P5-T01 through P5-T07 definitions, equations, conditional theorems, countermodels, audits, and scoped obstructions into one durable theorem-level source-dynamics synthesis; state the precise source-ontology milestone disposition and exact conditional input made available to P6.
-- Latest handoff path: `research_control/handoffs/handoff-0875.yaml`.
-- Latest handoff summary: P5-T08 integrates the exact P5-T01 through P5-T07 package and adds three theorem-level draft/control statements: the exact cubic tangent-response cocycle, a general factor-through-amplitude rank bound, and a source-dynamics milestone-closure theorem. The P5 work item closes as completed_with_precise_scoped_obstruction and blocked_adoption_open_continuation. P6 receives an exact conditional response-and-obstruction input for target formalization, but no positive local geometry, adopted source law, physical causality, or downstream GR object.
-- Current route family: integration or selection (scientific).
-- Next recommended action: Run the one governed checkpoint for AJ-RT-20260726-001-001. Only after it commits may one fresh bounded P6-T01 Ontology Formalizer packet define the causal influence or characteristic target and test the exact conditional P5 response without inferring a physical cone or metric.
+- Active task path: `research_control/tasks/RT-20260726-002/00_TASK.yaml`.
+- Active task objective: Define a precise metric-free source influence and characteristic target, source-provenance and operational obligations, positive degenerate acausal and multi-cone controls, and test the exact conditional P5 response against that target without importing or inferring a target metric.
+- Latest handoff path: `research_control/handoffs/handoff-0876.yaml`.
+- Latest handoff summary: P6-T01 defines a metric-free source influence and characteristic target, proves response-support composition, and derives an exact two-site diagonal-response nonselection theorem. Every coupling c has the same P5 diagonal flow and symmetric response, while c=0 has no cross-site response and c>0 has positive cross-site response. Gate B remains not ready because localization, local law, characteristic extraction, orientation, operational meaning, robustness, and universality are missing or untested. Adoption remains blocked while P6-T02 continuation remains open.
+- Current route family: formalization or theorem (scientific).
+- Next recommended action: Run the one governed checkpoint for AJ-RT-20260726-002-001. Only after it commits may one fresh bounded P6-T02 Candidate Constructor packet construct or precisely obstruct one source-derived propagation relation principal polynomial or causal order without reopening the frozen P5-diagonal inference or importing the target GR cone.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -84,7 +84,7 @@ Adopted source-only or source-extension objects:
 | Object | Status | Authority | Scope qualifier | Blocked overread | Downstream promotion authorized |
 | --- | --- | --- | --- | --- | --- |
 | M_src | adopted only as scoped source-only M_src object | `research_control/tasks/RT-20260614-134/artifacts/165_M_SRC_GSC_INTEGRATED_SOURCE_ONLY_ADOPTION_THEOREM_GATE_CHAIR_REVIEW.tex` | not_target_manifold_not_metric_not_gr_derivation | no_metricdata_e_adoption<br>no_geff_scope_expansion<br>no_matter_coupling_derivation<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | false |
-| g_eff | adopted only as scoped source-extension g_eff object | `research_control/tasks/RT-20260614-222/artifacts/251_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_GEFF_CANDIDATE_SCOPED_SOURCE_EXTENSION_ADOPTION_GATE_CHAIR_REVIEW.tex` | not_unscoped_lorentzian_metric_not_matter_coupling_not_einstein_equations | no_source_law_adoption<br>no_metricdata_e_adoption<br>no_unscoped_geff_adoption<br>no_matter_coupling_derivation<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | false |
+| g_eff | adopted only as scoped source-extension g_eff object | `research_control/tasks/RT-20260726-002/artifacts/causal_characteristic_target_v1.tex` | not_unscoped_lorentzian_metric_not_matter_coupling_not_einstein_equations | no_source_law_adoption<br>no_metricdata_e_adoption<br>no_unscoped_geff_adoption<br>no_matter_coupling_derivation<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation<br>no_global_theory_rejection<br>no_future_source_extension_impossibility | false |
 
 Scoped accepted evidence/preconditions:
 
@@ -216,7 +216,7 @@ columns below are the reader-facing anti-overread boundary:
 High-risk rows:
 
 - `m_src`: reader-facing `adopted only as scoped source-only M_src object`; control `gate_review_completed`; mathematical `scoped_source_only_adopted_object`; physical `not_target_manifold_not_metric_not_gr_derivation`; promotion `scoped_source_object_only`; guards: no_metricdata_e_adoption<br>no_geff_scope_expansion<br>no_matter_coupling_derivation<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation.
-- `g_eff`: reader-facing `adopted only as scoped source-extension g_eff object`; control `gate_review_completed`; mathematical `scoped_source_extension_geff_object`; physical `not_unscoped_lorentzian_metric_not_matter_coupling_not_einstein_equations`; promotion `scoped_source_object_only`; guards: no_source_law_adoption<br>no_metricdata_e_adoption<br>no_unscoped_geff_adoption<br>no_matter_coupling_derivation<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation.
+- `g_eff`: reader-facing `adopted only as scoped source-extension g_eff object`; control `gate_review_completed`; mathematical `scoped_source_extension_geff_object`; physical `not_unscoped_lorentzian_metric_not_matter_coupling_not_einstein_equations`; promotion `scoped_source_object_only`; guards: no_source_law_adoption<br>no_metricdata_e_adoption<br>no_unscoped_geff_adoption<br>no_matter_coupling_derivation<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation<br>no_global_theory_rejection<br>no_future_source_extension_impossibility.
 - `matter_coupling`: reader-facing `accepted only as scoped source-extension evidence/precondition`; control `accepted_as_scoped_evidence_precondition`; mathematical `parameterized_finite_local_witness_precondition`; physical `not_matter_coupling_not_stress_energy_not_matter_action_not_detector_semantics`; promotion `scoped_source_evidence_only`; guards: no_source_law_adoption<br>no_metricdata_e_adoption<br>no_geff_scope_expansion<br>no_coupling_law_adoption<br>no_matter_coupling_derivation<br>no_matter_coupling_adoption<br>no_stress_energy_semantics<br>no_stress_energy_tensor<br>no_matter_action<br>no_detector_semantics<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation<br>no_future_source_extension_impossibility<br>no_global_theory_rejection.
 - `einstein_equations`: reader-facing `not started; no positive derivation status`; control `not_started`; mathematical `dynamics_action_or_variation_missing`; physical `no_field_equation_derivation`; promotion `none`; guards: no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation.
 - `benchmark_promotion`: reader-facing `no benchmark promotion from scoped evidence/precondition alone`; control `blocked`; mathematical `upstream_burdens_missing`; physical `no_exact_gr_benchmark_promotion`; promotion `none`; guards: no_benchmark_promotion<br>no_benchmark_gate_chair_closure<br>no_completed_derivation.
@@ -289,7 +289,7 @@ preserves the raw ledger `current_status` field for continuity.
 | `obsloc_lc` | `source_localization_obsloc_lc` | constructive local exact-branch witness only | constructive witness exists | constructive_witness_recorded | constructive_witness | local_exact_branch_only | draft_control_only | no_source_law_adoption<br>no_matter_coupling_derivation<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/tasks/RT-20260614-037/artifacts/58_LOCALIZATION_SOURCE_BASIS_AXIOM_SELECTOR_DOMAIN_EQSRC_ALTERNATIVE_BRANCH_FAMILY_GUARD_STABILITY_SOURCE_PACKET_SMUGGLING_AUDIT.tex` |
 | `resp_lc` | `response_localization_resp_lc` | accepted only as scoped source-extension selector data | accepted | accepted_as_source_extension_data | selector_data_source_extension | not_detector_semantics_not_matter_coupling | scoped_source_object_only | no_canonical_ontology_edit<br>no_matter_coupling_derivation<br>no_detector_semantics<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/tasks/RT-20260614-060/artifacts/101_RESP_LC_SOURCE_EXTENSION_HUMAN_GATE_ADOPTION_DECISION.tex` |
 | `m_src` | `source_manifold_m_src` | adopted only as scoped source-only M_src object | accepted | gate_review_completed | scoped_source_only_adopted_object | not_target_manifold_not_metric_not_gr_derivation | scoped_source_object_only | no_metricdata_e_adoption<br>no_geff_scope_expansion<br>no_matter_coupling_derivation<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/tasks/RT-20260614-134/artifacts/165_M_SRC_GSC_INTEGRATED_SOURCE_ONLY_ADOPTION_THEOREM_GATE_CHAIR_REVIEW.tex` |
-| `g_eff` | `effective_metric_g_eff` | adopted only as scoped source-extension g_eff object | accepted | gate_review_completed | scoped_source_extension_geff_object | not_unscoped_lorentzian_metric_not_matter_coupling_not_einstein_equations | scoped_source_object_only | no_source_law_adoption<br>no_metricdata_e_adoption<br>no_unscoped_geff_adoption<br>no_matter_coupling_derivation<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/tasks/RT-20260614-222/artifacts/251_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_GEFF_CANDIDATE_SCOPED_SOURCE_EXTENSION_ADOPTION_GATE_CHAIR_REVIEW.tex` |
+| `g_eff` | `effective_metric_g_eff` | adopted only as scoped source-extension g_eff object | accepted | gate_review_completed | scoped_source_extension_geff_object | not_unscoped_lorentzian_metric_not_matter_coupling_not_einstein_equations | scoped_source_object_only | no_source_law_adoption<br>no_metricdata_e_adoption<br>no_unscoped_geff_adoption<br>no_matter_coupling_derivation<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation<br>no_global_theory_rejection<br>no_future_source_extension_impossibility | `research_control/tasks/RT-20260726-002/artifacts/causal_characteristic_target_v1.tex` |
 | `matter_coupling` | `matter_coupling` | accepted only as scoped source-extension evidence/precondition | accepted | accepted_as_scoped_evidence_precondition | parameterized_finite_local_witness_precondition | not_matter_coupling_not_stress_energy_not_matter_action_not_detector_semantics | scoped_source_evidence_only | no_source_law_adoption<br>no_metricdata_e_adoption<br>no_geff_scope_expansion<br>no_coupling_law_adoption<br>no_matter_coupling_derivation<br>no_matter_coupling_adoption<br>no_stress_energy_semantics<br>no_stress_energy_tensor<br>no_matter_action<br>no_detector_semantics<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation<br>no_future_source_extension_impossibility<br>no_global_theory_rejection | `research_control/tasks/RT-20260702-064/artifacts/source_certificate_operation_laws_v1.tex` |
 | `einstein_equations` | `einstein_equations` | not started; no positive derivation status | not started | not_started | dynamics_action_or_variation_missing | no_field_equation_derivation | none | no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/program_state.yaml` |
 | `finite_variation_robustness` | `source_equivalence_eqsrc` | Refuter stress passed | Refuter stress passed | refuter_stress_passed | conditional_theorem_candidate | downstream_gr_blocked | draft_control_only | no_source_law_adoption<br>no_matter_coupling_derivation<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/tasks/RT-20260614-101/artifacts/142_RESP_LC_M_SRC_GSC_FINITE_VARIATION_ROBUSTNESS_LAW_REFUTER_STRESS_TEST.tex` |
@@ -302,7 +302,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run the one governed checkpoint for AJ-RT-20260726-001-001. Only after it commits may one fresh bounded P6-T01 Ontology Formalizer packet define the causal influence or characteristic target and test the exact conditional P5 response without inferring a physical cone or metric.
+Run the one governed checkpoint for AJ-RT-20260726-002-001. Only after it commits may one fresh bounded P6-T02 Candidate Constructor packet construct or precisely obstruct one source-derived propagation relation principal polynomial or causal order without reopening the frozen P5-diagonal inference or importing the target GR cone.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -327,10 +327,10 @@ Validation layers:
 
 | Validation layer | Status | Meaning | Evidence |
 | --- | --- | --- | --- |
-| `pre_execution` | PASS | receipt complete | Generation 120 validated and atomically claimed the exact immutable P5-T08 route before consuming its one worker invocation.<br>The generation-119 checkpoint commit and clean repository dependency boundary were verified before execution.<br>Memory preflight and canonical P5 and ontology source inspection passed. |
-| `completion_internal` | PASS | receipt complete | The task-local validator passes 47 checks and the synthesis TeX compiles in scratch.<br>The completion separates conditional P6 formalization input from absent positive local geometry. |
+| `pre_execution` | PASS | receipt complete | Generation 121 validated and atomically claimed the exact immutable P6-T01 route before consuming its one worker invocation.<br>The generation-120 checkpoint commit and clean repository dependency boundary were verified before execution.<br>Memory preflight and canonical P5 ontology historical scoped g_eff and metric-use sources were inspected. |
+| `completion_internal` | PASS | receipt complete | The task-local validator passes 42 checks and the target TeX compiles in scratch.<br>The completion separates formal influence from physical causality and preserves the historical scoped g_eff boundary. |
 | `post_write` | PASS | receipt complete | Renderer memory documentation signal claim-language research-control selected-test and whitespace gates are required before checkpoint. |
-| `post_checkpoint` | PENDING | open item; evidence must explain why | One governed checkpoint remains to be invoked in generation 120. |
+| `post_checkpoint` | PENDING | open item; evidence must explain why | One governed checkpoint remains to be invoked in generation 121. |
 | `renderer` | PASS | receipt complete | Current frontier compact frontier task index dependency graph claim graph and burden-status derivatives are fresh. |
 | `memory_bootstrap` | PASS | receipt complete | Tracked memory bootstrap and validate-only are required after source registration. |
 | `claim_language_linter` | PASS | receipt complete | Changed-source claim-language validation is required before checkpoint. |
@@ -347,9 +347,9 @@ Authorization layers:
 
 Legacy compatibility records:
 
-- active task: `RT-20260726-001`;
-- latest handoff: `handoff-0875`;
-- current status: `p5_t08_theorem_level_synthesis_precise_source_ontology_obstruction_and_conditional_p6_input_ready_for_checkpoint`;
+- active task: `RT-20260726-002`;
+- latest handoff: `handoff-0876`;
+- current status: `p6_t01_metric_free_target_response_composition_and_two_site_nonselection_obstruction_ready_for_checkpoint`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -359,8 +359,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0875.yaml`
-- `research_control/tasks/RT-20260726-001/00_TASK.yaml`
+- `research_control/handoffs/handoff-0876.yaml`
+- `research_control/tasks/RT-20260726-002/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -376,7 +376,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0875*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0876*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

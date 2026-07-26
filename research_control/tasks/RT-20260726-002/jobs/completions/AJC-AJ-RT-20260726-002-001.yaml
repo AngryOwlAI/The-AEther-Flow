@@ -1,0 +1,879 @@
+job_id: "AJ-RT-20260726-002-001"
+completion_id: "AJC-AJ-RT-20260726-002-001"
+task_id: "RT-20260726-002"
+task_type: "v21_p6_t01_formalize_source_derived_causal_and_characteristic_target"
+decision_id: "DDR-20260726-002"
+role_id: "ontology-formalizer"
+role_version: "0.2.0"
+execution_role_ref: "ontology-formalizer@0.2.0--RT-20260726-002"
+status: "completed"
+validation_status: "PASS"
+final_repository_validation_status: "PASS_READY_FOR_CHECKPOINT"
+created_at: "2026-07-26T09:33:36Z"
+started_at: "2026-07-26T09:33:36Z"
+completed_at: "2026-07-26T09:33:36Z"
+objective: "Define a precise metric-free source influence and characteristic target, source provenance and operational obligations, positive degenerate acausal and multi-cone controls, and test the exact conditional P5 response against that target without importing or inferring a target metric."
+completion_summary: "P6-T01 defines formal source influence from response-block support and conditionally types principal-symbol, hyperbolicity, orientation, and causal-qualification targets. It proves response-support composition and an exact two-site diagonal-response nonselection theorem. The P5 diagonal flow and symmetric tangent response are identical for c=0 and c>0, but cross-site influence is absent for c=0 and present for c>0. Gate B is not ready because the current ontology does not derive localization, local evolution, characteristic extraction, orientation, operational signals, robustness, or universality. Adoption remains blocked while P6-T02 continuation remains open."
+objective_result: "metric_free_target_defined_with_response_composition_and_precise_two_site_nonselection_obstruction"
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 121
+  passes_consumed: 111
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:121"
+  handoff_token: "6c58425801828c8c9206a8f794e99f45b1ba46cdb9dea062"
+  relay_claim_token: "e1e24365a3d931abfcc097b648b99266511ed871ba4c2a59"
+  route_work_item_id: "P6-T01"
+  route_worker_skill: "continue-research"
+  route_sha256: "9bea3f705849d1dcce7cad65aafa260c0ea930f963e71b07f17a25054b827599"
+  worker_skill: "continue-research"
+  worker_invocation_count: 1
+
+transaction_status: "ready_for_checkpoint"
+result_disposition: "P6_T01_METRIC_FREE_TARGET_RESPONSE_COMPOSITION_AND_TWO_SITE_NONSELECTION_OBSTRUCTION_READY_FOR_CHECKPOINT"
+milestone_disposition: "completed_with_precise_scoped_obstruction"
+adoption_status: "blocked_adoption_open_continuation"
+checkpoint_commit:
+  status: "pending_governed_checkpoint"
+  dependency_checkpoint_commit: "8ad0c556ef08ece8483758646b1eacd66838ded9"
+  invocation_count_before_completion: 0
+  push_authorized: false
+  push_performed: false
+is_physics_task: true
+payload_class: "proved_conditional_theorem"
+minimum_payload:
+  payload_class: "proved_conditional_theorem"
+  payload_artifact_path: "research_control/tasks/RT-20260726-002/artifacts/causal_characteristic_target_v1.tex"
+  payload_summary: "The manuscript proves response-support composition and an exact two-site theorem showing that unchanged P5 diagonal data do not select a unique region-resolved influence relation."
+has_new_mathematical_payload: true
+has_finite_local_witness: true
+has_countermodel: true
+external_red_team_finding_requires_integration: false
+physics_promotion_authorized: false
+proof_authority: false
+
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P6"
+  plan_task_id: "P6-T01"
+  recommendation_ids:
+    - "V21-R17"
+    - "V21-R22"
+    - "V21-R63"
+    - "V21-R67"
+  implementation_status: "completed"
+  dependency_evidence:
+    P5_T08:
+      task_id: "RT-20260726-001"
+      completion_path: "research_control/tasks/RT-20260726-001/jobs/completions/AJC-AJ-RT-20260726-001-001.yaml"
+      completion_sha256: "d866758ebe728146486b117d5825a687035dda311ada6c59eb4c17cde482dcb0"
+      checkpoint_commit: "8ad0c556ef08ece8483758646b1eacd66838ded9"
+      qualifying_status: true
+  next_dependency_work_item: "P6-T02"
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  observed_durable_outputs:
+    physics:
+      - "registered metric-free source influence and characteristic target"
+      - "response-support composition and exact two-site diagonal-response nonselection theorems"
+      - "machine-readable Gate B readiness checklist and precise scoped obstruction"
+    project_system:
+      - "task-local deterministic validation receipt"
+      - "compact source and claim-boundary receipt"
+      - "standard control records and generated memory derivatives"
+  accepted_criteria:
+    physics:
+      - "target is expressible without target metric or GR null-cone premises"
+      - "formal influence is separated from physical causality"
+      - "two-site response calculation preserves exact P5 diagonal data and distinguishes cross-site response"
+      - "positive degenerate acausal and multi-cone controls are explicit"
+    project_system:
+      - "task-local validation and scratch TeX build pass"
+      - "claim-language source-authority documentation signal and research-control checks pass"
+      - "one governed checkpoint records the bounded transaction"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+physics_payload_admission_result:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "physics"
+  declared_payload_type: "theorem"
+  realized_payload_type: "theorem"
+  candidate_family: "V21-P6-METRIC-FREE-SOURCE-INFLUENCE-CHARACTERISTIC-TARGET-V1"
+  result: "PASS"
+  material_payload_present: true
+  process_receipts_counted_as_payload: false
+  physics_promotion_authorized: false
+
+family_freeze_admission_result:
+  schema_id: "family_freeze_route_admission_v1"
+  policy_id: "family_freeze_reopening_policy_v1"
+  route_id: "v21_p6_t01_metric_free_target_and_p5_diagonal_nonselection"
+  family_id: "V21-P5-T03-CUBIC-AMPLITUDE-SOURCE-DYNAMICS-V1"
+  detected_match_basis: []
+  reopening_requested: false
+  result: "PASS_UNMATCHED_SEEDED_EQSRC_FREEZE_FAMILY"
+  local_family_freeze_preserved: true
+  inherited_local_freeze_scope: "exact unchanged P5-T01 through P5-T08 one-mode amplitude route as positive local geometry support"
+  global_no_go_claimed: false
+
+ordinary_route_guard_admission_result:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0875"
+  selected_plan_task_id: "P6-T01"
+  guard_outcome: "below_threshold"
+  result: "PASS"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+
+artifacts:
+  - "research_control/tasks/RT-20260726-002/artifacts/causal_characteristic_target_v1.tex"
+  - "research_control/tasks/RT-20260726-002/artifacts/source_influence_characteristic_spec_v1.yaml"
+  - "research_control/tasks/RT-20260726-002/artifacts/gate_b_readiness_checklist_v1.yaml"
+  - "research_control/tasks/RT-20260726-002/artifacts/child_phys_math_p6_t01_causal_characteristic_target.yaml"
+  - "research_control/tasks/RT-20260726-002/artifacts/child_phys_phil_p6_t01_causal_characteristic_target.yaml"
+  - "research_control/tasks/RT-20260726-002/artifacts/parent_conflict_review_p6_t01_causal_characteristic_target.yaml"
+  - "research_control/tasks/RT-20260726-002/artifacts/parent_fusion_notes_p6_t01_causal_characteristic_target.md"
+  - "research_control/tasks/RT-20260726-002/artifacts/causal_characteristic_target_receipt.md"
+  - "research_control/tasks/RT-20260726-002/artifacts/causal_characteristic_target_validation_receipt_v1.json"
+  - "research_control/tasks/RT-20260726-002/artifacts/validate_causal_characteristic_target.py"
+
+output_paths:
+  - "research_control/tasks/RT-20260726-002/artifacts/causal_characteristic_target_v1.tex"
+  - "research_control/tasks/RT-20260726-002/artifacts/source_influence_characteristic_spec_v1.yaml"
+  - "research_control/tasks/RT-20260726-002/artifacts/gate_b_readiness_checklist_v1.yaml"
+  - "research_control/tasks/RT-20260726-002/artifacts/child_phys_math_p6_t01_causal_characteristic_target.yaml"
+  - "research_control/tasks/RT-20260726-002/artifacts/child_phys_phil_p6_t01_causal_characteristic_target.yaml"
+  - "research_control/tasks/RT-20260726-002/artifacts/parent_conflict_review_p6_t01_causal_characteristic_target.yaml"
+  - "research_control/tasks/RT-20260726-002/artifacts/parent_fusion_notes_p6_t01_causal_characteristic_target.md"
+  - "research_control/tasks/RT-20260726-002/artifacts/causal_characteristic_target_receipt.md"
+  - "research_control/tasks/RT-20260726-002/artifacts/causal_characteristic_target_validation_receipt_v1.json"
+  - "research_control/tasks/RT-20260726-002/artifacts/validate_causal_characteristic_target.py"
+  - "research_control/tasks/RT-20260726-002/00_TASK.yaml"
+  - "research_control/tasks/RT-20260726-002/DDR-20260726-002.md"
+  - "research_control/tasks/RT-20260726-002/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260726-002/roles/ontology-formalizer@0.2.0--RT-20260726-002.yaml"
+  - "research_control/tasks/RT-20260726-002/jobs/AJ-RT-20260726-002-001.yaml"
+  - "research_control/tasks/RT-20260726-002/jobs/completions/AJC-AJ-RT-20260726-002-001.yaml"
+  - "research_control/handoffs/handoff-0876.yaml"
+  - "research_control/handoffs/handoff-0876.md"
+
+artifact_receipts:
+  target_manuscript:
+    path: "research_control/tasks/RT-20260726-002/artifacts/causal_characteristic_target_v1.tex"
+    sha256: "32a055bc5c851f0a36d726343cb5be1f1d68cf72a5a32fccead12b3488f04273"
+  target_specification:
+    path: "research_control/tasks/RT-20260726-002/artifacts/source_influence_characteristic_spec_v1.yaml"
+    sha256: "7103061d3d93c4b6ba90d9e35217fa3f1fbadd2b4b0cb7d56cd5ba37b497983a"
+  gate_b_checklist:
+    path: "research_control/tasks/RT-20260726-002/artifacts/gate_b_readiness_checklist_v1.yaml"
+    sha256: "59f109130858f7c5b1db5ad359316ef614d4eeb6509ca126499aca3b389e7b5e"
+  validation:
+    path: "research_control/tasks/RT-20260726-002/artifacts/causal_characteristic_target_validation_receipt_v1.json"
+    sha256: "0c72d1f724364e957918f2d7c50ac8a65fce1036f085a7fdc3346d994ab3722a"
+  validator:
+    path: "research_control/tasks/RT-20260726-002/artifacts/validate_causal_characteristic_target.py"
+    sha256: "507163e11850a44b4fd5f1839f1aec9e30c4f2f59c964136e300725d62313d20"
+  parent_fusion:
+    path: "research_control/tasks/RT-20260726-002/artifacts/parent_fusion_notes_p6_t01_causal_characteristic_target.md"
+    sha256: "392913851bbcefee847dc998c4a6b683ed36b429967bd9ff58b0eb7db91df7a8"
+  compact_receipt:
+    path: "research_control/tasks/RT-20260726-002/artifacts/causal_characteristic_target_receipt.md"
+    sha256: "a592062f912af5f9dcdcfbacadce46e25be3a17f7325eef0f7b5f8cc9867ae65"
+
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_execution_unit_count: 2
+  outer_agentjob_count: 1
+  child_agentjob_count: 0
+
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260726-002/artifacts/child_phys_math_p6_t01_causal_characteristic_target.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260726-002/artifacts/child_phys_phil_p6_t01_causal_characteristic_target.yaml"
+      status: "completed"
+  conflict_review:
+    status: "resolved"
+    review_path: "research_control/tasks/RT-20260726-002/artifacts/parent_conflict_review_p6_t01_causal_characteristic_target.yaml"
+    resolution_rounds: 1
+    resolved_conflict_count: 4
+    unresolved_conflicts: []
+  fusion:
+    fused_output_path: "research_control/tasks/RT-20260726-002/artifacts/causal_characteristic_target_v1.tex"
+    fusion_notes_path: "research_control/tasks/RT-20260726-002/artifacts/parent_fusion_notes_p6_t01_causal_characteristic_target.md"
+    shared_consensus_summary: "Both perspectives separate response-support influence from physical causality, require a metric-free source provenance chain, and preserve the exact two-site result as scoped nonselection rather than model adoption or global no-go."
+    unique_phys_math_contributions: "Formal response-support relation, composition theorem, exact two-site tangent response, and diagonal-response nonselection theorem."
+    unique_phys_phil_contributions: "Influence-versus-causality distinction, target-definition-versus-construction distinction, legacy scoped g_eff boundary, and local obstruction versus global no-go boundary."
+    novelty_preservation_summary: "The fusion preserves the new target and exact nonselection mathematics together with the epistemic conditions needed for lawful downstream use."
+    claim_boundary_preservation_summary: "No source law, canonical ontology, physical causality, characteristic cone, M_src, unscoped g_eff, downstream GR object, proof, publication, or promotion is adopted."
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+
+source_hash_receipts:
+  - object_id: "TEX-V21-P5-T08-SOURCE-DYNAMICS-MILESTONE-SYNTHESIS-V1"
+    path: "research_control/tasks/RT-20260726-001/artifacts/source_dynamics_milestone_synthesis_v1.tex"
+    sha256: "a2b9c6670cdb0e09ca2e19ff30f71d9bb954e3ab2fc73a5c9727a2df10db93aa"
+    unchanged: true
+  - object_id: "P5T08-CONDITIONAL-P6-RESPONSE-INPUT-V1"
+    path: "research_control/tasks/RT-20260726-001/artifacts/p6_geometry_input_contract_v1.yaml"
+    sha256: "7b0eee4ea249a3acf99d38d312bd14619dedea79977d7b802062e9410f5b8557"
+    unchanged: true
+  - object_id: "TEX-ONTOLOGY-AETHER-FLOW-FOUNDATIONS"
+    path: "ontology/tex/aether_flow_foundations.tex"
+    sha256: "4749d9e8b6858a43230e99029cccc3274b55fc2ae2a2cdf45a983a60c98e5b59"
+    unchanged: true
+  - object_id: "TEX-ONTOLOGY-AETHER-FLOW-DYNAMICS"
+    path: "ontology/tex/aether_flow_dynamics.tex"
+    sha256: "fd6e579e71ef7f2ac4c9668ceede051ad57033ee52357b2552a9e3a5a53939c7"
+    unchanged: true
+  - object_id: "TEX-ONTOLOGY-AETHER-FLOW-GEOMETRY"
+    path: "ontology/tex/aether_flow_geometry.tex"
+    sha256: "f60a81b63f814b03cca7190b3ac6285842a55317f4aed058cc6e75154cc0b4d7"
+    unchanged: true
+  - object_id: "TEX-RT-20260614-216-GEFF-CANDIDATE"
+    path: "research_control/tasks/RT-20260614-216/artifacts/245_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_METRICFORMASSIGN_GEFF_CANDIDATE_OR_OBSTRUCTION.tex"
+    sha256: "dd30573519ed1df66b3800d29ee0adc9fcc94d9c8d3b9b5a7fcffde503d5f0ef"
+    unchanged: true
+  - object_id: "TEX-RT-20260614-222-SCOPED-GEFF-GATE-CHAIR"
+    path: "research_control/tasks/RT-20260614-222/artifacts/251_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_GEFF_CANDIDATE_SCOPED_SOURCE_EXTENSION_ADOPTION_GATE_CHAIR_REVIEW.tex"
+    sha256: "3ce8cbc6cd79c6852d78f81045633beea44c4dfc6e2912c604b08e3c8bdb0257"
+    unchanged: true
+  - object_id: "METRIC-USE-LEDGER"
+    path: "registries/METRIC_USE_LEDGER.csv"
+    sha256: "a33349c7a153c4fbadb70c7c38b17cf0eebb7672b8e1f692702fc91edf17efcf"
+    unchanged: true
+  - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+    path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+    sha256: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+    unchanged: true
+  - object_id: "MD-RESEARCH-CONTROL-DESIGN-GR-DERIVATION-BURDEN-MAP"
+    path: "research_control/design/gr_derivation_burden_map.md"
+    sha256: "8e9d44e3a18ecc8a2430a9c42497da3eb9911c2cf6cd714c1525c5d91551835e"
+    unchanged: true
+  - object_id: "AJC-AJ-RT-20260726-001-001"
+    path: "research_control/tasks/RT-20260726-001/jobs/completions/AJC-AJ-RT-20260726-001-001.yaml"
+    sha256: "d866758ebe728146486b117d5825a687035dda311ada6c59eb4c17cde482dcb0"
+    unchanged: true
+  - object_id: "HANDOFF-0875"
+    path: "research_control/handoffs/handoff-0875.yaml"
+    sha256: "fd9cbbc8c28d44179a33c1ac63631d47bb9843cfeb113e8294d33d712dbe2a70"
+    unchanged: true
+
+ontology_law_research_packet:
+  route: "ontology-law-research-packet"
+  trigger_classification: "derivation_critical_missing_source_law"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Define the first physical effective-geometry burden without importing a metric."
+  missing_source_law: "A source-derived localization, local evolution, influence-or-characteristic extraction, orientation, robustness, and operational signal law that selects one propagation structure from source data."
+  underdetermination_statement: "The current ontology does not derive a unique source localization, local evolution, region-resolved influence relation, characteristic operator, principal polynomial, orientation, robustness rule, or operational signal interpretation."
+  no_go_theorem_status: "scoped_obstruction_proved_for_inference_from_unchanged_p5_diagonal_data"
+  status: "completed_with_precise_scoped_obstruction"
+  missing_source_law_category: "derivation_critical_missing_source_law"
+  current_ontology_statement: "The current ontology does not derive the source-local laws needed to realize the metric-free influence and characteristic target."
+  adoption_status:
+    current_adoption: "blocked"
+    continuation: "open"
+    status_pair: "blocked_adoption_open_continuation"
+  packet_payload_mode: "candidate_law_refutation"
+  candidate_law_refutation:
+    refuted_candidate: "The exact unchanged P5 scalar flow and diagonal tangent response uniquely determine a region-resolved source influence relation or physical characteristic structure."
+    refutation_basis: "The proposal-only two-site family has the same P5 diagonal flow and symmetric tangent response for every c, while c=0 has no cross-site response and c>0 has positive cross-site response."
+    surviving_obligations:
+      - "P6-T02 must supply materially new source-side localization or characteristic-law content."
+      - "A source-derived principal symbol, order relation, or propagation relation must be constructed or precisely obstructed."
+      - "Orientation hyperbolicity naturality robustness operational meaning and common-signal universality remain open."
+      - "Metric scale remains deferred to a later work item."
+      - "Canonical ontology or source-law adoption remains protected and human-gated."
+  human_gate_precondition:
+    blocks_payload_definition: false
+    reason: "The target and scoped refutation are task-local draft/control results; protected authority is required only before adoption or ontology modification."
+  exact_gr_recovery_obligations:
+    checklist:
+      - "Derive source localization and propagation without importing a target atlas metric GR null cone or benchmark behavior."
+      - "Show one common operational propagation structure across admissible source signal sectors."
+      - "Derive conformal scale signature covariance robustness matter coupling and Einstein-equation layers through distinct later gates."
+      - "Preserve the historical scoped g_eff boundary and exact-GR benchmark separation."
+      - "Obtain protected human authority before ontology adoption source-law adoption or benchmark promotion."
+    distance_to_gr_links:
+      - "source_ontology_primitives"
+      - "source_manifold_m_src"
+      - "g_eff"
+      - "matter_coupling"
+      - "einstein_equations"
+      - "benchmark_promotion"
+  no_target_import_audit_scope:
+    forbidden_source_classes:
+      - "target_atlas"
+      - "target_metric"
+      - "benchmark_success"
+      - "candidate_reconstruction"
+      - "generated_derivative"
+      - "registry_metadata_authority"
+      - "role_authority"
+      - "validation_authority"
+    checked_objects:
+      - "metric-free source influence target"
+      - "conditional characteristic and hyperbolicity target"
+      - "response-support composition theorem"
+      - "two-site diagonal-response nonselection theorem"
+      - "Gate B readiness checklist"
+  atlas_glue_obligations:
+    profile_law: "source-local state assignment remains missing"
+    selector_law: "source propagation selector remains missing"
+    transition_law: "source morphism and orientation law remain missing"
+    inverse_checks: "not applicable until a local candidate is constructed"
+    cocycle_checks: "linear response cocycle is defined; local gluing cocycle remains missing"
+    finite_variation_robustness: "not established beyond the displayed finite control family"
+  failure_branches:
+    collapse: "a one-block or c=0 realization yields no cross-region influence"
+    nonuniqueness: "c=0 and c>0 share P5 diagonal data but have different cross-site relations"
+    inverse_defect: "not evaluated before a characteristic map exists"
+    cocycle_defect: "support composition passes conditionally; equality may fail by cancellation"
+    variation_fragility: "robustness under admissible source variations is not established"
+  known_risks:
+    - "formal influence could be overread as physical causality"
+    - "principal-symbol target definitions could be overread as constructed source operators"
+    - "two-site controls could be overread as selected ontology"
+    - "historical scoped g_eff status could be overread as physical metric input"
+  failed_alternatives:
+    - "copying the GR null cone into source notation is forbidden"
+    - "inferring unique local influence from the unchanged P5 diagonal response is refuted within the displayed countermodel class"
+  human_gate_request:
+    required_before_adoption: true
+    requested_decision: "No protected decision is requested by P6-T01; any later canonical ontology source-law physical-causality metric or promotion decision remains separately human-gated."
+    exact_requested_ontology_edit: ""
+  candidate_status: "draft/control proposal-only source-extension data"
+  canonical_ontology_candidate_status_used: false
+  canonical_ontology_modified: false
+  target_atlas_free: true
+  exact_gr_recovery_obligation_preserved: true
+  source_extension_continuation_open: true
+  global_impossibility_claimed: false
+
+source_extension_classification:
+  checklist_id: "source_extension_classification_checklist_v1"
+  checklist_path: "research_control/design/source_extension_classification_checklist_v1.md"
+  records:
+    - item_id: "P6T01-SOURCE-INFLUENCE-CHARACTERISTIC-TARGET-V1"
+      item_source_path: "research_control/tasks/RT-20260726-002/artifacts/source_influence_characteristic_spec_v1.yaml"
+      classification: "conservative_definitional_extension"
+      relation_to_current_ontology: "conservative"
+      allowed_conclusion: "conservative task-local requirement definition for a later source-derived target"
+      blocked_overreads:
+        - "target definition as source-law adoption"
+        - "formal influence as physical causality"
+      claim_boundary_id: "CB-V21-P6-T01-CAUSAL-CHARACTERISTIC-TARGET-001"
+      protected_authority_required: false
+      downstream_promotion_authorized: false
+      physics_promotion_authorized: false
+    - item_id: "P6T01-TWO-SITE-CUBIC-COUPLING-CONTROLS-V1"
+      item_source_path: "research_control/tasks/RT-20260726-002/artifacts/causal_characteristic_target_v1.tex"
+      classification: "status_boundary_evidence_only"
+      relation_to_current_ontology: "evidence_only"
+      allowed_conclusion: "proposal-only finite source-extension countermodel evidence for scoped P5 nonselection"
+      blocked_overreads:
+        - "two-site family as adopted ontology"
+        - "coupling c as a derived source law"
+        - "finite countermodel as global no-go"
+      claim_boundary_id: "CB-V21-P6-T01-CAUSAL-CHARACTERISTIC-TARGET-001"
+      protected_authority_required: true
+      downstream_promotion_authorized: false
+      physics_promotion_authorized: false
+    - item_id: "OBST-P6T01-P5-DIAGONAL-INFLUENCE-NONSELECTION-001"
+      item_source_path: "research_control/tasks/RT-20260726-002/artifacts/causal_characteristic_target_v1.tex"
+      classification: "blocked_adoption_open_continuation"
+      relation_to_current_ontology: "blocked_open"
+      allowed_conclusion: "blocked adoption with open P6-T02 continuation"
+      blocked_overreads:
+        - "scoped nonselection as future-source-extension impossibility"
+        - "Gate B failure as global theory rejection"
+      claim_boundary_id: "CB-V21-P6-T01-CAUSAL-CHARACTERISTIC-TARGET-001"
+      protected_authority_required: true
+      downstream_promotion_authorized: false
+      physics_promotion_authorized: false
+  status_vocabulary:
+    draft_control: true
+    proposal_only: true
+    source_extension_data: true
+    canonical_ontology_candidate: false
+    adopted: false
+    rejected: false
+    human_gated: true
+  target_import_found: false
+  process_authority_used_as_science: false
+  future_source_extension_continuation: "open"
+
+new_mathematical_payload:
+  - payload_id: "P6T01-NEW-MATH-001"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    theorem_id: "P6T01-THM-RESPONSE-SUPPORT-COMPOSITION"
+    source_path: "research_control/tasks/RT-20260726-002/artifacts/causal_characteristic_target_v1.tex"
+    summary: "Defines formal influence as nonzero source-response blocks and proves composed response support is contained in relational composition."
+  - payload_id: "P6T01-NEW-MATH-002"
+    payload_type: "countermodel_or_obstruction"
+    theorem_id: "P6T01-THM-DIAGONAL-RESPONSE-NONSELECTION"
+    source_path: "research_control/tasks/RT-20260726-002/artifacts/causal_characteristic_target_v1.tex"
+    summary: "Derives the exact two-site tangent response and proves identical P5 diagonal data coexist with distinct cross-site influence relations."
+  - payload_id: "P6T01-NEW-MATH-003"
+    payload_type: "countermodel_or_obstruction"
+    theorem_id: "P6T01-PROP-PRECISE-SCOPED-OBSTRUCTION"
+    source_path: "research_control/tasks/RT-20260726-002/artifacts/causal_characteristic_target_v1.tex"
+    summary: "Records that the current ontology and unchanged P5 input do not derive a unique local influence or characteristic structure."
+
+mathematical_payload_manifest:
+  - payload_id: "PAYLOAD-RT002-001"
+    payload_type: "definition"
+    object_name: "metric-free source influence and characteristic target"
+    claim_status: "draft/control requirement definition"
+    source_path: "research_control/tasks/RT-20260726-002/artifacts/source_influence_characteristic_spec_v1.yaml"
+    burden_effect: "narrows"
+    summary: "Makes the first effective-geometry burden precise without a target metric premise."
+  - payload_id: "PAYLOAD-RT002-002"
+    payload_type: "theorem"
+    object_name: "response-support composition theorem"
+    claim_status: "draft/control proved conditional result"
+    source_path: "research_control/tasks/RT-20260726-002/artifacts/causal_characteristic_target_v1.tex"
+    burden_effect: "narrows"
+    summary: "Shows how source influence support must compose under a linear response cocycle."
+  - payload_id: "PAYLOAD-RT002-003"
+    payload_type: "countermodel"
+    object_name: "two-site cubic diagonal-response nonselection family"
+    claim_status: "proposal-only source-extension countermodel"
+    source_path: "research_control/tasks/RT-20260726-002/artifacts/causal_characteristic_target_v1.tex"
+    burden_effect: "obstructs"
+    summary: "Shows that unchanged P5 diagonal data do not select cross-site influence."
+  - payload_id: "PAYLOAD-RT002-004"
+    payload_type: "obstruction"
+    object_name: "P5 diagonal-response influence nonselection obstruction"
+    claim_status: "negative result"
+    source_path: "research_control/tasks/RT-20260726-002/artifacts/causal_characteristic_target_v1.tex"
+    burden_effect: "freezes"
+    summary: "Locally freezes only the inference of unique region influence from unchanged P5 diagonal data."
+
+physics_progress_status:
+  status: "precise_obstruction_found"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Define the first physical effective-geometry burden without importing a metric."
+  explanation: "P6-T01 defines the exact metric-free target and proves scoped P5 nonselection, but the current ontology still does not derive the local source laws needed for a physical characteristic structure."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr_delta:
+  changed: true
+  effect: "obstruction_recorded"
+  burden_id: "g_eff"
+  milestone: "effective_metric_g_eff"
+  old_status: "scoped source-extension g_eff object accepted under declared source-side scope; no physical metric or P6 causal target result"
+  new_status: "historical scoped g_eff status preserved; metric-free causal and characteristic target defined; unchanged P5 diagonal response proved insufficient to select unique local influence"
+  ledger_row_updated: true
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  downstream_unlocked:
+    - "P6-T02 one bounded source-derived propagation construction or obstruction after governed checkpoint"
+  downstream_still_blocked:
+    - "physical source-derived characteristic structure"
+    - "physical causal cone or conformal class"
+    - "unscoped effective metric g_eff"
+    - "metric scale signature covariance and robustness"
+    - "matter coupling"
+    - "Einstein equations"
+    - "benchmark promotion"
+  explanation: "The ledger gains a precise metric-free target and exact scoped nonselection theorem without changing the historical scoped source-extension g_eff verdict or authorizing physical geometry."
+
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "P5 task-level synthesis remains completed with precise scoped obstruction and blocked adoption open continuation"
+  - burden: "Source equivalence EqSrc"
+    status: "unchanged; not discharged by this packet"
+  - burden: "RetainH"
+    status: "unchanged; not supplied or adopted"
+  - burden: "GenH"
+    status: "unchanged; not supplied or adopted"
+  - burden: "ObsLoc_lc"
+    status: "unchanged; prior scoped source-extension status only"
+  - burden: "Resp_lc"
+    status: "unchanged; prior scoped source-extension response context only"
+  - burden: "M_src"
+    status: "historical scoped source-only status unchanged; P6-T01 adds no physical manifold or localization law"
+  - burden: "g_eff"
+    status: "historical scoped source-extension object preserved; metric-free influence and characteristic target defined; physical Gate B not ready"
+  - burden: "matter coupling"
+    status: "blocked; no coupling derivation or operational signal universality"
+  - burden: "Einstein equations"
+    status: "not started; unchanged"
+  - burden: "finite-variation robustness"
+    status: "two-site control family evaluated exactly; no general source-characteristic robustness theorem"
+  - burden: "benchmark promotion"
+    status: "blocked by missing physical characteristic metric coupling and field-equation burdens plus protected authority"
+  - burden: "Gate Chair status"
+    status: "human-gated; no new protected verdict requested"
+  - burden: "current route freeze or hard-fail status"
+    status: "unique region influence from unchanged P5 diagonal response locally frozen; P6-T02 materially new source-law construction remains open"
+
+obstruction_record:
+  present: true
+  obstruction_id: "OBST-P6T01-P5-DIAGONAL-INFLUENCE-NONSELECTION-001"
+  scope: "source_extension_candidate"
+  failed_object: "unique region-resolved source influence relation inferred solely from unchanged P5 diagonal flow and tangent response"
+  exact_failure: "The c=0 and c>0 two-site proposal-only extensions have identical P5 diagonal evolution and symmetric tangent response, but c=0 has zero cross-site response while c>0 has positive cross-site response for positive parameter."
+  minimal_counterexample_path: "research_control/tasks/RT-20260726-002/artifacts/causal_characteristic_target_v1.tex"
+  current_ontology_implication: "does_not_derive"
+  source_extension_implication: "new_primitive_required"
+  consequence: "new_primitive_required"
+  forbidden_overread: "This result is scoped to inference from unchanged P5 diagonal data and the displayed finite extension family. It is not a global no-go theorem, future source-extension impossibility, ontology rejection, or downstream GR result."
+
+route_cycle_control:
+  cycle_family: "v21_p5_response_to_p6_characteristic_structure"
+  current_cycle_step: "p6_t01_metric_free_target_and_nonselection_complete"
+  prior_related_tasks:
+    - "RT-20260725-008"
+    - "RT-20260725-010"
+    - "RT-20260725-012"
+    - "RT-20260725-013"
+    - "RT-20260725-014"
+    - "RT-20260726-001"
+    - "RT-20260726-002"
+  cycle_risk: "high"
+  orbit_avoidance_reason: "P6-T01 introduces a new metric-free target, exact response-support theorem, and finite nonselection theorem, then requires P6-T02 to add materially new source-local law content rather than repeat scalar-response analysis."
+  next_role_consequence: "candidate-constructor@0.2.0 for P6-T02 after checkpoint"
+
+freeze_criteria_status:
+  repeated_burden: true
+  freeze_evaluation_required: true
+  active_freeze_label: "P6T01-P5-DIAGONAL-RESPONSE-TO-UNIQUE-INFLUENCE"
+  prior_attempts_considered:
+    - "P5-T03 through P5-T08 established and integrated the exact one-amplitude conditional response and its local-geometry obstruction."
+    - "P6-T01 supplied an exact two-site family with the same diagonal response and different transverse influence."
+  freeze_if:
+    - "Another packet infers a unique region-resolved influence relation solely from the unchanged P5 diagonal flow or symmetric response."
+    - "Another packet repeats the same two-site nonselection calculation without a materially new source law theorem or variation class."
+  do_not_freeze_if:
+    - "A separately authorized packet supplies source-derived localization local evolution and a propagation selector."
+    - "A materially distinct theorem or source-extension primitive changes the exact nonselection premises without relabeling the frozen inference."
+  freeze_decision: "locally_frozen"
+  decision_reason: "The exact c=0 versus c>0 response comparison proves that unchanged P5 diagonal data cannot select cross-site influence."
+  next_allowed_route: "candidate_constructor"
+  status_update_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  no_status_update_rationale: ""
+  global_theory_rejection: false
+  future_source_extension_impossibility: false
+
+gate_b_result:
+  checklist_id: "P6T01-GATE-B-READINESS-V1"
+  checklist_path: "research_control/tasks/RT-20260726-002/artifacts/gate_b_readiness_checklist_v1.yaml"
+  overall_result: "NOT_READY_PRECISE_SCOPED_OBSTRUCTION"
+  metric_free_target_definition_passed: true
+  response_composition_passed: true
+  positive_degenerate_acausal_and_multicone_controls_passed: true
+  target_metric_import_guard_passed: true
+  physical_gate_passed: false
+  missing_or_untested:
+    - "source localization provenance"
+    - "restriction and gluing"
+    - "local source evolution"
+    - "characteristic operator and principal polynomial"
+    - "hyperbolicity orientation and nondegeneracy"
+    - "covariance or naturality"
+    - "robustness"
+    - "operational signal meaning"
+    - "common signal structure"
+  metric_scale_status: "deferred_to_p6_t04"
+
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+  summary: "The target definitions, exact two-site theorem, Gate B checklist, validator, registry rows, and checkpoint are scoped draft/control evidence. They do not adopt ontology or a source law, establish physical causality or geometry, expand scoped g_eff, prove a global no-go, or unlock downstream GR."
+  forbidden_conclusions:
+    - "canonical ontology edit"
+    - "source-law or candidate adoption or rejection"
+    - "formal influence presented as physical causality"
+    - "two-site controls presented as selected physical ontology"
+    - "principal-symbol target presented as a constructed source operator"
+    - "GR null cone target metric proper time detector or benchmark import"
+    - "global no-go theorem"
+    - "future source-extension impossibility"
+    - "global theory rejection"
+    - "M_src adoption"
+    - "unscoped g_eff adoption reconstruction or historical scope expansion"
+    - "matter coupling or Einstein-equation claim"
+    - "benchmark promotion or Gate Chair verdict"
+    - "proof publication push or completed derivation"
+
+authorization_layers:
+  protected_scoped_gate_review_scope: "not_applicable"
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  protected_scoped_gate_review_authorized: false
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  canonical_ontology_edit_authorized: false
+  physical_causality_or_geometry_claim_authorized: false
+  M_src_adoption_authorized: false
+  g_eff_adoption_or_scope_expansion_authorized: false
+  matter_coupling_derivation_authorized: false
+  einstein_equation_derivation_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_authorized: false
+  future_source_extension_impossibility_authorized: false
+
+three_tier_claim_summary:
+  adopted_objects: []
+  accepted_evidence_preconditions:
+    - object: "P6-T01 metric-free target and response-support composition theorem"
+      status: "accepted only as task-local draft/control definitions and conditional mathematics"
+      authority_path: "research_control/tasks/RT-20260726-002/artifacts/causal_characteristic_target_v1.tex"
+      supports_target: "precise P6 causal and characteristic target"
+      does_not_establish:
+        - "source-local law or ontology adoption"
+        - "physical causality characteristic cone or geometry"
+        - "unscoped effective metric"
+    - object: "P6-T01 proposal-only two-site countermodel family"
+      status: "accepted only as finite source-extension nonselection evidence"
+      authority_path: "research_control/tasks/RT-20260726-002/artifacts/causal_characteristic_target_v1.tex"
+      supports_target: "scoped obstruction to unique influence inference from P5 diagonal data"
+      does_not_establish:
+        - "two-site ontology adoption"
+        - "physical spacetime locality or time"
+        - "global no-go or future source-extension impossibility"
+    - object: "historical scoped g_eff source-extension object"
+      status: "unchanged scoped status boundary"
+      authority_path: "research_control/tasks/RT-20260614-222/artifacts/251_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_GEFF_CANDIDATE_SCOPED_SOURCE_EXTENSION_ADOPTION_GATE_CHAIR_REVIEW.tex"
+      supports_target: "boundary context only"
+      does_not_establish:
+        - "physical Lorentzian metric"
+        - "proper time detector semantics matter coupling or Einstein equations"
+        - "unscoped g_eff adoption"
+  open_or_blocked_physical_targets:
+    - target: "source-derived characteristic or propagation structure"
+      status: "blocked_adoption_open_continuation"
+      missing_burden_or_authority: "source localization local evolution characteristic extraction orientation robustness and operational signal law"
+      next_lawful_route: "P6-T02 Candidate Constructor after checkpoint"
+    - target: "effective metric g_eff"
+      status: "historical scoped source-extension object only; physical target blocked"
+      missing_burden_or_authority: "physical causal structure conformal class scale signature covariance uniqueness robustness and operational meaning"
+      next_lawful_route: "not unlocked beyond P6-T02 characteristic construction"
+    - target: "matter coupling Einstein equations and benchmark promotion"
+      status: "blocked"
+      missing_burden_or_authority: "all upstream physical derivation burdens and protected promotion authority"
+      next_lawful_route: "not unlocked"
+  forbidden_overread:
+    - "No validator registry handoff generated derivative or checkpoint is proof authority."
+    - "No local freeze becomes a program-wide rejection or future source-extension impossibility."
+
+validation_receipts:
+  task_local_validator_report: "research_control/tasks/RT-20260726-002/artifacts/causal_characteristic_target_validation_receipt_v1.json"
+  task_local_validator_report_hash: "0c72d1f724364e957918f2d7c50ac8a65fce1036f085a7fdc3346d994ab3722a"
+  target_manuscript_hash: "32a055bc5c851f0a36d726343cb5be1f1d68cf72a5a32fccead12b3488f04273"
+  target_specification_hash: "7103061d3d93c4b6ba90d9e35217fa3f1fbadd2b4b0cb7d56cd5ba37b497983a"
+  gate_b_checklist_hash: "59f109130858f7c5b1db5ad359316ef614d4eeb6509ca126499aca3b389e7b5e"
+  task_local_check_count: 42
+  task_local_failure_count: 0
+  scratch_tex_build_status: "PASS"
+  validation_status: "PASS"
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1025
+    relationship_row_count: 5117
+    semantic_row_count: 1025
+    vault_row_count: 1025
+    local_cache_only_warning_count: 0
+  local_retrieval_refresh:
+    refresh_needed: true
+    refresh_performed: true
+    before_core_validation_status: "PASS"
+    before_freshness_status: "WARN"
+    before_local_retrieval_status: "WARN"
+    before_local_cache_only_warning_count: 9
+    after_core_validation_status: "PASS"
+    after_freshness_status: "PASS"
+    after_local_retrieval_status: "PASS"
+    after_local_cache_only_warning_count: 0
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/tasks/RT-20260726-001/artifacts/source_dynamics_milestone_synthesis_v1.tex --json"
+      query_type: "lookup"
+      query_text: "research_control/tasks/RT-20260726-001/artifacts/source_dynamics_milestone_synthesis_v1.tex"
+      returned_object_ids:
+        - "TEX-V21-P5-T08-SOURCE-DYNAMICS-MILESTONE-SYNTHESIS-V1"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"effective metric g_eff characteristic influence relation P6\" --limit 10 --json"
+      query_type: "search"
+      query_text: "effective metric g_eff characteristic influence relation P6"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "TEX-V21-P5-T08-SOURCE-DYNAMICS-MILESTONE-SYNTHESIS-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260726-001/artifacts/source_dynamics_milestone_synthesis_v1.tex"
+      source_hash: "a2b9c6670cdb0e09ca2e19ff30f71d9bb954e3ab2fc73a5c9727a2df10db93aa"
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  excluded_generated_returns:
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      reason: "Generated mutable frontier navigation result; excluded from canonical returns and did not provide a scientific premise."
+    - object_id: "MD-RESEARCH-CONTROL-TASK-INDEX"
+      reason: "Generated noncanonical navigation result; excluded from canonical returns and did not influence routing or claims."
+  failed_queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"P6-T01 characteristic target\" --limit 10 --json"
+      result: "FTS parser treated the hyphen as an operator; no result influenced routing or claims."
+  authority_note: "Generated Obsidian, wiki, semantic, relationship, task-index, and .local retrieval surfaces are navigation or diagnostics only and are not authority."
+
+command_results:
+  - "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python research_control/tasks/RT-20260726-002/artifacts/validate_causal_characteristic_target.py --write-report --json | exit_code=0 | PASS checks=42 failures=0"
+  - "PATH=/Users/alex.omegapy/texlive/2026/bin/universal-darwin:$PATH .venv/bin/python .codex/skills/project-memory-system/scripts/build_pdf_derivatives.py --scratch research_control/tasks/RT-20260726-002/artifacts/causal_characteristic_target_v1.tex | exit_code=0 | PASS 5-page scratch PDF"
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 121 validated and atomically claimed the exact immutable P6-T01 route before consuming its one worker invocation."
+      - "The generation-120 governed checkpoint commit, clean repository, repo binding, branch, model effort, lease parity, and predecessor completion were verified before execution."
+      - "Memory preflight passed and the registered P5-T08 source, canonical ontology, historical scoped g_eff boundary, and metric-use ledger were inspected."
+  task_local_validator:
+    status: "PASS"
+    evidence:
+      - "All twelve source hashes, artifact presence, two-site symmetric and transverse response cases, response cocycle, generator limit, Gate B fields, controls, and boundary markers pass 42 deterministic checks."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The target, response-support theorem, two-site nonselection theorem, and exact scoped obstruction are present."
+      - "Formal influence is separated from physical causality and the historical scoped g_eff status remains unchanged."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Repository documentation signal claim-language source-authority generated-freshness selected-test and whitespace gates are required before checkpoint."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "One governed checkpoint remains to be invoked in generation 121."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Current frontier compact frontier task index dependency graph claim graph and burden-status derivatives are required to be regenerated and checked."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory bootstrap and validate-only are required after source registration."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation is required before checkpoint."
+
+validators_run:
+  - "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python research_control/tasks/RT-20260726-002/artifacts/validate_causal_characteristic_target.py --write-report --json"
+  - "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python research_control/tasks/RT-20260726-002/artifacts/validate_causal_characteristic_target.py --check --json"
+  - "PATH=/Users/alex.omegapy/texlive/2026/bin/universal-darwin:$PATH .venv/bin/python .codex/skills/project-memory-system/scripts/build_pdf_derivatives.py --scratch research_control/tasks/RT-20260726-002/artifacts/causal_characteristic_target_v1.tex"
+  - ".venv/bin/python research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_renderer.py --write --json"
+  - ".venv/bin/python research_control/tasks/RT-20260721-009/artifacts/validate_v21_current_burden_status.py --write --json"
+  - ".venv/bin/python research_control/tasks/RT-20260721-009/artifacts/validate_v21_current_burden_status.py --check --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --check"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --check"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --write"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --check"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --json output/research_dependency_graph.json --markdown wiki/indexes/research_dependency_graph.md --dot output/research_dependency_graph.dot"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --check"
+  - ".venv/bin/python scripts/research_control/generate_claim_graph_v1.py --json output/claim_graph_v1.json"
+  - ".venv/bin/python scripts/research_control/generate_claim_graph_v1.py --check"
+  - ".venv/bin/python scripts/research_control/validate_claim_graph_v1.py --json"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --json-summary"
+  - ".venv/bin/python scripts/research_control/run_full_research_control_validation.py --json --tail-chars 2500"
+  - "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m unittest -v tests.test_research_control"
+  - ".venv/bin/python -m unittest discover -s tests"
+  - "git diff --check"
+
+documentation_impact:
+  required: true
+  status: "completed"
+  path: "research_control/tasks/RT-20260726-002/documentation_impact.yaml"
+  rationale: "The registered draft/control target TeX, source specification, Gate B checklist, parent fusion, compact receipt, decision, completion, handoff, ledger update, and generated memory derivatives expose the exact scoped result and all nonconclusions."
+
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"
+  rationale: "P6-T01 records a scientific missing-law obstruction and target formalization, not a shared project-system defect."
+
+next_handoff_id: "handoff-0876"
+selected_next_route:
+  route_id: "v21_p6_t02_derive_or_obstruct_source_characteristic_structure"
+  route_label: "candidate-construction-packet"
+  role_family: "candidate-constructor@0.2.0"
+  worker_skill: "continue-research"
+  task_type: "v21_p6_t02_derive_or_obstruct_source_characteristic_structure"
+  plan_task_id: "P6-T02"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Produce the first source-derived physical propagation structure."
+  strategy_id: "construct_or_obstruct_one_source_derived_propagation_structure_v1"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  metric_free_target_available: true
+  unique_influence_from_p5_diagonal_data_locally_frozen: true
+  physical_characteristic_structure_available: false
+  physics_promotion_authorized: false
+  next_action: "After the governed checkpoint, construct or precisely obstruct one source-derived propagation relation principal polynomial or causal order using materially new source-local law content."
+  source_handoff: "research_control/handoffs/handoff-0876.yaml"
+
+next_recommended_action: "Run one governed checkpoint. Only after it commits may one fresh bounded P6-T02 Candidate Constructor packet construct or precisely obstruct a source-derived propagation structure without reopening the frozen P5-diagonal inference or importing the target GR cone."
+verdict: "PASS_P6_T01_METRIC_FREE_TARGET_RESPONSE_COMPOSITION_AND_TWO_SITE_NONSELECTION_OBSTRUCTION_READY_FOR_CHECKPOINT"

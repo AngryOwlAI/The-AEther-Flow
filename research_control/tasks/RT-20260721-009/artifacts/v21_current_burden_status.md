@@ -13,9 +13,9 @@ state, or latest handoff, those sources govern and this file is stale.
 | Field | Value |
 | --- | --- |
 | Schema | `v21_current_burden_status_v1` |
-| Source commit at generation | `8eea5c89dca5ed11f90ffafddf94319e23ed2b4e` |
-| Status generation time | `2026-07-26T07:41:26Z` |
-| Tracked task count | 1111 |
+| Source commit at generation | `8ad0c556ef08ece8483758646b1eacd66838ded9` |
+| Status generation time | `2026-07-26T09:33:36Z` |
+| Tracked task count | 1112 |
 | Stable definition count | 10 |
 | Distance-to-GR burden count | 14 |
 | Historical authored-map commit | `2c5fb02fd8fff9b449ab10a328d7c881b13ef546` |
@@ -23,21 +23,21 @@ state, or latest handoff, those sources govern and this file is stale.
 
 ### Exact source hashes
 
-- `registries/DISTANCE_TO_GR_LEDGER.csv`: `ceb3cb161b0efb74772998f8426df244a45010741e761c35b331a07a869dd1ee`
-- `registries/RESEARCH_TASK_REGISTRY.csv`: `6d9d211e2a620c3cc9f0d83f70858c47a7a4b68f68def421712e1a88273ee705`
+- `registries/DISTANCE_TO_GR_LEDGER.csv`: `3297567acef2ede8675e85d80b84d042df9553538a688be035e0b344bda4e40b`
+- `registries/RESEARCH_TASK_REGISTRY.csv`: `e90c46bcc45768734460131874169f180fea4e716ec960d667e6df7ac9cefed7`
 - `research_control/design/gr_derivation_burden_map.md`: `8e9d44e3a18ecc8a2430a9c42497da3eb9911c2cf6cd714c1525c5d91551835e`
-- `research_control/handoffs/handoff-0875.yaml`: `fd9cbbc8c28d44179a33c1ac63631d47bb9843cfeb113e8294d33d712dbe2a70`
-- `research_control/program_state.yaml`: `24546f8b2b38ceed7c6505a1153d5a03745567a51e94df68926c45b429f9b4ea`
+- `research_control/handoffs/handoff-0876.yaml`: `763dd064c4831894d124ba17e700e8d119101459ef48eb25d45e7da3e7b14f24`
+- `research_control/program_state.yaml`: `f99108fd52748f3968917c4aeb8c2094c2fa0060d5c78e610cd324991d0f233d`
 - `research_control/tasks/RT-20260721-009/artifacts/v21_burden_definitions_v1.yaml`: `67b8053baa60db4b11ee20582633d6279523d40b2ee853a6c570e2fdc1d113f5`
 
 ## Live control state
 
 | Field | Value |
 | --- | --- |
-| Active task | `RT-20260726-001` |
-| Latest handoff | `handoff-0875` |
-| Current status | `p5_t08_theorem_level_synthesis_precise_source_ontology_obstruction_and_conditional_p6_input_ready_for_checkpoint` |
-| Next recommended action | Run the one governed checkpoint for AJ-RT-20260726-001-001. Only after it commits may one fresh bounded P6-T01 Ontology Formalizer packet define the causal influence or characteristic target and test the exact conditional P5 response without inferring a physical cone or metric. |
+| Active task | `RT-20260726-002` |
+| Latest handoff | `handoff-0876` |
+| Current status | `p6_t01_metric_free_target_response_composition_and_two_site_nonselection_obstruction_ready_for_checkpoint` |
+| Next recommended action | Run the one governed checkpoint for AJ-RT-20260726-002-001. Only after it commits may one fresh bounded P6-T02 Candidate Constructor packet construct or precisely obstruct one source-derived propagation relation principal polynomial or causal order without reopening the frozen P5-diagonal inference or importing the target GR cone. |
 
 ## Authored stable definitions with generated current values
 
@@ -184,15 +184,15 @@ state, or latest handoff, those sources govern and this file is stale.
 
 | Burden ID | Required object | Current status | Control status | Mathematical status | Physical status | Promotion status | Updated at |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| `g_eff` | g_eff | `accepted` | `gate_review_completed` | `scoped_source_extension_geff_object` | `not_unscoped_lorentzian_metric_not_matter_coupling_not_einstein_equations` | `scoped_source_object_only` | `2026-06-27T06:48:00Z` |
+| `g_eff` | g_eff | `accepted` | `gate_review_completed` | `scoped_source_extension_geff_object` | `not_unscoped_lorentzian_metric_not_matter_coupling_not_einstein_equations` | `scoped_source_object_only` | `2026-07-26T09:33:36Z` |
 
 #### `g_eff` generated detail
 
-- Current blocking burden: Scoped source-extension g_eff object adopted under declared source-side scope but downstream matter coupling Einstein equations benchmark promotion and completed derivation remain blocked
-- Current next evidence or action: Run one bounded Theoretical Continuation Selector packet to classify post-scoped-g_eff route before matter-coupling precondition work
-- Current failure/freeze criterion: Selector or downstream gate must find repair freeze obstruction or next bounded non-promotional route if scoped g_eff cannot support later burdens
-- Current evidence: `research_control/tasks/RT-20260614-222/artifacts/251_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_GEFF_CANDIDATE_SCOPED_SOURCE_EXTENSION_ADOPTION_GATE_CHAIR_REVIEW.tex`
-- Exact overread guard: `no_source_law_adoption;no_metricdata_e_adoption;no_unscoped_geff_adoption;no_matter_coupling_derivation;no_einstein_equations;no_benchmark_promotion;no_completed_derivation`
+- Current blocking burden: Historical scoped source-extension g_eff object remains adopted only under declared source-side scope while P6-T01 defines a metric-free influence and characteristic target and shows unchanged P5 diagonal response does not select unique local influence
+- Current next evidence or action: Derive one source-local propagation relation principal polynomial or causal order with provenance orientation operational meaning covariance robustness and no target-metric import
+- Current failure/freeze criterion: Freeze inference from unchanged P5 diagonal flow or symmetric response to unique region influence unless materially new source-local law data theorem variation class or protected decision is supplied
+- Current evidence: `research_control/tasks/RT-20260726-002/artifacts/causal_characteristic_target_v1.tex`
+- Exact overread guard: `no_source_law_adoption;no_metricdata_e_adoption;no_unscoped_geff_adoption;no_matter_coupling_derivation;no_einstein_equations;no_benchmark_promotion;no_completed_derivation;no_global_theory_rejection;no_future_source_extension_impossibility`
 
 ### `matter_coupling`
 
