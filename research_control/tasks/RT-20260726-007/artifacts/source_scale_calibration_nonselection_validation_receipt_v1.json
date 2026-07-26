@@ -1,0 +1,381 @@
+{
+  "artifact_hashes": {
+    "source_scale_calibration_nonselection_spec_v1.yaml": "5df45be2813605dc5be2cfd9b27f0f0db2adfb7e991c5960d062d63a3a761646",
+    "source_scale_calibration_nonselection_v1.tex": "96a527cccb8e7a6a614debc5110902b1587848178af8444fc02acda52caf4d28"
+  },
+  "assumption_count": 8,
+  "check_count": 61,
+  "checks": [
+    {
+      "check_id": "SPEC-SCHEMA",
+      "detail": "Expected bounded P6-T04 schema.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "SPEC-TASK",
+      "detail": "Specification is bound to the exact task.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "SPEC-PLAN",
+      "detail": "Specification is bound to the exact v21 work item.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "SPEC-ADOPTION",
+      "detail": "Adoption is blocked while continuation stays open.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "INPUT-ONE-RAY",
+      "detail": "P6-T03 one-ray bundle remains explicit.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "INPUT-NO-UNITS",
+      "detail": "No physical units are smuggled into the input.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "INPUT-NO-CONFORMAL-CLASS",
+      "detail": "No conformal class is assumed.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "INPUT-NO-TARGET",
+      "detail": "No target metric is imported.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "ASSUMPTION-TABLE",
+      "detail": "Eight explicit assumptions are present.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "ASSUMPTION-FLOW-NORMALIZATION",
+      "detail": "Flow normalization remains open.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "ASSUMPTION-UNITS",
+      "detail": "Dimensionful conversion remains open.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "ASSUMPTION-NO-TARGET",
+      "detail": "No-target boundary is explicit.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "THEOREM-VOLUME-GAUGE",
+      "detail": "Conditional volume-gauge theorem is present.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "THEOREM-UNIMODULAR",
+      "detail": "Fixed-density anisotropy theorem is present.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "PROPOSITION-CLOCK",
+      "detail": "Clock reparameterization result is present.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "VOLUME-SCALING-4D",
+      "detail": "Four-dimensional volume scales as Omega^4.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "VOLUME-GAUGE-UNIQUE",
+      "detail": "Positive fourth root gives the unique Weyl factor.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "MODEL-DETERMINANT-0.0",
+      "detail": "Unimodular witness determinant is -1.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "MODEL-SIGNATURE-0.0",
+      "detail": "Witness has Lorentzian signature.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "MODEL-DETERMINANT-0.3",
+      "detail": "Unimodular witness determinant is -1.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "MODEL-SIGNATURE-0.3",
+      "detail": "Witness has Lorentzian signature.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "MODEL-DETERMINANT--0.7",
+      "detail": "Unimodular witness determinant is -1.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "MODEL-SIGNATURE--0.7",
+      "detail": "Witness has Lorentzian signature.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "MODEL-NONCONFORMAL",
+      "detail": "Time coefficient fixes factor one while spatial coefficient differs.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "MODEL-DIFFERENT-CONES",
+      "detail": "A vector is null only in the a=0 witness.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "MODEL-DIFFERENT-RODS",
+      "detail": "Transverse rod length differs.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "CLOCK-RATIO-INVARIANT",
+      "detail": "Relative phase-rate ratio is reparameterization invariant.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "CLOCK-NO-ABSOLUTE-UNIT",
+      "detail": "Protocol does not supply an absolute time unit.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "CLOCK-NO-ROD",
+      "detail": "Clock agreement does not supply rod agreement.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "CLOCK-LAW-NOT-DERIVED",
+      "detail": "Current ontology does not derive the protocol law.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "DIMENSIONAL-ALL-OPEN",
+      "detail": "No physical unit or target calibration is silently supplied.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "OBSTRUCTION-ID",
+      "detail": "Stable obstruction identity is present.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "OBSTRUCTION-SCOPE",
+      "detail": "Obstruction remains candidate-scoped.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "OBSTRUCTION-ONTOLOGY",
+      "detail": "Underdetermination language is precise.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "OBSTRUCTION-CONTINUATION",
+      "detail": "A materially new source primitive may reopen continuation.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "OBSTRUCTION-NO-GLOBAL-NOGO",
+      "detail": "No global no-go is claimed.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "REOPENING-CRITERIA",
+      "detail": "Three materially richer reopening classes are named.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "FREEZE-CONTINUATION",
+      "detail": "Local freeze leaves materially richer continuation open.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "FREEZE-NO-GLOBAL-REJECTION",
+      "detail": "Local freeze is not theory rejection.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "AUTHORITY-ALL-FALSE",
+      "detail": "Every adoption, promotion, and publication authority flag is false.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "TEX-MARKER-01",
+      "detail": "Required TeX marker is present: Conditional volume gauge",
+      "status": "PASS"
+    },
+    {
+      "check_id": "TEX-MARKER-02",
+      "detail": "Required TeX marker is present: Unimodular density, cone, and rod nonselection",
+      "status": "PASS"
+    },
+    {
+      "check_id": "TEX-MARKER-03",
+      "detail": "Required TeX marker is present: Volume-tick calibration nonselection",
+      "status": "PASS"
+    },
+    {
+      "check_id": "TEX-MARKER-04",
+      "detail": "Required TeX marker is present: OBST-P6T04-VOLUME-TICK-CALIBRATION-NONSELECTION-001",
+      "status": "PASS"
+    },
+    {
+      "check_id": "TEX-MARKER-05",
+      "detail": "Required TeX marker is present: blocked\\_adoption\\_open\\_continuation",
+      "status": "PASS"
+    },
+    {
+      "check_id": "TEX-MARKER-06",
+      "detail": "Required TeX marker is present: not a theorem that the project can never derive",
+      "status": "PASS"
+    },
+    {
+      "check_id": "TEX-MARKER-07",
+      "detail": "Required TeX marker is present: relative-device agreement protocol",
+      "status": "PASS"
+    },
+    {
+      "check_id": "TEX-FORBIDDEN-01",
+      "detail": "Forbidden promotion marker is absent: canonical ontology is hereby",
+      "status": "PASS"
+    },
+    {
+      "check_id": "TEX-FORBIDDEN-02",
+      "detail": "Forbidden promotion marker is absent: physical clock is established",
+      "status": "PASS"
+    },
+    {
+      "check_id": "TEX-FORBIDDEN-03",
+      "detail": "Forbidden promotion marker is absent: physical rod is established",
+      "status": "PASS"
+    },
+    {
+      "check_id": "TEX-FORBIDDEN-04",
+      "detail": "Forbidden promotion marker is absent: effective metric is derived",
+      "status": "PASS"
+    },
+    {
+      "check_id": "TEX-FORBIDDEN-05",
+      "detail": "Forbidden promotion marker is absent: einstein equations are derived",
+      "status": "PASS"
+    },
+    {
+      "check_id": "TEX-FORBIDDEN-06",
+      "detail": "Forbidden promotion marker is absent: the theory is impossible",
+      "status": "PASS"
+    },
+    {
+      "check_id": "TEX-FORBIDDEN-07",
+      "detail": "Forbidden promotion marker is absent: this is a completed derivation",
+      "status": "PASS"
+    },
+    {
+      "check_id": "SOURCE-HASH-TEX-V21-P6-T03-ONE-RAY-CONFORMAL-INSUFFICIENCY-V1",
+      "detail": "Fixed source hash matches.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "SOURCE-HASH-TEX-ONTOLOGY-AETHER-FLOW-GEOMETRY",
+      "detail": "Fixed source hash matches.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "SOURCE-HASH-TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-METRICFORMASSIGN-GEFF-CANDIDATE-OR-OBSTRUCTION",
+      "detail": "Fixed source hash matches.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "SOURCE-HASH-TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-GEFF-CANDIDATE-SCOPED-SOURCE-EXTENSION-ADOPTION-GATE-CHAIR-REVIEW",
+      "detail": "Fixed source hash matches.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "SOURCE-HASH-MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21",
+      "detail": "Fixed source hash matches.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "SOURCE-HASH-MD-RESEARCH-CONTROL-DESIGN-GR-DERIVATION-BURDEN-MAP",
+      "detail": "Fixed source hash matches.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "SOURCE-HASH-HANDOFF-0880",
+      "detail": "Fixed source hash matches.",
+      "status": "PASS"
+    }
+  ],
+  "claim_boundary_summary": "Conditional volume gauge and candidate-scoped density/tick nonselection only; no ontology or source-law adoption, physical metric, clock, rod, downstream GR promotion, global no-go, publication, push, or completed derivation.",
+  "countermodel_count": 1,
+  "device_protocol_count": 1,
+  "fail_count": 0,
+  "fixed_sources": [
+    {
+      "actual_sha256": "007ae324872868b9eb9cdf0ebc4f1131737c71eda9ce301c805acd5041a52bac",
+      "expected_sha256": "007ae324872868b9eb9cdf0ebc4f1131737c71eda9ce301c805acd5041a52bac",
+      "object_id": "TEX-V21-P6-T03-ONE-RAY-CONFORMAL-INSUFFICIENCY-V1",
+      "path": "research_control/tasks/RT-20260726-005/artifacts/one_ray_conformal_insufficiency_v1.tex",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "f60a81b63f814b03cca7190b3ac6285842a55317f4aed058cc6e75154cc0b4d7",
+      "expected_sha256": "f60a81b63f814b03cca7190b3ac6285842a55317f4aed058cc6e75154cc0b4d7",
+      "object_id": "TEX-ONTOLOGY-AETHER-FLOW-GEOMETRY",
+      "path": "ontology/tex/aether_flow_geometry.tex",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "dd30573519ed1df66b3800d29ee0adc9fcc94d9c8d3b9b5a7fcffde503d5f0ef",
+      "expected_sha256": "dd30573519ed1df66b3800d29ee0adc9fcc94d9c8d3b9b5a7fcffde503d5f0ef",
+      "object_id": "TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-METRICFORMASSIGN-GEFF-CANDIDATE-OR-OBSTRUCTION",
+      "path": "research_control/tasks/RT-20260614-216/artifacts/245_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_METRICFORMASSIGN_GEFF_CANDIDATE_OR_OBSTRUCTION.tex",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "3ce8cbc6cd79c6852d78f81045633beea44c4dfc6e2912c604b08e3c8bdb0257",
+      "expected_sha256": "3ce8cbc6cd79c6852d78f81045633beea44c4dfc6e2912c604b08e3c8bdb0257",
+      "object_id": "TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-GEFF-CANDIDATE-SCOPED-SOURCE-EXTENSION-ADOPTION-GATE-CHAIR-REVIEW",
+      "path": "research_control/tasks/RT-20260614-222/artifacts/251_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_GEFF_CANDIDATE_SCOPED_SOURCE_EXTENSION_ADOPTION_GATE_CHAIR_REVIEW.tex",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087",
+      "expected_sha256": "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087",
+      "object_id": "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21",
+      "path": "implementations_plans/recommendations_implementation_plan_continue_task-v21.md",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "8e9d44e3a18ecc8a2430a9c42497da3eb9911c2cf6cd714c1525c5d91551835e",
+      "expected_sha256": "8e9d44e3a18ecc8a2430a9c42497da3eb9911c2cf6cd714c1525c5d91551835e",
+      "object_id": "MD-RESEARCH-CONTROL-DESIGN-GR-DERIVATION-BURDEN-MAP",
+      "path": "research_control/design/gr_derivation_burden_map.md",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "f5336b78dcbc7e5d67c9aa35c8af0c912ed54bbd080cf998da0dae6c2289536e",
+      "expected_sha256": "f5336b78dcbc7e5d67c9aa35c8af0c912ed54bbd080cf998da0dae6c2289536e",
+      "object_id": "HANDOFF-0880",
+      "path": "research_control/handoffs/handoff-0880.yaml",
+      "status": "PASS"
+    }
+  ],
+  "global_no_go_count": 0,
+  "pass_count": 61,
+  "physical_metric_count": 0,
+  "plan_task_id": "P6-T04",
+  "precise_obstruction_count": 1,
+  "result_id": "V21-P6-T04-SOURCE-SCALE-CALIBRATION-NONSELECTION-V1",
+  "schema_id": "v21_p6_t04_source_scale_calibration_nonselection_validation_v1",
+  "status": "PASS",
+  "target_metric_premise_count": 0,
+  "task_id": "RT-20260726-007",
+  "theorem_count": 3
+}

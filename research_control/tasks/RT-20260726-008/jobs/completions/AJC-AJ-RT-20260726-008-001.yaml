@@ -1,0 +1,335 @@
+validation_status: "PASS"
+final_repository_validation_status: "PASS_PRECHECKPOINT_RECOVERY_READY"
+job_id: "AJ-RT-20260726-008-001"
+completion_id: "AJC-AJ-RT-20260726-008-001"
+task_id: "RT-20260726-008"
+task_type: "project_system_p6_t04_support_traceability_metric_ledger_hash_legacy_checkpoint_recovery"
+decision_id: "DDR-20260726-008"
+role_id: "validator-engineer"
+source_role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260726-008"
+status: "completed"
+created_at: "2026-07-26T19:35:37Z"
+started_at: "2026-07-26T19:35:37Z"
+completed_at: "2026-07-26T19:35:37Z"
+objective: "Under the sealed generation-128 dirty-state manifest, replace exactly one stale METRIC_USE_LEDGER source hash in the v18 support-formalization traceability registry, prove all inherited and protected P6-T04 bytes remained exact at the repair boundary, synchronize normal control derivatives, and invoke one fresh governed cumulative checkpoint through the explicit legacy-validation fallback before P6-T05."
+completion_summary: "Generation 128 synchronizes exactly one stale traceability source hash to the already-authorized metric-use ledger hash. The sealed receipt records zero drift across all 64 inherited dirty-manifest paths, validates the exact one-token transition, preserves the P6-T04 scientific packet, and proves the earlier planner stop launched zero subprocesses and staged and committed nothing. P6-T05 remains unexecuted pending one governed cumulative legacy-validation checkpoint."
+objective_result: "p6_t04_traceability_legacy_checkpoint_recovery_pass_ready_for_checkpoint"
+
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P6"
+  plan_task_id: "P6-T04"
+  recovery_for_plan_task_id: "P6-T04"
+  implementation_status: "traceability_legacy_checkpoint_recovery_implemented_checkpoint_ready"
+  protected_p6_t04_status: "complete_preserved"
+  completed_v21_tasks_added: []
+  next_dependency_ready_work_item: "P6-T05_after_checkpoint"
+  next_work_item_executed: false
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 128
+  passes_consumed: 118
+  route_work_item_id: "P6-T04"
+  route_worker_skill: "improve-project-system"
+  route_sha256: "b8499c2bf0913ace5e6cbb74e978af1d909797eceda7e5fb8f44737687789610"
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:128"
+  handoff_token: "fc8e49323667d1e3f4005d91a8bd7d4a0433aa763f846947"
+  relay_claim_token: "dbb5fe9d87c717bc8df6643b2d8642169279ac6a1ba2ceeb"
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+
+transaction_status: "ready_for_governed_legacy_validation_checkpoint"
+result_disposition: "repair_implemented_and_validated"
+work_item_status: "completed"
+plan_task_id: "P6-T04"
+recovery_for_plan_task_id: "P6-T04"
+next_plan_task_id: "P6-T05"
+checkpoint_commit: "none_checkpoint_pending"
+checkpoint_invocation_count: 0
+checkpoint_staged: false
+legacy_validation_used: false
+legacy_validation_selected: true
+shadow_planner_subprocess_count: 0
+shadow_planner_staged: false
+shadow_planner_committed: false
+project_system_change_only: true
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS_PRECHECKPOINT_READY"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  observed_durable_outputs:
+    physics: []
+    project_system:
+      - "one exact v18 support-traceability source-hash synchronization"
+      - "sealed 64-path repair-preservation receipt"
+      - "one governed cumulative checkpoint through the explicit legacy-validation fallback"
+  accepted_criteria:
+    physics: []
+    project_system:
+      - "the target differs from its sealed hash by exactly one authorized ledger-hash substitution"
+      - "all 64 inherited dirty-manifest paths match at the repair boundary"
+      - "protected P6-T04 scientific and authority hashes remain exact"
+      - "the existing v18 validator and focused tests pass without behavior changes"
+      - "the shadow planner stop is evidenced as zero subprocesses zero stage and zero commit"
+      - "all required working-tree gates pass"
+      - "one governed cumulative checkpoint commits through --legacy-validation"
+      - "P6-T05 remains unexecuted until checkpoint success"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+physics_payload_admission_result:
+  status: "admitted"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+
+ordinary_route_guard_admission_result:
+  status: "PASS"
+  source_handoff_id: "handoff-0880"
+  selected_plan_task_id: "P6-T04"
+  guard_outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  system_success_counts_as_physics: false
+  system_success_counts_as_distance_to_gr: false
+  scientific_status_changed: false
+  physics_promotion_authorized: false
+
+recovery_result:
+  status: "PASS"
+  strategy_id: "repair_p6_t04_support_traceability_metric_ledger_hash_then_checkpoint_via_explicit_legacy_validation_fallback_v1"
+  source_task_id: "RT-20260726-007"
+  source_job_id: "AJ-RT-20260726-007-001"
+  source_handoff_id: "handoff-0881"
+  source_head: "3e9fa377def1af2d508c2ba63caffc79305ec5f3"
+  dirty_state_manifest_sha256: "6a1d08391bf88b2edc93dea614140a4e31a69d5d9ec2bf8d67ce48c8857422c2"
+  shadow_planner_evidence_sha256: "40a64870ae879d62f790980130ec18eed99ff446e16d0b83d21872a03a9d09d1"
+  traceability_gate_evidence_sha256: "5b04f41524049c19fc930172e2d5f2669535318991157d4af5d7a418f157e4ee"
+  recovery_validator_path: "research_control/tasks/RT-20260726-008/artifacts/validate_p6_t04_traceability_checkpoint_recovery.py"
+  recovery_validator_sha256: "9af59d7f311c4aed9a92b51df3188fcd6327d3defe4d392bf3c10c4ca02bca79"
+  recovery_receipt_path: "research_control/tasks/RT-20260726-008/artifacts/p6_t04_traceability_checkpoint_recovery_receipt.json"
+  recovery_receipt_sha256: "2ba050d096f74a181a993968c9334da185d0e33ab22c76af8f29cc76ef244a68"
+  manifest_path_count: 64
+  manifest_hash_mismatch_count: 0
+  protected_path_count: 18
+  target_path_count: 1
+  target_path: "research_control/design/support_formalization_traceability_registry_v18.yaml"
+  target_before_sha256: "768c0af4236c8793d233aefea6e5a253c1c5ba8f3eecc75f993a67f8392dd7dc"
+  target_after_sha256: "0651e7bbabd8cfe5e1d33e9b902620fc4b2566ef539ed542f138e49d5769ad20"
+  stale_ledger_sha256: "b63efbe32b6681bbe093c41ec92a2bfe0989fbd2a94a605387bdcd5a9e440720"
+  authorized_ledger_sha256: "d748fcbeff3b64a7d07dc874897564e39e9569b894719fd2cce7d49965a362be"
+  exact_hash_substitution_count: 1
+  support_traceability_entry_count: 5
+  focused_test_count: 6
+  shadow_planner_subprocess_count: 0
+  legacy_validation_fallback_selected: true
+  p6_t04_science_payload_modified: false
+  p6_t04_reexecuted: false
+  p6_t05_executed: false
+
+artifacts:
+  - path: "research_control/tasks/RT-20260726-008/artifacts/validate_p6_t04_traceability_checkpoint_recovery.py"
+    sha256: "9af59d7f311c4aed9a92b51df3188fcd6327d3defe4d392bf3c10c4ca02bca79"
+  - path: "research_control/tasks/RT-20260726-008/artifacts/p6_t04_traceability_checkpoint_recovery_receipt.json"
+    sha256: "2ba050d096f74a181a993968c9334da185d0e33ab22c76af8f29cc76ef244a68"
+  - path: "research_control/design/support_formalization_traceability_registry_v18.yaml"
+    sha256: "0651e7bbabd8cfe5e1d33e9b902620fc4b2566ef539ed542f138e49d5769ad20"
+
+output_paths:
+  - "research_control/design/support_formalization_traceability_registry_v18.yaml"
+  - "research_control/tasks/RT-20260726-008/**"
+  - "research_control/handoffs/handoff-0882.yaml"
+  - "research_control/handoffs/handoff-0882.md"
+  - "research_control/program_state.yaml"
+
+command_results:
+  - command: ".venv/bin/python research_control/tasks/RT-20260726-008/artifacts/validate_p6_t04_traceability_checkpoint_recovery.py --write-report --json"
+    status: "PASS"
+    summary: "one exact source-hash substitution; all 64 inherited manifest paths and 18 protected P6-T04 hashes match"
+  - command: ".venv/bin/python scripts/research_control/support_formalization/validate_traceability_registry_v18.py --json"
+    status: "PASS"
+    summary: "five support-only entries pass with no proof or promotion authority"
+  - command: ".venv/bin/python -m unittest -v tests.test_support_formalization_traceability_registry_v18"
+    status: "PASS"
+    summary: "six focused tests pass"
+  - command: "git diff --check"
+    status: "PASS"
+    summary: "working-tree whitespace validation passes after the exact one-field repair"
+
+validation_summary:
+  status: "PASS_PRECHECKPOINT_RECOVERY_READY"
+  task_local_error_count: 0
+  manifest_path_count: 64
+  manifest_hash_mismatch_count: 0
+  protected_path_count: 18
+  target_path_count: 1
+  exact_hash_substitution_count: 1
+  support_traceability_entry_count: 5
+  focused_test_count: 6
+  shadow_planner_subprocess_count: 0
+  checkpoint_invocation_count: 0
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 128 validated, atomically claimed, and consumed the exact immutable recovery route once."
+      - "The exact 64-path manifest, repository identity, lease, route, effort contract, and predecessor state matched before writes."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The sealed receipt proves one exact traceability-hash substitution, zero inherited drift, protected P6-T04 hashes, and a passing v18 validator."
+      - "The shadow-planner blocker records zero subprocesses, zero stage, and zero commit."
+  post_write:
+    status: "PENDING"
+    evidence:
+      - "Integrated control, documentation, signal, memory, and test validation remains to be consumed before checkpoint."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "The one governed legacy-validation checkpoint is pending; P6-T05 remains unexecuted."
+  renderer:
+    status: "PENDING"
+    evidence:
+      - "Tracked frontier, task index, registry, graph, and wiki derivatives remain to be synchronized."
+  memory_bootstrap:
+    status: "PENDING"
+    evidence:
+      - "Tracked memory synchronization remains after final control records are present."
+  claim_language_linter:
+    status: "PENDING"
+    evidence:
+      - "Integrated research-control validation remains to confirm no hard claim-language errors."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not authorized; ordinary project-system traceability and checkpoint-path recovery validation only"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  publication_authorized: false
+  proof_authority: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  canonical_ontology_edit_authorized: false
+  ontology_selection_authorized: false
+  physical_interpretation_establishment_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+distance_to_gr_delta:
+  changed: false
+  effect: "none_project_system_recovery"
+  burden_id: "g_eff"
+  milestone: "effective_metric_g_eff"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "The inherited P6-T04 conditional volume-gauge theorem, scale-calibration obstruction, and Distance-to-GR delta are preserved; this recovery contributes no physics movement."
+
+physics_progress_status:
+  status: "none_project_system_only"
+  new_mathematical_payload: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+
+selected_next_route:
+  route_id: "v21_p6_t05_signature_nondegeneracy_transformation_law"
+  route_label: "ontology-law-research-packet"
+  role_family: "ontology-formalizer@0.2.0"
+  worker_skill: "continue-research"
+  task_type: "v21_p6_t05_derive_lorentzian_signature_nondegeneracy_and_transformation_law"
+  plan_task_id: "P6-T05"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Meet the mathematical core of Gate B."
+  strategy_id: "test_signature_nondegeneracy_and_transformation_under_scale_calibration_nonselection_v1"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  blocked_by: "governed cumulative P6-T04 legacy-validation checkpoint"
+  physics_promotion_authorized: false
+  executed: false
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required_no_nonblank_signals"
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1035
+    relationship_row_count: 5202
+    semantic_row_count: 1035
+    vault_row_count: 1035
+    local_cache_only_warning_count: 7
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"P6 T04 support traceability metric ledger hash checkpoint legacy validation\" --json"
+      query_type: "search"
+      query_text: "P6 T04 support traceability metric ledger hash checkpoint legacy validation"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+  canonical_inspections:
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "d55ccb4de187d6fd4fa4523063abb045f53f22bac57b3ef391d6cf6fd00ca5e9"
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+      source_hash: "a28c02150d17f3c39cf919fa305d585cbe1ea7a022dd81320fa2cb72c8126ebc"
+  authority_note: "Generated Obsidian, wiki, semantic, relationship, SQLite, and .local surfaces are retrieval-only navigation layers and not authority; tracked canonical sources, registries, and research-control state govern this recovery."

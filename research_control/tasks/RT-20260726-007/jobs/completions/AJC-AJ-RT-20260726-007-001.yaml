@@ -1,0 +1,801 @@
+job_id: "AJ-RT-20260726-007-001"
+completion_id: "AJC-AJ-RT-20260726-007-001"
+task_id: "RT-20260726-007"
+task_type: "v21_p6_t04_derive_metric_scale_volume_clock_and_rod_calibration"
+decision_id: "DDR-20260726-007"
+role_id: "candidate-constructor"
+role_version: "0.2.0"
+execution_role_ref: "candidate-constructor@0.2.0--RT-20260726-007"
+status: "completed"
+validation_status: "PASS"
+final_repository_validation_status: "PASS_READY_FOR_CHECKPOINT"
+created_at: "2026-07-26T18:04:11Z"
+started_at: "2026-07-26T18:04:11Z"
+completed_at: "2026-07-26T18:04:11Z"
+objective: "Construct or precisely obstruct source-defined measure and operational structures that fix conformal scale and measured durations and lengths while treating P6-T03 conformal nonselection as a hard input and importing no target calibration."
+completion_summary: "P6-T04 proves that a positive density uniquely selects a Weyl representative only conditionally inside an independently supplied four-dimensional Lorentzian conformal class. The explicit family g_a=diag(-1,exp(2a),exp(-2a),1) has determinant -1 and identical one-ray density and phase data for every a while changing conformal class null cone and transverse rod lengths. Positive flow reparameterization V_f=fV separately rescales absolute phase rates while preserving relative ratios. Thus the tested package does not define a unique operational Lorentzian metric or absolute clock and rod calibration. Current ontology does not derive the missing conformal-shape normalized-volume clock coframe or robustness laws; adoption is blocked while materially richer continuation stays open."
+objective_result: "conditional_volume_gauge_theorem_and_scale_calibration_precise_obstruction"
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 127
+  passes_consumed: 117
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:127"
+  handoff_token: "f3bc776332cecf47ed6e671da157a2463a078243eada0bbb"
+  relay_claim_token: "0669f329d255e3749408e3fe3747a6da2e9745edbd393950"
+  route_work_item_id: "P6-T04"
+  route_worker_skill: "continue-research"
+  route_sha256: "ab06537dc28a8d6b141c167b11c3eca9ca26490f8120d06a6b1b5caceaca02ba"
+  worker_skill: "continue-research"
+  worker_invocation_count: 1
+
+transaction_status: "ready_for_checkpoint"
+result_disposition: "P6_T04_CONDITIONAL_VOLUME_GAUGE_AND_SCALE_CALIBRATION_PRECISE_OBSTRUCTION_READY_FOR_CHECKPOINT"
+milestone_disposition: "completed_with_conditional_theorem_and_precise_candidate_scoped_obstruction"
+adoption_status: "blocked_adoption_open_continuation"
+checkpoint_commit:
+  required: true
+  attempted: false
+  committed: false
+  commit_sha: ""
+  dependency_checkpoint_commit: "3e9fa377def1af2d508c2ba63caffc79305ec5f3"
+  push_authorized: false
+  push_performed: false
+
+is_physics_task: true
+payload_class: "precise_obstruction"
+minimum_payload:
+  payload_class: "precise_obstruction"
+  payload_artifact_path: "research_control/tasks/RT-20260726-007/artifacts/source_scale_calibration_nonselection_v1.tex"
+  payload_summary: "The manuscript proves a conditional Weyl-gauge theorem and supplies explicit determinant-one anisotropy and clock-reparameterization countermodels."
+has_new_mathematical_payload: true
+has_finite_local_witness: true
+has_countermodel: true
+external_red_team_finding_requires_integration: false
+physics_promotion_authorized: false
+proof_authority: false
+source_extension_classification_required: true
+
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P6"
+  plan_task_id: "P6-T04"
+  work_kind: "formalization_or_theorem"
+  task_class: "science"
+  expected_result_kind: "theorem_or_precise_obstruction"
+  dependency_task_id: "P6-T03"
+  dependency_completion_path: "research_control/tasks/RT-20260726-005/jobs/completions/AJC-AJ-RT-20260726-005-001.yaml"
+  dependency_completion_sha256: "c9f18359c5b4c37e85719cccea1307176653d05d52fc9fb54059d7abb3af4d79"
+  dependency_checkpoint_commit: "3e9fa377def1af2d508c2ba63caffc79305ec5f3"
+  work_item_status: "completed_ready_for_checkpoint"
+  recommendation_ids:
+    - "V21-R18"
+    - "V21-R23"
+    - "V21-R24"
+    - "V21-R63"
+  recommendation_coverage_role: "direct_implementation"
+  scientific_claims_changed: true
+  scientific_claim_change_scope: "draft/control conditional volume-gauge theorem fixed-density anisotropy countermodel clock-reparameterization result relative-device protocol and precise candidate-scoped obstruction"
+  physical_status_changed: false
+  distance_to_gr_delta_changed: true
+  distance_to_gr_delta_scope: "conditional_scale_gauge_and_volume_tick_operational_nonselection_only"
+  physics_promotion_authorized: false
+  proof_authority: false
+  next_dependency_work_item: "P6-T05_after_checkpoint"
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  observed_durable_outputs:
+    physics:
+      - "research_control/tasks/RT-20260726-007/artifacts/source_scale_calibration_nonselection_v1.tex"
+      - "research_control/tasks/RT-20260726-007/artifacts/source_scale_calibration_nonselection_spec_v1.yaml"
+    project_system:
+      - "research_control/tasks/RT-20260726-007/artifacts/validate_source_scale_calibration_nonselection.py"
+      - "research_control/tasks/RT-20260726-007/artifacts/source_scale_calibration_nonselection_validation_receipt_v1.json"
+  accepted_criteria:
+    physics:
+      - "conditional volume-gauge transformation and uniqueness proof are explicit"
+      - "fixed-density anisotropy and clock-reparameterization countermodels are explicit"
+      - "dimensional relative-device and candidate-scoped obstruction boundaries are explicit"
+    project_system:
+      - "task-local validation and scratch TeX build pass"
+      - "claim-language source-authority documentation signal and research-control checks pass"
+      - "one governed checkpoint records the bounded transaction"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+physics_payload_admission_result:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "physics"
+  declared_payload_type: "precise_obstruction"
+  realized_payload_type: "precise_obstruction"
+  candidate_family: "V21-P6-T04-SOURCE-SCALE-CALIBRATION-NONSELECTION-V1"
+  result: "PASS"
+  material_payload_present: true
+  process_receipts_counted_as_payload: false
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed_by_admission: false
+  physics_promotion_authorized: false
+
+family_freeze_admission_result:
+  schema_id: "family_freeze_route_admission_v1"
+  policy_id: "family_freeze_reopening_policy_v1"
+  route_id: "v21_p6_t04_source_scale_calibration_nonselection"
+  family_id: "V21-P6-T03-ONE-RAY-CONFORMAL-INSUFFICIENCY-V1"
+  detected_match_basis: []
+  reopening_requested: false
+  distinct_branch_identity: "V21-P6-T04-SOURCE-SCALE-CALIBRATION-NONSELECTION-V1"
+  result: "PASS_DISTINCT_PRECISE_OBSTRUCTION_BRANCH"
+  local_family_freeze_preserved: true
+  global_no_go_claimed: false
+  physics_promotion_authorized: false
+
+ordinary_route_guard_admission_result:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0880"
+  selected_plan_task_id: "P6-T04"
+  guard_outcome: "below_threshold"
+  result: "PASS"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  scientific_status_changed_by_guard: false
+  physics_promotion_authorized: false
+
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_execution_unit_count: 2
+  outer_agentjob_count: 1
+  child_agentjob_count: 0
+  subagent_count: 0
+
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260726-007/artifacts/child_phys_math_p6_t04_scale_calibration.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260726-007/artifacts/child_phys_phil_p6_t04_scale_calibration.yaml"
+      status: "completed"
+  conflict_review:
+    status: "resolved"
+    review_path: "research_control/tasks/RT-20260726-007/artifacts/parent_conflict_review_p6_t04_scale_calibration.yaml"
+    resolution_rounds: 1
+    resolved_conflict_count: 6
+    unresolved_conflicts: []
+  fusion:
+    fused_output_path: "research_control/tasks/RT-20260726-007/artifacts/source_scale_calibration_nonselection_v1.tex"
+    fusion_notes_path: "research_control/tasks/RT-20260726-007/artifacts/parent_fusion_notes_p6_t04_scale_calibration.md"
+    shared_consensus_summary: "Both perspectives separate conditional Weyl-gauge selection from conformal-shape construction and relative tick comparison from absolute physical duration and rod calibration."
+    unique_phys_math_contributions: "Four-dimensional volume scaling proof determinant-one anisotropy family null-cone and rod separation and phase-rate reparameterization invariant."
+    unique_phys_phil_contributions: "Dimensional physical-interpretation independent-device historical g_eff source-side reopening and downstream-promotion boundaries."
+    novelty_preservation_summary: "Fusion preserves the conditional positive theorem and explicit countermodels while keeping the obstruction candidate-scoped."
+    claim_boundary_preservation_summary: "No target import ontology source-law physical volume clock rod metric scale M_src unscoped g_eff downstream GR global no-go proof publication push or completed derivation is authorized."
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+
+artifacts:
+  child_phys_math: "research_control/tasks/RT-20260726-007/artifacts/child_phys_math_p6_t04_scale_calibration.yaml"
+  child_phys_phil: "research_control/tasks/RT-20260726-007/artifacts/child_phys_phil_p6_t04_scale_calibration.yaml"
+  parent_conflict_review: "research_control/tasks/RT-20260726-007/artifacts/parent_conflict_review_p6_t04_scale_calibration.yaml"
+  parent_fusion_notes: "research_control/tasks/RT-20260726-007/artifacts/parent_fusion_notes_p6_t04_scale_calibration.md"
+  theorem_and_obstruction: "research_control/tasks/RT-20260726-007/artifacts/source_scale_calibration_nonselection_v1.tex"
+  machine_specification: "research_control/tasks/RT-20260726-007/artifacts/source_scale_calibration_nonselection_spec_v1.yaml"
+  compact_receipt: "research_control/tasks/RT-20260726-007/artifacts/source_scale_calibration_nonselection_validation_receipt_v1.json"
+  human_receipt: "research_control/tasks/RT-20260726-007/artifacts/source_scale_calibration_nonselection_receipt.md"
+  validator: "research_control/tasks/RT-20260726-007/artifacts/validate_source_scale_calibration_nonselection.py"
+
+output_paths:
+  - "research_control/tasks/RT-20260726-007/artifacts/child_phys_math_p6_t04_scale_calibration.yaml"
+  - "research_control/tasks/RT-20260726-007/artifacts/child_phys_phil_p6_t04_scale_calibration.yaml"
+  - "research_control/tasks/RT-20260726-007/artifacts/parent_conflict_review_p6_t04_scale_calibration.yaml"
+  - "research_control/tasks/RT-20260726-007/artifacts/parent_fusion_notes_p6_t04_scale_calibration.md"
+  - "research_control/tasks/RT-20260726-007/artifacts/source_scale_calibration_nonselection_v1.tex"
+  - "research_control/tasks/RT-20260726-007/artifacts/source_scale_calibration_nonselection_spec_v1.yaml"
+  - "research_control/tasks/RT-20260726-007/artifacts/source_scale_calibration_nonselection_validation_receipt_v1.json"
+  - "research_control/tasks/RT-20260726-007/artifacts/source_scale_calibration_nonselection_receipt.md"
+  - "research_control/tasks/RT-20260726-007/artifacts/validate_source_scale_calibration_nonselection.py"
+  - "research_control/tasks/RT-20260726-007/00_TASK.yaml"
+  - "research_control/tasks/RT-20260726-007/DDR-20260726-007.md"
+  - "research_control/tasks/RT-20260726-007/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260726-007/roles/candidate-constructor@0.2.0--RT-20260726-007.yaml"
+  - "research_control/tasks/RT-20260726-007/jobs/AJ-RT-20260726-007-001.yaml"
+  - "research_control/tasks/RT-20260726-007/jobs/completions/AJC-AJ-RT-20260726-007-001.yaml"
+  - "research_control/handoffs/handoff-0881.yaml"
+  - "research_control/handoffs/handoff-0881.md"
+
+artifact_receipts:
+  child_phys_math:
+    path: "research_control/tasks/RT-20260726-007/artifacts/child_phys_math_p6_t04_scale_calibration.yaml"
+    sha256: "84369682133df4b81c30b824f936ec248e8e07bade42195fbe9129abe901af65"
+    status_label: "task_local_internal_perspective"
+  child_phys_phil:
+    path: "research_control/tasks/RT-20260726-007/artifacts/child_phys_phil_p6_t04_scale_calibration.yaml"
+    sha256: "7869d6e5e731a06b6c68cada5f748e12e7cd5b42229b38c0752900b1c36b06d7"
+    status_label: "task_local_internal_perspective"
+  parent_conflict_review:
+    path: "research_control/tasks/RT-20260726-007/artifacts/parent_conflict_review_p6_t04_scale_calibration.yaml"
+    sha256: "0f5385e9d8410d32196f4a1b1ef5ff06fbeb9bb2a1ea3998ce57b96a25446e20"
+    status_label: "task_local_synthesis_control"
+  parent_fusion_notes:
+    path: "research_control/tasks/RT-20260726-007/artifacts/parent_fusion_notes_p6_t04_scale_calibration.md"
+    sha256: "58d1400224ce37f6c16f2be93887d1ee08de9746853eee28d0f244ddd7a637cb"
+    status_label: "science_draft"
+  theorem_and_obstruction:
+    path: "research_control/tasks/RT-20260726-007/artifacts/source_scale_calibration_nonselection_v1.tex"
+    sha256: "96a527cccb8e7a6a614debc5110902b1587848178af8444fc02acda52caf4d28"
+    status_label: "draft/control"
+    result_status: "conditional theorem plus precise candidate-scoped obstruction"
+  machine_specification:
+    path: "research_control/tasks/RT-20260726-007/artifacts/source_scale_calibration_nonselection_spec_v1.yaml"
+    sha256: "5df45be2813605dc5be2cfd9b27f0f0db2adfb7e991c5960d062d63a3a761646"
+    status_label: "draft/control"
+  validation:
+    path: "research_control/tasks/RT-20260726-007/artifacts/source_scale_calibration_nonselection_validation_receipt_v1.json"
+    sha256: "b8642eff615ee8c8f026baa41c3b96af01eaeca6f8c662a0018ba893be2b1616"
+    status_label: "operational_evidence"
+  human_receipt:
+    path: "research_control/tasks/RT-20260726-007/artifacts/source_scale_calibration_nonselection_receipt.md"
+    sha256: "ac1fa158e43baa4baa868e82b3c04f57108ae7d22309da152b76531a0201d3a4"
+    status_label: "project_control"
+  validator:
+    path: "research_control/tasks/RT-20260726-007/artifacts/validate_source_scale_calibration_nonselection.py"
+    sha256: "9a60a44e44ee686c41b00ba5e7579df6cade622de4290136168192ae2f1c1350"
+    status_label: "operational_evidence"
+
+source_hash_receipts:
+  - object_id: "TEX-V21-P6-T03-ONE-RAY-CONFORMAL-INSUFFICIENCY-V1"
+    path: "research_control/tasks/RT-20260726-005/artifacts/one_ray_conformal_insufficiency_v1.tex"
+    sha256: "007ae324872868b9eb9cdf0ebc4f1131737c71eda9ce301c805acd5041a52bac"
+    unchanged: true
+  - object_id: "TEX-ONTOLOGY-AETHER-FLOW-GEOMETRY"
+    path: "ontology/tex/aether_flow_geometry.tex"
+    sha256: "f60a81b63f814b03cca7190b3ac6285842a55317f4aed058cc6e75154cc0b4d7"
+    unchanged: true
+  - object_id: "TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-METRICFORMASSIGN-GEFF-CANDIDATE-OR-OBSTRUCTION"
+    path: "research_control/tasks/RT-20260614-216/artifacts/245_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_METRICFORMASSIGN_GEFF_CANDIDATE_OR_OBSTRUCTION.tex"
+    sha256: "dd30573519ed1df66b3800d29ee0adc9fcc94d9c8d3b9b5a7fcffde503d5f0ef"
+    unchanged: true
+  - object_id: "TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-GEFF-CANDIDATE-SCOPED-SOURCE-EXTENSION-ADOPTION-GATE-CHAIR-REVIEW"
+    path: "research_control/tasks/RT-20260614-222/artifacts/251_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_GEFF_CANDIDATE_SCOPED_SOURCE_EXTENSION_ADOPTION_GATE_CHAIR_REVIEW.tex"
+    sha256: "3ce8cbc6cd79c6852d78f81045633beea44c4dfc6e2912c604b08e3c8bdb0257"
+    unchanged: true
+  - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+    path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+    sha256: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+    unchanged: true
+  - object_id: "MD-RESEARCH-CONTROL-DESIGN-GR-DERIVATION-BURDEN-MAP"
+    path: "research_control/design/gr_derivation_burden_map.md"
+    sha256: "8e9d44e3a18ecc8a2430a9c42497da3eb9911c2cf6cd714c1525c5d91551835e"
+    unchanged: true
+  - object_id: "HANDOFF-0880"
+    path: "research_control/handoffs/handoff-0880.yaml"
+    sha256: "f5336b78dcbc7e5d67c9aa35c8af0c912ed54bbd080cf998da0dae6c2289536e"
+    unchanged: true
+
+source_extension_classification:
+  checklist_id: "source_extension_classification_checklist_v1"
+  checklist_path: "research_control/design/source_extension_classification_checklist_v1.md"
+  route: "candidate-construction-packet"
+  trigger: "P6-T03 and handoff-0880 permit one materially new source scale-and-calibration theorem-or-obstruction packet after checkpoint"
+  status_label: "draft/control"
+  candidate_status: "proposal-only"
+  material_class: "source-extension analysis"
+  canonical_ontology_candidate_status: false
+  adopted_status: false
+  rejected_status: false
+  human_gated_status: true
+  adoption_status: "blocked_adoption_open_continuation"
+  current_ontology_statement: "Current ontology does not derive a Lorentzian conformal-shape law physically normalized volume density absolute clock normalization transverse rod or coframe law or cross-device compatibility and robustness law."
+  no_go_theorem_status: "precise scoped obstruction only for the exact one-ray plus unnormalized density and phase package"
+  exact_gr_recovery_obligations:
+    - "Derive a source-side Lorentzian conformal shape without target import."
+    - "Derive a physically normalized volume or equivalent Weyl selector."
+    - "Derive absolute clock and transverse rod or coframe laws with compatibility and robustness."
+    - "Preserve historical scoped g_eff and exact-GR benchmark separation."
+    - "Obtain protected human authority before ontology source-law metric or benchmark adoption."
+  records:
+    - item_id: "V21-P6-T04-POSITIVE-DENSITY-AND-PHASE-TEST-CARRIERS-V1"
+      item_kind: "test carriers"
+      item_source_path: "research_control/tasks/RT-20260726-007/artifacts/source_scale_calibration_nonselection_v1.tex"
+      classification: "status_boundary_evidence_only"
+      evidence_paths:
+        - "research_control/tasks/RT-20260726-007/artifacts/source_scale_calibration_nonselection_v1.tex"
+        - "research_control/tasks/RT-20260726-007/artifacts/source_scale_calibration_nonselection_spec_v1.yaml"
+      relation_to_current_ontology: "evidence_only"
+      relation_to_target_structures: "no target atlas metric proper time detector matter benchmark G or c used as a premise"
+      protected_authority_required: true
+      physics_promotion_authorized: false
+      downstream_promotion_authorized: false
+      allowed_conclusion: "proposal-only test carriers support a conditional volume-gauge theorem and exact countermodels"
+      blocked_overreads:
+        - "density as adopted physical spacetime volume"
+        - "phase carrier as proper time or adopted clock"
+        - "comparison metric as adopted source or target geometry"
+      claim_boundary_id: "CB-V21-P6-T04-SCALE-CALIBRATION-NONSELECTION-001"
+      next_route_if_blocked: "P6-T05 bounded signature nondegeneracy and transformation-law theorem or precise obstruction after checkpoint"
+    - item_id: "OBST-P6T04-VOLUME-TICK-CALIBRATION-NONSELECTION-001"
+      item_kind: "obstruction"
+      item_source_path: "research_control/tasks/RT-20260726-007/artifacts/source_scale_calibration_nonselection_v1.tex"
+      classification: "blocked_adoption_open_continuation"
+      evidence_paths:
+        - "research_control/tasks/RT-20260726-007/artifacts/source_scale_calibration_nonselection_v1.tex"
+        - "research_control/tasks/RT-20260726-007/artifacts/parent_conflict_review_p6_t04_scale_calibration.yaml"
+      relation_to_current_ontology: "blocked_open"
+      relation_to_target_structures: "operational Lorentzian metric physical clock rod volume and scale remain absent"
+      protected_authority_required: true
+      physics_promotion_authorized: false
+      downstream_promotion_authorized: false
+      allowed_conclusion: "the exact tested carrier package is locally insufficient while materially richer source-side continuation remains open"
+      blocked_overreads:
+        - "candidate-scoped nonselection as global no-go or theory rejection"
+        - "conditional volume theorem as physical metric scale"
+        - "precise obstruction as g_eff matter coupling Einstein equations or benchmark result"
+      claim_boundary_id: "CB-V21-P6-T04-SCALE-CALIBRATION-NONSELECTION-001"
+      next_route_if_blocked: "P6-T05 after checkpoint under the exact obstruction"
+  status_vocabulary:
+    draft_control: true
+    proposal_only: true
+    source_extension_data: true
+    canonical_ontology_candidate: false
+    adopted: false
+    rejected: false
+    human_gated: true
+  target_import_found: false
+  process_authority_used_as_science: false
+  future_source_extension_continuation: "open"
+
+new_mathematical_payload:
+  - payload_id: "NMP-RT-20260726-007-001"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    name: "Conditional four-dimensional volume-gauge theorem"
+    summary: "Proves that a positive density selects a unique representative only inside an independently supplied Lorentzian conformal class through Omega=(mu/|vol_g|)^(1/4)."
+  - payload_id: "NMP-RT-20260726-007-002"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    name: "Unimodular density cone and rod nonselection"
+    summary: "Proves that the determinant-one g_a family preserves one-ray and volume data while changing conformal class null cone and transverse rod lengths."
+  - payload_id: "NMP-RT-20260726-007-003"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    name: "Clock reparameterization and relative-device invariant"
+    summary: "Proves that positive flow reparameterization rescales absolute phase rates while preserving their pairwise ratios."
+  - payload_id: "NMP-RT-20260726-007-004"
+    payload_type: "countermodel_or_obstruction"
+    name: "Volume-tick calibration nonselection obstruction"
+    summary: "Records the exact candidate-scoped failure of a single-valued operational Lorentzian reconstruction from one-ray density and phase-carrier data."
+
+mathematical_payload_manifest:
+  - payload_id: "PAYLOAD-RT007-001"
+    payload_type: "theorem"
+    object_name: "conditional four-dimensional volume-gauge selector"
+    claim_status: "draft/control conditional mathematical result"
+    source_path: "research_control/tasks/RT-20260726-007/artifacts/source_scale_calibration_nonselection_v1.tex"
+    burden_effect: "narrows"
+    summary: "Identifies exactly when a positive density fixes a Weyl representative and why the prerequisite conformal class is missing."
+  - payload_id: "PAYLOAD-RT007-002"
+    payload_type: "countermodel"
+    object_name: "unimodular g_a density cone and rod nonselection family"
+    claim_status: "task-local comparison family"
+    source_path: "research_control/tasks/RT-20260726-007/artifacts/source_scale_calibration_nonselection_v1.tex"
+    burden_effect: "obstructs"
+    summary: "Exhibits identical one-ray density and phase data with pairwise nonconformal outputs and unequal null cones and rod lengths."
+  - payload_id: "PAYLOAD-RT007-003"
+    payload_type: "theorem"
+    object_name: "clock reparameterization and relative phase-rate invariant"
+    claim_status: "draft/control conditional mathematical result"
+    source_path: "research_control/tasks/RT-20260726-007/artifacts/source_scale_calibration_nonselection_v1.tex"
+    burden_effect: "narrows"
+    summary: "Separates relative device-cycle comparison from absolute duration calibration."
+  - payload_id: "PAYLOAD-RT007-004"
+    payload_type: "obstruction"
+    object_name: "P6-T04 volume-tick operational calibration nonselection"
+    claim_status: "precise scoped negative result"
+    source_path: "research_control/tasks/RT-20260726-007/artifacts/source_scale_calibration_nonselection_v1.tex"
+    burden_effect: "freezes"
+    summary: "Locally freezes only the exact operational-metric route from unchanged one-ray plus unnormalized density and phase inputs."
+
+physics_progress_status:
+  status: "precise_obstruction_found"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Supply the missing scale and operational calibration burden."
+  explanation: "P6-T04 proves a conditional Weyl-gauge theorem and decisively shows that the tested density and phase carriers do not select conformal shape rod lengths or absolute duration. It identifies the missing normalized-volume clock coframe and robustness primitives without constructing a physical metric."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr_delta:
+  changed: true
+  effect: "obstruction_recorded"
+  burden_id: "g_eff"
+  milestone: "effective_metric_g_eff"
+  old_status: "historical scoped source-extension g_eff object preserved; P6-T03 proved one-ray conformal nonselection and left metric scale clock rod volume and operational calibration open"
+  new_status: "historical scoped g_eff status preserved; a positive density conditionally fixes Weyl scale only after conformal shape is supplied; the tested density and phase package is proved insufficient for conformal shape rod comparison absolute clock normalization and physical units"
+  ledger_row_updated: true
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  downstream_unlocked:
+    - "P6-T05 bounded signature nondegeneracy and transformation-law theorem or precise obstruction after governed checkpoint"
+  downstream_still_blocked:
+    - "physical source-derived causal cone"
+    - "unscoped effective metric g_eff"
+    - "operational metric scale physical clocks rods and volume"
+    - "matter coupling"
+    - "Einstein equations"
+    - "benchmark promotion"
+  explanation: "The ledger gains a conditional scale theorem and exact volume-tick nonselection obstruction without changing the historical scoped g_eff verdict or authorizing physical geometry."
+
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "P5 synthesis remains completed with proposal-only source-extension data and blocked adoption open continuation"
+  - burden: "Source equivalence EqSrc"
+    status: "unchanged; no adopted source equivalence or calibration quotient is derived"
+  - burden: "RetainH"
+    status: "unchanged; no adopted retention or measure law is supplied"
+  - burden: "GenH"
+    status: "unchanged; no adopted generation or clock law is supplied"
+  - burden: "ObsLoc_lc"
+    status: "unchanged; no physical rod localization or operational spatial comparison is established"
+  - burden: "Resp_lc"
+    status: "relative phase-rate comparison is defined conditionally but detector response and physical readout semantics remain absent"
+  - burden: "M_src"
+    status: "historical scoped source-only status unchanged; no physical manifold identity localization clock or rod law"
+  - burden: "g_eff"
+    status: "historical scoped source-extension object preserved; conditional density gauge theorem recorded; conformal shape physical density clock rod and unit normalization remain missing"
+  - burden: "matter coupling"
+    status: "blocked; no physical metric operational calibration signal universality or coupling derivation"
+  - burden: "Einstein equations"
+    status: "not started; unchanged"
+  - burden: "finite-variation robustness"
+    status: "continuous determinant-one anisotropy family and positive flow reparameterization evaluated; no positive device-universality theorem"
+  - burden: "benchmark promotion"
+    status: "blocked by missing physical geometry scale coupling and field-equation burdens plus protected authority"
+  - burden: "Gate Chair status"
+    status: "human-gated; no new protected verdict requested"
+  - burden: "current route freeze or hard-fail status"
+    status: "reconstruction from unchanged one-ray plus unnormalized density and phases locally frozen; materially richer conformal-shape normalized-volume clock coframe or robustness laws remain open"
+
+obstruction_record:
+  present: true
+  obstruction_id: "OBST-P6T04-VOLUME-TICK-CALIBRATION-NONSELECTION-001"
+  scope: "source_extension_candidate"
+  failed_object: "a single-valued operational Lorentzian metric reconstruction from only the proposal-only one-ray datum plus an unnormalized positive density and dimensionless scalar phases"
+  exact_failure: "Identical one-ray density and phase inputs admit g_0 and g_a with a nonzero, which have equal determinant but different conformal classes null cones and rod lengths; positive V reparameterization separately leaves absolute phase normalization open."
+  minimal_counterexample_path: "research_control/tasks/RT-20260726-007/artifacts/source_scale_calibration_nonselection_v1.tex"
+  current_ontology_implication: "does_not_derive"
+  source_extension_implication: "new_primitive_required"
+  consequence: "new_primitive_required"
+  forbidden_overread: "This result is scoped to the exact tested carrier package. It is not a global no-go theorem, future source-extension impossibility, ontology rejection, physical metric, or downstream GR result."
+
+route_cycle_control:
+  cycle_family: "v21_p6_source_characteristic_to_effective_geometry"
+  current_cycle_step: "p6_t04_source_scale_calibration_nonselection_complete"
+  prior_related_tasks:
+    - "RT-20260726-002"
+    - "RT-20260726-003"
+    - "RT-20260726-004"
+    - "RT-20260726-005"
+    - "RT-20260726-006"
+    - "RT-20260726-007"
+  cycle_risk: "high"
+  orbit_avoidance_reason: "P6-T04 adds new density and phase carriers, proves a conditional volume theorem, constructs a determinant-one anisotropy family, and calculates clock reparameterization before locally freezing only the exact tested route."
+  next_role_consequence: "ontology-formalizer@0.2.0 for P6-T05 after checkpoint, constrained to signature nondegeneracy and transformation-law obligations under this obstruction"
+
+freeze_criteria_status:
+  repeated_burden: true
+  freeze_evaluation_required: true
+  active_freeze_label: "P6T04-ONE-RAY-VOLUME-TICK-TO-OPERATIONAL-METRIC"
+  prior_attempts_considered:
+    - "P6-T03 proved that the one-ray package does not select conformal shape."
+    - "P6-T04 added a positive density and dimensionless phases and proved fixed-density fixed-tick nonselection."
+  freeze_if:
+    - "Another packet claims an operational Lorentzian metric from only the unchanged one-ray density and phase package."
+    - "Another packet repeats the same determinant-one anisotropy or flow-normalization failure without materially new source-side data theorem or variation class."
+  do_not_freeze_if:
+    - "A separately authorized packet supplies a source-derived Lorentzian conformal-shape law."
+    - "A materially distinct physically normalized volume clock coframe or cross-device robustness law changes the exact premises."
+  criteria_evaluated:
+    - "single-valued reconstruction at fixed one-ray density and phase inputs"
+    - "absolute duration invariance under positive V reparameterization"
+    - "transverse rod uniqueness at fixed volume density"
+  freeze_decision: "locally_frozen"
+  decision_reason: "The explicit fixed-density nonconformal pair and phase-rate transformation prove that the unchanged carrier package cannot define a unique operational Lorentzian metric."
+  rationale: "Local freeze applies only to the exact tested route and is recorded in the g_eff Distance-to-GR row; materially richer source-side laws remain open."
+  next_allowed_route: "none"
+  status_update_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  no_status_update_rationale: ""
+  global_theory_rejection: false
+  future_source_extension_impossibility: false
+
+candidate_constructor_result:
+  result_type: "precise_obstruction"
+  constructed_candidate_path: ""
+  minimal_countermodel_path: "research_control/tasks/RT-20260726-007/artifacts/source_scale_calibration_nonselection_v1.tex"
+  obstruction_id: "OBST-P6T04-VOLUME-TICK-CALIBRATION-NONSELECTION-001"
+  formal_objects:
+    - "conditional four-dimensional volume-gauge selector"
+    - "unimodular g_a anisotropy family"
+    - "relative phase-rate agreement ratio R_AB"
+  maps:
+    - "independently supplied conformal class and positive density to its unique volume-gauge representative"
+    - "positive flow reparameterization to rescaled absolute phase rates and invariant pairwise ratios"
+  proof_obligations:
+    - "derive a source-side Lorentzian conformal shape"
+    - "derive physical density and clock normalization"
+    - "derive transverse rod or coframe comparison and cross-device robustness"
+  failed_components:
+    - "conformal-shape selection"
+    - "absolute clock normalization"
+    - "transverse rod uniqueness"
+    - "physical unit conversion"
+    - "independent-device universality and robustness"
+  next_required_role: "none"
+  no_fog_check: true
+  no_fog_explanation: "The exact one-ray density and phase package was proved nonselecting by an explicit fixed-determinant nonconformal family and a positive flow-reparameterization calculation; only a conditional Weyl-gauge theorem and relative cycle-ratio protocol survive."
+  claim_boundary_preserved: true
+  claim_boundary_citation: "CB-V21-P6-T04-SCALE-CALIBRATION-NONSELECTION-001"
+
+bridge_attempt_status:
+  candidate_map: ""
+  missing_primitive: "A source-derived Lorentzian conformal-shape law plus physically normalized volume clock transverse coframe and cross-device robustness laws."
+  preserves_blocks: "M_src unscoped g_eff physical metric scale matter coupling Einstein equations benchmark promotion proof publication push global no-go and completed derivation remain blocked."
+
+metric_use_result:
+  ledger_path: "registries/METRIC_USE_LEDGER.csv"
+  ledger_row_added: true
+  use_id: "MUL-RT-20260726-007-001"
+  use_category: "finite_local_witness_context"
+  object_used: "g_a Lorentzian comparison family and conditional g_mu representative"
+  allowed_use: "task-local fixed-density scale calibration nonselection and conditional Weyl-gauge evidence only"
+  physical_metric_use_authorized: false
+  proper_time_or_calibration_use_authorized: false
+
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+  summary: "The theorem, countermodel family, obstruction, protocol, validator, metric-use row, ledger delta, registry rows, generated derivatives, handoff, and checkpoint are scoped draft/control evidence. They do not adopt ontology or a source law, establish physical volume time clocks rods causality conformal geometry or metric scale, expand scoped g_eff, prove a global no-go, or unlock downstream GR."
+  forbidden_conclusions:
+    - "canonical ontology edit"
+    - "source-law or candidate adoption or rejection"
+    - "density as physical spacetime volume"
+    - "phase carrier or V parameter as proper time or physical clock"
+    - "task-local comparison metrics as source or target geometry"
+    - "conformal class physical rod or metric scale reconstructed"
+    - "target GR cone metric G c detector matter or benchmark calibration"
+    - "global no-go theorem"
+    - "future source-extension impossibility"
+    - "global theory rejection"
+    - "M_src adoption or source-to-target reconstruction"
+    - "unscoped g_eff adoption reconstruction or historical scope expansion"
+    - "matter coupling or Einstein-equation claim"
+    - "benchmark promotion or Gate Chair verdict"
+    - "proof publication push or completed derivation"
+
+authorization_layers:
+  protected_scoped_gate_review_scope: "not_applicable"
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  publication_authorized: false
+  protected_scoped_gate_review_authorized: false
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  canonical_ontology_edit_authorized: false
+  physical_causality_or_geometry_claim_authorized: false
+  physical_volume_clock_or_rod_claim_authorized: false
+  M_src_adoption_authorized: false
+  g_eff_adoption_or_scope_expansion_authorized: false
+  metric_scale_or_calibration_authorized: false
+  matter_coupling_derivation_authorized: false
+  einstein_equation_derivation_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_authorized: false
+  future_source_extension_impossibility_authorized: false
+
+validation_receipts:
+  task_local_validator_report: "research_control/tasks/RT-20260726-007/artifacts/source_scale_calibration_nonselection_validation_receipt_v1.json"
+  task_local_validator_report_hash: "b8642eff615ee8c8f026baa41c3b96af01eaeca6f8c662a0018ba893be2b1616"
+  theorem_manuscript_hash: "96a527cccb8e7a6a614debc5110902b1587848178af8444fc02acda52caf4d28"
+  machine_specification_hash: "5df45be2813605dc5be2cfd9b27f0f0db2adfb7e991c5960d062d63a3a761646"
+  task_local_check_count: 61
+  task_local_failure_count: 0
+  scratch_tex_build_status: "PASS"
+  scratch_pdf_page_count: 4
+  validation_status: "PASS"
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1033
+    relationship_row_count: 5189
+    semantic_row_count: 1033
+    vault_row_count: 1033
+    local_cache_only_warning_count: 0
+  local_retrieval_refresh:
+    refresh_needed: true
+    refresh_performed: true
+    before_core_validation_status: "PASS"
+    before_freshness_status: "WARN"
+    before_local_retrieval_status: "WARN"
+    before_local_cache_only_warning_count: 7
+    after_core_validation_status: "PASS"
+    after_freshness_status: "PASS"
+    after_local_retrieval_status: "PASS"
+    after_local_cache_only_warning_count: 0
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"P6 T04 source defined scale calibration conformal nonselection\" --limit 10 --json"
+      query_type: "search"
+      query_text: "P6 T04 source defined scale calibration conformal nonselection"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v21.md --json"
+      query_type: "lookup"
+      query_text: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "df6295cbc6b30b9e2d236ae8a030412f0e4f67d3abe2813399f7d2d055c5154b"
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  excluded_generated_returns:
+    - object_id: "MD-RESEARCH-CONTROL-TASK-INDEX"
+      reason: "Generated noncanonical navigation result was excluded from canonical returns and did not provide a scientific premise."
+  authority_note: "Generated Obsidian wiki semantic relationship task-index SQLite and .local retrieval surfaces are navigation or diagnostics only and are not authority; tracked canonical sources registries and research-control state govern this packet."
+
+command_results:
+  - command: "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python research_control/tasks/RT-20260726-007/artifacts/validate_source_scale_calibration_nonselection.py --write-report --json"
+    status: "PASS"
+    summary: "61 of 61 exact source theorem countermodel dimensional protocol TeX-marker and authority checks pass"
+  - command: "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python research_control/tasks/RT-20260726-007/artifacts/validate_source_scale_calibration_nonselection.py --check --json"
+    status: "PASS"
+    summary: "tracked validation receipt is current"
+  - command: "PATH=/Users/alex.omegapy/texlive/2026/bin/universal-darwin:$PATH .venv/bin/python .codex/skills/project-memory-system/scripts/build_pdf_derivatives.py --scratch research_control/tasks/RT-20260726-007/artifacts/source_scale_calibration_nonselection_v1.tex"
+    status: "PASS"
+    summary: "four-page scratch PDF compiles cleanly"
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 127 validated, atomically claimed, and consumed the exact immutable P6-T04 route once."
+      - "Checkpoint commit 3e9fa377def1af2d508c2ba63caffc79305ec5f3, clean repository, repo binding, branch, model effort, lease parity, and predecessor completion were verified before execution."
+      - "Memory preflight passed and the registered P6-T03 result, canonical target-side geometry dictionary, historical scoped g_eff boundary, metric-use ledger, and burden map were inspected."
+  task_local_validator:
+    status: "PASS"
+    evidence:
+      - "All 61 source-hash theorem countermodel dimensional protocol marker and authority checks pass."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The conditional volume theorem, unimodular anisotropy family, clock reparameterization, relative-device protocol, dimensional audit, precise obstruction, freeze criteria, and reopening classes are present."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Integrated control documentation signal claim-language memory and test validation are required before checkpoint."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "One governed checkpoint remains; P6-T05 is not executed before it."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Current frontier compact frontier task index dependency graph claim graph and burden-status derivatives are required to be regenerated and checked."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory bootstrap and validate-only are required after source registration."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation is required before checkpoint."
+
+validators_run:
+  - "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python research_control/tasks/RT-20260726-007/artifacts/validate_source_scale_calibration_nonselection.py --write-report --json"
+  - "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python research_control/tasks/RT-20260726-007/artifacts/validate_source_scale_calibration_nonselection.py --check --json"
+  - "PATH=/Users/alex.omegapy/texlive/2026/bin/universal-darwin:$PATH .venv/bin/python .codex/skills/project-memory-system/scripts/build_pdf_derivatives.py --scratch research_control/tasks/RT-20260726-007/artifacts/source_scale_calibration_nonselection_v1.tex"
+  - ".venv/bin/python research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_renderer.py --write --json"
+  - ".venv/bin/python research_control/tasks/RT-20260721-009/artifacts/validate_v21_current_burden_status.py --write --json"
+  - ".venv/bin/python research_control/tasks/RT-20260721-009/artifacts/validate_v21_current_burden_status.py --check --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --check"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --check"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --write"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --check"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --json output/research_dependency_graph.json --markdown wiki/indexes/research_dependency_graph.md --dot output/research_dependency_graph.dot"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --check"
+  - ".venv/bin/python scripts/research_control/generate_claim_graph_v1.py --json output/claim_graph_v1.json"
+  - ".venv/bin/python scripts/research_control/generate_claim_graph_v1.py --check"
+  - ".venv/bin/python scripts/research_control/validate_claim_graph_v1.py --json"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --json-summary"
+  - ".venv/bin/python scripts/research_control/run_full_research_control_validation.py --json --tail-chars 2500"
+  - "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m unittest -v tests.test_research_control"
+  - ".venv/bin/python -m unittest discover -s tests"
+  - "git diff --check"
+
+documentation_impact:
+  required: true
+  status: "completed"
+  path: "research_control/tasks/RT-20260726-007/documentation_impact.yaml"
+  rationale: "The registered draft/control TeX, machine specification, compact receipt, decision, completion, handoff, scoped ledgers, and generated memory derivatives expose the exact conditional theorem, candidate-scoped obstruction, and all nonconclusions."
+
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"
+  rationale: "P6-T04 records a scientific missing-law obstruction and explicit countermodels, not a shared project-system defect."
+
+next_handoff_id: "handoff-0881"
+selected_next_route:
+  route_id: "v21_p6_t05_signature_nondegeneracy_transformation_law"
+  role_family: "ontology-formalizer@0.2.0"
+  worker_skill: "continue-research"
+  task_type: "v21_p6_t05_derive_lorentzian_signature_nondegeneracy_and_transformation_law"
+  plan_task_id: "P6-T05"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Meet the mathematical core of Gate B."
+  strategy_id: "test_signature_nondegeneracy_and_transformation_under_scale_calibration_nonselection_v1"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  p6_t04_precise_obstruction_available: true
+  operational_metric_available: false
+  physics_promotion_authorized: false
+  next_action: "After the governed checkpoint, test signature nondegeneracy and source-induced transformation obligations under the exact P6-T03 and P6-T04 nonselection results, or return a precise typed obstruction without assuming a physical metric."
+  source_handoff: "research_control/handoffs/handoff-0881.yaml"
+
+next_recommended_action: "Run one governed checkpoint. Only after it commits may one fresh bounded P6-T05 Ontology Formalizer packet test Lorentzian signature nondegeneracy and transformation-law obligations under this scale-calibration obstruction or return its own precise obstruction."
+verdict: "PASS_P6_T04_CONDITIONAL_VOLUME_GAUGE_AND_SCALE_CALIBRATION_PRECISE_OBSTRUCTION_READY_FOR_CHECKPOINT"

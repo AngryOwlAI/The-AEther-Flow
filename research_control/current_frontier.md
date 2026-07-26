@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260726-006` and `handoff-0880`.
+`RT-20260726-008` and `handoff-0882`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260726-006` |
-| Latest handoff ID | `handoff-0880` |
-| Current status | `p6_t03_support_traceability_hash_recovery_pass_ready_for_checkpoint` |
+| Active task ID | `RT-20260726-008` |
+| Latest handoff ID | `handoff-0882` |
+| Current status | `p6_t04_traceability_legacy_checkpoint_recovery_pass_ready_for_checkpoint` |
 | V16 completed | false |
 | Current route family | benchmark or recovery (project system) |
 | Target derivation milestone | `effective_metric_g_eff` |
 | Current burden | `g_eff` |
-| Required next authority | After the governed cumulative checkpoint commits, one fresh bounded P6-T04 Candidate Constructor packet may test source-defined operational or measure structures for metric scale, clock, rod, volume, and calibration while treating the P6-T03 absence of a selected conformal class as a hard input. |
-| Next recommended action | Run the one governed cumulative checkpoint for AJ-RT-20260726-006-001. Only after it commits may one fresh bounded P6-T04 Candidate Constructor packet test source-defined scale and calibration structures against the P6-T03 conformal nonselection boundary or return its own typed obstruction. |
+| Required next authority | After the governed cumulative legacy-validation checkpoint commits, one fresh bounded P6-T05 Ontology Formalizer packet may test Lorentzian signature, nondegeneracy, and source-induced transformation-law obligations while preserving the P6-T03 conformal and P6-T04 scale-calibration nonselection results as hard inputs. |
+| Next recommended action | Run the one governed cumulative checkpoint for AJ-RT-20260726-008-001 with --legacy-validation. Only after it commits may one fresh bounded P6-T05 Ontology Formalizer packet test Lorentzian signature, nondegeneracy, and source-induced transformation-law obligations under the P6-T03 and P6-T04 nonselection results or return its own precise obstruction. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260726-006` |
-| Latest research handoff ID | `handoff-0880` |
-| Latest research next action | Run the one governed cumulative checkpoint for AJ-RT-20260726-006-001. Only after it commits may one fresh bounded P6-T04 Candidate Constructor packet test source-defined scale and calibration structures against the P6-T03 conformal nonselection boundary or return its own typed obstruction. |
+| Latest research task ID | `RT-20260726-008` |
+| Latest research handoff ID | `handoff-0882` |
+| Latest research next action | Run the one governed cumulative checkpoint for AJ-RT-20260726-008-001 with --legacy-validation. Only after it commits may one fresh bounded P6-T05 Ontology Formalizer packet test Lorentzian signature, nondegeneracy, and source-induced transformation-law obligations under the P6-T03 and P6-T04 nonselection results or return its own precise obstruction. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260726-006/00_TASK.yaml`.
-- Active task objective: Under the sealed generation-125 dirty-state manifest, replace exactly one stale METRIC_USE_LEDGER source hash in the v18 support-formalization traceability registry, prove all 64 inherited paths and the complete P6-T03 packet remained exact at the repair boundary, and invoke one fresh governed cumulative checkpoint before P6-T04.
-- Latest handoff path: `research_control/handoffs/handoff-0880.yaml`.
-- Latest handoff summary: Generation 125 synchronizes exactly one stale v18 support-traceability source hash to the already-authorized P6-T03 metric-use ledger hash. The sealed receipt records zero drift across all 64 inherited dirty-manifest paths, proves the exact one-token substitution, and preserves every protected P6-T03 science and authority byte. P6-T04 remains unexecuted pending one governed cumulative checkpoint.
+- Active task path: `research_control/tasks/RT-20260726-008/00_TASK.yaml`.
+- Active task objective: Under the sealed generation-128 dirty-state manifest, replace exactly one stale METRIC_USE_LEDGER source hash in the v18 support-formalization traceability registry, prove all 64 inherited paths and the complete P6-T04 packet remained exact at the repair boundary, and invoke one fresh governed cumulative checkpoint with the explicit legacy-validation fallback before P6-T05.
+- Latest handoff path: `research_control/handoffs/handoff-0882.yaml`.
+- Latest handoff summary: Generation 128 synchronizes exactly one stale v18 support-traceability source hash to the already-authorized P6-T04 metric-use ledger hash. The sealed receipt records zero drift across all 64 inherited dirty-manifest paths, proves the exact one-token substitution, preserves every protected P6-T04 science and authority byte, and preserves the zero-subprocess zero-stage zero-commit planner stop. P6-T05 remains unexecuted pending one governed cumulative checkpoint through the explicit legacy-validation fallback.
 - Current route family: benchmark or recovery (project system).
-- Next recommended action: Run the one governed cumulative checkpoint for AJ-RT-20260726-006-001. Only after it commits may one fresh bounded P6-T04 Candidate Constructor packet test source-defined scale and calibration structures against the P6-T03 conformal nonselection boundary or return its own typed obstruction.
+- Next recommended action: Run the one governed cumulative checkpoint for AJ-RT-20260726-008-001 with --legacy-validation. Only after it commits may one fresh bounded P6-T05 Ontology Formalizer packet test Lorentzian signature, nondegeneracy, and source-induced transformation-law obligations under the P6-T03 and P6-T04 nonselection results or return its own precise obstruction.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -84,7 +84,7 @@ Adopted source-only or source-extension objects:
 | Object | Status | Authority | Scope qualifier | Blocked overread | Downstream promotion authorized |
 | --- | --- | --- | --- | --- | --- |
 | M_src | adopted only as scoped source-only M_src object | `research_control/tasks/RT-20260614-134/artifacts/165_M_SRC_GSC_INTEGRATED_SOURCE_ONLY_ADOPTION_THEOREM_GATE_CHAIR_REVIEW.tex` | not_target_manifold_not_metric_not_gr_derivation | no_metricdata_e_adoption<br>no_geff_scope_expansion<br>no_matter_coupling_derivation<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | false |
-| g_eff | adopted only as scoped source-extension g_eff object | `research_control/tasks/RT-20260726-005/artifacts/one_ray_conformal_insufficiency_v1.tex` | not_unscoped_lorentzian_metric_not_matter_coupling_not_einstein_equations | no_source_law_adoption<br>no_metricdata_e_adoption<br>no_unscoped_geff_adoption<br>no_matter_coupling_derivation<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation<br>no_global_theory_rejection<br>no_future_source_extension_impossibility | false |
+| g_eff | adopted only as scoped source-extension g_eff object | `research_control/tasks/RT-20260726-007/artifacts/source_scale_calibration_nonselection_v1.tex` | not_unscoped_lorentzian_metric_not_matter_coupling_not_einstein_equations | no_source_law_adoption<br>no_metricdata_e_adoption<br>no_unscoped_geff_adoption<br>no_matter_coupling_derivation<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation<br>no_global_theory_rejection<br>no_future_source_extension_impossibility | false |
 
 Scoped accepted evidence/preconditions:
 
@@ -126,13 +126,13 @@ downstream GR claim.
 | Field | Value |
 | --- | --- |
 | Ledger path | `registries/METRIC_USE_LEDGER.csv` |
-| Total rows | 20 |
-| Forbidden/import guard rows | 20 |
+| Total rows | 21 |
+| Forbidden/import guard rows | 21 |
 | Blocked physical metric-use rows | 11 |
-| Audited-clean rows | 7 |
+| Audited-clean rows | 8 |
 | Blocked-by-scope rows | 13 |
-| Use categories | `blocked_physical_metric_use`: 11; `finite_local_witness_context`: 5; `scoped_source_extension_context`: 3; `source_side_relation_input_candidate`: 1 |
-| Audit statuses | `audited_clean`: 7; `blocked_by_scope`: 13 |
+| Use categories | `blocked_physical_metric_use`: 11; `finite_local_witness_context`: 6; `scoped_source_extension_context`: 3; `source_side_relation_input_candidate`: 1 |
+| Audit statuses | `audited_clean`: 8; `blocked_by_scope`: 13 |
 
 ## Positive-First Status Cards
 
@@ -289,7 +289,7 @@ preserves the raw ledger `current_status` field for continuity.
 | `obsloc_lc` | `source_localization_obsloc_lc` | constructive local exact-branch witness only | constructive witness exists | constructive_witness_recorded | constructive_witness | local_exact_branch_only | draft_control_only | no_source_law_adoption<br>no_matter_coupling_derivation<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/tasks/RT-20260614-037/artifacts/58_LOCALIZATION_SOURCE_BASIS_AXIOM_SELECTOR_DOMAIN_EQSRC_ALTERNATIVE_BRANCH_FAMILY_GUARD_STABILITY_SOURCE_PACKET_SMUGGLING_AUDIT.tex` |
 | `resp_lc` | `response_localization_resp_lc` | accepted only as scoped source-extension selector data | accepted | accepted_as_source_extension_data | selector_data_source_extension | not_detector_semantics_not_matter_coupling | scoped_source_object_only | no_canonical_ontology_edit<br>no_matter_coupling_derivation<br>no_detector_semantics<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/tasks/RT-20260614-060/artifacts/101_RESP_LC_SOURCE_EXTENSION_HUMAN_GATE_ADOPTION_DECISION.tex` |
 | `m_src` | `source_manifold_m_src` | adopted only as scoped source-only M_src object | accepted | gate_review_completed | scoped_source_only_adopted_object | not_target_manifold_not_metric_not_gr_derivation | scoped_source_object_only | no_metricdata_e_adoption<br>no_geff_scope_expansion<br>no_matter_coupling_derivation<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/tasks/RT-20260614-134/artifacts/165_M_SRC_GSC_INTEGRATED_SOURCE_ONLY_ADOPTION_THEOREM_GATE_CHAIR_REVIEW.tex` |
-| `g_eff` | `effective_metric_g_eff` | adopted only as scoped source-extension g_eff object | accepted | gate_review_completed | scoped_source_extension_geff_object | not_unscoped_lorentzian_metric_not_matter_coupling_not_einstein_equations | scoped_source_object_only | no_source_law_adoption<br>no_metricdata_e_adoption<br>no_unscoped_geff_adoption<br>no_matter_coupling_derivation<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation<br>no_global_theory_rejection<br>no_future_source_extension_impossibility | `research_control/tasks/RT-20260726-005/artifacts/one_ray_conformal_insufficiency_v1.tex` |
+| `g_eff` | `effective_metric_g_eff` | adopted only as scoped source-extension g_eff object | accepted | gate_review_completed | scoped_source_extension_geff_object | not_unscoped_lorentzian_metric_not_matter_coupling_not_einstein_equations | scoped_source_object_only | no_source_law_adoption<br>no_metricdata_e_adoption<br>no_unscoped_geff_adoption<br>no_matter_coupling_derivation<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation<br>no_global_theory_rejection<br>no_future_source_extension_impossibility | `research_control/tasks/RT-20260726-007/artifacts/source_scale_calibration_nonselection_v1.tex` |
 | `matter_coupling` | `matter_coupling` | accepted only as scoped source-extension evidence/precondition | accepted | accepted_as_scoped_evidence_precondition | parameterized_finite_local_witness_precondition | not_matter_coupling_not_stress_energy_not_matter_action_not_detector_semantics | scoped_source_evidence_only | no_source_law_adoption<br>no_metricdata_e_adoption<br>no_geff_scope_expansion<br>no_coupling_law_adoption<br>no_matter_coupling_derivation<br>no_matter_coupling_adoption<br>no_stress_energy_semantics<br>no_stress_energy_tensor<br>no_matter_action<br>no_detector_semantics<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation<br>no_future_source_extension_impossibility<br>no_global_theory_rejection | `research_control/tasks/RT-20260702-064/artifacts/source_certificate_operation_laws_v1.tex` |
 | `einstein_equations` | `einstein_equations` | not started; no positive derivation status | not started | not_started | dynamics_action_or_variation_missing | no_field_equation_derivation | none | no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/program_state.yaml` |
 | `finite_variation_robustness` | `source_equivalence_eqsrc` | Refuter stress passed | Refuter stress passed | refuter_stress_passed | conditional_theorem_candidate | downstream_gr_blocked | draft_control_only | no_source_law_adoption<br>no_matter_coupling_derivation<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/tasks/RT-20260614-101/artifacts/142_RESP_LC_M_SRC_GSC_FINITE_VARIATION_ROBUSTNESS_LAW_REFUTER_STRESS_TEST.tex` |
@@ -302,7 +302,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run the one governed cumulative checkpoint for AJ-RT-20260726-006-001. Only after it commits may one fresh bounded P6-T04 Candidate Constructor packet test source-defined scale and calibration structures against the P6-T03 conformal nonselection boundary or return its own typed obstruction.
+Run the one governed cumulative checkpoint for AJ-RT-20260726-008-001 with --legacy-validation. Only after it commits may one fresh bounded P6-T05 Ontology Formalizer packet test Lorentzian signature, nondegeneracy, and source-induced transformation-law obligations under the P6-T03 and P6-T04 nonselection results or return its own precise obstruction.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -327,10 +327,10 @@ Validation layers:
 
 | Validation layer | Status | Meaning | Evidence |
 | --- | --- | --- | --- |
-| `pre_execution` | PASS | receipt complete | Generation 125 validated, atomically claimed, and consumed its exact immutable recovery route once. |
-| `completion_internal` | PASS | receipt complete | The tracked receipt proves one exact source-hash substitution, 64 inherited hash matches, protected P6-T03 preservation, and a passing v18 validator. |
+| `pre_execution` | PASS | receipt complete | Generation 128 validated, atomically claimed, and consumed its exact immutable recovery route once. |
+| `completion_internal` | PASS | receipt complete | The tracked receipt proves one exact source-hash substitution, 64 inherited hash matches, 18 protected P6-T04 hash matches, and a passing v18 validator.<br>The prior planner stop launched zero subprocesses and staged and committed nothing. |
 | `post_write` | PENDING | open item; evidence must explain why | Integrated control, documentation, signal, memory, and test validation remains before checkpoint. |
-| `post_checkpoint` | PENDING | open item; evidence must explain why | One governed cumulative checkpoint remains; P6-T04 is not executed before it. |
+| `post_checkpoint` | PENDING | open item; evidence must explain why | One governed cumulative legacy-validation checkpoint remains; P6-T05 is not executed before it. |
 | `renderer` | PENDING | open item; evidence must explain why | Tracked frontier, task-index, graph, registry, and wiki derivatives remain to be synchronized. |
 | `memory_bootstrap` | PENDING | open item; evidence must explain why | Tracked memory synchronization remains before checkpoint. |
 | `claim_language_linter` | PENDING | open item; evidence must explain why | Integrated research-control validation remains to confirm no hard claim-language errors. |
@@ -340,7 +340,7 @@ Authorization layers:
 | Authorization field | Value | Meaning |
 | --- | --- | --- |
 | `protected_scoped_gate_review_authorized` | false (not authorized) | scoped review authority only |
-| `protected_scoped_gate_review_scope` | not authorized; ordinary project-system traceability-hash recovery validation only | exact scope of protected review authority |
+| `protected_scoped_gate_review_scope` | not authorized; ordinary project-system traceability and checkpoint-path recovery validation only | exact scope of protected review authority |
 | `protected_scoped_gate_review_authority_source_path` | none | tracked source for scoped review authority |
 | `downstream_physics_promotion_authorized` | false (not authorized) | authorizes downstream physics promotion only when true |
 | `downstream_physics_promotion_authority_source_path` | none | tracked source for downstream promotion authority |
@@ -363,9 +363,9 @@ Authorization layers:
 
 Legacy compatibility records:
 
-- active task: `RT-20260726-006`;
-- latest handoff: `handoff-0880`;
-- current status: `p6_t03_support_traceability_hash_recovery_pass_ready_for_checkpoint`;
+- active task: `RT-20260726-008`;
+- latest handoff: `handoff-0882`;
+- current status: `p6_t04_traceability_legacy_checkpoint_recovery_pass_ready_for_checkpoint`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -375,8 +375,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0880.yaml`
-- `research_control/tasks/RT-20260726-006/00_TASK.yaml`
+- `research_control/handoffs/handoff-0882.yaml`
+- `research_control/tasks/RT-20260726-008/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -392,7 +392,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0880*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0882*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

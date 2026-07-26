@@ -1,0 +1,244 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{array,longtable,booktabs}
+\usepackage[hidelinks]{hyperref}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}[theorem]{Example}
+\newcommand{\Ann}{\operatorname{Ann}}
+\newcommand{\vol}{\operatorname{vol}}
+
+\title{P6-T04: Source Density and Tick Carriers Do Not Yet Select Operational Metric Scale}
+\author{The AEther-Flow Research Project}
+\date{2026-07-26}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+\fbox{\parbox{0.92\textwidth}{
+\textbf{Status and authority.}
+This is a task-local \emph{draft/control} result about proposal-only
+source-extension carriers.  It proves a conditional volume-gauge theorem and
+a precise candidate-scoped nonselection obstruction.  It is not a
+canonical-ontology edit, source-law adoption or rejection, physical clock or
+rod construction, effective-metric derivation, Gate Chair verdict, global
+no-go theorem, publication, or completed derivation.
+}}
+\end{center}
+
+\section{Question and fixed input}
+
+P6-T03 leaves as its complete source-side geometric input
+\[
+  \mathcal D_1(S,V)=\bigl([V]_+,\Ann(V),\preceq_V\bigr),
+\]
+where \(S\) is a smooth four-dimensional source arena and \(V\) is the
+proposal-only oriented nonzero vector field from P6-T02.  It proves that this
+one-ray datum does not select a Lorentzian conformal class.
+
+P6-T04 asks whether source-defined measure or operational carriers can
+nevertheless fix scale and measured durations and lengths.  We test the
+stronger package
+\[
+ \mathcal D_{\rm cal}
+ =\bigl(\mathcal D_1,\mu,\{\theta_A\}_{A\in\mathcal A}\bigr),
+\]
+where \(\mu\) is a smooth positive source density and each \(\theta_A\) is a
+dimensionless phase carrier.  These are deliberately favorable
+\emph{proposal-only test carriers}; current ontology does not derive their
+physical meaning, normalization, compatibility, or universality.  No target
+atlas, target metric, GR null cone, proper time, detector response, matter
+datum, or benchmark fit is admitted.
+
+\section{Assumption and dimensional audit}
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.10\textwidth}
+                  >{\raggedright\arraybackslash}p{0.38\textwidth}
+                  >{\raggedright\arraybackslash}p{0.41\textwidth}}
+\toprule
+ID & Test assumption & Status and dimensional consequence\\
+\midrule
+\endhead
+A1 & \(S\) is smooth and four dimensional, and \(V\) is smooth, nonzero, and
+positively oriented. & Inherited candidate scope; not a physical spacetime or
+clock conclusion.\\
+A2 & Only \(\mathcal D_1\), a positive density \(\mu\), and scalar phases
+\(\theta_A\) are supplied. & Exact enlarged input under test; no hidden
+metric, coframe, connection, or target calibration.\\
+A3 & \(\mu\) is treated as a source density rather than a metric volume form. &
+Its physical dimension and relation to spacetime volume are not derived.\\
+A4 & Each \(\theta_A\) is dimensionless and a tick is a \(2\pi\) phase
+increment. & Tick counts are meaningful conditionally; no seconds-per-tick
+constant is supplied.\\
+A5 & Positive reparameterizations \(V\mapsto fV\) preserve the oriented ray and
+unparameterized forward flow. & An absolute flow parameter is not part of
+\(\mathcal D_1\).\\
+A6 & The historical scoped source-extension \(g_{\rm eff}\) object is not a
+premise and its status is unchanged. & No protected scope expansion or
+unscoped physical metric is inferred.\\
+A7 & No conversion constant with dimensions of time, length, or volume is
+available. & A numerical density or phase count cannot alone establish a
+physical unit.\\
+A8 & No target-side geometry, matter response, detector behavior, or exact-GR
+benchmark data are premises. & Target fitting and benchmark calibration are
+excluded.\\
+\bottomrule
+\end{longtable}
+
+\section{What a density can fix conditionally}
+
+\begin{theorem}[Conditional volume gauge]
+\label{thm:volume-gauge}
+Let \([g]\) be an independently supplied Lorentzian conformal class on a
+four-dimensional oriented region and let \(\mu\) be a positive density.
+There is a unique representative \(g_\mu\in[g]\) whose absolute metric volume
+density equals \(\mu\).
+\end{theorem}
+
+\begin{proof}
+Choose any representative \(g\in[g]\).  Under \(g\mapsto g'=\Omega^2g\)
+with \(\Omega>0\), the four-dimensional volume density transforms as
+\[
+  |\vol_{g'}|=\Omega^4|\vol_g|.
+\]
+Thus
+\[
+  \Omega=\left(\frac{\mu}{|\vol_g|}\right)^{1/4}
+\]
+is positive and uniquely enforces \(|\vol_{\Omega^2g}|=\mu\).  Replacing the
+initial representative by \(\widehat g=\omega^2g\) replaces the displayed
+factor by \(\widehat\Omega=\Omega/\omega\), so the resulting metric is
+independent of the initial representative.
+\end{proof}
+
+\begin{corollary}
+A density is a conditional Weyl-gauge selector, not a constructor of the
+missing conformal shape.  The theorem cannot be invoked on
+\(\mathcal D_1\) alone because P6-T03 proves that \(\mathcal D_1\) supplies no
+unique \([g]\).  Physical use would additionally require a source law
+identifying \(\mu\) with operational spacetime volume and fixing its units.
+\end{corollary}
+
+\section{Fixed-density anisotropy countermodel}
+
+\begin{theorem}[Unimodular density, cone, and rod nonselection]
+\label{thm:unimodular}
+In local flow-box coordinates \((s,y^1,y^2,y^3)\) with \(V=\partial_s\), the
+one-parameter family
+\[
+  g_a=-ds^2+e^{2a}(dy^1)^2+e^{-2a}(dy^2)^2+(dy^3)^2,
+  \qquad a\in\mathbb R,
+\]
+has the same oriented \(V\)-ray, annihilator, forward flow preorder, and
+absolute volume density.  Distinct values of \(a\) are nevertheless
+nonconformal, generally have different null cones, and assign different
+transverse rod lengths.
+\end{theorem}
+
+\begin{proof}
+Every \(g_a\) is Lorentzian and has \(g_a(V,V)=-1\).  The ray,
+\(\Ann(V)\), and flow preorder depend only on \(V\).  Moreover,
+\[
+ \det(g_a)=-e^{2a}e^{-2a}=-1,
+\]
+so every member has the same density
+\(|ds\wedge dy^1\wedge dy^2\wedge dy^3|\).
+If \(g_b=\Omega^2g_a\), evaluation on \(V\) gives \(\Omega^2=1\); evaluation
+on \(\partial_{y^1}\) then gives \(e^{2b}=e^{2a}\), hence \(b=a\).
+For \(a=0\), \(V+\partial_{y^1}\) is null, while for \(a\ne0\) its squared
+norm is \(-1+e^{2a}\).  A coordinate segment of \(y^1\)-length \(L\) has
+comparison length \(e^aL\), while a \(y^2\)-segment has \(e^{-a}L\).
+Thus fixed density controls the product of transverse scales but not their
+shape or rod comparisons.
+\end{proof}
+
+\section{Clock phases and device agreement}
+
+For a phase carrier \(\theta_A\), define the local phase rate
+\(\omega_A=V(\theta_A)\).  Under the positive reparameterization
+\(V_f=fV\),
+\[
+  \omega_A\longmapsto \omega_A^{(f)}=f\,\omega_A.
+\]
+Therefore neither \(\omega_A\) nor a duration inferred as
+\(2\pi/\omega_A\) is invariant without a normalization of \(V\).
+For two nonzero phase carriers, however,
+\[
+   R_{AB}=\frac{V(\theta_A)}{V(\theta_B)}
+\]
+is invariant under \(V\mapsto fV\).  This supports a bounded
+\emph{relative-device agreement protocol}: two devices agree on a connected
+test region when \(R_{AB}\) is a source-derived constant and controlled
+perturbations keep it within a declared error band.  The protocol compares
+cycle ratios only.  It does not supply an absolute physical time unit, and
+current ontology derives neither the constant ratio nor its robustness law.
+
+The countermodel of Theorem~\ref{thm:unimodular} may carry the same phases
+\(\theta_A\) for every \(a\).  Hence equal tick data and equal density coexist
+with different null cones and rod lengths.  A phase normalization can at most
+constrain a selected direction conditionally; it does not reconstruct the
+missing transverse geometry.
+
+\section{Precise obstruction}
+
+\begin{proposition}[Volume-tick calibration nonselection]
+\label{prop:obstruction}
+There is no single-valued operational Lorentzian metric reconstruction from
+only \(\mathcal D_{\rm cal}\) as defined above.  Identical one-ray, density,
+and phase-carrier data admit the pair \(g_0,g_a\) with \(a\ne0\), which have
+different conformal classes, null cones, and rod lengths.  Positive
+reparameterization of \(V\) separately leaves the oriented ray and
+unparameterized flow unchanged while rescaling every absolute phase rate.
+\end{proposition}
+
+The exact disposition is
+\texttt{OBST-P6T04-VOLUME-TICK-CALIBRATION-NONSELECTION-001}.  The current
+ontology does not derive:
+\begin{enumerate}
+\item a Lorentzian conformal shape to which the conditional volume-gauge
+theorem could be applied;
+\item a source law identifying a positive density as physical volume with a
+dimensionful normalization;
+\item an absolute clock-frequency or flow-parameter normalization;
+\item a transverse rod/coframe comparison law; or
+\item a compatibility and robustness theorem forcing independent clock and
+rod devices to agree.
+\end{enumerate}
+Supplying any of these as a conversion rule, coframe, constitutive response,
+or normalized measure would be a new source-side primitive unless separately
+derived.
+
+This is not a theorem that the project can never derive operational metric
+scale.  Same-milestone continuation remains open for materially richer
+source-side input, and protected human authority remains mandatory before
+any canonical-ontology candidate, adoption, rejection, physical metric,
+clock, rod, or benchmark claim.  Current adoption is
+\texttt{blocked\_adoption\_open\_continuation}.
+
+\section{Distance-to-GR disposition}
+
+P6-T04 is mathematically decisive within the enlarged input tested here.  It
+proves one conditional positive theorem and an explicit fixed-density,
+fixed-tick countermodel.  The exact unchanged route from one-ray plus
+unnormalized density and phase carriers to an operational Lorentzian metric
+is locally frozen.  The historical scoped \(g_{\rm eff}\) object remains
+unchanged.  Physical conformal geometry, metric scale, clocks, rods,
+\(M_{\rm src}\), matter coupling, Einstein equations, benchmark promotion,
+proof authority, publication, push, and completed derivation remain blocked.
+
+\section{Project source note}
+
+The fixed project basis is the registered P6-T03 conformal-nonselection
+theorem, the canonical target-side geometry dictionary, the historical scoped
+source-extension \(g_{\rm eff}\) candidate and Gate Chair record, the v21
+implementation plan, the Distance-to-GR burden map, and handoff-0880.  These
+sources are held at the exact hashes recorded in the accompanying
+machine-readable specification.  The scaling, determinant,
+reparameterization, and countermodel calculations above are reproduced
+directly; no external physical datum is used.
+
+\end{document}

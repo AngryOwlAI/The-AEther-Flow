@@ -1,0 +1,197 @@
+schema_id: "v21_p6_t04_source_scale_calibration_nonselection_v1"
+result_id: "V21-P6-T04-SOURCE-SCALE-CALIBRATION-NONSELECTION-V1"
+task_id: "RT-20260726-007"
+plan_task_id: "P6-T04"
+status_label: "draft/control"
+result_status: "conditional theorem plus precise candidate-scoped obstruction"
+material_class: "source-extension analysis"
+adoption_status: "blocked_adoption_open_continuation"
+target_derivation_milestone: "effective_metric_g_eff"
+milestone_burden: "Supply the missing scale and operational calibration burden."
+
+typed_input:
+  one_ray_bundle: "D_1(S,V)=([V]_+,Ann(V),preceq_V)"
+  proposed_density: "smooth positive source density mu"
+  proposed_clock_carriers: "dimensionless scalar phases theta_A"
+  calibration_bundle: "D_cal=(D_1,mu,{theta_A})"
+  physical_units_supplied: false
+  conformal_class_supplied: false
+  target_metric_imported: false
+
+typed_output_target:
+  desired_map: "G_op:D_cal->g_op"
+  output_type: "unique operational nondegenerate Lorentzian metric with measured durations and lengths"
+  physical_scale_required: true
+  independent_device_agreement_required: true
+  target_fit_allowed: false
+
+assumption_table:
+  - id: "A1"
+    statement: "S is smooth and four dimensional and V is smooth nonzero and positively oriented."
+    status: "inherited_candidate_scope"
+  - id: "A2"
+    statement: "Only D_1 a positive density and scalar phase carriers are inputs."
+    status: "exact_enlarged_test_scope"
+  - id: "A3"
+    statement: "mu is a source density rather than an already physical metric volume form."
+    status: "proposal_only_not_derived"
+  - id: "A4"
+    statement: "theta_A is dimensionless and a tick is a 2pi phase increment."
+    status: "relative_count_only"
+  - id: "A5"
+    statement: "Positive V reparameterizations preserve the oriented ray and unparameterized flow."
+    status: "normalization_open"
+  - id: "A6"
+    statement: "Historical scoped source-extension g_eff is not a premise."
+    status: "scope_preserved"
+  - id: "A7"
+    statement: "No dimensionful time length or volume conversion constant is available."
+    status: "unit_conversion_open"
+  - id: "A8"
+    statement: "No target geometry detector matter response or benchmark behavior is a premise."
+    status: "no_target_import_enforced"
+
+theorems:
+  - theorem_id: "P6T04-THM-CONDITIONAL-VOLUME-GAUGE"
+    claim: "Given an independent four-dimensional Lorentzian conformal class and a positive density there is a unique representative with that absolute metric volume density."
+    hypotheses:
+      - "a Lorentzian conformal class [g] is independently available"
+      - "mu is a smooth positive density"
+    formula: "Omega=(mu/|vol_g|)^(1/4)"
+    burden_effect: "conditionally fixes Weyl scale but not conformal shape or physical units"
+  - theorem_id: "P6T04-THM-UNIMODULAR-DENSITY-CONE-ROD-NONSELECTION"
+    claim: "The g_a family has identical D_1 and volume density but pairwise nonconformal members with different null cones and rod lengths."
+    witness_family: "g_a=-ds^2+exp(2a)(dy1)^2+exp(-2a)(dy2)^2+(dy3)^2"
+    determinant: "-1"
+    burden_effect: "proves fixed-density conformal-shape and rod nonselection"
+  - theorem_id: "P6T04-PROP-CLOCK-REPARAMETERIZATION"
+    claim: "Absolute phase rates rescale under V_f=fV while relative phase-rate ratios remain invariant."
+    transformation: "V_f(theta_A)=f V(theta_A)"
+    invariant: "R_AB=V(theta_A)/V(theta_B)"
+    burden_effect: "permits relative cycle agreement but not absolute time calibration"
+
+conditional_positive_result:
+  result_type: "conditional scale gauge"
+  input_missing_from_current_package: "independently selected Lorentzian conformal class and physically normalized density"
+  uniqueness: true
+  physical_interpretation_established: false
+
+countermodel:
+  parameter: "a in R"
+  shared_data:
+    - "[V]_+"
+    - "Ann(V)"
+    - "preceq_V"
+    - "mu=|ds wedge dy1 wedge dy2 wedge dy3|"
+    - "same scalar phase carriers theta_A"
+  first_metric: "g_0=diag(-1,1,1,1)"
+  second_metric: "g_a=diag(-1,exp(2a),exp(-2a),1), a!=0"
+  determinant_equal: true
+  conformally_related: false
+  null_cones_equal: false
+  transverse_rod_lengths_equal: false
+
+device_agreement_protocol:
+  protocol_type: "relative_only"
+  invariant_ratio: "R_AB=V(theta_A)/V(theta_B)"
+  agreement_condition: "R_AB is source-derived constant on a connected test region"
+  robustness_condition: "controlled perturbations keep R_AB within a declared error band"
+  absolute_time_unit_supplied: false
+  rod_agreement_supplied: false
+  current_ontology_derives_protocol_law: false
+
+dimensional_analysis:
+  source_density_physical_volume_unit_derived: false
+  phase_count_physical_time_unit_derived: false
+  transverse_coordinate_physical_length_unit_derived: false
+  conversion_constant_available: false
+  target_calibration_used: false
+
+precise_obstruction:
+  obstruction_id: "OBST-P6T04-VOLUME-TICK-CALIBRATION-NONSELECTION-001"
+  scope: "source_extension_candidate"
+  failed_object: "a single-valued operational Lorentzian metric reconstruction from only D_cal"
+  exact_failure: "identical one-ray density and phase-carrier inputs admit nonconformal fixed-volume outputs with different cones and rod lengths while positive flow reparameterization leaves absolute tick normalization open"
+  current_ontology_implication: "does_not_derive"
+  source_extension_implication: "new_primitive_required"
+  consequence: "new_primitive_required"
+  global_no_go_claimed: false
+  forbidden_overread: "The obstruction does not rule out materially richer source-side conformal-shape density clock coframe constitutive or robustness laws."
+
+reopening:
+  criteria:
+    - "source-derived nondegenerate Lorentzian conformal-shape law"
+    - "source-derived physically normalized volume density or equivalent Weyl selector"
+    - "source-derived clock-frequency and transverse coframe or rod law with cross-device robustness"
+  protected_authority_required_before_adoption: true
+
+freeze:
+  active_freeze_label: "P6T04-ONE-RAY-VOLUME-TICK-TO-OPERATIONAL-METRIC"
+  frozen_scope: "reconstruction from unchanged D_1 plus an unnormalized positive density and dimensionless phase carriers"
+  materially_richer_continuation_open: true
+  global_theory_rejection: false
+
+distance_to_gr:
+  changed: true
+  effect: "conditional_scale_theorem_and_precise_obstruction_recorded"
+  burden_id: "g_eff"
+  narrowed_burden: "density can fix Weyl scale only after conformal shape is independently supplied; density and ticks do not supply shape rod comparison or absolute units"
+  missing_primitives:
+    - "source-derived conformal shape"
+    - "physically normalized volume law"
+    - "absolute clock normalization"
+    - "transverse rod or coframe law"
+    - "cross-device compatibility and robustness"
+  downstream_still_blocked:
+    - "physical causal cone"
+    - "unscoped effective metric g_eff"
+    - "operational metric scale clocks and rods"
+    - "matter coupling"
+    - "Einstein equations"
+    - "benchmark promotion"
+
+fixed_sources:
+  - object_id: "TEX-V21-P6-T03-ONE-RAY-CONFORMAL-INSUFFICIENCY-V1"
+    path: "research_control/tasks/RT-20260726-005/artifacts/one_ray_conformal_insufficiency_v1.tex"
+    sha256: "007ae324872868b9eb9cdf0ebc4f1131737c71eda9ce301c805acd5041a52bac"
+  - object_id: "TEX-ONTOLOGY-AETHER-FLOW-GEOMETRY"
+    path: "ontology/tex/aether_flow_geometry.tex"
+    sha256: "f60a81b63f814b03cca7190b3ac6285842a55317f4aed058cc6e75154cc0b4d7"
+  - object_id: "TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-METRICFORMASSIGN-GEFF-CANDIDATE-OR-OBSTRUCTION"
+    path: "research_control/tasks/RT-20260614-216/artifacts/245_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_METRICFORMASSIGN_GEFF_CANDIDATE_OR_OBSTRUCTION.tex"
+    sha256: "dd30573519ed1df66b3800d29ee0adc9fcc94d9c8d3b9b5a7fcffde503d5f0ef"
+  - object_id: "TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-GEFF-CANDIDATE-SCOPED-SOURCE-EXTENSION-ADOPTION-GATE-CHAIR-REVIEW"
+    path: "research_control/tasks/RT-20260614-222/artifacts/251_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_GEFF_CANDIDATE_SCOPED_SOURCE_EXTENSION_ADOPTION_GATE_CHAIR_REVIEW.tex"
+    sha256: "3ce8cbc6cd79c6852d78f81045633beea44c4dfc6e2912c604b08e3c8bdb0257"
+  - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+    path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+    sha256: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  - object_id: "MD-RESEARCH-CONTROL-DESIGN-GR-DERIVATION-BURDEN-MAP"
+    path: "research_control/design/gr_derivation_burden_map.md"
+    sha256: "8e9d44e3a18ecc8a2430a9c42497da3eb9911c2cf6cd714c1525c5d91551835e"
+  - object_id: "HANDOFF-0880"
+    path: "research_control/handoffs/handoff-0880.yaml"
+    sha256: "f5336b78dcbc7e5d67c9aa35c8af0c912ed54bbd080cf998da0dae6c2289536e"
+
+authority:
+  canonical_ontology_modified: false
+  canonical_ontology_candidate_promoted: false
+  source_law_adopted: false
+  source_law_rejected: false
+  physical_time_established: false
+  physical_volume_established: false
+  physical_rod_established: false
+  physical_causality_established: false
+  conformal_class_reconstructed: false
+  operational_metric_reconstructed: false
+  metric_scale_reconstructed: false
+  historical_scoped_g_eff_expanded: false
+  matter_coupling_derived: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false

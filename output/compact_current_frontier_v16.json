@@ -2,7 +2,7 @@
   "schema_id": "compact_current_frontier_v16",
   "generated_from": [
     "research_control/program_state.yaml",
-    "research_control/handoffs/handoff-0880.yaml",
+    "research_control/handoffs/handoff-0882.yaml",
     "registries/DISTANCE_TO_GR_LEDGER.csv",
     "registries/METRIC_USE_LEDGER.csv",
     "research_control/current_frontier.md",
@@ -11,17 +11,17 @@
     "research_control/design/active_state_bifurcation_policy_v1.md"
   ],
   "active_state": {
-    "active_task_id": "RT-20260726-006",
-    "latest_handoff_id": "handoff-0880",
-    "current_status": "p6_t03_support_traceability_hash_recovery_pass_ready_for_checkpoint",
+    "active_task_id": "RT-20260726-008",
+    "latest_handoff_id": "handoff-0882",
+    "current_status": "p6_t04_traceability_legacy_checkpoint_recovery_pass_ready_for_checkpoint",
     "v15_completed": false,
     "v16_completed": false,
     "v16_plan_registered": true
   },
   "active_state_bifurcation": {
-    "latest_research_task_id": "RT-20260726-006",
-    "latest_research_handoff_id": "handoff-0880",
-    "latest_research_next_action": "Run the one governed cumulative checkpoint for AJ-RT-20260726-006-001. Only after it commits may one fresh bounded P6-T04 Candidate Constructor packet test source-defined scale and calibration structures against the P6-T03 conformal nonselection boundary or return its own typed obstruction.",
+    "latest_research_task_id": "RT-20260726-008",
+    "latest_research_handoff_id": "handoff-0882",
+    "latest_research_next_action": "Run the one governed cumulative checkpoint for AJ-RT-20260726-008-001 with --legacy-validation. Only after it commits may one fresh bounded P6-T05 Ontology Formalizer packet test Lorentzian signature, nondegeneracy, and source-induced transformation-law obligations under the P6-T03 and P6-T04 nonselection results or return its own precise obstruction.",
     "latest_project_system_task_id": "none",
     "latest_project_system_status": "none",
     "latest_project_system_sidecar_task_id": "none",
@@ -30,10 +30,10 @@
     "next_research_route_source": "latest_research_handoff"
   },
   "next_route": {
-    "route_id": "v21_p6_t04_derive_metric_scale_volume_clock_and_rod_calibration",
-    "role_family": "candidate-constructor@0.2.0",
+    "route_id": "v21_p6_t05_signature_nondegeneracy_transformation_law",
+    "role_family": "ontology-formalizer@0.2.0",
     "target_derivation_milestone": "effective_metric_g_eff",
-    "milestone_burden": "Supply the missing scale and operational calibration burden.",
+    "milestone_burden": "Meet the mathematical core of Gate B.",
     "requires_human_gate": false
   },
   "claim_boundary": {
@@ -236,7 +236,7 @@
     {
       "object_id": "g_eff",
       "reader_facing_status": "adopted only as scoped source-extension g_eff object",
-      "authority_path": "research_control/tasks/RT-20260726-005/artifacts/one_ray_conformal_insufficiency_v1.tex",
+      "authority_path": "research_control/tasks/RT-20260726-007/artifacts/source_scale_calibration_nonselection_v1.tex",
       "scope_qualifier": "not_unscoped_lorentzian_metric_not_matter_coupling_not_einstein_equations",
       "blocked_overread": [
         "no_source_law_adoption",
@@ -400,7 +400,7 @@
           "no_global_theory_rejection",
           "no_future_source_extension_impossibility"
         ],
-        "last_evidence_path": "research_control/tasks/RT-20260726-005/artifacts/one_ray_conformal_insufficiency_v1.tex",
+        "last_evidence_path": "research_control/tasks/RT-20260726-007/artifacts/source_scale_calibration_nonselection_v1.tex",
         "high_risk_status_card": {
           "object_id": "g_eff",
           "positive_status": "g_eff is adopted only as a scoped source-extension g_eff object.",
@@ -589,24 +589,24 @@
   },
   "metric_use_ledger": {
     "ledger_path": "registries/METRIC_USE_LEDGER.csv",
-    "total_row_count": "20",
-    "forbidden_or_import_row_count": "20",
+    "total_row_count": "21",
+    "forbidden_or_import_row_count": "21",
     "blocked_physical_metric_use_row_count": "11",
-    "audited_clean_row_count": "7",
+    "audited_clean_row_count": "8",
     "blocked_by_scope_row_count": "13",
     "use_category_counts": {
       "blocked_physical_metric_use": "11",
-      "finite_local_witness_context": "5",
+      "finite_local_witness_context": "6",
       "scoped_source_extension_context": "3",
       "source_side_relation_input_candidate": "1"
     },
     "audit_status_counts": {
-      "audited_clean": "7",
+      "audited_clean": "8",
       "blocked_by_scope": "13"
     },
     "stress_status_counts": {
       "not_applicable": "17",
-      "scoped_obstruction": "3"
+      "scoped_obstruction": "4"
     }
   },
   "validation": {
@@ -623,7 +623,7 @@
         "layer": "post_checkpoint",
         "status": "PENDING",
         "evidence": [
-          "One governed cumulative checkpoint remains; P6-T04 is not executed before it."
+          "One governed cumulative legacy-validation checkpoint remains; P6-T05 is not executed before it."
         ]
       },
       {

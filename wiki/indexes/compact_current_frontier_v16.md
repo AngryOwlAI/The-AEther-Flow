@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260726-006`
-- Latest handoff: `handoff-0880`
-- Current status: `p6_t03_support_traceability_hash_recovery_pass_ready_for_checkpoint`
+- Active task: `RT-20260726-008`
+- Latest handoff: `handoff-0882`
+- Current status: `p6_t04_traceability_legacy_checkpoint_recovery_pass_ready_for_checkpoint`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260726-006`
-- Latest research handoff: `handoff-0880`
-- Latest research next action: Run the one governed cumulative checkpoint for AJ-RT-20260726-006-001. Only after it commits may one fresh bounded P6-T04 Candidate Constructor packet test source-defined scale and calibration structures against the P6-T03 conformal nonselection boundary or return its own typed obstruction.
+- Latest research task: `RT-20260726-008`
+- Latest research handoff: `handoff-0882`
+- Latest research next action: Run the one governed cumulative checkpoint for AJ-RT-20260726-008-001 with --legacy-validation. Only after it commits may one fresh bounded P6-T05 Ontology Formalizer packet test Lorentzian signature, nondegeneracy, and source-induced transformation-law obligations under the P6-T03 and P6-T04 nonselection results or return its own precise obstruction.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p6_t04_derive_metric_scale_volume_clock_and_rod_calibration`
-- Role family: `candidate-constructor@0.2.0`
+- Route ID: `v21_p6_t05_signature_nondegeneracy_transformation_law`
+- Role family: `ontology-formalizer@0.2.0`
 - Target milestone: `effective_metric_g_eff`
-- Milestone burden: Supply the missing scale and operational calibration burden.
+- Milestone burden: Meet the mathematical core of Gate B.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -57,15 +57,15 @@ These cards render high-risk rows in the required order: positive status, exact 
 ## Metric-Use Ledger
 
 - Ledger path: `registries/METRIC_USE_LEDGER.csv`
-- Total rows: `20`
-- Forbidden/import guard rows: `20`
+- Total rows: `21`
+- Forbidden/import guard rows: `21`
 - Blocked physical metric-use rows: `11`
 - Authority: project-control guard ledger only; no physics proof authority.
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `ff3806e2855953aad0846e44d3110e5ed2c3bcef76e9a860677937878cba6d0f`
-- JSON SHA-256: `9cde7f3689367497d571401a85b51dbd5e9a861b26cb7656e8469f158ad0e19c`
+- YAML SHA-256: `e2298f5377ed4e73f8d99550494c4a9bc2ebdee250d3a65eaf686c458acd674e`
+- JSON SHA-256: `d6ac7d19f59553eaaf727b2e30a640eefe594563307bcea5a3d14d7a80b9f95b`
 
 ## Authority Warning
 

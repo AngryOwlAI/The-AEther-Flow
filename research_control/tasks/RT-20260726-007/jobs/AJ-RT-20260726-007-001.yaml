@@ -1,0 +1,481 @@
+job_id: "AJ-RT-20260726-007-001"
+task_id: "RT-20260726-007"
+decision_id: "DDR-20260726-007"
+role_id: "candidate-constructor"
+role_version: "0.2.0"
+execution_role_ref: "candidate-constructor@0.2.0--RT-20260726-007"
+status: "completed"
+validation_status: "PASS"
+requires_human_gate: false
+created_at: "2026-07-26T18:04:11Z"
+started_at: "2026-07-26T18:04:11Z"
+completed_at: "2026-07-26T18:04:11Z"
+completion_path: "research_control/tasks/RT-20260726-007/jobs/completions/AJC-AJ-RT-20260726-007-001.yaml"
+objective: "Execute only v21 P6-T04: construct or precisely obstruct source-defined measure and operational structures that fix conformal scale and measured durations and lengths while treating P6-T03 conformal nonselection as a hard input and importing no target calibration."
+target_derivation_milestone: "effective_metric_g_eff"
+milestone_burden: "Supply the missing scale and operational calibration burden."
+route_label: "candidate-construction-packet"
+route_reason: "Handoff-0880, cumulative checkpoint 3e9fa377def1af2d508c2ba63caffc79305ec5f3, v21 P6-T04, and immutable generation 127 select one bounded source scale-and-calibration theorem-or-obstruction packet."
+immutable_route_sha256: "ab06537dc28a8d6b141c167b11c3eca9ca26490f8120d06a6b1b5caceaca02ba"
+plan_task_id: "P6-T04"
+recommendation_ids:
+  - "V21-R18"
+  - "V21-R23"
+  - "V21-R24"
+  - "V21-R63"
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 127
+  passes_consumed: 117
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:127"
+  handoff_token: "f3bc776332cecf47ed6e671da157a2463a078243eada0bbb"
+  relay_claim_token: "0669f329d255e3749408e3fe3747a6da2e9745edbd393950"
+  route_work_item_id: "P6-T04"
+  route_worker_skill: "continue-research"
+  route_sha256: "ab06537dc28a8d6b141c167b11c3eca9ca26490f8120d06a6b1b5caceaca02ba"
+  worker_skill: "continue-research"
+  worker_invocation_count: 1
+
+mathematical_decisiveness_contract:
+  contract_path: "research_control/design/mathematical_decisiveness_completion_contract.md"
+  schema_path: ".agents/schemas/PHYSICS_COMPLETION_DECISIVENESS_SCHEMA.md"
+  enforcement_mode: "hard_failure"
+  active_after: "2026-06-21T02:32:39Z"
+
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "physics"
+  payload_type: "precise_obstruction"
+  candidate_family: "V21-P6-T04-SOURCE-SCALE-CALIBRATION-NONSELECTION-V1"
+  assumption_delta:
+    - "The P6-T03 one-ray conformal nonselection result remains fixed and no conformal class is admitted."
+    - "A smooth positive source density is added only as a proposal-only measure carrier."
+    - "Dimensionless scalar phases are added only as proposal-only clock carriers."
+    - "No physical time length or volume conversion constant is supplied."
+    - "Positive reparameterization of V remains admissible because the oriented ray and unparameterized flow are the fixed input."
+    - "Historical scoped source-extension g_eff remains unchanged and is not a premise."
+    - "No target atlas metric GR cone G c detector matter benchmark generated derivative registry metadata role authority or validator result is admitted as a source premise."
+  materiality_basis: "P6-T04 proves a new conditional four-dimensional volume-gauge theorem and constructs an explicit determinant-one anisotropy family plus flow-reparameterization calculation showing that density and phases do not define conformal shape rod lengths or absolute duration."
+  payload_details:
+    obstruction_id: "OBST-P6T04-VOLUME-TICK-CALIBRATION-NONSELECTION-001"
+    obstruction_scope: "an operational Lorentzian reconstruction whose complete input is only the P6-T03 one-ray datum plus an unnormalized positive density and dimensionless scalar phases"
+    theorem_ids:
+      - "P6T04-THM-CONDITIONAL-VOLUME-GAUGE"
+      - "P6T04-THM-UNIMODULAR-DENSITY-CONE-ROD-NONSELECTION"
+      - "P6T04-PROP-CLOCK-REPARAMETERIZATION"
+    global_no_go_claimed: false
+  source_basis:
+    - "TEX-V21-P6-T03-ONE-RAY-CONFORMAL-INSUFFICIENCY-V1"
+    - "TEX-ONTOLOGY-AETHER-FLOW-GEOMETRY"
+    - "TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-METRICFORMASSIGN-GEFF-CANDIDATE-OR-OBSTRUCTION"
+    - "TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-GEFF-CANDIDATE-SCOPED-SOURCE-EXTENSION-ADOPTION-GATE-CHAIR-REVIEW"
+    - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+    - "research_control/design/gr_derivation_burden_map.md"
+    - "research_control/handoffs/handoff-0880.yaml"
+  expected_artifact_paths:
+    - "research_control/tasks/RT-20260726-007/artifacts/source_scale_calibration_nonselection_v1.tex"
+    - "research_control/tasks/RT-20260726-007/artifacts/source_scale_calibration_nonselection_spec_v1.yaml"
+    - "research_control/tasks/RT-20260726-007/artifacts/source_scale_calibration_nonselection_validation_receipt_v1.json"
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+
+family_freeze_admission:
+  schema_id: "family_freeze_route_admission_v1"
+  policy_id: "family_freeze_reopening_policy_v1"
+  route_id: "v21_p6_t04_source_scale_calibration_nonselection"
+  family_id: "V21-P6-T03-ONE-RAY-CONFORMAL-INSUFFICIENCY-V1"
+  family_identity_sha256: "007ae324872868b9eb9cdf0ebc4f1131737c71eda9ce301c805acd5041a52bac"
+  assumption_sha256es:
+    - "92a01504ab891643172720e8a99ff3209517311e39382292bc40895b5c4ca207"
+  route_kind: "precise_obstruction"
+  detected_match_basis: []
+  reopening:
+    requested: false
+    class: "none"
+  distinct_branch:
+    branch_identity: "V21-P6-T04-SOURCE-SCALE-CALIBRATION-NONSELECTION-V1"
+    material_difference_basis: "Adds a positive-density carrier, dimensionless phase carriers, a conditional volume-gauge theorem, a determinant-one anisotropy family, and a clock reparameterization invariant instead of repackaging the P6-T03 one-ray conformal obstruction."
+    reconstructs_frozen_candidate: false
+    expected_artifact_paths:
+      - "research_control/tasks/RT-20260726-007/artifacts/source_scale_calibration_nonselection_v1.tex"
+      - "research_control/tasks/RT-20260726-007/artifacts/source_scale_calibration_nonselection_spec_v1.yaml"
+  authority_limits:
+    local_family_freeze_preserved: true
+    global_no_go_claimed: false
+    automatic_candidate_adoption: false
+    theorem_truth_inferred: false
+    ontology_modified: false
+    physics_promotion_authorized: false
+
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  expected_durable_outputs:
+    physics:
+      - "research_control/tasks/RT-20260726-007/artifacts/source_scale_calibration_nonselection_v1.tex"
+      - "research_control/tasks/RT-20260726-007/artifacts/source_scale_calibration_nonselection_spec_v1.yaml"
+    project_system:
+      - "research_control/tasks/RT-20260726-007/artifacts/validate_source_scale_calibration_nonselection.py"
+      - "research_control/tasks/RT-20260726-007/artifacts/source_scale_calibration_nonselection_validation_receipt_v1.json"
+  acceptance_criteria:
+    physics:
+      - "conditional volume-gauge transformation and uniqueness proof are explicit"
+      - "fixed-density anisotropy and clock-reparameterization countermodels are explicit"
+      - "dimensional relative-device and candidate-scoped obstruction boundaries are explicit"
+    project_system:
+      - "task-local validation and scratch TeX build pass"
+      - "claim-language source-authority documentation signal and research-control checks pass"
+      - "one governed checkpoint records the bounded transaction"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: false
+    exception_id: ""
+    evidence_path: ""
+    evidence_sha256: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0880"
+  source_handoff_path: "research_control/handoffs/handoff-0880.yaml"
+  source_handoff_sha256: "f5336b78dcbc7e5d67c9aa35c8af0c912ed54bbd080cf998da0dae6c2289536e"
+  selected_plan_task_id: "P6-T04"
+  guard_outcome: "below_threshold"
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  parent:
+    execution_unit_id: "parent"
+    perspective: "physicist_mathematician_philosopher"
+    responsibilities:
+      - "hold P6-T03 canonical ontology historical scoped g_eff and the no-target boundary fixed"
+      - "test source density and phases for conditional scale and operational calibration"
+      - "fuse transformation dimensional device-agreement countermodel and interpretation audits"
+  children:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260726-007/artifacts/child_phys_math_p6_t04_scale_calibration.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260726-007/artifacts/child_phys_phil_p6_t04_scale_calibration.yaml"
+      status: "completed"
+  conflict_policy:
+    review_path: "research_control/tasks/RT-20260726-007/artifacts/parent_conflict_review_p6_t04_scale_calibration.yaml"
+    max_resolution_rounds: 2
+    require_parallel_child_revision: true
+    unresolved_conflict_status: "blocked"
+  fusion_policy:
+    fusion_notes_path: "research_control/tasks/RT-20260726-007/artifacts/parent_fusion_notes_p6_t04_scale_calibration.md"
+    fused_output_path: "research_control/tasks/RT-20260726-007/artifacts/source_scale_calibration_nonselection_v1.tex"
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+    final_output_replaces_old_single_role_artifact: true
+  outer_agentjob_count: 1
+  child_agentjob_count: 0
+  subagent_count: 0
+  rationale: "Two internal analytical perspectives independently audit the mathematical obstruction and its operational interpretation within one immutable worker invocation and one outer AgentJob; no child AgentJob or subagent is created."
+
+allowed_read_paths:
+  - "SOUL.md"
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".codex/skills/continue-research-continue-goal/SKILL.md"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - ".agents/roles/physics/candidate-constructor.v0.2.0.md"
+  - ".agents/schemas/**"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  - "research_control/design/**"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0880.yaml"
+  - "research_control/handoffs/handoff-0880.md"
+  - "research_control/tasks/RT-20260726-006/**"
+  - "research_control/tasks/RT-20260726-005/**"
+  - "research_control/tasks/RT-20260614-216/**"
+  - "research_control/tasks/RT-20260614-222/**"
+  - "ontology/tex/aether_flow_geometry.tex"
+  - "registries/**"
+
+allowed_write_paths:
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "registries/METRIC_USE_LEDGER.csv"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_burden_status_migration_receipt.json"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status.md"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_validation.json"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_compact_receipt.json"
+  - "research_control/tasks/RT-20260726-007/**"
+  - "research_control/handoffs/handoff-0881.yaml"
+  - "research_control/handoffs/handoff-0881.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/PDF_DERIVATIVE_REGISTRY.csv"
+  - "registries/PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "registries/TEX_SOURCE_REGISTRY.csv"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/pdf/**"
+  - "wiki/tex/**"
+
+allowed_generated_paths:
+  - ".local/**"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_burden_status_migration_receipt.json"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status.md"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_validation.json"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_compact_receipt.json"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/pdf/**"
+  - "wiki/tex/**"
+
+forbidden_paths:
+  - "ontology/**"
+  - "manuscripts/**"
+  - "legacy_ontology/**"
+  - "html/**"
+  - "implementations_plans/**"
+  - ".agents/roles/**"
+  - ".codex/skills/**"
+  - "research_control/tasks/RT-20260726-006/**"
+  - "research_control/tasks/RT-20260726-005/**"
+  - "research_control/tasks/RT-20260614-216/**"
+  - "research_control/tasks/RT-20260614-222/**"
+
+allowed_source_classes:
+  - "science_draft"
+  - "task_local_theorem"
+  - "task_local_countermodel"
+  - "task_local_precise_obstruction"
+  - "task_local_calibration_protocol"
+  - "task_local_dimensional_analysis"
+  - "scoped_metric_use_audit"
+  - "project_control"
+  - "registry"
+  - "role_contract"
+  - "generated_memory_derivative"
+
+forbidden_source_classes:
+  - "canonical_ontology_write"
+  - "benchmark_promotion"
+  - "physics_claim_promotion"
+  - "source_law_adoption"
+  - "canonical_ontology_candidate_promotion"
+  - "physical_ontology_adoption"
+  - "physical_time_scale_locality_volume_clock_or_rod_claim"
+  - "target_atlas_or_metric_import"
+  - "target_gr_null_cone_import"
+  - "target_G_or_c_calibration"
+  - "physical_causality_or_characteristic_claim"
+  - "positive_geometry_claim"
+  - "M_src_adoption"
+  - "candidate_reconstruction"
+  - "g_eff_adoption_or_scope_expansion"
+  - "matter_coupling_or_Einstein_equations"
+  - "gate_chair_verdict"
+  - "completed_derivation_claim"
+  - "global_theory_rejection"
+  - "future_source_extension_impossibility"
+  - "generated_derivative_authority"
+  - "proof_publication_or_push"
+
+approved_commands:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"P6 T04 source defined scale calibration conformal nonselection\" --limit 10 --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v21.md --json"
+  - "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python research_control/tasks/RT-20260726-007/artifacts/validate_source_scale_calibration_nonselection.py --write-report --json"
+  - "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python research_control/tasks/RT-20260726-007/artifacts/validate_source_scale_calibration_nonselection.py --check --json"
+  - "PATH=/Users/alex.omegapy/texlive/2026/bin/universal-darwin:$PATH .venv/bin/python .codex/skills/project-memory-system/scripts/build_pdf_derivatives.py --scratch research_control/tasks/RT-20260726-007/artifacts/source_scale_calibration_nonselection_v1.tex"
+  - ".venv/bin/python research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_renderer.py --write --json"
+  - ".venv/bin/python research_control/tasks/RT-20260721-009/artifacts/validate_v21_current_burden_status.py --write --json"
+  - ".venv/bin/python research_control/tasks/RT-20260721-009/artifacts/validate_v21_current_burden_status.py --check --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --check"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --check"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --write"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --check"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --json output/research_dependency_graph.json --markdown wiki/indexes/research_dependency_graph.md --dot output/research_dependency_graph.dot"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --check"
+  - ".venv/bin/python scripts/research_control/generate_claim_graph_v1.py --json output/claim_graph_v1.json"
+  - ".venv/bin/python scripts/research_control/generate_claim_graph_v1.py --check"
+  - ".venv/bin/python scripts/research_control/validate_claim_graph_v1.py --json"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --json-summary"
+  - ".venv/bin/python scripts/research_control/run_full_research_control_validation.py --json --tail-chars 2500"
+  - "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m unittest -v tests.test_research_control"
+  - ".venv/bin/python -m unittest discover -s tests"
+  - "git diff --check"
+  - "git diff --cached --check"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260726-007-001"
+
+required_validators:
+  - "task_local_source_scale_calibration_nonselection"
+  - "scratch_tex_build"
+  - "v21_burden_status"
+  - "project_memory_bootstrap"
+  - "current_frontier_render_and_check"
+  - "task_index_render_and_check"
+  - "compact_frontier_render_and_check"
+  - "dependency_graph_render_and_check"
+  - "claim_graph_generate_and_validate"
+  - "project_change_classifier"
+  - "project_improvement_signals"
+  - "documentation_impact"
+  - "claim_language"
+  - "research_control_diff"
+  - "full_research_control_validation"
+  - "focused_research_control_tests"
+  - "repository_test_shard"
+  - "git_diff_check"
+  - "checkpoint_transaction"
+
+expected_outputs:
+  - "research_control/tasks/RT-20260726-007/artifacts/child_phys_math_p6_t04_scale_calibration.yaml"
+  - "research_control/tasks/RT-20260726-007/artifacts/child_phys_phil_p6_t04_scale_calibration.yaml"
+  - "research_control/tasks/RT-20260726-007/artifacts/parent_conflict_review_p6_t04_scale_calibration.yaml"
+  - "research_control/tasks/RT-20260726-007/artifacts/parent_fusion_notes_p6_t04_scale_calibration.md"
+  - "research_control/tasks/RT-20260726-007/artifacts/source_scale_calibration_nonselection_v1.tex"
+  - "research_control/tasks/RT-20260726-007/artifacts/source_scale_calibration_nonselection_spec_v1.yaml"
+  - "research_control/tasks/RT-20260726-007/artifacts/source_scale_calibration_nonselection_validation_receipt_v1.json"
+  - "research_control/tasks/RT-20260726-007/artifacts/source_scale_calibration_nonselection_receipt.md"
+  - "research_control/tasks/RT-20260726-007/artifacts/validate_source_scale_calibration_nonselection.py"
+  - "research_control/tasks/RT-20260726-007/00_TASK.yaml"
+  - "research_control/tasks/RT-20260726-007/DDR-20260726-007.md"
+  - "research_control/tasks/RT-20260726-007/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260726-007/roles/candidate-constructor@0.2.0--RT-20260726-007.yaml"
+  - "research_control/tasks/RT-20260726-007/jobs/completions/AJC-AJ-RT-20260726-007-001.yaml"
+  - "research_control/handoffs/handoff-0881.yaml"
+  - "research_control/handoffs/handoff-0881.md"
+
+stop_conditions:
+  - "the result assumes a conformal class or imports target geometry proper time G c matter detector or benchmark calibration"
+  - "density or phase carriers are presented as adopted physical volume clock or rod laws"
+  - "the result cannot distinguish candidate-scoped nonselection from global impossibility"
+  - "a required write path is outside the AgentJob allowlist"
+  - "validation or the single governed checkpoint fails"
+  - "more than one AgentJob or checkpoint would be required"
+
+claim_boundary: "Test only task-local proposal-only source density and phase carriers against the P6-T03 conformal nonselection result; prove the conditional volume-gauge theorem and exact fixed-density and clock-normalization obstruction; keep physical units geometry scale clocks rods and every downstream GR interpretation open; and create no ontology source-law g_eff promotion proof publication push global no-go or completed-derivation authority."
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1033
+    relationship_row_count: 5189
+    semantic_row_count: 1033
+    vault_row_count: 1033
+    local_cache_only_warning_count: 0
+    refresh_performed: true
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"P6 T04 source defined scale calibration conformal nonselection\" --limit 10 --json"
+      query_type: "search"
+      query_text: "P6 T04 source defined scale calibration conformal nonselection"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v21.md --json"
+      query_type: "lookup"
+      query_text: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "df6295cbc6b30b9e2d236ae8a030412f0e4f67d3abe2813399f7d2d055c5154b"
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  excluded_generated_returns:
+    - object_id: "MD-RESEARCH-CONTROL-TASK-INDEX"
+      reason: "Generated noncanonical navigation result was excluded from canonical returns and did not provide a scientific premise."
+  authority_note: "Generated Obsidian wiki semantic relationship task-index SQLite and .local retrieval surfaces are navigation or diagnostics only and are not authority; tracked canonical sources registries and research-control state govern this packet."
