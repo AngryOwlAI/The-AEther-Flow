@@ -1,0 +1,75 @@
+schema_id: "v21_p5_t08_source_dynamics_theorem_inventory_v1"
+task_id: "RT-20260726-001"
+plan_task_id: "P5-T08"
+status: "draft/control"
+candidate_family: "V21-P5-T03-CUBIC-AMPLITUDE-SOURCE-DYNAMICS-V1"
+source_hashes_fixed: true
+entries:
+  - theorem_id: "P5T03-THM-CUBIC-FORWARD-FLOW"
+    source_task_id: "RT-20260725-008"
+    result_kind: "proved_conditional_theorem"
+    status: "survives_as_candidate_specific_mathematics"
+    assumption_scope: "proposal-only cubic generator gamma positive and forward monoid parameter"
+    geometry_effect: "none"
+  - theorem_id: "P5T04-STRUCTURAL-RESULTS"
+    source_task_id: "RT-20260725-010"
+    result_kind: "proved_conditional_theorems"
+    status: "survive_as_candidate_specific_mathematics"
+    assumption_scope: "exact one-mode amplitude family"
+    geometry_effect: "records one-dimensional structural limits"
+  - theorem_id: "OBST-P5T05-QAMP-NO-RECONSTRUCTION-PHASE-001"
+    source_task_id: "RT-20260725-012"
+    result_kind: "precise_obstruction"
+    status: "preserved"
+    assumption_scope: "exact one-mode amplitude family"
+    geometry_effect: "blocks nontrivial reconstruction-suitable phase within the candidate"
+  - theorem_id: "OBST-P5T06-QAMP-LOCAL-FIELD-RANK-001"
+    source_task_id: "RT-20260725-013"
+    result_kind: "precise_obstruction"
+    status: "preserved"
+    assumption_scope: "source-amplitude nearest-lattice map and deterministic decoder"
+    geometry_effect: "blocks independent local-field reconstruction from the map alone"
+  - theorem_id: "P5T07-THM-ODD-POWER-NONSELECTION"
+    source_task_id: "RT-20260725-014"
+    result_kind: "countermodel_or_obstruction"
+    status: "preserved"
+    assumption_scope: "qualitative forward-semiflow burdens tested by the exact odd-power family"
+    geometry_effect: "blocks unique cubic-law selection from those burdens"
+  - theorem_id: "OBST-P5T07-QAMP-INTRINSIC-LAW-SCALE-ROBUSTNESS-001"
+    source_task_id: "RT-20260725-014"
+    result_kind: "precise_obstruction"
+    status: "preserved_with_local_freeze"
+    assumption_scope: "exact unchanged P5-T01 through P5-T06 package"
+    geometry_effect: "locally freezes the exact unchanged one-mode geometry-support route"
+  - theorem_id: "P5T08-THM-CONDITIONAL-TANGENT-RESPONSE"
+    source_task_id: "RT-20260726-001"
+    result_kind: "theorem_with_hypotheses_and_proof"
+    status: "new_conditional_result"
+    assumption_scope: "proposal-only cubic generator gamma positive and lambda nonnegative"
+    geometry_effect: "supplies an exact one-dimensional conditional response operator only"
+  - theorem_id: "P5T08-THM-FACTOR-THROUGH-AMPLITUDE-RANK-BOUND"
+    source_task_id: "RT-20260726-001"
+    result_kind: "theorem_with_hypotheses_and_proof"
+    status: "new_scoped_obstruction"
+    assumption_scope: "every deterministic downstream reconstruction factors through one amplitude coordinate"
+    geometry_effect: "rank at most one and no positive multi-direction local input from this route alone"
+  - theorem_id: "P5T08-THM-SOURCE-DYNAMICS-MILESTONE-CLOSURE"
+    source_task_id: "RT-20260726-001"
+    result_kind: "theorem_with_hypotheses_and_proof"
+    status: "new_integration_theorem"
+    assumption_scope: "exact registered P5-T01 through P5-T07 source hashes"
+    geometry_effect: "makes a conditional response-and-obstruction input available to P6 without positive geometry"
+counts:
+  entry_count: 9
+  new_p5_t08_theorem_count: 3
+  preserved_precise_obstruction_count: 3
+  positive_local_geometry_input_count: 0
+milestone_disposition: "completed_with_precise_scoped_obstruction"
+adoption_status: "blocked_adoption_open_continuation"
+authority:
+  canonical_ontology_modified: false
+  source_law_adopted: false
+  positive_geometry_reconstructed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false

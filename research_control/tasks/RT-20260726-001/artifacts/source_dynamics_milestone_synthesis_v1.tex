@@ -1,0 +1,292 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[hidelinks]{hyperref}
+
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newcommand{\Qamp}{\mathcal Q_{\mathrm{amp}}}
+\newcommand{\Phisrc}{\Phi_{\mathrm{src}}}
+
+\title{P5 Source-Dynamics Milestone Synthesis\\
+\large Registered draft/control manuscript}
+\author{The \AE ther-Flow Research Project}
+\date{2026-07-26}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This registered draft/control manuscript closes v21 work item P5-T08 by
+integrating the exact, conditional mathematics of P5-T01 through P5-T07.
+It proves a new tangent-response formula and response-cocycle identity for the
+proposal-only cubic-amplitude candidate, and it proves a factor-through-
+amplitude rank bound for every deterministic downstream reconstruction from
+that candidate.  The resulting source-ontology status is
+\texttt{blocked\_adoption\_open\_continuation}: the current ontology does not
+derive a unique source law, normalization, resolution, local source data,
+characteristic operator, or physical geometry.  The output made available to
+P6 is an exact conditional response-and-obstruction input, not an adopted
+source law, local causal structure, effective metric, or physical claim.
+\end{abstract}
+
+\section{Authority and scope}
+
+The canonical ontology sources remain
+\texttt{ontology/tex/aether\_flow\_foundations.tex},
+\texttt{aether\_flow\_dynamics.tex}, and
+\texttt{aether\_flow\_geometry.tex}.  They keep the smooth four-dimensional
+source arena as explicit primitive debt, leave \(\Phisrc\) unresolved, and
+separate the exact-GR target benchmark from the open source-to-target
+derivation.  This manuscript does not edit those sources.
+
+The P5-T01 through P5-T07 artifacts are task-local source-extension data.
+Their proved statements are conditional on their displayed hypotheses.  The
+cubic generator, its coefficient, the resolution parameter, and every
+candidate-specific construction remain proposal-only.  Validator success,
+registration, a handoff, or a checkpoint is not theorem truth, ontology
+adoption, proof authority, publication authority, or physics promotion.
+
+\section{Integrated P5 package}
+
+\begin{definition}[Fixed P5 package]
+The fixed package \(\mathcal P_5\) consists of:
+\begin{enumerate}
+  \item the compact one-mode state family
+  \[
+     q_a(\theta)=a\sin\theta_1,\qquad
+     \Qamp=\{q_a:a\in\mathbb R\};
+  \]
+  \item the proposal-only forward action
+  \(\Phisrc:\mathbb R_{\geq0}\times\Qamp\to\Qamp\);
+  \item the proposal-only cubic generator
+  \[
+     X_\gamma(a)=-\gamma a^3,\qquad \gamma>0;
+  \]
+  \item the exact conditional flow
+  \[
+     \phi_\lambda(a)
+       =\frac{a}{\sqrt{1+2\gamma\lambda a^2}},
+       \qquad \lambda\geq0;
+  \]
+  \item the unique stationary background \(a=0\), the structural and
+  background results already recorded by P5-T04 and P5-T05, and the
+  nearest-lattice source-amplitude map \(\mathcal N_\varepsilon\) from
+  P5-T06;
+  \item the P5-T07 odd-power counterfamily, relabeling identities,
+  obstruction
+  \[
+  \texttt{OBST-P5T07-QAMP-INTRINSIC-LAW-SCALE-ROBUSTNESS-001},
+  \]
+  and local freeze of the exact unchanged one-mode route as support for
+  geometry.
+\end{enumerate}
+\end{definition}
+
+No item in this definition supplies independent local source degrees of
+freedom, a gluing law, a physical clock, an adopted evolution law, a
+source-invariant normalization, a characteristic operator, a causal cone, or
+a source-to-target bridge.
+
+\section{New conditional response theorem}
+
+\begin{theorem}[P5T08-THM-CONDITIONAL-TANGENT-RESPONSE]
+\label{thm:response}
+Fix \(\gamma>0\).  For the proposal-only cubic flow on \(\mathbb R\),
+\[
+ \phi_\lambda(a)=a(1+2\gamma\lambda a^2)^{-1/2},
+\]
+the tangent response exists for every \(a\in\mathbb R\) and
+\(\lambda\geq0\), and is
+\[
+ D\phi_\lambda(a)
+   =(1+2\gamma\lambda a^2)^{-3/2}.
+\]
+It obeys the response cocycle
+\[
+ D\phi_{\lambda+\mu}(a)
+ =D\phi_\mu(\phi_\lambda(a))\,D\phi_\lambda(a)
+ \qquad(\lambda,\mu\geq0),
+\]
+and its infinitesimal response generator is
+\[
+ DX_\gamma(a)=-3\gamma a^2.
+\]
+For \(\lambda>0\), \(0<D\phi_\lambda(a)\leq1\), with equality only at
+\(a=0\).
+\end{theorem}
+
+\begin{proof}
+Direct differentiation gives
+\[
+\begin{aligned}
+\frac{\partial}{\partial a}
+\left[a(1+2\gamma\lambda a^2)^{-1/2}\right]
+&=(1+2\gamma\lambda a^2)^{-1/2}\\
+&\quad-2\gamma\lambda a^2
+ (1+2\gamma\lambda a^2)^{-3/2}\\
+&=(1+2\gamma\lambda a^2)^{-3/2}.
+\end{aligned}
+\]
+The P5-T03 semiflow identity
+\(\phi_{\lambda+\mu}=\phi_\mu\circ\phi_\lambda\), followed by the
+one-dimensional chain rule, gives the cocycle.  Differentiating
+\(X_\gamma(a)=-\gamma a^3\) gives the infinitesimal formula.  Positivity and
+the contraction bound follow from
+\(1+2\gamma\lambda a^2\geq1\).
+\end{proof}
+
+\paragraph{Status.}
+Theorem~\ref{thm:response} is an exact conditional result about the fixed
+proposal-only candidate.  It does not make \(\lambda\) physical time, adopt
+\(\gamma\), or identify the tangent response with a spacetime
+characteristic.
+
+\section{Factor-through-amplitude obstruction}
+
+\begin{definition}[Positive local geometry input]
+A positive local geometry input for P6 would have to provide, from source-side
+data and without a target atlas or metric premise, at least:
+\[
+\mathfrak G_{\mathrm{req}}=
+(\mathcal Q_{\mathrm{loc}},\operatorname{res},\operatorname{glue},
+\Phi_{\mathrm{loc}},D\Phi_{\mathrm{loc}},
+\operatorname{Char},\operatorname{Cov},\operatorname{Scale},
+\operatorname{Robust},\operatorname{Resp}).
+\]
+Here \(\mathcal Q_{\mathrm{loc}}\) supplies independently variable local
+source data; restriction and gluing make locality testable;
+\(\Phi_{\mathrm{loc}}\) and its linearization determine source response;
+\(\operatorname{Char}\) extracts a source-invariant influence or
+characteristic structure; and the remaining entries state covariance,
+normalization, robustness, and response obligations.  This is a requirement
+record, not an adopted ontology extension.
+\end{definition}
+
+\begin{theorem}[P5T08-THM-FACTOR-THROUGH-AMPLITUDE-RANK-BOUND]
+\label{thm:rank}
+Let \(U\) be a differentiable source-data space, let
+\(a:U\to\mathbb R\) be differentiable, and let
+\(B:\mathbb R\to E\) be differentiable for a finite-dimensional vector
+space \(E\).  Every deterministic reconstruction
+\[
+  \mathcal R=B\circ a:U\to E
+\]
+that factors through the sole amplitude coordinate satisfies
+\[
+  \operatorname{rank}D\mathcal R_u\leq1
+  \qquad\text{for every }u\in U.
+\]
+Consequently, if a proposed local characteristic or geometry input requires
+two or more independently variable response directions at one source point,
+the exact unchanged \(\Qamp\) route cannot supply that input by deterministic
+post-processing alone.
+\end{theorem}
+
+\begin{proof}
+The chain rule gives
+\[
+ D\mathcal R_u=DB_{a(u)}\circ Da_u.
+\]
+The intermediate space is one-dimensional, so the rank of the composition is
+at most one.  Deterministic post-processing can change representation but
+cannot create a second independent tangent direction.  Therefore a target
+requiring rank at least two cannot be obtained from this factorization.
+\end{proof}
+
+\paragraph{Scope.}
+Theorem~\ref{thm:rank} is a factorization theorem for the exact one-mode
+candidate.  It is not a global no-go theorem.  Conservative source extensions
+with independent local data, restriction and gluing structure, or new
+source-derived dynamics remain possible.
+
+\section{P5 milestone closure theorem}
+
+\begin{theorem}[P5T08-THM-SOURCE-DYNAMICS-MILESTONE-CLOSURE]
+\label{thm:closure}
+Under the exact registered P5-T01 through P5-T07 source hashes:
+\begin{enumerate}
+  \item the fixed cubic candidate has a well-defined conditional forward
+  semiflow, stationary background, tangent response, response cocycle,
+  candidate-specific structural results, and bounded amplitude
+  coarse-graining error;
+  \item the current ontology and the fixed package do not derive a unique
+  exponent, coefficient normalization, intrinsic resolution, independent
+  local source data, gluing law, or characteristic operator;
+  \item deterministic reconstructions that factor through the sole amplitude
+  have differential rank at most one;
+  \item the exact unchanged one-mode route therefore supplies no positive
+  local geometry input and remains locally frozen as geometry support;
+  \item the exact conditional P6 input
+  \[
+    \mathcal I^{\mathrm{cond}}_6
+      =(\Qamp,\phi_\lambda,D\phi_\lambda,DX_\gamma,
+        \mathfrak G_{\mathrm{req}},
+        \mathcal O_{\mathrm{law}},
+        \mathcal O_{\mathrm{rank}})
+  \]
+  is nevertheless available for formalizing the next causal and
+  characteristic target and testing insufficiency without importing a
+  metric.
+\end{enumerate}
+Thus P5-T08 is completed by a theorem-level synthesis with a precise scoped
+source-ontology obstruction.  Canonical adoption remains blocked while
+same-milestone conservative source extension and downstream target
+formalization remain open.
+\end{theorem}
+
+\begin{proof}
+Item 1 integrates the registered conditional P5-T03 through P5-T06 results
+with Theorem~\ref{thm:response}.  Item 2 is the exact P5-T07 nonselection and
+provenance disposition.  Items 3 and 4 follow from
+Theorem~\ref{thm:rank} and the P5-T07 local freeze.  Item 5 merely packages
+the surviving conditional response, the positive-input requirement record,
+and the two scoped obstructions; it adds no source datum.  The final status
+therefore follows without ontology adoption or a global impossibility claim.
+\end{proof}
+
+\section{Distance-to-GR and P6 handoff}
+
+The source-ontology milestone is closed at the task level as
+\texttt{completed\_with\_precise\_scoped\_obstruction}.  Its scientific
+status remains draft/control and proposal-only:
+\[
+\texttt{blocked\_adoption\_open\_continuation}.
+\]
+The exact effective-geometry-relevant input made available to P6 is
+\(\mathcal I^{\mathrm{cond}}_6\).  It contains a one-dimensional conditional
+response operator and explicit insufficiency obligations.  It is not a
+positive local causal structure, not a characteristic cone, and not
+\(g_{\mathrm{eff}}\).
+
+P6-T01 may therefore formalize the exact causal, influence, or characteristic
+target to be demanded from source dynamics and test the conditional input
+against it.  P6-T01 may not infer a physical cone or metric from the
+one-dimensional response, treat the proposal-only generator as adopted, or
+claim reconstruction success.  Any positive reconstruction remains blocked
+until source-derived local data, gluing, characteristic, covariance, scale,
+and robustness burdens are met.
+
+\section{Explicit nonclaims}
+
+This manuscript does not:
+\begin{itemize}
+  \item adopt, reject, or modify canonical ontology or a source law;
+  \item identify \(\lambda\) with physical time or \(\gamma\) or
+  \(\varepsilon\) with an intrinsic physical scale;
+  \item establish physical locality, covariance, causality, a characteristic
+  cone, \(M_{\mathrm{src}}\), \(g_{\mathrm{eff}}\), matter coupling, or the
+  Einstein equations;
+  \item promote the exact-GR benchmark or claim a completed derivation;
+  \item prove a global theory rejection or future source-extension
+  impossibility;
+  \item create proof, Gate Chair, publication, push, or external-claim
+  authority.
+\end{itemize}
+
+\end{document}

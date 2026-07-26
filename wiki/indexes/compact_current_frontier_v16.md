@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260725-014`
-- Latest handoff: `handoff-0874`
-- Current status: `p5_t07_precise_scoped_obstruction_and_local_geometry_route_freeze_ready_for_checkpoint`
+- Active task: `RT-20260726-001`
+- Latest handoff: `handoff-0875`
+- Current status: `p5_t08_theorem_level_synthesis_precise_source_ontology_obstruction_and_conditional_p6_input_ready_for_checkpoint`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260725-014`
-- Latest research handoff: `handoff-0874`
-- Latest research next action: Run the one governed checkpoint for AJ-RT-20260725-014-001. Only after it commits may one fresh bounded P5-T08 Ontology Formalizer packet integrate the surviving source-dynamics mathematics, scoped obstruction, local freeze, and milestone decision without repairing or reopening the frozen route.
+- Latest research task: `RT-20260726-001`
+- Latest research handoff: `handoff-0875`
+- Latest research next action: Run the one governed checkpoint for AJ-RT-20260726-001-001. Only after it commits may one fresh bounded P6-T01 Ontology Formalizer packet define the causal influence or characteristic target and test the exact conditional P5 response without inferring a physical cone or metric.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p5_t08_integrate_source_dynamics_manuscript_and_milestone_decision`
+- Route ID: `v21_p6_t01_formalize_source_derived_causal_characteristic_target`
 - Role family: `ontology-formalizer@0.2.0`
-- Target milestone: `source_ontology`
-- Milestone burden: Close the source-dynamics phase with a durable theorem-level synthesis.
+- Target milestone: `effective_metric_g_eff`
+- Milestone burden: Define the first physical effective-geometry burden without importing a metric.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `33acb9f36765936ecbd0b2b9e1890a7254fc3b05b1ebd81f6fa1401b290ba24e`
-- JSON SHA-256: `849e8200144ecef3f3fb9c184f0e03255561ad94d02080c8d5f406825b2a5b4d`
+- YAML SHA-256: `ee180f274ebc5e65e27542ae9789f87407d855cce526bf1edf511ff92ee67c99`
+- JSON SHA-256: `a92f7b1a65ce15578712e7bb578571d4226d5c6e4b2ef4956f2c80fc35ee2996`
 
 ## Authority Warning
 

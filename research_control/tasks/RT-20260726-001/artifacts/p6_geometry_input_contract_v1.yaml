@@ -1,0 +1,66 @@
+schema_id: "v21_p5_t08_conditional_p6_geometry_input_contract_v1"
+input_id: "P5T08-CONDITIONAL-P6-RESPONSE-INPUT-V1"
+task_id: "RT-20260726-001"
+plan_task_id: "P5-T08"
+status: "draft/control"
+input_kind: "conditional_source_response_and_obstruction"
+candidate_family: "V21-P5-T03-CUBIC-AMPLITUDE-SOURCE-DYNAMICS-V1"
+source_side_objects:
+  state_family: "Q_amp={q_a:a in R}"
+  proposal_flow: "phi_lambda(a)=a/(1+2 gamma lambda a^2)^(1/2)"
+  tangent_response: "Dphi_lambda(a)=(1+2 gamma lambda a^2)^(-3/2)"
+  infinitesimal_response: "DX_gamma(a)=-3 gamma a^2"
+  response_cocycle: "Dphi_(lambda+mu)(a)=Dphi_mu(phi_lambda(a)) Dphi_lambda(a)"
+  parameter_domain: "a in R, lambda and mu nonnegative, gamma positive"
+exact_input_made_available_to_p6:
+  - "one-dimensional conditional forward response operator"
+  - "exact response-cocycle identity"
+  - "exact factor-through-amplitude rank bound"
+  - "odd-power law nonselection counterfamily"
+  - "explicit positive-local-input requirement record"
+  - "scoped obstruction and local-freeze ledger"
+required_positive_local_geometry_input:
+  components:
+    - "independently variable local source state space"
+    - "restriction and gluing maps"
+    - "local evolution and linearized response"
+    - "source-derived characteristic extraction"
+    - "source covariance and normalization"
+    - "scale and robustness rules"
+    - "response rule linking local perturbations to the extracted structure"
+  supplied_by_current_candidate:
+    independently_variable_local_source_state_space: false
+    restriction_and_gluing_maps: false
+    local_evolution_and_linearized_response: false
+    source_derived_characteristic_extraction: false
+    source_covariance_and_normalization: false
+    scale_and_robustness_rules: false
+    response_rule_for_extracted_structure: false
+  supplied_conditionally_at_global_amplitude_level:
+    proposal_flow: true
+    one_dimensional_linearized_response: true
+    response_cocycle: true
+    factorization_rank_bound: true
+p6_t01_use:
+  allowed:
+    - "formalize the exact causal influence or characteristic target to be derived without a metric premise"
+    - "test whether the conditional one-dimensional response can satisfy that target"
+    - "record a precise scoped obstruction when source invariance locality or rank fails"
+  forbidden:
+    - "treat the proposal-only cubic generator as adopted"
+    - "identify lambda as physical time"
+    - "infer a physical cone from a one-dimensional global response"
+    - "reconstruct or adopt M_src or g_eff"
+    - "claim matter coupling Einstein equations benchmark promotion or completed derivation"
+qualification:
+  lawful_for_p6_target_formalization: true
+  positive_local_geometry_input: false
+  geometry_reconstruction_unlocked: false
+  adoption_status: "blocked_adoption_open_continuation"
+authority:
+  target_atlas_imported: false
+  target_metric_imported: false
+  canonical_ontology_modified: false
+  source_law_adopted: false
+  physical_causality_established: false
+  physics_promotion_authorized: false

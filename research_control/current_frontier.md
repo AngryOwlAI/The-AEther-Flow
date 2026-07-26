@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260725-014` and `handoff-0874`.
+`RT-20260726-001` and `handoff-0875`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260725-014` |
-| Latest handoff ID | `handoff-0874` |
-| Current status | `p5_t07_precise_scoped_obstruction_and_local_geometry_route_freeze_ready_for_checkpoint` |
+| Active task ID | `RT-20260726-001` |
+| Latest handoff ID | `handoff-0875` |
+| Current status | `p5_t08_theorem_level_synthesis_precise_source_ontology_obstruction_and_conditional_p6_input_ready_for_checkpoint` |
 | V16 completed | false |
-| Current route family | audit or review (scientific audit) |
+| Current route family | integration or selection (scientific) |
 | Target derivation milestone | `source_ontology` |
-| Current burden | `source_ontology_primitives`; status: accepted |
-| Required next authority | After the governed checkpoint commits, one fresh bounded P5-T08 ontology-law-research packet may integrate the surviving source-dynamics mathematics, exact scoped obstruction, local freeze, and source-ontology milestone decision without repair, reopening, adoption, or promotion. |
-| Next recommended action | Run the one governed checkpoint for AJ-RT-20260725-014-001. Only after it commits may one fresh bounded P5-T08 Ontology Formalizer packet integrate the surviving source-dynamics mathematics, scoped obstruction, local freeze, and milestone decision without repairing or reopening the frozen route. |
+| Current burden | `source_ontology_primitives`; status: completed_with_precise_scoped_obstruction |
+| Required next authority | After the governed checkpoint commits, one fresh bounded P6-T01 ontology-law-research packet may formalize the exact causal influence or characteristic target and test the conditional P5 response-and-obstruction input without importing or inferring positive geometry. |
+| Next recommended action | Run the one governed checkpoint for AJ-RT-20260726-001-001. Only after it commits may one fresh bounded P6-T01 Ontology Formalizer packet define the causal influence or characteristic target and test the exact conditional P5 response without inferring a physical cone or metric. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260725-014` |
-| Latest research handoff ID | `handoff-0874` |
-| Latest research next action | Run the one governed checkpoint for AJ-RT-20260725-014-001. Only after it commits may one fresh bounded P5-T08 Ontology Formalizer packet integrate the surviving source-dynamics mathematics, scoped obstruction, local freeze, and milestone decision without repairing or reopening the frozen route. |
+| Latest research task ID | `RT-20260726-001` |
+| Latest research handoff ID | `handoff-0875` |
+| Latest research next action | Run the one governed checkpoint for AJ-RT-20260726-001-001. Only after it commits may one fresh bounded P6-T01 Ontology Formalizer packet define the causal influence or characteristic target and test the exact conditional P5 response without inferring a physical cone or metric. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260725-014/00_TASK.yaml`.
-- Active task objective: Perform a fresh source-provenance audit and adversarial stress of the exact unchanged P5-T01 through P5-T06 source theory, dynamics, backgrounds, and reconstruction map under relabeling, finite variation, boundary, phase, parameter, target-import, information-creation, covariance, error-bound, and process-authority attacks.
-- Latest handoff path: `research_control/handoffs/handoff-0874.yaml`.
-- Latest handoff summary: P5-T07 finds the exact P5-T01 through P5-T06 package textually source-pure and preserves its candidate-specific flow, structural, background, and approximation mathematics. An exact odd-power family shows that the audited qualitative properties do not select the cubic exponent; coefficient and resolution relabeling identities show that gamma and epsilon are not intrinsic without source normalization; and the one-mode family supplies no transverse local dynamics. This yields one precise source-extension-candidate obstruction and locally freezes the exact unchanged route as geometry support. The result is not a global no-go, source-law rejection, future source-extension closure, or downstream GR promotion.
-- Current route family: audit or review (scientific audit).
-- Next recommended action: Run the one governed checkpoint for AJ-RT-20260725-014-001. Only after it commits may one fresh bounded P5-T08 Ontology Formalizer packet integrate the surviving source-dynamics mathematics, scoped obstruction, local freeze, and milestone decision without repairing or reopening the frozen route.
+- Active task path: `research_control/tasks/RT-20260726-001/00_TASK.yaml`.
+- Active task objective: Integrate the exact registered P5-T01 through P5-T07 definitions, equations, conditional theorems, countermodels, audits, and scoped obstructions into one durable theorem-level source-dynamics synthesis; state the precise source-ontology milestone disposition and exact conditional input made available to P6.
+- Latest handoff path: `research_control/handoffs/handoff-0875.yaml`.
+- Latest handoff summary: P5-T08 integrates the exact P5-T01 through P5-T07 package and adds three theorem-level draft/control statements: the exact cubic tangent-response cocycle, a general factor-through-amplitude rank bound, and a source-dynamics milestone-closure theorem. The P5 work item closes as completed_with_precise_scoped_obstruction and blocked_adoption_open_continuation. P6 receives an exact conditional response-and-obstruction input for target formalization, but no positive local geometry, adopted source law, physical causality, or downstream GR object.
+- Current route family: integration or selection (scientific).
+- Next recommended action: Run the one governed checkpoint for AJ-RT-20260726-001-001. Only after it commits may one fresh bounded P6-T01 Ontology Formalizer packet define the causal influence or characteristic target and test the exact conditional P5 response without inferring a physical cone or metric.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -282,7 +282,7 @@ preserves the raw ledger `current_status` field for continuity.
 
 | Burden ID | Milestone | Reader-facing status | Legacy status | Control status | Mathematical status | Physical status | Promotion status | Overread guard | Last evidence |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| `source_ontology_primitives` | `source_ontology` | draft source-ontology primitives only | accepted | accepted_as_source_extension_data | scoped_obstruction | no_physical_interpretation_authorized | scoped_source_object_only | no_source_law_adoption<br>no_canonical_ontology_edit<br>no_metricdata_e_adoption<br>no_matter_coupling_adoption<br>no_benchmark_promotion<br>no_completed_derivation<br>no_global_theory_rejection<br>no_future_source_extension_impossibility | `research_control/tasks/RT-20260725-014/artifacts/source_dynamics_package_audit_v1.tex` |
+| `source_ontology_primitives` | `source_ontology` | draft source-ontology primitives only | accepted | accepted_as_source_extension_data | scoped_obstruction | no_physical_interpretation_authorized | scoped_source_object_only | no_source_law_adoption<br>no_canonical_ontology_edit<br>no_metricdata_e_adoption<br>no_matter_coupling_adoption<br>no_benchmark_promotion<br>no_completed_derivation<br>no_global_theory_rejection<br>no_future_source_extension_impossibility | `research_control/tasks/RT-20260726-001/artifacts/source_dynamics_milestone_synthesis_v1.tex` |
 | `source_equivalence_eqsrc` | `source_equivalence_eqsrc` | draft source-equivalence object only | draft object exists | draft_control_object_exists | general_equivalence_theorem_missing | downstream_gr_blocked | draft_control_only | no_source_law_adoption<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/program_state.yaml` |
 | `retain_h` | `source_equivalence_eqsrc` | blocked by missing primitive | blocked by missing primitive | blocked | primitive_missing | no_retention_law_adoption | none | no_source_law_adoption<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/program_state.yaml` |
 | `gen_h` | `source_equivalence_eqsrc` | blocked by missing primitive | blocked by missing primitive | blocked | primitive_missing | no_generator_law_adoption | none | no_source_law_adoption<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/program_state.yaml` |
@@ -302,7 +302,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run the one governed checkpoint for AJ-RT-20260725-014-001. Only after it commits may one fresh bounded P5-T08 Ontology Formalizer packet integrate the surviving source-dynamics mathematics, scoped obstruction, local freeze, and milestone decision without repairing or reopening the frozen route.
+Run the one governed checkpoint for AJ-RT-20260726-001-001. Only after it commits may one fresh bounded P6-T01 Ontology Formalizer packet define the causal influence or characteristic target and test the exact conditional P5 response without inferring a physical cone or metric.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -327,11 +327,11 @@ Validation layers:
 
 | Validation layer | Status | Meaning | Evidence |
 | --- | --- | --- | --- |
-| `pre_execution` | PASS | receipt complete | Generation 119 validated and atomically claimed the exact immutable P5-T07 route before consuming its one worker invocation.<br>The generation-118 checkpoint commit and clean repository dependency boundary were verified before execution.<br>Memory preflight and canonical P5 source inspection passed. |
-| `completion_internal` | PASS | receipt complete | Both child perspectives completed and the parent synthesis resolved every recorded scope tension.<br>The task-local validator passes 40 checks and the audit TeX compiles in scratch. |
-| `post_write` | PASS | receipt complete | Renderer, memory, documentation, signal, claim-language, research-control, selected-test, and whitespace gates are required before checkpoint. |
-| `post_checkpoint` | PENDING | open item; evidence must explain why | One governed checkpoint remains to be invoked in generation 119. |
-| `renderer` | PASS | receipt complete | Current frontier, compact frontier, task index, dependency graph, claim graph, and burden-status derivatives are fresh. |
+| `pre_execution` | PASS | receipt complete | Generation 120 validated and atomically claimed the exact immutable P5-T08 route before consuming its one worker invocation.<br>The generation-119 checkpoint commit and clean repository dependency boundary were verified before execution.<br>Memory preflight and canonical P5 and ontology source inspection passed. |
+| `completion_internal` | PASS | receipt complete | The task-local validator passes 47 checks and the synthesis TeX compiles in scratch.<br>The completion separates conditional P6 formalization input from absent positive local geometry. |
+| `post_write` | PASS | receipt complete | Renderer memory documentation signal claim-language research-control selected-test and whitespace gates are required before checkpoint. |
+| `post_checkpoint` | PENDING | open item; evidence must explain why | One governed checkpoint remains to be invoked in generation 120. |
+| `renderer` | PASS | receipt complete | Current frontier compact frontier task index dependency graph claim graph and burden-status derivatives are fresh. |
 | `memory_bootstrap` | PASS | receipt complete | Tracked memory bootstrap and validate-only are required after source registration. |
 | `claim_language_linter` | PASS | receipt complete | Changed-source claim-language validation is required before checkpoint. |
 
@@ -347,9 +347,9 @@ Authorization layers:
 
 Legacy compatibility records:
 
-- active task: `RT-20260725-014`;
-- latest handoff: `handoff-0874`;
-- current status: `p5_t07_precise_scoped_obstruction_and_local_geometry_route_freeze_ready_for_checkpoint`;
+- active task: `RT-20260726-001`;
+- latest handoff: `handoff-0875`;
+- current status: `p5_t08_theorem_level_synthesis_precise_source_ontology_obstruction_and_conditional_p6_input_ready_for_checkpoint`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -359,8 +359,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0874.yaml`
-- `research_control/tasks/RT-20260725-014/00_TASK.yaml`
+- `research_control/handoffs/handoff-0875.yaml`
+- `research_control/tasks/RT-20260726-001/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -376,7 +376,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0874*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0875*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

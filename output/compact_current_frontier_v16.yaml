@@ -1,7 +1,7 @@
 schema_id: "compact_current_frontier_v16"
 generated_from:
   - "research_control/program_state.yaml"
-  - "research_control/handoffs/handoff-0874.yaml"
+  - "research_control/handoffs/handoff-0875.yaml"
   - "registries/DISTANCE_TO_GR_LEDGER.csv"
   - "registries/METRIC_USE_LEDGER.csv"
   - "research_control/current_frontier.md"
@@ -9,16 +9,16 @@ generated_from:
   - "research_control/design/accepted_status_calibration_v2.yaml"
   - "research_control/design/active_state_bifurcation_policy_v1.md"
 active_state:
-  active_task_id: "RT-20260725-014"
-  latest_handoff_id: "handoff-0874"
-  current_status: "p5_t07_precise_scoped_obstruction_and_local_geometry_route_freeze_ready_for_checkpoint"
+  active_task_id: "RT-20260726-001"
+  latest_handoff_id: "handoff-0875"
+  current_status: "p5_t08_theorem_level_synthesis_precise_source_ontology_obstruction_and_conditional_p6_input_ready_for_checkpoint"
   v15_completed: false
   v16_completed: false
   v16_plan_registered: true
 active_state_bifurcation:
-  latest_research_task_id: "RT-20260725-014"
-  latest_research_handoff_id: "handoff-0874"
-  latest_research_next_action: "Run the one governed checkpoint for AJ-RT-20260725-014-001. Only after it commits may one fresh bounded P5-T08 Ontology Formalizer packet integrate the surviving source-dynamics mathematics, scoped obstruction, local freeze, and milestone decision without repairing or reopening the frozen route."
+  latest_research_task_id: "RT-20260726-001"
+  latest_research_handoff_id: "handoff-0875"
+  latest_research_next_action: "Run the one governed checkpoint for AJ-RT-20260726-001-001. Only after it commits may one fresh bounded P6-T01 Ontology Formalizer packet define the causal influence or characteristic target and test the exact conditional P5 response without inferring a physical cone or metric."
   latest_project_system_task_id: "none"
   latest_project_system_status: "none"
   latest_project_system_sidecar_task_id: "none"
@@ -26,10 +26,10 @@ active_state_bifurcation:
   sidecar_supersedes_research_handoff: false
   next_research_route_source: "latest_research_handoff"
 next_route:
-  route_id: "v21_p5_t08_integrate_source_dynamics_manuscript_and_milestone_decision"
+  route_id: "v21_p6_t01_formalize_source_derived_causal_characteristic_target"
   role_family: "ontology-formalizer@0.2.0"
-  target_derivation_milestone: "source_ontology"
-  milestone_burden: "Close the source-dynamics phase with a durable theorem-level synthesis."
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Define the first physical effective-geometry burden without importing a metric."
   requires_human_gate: false
 claim_boundary:
   physics_claim_authority: false
@@ -274,7 +274,7 @@ blocked_physical_targets:
       - "no_completed_derivation"
 distance_to_gr:
   delta:
-    effect: "precise_source_ontology_obstruction_and_local_route_freeze"
+    effect: "theorem_level_source_ontology_synthesis_and_conditional_p6_formalization_input"
     changed: true
     milestone: "source_ontology"
     burden_id: "source_ontology_primitives"
@@ -525,6 +525,6 @@ validation:
     - layer: "post_checkpoint"
       status: "PENDING"
       evidence:
-        - "One governed checkpoint remains to be invoked in generation 119."
+        - "One governed checkpoint remains to be invoked in generation 120."
 authority_warning:
   snapshot_only_not_authority: true

@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-07-26T05:25:02Z`
-- Source fingerprint: `c0e5bbabbf9f0e30b1f792a6925f02068bd057cbbea54d268eed5cac7f61a8e4`
-- Nodes: `22237`
-- Edges: `73072`
+- Generated from tracked state as of: `2026-07-26T07:41:26Z`
+- Source fingerprint: `0983b89628ddbbfe01f6d267f8f9c6c3327976fb6fa47a450edcdee7ca55793e`
+- Nodes: `22276`
+- Edges: `73125`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 1110 |
+| `completion_yaml` | 1111 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 874 |
+| `handoff_yaml` | 875 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,32 +33,32 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 8 |
-| `agent_job` | `support_only` | 1110 |
+| `agent_job` | `support_only` | 1111 |
 | `artifact` | `canonical_source` | 86 |
-| `artifact` | `support_only` | 11282 |
-| `blocked_burden` | `blocked` | 4512 |
-| `claim_boundary` | `support_only` | 1067 |
-| `draft_control_candidate` | `draft_control` | 742 |
-| `draft_control_candidate` | `proposal_only` | 117 |
-| `draft_control_candidate` | `science_draft` | 65 |
+| `artifact` | `support_only` | 11302 |
+| `blocked_burden` | `blocked` | 4520 |
+| `claim_boundary` | `support_only` | 1068 |
+| `draft_control_candidate` | `draft_control` | 744 |
+| `draft_control_candidate` | `proposal_only` | 118 |
+| `draft_control_candidate` | `science_draft` | 66 |
 | `frozen_negative` | `frozen_negative` | 137 |
 | `gate_chair_verdict` | `human_gated` | 32 |
-| `handoff` | `support_only` | 874 |
-| `human_gated_object` | `human_gated` | 528 |
+| `handoff` | `support_only` | 875 |
+| `human_gated_object` | `human_gated` | 529 |
 | `ledger_row` | `accepted_scoped` | 6 |
 | `ledger_row` | `blocked` | 4 |
 | `ledger_row` | `frozen_negative` | 1 |
 | `ledger_row` | `human_gated` | 1 |
 | `ledger_row` | `science_draft` | 3 |
-| `obstruction` | `blocked` | 83 |
+| `obstruction` | `blocked` | 84 |
 | `obstruction` | `rejected` | 4 |
 | `source_extension_evidence_precondition` | `source_extension_evidence` | 38 |
 | `source_ontology_object` | `canonical_source` | 27 |
 | `source_ontology_object` | `rejected` | 50 |
-| `source_ontology_object` | `support_only` | 350 |
+| `source_ontology_object` | `support_only` | 351 |
 | `task` | `human_gated` | 29 |
 | `task` | `science_draft` | 32 |
-| `task` | `support_only` | 1049 |
+| `task` | `support_only` | 1050 |
 
 ## Frontier Table
 
@@ -163,9 +163,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 ## Route Continuity
 
-- Active task: `RT-20260725-014`
-- Latest handoff: `handoff-0874`
-- Handoff path: `research_control/handoffs/handoff-0874.yaml`
-- Next action: Run the one governed checkpoint for AJ-RT-20260725-014-001. Only after it commits may one fresh bounded P5-T08 Ontology Formalizer packet integrate the surviving source-dynamics mathematics, scoped obstruction, local freeze, and milestone decision without repairing or reopening the frozen route.
+- Active task: `RT-20260726-001`
+- Latest handoff: `handoff-0875`
+- Handoff path: `research_control/handoffs/handoff-0875.yaml`
+- Next action: Run the one governed checkpoint for AJ-RT-20260726-001-001. Only after it commits may one fresh bounded P6-T01 Ontology Formalizer packet define the causal influence or characteristic target and test the exact conditional P5 response without inferring a physical cone or metric.
 
 This graph is navigational support only; inspect the cited sources before using any claim.

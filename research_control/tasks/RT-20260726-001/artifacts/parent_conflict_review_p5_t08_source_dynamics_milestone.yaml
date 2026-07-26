@@ -1,0 +1,31 @@
+schema_id: "parent_child_conflict_review_v1"
+conflict_review_id: "PCR-RT-20260726-001-001"
+task_id: "RT-20260726-001"
+job_id: "AJ-RT-20260726-001-001"
+parent_execution_unit_id: "parent"
+mode: "parent_child_parallel_synthesis"
+decomposition_version: "0.1.0"
+status: "resolved"
+reviewed_outputs:
+  - "research_control/tasks/RT-20260726-001/artifacts/child_phys_math_p5_t08_source_dynamics_milestone.yaml"
+  - "research_control/tasks/RT-20260726-001/artifacts/child_phys_phil_p5_t08_source_dynamics_milestone.yaml"
+resolved_conflicts:
+  - conflict_id: "CONFLICT-001"
+    type: "claim_boundary"
+    severity: "nonblocking"
+    summary: "The mathematically exact tangent response could be read as a physical response law."
+    resolution: "State exactness only under the displayed proposal-only cubic assumptions and explicitly block physical time, locality, causality, and geometry overreads."
+  - conflict_id: "CONFLICT-002"
+    type: "ontological"
+    severity: "nonblocking"
+    summary: "Closing P5-T08 could be read as closing or adopting source ontology."
+    resolution: "Use completed_with_precise_scoped_obstruction for the planned work item and retain blocked_adoption_open_continuation for ontology status."
+  - conflict_id: "CONFLICT-003"
+    type: "next_route"
+    severity: "nonblocking"
+    summary: "A P6 handoff could be read as positive geometry readiness."
+    resolution: "Route only target formalization and insufficiency testing against a conditional response-and-obstruction input; positive geometry remains unavailable."
+resolution_rounds: 1
+unresolved_conflicts: []
+claim_boundary_preserved: true
+physics_promotion_authorized: false

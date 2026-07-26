@@ -13,9 +13,9 @@ state, or latest handoff, those sources govern and this file is stale.
 | Field | Value |
 | --- | --- |
 | Schema | `v21_current_burden_status_v1` |
-| Source commit at generation | `043a66fa5915300c61a2f5e45c23978e6164ff05` |
-| Status generation time | `2026-07-26T05:25:02Z` |
-| Tracked task count | 1110 |
+| Source commit at generation | `8eea5c89dca5ed11f90ffafddf94319e23ed2b4e` |
+| Status generation time | `2026-07-26T07:41:26Z` |
+| Tracked task count | 1111 |
 | Stable definition count | 10 |
 | Distance-to-GR burden count | 14 |
 | Historical authored-map commit | `2c5fb02fd8fff9b449ab10a328d7c881b13ef546` |
@@ -23,21 +23,21 @@ state, or latest handoff, those sources govern and this file is stale.
 
 ### Exact source hashes
 
-- `registries/DISTANCE_TO_GR_LEDGER.csv`: `35d0c0928bdbc0ec17bc9552e153f8c964efa13ccea5c97d9ac523470f3b05d3`
-- `registries/RESEARCH_TASK_REGISTRY.csv`: `6ef4b783d0e8562533d0f3c02d2e6bb86cea168bc1979500e44c4dfa9b751000`
+- `registries/DISTANCE_TO_GR_LEDGER.csv`: `ceb3cb161b0efb74772998f8426df244a45010741e761c35b331a07a869dd1ee`
+- `registries/RESEARCH_TASK_REGISTRY.csv`: `6d9d211e2a620c3cc9f0d83f70858c47a7a4b68f68def421712e1a88273ee705`
 - `research_control/design/gr_derivation_burden_map.md`: `8e9d44e3a18ecc8a2430a9c42497da3eb9911c2cf6cd714c1525c5d91551835e`
-- `research_control/handoffs/handoff-0874.yaml`: `1e4bf08da3dacf22c686042cdb06f130618b055a8065d16cbbfaf795d9a8ef66`
-- `research_control/program_state.yaml`: `599516131f99f2dafe2f410cbf1fced5a2c131e7f5c00c28c778699117dab871`
+- `research_control/handoffs/handoff-0875.yaml`: `fd9cbbc8c28d44179a33c1ac63631d47bb9843cfeb113e8294d33d712dbe2a70`
+- `research_control/program_state.yaml`: `24546f8b2b38ceed7c6505a1153d5a03745567a51e94df68926c45b429f9b4ea`
 - `research_control/tasks/RT-20260721-009/artifacts/v21_burden_definitions_v1.yaml`: `67b8053baa60db4b11ee20582633d6279523d40b2ee853a6c570e2fdc1d113f5`
 
 ## Live control state
 
 | Field | Value |
 | --- | --- |
-| Active task | `RT-20260725-014` |
-| Latest handoff | `handoff-0874` |
-| Current status | `p5_t07_precise_scoped_obstruction_and_local_geometry_route_freeze_ready_for_checkpoint` |
-| Next recommended action | Run the one governed checkpoint for AJ-RT-20260725-014-001. Only after it commits may one fresh bounded P5-T08 Ontology Formalizer packet integrate the surviving source-dynamics mathematics, scoped obstruction, local freeze, and milestone decision without repairing or reopening the frozen route. |
+| Active task | `RT-20260726-001` |
+| Latest handoff | `handoff-0875` |
+| Current status | `p5_t08_theorem_level_synthesis_precise_source_ontology_obstruction_and_conditional_p6_input_ready_for_checkpoint` |
+| Next recommended action | Run the one governed checkpoint for AJ-RT-20260726-001-001. Only after it commits may one fresh bounded P6-T01 Ontology Formalizer packet define the causal influence or characteristic target and test the exact conditional P5 response without inferring a physical cone or metric. |
 
 ## Authored stable definitions with generated current values
 
@@ -52,14 +52,14 @@ state, or latest handoff, those sources govern and this file is stale.
 
 | Burden ID | Required object | Current status | Control status | Mathematical status | Physical status | Promotion status | Updated at |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| `source_ontology_primitives` | selected primitive source arena compact draft/control theory target proposal-only Phi_src semantics one cubic amplitude dynamics candidate its structural and background-mode analysis one global-amplitude coarse-graining and one exact P5-T07 provenance audit with odd-power counterfamily relabeling obstruction and local geometry-route freeze | `accepted` | `accepted_as_source_extension_data` | `scoped_obstruction` | `no_physical_interpretation_authorized` | `scoped_source_object_only` | `2026-07-26T05:25:02Z` |
+| `source_ontology_primitives` | selected primitive source arena compact draft/control theory target proposal-only Phi_src semantics one cubic amplitude dynamics candidate its structural background and coarse-graining analysis one exact provenance audit and one P5-T08 theorem-level synthesis with conditional tangent response factor-through-amplitude rank obstruction and typed P6 formalization input | `accepted` | `accepted_as_source_extension_data` | `scoped_obstruction` | `no_physical_interpretation_authorized` | `scoped_source_object_only` | `2026-07-26T07:41:26Z` |
 
 #### `source_ontology_primitives` generated detail
 
 - Current blocking burden: generic source locality composition constraints conservation gauge probability independent local modes viable reconstruction phase local source data gluing characteristic operator source-invariant causal structure source-derived law and normalization selection and source-to-target reconstruction
-- Current next evidence or action: canonical source-only boundary with explicit primitive debt no target import candidate-specific obstruction scope exact counterfamily reproducible stress explicit approximation and information loss local-freeze scope and no physical overread
-- Current failure/freeze criterion: P5-T08 integration is allowed but reopening the exact unchanged Q_amp geometry-support route requires a new source primitive theorem variation class or protected decision
-- Current evidence: `research_control/tasks/RT-20260725-014/artifacts/source_dynamics_package_audit_v1.tex`
+- Current next evidence or action: canonical source-only boundary with explicit primitive debt no target import candidate-specific obstruction scope exact response theorem exact rank theorem reproducible validation explicit conditional-versus-positive-input split local-freeze scope and no physical overread
+- Current failure/freeze criterion: P6-T01 target formalization is allowed after checkpoint but positive geometry reconstruction and reopening the exact unchanged Q_amp route require new source data theorem variation class or protected decision
+- Current evidence: `research_control/tasks/RT-20260726-001/artifacts/source_dynamics_milestone_synthesis_v1.tex`
 - Exact overread guard: `no_source_law_adoption;no_canonical_ontology_edit;no_metricdata_e_adoption;no_matter_coupling_adoption;no_benchmark_promotion;no_completed_derivation;no_global_theory_rejection;no_future_source_extension_impossibility`
 
 ### `source_equivalence_eqsrc`

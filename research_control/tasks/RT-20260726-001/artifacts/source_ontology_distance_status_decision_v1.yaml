@@ -1,0 +1,62 @@
+schema_id: "v21_p5_t08_source_ontology_distance_status_decision_v1"
+decision_id: "P5T08-SOURCE-ONTOLOGY-STATUS-001"
+task_id: "RT-20260726-001"
+plan_task_id: "P5-T08"
+target_derivation_milestone: "source_ontology"
+milestone_burden: "Close the source-dynamics phase with a durable theorem-level synthesis."
+work_item_status: "completed"
+milestone_result: "completed_with_precise_scoped_obstruction"
+adoption_status: "blocked_adoption_open_continuation"
+current_ontology_implication: "does_not_derive"
+exact_missing_source_objects:
+  - "source-derived unique evolution-law selector"
+  - "source-invariant amplitude and monoid-parameter normalization"
+  - "independent local source degrees of freedom"
+  - "restriction and gluing laws"
+  - "source-derived characteristic operator"
+  - "source-invariant scale robustness and response rules"
+positive_local_geometry_input_available: false
+conditional_p6_formalization_input_available: true
+conditional_input_id: "P5T08-CONDITIONAL-P6-RESPONSE-INPUT-V1"
+conditional_input_path: "research_control/tasks/RT-20260726-001/artifacts/p6_geometry_input_contract_v1.yaml"
+precise_obstructions:
+  - "OBST-P5T05-QAMP-NO-RECONSTRUCTION-PHASE-001"
+  - "OBST-P5T06-QAMP-LOCAL-FIELD-RANK-001"
+  - "OBST-P5T07-QAMP-INTRINSIC-LAW-SCALE-ROBUSTNESS-001"
+  - "OBST-P5T08-FACTOR-THROUGH-AMPLITUDE-RANK-001"
+local_freeze:
+  active: true
+  scope: "exact unchanged P5-T01 through P5-T07 one-mode amplitude route as positive local geometry support"
+  reopening_requires:
+    - "new source primitive"
+    - "new theorem"
+    - "new variation class"
+    - "protected decision"
+  future_conservative_source_extensions_open: true
+distance_to_gr_delta:
+  changed: true
+  burden_id: "source_ontology_primitives"
+  milestone: "source_ontology"
+  old_status: "P5-T07 precise provenance obstruction and local route freeze"
+  new_status: "P5-T08 theorem-level synthesis with exact conditional P6 response input and preserved positive-geometry block"
+  ledger_row_updated: true
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  downstream_unlocked:
+    - "P6-T01 target formalization against the exact conditional response-and-obstruction input after checkpoint"
+  downstream_still_blocked:
+    - "positive source-derived local characteristic structure"
+    - "canonical source-law adoption"
+    - "physical source manifold M_src"
+    - "effective metric g_eff"
+    - "matter coupling"
+    - "Einstein equations"
+    - "benchmark promotion"
+authority:
+  canonical_ontology_modified: false
+  source_law_adopted: false
+  source_law_rejected: false
+  physical_status_changed: false
+  positive_geometry_reconstructed: false
+  global_no_go_claimed: false
+  physics_promotion_authorized: false
+  proof_authority: false
