@@ -95,6 +95,33 @@ class ResearchControlTests(unittest.TestCase):
         report = self.validator.validate_all()
         self.assertEqual(report.errors, [])
 
+    def test_validation_policy_preflights_preserve_historical_hashes(self) -> None:
+        object_ids = {
+            "MD-RESEARCH-CONTROL-DESIGN-CI-VALIDATION-SHARD-POLICY-V1",
+            "MD-RESEARCH-CONTROL-DESIGN-VALIDATION-PROFILE-POLICY-V1",
+        }
+        self.assertTrue(
+            object_ids.issubset(
+                self.validator.MUTABLE_MEMORY_PREFLIGHT_SOURCE_OBJECT_IDS
+            )
+        )
+        active_task_id = self.validator.active_program_task_id()
+        self.assertTrue(active_task_id)
+        for object_id in object_ids:
+            with self.subTest(object_id=object_id):
+                self.assertTrue(
+                    self.validator.memory_preflight_hash_must_be_current(
+                        {"task_id": active_task_id},
+                        object_id,
+                    )
+                )
+                self.assertFalse(
+                    self.validator.memory_preflight_hash_must_be_current(
+                        {"task_id": "RT-HISTORICAL"},
+                        object_id,
+                    )
+                )
+
     def test_physics_progress_metrics_report_reads_tracked_completions(self) -> None:
         snapshot = self.live_metrics_snapshot()
         report = snapshot.materialize_report()

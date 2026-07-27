@@ -249,6 +249,9 @@ def diagnose_burden_status() -> dict[str, Any]:
         "registries/RESEARCH_TASK_REGISTRY.csv",
         "research_control/program_state.yaml",
     ]
+    project_system_side_task_paths = [
+        "registries/RESEARCH_TASK_REGISTRY.csv",
+    ]
     same_task_finalization_paths = ["research_control/program_state.yaml"]
     if drift_paths == expected_fully_advanced_paths:
         if not stale_live_view:
@@ -262,6 +265,22 @@ def diagnose_burden_status() -> dict[str, Any]:
             or receipt["task_count"] >= registry_count
         ):
             raise AuditError("P10-T08 task-count freshness transition is not demonstrated")
+    elif drift_paths == project_system_side_task_paths:
+        if not stale_live_view:
+            raise AuditError(
+                "P10-T08 project-system side task unexpectedly reports a fresh live view"
+            )
+        if receipt.get("active_task_id") != active_task_id:
+            raise AuditError("P10-T08 project-system side task changed active task identity")
+        if receipt.get("latest_handoff_id") != latest_handoff_id:
+            raise AuditError("P10-T08 project-system side task changed handoff identity")
+        if (
+            not isinstance(receipt.get("task_count"), int)
+            or receipt["task_count"] >= registry_count
+        ):
+            raise AuditError(
+                "P10-T08 project-system side-task count transition is not demonstrated"
+            )
     elif drift_paths == same_task_finalization_paths:
         if not stale_live_view:
             raise AuditError(

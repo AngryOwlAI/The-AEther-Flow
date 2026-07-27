@@ -57,6 +57,30 @@ Profile selection never overrides a human gate. The checkpoint may generate
 registered derivatives before staging, but acceptance is evaluated against the
 actual staged transaction after generation.
 
+## Repository-test checkpoint cadence
+
+An ordinary checkpoint does not unconditionally run
+`test_shard_repository`. The checkpoint helper adds that explicit blocking
+obligation whenever the working transaction crosses a boundary of ten
+completed scientific AgentJobs after
+`AJ-RT-20260726-011-001`. The anchor is ordinal zero, so the first scheduled
+repository shard occurs after ten later scientific jobs.
+
+A research process for this cadence is one completed AgentJob whose registered
+`role_kind` begins with `scientific_`. Project-system, documentation, routing,
+and recovery AgentJobs do not advance the count. The helper compares the
+working `AGENT_JOB_REGISTRY.csv` sequence with the sequence already committed
+in `HEAD`. A recovery carrying an uncommitted tenth scientific job therefore
+retains the repository-test obligation, while later project-system work does
+not repeat it after that boundary is committed.
+
+This cadence does not suppress affected validation. Changes tagged as tests,
+test shards, traceability inputs, proof-normal-form checks, metric-use TeX, or
+scientific checkers still select the repository shard immediately. Explicit
+`full`, scheduled-full composition, and unknown-path fail-safe selection also
+remain unchanged. Missing anchor, role-kind, committed-registry, or sequence
+parity evidence fails safe by selecting the repository shard.
+
 ## Full and scheduled coverage
 
 `full` is unfiltered across all nontransactional blocking validation gates and

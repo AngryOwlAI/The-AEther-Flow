@@ -470,6 +470,26 @@ class ProjectChangeClassifierTests(unittest.TestCase):
         )
         self.assertNotIn("unknown_governed_path", result["reason_codes"])
 
+    def test_validation_adapter_bindings_are_exact_ci_orchestration(self) -> None:
+        path = "research_control/design/validation_adapter_bindings_v1.json"
+        result = self.classifier.classify_paths([path])
+
+        self.assertEqual(result["path_family_tags"], ["ci_orchestration"])
+        self.assertEqual(result["recommended_validation_profile"], "affected")
+        self.assertEqual(
+            result["path_family_details"][0]["reasons"],
+            ["path_rule:ci_orchestration"],
+        )
+        self.assertNotIn("unknown_governed_path", result["reason_codes"])
+
+        unrelated = self.classifier.classify_paths(
+            ["governed/future_adapter_bindings.json"]
+        )
+        self.assertEqual(
+            unrelated["path_family_tags"],
+            ["unknown_governed_path"],
+        )
+
     def test_unknown_governed_path_selects_full_without_silent_skip(self) -> None:
         result = self.classifier.classify_paths(["governed/new-format.bin"])
         self.assertEqual(result["recommended_validation_profile"], "full")

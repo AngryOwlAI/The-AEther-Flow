@@ -1,0 +1,83 @@
+validation_status: "PASS"
+task_id: "RT-20260727-001"
+task_type: "project_system_repository_test_cadence"
+title: "Run the repository test shard every ten scientific research jobs"
+task_taxonomy:
+  schema_id: "v21_task_taxonomy_v1"
+  work_kind: "construction_or_implementation"
+  milestone: "not_applicable"
+  candidate_family: "repository_test_cadence"
+  result_kind: "implemented_and_validated_or_precisely_blocked"
+  authority: "project_control"
+  scope: "project_system"
+status: "completed"
+created_at: "2026-07-27T04:46:54Z"
+updated_at: "2026-07-27T06:36:25Z"
+closed_at: "2026-07-27T06:36:25Z"
+parent_task_id: "RT-20260726-011"
+parent_handoff_id: "handoff-0885"
+supersedes_active_routing_task_id: ""
+current_decision_id: "DDR-20260727-001"
+current_job_id: "AJ-RT-20260727-001-001"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260727-001"
+requires_human_gate: false
+human_authorization_note: "The user explicitly requested changing the full repository test cadence from every research process to every ten research processes."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  plan_phase_id: "P5"
+  plan_task_id: "P5-T07"
+  recovery_for_plan_task_id: "P5-T07"
+  recommendation_ids:
+    - "V19-R33"
+    - "V19-R41"
+objective: "Replace the unconditional repository test prerequisite of every governed research checkpoint with one commit-aware cadence run per ten completed scientific AgentJobs while preserving affected full-suite selection and every per-checkpoint integrity gate."
+target_derivation_milestone: "not_applicable"
+milestone_burden: "Project-system validation scheduling only; no physics derivation burden or scientific status changes."
+route_label: "user_authorized_repository_test_cadence_v1"
+project_system_change_only: true
+dual_budget_category: "system_bearing"
+primary_budget: "project_system"
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+claim_boundary_id: "CB-PS-REPOSITORY-TEST-CADENCE-001"
+claim_boundary:
+  allowed_scope: "Implement and validate the ten-completed-scientific-AgentJob repository-test cadence in checkpoint planning and legacy fallback; preserve immediate path-selected full-suite runs and all ordinary checkpoint integrity gates."
+  cadence: 10
+  anchor_job_id: "AJ-RT-20260726-011-001"
+  research_process_definition: "one completed AgentJob whose registered role_kind begins with scientific_"
+  ordinary_research_handoff_id: "handoff-0885"
+  ordinary_research_handoff_authoritative: true
+  p6_t08_executed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+documentation_impact_id: "DI-RT-20260727-001-001"
+completion_id: "AJC-AJ-RT-20260727-001-001"
+output_artifacts:
+  - "scripts/research_control/checkpoint_research_transaction.py"
+  - "scripts/research_control/validate_research_control.py"
+  - "scripts/project_control/classify_project_changes.py"
+  - "scripts/validation/staged.py"
+  - "research_control/design/validation_gate_manifest_v1.yaml"
+  - "research_control/design/validation_adapter_bindings_v1.json"
+  - "research_control/design/validation_profile_policy_v1.md"
+  - "research_control/design/ci_validation_shard_policy_v1.md"
+  - "research_control/tasks/RT-20260722-003/artifacts/validate_v21_p10_migration_readiness.py"
+  - "tests/support/research_control_shards.py"
+  - "tests/test_checkpoint_validation_planner.py"
+  - "tests/test_project_change_classifier.py"
+  - "tests/test_validation_profiles.py"
+  - "tests/test_research_control.py"
+  - "tests/test_v21_p10_migration_readiness.py"
+  - "tests/fixtures/validation_plans/change_matrix_v1.json"
+closure_status: "implemented_and_validated_precheckpoint"
+summary: "The commit-aware ten-scientific-job repository-test cadence and its fail-safe compatibility surfaces pass focused, control, memory, documentation, and 1261-test repository validation; P6-T08 remains unexecuted."
+next_recommended_action: "Checkpoint this project-system transaction only with explicit commit authority, then release the separately paused generation-133 recovery relay."
+project_improvement_signals: []
+notes: "This task changes operational test scheduling only and creates no scientific ontology benchmark proof publication push or completed-derivation authority."

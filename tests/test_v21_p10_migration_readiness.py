@@ -123,6 +123,52 @@ class P10MigrationReadinessTests(unittest.TestCase):
             ],
         )
 
+    def test_project_system_side_task_preserves_the_historical_audit(self) -> None:
+        registry_count = sum(
+            1
+            for line in (
+                REPO_ROOT / "registries/RESEARCH_TASK_REGISTRY.csv"
+            ).read_text(encoding="utf-8").splitlines()[1:]
+            if line.strip()
+        )
+        receipt = {
+            "source_hashes": {
+                "registries/RESEARCH_TASK_REGISTRY.csv": "registry-before-side-task",
+                "research_control/program_state.yaml": "program-unchanged",
+            },
+            "active_task_id": "RT-ORDINARY-RESEARCH",
+            "latest_handoff_id": "handoff-ordinary-research",
+            "task_count": registry_count - 1,
+        }
+        live_hashes = {
+            "registries/RESEARCH_TASK_REGISTRY.csv": "registry-after-side-task",
+            "research_control/program_state.yaml": "program-unchanged",
+        }
+        with (
+            patch.object(
+                self.module,
+                "run_json_command",
+                return_value=(
+                    1,
+                    {"status": "FAIL", "error": "generated Markdown is stale"},
+                ),
+            ),
+            patch.object(self.module, "load_json", return_value=receipt),
+            patch.object(
+                self.module,
+                "program_identity",
+                return_value=("RT-ORDINARY-RESEARCH", "handoff-ordinary-research"),
+            ),
+            patch.object(
+                self.module,
+                "sha256_path",
+                side_effect=lambda relative: live_hashes[relative],
+            ),
+        ):
+            component = self.module.diagnose_burden_status()
+
+        self.assertEqual(component["finding_id"], "P10-AUDIT-F002")
+
     def test_converged_live_view_preserves_the_historical_audit(self) -> None:
         registry_count = sum(
             1

@@ -169,11 +169,20 @@ class CheckpointPlannerIntegrationTests(unittest.TestCase):
         self.assertNotIn("continue_memory_preflight", plan.generator_gate_ids)
         self.assertIn("continue_memory_preflight", plan.local_only_gate_ids)
         self.assertIn("checkpoint_transaction", plan.orchestrator_gate_ids)
+        self.assertNotIn("test_shard_repository", plan.selected_gate_ids)
 
         pdf_plan = self.checkpoint.plan_checkpoint_validation(
             ["legacy_ontology/tex/aether_flow_consistency.tex"]
         )
         self.assertIn("targeted_pdf_build", pdf_plan.generator_gate_ids)
+
+    def test_planner_selects_repository_shard_for_cadence_obligation(self) -> None:
+        plan = self.checkpoint.plan_checkpoint_validation(
+            ["research_control/tasks/RT-TEST/00_TASK.yaml"],
+            role_obligations=("test_shard_repository",),
+        )
+
+        self.assertIn("test_shard_repository", plan.selected_gate_ids)
 
     def test_validation_manifest_schema_transaction_has_safe_shadow_plan(self) -> None:
         manifest_path = "research_control/design/validation_gate_manifest_v1.yaml"
@@ -262,7 +271,11 @@ class CheckpointPlannerIntegrationTests(unittest.TestCase):
         )
 
     def run_shadow(
-        self, repo: TemporaryGitRepository, paths: list[str]
+        self,
+        repo: TemporaryGitRepository,
+        paths: list[str],
+        *,
+        role_obligations: tuple[str, ...] = (),
     ) -> tuple[dict[str, object], dict[str, object], list[object]]:
         commands: list[object] = []
 
@@ -283,8 +296,139 @@ class CheckpointPlannerIntegrationTests(unittest.TestCase):
                 agent_job_id="AJ-TEST",
                 command_results=commands,
                 classifier=classification,
+                role_obligations=role_obligations,
             )
         return receipt, integration, commands
+
+    def test_staged_acceptance_executes_repository_shard_when_cadence_is_due(
+        self,
+    ) -> None:
+        repo = self.repo()
+        repo.commit_files({"sample.py": "before\n"})
+        repo.write("sample.py", "after\n")
+
+        receipt, integration, commands = self.run_shadow(
+            repo,
+            ["sample.py"],
+            role_obligations=("test_shard_repository",),
+        )
+
+        self.assertEqual(receipt["status"], "PASS")
+        self.assertIn(
+            "test_shard_repository",
+            integration["required_gate_ids"],
+        )
+        self.assertIn(
+            [".venv/bin/python", "-m", "unittest", "discover", "-s", "tests"],
+            [result.command for result in commands],
+        )
+
+    def test_repository_test_cadence_counts_only_new_completed_scientific_jobs(
+        self,
+    ) -> None:
+        roles = [
+            {
+                "role_id": "scientist",
+                "version": "1",
+                "role_kind": "scientific_test",
+            },
+            {
+                "role_id": "validator",
+                "version": "1",
+                "role_kind": "project_system_validation",
+            },
+        ]
+
+        def scientific(job_id: str, ordinal: int) -> dict[str, str]:
+            return {
+                "job_id": job_id,
+                "role_id": "scientist",
+                "role_version": "1",
+                "status": "completed",
+                "completed_at": f"2026-07-27T05:{ordinal:02d}:00Z",
+            }
+
+        anchor = scientific(
+            self.checkpoint.REPOSITORY_TEST_CADENCE_ANCHOR_JOB_ID,
+            0,
+        )
+        first_nine = [
+            scientific(f"AJ-SCIENCE-{ordinal:02d}", ordinal)
+            for ordinal in range(1, 10)
+        ]
+        tenth = scientific("AJ-SCIENCE-10", 10)
+
+        before_boundary = self.checkpoint.repository_test_cadence_decision(
+            first_nine[-1],
+            job_rows=[anchor, *first_nine],
+            committed_job_rows=[anchor, *first_nine[:-1]],
+            role_rows=roles,
+        )
+        at_boundary = self.checkpoint.repository_test_cadence_decision(
+            tenth,
+            job_rows=[anchor, *first_nine, tenth],
+            committed_job_rows=[anchor, *first_nine],
+            role_rows=roles,
+        )
+
+        self.assertFalse(before_boundary["required"])
+        self.assertEqual(
+            before_boundary["working_completed_scientific_jobs_since_anchor"],
+            9,
+        )
+        self.assertTrue(at_boundary["required"])
+        self.assertEqual(at_boundary["due_boundary_ordinal"], 10)
+
+        recovery = {
+            "job_id": "AJ-RECOVERY",
+            "role_id": "validator",
+            "role_version": "1",
+            "status": "completed",
+            "completed_at": "2026-07-27T05:11:00Z",
+        }
+        recovery_before_commit = self.checkpoint.repository_test_cadence_decision(
+            recovery,
+            job_rows=[anchor, *first_nine, tenth, recovery],
+            committed_job_rows=[anchor, *first_nine],
+            role_rows=roles,
+        )
+        recovery_after_commit = self.checkpoint.repository_test_cadence_decision(
+            recovery,
+            job_rows=[anchor, *first_nine, tenth, recovery],
+            committed_job_rows=[anchor, *first_nine, tenth],
+            role_rows=roles,
+        )
+
+        self.assertTrue(recovery_before_commit["required"])
+        self.assertFalse(recovery_after_commit["required"])
+        self.assertEqual(
+            recovery_after_commit["reason"],
+            "project_system_job_does_not_advance_cadence",
+        )
+
+    def test_repository_test_cadence_fails_safe_without_anchor(self) -> None:
+        job = {
+            "job_id": "AJ-SCIENCE-01",
+            "role_id": "scientist",
+            "role_version": "1",
+            "status": "completed",
+            "completed_at": "2026-07-27T05:01:00Z",
+        }
+        decision = self.checkpoint.repository_test_cadence_decision(
+            job,
+            job_rows=[job],
+            committed_job_rows=[],
+            role_rows=[
+                {
+                    "role_id": "scientist",
+                    "version": "1",
+                    "role_kind": "scientific_test",
+                }
+            ],
+        )
+
+        self.assertTrue(decision["required"])
+        self.assertEqual(decision["reason"], "cadence_state_invalid_fail_safe")
 
     def test_three_representative_transactions_match_legacy_on_exact_index(self) -> None:
         for scenario in ("add", "modify", "delete"):

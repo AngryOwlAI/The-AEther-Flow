@@ -424,6 +424,7 @@ def run_staged_acceptance(
     working_plan: ValidationPlan | Mapping[str, object] | None = None,
     base_ref: str = "HEAD",
     agent_job_id: str = "",
+    role_obligations: Iterable[str] = (),
 ) -> dict[str, object]:
     """Run one rollback-safe shadow acceptance against an exact staged tree."""
 
@@ -524,6 +525,7 @@ def run_staged_acceptance(
             classification,
             requested_profile="checkpoint",
             scopes=("staged",),
+            role_obligations=role_obligations,
             shadow=True,
         )
         plan = resolution.plan

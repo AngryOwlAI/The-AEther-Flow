@@ -1,0 +1,286 @@
+validation_status: "PASS"
+final_repository_validation_status: "PASS_PRECHECKPOINT"
+job_id: "AJ-RT-20260727-001-001"
+completion_id: "AJC-AJ-RT-20260727-001-001"
+task_id: "RT-20260727-001"
+task_type: "project_system_repository_test_cadence"
+decision_id: "DDR-20260727-001"
+role_id: "validator-engineer"
+source_role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260727-001"
+status: "completed"
+created_at: "2026-07-27T04:46:54Z"
+started_at: "2026-07-27T04:46:54Z"
+completed_at: "2026-07-27T06:36:25Z"
+objective: "Implement and validate a commit-aware ten-completed-scientific-AgentJob repository-test cadence while preserving immediate affected full-suite selection and every other checkpoint gate."
+completion_summary: "The checkpoint planner now schedules the full repository unittest shard once per ten completed scientific AgentJobs, beginning after AJ-RT-20260726-011-001, while retaining immediate path-selected, explicit, scheduled, and fail-safe full-suite execution. Focused validation and the 1261-test repository suite pass. The ordinary P6-T08 research handoff remains authoritative and unexecuted."
+objective_result: "repository_test_cadence_implemented_and_validated_precheckpoint"
+
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  plan_phase_id: "P5"
+  plan_task_id: "P5-T07"
+  implementation_status: "ten_scientific_job_repository_test_cadence_implemented"
+  current_ordinary_route_plan_task_id: "P6-T08"
+  current_ordinary_route_executed: false
+
+transaction_status: "completed_ready_for_governed_checkpoint"
+result_disposition: "implemented_and_validated"
+work_item_status: "completed"
+plan_task_id: "P6-T08"
+recovery_for_plan_task_id: ""
+checkpoint_commit: "none_checkpoint_pending"
+checkpoint_invocation_count: 0
+checkpoint_staged: false
+project_system_change_only: true
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS_PRECHECKPOINT"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  observed_durable_outputs:
+    physics: []
+    project_system:
+      - "commit-aware ten-scientific-job cadence"
+      - "manifest and adapter-binding parity"
+      - "focused boundary recovery and fail-safe regressions"
+      - "updated validation policy documentation"
+  accepted_criteria:
+    physics: []
+    project_system:
+      - "ordinary research checkpoint excludes the repository shard"
+      - "the tenth new completed scientific job selects the repository shard"
+      - "a recovery carrying an uncommitted tenth job retains the obligation"
+      - "post-commit project-system work does not repeat the run"
+      - "affected full scheduled and unknown-path selection remain intact"
+      - "focused repository control memory documentation and whitespace gates pass"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+physics_payload_admission_result:
+  status: "admitted"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+
+ordinary_route_guard_admission_result:
+  status: "PASS"
+  source_handoff_id: "handoff-0885"
+  selected_plan_task_id: "P6-T08"
+  guard_outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  system_success_counts_as_physics: false
+  system_success_counts_as_distance_to_gr: false
+  scientific_status_changed: false
+  physics_promotion_authorized: false
+
+output_paths:
+  - "scripts/research_control/checkpoint_research_transaction.py"
+  - "scripts/research_control/validate_research_control.py"
+  - "scripts/project_control/classify_project_changes.py"
+  - "scripts/validation/staged.py"
+  - "research_control/design/validation_gate_manifest_v1.yaml"
+  - "research_control/design/validation_adapter_bindings_v1.json"
+  - "research_control/design/validation_profile_policy_v1.md"
+  - "research_control/design/ci_validation_shard_policy_v1.md"
+  - "research_control/tasks/RT-20260722-003/artifacts/validate_v21_p10_migration_readiness.py"
+  - "tests/support/research_control_shards.py"
+  - "tests/test_checkpoint_validation_planner.py"
+  - "tests/test_project_change_classifier.py"
+  - "tests/test_validation_profiles.py"
+  - "tests/test_research_control.py"
+  - "tests/test_v21_p10_migration_readiness.py"
+  - "tests/fixtures/validation_plans/change_matrix_v1.json"
+  - "research_control/tasks/RT-20260727-001/**"
+
+command_results:
+  - command: ".venv/bin/python -m unittest -v tests.test_checkpoint_validation_planner tests.test_validation_profiles tests.test_validation_change_matrix tests.test_validation_executor.ValidationExecutorTests.test_default_bindings_cover_the_canonical_current_full_plan tests.test_research_control.ResearchControlTests.test_validation_policy_preflights_preserve_historical_hashes"
+    status: "PASS"
+    summary: "47 focused cadence, planner, profile, golden-plan, binding, and historical-preflight tests pass"
+  - command: ".venv/bin/python -m unittest -v tests.test_project_change_classifier"
+    status: "PASS"
+    summary: "65 classifier tests pass, including exact adapter-binding classification"
+  - command: ".venv/bin/python -m unittest -v tests.test_v21_p10_migration_readiness"
+    status: "PASS"
+    summary: "12 migration-readiness tests pass, including registry-only project-system side-task handling"
+  - command: ".venv/bin/python -m unittest discover -s tests"
+    status: "PASS"
+    summary: "1261 tests pass with one expected skip"
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+    status: "PASS"
+    summary: "registered policy sources and generated memory derivatives synchronize"
+  - command: ".venv/bin/python scripts/project_control/validate_documentation_impact.py"
+    status: "PASS"
+    summary: "documentation-impact receipt covers all live source and generated changes"
+  - command: ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json"
+    status: "PASS"
+    summary: "no new project-improvement signal is emitted"
+  - command: ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+    status: "PASS"
+    summary: "no hard claim-language failures"
+  - command: ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --json-summary"
+    status: "PASS"
+    summary: "research-control diff passes with zero errors"
+  - command: "git diff --check"
+    status: "PASS"
+    summary: "working-tree whitespace validation passes"
+
+validation_summary:
+  status: "PASS_PRECHECKPOINT"
+  focused_cadence_and_profile_test_count: 47
+  classifier_test_count: 65
+  migration_readiness_test_count: 12
+  repository_test_count: 1261
+  repository_skip_count: 1
+  research_control_error_count: 0
+  checkpoint_invocation_count: 0
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "The direct user instruction supplied the every-ten policy choice and the task was routed through improve-project-system."
+      - "The v19 validation policy source, role contract, memory preflight, and ordinary P6-T08 handoff boundary were inspected before writes."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Cadence boundary, recovery carry-forward, post-commit nonrepetition, fail-safe, staged-acceptance, and classifier regressions pass."
+      - "The full 1261-test repository suite passes with one expected skip."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Documentation impact, improvement-signal integrity, claim language, research-control diff, and whitespace checks pass."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "No checkpoint, commit, push, or publication was authorized or performed for this task."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Registered validation-policy wiki mirrors and generated registries were regenerated from canonical sources."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Memory bootstrap and validate-only checks pass after integration."
+  claim_language_linter:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "Changed-path claim validation has zero hard failures; historical warning-only findings remain nonblocking."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not authorized; ordinary project-system validation scheduling only"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  publication_authorized: false
+  proof_authority: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  canonical_ontology_edit_authorized: false
+  ontology_selection_authorized: false
+  physical_interpretation_establishment_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+distance_to_gr_delta:
+  changed: false
+  effect: "none_project_system_only"
+  burden_id: "not_applicable"
+  milestone: "not_applicable"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "Operational validation scheduling creates no scientific or Distance-to-GR movement."
+
+physics_progress_status:
+  status: "none_project_system_only"
+  new_mathematical_payload: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+
+selected_next_route:
+  route_id: "v21_p6_t08_source_extension_smuggling_audit"
+  route_label: "source_extension_smuggling_audit"
+  worker_skill: "continue-research"
+  plan_task_id: "P6-T08"
+  source_handoff_id: "handoff-0885"
+  ordinary_research_handoff_authoritative: true
+  execution_ready_now: false
+  blocked_by: "separate generation-133 recovery relay remains paused during this uncommitted project-system transaction"
+  physics_promotion_authorized: false
+  executed: false
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required_no_nonblank_signals"
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1040
+    relationship_row_count: 5191
+    semantic_row_count: 1040
+    vault_row_count: 1040
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search 'repository test shard checkpoint cadence full validation' --limit 10 --json"
+      query_type: "search"
+      query_text: "repository test shard checkpoint cadence full validation"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+      source_hash: "a28c02150d17f3c39cf919fa305d585cbe1ea7a022dd81320fa2cb72c8126ebc"
+  authority_note: "Obsidian wiki semantic extracts and .local are retrieval layers only and not authority; the registered canonical source was inspected directly."

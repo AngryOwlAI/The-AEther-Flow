@@ -88,6 +88,24 @@ class ValidationProfileTests(unittest.TestCase):
             "checkpoint_transaction",
             audit["profile_membership"]["checkpoint"],
         )
+        ordinary = resolve_profile(
+            self.manifest,
+            classify_paths(["research_control/tasks/RT-TEST/00_TASK.yaml"]),
+            requested_profile="checkpoint",
+            scopes=("staged",),
+        )
+        self.assertNotIn(
+            "test_shard_repository",
+            ordinary.plan.selected_gate_ids,
+        )
+        cadence = resolve_profile(
+            self.manifest,
+            classify_paths(["research_control/tasks/RT-TEST/00_TASK.yaml"]),
+            requested_profile="checkpoint",
+            scopes=("staged",),
+            role_obligations=("test_shard_repository",),
+        )
+        self.assertIn("test_shard_repository", cadence.plan.selected_gate_ids)
 
     def test_doctor_has_no_blocking_members_and_cannot_satisfy_checkpoint(self) -> None:
         audit = build_membership_audit(self.manifest)

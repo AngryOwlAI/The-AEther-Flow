@@ -137,6 +137,9 @@ DEPENDENCY_ENVIRONMENT_PATHS = {
 VALIDATION_GATE_MANIFEST_PATH = (
     "research_control/design/validation_gate_manifest_v1.yaml"
 )
+VALIDATION_ADAPTER_BINDINGS_PATH = (
+    "research_control/design/validation_adapter_bindings_v1.json"
+)
 AUTHORITY_MARKER_RE = re.compile(r"<!--\s*authority:\s*(explanatory|control)\s*-->")
 HUNK_RE = re.compile(r"@@ -\d+(?:,\d+)? \+(\d+)(?:,(\d+))? @@")
 PATH_FAMILY_TAGS = (
@@ -584,6 +587,7 @@ def classify_path_family(path: str, registry: RegistryIndex) -> dict[str, object
         path.startswith(".github/workflows/")
         or path == ".gitattributes"
         or path == "Makefile"
+        or path == VALIDATION_ADAPTER_BINDINGS_PATH
         or path in DEPENDENCY_ENVIRONMENT_PATHS
         or path.startswith("scripts/validation/")
         or Path(path).name.startswith(("checkpoint_", "continue_", "run_full_"))

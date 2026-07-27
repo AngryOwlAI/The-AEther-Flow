@@ -75,6 +75,10 @@ CLAIM_SUPERSEDENCE_PREDICATE_ID = "rc_diff_satisfies_claim_language_same_scope_v
 CLAIM_LANGUAGE_SCRIPT = "scripts/project_control/validate_claim_language.py"
 CHECKPOINT_VALIDATION_MODES = {"legacy", "compare"}
 SUPPORTED_TRACKED_GENERATORS = {"memory_sync", "targeted_pdf_build"}
+REPOSITORY_TEST_CADENCE = 10
+REPOSITORY_TEST_CADENCE_ANCHOR_JOB_ID = "AJ-RT-20260726-011-001"
+REPOSITORY_TEST_GATE_ID = "test_shard_repository"
+SCIENTIFIC_ROLE_KIND_PREFIX = "scientific_"
 
 
 @dataclass
@@ -215,6 +219,18 @@ def read_csv_registry(name: str) -> list[dict[str, str]]:
         return []
     with path.open(newline="", encoding="utf-8") as handle:
         return [{key: value or "" for key, value in row.items()} for row in csv.DictReader(handle)]
+
+
+def read_csv_registry_at_ref(name: str, ref: str = "HEAD") -> list[dict[str, str]]:
+    result = run_command(["git", "show", f"{ref}:registries/{name}"])
+    if result.returncode != 0:
+        raise RuntimeError(
+            result.stderr or f"could not read registries/{name} at {ref}"
+        )
+    return [
+        {key: value or "" for key, value in row.items()}
+        for row in csv.DictReader(result.stdout.splitlines())
+    ]
 
 
 def by_id(rows: list[dict[str, str]], key: str) -> dict[str, dict[str, str]]:
@@ -360,6 +376,156 @@ def select_job(job_id: str | None) -> dict[str, str]:
     )[-1]
 
 
+def repository_test_cadence_decision(
+    job_row: Mapping[str, str],
+    *,
+    job_rows: Iterable[Mapping[str, str]] | None = None,
+    committed_job_rows: Iterable[Mapping[str, str]] | None = None,
+    role_rows: Iterable[Mapping[str, str]] | None = None,
+) -> dict[str, object]:
+    """Select one repository suite when uncommitted science crosses a ten-job boundary."""
+
+    current_jobs = list(
+        job_rows
+        if job_rows is not None
+        else read_csv_registry("AGENT_JOB_REGISTRY.csv")
+    )
+    roles = list(
+        role_rows
+        if role_rows is not None
+        else read_csv_registry("AGENT_ROLE_REGISTRY.csv")
+    )
+    try:
+        committed_jobs = list(
+            committed_job_rows
+            if committed_job_rows is not None
+            else read_csv_registry_at_ref("AGENT_JOB_REGISTRY.csv")
+        )
+    except (OSError, RuntimeError) as exc:
+        return {
+            "schema_id": "repository_test_cadence_decision_v1",
+            "cadence": REPOSITORY_TEST_CADENCE,
+            "anchor_job_id": REPOSITORY_TEST_CADENCE_ANCHOR_JOB_ID,
+            "current_job_id": str(job_row.get("job_id", "")),
+            "required": True,
+            "reason": "committed_registry_unavailable_fail_safe",
+            "error": str(exc),
+            "no_physics_authority": True,
+        }
+
+    role_kinds = {
+        (str(row.get("role_id", "")), str(row.get("version", ""))): str(
+            row.get("role_kind", "")
+        )
+        for row in roles
+    }
+
+    def job_order(row: Mapping[str, str]) -> tuple[str, str]:
+        return (
+            str(
+                row.get("completed_at")
+                or row.get("started_at")
+                or row.get("created_at")
+                or ""
+            ),
+            str(row.get("job_id", "")),
+        )
+
+    def completed_scientific_after_anchor(
+        rows: Iterable[Mapping[str, str]],
+    ) -> tuple[list[str], str]:
+        values = list(rows)
+        anchor = next(
+            (
+                row
+                for row in values
+                if row.get("job_id") == REPOSITORY_TEST_CADENCE_ANCHOR_JOB_ID
+            ),
+            None,
+        )
+        if anchor is None or anchor.get("status") != "completed":
+            return [], "cadence_anchor_missing_or_incomplete"
+        anchor_kind = role_kinds.get(
+            (str(anchor.get("role_id", "")), str(anchor.get("role_version", ""))),
+            "",
+        )
+        if not anchor_kind.startswith(SCIENTIFIC_ROLE_KIND_PREFIX):
+            return [], "cadence_anchor_role_unresolved"
+        anchor_order = job_order(anchor)
+        scientific: list[tuple[tuple[str, str], str]] = []
+        for row in values:
+            if row.get("status") != "completed" or job_order(row) <= anchor_order:
+                continue
+            kind = role_kinds.get(
+                (str(row.get("role_id", "")), str(row.get("role_version", ""))),
+                "",
+            )
+            if not kind:
+                return [], f"role_kind_unresolved:{row.get('job_id', '')}"
+            if kind.startswith(SCIENTIFIC_ROLE_KIND_PREFIX):
+                scientific.append((job_order(row), str(row.get("job_id", ""))))
+        return [job_id for _, job_id in sorted(scientific)], ""
+
+    working_scientific, working_error = completed_scientific_after_anchor(
+        current_jobs
+    )
+    committed_scientific, committed_error = completed_scientific_after_anchor(
+        committed_jobs
+    )
+    current_role_kind = role_kinds.get(
+        (
+            str(job_row.get("role_id", "")),
+            str(job_row.get("role_version", "")),
+        ),
+        "",
+    )
+    errors = [value for value in (working_error, committed_error) if value]
+    if not current_role_kind:
+        errors.append("current_job_role_unresolved")
+    if (
+        current_role_kind.startswith(SCIENTIFIC_ROLE_KIND_PREFIX)
+        and job_row.get("status") != "completed"
+    ):
+        errors.append("current_scientific_job_incomplete")
+    if len(working_scientific) < len(committed_scientific) or (
+        working_scientific[: len(committed_scientific)] != committed_scientific
+    ):
+        errors.append("working_and_committed_scientific_sequences_diverge")
+
+    working_count = len(working_scientific)
+    committed_count = len(committed_scientific)
+    due_boundary = (committed_count // REPOSITORY_TEST_CADENCE + 1) * (
+        REPOSITORY_TEST_CADENCE
+    )
+    boundary_crossed = (
+        working_count // REPOSITORY_TEST_CADENCE
+        > committed_count // REPOSITORY_TEST_CADENCE
+    )
+    required = bool(errors) or boundary_crossed
+    if errors:
+        reason = "cadence_state_invalid_fail_safe"
+    elif boundary_crossed:
+        reason = "completed_scientific_cadence_boundary_crossed"
+    elif current_role_kind.startswith(SCIENTIFIC_ROLE_KIND_PREFIX):
+        reason = "completed_scientific_cadence_boundary_not_crossed"
+    else:
+        reason = "project_system_job_does_not_advance_cadence"
+    return {
+        "schema_id": "repository_test_cadence_decision_v1",
+        "cadence": REPOSITORY_TEST_CADENCE,
+        "anchor_job_id": REPOSITORY_TEST_CADENCE_ANCHOR_JOB_ID,
+        "current_job_id": str(job_row.get("job_id", "")),
+        "current_role_kind": current_role_kind,
+        "committed_completed_scientific_jobs_since_anchor": committed_count,
+        "working_completed_scientific_jobs_since_anchor": working_count,
+        "due_boundary_ordinal": due_boundary,
+        "required": required,
+        "reason": reason,
+        "errors": errors,
+        "no_physics_authority": True,
+    }
+
+
 def execution_role_ref_for_job(job_id: str, job_contract: dict[str, object]) -> str:
     contract_ref = str(job_contract.get("execution_role_ref", ""))
     if contract_ref:
@@ -397,6 +563,8 @@ def allowed_patterns_for_changed_paths(
 
 def plan_checkpoint_validation(
     changed_paths: Iterable[str],
+    *,
+    role_obligations: Iterable[str] = (),
 ) -> CheckpointValidationPlan:
     """Build the shadow checkpoint plan and identify checkpoint-owned generators."""
 
@@ -408,6 +576,7 @@ def plan_checkpoint_validation(
         classification,
         requested_profile="checkpoint",
         scopes=("staged",),
+        role_obligations=role_obligations,
         shadow=True,
     )
     plan = resolution.plan
@@ -550,11 +719,13 @@ def run_checkpoint_staged_acceptance(
     agent_job_id: str,
     command_results: list[CommandResult],
     classifier: Callable[..., dict[str, object]] = classify_paths,
+    role_obligations: Iterable[str] = (),
 ) -> tuple[dict[str, object], dict[str, object]]:
     """Execute planner-selected staged blockers once and compare legacy statuses."""
 
     legacy_statuses: dict[str, str] = {}
     child_receipts: list[dict[str, str]] = []
+    obligations = tuple(role_obligations)
 
     def gate_executor(
         required: tuple[str, ...], context: StagedExecutionContext
@@ -566,6 +737,7 @@ def run_checkpoint_staged_acceptance(
             classification,
             profile="checkpoint",
             scopes=("staged",),
+            role_obligations=obligations,
         )
         gates = {
             str(gate["gate_id"]): gate
@@ -631,6 +803,7 @@ def run_checkpoint_staged_acceptance(
         },
         base_ref="HEAD",
         agent_job_id=agent_job_id,
+        role_obligations=obligations,
     )
     execution = receipt.get("execution", {})
     integration = {
@@ -905,6 +1078,10 @@ def _checkpoint_impl(
     job_row = select_job(job_id)
     job_contract = load_job_contract(job_row)
     execution_ref = execution_role_ref_for_job(job_row["job_id"], job_contract)
+    cadence_decision = repository_test_cadence_decision(job_row)
+    cadence_obligations = (
+        (REPOSITORY_TEST_GATE_ID,) if cadence_decision["required"] else ()
+    )
 
     preflight = git_status_paths()
     allowed = allowed_patterns_for_changed_paths(job_row, job_contract, preflight)
@@ -925,7 +1102,10 @@ def _checkpoint_impl(
     if validation_mode == "compare":
         try:
             planning_paths = checkpoint_planning_paths(preflight)
-            planner_plan = plan_checkpoint_validation(planning_paths)
+            planner_plan = plan_checkpoint_validation(
+                planning_paths,
+                role_obligations=cadence_obligations,
+            )
             precheck = run_precheck(
                 REPO_ROOT,
                 planning_paths,
@@ -951,6 +1131,13 @@ def _checkpoint_impl(
                 "checkpoint_acceptance": False,
             },
             "generator_selection": planner_plan.receipt(),
+            "repository_test_cadence": {
+                **cadence_decision,
+                "gate_id": REPOSITORY_TEST_GATE_ID,
+                "gate_selected": (
+                    REPOSITORY_TEST_GATE_ID in planner_plan.selected_gate_ids
+                ),
+            },
             "staged_acceptance": {"status": "NOT_RUN"},
             "fallback_switch": "--legacy-validation",
         }
@@ -1090,6 +1277,8 @@ def _checkpoint_impl(
     working_commands = (
         post_sync_validation_commands() if validation_mode == "legacy" else []
     )
+    if validation_mode == "legacy" and cadence_decision["required"]:
+        working_commands.append(staged_gate_command(REPOSITORY_TEST_GATE_ID))
     for command in working_commands:
         result = run_command(command)
         commands.append(result)
@@ -1171,6 +1360,7 @@ def _checkpoint_impl(
             manifest=planner_plan.manifest,
             agent_job_id=job_row["job_id"],
             command_results=commands,
+            role_obligations=cadence_obligations,
         )
         planner_integration["staged_acceptance"] = staged_integration
         if staged_receipt.get("status") != "PASS":

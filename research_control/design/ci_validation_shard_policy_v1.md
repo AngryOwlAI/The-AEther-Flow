@@ -102,6 +102,13 @@ Deduplication precedes sharding. A composed run executes each selected gate
 once per evidence identity, after prerequisites, and records any satisfied or
 superseded obligation rather than launching a second compatibility recipe.
 
+The local governed checkpoint applies the ten-completed-scientific-AgentJob
+repository-test cadence defined by `validation-profile-policy-v1`. That local
+cadence changes neither the unfiltered `full` profile nor `scheduled-full`
+composition. A path-selected repository shard and a cadence-selected
+repository shard are the same gate and execute at most once for one checkpoint
+evidence identity.
+
 ## Required and optional checks
 
 During P11-T01 and the later shadow rollout:
