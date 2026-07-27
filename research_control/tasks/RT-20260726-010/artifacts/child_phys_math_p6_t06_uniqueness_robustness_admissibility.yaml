@@ -1,0 +1,33 @@
+schema_id: "v21_p6_t06_internal_perspective_v1"
+task_id: "RT-20260726-010"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+question: "Does the cumulative one-ray density phase package determine a unique covariant Lorentzian geometry that is stable under finite variation?"
+findings:
+  - finding_id: "MATH-001"
+    result: "The family q_(a,epsilon)=diag(-1,exp(2a),exp(-2a),epsilon^2) is Lorentzian for every real a and positive epsilon, has determinant -epsilon^2, and leaves the admitted source carriers unchanged."
+  - finding_id: "MATH-002"
+    result: "For xi=e^0+e^1, the inverse quadratic value is -1+exp(-2a), so the fixed source covector is null at a=0, timelike for a>0, and spacelike for a<0."
+  - finding_id: "MATH-003"
+    result: "The derivative with respect to a is diag(0,2exp(2a),-2exp(-2a),0), while the source data do not vary; transverse comparisons therefore remain nonselected."
+  - finding_id: "MATH-004"
+    result: "As epsilon tends to zero, the inverse component q^(33)=epsilon^(-2) diverges and the limiting form degenerates; continuing the last entry through zero changes signature."
+  - finding_id: "MATH-005"
+    result: "The P6-T05 determinant-one source-automorphism theorem still forces every natural symmetric bilinear form to vanish on the admitted maximally symmetric datum."
+  - finding_id: "MATH-006"
+    result: "The transition 2I violates Lorentz preservation, while the Lorentz-valued triple I,I,-I violates the cocycle; local signature alone therefore does not certify global covariance."
+  - finding_id: "MATH-007"
+    result: "No geometry-valued coarse-graining map, output comparison metric, or Lipschitz estimate transfers P5 source-side stability to q-level stability."
+decisive_result:
+  result_type: "precise_scoped_obstruction"
+  refuter_classification: "scoped_obstruction"
+  obstruction_id: "OBST-P6T06-GATE-B-UNIQUENESS-ROBUSTNESS-ADMISSIBILITY-001"
+  no_fog: true
+limits:
+  comparison_family_physical: false
+  gauge_equivalence_derived: false
+  operational_transport_derived: false
+  uniform_nondegeneracy_certified: false
+  global_no_go_claimed: false
+  physics_promotion_authorized: false

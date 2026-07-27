@@ -1,0 +1,298 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{array,longtable,booktabs}
+\usepackage[hidelinks]{hyperref}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}[theorem]{Example}
+\newcommand{\Ann}{\operatorname{Ann}}
+\newcommand{\diag}{\operatorname{diag}}
+
+\title{P6-T06: A Scoped Gate-B Uniqueness, Robustness, and Admissibility Obstruction}
+\author{The AEther-Flow Research Project}
+\date{2026-07-26}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+\fbox{\parbox{0.92\textwidth}{
+\textbf{Status and authority.}
+This is a task-local \emph{draft/control} Refuter result. It proves exact
+comparison-family and transition countermodels and records a scoped
+obstruction for the unchanged one-ray, unnormalized-density, dimensionless-
+phase route. The comparison forms are not physical metrics. This result is
+not a canonical-ontology edit, source-law adoption or rejection, causal-cone
+identification, matter model, Gate Chair verdict, global no-go theorem,
+publication, or completed derivation.
+}}
+\end{center}
+
+\section{Question and fixed input}
+
+P6-T03 leaves as its complete unconditional geometric input
+\[
+  \mathcal D_1(S,V)=\bigl([V]_+,\Ann(V),\preceq_V\bigr).
+\]
+P6-T04 enlarges this to
+\[
+  \mathcal D_{\rm cal}
+  =\bigl(\mathcal D_1,\mu,\{\theta_A\}_{A\in\mathcal A}\bigr),
+\]
+where \(\mu\) is an independent positive source density and the
+\(\theta_A\) are dimensionless scalar phases. P6-T05 proves that this package
+does not select signature or nondegeneracy and that, on an admitted maximally
+symmetric datum, source naturality forces every symmetric bilinear output to
+vanish.
+
+P6-T06 tests the remaining Gate-B burdens:
+\begin{enumerate}
+\item uniqueness up to a declared and observable-preserving gauge relation;
+\item source naturality, transition compatibility, inverse laws, and cocycles;
+\item robustness under finite variation and coarse-graining; and
+\item operational admissibility for cones, clocks, rods, and universal
+coupling.
+\end{enumerate}
+No target atlas, target metric, GR null cone, detector semantics, matter
+response, \(G\), \(c\), or benchmark fit is admitted. The historical scoped
+\(g_{\rm eff}\) source-extension object is not a premise and is unchanged.
+
+\section{Typed assumption audit}
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.10\textwidth}
+                  >{\raggedright\arraybackslash}p{0.38\textwidth}
+                  >{\raggedright\arraybackslash}p{0.41\textwidth}}
+\toprule
+ID & Test assumption & Status and consequence\\
+\midrule
+\endhead
+A1 & \(S\) is smooth and four dimensional; \(V\) is nonzero and positively
+oriented. & Inherited candidate scope, not a physical spacetime or clock
+conclusion.\\
+A2 & Only \(\mathcal D_{\rm cal}\) is unconditional. & No coframe, bilinear
+form, connection, target chart, operational transport, or universality law is
+hidden in the input.\\
+A3 & \(\mu\) is independent source density data. & It is not identified with
+the volume density of a comparison form.\\
+A4 & Scalar phases may be constant on the exact comparison datum. & They then
+provide no discriminator while remaining admitted data.\\
+A5 & Comparison forms are mathematical controls on one fixed source basis. &
+They are neither source geometry nor target geometry.\\
+A6 & A gauge quotient must make stated observables representative-independent.
+& Merely naming a source automorphism ``gauge'' is not an operational
+transport theorem.\\
+A7 & P6-T03 through P6-T05 are fixed inputs. & Their scope is not enlarged.\\
+A8 & Generated artifacts, validators, roles, and route authority are not
+scientific premises. & Process success cannot establish geometry.\\
+\bottomrule
+\end{longtable}
+
+\section{The same-source comparison family}
+
+Fix a source tangent basis \(e_0,e_1,e_2,e_3\), the oriented ray
+\(L=[e_0]_+\), the density
+\(\mu_0=|e^0\wedge e^1\wedge e^2\wedge e^3|\), and constant phases. For
+\(a\in\mathbb R\) and \(\varepsilon>0\), define
+\[
+ q_{a,\varepsilon}
+ =\diag\!\left(-1,e^{2a},e^{-2a},\varepsilon^2\right).
+\]
+Every member has Lorentzian inertia and
+\[
+ \det q_{a,\varepsilon}=-\varepsilon^2.
+\]
+The admitted source carriers are independent of \(a\) and
+\(\varepsilon\).
+
+\begin{theorem}[Cone and transverse-comparison nonselection]
+\label{thm:cone}
+The family \(q_{a,\varepsilon}\) changes both the quadratic classification of
+a fixed source covector and transverse comparisons while the admitted source
+datum stays fixed.
+\end{theorem}
+\begin{proof}
+The inverse matrix is
+\[
+ q_{a,\varepsilon}^{-1}
+ =\diag\!\left(-1,e^{-2a},e^{2a},\varepsilon^{-2}\right).
+\]
+For the fixed source covector \(\xi=e^0+e^1\),
+\[
+ q_{a,\varepsilon}^{-1}(\xi,\xi)=-1+e^{-2a}.
+\]
+It is positive for \(a<0\), zero for \(a=0\), and negative for \(a>0\).
+Meanwhile
+\[
+ q_{a,\varepsilon}(e_1,e_1)=e^{2a},\qquad
+ q_{a,\varepsilon}(e_2,e_2)=e^{-2a}.
+\]
+Thus cone classification and transverse comparisons both vary at fixed
+source data.
+\end{proof}
+
+\begin{corollary}[A gauge declaration does not close the burden]
+\label{cor:gauge}
+Let
+\[
+ B_a=\diag(1,e^a,e^{-a},1).
+\]
+Then \(\det B_a=1\), \(B_a\) preserves the oriented ray and density, and
+\(q_{a,\varepsilon}=B_a^Tq_{0,\varepsilon}B_a\). Treating these
+source-data automorphisms as gauge does not by itself define a physical cone.
+\end{corollary}
+\begin{proof}
+The matrix identities are direct. If forms are quotient identified, a
+representative-independent cone statement also needs a derived identification
+of operational covectors between representatives. The unchanged source
+package derives neither that transport nor an invariant operational
+readout. Indeed Theorem~\ref{thm:cone} shows that the same named source
+covector has different classifications across representatives. Co-transforming
+the covector restores the elementary tensor identity, but that conditional
+move is precisely the missing source-derived transport law.
+\end{proof}
+
+\section{Finite-variation and conditioning stress}
+
+\begin{proposition}[Nonzero response at fixed source input]
+\[
+ \frac{\partial q_{a,\varepsilon}}{\partial a}
+ =\diag\!\left(0,2e^{2a},-2e^{-2a},0\right)\ne0.
+\]
+No variation of \(\mathcal D_{\rm cal}\) accounts for this response.
+\end{proposition}
+
+\begin{proposition}[No uniform nondegeneracy certificate]
+As \(\varepsilon\to0^+\), the inverse component
+\((q_{a,\varepsilon}^{-1})^{33}=\varepsilon^{-2}\) diverges and the limiting
+form is degenerate. The signed family
+\[
+ r_t=\diag(-1,1,1,t)
+\]
+is Lorentzian for \(t>0\), degenerate at \(t=0\), and split-signature for
+\(t<0\). Current source data derive no positive lower bound or exclusion of
+this crossing.
+\end{proposition}
+
+P5 source-side error and semigroup certificates do not change this
+conclusion. A transfer theorem would require a geometry-valued map
+\(\mathfrak G\), a comparison distance \(d_q\), and an estimate such as
+\[
+ d_q\!\left(\mathfrak G(C_\ell D),\mathfrak G(D)\right)
+ \le L\,d_D(C_\ell D,D).
+\]
+None of \(\mathfrak G,d_q,L\) is derived. Source-side stability therefore
+does not certify geometry-side stability.
+
+\section{Covariance, inverse, and cocycle controls}
+
+P6-T05 already proves that the determinant-one diagonal automorphisms of an
+admitted maximally symmetric datum force the only natural symmetric bilinear
+form to be zero. P6-T06 does not re-prove or broaden that theorem; it uses it
+as the cumulative naturality obstruction.
+
+The following finite controls separate local signature from global
+covariance. With
+\(\eta=\diag(-1,1,1,1)\), the transition \(2I\) fails because
+\[
+ (2I)^T\eta(2I)=4\eta\ne\eta.
+\]
+Even when every transition is Lorentz-valued, inverse and cocycle laws remain
+independent. The pair
+\(\Lambda_{VU}=I,\Lambda_{UV}=-I\) violates
+\(\Lambda_{UV}=\Lambda_{VU}^{-1}\). On a triple overlap,
+\[
+ \Lambda_{VU}=I,\qquad \Lambda_{WV}=I,\qquad
+ \Lambda_{WU}=-I
+\]
+has Lorentz-valued entries but violates
+\(\Lambda_{WV}\Lambda_{VU}=\Lambda_{WU}\).
+These are conditional consistency countermodels, not claims that the current
+source package derives any transition maps.
+
+\section{Physical-admissibility audit}
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.27\textwidth}
+                  >{\raggedright\arraybackslash}p{0.48\textwidth}
+                  >{\raggedright\arraybackslash}p{0.15\textwidth}}
+\toprule
+Criterion & Exact audit & Disposition\\
+\midrule
+\endhead
+Unique cone up to gauge & Theorem~\ref{thm:cone} and
+Corollary~\ref{cor:gauge}; no operational transport or quotient-observable
+theorem. & Not met\\
+Source covariance & P6-T05 naturality obstruction; transition, inverse, and
+cocycle controls above. & Not met\\
+Finite-variation robustness & Inverse conditioning grows as
+\(\varepsilon^{-2}\); degeneracy and signature crossing are not excluded. &
+Not met\\
+Characteristic cone & P6-T02 gives \(\Ann(V)\), a linear hyperplane, not a
+nondegenerate Lorentzian quadratic null cone. & Not met\\
+Clock calibration & P6-T04 leaves positive rescaling \(V_f=fV\) and no
+absolute normalization. & Not met\\
+Rod calibration & Transverse comparisons vary as \(e^{2a}\) and \(e^{-2a}\)
+at fixed source input. & Not met\\
+Coarse-grained stability & No geometry map, output distance, or transfer
+estimate is derived. & Not met\\
+Universal matter coupling & No detector semantics, matter action,
+universality theorem, or exclusion of bimetric, multicone, and nonuniversal
+comparison branches is derived. & Not met\\
+\bottomrule
+\end{longtable}
+
+The last row does not adopt any bimetric, multicone, or nonuniversal physical
+sector. Those are only unexcluded comparison branches.
+
+\section{Precise obstruction and route consequence}
+
+\begin{theorem}[Scoped Gate-B obstruction]
+\label{thm:obstruction}
+For the exact cumulative source package tested, Gate B is not closed. The
+package does not determine a unique cone modulo a derived observable-
+preserving gauge relation, a nonzero natural bilinear form, globally
+compatible transitions, uniform nondegeneracy, geometry-level
+coarse-graining stability, characteristic-cone identification, calibrated
+clocks and rods, or universal operational coupling.
+\end{theorem}
+\begin{proof}
+Cone and rod nonselection follow from Theorem~\ref{thm:cone}. The gauge burden
+follows from Corollary~\ref{cor:gauge}. Naturality is obstructed by P6-T05.
+The transition controls show that local signature does not supply
+Lorentz-valued transitions, inverses, or cocycles. The
+\(\varepsilon\)-family gives the missing uniform bound. The
+physical-admissibility table records the remaining exact non-implications.
+\end{proof}
+
+The obstruction identifier is
+\[
+\texttt{OBST-P6T06-GATE-B-UNIQUENESS-ROBUSTNESS-ADMISSIBILITY-001}.
+\]
+Its Refuter classification is \texttt{scoped\_obstruction}. The exact
+unchanged route from \(\mathcal D_{\rm cal}\) to an unscoped physical geometry
+is locally frozen. This is not a global no-go theorem. A materially richer
+source-side law could supply a discriminator, operational transport, uniform
+robustness, a geometry-level coarse-graining map, and a universality theorem.
+Current status is
+\texttt{blocked\_adoption\_open\_continuation}.
+
+\section{Distance-to-GR disposition}
+
+P6-T06 supplies new countermodels and a precise obstruction, so it is not a
+route orbit. Gate B remains unpassed. The historical scoped \(g_{\rm eff}\)
+object is unchanged. Physical causal geometry, unscoped \(g_{\rm eff}\),
+matter coupling, Einstein equations, benchmark promotion, proof authority,
+publication, push, and completed derivation remain blocked.
+
+\section{Project source note}
+
+The fixed project basis is the registered P6-T03, P6-T04, and P6-T05 theorem
+packets, canonical target-side geometry dictionary, historical scoped
+source-extension \(g_{\rm eff}\) candidate and Gate Chair record, v21
+implementation plan, Distance-to-GR burden map, and handoff-0883. Exact
+source hashes are recorded in the accompanying machine-readable
+specification. No external physical datum is used.
+
+\end{document}

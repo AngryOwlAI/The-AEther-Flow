@@ -13,9 +13,9 @@ state, or latest handoff, those sources govern and this file is stale.
 | Field | Value |
 | --- | --- |
 | Schema | `v21_current_burden_status_v1` |
-| Source commit at generation | `cdd4fd0989ed59ed0f1e4b5d7827cf8a1082af07` |
-| Status generation time | `2026-07-26T21:10:13Z` |
-| Tracked task count | 1119 |
+| Source commit at generation | `a03c6d84f3a315eaba213b0c7ea6806a5957d62d` |
+| Status generation time | `2026-07-26T23:39:09Z` |
+| Tracked task count | 1120 |
 | Stable definition count | 10 |
 | Distance-to-GR burden count | 14 |
 | Historical authored-map commit | `2c5fb02fd8fff9b449ab10a328d7c881b13ef546` |
@@ -23,21 +23,21 @@ state, or latest handoff, those sources govern and this file is stale.
 
 ### Exact source hashes
 
-- `registries/DISTANCE_TO_GR_LEDGER.csv`: `a21f705489247d37a73b09b5e2b629ec53362b1ab042d4d8f395f420e631fe54`
-- `registries/RESEARCH_TASK_REGISTRY.csv`: `1a7818816a81bbd792acd8eea2ab5db6e625f7f173af9644fa0c224b3e77f7df`
+- `registries/DISTANCE_TO_GR_LEDGER.csv`: `a274628defe6b481c1b7cda9e7405826549659e0276319a90eaa544a902ad5ad`
+- `registries/RESEARCH_TASK_REGISTRY.csv`: `3cc19012b9410d1425bae7ee3c087fe3d10c4353874dab25da0d0ac92435283f`
 - `research_control/design/gr_derivation_burden_map.md`: `8e9d44e3a18ecc8a2430a9c42497da3eb9911c2cf6cd714c1525c5d91551835e`
-- `research_control/handoffs/handoff-0883.yaml`: `72c48eb53cf3d031fe548434964c012546c08ad66e32c6ddf96a9ef1b12cb2cf`
-- `research_control/program_state.yaml`: `c0b094d3ed031ba5c32d67b20eee7bbb8b4837de6922909553d2d641f190ff63`
+- `research_control/handoffs/handoff-0884.yaml`: `161ab7751912c90bd81514f037539d662480b95415245fba5f519d4bd572e315`
+- `research_control/program_state.yaml`: `3f7cf043ebf20ebd460816d06b27c7b324f1f734b96b675d82e0dfa8ada40d4d`
 - `research_control/tasks/RT-20260721-009/artifacts/v21_burden_definitions_v1.yaml`: `67b8053baa60db4b11ee20582633d6279523d40b2ee853a6c570e2fdc1d113f5`
 
 ## Live control state
 
 | Field | Value |
 | --- | --- |
-| Active task | `RT-20260726-009` |
-| Latest handoff | `handoff-0883` |
-| Current status | `p6_t05_conditional_coframe_gluing_and_signature_covariance_naturality_obstruction_ready_for_checkpoint` |
-| Next recommended action | Run one governed checkpoint for AJ-RT-20260726-009-001. Only after it commits may one fresh bounded P6-T06 Refuter packet stress the cumulative P6-T03 through P6-T05 package for uniqueness, source covariance, finite and infinitesimal variation robustness, and physical-admissibility overreads or return a precise obstruction. |
+| Active task | `RT-20260726-010` |
+| Latest handoff | `handoff-0884` |
+| Current status | `p6_t06_scoped_gate_b_uniqueness_robustness_admissibility_obstruction_ready_for_checkpoint` |
+| Next recommended action | Run one governed checkpoint for AJ-RT-20260726-010-001. Only after it commits may one fresh bounded P6-T07 theoretical-continuation-selector packet name the honest status of the remaining metric branch and choose a materially distinct next route without promoting physical geometry. |
 
 ## Authored stable definitions with generated current values
 
@@ -184,14 +184,14 @@ state, or latest handoff, those sources govern and this file is stale.
 
 | Burden ID | Required object | Current status | Control status | Mathematical status | Physical status | Promotion status | Updated at |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| `g_eff` | g_eff | `accepted` | `gate_review_completed` | `scoped_source_extension_geff_object` | `not_unscoped_lorentzian_metric_not_matter_coupling_not_einstein_equations` | `scoped_source_object_only` | `2026-07-26T21:10:13Z` |
+| `g_eff` | g_eff | `accepted` | `gate_review_completed` | `scoped_source_extension_geff_object` | `not_unscoped_lorentzian_metric_not_matter_coupling_not_einstein_equations` | `scoped_source_object_only` | `2026-07-26T23:39:09Z` |
 
 #### `g_eff` generated detail
 
-- Current blocking burden: Historical scoped source-extension g_eff object remains adopted only under declared source-side scope while P6-T03 proves one-ray conformal nonselection P6-T04 proves scale-calibration nonselection and P6-T05 proves the unchanged carrier package selects neither Lorentzian inertia nondegeneracy nor a natural symmetric bilinear form
-- Current next evidence or action: Supply materially richer source-side conformal-shape physically normalized volume absolute clock intrinsic coframe Lorentzian signature determinant transition inverse cocycle compatibility and finite-variation robustness laws before testing unscoped operational geometry
-- Current failure/freeze criterion: Freeze natural nondegenerate Lorentzian metric selection from only the unchanged P6-T03 one-ray datum plus P6-T04 independent unnormalized density and dimensionless phases unless a new source law theorem variation class or protected decision changes the exact premises
-- Current evidence: `research_control/tasks/RT-20260726-009/artifacts/signature_covariance_naturality_obstruction_v1.tex`
+- Current blocking burden: Historical scoped source-extension g_eff object remains adopted only under declared source-side scope while P6-T03 proves one-ray conformal nonselection P6-T04 proves scale-calibration nonselection P6-T05 proves signature nondegeneracy and source-naturality obstruction and P6-T06 proves the cumulative unchanged route does not establish uniqueness robustness coarse-graining transfer or physical admissibility
+- Current next evidence or action: Supply materially richer source-side cone-discriminator operational-transport uniform-conditioning geometry-level coarse-graining characteristic-identification clock rod and universal-coupling laws before testing unscoped operational geometry
+- Current failure/freeze criterion: Freeze only the exact cumulative route from the unchanged one-ray independent-density dimensionless-phase package to a unique source-natural robust operationally admissible unscoped geometry unless a new source law theorem variation class conditional comparison-geometry program or protected decision changes the exact premises
+- Current evidence: `research_control/tasks/RT-20260726-010/artifacts/uniqueness_covariance_robustness_admissibility_obstruction_v1.tex`
 - Exact overread guard: `no_source_law_adoption;no_metricdata_e_adoption;no_unscoped_geff_adoption;no_matter_coupling_derivation;no_einstein_equations;no_benchmark_promotion;no_completed_derivation;no_global_theory_rejection;no_future_source_extension_impossibility`
 
 ### `matter_coupling`

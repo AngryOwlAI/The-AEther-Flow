@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260726-009`
-- Latest handoff: `handoff-0883`
-- Current status: `p6_t05_conditional_coframe_gluing_and_signature_covariance_naturality_obstruction_ready_for_checkpoint`
+- Active task: `RT-20260726-010`
+- Latest handoff: `handoff-0884`
+- Current status: `p6_t06_scoped_gate_b_uniqueness_robustness_admissibility_obstruction_ready_for_checkpoint`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260726-009`
-- Latest research handoff: `handoff-0883`
-- Latest research next action: Run one governed checkpoint for AJ-RT-20260726-009-001. Only after it commits may one fresh bounded P6-T06 Refuter packet stress the cumulative P6-T03 through P6-T05 package for uniqueness, source covariance, finite and infinitesimal variation robustness, and physical-admissibility overreads or return a precise obstruction.
+- Latest research task: `RT-20260726-010`
+- Latest research handoff: `handoff-0884`
+- Latest research next action: Run one governed checkpoint for AJ-RT-20260726-010-001. Only after it commits may one fresh bounded P6-T07 theoretical-continuation-selector packet name the honest status of the remaining metric branch and choose a materially distinct next route without promoting physical geometry.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p6_t06_uniqueness_covariance_variation_physical_admissibility`
-- Role family: `refuter@0.2.0`
+- Route ID: `v21_p6_t07_honest_metric_branch_status_selector`
+- Role family: `theoretical-continuation-selector@0.1.0`
 - Target milestone: `effective_metric_g_eff`
-- Milestone burden: Close the remaining Gate B theorem burdens before naming an unscoped metric.
+- Milestone burden: Name the honest status of the remaining metric branch.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `a3166a54696cf6fefc0a120325ada4330ef3db5b38ede9d0d858cd631dd52118`
-- JSON SHA-256: `c0bb1f1e34c75fb9fac5a484fadd85ecca6450cc1e74981f428812d2bb6aa402`
+- YAML SHA-256: `b093c250abb3bc651eafa4fc16e503dc2b4900f697a0c0a8874a573692b287ca`
+- JSON SHA-256: `622da92d7098110ad88911b605218181caa3182e613c4dbd1195a9ba4ed9eb0f`
 
 ## Authority Warning
 

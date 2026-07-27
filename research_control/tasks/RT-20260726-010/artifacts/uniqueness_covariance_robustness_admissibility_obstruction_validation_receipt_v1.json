@@ -1,0 +1,520 @@
+{
+  "artifact_hashes": {
+    "physical_admissibility_matrix_v1.yaml": "7a083affc67510b21186a4474f2404898803dd187fe0c342090e4eb81362e298",
+    "uniqueness_covariance_robustness_admissibility_obstruction_spec_v1.yaml": "942806c3b70d588c0273bf40fea6fb3829c1486c5e14de58a41e50b424d3d86b",
+    "uniqueness_covariance_robustness_admissibility_obstruction_v1.tex": "a9c307207ede1d04825c73d5f3ff7e081f27ce15ebf4aac4d6041aae4873aa8a",
+    "variation_stress_report_v1.yaml": "5e00b816446aec8f39397da3b44a4e88c92a2c49a805473a6e4084e39b2f755b"
+  },
+  "assumption_count": 8,
+  "check_count": 84,
+  "checks": [
+    {
+      "check_id": "SPEC-SCHEMA",
+      "detail": "Expected bounded P6-T06 schema.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "SPEC-TASK",
+      "detail": "Specification is bound to the exact task.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "SPEC-PLAN",
+      "detail": "Specification is bound to the exact v21 work item.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "SPEC-REFUTER-CLASS",
+      "detail": "Refuter classification is exact.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "SPEC-ADOPTION",
+      "detail": "Adoption is blocked while continuation stays open.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "INPUT-ONE-RAY",
+      "detail": "P6-T03 one-ray bundle remains explicit.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "INPUT-SOURCE_COFRAME_SUPPLIED",
+      "detail": "source_coframe_supplied remains false.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "INPUT-LORENTZIAN_FORM_SUPPLIED",
+      "detail": "lorentzian_form_supplied remains false.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "INPUT-OPERATIONAL_COVECTOR_TRANSPORT_SUPPLIED",
+      "detail": "operational_covector_transport_supplied remains false.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "INPUT-GEOMETRY_COARSE_GRAINING_MAP_SUPPLIED",
+      "detail": "geometry_coarse_graining_map_supplied remains false.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "INPUT-MATTER_UNIVERSALITY_LAW_SUPPLIED",
+      "detail": "matter_universality_law_supplied remains false.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "INPUT-TARGET_METRIC_IMPORTED",
+      "detail": "target_metric_imported remains false.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "ASSUMPTION-TABLE",
+      "detail": "Eight explicit assumptions are present.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "ASSUMPTION-GAUGE",
+      "detail": "Gauge observability is a consistency requirement.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "ASSUMPTION-MISSING-LAWS",
+      "detail": "Conditional source laws remain missing.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "ASSUMPTION-NO-TARGET",
+      "detail": "No-target boundary is explicit.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "THEOREM-SET",
+      "detail": "Six exact theorem identities are present.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "CONE-SIGN--1.0",
+      "detail": "Fixed source covector changes classification across a.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "CONE-SIGN-0.0",
+      "detail": "Fixed source covector changes classification across a.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "CONE-SIGN-1.0",
+      "detail": "Fixed source covector changes classification across a.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "FAMILY-TRANSVERSE-PRODUCT--1.0",
+      "detail": "a-variation preserves determinant while changing transverse entries.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "FAMILY-LORENTZ--1.0",
+      "detail": "The epsilon=1 family remains Lorentzian.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "FAMILY-TRANSVERSE-PRODUCT-0.0",
+      "detail": "a-variation preserves determinant while changing transverse entries.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "FAMILY-LORENTZ-0.0",
+      "detail": "The epsilon=1 family remains Lorentzian.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "FAMILY-TRANSVERSE-PRODUCT-1.0",
+      "detail": "a-variation preserves determinant while changing transverse entries.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "FAMILY-LORENTZ-1.0",
+      "detail": "The epsilon=1 family remains Lorentzian.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "EPSILON-DET-1.0",
+      "detail": "Positive epsilon has nonzero negative determinant.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "EPSILON-INVERSE-1.0",
+      "detail": "Inverse conditioning witness is explicit.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "EPSILON-DET-0.1",
+      "detail": "Positive epsilon has nonzero negative determinant.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "EPSILON-INVERSE-0.1",
+      "detail": "Inverse conditioning witness is explicit.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "EPSILON-DET-0.001",
+      "detail": "Positive epsilon has nonzero negative determinant.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "EPSILON-INVERSE-0.001",
+      "detail": "Inverse conditioning witness is explicit.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "EPSILON-CONDITIONING-GROWTH",
+      "detail": "Inverse conditioning grows toward the degenerate boundary.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "SIGNATURE-CROSSING",
+      "detail": "Signed continuation crosses from Lorentzian to split signature.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "NATURALITY-INHERITED",
+      "detail": "P6-T05 zero-dimensional invariant-form result is fixed.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "NATURALITY-SCOPE",
+      "detail": "P6-T05 theorem scope is not broadened.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "TRANSITION-2I",
+      "detail": "2I is not eta-preserving.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "TRANSITION-INVERSE",
+      "detail": "I and -I fail the required inverse identity.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "TRANSITION-COCYCLE",
+      "detail": "I,I,-I fail the triple-overlap cocycle.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "VARIATION-VERDICT",
+      "detail": "Variation robustness fails closed.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "VARIATION-RESULTS",
+      "detail": "All five required variation results are present.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "ADMISSIBILITY-ROW-COUNT",
+      "detail": "Eight physical-admissibility criteria are audited.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "ADMISSIBILITY-DISPOSITIONS",
+      "detail": "Every physical-admissibility criterion fails closed.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "ADMISSIBILITY-GATE-B",
+      "detail": "Gate B is not passed.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "ADMISSIBILITY-BRANCH-STATUS",
+      "detail": "Comparison branches are not adopted physical sectors.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "BURDEN-PROPOSAL-ONLY",
+      "detail": "Burden template uses controlled proposal-only status.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "BURDEN-NOT-CANONICAL-CANDIDATE",
+      "detail": "No canonical-ontology candidate is promoted.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "BURDEN-HUMAN-GATE",
+      "detail": "Adoption remains human-gated.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "OBSTRUCTION-ID",
+      "detail": "Stable obstruction identity is present.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "OBSTRUCTION-REFUTER-CLASS",
+      "detail": "Refuter vocabulary is exact.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "OBSTRUCTION-SCOPE",
+      "detail": "Obstruction remains candidate-scoped.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "OBSTRUCTION-ONTOLOGY",
+      "detail": "Underdetermination language is precise.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "OBSTRUCTION-NO-GLOBAL-NOGO",
+      "detail": "No global no-go is claimed.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "REOPENING-CRITERIA",
+      "detail": "Four materially richer reopening classes are named.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "FREEZE-DECISION",
+      "detail": "Only the exact unchanged route is locally frozen.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "FREEZE-NEXT",
+      "detail": "P6-T07 selector is the next route family.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "FREEZE-CONTINUATION",
+      "detail": "Materially richer continuation stays open.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "FREEZE-NO-GLOBAL-REJECTION",
+      "detail": "Local freeze is not theory rejection.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "AUTHORITY-ALL-FALSE",
+      "detail": "Every adoption, promotion, and publication authority flag is false.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "TEX-MARKER-01",
+      "detail": "Required TeX marker is present: same-source comparison family",
+      "status": "PASS"
+    },
+    {
+      "check_id": "TEX-MARKER-02",
+      "detail": "Required TeX marker is present: Cone and transverse-comparison nonselection",
+      "status": "PASS"
+    },
+    {
+      "check_id": "TEX-MARKER-03",
+      "detail": "Required TeX marker is present: A gauge declaration does not close the burden",
+      "status": "PASS"
+    },
+    {
+      "check_id": "TEX-MARKER-04",
+      "detail": "Required TeX marker is present: No uniform nondegeneracy certificate",
+      "status": "PASS"
+    },
+    {
+      "check_id": "TEX-MARKER-05",
+      "detail": "Required TeX marker is present: Physical-admissibility audit",
+      "status": "PASS"
+    },
+    {
+      "check_id": "TEX-MARKER-06",
+      "detail": "Required TeX marker is present: OBST-P6T06-GATE-B-UNIQUENESS-ROBUSTNESS-ADMISSIBILITY-001",
+      "status": "PASS"
+    },
+    {
+      "check_id": "TEX-MARKER-07",
+      "detail": "Required TeX marker is present: blocked\\_adoption\\_open\\_continuation",
+      "status": "PASS"
+    },
+    {
+      "check_id": "TEX-MARKER-08",
+      "detail": "Required TeX marker is present: Gate B remains unpassed",
+      "status": "PASS"
+    },
+    {
+      "check_id": "TEX-FORBIDDEN-01",
+      "detail": "Forbidden promotion marker is absent: canonical ontology is hereby",
+      "status": "PASS"
+    },
+    {
+      "check_id": "TEX-FORBIDDEN-02",
+      "detail": "Forbidden promotion marker is absent: physical metric is established",
+      "status": "PASS"
+    },
+    {
+      "check_id": "TEX-FORBIDDEN-03",
+      "detail": "Forbidden promotion marker is absent: physical causal cone is established",
+      "status": "PASS"
+    },
+    {
+      "check_id": "TEX-FORBIDDEN-04",
+      "detail": "Forbidden promotion marker is absent: effective metric is derived",
+      "status": "PASS"
+    },
+    {
+      "check_id": "TEX-FORBIDDEN-05",
+      "detail": "Forbidden promotion marker is absent: einstein equations are derived",
+      "status": "PASS"
+    },
+    {
+      "check_id": "TEX-FORBIDDEN-06",
+      "detail": "Forbidden promotion marker is absent: the theory is impossible",
+      "status": "PASS"
+    },
+    {
+      "check_id": "TEX-FORBIDDEN-07",
+      "detail": "Forbidden promotion marker is absent: this is a completed derivation",
+      "status": "PASS"
+    },
+    {
+      "check_id": "SOURCE-HASH-TEX-V21-P6-T03-ONE-RAY-CONFORMAL-INSUFFICIENCY-V1",
+      "detail": "Fixed source hash matches.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "SOURCE-HASH-TEX-V21-P6-T04-SOURCE-SCALE-CALIBRATION-NONSELECTION-V1",
+      "detail": "Fixed source hash matches.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "SOURCE-HASH-TEX-V21-P6-T05-SIGNATURE-COVARIANCE-NATURALITY-OBSTRUCTION-V1",
+      "detail": "Fixed source hash matches.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "SOURCE-HASH-YAML-V21-P6-T05-SIGNATURE-COVARIANCE-NATURALITY-OBSTRUCTION-V1",
+      "detail": "Fixed source hash matches.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "SOURCE-HASH-TEX-ONTOLOGY-AETHER-FLOW-GEOMETRY",
+      "detail": "Fixed source hash matches.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "SOURCE-HASH-TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-METRICFORMASSIGN-GEFF-CANDIDATE-OR-OBSTRUCTION",
+      "detail": "Fixed source hash matches.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "SOURCE-HASH-TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-GEFF-CANDIDATE-SCOPED-SOURCE-EXTENSION-ADOPTION-GATE-CHAIR-REVIEW",
+      "detail": "Fixed source hash matches.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "SOURCE-HASH-MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21",
+      "detail": "Fixed source hash matches.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "SOURCE-HASH-MD-RESEARCH-CONTROL-DESIGN-GR-DERIVATION-BURDEN-MAP",
+      "detail": "Fixed source hash matches.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "SOURCE-HASH-HANDOFF-0883",
+      "detail": "Fixed source hash matches.",
+      "status": "PASS"
+    }
+  ],
+  "claim_boundary_summary": "Exact same-source cone and conditioning variation, inherited naturality obstruction, conditional transition controls, and physical-admissibility audit only; no ontology or source-law adoption, physical metric, downstream GR promotion, global no-go, publication, push, or completed derivation.",
+  "comparison_family_count": 1,
+  "fail_count": 0,
+  "fixed_sources": [
+    {
+      "actual_sha256": "007ae324872868b9eb9cdf0ebc4f1131737c71eda9ce301c805acd5041a52bac",
+      "expected_sha256": "007ae324872868b9eb9cdf0ebc4f1131737c71eda9ce301c805acd5041a52bac",
+      "object_id": "TEX-V21-P6-T03-ONE-RAY-CONFORMAL-INSUFFICIENCY-V1",
+      "path": "research_control/tasks/RT-20260726-005/artifacts/one_ray_conformal_insufficiency_v1.tex",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "96a527cccb8e7a6a614debc5110902b1587848178af8444fc02acda52caf4d28",
+      "expected_sha256": "96a527cccb8e7a6a614debc5110902b1587848178af8444fc02acda52caf4d28",
+      "object_id": "TEX-V21-P6-T04-SOURCE-SCALE-CALIBRATION-NONSELECTION-V1",
+      "path": "research_control/tasks/RT-20260726-007/artifacts/source_scale_calibration_nonselection_v1.tex",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "d7e116d553b1d8a28d5168d7f268c86301161493d08f50a4741573e154e7d4b4",
+      "expected_sha256": "d7e116d553b1d8a28d5168d7f268c86301161493d08f50a4741573e154e7d4b4",
+      "object_id": "TEX-V21-P6-T05-SIGNATURE-COVARIANCE-NATURALITY-OBSTRUCTION-V1",
+      "path": "research_control/tasks/RT-20260726-009/artifacts/signature_covariance_naturality_obstruction_v1.tex",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "15df4bb776339b039217313e6984cc8825fbf9383508cf2c2778ce63ccedc3a8",
+      "expected_sha256": "15df4bb776339b039217313e6984cc8825fbf9383508cf2c2778ce63ccedc3a8",
+      "object_id": "YAML-V21-P6-T05-SIGNATURE-COVARIANCE-NATURALITY-OBSTRUCTION-V1",
+      "path": "research_control/tasks/RT-20260726-009/artifacts/signature_covariance_naturality_obstruction_spec_v1.yaml",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "f60a81b63f814b03cca7190b3ac6285842a55317f4aed058cc6e75154cc0b4d7",
+      "expected_sha256": "f60a81b63f814b03cca7190b3ac6285842a55317f4aed058cc6e75154cc0b4d7",
+      "object_id": "TEX-ONTOLOGY-AETHER-FLOW-GEOMETRY",
+      "path": "ontology/tex/aether_flow_geometry.tex",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "dd30573519ed1df66b3800d29ee0adc9fcc94d9c8d3b9b5a7fcffde503d5f0ef",
+      "expected_sha256": "dd30573519ed1df66b3800d29ee0adc9fcc94d9c8d3b9b5a7fcffde503d5f0ef",
+      "object_id": "TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-METRICFORMASSIGN-GEFF-CANDIDATE-OR-OBSTRUCTION",
+      "path": "research_control/tasks/RT-20260614-216/artifacts/245_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_METRICFORMASSIGN_GEFF_CANDIDATE_OR_OBSTRUCTION.tex",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "3ce8cbc6cd79c6852d78f81045633beea44c4dfc6e2912c604b08e3c8bdb0257",
+      "expected_sha256": "3ce8cbc6cd79c6852d78f81045633beea44c4dfc6e2912c604b08e3c8bdb0257",
+      "object_id": "TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-GEFF-CANDIDATE-SCOPED-SOURCE-EXTENSION-ADOPTION-GATE-CHAIR-REVIEW",
+      "path": "research_control/tasks/RT-20260614-222/artifacts/251_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_GEFF_CANDIDATE_SCOPED_SOURCE_EXTENSION_ADOPTION_GATE_CHAIR_REVIEW.tex",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087",
+      "expected_sha256": "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087",
+      "object_id": "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21",
+      "path": "implementations_plans/recommendations_implementation_plan_continue_task-v21.md",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "8e9d44e3a18ecc8a2430a9c42497da3eb9911c2cf6cd714c1525c5d91551835e",
+      "expected_sha256": "8e9d44e3a18ecc8a2430a9c42497da3eb9911c2cf6cd714c1525c5d91551835e",
+      "object_id": "MD-RESEARCH-CONTROL-DESIGN-GR-DERIVATION-BURDEN-MAP",
+      "path": "research_control/design/gr_derivation_burden_map.md",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "078ff50e5bf1c9306a7ec088d1bab0adae19db0bfc2b891d4a55362013d9ca59",
+      "expected_sha256": "078ff50e5bf1c9306a7ec088d1bab0adae19db0bfc2b891d4a55362013d9ca59",
+      "object_id": "HANDOFF-0883",
+      "path": "research_control/handoffs/handoff-0883.yaml",
+      "status": "PASS"
+    }
+  ],
+  "global_no_go_count": 0,
+  "pass_count": 84,
+  "physical_admissibility_criterion_count": 8,
+  "physical_metric_count": 0,
+  "plan_task_id": "P6-T06",
+  "result_id": "V21-P6-T06-UNIQUENESS-COVARIANCE-ROBUSTNESS-ADMISSIBILITY-V1",
+  "schema_id": "v21_p6_t06_uniqueness_covariance_robustness_admissibility_validation_v1",
+  "scoped_obstruction_count": 1,
+  "status": "PASS",
+  "target_metric_premise_count": 0,
+  "task_id": "RT-20260726-010",
+  "theorem_count": 6,
+  "variation_stress_count": 5
+}

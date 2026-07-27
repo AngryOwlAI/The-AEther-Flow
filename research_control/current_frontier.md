@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260726-009` and `handoff-0883`.
+`RT-20260726-010` and `handoff-0884`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260726-009` |
-| Latest handoff ID | `handoff-0883` |
-| Current status | `p6_t05_conditional_coframe_gluing_and_signature_covariance_naturality_obstruction_ready_for_checkpoint` |
+| Active task ID | `RT-20260726-010` |
+| Latest handoff ID | `handoff-0884` |
+| Current status | `p6_t06_scoped_gate_b_uniqueness_robustness_admissibility_obstruction_ready_for_checkpoint` |
 | V16 completed | false |
 | Current route family | formalization or theorem (scientific) |
 | Target derivation milestone | `effective_metric_g_eff` |
 | Current burden | `g_eff` |
-| Required next authority | After the governed checkpoint commits, one fresh bounded P6-T06 Refuter packet may test uniqueness, source covariance, finite and infinitesimal variation robustness, and physical admissibility while treating the P6-T03 conformal, P6-T04 scale-calibration, and P6-T05 signature/naturality obstructions as hard inputs. |
-| Next recommended action | Run one governed checkpoint for AJ-RT-20260726-009-001. Only after it commits may one fresh bounded P6-T06 Refuter packet stress the cumulative P6-T03 through P6-T05 package for uniqueness, source covariance, finite and infinitesimal variation robustness, and physical-admissibility overreads or return a precise obstruction. |
+| Required next authority | After the governed checkpoint commits, one fresh bounded P6-T07 theoretical-continuation-selector packet may select among a materially richer source-law route, a conditional comparison-geometry program, or continued local freeze while treating the cumulative P6-T03 through P6-T06 obstruction package as scoped evidence. |
+| Next recommended action | Run one governed checkpoint for AJ-RT-20260726-010-001. Only after it commits may one fresh bounded P6-T07 theoretical-continuation-selector packet name the honest status of the remaining metric branch and choose a materially distinct next route without promoting physical geometry. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260726-009` |
-| Latest research handoff ID | `handoff-0883` |
-| Latest research next action | Run one governed checkpoint for AJ-RT-20260726-009-001. Only after it commits may one fresh bounded P6-T06 Refuter packet stress the cumulative P6-T03 through P6-T05 package for uniqueness, source covariance, finite and infinitesimal variation robustness, and physical-admissibility overreads or return a precise obstruction. |
+| Latest research task ID | `RT-20260726-010` |
+| Latest research handoff ID | `handoff-0884` |
+| Latest research next action | Run one governed checkpoint for AJ-RT-20260726-010-001. Only after it commits may one fresh bounded P6-T07 theoretical-continuation-selector packet name the honest status of the remaining metric branch and choose a materially distinct next route without promoting physical geometry. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260726-009/00_TASK.yaml`.
-- Active task objective: Show that a geometric output is nondegenerate, has Lorentzian signature, and transforms consistently under source-induced frame changes, or return a precise typed obstruction, while treating P6-T03 conformal and P6-T04 scale-calibration nonselection as hard inputs.
-- Latest handoff path: `research_control/handoffs/handoff-0883.yaml`.
-- Latest handoff summary: P6-T05 proves exact signature and near-degeneracy countermodels and a stronger source-naturality obstruction: a determinant-one diagonal automorphism subgroup preserves a maximally symmetric admitted source datum and forces every invariant symmetric bilinear form to vanish. A positive conditional theorem states the exact eta-preserving transition, inverse, and cocycle burden for supplied source coframes. Current ontology does not derive the coframe, signature discriminator, determinant certificate, transition representation, or robustness law; the exact tested route is locally frozen while materially richer continuation remains open.
+- Active task path: `research_control/tasks/RT-20260726-010/00_TASK.yaml`.
+- Active task objective: Stress the cumulative P6-T03 through P6-T05 package for uniqueness up to declared gauge, source covariance, finite-variation robustness, and operational physical admissibility, returning a theorem or precise scoped obstruction without presuming a reconstructed metric.
+- Latest handoff path: `research_control/handoffs/handoff-0884.yaml`.
+- Latest handoff summary: P6-T06 constructs the exact same-source Lorentzian family q_(a,epsilon), proves cone and transverse-comparison variation, records inverse-conditioning and signature-crossing witnesses, retains the P6-T05 zero-invariant-form naturality theorem, and gives exact transition inverse and cocycle controls. A coarse-graining transfer gap and physical-admissibility matrix show that Gate B is not passed. The exact unchanged route is locally frozen, but materially richer source-side and conditional comparison-geometry continuation remain open.
 - Current route family: formalization or theorem (scientific).
-- Next recommended action: Run one governed checkpoint for AJ-RT-20260726-009-001. Only after it commits may one fresh bounded P6-T06 Refuter packet stress the cumulative P6-T03 through P6-T05 package for uniqueness, source covariance, finite and infinitesimal variation robustness, and physical-admissibility overreads or return a precise obstruction.
+- Next recommended action: Run one governed checkpoint for AJ-RT-20260726-010-001. Only after it commits may one fresh bounded P6-T07 theoretical-continuation-selector packet name the honest status of the remaining metric branch and choose a materially distinct next route without promoting physical geometry.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -84,7 +84,7 @@ Adopted source-only or source-extension objects:
 | Object | Status | Authority | Scope qualifier | Blocked overread | Downstream promotion authorized |
 | --- | --- | --- | --- | --- | --- |
 | M_src | adopted only as scoped source-only M_src object | `research_control/tasks/RT-20260614-134/artifacts/165_M_SRC_GSC_INTEGRATED_SOURCE_ONLY_ADOPTION_THEOREM_GATE_CHAIR_REVIEW.tex` | not_target_manifold_not_metric_not_gr_derivation | no_metricdata_e_adoption<br>no_geff_scope_expansion<br>no_matter_coupling_derivation<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | false |
-| g_eff | adopted only as scoped source-extension g_eff object | `research_control/tasks/RT-20260726-009/artifacts/signature_covariance_naturality_obstruction_v1.tex` | not_unscoped_lorentzian_metric_not_matter_coupling_not_einstein_equations | no_source_law_adoption<br>no_metricdata_e_adoption<br>no_unscoped_geff_adoption<br>no_matter_coupling_derivation<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation<br>no_global_theory_rejection<br>no_future_source_extension_impossibility | false |
+| g_eff | adopted only as scoped source-extension g_eff object | `research_control/tasks/RT-20260726-010/artifacts/uniqueness_covariance_robustness_admissibility_obstruction_v1.tex` | not_unscoped_lorentzian_metric_not_matter_coupling_not_einstein_equations | no_source_law_adoption<br>no_metricdata_e_adoption<br>no_unscoped_geff_adoption<br>no_matter_coupling_derivation<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation<br>no_global_theory_rejection<br>no_future_source_extension_impossibility | false |
 
 Scoped accepted evidence/preconditions:
 
@@ -289,7 +289,7 @@ preserves the raw ledger `current_status` field for continuity.
 | `obsloc_lc` | `source_localization_obsloc_lc` | constructive local exact-branch witness only | constructive witness exists | constructive_witness_recorded | constructive_witness | local_exact_branch_only | draft_control_only | no_source_law_adoption<br>no_matter_coupling_derivation<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/tasks/RT-20260614-037/artifacts/58_LOCALIZATION_SOURCE_BASIS_AXIOM_SELECTOR_DOMAIN_EQSRC_ALTERNATIVE_BRANCH_FAMILY_GUARD_STABILITY_SOURCE_PACKET_SMUGGLING_AUDIT.tex` |
 | `resp_lc` | `response_localization_resp_lc` | accepted only as scoped source-extension selector data | accepted | accepted_as_source_extension_data | selector_data_source_extension | not_detector_semantics_not_matter_coupling | scoped_source_object_only | no_canonical_ontology_edit<br>no_matter_coupling_derivation<br>no_detector_semantics<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/tasks/RT-20260614-060/artifacts/101_RESP_LC_SOURCE_EXTENSION_HUMAN_GATE_ADOPTION_DECISION.tex` |
 | `m_src` | `source_manifold_m_src` | adopted only as scoped source-only M_src object | accepted | gate_review_completed | scoped_source_only_adopted_object | not_target_manifold_not_metric_not_gr_derivation | scoped_source_object_only | no_metricdata_e_adoption<br>no_geff_scope_expansion<br>no_matter_coupling_derivation<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/tasks/RT-20260614-134/artifacts/165_M_SRC_GSC_INTEGRATED_SOURCE_ONLY_ADOPTION_THEOREM_GATE_CHAIR_REVIEW.tex` |
-| `g_eff` | `effective_metric_g_eff` | adopted only as scoped source-extension g_eff object | accepted | gate_review_completed | scoped_source_extension_geff_object | not_unscoped_lorentzian_metric_not_matter_coupling_not_einstein_equations | scoped_source_object_only | no_source_law_adoption<br>no_metricdata_e_adoption<br>no_unscoped_geff_adoption<br>no_matter_coupling_derivation<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation<br>no_global_theory_rejection<br>no_future_source_extension_impossibility | `research_control/tasks/RT-20260726-009/artifacts/signature_covariance_naturality_obstruction_v1.tex` |
+| `g_eff` | `effective_metric_g_eff` | adopted only as scoped source-extension g_eff object | accepted | gate_review_completed | scoped_source_extension_geff_object | not_unscoped_lorentzian_metric_not_matter_coupling_not_einstein_equations | scoped_source_object_only | no_source_law_adoption<br>no_metricdata_e_adoption<br>no_unscoped_geff_adoption<br>no_matter_coupling_derivation<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation<br>no_global_theory_rejection<br>no_future_source_extension_impossibility | `research_control/tasks/RT-20260726-010/artifacts/uniqueness_covariance_robustness_admissibility_obstruction_v1.tex` |
 | `matter_coupling` | `matter_coupling` | accepted only as scoped source-extension evidence/precondition | accepted | accepted_as_scoped_evidence_precondition | parameterized_finite_local_witness_precondition | not_matter_coupling_not_stress_energy_not_matter_action_not_detector_semantics | scoped_source_evidence_only | no_source_law_adoption<br>no_metricdata_e_adoption<br>no_geff_scope_expansion<br>no_coupling_law_adoption<br>no_matter_coupling_derivation<br>no_matter_coupling_adoption<br>no_stress_energy_semantics<br>no_stress_energy_tensor<br>no_matter_action<br>no_detector_semantics<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation<br>no_future_source_extension_impossibility<br>no_global_theory_rejection | `research_control/tasks/RT-20260702-064/artifacts/source_certificate_operation_laws_v1.tex` |
 | `einstein_equations` | `einstein_equations` | not started; no positive derivation status | not started | not_started | dynamics_action_or_variation_missing | no_field_equation_derivation | none | no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/program_state.yaml` |
 | `finite_variation_robustness` | `source_equivalence_eqsrc` | Refuter stress passed | Refuter stress passed | refuter_stress_passed | conditional_theorem_candidate | downstream_gr_blocked | draft_control_only | no_source_law_adoption<br>no_matter_coupling_derivation<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/tasks/RT-20260614-101/artifacts/142_RESP_LC_M_SRC_GSC_FINITE_VARIATION_ROBUSTNESS_LAW_REFUTER_STRESS_TEST.tex` |
@@ -302,7 +302,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one governed checkpoint for AJ-RT-20260726-009-001. Only after it commits may one fresh bounded P6-T06 Refuter packet stress the cumulative P6-T03 through P6-T05 package for uniqueness, source covariance, finite and infinitesimal variation robustness, and physical-admissibility overreads or return a precise obstruction.
+Run one governed checkpoint for AJ-RT-20260726-010-001. Only after it commits may one fresh bounded P6-T07 theoretical-continuation-selector packet name the honest status of the remaining metric branch and choose a materially distinct next route without promoting physical geometry.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -327,10 +327,10 @@ Validation layers:
 
 | Validation layer | Status | Meaning | Evidence |
 | --- | --- | --- | --- |
-| `pre_execution` | PASS | receipt complete | Generation 129 validated, atomically claimed, and consumed its exact immutable P6-T05 route once. |
-| `completion_internal` | PASS | receipt complete | The exact signature countermodels, near-degenerate family, source-automorphism theorem, conditional gluing theorem, obstruction, freeze, and reopening criteria pass 80 task-local checks. |
+| `pre_execution` | PASS | receipt complete | Generation 130 validated, atomically claimed, and consumed its exact immutable P6-T06 route once. |
+| `completion_internal` | PASS | receipt complete | The exact comparison family, variation witnesses, transition controls, coarse-graining gap, physical-admissibility matrix, scoped obstruction, freeze, and reopening criteria pass 84 task-local checks. |
 | `post_write` | PASS | receipt complete | Integrated control, documentation, signal, memory, and test validation are required before checkpoint. |
-| `post_checkpoint` | PENDING | open item; evidence must explain why | One governed checkpoint remains; P6-T06 is not executed before it. |
+| `post_checkpoint` | PENDING | open item; evidence must explain why | One governed checkpoint remains; P6-T07 is not executed before it. |
 | `renderer` | PASS | receipt complete | Tracked frontier, task-index, graph, registry, and wiki derivatives are required to be synchronized. |
 | `memory_bootstrap` | PASS | receipt complete | Tracked memory synchronization is required before checkpoint. |
 | `claim_language_linter` | PASS | receipt complete | Changed-source claim-language validation is required before checkpoint. |
@@ -340,7 +340,7 @@ Authorization layers:
 | Authorization field | Value | Meaning |
 | --- | --- | --- |
 | `protected_scoped_gate_review_authorized` | false (not authorized) | scoped review authority only |
-| `protected_scoped_gate_review_scope` | not authorized; ordinary P6-T05 draft/control theorem and candidate-scoped obstruction only | exact scope of protected review authority |
+| `protected_scoped_gate_review_scope` | not authorized; ordinary P6-T06 draft/control scoped obstruction only | exact scope of protected review authority |
 | `protected_scoped_gate_review_authority_source_path` | none | tracked source for scoped review authority |
 | `downstream_physics_promotion_authorized` | false (not authorized) | authorizes downstream physics promotion only when true |
 | `downstream_physics_promotion_authority_source_path` | none | tracked source for downstream promotion authority |
@@ -364,9 +364,9 @@ Authorization layers:
 
 Legacy compatibility records:
 
-- active task: `RT-20260726-009`;
-- latest handoff: `handoff-0883`;
-- current status: `p6_t05_conditional_coframe_gluing_and_signature_covariance_naturality_obstruction_ready_for_checkpoint`;
+- active task: `RT-20260726-010`;
+- latest handoff: `handoff-0884`;
+- current status: `p6_t06_scoped_gate_b_uniqueness_robustness_admissibility_obstruction_ready_for_checkpoint`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -376,8 +376,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0883.yaml`
-- `research_control/tasks/RT-20260726-009/00_TASK.yaml`
+- `research_control/handoffs/handoff-0884.yaml`
+- `research_control/tasks/RT-20260726-010/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -393,7 +393,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0883*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0884*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

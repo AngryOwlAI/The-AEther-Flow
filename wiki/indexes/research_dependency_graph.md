@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-07-26T21:10:13Z`
-- Source fingerprint: `8271f0705d2b101a4b8369a39caf77a2ed5b6a1d7e767c32f87cc325de02b9ae`
-- Nodes: `22535`
-- Edges: `73499`
+- Generated from tracked state as of: `2026-07-26T23:39:09Z`
+- Source fingerprint: `6103f00bece2c20be426c8db3b93c0557aa13156faab9105e64350b4632a9892`
+- Nodes: `22574`
+- Edges: `73559`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 1119 |
+| `completion_yaml` | 1120 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 883 |
+| `handoff_yaml` | 884 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,32 +33,32 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 8 |
-| `agent_job` | `support_only` | 1119 |
+| `agent_job` | `support_only` | 1120 |
 | `artifact` | `canonical_source` | 86 |
-| `artifact` | `support_only` | 11435 |
-| `blocked_burden` | `blocked` | 4576 |
-| `claim_boundary` | `support_only` | 1076 |
-| `draft_control_candidate` | `draft_control` | 755 |
-| `draft_control_candidate` | `proposal_only` | 121 |
-| `draft_control_candidate` | `science_draft` | 73 |
-| `frozen_negative` | `frozen_negative` | 139 |
+| `artifact` | `support_only` | 11456 |
+| `blocked_burden` | `blocked` | 4581 |
+| `claim_boundary` | `support_only` | 1077 |
+| `draft_control_candidate` | `draft_control` | 758 |
+| `draft_control_candidate` | `proposal_only` | 122 |
+| `draft_control_candidate` | `science_draft` | 75 |
+| `frozen_negative` | `frozen_negative` | 140 |
 | `gate_chair_verdict` | `human_gated` | 32 |
-| `handoff` | `support_only` | 883 |
+| `handoff` | `support_only` | 884 |
 | `human_gated_object` | `human_gated` | 535 |
 | `ledger_row` | `accepted_scoped` | 6 |
 | `ledger_row` | `blocked` | 4 |
 | `ledger_row` | `frozen_negative` | 1 |
 | `ledger_row` | `human_gated` | 1 |
 | `ledger_row` | `science_draft` | 3 |
-| `obstruction` | `blocked` | 88 |
+| `obstruction` | `blocked` | 89 |
 | `obstruction` | `rejected` | 4 |
 | `source_extension_evidence_precondition` | `source_extension_evidence` | 38 |
 | `source_ontology_object` | `canonical_source` | 27 |
 | `source_ontology_object` | `rejected` | 50 |
-| `source_ontology_object` | `support_only` | 356 |
+| `source_ontology_object` | `support_only` | 357 |
 | `task` | `human_gated` | 29 |
 | `task` | `science_draft` | 32 |
-| `task` | `support_only` | 1058 |
+| `task` | `support_only` | 1059 |
 
 ## Frontier Table
 
@@ -66,7 +66,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | --- | --- | --- | --- |
 | Resp_lc | `ledger:resp_lc` | `ledger_row` | `accepted_scoped` | Xi_X^R adopted only as admissible source-extension data for Resp_lc continuation through S_X^+; old S_X selector obstruction remains valid and downstream M_src |
 | M_src | `ledger:m_src` | `ledger_row` | `accepted_scoped` | Updated by RT-20260614-134 Phase 9 Gate Chair review to record scoped M_src adoption while g_eff matter coupling Einstein equations benchmark promotion and comp |
-| scoped g_eff | `ledger:g_eff` | `ledger_row` | `accepted_scoped` | P6-T05 proves an equal-determinant Lorentzian versus split-signature countermodel a near-degenerate Lorentzian family a zero-invariant-form source-naturality th |
+| scoped g_eff | `ledger:g_eff` | `ledger_row` | `accepted_scoped` | P6-T06 proves exact same-source cone and transverse-comparison variation a gauge-observable certificate gap inverse-conditioning and signature-crossing witnesse |
 | B_E^{rec} | `object:b_e_rec` | `source_extension_evidence_precondition` | `source_extension_evidence` | Constructs the recovery-bridge candidate map on a declared finite/local source family with explicit bottom branches. |
 | BridgeCert | `object:bridgecert` | `source_extension_evidence_precondition` | `source_extension_evidence` | Required frontier object exposed in completion text: BridgeCert. |
 | SEI-MC criteria | `object:sei_mc_criteria` | `draft_control_candidate` | `draft_control` | Required frontier object exposed in completion text: SEI-MC criteria. |
@@ -106,6 +106,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `blocked_claim:alias_map_as_ledger_authority` | Blocked claim: alias map as ledger authority | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:alias_map_as_physics_proof` | Blocked claim: alias map as physics proof | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:alias_or_status_language_as_physics_authority` | Blocked claim: alias or status language as physics authority | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:ann_v_as_physical_null_cone` | Blocked claim: Ann(V) as physical null cone | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:another_plan_task_or_successor_execution` | Blocked permission: another plan task or successor execution | `registries/ROLE_EXECUTION_REGISTRY.csv` |
 | `blocked_claim:approval_as_claim_promotion` | Blocked claim: approval as claim promotion | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:approval_as_proof` | Blocked claim: approval as proof | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
@@ -159,13 +160,12 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `blocked_claim:audit_pass_as_source_extension_data_adoption` | Blocked claim: audit pass as source-extension data adoption | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:audit_pass_as_source_law_adoption` | Blocked claim: audit pass as source-law adoption | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:audit_pass_as_stress_energy_semantics` | Blocked claim: audit pass as stress-energy semantics | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:audit_pass_as_stress_energy_tensor` | Blocked claim: audit pass as stress-energy tensor | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 
 ## Route Continuity
 
-- Active task: `RT-20260726-009`
-- Latest handoff: `handoff-0883`
-- Handoff path: `research_control/handoffs/handoff-0883.yaml`
-- Next action: Run one governed checkpoint for AJ-RT-20260726-009-001. Only after it commits may one fresh bounded P6-T06 Refuter packet stress the cumulative P6-T03 through P6-T05 package for uniqueness, source covariance, finite and infinitesimal variation robustness, and physical-admissibility overreads or return a precise obstruction.
+- Active task: `RT-20260726-010`
+- Latest handoff: `handoff-0884`
+- Handoff path: `research_control/handoffs/handoff-0884.yaml`
+- Next action: Run one governed checkpoint for AJ-RT-20260726-010-001. Only after it commits may one fresh bounded P6-T07 theoretical-continuation-selector packet name the honest status of the remaining metric branch and choose a materially distinct next route without promoting physical geometry.
 
 This graph is navigational support only; inspect the cited sources before using any claim.
