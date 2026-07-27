@@ -1,0 +1,34 @@
+schema_id: "v21_p6_t08_parent_conflict_review_v1"
+task_id: "RT-20260727-004"
+status: "resolved"
+child_outputs:
+  - execution_unit_id: "child_phys_math"
+    path: "research_control/tasks/RT-20260727-004/artifacts/child_phys_math_p6_t08_gate_b_review.yaml"
+    verdict: "not_enough_assumptions"
+  - execution_unit_id: "child_phys_phil"
+    path: "research_control/tasks/RT-20260727-004/artifacts/child_phys_phil_p6_t08_gate_b_review.yaml"
+    verdict: "freeze_recommended"
+shared_consensus:
+  - "The unchanged P6 package meets zero of eight Gate B criteria."
+  - "No lawful unscoped effective-geometry input exists for P7."
+  - "The historical scoped source-extension record and its protected status remain unchanged."
+  - "The exact-GR target metric cannot repair the source-side gap."
+  - "P15-T04 is a dependency-ready non-promotional route."
+preserved_differences:
+  - difference_id: "DIFF-01"
+    topic: "verdict_token"
+    child_phys_math: "not_enough_assumptions"
+    child_phys_phil: "freeze_recommended"
+    parent_disposition: "freeze_recommended_with_exact_not_enough_assumptions_basis"
+    rationale: "The mathematical finding identifies the missing-assumption mechanism; the route-level consequence is a local freeze of P7 use of the unchanged premise package."
+  - difference_id: "DIFF-02"
+    topic: "reopening_emphasis"
+    child_phys_math: "A materially richer source law or quotient theorem could reopen the same milestone."
+    child_phys_phil: "The immediate dependency-ready route should preserve the result in P15-T04."
+    parent_disposition: "preserve_both"
+    rationale: "P15-T04 packages the current result, while the local freeze criteria separately retain lawful source-side reopening classes."
+resolution_rounds: 1
+unresolved_conflicts: []
+final_verdict: "freeze_recommended"
+selected_next_plan_task_id: "P15-T04"
+physics_promotion_authorized: false

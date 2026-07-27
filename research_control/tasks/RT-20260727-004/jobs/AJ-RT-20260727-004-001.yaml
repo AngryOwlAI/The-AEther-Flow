@@ -1,0 +1,508 @@
+job_id: "AJ-RT-20260727-004-001"
+task_id: "RT-20260727-004"
+decision_id: "DDR-20260727-004"
+role_id: "external-red-team-reviewer"
+role_version: "0.1.0"
+execution_role_ref: "external-red-team-reviewer@0.1.0--RT-20260727-004"
+status: "completed"
+validation_status: "PASS"
+requires_human_gate: false
+created_at: "2026-07-27T18:18:22Z"
+started_at: "2026-07-27T18:18:22Z"
+completed_at: "2026-07-27T18:18:22Z"
+completion_path: "research_control/tasks/RT-20260727-004/jobs/completions/AJC-AJ-RT-20260727-004-001.yaml"
+objective: "Execute only v21 P6-T08 by independently pressuring the fixed cumulative Gate B package, integrating the exact readiness disposition, and selecting one lawful route."
+target_derivation_milestone: "effective_metric_g_eff"
+milestone_burden: "Determine whether effective geometry is ready for matter-coupling work."
+route_label: "external-review-packet"
+route_reason: "Handoff-0885 checkpoint e175d46b36bec4a129e80519e63322f5acd2bce4 v21 P6-T08 and immutable generation 137 select one bounded External Red-Team Reviewer packet."
+immutable_route_sha256: "d5cf42691b44a8614993f52494c3bb57be9b58314aa7557c4e02c7e1fc890dab"
+plan_task_id: "P6-T08"
+recommendation_ids:
+  - "V21-R17"
+  - "V21-R18"
+  - "V21-R19"
+  - "V21-R20"
+  - "V21-R36"
+  - "V21-R37"
+  - "V21-R67"
+  - "V21-R68"
+source_extension_classification_required: true
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 137
+  passes_consumed: 126
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:137"
+  handoff_token: "97ffbfa42a1532f1ba91380561cc07e698fb120d18d17d64"
+  relay_claim_token: "fb8a487ec40293fb2052e37a3f7d85040cf53dc2377be593"
+  route_work_item_id: "P6-T08"
+  route_worker_skill: "continue-research"
+  route_sha256: "d5cf42691b44a8614993f52494c3bb57be9b58314aa7557c4e02c7e1fc890dab"
+  worker_skill: "continue-research"
+  worker_invocation_count: 1
+
+mathematical_decisiveness_contract:
+  contract_path: "research_control/design/mathematical_decisiveness_completion_contract.md"
+  schema_path: ".agents/schemas/PHYSICS_COMPLETION_DECISIVENESS_SCHEMA.md"
+  enforcement_mode: "hard_failure"
+  active_after: "2026-06-21T02:32:39Z"
+
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "physics"
+  payload_type: "precise_obstruction"
+  candidate_family: "V21-P6-T08-INTEGRATED-GATE-B-REVIEW-V1"
+  assumption_delta:
+    - "The P6-T01 through P6-T07 source and status bytes remain fixed."
+    - "The unconditional package remains one oriented ray independent unnormalized density dimensionless phases and the exact scoped ten-slot record."
+    - "The review attacks only the implication that this package is lawful unscoped geometry input to P7."
+    - "Task-local comparison forms remain controls and are not adopted."
+    - "Same-context AI review is recorded and is not relabeled as external human review or independent replication."
+    - "No target metric proper time detector matter benchmark validator registry or workflow result is admitted as a source premise."
+  materiality_basis: "P6-T08 supplies the first independent-role integration of every causal conformal scale signature covariance robustness operational naming and positive-provenance burden into one exact separating certificate and P7-input disposition."
+  payload_details:
+    obstruction_scope: "the unchanged cumulative P6 premise package as a unique source-natural robust operationally calibrated unscoped geometry or P7 input"
+    global_no_go_claimed: false
+  source_basis:
+    - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+    - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+    - "MD-V21-P6-T07-METRIC-OBJECT-NAMING-RECEIPT-V1"
+    - "MD-V21-P11-T05-POSITIVE-PROVENANCE-OPERATIONAL-MEANING-GATE-POLICY"
+    - "research_control/handoffs/handoff-0885.yaml"
+    - "research_control/tasks/RT-20260726-002/artifacts/causal_characteristic_target_v1.tex"
+    - "research_control/tasks/RT-20260726-003/artifacts/source_local_transport_candidate_v1.tex"
+    - "research_control/tasks/RT-20260726-005/artifacts/one_ray_conformal_insufficiency_v1.tex"
+    - "research_control/tasks/RT-20260726-007/artifacts/source_scale_calibration_nonselection_v1.tex"
+    - "research_control/tasks/RT-20260726-009/artifacts/signature_covariance_naturality_obstruction_v1.tex"
+    - "research_control/tasks/RT-20260726-010/artifacts/uniqueness_covariance_robustness_admissibility_obstruction_v1.tex"
+  expected_artifact_paths:
+    - "research_control/tasks/RT-20260727-004/artifacts/p6_t08_gate_b_external_red_team_review_v1.yaml"
+    - "research_control/tasks/RT-20260727-004/artifacts/p6_t08_gate_b_separating_certificate_v1.yaml"
+    - "research_control/tasks/RT-20260727-004/artifacts/p6_t08_gate_b_positive_provenance_record_v1.yaml"
+    - "research_control/tasks/RT-20260727-004/artifacts/p6_t08_theorem_inventory_and_route_v1.yaml"
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+
+family_freeze_admission:
+  schema_id: "family_freeze_route_admission_v1"
+  policy_id: "family_freeze_reopening_policy_v1"
+  route_id: "v21_p6_t08_integrated_gate_b_review"
+  family_id: "V21-P6-T08-INTEGRATED-GATE-B-REVIEW-V1"
+  family_identity_sha256: "83591be5c1f505c9bba8b217e25597db561c0793da9f9fedf80caabe924d16a1"
+  assumption_sha256es:
+    - "32a055bc5c851f0a36d726343cb5be1f1d68cf72a5a32fccead12b3488f04273"
+    - "7b446c8660410e655166c0b3124fc37aad9edb8e49b7df2afdc9911c6f560958"
+    - "007ae324872868b9eb9cdf0ebc4f1131737c71eda9ce301c805acd5041a52bac"
+    - "96a527cccb8e7a6a614debc5110902b1587848178af8444fc02acda52caf4d28"
+    - "d7e116d553b1d8a28d5168d7f268c86301161493d08f50a4741573e154e7d4b4"
+    - "a9c307207ede1d04825c73d5f3ff7e081f27ce15ebf4aac4d6041aae4873aa8a"
+  route_kind: "precise_obstruction"
+  detected_match_basis: []
+  reopening:
+    requested: false
+    class: "none"
+  distinct_branch:
+    branch_identity: "P6T08-INTEGRATED-GATE-B-SEPARATING-CERTIFICATE"
+    material_difference_basis: "The packet reviews and integrates the cumulative P6 burden and positive-provenance status; it does not reconstruct any frozen candidate."
+    reconstructs_frozen_candidate: false
+    expected_artifact_paths:
+      - "research_control/tasks/RT-20260727-004/artifacts/p6_t08_gate_b_separating_certificate_v1.yaml"
+      - "research_control/tasks/RT-20260727-004/artifacts/p6_t08_gate_b_external_red_team_review_v1.yaml"
+  authority_limits:
+    local_family_freeze_preserved: true
+    global_no_go_claimed: false
+    automatic_candidate_adoption: false
+    theorem_truth_inferred: false
+    ontology_modified: false
+    physics_promotion_authorized: false
+
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  expected_durable_outputs:
+    physics:
+      - "research_control/tasks/RT-20260727-004/artifacts/p6_t08_gate_b_external_red_team_review_v1.yaml"
+      - "research_control/tasks/RT-20260727-004/artifacts/p6_t08_gate_b_separating_certificate_v1.yaml"
+      - "research_control/tasks/RT-20260727-004/artifacts/p6_t08_gate_b_positive_provenance_record_v1.yaml"
+      - "research_control/tasks/RT-20260727-004/artifacts/p6_t08_theorem_inventory_and_route_v1.yaml"
+    project_system:
+      - "research_control/tasks/RT-20260727-004/artifacts/validate_p6_t08_gate_b_review.py"
+      - "research_control/tasks/RT-20260727-004/artifacts/p6_t08_gate_b_review_compact_receipt_v1.json"
+      - "research_control/tasks/RT-20260727-004/artifacts/p6_t08_gate_b_review_validation_v1.json"
+  acceptance_criteria:
+    physics:
+      - "all eight Gate B criteria and the positive-provenance dimensions are directly evaluated"
+      - "the exact P7 input disposition and scoped obstruction are recorded"
+      - "review provenance and every child difference are preserved"
+    project_system:
+      - "fixed source hashes and authority flags pass task-local validation"
+      - "the external-red-team schema and positive-provenance shape pass"
+      - "one governed checkpoint records the bounded transaction"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: false
+    exception_id: ""
+    evidence_path: ""
+    evidence_sha256: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0885"
+  source_handoff_path: "research_control/handoffs/handoff-0885.yaml"
+  source_handoff_sha256: "52aec390648b2afeec93ba8a5cbf3030efd7bb95ac823da7c3eab6f656f33b38"
+  selected_plan_task_id: "P6-T08"
+  guard_outcome: "below_threshold"
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  parent:
+    execution_unit_id: "parent"
+    perspective: "physicist_mathematician_philosopher"
+    responsibilities:
+      - "enforce fixed-source and claim boundaries"
+      - "calibrate reviewer provenance"
+      - "resolve child differences without erasing them"
+      - "fuse one exact Gate B and route disposition"
+  children:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260727-004/artifacts/child_phys_math_p6_t08_gate_b_review.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260727-004/artifacts/child_phys_phil_p6_t08_gate_b_review.yaml"
+      status: "completed"
+  conflict_policy:
+    review_path: "research_control/tasks/RT-20260727-004/artifacts/parent_conflict_review_p6_t08_gate_b_review.yaml"
+    max_resolution_rounds: 2
+    require_parallel_child_revision: true
+    unresolved_conflict_status: "blocked"
+  fusion_policy:
+    fusion_notes_path: "research_control/tasks/RT-20260727-004/artifacts/parent_fusion_notes_p6_t08_gate_b_review.md"
+    fused_output_path: "research_control/tasks/RT-20260727-004/artifacts/p6_t08_gate_b_external_red_team_review_v1.yaml"
+    final_output_replaces_old_single_role_artifact: true
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+
+allowed_read_paths:
+  - "SOUL.md"
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research-continue-goal/SKILL.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - ".agents/roles/physics/external-red-team-reviewer.v0.1.0.md"
+  - ".agents/schemas/AGENT_JOB_SCHEMA.md"
+  - ".agents/schemas/EXECUTION_ROLE_SCHEMA.md"
+  - ".agents/schemas/EXTERNAL_RED_TEAM_REVIEW_ARTIFACT_SCHEMA.md"
+  - ".agents/schemas/PHYSICS_COMPLETION_DECISIVENESS_SCHEMA.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0885.yaml"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  - "research_control/design/gr_derivation_burden_map.md"
+  - "research_control/design/mathematical_decisiveness_completion_contract.md"
+  - "research_control/design/no_target_import_guard_map.md"
+  - "research_control/tasks/RT-20260614-216/**"
+  - "research_control/tasks/RT-20260614-222/**"
+  - "research_control/tasks/RT-20260722-007/**"
+  - "research_control/tasks/RT-20260726-001/**"
+  - "research_control/tasks/RT-20260726-002/**"
+  - "research_control/tasks/RT-20260726-003/**"
+  - "research_control/tasks/RT-20260726-005/**"
+  - "research_control/tasks/RT-20260726-007/**"
+  - "research_control/tasks/RT-20260726-009/**"
+  - "research_control/tasks/RT-20260726-010/**"
+  - "research_control/tasks/RT-20260726-011/**"
+  - "ontology/tex/aether_flow_geometry.tex"
+  - "registries/**"
+
+allowed_write_paths:
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "registries/METRIC_USE_LEDGER.csv"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_burden_status_migration_receipt.json"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status.md"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_validation.json"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_compact_receipt.json"
+  - "research_control/tasks/RT-20260727-004/**"
+  - "research_control/handoffs/handoff-0886.yaml"
+  - "research_control/handoffs/handoff-0886.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/PDF_DERIVATIVE_REGISTRY.csv"
+  - "registries/PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "registries/TEX_SOURCE_REGISTRY.csv"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/pdf/**"
+  - "wiki/tex/**"
+
+allowed_generated_paths:
+  - ".local/content_semantics/**"
+  - ".local/obsidian/**"
+  - ".local/memory_index/**"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_burden_status_migration_receipt.json"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status.md"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_validation.json"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_compact_receipt.json"
+  - "FOLDER_MAP.md"
+  - "registries/CONTENT_SEMANTIC_REGISTRY.csv"
+  - "registries/CONTENT_SEMANTIC_REGISTRY.meta.json"
+  - "registries/FILE_OBJECT_REGISTRY.csv"
+  - "registries/FILE_OBJECT_REGISTRY.meta.json"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY.csv"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY.meta.json"
+  - "registries/OBSIDIAN_VAULT_REGISTRY.csv"
+  - "registries/OBSIDIAN_VAULT_REGISTRY.meta.json"
+  - "registries/WIKI_ARTIFACT_REGISTRY.csv"
+  - "registries/WIKI_ARTIFACT_REGISTRY.meta.json"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/tex/**"
+  - "output/**"
+
+forbidden_paths:
+  - "ontology/tex/**"
+  - "ontology/pdfs/**"
+  - "manuscripts/**"
+  - ".codex/skills/continue-research-goal/goals/**"
+  - ".local/** as tracked transaction evidence"
+
+allowed_source_classes:
+  - "science_draft"
+  - "scientific_gate_read_only"
+  - "control_state"
+  - "registry"
+  - "role_contract"
+  - "canonical_ontology_read_only"
+  - "task_local_review_output"
+
+forbidden_source_classes:
+  - "canonical_ontology_write"
+  - "benchmark_source_as_source_premise"
+  - "generated_derivative_authority"
+  - "physics_claim_promotion"
+  - "source_law_adoption"
+  - "MetricData_E_adoption"
+  - "unscoped_g_eff_adoption"
+  - "historical_gate_verdict_rewrite"
+  - "comparison_form_physical_promotion"
+  - "candidate_reconstruction"
+  - "gate_chair_verdict"
+  - "human_review_without_receipt"
+  - "internal_review_as_independent_replication"
+  - "matter_coupling_derivation"
+  - "Einstein_equations"
+  - "benchmark_promotion"
+  - "global_theory_rejection"
+  - "future_source_extension_impossibility"
+  - "completed_derivation_claim"
+
+approved_commands:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"Gate B metric object naming\" --limit 10 --json"
+  - ".venv/bin/python scripts/research_control/continue_research.py --summary"
+  - ".venv/bin/python -m py_compile research_control/tasks/RT-20260727-004/artifacts/validate_p6_t08_gate_b_review.py"
+  - ".venv/bin/python research_control/tasks/RT-20260727-004/artifacts/validate_p6_t08_gate_b_review.py --write-report --json"
+  - ".venv/bin/python scripts/research_control/validate_red_team_review_artifact.py --json research_control/tasks/RT-20260727-004/artifacts/p6_t08_gate_b_external_red_team_review_v1.yaml"
+  - ".venv/bin/python research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_renderer.py --write --json"
+  - ".venv/bin/python research_control/tasks/RT-20260721-009/artifacts/validate_v21_current_burden_status.py --write --json"
+  - ".venv/bin/python research_control/tasks/RT-20260721-009/artifacts/validate_v21_current_burden_status.py --check --json"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --check"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --check"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --write"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --check"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --json output/research_dependency_graph.json --markdown wiki/indexes/research_dependency_graph.md --dot output/research_dependency_graph.dot"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --check"
+  - ".venv/bin/python scripts/research_control/generate_claim_graph_v1.py --json output/claim_graph_v1.json"
+  - ".venv/bin/python scripts/research_control/generate_claim_graph_v1.py --check"
+  - ".venv/bin/python scripts/research_control/validate_claim_graph_v1.py --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --json-summary"
+  - ".venv/bin/python scripts/research_control/run_full_research_control_validation.py --json --tail-chars 2500"
+  - ".venv/bin/python -m unittest -v tests.test_research_control"
+  - ".venv/bin/python -m unittest discover -s tests"
+  - "git diff --check"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260727-004-001"
+
+required_validators:
+  - "memory_preflight"
+  - "query_memory_status"
+  - "query_memory_search_gate_b"
+  - "task_local_p6_t08_gate_b_review"
+  - "external_red_team_review_artifact_schema"
+  - "positive_provenance_gate_record"
+  - "v21_current_burden_status"
+  - "memory_bootstrap"
+  - "memory_validate_only"
+  - "render_current_frontier"
+  - "render_task_index"
+  - "render_compact_current_frontier_v16"
+  - "render_dependency_graph"
+  - "generate_claim_graph_v1"
+  - "validate_claim_graph_v1"
+  - "classify_project_changes"
+  - "project_improvement_signal_parity"
+  - "documentation_impact"
+  - "claim_language"
+  - "research_control_validation"
+  - "full_research_control_validation"
+  - "selected_test_shard"
+  - "git_diff_check"
+  - "checkpoint_research_transaction"
+
+expected_outputs:
+  - "research_control/tasks/RT-20260727-004/**"
+  - "research_control/tasks/RT-20260727-004/artifacts/p6_t08_gate_b_external_red_team_review_v1.yaml"
+  - "research_control/tasks/RT-20260727-004/artifacts/p6_t08_gate_b_separating_certificate_v1.yaml"
+  - "research_control/tasks/RT-20260727-004/artifacts/p6_t08_gate_b_positive_provenance_record_v1.yaml"
+  - "research_control/tasks/RT-20260727-004/artifacts/p6_t08_theorem_inventory_and_route_v1.yaml"
+  - "research_control/tasks/RT-20260727-004/artifacts/p6_t08_gate_b_review_compact_receipt_v1.json"
+  - "research_control/tasks/RT-20260727-004/artifacts/p6_t08_gate_b_review_validation_v1.json"
+  - "research_control/handoffs/handoff-0886.yaml"
+  - "research_control/handoffs/handoff-0886.md"
+  - "research_control/program_state.yaml"
+
+claim_boundary: "CB-V21-P6-T08-GATE-B-INDEPENDENT-REVIEW-001"
+resolves_signal_routing: false
+documentation_impact_id: "DI-RT-20260727-004-001"
+completion_id: "AJC-AJ-RT-20260727-004-001"
+stop_conditions:
+  - "requires_human_gate=true"
+  - "prior source modification or repair is required"
+  - "external outreach would be required"
+  - "review provenance cannot be stated honestly"
+  - "a lawful P7 input cannot be distinguished from the scoped source record"
+  - "validation fails"
+  - "authority expansion required"
+  - "job would touch paths outside allowlist"
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1041
+    relationship_row_count: 5195
+    semantic_row_count: 1041
+    vault_row_count: 1041
+    local_cache_only_warning_count: 0
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: true
+    refresh_performed: true
+    before_core_validation_status: "PASS"
+    before_freshness_status: "WARN"
+    before_local_retrieval_status: "WARN"
+    before_local_cache_only_warning_count: 5
+    after_core_validation_status: "PASS"
+    after_freshness_status: "PASS"
+    after_local_retrieval_status: "PASS"
+    after_local_cache_only_warning_count: 0
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"Gate B metric object naming\" --limit 10 --json"
+      query_type: "search"
+      query_text: "Gate B metric object naming"
+      returned_object_ids:
+        - "MD-V21-P6-T07-METRIC-OBJECT-NAMING-RECEIPT-V1"
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+        - "MD-V21-P11-T05-POSITIVE-PROVENANCE-OPERATIONAL-MEANING-GATE-POLICY"
+  canonical_inspections:
+    - object_id: "MD-V21-P6-T07-METRIC-OBJECT-NAMING-RECEIPT-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260726-011/artifacts/metric_object_naming_receipt.md"
+      source_hash: "e2d76d266dff3802dd7cf5415ae88c48221b9fb1888de6613d19701bdd52f838"
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "2f6d4bc1095f1bb32493b75d6b5ee5d6a2ab55b3cc7809be4b67cc4f4befd618"
+    - object_id: "MD-V21-P11-T05-POSITIVE-PROVENANCE-OPERATIONAL-MEANING-GATE-POLICY"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260722-007/artifacts/positive_provenance_operational_meaning_gate_policy.md"
+      source_hash: "7d679cbcbc05bf771333ba7d3afddb351159b87d0edd92e720942428389b62c6"
+  authority_note: "Generated Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+
+notes: "P6-T08 records a same-context internal AI review and exact local freeze. It does not claim external human review or independent replication."

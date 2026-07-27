@@ -1,0 +1,45 @@
+schema_id: "v21_p6_t08_child_review_v1"
+task_id: "RT-20260727-004"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+review_context: "same_context_internal_role_review"
+status: "completed"
+claim_under_review: "The cumulative P6-T01 through P6-T07 package supplies a unique, source-natural, robust, operationally calibrated unscoped effective geometry that is lawful input to P7 matter-coupling work."
+fixed_source_findings:
+  - finding_id: "MATH-01"
+    severity: "blocking"
+    statement: "The P6-T02 principal symbol is linear in the covector and has characteristic hyperplane Ann(V), not a nondegenerate Lorentzian quadratic null cone."
+    evidence_path: "research_control/tasks/RT-20260726-003/artifacts/source_local_transport_candidate_v1.tex"
+  - finding_id: "MATH-02"
+    severity: "blocking"
+    statement: "The same one-ray datum is compatible with infinitely many nonconformal Lorentzian comparison forms, so neither a conformal class nor an operational cone is selected."
+    evidence_path: "research_control/tasks/RT-20260726-005/artifacts/one_ray_conformal_insufficiency_v1.tex"
+  - finding_id: "MATH-03"
+    severity: "blocking"
+    statement: "A supplied density can normalize a representative only after a conformal class is given; fixed-density anisotropy and positive flow rescaling leave rod and clock normalization unresolved."
+    evidence_path: "research_control/tasks/RT-20260726-007/artifacts/source_scale_calibration_nonselection_v1.tex"
+  - finding_id: "MATH-04"
+    severity: "blocking"
+    statement: "The admitted source datum supports incompatible signatures and arbitrarily ill-conditioned nondegenerate forms, while source automorphism naturality supplies no nonzero symmetric bilinear selector."
+    evidence_path: "research_control/tasks/RT-20260726-009/artifacts/signature_covariance_naturality_obstruction_v1.tex"
+  - finding_id: "MATH-05"
+    severity: "blocking"
+    statement: "The q_(a,epsilon) witness family changes cone classification, transverse ratios, and inverse conditioning at fixed admitted source data; no operational quotient, transport, coarse-graining transfer, or universality law removes the variation."
+    evidence_path: "research_control/tasks/RT-20260726-010/artifacts/uniqueness_covariance_robustness_admissibility_obstruction_v1.tex"
+minimal_countermodel_attempt:
+  attempted: true
+  result: "countermodel_found"
+  summary: "Use one unchanged admitted P6 source package and two members of the existing q_(a,epsilon) comparison family. They agree on the oriented ray, density, dimensionless phases, and scoped-record status while changing at least one of causal covector classification, transverse rod ratio, signature branch, or inverse conditioning. This blocks the reviewed readiness implication without adopting either comparison form."
+  artifact_path: "research_control/tasks/RT-20260727-004/artifacts/p6_t08_gate_b_separating_certificate_v1.yaml"
+gate_b_result:
+  criterion_count: 8
+  met_count: 0
+  unmet_count: 8
+  lawful_p7_effective_geometry_input_exists: false
+verdict: "not_enough_assumptions"
+recommended_route: "P15-T04"
+route_reason: "P15-T04 is dependency-ready after P6-T08 and can preserve the P5-P6 positive and negative mathematics in a durable report without pretending Gate B passed; P7-T01 lacks its required geometry input."
+limitations:
+  - "This is an internal same-context role review, not human-expert review or independent replication."
+  - "The result is scoped to the unchanged cumulative P6 premise package and is not a global no-go theorem."
+physics_promotion_authorized: false

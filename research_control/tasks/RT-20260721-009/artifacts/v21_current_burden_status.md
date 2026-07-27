@@ -13,9 +13,9 @@ state, or latest handoff, those sources govern and this file is stale.
 | Field | Value |
 | --- | --- |
 | Schema | `v21_current_burden_status_v1` |
-| Source commit at generation | `9b592da8356a4bc08ca175e48b2eba4576f05ea3` |
-| Status generation time | `2026-07-27T02:16:46Z` |
-| Tracked task count | 1121 |
+| Source commit at generation | `e175d46b36bec4a129e80519e63322f5acd2bce4` |
+| Status generation time | `2026-07-27T18:18:22Z` |
+| Tracked task count | 1125 |
 | Stable definition count | 10 |
 | Distance-to-GR burden count | 14 |
 | Historical authored-map commit | `2c5fb02fd8fff9b449ab10a328d7c881b13ef546` |
@@ -23,21 +23,21 @@ state, or latest handoff, those sources govern and this file is stale.
 
 ### Exact source hashes
 
-- `registries/DISTANCE_TO_GR_LEDGER.csv`: `d6474d264b4f4905268fd64a9d62aca44709148d8e76dfb1dd2222f78998f174`
-- `registries/RESEARCH_TASK_REGISTRY.csv`: `5b312d8d0e97330b68fedd7937e6385e3f8db645f1fdbb3c939d1253d0c2e447`
+- `registries/DISTANCE_TO_GR_LEDGER.csv`: `c21b88a519eea4b13de34b1ad1b1095eae52e7d08168165626123b9b40e913b3`
+- `registries/RESEARCH_TASK_REGISTRY.csv`: `32e6375a61da903c89f22b4387a258103c7d626f2cde7aaac53c7ad7a578b701`
 - `research_control/design/gr_derivation_burden_map.md`: `8e9d44e3a18ecc8a2430a9c42497da3eb9911c2cf6cd714c1525c5d91551835e`
-- `research_control/handoffs/handoff-0885.yaml`: `52aec390648b2afeec93ba8a5cbf3030efd7bb95ac823da7c3eab6f656f33b38`
-- `research_control/program_state.yaml`: `46358d257c099385094dca8c1830b18e8f116fc609f3ec9017ee90bf186cae1e`
+- `research_control/handoffs/handoff-0886.yaml`: `5c2f8289565c8f346ec06f27f0fbdef863d049e8179d857d916ff109db9fd07c`
+- `research_control/program_state.yaml`: `4e789f6c99b187c363cdbbc43fc0fed832615e21d4b024680611572a23041347`
 - `research_control/tasks/RT-20260721-009/artifacts/v21_burden_definitions_v1.yaml`: `67b8053baa60db4b11ee20582633d6279523d40b2ee853a6c570e2fdc1d113f5`
 
 ## Live control state
 
 | Field | Value |
 | --- | --- |
-| Active task | `RT-20260726-011` |
-| Latest handoff | `handoff-0885` |
-| Current status | `p6_t07_scoped_record_retype_and_p6_t08_selection_ready_for_checkpoint` |
-| Next recommended action | Run one governed checkpoint for AJ-RT-20260726-011-001. Only after it commits may one fresh bounded P6-T08 external-red-team-reviewer packet independently audit the full Gate B and naming package without presuming a physical metric. |
+| Active task | `RT-20260727-004` |
+| Latest handoff | `handoff-0886` |
+| Current status | `p6_t08_gate_b_not_ready_unchanged_package_locally_frozen_p15_t04_selected_ready_for_checkpoint` |
+| Next recommended action | Run one governed checkpoint for AJ-RT-20260727-004-001. Only after it commits may one fresh bounded P15-T04 publication-preparation packet package the P5 and P6 results and obstructions without implying metric adoption. |
 
 ## Authored stable definitions with generated current values
 
@@ -184,14 +184,14 @@ state, or latest handoff, those sources govern and this file is stale.
 
 | Burden ID | Required object | Current status | Control status | Mathematical status | Physical status | Promotion status | Updated at |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| `g_eff` | ScopedMetricStructureRecord_src;legacy_alias_g_eff_GSC_cand;unresolved_burden_g_eff | `accepted` | `gate_review_completed` | `scoped_source_extension_geff_object` | `not_unscoped_lorentzian_metric_not_matter_coupling_not_einstein_equations` | `scoped_source_object_only` | `2026-07-27T02:16:46Z` |
+| `g_eff` | ScopedMetricStructureRecord_src;legacy_alias_g_eff_GSC_cand;unresolved_burden_g_eff | `accepted` | `gate_review_completed` | `scoped_source_extension_geff_object` | `not_unscoped_lorentzian_metric_not_matter_coupling_not_einstein_equations` | `scoped_source_object_only` | `2026-07-27T18:18:22Z` |
 
 #### `g_eff` generated detail
 
-- Current blocking burden: The protected historical verdict applies only to the exact ten-slot scoped source-extension record now named primarily ScopedMetricStructureRecord_src with g_eff^{GSC-cand} retained as its exact legacy alias; bare g_eff remains unresolved because P6-T03 through P6-T06 leave all eight operational Gate B criteria unmet
-- Current next evidence or action: Independently review the complete causal conformal scale signature covariance robustness clock rod coarse-graining and universal-coupling package before any later matter-coupling route and supply materially richer source-side laws before testing unscoped operational geometry
-- Current failure/freeze criterion: Freeze only the exact cumulative route from the unchanged one-ray independent-density dimensionless-phase package to a unique source-natural robust operationally admissible unscoped geometry unless a new source law theorem variation class conditional comparison-geometry program or protected decision changes the exact premises
-- Current evidence: `research_control/tasks/RT-20260726-011/artifacts/metric_object_naming_decision_v1.yaml`
+- Current blocking burden: The protected historical verdict still applies only to the exact ten-slot scoped source-extension record; P6-T08 same-context review integrates the cumulative P6 evidence and confirms that bare g_eff remains unresolved with all eight Gate B criteria unmet
+- Current next evidence or action: Prepare the P15-T04 durable P5-P6 technical report after checkpoint while withholding P7 use of the unchanged package; same-milestone geometry work requires a materially new source law theorem variation class or protected decision
+- Current failure/freeze criterion: Freeze the exact cumulative route from the unchanged one-ray independent-density dimensionless-phase and scoped-record package to an unscoped operational geometry or P7 input; the freeze does not block materially richer source-side continuation or non-promotional reporting
+- Current evidence: `research_control/tasks/RT-20260727-004/artifacts/p6_t08_gate_b_separating_certificate_v1.yaml`
 - Exact overread guard: `no_source_law_adoption;no_metricdata_e_adoption;no_unscoped_geff_adoption;no_matter_coupling_derivation;no_einstein_equations;no_benchmark_promotion;no_completed_derivation;no_global_theory_rejection;no_future_source_extension_impossibility`
 
 ### `matter_coupling`

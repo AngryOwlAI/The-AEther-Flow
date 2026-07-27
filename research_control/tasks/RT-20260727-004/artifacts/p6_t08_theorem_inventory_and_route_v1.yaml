@@ -1,0 +1,68 @@
+schema_id: "v21_p6_t08_theorem_inventory_and_route_v1"
+task_id: "RT-20260727-004"
+status: "completed"
+inventory:
+  - object_id: "P6T01-TWO-SITE-INFLUENCE-NONSELECTION"
+    source_path: "research_control/tasks/RT-20260726-002/artifacts/causal_characteristic_target_v1.tex"
+    status: "draft/control exact finite nonselection result"
+    gate_b_effect: "No unique local influence or causal structure follows from the fixed diagonal response data."
+  - object_id: "P6T02-SOURCE-LOCAL-TRANSPORT-CANDIDATE"
+    source_path: "research_control/tasks/RT-20260726-003/artifacts/source_local_transport_candidate_v1.tex"
+    status: "proposal-only source-extension candidate"
+    gate_b_effect: "Principal symbol xi(V) supplies a characteristic hyperplane and one-ray dual only."
+  - object_id: "P6T03-ONE-RAY-CONFORMAL-INSUFFICIENCY"
+    source_path: "research_control/tasks/RT-20260726-005/artifacts/one_ray_conformal_insufficiency_v1.tex"
+    status: "draft/control exact scoped obstruction"
+    gate_b_effect: "No Lorentzian null cone or conformal class is selected."
+  - object_id: "P6T04-SCALE-CALIBRATION-NONSELECTION"
+    source_path: "research_control/tasks/RT-20260726-007/artifacts/source_scale_calibration_nonselection_v1.tex"
+    status: "draft/control exact scoped obstruction"
+    gate_b_effect: "Density is only a conditional scale representative; clocks and rods remain uncalibrated."
+  - object_id: "P6T05-SIGNATURE-COVARIANCE-NATURALITY-OBSTRUCTION"
+    source_path: "research_control/tasks/RT-20260726-009/artifacts/signature_covariance_naturality_obstruction_v1.tex"
+    status: "draft/control conditional theorem and scoped obstruction"
+    gate_b_effect: "Signature, nondegeneracy, naturality, transition, and time-orientation burdens remain."
+  - object_id: "P6T06-UNIQUENESS-ROBUSTNESS-ADMISSIBILITY-OBSTRUCTION"
+    source_path: "research_control/tasks/RT-20260726-010/artifacts/uniqueness_covariance_robustness_admissibility_obstruction_v1.tex"
+    status: "draft/control precise scoped obstruction"
+    gate_b_effect: "No unique operational gauge, uniform robustness, coarse-graining stability, or universal coupling is established."
+  - object_id: "SCOPED-METRIC-STRUCTURE-RECORD-SRC"
+    source_path: "research_control/tasks/RT-20260726-011/artifacts/metric_object_naming_decision_v1.yaml"
+    status: "historically adopted scoped source-extension record with exact legacy alias"
+    gate_b_effect: "Naming is calibrated, but bare g_eff and physical geometry remain unresolved."
+  - object_id: "P6T08-GATE-B-SEPARATING-CERTIFICATE"
+    source_path: "research_control/tasks/RT-20260727-004/artifacts/p6_t08_gate_b_separating_certificate_v1.yaml"
+    status: "draft/control integrated precise scoped obstruction"
+    gate_b_effect: "The unchanged package is not a lawful P7 effective-geometry input."
+review_summary:
+  review_verdict: "freeze_recommended"
+  gate_b_met_count: 0
+  gate_b_unmet_count: 8
+  positive_provenance_ready_dimensions: 0
+  review_provenance_class: "same_context_role_review"
+  human_expert_review_completed: false
+  independent_replication_completed: false
+  lawful_p7_effective_geometry_input_exists: false
+route:
+  selected_plan_task_id: "P15-T04"
+  route_label: "publication-preparation-packet"
+  role_family: "ontology-formalizer@0.2.0"
+  worker_skill: "continue-research"
+  dependency_ready_after_checkpoint: true
+  reason: "P15-T04 directly depends on P6-T08 and requires an honest durable report even when Gate B failed."
+  p7_t01_selected: false
+  p7_t01_blocker: "No lawful unscoped effective geometry input exists."
+reopening:
+  same_milestone_continuation_open: true
+  exact_classes:
+    - "new source primitive or law"
+    - "new uniqueness or quotient theorem"
+    - "new robust variation class"
+    - "protected decision within exact authority"
+authority_limits:
+  historical_scoped_verdict_preserved: true
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+  physical_metric_adopted: false
+  matter_coupling_derived: false
+  physics_promotion_authorized: false

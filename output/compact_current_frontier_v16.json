@@ -2,7 +2,7 @@
   "schema_id": "compact_current_frontier_v16",
   "generated_from": [
     "research_control/program_state.yaml",
-    "research_control/handoffs/handoff-0885.yaml",
+    "research_control/handoffs/handoff-0887.yaml",
     "registries/DISTANCE_TO_GR_LEDGER.csv",
     "registries/METRIC_USE_LEDGER.csv",
     "research_control/current_frontier.md",
@@ -11,17 +11,17 @@
     "research_control/design/active_state_bifurcation_policy_v1.md"
   ],
   "active_state": {
-    "active_task_id": "RT-20260726-011",
-    "latest_handoff_id": "handoff-0885",
-    "current_status": "p6_t07_scoped_record_retype_and_p6_t08_selection_ready_for_checkpoint",
+    "active_task_id": "RT-20260727-005",
+    "latest_handoff_id": "handoff-0887",
+    "current_status": "p6_t08_traceability_legacy_checkpoint_recovery_pass_ready_for_checkpoint",
     "v15_completed": false,
     "v16_completed": false,
     "v16_plan_registered": true
   },
   "active_state_bifurcation": {
-    "latest_research_task_id": "RT-20260726-011",
-    "latest_research_handoff_id": "handoff-0885",
-    "latest_research_next_action": "Run one governed checkpoint for AJ-RT-20260726-011-001. Only after it commits may one fresh bounded P6-T08 external-red-team-reviewer packet independently audit the full Gate B and naming package without presuming a physical metric.",
+    "latest_research_task_id": "RT-20260727-005",
+    "latest_research_handoff_id": "handoff-0887",
+    "latest_research_next_action": "Run the one governed cumulative checkpoint for AJ-RT-20260727-005-001 with --legacy-validation. Only after it commits may one fresh bounded P15-T04 publication-preparation packet package the P5 and P6 results and obstructions without implying metric adoption.",
     "latest_project_system_task_id": "none",
     "latest_project_system_status": "none",
     "latest_project_system_sidecar_task_id": "none",
@@ -30,10 +30,10 @@
     "next_research_route_source": "latest_research_handoff"
   },
   "next_route": {
-    "route_id": "v21_p6_t08_independent_gate_b_review_and_effective_geometry_integration",
-    "role_family": "external-red-team-reviewer@0.1.0",
+    "route_id": "v21_p15_t04_source_dynamics_and_reconstruction_technical_report",
+    "role_family": "ontology-formalizer@0.2.0",
     "target_derivation_milestone": "effective_metric_g_eff",
-    "milestone_burden": "Determine whether effective geometry is ready for matter-coupling work.",
+    "milestone_burden": "Create a coherent scientific record whether the result is positive or obstructed.",
     "requires_human_gate": false
   },
   "claim_boundary": {
@@ -237,7 +237,7 @@
     {
       "object_id": "g_eff",
       "reader_facing_status": "ScopedMetricStructureRecord_src adopted as the scoped source-extension record; g_eff^{GSC-cand} retained as exact legacy alias",
-      "authority_path": "research_control/tasks/RT-20260726-011/artifacts/metric_object_naming_decision_v1.yaml",
+      "authority_path": "research_control/tasks/RT-20260727-004/artifacts/p6_t08_gate_b_separating_certificate_v1.yaml",
       "scope_qualifier": "not_unscoped_lorentzian_metric_not_matter_coupling_not_einstein_equations",
       "blocked_overread": [
         "no_source_law_adoption",
@@ -326,7 +326,7 @@
   ],
   "distance_to_gr": {
     "delta": {
-      "effect": "no_distance_delta",
+      "effect": "none_project_system_recovery",
       "changed": false,
       "milestone": "effective_metric_g_eff",
       "burden_id": "g_eff"
@@ -401,7 +401,7 @@
           "no_global_theory_rejection",
           "no_future_source_extension_impossibility"
         ],
-        "last_evidence_path": "research_control/tasks/RT-20260726-011/artifacts/metric_object_naming_decision_v1.yaml",
+        "last_evidence_path": "research_control/tasks/RT-20260727-004/artifacts/p6_t08_gate_b_separating_certificate_v1.yaml",
         "high_risk_status_card": {
           "object_id": "g_eff",
           "positive_status": "ScopedMetricStructureRecord_src is the primary name for the adopted scoped source-extension record; g_eff^{GSC-cand} is its exact legacy alias.",
@@ -591,34 +591,62 @@
   },
   "metric_use_ledger": {
     "ledger_path": "registries/METRIC_USE_LEDGER.csv",
-    "total_row_count": "24",
-    "forbidden_or_import_row_count": "24",
-    "blocked_physical_metric_use_row_count": "12",
-    "audited_clean_row_count": "10",
+    "total_row_count": "25",
+    "forbidden_or_import_row_count": "25",
+    "blocked_physical_metric_use_row_count": "13",
+    "audited_clean_row_count": "11",
     "blocked_by_scope_row_count": "14",
     "use_category_counts": {
-      "blocked_physical_metric_use": "12",
+      "blocked_physical_metric_use": "13",
       "finite_local_witness_context": "7",
       "scoped_source_extension_context": "4",
       "source_side_relation_input_candidate": "1"
     },
     "audit_status_counts": {
-      "audited_clean": "10",
+      "audited_clean": "11",
       "blocked_by_scope": "14"
     },
     "stress_status_counts": {
       "not_applicable": "19",
-      "scoped_obstruction": "5"
+      "scoped_obstruction": "6"
     }
   },
   "validation": {
     "latest_required_status": "PASS",
     "pending_layers": [
       {
+        "layer": "post_write",
+        "status": "PENDING",
+        "evidence": [
+          "Integrated control, documentation, signal, memory, and test validation remains before checkpoint."
+        ]
+      },
+      {
         "layer": "post_checkpoint",
         "status": "PENDING",
         "evidence": [
-          "One governed checkpoint remains; P6-T08 is unexecuted."
+          "One governed cumulative legacy-validation checkpoint remains; P15-T04 is not executed before it."
+        ]
+      },
+      {
+        "layer": "renderer",
+        "status": "PENDING",
+        "evidence": [
+          "Tracked frontier, task-index, graph, registry, and wiki derivatives remain to be synchronized."
+        ]
+      },
+      {
+        "layer": "memory_bootstrap",
+        "status": "PENDING",
+        "evidence": [
+          "Tracked memory synchronization remains before checkpoint."
+        ]
+      },
+      {
+        "layer": "claim_language_linter",
+        "status": "PENDING",
+        "evidence": [
+          "Integrated research-control validation remains to confirm no hard claim-language errors."
         ]
       }
     ]

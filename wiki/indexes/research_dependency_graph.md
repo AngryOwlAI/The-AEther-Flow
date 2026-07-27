@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-07-27T02:16:46Z`
-- Source fingerprint: `824b2dde456ec12d3ad72c9a9479fb98739f7cd47ce78f638797936a27e77ba2`
-- Nodes: `22613`
-- Edges: `73604`
+- Generated from tracked state as of: `2026-07-27T18:18:22Z`
+- Source fingerprint: `6d1732bfcb46a190bd05c8ac349efdfd36a1e638601aeeeca0414a0f4c707ec7`
+- Nodes: `22686`
+- Edges: `73725`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 1121 |
+| `completion_yaml` | 1125 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 885 |
+| `handoff_yaml` | 886 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,24 +33,24 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 8 |
-| `agent_job` | `support_only` | 1121 |
+| `agent_job` | `support_only` | 1125 |
 | `artifact` | `canonical_source` | 87 |
-| `artifact` | `support_only` | 11476 |
-| `blocked_burden` | `blocked` | 4591 |
-| `claim_boundary` | `support_only` | 1078 |
-| `draft_control_candidate` | `draft_control` | 761 |
+| `artifact` | `support_only` | 11505 |
+| `blocked_burden` | `blocked` | 4614 |
+| `claim_boundary` | `support_only` | 1082 |
+| `draft_control_candidate` | `draft_control` | 764 |
 | `draft_control_candidate` | `proposal_only` | 122 |
 | `draft_control_candidate` | `science_draft` | 75 |
 | `frozen_negative` | `frozen_negative` | 140 |
 | `gate_chair_verdict` | `human_gated` | 32 |
-| `handoff` | `support_only` | 885 |
-| `human_gated_object` | `human_gated` | 536 |
+| `handoff` | `support_only` | 886 |
+| `human_gated_object` | `human_gated` | 540 |
 | `ledger_row` | `accepted_scoped` | 6 |
 | `ledger_row` | `blocked` | 4 |
 | `ledger_row` | `frozen_negative` | 1 |
 | `ledger_row` | `human_gated` | 1 |
 | `ledger_row` | `science_draft` | 3 |
-| `obstruction` | `blocked` | 89 |
+| `obstruction` | `blocked` | 90 |
 | `obstruction` | `rejected` | 4 |
 | `source_extension_evidence_precondition` | `source_extension_evidence` | 38 |
 | `source_ontology_object` | `canonical_source` | 27 |
@@ -58,7 +58,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `source_ontology_object` | `support_only` | 357 |
 | `task` | `human_gated` | 29 |
 | `task` | `science_draft` | 32 |
-| `task` | `support_only` | 1060 |
+| `task` | `support_only` | 1064 |
 
 ## Frontier Table
 
@@ -66,7 +66,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | --- | --- | --- | --- |
 | Resp_lc | `ledger:resp_lc` | `ledger_row` | `accepted_scoped` | Xi_X^R adopted only as admissible source-extension data for Resp_lc continuation through S_X^+; old S_X selector obstruction remains valid and downstream M_src |
 | M_src | `ledger:m_src` | `ledger_row` | `accepted_scoped` | Updated by RT-20260614-134 Phase 9 Gate Chair review to record scoped M_src adoption while g_eff matter coupling Einstein equations benchmark promotion and comp |
-| scoped g_eff | `ledger:g_eff` | `ledger_row` | `accepted_scoped` | P6-T07 performs an additive compatibility retype only: ScopedMetricStructureRecord_src is the primary current type; g_eff^{GSC-cand} resolves only to that exact |
+| scoped g_eff | `ledger:g_eff` | `ledger_row` | `accepted_scoped` | P6-T08 records OBST-P6T08-LAWFUL-EFFECTIVE-GEOMETRY-INPUT-ABSENT-001 as a precise scoped obstruction: admitted completions agree on the fixed source package whi |
 | B_E^{rec} | `object:b_e_rec` | `source_extension_evidence_precondition` | `source_extension_evidence` | Constructs the recovery-bridge candidate map on a declared finite/local source family with explicit bottom branches. |
 | BridgeCert | `object:bridgecert` | `source_extension_evidence_precondition` | `source_extension_evidence` | Required frontier object exposed in completion text: BridgeCert. |
 | SEI-MC criteria | `object:sei_mc_criteria` | `draft_control_candidate` | `draft_control` | Required frontier object exposed in completion text: SEI-MC criteria. |
@@ -163,9 +163,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 ## Route Continuity
 
-- Active task: `RT-20260726-011`
-- Latest handoff: `handoff-0885`
-- Handoff path: `research_control/handoffs/handoff-0885.yaml`
-- Next action: Run one governed checkpoint for AJ-RT-20260726-011-001. Only after it commits may one fresh bounded P6-T08 external-red-team-reviewer packet independently audit the full Gate B and naming package without presuming a physical metric.
+- Active task: `RT-20260727-004`
+- Latest handoff: `handoff-0886`
+- Handoff path: `research_control/handoffs/handoff-0886.yaml`
+- Next action: Run one governed checkpoint for AJ-RT-20260727-004-001. Only after it commits may one fresh bounded P15-T04 publication-preparation packet package the P5 and P6 results and obstructions without implying metric adoption.
 
 This graph is navigational support only; inspect the cited sources before using any claim.

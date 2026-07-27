@@ -1,0 +1,92 @@
+schema_id: "v21_p6_t08_gate_b_separating_certificate_v1"
+certificate_id: "CERT-P6T08-GATE-B-SEPARATION-001"
+obstruction_id: "OBST-P6T08-LAWFUL-EFFECTIVE-GEOMETRY-INPUT-ABSENT-001"
+task_id: "RT-20260727-004"
+status: "draft/control precise scoped obstruction"
+target_derivation_milestone: "effective_metric_g_eff"
+milestone_burden: "Determine whether effective geometry is ready for matter-coupling work."
+fixed_premise_package:
+  - "one oriented source ray [V]"
+  - "one independent unnormalized positive density"
+  - "dimensionless phase data without clock or detector semantics"
+  - "the exact ten-slot ScopedMetricStructureRecord_src under its historical declared source-extension scope"
+  - "the P6-T02 proposal-only transport operator and every explicit P6-T03 through P6-T06 scope guard"
+separating_witnesses:
+  - witness_id: "SEP-01-CHARACTERISTIC"
+    agrees_on: "the fixed source ray and transport candidate"
+    separates: "linear characteristic hyperplane Ann(V) from a Lorentzian quadratic null cone"
+    consequence: "characteristic cone identification is not met"
+    source_path: "research_control/tasks/RT-20260726-003/artifacts/source_local_transport_candidate_v1.tex"
+  - witness_id: "SEP-02-CONFORMAL"
+    agrees_on: "one characteristic ray"
+    separates: "infinitely many nonconformal Lorentzian comparison forms"
+    consequence: "a conformal class and unique cone are not selected"
+    source_path: "research_control/tasks/RT-20260726-005/artifacts/one_ray_conformal_insufficiency_v1.tex"
+  - witness_id: "SEP-03-SCALE-ROD-CLOCK"
+    agrees_on: "the ray, fixed density, and dimensionless phases"
+    separates: "fixed-density anisotropic transverse ratios and positive flow rescalings"
+    consequence: "rod and absolute clock calibration are not selected"
+    source_path: "research_control/tasks/RT-20260726-007/artifacts/source_scale_calibration_nonselection_v1.tex"
+  - witness_id: "SEP-04-SIGNATURE-NATURALITY"
+    agrees_on: "the admitted source datum"
+    separates: "Lorentzian, split-signature, and near-degenerate comparison branches"
+    consequence: "signature, nondegeneracy, and a nonzero source-natural bilinear selector are not derived"
+    source_path: "research_control/tasks/RT-20260726-009/artifacts/signature_covariance_naturality_obstruction_v1.tex"
+  - witness_id: "SEP-05-ROBUSTNESS-ADMISSIBILITY"
+    agrees_on: "the complete unchanged cumulative P6 premise package"
+    separates: "causal classification, transverse rod ratios, and inverse conditioning across q_(a,epsilon)"
+    consequence: "uniqueness, observable-preserving gauge, uniform robustness, and physical admissibility are not established"
+    source_path: "research_control/tasks/RT-20260726-010/artifacts/uniqueness_covariance_robustness_admissibility_obstruction_v1.tex"
+integrated_statement:
+  theorem_like_claim: "For the fixed cumulative P6 premise package, the reviewed evidence does not justify a map to a unique source-natural robust operationally calibrated unscoped Lorentzian geometry: admitted comparison completions agree on the premise package while differing in at least one required causal, signature, scale, rod, or conditioning output."
+  exact_scope: "the unchanged P6-T01 through P6-T07 premise and variation package"
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+gate_b_matrix:
+  criterion_count: 8
+  met_count: 0
+  unmet:
+    - criterion: "unique cone up to derived observable-preserving gauge"
+      smallest_missing_input: "source-derived cone discriminator plus an explicit observable-preserving equivalence relation and quotient theorem"
+    - criterion: "source covariance and global gluing"
+      smallest_missing_input: "source-derived coframe or form selector with transition inverse cocycle and naturality laws"
+    - criterion: "uniform finite-variation robustness"
+      smallest_missing_input: "a source-side exclusion or control law for degeneracy signature crossing and inverse conditioning"
+    - criterion: "characteristic cone identification"
+      smallest_missing_input: "a source-derived quadratic principal symbol or an equivalent cone-generating theorem"
+    - criterion: "clock calibration"
+      smallest_missing_input: "a source-defined clock protocol and normalization law"
+    - criterion: "rod calibration"
+      smallest_missing_input: "a source-defined spatial comparison protocol invariant under the declared gauge"
+    - criterion: "coarse-grained geometry stability"
+      smallest_missing_input: "a geometry-valued coarse-graining map and a uniform transfer inequality"
+    - criterion: "universal matter coupling"
+      smallest_missing_input: "source matter and detector semantics plus a universal-coupling theorem excluding inequivalent propagation branches"
+p7_input_disposition:
+  lawful_effective_geometry_input_exists: false
+  p7_t01_selected: false
+  missing_input_bundle: "all eight Gate B criteria and the seven-dimension positive-provenance profile"
+freeze:
+  label: "P6T08-UNCHANGED-PACKAGE-TO-P7-EFFECTIVE-GEOMETRY"
+  scope: "promotion of the unchanged cumulative P6 premise package into an unscoped operational geometry or P7 matter-coupling input"
+  reopening_classes:
+    - "new source primitive or law supplying a cone discriminator, operational calibration, or universality"
+    - "new theorem defining the exact observable-preserving quotient and proving uniqueness and naturality"
+    - "new variation class with uniform robustness and geometry-level coarse-graining control"
+    - "protected human decision within its exact authority"
+  adoption_status: "blocked_adoption_open_continuation"
+selected_next_route:
+  plan_task_id: "P15-T04"
+  route_label: "publication-preparation-packet"
+  role_family: "ontology-formalizer@0.2.0"
+  reason: "Package the P5-P6 positive and negative results while preserving the failed Gate B and P7-input boundary."
+authority_limits:
+  canonical_ontology_modified: false
+  source_law_adopted: false
+  historical_scoped_record_status_changed: false
+  physical_metric_adopted: false
+  matter_coupling_derived: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  proof_authority: false
+  physics_promotion_authorized: false

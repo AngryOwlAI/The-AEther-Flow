@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260726-011`
-- Latest handoff: `handoff-0885`
-- Current status: `p6_t07_scoped_record_retype_and_p6_t08_selection_ready_for_checkpoint`
+- Active task: `RT-20260727-005`
+- Latest handoff: `handoff-0887`
+- Current status: `p6_t08_traceability_legacy_checkpoint_recovery_pass_ready_for_checkpoint`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260726-011`
-- Latest research handoff: `handoff-0885`
-- Latest research next action: Run one governed checkpoint for AJ-RT-20260726-011-001. Only after it commits may one fresh bounded P6-T08 external-red-team-reviewer packet independently audit the full Gate B and naming package without presuming a physical metric.
+- Latest research task: `RT-20260727-005`
+- Latest research handoff: `handoff-0887`
+- Latest research next action: Run the one governed cumulative checkpoint for AJ-RT-20260727-005-001 with --legacy-validation. Only after it commits may one fresh bounded P15-T04 publication-preparation packet package the P5 and P6 results and obstructions without implying metric adoption.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p6_t08_independent_gate_b_review_and_effective_geometry_integration`
-- Role family: `external-red-team-reviewer@0.1.0`
+- Route ID: `v21_p15_t04_source_dynamics_and_reconstruction_technical_report`
+- Role family: `ontology-formalizer@0.2.0`
 - Target milestone: `effective_metric_g_eff`
-- Milestone burden: Determine whether effective geometry is ready for matter-coupling work.
+- Milestone burden: Create a coherent scientific record whether the result is positive or obstructed.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -57,15 +57,15 @@ These cards render high-risk rows in the required order: positive status, exact 
 ## Metric-Use Ledger
 
 - Ledger path: `registries/METRIC_USE_LEDGER.csv`
-- Total rows: `24`
-- Forbidden/import guard rows: `24`
-- Blocked physical metric-use rows: `12`
+- Total rows: `25`
+- Forbidden/import guard rows: `25`
+- Blocked physical metric-use rows: `13`
 - Authority: project-control guard ledger only; no physics proof authority.
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `ed972af125b1ace2ed9430805aee9ad66fbf0c43f8fc5a9a920098f82cb61378`
-- JSON SHA-256: `8e29ed1d9ea297ac93a941e88382476a1af59c7e6393e1e45c892ce86302b8e0`
+- YAML SHA-256: `0b8a087c5c5bded1d922cc949c1f072c4381bbd7cf19a15fe33c843e55eafe1d`
+- JSON SHA-256: `bb45b65e77b4dc267f47b7601491174d5f2cb5339d0b275a7e72d63926acec6d`
 
 ## Authority Warning
 
