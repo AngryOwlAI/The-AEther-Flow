@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260726-010` and `handoff-0884`.
+`RT-20260726-011` and `handoff-0885`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260726-010` |
-| Latest handoff ID | `handoff-0884` |
-| Current status | `p6_t06_scoped_gate_b_uniqueness_robustness_admissibility_obstruction_ready_for_checkpoint` |
+| Active task ID | `RT-20260726-011` |
+| Latest handoff ID | `handoff-0885` |
+| Current status | `p6_t07_scoped_record_retype_and_p6_t08_selection_ready_for_checkpoint` |
 | V16 completed | false |
-| Current route family | formalization or theorem (scientific) |
+| Current route family | integration or selection (scientific) |
 | Target derivation milestone | `effective_metric_g_eff` |
 | Current burden | `g_eff` |
-| Required next authority | After the governed checkpoint commits, one fresh bounded P6-T07 theoretical-continuation-selector packet may select among a materially richer source-law route, a conditional comparison-geometry program, or continued local freeze while treating the cumulative P6-T03 through P6-T06 obstruction package as scoped evidence. |
-| Next recommended action | Run one governed checkpoint for AJ-RT-20260726-010-001. Only after it commits may one fresh bounded P6-T07 theoretical-continuation-selector packet name the honest status of the remaining metric branch and choose a materially distinct next route without promoting physical geometry. |
+| Required next authority | After the governed checkpoint commits one fresh bounded P6-T08 external-red-team-reviewer packet may independently audit the complete causal conformal scale signature covariance robustness clock rod coarse-graining universality and naming package. |
+| Next recommended action | Run one governed checkpoint for AJ-RT-20260726-011-001. Only after it commits may one fresh bounded P6-T08 external-red-team-reviewer packet independently audit the full Gate B and naming package without presuming a physical metric. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260726-010` |
-| Latest research handoff ID | `handoff-0884` |
-| Latest research next action | Run one governed checkpoint for AJ-RT-20260726-010-001. Only after it commits may one fresh bounded P6-T07 theoretical-continuation-selector packet name the honest status of the remaining metric branch and choose a materially distinct next route without promoting physical geometry. |
+| Latest research task ID | `RT-20260726-011` |
+| Latest research handoff ID | `handoff-0885` |
+| Latest research next action | Run one governed checkpoint for AJ-RT-20260726-011-001. Only after it commits may one fresh bounded P6-T08 external-red-team-reviewer packet independently audit the full Gate B and naming package without presuming a physical metric. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260726-010/00_TASK.yaml`.
-- Active task objective: Stress the cumulative P6-T03 through P6-T05 package for uniqueness up to declared gauge, source covariance, finite-variation robustness, and operational physical admissibility, returning a theorem or precise scoped obstruction without presuming a reconstructed metric.
-- Latest handoff path: `research_control/handoffs/handoff-0884.yaml`.
-- Latest handoff summary: P6-T06 constructs the exact same-source Lorentzian family q_(a,epsilon), proves cone and transverse-comparison variation, records inverse-conditioning and signature-crossing witnesses, retains the P6-T05 zero-invariant-form naturality theorem, and gives exact transition inverse and cocycle controls. A coarse-graining transfer gap and physical-admissibility matrix show that Gate B is not passed. The exact unchanged route is locally frozen, but materially richer source-side and conditional comparison-geometry continuation remain open.
-- Current route family: formalization or theorem (scientific).
-- Next recommended action: Run one governed checkpoint for AJ-RT-20260726-010-001. Only after it commits may one fresh bounded P6-T07 theoretical-continuation-selector packet name the honest status of the remaining metric branch and choose a materially distinct next route without promoting physical geometry.
+- Active task path: `research_control/tasks/RT-20260726-011/00_TASK.yaml`.
+- Active task objective: Align the scoped source metric-structure record name and status with the evidence while preserving historical resolution and selecting one materially distinct next packet.
+- Latest handoff path: `research_control/handoffs/handoff-0885.yaml`.
+- Latest handoff summary: P6-T07 makes ScopedMetricStructureRecord_src the primary current control type for the exact historical ten-slot scoped source-extension record while preserving g_eff^{GSC-cand} as an exact legacy alias. Bare g_eff remains the unresolved effective-metric burden. Comparison controls and the exact-GR target metric remain distinct. Gate B is 0 of 8. P6-T08 is selected as an independent source-extension smuggling audit.
+- Current route family: integration or selection (scientific).
+- Next recommended action: Run one governed checkpoint for AJ-RT-20260726-011-001. Only after it commits may one fresh bounded P6-T08 external-red-team-reviewer packet independently audit the full Gate B and naming package without presuming a physical metric.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -84,7 +84,7 @@ Adopted source-only or source-extension objects:
 | Object | Status | Authority | Scope qualifier | Blocked overread | Downstream promotion authorized |
 | --- | --- | --- | --- | --- | --- |
 | M_src | adopted only as scoped source-only M_src object | `research_control/tasks/RT-20260614-134/artifacts/165_M_SRC_GSC_INTEGRATED_SOURCE_ONLY_ADOPTION_THEOREM_GATE_CHAIR_REVIEW.tex` | not_target_manifold_not_metric_not_gr_derivation | no_metricdata_e_adoption<br>no_geff_scope_expansion<br>no_matter_coupling_derivation<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | false |
-| g_eff | adopted only as scoped source-extension g_eff object | `research_control/tasks/RT-20260726-010/artifacts/uniqueness_covariance_robustness_admissibility_obstruction_v1.tex` | not_unscoped_lorentzian_metric_not_matter_coupling_not_einstein_equations | no_source_law_adoption<br>no_metricdata_e_adoption<br>no_unscoped_geff_adoption<br>no_matter_coupling_derivation<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation<br>no_global_theory_rejection<br>no_future_source_extension_impossibility | false |
+| g_eff | ScopedMetricStructureRecord_src adopted as the scoped source-extension record; g_eff^{GSC-cand} retained as exact legacy alias | `research_control/tasks/RT-20260726-011/artifacts/metric_object_naming_decision_v1.yaml` | not_unscoped_lorentzian_metric_not_matter_coupling_not_einstein_equations | no_source_law_adoption<br>no_metricdata_e_adoption<br>no_unscoped_geff_adoption<br>no_matter_coupling_derivation<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation<br>no_global_theory_rejection<br>no_future_source_extension_impossibility | false |
 
 Scoped accepted evidence/preconditions:
 
@@ -126,13 +126,13 @@ downstream GR claim.
 | Field | Value |
 | --- | --- |
 | Ledger path | `registries/METRIC_USE_LEDGER.csv` |
-| Total rows | 21 |
-| Forbidden/import guard rows | 21 |
-| Blocked physical metric-use rows | 11 |
-| Audited-clean rows | 8 |
-| Blocked-by-scope rows | 13 |
-| Use categories | `blocked_physical_metric_use`: 11; `finite_local_witness_context`: 6; `scoped_source_extension_context`: 3; `source_side_relation_input_candidate`: 1 |
-| Audit statuses | `audited_clean`: 8; `blocked_by_scope`: 13 |
+| Total rows | 24 |
+| Forbidden/import guard rows | 24 |
+| Blocked physical metric-use rows | 12 |
+| Audited-clean rows | 10 |
+| Blocked-by-scope rows | 14 |
+| Use categories | `blocked_physical_metric_use`: 12; `finite_local_witness_context`: 7; `scoped_source_extension_context`: 4; `source_side_relation_input_candidate`: 1 |
+| Audit statuses | `audited_clean`: 10; `blocked_by_scope`: 14 |
 
 ## Positive-First Status Cards
 
@@ -156,15 +156,15 @@ completed-derivation authority.
 
 ### `g_eff`
 
-**Positive status:** g_eff is adopted only as a scoped source-extension g_eff object.
+**Positive status:** ScopedMetricStructureRecord_src is the primary name for the adopted scoped source-extension record; g_eff^{GSC-cand} is its exact legacy alias.
 
-**Scope:** The adoption applies only to the declared source-extension candidate scope.
+**Scope:** The adoption applies only to the exact declared source-extension candidate scope reviewed in RT-20260614-222.
 
-**Allowed use:** Later bounded packets may use it as scoped source-extension context.
+**Allowed use:** Later bounded packets may use ScopedMetricStructureRecord_src as scoped source-extension context and may use g_eff^{GSC-cand} only as its explicit exact legacy alias.
 
 **Blocked overread:** No MetricData(E), unscoped g_eff, matter coupling, Einstein equations, benchmark promotion, or completed derivation follows from this row.
 
-**Next burden:** Show any later use of scoped g_eff as source-extension context without adopting MetricData(E), an unscoped Lorentzian metric, matter coupling, or Einstein equations.
+**Next burden:** Independently review the full Gate B package while using ScopedMetricStructureRecord_src as the scoped record and keeping bare g_eff unresolved.
 
 ### `matter_coupling`
 
@@ -216,7 +216,7 @@ columns below are the reader-facing anti-overread boundary:
 High-risk rows:
 
 - `m_src`: reader-facing `adopted only as scoped source-only M_src object`; control `gate_review_completed`; mathematical `scoped_source_only_adopted_object`; physical `not_target_manifold_not_metric_not_gr_derivation`; promotion `scoped_source_object_only`; guards: no_metricdata_e_adoption<br>no_geff_scope_expansion<br>no_matter_coupling_derivation<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation.
-- `g_eff`: reader-facing `adopted only as scoped source-extension g_eff object`; control `gate_review_completed`; mathematical `scoped_source_extension_geff_object`; physical `not_unscoped_lorentzian_metric_not_matter_coupling_not_einstein_equations`; promotion `scoped_source_object_only`; guards: no_source_law_adoption<br>no_metricdata_e_adoption<br>no_unscoped_geff_adoption<br>no_matter_coupling_derivation<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation<br>no_global_theory_rejection<br>no_future_source_extension_impossibility.
+- `g_eff`: reader-facing `ScopedMetricStructureRecord_src adopted as the scoped source-extension record; g_eff^{GSC-cand} retained as exact legacy alias`; control `gate_review_completed`; mathematical `scoped_source_extension_geff_object`; physical `not_unscoped_lorentzian_metric_not_matter_coupling_not_einstein_equations`; promotion `scoped_source_object_only`; guards: no_source_law_adoption<br>no_metricdata_e_adoption<br>no_unscoped_geff_adoption<br>no_matter_coupling_derivation<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation<br>no_global_theory_rejection<br>no_future_source_extension_impossibility.
 - `matter_coupling`: reader-facing `accepted only as scoped source-extension evidence/precondition`; control `accepted_as_scoped_evidence_precondition`; mathematical `parameterized_finite_local_witness_precondition`; physical `not_matter_coupling_not_stress_energy_not_matter_action_not_detector_semantics`; promotion `scoped_source_evidence_only`; guards: no_source_law_adoption<br>no_metricdata_e_adoption<br>no_geff_scope_expansion<br>no_coupling_law_adoption<br>no_matter_coupling_derivation<br>no_matter_coupling_adoption<br>no_stress_energy_semantics<br>no_stress_energy_tensor<br>no_matter_action<br>no_detector_semantics<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation<br>no_future_source_extension_impossibility<br>no_global_theory_rejection.
 - `einstein_equations`: reader-facing `not started; no positive derivation status`; control `not_started`; mathematical `dynamics_action_or_variation_missing`; physical `no_field_equation_derivation`; promotion `none`; guards: no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation.
 - `benchmark_promotion`: reader-facing `no benchmark promotion from scoped evidence/precondition alone`; control `blocked`; mathematical `upstream_burdens_missing`; physical `no_exact_gr_benchmark_promotion`; promotion `none`; guards: no_benchmark_promotion<br>no_benchmark_gate_chair_closure<br>no_completed_derivation.
@@ -256,7 +256,7 @@ High-risk burden aliases:
 | Object | Reader-facing status | Required qualifier | Required blocked phrase |
 | --- | --- | --- | --- |
 | `m_src` | adopted only as scoped source-only M_src object | M_src is not a target manifold, not a metric, and not a GR derivation. | No MetricData(E), g_eff scope expansion, matter coupling, Einstein equations, benchmark promotion, or completed derivation follows from this row. |
-| `g_eff` | adopted only as scoped source-extension g_eff object | The object is not an unscoped Lorentzian metric and does not supply matter coupling or Einstein equations. | No MetricData(E), unscoped g_eff, matter coupling, Einstein equations, benchmark promotion, or completed derivation follows from this row. |
+| `g_eff` | ScopedMetricStructureRecord_src adopted as the scoped source-extension record; g_eff^{GSC-cand} retained as exact legacy alias | Bare g_eff remains an unresolved burden; the scoped record is not an unscoped Lorentzian metric and does not supply matter coupling or Einstein equations. | No MetricData(E), unscoped g_eff, matter coupling, Einstein equations, benchmark promotion, or completed derivation follows from this row. |
 | `matter_coupling` | accepted only as scoped source-extension evidence/precondition | PositiveMSProfile_v1 and RR_ETransportCompletenessOrInvarianceLaw_v1 are scoped evidence/preconditions only; matter coupling remains not derived and not adopted. | No source-law adoption, RR_ETransportCompletenessOrInvarianceLaw_v1 adoption, PositiveMSProfile_v1 adoption, SourceMatterSemanticsAdoptionReadinessLaw_v1 law adoption, matter semantics, detector semantics, coupling law, matter coupling, stress-energy, matter action, MetricData(E), g_eff scope expansion, Einstein equations, benchmark promotion, or completed derivation follows from this row. |
 | `einstein_equations` | not started; no positive derivation status | No Einstein-equation premise, derivation, benchmark closure, or completed derivation has been established. | Einstein equations remain blocked by missing dynamics, action, variation, matter coupling, and protected benchmark authority. |
 | `benchmark_promotion` | no benchmark promotion from scoped evidence/precondition alone | Exact-GR benchmark promotion remains blocked by upstream derivation burdens and protected authority. | No benchmark promotion, closure, fit claim, or completed exact-GR derivation claim follows from scoped evidence/preconditions. |
@@ -289,7 +289,7 @@ preserves the raw ledger `current_status` field for continuity.
 | `obsloc_lc` | `source_localization_obsloc_lc` | constructive local exact-branch witness only | constructive witness exists | constructive_witness_recorded | constructive_witness | local_exact_branch_only | draft_control_only | no_source_law_adoption<br>no_matter_coupling_derivation<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/tasks/RT-20260614-037/artifacts/58_LOCALIZATION_SOURCE_BASIS_AXIOM_SELECTOR_DOMAIN_EQSRC_ALTERNATIVE_BRANCH_FAMILY_GUARD_STABILITY_SOURCE_PACKET_SMUGGLING_AUDIT.tex` |
 | `resp_lc` | `response_localization_resp_lc` | accepted only as scoped source-extension selector data | accepted | accepted_as_source_extension_data | selector_data_source_extension | not_detector_semantics_not_matter_coupling | scoped_source_object_only | no_canonical_ontology_edit<br>no_matter_coupling_derivation<br>no_detector_semantics<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/tasks/RT-20260614-060/artifacts/101_RESP_LC_SOURCE_EXTENSION_HUMAN_GATE_ADOPTION_DECISION.tex` |
 | `m_src` | `source_manifold_m_src` | adopted only as scoped source-only M_src object | accepted | gate_review_completed | scoped_source_only_adopted_object | not_target_manifold_not_metric_not_gr_derivation | scoped_source_object_only | no_metricdata_e_adoption<br>no_geff_scope_expansion<br>no_matter_coupling_derivation<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/tasks/RT-20260614-134/artifacts/165_M_SRC_GSC_INTEGRATED_SOURCE_ONLY_ADOPTION_THEOREM_GATE_CHAIR_REVIEW.tex` |
-| `g_eff` | `effective_metric_g_eff` | adopted only as scoped source-extension g_eff object | accepted | gate_review_completed | scoped_source_extension_geff_object | not_unscoped_lorentzian_metric_not_matter_coupling_not_einstein_equations | scoped_source_object_only | no_source_law_adoption<br>no_metricdata_e_adoption<br>no_unscoped_geff_adoption<br>no_matter_coupling_derivation<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation<br>no_global_theory_rejection<br>no_future_source_extension_impossibility | `research_control/tasks/RT-20260726-010/artifacts/uniqueness_covariance_robustness_admissibility_obstruction_v1.tex` |
+| `g_eff` | `effective_metric_g_eff` | ScopedMetricStructureRecord_src adopted as the scoped source-extension record; g_eff^{GSC-cand} retained as exact legacy alias | accepted | gate_review_completed | scoped_source_extension_geff_object | not_unscoped_lorentzian_metric_not_matter_coupling_not_einstein_equations | scoped_source_object_only | no_source_law_adoption<br>no_metricdata_e_adoption<br>no_unscoped_geff_adoption<br>no_matter_coupling_derivation<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation<br>no_global_theory_rejection<br>no_future_source_extension_impossibility | `research_control/tasks/RT-20260726-011/artifacts/metric_object_naming_decision_v1.yaml` |
 | `matter_coupling` | `matter_coupling` | accepted only as scoped source-extension evidence/precondition | accepted | accepted_as_scoped_evidence_precondition | parameterized_finite_local_witness_precondition | not_matter_coupling_not_stress_energy_not_matter_action_not_detector_semantics | scoped_source_evidence_only | no_source_law_adoption<br>no_metricdata_e_adoption<br>no_geff_scope_expansion<br>no_coupling_law_adoption<br>no_matter_coupling_derivation<br>no_matter_coupling_adoption<br>no_stress_energy_semantics<br>no_stress_energy_tensor<br>no_matter_action<br>no_detector_semantics<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation<br>no_future_source_extension_impossibility<br>no_global_theory_rejection | `research_control/tasks/RT-20260702-064/artifacts/source_certificate_operation_laws_v1.tex` |
 | `einstein_equations` | `einstein_equations` | not started; no positive derivation status | not started | not_started | dynamics_action_or_variation_missing | no_field_equation_derivation | none | no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/program_state.yaml` |
 | `finite_variation_robustness` | `source_equivalence_eqsrc` | Refuter stress passed | Refuter stress passed | refuter_stress_passed | conditional_theorem_candidate | downstream_gr_blocked | draft_control_only | no_source_law_adoption<br>no_matter_coupling_derivation<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/tasks/RT-20260614-101/artifacts/142_RESP_LC_M_SRC_GSC_FINITE_VARIATION_ROBUSTNESS_LAW_REFUTER_STRESS_TEST.tex` |
@@ -302,7 +302,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one governed checkpoint for AJ-RT-20260726-010-001. Only after it commits may one fresh bounded P6-T07 theoretical-continuation-selector packet name the honest status of the remaining metric branch and choose a materially distinct next route without promoting physical geometry.
+Run one governed checkpoint for AJ-RT-20260726-011-001. Only after it commits may one fresh bounded P6-T08 external-red-team-reviewer packet independently audit the full Gate B and naming package without presuming a physical metric.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -320,37 +320,28 @@ Layer status summary:
 
 | Status | Count | Meaning |
 | --- | --- | --- |
-| `PASS` | 6 | receipt complete |
+| `PASS` | 3 | receipt complete |
 | `PENDING` | 1 | open item; evidence must explain why |
 
 Validation layers:
 
 | Validation layer | Status | Meaning | Evidence |
 | --- | --- | --- | --- |
-| `pre_execution` | PASS | receipt complete | Generation 130 validated, atomically claimed, and consumed its exact immutable P6-T06 route once. |
-| `completion_internal` | PASS | receipt complete | The exact comparison family, variation witnesses, transition controls, coarse-graining gap, physical-admissibility matrix, scoped obstruction, freeze, and reopening criteria pass 84 task-local checks. |
-| `post_write` | PASS | receipt complete | Integrated control, documentation, signal, memory, and test validation are required before checkpoint. |
-| `post_checkpoint` | PENDING | open item; evidence must explain why | One governed checkpoint remains; P6-T07 is not executed before it. |
-| `renderer` | PASS | receipt complete | Tracked frontier, task-index, graph, registry, and wiki derivatives are required to be synchronized. |
-| `memory_bootstrap` | PASS | receipt complete | Tracked memory synchronization is required before checkpoint. |
-| `claim_language_linter` | PASS | receipt complete | Changed-source claim-language validation is required before checkpoint. |
+| `pre_execution` | PASS | receipt complete | Generation 131 validated claimed and consumed exactly once.<br>P6-T06 dependency checkpoint is committed. |
+| `completion_internal` | PASS | receipt complete | Primary type exact alias historical hashes Gate B matrix and next route pass task-local validation. |
+| `post_write` | PASS | receipt complete | Integrated control documentation signal memory and test validation are required before checkpoint. |
+| `post_checkpoint` | PENDING | open item; evidence must explain why | One governed checkpoint remains; P6-T08 is unexecuted. |
 
 Authorization layers:
 
 | Authorization field | Value | Meaning |
 | --- | --- | --- |
 | `protected_scoped_gate_review_authorized` | false (not authorized) | scoped review authority only |
-| `protected_scoped_gate_review_scope` | not authorized; ordinary P6-T06 draft/control scoped obstruction only | exact scope of protected review authority |
-| `protected_scoped_gate_review_authority_source_path` | none | tracked source for scoped review authority |
 | `downstream_physics_promotion_authorized` | false (not authorized) | authorizes downstream physics promotion only when true |
-| `downstream_physics_promotion_authority_source_path` | none | tracked source for downstream promotion authority |
 | `benchmark_promotion_authorized` | false (not authorized) | authorizes benchmark promotion only when true |
-| `benchmark_promotion_authority_source_path` | none | tracked source for benchmark authority |
 | `completed_derivation_authorized` | false (not authorized) | authorizes completed-derivation claim only when true |
-| `completed_derivation_authority_source_path` | none | tracked source for completed-derivation authority |
 | `Gate_Chair_verdict_authorized` | False | extension authorization field |
 | `canonical_ontology_edit_authorized` | False | extension authorization field |
-| `conformal_metric_or_scale_adoption_authorized` | False | extension authorization field |
 | `external_outreach_authorized` | False | extension authorization field |
 | `external_publication_authorized` | False | extension authorization field |
 | `global_no_go_claim_authorized` | False | extension authorization field |
@@ -364,9 +355,9 @@ Authorization layers:
 
 Legacy compatibility records:
 
-- active task: `RT-20260726-010`;
-- latest handoff: `handoff-0884`;
-- current status: `p6_t06_scoped_gate_b_uniqueness_robustness_admissibility_obstruction_ready_for_checkpoint`;
+- active task: `RT-20260726-011`;
+- latest handoff: `handoff-0885`;
+- current status: `p6_t07_scoped_record_retype_and_p6_t08_selection_ready_for_checkpoint`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -376,8 +367,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0884.yaml`
-- `research_control/tasks/RT-20260726-010/00_TASK.yaml`
+- `research_control/handoffs/handoff-0885.yaml`
+- `research_control/tasks/RT-20260726-011/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -393,7 +384,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0884*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0885*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

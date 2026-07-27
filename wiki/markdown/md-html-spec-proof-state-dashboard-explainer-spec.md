@@ -14,11 +14,10 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 
 ## Related Objects
 
-- Related source: `MD-PROOF-STATE-DASHBOARD-PUBLICATION-BRIEF` `markdown/publication-briefs/proof-state-dashboard.publication-brief.md`
 - Generated output path: `wiki/markdown/md-html-spec-proof-state-dashboard-explainer-spec.md`
 - Backlink from `HTML-PROOF-STATE-DASHBOARD-EXPLAINER` `html/proof-state-dashboard-explainer.html`
 
 ## Validation
 
 - Validation status: `PASS`
-- Last validated at: `2026-07-08T20:09:45Z`
+- Last validated at: `2026-07-27T03:04:15Z`

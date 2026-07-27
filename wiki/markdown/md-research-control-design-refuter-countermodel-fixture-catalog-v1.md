@@ -14,10 +14,9 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 
 ## Related Objects
 
-- Related source: `MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V15;MD-RESEARCH-CONTROL-DESIGN-REFUTER-OBSTRUCTION-SCHEMA-V1` ``
 - Generated output path: `wiki/markdown/md-research-control-design-refuter-countermodel-fixture-catalog-v1.md`
 
 ## Validation
 
 - Validation status: `PASS`
-- Last validated at: `2026-07-03T08:34:26Z`
+- Last validated at: `2026-07-27T03:04:15Z`

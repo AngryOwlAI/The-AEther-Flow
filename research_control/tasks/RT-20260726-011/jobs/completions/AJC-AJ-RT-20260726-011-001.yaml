@@ -1,0 +1,590 @@
+job_id: "AJ-RT-20260726-011-001"
+completion_id: "AJC-AJ-RT-20260726-011-001"
+task_id: "RT-20260726-011"
+task_type: "v21_p6_t07_metric_object_naming_integration_and_route_selection"
+decision_id: "DDR-20260726-011"
+role_id: "theoretical-continuation-selector"
+role_version: "0.1.0"
+execution_role_ref: "theoretical-continuation-selector@0.1.0--RT-20260726-011"
+status: "completed"
+validation_status: "PASS"
+final_repository_validation_status: "PASS_READY_FOR_CHECKPOINT"
+created_at: "2026-07-27T02:16:46Z"
+started_at: "2026-07-27T02:16:46Z"
+completed_at: "2026-07-27T02:16:46Z"
+objective: "Align the scoped source metric-structure record name and status with the evidence and select one materially distinct next packet."
+completion_summary: "P6-T07 makes ScopedMetricStructureRecord_src the primary current control type for the exact historical ten-slot scoped source-extension record and retains g_eff^{GSC-cand} as an exact legacy alias under the same scope. Bare g_eff remains the unresolved burden. GateBComparisonForm controls and the exact-GR target metric remain distinct. All eight Gate B criteria are unmet. P6-T08 is selected as an independent source-extension smuggling audit."
+objective_result: "scoped_record_retyped_with_exact_legacy_alias_gate_b_not_ready"
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 131
+  passes_consumed: 121
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:131"
+  handoff_token: "0b59ebd46c08e990c0b667076e74ee2f78d82ebf339d518c"
+  relay_claim_token: "d47555d54091ebce08285020fb13a24e6a93fbfc75cf949c"
+  route_work_item_id: "P6-T07"
+  route_worker_skill: "continue-research"
+  route_sha256: "f730068723b6a23dd20dc6015a09c3da4a87523706a9bf36fe5afd46ccc7f8d2"
+  worker_skill: "continue-research"
+  worker_invocation_count: 1
+
+transaction_status: "ready_for_checkpoint"
+result_disposition: "P6_T07_SCOPED_RECORD_RETYPE_AND_P6_T08_SELECTION_READY_FOR_CHECKPOINT"
+milestone_disposition: "completed_with_naming_calibration_and_route_selection"
+adoption_status: "blocked_adoption_open_continuation"
+checkpoint_commit:
+  required: true
+  attempted: false
+  committed: false
+  commit_sha: ""
+  dependency_checkpoint_commit: "9b592da8356a4bc08ca175e48b2eba4576f05ea3"
+  push_authorized: false
+  push_performed: false
+
+is_physics_task: true
+payload_class: "route_decision"
+has_new_mathematical_payload: true
+source_extension_classification_required: true
+external_red_team_finding_requires_integration: false
+physics_promotion_authorized: false
+proof_authority: false
+
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P6"
+  plan_task_id: "P6-T07"
+  work_kind: "integration_or_selection"
+  task_class: "science"
+  expected_result_kind: "completed_or_precisely_blocked"
+  dependency_task_id: "P6-T06"
+  dependency_completion_path: "research_control/tasks/RT-20260726-010/jobs/completions/AJC-AJ-RT-20260726-010-001.yaml"
+  dependency_completion_sha256: "d2d57e46d00c75d883aa9cac88bd881967eb40ef9bb8c6012ed6a0ec606bb172"
+  dependency_checkpoint_commit: "9b592da8356a4bc08ca175e48b2eba4576f05ea3"
+  work_item_status: "completed_ready_for_checkpoint"
+  recommendation_ids:
+    - "V21-R20"
+    - "V21-R31"
+    - "V21-R32"
+    - "V21-R33"
+    - "V21-R50"
+  recommendation_coverage_role: "direct_implementation"
+  scientific_claims_changed: false
+  scientific_claim_change_scope: "none; additive current control naming and exact compatibility resolution only"
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  distance_to_gr_delta_scope: "none; ledger resolver wording calibrated while registered layer vocabulary remains unchanged"
+  physics_promotion_authorized: false
+  proof_authority: false
+  next_dependency_work_item: "P6-T08_after_checkpoint"
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  observed_durable_outputs:
+    physics:
+      - "research_control/tasks/RT-20260726-011/artifacts/metric_object_naming_decision_v1.yaml"
+      - "research_control/tasks/RT-20260726-011/artifacts/gate_b_readiness_verdict_v1.yaml"
+      - "research_control/tasks/RT-20260726-011/artifacts/metric_object_alias_migration_plan_v1.yaml"
+    project_system:
+      - "research_control/tasks/RT-20260726-011/artifacts/validate_metric_object_naming.py"
+      - "research_control/tasks/RT-20260726-011/artifacts/metric_object_naming_validation_receipt_v1.json"
+      - "research_control/tasks/RT-20260726-011/artifacts/g_eff_reference_audit_v1.json"
+  accepted_criteria:
+    physics:
+      - "the exact historical ten-slot record has one honest primary type and exact legacy alias"
+      - "all eight Gate B criteria are evaluated without promotion"
+      - "one materially distinct P6-T08 packet is selected"
+    project_system:
+      - "alias calibration and status-card mirrors remain exact"
+      - "historical source hashes and current reference classifications pass"
+      - "one governed checkpoint records the bounded transaction"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+physics_payload_admission_result:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "physics"
+  declared_payload_type: "route_decision"
+  realized_payload_type: "route_decision"
+  candidate_family: "V21-P6-T07-SCOPED-METRIC-STRUCTURE-RECORD-NAMING-V1"
+  result: "PASS"
+  material_payload_present: true
+  process_receipts_counted_as_payload: false
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed_by_admission: false
+  physics_promotion_authorized: false
+
+family_freeze_admission_result:
+  schema_id: "family_freeze_route_admission_v1"
+  policy_id: "family_freeze_reopening_policy_v1"
+  route_id: "v21_p6_t07_scoped_metric_structure_record_naming"
+  family_id: "V21-P6-T07-SCOPED-METRIC-STRUCTURE-RECORD-NAMING-V1"
+  detected_match_basis: []
+  reopening_requested: false
+  result: "PASS_UNFROZEN_NAMING_INTEGRATION"
+  local_family_freeze_preserved: true
+  global_no_go_claimed: false
+  physics_promotion_authorized: false
+
+ordinary_route_guard_admission_result:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0884"
+  selected_plan_task_id: "P6-T07"
+  guard_outcome: "below_threshold"
+  result: "PASS"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  scientific_status_changed_by_guard: false
+  physics_promotion_authorized: false
+
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_execution_unit_count: 2
+  outer_agentjob_count: 1
+  child_agentjob_count: 0
+  subagent_count: 0
+
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260726-011/artifacts/child_phys_math_p6_t07_metric_object_naming.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260726-011/artifacts/child_phys_phil_p6_t07_metric_object_naming.yaml"
+      status: "completed"
+  conflict_review:
+    status: "resolved"
+    review_path: "research_control/tasks/RT-20260726-011/artifacts/parent_conflict_review_p6_t07_metric_object_naming.yaml"
+    resolution_rounds: 1
+    resolved_conflict_count: 2
+    unresolved_conflicts: []
+  fusion:
+    fused_output_path: "research_control/tasks/RT-20260726-011/artifacts/metric_object_naming_decision_v1.yaml"
+    fusion_notes_path: "research_control/tasks/RT-20260726-011/artifacts/parent_fusion_notes_p6_t07_metric_object_naming.md"
+    shared_consensus_summary: "The exact historical object is a scoped source-side record rather than an established operational metric."
+    unique_phys_math_contributions: "Exact ten-slot type resolution legacy alias relation and zero-of-eight Gate B evaluation."
+    unique_phys_phil_contributions: "Historical-verdict preservation semantic class boundaries overread controls and independent-review selection."
+    novelty_preservation_summary: "Fusion preserves the exact record identity and protected scoped status while making the current primary type and next audit explicit."
+    claim_boundary_preservation_summary: "No historical rewrite ontology source law physical metric comparison geometry downstream GR proof publication push global no-go or completed derivation is authorized."
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+
+theoretical_decision_output:
+  selected_next_packet_type: "source_extension_smuggling_audit"
+  selected_next_route_family: "external-review-packet"
+  selected_next_role_family: "external-red-team-reviewer@0.1.0"
+  selected_next_task_id: "P6-T08"
+  decision_basis: "P6-T06 leaves all eight Gate B criteria unmet while P6-T07 supplies an exact primary-type and legacy-alias calibration. The plan makes P6-T08 the dependency-ready materially distinct independent review before any later matter-coupling route."
+  theoretical_method: "Compare rename retype promotion and freeze options against the historical ten-slot construction protected scoped verdict cumulative P6-T03 through P6-T06 obstruction matrix status aliases metric ledgers and v21 dependency graph."
+  preserves_claim_blocks: true
+  requires_human_gate: false
+  human_gate_reason: "No protected ontology edit source-law adoption Gate Chair verdict benchmark closure or completed-derivation authority is requested."
+  selected_next_packet_requires_human_gate: false
+  decision_consequence: "One independent reviewer audits the full Gate B and naming package and either integrates a lawful effective-geometry input or records the exact remaining repair without assuming promotion."
+  new_payload_novelty: "Introduces the first exact current resolver separating ScopedMetricStructureRecord_src the historical g_eff^{GSC-cand} alias bare g_eff burden comparison controls and target metric while selecting the post-integration review."
+  source_extension_category: "source_extension_smuggling_audit"
+  source_extension_import_classification: "The next packet audits status-boundary evidence and hidden target or physical-metric imports. It is not derivation from current ontology source-extension adoption a new ontology primitive or target-GR import."
+
+source_extension_classification:
+  checklist_id: "source_extension_classification_checklist_v1"
+  records:
+    - object_id: "ScopedMetricStructureRecord_src"
+      classification: "status_boundary_evidence_only"
+      relation_to_current_ontology: "evidence_only"
+      claim_boundary_id: "CB-V21-P6-T07-METRIC-OBJECT-NAMING-001"
+      blocked_overreads:
+        - "current ontology derives the ten-slot record"
+        - "the scoped record is an unscoped Lorentzian metric"
+        - "the exact legacy alias expands the historical scope"
+        - "comparison controls or the target metric are alias instances"
+        - "matter coupling Einstein equations benchmark promotion or completed derivation"
+      protected_authority_required: false
+      downstream_promotion_authorized: false
+      physics_promotion_authorized: false
+
+ontology_law_research_packet:
+  route: "ontology-law-research-packet"
+  trigger_classification: "derivation_critical_missing_source_law"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Prevent semantic promotion beyond the mathematical result."
+  missing_source_law: "A source-derived cone discriminator operational-covector transport law uniform robustness law geometry-level coarse-graining map clock and rod calibration and universal-coupling law."
+  underdetermination_statement: "Current ontology does not derive the named cone discriminator transport robustness coarse-graining calibration or universal-coupling laws."
+  no_go_theorem_status: "not_proved"
+  adoption_status:
+    current_adoption: "blocked"
+    continuation: "open"
+    status_pair: "blocked_adoption_open_continuation"
+  packet_payload_mode: "candidate_law_refutation"
+  candidate_law_refutation:
+    refuted_candidate: "Promoting the exact scoped ten-slot record to an unscoped physical metric by naming or alias resolution alone."
+    refutation_basis: "The protected verdict is scoped and P6-T03 through P6-T06 leave all eight operational Gate B criteria unmet."
+    surviving_obligations:
+      - "source-derived cone discriminator and operational transport"
+      - "uniform robustness and geometry-level coarse-graining transfer"
+      - "clock rod characteristic and universal-coupling laws"
+  exact_gr_recovery_obligations:
+    checklist:
+      - "derive physical geometry from source-side laws without target fitting"
+      - "satisfy all Gate B criteria before any physical-metric promotion"
+      - "derive matter coupling and Einstein equations in later distinct burdens"
+      - "retain protected benchmark-promotion authority"
+    distance_to_gr_links:
+      - "effective_metric_g_eff"
+      - "matter coupling"
+      - "Einstein equations"
+      - "benchmark promotion"
+  no_target_import_audit_scope:
+    forbidden_source_classes:
+      - "target_atlas"
+      - "target_metric"
+      - "benchmark_success"
+      - "generated_derivative"
+      - "registry_metadata_authority"
+      - "role_authority"
+      - "validation_authority"
+  human_gate_request:
+    required_before_adoption: true
+    requested_decision: "none in this task"
+    exact_requested_ontology_edit: "none"
+
+new_mathematical_payload:
+  - payload_id: "NMP-RT-20260726-011-001"
+    payload_type: "definition"
+    name: "Scoped metric-structure record resolver"
+    summary: "Defines the current primary type exact historical alias unresolved bare burden comparison-control class and target-metric distinction for the ten-slot record."
+  - payload_id: "NMP-RT-20260726-011-002"
+    payload_type: "packet_selection"
+    name: "P6-T08 independent Gate B audit selection"
+    summary: "Selects one materially distinct source-extension smuggling audit after the naming integration and preserves all promotion blocks."
+
+mathematical_payload_manifest:
+  - payload_id: "PAYLOAD-RT011-001"
+    payload_type: "definition"
+    object_name: "ScopedMetricStructureRecord_src exact compatibility resolver"
+    claim_status: "draft/control naming integration"
+    source_path: "research_control/tasks/RT-20260726-011/artifacts/metric_object_naming_decision_v1.yaml"
+    burden_effect: "narrows"
+    summary: "Names the exact historical scoped record honestly without treating the name change as a scientific delta."
+  - payload_id: "PAYLOAD-RT011-002"
+    payload_type: "dependency_map_update"
+    object_name: "Gate B readiness and object-class separation matrix"
+    claim_status: "draft/control evidence integration"
+    source_path: "research_control/tasks/RT-20260726-011/artifacts/gate_b_readiness_verdict_v1.yaml"
+    burden_effect: "audits"
+    summary: "Records zero of eight Gate B criteria and separates scoped record legacy alias comparison controls bare burden and target metric."
+  - payload_id: "PAYLOAD-RT011-003"
+    payload_type: "packet_selection"
+    object_name: "P6-T08 independent source-extension smuggling audit"
+    claim_status: "draft/control route selection"
+    source_path: "research_control/tasks/RT-20260726-011/artifacts/metric_object_naming_decision_v1.yaml"
+    burden_effect: "selects_next"
+    summary: "Selects one independent audit before any later matter-coupling work."
+
+physics_progress_status:
+  status: "selector_only_no_distance_delta"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Prevent semantic promotion beyond the mathematical result."
+  explanation: "P6-T07 calibrates names and selects P6-T08. It creates no new scientific object and does not pass any Gate B criterion."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "g_eff"
+  milestone: "effective_metric_g_eff"
+  old_status: "historical scoped source-extension g_eff object preserved while the unscoped effective-metric burden remains blocked"
+  new_status: "same scoped object and blocked physical burden with ScopedMetricStructureRecord_src as primary current name and g_eff^{GSC-cand} as exact legacy alias"
+  ledger_row_updated: true
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  downstream_unlocked:
+    - "P6-T08 independent Gate B and naming audit after governed checkpoint"
+  downstream_still_blocked:
+    - "physical source-derived causal cone"
+    - "unscoped effective metric g_eff"
+    - "physical clocks rods and operational metric"
+    - "matter coupling"
+    - "Einstein equations"
+    - "benchmark promotion"
+  explanation: "The ledger wording is calibrated for honest current resolution. No mathematical or physical burden is discharged by the name change."
+
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "unchanged; proposal-only source-side continuation with no canonical ontology edit"
+  - burden: "Source equivalence EqSrc"
+    status: "unchanged; no general source-equivalence theorem"
+  - burden: "RetainH"
+    status: "unchanged"
+  - burden: "GenH"
+    status: "unchanged"
+  - burden: "ObsLoc_lc"
+    status: "unchanged; no physical local frame cone clock or rod"
+  - burden: "Resp_lc"
+    status: "unchanged; no detector or physical readout semantics"
+  - burden: "M_src"
+    status: "historical scoped source-only status unchanged"
+  - burden: "g_eff"
+    status: "ScopedMetricStructureRecord_src is the primary current name for the exact adopted scoped record; g_eff^{GSC-cand} is its legacy alias; bare g_eff and physical geometry remain unresolved"
+  - burden: "matter coupling"
+    status: "blocked"
+  - burden: "Einstein equations"
+    status: "not started"
+  - burden: "finite-variation robustness"
+    status: "P6-T06 obstruction unchanged; no uniform geometry robustness law"
+  - burden: "benchmark promotion"
+    status: "blocked"
+  - burden: "Gate Chair status"
+    status: "historical scoped verdict preserved; no new protected verdict requested"
+  - burden: "current route freeze or hard-fail status"
+    status: "exact unchanged P6-T03 through P6-T06 route remains locally frozen while P6-T08 independent review is selected"
+
+freeze_criteria_status:
+  repeated_burden: true
+  freeze_evaluation_required: true
+  active_freeze_label: "P6T06-UNCHANGED-SOURCE-TO-UNIQUE-ROBUST-ADMISSIBLE-GEOMETRY"
+  prior_attempts_considered:
+    - "P6-T03 through P6-T06 established scoped conformal scale signature covariance robustness and admissibility obstructions."
+    - "P6-T07 calibrates the object name and selects independent review without adding a new physical premise."
+  freeze_if:
+    - "A later packet repeats the unchanged source-to-physical-geometry route or treats the naming change as Gate B evidence."
+  do_not_freeze_if:
+    - "P6-T08 independently reviews the full package and records a materially distinct readiness or exact-repair verdict."
+  freeze_decision: "not_frozen"
+  decision_reason: "Continuation is non-orbital because P6-T08 is an independent review of the integrated package rather than another construction from unchanged premises."
+  next_allowed_route: "smuggling_auditor"
+  global_theory_rejection: false
+  future_source_extension_impossibility: false
+
+route_cycle_control:
+  cycle_family: "v21_p6_source_characteristic_to_effective_geometry"
+  current_cycle_step: "p6_t07_naming_integration_and_independent_review_selection"
+  prior_related_tasks:
+    - "RT-20260726-002 through RT-20260726-010"
+  cycle_risk: "high"
+  orbit_avoidance_reason: "P6-T07 resolves the semantic object identity and selects an independent reviewer rather than repeating a construction audit or stress on the unchanged source family."
+  next_role_consequence: "external-red-team-reviewer@0.1.0 for P6-T08 after checkpoint"
+
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  forbidden_conclusions:
+    - "historical artifact rename or protected verdict revocation"
+    - "name change as scientific progress"
+    - "canonical ontology or source-law adoption"
+    - "M_src adoption or scope expansion"
+    - "MetricData(E) or unscoped g_eff adoption"
+    - "comparison form or target metric as source geometry"
+    - "physical cone clock rod detector universality or matter semantics"
+    - "matter coupling or Einstein equations"
+    - "benchmark promotion proof publication push or completed derivation"
+    - "global no-go theorem global theory rejection or future source-extension impossibility"
+  summary: "P6-T07 is an additive naming integration and route selector only."
+
+artifacts:
+  child_phys_math: "research_control/tasks/RT-20260726-011/artifacts/child_phys_math_p6_t07_metric_object_naming.yaml"
+  child_phys_phil: "research_control/tasks/RT-20260726-011/artifacts/child_phys_phil_p6_t07_metric_object_naming.yaml"
+  parent_conflict_review: "research_control/tasks/RT-20260726-011/artifacts/parent_conflict_review_p6_t07_metric_object_naming.yaml"
+  parent_fusion_notes: "research_control/tasks/RT-20260726-011/artifacts/parent_fusion_notes_p6_t07_metric_object_naming.md"
+  naming_decision: "research_control/tasks/RT-20260726-011/artifacts/metric_object_naming_decision_v1.yaml"
+  alias_migration_plan: "research_control/tasks/RT-20260726-011/artifacts/metric_object_alias_migration_plan_v1.yaml"
+  gate_b_verdict: "research_control/tasks/RT-20260726-011/artifacts/gate_b_readiness_verdict_v1.yaml"
+  reference_audit: "research_control/tasks/RT-20260726-011/artifacts/g_eff_reference_audit_v1.json"
+  compact_validation_receipt: "research_control/tasks/RT-20260726-011/artifacts/metric_object_naming_validation_receipt_v1.json"
+  human_receipt: "research_control/tasks/RT-20260726-011/artifacts/metric_object_naming_receipt.md"
+  validator: "research_control/tasks/RT-20260726-011/artifacts/validate_metric_object_naming.py"
+
+output_paths:
+  - "research_control/tasks/RT-20260726-011/artifacts/child_phys_math_p6_t07_metric_object_naming.yaml"
+  - "research_control/tasks/RT-20260726-011/artifacts/child_phys_phil_p6_t07_metric_object_naming.yaml"
+  - "research_control/tasks/RT-20260726-011/artifacts/parent_conflict_review_p6_t07_metric_object_naming.yaml"
+  - "research_control/tasks/RT-20260726-011/artifacts/parent_fusion_notes_p6_t07_metric_object_naming.md"
+  - "research_control/tasks/RT-20260726-011/artifacts/metric_object_naming_decision_v1.yaml"
+  - "research_control/tasks/RT-20260726-011/artifacts/metric_object_alias_migration_plan_v1.yaml"
+  - "research_control/tasks/RT-20260726-011/artifacts/gate_b_readiness_verdict_v1.yaml"
+  - "research_control/tasks/RT-20260726-011/artifacts/g_eff_reference_audit_v1.json"
+  - "research_control/tasks/RT-20260726-011/artifacts/metric_object_naming_validation_receipt_v1.json"
+  - "research_control/tasks/RT-20260726-011/artifacts/metric_object_naming_receipt.md"
+  - "research_control/tasks/RT-20260726-011/artifacts/validate_metric_object_naming.py"
+  - "research_control/tasks/RT-20260726-011/00_TASK.yaml"
+  - "research_control/tasks/RT-20260726-011/DDR-20260726-011.md"
+  - "research_control/tasks/RT-20260726-011/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260726-011/roles/theoretical-continuation-selector@0.1.0--RT-20260726-011.yaml"
+  - "research_control/tasks/RT-20260726-011/jobs/completions/AJC-AJ-RT-20260726-011-001.yaml"
+  - "research_control/handoffs/handoff-0885.yaml"
+  - "research_control/handoffs/handoff-0885.md"
+
+artifact_receipts:
+  naming_decision:
+    path: "research_control/tasks/RT-20260726-011/artifacts/metric_object_naming_decision_v1.yaml"
+    sha256: "b2e49890c46ba9ef793bd55464daf595bdc9e71671c256feaac315d0f344ec23"
+    status_label: "draft_control_naming_integration"
+  alias_migration_plan:
+    path: "research_control/tasks/RT-20260726-011/artifacts/metric_object_alias_migration_plan_v1.yaml"
+    sha256: "ffe98383d8c34d3c1b3262b1f4116f650da88088bf7085b2caecc4f6e9232415"
+    status_label: "additive_compatibility_plan"
+  gate_b_verdict:
+    path: "research_control/tasks/RT-20260726-011/artifacts/gate_b_readiness_verdict_v1.yaml"
+    sha256: "925678fc5490db48514775b5e7c9eb0dbf740820973a79b9e61c2e2b3fd29eb2"
+    status_label: "draft_control_evidence_integration"
+  validation_receipt:
+    path: "research_control/tasks/RT-20260726-011/artifacts/metric_object_naming_validation_receipt_v1.json"
+    sha256: "8393651bfaf27ea47acaea48bcdbf2788064c9dc31d90962e02ee34a00c60350"
+    status_label: "operational_validation_only"
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 131 validated atomically claimed and consumed its exact immutable P6-T07 route once."
+      - "Dependency checkpoint 9b592da8356a4bc08ca175e48b2eba4576f05ea3 contains finalized P6-T06 evidence."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The exact primary type legacy resolver Gate B matrix historical hash guard and next-packet selection pass task-local validation."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Integrated control documentation signal memory and test validation are required before checkpoint."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "One governed checkpoint remains; P6-T08 is not executed before it."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Tracked frontier task-index graph registry and wiki derivatives are required to be synchronized."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory synchronization is required before checkpoint."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation is required before checkpoint."
+
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=true source_object_count=1039 relationship_row_count=5229 semantic_row_count=1039 vault_row_count=1039"
+  - ".venv/bin/python research_control/tasks/RT-20260726-011/artifacts/validate_metric_object_naming.py --json | exit_code=0 | status=PASS check_count=22 failure_count=0"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --check | exit_code=0 | status=pass"
+
+validation_evidence:
+  - gate_id: "task_local_metric_object_naming"
+    status: "PASS"
+    receipt_path: "research_control/tasks/RT-20260726-011/artifacts/metric_object_naming_validation_receipt_v1.json"
+    content_hash: "sha256:8393651bfaf27ea47acaea48bcdbf2788064c9dc31d90962e02ee34a00c60350"
+    counts:
+      error_count: 0
+      warning_count: 0
+      finding_count: 22
+    relevant_finding_ids: []
+    tree_fingerprint: ""
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not requested; historical RT-20260614-222 verdict is preserved without expansion"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  publication_authorized: false
+  proof_authority: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  canonical_ontology_edit_authorized: false
+  ontology_selection_authorized: false
+  physical_interpretation_establishment_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  sidecar_required: false
+  sidecar_created: false
+  reason: "No nonblank project-improvement signal was emitted."
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1039
+    relationship_row_count: 5229
+    semantic_row_count: 1039
+    vault_row_count: 1039
+    local_cache_only_warning_count: 0
+    refresh_performed: true
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"P6 T07 theoretical continuation selector honest status remaining metric branch\" --limit 10 --json"
+      query_type: "search"
+      query_text: "P6 T07 theoretical continuation selector honest status remaining metric branch"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "5da271db629d0cd72cfaba44b9b6e6641116a6e917b30b5164b82a81fbe2caa2"
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+
+required_next_packet:
+  plan_task_id: "P6-T08"
+  task_type: "independent_gate_b_review_and_effective_geometry_integration"
+  selected_next_packet_type: "source_extension_smuggling_audit"
+  selected_next_role_family: "external-red-team-reviewer@0.1.0"
+  route_label: "external-review-packet"
+  dependency_ready_after_checkpoint: true
+  dependency_ready_now: false
+  executed: false
+
+next_recommendation: "After one governed checkpoint run one bounded P6-T08 external-red-team-reviewer independent Gate B and naming audit."

@@ -7,17 +7,16 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 - Source object: `MD-RESEARCH-CONTROL-DESIGN-ROUTE-DIAGNOSTIC-CACHE-SCHEMA-V1`
 - Source path: `research_control/design/route_diagnostic_cache_schema_v1.md`
 - Format: `markdown`
-- Role: `control_schema`
+- Role: `research_control_design`
 - Authority status: `project_control`
 - Owner skill: `project-memory-system`
 - Source hash: `dda7f9f093811e891dac2bd90c05036ac5760aced65b615a94343f0596e688b6`
 
 ## Related Objects
 
-- Related source: `MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19;MD-RESEARCH-CONTROL-DESIGN-ROUTE-SIGNATURE-SCHEMA-V1` ``
 - Generated output path: `wiki/markdown/md-research-control-design-route-diagnostic-cache-schema-v1.md`
 
 ## Validation
 
 - Validation status: `PASS`
-- Last validated at: `2026-07-17T14:54:00Z`
+- Last validated at: `2026-07-27T03:04:15Z`

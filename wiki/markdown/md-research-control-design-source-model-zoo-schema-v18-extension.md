@@ -14,10 +14,9 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 
 ## Related Objects
 
-- Related source: `MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V18;MD-RESEARCH-CONTROL-DESIGN-SOURCE-MODEL-ZOO-SCHEMA-V1;MD-RESEARCH-CONTROL-DESIGN-SOURCE-MODEL-ZOO-V1;TEX-V18-P6-T02-FINITE-TOY-RESPONSE-V2-MODEL-OR-OBSTRUCTION;TEX-V18-P6-T03-FINITE-TOY-RESPONSE-V2-REFUTER-STRESS` ``
 - Generated output path: `wiki/markdown/md-research-control-design-source-model-zoo-schema-v18-extension.md`
 
 ## Validation
 
 - Validation status: `PASS`
-- Last validated at: `2026-07-08T10:02:00Z`
+- Last validated at: `2026-07-27T03:04:15Z`

@@ -14,10 +14,9 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 
 ## Related Objects
 
-- Related source: `TEX-V21-P4-T05-ONTOLOGY-REGIME-GATE-CHAIR-DECISION-V1` `research_control/tasks/RT-20260724-004/artifacts/ontology_regime_gate_chair_decision_v1.tex`
 - Generated output path: `wiki/markdown/md-research-control-design-gr-derivation-burden-map.md`
 
 ## Validation
 
 - Validation status: `PASS`
-- Last validated at: `2026-07-25T00:15:25Z`
+- Last validated at: `2026-07-27T03:04:15Z`

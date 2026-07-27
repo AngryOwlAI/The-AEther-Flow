@@ -1,0 +1,51 @@
+schema_id: "v21_p6_t07_metric_object_alias_migration_plan_v1"
+task_id: "RT-20260726-011"
+status: "completed"
+authority: "control"
+migration_mode: "additive_compatibility_retype"
+resolver:
+  primary_key: "ScopedMetricStructureRecord_src"
+  legacy_keys:
+    - "g_eff_GSC_cand"
+    - "g_eff^{GSC-cand}"
+  unresolved_burden_key: "g_eff"
+  exact_resolution_rule: "Legacy scoped-candidate keys resolve only to the exact ten-slot ScopedMetricStructureRecord_src under the historical declared scope."
+  reject_resolution:
+    - "bare g_eff to an extant physical metric"
+    - "GateBComparisonForm to ScopedMetricStructureRecord_src"
+    - "target g_{mu nu} to ScopedMetricStructureRecord_src"
+surface_updates:
+  - path: "research_control/design/distance_to_gr_status_aliases.yaml"
+    action: "make the scoped record primary and preserve the exact legacy alias"
+  - path: "research_control/design/accepted_status_calibration_v1.yaml"
+    action: "mirror calibrated primary-name wording"
+  - path: "research_control/design/accepted_status_calibration_v2.yaml"
+    action: "mirror status-card wording and next burden"
+  - path: "research_control/design/public_status_table_source_spec.md"
+    action: "audit only and preserve registered historical bytes; the additive resolver lives in the alias calibrations and task receipt"
+  - path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+    action: "record naming calibration with no Gate B or physical-status promotion"
+  - path: "registries/METRIC_USE_LEDGER.csv"
+    action: "record primary, legacy, comparison-control, and target distinctions"
+historical_resolution:
+  rename_historical_artifacts_in_place: false
+  rewrite_historical_gate_decision: false
+  remove_legacy_symbol: false
+  preserve_exact_scope: true
+  preserve_provenance: true
+claim_language_rules:
+  - rule_id: "P6T07-CLAIM-001"
+    rule: "Current positive-status prose names ScopedMetricStructureRecord_src first."
+  - rule_id: "P6T07-CLAIM-002"
+    rule: "A current use of g_eff^{GSC-cand} must identify it as the exact legacy alias or quote a historical artifact."
+  - rule_id: "P6T07-CLAIM-003"
+    rule: "Bare g_eff may name only the unresolved burden unless an explicit later protected authority changes status."
+  - rule_id: "P6T07-CLAIM-004"
+    rule: "Comparison forms and the exact-GR target metric never resolve through the scoped-record alias."
+rollback_condition: "If alias parity, historical resolution, source hashes, claim-language checks, or the single governed checkpoint fails, preserve the failed receipt and route a distinct bounded repair; do not replay this generation."
+authority_limits:
+  no_physics_delta: true
+  no_ontology_delta: true
+  no_gate_chair_delta: true
+  no_physical_metric_delta: true
+  physics_promotion_authorized: false

@@ -1,0 +1,49 @@
+schema_id: "v21_p6_t07_gate_b_readiness_verdict_v1"
+task_id: "RT-20260726-011"
+status: "completed"
+authority: "draft/control evidence integration"
+verdict: "not_ready"
+criterion_count: 8
+met_count: 0
+unmet_count: 8
+criteria:
+  - criterion: "unique cone up to derived observable-preserving gauge"
+    status: "not_met"
+    evidence: "A fixed source covector changes causal classification across q_(a,epsilon), and no operational transport theorem exists."
+  - criterion: "source covariance and global gluing"
+    status: "not_met"
+    evidence: "P6-T05 naturality forces zero on an admitted datum, while local signature alone does not supply inverse and cocycle laws."
+  - criterion: "uniform finite-variation robustness"
+    status: "not_met"
+    evidence: "Inverse conditioning diverges as epsilon tends to zero, with degeneracy and signature crossing not excluded."
+  - criterion: "characteristic cone identification"
+    status: "not_met"
+    evidence: "Ann(V) is a hyperplane rather than a nondegenerate Lorentzian quadratic null cone."
+  - criterion: "clock calibration"
+    status: "not_met"
+    evidence: "Positive flow rescaling remains free."
+  - criterion: "rod calibration"
+    status: "not_met"
+    evidence: "Transverse comparisons vary at fixed admitted source data."
+  - criterion: "coarse-grained geometry stability"
+    status: "not_met"
+    evidence: "No geometry-valued coarse-graining map or transfer inequality is derived."
+  - criterion: "universal matter coupling"
+    status: "not_met"
+    evidence: "No detector semantics, matter action, universality theorem, or exclusion of bimetric, multicone, and nonuniversal branches is derived."
+disposition:
+  primary_object_type: "ScopedMetricStructureRecord_src"
+  legacy_alias: "g_eff^{GSC-cand}"
+  bare_g_eff: "unresolved burden"
+  promotion_review: "not_requested"
+  adoption_status: "blocked_adoption_open_continuation"
+  next_review: "P6-T08 independent source-extension smuggling audit"
+authority_limits:
+  comparison_form_promoted: false
+  physical_cone_identified: false
+  clocks_or_rods_calibrated: false
+  universal_coupling_established: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+  physics_promotion_authorized: false
+

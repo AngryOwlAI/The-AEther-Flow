@@ -14,10 +14,9 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 
 ## Related Objects
 
-- Related source: `MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17;MD-RESEARCH-CONTROL-CURRENT-FRONTIER` ``
 - Generated output path: `wiki/markdown/md-research-control-design-ai-research-agent-metrics-taxonomy-v1.md`
 
 ## Validation
 
 - Validation status: `PASS`
-- Last validated at: `2026-07-06T21:09:04Z`
+- Last validated at: `2026-07-27T03:04:15Z`

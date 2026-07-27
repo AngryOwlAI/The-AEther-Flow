@@ -75,10 +75,11 @@ accepted_status_calibration_v2:
       source_v1_calibration_path: "research_control/design/accepted_status_calibration_v1.yaml#accepted_status_calibration_v1.high_risk_objects.g_eff"
       status_card_v2:
         object_id: "g_eff"
-        positive_status: "g_eff is adopted only as a scoped source-extension g_eff object."
-        exact_scope: "The adoption applies only to the declared source-extension candidate scope."
-        allowed_use: "Later bounded packets may use it as scoped source-extension context."
+        positive_status: "ScopedMetricStructureRecord_src is the primary name for the adopted scoped source-extension record; g_eff^{GSC-cand} is its exact legacy alias."
+        exact_scope: "The adoption applies only to the exact declared source-extension candidate scope reviewed in RT-20260614-222."
+        allowed_use: "Later bounded packets may use ScopedMetricStructureRecord_src as scoped source-extension context and may use g_eff^{GSC-cand} only as its explicit exact legacy alias."
         blocked_overread:
+          - "bare g_eff remains an unresolved burden"
           - "not an unscoped Lorentzian metric"
           - "not MetricData(E) adoption"
           - "not unscoped g_eff"
@@ -86,9 +87,9 @@ accepted_status_calibration_v2:
           - "not Einstein equations"
           - "not benchmark promotion"
           - "not completed derivation"
-        next_burden: "Show any later use of scoped g_eff as source-extension context without adopting MetricData(E), an unscoped Lorentzian metric, matter coupling, or Einstein equations."
-        next_lawful_route: "one bounded source-extension construction, audit, stress, or selector packet authorized by the latest handoff"
-        public_summary: "Scoped source-extension g_eff exists for continuation; it is not an unscoped Lorentzian metric, coupling, benchmark, or derivation."
+        next_burden: "Independently review the full Gate B package while using ScopedMetricStructureRecord_src as the scoped record and keeping bare g_eff unresolved."
+        next_lawful_route: "one bounded P6-T08 independent source-extension smuggling audit authorized by the latest handoff"
+        public_summary: "ScopedMetricStructureRecord_src exists for continuation, with g_eff^{GSC-cand} retained only as an exact legacy alias; bare g_eff is not an established physical metric."
         full_control_non_conclusions:
           - "no_unscoped_lorentzian_metric"
           - "no_metricdata_e_adoption"

@@ -1,0 +1,100 @@
+schema_id: "v21_p6_t07_metric_object_naming_decision_v1"
+decision_id: "P6T07-METRIC-OBJECT-NAMING-001"
+task_id: "RT-20260726-011"
+plan_task_id: "P6-T07"
+status: "completed"
+authority: "draft/control naming integration"
+result_status: "scoped_record_retyped_with_exact_legacy_alias_gate_b_not_ready"
+evidence_basis:
+  historical_construction:
+    path: "research_control/tasks/RT-20260614-216/artifacts/245_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_METRICFORMASSIGN_GEFF_CANDIDATE_OR_OBSTRUCTION.tex"
+    status: "historical draft/control construction"
+  protected_scoped_verdict:
+    path: "research_control/tasks/RT-20260614-222/artifacts/251_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_GEFF_CANDIDATE_SCOPED_SOURCE_EXTENSION_ADOPTION_GATE_CHAIR_REVIEW.tex"
+    status: "protected adoption as scoped source-extension object only"
+  cumulative_gate_b_obstruction:
+    path: "research_control/tasks/RT-20260726-010/artifacts/physical_admissibility_matrix_v1.yaml"
+    status: "eight criteria not met"
+primary_object:
+  type_name: "ScopedMetricStructureRecord_src"
+  typed_symbol: "ScopedMetricStructureRecord_src^{GSC}(E;G^beta,T_src(E))"
+  field_order:
+    - "D_E"
+    - "Q_E"
+    - "S_E"
+    - "Theta_E"
+    - "N_E"
+    - "B_E"
+    - "F_E"
+    - "C_E"
+    - "O_E"
+    - "L_E"
+  field_count: 10
+  status_family: "scoped_source_extension_object"
+  control_status: "gate_review_completed"
+  mathematical_status: "scoped_metric_structure_record_src_with_legacy_geff_alias"
+  physical_status: "not_unscoped_lorentzian_metric_not_matter_coupling_not_einstein_equations"
+  promotion_status: "scoped_source_object_only"
+  positive_status_sentence: "ScopedMetricStructureRecord_src is the primary name for the adopted scoped source-extension record."
+  exact_scope_sentence: "The adoption applies only to the exact declared source-extension candidate scope reviewed in RT-20260614-222."
+  allowed_use_sentence: "Later bounded packets may use the record as scoped source-extension context."
+legacy_alias:
+  symbol: "g_eff^{GSC-cand}(E;G^beta,T_src(E))"
+  normalized_key: "g_eff_GSC_cand"
+  resolution: "exact_alias_to_primary_object"
+  historical_artifacts_preserved: true
+  scope_expansion_allowed: false
+  qualifier_required: "legacy alias for ScopedMetricStructureRecord_src under the exact historical source-side scope"
+reserved_burden_name:
+  symbol: "g_eff"
+  meaning: "unresolved effective_metric_g_eff derivation burden"
+  extant_unscoped_physical_metric_instance: false
+comparison_controls:
+  type_name: "GateBComparisonForm"
+  examples:
+    - "g_H"
+    - "tilde_g_a"
+    - "g_a"
+    - "g_mu"
+    - "q_(a,epsilon)"
+  alias_instances: false
+  physical_geometry_adopted: false
+target_object:
+  symbol: "g_{mu nu}"
+  meaning: "exact-GR benchmark target metric"
+  alias_of_primary_object: false
+gate_b:
+  criterion_count: 8
+  met_count: 0
+  unmet_count: 8
+  readiness: "not_ready"
+  protected_promotion_review_ready: false
+  adoption_status: "blocked_adoption_open_continuation"
+assumption_delta:
+  added:
+    - "A control-level primary type name is introduced for exact resolution of the historical scoped record."
+  unchanged:
+    - "The historical record bytes, field order, declared scope, and protected Gate Chair status remain unchanged."
+    - "P6-T03 through P6-T06 obstruction evidence remains scoped and unchanged."
+    - "No source-side cone selector, operational transport, robustness law, geometry coarse-graining, clock, rod, or universal-coupling law is added."
+  removed: []
+selected_next_packet:
+  selected_next_packet_type: "source_extension_smuggling_audit"
+  selected_next_plan_task_id: "P6-T08"
+  selected_next_route_family: "external-review-packet"
+  selected_next_role_family: "external-red-team-reviewer@0.1.0"
+  decision_consequence: "Independently audit the full Gate B and naming package; route to later matter-coupling work only if a lawful effective-geometry input exists."
+authority_limits:
+  historical_artifacts_renamed_in_place: false
+  name_change_counted_as_scientific_delta: false
+  historical_gate_verdict_revoked: false
+  canonical_ontology_modified: false
+  source_law_adopted: false
+  metricdata_adopted: false
+  unscoped_g_eff_adopted: false
+  matter_coupling_derived: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  proof_authority: false
+  physics_promotion_authorized: false
+

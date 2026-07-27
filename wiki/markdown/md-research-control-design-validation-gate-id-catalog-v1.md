@@ -7,17 +7,16 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 - Source object: `MD-RESEARCH-CONTROL-DESIGN-VALIDATION-GATE-ID-CATALOG-V1`
 - Source path: `research_control/design/validation_gate_id_catalog_v1.md`
 - Format: `markdown`
-- Role: `control_design`
+- Role: `research_control_design`
 - Authority status: `project_control`
 - Owner skill: `project-memory-system`
 - Source hash: `acf53fafae9bbf27641120c036195257b4bb1ecc401a198d4ad1d9707386e7da`
 
 ## Related Objects
 
-- Related source: `MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19` `implementations_plans/recommendations_implementation_plan_continue_task-v19.md`
 - Generated output path: `wiki/markdown/md-research-control-design-validation-gate-id-catalog-v1.md`
 
 ## Validation
 
 - Validation status: `PASS`
-- Last validated at: `2026-07-13T02:35:09Z`
+- Last validated at: `2026-07-27T03:04:15Z`

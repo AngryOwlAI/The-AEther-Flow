@@ -14,7 +14,6 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 
 ## Related Objects
 
-- Related source: `MD-NEGATIVE-RESULTS-AND-OBSTRUCTIONS-PUBLICATION-BRIEF` `markdown/publication-briefs/negative-results-and-obstructions.publication-brief.md`
 - Generated output path: `wiki/markdown/md-html-spec-negative-results-and-obstructions-explainer.md`
 - Backlink from `HTML-NEGATIVE-RESULTS-AND-OBSTRUCTIONS-EXPLAINER` `html/negative-results-and-obstructions-explainer.html`
 - Backlink from `MD-GITHUB-FACING-NEGATIVE-RESULTS-AND-OBSTRUCTIONS-EXPLAINER` `github-facing/negative-results-and-obstructions-explainer.md`
@@ -22,4 +21,4 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 ## Validation
 
 - Validation status: `PASS`
-- Last validated at: `2026-07-08T20:09:45Z`
+- Last validated at: `2026-07-27T03:04:15Z`

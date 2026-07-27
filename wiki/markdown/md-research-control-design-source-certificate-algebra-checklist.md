@@ -14,10 +14,9 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 
 ## Related Objects
 
-- Related source: `MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V15;TEX-V15-P3-T01-SOURCE-CERTIFICATE-ALGEBRA-PRIMITIVES;TEX-V15-P3-T02-SOURCE-CERTIFICATE-OPERATION-LAWS` ``
 - Generated output path: `wiki/markdown/md-research-control-design-source-certificate-algebra-checklist.md`
 
 ## Validation
 
 - Validation status: `PASS`
-- Last validated at: `2026-07-02T23:26:07Z`
+- Last validated at: `2026-07-27T03:04:15Z`

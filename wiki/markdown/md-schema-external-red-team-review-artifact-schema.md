@@ -14,10 +14,9 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 
 ## Related Objects
 
-- Related source: `MD-V21-P11-T02-REVIEW-METADATA-SCHEMA` `research_control/tasks/RT-20260722-005/artifacts/review_metadata_schema.md`
 - Generated output path: `wiki/markdown/md-schema-external-red-team-review-artifact-schema.md`
 
 ## Validation
 
 - Validation status: `PASS`
-- Last validated at: `2026-07-22T10:18:10Z`
+- Last validated at: `2026-07-27T03:04:15Z`

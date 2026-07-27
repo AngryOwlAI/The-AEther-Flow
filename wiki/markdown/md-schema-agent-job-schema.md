@@ -14,10 +14,9 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 
 ## Related Objects
 
-- Related source: `MD-RESEARCH-CONTROL-DESIGN-PHYSICS-PAYLOAD-ADMISSION-POLICY-V1;MD-RESEARCH-CONTROL-TASKS-RT-20260722-014-DUAL-BUDGET-POLICY-V1` ``
 - Generated output path: `wiki/markdown/md-schema-agent-job-schema.md`
 
 ## Validation
 
 - Validation status: `PASS`
-- Last validated at: `2026-07-24T16:34:51Z`
+- Last validated at: `2026-07-27T03:04:15Z`

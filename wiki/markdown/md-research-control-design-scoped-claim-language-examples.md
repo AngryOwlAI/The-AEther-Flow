@@ -7,7 +7,7 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 - Source object: `MD-RESEARCH-CONTROL-DESIGN-SCOPED-CLAIM-LANGUAGE-EXAMPLES`
 - Source path: `research_control/design/scoped_claim_language_examples.md`
 - Format: `markdown`
-- Role: `claim_language_control_note`
+- Role: `research_control_design`
 - Authority status: `project_control`
 - Owner skill: `project-memory-system`
 - Source hash: `413205f9853a6da5e5a7bc3027452ebb33382af28b1f90d768558b80b53194a8`
@@ -19,4 +19,4 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 ## Validation
 
 - Validation status: `PASS`
-- Last validated at: `2026-07-02T13:43:40Z`
+- Last validated at: `2026-07-27T03:04:15Z`

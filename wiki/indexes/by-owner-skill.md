@@ -20,7 +20,6 @@ Generated metadata index. Not canonical authority. Update source registries, the
 
 ## documentation-curator
 
-- `MD-EQSRC-FAMILY-CLOSURE-REVIEW-PACKET-SPEC-V1` `markdown/external-review-specs/eqsrc_family_closure_review_packet_spec_v1.md`
 - `MD-EXTERNAL-REVIEW-PACKET-EQSRC-FAMILY-CLOSURE-V1` `external_review_packets/eqsrc_family_closure_review_packet_v1.md`
 - `MD-GITHUB-FACING-AETHER-FLOW-ONTOLOGY-EXPLAINER` `github-facing/aether-flow-ontology-explainer.md`
 - `MD-GITHUB-FACING-AETHER-FLOW-PHYSICS-PROGRAM-EXPLAINER` `github-facing/aether-flow-physics-program-explainer.md`
@@ -124,6 +123,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-CLAIM-GATES-PUBLICATION-BRIEF` `markdown/publication-briefs/claim-gates.publication-brief.md`
 - `MD-DIRECTOR-AGENTJOB-LIFECYCLE-PUBLICATION-BRIEF` `markdown/publication-briefs/director-agentjob-lifecycle.publication-brief.md`
 - `MD-DOCUMENTATION-CURATOR-PUBLICATION-PROCESS-PUBLICATION-BRIEF` `markdown/publication-briefs/documentation-curator-publication-process.publication-brief.md`
+- `MD-EQSRC-FAMILY-CLOSURE-REVIEW-PACKET-SPEC-V1` `markdown/external-review-specs/eqsrc_family_closure_review_packet_spec_v1.md`
 - `MD-EXACT-GR-BENCHMARK-BOUNDARY-PUBLICATION-BRIEF` `markdown/publication-briefs/exact-gr-benchmark-boundary.publication-brief.md`
 - `MD-GR-DERIVATION-ROADMAP-PUBLICATION-BRIEF` `markdown/publication-briefs/gr-derivation-roadmap.publication-brief.md`
 - `MD-LEGACY-ONTOLOGY-AETHER-AND-AETHER-FLOW` `legacy_ontology/aether-and-aether-flow.md`
@@ -768,6 +768,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-V21-P6-T04-SOURCE-SCALE-CALIBRATION-NONSELECTION-RECEIPT-V1` `wiki/markdown/md-v21-p6-t04-source-scale-calibration-nonselection-receipt-v1.md`
 - `WIKI-MD-V21-P6-T05-SIGNATURE-COVARIANCE-NATURALITY-OBSTRUCTION-RECEIPT-V1` `wiki/markdown/md-v21-p6-t05-signature-covariance-naturality-obstruction-receipt-v1.md`
 - `WIKI-MD-V21-P6-T06-UNIQUENESS-COVARIANCE-ROBUSTNESS-ADMISSIBILITY-OBSTRUCTION-RECEIPT-V1` `wiki/markdown/md-v21-p6-t06-uniqueness-covariance-robustness-admissibility-obstruction-receipt-v1.md`
+- `WIKI-MD-V21-P6-T07-METRIC-OBJECT-NAMING-RECEIPT-V1` `wiki/markdown/md-v21-p6-t07-metric-object-naming-receipt-v1.md`
 - `WIKI-MD-VALIDATOR-OPERATOR-WORKFLOW-PUBLICATION-BRIEF` `wiki/markdown/md-validator-operator-workflow-publication-brief.md`
 - `WIKI-PDF-LEGACY-ONTOLOGY-AETHER-FLOW-CONSISTENCY` `wiki/pdf/pdf-legacy-ontology-aether-flow-consistency.md`
 - `WIKI-PDF-LEGACY-ONTOLOGY-AETHER-FLOW-DYNAMICS` `wiki/pdf/pdf-legacy-ontology-aether-flow-dynamics.md`
@@ -1691,6 +1692,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-V21-P6-T04-SOURCE-SCALE-CALIBRATION-NONSELECTION-RECEIPT-V1` `research_control/tasks/RT-20260726-007/artifacts/source_scale_calibration_nonselection_receipt.md`
 - `MD-V21-P6-T05-SIGNATURE-COVARIANCE-NATURALITY-OBSTRUCTION-RECEIPT-V1` `research_control/tasks/RT-20260726-009/artifacts/signature_covariance_naturality_obstruction_receipt.md`
 - `MD-V21-P6-T06-UNIQUENESS-COVARIANCE-ROBUSTNESS-ADMISSIBILITY-OBSTRUCTION-RECEIPT-V1` `research_control/tasks/RT-20260726-010/artifacts/uniqueness_covariance_robustness_admissibility_obstruction_receipt.md`
+- `MD-V21-P6-T07-METRIC-OBJECT-NAMING-RECEIPT-V1` `research_control/tasks/RT-20260726-011/artifacts/metric_object_naming_receipt.md`
 
 ## tex-wiki
 

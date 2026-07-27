@@ -133,18 +133,27 @@ row_aliases:
     required_blocked_phrase: "No MetricData(E), g_eff scope expansion, matter coupling, Einstein equations, benchmark promotion, or completed derivation follows from this row."
   g_eff:
     ledger_burden_id: "g_eff"
-    display_status: "adopted only as scoped source-extension g_eff object"
+    display_status: "ScopedMetricStructureRecord_src adopted as the scoped source-extension record; g_eff^{GSC-cand} retained as exact legacy alias"
     scoped_positive_term: "adopted_as_scoped_source_extension_object"
-    required_qualifier: "The object is not an unscoped Lorentzian metric and does not supply matter coupling or Einstein equations."
+    required_qualifier: "Bare g_eff remains an unresolved burden; the scoped record is not an unscoped Lorentzian metric and does not supply matter coupling or Einstein equations."
+    primary_object_type: "ScopedMetricStructureRecord_src"
+    legacy_alias:
+      symbol: "g_eff^{GSC-cand}"
+      resolution: "exact_alias_to_primary_object"
+      historical_scope_only: true
+      scope_expansion_allowed: false
+    comparison_object_type: "GateBComparisonForm"
+    comparison_forms_are_alias_instances: false
     acceptance_calibration:
       object_id: "g_eff"
+      ledger_burden_id: "g_eff"
       status_family: "scoped_source_extension_object"
-      positive_status_sentence: "g_eff is adopted only as a scoped source-extension g_eff object."
-      exact_scope_sentence: "The adoption applies only to the declared source-extension candidate scope."
-      allowed_use_sentence: "Later bounded packets may use it as scoped source-extension context."
-      blocked_overread_sentence: "It is not an unscoped Lorentzian metric, MetricData(E) adoption, matter coupling, Einstein-equation result, benchmark promotion, or completed derivation."
-      underclaim_guard: "Do not describe g_eff as basically nothing; it has scoped positive source-extension status."
-      overclaim_guard: "Do not render g_eff as an unscoped Lorentzian metric, MetricData(E) adoption, matter coupling, Einstein-equation result, benchmark promotion, or completed derivation."
+      positive_status_sentence: "ScopedMetricStructureRecord_src is the primary name for the adopted scoped source-extension record; g_eff^{GSC-cand} is its exact legacy alias."
+      exact_scope_sentence: "The adoption applies only to the exact declared source-extension candidate scope reviewed in RT-20260614-222."
+      allowed_use_sentence: "Later bounded packets may use ScopedMetricStructureRecord_src as scoped source-extension context and may use g_eff^{GSC-cand} only as its explicit exact legacy alias."
+      blocked_overread_sentence: "Bare g_eff remains an unresolved burden; the record is not an unscoped Lorentzian metric, MetricData(E) adoption, matter coupling, Einstein-equation result, benchmark promotion, or completed derivation."
+      underclaim_guard: "Do not describe ScopedMetricStructureRecord_src as basically nothing; it has scoped positive source-extension record status."
+      overclaim_guard: "Do not render ScopedMetricStructureRecord_src or its g_eff^{GSC-cand} legacy alias as an unscoped Lorentzian metric, MetricData(E) adoption, matter coupling, Einstein-equation result, benchmark promotion, or completed derivation."
       public_summary_max_blocked_items: 6
       full_control_blocked_items:
         - "no_unscoped_lorentzian_metric"
@@ -158,10 +167,11 @@ row_aliases:
       no_physics_delta: true
     status_card_v2:
       object_id: "g_eff"
-      positive_status: "g_eff is adopted only as a scoped source-extension g_eff object."
-      exact_scope: "The adoption applies only to the declared source-extension candidate scope."
-      allowed_use: "Later bounded packets may use it as scoped source-extension context."
+      positive_status: "ScopedMetricStructureRecord_src is the primary name for the adopted scoped source-extension record; g_eff^{GSC-cand} is its exact legacy alias."
+      exact_scope: "The adoption applies only to the exact declared source-extension candidate scope reviewed in RT-20260614-222."
+      allowed_use: "Later bounded packets may use ScopedMetricStructureRecord_src as scoped source-extension context and may use g_eff^{GSC-cand} only as its explicit exact legacy alias."
       blocked_overread:
+        - "bare g_eff remains an unresolved burden"
         - "not an unscoped Lorentzian metric"
         - "not MetricData(E) adoption"
         - "not unscoped g_eff"
@@ -169,9 +179,9 @@ row_aliases:
         - "not Einstein equations"
         - "not benchmark promotion"
         - "not completed derivation"
-      next_burden: "Show any later use of scoped g_eff as source-extension context without adopting MetricData(E), an unscoped Lorentzian metric, matter coupling, or Einstein equations."
-      next_lawful_route: "one bounded source-extension construction, audit, stress, or selector packet authorized by the latest handoff"
-      public_summary: "Scoped source-extension g_eff exists for continuation; it is not an unscoped Lorentzian metric, coupling, benchmark, or derivation."
+      next_burden: "Independently review the full Gate B package while using ScopedMetricStructureRecord_src as the scoped record and keeping bare g_eff unresolved."
+      next_lawful_route: "one bounded P6-T08 independent source-extension smuggling audit authorized by the latest handoff"
+      public_summary: "ScopedMetricStructureRecord_src exists for continuation, with g_eff^{GSC-cand} retained only as an exact legacy alias; bare g_eff is not an established physical metric."
       full_control_non_conclusions:
         - "no_unscoped_lorentzian_metric"
         - "no_metricdata_e_adoption"

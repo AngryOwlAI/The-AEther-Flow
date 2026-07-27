@@ -10,14 +10,13 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 - Role: `current_frontier_report`
 - Authority status: `project_control`
 - Owner skill: `project-memory-system`
-- Source hash: `358a328db13c6a515bab4224b5cb8fba71cdf0e50f450c4f41252a2657fc0434`
+- Source hash: `5da271db629d0cd72cfaba44b9b6e6641116a6e917b30b5164b82a81fbe2caa2`
 
 ## Related Objects
 
 - Generated output path: `wiki/markdown/md-research-control-current-frontier.md`
-- Backlink from `MD-PROOF-STATE-DASHBOARD-PUBLICATION-BRIEF` `markdown/publication-briefs/proof-state-dashboard.publication-brief.md`
 
 ## Validation
 
 - Validation status: `PASS`
-- Last validated at: `2026-07-27T00:09:57Z`
+- Last validated at: `2026-07-27T03:04:15Z`

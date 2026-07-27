@@ -14,10 +14,9 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 
 ## Related Objects
 
-- Related source: `MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V15;MD-RESEARCH-CONTROL-DESIGN-MATTER-COUPLING-DERIVATION-MORATORIUM;MD-RESEARCH-CONTROL-DESIGN-MATTER-COUPLING-PRE-ADOPTION-CHECKLIST` ``
 - Generated output path: `wiki/markdown/md-research-control-design-matter-coupling-dependency-dag-schema-v1.md`
 
 ## Validation
 
 - Validation status: `PASS`
-- Last validated at: `2026-07-02T23:43:12Z`
+- Last validated at: `2026-07-27T03:04:15Z`

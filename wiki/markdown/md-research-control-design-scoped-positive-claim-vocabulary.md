@@ -7,7 +7,7 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 - Source object: `MD-RESEARCH-CONTROL-DESIGN-SCOPED-POSITIVE-CLAIM-VOCABULARY`
 - Source path: `research_control/design/scoped_positive_claim_vocabulary.md`
 - Format: `markdown`
-- Role: `claim_language_control_note`
+- Role: `research_control_design`
 - Authority status: `project_control`
 - Owner skill: `project-memory-system`
 - Source hash: `d588561071cce453663dbbb29a38e1befa9a95dd179c438a63c17ab9a6961193`
@@ -19,4 +19,4 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 ## Validation
 
 - Validation status: `PASS`
-- Last validated at: `2026-07-01T18:16:34Z`
+- Last validated at: `2026-07-27T03:04:15Z`

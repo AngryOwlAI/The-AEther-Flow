@@ -14,10 +14,9 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 
 ## Related Objects
 
-- Related source: `MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V18;MD-RESEARCH-CONTROL-DESIGN-V18-RECOMMENDATION-BACKLOG-SCHEMA` ``
 - Generated output path: `wiki/markdown/md-research-control-design-active-state-bifurcation-policy-v1.md`
 
 ## Validation
 
 - Validation status: `PASS`
-- Last validated at: `2026-07-07T07:22:18Z`
+- Last validated at: `2026-07-27T03:04:15Z`

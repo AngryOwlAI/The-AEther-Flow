@@ -7,17 +7,16 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 - Source object: `MD-RESEARCH-CONTROL-DESIGN-LAYERED-STATUS-FIELD-SCHEMA-V16`
 - Source path: `research_control/design/layered_status_field_schema_v16.md`
 - Format: `markdown`
-- Role: `control_schema`
+- Role: `research_control_design`
 - Authority status: `project_control`
 - Owner skill: `project-memory-system`
 - Source hash: `0896350d5d81c31aa856b3d4c945a42455b91a7e6613825651b30da7e8d5455f`
 
 ## Related Objects
 
-- Related source: `MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V16;MD-RESEARCH-CONTROL-DESIGN-DISTANCE-TO-GR-STATUS-LAYERS-V1;MD-RESEARCH-CONTROL-DESIGN-SCOPED-POSITIVE-CLAIM-VOCABULARY` ``
 - Generated output path: `wiki/markdown/md-research-control-design-layered-status-field-schema-v16.md`
 
 ## Validation
 
 - Validation status: `PASS`
-- Last validated at: `2026-07-05T05:07:00Z`
+- Last validated at: `2026-07-27T03:04:15Z`

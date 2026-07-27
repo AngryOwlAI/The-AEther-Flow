@@ -14,10 +14,9 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 
 ## Related Objects
 
-- Related source: `MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V14` `implementations_plans/recommendations_implementation_plan_continue_task-v14.md`
 - Generated output path: `wiki/markdown/md-research-control-design-positive-semantics-requirement-note.md`
 
 ## Validation
 
 - Validation status: `PASS`
-- Last validated at: `2026-07-02T12:18:00Z`
+- Last validated at: `2026-07-27T03:04:15Z`

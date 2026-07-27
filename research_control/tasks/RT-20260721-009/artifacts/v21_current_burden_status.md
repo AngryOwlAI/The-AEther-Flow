@@ -13,9 +13,9 @@ state, or latest handoff, those sources govern and this file is stale.
 | Field | Value |
 | --- | --- |
 | Schema | `v21_current_burden_status_v1` |
-| Source commit at generation | `a03c6d84f3a315eaba213b0c7ea6806a5957d62d` |
-| Status generation time | `2026-07-26T23:39:09Z` |
-| Tracked task count | 1120 |
+| Source commit at generation | `9b592da8356a4bc08ca175e48b2eba4576f05ea3` |
+| Status generation time | `2026-07-27T02:16:46Z` |
+| Tracked task count | 1121 |
 | Stable definition count | 10 |
 | Distance-to-GR burden count | 14 |
 | Historical authored-map commit | `2c5fb02fd8fff9b449ab10a328d7c881b13ef546` |
@@ -23,21 +23,21 @@ state, or latest handoff, those sources govern and this file is stale.
 
 ### Exact source hashes
 
-- `registries/DISTANCE_TO_GR_LEDGER.csv`: `a274628defe6b481c1b7cda9e7405826549659e0276319a90eaa544a902ad5ad`
-- `registries/RESEARCH_TASK_REGISTRY.csv`: `3cc19012b9410d1425bae7ee3c087fe3d10c4353874dab25da0d0ac92435283f`
+- `registries/DISTANCE_TO_GR_LEDGER.csv`: `d6474d264b4f4905268fd64a9d62aca44709148d8e76dfb1dd2222f78998f174`
+- `registries/RESEARCH_TASK_REGISTRY.csv`: `5b312d8d0e97330b68fedd7937e6385e3f8db645f1fdbb3c939d1253d0c2e447`
 - `research_control/design/gr_derivation_burden_map.md`: `8e9d44e3a18ecc8a2430a9c42497da3eb9911c2cf6cd714c1525c5d91551835e`
-- `research_control/handoffs/handoff-0884.yaml`: `161ab7751912c90bd81514f037539d662480b95415245fba5f519d4bd572e315`
-- `research_control/program_state.yaml`: `3f7cf043ebf20ebd460816d06b27c7b324f1f734b96b675d82e0dfa8ada40d4d`
+- `research_control/handoffs/handoff-0885.yaml`: `52aec390648b2afeec93ba8a5cbf3030efd7bb95ac823da7c3eab6f656f33b38`
+- `research_control/program_state.yaml`: `46358d257c099385094dca8c1830b18e8f116fc609f3ec9017ee90bf186cae1e`
 - `research_control/tasks/RT-20260721-009/artifacts/v21_burden_definitions_v1.yaml`: `67b8053baa60db4b11ee20582633d6279523d40b2ee853a6c570e2fdc1d113f5`
 
 ## Live control state
 
 | Field | Value |
 | --- | --- |
-| Active task | `RT-20260726-010` |
-| Latest handoff | `handoff-0884` |
-| Current status | `p6_t06_scoped_gate_b_uniqueness_robustness_admissibility_obstruction_ready_for_checkpoint` |
-| Next recommended action | Run one governed checkpoint for AJ-RT-20260726-010-001. Only after it commits may one fresh bounded P6-T07 theoretical-continuation-selector packet name the honest status of the remaining metric branch and choose a materially distinct next route without promoting physical geometry. |
+| Active task | `RT-20260726-011` |
+| Latest handoff | `handoff-0885` |
+| Current status | `p6_t07_scoped_record_retype_and_p6_t08_selection_ready_for_checkpoint` |
+| Next recommended action | Run one governed checkpoint for AJ-RT-20260726-011-001. Only after it commits may one fresh bounded P6-T08 external-red-team-reviewer packet independently audit the full Gate B and naming package without presuming a physical metric. |
 
 ## Authored stable definitions with generated current values
 
@@ -184,14 +184,14 @@ state, or latest handoff, those sources govern and this file is stale.
 
 | Burden ID | Required object | Current status | Control status | Mathematical status | Physical status | Promotion status | Updated at |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| `g_eff` | g_eff | `accepted` | `gate_review_completed` | `scoped_source_extension_geff_object` | `not_unscoped_lorentzian_metric_not_matter_coupling_not_einstein_equations` | `scoped_source_object_only` | `2026-07-26T23:39:09Z` |
+| `g_eff` | ScopedMetricStructureRecord_src;legacy_alias_g_eff_GSC_cand;unresolved_burden_g_eff | `accepted` | `gate_review_completed` | `scoped_source_extension_geff_object` | `not_unscoped_lorentzian_metric_not_matter_coupling_not_einstein_equations` | `scoped_source_object_only` | `2026-07-27T02:16:46Z` |
 
 #### `g_eff` generated detail
 
-- Current blocking burden: Historical scoped source-extension g_eff object remains adopted only under declared source-side scope while P6-T03 proves one-ray conformal nonselection P6-T04 proves scale-calibration nonselection P6-T05 proves signature nondegeneracy and source-naturality obstruction and P6-T06 proves the cumulative unchanged route does not establish uniqueness robustness coarse-graining transfer or physical admissibility
-- Current next evidence or action: Supply materially richer source-side cone-discriminator operational-transport uniform-conditioning geometry-level coarse-graining characteristic-identification clock rod and universal-coupling laws before testing unscoped operational geometry
+- Current blocking burden: The protected historical verdict applies only to the exact ten-slot scoped source-extension record now named primarily ScopedMetricStructureRecord_src with g_eff^{GSC-cand} retained as its exact legacy alias; bare g_eff remains unresolved because P6-T03 through P6-T06 leave all eight operational Gate B criteria unmet
+- Current next evidence or action: Independently review the complete causal conformal scale signature covariance robustness clock rod coarse-graining and universal-coupling package before any later matter-coupling route and supply materially richer source-side laws before testing unscoped operational geometry
 - Current failure/freeze criterion: Freeze only the exact cumulative route from the unchanged one-ray independent-density dimensionless-phase package to a unique source-natural robust operationally admissible unscoped geometry unless a new source law theorem variation class conditional comparison-geometry program or protected decision changes the exact premises
-- Current evidence: `research_control/tasks/RT-20260726-010/artifacts/uniqueness_covariance_robustness_admissibility_obstruction_v1.tex`
+- Current evidence: `research_control/tasks/RT-20260726-011/artifacts/metric_object_naming_decision_v1.yaml`
 - Exact overread guard: `no_source_law_adoption;no_metricdata_e_adoption;no_unscoped_geff_adoption;no_matter_coupling_derivation;no_einstein_equations;no_benchmark_promotion;no_completed_derivation;no_global_theory_rejection;no_future_source_extension_impossibility`
 
 ### `matter_coupling`

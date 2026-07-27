@@ -14,10 +14,9 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 
 ## Related Objects
 
-- Related source: `MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V18;MD-RESEARCH-CONTROL-TASKS-RT-20260707-024-POST-EQSRC-FAMILY-CLOSURE-SELECTOR-RECEIPT` ``
 - Generated output path: `wiki/markdown/md-research-control-design-minimal-countermodel-obligation-policy-v1.md`
 
 ## Validation
 
 - Validation status: `PASS`
-- Last validated at: `2026-07-08T00:22:57Z`
+- Last validated at: `2026-07-27T03:04:15Z`

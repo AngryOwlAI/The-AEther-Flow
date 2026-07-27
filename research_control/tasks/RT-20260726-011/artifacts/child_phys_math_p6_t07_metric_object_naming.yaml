@@ -1,0 +1,54 @@
+schema_id: "p6_t07_child_phys_math_metric_object_naming_v1"
+task_id: "RT-20260726-011"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+authority: "task_local_internal_perspective"
+inputs:
+  historical_record_path: "research_control/tasks/RT-20260614-216/artifacts/245_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_METRICFORMASSIGN_GEFF_CANDIDATE_OR_OBSTRUCTION.tex"
+  protected_verdict_path: "research_control/tasks/RT-20260614-222/artifacts/251_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_GEFF_CANDIDATE_SCOPED_SOURCE_EXTENSION_ADOPTION_GATE_CHAIR_REVIEW.tex"
+  cumulative_obstruction_path: "research_control/tasks/RT-20260726-010/artifacts/uniqueness_covariance_robustness_admissibility_obstruction_v1.tex"
+historical_tuple:
+  old_symbol: "g_eff^{GSC-cand}(E;G^beta,T_src(E))"
+  fields:
+    - "D_E"
+    - "Q_E"
+    - "S_E"
+    - "Theta_E"
+    - "N_E"
+    - "B_E"
+    - "F_E"
+    - "C_E"
+    - "O_E"
+    - "L_E"
+  field_count: 10
+  mathematical_kind: "typed source-side record"
+  physical_metric_claimed: false
+finding:
+  primary_type: "ScopedMetricStructureRecord_src"
+  typed_symbol: "ScopedMetricStructureRecord_src^{GSC}(E;G^beta,T_src(E))"
+  exact_legacy_alias: "g_eff^{GSC-cand}(E;G^beta,T_src(E))"
+  alias_relation: "The legacy symbol resolves to exactly the same historical ten-slot scoped source-extension record and to no broader object."
+  bare_g_eff_status: "unresolved effective_metric_g_eff burden name; no unscoped physical-metric instance exists"
+  target_metric_status: "g_{mu nu} is the exact-GR benchmark target metric and is not an alias of the source-side record"
+  comparison_form_status: "q_(a,epsilon), g_H, tilde_g_a, g_a, and g_mu are Gate-B comparison controls only and are not alias instances"
+gate_b_evaluation:
+  criterion_count: 8
+  met_count: 0
+  unmet_count: 8
+  overall: "not_ready"
+  consequence: "Retyping is required; promotion to an unscoped Lorentzian metric is not available."
+new_payload:
+  payload_id: "P6T07-METRIC-OBJECT-TYPE-RESOLUTION-001"
+  payload_type: "definition"
+  status: "draft/control naming integration"
+  statement: "Define ScopedMetricStructureRecord_src as the primary control type for the exact historical scoped record and retain g_eff^{GSC-cand} only as an exact compatibility alias."
+authority_limits:
+  historical_artifacts_renamed_in_place: false
+  historical_gate_verdict_revoked: false
+  new_scientific_object_constructed: false
+  canonical_ontology_modified: false
+  source_law_adopted: false
+  physical_metric_adopted: false
+  physics_promotion_authorized: false
+

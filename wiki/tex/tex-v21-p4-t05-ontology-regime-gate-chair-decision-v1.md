@@ -16,10 +16,6 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 
 - Related source: `TEX-V21-P4-T02-CONTINUUM-FIRST-PREMETRIC-ONTOLOGY-OPTION-V1;TEX-V21-P4-T03-EMERGENCE-FIRST-PROCESS-ORDER-ONTOLOGY-OPTION-V1;MD-V21-P4-T04-ONTOLOGY-REGIME-COMPARISON-REPORT-V1` ``
 - Generated output path: `wiki/tex/tex-v21-p4-t05-ontology-regime-gate-chair-decision-v1.md`
-- Backlink from `MD-RESEARCH-CONTROL-DESIGN-GR-DERIVATION-BURDEN-MAP` `research_control/design/gr_derivation_burden_map.md`
-- Backlink from `TEX-ONTOLOGY-AETHER-FLOW-DYNAMICS` `ontology/tex/aether_flow_dynamics.tex`
-- Backlink from `TEX-ONTOLOGY-AETHER-FLOW-FOUNDATIONS` `ontology/tex/aether_flow_foundations.tex`
-- Backlink from `TEX-ONTOLOGY-AETHER-FLOW-GEOMETRY` `ontology/tex/aether_flow_geometry.tex`
 
 ## Validation
 

@@ -14,10 +14,9 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 
 ## Related Objects
 
-- Related source: `MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19` `implementations_plans/recommendations_implementation_plan_continue_task-v19.md`
 - Generated output path: `wiki/markdown/md-research-control-design-support-traceability-v1-v18-parity-assessment.md`
 
 ## Validation
 
 - Validation status: `PASS`
-- Last validated at: `2026-07-17T18:49:37Z`
+- Last validated at: `2026-07-27T03:04:15Z`

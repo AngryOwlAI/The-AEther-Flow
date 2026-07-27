@@ -1,0 +1,135 @@
+{
+  "audit_path": "research_control/tasks/RT-20260726-011/artifacts/g_eff_reference_audit_v1.json",
+  "check_count": 22,
+  "checks": [
+    {
+      "check_id": "primary_type",
+      "detail": "Primary type is ScopedMetricStructureRecord_src.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "exact_field_order",
+      "detail": "Historical ten-slot field order is exact.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "legacy_alias",
+      "detail": "Historical g_eff^{GSC-cand} is an exact no-expansion alias.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "bare_geff_unresolved",
+      "detail": "Bare g_eff names an unresolved burden, not an extant physical metric.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "comparison_forms_distinct",
+      "detail": "Gate-B comparison forms are neither alias instances nor adopted geometry.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "target_metric_distinct",
+      "detail": "The exact-GR target metric remains distinct.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "gate_b_zero_of_eight",
+      "detail": "All eight Gate B criteria remain unmet.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "next_packet",
+      "detail": "P6-T08 independent source-extension smuggling audit is selected.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "migration_additive",
+      "detail": "Migration is additive and preserves historical artifacts.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "alias_v1_parity",
+      "detail": "Alias-map acceptance calibration exactly mirrors v1.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "alias_v2_parity",
+      "detail": "Alias-map status card exactly mirrors v2.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "alias_primary_name",
+      "detail": "Alias map records the primary type and exact legacy resolver.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "surface_primary_name:registries/DISTANCE_TO_GR_LEDGER.csv",
+      "detail": "registries/DISTANCE_TO_GR_LEDGER.csv names the primary scoped record.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "surface_primary_name:registries/METRIC_USE_LEDGER.csv",
+      "detail": "registries/METRIC_USE_LEDGER.csv names the primary scoped record.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "surface_primary_name:research_control/design/accepted_status_calibration_v1.yaml",
+      "detail": "research_control/design/accepted_status_calibration_v1.yaml names the primary scoped record.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "surface_primary_name:research_control/design/accepted_status_calibration_v2.yaml",
+      "detail": "research_control/design/accepted_status_calibration_v2.yaml names the primary scoped record.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "surface_primary_name:research_control/design/distance_to_gr_status_aliases.yaml",
+      "detail": "research_control/design/distance_to_gr_status_aliases.yaml names the primary scoped record.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "historical_hash:research_control/tasks/RT-20260614-216/artifacts/245_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_METRICFORMASSIGN_GEFF_CANDIDATE_OR_OBSTRUCTION.tex",
+      "detail": "research_control/tasks/RT-20260614-216/artifacts/245_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_METRICFORMASSIGN_GEFF_CANDIDATE_OR_OBSTRUCTION.tex bytes remain unchanged.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "historical_hash:research_control/tasks/RT-20260614-222/artifacts/251_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_GEFF_CANDIDATE_SCOPED_SOURCE_EXTENSION_ADOPTION_GATE_CHAIR_REVIEW.tex",
+      "detail": "research_control/tasks/RT-20260614-222/artifacts/251_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_GEFF_CANDIDATE_SCOPED_SOURCE_EXTENSION_ADOPTION_GATE_CHAIR_REVIEW.tex bytes remain unchanged.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "historical_hash:ontology/tex/aether_flow_geometry.tex",
+      "detail": "ontology/tex/aether_flow_geometry.tex bytes remain unchanged.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "distance_ledger_status",
+      "detail": "Distance-to-GR preserves the registered layer vocabulary and physical block while recording the primary resolver.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "reference_audit_nonempty",
+      "detail": "Classified 5453 paths containing metric-object references.",
+      "status": "PASS"
+    }
+  ],
+  "claim_boundary_summary": "Primary control naming and exact legacy resolution only; no historical rewrite, ontology or source-law change, physical metric, Gate B passage, matter coupling, Einstein equations, benchmark promotion, proof, or completed derivation.",
+  "failure_count": 0,
+  "finding_counts": {
+    "gate_b_criterion_count": 8,
+    "gate_b_met_count": 0,
+    "legacy_alias_count": 1,
+    "primary_object_count": 1,
+    "reference_path_count": 5453,
+    "unresolved_bare_geff_count": 1
+  },
+  "schema_id": "v21_p6_t07_metric_object_naming_validation_receipt_v1",
+  "status": "PASS",
+  "task_id": "RT-20260726-011",
+  "validator_ids": [
+    "p6_t07_metric_object_naming_v1",
+    "p6_t07_alias_parity_v1",
+    "p6_t07_historical_hash_guard_v1",
+    "p6_t07_reference_audit_v1"
+  ]
+}

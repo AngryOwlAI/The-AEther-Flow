@@ -1,0 +1,49 @@
+schema_id: "p6_t07_child_phys_phil_metric_object_naming_v1"
+task_id: "RT-20260726-011"
+execution_unit_id: "child_phys_phil"
+perspective: "physicist_philosopher"
+status: "completed"
+authority: "task_local_internal_perspective"
+semantic_classes:
+  - class_id: "primary_scoped_record"
+    name: "ScopedMetricStructureRecord_src"
+    positive_status: "adopted scoped source-extension record under the exact historical declared source-side scope"
+    allowed_use: "bounded source-side prerequisite and audit context"
+  - class_id: "legacy_exact_alias"
+    name: "g_eff^{GSC-cand}"
+    positive_status: "compatibility name for the exact primary scoped record only"
+    allowed_use: "historical citation or explicit compatibility resolution with a scope qualifier"
+  - class_id: "unresolved_burden"
+    name: "bare g_eff"
+    positive_status: "none"
+    allowed_use: "name of the unresolved effective-metric derivation burden"
+  - class_id: "gate_b_comparison_controls"
+    name: "q_(a,epsilon) and earlier P6 comparison forms"
+    positive_status: "task-local mathematical controls"
+    allowed_use: "countermodel, nonselection, and robustness audit only"
+  - class_id: "benchmark_target"
+    name: "g_{mu nu}"
+    positive_status: "exact-GR benchmark target metric"
+    allowed_use: "target-side benchmark context only, never a source premise"
+risks_and_resolutions:
+  - risk: "Retyping could appear to revoke the protected Gate Chair verdict."
+    resolution: "Preserve the verdict and exact historical symbol as a legacy alias; change only the primary control vocabulary used for current resolution."
+  - risk: "The word metric in the legacy alias could imply operational geometry."
+    resolution: "Require the scoped-record qualifier and state that all eight Gate B criteria remain unmet."
+  - risk: "Comparison forms could be mistaken for instances of the adopted record."
+    resolution: "Classify them separately as GateBComparisonForm controls and prohibit alias resolution."
+  - risk: "A naming change could be counted as physics progress."
+    resolution: "Record no new scientific object, no Gate B progress, and no physical-metric promotion."
+selected_next_packet:
+  plan_task_id: "P6-T08"
+  packet_type: "source_extension_smuggling_audit"
+  route_label: "external-review-packet"
+  role_family: "external-red-team-reviewer@0.1.0"
+  rationale: "Independent review is the materially distinct next check on whether the scoped record, comparison forms, signal structure, and blocked operational geometry have been kept semantically separate."
+authority_limits:
+  ontology_or_source_law_changed: false
+  physical_interpretation_established: false
+  gate_b_passed: false
+  gate_chair_review_requested: false
+  physics_promotion_authorized: false
+

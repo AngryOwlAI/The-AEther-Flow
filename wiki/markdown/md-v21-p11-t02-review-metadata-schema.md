@@ -16,7 +16,6 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 
 - Related source: `MD-V21-P11-T02-REVIEW-INDEPENDENCE-TAXONOMY;MD-EXTERNAL-RED-TEAM-REVIEW-ARTIFACT-SCHEMA` ``
 - Generated output path: `wiki/markdown/md-v21-p11-t02-review-metadata-schema.md`
-- Backlink from `MD-SCHEMA-EXTERNAL-RED-TEAM-REVIEW-ARTIFACT-SCHEMA` `.agents/schemas/EXTERNAL_RED_TEAM_REVIEW_ARTIFACT_SCHEMA.md`
 
 ## Validation
 
