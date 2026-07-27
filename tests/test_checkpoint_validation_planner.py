@@ -11,6 +11,7 @@ from unittest import mock
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 SCRIPT_PATH = REPO_ROOT / "scripts/research_control/checkpoint_research_transaction.py"
+VALIDATOR_PATH = REPO_ROOT / "scripts/research_control/validate_research_control.py"
 P12_T05_DIRTY_MANIFEST_PATHS = (
     "FOLDER_MAP.md",
     "output/ai_methodology_metrics_dashboard.json",
@@ -86,6 +87,19 @@ def load_checkpoint_module():
     return module
 
 
+def load_validator_module():
+    name = "validate_research_control_checkpoint_binding_test"
+    script_dir = str(VALIDATOR_PATH.parent)
+    if script_dir not in sys.path:
+        sys.path.insert(0, script_dir)
+    spec = importlib.util.spec_from_file_location(name, VALIDATOR_PATH)
+    assert spec is not None and spec.loader is not None
+    module = importlib.util.module_from_spec(spec)
+    sys.modules[name] = module
+    spec.loader.exec_module(module)
+    return module
+
+
 def classification(paths, **_kwargs) -> dict[str, object]:
     values = tuple(sorted(str(path) for path in paths))
     return {
@@ -148,6 +162,128 @@ class CheckpointPlannerIntegrationTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
         cls.checkpoint = load_checkpoint_module()
+        cls.validator = load_validator_module()
+
+    def test_staged_diff_command_binds_the_explicit_agent_job(self) -> None:
+        command = self.checkpoint.staged_gate_command(
+            "research_control_diff",
+            agent_job_id="AJ-EXPLICIT",
+        )
+
+        self.assertEqual(
+            command,
+            [
+                ".venv/bin/python",
+                "scripts/research_control/validate_research_control.py",
+                "--check-diff",
+                "--staged-only",
+                "--json",
+                "--job-id",
+                "AJ-EXPLICIT",
+            ],
+        )
+
+    def test_working_diff_command_binds_the_explicit_agent_job(self) -> None:
+        commands = self.checkpoint.post_sync_validation_commands("AJ-EXPLICIT")
+
+        self.assertIn(
+            [
+                ".venv/bin/python",
+                "scripts/research_control/validate_research_control.py",
+                "--check-diff",
+                "--job-id",
+                "AJ-EXPLICIT",
+            ],
+            commands,
+        )
+
+    def test_diff_validator_uses_explicit_older_agent_job(self) -> None:
+        report = self.validator.ValidationReport()
+        jobs = {
+            "AJ-OLDER": {
+                "job_id": "AJ-OLDER",
+                "role_id": "validator-engineer",
+                "status": "completed",
+                "created_at": "2026-07-01T00:00:00Z",
+                "allowed_write_paths": "research_control/tasks/RT-OLDER/**",
+                "output_paths": "",
+            },
+            "AJ-LATER": {
+                "job_id": "AJ-LATER",
+                "role_id": "validator-engineer",
+                "status": "completed",
+                "created_at": "2026-07-02T00:00:00Z",
+                "allowed_write_paths": "research_control/tasks/RT-LATER/**",
+                "output_paths": "",
+            },
+        }
+        changed = "research_control/tasks/RT-OLDER/result.yaml"
+        with mock.patch.object(
+            self.validator,
+            "changed_paths",
+            return_value=[changed],
+        ):
+            self.validator.validate_diff(
+                report,
+                jobs,
+                "HEAD",
+                False,
+                "AJ-OLDER",
+            )
+
+        self.assertEqual(report.errors, [])
+
+    def test_diff_validator_rejects_missing_explicit_agent_job(self) -> None:
+        report = self.validator.ValidationReport()
+        with mock.patch.object(
+            self.validator,
+            "changed_paths",
+            return_value=[],
+        ):
+            self.validator.validate_diff(
+                report,
+                {},
+                "HEAD",
+                False,
+                "AJ-MISSING",
+            )
+
+        self.assertEqual(
+            report.errors,
+            ["--job-id AJ-MISSING: AgentJob does not exist"],
+        )
+
+    def test_diff_validator_rejects_ineligible_explicit_agent_job(self) -> None:
+        report = self.validator.ValidationReport()
+        jobs = {
+            "AJ-PLANNED": {
+                "job_id": "AJ-PLANNED",
+                "status": "planned",
+                "created_at": "2026-07-01T00:00:00Z",
+                "allowed_write_paths": "research_control/**",
+                "output_paths": "",
+            }
+        }
+        with mock.patch.object(
+            self.validator,
+            "changed_paths",
+            return_value=[],
+        ):
+            self.validator.validate_diff(
+                report,
+                jobs,
+                "HEAD",
+                False,
+                "AJ-PLANNED",
+            )
+
+        self.assertEqual(
+            report.errors,
+            [
+                "--job-id AJ-PLANNED: AgentJob status "
+                "'planned' is not active or completed"
+            ],
+        )
 
     def test_cli_defaults_to_compare_and_retains_explicit_legacy_fallback(self) -> None:
         self.assertEqual(self.checkpoint.parse_args([]).validation_mode, "compare")

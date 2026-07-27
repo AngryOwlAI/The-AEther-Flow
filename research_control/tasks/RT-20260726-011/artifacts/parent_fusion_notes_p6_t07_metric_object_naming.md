@@ -33,4 +33,3 @@ This fusion is a naming and route-selection payload. It is not physics proof,
 source-law adoption, ontology adoption, physical geometry, matter coupling,
 Einstein equations, benchmark promotion, publication authority, or a
 completed derivation.
-

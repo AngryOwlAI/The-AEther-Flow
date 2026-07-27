@@ -57,6 +57,14 @@ Profile selection never overrides a human gate. The checkpoint may generate
 registered derivatives before staging, but acceptance is evaluated against the
 actual staged transaction after generation.
 
+When a checkpoint is invoked with an explicit AgentJob identity, that same
+identity is propagated to both working-tree and staged
+`research_control_diff` validation. The validator resolves that exact active
+or completed job and fails closed when it is missing or ineligible. Only
+standalone diff validation without an explicit identity retains the
+latest-eligible-job fallback. A later unrelated AgentJob therefore cannot
+silently replace the allowlist authority selected by the checkpoint.
+
 ## Repository-test checkpoint cadence
 
 An ordinary checkpoint does not unconditionally run

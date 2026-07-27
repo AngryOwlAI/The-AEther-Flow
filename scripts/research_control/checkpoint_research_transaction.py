@@ -625,7 +625,11 @@ def plan_checkpoint_validation(
     )
 
 
-def staged_gate_command(gate_id: str) -> list[str]:
+def staged_gate_command(
+    gate_id: str,
+    *,
+    agent_job_id: str | None = None,
+) -> list[str]:
     commands = {
         "classify_changes": [
             ".venv/bin/python",
@@ -668,9 +672,12 @@ def staged_gate_command(gate_id: str) -> list[str]:
         "git_diff_check": ["git", "diff", "--cached", "--check"],
     }
     try:
-        return list(commands[gate_id])
+        command = list(commands[gate_id])
     except KeyError as exc:
         raise RuntimeError(f"no checkpoint adapter command for gate {gate_id}") from exc
+    if gate_id == "research_control_diff" and agent_job_id:
+        command.extend(["--job-id", agent_job_id])
+    return command
 
 
 def _project_executor_manifest(
@@ -747,7 +754,12 @@ def run_checkpoint_staged_acceptance(
         adapters = {
             str(gates[gate_id]["adapter"]): CheckpointCommandAdapter(
                 gate_id,
-                tuple(staged_gate_command(gate_id)),
+                tuple(
+                    staged_gate_command(
+                        gate_id,
+                        agent_job_id=agent_job_id,
+                    )
+                ),
                 command_results,
                 legacy_statuses,
             )
@@ -892,8 +904,10 @@ def block_report(
     }
 
 
-def post_sync_validation_commands() -> list[list[str]]:
-    return [
+def post_sync_validation_commands(
+    agent_job_id: str | None = None,
+) -> list[list[str]]:
+    commands = [
         [".venv/bin/python", "scripts/project_control/classify_project_changes.py", "--json"],
         [
             ".venv/bin/python",
@@ -907,6 +921,9 @@ def post_sync_validation_commands() -> list[list[str]]:
             "--check-diff",
         ],
     ]
+    if agent_job_id:
+        commands[-1].extend(["--job-id", agent_job_id])
+    return commands
 
 
 def final_memory_validation_command() -> list[str]:
@@ -1275,7 +1292,9 @@ def _checkpoint_impl(
         )
 
     working_commands = (
-        post_sync_validation_commands() if validation_mode == "legacy" else []
+        post_sync_validation_commands(job_row["job_id"])
+        if validation_mode == "legacy"
+        else []
     )
     if validation_mode == "legacy" and cadence_decision["required"]:
         working_commands.append(staged_gate_command(REPOSITORY_TEST_GATE_ID))
@@ -1423,13 +1442,12 @@ def _checkpoint_impl(
                 suggested_repair_role="documentation-curator",
             )
 
-        staged_check = run_command([
-            ".venv/bin/python",
-            "scripts/research_control/validate_research_control.py",
-            "--check-diff",
-            "--staged-only",
-            "--json",
-        ])
+        staged_check = run_command(
+            staged_gate_command(
+                "research_control_diff",
+                agent_job_id=job_row["job_id"],
+            )
+        )
         commands.append(staged_check)
         if staged_check.returncode != 0:
             return rollback_block(

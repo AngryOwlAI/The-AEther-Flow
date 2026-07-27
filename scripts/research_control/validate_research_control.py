@@ -6343,11 +6343,32 @@ def validate_diff(
     job_rows: dict[str, dict[str, str]],
     base_ref: str,
     staged_only: bool,
+    job_id: str | None = None,
 ) -> None:
-    active_jobs = [row for row in job_rows.values() if row["status"] in {"active", "completed"}]
-    job = sorted(active_jobs, key=lambda row: row["created_at"])[-1] if active_jobs else None
+    active_jobs = [
+        row
+        for row in job_rows.values()
+        if row["status"] in {"active", "completed"}
+    ]
+    if job_id is not None:
+        job = job_rows.get(job_id)
+        if job is None:
+            report.error(f"--job-id {job_id}: AgentJob does not exist")
+        elif job.get("status") not in {"active", "completed"}:
+            report.error(
+                f"--job-id {job_id}: AgentJob status "
+                f"{job.get('status', '')!r} is not active or completed"
+            )
+            job = None
+    else:
+        job = (
+            sorted(active_jobs, key=lambda row: row["created_at"])[-1]
+            if active_jobs
+            else None
+        )
     if job is None:
-        report.error("--check-diff requires an active or completed AgentJob")
+        if job_id is None:
+            report.error("--check-diff requires an active or completed AgentJob")
     try:
         paths = changed_paths(base_ref, staged_only)
     except RuntimeError as exc:
@@ -6386,6 +6407,7 @@ def validate_all(
     check_diff: bool = False,
     base_ref: str = "HEAD",
     staged_only: bool = False,
+    job_id: str | None = None,
 ) -> ValidationReport:
     report = ValidationReport()
     validate_registry_columns(report)
@@ -6407,7 +6429,7 @@ def validate_all(
                 and row.get("allowed_write_paths") is not None
                 and row.get("output_paths") is not None
             }
-            validate_diff(report, partial_jobs, base_ref, staged_only)
+            validate_diff(report, partial_jobs, base_ref, staged_only, job_id)
         return report
     validate_registry_values(report, rows_by_registry)
     validate_countermodel_obligation_registry(
@@ -6444,7 +6466,7 @@ def validate_all(
     validate_claim_boundaries(report, rows_by_registry["CLAIM_BOUNDARY_REGISTRY.csv"])
     scan_for_forbidden_claims(report, rows_by_registry["CLAIM_BOUNDARY_REGISTRY.csv"])
     if check_diff:
-        validate_diff(report, jobs, base_ref, staged_only)
+        validate_diff(report, jobs, base_ref, staged_only, job_id)
     return report
 
 
@@ -6457,7 +6479,18 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
         action="store_true",
         help="Emit the previous unbounded human-readable output.",
     )
-    parser.add_argument("--check-diff", action="store_true", help="Check current git diff against the latest active/completed AgentJob.")
+    parser.add_argument(
+        "--check-diff",
+        action="store_true",
+        help="Check the current git diff against an active or completed AgentJob.",
+    )
+    parser.add_argument(
+        "--job-id",
+        help=(
+            "Use this exact active or completed AgentJob for --check-diff; "
+            "otherwise use the latest eligible job."
+        ),
+    )
     parser.add_argument("--staged-only", action="store_true", help="Check staged changes only.")
     parser.add_argument("--base-ref", default="HEAD", help="Git base ref for --check-diff.")
     args = parser.parse_args(argv)
@@ -6469,6 +6502,8 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
         parser.error("--json cannot be combined with another reporting mode")
     if args.legacy_human and common_mode_selected:
         parser.error("--legacy-human cannot be combined with a common reporting mode")
+    if args.job_id and not args.check_diff:
+        parser.error("--job-id requires --check-diff")
     return args
 
 
@@ -6551,6 +6586,7 @@ def adapt_to_common_run(report: ValidationReport, args: argparse.Namespace) -> V
         "check_diff": args.check_diff,
         "staged_only": args.staged_only,
         "base_ref": args.base_ref,
+        "job_id": args.job_id,
     }
     digest = _working_tree_digest(payload)
     status = "PASS" if report.ok() else "FAIL"
@@ -6579,6 +6615,7 @@ def main(argv: list[str] | None = None) -> int:
         check_diff=args.check_diff,
         base_ref=args.base_ref,
         staged_only=args.staged_only,
+        job_id=args.job_id,
     )
     if args.json:
         print(json.dumps(_legacy_payload(report), indent=2))

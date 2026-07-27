@@ -31,4 +31,3 @@ The selected materially distinct continuation is P6-T08 as one independent
 `source_extension_smuggling_audit` on the `external-review-packet` route,
 using `external-red-team-reviewer@0.1.0`. It may review readiness or record an
 exact repair; it receives no promotion authority from this receipt.
-
