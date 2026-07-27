@@ -1,0 +1,333 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage[hidelinks]{hyperref}
+
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newcommand{\Qamp}{\mathcal Q_{\mathrm{amp}}}
+\newcommand{\Phisrc}{\Phi_{\mathrm{src}}}
+\newcommand{\Ann}{\operatorname{Ann}}
+\newcommand{\rank}{\operatorname{rank}}
+
+\title{Source Dynamics and Reconstruction:\\
+\large A Status-Separated Technical Report on the Fixed P5--P6 Package}
+\author{The \AE ther-Flow Research Project}
+\date{2026-07-27}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This registered task-local draft/control report completes v21 work item
+P15-T04 by assembling the exact registered P5 and P6 source-dynamics,
+reconstruction, characteristic, conformal, scale, signature, covariance,
+robustness, operational, and metric-status results.  The positive mathematics
+is conditional: a proposal-only cubic-amplitude semiflow has an exact response
+cocycle, and a proposal-only transport equation has a one-ray characteristic
+structure.  The negative mathematics is also exact within its stated scope:
+factor-through-amplitude reconstruction has differential rank at most one,
+and structural plus same-premise comparison controls separate every required
+Gate-B geometry output.  A new compositional theorem shows that the unchanged package
+does not certify a unique, source-natural, robust, operationally calibrated
+Lorentzian geometry.  Gate B remains zero of eight.  This report discharges
+the coherent-record burden; it does not derive or adopt a physical metric,
+source law, matter coupling, Einstein equations, or a completed derivation.
+\end{abstract}
+
+\section{Authority, status, and attribution}
+
+The canonical ontology sources remain the registered files under
+\texttt{ontology/tex/}.  They describe a proposed \AE ther{} /
+\AE ther-flow research ontology, keep the smooth four-dimensional source
+arena as explicit primitive debt, and leave the source-order/evolution slot
+\(\Phisrc\) unresolved.  The exact Einsteinian action, one-metric matter
+coupling, and relativistic observables in those manuscripts belong to the
+adopted target-side exact-GR benchmark.  They are not evidence that the source
+package derives that benchmark.
+
+The P5 and P6 artifacts summarized here are registered task-local
+draft/control science.  Their exact theorems hold under displayed hypotheses;
+their constructed dynamics and transport laws remain proposal-only; the
+historical \texttt{ScopedMetricStructureRecord\_src} remains a scoped
+source-extension record with exact legacy alias
+\(g_{\mathrm{eff}}^{\mathrm{GSC\mbox{-}cand}}\); and the P5/P6 obstruction
+results remain scoped to their fixed premise packages.  The bare symbol
+\(g_{\mathrm{eff}}\) remains unresolved as a physical metric.
+
+Copyright and attribution follow the repository \texttt{NOTICES} and
+\texttt{LICENSE}.  Scientific prose in this report is research content under
+the repository's CC BY 4.0 default; the accompanying executable archive is
+tooling under the Apache-2.0 default.  License permission changes no
+scientific status.
+
+\section{The fixed source regime}
+
+\begin{definition}[Fixed P5--P6 package]
+\label{def:package}
+Let \(\mathcal P_{5:6}\) denote the exact registered package consisting of:
+\begin{enumerate}
+  \item the P5 compact source-theory object and its explicit open slots;
+  \item the proposal-only continuous forward monoid action
+  \(\Phisrc:\mathbb R_{\geq0}\times\Qamp\to\Qamp\);
+  \item the one-mode family
+  \(q_a(\theta)=a\sin\theta_1\) and proposal-only cubic generator
+  \(X_\gamma(a)=-\gamma a^3\), \(\gamma>0\);
+  \item the P5 structural, phase, coarse-graining, audit, and milestone
+  results, including their exact source hashes and scoped freezes;
+  \item the proposal-only P6 transport-reaction equation
+  \[
+     \mathcal L_Va+\gamma a^3=0
+  \]
+  for one source vector field \(V\);
+  \item the P6 one-ray, conformal, scale, signature, naturality, robustness,
+  operational-admissibility, naming, and Gate-B records;
+  \item one independent positive density, dimensionless phase data, and the
+  exact historically scoped ten-slot metric-structure record, each only in
+  its declared source-side status.
+\end{enumerate}
+\end{definition}
+
+No target atlas, target metric, GR null cone, proper-time rule, physical
+detector, matter response, Einstein equation, or benchmark solution is a
+premise of Definition~\ref{def:package}.  No new premise is introduced by
+this report.
+
+\section{P5: source dynamics and reconstruction}
+
+For the proposal-only cubic candidate, the exact conditional flow is
+\[
+  \phi_\lambda(a)
+  =\frac{a}{\sqrt{1+2\gamma\lambda a^2}},
+  \qquad \lambda\geq0,
+\]
+with tangent response
+\[
+  D\phi_\lambda(a)
+  =(1+2\gamma\lambda a^2)^{-3/2}.
+\]
+The response satisfies
+\[
+  D\phi_{\lambda+\mu}(a)
+  =D\phi_\mu(\phi_\lambda(a))D\phi_\lambda(a),
+\]
+and \(DX_\gamma(a)=-3\gamma a^2\).  These are exact results about the
+candidate; \(\lambda\) is not thereby physical time and \(\gamma\) is not an
+adopted law coefficient.
+
+The reconstruction interface is deliberately explicit.  If a differentiable
+deterministic reconstruction factors as
+\[
+   \mathcal R=B\circ A:U\longrightarrow E,
+   \qquad A:U\to\mathbb R,
+\]
+through the sole amplitude coordinate, then
+\[
+   D\mathcal R_u=DB_{A(u)}\circ DA_u,
+   \qquad \rank D\mathcal R_u\leq1.
+\]
+Deterministic relabeling cannot create a second independent tangent
+direction.  This is a scoped rank theorem, not a claim that richer source
+data cannot exist.
+
+The P5 package also preserves exact negative branches: the exponent,
+coefficient normalization, resolution, independent local data, restriction
+and gluing, and off-family robustness are not selected by the unchanged
+ontology.  Its milestone status is
+\texttt{completed\_with\_precise\_scoped\_obstruction} and
+\texttt{blocked\_adoption\_open\_continuation}.
+
+\section{P6: characteristic and geometry status}
+
+Linearization of the proposal-only transport-reaction equation about a
+background \(\bar a\) gives
+\[
+  \mathcal L_Vu+3\gamma\bar a^2u=0,
+  \qquad P_x(\xi)=\xi(V_x).
+\]
+Its characteristic set is the hyperplane \(\Ann(V_x)\), while its formal
+forward dual is one oriented ray.  This is a source-local characteristic
+calculation, not a Lorentzian quadratic null cone or physical causal
+structure.
+
+The exact P6 comparison controls keep the admitted source description fixed
+while separating required geometry outputs:
+\begin{enumerate}
+  \item the linear zero set \(\xi(V)=0\) is not a nondegenerate quadratic
+  Lorentzian cone;
+  \item one ray admits infinitely many nonconformal Lorentzian comparison
+  forms;
+  \item the determinant-one family
+  \[
+    g_a=\operatorname{diag}(-1,e^{2a},e^{-2a},1)
+  \]
+  preserves volume while changing transverse rod ratios and generally the
+  null cone;
+  \item \(q_L=\operatorname{diag}(-1,1,1,1)\) and
+  \(q_S=\operatorname{diag}(-1,-1,1,1)\) have equal absolute determinant but
+  different inertia;
+  \item \(q_\varepsilon=\operatorname{diag}(-1,1,1,\varepsilon^2)\) becomes
+  arbitrarily ill-conditioned as \(\varepsilon\to0\);
+  \item the complete \(q_{(a,\varepsilon)}\) stress family changes causal
+  classification, transverse ratios, signature branch, or inverse
+  conditioning without changing the admitted source premises.
+\end{enumerate}
+These forms are mathematical controls.  None is adopted as physical geometry.
+
+\section{Compositional status-barrier theorem}
+
+\begin{definition}[Source entailment at fixed description]
+\label{def:entailment}
+Let \(D\) be an admitted source description and let \(Y\) be an operational
+output space.  We say that \(D\) entails \(y\in Y\) through a deterministic
+source-derived rule if there is a single-valued rule \(F\), defined only from
+admitted source data and declared equivalences, such that \(F(D)=y\).
+If two admissible completions agree on \(D\) and its equivalence class but
+require distinct values of an observable component of \(Y\), that component
+is not entailed by \(D\).
+\end{definition}
+
+\begin{theorem}[P15T04-THM-FIXED-PACKAGE-COMPOSED-STATUS-BARRIER]
+\label{thm:barrier}
+Fix \(\mathcal P_{5:6}\) from Definition~\ref{def:package}.  Suppose:
+\begin{enumerate}
+  \item every deterministic P5 reconstruction under review factors through
+  the sole amplitude coordinate \(A:U\to\mathbb R\);
+  \item the positive local-geometry interface invokes the rank consequence
+  only where at least two independently variable response directions are
+  required at a source point;
+  \item a lawful unscoped operational geometry must supply a unique
+  Lorentzian cone up to a source-derived observable-preserving quotient,
+  source naturality and gluing, uniform finite-variation robustness, clock
+  and rod calibration, stable coarse-graining, and universal matter
+  coupling;
+  \item the registered P6 structural mismatch and same-premise separating
+  witnesses are admissible mathematical controls for testing entailment,
+  without adoption of any comparison completion.
+\end{enumerate}
+Then the unchanged package does not certify a deterministic map to a unique,
+source-natural, robust, operationally calibrated unscoped Lorentzian
+geometry.
+\end{theorem}
+
+\begin{proof}
+By the P5 factorization theorem,
+\(\rank D(B\circ A)\leq1\) for every deterministic reconstruction of the
+stated class.  Such post-processing cannot create the independently variable
+local response directions, restriction/gluing data, or a new source
+discriminator absent from the fixed package.
+
+Independently, each P6 witness pair agrees on the admitted source description
+while differing in at least one required output: characteristic versus
+quadratic cone, conformal class, transverse rod ratio, signature,
+nondegeneracy, naturality, or inverse conditioning.  By
+Definition~\ref{def:entailment}, a single-valued source-derived rule cannot
+assign two distinct observable outputs to the same admitted description.
+The relevant output is therefore not entailed unless an additional
+source-derived discriminator or declared quotient identifies the difference.
+The fixed package contains neither.
+
+The rank result prevents deterministic repackaging of the P5 amplitude from
+supplying the missing independent data, and the P6 witnesses establish
+non-entailment even after the one-ray transport candidate is included.
+Consequently the full required operational-geometry tuple is not certified
+by \(\mathcal P_{5:6}\).
+\end{proof}
+
+\paragraph{Exact scope.}
+Here ``composes'' means that two independently necessary certification
+conditions fail; it does not mean literal composition of a P5 reconstruction
+map with a P6 comparison form.  Theorem~\ref{thm:barrier} joins
+already-registered conditional, structural, and same-premise separating
+results for the unchanged package.  It does not prove that no
+richer ontology can derive geometry, that every future reconstruction must
+factor through one amplitude, or that a new source law, quotient theorem,
+operational protocol, or robust variation class is impossible.  The correct
+status is \texttt{blocked\_adoption\_open\_continuation}.
+It is not a global no-go theorem.
+
+\section{Gate-B matrix and metric disposition}
+
+\begin{center}
+\begin{tabular}{p{0.47\linewidth}p{0.15\linewidth}p{0.28\linewidth}}
+\toprule
+Criterion & Status & Smallest missing class \\
+\midrule
+Unique cone up to derived observable gauge & unmet & cone discriminator and quotient theorem \\
+Source covariance and global gluing & unmet & source coframe/form selector and cocycle laws \\
+Uniform finite-variation robustness & unmet & stability and conditioning law \\
+Characteristic-cone identification & unmet & quadratic principal symbol or equivalent theorem \\
+Clock calibration & unmet & source clock protocol and normalization \\
+Rod calibration & unmet & source spatial comparison protocol \\
+Coarse-grained geometry stability & unmet & geometry-valued coarse-graining transfer bound \\
+Universal matter coupling & unmet & source matter/detector semantics and universality theorem \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The result is zero of eight.  No lawful unscoped effective-geometry input
+exists for P7.  The exact historical name
+\texttt{ScopedMetricStructureRecord\_src}, including its legacy alias, remains
+unchanged.  Naming calibration is not physical metric adoption.
+
+\section{Status-separated result map}
+
+\begin{longtable}{p{0.20\linewidth}p{0.25\linewidth}p{0.45\linewidth}}
+\toprule
+Layer & Status & Exact meaning \\
+\midrule
+\endhead
+Canonical source ontology & proposed research ontology & Source arena and unresolved evolution slot; no source-to-GR bridge. \\
+Exact-GR benchmark & adopted target-side benchmark & One Lorentzian metric, universal matter coupling, and Einstein dynamics at the effective target level; not source derivation. \\
+P5 semiflow and cubic law & proposal-only source-extension candidate & Exact conditional solutions and response theorems; no physical time or adopted coefficient. \\
+P5 reconstruction results & theorem plus precise scoped obstruction & Rank and information limits for the fixed one-mode factorization; richer source data remain open. \\
+P6 transport law & proposal-only source-extension candidate & One linear characteristic hyperplane and oriented ray; no Lorentzian cone. \\
+P6 comparison families & mathematical controls & Same-premise separating witnesses; no control form is adopted as physical geometry. \\
+Scoped metric record & historical scoped source-extension record & Exact protected name and legacy alias; bare physical \(g_{\mathrm{eff}}\) remains unresolved. \\
+Gate B & not ready; precise scoped obstruction & Zero of eight; unchanged package is locally frozen as P7 geometry input. \\
+P15-T04 report & registered task-local draft/control science & Coherent record and new scoped composition theorem; not external publication or proof authority. \\
+Operational checks & operational evidence & Checked bytes and transaction integrity only; not theorem truth or physics promotion. \\
+\bottomrule
+\end{longtable}
+
+\section{Reproducibility archive}
+
+The accompanying Python archive evaluates the cubic flow and response
+cocycle, verifies rank-one factorization controls, and evaluates the P6
+hyperplane, determinant, signature, rod-ratio, and conditioning witnesses.
+Its manifest records exact SHA-256 hashes for every primary P5/P6 source used
+here.  The assumption ledger records premise status and absence of an
+assumption delta.  The review packet records same-context mathematical and
+philosophical reviews; neither child review is human-expert review or
+independent replication.
+
+Runnable controls and validator PASS are reproducibility evidence for the
+displayed calculations and source traceability.  They do not prove physical
+interpretation, ontology adoption, or benchmark derivation.
+
+\section{Conclusion}
+
+P15-T04 creates the coherent scientific record required whether the current
+line is positive or obstructed.  P5 supplies a precise proposal-only source
+dynamics with exact conditional response theorems and a one-amplitude
+reconstruction limit.  P6 supplies a precise proposal-only transport
+candidate and exact separating witnesses showing why one ray, density,
+dimensionless phases, and a scoped metric-structure record do not select
+operational Lorentzian geometry.  Their composition yields a scoped
+fixed-package status barrier.
+
+The reporting burden is discharged.  The effective-metric derivation burden is not.
+No canonical ontology, source law, physical metric, clock, rod,
+detector, matter coupling, Einstein equation, benchmark promotion, proof,
+external publication, push, global no-go, future impossibility, or completed
+derivation follows.
+
+\end{document}

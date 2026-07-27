@@ -1,7 +1,7 @@
 schema_id: "compact_current_frontier_v16"
 generated_from:
   - "research_control/program_state.yaml"
-  - "research_control/handoffs/handoff-0887.yaml"
+  - "research_control/handoffs/handoff-0888.yaml"
   - "registries/DISTANCE_TO_GR_LEDGER.csv"
   - "registries/METRIC_USE_LEDGER.csv"
   - "research_control/current_frontier.md"
@@ -9,16 +9,16 @@ generated_from:
   - "research_control/design/accepted_status_calibration_v2.yaml"
   - "research_control/design/active_state_bifurcation_policy_v1.md"
 active_state:
-  active_task_id: "RT-20260727-005"
-  latest_handoff_id: "handoff-0887"
-  current_status: "p6_t08_traceability_legacy_checkpoint_recovery_pass_ready_for_checkpoint"
+  active_task_id: "RT-20260727-006"
+  latest_handoff_id: "handoff-0888"
+  current_status: "p15_t04_report_complete_reporting_burden_discharged_p7_t01_selected_ready_for_checkpoint"
   v15_completed: false
   v16_completed: false
   v16_plan_registered: true
 active_state_bifurcation:
-  latest_research_task_id: "RT-20260727-005"
-  latest_research_handoff_id: "handoff-0887"
-  latest_research_next_action: "Run the one governed cumulative checkpoint for AJ-RT-20260727-005-001 with --legacy-validation. Only after it commits may one fresh bounded P15-T04 publication-preparation packet package the P5 and P6 results and obstructions without implying metric adoption."
+  latest_research_task_id: "RT-20260727-006"
+  latest_research_handoff_id: "handoff-0888"
+  latest_research_next_action: "Run one governed checkpoint for AJ-RT-20260727-006-001. Only after it commits may one fresh bounded P7-T01 ontology-law research packet define a proposal-only source matter ontology candidate, sector and charge taxonomy, nontrivial configuration, malformed branch, and exact assumption table without assuming geometry or coupling."
   latest_project_system_task_id: "none"
   latest_project_system_status: "none"
   latest_project_system_sidecar_task_id: "none"
@@ -26,10 +26,10 @@ active_state_bifurcation:
   sidecar_supersedes_research_handoff: false
   next_research_route_source: "latest_research_handoff"
 next_route:
-  route_id: "v21_p15_t04_source_dynamics_and_reconstruction_technical_report"
+  route_id: "v21_p7_t01_source_matter_ontology_and_sector_taxonomy"
   role_family: "ontology-formalizer@0.2.0"
-  target_derivation_milestone: "effective_metric_g_eff"
-  milestone_burden: "Create a coherent scientific record whether the result is positive or obstructed."
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "Replace interface-only matter profiles with an actual matter ontology target."
   requires_human_gate: false
 claim_boundary:
   physics_claim_authority: false
@@ -277,7 +277,7 @@ blocked_physical_targets:
       - "no_completed_derivation"
 distance_to_gr:
   delta:
-    effect: "none_project_system_recovery"
+    effect: "no_distance_delta_reporting_burden_only"
     changed: false
     milestone: "effective_metric_g_eff"
     burden_id: "g_eff"
@@ -528,25 +528,9 @@ metric_use_ledger:
 validation:
   latest_required_status: "PASS"
   pending_layers:
-    - layer: "post_write"
-      status: "PENDING"
-      evidence:
-        - "Integrated control, documentation, signal, memory, and test validation remains before checkpoint."
     - layer: "post_checkpoint"
       status: "PENDING"
       evidence:
-        - "One governed cumulative legacy-validation checkpoint remains; P15-T04 is not executed before it."
-    - layer: "renderer"
-      status: "PENDING"
-      evidence:
-        - "Tracked frontier, task-index, graph, registry, and wiki derivatives remain to be synchronized."
-    - layer: "memory_bootstrap"
-      status: "PENDING"
-      evidence:
-        - "Tracked memory synchronization remains before checkpoint."
-    - layer: "claim_language_linter"
-      status: "PENDING"
-      evidence:
-        - "Integrated research-control validation remains to confirm no hard claim-language errors."
+        - "One governed checkpoint remains; P7-T01 is unexecuted."
 authority_warning:
   snapshot_only_not_authority: true

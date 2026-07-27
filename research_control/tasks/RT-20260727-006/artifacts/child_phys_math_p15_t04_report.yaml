@@ -1,0 +1,324 @@
+schema_id: "v21_p15_t04_child_phys_math_report_v1"
+task_id: "RT-20260727-006"
+job_id: "AJ-RT-20260727-006-001"
+plan_task_id: "P15-T04"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+created_at: "2026-07-27T22:17:44Z"
+
+theorem_review:
+  theorem_id: "P15T04-THM-FIXED-PACKAGE-COMPOSED-STATUS-BARRIER"
+  theorem_kind: "exact scoped non-entailment and differential-rank status barrier"
+  fixed_scope: "the unchanged registered P5-T01 through P6-T08 premise, candidate, comparison, variation, and status package"
+  verdict: "accept_scoped_with_explicit_hypothesis_closure"
+  mathematical_status: "valid under the hypotheses and entailment semantics stated in this review"
+  blocking_conflicts: []
+  required_statement_precision:
+    - "State the P5 regularity and factorization hypotheses explicitly; the rank conclusion is conditional on R=B o a through one real amplitude coordinate."
+    - "Define P6 entailment over a declared class of admissible completions of one fixed premise signature and define output equality modulo only a source-derived observable-preserving equivalence relation."
+    - "Treat SEP-01 as a structural type-mismatch result and SEP-02 through SEP-05 as the pairwise or family-level same-premise separation results."
+    - "Use composed to mean conjunction of two independently necessary certification conditions, not literal composition of a P5 reconstruction map with the P6 comparison forms."
+    - "Do not infer that every metric-valued map must have rank at least two; the rank consequence applies only when the declared positive local-geometry interface requires at least two independently variable response directions."
+
+fixed_status_guard:
+  p5_milestone_disposition: "completed_with_precise_scoped_obstruction"
+  p5_adoption_status: "blocked_adoption_open_continuation"
+  p6_gate_b:
+    criterion_count: 8
+    met_count: 0
+    unmet_count: 8
+    readiness: "not_ready"
+  historical_scoped_record:
+    primary_type: "ScopedMetricStructureRecord_src"
+    legacy_alias: "g_eff^{GSC-cand}"
+    bare_g_eff_status: "unresolved effective_metric_g_eff derivation burden"
+    status_change_authorized: false
+    status_preserved: true
+  local_freeze:
+    label: "P6T08-UNCHANGED-PACKAGE-TO-P7-EFFECTIVE-GEOMETRY"
+    scope: "promotion of the unchanged cumulative P6 premise package into an unscoped operational geometry or P7 matter-coupling input"
+    preserved: true
+    materially_richer_same_milestone_continuation_open: true
+  exact_status_pair: "blocked_adoption_open_continuation"
+
+formal_objects:
+  p5_factorization:
+    source_data_space: "a differentiable space U"
+    amplitude_map: "a: U -> R"
+    output_space: "a finite-dimensional real vector space E, or a smooth output manifold after restriction to a coordinate chart"
+    postprocessor: "B: R -> E"
+    deterministic_reconstruction: "R = B o a"
+    regularity: "a and B are differentiable at the point under review"
+  p6_entailment:
+    fixed_premise_symbol: "D_6"
+    fixed_premise_components:
+      - "one oriented source ray [V]_+ and its annihilator and forward-flow preorder"
+      - "one independent unnormalized positive source density"
+      - "dimensionless phase carriers without clock or detector semantics"
+      - "the proposal-only P6-T02 transport candidate with every explicit scope guard retained"
+      - "the exact ten-slot ScopedMetricStructureRecord_src under only its protected historical source-extension scope"
+      - "the fixed P6-T03 through P6-T06 comparison and variation admissibility rules"
+      - "no target metric, target atlas, detector protocol, matter action, operational quotient, or benchmark behavior as a source premise"
+    completion_class: "Comp(D_6), the mathematical comparison completions satisfying the complete fixed premise signature"
+    output_bundle:
+      - "characteristic or causal-cone identification"
+      - "Lorentzian conformal class"
+      - "metric scale and normalization"
+      - "Lorentzian signature and nondegeneracy"
+      - "rod calibration"
+      - "clock calibration"
+      - "source naturality and transition compatibility"
+      - "finite-variation conditioning and robustness"
+    output_equivalence: "only an equivalence relation derived from the fixed source package and proved observable-preserving; no such nontrivial quotient is currently supplied"
+  certification_interface:
+    local_response_condition: "where demanded by the positive local-geometry interface, at least two independently variable tangent response directions"
+    entailment_condition: "a unique output class for each required P6 output on every admissible completion of the same premise signature"
+    gate_condition: "all eight Gate B criteria met with positive provenance"
+
+hypotheses:
+  - hypothesis_id: "H-FIXED-01"
+    statement: "Every registered P5-T01 through P6-T08 source object, hash, premise, candidate status, comparison status, variation class, and scope guard is held fixed."
+  - hypothesis_id: "H-NO-DELTA-02"
+    statement: "No new source primitive, source law, selector, quotient, operational protocol, robustness law, physical interpretation, or protected authority is added."
+  - hypothesis_id: "H-P5-REG-03"
+    statement: "U is differentiable, a:U->R is differentiable, B:R->E is differentiable, and the deterministic reconstruction under review is R=B o a."
+  - hypothesis_id: "H-P5-RICHNESS-04"
+    statement: "The rank consequence is invoked only for an interface that requires at least two independent response directions at a relevant source point."
+  - hypothesis_id: "H-P6-COMP-05"
+    statement: "The P6 comparison forms are admissible mathematical completions or controls of D_6 and are not adopted source or physical geometries."
+  - hypothesis_id: "H-P6-SAME-06"
+    statement: "For each pairwise non-entailment claim, the two compared completions have the same restriction to the complete premise signature relevant to that output."
+  - hypothesis_id: "H-P6-DIFF-07"
+    statement: "The compared completions differ in the required output or in an invariant needed to define that output, and the fixed package supplies no derived observable-preserving equivalence relation identifying the difference."
+  - hypothesis_id: "H-ENTAIL-08"
+    statement: "A required output is called entailed only if all admissible completions of the same fixed premise signature yield the same output class."
+  - hypothesis_id: "H-CERT-09"
+    statement: "Certification as a unique source-natural robust operational Lorentzian geometry requires both the applicable local-response condition and the P6 entailment condition, in addition to the remaining Gate B conditions."
+  - hypothesis_id: "H-CLOCK-10"
+    statement: "Clock non-entailment is formulated over the unnormalized oriented-flow data or over completion-level operational calibration semantics; a normalized physical clock is not silently included in D_6."
+
+formal_entailment_and_single_valuedness_logic:
+  entailment_definition: "D_6 entails output O modulo ~ exactly when [O(M)]_~ is identical for every M in Comp(D_6)."
+  functional_form: "Equivalently, an entailed deterministic reconstruction F_O must satisfy F_O(D_6)=[O(M)]_~ for every M in Comp(D_6)."
+  separating_model_rule: "If M_1 and M_2 both lie in Comp(D_6), agree on D_6, and [O(M_1)]_~ differs from [O(M_2)]_~, then no such single-valued F_O exists and D_6 does not entail O modulo ~."
+  proof_steps:
+    - "Assume a single-valued entailed reconstruction F_O exists."
+    - "Because M_1 and M_2 restrict to the same D_6, both outputs must equal the one value F_O(D_6)."
+    - "The separating witness gives inequivalent output classes, contradicting single-valuedness."
+    - "The conclusion is non-entailment from D_6, not nonexistence of an externally chosen output and not impossibility after adding new premises."
+  quotient_guard: "Declaring all comparison outputs gauge-equivalent after the fact does not repair the proof burden; the equivalence and observable transport must themselves be source-derived and proved compatible with the fixed package."
+
+p5_rank_review:
+  inherited_theorem_id: "P5T08-THM-FACTOR-THROUGH-AMPLITUDE-RANK-BOUND"
+  obstruction_id: "OBST-P5T08-FACTOR-THROUGH-AMPLITUDE-RANK-001"
+  derivation:
+    - "The chain rule gives D R_u = D B_{a(u)} o D a_u."
+    - "D a_u has image in the one-dimensional tangent space T_{a(u)}R."
+    - "Therefore rank(D R_u) <= min(rank(D a_u), rank(D B_{a(u)})) <= 1."
+    - "In coordinates, D R_u is an outer product, so every 2 by 2 minor vanishes identically."
+  accepted_consequence: "Deterministic differentiable post-processing through the sole amplitude coordinate cannot supply two independently variable local response directions."
+  rejected_overreads:
+    - "The rank bound does not say that no unique rank-one metric-valued curve can be written down."
+    - "It does not cover nondifferentiable, stochastic, relational, or materially richer source reconstructions."
+    - "It does not prove that every geometry target intrinsically requires rank at least two without a separately stated interface requirement."
+    - "It does not apply to a conservative source extension with independent local source degrees of freedom."
+  verdict: "mathematically_valid_and_exactly_candidate_scoped"
+
+p6_witness_review:
+  - witness_id: "SEP-01-CHARACTERISTIC"
+    witness_mode: "structural_type_mismatch"
+    same_premise_pair: false
+    exact_result: "The linear characteristic hyperplane Ann(V) cannot equal the nonlinear null cone of a nondegenerate Lorentzian quadratic form; equivalently, a three-dimensional totally isotropic subspace is impossible for Lorentzian Witt index one."
+    consequence: "The P6-T02 principal polynomial xi(V) does not itself identify a Lorentzian characteristic cone."
+  - witness_id: "SEP-02-CONFORMAL"
+    witness_mode: "same_premise_pair_and_infinite_family"
+    same_premise_pair: true
+    exact_result: "The family g_H=-ds^2+H_ij dy^i dy^j shares [V]_+, Ann(V), and the forward V-flow preorder while containing infinitely many pairwise nonconformal forms."
+    consequence: "No single-valued Lorentzian conformal reconstruction is entailed by the one-ray datum."
+  - witness_id: "SEP-03-SCALE-ROD-CLOCK"
+    witness_mode: "same_premise_family_plus_normalization_freedom"
+    same_premise_pair: true
+    exact_result: "The family g_a=-ds^2+e^(2a)(dy^1)^2+e^(-2a)(dy^2)^2+(dy^3)^2 preserves the ray, annihilator, preorder, density, and phase carriers while changing conformal class, null cone, and transverse rod ratios; positive flow rescaling leaves absolute clock normalization free."
+    consequence: "Density and dimensionless phases do not entail conformal shape, rod calibration, or an absolute clock."
+  - witness_id: "SEP-04-SIGNATURE-NATURALITY"
+    witness_mode: "same_premise_signature_pair_near_degeneracy_and_fixed_point_naturality"
+    same_premise_pair: true
+    exact_result: "q_L and q_S share the admitted carriers but have different inertia; q_epsilon approaches degeneracy with no source lower bound; and invariance under the admitted determinant-one diagonal automorphisms forces every symmetric bilinear output to vanish."
+    consequence: "Lorentzian signature, uniform nondegeneracy, and a nonzero source-natural bilinear selector are not entailed."
+  - witness_id: "SEP-05-ROBUSTNESS-ADMISSIBILITY"
+    witness_mode: "same_premise_two_parameter_family"
+    same_premise_pair: true
+    exact_result: "q_(a,epsilon)=diag(-1,e^(2a),e^(-2a),epsilon^2) keeps the admitted source carriers fixed while changing fixed-covector classification and transverse ratios, with inverse conditioning diverging as epsilon^(-2)."
+    consequence: "Unique cone selection, observable-preserving gauge, rod comparison, uniform robustness, and physical admissibility are not certified."
+p6_witness_family_conclusion: "SEP-02 through SEP-05 furnish the same-premise non-entailment mechanism; SEP-01 independently blocks a proposed identity between the available characteristic object and a Lorentzian null cone."
+
+composition_review:
+  logical_form: "The certification predicate is conjunctive. Under its explicit interface, certification requires both sufficient local response rank and single-valued source entailment of the required P6 outputs."
+  proof_steps:
+    - "The fixed P5 amplitude-factorized branch has differential rank at most one, so it fails any declared requirement for two or more independent local response directions."
+    - "The fixed P6 premise signature admits structural mismatch and same-premise separating completions, so the listed geometry outputs are not single-valued consequences of that signature."
+    - "Failure of either necessary condition blocks certification; here both failures are documented for their exact scopes."
+    - "Therefore the unchanged P5-P6 package cannot be certified as a unique source-natural robust operationally calibrated unscoped Lorentzian geometry or lawful P7 input."
+  composition_kind: "conjunction_of_independent_necessary_condition_failures"
+  literal_map_composition_claimed: false
+  exhaustive_global_dichotomy_claimed: false
+  p6_non_entailment_alone_blocks_uniqueness: true
+  p5_rank_clause_adds_response_dimension_obstruction: true
+  result_scope: "exact fixed-package certification status only"
+
+what_the_result_proves:
+  - "The P5 factor-through-amplitude reconstruction differential has rank at most one under the displayed differentiability and factorization hypotheses."
+  - "The fixed P6 premise package does not entail the listed causal, conformal, scale, signature, rod, clock, naturality, or conditioning outputs under the declared completion and output-equivalence semantics."
+  - "The unchanged combined package fails the stated certification interface for a unique source-natural robust operational Lorentzian geometry."
+  - "Gate B remains zero of eight and no lawful unscoped P7 effective-geometry input exists."
+  - "The exact unchanged P5 geometry-support route and the P6-to-P7 promotion route remain locally frozen."
+
+what_the_result_does_not_prove:
+  - "It does not edit or complete canonical ontology and does not adopt or reject a source law."
+  - "It does not derive physical time, locality, causality, a cone, a conformal class, metric scale, clocks, rods, M_src, unscoped g_eff, or a physical metric."
+  - "It does not derive matter coupling, stress-energy semantics, an action, Einstein equations, or benchmark recovery."
+  - "It does not revoke, rename in place, or expand the protected historical ScopedMetricStructureRecord_src or its exact g_eff^{GSC-cand} legacy alias."
+  - "It does not prove that no arbitrary choice function or externally supplied metric can be written down; it proves that the required output is not entailed by the fixed source package."
+  - "It does not rule out a source-derived quotient, operational protocol, robust variation law, or richer source ontology supplied in a future authorized packet."
+  - "It is not a global no-go theorem, global theory rejection, future-source-extension impossibility result, completed derivation, publication, or Gate Chair verdict."
+  - "It does not turn same-context internal review or validator success into theorem truth, independent replication, human-expert review, or proof authority."
+
+calculation_and_model_archive_checks_required:
+  archive_acceptance_status: "required_not_executed_by_this_child_review"
+  checks:
+    - check_id: "ARCH-HASH-01"
+      requirement: "Pin and verify every registered P5/P6 evidence hash before calculations; fail closed on a missing or changed path."
+    - check_id: "ARCH-P5-RESPONSE-02"
+      requirement: "Reproduce phi_lambda(a), Dphi_lambda(a), DX_gamma(a), and the derivative cocycle for gamma>0 and lambda,mu>=0, including a=0 and zero-parameter edge cases."
+    - check_id: "ARCH-P5-RANK-03"
+      requirement: "Construct representative Jacobians D B times D a and verify all 2 by 2 minors vanish; record that sampling supports but does not replace the exact chain-rule proof."
+    - check_id: "ARCH-P6-CHAR-04"
+      requirement: "Verify P_x(xi)=xi(V), the three-dimensional Ann(V) characteristic hyperplane, and the hyperplane versus Lorentzian quadratic-null-cone mismatch."
+    - check_id: "ARCH-P6-CONFORMAL-05"
+      requirement: "Evaluate explicit H_0 and H_1 comparison forms, confirm identical one-ray premises, nonconformality, and changed null classification of a fixed vector."
+    - check_id: "ARCH-P6-SCALE-06"
+      requirement: "Verify det(g_a)=-1, transverse factors e^(2a) and e^(-2a), changed rod ratios at fixed density, and positive-flow rescaling of phase rates."
+    - check_id: "ARCH-P6-SIGNATURE-07"
+      requirement: "Compute inertia and determinants of q_L, q_S, and q_epsilon; verify approach to degeneracy and the absence of any zero pair among the naturality weights w_i+w_j."
+    - check_id: "ARCH-P6-ROBUSTNESS-08"
+      requirement: "For q_(a,epsilon), verify the sign change of -1+e^(-2a), transverse-ratio variation, det=-epsilon^2, inverse component epsilon^(-2), and conditioning growth toward epsilon=0."
+    - check_id: "ARCH-ENTAILMENT-09"
+      requirement: "Represent every pairwise witness with an identical complete premise fingerprint and a distinct output invariant; reject a purported witness when its premise fingerprints differ."
+    - check_id: "ARCH-QUOTIENT-10"
+      requirement: "If an output quotient is tested, require an explicit source-derived equivalence and observable-transport rule; do not treat a post hoc gauge label as a passing quotient."
+    - check_id: "ARCH-NEGATIVE-11"
+      requirement: "Include negative controls that deliberately change a premise, remove a witness difference, or import a target value, and require the archive to flag each case rather than count it as support."
+    - check_id: "ARCH-STATUS-12"
+      requirement: "Assert Gate B 0/8, unchanged historical scoped-record status, the exact local-freeze scope, blocked_adoption_open_continuation, and physics_promotion_authorized=false."
+    - check_id: "ARCH-REPRO-13"
+      requirement: "Emit deterministic JSON with code and manifest hashes, exact parameter grids, tolerances, formula identifiers, pass/fail counts, and no network or target-benchmark fitting."
+  numerical_caution: "Use exact algebra for determinant, inertia, rank-minor, and premise-equality claims where possible; floating-point grids are reproducibility controls rather than proofs."
+  authority_caution: "A passing archive is operational evidence only and cannot promote the theorem, ontology, metric, benchmark, review provenance, or publication status."
+
+exact_evidence:
+  primary:
+    - object_id: "TEX-V21-P5-T08-SOURCE-DYNAMICS-MILESTONE-SYNTHESIS-V1"
+      path: "research_control/tasks/RT-20260726-001/artifacts/source_dynamics_milestone_synthesis_v1.tex"
+      sha256: "a2b9c6670cdb0e09ca2e19ff30f71d9bb954e3ab2fc73a5c9727a2df10db93aa"
+      status: "registered draft/control theorem synthesis"
+    - object_id: "P5T08-THEOREM-INVENTORY"
+      path: "research_control/tasks/RT-20260726-001/artifacts/source_dynamics_theorem_inventory_v1.yaml"
+      sha256: "3be2942e28aeb5d96f8c274ce8b887d72bf36a1848b7b34ce21d4ec6c0913a79"
+      status: "task-local theorem and obstruction inventory"
+    - object_id: "P6T08-GATE-B-SEPARATING-CERTIFICATE"
+      path: "research_control/tasks/RT-20260727-004/artifacts/p6_t08_gate_b_separating_certificate_v1.yaml"
+      sha256: "f3080ed6a6ba1d6847a3b7ed43c7a11ad7f7dae4deccd25486913ea9547f221b"
+      status: "draft/control integrated precise scoped obstruction"
+    - object_id: "P6T08-THEOREM-INVENTORY-AND-ROUTE"
+      path: "research_control/tasks/RT-20260727-004/artifacts/p6_t08_theorem_inventory_and_route_v1.yaml"
+      sha256: "b17afe5f02752f8202f1bbd3bd68d29ca8f42a124b543a08d43796f284c90046"
+      status: "completed task-local status and route inventory"
+  p6_witness_sources:
+    - path: "research_control/tasks/RT-20260726-002/artifacts/causal_characteristic_target_v1.tex"
+      sha256: "32a055bc5c851f0a36d726343cb5be1f1d68cf72a5a32fccead12b3488f04273"
+      role: "two-site diagonal-response nonselection and formal characteristic target"
+    - path: "research_control/tasks/RT-20260726-003/artifacts/source_local_transport_candidate_v1.tex"
+      sha256: "7b446c8660410e655166c0b3124fc37aad9edb8e49b7df2afdc9911c6f560958"
+      role: "proposal-only principal polynomial xi(V) and one-ray transport"
+    - path: "research_control/tasks/RT-20260726-005/artifacts/one_ray_conformal_insufficiency_v1.tex"
+      sha256: "007ae324872868b9eb9cdf0ebc4f1131737c71eda9ce301c805acd5041a52bac"
+      role: "hyperplane mismatch and nonconformal same-premise family"
+    - path: "research_control/tasks/RT-20260726-007/artifacts/source_scale_calibration_nonselection_v1.tex"
+      sha256: "96a527cccb8e7a6a614debc5110902b1587848178af8444fc02acda52caf4d28"
+      role: "fixed-density anisotropy and clock/rod calibration nonselection"
+    - path: "research_control/tasks/RT-20260726-009/artifacts/signature_covariance_naturality_obstruction_v1.tex"
+      sha256: "d7e116d553b1d8a28d5168d7f268c86301161493d08f50a4741573e154e7d4b4"
+      role: "signature, degeneracy, source-naturality, and conditional gluing results"
+    - path: "research_control/tasks/RT-20260726-010/artifacts/uniqueness_covariance_robustness_admissibility_obstruction_v1.tex"
+      sha256: "a9c307207ede1d04825c73d5f3ff7e081f27ce15ebf4aac4d6041aae4873aa8a"
+      role: "q_(a,epsilon) same-source variation and scoped Gate-B obstruction"
+  status_and_provenance_sources:
+    - path: "research_control/tasks/RT-20260726-011/artifacts/metric_object_naming_decision_v1.yaml"
+      sha256: "4d67563b2444cfed2bd430e9d027337f26656701624d532f7cb2e357cbac2452"
+      role: "historical scoped-record, exact legacy-alias, and bare-g_eff status"
+    - path: "research_control/tasks/RT-20260726-011/artifacts/gate_b_readiness_verdict_v1.yaml"
+      sha256: "f62e03fe10610cbe0f37c4160e95ac7631f3c75c090ab5c2f6af1fb53babace9"
+      role: "Gate B zero-of-eight readiness verdict"
+    - path: "research_control/tasks/RT-20260727-004/artifacts/p6_t08_gate_b_review_receipt.md"
+      sha256: "ceb38babf4ecc14efb869327ce5c6cc4876c49c9a2f6a9477b3ef8f7ee798758"
+      role: "same-context review calibration and local-freeze receipt"
+  operational_receipts_inspected:
+    - path: "research_control/tasks/RT-20260726-001/artifacts/source_dynamics_milestone_validation_receipt_v1.json"
+      sha256: "ffa304b2e96acb3a0da3543996ca62fd9e5b86d323c9892320c770d503fbec57"
+      authority: "operational evidence only"
+    - path: "research_control/tasks/RT-20260727-004/artifacts/p6_t08_gate_b_review_compact_receipt_v1.json"
+      sha256: "4e09b0716590bcf74df8cabb06691b7a470a2fc25ba7cfa6c2bfeb85f6e7547d"
+      authority: "operational evidence only"
+
+review_provenance:
+  review_context_classification: "same_context_internal_role_review"
+  reviewer_kind: "ai"
+  blind_packet_received: false
+  same_repository: true
+  same_source_context: true
+  independent_code_implementation: false
+  independent_replication_completed: false
+  human_expert_review_completed: false
+  external_review_completed: false
+  agent_job:
+    path: "research_control/tasks/RT-20260727-006/jobs/AJ-RT-20260727-006-001.yaml"
+    sha256: "0c9d188d3a217322f67e0d013d1508848a36f017ecc751a8b8410fe0811c1b8d"
+  execution_role_overlay:
+    path: "research_control/tasks/RT-20260727-006/roles/ontology-formalizer@0.2.0--RT-20260727-006.yaml"
+    sha256: "f0a5f36f955780f26228a94f89709bb9cb003f17f3ff862acd976663e0a88298"
+  base_role:
+    path: ".agents/roles/physics/ontology-formalizer.v0.2.0.md"
+    sha256: "429a37d58f93c0693e3f704ba98edc00487d77b92008565acc295e7b20dc5a6c"
+  memory_preflight:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    refresh_performed: false
+    retrieval_used_as_authority: false
+  provenance_limitation: "Role separation supplies a useful mathematical perspective but is not independent human review, external peer review, or replication."
+
+limitations:
+  - "The P5 rank statement is local and differential; a manifold-valued output requires a local chart or tangent-map formulation."
+  - "The rank clause does not independently prove geometry nonuniqueness; it proves insufficient tangent richness only under the stated interface."
+  - "P6 non-entailment depends on the exact completion class, complete premise fingerprint, and allowed output equivalence remaining explicit."
+  - "SEP-01 is a type-mismatch proof rather than a pair of same-premise metric completions."
+  - "The inherited Gate B 0/8 status includes criteria recorded as missing rather than separately refuted by one common countermodel."
+  - "Clock nonselection must not compare differently normalized transport operators while calling them literally identical premises; use the unnormalized ray or explicit operational-completion semantics."
+  - "No new P15 model archive was available or executed within this child's one-file ownership; the parent must run and record the required archive checks."
+  - "This review is same-context and non-independent."
+
+final_disposition:
+  theorem_accepted_within_fixed_scope: true
+  unresolved_blocking_mathematical_conflicts: []
+  required_parent_action: "Use the explicit completion semantics and necessary-condition composition above in the fused theorem, and require the listed archive checks before acceptance."
+  gate_b_met_count: 0
+  gate_b_criterion_count: 8
+  lawful_p7_effective_geometry_input_exists: false
+  historical_scoped_record_status_changed: false
+  local_freeze_preserved: true
+  adoption_status: "blocked_adoption_open_continuation"
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+  proof_or_publication_authority_created: false
+  physics_promotion_authorized: false

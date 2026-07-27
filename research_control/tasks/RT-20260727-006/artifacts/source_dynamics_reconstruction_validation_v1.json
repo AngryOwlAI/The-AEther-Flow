@@ -1,0 +1,110 @@
+{
+  "authority_limits": {
+    "canonical_ontology_modified": false,
+    "physical_metric_adopted": false,
+    "physics_promotion_authorized": false,
+    "source_law_adopted": false,
+    "theorem_truth_inferred": false,
+    "validator_pass_is_operational_evidence_only": true
+  },
+  "check_count": 13,
+  "checks": [
+    {
+      "check_id": "required_artifacts",
+      "detail": "all required task-local report artifacts exist",
+      "status": "PASS"
+    },
+    {
+      "check_id": "control_identity",
+      "detail": "task, AgentJob, and v21 plan identity agree",
+      "status": "PASS"
+    },
+    {
+      "check_id": "milestone_contract",
+      "detail": "effective_metric_g_eff reporting burden is explicit",
+      "status": "PASS"
+    },
+    {
+      "check_id": "parent_child_decomposition",
+      "detail": "one outer AgentJob contains exactly two required internal execution units",
+      "status": "PASS"
+    },
+    {
+      "check_id": "report_required_content",
+      "detail": "theorem, status, Gate-B, naming, and burden boundaries are present",
+      "status": "PASS"
+    },
+    {
+      "check_id": "report_forbidden_overreads",
+      "detail": "no forbidden promotional or global overread appears",
+      "status": "PASS"
+    },
+    {
+      "check_id": "primary_source_hashes",
+      "detail": "16 primary source hashes match",
+      "status": "PASS"
+    },
+    {
+      "check_id": "model_archive",
+      "detail": "all bounded P5/P6 calculation controls pass",
+      "status": "PASS"
+    },
+    {
+      "check_id": "assumption_ledger",
+      "detail": "no premise delta, fourteen status-separated entries, and inherited freeze",
+      "status": "PASS"
+    },
+    {
+      "check_id": "child_review_provenance",
+      "detail": "both child reviews are completed and calibrated as same-context internal review",
+      "status": "PASS"
+    },
+    {
+      "check_id": "parent_conflict_review",
+      "detail": "parent records and resolves child differences without promotion",
+      "status": "PASS"
+    },
+    {
+      "check_id": "parent_fusion",
+      "detail": "fusion notes preserve provenance, Gate-B result, freeze, and authority limits",
+      "status": "PASS"
+    },
+    {
+      "check_id": "review_packet",
+      "detail": "review packet is status-complete, Gate B is 0/8, and review is non-independent",
+      "status": "PASS"
+    }
+  ],
+  "failed_check_count": 0,
+  "failed_check_ids": [],
+  "job_id": "AJ-RT-20260727-006-001",
+  "model_summary": {
+    "checks": {
+      "characteristic_hyperplane_not_lorentzian_null": true,
+      "equal_absolute_determinant": true,
+      "factorized_rank_at_most_one": true,
+      "gate_b_met_count_is_zero": true,
+      "near_degenerate_conditioning": true,
+      "physics_promotion_authorized_is_false": true,
+      "response_cocycle": true,
+      "rod_ratio_changes": true,
+      "semiflow_composition": true,
+      "signature_separates": true,
+      "source_hashes_match": true,
+      "unimodular_anisotropy": true
+    },
+    "status": "PASS"
+  },
+  "schema_id": "v21_p15_t04_source_dynamics_reconstruction_validation_v1",
+  "source_summary": {
+    "assumption_ledger_sha256": "f42a3e28bb02f052f393c3cbe58c79e4e850dbd2531183ecbb60c188bfe57e42",
+    "manifest_sha256": "13dadfdcc0087ab6f95afed2758fac20d94cf729e7535277eb6fc93894712e8c",
+    "manifest_source_count": 16,
+    "model_archive_sha256": "8ef5532167df2a4b7e7b65268002cd50dc9e4651e12c5635beeb419ca4e3a851",
+    "report_sha256": "5724a07c2181f87d517b80d7878f437b47d8802045596cd16d3e62929dfe5cff",
+    "review_packet_sha256": "6878ec87c4d6afa367d42e0d54109be0587e1ae632f8906c230665fa092b7afd"
+  },
+  "status": "PASS",
+  "task_id": "RT-20260727-006",
+  "validator_id": "VAL-P15T04-SOURCE-DYNAMICS-RECONSTRUCTION-001"
+}

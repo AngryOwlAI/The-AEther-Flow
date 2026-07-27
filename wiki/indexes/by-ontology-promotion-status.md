@@ -393,6 +393,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V21-P14-T03-NO-TARGET-POSITIVE-SUFFICIENCY-POLICY-V1` `research_control/tasks/RT-20260722-019/artifacts/no_target_positive_provenance_sufficiency_policy_v1.tex`
 - `TEX-V21-P14-T05-NEGATIVE-RESULT-SUCCESS-PATHWAY-V1` `research_control/tasks/RT-20260722-020/artifacts/negative_result_success_pathway_v1.tex`
 - `TEX-V21-P15-T03-SELECTOR-MINIMUM-EXTENSION-THEOREM-MANUSCRIPT-V1` `research_control/tasks/RT-20260723-003/artifacts/selector_minimum_extension_theorem_manuscript_v1.tex`
+- `TEX-V21-P15-T04-SOURCE-DYNAMICS-RECONSTRUCTION-TECHNICAL-REPORT-V1` `research_control/tasks/RT-20260727-006/artifacts/source_dynamics_reconstruction_technical_report_v1.tex`
 - `TEX-V21-P2-T01-EQSRC-SOURCE-CATEGORY-DEFINITION` `research_control/tasks/RT-20260720-014/artifacts/eqsrc_source_category_definition_v1.tex`
 - `TEX-V21-P2-T02-EQSRC-NATURAL-SELECTOR-FIXED-POINT-CONDITION` `research_control/tasks/RT-20260720-015/artifacts/eqsrc_natural_selector_fixed_point_condition_v1.tex`
 - `TEX-V21-P2-T03-EQSRC-NO-SELECTOR-NONUNIQUENESS-THEOREM` `research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_theorem_v1.tex`

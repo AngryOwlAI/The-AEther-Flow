@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260727-005`
-- Latest handoff: `handoff-0887`
-- Current status: `p6_t08_traceability_legacy_checkpoint_recovery_pass_ready_for_checkpoint`
+- Active task: `RT-20260727-006`
+- Latest handoff: `handoff-0888`
+- Current status: `p15_t04_report_complete_reporting_burden_discharged_p7_t01_selected_ready_for_checkpoint`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260727-005`
-- Latest research handoff: `handoff-0887`
-- Latest research next action: Run the one governed cumulative checkpoint for AJ-RT-20260727-005-001 with --legacy-validation. Only after it commits may one fresh bounded P15-T04 publication-preparation packet package the P5 and P6 results and obstructions without implying metric adoption.
+- Latest research task: `RT-20260727-006`
+- Latest research handoff: `handoff-0888`
+- Latest research next action: Run one governed checkpoint for AJ-RT-20260727-006-001. Only after it commits may one fresh bounded P7-T01 ontology-law research packet define a proposal-only source matter ontology candidate, sector and charge taxonomy, nontrivial configuration, malformed branch, and exact assumption table without assuming geometry or coupling.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p15_t04_source_dynamics_and_reconstruction_technical_report`
+- Route ID: `v21_p7_t01_source_matter_ontology_and_sector_taxonomy`
 - Role family: `ontology-formalizer@0.2.0`
-- Target milestone: `effective_metric_g_eff`
-- Milestone burden: Create a coherent scientific record whether the result is positive or obstructed.
+- Target milestone: `matter_coupling`
+- Milestone burden: Replace interface-only matter profiles with an actual matter ontology target.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `0b8a087c5c5bded1d922cc949c1f072c4381bbd7cf19a15fe33c843e55eafe1d`
-- JSON SHA-256: `bb45b65e77b4dc267f47b7601491174d5f2cb5339d0b275a7e72d63926acec6d`
+- YAML SHA-256: `f491e4fd85429b5b01ce130b1565f634b90447afc35a6bb4969f14c14f5fda40`
+- JSON SHA-256: `58af706684808cff9f7006fe0aa7674d8f8f037f35e202939051899a739f3dc9`
 
 ## Authority Warning
 

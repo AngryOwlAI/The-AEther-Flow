@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260727-005` and `handoff-0887`.
+`RT-20260727-006` and `handoff-0888`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260727-005` |
-| Latest handoff ID | `handoff-0887` |
-| Current status | `p6_t08_traceability_legacy_checkpoint_recovery_pass_ready_for_checkpoint` |
+| Active task ID | `RT-20260727-006` |
+| Latest handoff ID | `handoff-0888` |
+| Current status | `p15_t04_report_complete_reporting_burden_discharged_p7_t01_selected_ready_for_checkpoint` |
 | V16 completed | false |
-| Current route family | benchmark or recovery (project system) |
+| Current route family | construction or implementation (scientific) |
 | Target derivation milestone | `effective_metric_g_eff` |
 | Current burden | `g_eff` |
-| Required next authority | After the governed cumulative legacy-validation checkpoint commits, one fresh bounded P15-T04 publication-preparation packet may package the P5 and P6 results and obstructions as a durable technical report. |
-| Next recommended action | Run the one governed cumulative checkpoint for AJ-RT-20260727-005-001 with --legacy-validation. Only after it commits may one fresh bounded P15-T04 publication-preparation packet package the P5 and P6 results and obstructions without implying metric adoption. |
+| Required next authority | After the governed checkpoint commits, one fresh bounded P7-T01 Ontology Formalizer packet may define a proposal-only source matter ontology candidate, sector and charge taxonomy, one nontrivial configuration, one malformed branch, and an exact assumption table without assuming a target metric, effective geometry, stress tensor, coupling, or GR behavior. |
+| Next recommended action | Run one governed checkpoint for AJ-RT-20260727-006-001. Only after it commits may one fresh bounded P7-T01 ontology-law research packet define a proposal-only source matter ontology candidate, sector and charge taxonomy, nontrivial configuration, malformed branch, and exact assumption table without assuming geometry or coupling. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260727-005` |
-| Latest research handoff ID | `handoff-0887` |
-| Latest research next action | Run the one governed cumulative checkpoint for AJ-RT-20260727-005-001 with --legacy-validation. Only after it commits may one fresh bounded P15-T04 publication-preparation packet package the P5 and P6 results and obstructions without implying metric adoption. |
+| Latest research task ID | `RT-20260727-006` |
+| Latest research handoff ID | `handoff-0888` |
+| Latest research next action | Run one governed checkpoint for AJ-RT-20260727-006-001. Only after it commits may one fresh bounded P7-T01 ontology-law research packet define a proposal-only source matter ontology candidate, sector and charge taxonomy, nontrivial configuration, malformed branch, and exact assumption table without assuming geometry or coupling. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260727-005/00_TASK.yaml`.
-- Active task objective: Under the sealed generation-138 dirty-state manifest, replace exactly one stale METRIC_USE_LEDGER source hash in the v18 support-formalization traceability registry, preserve the P6-T08 scientific payload and authority conclusions, synchronize cumulative documentation-impact coverage, and invoke one fresh governed cumulative checkpoint with the explicit legacy-validation fallback before P15-T04.
-- Latest handoff path: `research_control/handoffs/handoff-0887.yaml`.
-- Latest handoff summary: Generation 138 synchronizes exactly one stale v18 support-traceability source hash to the already-authorized P6-T08 metric-use ledger hash and synchronizes the prior documentation-impact receipt for cumulative coverage. The sealed receipt records zero drift across all 64 inherited dirty-manifest paths at the repair boundary, proves the exact one-token substitution, preserves the P6-T08 scientific payload and authority conclusions, and preserves the zero-subprocess zero-stage zero-commit planner stop. P15-T04 remains unexecuted pending one governed cumulative checkpoint through the explicit legacy-validation fallback.
-- Current route family: benchmark or recovery (project system).
-- Next recommended action: Run the one governed cumulative checkpoint for AJ-RT-20260727-005-001 with --legacy-validation. Only after it commits may one fresh bounded P15-T04 publication-preparation packet package the P5 and P6 results and obstructions without implying metric adoption.
+- Active task path: `research_control/tasks/RT-20260727-006/00_TASK.yaml`.
+- Active task objective: Package the fixed registered P5 and P6 results, candidates, controls, and obstructions into one durable task-local technical report with an explicit ontology regime, source dynamics, reconstruction map, causal structure, geometry status, runnable model archive, assumption ledger, review packet, and exact source hashes.
+- Latest handoff path: `research_control/handoffs/handoff-0888.yaml`.
+- Latest handoff summary: P15-T04 packages the unchanged registered P5-T01 through P6-T08 results into a durable task-local technical report, exact source-hash manifest, runnable archive, assumption ledger, and same-context review packet. The new P15T04 fixed-package theorem is an exact scoped conjunction of independently necessary certification-condition failures, not literal map composition or a global no-go. The coherent-reporting burden is discharged; the effective-metric derivation burden, historical scoped record, Gate B zero-of-eight result, and local freeze remain unchanged. P7-T01 is selected after checkpoint only for proposal-only source matter ontology work that assumes no effective geometry, stress tensor, coupling, or GR behavior.
+- Current route family: construction or implementation (scientific).
+- Next recommended action: Run one governed checkpoint for AJ-RT-20260727-006-001. Only after it commits may one fresh bounded P7-T01 ontology-law research packet define a proposal-only source matter ontology candidate, sector and charge taxonomy, nontrivial configuration, malformed branch, and exact assumption table without assuming geometry or coupling.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -302,7 +302,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run the one governed cumulative checkpoint for AJ-RT-20260727-005-001 with --legacy-validation. Only after it commits may one fresh bounded P15-T04 publication-preparation packet package the P5 and P6 results and obstructions without implying metric adoption.
+Run one governed checkpoint for AJ-RT-20260727-006-001. Only after it commits may one fresh bounded P7-T01 ontology-law research packet define a proposal-only source matter ontology candidate, sector and charge taxonomy, nontrivial configuration, malformed branch, and exact assumption table without assuming geometry or coupling.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -320,20 +320,17 @@ Layer status summary:
 
 | Status | Count | Meaning |
 | --- | --- | --- |
-| `PASS` | 2 | receipt complete |
-| `PENDING` | 5 | open item; evidence must explain why |
+| `PASS` | 3 | receipt complete |
+| `PENDING` | 1 | open item; evidence must explain why |
 
 Validation layers:
 
 | Validation layer | Status | Meaning | Evidence |
 | --- | --- | --- | --- |
-| `pre_execution` | PASS | receipt complete | Generation 138 validated, atomically claimed, and consumed its exact immutable recovery route once. |
-| `completion_internal` | PASS | receipt complete | The tracked receipt proves one exact source-hash substitution, 64 inherited hash matches, and a passing v18 validator.<br>The prior planner stop launched zero subprocesses and staged and committed nothing. |
-| `post_write` | PENDING | open item; evidence must explain why | Integrated control, documentation, signal, memory, and test validation remains before checkpoint. |
-| `post_checkpoint` | PENDING | open item; evidence must explain why | One governed cumulative legacy-validation checkpoint remains; P15-T04 is not executed before it. |
-| `renderer` | PENDING | open item; evidence must explain why | Tracked frontier, task-index, graph, registry, and wiki derivatives remain to be synchronized. |
-| `memory_bootstrap` | PENDING | open item; evidence must explain why | Tracked memory synchronization remains before checkpoint. |
-| `claim_language_linter` | PENDING | open item; evidence must explain why | Integrated research-control validation remains to confirm no hard claim-language errors. |
+| `pre_execution` | PASS | receipt complete | Generation 139 validated, atomically claimed, and consumed its exact immutable route once.<br>P6-T08 dependency checkpoint e3360a44a682e21f81cc42b0d1eea6a5e0d17309 is committed. |
+| `completion_internal` | PASS | receipt complete | Fixed-source theorem status review runnable-model and authority checks pass thirteen of thirteen.<br>The TeX scratch build succeeds with resolved references and six rendered pages. |
+| `post_write` | PASS | receipt complete | Integrated task-local, documentation-impact, improvement-signal, claim-language, family-freeze, dual-budget, renderer, memory, and research-control validation completed without unresolved packet defects. |
+| `post_checkpoint` | PENDING | open item; evidence must explain why | One governed checkpoint remains; P7-T01 is unexecuted. |
 
 Authorization layers:
 
@@ -347,7 +344,9 @@ Authorization layers:
 | `canonical_ontology_edit_authorized` | False | extension authorization field |
 | `external_outreach_authorized` | False | extension authorization field |
 | `external_publication_authorized` | False | extension authorization field |
+| `future_source_extension_impossibility_authorized` | False | extension authorization field |
 | `global_no_go_claim_authorized` | False | extension authorization field |
+| `matter_ontology_adoption_authorized` | False | extension authorization field |
 | `ontology_selection_authorized` | False | extension authorization field |
 | `physical_interpretation_establishment_authorized` | False | extension authorization field |
 | `proof_authority` | False | extension authorization field |
@@ -358,9 +357,9 @@ Authorization layers:
 
 Legacy compatibility records:
 
-- active task: `RT-20260727-005`;
-- latest handoff: `handoff-0887`;
-- current status: `p6_t08_traceability_legacy_checkpoint_recovery_pass_ready_for_checkpoint`;
+- active task: `RT-20260727-006`;
+- latest handoff: `handoff-0888`;
+- current status: `p15_t04_report_complete_reporting_burden_discharged_p7_t01_selected_ready_for_checkpoint`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -370,8 +369,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0887.yaml`
-- `research_control/tasks/RT-20260727-005/00_TASK.yaml`
+- `research_control/handoffs/handoff-0888.yaml`
+- `research_control/tasks/RT-20260727-006/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -387,7 +386,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0887*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0888*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

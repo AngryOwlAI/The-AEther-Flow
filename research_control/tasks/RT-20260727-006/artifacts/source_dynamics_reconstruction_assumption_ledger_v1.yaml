@@ -1,0 +1,152 @@
+schema_id: "v21_p15_t04_source_dynamics_reconstruction_assumption_ledger_v1"
+ledger_id: "ASSUMP-P15T04-FIXED-P5-P6-001"
+task_id: "RT-20260727-006"
+status: "draft/control"
+target_derivation_milestone: "effective_metric_g_eff"
+milestone_burden: "Create a coherent scientific record whether the result is positive or obstructed."
+package_scope: "unchanged registered P5-T01 through P6-T08 package"
+assumption_delta:
+  changed: false
+  added_source_primitives: []
+  added_source_laws: []
+  added_operational_protocols: []
+  added_equivalence_relations: []
+  added_variation_classes: []
+  protected_decisions: []
+entries:
+  - assumption_id: "A-P15-01"
+    statement: "A smooth four-dimensional source arena is explicit primitive debt."
+    status: "canonical source research architecture"
+    source: "ontology/tex/aether_flow_foundations.tex"
+    not_inferred:
+      - "physical spacetime"
+      - "target atlas"
+      - "source-to-target bridge"
+  - assumption_id: "A-P15-02"
+    statement: "Phi_src is a continuous unital forward monoid action for the P5 candidate."
+    status: "proposal-only source-extension candidate"
+    source: "research_control/tasks/RT-20260725-007/artifacts/phi_src_semiflow_semantics_v1.tex"
+    not_inferred:
+      - "physical time"
+      - "clock normalization"
+      - "adopted source evolution law"
+  - assumption_id: "A-P15-03"
+    statement: "The candidate state family is q_a(theta)=a sin(theta_1)."
+    status: "task-local proposal-only one-mode family"
+    source: "research_control/tasks/RT-20260725-003/artifacts/compact_source_theory_object_v1.tex"
+    not_inferred:
+      - "complete source state space"
+      - "independent local degrees of freedom"
+  - assumption_id: "A-P15-04"
+    statement: "The candidate generator is X_gamma(a)=-gamma a^3 with gamma>0."
+    status: "proposal-only source-extension candidate"
+    source: "research_control/tasks/RT-20260725-008/artifacts/cubic_amplitude_source_dynamics_v1.tex"
+    not_inferred:
+      - "adopted law"
+      - "physical rate"
+      - "intrinsic scale"
+  - assumption_id: "A-P15-05"
+    statement: "The exact cubic flow and tangent response are evaluated conditionally on A-P15-04."
+    status: "exact conditional theorem"
+    source: "research_control/tasks/RT-20260726-001/artifacts/source_dynamics_milestone_synthesis_v1.tex"
+    not_inferred:
+      - "physical chronology"
+      - "causal propagation"
+  - assumption_id: "A-P15-06"
+    statement: "The reviewed deterministic P5 reconstructions factor through one amplitude coordinate."
+    status: "explicit theorem hypothesis"
+    source: "research_control/tasks/RT-20260726-001/artifacts/source_dynamics_milestone_synthesis_v1.tex"
+    not_inferred:
+      - "all possible future reconstructions factor through one amplitude"
+  - assumption_id: "A-P15-07"
+    statement: "The P6 transport-reaction equation L_V a + gamma a^3=0 is included."
+    status: "proposal-only source-extension candidate"
+    source: "research_control/tasks/RT-20260726-003/artifacts/source_local_transport_candidate_v1.tex"
+    not_inferred:
+      - "physical signal law"
+      - "Lorentzian characteristic cone"
+      - "adopted causal structure"
+  - assumption_id: "A-P15-08"
+    statement: "One oriented source ray and its annihilator are included."
+    status: "exact candidate-specific characteristic result"
+    source: "research_control/tasks/RT-20260726-003/artifacts/source_local_transport_candidate_v1.tex"
+    not_inferred:
+      - "conformal class"
+      - "metric signature"
+      - "proper time"
+  - assumption_id: "A-P15-09"
+    statement: "One independent positive density is held fixed in scale controls."
+    status: "source-side comparison datum"
+    source: "research_control/tasks/RT-20260726-007/artifacts/source_scale_calibration_nonselection_v1.tex"
+    not_inferred:
+      - "metric volume"
+      - "rod calibration"
+      - "clock calibration"
+  - assumption_id: "A-P15-10"
+    statement: "Dimensionless phases are available without clock or detector semantics."
+    status: "source-side comparison datum"
+    source: "research_control/tasks/RT-20260726-007/artifacts/source_scale_calibration_nonselection_v1.tex"
+    not_inferred:
+      - "absolute frequency"
+      - "proper time"
+      - "detector response"
+  - assumption_id: "A-P15-11"
+    statement: "P6 comparison forms are admitted only as mathematical separating controls."
+    status: "draft/control witness family"
+    source: "research_control/tasks/RT-20260727-004/artifacts/p6_t08_gate_b_separating_certificate_v1.yaml"
+    not_inferred:
+      - "any comparison form is physical geometry"
+      - "target geometry is a source premise"
+  - assumption_id: "A-P15-12"
+    statement: "ScopedMetricStructureRecord_src retains its exact historical source-extension status and legacy alias."
+    status: "historically adopted scoped source-extension record"
+    source: "research_control/tasks/RT-20260726-011/artifacts/metric_object_naming_decision_v1.yaml"
+    not_inferred:
+      - "bare g_eff is resolved"
+      - "unscoped physical metric"
+      - "matter-coupling geometry"
+  - assumption_id: "A-P15-13"
+    statement: "The exact-GR metric and Einstein dynamics are target-side benchmark adoption."
+    status: "canonical exact-closure benchmark"
+    source: "ontology/tex/aether_flow_dynamics.tex"
+    not_inferred:
+      - "source derivation"
+      - "source metric premise"
+      - "benchmark promotion by this task"
+  - assumption_id: "A-P15-14"
+    statement: "Same-context child reviews may audit the report."
+    status: "internal AI review provenance"
+    source: "research_control/tasks/RT-20260727-006/jobs/AJ-RT-20260727-006-001.yaml"
+    not_inferred:
+      - "human expert review"
+      - "external review"
+      - "independent replication"
+composed_theorem:
+  theorem_id: "P15T04-THM-FIXED-PACKAGE-COMPOSED-STATUS-BARRIER"
+  exact_hypotheses:
+    - "deterministic reviewed P5 reconstruction factors through the sole amplitude coordinate"
+    - "operational geometry requires the exact Gate-B tuple"
+    - "registered P6 same-premise witnesses are used only to test entailment"
+  conclusion: "the unchanged package does not certify a unique source-natural robust operationally calibrated unscoped Lorentzian geometry"
+  status: "draft/control exact scoped compositional theorem"
+  global_no_go_claimed: false
+freeze:
+  inherited_label: "P6T08-UNCHANGED-PACKAGE-TO-P7-EFFECTIVE-GEOMETRY"
+  inherited_status: "blocked_adoption_open_continuation"
+  reopened: false
+  reopening_classes:
+    - "new source primitive or law supplying a discriminator or operational calibration"
+    - "new observable-preserving quotient and uniqueness theorem"
+    - "new robust variation and geometry-level coarse-graining control"
+    - "protected human decision within exact authority"
+authority_limits:
+  canonical_ontology_modified: false
+  source_law_adopted: false
+  physical_time_or_scale_adopted: false
+  physical_metric_adopted: false
+  matter_coupling_derived: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  publication_authorized: false
+  proof_authority: false
+  physics_promotion_authorized: false

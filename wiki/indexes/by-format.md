@@ -589,6 +589,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-V21-P13-T04-VALIDATOR-API-CONTRACT-V1` `research_control/tasks/RT-20260723-020/artifacts/validator_api_contract_v1.md`
 - `MD-V21-P13-T05-SECURITY-SCAN-POLICY-V1` `research_control/tasks/RT-20260724-002/artifacts/security_scan_policy_v1.md`
 - `MD-V21-P15-T01-EXACT-GR-INTERPRETIVE-MANUSCRIPT-V1` `research_control/tasks/RT-20260722-021/artifacts/exact_gr_interpretive_manuscript_v1.md`
+- `MD-V21-P15-T04-PARENT-FUSION-SOURCE-DYNAMICS-RECONSTRUCTION-V1` `research_control/tasks/RT-20260727-006/artifacts/parent_fusion_notes_p15_t04_report.md`
+- `MD-V21-P15-T04-SOURCE-DYNAMICS-RECONSTRUCTION-RECEIPT-V1` `research_control/tasks/RT-20260727-006/artifacts/source_dynamics_reconstruction_receipt.md`
 - `MD-V21-P4-T01-SOURCE-ASSUMPTION-AMBIGUITIES` `research_control/tasks/RT-20260720-030/artifacts/source_assumption_unresolved_ambiguities_v1.md`
 - `MD-V21-P4-T04-ONTOLOGY-REGIME-COMPARISON-REPORT-V1` `research_control/tasks/RT-20260721-002/artifacts/ontology_regime_comparison_report_v1.md`
 - `MD-V21-P4-T05-ONTOLOGY-REGIME-GATE-CHAIR-PARENT-FUSION-V1` `research_control/tasks/RT-20260724-004/artifacts/parent_fusion_notes_ontology_regime_gate_chair_review.md`
@@ -1023,6 +1025,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V21-P14-T03-NO-TARGET-POSITIVE-SUFFICIENCY-POLICY-V1` `research_control/tasks/RT-20260722-019/artifacts/no_target_positive_provenance_sufficiency_policy_v1.tex`
 - `TEX-V21-P14-T05-NEGATIVE-RESULT-SUCCESS-PATHWAY-V1` `research_control/tasks/RT-20260722-020/artifacts/negative_result_success_pathway_v1.tex`
 - `TEX-V21-P15-T03-SELECTOR-MINIMUM-EXTENSION-THEOREM-MANUSCRIPT-V1` `research_control/tasks/RT-20260723-003/artifacts/selector_minimum_extension_theorem_manuscript_v1.tex`
+- `TEX-V21-P15-T04-SOURCE-DYNAMICS-RECONSTRUCTION-TECHNICAL-REPORT-V1` `research_control/tasks/RT-20260727-006/artifacts/source_dynamics_reconstruction_technical_report_v1.tex`
 - `TEX-V21-P2-T01-EQSRC-SOURCE-CATEGORY-DEFINITION` `research_control/tasks/RT-20260720-014/artifacts/eqsrc_source_category_definition_v1.tex`
 - `TEX-V21-P2-T02-EQSRC-NATURAL-SELECTOR-FIXED-POINT-CONDITION` `research_control/tasks/RT-20260720-015/artifacts/eqsrc_natural_selector_fixed_point_condition_v1.tex`
 - `TEX-V21-P2-T03-EQSRC-NO-SELECTOR-NONUNIQUENESS-THEOREM` `research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_theorem_v1.tex`
@@ -1639,6 +1642,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-V21-P13-T04-VALIDATOR-API-CONTRACT-V1` `wiki/markdown/md-v21-p13-t04-validator-api-contract-v1.md`
 - `WIKI-MD-V21-P13-T05-SECURITY-SCAN-POLICY-V1` `wiki/markdown/md-v21-p13-t05-security-scan-policy-v1.md`
 - `WIKI-MD-V21-P15-T01-EXACT-GR-INTERPRETIVE-MANUSCRIPT-V1` `wiki/markdown/md-v21-p15-t01-exact-gr-interpretive-manuscript-v1.md`
+- `WIKI-MD-V21-P15-T04-PARENT-FUSION-SOURCE-DYNAMICS-RECONSTRUCTION-V1` `wiki/markdown/md-v21-p15-t04-parent-fusion-source-dynamics-reconstruction-v1.md`
+- `WIKI-MD-V21-P15-T04-SOURCE-DYNAMICS-RECONSTRUCTION-RECEIPT-V1` `wiki/markdown/md-v21-p15-t04-source-dynamics-reconstruction-receipt-v1.md`
 - `WIKI-MD-V21-P4-T01-SOURCE-ASSUMPTION-AMBIGUITIES` `wiki/markdown/md-v21-p4-t01-source-assumption-ambiguities.md`
 - `WIKI-MD-V21-P4-T04-ONTOLOGY-REGIME-COMPARISON-REPORT-V1` `wiki/markdown/md-v21-p4-t04-ontology-regime-comparison-report-v1.md`
 - `WIKI-MD-V21-P4-T05-ONTOLOGY-REGIME-GATE-CHAIR-PARENT-FUSION-V1` `wiki/markdown/md-v21-p4-t05-ontology-regime-gate-chair-parent-fusion-v1.md`
@@ -2067,6 +2072,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-V21-P14-T03-NO-TARGET-POSITIVE-SUFFICIENCY-POLICY-V1` `wiki/tex/tex-v21-p14-t03-no-target-positive-sufficiency-policy-v1.md`
 - `WIKI-TEX-V21-P14-T05-NEGATIVE-RESULT-SUCCESS-PATHWAY-V1` `wiki/tex/tex-v21-p14-t05-negative-result-success-pathway-v1.md`
 - `WIKI-TEX-V21-P15-T03-SELECTOR-MINIMUM-EXTENSION-THEOREM-MANUSCRIPT-V1` `wiki/tex/tex-v21-p15-t03-selector-minimum-extension-theorem-manuscript-v1.md`
+- `WIKI-TEX-V21-P15-T04-SOURCE-DYNAMICS-RECONSTRUCTION-TECHNICAL-REPORT-V1` `wiki/tex/tex-v21-p15-t04-source-dynamics-reconstruction-technical-report-v1.md`
 - `WIKI-TEX-V21-P2-T01-EQSRC-SOURCE-CATEGORY-DEFINITION` `wiki/tex/tex-v21-p2-t01-eqsrc-source-category-definition.md`
 - `WIKI-TEX-V21-P2-T02-EQSRC-NATURAL-SELECTOR-FIXED-POINT-CONDITION` `wiki/tex/tex-v21-p2-t02-eqsrc-natural-selector-fixed-point-condition.md`
 - `WIKI-TEX-V21-P2-T03-EQSRC-NO-SELECTOR-NONUNIQUENESS-THEOREM` `wiki/tex/tex-v21-p2-t03-eqsrc-no-selector-nonuniqueness-theorem.md`
