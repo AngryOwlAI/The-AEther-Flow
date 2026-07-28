@@ -36,6 +36,10 @@ snapshots, generated dependency graphs, semantic extracts, Obsidian notes, and
   variational object and one fixed-class directional-update obstruction while
   leaving physical action, stress energy, conservation, coupling, and
   downstream GR burdens open.
+- P7-T07 v21 integrated matter-package audit: `RT-20260728-006`, adding
+  Item 9B for the exact-package typed-interface cut-set theorem,
+  componentwise finite-balance refinement, and zero-ready Gate C matrix while
+  leaving P7-T08 protected and human-gated.
 - Schema source:
   `research_control/design/frontier_theorem_inventory_schema_v1.md`.
 - Inventory source:
@@ -811,6 +815,132 @@ benchmark closure, or completed derivation.
   \(L_C\) versus \(\operatorname{Sym}(I-P)\) distinction, and the boundary
   between finite cancellation and physical conservation. Same-context child
   review is not external human review or independent replication.
+
+### Item 9B: matter_package_typed_interface_audit_p7t07
+
+- `frontier_item_id`: `matter_package_typed_interface_audit_p7t07`
+- `frontier_item_class`: `theorem;obstruction;source_extension_evidence`
+- `milestone`: `matter_coupling`
+- `object_type`: `task_local_audit;theorem;proposition;obstruction`
+- `object_or_claim_name`: `P7MatterPackageSmugglingAudit_v1`,
+  `P7T07-THM-TYPED-INTERFACE-CUTSET-001`,
+  `P7T07-PROP-COMPONENTWISE-BALANCE-COMPATIBILITY-001`, and
+  `OBST-P7T07-CROSS-LAYER-COMPOSITION-GAP-001`.
+- `status_layer_summary`:
+  - `control_status`: `audit_completed_gate_c_not_ready`
+  - `mathematical_status`: `typed_interface_cutset_obstruction_with_componentwise_balance_refinement`
+  - `physical_status`: `not_matter_coupling_not_operational_semantics_not_geometry_not_action_not_stress_energy_not_conservation`
+  - `promotion_status`: `scoped_audit_obstruction_only`
+  - `overread_guard`: `no_canonical_ontology_edit;no_source_law_adoption;no_coupling_law_adoption;no_matter_coupling_derivation;no_matter_coupling_adoption;no_operational_semantics_adoption;no_stress_energy_semantics;no_stress_energy_tensor;no_matter_action;no_einstein_equations;no_benchmark_promotion;no_protected_gate_c_verdict_without_human_authorization;no_completed_derivation;no_future_source_extension_impossibility;no_program_wide_no_go_conclusion`
+- `three_tier_classification`: `mixed_with_explicit_boundaries`.
+- `linter_status`: `PASS`; P7-T07 exact hash, finite algebra,
+  semantic-alias, Gate C schema, and changed-claim validation before
+  checkpoint.
+- `overread_guard`: `no_canonical_ontology_edit;no_source_law_adoption;no_coupling_law_adoption;no_matter_coupling_derivation;no_matter_coupling_adoption;no_operational_semantics_adoption;no_stress_energy_semantics;no_stress_energy_tensor;no_matter_action;no_einstein_equations;no_benchmark_promotion;no_protected_gate_c_verdict_without_human_authorization;no_completed_derivation;no_future_source_extension_impossibility;no_program_wide_no_go_conclusion`
+- `source_artifact_path`:
+  `research_control/tasks/RT-20260728-006/artifacts/matter_package_smuggling_audit_v1.tex`;
+  `research_control/tasks/RT-20260728-006/artifacts/refuter_stress_matter_package_v1.yaml`;
+  `research_control/tasks/RT-20260728-006/artifacts/gate_c_readiness_matrix_v1.yaml`;
+  `registries/DISTANCE_TO_GR_LEDGER.csv`;
+  `registries/CLAIM_BOUNDARY_REGISTRY.csv`.
+- `authority_level`: `draft_control;registry_row`
+- `source_authority_type`: `registered_tex_artifact;distance_to_gr_ledger_row;claim_boundary_registry_row`
+- `assumptions`:
+  - The registered P7-T01 through P7-T06 source artifacts and hashes are held
+    exactly fixed.
+  - A package-certified adjacent interface must be total and typed, positively
+    source-derived, natural or quotiented at the claimed scope, and, for a
+    physical layer, supplied with a validated model-to-world interpretation.
+  - Textual absence of target imports is separated from positive provenance,
+    semantic licensing, and cross-layer composability.
+  - No target atlas, metric, proper time, calibration, detector result,
+    physical matter field, coupling, action, stress energy, conservation,
+    validator, registry, role, handoff, generated derivative, or checkpoint
+    state is admitted as a scientific premise.
+- `definitions_used`: the exact P7-T01 through P7-T06 proposal-only package;
+  the seven-layer source-matter-to-physical-conservation burden chain.
+- `definitions_introduced`: task-local certified-interface predicate and
+  Boolean serial certificate \(\mathsf C_{\mathrm{Gate\,C}}(\mathcal P_{7,\mathrm{src}})\).
+- `theorem_like_claims`:
+  - `P7T07-THM-TYPED-INTERFACE-CUTSET-001`.
+  - `P7T07-PROP-COMPONENTWISE-BALANCE-COMPATIBILITY-001`.
+- `statement_or_decision`: The exact unchanged package passes bounded textual
+  no-target-import hygiene, but multiple adjacent interfaces are stipulated,
+  partial, conditional, or absent. Its serial Gate C certificate is therefore
+  zero. Separately, \(L_Cq=a\) is rationally solvable exactly when \(a\) has
+  zero sum on every connected component of the positive symmetric support.
+- `mathematical_conclusion`: The typed-interface cut-set theorem and
+  componentwise compatibility proposition are exact within their declared
+  task-local hypotheses. Gate C has zero of seven ready dimensions, and the
+  v21 plan matrix has zero of ten ready criteria.
+- `audits_passed`: all six dependency hashes unchanged; bounded no-target
+  audit; 19-fixture semantic suite with zero semantic false negatives and
+  false positives; 62-of-62 task-local checks; Gate C schema validation;
+  same-context parent-child synthesis; scratch TeX compilation.
+- `stress_results`: Sector deletion preserves same-sector nonselection;
+  relabeling preserves only declared candidate-relative naturality; field
+  redefinition lacks an invariance theorem; interaction changes alter several
+  layers without an integrated selector; the anomaly branch requires
+  componentwise rather than merely global balance; Clock and Signal do not
+  share one calibrated physical relation; full-suite universality and
+  equivalence-principle overreads fail.
+- `gate_chair_results`: `none`; P7-T08 remains protected, human-gated, and
+  unexecuted.
+- `fail_closed_branches`: Missing positive source selector, operational
+  interpretation, common physical geometry, total universal coupling,
+  physical action, metric variation, stress energy, conservation, independent
+  human review, or exact Gate Chair authority all fail closed.
+- `known_obstructions`:
+  `OBST-P7T07-CROSS-LAYER-COMPOSITION-GAP-001`; the exact unchanged package
+  has no certified serial composition across the declared burden chain.
+- `physical_non_conclusions`:
+  - Textual source purity is not positive derivation, operational meaning, or
+    Gate C readiness.
+  - Formal occupation, kernel, protocol, support, equipment, variation, and
+    balance records are not physical matter, time, devices, geometry,
+    coupling, action, stress energy, or conservation.
+  - The result is not a protected Gate C verdict, Einstein-equation
+    derivation, exact-GR recovery, benchmark result, proof, publication,
+    completed derivation, theory-wide rejection, or future-extension
+    impossibility.
+- `forbidden_overread`: Package integration or process PASS as physical
+  certification; the componentwise finite identity as physical conservation;
+  the package-scoped obstruction as a global no-go; a planned protected gate
+  as already authorized or executed.
+- `downstream_blocked_targets`: positive source selector; validated
+  operational meaning; common physical propagation geometry; universal
+  coupling; physical matter action; metric variation; stress-energy tensor;
+  Noether or covariant conservation; equivalence-principle status; Einstein
+  equations; benchmark promotion; completed derivation.
+- `allowed_reuse`:
+  - Reuse the exact source hashes, surviving candidate-relative mathematics,
+    typed interface ledger, componentwise balance criterion, and Gate C gap
+    matrix with their proposal-only and audit-only statuses.
+  - Present the package to P7-T08 only after checkpoint and only under a
+    nonblank exact human authorization record.
+  - Reopen same-milestone construction only with materially new conservative
+    source-side input.
+- `blocked_reuse`:
+  - Do not repair or mutate the audited candidates inside this audit result.
+  - Do not treat labels, support, equipment, finite variation, role diversity,
+    validator success, or checkpoint state as positive physical provenance.
+  - Do not infer a protected verdict or global no-go from the obstruction.
+- `dependency_items`: P7-T01 through P7-T06; positive-provenance operational
+  meaning policy; semantic-smuggling suite; matter-coupling bridge target.
+- `missing_theorem_or_primitive`: A positively source-derived selector and
+  typed model-to-world composition through operational systems, common
+  physical geometry, universal coupling, matter action, stress energy, and
+  physical conservation.
+- `next_theorem_needed`: P7-T08 is a protected human decision, not an
+  automatic theorem route. Without exact human authorization, select only a
+  dependency-independent included work item or a materially new conservative
+  source-side route allowed by the local freeze.
+- `candidate_next_task`: `P7-T08` only after checkpoint and exact human
+  authorization; otherwise `deferred_human_gate`.
+- `external_review_notes`: Review the certified-interface definition, source
+  hash preservation, componentwise Laplacian compatibility proof, zero-ready
+  Gate C matrix, and the separation between textual hygiene, formal
+  mathematics, physical interpretation, and protected authority.
 
 ### Item 10: matter_coupling_precondition_evidence
 

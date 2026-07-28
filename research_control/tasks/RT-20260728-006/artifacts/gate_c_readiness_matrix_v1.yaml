@@ -1,0 +1,96 @@
+schema_id: "v21_positive_provenance_operational_meaning_gate_v1"
+record_id: "GATEC-EVIDENCE-P7T07-MATTER-PACKAGE-V1"
+gate_id: "gate_c"
+subject_id: "P7SourceMatterPackage_v1"
+subject_scope: "source_extension"
+review_surface: "matter_coupling"
+no_target_purity:
+  status: "passed"
+  evidence_refs:
+    - "research_control/tasks/RT-20260728-006/artifacts/matter_package_smuggling_audit_v1.tex"
+    - "research_control/tasks/RT-20260722-006/artifacts/semantic_smuggling_validation.json"
+validator_receipts:
+  - "research_control/tasks/RT-20260722-006/artifacts/semantic_smuggling_compact_receipt.json"
+  - "research_control/tasks/RT-20260728-006/artifacts/matter_package_audit_validation_v1.json"
+dimensions:
+  source_derivation:
+    status: "proposed"
+    evidence_refs:
+      - "research_control/tasks/RT-20260727-007/artifacts/source_matter_ontology_and_sector_taxonomy_v1.tex"
+      - "research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_candidate_v1.tex"
+      - "research_control/tasks/RT-20260728-006/artifacts/matter_package_smuggling_audit_v1.tex"
+    source_refs:
+      - "TEX-V21-P7-T01-SOURCE-MATTER-ONTOLOGY-SECTOR-TAXONOMY-V1"
+      - "TEX-V21-P7-T02-SOURCE-MATTER-FINITE-TRANSITION-KERNEL-V1"
+    source_hashes:
+      TEX-V21-P7-T01-SOURCE-MATTER-ONTOLOGY-SECTOR-TAXONOMY-V1: "8d160217bf223078a11bc63fde6593c11c39d5b50d9c48fbad7b12084f8a752d"
+      TEX-V21-P7-T02-SOURCE-MATTER-FINITE-TRANSITION-KERNEL-V1: "65ac095f5cdf4c2e319365c8b0e024d031b19d9fc2b8102e59997afa1e8f9129"
+    premise_kinds:
+      - "source_extension"
+      - "derived_source_consequence"
+    not_applicable_reason: ""
+  uniqueness_or_quotient:
+    status: "multiple_unresolved"
+    evidence_refs:
+      - "research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_profile_candidate_v1.tex"
+      - "research_control/tasks/RT-20260728-004/artifacts/universal_source_coupling_map_candidate_v1.tex"
+    quotient_scope: ""
+    not_applicable_reason: ""
+  naturality:
+    status: "conditional"
+    evidence_refs:
+      - "research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_candidate_v1.tex"
+      - "research_control/tasks/RT-20260728-004/artifacts/universal_source_coupling_map_candidate_v1.tex"
+    not_applicable_reason: ""
+  dynamics:
+    status: "specified"
+    evidence_refs:
+      - "research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_candidate_v1.tex"
+      - "research_control/tasks/RT-20260728-005/artifacts/source_kernel_variational_object_candidate_v1.tex"
+    not_applicable_reason: ""
+  operational_systems:
+    status: "specified"
+    evidence_refs:
+      - "research_control/tasks/RT-20260728-002/artifacts/source_operational_device_suite_candidate_v1.tex"
+      - "research_control/tasks/RT-20260728-006/artifacts/matter_package_smuggling_audit_v1.tex"
+    device_or_protocol_refs:
+      - "Clock_src"
+      - "Rod_src"
+      - "Signal_src"
+      - "Detector_src"
+      - "FreeFall_src"
+    not_applicable_reason: ""
+  robustness:
+    status: "conditional"
+    evidence_refs:
+      - "research_control/tasks/RT-20260728-006/artifacts/refuter_stress_matter_package_v1.yaml"
+    perturbation_scope: "sector deletion source-presentation relabeling field redefinition enabled-interaction changes finite variation anomaly clock-signal comparison full-suite universality equivalence-principle overread and process-authority attacks"
+    not_applicable_reason: ""
+  independent_review:
+    status: "same_context_role_review"
+    evidence_refs:
+      - "research_control/tasks/RT-20260728-006/artifacts/child_phys_math_p7_t07_matter_package_audit.yaml"
+      - "research_control/tasks/RT-20260728-006/artifacts/child_phys_phil_p7_t07_matter_package_audit.yaml"
+      - "research_control/tasks/RT-20260728-006/artifacts/parent_conflict_review_p7_t07_matter_package_audit.yaml"
+    review_artifact_refs:
+      - "research_control/tasks/RT-20260728-006/artifacts/parent_fusion_notes_p7_t07_matter_package_audit.md"
+    not_applicable_reason: ""
+review_executed: true
+outcome: "blocked"
+authority:
+  status: "control_only"
+  authority_refs:
+    - "research_control/tasks/RT-20260722-007/artifacts/positive_provenance_operational_meaning_gate_policy.md"
+    - "research_control/tasks/RT-20260728-006/DDR-20260728-006.md"
+  protected_gate_id: "P7-T08"
+physics_promotion_authorized: false
+forbidden_conclusions:
+  - "no-target purity is sufficient for Gate C readiness"
+  - "validator checkpoint or same-context role review is proof or promotion authority"
+  - "formal source protocol names establish physical operational meaning"
+  - "restricted support isomorphism establishes a common physical cone or metric"
+  - "explicitly equipped reindexing establishes universal physical coupling"
+  - "finite source functional establishes matter action stress energy or physical conservation"
+  - "Gate C evidence is complete or a protected Gate C verdict has occurred"
+  - "Einstein equations exact-GR recovery benchmark promotion or completed derivation"
+  - "global no-go theory rejection or future source-extension impossibility"

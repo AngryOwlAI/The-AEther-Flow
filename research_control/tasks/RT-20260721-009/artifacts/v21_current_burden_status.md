@@ -13,9 +13,9 @@ state, or latest handoff, those sources govern and this file is stale.
 | Field | Value |
 | --- | --- |
 | Schema | `v21_current_burden_status_v1` |
-| Source commit at generation | `556b0c230809b9e4f58ae6b503a8780d56a9faca` |
-| Status generation time | `2026-07-28T10:51:48Z` |
-| Tracked task count | 1134 |
+| Source commit at generation | `264b55eb4554b4b0903a253b6cf3d20601692385` |
+| Status generation time | `2026-07-28T13:07:27Z` |
+| Tracked task count | 1135 |
 | Stable definition count | 10 |
 | Distance-to-GR burden count | 14 |
 | Historical authored-map commit | `2c5fb02fd8fff9b449ab10a328d7c881b13ef546` |
@@ -23,21 +23,21 @@ state, or latest handoff, those sources govern and this file is stale.
 
 ### Exact source hashes
 
-- `registries/DISTANCE_TO_GR_LEDGER.csv`: `b0299c11cfefcc6949388cac4fdd9a8acf1b22e5bfeeba0381c2b127a6755c19`
-- `registries/RESEARCH_TASK_REGISTRY.csv`: `480b3b0fc86377671a1d9726014bf72fda2aeb8272998b3dd9e1bf78720d9185`
+- `registries/DISTANCE_TO_GR_LEDGER.csv`: `ba9241c4a57b1c308c2e3d38724014c55c2cabc97d8c8b5c10b7f2de87e424d6`
+- `registries/RESEARCH_TASK_REGISTRY.csv`: `f54c80785b18d48689069f3ac27d661f8c6d6e908d35bf1d844b2f220d27adc2`
 - `research_control/design/gr_derivation_burden_map.md`: `8e9d44e3a18ecc8a2430a9c42497da3eb9911c2cf6cd714c1525c5d91551835e`
-- `research_control/handoffs/handoff-0895.yaml`: `1e2f6899a3c8548ff73e3f93da24e1233a2505d6d93ce65142df67532bcd5ee6`
-- `research_control/program_state.yaml`: `66a73195d9685ddb96554df90a26a1cbfddc5c04d9a10d940189f2b63d90c16a`
+- `research_control/handoffs/handoff-0896.yaml`: `67793f272db6c82209c263a2aca371dd63ed6e95cd2bee1899d77be0be07b281`
+- `research_control/program_state.yaml`: `806e926b9b8a15f511e26eb8d25e6832696ceb63ca34ac7fa07893d49880d5fb`
 - `research_control/tasks/RT-20260721-009/artifacts/v21_burden_definitions_v1.yaml`: `67b8053baa60db4b11ee20582633d6279523d40b2ee853a6c570e2fdc1d113f5`
 
 ## Live control state
 
 | Field | Value |
 | --- | --- |
-| Active task | `RT-20260728-005` |
-| Latest handoff | `handoff-0895` |
-| Current status | `p7_t06_precise_obstruction_with_constructive_restricted_variational_object_p7_t07_ready_for_checkpoint` |
-| Next recommended action | Run one governed checkpoint for AJ-RT-20260728-005-001. Only after it commits may one fresh bounded smuggling-auditor@0.2.0 ontology-law-research-packet execute v21 P7-T07 by auditing the P7-T01 through P7-T06 matter package for source provenance, target import, physical-semantic smuggling, scope inflation, and unsupported adoption. |
+| Active task | `RT-20260728-006` |
+| Latest handoff | `handoff-0896` |
+| Current status | `p7_t07_gate_c_readiness_blocked_textual_purity_pass_p7_t08_human_gate_pending_checkpoint` |
+| Next recommended action | Run one governed checkpoint for AJ-RT-20260728-006-001. After it commits, P7-T08 remains a protected human Gate C review and may execute only if a nonblank exact human authorization record is present. If no such authorization exists, record deferred_human_gate and select only a dependency-independent included work item without overreading or repairing the unchanged P7 package. |
 
 ## Authored stable definitions with generated current values
 
@@ -205,14 +205,14 @@ state, or latest handoff, those sources govern and this file is stale.
 
 | Burden ID | Required object | Current status | Control status | Mathematical status | Physical status | Promotion status | Updated at |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| `matter_coupling` | universal coupling | `draft object exists` | `accepted_as_scoped_evidence_precondition` | `parameterized_finite_local_witness_precondition` | `not_matter_coupling_not_stress_energy_not_matter_action_not_detector_semantics` | `scoped_source_evidence_only` | `2026-07-28T10:51:48Z` |
+| `matter_coupling` | universal coupling | `draft object exists` | `accepted_as_scoped_evidence_precondition` | `parameterized_finite_local_witness_precondition` | `not_matter_coupling_not_stress_energy_not_matter_action_not_detector_semantics` | `scoped_source_evidence_only` | `2026-07-28T13:07:27Z` |
 
 #### `matter_coupling` generated detail
 
-- Current blocking burden: SourceKernelDirichletVariationalCandidate_v1 constructs an exact proposal-only finite symmetric-conductance source variational surrogate for each separately declared P7-T02 kernel; its first variation L_C q and antisymmetric source-edge record give exact finite closed-carrier and cut identities; the fixed forward I-P is nonsymmetric and is precisely obstructed as the standard-coordinate gradient of a scalar quadratic on the same variables; L_C is not generally Sym(I-P); current ontology still does not derive a universal selector physical matter variables geometry action stress energy physical conservation or coupling and P6 Gate B supplies no effective-geometry input
-- Current next evidence or action: After checkpoint run one bounded P7-T07 smuggling-auditor ontology-law packet that audits the P7-T01 through P7-T06 matter package for target imports physical-semantic smuggling scope inflation and unsupported adoption while preserving the exact proposal-only mathematics
-- Current failure/freeze criterion: Freeze repetition of the unchanged P7-T06 symmetric split forward nonsymmetry witness or P7-T05 selector countermodel without a materially new audit finding variational class source law model-to-world map theorem or protected decision; do not treat the task-local functional flux labels finite balance child review validator checkpoint or scoped obstruction as canonical ontology source-law or coupling-law adoption physical action stress energy conservation geometry matter coupling Einstein equations benchmark promotion completed derivation global no-go or future source-extension impossibility
-- Current evidence: `research_control/tasks/RT-20260728-005/artifacts/source_kernel_variational_object_candidate_v1.tex`
+- Current blocking burden: The exact unchanged P7-T01 through P7-T06 package passes bounded textual no-target-import hygiene and preserves its candidate-relative finite mathematics but P7T07-THM-TYPED-INTERFACE-CUTSET-001 finds no total positively source-derived semantically licensed composition through selected dynamics operational systems common physical geometry universal coupling physical action stress energy and physical conservation; Gate C is zero of seven ready dimensions and the plan matrix is zero of ten; P7T07-PROP-COMPONENTWISE-BALANCE-COMPATIBILITY-001 further shows that global residual zero sum is insufficient on disconnected support; current ontology still does not derive the missing interfaces and P6 Gate B supplies no effective-geometry input
+- Current next evidence or action: After checkpoint present the exact blocked Gate C matrix to P7-T08 only under a nonblank exact human authorization record; without that authority record deferred_human_gate and select only a dependency-independent included work item; same-milestone continuation requires materially new source selector model-to-world operational-validation common-geometry coupling action stress-energy or conservation input
+- Current failure/freeze criterion: Freeze repetition or physical overread of the exact unchanged P7 package including familiar labels restricted support explicit equipment symmetric functional finite balance same-context review validator or checkpoint state; reopen only for materially new conservative source-side data or law a new model-to-world map operational validation common physical geometry variation class protected human decision or dependency-independent included work
+- Current evidence: `research_control/tasks/RT-20260728-006/artifacts/matter_package_smuggling_audit_v1.tex`
 - Exact overread guard: `no_source_law_adoption;no_canonical_ontology_edit;no_metricdata_e_adoption;no_geff_scope_expansion;no_coupling_law_adoption;no_matter_coupling_derivation;no_matter_coupling_adoption;no_stress_energy_semantics;no_stress_energy_tensor;no_matter_action;no_detector_semantics;no_einstein_equations;no_benchmark_promotion;no_completed_derivation;no_future_source_extension_impossibility;no_global_theory_rejection`
 
 ### `einstein_equations`

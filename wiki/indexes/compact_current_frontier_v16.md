@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260728-005`
-- Latest handoff: `handoff-0895`
-- Current status: `p7_t06_precise_obstruction_with_constructive_restricted_variational_object_p7_t07_ready_for_checkpoint`
+- Active task: `RT-20260728-006`
+- Latest handoff: `handoff-0896`
+- Current status: `p7_t07_gate_c_readiness_blocked_textual_purity_pass_p7_t08_human_gate_pending_checkpoint`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260728-005`
-- Latest research handoff: `handoff-0895`
-- Latest research next action: Run one governed checkpoint for AJ-RT-20260728-005-001. Only after it commits may one fresh bounded smuggling-auditor@0.2.0 ontology-law-research-packet execute v21 P7-T07 by auditing the P7-T01 through P7-T06 matter package for source provenance, target import, physical-semantic smuggling, scope inflation, and unsupported adoption.
+- Latest research task: `RT-20260728-006`
+- Latest research handoff: `handoff-0896`
+- Latest research next action: Run one governed checkpoint for AJ-RT-20260728-006-001. After it commits, P7-T08 remains a protected human Gate C review and may execute only if a nonblank exact human authorization record is present. If no such authorization exists, record deferred_human_gate and select only a dependency-independent included work item without overreading or repairing the unchanged P7 package.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,11 +26,11 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p7_t07_matter_package_smuggling_audit_after_checkpoint`
-- Role family: `smuggling-auditor@0.2.0`
+- Route ID: `v21_p7_t08_human_gate_c_review_after_checkpoint`
+- Role family: `gate-chair`
 - Target milestone: `matter_coupling`
-- Milestone burden: Determine whether the package establishes genuine matter coupling in scope.
-- Requires human gate: `false`
+- Milestone burden: Make the protected matter-coupling decision required before gravitational closure.
+- Requires human gate: `true`
 
 ## High-Risk Rows
 
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `ea8336fd47d436b9d0bfd1552aca6ccd2f276b6169329f35701beca38f66b62f`
-- JSON SHA-256: `2de088e4911ca5b0a2f3a00322d5a9ff73a8c96c72d7fa38ed4b518b25b9bae0`
+- YAML SHA-256: `76e58faf6fb101b93b3bff3f58918cc7e508266b0b34fc82fe4351230fa5de55`
+- JSON SHA-256: `0a66d686e6e6e94d0bcc0c52babd6540bafe18b5401d23dea154e3fedf72a138`
 
 ## Authority Warning
 

@@ -96,6 +96,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-V21-P7-T04-PARENT-FUSION-COMMON-SOURCE-PROPAGATION-V1` `research_control/tasks/RT-20260728-003/artifacts/parent_fusion_notes_p7_t04_common_propagation.md`
 - `MD-V21-P7-T05-PARENT-FUSION-UNIVERSAL-SOURCE-COUPLING-V1` `research_control/tasks/RT-20260728-004/artifacts/parent_fusion_notes_p7_t05_source_coupling.md`
 - `MD-V21-P7-T06-PARENT-FUSION-SOURCE-VARIATIONAL-V1` `research_control/tasks/RT-20260728-005/artifacts/parent_fusion_notes_p7_t06_source_variational.md`
+- `MD-V21-P7-T07-PARENT-FUSION-MATTER-PACKAGE-AUDIT-V1` `research_control/tasks/RT-20260728-006/artifacts/parent_fusion_notes_p7_t07_matter_package_audit.md`
 - `TEX-EQSRC-CLOSURE-SOURCE-LAW-SMUGGLING-AUDIT-V1` `research_control/tasks/RT-20260718-017/artifacts/eqsrc_closure_source_law_smuggling_audit_v1.tex`
 - `TEX-EQSRC-CLOSURE-SOURCE-LAW-V2-SMUGGLING-AUDIT` `research_control/tasks/RT-20260718-019/artifacts/eqsrc_closure_source_law_v2_smuggling_audit.tex`
 - `TEX-EQSRC-CLOSURE-SOURCE-LAW-V3-REFUTER-STRESS` `research_control/tasks/RT-20260718-022/artifacts/eqsrc_closure_source_law_v3_refuter_stress.tex`
@@ -510,6 +511,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V21-P7-T04-COMMON-SOURCE-PROPAGATION-PROFILE-V1` `research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_profile_candidate_v1.tex`
 - `TEX-V21-P7-T05-UNIVERSAL-SOURCE-COUPLING-MAP-V1` `research_control/tasks/RT-20260728-004/artifacts/universal_source_coupling_map_candidate_v1.tex`
 - `TEX-V21-P7-T06-SOURCE-KERNEL-VARIATIONAL-OBJECT-V1` `research_control/tasks/RT-20260728-005/artifacts/source_kernel_variational_object_candidate_v1.tex`
+- `TEX-V21-P7-T07-MATTER-PACKAGE-SMUGGLING-AUDIT-V1` `research_control/tasks/RT-20260728-006/artifacts/matter_package_smuggling_audit_v1.tex`
 
 ## explanatory_noncanonical
 
@@ -1209,6 +1211,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-V21-P7-T05-UNIVERSAL-SOURCE-COUPLING-RECEIPT-V1` `wiki/markdown/md-v21-p7-t05-universal-source-coupling-receipt-v1.md`
 - `WIKI-MD-V21-P7-T06-PARENT-FUSION-SOURCE-VARIATIONAL-V1` `wiki/markdown/md-v21-p7-t06-parent-fusion-source-variational-v1.md`
 - `WIKI-MD-V21-P7-T06-SOURCE-VARIATIONAL-RECEIPT-V1` `wiki/markdown/md-v21-p7-t06-source-variational-receipt-v1.md`
+- `WIKI-MD-V21-P7-T07-MATTER-PACKAGE-AUDIT-RECEIPT-V1` `wiki/markdown/md-v21-p7-t07-matter-package-audit-receipt-v1.md`
+- `WIKI-MD-V21-P7-T07-PARENT-FUSION-MATTER-PACKAGE-AUDIT-V1` `wiki/markdown/md-v21-p7-t07-parent-fusion-matter-package-audit-v1.md`
 - `WIKI-MD-VALIDATOR-OPERATOR-WORKFLOW-PUBLICATION-BRIEF` `wiki/markdown/md-validator-operator-workflow-publication-brief.md`
 - `WIKI-PDF-LEGACY-ONTOLOGY-AETHER-FLOW-CONSISTENCY` `wiki/pdf/pdf-legacy-ontology-aether-flow-consistency.md`
 - `WIKI-PDF-LEGACY-ONTOLOGY-AETHER-FLOW-DYNAMICS` `wiki/pdf/pdf-legacy-ontology-aether-flow-dynamics.md`
@@ -1656,6 +1660,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-V21-P7-T04-COMMON-SOURCE-PROPAGATION-PROFILE-V1` `wiki/tex/tex-v21-p7-t04-common-source-propagation-profile-v1.md`
 - `WIKI-TEX-V21-P7-T05-UNIVERSAL-SOURCE-COUPLING-MAP-V1` `wiki/tex/tex-v21-p7-t05-universal-source-coupling-map-v1.md`
 - `WIKI-TEX-V21-P7-T06-SOURCE-KERNEL-VARIATIONAL-OBJECT-V1` `wiki/tex/tex-v21-p7-t06-source-kernel-variational-object-v1.md`
+- `WIKI-TEX-V21-P7-T07-MATTER-PACKAGE-SMUGGLING-AUDIT-V1` `wiki/tex/tex-v21-p7-t07-matter-package-smuggling-audit-v1.md`
 
 ## project_control
 
@@ -2150,3 +2155,4 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-V21-P7-T04-COMMON-SOURCE-PROPAGATION-RECEIPT-V1` `research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_receipt.md`
 - `MD-V21-P7-T05-UNIVERSAL-SOURCE-COUPLING-RECEIPT-V1` `research_control/tasks/RT-20260728-004/artifacts/universal_source_coupling_receipt.md`
 - `MD-V21-P7-T06-SOURCE-VARIATIONAL-RECEIPT-V1` `research_control/tasks/RT-20260728-005/artifacts/source_kernel_variational_receipt.md`
+- `MD-V21-P7-T07-MATTER-PACKAGE-AUDIT-RECEIPT-V1` `research_control/tasks/RT-20260728-006/artifacts/matter_package_audit_receipt.md`
