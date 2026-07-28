@@ -89,6 +89,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-V21-P5-T08-PARENT-FUSION-SOURCE-DYNAMICS-MILESTONE-V1` `research_control/tasks/RT-20260726-001/artifacts/parent_fusion_notes_source_dynamics_milestone.md`
 - `MD-V21-P6-T01-PARENT-FUSION-CAUSAL-CHARACTERISTIC-TARGET-V1` `research_control/tasks/RT-20260726-002/artifacts/parent_fusion_notes_p6_t01_causal_characteristic_target.md`
 - `MD-V21-P6-T02-PARENT-FUSION-SOURCE-LOCAL-TRANSPORT-V1` `research_control/tasks/RT-20260726-003/artifacts/parent_fusion_notes_p6_t02_source_local_transport.md`
+- `MD-V21-P7-T01-PARENT-FUSION-SOURCE-MATTER-ONTOLOGY-V1` `research_control/tasks/RT-20260727-007/artifacts/parent_fusion_notes_p7_t01_source_matter_ontology.md`
 - `TEX-EQSRC-CLOSURE-SOURCE-LAW-SMUGGLING-AUDIT-V1` `research_control/tasks/RT-20260718-017/artifacts/eqsrc_closure_source_law_smuggling_audit_v1.tex`
 - `TEX-EQSRC-CLOSURE-SOURCE-LAW-V2-SMUGGLING-AUDIT` `research_control/tasks/RT-20260718-019/artifacts/eqsrc_closure_source_law_v2_smuggling_audit.tex`
 - `TEX-EQSRC-CLOSURE-SOURCE-LAW-V3-REFUTER-STRESS` `research_control/tasks/RT-20260718-022/artifacts/eqsrc_closure_source_law_v3_refuter_stress.tex`
@@ -497,6 +498,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V21-P6-T04-SOURCE-SCALE-CALIBRATION-NONSELECTION-V1` `research_control/tasks/RT-20260726-007/artifacts/source_scale_calibration_nonselection_v1.tex`
 - `TEX-V21-P6-T05-SIGNATURE-COVARIANCE-NATURALITY-OBSTRUCTION-V1` `research_control/tasks/RT-20260726-009/artifacts/signature_covariance_naturality_obstruction_v1.tex`
 - `TEX-V21-P6-T06-UNIQUENESS-COVARIANCE-ROBUSTNESS-ADMISSIBILITY-OBSTRUCTION-V1` `research_control/tasks/RT-20260726-010/artifacts/uniqueness_covariance_robustness_admissibility_obstruction_v1.tex`
+- `TEX-V21-P7-T01-SOURCE-MATTER-ONTOLOGY-SECTOR-TAXONOMY-V1` `research_control/tasks/RT-20260727-007/artifacts/source_matter_ontology_and_sector_taxonomy_v1.tex`
 
 ## explanatory_noncanonical
 
@@ -1182,6 +1184,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-V21-P6-T06-UNIQUENESS-COVARIANCE-ROBUSTNESS-ADMISSIBILITY-OBSTRUCTION-RECEIPT-V1` `wiki/markdown/md-v21-p6-t06-uniqueness-covariance-robustness-admissibility-obstruction-receipt-v1.md`
 - `WIKI-MD-V21-P6-T07-METRIC-OBJECT-NAMING-RECEIPT-V1` `wiki/markdown/md-v21-p6-t07-metric-object-naming-receipt-v1.md`
 - `WIKI-MD-V21-P6-T08-GATE-B-REVIEW-RECEIPT-V1` `wiki/markdown/md-v21-p6-t08-gate-b-review-receipt-v1.md`
+- `WIKI-MD-V21-P7-T01-PARENT-FUSION-SOURCE-MATTER-ONTOLOGY-V1` `wiki/markdown/md-v21-p7-t01-parent-fusion-source-matter-ontology-v1.md`
+- `WIKI-MD-V21-P7-T01-SOURCE-MATTER-ONTOLOGY-RECEIPT-V1` `wiki/markdown/md-v21-p7-t01-source-matter-ontology-receipt-v1.md`
 - `WIKI-MD-VALIDATOR-OPERATOR-WORKFLOW-PUBLICATION-BRIEF` `wiki/markdown/md-validator-operator-workflow-publication-brief.md`
 - `WIKI-PDF-LEGACY-ONTOLOGY-AETHER-FLOW-CONSISTENCY` `wiki/pdf/pdf-legacy-ontology-aether-flow-consistency.md`
 - `WIKI-PDF-LEGACY-ONTOLOGY-AETHER-FLOW-DYNAMICS` `wiki/pdf/pdf-legacy-ontology-aether-flow-dynamics.md`
@@ -1623,6 +1627,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-V21-P6-T04-SOURCE-SCALE-CALIBRATION-NONSELECTION-V1` `wiki/tex/tex-v21-p6-t04-source-scale-calibration-nonselection-v1.md`
 - `WIKI-TEX-V21-P6-T05-SIGNATURE-COVARIANCE-NATURALITY-OBSTRUCTION-V1` `wiki/tex/tex-v21-p6-t05-signature-covariance-naturality-obstruction-v1.md`
 - `WIKI-TEX-V21-P6-T06-UNIQUENESS-COVARIANCE-ROBUSTNESS-ADMISSIBILITY-OBSTRUCTION-V1` `wiki/tex/tex-v21-p6-t06-uniqueness-covariance-robustness-admissibility-obstruction-v1.md`
+- `WIKI-TEX-V21-P7-T01-SOURCE-MATTER-ONTOLOGY-SECTOR-TAXONOMY-V1` `wiki/tex/tex-v21-p7-t01-source-matter-ontology-sector-taxonomy-v1.md`
 
 ## project_control
 
@@ -2110,3 +2115,4 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-V21-P6-T06-UNIQUENESS-COVARIANCE-ROBUSTNESS-ADMISSIBILITY-OBSTRUCTION-RECEIPT-V1` `research_control/tasks/RT-20260726-010/artifacts/uniqueness_covariance_robustness_admissibility_obstruction_receipt.md`
 - `MD-V21-P6-T07-METRIC-OBJECT-NAMING-RECEIPT-V1` `research_control/tasks/RT-20260726-011/artifacts/metric_object_naming_receipt.md`
 - `MD-V21-P6-T08-GATE-B-REVIEW-RECEIPT-V1` `research_control/tasks/RT-20260727-004/artifacts/p6_t08_gate_b_review_receipt.md`
+- `MD-V21-P7-T01-SOURCE-MATTER-ONTOLOGY-RECEIPT-V1` `research_control/tasks/RT-20260727-007/artifacts/source_matter_ontology_receipt.md`

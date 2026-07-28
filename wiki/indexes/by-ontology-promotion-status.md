@@ -423,6 +423,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V21-P6-T04-SOURCE-SCALE-CALIBRATION-NONSELECTION-V1` `research_control/tasks/RT-20260726-007/artifacts/source_scale_calibration_nonselection_v1.tex`
 - `TEX-V21-P6-T05-SIGNATURE-COVARIANCE-NATURALITY-OBSTRUCTION-V1` `research_control/tasks/RT-20260726-009/artifacts/signature_covariance_naturality_obstruction_v1.tex`
 - `TEX-V21-P6-T06-UNIQUENESS-COVARIANCE-ROBUSTNESS-ADMISSIBILITY-OBSTRUCTION-V1` `research_control/tasks/RT-20260726-010/artifacts/uniqueness_covariance_robustness_admissibility_obstruction_v1.tex`
+- `TEX-V21-P7-T01-SOURCE-MATTER-ONTOLOGY-SECTOR-TAXONOMY-V1` `research_control/tasks/RT-20260727-007/artifacts/source_matter_ontology_and_sector_taxonomy_v1.tex`
 
 ## superseded
 

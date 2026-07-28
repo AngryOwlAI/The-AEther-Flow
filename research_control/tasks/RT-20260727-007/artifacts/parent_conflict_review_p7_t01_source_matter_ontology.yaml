@@ -1,0 +1,121 @@
+schema_id: "v21_p7_t01_parent_conflict_review_v1"
+task_id: "RT-20260727-007"
+job_id: "AJ-RT-20260727-007-001"
+candidate_id: "SourceMatterIncidenceCandidate_v1"
+reviewed_at: "2026-07-28T00:07:25Z"
+status: "completed"
+disposition: "fuse_after_parent_corrections"
+review_provenance:
+  classification: "same_context_internal_ai_parent_child_synthesis"
+  human_expert_review_completed: false
+  independent_replication_completed: false
+  external_review_completed: false
+  proof_authority_created: false
+
+child_inputs:
+  - execution_unit_id: "child_phys_math"
+    perspective: "physicist_mathematician"
+    path: "research_control/tasks/RT-20260727-007/artifacts/child_phys_math_p7_t01_source_matter_ontology.yaml"
+    sha256: "fb104c08a874bb69d389a3d38039fd32a6b4e070fb38e22b792bd49366f31f06"
+    status: "completed"
+    disposition: "revise_then_fuse"
+  - execution_unit_id: "child_phys_phil"
+    perspective: "physicist_philosopher"
+    path: "research_control/tasks/RT-20260727-007/artifacts/child_phys_phil_p7_t01_source_matter_ontology.yaml"
+    sha256: "7cb88dfebc13c6a264ea37fe766342dd356b5714caa8b00ecf6ee68e6a533b4c"
+    status: "completed"
+    disposition: "conditionally_supports_parent_fusion"
+
+shared_consensus:
+  - "A finite augmented source-incidence complex can support a nontrivial proposal-only configuration space, algebraic charge and defect records, and exact conditional theorems without target geometry."
+  - "The candidate is materially stronger than an interface-only profile because occupation data are explicit and charge is derived through a declared charge-label map."
+  - "No mathematical result in the packet establishes physical matter, physical charge, physical conservation, detector semantics, canonical ontology, coupling, or exact-GR recovery."
+  - "Legacy matter records retain their exact target, proposal-only, draft/control, or scoped evidence/precondition statuses."
+  - "P6 Gate B remains zero of eight and its local effective-geometry freeze is unchanged."
+
+resolution_items:
+  - resolution_id: "P7T01-RES-001"
+    source_findings:
+      - "P7T01-MATH-001"
+      - "P7T01-RC-001"
+    issue: "Independent charge and representation tags would repeat the legacy arbitrary-label obstruction."
+    resolution: "Use primitive occupation multiplicities m and declared chi; derive nu, q_v, q, and M."
+    status: "resolved_in_fused_artifacts"
+  - resolution_id: "P7T01-RES-002"
+    source_findings:
+      - "P7T01-MATH-002"
+      - "P7T01-MATH-005"
+      - "PHIL-CORR-003"
+    issue: "Internal and coefficient transport was under-typed, and raw Q need not be invariant under an internal automorphism."
+    resolution: "Require phi, gamma, alpha, and beta compatibility, name F_i tensor alpha and F_i tensor beta, state equivariance Q maps to alpha(Q), and require either alpha(Q)=Q or an explicit orbit before calling a transformation within-sector."
+    status: "resolved_in_fused_artifacts"
+  - resolution_id: "P7T01-RES-003"
+    source_findings:
+      - "P7T01-MATH-003"
+      - "PHIL-CORR-006"
+    issue: "Representation grade M is not preserved by the declared transition law, and the zero sector is shared by null and nontrivial neutral configurations."
+    resolution: "Define the transition-invariant sector as (Q,D), keep M as a separate equivariant grade, and call m=0,z=0 a configuration stratum rather than a unique sector."
+    status: "resolved_in_fused_artifacts"
+  - resolution_id: "P7T01-RES-004"
+    source_findings:
+      - "P7T01-MATH-004"
+    issue: "Total-charge preservation requires epsilon partial_1=0 as a hypothesis."
+    resolution: "Make K_src an augmented incidence complex with epsilon partial_1=0 explicitly declared."
+    status: "resolved_in_fused_artifacts"
+  - resolution_id: "P7T01-RES-005"
+    source_findings:
+      - "P7T01-MATH-006"
+      - "PHIL-CORR-001"
+      - "PHIL-CORR-002"
+    issue: "Candidate isomorphism, sector coincidence, physical identity, and ontology adoption could be conflated."
+    resolution: "Add both a model-to-world status ladder and an identity ladder; reserve general EqSrc, physical identity, and ontology adoption for later authority."
+    status: "resolved_in_fused_artifacts"
+  - resolution_id: "P7T01-RES-006"
+    source_findings:
+      - "P7T01-RISK-006"
+      - "PHIL-CORR-004"
+      - "PHIL-CORR-005"
+    issue: "Observable and conservation language could import detector or independent-dynamics semantics."
+    resolution: "Use source-invariant record and conditional chain-level invariant terminology, with explicit no-detector, no-Noether, and no-physical-conservation guards."
+    status: "resolved_in_fused_artifacts"
+  - resolution_id: "P7T01-RES-007"
+    source_findings:
+      - "PHIL-CORR-006"
+      - "PHIL-CORR-008"
+      - "PHIL-CORR-009"
+    issue: "Null, nontrivial neutral, malformed, and underdetermined cases and the finite witness required separate semantics."
+    resolution: "Retain four distinct branches, record exact failed or missing rules, and limit the witness to existence inside the finite candidate."
+    status: "resolved_in_fused_artifacts"
+  - resolution_id: "P7T01-RES-008"
+    source_findings:
+      - "PHIL-CORR-007"
+      - "PHIL-CORR-010"
+    issue: "Legacy mappings and exact-GR obligations could be overread as status upgrades."
+    resolution: "Provide object-level mappings with no-upgrade guards, preserve blocked_adoption_open_continuation, and state the protected downstream burdens."
+    status: "resolved_in_fused_artifacts"
+
+conflict_assessment:
+  material_child_disagreement_count: 0
+  blocking_conflict_count: 0
+  unresolved_conflict_count: 0
+  parent_resolution_rounds_used: 1
+  parallel_child_revision_required: false
+  rationale: "The children supplied complementary corrections rather than incompatible conclusions; every blocking correction was express enough for parent-side fusion without inventing a third position."
+
+preserved_unresolved_limitations:
+  - "The candidate primitives are stipulated proposal-only inputs, not source-derived canonical ontology."
+  - "No rule selects which kinematically admissible transition occurs."
+  - "Physical reference, detector semantics, dynamics, action, stress energy, coupling, Einstein equations, and benchmark recovery remain open."
+  - "Ontology adoption and canonical edits remain protected and human-gated."
+
+authority_limits:
+  canonical_ontology_modified: false
+  canonical_ontology_candidate_promoted: false
+  source_law_adopted: false
+  matter_ontology_adopted: false
+  physical_interpretation_established: false
+  matter_coupling_derived: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  proof_authority: false
+  physics_promotion_authorized: false

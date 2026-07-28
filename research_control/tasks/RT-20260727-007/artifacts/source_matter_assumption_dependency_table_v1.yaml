@@ -1,0 +1,157 @@
+schema_id: "source_matter_assumption_dependency_table_v1"
+artifact_id: "P7T01-SOURCE-MATTER-ASSUMPTION-DEPENDENCY-TABLE-V1"
+task_id: "RT-20260727-007"
+job_id: "AJ-RT-20260727-007-001"
+status: "draft/control"
+
+assumptions:
+  - assumption_id: "P7T01-A01"
+    statement: "K_src is a finite free augmented chain complex with partial_1 partial_2 = 0 and epsilon partial_1 = 0."
+    class: "new_proposal_only_source_input"
+    used_by:
+      - "configuration domain"
+      - "defect classes"
+      - "source relabeling theorem"
+    not_claimed:
+      - "target atlas"
+      - "spacetime topology"
+      - "physical locality"
+  - assumption_id: "P7T01-A02"
+    statement: "The incidence boundary has one positive and one negative endpoint per oriented source link so epsilon_A partial_1 = 0."
+    class: "new_proposal_only_combinatorial_axiom"
+    used_by:
+      - "total source-charge theorem"
+    not_claimed:
+      - "physical conservation law"
+  - assumption_id: "P7T01-A03"
+    statement: "A_int and B_def are finitely generated abelian coefficient groups."
+    class: "new_proposal_only_internal_input"
+    used_by:
+      - "charge sectors"
+      - "current records"
+      - "defect sectors"
+    not_claimed:
+      - "physical charge group"
+  - assumption_id: "P7T01-A04"
+    statement: "G_int has declared representation carrier-homomorphism pairs Ghat_decl and a declared source charge-label map chi: Ghat_decl -> A_int."
+    class: "new_proposal_only_internal_input"
+    used_by:
+      - "representation grades"
+      - "derived charge chains"
+    not_claimed:
+      - "particle species"
+      - "physical gauge group"
+  - assumption_id: "P7T01-A05"
+    statement: "Primitive occupations m and defects z determine derived nu q and M; malformed domain derivation and defect-cycle conditions fail closed."
+    class: "new_candidate_admissibility_condition"
+    used_by:
+      - "state space"
+      - "malformed branch"
+    not_claimed:
+      - "canonical ontology axiom"
+  - assumption_id: "P7T01-A06"
+    statement: "A kinematically admissible transition satisfies q_plus-q_minus=partial_1 J and z_plus-z_minus=partial_2 w."
+    class: "new_proposal_only_transition_constraint"
+    used_by:
+      - "charge preservation"
+      - "defect-sector preservation"
+    not_claimed:
+      - "action"
+      - "equation of motion"
+      - "physical continuity equation"
+  - assumption_id: "P7T01-A07"
+    statement: "Source presentation changes are chain isomorphisms with coefficientwise extensions and compatible internal-label isomorphisms satisfying chi_prime gamma = alpha chi."
+    class: "new_proposal_only_equivalence_scope"
+    used_by:
+      - "P7T01-THM-SOURCE-RELABELING-SECTOR-NATURALITY-001"
+    not_claimed:
+      - "diffeomorphism invariance"
+      - "physical gauge equivalence"
+  - assumption_id: "P7T01-A08"
+    statement: "No target geometry physical interpretation or process authority is a mathematical premise."
+    class: "preserved_no_import_guard"
+    used_by:
+      - "all candidate definitions"
+      - "all witnesses"
+      - "all theorem conclusions"
+    not_claimed:
+      - "effective geometry"
+      - "stress energy"
+      - "matter action"
+      - "detector semantics"
+      - "coupling"
+
+dependencies:
+  - dependency_id: "P6-T08"
+    evidence_path: "research_control/tasks/RT-20260727-004/jobs/completions/AJC-AJ-RT-20260727-004-001.yaml"
+    evidence_sha256: "86c5122fd324c59406bf4992f326a533f563c4b23d0bdf83513b0282e9be7760"
+    qualifying_status: "completed with exact zero-of-eight Gate B scoped obstruction"
+    use_here: "preserve local effective-geometry freeze; do not use as geometry input"
+  - dependency_id: "P15-T04-checkpoint"
+    evidence_path: "git commit"
+    evidence_sha256: "832f9cf9ba98061df40cdda2799d5a46661260bc"
+    qualifying_status: "committed"
+    use_here: "authorizes P7-T01 execution after report closure"
+  - dependency_id: "matter-coupling-bridge-target"
+    object_id: "TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-MATTER-COUPLING-BRIDGE-TARGET-V1-FORMALIZATION"
+    evidence_path: "research_control/tasks/RT-20260614-257/artifacts/286_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_MATTER_COUPLING_BRIDGE_TARGET_V1_FORMALIZATION.tex"
+    evidence_sha256: "3d1c6dfb2ea543c8ea455ee2f3553e3cac76e3072902213ed07aff0db514605e"
+    use_here: "downstream target and no-import boundary only"
+  - dependency_id: "source-certificate-operation-laws"
+    object_id: "TEX-V15-P3-T02-SOURCE-CERTIFICATE-OPERATION-LAWS"
+    evidence_path: "research_control/tasks/RT-20260702-064/artifacts/source_certificate_operation_laws_v1.tex"
+    evidence_sha256: "2ebc781bd82b4d39ab394255e5d3836d992625bdece8b8f912a8ab809669b986"
+    use_here: "fail-closed certificate grammar only"
+  - dependency_id: "legacy-matter-candidate-law"
+    object_id: "TEX-V12-ONTOLOGY-LAW-MATTER-SEMANTICS-CANDIDATE-LAW-PAYLOAD"
+    evidence_path: "research_control/tasks/RT-20260629-055/artifacts/matter_semantics_candidate_law_payload_v1.tex"
+    evidence_sha256: "0adf7d4b034f26cd478603ba6d9cb526dd7743dcb3a9a9f01d2e981efb2d81bf"
+    use_here: "proposal-only discriminator obligations"
+  - dependency_id: "legacy-matter-candidate-law-refuter"
+    object_id: "TEX-V12-ONTOLOGY-LAW-MATTER-SEMANTICS-CANDIDATE-LAW-REFUTER-STRESS"
+    evidence_path: "research_control/tasks/RT-20260629-057/artifacts/matter_semantics_candidate_law_refuter_stress_v1.tex"
+    evidence_sha256: "78825184f37ad01071be86f0b190b12762539cdcb80093c55543fdf542676ca6"
+    use_here: "retain current-basis nonbottom-instantiation obstruction and no-overread boundary"
+  - dependency_id: "legacy-matter-target"
+    object_id: "TEX-V12-P5-T02-SOURCE-MATTER-SEMANTICS-TARGET-FORMALIZATION"
+    evidence_path: "research_control/tasks/RT-20260630-022/artifacts/matter_semantics_target_formalization_v1.tex"
+    evidence_sha256: "4af3609b3a79e2870cbc9bb6d6c632adc7f381806cf1e63630319589572e1d16"
+    use_here: "legacy interface-object mapping only"
+  - dependency_id: "legacy-matter-candidate"
+    object_id: "TEX-V12-P5-T03-MATTER-SEMANTICS-CANDIDATE"
+    evidence_path: "research_control/tasks/RT-20260630-023/artifacts/matter_semantics_candidate_v1.tex"
+    evidence_sha256: "8dd53571106b37329152142b73fe2bbee5066b898e15c096f689842235a7f03a"
+    use_here: "legacy certificate and interface candidate mapping only"
+  - dependency_id: "metric-use-boundary"
+    evidence_path: "registries/METRIC_USE_LEDGER.csv"
+    evidence_sha256: "108b1b56d9ef2d2d6cd30d7caa77461c813d8729890afd537206c6f94a1f24cb"
+    use_here: "confirm no target metric or effective geometry enters P7-T01"
+
+assumption_counts:
+  total: 8
+  new_proposal_only: 7
+  preserved_no_import: 1
+  target_geometry_assumptions: 0
+  physical_interpretation_assumptions: 0
+  process_authority_assumptions: 0
+
+dependency_counts:
+  total: 9
+  qualifying_dependency_completions: 2
+  registered_science_sources: 6
+  control_ledgers: 1
+  status_upgrades: 0
+
+distance_to_gr:
+  changed: true
+  effect: "proposal-only source-matter ontology target supplied and the ontology-target sub-burden narrowed; adoption dynamics physical interpretation coupling and GR burdens remain unchanged"
+  next_burden: "P7-T02 source matter action evolution equation or transition law after checkpoint"
+
+authority_limits:
+  canonical_ontology_modified: false
+  source_law_adopted: false
+  matter_ontology_adopted: false
+  physical_interpretation_established: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false

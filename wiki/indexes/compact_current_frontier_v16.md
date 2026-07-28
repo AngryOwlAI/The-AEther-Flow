@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260727-006`
-- Latest handoff: `handoff-0888`
-- Current status: `p15_t04_report_complete_reporting_burden_discharged_p7_t01_selected_ready_for_checkpoint`
+- Active task: `RT-20260727-007`
+- Latest handoff: `handoff-0889`
+- Current status: `p7_t01_source_matter_ontology_target_complete_p7_t02_selector_ready_for_checkpoint`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260727-006`
-- Latest research handoff: `handoff-0888`
-- Latest research next action: Run one governed checkpoint for AJ-RT-20260727-006-001. Only after it commits may one fresh bounded P7-T01 ontology-law research packet define a proposal-only source matter ontology candidate, sector and charge taxonomy, nontrivial configuration, malformed branch, and exact assumption table without assuming geometry or coupling.
+- Latest research task: `RT-20260727-007`
+- Latest research handoff: `handoff-0889`
+- Latest research next action: Run one governed checkpoint for AJ-RT-20260727-007-001. Only after it commits may one fresh bounded theoretical-continuation-selector@0.1.0 packet choose exactly one non-promotional P7-T02 source matter action evolution-equation or transition-law construction; it may not execute the selected dynamics packet in the selector task.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p7_t01_source_matter_ontology_and_sector_taxonomy`
-- Role family: `ontology-formalizer@0.2.0`
+- Route ID: `v21_p7_t02_source_matter_dynamics_packet_selector`
+- Role family: `theoretical-continuation-selector@0.1.0`
 - Target milestone: `matter_coupling`
-- Milestone burden: Replace interface-only matter profiles with an actual matter ontology target.
+- Milestone burden: Build one explicit source matter action evolution equation or transition law and derive its basic conserved or constraint structure.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `f491e4fd85429b5b01ce130b1565f634b90447afc35a6bb4969f14c14f5fda40`
-- JSON SHA-256: `58af706684808cff9f7006fe0aa7674d8f8f037f35e202939051899a739f3dc9`
+- YAML SHA-256: `6eb9f5b34829d9c440988626f3f49b1e150fe3f27d721392af3f3539a220b2fd`
+- JSON SHA-256: `85cbf5cb5ec72c8c507577ef327d5e93db0a841abace70001716f634b3349589`
 
 ## Authority Warning
 

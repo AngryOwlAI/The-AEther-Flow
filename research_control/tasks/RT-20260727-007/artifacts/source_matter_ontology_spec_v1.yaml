@@ -1,0 +1,369 @@
+schema_id: "source_matter_ontology_spec_v1"
+artifact_id: "P7T01-SOURCE-MATTER-ONTOLOGY-SPEC-V1"
+task_id: "RT-20260727-007"
+job_id: "AJ-RT-20260727-007-001"
+plan_task_id: "P7-T01"
+status: "draft/control"
+candidate_status: "proposal-only"
+candidate_id: "SourceMatterIncidenceCandidate_v1"
+adoption_status: "blocked_adoption_open_continuation"
+target_derivation_milestone: "matter_coupling"
+milestone_burden: "Replace interface-only matter profiles with an actual matter ontology target."
+
+source_data:
+  incidence_complex:
+    symbol: "K_src"
+    kind: "finite_augmented_source_incidence_complex"
+    chain_groups:
+      - "C_2(K_src; Z)"
+      - "C_1(K_src; Z)"
+      - "C_0(K_src; Z)"
+    boundary_maps:
+      - "partial_2: C_2 -> C_1"
+      - "partial_1: C_1 -> C_0"
+      - "epsilon: C_0 -> Z"
+    axiom: "partial_1 partial_2 = 0"
+    augmentation_axiom: "epsilon partial_1 = 0"
+    endpoint_condition: "each source-link boundary has one positive and one negative endpoint; self-loops may have zero boundary"
+    interpretation: "finite combinatorial source incidence only"
+    forbidden_interpretations:
+      - "target atlas"
+      - "spacetime topology"
+      - "target metric"
+      - "causal cone"
+      - "physical locality"
+  internal_charge_group:
+    symbol: "A_int"
+    type: "finitely_generated_abelian_group"
+    interpretation: "source charge-label coefficients only"
+  defect_group:
+    symbol: "B_def"
+    type: "finitely_generated_abelian_group"
+    interpretation: "source defect-label coefficients only"
+  internal_symmetry:
+    symbol: "G_int"
+    representations: "finite declared set Ghat_decl of carrier-homomorphism pairs varrho_rho: G_int -> GL(W_rho)"
+    empty_label: "0_R"
+    charge_label_map: "chi: Ghat_decl union {0_R} -> A_int with chi(0_R)=0"
+    interpretation: "proposal-only internal labels"
+
+model_to_world_status_ladder:
+  stipulated_candidate_primitives:
+    - "incidence complex"
+    - "coefficient groups"
+    - "internal group representations and chi"
+    - "occupations and transition grammar"
+  candidate_derived_mathematical_records:
+    - "charge chains"
+    - "representation grades"
+    - "sector coordinates"
+    - "current constraints"
+    - "defect classes"
+  physical_interpretation: "open and not supplied"
+  canonical_adoption: "protected and human-gated"
+
+configuration:
+  symbol: "Psi"
+  primitive_tuple: "(m, z)"
+  tuple:
+    - field: "m"
+      type: "V x Ghat_decl -> N_0"
+      meaning: "source representation-occupation multiplicity"
+    - field: "z"
+      type: "ker(partial_1: C_1(K_src; B_def) -> C_0(K_src; B_def))"
+      meaning: "closed source defect one-chain"
+  derived_fields:
+    - field: "nu"
+      definition: "nu(v)=sum_rho m(v,rho)"
+    - field: "q_v"
+      definition: "q_v=sum_rho m(v,rho) chi(rho)"
+    - field: "q"
+      definition: "q(Psi)=sum_v q_v [v] in C_0(K_src; A_int)"
+    - field: "M"
+      definition: "M_rho(Psi)=sum_v m(v,rho)"
+  admissibility_conditions:
+    - condition_id: "C1_DECLARED_DOMAINS"
+      statement: "all vertices links relations coefficient groups representation carriers actions labels and chi values are declared"
+    - condition_id: "C2_DERIVED_FIELDS"
+      statement: "m is nonnegative on the finite declared domain and nu q and M are derived rather than independent tags"
+    - condition_id: "C3_DEFECT_CYCLE"
+      statement: "z is declared and partial_1 z = 0"
+    - condition_id: "C4_NO_TARGET_IMPORT"
+      statement: "no field is defined from target physical or process authority"
+  invalid_result:
+    symbol: "bottom_mat"
+    required_fields:
+      - "failed_condition"
+      - "offending_datum"
+      - "exact_blocked_conclusion"
+  underdetermined_result:
+    symbol: "undetermined_mat"
+    condition: "all supplied fields are well typed but the candidate has no rule for the requested classification"
+    required_fields:
+      - "requested_classification"
+      - "missing_rule"
+      - "exact_blocked_conclusion"
+    distinct_from_null: true
+    distinct_from_malformed: true
+
+sector_map:
+  id: "SourceMatterSectorMap_v1"
+  symbol: "Sec_src"
+  components:
+    - id: "total_source_charge"
+      definition: "Q(Psi) = epsilon_A(q(Psi))"
+      codomain: "A_int"
+    - id: "source_defect_class"
+      definition: "D(Psi) = [z]"
+      codomain: "H_1(K_src; B_def)"
+  composite_definition: "Sec_src(Psi) = (Q(Psi), D(Psi))"
+  representation_grade:
+    definition: "M(Psi)"
+    codomain: "finite multiplicity functions on Ghat_decl"
+    transition_invariant_without_extra_Pi_constraint: false
+  source_invariant_record:
+    definition: "O_src(Psi) = (N(Psi), Q(Psi), D(Psi), M(Psi))"
+    preferred_term: "source-invariant record"
+    detector_semantics: false
+    empirical_semantics: false
+
+transition:
+  id: "SourceMatterTransition_v1"
+  tuple: "(Psi_minus, J, w, Pi, Psi_plus)"
+  current:
+    symbol: "J"
+    type: "C_1(K_src; A_int)"
+  defect_relation:
+    symbol: "w"
+    type: "C_2(K_src; B_def)"
+  update_record:
+    symbol: "Pi"
+    type: "declared source-only occupation and representation update record"
+  kinematic_conditions:
+    - condition_id: "T1_CONTINUITY"
+      statement: "q_plus - q_minus = partial_1 J"
+    - condition_id: "T2_DEFECT_RELATION"
+      statement: "z_plus - z_minus = partial_2 w"
+    - condition_id: "T3_SOURCE_ONLY_UPDATE"
+      statement: "Pi uses only declared source data"
+  dynamics_selected: false
+  action_defined: false
+  physical_conservation_law_claimed: false
+
+theorem:
+  theorem_id: "P7T01-THM-SOURCE-RELABELING-SECTOR-NATURALITY-001"
+  status: "draft/control exact theorem within proposal-only candidate"
+  hypotheses:
+    - "F_i are source chain-group isomorphisms commuting with boundary maps"
+    - "F_0 is induced by a source-vertex bijection"
+    - "alpha and beta are coefficient-group isomorphisms"
+    - "phi is an internal-group isomorphism and gamma transports each declared representation class so varrho_prime_(gamma rho) composed with phi is isomorphic to varrho_rho"
+    - "chi_prime gamma = alpha chi"
+    - "coefficientwise maps are L_i^A=F_i tensor alpha and L_i^B=F_i tensor beta"
+  conclusions:
+    - "configuration admissibility is preserved"
+    - "transition admissibility is preserved"
+    - "sector labels transform equivariantly"
+    - "admissible transitions preserve total source charge labels and defect classes"
+    - "continuity violations remain malformed under isomorphism"
+  physical_law_claimed: false
+  ontology_adoption_claimed: false
+  proof_authority: false
+
+identity_ladder:
+  presentation_identity: "exact equality of every declared field"
+  candidate_isomorphism: "transport by declared source-chain and internal-label isomorphisms"
+  sector_coincidence: "equality or declared equivariant transport of Sec_src; coarser than configuration identity"
+  physical_identity: "not supplied"
+  general_EqSrc_identified: false
+  observational_equivalence_identified: false
+
+internal_symmetry_sector_rule:
+  admitted_transformation_scope: "compatible subgroup of source-chain coefficient-group internal-group and representation-label isomorphisms"
+  default: "equivariant transport Q -> alpha(Q)"
+  compatibility: "chi_prime gamma = alpha chi"
+  raw_charge_invariance_claimed: false
+  within_sector_options:
+    - "restrict to automorphisms satisfying alpha(Q)=Q"
+    - "replace Q by an explicitly declared automorphism orbit"
+  explicit_example:
+    charge_group: "A_int=Z"
+    labels: "rho_plus and rho_minus"
+    charge_map: "chi(rho_plus)=1; chi(rho_minus)=-1"
+    automorphism: "alpha(n)=-n; gamma swaps rho_plus and rho_minus"
+    compatibility_check: "chi gamma = alpha chi"
+    sector_effect: "Q maps to -Q"
+
+witnesses:
+  nontrivial:
+    witness_id: "P7T01-WITNESS-NONTRIVIAL-001"
+    vertices:
+      - "u"
+      - "v"
+    one_chains:
+      e:
+        boundary: "[v] - [u]"
+      ell:
+        boundary: "0"
+    boundary_matrix:
+      row_order:
+        - "u"
+        - "v"
+      column_order:
+        - "e"
+        - "ell"
+      matrix:
+        - [-1, 0]
+        - [1, 0]
+    augmentation_row: [1, 1]
+    augmentation_times_boundary:
+      - 0
+      - 0
+    two_chain_rank: 0
+    defect_homology: "H_1(K_src; Z) is Z generated by [ell]"
+    coefficient_groups:
+      A_int: "Z"
+      B_def: "Z"
+    representation_label: "rho"
+    charge_label_map: "chi(rho)=1"
+    initial:
+      primitive_occupation: "m(u,rho)=1"
+      derived_occupation: "nu(u)=1"
+      derived_charge: "[u]"
+      defect: "ell"
+      representation_grade: "M_rho=1"
+    final:
+      primitive_occupation: "m(v,rho)=1"
+      derived_occupation: "nu(v)=1"
+      derived_charge: "[v]"
+      defect: "ell"
+      representation_grade: "M_rho=1"
+    current: "e"
+    continuity_residual: "0"
+    defect_residual: "0"
+    invariant_sector: "(1, [ell])"
+    physical_trajectory_claimed: false
+  null:
+    witness_id: "P7T01-WITNESS-NULL-001"
+    configuration: "(m=0, z=0)"
+    derived_fields: "nu=q=M=0"
+    sector: "(0, [0])"
+    physical_vacuum_claimed: false
+  nontrivial_neutral:
+    witness_id: "P7T01-WITNESS-NEUTRAL-001"
+    charge_label_map: "chi(rho_plus)=1; chi(rho_minus)=-1"
+    configuration: "m(u,rho_plus)=m(v,rho_minus)=1; z=0"
+    derived_charge: "q=[u]-[v]"
+    total_source_charge: "0"
+    source_occupation: "2"
+    distinct_from_null: true
+  malformed:
+    witness_id: "P7T01-WITNESS-MALFORMED-001"
+    endpoints: "same as nontrivial witness"
+    current: "0"
+    continuity_residual: "[v] - [u]"
+    failed_condition: "T1_CONTINUITY"
+    result: "bottom_mat"
+  underdetermined:
+    witness_id: "P7T01-WITNESS-UNDERDETERMINED-001"
+    typed_request: "map an admissible sector to a detector outcome"
+    missing_rule: "detector_semantics"
+    result: "undetermined_mat"
+    distinct_from_null: true
+    distinct_from_malformed: true
+
+ontology_position:
+  proposal_models_matter_as: "stipulated source-side degrees of freedom"
+  canonical_fundamental_or_emergent_decision: "open"
+  physical_substrate_excitation_status: "open pending reference state dynamics stability and interpretation map"
+  identity_criterion: "source configuration and task-local candidate-presentation-isomorphism orbit"
+  observer_label_identity: false
+  detector_record_identity: false
+
+legacy_mapping:
+  - legacy_object: "SourceMatterSector_v1"
+    mapping: "possible interface projection of Sec_src"
+    preserved_status: "target grammar only"
+    status_upgraded: false
+  - legacy_object: "SourceProbeToken_v1; SourceDetectorReadout_v1; MatterResponseToken_v1"
+    mapping: "excluded from ontology core and deferred to later operational semantics"
+    preserved_status: "source syntax only"
+    status_upgraded: false
+  - legacy_object: "MatSrcDiscLaw_v1; SemMatter_src"
+    mapping: "the chi-linked occupation model and Sec_src form a concrete proposal-only nonbottom discriminator candidate for later audit"
+    preserved_status: "proposal-only with prior scoped obstruction retained"
+    status_upgraded: false
+  - legacy_object: "MatterSemanticsCandidate^cand_v1"
+    mapping: "earlier interface and certificate candidate may later receive a projection"
+    preserved_status: "draft/control candidate"
+    status_upgraded: false
+  - legacy_object: "MSStablePartitionPrecondition_v1"
+    mapping: "scoped partition evidence for later compatibility review"
+    preserved_status: "scoped source-extension evidence/precondition"
+    status_upgraded: false
+  - legacy_object: "MSStableMatterSemanticsBridge_v1"
+    mapping: "prior fail-closed bridge evidence for later compatibility review"
+    preserved_status: "scoped source-extension bridge evidence/precondition"
+    status_upgraded: false
+  - legacy_object: "SourceMatterSemanticsAdoptionReadinessLaw_v1"
+    mapping: "readiness-context cross-check only"
+    preserved_status: "scoped source-extension readiness evidence/precondition"
+    status_upgraded: false
+  - legacy_object: "PositiveMSProfile_v1"
+    mapping: "legacy evidence annotation or partial projection target"
+    preserved_status: "scoped positive profile evidence/precondition"
+    status_upgraded: false
+  - legacy_object: "PTMI_E; MatterCouplingBridgeTarget_v1"
+    mapping: "downstream bridge target only"
+    preserved_status: "draft/control bridge target"
+    status_upgraded: false
+  - legacy_object: "RR_E records and source certificates"
+    mapping: "declared-scope transport and fail-closed grammar only"
+    preserved_status: "conditional source records and certificates"
+    status_upgraded: false
+
+inherited_control_boundaries:
+  p6_gate_b:
+    mapping: "no geometry input; only its no-promotion boundary is inherited"
+    preserved_status: "zero of eight and local freeze unchanged"
+    status_upgraded: false
+
+configuration_strata:
+  - stratum_id: "null"
+    condition: "m=0 and z=0"
+    sector_uniqueness_claimed: false
+  - stratum_id: "neutral_nulldefect_nontrivial"
+    condition: "m is nonzero; Q=0; [z]=0"
+  - stratum_id: "charged"
+    condition: "Q is nonzero"
+  - stratum_id: "defect"
+    condition: "[z] is nonzero"
+  - stratum_id: "mixed"
+    condition: "Q and [z] are both nonzero"
+transition_superselection_claimed: false
+
+authority_limits:
+  canonical_ontology_modified: false
+  source_law_adopted: false
+  matter_ontology_adopted: false
+  physical_charge_established: false
+  physical_conservation_established: false
+  detector_semantics_established: false
+  target_metric_imported: false
+  effective_geometry_assumed: false
+  stress_energy_established: false
+  matter_action_established: false
+  coupling_law_adopted: false
+  matter_coupling_derived: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  completed_derivation_claimed: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+  proof_authority: false
+
+next_route:
+  plan_task_id: "P7-T02"
+  eligible_only_after_checkpoint: true
+  objective: "Construct one explicit source matter action evolution equation or transition law and derive its basic conserved or constraint structure."
+  executed_here: false

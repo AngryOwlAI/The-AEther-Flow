@@ -772,6 +772,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-V21-P6-T06-UNIQUENESS-COVARIANCE-ROBUSTNESS-ADMISSIBILITY-OBSTRUCTION-RECEIPT-V1` `wiki/markdown/md-v21-p6-t06-uniqueness-covariance-robustness-admissibility-obstruction-receipt-v1.md`
 - `WIKI-MD-V21-P6-T07-METRIC-OBJECT-NAMING-RECEIPT-V1` `wiki/markdown/md-v21-p6-t07-metric-object-naming-receipt-v1.md`
 - `WIKI-MD-V21-P6-T08-GATE-B-REVIEW-RECEIPT-V1` `wiki/markdown/md-v21-p6-t08-gate-b-review-receipt-v1.md`
+- `WIKI-MD-V21-P7-T01-PARENT-FUSION-SOURCE-MATTER-ONTOLOGY-V1` `wiki/markdown/md-v21-p7-t01-parent-fusion-source-matter-ontology-v1.md`
+- `WIKI-MD-V21-P7-T01-SOURCE-MATTER-ONTOLOGY-RECEIPT-V1` `wiki/markdown/md-v21-p7-t01-source-matter-ontology-receipt-v1.md`
 - `WIKI-MD-VALIDATOR-OPERATOR-WORKFLOW-PUBLICATION-BRIEF` `wiki/markdown/md-validator-operator-workflow-publication-brief.md`
 
 ## obsidian-wiki
@@ -1244,6 +1246,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-V21-P6-T06-UNIQUENESS-COVARIANCE-ROBUSTNESS-ADMISSIBILITY-OBSTRUCTION-RECEIPT-V1` `research_control/tasks/RT-20260726-010/artifacts/uniqueness_covariance_robustness_admissibility_obstruction_receipt.md`
 - `MD-V21-P6-T07-METRIC-OBJECT-NAMING-RECEIPT-V1` `research_control/tasks/RT-20260726-011/artifacts/metric_object_naming_receipt.md`
 - `MD-V21-P6-T08-GATE-B-REVIEW-RECEIPT-V1` `research_control/tasks/RT-20260727-004/artifacts/p6_t08_gate_b_review_receipt.md`
+- `MD-V21-P7-T01-PARENT-FUSION-SOURCE-MATTER-ONTOLOGY-V1` `research_control/tasks/RT-20260727-007/artifacts/parent_fusion_notes_p7_t01_source_matter_ontology.md`
+- `MD-V21-P7-T01-SOURCE-MATTER-ONTOLOGY-RECEIPT-V1` `research_control/tasks/RT-20260727-007/artifacts/source_matter_ontology_receipt.md`
 
 ## tex-wiki
 

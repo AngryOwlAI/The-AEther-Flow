@@ -1,0 +1,370 @@
+schema_id: "v21_p7_t01_child_phys_math_review_v1"
+task_id: "RT-20260727-007"
+job_id: "AJ-RT-20260727-007-001"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+review_context: "internal parent-child synthesis input"
+reviewed_candidate_id: "SourceMatterIncidenceCandidate_v1"
+candidate_status: "proposal-only"
+adoption_status: "blocked_adoption_open_continuation"
+target_derivation_milestone: "matter_coupling"
+milestone_burden: "Replace interface-only matter profiles with an actual matter ontology target."
+
+source_basis:
+  - path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+    use: "P7-T01 objective, source boundary, outputs, and validation burden"
+  - path: "research_control/tasks/RT-20260727-007/jobs/AJ-RT-20260727-007-001.yaml"
+    use: "immutable outer-AgentJob scope, payload admission, and authority limits"
+  - path: "research_control/tasks/RT-20260727-007/roles/ontology-formalizer@0.2.0--RT-20260727-007.yaml"
+    use: "task-local execution-role constraints"
+  - path: "research_control/design/frontier_theorem_inventory.md"
+    use: "registered matter-coupling target and precondition statuses"
+  - path: "research_control/tasks/RT-20260614-257/artifacts/286_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_MATTER_COUPLING_BRIDGE_TARGET_V1_FORMALIZATION.tex"
+    use: "pre-tensorial bridge target and no-target-import boundary only"
+  - path: "research_control/tasks/RT-20260702-064/artifacts/source_certificate_operation_laws_v1.tex"
+    use: "declared-scope and fail-closed certificate discipline only"
+  - path: "research_control/tasks/RT-20260629-050/artifacts/matter_semantics_target_formalization_v1.tex"
+    use: "legacy target grammar and discriminator burden"
+  - path: "research_control/tasks/RT-20260629-055/artifacts/matter_semantics_candidate_law_payload_v1.tex"
+    use: "proposal-only nonbottom discriminator and relabeling obligations"
+  - path: "research_control/tasks/RT-20260629-057/artifacts/matter_semantics_candidate_law_refuter_stress_v1.tex"
+    use: "current-basis arbitrary-label and label-transport obstruction"
+  - path: "research_control/tasks/RT-20260630-022/artifacts/matter_semantics_target_formalization_v1.tex"
+    use: "legacy sector, probe, readout, and response syntax"
+  - path: "research_control/tasks/RT-20260630-023/artifacts/matter_semantics_candidate_v1.tex"
+    use: "legacy finite interface candidate and its exact non-adoption status"
+  - path: "research_control/tasks/RT-20260727-004/jobs/completions/AJC-AJ-RT-20260727-004-001.yaml"
+    use: "P6 Gate B zero-of-eight and local effective-geometry freeze"
+
+consensus:
+  shared_conclusion: "A finite augmented source-incidence complex with internal coefficient data can support a nontrivial proposal-only source-matter configuration space, algebraic charge sectors, current constraints, and defect classes without importing target geometry."
+  mathematical_disposition: "conditionally_acceptable_after_required_corrections"
+  no_hidden_target_import_found: true
+  current_draft_strength: "The boundary-chain, homology, continuity, null, and malformed constructions are mathematically viable and materially stronger than the legacy interface-label packets."
+  current_draft_limit: "As presently written, q and r are independent labels subject only to a support condition, and the internal-group representation structure is not connected to either q or the naturality theorem. The draft therefore has not yet fully answered the legacy arbitrary-nonbottom-label stress."
+  authority_conclusion: "The construction can be an exact theorem inside the task-local proposal, but it cannot establish physical matter, physical charge, a physical conservation law, canonical ontology, matter coupling, or GR recovery."
+
+recommended_mathematical_core:
+  augmented_source_incidence_complex:
+    datum: "K_src = (C_2 --partial_2--> C_1 --partial_1--> C_0 --epsilon--> Z)"
+    coefficient_ring: "Z"
+    requirements:
+      - "Each C_i is a finite free abelian group with a declared source-cell basis."
+      - "partial_1 partial_2 = 0."
+      - "epsilon partial_1 = 0."
+      - "For link incidence, every one-cell boundary has one declared positive endpoint and one declared negative endpoint, allowing a self-loop to have zero boundary."
+    interpretation: "finite algebraic source incidence only"
+  internal_candidate_datum:
+    tuple: "I_src = (G_int, A_int, B_def, R_decl, chi)"
+    fields:
+      G_int: "declared internal group; no physical gauge interpretation"
+      A_int: "finitely generated abelian source charge-label group"
+      B_def: "finitely generated abelian source defect-label group"
+      R_decl: "finite set of declared internal representation labels, with an empty label 0_R"
+      chi: "charge-label map chi: R_decl -> A_int with chi(0_R)=0"
+    compatibility: "For an admissible internal-data isomorphism (phi, alpha, beta, gamma), require chi_prime(gamma(r)) = alpha(chi(r)); if R_decl names actual representation classes, also require gamma([V]) = [V composed with phi_inverse]."
+  configuration:
+    preferred_occupation_field: "m: V x R_decl -> N_0 with finite support"
+    derived_fields:
+      occupation: "nu(v) = sum_r m(v,r)"
+      local_charge: "q_v = sum_r m(v,r) chi(r)"
+      charge_chain: "q(Psi) = sum_v q_v [v] in C_0(K_src; A_int)"
+      representation_content: "M_r(Psi) = sum_v m(v,r)"
+    independent_defect_field: "z in ker(partial_1: C_1(K_src; B_def) -> C_0(K_src; B_def))"
+    reason_for_derivation: "This makes nonzero charge and representation content consequences of declared source occupation data rather than independent matter-named tags."
+  transition:
+    tuple: "T = (Psi_minus, J, w, Pi, Psi_plus)"
+    charge_current_constraint: "q_plus - q_minus = partial_1 J"
+    defect_constraint: "z_plus - z_minus = partial_2 w"
+    occupation_update: "Pi must map the declared occupation multiset and must be compatible with the derived q fields; P7-T01 still does not select which admissible transition occurs."
+    physical_dynamics_claimed: false
+  sector_and_stratum_split:
+    transition_invariant_sector: "Sigma_inv(Psi) = (Q(Psi), [z]) in A_int x H_1(K_src; B_def)"
+    total_charge: "Q(Psi) = epsilon_A(q(Psi))"
+    representation_grade: "M(Psi) in N_0^(R_decl), equivariant under label bijections but not conserved unless Pi is separately constrained"
+    presentation_invariant_record: "O_src(Psi) = (N(Psi), Q(Psi), [z], M(Psi))"
+    configuration_strata:
+      - "null: m=0 and z=0"
+      - "neutral_nulldefect_excitation: m is nonzero, Q=0, and [z]=0"
+      - "charged_excitation: Q is nonzero"
+      - "defect_excitation: [z] is nonzero"
+      - "mixed_excitation: Q and [z] are both nonzero"
+    warning: "Do not call the entire tuple (Q, [z], M) transition-conserved unless Pi is required to preserve M."
+
+mathematical_findings:
+  - finding_id: "P7T01-MATH-001"
+    severity: "blocking_before_fused_acceptance"
+    topic: "charge and representation binding"
+    finding: "The current draft permits arbitrary q_v and r(v) whenever nu(v) is nonzero. Hence a nonzero q or a label rho can still be attached by declaration, reproducing the precise arbitrary-nonbottom-label weakness identified by the legacy Refuter."
+    required_correction: "Add a declared source-side map chi: R_decl -> A_int and derive q_v from occupation multiplicities and chi. A minimal single-label variant is q_v = nu(v) chi(r(v)); the more robust variant uses m(v,r) and q_v = sum_r m(v,r) chi(r)."
+    why_required: "Without this relation, charge and representation are parallel bookkeeping fields, not an integrated source-matter ontology."
+  - finding_id: "P7T01-MATH-002"
+    severity: "blocking_before_internal_automorphism_claim"
+    topic: "internal symmetry"
+    finding: "G_int is declared, but the current draft specifies neither its representations nor its action on A_int, B_def, R_decl, configurations, or transitions."
+    required_correction: "Define the admitted internal-data automorphisms and require chi_prime gamma = alpha chi. State equivariance under those automorphisms, not an unqualified internal gauge invariance."
+    why_required: "A bare group name and a label bijection do not establish representation or internal-automorphism naturality."
+  - finding_id: "P7T01-MATH-003"
+    severity: "major_precision"
+    topic: "sector versus grade"
+    finding: "The current composite sector includes M_r, but admissible transitions constrain only charge and defect chains. Therefore Q and [z] are preserved, while M_r may change through the unconstrained update record Pi."
+    required_correction: "Either define the transition-invariant sector as (Q,[z]) and call M_r a representation grade, or add an explicit representation-content continuity rule if M_r is intended to be sector-preserved."
+    why_required: "The candidate should not silently identify a presentation-invariant descriptor with a transition invariant."
+  - finding_id: "P7T01-MATH-004"
+    severity: "major_precision"
+    topic: "augmentation"
+    finding: "epsilon partial_1 = 0 is essential to the total-charge calculation but is not a consequence of an arbitrary finite chain complex."
+    required_correction: "Include the augmentation or the endpoint-incidence condition in the definition of admissible K_src, rather than only asserting it after the definition."
+    why_required: "The total-charge theorem depends exactly on this hypothesis."
+  - finding_id: "P7T01-MATH-005"
+    severity: "major_precision"
+    topic: "coefficientwise naturality"
+    finding: "The naturality proof informally writes F_i with alpha or beta applied coefficientwise, but F_i was introduced only on integer chain groups."
+    required_correction: "Name the extended maps F_i tensor alpha on A_int chains and F_i tensor beta on B_def chains, then write the commuting squares with those maps."
+    why_required: "This removes a type mismatch and makes the equivariance equation exact."
+  - finding_id: "P7T01-MATH-006"
+    severity: "major_precision"
+    topic: "identity language"
+    finding: "The phrase source-equivalence orbit may be overread as the canonical EqSrc relation, while the task only defines task-local chain and internal-data isomorphisms."
+    required_correction: "Use task-local candidate-presentation-isomorphism orbit unless an exact registered EqSrc comparison is separately supplied."
+    why_required: "The correction preserves the canonical source-equivalence burden."
+  - finding_id: "P7T01-MATH-007"
+    severity: "accepted"
+    topic: "current and defect constraints"
+    finding: "Given an augmented incidence complex, q_plus-q_minus=partial_1 J implies preservation of total source charge labels, and z_plus-z_minus=partial_2 w implies preservation of the defect homology class."
+    exact_scope: "kinematic theorem inside the proposal-only candidate"
+  - finding_id: "P7T01-MATH-008"
+    severity: "accepted"
+    topic: "malformed branch"
+    finding: "The J=0 branch for endpoints whose charge difference is [v]-[u] has a nonzero residual and fails closed. Invertible source relabeling cannot map that nonzero residual to zero."
+    exact_scope: "task-local malformed-transition result"
+
+explicit_calculations:
+  corrected_nontrivial_witness:
+    witness_id: "P7T01-MATH-WITNESS-001"
+    source_bases:
+      C_0: "[u], [v]"
+      C_1: "e, ell"
+      C_2: "0"
+    boundary_matrix:
+      row_order: "u, v"
+      column_order: "e, ell"
+      matrix: "[[-1, 0], [1, 0]]"
+    chain_checks:
+      partial_1_partial_2: "0 because C_2=0"
+      augmentation_row: "[1, 1]"
+      augmentation_times_boundary: "[1, 1] * [[-1, 0], [1, 0]] = [0, 0]"
+      kernel_partial_1: "Z generated by ell"
+      image_partial_2: "0"
+      first_defect_homology: "H_1(K_src; Z) is isomorphic to Z generated by [ell]"
+    internal_data:
+      A_int: "Z"
+      B_def: "Z"
+      R_decl: "rho plus 0_R"
+      charge_map: "chi(rho)=1 and chi(0_R)=0"
+    initial_configuration:
+      occupation: "m_minus(u,rho)=1; all other multiplicities zero"
+      derived_charge_vector: "[1, 0]^T"
+      defect_vector: "[0, 1]^T in the (e,ell) basis"
+      representation_grade: "M_rho=1"
+    final_configuration:
+      occupation: "m_plus(v,rho)=1; all other multiplicities zero"
+      derived_charge_vector: "[0, 1]^T"
+      defect_vector: "[0, 1]^T in the (e,ell) basis"
+      representation_grade: "M_rho=1"
+    transition:
+      current_vector: "[1, 0]^T in the (e,ell) basis"
+      charge_difference: "[-1, 1]^T"
+      boundary_of_current: "[[-1, 0], [1, 0]] * [1, 0]^T = [-1, 1]^T"
+      continuity_residual: "[0, 0]^T"
+      defect_relation_chain: "0"
+      defect_residual: "0"
+    sector_checks:
+      initial_total_charge: "[1, 1] * [1, 0]^T = 1"
+      final_total_charge: "[1, 1] * [0, 1]^T = 1"
+      initial_defect_class: "[ell]"
+      final_defect_class: "[ell]"
+      invariant_sector: "(1, [ell])"
+    licensed_conclusion: "A nontrivial finite source-incidence configuration and kinematically admissible transport record exist inside the proposal."
+    forbidden_overread: "This is not a particle trajectory, worldline, physical loop, measured charge, physical current, or dynamics."
+  null_branch:
+    witness_id: "P7T01-MATH-WITNESS-NULL-001"
+    occupation: "m=0"
+    derived_charge: "q=0"
+    defect: "z=0"
+    invariant_sector: "(0,[0])"
+    configuration_stratum: "null"
+    licensed_conclusion: "The zero record is admissible."
+    forbidden_overread: "No physical vacuum, ground state, or cosmological background is established."
+  malformed_branch:
+    witness_id: "P7T01-MATH-WITNESS-MALFORMED-001"
+    endpoints: "same endpoints as P7T01-MATH-WITNESS-001"
+    altered_current: "J=0"
+    residual: "q_plus-q_minus-partial_1 J = [-1,1]^T"
+    failed_axiom: "T1_CONTINUITY"
+    result: "bottom_mat with exact residual"
+    relabeling_check: "For an invertible coefficientwise chain map L_0, L_0[-1,1]^T is nonzero, so malformedness is preserved."
+  internal_automorphism_example:
+    example_id: "P7T01-MATH-INTERNAL-AUT-001"
+    data: "A_int=Z; R_decl={rho_plus,rho_minus}; chi(rho_plus)=1; chi(rho_minus)=-1"
+    automorphism: "alpha(n)=-n and gamma swaps rho_plus with rho_minus"
+    compatibility_check: "chi(gamma(r)) = alpha(chi(r)) for both labels"
+    sector_effect: "Q maps to -Q; this is equivariance, not literal invariance."
+    lesson: "If the fused artifact uses the phrase internal symmetry invariance, it must either quotient by the admitted automorphism orbit or replace invariance with equivariance."
+
+naturality_proof_skeleton:
+  hypotheses:
+    - "F_i are source-basis chain isomorphisms with F_(i-1) partial_i = partial_i_prime F_i."
+    - "alpha: A_int -> A_int_prime and beta: B_def -> B_def_prime are group isomorphisms."
+    - "gamma: R_decl -> R_decl_prime is a label bijection compatible with the internal-group isomorphism."
+    - "chi_prime gamma = alpha chi."
+    - "F_0 is induced by a vertex bijection and preserves augmentation."
+  induced_maps:
+    charge_chains: "L_i^A = F_i tensor alpha"
+    defect_chains: "L_i^B = F_i tensor beta"
+    occupations: "m_prime(F_0 v, gamma r) = m(v,r)"
+  configuration_check:
+    derivation: "q_prime_(F_0 v) = sum_r m(v,r) chi_prime(gamma r) = alpha(sum_r m(v,r) chi(r))"
+    consequence: "the derived-charge admissibility condition is preserved"
+  transition_check:
+    derivation: "partial_1_prime L_1^A J = L_0^A partial_1 J = L_0^A(q_plus-q_minus)"
+    consequence: "charge-current admissibility is preserved"
+  defect_check:
+    derivation: "partial_1_prime L_1^B z = L_0^B partial_1 z = 0 and L_1^B partial_2 w = partial_2_prime L_2^B w"
+    consequence: "cycles, boundaries, and defect classes transport functorially"
+  sector_check:
+    total_charge: "Q_prime(Psi_prime) = alpha(Q(Psi))"
+    defect: "[z_prime] = H_1(F;beta)[z]"
+    representation_grade: "M_prime = gamma_* M"
+  malformed_check:
+    derivation: "An isomorphism maps a nonzero continuity residual to a nonzero residual."
+  theorem_scope: "exact source-presentation equivariance for the declared proposal-only candidate"
+  excluded_claims:
+    - "target-coordinate covariance"
+    - "diffeomorphism invariance"
+    - "physical gauge invariance"
+    - "physical equivalence"
+    - "canonical EqSrc theorem"
+
+risks_and_counterexamples:
+  - risk_id: "P7T01-RISK-001"
+    counterexample: "Take one occupied vertex and independently assign two different q values while keeping nu and r fixed. The current draft admits both, so q is not determined by the proposed matter degree of freedom."
+    mitigation: "derive q through chi and occupation multiplicities"
+  - risk_id: "P7T01-RISK-002"
+    counterexample: "Let Pi replace one charge-neutral pair of representation labels by another while preserving q and z. The current transition remains admissible but M_r changes."
+    mitigation: "separate invariant sector from representation grade or constrain Pi"
+  - risk_id: "P7T01-RISK-003"
+    counterexample: "A finite free chain complex may have a one-boundary whose coefficients do not sum to zero; then epsilon partial_1 is nonzero and the total-charge proof fails."
+    mitigation: "make augmented incidence an explicit axiom"
+  - risk_id: "P7T01-RISK-004"
+    counterexample: "If a two-cell f with partial_2 f=ell is added to the witness, [ell]=0 even though ell is a nonzero cycle."
+    mitigation: "retain C_2=0 in the witness or compute image(partial_2) explicitly before calling a defect class nontrivial"
+  - risk_id: "P7T01-RISK-005"
+    counterexample: "An arbitrary permutation of representation labels need not preserve charge assignment or representation type."
+    mitigation: "restrict gamma by chi_prime gamma = alpha chi and representation transport compatibility"
+  - risk_id: "P7T01-RISK-006"
+    counterexample: "Calling O_src an operational observable can be read as detector semantics even when it is only an algebraic invariant record."
+    mitigation: "prefer source-invariant bookkeeping record and explicitly defer operational protocols"
+  - risk_id: "P7T01-RISK-007"
+    counterexample: "Calling [z] a topological defect can import spacetime topology."
+    mitigation: "call it finite incidence homology or combinatorial defect class and retain the explicit no-spacetime-topology guard"
+
+legacy_evidence_mapping:
+  - legacy_object: "SourceMatterSector_v1"
+    exact_mapping: "target grammar against which Sigma_inv and the configuration strata may later be compared"
+    preserved_status: "draft/control target grammar"
+    status_upgraded: false
+  - legacy_object: "MatSrcDiscLaw_v1 and SemMatter_src"
+    exact_mapping: "the chi-linked occupation model supplies a new proposal-only nonbottom instantiation candidate for their old obligations"
+    preserved_status: "proposal-only; prior scoped obstruction remains historically valid for the earlier payload"
+    status_upgraded: false
+  - legacy_object: "MatterSemanticsCandidate^cand_v1"
+    exact_mapping: "possible downstream interface projection from a separately validated source configuration"
+    preserved_status: "draft/control interface and certificate candidate"
+    status_upgraded: false
+  - legacy_object: "SourceProbeToken_v1, SourceDetectorReadout_v1, and MatterResponseToken_v1"
+    exact_mapping: "excluded from the ontology core; possible later protocol-layer syntax only"
+    preserved_status: "source syntax without detector or empirical semantics"
+    status_upgraded: false
+  - legacy_object: "PositiveMSProfile_v1 and RR_E transport records"
+    exact_mapping: "scoped compatibility evidence or preconditions only; not inputs that define m, chi, q, J, or z"
+    preserved_status: "scoped evidence/precondition"
+    status_upgraded: false
+  - legacy_object: "PTMI_E and MatterCouplingBridgeTarget_v1"
+    exact_mapping: "downstream bridge codomain and eligibility target only"
+    preserved_status: "draft/control pre-tensorial target"
+    status_upgraded: false
+  - legacy_object: "P6 Gate B package"
+    exact_mapping: "no constructive input; only the prohibition against effective-geometry import is inherited"
+    preserved_status: "zero of eight with unchanged-package local freeze"
+    status_upgraded: false
+
+no_target_import_audit:
+  target_atlas_used: false
+  target_topology_used: false
+  target_metric_used: false
+  effective_geometry_used: false
+  lorentzian_signature_used: false
+  proper_time_used: false
+  stress_energy_used: false
+  matter_action_used: false
+  detector_semantics_used: false
+  empirical_calibration_used: false
+  coupling_law_used: false
+  einstein_equations_used: false
+  benchmark_behavior_used: false
+  generated_derivative_used_as_premise: false
+  registry_or_validator_used_as_proof: false
+  role_handoff_commit_or_approval_used_as_proof: false
+  audit_conclusion: "No hidden target import was found in the finite incidence, group, chain, homology, or witness calculations. The material deficiencies are source-internal typing and invariance issues, not target smuggling."
+
+required_corrections_before_parent_fusion:
+  - correction_id: "P7T01-RC-001"
+    priority: 1
+    action: "Add chi and derive local q from occupation/representation data; update the witness to state chi(rho)=1."
+  - correction_id: "P7T01-RC-002"
+    priority: 2
+    action: "Define admissible internal-data isomorphisms and require chi compatibility; state internal equivariance exactly."
+  - correction_id: "P7T01-RC-003"
+    priority: 3
+    action: "Separate transition-invariant sector (Q,[z]) from representation grade M, unless an M-preservation law is added."
+  - correction_id: "P7T01-RC-004"
+    priority: 4
+    action: "Move epsilon partial_1=0 into the definition or explicit assumptions of the augmented source incidence complex."
+  - correction_id: "P7T01-RC-005"
+    priority: 5
+    action: "Write coefficientwise chain maps as F_i tensor alpha and F_i tensor beta, and replace canonical-sounding source-equivalence orbit language with task-local candidate-presentation-isomorphism orbit."
+
+parent_fusion_recommendation:
+  disposition: "revise_then_fuse"
+  shared_consensus_to_preserve: "The finite chain/homology candidate is source-only, nontrivial, and proposal-only; its continuity and defect calculations are exact under declared hypotheses."
+  unique_mathematical_contribution: "Bind occupation, representation, and charge through chi; separate conserved sector data from unconserved representation grades; state coefficientwise naturality with exact types."
+  unresolved_limitations_to_preserve:
+    - "The candidate inputs K_src, G_int, A_int, B_def, R_decl, and chi are proposed assumptions, not derived canonical ontology."
+    - "P7-T01 supplies kinematics only; no rule selects an admissible transition."
+    - "No physical interpretation, detector protocol, stress-energy object, action, coupling, geometry, Einstein equation, or benchmark result follows."
+    - "Whether this candidate should be adopted remains protected and human-gated."
+
+authority_limits:
+  canonical_ontology_modified: false
+  canonical_ontology_candidate_promoted: false
+  source_law_adopted: false
+  matter_ontology_adopted: false
+  physical_matter_established: false
+  physical_charge_established: false
+  physical_conservation_law_established: false
+  physical_gauge_symmetry_established: false
+  target_geometry_established: false
+  stress_energy_established: false
+  matter_action_established: false
+  detector_semantics_established: false
+  coupling_law_adopted: false
+  matter_coupling_derived: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  completed_derivation_claimed: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+  proof_authority: false
+  physics_promotion_authorized: false

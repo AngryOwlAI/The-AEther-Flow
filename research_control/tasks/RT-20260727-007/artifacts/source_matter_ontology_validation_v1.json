@@ -1,0 +1,404 @@
+{
+  "artifact_hashes": {
+    "child_phys_math_p7_t01_source_matter_ontology.yaml": "fb104c08a874bb69d389a3d38039fd32a6b4e070fb38e22b792bd49366f31f06",
+    "child_phys_phil_p7_t01_source_matter_ontology.yaml": "7cb88dfebc13c6a264ea37fe766342dd356b5714caa8b00ecf6ee68e6a533b4c",
+    "parent_conflict_review_p7_t01_source_matter_ontology.yaml": "6230fcec0bc1cad7a0371b02ec98864fea0aac31459ed44b49671b32654dfb74",
+    "parent_fusion_notes_p7_t01_source_matter_ontology.md": "35140afc25e7e823d3284d1f95c3c26fbeb7fbc04ed57098b661d681c081dfd3",
+    "source_matter_assumption_dependency_table_v1.yaml": "c665dbc7522d4ee1b6aa01db14100689c8d9acc28c7e659c33b4272d32976991",
+    "source_matter_ontology_and_sector_taxonomy_v1.tex": "8d160217bf223078a11bc63fde6593c11c39d5b50d9c48fbad7b12084f8a752d",
+    "source_matter_ontology_spec_v1.yaml": "a5563edddaff90ebab6ac4d3d4e2dc0425fea23b5f27c1c6174cb28b1f4652be",
+    "source_matter_sector_charge_taxonomy_v1.yaml": "0b7bb06a63b20469185badab4b2664eaa23d5b4e47752b953d51c2508f283c59"
+  },
+  "authority": "operational_validation_only",
+  "authority_limits": {
+    "canonical_ontology_modified": false,
+    "distance_to_gr_changed": true,
+    "matter_ontology_adopted": false,
+    "physical_interpretation_established": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "source_law_adopted": false,
+    "theorem_truth_inferred": false,
+    "validator_pass_counts_as_physics": false
+  },
+  "candidate_id": "SourceMatterIncidenceCandidate_v1",
+  "check_count": 68,
+  "checks": [
+    {
+      "check_id": "artifact_exists::source_matter_ontology_and_sector_taxonomy_v1.tex",
+      "detail": "required task-local artifact source_matter_ontology_and_sector_taxonomy_v1.tex",
+      "status": "PASS"
+    },
+    {
+      "check_id": "artifact_exists::source_matter_ontology_spec_v1.yaml",
+      "detail": "required task-local artifact source_matter_ontology_spec_v1.yaml",
+      "status": "PASS"
+    },
+    {
+      "check_id": "artifact_exists::source_matter_sector_charge_taxonomy_v1.yaml",
+      "detail": "required task-local artifact source_matter_sector_charge_taxonomy_v1.yaml",
+      "status": "PASS"
+    },
+    {
+      "check_id": "artifact_exists::source_matter_assumption_dependency_table_v1.yaml",
+      "detail": "required task-local artifact source_matter_assumption_dependency_table_v1.yaml",
+      "status": "PASS"
+    },
+    {
+      "check_id": "artifact_exists::child_phys_math_p7_t01_source_matter_ontology.yaml",
+      "detail": "required task-local artifact child_phys_math_p7_t01_source_matter_ontology.yaml",
+      "status": "PASS"
+    },
+    {
+      "check_id": "artifact_exists::child_phys_phil_p7_t01_source_matter_ontology.yaml",
+      "detail": "required task-local artifact child_phys_phil_p7_t01_source_matter_ontology.yaml",
+      "status": "PASS"
+    },
+    {
+      "check_id": "artifact_exists::parent_conflict_review_p7_t01_source_matter_ontology.yaml",
+      "detail": "required task-local artifact parent_conflict_review_p7_t01_source_matter_ontology.yaml",
+      "status": "PASS"
+    },
+    {
+      "check_id": "artifact_exists::parent_fusion_notes_p7_t01_source_matter_ontology.md",
+      "detail": "required task-local artifact parent_fusion_notes_p7_t01_source_matter_ontology.md",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec::schema_id",
+      "detail": "expected 'source_matter_ontology_spec_v1'; observed 'source_matter_ontology_spec_v1'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec::candidate_status",
+      "detail": "expected 'proposal-only'; observed 'proposal-only'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec::candidate_id",
+      "detail": "expected 'SourceMatterIncidenceCandidate_v1'; observed 'SourceMatterIncidenceCandidate_v1'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec::adoption_status",
+      "detail": "expected 'blocked_adoption_open_continuation'; observed 'blocked_adoption_open_continuation'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec::source_data.incidence_complex.axiom",
+      "detail": "expected 'partial_1 partial_2 = 0'; observed 'partial_1 partial_2 = 0'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec::source_data.incidence_complex.augmentation_axiom",
+      "detail": "expected 'epsilon partial_1 = 0'; observed 'epsilon partial_1 = 0'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec::source_data.internal_symmetry.charge_label_map",
+      "detail": "expected 'chi: Ghat_decl union {0_R} -> A_int with chi(0_R)=0'; observed 'chi: Ghat_decl union {0_R} -> A_int with chi(0_R)=0'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec::configuration.primitive_tuple",
+      "detail": "expected '(m, z)'; observed '(m, z)'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec::transition.id",
+      "detail": "expected 'SourceMatterTransition_v1'; observed 'SourceMatterTransition_v1'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec::theorem.theorem_id",
+      "detail": "expected 'P7T01-THM-SOURCE-RELABELING-SECTOR-NATURALITY-001'; observed 'P7T01-THM-SOURCE-RELABELING-SECTOR-NATURALITY-001'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec::witnesses.nontrivial.continuity_residual",
+      "detail": "expected '0'; observed '0'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec::witnesses.nontrivial.defect_residual",
+      "detail": "expected '0'; observed '0'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec::witnesses.nontrivial.charge_label_map",
+      "detail": "expected 'chi(rho)=1'; observed 'chi(rho)=1'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec::witnesses.malformed.failed_condition",
+      "detail": "expected 'T1_CONTINUITY'; observed 'T1_CONTINUITY'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec::witnesses.malformed.result",
+      "detail": "expected 'bottom_mat'; observed 'bottom_mat'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec::witnesses.nontrivial_neutral.distinct_from_null",
+      "detail": "expected True; observed True",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec::witnesses.underdetermined.result",
+      "detail": "expected 'undetermined_mat'; observed 'undetermined_mat'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec::ontology_position.canonical_fundamental_or_emergent_decision",
+      "detail": "expected 'open'; observed 'open'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec::configuration_fields",
+      "detail": "observed ['m', 'z']",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec::derived_configuration_fields",
+      "detail": "observed ['M', 'nu', 'q', 'q_v']",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec::configuration_conditions",
+      "detail": "observed ['C1_DECLARED_DOMAINS', 'C2_DERIVED_FIELDS', 'C3_DEFECT_CYCLE', 'C4_NO_TARGET_IMPORT']",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec::transition_conditions",
+      "detail": "observed ['T1_CONTINUITY', 'T2_DEFECT_RELATION', 'T3_SOURCE_ONLY_UPDATE']",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec::theorem_conclusions",
+      "detail": "observed 5 conclusions",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec::legacy_mapping_count",
+      "detail": "observed 10 mappings",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec::legacy_no_upgrade",
+      "detail": "all retained legacy mappings must preserve status",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec::authority_flags_false",
+      "detail": "all protected authority flags must remain false",
+      "status": "PASS"
+    },
+    {
+      "check_id": "taxonomy::class_ids",
+      "detail": "observed ['SM-CHARGE', 'SM-CURRENT', 'SM-DEFECT', 'SM-INVARIANT', 'SM-MALFORMED', 'SM-NULL', 'SM-REP', 'SM-UNDERDETERMINED']",
+      "status": "PASS"
+    },
+    {
+      "check_id": "taxonomy::class_count_receipt",
+      "detail": "taxonomy count receipt must equal eight",
+      "status": "PASS"
+    },
+    {
+      "check_id": "taxonomy::no_adopted_physical_sector",
+      "detail": "no physical sector may be adopted",
+      "status": "PASS"
+    },
+    {
+      "check_id": "assumptions::count",
+      "detail": "observed 8 assumptions",
+      "status": "PASS"
+    },
+    {
+      "check_id": "dependencies::count",
+      "detail": "observed 9 dependencies",
+      "status": "PASS"
+    },
+    {
+      "check_id": "assumptions::no_target_geometry",
+      "detail": "target-geometry assumption count must be zero",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex::marker::SourceMatterIncidenceCandidate",
+      "detail": "required TeX marker 'SourceMatterIncidenceCandidate'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex::marker::P7T01-THM-SOURCE-RELABELING-SECTOR-NATURALITY-001",
+      "detail": "required TeX marker 'P7T01-THM-SOURCE-RELABELING-SECTOR-NATURALITY-001'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex::marker::q^+-q^- &= \\partial_1J",
+      "detail": "required TeX marker 'q^+-q^- &= \\\\partial_1J'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex::marker::z^+-z^- &= \\partial_2w",
+      "detail": "required TeX marker 'z^+-z^- &= \\\\partial_2w'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex::marker::\\epsilon_{\\Aint}\\partial_1=0",
+      "detail": "required TeX marker '\\\\epsilon_{\\\\Aint}\\\\partial_1=0'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex::marker::\\chi:\\Rdecl\\cup\\{0_R\\}\\longrightarrow\\Aint",
+      "detail": "required TeX marker '\\\\chi:\\\\Rdecl\\\\cup\\\\{0_R\\\\}\\\\longrightarrow\\\\Aint'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex::marker::\\chi'(\\gamma\\rho)=\\alpha(\\chi(\\rho))",
+      "detail": "required TeX marker \"\\\\chi'(\\\\gamma\\\\rho)=\\\\alpha(\\\\chi(\\\\rho))\"",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex::marker::L_i^A=F_i\\otimes\\alpha",
+      "detail": "required TeX marker 'L_i^A=F_i\\\\otimes\\\\alpha'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex::marker::\\mathrm{SourceMatterSector}_{v1}",
+      "detail": "required TeX marker '\\\\mathrm{SourceMatterSector}_{v1}'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex::marker::\\mathrm{MatSrcDiscLaw}_{v1}",
+      "detail": "required TeX marker '\\\\mathrm{MatSrcDiscLaw}_{v1}'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex::marker::\\mathrm{PositiveMSProfile}_{v1}",
+      "detail": "required TeX marker '\\\\mathrm{PositiveMSProfile}_{v1}'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex::marker::blocked\\_adoption\\_open\\_continuation",
+      "detail": "required TeX marker 'blocked\\\\_adoption\\\\_open\\\\_continuation'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex::marker::not a physical vacuum",
+      "detail": "required TeX marker 'not a physical vacuum'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex::marker::not a particle trajectory",
+      "detail": "required TeX marker 'not a particle trajectory'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex::marker::Nontrivial neutral configuration",
+      "detail": "required TeX marker 'Nontrivial neutral configuration'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex::marker::Underdetermined request",
+      "detail": "required TeX marker 'Underdetermined request'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex::marker::not the general",
+      "detail": "required TeX marker 'not the general'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex::marker::P7-T02",
+      "detail": "required TeX marker 'P7-T02'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "source_hash::implementations_plans/recommendations_implementation_plan_continue_task-v21.md",
+      "detail": "expected 4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087; observed 4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087",
+      "status": "PASS"
+    },
+    {
+      "check_id": "source_hash::research_control/tasks/RT-20260614-257/artifacts/286_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_MATTER_COUPLING_BRIDGE_TARGET_V1_FORMALIZATION.tex",
+      "detail": "expected 3d1c6dfb2ea543c8ea455ee2f3553e3cac76e3072902213ed07aff0db514605e; observed 3d1c6dfb2ea543c8ea455ee2f3553e3cac76e3072902213ed07aff0db514605e",
+      "status": "PASS"
+    },
+    {
+      "check_id": "source_hash::research_control/tasks/RT-20260702-064/artifacts/source_certificate_operation_laws_v1.tex",
+      "detail": "expected 2ebc781bd82b4d39ab394255e5d3836d992625bdece8b8f912a8ab809669b986; observed 2ebc781bd82b4d39ab394255e5d3836d992625bdece8b8f912a8ab809669b986",
+      "status": "PASS"
+    },
+    {
+      "check_id": "source_hash::research_control/design/frontier_theorem_inventory.md",
+      "detail": "expected fa7d97207315b49517e6e05bc3ae5b6bfcd0e335b669ba6a98371e55b4721600; observed fa7d97207315b49517e6e05bc3ae5b6bfcd0e335b669ba6a98371e55b4721600",
+      "status": "PASS"
+    },
+    {
+      "check_id": "source_hash::registries/METRIC_USE_LEDGER.csv",
+      "detail": "expected 108b1b56d9ef2d2d6cd30d7caa77461c813d8729890afd537206c6f94a1f24cb; observed 108b1b56d9ef2d2d6cd30d7caa77461c813d8729890afd537206c6f94a1f24cb",
+      "status": "PASS"
+    },
+    {
+      "check_id": "source_hash::research_control/tasks/RT-20260629-055/artifacts/matter_semantics_candidate_law_payload_v1.tex",
+      "detail": "expected 0adf7d4b034f26cd478603ba6d9cb526dd7743dcb3a9a9f01d2e981efb2d81bf; observed 0adf7d4b034f26cd478603ba6d9cb526dd7743dcb3a9a9f01d2e981efb2d81bf",
+      "status": "PASS"
+    },
+    {
+      "check_id": "source_hash::research_control/tasks/RT-20260629-057/artifacts/matter_semantics_candidate_law_refuter_stress_v1.tex",
+      "detail": "expected 78825184f37ad01071be86f0b190b12762539cdcb80093c55543fdf542676ca6; observed 78825184f37ad01071be86f0b190b12762539cdcb80093c55543fdf542676ca6",
+      "status": "PASS"
+    },
+    {
+      "check_id": "source_hash::research_control/tasks/RT-20260630-022/artifacts/matter_semantics_target_formalization_v1.tex",
+      "detail": "expected 4af3609b3a79e2870cbc9bb6d6c632adc7f381806cf1e63630319589572e1d16; observed 4af3609b3a79e2870cbc9bb6d6c632adc7f381806cf1e63630319589572e1d16",
+      "status": "PASS"
+    },
+    {
+      "check_id": "source_hash::research_control/tasks/RT-20260630-023/artifacts/matter_semantics_candidate_v1.tex",
+      "detail": "expected 8dd53571106b37329152142b73fe2bbee5066b898e15c096f689842235a7f03a; observed 8dd53571106b37329152142b73fe2bbee5066b898e15c096f689842235a7f03a",
+      "status": "PASS"
+    },
+    {
+      "check_id": "source_hash::research_control/tasks/RT-20260727-004/jobs/completions/AJC-AJ-RT-20260727-004-001.yaml",
+      "detail": "expected 86c5122fd324c59406bf4992f326a533f563c4b23d0bdf83513b0282e9be7760; observed 86c5122fd324c59406bf4992f326a533f563c4b23d0bdf83513b0282e9be7760",
+      "status": "PASS"
+    }
+  ],
+  "failure_count": 0,
+  "finding_counts": {
+    "adopted_physical_sector_count": 0,
+    "assumption_count": 8,
+    "configuration_condition_count": 4,
+    "configuration_field_count": 2,
+    "dependency_count": 9,
+    "derived_configuration_field_count": 4,
+    "legacy_mapping_count": 10,
+    "malformed_branch_count": 1,
+    "nontrivial_neutral_witness_count": 1,
+    "nontrivial_witness_count": 1,
+    "null_witness_count": 1,
+    "taxonomy_class_count": 8,
+    "theorem_count": 1,
+    "transition_condition_count": 3,
+    "underdetermined_branch_count": 1
+  },
+  "job_id": "AJ-RT-20260727-007-001",
+  "schema_id": "source_matter_ontology_validation_v1",
+  "source_hashes": {
+    "implementations_plans/recommendations_implementation_plan_continue_task-v21.md": "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087",
+    "registries/METRIC_USE_LEDGER.csv": "108b1b56d9ef2d2d6cd30d7caa77461c813d8729890afd537206c6f94a1f24cb",
+    "research_control/design/frontier_theorem_inventory.md": "fa7d97207315b49517e6e05bc3ae5b6bfcd0e335b669ba6a98371e55b4721600",
+    "research_control/tasks/RT-20260614-257/artifacts/286_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_MATTER_COUPLING_BRIDGE_TARGET_V1_FORMALIZATION.tex": "3d1c6dfb2ea543c8ea455ee2f3553e3cac76e3072902213ed07aff0db514605e",
+    "research_control/tasks/RT-20260629-055/artifacts/matter_semantics_candidate_law_payload_v1.tex": "0adf7d4b034f26cd478603ba6d9cb526dd7743dcb3a9a9f01d2e981efb2d81bf",
+    "research_control/tasks/RT-20260629-057/artifacts/matter_semantics_candidate_law_refuter_stress_v1.tex": "78825184f37ad01071be86f0b190b12762539cdcb80093c55543fdf542676ca6",
+    "research_control/tasks/RT-20260630-022/artifacts/matter_semantics_target_formalization_v1.tex": "4af3609b3a79e2870cbc9bb6d6c632adc7f381806cf1e63630319589572e1d16",
+    "research_control/tasks/RT-20260630-023/artifacts/matter_semantics_candidate_v1.tex": "8dd53571106b37329152142b73fe2bbee5066b898e15c096f689842235a7f03a",
+    "research_control/tasks/RT-20260702-064/artifacts/source_certificate_operation_laws_v1.tex": "2ebc781bd82b4d39ab394255e5d3836d992625bdece8b8f912a8ab809669b986",
+    "research_control/tasks/RT-20260727-004/jobs/completions/AJC-AJ-RT-20260727-004-001.yaml": "86c5122fd324c59406bf4992f326a533f563c4b23d0bdf83513b0282e9be7760"
+  },
+  "status": "PASS",
+  "task_id": "RT-20260727-007",
+  "theorem_id": "P7T01-THM-SOURCE-RELABELING-SECTOR-NATURALITY-001",
+  "validated_at": "2026-07-28T00:10:00Z"
+}

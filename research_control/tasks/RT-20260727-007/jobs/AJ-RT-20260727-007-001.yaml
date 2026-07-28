@@ -1,0 +1,567 @@
+job_id: "AJ-RT-20260727-007-001"
+task_id: "RT-20260727-007"
+decision_id: "DDR-20260727-007"
+role_id: "ontology-formalizer"
+role_version: "0.2.0"
+execution_role_ref: "ontology-formalizer@0.2.0--RT-20260727-007"
+status: "completed"
+validation_status: "PASS"
+requires_human_gate: false
+created_at: "2026-07-27T23:41:33Z"
+started_at: "2026-07-27T23:41:33Z"
+completed_at: "2026-07-28T00:13:22Z"
+completion_path: "research_control/tasks/RT-20260727-007/jobs/completions/AJC-AJ-RT-20260727-007-001.yaml"
+objective: "Execute only v21 P7-T01 by defining a proposal-only finite source-incidence matter ontology candidate, sector and charge taxonomy, currents, defects, internal representations, source-invariant records, nontrivial and malformed configurations, and an exact legacy-evidence mapping."
+target_derivation_milestone: "matter_coupling"
+milestone_burden: "Replace interface-only matter profiles with an actual matter ontology target."
+route_label: "ontology-law-research-packet"
+route_reason: "Handoff-0888, committed P15-T04 checkpoint 832f9cf9ba98061df40cdda2799d5a46661260bc, v21 P7-T01, and immutable generation 140 select one bounded proposal-only source-matter ontology packet."
+immutable_route_sha256: "29f3d5afd86821934d5002d00dad76999ed1aac6aa5ea28c0088eae0eec755c6"
+plan_task_id: "P7-T01"
+recommendation_ids:
+  - "V21-R21"
+  - "V21-R22"
+  - "V21-R25"
+  - "V21-R31"
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 140
+  passes_consumed: 129
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:140"
+  handoff_token: "b59ba4972eaec816651f0b83f4b83c4e11916deb8a11e051"
+  relay_claim_token: "b321c2f6449eccc899dcfae31dc33e7ee81f28db90126447"
+  route_work_item_id: "P7-T01"
+  route_worker_skill: "continue-research"
+  route_sha256: "29f3d5afd86821934d5002d00dad76999ed1aac6aa5ea28c0088eae0eec755c6"
+  worker_skill: "continue-research"
+  worker_invocation_count: 1
+
+mathematical_decisiveness_contract:
+  contract_path: "research_control/design/mathematical_decisiveness_completion_contract.md"
+  schema_path: ".agents/schemas/PHYSICS_COMPLETION_DECISIVENESS_SCHEMA.md"
+  enforcement_mode: "hard_failure"
+  active_after: "2026-06-21T02:32:39Z"
+
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "physics"
+  payload_type: "candidate_construction"
+  candidate_family: "V21-P7-T01-SOURCE-MATTER-INCIDENCE-ONTOLOGY-V1"
+  assumption_delta:
+    - "Add a proposal-only finite source incidence complex with boundary maps satisfying partial_1 partial_2 equals zero; this is source combinatorics, not target geometry."
+    - "Add a declared finitely generated abelian internal charge group and finite representation-label set as candidate inputs, not adopted physical symmetries or charges."
+    - "Add occupation records, charge zero-chains, current one-chains, defect cycles, and chain-level transition admissibility without a target metric, stress tensor, action, coupling, detector semantics, or GR behavior."
+    - "Hold the P6 Gate B zero-of-eight result and its local effective-geometry freeze fixed."
+    - "Keep all legacy matter-profile records at their exact target, proposal-only, or scoped evidence/precondition statuses."
+  materiality_basis: "P7-T01 adds the first concrete source configuration state space, intrinsic sector map, chain-level current law, defect-class taxonomy, and finite source witness rather than another interface profile or certificate wrapper."
+  payload_details:
+    candidate_ids:
+      - "SourceMatterIncidenceCandidate_v1"
+      - "SourceMatterSectorMap_v1"
+      - "SourceMatterTransition_v1"
+    theorem_ids:
+      - "P7T01-THM-SOURCE-RELABELING-SECTOR-NATURALITY-001"
+    candidate_status: "proposal-only"
+    physical_charge_claimed: false
+    physical_conservation_law_claimed: false
+  source_basis:
+    - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+    - "TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-MATTER-COUPLING-BRIDGE-TARGET-V1-FORMALIZATION"
+    - "TEX-V15-P3-T02-SOURCE-CERTIFICATE-OPERATION-LAWS"
+    - "research_control/design/frontier_theorem_inventory.md"
+    - "research_control/tasks/RT-20260727-004/jobs/completions/AJC-AJ-RT-20260727-004-001.yaml"
+    - "research_control/tasks/RT-20260629-055/artifacts/matter_semantics_candidate_law_payload_v1.tex"
+    - "research_control/tasks/RT-20260629-057/artifacts/matter_semantics_candidate_law_refuter_stress_v1.tex"
+    - "research_control/tasks/RT-20260630-022/artifacts/matter_semantics_target_formalization_v1.tex"
+    - "research_control/tasks/RT-20260630-023/artifacts/matter_semantics_candidate_v1.tex"
+  expected_artifact_paths:
+    - "research_control/tasks/RT-20260727-007/artifacts/source_matter_ontology_and_sector_taxonomy_v1.tex"
+    - "research_control/tasks/RT-20260727-007/artifacts/source_matter_ontology_spec_v1.yaml"
+    - "research_control/tasks/RT-20260727-007/artifacts/source_matter_sector_charge_taxonomy_v1.yaml"
+    - "research_control/tasks/RT-20260727-007/artifacts/source_matter_assumption_dependency_table_v1.yaml"
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+
+family_freeze_admission:
+  schema_id: "family_freeze_route_admission_v1"
+  policy_id: "family_freeze_reopening_policy_v1"
+  route_id: "v21_p7_t01_source_matter_incidence_ontology"
+  family_id: "V21-P7-T01-SOURCE-MATTER-INCIDENCE-ONTOLOGY-V1"
+  family_identity_sha256: "e6892c4d16e514106a4b61af7578e12cee0bcec1da3bc3ca1fc1731fb999ef4e"
+  assumption_sha256es:
+    - "f78d9b4798b3e9a8ab266a2a809e3e14bf1d26f0d6d01a6278a8dd0954681ce5"
+    - "1755f159e5ea7769b7e44dd14721b1add13fa847c33fcfc4772200b78f4299b4"
+  route_kind: "candidate_construction"
+  detected_match_basis: []
+  reopening:
+    requested: false
+    class: "none"
+  distinct_branch:
+    branch_identity: "source_matter_without_effective_geometry"
+    material_difference_basis: "This candidate changes milestone and constructs source matter directly; it does not reconstruct or reopen any frozen EqSrc or P6 effective-geometry family."
+    reconstructs_frozen_candidate: false
+    expected_artifact_paths:
+      - "research_control/tasks/RT-20260727-007/artifacts/source_matter_ontology_and_sector_taxonomy_v1.tex"
+  authority_limits:
+    local_family_freeze_preserved: true
+    global_no_go_claimed: false
+    automatic_candidate_adoption: false
+    theorem_truth_inferred: false
+    ontology_modified: false
+    physics_promotion_authorized: false
+
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  expected_durable_outputs:
+    physics:
+      - "proposal-only source matter ontology candidate"
+      - "sector and charge taxonomy with current and defect classes"
+      - "finite nontrivial null and malformed configurations"
+      - "source-relabeling and charge-conservation theorem"
+    project_system:
+      - "task-local deterministic validation and compact receipt"
+      - "standard control records and generated memory derivatives"
+  acceptance_criteria:
+    physics:
+      - "all matter objects are defined from source-side incidence and internal labels only"
+      - "the nontrivial witness and malformed branch are explicit and checkable"
+      - "legacy profiles are mapped without status upgrade"
+      - "the theorem is scoped to the proposal-only candidate"
+    project_system:
+      - "task-local validation and scratch TeX build pass"
+      - "documentation-impact claim-language and research-control checks pass"
+      - "one governed checkpoint records the transaction"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: false
+    exception_id: ""
+    evidence_path: ""
+    evidence_sha256: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0888"
+  source_handoff_path: "research_control/handoffs/handoff-0888.yaml"
+  source_handoff_sha256: "0538b50e9b7147de5dba6ce0fbca2c0f8f01299d34e84c36106169063b85dc40"
+  selected_plan_task_id: "P7-T01"
+  guard_outcome: "below_threshold"
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+ontology_law_research_packet:
+  route: "ontology-law-research-packet"
+  trigger_classification: "derivation_critical_missing_source_law"
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "Replace interface-only matter profiles with an actual matter ontology target."
+  missing_source_law: "A source-side matter ontology defining configurations, sector membership, internal charges, currents, defect classes, representation labels, and malformed configurations independently of effective geometry and coupling."
+  underdetermination_statement: "Current ontology does not derive a source-side matter ontology with configuration, sector, charge, current, defect-class, representation, and malformed-configuration laws."
+  no_go_theorem_status: "not_proved"
+  adoption_status:
+    current_adoption: "blocked"
+    continuation: "open"
+    status_pair: "blocked_adoption_open_continuation"
+  packet_payload_mode: "candidate_law_payload"
+  candidate_law_payload:
+    status_label: "proposal-only"
+    source_side_definition: "Define source-matter configurations and transitions over a finite source incidence complex with internal labels, chain-level charges and currents, defect homology classes, and fail-closed admissibility."
+    formal_objects:
+      - "SourceMatterIncidenceCandidate_v1"
+      - "SourceMatterSectorMap_v1"
+      - "SourceMatterTransition_v1"
+      - "SourceMatterMalformed_v1"
+    domains:
+      - "finite source incidence complexes"
+      - "finitely generated abelian internal charge groups"
+      - "finite internal representation-label sets"
+      - "admissible and malformed source configurations"
+    maps:
+      - "source configuration to total charge and defect sector"
+      - "source transition to chain-level continuity status"
+      - "source configuration to source-invariant record"
+      - "source configuration to admissible null or malformed status"
+    proof_obligations:
+      - "define every object from source-side data and source equivalence only"
+      - "give one nontrivial admissible configuration"
+      - "give one null configuration"
+      - "give one explicit malformed configuration and failed axiom"
+      - "prove source-relabeling and internal-automorphism equivariance"
+      - "prove total source-charge conservation for admissible transitions"
+      - "preserve exact-GR recovery obligations before any later adoption"
+  exact_gr_recovery_obligations:
+    checklist:
+      - "keep exact GR as a target benchmark rather than a source premise"
+      - "derive any later effective geometry independently from source structure"
+      - "derive any physical charge interpretation detector semantics matter action stress energy and coupling in later distinct burdens"
+      - "derive Einstein equations and benchmark comparison only after their named burdens"
+      - "retain protected human authority for any ontology or benchmark promotion"
+  no_target_import_audit_scope:
+    forbidden_source_classes:
+      - "target_atlas"
+      - "target_metric"
+      - "benchmark_success"
+      - "candidate_reconstruction"
+      - "generated_derivative_authority"
+      - "registry_metadata_authority"
+      - "role_authority"
+      - "validation_authority"
+      - "stress_energy_semantics"
+      - "matter_action"
+      - "detector_semantics"
+      - "coupling_law"
+  known_risks:
+    - "combinatorial incidence mistaken for adopted physical spacetime geometry"
+    - "internal labels mistaken for measured physical charges"
+    - "source invariants mistaken for detector observables"
+    - "proposal-only theorem mistaken for a canonical conservation law"
+  failed_alternatives:
+    - "reuse interface-only matter-profile labels as ontology; rejected because labels and certificates do not supply intrinsic source degrees of freedom"
+    - "use the frozen P6 geometry package; rejected because Gate B remains zero of eight and P7-T01 assumes no effective geometry"
+  human_gate_request:
+    required_before_adoption: true
+    requested_decision: ""
+    exact_requested_ontology_edit: ""
+
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  parent:
+    execution_unit_id: "parent"
+    perspective: "physicist_mathematician_philosopher"
+    responsibilities:
+      - "hold the source-only claim boundary and exact registered source statuses fixed"
+      - "write the final candidate taxonomy assumption table validator and receipts"
+      - "review child outputs for mathematical semantic and authority conflicts"
+      - "fuse child findings while preserving unique contributions and limitations"
+  children:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260727-007/artifacts/child_phys_math_p7_t01_source_matter_ontology.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260727-007/artifacts/child_phys_phil_p7_t01_source_matter_ontology.yaml"
+      status: "completed"
+  conflict_policy:
+    review_path: "research_control/tasks/RT-20260727-007/artifacts/parent_conflict_review_p7_t01_source_matter_ontology.yaml"
+    max_resolution_rounds: 2
+    require_parallel_child_revision: true
+    unresolved_conflict_status: "blocked"
+  fusion_policy:
+    fusion_notes_path: "research_control/tasks/RT-20260727-007/artifacts/parent_fusion_notes_p7_t01_source_matter_ontology.md"
+    fused_output_path: "research_control/tasks/RT-20260727-007/artifacts/source_matter_ontology_and_sector_taxonomy_v1.tex"
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+    final_output_replaces_old_single_role_artifact: true
+
+allowed_read_paths:
+  - "SOUL.md"
+  - "AGENTS.md"
+  - "README.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - ".agents/roles/physics/ontology-formalizer.v0.2.0.md"
+  - ".agents/schemas/**"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  - "research_control/design/**"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0888.yaml"
+  - "research_control/handoffs/handoff-0888.md"
+  - "research_control/tasks/RT-20260727-004/**"
+  - "research_control/tasks/RT-20260727-006/**"
+  - "research_control/tasks/RT-20260614-257/**"
+  - "research_control/tasks/RT-20260629-050/**"
+  - "research_control/tasks/RT-20260629-055/**"
+  - "research_control/tasks/RT-20260629-057/**"
+  - "research_control/tasks/RT-20260630-022/**"
+  - "research_control/tasks/RT-20260630-023/**"
+  - "research_control/tasks/RT-20260702-064/**"
+  - "ontology/tex/**"
+  - "registries/**"
+
+allowed_write_paths:
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_burden_status_migration_receipt.json"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status.md"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_validation.json"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_compact_receipt.json"
+  - "research_control/tasks/RT-20260727-007/**"
+  - "research_control/handoffs/handoff-0889.yaml"
+  - "research_control/handoffs/handoff-0889.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/PDF_DERIVATIVE_REGISTRY.csv"
+  - "registries/PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "registries/TEX_SOURCE_REGISTRY.csv"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/pdf/**"
+  - "wiki/tex/**"
+
+allowed_generated_paths:
+  - ".local/**"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_burden_status_migration_receipt.json"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status.md"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_validation.json"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_compact_receipt.json"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/pdf/**"
+  - "wiki/tex/**"
+
+forbidden_paths:
+  - "ontology/**"
+  - "manuscripts/**"
+  - "legacy_ontology/**"
+  - "html/**"
+  - "github-facing/**"
+  - "implementations_plans/**"
+  - ".agents/roles/**"
+  - ".codex/skills/**"
+  - "registries/METRIC_USE_LEDGER.csv"
+  - "research_control/tasks/RT-20260727-004/**"
+  - "research_control/tasks/RT-20260727-006/**"
+
+allowed_source_classes:
+  - "science_draft"
+  - "task_local_candidate"
+  - "task_local_theorem_synthesis"
+  - "task_local_finite_witness"
+  - "task_local_precise_obstruction"
+  - "task_local_taxonomy"
+  - "task_local_assumption_ledger"
+  - "project_control"
+  - "registry"
+  - "role_contract"
+  - "generated_memory_derivative"
+
+forbidden_source_classes:
+  - "canonical_ontology_write"
+  - "benchmark_promotion"
+  - "physics_claim_promotion"
+  - "source_law_adoption"
+  - "canonical_ontology_candidate_promotion"
+  - "candidate_reconstruction"
+  - "physical_ontology_adoption"
+  - "physical_charge_or_conservation_law_adoption"
+  - "target_atlas_or_metric_import"
+  - "effective_geometry_adoption"
+  - "stress_energy_or_matter_action"
+  - "detector_semantics"
+  - "matter_coupling_or_Einstein_equations"
+  - "gate_chair_verdict"
+  - "completed_derivation_claim"
+  - "global_theory_rejection"
+  - "future_source_extension_impossibility"
+  - "generated_derivative_authority"
+  - "proof_publication_or_push"
+
+approved_commands:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"source matter ontology sector taxonomy effective geometry coupling\" --limit 10 --json"
+  - "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python research_control/tasks/RT-20260727-007/artifacts/validate_source_matter_ontology.py --write-report --json"
+  - "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python research_control/tasks/RT-20260727-007/artifacts/validate_source_matter_ontology.py --check --json"
+  - "PATH=/Users/alex.omegapy/texlive/2026/bin/universal-darwin:$PATH .venv/bin/python .codex/skills/project-memory-system/scripts/build_pdf_derivatives.py --scratch research_control/tasks/RT-20260727-007/artifacts/source_matter_ontology_and_sector_taxonomy_v1.tex"
+  - ".venv/bin/python research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_renderer.py --write --json"
+  - ".venv/bin/python research_control/tasks/RT-20260721-009/artifacts/validate_v21_current_burden_status.py --write --json"
+  - ".venv/bin/python research_control/tasks/RT-20260721-009/artifacts/validate_v21_current_burden_status.py --check --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --check"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --check"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --write"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --check"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --json output/research_dependency_graph.json --markdown wiki/indexes/research_dependency_graph.md --dot output/research_dependency_graph.dot"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --check"
+  - ".venv/bin/python scripts/research_control/generate_claim_graph_v1.py --json output/claim_graph_v1.json"
+  - ".venv/bin/python scripts/research_control/generate_claim_graph_v1.py --check"
+  - ".venv/bin/python scripts/research_control/validate_claim_graph_v1.py --json"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --json-summary"
+  - ".venv/bin/python scripts/research_control/run_full_research_control_validation.py --json --tail-chars 2500"
+  - "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m unittest -v tests.test_research_control"
+  - ".venv/bin/python -m unittest discover -s tests"
+  - "git diff --check"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260727-007-001"
+
+required_validators:
+  - "memory_preflight"
+  - "validate_source_matter_ontology"
+  - "latex_scratch_build"
+  - "source_hash_and_traceability_checks"
+  - "source_relabeling_sector_naturality_review"
+  - "legacy_profile_status_mapping_review"
+  - "parent_child_conflict_and_fusion_review"
+  - "classify_project_changes"
+  - "collect_project_improvement_signals"
+  - "validate_documentation_impact"
+  - "validate_claim_language"
+  - "validate_research_control"
+  - "run_full_research_control_validation"
+  - "bootstrap_memory_system"
+  - "checkpoint_research_transaction"
+
+expected_outputs:
+  - "research_control/tasks/RT-20260727-007/artifacts/source_matter_ontology_and_sector_taxonomy_v1.tex"
+  - "research_control/tasks/RT-20260727-007/artifacts/source_matter_ontology_spec_v1.yaml"
+  - "research_control/tasks/RT-20260727-007/artifacts/source_matter_sector_charge_taxonomy_v1.yaml"
+  - "research_control/tasks/RT-20260727-007/artifacts/source_matter_assumption_dependency_table_v1.yaml"
+  - "research_control/tasks/RT-20260727-007/artifacts/child_phys_math_p7_t01_source_matter_ontology.yaml"
+  - "research_control/tasks/RT-20260727-007/artifacts/child_phys_phil_p7_t01_source_matter_ontology.yaml"
+  - "research_control/tasks/RT-20260727-007/artifacts/parent_conflict_review_p7_t01_source_matter_ontology.yaml"
+  - "research_control/tasks/RT-20260727-007/artifacts/parent_fusion_notes_p7_t01_source_matter_ontology.md"
+  - "research_control/tasks/RT-20260727-007/artifacts/source_matter_ontology_compact_receipt_v1.json"
+  - "research_control/tasks/RT-20260727-007/artifacts/source_matter_ontology_validation_v1.json"
+  - "research_control/tasks/RT-20260727-007/artifacts/validate_source_matter_ontology.py"
+  - "research_control/tasks/RT-20260727-007/artifacts/source_matter_ontology_receipt.md"
+  - "research_control/tasks/RT-20260727-007/jobs/completions/AJC-AJ-RT-20260727-007-001.yaml"
+  - "research_control/handoffs/handoff-0889.yaml"
+  - "research_control/handoffs/handoff-0889.md"
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1044
+    relationship_row_count: 5213
+    semantic_row_count: 1044
+    vault_row_count: 1044
+    local_cache_only_warning_count: 0
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: true
+    refresh_performed: true
+    before_core_validation_status: "PASS"
+    before_freshness_status: "PASS"
+    before_local_retrieval_status: "WARN"
+    before_local_cache_only_warning_count: 9
+    after_core_validation_status: "PASS"
+    after_freshness_status: "PASS"
+    after_local_retrieval_status: "PASS"
+    after_local_cache_only_warning_count: 0
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"source matter ontology sector taxonomy effective geometry coupling\" --limit 10 --json"
+      query_type: "search"
+      query_text: "source matter ontology sector taxonomy effective geometry coupling"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+        - "MD-RESEARCH-CONTROL-TASK-INDEX"
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "a91e514931a9a77a03ec2203acce2058edee21f60d9710c5408f5da93368a2d5"
+    - object_id: "MD-RESEARCH-CONTROL-TASK-INDEX"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/TASK_INDEX.md"
+      source_hash: "55e2d94fa1060a3b32daf693c6d8172cde9487c4467eb897d224a46d6c70d46d"
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  failed_queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"source-matter ontology\" --limit 10 --json"
+      result: "FTS parser treated the hyphen as an operator; no result influenced routing or claims"
+  authority_note: "Generated Obsidian wiki semantic relationship and .local retrieval surfaces are navigation or diagnostics only and are not authority."
+
+claim_boundary_id: "CB-V21-P7-T01-SOURCE-MATTER-ONTOLOGY-001"
+claim_boundary: "Define only a task-local proposal-only source-matter incidence candidate, sector and charge taxonomy, current and defect classes, source-invariant records, finite witnesses, malformed branch, exact assumption table, and scoped naturality theorem. Do not edit or adopt canonical ontology or a source law; upgrade legacy profiles; infer physical matter charges conservation detectors geometry stress energy action or coupling; derive Einstein equations; promote a benchmark; publish or push; claim proof or completed derivation; globally reject the theory; or declare future source extensions impossible."
+documentation_impact_id: "DI-RT-20260727-007-001"
+completion_id: "AJC-AJ-RT-20260727-007-001"
+stop_conditions:
+  - "stop before any canonical ontology edit source-law adoption or protected matter-ontology status"
+  - "stop if a definition requires target atlas metric effective geometry stress energy matter action detector semantics coupling or GR behavior"
+  - "stop if legacy matter-profile evidence cannot be mapped without status upgrade"
+  - "stop if the finite witness or theorem cannot be checked from declared source data"
+  - "stop on source-hash repository branch lease reasoning-effort or allowlist mismatch"
+  - "stop on unresolved parent-child conflict validation checkpoint or exact-path residue failure"
+  - "do not publish push claim completed derivation global rejection or future impossibility"

@@ -13,9 +13,9 @@ state, or latest handoff, those sources govern and this file is stale.
 | Field | Value |
 | --- | --- |
 | Schema | `v21_current_burden_status_v1` |
-| Source commit at generation | `e175d46b36bec4a129e80519e63322f5acd2bce4` |
-| Status generation time | `2026-07-27T18:18:22Z` |
-| Tracked task count | 1125 |
+| Source commit at generation | `832f9cf9ba98061df40cdda2799d5a46661260bc` |
+| Status generation time | `2026-07-28T00:13:22Z` |
+| Tracked task count | 1128 |
 | Stable definition count | 10 |
 | Distance-to-GR burden count | 14 |
 | Historical authored-map commit | `2c5fb02fd8fff9b449ab10a328d7c881b13ef546` |
@@ -23,21 +23,21 @@ state, or latest handoff, those sources govern and this file is stale.
 
 ### Exact source hashes
 
-- `registries/DISTANCE_TO_GR_LEDGER.csv`: `c21b88a519eea4b13de34b1ad1b1095eae52e7d08168165626123b9b40e913b3`
-- `registries/RESEARCH_TASK_REGISTRY.csv`: `32e6375a61da903c89f22b4387a258103c7d626f2cde7aaac53c7ad7a578b701`
+- `registries/DISTANCE_TO_GR_LEDGER.csv`: `6392a693b040451cf116dd490101cfb4fea9b49157d6adcd09813b53fb30f3d1`
+- `registries/RESEARCH_TASK_REGISTRY.csv`: `4f2a80832a2ffef3022eb1ddd899524b17262478a1f906dee741e9734e0d1d14`
 - `research_control/design/gr_derivation_burden_map.md`: `8e9d44e3a18ecc8a2430a9c42497da3eb9911c2cf6cd714c1525c5d91551835e`
-- `research_control/handoffs/handoff-0886.yaml`: `5c2f8289565c8f346ec06f27f0fbdef863d049e8179d857d916ff109db9fd07c`
-- `research_control/program_state.yaml`: `4e789f6c99b187c363cdbbc43fc0fed832615e21d4b024680611572a23041347`
+- `research_control/handoffs/handoff-0889.yaml`: `5dabdb01ed339a3e276e42420c15f3700b37db58fd8a07d923ef8d65197607b8`
+- `research_control/program_state.yaml`: `a81924507cc93e8a51a746f1c58f89ebdf1e9545f97e6137806d25ec571c51a7`
 - `research_control/tasks/RT-20260721-009/artifacts/v21_burden_definitions_v1.yaml`: `67b8053baa60db4b11ee20582633d6279523d40b2ee853a6c570e2fdc1d113f5`
 
 ## Live control state
 
 | Field | Value |
 | --- | --- |
-| Active task | `RT-20260727-004` |
-| Latest handoff | `handoff-0886` |
-| Current status | `p6_t08_gate_b_not_ready_unchanged_package_locally_frozen_p15_t04_selected_ready_for_checkpoint` |
-| Next recommended action | Run one governed checkpoint for AJ-RT-20260727-004-001. Only after it commits may one fresh bounded P15-T04 publication-preparation packet package the P5 and P6 results and obstructions without implying metric adoption. |
+| Active task | `RT-20260727-007` |
+| Latest handoff | `handoff-0889` |
+| Current status | `p7_t01_source_matter_ontology_target_complete_p7_t02_selector_ready_for_checkpoint` |
+| Next recommended action | Run one governed checkpoint for AJ-RT-20260727-007-001. Only after it commits may one fresh bounded theoretical-continuation-selector@0.1.0 packet choose exactly one non-promotional P7-T02 source matter action evolution-equation or transition-law construction; it may not execute the selected dynamics packet in the selector task. |
 
 ## Authored stable definitions with generated current values
 
@@ -205,15 +205,15 @@ state, or latest handoff, those sources govern and this file is stale.
 
 | Burden ID | Required object | Current status | Control status | Mathematical status | Physical status | Promotion status | Updated at |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| `matter_coupling` | universal coupling | `accepted` | `accepted_as_scoped_evidence_precondition` | `parameterized_finite_local_witness_precondition` | `not_matter_coupling_not_stress_energy_not_matter_action_not_detector_semantics` | `scoped_source_evidence_only` | `2026-07-02T22:53:15Z` |
+| `matter_coupling` | universal coupling | `draft object exists` | `accepted_as_scoped_evidence_precondition` | `parameterized_finite_local_witness_precondition` | `not_matter_coupling_not_stress_energy_not_matter_action_not_detector_semantics` | `scoped_source_evidence_only` | `2026-07-28T00:10:00Z` |
 
 #### `matter_coupling` generated detail
 
-- Current blocking burden: PositiveMSProfile_v1 RR_ETransportCompletenessOrInvarianceLaw_v1 NarrowMSCertEq_v1 SourceCertificateAlgebraPrimitives_v1 and SourceCertificateOperationLaws_v1 are accepted or drafted only as scoped source-extension evidence/preconditions evidence-status draft/control certificate primitives or draft/control operation-law support under declared source-side and fail-closed scope while no source-law adoption no RR_ETransportCompletenessOrInvarianceLaw_v1 adoption no PositiveMSProfile_v1 adoption no SourceMatterSemanticsAdoptionReadinessLaw_v1 law adoption no source-extension data adoption beyond exact scoped gate result no matter-semantics adoption no detector-semantics adoption no coupling-law adoption no matter-coupling derivation no stress-energy semantics no matter action no MetricData(E) adoption no g_eff scope expansion no Einstein-equation premise no benchmark fit and no downstream promotion occurred
-- Current next evidence or action: Run one bounded v15 P3-T03 certificate checklist integration packet before P4 matter-coupling DAG semantic-layer work matter-coupling Einstein-equation benchmark or promotion route
-- Current failure/freeze criterion: Do not treat scoped vocabulary alias maps current-frontier wording aliases scoped RR_ETransportCompletenessOrInvarianceLaw_v1 evidence acceptance PositiveMSProfile_v1 evidence acceptance NarrowMSCertEq_v1 scoped evidence-status Gate Chair review context source certificate primitive definitions source certificate operation laws selector readiness or checklist readiness as source-law adoption RR_ETransportCompletenessOrInvarianceLaw_v1 adoption PositiveMSProfile_v1 adoption SourceMatterSemanticsAdoptionReadinessLaw_v1 law adoption source-extension data adoption beyond exact scoped gate result matter-semantics adoption detector-semantics adoption coupling-law adoption matter coupling stress-energy semantics stress-energy tensor matter action Einstein equations benchmark promotion completed derivation future source-extension impossibility global theory rejection or checker proof authority; freeze if later packets repeat boundary synchronization scoped evidence/precondition wording theorem audit stress selector gate review vocabulary definitions primitive restatement operation-law restatement alias labels or renderer wording without materially new checklist integration linter route-selection repair obstruction or mathematical payload
-- Current evidence: `research_control/tasks/RT-20260702-064/artifacts/source_certificate_operation_laws_v1.tex`
-- Exact overread guard: `no_source_law_adoption;no_metricdata_e_adoption;no_geff_scope_expansion;no_coupling_law_adoption;no_matter_coupling_derivation;no_matter_coupling_adoption;no_stress_energy_semantics;no_stress_energy_tensor;no_matter_action;no_detector_semantics;no_einstein_equations;no_benchmark_promotion;no_completed_derivation;no_future_source_extension_impossibility;no_global_theory_rejection`
+- Current blocking burden: SourceMatterIncidenceCandidate_v1 supplies a proposal-only finite source-matter configuration target with occupation-derived charge invariant charge-and-defect sectors representation grades current constraints and distinct null neutral malformed and underdetermined branches; P7-T02 source dynamics or action physical interpretation detector semantics common propagation universal coupling stress energy adoption and every downstream GR burden remain open while P6 Gate B supplies no effective-geometry input
+- Current next evidence or action: After checkpoint run one bounded P7-T02 packet that constructs one explicit source matter action evolution equation or transition law and derives its basic conserved or constraint structure without importing target geometry stress energy coupling detector semantics or GR behavior
+- Current failure/freeze criterion: Freeze repetition of the unchanged incidence candidate or relabeling theorem without a materially new source law action evolution rule transition selector theorem variation class or protected decision; do not treat the proposal-only candidate finite witness conditional chain invariant legacy mapping validator checkpoint or scoped prior evidence as canonical ontology source-law adoption physical matter physical charge physical conservation detector semantics universal coupling stress energy Einstein equations benchmark promotion completed derivation global theory rejection or future source-extension impossibility
+- Current evidence: `research_control/tasks/RT-20260727-007/artifacts/source_matter_ontology_and_sector_taxonomy_v1.tex`
+- Exact overread guard: `no_source_law_adoption;no_canonical_ontology_edit;no_metricdata_e_adoption;no_geff_scope_expansion;no_coupling_law_adoption;no_matter_coupling_derivation;no_matter_coupling_adoption;no_stress_energy_semantics;no_stress_energy_tensor;no_matter_action;no_detector_semantics;no_einstein_equations;no_benchmark_promotion;no_completed_derivation;no_future_source_extension_impossibility;no_global_theory_rejection`
 
 ### `einstein_equations`
 

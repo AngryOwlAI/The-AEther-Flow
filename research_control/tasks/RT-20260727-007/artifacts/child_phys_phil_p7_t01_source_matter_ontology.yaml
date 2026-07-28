@@ -1,0 +1,421 @@
+schema_id: "v21_p7_t01_child_physicist_philosopher_review_v1"
+task_id: "RT-20260727-007"
+job_id: "AJ-RT-20260727-007-001"
+plan_task_id: "P7-T01"
+execution_unit_id: "child_phys_phil"
+perspective: "physicist_philosopher"
+review_context: "same_context_internal_role_review"
+status: "completed_with_required_fusion_corrections"
+candidate_family: "V21-P7-T01-SOURCE-MATTER-INCIDENCE-ONTOLOGY-V1"
+candidate_status: "proposal-only"
+target_derivation_milestone: "matter_coupling"
+milestone_burden: "Replace interface-only matter profiles with an actual matter ontology target."
+
+review_question: "Can a finite source-incidence complex with occupation records, internal charge labels, current chains, defect classes, internal representation labels, and source-invariant records serve as a proposal-only source matter ontology candidate without silently becoming physical matter, spacetime geometry, detector semantics, an adopted conservation law, or a coupling premise?"
+
+review_scope:
+  allowed:
+    - "analyze task-local candidate identity and interpretation"
+    - "distinguish primitive candidate data from derived mathematical invariants"
+    - "test source-relabeling and internal-symmetry interpretation"
+    - "separate source-invariant records from empirical observables"
+    - "audit null, malformed, and underdetermined branches"
+    - "map legacy profile evidence without status change"
+    - "state exact-GR recovery and protected-adoption obligations"
+  forbidden:
+    - "canonical ontology edit or source-law adoption"
+    - "canonical-ontology candidate, adopted, or rejected status"
+    - "physical matter, charge, current, defect, gauge, or conservation-law adoption"
+    - "target atlas, metric, effective geometry, stress-energy, matter action, detector semantics, or coupling import"
+    - "Einstein-equation derivation, benchmark promotion, completed derivation, or proof publication"
+    - "global theory rejection or future source-extension impossibility"
+
+source_basis:
+  - path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+    sha256: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+    use: "P7-T01 objective, implementation actions, outputs, and claim boundary"
+  - path: "research_control/tasks/RT-20260727-007/jobs/AJ-RT-20260727-007-001.yaml"
+    sha256: "58b5b7506d9d13ea23ec81736191f984ca7ba38bd71243eb0a61914233c5e55a"
+    use: "active candidate construction, role decomposition, source allowlist, and authority limits"
+  - path: "research_control/tasks/RT-20260727-007/roles/ontology-formalizer@0.2.0--RT-20260727-007.yaml"
+    sha256: "b9d678c1a56332b0c20ac4954fd920125886cbe67dac2cb508e913612a5fcf7f"
+    use: "one-job execution-role constraints"
+  - path: "research_control/tasks/RT-20260629-050/artifacts/matter_semantics_target_formalization_v1.tex"
+    sha256: "f77cbeba4958cb7db09d74eb63bafa2884a768889024e18851310fec01520150"
+    use: "legacy discriminator target and no-stress-energy, no-action, and no-detector boundary"
+  - path: "research_control/tasks/RT-20260629-055/artifacts/matter_semantics_candidate_law_payload_v1.tex"
+    sha256: "0adf7d4b034f26cd478603ba6d9cb526dd7743dcb3a9a9f01d2e981efb2d81bf"
+    use: "proposal-only MatSrcDiscLaw_v1 and SemMatter_src schema"
+  - path: "research_control/tasks/RT-20260629-057/artifacts/matter_semantics_candidate_law_refuter_stress_v1.tex"
+    sha256: "78825184f37ad01071be86f0b190b12762539cdcb80093c55543fdf542676ca6"
+    use: "non-bottom instantiation and source-defined label-transport obstruction"
+  - path: "research_control/tasks/RT-20260630-022/artifacts/matter_semantics_target_formalization_v1.tex"
+    sha256: "4af3609b3a79e2870cbc9bb6d6c632adc7f381806cf1e63630319589572e1d16"
+    use: "source-token, readout, response, and fail-closed target grammar"
+  - path: "research_control/tasks/RT-20260630-023/artifacts/matter_semantics_candidate_v1.tex"
+    sha256: "8dd53571106b37329152142b73fe2bbee5066b898e15c096f689842235a7f03a"
+    use: "legacy finite source-side candidate and explicit non-adoption boundary"
+  - path: "research_control/tasks/RT-20260614-257/artifacts/286_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_MATTER_COUPLING_BRIDGE_TARGET_V1_FORMALIZATION.tex"
+    sha256: "3d1c6dfb2ea543c8ea455ee2f3553e3cac76e3072902213ed07aff0db514605e"
+    use: "pre-tensorial bridge-target status and no-target-import guard"
+  - path: "research_control/tasks/RT-20260702-064/artifacts/source_certificate_operation_laws_v1.tex"
+    sha256: "2ebc781bd82b4d39ab394255e5d3836d992625bdece8b8f912a8ab809669b986"
+    use: "malformed and target-importing records fail closed without positive inference"
+  - path: "research_control/design/frontier_theorem_inventory.md"
+    sha256: "fa7d97207315b49517e6e05bc3ae5b6bfcd0e335b669ba6a98371e55b4721600"
+    use: "exact status of bridge targets, profile evidence, readiness evidence, and blocked downstream burdens"
+
+consensus:
+  disposition: "conditionally_fusable_after_required_corrections"
+  findings:
+    - finding_id: "PHIL-CONS-001"
+      statement: "The finite source-incidence proposal is materially stronger than an interface-only profile because it stipulates an explicit configuration domain and derives algebraic sector records from declared source-side data."
+    - finding_id: "PHIL-CONS-002"
+      statement: "Its mathematical success is candidate-relative: it establishes neither that the variables denote physical matter nor that the candidate is fundamental, emergent, or realized by the selected substrate."
+    - finding_id: "PHIL-CONS-003"
+      statement: "Source-incidence relabeling, internal-label transport, and chain-level balance can support exact conditional theorems without importing target geometry, but every such theorem must retain its declared candidate hypotheses."
+    - finding_id: "PHIL-CONS-004"
+      statement: "The proposal can instantiate a source-intrinsic non-bottom mathematical split that earlier profile schemas lacked, but it does not thereby adopt MatSrcDiscLaw_v1, SemMatter_src, matter semantics, or a physical sector classification."
+    - finding_id: "PHIL-CONS-005"
+      statement: "All legacy matter-profile and readiness objects remain target grammar, proposal-only schema, or scoped evidence/precondition at their existing statuses."
+    - finding_id: "PHIL-CONS-006"
+      statement: "The P6 Gate B zero-of-eight result and local freeze remain unchanged because this packet assumes no effective geometry and supplies no lawful geometry input."
+
+ontological_level_map:
+  stipulated_candidate_primitives:
+    status: "proposal-only task-local mathematical inputs"
+    objects:
+      - "finite source-incidence complex and its declared boundary operators"
+      - "finitely generated abelian internal charge-label group"
+      - "finite internal label set and any explicitly declared internal action"
+      - "occupation assignments and admissible-transition grammar"
+    interpretation: "Primitive within this candidate presentation only; not established fundamental physical entities and not adopted canonical ontology."
+  mathematically_derived_candidate_objects:
+    status: "conditional algebraic consequences inside the candidate"
+    objects:
+      - "total source charge-label record"
+      - "candidate defect homology class"
+      - "source-relabeling orbit or invariant record"
+      - "chain-level balance status for an admissible transition"
+    interpretation: "Derived mathematically from the stipulated candidate data; mathematical derivation does not supply physical reference."
+  physical_interpretation:
+    status: "open and not authorized"
+    blocked_identifications:
+      - "occupation as physical particle number or mass density"
+      - "internal charge label as measured physical charge"
+      - "one-chain as physical transport current or worldline"
+      - "homology class as a physical topological defect"
+      - "source-invariant record as a detector observable"
+      - "incidence adjacency as spacetime locality, causality, or distance"
+  emergence_status:
+    mathematically_emergent: "Sector and defect invariants may be derived from the candidate primitives in the limited algebraic sense."
+    physically_emergent: false
+    fundamental_physical_status: false
+    substrate_excitation_status: "proposal-only metaphor unless a later source dynamics defines a reference state, admissible perturbations, stability, and an interpretation map."
+    required_wording: "The candidate treats its matter variables as stipulated source-side degrees of freedom. It does not decide whether physical matter is fundamental, emergent, or a substrate excitation."
+
+identity_and_individuation:
+  required_identity_ladder:
+    presentation_identity: "Exact equality of all declared incidence, coefficient, occupation, current, defect, and internal-label fields."
+    candidate_relabeling_equivalence: "Isomorphism under declared incidence-preserving cell bijections together with compatible transport of coefficients and internal labels."
+    sector_coincidence: "Equality of the declared sector index or orbit; this is coarser than configuration identity."
+    physical_identity: "Not supplied. Neither numerical identity of physical objects nor persistence of particles across transitions follows."
+  source_equivalence_boundary: "Candidate-specific relabeling equivalence is not the unresolved general EqSrc relation and must not be presented as physical observational equivalence or gauge."
+  no_haecceity_requirement: "Bare vertex, edge, token, or file identifiers must not individuate candidate excitations. Only transported structural assignments may contribute to the candidate-relative identity."
+  transition_boundary: "An admissible source transition relates two candidate configurations. It does not establish a physical trajectory, worldline, causal propagation, or persistence relation."
+  sector_boundary:
+    statement: "A sector taxonomy is an algebraic partition of candidate configurations, not a physical species taxonomy or superselection theorem."
+    required_guard: "Equality of total charge-label and defect class does not imply equality or physical indistinguishability of configurations."
+    neutral_nontrivial_case: "A nonzero charge-neutral configuration may share total charge with the null configuration; the taxonomy must retain configuration-level distinction."
+  excitation_boundary:
+    statement: "The term excitation requires a declared reference configuration plus a rule for departures from it."
+    guard: "A designated null configuration is a mathematical basepoint only, not a physical vacuum, ground state, or energy minimum."
+
+internal_symmetry_and_label_semantics:
+  source_relabeling:
+    acts_on: "source cells, incidence maps, and transported assignments"
+    does_not_mean:
+      - "physical coordinate transformation"
+      - "spacetime diffeomorphism"
+      - "observational gauge equivalence"
+  internal_symmetry:
+    acts_on: "declared internal coefficient or representation-label data only"
+    status: "stipulated candidate structure unless separately derived"
+    does_not_mean:
+      - "physical gauge symmetry"
+      - "local Lorentz symmetry"
+      - "observer frame change"
+      - "empirically calibrated charge symmetry"
+  compatibility_requirement: "The candidate must declare whether source relabeling and internal transport commute, form a semidirect action, or are restricted to a specified compatible subgroup."
+  charge_orbit_requirement:
+    risk: "If an allowed internal automorphism acts nontrivially on the charge group, a raw total-charge label need not be invariant."
+    lawful_options:
+      - "restrict the declared internal symmetry to automorphisms that fix the sector charge"
+      - "define the charge part of the sector as the orbit of total charge under the declared internal action"
+    forbidden_shortcut: "Call the transformation a symmetry while retaining a non-invariant raw charge as an unchanged sector identifier."
+  representation_label_guard: "A finite label set is not a mathematical representation unless an acting group, carrier, and action or homomorphism are explicitly supplied. Otherwise use internal label rather than representation."
+
+source_observable_semantics:
+  preferred_term: "source-invariant record"
+  admissible_definition: "A declared function of valid candidate configurations that is constant on the specified candidate-relabeling classes or transforms equivariantly under the declared internal action."
+  nonconclusions:
+    - "not an empirical observable"
+    - "not an observer-localized quantity"
+    - "not a detector readout"
+    - "not an operational clock or rod reading"
+    - "not calibrated, dimensioned, or measurable merely because it is invariant"
+  operational_upgrade_requirements:
+    - "a separately authorized detector or probe semantics"
+    - "an interpretation map from source records to possible outcomes"
+    - "calibration, units, and error or robustness conditions"
+    - "observer and localization semantics"
+    - "compatibility with later lawful geometry and universal coupling"
+  legacy_token_guard: "SourceProbeToken_v1, SourceDetectorReadout_v1, and MatterResponseToken_v1 remain source syntax. Their names do not confer empirical or detector meaning."
+
+null_malformed_and_underdetermined_branches:
+  valid_null:
+    status: "member of the valid candidate configuration space"
+    required_fields: "All declared structural typing remains present; occupation, charge, current, and defect data take their declared zero values."
+    nonconclusions:
+      - "not absence of a source object"
+      - "not physical vacuum"
+      - "not nonmatter semantics"
+      - "not ground-state or minimum-energy status"
+  nontrivial_neutral:
+    status: "valid and distinct from null"
+    example_class: "Oppositely labeled occupations or a nonzero closed current can have zero total charge-label while retaining nonzero configuration data."
+    required_guard: "Zero total charge-label alone must never define nullity."
+  malformed:
+    status: "outside the admissible candidate configuration space"
+    examples:
+      - "undeclared cell or coefficient"
+      - "boundary-composition failure"
+      - "domain-codomain mismatch"
+      - "missing required internal action or representation carrier"
+      - "target, detector, stress-energy, action, process-authority, or generated-authority import"
+    evaluator_result: "fail closed to bottom with an exact reason"
+    required_guard: "Malformed is not a sector and must not be quotiented with the valid null configuration."
+  underdetermined:
+    status: "typed input exists but the declared candidate rules do not decide the requested classification"
+    required_guard: "Record a scoped obstruction or guarded-undetermined result; do not silently replace missing information with zero, null, or a target interpretation."
+
+conditional_theorem_interpretation:
+  source_relabeling_sector_naturality:
+    acceptable_claim: "Under the declared candidate isomorphism and compatible internal transport hypotheses, the sector index is preserved or transported to its declared orbit."
+    forbidden_claim: "Physical matter sectors are gauge invariant or observationally identical."
+  total_charge_statement:
+    acceptable_claim: "If admissible transitions are defined by a chain-level balance equation and the augmentation annihilates incidence boundaries, then the total source charge-label is equal at the two endpoints."
+    disclosure: "If transition admissibility includes the balance equation by definition, the result is a conditional algebraic invariant or consistency lemma, not an independently derived dynamical conservation law."
+    forbidden_claim: "Physical charge conservation, Noether conservation, stress-energy conservation, or universal matter conservation has been derived."
+  defect_statement:
+    acceptable_claim: "A declared cycle determines a candidate homology class modulo declared source boundaries."
+    forbidden_claim: "A stable physical topological defect exists."
+  theorem_authority: "Task-local proof under explicit candidate hypotheses only; no theorem truth, ontology adoption, or physical interpretation is inferred from validator or checkpoint success."
+
+legacy_status_mapping:
+  - legacy_object: "SourceMatterSector_v1"
+    exact_inherited_status: "draft/control target grammar"
+    lawful_mapping: "Use as a vocabulary and obligation crosswalk for the new candidate sector map."
+    blocked_upgrade: "Do not treat the legacy target as an already existing physical sector or as adoption evidence."
+  - legacy_object: "MatSrcDiscLaw_v1 and SemMatter_src"
+    exact_inherited_status: "proposal-only candidate-law schema and repair target"
+    lawful_mapping: "The new candidate may provide a task-local mathematical non-bottom instantiation against the schema's source-purity obligations."
+    blocked_upgrade: "Instantiation does not adopt either object as a source law or matter semantics."
+  - legacy_object: "MatterSemanticsCandidate_v1"
+    exact_inherited_status: "draft/control finite-local source-side candidate"
+    lawful_mapping: "Treat its sector, probe, readout, response, and certificate records as legacy interface projections or comparison records only when an explicit source-only map is supplied."
+    blocked_upgrade: "Do not infer that a legacy profile is identical to, exhaustive of, or realized by a new incidence configuration."
+  - legacy_object: "MSStablePartitionPrecondition_v1"
+    exact_inherited_status: "scoped source-extension evidence/precondition"
+    lawful_mapping: "Cite only as scoped partition-precondition evidence."
+    blocked_upgrade: "Do not treat it as adopted sector identity or physical matter semantics."
+  - legacy_object: "MSStableMatterSemanticsBridge_v1"
+    exact_inherited_status: "scoped source-extension bridge evidence/precondition"
+    lawful_mapping: "Cite only as a prior fail-closed bridge-precondition record."
+    blocked_upgrade: "Do not identify it with the new configuration ontology or with matter semantics."
+  - legacy_object: "SourceMatterSemanticsAdoptionReadinessLaw_v1"
+    exact_inherited_status: "scoped source-extension readiness evidence/precondition; the word Law is not adoption"
+    lawful_mapping: "Use only as readiness-context evidence."
+    blocked_upgrade: "Do not infer source-law adoption, matter-semantics adoption, or protected approval."
+  - legacy_object: "PositiveMSProfile_v1"
+    exact_inherited_status: "scoped positive source-matter-semantics profile evidence/precondition"
+    lawful_mapping: "Map as a legacy evidence annotation or partial projection target with exact provenance."
+    blocked_upgrade: "Do not use profile positivity as sector membership, physical matter identity, or coupling evidence."
+  - legacy_object: "PositiveSourceMatterSemanticsTarget_v1"
+    exact_inherited_status: "proposal-only target grammar"
+    lawful_mapping: "Use as a prior admissibility checklist."
+    blocked_upgrade: "Do not cite it as a constructed or adopted matter profile."
+  - legacy_object: "PTMI_E and MatterCouplingBridgeTarget_v1"
+    exact_inherited_status: "draft/control pre-tensorial bridge target"
+    lawful_mapping: "Retain as a future interface obligation only."
+    blocked_upgrade: "Do not map source chains to stress-energy, a matter action, or coupling in P7-T01."
+  - legacy_object: "RR_E records and source certificates"
+    exact_inherited_status: "declared-scope source records and conditional certificates"
+    lawful_mapping: "Preserve record separation unless an exact declared-object-indexed source transport, invariance, or factorization certificate is supplied."
+    blocked_upgrade: "Do not identify RR_E records by convenience, detector interpretation, candidate-sector equality, validation status, or process authority."
+
+semantic_risks_and_counterexamples:
+  - risk_id: "PHIL-RISK-001"
+    class: "reification"
+    counterexample: "The same finite chain complex can be interpreted as matter bookkeeping, network traffic, or abstract coloring while preserving all algebraic facts."
+    implication: "Algebraic structure alone underdetermines physical matter reference."
+  - risk_id: "PHIL-RISK-002"
+    class: "topology_or_geometry_smuggling"
+    counterexample: "An incidence edge records a declared source relation but supplies no length, causal precedence, Lorentzian signature, neighborhood scale, or target-manifold chart."
+    implication: "Combinatorial adjacency cannot be called physical locality or spacetime geometry."
+  - risk_id: "PHIL-RISK-003"
+    class: "sector_identity_collapse"
+    counterexample: "A nonzero charge-neutral pair and the valid null configuration have the same total charge-label but are different configurations."
+    implication: "Sector coincidence is not configuration identity and total charge alone is not a complete taxonomy."
+  - risk_id: "PHIL-RISK-004"
+    class: "internal_symmetry_inconsistency"
+    counterexample: "An allowed automorphism sends Q to a distinct group element while a raw-Q sector map is claimed invariant."
+    implication: "The candidate must restrict the symmetry or quotient the charge label into a declared orbit."
+  - risk_id: "PHIL-RISK-005"
+    class: "current_as_motion_overread"
+    counterexample: "A nonzero closed one-chain has zero boundary but no supplied time parameter, transport law, velocity, worldline, or detector signature."
+    implication: "Current is a chain-level candidate record, not physical motion or flux."
+  - risk_id: "PHIL-RISK-006"
+    class: "defect_as_physical_object_overread"
+    counterexample: "Changing the declared two-cell set can change homology while leaving lower-dimensional labels fixed."
+    implication: "Defect status is relative to the stipulated source complex and is not a robust physical defect theorem."
+  - risk_id: "PHIL-RISK-007"
+    class: "superselection_overread"
+    counterexample: "A taxonomy may partition configurations even when later admitted transitions connect the partitions."
+    implication: "Sector does not mean dynamically superselected sector without a separate transition-invariance result."
+  - risk_id: "PHIL-RISK-008"
+    class: "emergence_overread"
+    counterexample: "Calling a nonzero assignment an excitation supplies neither a derived base state nor a stability or dynamics theorem."
+    implication: "Physical emergence and substrate excitation remain undecided."
+  - risk_id: "PHIL-RISK-009"
+    class: "null_malformed_conflation"
+    counterexample: "A record missing its charge group is not equivalent to a valid record whose charge is the group identity."
+    implication: "Missing or malformed data must fail closed rather than be imputed as zero."
+  - risk_id: "PHIL-RISK-010"
+    class: "operational_semantics_smuggling"
+    counterexample: "A relabeling-invariant integer can be computed without any apparatus, calibration, unit, or possible outcome relation."
+    implication: "Invariance does not make a source record empirically observable."
+  - risk_id: "PHIL-RISK-011"
+    class: "conservation_law_smuggling"
+    counterexample: "Defining admissible transitions to satisfy a balance equation guarantees endpoint equality by construction."
+    implication: "The result is a candidate consistency condition unless independent dynamics derives that admissibility rule."
+  - risk_id: "PHIL-RISK-012"
+    class: "legacy_status_laundering"
+    counterexample: "A positive-sounding legacy profile label retains exactly the same fields whether it is called evidence or adopted semantics."
+    implication: "Names and profile mappings cannot change tracked authority status."
+
+required_fusion_corrections:
+  - correction_id: "PHIL-CORR-001"
+    severity: "blocking_for_parent_fusion"
+    requirement: "State the four levels explicitly: stipulated candidate primitives, candidate-derived mathematical invariants, open physical interpretation, and protected ontology adoption."
+    acceptance_test: "No sentence moves from mathematical construction to physical matter or canonical ontology without a separately named future authority."
+  - correction_id: "PHIL-CORR-002"
+    severity: "blocking_for_parent_fusion"
+    requirement: "Include the identity ladder and say that candidate relabeling equivalence is neither general EqSrc nor physical observational equivalence."
+    acceptance_test: "Presentation identity, candidate isomorphism, sector coincidence, and physical identity are not conflated."
+  - correction_id: "PHIL-CORR-003"
+    severity: "blocking_for_parent_fusion"
+    requirement: "Define how internal automorphisms interact with the sector map: fix the raw charge or use its declared orbit."
+    acceptance_test: "Every allowed internal symmetry transports the sector index according to an explicit equation."
+  - correction_id: "PHIL-CORR-004"
+    severity: "blocking_for_parent_fusion"
+    requirement: "Use source-invariant record as the primary term and reserve empirical or operational observable for a later detector-semantics route."
+    acceptance_test: "No invariant is described as measured, observable by an agent, calibrated, or physically operational."
+  - correction_id: "PHIL-CORR-005"
+    severity: "blocking_for_parent_fusion"
+    requirement: "Label the total-charge result as a conditional chain-level source-label invariant and disclose when it follows from the definition of admissible transition."
+    acceptance_test: "The packet makes no physical, Noether, stress-energy, or dynamical conservation claim."
+  - correction_id: "PHIL-CORR-006"
+    severity: "blocking_for_parent_fusion"
+    requirement: "Keep valid null, valid nontrivial neutral, malformed, and underdetermined records as four distinct branches."
+    acceptance_test: "Neither missing data nor zero total charge is sufficient to classify a record as null."
+  - correction_id: "PHIL-CORR-007"
+    severity: "blocking_for_parent_fusion"
+    requirement: "Provide an object-by-object legacy mapping with exact inherited status and an explicit no-upgrade field."
+    acceptance_test: "PositiveMSProfile_v1, readiness objects, bridge objects, and candidate-law schemas retain their tracked status."
+  - correction_id: "PHIL-CORR-008"
+    severity: "blocking_for_parent_fusion"
+    requirement: "State that incidence, orientation, coefficients, internal groups, and transition grammar are task-local candidate assumptions rather than source-derived physical primitives."
+    acceptance_test: "No combinatorial cell, arrow, orientation, or homology class is identified with spacetime, causal, or physical topology."
+  - correction_id: "PHIL-CORR-009"
+    severity: "blocking_for_parent_fusion"
+    requirement: "Describe the nontrivial witness as existence inside the finite candidate model only."
+    acceptance_test: "The witness is not evidence that physical matter exists, that the ontology is realized, or that matter coupling is possible."
+  - correction_id: "PHIL-CORR-010"
+    severity: "blocking_for_parent_fusion"
+    requirement: "Retain exact-GR recovery and human-gated adoption as explicit downstream obligations."
+    acceptance_test: "The packet neither uses the exact-GR benchmark as a premise nor changes P6 Gate B, effective-metric, coupling, or benchmark status."
+
+unique_philosophical_contributions:
+  - contribution_id: "PHIL-UNIQUE-001"
+    statement: "The packet needs a model-to-world separation: a genuine mathematical ontology inside a model is not yet an ontology of physical matter."
+  - contribution_id: "PHIL-UNIQUE-002"
+    statement: "Sector identity is deliberately coarser than configuration identity and much weaker than physical individuation or superselection."
+  - contribution_id: "PHIL-UNIQUE-003"
+    statement: "Physical emergence remains open even when sector and defect invariants are mathematically derived; algebraic emergence and physical emergence are different claims."
+  - contribution_id: "PHIL-UNIQUE-004"
+    statement: "Candidate transitions provide no diachronic identity for particles or excitations. They encode endpoint relations and balance only."
+  - contribution_id: "PHIL-UNIQUE-005"
+    statement: "Internal symmetry is not observer redundancy by default. Its interpretive role depends on a later physical semantics and cannot be inferred from equivariance alone."
+  - contribution_id: "PHIL-UNIQUE-006"
+    statement: "A source invariant becomes operational only after a separately justified measurement relation, calibration, localization, and robustness package."
+  - contribution_id: "PHIL-UNIQUE-007"
+    statement: "The valid null record is a mathematical basepoint; malformed and underdetermined records are epistemic or typing failures and must not be ontologized as vacuum or nonmatter."
+
+exact_gr_recovery_and_adoption_gates:
+  exact_gr_benchmark_role: "target to be recovered later, never a premise for the source-matter candidate"
+  unchanged_open_burdens:
+    - "lawful unscoped effective geometry"
+    - "physical interpretation of source matter variables"
+    - "detector and operational semantics"
+    - "matter action and stress-energy construction"
+    - "universal coupling and equivalence-principle status"
+    - "Einstein-equation derivation"
+    - "benchmark comparison and promotion"
+  p6_gate_b_status:
+    met_count: 0
+    criterion_count: 8
+    lawful_effective_geometry_input_exists: false
+    changed_by_this_review: false
+  adoption_status:
+    current_adoption: "blocked"
+    continuation: "open"
+    status_pair: "blocked_adoption_open_continuation"
+  protected_human_authority_required_for:
+    - "canonical-ontology candidate status"
+    - "canonical ontology edit"
+    - "source-law adoption"
+    - "physical matter-semantics adoption"
+    - "benchmark or downstream claim promotion"
+
+review_provenance:
+  classification: "same_context_internal_ai_role_review"
+  human_expert_review_completed: false
+  independent_replication_completed: false
+  external_review_completed: false
+  proof_authority_created: false
+  statement: "Perspective separation supplies structured internal criticism only. It is not external review, human endorsement, independent replication, or Gate Chair authority."
+
+authority_limits:
+  canonical_ontology_modified: false
+  canonical_ontology_candidate_status_created: false
+  source_law_adopted: false
+  physical_matter_identified: false
+  physical_charge_or_conservation_law_adopted: false
+  detector_or_empirical_semantics_created: false
+  target_metric_or_effective_geometry_imported: false
+  stress_energy_or_matter_action_created: false
+  matter_coupling_derived_or_adopted: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  completed_derivation_claimed: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+  physics_promotion_authorized: false
+
+final_verdict:
+  result: "conditionally_supports_parent_fusion"
+  summary: "The proposed finite source-incidence construction can serve as a nontrivial proposal-only mathematical source-matter ontology candidate if the fused artifacts preserve the identity ladder, internal-symmetry compatibility, source-invariant terminology, null and malformed separation, conditional conservation wording, exact legacy statuses, and protected exact-GR and adoption gates."
+  task_blocked: false
+  unresolved_scientific_limitation: "No supplied structure fixes a physical matter interpretation, detector semantics, a source-derived dynamics, universal coupling, or exact-GR recovery."
+  next_status_if_corrections_are_fused: "proposal-only candidate constructed; blocked_adoption_open_continuation"

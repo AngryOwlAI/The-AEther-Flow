@@ -1,0 +1,123 @@
+schema_id: "source_matter_sector_charge_taxonomy_v1"
+artifact_id: "P7T01-SOURCE-MATTER-SECTOR-CHARGE-TAXONOMY-V1"
+task_id: "RT-20260727-007"
+candidate_id: "SourceMatterIncidenceCandidate_v1"
+status: "draft/control"
+candidate_status: "proposal-only"
+
+taxonomy:
+  - class_id: "SM-NULL"
+    label: "null_configuration_stratum"
+    defining_data: "m=0; z=0; hence N=q=M=0"
+    invariant: "configuration-level basepoint whose sector coordinate is (Q=0, D=[0])"
+    allowed_meaning: "empty source configuration, not a unique invariant sector"
+    forbidden_meanings:
+      - "physical vacuum"
+      - "ground state"
+      - "cosmological background"
+  - class_id: "SM-CHARGE"
+    label: "source_charge_sector"
+    defining_data: "q_v=sum_rho m(v,rho)chi(rho); Q(Psi)=epsilon_A(q(Psi))"
+    invariant: "additive source coefficient label"
+    allowed_meaning: "source sector coordinate"
+    forbidden_meanings:
+      - "electric charge"
+      - "color charge"
+      - "baryon number"
+      - "energy"
+      - "measured physical charge"
+  - class_id: "SM-DEFECT"
+    label: "source_defect_sector"
+    defining_data: "D(Psi)=[z] in H_1(K_src; B_def)"
+    invariant: "closed source chain modulo declared source relations"
+    allowed_meaning: "combinatorial source defect class"
+    forbidden_meanings:
+      - "spacetime topological defect"
+      - "physical vortex"
+      - "physical worldline"
+  - class_id: "SM-REP"
+    label: "source_representation_grade"
+    defining_data: "M_rho(Psi)=sum_v m(v,rho)"
+    invariant: "equivariant grade, not transition-invariant without an added Pi constraint"
+    allowed_meaning: "internal candidate-label grade which need not be transition invariant"
+    forbidden_meanings:
+      - "particle species"
+      - "Standard Model representation"
+      - "empirical classification"
+  - class_id: "SM-INVARIANT"
+    label: "invariant_source_matter_sector"
+    defining_data: "Sec_src(Psi)=(Q(Psi),D(Psi))"
+    invariant: "product candidate sector preserved by declared kinematic constraints"
+    allowed_meaning: "task-local candidate-presentation sector label"
+    forbidden_meanings:
+      - "adopted matter ontology"
+      - "physical superselection sector"
+  - class_id: "SM-CURRENT"
+    label: "source_current_record"
+    defining_data: "J in C_1(K_src; A_int) with q_plus-q_minus=partial_1 J"
+    invariant: "chain-level transition witness"
+    allowed_meaning: "source transport bookkeeping"
+    forbidden_meanings:
+      - "physical flux"
+      - "four-current"
+      - "stress energy"
+  - class_id: "SM-MALFORMED"
+    label: "malformed_source_matter_record"
+    defining_data: "failure of a declared domain support cycle continuity defect-relation or no-import condition"
+    invariant: "bottom_mat with explicit failed condition"
+    allowed_meaning: "fail-closed candidate result"
+    forbidden_meanings:
+      - "repair by target semantics"
+      - "repair by validator or registry authority"
+  - class_id: "SM-UNDERDETERMINED"
+    label: "underdetermined_source_matter_request"
+    defining_data: "well-typed candidate input with no declared rule for the requested classification"
+    invariant: "undetermined_mat with an explicit missing rule"
+    allowed_meaning: "guarded missing-rule result outside the sector set"
+    forbidden_meanings:
+      - "valid null configuration"
+      - "malformed input"
+      - "zero imputed for missing information"
+
+charge_structure:
+  coefficient_group: "A_int finitely generated abelian"
+  total_map: "epsilon_A: C_0(K_src; A_int) -> A_int"
+  local_transport_constraint: "q_plus-q_minus=partial_1 J"
+  total_preservation_reason: "epsilon_A partial_1 = 0"
+  physical_conservation_law_claimed: false
+
+defect_structure:
+  coefficient_group: "B_def finitely generated abelian"
+  cycle_group: "ker(partial_1: C_1 -> C_0)"
+  relation_group: "im(partial_2: C_2 -> C_1)"
+  sector_group: "H_1(K_src; B_def)"
+  sector_preservation_constraint: "z_plus-z_minus=partial_2 w"
+  spacetime_topology_claimed: false
+
+symmetry_structure:
+  source_relabeling: "chain isomorphism commuting with boundary maps"
+  internal_charge_relabeling: "group isomorphism alpha"
+  defect_relabeling: "group isomorphism beta"
+  representation_relabeling: "compatible label bijection gamma"
+  charge_representation_compatibility: "chi_prime gamma = alpha chi"
+  coefficientwise_maps: "L_i^A=F_i tensor alpha; L_i^B=F_i tensor beta"
+  raw_charge_rule: "Q transforms equivariantly to alpha(Q); within-sector invariance requires alpha(Q)=Q or an explicit orbit sector"
+  physical_gauge_symmetry_claimed: false
+  target_covariance_claimed: false
+
+finding_counts:
+  taxonomy_class_count: 8
+  charge_component_count: 1
+  defect_component_count: 1
+  representation_component_count: 1
+  current_component_count: 1
+  malformed_branch_count: 1
+  underdetermined_branch_count: 1
+  nontrivial_neutral_witness_count: 1
+  adopted_physical_sector_count: 0
+
+status_guard:
+  adoption_status: "blocked_adoption_open_continuation"
+  canonical_ontology_modified: false
+  physics_promotion_authorized: false
+  proof_authority: false

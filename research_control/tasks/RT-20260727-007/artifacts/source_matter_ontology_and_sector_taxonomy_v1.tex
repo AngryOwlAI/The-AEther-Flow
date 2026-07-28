@@ -1,0 +1,717 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{longtable}
+
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{remark}{Remark}
+\newtheorem{nonconclusion}{Non-conclusion}
+
+\newcommand{\Ksrc}{K_{\mathrm{src}}}
+\newcommand{\Aint}{A_{\mathrm{int}}}
+\newcommand{\Bdef}{B_{\mathrm{def}}}
+\newcommand{\Gint}{G_{\mathrm{int}}}
+\newcommand{\Rdecl}{\widehat G_{\mathrm{decl}}}
+\newcommand{\Conf}{\mathcal C_{\mathrm{mat}}}
+\newcommand{\Sect}{\mathrm{Sec}_{\mathrm{src}}}
+\newcommand{\Malformed}{\bot_{\mathrm{mat}}}
+\newcommand{\Undetermined}{\mathsf{undetermined}_{\mathrm{mat}}}
+\newcommand{\MetricData}{\mathrm{MetricData}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+
+\title{P7-T01 Source-Matter Ontology and Sector Taxonomy v1}
+\author{Ontology Formalizer Packet RT-20260727-007}
+\date{2026-07-27}
+
+\begin{document}
+\maketitle
+
+\section{Control status and result}
+
+This artifact is the fused old-style science-draft output of
+\texttt{AJ-RT-20260727-007-001}. It constructs
+\[
+  \mathrm{SourceMatterIncidenceCandidate}_{v1}
+\]
+as a \emph{draft/control, proposal-only} source-side ontology candidate. The
+candidate supplies explicit configuration variables, internal labels, source
+charge and current chains, defect classes, sector maps, source-invariant
+bookkeeping records, a nontrivial finite configuration, a null
+configuration, a malformed branch, and one exact naturality theorem within
+the candidate.
+
+The artifact does not edit canonical ontology or adopt a source law. It does
+not establish physical matter, physical charge, a physical conservation law,
+detector semantics, an effective geometry, a target metric, stress energy, a
+matter action, matter coupling, Einstein equations, benchmark promotion,
+proof authority, publication, completed derivation, a global no-go theorem,
+or future source-extension impossibility. Current adoption remains
+\texttt{blocked\_adoption\_open\_continuation}.
+
+\section{Why a new candidate is required}
+
+The registered legacy matter records provide useful target grammar,
+matter-sector labels, source probe and readout syntax, compatibility
+certificates, candidate-law obligations, and scoped evidence/preconditions.
+Their own status controls expressly prevent those interfaces from being read
+as a source-derived matter ontology. In particular, a label called a matter
+sector is not yet an intrinsic degree of freedom, and a passing certificate is
+not a law that produces a sector.
+
+P7-T01 therefore asks a narrower mathematical question:
+
+\begin{quote}
+Can one write a concrete source-only configuration space and sector map that
+does not assume the frozen P6 effective-geometry output, a target metric,
+stress energy, a matter action, coupling, detector semantics, or GR behavior?
+\end{quote}
+
+The construction below answers that question at proposal-only candidate
+level. It does not answer whether the project should adopt this candidate.
+
+\section{Declared source data}
+
+\begin{definition}[Finite augmented source incidence complex]
+A finite augmented source incidence complex is a chain complex of free
+abelian groups
+\[
+ C_2(\Ksrc;\mathbb Z)
+ \xrightarrow{\partial_2}
+ C_1(\Ksrc;\mathbb Z)
+ \xrightarrow{\partial_1}
+ C_0(\Ksrc;\mathbb Z)
+ \xrightarrow{\epsilon}
+ \mathbb Z,
+ \qquad
+ \partial_1\partial_2=0,
+ \qquad
+ \epsilon\partial_1=0,
+\]
+with a declared finite vertex basis \(V\), oriented source-link basis \(E\),
+and source-relation basis \(F\). The boundary matrices are source data.
+Each source-link boundary has one declared positive and one declared negative
+endpoint; a self-loop may have zero boundary. The augmentation sends every
+vertex basis element to \(1\).
+``Incidence'' here is combinatorial source syntax. It is not a target atlas,
+spacetime topology, metric, causal cone, proper-time relation, or physical
+locality claim.
+\end{definition}
+
+\begin{definition}[Internal candidate data]
+The candidate declares:
+\begin{enumerate}[leftmargin=*]
+\item a finitely generated abelian group
+  \(\Aint\), used only as a source charge-label group;
+\item a finitely generated abelian group
+  \(\Bdef\), used only as a source defect-label group;
+\item an internal group \(\Gint\) and a finite declared set
+  \(\Rdecl\) of representation isomorphism classes, each with a declared
+  carrier and homomorphism
+  \(\varrho_\rho:\Gint\to\mathrm{GL}(W_\rho)\);
+\item a distinguished empty representation label \(0_R\);
+\item a source charge-label map
+  \[
+    \chi:\Rdecl\cup\{0_R\}\longrightarrow\Aint,
+    \qquad \chi(0_R)=0.
+  \]
+\end{enumerate}
+These are proposal-only internal labels. They are not measured charges,
+particle species, Standard Model representations, detector outcomes, or
+empirical calibrations.
+\end{definition}
+
+\begin{definition}[Model-to-world status ladder]
+The packet keeps four levels separate:
+\begin{enumerate}[leftmargin=*]
+\item the incidence complex, coefficient groups, internal group,
+  representations, \(\chi\), occupations, and transition grammar are
+  \emph{stipulated candidate primitives};
+\item charge chains, representation grades, sector coordinates, current
+  constraints, and defect classes are \emph{candidate-derived mathematical
+  records};
+\item reference to physical matter, charge, motion, measurement, or
+  spacetime is \emph{open and not supplied};
+\item canonical ontology or source-law adoption is \emph{protected and
+  human-gated}.
+\end{enumerate}
+An exact consequence at the second level does not move an object to the
+third or fourth level.
+\end{definition}
+
+Coefficient extension gives chain groups
+\(C_i(\Ksrc;\Aint)\) and \(C_i(\Ksrc;\Bdef)\). Let
+\[
+  \epsilon_{\Aint}:C_0(\Ksrc;\Aint)\longrightarrow\Aint,
+  \qquad
+  \epsilon_{\Aint}\!\left(\sum_{v\in V}a_v[v]\right)
+  =\sum_{v\in V}a_v .
+\]
+For an incidence boundary, every oriented link contributes one \(+\) and one
+\(-\) endpoint, so
+\(\epsilon_{\Aint}\partial_1=0\).
+
+\section{Source-matter configurations}
+
+\begin{definition}[Proposal-only source-matter configuration]
+A source-matter configuration has primitive tuple
+\[
+  \Psi=(m,z)
+\]
+with
+\[
+  m:V\times\Rdecl\longrightarrow\mathbb N_0,
+  \qquad
+  z\in Z_1(\Ksrc;\Bdef)=\ker\partial_1 .
+\]
+Here \(m\) is the source representation-occupation multiplicity and \(z\) is
+a closed source defect chain. Occupation, local charge, charge chain, and
+representation grade are derived:
+\[
+  \nu(v)=\sum_{\rho\in\Rdecl}m(v,\rho),\qquad
+  q_v=\sum_{\rho\in\Rdecl}m(v,\rho)\chi(\rho),
+\]
+\[
+  q(\Psi)=\sum_{v\in V}q_v[v],
+  \qquad
+  M_\rho(\Psi)=\sum_{v\in V}m(v,\rho).
+\]
+It is admissible when:
+\begin{enumerate}[label=\textup{(C\arabic*)},leftmargin=*]
+\item all vertices, links, relations, coefficient groups, representation
+  carriers, actions, labels, and values of \(\chi\) are declared;
+\item \(m(v,\rho)\) is nonnegative on the declared finite domain, and
+  \(\nu,q,M\) are the derived fields above rather than independent tags;
+\item \(z\) is a declared one-chain and \(\partial_1z=0\);
+\item no component is defined from a target atlas, target metric, effective
+  geometry, stress-energy variable, matter action, detector outcome,
+  benchmark behavior, validator result, registry row, role authority,
+  generated derivative, local cache, or commit state.
+\end{enumerate}
+Failure of any condition returns \(\Malformed\) with the failed condition and
+offending datum recorded.
+\end{definition}
+
+\begin{definition}[Candidate state space]
+The proposal-only state space is
+\[
+  \Conf(\Ksrc;\Aint,\Bdef,\Gint,\Rdecl)
+  =
+  \{\Psi:\Psi\text{ satisfies (C1)--(C4)}\}
+  \cup\{\Malformed\}.
+\]
+This is a kinematic candidate. It supplies no action, Hamiltonian, evolution
+operator, probability rule, energetic weighting, or physical time.
+\end{definition}
+
+\begin{definition}[Source sectors, representation grade, and invariant records]
+For admissible \(\Psi=(m,z)\), define
+\[
+  Q(\Psi)=\epsilon_{\Aint}(q(\Psi)),\qquad
+  D(\Psi)=[z]\in
+  H_1(\Ksrc;\Bdef)=
+  \ker\partial_1/\operatorname{im}\partial_2,
+\]
+and use the derived \(M(\Psi)\) as a representation grade. The
+transition-invariant candidate sector map is
+\[
+  \Sect(\Psi)=\bigl(Q(\Psi),D(\Psi)\bigr).
+\]
+Also define the source-invariant bookkeeping record
+\[
+  O_{\mathrm{src}}(\Psi)
+  =
+  \left(
+    N(\Psi)=\sum_v\nu(v),\,
+    Q(\Psi),\,
+    D(\Psi),\,
+    M(\Psi)
+  \right).
+\]
+The grade \(M\) is equivariant under internal-label transport but is not
+claimed to be transition-invariant unless a later packet constrains the
+update record \(\Pi\) accordingly.
+These are source invariants or labels. They are not empirical or operational
+observables. Invariance licenses no observer, detector, measurement,
+calibration, unit, localization, or operational-geometry semantics.
+\end{definition}
+
+\begin{definition}[Identity ladder and underdetermined result]
+Four levels must remain distinct:
+\begin{enumerate}[leftmargin=*]
+\item \emph{presentation identity}: equality of every declared field;
+\item \emph{candidate isomorphism}: transport by the declared source-chain
+  and internal-label isomorphisms;
+\item \emph{sector coincidence}: equality, or declared transport, of
+  \(\Sect\), which is coarser than configuration identity;
+\item \emph{physical identity}: not supplied by this packet.
+\end{enumerate}
+Candidate isomorphism is not the unresolved general
+\(\mathrm{EqSrc}\) relation, observational equivalence, or physical gauge.
+If all fields are well typed but the candidate rules do not decide a requested
+classification, the evaluator returns \(\Undetermined\) with the missing rule
+recorded. It does not replace missing information by zero, the valid null
+state, or \(\Malformed\).
+\end{definition}
+
+\section{Currents and kinematically admissible transitions}
+
+\begin{definition}[Source-current transition record]
+For admissible endpoint configurations
+\(\Psi^-=(m^-,z^-)\) and
+\(\Psi^+=(m^+,z^+)\), with their derived charge chains \(q^-\) and
+\(q^+\), a candidate transition record is
+\[
+  T=(\Psi^-,J,w,\Pi,\Psi^+)
+\]
+where \(J\in C_1(\Ksrc;\Aint)\) is a source current-label chain,
+\(w\in C_2(\Ksrc;\Bdef)\) is a defect-relation chain, and \(\Pi\) is the
+declared source-only update from \(m^-\) to \(m^+\).
+It is kinematically admissible when
+\begin{align}
+  q^+-q^- &= \partial_1J,
+    \label{eq:continuity}\\
+  z^+-z^- &= \partial_2w,
+    \label{eq:defect}
+\end{align}
+and \(\Pi\) uses only declared source data. Equation
+\eqref{eq:continuity} is a candidate chain constraint, not an adopted
+dynamical or physical conservation law. P7-T01 does not select which
+admissible transition occurs.
+\end{definition}
+
+\begin{proposition}[Candidate total-charge and defect-sector preservation]
+For every kinematically admissible transition,
+\[
+  Q(\Psi^+)=Q(\Psi^-),\qquad
+  D(\Psi^+)=D(\Psi^-).
+\]
+\end{proposition}
+
+\begin{proof}
+Apply \(\epsilon_{\Aint}\) to
+\(q^+-q^-=\partial_1J\). Since
+\(\epsilon_{\Aint}\partial_1=0\), the total source charge labels agree.
+Equation \eqref{eq:defect} says \(z^+\) and \(z^-\) differ by an element of
+\(\operatorname{im}\partial_2\), so they define the same homology class.
+\end{proof}
+
+\begin{remark}[Conditional consistency rather than independent dynamics]
+The preceding proposition is a conditional chain-level invariant. Because
+equations \eqref{eq:continuity} and \eqref{eq:defect} are part of the
+definition of a kinematically admissible transition, the proposition checks
+consistency of that proposal. It is not an independently derived equation of
+motion, Noether theorem, or physical conservation law.
+\end{remark}
+
+\section{Sector and charge taxonomy}
+
+\begin{longtable}{p{0.19\linewidth}p{0.28\linewidth}p{0.43\linewidth}}
+\toprule
+Candidate class & Defining datum & Exact licensed meaning \\
+\midrule
+\endhead
+Null configuration stratum &
+\(m=0,\ z=0\), hence \(N=q=M=0\) &
+Empty source configuration. Other nontrivial configurations can share its
+\((Q,D)=(0,[0])\) sector, so nullity is not a sector property. It is not a
+physical vacuum or ground state.\\
+Charge sector &
+\(Q\in\Aint\) &
+Additive source label obtained by augmentation. It is not electric, color,
+baryon, energy, or another physical charge without later authority.\\
+Defect sector &
+\([z]\in H_1(\Ksrc;\Bdef)\) &
+Equivalence class of a closed combinatorial source chain modulo declared
+source relations. It is not a spacetime topological defect.\\
+Representation grade &
+\(M:\Rdecl\to\mathbb N_0\) &
+Multiplicity of declared internal representation labels. It is not a
+particle-species or empirical classification and need not be transition
+invariant.\\
+Invariant sector &
+\((Q,[z])\) &
+Product candidate sector preserved by the declared kinematic constraints.\\
+Current record &
+\(J\in C_1(\Ksrc;\Aint)\) with
+\(q^+-q^-=\partial_1J\) &
+Chain-level transport witness between declared endpoint labels. It is not
+physical flux or stress energy.\\
+Malformed branch &
+\(\Malformed\) plus failed condition &
+Fail-closed result for an undeclared object, support violation, noncycle,
+continuity failure, defect-relation failure, or forbidden import.\\
+\bottomrule
+\end{longtable}
+
+\section{Internal symmetry and source relabeling}
+
+\begin{definition}[Admissible change of source presentation]
+An admissible change of source presentation from candidate data
+\((\Ksrc,\Aint,\Bdef,\Gint,\Rdecl)\) to primed data consists of:
+\begin{enumerate}[leftmargin=*]
+\item chain-group isomorphisms
+  \(F_i:C_i(\Ksrc;\mathbb Z)\to C_i(\Ksrc';\mathbb Z)\) satisfying
+  \(F_{i-1}\partial_i=\partial_i'F_i\), with \(F_0\) induced by a vertex
+  bijection;
+\item group isomorphisms
+  \(\alpha:\Aint\to\Aint'\) and
+  \(\beta:\Bdef\to\Bdef'\);
+\item an internal-group isomorphism
+  \(\phi:\Gint\to\Gint'\) and compatible bijection
+  \(\gamma:\Rdecl\to\Rdecl'\), transporting representation classes so that
+  \(\varrho'_{\gamma\rho}\circ\phi\) is isomorphic to
+  \(\varrho_\rho\), and satisfying
+  \[
+    \chi'(\gamma\rho)=\alpha(\chi(\rho));
+  \]
+\item coefficientwise chain maps
+  \(L_i^A=F_i\otimes\alpha\) and
+  \(L_i^B=F_i\otimes\beta\), together with occupation transport
+  \(m'(F_0v,\gamma\rho)=m(v,\rho)\) and fieldwise transport of
+  \(z,J,w,\Pi\).
+\end{enumerate}
+The admitted transformations are exactly this compatible subgroup of the
+product of source-chain, coefficient-group, internal-group, and label
+isomorphisms; arbitrary independent permutations are not admitted.
+This is source-presentation naturality only. It is not target-coordinate
+covariance, diffeomorphism invariance, local gauge symmetry, or physical
+equivalence.
+\end{definition}
+
+An internal automorphism need not fix the raw label \(Q\). The theorem below
+therefore claims equivariant transport \(Q\mapsto\alpha Q\), not invariance of
+the raw value. A later use that calls such a transformation a
+within-sector symmetry must either restrict to \(\alpha Q=Q\) or replace the
+charge coordinate by its explicitly declared automorphism orbit.
+
+For example, take \(\Aint=\mathbb Z\), labels
+\(\rho_+,\rho_-\) with \(\chi(\rho_\pm)=\pm1\), the automorphism
+\(\alpha(n)=-n\), and let \(\gamma\) exchange the two labels. Then
+\(\chi'\gamma=\alpha\chi\) and \(Q\mapsto-Q\). This is exact equivariance,
+not literal invariance of \(Q\).
+
+\begin{theorem}[P7T01-THM-SOURCE-RELABELING-SECTOR-NATURALITY-001]
+Let \((F,\phi,\alpha,\beta,\gamma)\) be an admissible change of source
+presentation. Then:
+\begin{enumerate}[leftmargin=*]
+\item admissible configurations transport to admissible configurations;
+\item kinematically admissible transitions transport to kinematically
+  admissible transitions;
+\item the sector map and representation grade are equivariant:
+  \[
+    \Sect(\Psi')=
+    \left(
+      \alpha Q(\Psi),\,
+      H_1(F;\beta)D(\Psi)
+    \right),
+    \qquad
+    M(\Psi')=\gamma_*M(\Psi);
+  \]
+\item a continuity violation remains a continuity violation under the
+  isomorphism, so that malformed branch cannot be repaired by relabeling.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+The vertex and representation-label bijections preserve occupation
+multiplicity. Compatibility of \(\chi\) gives, at every vertex,
+\[
+  q'_{F_0v}
+  =
+  \sum_\rho m(v,\rho)\chi'(\gamma\rho)
+  =
+  \alpha\!\left(\sum_\rho m(v,\rho)\chi(\rho)\right)
+  =
+  \alpha(q_v).
+\]
+Thus charge is transported as a derived field, not as an independently
+relabelled tag. The coefficientwise chain-map identity gives
+\[
+  \partial_1'L_1^A J
+  =
+  L_0^A\partial_1J
+  =
+  L_0^A(q^+-q^-),
+\]
+hence the continuity condition is preserved. The same argument using
+\(L_1^B\partial_2=\partial_2'L_2^B\) preserves the defect-relation
+condition and induces \(H_1(F;\beta)\).
+
+Vertex bijectivity implies
+\(\epsilon_{\Aint'}L_0^A=\alpha\epsilon_{\Aint}\), yielding the stated
+charge component. Representation grades are permuted by \(\gamma\).
+Finally, if
+\(q^+-q^--\partial_1J\neq0\), its image under the coefficientwise
+isomorphism \(L_0^A\) is nonzero, so the corresponding primed transition
+still fails. No target structure enters the argument.
+\end{proof}
+
+\begin{remark}[Status of the theorem]
+The proof is exact for the declared finite candidate. Its conclusion is
+mathematical naturality of proposal-only source records. It is not a theorem
+that nature realizes the candidate, not a physical conservation law, not an
+ontology adoption, and not proof authority for downstream GR claims.
+\end{remark}
+
+\section{Explicit configurations}
+
+\subsection{Nontrivial finite witness}
+
+Let \(V=\{u,v\}\). Let \(C_1\) have source-link basis
+\(\{e,\ell\}\), with
+\[
+  \partial_1 e=[v]-[u],
+  \qquad
+  \partial_1\ell=0,
+\]
+and let \(C_2=0\). Take
+\(\Aint=\Bdef=\mathbb Z\), declare an internal representation label
+\(\rho\in\Rdecl\) with \(\chi(\rho)=1\), and define:
+\[
+\begin{array}{c|cccc}
+ & m & \nu & q & z\\
+\hline
+\Psi^- & m(u,\rho)=1 & \nu(u)=1 & [u] & \ell\\
+\Psi^+ & m(v,\rho)=1 & \nu(v)=1 & [v] & \ell
+\end{array}
+\]
+with all unlisted multiplicities zero. The displayed \(\nu\) and \(q\) are
+derived from \(m\) and \(\chi\). Put
+\[
+  J=e,\qquad w=0,
+\]
+and let \(\Pi\) record the source-label move \(u\to v\). Then
+\[
+  q^+-q^-=[v]-[u]=\partial_1e=\partial_1J,
+  \qquad
+  z^+-z^-=0=\partial_2w.
+\]
+Both endpoints therefore occupy the nontrivial invariant sector
+\[
+  \bigl(1,[\ell]\bigr)
+\]
+and have representation grade \(M_\rho=1\).
+Because \(C_2=0\) and \(\ell\neq0\), \([\ell]\) is nonzero. This is a
+finite source-chain witness, not a particle trajectory, spacetime loop,
+physical worldline, or measured charge flow.
+
+\subsection{Null configuration}
+
+The tuple
+\[
+  \Psi_0=(m=0,z=0)
+\]
+is admissible, has derived \(\nu=q=M=0\), and has sector \((0,[0])\).
+It is a null source record, not a physical vacuum, minimum-energy state, or
+cosmological background.
+
+\subsection{Nontrivial neutral configuration}
+
+Declare labels \(\rho_+,\rho_-\) with
+\(\chi(\rho_+)=1\) and \(\chi(\rho_-)=-1\). On two occupied vertices, take
+\[
+  m(u,\rho_+)=m(v,\rho_-)=1,\qquad z=0.
+\]
+Then \(q=[u]-[v]\), \(Q=0\), \(N=2\), and both representation grades are
+nonzero. This valid configuration is
+not the null configuration. Zero total source charge never implies nullity,
+physical neutrality, or absence of matter.
+
+\subsection{Malformed transition}
+
+Keep the two nontrivial endpoints above but set \(J=0\). Then
+\[
+  q^+-q^-=[v]-[u]\neq0=\partial_1J.
+\]
+The transition fails equation \eqref{eq:continuity} and returns
+\[
+  \Malformed(
+    \mathrm{failed\_condition}=\mathrm{C\mbox{-}TRANS\mbox{-}CONTINUITY},
+    \mathrm{residual}=[v]-[u]).
+\]
+No target metric, detector output, or validator result may repair it.
+
+\subsection{Underdetermined request}
+
+For a well-typed admissible configuration, a question such as ``which
+detector outcome corresponds to this sector?'' has no rule in P7-T01. The
+result is \(\Undetermined\) with
+\(\mathrm{missing\_rule}=\mathrm{detector\_semantics}\), not the valid null
+sector and not \(\Malformed\). The missing rule remains a later burden.
+
+\section{Matter identity and emergence boundary}
+
+Within this candidate, a matter token is individuated only at the
+candidate-relative level by a source configuration and its declared
+candidate-isomorphism orbit, not by a persistent observer name. Sector
+coincidence is weaker than configuration identity and supplies neither
+diachronic particle identity nor a superselection theorem.
+
+The packet stipulates source-side matter degrees of freedom. It does not
+decide whether physical matter is fundamental, emergent, or a substrate
+excitation. Calling a configuration a physical excitation would additionally
+require a derived reference state, lawful dynamics, stability, and an
+interpretation map, none of which P7-T01 supplies. Canonical physical identity,
+empirical detectability, and correspondence to known particles remain open
+and human-gated where ontology adoption would be required.
+
+\section{Legacy-evidence mapping without status upgrade}
+
+\begin{longtable}{p{0.25\linewidth}p{0.31\linewidth}p{0.34\linewidth}}
+\toprule
+Legacy object & Candidate-side mapping & Preserved status and block \\
+\midrule
+\endhead
+\(\mathrm{SourceMatterSector}_{v1}\) &
+Possible interface projection of \(\Sect(\Psi)\) plus separately labelled
+configuration strata or representation grades. &
+Target grammar only; not adopted sector semantics.\\
+\(\mathrm{SourceProbeToken}_{v1}\),
+\(\mathrm{SourceDetectorReadout}_{v1}\),
+\(\mathrm{MatterResponseToken}_{v1}\) &
+Excluded from the ontology core; possible later operational-protocol inputs. &
+No observer, detector, measurement, or empirical semantics.\\
+\(\mathrm{MatSrcDiscLaw}_{v1}\) and
+\(\mathrm{SemMatter}_{\mathrm{src}}\) &
+The \(\chi\)-linked occupation model and \(\Sect\) are a concrete
+proposal-only nonbottom discriminator candidate that can be tested against
+the old obligations. &
+No source-law or matter-semantics adoption; prior Refuter obstruction is not
+retroactively erased.\\
+\(\mathrm{MatterSemanticsCandidate}^{\mathrm{cand}}_{v1}\) &
+Earlier interface/certificate candidate; may receive a later projection from
+the new configuration space. &
+No replacement, adoption, detector semantics, or coupling.\\
+\(\mathrm{PositiveMSProfile}_{v1}\),
+stable-partition and stable-bridge records &
+Scoped evidence/preconditions for later compatibility review. &
+Remain scoped evidence/preconditions; do not instantiate this candidate.\\
+\(\mathrm{SourceMatterSemanticsAdoptionReadinessLaw}_{v1}\) &
+Readiness-context cross-check only. &
+Scoped evidence/precondition; the word ``Law'' does not adopt a law.\\
+\(\mathrm{RR}_E\) and source-certificate records &
+Declared-scope transport and fail-closed record grammar only. &
+No detector equivalence, matter semantics, or proof authority.\\
+\(\mathrm{PTMI}_E\) and
+\(\mathrm{MatterCouplingBridgeTarget}_{v1}\) &
+Downstream bridge target that may later consume a separately authorized
+ontology projection. &
+No stress-energy, matter action, coupling law, or matter coupling.\\
+P6 Gate B package &
+No input to the construction except the prohibition on treating it as
+effective geometry. &
+Gate B remains zero of eight; the local freeze is preserved.\\
+\bottomrule
+\end{longtable}
+
+\section{Assumption and dependency summary}
+
+\begin{enumerate}[leftmargin=*]
+\item The finite augmented chain complex, coefficient groups, internal group,
+  representation carriers, and charge-label map \(\chi\) are explicit
+  proposal-only inputs rather than source-derived physical primitives.
+\item Boundary compatibility
+  \(\partial_1\partial_2=0\) and incidence augmentation
+  \(\epsilon\partial_1=0\) are mathematical assumptions of this candidate.
+\item No action or evolution rule chooses among admissible transitions.
+\item No target atlas, target metric, \(\MetricData(E)\), \(\geff\), physical
+  cone, clock, rod, stress tensor, matter action, detector protocol, coupling
+  law, or GR behavior is assumed.
+\item Source equivalence in this packet is limited to declared chain
+  isomorphisms and internal-label isomorphisms; it is not the general
+  \(\mathrm{EqSrc}\) relation and physical equivalence is not inferred.
+\item Existing matter-profile records retain their exact registered statuses.
+\item Any adoption or canonical ontology edit requires separate protected
+  human Gate Chair authority.
+\end{enumerate}
+
+\section{Distance-to-GR and freeze evaluation}
+
+\[
+\begin{array}{ll}
+\text{source matter configuration target}
+  & \text{proposal-only candidate supplied}\\
+\text{sector/charge/current/defect taxonomy}
+  & \text{proposal-only finite definitions supplied}\\
+\text{canonical matter ontology}
+  & \text{not adopted}\\
+\text{physical charge or conservation}
+  & \text{not established}\\
+\text{operational detector semantics}
+  & \text{missing}\\
+\text{matter action or evolution law}
+  & \text{missing; P7-T02 remains separate}\\
+\text{stress energy and universal coupling}
+  & \text{missing}\\
+\text{effective geometry}
+  & \text{not assumed; P6 Gate B freeze unchanged}\\
+\text{Einstein equations}
+  & \text{not derived}\\
+\text{exact-GR benchmark}
+  & \text{unchanged target-side benchmark}\\
+\text{adoption status}
+  & \texttt{blocked\_adoption\_open\_continuation}
+\end{array}
+\]
+
+This candidate is materially distinct from the frozen P6 effective-geometry
+family and does not reopen it. Repeating the same incidence candidate without
+a new source law, theorem, variation class, stress result, or protected
+decision should be locally frozen. A fresh P7-T02 packet may proceed only
+after checkpoint and only to construct an explicit source action, evolution
+equation, or transition law; this artifact does not preselect one.
+
+\section{Exact-GR recovery obligations}
+
+Any later use of this candidate must:
+\begin{enumerate}[leftmargin=*]
+\item keep exact GR as a target benchmark rather than a source premise;
+\item derive any effective geometry from source structure independently of
+  the matter labels defined here;
+\item separately derive physical interpretation, operational protocols,
+  matter dynamics, stress energy, universal coupling, and Einstein equations;
+\item preserve the distinction between task-local mathematical truth,
+  canonical ontology status, physical interpretation, and benchmark status;
+\item obtain protected human authority before ontology or benchmark
+  promotion.
+\end{enumerate}
+
+\section{Non-conclusions}
+
+\begin{nonconclusion}
+This artifact is not canonical ontology, not a source-law adoption, not a
+physical matter ontology, not a particle model, not a physical charge or
+conservation law, not an observer or detector theory, not a target atlas,
+metric, causal cone, clock, rod, stress-energy tensor, matter action, coupling
+law, matter-coupling derivation, Einstein-equation derivation, benchmark
+promotion, proof publication, completed derivation, global theory rejection,
+or proof that future source extensions are impossible.
+\end{nonconclusion}
+
+\section*{Registered source basis}
+
+\begin{itemize}[leftmargin=*]
+\item The AEther-Flow Research Project. (2026, July 20).
+  \emph{Recommendations implementation plan continue task v21}
+  [Internal control plan].
+\item The AEther-Flow Research Project. (2026, June 28).
+  \emph{Matter-Coupling Bridge Target v1 formalization}
+  [Registered draft/control TeX artifact].
+\item The AEther-Flow Research Project. (2026, July 2).
+  \emph{Source certificate operation laws v1}
+  [Registered draft/control TeX artifact].
+\item The AEther-Flow Research Project. (2026, June 29--30).
+  \emph{Matter-semantics candidate-law, target, candidate, and Refuter
+  records} [Registered draft/control TeX artifacts].
+\item The AEther-Flow Research Project. (2026, July 27).
+  \emph{P6-T08 Gate B review and P15-T04 source-dynamics reconstruction
+  report} [Tracked research-control records].
+\end{itemize}
+
+\end{document}
