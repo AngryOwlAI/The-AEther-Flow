@@ -1,0 +1,310 @@
+schema_id: "source_matter_dynamics_packet_selection_v1"
+artifact_id: "P7T02-SOURCE-MATTER-DYNAMICS-PACKET-SELECTION-V1"
+task_id: "RT-20260727-008"
+job_id: "AJ-RT-20260727-008-001"
+plan_task_id: "P7-T02"
+status: "draft/control"
+decision_status: "completed"
+candidate_status: "proposal-only"
+target_derivation_milestone: "matter_coupling"
+milestone_burden: "Build one explicit source matter action evolution equation or transition law and derive its basic conserved or constraint structure."
+selected_dynamics_packet_executed_here: false
+
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  status: "PASS"
+  child_inputs:
+    - execution_unit_id: "child_phys_math"
+      path: "research_control/tasks/RT-20260727-008/artifacts/child_phys_math_p7_t02_source_matter_dynamics_selector.yaml"
+      sha256: "e3d80e3b3d29f0882feea060b94b8d0acc747d92bf8f8e5b2b7dca002cb3e5dd"
+      selected_branch: "source_transition_law"
+    - execution_unit_id: "child_phys_phil"
+      path: "research_control/tasks/RT-20260727-008/artifacts/child_phys_phil_p7_t02_source_matter_dynamics_selector.yaml"
+      sha256: "325073606222a9d3fb7f353d031798c044d17808d096e3fe913f1d870bfa277b"
+      selected_branch: "source_transition_law"
+  conflict_review_path: "research_control/tasks/RT-20260727-008/artifacts/parent_conflict_review_p7_t02_source_matter_dynamics_selector.yaml"
+  fusion_notes_path: "research_control/tasks/RT-20260727-008/artifacts/parent_fusion_notes_p7_t02_source_matter_dynamics_selector.md"
+  resolved_formulation_difference: "Use a finite normalized kernel to meet the equation-and-constraint burden while treating its support relation as primary and its weights as nonphysical proposal-only coefficients. Preserve a relation-only rule as the degenerate or obstruction fallback."
+  unresolved_blocking_conflict_count: 0
+
+source_basis:
+  - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+    path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+    sha256: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+    use: "P7-T02 objective and durable-output burden"
+  - object_id: "TEX-V21-P7-T01-SOURCE-MATTER-ONTOLOGY-SECTOR-TAXONOMY-V1"
+    path: "research_control/tasks/RT-20260727-007/artifacts/source_matter_ontology_and_sector_taxonomy_v1.tex"
+    sha256: "8d160217bf223078a11bc63fde6593c11c39d5b50d9c48fbad7b12084f8a752d"
+    use: "canonical proposal-only configuration and transition-grammar basis"
+  - path: "research_control/tasks/RT-20260727-007/artifacts/source_matter_ontology_spec_v1.yaml"
+    sha256: "a5563edddaff90ebab6ac4d3d4e2dc0425fea23b5f27c1c6174cb28b1f4652be"
+    use: "machine-readable candidate state and explicit dynamics absence"
+  - path: "research_control/tasks/RT-20260727-007/artifacts/source_matter_assumption_dependency_table_v1.yaml"
+    sha256: "c665dbc7522d4ee1b6aa01db14100689c8d9acc28c7e659c33b4272d32976991"
+    use: "fixed assumptions, conditional constraints, and no-target-import guard"
+  - path: "research_control/tasks/RT-20260727-007/jobs/completions/AJC-AJ-RT-20260727-007-001.yaml"
+    sha256: "4d1fc3d7d045defa6000dc0860973fba50280ddd1ee72cb4881d8ee2de2ddc1c"
+    use: "qualifying dependency completion and exact status boundary"
+  - path: "research_control/handoffs/handoff-0889.yaml"
+    sha256: "5dabdb01ed339a3e276e42420c15f3700b37db58fd8a07d923ef8d65197607b8"
+    use: "three-branch selector authority and construction prohibition"
+  - path: "research_control/tasks/RT-20260721-002/artifacts/ontology_regime_primary_literature_bibliography_v1.yaml"
+    use: "comparison-only precedent that source-side stochastic growth requires declared conditions; not AEther-Flow derivation or adoption evidence"
+
+fixed_basis:
+  candidate_id: "SourceMatterIncidenceCandidate_v1"
+  candidate_status: "proposal-only"
+  primitive_configuration: "Psi=(m,z)"
+  invariant_sector: "Sec_src(Psi)=(Q(Psi),[z])"
+  transition_id: "SourceMatterTransition_v1"
+  transition_tuple: "(Psi_minus,J,w,Pi,Psi_plus)"
+  transition_constraints:
+    - "q_plus-q_minus=partial_1 J"
+    - "z_plus-z_minus=partial_2 w"
+    - "Pi uses only declared source data"
+  conditional_invariant: "Every admitted transition preserves Q and [z] because support already satisfies the chain constraints."
+  representation_grade_transition_invariant: false
+  dynamics_selected: false
+  action_defined: false
+  physical_time_defined: false
+  transition_weight_defined: false
+  probability_semantics_defined: false
+  interpretation_limit: "The transition grammar is kinematic admissibility, not an equation of motion, Noether theorem, physical conservation law, or adopted matter dynamics."
+
+decision_criteria:
+  - "minimum explicit assumption delta beyond the fixed P7-T01 basis"
+  - "one reproducible future equation or update law"
+  - "one basic conserved normalization or constraint structure with imposed and derived parts separated"
+  - "finite positive null interacting and degenerate controls"
+  - "source-presentation naturality"
+  - "no target atlas metric detector stress-energy coupling or GR import"
+  - "one bounded Candidate Constructor AgentJob"
+
+branch_comparison:
+  - branch_id: "source_action"
+    disposition: "lawful_future_option_not_selected"
+    minimum_added_primitives:
+      - "a source-only history space or ordered configuration sequence"
+      - "a scalar codomain and aggregation rule for the action"
+      - "source-side pairings or weights for occupations currents defects and interactions"
+      - "a discrete variation calculus and endpoint conditions"
+      - "constraint enforcement and source-history symmetry data"
+      - "all interaction coefficients and scales with declared source provenance"
+    reproducible_future_equation: "A discrete stationarity or Euler-Lagrange-type equation is possible only after the history and variation structures are supplied."
+    conserved_or_constraint_target: "A later packet could derive a candidate-relative identity from a declared action symmetry, but it must separate the imposed transition constraints from any variational consequence."
+    strengths:
+      - "unifies free interaction and symmetry terms"
+      - "could eventually support the later action and stress-energy burden"
+    liabilities:
+      - "largest assumption delta"
+      - "integer occupations make ordinary variation ill typed without another construction"
+      - "kinetic norm volume time and scale choices create strong target-import pressure"
+    constructibility: "medium_low_for_one_bounded_job"
+    target_import_risk: "High: familiar action terms can silently import a target metric volume proper time locality or desired GR behavior."
+    target_import_required: false
+    executed_here: false
+
+  - branch_id: "source_evolution_equation"
+    disposition: "lawful_future_option_not_selected"
+    minimum_added_primitives:
+      - "a source-only discrete update or semigroup parameter"
+      - "a typed operator domain extending the discrete configuration set"
+      - "an explicit update operator or generator"
+      - "any adjoint pairing incidence weights or Laplacian data"
+      - "initial conditions constraint propagation and well-posedness conventions"
+      - "a source-only interaction nonlinearity"
+    reproducible_future_equation: "A finite difference or semigroup update is possible only after the update index, operator domain, and generator are supplied."
+    conserved_or_constraint_target: "A later packet could prove admissibility and sector preservation under the chosen update and characterize fixed or degenerate states."
+    strengths:
+      - "most direct later input for propagation analysis"
+      - "states initial-value and constraint-propagation questions explicitly"
+    liabilities:
+      - "P7-T01 supplies no physical or formal evolution parameter"
+      - "incidence boundary maps do not determine an adjoint generator or norm"
+      - "sector preservation may be designed into the operator rather than independently explained"
+    constructibility: "medium_for_one_bounded_job"
+    target_import_risk: "Medium-high: physical time continuum derivatives target causal structure inner products or metric-tuned coefficients can be imported by familiar equation notation."
+    target_import_required: false
+    executed_here: false
+
+  - branch_id: "source_transition_law"
+    disposition: "selected_for_one_future_constructive_packet"
+    minimum_added_primitives:
+      - "a finite source-only control subset of admissible configurations and transition tuples"
+      - "a discrete composition index explicitly denied physical-time meaning"
+      - "nonnegative transition weights and one exact normalization convention"
+      - "support only on valid P7-T01 transition tuples and endpoints"
+      - "source-presentation equivariance of the transition assignment"
+      - "a source-only factorization rule distinguishing independent and interacting updates"
+      - "exact valid-null and degenerate-state conventions"
+    reproducible_future_equation: "A later packet can derive one finite normalized transition-update equation from the constructed kernel and declared initial control data."
+    conserved_or_constraint_target: "A later packet can prove normalization, support closure, source-presentation equivariance, and distribution-level preservation of the candidate sector coordinates while labeling the P7-T01 chain constraints as imposed."
+    strengths:
+      - "acts directly on the already typed P7-T01 transition grammar"
+      - "adds no differentiable configuration geometry history action target metric or inner product"
+      - "supports finite positive null interacting and degenerate controls"
+      - "highest one-job auditability"
+    liabilities:
+      - "weights normalization and update index are new proposal inputs"
+      - "a finite control bound is a regulator rather than a canonical cutoff"
+      - "equivariance may leave a nonunique or degenerate kernel"
+      - "a kernel supplies no energy action continuum principal symbol or physical time"
+    constructibility: "high_for_one_bounded_job"
+    target_import_risk: "Low-medium: weights must not be tuned from target distance causal separation detector response coupling or benchmark success, and normalized weights must not be called empirical probabilities."
+    target_import_required: false
+    executed_here: false
+
+recommendation:
+  selected_branch: "source_transition_law"
+  selected_next_packet_type: "ontology_law_research_packet"
+  selected_next_route_family: "ontology-law-research-packet"
+  selected_next_role_family: "candidate-constructor@0.2.0"
+  selected_next_plan_task_id: "P7-T02"
+  proposed_future_candidate_id: "SourceMatterFiniteTransitionKernelCandidate_v1"
+  future_candidate_status: "proposal-only"
+  decision_identity: "P7T02-SOURCE-MATTER-DYNAMICS-BRANCH-SELECTION-001"
+  decision_basis: "The transition-law branch reuses the exact finite P7-T01 endpoint and constraint grammar and adds only a bounded source-domain update index weights normalization support equivariance interaction factorization and degenerate-state convention. The action and evolution branches first require history variation or operator-domain structures with larger target-import exposure."
+  theoretical_method: "Construct in the future a finite source-only transition system whose kernel is supported on P7-T01 admissible tuples, normalized, and equivariant under declared source-presentation isomorphisms; derive the finite update, normalization, support, and candidate-sector consequences while keeping the update index and weights nonphysical."
+  minimum_future_assumptions:
+    - "A finite control subset of P7-T01 admissible configurations and transition tuples is declared by source-only bounds."
+    - "A discrete update index is source bookkeeping and is not physical time, duration, or causal order."
+    - "A nonnegative transition-weight system and exact row-normalization convention are declared."
+    - "Kernel support is confined to valid P7-T01 transition tuples and valid endpoints."
+    - "Kernel assignments are equivariant under the fixed compatible source-presentation transformations."
+    - "A source-only composition and factorization rule distinguishes independent from interacting updates."
+    - "Null and degenerate states have exact conventions distinct from malformed and underdetermined records."
+    - "No coefficient support relation cutoff or control datum is inferred from target geometry detector coupling GR or benchmark behavior."
+  future_mathematical_deliverables:
+    - "one exact finite control-domain definition with provenance for every added primitive"
+    - "one explicit normalized source transition kernel supported only on P7-T01 admissible records"
+    - "one reproducible finite transition-update equation with initial control data"
+    - "one derivation of normalization and update closure"
+    - "one proof of candidate-sector preservation with imposed kinematics separated from kernel consequences"
+    - "one source-presentation equivariance theorem or one exact scoped obstruction"
+    - "positive null interacting and degenerate finite controls"
+    - "one assumption ledger and no-target-import audit"
+  positive_and_degenerate_controls:
+    - "positive: at least one enabled nonidentity transition with nonzero normalized update"
+    - "null: an explicit convention for the valid P7-T01 null configuration without vacuum language"
+    - "interacting: one nonfactorizing multi-occupation update satisfying fixed chain constraints"
+    - "degenerate: one valid state with no nonidentity enabled move or orbit-degenerate assignment"
+    - "malformed: fail closed on typing continuity defect normalization or no-import failure"
+  relation_only_fallback: "If no nontrivial equivariant normalized weights can be constructed without undeclared source data, retain the support relation as the proposal-only transition-law result and return a precise scoped obstruction for the stronger kernel."
+  preserves_claim_blocks: true
+  requires_human_gate: false
+  human_gate_reason: "A conservative proposal-only source-side construction remains available; no canonical ontology edit, adoption, Gate Chair verdict, or other protected authority is requested."
+  selected_dynamics_executed_here: false
+
+ontology_law_research_packet:
+  route: "ontology-law-research-packet"
+  trigger_classification: "derivation_critical_missing_source_law"
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "Build one explicit source matter action evolution equation or transition law and derive its basic conserved or constraint structure."
+  missing_source_law: "A source-derived selector, rate, weight, or transition rule that chooses or weights P7-T01 kinematically admissible transitions and determines a composable source update."
+  underdetermination_statement: "Current ontology and the proposal-only P7-T01 candidate do not derive which admissible source transition occurs, how alternatives are weighted, or how updates compose."
+  no_go_theorem_status: "not_proved"
+  adoption_status:
+    current_adoption: "blocked"
+    continuation: "open"
+    status_pair: "blocked_adoption_open_continuation"
+  packet_payload_mode: "candidate_law_payload"
+  candidate_law_payload:
+    future_candidate_id: "SourceMatterFiniteTransitionKernelCandidate_v1"
+    status_label: "proposal-only"
+    source_side_definition: "One finite normalized source transition kernel supported on P7-T01 admissible tuples and equivariant under declared source-presentation changes."
+    derivation_from_current_ontology: false
+    conservative_source_extension_possible: true
+    target_import_allowed: false
+    selected_dynamics_executed_here: false
+  exact_gr_recovery_obligations:
+    - "keep exact GR as a target benchmark rather than a source premise"
+    - "derive any later effective geometry without tuning the transition kernel to target behavior"
+    - "derive detector semantics common propagation universal coupling action and stress energy in later distinct burdens"
+    - "derive Einstein equations only after their named burden"
+    - "retain protected human authority for ontology source-law or benchmark adoption"
+  no_target_import_audit_scope:
+    forbidden_inputs:
+      - "target atlas topology metric cone volume proper time or continuum coordinate derivative"
+      - "detector response empirical particle behavior stress energy or matter coupling"
+      - "desired Einstein-equation or exact-GR benchmark recovery"
+      - "generated derivative registry validator checkpoint or route authority"
+  human_gate_request:
+    required_before_adoption: true
+    requested_decision: ""
+    exact_requested_ontology_edit: ""
+
+source_extension_classification:
+  category: "proposal-only source transition selection rule"
+  relation_to_current_ontology: "not_derived"
+  extension_kind: "conservative definitional source extension candidate"
+  new_ontology_primitive_status: "proposal-only and unadopted"
+  target_gr_import: "forbidden"
+  adoption_status: "blocked_adoption_open_continuation"
+  source_extension_category: "ontology_law_research_packet"
+  source_extension_import_classification: "source-only conservative extension candidate; not current-ontology derivation and not target-GR import"
+
+rejected_branch_reasons:
+  - branch_id: "source_action"
+    status: "not_selected_now_not_globally_rejected"
+    reason: "Requires the largest prior structure package: histories scalar aggregation pairings discrete variation constraints interactions and scales."
+    reopening_condition: "A source-only history space variation calculus and pairing package is separately derived or justified."
+  - branch_id: "source_evolution_equation"
+    status: "not_selected_now_not_globally_rejected"
+    reason: "Requires a source update parameter operator domain generator adjoint or weights initial data and well-posedness before the existing transition grammar can become an equation."
+    reopening_condition: "A transition construction supplies a source update semantics and exact operator domain without target import."
+
+distance_to_gr:
+  changed: false
+  effect: "selector_only_no_distance_delta"
+  burden_id: "matter_coupling"
+  milestone: "matter_coupling"
+  ledger_row_updated: false
+  downstream_unlocked:
+    - "one P7-T02 Candidate Constructor transition-law packet after governed checkpoint"
+  downstream_still_blocked:
+    - "P7-T02 source dynamics until the selected packet is constructed and validated"
+    - "P7-T03 operational devices"
+    - "P7-T04 principal symbols and common propagation"
+    - "P7-T05 universal coupling"
+    - "P7-T06 matter action and stress energy"
+    - "P7-T08 adoption"
+    - "Einstein equations"
+    - "benchmark promotion"
+  explanation: "The selector adds an auditable route decision but no dynamics object, equation, solution, physical interpretation, or Distance-to-GR movement."
+
+limitations:
+  - "No transition weights rates probabilities action evolution equation solution trajectory or physical law are defined here."
+  - "The future finite control bound and transition weights remain unconstructed proposal inputs."
+  - "Sector preservation on supported paths remains conditional on imposed P7-T01 kinematics and is not a Noether or physical conservation theorem."
+  - "An equivariant nontrivial normalized kernel may be nonunique or degenerate; the future job must construct it or return an exact scoped obstruction."
+  - "The action and evolution branches remain lawful later options and are not globally rejected."
+  - "No physical interpretation of the update index or normalized weights is available."
+  - "The kernel's support relation is primary; normalized weights remain proposal-only coefficients and must not be interpreted as rates, probabilities, frequencies, or empirical propensities."
+
+authority_flags:
+  canonical_ontology_modified: false
+  source_law_adopted: false
+  matter_ontology_adopted: false
+  selected_dynamics_executed_here: false
+  physical_time_established: false
+  physical_probability_established: false
+  physical_conservation_law_established: false
+  detector_semantics_established: false
+  effective_geometry_assumed: false
+  matter_action_established: false
+  stress_energy_established: false
+  matter_coupling_derived: false
+  einstein_equations_derived: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_performed: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+  completed_derivation_claimed: false
+
+conclusion:
+  decision: "Select one future SourceMatterFiniteTransitionKernelCandidate_v1 construction under candidate-constructor@0.2.0 on the ontology-law-research-packet route."
+  exact_status: "selector-only draft/control decision; blocked_adoption_open_continuation"
+  selected_dynamics_executed_here: false

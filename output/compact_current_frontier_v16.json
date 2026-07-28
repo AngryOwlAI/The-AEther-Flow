@@ -2,7 +2,7 @@
   "schema_id": "compact_current_frontier_v16",
   "generated_from": [
     "research_control/program_state.yaml",
-    "research_control/handoffs/handoff-0889.yaml",
+    "research_control/handoffs/handoff-0890.yaml",
     "registries/DISTANCE_TO_GR_LEDGER.csv",
     "registries/METRIC_USE_LEDGER.csv",
     "research_control/current_frontier.md",
@@ -11,17 +11,17 @@
     "research_control/design/active_state_bifurcation_policy_v1.md"
   ],
   "active_state": {
-    "active_task_id": "RT-20260727-007",
-    "latest_handoff_id": "handoff-0889",
-    "current_status": "p7_t01_source_matter_ontology_target_complete_p7_t02_selector_ready_for_checkpoint",
+    "active_task_id": "RT-20260727-008",
+    "latest_handoff_id": "handoff-0890",
+    "current_status": "p7_t02_selector_complete_transition_kernel_construction_ready_for_checkpoint",
     "v15_completed": false,
     "v16_completed": false,
     "v16_plan_registered": true
   },
   "active_state_bifurcation": {
-    "latest_research_task_id": "RT-20260727-007",
-    "latest_research_handoff_id": "handoff-0889",
-    "latest_research_next_action": "Run one governed checkpoint for AJ-RT-20260727-007-001. Only after it commits may one fresh bounded theoretical-continuation-selector@0.1.0 packet choose exactly one non-promotional P7-T02 source matter action evolution-equation or transition-law construction; it may not execute the selected dynamics packet in the selector task.",
+    "latest_research_task_id": "RT-20260727-008",
+    "latest_research_handoff_id": "handoff-0890",
+    "latest_research_next_action": "Run one governed checkpoint for AJ-RT-20260727-008-001. Only after it commits may one fresh bounded candidate-constructor@0.2.0 packet continue P7-T02 by constructing or precisely obstructing SourceMatterFiniteTransitionKernelCandidate_v1 under the ontology-law-research-packet route.",
     "latest_project_system_task_id": "none",
     "latest_project_system_status": "none",
     "latest_project_system_sidecar_task_id": "none",
@@ -30,8 +30,8 @@
     "next_research_route_source": "latest_research_handoff"
   },
   "next_route": {
-    "route_id": "v21_p7_t02_source_matter_dynamics_packet_selector",
-    "role_family": "theoretical-continuation-selector@0.1.0",
+    "route_id": "v21_p7_t02_construct_source_matter_finite_transition_kernel_v1",
+    "role_family": "candidate-constructor@0.2.0",
     "target_derivation_milestone": "matter_coupling",
     "milestone_burden": "Build one explicit source matter action evolution equation or transition law and derive its basic conserved or constraint structure.",
     "requires_human_gate": false
@@ -328,8 +328,8 @@
   ],
   "distance_to_gr": {
     "delta": {
-      "effect": "proposal_only_source_matter_ontology_target",
-      "changed": true,
+      "effect": "no_distance_delta",
+      "changed": false,
       "milestone": "matter_coupling",
       "burden_id": "matter_coupling"
     },
@@ -621,7 +621,7 @@
         "layer": "post_checkpoint",
         "status": "PENDING",
         "evidence": [
-          "One governed checkpoint remains; P7-T02 is unexecuted."
+          "One governed checkpoint remains; P7-T02 construction is unexecuted."
         ]
       }
     ]

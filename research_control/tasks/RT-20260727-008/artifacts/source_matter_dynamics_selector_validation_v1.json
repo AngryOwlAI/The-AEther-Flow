@@ -1,0 +1,327 @@
+{
+  "check_count": 60,
+  "checks": [
+    {
+      "check_id": "selection_identity",
+      "detail": "The fused selector artifact has the exact task-local identity and status.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "fixed_candidate",
+      "detail": "The P7-T01 proposal-only candidate remains the fixed comparison basis.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "kinematics_not_dynamics",
+      "detail": "P7-T01 transition admissibility is not reclassified as dynamics or action.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "three_branch_coverage",
+      "detail": "Action, evolution-equation, and transition-law branches are each compared once.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "branch_assumptions:source_action",
+      "detail": "source_action names at least two exact added primitives.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "branch_constraint_target:source_action",
+      "detail": "source_action names a future conserved or constraint target.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "branch_target_import:source_action",
+      "detail": "source_action names import risk while requiring no target import.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "branch_not_executed:source_action",
+      "detail": "source_action remains unexecuted in the selector.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "branch_assumptions:source_evolution_equation",
+      "detail": "source_evolution_equation names at least two exact added primitives.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "branch_constraint_target:source_evolution_equation",
+      "detail": "source_evolution_equation names a future conserved or constraint target.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "branch_target_import:source_evolution_equation",
+      "detail": "source_evolution_equation names import risk while requiring no target import.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "branch_not_executed:source_evolution_equation",
+      "detail": "source_evolution_equation remains unexecuted in the selector.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "branch_assumptions:source_transition_law",
+      "detail": "source_transition_law names at least two exact added primitives.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "branch_constraint_target:source_transition_law",
+      "detail": "source_transition_law names a future conserved or constraint target.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "branch_target_import:source_transition_law",
+      "detail": "source_transition_law names import risk while requiring no target import.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "branch_not_executed:source_transition_law",
+      "detail": "source_transition_law remains unexecuted in the selector.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "selected_branch",
+      "detail": "Exactly the source-transition-law branch is selected.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "selected_packet_type",
+      "detail": "The selected theoretical packet type is ontology_law_research_packet.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "selected_route_and_role",
+      "detail": "The future route and execution-role family are exact.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "future_candidate_identity",
+      "detail": "The future proposal-only transition-kernel candidate has one stable identity.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "future_assumption_budget",
+      "detail": "The future packet names at least five explicit source-side assumptions.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "future_deliverables",
+      "detail": "The future packet names at least five mathematical deliverables.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "future_controls",
+      "detail": "The future packet requires positive, null, interacting, and degenerate controls.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "selector_only",
+      "detail": "The selected dynamics packet is not executed in this task.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "claim_blocks",
+      "detail": "The recommendation explicitly preserves claim blocks.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "ontology_route_trigger",
+      "detail": "The ontology-law route is used only for a derivation-critical missing transition law.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "open_continuation_status",
+      "detail": "Current adoption is blocked while same-milestone continuation remains open.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "no_go_boundary",
+      "detail": "No global or local impossibility theorem is inferred from underdetermination.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "conflict_review",
+      "detail": "The parent conflict review resolves the child analyses with zero blockers.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "child_selection:child_phys_math",
+      "detail": "child_phys_math independently selects the unexecuted transition-law branch.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "child_selection:child_phys_phil",
+      "detail": "child_phys_phil independently selects the unexecuted transition-law branch.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "parent_child_contract",
+      "detail": "The one outer AgentJob records two completed internal child units.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "authority:canonical_ontology_modified",
+      "detail": "authority_flags.canonical_ontology_modified is false.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "authority:source_law_adopted",
+      "detail": "authority_flags.source_law_adopted is false.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "authority:matter_ontology_adopted",
+      "detail": "authority_flags.matter_ontology_adopted is false.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "authority:selected_dynamics_executed_here",
+      "detail": "authority_flags.selected_dynamics_executed_here is false.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "authority:physical_time_established",
+      "detail": "authority_flags.physical_time_established is false.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "authority:physical_probability_established",
+      "detail": "authority_flags.physical_probability_established is false.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "authority:physical_conservation_law_established",
+      "detail": "authority_flags.physical_conservation_law_established is false.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "authority:detector_semantics_established",
+      "detail": "authority_flags.detector_semantics_established is false.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "authority:effective_geometry_assumed",
+      "detail": "authority_flags.effective_geometry_assumed is false.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "authority:matter_action_established",
+      "detail": "authority_flags.matter_action_established is false.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "authority:stress_energy_established",
+      "detail": "authority_flags.stress_energy_established is false.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "authority:matter_coupling_derived",
+      "detail": "authority_flags.matter_coupling_derived is false.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "authority:einstein_equations_derived",
+      "detail": "authority_flags.einstein_equations_derived is false.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "authority:benchmark_promotion_authorized",
+      "detail": "authority_flags.benchmark_promotion_authorized is false.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "authority:physics_promotion_authorized",
+      "detail": "authority_flags.physics_promotion_authorized is false.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "authority:proof_authority",
+      "detail": "authority_flags.proof_authority is false.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "authority:publication_authorized",
+      "detail": "authority_flags.publication_authorized is false.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "authority:push_performed",
+      "detail": "authority_flags.push_performed is false.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "authority:global_no_go_claimed",
+      "detail": "authority_flags.global_no_go_claimed is false.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "authority:future_source_extension_impossibility_claimed",
+      "detail": "authority_flags.future_source_extension_impossibility_claimed is false.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "authority:completed_derivation_claimed",
+      "detail": "authority_flags.completed_derivation_claimed is false.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "task_boundary",
+      "detail": "The task is bound to the exact P7-T02 selector claim boundary.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "source_hash:research_control/handoffs/handoff-0889.yaml",
+      "detail": "research_control/handoffs/handoff-0889.yaml matches its admitted SHA-256.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "source_hash:research_control/tasks/RT-20260727-007/artifacts/source_matter_ontology_and_sector_taxonomy_v1.tex",
+      "detail": "research_control/tasks/RT-20260727-007/artifacts/source_matter_ontology_and_sector_taxonomy_v1.tex matches its admitted SHA-256.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "source_hash:research_control/tasks/RT-20260727-007/artifacts/source_matter_ontology_spec_v1.yaml",
+      "detail": "research_control/tasks/RT-20260727-007/artifacts/source_matter_ontology_spec_v1.yaml matches its admitted SHA-256.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "source_hash:research_control/tasks/RT-20260727-007/artifacts/source_matter_sector_charge_taxonomy_v1.yaml",
+      "detail": "research_control/tasks/RT-20260727-007/artifacts/source_matter_sector_charge_taxonomy_v1.yaml matches its admitted SHA-256.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "source_hash:research_control/tasks/RT-20260727-007/artifacts/source_matter_assumption_dependency_table_v1.yaml",
+      "detail": "research_control/tasks/RT-20260727-007/artifacts/source_matter_assumption_dependency_table_v1.yaml matches its admitted SHA-256.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "source_hash:research_control/tasks/RT-20260727-007/jobs/completions/AJC-AJ-RT-20260727-007-001.yaml",
+      "detail": "research_control/tasks/RT-20260727-007/jobs/completions/AJC-AJ-RT-20260727-007-001.yaml matches its admitted SHA-256.",
+      "status": "PASS"
+    }
+  ],
+  "claim_boundary_summary": "One source-transition-law construction packet is selected but not executed; no source law, action, probability, physical conservation, ontology, detector, geometry, stress energy, coupling, GR, benchmark, proof, publication, push, no-go, or completed derivation is established.",
+  "failure_count": 0,
+  "finding_counts": {
+    "adopted_source_law_count": 0,
+    "child_output_count": 2,
+    "compared_branch_count": 3,
+    "executed_dynamics_packet_count": 0,
+    "selected_branch_count": 1,
+    "unresolved_blocking_conflict_count": 0
+  },
+  "job_id": "AJ-RT-20260727-008-001",
+  "schema_id": "source_matter_dynamics_selector_validation_v1",
+  "status": "PASS",
+  "task_id": "RT-20260727-008",
+  "validator_ids": [
+    "p7_t02_three_branch_comparison_v1",
+    "p7_t02_theoretical_decision_output_v1",
+    "p7_t02_ontology_law_route_boundary_v1",
+    "p7_t02_parent_child_synthesis_v1",
+    "p7_t02_source_hash_guard_v1",
+    "p7_t02_authority_flag_guard_v1"
+  ]
+}

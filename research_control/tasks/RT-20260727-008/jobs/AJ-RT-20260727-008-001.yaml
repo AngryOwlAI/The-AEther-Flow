@@ -1,0 +1,479 @@
+job_id: "AJ-RT-20260727-008-001"
+task_id: "RT-20260727-008"
+decision_id: "DDR-20260727-008"
+role_id: "theoretical-continuation-selector"
+role_version: "0.1.0"
+execution_role_ref: "theoretical-continuation-selector@0.1.0--RT-20260727-008"
+status: "completed"
+validation_status: "PASS"
+requires_human_gate: false
+created_at: "2026-07-28T02:04:36Z"
+started_at: "2026-07-28T02:04:36Z"
+completed_at: "2026-07-28T02:23:29Z"
+completion_path: "research_control/tasks/RT-20260727-008/jobs/completions/AJC-AJ-RT-20260727-008-001.yaml"
+objective: "Execute only the P7-T02 theoretical packet selection by comparing source-action, source-evolution-equation, and source-transition-law branches and selecting exactly one future constructive packet without executing it."
+target_derivation_milestone: "matter_coupling"
+milestone_burden: "Build one explicit source matter action evolution equation or transition law and derive its basic conserved or constraint structure."
+route_label: "theoretical-continuation-selector"
+route_reason: "Handoff-0889, committed P7-T01 checkpoint 1b96356423eec36a6e1aad5bc54655fd8fd32c3c, v21 P7-T02, and immutable generation 141 select one bounded source-matter dynamics packet decision."
+immutable_route_sha256: "e7bb359ac779ce2f81653b8d24efb2a69cf30e164b04a7c7224b4fa3c322bd7a"
+plan_task_id: "P7-T02"
+recommendation_ids:
+  - "V21-R21"
+  - "V21-R22"
+  - "V21-R25"
+source_extension_classification_required: true
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 141
+  passes_consumed: 130
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:141"
+  handoff_token: "66faf7605903b8b9bdea8f2c80531aa80c3ab2e260654f89"
+  relay_claim_token: "71edac2c24941c47da295f803d68c1f5a4ca59f4ac68a21f"
+  route_work_item_id: "P7-T02"
+  route_worker_skill: "continue-research"
+  route_sha256: "e7bb359ac779ce2f81653b8d24efb2a69cf30e164b04a7c7224b4fa3c322bd7a"
+  worker_skill: "continue-research"
+  worker_invocation_count: 1
+
+mathematical_decisiveness_contract:
+  contract_path: "research_control/design/mathematical_decisiveness_completion_contract.md"
+  schema_path: ".agents/schemas/PHYSICS_COMPLETION_DECISIVENESS_SCHEMA.md"
+  enforcement_mode: "hard_failure"
+  active_after: "2026-06-21T02:32:39Z"
+
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "physics"
+  payload_type: "route_decision"
+  candidate_family: "V21-P7-T02-SOURCE-MATTER-DYNAMICS-PACKET-SELECTION-V1"
+  assumption_delta:
+    - "Hold SourceMatterIncidenceCandidate_v1, its finite incidence complex, configuration data, invariant sector, and admissible transition grammar fixed at proposal-only status."
+    - "Treat the P7-T01 chain-level constraints as kinematic admissibility only; they do not select a physical transition, rate, probability, time evolution, or action."
+    - "Compare each branch only after naming its added source-side time orientation measure inner-product variational rate or normalization primitives."
+    - "Require the selected future packet to produce a reproducible equation and basic constraint or conserved structure with positive null interacting and degenerate branches."
+    - "Admit no target atlas metric cone detector stress-energy coupling GR benchmark validator or route result as a source-side physical premise."
+  materiality_basis: "P7-T01 leaves three materially different dynamics extensions open and encodes no choice among them. This packet supplies the first assumption-audited branch comparison and one exact future packet specification."
+  payload_details:
+    resolves_new_route_decision: true
+    decision_identity: "P7T02-SOURCE-MATTER-DYNAMICS-BRANCH-SELECTION-001"
+    not_already_encoded_evidence: "Handoff-0889 names three branches but does not rank them, identify their minimum added primitives, or select a construction role and mathematical deliverables."
+    compared_branches:
+      - "source_action"
+      - "source_evolution_equation"
+      - "source_transition_law"
+    selected_dynamics_packet_executed_here: false
+  source_basis:
+    - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+    - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+    - "research_control/handoffs/handoff-0889.yaml"
+    - "TEX-V21-P7-T01-SOURCE-MATTER-ONTOLOGY-SECTOR-TAXONOMY-V1"
+    - "research_control/tasks/RT-20260727-007/artifacts/source_matter_ontology_spec_v1.yaml"
+    - "research_control/tasks/RT-20260727-007/artifacts/source_matter_sector_charge_taxonomy_v1.yaml"
+    - "research_control/tasks/RT-20260727-007/artifacts/source_matter_assumption_dependency_table_v1.yaml"
+    - "research_control/tasks/RT-20260727-007/jobs/completions/AJC-AJ-RT-20260727-007-001.yaml"
+  expected_artifact_paths:
+    - "research_control/tasks/RT-20260727-008/artifacts/source_matter_dynamics_packet_selection_v1.yaml"
+    - "research_control/tasks/RT-20260727-008/artifacts/parent_conflict_review_p7_t02_source_matter_dynamics_selector.yaml"
+    - "research_control/tasks/RT-20260727-008/artifacts/parent_fusion_notes_p7_t02_source_matter_dynamics_selector.md"
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+
+family_freeze_admission:
+  schema_id: "family_freeze_route_admission_v1"
+  policy_id: "family_freeze_reopening_policy_v1"
+  route_id: "v21_p7_t02_source_matter_dynamics_packet_selection"
+  family_id: "V21-P7-T02-SOURCE-MATTER-DYNAMICS-PACKET-SELECTION-V1"
+  family_identity_sha256: "de265b40e94e8fae12160b980dd7f8112d722716d9ee659f29180f6423c3e5b2"
+  assumption_sha256es:
+    - "bfb1100682cf9783a99deed8a915b8c89d283629a7b17aabb61d7e59d26b7cf8"
+    - "811263b79508a5a2de19f19d54c7f331d3a61a2456d7cc93eea430b6781f1f1f"
+  route_kind: "primitive_investigation"
+  detected_match_basis: []
+  reopening:
+    requested: false
+    class: "none"
+  distinct_branch:
+    branch_identity: "source_matter_dynamics_after_p7_t01"
+    material_difference_basis: "This decision changes milestone sub-burden and compares source dynamics primitives; it does not reconstruct or reopen any frozen EqSrc or P6 effective-geometry candidate."
+    reconstructs_frozen_candidate: false
+    expected_artifact_paths:
+      - "research_control/tasks/RT-20260727-008/artifacts/source_matter_dynamics_packet_selection_v1.yaml"
+  authority_limits:
+    local_family_freeze_preserved: true
+    global_no_go_claimed: false
+    automatic_candidate_adoption: false
+    theorem_truth_inferred: false
+    ontology_modified: false
+    physics_promotion_authorized: false
+
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  expected_durable_outputs:
+    physics:
+      - "research_control/tasks/RT-20260727-008/artifacts/source_matter_dynamics_packet_selection_v1.yaml"
+      - "research_control/tasks/RT-20260727-008/artifacts/parent_conflict_review_p7_t02_source_matter_dynamics_selector.yaml"
+      - "research_control/tasks/RT-20260727-008/artifacts/parent_fusion_notes_p7_t02_source_matter_dynamics_selector.md"
+    project_system:
+      - "research_control/tasks/RT-20260727-008/artifacts/validate_source_matter_dynamics_selector.py"
+      - "research_control/tasks/RT-20260727-008/artifacts/source_matter_dynamics_selector_validation_v1.json"
+      - "research_control/tasks/RT-20260727-008/artifacts/source_matter_dynamics_selector_compact_receipt_v1.json"
+  acceptance_criteria:
+    physics:
+      - "all three branches are compared against one fixed P7-T01 source basis"
+      - "each branch names its minimum added primitive and target-import risk"
+      - "exactly one future packet type method role and mathematical payload are selected"
+      - "the selected dynamics remains unexecuted and proposal-only"
+    project_system:
+      - "task-local structural and claim-boundary validation passes"
+      - "documentation-impact claim-language and research-control checks pass"
+      - "one governed checkpoint records the bounded selector transaction"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: false
+    exception_id: ""
+    evidence_path: ""
+    evidence_sha256: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0889"
+  source_handoff_path: "research_control/handoffs/handoff-0889.yaml"
+  source_handoff_sha256: "5dabdb01ed339a3e276e42420c15f3700b37db58fd8a07d923ef8d65197607b8"
+  selected_plan_task_id: "P7-T02"
+  guard_outcome: "below_threshold"
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  parent:
+    execution_unit_id: "parent"
+    perspective: "physicist_mathematician_philosopher"
+    responsibilities:
+      - "hold P7-T01 formal objects and proposal-only status fixed"
+      - "enforce one shared claim boundary and no-target-import source restrictions"
+      - "review the mathematical and semantic child outputs for conflicts"
+      - "fuse exactly one future packet selection without executing it"
+  children:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260727-008/artifacts/child_phys_math_p7_t02_source_matter_dynamics_selector.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260727-008/artifacts/child_phys_phil_p7_t02_source_matter_dynamics_selector.yaml"
+      status: "completed"
+  conflict_policy:
+    review_path: "research_control/tasks/RT-20260727-008/artifacts/parent_conflict_review_p7_t02_source_matter_dynamics_selector.yaml"
+    max_resolution_rounds: 2
+    require_parallel_child_revision: true
+    unresolved_conflict_status: "blocked"
+  fusion_policy:
+    fusion_notes_path: "research_control/tasks/RT-20260727-008/artifacts/parent_fusion_notes_p7_t02_source_matter_dynamics_selector.md"
+    fused_output_path: "research_control/tasks/RT-20260727-008/artifacts/source_matter_dynamics_packet_selection_v1.yaml"
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+    final_output_replaces_old_single_role_artifact: true
+  outer_agentjob_count: 1
+  child_agentjob_count: 0
+  subagent_count: 2
+  rationale: "Two internal analytical perspectives independently compare mathematical feasibility and semantic authority inside one immutable worker invocation and one outer AgentJob; no child AgentJob or independent role authority is created."
+
+allowed_read_paths:
+  - "SOUL.md"
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".codex/skills/continue-research-continue-goal/SKILL.md"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - ".agents/roles/physics/theoretical-continuation-selector.v0.1.0.md"
+  - ".agents/roles/physics/candidate-constructor.v0.2.0.md"
+  - ".agents/schemas/**"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  - "research_control/design/**"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0889.yaml"
+  - "research_control/handoffs/handoff-0889.md"
+  - "research_control/tasks/RT-20260727-007/**"
+  - "research_control/tasks/RT-20260721-002/artifacts/ontology_regime_external_literature_matrix_v1.csv"
+  - "research_control/tasks/RT-20260721-002/artifacts/ontology_regime_primary_literature_bibliography_v1.yaml"
+  - "registries/**"
+
+allowed_write_paths:
+  - "research_control/tasks/RT-20260727-008/**"
+  - "research_control/handoffs/handoff-0890.yaml"
+  - "research_control/handoffs/handoff-0890.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/PDF_DERIVATIVE_REGISTRY.csv"
+  - "registries/PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "registries/TEX_SOURCE_REGISTRY.csv"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/pdf/**"
+  - "wiki/tex/**"
+
+allowed_generated_paths:
+  - ".local/**"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/pdf/**"
+  - "wiki/tex/**"
+
+forbidden_paths:
+  - "ontology/**"
+  - "manuscripts/**"
+  - "legacy_ontology/**"
+  - "html/**"
+  - "github-facing/**"
+  - "implementations_plans/**"
+  - ".agents/roles/**"
+  - ".codex/skills/**"
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "registries/METRIC_USE_LEDGER.csv"
+  - "research_control/tasks/RT-20260727-007/**"
+
+allowed_source_classes:
+  - "science_draft"
+  - "task_local_route_decision"
+  - "task_local_branch_comparison"
+  - "task_local_assumption_ledger"
+  - "task_local_precise_obstruction"
+  - "project_control"
+  - "registry"
+  - "role_contract"
+  - "generated_memory_derivative"
+
+forbidden_source_classes:
+  - "candidate_reconstruction"
+  - "canonical_ontology_write"
+  - "benchmark_promotion"
+  - "physics_claim_promotion"
+  - "source_law_adoption"
+  - "canonical_ontology_candidate_promotion"
+  - "selected_dynamics_packet_execution"
+  - "source_action_or_equation_construction"
+  - "transition_rate_kernel_or_probability_construction"
+  - "physical_ontology_adoption"
+  - "physical_charge_or_conservation_law_adoption"
+  - "target_atlas_or_metric_import"
+  - "effective_geometry_adoption"
+  - "stress_energy_or_matter_action"
+  - "detector_semantics"
+  - "matter_coupling_or_Einstein_equations"
+  - "gate_chair_verdict"
+  - "completed_derivation_claim"
+  - "global_theory_rejection"
+  - "future_source_extension_impossibility"
+  - "generated_derivative_authority"
+  - "proof_publication_or_push"
+
+approved_commands:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"source matter dynamics theoretical continuation selector action evolution transition law\" --limit 10 --json"
+  - "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python research_control/tasks/RT-20260727-008/artifacts/validate_source_matter_dynamics_selector.py --write-report --json"
+  - "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python research_control/tasks/RT-20260727-008/artifacts/validate_source_matter_dynamics_selector.py --check --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --check"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --check"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --write"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --check"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --json output/research_dependency_graph.json --markdown wiki/indexes/research_dependency_graph.md --dot output/research_dependency_graph.dot"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --check"
+  - ".venv/bin/python scripts/research_control/generate_claim_graph_v1.py --json output/claim_graph_v1.json"
+  - ".venv/bin/python scripts/research_control/generate_claim_graph_v1.py --check"
+  - ".venv/bin/python scripts/research_control/validate_claim_graph_v1.py --json"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --json-summary"
+  - ".venv/bin/python scripts/research_control/run_full_research_control_validation.py --json --tail-chars 2500"
+  - "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m unittest -v tests.test_research_control"
+  - ".venv/bin/python -m unittest discover -s tests"
+  - "git diff --check"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260727-008-001"
+
+required_validators:
+  - "memory_preflight"
+  - "query_memory_status"
+  - "query_memory_search_p7_t02"
+  - "task_local_source_matter_dynamics_selector"
+  - "parent_child_conflict_and_fusion_review"
+  - "classify_project_changes"
+  - "collect_project_improvement_signals"
+  - "validate_documentation_impact"
+  - "validate_claim_language"
+  - "validate_research_control"
+  - "run_full_research_control_validation"
+  - "bootstrap_memory_system"
+  - "unittest_discovery"
+  - "git_diff_check"
+  - "checkpoint_research_transaction"
+
+expected_outputs:
+  - "research_control/tasks/RT-20260727-008/artifacts/child_phys_math_p7_t02_source_matter_dynamics_selector.yaml"
+  - "research_control/tasks/RT-20260727-008/artifacts/child_phys_phil_p7_t02_source_matter_dynamics_selector.yaml"
+  - "research_control/tasks/RT-20260727-008/artifacts/parent_conflict_review_p7_t02_source_matter_dynamics_selector.yaml"
+  - "research_control/tasks/RT-20260727-008/artifacts/parent_fusion_notes_p7_t02_source_matter_dynamics_selector.md"
+  - "research_control/tasks/RT-20260727-008/artifacts/source_matter_dynamics_packet_selection_v1.yaml"
+  - "research_control/tasks/RT-20260727-008/artifacts/source_matter_dynamics_selector_compact_receipt_v1.json"
+  - "research_control/tasks/RT-20260727-008/artifacts/source_matter_dynamics_selector_validation_v1.json"
+  - "research_control/tasks/RT-20260727-008/artifacts/validate_source_matter_dynamics_selector.py"
+  - "research_control/tasks/RT-20260727-008/artifacts/source_matter_dynamics_selector_receipt.md"
+  - "research_control/tasks/RT-20260727-008/jobs/completions/AJC-AJ-RT-20260727-008-001.yaml"
+  - "research_control/handoffs/handoff-0890.yaml"
+  - "research_control/handoffs/handoff-0890.md"
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1047
+    relationship_row_count: 5229
+    semantic_row_count: 1047
+    vault_row_count: 1047
+    local_cache_only_warning_count: 0
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: true
+    refresh_performed: true
+    before_core_validation_status: "PASS"
+    before_freshness_status: "PASS"
+    before_local_retrieval_status: "WARN"
+    before_local_cache_only_warning_count: 9
+    after_core_validation_status: "PASS"
+    after_freshness_status: "PASS"
+    after_local_retrieval_status: "PASS"
+    after_local_cache_only_warning_count: 0
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"source matter dynamics theoretical continuation selector action evolution transition law\" --limit 10 --json"
+      query_type: "search"
+      query_text: "source matter dynamics theoretical continuation selector action evolution transition law"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+        - "MD-RESEARCH-CONTROL-TASK-INDEX"
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "db050d86db6c809fa099eedf267cd42027ad70b554046c9dcf177097af16e910"
+    - object_id: "MD-RESEARCH-CONTROL-TASK-INDEX"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/TASK_INDEX.md"
+      source_hash: "02c4dd0019d39a60892f8225d21bc6015583c4ca8cfd41febd97b865e123a8b5"
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+    - object_id: "TEX-V21-P7-T01-SOURCE-MATTER-ONTOLOGY-SECTOR-TAXONOMY-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260727-007/artifacts/source_matter_ontology_and_sector_taxonomy_v1.tex"
+      source_hash: "8d160217bf223078a11bc63fde6593c11c39d5b50d9c48fbad7b12084f8a752d"
+  failed_queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"P7-T02 source-matter dynamics\" --limit 10 --json"
+      result: "FTS parser treated punctuation as operators; no result influenced routing or claims"
+  authority_note: "Generated Obsidian wiki semantic relationship and .local retrieval surfaces are navigation or diagnostics only and are not authority."
+
+claim_boundary_id: "CB-V21-P7-T02-SOURCE-MATTER-DYNAMICS-SELECTOR-001"
+claim_boundary: "Compare only the source-action source-evolution-equation and source-transition-law branches against the fixed proposal-only P7-T01 candidate and select exactly one future packet with assumptions method role mathematical deliverables and claim blocks. Do not execute the selected dynamics; define rates probabilities actions equations solutions or physical time; edit or adopt canonical ontology or a source law; infer physical matter conservation detector geometry stress energy coupling or GR behavior; derive Einstein equations; promote a benchmark; publish; push; claim proof or completed derivation; globally reject the theory; or declare future source extensions impossible."
+documentation_impact_id: "DI-RT-20260727-008-001"
+completion_id: "AJC-AJ-RT-20260727-008-001"
+stop_conditions:
+  - "stop before any execution of the selected source dynamics packet"
+  - "stop before any canonical ontology edit source-law adoption or protected status"
+  - "stop if a branch comparison silently imports target atlas metric effective geometry detector stress energy coupling or GR behavior"
+  - "stop if exactly one future packet cannot be selected from canonical evidence"
+  - "stop on source-hash repository branch lease reasoning-effort or allowlist mismatch"
+  - "stop on unresolved parent-child conflict validation checkpoint or exact-path residue failure"
+  - "do not publish push claim completed derivation global rejection or future impossibility"

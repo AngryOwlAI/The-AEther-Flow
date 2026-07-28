@@ -612,6 +612,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-V21-P6-T08-GATE-B-REVIEW-RECEIPT-V1` `research_control/tasks/RT-20260727-004/artifacts/p6_t08_gate_b_review_receipt.md`
 - `MD-V21-P7-T01-PARENT-FUSION-SOURCE-MATTER-ONTOLOGY-V1` `research_control/tasks/RT-20260727-007/artifacts/parent_fusion_notes_p7_t01_source_matter_ontology.md`
 - `MD-V21-P7-T01-SOURCE-MATTER-ONTOLOGY-RECEIPT-V1` `research_control/tasks/RT-20260727-007/artifacts/source_matter_ontology_receipt.md`
+- `MD-V21-P7-T02-PARENT-FUSION-SOURCE-MATTER-DYNAMICS-SELECTOR-V1` `research_control/tasks/RT-20260727-008/artifacts/parent_fusion_notes_p7_t02_source_matter_dynamics_selector.md`
+- `MD-V21-P7-T02-SOURCE-MATTER-DYNAMICS-SELECTOR-RECEIPT-V1` `research_control/tasks/RT-20260727-008/artifacts/source_matter_dynamics_selector_receipt.md`
 - `MD-VALIDATOR-OPERATOR-WORKFLOW-PUBLICATION-BRIEF` `markdown/publication-briefs/validator-operator-workflow.publication-brief.md`
 
 ## pdf
@@ -1668,6 +1670,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-V21-P6-T08-GATE-B-REVIEW-RECEIPT-V1` `wiki/markdown/md-v21-p6-t08-gate-b-review-receipt-v1.md`
 - `WIKI-MD-V21-P7-T01-PARENT-FUSION-SOURCE-MATTER-ONTOLOGY-V1` `wiki/markdown/md-v21-p7-t01-parent-fusion-source-matter-ontology-v1.md`
 - `WIKI-MD-V21-P7-T01-SOURCE-MATTER-ONTOLOGY-RECEIPT-V1` `wiki/markdown/md-v21-p7-t01-source-matter-ontology-receipt-v1.md`
+- `WIKI-MD-V21-P7-T02-PARENT-FUSION-SOURCE-MATTER-DYNAMICS-SELECTOR-V1` `wiki/markdown/md-v21-p7-t02-parent-fusion-source-matter-dynamics-selector-v1.md`
+- `WIKI-MD-V21-P7-T02-SOURCE-MATTER-DYNAMICS-SELECTOR-RECEIPT-V1` `wiki/markdown/md-v21-p7-t02-source-matter-dynamics-selector-receipt-v1.md`
 - `WIKI-MD-VALIDATOR-OPERATOR-WORKFLOW-PUBLICATION-BRIEF` `wiki/markdown/md-validator-operator-workflow-publication-brief.md`
 - `WIKI-PDF-LEGACY-ONTOLOGY-AETHER-FLOW-CONSISTENCY` `wiki/pdf/pdf-legacy-ontology-aether-flow-consistency.md`
 - `WIKI-PDF-LEGACY-ONTOLOGY-AETHER-FLOW-DYNAMICS` `wiki/pdf/pdf-legacy-ontology-aether-flow-dynamics.md`

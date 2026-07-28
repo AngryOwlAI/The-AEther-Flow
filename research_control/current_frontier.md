@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260727-007` and `handoff-0889`.
+`RT-20260727-008` and `handoff-0890`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260727-007` |
-| Latest handoff ID | `handoff-0889` |
-| Current status | `p7_t01_source_matter_ontology_target_complete_p7_t02_selector_ready_for_checkpoint` |
+| Active task ID | `RT-20260727-008` |
+| Latest handoff ID | `handoff-0890` |
+| Current status | `p7_t02_selector_complete_transition_kernel_construction_ready_for_checkpoint` |
 | V16 completed | false |
-| Current route family | formalization or theorem (scientific) |
+| Current route family | integration or selection (scientific) |
 | Target derivation milestone | `matter_coupling` |
 | Current burden | `matter_coupling` |
-| Required next authority | After the governed checkpoint commits, one bounded theoretical-continuation-selector@0.1.0 packet may compare the action, evolution-equation, and transition-law branches for P7-T02 and select exactly one source-only constructive packet with explicit assumptions, mathematical payload, and no-promotion guards. |
-| Next recommended action | Run one governed checkpoint for AJ-RT-20260727-007-001. Only after it commits may one fresh bounded theoretical-continuation-selector@0.1.0 packet choose exactly one non-promotional P7-T02 source matter action evolution-equation or transition-law construction; it may not execute the selected dynamics packet in the selector task. |
+| Required next authority | After the governed checkpoint commits, one bounded candidate-constructor@0.2.0 packet may construct or precisely obstruct SourceMatterFiniteTransitionKernelCandidate_v1 using only declared source data, finite controls, nonphysical bookkeeping weights, exact normalization and support rules, and source-presentation equivariance. |
+| Next recommended action | Run one governed checkpoint for AJ-RT-20260727-008-001. Only after it commits may one fresh bounded candidate-constructor@0.2.0 packet continue P7-T02 by constructing or precisely obstructing SourceMatterFiniteTransitionKernelCandidate_v1 under the ontology-law-research-packet route. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260727-007` |
-| Latest research handoff ID | `handoff-0889` |
-| Latest research next action | Run one governed checkpoint for AJ-RT-20260727-007-001. Only after it commits may one fresh bounded theoretical-continuation-selector@0.1.0 packet choose exactly one non-promotional P7-T02 source matter action evolution-equation or transition-law construction; it may not execute the selected dynamics packet in the selector task. |
+| Latest research task ID | `RT-20260727-008` |
+| Latest research handoff ID | `handoff-0890` |
+| Latest research next action | Run one governed checkpoint for AJ-RT-20260727-008-001. Only after it commits may one fresh bounded candidate-constructor@0.2.0 packet continue P7-T02 by constructing or precisely obstructing SourceMatterFiniteTransitionKernelCandidate_v1 under the ontology-law-research-packet route. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260727-007/00_TASK.yaml`.
-- Active task objective: Define a proposal-only source-matter configuration space, sector and charge taxonomy, currents, defect classes, internal symmetry labels, source-invariant records, one nontrivial configuration, one null branch, and one malformed branch using only finite source incidence data.
-- Latest handoff path: `research_control/handoffs/handoff-0889.yaml`.
-- Latest handoff summary: P7-T01 constructs SourceMatterIncidenceCandidate_v1 as a task-local proposal-only finite source-matter ontology target. Primitive occupation and defect data determine charge chains representation grades and the invariant sector (Q,[z]); current and defect constraints are explicit; null nontrivial-neutral malformed and underdetermined branches remain distinct; and P7T01-THM-SOURCE-RELABELING-SECTOR-NATURALITY-001 is exact only inside the candidate. The ontology-target sub-burden narrows, but canonical adoption physical interpretation source dynamics detector semantics common propagation universal coupling stress energy effective geometry Einstein equations benchmark proof publication and completed derivation remain blocked.
-- Current route family: formalization or theorem (scientific).
-- Next recommended action: Run one governed checkpoint for AJ-RT-20260727-007-001. Only after it commits may one fresh bounded theoretical-continuation-selector@0.1.0 packet choose exactly one non-promotional P7-T02 source matter action evolution-equation or transition-law construction; it may not execute the selected dynamics packet in the selector task.
+- Active task path: `research_control/tasks/RT-20260727-008/00_TASK.yaml`.
+- Active task objective: Compare the proposal-only source action, evolution-equation, and transition-law branches against SourceMatterIncidenceCandidate_v1 and select exactly one bounded source-only constructive packet with explicit assumptions, mathematical payload, and no-promotion guards.
+- Latest handoff path: `research_control/handoffs/handoff-0890.yaml`.
+- Latest handoff summary: The P7-T02 selector holds SourceMatterIncidenceCandidate_v1 fixed, compares the source-action, source-evolution-equation, and source-transition-law branches, and selects one future SourceMatterFiniteTransitionKernelCandidate_v1 construction. Its support relation is primary and its normalized weights remain nonphysical proposal-only coefficients. The selector executes no dynamics, creates no Distance-to-GR delta, and leaves P7-T02 active for construction after checkpoint.
+- Current route family: integration or selection (scientific).
+- Next recommended action: Run one governed checkpoint for AJ-RT-20260727-008-001. Only after it commits may one fresh bounded candidate-constructor@0.2.0 packet continue P7-T02 by constructing or precisely obstructing SourceMatterFiniteTransitionKernelCandidate_v1 under the ontology-law-research-packet route.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -302,7 +302,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one governed checkpoint for AJ-RT-20260727-007-001. Only after it commits may one fresh bounded theoretical-continuation-selector@0.1.0 packet choose exactly one non-promotional P7-T02 source matter action evolution-equation or transition-law construction; it may not execute the selected dynamics packet in the selector task.
+Run one governed checkpoint for AJ-RT-20260727-008-001. Only after it commits may one fresh bounded candidate-constructor@0.2.0 packet continue P7-T02 by constructing or precisely obstructing SourceMatterFiniteTransitionKernelCandidate_v1 under the ontology-law-research-packet route.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -327,10 +327,10 @@ Validation layers:
 
 | Validation layer | Status | Meaning | Evidence |
 | --- | --- | --- | --- |
-| `pre_execution` | PASS | receipt complete | Generation 140 validated claimed and consumed the immutable P7-T01 route exactly once.<br>The P15-T04 dependency checkpoint 832f9cf9ba98061df40cdda2799d5a46661260bc was committed before execution. |
-| `completion_internal` | PASS | receipt complete | Task-local validation passes 68 of 68 checks.<br>The scratch TeX build resolves references and renders ten pages.<br>Two same-context child perspectives were fused with zero unresolved conflicts. |
-| `post_write` | PASS | receipt complete | Integrated task-local documentation-impact improvement-signal claim-language memory registry renderer and research-control gates pass. |
-| `post_checkpoint` | PENDING | open item; evidence must explain why | One governed checkpoint remains; P7-T02 is unexecuted. |
+| `pre_execution` | PASS | receipt complete | Generation 141 validated claimed and consumed the immutable P7-T02 selector route exactly once.<br>The P7-T01 dependency checkpoint 1b96356423eec36a6e1aad5bc54655fd8fd32c3c was committed before execution. |
+| `completion_internal` | PASS | receipt complete | Task-local validation passes 60 of 60 checks.<br>Two same-context child perspectives were fused with zero unresolved blocking conflicts. |
+| `post_write` | PASS | receipt complete | Integrated control documentation signal memory registry renderer and research-control gates are required before checkpoint. |
+| `post_checkpoint` | PENDING | open item; evidence must explain why | One governed checkpoint remains; P7-T02 construction is unexecuted. |
 
 Authorization layers:
 
@@ -357,9 +357,9 @@ Authorization layers:
 
 Legacy compatibility records:
 
-- active task: `RT-20260727-007`;
-- latest handoff: `handoff-0889`;
-- current status: `p7_t01_source_matter_ontology_target_complete_p7_t02_selector_ready_for_checkpoint`;
+- active task: `RT-20260727-008`;
+- latest handoff: `handoff-0890`;
+- current status: `p7_t02_selector_complete_transition_kernel_construction_ready_for_checkpoint`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -369,8 +369,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0889.yaml`
-- `research_control/tasks/RT-20260727-007/00_TASK.yaml`
+- `research_control/handoffs/handoff-0890.yaml`
+- `research_control/tasks/RT-20260727-008/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -386,7 +386,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0889*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0890*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

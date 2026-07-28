@@ -1,0 +1,340 @@
+schema_id: "v21_p7_t02_child_phys_phil_source_matter_dynamics_selector_v1"
+artifact_id: "P7T02-CHILD-PHYS-PHIL-SOURCE-MATTER-DYNAMICS-SELECTOR-V1"
+task_id: "RT-20260727-008"
+job_id: "AJ-RT-20260727-008-001"
+plan_task_id: "P7-T02"
+execution_unit_id: "child_phys_phil"
+perspective: "physicist_philosopher"
+status: "completed"
+review_context: "same_context_internal_parent_child_synthesis_input"
+target_derivation_milestone: "matter_coupling"
+milestone_burden: "Build one explicit source matter action evolution equation or transition law and derive its basic conserved or constraint structure."
+
+fixed_basis:
+  candidate_id: "SourceMatterIncidenceCandidate_v1"
+  candidate_status: "proposal-only"
+  artifact_status: "draft/control"
+  adoption_status: "blocked_adoption_open_continuation"
+  retained_objects:
+    - "finite augmented source-incidence complex K_src"
+    - "configuration Psi=(m,z), derived q and M, and sector (Q,[z])"
+    - "kinematic transition record (Psi_minus,J,w,Pi,Psi_plus)"
+    - "constraints q_plus-q_minus=partial_1 J and z_plus-z_minus=partial_2 w"
+    - "candidate-presentation isomorphisms and candidate-relative naturality"
+    - "distinct null, nontrivial-neutral, malformed, and underdetermined branches"
+  retained_absences:
+    - "no rule selects which admissible transition occurs"
+    - "no action, evolution equation, transition law, rate, probability, or solution"
+    - "no physical time, persistence, detector, geometry, stress-energy, coupling, or GR semantics"
+  comparison_rule: "Compare all branches against this unchanged proposal-only basis; do not infer dynamics from kinematic admissibility."
+
+source_basis:
+  - path: "research_control/tasks/RT-20260727-008/jobs/AJ-RT-20260727-008-001.yaml"
+    sha256: "9c67d7161242b4135c358ecc41e0d35b12cc41d3a9f0240f70d1926b7ef46dff"
+    use: "immutable selector scope and claim blocks"
+  - path: ".agents/roles/physics/theoretical-continuation-selector.v0.1.0.md"
+    sha256: "85550a50a4be3fc2b1fbf6e22b22c160b25923944276d0b555e75fb10380ff79"
+    use: "allowed packet types and routing discipline"
+  - path: ".agents/roles/physics/candidate-constructor.v0.2.0.md"
+    sha256: "f6534fd2950c2a6eefb8f2a4b255cd0794ceeb1462556be60af288bceb9d51d5"
+    use: "future bounded construction boundary"
+  - path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+    sha256: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+    use: "P7-T02 objective, planned Candidate Constructor role, and no-target rule"
+  - path: "research_control/handoffs/handoff-0889.yaml"
+    sha256: "5dabdb01ed339a3e276e42420c15f3700b37db58fd8a07d923ef8d65197607b8"
+    use: "fixed P7-T01 result and selector-only handoff"
+  - path: "research_control/design/gr_derivation_burden_map.md"
+    sha256: "8e9d44e3a18ecc8a2430a9c42497da3eb9911c2cf6cd714c1525c5d91551835e"
+    use: "matter-coupling milestone burden"
+  - path: "research_control/tasks/RT-20260727-007/artifacts/source_matter_ontology_and_sector_taxonomy_v1.tex"
+    object_id: "TEX-V21-P7-T01-SOURCE-MATTER-ONTOLOGY-SECTOR-TAXONOMY-V1"
+    sha256: "8d160217bf223078a11bc63fde6593c11c39d5b50d9c48fbad7b12084f8a752d"
+    use: "registered P7-T01 science-draft claim basis"
+  - path: "research_control/tasks/RT-20260727-007/artifacts/source_matter_ontology_spec_v1.yaml"
+    sha256: "a5563edddaff90ebab6ac4d3d4e2dc0425fea23b5f27c1c6174cb28b1f4652be"
+    use: "fixed objects, transition grammar, identity ladder, and authority limits"
+  - path: "research_control/tasks/RT-20260727-007/artifacts/source_matter_sector_charge_taxonomy_v1.yaml"
+    sha256: "0b7bb06a63b20469185badab4b2664eaa23d5b4e47752b953d51c2508f283c59"
+    use: "source-label semantics and overread guards"
+  - path: "research_control/tasks/RT-20260727-007/artifacts/source_matter_assumption_dependency_table_v1.yaml"
+    sha256: "c665dbc7522d4ee1b6aa01db14100689c8d9acc28c7e659c33b4272d32976991"
+    use: "stipulated assumptions and open dynamics burden"
+  - path: "research_control/tasks/RT-20260727-007/artifacts/child_phys_math_p7_t01_source_matter_ontology.yaml"
+    sha256: "fb104c08a874bb69d389a3d38039fd32a6b4e070fb38e22b792bd49366f31f06"
+    use: "same-context internal kinematics-versus-dynamics analysis"
+  - path: "research_control/tasks/RT-20260727-007/artifacts/child_phys_phil_p7_t01_source_matter_ontology.yaml"
+    sha256: "7cb88dfebc13c6a264ea37fe766342dd356b5714caa8b00ecf6ee68e6a533b4c"
+    use: "same-context internal identity, observability, and emergence analysis"
+  - path: "research_control/tasks/RT-20260727-007/artifacts/parent_conflict_review_p7_t01_source_matter_ontology.yaml"
+    sha256: "6230fcec0bc1cad7a0371b02ec98864fea0aac31459ed44b49671b32654dfb74"
+    use: "resolved P7-T01 semantics and preserved open dynamics limitation"
+
+source_authority_guard:
+  generated_wiki_derivative_used_as_authority: false
+
+fixed_status_ladder:
+  governing_status_pair: "blocked_adoption_open_continuation"
+  statuses:
+    - label: "draft/control"
+      meaning_here: "selector and future working artifacts only"
+    - label: "proposal-only"
+      meaning_here: "fixed incidence candidate and any future dynamics candidate"
+    - label: "source-extension data"
+      meaning_here: "any future step-order, selector, locality, or composition primitive"
+    - label: "canonical-ontology candidate"
+      meaning_here: "not assigned; human-gated"
+    - label: "adopted"
+      meaning_here: "not assigned; human-gated"
+    - label: "rejected"
+      meaning_here: "not assigned globally to any branch; human-gated where source-law rejection is intended"
+    - label: "human-gated"
+      meaning_here: "canonical candidacy, adoption, rejection, ontology change, and protected promotion"
+
+branch_comparison:
+  source_action:
+    ontology_versus_model_status: >-
+      Adds a source-history functional and stationarity principle as new model
+      postulates. It is not derived ontology, a physical matter action, or an
+      adopted law.
+    new_ontological_commitments:
+      - "composable history domain and history orientation"
+      - "scalar or ordered action codomain, weights, and coefficients"
+      - "variation class, boundary data, and stationarity principle"
+      - "history symmetry if a Noether-style result is sought"
+    identity_and_modality_of_state_changes: >-
+      Extremal histories remain possible mathematical histories; an action
+      supplies neither persistent particle identity nor physical actuality.
+    semantic_risks:
+      time: "History order may be overread as physical or proper time."
+      probability: "An action gives no probability unless a separate history measure and normalization are added."
+      action: "The functional and privilege of stationary histories are stipulated."
+      circularity_and_target_import: "Desired balance, cone, coupling, target Lagrangian, metric contraction, or GR behavior can be encoded directly in the action."
+    minimal_primitive_commitment:
+      rating: "high"
+      basis: "P7-T01 supplies no history measure, scalar pairing, variation class, or extremality principle."
+    derivation_versus_stipulation_test:
+      stipulated: "action, coefficients, history domain, variations, and boundary conditions"
+      could_count_as_derived: "Reproducible stationarity equations or symmetry identities that follow from, rather than occur verbatim in, the action."
+      cannot_count_as_derived: "P7-T01 admissibility or desired downstream behavior inserted as hard action constraints."
+    empirical_or_operational_overread_risk:
+      level: "high"
+      examples: "extremal history as observed trajectory; coefficients as calibrated masses or couplings; formal invariance as physical conservation"
+    constructibility:
+      rating: "medium"
+      reason: "Finite-history actions are possible, but every weighting and variational structure would be new and currently unmotivated."
+    honest_future_claim: "At most one proposal-only source-history action with candidate-relative stationarity or symmetry results; no physical action, stress energy, coupling, or realized dynamics."
+
+  source_evolution_equation:
+    ontology_versus_model_status: >-
+      Adds an evolution parameter or ordered action, a state-space
+      representation, and a generator or update operator as proposal-only model
+      primitives. None is derived by P7-T01.
+    new_ontological_commitments:
+      - "oriented evolution parameter, step object, or semigroup"
+      - "state-space embedding supporting a difference or derivative"
+      - "generator, initial data, and existence or uniqueness semantics"
+      - "constraint propagation and degenerate-branch rules"
+    identity_and_modality_of_state_changes: >-
+      A unique map gives formal state persistence, not diachronic identity of
+      physical particles or observers; nonunique evolution gives possible
+      continuations, not probabilities or actual events.
+    semantic_risks:
+      time: "Strongest risk of identifying an iteration parameter with physical time."
+      probability: "A deterministic equation has none; a stochastic equation requires new sample and normalization data."
+      action: "No action follows without additional variational structure."
+      circularity_and_target_import: "Constraint preservation, target wave equations, continuum time, principal cones, or desired dispersion can be built into the generator."
+    minimal_primitive_commitment:
+      rating: "medium_high"
+      basis: "Avoids action weights but adds temporal, state-space, generator, and initial-value semantics."
+    derivation_versus_stipulation_test:
+      stipulated: "evolution order, state embedding, generator, and initial-value domain"
+      could_count_as_derived: "Constraint propagation, fixed points, or an invariant proved from an independently specified generator."
+      cannot_count_as_derived: "Preservation explicitly imposed on the generator, or a formal principal part called a physical cone."
+    empirical_or_operational_overread_risk:
+      level: "high"
+      examples: "update order as clock time; solution as physical trajectory; uniqueness as physical determinism; spectrum as measured energy"
+    constructibility:
+      rating: "medium_low_as_a_distinct_branch"
+      reason: "Integer occupations have no canonical differential structure; a discrete recurrence without independent evolution semantics collapses into a transition law."
+    honest_future_claim: "At most one proposal-only parameterized update model with candidate-relative solutions and constraint results; no physical time, determinism, causality, or realized dynamics."
+
+  source_transition_law:
+    ontology_versus_model_status: >-
+      Adds one source-only relation or selector over the already declared
+      kinematically admissible transitions. It is derivation-critical missing
+      source-law data, but remains proposal-only source-extension data rather
+      than canonical ontology or physical law.
+    new_ontological_commitments:
+      - "abstract source-side successor orientation"
+      - "relation-valued or selector-valued rule on existing transition records"
+      - "source-local dependence and finite-support scope"
+      - "presentation-equivariance or explicit symmetry-breaking datum"
+      - "composition, null, interacting, and degenerate branch semantics"
+    identity_and_modality_of_state_changes: >-
+      A relation-valued law distinguishes allowed candidate successors without
+      assigning physical actuality, probability, persistent particle identity,
+      trajectory, or worldline.
+    semantic_risks:
+      time: "Only abstract precedence is needed; duration, clock time, and proper time remain absent."
+      probability: "Multiplicity of allowed successors is not a distribution, rate, or frequency."
+      action: "No functional or stationarity principle is assumed."
+      circularity_and_target_import: "A selector can hide desired endpoints, target geometry, detector outputs, process order, or GR behavior; properties copied into its predicate are stipulated."
+    minimal_primitive_commitment:
+      rating: "lowest_of_the_three"
+      basis: "Reuses the fixed configuration and transition domains without first adding histories, scalar weights, continuous state space, physical time, or probability."
+    derivation_versus_stipulation_test:
+      stipulated: "future relation or selector, step orientation, dependence domain, and any symmetry-breaking data"
+      could_count_as_derived: "Closure, composition, constraint propagation, a new invariant, or a scoped obstruction following from a separately specified minimal rule."
+      cannot_count_as_derived: "Q and [z] preservation obtained only by restricting the codomain to P7-T01-admissible transitions, or another constraint written into the selector."
+    empirical_or_operational_overread_risk:
+      level: "medium_and_controllable"
+      examples: "successor order as measured time; allowed edge as observed event; edge multiplicity as probability; naturality as physical covariance"
+    constructibility:
+      rating: "high_relative_to_the_other_branches"
+      reason: "The fixed finite candidate already supplies endpoints, admissible edges, relabelings, and positive and failure branches."
+    honest_future_claim: "At most one proposal-only transition-law candidate or precise scoped obstruction with candidate-relative closure or constraint results; no physical law, time, probability, action, detector meaning, coupling, or GR recovery."
+
+recommendation:
+  selected_branch: "source_transition_law"
+  selected_next_packet_type: "ontology_law_research_packet"
+  selected_next_route_family: "ontology-law-research-packet"
+  selected_next_route_label: "ontology-law-research-packet"
+  selected_next_role_family: "candidate-constructor@0.2.0"
+  trigger_classification: "derivation_critical_missing_source_law"
+  ordinary_gap: false
+  workflow_inconvenience: false
+  current_ontology_statement: "The current proposal-only ontology does not derive a rule selecting, narrowing, or organizing SourceMatterTransition_v1 records."
+  impossibility_claimed: false
+  decision_basis:
+    - "Reuses the fixed P7-T01 configuration and transition domains."
+    - "Adds only abstract successor semantics and may remain relation-valued."
+    - "Avoids premature action, continuous-time, determinism, probability, and measurement commitments."
+    - "Supports a bounded finite construction and a direct non-circularity test."
+    - "The missing transition rule is derivation-critical, so ontology-law-research-packet is more accurate than an ordinary calculation route."
+  theoretical_method: >-
+    In one future Candidate Constructor packet, treat fixed P7-T01
+    configurations as vertices and admissible transition records as available
+    edges, then construct or precisely obstruct one source-factorizing,
+    presentation-equivariant, relation-valued rule. Require explicit positive,
+    null, interacting, malformed or undefined, and degenerate branches, plus
+    one closure, constraint, invariant, or obstruction not inserted verbatim
+    into the rule. No rule or formula is instantiated here.
+  proposed_future_candidate_id: "SourceMatterTransitionLawCandidate_v1"
+  minimum_future_assumptions:
+    - "Hold SourceMatterIncidenceCandidate_v1 and its kinematic grammar fixed at proposal-only status."
+    - "Declare one abstract successor orientation without duration or physical-time meaning."
+    - "Declare exactly one source-only relation or selector; deterministic uniqueness is not assumed."
+    - "Factor the rule through K_src, m, z, q, M, J, w, Pi, and compatible source-presentation data only."
+    - "Require presentation-equivariance or classify each symmetry-breaking datum as source-extension data."
+    - "Separate positive, null, interacting, malformed or undefined, and degenerate branches."
+    - "Count a constraint as derived only when it is not P7-T01 admissibility or part of the rule definition."
+    - "Import no target atlas, metric, cone, time, detector, stress energy, coupling, GR equation, benchmark result, validator, or process authority."
+  status_vocabulary:
+    - "draft/control"
+    - "proposal-only"
+    - "source-extension data"
+    - "canonical-ontology candidate"
+    - "adopted"
+    - "rejected"
+    - "human-gated"
+  source_extension_category: "proposal_only_source_transition_rule"
+  source_extension_import_classification: "new source-side transition-rule primitive candidate pending construction, source-factorization audit, Refuter stress, and human authority for any adoption; not constructed or adopted here"
+  preserves_claim_blocks: true
+  preserved_claim_blocks:
+    - "canonical ontology, canonical-ontology candidacy, source-law adoption, and physical matter"
+    - "physical charge, conservation, persistence, trajectory, time, probability, rate, action, and evolution"
+    - "observer, detector, measurement, calibration, and empirical prediction"
+    - "target atlas, metric, cone, effective geometry, stress energy, coupling, and equivalence-principle status"
+    - "gravitational closure, Einstein equations, exact-GR benchmark promotion, and completed derivation"
+    - "proof, publication, outreach, push, global no-go, global rejection, and future-extension impossibility"
+  selected_dynamics_executed_here: false
+  requires_human_gate: false
+  human_gate_reason: "A future draft/control construction is non-promotional; candidacy, adoption, rejection, ontology change, and protected downstream promotions remain human-gated."
+
+rejected_branches:
+  - branch: "source_action"
+    reason: "Not selected for the immediate packet because it adds history, weighting, variation, and stationarity primitives and has greater target-action and coupling-import risk."
+    global_rejection: false
+    reconsider_when: "A source-side history composition and scalar or pairing provenance exists, or a transition-law packet proves one-step dynamics insufficient."
+  - branch: "source_evolution_equation"
+    reason: "Not selected for the immediate packet because it adds time, state-space, generator, and initial-value semantics; a discrete recurrence otherwise collapses into the selected branch."
+    global_rejection: false
+    reconsider_when: "A justified ordered composition or independent proposal-only source-time primitive exists."
+
+identity_observability_emergence_consequences:
+  identity: "Candidate endpoints remain configurations; no physical persistence, particle identity, worldline, or observer identity follows."
+  modality: "A future relation may classify allowed successors, not actual events, chances, or deterministic futures."
+  observability: "Q, [z], M, J, transition membership, and future rule invariants remain source records, not detector outcomes or measurements."
+  emergence: "A mathematically closed dynamics candidate would not establish physical matter, time, particles, or geometry as emergent."
+  status_effect: "blocked_adoption_open_continuation remains unchanged."
+
+limitations:
+  - "This artifact selects a route; it constructs no action, equation, transition law, rate, probability, solution, theorem, or physical law."
+  - "The future candidate may fail with a precise scoped obstruction."
+  - "Relation-valued selection minimizes commitment but does not explain why one transition actually occurs."
+  - "Inherited Q and [z] preservation alone cannot satisfy the new P7-T02 derivation burden."
+  - "Presentation-equivariance is not physical covariance, gauge, or empirical equivalence."
+  - "P7-T01 primitives remain stipulated and proposal-only."
+  - "P6 Gate B remains zero of eight and supplies no geometry input."
+  - "This same-context internal analysis is not independent review, human endorsement, replication, or proof authority."
+
+authority_flags:
+  selected_dynamics_executed_here: false
+  source_action_defined: false
+  source_evolution_equation_defined: false
+  source_transition_law_defined: false
+  source_rate_defined: false
+  source_probability_defined: false
+  source_time_defined: false
+  equation_solved: false
+  solution_set_constructed: false
+  new_physical_law_instantiated: false
+  canonical_ontology_modified: false
+  canonical_ontology_candidate_promoted: false
+  source_law_adopted: false
+  source_law_rejected: false
+  matter_ontology_adopted: false
+  physical_matter_established: false
+  physical_charge_or_conservation_established: false
+  physical_identity_or_determinism_established: false
+  detector_or_empirical_semantics_established: false
+  target_atlas_or_metric_imported: false
+  effective_geometry_assumed: false
+  stress_energy_established: false
+  coupling_law_adopted: false
+  matter_coupling_derived: false
+  equivalence_principle_established: false
+  gravitational_closure_established: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  exact_gr_recovery_established: false
+  completed_derivation_claimed: false
+  global_no_go_claimed: false
+  global_theory_rejected: false
+  future_source_extension_impossibility_claimed: false
+  proof_authority: false
+  publication_authorized: false
+  push_performed: false
+  physics_promotion_authorized: false
+
+theoretical_decision_output:
+  selected_next_packet_type: "ontology_law_research_packet"
+  decision_basis: "The fixed candidate has a kinematic transition grammar but derives no transition rule; a relation-valued source transition law is the least semantically committal constructive extension."
+  theoretical_method: "Route one future Candidate Constructor packet to construct or precisely obstruct SourceMatterTransitionLawCandidate_v1 with source factorization, presentation-equivariance, finite branch coverage, and a non-circular constraint analysis."
+  preserves_claim_blocks: true
+  requires_human_gate: false
+  human_gate_reason: "Draft/control construction is non-promotional; any adoption, rejection, ontology change, or downstream promotion remains human-gated."
+  selected_next_route_label: "ontology-law-research-packet"
+  selected_next_role_family: "candidate-constructor@0.2.0"
+  selected_dynamics_executed_here: false
+
+conclusion: >-
+  Select exactly one future source-transition-law construction under
+  ontology-law-research-packet and candidate-constructor@0.2.0. It is the
+  least semantically committal route because it reuses P7-T01 kinematics and
+  can remain relation-valued. No dynamics is executed here. Adoption remains
+  blocked_adoption_open_continuation, and every ontology, physical matter,
+  detector, geometry, stress-energy, coupling, GR, benchmark, proof,
+  publication, push, global-no-go, and completed-derivation claim remains
+  blocked.
