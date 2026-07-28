@@ -1,0 +1,861 @@
+validation_status: "PASS"
+final_repository_validation_status: "PASS_READY_FOR_CHECKPOINT"
+job_id: "AJ-RT-20260728-004-001"
+completion_id: "AJC-AJ-RT-20260728-004-001"
+task_id: "RT-20260728-004"
+task_type: "v21_p7_t05_universal_source_matter_coupling_map"
+decision_id: "DDR-20260728-004"
+role_id: "candidate-constructor"
+role_version: "0.2.0"
+execution_role_ref: "candidate-constructor@0.2.0--RT-20260728-004"
+status: "completed"
+created_at: "2026-07-28T08:09:05Z"
+started_at: "2026-07-28T08:09:05Z"
+completed_at: "2026-07-28T09:03:55Z"
+objective: "Execute only P7-T05 by constructing an explicit proposal-only source support comparison on equipped finite controls and deciding whether current sector data derive the required universal selection."
+completion_summary: "P7-T05 constructs exact finite update-intertwining and composition on controls explicitly equipped with support-preserving maps to B_3. The exact P7-T02 sector sigma_0=(1,[0]) admits identity-only and forward-enabled controls on the same two configurations whose supports have two and three full edges. Current sector data therefore do not derive the control and equipment selection required for one all-sector exact comparison family. The result is proposal-only source support evidence, not physical coupling, geometry, action, stress energy, adoption, or GR."
+objective_result: "precise_obstruction_with_constructive_restricted_domain"
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 145
+  passes_consumed: 134
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:145"
+  handoff_token: "3577b161373eecebb9487f5b15524e7ae7b51f626ccd4e8f"
+  relay_claim_token: "2e4e8d073d1530c31e7110464252813dc8eeeaea1ef65d94"
+  route_work_item_id: "P7-T05"
+  route_worker_skill: "continue-research"
+  route_sha256: "35053803f2bbd8ae4d80ca24c89836f80660b61ad0523676bd8a34797f60c881"
+  worker_skill: "continue-research"
+  worker_invocation_count: 1
+
+transaction_status: "ready_for_checkpoint"
+result_disposition: "P7_T05_PRECISE_OBSTRUCTION_WITH_CONSTRUCTIVE_RESTRICTED_DOMAIN_READY_FOR_CHECKPOINT"
+milestone_disposition: "sector_derived_universal_selection_precisely_obstructed_restricted_support_comparison_constructed_physical_coupling_open"
+adoption_status: "blocked_adoption_open_continuation"
+checkpoint_commit:
+  required: true
+  attempted: false
+  committed: false
+  commit_sha: ""
+  dependency_checkpoint_commit: "511e811eded5078f8d504b5139a197fc97516a89"
+  push_authorized: false
+  push_performed: false
+
+is_physics_task: true
+payload_class: "precise_obstruction"
+has_new_mathematical_payload: true
+source_extension_classification_required: false
+external_red_team_finding_requires_integration: false
+physics_promotion_authorized: false
+proof_authority: false
+
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P7"
+  plan_task_id: "P7-T05"
+  work_kind: "construction_or_implementation"
+  task_class: "science"
+  expected_result_kind: "candidate_or_precise_obstruction"
+  dependency_task_ids:
+    - "P7-T04"
+  dependency_completion_paths:
+    - "research_control/tasks/RT-20260728-003/jobs/completions/AJC-AJ-RT-20260728-003-001.yaml"
+  dependency_checkpoint_commits:
+    - "511e811eded5078f8d504b5139a197fc97516a89"
+  work_item_status: "completed_ready_for_checkpoint"
+  recommendation_ids:
+    - "V21-R24"
+    - "V21-R25"
+    - "V21-R63"
+    - "V21-R67"
+  recommendation_coverage_role: "direct_implementation"
+  scientific_claims_changed: true
+  scientific_claim_change_scope: "task-local proposal-only equipped-control support comparison two exact candidate-relative theorems and one same-sector selector obstruction"
+  physical_status_changed: false
+  distance_to_gr_delta_changed: true
+  distance_to_gr_delta_scope: "proposal_only_universal_selection_obstruction_with_restricted_support_construction"
+  physics_promotion_authorized: false
+  proof_authority: false
+  next_dependency_work_item: "P7-T06_after_checkpoint"
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  observed_durable_outputs:
+    physics:
+      - "proposal-only equipped-control source coupling comparison"
+      - "exact task-local naturality and composition theorem"
+      - "same-sector nonselection countermodel and precise obstruction"
+    project_system:
+      - "task-local deterministic validator report and compact receipt"
+      - "standard control records and generated memory derivatives"
+  accepted_criteria:
+    physics:
+      - "the comparison map is explicitly typed and source-derived on its constructive domain"
+      - "each admitted equipped sector instance type-checks"
+      - "the countermodel holds sector data fixed and varies enabled-row support"
+      - "the obstruction is distinct from P7-T04 and scoped to current data"
+    project_system:
+      - "task-local validation and scratch TeX build pass"
+      - "documentation-impact claim-language and research-control checks pass"
+      - "one governed checkpoint records the transaction"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+physics_payload_admission_result:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "physics"
+  declared_payload_type: "precise_obstruction"
+  realized_payload_type: "precise_obstruction"
+  candidate_family: "V21-P7-T05-UNIVERSAL-SOURCE-COUPLING-MAP-V1"
+  result: "PASS"
+  material_payload_present: true
+  process_receipts_counted_as_payload: false
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed_by_admission: false
+  physics_promotion_authorized: false
+
+family_freeze_admission_result:
+  schema_id: "family_freeze_route_admission_v1"
+  policy_id: "family_freeze_reopening_policy_v1"
+  route_id: "v21_p7_t05_universal_source_coupling_map_v1"
+  family_id: "V21-P7-T05-UNIVERSAL-SOURCE-COUPLING-MAP-V1"
+  detected_match_basis: []
+  reopening_requested: false
+  result: "PASS_UNFROZEN_PRECISE_OBSTRUCTION"
+  local_family_freeze_preserved: true
+  global_no_go_claimed: false
+  physics_promotion_authorized: false
+
+ordinary_route_guard_admission_result:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0893"
+  selected_plan_task_id: "P7-T05"
+  guard_outcome: "below_threshold"
+  result: "PASS"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  scientific_status_changed_by_guard: false
+  physics_promotion_authorized: false
+
+artifacts:
+  candidate: "research_control/tasks/RT-20260728-004/artifacts/universal_source_coupling_map_candidate_v1.tex"
+  machine_specification: "research_control/tasks/RT-20260728-004/artifacts/universal_source_coupling_map_spec_v1.yaml"
+  finite_controls: "research_control/tasks/RT-20260728-004/artifacts/universal_source_coupling_controls_v1.yaml"
+  assumption_dependency_table: "research_control/tasks/RT-20260728-004/artifacts/universal_source_coupling_assumption_dependency_table_v1.yaml"
+  compact_receipt: "research_control/tasks/RT-20260728-004/artifacts/universal_source_coupling_compact_receipt_v1.json"
+  validation_report: "research_control/tasks/RT-20260728-004/artifacts/universal_source_coupling_validation_v1.json"
+  validator: "research_control/tasks/RT-20260728-004/artifacts/validate_universal_source_coupling.py"
+  source_receipt: "research_control/tasks/RT-20260728-004/artifacts/universal_source_coupling_receipt.md"
+  child_phys_math: "research_control/tasks/RT-20260728-004/artifacts/child_phys_math_p7_t05_source_coupling.yaml"
+  child_phys_phil: "research_control/tasks/RT-20260728-004/artifacts/child_phys_phil_p7_t05_source_coupling.yaml"
+  conflict_review: "research_control/tasks/RT-20260728-004/artifacts/parent_conflict_review_p7_t05_source_coupling.yaml"
+  fusion_notes: "research_control/tasks/RT-20260728-004/artifacts/parent_fusion_notes_p7_t05_source_coupling.md"
+
+output_paths:
+  - "research_control/tasks/RT-20260728-004/artifacts/universal_source_coupling_map_candidate_v1.tex"
+  - "research_control/tasks/RT-20260728-004/artifacts/universal_source_coupling_map_spec_v1.yaml"
+  - "research_control/tasks/RT-20260728-004/artifacts/universal_source_coupling_controls_v1.yaml"
+  - "research_control/tasks/RT-20260728-004/artifacts/universal_source_coupling_assumption_dependency_table_v1.yaml"
+  - "research_control/tasks/RT-20260728-004/artifacts/child_phys_math_p7_t05_source_coupling.yaml"
+  - "research_control/tasks/RT-20260728-004/artifacts/child_phys_phil_p7_t05_source_coupling.yaml"
+  - "research_control/tasks/RT-20260728-004/artifacts/parent_conflict_review_p7_t05_source_coupling.yaml"
+  - "research_control/tasks/RT-20260728-004/artifacts/parent_fusion_notes_p7_t05_source_coupling.md"
+  - "research_control/tasks/RT-20260728-004/artifacts/universal_source_coupling_compact_receipt_v1.json"
+  - "research_control/tasks/RT-20260728-004/artifacts/universal_source_coupling_validation_v1.json"
+  - "research_control/tasks/RT-20260728-004/artifacts/validate_universal_source_coupling.py"
+  - "research_control/tasks/RT-20260728-004/artifacts/universal_source_coupling_receipt.md"
+  - "research_control/tasks/RT-20260728-004/00_TASK.yaml"
+  - "research_control/tasks/RT-20260728-004/DDR-20260728-004.md"
+  - "research_control/tasks/RT-20260728-004/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260728-004/roles/candidate-constructor@0.2.0--RT-20260728-004.yaml"
+  - "research_control/tasks/RT-20260728-004/jobs/AJ-RT-20260728-004-001.yaml"
+  - "research_control/tasks/RT-20260728-004/jobs/completions/AJC-AJ-RT-20260728-004-001.yaml"
+  - "research_control/handoffs/handoff-0894.yaml"
+  - "research_control/handoffs/handoff-0894.md"
+
+artifact_receipts:
+  - artifact_id: "TEX-V21-P7-T05-UNIVERSAL-SOURCE-COUPLING-MAP-V1"
+    path: "research_control/tasks/RT-20260728-004/artifacts/universal_source_coupling_map_candidate_v1.tex"
+    sha256: "5a9a8f5542a7c8b714bbff7ec06c06449b0c66c0196266051562caf9ce602c6b"
+    status_label: "draft/control proposal-only"
+  - artifact_id: "P7T05-UNIVERSAL-SOURCE-COUPLING-SPEC-V1"
+    path: "research_control/tasks/RT-20260728-004/artifacts/universal_source_coupling_map_spec_v1.yaml"
+    sha256: "75a3564fc0ea37ac776b2602c5f260514e5f48ae861ac049f87f9d92532f85db"
+    status_label: "draft/control proposal-only"
+  - artifact_id: "P7T05-UNIVERSAL-SOURCE-COUPLING-CONTROLS-V1"
+    path: "research_control/tasks/RT-20260728-004/artifacts/universal_source_coupling_controls_v1.yaml"
+    sha256: "d8f8ceabbba294be8f268367d573e028774845f7d022e1b6c61a5e16623352dd"
+    status_label: "draft/control proposal-only"
+  - artifact_id: "P7T05-UNIVERSAL-SOURCE-COUPLING-VALIDATION-V1"
+    path: "research_control/tasks/RT-20260728-004/artifacts/universal_source_coupling_validation_v1.json"
+    sha256: "57a61f6bf3567aed0f62e483d40c49aaf30b02f818484e0b5f0488b29803f0a7"
+    status_label: "operational_evidence"
+  - artifact_id: "P7T05-UNIVERSAL-SOURCE-COUPLING-COMPACT-RECEIPT-V1"
+    path: "research_control/tasks/RT-20260728-004/artifacts/universal_source_coupling_compact_receipt_v1.json"
+    sha256: "9e9d4e3a8bcb49d419f37d516614a486b6e2392dc812762a58839fe9ef3c7d85"
+    status_label: "operational_evidence"
+  - artifact_id: "MD-V21-P7-T05-UNIVERSAL-SOURCE-COUPLING-RECEIPT-V1"
+    path: "research_control/tasks/RT-20260728-004/artifacts/universal_source_coupling_receipt.md"
+    sha256: "ce15cd20747aa83daa41bd0ce91561226c90acfecb65f84370683eed3dc573a5"
+    status_label: "science_draft_receipt"
+
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_execution_unit_count: 2
+  outer_agentjob_count: 1
+  child_agentjob_count: 0
+  subagent_count: 2
+
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260728-004/artifacts/child_phys_math_p7_t05_source_coupling.yaml"
+      output_sha256: "473288207056e1e38dcc403173433a0552850b9f5cc60ac678768623e00d3507"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260728-004/artifacts/child_phys_phil_p7_t05_source_coupling.yaml"
+      output_sha256: "7c68a73d9697d37e0403c05c0d33e89e2d424bdd48d1e5bc44dd14d2fa35eade"
+      status: "completed"
+  conflict_review:
+    status: "resolved"
+    review_path: "research_control/tasks/RT-20260728-004/artifacts/parent_conflict_review_p7_t05_source_coupling.yaml"
+    review_sha256: "9e8290ac17e3fbf69baf2ccc53a77cb198dd9f8bf68fa5b2fffa53a6d6f49eb9"
+    resolution_rounds: 1
+    unresolved_conflicts: []
+  fusion:
+    status: "completed"
+    fused_output_path: "research_control/tasks/RT-20260728-004/artifacts/universal_source_coupling_map_candidate_v1.tex"
+    fusion_notes_path: "research_control/tasks/RT-20260728-004/artifacts/parent_fusion_notes_p7_t05_source_coupling.md"
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+
+bridge_attempt_status:
+  status: "restricted_support_comparison_constructed_sector_selection_obstructed"
+  candidate_map: "explicitly equipped finite source control to the stipulated B_3 support and bookkeeping carrier"
+  missing_primitive: "sector-to-control selector coherent equipment family source-to-operator map physical geometry and variational input"
+  preserves_blocks: "Preserves M_src and g_eff scope physical coupling action stress energy Einstein equations benchmark Gate Chair proof publication completed derivation and global theory rejection blocks."
+  explanation: "P7-T05 constructs a restricted support comparison and precisely obstructs derivation of one all-sector exact comparison from current sector data."
+
+candidate_constructor_result:
+  result_type: "precise_obstruction"
+  constructed_candidate_path: "research_control/tasks/RT-20260728-004/artifacts/universal_source_coupling_map_candidate_v1.tex"
+  minimal_countermodel_path: "research_control/tasks/RT-20260728-004/artifacts/universal_source_coupling_controls_v1.yaml"
+  obstruction_id: "OBST-P7T05-SECTOR-COUPLING-FUNCTOR-NONSELECTION-001"
+  formal_objects:
+    - "B3SourceControl_v1"
+    - "B3EquippedSectorControl_v1"
+    - "ThreeAddressSupportCouplingMap_v1"
+    - "SourceUniversalCouplingMapCandidate_v1"
+    - "same-sector two-control countermodel"
+  maps:
+    - "kappa_C from an equipped finite source carrier to B_3"
+    - "kappa-hat_C from enabled transition rows to B_3 rows"
+    - "bookkeeping pushforward Kappa_C"
+  proof_obligations:
+    - "preserve exact support and kernel transport on explicitly equipped controls"
+    - "keep naturality conditional on equipment coherence"
+    - "derive any all-sector selector from new source data rather than the current sector label"
+    - "derive any physical action geometry or coupling interpretation through a distinct lawful packet"
+  failed_components:
+    - "sector-to-control selection"
+    - "sector-to-carrier selection"
+    - "sector-to-comparison selection"
+    - "all-sector naturality coherence"
+    - "physical model-to-world coupling interpretation"
+  next_required_role: "none"
+  no_fog_check: true
+  no_fog_explanation: "Exact B_3 bookkeeping comparisons exist and compose on explicitly equipped Rod, Signal, and Detector controls. The exact P7-T02 sector sigma_0=(1,[0]) nevertheless admits identity-only and forward-enabled equal-cardinality controls with nonisomorphic support, so Sec_src does not derive the selector and comparison family required for an all-sector exact law."
+  claim_boundary_preserved: true
+  claim_boundary_citation: "CB-V21-P7-T05-UNIVERSAL-SOURCE-COUPLING-001"
+
+universal_source_coupling_result:
+  candidate_id: "SourceUniversalCouplingMapCandidate_v1"
+  comparison_id: "ThreeAddressSupportCouplingMap_v1"
+  constructive_domain: "B3EquippedSectorControl_v1"
+  status: "draft/control"
+  candidate_status: "proposal-only"
+  result_kind: "precise_obstruction_with_constructive_restricted_domain"
+  constructive_instance_count: 3
+  theorem_count: 2
+  obstruction_count: 1
+  same_sector_countermodel_count: 1
+  countermodel_state_count_each: 2
+  countermodel_full_edge_counts:
+    - 2
+    - 3
+  resolved_parent_conflict_count: 9
+  unresolved_parent_conflict_count: 0
+  task_local_check_count: 128
+  task_local_failed_check_count: 0
+  latex_compile_status: "PASS"
+  latex_page_count: 6
+  current_ontology_derives_sector_selector: false
+  current_ontology_derives_equipment_family: false
+  all_admitted_sectors_covered: false
+  physical_matter_coupling_derived: false
+  common_physical_geometry_derived: false
+  matter_action_derived: false
+  stress_energy_derived: false
+  conservation_law_derived: false
+  scientific_ledgers_changed: true
+
+new_mathematical_payload:
+  - payload_id: "NMP-RT-20260728-004-001"
+    payload_type: "definition"
+    name: "Explicitly equipped three-address source control"
+    summary: "Defines a finite control with a bijective row transition support and kernel intertwiner to B_3."
+  - payload_id: "NMP-RT-20260728-004-002"
+    payload_type: "theorem"
+    name: "P7T05-THM-THREE-ADDRESS-COUPLING-NATURALITY-001"
+    summary: "Proves exact update transport and conditional naturality under coherent equipment."
+  - payload_id: "NMP-RT-20260728-004-003"
+    payload_type: "countermodel"
+    name: "P7T05-CM-SAME-SECTOR-ENABLED-ROW-NONSELECTION-001"
+    summary: "Holds sigma_0 and a two-state carrier fixed while enabled-row support changes."
+  - payload_id: "NMP-RT-20260728-004-004"
+    payload_type: "obstruction"
+    name: "OBST-P7T05-SECTOR-COUPLING-FUNCTOR-NONSELECTION-001"
+    summary: "Records exact current-data nonselection of a sector-indexed control and comparison family."
+
+mathematical_payload_manifest:
+  - payload_id: "PAYLOAD-RT-20260728-004-001"
+    payload_type: "construction"
+    object_name: "ThreeAddressSupportCouplingMap_v1"
+    claim_status: "draft/control proposal-only"
+    source_path: "research_control/tasks/RT-20260728-004/artifacts/universal_source_coupling_map_candidate_v1.tex"
+    burden_effect: "narrows"
+    summary: "Constructs exact finite bookkeeping reindexing on explicitly equipped controls."
+  - payload_id: "PAYLOAD-RT-20260728-004-002"
+    payload_type: "theorem"
+    object_name: "P7T05-THM-THREE-ADDRESS-COUPLING-NATURALITY-001"
+    claim_status: "exact within the task-local proposal-only candidate"
+    source_path: "research_control/tasks/RT-20260728-004/artifacts/universal_source_coupling_map_candidate_v1.tex"
+    burden_effect: "narrows"
+    summary: "Proves exact update intertwining composition and conditional naturality."
+  - payload_id: "PAYLOAD-RT-20260728-004-003"
+    payload_type: "countermodel"
+    object_name: "P7T05-CM-SAME-SECTOR-ENABLED-ROW-NONSELECTION-001"
+    claim_status: "exact finite local countermodel"
+    source_path: "research_control/tasks/RT-20260728-004/artifacts/universal_source_coupling_controls_v1.yaml"
+    burden_effect: "obstructs"
+    summary: "Two same-sector controls differ only by whether T_e is enabled and have nonisomorphic support."
+  - payload_id: "PAYLOAD-RT-20260728-004-004"
+    payload_type: "obstruction"
+    object_name: "OBST-P7T05-SECTOR-COUPLING-FUNCTOR-NONSELECTION-001"
+    claim_status: "precise scoped obstruction"
+    source_path: "research_control/tasks/RT-20260728-004/artifacts/universal_source_coupling_map_candidate_v1.tex"
+    burden_effect: "obstructs"
+    summary: "Current sector data do not derive one all-sector control and exact comparison family."
+
+physics_progress_status:
+  status: "precise_obstruction_found"
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "Build the actual coupling candidate rather than another readiness profile."
+  explanation: "P7-T05 supplies an exact restricted support comparison and a reproducible same-sector nonselection obstruction. It narrows the formal source burden but establishes no physical universal coupling geometry action stress energy or adoption."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr_delta:
+  changed: true
+  effect: "obstruction_recorded"
+  burden_id: "matter_coupling"
+  milestone: "matter_coupling"
+  old_status: "draft object exists"
+  new_status: "draft object exists"
+  ledger_row_updated: true
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "The matter-coupling row now records an exact restricted support comparison and a distinct current-sector-data nonselection obstruction while the physical coupling burden remains open."
+  downstream_unlocked:
+    - "P7-T06 source-equivalent variational construction-or-obstruction packet after checkpoint"
+  downstream_still_blocked:
+    - "source selector and comparison-family adoption"
+    - "physical matter coupling and equivalence-principle behavior"
+    - "source-derived geometry and physical operator interpretation"
+    - "matter action stress energy and conservation"
+    - "Einstein equations"
+    - "benchmark promotion"
+  explanation: "The ledger records proposal-level construction and obstruction only; no physical or promotion status changes."
+
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "unchanged; proposal-only source equipment remains unadopted"
+  - burden: "Source equivalence EqSrc"
+    status: "unchanged; general EqSrc remains open"
+  - burden: "RetainH"
+    status: "unchanged; no canonical retention law"
+  - burden: "GenH"
+    status: "unchanged; no canonical generator law"
+  - burden: "ObsLoc_lc"
+    status: "unchanged; local exact branch only"
+  - burden: "Resp_lc"
+    status: "unchanged; support comparison does not establish detector semantics"
+  - burden: "M_src"
+    status: "unchanged; protected scoped source-only status supplies no physical coupling"
+  - burden: "g_eff"
+    status: "unchanged; P6 Gate B remains zero of eight and no lawful physical geometry input exists"
+  - burden: "matter coupling"
+    status: "restricted equipped-control support comparison constructed and current sector-derived all-sector selection precisely obstructed; physical coupling action stress energy and equivalence-principle behavior remain open"
+  - burden: "Einstein equations"
+    status: "not started; unchanged"
+  - burden: "finite-variation robustness"
+    status: "unchanged; finite comparison does not establish arbitrary physical robustness"
+  - burden: "benchmark promotion"
+    status: "blocked by missing physical geometry coupling Einstein equations and protected review"
+  - burden: "Gate Chair status"
+    status: "human-gated; unchanged"
+  - burden: "current route freeze or hard-fail status"
+    status: "the exact P7-T05 sector-only selector derivation is locally frozen; P7-T06 is a distinct variational construction-or-obstruction burden"
+
+obstruction_record:
+  present: true
+  obstruction_id: "OBST-P7T05-SECTOR-COUPLING-FUNCTOR-NONSELECTION-001"
+  scope: "matter_coupling"
+  failed_object: "one exact sector-indexed control and support-comparison family derived from current P7-T01 sector data"
+  exact_failure: "Within sigma_0=(1,[0]), the same configurations x_u and x_v support an identity-only control with two full edges and a forward-enabled control with three; their supports are not permutation-equivalent, while Sec_src omits the enabled-row choice."
+  minimal_counterexample_path: "research_control/tasks/RT-20260728-004/artifacts/universal_source_coupling_controls_v1.yaml"
+  current_ontology_implication: "does_not_derive"
+  source_extension_implication: "repair_allowed"
+  consequence: "new_primitive_required"
+  forbidden_overread: "This current-data nonselection does not establish physical nonuniversality global theory rejection or impossibility of a new selector carrier comparison or conservative source extension."
+
+countermodel_obligations:
+  policy_id: "minimal_countermodel_obligation_policy_v1"
+  theorem_family: "matter_coupling"
+  waiver_decision_id: ""
+  slots:
+    - countermodel_slot: "source_matter_semantics_missing_countermodel"
+      status: "filled"
+      scope: "protocol-role labels versus admitted source sectors and physical matter"
+      result_artifact: "research_control/tasks/RT-20260728-004/artifacts/child_phys_phil_p7_t05_source_coupling.yaml"
+      local_countermodel_claim: "Three protocol roles do not enumerate or physically interpret all source sectors."
+      forbidden_overread: "This does not deny a future model-to-world map."
+    - countermodel_slot: "coupling_law_gap_countermodel"
+      status: "filled"
+      scope: "sector-only exact control and comparison selection"
+      result_artifact: "research_control/tasks/RT-20260728-004/artifacts/universal_source_coupling_controls_v1.yaml"
+      obstruction_id: "OBST-P7T05-SECTOR-COUPLING-FUNCTOR-NONSELECTION-001"
+      local_countermodel_claim: "Identity-only and forward-enabled same-sector controls have nonisomorphic support."
+      forbidden_overread: "This is not physical noncoupling or a global no-go."
+    - countermodel_slot: "MetricData_or_g_eff_overread_countermodel"
+      status: "filled"
+      scope: "finite B_3 relation reinterpreted as physical geometry"
+      result_artifact: "research_control/tasks/RT-20260728-004/artifacts/parent_fusion_notes_p7_t05_source_coupling.md"
+      local_countermodel_claim: "B_3 contains no covector operator cone metric or model-to-world data."
+      forbidden_overread: "This does not prove that no later source-derived geometry can exist."
+    - countermodel_slot: "stress_energy_import_countermodel"
+      status: "filled"
+      scope: "attempt to infer stress energy from bookkeeping reindexing"
+      result_artifact: "research_control/tasks/RT-20260728-004/artifacts/universal_source_coupling_assumption_dependency_table_v1.yaml"
+      local_countermodel_claim: "No variational derivative field tensor density or physical action domain is typed."
+      forbidden_overread: "This is a missing-type result rather than a stress-energy no-go."
+    - countermodel_slot: "matter_action_import_countermodel"
+      status: "filled"
+      scope: "attempt to rename the finite support comparison as an action"
+      result_artifact: "research_control/tasks/RT-20260728-004/artifacts/universal_source_coupling_map_candidate_v1.tex"
+      local_countermodel_claim: "The finite map supplies no variational functional or Euler-Lagrange object."
+      forbidden_overread: "A later proposal-only source variational object remains open."
+    - countermodel_slot: "benchmark_dependency_countermodel"
+      status: "filled"
+      scope: "selection of equipment by desired exact-GR behavior"
+      result_artifact: "research_control/tasks/RT-20260728-004/artifacts/universal_source_coupling_controls_v1.yaml"
+      local_countermodel_claim: "Target metric cone detector benchmark and GR behavior are forbidden source premises."
+      forbidden_overread: "The exact-GR benchmark remains a downstream target."
+
+loop_risk_decision:
+  category: "scoped_obstruction"
+  reason: "The sector-only selection question has an exact minimal countermodel; continuation must change the mathematical object to a source-equivalent variational construction or precise obstruction."
+
+freeze_criteria_status:
+  repeated_burden: true
+  freeze_evaluation_required: true
+  active_freeze_label: "V21-P7-T05-SECTOR-COUPLING-FUNCTOR-NONSELECTION-V1"
+  prior_attempts_considered:
+    - "RT-20260728-001 P7-T02 finite transition-kernel construction"
+    - "RT-20260728-003 P7-T04 common source propagation obstruction"
+    - "RT-20260728-004 P7-T05 support comparison and sector nonselection"
+  freeze_if:
+    - "Later work repeats the same sigma_0 identity-only versus forward-enabled pair without a new theorem source datum selector variation class or protected decision."
+    - "Later work renames B_3 support reindexing as physical coupling geometry action or stress energy."
+  do_not_freeze_if:
+    - "P7-T06 constructs a materially new source-equivalent variational object from declared source data."
+    - "P7-T06 records a distinct exact missing-law obstruction at the variational type."
+    - "A protected decision authorizes only its exact human-gated scope."
+  freeze_decision: "locally_frozen"
+  decision_reason: "The current-sector selector derivation has an exact minimal countermodel and should not be repeated; P7-T06 changes the burden to a variational object."
+  next_allowed_route: "candidate_constructor"
+  status_update_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  exact_prior_route_freeze_preserved: true
+  global_theory_rejection: false
+  future_source_extension_impossibility: false
+
+route_cycle_control:
+  cycle_family: "v21_p7_source_matter_construction"
+  current_cycle_step: "p7_t05_sector_selection_obstructed_p7_t06_variational_packet_selected"
+  prior_related_tasks:
+    - "RT-20260727-007"
+    - "RT-20260728-001"
+    - "RT-20260728-002"
+    - "RT-20260728-003"
+    - "RT-20260728-004"
+  cycle_risk: "medium"
+  orbit_avoidance_reason: "P7-T06 must construct or precisely obstruct a source-equivalent variational object; it may not repeat the P7-T04 role-graph or P7-T05 sector-selection countermodel."
+  next_role_consequence: "ontology-formalizer@0.2.0 for v21 P7-T06"
+
+selected_next_route:
+  route_id: "v21_p7_t06_matter_action_after_checkpoint"
+  route_label: "ontology-law-research-packet"
+  role_family: "ontology-formalizer@0.2.0"
+  worker_skill: "continue-research"
+  selected_next_packet_type: "ontology_law_research_packet"
+  task_type: "v21_p7_t06_source_equivalent_variational_object"
+  plan_task_id: "P7-T06"
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "Supply the variational matter input required for Einstein-equation work."
+  strategy_id: "construct_source_equivalent_variational_object_or_precisely_obstruct_v1"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  adoption_status: "blocked_adoption_open_continuation"
+  inherited_p7_t05_result: "precise_obstruction_with_constructive_restricted_domain"
+  inherited_missing_inputs:
+    - "sector-to-control selector"
+    - "coherent equipment family"
+    - "source-derived physical geometry"
+    - "physical coupling interpretation"
+  physics_promotion_authorized: false
+  source_handoff: "research_control/handoffs/handoff-0894.yaml"
+
+ontology_law_research_packet:
+  route: "ontology-law-research-packet"
+  trigger_classification: "derivation_critical_missing_source_law"
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "Supply the variational matter input required for Einstein-equation work."
+  missing_source_law: "A source-derived variational rule that selects a source-equivalent action object and states the conditions under which its source current or variation is conserved."
+  underdetermination_statement: "Current ontology does not derive a source-equivalent variational object, its variation domain, or its conservation conditions from the present sector, control, and equipment data."
+  no_go_theorem_status: "not_proved"
+  adoption_status:
+    current_adoption: "blocked"
+    continuation: "open"
+    status_pair: "blocked_adoption_open_continuation"
+  packet_payload_mode: "candidate_law_payload"
+  result: "candidate_law_payload_selected_not_constructed"
+  candidate_law_payload:
+    status_label: "proposal-only"
+    candidate_id: "SourceEquivalentVariationalObjectCandidate_v1"
+    source_side_definition: "A prospective proposal-only functional or source-equivalent variational object defined solely on declared source configurations controls histories and source-side variation data."
+    formal_objects:
+      - "source configuration or history domain"
+      - "source-side variation class"
+      - "proposal-only variational functional or equivalent finite object"
+      - "source current and conservation-residual record"
+    domains:
+      - "current P7-T01 configurations and sectors"
+      - "current P7-T02 finite controls and histories"
+      - "explicit proposal-only P7-T05 comparison data where lawfully typed"
+    maps:
+      - "source history and variation to a proposal-only scalar or finite variational record"
+      - "source-side variation to an Euler-like residual or precise type obstruction"
+      - "declared source symmetry to a conditional conservation residual"
+    proof_obligations:
+      - "type the functional or source-equivalent object without importing target geometry"
+      - "make every variation domain boundary term sign and dimension assumption explicit"
+      - "derive or precisely obstruct a stress-energy-equivalent source object"
+      - "state conservation conditions and anomaly branches"
+      - "preserve P7-T05 nonselection and all model-to-world guards"
+  exact_gr_recovery_obligations:
+    checklist:
+      - "keep exact GR as a target benchmark rather than a source premise"
+      - "derive any physical geometry coupling or stress energy through separately justified maps"
+      - "do not tune the source variational object to target Einstein equations"
+      - "retain protected human authority for source-law and benchmark adoption"
+    distance_to_gr_links:
+      - "matter coupling"
+      - "effective_metric_g_eff"
+      - "Einstein equations"
+      - "benchmark promotion"
+  no_target_import_audit_scope:
+    forbidden_source_classes:
+      - "target_atlas"
+      - "target_metric"
+      - "benchmark_success"
+      - "candidate_reconstruction"
+      - "generated_derivative"
+      - "registry_metadata_authority"
+      - "role_authority"
+      - "validation_authority"
+  human_gate_request:
+    required_before_adoption: true
+    requested_decision: "No decision in P7-T05; any later source-law adoption or rejection requires an explicit human Gate Chair decision."
+    exact_requested_ontology_edit: "none"
+
+source_extension_classification:
+  checklist_id: "source_extension_classification_checklist_v1"
+  records:
+    - object_id: "B3EquippedSectorControl_v1"
+      classification: "new_ontology_primitive_candidate"
+      relation_to_current_ontology: "missing_primitive"
+      claim_boundary_id: "CB-V21-P7-T05-UNIVERSAL-SOURCE-COUPLING-001"
+      allowed_conclusion: "proposal-only task-local equipment data support an exact restricted comparison"
+      blocked_overreads:
+        - "current ontology derives or adopts the equipment family"
+        - "equipment is universal over all admitted sectors"
+        - "equipment defines physical coupling or geometry"
+      protected_authority_required: true
+      downstream_promotion_authorized: false
+      physics_promotion_authorized: false
+    - object_id: "OBST-P7T05-SECTOR-COUPLING-FUNCTOR-NONSELECTION-001"
+      classification: "blocked_adoption_open_continuation"
+      relation_to_current_ontology: "blocked_open"
+      claim_boundary_id: "CB-V21-P7-T05-UNIVERSAL-SOURCE-COUPLING-001"
+      allowed_conclusion: "current ontology does not derive the required sector-indexed selector"
+      blocked_overreads:
+        - "no selector or comparison can exist"
+        - "physical matter cannot couple universally"
+        - "future conservative source extension is impossible"
+      protected_authority_required: false
+      downstream_promotion_authorized: false
+      physics_promotion_authorized: false
+
+claim_boundary:
+  boundary_id: "CB-V21-P7-T05-UNIVERSAL-SOURCE-COUPLING-001"
+  allowed_scope: "Explicitly equipped finite support comparison exact task-local update intertwining and naturality same-sector enabled-row countermodel scoped current-data nonselection obstruction and one P7-T06 route."
+  blocked_scope: "Canonical ontology source-law or equipment adoption physical matter coupling covariant derivative action stress energy cone metric detector semantics equivalence principle Einstein equations benchmark proof publication push completed derivation global no-go or future source-extension impossibility."
+  claim_boundary_preserved: true
+
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+  summary: "The restricted support comparison and same-sector countermodel are scoped proposal evidence only. They do not establish physical coupling geometry action stress energy Einstein equations benchmark promotion proof publication or completed derivation."
+  forbidden_conclusions:
+    - "M_src adoption or derivation or adoption of the equipment selector or comparison"
+    - "B_3 or the support comparison as g_eff or common physical geometry"
+    - "protocol roles promoted to all matter sectors"
+    - "bookkeeping update or reindexing as physical matter coupling"
+    - "covariant derivative coupling constant matter action or stress energy"
+    - "equivalence-principle behavior established or refuted"
+    - "Einstein-equation derivation"
+    - "benchmark promotion Gate Chair verdict publication or completed derivation"
+    - "global theory rejection or future source-extension impossibility"
+
+no_target_import_audit:
+  explicit_target_import_found: false
+  explicit_process_import_found: false
+  distinction: "Only fixed proposal-only source sectors finite controls explicit support maps and declared equipment enter the construction and obstruction."
+  forbidden_inputs_absent:
+    - "target atlas or metric"
+    - "physical cone or effective geometry"
+    - "matter action covariant derivative or stress energy"
+    - "detector calibration or equivalence-principle behavior"
+    - "desired Einstein equations or exact-GR benchmark behavior"
+    - "validator checkpoint recency role or generated derivative as science"
+
+ordinary_route_guard:
+  schema_id: "ordinary_route_guard_evaluation_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  evaluation_id: "ORE-HANDOFF-0894"
+  ordinary_handoff_id: "handoff-0894"
+  threshold: 3
+  consecutive_project_system_tasks_before_selection: 0
+  ready_science_plan_task_ids:
+    - "P7-T06"
+    - "P14-T04"
+  selected_plan_task_id: "P7-T06"
+  selected_route_class: "physics_bearing"
+  selected_worker_skill: "continue-research"
+  outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  exception_receipt:
+    active: false
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+active_state_boundary:
+  active_task_id: "RT-20260728-004"
+  active_job_id: "AJ-RT-20260728-004-001"
+  current_status: "p7_t05_precise_obstruction_with_constructive_restricted_domain_p7_t06_ready_for_checkpoint"
+  checkpoint_required: true
+  checkpoint_completed: false
+  checkpoint_invocation_count: 0
+  p7_t05_complete: true
+  selected_next_plan_task_id: "P7-T06"
+  selected_next_worker_skill: "continue-research"
+  selected_next_role_family: "ontology-formalizer@0.2.0"
+  selected_next_route_label: "ontology-law-research-packet"
+  selected_next_strategy_id: "construct_source_equivalent_variational_object_or_precisely_obstruct_v1"
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1058
+    relationship_row_count: 5297
+    semantic_row_count: 1058
+    vault_row_count: 1058
+    local_cache_only_warning_count: 0
+  authority_note: "Generated Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+  refresh_needed: true
+  refresh_performed: true
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"universal matter coupling source effective coupling map\" --json"
+      query_type: "search"
+      query_text: "universal matter coupling source effective coupling map"
+      returned_object_ids:
+        - "TEX-ONTOLOGY-AETHER-FLOW-DYNAMICS"
+        - "MD-RESEARCH-CONTROL-DESIGN-GR-DERIVATION-BURDEN-MAP"
+  canonical_inspections:
+    - object_id: "TEX-ONTOLOGY-AETHER-FLOW-DYNAMICS"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "ontology/tex/aether_flow_dynamics.tex"
+      source_hash: "fd6e579e71ef7f2ac4c9668ceede051ad57033ee52357b2552a9e3a5a53939c7"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-GR-DERIVATION-BURDEN-MAP"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/gr_derivation_burden_map.md"
+      source_hash: "8e9d44e3a18ecc8a2430a9c42497da3eb9911c2cf6cd714c1525c5d91551835e"
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 145 validated and was atomically claimed and consumed exactly once."
+      - "The P7-T04 dependency checkpoint 511e811eded5078f8d504b5139a197fc97516a89 was committed before execution."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Task-local validation passes 128 of 128 checks."
+      - "The bundled Tectonic build resolves references and renders six pages."
+      - "Two same-context child perspectives were fused with zero unresolved conflicts."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Integrated documentation-impact improvement-signal claim-language memory registry renderer and research-control gates pass before checkpoint."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "One governed checkpoint remains; P7-T06 is unexecuted."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Current frontier task index compact frontier dependency graph claim graph and v21 burden-status derivatives are regenerated and pass freshness checks."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory registries wiki notes and indexes are regenerated and validate-only passes."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation has zero hard failures."
+
+command_results:
+  - command: ".venv/bin/python research_control/tasks/RT-20260728-004/artifacts/validate_universal_source_coupling.py --check --json"
+    status: "PASS"
+    summary: "128 of 128 construction theorem countermodel provenance parent-fusion and authority checks pass"
+  - command: "bundled Tectonic two-pass scratch build of universal_source_coupling_map_candidate_v1.tex"
+    status: "PASS"
+    summary: "six-page scratch PDF compiles with references resolved and cosmetic box warnings only"
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+    status: "PASS"
+    summary: "tracked memory sources registries wiki derivatives and indexes are current"
+  - command: ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+    status: "PASS"
+    summary: "all changed paths are classified within the bounded AgentJob"
+  - command: ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json"
+    status: "PASS"
+    summary: "no project-improvement signal is emitted by this research completion"
+  - command: ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+    status: "PASS"
+    summary: "documentation-impact receipt covers the changed control science and generated surfaces"
+  - command: ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+    status: "PASS"
+    summary: "changed-source claim-language validation has zero hard failures"
+  - command: ".venv/bin/python research_control/tasks/RT-20260721-009/artifacts/validate_v21_current_burden_status.py --check --json"
+    status: "PASS"
+    summary: "the generated burden-status bundle is fresh and non-promotional"
+  - command: ".venv/bin/python scripts/research_control/validate_compact_current_frontier_v16.py --json"
+    status: "PASS"
+    summary: "compact frontier matches tracked state and preserves all high-risk guards"
+  - command: ".venv/bin/python scripts/research_control/render_dependency_graph.py --check"
+    status: "PASS"
+    summary: "dependency graph derivatives are fresh"
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not authorized; ordinary P7-T05 draft/control proposal-only finite support comparison and exact scoped obstruction only"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  publication_authorized: false
+  proof_authority: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  canonical_ontology_edit_authorized: false
+  ontology_selection_authorized: false
+  matter_ontology_adoption_authorized: false
+  operational_semantics_adoption_authorized: false
+  physical_interpretation_establishment_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+  future_source_extension_impossibility_authorized: false
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  sidecar_required: false
+  sidecar_created: false
+  reason: "No project-improvement signal was emitted."

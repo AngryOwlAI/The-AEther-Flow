@@ -1,7 +1,7 @@
 schema_id: "compact_current_frontier_v16"
 generated_from:
   - "research_control/program_state.yaml"
-  - "research_control/handoffs/handoff-0893.yaml"
+  - "research_control/handoffs/handoff-0894.yaml"
   - "registries/DISTANCE_TO_GR_LEDGER.csv"
   - "registries/METRIC_USE_LEDGER.csv"
   - "research_control/current_frontier.md"
@@ -9,16 +9,16 @@ generated_from:
   - "research_control/design/accepted_status_calibration_v2.yaml"
   - "research_control/design/active_state_bifurcation_policy_v1.md"
 active_state:
-  active_task_id: "RT-20260728-003"
-  latest_handoff_id: "handoff-0893"
-  current_status: "p7_t04_common_source_propagation_precise_obstruction_p7_t05_ready_for_checkpoint"
+  active_task_id: "RT-20260728-004"
+  latest_handoff_id: "handoff-0894"
+  current_status: "p7_t05_precise_obstruction_with_constructive_restricted_domain_p7_t06_ready_for_checkpoint"
   v15_completed: false
   v16_completed: false
   v16_plan_registered: true
 active_state_bifurcation:
-  latest_research_task_id: "RT-20260728-003"
-  latest_research_handoff_id: "handoff-0893"
-  latest_research_next_action: "Run one governed checkpoint for AJ-RT-20260728-003-001. Only after it commits may one fresh bounded candidate-constructor@0.2.0 packet execute v21 P7-T05 by constructing the actual universal matter-coupling candidate or returning a distinct precise obstruction without assuming a common physical cone metric detector semantics stress energy coupling or GR behavior."
+  latest_research_task_id: "RT-20260728-004"
+  latest_research_handoff_id: "handoff-0894"
+  latest_research_next_action: "Run one governed checkpoint for AJ-RT-20260728-004-001. Only after it commits may one fresh bounded ontology-formalizer@0.2.0 ontology-law-research-packet execute v21 P7-T06 by constructing a proposal-only source-equivalent variational object or returning a precise obstruction without assuming a target metric physical coupling action stress energy or Einstein equations."
   latest_project_system_task_id: "none"
   latest_project_system_status: "none"
   latest_project_system_sidecar_task_id: "none"
@@ -26,10 +26,10 @@ active_state_bifurcation:
   sidecar_supersedes_research_handoff: false
   next_research_route_source: "latest_research_handoff"
 next_route:
-  route_id: "v21_p7_t05_universal_matter_coupling"
-  role_family: "candidate-constructor@0.2.0"
+  route_id: "v21_p7_t06_matter_action_after_checkpoint"
+  role_family: "ontology-formalizer@0.2.0"
   target_derivation_milestone: "matter_coupling"
-  milestone_burden: "Build the actual coupling candidate rather than another readiness profile."
+  milestone_burden: "Supply the variational matter input required for Einstein-equation work."
   requires_human_gate: false
 claim_boundary:
   physics_claim_authority: false
@@ -220,7 +220,7 @@ scoped_positive_objects:
 scoped_evidence_preconditions:
   - object_id: "matter_coupling"
     reader_facing_status: "accepted only as scoped source-extension evidence/precondition"
-    authority_path: "research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_profile_candidate_v1.tex"
+    authority_path: "research_control/tasks/RT-20260728-004/artifacts/universal_source_coupling_map_candidate_v1.tex"
     supports_target: "matter-semantics and matter-coupling continuation only"
     does_not_establish:
       - "no_source_law_adoption"
@@ -243,7 +243,7 @@ blocked_physical_targets:
   - target_id: "matter_coupling"
     reader_facing_status: "accepted only as scoped source-extension evidence/precondition"
     control_status: "accepted_as_scoped_evidence_precondition"
-    blocking_burden: "CommonSourcePropagationProfileCandidate_v1 supplies proposal-only finite Boolean source support and reachability profiles an exact transport theorem and a common three-address Rod-Signal-Detector subfamily; the current explicit five-role suite precisely fails the U_bij exact-bijective universality predicate by an equal-cardinality Clock-FreeFall SCC and nontrivial-cycle countermodel; P7-T05 actual coupling construction physical low-energy propagation principal symbols cones metrics matter-sector universality stress energy adoption and every downstream GR burden remain open while P6 Gate B supplies no effective-geometry input"
+    blocking_burden: "SourceUniversalCouplingMapCandidate_v1 constructs exact proposal-only finite support reindexing for explicitly B_3-equipped controls; the exact P7-T02 sector sigma_0=(1,[0]) admits identity-only and forward-enabled controls on the same x_u x_v carrier with nonisomorphic support; current sector data therefore do not derive one all-sector control and comparison family; physical matter coupling common geometry action stress energy conservation equivalence-principle behavior adoption and every downstream GR burden remain open while P6 Gate B supplies no effective-geometry input"
     overread_guard:
       - "no_source_law_adoption"
       - "no_canonical_ontology_edit"
@@ -398,7 +398,7 @@ distance_to_gr:
         - "no_completed_derivation"
         - "no_future_source_extension_impossibility"
         - "no_global_theory_rejection"
-      last_evidence_path: "research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_profile_candidate_v1.tex"
+      last_evidence_path: "research_control/tasks/RT-20260728-004/artifacts/universal_source_coupling_map_candidate_v1.tex"
       high_risk_status_card:
         object_id: "matter_coupling"
         positive_status: "matter_coupling has accepted scoped evidence/precondition only for continuation."
@@ -534,6 +534,6 @@ validation:
     - layer: "post_checkpoint"
       status: "PENDING"
       evidence:
-        - "One governed checkpoint remains; P7-T05 is unexecuted."
+        - "One governed checkpoint remains; P7-T06 is unexecuted."
 authority_warning:
   snapshot_only_not_authority: true

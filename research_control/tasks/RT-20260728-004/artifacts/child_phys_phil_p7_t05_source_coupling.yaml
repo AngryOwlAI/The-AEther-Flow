@@ -1,0 +1,867 @@
+schema_id: "v21_p7_t05_child_phys_phil_source_coupling_review_v1"
+artifact_id: "P7T05-CHILD-PHYS-PHIL-SOURCE-COUPLING-REVIEW-V1"
+task_id: "RT-20260728-004"
+job_id: "AJ-RT-20260728-004-001"
+decision_id: "DDR-20260728-004"
+plan_task_id: "P7-T05"
+execution_unit_id: "child_phys_phil"
+perspective: "physicist_philosopher"
+status: "completed"
+artifact_status: "draft/control"
+candidate_status: "proposal-only"
+evidence_status: "source-extension data"
+adoption_status: "blocked_adoption_open_continuation"
+review_context: "same_context_internal_parent_child_synthesis_input"
+target_derivation_milestone: "matter_coupling"
+milestone_burden: "Build the actual coupling candidate rather than another readiness profile."
+claim_boundary_id: "CB-V21-P7-T05-UNIVERSAL-SOURCE-COUPLING-001"
+
+review_question: >-
+  What exact comparison can be constructed for finite controls that are
+  explicitly equipped with a support-preserving bijection to one stipulated
+  three-address carrier, what conditional naturality follows, and does the
+  coarser P7-T01 sector record derive the control and comparison selection
+  needed to cover all admitted source-sector instances?
+
+review_outcome:
+  result_classification: "precise_obstruction_with_constructive_restricted_domain"
+  decisive_candidate_constructor_result_type: "precise_obstruction"
+  candidate_id: "SourceUniversalCouplingMapCandidate_v1"
+  restricted_comparison_id: "ThreeAddressSupportCouplingMap_v1"
+  theorem_ids:
+    - "P7T05-THM-THREE-ADDRESS-COUPLING-NATURALITY-001"
+    - "P7T05-THM-SECTOR-DATA-NONSELECTION-001"
+  obstruction_id: "OBST-P7T05-SECTOR-COUPLING-FUNCTOR-NONSELECTION-001"
+  constructive_result: >-
+    On the restricted domain of finite controls carrying an explicit
+    bijective support intertwiner kappa_C to the stipulated reflexive
+    forward-chain carrier B_3, kappa_C is a well-typed proposal-only source
+    support comparison. Under an explicitly declared compatible control
+    isomorphism h and the additional equipment-coherence equation
+    kappa_D composed with h equals kappa_C, the comparison square commutes,
+    Boolean reachability transports, and the induced comparisons compose.
+  obstruction_result: >-
+    The current P7-T01 sector value sigma=(Q,D) forgets the P7-T02 finite
+    control set, enabled rows, and equipment. Two equal-cardinality valid
+    controls on the same two configurations in sigma_0=(1,[0]) can have,
+    respectively, only typed identities or one additional forward
+    transition. Their reduced edge counts and reachability diameters differ,
+    so no support-preserving-and-reflecting bijection identifies them.
+    Because current ontology supplies no enabled-row selector, control
+    selector, or equipment assignment, the shared sector label does not
+    derive a unique sector-indexed control or source comparison.
+  exact_scope: >-
+    The positive result concerns explicitly equipped finite support
+    relations only. The negative result concerns derivability of a unique
+    sector-indexed support-control-and-comparison assignment from current
+    P7-T01 through P7-T04 proposal data. It does not deny that a new
+    source-side selector, a nonbijective comparison, a coarse quotient, a
+    different carrier, or a future conservative extension could be
+    stipulated and tested.
+  physical_result: "not_derived_and_not_refuted"
+  proof_authority: false
+  physics_promotion_authorized: false
+
+source_basis:
+  - path: "research_control/tasks/RT-20260728-004/00_TASK.yaml"
+    sha256: "8d452a96a815db2577ea3857c025b4d3130f1a1a98cc365a0f897e80b96449b6"
+    use: "active objective, claim boundary, status vocabulary, and output ownership"
+  - path: "research_control/tasks/RT-20260728-004/DDR-20260728-004.md"
+    sha256: "c8b3c27c73fe117a321458f7d2dc2889afd539e91aa22a52c9bccf1a266541a4"
+    use: "equipped-control construction question and same-sector obstruction design"
+  - path: "research_control/tasks/RT-20260728-004/jobs/AJ-RT-20260728-004-001.yaml"
+    sha256: "b93b571057fb76ac05ef38a55af078abfe9ffb88d5012ddf4a3118d497eb537a"
+    use: "single outer AgentJob, theorem and obstruction identities, no-fog contract, and authority limits"
+  - path: "research_control/tasks/RT-20260728-004/roles/candidate-constructor@0.2.0--RT-20260728-004.yaml"
+    sha256: "b5d8be8468ec590e31cfb4c324e92c26c5382a33c7c446fa290035b92689126f"
+    use: "one-job construction permissions and removed physical interpretations"
+  - path: ".agents/roles/physics/candidate-constructor.v0.2.0.md"
+    sha256: "f6534fd2950c2a6eefb8f2a4b255cd0794ceeb1462556be60af288bceb9d51d5"
+    use: "decisive result vocabulary and no-fog completion requirements"
+  - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+    path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+    sha256: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+    use: "P7-T05 target, universality burden, fail-closed requirements, and P7-T06 dependency"
+  - object_id: "TEX-V21-P7-T01-SOURCE-MATTER-ONTOLOGY-SECTOR-TAXONOMY-V1"
+    path: "research_control/tasks/RT-20260727-007/artifacts/source_matter_ontology_and_sector_taxonomy_v1.tex"
+    sha256: "8d160217bf223078a11bc63fde6593c11c39d5b50d9c48fbad7b12084f8a752d"
+    use: "coarse sector map, identity ladder, same-sector transition witness, and interpretation boundary"
+  - path: "research_control/tasks/RT-20260727-007/artifacts/source_matter_ontology_spec_v1.yaml"
+    sha256: "a5563edddaff90ebab6ac4d3d4e2dc0425fea23b5f27c1c6174cb28b1f4652be"
+    use: "machine-readable sector record, its coarse identity status, and transition typing"
+  - object_id: "TEX-V21-P7-T02-SOURCE-MATTER-FINITE-TRANSITION-KERNEL-V1"
+    path: "research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_candidate_v1.tex"
+    sha256: "65ac095f5cdf4c2e319365c8b0e024d031b19d9fc2b8102e59997afa1e8f9129"
+    use: "finite control type, enabled-row selection gap, support primacy, and presentation equivariance"
+  - path: "research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_spec_v1.yaml"
+    sha256: "936d2aa6dfea3d263675468ff581190240efde84c1241ad971a8c1383a065a97"
+    use: "finite control, identity convention, row-selection status, and fail-closed branches"
+  - path: "research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_controls_v1.yaml"
+    sha256: "af7fc976590b4ca82fca5c34c6f30091f6599428b8005cf3932ce03f92f7d779"
+    use: "identity-only and forward-transition control patterns"
+  - object_id: "TEX-V21-P7-T03-SOURCE-OPERATIONAL-DEVICE-SUITE-V1"
+    path: "research_control/tasks/RT-20260728-002/artifacts/source_operational_device_suite_candidate_v1.tex"
+    sha256: "d6c818ee29f1a7e659e2f454aec21431d680b3d2d4df048fcf36f4aba87ba22a"
+    use: "guarded role names, explicit three-address chains, and model-to-world limits"
+  - path: "research_control/tasks/RT-20260728-002/artifacts/source_operational_device_suite_spec_v1.yaml"
+    sha256: "417c604bad008b85b153718ae04aa43307c2ff3cfa3a5c3f242e70b013c86ba4"
+    use: "protocol role type, conditional address comparison, and open physical interpretation"
+  - path: "research_control/tasks/RT-20260728-002/artifacts/source_operational_device_controls_v1.yaml"
+    sha256: "7b5b7f39318bd4aa39e778c17ab3fd410f2498f20b52b03c6bd86045bdffeee7"
+    use: "Rod, Signal, and Detector three-address enabled rows"
+  - object_id: "TEX-V21-P7-T04-COMMON-SOURCE-PROPAGATION-PROFILE-V1"
+    path: "research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_profile_candidate_v1.tex"
+    sha256: "87014253023cdb8945ed67f606355d762486884ce3a6de4fa2d32e2af32e2b43"
+    use: "support relation, B_3-like subfamily, transport theorem, and preserved full-suite obstruction"
+  - path: "research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_spec_v1.yaml"
+    sha256: "91422c4db2b3166da6cab9391ff3f1109d43a683d9624f8086e23d7d8ddf7001"
+    use: "machine-readable support profiles, explicit maps, and geometry boundary"
+  - path: "research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_controls_v1.yaml"
+    sha256: "a4039465e6f4f45db7e484cee3b5bbb213750aa395dbe9abbf820adf53b35709"
+    use: "three-address positive control and exact P7-T04 countermodel scope"
+
+fixed_basis:
+  p7_t01_sector_record:
+    candidate_id: "SourceMatterIncidenceCandidate_v1"
+    status: "proposal-only"
+    configuration: "Psi=(m,z)"
+    sector_map: "Sec_src(Psi)=(Q(Psi),D(Psi))"
+    exact_content:
+      - "Q is a total source charge label."
+      - "D=[z] is a source defect class."
+      - "Every admitted transition preserves Q and D."
+      - "Sector coincidence is strictly coarser than configuration identity."
+    omitted_control_data:
+      - "finite control domain Omega"
+      - "enabled transition rows E_x"
+      - "kernel weights and update"
+      - "protocol, intervention, and readout data"
+      - "carrier selection and comparison maps"
+    physical_matter_sector_semantics: false
+  p7_t02_control_record:
+    candidate_id: "SourceMatterFiniteTransitionKernelCandidate_v1"
+    status: "proposal-only"
+    control_type: "C=(Omega,E,s,t,K_C)"
+    exact_content:
+      - "Omega is a finite nonempty set of typed P7-T01 configurations."
+      - "Every row E_x contains its typed identity."
+      - "Each enabled nonidentity transition preserves its P7-T01 sector."
+      - "The finite support relation is primary."
+    row_selection_derived_by_current_ontology: false
+    control_selection_derived_by_sector_record: false
+    physical_dynamics_or_coupling: false
+  p7_t03_protocol_record:
+    candidate_id: "SourceOperationalDeviceSuiteCandidate_v1"
+    status: "proposal-only"
+    relevant_roles:
+      - "Rod_src"
+      - "Signal_src"
+      - "Detector_src"
+    exact_content:
+      - "Each relevant role has a three-address identity-plus-forward control."
+      - "Signal_src to Detector_src carries an explicit address and transition bijection."
+      - "Rod_src to Signal_src comparison is conditional on a declared source-address bijection."
+    critical_limit: >-
+      Device-role names are not P7-T01 sector values. The fixed artifacts do
+      not enumerate one role or one three-address control for every admitted
+      source sector, and they do not identify any role with physical matter.
+  p7_t04_support_record:
+    candidate_id: "CommonSourcePropagationProfileCandidate_v1"
+    status: "proposal-only"
+    exact_content:
+      - "Rod_src, Signal_src, and Detector_src share one three-address support skeleton under explicit bijections."
+      - "Support and Boolean reachability transport under an exact support isomorphism."
+      - "The full protocol suite fails one exact-bijective common-relation predicate."
+    fixed_obstruction_id: "OBST-P7T04-FULL-SUITE-COMMON-PROPAGATION-001"
+    not_supplied:
+      - "one control for every P7-T01 sector"
+      - "a sector-indexed control selector"
+      - "a physical carrier or field"
+      - "a common cone or metric"
+      - "a source-to-effective coupling law"
+
+controlled_vocabulary:
+  candidate_name_guard: >-
+    SourceUniversalCouplingMapCandidate_v1 is a task identifier for the P7-T05
+    target. It does not entail that the resulting object is universal,
+    physical, effective, or a coupling law.
+  restricted_map_name_guard: >-
+    ThreeAddressSupportCouplingMap_v1 may be retained as a registered
+    identifier, but prose should call kappa_C an equipped-control source
+    support comparison or support intertwiner.
+  status_terms:
+    current:
+      - "draft/control"
+      - "proposal-only"
+      - "source-extension data"
+    protected_or_not_assigned:
+      - "canonical-ontology candidate"
+      - "adopted"
+      - "rejected"
+      - "human-gated"
+  exact_status: "blocked_adoption_open_continuation"
+
+model_to_world_ladder:
+  level_0_process_and_provenance:
+    items:
+      - "task, decision, role, AgentJob, registry, validator, checkpoint, and commit records"
+    exact_role: "routing, provenance, validation, and transaction evidence only"
+    forbidden_use: "none may be a mathematical or physical premise"
+  level_1_source_sector_labels:
+    items:
+      - "P7-T01 configurations Psi"
+      - "sector coordinates Sec_src(Psi)=(Q,D)"
+      - "candidate-presentation and sector-coincidence relations"
+    exact_role: "proposal-only source labels and kinematic records"
+    critical_limit: "a sector value does not contain enabled-row or equipment data"
+  level_2_enabled_row_controls:
+    items:
+      - "finite control domain Omega"
+      - "enabled rows E_x"
+      - "typed identities and admitted nonidentity transitions"
+      - "finite support and bookkeeping kernel"
+    exact_role: "separately stipulated proposal-only source-control data"
+    critical_limit: "current ontology and sector labels do not select these records"
+  level_3_explicit_carrier_and_comparison_maps:
+    items:
+      - "the stipulated three-address carrier B_3"
+      - "a declared bijection kappa_C:Omega_C->B_3"
+      - "support-preservation and support-reflection checks"
+      - "an optional declared control isomorphism h between equipped controls"
+    exact_role: "new proposal-only equipment, not a derived source law"
+    critical_limit: >-
+      A source-address bijection need not be a full P7-T01 source-presentation
+      isomorphism and need not transport Q or D unless those properties are
+      separately supplied and checked.
+  level_4_task_local_exact_theorems:
+    items:
+      - "conditional equipment-coherence or naturality"
+      - "Boolean reachability transport under kappa_C"
+      - "composition of explicitly compatible equipped-control comparisons"
+      - "same-sector two-control nonselection theorem"
+    exact_role: "candidate-relative mathematical consequences"
+    critical_limit: "exactness within stipulated data is not ontology derivation or proof authority"
+  level_5_scoped_obstruction:
+    item: >-
+      Current sector data do not derive a unique sector-indexed control and
+      support comparison because the sector projection forgets enabled-row
+      information and current ontology supplies no section or selector.
+    exact_role: "precise underdetermination of the requested current-data derivation"
+    critical_limit: "not an impossibility theorem for all future extensions or all comparison notions"
+  level_6_possible_physical_interpretation:
+    status: "open_not_supplied"
+    possible_only_after_new_maps:
+      - "source configurations and sectors to physical fields or matter species"
+      - "finite carrier states to physical events or field configurations"
+      - "source support to a physical differential operator"
+      - "operator characteristics to a physical cone"
+      - "cone or other source structure to an effective geometry"
+      - "source comparison to a covariant derivative or matter coupling"
+      - "formal histories and tokens to calibrated physical observables"
+    automatic_from_lower_levels: false
+  level_7_protected_adoption:
+    status: "human-gated"
+    blocked_here:
+      - "canonical-ontology candidate designation"
+      - "source selector or coupling law adoption"
+      - "physical interpretation adoption"
+      - "effective geometry or matter coupling adoption"
+      - "benchmark, proof, publication, or completed-derivation promotion"
+  ladder_rule: >-
+    Neither an exact finite theorem, a familiar word in an identifier, a
+    common reference carrier, nor validator success moves an object from
+    source syntax to physical interpretation or protected adoption.
+
+constructive_restricted_domain_audit:
+  domain_id: "ExplicitlyEquippedThreeAddressControls_v1"
+  carrier:
+    carrier_id: "B_3"
+    vertices: ["0", "1", "2"]
+    full_support_matrix:
+      - [1, 1, 0]
+      - [0, 1, 1]
+      - [0, 0, 1]
+    reduced_edges:
+      - "0->1"
+      - "1->2"
+    exact_meaning: "stipulated finite reflexive forward-chain source carrier"
+    physical_geometry: false
+  equipped_instance:
+    tuple: "(sigma,C,kappa_C)"
+    requirements:
+      - "C is a finite valid P7-T02 control."
+      - "Every configuration in Omega_C has one explicitly recorded P7-T01 sector sigma, or a declared sector-transport record is supplied."
+      - "kappa_C is a declared bijection from Omega_C to B_3."
+      - "kappa_C transports typed identities to typed identities."
+      - "x R_C y if and only if kappa_C(x) R_B3 kappa_C(y)."
+      - "No target metric, detector result, physical action, or desired GR behavior selects kappa_C."
+    excluded_by_definition:
+      - "unequipped controls"
+      - "controls of nonmatching cardinality"
+      - "maps that preserve but do not reflect support when exact intertwining is claimed"
+      - "maps selected from target or process authority"
+  available_examples:
+    Rod_src:
+      control: "P7T03-CONTROL-ROD-ADDRESS-CHAIN-001"
+      map: "kappa_R(r_j)=j"
+      status: "new explicit proposal-only equipment if parent declares it"
+    Signal_src:
+      control: "P7T03-CONTROL-SIGNAL-CHAIN-001"
+      map: "kappa_S(s_j)=j"
+      status: "explicit proposal-only equipment"
+    Detector_src:
+      control: "P7T03-CONTROL-DETECTOR-TRANSDUCER-001"
+      map: "kappa_D(q_j)=j"
+      status: "explicit proposal-only equipment"
+  available_example_limit: >-
+    These are three protocol controls, not an enumeration of admitted source
+    sectors. Their address maps are support maps. Cross-control preservation
+    of P7-T01 Q and D is not supplied merely by the matching address index.
+  induced_control_comparison:
+    definition: "h_(D<-C)=kappa_D^(-1) composed with kappa_C"
+    exact_result: >-
+      If both equipments are valid, h_(D<-C) is a bijective support
+      intertwiner. For three valid equipments, h_(E<-D) composed with
+      h_(D<-C) equals h_(E<-C).
+    semantic_limit: "finite support-level comparison only"
+
+naturality_theorem_audit:
+  theorem_id: "P7T05-THM-THREE-ADDRESS-COUPLING-NATURALITY-001"
+  controlled_title: "Conditional naturality of explicitly equipped three-address source comparisons"
+  minimum_hypotheses:
+    - "C and D are valid finite P7-T02 controls in the explicitly equipped restricted domain."
+    - "kappa_C and kappa_D are declared bijective support intertwiners to B_3."
+    - "h:Omega_C->Omega_D is a declared control-support isomorphism."
+    - "The equipment-coherence equation kappa_D composed with h equals kappa_C is checked."
+    - "If P7-T01 sector naturality is claimed, h must additionally be a declared compatible P7-T01 presentation map with the exact Q,D transport recorded."
+  exact_conclusions:
+    - "the comparison square commutes"
+    - "full and reduced support transport"
+    - "Boolean exact and bounded reachability transport"
+    - "composition of induced equipped-control comparisons"
+  proof_character: >-
+    Conditional and largely definitional coherence relative to explicitly
+    supplied equipment. The theorem is useful because it exposes every
+    premise; it is not evidence that current ontology derives the equipment.
+  conclusions_not_licensed:
+    - "naturality under every source presentation without an equipment transport rule"
+    - "sector preservation across controls without a Q,D transport check"
+    - "universality over all admitted sectors"
+    - "target covariance or diffeomorphism invariance"
+    - "physical gauge symmetry"
+    - "physical matter coupling"
+    - "effective geometry"
+    - "equivalence-principle behavior"
+  theorem_status: "task-local_exact_if_parent_supplies_and_checks_all_hypotheses"
+  proof_authority: false
+
+same_sector_nonselection_obstruction_audit:
+  theorem_id: "P7T05-THM-SECTOR-DATA-NONSELECTION-001"
+  obstruction_id: "OBST-P7T05-SECTOR-COUPLING-FUNCTOR-NONSELECTION-001"
+  shared_p7_t01_data:
+    source_complex: "the exact P7-T02 positive two-vertex control basis with link e and zero defect"
+    configurations:
+      x_u:
+        occupation: "m(u,rho)=1"
+        charge_chain: "[u]"
+        defect_chain: "0"
+        sector: "(1,[0])"
+      x_v:
+        occupation: "m(v,rho)=1"
+        charge_chain: "[v]"
+        defect_chain: "0"
+        sector: "(1,[0])"
+    admitted_forward_transition:
+      id: "T_e"
+      tuple: "(x_u,e,0,Pi_e,x_v)"
+      continuity_check: "[v]-[u]=partial_1 e"
+      defect_check: "0-0=0"
+      sector_preserved: true
+  equal_cardinality_controls:
+    identity_only_control:
+      control_id: "P7T05-CTRL-SAME-SECTOR-IDENTITY-ONLY-001"
+      configuration_set: ["x_u", "x_v"]
+      enabled_rows:
+        x_u: ["id_u"]
+        x_v: ["id_v"]
+      full_support_matrix:
+        - [1, 0]
+        - [0, 1]
+      profile:
+        vertex_count: 2
+        reduced_edge_count: 0
+        strongly_connected_component_count: 2
+        reduced_directed_cycle_present: false
+        reachable_pair_diameter: 0
+    forward_control:
+      control_id: "P7T05-CTRL-SAME-SECTOR-FORWARD-001"
+      configuration_set: ["x_u", "x_v"]
+      enabled_rows:
+        x_u: ["id_u", "T_e"]
+        x_v: ["id_v"]
+      full_support_matrix:
+        - [1, 1]
+        - [0, 1]
+      profile:
+        vertex_count: 2
+        reduced_edge_count: 1
+        strongly_connected_component_count: 2
+        reduced_directed_cycle_present: false
+        reachable_pair_diameter: 1
+  held_fixed:
+    - "the source incidence complex"
+    - "the two configurations"
+    - "the exact P7-T02 sector value sigma_0=(1,[0])"
+    - "the vertex cardinality"
+    - "the typed-identity convention"
+  varied:
+    - "only the enabled-row inclusion of the admitted transition T_e"
+  exact_nonisomorphism_reason:
+    - "reduced edge count is zero versus one"
+    - "reachable-pair diameter is zero versus one"
+  invariants_not_distinguishing_this_pair:
+    - "vertex count is equal"
+    - "strongly connected component count is equal"
+    - "nontrivial directed-cycle status is equal"
+  two_model_argument:
+    premises:
+      - "Both controls satisfy the P7-T02 finite-control type."
+      - "Every configuration in both controls has the same P7-T01 sector sigma."
+      - "P7-T01 sector data contain no enabled-row field."
+      - "Current ontology does not derive the P7-T02 enabled-row selection."
+    conclusion: >-
+      The same current sector record is compatible with two
+      support-nonisomorphic controls. Therefore the sector record and current
+      ontology do not determine a unique control-support object, and hence do
+      not determine a unique equipment or comparison assignment from sector
+      values alone.
+  exact_obstruction_components:
+    - "missing sector-to-control selector Sel"
+    - "missing proof that Sel(sigma) lies in the B_3-equipped domain for every admitted sigma"
+    - "missing equipment assignment kappa_sigma"
+    - "missing coherence law under admissible source-presentation maps"
+  relation_to_b3: >-
+    The two-state countermodel is deliberately upstream of B_3 equipment. It
+    shows that sector data do not even select control cardinality or support,
+    so they cannot derive membership in the three-address equipped domain.
+    It does not prove that no separately stipulated three-state control or
+    comparison can be supplied for sigma.
+  exact_allowed_conclusion: >-
+    Current proposal-only sector data do not derive the universal
+    sector-indexed control-and-comparison selection required by P7-T05.
+  conclusions_not_licensed:
+    - "no mathematical selector exists"
+    - "no choice function may be stipulated"
+    - "no nonbijective or lossy common comparison exists"
+    - "no other carrier can be used"
+    - "physical matter cannot couple universally"
+    - "future conservative source extension is impossible"
+    - "the global theory is false"
+
+distinctness_from_p7_t04:
+  p7_t04_question: >-
+    Whether the fixed explicit Clock_src and baseline FreeFall_src protocol
+    supports belong to one exact-bijective relation isomorphism class.
+  p7_t04_minimal_pair: "Clock_src versus baseline FreeFall_src"
+  p7_t04_distinguishing_invariants:
+    - "strongly connected component count"
+    - "nontrivial directed-cycle status"
+  p7_t05_question: >-
+    Whether the coarser P7-T01 sector record and current ontology determine
+    the P7-T02 control and explicit carrier equipment required for a
+    sector-indexed source comparison.
+  p7_t05_minimal_pair: "identity-only versus forward-enabled controls on the same configurations and same sector"
+  p7_t05_distinguishing_invariants:
+    - "reduced edge count"
+    - "reachable-pair diameter"
+  new_constructive_payload: "explicit kappa_C comparisons to B_3 on a restricted equipped-control domain"
+  new_obstruction_payload: "failure of a section or selector through the forgetful sector projection"
+  repeated_family_calculation: false
+  p7_t04_obstruction_preserved: true
+
+terminology_hazard_audit:
+  coupling:
+    risk: >-
+      In physics, coupling suggests a term in an action, a covariant
+      derivative, a field equation, or a response law between physical
+      degrees of freedom.
+    allowed_use: >-
+      Use only inside the fixed candidate or theorem identifier, or in the
+      fully qualified phrase proposal-only equipped-control source support
+      comparison.
+    preferred_prose: "source support comparison"
+    forbidden_overread: "physical matter coupling or coupling constant"
+  universal:
+    risk: "suggests coverage and one law for every admitted physical matter sector"
+    allowed_use: >-
+      Use for the unmet P7-T05 target or the precisely obstructed
+      sector-indexed selection obligation.
+    preferred_prose: "uniform on the explicitly equipped restricted domain"
+    forbidden_overread: "universal over all admitted sectors"
+  all_admitted_sectors:
+    risk: >-
+      P7-T01 does not supply a finite enumeration, one control per sector, or
+      a proof that every realized sector has B_3 equipment.
+    allowed_use: >-
+      State that coverage of all admitted sectors is an unfulfilled
+      obligation and an exact failed component.
+    forbidden_overread: "Rod_src, Signal_src, and Detector_src exhaust all sectors"
+  common_carrier:
+    risk: "may be mistaken for a common physical spacetime or geometry"
+    allowed_use: "one stipulated finite reference support relation B_3"
+    forbidden_overread: "common physical carrier, background, cone, or metric"
+  geometry:
+    risk: "suggests dimension, locality, distance, bilinear form, signature, or causal structure"
+    allowed_use: "only in explicit negative or missing-map statements"
+    forbidden_overread: "B_3 is common geometry or preserves common geometry"
+  matter:
+    risk: "suggests empirically interpreted physical fields or particles"
+    allowed_use: "P7-T01 source-matter candidate nomenclature with proposal-only qualification"
+    forbidden_overread: "the protocol controls are physical matter sectors"
+  naturality:
+    risk: "suggests a source-derived functorial law under every symmetry"
+    allowed_use: >-
+      Conditional equipment coherence under explicitly declared maps and
+      exact hypotheses.
+    forbidden_overread: "automatic covariance, gauge invariance, or source-derived universality"
+  effective:
+    risk: "suggests a justified coarse graining, low-energy limit, or physical output theory"
+    allowed_use: "only as the still-open source-to-effective target named by the plan"
+    forbidden_overread: "the finite carrier or support map is an effective geometry or effective coupling"
+
+exact_allowed_wording:
+  - "The map kappa_C is an explicitly supplied proposal-only support intertwiner on an equipped finite control."
+  - "The same comparison schema applies uniformly to each object already admitted to the equipped restricted domain."
+  - "Conditional on equipment coherence, the source support comparison is natural under the declared compatible control map."
+  - "The Rod_src, Signal_src, and Detector_src controls can be equipped with maps to the same stipulated three-address support carrier."
+  - "The role names remain formal protocol labels and are not physical matter sectors."
+  - "The sector record Sec_src=(Q,D) is coarser than configuration identity and omits enabled-row control data."
+  - "Two equal-size controls in the same sector can have nonisomorphic support relations."
+  - "Current ontology does not derive the sector-indexed control selector or equipment assignment required for all-sector coverage."
+  - "The exact result is a precise current-data obstruction with a constructive restricted domain."
+  - "Adoption is blocked while conservative same-milestone continuation remains open."
+  - "No physical interpretation or protected status follows from the task-local exact theorems."
+
+forbidden_wording:
+  - "A universal matter-coupling law has been derived."
+  - "The comparison acts on all admitted physical matter sectors."
+  - "The three protocol roles are the admitted matter sectors."
+  - "B_3 is a common physical carrier or common geometry."
+  - "The source comparison is a covariant derivative."
+  - "The comparison defines minimal coupling."
+  - "The finite support relation defines an action or field equation."
+  - "The equipped-control theorem derives stress energy."
+  - "The finite chain defines a physical cone, light cone, or metric."
+  - "Conditional equipment coherence is diffeomorphism covariance or gauge invariance."
+  - "The construction establishes the equivalence principle."
+  - "The obstruction proves physical nonuniversality."
+  - "No universal comparison or coupling can ever exist."
+  - "The ontology has adopted the selector, equipment, or coupling law."
+  - "The theorem is a proof or promotion of the physical theory."
+  - "Einstein equations, exact GR, or benchmark recovery have been derived."
+  - "The result is a global no-go theorem or global theory rejection."
+  - "Future source extension is impossible."
+
+missing_source_laws_and_mathematical_maps:
+  sector_coverage:
+    - "a declared domain Sigma_adm of admitted sector values"
+    - "a source-derived or explicitly proposed total selector Sel:Sigma_adm->finite controls"
+    - "proof that every selected control is valid and confined to the intended sector or carries an exact sector-transport record"
+    - "proof that each selected control has the cardinality and support type needed for its declared carrier"
+  equipment:
+    - "a total equipment assignment sigma maps to kappa_sigma"
+    - "a nontrivial criterion selecting B_3 rather than another carrier"
+    - "support-preservation and support-reflection conditions"
+    - "coherence under P7-T01 presentation isomorphisms"
+    - "stability under allowed intervention changes"
+  operator_and_variation:
+    - "source field or module on which a coupling operator acts"
+    - "derivation, connection, or covariant-derivative type"
+    - "locality and composition laws for such an operator"
+    - "action or alternative variational object"
+    - "allowed nonuniversal correction-operator domain and coefficients"
+    - "conservation or Ward-type identity with physical interpretation"
+  current_exact_disposition: >-
+    These are missing derivation-critical data, not zero-valued operators and
+    not implicitly supplied by the finite comparison.
+
+missing_interpretation_maps:
+  - "P7-T01 source configurations to physical matter fields, particles, or excitations"
+  - "source sector values Q,D to physical species or superselection sectors"
+  - "finite control states to localized physical events or field states"
+  - "enabled support to a physical evolution, propagation, or response law"
+  - "B_3 to a spacetime, manifold, bundle, or physical carrier"
+  - "formal composition to physical time"
+  - "source address to physical location or distance"
+  - "finite support or update to a differential or pseudodifferential operator"
+  - "operator to principal symbol and characteristic set"
+  - "characteristics to physical cone and metric"
+  - "source comparison to a physical covariant derivative or matter coupling"
+  - "protocol tokens to calibrated observations"
+  - "source symmetry to equivalence-principle universality"
+  - "candidate equations to empirical predictions and tests"
+
+fail_closed_branches:
+  - branch_id: "P7T05-BRANCH-VALID-EQUIPPED-RESTRICTED-001"
+    trigger: "C and kappa_C satisfy every equipped-domain typing and support-intertwining condition"
+    result: "valid_proposal_only_restricted_comparison"
+    physical_promotion: false
+  - branch_id: "P7T05-BRANCH-UNEQUIPPED-UNDERDETERMINED-002"
+    trigger: "C is typed but no carrier map kappa_C is supplied"
+    result: "underdetermined_missing_equipment"
+    not_result: "zero map, malformed control, or physical noncoupling"
+  - branch_id: "P7T05-BRANCH-SECTOR-SELECTOR-UNDERDETERMINED-003"
+    trigger: "sigma is typed but no rule selects C_sigma"
+    result: "underdetermined_missing_sector_to_control_selector"
+    obstruction_link: "OBST-P7T05-SECTOR-COUPLING-FUNCTOR-NONSELECTION-001"
+  - branch_id: "P7T05-BRANCH-COVERAGE-UNDERDETERMINED-004"
+    trigger: "the request quantifies over all admitted sectors without a domain enumeration and totality proof"
+    result: "underdetermined_all_sector_coverage"
+  - branch_id: "P7T05-BRANCH-CARDINALITY-MISMATCH-005"
+    trigger: "Omega_C and the selected carrier have different finite cardinalities while a bijection is required"
+    result: "not_in_equipped_domain"
+    global_no_go: false
+  - branch_id: "P7T05-BRANCH-SUPPORT-MISMATCH-006"
+    trigger: "kappa_C fails support preservation or reflection"
+    result: "malformed_equipment_for_exact_intertwining"
+  - branch_id: "P7T05-BRANCH-SECTOR-TRANSPORT-MISSING-007"
+    trigger: "a cross-control map is called sector-natural without a Q,D transport record"
+    result: "underdetermined_sector_naturality"
+  - branch_id: "P7T05-BRANCH-NATURALITY-INCOHERENT-008"
+    trigger: "kappa_D composed with h differs from kappa_C"
+    result: "inconsistent_equipment_family"
+  - branch_id: "P7T05-BRANCH-INTERVENTION-UNSTABLE-009"
+    trigger: "an allowed intervention changes support and no compatible equipment update is supplied"
+    result: "underdetermined_or_inconsistent_intervention_transport"
+  - branch_id: "P7T05-BRANCH-TRIVIAL-QUOTIENT-010"
+    trigger: "all controls are collapsed to one point without a declared information-retention criterion"
+    result: "degenerate_comparison_not_accepted_as_universality"
+  - branch_id: "P7T05-BRANCH-TARGET-IMPORT-011"
+    trigger: "the map or selector is chosen from a target metric, desired GR behavior, detector result, validator, registry, cache, or commit state"
+    result: "malformed_target_or_process_import"
+  - branch_id: "P7T05-BRANCH-PHYSICAL-INTERPRETATION-UNDERDETERMINED-012"
+    trigger: "physical coupling, geometry, matter, or equivalence-principle meaning is requested without model-to-world maps"
+    result: "underdetermined_physical_interpretation"
+  - branch_id: "P7T05-BRANCH-PROTECTED-ADOPTION-BLOCKED-013"
+    trigger: "canonical-candidate, adoption, rejection, proof, publication, or benchmark status is requested"
+    result: "blocked_human_gated_authority"
+
+nonuniversal_correction_operator_audit:
+  plan_obligation: "state allowed nonuniversal correction operators"
+  current_type_status: "not_well_typed"
+  reason: >-
+    The sources define no physical field space, differential operator,
+    coupling operator, action, scale expansion, or coefficient semantics.
+  exact_allowed_record: >-
+    Correction operators remain underdetermined. No zero correction, finite
+    adjacency perturbation, or support-map defect may be renamed a physical
+    nonuniversal coupling correction.
+
+no_fog_result:
+  no_fog_check: true
+  no_fog_explanation: >-
+    Exactly one restricted object is constructible: an explicit bijective
+    support comparison kappa_C for each already equipped B_3-like finite
+    control, with conditional coherence and composition. Exactly one
+    component fails for current all-sector derivation: the sector record and
+    current ontology supply neither a sector-to-control selector nor a total
+    equipment assignment, as witnessed by two equal-cardinality
+    support-nonisomorphic controls in the same sector.
+  candidate_constructor_result:
+    result_type: "precise_obstruction"
+    obstruction_identifier: "OBST-P7T05-SECTOR-COUPLING-FUNCTOR-NONSELECTION-001"
+    failed_components:
+      - "sector-indexed control selection"
+      - "all-sector equipped-domain coverage"
+      - "sector-indexed comparison assignment"
+      - "equipment coherence derived from current source law"
+      - "physical interpretation as matter coupling"
+    obstruction_record: "this child review input and the parent-fused P7-T05 obstruction record"
+    constructive_restricted_domain_preserved: true
+    next_required_role: "ontology-formalizer@0.2.0"
+
+conservative_reopening_criteria:
+  valid_reopening_classes:
+    - reopening_class: "new_sector_to_control_selector"
+      required_delta: >-
+        Supply a target-atlas-free proposal for Sel on a declared admitted
+        sector domain and prove its typing, sector confinement, and
+        presentation coherence.
+    - reopening_class: "new_total_equipment_family"
+      required_delta: >-
+        Supply one explicitly typed carrier and comparison map for every
+        selected sector control, with a nontrivial coverage and information
+        retention criterion.
+    - reopening_class: "new_comparison_not_exact_bijection"
+      required_delta: >-
+        Define a quotient, embedding, span, common cover, coarse graining, or
+        enriched comparison, and state exactly which data it preserves,
+        reflects, or discards.
+    - reopening_class: "new_intervention_stability_law"
+      required_delta: >-
+        Supply a source-only rule transporting or updating equipment when
+        allowed interventions change enabled support.
+    - reopening_class: "new_source_to_operator_map"
+      required_delta: >-
+        Supply a field domain, operator type, locality or composition rule,
+        source provenance, and no-target-import audit before coupling or
+        correction-operator language is used.
+    - reopening_class: "new_model_to_world_bridge"
+      required_delta: >-
+        Supply physical matter, carrier, geometry, and operational
+        interpretation maps and route them through the required audits and
+        protected authority.
+    - reopening_class: "protected_source_law_authority"
+      required_delta: >-
+        Obtain explicit human-gated authority before canonical-ontology
+        candidate designation, adoption, rejection, or physical promotion.
+  invalid_reopening_bases:
+    - "renaming kappa_C as a covariant derivative"
+    - "calling B_3 common geometry"
+    - "treating the three protocol roles as all matter sectors"
+    - "using a target metric or desired GR result to choose the selector"
+    - "collapsing every control to a one-point quotient without an information criterion"
+    - "repeating the same same-sector control pair without a material premise delta"
+    - "treating validator or checkpoint success as scientific proof"
+
+bounded_next_role_route_recommendation:
+  advisory_only: true
+  requires_parent_and_director_resolution: true
+  after_validated_checkpoint_only: true
+  recommended_plan_task_id: "P7-T06"
+  recommended_role_family: "ontology-formalizer@0.2.0"
+  recommended_route_label: "ontology-law-research-packet"
+  recommended_result_target: "source_equivalent_variational_object_or_precise_obstruction"
+  exact_scope: >-
+    Attempt one bounded source-side matter-action or source-equivalent
+    variational construction while treating the missing sector selector,
+    equipment family, physical coupling, and geometry as unresolved rather
+    than as premises. If the variational type cannot be stated without those
+    data, record the exact missing source-side law and a precise obstruction.
+  status_guard: "blocked_adoption_open_continuation"
+  conflict_to_resolve: >-
+    The active P7-T05 AgentJob's selected-next-route note names
+    candidate-constructor@0.2.0, while the v21 P7-T06 plan section names
+    ontology-formalizer@0.2.0 and ontology-law-research-packet. The parent
+    should preserve the current result and resolve this role/route mismatch
+    from tracked authority before creating any successor job.
+  not_authorized_here:
+    - "creation of P7-T06 AgentJob"
+    - "creation of a handoff"
+    - "canonical ontology edit"
+    - "source-law adoption"
+    - "physical action or stress-energy promotion"
+
+conflict_review_input:
+  blocking_conflicts_found: true
+  required_parent_resolutions:
+    - conflict_id: "PHIL-CONFLICT-P7T05-01"
+      issue: "The word coupling overstates a finite support comparison."
+      required_resolution: >-
+        Define kappa_C as an equipped-control source support comparison and
+        confine coupling to controlled identifiers or explicitly qualified
+        plan-target language.
+      blocking_if_unresolved: true
+    - conflict_id: "PHIL-CONFLICT-P7T05-02"
+      issue: "Rod_src, Signal_src, and Detector_src are protocol roles, not admitted matter sectors."
+      required_resolution: >-
+        State that the positive construction covers three equipped controls
+        only and that all-sector coverage remains a failed component.
+      blocking_if_unresolved: true
+    - conflict_id: "PHIL-CONFLICT-P7T05-03"
+      issue: "A P7-T04 address bijection is not automatically a full P7-T01 presentation or sector map."
+      required_resolution: >-
+        Keep the theorem at support level unless a full compatible source map
+        and Q,D transport record are explicitly supplied.
+      blocking_if_unresolved: true
+    - conflict_id: "PHIL-CONFLICT-P7T05-04"
+      issue: "Naturality is conditional on equipment coherence and is otherwise not derived."
+      required_resolution: >-
+        Put kappa_D composed with h equals kappa_C in the hypotheses and
+        describe the theorem as conditional candidate-relative coherence.
+      blocking_if_unresolved: true
+    - conflict_id: "PHIL-CONFLICT-P7T05-05"
+      issue: "The same-sector pair proves nonselection, not absolute nonexistence of a selector."
+      required_resolution: >-
+        Use current ontology does not derive wording and leave new choices,
+        nonbijective comparisons, other carriers, and future extensions open.
+      blocking_if_unresolved: true
+    - conflict_id: "PHIL-CONFLICT-P7T05-06"
+      issue: "The two-state countermodel is not itself B_3-equipped."
+      required_resolution: >-
+        Explain that it is an upstream control-selection and cardinality
+        obstruction, not a direct theorem that no map to B_3 can be proposed.
+      blocking_if_unresolved: true
+    - conflict_id: "PHIL-CONFLICT-P7T05-07"
+      issue: "The plan objective says preserves common geometry, but P7-T04 supplies no geometry."
+      required_resolution: >-
+        State that B_3 is a finite reference relation only and that common
+        geometry remains absent and cannot be a premise or result.
+      blocking_if_unresolved: true
+    - conflict_id: "PHIL-CONFLICT-P7T05-08"
+      issue: "The plan asks for nonuniversal correction operators, but no operator domain is typed."
+      required_resolution: >-
+        Record correction operators as underdetermined and list the missing
+        field, operator, locality, scale, and coefficient data.
+      blocking_if_unresolved: true
+    - conflict_id: "PHIL-CONFLICT-P7T05-09"
+      issue: "The active next-route role note differs from the v21 P7-T06 plan role and route."
+      required_resolution: >-
+        Resolve the mismatch from tracked Director authority before any
+        successor AgentJob is created.
+      blocking_if_unresolved: true
+
+finding_counts:
+  source_files_hashed: 17
+  model_to_world_level_count: 8
+  equipped_positive_control_count: 3
+  task_local_theorem_id_count: 2
+  scoped_obstruction_count: 1
+  equal_cardinality_same_sector_countermodel_count: 1
+  terminology_hazard_count: 8
+  allowed_wording_count: 11
+  forbidden_wording_count: 18
+  fail_closed_branch_count: 13
+  missing_interpretation_map_count: 14
+  conservative_reopening_class_count: 7
+  required_parent_resolution_count: 9
+  physical_promotion_count: 0
+
+authority_limits:
+  canonical_ontology_modified: false
+  canonical_ontology_candidate_promoted: false
+  source_selector_law_adopted: false
+  source_equipment_law_adopted: false
+  source_coupling_law_adopted: false
+  source_extension_adopted: false
+  matter_ontology_adopted: false
+  protocol_roles_promoted_to_matter_sectors: false
+  all_admitted_sectors_covered: false
+  physical_matter_established: false
+  physical_matter_coupling_established: false
+  coupling_constant_established: false
+  covariant_derivative_established: false
+  matter_action_established: false
+  stress_energy_established: false
+  physical_conservation_law_established: false
+  physical_carrier_established: false
+  physical_time_established: false
+  physical_causal_order_established: false
+  principal_symbol_established: false
+  characteristic_set_established: false
+  physical_cone_established: false
+  effective_metric_established: false
+  effective_geometry_established: false
+  detector_semantics_established: false
+  equivalence_principle_established_or_refuted: false
+  einstein_equations_derived: false
+  exact_gr_recovery_established: false
+  benchmark_promoted: false
+  proof_authority: false
+  publication_authority: false
+  completed_derivation_claimed: false
+  global_no_go_claimed: false
+  global_theory_rejected: false
+  future_source_extension_impossibility_claimed: false
+  validator_or_checkpoint_used_as_proof: false
+  physics_promotion_authorized: false

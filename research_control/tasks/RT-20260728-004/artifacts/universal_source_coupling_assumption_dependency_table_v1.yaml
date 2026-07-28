@@ -1,0 +1,100 @@
+schema_id: "v21_p7_t05_universal_source_coupling_assumption_dependency_table_v1"
+artifact_id: "P7T05-UNIVERSAL-SOURCE-COUPLING-ASSUMPTION-DEPENDENCY-TABLE-V1"
+task_id: "RT-20260728-004"
+job_id: "AJ-RT-20260728-004-001"
+status: "draft/control"
+candidate_status: "proposal-only"
+claim_boundary_id: "CB-V21-P7-T05-UNIVERSAL-SOURCE-COUPLING-001"
+
+assumptions:
+  - assumption_id: "P7T05-A01-P7T01-FIXED"
+    statement: "P7-T01 configurations sector map and same-sector witness are fixed proposal-only inputs."
+    source: "TEX-V21-P7-T01-SOURCE-MATTER-ONTOLOGY-SECTOR-TAXONOMY-V1"
+    status: "inherited_candidate_input"
+    physical_interpretation: false
+  - assumption_id: "P7T05-A02-P7T02-FIXED"
+    statement: "P7-T02 finite controls enabled rows rational kernel and sector-preservation theorem are fixed proposal-only inputs."
+    source: "TEX-V21-P7-T02-SOURCE-MATTER-FINITE-TRANSITION-KERNEL-V1"
+    status: "inherited_candidate_input"
+    physical_interpretation: false
+  - assumption_id: "P7T05-A03-P7T03-CHAINS"
+    statement: "The Rod Signal and Detector three-address controls are fixed formal source protocols."
+    source: "TEX-V21-P7-T03-SOURCE-OPERATIONAL-DEVICE-SUITE-V1"
+    status: "inherited_candidate_input"
+    physical_interpretation: false
+  - assumption_id: "P7T05-A04-P7T04-CARRIER"
+    statement: "The common three-address source support skeleton is fixed only as proposal-only finite relation data."
+    source: "TEX-V21-P7-T04-COMMON-SOURCE-PROPAGATION-PROFILE-V1"
+    status: "inherited_candidate_input"
+    physical_interpretation: false
+  - assumption_id: "P7T05-A05-EXPLICIT-EQUIPMENT"
+    statement: "Every constructive instance supplies a sector-preserving row-bijective comparison kappa rather than deriving it from a protocol name."
+    source: "task-local P7-T05 candidate"
+    status: "new_stipulated_candidate_input"
+    physical_interpretation: false
+  - assumption_id: "P7T05-A06-NO-TARGET-IMPORT"
+    statement: "No target atlas metric cone detector benchmark validator derivative or desired GR behavior selects the carrier or comparison."
+    source: "CB-V21-P7-T05-UNIVERSAL-SOURCE-COUPLING-001"
+    status: "hard_guard"
+    physical_interpretation: false
+
+derived_dependencies:
+  - result_id: "P7T05-R01-SECTORWISE-INVERSE"
+    depends_on: ["P7T05-A01-P7T01-FIXED", "P7T05-A05-EXPLICIT-EQUIPMENT"]
+    exact_result: "Kappa has the displayed sectorwise inverse."
+    result_status: "exact_within_candidate"
+  - result_id: "P7T05-R02-UPDATE-INTERTWINING"
+    depends_on: ["P7T05-A02-P7T02-FIXED", "P7T05-A04-P7T04-CARRIER", "P7T05-A05-EXPLICIT-EQUIPMENT"]
+    exact_result: "Kappa U_C=(direct sum U_B3)Kappa."
+    result_status: "exact_within_candidate"
+  - result_id: "P7T05-R03-THREE-INSTANCE-CONSTRUCTION"
+    depends_on: ["P7T05-A01-P7T01-FIXED", "P7T05-A03-P7T03-CHAINS", "P7T05-A04-P7T04-CARRIER", "P7T05-A05-EXPLICIT-EQUIPMENT"]
+    exact_result: "Rod Signal and Detector supply three explicitly equipped one-sector instances."
+    result_status: "exact_within_candidate"
+  - result_id: "P7T05-R04-SAME-SECTOR-NONSELECTION"
+    depends_on: ["P7T05-A01-P7T01-FIXED", "P7T05-A02-P7T02-FIXED"]
+    exact_result: "Sec_src alone does not select one support-isomorphism class for all controls in sigma_0=(1,[0])."
+    result_status: "precise_scoped_obstruction"
+  - result_id: "P7T05-R05-NO-PHYSICAL-COUPLING"
+    depends_on: ["P7T05-A06-NO-TARGET-IMPORT"]
+    exact_result: "No model-to-world physical coupling geometry action stress-energy or GR claim is licensed."
+    result_status: "claim_boundary"
+
+missing_dependencies:
+  - missing_id: "P7T05-M01-SECTOR-CONTROL-SELECTOR"
+    needed_for: "total universal sector-indexed source comparison"
+    current_status: "not_derived"
+    repair_class: "future source-side extension allowed"
+  - missing_id: "P7T05-M02-COMMON-CARRIER-LAW"
+    needed_for: "one nontrivial carrier justified for every admitted sector"
+    current_status: "not_derived"
+    repair_class: "future source-side extension allowed"
+  - missing_id: "P7T05-M03-MODEL-TO-WORLD-MAP"
+    needed_for: "physical matter coupling or equivalence-principle interpretation"
+    current_status: "not_supplied"
+    repair_class: "separate interpretation burden"
+  - missing_id: "P7T05-M04-VARIATIONAL-OBJECT"
+    needed_for: "action stress-energy or conservation claims"
+    current_status: "not_supplied"
+    repair_class: "P7-T06 construction-or-obstruction burden"
+  - missing_id: "P7T05-M05-EFFECTIVE-GEOMETRY"
+    needed_for: "metric-compatible physical coupling"
+    current_status: "P6 Gate B zero of eight; no input available"
+    repair_class: "cannot be assumed or imported"
+
+status_matrix:
+  source_reindexing_constructed: true
+  constructive_domain_totality: true
+  every_current_p7_t01_sector_covered: false
+  sector_only_selector_derived: false
+  common_physical_geometry_preserved: false
+  physical_matter_coupling_derived: false
+  matter_action_derived: false
+  stress_energy_derived: false
+  conservation_law_derived: false
+  equivalence_principle_behavior_derived: false
+  einstein_equations_derived: false
+  ontology_or_source_law_adopted: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+  physics_promotion_authorized: false

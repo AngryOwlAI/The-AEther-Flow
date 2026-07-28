@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-07-28T07:08:39Z`
-- Source fingerprint: `64fe310b9380aa2bc2764d2f8cbbac77b0c9a3ede0e253a4222a4b85f32b358a`
-- Nodes: `22925`
-- Edges: `74027`
+- Generated from tracked state as of: `2026-07-28T09:03:55Z`
+- Source fingerprint: `0f5e5908d2ceb71445fc382ef0304bd0c82e2d63d02ccf09ec152e9565a96126`
+- Nodes: `22963`
+- Edges: `74073`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 1132 |
+| `completion_yaml` | 1133 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 893 |
+| `handoff_yaml` | 894 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,32 +33,32 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 7 |
-| `agent_job` | `support_only` | 1132 |
+| `agent_job` | `support_only` | 1133 |
 | `artifact` | `canonical_source` | 87 |
-| `artifact` | `support_only` | 11645 |
-| `blocked_burden` | `blocked` | 4648 |
-| `claim_boundary` | `support_only` | 1089 |
+| `artifact` | `support_only` | 11669 |
+| `blocked_burden` | `blocked` | 4652 |
+| `claim_boundary` | `support_only` | 1090 |
 | `draft_control_candidate` | `draft_control` | 768 |
-| `draft_control_candidate` | `proposal_only` | 136 |
-| `draft_control_candidate` | `science_draft` | 79 |
+| `draft_control_candidate` | `proposal_only` | 138 |
+| `draft_control_candidate` | `science_draft` | 81 |
 | `frozen_negative` | `frozen_negative` | 141 |
 | `gate_chair_verdict` | `human_gated` | 32 |
-| `handoff` | `support_only` | 893 |
+| `handoff` | `support_only` | 894 |
 | `human_gated_object` | `human_gated` | 547 |
 | `ledger_row` | `accepted_scoped` | 4 |
 | `ledger_row` | `blocked` | 4 |
 | `ledger_row` | `frozen_negative` | 1 |
 | `ledger_row` | `human_gated` | 1 |
 | `ledger_row` | `science_draft` | 5 |
-| `obstruction` | `blocked` | 91 |
+| `obstruction` | `blocked` | 92 |
 | `obstruction` | `rejected` | 4 |
 | `source_extension_evidence_precondition` | `source_extension_evidence` | 40 |
 | `source_ontology_object` | `canonical_source` | 27 |
 | `source_ontology_object` | `rejected` | 50 |
-| `source_ontology_object` | `support_only` | 362 |
+| `source_ontology_object` | `support_only` | 363 |
 | `task` | `human_gated` | 29 |
 | `task` | `science_draft` | 32 |
-| `task` | `support_only` | 1071 |
+| `task` | `support_only` | 1072 |
 
 ## Frontier Table
 
@@ -71,7 +71,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | BridgeCert | `object:bridgecert` | `source_extension_evidence_precondition` | `source_extension_evidence` | Required frontier object exposed in completion text: BridgeCert. |
 | SEI-MC criteria | `object:sei_mc_criteria` | `draft_control_candidate` | `draft_control` | Required frontier object exposed in completion text: SEI-MC criteria. |
 | SEI_src^{cand} | `object:sei_src_cand` | `draft_control_candidate` | `draft_control` | Required frontier object exposed in completion text: SEI_src^{cand}. |
-| matter-coupling burden | `object:matter_coupling_burden` | `ledger_row` | `science_draft` | P7-T04 proves exact source-bijection transport and one common three-address subfamily while precisely obstructing one full-suite exact-bijective support relatio |
+| matter-coupling burden | `object:matter_coupling_burden` | `ledger_row` | `science_draft` | P7-T05 proves exact support and update transport on explicitly equipped finite controls and precisely obstructs derivation of one sector-indexed exact compariso |
 | Einstein-equations burden | `object:einstein_equations_burden` | `blocked_burden` | `blocked` | no Einstein-equation derivation supplied |
 | benchmark-promotion burden | `object:benchmark_promotion_burden` | `human_gated_object` | `human_gated` | benchmark promotion remains blocked |
 | finite toy metric response frozen negative | `ledger:finite_toy_metric_response` | `ledger_row` | `frozen_negative` | explicit-tag-only finite toy route failed tag-removal stress and is frozen locally |
@@ -163,9 +163,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 ## Route Continuity
 
-- Active task: `RT-20260728-003`
-- Latest handoff: `handoff-0893`
-- Handoff path: `research_control/handoffs/handoff-0893.yaml`
-- Next action: Run one governed checkpoint for AJ-RT-20260728-003-001. Only after it commits may one fresh bounded candidate-constructor@0.2.0 packet execute v21 P7-T05 by constructing the actual universal matter-coupling candidate or returning a distinct precise obstruction without assuming a common physical cone metric detector semantics stress energy coupling or GR behavior.
+- Active task: `RT-20260728-004`
+- Latest handoff: `handoff-0894`
+- Handoff path: `research_control/handoffs/handoff-0894.yaml`
+- Next action: Run one governed checkpoint for AJ-RT-20260728-004-001. Only after it commits may one fresh bounded ontology-formalizer@0.2.0 ontology-law-research-packet execute v21 P7-T06 by constructing a proposal-only source-equivalent variational object or returning a precise obstruction without assuming a target metric physical coupling action stress energy or Einstein equations.
 
 This graph is navigational support only; inspect the cited sources before using any claim.

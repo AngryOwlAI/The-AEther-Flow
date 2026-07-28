@@ -620,6 +620,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-V21-P7-T03-SOURCE-OPERATIONAL-DEVICE-RECEIPT-V1` `research_control/tasks/RT-20260728-002/artifacts/source_operational_device_receipt.md`
 - `MD-V21-P7-T04-COMMON-SOURCE-PROPAGATION-RECEIPT-V1` `research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_receipt.md`
 - `MD-V21-P7-T04-PARENT-FUSION-COMMON-SOURCE-PROPAGATION-V1` `research_control/tasks/RT-20260728-003/artifacts/parent_fusion_notes_p7_t04_common_propagation.md`
+- `MD-V21-P7-T05-PARENT-FUSION-UNIVERSAL-SOURCE-COUPLING-V1` `research_control/tasks/RT-20260728-004/artifacts/parent_fusion_notes_p7_t05_source_coupling.md`
+- `MD-V21-P7-T05-UNIVERSAL-SOURCE-COUPLING-RECEIPT-V1` `research_control/tasks/RT-20260728-004/artifacts/universal_source_coupling_receipt.md`
 - `MD-VALIDATOR-OPERATOR-WORKFLOW-PUBLICATION-BRIEF` `markdown/publication-briefs/validator-operator-workflow.publication-brief.md`
 
 ## wiki_markdown
@@ -1237,4 +1239,6 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-V21-P7-T03-SOURCE-OPERATIONAL-DEVICE-RECEIPT-V1` `wiki/markdown/md-v21-p7-t03-source-operational-device-receipt-v1.md`
 - `WIKI-MD-V21-P7-T04-COMMON-SOURCE-PROPAGATION-RECEIPT-V1` `wiki/markdown/md-v21-p7-t04-common-source-propagation-receipt-v1.md`
 - `WIKI-MD-V21-P7-T04-PARENT-FUSION-COMMON-SOURCE-PROPAGATION-V1` `wiki/markdown/md-v21-p7-t04-parent-fusion-common-source-propagation-v1.md`
+- `WIKI-MD-V21-P7-T05-PARENT-FUSION-UNIVERSAL-SOURCE-COUPLING-V1` `wiki/markdown/md-v21-p7-t05-parent-fusion-universal-source-coupling-v1.md`
+- `WIKI-MD-V21-P7-T05-UNIVERSAL-SOURCE-COUPLING-RECEIPT-V1` `wiki/markdown/md-v21-p7-t05-universal-source-coupling-receipt-v1.md`
 - `WIKI-MD-VALIDATOR-OPERATOR-WORKFLOW-PUBLICATION-BRIEF` `wiki/markdown/md-validator-operator-workflow-publication-brief.md`

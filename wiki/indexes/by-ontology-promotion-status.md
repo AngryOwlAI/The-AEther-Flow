@@ -427,6 +427,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V21-P7-T02-SOURCE-MATTER-FINITE-TRANSITION-KERNEL-V1` `research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_candidate_v1.tex`
 - `TEX-V21-P7-T03-SOURCE-OPERATIONAL-DEVICE-SUITE-V1` `research_control/tasks/RT-20260728-002/artifacts/source_operational_device_suite_candidate_v1.tex`
 - `TEX-V21-P7-T04-COMMON-SOURCE-PROPAGATION-PROFILE-V1` `research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_profile_candidate_v1.tex`
+- `TEX-V21-P7-T05-UNIVERSAL-SOURCE-COUPLING-MAP-V1` `research_control/tasks/RT-20260728-004/artifacts/universal_source_coupling_map_candidate_v1.tex`
 
 ## superseded
 

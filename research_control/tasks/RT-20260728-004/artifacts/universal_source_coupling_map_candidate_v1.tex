@@ -1,0 +1,459 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs,longtable,array,enumitem}
+
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{obstruction}{Precise obstruction}
+\newenvironment{nonconclusion}{\par\smallskip\noindent\textbf{Non-conclusion.}\ }{\par\smallskip}
+
+\newcommand{\Sec}{\operatorname{Sec}_{\mathrm{src}}}
+\newcommand{\Control}{\mathfrak C}
+\newcommand{\Carrier}{\mathcal B_3}
+\newcommand{\Kmap}{\mathcal K}
+\newcommand{\Update}{U}
+\newcommand{\Rel}{\mathcal R}
+\newcommand{\Q}{\mathbb Q}
+
+\title{SourceUniversalCouplingMapCandidate\_v1\\
+\large An explicitly equipped finite source comparison and a scoped
+sector-selection obstruction}
+\author{Candidate Constructor Packet RT-20260728-004}
+\date{2026-07-28}
+
+\begin{document}
+\maketitle
+
+\section{Status and decisive result}
+
+This task-local object is \texttt{draft/control}, \texttt{proposal-only},
+and \texttt{source-extension data}.  It executes v21 P7-T05 under
+\texttt{CB-V21-P7-T05-UNIVERSAL-SOURCE-COUPLING-001}.  It neither modifies
+canonical ontology nor adopts a source law.
+
+The packet constructs an exact finite source comparison on a restricted,
+explicitly equipped domain.  For every sector fiber of such a control, the
+comparison reindexes P7-T02 bookkeeping states onto the same three-address
+source carrier and intertwines the finite rational update.  The P7-T03
+Rod-, Signal-, and Detector-labelled chains provide three constructive
+instances after their source-address maps are explicitly supplied.
+
+The current source records do \emph{not}, however, derive the total
+sector-indexed selection required for a universal P7-T05 result.  The same
+P7-T01 sector supports two equal-cardinality P7-T02 controls---one
+identity-only and one identity-plus-forward---whose support relations have
+different edge counts.  The sector projection forgets the enabled-row datum
+that distinguishes them.  Thus it cannot by itself select one common
+support-preserving carrier and comparison for all current admitted controls
+in that sector.
+
+The exact result is
+\[
+ \texttt{precise\_obstruction\_with\_constructive\_restricted\_domain}.
+\]
+Adoption is
+\texttt{blocked\_adoption\_open\_continuation}.  This is not a physical
+matter-coupling result, equivalence-principle test, or global no-go theorem.
+
+\section{Fixed proposal-only source basis}
+
+P7-T01 supplies configurations \(x\) and the source-sector projection
+\[
+ \Sec(x)=\bigl(Q(x),D(x)\bigr),
+\]
+The sector coordinates are candidate-derived records, not physical particle
+species or measured charges.
+
+P7-T02 supplies finite controls
+\[
+ \Control=(\Omega,E,s,t,K_{\Control})
+\]
+whose enabled rows contain typed identities.  Its rational update on
+bookkeeping states is
+\begin{equation}
+  (\Update_{\Control}\mu)(y)
+  =
+  \sum_{x\in\Omega}\mu(x)
+  \sum_{\substack{T\in E_x\\t(T)=y}}
+  K_{\Control}(T\mid x).
+  \label{eq:p7t02-update}
+\end{equation}
+Every enabled transition preserves \(\Sec\).  Its explicit positive control
+contains distinct \(x_u,x_v\) in sector \((1,[0])\) and the admissible record
+\(T_e:x_u\to x_v\).  Kernel coefficients are not physical probabilities,
+and the update count is not physical time.
+
+P7-T03 supplies formal Rod-, Signal-, and Detector-labelled three-address
+chains.  P7-T04 proves that their finite support relations are copies of
+one chain after explicit address bijections are stipulated.  P7-T04 does
+not supply a physical cone, metric, geometry, detector interpretation, or
+matter coupling.  Its common carrier is used below only as finite source
+syntax.
+
+The exact-GR benchmark's target-side minimal-coupling grammar is expressly
+excluded as a source premise.  No target atlas, target metric, desired
+benchmark behavior, validator verdict, generated derivative, registry row,
+or commit state selects the construction below.
+
+\section{The explicitly equipped construction}
+
+\begin{definition}[Common three-address source carrier]
+Let
+\[
+ \Carrier=\{b_0,b_1,b_2\}.
+\]
+Its enabled rows contain typed identities, the forward record
+\(b_0\to b_1\), and the forward record \(b_1\to b_2\).  The corresponding
+P7-T02 update matrix, with target rows and source columns, is
+\begin{equation}
+ M_{\Carrier}=
+ \begin{pmatrix}
+  1/2&0&0\\
+  1/2&1/2&0\\
+  0&1/2&1
+ \end{pmatrix}.
+ \label{eq:carrier-matrix}
+\end{equation}
+This is a finite rational source carrier.  It is not a spatial manifold,
+causal skeleton, characteristic cone, or effective geometry.
+\end{definition}
+
+For a control \(\Control\), let
+\[
+ \Sigma_{\Control}=\{\Sec(x):x\in\Omega\},
+ \qquad
+ \Omega_{\Control,\sigma}
+ =\{x\in\Omega:\Sec(x)=\sigma\}.
+\]
+Sector preservation makes every update block diagonal with respect to these
+fibers.
+
+\begin{definition}[Explicitly equipped sector control]
+An explicitly equipped control is
+\[
+ \widehat{\Control}
+ =(\Control,\Sigma_{\Control},\lambda_{\Control},\kappa_{\Control}),
+ \qquad
+ \lambda_{\Control}=\Sec|_{\Omega},
+\]
+with an \emph{explicitly supplied} bijection
+\[
+ \kappa_{\Control}:\Omega\longrightarrow
+ \Carrier\times\Sigma_{\Control}
+\]
+satisfying:
+\begin{enumerate}[leftmargin=*]
+\item
+ \(\operatorname{pr}_{\Sigma}\kappa_{\Control}(x)=\Sec(x)\);
+\item each fiber restriction
+ \(\kappa_{\Control,\sigma}:\Omega_{\Control,\sigma}
+   \to\Carrier\times\{\sigma\}\)
+ is a bijection;
+\item \(\kappa_{\Control}\) transports typed identities and every enabled
+ nonidentity record row-bijectively; and
+\item transported P7-T02 kernel coefficients equal the coefficients in
+ Equation~\eqref{eq:carrier-matrix}.
+\end{enumerate}
+The equipment is source-extension input.  A familiar protocol name does
+not provide it.
+\end{definition}
+
+Let \(V_{\Control}=\Q^\Omega\) be the rational linear span of P7-T02
+bookkeeping states.  Define
+\begin{equation}
+ \Kmap_{\widehat{\Control}}:
+ V_{\Control}\longrightarrow
+ \bigoplus_{\sigma\in\Sigma_{\Control}}\Q^{\Carrier},
+ \qquad
+ \bigl(\Kmap_{\widehat{\Control}}\mu\bigr)_\sigma(b)
+ =
+ \mu\!\left(\kappa_{\Control}^{-1}(b,\sigma)\right).
+ \label{eq:coupling-map}
+\end{equation}
+The map preserves the nonnegative bookkeeping cone and total bookkeeping
+mass.  The name ``coupling map'' is a P7-T05 routing label: mathematically,
+Equation~\eqref{eq:coupling-map} is a sectorwise reindexing.
+
+\begin{theorem}[Explicit-equipment naturality and update intertwining]
+\label{thm:intertwining}
+% theorem_id: P7T05-THM-THREE-ADDRESS-COUPLING-NATURALITY-001
+\textup{\texttt{P7T05-THM-THREE-ADDRESS-}\allowbreak
+\texttt{COUPLING-NATURALITY-001}.}
+For every explicitly equipped control,
+\(\Kmap_{\widehat{\Control}}\) is invertible and
+\begin{equation}
+ \Kmap_{\widehat{\Control}}\Update_{\Control}
+ =
+ \left(\bigoplus_{\sigma\in\Sigma_{\Control}}\Update_{\Carrier}\right)
+ \Kmap_{\widehat{\Control}}.
+ \label{eq:intertwining}
+\end{equation}
+If a compatible source-presentation map \(h:\Control\to\Control'\)
+transports the equipment so that
+\[
+ \kappa_{\Control'}h
+ =
+ (\operatorname{id}_{\Carrier}\times\alpha)\kappa_{\Control}
+\]
+for the induced sector relabeling \(\alpha\), then its push-forward commutes
+with the two comparison maps.  Successive compatible equipment transports
+compose.
+\end{theorem}
+
+\begin{proof}
+Fiberwise bijectivity gives the inverse
+\[
+ \bigl(\Kmap_{\widehat{\Control}}^{-1}\nu\bigr)(x)
+ =
+ \nu_{\Sec(x)}
+ \!\left(\operatorname{pr}_{\Carrier}\kappa_{\Control}(x)\right).
+\]
+For \(b\in\Carrier\) and \(\sigma\in\Sigma_{\Control}\), substitute
+\(y=\kappa_{\Control}^{-1}(b,\sigma)\) into
+Equation~\eqref{eq:p7t02-update}.  Row-bijective transition transport
+changes the finite sum over \(x,T\) into the corresponding sum over
+\(b'\) and the carrier records.  Equality of transported coefficients gives
+\[
+ \bigl(\Kmap\Update_{\Control}\mu\bigr)_\sigma(b)
+ =
+ \sum_{b'\in\Carrier}
+ M_{\Carrier}(b,b')
+ \bigl(\Kmap\mu\bigr)_\sigma(b'),
+\]
+which is Equation~\eqref{eq:intertwining}.  The presentation statement is
+the same finite change of variables with the displayed compatibility
+square.  Associativity of ordinary map composition proves the final claim.
+\end{proof}
+
+\begin{nonconclusion}
+The theorem is exact only within the explicitly equipped finite candidate.
+It is not target covariance, a covariant derivative, minimal coupling, an
+interaction Hamiltonian, a matter action, or a physical universality
+theorem.
+\end{nonconclusion}
+
+\section{Constructive instances and exact domain limit}
+
+Let \(r_0\to r_1\to r_2\),
+\(s_0\to s_1\to s_2\), and
+\(q_0\to q_1\to q_2\) be the fixed P7-T03 Rod-, Signal-, and
+Detector-labelled chains with their typed identities.  Since every forward
+record preserves \(\Sec\), the states in each connected chain share one
+sector label, respectively \(\sigma_R,\sigma_S,\sigma_D\).
+
+The explicit maps
+\[
+ r_i\mapsto b_i,\qquad s_i\mapsto b_i,\qquad q_i\mapsto b_i
+\]
+equip the three controls and satisfy
+Theorem~\ref{thm:intertwining}.  Thus the construction is total on every
+sector fiber occurring in each of these explicitly equipped controls
+(one fiber per displayed instance).
+
+This is genuine new candidate payload, but its quantifier is limited:
+\[
+ \forall\,\widehat{\Control}\ \text{explicitly equipped},\qquad
+ \forall\,\sigma\in\Sigma_{\Control}.
+\]
+It is not
+\[
+ \forall\,\sigma\in\Sigma_{\mathrm{src}},\qquad
+ \text{with equipment derived from }\sigma.
+\]
+The current records do not equip every admitted P7-T01 sector and do not
+derive a rule that does so.
+
+For diagnostic purposes, whenever both sides are typed define the finite
+residual
+\[
+ \Delta_{\Control,\kappa}
+ =
+ \Update_{\Control}
+ -
+ \Kmap^{-1}
+ \left(\bigoplus_{\sigma}\Update_{\Carrier}\right)
+ \Kmap.
+\]
+The exact candidate branch requires \(\Delta_{\Control,\kappa}=0\).
+A nonzero residual returns
+\texttt{incompatible\_source\_}\allowbreak\texttt{comparison}; it is
+not an allowed physical nonuniversal correction operator.
+
+\section{Same-sector nonselection theorem}
+
+\begin{definition}[Sector-only universality predicate]
+Let \(U_{\mathrm{sec}}\) assert that source sector data alone assign to every
+admitted sector \(\sigma\) one finite carrier relation
+\((B_\sigma,\Rel_\sigma)\), and that every admitted P7-T02 control supported
+in \(\sigma\) has a support-preserving bijection to that same carrier.
+The assignment may depend on \(\sigma\), but not on enabled-row data that
+\(\Sec\) has discarded.
+\end{definition}
+
+Fix the explicit P7-T02 positive-control sector
+\[
+ \sigma_0=(1,[0])
+\]
+with distinct configurations \(x_u,x_v\) and admissible nonidentity record
+\(T_e:x_u\to x_v\).  P7-T02 admits both of the following controls on the
+same carrier \(\{x_u,x_v\}\).
+
+The identity-only control has
+\[
+ M_{\mathrm{id}}=
+ \begin{pmatrix}1&0\\0&1\end{pmatrix},
+ \qquad
+ \Rel_{\mathrm{id}}
+ =\{x_u\to x_u,\ x_v\to x_v\}.
+\]
+The forward control enables \(T_e\) in addition to both identities:
+\[
+ M_{\mathrm{fwd}}=
+ \begin{pmatrix}1/2&0\\1/2&1\end{pmatrix},
+ \qquad
+ \Rel_{\mathrm{fwd}}
+ =\Rel_{\mathrm{id}}\cup\{x_u\to x_v\}.
+\]
+Both controls have two states, the same sector data, and the same typed
+identity convention.
+
+\begin{theorem}[Sector data do not select a universal support carrier]
+\label{thm:nonselection}
+% theorem_id: P7T05-THM-SECTOR-DATA-NONSELECTION-001
+\textup{\texttt{P7T05-THM-SECTOR-DATA-}\allowbreak
+\texttt{NONSELECTION-001}.}
+The current P7-T01 sector projection does not derive
+\(U_{\mathrm{sec}}\).
+\end{theorem}
+
+\begin{proof}
+The full support of the identity-only control has two edges.  The full
+support of the forward control has three.  Edge count is invariant under
+every relation isomorphism, so no one two-state relation is isomorphic to
+both.  The controls have equal carrier cardinality, so the failure is not a
+cardinality artifact.  Their P7-T01 sector records are identical; only the
+enabled-row record differs.  Therefore \(\Sec\) alone omits the datum needed
+to select a common support-isomorphism class and cannot derive
+\(U_{\mathrm{sec}}\).
+\end{proof}
+
+\begin{obstruction}[Sector-indexed coupling-functor nonselection]
+\label{obst:nonselection}
+The obstruction identifier is
+\[
+ \texttt{OBST-P7T05-SECTOR-COUPLING-FUNCTOR-NONSELECTION-001}.
+\]
+The failed object is a source-derived assignment
+\[
+ \sigma\longmapsto
+ (B_\sigma,\Rel_\sigma,\Update_\sigma)
+\]
+together with support- and update-preserving comparisons for every current
+admitted control in \(\sigma\), when that assignment is required to follow
+from the P7-T01 sector record alone.
+\end{obstruction}
+
+The exact failed components are:
+\begin{enumerate}[leftmargin=*]
+\item a source-derived selector of one control or support-isomorphism class
+for each sector;
+\item a common carrier relation determined by the sector projection; and
+\item a total extension of Equation~\eqref{eq:coupling-map} from explicitly
+equipped controls to all current admitted controls.
+\end{enumerate}
+The no-fog disposition is \texttt{true}.  The current ontology
+\texttt{does\_not\_derive} these components.  A conservative repair remains
+allowed.
+
+\section{Distinctness from P7-T04}
+
+P7-T04 held five protocol-role instances fixed and showed that the
+Clock-labelled and baseline FreeFall-labelled support graphs have
+incompatible strongly-connected-component and cycle invariants.  Its failed
+predicate was one bijective support relation across that explicit suite.
+
+P7-T05 instead:
+\begin{enumerate}[leftmargin=*]
+\item constructs the new rational-linear map
+  \(\Kmap_{\widehat{\Control}}\) and proves update intertwining;
+\item holds one sector label and one two-state configuration carrier fixed;
+\item varies only whether one admissible same-sector transition is enabled;
+  and
+\item proves that the sector projection loses information needed to select a
+  comparison family.
+\end{enumerate}
+It therefore does not replay
+\texttt{OBST-P7T04-FULL-SUITE-COMMON-PROPAGATION-001}.
+
+\section{Fail-closed branches and reopening obligations}
+
+The candidate returns:
+\begin{longtable}{p{0.29\linewidth}p{0.63\linewidth}}
+\toprule
+Branch & Exact result\\
+\midrule
+\endhead
+valid equipped control &
+Equation~\eqref{eq:coupling-map} is defined and
+Equation~\eqref{eq:intertwining} holds.\\
+missing \(\kappa_{\Control}\) &
+\texttt{underdetermined\_source\_comparison}.\\
+nonbijective \(\kappa_{\Control}\) &
+\texttt{malformed\_source\_comparison}.\\
+nonintertwining comparison &
+\texttt{incompatible\_source\_comparison}.\\
+sector fiber not of the equipped three-address type &
+\texttt{outside\_constructive\_domain\_not\_refuted}.\\
+edge changes \(\Sec\) &
+\texttt{malformed\_against\_fixed\_P7T01\_basis}.\\
+target metric, detector, benchmark, validator, or generated output selects
+the map &
+\texttt{forbidden\_target\_import}.\\
+source comparison is promoted to a physical coupling or geometry &
+\texttt{forbidden\_model\_to\_world\_overread}.\\
+\bottomrule
+\end{longtable}
+
+A future source-side repair must add materially new data:
+\begin{enumerate}[leftmargin=*]
+\item a source-derived selector assigning an admitted control or comparison
+class to every sector;
+\item natural sector-indexed comparison maps stable under allowed source
+presentations and declared compositions;
+\item a source justification for one nontrivial common carrier or operator;
+\item a separate model-to-world map before physical matter response,
+geometry, or equivalence-principle language; and
+\item a variational object before action, stress-energy, or conservation
+claims.
+\end{enumerate}
+Merely renaming \(\Kmap\), dropping incompatible controls, using a one-point
+quotient, or importing the target benchmark does not satisfy those
+obligations.
+
+\section{Claim boundary and next bounded route}
+
+The comparison is neither minimal, effective, nor generalized
+\emph{physical} coupling.  It is a proposal-only source reindexing with an
+exact finite update-intertwining property.  The familiar words ``matter'',
+``coupling'', ``universal'', and ``geometry'' occur only as names of open
+P7 burdens.
+
+\begin{nonconclusion}
+This packet does not establish physical matter, a covariant derivative,
+matter action, stress-energy tensor, conservation law, detector semantics,
+common physical cone, effective metric, equivalence-principle behavior,
+Einstein equations, exact-GR recovery, benchmark promotion, proof authority,
+publication authority, completed derivation, global theory rejection, or
+future source-extension impossibility.
+\end{nonconclusion}
+
+After validation and one governed checkpoint, P7-T06 may attempt one bounded
+proposal-only source variational object or return a precise obstruction.
+That route must not treat the present comparison as an adopted physical
+coupling.
+
+\end{document}

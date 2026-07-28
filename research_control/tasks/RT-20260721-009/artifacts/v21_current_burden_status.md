@@ -13,9 +13,9 @@ state, or latest handoff, those sources govern and this file is stale.
 | Field | Value |
 | --- | --- |
 | Schema | `v21_current_burden_status_v1` |
-| Source commit at generation | `622ad1e0079765447feefd21b94348676424cf6c` |
-| Status generation time | `2026-07-28T05:37:18Z` |
-| Tracked task count | 1131 |
+| Source commit at generation | `511e811eded5078f8d504b5139a197fc97516a89` |
+| Status generation time | `2026-07-28T09:03:55Z` |
+| Tracked task count | 1133 |
 | Stable definition count | 10 |
 | Distance-to-GR burden count | 14 |
 | Historical authored-map commit | `2c5fb02fd8fff9b449ab10a328d7c881b13ef546` |
@@ -23,21 +23,21 @@ state, or latest handoff, those sources govern and this file is stale.
 
 ### Exact source hashes
 
-- `registries/DISTANCE_TO_GR_LEDGER.csv`: `d12ee06c5930bde0224f990a3d0efc2add2e3bd5960023d478eaddc4c4125aeb`
-- `registries/RESEARCH_TASK_REGISTRY.csv`: `3e64783356fe4af1a1bd12af0466cd99f6391f567f971222e918585930748e86`
+- `registries/DISTANCE_TO_GR_LEDGER.csv`: `96c4aac4ff6a1f14a6297557954cb8538c8e70e8a93a6054cdb9fdcef0970ee7`
+- `registries/RESEARCH_TASK_REGISTRY.csv`: `fdc89ed958661ef9b3c1699c4c4a192f1d8b3147ecbd57c941b5229ec8ab5b35`
 - `research_control/design/gr_derivation_burden_map.md`: `8e9d44e3a18ecc8a2430a9c42497da3eb9911c2cf6cd714c1525c5d91551835e`
-- `research_control/handoffs/handoff-0892.yaml`: `c7f7b0ca254719eebf25a94caad60a199f12140255426e74e515c0a06acd40b4`
-- `research_control/program_state.yaml`: `53848c697abf1bd5696d62cdc5ff47f95af088a555eaed15fddd6485abcc0343`
+- `research_control/handoffs/handoff-0894.yaml`: `ad535ab39069b0d35845c3de0051b02ce55d4096e28b0f7ce48b434a90ba1d45`
+- `research_control/program_state.yaml`: `0eb4268905ce4511f595d2ca07797de5dd6f6be84aefb073b60c78f1681e5a3d`
 - `research_control/tasks/RT-20260721-009/artifacts/v21_burden_definitions_v1.yaml`: `67b8053baa60db4b11ee20582633d6279523d40b2ee853a6c570e2fdc1d113f5`
 
 ## Live control state
 
 | Field | Value |
 | --- | --- |
-| Active task | `RT-20260728-002` |
-| Latest handoff | `handoff-0892` |
-| Current status | `p7_t03_source_operational_device_suite_complete_p7_t04_ready_after_checkpoint` |
-| Next recommended action | Run one governed checkpoint for AJ-RT-20260728-002-001. Only after it commits may one fresh bounded candidate-constructor@0.2.0 packet execute v21 P7-T04 by deriving or precisely obstructing common formal source propagation without importing a physical cone metric detector semantics coupling or GR behavior. |
+| Active task | `RT-20260728-004` |
+| Latest handoff | `handoff-0894` |
+| Current status | `p7_t05_precise_obstruction_with_constructive_restricted_domain_p7_t06_ready_for_checkpoint` |
+| Next recommended action | Run one governed checkpoint for AJ-RT-20260728-004-001. Only after it commits may one fresh bounded ontology-formalizer@0.2.0 ontology-law-research-packet execute v21 P7-T06 by constructing a proposal-only source-equivalent variational object or returning a precise obstruction without assuming a target metric physical coupling action stress energy or Einstein equations. |
 
 ## Authored stable definitions with generated current values
 
@@ -205,14 +205,14 @@ state, or latest handoff, those sources govern and this file is stale.
 
 | Burden ID | Required object | Current status | Control status | Mathematical status | Physical status | Promotion status | Updated at |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| `matter_coupling` | universal coupling | `draft object exists` | `accepted_as_scoped_evidence_precondition` | `parameterized_finite_local_witness_precondition` | `not_matter_coupling_not_stress_energy_not_matter_action_not_detector_semantics` | `scoped_source_evidence_only` | `2026-07-28T05:37:18Z` |
+| `matter_coupling` | universal coupling | `draft object exists` | `accepted_as_scoped_evidence_precondition` | `parameterized_finite_local_witness_precondition` | `not_matter_coupling_not_stress_energy_not_matter_action_not_detector_semantics` | `scoped_source_evidence_only` | `2026-07-28T09:03:55Z` |
 
 #### `matter_coupling` generated detail
 
-- Current blocking burden: SourceOperationalDeviceSuiteCandidate_v1 supplies a proposal-only finite source protocol tuple with five guarded role instances exact token-response closure zero-sum intervention differences source-presentation naturality and positive independent no-event malformed underdetermined and inconsistent controls; P7-T04 common formal propagation physical time length causality probability detector and free-fall semantics universal coupling stress energy adoption and every downstream GR burden remain open while P6 Gate B supplies no effective-geometry input
-- Current next evidence or action: After checkpoint run one bounded P7-T04 packet that derives or precisely obstructs common formal source propagation across the proposal-only operational protocols without treating tokens responses horizons or cross-device equalities as physical time length probability causality detector behavior geometry coupling or GR behavior
-- Current failure/freeze criterion: Freeze repetition of the unchanged finite protocol tuple token-partition theorem naturality theorem or controls without a materially new common-propagation construction source law theorem variation class or protected decision; do not treat the proposal-only device names tokens response values intervention differences factorization validator checkpoint or scoped prior evidence as canonical ontology source-law or operational-semantics adoption physical clock rod signal detector free fall time length probability causality universal coupling stress energy Einstein equations benchmark promotion completed derivation global theory rejection or future source-extension impossibility
-- Current evidence: `research_control/tasks/RT-20260728-002/artifacts/source_operational_device_suite_candidate_v1.tex`
+- Current blocking burden: SourceUniversalCouplingMapCandidate_v1 constructs exact proposal-only finite support reindexing for explicitly B_3-equipped controls; the exact P7-T02 sector sigma_0=(1,[0]) admits identity-only and forward-enabled controls on the same x_u x_v carrier with nonisomorphic support; current sector data therefore do not derive one all-sector control and comparison family; physical matter coupling common geometry action stress energy conservation equivalence-principle behavior adoption and every downstream GR burden remain open while P6 Gate B supplies no effective-geometry input
+- Current next evidence or action: After checkpoint run one bounded P7-T06 ontology-law packet that constructs a proposal-only source-equivalent variational object stress-energy-equivalent object and conservation conditions or returns a precise missing-source-law obstruction without assuming target geometry physical coupling action stress energy or Einstein equations
+- Current failure/freeze criterion: Freeze repetition of the unchanged P7-T05 sigma_0 identity-only versus forward-enabled countermodel without a materially new variational object source law theorem variation class or protected decision; do not treat the proposal-only equipment support reindexing role labels B_3 validator checkpoint or scoped obstruction as canonical ontology source-law or coupling-law adoption physical geometry matter coupling action stress energy conservation Einstein equations benchmark promotion completed derivation theory-wide impossibility conclusion or future source-extension impossibility
+- Current evidence: `research_control/tasks/RT-20260728-004/artifacts/universal_source_coupling_map_candidate_v1.tex`
 - Exact overread guard: `no_source_law_adoption;no_canonical_ontology_edit;no_metricdata_e_adoption;no_geff_scope_expansion;no_coupling_law_adoption;no_matter_coupling_derivation;no_matter_coupling_adoption;no_stress_energy_semantics;no_stress_energy_tensor;no_matter_action;no_detector_semantics;no_einstein_equations;no_benchmark_promotion;no_completed_derivation;no_future_source_extension_impossibility;no_global_theory_rejection`
 
 ### `einstein_equations`

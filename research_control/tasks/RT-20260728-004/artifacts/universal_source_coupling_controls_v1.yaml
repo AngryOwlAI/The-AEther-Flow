@@ -1,0 +1,228 @@
+schema_id: "v21_p7_t05_universal_source_coupling_controls_v1"
+artifact_id: "P7T05-UNIVERSAL-SOURCE-COUPLING-CONTROLS-V1"
+task_id: "RT-20260728-004"
+job_id: "AJ-RT-20260728-004-001"
+plan_task_id: "P7-T05"
+status: "draft/control"
+candidate_status: "proposal-only"
+source_extension_status: "source-extension data"
+adoption_status: "blocked_adoption_open_continuation"
+claim_boundary_id: "CB-V21-P7-T05-UNIVERSAL-SOURCE-COUPLING-001"
+candidate_id: "SourceUniversalCouplingMapCandidate_v1"
+comparison_id: "ThreeAddressSupportCouplingMap_v1"
+obstruction_id: "OBST-P7T05-SECTOR-COUPLING-FUNCTOR-NONSELECTION-001"
+
+matrix_conventions:
+  orientation: "rows are target configurations and columns are source configurations"
+  identity_rule: "every P7-T02 enabled row contains its typed identity"
+  support_rule: "a matrix entry is support-present exactly when its rational coefficient is positive"
+  composition_index: "formal update count only; not physical time or causal order"
+  sector_rule: "every enabled P7-T01 transition preserves Sec_src=(Q,D)"
+
+common_three_address_carrier:
+  carrier_id: "B3_SOURCE_CHAIN_V1"
+  states: ["b_0", "b_1", "b_2"]
+  sector_parameter: "sigma"
+  enabled_rows:
+    b_0:
+      - transition_id: "id_b0"
+        target: "b_0"
+        weight: "1/2"
+      - transition_id: "f_b01"
+        target: "b_1"
+        weight: "1/2"
+    b_1:
+      - transition_id: "id_b1"
+        target: "b_1"
+        weight: "1/2"
+      - transition_id: "f_b12"
+        target: "b_2"
+        weight: "1/2"
+    b_2:
+      - transition_id: "id_b2"
+        target: "b_2"
+        weight: "1"
+  update_matrix_rows_target_columns_source:
+    - ["1/2", "0", "0"]
+    - ["1/2", "1/2", "0"]
+    - ["0", "1/2", "1"]
+  full_support_edges:
+    - "b_0->b_0"
+    - "b_0->b_1"
+    - "b_1->b_1"
+    - "b_1->b_2"
+    - "b_2->b_2"
+  reduced_support_edges:
+    - "b_0->b_1"
+    - "b_1->b_2"
+  physical_geometry_claimed: false
+
+equipped_control_type:
+  type_id: "ExplicitlyEquippedSectorControl_v1"
+  tuple: "(C,Sigma_C,lambda_C,kappa_C)"
+  fields:
+    C: "one fixed proposal-only P7-T02 finite control"
+    Sigma_C: "finite set of P7-T01 sector labels occurring in C"
+    lambda_C: "restriction of Sec_src to the finite carrier Omega_C"
+    kappa_C: "explicit bijection Omega_C -> B3 x Sigma_C"
+  predicates:
+    - "for every x, pr_Sigma(kappa_C(x))=lambda_C(x)"
+    - "for every sigma in Sigma_C, kappa_C restricts to a bijection Omega_(C,sigma) -> B3 x {sigma}"
+    - "kappa_C transports typed identities and nonidentity transition rows bijectively"
+    - "transported rational kernel coefficients equal the B3 coefficients in the same sector fiber"
+    - "no target atlas metric cone detector calibration desired benchmark result validator or generated derivative defines kappa_C"
+  consequence: "the comparison is total on every sector occurring in this explicitly equipped control"
+  global_sector_selection_claimed: false
+
+constructive_instances:
+  - instance_id: "P7T05-EQUIPPED-ROD-CHAIN-001"
+    predecessor_control: "P7T03-CONTROL-ROD-ADDRESS-CHAIN-001"
+    states: ["r_0", "r_1", "r_2"]
+    sector_label: "sigma_R"
+    sector_derivation: "the two forward transitions preserve Sec_src so all three connected states have one common sector label"
+    kappa:
+      r_0: "b_0"
+      r_1: "b_1"
+      r_2: "b_2"
+    exact_update_intertwining: true
+    status: "constructive_proposal_only_instance"
+  - instance_id: "P7T05-EQUIPPED-SIGNAL-CHAIN-001"
+    predecessor_control: "P7T03-CONTROL-SIGNAL-CHAIN-001"
+    states: ["s_0", "s_1", "s_2"]
+    sector_label: "sigma_S"
+    sector_derivation: "the two forward transitions preserve Sec_src so all three connected states have one common sector label"
+    kappa:
+      s_0: "b_0"
+      s_1: "b_1"
+      s_2: "b_2"
+    exact_update_intertwining: true
+    status: "constructive_proposal_only_instance"
+  - instance_id: "P7T05-EQUIPPED-DETECTOR-CHAIN-001"
+    predecessor_control: "P7T03-CONTROL-DETECTOR-TRANSDUCER-001"
+    states: ["q_0", "q_1", "q_2"]
+    sector_label: "sigma_D"
+    sector_derivation: "the two forward transitions preserve Sec_src so all three connected states have one common sector label"
+    kappa:
+      q_0: "b_0"
+      q_1: "b_1"
+      q_2: "b_2"
+    exact_update_intertwining: true
+    status: "constructive_proposal_only_instance"
+
+same_sector_countermodel:
+  countermodel_id: "P7T05-CM-SAME-SECTOR-TWO-CONTROLS-001"
+  source_basis: "P7-T02 explicitly supplies distinct x_u and x_v in sector sigma_0=(1,[0]) and the admissible nonidentity record T_e:x_u->x_v"
+  fixed_sector:
+    sector_id: "sigma_0"
+    sector_value: "(1,[0])"
+    configurations: ["x_u", "x_v"]
+    equal_cardinality: true
+    state_count_each: 2
+  identity_only_control:
+    control_id: "C_id_sigma_0"
+    states: ["x_u", "x_v"]
+    enabled_rows:
+      x_u:
+        - transition_id: "id_xu"
+          target: "x_u"
+          weight: "1"
+      x_v:
+        - transition_id: "id_xv"
+          target: "x_v"
+          weight: "1"
+    update_matrix_rows_target_columns_source:
+      - ["1", "0"]
+      - ["0", "1"]
+    full_support_edges: ["x_u->x_u", "x_v->x_v"]
+    full_support_edge_count: 2
+    reduced_support_edge_count: 0
+    strongly_connected_component_count: 2
+  forward_control:
+    control_id: "C_fwd_sigma_0"
+    states: ["x_u", "x_v"]
+    enabled_rows:
+      x_u:
+        - transition_id: "id_xu"
+          target: "x_u"
+          weight: "1/2"
+        - transition_id: "T_e"
+          target: "x_v"
+          weight: "1/2"
+      x_v:
+        - transition_id: "id_xv"
+          target: "x_v"
+          weight: "1"
+    update_matrix_rows_target_columns_source:
+      - ["1/2", "0"]
+      - ["1/2", "1"]
+    full_support_edges: ["x_u->x_u", "x_u->x_v", "x_v->x_v"]
+    full_support_edge_count: 3
+    reduced_support_edge_count: 1
+    strongly_connected_component_count: 2
+  held_fixed:
+    - "P7-T01 incidence complex and internal label declarations"
+    - "the two configurations x_u and x_v"
+    - "sector label sigma_0=(1,[0])"
+    - "carrier cardinality two"
+    - "typed identity convention"
+  varied:
+    - "whether the admissible nonidentity record T_e is enabled"
+    - "the resulting support and rational update matrices"
+  incompatible_invariants:
+    - "full support edge count 2 versus 3"
+    - "reduced support edge count 0 versus 1"
+    - "identity update versus nonidentity forward update"
+  exact_conclusion: "no relation on one two-state carrier can be support-isomorphic to both controls; therefore Sec_src alone does not determine a universal support-preserving carrier or comparison for all admitted controls in sigma_0"
+  p7_t04_obstruction_repeated: false
+  global_no_go_claimed: false
+
+diagnostic_residual:
+  residual_id: "Delta_SourceComparison_v1"
+  definition: "Delta_(C,kappa)=K_C-kappa^{-1} K_B kappa on the finite rational bookkeeping vector space whenever both sides are typed"
+  exact_candidate_requirement: "Delta_(C,kappa)=0"
+  nonzero_meaning: "source comparison mismatch requiring fail-closed incompatible status"
+  physical_nonuniversal_correction_operator: false
+  physical_effective_operator: false
+
+fail_closed_controls:
+  - control_id: "P7T05-CTRL-VALID-EQUIPPED-001"
+    condition: "all equipped-control predicates hold"
+    result: "valid_constructive_domain"
+  - control_id: "P7T05-CTRL-MISSING-KAPPA-001"
+    condition: "control and sector fibers are supplied but kappa_C is absent"
+    result: "underdetermined_source_comparison"
+  - control_id: "P7T05-CTRL-NONBIJECTIVE-KAPPA-001"
+    condition: "kappa_C is not bijective on a declared sector fiber"
+    result: "malformed_source_comparison"
+  - control_id: "P7T05-CTRL-NONINTERTWINING-KAPPA-001"
+    condition: "kappa_C fails support or rational-row transport"
+    result: "incompatible_source_comparison"
+  - control_id: "P7T05-CTRL-SECTOR-FIBER-NOT-B3-001"
+    condition: "a sector fiber does not have the explicitly equipped three-address type"
+    result: "outside_constructive_domain_not_refuted"
+  - control_id: "P7T05-CTRL-MIXED-SECTOR-EDGE-001"
+    condition: "an alleged P7-T02 edge changes Sec_src"
+    result: "malformed_against_fixed_p7_t01_basis"
+  - control_id: "P7T05-CTRL-TARGET-IMPORT-001"
+    condition: "kappa_C or the carrier is selected from a target metric cone detector outcome benchmark behavior validator registry generated derivative or commit state"
+    result: "forbidden_target_import"
+  - control_id: "P7T05-CTRL-PHYSICAL-OVERREAD-001"
+    condition: "the source comparison is called a physical coupling covariant derivative action stress tensor metric geometry or equivalence principle"
+    result: "forbidden_model_to_world_overread"
+
+authority_limits:
+  current_ontology_derives_candidate: false
+  source_law_adopted: false
+  universal_sector_selection_derived: false
+  physical_matter_coupling_derived: false
+  covariant_derivative_derived: false
+  physical_action_derived: false
+  stress_energy_derived: false
+  effective_geometry_derived: false
+  equivalence_principle_behavior_derived: false
+  einstein_equations_derived: false
+  benchmark_recovered: false
+  proof_authority: false
+  physics_promotion_authorized: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false

@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260728-003`
-- Latest handoff: `handoff-0893`
-- Current status: `p7_t04_common_source_propagation_precise_obstruction_p7_t05_ready_for_checkpoint`
+- Active task: `RT-20260728-004`
+- Latest handoff: `handoff-0894`
+- Current status: `p7_t05_precise_obstruction_with_constructive_restricted_domain_p7_t06_ready_for_checkpoint`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260728-003`
-- Latest research handoff: `handoff-0893`
-- Latest research next action: Run one governed checkpoint for AJ-RT-20260728-003-001. Only after it commits may one fresh bounded candidate-constructor@0.2.0 packet execute v21 P7-T05 by constructing the actual universal matter-coupling candidate or returning a distinct precise obstruction without assuming a common physical cone metric detector semantics stress energy coupling or GR behavior.
+- Latest research task: `RT-20260728-004`
+- Latest research handoff: `handoff-0894`
+- Latest research next action: Run one governed checkpoint for AJ-RT-20260728-004-001. Only after it commits may one fresh bounded ontology-formalizer@0.2.0 ontology-law-research-packet execute v21 P7-T06 by constructing a proposal-only source-equivalent variational object or returning a precise obstruction without assuming a target metric physical coupling action stress energy or Einstein equations.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p7_t05_universal_matter_coupling`
-- Role family: `candidate-constructor@0.2.0`
+- Route ID: `v21_p7_t06_matter_action_after_checkpoint`
+- Role family: `ontology-formalizer@0.2.0`
 - Target milestone: `matter_coupling`
-- Milestone burden: Build the actual coupling candidate rather than another readiness profile.
+- Milestone burden: Supply the variational matter input required for Einstein-equation work.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `f08103a94ea5ba1e5c386774dde8604bc638d15628faa0ff7c1c97ebe5cdc527`
-- JSON SHA-256: `9677574a96e71585828789b0f780a51af7d7ea28de99dc3c3d704913cfa1e95c`
+- YAML SHA-256: `907d3044677b207286560bd83fbd29bf8b5ce130918368b45522e945122b184d`
+- JSON SHA-256: `692459deb6fb7d43594081e01ae1112cb5f6f04ebd45e95ab94bbf259e20acf8`
 
 ## Authority Warning
 
