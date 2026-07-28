@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-07-28T02:23:29Z`
-- Source fingerprint: `21b94ea7cb556a89e69bd12febe0416221553b817a90d6101b5bc8c7b8e28877`
-- Nodes: `22804`
-- Edges: `73881`
+- Generated from tracked state as of: `2026-07-28T04:19:10Z`
+- Source fingerprint: `923c5bc284da15ff95765cb010167d90629e035ba1ce79796ad7fe435e252b0d`
+- Nodes: `22845`
+- Edges: `73933`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 1129 |
+| `completion_yaml` | 1130 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 890 |
+| `handoff_yaml` | 891 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,17 +33,17 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 7 |
-| `agent_job` | `support_only` | 1129 |
+| `agent_job` | `support_only` | 1130 |
 | `artifact` | `canonical_source` | 87 |
-| `artifact` | `support_only` | 11573 |
-| `blocked_burden` | `blocked` | 4633 |
-| `claim_boundary` | `support_only` | 1086 |
-| `draft_control_candidate` | `draft_control` | 766 |
-| `draft_control_candidate` | `proposal_only` | 127 |
+| `artifact` | `support_only` | 11597 |
+| `blocked_burden` | `blocked` | 4639 |
+| `claim_boundary` | `support_only` | 1087 |
+| `draft_control_candidate` | `draft_control` | 767 |
+| `draft_control_candidate` | `proposal_only` | 130 |
 | `draft_control_candidate` | `science_draft` | 77 |
-| `frozen_negative` | `frozen_negative` | 140 |
+| `frozen_negative` | `frozen_negative` | 141 |
 | `gate_chair_verdict` | `human_gated` | 32 |
-| `handoff` | `support_only` | 890 |
+| `handoff` | `support_only` | 891 |
 | `human_gated_object` | `human_gated` | 545 |
 | `ledger_row` | `accepted_scoped` | 4 |
 | `ledger_row` | `blocked` | 4 |
@@ -52,12 +52,12 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `ledger_row` | `science_draft` | 5 |
 | `obstruction` | `blocked` | 90 |
 | `obstruction` | `rejected` | 4 |
-| `source_extension_evidence_precondition` | `source_extension_evidence` | 38 |
+| `source_extension_evidence_precondition` | `source_extension_evidence` | 39 |
 | `source_ontology_object` | `canonical_source` | 27 |
 | `source_ontology_object` | `rejected` | 50 |
-| `source_ontology_object` | `support_only` | 359 |
+| `source_ontology_object` | `support_only` | 360 |
 | `task` | `human_gated` | 29 |
-| `task` | `science_draft` | 32 |
+| `task` | `science_draft` | 33 |
 | `task` | `support_only` | 1068 |
 
 ## Frontier Table
@@ -71,7 +71,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | BridgeCert | `object:bridgecert` | `source_extension_evidence_precondition` | `source_extension_evidence` | Required frontier object exposed in completion text: BridgeCert. |
 | SEI-MC criteria | `object:sei_mc_criteria` | `draft_control_candidate` | `draft_control` | Required frontier object exposed in completion text: SEI-MC criteria. |
 | SEI_src^{cand} | `object:sei_src_cand` | `draft_control_candidate` | `draft_control` | Required frontier object exposed in completion text: SEI_src^{cand}. |
-| matter-coupling burden | `object:matter_coupling_burden` | `ledger_row` | `science_draft` | P7-T01 constructs the first concrete task-local source-matter ontology target by deriving charge and representation grades from declared occupation data and chi |
+| matter-coupling burden | `object:matter_coupling_burden` | `ledger_row` | `science_draft` | P7-T02 constructs the first explicit task-local source-matter transition rule by assigning uniform bookkeeping weights to finite source-declared admissible rows |
 | Einstein-equations burden | `object:einstein_equations_burden` | `blocked_burden` | `blocked` | no Einstein-equation derivation supplied |
 | benchmark-promotion burden | `object:benchmark_promotion_burden` | `human_gated_object` | `human_gated` | benchmark promotion remains blocked |
 | finite toy metric response frozen negative | `ledger:finite_toy_metric_response` | `ledger_row` | `frozen_negative` | explicit-tag-only finite toy route failed tag-removal stress and is frozen locally |
@@ -163,9 +163,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 ## Route Continuity
 
-- Active task: `RT-20260727-008`
-- Latest handoff: `handoff-0890`
-- Handoff path: `research_control/handoffs/handoff-0890.yaml`
-- Next action: Run one governed checkpoint for AJ-RT-20260727-008-001. Only after it commits may one fresh bounded candidate-constructor@0.2.0 packet continue P7-T02 by constructing or precisely obstructing SourceMatterFiniteTransitionKernelCandidate_v1 under the ontology-law-research-packet route.
+- Active task: `RT-20260728-001`
+- Latest handoff: `handoff-0891`
+- Handoff path: `research_control/handoffs/handoff-0891.yaml`
+- Next action: Run one governed checkpoint for AJ-RT-20260728-001-001. Only after it commits may one fresh bounded candidate-constructor@0.2.0 packet execute v21 P7-T03 by constructing source-level operational devices and protocols with explicit source objects, readout maps, interventions, success and failure criteria, and no imported target geometry or inferred physical semantics.
 
 This graph is navigational support only; inspect the cited sources before using any claim.

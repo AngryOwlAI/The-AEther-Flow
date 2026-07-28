@@ -1,0 +1,270 @@
+schema_id: "source_matter_finite_transition_kernel_spec_v1"
+artifact_id: "P7T02-SOURCE-MATTER-FINITE-TRANSITION-KERNEL-SPEC-V1"
+task_id: "RT-20260728-001"
+job_id: "AJ-RT-20260728-001-001"
+plan_task_id: "P7-T02"
+status: "draft/control"
+candidate_status: "proposal-only"
+candidate_id: "SourceMatterFiniteTransitionKernelCandidate_v1"
+update_id: "SourceMatterBookkeepingUpdate_v1"
+adoption_status: "blocked_adoption_open_continuation"
+target_derivation_milestone: "matter_coupling"
+milestone_burden: "Build one explicit source matter action evolution equation or transition law and derive its basic conserved or constraint structure."
+
+fixed_basis:
+  candidate_id: "SourceMatterIncidenceCandidate_v1"
+  candidate_status: "proposal-only"
+  configuration: "Psi=(m,z)"
+  sector_map: "Sec_src(Psi)=(Q(Psi),D(Psi)) with D(Psi)=[z]"
+  transition_id: "SourceMatterTransition_v1"
+  transition_tuple: "(Psi_minus,J,w,Pi,Psi_plus)"
+  transition_conditions:
+    - "q_plus-q_minus=partial_1 J"
+    - "z_plus-z_minus=partial_2 w"
+    - "Pi uses only declared source data"
+  inherited_consequence: "Every P7-T01 admissible transition preserves Q and D."
+  fixed_limit: "The transition grammar selects no enabled row, weight, update, physical time, probability, action, or physical conservation law."
+
+finite_control_system:
+  symbol: "C=(Omega,E,s,t)"
+  configuration_set:
+    symbol: "Omega"
+    type: "finite nonempty subset of P7-T01 admissible configurations"
+    provenance: "declared task-local source control data"
+    physical_cutoff_claimed: false
+  transition_set:
+    symbol: "E"
+    type: "finite set of typed P7-T01 admissible transition records with endpoints in Omega"
+    source_map: "s:E->Omega"
+    target_map: "t:E->Omega"
+  enabled_row:
+    definition: "E_x={T in E:s(T)=x}"
+    cardinality: "d_C(x)=|E_x|"
+    required_nonempty: true
+  identity_transition:
+    id: "IdTransition_v1"
+    definition: "1_x=(x,0,0,Pi_id,x)"
+    update_record: "Pi_id is the declared source-only identity occupation and label record"
+    required_in_every_row: true
+    consequence: "d_C(x)>=1"
+    interpretation: "total bookkeeping update convention only"
+    not_claimed:
+      - "physical persistence"
+      - "inertia"
+      - "vacuum stability"
+      - "zero-duration physical event"
+  row_selection_status:
+    selected_by_current_ontology: false
+    candidate_input: true
+    missing_canonical_rule_result: "undetermined_K"
+
+kernel:
+  symbol: "K_C(T|x)"
+  codomain: "Q_nonnegative"
+  definition:
+    enabled: "1/d_C(x) when T is in E_x"
+    disabled: "0 otherwise"
+  support_primary: true
+  row_normalization: "sum_{T in E_x} K_C(T|x)=1"
+  coefficient_provenance: "uniform finite row cardinality only"
+  coefficients_dimensionless: true
+  coupling_constants: []
+  dimensional_scales: []
+  no_tunable_parameter_count: 0
+  physical_probability: false
+  physical_rate: false
+  physical_frequency: false
+  empirical_propensity: false
+
+bookkeeping_state:
+  symbol: "mu"
+  domain: "B(Omega)=Q_nonnegative^Omega"
+  total_bookkeeping_mass: "|mu|_1=sum_{x in Omega}mu(x)"
+  unit_mass_subset: "B_1(Omega)={mu in B(Omega):|mu|_1=1}"
+  interpretation: "finite rational bookkeeping weights only"
+  empirical_ensemble: false
+
+update:
+  symbol: "U_C"
+  definition: "(U_C mu)(y)=sum_{x in Omega} mu(x) sum_{T in E_x:t(T)=y} K_C(T|x)"
+  composition_index:
+    symbol: "n in N_0"
+    recurrence: "mu_{n+1}=U_C mu_n"
+    interpretation: "formal composition count only"
+    physical_time: false
+    duration: false
+    causal_order: false
+  exact_consequences:
+    - "U_C maps B(Omega) to B(Omega)"
+    - "|U_C mu|_1=|mu|_1"
+    - "U_C maps B_1(Omega) to B_1(Omega)"
+    - "support remains inside Omega"
+
+constraint_ledger:
+  inherited:
+    - constraint_id: "P7T01-T1-CONTINUITY"
+      statement: "q_plus-q_minus=partial_1 J"
+      effect_here: "supported endpoints have equal Q"
+      newly_derived_here: false
+    - constraint_id: "P7T01-T2-DEFECT"
+      statement: "z_plus-z_minus=partial_2 w"
+      effect_here: "supported endpoints have equal D=[z]"
+      newly_derived_here: false
+    - constraint_id: "P7T01-T3-SOURCE-ONLY"
+      statement: "Pi uses only declared source data"
+      effect_here: "supported records contain no target import"
+      newly_derived_here: false
+  new_candidate_consequences:
+    - consequence_id: "P7T02-C1-ROW-NORMALIZATION"
+      statement: "Every enabled row sums exactly to one."
+    - consequence_id: "P7T02-C2-BOOKKEEPING-MASS"
+      statement: "The update preserves total bookkeeping mass."
+    - consequence_id: "P7T02-C3-FINITE-CLOSURE"
+      statement: "The update remains a nonnegative rational function on Omega."
+    - consequence_id: "P7T02-C4-SECTOR-SUPPORT"
+      statement: "If mu is supported in one fixed P7-T01 sector, U_C mu is supported in that same sector."
+      caveat: "This distribution-level statement combines the new update with inherited endpoint constraints; it is not a physical conservation law."
+    - consequence_id: "P7T02-C5-INVARIANT-SUBSPACE"
+      statement: "If a declared presentation automorphism preserves C and mu is invariant under it, then U_C mu is invariant under it."
+
+theorems:
+  - theorem_id: "P7T02-THM-FINITE-KERNEL-NORMALIZATION-CLOSURE-001"
+    status: "draft/control exact theorem within proposal-only candidate"
+    hypotheses:
+      - "Omega is finite and nonempty"
+      - "every enabled row is finite and contains its identity transition"
+      - "every enabled nonidentity transition is P7-T01 admissible"
+      - "K_C is the uniform row kernel"
+    conclusions:
+      - "exact row normalization"
+      - "finite nonnegative update closure"
+      - "total bookkeeping-mass preservation"
+      - "unit-mass bookkeeping-state preservation"
+      - "candidate-sector support preservation from inherited P7-T01 endpoint constraints"
+    physical_conservation_law_claimed: false
+    proof_authority: false
+  - theorem_id: "P7T02-THM-SOURCE-PRESENTATION-EQUIVARIANCE-001"
+    status: "draft/control exact theorem within proposal-only candidate"
+    hypotheses:
+      - "h is a compatible P7-T01 source-presentation isomorphism"
+      - "h maps Omega bijectively to Omega_prime"
+      - "h maps E_x bijectively to E_prime_hx and commutes with source and target"
+    conclusions:
+      - "d_C(x)=d_C_prime(hx)"
+      - "K_C_prime(hT|hx)=K_C(T|x)"
+      - "h_* U_C = U_C_prime h_*"
+      - "presentation-invariant bookkeeping states remain presentation invariant"
+    target_covariance_claimed: false
+    physical_symmetry_claimed: false
+    proof_authority: false
+
+composition:
+  independent:
+    domain: "C_1 box_times C_2"
+    configuration_set: "Omega_1 x Omega_2"
+    enabled_row: "E_(x1,x2)=E^1_x1 x E^2_x2"
+    kernel: "K_(C1 box_times C2)(T1,T2|x1,x2)=K_C1(T1|x1)K_C2(T2|x2)"
+    update: "U_(C1 box_times C2)=U_C1 tensor U_C2"
+    meaning: "candidate-level source factorization only"
+  interacting:
+    criterion: "An enabled row is interacting when it is not the Cartesian product of its nontrivial component projections in the declared source decomposition."
+    coefficient_rule: "the same uniform row rule"
+    physical_force_or_coupling_claimed: false
+    physical_interaction_claimed: false
+
+result_branches:
+  valid_positive: "candidate constructed with at least one enabled nonidentity transition"
+  valid_null: "valid P7-T01 null configuration with its typed identity row"
+  valid_degenerate: "valid non-null configuration whose enabled row contains only its typed identity"
+  valid_interacting: "valid non-Cartesian joint enabled row"
+  malformed:
+    symbol: "bottom_K"
+    triggers:
+      - "endpoint is not a P7-T01 admissible configuration"
+      - "enabled nonidentity record violates continuity defect or source-only typing"
+      - "enabled row is empty or omits the typed identity"
+      - "coefficient is negative or row sum is not one"
+      - "support coefficient or cutoff is defined from a forbidden target or process authority"
+  underdetermined:
+    symbol: "undetermined_K"
+    condition: "all supplied P7-T01 data are typed but no finite control set or enabled-row declaration is supplied for the requested update"
+    distinct_from_null: true
+    distinct_from_degenerate: true
+    distinct_from_malformed: true
+
+solution_family:
+  control_id: "P7T02-CONTROL-POSITIVE-PROPAGATION-001"
+  initial_state: "mu_0=delta_xu"
+  recurrence: "mu_{n+1}=U_C mu_n"
+  exact_solution:
+    - "mu_n(x_u)=2^(-n)"
+    - "mu_n(x_v)=1-2^(-n)"
+  valid_for: "n in N_0"
+  interpretation: "analytic solution of a finite bookkeeping recurrence only"
+  physical_propagation_claimed: false
+  stability_claimed: "bounded nonnegative unit-mass bookkeeping stability only"
+
+model_to_world_status_ladder:
+  stipulated_candidate_primitives:
+    - "finite control set Omega"
+    - "enabled transition rows E_x"
+    - "typed identity-transition convention"
+    - "uniform row-coefficient rule"
+    - "formal composition index"
+    - "independent-product and interacting-row declarations"
+  candidate_derived_mathematical_records:
+    - "normalized kernel"
+    - "finite update"
+    - "bookkeeping-mass preservation"
+    - "finite closure"
+    - "sector-support preservation"
+    - "presentation equivariance"
+    - "analytic finite-control solution"
+  physical_interpretation: "open and not supplied"
+  canonical_adoption: "protected and human-gated"
+
+source_extension_classification:
+  classification: "new_ontology_primitive_candidate"
+  relation_to_current_ontology: "missing_primitive"
+  source_extension_category: "proposal-only source transition rule"
+  target_import: "forbidden"
+  conservative_source_extension_possible: true
+  canonical_ontology_candidate_status: "not_assigned"
+  adopted_status: "not_assigned"
+  rejected_status: "not_assigned"
+  human_gate_required_before_adoption: true
+
+open_burdens:
+  - "canonical selection or adoption of any source transition rule"
+  - "physical time duration causality or dynamics"
+  - "physical probability rate frequency or empirical propensity"
+  - "physical matter charge persistence identity or conservation"
+  - "continuum limit and principal-symbol analysis"
+  - "operational clocks rods signals detectors and free-fall systems"
+  - "common propagation or effective geometry"
+  - "matter action stress energy and universal coupling"
+  - "Einstein equations and exact-GR benchmark recovery"
+
+authority_limits:
+  canonical_ontology_modified: false
+  canonical_ontology_candidate_promoted: false
+  source_law_adopted: false
+  matter_ontology_adopted: false
+  physical_time_established: false
+  physical_probability_established: false
+  physical_conservation_law_established: false
+  physical_interpretation_established: false
+  detector_semantics_established: false
+  target_metric_imported: false
+  effective_geometry_assumed: false
+  stress_energy_established: false
+  matter_action_established: false
+  coupling_law_adopted: false
+  matter_coupling_derived: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  completed_derivation_claimed: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+  physics_promotion_authorized: false
+  proof_authority: false

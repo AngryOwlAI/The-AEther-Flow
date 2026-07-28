@@ -1,0 +1,844 @@
+validation_status: "PASS"
+final_repository_validation_status: "PASS_READY_FOR_CHECKPOINT"
+job_id: "AJ-RT-20260728-001-001"
+completion_id: "AJC-AJ-RT-20260728-001-001"
+task_id: "RT-20260728-001"
+task_type: "v21_p7_t02_source_matter_finite_transition_kernel_candidate_construction"
+decision_id: "DDR-20260728-001"
+role_id: "candidate-constructor"
+role_version: "0.2.0"
+execution_role_ref: "candidate-constructor@0.2.0--RT-20260728-001"
+status: "completed"
+created_at: "2026-07-28T04:05:00Z"
+started_at: "2026-07-28T04:05:00Z"
+completed_at: "2026-07-28T04:19:10Z"
+objective: "Execute only the selected P7-T02 Candidate Constructor packet by constructing or precisely obstructing one proposal-only SourceMatterFiniteTransitionKernelCandidate_v1 with exact finite update, normalization, closure, presentation equivariance, and bounded controls."
+completion_summary: "P7-T02 constructs SourceMatterFiniteTransitionKernelCandidate_v1 as a task-local proposal-only source-transition law. A finite nonempty enabled row with exactly one typed identity record receives uniform nonnegative rational bookkeeping weights, and the induced update has exact row normalization, finite closure, total bookkeeping-mass preservation, inherited (Q,[z]) sector support, and source-presentation equivariance. A two-state positive solution, Cartesian factorization control, synchronized disjoint-component nonfactorization control, and null, degenerate, malformed, and underdetermined branches are explicit. Current ontology does not derive the enabled rows, identity convention, weights, or update. Physical probability, time, dynamics, interaction, conservation, detectors, geometry, coupling, GR, proof, and promotion remain blocked."
+objective_result: "proposal_only_finite_source_transition_kernel_candidate_constructed"
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 142
+  passes_consumed: 131
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:142"
+  handoff_token: "a89fda8d803853401726a055e08d42e91da9792c7abf240b"
+  relay_claim_token: "a08199086404ac47b84924e8fa13b42b6dedbaaf8802768d"
+  route_work_item_id: "P7-T02"
+  route_worker_skill: "continue-research"
+  route_sha256: "405ce28987b5e4cb87842bcfd713f90f388427f8bc2cce275ab8548e9aaaec01"
+  worker_skill: "continue-research"
+  worker_invocation_count: 1
+
+transaction_status: "ready_for_checkpoint"
+result_disposition: "P7_T02_SOURCE_MATTER_FINITE_TRANSITION_KERNEL_PASS_READY_FOR_CHECKPOINT"
+milestone_disposition: "source_transition_rule_sub_burden_narrowed_adoption_and_physical_semantics_open"
+adoption_status: "blocked_adoption_open_continuation"
+checkpoint_commit:
+  required: true
+  attempted: false
+  committed: false
+  commit_sha: ""
+  dependency_checkpoint_commit: "4da35201d2c701eaea7814fd0401584206a1d0d2"
+  push_authorized: false
+  push_performed: false
+
+is_physics_task: true
+payload_class: "candidate_construction"
+has_new_mathematical_payload: true
+source_extension_classification_required: true
+external_red_team_finding_requires_integration: false
+physics_promotion_authorized: false
+proof_authority: false
+
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P7"
+  plan_task_id: "P7-T02"
+  work_kind: "construction_or_implementation"
+  task_class: "science"
+  expected_result_kind: "candidate_or_precise_obstruction"
+  dependency_task_id: "P7-T01"
+  dependency_completion_path: "research_control/tasks/RT-20260727-007/jobs/completions/AJC-AJ-RT-20260727-007-001.yaml"
+  dependency_completion_sha256: "4d1fc3d7d045defa6000dc0860973fba50280ddd1ee72cb4881d8ee2de2ddc1c"
+  dependency_checkpoint_commit: "832f9cf9ba98061df40cdda2799d5a46661260bc"
+  selector_task_id: "RT-20260727-008"
+  selector_completion_path: "research_control/tasks/RT-20260727-008/jobs/completions/AJC-AJ-RT-20260727-008-001.yaml"
+  selector_completion_sha256: "e1f4d1a2b9edc4de6252c829c8bbc2df6fe3fddabe2151907672fb4ebe6ca16e"
+  selector_checkpoint_commit: "4da35201d2c701eaea7814fd0401584206a1d0d2"
+  work_item_status: "completed_ready_for_checkpoint"
+  recommendation_ids:
+    - "V21-R21"
+    - "V21-R22"
+    - "V21-R25"
+  recommendation_coverage_role: "direct_implementation"
+  scientific_claims_changed: true
+  scientific_claim_change_scope: "task-local proposal-only source-transition law exact finite update theorems and bounded controls"
+  physical_status_changed: false
+  distance_to_gr_delta_changed: true
+  distance_to_gr_delta_scope: "proposal_only_source_matter_transition_rule_and_constraint_structure"
+  physics_promotion_authorized: false
+  proof_authority: false
+  next_dependency_work_item: "P7-T03_after_checkpoint"
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  observed_durable_outputs:
+    physics:
+      - "proposal-only finite source transition kernel"
+      - "finite source bookkeeping update equation"
+      - "normalization closure and presentation-equivariance theorems"
+      - "positive null interacting malformed and degenerate controls"
+    project_system:
+      - "task-local deterministic validator validation report and compact receipt"
+      - "standard control records and generated memory derivatives"
+  accepted_criteria:
+    physics:
+      - "kernel support uses only typed P7-T01 admissible transitions"
+      - "every enabled row is finite nonempty and exactly normalized"
+      - "update closure and total bookkeeping-mass preservation are derived"
+      - "sector support is separated into inherited and new consequences"
+      - "source-presentation equivariance is proved"
+      - "positive null interacting malformed and degenerate controls are explicit"
+    project_system:
+      - "task-local validation and scratch TeX build pass"
+      - "documentation-impact claim-language and research-control checks pass"
+      - "one governed checkpoint records the transaction"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+physics_payload_admission_result:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "physics"
+  declared_payload_type: "candidate_construction"
+  realized_payload_type: "candidate_construction"
+  candidate_family: "V21-P7-T02-SOURCE-MATTER-FINITE-TRANSITION-KERNEL-V1"
+  result: "PASS"
+  material_payload_present: true
+  process_receipts_counted_as_payload: false
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed_by_admission: false
+  physics_promotion_authorized: false
+
+family_freeze_admission_result:
+  schema_id: "family_freeze_route_admission_v1"
+  policy_id: "family_freeze_reopening_policy_v1"
+  route_id: "v21_p7_t02_source_matter_finite_transition_kernel_candidate_v1"
+  family_id: "V21-P7-T02-SOURCE-MATTER-FINITE-TRANSITION-KERNEL-V1"
+  detected_match_basis: []
+  reopening_requested: false
+  result: "PASS_UNFROZEN_CANDIDATE_CONSTRUCTION"
+  local_family_freeze_preserved: true
+  global_no_go_claimed: false
+  physics_promotion_authorized: false
+
+ordinary_route_guard_admission_result:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0890"
+  selected_plan_task_id: "P7-T02"
+  guard_outcome: "below_threshold"
+  result: "PASS"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  scientific_status_changed_by_guard: false
+  physics_promotion_authorized: false
+
+artifacts:
+  source_matter_transition_candidate: "research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_candidate_v1.tex"
+  machine_specification: "research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_spec_v1.yaml"
+  finite_controls: "research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_controls_v1.yaml"
+  assumption_dependency_table: "research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_assumption_dependency_table_v1.yaml"
+  compact_receipt: "research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_compact_receipt_v1.json"
+  validation_report: "research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_validation_v1.json"
+  validator: "research_control/tasks/RT-20260728-001/artifacts/validate_source_matter_finite_transition_kernel.py"
+  source_receipt: "research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_receipt.md"
+  child_phys_math: "research_control/tasks/RT-20260728-001/artifacts/child_phys_math_p7_t02_finite_transition_kernel.yaml"
+  child_phys_phil: "research_control/tasks/RT-20260728-001/artifacts/child_phys_phil_p7_t02_finite_transition_kernel.yaml"
+  conflict_review: "research_control/tasks/RT-20260728-001/artifacts/parent_conflict_review_p7_t02_finite_transition_kernel.yaml"
+  fusion_notes: "research_control/tasks/RT-20260728-001/artifacts/parent_fusion_notes_p7_t02_finite_transition_kernel.md"
+
+output_paths:
+  - "research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_candidate_v1.tex"
+  - "research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_spec_v1.yaml"
+  - "research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_controls_v1.yaml"
+  - "research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_assumption_dependency_table_v1.yaml"
+  - "research_control/tasks/RT-20260728-001/artifacts/child_phys_math_p7_t02_finite_transition_kernel.yaml"
+  - "research_control/tasks/RT-20260728-001/artifacts/child_phys_phil_p7_t02_finite_transition_kernel.yaml"
+  - "research_control/tasks/RT-20260728-001/artifacts/parent_conflict_review_p7_t02_finite_transition_kernel.yaml"
+  - "research_control/tasks/RT-20260728-001/artifacts/parent_fusion_notes_p7_t02_finite_transition_kernel.md"
+  - "research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_compact_receipt_v1.json"
+  - "research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_validation_v1.json"
+  - "research_control/tasks/RT-20260728-001/artifacts/validate_source_matter_finite_transition_kernel.py"
+  - "research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_receipt.md"
+  - "research_control/tasks/RT-20260728-001/00_TASK.yaml"
+  - "research_control/tasks/RT-20260728-001/DDR-20260728-001.md"
+  - "research_control/tasks/RT-20260728-001/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260728-001/roles/candidate-constructor@0.2.0--RT-20260728-001.yaml"
+  - "research_control/tasks/RT-20260728-001/jobs/AJ-RT-20260728-001-001.yaml"
+  - "research_control/tasks/RT-20260728-001/jobs/completions/AJC-AJ-RT-20260728-001-001.yaml"
+  - "research_control/handoffs/handoff-0891.yaml"
+  - "research_control/handoffs/handoff-0891.md"
+
+artifact_receipts:
+  - artifact_id: "TEX-V21-P7-T02-SOURCE-MATTER-FINITE-TRANSITION-KERNEL-V1"
+    path: "research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_candidate_v1.tex"
+    sha256: "65ac095f5cdf4c2e319365c8b0e024d031b19d9fc2b8102e59997afa1e8f9129"
+    status_label: "draft/control proposal-only"
+  - artifact_id: "P7T02-SOURCE-MATTER-FINITE-TRANSITION-KERNEL-SPEC-V1"
+    path: "research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_spec_v1.yaml"
+    sha256: "936d2aa6dfea3d263675468ff581190240efde84c1241ad971a8c1383a065a97"
+    status_label: "draft/control proposal-only"
+  - artifact_id: "P7T02-SOURCE-MATTER-FINITE-TRANSITION-KERNEL-CONTROLS-V1"
+    path: "research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_controls_v1.yaml"
+    sha256: "af7fc976590b4ca82fca5c34c6f30091f6599428b8005cf3932ce03f92f7d779"
+    status_label: "draft/control proposal-only"
+  - artifact_id: "P7T02-SOURCE-MATTER-FINITE-TRANSITION-KERNEL-VALIDATION-V1"
+    path: "research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_validation_v1.json"
+    sha256: "cb8fdf6bb68fd9bff30ad3122a565ff44724901368b42d470ca97521e6fd3796"
+    status_label: "operational_evidence"
+  - artifact_id: "P7T02-SOURCE-MATTER-FINITE-TRANSITION-KERNEL-COMPACT-RECEIPT-V1"
+    path: "research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_compact_receipt_v1.json"
+    sha256: "1e34c5ce0a6e13fd9cb0a7ba72f6694fae725d731eeb5f8ba8072e8ef868517a"
+    status_label: "operational_evidence"
+  - artifact_id: "MD-V21-P7-T02-SOURCE-MATTER-FINITE-TRANSITION-KERNEL-RECEIPT-V1"
+    path: "research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_receipt.md"
+    sha256: "7030edb5ca7707b6787022493e929f455606a6532c4e430a927bc6061cf50fb8"
+    status_label: "science_draft_receipt"
+
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_execution_unit_count: 2
+  outer_agentjob_count: 1
+  child_agentjob_count: 0
+  subagent_count: 2
+
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260728-001/artifacts/child_phys_math_p7_t02_finite_transition_kernel.yaml"
+      output_sha256: "0a98bc5acf9dd931f84f7ebc68328576b221386237cda98a5d3408fd43ae21d1"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260728-001/artifacts/child_phys_phil_p7_t02_finite_transition_kernel.yaml"
+      output_sha256: "f2ff5378dd65f6a80e2d39b7ee228c30a4632ac0e365600383cc92c3078d6446"
+      status: "completed"
+  conflict_review:
+    status: "resolved"
+    review_path: "research_control/tasks/RT-20260728-001/artifacts/parent_conflict_review_p7_t02_finite_transition_kernel.yaml"
+    resolution_rounds: 1
+    resolved_conflict_count: 12
+    unresolved_conflicts: []
+  fusion:
+    fused_output_path: "research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_candidate_v1.tex"
+    fusion_notes_path: "research_control/tasks/RT-20260728-001/artifacts/parent_fusion_notes_p7_t02_finite_transition_kernel.md"
+    shared_consensus_summary: "A uniform finite kernel on source-declared P7-T01 rows supplies exact proposal-only bookkeeping consequences but no physical probability time dynamics or adoption."
+    unique_phys_math_contributions: "Exact row and update theorems rational iterates source-presentation intertwining Cartesian factorization and synchronized disjoint-component nonfactorization."
+    unique_phys_phil_contributions: "Identity bookkeeping and composition-index boundaries intervention and interaction cautions inherited-versus-new conservation language and adoption ladder."
+    novelty_preservation_summary: "Fusion preserves the explicit kernel and exact finite controls while exposing which elements are stipulated rather than derived."
+    claim_boundary_preservation_summary: "No canonical ontology source-law physical probability time dynamics interaction conservation detector geometry action coupling GR proof publication global-no-go or completed-derivation authority is created."
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+
+ontology_law_research_packet:
+  route: "ontology-law-research-packet"
+  trigger_classification: "derivation_critical_missing_source_law"
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "Build one explicit source matter action evolution equation or transition law and derive its basic conserved or constraint structure."
+  missing_source_law: "A source-derived selector, weight, or transition rule that chooses or weights P7-T01 kinematically admissible transitions and determines a composable source update."
+  underdetermination_statement: "Current ontology does not derive which admissible source transition is enabled, how alternatives are weighted, or how finite source updates compose."
+  no_go_theorem_status: "not_proved"
+  adoption_status:
+    current_adoption: "blocked"
+    continuation: "open"
+    status_pair: "blocked_adoption_open_continuation"
+  packet_payload_mode: "candidate_law_payload"
+  result: "candidate_law_payload_constructed"
+  candidate_law_payload:
+    status_label: "proposal-only"
+    candidate_id: "SourceMatterFiniteTransitionKernelCandidate_v1"
+    source_side_definition: "A finite row-normalized bookkeeping kernel supported only on P7-T01 admissible transition records and equivariant under declared source-presentation isomorphisms."
+    formal_objects:
+      - "SourceMatterFiniteTransitionKernelCandidate_v1"
+      - "SourceMatterBookkeepingUpdate_v1"
+      - "finite enabled-transition row system"
+      - "typed identity-transition convention"
+    domains:
+      - "finite source-only control subsets of P7-T01 admissible configurations"
+      - "finite rows of P7-T01 admissible transition records"
+      - "finite rational-valued nonnegative bookkeeping weights"
+    maps:
+      - "enabled transition record to inverse-row-cardinality coefficient"
+      - "bookkeeping weight to one finite update"
+      - "compatible source-presentation isomorphism to transported control system"
+    proof_obligations:
+      - "prove exact row normalization and finite update closure"
+      - "prove support only on P7-T01 admissible transitions"
+      - "prove total bookkeeping-mass preservation"
+      - "separate inherited charge and defect sector support from new kernel consequences"
+      - "prove source-presentation equivariance"
+      - "provide positive null interacting malformed and degenerate controls"
+      - "preserve target-atlas-free definitions and exact-GR recovery obligations"
+    proof_obligations_remaining:
+      - "derive or lawfully adopt the enabled-row selector identity convention and weights from source ontology"
+      - "supply physical probability time interaction and conservation interpretation only through distinct authorized burdens"
+      - "construct and audit P7-T03 operational devices before P7-T04 common-propagation analysis"
+      - "derive universal coupling stress energy Einstein equations and benchmark recovery only through their named later tasks"
+  exact_gr_recovery_obligations:
+    checklist:
+      - "keep exact GR as a target benchmark rather than a source premise"
+      - "derive any later effective geometry without tuning the kernel to target behavior"
+      - "derive physical interpretation detector semantics common propagation universal coupling action and stress energy through later distinct burdens"
+      - "derive Einstein equations and benchmark comparison only after their named burdens"
+      - "retain protected human authority for ontology source-law and benchmark adoption"
+    distance_to_gr_links:
+      - "matter coupling"
+      - "effective_metric_g_eff"
+      - "Einstein equations"
+      - "benchmark promotion"
+  no_target_import_audit_scope:
+    forbidden_source_classes:
+      - "target_atlas"
+      - "target_metric"
+      - "benchmark_success"
+      - "candidate_reconstruction"
+      - "generated_derivative"
+      - "registry_metadata_authority"
+      - "role_authority"
+      - "validation_authority"
+      - "physical_time"
+      - "physical_probability"
+      - "detector_semantics"
+      - "stress_energy_semantics"
+      - "matter_action"
+      - "coupling_law"
+  exact_gr_recovery_obligations_preserved: true
+  human_gate_request:
+    required_before_adoption: true
+    requested_decision: "none in this task"
+    exact_requested_ontology_edit: "none"
+
+source_extension_classification:
+  checklist_id: "source_extension_classification_checklist_v1"
+  records:
+    - item_id: "SourceMatterFiniteTransitionKernelCandidate_v1"
+      item_source_path: "research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_candidate_v1.tex"
+      classification: "new_ontology_primitive_candidate"
+      evidence_paths:
+        - "research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_candidate_v1.tex"
+        - "research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_validation_v1.json"
+      relation_to_current_ontology: "missing_primitive"
+      claim_boundary_id: "CB-V21-P7-T02-SOURCE-MATTER-FINITE-TRANSITION-KERNEL-001"
+      allowed_conclusion: "proposal-only new source-transition-law primitive candidate; blocked adoption with open continuation"
+      blocked_overreads:
+        - "canonical ontology candidate adopted ontology or adopted source law"
+        - "physical probability rate time dynamics interaction or conservation"
+        - "detector semantics target geometry matter action stress energy or universal coupling"
+        - "Einstein equations benchmark promotion proof publication or completed derivation"
+      protected_authority_required: true
+      downstream_promotion_authorized: false
+      physics_promotion_authorized: false
+      next_route_if_blocked: "P7-T03 source-level operational-device construction after checkpoint"
+    - item_id: "P7T02-THM-FINITE-KERNEL-NORMALIZATION-CLOSURE-001"
+      item_source_path: "research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_candidate_v1.tex"
+      classification: "status_boundary_evidence_only"
+      evidence_paths:
+        - "research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_candidate_v1.tex"
+        - "research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_spec_v1.yaml"
+      relation_to_current_ontology: "evidence_only"
+      claim_boundary_id: "CB-V21-P7-T02-SOURCE-MATTER-FINITE-TRANSITION-KERNEL-001"
+      allowed_conclusion: "exact finite theorem inside one stipulated proposal-only kernel"
+      blocked_overreads:
+        - "physical probability normalization"
+        - "physical time evolution"
+        - "physical conservation law"
+      protected_authority_required: false
+      downstream_promotion_authorized: false
+      physics_promotion_authorized: false
+
+bridge_attempt_status:
+  status: "scoped_source_transition_candidate_constructed"
+  candidate_map: "finite P7-T01 enabled rows to normalized bookkeeping coefficients and one composable update"
+  missing_primitive: "source-derived enabled-row selector weight law physical interpretation and protected adoption"
+  preserves_blocks: "Preserves canonical ontology source-law adoption physical probability time conservation detector semantics effective geometry matter coupling Einstein equations benchmark Gate Chair publication and completed-derivation blocks."
+  explanation: "P7-T02 constructs the selected transition-rule candidate and exact internal consequences but does not establish a physical matter-coupling bridge."
+
+candidate_constructor_result:
+  result_type: "constructed_candidate"
+  constructed_candidate_path: "research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_candidate_v1.tex"
+  minimal_countermodel_path: ""
+  obstruction_id: ""
+  formal_objects:
+    - "SourceMatterFiniteTransitionKernelCandidate_v1"
+    - "SourceMatterBookkeepingUpdate_v1"
+    - "finite enabled-transition rows with one typed identity record"
+    - "two-state positive exact solution"
+    - "Cartesian independent factorization control"
+    - "synchronized disjoint-component nonfactorization control"
+  maps:
+    - "enabled row to uniform nonnegative rational kernel"
+    - "finite bookkeeping weight to one update"
+    - "source-presentation isomorphism to transported kernel and update"
+    - "component projections to marginal row kernels"
+  proof_obligations:
+    - "P7-T03 construct source-level operational devices and protocols without importing target geometry"
+    - "P7-T04 compute principal symbols or source propagation relations only after P7-T03 completes"
+    - "audit source-law smuggling and model-to-world claims before any adoption"
+    - "obtain protected human authority before canonical ontology or source-law adoption"
+  failed_components: []
+  next_required_role: "smuggling-auditor"
+  no_fog_check: true
+  no_fog_explanation: "The task explicitly constructs the finite kernel, update equation, two exact theorems, one analytic iterate family, and nine typed control or failure branches; all 80 deterministic checks pass and zero parent-child conflicts remain unresolved."
+  claim_boundary_preserved: true
+  claim_boundary_citation: "CB-V21-P7-T02-SOURCE-MATTER-FINITE-TRANSITION-KERNEL-001"
+
+source_matter_finite_transition_kernel_result:
+  candidate_id: "SourceMatterFiniteTransitionKernelCandidate_v1"
+  status: "draft/control"
+  adoption_status: "proposal-only"
+  result_kind: "source-extension data"
+  finite_control_state_count: 2
+  positive_solution_family_count: 1
+  theorem_count: 2
+  exact_row_normalization: true
+  finite_update_closure: true
+  total_bookkeeping_mass_preserved: true
+  inherited_sector_support_preserved: true
+  source_presentation_equivariance: true
+  independent_factorization_control_complete: true
+  synchronized_nonfactorization_control_complete: true
+  null_control_complete: true
+  degenerate_control_complete: true
+  malformed_control_count: 4
+  underdetermined_control_count: 1
+  resolved_parent_conflict_count: 12
+  unresolved_parent_conflict_count: 0
+  task_local_check_count: 80
+  task_local_failed_check_count: 0
+  latex_compile_status: "PASS"
+  latex_page_count: 6
+  current_ontology_derives_enabled_rows: false
+  current_ontology_derives_weights: false
+  current_ontology_derives_update: false
+  physical_probability_established: false
+  physical_time_established: false
+  physical_interaction_established: false
+  physical_conservation_established: false
+  source_law_adopted: false
+  matter_coupling_derived: false
+  scientific_ledgers_changed: true
+
+new_mathematical_payload:
+  - payload_id: "NMP-RT-20260728-001-001"
+    payload_type: "definition"
+    name: "Finite row-normalized source transition kernel"
+    summary: "Defines a uniform nonnegative rational kernel on finite nonempty P7-T01 enabled rows with exactly one identity record."
+  - payload_id: "NMP-RT-20260728-001-002"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    name: "Finite normalization closure and inherited-sector theorem"
+    summary: "Proves row normalization finite update closure total bookkeeping-mass preservation and inherited (Q,[z]) sector support."
+  - payload_id: "NMP-RT-20260728-001-003"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    name: "Source-presentation equivariance theorem"
+    summary: "Proves exact intertwining of transported kernels and updates under compatible row-bijective source-presentation isomorphisms."
+  - payload_id: "NMP-RT-20260728-001-004"
+    payload_type: "finite_model"
+    name: "Exact positive free and composition controls"
+    summary: "Computes the two-state positive iterate and separates Cartesian factorization from synchronized disjoint-component nonfactorization."
+
+mathematical_payload_manifest:
+  - payload_id: "PAYLOAD-RT-20260728-001-001"
+    payload_type: "construction"
+    object_name: "SourceMatterFiniteTransitionKernelCandidate_v1"
+    claim_status: "draft/control proposal-only"
+    source_path: "research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_candidate_v1.tex"
+    burden_effect: "narrows"
+    summary: "Supplies one explicit source-transition rule and finite update without adopting or physically interpreting either."
+  - payload_id: "PAYLOAD-RT-20260728-001-002"
+    payload_type: "theorem"
+    object_name: "P7T02-THM-FINITE-KERNEL-NORMALIZATION-CLOSURE-001"
+    claim_status: "exact within task-local proposal-only candidate"
+    source_path: "research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_candidate_v1.tex"
+    burden_effect: "narrows"
+    summary: "Derives normalization closure total bookkeeping mass and inherited sector support with new-versus-inherited consequences separated."
+  - payload_id: "PAYLOAD-RT-20260728-001-003"
+    payload_type: "theorem"
+    object_name: "P7T02-THM-SOURCE-PRESENTATION-EQUIVARIANCE-001"
+    claim_status: "exact within task-local proposal-only candidate"
+    source_path: "research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_candidate_v1.tex"
+    burden_effect: "narrows"
+    summary: "Proves candidate-level presentation transport without asserting target covariance or physical gauge."
+  - payload_id: "PAYLOAD-RT-20260728-001-004"
+    payload_type: "finite_model"
+    object_name: "P7-T02 positive free factorizing and synchronized nonfactorizing controls"
+    claim_status: "source-extension data"
+    source_path: "research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_controls_v1.yaml"
+    burden_effect: "stress_tests"
+    summary: "Provides exact finite analytic and composition witnesses together with null degenerate malformed and underdetermined controls."
+  - payload_id: "PAYLOAD-RT-20260728-001-005"
+    payload_type: "dependency_map_update"
+    object_name: "P7-T02 completion with P7-T03 dependency ready after checkpoint"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_compact_receipt_v1.json"
+    burden_effect: "selects_next"
+    summary: "Selects only P7-T03 for the next relay generation; P7-T04 remains blocked on P7-T03."
+
+physics_progress_status:
+  status: "candidate_constructed_pending_audit"
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "Build one explicit source matter action evolution equation or transition law and derive its basic conserved or constraint structure."
+  explanation: "P7-T02 supplies one explicit proposal-only source transition rule and exact finite constraint structure. It narrows the mathematical source-dynamics sub-burden but creates no physical dynamics coupling or adoption authority."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr_delta:
+  changed: true
+  effect: "scoped_evidence_precondition"
+  burden_id: "matter_coupling"
+  milestone: "matter_coupling"
+  old_status: "draft object exists"
+  new_status: "draft object exists"
+  ledger_row_updated: true
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_sha256_after_update: "3acd19899ac236dd153bbdd28fd9e1cd5a39b886f58b8749a81af29bada69c19"
+  ledger_update_rationale: "The mathematical source-transition-rule sub-burden narrows from a configuration ontology only to an explicit proposal-only update law with exact finite consequences; the higher-level burden status remains draft object exists."
+  downstream_unlocked:
+    - "P7-T03 source-level operational-device construction after checkpoint"
+  downstream_still_blocked:
+    - "P7-T04 until P7-T03 completes"
+    - "physical source matter and source-law adoption"
+    - "detector and operational semantics"
+    - "common source propagation structure"
+    - "universal coupling and equivalence-principle behavior"
+    - "matter action and stress energy"
+    - "lawful unscoped effective geometry"
+    - "Einstein equations"
+    - "benchmark promotion"
+  explanation: "The Distance-to-GR ledger records a real proposal-level mathematical delta only; physical and promotion statuses do not change."
+
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "unchanged; P5 source-extension objects remain proposal-only"
+  - burden: "Source equivalence EqSrc"
+    status: "unchanged; general EqSrc remains open"
+  - burden: "RetainH"
+    status: "unchanged; no canonical retention law"
+  - burden: "GenH"
+    status: "unchanged; no canonical generator law"
+  - burden: "ObsLoc_lc"
+    status: "unchanged; local exact branch only"
+  - burden: "Resp_lc"
+    status: "unchanged; no detector semantics"
+  - burden: "M_src"
+    status: "unchanged; scoped source-only adopted object is not target geometry"
+  - burden: "g_eff"
+    status: "unchanged; P6 Gate B remains zero of eight and bare g_eff remains unresolved"
+  - burden: "matter coupling"
+    status: "proposal-only finite source transition rule and exact bookkeeping constraints now exist; physical dynamics operational semantics stress energy universal coupling and adoption remain open"
+  - burden: "Einstein equations"
+    status: "not started; unchanged"
+  - burden: "finite-variation robustness"
+    status: "unchanged; finite controls do not establish arbitrary physical robustness"
+  - burden: "benchmark promotion"
+    status: "blocked by missing physical interpretation common propagation coupling Einstein equations and protected review"
+  - burden: "Gate Chair status"
+    status: "human-gated; unchanged"
+  - burden: "current route freeze or hard-fail status"
+    status: "the exact uniform finite-kernel construction route is locally complete; P7-T03 is a distinct operational-device burden"
+
+freeze_criteria_status:
+  repeated_burden: true
+  freeze_evaluation_required: true
+  active_freeze_label: "V21-P7-T02-SOURCE-MATTER-FINITE-TRANSITION-KERNEL-V1"
+  prior_attempts_considered:
+    - "RT-20260727-007 P7-T01 source-matter incidence ontology candidate"
+    - "RT-20260727-008 P7-T02 theoretical packet selector"
+    - "RT-20260728-001 P7-T02 finite transition-kernel construction"
+  freeze_if:
+    - "Later work repeats the uniform enabled-row kernel normalization theorem or existing finite controls without a new theorem countermodel source datum or protected decision."
+    - "Later work renames bookkeeping coefficients as physical probability or the update index as time without a distinct derivation."
+  do_not_freeze_if:
+    - "P7-T03 constructs a materially new source-level operational-device and protocol candidate."
+    - "A later smuggling audit or Refuter supplies a distinct failure or admissibility result for this candidate."
+  freeze_decision: "locally_frozen"
+  decision_reason: "The exact P7-T02 uniform-kernel construction is complete and should not repeat; P7-T03 is a distinct operational-semantics construction."
+  no_status_update_rationale: "The Distance-to-GR matter-coupling row already names the exact repetition guard, so no separate freeze registry row is needed."
+  exact_prior_route_freeze_preserved: true
+  global_theory_rejection: false
+  future_source_extension_impossibility: false
+  next_allowed_route: "candidate_constructor"
+
+route_cycle_control:
+  cycle_family: "v21_p7_source_matter_construction"
+  current_cycle_step: "p7_t02_transition_kernel_constructed_p7_t03_operational_devices_selected"
+  prior_related_tasks:
+    - "RT-20260727-007"
+    - "RT-20260727-008"
+    - "RT-20260728-001"
+  cycle_risk: "medium"
+  orbit_avoidance_reason: "P7-T03 must construct explicit operational devices and protocols with new source objects and success or failure conditions; it may not restate the kernel or infer physical semantics from normalization."
+  next_role_consequence: "candidate-constructor@0.2.0 for v21 P7-T03"
+
+selected_next_route:
+  route_id: "v21_p7_t03_source_operational_devices_and_protocols"
+  route_label: "candidate-construction-packet"
+  role_family: "candidate-constructor@0.2.0"
+  worker_skill: "continue-research"
+  selected_next_packet_type: "source_operational_devices_candidate_construction"
+  task_type: "v21_p7_t03_source_operational_devices_and_protocols"
+  plan_task_id: "P7-T03"
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "Give operational meaning to effective geometry and matter response."
+  strategy_id: "construct_source_level_operational_devices_v1"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  effective_geometry_available: false
+  target_metric_assumed: false
+  physical_probability_assumed: false
+  physical_time_assumed: false
+  detector_semantics_assumed: false
+  stress_energy_assumed: false
+  coupling_assumed: false
+  gr_behavior_assumed: false
+  physics_promotion_authorized: false
+  source_handoff: "research_control/handoffs/handoff-0891.yaml"
+
+claim_boundary:
+  boundary_id: "CB-V21-P7-T02-SOURCE-MATTER-FINITE-TRANSITION-KERNEL-001"
+  allowed_scope: "Exact P7-T02 finite enabled-row kernel update normalization closure inherited-sector support presentation equivariance bounded controls and one P7-T03 route."
+  blocked_scope: "Canonical ontology or source-law adoption physical probability time dynamics interaction conservation detector semantics target geometry action stress energy coupling P7-T03 execution P7-T04 execution Einstein equations benchmark proof publication push completed derivation global no-go or future source-extension impossibility."
+  claim_boundary_preserved: true
+
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+  summary: "The finite kernel is scoped proposal evidence only. It does not establish physical probability time dynamics interaction conservation detector semantics geometry action stress energy universal coupling Einstein equations exact-GR recovery benchmark promotion proof publication or a completed derivation."
+  forbidden_conclusions:
+    - "enabled rows identity convention coefficients or update derived from or adopted into current ontology"
+    - "M_src adoption or expansion beyond its protected scoped source-only status"
+    - "g_eff adoption scope expansion or use as a P7 geometry input"
+    - "matter coupling derivation or adoption"
+    - "bookkeeping coefficients as physical probabilities rates frequencies or propensities"
+    - "composition index as physical time duration causal order or persistence"
+    - "sector support or total bookkeeping mass as a physical conservation law"
+    - "Cartesian factorization as empirical independence"
+    - "synchronized nonfactorization as physical force coupling or interaction"
+    - "source-presentation equivariance as target covariance or physical gauge"
+    - "null row as a physical vacuum"
+    - "detector semantics matter action stress energy or universal coupling"
+    - "effective geometry or common cone"
+    - "Einstein-equation derivation"
+    - "benchmark promotion Gate Chair verdict publication or completed derivation"
+    - "global theory rejection or future source-extension impossibility"
+
+no_target_import_audit:
+  explicit_target_import_found: false
+  explicit_process_import_found: false
+  distinction: "Only fixed P7-T01 source configurations typed transitions finite enabled-row declarations rational bookkeeping weights and compatible source-presentation maps enter the construction."
+  forbidden_inputs_absent:
+    - "target atlas"
+    - "target metric"
+    - "desired benchmark behavior"
+    - "physical time or probability calibration"
+    - "detector response"
+    - "stress-energy or matter action"
+    - "coupling law"
+    - "validator or checkpoint metadata as science"
+
+ordinary_route_guard:
+  schema_id: "ordinary_route_guard_evaluation_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  evaluation_id: "ORE-HANDOFF-0891"
+  ordinary_handoff_id: "handoff-0891"
+  threshold: 3
+  consecutive_project_system_tasks_before_selection: 0
+  ready_science_plan_task_ids:
+    - "P7-T03"
+    - "P14-T04"
+  selected_plan_task_id: "P7-T03"
+  selected_route_class: "physics_bearing"
+  selected_worker_skill: "continue-research"
+  outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  exception_receipt:
+    active: false
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+active_state_boundary:
+  active_task_id: "RT-20260728-001"
+  active_job_id: "AJ-RT-20260728-001-001"
+  current_status: "p7_t02_source_matter_transition_kernel_complete_p7_t03_ready_for_checkpoint"
+  checkpoint_required: true
+  checkpoint_completed: false
+  checkpoint_invocation_count: 0
+  p7_t02_complete: true
+  selected_next_plan_task_id: "P7-T03"
+  selected_next_worker_skill: "continue-research"
+  selected_next_role_family: "candidate-constructor@0.2.0"
+  selected_next_route_label: "candidate-construction-packet"
+  selected_next_strategy_id: "construct_source_level_operational_devices_v1"
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1052
+    relationship_row_count: 5261
+    semantic_row_count: 1052
+    vault_row_count: 1052
+    local_cache_only_warning_count: 0
+  authority_note: "Generated Obsidian wiki notes, semantic extracts, SQLite memory index, and .local files are retrieval layers only and not authority."
+  refresh_needed: true
+  refresh_performed: true
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"source matter finite transition kernel candidate\" --limit 10 --json"
+      query_type: "search"
+      query_text: "source matter finite transition kernel candidate"
+      returned_object_ids:
+        - "TEX-V21-P7-T02-SOURCE-MATTER-FINITE-TRANSITION-KERNEL-V1"
+        - "MD-V21-P7-T02-SOURCE-MATTER-FINITE-TRANSITION-KERNEL-RECEIPT-V1"
+  canonical_inspections:
+    - object_id: "TEX-V21-P7-T02-SOURCE-MATTER-FINITE-TRANSITION-KERNEL-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_candidate_v1.tex"
+      source_hash: "65ac095f5cdf4c2e319365c8b0e024d031b19d9fc2b8102e59997afa1e8f9129"
+    - object_id: "MD-V21-P7-T02-SOURCE-MATTER-FINITE-TRANSITION-KERNEL-RECEIPT-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_receipt.md"
+      source_hash: "7030edb5ca7707b6787022493e929f455606a6532c4e430a927bc6061cf50fb8"
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 142 validated, was atomically claimed, and consumed its immutable P7-T02 route exactly once."
+      - "The selector checkpoint 4da35201d2c701eaea7814fd0401584206a1d0d2 was committed before execution."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Task-local validation passes 80 of 80 checks."
+      - "The scratch TeX build resolves references, has no final overfull boxes, and renders six pages."
+      - "Two same-context child perspectives were fused with zero unresolved conflicts."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Integrated documentation-impact improvement-signal claim-language memory registry renderer and research-control gates must pass before checkpoint."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "One governed checkpoint remains; P7-T03 is unexecuted."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Current frontier task index compact frontier dependency graph claim graph and v21 burden-status derivatives are regenerated and pass freshness checks."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory registries wiki notes and indexes were regenerated and validate-only passes."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation has zero hard failures; inherited findings remain warning-level."
+
+command_results:
+  - command: "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python research_control/tasks/RT-20260728-001/artifacts/validate_source_matter_finite_transition_kernel.py --check --json"
+    status: "PASS"
+    summary: "80 of 80 task-local finite-kernel specification theorem control provenance and authority checks pass"
+  - command: "PATH=/Users/alex.omegapy/texlive/2026/bin/universal-darwin:$PATH .venv/bin/python .codex/skills/project-memory-system/scripts/build_pdf_derivatives.py --scratch research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_candidate_v1.tex"
+    status: "PASS"
+    summary: "six-page scratch PDF compiles with resolved references and no overfull boxes"
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+    status: "PASS"
+    summary: "tracked memory sources registries wiki derivatives and indexes are current"
+  - command: ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+    status: "PASS"
+    summary: "all changed paths are classified within the bounded AgentJob"
+  - command: ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json"
+    status: "PASS"
+    summary: "no project-improvement signal is emitted by this research completion"
+  - command: ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+    status: "PASS"
+    summary: "documentation-impact receipt covers the changed control and science surfaces"
+  - command: ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+    status: "PASS"
+    summary: "changed-source claim-language validation has zero hard failures"
+  - command: ".venv/bin/python scripts/research_control/render_dependency_graph.py --check"
+    status: "PASS"
+    summary: "dependency graph derivatives are fresh"
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not authorized; ordinary P7-T02 draft/control proposal-only source-transition candidate and exact internal finite consequences only"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  publication_authorized: false
+  proof_authority: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  canonical_ontology_edit_authorized: false
+  ontology_selection_authorized: false
+  matter_ontology_adoption_authorized: false
+  physical_interpretation_establishment_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+  future_source_extension_impossibility_authorized: false
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  sidecar_required: false
+  sidecar_created: false
+  reason: "No project-improvement signal was emitted."

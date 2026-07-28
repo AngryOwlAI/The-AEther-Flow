@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260727-008`
-- Latest handoff: `handoff-0890`
-- Current status: `p7_t02_selector_complete_transition_kernel_construction_ready_for_checkpoint`
+- Active task: `RT-20260728-001`
+- Latest handoff: `handoff-0891`
+- Current status: `p7_t02_finite_transition_kernel_complete_p7_t03_ready_after_checkpoint`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260727-008`
-- Latest research handoff: `handoff-0890`
-- Latest research next action: Run one governed checkpoint for AJ-RT-20260727-008-001. Only after it commits may one fresh bounded candidate-constructor@0.2.0 packet continue P7-T02 by constructing or precisely obstructing SourceMatterFiniteTransitionKernelCandidate_v1 under the ontology-law-research-packet route.
+- Latest research task: `RT-20260728-001`
+- Latest research handoff: `handoff-0891`
+- Latest research next action: Run one governed checkpoint for AJ-RT-20260728-001-001. Only after it commits may one fresh bounded candidate-constructor@0.2.0 packet execute v21 P7-T03 by constructing source-level operational devices and protocols with explicit source objects, readout maps, interventions, success and failure criteria, and no imported target geometry or inferred physical semantics.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p7_t02_construct_source_matter_finite_transition_kernel_v1`
+- Route ID: `v21_p7_t03_source_operational_devices_and_protocols`
 - Role family: `candidate-constructor@0.2.0`
 - Target milestone: `matter_coupling`
-- Milestone burden: Build one explicit source matter action evolution equation or transition law and derive its basic conserved or constraint structure.
+- Milestone burden: Give operational meaning to effective geometry and matter response.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `f9823a3fafdc46391a8f4a22eb8e0f0ecf899e8afc3c78da8f9a9a25f7995bc0`
-- JSON SHA-256: `ba1ae8ca43266132e8485ffecf935fe5fb4ae600ebc95ee1cd350bf5afc0ebb6`
+- YAML SHA-256: `cc7cfb153fa224d070e0a653bc30704290d5fc4331f6112e09c6da440d2d35de`
+- JSON SHA-256: `6b33db4c505e0a8b15ec7cf5cb2e5519beb4b19b7672cecaa9ab2d90ee6c92dd`
 
 ## Authority Warning
 

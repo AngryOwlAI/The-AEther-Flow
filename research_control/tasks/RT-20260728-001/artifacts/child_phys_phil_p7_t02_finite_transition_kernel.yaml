@@ -1,0 +1,579 @@
+schema_id: "v21_p7_t02_child_phys_phil_finite_transition_kernel_review_v1"
+artifact_id: "P7T02-CHILD-PHYS-PHIL-FINITE-TRANSITION-KERNEL-REVIEW-V1"
+task_id: "RT-20260728-001"
+job_id: "AJ-RT-20260728-001-001"
+decision_id: "DDR-20260728-001"
+plan_task_id: "P7-T02"
+execution_unit_id: "child_phys_phil"
+perspective: "physicist_philosopher"
+status: "completed"
+artifact_status: "draft/control"
+candidate_status: "proposal-only"
+adoption_status: "blocked_adoption_open_continuation"
+review_context: "same_context_internal_parent_child_synthesis_input"
+target_derivation_milestone: "matter_coupling"
+milestone_burden: "Build one explicit source matter action evolution equation or transition law and derive its basic conserved or constraint structure."
+
+review_question: >-
+  What exact mathematical and modal claims may
+  SourceMatterFiniteTransitionKernelCandidate_v1 support, and what physical,
+  empirical, ontological, or downstream claims remain blocked, when the
+  candidate adds finite enabled rows, one identity record per row, uniform
+  bookkeeping coefficients, and an iterated update to the fixed proposal-only
+  SourceMatterIncidenceCandidate_v1 grammar?
+
+source_basis:
+  - path: "research_control/tasks/RT-20260728-001/DDR-20260728-001.md"
+    sha256: "bc341a8d955113df40768f7d8e6300cf85a95e124e505ac176556a6a8b51f76e"
+    use: "active construction question, permitted mathematical payload, and claim boundary"
+  - path: "research_control/tasks/RT-20260728-001/jobs/AJ-RT-20260728-001-001.yaml"
+    sha256: "6555fa4b84e74b07d7361b41fd8933405393c71b46c475e7c433dadcea008823"
+    use: "single outer AgentJob scope, assumptions, controls, and authority limits"
+  - path: "research_control/tasks/RT-20260728-001/roles/candidate-constructor@0.2.0--RT-20260728-001.yaml"
+    sha256: "f39fef0a4eb2a8859cb60e99a6f10ccbafca8c9869e9c85e464e1b1644c02163"
+    use: "task-local Candidate Constructor permissions and removed physical interpretations"
+  - path: ".agents/roles/physics/candidate-constructor.v0.2.0.md"
+    sha256: "f6534fd2950c2a6eefb8f2a4b255cd0794ceeb1462556be60af288bceb9d51d5"
+    use: "base role construction and no-fog boundaries"
+  - object_id: "TEX-V21-P7-T01-SOURCE-MATTER-ONTOLOGY-SECTOR-TAXONOMY-V1"
+    path: "research_control/tasks/RT-20260727-007/artifacts/source_matter_ontology_and_sector_taxonomy_v1.tex"
+    sha256: "8d160217bf223078a11bc63fde6593c11c39d5b50d9c48fbad7b12084f8a752d"
+    use: "fixed proposal-only configurations, admissible transition grammar, sector theorem, and model-to-world ladder"
+  - path: "research_control/tasks/RT-20260727-007/artifacts/source_matter_ontology_spec_v1.yaml"
+    sha256: "a5563edddaff90ebab6ac4d3d4e2dc0425fea23b5f27c1c6174cb28b1f4652be"
+    use: "machine-readable fixed candidate, identity ladder, witnesses, and authority limits"
+  - path: "research_control/tasks/RT-20260727-007/artifacts/source_matter_assumption_dependency_table_v1.yaml"
+    sha256: "c665dbc7522d4ee1b6aa01db14100689c8d9acc28c7e659c33b4272d32976991"
+    use: "fixed stipulated assumptions, inherited constraints, and no-target-import guard"
+  - path: "research_control/tasks/RT-20260727-008/artifacts/source_matter_dynamics_packet_selection_v1.yaml"
+    sha256: "6692a493dfe91cc6d92986e69cfda48d04656d42f2d559ca6aa498f3366ccbd7"
+    use: "selected transition-law branch, minimum assumption delta, controls, and semantic cautions"
+  - path: "research_control/tasks/RT-20260727-008/artifacts/parent_fusion_notes_p7_t02_source_matter_dynamics_selector.md"
+    sha256: "42b37a5946a81504d717e06ed2d7adb1c7048815e36c4ebae081b51f29d5465f"
+    use: "fused selector decision that support is primary and normalized weights are nonphysical"
+
+fixed_basis:
+  candidate_id: "SourceMatterIncidenceCandidate_v1"
+  status: "proposal-only"
+  configuration: "Psi=(m,z)"
+  candidate_sector: "Sec_src(Psi)=(Q(Psi),D(Psi)) with D(Psi)=[z]"
+  transition_record: "T=(Psi_minus,J,w,Pi,Psi_plus)"
+  transition_conditions:
+    - "q_plus-q_minus=partial_1 J"
+    - "z_plus-z_minus=partial_2 w"
+    - "Pi uses only declared source data"
+  fixed_absences:
+    - "no transition selector or weight"
+    - "no action or Hamiltonian"
+    - "no physical or formal time supplied by P7-T01"
+    - "no probability, rate, frequency, or propensity semantics"
+    - "no detector, observer, or empirical interpretation"
+    - "no target geometry, stress energy, coupling, or GR input"
+  underdetermination_statement: >-
+    Current ontology and the fixed proposal-only P7-T01 candidate do not
+    derive which kinematically admissible transition is enabled, how
+    alternatives are weighted, or how finite updates compose.
+  impossibility_claimed: false
+
+model_to_world_ladder:
+  level_1_stipulated_candidate_primitives:
+    inherited:
+      - "finite augmented source-incidence complex and coefficient groups"
+      - "occupation and defect data"
+      - "derived charge-label map and P7-T01 transition grammar"
+    added_here:
+      - "finite control configuration set Omega"
+      - "finite source-declared enabled-transition rows T_x"
+      - "exactly one typed identity record in each row"
+      - "uniform row coefficient K_Omega(x,T)=1/|T_x| on enabled records"
+      - "formal composition index and bookkeeping update U_Omega"
+    status_effect: "All added items are proposal-only source-extension candidate data, not ontology derivations or adopted physical primitives."
+  level_2_candidate_derived_mathematics:
+    licensed_if_proved:
+      - "finite nonempty rows"
+      - "nonnegative rational coefficients"
+      - "exact row normalization"
+      - "finite update closure"
+      - "preservation of total bookkeeping mass"
+      - "transport equivariance under compatible source-presentation isomorphisms"
+      - "conditional factorization under an explicitly declared product control"
+      - "candidate-sector support inherited from P7-T01 admissibility"
+    status_effect: "Exact theorem status is internal to the stipulated finite candidate and does not supply physical truth or adoption."
+  level_3_physical_or_empirical_interpretation:
+    status: "open_not_supplied"
+    missing_maps:
+      - "candidate configuration to physical matter"
+      - "bookkeeping coefficient to empirical chance, rate, or frequency"
+      - "formal update iterate to clock time, duration, or causal order"
+      - "source record to detector outcome or measurement"
+      - "source nonfactorization to physical interaction or coupling"
+      - "candidate sector to physical charge, defect, or superselection sector"
+  level_4_canonical_or_protected_status:
+    status: "human-gated"
+    blocked_here:
+      - "canonical-ontology candidate designation"
+      - "source-law adoption"
+      - "matter-ontology adoption"
+      - "physical interpretation adoption"
+      - "benchmark or derivation promotion"
+  ladder_rule: >-
+    An exact consequence at level 2 cannot, by validation, notation,
+    familiarity, or analogy, be promoted to level 3 or level 4.
+
+semantic_findings:
+  identity_transition_convention:
+    proposed_record: "I_x=(x,0,0,id_x,x)"
+    exact_candidate_status: >-
+      I_x is a typed reflexive transition convention. It is P7-T01 admissible
+      when id_x is a declared source-only update because both chain residuals
+      vanish.
+    mathematical_function:
+      - "ensures every finite enabled row is nonempty"
+      - "makes the row-normalization denominator positive"
+      - "provides an absorbing bookkeeping row when no nonidentity record is enabled"
+      - "supports a total update map on every declared control configuration"
+    does_not_mean:
+      - "physical persistence of a system or particle"
+      - "an event in which nothing physically happens"
+      - "elapsed time, waiting time, or survival probability"
+      - "zero energy, inertial motion, equilibrium, or stability"
+      - "absence of interaction or coupling"
+      - "physical vacuum persistence"
+    exactness_requirement: >-
+      Rows must contain exactly one distinguished identity record per
+      configuration under a record-identity convention that prevents
+      duplicate copies from changing |T_x| and therefore changing the kernel.
+    derivation_status: "stipulated convention, not derived law"
+
+  uniform_bookkeeping_weights:
+    formula: "K_Omega(x,T)=1/|T_x| for T in T_x and 0 otherwise"
+    exact_mathematical_description: "finite nonnegative row-normalized rational bookkeeping kernel"
+    licensed_consequences:
+      - "K_Omega(x,T) is nonnegative"
+      - "sum over T in T_x of K_Omega(x,T) equals 1"
+      - "every declared enabled record has equal positive bookkeeping coefficient"
+      - "row cardinality is preserved under a row bijection, so transported uniform rows have equal coefficients"
+    stipulated_elements:
+      - "which records belong to each enabled row"
+      - "the use of equal rather than nonuniform coefficients"
+      - "the finite control cutoff or domain"
+      - "the decision to normalize each row to one"
+    blocked_readings:
+      - "transition probability"
+      - "objective chance"
+      - "empirical propensity"
+      - "rate or frequency"
+      - "principle of indifference"
+      - "maximum-entropy inference"
+      - "quantum amplitude or Born weight"
+      - "thermodynamic ensemble"
+    nonuniqueness_warning: >-
+      Presentation equivariance makes the uniform assignment lawful but does
+      not generally prove it unique. Other equivariant coefficient systems
+      may exist when additional source-only orbit data are declared.
+    semantic_rule: >-
+      Call K_Omega a bookkeeping coefficient or normalized kernel. Do not
+      call it a transition probability, rate, likelihood, propensity, or
+      empirical distribution.
+
+  bookkeeping_update_and_index:
+    formula: >-
+      (U_Omega mu)(y)=sum_x mu(x) sum_{T in T_x with target(T)=y}
+      K_Omega(x,T)
+    input_status: "finite nonnegative rational bookkeeping assignment mu on Omega"
+    exact_candidate_consequences:
+      - "U_Omega mu is a finite nonnegative rational bookkeeping assignment"
+      - "total bookkeeping mass is preserved by row normalization"
+      - "normalized input assignments remain normalized"
+      - "iteration U_Omega^n is algebraically defined for nonnegative integer n when the control system is closed"
+    index_semantics: "formal composition count only"
+    index_does_not_mean:
+      - "physical time"
+      - "proper time"
+      - "clock time or duration"
+      - "causal precedence"
+      - "continuum limit"
+      - "worldline parameter"
+      - "measured update frequency"
+    modality: >-
+      U_Omega transports bookkeeping assignments over candidate-allowed
+      records. It does not select one actual history, say that an event occurs,
+      or assign a chance that nature realizes an endpoint.
+    terminology_guard:
+      preferred:
+        - "formal update iterate"
+        - "composition index"
+        - "bookkeeping assignment"
+        - "total bookkeeping mass"
+      avoid:
+        - "time step"
+        - "future state"
+        - "probability distribution"
+        - "physical evolution"
+        - "conserved probability"
+
+  modal_versus_empirical_claims:
+    support_meaning: >-
+      Membership T in T_x means only that the record is enabled inside the
+      stipulated finite candidate control. It is stronger than bare P7-T01
+      kinematic admissibility but remains candidate-relative.
+    support_does_not_establish:
+      - "physical possibility"
+      - "actual occurrence"
+      - "deterministic succession"
+      - "empirical accessibility"
+      - "relative frequency"
+      - "causal influence"
+      - "persistent identity across endpoints"
+    positive_coefficient_meaning: >-
+      A positive K_Omega value means that the enabled record contributes to
+      the formal bookkeeping update. It does not mean nonzero physical chance.
+    endpoint_language: >-
+      Psi_minus and Psi_plus are source-record endpoints in a typed tuple.
+      Their notation does not establish temporal before and after, trajectory,
+      motion, or worldline semantics.
+    empirical_status: "No observational, measurement, calibration, prediction, or detector claim is licensed."
+
+  inherited_versus_new_consequences:
+    inherited_from_p7_t01_or_imposed_support:
+      - "transition endpoints are admissible P7-T01 configurations"
+      - "q_plus-q_minus=partial_1 J"
+      - "z_plus-z_minus=partial_2 w"
+      - "Pi is source-only"
+      - "each supported transition preserves the source-label Q and defect class D=[z]"
+      - "malformed transitions are excluded fail-closed"
+    newly_derived_from_kernel_given_the_stipulations:
+      - "row normalization"
+      - "finite nonnegative update closure"
+      - "total bookkeeping-mass preservation"
+      - "no bookkeeping support crosses Q and D sectors when every enabled record obeys the inherited constraints"
+      - "source-presentation equivariance when the entire finite control and its rows transport bijectively"
+      - "conditional product factorization under an explicitly product-closed independent control"
+    careful_sector_statement: >-
+      The kernel newly lifts inherited endpoint-sector support to
+      distribution-level support. It does not newly derive the endpoint
+      constraints themselves and it does not create a physical conservation
+      law.
+    not_preserved_without_extra_conditions:
+      - "representation grade M"
+      - "occupation count N"
+      - "energy, momentum, angular momentum, or stress energy"
+      - "physical particle number or charge"
+    noether_status: "No action or independently derived symmetry-to-conservation argument exists here."
+
+  source_presentation_equivariance:
+    exact_hypothesis: >-
+      A compatible P7-T01 source-presentation isomorphism must transport
+      Omega to Omega_prime and induce a bijection T_x to
+      T_prime_transport(x), including identity records and targets.
+    exact_consequence: >-
+      Row cardinalities agree, uniform coefficients agree under transport,
+      and pushforward commutes with the finite bookkeeping update.
+    does_not_mean:
+      - "diffeomorphism invariance"
+      - "target-coordinate covariance"
+      - "physical gauge symmetry"
+      - "observational equivalence"
+      - "empirical indistinguishability"
+    scope_warning: >-
+      Equivariance compares a control with its transported control. An
+      arbitrary finite truncation is not automatically invariant under every
+      automorphism of one presentation.
+
+  independence_and_interaction:
+    independent_control_hypotheses:
+      - "a declared source decomposition into two component controls"
+      - "configuration domain Omega=Omega_1 times Omega_2"
+      - "enabled row T_(x1,x2)=T^1_x1 times T^2_x2"
+      - "componentwise target and identity records"
+      - "no omitted or added joint record in the declared product row"
+    exact_factorization_result: >-
+      Under those hypotheses, row cardinalities multiply and the uniform
+      bookkeeping coefficient factors as K=K_1 K_2.
+    independence_does_not_mean:
+      - "statistical independence of physical events"
+      - "spacelike separation"
+      - "causal isolation"
+      - "absence of a physical force"
+      - "absence of universal matter coupling"
+      - "ontological separability"
+    interacting_control_exact_meaning: >-
+      A candidate-relative interacting control is one whose declared
+      multi-occupation enabled row is not the Cartesian product of declared
+      component rows, so its bookkeeping update does not have the above
+      product form.
+    interaction_does_not_mean:
+      - "physical interaction"
+      - "force, potential, scattering, or energy exchange"
+      - "matter coupling"
+      - "locality or nonlocality in spacetime"
+      - "entanglement or empirical correlation"
+    regulator_warning: >-
+      Apparent nonfactorization caused only by an arbitrary finite cutoff or
+      omitted records is not an intrinsic interaction result. The fused
+      candidate must either provide a source-declared joint enablement rule or
+      qualify the result as a nonfactorizing finite control witness.
+    preferred_term: "candidate-relative nonfactorizing source control"
+
+branch_distinctions:
+  null:
+    defining_condition: "m=0 and z=0"
+    kind: "configuration-content stratum"
+    exact_meaning: "valid empty source configuration with Q=0 and D=[0]"
+    blocked_meanings:
+      - "physical vacuum"
+      - "ground state"
+      - "minimum-energy state"
+      - "cosmological background"
+      - "absence of all physical matter"
+  degenerate:
+    defining_condition: "a valid enabled row has only its identity record, or an explicitly declared orbit-degenerate coefficient assignment"
+    kind: "candidate-update row property"
+    exact_meaning: "the formal bookkeeping update leaves that row at its source configuration"
+    blocked_meanings:
+      - "physical stability"
+      - "equilibrium"
+      - "dynamical arrest"
+      - "infinite lifetime"
+      - "zero interaction"
+    relation_to_null: >-
+      Nullity and degeneracy are logically distinct. The chosen null control
+      may also be degenerate, but nonnull configurations can be degenerate and
+      a different proposal could give a null configuration nonidentity
+      enabled records.
+  malformed:
+    defining_condition: >-
+      A record, row, or control violates typing, P7-T01 admissibility,
+      identity-row uniqueness, nonempty-row, normalization, transport, or
+      no-target-import requirements.
+    kind: "fail-closed invalid result"
+    exact_meaning: "the candidate evaluator returns a recorded bottom result and excludes the invalid datum from the valid kernel"
+    blocked_meanings:
+      - "zero-probability physical event"
+      - "forbidden event in nature"
+      - "degenerate state"
+      - "null configuration"
+      - "evidence against all future source extensions"
+    zero_weight_distinction: >-
+      K=0 off an otherwise valid enabled row records absence from the
+      stipulated support; it must not be used to disguise a malformed record
+      as a valid zero-weight transition.
+  underdetermined:
+    defining_condition: "all supplied data are well typed but the candidate contains no rule for the requested classification"
+    kind: "missing-rule result"
+    exact_meaning: "the question remains open inside the candidate"
+    distinct_from:
+      - "null"
+      - "degenerate"
+      - "malformed"
+    example: "asking which detector outcome corresponds to a bookkeeping update"
+
+exactly_licensed_claims_if_parent_proofs_pass:
+  - claim_id: "PHIL-LIC-01"
+    statement: "Within a stipulated finite source-only control, each row is finite and nonempty because it contains exactly one typed identity record."
+  - claim_id: "PHIL-LIC-02"
+    statement: "The uniform bookkeeping kernel is nonnegative and exactly row normalized."
+  - claim_id: "PHIL-LIC-03"
+    statement: "The induced finite update preserves nonnegativity and total bookkeeping mass and is closed on the declared finite domain."
+  - claim_id: "PHIL-LIC-04"
+    statement: "Bookkeeping support remains inside inherited P7-T01 Q and D sectors because every enabled transition is required to satisfy the P7-T01 chain constraints."
+  - claim_id: "PHIL-LIC-05"
+    statement: "The transported kernel and update are equivariant under compatible source-presentation isomorphisms that bijectively transport the entire finite control."
+  - claim_id: "PHIL-LIC-06"
+    statement: "Uniform bookkeeping coefficients factor under an explicitly Cartesian product control."
+  - claim_id: "PHIL-LIC-07"
+    statement: "One explicit non-Cartesian multi-occupation row can witness candidate-relative nonfactorization without establishing physical interaction."
+  - claim_id: "PHIL-LIC-08"
+    statement: "Positive, null, degenerate, and malformed controls are mathematically distinct."
+  - claim_id: "PHIL-LIC-09"
+    statement: "The result constructs a proposal-only finite transition-law candidate and narrows the P7-T02 formal burden without adopting that law."
+
+stipulated_or_open_items:
+  stipulated_not_derived:
+    - "the finite control domain and cutoff"
+    - "enabled-row membership"
+    - "one identity record per configuration"
+    - "uniform weighting"
+    - "normalization to one"
+    - "formal update orientation and composition index"
+    - "any source decomposition used to define product independence"
+    - "any joint enablement rule used to define candidate-relative interaction"
+  open_mathematical_or_model_questions:
+    - "uniqueness or principled selection of the uniform kernel"
+    - "compatibility of different finite controls or a projective limit"
+    - "continuum, large-domain, or infinite-state extension"
+    - "ergodicity, recurrence, fixed-point classification, or stability"
+    - "whether M or N should be constrained"
+    - "relation to an action, generator, energy, or stress object"
+  open_physical_or_empirical_questions:
+    - "whether any source configuration represents physical matter"
+    - "whether any enabled record represents a possible or actual event"
+    - "whether bookkeeping weights acquire probability, rate, or frequency semantics"
+    - "whether the update index acquires physical-time or causal meaning"
+    - "whether source nonfactorization corresponds to physical interaction"
+    - "whether source sectors correspond to measured charges or defects"
+    - "detector semantics, calibration, and empirical prediction"
+    - "effective geometry, common propagation, universal coupling, matter action, and stress energy"
+    - "Einstein-equation derivation and exact-GR recovery"
+
+conflict_review_input:
+  blocking_conflicts_found: false
+  items_parent_must_resolve_or_state:
+    - conflict_id: "PHIL-CONFLICT-01"
+      issue: "Uniformity can be overread as equal likelihood or as forced by symmetry."
+      required_resolution: "State that uniformity is a lawful stipulated choice and that equivariance alone does not prove uniqueness or empirical indifference."
+      blocking_if_unresolved: true
+    - conflict_id: "PHIL-CONFLICT-02"
+      issue: "An identity transition can be overread as physical persistence or waiting."
+      required_resolution: "Define it as a typed reflexive bookkeeping convention and deny time, duration, survival, stability, and vacuum semantics."
+      blocking_if_unresolved: true
+    - conflict_id: "PHIL-CONFLICT-03"
+      issue: "Sector preservation can be presented as a new conservation law."
+      required_resolution: "Separate inherited endpoint constraints from the new update-level support lift and deny Noether or physical-conservation status."
+      blocking_if_unresolved: true
+    - conflict_id: "PHIL-CONFLICT-04"
+      issue: "Nonfactorization can be caused by finite truncation rather than a source-declared joint rule."
+      required_resolution: "Supply explicit joint source enablement or qualify the witness as candidate-relative nonfactorization only."
+      blocking_if_unresolved: false
+    - conflict_id: "PHIL-CONFLICT-05"
+      issue: "Presentation equivariance can be overclaimed for an arbitrary finite subset."
+      required_resolution: "Compare Omega with its transported Omega_prime and require a row bijection, rather than asserting automorphism invariance without closure."
+      blocking_if_unresolved: true
+    - conflict_id: "PHIL-CONFLICT-06"
+      issue: "Duplicate identity records would make row cardinality and coefficients presentation-dependent."
+      required_resolution: "Specify a set or canonical record identity and exactly one distinguished identity record per row."
+      blocking_if_unresolved: true
+    - conflict_id: "PHIL-CONFLICT-07"
+      issue: "The words enabled, successor, interaction, mass, and evolution carry physical connotations."
+      required_resolution: "Use explicit candidate-relative qualifiers and the preferred bookkeeping vocabulary throughout the fused artifact."
+      blocking_if_unresolved: false
+
+parent_fusion_requirements:
+  required_positive_language:
+    - "within the stipulated finite proposal-only candidate"
+    - "bookkeeping coefficient"
+    - "formal update iterate"
+    - "candidate-relative enabled record"
+    - "candidate-relative nonfactorizing source control"
+    - "inherited P7-T01 sector support"
+    - "blocked_adoption_open_continuation"
+  required_negative_language:
+    - "not a physical probability, rate, frequency, or propensity"
+    - "not physical time, duration, or causal order"
+    - "not a Noether or physical conservation law"
+    - "not detector or empirical semantics"
+    - "not target geometry, stress energy, matter action, or coupling"
+    - "not Einstein-equation or exact-GR recovery"
+  theorem_scope_guard: >-
+    Every theorem should quantify over the declared finite control and list
+    the support, row-transport, and closure hypotheses. No theorem may infer
+    realization in nature, ontology adoption, or downstream proof authority.
+  witness_scope_guard: >-
+    The positive and interacting controls are finite source-chain witnesses,
+    not trajectories, experiments, particles, scattering events, or
+    calibrated physical models.
+
+no_target_import_audit:
+  target_atlas_used: false
+  target_topology_used: false
+  target_metric_used: false
+  effective_geometry_used: false
+  causal_cone_used: false
+  physical_time_used: false
+  detector_response_used: false
+  empirical_calibration_used: false
+  stress_energy_used: false
+  matter_action_used: false
+  coupling_law_used: false
+  desired_einstein_equation_used: false
+  desired_exact_gr_behavior_used: false
+  validator_or_checkpoint_used_as_science: false
+  route_or_role_used_as_science: false
+  generated_derivative_used_as_authority: false
+  audit_result: "PASS_for_child_semantic_review"
+
+limitations:
+  - "This is same-context internal synthesis input, not independent review, replication, human endorsement, or proof authority."
+  - "This review evaluates the permitted construction schema before the parent fused TeX and machine specification are final."
+  - "The review does not prove the parent mathematical theorems or validate the eventual witness arithmetic."
+  - "Uniform bookkeeping weights remain underdetermined by current ontology even if the finite theorem package is internally exact."
+  - "A finite control is a bounded model domain, not a canonical cutoff or exhaustive physical state space."
+  - "No formal update establishes actualization, determinism, physical modality, or empirical chance."
+  - "No candidate-relative factorization statement establishes physical independence, locality, or separability."
+  - "No candidate-relative nonfactorization statement establishes interaction, force, coupling, or entanglement."
+  - "No inherited Q or D support establishes a physical conserved quantity."
+  - "The P7-T03 operational, P7-T04 propagation, P7-T05 coupling, P7-T06 action and stress-energy, Einstein-equation, and benchmark burdens remain open."
+
+status_vocabulary:
+  allowed_here:
+    - "draft/control"
+    - "proposal-only"
+    - "source-extension data"
+  protected_not_assigned_here:
+    - "canonical-ontology candidate"
+    - "adopted"
+    - "rejected"
+    - "human-gated"
+  governing_status_pair: "blocked_adoption_open_continuation"
+
+authority_flags:
+  canonical_ontology_modified: false
+  canonical_ontology_candidate_status_assigned: false
+  source_law_adopted: false
+  matter_ontology_adopted: false
+  physical_matter_established: false
+  physical_transition_probability_established: false
+  physical_rate_frequency_or_propensity_established: false
+  physical_time_duration_or_causal_order_established: false
+  physical_persistence_or_actualization_established: false
+  physical_conservation_law_established: false
+  noether_theorem_established: false
+  physical_independence_or_interaction_established: false
+  observer_semantics_established: false
+  detector_semantics_established: false
+  empirical_prediction_established: false
+  target_atlas_or_metric_imported: false
+  effective_geometry_established: false
+  stress_energy_established: false
+  matter_action_established: false
+  coupling_law_established: false
+  matter_coupling_derived: false
+  common_propagation_derived: false
+  einstein_equations_derived: false
+  exact_gr_recovered: false
+  benchmark_promoted: false
+  proof_authority: false
+  publication_authority: false
+  completed_derivation_claimed: false
+  global_no_go_claimed: false
+  global_theory_rejection_claimed: false
+  future_source_extension_impossibility_claimed: false
+  validator_pass_counts_as_science: false
+  checkpoint_pass_counts_as_science: false
+  human_gate_requested_here: false
+  human_gate_required_before_adoption: true
+
+source_extension_classification:
+  category: "proposal-only source transition selection rule"
+  relation_to_current_ontology: "not_derived"
+  extension_kind: "conservative finite source-extension candidate"
+  target_gr_import: "forbidden"
+  status: "blocked_adoption_open_continuation"
+  exact_statement: >-
+    The construction can be internally exact as a finite mathematical
+    candidate while current ontology still does not derive its enabled rows,
+    identity convention, uniform coefficients, control cutoff, or update
+    index.
+
+review_conclusion:
+  result: "semantically_admissible_with_explicit_guards"
+  decisive_statement: >-
+    SourceMatterFiniteTransitionKernelCandidate_v1 may exactly construct a
+    finite row-normalized bookkeeping update and prove normalization, closure,
+    transported equivariance, and conditional factorization inside a
+    stipulated proposal-only source control. Its Q and D support is inherited
+    from P7-T01 admissibility, and neither the identity rows, uniform
+    coefficients, formal iterate, nor nonfactorizing control carries physical
+    probability, time, conservation, detector, geometry, coupling, or GR
+    meaning. Current adoption remains blocked while same-milestone
+    continuation remains open.

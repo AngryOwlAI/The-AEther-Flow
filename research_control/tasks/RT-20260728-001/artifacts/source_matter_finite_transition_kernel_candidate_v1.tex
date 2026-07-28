@@ -1,0 +1,489 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{longtable}
+
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{remark}{Remark}
+\newtheorem{nonconclusion}{Non-conclusion}
+
+\newcommand{\Ksrc}{K_{\mathrm{src}}}
+\newcommand{\Conf}{\mathcal C_{\mathrm{mat}}}
+\newcommand{\Trans}{\mathcal T_{\mathrm{mat}}}
+\newcommand{\Control}{\mathfrak C}
+\newcommand{\Enabled}{\mathcal E}
+\newcommand{\Book}{\mathcal B}
+\newcommand{\Sect}{\mathrm{Sec}_{\mathrm{src}}}
+\newcommand{\Kernel}{K_{\Control}}
+\newcommand{\Update}{U_{\Control}}
+\newcommand{\Malformed}{\bot_K}
+\newcommand{\Undetermined}{\mathsf{undetermined}_K}
+
+\title{P7-T02 Source-Matter Finite Transition Kernel Candidate v1}
+\author{Candidate Constructor Packet RT-20260728-001}
+\date{2026-07-28}
+
+\begin{document}
+\maketitle
+
+\section{Control status and decisive result}
+
+This artifact is the fused science-draft output of
+\texttt{AJ-RT-20260728-001-001}. It constructs
+\[
+  \mathrm{SourceMatterFiniteTransitionKernelCandidate}_{v1}
+\]
+as a \emph{draft/control, proposal-only} source-transition-law candidate.
+The candidate supplies a finite enabled-transition system, a dimensionless
+row-normalized bookkeeping kernel, a reproducible finite update equation, an
+analytic positive control, exact normalization and closure, an inherited
+sector-support theorem, source-presentation equivariance, independent and
+interacting controls, and exact null, degenerate, malformed, and
+underdetermined branches.
+
+The candidate is not derived by the current ontology and is not adopted.
+Adoption remains
+\texttt{blocked\_adoption\_open\_continuation}. Kernel coefficients are not
+physical probabilities, rates, frequencies, or empirical propensities. The
+composition index is not physical time, duration, or causal order. The
+artifact does not establish physical matter, a physical conservation law,
+detector semantics, effective geometry, stress energy, a matter action,
+universal coupling, Einstein equations, exact-GR recovery, benchmark
+promotion, proof authority, publication, completed derivation, a global
+no-go theorem, or future source-extension impossibility.
+
+\section{Fixed P7-T01 basis}
+
+The construction holds
+\(\mathrm{SourceMatterIncidenceCandidate}_{v1}\) fixed. Its admissible
+configurations are \(\Psi=(m,z)\), with occupation multiplicities \(m\),
+closed defect chain \(z\), derived charge chain \(q(\Psi)\), and sector
+\[
+  \Sect(\Psi)=\bigl(Q(\Psi),D(\Psi)\bigr),
+  \qquad
+  Q(\Psi)=\epsilon(q(\Psi)),
+  \qquad
+  D(\Psi)=[z].
+\]
+An admissible P7-T01 transition record is
+\[
+  T=(\Psi^-,J,w,\Pi,\Psi^+)
+\]
+with
+\begin{equation}
+  q(\Psi^+)-q(\Psi^-)=\partial_1J,
+  \qquad
+  z^+-z^-=\partial_2w,
+  \label{eq:p7t01-constraints}
+\end{equation}
+and source-only update record \(\Pi\). Because
+\(\epsilon\partial_1=0\) and boundaries do not change homology classes,
+every such transition has
+\[
+  \Sect(\Psi^+)=\Sect(\Psi^-).
+\]
+This is inherited kinematic admissibility. It does not say which transition
+is enabled, how alternatives are weighted, whether any event occurs, or how
+updates compose. It is not a physical continuity equation or Noether law.
+
+\section{Finite control systems}
+
+\begin{definition}[Finite source-transition control system]
+A finite control system is
+\[
+  \Control=(\Omega,\Enabled,s,t),
+\]
+where \(\Omega\) is a finite nonempty subset of admissible P7-T01
+configurations, \(\Enabled\) is a finite set of admissible P7-T01 transition
+records with source and target maps
+\[
+  s,t:\Enabled\longrightarrow\Omega,
+\]
+and every enabled row
+\[
+  \Enabled_x=\{T\in\Enabled:s(T)=x\}
+\]
+contains the typed identity record
+\[
+  \mathbf 1_x=(x,0,0,\Pi_{\mathrm{id}},x).
+\]
+Here \(\Pi_{\mathrm{id}}\) is the declared source-only record that leaves
+occupations and labels unchanged. Thus
+\[
+  d_{\Control}(x)=|\Enabled_x|\geq 1.
+\]
+The finite set \(\Omega\), enabled rows, and identity convention are
+proposal inputs. The identity record is a totality convention for the
+bookkeeping update, not physical persistence, inertia, or a zero-duration
+event. The finite control bound is not a physical cutoff, spatial region, or
+finiteness claim about nature.
+\end{definition}
+
+\begin{definition}[Uniform finite transition kernel]
+For a finite control system define
+\begin{equation}
+  \Kernel(T\mid x)=
+  \begin{cases}
+    d_{\Control}(x)^{-1},&T\in\Enabled_x,\\
+    0,&T\notin\Enabled_x.
+  \end{cases}
+  \label{eq:kernel}
+\end{equation}
+The codomain is \(\mathbb Q_{\geq0}\). Uniformity is a minimal
+presentation-neutral proposal: a row carries no ordering or other declared
+source datum that could distinguish its members. There are no tunable
+coupling constants and no dimensional scales. Row cardinalities and the
+finite control domain are exact task-local data.
+\end{definition}
+
+The support relation is primary. Equation~\eqref{eq:kernel} is one
+proposal-only completion of that relation, not a claim that alternatives
+occur randomly or with empirical frequency.
+
+\section{Reproducible finite update equation}
+
+\begin{definition}[Bookkeeping state and update]
+Let
+\[
+  \Book(\Omega)=\mathbb Q_{\geq0}^{\Omega},
+  \qquad
+  \|\mu\|_1=\sum_{x\in\Omega}\mu(x).
+\]
+Elements of \(\Book(\Omega)\) are finite rational bookkeeping weights, not
+empirical ensembles. Define
+\begin{equation}
+  (\Update\mu)(y)
+  =
+  \sum_{x\in\Omega}\mu(x)
+  \sum_{\substack{T\in\Enabled_x\\t(T)=y}}
+  \Kernel(T\mid x).
+  \label{eq:update}
+\end{equation}
+The recurrence
+\[
+  \mu_{n+1}=\Update\mu_n,\qquad n\in\mathbb N_0,
+\]
+counts formal compositions of the candidate update. It assigns no physical
+time, duration, causal ordering, clock reading, or trajectory.
+\end{definition}
+
+\begin{theorem}[Finite normalization, closure, and inherited-sector support]
+\label{thm:normalization}
+For every finite control system \(\Control\):
+\begin{enumerate}[leftmargin=*]
+\item each row is normalized,
+  \[
+    \sum_{T\in\Enabled_x}\Kernel(T\mid x)=1;
+  \]
+\item \(\Update\) maps \(\Book(\Omega)\) to itself;
+\item total bookkeeping mass is preserved,
+  \[
+    \|\Update\mu\|_1=\|\mu\|_1;
+  \]
+\item the unit-mass subset
+  \(\Book_1(\Omega)=\{\mu:\|\mu\|_1=1\}\) is closed under
+  \(\Update\);
+\item if \(\mu\) is supported in one fixed P7-T01 sector \(\sigma\), then
+  \(\Update\mu\) is supported in \(\sigma\).
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+The first statement is
+\[
+  \sum_{T\in\Enabled_x}\frac{1}{d_{\Control}(x)}
+  =
+  \frac{|\Enabled_x|}{d_{\Control}(x)}=1.
+\]
+Every sum in~\eqref{eq:update} is finite and nonnegative rational, proving
+closure. Reordering the finite sums gives
+\[
+\begin{aligned}
+  \|\Update\mu\|_1
+  &=
+  \sum_{y\in\Omega}\sum_{x\in\Omega}\mu(x)
+  \sum_{\substack{T\in\Enabled_x\\t(T)=y}}
+  \Kernel(T\mid x)\\
+  &=
+  \sum_{x\in\Omega}\mu(x)
+  \sum_{T\in\Enabled_x}\Kernel(T\mid x)
+  =
+  \sum_{x\in\Omega}\mu(x).
+\end{aligned}
+\]
+The unit-mass claim follows. Finally, every transition in the support obeys
+the inherited constraints~\eqref{eq:p7t01-constraints}, hence has equal
+sector coordinates at source and target. Therefore no update term can leave
+the sector supporting \(\mu\).
+\end{proof}
+
+\begin{remark}[New and inherited content]
+Row normalization, finite closure, total bookkeeping-mass preservation, and
+the update equation are new consequences of the candidate kernel. Equality
+of \(Q\) and \(D\) across each supported edge is inherited from P7-T01.
+The distribution-level sector-support statement combines those layers; it is
+not an independent physical conservation law.
+\end{remark}
+
+\section{Source-presentation equivariance}
+
+\begin{definition}[Transported control system]
+Let \(h\) be a compatible P7-T01 source-presentation isomorphism. It transports
+configurations and transition records. A control system \(\Control'\) is the
+transport of \(\Control\) when \(h:\Omega\to\Omega'\) and
+\(h:\Enabled\to\Enabled'\) are bijections satisfying
+\[
+  s'(hT)=h(sT),\qquad t'(hT)=h(tT),
+\]
+and \(h(\Enabled_x)=\Enabled'_{hx}\).
+For bookkeeping states define
+\[
+  (h_*\mu)(hx)=\mu(x).
+\]
+\end{definition}
+
+\begin{theorem}[Source-presentation equivariance]
+\label{thm:equivariance}
+For transported finite control systems,
+\[
+  d_{\Control'}(hx)=d_{\Control}(x),
+  \qquad
+  K_{\Control'}(hT\mid hx)=K_{\Control}(T\mid x),
+\]
+and
+\begin{equation}
+  h_*\Update=U_{\Control'}h_*.
+  \label{eq:intertwining}
+\end{equation}
+Consequently, if a declared presentation automorphism preserves
+\(\Control\), its invariant bookkeeping subspace is preserved by
+\(\Update\).
+\end{theorem}
+
+\begin{proof}
+The row bijection preserves cardinality, which proves the kernel identity.
+Substituting \(x'=hx\), \(T'=hT\), and \(y'=hy\) into the finite sum
+in~\eqref{eq:update} proves~\eqref{eq:intertwining}. If \(h_*\mu=\mu\),
+then \(h_*\Update\mu=\Update h_*\mu=\Update\mu\).
+\end{proof}
+
+This theorem concerns candidate presentation changes. It is not target
+covariance, diffeomorphism invariance, physical gauge symmetry, or general
+\(\mathrm{EqSrc}\).
+
+\section{Free positive control and analytic solution}
+
+Take two source vertices \(u,v\), one link \(e\) with
+\(\partial_1e=[v]-[u]\), coefficient group \(A_{\mathrm{int}}=\mathbb Z\),
+one representation label \(\rho\) with \(\chi(\rho)=1\), and zero defect.
+Let \(x_u\) have one occupation at \(u\) and \(x_v\) one at \(v\). Both have
+sector \((1,[0])\). The nonidentity transition
+\[
+  T_e=(x_u,e,0,\Pi_e,x_v)
+\]
+is admissible because its continuity residual is zero.
+
+Choose
+\[
+  \Omega=\{x_u,x_v\},\qquad
+  \Enabled_{x_u}=\{\mathbf1_{x_u},T_e\},\qquad
+  \Enabled_{x_v}=\{\mathbf1_{x_v}\}.
+\]
+Then
+\[
+  K(\mathbf1_{x_u}\mid x_u)
+  =
+  K(T_e\mid x_u)=\frac12,
+  \qquad
+  K(\mathbf1_{x_v}\mid x_v)=1.
+\]
+For \(\mu_0=\delta_{x_u}\),
+\[
+  \mu_1=\frac12\delta_{x_u}+\frac12\delta_{x_v},
+\]
+and the exact solution is
+\begin{equation}
+  \mu_n(x_u)=2^{-n},
+  \qquad
+  \mu_n(x_v)=1-2^{-n}.
+  \label{eq:positive-solution}
+\end{equation}
+Indeed,~\eqref{eq:positive-solution} satisfies the recurrence because
+\(\mu_{n+1}(x_u)=\mu_n(x_u)/2\) and
+\(\mu_{n+1}(x_v)=\mu_n(x_v)+\mu_n(x_u)/2\).
+All coefficients stay nonnegative and sum to one. This is a stable bounded
+solution of a finite bookkeeping recurrence, not particle propagation,
+physical relaxation, or a trajectory in time.
+
+\section{Independent and interacting branches}
+
+\begin{proposition}[Independent product factorization]
+For finite control systems \(\Control_1,\Control_2\), define the independent
+product by
+\[
+  \Omega_{12}=\Omega_1\times\Omega_2,\qquad
+  \Enabled_{(x_1,x_2)}
+  =
+  \Enabled^1_{x_1}\times\Enabled^2_{x_2}.
+\]
+Then
+\[
+  K_{12}(T_1,T_2\mid x_1,x_2)
+  =
+  K_1(T_1\mid x_1)K_2(T_2\mid x_2),
+  \qquad
+  U_{12}=U_1\otimes U_2.
+\]
+\end{proposition}
+
+\begin{proof}
+The product row has cardinality
+\(d_{12}(x_1,x_2)=d_1(x_1)d_2(x_2)\), so the uniform coefficient factors.
+The update factorization follows by separating the two finite sums.
+\end{proof}
+
+For an interacting control take a declared disjoint source sum with vertices
+\(u_1,v_1\) in the first component and \(u_2,v_2\) in the second, and links
+\[
+  \partial_1e_1=[v_1]-[u_1],
+  \qquad
+  \partial_1e_2=[v_2]-[u_2].
+\]
+Let \(x_{uu}\) contain one \(\rho\)-occupation at each of \(u_1,u_2\), and let
+\(x_{vv}\) contain one at each of \(v_1,v_2\). Both have sector
+\((2,[0])\). The joint
+transition
+\[
+  T_{12}=(x_{uu},e_1+e_2,0,\Pi_{\mathrm{joint}},x_{vv})
+\]
+is admissible because
+\[
+  q(x_{vv})-q(x_{uu})
+  =
+  [v_1]+[v_2]-[u_1]-[u_2]
+  =
+  \partial_1(e_1+e_2).
+\]
+Declare only
+\[
+  \Enabled_{x_{uu}}=\{\mathbf1_{x_{uu}},T_{12}\},
+  \qquad
+  \Enabled_{x_{vv}}=\{\mathbf1_{x_{vv}}\}.
+\]
+The projections of the first row contain an identity and a move in each
+component. Their Cartesian product would have four records, including the two
+mixed records, whereas the declared joint row contains only the two diagonal
+records. The synchronized joint enablement and the omitted mixed records are
+explicit source-control declarations, not an accidental finite truncation.
+The row therefore does not factor as an independent product. This is a
+candidate-level non-Cartesian interaction rule. It is not a physical force,
+interaction, or coupling law.
+
+\section{Null, degenerate, malformed, and underdetermined controls}
+
+For the valid P7-T01 null configuration
+\(x_0=(m=0,z=0)\), choose the sole row
+\(\Enabled_{x_0}=\{\mathbf1_{x_0}\}\). Then
+\[
+  U\delta_{x_0}=\delta_{x_0}.
+\]
+This is a valid null control, not a physical vacuum or ground state.
+
+For a valid non-null configuration \(x_d\), choose the sole row
+\(\Enabled_{x_d}=\{\mathbf1_{x_d}\}\). Then
+\(U\delta_{x_d}=\delta_{x_d}\). This is the degenerate identity-only branch.
+It is distinct from the null configuration and does not establish physical
+stasis.
+
+Malformed candidate data return \(\Malformed\) with the failed condition:
+\begin{enumerate}[leftmargin=*]
+\item a purported \(x_u\to x_v\) transition with \(J=0\) has residual
+  \([v]-[u]\) and fails P7-T01 continuity;
+\item an empty row or a row omitting \(\mathbf1_x\) fails the totality
+  convention;
+\item negative coefficients or a row whose coefficients do not sum to one
+  fail the kernel rule;
+\item a support decision, coefficient, or cutoff defined from target metric
+  distance, detector output, desired GR behavior, validator status, registry
+  metadata, generated derivatives, or commit state fails the source-only
+  guard.
+\end{enumerate}
+Malformed records never enter the kernel support.
+
+If P7-T01 data are well typed but no finite control domain or enabled-row
+declaration is supplied for a requested update, the result is
+\(\Undetermined\), not zero, nullity, degeneracy, or malformedness. This
+branch records exactly why current ontology does not derive a canonical
+transition kernel.
+
+\section{Symmetry, constraints, and conservation language}
+
+The exact structure has three different sources:
+\begin{longtable}{p{0.27\textwidth}p{0.31\textwidth}p{0.34\textwidth}}
+\toprule
+Result & Mathematical source & Authorized reading\\
+\midrule
+Equal \(Q,D\) across support &
+P7-T01 chain constraints &
+Inherited candidate-sector admissibility only\\
+Row normalization and \(\|\mu\|_1\) preservation &
+Uniform finite kernel &
+New bookkeeping identity, not physical probability conservation\\
+Invariant-subspace preservation &
+Declared presentation-equivariance theorem &
+Candidate presentation constraint, not target covariance or Noether law\\
+Independent factorization &
+Cartesian enabled rows &
+Candidate composition identity, not empirical independence\\
+Interacting nonfactorization &
+Declared non-Cartesian joint row &
+Proposal-only structural interaction, not force or coupling\\
+\bottomrule
+\end{longtable}
+
+This is not a physical conservation law, and no physical conservation theorem
+is claimed. The P7-T02 burden is met by an
+explicit transition law plus its exact normalization, closure, sector-support,
+and symmetry-compatibility constraints.
+
+\section{Source-extension classification and open burdens}
+
+The enabled-row assignment, identity convention, uniform weighting, formal
+composition index, and composition rules are new proposal-only primitives.
+Current ontology does not derive them. The positive construction shows that a
+conservative, target-atlas-free source extension is mathematically available;
+it does not make the extension canonical, empirically adequate, unique, or
+adopted.
+
+The following burdens remain open:
+\begin{enumerate}[leftmargin=*]
+\item protected selection or adoption of a source transition law;
+\item physical time, probability, rate, persistence, or dynamics;
+\item operational clocks, rods, signals, detectors, and free-fall systems;
+\item continuum or principal-symbol analysis and common propagation;
+\item effective geometry and universality;
+\item matter action, stress energy, and universal coupling;
+\item Einstein equations and exact-GR benchmark recovery;
+\item every protected ontology, source-law, and benchmark decision.
+\end{enumerate}
+
+\begin{nonconclusion}[Exact claim boundary]
+The decisive Candidate Constructor result is the machine status
+\[
+\texttt{constructed\_candidate}.
+\]
+The constructed object is exactly the
+proposal-only finite kernel and update defined above. It is not a
+canonical-ontology candidate, adopted source law, physical matter dynamics,
+physical stochastic process, time evolution, physical conservation theorem,
+detector model, metric theory, matter coupling, or GR derivation. Validator
+and checkpoint success are operational evidence only.
+\end{nonconclusion}
+
+\end{document}

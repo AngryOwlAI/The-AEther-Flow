@@ -1,0 +1,475 @@
+{
+  "artifact_hashes": {
+    "child_phys_math_p7_t02_finite_transition_kernel.yaml": "0a98bc5acf9dd931f84f7ebc68328576b221386237cda98a5d3408fd43ae21d1",
+    "child_phys_phil_p7_t02_finite_transition_kernel.yaml": "f2ff5378dd65f6a80e2d39b7ee228c30a4632ac0e365600383cc92c3078d6446",
+    "parent_conflict_review_p7_t02_finite_transition_kernel.yaml": "f66519d59b128e031ebb425d1087f8a50eaf2c430c0fdfc6ab951a8a5db18aa3",
+    "parent_fusion_notes_p7_t02_finite_transition_kernel.md": "1a6b51bd4bf557e216c81df9b9ca46a41e3630547808c6ce594356f889d6faf8",
+    "source_matter_finite_transition_kernel_assumption_dependency_table_v1.yaml": "92ec02cd6d4dddcfa31ca70eaa80b18c90fd5a88c2f6cc161370606ff6567f84",
+    "source_matter_finite_transition_kernel_candidate_v1.tex": "65ac095f5cdf4c2e319365c8b0e024d031b19d9fc2b8102e59997afa1e8f9129",
+    "source_matter_finite_transition_kernel_controls_v1.yaml": "af7fc976590b4ca82fca5c34c6f30091f6599428b8005cf3932ce03f92f7d779",
+    "source_matter_finite_transition_kernel_spec_v1.yaml": "936d2aa6dfea3d263675468ff581190240efde84c1241ad971a8c1383a065a97"
+  },
+  "authority": "operational_validation_only",
+  "authority_limits": {
+    "canonical_ontology_modified": false,
+    "distance_to_gr_changed": true,
+    "matter_ontology_adopted": false,
+    "physical_conservation_law_established": false,
+    "physical_probability_established": false,
+    "physical_time_established": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "source_law_adopted": false,
+    "theorem_truth_inferred": false,
+    "validator_pass_counts_as_physics": false
+  },
+  "candidate_id": "SourceMatterFiniteTransitionKernelCandidate_v1",
+  "check_count": 80,
+  "checks": [
+    {
+      "check_id": "artifact_exists::source_matter_finite_transition_kernel_candidate_v1.tex",
+      "detail": "required task-local artifact source_matter_finite_transition_kernel_candidate_v1.tex",
+      "status": "PASS"
+    },
+    {
+      "check_id": "artifact_exists::source_matter_finite_transition_kernel_spec_v1.yaml",
+      "detail": "required task-local artifact source_matter_finite_transition_kernel_spec_v1.yaml",
+      "status": "PASS"
+    },
+    {
+      "check_id": "artifact_exists::source_matter_finite_transition_kernel_controls_v1.yaml",
+      "detail": "required task-local artifact source_matter_finite_transition_kernel_controls_v1.yaml",
+      "status": "PASS"
+    },
+    {
+      "check_id": "artifact_exists::source_matter_finite_transition_kernel_assumption_dependency_table_v1.yaml",
+      "detail": "required task-local artifact source_matter_finite_transition_kernel_assumption_dependency_table_v1.yaml",
+      "status": "PASS"
+    },
+    {
+      "check_id": "artifact_exists::child_phys_math_p7_t02_finite_transition_kernel.yaml",
+      "detail": "required task-local artifact child_phys_math_p7_t02_finite_transition_kernel.yaml",
+      "status": "PASS"
+    },
+    {
+      "check_id": "artifact_exists::child_phys_phil_p7_t02_finite_transition_kernel.yaml",
+      "detail": "required task-local artifact child_phys_phil_p7_t02_finite_transition_kernel.yaml",
+      "status": "PASS"
+    },
+    {
+      "check_id": "artifact_exists::parent_conflict_review_p7_t02_finite_transition_kernel.yaml",
+      "detail": "required task-local artifact parent_conflict_review_p7_t02_finite_transition_kernel.yaml",
+      "status": "PASS"
+    },
+    {
+      "check_id": "artifact_exists::parent_fusion_notes_p7_t02_finite_transition_kernel.md",
+      "detail": "required task-local artifact parent_fusion_notes_p7_t02_finite_transition_kernel.md",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec::schema_id",
+      "detail": "expected 'source_matter_finite_transition_kernel_spec_v1'; observed 'source_matter_finite_transition_kernel_spec_v1'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec::candidate_status",
+      "detail": "expected 'proposal-only'; observed 'proposal-only'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec::candidate_id",
+      "detail": "expected 'SourceMatterFiniteTransitionKernelCandidate_v1'; observed 'SourceMatterFiniteTransitionKernelCandidate_v1'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec::update_id",
+      "detail": "expected 'SourceMatterBookkeepingUpdate_v1'; observed 'SourceMatterBookkeepingUpdate_v1'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec::adoption_status",
+      "detail": "expected 'blocked_adoption_open_continuation'; observed 'blocked_adoption_open_continuation'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec::fixed_basis.candidate_id",
+      "detail": "expected 'SourceMatterIncidenceCandidate_v1'; observed 'SourceMatterIncidenceCandidate_v1'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec::finite_control_system.identity_transition.id",
+      "detail": "expected 'IdTransition_v1'; observed 'IdTransition_v1'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec::finite_control_system.identity_transition.required_in_every_row",
+      "detail": "expected True; observed True",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec::kernel.definition.enabled",
+      "detail": "expected '1/d_C(x) when T is in E_x'; observed '1/d_C(x) when T is in E_x'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec::kernel.physical_probability",
+      "detail": "expected False; observed False",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec::kernel.physical_rate",
+      "detail": "expected False; observed False",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec::kernel.no_tunable_parameter_count",
+      "detail": "expected 0; observed 0",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec::update.composition_index.physical_time",
+      "detail": "expected False; observed False",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec::result_branches.malformed.symbol",
+      "detail": "expected 'bottom_K'; observed 'bottom_K'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec::result_branches.underdetermined.symbol",
+      "detail": "expected 'undetermined_K'; observed 'undetermined_K'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec::source_extension_classification.relation_to_current_ontology",
+      "detail": "expected 'missing_primitive'; observed 'missing_primitive'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec::theorem_ids",
+      "detail": "observed ['P7T02-THM-FINITE-KERNEL-NORMALIZATION-CLOSURE-001', 'P7T02-THM-SOURCE-PRESENTATION-EQUIVARIANCE-001']",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec::inherited_constraint_count",
+      "detail": "observed 3",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec::new_consequence_count",
+      "detail": "observed 5",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec::inherited_not_new",
+      "detail": "all P7-T01 support constraints must be labeled inherited",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec::authority_flags_false",
+      "detail": "all protected authority flags must remain false",
+      "status": "PASS"
+    },
+    {
+      "check_id": "controls::required_ids",
+      "detail": "observed ['P7T02-CONTROL-DEGENERATE-NONNULL-001', 'P7T02-CONTROL-INDEPENDENT-PRODUCT-001', 'P7T02-CONTROL-INTERACTING-JOINT-001', 'P7T02-CONTROL-MALFORMED-CONTINUITY-001', 'P7T02-CONTROL-MALFORMED-EMPTY-ROW-001', 'P7T02-CONTROL-MALFORMED-NORMALIZATION-001', 'P7T02-CONTROL-MALFORMED-TARGET-IMPORT-001', 'P7T02-CONTROL-NULL-001', 'P7T02-CONTROL-POSITIVE-PROPAGATION-001', 'P7T02-CONTROL-UNDERDETERMINED-001']",
+      "status": "PASS"
+    },
+    {
+      "check_id": "controls::positive_row_normalization",
+      "detail": "x_u=1; x_v=1",
+      "status": "PASS"
+    },
+    {
+      "check_id": "controls::positive_residuals_zero",
+      "detail": "all positive-control continuity residuals must vanish",
+      "status": "PASS"
+    },
+    {
+      "check_id": "controls::positive_exact_solution",
+      "detail": "verified n=0 through n=8 exactly over rational arithmetic",
+      "status": "PASS"
+    },
+    {
+      "check_id": "controls::null_identity",
+      "detail": "valid null row must be identity-only and nonphysical",
+      "status": "PASS"
+    },
+    {
+      "check_id": "controls::independent_factorization",
+      "detail": "two binary rows must form a four-element uniform product row",
+      "status": "PASS"
+    },
+    {
+      "check_id": "controls::interacting_continuity",
+      "detail": "joint transition must satisfy fixed P7-T01 constraints",
+      "status": "PASS"
+    },
+    {
+      "check_id": "controls::interacting_nonfactorization",
+      "detail": "diagonal two-record row must differ from four-record Cartesian product",
+      "status": "PASS"
+    },
+    {
+      "check_id": "controls::interacting_no_physical_claim",
+      "detail": "structural interaction must not be promoted",
+      "status": "PASS"
+    },
+    {
+      "check_id": "controls::degenerate_distinctions",
+      "detail": "non-null identity-only branch must remain valid and distinct",
+      "status": "PASS"
+    },
+    {
+      "check_id": "controls::malformed_count",
+      "detail": "observed 4",
+      "status": "PASS"
+    },
+    {
+      "check_id": "controls::malformed_fail_closed",
+      "detail": "every malformed control must fail closed",
+      "status": "PASS"
+    },
+    {
+      "check_id": "controls::underdetermined_distinctions",
+      "detail": "missing row selection must remain distinct from null, degeneracy, and failure",
+      "status": "PASS"
+    },
+    {
+      "check_id": "assumptions::count",
+      "detail": "observed 9 assumptions",
+      "status": "PASS"
+    },
+    {
+      "check_id": "dependencies::count",
+      "detail": "observed 13 dependencies",
+      "status": "PASS"
+    },
+    {
+      "check_id": "assumptions::no_target_or_physical_inputs",
+      "detail": "all target, physical, process, free-coupling, and scale counts must be zero",
+      "status": "PASS"
+    },
+    {
+      "check_id": "child::child_phys_math::identity",
+      "detail": "child_phys_math must be completed with perspective physicist_mathematician",
+      "status": "PASS"
+    },
+    {
+      "check_id": "child::child_phys_math::no_promotion",
+      "detail": "child_phys_math must preserve source-law and promotion blocks",
+      "status": "PASS"
+    },
+    {
+      "check_id": "child::child_phys_phil::identity",
+      "detail": "child_phys_phil must be completed with perspective physicist_philosopher",
+      "status": "PASS"
+    },
+    {
+      "check_id": "child::child_phys_phil::no_promotion",
+      "detail": "child_phys_phil must preserve source-law and promotion blocks",
+      "status": "PASS"
+    },
+    {
+      "check_id": "parent::conflict_resolution",
+      "detail": "parent conflict review must resolve all blocking differences",
+      "status": "PASS"
+    },
+    {
+      "check_id": "parent::fusion_markers",
+      "detail": "fusion notes must preserve consensus, unique contributions, resolutions, limits, and boundary",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex::marker::SourceMatterFiniteTransitionKernelCandidate",
+      "detail": "required TeX marker 'SourceMatterFiniteTransitionKernelCandidate'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex::marker::P7-T02",
+      "detail": "required TeX marker 'P7-T02'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex::marker::blocked\\_adoption\\_open\\_continuation",
+      "detail": "required TeX marker 'blocked\\\\_adoption\\\\_open\\\\_continuation'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex::marker::K_{\\Control}(T\\mid x)",
+      "detail": "required TeX marker 'K_{\\\\Control}(T\\\\mid x)'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex::marker::(\\Update\\mu)(y)",
+      "detail": "required TeX marker '(\\\\Update\\\\mu)(y)'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex::marker::Finite normalization, closure, and inherited-sector support",
+      "detail": "required TeX marker 'Finite normalization, closure, and inherited-sector support'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex::marker::Source-presentation equivariance",
+      "detail": "required TeX marker 'Source-presentation equivariance'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex::marker::\\mu_n(x_u)=2^{-n}",
+      "detail": "required TeX marker '\\\\mu_n(x_u)=2^{-n}'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex::marker::[v_1]+[v_2]-[u_1]-[u_2]",
+      "detail": "required TeX marker '[v_1]+[v_2]-[u_1]-[u_2]'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex::marker::not a physical force",
+      "detail": "required TeX marker 'not a physical force'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex::marker::not a physical vacuum",
+      "detail": "required TeX marker 'not a physical vacuum'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex::marker::not a physical conservation law",
+      "detail": "required TeX marker 'not a physical conservation law'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex::marker::constructed\\_candidate",
+      "detail": "required TeX marker 'constructed\\\\_candidate'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex::marker::current ontology does not derive",
+      "detail": "required TeX marker 'current ontology does not derive'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex::marker::no tunable",
+      "detail": "required TeX marker 'no tunable'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex::marker::physical time",
+      "detail": "required TeX marker 'physical time'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex::marker::physical probabilities",
+      "detail": "required TeX marker 'physical probabilities'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "source_hash::implementations_plans/recommendations_implementation_plan_continue_task-v21.md",
+      "detail": "expected 4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087; observed 4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087",
+      "status": "PASS"
+    },
+    {
+      "check_id": "source_hash::research_control/tasks/RT-20260727-007/artifacts/source_matter_ontology_and_sector_taxonomy_v1.tex",
+      "detail": "expected 8d160217bf223078a11bc63fde6593c11c39d5b50d9c48fbad7b12084f8a752d; observed 8d160217bf223078a11bc63fde6593c11c39d5b50d9c48fbad7b12084f8a752d",
+      "status": "PASS"
+    },
+    {
+      "check_id": "source_hash::research_control/tasks/RT-20260727-007/artifacts/source_matter_ontology_spec_v1.yaml",
+      "detail": "expected a5563edddaff90ebab6ac4d3d4e2dc0425fea23b5f27c1c6174cb28b1f4652be; observed a5563edddaff90ebab6ac4d3d4e2dc0425fea23b5f27c1c6174cb28b1f4652be",
+      "status": "PASS"
+    },
+    {
+      "check_id": "source_hash::research_control/tasks/RT-20260727-007/artifacts/source_matter_assumption_dependency_table_v1.yaml",
+      "detail": "expected c665dbc7522d4ee1b6aa01db14100689c8d9acc28c7e659c33b4272d32976991; observed c665dbc7522d4ee1b6aa01db14100689c8d9acc28c7e659c33b4272d32976991",
+      "status": "PASS"
+    },
+    {
+      "check_id": "source_hash::research_control/tasks/RT-20260727-007/jobs/completions/AJC-AJ-RT-20260727-007-001.yaml",
+      "detail": "expected 4d1fc3d7d045defa6000dc0860973fba50280ddd1ee72cb4881d8ee2de2ddc1c; observed 4d1fc3d7d045defa6000dc0860973fba50280ddd1ee72cb4881d8ee2de2ddc1c",
+      "status": "PASS"
+    },
+    {
+      "check_id": "source_hash::research_control/tasks/RT-20260727-008/artifacts/source_matter_dynamics_packet_selection_v1.yaml",
+      "detail": "expected 6692a493dfe91cc6d92986e69cfda48d04656d42f2d559ca6aa498f3366ccbd7; observed 6692a493dfe91cc6d92986e69cfda48d04656d42f2d559ca6aa498f3366ccbd7",
+      "status": "PASS"
+    },
+    {
+      "check_id": "source_hash::research_control/tasks/RT-20260727-008/jobs/completions/AJC-AJ-RT-20260727-008-001.yaml",
+      "detail": "expected e1f4d1a2b9edc4de6252c829c8bbc2df6fe3fddabe2151907672fb4ebe6ca16e; observed e1f4d1a2b9edc4de6252c829c8bbc2df6fe3fddabe2151907672fb4ebe6ca16e",
+      "status": "PASS"
+    },
+    {
+      "check_id": "source_hash::research_control/handoffs/handoff-0890.yaml",
+      "detail": "expected 874ac8d05924af09c2d837f1cbad23dbabab261e8a7b9d31c96cda968b40b03d; observed 874ac8d05924af09c2d837f1cbad23dbabab261e8a7b9d31c96cda968b40b03d",
+      "status": "PASS"
+    },
+    {
+      "check_id": "source_hash::research_control/tasks/RT-20260614-257/artifacts/286_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_MATTER_COUPLING_BRIDGE_TARGET_V1_FORMALIZATION.tex",
+      "detail": "expected 3d1c6dfb2ea543c8ea455ee2f3553e3cac76e3072902213ed07aff0db514605e; observed 3d1c6dfb2ea543c8ea455ee2f3553e3cac76e3072902213ed07aff0db514605e",
+      "status": "PASS"
+    },
+    {
+      "check_id": "source_hash::research_control/tasks/RT-20260702-064/artifacts/source_certificate_operation_laws_v1.tex",
+      "detail": "expected 2ebc781bd82b4d39ab394255e5d3836d992625bdece8b8f912a8ab809669b986; observed 2ebc781bd82b4d39ab394255e5d3836d992625bdece8b8f912a8ab809669b986",
+      "status": "PASS"
+    },
+    {
+      "check_id": "source_hash::research_control/design/frontier_theorem_inventory.md",
+      "detail": "expected fa7d97207315b49517e6e05bc3ae5b6bfcd0e335b669ba6a98371e55b4721600; observed fa7d97207315b49517e6e05bc3ae5b6bfcd0e335b669ba6a98371e55b4721600",
+      "status": "PASS"
+    },
+    {
+      "check_id": "source_hash::registries/METRIC_USE_LEDGER.csv",
+      "detail": "expected 108b1b56d9ef2d2d6cd30d7caa77461c813d8729890afd537206c6f94a1f24cb; observed 108b1b56d9ef2d2d6cd30d7caa77461c813d8729890afd537206c6f94a1f24cb",
+      "status": "PASS"
+    }
+  ],
+  "failure_count": 0,
+  "finding_counts": {
+    "assumption_count": 9,
+    "child_review_count": 2,
+    "control_count": 10,
+    "dependency_count": 13,
+    "exact_solution_family_count": 1,
+    "inherited_constraint_count": 3,
+    "malformed_count": 4,
+    "new_candidate_consequence_count": 5,
+    "physical_conservation_claim_count": 0,
+    "physical_probability_claim_count": 0,
+    "physical_time_claim_count": 0,
+    "theorem_count": 2,
+    "underdetermined_count": 1,
+    "unresolved_conflict_count": 0,
+    "valid_degenerate_count": 1,
+    "valid_independent_count": 1,
+    "valid_interacting_count": 1,
+    "valid_null_count": 1,
+    "valid_positive_free_count": 1
+  },
+  "job_id": "AJ-RT-20260728-001-001",
+  "schema_id": "source_matter_finite_transition_kernel_validation_v1",
+  "source_hashes": {
+    "implementations_plans/recommendations_implementation_plan_continue_task-v21.md": "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087",
+    "registries/METRIC_USE_LEDGER.csv": "108b1b56d9ef2d2d6cd30d7caa77461c813d8729890afd537206c6f94a1f24cb",
+    "research_control/design/frontier_theorem_inventory.md": "fa7d97207315b49517e6e05bc3ae5b6bfcd0e335b669ba6a98371e55b4721600",
+    "research_control/handoffs/handoff-0890.yaml": "874ac8d05924af09c2d837f1cbad23dbabab261e8a7b9d31c96cda968b40b03d",
+    "research_control/tasks/RT-20260614-257/artifacts/286_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_MATTER_COUPLING_BRIDGE_TARGET_V1_FORMALIZATION.tex": "3d1c6dfb2ea543c8ea455ee2f3553e3cac76e3072902213ed07aff0db514605e",
+    "research_control/tasks/RT-20260702-064/artifacts/source_certificate_operation_laws_v1.tex": "2ebc781bd82b4d39ab394255e5d3836d992625bdece8b8f912a8ab809669b986",
+    "research_control/tasks/RT-20260727-007/artifacts/source_matter_assumption_dependency_table_v1.yaml": "c665dbc7522d4ee1b6aa01db14100689c8d9acc28c7e659c33b4272d32976991",
+    "research_control/tasks/RT-20260727-007/artifacts/source_matter_ontology_and_sector_taxonomy_v1.tex": "8d160217bf223078a11bc63fde6593c11c39d5b50d9c48fbad7b12084f8a752d",
+    "research_control/tasks/RT-20260727-007/artifacts/source_matter_ontology_spec_v1.yaml": "a5563edddaff90ebab6ac4d3d4e2dc0425fea23b5f27c1c6174cb28b1f4652be",
+    "research_control/tasks/RT-20260727-007/jobs/completions/AJC-AJ-RT-20260727-007-001.yaml": "4d1fc3d7d045defa6000dc0860973fba50280ddd1ee72cb4881d8ee2de2ddc1c",
+    "research_control/tasks/RT-20260727-008/artifacts/source_matter_dynamics_packet_selection_v1.yaml": "6692a493dfe91cc6d92986e69cfda48d04656d42f2d559ca6aa498f3366ccbd7",
+    "research_control/tasks/RT-20260727-008/jobs/completions/AJC-AJ-RT-20260727-008-001.yaml": "e1f4d1a2b9edc4de6252c829c8bbc2df6fe3fddabe2151907672fb4ebe6ca16e"
+  },
+  "status": "PASS",
+  "task_id": "RT-20260728-001",
+  "theorem_ids": [
+    "P7T02-THM-FINITE-KERNEL-NORMALIZATION-CLOSURE-001",
+    "P7T02-THM-SOURCE-PRESENTATION-EQUIVARIANCE-001"
+  ],
+  "validated_at": "2026-07-28T04:25:00Z"
+}

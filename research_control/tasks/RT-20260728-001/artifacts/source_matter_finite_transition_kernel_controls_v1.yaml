@@ -1,0 +1,260 @@
+schema_id: "source_matter_finite_transition_kernel_controls_v1"
+artifact_id: "P7T02-SOURCE-MATTER-FINITE-TRANSITION-KERNEL-CONTROLS-V1"
+task_id: "RT-20260728-001"
+job_id: "AJ-RT-20260728-001-001"
+candidate_id: "SourceMatterFiniteTransitionKernelCandidate_v1"
+status: "draft/control"
+candidate_status: "proposal-only"
+
+shared_source_data:
+  coefficient_groups:
+    A_int: "Z"
+    B_def: "Z"
+  representation_label: "rho"
+  charge_label_map: "chi(rho)=1"
+  defect_chain: "0 unless explicitly stated"
+  physical_interpretation: false
+
+controls:
+  - control_id: "P7T02-CONTROL-POSITIVE-PROPAGATION-001"
+    branch: "valid_positive_free"
+    source_complex:
+      vertices: ["u", "v"]
+      links:
+        e:
+          boundary: "[v]-[u]"
+      two_chain_rank: 0
+    configurations:
+      x_u:
+        occupation: "m(u,rho)=1"
+        charge_chain: "[u]"
+        sector: "(1,[0])"
+      x_v:
+        occupation: "m(v,rho)=1"
+        charge_chain: "[v]"
+        sector: "(1,[0])"
+    transitions:
+      id_u:
+        tuple: "(x_u,0,0,Pi_id,x_u)"
+        continuity_residual: "0"
+        defect_residual: "0"
+      move_e:
+        tuple: "(x_u,e,0,Pi_e,x_v)"
+        continuity_check: "[v]-[u]=partial_1 e"
+        continuity_residual: "0"
+        defect_residual: "0"
+      id_v:
+        tuple: "(x_v,0,0,Pi_id,x_v)"
+        continuity_residual: "0"
+        defect_residual: "0"
+    enabled_rows:
+      x_u: ["id_u", "move_e"]
+      x_v: ["id_v"]
+    kernel_rows:
+      x_u:
+        id_u: "1/2"
+        move_e: "1/2"
+        row_sum: "1"
+      x_v:
+        id_v: "1"
+        row_sum: "1"
+    initial_bookkeeping_state:
+      x_u: "1"
+      x_v: "0"
+    first_update:
+      x_u: "1/2"
+      x_v: "1/2"
+    exact_solution:
+      x_u: "2^(-n)"
+      x_v: "1-2^(-n)"
+      domain: "n in N_0"
+      recurrence_check: "mu_(n+1)(x_u)=mu_n(x_u)/2 and mu_(n+1)(x_v)=mu_n(x_v)+mu_n(x_u)/2"
+      total_bookkeeping_mass: "1"
+    stable_property: "all coefficients remain in [0,1] and sum to one"
+    not_claimed:
+      - "physical propagation"
+      - "particle trajectory"
+      - "physical stability"
+      - "physical probability"
+      - "physical time"
+
+  - control_id: "P7T02-CONTROL-NULL-001"
+    branch: "valid_null"
+    configuration:
+      id: "x_0"
+      primitive: "(m=0,z=0)"
+      sector: "(0,[0])"
+    enabled_rows:
+      x_0: ["id_0"]
+    transition:
+      id_0:
+        tuple: "(x_0,0,0,Pi_id,x_0)"
+        continuity_residual: "0"
+        defect_residual: "0"
+    kernel:
+      id_0: "1"
+      row_sum: "1"
+    exact_update: "U delta_x0=delta_x0"
+    physical_vacuum_claimed: false
+    ground_state_claimed: false
+
+  - control_id: "P7T02-CONTROL-INDEPENDENT-PRODUCT-001"
+    branch: "valid_independent"
+    local_rows:
+      first: ["id_1", "move_1"]
+      second: ["id_2", "move_2"]
+    product_row:
+      - "(id_1,id_2)"
+      - "(move_1,id_2)"
+      - "(id_1,move_2)"
+      - "(move_1,move_2)"
+    row_cardinality: 4
+    kernel_each: "1/4"
+    factorization_check: "1/4=(1/2)(1/2)"
+    update_factorization: "U_product=U_1 tensor U_2"
+    physical_independence_claimed: false
+
+  - control_id: "P7T02-CONTROL-INTERACTING-JOINT-001"
+    branch: "valid_interacting"
+    source_complex:
+      decomposition: "disjoint union of components S_1 and S_2"
+      vertices: ["u_1", "v_1", "u_2", "v_2"]
+      links:
+        e_1:
+          boundary: "[v_1]-[u_1]"
+        e_2:
+          boundary: "[v_2]-[u_2]"
+      two_chain_rank: 0
+    configurations:
+      x_uu:
+        occupation: "m(u_1,rho)=1,m(u_2,rho)=1"
+        charge_chain: "[u_1]+[u_2]"
+        total_charge: "2"
+        sector: "(2,[0])"
+      x_vv:
+        occupation: "m(v_1,rho)=1,m(v_2,rho)=1"
+        charge_chain: "[v_1]+[v_2]"
+        total_charge: "2"
+        sector: "(2,[0])"
+    transitions:
+      id_uu:
+        tuple: "(x_uu,0,0,Pi_id,x_uu)"
+        continuity_residual: "0"
+      joint_e1e2:
+        tuple: "(x_uu,e_1+e_2,0,Pi_joint,x_vv)"
+        continuity_check: "[v_1]+[v_2]-[u_1]-[u_2]=partial_1(e_1+e_2)"
+        continuity_residual: "0"
+        defect_residual: "0"
+      id_vv:
+        tuple: "(x_vv,0,0,Pi_id,x_vv)"
+        continuity_residual: "0"
+    enabled_rows:
+      x_uu: ["id_uu", "joint_e1e2"]
+      x_vv: ["id_vv"]
+    kernel_rows:
+      x_uu:
+        id_uu: "1/2"
+        joint_e1e2: "1/2"
+        row_sum: "1"
+      x_vv:
+        id_vv: "1"
+        row_sum: "1"
+    nonfactorization:
+      projected_first_row: ["id_1", "move_a"]
+      projected_second_row: ["id_2", "move_b"]
+      cartesian_product_cardinality: 4
+      actual_joint_row_cardinality: 2
+      missing_mixed_records:
+        - "(move_a,id_2)"
+        - "(id_1,move_b)"
+      conclusion: "The enabled row is the diagonal subset and is not the Cartesian product of its component projections."
+      source_declaration: "The synchronized joint enablement is stipulated source-control data; the missing mixed records are explicit rather than an accidental finite truncation."
+    physical_interaction_claimed: false
+    coupling_law_claimed: false
+    force_claimed: false
+
+  - control_id: "P7T02-CONTROL-DEGENERATE-NONNULL-001"
+    branch: "valid_degenerate"
+    configuration:
+      id: "x_d"
+      occupation: "m(u,rho)=1"
+      sector: "(1,[0])"
+      "null": false
+    enabled_rows:
+      x_d: ["id_d"]
+    kernel:
+      id_d: "1"
+      row_sum: "1"
+    exact_update: "U delta_xd=delta_xd"
+    classification: "valid non-null identity-only row"
+    distinct_from_null: true
+    distinct_from_malformed: true
+    physical_stasis_claimed: false
+
+  - control_id: "P7T02-CONTROL-MALFORMED-CONTINUITY-001"
+    branch: "malformed"
+    attempted_transition: "(x_u,0,0,Pi_bad,x_v)"
+    continuity_residual: "[v]-[u]"
+    failed_condition: "P7T01-T1-CONTINUITY"
+    result: "bottom_K"
+    enabled: false
+
+  - control_id: "P7T02-CONTROL-MALFORMED-EMPTY-ROW-001"
+    branch: "malformed"
+    attempted_row: []
+    failed_condition: "P7T02-K1-NONEMPTY-IDENTITY-ROW"
+    result: "bottom_K"
+
+  - control_id: "P7T02-CONTROL-MALFORMED-NORMALIZATION-001"
+    branch: "malformed"
+    attempted_row_coefficients: ["2/3", "2/3"]
+    attempted_row_sum: "4/3"
+    failed_condition: "P7T02-K2-ROW-NORMALIZATION"
+    result: "bottom_K"
+
+  - control_id: "P7T02-CONTROL-MALFORMED-TARGET-IMPORT-001"
+    branch: "malformed"
+    attempted_coefficient_source: "target metric distance or desired benchmark behavior"
+    failed_condition: "P7T02-K3-SOURCE-ONLY"
+    result: "bottom_K"
+
+  - control_id: "P7T02-CONTROL-UNDERDETERMINED-001"
+    branch: "underdetermined"
+    supplied_data: "typed P7-T01 configurations and all kinematically admissible transition records"
+    missing_rule: "finite control subset and enabled-row declaration"
+    result: "undetermined_K"
+    distinct_from_null: true
+    distinct_from_degenerate: true
+    distinct_from_malformed: true
+
+finding_counts:
+  valid_positive_free: 1
+  valid_null: 1
+  valid_independent: 1
+  valid_interacting: 1
+  valid_degenerate: 1
+  malformed: 4
+  underdetermined: 1
+  exact_solution_families: 1
+  physical_probability_claims: 0
+  physical_time_claims: 0
+  physical_conservation_claims: 0
+  physical_interaction_claims: 0
+
+authority_limits:
+  canonical_ontology_modified: false
+  source_law_adopted: false
+  matter_ontology_adopted: false
+  physical_probability_established: false
+  physical_time_established: false
+  physical_conservation_law_established: false
+  detector_semantics_established: false
+  effective_geometry_assumed: false
+  stress_energy_established: false
+  matter_action_established: false
+  coupling_law_adopted: false
+  matter_coupling_derived: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  physics_promotion_authorized: false
+  proof_authority: false

@@ -1,0 +1,208 @@
+schema_id: "source_matter_finite_transition_kernel_assumption_dependency_table_v1"
+artifact_id: "P7T02-SOURCE-MATTER-FINITE-TRANSITION-KERNEL-ASSUMPTION-DEPENDENCY-TABLE-V1"
+task_id: "RT-20260728-001"
+job_id: "AJ-RT-20260728-001-001"
+status: "draft/control"
+candidate_status: "proposal-only"
+
+assumptions:
+  - assumption_id: "P7T02-A01"
+    statement: "The exact proposal-only P7-T01 SourceMatterIncidenceCandidate_v1 configuration and admissible-transition grammar are held fixed."
+    class: "inherited_candidate_input"
+    used_by:
+      - "configuration domain"
+      - "transition support"
+      - "sector support"
+    not_claimed:
+      - "canonical ontology"
+      - "physical matter"
+  - assumption_id: "P7T02-A02"
+    statement: "Omega is a finite nonempty declared source-only control subset of P7-T01 admissible configurations."
+    class: "new_proposal_only_control_input"
+    used_by:
+      - "finite update domain"
+      - "finite solution family"
+    not_claimed:
+      - "canonical cutoff"
+      - "physical finiteness"
+      - "spatial region"
+  - assumption_id: "P7T02-A03"
+    statement: "Each enabled row is finite, contains only typed P7-T01 admissible transitions with endpoints in Omega, and contains the declared identity transition."
+    class: "new_proposal_only_transition_rule"
+    used_by:
+      - "kernel support"
+      - "nonempty row"
+      - "closure"
+    not_claimed:
+      - "physical persistence"
+      - "complete dynamics"
+  - assumption_id: "P7T02-A04"
+    statement: "Every enabled transition in a row receives the same nonnegative dimensionless rational bookkeeping weight 1 over the row cardinality."
+    class: "new_proposal_only_weight_rule"
+    used_by:
+      - "row normalization"
+      - "finite update"
+      - "bookkeeping-mass preservation"
+    not_claimed:
+      - "physical probability"
+      - "rate"
+      - "frequency"
+      - "empirical propensity"
+  - assumption_id: "P7T02-A05"
+    statement: "The update index n counts formal compositions of U_C only."
+    class: "new_proposal_only_composition_input"
+    used_by:
+      - "recurrence"
+      - "analytic finite solution"
+    not_claimed:
+      - "physical time"
+      - "duration"
+      - "causal order"
+  - assumption_id: "P7T02-A06"
+    statement: "Compatible source-presentation isomorphisms transport Omega and every enabled row bijectively while commuting with source and target maps."
+    class: "new_candidate_equivariance_condition"
+    used_by:
+      - "P7T02-THM-SOURCE-PRESENTATION-EQUIVARIANCE-001"
+    not_claimed:
+      - "target covariance"
+      - "diffeomorphism invariance"
+      - "physical gauge symmetry"
+  - assumption_id: "P7T02-A07"
+    statement: "Independent composite controls use Cartesian-product enabled rows; interacting controls may declare non-Cartesian source-only joint rows."
+    class: "new_proposal_only_composition_rule"
+    used_by:
+      - "factorization proposition"
+      - "interacting control"
+    not_claimed:
+      - "physical independence"
+      - "physical interaction"
+      - "force"
+      - "coupling law"
+  - assumption_id: "P7T02-A08"
+    statement: "Uniform weights introduce no free coupling constant or dimensional scale; finite row cardinalities and control bounds are exact task-local data."
+    class: "new_candidate_parameter_provenance"
+    used_by:
+      - "coefficient provenance"
+      - "scale audit"
+    not_claimed:
+      - "natural constant"
+      - "mass scale"
+      - "coupling strength"
+  - assumption_id: "P7T02-A09"
+    statement: "No target geometry, physical interpretation, detector, stress-energy, coupling, GR, benchmark, process, validator, registry, generated derivative, or commit state is a mathematical premise."
+    class: "preserved_no_import_guard"
+    used_by:
+      - "all candidate definitions"
+      - "all controls"
+      - "all theorem conclusions"
+    not_claimed:
+      - "effective geometry"
+      - "detector semantics"
+      - "stress energy"
+      - "matter action"
+      - "matter coupling"
+      - "GR recovery"
+
+dependencies:
+  - dependency_id: "P7-T02-selector-checkpoint"
+    evidence_path: "git commit"
+    evidence_sha256: "4da35201d2c701eaea7814fd0401584206a1d0d2"
+    qualifying_status: "committed"
+    use_here: "authorizes the selected transition-kernel construction"
+  - dependency_id: "P7-T02-selector-output"
+    evidence_path: "research_control/tasks/RT-20260727-008/artifacts/source_matter_dynamics_packet_selection_v1.yaml"
+    evidence_sha256: "6692a493dfe91cc6d92986e69cfda48d04656d42f2d559ca6aa498f3366ccbd7"
+    qualifying_status: "completed selector; construction unexecuted"
+    use_here: "candidate identity, minimum assumptions, controls, and no-target boundary"
+  - dependency_id: "P7-T02-selector-completion"
+    evidence_path: "research_control/tasks/RT-20260727-008/jobs/completions/AJC-AJ-RT-20260727-008-001.yaml"
+    evidence_sha256: "e1f4d1a2b9edc4de6252c829c8bbc2df6fe3fddabe2151907672fb4ebe6ca16e"
+    qualifying_status: "PASS ready-after-checkpoint"
+    use_here: "exact selector status and source-extension classification"
+  - dependency_id: "P7-T01-candidate"
+    object_id: "TEX-V21-P7-T01-SOURCE-MATTER-ONTOLOGY-SECTOR-TAXONOMY-V1"
+    evidence_path: "research_control/tasks/RT-20260727-007/artifacts/source_matter_ontology_and_sector_taxonomy_v1.tex"
+    evidence_sha256: "8d160217bf223078a11bc63fde6593c11c39d5b50d9c48fbad7b12084f8a752d"
+    qualifying_status: "proposal-only candidate constructed"
+    use_here: "fixed configuration transition theorem and witness basis"
+  - dependency_id: "P7-T01-machine-spec"
+    evidence_path: "research_control/tasks/RT-20260727-007/artifacts/source_matter_ontology_spec_v1.yaml"
+    evidence_sha256: "a5563edddaff90ebab6ac4d3d4e2dc0425fea23b5f27c1c6174cb28b1f4652be"
+    qualifying_status: "draft/control"
+    use_here: "machine-readable fixed transition conditions and authority limits"
+  - dependency_id: "P7-T01-assumption-ledger"
+    evidence_path: "research_control/tasks/RT-20260727-007/artifacts/source_matter_assumption_dependency_table_v1.yaml"
+    evidence_sha256: "c665dbc7522d4ee1b6aa01db14100689c8d9acc28c7e659c33b4272d32976991"
+    qualifying_status: "draft/control"
+    use_here: "inherited assumptions and no-target guard"
+  - dependency_id: "P7-T01-completion"
+    evidence_path: "research_control/tasks/RT-20260727-007/jobs/completions/AJC-AJ-RT-20260727-007-001.yaml"
+    evidence_sha256: "4d1fc3d7d045defa6000dc0860973fba50280ddd1ee72cb4881d8ee2de2ddc1c"
+    qualifying_status: "completed and checkpointed"
+    use_here: "qualifying plan dependency and exact status boundary"
+  - dependency_id: "v21-plan"
+    object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+    evidence_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+    evidence_sha256: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+    qualifying_status: "canonical registered control plan"
+    use_here: "P7-T02 objective deliverables validators and handoff rule"
+  - dependency_id: "handoff-0890"
+    evidence_path: "research_control/handoffs/handoff-0890.yaml"
+    evidence_sha256: "874ac8d05924af09c2d837f1cbad23dbabab261e8a7b9d31c96cda968b40b03d"
+    qualifying_status: "ready after committed checkpoint"
+    use_here: "exact bounded route and claim boundary"
+  - dependency_id: "matter-coupling-bridge-target"
+    object_id: "TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-MATTER-COUPLING-BRIDGE-TARGET-V1-FORMALIZATION"
+    evidence_path: "research_control/tasks/RT-20260614-257/artifacts/286_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_MATTER_COUPLING_BRIDGE_TARGET_V1_FORMALIZATION.tex"
+    evidence_sha256: "3d1c6dfb2ea543c8ea455ee2f3553e3cac76e3072902213ed07aff0db514605e"
+    use_here: "downstream target and no-import boundary only"
+  - dependency_id: "source-certificate-operation-laws"
+    object_id: "TEX-V15-P3-T02-SOURCE-CERTIFICATE-OPERATION-LAWS"
+    evidence_path: "research_control/tasks/RT-20260702-064/artifacts/source_certificate_operation_laws_v1.tex"
+    evidence_sha256: "2ebc781bd82b4d39ab394255e5d3836d992625bdece8b8f912a8ab809669b986"
+    use_here: "fail-closed source-only discipline only"
+  - dependency_id: "frontier-theorem-inventory"
+    evidence_path: "research_control/design/frontier_theorem_inventory.md"
+    evidence_sha256: "fa7d97207315b49517e6e05bc3ae5b6bfcd0e335b669ba6a98371e55b4721600"
+    use_here: "open theorem and downstream burden boundary"
+  - dependency_id: "metric-use-boundary"
+    evidence_path: "registries/METRIC_USE_LEDGER.csv"
+    evidence_sha256: "108b1b56d9ef2d2d6cd30d7caa77461c813d8729890afd537206c6f94a1f24cb"
+    use_here: "confirm no target metric or effective geometry enters P7-T02"
+
+assumption_counts:
+  total: 9
+  inherited_candidate_inputs: 1
+  new_proposal_only: 7
+  preserved_no_import: 1
+  target_geometry_assumptions: 0
+  physical_time_assumptions: 0
+  physical_probability_assumptions: 0
+  physical_interpretation_assumptions: 0
+  process_authority_assumptions: 0
+  free_coupling_constants: 0
+  dimensional_scales: 0
+
+dependency_counts:
+  total: 13
+  qualifying_dependency_completions_or_checkpoints: 4
+  registered_science_or_control_sources: 8
+  control_ledgers: 1
+  status_upgrades: 0
+
+distance_to_gr:
+  changed: true
+  effect: "proposal-only P7-T02 source transition law and exact finite constraint structure supplied; physical dynamics operational semantics common propagation universal coupling action stress energy and GR burdens remain open"
+  next_burden: "P7-T03 source-level operational devices after successful checkpoint"
+
+authority_limits:
+  canonical_ontology_modified: false
+  source_law_adopted: false
+  matter_ontology_adopted: false
+  physical_interpretation_established: false
+  physical_time_established: false
+  physical_probability_established: false
+  physical_conservation_law_established: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
