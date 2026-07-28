@@ -1,0 +1,450 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{longtable}
+
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{remark}{Remark}
+\newtheorem{nonconclusion}{Non-conclusion}
+
+\newcommand{\Device}{\mathfrak D}
+\newcommand{\Control}{\mathfrak C}
+\newcommand{\Hist}{\mathcal H}
+\newcommand{\Tokens}{\mathcal A}
+\newcommand{\Response}{R}
+\newcommand{\Difference}{\Delta}
+\newcommand{\Malformed}{\bot_D}
+\newcommand{\Undetermined}{\mathsf{undetermined}_D}
+\newcommand{\Inconsistent}{\mathsf{inconsistent}_D}
+
+\title{P7-T03 Source Operational-Device Suite Candidate v1}
+\author{Candidate Constructor Packet RT-20260728-002}
+\date{2026-07-28}
+
+\begin{document}
+\maketitle
+
+\section{Control status and decisive result}
+
+This fused task-local science draft constructs
+\[
+  \mathrm{SourceOperationalDeviceSuiteCandidate}_{v1}
+\]
+as a \emph{draft/control, proposal-only} finite source-protocol suite. It
+defines explicit preparation, intervention, finite-history, readout-token,
+success, and failure data for the guarded roles
+\[
+  \mathsf{Clock}_{\mathrm{src}},\quad
+  \mathsf{Rod}_{\mathrm{src}},\quad
+  \mathsf{Signal}_{\mathrm{src}},\quad
+  \mathsf{Detector}_{\mathrm{src}},\quad
+  \mathsf{FreeFall}_{\mathrm{src}}.
+\]
+It supplies two independent finite operational systems, exact rational
+token-response maps, an intervention-difference map, token-partition and
+source-presentation-naturality theorems, a signal--detector consistency
+contract, and explicit positive, no-event, malformed, underdetermined, and
+cross-device-inconsistent controls.
+
+The role names are syntactic labels. A \(\mathsf{tick}\) token is not proper
+time or duration; an endpoint or hop token is not physical length; an arrival
+token is not a causal signal; a trigger token is not empirical detection; and
+an unlabelled-intervention baseline is not gravitational free fall. History
+weights are not physical probabilities, and the finite horizon is not
+physical time.
+
+Current ontology does not derive the protocol fields and does not adopt this
+candidate. Adoption remains
+\texttt{blocked\_adoption\_open\_continuation}. The result does not establish
+effective geometry, physical clocks or rods, causality, detector semantics,
+free-fall behavior, universal coupling, stress energy, a matter action,
+Einstein equations, exact-GR recovery, benchmark promotion, proof authority,
+publication, completed derivation, a global no-go theorem, or future
+source-extension impossibility.
+In particular, current ontology does not derive these protocols, and no
+common physical propagation follows from their formal token relations.
+
+\section{Fixed proposal-only source basis}
+
+Hold the P7-T01
+\(\mathrm{SourceMatterIncidenceCandidate}_{v1}\) fixed. Its admissible
+configurations are \(\Psi=(m,z)\), and its typed transition records are
+\[
+  T=(\Psi^-,J,w,\Pi,\Psi^+)
+\]
+with source-only \(\Pi\) and the exact kinematic conditions
+\[
+  q(\Psi^+)-q(\Psi^-)=\partial_1J,\qquad
+  z^+-z^-=\partial_2w.
+\]
+These conditions preserve the inherited sector coordinates
+\((Q,[z])\) along an admissible transition, but they do not select an event,
+provide an operational meaning, or establish a physical conservation law.
+
+Also hold the P7-T02
+\(\mathrm{SourceMatterFiniteTransitionKernelCandidate}_{v1}\) fixed. A
+finite control is
+\[
+  \Control=(\Omega,E,s,t,K_{\Control}),
+\]
+where each finite enabled row \(E_x\) is nonempty and
+\[
+  \sum_{T\in E_x}K_{\Control}(T\mid x)=1.
+\]
+For a bookkeeping state
+\(\mu\in\mathbb Q_{\geq0}^{\Omega}\), P7-T02 defines a formal finite update.
+Its coefficients and composition counter carry no physical probability,
+rate, duration, causal, or trajectory meaning. P7-T03 adds protocol data on
+top of this fixed proposal-only object; it does not promote the kernel.
+
+\section{Finite histories and protocol type}
+
+\begin{definition}[Finite source history]
+For \(n\in\mathbb N_0\), an admitted history is
+\[
+  h=(x_0,T_1,x_1,\ldots,T_n,x_n)\in\Hist_n(\Control)
+\]
+with \(s(T_j)=x_{j-1}\), \(t(T_j)=x_j\), and \(T_j\in E_{x_{j-1}}\).
+Given initial bookkeeping state \(\mu\), define
+\begin{equation}
+  W_{\mu}(h)=
+  \mu(x_0)\prod_{j=1}^{n}K_{\Control}(T_j\mid x_{j-1}).
+  \label{eq:history-weight}
+\end{equation}
+This is a finite rational history weight. It is not a physical path
+probability, amplitude, occurrence frequency, or empirical ensemble weight.
+\end{definition}
+
+\begin{definition}[Finite source operational protocol]
+A protocol is the tuple
+\[
+  \Device=(\Control,P,I,\Tokens,r,S,F).
+\]
+Here:
+\begin{enumerate}[leftmargin=*]
+\item \(P\) is a finite nonempty set of preparation records
+  \(p=(\Control_p,\mu_p,n_p)\);
+\item \(I\) is a finite set of source intervention labels containing a
+  baseline label \(i_0\); an intervention selects only declared source
+  control and preparation data;
+\item \(\Tokens\) is a finite formal token alphabet;
+\item \(r\) is a total, single-valued, source-only map from every admitted
+  finite history at the selected horizon to exactly one token;
+\item \(S\subseteq\Tokens\) is a declared success-token subset; and
+\item \(F\) classifies a request as valid success, valid no-event, valid
+  protocol failure, malformed, underdetermined, or cross-device inconsistent.
+\end{enumerate}
+No member of the tuple may be defined by a target atlas, target metric,
+proper time, physical distance, causal cone, empirical detector calibration,
+desired benchmark answer, validator verdict, or generated derivative.
+\end{definition}
+
+\begin{definition}[Token response and intervention difference]
+For a preparation \(p\), intervention \(i\), horizon \(n\), and token
+\(a\in\Tokens\), define
+\begin{equation}
+  \Response_{\Device,p,i,n}(a)
+  =
+  \sum_{\substack{h\in\Hist_n(\Control_{p,i})\\r_{p,i,n}(h)=a}}
+  W_{\mu_{p,i}}(h).
+  \label{eq:response}
+\end{equation}
+Relative to the baseline \(i_0\), define
+\begin{equation}
+  \Difference_{\Device,p,i,n}(a)
+  =
+  \Response_{\Device,p,i,n}(a)
+  -
+  \Response_{\Device,p,i_0,n}(a).
+  \label{eq:difference}
+\end{equation}
+Both maps are formal source bookkeeping records. They are not empirical
+response functions.
+\end{definition}
+
+\section{Exact finite response theorems}
+
+\begin{theorem}[Finite token-response closure and partition]
+\label{thm:partition}
+Let \(\Device\) be a valid protocol over a finite row-normalized control.
+Then:
+\begin{enumerate}[leftmargin=*]
+\item every
+  \(\Response_{\Device,p,i,n}(a)\in\mathbb Q_{\geq0}\);
+\item
+  \[
+    \sum_{a\in\Tokens}\Response_{\Device,p,i,n}(a)
+    =
+    \sum_{x\in\Omega_{p,i}}\mu_{p,i}(x);
+  \]
+\item for a unit-bookkeeping-mass preparation, the token response partitions
+  one; and
+\item if baseline and intervention preparations have equal total
+  bookkeeping mass, then
+  \[
+    \sum_{a\in\Tokens}\Difference_{\Device,p,i,n}(a)=0.
+  \]
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+Every history set is finite, and each factor in
+Equation~\eqref{eq:history-weight} is a nonnegative rational, proving the
+first claim. Totality and single-valuedness of \(r\) partition the history
+set by tokens, so summing Equation~\eqref{eq:response} over \(a\) sums every
+history weight exactly once. Repeated row normalization collapses the sum
+over all length-\(n\) continuations to the initial bookkeeping mass. The unit
+case follows. Subtracting the equal-mass baseline identity from the
+intervention identity proves the zero-sum statement.
+\end{proof}
+
+\begin{nonconclusion}
+The value one is a bookkeeping normalization. The theorem is not a
+probability theorem, physical conservation law, completeness theorem for
+observations, or empirical calibration statement.
+\end{nonconclusion}
+
+\begin{theorem}[Source-presentation naturality]
+\label{thm:naturality}
+Let \(g\) be a compatible P7-T01 presentation isomorphism transporting
+P7-T02 controls row-bijectively. Suppose \(g\) also transports preparations,
+interventions, and histories, and let
+\(\alpha:\Tokens\to\Tokens'\) be a token bijection satisfying
+\[
+  r'(gh)=\alpha(r(h)).
+\]
+Then
+\begin{equation}
+  \Response_{g\Device,gp,gi,n}(\alpha(a))
+  =
+  \Response_{\Device,p,i,n}(a),
+  \qquad
+  \Difference_{g\Device,gp,gi,n}(\alpha(a))
+  =
+  \Difference_{\Device,p,i,n}(a).
+  \label{eq:naturality}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+P7-T02 row-bijective transport preserves every kernel coefficient. Hence the
+induced history bijection preserves the products in
+Equation~\eqref{eq:history-weight}. The readout compatibility maps exactly
+the histories in the \(a\)-fiber to those in the \(\alpha(a)\)-fiber.
+Changing variables in the finite response sum proves the first equality;
+subtracting transported baselines proves the second.
+\end{proof}
+
+This naturality is presentation-relative source bookkeeping. It is not
+target covariance, diffeomorphism invariance, physical gauge symmetry, or
+observational equivalence.
+
+\section{Five guarded source protocol roles}
+
+\subsection{\(\mathsf{Clock}_{\mathrm{src}}\)}
+
+Take two source configurations \(c_0,c_1\) with rows
+\[
+ E_{c_0}=\{\mathbf1_{c_0},f_{01}\},\qquad
+ E_{c_1}=\{\mathbf1_{c_1},f_{10}\},
+\]
+each coefficient being \(1/2\). Prepare
+\(\mu_0=\delta_{c_0}\) at formal horizon two. Let the token be
+\(\mathsf{tick}_1\) exactly for the transition word
+\((f_{01},f_{10})\), and \(\mathsf{idle}_2\) otherwise. Then
+\[
+  R(\mathsf{tick}_1)=\frac14,\qquad
+  R(\mathsf{idle}_2)=\frac34.
+\]
+Longer protocols may count declared completed cycle words and compare the
+resulting integers. Neither the cycle count nor the fraction \(1/4\) is a
+duration, proper time, clock rate, or frequency.
+
+\subsection{\(\mathsf{Rod}_{\mathrm{src}}\)}
+
+Take the ordered source-address chain
+\[
+  r_0\prec r_1\prec r_2
+\]
+with identity-plus-forward rows at \(r_0,r_1\) and an identity row at
+\(r_2\). From \(\delta_{r_0}\) at horizon two, return
+\(\mathsf{endpoint}_2\) exactly when the final address is \(r_2\).
+The only successful word contains both forward hops, so
+\[
+  R(\mathsf{endpoint}_2)=\frac14.
+\]
+The declared order, endpoint index, and hop count are source-address data.
+They are not length, distance, rigidity, a spatial coordinate, or a physical
+rod standard.
+
+\subsection{\(\mathsf{Signal}_{\mathrm{src}}\)}
+
+Use a disjoint three-address source chain
+\[
+  s_0\longrightarrow s_1\longrightarrow s_2
+\]
+with the same identity-plus-forward row convention. The preparation carries
+the token \(\mathsf{emitted}_0\). At horizon two, read
+\(\mathsf{arrived}_2\) exactly at final address \(s_2\). Thus
+\[
+  R_{\mathrm{sig}}(\mathsf{arrived}_2)=\frac14,
+\]
+and two is the least formal horizon with nonzero arrival-token response.
+This is not a light signal, causal arrival, propagation speed, cone, or
+physical travel time.
+
+\subsection{\(\mathsf{Detector}_{\mathrm{src}}\)}
+
+Define source addresses
+\[
+  q_0=(s_0,d_{\mathrm{ready}}),\quad
+  q_1=(s_1,d_{\mathrm{ready}}),\quad
+  q_2=(s_2,d_{\mathrm{triggered}})
+\]
+with identity-plus-forward rows along \(q_0\to q_1\to q_2\). Return
+\(\mathsf{triggered}_2\) exactly at \(q_2\). The declared history bijection
+\[
+  s_j\longleftrightarrow q_j
+\]
+and corresponding transition bijection imply
+\[
+  R_{\mathrm{sig}}(\mathsf{arrived}_2)
+  =
+  R_{\mathrm{det}}(\mathsf{triggered}_2)
+  =
+  \frac14.
+\]
+This is equality of two formal token fibers. It does not establish empirical
+detection, measurement, observation, instrument response, or detector
+universality.
+
+\subsection{\(\mathsf{FreeFall}_{\mathrm{src}}\)}
+
+Let the baseline label \(i_0\) mean only ``no declared source intervention.''
+On configurations \(f_0,f_1\), take baseline row
+\[
+ E^{i_0}_{f_0}=\{\mathbf1_{f_0},m_{01}\}
+\]
+and an intervention \(i_{\mathrm{block}}\) with row
+\[
+ E^{i_{\mathrm{block}}}_{f_0}=\{\mathbf1_{f_0}\}.
+\]
+At horizon one from \(\delta_{f_0}\), return the final-address token. Then
+\[
+\begin{array}{c|cc}
+ &\mathsf{address}_{f_0}&\mathsf{address}_{f_1}\\
+\hline
+i_0&1/2&1/2\\
+i_{\mathrm{block}}&1&0\\
+\Delta&1/2&-1/2
+\end{array}
+\]
+and the difference sums to zero. ``No declared intervention'' is a syntactic
+baseline, not force freedom. The contrast is not gravitational free fall,
+geodesic motion, inertia, or an equivalence-principle test.
+
+\section{Two independent systems and cross-device controls}
+
+Declare the clock component \(S_{\mathrm{clock}}\) and signal component
+\(S_{\mathrm{signal}}\) disjoint, and use their exact Cartesian product
+control and product preparation. P7-T02 factorization gives
+\[
+  R_{\mathrm{joint}}
+  (\mathsf{tick}_1,\mathsf{arrived}_2)
+  =
+  R_{\mathrm{clock}}(\mathsf{tick}_1)
+  R_{\mathrm{signal}}(\mathsf{arrived}_2)
+  =
+  \frac1{16}.
+\]
+This verifies at least two independent formal operational systems. It is not
+empirical statistical independence, locality, separability, or absence of a
+physical force.
+
+The suite also imposes three candidate-level consistency contracts:
+\begin{enumerate}[leftmargin=*]
+\item the signal arrival and detector trigger responses agree under their
+  declared history bijection;
+\item the disjoint clock--signal response factors only when the joint control
+  and preparation are exactly Cartesian; and
+\item rod endpoint and signal arrival addresses may be compared only when a
+  declared source-address bijection transports their token labels.
+\end{enumerate}
+These checks compare formal source records. They do not derive common
+physical propagation, metric universality, or universal coupling.
+
+\section{Failure and residual branches}
+
+\begin{longtable}{p{0.23\textwidth}p{0.69\textwidth}}
+\toprule
+Branch & Exact result\\
+\midrule
+\endhead
+Valid positive &
+All tuple fields are typed and at least one declared success token has
+nonzero bookkeeping response.\\
+Valid no-event &
+All fields are typed, and an identity-only finite history returns a declared
+no-event token. This is not a physical vacuum or stasis result.\\
+Valid protocol failure &
+All fields are typed, and the total readout returns a declared failure token.\\
+Malformed &
+\(\Malformed\) if a preparation or transition is untyped, the readout is
+partial or multivalued, a token lies outside the alphabet, or any target
+geometry or empirical calibration is used as a source premise.\\
+Underdetermined &
+\(\Undetermined\) when the source control is typed but preparation,
+intervention, alphabet, readout, success, or failure data are absent. This is
+not a no-go theorem.\\
+Cross-device inconsistent &
+\(\Inconsistent\) when a declared history bijection exists but paired token
+fibers or response values disagree. This is a candidate-relative consistency
+failure, not empirical falsification.\\
+\bottomrule
+\end{longtable}
+
+For example, if the detector returns \(\mathsf{triggered}_2\) at either
+\(q_1\) or \(q_2\), its response becomes \(3/4\) while the paired signal
+arrival response stays \(1/4\). The declared contract therefore returns
+\(\Inconsistent\). This local inconsistency does not prove that detector
+semantics are impossible; a different source-only protocol remains open.
+
+\section{Assumption and authority ledger}
+
+The genuinely new proposal inputs are the finite preparations, intervention
+labels, token alphabets, total readout maps, guarded role-name convention,
+transport compatibility, and cross-device history bijections. From those
+inputs and the fixed P7-T02 kernel, the candidate derives finite rational
+responses, token partitions, zero-sum intervention differences,
+source-presentation naturality, formal token-response equalities, and exact
+Cartesian factorization.
+
+No target metric, proper time, physical distance, causal cone, empirical
+detector, force, coupling constant, dimensional scale, stress-energy object,
+matter action, Einstein equation, benchmark behavior, validator status, or
+generated derivative is an input.
+
+The completion category for P7-T03 is
+\texttt{constructed\_candidate}: the requested formal devices, at least two
+independent systems, readout maps, interventions, success conditions, and
+failure controls are explicit. This narrows only the proposal-level
+operational-device sub-burden. It does not turn formal source tokens into
+physical observables or adopt any primitive.
+
+\section{Open burdens and next legal step}
+
+Current ontology still does not derive the preparation, intervention, or
+readout primitives. Physical interpretation and canonical adoption remain
+open and protected. A later P7-T04 packet may ask whether multiple completed
+formal source systems share a common source propagation structure, but only
+after this packet is checkpointed. Even a common formal structure would not
+by itself establish a lawful effective metric, universal coupling, physical
+causality, or exact-GR recovery.
+
+\end{document}

@@ -1,0 +1,872 @@
+schema_id: "v21_p7_t03_child_phys_phil_operational_devices_review_v1"
+artifact_id: "P7T03-CHILD-PHYS-PHIL-OPERATIONAL-DEVICES-REVIEW-V1"
+task_id: "RT-20260728-002"
+job_id: "AJ-RT-20260728-002-001"
+decision_id: "DDR-20260728-002"
+plan_task_id: "P7-T03"
+execution_unit_id: "child_phys_phil"
+perspective: "physicist_philosopher"
+status: "completed"
+artifact_status: "draft/control"
+candidate_status: "proposal-only"
+adoption_status: "blocked_adoption_open_continuation"
+review_context: "same_context_internal_parent_child_synthesis_input"
+target_derivation_milestone: "matter_coupling"
+milestone_burden: "Give operational meaning to effective geometry and matter response."
+
+review_question: >-
+  Which exact formal source-token statements may
+  SourceOperationalDeviceSuiteCandidate_v1 support for the role names
+  Clock_src, Rod_src, Signal_src, Detector_src, and FreeFall_src, and which
+  physical, empirical, geometric, ontological, or downstream statements
+  remain blocked when the suite adds finite source-only preparation,
+  intervention, history, readout, and failure data to the fixed proposal-only
+  P7-T01 and P7-T02 candidates?
+
+source_basis:
+  - path: "research_control/tasks/RT-20260728-002/DDR-20260728-002.md"
+    sha256: "1e9630ba1cd8da8904476531f5718216cf68d99366fc12acf440db31d9b58548"
+    use: "active construction question, permitted protocol tuple, and claim boundary"
+  - path: "research_control/tasks/RT-20260728-002/jobs/AJ-RT-20260728-002-001.yaml"
+    sha256: "54b53058f62b738d594c89127cf8c1aad0317de0c25c5025a40f72edaa047208"
+    use: "single outer AgentJob assumptions, expected artifacts, child decomposition, and authority limits"
+  - path: "research_control/tasks/RT-20260728-002/roles/candidate-constructor@0.2.0--RT-20260728-002.yaml"
+    sha256: "4bc142a7c02b72ac3b29acad5824111260650d56d637e9b529b9aaa0b2c88653"
+    use: "task-local Candidate Constructor permissions and removed interpretations"
+  - path: ".agents/roles/physics/candidate-constructor.v0.2.0.md"
+    sha256: "f6534fd2950c2a6eefb8f2a4b255cd0794ceeb1462556be60af288bceb9d51d5"
+    use: "base-role construction, no-fog, and protected-status boundaries"
+  - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+    path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+    sha256: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+    use: "P7-T03 objective, required device roles, evidence burden, and definition of done"
+  - object_id: "TEX-V21-P7-T01-SOURCE-MATTER-ONTOLOGY-SECTOR-TAXONOMY-V1"
+    path: "research_control/tasks/RT-20260727-007/artifacts/source_matter_ontology_and_sector_taxonomy_v1.tex"
+    sha256: "8d160217bf223078a11bc63fde6593c11c39d5b50d9c48fbad7b12084f8a752d"
+    use: "fixed proposal-only configurations, transition grammar, sector support, and model-to-world ladder"
+  - object_id: "TEX-V21-P7-T02-SOURCE-MATTER-FINITE-TRANSITION-KERNEL-V1"
+    path: "research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_candidate_v1.tex"
+    sha256: "65ac095f5cdf4c2e319365c8b0e024d031b19d9fc2b8102e59997afa1e8f9129"
+    use: "fixed proposal-only finite control, bookkeeping update, formal composition index, and source-presentation transport"
+  - path: "research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_spec_v1.yaml"
+    sha256: "936d2aa6dfea3d263675468ff581190240efde84c1241ad971a8c1383a065a97"
+    use: "machine-readable P7-T02 objects, exact consequences, branch vocabulary, and open burdens"
+  - path: "research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_controls_v1.yaml"
+    sha256: "af7fc976590b4ca82fca5c34c6f30091f6599428b8005cf3932ce03f92f7d779"
+    use: "finite controls and distinctions among positive, null, degenerate, malformed, and underdetermined branches"
+  - path: "research_control/current_frontier.md"
+    sha256: "017193f60651afdac9e7ccea702c8a3d9baad460fc9c869f6adbe3304a83d60e"
+    use: "current matter-coupling burden, P6-input freeze, and exact blocked claims"
+  - path: "registries/METRIC_USE_LEDGER.csv"
+    sha256: "108b1b56d9ef2d2d6cd30d7caa77461c813d8729890afd537206c6f94a1f24cb"
+    use: "metric-adjacent wording and detector-calibration import guards"
+  - object_id: "TEX-V15-P3-T02-SOURCE-CERTIFICATE-OPERATION-LAWS"
+    path: "research_control/tasks/RT-20260702-064/artifacts/source_certificate_operation_laws_v1.tex"
+    sha256: "2ebc781bd82b4d39ab394255e5d3836d992625bdece8b8f912a8ab809669b986"
+    use: "declared-scope, composition, restriction, and fail-closed discipline for source readout records"
+
+fixed_basis:
+  p7_t01:
+    candidate_id: "SourceMatterIncidenceCandidate_v1"
+    status: "proposal-only"
+    configuration: "Psi=(m,z)"
+    sector_map: "Sec_src(Psi)=(Q(Psi),D(Psi)) with D(Psi)=[z]"
+    transition_record: "T=(Psi_minus,J,w,Pi,Psi_plus)"
+    transition_conditions:
+      - "q_plus-q_minus=partial_1 J"
+      - "z_plus-z_minus=partial_2 w"
+      - "Pi uses only declared source data"
+    supplied_meaning: "finite source incidence and label bookkeeping only"
+    not_supplied:
+      - "persistent physical object identity"
+      - "observer or measurement semantics"
+      - "physical locality or spatial adjacency"
+      - "physical motion or worldline semantics"
+      - "target geometry or matter coupling"
+  p7_t02:
+    candidate_id: "SourceMatterFiniteTransitionKernelCandidate_v1"
+    status: "proposal-only"
+    finite_control: "C=(Omega,E,s,t)"
+    bookkeeping_state: "mu in Q_nonnegative^Omega"
+    update: "(U_C mu)(y)=sum_x mu(x) sum_{T in E_x:t(T)=y} K_C(T|x)"
+    composition_index: "n in N_0"
+    index_meaning: "formal composition count only"
+    kernel_meaning: "finite rational bookkeeping coefficient only"
+    supplied_consequences:
+      - "finite nonnegative rational closure"
+      - "row normalization"
+      - "total bookkeeping-mass preservation"
+      - "inherited P7-T01 sector support"
+      - "transport under compatible source-presentation isomorphisms"
+    not_supplied:
+      - "actualized histories"
+      - "physical probability, frequency, rate, or propensity"
+      - "physical time, duration, or causal order"
+      - "empirical preparation, intervention, or readout"
+      - "physical independence, interaction, or propagation"
+      - "detector calibration, geometry, or coupling"
+  inherited_underdetermination_statement: >-
+    Current ontology and the fixed proposal-only P7-T01 and P7-T02 candidates
+    do not derive a canonical preparation protocol, intervention family,
+    token alphabet, history-to-token readout, success condition, failure
+    classifier, cross-device identification, empirical calibration, or
+    physical interpretation.
+  impossibility_claimed: false
+
+proposed_protocol_semantic_contract:
+  candidate_id: "SourceOperationalDeviceSuiteCandidate_v1"
+  candidate_tuple: "D=(C,P,I,A,r,F)"
+  tuple_fields:
+    C:
+      exact_kind: "finite proposal-only P7-T02 source control"
+      semantic_limit: "not a physical apparatus or environment"
+    P:
+      exact_kind: "finite source-only preparation record or declared set of initial bookkeeping states"
+      semantic_limit: "not laboratory preparation or physical initialization"
+    I:
+      exact_kind: "finite family of typed source-control replacements or source-only intervention labels"
+      semantic_limit: "not a physical manipulation, force, treatment, or causal operation"
+    A:
+      exact_kind: "finite formal token alphabet"
+      semantic_limit: "tokens have only declared source syntax"
+    r:
+      exact_kind: "single-valued source-only map from a declared finite-history domain to A, or to A with one explicit no-readout token"
+      semantic_limit: "not an empirical observation, measurement, or semantic assignment"
+    F:
+      exact_kind: "typed classifier for successful execution, valid no-token execution, malformed input, underdetermined request, and cross-device inconsistency"
+      semantic_limit: "not empirical falsification or physical failure"
+  finite_history:
+    exact_kind: "typed finite word of P7-T02 source configurations and enabled transition records"
+    admissibility: "every adjacent record is enabled and its source and target match the adjacent configurations"
+    blocked_readings:
+      - "trajectory through spacetime"
+      - "worldline"
+      - "actual event sequence"
+      - "causal history"
+      - "experimental run"
+  operational_word_guard: >-
+    Operational means executable relative to explicit source syntax,
+    preparation, transition, and readout rules. It does not mean physically
+    realizable, empirically calibrated, observable, or measurement-bearing.
+
+model_to_world_ladder:
+  level_1_stipulated_candidate_primitives:
+    items:
+      - "finite history domains"
+      - "source-only preparation records"
+      - "source-only intervention labels and transported controls"
+      - "finite formal token alphabets"
+      - "single-valued readout maps"
+      - "success and failure classifiers"
+      - "role-name assignments Clock_src Rod_src Signal_src Detector_src and FreeFall_src"
+    status_effect: "proposal-only source-extension data, not ontology derivation or adoption"
+  level_2_candidate_derived_mathematics:
+    licensed_if_demonstrated:
+      - "finite token-response closure"
+      - "exact token partition when the readout map is total and single-valued"
+      - "rational intervention-difference bookkeeping"
+      - "source-presentation naturality under transport of the entire protocol"
+      - "finite protocol executability and declared success or failure classification"
+      - "conditional cross-device compatibility under an explicit source-only comparison map"
+    status_effect: "exact only inside the stipulated finite candidate"
+  level_3_source_role_semantics:
+    status: "formal_only"
+    exact_scope: >-
+      The five device names classify source protocol roles and their formal
+      token grammars; this level adds no empirical referent.
+  level_4_physical_or_empirical_interpretation:
+    status: "open_not_supplied"
+    missing_maps:
+      - "tick token to clock reading or duration"
+      - "endpoint or hop token to spatial length"
+      - "emission and arrival tokens to causal signaling"
+      - "trigger token to empirical detection or observation"
+      - "unforced-baseline label to gravitational or inertial free fall"
+      - "bookkeeping response to observed frequency or probability"
+      - "intervention difference to physical response or coupling"
+  level_5_canonical_or_protected_status:
+    status: "human-gated"
+    blocked_here:
+      - "canonical-ontology candidate designation"
+      - "source-protocol or source-law adoption"
+      - "physical interpretation adoption"
+      - "benchmark or derivation promotion"
+  ladder_rule: >-
+    A candidate-relative mathematical result or a familiar device name cannot
+    move an object from formal source syntax to physical interpretation or
+    protected status.
+
+token_response_audit:
+  response_id: "SourceOperationalResponseTrace_v1"
+  conditional_formula: "R_D,n(a)=sum_{h in H_D,n:r(h)=a} w_n(h)"
+  exact_input_meanings:
+    H_D_n: "finite declared domain of length-n source histories"
+    w_n: "finite rational bookkeeping weight induced from the P7-T02 candidate"
+    a: "formal token in the declared finite alphabet A"
+  licensed_consequences_if_well_typed:
+    - "R_D,n(a) is a finite nonnegative rational number"
+    - "tokens with empty preimage have response coefficient zero"
+    - "a bijective relabeling of the token alphabet only relabels response coordinates"
+    - "intervention differences are exact rational differences of two separately declared source protocols"
+  total_partition_condition: >-
+    The equality sum_a R_D,n(a)=sum_h w_n(h) is licensed only when r is total
+    and single-valued on the entire weighted history domain. A partial
+    readout requires either an explicit no-readout token or an inequality
+    limited to the declared readout domain.
+  intervention_difference:
+    formula: "Delta_D,n^i(a)=R_D^i,n(a)-R_D^0,n(a)"
+    exact_meaning: "candidate-relative rational comparison between declared source-control variants"
+    does_not_mean:
+      - "physical response coefficient"
+      - "causal effect"
+      - "experimental treatment effect"
+      - "susceptibility"
+      - "coupling strength"
+      - "observed excess"
+  blocked_readings:
+    - "probability of token occurrence"
+    - "relative frequency"
+    - "detector efficiency"
+    - "measurement distribution"
+    - "empirical expectation"
+    - "physical conservation of probability"
+  zero_response_distinction: >-
+    A zero formal response coefficient means that no weighted history in the
+    declared domain maps to that token. It does not mean physical
+    impossibility, nonoccurrence in nature, detector silence, or a null
+    source configuration.
+
+device_role_audit:
+  Clock_src:
+    role_status: "formal source-protocol role only"
+    admissible_formal_content:
+      - "a source-only preparation record"
+      - "a finite history domain over the P7-T02 control"
+      - "a declared cycle-completion or recurrence predicate"
+      - "a tick-token readout map"
+      - "a formal cycle-count or token-count comparison"
+      - "malformed and underdetermined branches"
+    exactly_licensed_language:
+      - "the declared history emits a tick token"
+      - "the source protocol has k completed formal cycles"
+      - "two formal token counts or integer cycle counts agree or differ"
+      - "the transported Clock_src protocol preserves its token trace up to declared token relabeling"
+    blocked_meanings:
+      - "physical clock"
+      - "elapsed time or duration"
+      - "proper time"
+      - "frequency, period, rate, or temporal calibration"
+      - "time standard or synchronization"
+      - "worldline parameter"
+      - "metric normalization"
+    smuggling_risks:
+      - risk_id: "PHIL-CLOCK-IMPORT-01"
+        trigger: "the cycle predicate or preparation is selected using target proper time, a target metric, or desired benchmark behavior"
+        disposition: "malformed_target_import"
+      - risk_id: "PHIL-CLOCK-SEMANTICS-02"
+        trigger: "integer cycle count is called measured duration or equal ticks are called equal physical intervals"
+        disposition: "blocked_overread"
+      - risk_id: "PHIL-CLOCK-INDEX-03"
+        trigger: "P7-T02 composition index is renamed clock time without a separately derived interpretation map"
+        disposition: "blocked_overread"
+    success_language: "formal_cycle_token_executed"
+    valid_no_success_language: "well_typed_history_without_declared_tick_token"
+    underdetermined_when: "the cycle predicate, preparation, readout map, or comparison rule is absent"
+
+  Rod_src:
+    role_status: "formal source-protocol role only"
+    admissible_formal_content:
+      - "a finite ordered source-address or incidence-word declaration"
+      - "distinguished formal endpoint tokens"
+      - "a source-only hop-count or address-comparison readout"
+      - "orientation or reversal data when explicitly declared"
+      - "malformed and underdetermined branches"
+    exactly_licensed_language:
+      - "the declared source word has k typed links or addresses"
+      - "the endpoint token pair is well typed"
+      - "two declared source words have equal or unequal formal hop count"
+      - "a compatible presentation transport preserves the ordered incidence word up to declared relabeling"
+    blocked_meanings:
+      - "physical rod"
+      - "spatial length or distance"
+      - "rigidity"
+      - "spatial direction or orientation"
+      - "local neighborhood in spacetime"
+      - "metric interval"
+      - "physical scale calibration"
+    smuggling_risks:
+      - risk_id: "PHIL-ROD-IMPORT-01"
+        trigger: "link weights or word selection use target distance, a metric norm, physical units, or a desired spatial relation"
+        disposition: "malformed_target_import"
+      - risk_id: "PHIL-ROD-SEMANTICS-02"
+        trigger: "equal hop count is called equal physical length"
+        disposition: "blocked_overread"
+      - risk_id: "PHIL-ROD-RIGIDITY-03"
+        trigger: "preserved address word is called rigidity or shape preservation"
+        disposition: "blocked_overread"
+    success_language: "formal_endpoint_or_hop_token_executed"
+    valid_no_success_language: "well_typed_source_word_without_requested_endpoint token"
+    underdetermined_when: "ordering, endpoints, readout, or comparison rule is absent"
+
+  Signal_src:
+    role_status: "formal source-protocol role only"
+    admissible_formal_content:
+      - "a source-only emission-token preparation"
+      - "a finite set of enabled transition words"
+      - "an arrival-token predicate on declared histories"
+      - "a formal first-arrival index when defined purely as least composition count"
+      - "failure and no-arrival-token classifications"
+    exactly_licensed_language:
+      - "an emission token labels the prepared source record"
+      - "an arrival token labels histories in a declared readout preimage"
+      - "the least formal composition index with an arrival token is k"
+      - "the response coefficient for the arrival-token class is a finite rational bookkeeping value"
+    blocked_meanings:
+      - "physical signal"
+      - "causal influence or causal arrival"
+      - "propagation speed"
+      - "light cone or characteristic cone"
+      - "spacelike, timelike, or null relation"
+      - "transmission through physical space"
+      - "communication or information transfer in nature"
+    smuggling_risks:
+      - risk_id: "PHIL-SIGNAL-IMPORT-01"
+        trigger: "enabled history or arrival predicate is chosen using a target cone, target distance, physical travel time, or desired propagation law"
+        disposition: "malformed_target_import"
+      - risk_id: "PHIL-SIGNAL-CAUSALITY-02"
+        trigger: "source-map and target-map orientation is treated as causal before and after"
+        disposition: "blocked_overread"
+      - risk_id: "PHIL-SIGNAL-SPEED-03"
+        trigger: "hop count divided by formal composition count is called propagation speed"
+        disposition: "blocked_overread"
+    success_language: "formal_arrival_token_executed"
+    valid_no_success_language: "well_typed_bounded_history_without_arrival_token"
+    underdetermined_when: "emission preparation, arrival predicate, history bound, or readout map is absent"
+
+  Detector_src:
+    role_status: "formal source-token transducer role only"
+    admissible_formal_content:
+      - "a ready-token preparation"
+      - "a source-only typed input-token alphabet"
+      - "a transition or history rule producing a trigger token"
+      - "a no-trigger token when total response partition is claimed"
+      - "a malformed-input and missing-map classifier"
+    exactly_licensed_language:
+      - "the source transducer maps the declared input-token class to the trigger-token class"
+      - "the trigger-token response coefficient is a finite rational bookkeeping value"
+      - "the transduction map composes with another source readout only when domains and codomains match"
+      - "transported source presentations preserve the transducer table up to declared token relabeling"
+    blocked_meanings:
+      - "empirical detector"
+      - "observation or measurement"
+      - "physical outcome"
+      - "instrument response or efficiency"
+      - "calibration"
+      - "sensitivity, specificity, or noise in an empirical sense"
+      - "matter detection or localization"
+    smuggling_risks:
+      - risk_id: "PHIL-DETECTOR-IMPORT-01"
+        trigger: "trigger labels are assigned from observed data, empirical outcomes, target observables, or desired benchmark fit"
+        disposition: "malformed_target_import"
+      - risk_id: "PHIL-DETECTOR-SEMANTICS-02"
+        trigger: "formal trigger token is called a detected event or measured outcome"
+        disposition: "blocked_overread"
+      - risk_id: "PHIL-DETECTOR-EFFICIENCY-03"
+        trigger: "bookkeeping response is called detector efficiency or empirical likelihood"
+        disposition: "blocked_overread"
+      - risk_id: "PHIL-DETECTOR-COMPOSITION-04"
+        trigger: "an arrival token and a trigger token are identified without an explicit typed source-only transduction map"
+        disposition: "underdetermined_or_malformed_by_typing"
+    success_language: "formal_trigger_token_executed"
+    valid_no_success_language: "well_typed_input_history_mapped_to_explicit_no_trigger_token"
+    underdetermined_when: "input alphabet, transduction map, preparation, or no-trigger convention is absent"
+
+  FreeFall_src:
+    role_status: "formal source-baseline comparison role only"
+    preferred_formal_name: "UnintervenedBaseline_src"
+    admissible_formal_content:
+      - "a baseline source control with no member of a declared intervention family applied"
+      - "one or more explicitly altered source controls"
+      - "a shared formal token alphabet and comparison map"
+      - "a finite intervention-difference trace"
+      - "failure branches for hidden, ill-typed, or target-defined interventions"
+    exactly_licensed_language:
+      - "the baseline branch omits every intervention label declared in I"
+      - "the baseline and altered source protocols have equal or unequal formal response traces"
+      - "Delta_D,n^i(a) is zero or nonzero as a rational source-bookkeeping comparison"
+      - "the comparison is invariant under transport of the whole declared source protocol"
+    blocked_meanings:
+      - "physical free fall"
+      - "absence of physical force"
+      - "inertial motion"
+      - "gravitational motion"
+      - "geodesic behavior"
+      - "equivalence principle"
+      - "universal acceleration"
+      - "force-free worldline"
+    smuggling_risks:
+      - risk_id: "PHIL-FREEFALL-NEGATIVE-01"
+        trigger: "absence from the declared intervention list is treated as absence of every physical force or coupling"
+        disposition: "blocked_overread"
+      - risk_id: "PHIL-FREEFALL-IMPORT-02"
+        trigger: "baseline or success is defined by geodesics, target connection, target metric, acceleration, proper time, or desired GR behavior"
+        disposition: "malformed_target_import"
+      - risk_id: "PHIL-FREEFALL-UNIVERSALITY-03"
+        trigger: "matching formal traces across two source controls is called universality of free fall"
+        disposition: "blocked_overread"
+    success_language: "formal_unintervened_baseline_trace_executed"
+    valid_no_success_language: "well_typed_baseline_trace_without_requested_comparison token"
+    underdetermined_when: "the intervention family is not exhaustive relative to the claimed source scope, or no baseline comparison map is declared"
+
+cross_device_consistency_audit:
+  exact_scope: "compatibility among formal source protocols only"
+  required_checks:
+    - check_id: "PHIL-CROSS-01-TYPED-COMPOSITION"
+      requirement: "Every composed readout or transduction has matching declared source-token domain and codomain."
+      pass_meaning: "formal composition is well typed"
+      blocked_overread: "not empirical compatibility between instruments"
+    - check_id: "PHIL-CROSS-02-SHARED-HISTORY"
+      requirement: "Claims about the same history name an explicit shared finite history object or a source-only transport map."
+      pass_meaning: "two token assignments are compared on declared common source data"
+      blocked_overread: "not co-location, simultaneity, or observation of one physical event"
+    - check_id: "PHIL-CROSS-03-CLOCK-SIGNAL"
+      requirement: "Any comparison of tick count with arrival index remains a pair of formal integer records."
+      pass_meaning: "integer relation inside the proposal-only suite"
+      blocked_overread: "not travel time, signal speed, synchronization, or causal delay"
+    - check_id: "PHIL-CROSS-04-ROD-SIGNAL"
+      requirement: "Any comparison of hop count with arrival index records source-word combinatorics only."
+      pass_meaning: "formal source-word response relation"
+      blocked_overread: "not distance, speed, cone, or spacetime interval"
+    - check_id: "PHIL-CROSS-05-SIGNAL-DETECTOR"
+      requirement: "Arrival and trigger tokens are related only through an explicit source-only typed transduction map."
+      pass_meaning: "formal token composition"
+      blocked_overread: "not a signal being physically detected"
+    - check_id: "PHIL-CROSS-06-BASELINE-DEVICES"
+      requirement: "Baseline comparisons preserve the same declared preparation, alphabet, and readout scope except for the named source intervention."
+      pass_meaning: "controlled formal comparison"
+      blocked_overread: "not an experiment, causal intervention, or universality test in nature"
+    - check_id: "PHIL-CROSS-07-INDEPENDENT-SYSTEMS"
+      requirement: "At least two systems use separately declared finite controls or a fully declared Cartesian product with separate readout factors."
+      pass_meaning: "candidate-relative protocol independence"
+      blocked_overread: "not statistical independence, physical separability, or independent replication"
+  inconsistency_rule: >-
+    If two protocols purport to share one history and one token-identification
+    map but assign incompatible token classes, the result is
+    cross_device_inconsistent with the conflicting maps recorded. It is not
+    empirical falsification, physical nonuniversality, or a global
+    obstruction.
+
+source_presentation_naturality_audit:
+  required_transport_data:
+    - "compatible P7-T01 and P7-T02 transport of configurations, transitions, and finite histories"
+    - "transported preparation records"
+    - "transported intervention family with a bijection of intervention labels"
+    - "a bijection theta:A->A_prime of formal token alphabets"
+    - "readout compatibility r_prime(h_* h)=theta(r(h))"
+    - "transported success and failure classes"
+  exact_candidate_consequence: >-
+    Under the full transport hypotheses, token-response coordinates agree up
+    to theta and the classification of valid, malformed, underdetermined,
+    and inconsistent branches is preserved.
+  insufficient_hypotheses:
+    - "configuration transport without history-domain transport"
+    - "history transport without readout compatibility"
+    - "token-name similarity without an alphabet bijection"
+    - "transport of the baseline but not the intervention family"
+    - "an arbitrary finite truncation not closed under the declared transport"
+  does_not_mean:
+    - "observational equivalence"
+    - "empirical indistinguishability"
+    - "target-coordinate covariance"
+    - "diffeomorphism invariance"
+    - "physical gauge symmetry"
+    - "instrument invariance"
+    - "universal physical law"
+
+branch_distinctions:
+  valid_executable:
+    defining_condition: "all source objects are typed and at least one declared finite history receives the requested formal token"
+    exact_meaning: "the proposal-only source protocol executes on its declared finite domain"
+    blocked_meanings:
+      - "physical realizability"
+      - "experimental success"
+      - "empirical observation"
+  valid_no_success_token:
+    defining_condition: "the protocol is well typed but the bounded history receives an explicit no-readout, no-arrival, or no-trigger token"
+    exact_meaning: "a valid negative branch inside the formal classifier"
+    distinct_from:
+      - "null source configuration"
+      - "identity-only degenerate control"
+      - "malformed input"
+      - "underdetermined request"
+      - "zero physical event"
+  valid_null:
+    defining_condition: "the underlying P7-T01 configuration is the valid null source record and the protocol is otherwise well typed"
+    exact_meaning: "formal protocol over an empty source configuration"
+    blocked_meanings:
+      - "physical vacuum"
+      - "detector dark count baseline"
+      - "zero spacetime interval"
+  valid_degenerate:
+    defining_condition: "the underlying P7-T02 control has an identity-only row and the readout rule is well typed"
+    exact_meaning: "formal identity-only history branch"
+    blocked_meanings:
+      - "physical rest"
+      - "inertial motion"
+      - "infinite duration"
+      - "absence of force"
+  malformed:
+    symbol: "bottom_D"
+    defining_condition: "typing, source-only, totality, composition, or declared-scope requirements fail"
+    triggers:
+      - "a history uses a transition not enabled by the fixed P7-T02 control"
+      - "preparation data fall outside the declared finite source domain"
+      - "a readout is multivalued where a single-valued partition is claimed"
+      - "a partial readout is treated as a total partition without an explicit no-readout token"
+      - "an intervention has no typed source-control action"
+      - "composed token domains and codomains do not match"
+      - "target geometry, proper time, physical distance, causal cone, empirical outcome, calibration, desired GR behavior, process authority, or generated derivative supplies a premise"
+    exact_meaning: "fail-closed invalid candidate datum"
+    blocked_meanings:
+      - "physically forbidden outcome"
+      - "zero physical probability"
+      - "failure of every future source protocol"
+  underdetermined:
+    symbol: "undetermined_D"
+    defining_condition: "all supplied objects are well typed but a requested preparation, intervention, readout, comparison, or interpretation rule is absent"
+    examples:
+      - "asking which physical duration a tick count represents"
+      - "asking which spatial length a hop token represents"
+      - "asking whether an arrival token is causally connected"
+      - "asking which empirical outcome a trigger token represents"
+      - "asking whether omission of a listed intervention means force-free motion"
+    exact_meaning: "the candidate contains no rule answering the request"
+    impossibility_claimed: false
+  cross_device_inconsistent:
+    symbol: "inconsistent_D"
+    defining_condition: "declared shared history or token-identification maps yield incompatible formal assignments"
+    exact_meaning: "the proposed suite fails its own declared compatibility condition"
+    blocked_meanings:
+      - "experimental falsification"
+      - "physical violation of universality"
+      - "global no-go theorem"
+
+valid_success_and_failure_language:
+  preferred:
+    - "formal source protocol"
+    - "source-only preparation record"
+    - "declared source intervention"
+    - "finite history word"
+    - "formal token alphabet"
+    - "readout-token map"
+    - "bookkeeping response coefficient"
+    - "formal composition index"
+    - "candidate-relative intervention difference"
+    - "well-typed execution"
+    - "valid no-success-token branch"
+    - "malformed target-import branch"
+    - "underdetermined interpretation request"
+    - "cross-device formal compatibility"
+    - "blocked_adoption_open_continuation"
+  forbidden_as_positive_claims:
+    - "the clock measures time"
+    - "the rod measures length"
+    - "the signal propagates causally"
+    - "the detector observes an event"
+    - "the baseline is gravitational free fall"
+    - "the response is a probability or frequency"
+    - "the intervention has a physical causal effect"
+    - "the devices measure one effective geometry"
+    - "the suite establishes universal matter coupling"
+    - "the protocols recover GR"
+  failure_language_rule: >-
+    Every failure must identify whether the branch is valid-no-success,
+    malformed, underdetermined, or cross-device inconsistent. The word
+    failure alone is insufficient and must never be used as evidence of a
+    physical impossibility.
+
+exactly_licensed_claims_if_parent_artifacts_support_them:
+  - claim_id: "PHIL-LIC-P7T03-01"
+    statement: "Within the stipulated finite proposal-only suite, each device role can be represented by explicit finite preparation, history, token-readout, and failure data."
+  - claim_id: "PHIL-LIC-P7T03-02"
+    statement: "A total single-valued readout partitions the finite weighted history domain into formal token classes."
+  - claim_id: "PHIL-LIC-P7T03-03"
+    statement: "Each token-response coefficient is finite, nonnegative, and rational when inherited history weights are finite nonnegative rationals."
+  - claim_id: "PHIL-LIC-P7T03-04"
+    statement: "A declared intervention difference is an exact rational comparison of formal token-response coordinates."
+  - claim_id: "PHIL-LIC-P7T03-05"
+    statement: "Compatible transport of the entire protocol preserves formal response traces up to declared token relabeling."
+  - claim_id: "PHIL-LIC-P7T03-06"
+    statement: "At least two separately declared finite protocols may provide candidate-relative cross-device comparison data."
+  - claim_id: "PHIL-LIC-P7T03-07"
+    statement: "Executable, valid-no-success, null, degenerate, malformed, underdetermined, and inconsistent branches are logically distinct."
+  - claim_id: "PHIL-LIC-P7T03-08"
+    statement: "The construction narrows the P7-T03 formal protocol burden at proposal-only level without establishing physical operational semantics."
+
+stipulated_or_open_items:
+  stipulated_not_derived:
+    - "which finite histories belong to each device protocol"
+    - "preparation records"
+    - "intervention labels and their source-control actions"
+    - "token alphabets"
+    - "history-to-token readout maps"
+    - "success predicates and failure classifiers"
+    - "the assignment of familiar device-role names"
+    - "cross-device token-identification and comparison maps"
+  open_mathematical_or_model_questions:
+    - "selection or uniqueness of any protocol suite"
+    - "compatibility across different finite controls or truncations"
+    - "long-history, continuum, or projective-limit behavior"
+    - "robustness under changes of preparation, intervention, and readout"
+    - "nontrivial common structure across all declared source-matter sectors"
+    - "principal symbols or source propagation relations"
+  open_physical_or_empirical_questions:
+    - "physical referents for every source configuration and token"
+    - "calibration of token counts to time or length"
+    - "physical causal or signaling meaning"
+    - "empirical detector semantics"
+    - "physical force and free-fall meaning"
+    - "probability, rate, frequency, or observed-response meaning"
+    - "common effective geometry and universality"
+    - "matter action, stress energy, and universal coupling"
+    - "Einstein-equation derivation and exact-GR recovery"
+
+conflict_review_input:
+  blocking_conflicts_found: false
+  items_parent_must_resolve_or_state:
+    - conflict_id: "PHIL-CONFLICT-P7T03-01"
+      issue: "Familiar device names can import their ordinary physical meanings by implication."
+      required_resolution: "Define every name as a guarded formal source role and repeat the corresponding blocked interpretation at first use."
+      blocking_if_unresolved: true
+    - conflict_id: "PHIL-CONFLICT-P7T03-02"
+      issue: "A total token-partition identity can be overread as probability normalization."
+      required_resolution: "Call all weights bookkeeping coefficients and state the total-single-valued readout hypothesis explicitly."
+      blocking_if_unresolved: true
+    - conflict_id: "PHIL-CONFLICT-P7T03-03"
+      issue: "A partial readout silently loses bookkeeping mass if no no-readout token is declared."
+      required_resolution: "Either make the readout total with an explicit no-readout token or state only a restricted-domain inequality."
+      blocking_if_unresolved: true
+    - conflict_id: "PHIL-CONFLICT-P7T03-04"
+      issue: "Clock cycle count and signal arrival index can be combined into apparent duration or speed."
+      required_resolution: "Keep both as formal integer records and prohibit physical ratios without a separately derived interpretation map."
+      blocking_if_unresolved: true
+    - conflict_id: "PHIL-CONFLICT-P7T03-05"
+      issue: "Rod hop count can be mistaken for spatial length or metric distance."
+      required_resolution: "Use source-address or incidence-word language and prohibit physical units and target metric inputs."
+      blocking_if_unresolved: true
+    - conflict_id: "PHIL-CONFLICT-P7T03-06"
+      issue: "Signal arrival and detector trigger may be identified by shared English meaning rather than a typed source map."
+      required_resolution: "Require an explicit source-only token transduction with matching domain and codomain."
+      blocking_if_unresolved: true
+    - conflict_id: "PHIL-CONFLICT-P7T03-07"
+      issue: "No declared intervention can be overread as no physical force."
+      required_resolution: "Use unintervened baseline language and state that the intervention list is candidate-relative and not physically exhaustive."
+      blocking_if_unresolved: true
+    - conflict_id: "PHIL-CONFLICT-P7T03-08"
+      issue: "Matching formal traces across devices or sectors can be called physical universality."
+      required_resolution: "Limit the conclusion to formal source-token compatibility and leave physical universality open."
+      blocking_if_unresolved: true
+    - conflict_id: "PHIL-CONFLICT-P7T03-09"
+      issue: "Presentation naturality can be asserted while omitting transport of preparations, interventions, alphabets, or failure classes."
+      required_resolution: "Quantify over transport of the entire protocol tuple and an explicit token-alphabet bijection."
+      blocking_if_unresolved: true
+    - conflict_id: "PHIL-CONFLICT-P7T03-10"
+      issue: "A validator or successful checkpoint can be mistaken for scientific confirmation of the device semantics."
+      required_resolution: "Keep process receipts operational only and exclude them from every scientific premise."
+      blocking_if_unresolved: true
+
+parent_fusion_requirements:
+  required_positive_language:
+    - "within the stipulated finite proposal-only source protocol"
+    - "formal token"
+    - "bookkeeping response coefficient"
+    - "formal composition count"
+    - "source-only preparation and intervention"
+    - "candidate-relative cross-device compatibility"
+    - "blocked_adoption_open_continuation"
+  required_negative_language:
+    - "tick token is not physical time, duration, frequency, or proper time"
+    - "endpoint or hop token is not physical length or distance"
+    - "arrival token is not causal propagation or a physical signal"
+    - "trigger token is not empirical detection, observation, or calibration"
+    - "unintervened baseline is not physical free fall or absence of force"
+    - "bookkeeping response is not probability, frequency, or observed response"
+    - "formal compatibility is not common effective geometry or universal coupling"
+    - "no Einstein-equation or exact-GR recovery follows"
+  total_readout_guard: >-
+    Any token-mass equality must state that the history domain is finite and
+    the readout is total and single-valued, including an explicit
+    no-readout token when needed.
+  theorem_scope_guard: >-
+    Every exact result must quantify over the declared finite protocol,
+    source-only preparations and interventions, typed history domain, and
+    full presentation transport. No result may infer physical realization,
+    empirical interpretation, ontology adoption, or downstream authority.
+  witness_scope_guard: >-
+    Device witnesses are finite source-word and token-table constructions,
+    not apparatuses, experiments, trajectories, worldlines, signals,
+    measurements, rods, clocks, or free-fall systems in nature.
+
+adoption_ladder:
+  current:
+    artifact_status: "draft/control"
+    candidate_status: "proposal-only"
+    source_extension_status: "source-extension data"
+    adoption_status: "blocked_adoption_open_continuation"
+  protected_future_statuses:
+    canonical_ontology_candidate:
+      assigned_here: false
+      authority_required: "separate protected human Gate Chair authority"
+    adopted:
+      assigned_here: false
+      authority_required: "separate protected human Gate Chair authority"
+    rejected:
+      assigned_here: false
+      authority_required: "separate bounded stress or protected decision appropriate to the claim"
+    human_gated:
+      meaning: "status transition authority, not evidence that a transition should occur"
+  rule: >-
+    Internal exactness, task validation, token-role completeness, or
+    checkpoint success cannot move the suite upward on this ladder.
+
+no_target_import_audit:
+  target_topology_used: false
+  target_atlas_used: false
+  target_metric_used: false
+  scoped_metric_record_used_as_protocol_input: false
+  effective_geometry_used: false
+  causal_cone_used: false
+  physical_time_or_proper_time_used: false
+  physical_length_or_distance_used: false
+  empirical_detector_or_observable_used: false
+  empirical_calibration_used: false
+  physical_force_or_free_fall_used: false
+  stress_energy_used: false
+  matter_action_used: false
+  coupling_law_used: false
+  desired_einstein_equation_used: false
+  desired_exact_gr_behavior_used: false
+  validator_or_checkpoint_used_as_science: false
+  role_route_registry_or_handoff_used_as_science: false
+  generated_derivative_or_local_cache_used_as_authority: false
+  audit_result: "PASS_for_child_semantic_review"
+
+exact_gr_recovery_obligations:
+  - "Keep exact GR as a target benchmark rather than a premise of any source protocol."
+  - "Derive any physical clock, duration, or proper-time interpretation from independently authorized source-to-world structure."
+  - "Derive any physical rod, length, distance, or scale interpretation without importing the target metric."
+  - "Derive any causal signal, characteristic cone, or propagation-speed interpretation from later source propagation analysis."
+  - "Derive empirical detector semantics, calibration, and outcome mappings separately."
+  - "Derive a physical force law and the meaning of force-free or gravitational free fall separately."
+  - "Establish common behavior across matter sectors before any physical universality statement."
+  - "Derive matter action, stress energy, and universal coupling independently."
+  - "Derive Einstein equations and perform protected benchmark comparison only after all upstream burdens are met."
+  - "Preserve the separation among candidate mathematics, physical interpretation, canonical status, and benchmark authority."
+
+guarded_next_route_language:
+  qualifying_constructed_result: >-
+    After the parent fuses, validates, and checkpoints this P7-T03 packet,
+    one fresh bounded P7-T04 route may analyze principal symbols or source
+    propagation relations. It may use the protocol suite only as
+    proposal-only formal source-token data and may not infer a shared
+    physical cone, metric, detector semantics, universality, or coupling.
+  malformed_or_inconsistent_result: >-
+    Route one bounded same-milestone repair only if it names the failed
+    source-only typing, readout-totality, intervention, transport, or
+    cross-device condition and uses a materially different construction.
+  underdetermined_result: >-
+    Record the exact missing source-only preparation, intervention, readout,
+    comparison, or interpretation map. Current ontology does not derive that
+    map; this does not make the map impossible, and same-milestone
+    continuation remains open.
+  adoption_boundary: >-
+    Stop for protected human authority only if a later step actually requests
+    canonical status or physical interpretation adoption. Formal source-side
+    construction and stress work do not by themselves require adoption.
+
+limitations:
+  - "This artifact is same-context internal synthesis input, not independent review, external review, replication, human endorsement, or proof authority."
+  - "The audit evaluates semantic admissibility conditions before the parent fused TeX and machine specifications are final."
+  - "The audit does not demonstrate the parent mathematical identities or validate witness arithmetic."
+  - "Device-role names remain mnemonic source labels and supply no physical referent."
+  - "Formal execution supplies no actualization, realizability, experiment, observation, or empirical prediction."
+  - "Finite bookkeeping responses remain nonempirical even when nonnegative and normalized."
+  - "A formal composition index remains nonphysical even when called a cycle count or arrival index."
+  - "Candidate-relative omission of an intervention is not absence of all possible physical influence."
+  - "Matching token traces do not establish a common physical metric, cone, coupling, or equivalence principle."
+  - "P7-T04 propagation, P7-T05 coupling, P7-T06 action and stress-energy, Einstein-equation, and benchmark burdens remain open."
+
+status_vocabulary:
+  allowed_here:
+    - "draft/control"
+    - "proposal-only"
+    - "source-extension data"
+  protected_not_assigned_here:
+    - "canonical-ontology candidate"
+    - "adopted"
+    - "rejected"
+    - "human-gated"
+  governing_status_pair: "blocked_adoption_open_continuation"
+
+authority_flags:
+  canonical_ontology_modified: false
+  canonical_ontology_candidate_status_assigned: false
+  source_protocol_or_source_law_adopted: false
+  matter_ontology_adopted: false
+  physical_clock_or_time_established: false
+  physical_duration_or_proper_time_established: false
+  physical_rod_length_or_distance_established: false
+  physical_signal_or_causality_established: false
+  physical_probability_rate_or_frequency_established: false
+  empirical_detector_or_observation_established: false
+  empirical_calibration_established: false
+  physical_force_or_free_fall_established: false
+  physical_universality_or_equivalence_principle_established: false
+  physical_intervention_effect_established: false
+  target_atlas_or_metric_imported: false
+  effective_geometry_established: false
+  common_propagation_cone_established: false
+  stress_energy_established: false
+  matter_action_established: false
+  coupling_law_established: false
+  matter_coupling_derived: false
+  einstein_equations_derived: false
+  exact_gr_recovered: false
+  benchmark_promoted: false
+  proof_authority: false
+  publication_authority: false
+  external_review_claimed: false
+  completed_derivation_claimed: false
+  global_no_go_claimed: false
+  global_theory_rejection_claimed: false
+  future_source_extension_impossibility_claimed: false
+  validator_pass_counts_as_science: false
+  checkpoint_pass_counts_as_science: false
+  human_gate_requested_here: false
+  human_gate_required_before_adoption: true
+
+source_extension_classification:
+  category: "proposal-only finite source operational-protocol suite"
+  relation_to_current_ontology: "not_derived"
+  extension_kind: "conservative source-only preparation intervention readout and failure data"
+  target_gr_import: "forbidden"
+  status: "blocked_adoption_open_continuation"
+  exact_statement: >-
+    A finite source-token protocol suite may be internally exact while current
+    ontology still does not derive its preparations, intervention family,
+    token alphabets, readout maps, success predicates, failure classes,
+    cross-device identifications, or any physical interpretation.
+
+review_conclusion:
+  result: "semantically_admissible_with_explicit_guards"
+  decisive_statement: >-
+    SourceOperationalDeviceSuiteCandidate_v1 may construct five guarded
+    formal source roles with explicit finite preparations, histories,
+    interventions, token readouts, response traces, and failure classes, and
+    may establish candidate-relative token partition, rational closure,
+    intervention-difference, full-protocol transport, and cross-device
+    compatibility results. The role names and tokens carry no physical or
+    empirical meaning: tick is not time, hop is not length, arrival is not
+    causality, trigger is not detection, and an unintervened baseline is not
+    free fall. Current ontology does not derive or adopt the protocol suite;
+    adoption remains blocked while same-milestone continuation remains open.

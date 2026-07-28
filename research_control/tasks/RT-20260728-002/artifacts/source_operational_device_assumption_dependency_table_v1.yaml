@@ -1,0 +1,173 @@
+schema_id: "source_operational_device_assumption_dependency_table_v1"
+artifact_id: "P7T03-SOURCE-OPERATIONAL-DEVICE-ASSUMPTION-DEPENDENCY-TABLE-V1"
+task_id: "RT-20260728-002"
+job_id: "AJ-RT-20260728-002-001"
+candidate_id: "SourceOperationalDeviceSuiteCandidate_v1"
+status: "draft/control"
+candidate_status: "proposal-only"
+adoption_status: "blocked_adoption_open_continuation"
+
+assumptions:
+  - assumption_id: "P7T03-A1-FIXED-P7T01-TYPING"
+    statement: "SourceMatterIncidenceCandidate_v1 configurations transitions sectors and presentation maps are held fixed at proposal-only status."
+    provenance: "P7-T01"
+    derived_by_current_ontology: false
+    physical_assumption: false
+  - assumption_id: "P7T03-A2-FIXED-P7T02-KERNEL"
+    statement: "SourceMatterFiniteTransitionKernelCandidate_v1 supplies only a finite row-normalized rational bookkeeping update and formal histories."
+    provenance: "P7-T02"
+    adopted_source_law: false
+    physical_probability_or_time: false
+  - assumption_id: "P7T03-A3-FINITE-PREPARATIONS"
+    statement: "Each protocol declares a finite nonempty preparation set with rational bookkeeping states and formal horizons."
+    provenance: "new proposal input"
+    derived_by_current_ontology: false
+  - assumption_id: "P7T03-A4-SOURCE-INTERVENTIONS"
+    statement: "Each intervention label changes only declared source controls or preparation records."
+    provenance: "new proposal input"
+    target_import_forbidden: true
+  - assumption_id: "P7T03-A5-FORMAL-TOKEN-ALPHABETS"
+    statement: "Each protocol has a finite formal token alphabet carrying no empirical observation semantics."
+    provenance: "new proposal input"
+    empirical_semantics: false
+  - assumption_id: "P7T03-A6-TOTAL-READOUT"
+    statement: "Each admitted finite history receives exactly one source-only token."
+    provenance: "new proposal input"
+    derived_by_current_ontology: false
+  - assumption_id: "P7T03-A7-GUARDED-ROLE-NAMES"
+    statement: "Clock_src Rod_src Signal_src Detector_src and FreeFall_src are protocol-role names only."
+    provenance: "semantic guard"
+    physical_interpretation: false
+  - assumption_id: "P7T03-A8-TRANSPORTED-PROTOCOL-DATA"
+    statement: "Compatible source-presentation isomorphisms transport preparations interventions histories alphabets and readout maps bijectively."
+    provenance: "new proposal compatibility requirement"
+    target_covariance: false
+  - assumption_id: "P7T03-A9-DISJOINT-CROSS-DEVICE-CONTROLS"
+    statement: "Clock and signal controls may be declared on disjoint source components and paired systems may carry explicit history bijections."
+    provenance: "new finite control input"
+    physical_independence_or_universality: false
+
+assumption_counts:
+  total: 9
+  inherited_proposal_only_basis: 2
+  new_source_protocol_inputs: 6
+  semantic_guard_inputs: 1
+  target_geometry_assumptions: 0
+  proper_time_assumptions: 0
+  physical_length_assumptions: 0
+  physical_causality_assumptions: 0
+  physical_probability_assumptions: 0
+  empirical_detector_assumptions: 0
+  physical_free_fall_assumptions: 0
+  process_authority_assumptions: 0
+  free_coupling_constants: 0
+  dimensional_scales: 0
+
+dependencies:
+  - dependency_id: "P7T03-D01-V21-PLAN"
+    path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+    sha256: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+    authority_use: "P7-T03 objective outputs implementation and done criteria"
+  - dependency_id: "P7T03-D02-P7T01-CANDIDATE"
+    path: "research_control/tasks/RT-20260727-007/artifacts/source_matter_ontology_and_sector_taxonomy_v1.tex"
+    sha256: "8d160217bf223078a11bc63fde6593c11c39d5b50d9c48fbad7b12084f8a752d"
+    authority_use: "proposal-only configurations transitions sectors and presentation transport"
+  - dependency_id: "P7T03-D03-P7T01-SPEC"
+    path: "research_control/tasks/RT-20260727-007/artifacts/source_matter_ontology_spec_v1.yaml"
+    sha256: "a5563edddaff90ebab6ac4d3d4e2dc0425fea23b5f27c1c6174cb28b1f4652be"
+    authority_use: "machine-readable P7-T01 typing and explicit dynamics absence"
+  - dependency_id: "P7T03-D04-P7T02-CANDIDATE"
+    path: "research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_candidate_v1.tex"
+    sha256: "65ac095f5cdf4c2e319365c8b0e024d031b19d9fc2b8102e59997afa1e8f9129"
+    authority_use: "proposal-only finite kernel update history weights and semantic limits"
+  - dependency_id: "P7T03-D05-P7T02-SPEC"
+    path: "research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_spec_v1.yaml"
+    sha256: "936d2aa6dfea3d263675468ff581190240efde84c1241ad971a8c1383a065a97"
+    authority_use: "machine-readable finite control update and theorem contract"
+  - dependency_id: "P7T03-D06-P7T02-CONTROLS"
+    path: "research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_controls_v1.yaml"
+    sha256: "af7fc976590b4ca82fca5c34c6f30091f6599428b8005cf3932ce03f92f7d779"
+    authority_use: "two-state and product finite bookkeeping controls"
+  - dependency_id: "P7T03-D07-P7T02-COMPLETION"
+    path: "research_control/tasks/RT-20260728-001/jobs/completions/AJC-AJ-RT-20260728-001-001.yaml"
+    sha256: "0355c30c700cd5a8a7c35e81bd2d0b3f833efa8be99be00946734988dd570c3d"
+    authority_use: "completed proposal-only dependency and open operational burden"
+  - dependency_id: "P7T03-D08-HANDOFF-0891"
+    path: "research_control/handoffs/handoff-0891.yaml"
+    sha256: "690197127ce9df4c2eaf9f706646a34212a2421df25e49c35cc374badd31353b"
+    authority_use: "selected P7-T03 route and inherited claim boundary"
+  - dependency_id: "P7T03-D09-FRONTIER-THEOREMS"
+    path: "research_control/design/frontier_theorem_inventory.md"
+    sha256: "fa7d97207315b49517e6e05bc3ae5b6bfcd0e335b669ba6a98371e55b4721600"
+    authority_use: "current theorem status and frozen Gate B boundary"
+  - dependency_id: "P7T03-D10-METRIC-USE-LEDGER"
+    path: "registries/METRIC_USE_LEDGER.csv"
+    sha256: "108b1b56d9ef2d2d6cd30d7caa77461c813d8729890afd537206c6f94a1f24cb"
+    authority_use: "forbidden metric and physical-semantics use audit"
+  - dependency_id: "P7T03-D11-LEGACY-BRIDGE-TARGET"
+    path: "research_control/tasks/RT-20260614-257/artifacts/286_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_MATTER_COUPLING_BRIDGE_TARGET_V1_FORMALIZATION.tex"
+    sha256: "3d1c6dfb2ea543c8ea455ee2f3553e3cac76e3072902213ed07aff0db514605e"
+    authority_use: "historical target-side bridge requirements used only as a forbidden-input contrast"
+  - dependency_id: "P7T03-D12-LEGACY-OPERATION-LAWS"
+    path: "research_control/tasks/RT-20260702-064/artifacts/source_certificate_operation_laws_v1.tex"
+    sha256: "2ebc781bd82b4d39ab394255e5d3836d992625bdece8b8f912a8ab809669b986"
+    authority_use: "historical source operation-law notation and target-import caution"
+  - dependency_id: "P7T03-D13-ROOT-GUIDANCE"
+    path: "AGENTS.md"
+    sha256: "3a987a7ae1fb0bc4f91dbcbe0e1432eeecacf7febc1256e8498860016f4baf29"
+    authority_use: "source-extension status vocabulary and no-promotion route boundary"
+  - dependency_id: "P7T03-D14-RESEARCH-CONTROL-GUIDANCE"
+    path: "research_control/AGENTS.md"
+    sha256: "c93e14bb2cc6e7bbc5c299085f8843ca84d714cdaef99b2b78a46715b5b310ae"
+    authority_use: "AgentJob completion and claim-gate requirements"
+
+dependency_counts:
+  total: 14
+  canonical_or_registered_science_sources: 8
+  control_and_guidance_sources: 4
+  historical_negative_contrast_sources: 2
+  target_sources_used_as_premises: 0
+  generated_derivatives_used_as_authority: 0
+
+new_candidate_consequences:
+  - consequence_id: "P7T03-C1-FINITE-RESPONSE"
+    statement: "Every formal token response is a finite nonnegative rational."
+  - consequence_id: "P7T03-C2-TOKEN-PARTITION"
+    statement: "A total single-valued readout partitions total bookkeeping mass across the token alphabet."
+  - consequence_id: "P7T03-C3-INTERVENTION-ZERO-SUM"
+    statement: "For equal-mass baseline and intervention preparations the tokenwise intervention difference sums to zero."
+  - consequence_id: "P7T03-C4-PRESENTATION-NATURALITY"
+    statement: "Transported source protocols have identical responses after token relabeling."
+  - consequence_id: "P7T03-C5-CROSS-DEVICE-CONSISTENCY"
+    statement: "Declared history bijections induce exact formal token-response equalities."
+  - consequence_id: "P7T03-C6-INDEPENDENT-FACTOR"
+    statement: "Exactly Cartesian clock and signal protocols have factorized joint formal token responses."
+
+forbidden_inferences:
+  - "formal tick token to proper time or duration"
+  - "formal endpoint or hop token to physical length"
+  - "formal arrival token to causality or propagation speed"
+  - "formal trigger token to empirical detection or observation"
+  - "baseline intervention contrast to gravitational free fall or geodesic motion"
+  - "bookkeeping response to physical probability"
+  - "source-presentation naturality to target covariance"
+  - "cross-device token equality to universal physical coupling"
+  - "candidate exactness to canonical adoption proof or completed derivation"
+
+authority_limits:
+  canonical_ontology_modified: false
+  source_law_adopted: false
+  operational_semantics_adopted: false
+  target_geometry_imported: false
+  empirical_calibration_imported: false
+  physical_time_established: false
+  physical_length_established: false
+  physical_causality_established: false
+  physical_probability_established: false
+  detector_semantics_established: false
+  free_fall_semantics_established: false
+  matter_coupling_derived: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  proof_authority: false
+  physics_promotion_authorized: false

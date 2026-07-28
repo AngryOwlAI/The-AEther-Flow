@@ -1,0 +1,505 @@
+{
+  "artifact_hashes": {
+    "child_phys_math_p7_t03_operational_devices.yaml": "6c45495d3c6e8c84a949d133f66335d842e9a619042e5039acd6f62b1e4a117f",
+    "child_phys_phil_p7_t03_operational_devices.yaml": "436e0c0a3312fac11286de08894fea011937b998bfe554db0a42f7759dbe621d",
+    "parent_conflict_review_p7_t03_operational_devices.yaml": "6de99ae4aaa4e0f1a895b8bf80763e114c5248f35caa1fc4288857715a52ace9",
+    "parent_fusion_notes_p7_t03_operational_devices.md": "5e70cbc28c2c925f30b9023487adee4c3973c39ce0984728b71a0e0f2690813f",
+    "source_operational_device_assumption_dependency_table_v1.yaml": "12ffa0ce0f1d1f25ce0fc8c00f25ec1171f04d8a8454e21aaf48ac1f52179a33",
+    "source_operational_device_controls_v1.yaml": "7b5b7f39318bd4aa39e778c17ab3fd410f2498f20b52b03c6bd86045bdffeee7",
+    "source_operational_device_suite_candidate_v1.tex": "d6c818ee29f1a7e659e2f454aec21431d680b3d2d4df048fcf36f4aba87ba22a",
+    "source_operational_device_suite_spec_v1.yaml": "417c604bad008b85b153718ae04aa43307c2ff3cfa3a5c3f242e70b013c86ba4"
+  },
+  "authority": "operational_validation_only",
+  "authority_limits": {
+    "canonical_ontology_modified": false,
+    "distance_to_gr_changed": true,
+    "operational_semantics_adopted": false,
+    "physical_causality_established": false,
+    "physical_detector_established": false,
+    "physical_free_fall_established": false,
+    "physical_length_established": false,
+    "physical_probability_established": false,
+    "physical_time_established": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "source_law_adopted": false,
+    "theorem_truth_inferred": false,
+    "validator_pass_counts_as_physics": false
+  },
+  "candidate_id": "SourceOperationalDeviceSuiteCandidate_v1",
+  "check_count": 86,
+  "checks": [
+    {
+      "check_id": "artifact_exists::source_operational_device_suite_candidate_v1.tex",
+      "detail": "required task-local artifact source_operational_device_suite_candidate_v1.tex",
+      "status": "PASS"
+    },
+    {
+      "check_id": "artifact_exists::source_operational_device_suite_spec_v1.yaml",
+      "detail": "required task-local artifact source_operational_device_suite_spec_v1.yaml",
+      "status": "PASS"
+    },
+    {
+      "check_id": "artifact_exists::source_operational_device_controls_v1.yaml",
+      "detail": "required task-local artifact source_operational_device_controls_v1.yaml",
+      "status": "PASS"
+    },
+    {
+      "check_id": "artifact_exists::source_operational_device_assumption_dependency_table_v1.yaml",
+      "detail": "required task-local artifact source_operational_device_assumption_dependency_table_v1.yaml",
+      "status": "PASS"
+    },
+    {
+      "check_id": "artifact_exists::child_phys_math_p7_t03_operational_devices.yaml",
+      "detail": "required task-local artifact child_phys_math_p7_t03_operational_devices.yaml",
+      "status": "PASS"
+    },
+    {
+      "check_id": "artifact_exists::child_phys_phil_p7_t03_operational_devices.yaml",
+      "detail": "required task-local artifact child_phys_phil_p7_t03_operational_devices.yaml",
+      "status": "PASS"
+    },
+    {
+      "check_id": "artifact_exists::parent_conflict_review_p7_t03_operational_devices.yaml",
+      "detail": "required task-local artifact parent_conflict_review_p7_t03_operational_devices.yaml",
+      "status": "PASS"
+    },
+    {
+      "check_id": "artifact_exists::parent_fusion_notes_p7_t03_operational_devices.md",
+      "detail": "required task-local artifact parent_fusion_notes_p7_t03_operational_devices.md",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec::schema_id",
+      "detail": "expected 'source_operational_device_suite_spec_v1'; observed 'source_operational_device_suite_spec_v1'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec::candidate_status",
+      "detail": "expected 'proposal-only'; observed 'proposal-only'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec::candidate_id",
+      "detail": "expected 'SourceOperationalDeviceSuiteCandidate_v1'; observed 'SourceOperationalDeviceSuiteCandidate_v1'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec::response_id",
+      "detail": "expected 'SourceOperationalResponseTrace_v1'; observed 'SourceOperationalResponseTrace_v1'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec::adoption_status",
+      "detail": "expected 'blocked_adoption_open_continuation'; observed 'blocked_adoption_open_continuation'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec::fixed_basis.source_matter_candidate_id",
+      "detail": "expected 'SourceMatterIncidenceCandidate_v1'; observed 'SourceMatterIncidenceCandidate_v1'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec::fixed_basis.transition_kernel_candidate_id",
+      "detail": "expected 'SourceMatterFiniteTransitionKernelCandidate_v1'; observed 'SourceMatterFiniteTransitionKernelCandidate_v1'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec::protocol_type.name",
+      "detail": "expected 'finite source operational protocol'; observed 'finite source operational protocol'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec::protocol_type.fields.r.target_observable_input",
+      "detail": "expected False; observed False",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec::formal_histories.response.codomain",
+      "detail": "expected 'Q_nonnegative'; observed 'Q_nonnegative'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec::result_branches.malformed.symbol",
+      "detail": "expected 'bottom_D'; observed 'bottom_D'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec::result_branches.underdetermined.symbol",
+      "detail": "expected 'undetermined_D'; observed 'undetermined_D'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec::result_branches.cross_device_inconsistent.symbol",
+      "detail": "expected 'inconsistent_D'; observed 'inconsistent_D'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec::source_extension_classification.relation_to_current_ontology",
+      "detail": "expected 'not_derived'; observed 'not_derived'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec::five_device_roles",
+      "detail": "observed ['Clock_src', 'Detector_src', 'FreeFall_src', 'Rod_src', 'Signal_src']",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec::device::Clock_src::complete",
+      "detail": "Clock_src must declare all protocol fields and guarded meanings",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec::device::Detector_src::complete",
+      "detail": "Detector_src must declare all protocol fields and guarded meanings",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec::device::FreeFall_src::complete",
+      "detail": "FreeFall_src must declare all protocol fields and guarded meanings",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec::device::Rod_src::complete",
+      "detail": "Rod_src must declare all protocol fields and guarded meanings",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec::device::Signal_src::complete",
+      "detail": "Signal_src must declare all protocol fields and guarded meanings",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec::theorem_ids",
+      "detail": "observed ['P7T03-THM-FINITE-TOKEN-RESPONSE-CLOSURE-001', 'P7T03-THM-SOURCE-PRESENTATION-NATURALITY-001']",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec::independent_systems",
+      "detail": "Clock_src and Signal_src must be declared independent source systems",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec::cross_device_contracts",
+      "detail": "three explicit cross-device contracts are required",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec::authority_flags_false",
+      "detail": "all protected authority flags must remain false",
+      "status": "PASS"
+    },
+    {
+      "check_id": "controls::required_ids",
+      "detail": "observed ['P7T03-CONTROL-CLOCK-TWO-STATE-001', 'P7T03-CONTROL-CROSS-DEVICE-INCONSISTENT-001', 'P7T03-CONTROL-DETECTOR-TRANSDUCER-001', 'P7T03-CONTROL-FREEFALL-BASELINE-INTERVENTION-001', 'P7T03-CONTROL-INDEPENDENT-CLOCK-SIGNAL-001', 'P7T03-CONTROL-MALFORMED-PARTIAL-READOUT-001', 'P7T03-CONTROL-MALFORMED-TARGET-IMPORT-001', 'P7T03-CONTROL-MALFORMED-TOKEN-OUTSIDE-ALPHABET-001', 'P7T03-CONTROL-NULL-NO-EVENT-001', 'P7T03-CONTROL-ROD-ADDRESS-CHAIN-001', 'P7T03-CONTROL-SIGNAL-CHAIN-001', 'P7T03-CONTROL-UNDERDETERMINED-READOUT-001']",
+      "status": "PASS"
+    },
+    {
+      "check_id": "controls::clock_response",
+      "detail": "clock token response must be exactly 1/4 plus 3/4",
+      "status": "PASS"
+    },
+    {
+      "check_id": "controls::P7T03-CONTROL-ROD-ADDRESS-CHAIN-001::response",
+      "detail": "P7T03-CONTROL-ROD-ADDRESS-CHAIN-001 response must be exactly 1/4 plus 3/4",
+      "status": "PASS"
+    },
+    {
+      "check_id": "controls::P7T03-CONTROL-SIGNAL-CHAIN-001::response",
+      "detail": "P7T03-CONTROL-SIGNAL-CHAIN-001 response must be exactly 1/4 plus 3/4",
+      "status": "PASS"
+    },
+    {
+      "check_id": "controls::P7T03-CONTROL-DETECTOR-TRANSDUCER-001::response",
+      "detail": "P7T03-CONTROL-DETECTOR-TRANSDUCER-001 response must be exactly 1/4 plus 3/4",
+      "status": "PASS"
+    },
+    {
+      "check_id": "controls::signal_detector_agreement",
+      "detail": "paired source-history responses must agree exactly",
+      "status": "PASS"
+    },
+    {
+      "check_id": "controls::intervention_difference",
+      "detail": "formal intervention difference must be +1/2 and -1/2",
+      "status": "PASS"
+    },
+    {
+      "check_id": "controls::independent_factorization",
+      "detail": "joint response must be exact formal product 1/16",
+      "status": "PASS"
+    },
+    {
+      "check_id": "controls::valid_no_event",
+      "detail": "identity-only no-event branch must remain valid and nonphysical",
+      "status": "PASS"
+    },
+    {
+      "check_id": "controls::malformed_count",
+      "detail": "observed 3",
+      "status": "PASS"
+    },
+    {
+      "check_id": "controls::malformed_fail_closed",
+      "detail": "every malformed protocol must fail closed",
+      "status": "PASS"
+    },
+    {
+      "check_id": "controls::underdetermined_distinctions",
+      "detail": "missing readout data must remain distinct from no-event and malformed",
+      "status": "PASS"
+    },
+    {
+      "check_id": "controls::cross_device_inconsistent",
+      "detail": "paired 1/4 and 3/4 responses must fail only the formal contract",
+      "status": "PASS"
+    },
+    {
+      "check_id": "assumptions::count",
+      "detail": "observed 9",
+      "status": "PASS"
+    },
+    {
+      "check_id": "dependencies::count",
+      "detail": "observed 14",
+      "status": "PASS"
+    },
+    {
+      "check_id": "assumptions::no_target_or_physical_inputs",
+      "detail": "all target empirical physical process free-coupling and scale counts must be zero",
+      "status": "PASS"
+    },
+    {
+      "check_id": "assumptions::new_consequence_count",
+      "detail": "six materially new candidate-level consequences are required",
+      "status": "PASS"
+    },
+    {
+      "check_id": "child::child_phys_math::identity",
+      "detail": "child_phys_math must be completed with perspective physicist_mathematician",
+      "status": "PASS"
+    },
+    {
+      "check_id": "child::child_phys_math::no_promotion",
+      "detail": "child_phys_math must preserve source-law and promotion blocks",
+      "status": "PASS"
+    },
+    {
+      "check_id": "child::child_phys_phil::identity",
+      "detail": "child_phys_phil must be completed with perspective physicist_philosopher",
+      "status": "PASS"
+    },
+    {
+      "check_id": "child::child_phys_phil::no_promotion",
+      "detail": "child_phys_phil must preserve source-law and promotion blocks",
+      "status": "PASS"
+    },
+    {
+      "check_id": "parent::conflict_resolution",
+      "detail": "parent conflict review must resolve every blocking difference",
+      "status": "PASS"
+    },
+    {
+      "check_id": "parent::fusion_markers",
+      "detail": "fusion notes must preserve consensus contributions resolutions limits and boundary",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex::marker::SourceOperationalDeviceSuiteCandidate",
+      "detail": "required TeX marker 'SourceOperationalDeviceSuiteCandidate'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex::marker::P7-T03",
+      "detail": "required TeX marker 'P7-T03'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex::marker::blocked\\_adoption\\_open\\_continuation",
+      "detail": "required TeX marker 'blocked\\\\_adoption\\\\_open\\\\_continuation'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex::marker::\\Device=(\\Control,P,I,\\Tokens,r,S,F)",
+      "detail": "required TeX marker '\\\\Device=(\\\\Control,P,I,\\\\Tokens,r,S,F)'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex::marker::\\Response_{\\Device,p,i,n}(a)",
+      "detail": "required TeX marker '\\\\Response_{\\\\Device,p,i,n}(a)'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex::marker::Finite token-response closure and partition",
+      "detail": "required TeX marker 'Finite token-response closure and partition'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex::marker::Source-presentation naturality",
+      "detail": "required TeX marker 'Source-presentation naturality'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex::marker::R(\\mathsf{tick}_1)=\\frac14",
+      "detail": "required TeX marker 'R(\\\\mathsf{tick}_1)=\\\\frac14'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex::marker::R_{\\mathrm{joint}}",
+      "detail": "required TeX marker 'R_{\\\\mathrm{joint}}'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex::marker::\\frac1{16}",
+      "detail": "required TeX marker '\\\\frac1{16}'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex::marker::not proper",
+      "detail": "required TeX marker 'not proper'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex::marker::not physical length",
+      "detail": "required TeX marker 'not physical length'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex::marker::not a causal signal",
+      "detail": "required TeX marker 'not a causal signal'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex::marker::not empirical detection",
+      "detail": "required TeX marker 'not empirical detection'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex::marker::not gravitational free fall",
+      "detail": "required TeX marker 'not gravitational free fall'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex::marker::constructed\\_candidate",
+      "detail": "required TeX marker 'constructed\\\\_candidate'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex::marker::current ontology does not derive",
+      "detail": "required TeX marker 'current ontology does not derive'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex::marker::physical probabilities",
+      "detail": "required TeX marker 'physical probabilities'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex::marker::common physical propagation",
+      "detail": "required TeX marker 'common physical propagation'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "source_hash::implementations_plans/recommendations_implementation_plan_continue_task-v21.md",
+      "detail": "expected 4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087; observed 4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087",
+      "status": "PASS"
+    },
+    {
+      "check_id": "source_hash::research_control/tasks/RT-20260727-007/artifacts/source_matter_ontology_and_sector_taxonomy_v1.tex",
+      "detail": "expected 8d160217bf223078a11bc63fde6593c11c39d5b50d9c48fbad7b12084f8a752d; observed 8d160217bf223078a11bc63fde6593c11c39d5b50d9c48fbad7b12084f8a752d",
+      "status": "PASS"
+    },
+    {
+      "check_id": "source_hash::research_control/tasks/RT-20260727-007/artifacts/source_matter_ontology_spec_v1.yaml",
+      "detail": "expected a5563edddaff90ebab6ac4d3d4e2dc0425fea23b5f27c1c6174cb28b1f4652be; observed a5563edddaff90ebab6ac4d3d4e2dc0425fea23b5f27c1c6174cb28b1f4652be",
+      "status": "PASS"
+    },
+    {
+      "check_id": "source_hash::research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_candidate_v1.tex",
+      "detail": "expected 65ac095f5cdf4c2e319365c8b0e024d031b19d9fc2b8102e59997afa1e8f9129; observed 65ac095f5cdf4c2e319365c8b0e024d031b19d9fc2b8102e59997afa1e8f9129",
+      "status": "PASS"
+    },
+    {
+      "check_id": "source_hash::research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_spec_v1.yaml",
+      "detail": "expected 936d2aa6dfea3d263675468ff581190240efde84c1241ad971a8c1383a065a97; observed 936d2aa6dfea3d263675468ff581190240efde84c1241ad971a8c1383a065a97",
+      "status": "PASS"
+    },
+    {
+      "check_id": "source_hash::research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_controls_v1.yaml",
+      "detail": "expected af7fc976590b4ca82fca5c34c6f30091f6599428b8005cf3932ce03f92f7d779; observed af7fc976590b4ca82fca5c34c6f30091f6599428b8005cf3932ce03f92f7d779",
+      "status": "PASS"
+    },
+    {
+      "check_id": "source_hash::research_control/tasks/RT-20260728-001/jobs/completions/AJC-AJ-RT-20260728-001-001.yaml",
+      "detail": "expected 0355c30c700cd5a8a7c35e81bd2d0b3f833efa8be99be00946734988dd570c3d; observed 0355c30c700cd5a8a7c35e81bd2d0b3f833efa8be99be00946734988dd570c3d",
+      "status": "PASS"
+    },
+    {
+      "check_id": "source_hash::research_control/handoffs/handoff-0891.yaml",
+      "detail": "expected 690197127ce9df4c2eaf9f706646a34212a2421df25e49c35cc374badd31353b; observed 690197127ce9df4c2eaf9f706646a34212a2421df25e49c35cc374badd31353b",
+      "status": "PASS"
+    },
+    {
+      "check_id": "source_hash::research_control/design/frontier_theorem_inventory.md",
+      "detail": "expected fa7d97207315b49517e6e05bc3ae5b6bfcd0e335b669ba6a98371e55b4721600; observed fa7d97207315b49517e6e05bc3ae5b6bfcd0e335b669ba6a98371e55b4721600",
+      "status": "PASS"
+    },
+    {
+      "check_id": "source_hash::registries/METRIC_USE_LEDGER.csv",
+      "detail": "expected 108b1b56d9ef2d2d6cd30d7caa77461c813d8729890afd537206c6f94a1f24cb; observed 108b1b56d9ef2d2d6cd30d7caa77461c813d8729890afd537206c6f94a1f24cb",
+      "status": "PASS"
+    },
+    {
+      "check_id": "source_hash::research_control/tasks/RT-20260614-257/artifacts/286_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_MATTER_COUPLING_BRIDGE_TARGET_V1_FORMALIZATION.tex",
+      "detail": "expected 3d1c6dfb2ea543c8ea455ee2f3553e3cac76e3072902213ed07aff0db514605e; observed 3d1c6dfb2ea543c8ea455ee2f3553e3cac76e3072902213ed07aff0db514605e",
+      "status": "PASS"
+    },
+    {
+      "check_id": "source_hash::research_control/tasks/RT-20260702-064/artifacts/source_certificate_operation_laws_v1.tex",
+      "detail": "expected 2ebc781bd82b4d39ab394255e5d3836d992625bdece8b8f912a8ab809669b986; observed 2ebc781bd82b4d39ab394255e5d3836d992625bdece8b8f912a8ab809669b986",
+      "status": "PASS"
+    }
+  ],
+  "failure_count": 0,
+  "finding_counts": {
+    "assumption_count": 9,
+    "child_review_count": 2,
+    "control_count": 12,
+    "cross_device_contract_count": 3,
+    "cross_device_inconsistent_count": 1,
+    "dependency_count": 14,
+    "device_role_count": 5,
+    "independent_operational_system_count": 2,
+    "malformed_count": 3,
+    "physical_interpretation_claim_count": 0,
+    "theorem_count": 2,
+    "underdetermined_count": 1,
+    "unresolved_conflict_count": 0,
+    "valid_independent_count": 1,
+    "valid_no_event_count": 1,
+    "valid_positive_count": 5
+  },
+  "job_id": "AJ-RT-20260728-002-001",
+  "schema_id": "source_operational_device_validation_v1",
+  "source_hashes": {
+    "implementations_plans/recommendations_implementation_plan_continue_task-v21.md": "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087",
+    "registries/METRIC_USE_LEDGER.csv": "108b1b56d9ef2d2d6cd30d7caa77461c813d8729890afd537206c6f94a1f24cb",
+    "research_control/design/frontier_theorem_inventory.md": "fa7d97207315b49517e6e05bc3ae5b6bfcd0e335b669ba6a98371e55b4721600",
+    "research_control/handoffs/handoff-0891.yaml": "690197127ce9df4c2eaf9f706646a34212a2421df25e49c35cc374badd31353b",
+    "research_control/tasks/RT-20260614-257/artifacts/286_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_MATTER_COUPLING_BRIDGE_TARGET_V1_FORMALIZATION.tex": "3d1c6dfb2ea543c8ea455ee2f3553e3cac76e3072902213ed07aff0db514605e",
+    "research_control/tasks/RT-20260702-064/artifacts/source_certificate_operation_laws_v1.tex": "2ebc781bd82b4d39ab394255e5d3836d992625bdece8b8f912a8ab809669b986",
+    "research_control/tasks/RT-20260727-007/artifacts/source_matter_ontology_and_sector_taxonomy_v1.tex": "8d160217bf223078a11bc63fde6593c11c39d5b50d9c48fbad7b12084f8a752d",
+    "research_control/tasks/RT-20260727-007/artifacts/source_matter_ontology_spec_v1.yaml": "a5563edddaff90ebab6ac4d3d4e2dc0425fea23b5f27c1c6174cb28b1f4652be",
+    "research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_candidate_v1.tex": "65ac095f5cdf4c2e319365c8b0e024d031b19d9fc2b8102e59997afa1e8f9129",
+    "research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_controls_v1.yaml": "af7fc976590b4ca82fca5c34c6f30091f6599428b8005cf3932ce03f92f7d779",
+    "research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_spec_v1.yaml": "936d2aa6dfea3d263675468ff581190240efde84c1241ad971a8c1383a065a97",
+    "research_control/tasks/RT-20260728-001/jobs/completions/AJC-AJ-RT-20260728-001-001.yaml": "0355c30c700cd5a8a7c35e81bd2d0b3f833efa8be99be00946734988dd570c3d"
+  },
+  "status": "PASS",
+  "task_id": "RT-20260728-002",
+  "theorem_ids": [
+    "P7T03-THM-FINITE-TOKEN-RESPONSE-CLOSURE-001",
+    "P7T03-THM-SOURCE-PRESENTATION-NATURALITY-001"
+  ],
+  "validated_at": "2026-07-28T05:45:00Z"
+}

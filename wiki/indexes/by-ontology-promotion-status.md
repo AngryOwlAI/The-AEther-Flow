@@ -425,6 +425,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V21-P6-T06-UNIQUENESS-COVARIANCE-ROBUSTNESS-ADMISSIBILITY-OBSTRUCTION-V1` `research_control/tasks/RT-20260726-010/artifacts/uniqueness_covariance_robustness_admissibility_obstruction_v1.tex`
 - `TEX-V21-P7-T01-SOURCE-MATTER-ONTOLOGY-SECTOR-TAXONOMY-V1` `research_control/tasks/RT-20260727-007/artifacts/source_matter_ontology_and_sector_taxonomy_v1.tex`
 - `TEX-V21-P7-T02-SOURCE-MATTER-FINITE-TRANSITION-KERNEL-V1` `research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_candidate_v1.tex`
+- `TEX-V21-P7-T03-SOURCE-OPERATIONAL-DEVICE-SUITE-V1` `research_control/tasks/RT-20260728-002/artifacts/source_operational_device_suite_candidate_v1.tex`
 
 ## superseded
 

@@ -1,0 +1,675 @@
+schema_id: "v21_p7_t03_child_phys_math_operational_devices_v1"
+artifact_id: "P7T03-CHILD-PHYS-MATH-OPERATIONAL-DEVICES-V1"
+task_id: "RT-20260728-002"
+job_id: "AJ-RT-20260728-002-001"
+decision_id: "DDR-20260728-002"
+plan_task_id: "P7-T03"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+artifact_status: "draft/control"
+candidate_id: "SourceOperationalDeviceSuiteCandidate_v1"
+response_trace_id: "SourceOperationalResponseTrace_v1"
+candidate_status: "proposal-only"
+adoption_status: "blocked_adoption_open_continuation"
+review_context: "internal parent-child synthesis input"
+target_derivation_milestone: "matter_coupling"
+milestone_burden: "Give operational meaning to effective geometry and matter response."
+claim_boundary_id: "CB-V21-P7-T03-SOURCE-OPERATIONAL-DEVICES-001"
+
+source_basis:
+  - path: "SOUL.md"
+    sha256: "bde009787dd94f6648853649da82ac5163cabc45e425117be9e69eb0c354ef8a"
+    authority_use: "repository mathematical and scientific reasoning discipline"
+  - path: "AGENTS.md"
+    sha256: "3a987a7ae1fb0bc4f91dbcbe0e1432eeecacf7febc1256e8498860016f4baf29"
+    authority_use: "root source-only and no-promotion boundary"
+  - path: "research_control/AGENTS.md"
+    sha256: "c93e14bb2cc6e7bbc5c299085f8843ca84d714cdaef99b2b78a46715b5b310ae"
+    authority_use: "tracked research-control and candidate-status constraints"
+  - path: ".agents/roles/physics/candidate-constructor.v0.2.0.md"
+    sha256: "f6534fd2950c2a6eefb8f2a4b255cd0794ceeb1462556be60af288bceb9d51d5"
+    authority_use: "one bounded proposal-only construction and no-fog result discipline"
+  - path: "research_control/tasks/RT-20260728-002/DDR-20260728-002.md"
+    sha256: "1e9630ba1cd8da8904476531f5718216cf68d99366fc12acf440db31d9b58548"
+    authority_use: "active construction decision, mathematical payload, synthesis rule, and claim boundary"
+  - path: "research_control/tasks/RT-20260728-002/jobs/AJ-RT-20260728-002-001.yaml"
+    sha256: "54b53058f62b738d594c89127cf8c1aad0317de0c25c5025a40f72edaa047208"
+    authority_use: "immutable outer-AgentJob scope, required protocol roles, controls, and authority limits"
+  - path: "research_control/tasks/RT-20260728-002/roles/candidate-constructor@0.2.0--RT-20260728-002.yaml"
+    sha256: "4bc142a7c02b72ac3b29acad5824111260650d56d637e9b529b9aaa0b2c88653"
+    authority_use: "one-job P7-T03 execution overlay"
+  - path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+    sha256: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+    authority_use: "P7-T03 source-device objective, required outputs, execution tests, and stop conditions"
+  - path: "research_control/tasks/RT-20260727-007/artifacts/source_matter_ontology_and_sector_taxonomy_v1.tex"
+    sha256: "8d160217bf223078a11bc63fde6593c11c39d5b50d9c48fbad7b12084f8a752d"
+    authority_use: "fixed P7-T01 configurations, transitions, sectors, and source-presentation transport"
+  - path: "research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_candidate_v1.tex"
+    sha256: "65ac095f5cdf4c2e319365c8b0e024d031b19d9fc2b8102e59997afa1e8f9129"
+    authority_use: "fixed P7-T02 finite control system, uniform kernel, update, products, and equivariance"
+  - path: "research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_spec_v1.yaml"
+    sha256: "936d2aa6dfea3d263675468ff581190240efde84c1241ad971a8c1383a065a97"
+    authority_use: "machine-readable P7-T02 types and exact semantic limits"
+  - path: "research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_controls_v1.yaml"
+    sha256: "af7fc976590b4ca82fca5c34c6f30091f6599428b8005cf3932ce03f92f7d779"
+    authority_use: "finite analytic, independent, interacting, malformed, and underdetermined predecessor controls"
+
+fixed_source_basis:
+  p7_t01_candidate:
+    candidate_id: "SourceMatterIncidenceCandidate_v1"
+    status: "draft/control proposal-only"
+    configuration: "Psi=(m,z), with finite nonnegative representation occupations m and closed source defect chain z"
+    transition: "T=(Psi_minus,J,w,Pi,Psi_plus)"
+    transition_conditions:
+      - "q(Psi_plus)-q(Psi_minus)=partial_1 J"
+      - "z(Psi_plus)-z(Psi_minus)=partial_2 w"
+      - "Pi uses only declared source data"
+    inherited_sector_result: "Every admitted transition preserves Sec_src=(Q,D)."
+    semantic_limit: "kinematic source syntax only; no event selection, occurrence, measurement, or physical conservation semantics"
+  p7_t02_candidate:
+    candidate_id: "SourceMatterFiniteTransitionKernelCandidate_v1"
+    status: "draft/control proposal-only"
+    control_system: "C=(Omega,E,s,t), with finite nonempty Omega and a typed identity in every enabled row E_x"
+    kernel: "K_C(T|x)=1/|E_x| for T in E_x and zero otherwise"
+    update: "(U_C mu)(y)=sum_x mu(x) sum_{T in E_x:t(T)=y} K_C(T|x)"
+    bookkeeping_domain: "Q_nonnegative^Omega"
+    composition_index: "n in N_0 is a formal update-composition count"
+    inherited_exact_results:
+      - "finite rational closure"
+      - "row normalization"
+      - "total bookkeeping-mass preservation"
+      - "candidate-sector support preservation"
+      - "source-presentation equivariance"
+      - "Cartesian-product factorization when product rows are declared"
+    semantic_limit: "K_C and mu are bookkeeping coefficients, not physical probabilities, rates, frequencies, or empirical ensembles"
+  frozen_inputs:
+    - "The P7-T01 and P7-T02 candidates remain proposal-only and unadopted."
+    - "No P6 metric-structure record is used as an input."
+    - "No target atlas, metric, cone, proper time, spatial distance, empirical detector output, matter action, stress energy, coupling law, GR behavior, validator result, generated derivative, or commit state is used as a protocol datum."
+
+status_separation:
+  stipulated_candidate_primitives:
+    - "finite P7-T02 control systems and bounded formal horizons"
+    - "finite source-only preparation records"
+    - "finite intervention labels whose effects are explicit enabled-row replacements"
+    - "finite formal-token alphabets"
+    - "total single-valued readout maps on bounded source histories"
+    - "success, no-event, malformed, underdetermined, and cross-device mismatch classifiers"
+    - "guarded role names Clock_src, Rod_src, Signal_src, Detector_src, and FreeFall_src"
+  candidate_derived_mathematical_records:
+    - "finite rational response traces"
+    - "exact token partitions"
+    - "zero-sum intervention differences"
+    - "source-presentation-natural response traces"
+    - "formal cycle-count, endpoint-address, arrival-token, trigger-token, and baseline-comparison records"
+    - "independent-product and signal-token/transducer consistency tests"
+  physical_interpretation: "open and not supplied"
+  canonical_adoption: "protected and human-gated"
+
+formal_protocol:
+  tuple:
+    symbol: "D=(C,P,I,A,r,S,F)"
+    name: "finite source operational-role protocol"
+    components:
+      C: "a finite P7-T02 source control system"
+      P: "a finite nonempty set of preparation records p=(mu_0^p,N_p), with unit bookkeeping mass and bounded horizon N_p"
+      I: "a finite family of explicit source-only intervention labels i, each selecting a well-typed control C_i on declared source data; i_0 denotes the baseline label"
+      A: "a finite formal-token alphabet disjointly typed by protocol role"
+      r: "for every p,i,n<=N_p, a total single-valued map r_(p,i,n):H_n(C_i)->A"
+      S: "a token classifier S:A->{success,no_event,auxiliary}"
+      F: "a fail-closed evaluator distinguishing malformed, underdetermined, and cross-device mismatch records"
+  finite_histories:
+    symbol: "H_n(C_i)"
+    definition: "H_n(C_i) is the finite set of tuples (x_0,T_1,x_1,...,T_n,x_n) with T_k in E^i_(x_(k-1)) and t(T_k)=x_k."
+    path_weight: "W_(p,i,n)(h)=mu_0^p(x_0) product_(k=1)^n K_(C_i)(T_k|x_(k-1))"
+    codomain: "Q_nonnegative"
+    semantic_rule: "W is a path-bookkeeping coefficient only"
+  response_trace:
+    symbol: "R^D_(p,i,n)(a)"
+    definition: "R^D_(p,i,n)(a)=sum_{h in H_n(C_i):r_(p,i,n)(h)=a} W_(p,i,n)(h)"
+    intervention_difference: "Delta^D_(p,i,n)(a)=R^D_(p,i,n)(a)-R^D_(p,i_0,n)(a)"
+    semantics:
+      - "R is a finite rational token-response record."
+      - "Delta is a signed rational comparison between two declared source controls."
+      - "Neither R nor Delta is a physical probability, response rate, frequency, detector statistic, or empirical prediction."
+  result_branches:
+    valid_success:
+      symbol: "ok_D"
+      condition: "all types and partitions validate and at least one token classified success has nonzero bookkeeping response"
+    valid_no_event:
+      symbol: "no_event_D"
+      condition: "the protocol is valid but every success token has zero response at the requested bounded horizon"
+      distinct_from_malformed: true
+      distinct_from_underdetermined: true
+    malformed:
+      symbol: "bottom_D"
+      triggers:
+        - "preparation has negative, nonrational, unsupported, or non-unit bookkeeping entries"
+        - "an intervention row is empty, omits the typed identity, or contains a non-P7-T01 transition"
+        - "a token alphabet is not finite or its role types overlap"
+        - "a readout is partial, multivalued, or emits a token outside A"
+        - "a preparation, intervention, horizon, token, readout, success rule, or failure rule is defined from a forbidden target or process-authority datum"
+    underdetermined:
+      symbol: "undetermined_D"
+      condition: "source data are well typed but a requested preparation, intervention, finite horizon, token alphabet, readout map, or comparison bridge is absent"
+      distinct_from_no_event: true
+      distinct_from_malformed: true
+    cross_device_mismatch:
+      symbol: "mismatch_D"
+      condition: "two otherwise valid protocols fail an explicitly declared source-token bridge or independent-factorization check"
+      semantic_rule: "mismatch_D is a formal consistency failure, not an empirical anomaly or violation of a physical universality principle"
+
+mathematical_results:
+  - theorem_id: "P7T03-THM-FINITE-TOKEN-RESPONSE-CLOSURE-001"
+    status: "draft/control exact theorem within the proposal-only candidate"
+    hypotheses:
+      - "C_i is a finite P7-T02 control system for every admitted intervention i."
+      - "mu_0^p is a nonnegative rational bookkeeping vector with total mass one."
+      - "N_p is finite."
+      - "A is finite."
+      - "r_(p,i,n) is total and single valued."
+    conclusions:
+      - "H_n(C_i) is finite."
+      - "Every W_(p,i,n)(h) and R^D_(p,i,n)(a) is a nonnegative rational."
+      - "The inverse images r^(-1)(a) form a disjoint partition of H_n(C_i)."
+      - "sum_(a in A) R^D_(p,i,n)(a)=1."
+      - "sum_(a in A) Delta^D_(p,i,n)(a)=0."
+    proof_sketch:
+      - "Finite Omega, finite enabled rows, and finite n make the history set finite."
+      - "P7-T02 rational kernels and rational preparation entries make every finite product and sum rational and nonnegative."
+      - "Total single-valued r assigns each history to exactly one inverse-image cell."
+      - "Summing response cells therefore sums all path weights; repeated P7-T02 row normalization reduces the total to the unit preparation mass."
+      - "Subtracting the two normalized response totals gives the zero-sum intervention identity."
+    prohibited_overread: "not probability normalization, empirical exhaustiveness, detector completeness, or physical response conservation"
+    proof_authority: false
+
+  - theorem_id: "P7T03-THM-SOURCE-PRESENTATION-NATURALITY-001"
+    status: "draft/control exact theorem within the proposal-only candidate"
+    hypotheses:
+      - "g is a compatible P7-T01 source-presentation isomorphism transporting every C_i to C_i_prime."
+      - "g transports preparation weights by (g_*mu)(gx)=mu(x)."
+      - "intervention labels are transported bijectively i->i_prime."
+      - "lambda:A->A_prime is a token-type-preserving bijection."
+      - "the readouts commute: r_prime(g_*h)=lambda(r(h)) for every bounded history."
+      - "success and failure classifiers commute with lambda."
+    conclusions:
+      - "g gives a weight-preserving bijection H_n(C_i)->H_n(C_i_prime)."
+      - "R^(D_prime)_(g_*p,i_prime,n)(lambda(a))=R^D_(p,i,n)(a)."
+      - "Delta^(D_prime)_(g_*p,i_prime,n)(lambda(a))=Delta^D_(p,i,n)(a)."
+      - "valid-success, valid-no-event, malformed, underdetermined, and mismatch classifications are preserved under compatible transport."
+    proof_sketch:
+      - "P7-T02 equivariance preserves every transported kernel factor."
+      - "Preparation transport preserves the initial factor."
+      - "The finite history bijection and commuting readout map identify corresponding token cells."
+      - "Changing variables in the finite response sum yields response equality; subtraction yields intervention-difference equality."
+    prohibited_overread: "not target covariance, diffeomorphism invariance, observer equivalence, physical gauge equivalence, or empirical calibration invariance"
+    proof_authority: false
+
+device_suite:
+  Clock_src:
+    role_status: "guarded formal source-protocol role only"
+    source_system:
+      source_complex: "two source vertices c_0,c_1 with one oriented link e_c satisfying partial_1 e_c=[c_1]-[c_0]"
+      states:
+        c_0: "one rho occupation at c_0, zero defect, sector (1,[0])"
+        c_1: "one rho occupation at c_1, zero defect, sector (1,[0])"
+      transitions:
+        id_0: "(c_0,0,0,Pi_id,c_0)"
+        f_01: "(c_0,e_c,0,Pi_01,c_1)"
+        id_1: "(c_1,0,0,Pi_id,c_1)"
+        f_10: "(c_1,-e_c,0,Pi_10,c_0)"
+      rows:
+        c_0: ["id_0", "f_01"]
+        c_1: ["id_1", "f_10"]
+      kernel_each_enabled_record: "1/2"
+    preparation:
+      id: "CLK-PREP-START-0"
+      bookkeeping_state: "delta_(c_0)"
+      horizon: 2
+    interventions:
+      baseline: "clk_run uses both two-member enabled rows"
+      hold: "clk_hold replaces both rows by their typed identity only"
+      intervention_source: "explicit enabled-row declaration only"
+    readout:
+      nonidentity_count: "M(h)=the number of f_01 or f_10 records in h"
+      completed_cycle_count: "Cyc(h)=floor(M(h)/2)"
+      phase: "Phase(h)=M(h) mod 2"
+      token: "clk_cycle_(Cyc(h))_phase_(Phase(h))"
+      finite_alphabet_at_horizon_2:
+        - "clk_cycle_0_phase_0"
+        - "clk_cycle_0_phase_1"
+        - "clk_cycle_1_phase_0"
+    success_map:
+      success: ["clk_cycle_1_phase_0"]
+      no_event: ["clk_cycle_0_phase_0", "clk_cycle_0_phase_1"]
+      exact_scope: "success means one complete alternating source-transition pair in the bounded history"
+    formal_duration_comparison:
+      map: "Cmp_clk(h,h_prime)=sign(Cyc(h)-Cyc(h_prime)) in {-1,0,1}"
+      exact_scope: "integer comparison of source-transition pair counts only"
+      proper_time_or_duration_claimed: false
+    analytic_control:
+      baseline_history_tokens:
+        clk_cycle_0_phase_0: "1/4"
+        clk_cycle_0_phase_1: "1/2"
+        clk_cycle_1_phase_0: "1/4"
+      hold_history_tokens:
+        clk_cycle_0_phase_0: "1"
+        clk_cycle_0_phase_1: "0"
+        clk_cycle_1_phase_0: "0"
+      hold_minus_baseline_delta:
+        clk_cycle_0_phase_0: "3/4"
+        clk_cycle_0_phase_1: "-1/2"
+        clk_cycle_1_phase_0: "-1/4"
+      delta_sum: "0"
+    error_model:
+      - "bottom_D if a tick token is supplied from target proper time, frequency, metric interval, or external clock calibration"
+      - "undetermined_D if the cycle word, horizon, or token map is absent"
+    not_claimed:
+      - "physical clock"
+      - "physical time or duration"
+      - "frequency standard"
+      - "proper time"
+
+  Rod_src:
+    role_status: "guarded formal source-protocol role only"
+    source_system:
+      source_complex: "three source vertices r_0,r_1,r_2 with links e_01,e_12 satisfying partial_1 e_01=[r_1]-[r_0] and partial_1 e_12=[r_2]-[r_1]"
+      states:
+        r_0: "one rho occupation at r_0, zero defect, sector (1,[0])"
+        r_1: "one rho occupation at r_1, zero defect, sector (1,[0])"
+        r_2: "one rho occupation at r_2, zero defect, sector (1,[0])"
+      rows:
+        r_0: ["id_0", "f_01"]
+        r_1: ["id_1", "f_12"]
+        r_2: ["id_2"]
+      kernel_values:
+        r_0: ["1/2", "1/2"]
+        r_1: ["1/2", "1/2"]
+        r_2: ["1"]
+    preparation:
+      id: "ROD-PREP-ENDPOINT-0"
+      bookkeeping_state: "delta_(r_0)"
+      horizon: 2
+    interventions:
+      baseline: "rod_open uses the declared chain rows"
+      block_12: "rod_block_12 replaces the r_1 row by id_1 only"
+    readout:
+      address: "Addr(h)=j when the terminal source state is r_j"
+      hop_count: "Hop(h)=the number of nonidentity f_01 and f_12 records"
+      token: "rod_endpoint_(Addr(h))_hops_(Hop(h))"
+      baseline_alphabet_at_horizon_2:
+        - "rod_endpoint_0_hops_0"
+        - "rod_endpoint_1_hops_1"
+        - "rod_endpoint_2_hops_2"
+    success_map:
+      success: ["rod_endpoint_2_hops_2"]
+      no_event: ["rod_endpoint_0_hops_0", "rod_endpoint_1_hops_1"]
+      exact_scope: "success means the bounded history reaches the declared terminal source address"
+    formal_extent_comparison:
+      map: "Cmp_rod(h,h_prime)=sign(Hop(h)-Hop(h_prime)) in {-1,0,1}"
+      exact_scope: "integer comparison of declared source-link traversals only"
+      spatial_length_or_distance_claimed: false
+    analytic_control:
+      baseline_response:
+        rod_endpoint_0_hops_0: "1/4"
+        rod_endpoint_1_hops_1: "1/2"
+        rod_endpoint_2_hops_2: "1/4"
+      block_12_response:
+        rod_endpoint_0_hops_0: "1/4"
+        rod_endpoint_1_hops_1: "3/4"
+        rod_endpoint_2_hops_2: "0"
+      block_minus_baseline_delta:
+        rod_endpoint_0_hops_0: "0"
+        rod_endpoint_1_hops_1: "1/4"
+        rod_endpoint_2_hops_2: "-1/4"
+      delta_sum: "0"
+    error_model:
+      - "bottom_D if source addresses or hop tokens are assigned by target spatial coordinates, metric distance, or physical units"
+      - "undetermined_D if the ordered source chain, endpoints, or readout map is absent"
+    not_claimed:
+      - "physical rod"
+      - "spatial distance or length"
+      - "rigidity"
+      - "metric calibration"
+
+  Signal_src:
+    role_status: "guarded formal source-protocol role only"
+    source_system:
+      source_complex: "a three-state copy s_0,s_1,s_2 of the admissible P7-T01 chain control"
+      rows:
+        s_0: ["id_0", "f_01"]
+        s_1: ["id_1", "f_12"]
+        s_2: ["id_2"]
+      kernel_values:
+        s_0: ["1/2", "1/2"]
+        s_1: ["1/2", "1/2"]
+        s_2: ["1"]
+    preparation:
+      id: "SIG-PREP-EMIT-0"
+      bookkeeping_state: "delta_(s_0)"
+      preparation_token: "sig_emit_src"
+      horizon: 2
+      semantic_rule: "sig_emit_src is a source preparation label only"
+    interventions:
+      baseline: "sig_open uses both forward transitions"
+      drop_12: "sig_drop_12 replaces the s_1 row by id_1 only"
+    readout:
+      terminal_tokens:
+        s_0: "sig_at_0"
+        s_1: "sig_at_1"
+        s_2: "sig_arrive_2"
+      arrival_index: "ArrIdx(h)=min{k<=N:terminal prefix state is s_2}, or none when no such prefix exists"
+      semantic_rule: "ArrIdx is a formal prefix index only"
+    success_map:
+      success: ["sig_arrive_2"]
+      no_event: ["sig_at_0", "sig_at_1"]
+    analytic_control:
+      baseline_response:
+        sig_at_0: "1/4"
+        sig_at_1: "1/2"
+        sig_arrive_2: "1/4"
+      drop_response:
+        sig_at_0: "1/4"
+        sig_at_1: "3/4"
+        sig_arrive_2: "0"
+    error_model:
+      - "bottom_D if arrival is defined from a target causal cone, target light speed, target coordinate time, or desired GR behavior"
+      - "undetermined_D if the emission preparation, finite path, horizon, or arrival readout is absent"
+    not_claimed:
+      - "physical signal"
+      - "causal propagation"
+      - "signal speed"
+      - "light cone"
+      - "physical emission or arrival"
+
+  Detector_src:
+    role_status: "guarded formal source-protocol role only"
+    source_system:
+      source_complex: "a three-state copy d_0,d_1,d_2 of the admissible P7-T01 chain control"
+      rows:
+        d_0: ["id_0", "f_01"]
+        d_1: ["id_1", "f_12"]
+        d_2: ["id_2"]
+      kernel_values:
+        d_0: ["1/2", "1/2"]
+        d_1: ["1/2", "1/2"]
+        d_2: ["1"]
+    preparation:
+      id: "DET-PREP-READY-0"
+      bookkeeping_state: "delta_(d_0)"
+      preparation_token: "det_ready_src"
+      horizon: 2
+      semantic_rule: "det_ready_src is a formal source token only"
+    interventions:
+      baseline: "det_enabled uses both forward transitions"
+      inhibit_12: "det_inhibit_12 replaces the d_1 row by id_1 only"
+    readout:
+      terminal_tokens:
+        d_0: "det_ready_0"
+        d_1: "det_armed_1"
+        d_2: "det_trigger_2"
+      semantic_rule: "det_trigger_2 records membership in one terminal source-token cell only"
+    success_map:
+      success: ["det_trigger_2"]
+      no_event: ["det_ready_0", "det_armed_1"]
+    analytic_control:
+      baseline_response:
+        det_ready_0: "1/4"
+        det_armed_1: "1/2"
+        det_trigger_2: "1/4"
+      inhibit_response:
+        det_ready_0: "1/4"
+        det_armed_1: "3/4"
+        det_trigger_2: "0"
+    error_model:
+      - "bottom_D if a token is identified with an empirical outcome, observation, instrument response, or physical detection without a separately proved interpretation map"
+      - "undetermined_D if the token alphabet or source transducer readout is absent"
+    not_claimed:
+      - "empirical detector"
+      - "measurement"
+      - "observation"
+      - "physical trigger"
+      - "instrument calibration"
+
+  FreeFall_src:
+    role_status: "guarded formal source-protocol role only"
+    source_system:
+      source_complex: "three source vertices f_0,f_1,f_2 with links e_01 and e_02 satisfying partial_1 e_01=[f_1]-[f_0] and partial_1 e_02=[f_2]-[f_0]"
+      states:
+        f_0: "one rho occupation at f_0, zero defect, sector (1,[0])"
+        f_1: "one rho occupation at f_1, zero defect, sector (1,[0])"
+        f_2: "one rho occupation at f_2, zero defect, sector (1,[0])"
+      baseline_rows:
+        f_0: ["id_0", "f_01"]
+        f_1: ["id_1"]
+        f_2: ["id_2"]
+      perturbed_rows:
+        f_0: ["id_0", "f_01", "f_02"]
+        f_1: ["id_1"]
+        f_2: ["id_2"]
+    preparation:
+      id: "FF-PREP-BASE-0"
+      bookkeeping_state: "delta_(f_0)"
+      horizon: 1
+    interventions:
+      baseline:
+        label: "ff_no_declared_intervention"
+        exact_meaning: "the intervention set is the empty source-control record and the baseline enabled rows are used"
+      perturbed:
+        label: "ff_add_f_02"
+        exact_meaning: "the admissible transition f_02 is added to the f_0 row"
+      semantic_rule: "unforced means only absence of a declared intervention label; it does not mean absence of physical force"
+    readout:
+      terminal_tokens:
+        f_0: "ff_at_0"
+        f_1: "ff_at_1"
+        f_2: "ff_at_2"
+    success_map:
+      success: ["ff_at_1", "ff_at_2"]
+      no_event: ["ff_at_0"]
+      pairwise_protocol_success: "both finite controls validate and their response difference is an exact zero-sum rational vector"
+    analytic_control:
+      baseline_response:
+        ff_at_0: "1/2"
+        ff_at_1: "1/2"
+        ff_at_2: "0"
+      perturbed_response:
+        ff_at_0: "1/3"
+        ff_at_1: "1/3"
+        ff_at_2: "1/3"
+      perturbed_minus_baseline_delta:
+        ff_at_0: "-1/6"
+        ff_at_1: "-1/6"
+        ff_at_2: "1/3"
+      delta_sum: "0"
+    error_model:
+      - "bottom_D if baseline or perturbation is defined by a target geodesic, metric connection, gravitational acceleration, or force measurement"
+      - "undetermined_D if the baseline-intervention distinction or comparison map is absent"
+    not_claimed:
+      - "physical free fall"
+      - "force-free motion"
+      - "geodesic behavior"
+      - "gravitational response"
+      - "equivalence principle"
+
+independent_operational_systems:
+  system_pair:
+    first: "Clock_src"
+    second: "Rod_src"
+    source_relation: "declared disjoint source components"
+    joint_control: "C_clk box_times C_rod with Cartesian enabled rows"
+    joint_preparation: "delta_(c_0) tensor delta_(r_0)"
+    joint_horizon: "(2,2)"
+  exact_factorization:
+    statement: "R_joint(a_clk,a_rod)=R_clk(a_clk) R_rod(a_rod)"
+    reason:
+      - "P7-T02 gives K_joint=K_clk K_rod for Cartesian rows."
+      - "The joint readout is the ordered pair of the two total readouts."
+      - "The finite history sum separates into the product of two finite sums."
+    explicit_cell: "R_joint(clk_cycle_1_phase_0,rod_endpoint_2_hops_2)=(1/4)(1/4)=1/16"
+    total_joint_response: "1"
+  executable_system_count: 2
+  exact_scope: "two mathematically independent finite source protocol systems"
+  physical_independence_or_universality_claimed: false
+
+cross_device_tests:
+  - test_id: "P7T03-CROSS-SIGNAL-DETECTOR-MATCH-001"
+    systems: ["Signal_src", "Detector_src"]
+    bridge:
+      state_map: "s_j -> d_j for j=0,1,2"
+      transition_map: "corresponding identity and forward transition records"
+      token_map:
+        sig_at_0: "det_ready_0"
+        sig_at_1: "det_armed_1"
+        sig_arrive_2: "det_trigger_2"
+    exact_result:
+      - "the bridge is a source-presentation isomorphism of the two declared controls"
+      - "the transported readouts commute"
+      - "R_sig(sig_arrive_2)=R_det(det_trigger_2)=1/4 at horizon two"
+      - "the drop and inhibit interventions also transport and give zero success-token response"
+    classification: "valid formal source-token consistency"
+    prohibited_overread: "not empirical detector calibration, causal signaling, physical measurement, or coupling universality"
+
+  - test_id: "P7T03-CROSS-CLOCK-ROD-INDEPENDENCE-001"
+    systems: ["Clock_src", "Rod_src"]
+    exact_result: "the response trace factors on the declared Cartesian product; one explicit joint success cell has weight 1/16"
+    classification: "valid independent-product control"
+    prohibited_overread: "not physical clock-rod agreement, metric universality, or common geometry"
+
+  - test_id: "P7T03-CROSS-MISMATCH-EARLY-TRIGGER-001"
+    attempted_detector_readout: "map both d_1 and d_2 to det_trigger_bad"
+    signal_success_cell: "s_2 only"
+    exact_responses_at_horizon_2:
+      signal_arrival: "1/4"
+      attempted_detector_trigger: "3/4"
+      residual: "1/2"
+    result: "mismatch_D"
+    interpretation: "the attempted readout fails the declared source-token bridge"
+    empirical_anomaly_claimed: false
+
+  - test_id: "P7T03-CROSS-MALFORMED-TARGET-IMPORT-001"
+    attempted_definition: "set a clock tick from target proper time, rod address from target metric distance, signal arrival from a target causal cone, detector trigger from an empirical outcome, or free-fall baseline from a target geodesic"
+    result: "bottom_D"
+    failed_condition: "P7T03-SOURCE-ONLY-PROTOCOL-DATA"
+
+  - test_id: "P7T03-CROSS-MALFORMED-READOUT-PARTITION-001"
+    attempted_readout: "one history maps to both success and no_event tokens, or to no token"
+    result: "bottom_D"
+    failed_condition: "P7T03-TOTAL-SINGLE-VALUED-READOUT"
+
+  - test_id: "P7T03-CROSS-UNDERDETERMINED-READOUT-001"
+    supplied_data: "well-typed P7-T02 control, preparation, intervention family, and bounded horizon"
+    missing_data: "finite token alphabet or readout map"
+    result: "undetermined_D"
+    distinct_from_no_event: true
+    distinct_from_malformed: true
+
+assumption_ledger:
+  - assumption_id: "P7T03-A1-FIXED-PREDECESSORS"
+    statement: "P7-T01 configurations and P7-T02 control kernels are held fixed at proposal-only status."
+    necessity: "types histories and supplies exact finite path weights"
+    derived_by_current_ontology: false
+  - assumption_id: "P7T03-A2-FINITE-PROTOCOL-DATA"
+    statement: "Preparations, intervention families, horizons, token alphabets, and readout maps are explicit finite source-only candidate inputs."
+    necessity: "makes response traces executable and exactly enumerable"
+    derived_by_current_ontology: false
+  - assumption_id: "P7T03-A3-TOTAL-READOUT"
+    statement: "Each bounded history receives exactly one role-typed token."
+    necessity: "gives a disjoint exhaustive token partition"
+    derived_by_current_ontology: false
+  - assumption_id: "P7T03-A4-TRANSPORTED-PROTOCOL"
+    statement: "Compatible presentation changes transport preparations, interventions, token types, readouts, and classifiers."
+    necessity: "supports the candidate-relative naturality theorem"
+    derived_by_current_ontology: false
+  - assumption_id: "P7T03-A5-ROLE-NAMES"
+    statement: "Clock_src, Rod_src, Signal_src, Detector_src, and FreeFall_src are syntactic protocol-role names."
+    necessity: "prevents model-world identity collapse"
+    derived_by_current_ontology: false
+  - assumption_id: "P7T03-A6-NO-TARGET-IMPORT"
+    statement: "No protocol component depends on target geometry, physical calibration, desired benchmark behavior, or process authority."
+    necessity: "preserves source-only construction"
+    derived_by_current_ontology: false
+
+blocking_issues:
+  construction_blocker: "none for the finite proposal-only candidate"
+  adoption_blockers:
+    - "current ontology does not derive or select the P7-T01 candidate, P7-T02 kernel, or this protocol suite"
+    - "no source-derived interpretation map links formal token cells to physical clock, rod, signal, detector, or free-fall outcomes"
+    - "no empirical preparation, calibration, error-frequency, or observation map is supplied"
+    - "no common principal symbol, cone, metric structure, or universal-coupling theorem is supplied"
+    - "no matter action, stress-energy object, Einstein equation, or exact-GR recovery result is supplied"
+  continuation_status: "blocked_adoption_open_continuation"
+  next_scientific_burden: "P7-T04 may test source propagation relations only after parent fusion, validation, and governed checkpoint."
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+
+guarded_claims:
+  allowed_exact_candidate_relative:
+    - "The five named source roles admit explicit finite preparation, intervention, evolution-history, readout, success, no-event, malformed, and underdetermined records."
+    - "Clock_src and Rod_src are two executable independent finite source systems under the declared Cartesian product."
+    - "Every valid response trace is a finite nonnegative rational token partition."
+    - "Every same-preparation intervention difference has zero total."
+    - "Compatible source-presentation transport preserves response and intervention-difference traces."
+    - "The listed analytic control values follow exactly from the fixed P7-T02 uniform row kernel."
+  prohibited:
+    - "physical time, duration, frequency, proper time, length, distance, rigidity, causality, propagation speed, probability, or empirical frequency"
+    - "empirical detector, observation, measurement, calibration, trigger, or instrument response"
+    - "physical free fall, force-free motion, geodesic behavior, gravity, or equivalence principle"
+    - "target atlas, effective geometry, common cone, metric universality, matter action, stress energy, or coupling"
+    - "canonical ontology candidate, ontology adoption, source-law adoption, physical interpretation, GR derivation, benchmark promotion, proof authority, publication, or completed derivation"
+    - "global no-go, global theory rejection, or future source-extension impossibility"
+
+recommendation_coverage:
+  V21-R18: "supplies explicit operational-role protocol construction at source-only proposal level"
+  V21-R23: "supplies clock-cycle, rod-address, signal-token, detector-token, and baseline-comparison records with guarded interpretation"
+  V21-R24: "supplies source-presentation naturality and independent cross-device controls without target geometry"
+  V21-R63: "preserves registered claim boundaries, exact-GR recovery obligations, and protected adoption status"
+
+child_result:
+  result_type: "constructed_candidate"
+  result_status: "recommended_for_parent_fusion"
+  constructed_object: "SourceOperationalDeviceSuiteCandidate_v1"
+  decisive_summary: "A finite proposal-only suite exists with five guarded source protocol roles, explicit bounded readouts and interventions, two independent executable systems, exact token-response partition and naturality theorems, analytic controls, and fail-closed target-import and consistency branches."
+  mathematical_payload:
+    - "P7T03-THM-FINITE-TOKEN-RESPONSE-CLOSURE-001"
+    - "P7T03-THM-SOURCE-PRESENTATION-NATURALITY-001"
+    - "Clock_src two-step cycle-token response and hold intervention difference"
+    - "Rod_src two-step endpoint-token response and block intervention difference"
+    - "Signal_src and Detector_src transported-token equality"
+    - "FreeFall_src baseline-versus-intervention zero-sum response difference"
+    - "Clock_src and Rod_src independent-product response factorization"
+  unresolved_limitations:
+    - "all protocol primitives remain stipulated rather than source-derived"
+    - "all operational names remain formal source-role labels"
+    - "physical interpretation, empirical adequacy, common propagation, geometry, coupling, and adoption remain open"
+  no_fog_check: true
+  proof_authority: false
+
+authority_limits:
+  canonical_ontology_modified: false
+  canonical_ontology_candidate_status_created: false
+  source_law_adopted: false
+  matter_ontology_adopted: false
+  operational_semantics_adopted: false
+  physical_clock_established: false
+  physical_time_or_duration_established: false
+  physical_rod_or_length_established: false
+  physical_signal_or_causality_established: false
+  physical_probability_established: false
+  empirical_detector_established: false
+  physical_free_fall_established: false
+  effective_geometry_assumed: false
+  common_propagation_established: false
+  stress_energy_established: false
+  matter_action_established: false
+  coupling_law_adopted: false
+  matter_coupling_derived: false
+  einstein_equations_derived: false
+  exact_gr_recovery_claimed: false
+  benchmark_promoted: false
+  completed_derivation_claimed: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+  physics_promotion_authorized: false
+  proof_authority: false

@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260728-001`
-- Latest handoff: `handoff-0891`
-- Current status: `p7_t02_finite_transition_kernel_complete_p7_t03_ready_after_checkpoint`
+- Active task: `RT-20260728-002`
+- Latest handoff: `handoff-0892`
+- Current status: `p7_t03_source_operational_device_suite_complete_p7_t04_ready_after_checkpoint`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260728-001`
-- Latest research handoff: `handoff-0891`
-- Latest research next action: Run one governed checkpoint for AJ-RT-20260728-001-001. Only after it commits may one fresh bounded candidate-constructor@0.2.0 packet execute v21 P7-T03 by constructing source-level operational devices and protocols with explicit source objects, readout maps, interventions, success and failure criteria, and no imported target geometry or inferred physical semantics.
+- Latest research task: `RT-20260728-002`
+- Latest research handoff: `handoff-0892`
+- Latest research next action: Run one governed checkpoint for AJ-RT-20260728-002-001. Only after it commits may one fresh bounded candidate-constructor@0.2.0 packet execute v21 P7-T04 by deriving or precisely obstructing common formal source propagation without importing a physical cone metric detector semantics coupling or GR behavior.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p7_t03_source_operational_devices_and_protocols`
+- Route ID: `v21_p7_t04_common_source_propagation`
 - Role family: `candidate-constructor@0.2.0`
 - Target milestone: `matter_coupling`
-- Milestone burden: Give operational meaning to effective geometry and matter response.
+- Milestone burden: Derive common source propagation structure across operational systems.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `cc7cfb153fa224d070e0a653bc30704290d5fc4331f6112e09c6da440d2d35de`
-- JSON SHA-256: `6b33db4c505e0a8b15ec7cf5cb2e5519beb4b19b7672cecaa9ab2d90ee6c92dd`
+- YAML SHA-256: `550979ff6d70ef857f2aa1ddb0f4e9e0ee1a393fcb2d29e0057876a45cdf0b95`
+- JSON SHA-256: `c3be95a2dc38edda3de1cd5906d95621b673e63504d745ba8d1cacfa5d349321`
 
 ## Authority Warning
 

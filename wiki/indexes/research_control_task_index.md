@@ -6,9 +6,9 @@ Generated navigation support only. This index is not task authority, physics pro
 
 - Schema: `research_control_task_index_v2`
 - Schema source: `research_control/design/task_index_schema_v2.md`
-- Source fingerprint: `11e573fbab8f1d253fa36c0847233c932dab9e4604ca6beb5fe63d029595eb47`
-- Generated-at source timestamp: `2026-07-28T04:05:00Z`
-- Row count: `1134`
+- Source fingerprint: `0f477ff4461747f228a8a27e3168864bab8fbe77350d59861840204f0a3b2b61`
+- Generated-at source timestamp: `2026-07-28T05:16:03Z`
+- Row count: `1135`
 - Issue count: `297`
 - CSV output: `research_control/tasks/TASK_INDEX.csv`
 
@@ -16,6 +16,7 @@ Generated navigation support only. This index is not task authority, physics pro
 
 |task_id|parent_task_id|created_at|closed_at|title|task_type|work_kind|milestone|candidate_family|result_kind|authority|scope|taxonomy_source|taxonomy_confidence|status|target_derivation_milestone|milestone_burden|role_family|physics_delta|ledger_rows_changed|artifact_count|next_recommended_action|validation_status|completion_path|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|RT-20260728-002|RT-20260728-001|2026-07-28T05:16:03Z|2026-07-28T05:37:18Z|Construct source-level operational devices and protocols|v21_p7_t03_source_operational_devices_and_protocols|construction_or_implementation|matter_coupling|v21_p7_t03_source_operational_device_suite_candidate_v1|candidate_or_precise_obstruction|science_draft|scientific|explicit|high|completed|matter_coupling|Give operational meaning to effective geometry and matter response.|candidate-constructor@0.2.0|true|matter_coupling|12|Invoke one governed checkpoint for AJ-RT-20260728-002-001. Only after it commits may one fresh bounded P7-T04 packet analyze common formal source propagation.|PASS|research_control/tasks/RT-20260728-002/jobs/completions/AJC-AJ-RT-20260728-002-001.yaml|
 |RT-20260728-001|RT-20260727-008|2026-07-28T04:05:00Z|2026-07-28T04:19:10Z|Construct one finite source-matter transition kernel|v21_p7_t02_source_matter_finite_transition_kernel_candidate_construction|construction_or_implementation|matter_coupling|v21_p7_t02_source_matter_finite_transition_kernel_candidate_v1|candidate_or_precise_obstruction|science_draft|scientific|explicit|high|completed|matter_coupling|Build one explicit source matter action evolution equation or transition law and derive its basic conserved or constraint structure.|candidate-constructor@0.2.0|true|matter_coupling|12|Run one governed checkpoint for AJ-RT-20260728-001-001; only after it commits may one fresh bounded P7-T03 operational-device packet begin.|PASS|research_control/tasks/RT-20260728-001/jobs/completions/AJC-AJ-RT-20260728-001-001.yaml|
 |RT-20260727-008|RT-20260727-007|2026-07-28T02:04:36Z|2026-07-28T04:05:00Z|Select one source matter dynamics construction|v21_p7_t02_source_matter_dynamics_packet_selection|integration_or_selection|matter_coupling|v21_p7_t02_source_matter_dynamics_packet_selection|completed_or_precisely_blocked|science_draft|scientific|explicit|high|completed|matter_coupling|Build one explicit source matter action evolution equation or transition law and derive its basic conserved or constraint structure.|theoretical-continuation-selector@0.1.0|false|false|9|Complete only AJ-RT-20260728-001-001 before any later P7 route.|PASS|research_control/tasks/RT-20260727-008/jobs/completions/AJC-AJ-RT-20260727-008-001.yaml|
 |RT-20260727-007|RT-20260727-006|2026-07-27T23:41:33Z|2026-07-28T00:13:22Z|Define the source matter ontology and sector taxonomy|v21_p7_t01_source_matter_ontology_and_sector_taxonomy|formalization_or_theorem|matter_coupling|v21_p7_t01_source_matter_incidence_ontology|completed_or_precisely_blocked|science_draft|scientific|explicit|high|completed|matter_coupling|Replace interface-only matter profiles with an actual matter ontology target.|ontology-formalizer@0.2.0|true|matter_coupling|12|Run one governed checkpoint for AJ-RT-20260727-007-001, then route one bounded P7-T02 theoretical-continuation selector.|PASS|research_control/tasks/RT-20260727-007/jobs/completions/AJC-AJ-RT-20260727-007-001.yaml|

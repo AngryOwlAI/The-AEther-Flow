@@ -1,0 +1,280 @@
+schema_id: "source_operational_device_controls_v1"
+artifact_id: "P7T03-SOURCE-OPERATIONAL-DEVICE-CONTROLS-V1"
+task_id: "RT-20260728-002"
+job_id: "AJ-RT-20260728-002-001"
+candidate_id: "SourceOperationalDeviceSuiteCandidate_v1"
+status: "draft/control"
+candidate_status: "proposal-only"
+
+shared_source_data:
+  coefficient_groups:
+    A_int: "Z"
+    B_def: "Z"
+  representation_label: "rho"
+  charge_label_map: "chi(rho)=1"
+  defect_chain: "0"
+  kernel_rule: "uniform on each finite enabled row"
+  history_weight_semantics: "formal rational bookkeeping only"
+  physical_interpretation: false
+
+controls:
+  - control_id: "P7T03-CONTROL-CLOCK-TWO-STATE-001"
+    device_role: "Clock_src"
+    branch: "valid_positive"
+    source_component: "S_clock"
+    configurations: ["c_0", "c_1"]
+    enabled_rows:
+      c_0: ["id_c0", "flip_01"]
+      c_1: ["id_c1", "flip_10"]
+    kernel_rows:
+      c_0:
+        id_c0: "1/2"
+        flip_01: "1/2"
+      c_1:
+        id_c1: "1/2"
+        flip_10: "1/2"
+    preparation:
+      initial: "delta_c0"
+      horizon: 2
+    token_alphabet: ["tick_1", "idle_2"]
+    readout:
+      tick_1: "the transition word is exactly (flip_01,flip_10)"
+      idle_2: "every other admitted two-transition word"
+    exact_response:
+      tick_1: "1/4"
+      idle_2: "3/4"
+      sum: "1"
+    success_tokens: ["tick_1"]
+    formal_comparison: "compare integer counts of declared completed cycle words"
+    not_claimed:
+      - "proper time"
+      - "duration"
+      - "frequency"
+      - "physical clock"
+
+  - control_id: "P7T03-CONTROL-ROD-ADDRESS-CHAIN-001"
+    device_role: "Rod_src"
+    branch: "valid_positive"
+    source_component: "S_address"
+    configurations: ["r_0", "r_1", "r_2"]
+    declared_order: ["r_0", "r_1", "r_2"]
+    enabled_rows:
+      r_0: ["id_r0", "hop_01"]
+      r_1: ["id_r1", "hop_12"]
+      r_2: ["id_r2"]
+    preparation:
+      initial: "delta_r0"
+      horizon: 2
+    token_alphabet: ["endpoint_2", "not_endpoint_2"]
+    readout:
+      endpoint_2: "final source address is r_2"
+      not_endpoint_2: "final source address is r_0 or r_1"
+    exact_response:
+      endpoint_2: "1/4"
+      not_endpoint_2: "3/4"
+      sum: "1"
+    formal_comparison: "the successful word has two declared address hops"
+    not_claimed:
+      - "physical length"
+      - "spatial distance"
+      - "rigidity"
+      - "physical rod"
+
+  - control_id: "P7T03-CONTROL-SIGNAL-CHAIN-001"
+    device_role: "Signal_src"
+    branch: "valid_positive"
+    source_component: "S_signal"
+    configurations: ["s_0", "s_1", "s_2"]
+    enabled_rows:
+      s_0: ["id_s0", "move_01"]
+      s_1: ["id_s1", "move_12"]
+      s_2: ["id_s2"]
+    preparation:
+      initial: "delta_s0"
+      emission_token: "emitted_0"
+      horizon: 2
+    token_alphabet: ["arrived_2", "not_arrived_2"]
+    readout:
+      arrived_2: "final source address is s_2"
+      not_arrived_2: "final source address is s_0 or s_1"
+    exact_response:
+      arrived_2: "1/4"
+      not_arrived_2: "3/4"
+      sum: "1"
+    least_positive_formal_horizon: 2
+    not_claimed:
+      - "physical propagation"
+      - "causal arrival"
+      - "speed"
+      - "light signal"
+
+  - control_id: "P7T03-CONTROL-DETECTOR-TRANSDUCER-001"
+    device_role: "Detector_src"
+    branch: "valid_positive"
+    source_component: "S_detector"
+    configurations: ["q_0=(s_0,d_ready)", "q_1=(s_1,d_ready)", "q_2=(s_2,d_triggered)"]
+    enabled_rows:
+      q_0: ["id_q0", "advance_q01"]
+      q_1: ["id_q1", "advance_and_trigger_q12"]
+      q_2: ["id_q2"]
+    preparation:
+      initial: "delta_q0"
+      horizon: 2
+    token_alphabet: ["triggered_2", "ready_2"]
+    readout:
+      triggered_2: "final source address is q_2"
+      ready_2: "final source address is q_0 or q_1"
+    exact_response:
+      triggered_2: "1/4"
+      ready_2: "3/4"
+      sum: "1"
+    paired_signal_history_bijection: "s_j maps to q_j and move_jk maps to advance_qjk"
+    cross_device_result: "R_signal(arrived_2)=R_detector(triggered_2)=1/4"
+    not_claimed:
+      - "empirical detection"
+      - "measurement"
+      - "instrument response"
+      - "observation"
+
+  - control_id: "P7T03-CONTROL-FREEFALL-BASELINE-INTERVENTION-001"
+    device_role: "FreeFall_src"
+    branch: "valid_positive"
+    source_component: "S_baseline"
+    configurations: ["f_0", "f_1"]
+    preparation:
+      initial: "delta_f0"
+      horizon: 1
+    intervention_labels: ["i_0_no_declared_intervention", "i_block_move"]
+    baseline_rows:
+      f_0: ["id_f0", "move_f01"]
+      f_1: ["id_f1"]
+    intervention_rows:
+      f_0: ["id_f0"]
+      f_1: ["id_f1"]
+    token_alphabet: ["address_f0", "address_f1"]
+    readout: "return the final formal source address"
+    exact_response:
+      baseline:
+        address_f0: "1/2"
+        address_f1: "1/2"
+      i_block_move:
+        address_f0: "1"
+        address_f1: "0"
+      difference_i_minus_baseline:
+        address_f0: "1/2"
+        address_f1: "-1/2"
+        sum: "0"
+    baseline_semantics: "absence of a declared intervention label only"
+    not_claimed:
+      - "gravitational free fall"
+      - "geodesic motion"
+      - "force free motion"
+      - "equivalence principle"
+
+  - control_id: "P7T03-CONTROL-INDEPENDENT-CLOCK-SIGNAL-001"
+    device_role: "cross_device"
+    branch: "valid_independent"
+    components: ["Clock_src", "Signal_src"]
+    disjoint_source_components: true
+    product_preparation: "delta_c0 tensor delta_s0"
+    horizon: 2
+    marginal_responses:
+      tick_1: "1/4"
+      arrived_2: "1/4"
+    joint_response:
+      token_pair: "(tick_1,arrived_2)"
+      value: "1/16"
+    factorization_check: "1/16=(1/4)(1/4)"
+    physical_independence_claimed: false
+
+  - control_id: "P7T03-CONTROL-NULL-NO-EVENT-001"
+    device_role: "generic"
+    branch: "valid_no_event"
+    configurations: ["z_0"]
+    enabled_rows:
+      z_0: ["id_z0"]
+    preparation:
+      initial: "delta_z0"
+      horizon: 3
+    token_alphabet: ["no_event_3"]
+    readout:
+      no_event_3: "the unique history is three identity records"
+    exact_response:
+      no_event_3: "1"
+    physical_vacuum_claimed: false
+    physical_stasis_claimed: false
+
+  - control_id: "P7T03-CONTROL-MALFORMED-PARTIAL-READOUT-001"
+    device_role: "generic"
+    branch: "malformed"
+    attempted_readout: "one valid finite history has no token"
+    failed_condition: "P7T03-D1-TOTAL-SINGLE-VALUED-READOUT"
+    result: "bottom_D"
+
+  - control_id: "P7T03-CONTROL-MALFORMED-TOKEN-OUTSIDE-ALPHABET-001"
+    device_role: "generic"
+    branch: "malformed"
+    attempted_token: "undeclared_token"
+    failed_condition: "P7T03-D2-FINITE-DECLARED-TOKEN-ALPHABET"
+    result: "bottom_D"
+
+  - control_id: "P7T03-CONTROL-MALFORMED-TARGET-IMPORT-001"
+    device_role: "generic"
+    branch: "malformed"
+    attempted_readout_source: "target proper time metric distance causal cone empirical detector calibration or desired benchmark behavior"
+    failed_condition: "P7T03-D3-SOURCE-ONLY"
+    result: "bottom_D"
+
+  - control_id: "P7T03-CONTROL-UNDERDETERMINED-READOUT-001"
+    device_role: "generic"
+    branch: "underdetermined"
+    supplied_data: "typed finite P7-T02 control and preparation"
+    missing_data: "token alphabet readout map and success or failure classifier"
+    result: "undetermined_D"
+    distinct_from_no_event: true
+    distinct_from_malformed: true
+
+  - control_id: "P7T03-CONTROL-CROSS-DEVICE-INCONSISTENT-001"
+    device_role: "cross_device"
+    branch: "cross_device_inconsistent"
+    declared_history_bijection: "Signal_src histories map to Detector_src histories"
+    inconsistent_detector_rule: "triggered_2 is returned at q_1 or q_2"
+    signal_arrival_response: "1/4"
+    attempted_detector_trigger_response: "3/4"
+    result: "inconsistent_D"
+    physical_falsification_claimed: false
+
+finding_counts:
+  device_role_count: 5
+  valid_positive_count: 5
+  valid_independent_count: 1
+  valid_no_event_count: 1
+  malformed_count: 3
+  underdetermined_count: 1
+  cross_device_inconsistent_count: 1
+  independent_operational_system_count: 2
+  cross_device_contract_count: 3
+  physical_interpretation_claim_count: 0
+
+authority_limits:
+  canonical_ontology_modified: false
+  source_law_adopted: false
+  matter_ontology_adopted: false
+  operational_semantics_adopted: false
+  physical_clock_established: false
+  physical_rod_established: false
+  physical_signal_established: false
+  physical_detector_established: false
+  physical_free_fall_established: false
+  physical_time_established: false
+  physical_length_established: false
+  physical_causality_established: false
+  physical_probability_established: false
+  effective_geometry_assumed: false
+  stress_energy_established: false
+  coupling_law_adopted: false
+  matter_coupling_derived: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  physics_promotion_authorized: false
+  proof_authority: false
