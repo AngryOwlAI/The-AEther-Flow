@@ -1,0 +1,162 @@
+schema_id: "v21_p7_t04_parent_conflict_review_common_propagation_v1"
+artifact_id: "P7T04-PARENT-CONFLICT-REVIEW-COMMON-PROPAGATION-V1"
+task_id: "RT-20260728-003"
+job_id: "AJ-RT-20260728-003-001"
+plan_task_id: "P7-T04"
+candidate_id: "CommonSourcePropagationProfileCandidate_v1"
+obstruction_id: "OBST-P7T04-FULL-SUITE-COMMON-PROPAGATION-001"
+status: "resolved"
+verdict: "resolved"
+review_context: "same_context_internal_ai_parent_child_synthesis"
+actual_external_human_review_completed: false
+independent_replication_completed: false
+resolution_rounds: 1
+resolved_conflict_count: 10
+unresolved_conflict_count: 0
+unresolved_conflicts: []
+
+child_inputs:
+  - execution_unit_id: "child_phys_math"
+    perspective: "physicist_mathematician"
+    path: "research_control/tasks/RT-20260728-003/artifacts/child_phys_math_p7_t04_common_propagation.yaml"
+    sha256: "1d0ca5a8c075d922a7a328c582d3e7ebc8df4fdb0ca4f90bbb185989ddf99860"
+    status: "completed"
+  - execution_unit_id: "child_phys_phil"
+    perspective: "physicist_philosopher"
+    path: "research_control/tasks/RT-20260728-003/artifacts/child_phys_phil_p7_t04_common_propagation.yaml"
+    sha256: "e1211b500246c9f331212efcf0a62d062a8d54a4f9b6a9e71cd3e1cacfbe1c91"
+    status: "completed"
+
+resolutions:
+  - conflict_id: "P7T04-PARENT-RESOLUTION-001"
+    topic: "protocol roles versus matter sectors"
+    child_positions:
+      physicist_mathematician: "The five explicit protocol controls admit finite support profiles."
+      physicist_philosopher: "P7-T03 role names are not a parameterized family over every matter sector."
+    parent_resolution: "State every theorem and obstruction for the explicit protocol controls only and deny matter-sector universality."
+    fused_change: "The TeX tests the five-role source suite and never promotes roles to sectors."
+    blocking: false
+  - conflict_id: "P7T04-PARENT-RESOLUTION-002"
+    topic: "one role name versus intervention-indexed relation family"
+    child_positions:
+      physicist_mathematician: "Baseline and blocked FreeFall controls have distinct support matrices."
+      physicist_philosopher: "One English role name does not select one intervention-independent relation."
+    parent_resolution: "Index both FreeFall relations explicitly and use only the baseline relation in the minimal full-suite test."
+    fused_change: "The spec contains separate freefall_baseline and freefall_blocked profiles plus an intervention-sensitivity control."
+    blocking: false
+  - conflict_id: "P7T04-PARENT-RESOLUTION-003"
+    topic: "rod-to-signal comparison map"
+    child_positions:
+      physicist_mathematician: "The three identity-plus-forward chains have identical finite relation structure."
+      physicist_philosopher: "P7-T03 declares signal-to-detector transport but only conditionally permits rod-to-signal comparison."
+    parent_resolution: "Declare b_RS(r_j)=s_j as new proposal-only source-extension data and keep b_SD as inherited."
+    fused_change: "The theorem hypotheses and assumption table separate the new and inherited maps."
+    blocking: false
+  - conflict_id: "P7T04-PARENT-RESOLUTION-004"
+    topic: "identity loops and directed-cycle vocabulary"
+    child_positions:
+      physicist_mathematician: "Every support relation contains mandatory typed identity loops."
+      physicist_philosopher: "Unqualified cycle language could make every protocol cyclic."
+    parent_resolution: "Define full support and reduced support separately; a nontrivial cycle must contain an off-diagonal transition."
+    fused_change: "The clock two-cycle and freefall acyclicity are evaluated on reduced support while SCCs use full support."
+    blocking: false
+  - conflict_id: "P7T04-PARENT-RESOLUTION-005"
+    topic: "matrix orientation"
+    child_positions:
+      physicist_mathematician: "Uses target rows and source columns for adjacency matrices."
+      physicist_philosopher: "The invariant content matters but representation conventions must be explicit."
+    parent_resolution: "Use source rows and target columns in the fused TeX and spec; this is the transpose convention and preserves every stated invariant and intertwining claim."
+    fused_change: "Every fused matrix states the row-source convention, and the validator computes only convention-invariant profiles."
+    blocking: false
+  - conflict_id: "P7T04-PARENT-RESOLUTION-006"
+    topic: "token-response equality versus support isomorphism"
+    child_positions:
+      physicist_mathematician: "Support transport is proved from explicit edge bijections."
+      physicist_philosopher: "Equal one-quarter token responses do not imply relation isomorphism or operational equivalence."
+    parent_resolution: "Use only edge and identity transport as theorem premises; retain token-response equality solely as predecessor context."
+    fused_change: "The P7-T04 theorem contains no inference from response values."
+    blocking: false
+  - conflict_id: "P7T04-PARENT-RESOLUTION-007"
+    topic: "finite matrix characteristic polynomial versus principal symbol"
+    child_positions:
+      physicist_mathematician: "Finite adjacency matrices admit exact combinatorial and spectral calculations."
+      physicist_philosopher: "A spectral parameter is not a covector and a finite matrix polynomial is not a PDE principal symbol."
+    parent_resolution: "Keep Boolean support invariants and explicitly list the missing base-space operator covector homogeneity and interpretation maps."
+    fused_change: "The TeX has a dedicated principal-symbol cone and metric non-derivability section."
+    blocking: false
+  - conflict_id: "P7T04-PARENT-RESOLUTION-008"
+    topic: "scope of universality obstruction"
+    child_positions:
+      physicist_mathematician: "Clock and baseline FreeFall give a two-vertex nonisomorphism countermodel."
+      physicist_philosopher: "The conclusion must not silently quantify over quotients embeddings covers coarse grainings or future source extensions."
+    parent_resolution: "Name the tested predicate U_bij and limit the obstruction to exact bijective transport of current explicit controls."
+    fused_change: "The countermodel leaves weaker maps enriched structures continuum limits and future conservative extensions open."
+    blocking: false
+  - conflict_id: "P7T04-PARENT-RESOLUTION-009"
+    topic: "low-energy language without a scale variable"
+    child_positions:
+      physicist_mathematician: "The finite controls have only a formal composition index."
+      physicist_philosopher: "No energy scale or limiting map is available to evaluate low-energy universality."
+    parent_resolution: "Record the finite formal result as decisive at source-relation scope and the physical low-energy question as underdetermined."
+    fused_change: "The spec and controls set energy_or_scale_regime_supplied false and require a new scale map for reopening."
+    blocking: false
+  - conflict_id: "P7T04-PARENT-RESOLUTION-010"
+    topic: "completion process and downstream P7-T05 use"
+    child_positions:
+      physicist_mathematician: "The common subfamily theorem and minimal countermodel satisfy the theorem-or-obstruction output."
+      physicist_philosopher: "Neither validation nor a common formal chain licenses a common cone metric coupling or equivalence principle."
+    parent_resolution: "Complete P7-T04 only as a precise scoped obstruction with constructive subfamily theorem; permit P7-T05 consideration only after checkpoint and under fail-closed missing-geometry guards."
+    fused_change: "The handoff will preserve the obstruction and require any later packet to introduce materially new source data or return a further precise obstruction."
+    blocking: false
+
+shared_consensus:
+  - "Finite enabled source transitions define exact Boolean support and reachability relations."
+  - "Compatible source-address and transition bijections intertwine every Boolean reachability power."
+  - "Rod Signal and Detector share one three-address-chain skeleton only under explicit proposal-only maps."
+  - "Clock and baseline FreeFall give an equal-cardinality nonisomorphism countermodel."
+  - "The current full suite does not satisfy the named U_bij universality predicate."
+  - "No principal symbol characteristic set cone metric energy regime detector semantics coupling or GR result follows."
+  - "Adoption remains blocked_adoption_open_continuation and future conservative source extension remains open."
+
+unique_contributions_preserved:
+  physicist_mathematician:
+    - "support and Boolean reachability definitions"
+    - "six explicit relation variants and invariant profiles"
+    - "Boolean support-transport theorem"
+    - "conditional three-address subfamily theorem"
+    - "same-cardinality Clock versus FreeFall countermodel"
+    - "explicit enumeration proof and reopening criteria"
+  physicist_philosopher:
+    - "protocol-role versus matter-sector distinction"
+    - "intervention-indexed relation-family guard"
+    - "identity-loop versus nontrivial-cycle distinction"
+    - "finite spectrum versus principal-symbol type boundary"
+    - "low-energy underdetermination"
+    - "model-to-world and adoption ladders"
+    - "P7-T05 fail-closed downstream-use rule"
+
+claim_boundary_preserved:
+  candidate_status: "proposal-only"
+  evidence_status: "source-extension data"
+  adoption_status: "blocked_adoption_open_continuation"
+  canonical_ontology_modified: false
+  source_law_adopted: false
+  protocol_roles_promoted_to_matter_sectors: false
+  physical_time_established: false
+  physical_causality_established: false
+  signal_speed_established: false
+  principal_symbol_established: false
+  characteristic_set_established: false
+  physical_cone_established: false
+  effective_metric_established: false
+  detector_semantics_established: false
+  matter_coupling_derived: false
+  equivalence_principle_established_or_refuted: false
+  stress_energy_established: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  proof_authority: false
+  physics_promotion_authorized: false
+  completed_derivation_claimed: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false

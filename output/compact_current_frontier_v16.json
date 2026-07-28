@@ -2,7 +2,7 @@
   "schema_id": "compact_current_frontier_v16",
   "generated_from": [
     "research_control/program_state.yaml",
-    "research_control/handoffs/handoff-0892.yaml",
+    "research_control/handoffs/handoff-0893.yaml",
     "registries/DISTANCE_TO_GR_LEDGER.csv",
     "registries/METRIC_USE_LEDGER.csv",
     "research_control/current_frontier.md",
@@ -11,17 +11,17 @@
     "research_control/design/active_state_bifurcation_policy_v1.md"
   ],
   "active_state": {
-    "active_task_id": "RT-20260728-002",
-    "latest_handoff_id": "handoff-0892",
-    "current_status": "p7_t03_source_operational_device_suite_complete_p7_t04_ready_after_checkpoint",
+    "active_task_id": "RT-20260728-003",
+    "latest_handoff_id": "handoff-0893",
+    "current_status": "p7_t04_common_source_propagation_precise_obstruction_p7_t05_ready_for_checkpoint",
     "v15_completed": false,
     "v16_completed": false,
     "v16_plan_registered": true
   },
   "active_state_bifurcation": {
-    "latest_research_task_id": "RT-20260728-002",
-    "latest_research_handoff_id": "handoff-0892",
-    "latest_research_next_action": "Run one governed checkpoint for AJ-RT-20260728-002-001. Only after it commits may one fresh bounded candidate-constructor@0.2.0 packet execute v21 P7-T04 by deriving or precisely obstructing common formal source propagation without importing a physical cone metric detector semantics coupling or GR behavior.",
+    "latest_research_task_id": "RT-20260728-003",
+    "latest_research_handoff_id": "handoff-0893",
+    "latest_research_next_action": "Run one governed checkpoint for AJ-RT-20260728-003-001. Only after it commits may one fresh bounded candidate-constructor@0.2.0 packet execute v21 P7-T05 by constructing the actual universal matter-coupling candidate or returning a distinct precise obstruction without assuming a common physical cone metric detector semantics stress energy coupling or GR behavior.",
     "latest_project_system_task_id": "none",
     "latest_project_system_status": "none",
     "latest_project_system_sidecar_task_id": "none",
@@ -30,10 +30,10 @@
     "next_research_route_source": "latest_research_handoff"
   },
   "next_route": {
-    "route_id": "v21_p7_t04_common_source_propagation",
+    "route_id": "v21_p7_t05_universal_matter_coupling",
     "role_family": "candidate-constructor@0.2.0",
     "target_derivation_milestone": "matter_coupling",
-    "milestone_burden": "Derive common source propagation structure across operational systems.",
+    "milestone_burden": "Build the actual coupling candidate rather than another readiness profile.",
     "requires_human_gate": false
   },
   "claim_boundary": {
@@ -256,7 +256,7 @@
     {
       "object_id": "matter_coupling",
       "reader_facing_status": "accepted only as scoped source-extension evidence/precondition",
-      "authority_path": "research_control/tasks/RT-20260728-002/artifacts/source_operational_device_suite_candidate_v1.tex",
+      "authority_path": "research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_profile_candidate_v1.tex",
       "supports_target": "matter-semantics and matter-coupling continuation only",
       "does_not_establish": [
         "no_source_law_adoption",
@@ -283,7 +283,7 @@
       "target_id": "matter_coupling",
       "reader_facing_status": "accepted only as scoped source-extension evidence/precondition",
       "control_status": "accepted_as_scoped_evidence_precondition",
-      "blocking_burden": "SourceOperationalDeviceSuiteCandidate_v1 supplies a proposal-only finite source protocol tuple with five guarded role instances exact token-response closure zero-sum intervention differences source-presentation naturality and positive independent no-event malformed underdetermined and inconsistent controls; P7-T04 common formal propagation physical time length causality probability detector and free-fall semantics universal coupling stress energy adoption and every downstream GR burden remain open while P6 Gate B supplies no effective-geometry input",
+      "blocking_burden": "CommonSourcePropagationProfileCandidate_v1 supplies proposal-only finite Boolean source support and reachability profiles an exact transport theorem and a common three-address Rod-Signal-Detector subfamily; the current explicit five-role suite precisely fails the U_bij exact-bijective universality predicate by an equal-cardinality Clock-FreeFall SCC and nontrivial-cycle countermodel; P7-T05 actual coupling construction physical low-energy propagation principal symbols cones metrics matter-sector universality stress energy adoption and every downstream GR burden remain open while P6 Gate B supplies no effective-geometry input",
       "overread_guard": [
         "no_source_law_adoption",
         "no_canonical_ontology_edit",
@@ -328,7 +328,7 @@
   ],
   "distance_to_gr": {
     "delta": {
-      "effect": "proposal_only_formal_source_operational_device_suite",
+      "effect": "obstruction_recorded",
       "changed": true,
       "milestone": "matter_coupling",
       "burden_id": "matter_coupling"
@@ -462,7 +462,7 @@
           "no_future_source_extension_impossibility",
           "no_global_theory_rejection"
         ],
-        "last_evidence_path": "research_control/tasks/RT-20260728-002/artifacts/source_operational_device_suite_candidate_v1.tex",
+        "last_evidence_path": "research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_profile_candidate_v1.tex",
         "high_risk_status_card": {
           "object_id": "matter_coupling",
           "positive_status": "matter_coupling has accepted scoped evidence/precondition only for continuation.",
@@ -616,7 +616,15 @@
   },
   "validation": {
     "latest_required_status": "PASS",
-    "pending_layers": []
+    "pending_layers": [
+      {
+        "layer": "post_checkpoint",
+        "status": "PENDING",
+        "evidence": [
+          "One governed checkpoint remains; P7-T05 is unexecuted."
+        ]
+      }
+    ]
   },
   "authority_warning": {
     "snapshot_only_not_authority": true

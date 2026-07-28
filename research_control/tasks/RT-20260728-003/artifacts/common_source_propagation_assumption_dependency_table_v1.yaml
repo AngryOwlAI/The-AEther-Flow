@@ -1,0 +1,79 @@
+schema_id: "common_source_propagation_assumption_dependency_table_v1"
+artifact_id: "P7T04-COMMON-SOURCE-PROPAGATION-ASSUMPTION-DEPENDENCY-TABLE-V1"
+task_id: "RT-20260728-003"
+job_id: "AJ-RT-20260728-003-001"
+plan_task_id: "P7-T04"
+status: "draft/control"
+candidate_status: "proposal-only"
+
+assumptions:
+  - assumption_id: "P7T04-A01"
+    statement: "P7-T02 finite controls and typed identity rows are held fixed at proposal-only status."
+    source: "TEX-V21-P7-T02-SOURCE-MATTER-FINITE-TRANSITION-KERNEL-V1"
+    kind: "inherited_candidate"
+  - assumption_id: "P7T04-A02"
+    statement: "The five explicit P7-T03 protocol controls and their enabled rows are held fixed at proposal-only status."
+    source: "TEX-V21-P7-T03-SOURCE-OPERATIONAL-DEVICE-SUITE-V1"
+    kind: "inherited_candidate"
+  - assumption_id: "P7T04-A03"
+    statement: "Support means existence of a declared enabled source transition and not physical occurrence."
+    source: "CommonSourcePropagationProfileCandidate_v1"
+    kind: "new_proposal_definition"
+  - assumption_id: "P7T04-A04"
+    statement: "Reachability is Boolean finite-word composition and the index is not physical time."
+    source: "CommonSourcePropagationProfileCandidate_v1"
+    kind: "new_proposal_definition"
+  - assumption_id: "P7T04-A05"
+    statement: "The rod addresses are mapped to signal addresses by b_RS(r_j)=s_j."
+    source: "CommonSourcePropagationProfileCandidate_v1"
+    kind: "new_source_extension_data"
+  - assumption_id: "P7T04-A06"
+    statement: "The signal-to-detector address and history bijection is the one declared by P7-T03."
+    source: "TEX-V21-P7-T03-SOURCE-OPERATIONAL-DEVICE-SUITE-V1"
+    kind: "inherited_candidate"
+  - assumption_id: "P7T04-A07"
+    statement: "Full-suite universality U_bij requires bijective intertwiners to one finite relation."
+    source: "CommonSourcePropagationProfileCandidate_v1"
+    kind: "new_testable_candidate_condition"
+
+results:
+  - result_id: "P7T04-R01"
+    statement: "Boolean support and every finite reachability power are natural under support-preserving source bijections."
+    depends_on: ["P7T04-A01", "P7T04-A03", "P7T04-A04"]
+    status: "derived_exactly_within_candidate"
+    physical_status: "not_physical_propagation"
+  - result_id: "P7T04-R02"
+    statement: "Rod signal and detector share the same three-address chain relation under the declared candidate maps."
+    depends_on: ["P7T04-A02", "P7T04-A03", "P7T04-A05", "P7T04-A06"]
+    status: "derived_exactly_within_candidate"
+    physical_status: "not_common_cone_or_metric"
+  - result_id: "P7T04-R03"
+    statement: "Clock and baseline FreeFall source relations are nonisomorphic despite equal vertex count."
+    depends_on: ["P7T04-A02", "P7T04-A03"]
+    status: "derived_exactly_within_candidate"
+    physical_status: "formal_source_countermodel_only"
+  - result_id: "P7T04-R04"
+    statement: "The current five-protocol suite does not satisfy U_bij."
+    depends_on: ["P7T04-A07", "P7T04-R03"]
+    status: "precise_scoped_obstruction"
+    physical_status: "no_global_no_go"
+  - result_id: "P7T04-R05"
+    statement: "No principal symbol characteristic set cone metric or low-energy regime is derivable from the finite relation data."
+    depends_on: ["P7T04-A01", "P7T04-A02", "P7T04-A03", "P7T04-A04"]
+    status: "typed_missing_primitive_obstruction"
+    physical_status: "future_conservative_source_extension_open"
+
+forbidden_assumptions:
+  - "target atlas or effective metric"
+  - "physical time duration or causal ordering"
+  - "covector momentum energy wavelength or dispersion relation"
+  - "empirical detector or signal semantics"
+  - "universal matter action coupling or equivalence principle"
+  - "validator role checkpoint or recency as mathematical premise"
+
+status_separation:
+  stipulated: ["P7T04-A03", "P7T04-A04", "P7T04-A05", "P7T04-A07"]
+  inherited_proposal_only: ["P7T04-A01", "P7T04-A02", "P7T04-A06"]
+  candidate_derived: ["P7T04-R01", "P7T04-R02", "P7T04-R03", "P7T04-R04", "P7T04-R05"]
+  canonical_adoption: "not authorized"
+  physical_interpretation: "open and not supplied"

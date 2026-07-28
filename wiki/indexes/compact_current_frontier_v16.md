@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260728-002`
-- Latest handoff: `handoff-0892`
-- Current status: `p7_t03_source_operational_device_suite_complete_p7_t04_ready_after_checkpoint`
+- Active task: `RT-20260728-003`
+- Latest handoff: `handoff-0893`
+- Current status: `p7_t04_common_source_propagation_precise_obstruction_p7_t05_ready_for_checkpoint`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260728-002`
-- Latest research handoff: `handoff-0892`
-- Latest research next action: Run one governed checkpoint for AJ-RT-20260728-002-001. Only after it commits may one fresh bounded candidate-constructor@0.2.0 packet execute v21 P7-T04 by deriving or precisely obstructing common formal source propagation without importing a physical cone metric detector semantics coupling or GR behavior.
+- Latest research task: `RT-20260728-003`
+- Latest research handoff: `handoff-0893`
+- Latest research next action: Run one governed checkpoint for AJ-RT-20260728-003-001. Only after it commits may one fresh bounded candidate-constructor@0.2.0 packet execute v21 P7-T05 by constructing the actual universal matter-coupling candidate or returning a distinct precise obstruction without assuming a common physical cone metric detector semantics stress energy coupling or GR behavior.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p7_t04_common_source_propagation`
+- Route ID: `v21_p7_t05_universal_matter_coupling`
 - Role family: `candidate-constructor@0.2.0`
 - Target milestone: `matter_coupling`
-- Milestone burden: Derive common source propagation structure across operational systems.
+- Milestone burden: Build the actual coupling candidate rather than another readiness profile.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `550979ff6d70ef857f2aa1ddb0f4e9e0ee1a393fcb2d29e0057876a45cdf0b95`
-- JSON SHA-256: `c3be95a2dc38edda3de1cd5906d95621b673e63504d745ba8d1cacfa5d349321`
+- YAML SHA-256: `f08103a94ea5ba1e5c386774dde8604bc638d15628faa0ff7c1c97ebe5cdc527`
+- JSON SHA-256: `9677574a96e71585828789b0f780a51af7d7ea28de99dc3c3d704913cfa1e95c`
 
 ## Authority Warning
 

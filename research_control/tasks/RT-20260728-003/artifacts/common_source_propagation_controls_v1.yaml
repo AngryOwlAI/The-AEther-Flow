@@ -1,0 +1,94 @@
+schema_id: "common_source_propagation_controls_v1"
+artifact_id: "P7T04-COMMON-SOURCE-PROPAGATION-CONTROLS-V1"
+task_id: "RT-20260728-003"
+job_id: "AJ-RT-20260728-003-001"
+plan_task_id: "P7-T04"
+status: "draft/control"
+candidate_status: "proposal-only"
+obstruction_id: "OBST-P7T04-FULL-SUITE-COMMON-PROPAGATION-001"
+
+controls:
+  - control_id: "P7T04-CTRL-CHAIN-BOOLEAN-REACHABILITY-001"
+    class: "positive_exact"
+    input_matrix:
+      - [1, 1, 0]
+      - [0, 1, 1]
+      - [0, 0, 1]
+    expected_exact_two_step_0_to_2: 1
+    expected_exact_one_step_0_to_2: 0
+    expected_profile: [3, 2, 3, false, 2]
+    physical_time_claimed: false
+  - control_id: "P7T04-CTRL-ROD-SIGNAL-DETECTOR-TRANSPORT-001"
+    class: "positive_cross_protocol"
+    systems: ["Rod_src", "Signal_src", "Detector_src"]
+    maps:
+      - {r0: s0, r1: s1, r2: s2}
+      - {s0: q0, s1: q1, s2: q2}
+    expected_adjacency_intertwining: true
+    expected_bounded_reachability_intertwining: true
+    physical_common_cone_claimed: false
+  - control_id: "P7T04-CTRL-CLOCK-FREEFALL-MINIMAL-COUNTERMODEL-001"
+    class: "minimal_countermodel"
+    clock_matrix:
+      - [1, 1]
+      - [1, 1]
+    freefall_baseline_matrix:
+      - [1, 1]
+      - [0, 1]
+    same_vertex_count: true
+    expected_isomorphic: false
+    exact_failed_invariants:
+      - "strongly_connected_component_count"
+      - "reduced_directed_cycle_present"
+    scope: "current explicit proposal-only controls and bijective support transport"
+    global_no_go_claimed: false
+  - control_id: "P7T04-CTRL-FREEFALL-INTERVENTION-RELATION-CHANGE-001"
+    class: "intervention_sensitivity"
+    baseline_matrix:
+      - [1, 1]
+      - [0, 1]
+    blocked_matrix:
+      - [1, 0]
+      - [0, 1]
+    expected_same_relation: false
+    conclusion: "even one guarded role need not carry an intervention-independent support relation"
+    physical_force_or_geodesic_claimed: false
+  - control_id: "P7T04-CTRL-TRIVIAL-QUOTIENT-REJECTION-001"
+    class: "degenerate_commonality"
+    candidate_quotient_vertex_count: 1
+    common_to_all_relations: true
+    accepted_as_universality_result: false
+    rejection_reason: "erases every distinguishing support invariant and has no selected interpretation"
+  - control_id: "P7T04-CTRL-MATRIX-SPECTRUM-SMUGGLING-001"
+    class: "target_import_guard"
+    attempted_inference: "finite adjacency characteristic polynomial is a physical dispersion relation"
+    expected_branch: "malformed_target_import"
+    missing_primitives:
+      - "source manifold"
+      - "covector domain"
+      - "differential operator"
+      - "leading derivative order"
+      - "scale map"
+      - "model-to-world interpretation"
+  - control_id: "P7T04-CTRL-LOW-ENERGY-UNDERDETERMINED-001"
+    class: "underdetermined"
+    requested_claim: "universal low-energy propagation"
+    missing_source_datum: "energy or scale variable and low-energy limiting map"
+    expected_branch: "underdetermined_not_global_no_go"
+  - control_id: "P7T04-CTRL-FUTURE-EXTENSION-OPEN-001"
+    class: "reopening_guard"
+    current_result: "precise obstruction to current U_bij claim"
+    allowed_future_change: "materially new conservative source propagation structure satisfying recorded reopening criteria"
+    future_impossibility_claimed: false
+
+expected_summary:
+  positive_control_count: 2
+  countermodel_control_count: 1
+  intervention_control_count: 1
+  degenerate_control_count: 1
+  target_import_guard_count: 1
+  underdetermined_control_count: 1
+  reopening_guard_count: 1
+  full_suite_universality_established: false
+  subfamily_relation_established_within_candidate: true
+  physical_propagation_established: false

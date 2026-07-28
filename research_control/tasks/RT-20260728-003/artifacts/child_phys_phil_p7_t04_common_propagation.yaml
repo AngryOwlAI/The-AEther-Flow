@@ -1,0 +1,771 @@
+schema_id: "v21_p7_t04_child_phys_phil_common_source_propagation_review_v1"
+artifact_id: "P7T04-CHILD-PHYS-PHIL-COMMON-SOURCE-PROPAGATION-REVIEW-V1"
+task_id: "RT-20260728-003"
+job_id: "AJ-RT-20260728-003-001"
+decision_id: "DDR-20260728-003"
+plan_task_id: "P7-T04"
+execution_unit_id: "child_phys_phil"
+perspective: "physicist_philosopher"
+status: "completed"
+artifact_status: "draft/control"
+candidate_status: "proposal-only"
+evidence_status: "source-extension data"
+adoption_status: "blocked_adoption_open_continuation"
+review_context: "same_context_internal_parent_child_synthesis_input"
+target_derivation_milestone: "matter_coupling"
+milestone_burden: "Establish or refute universal low-energy propagation."
+claim_boundary_id: "CB-V21-P7-T04-COMMON-SOURCE-PROPAGATION-001"
+
+review_question: >-
+  What exact source-side relation, reachability, transport, and
+  non-isomorphism statements follow from the fixed proposal-only P7-T02
+  finite controls and P7-T03 protocol suite, and which physical,
+  operational, geometric, matter-sector, coupling, or GR interpretations
+  remain blocked?
+
+review_outcome:
+  result_kind: "precise_obstruction_with_constructive_subfamily_theorem"
+  candidate_id: "CommonSourcePropagationProfileCandidate_v1"
+  relation_id: "SourceSupportRelation_v1"
+  theorem_ids:
+    - "P7T04-THM-BOOLEAN-SUPPORT-TRANSPORT-001"
+    - "P7T04-THM-THREE-ADDRESS-SUBFAMILY-001"
+  obstruction_id: "OBST-P7T04-FULL-SUITE-COMMON-PROPAGATION-001"
+  exact_allowed_result: >-
+    Inside the stipulated finite proposal-only controls, Boolean support and
+    finite reachability are source combinatorics. Rod_src, Signal_src, and
+    Detector_src have a common three-address-chain support skeleton only
+    under explicit source-address and transition bijections. The full
+    intervention-indexed P7-T03 relation family is not one isomorphism class:
+    in particular Clock_src and baseline FreeFall_src have equal vertex
+    cardinality but incompatible strongly-connected-component and
+    nontrivial-cycle invariants. Therefore the current candidate data do not
+    supply one common support relation by bijective transport across the
+    whole suite.
+  exact_obstruction_scope: >-
+    The obstruction is limited to exact bijective transport of the explicit
+    finite source-support relations in the current P7-T03 candidate,
+    including its declared intervention variants. It is not a physical
+    multi-cone result, not birefringence, not nonuniversality of matter
+    sectors, not a global no-go theorem, and not a future source-extension
+    impossibility claim.
+  physical_low_energy_result: "underdetermined_not_refuted"
+  proof_authority: false
+  physics_promotion_authorized: false
+
+source_basis:
+  - path: "research_control/tasks/RT-20260728-003/DDR-20260728-003.md"
+    sha256: "78b388840fbef4a8a1dcf892cb8ab1f90d32090227516fbacac36fd97e08a541"
+    use: "active construction question, finite-relation scope, and exact claim boundary"
+  - path: "research_control/tasks/RT-20260728-003/jobs/AJ-RT-20260728-003-001.yaml"
+    sha256: "6a466edc537cfb83a024fbdeaab12deffd48c7939a85b80b591ef1a748a98a8e"
+    use: "single outer AgentJob assumptions, theorem and obstruction identities, child decomposition, and authority limits"
+  - path: "research_control/tasks/RT-20260728-003/roles/candidate-constructor@0.2.0--RT-20260728-003.yaml"
+    sha256: "baee7456b2cb498e581137963ecfeaad38cfabb1110539eca1593a08fe4b89ec"
+    use: "task-local construction permissions and removed physical interpretations"
+  - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+    path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+    sha256: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+    use: "P7-T04 objective, dependencies, common-propagation-or-obstruction burden, and handoff rule"
+  - object_id: "TEX-V21-P7-T02-SOURCE-MATTER-FINITE-TRANSITION-KERNEL-V1"
+    path: "research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_candidate_v1.tex"
+    sha256: "65ac095f5cdf4c2e319365c8b0e024d031b19d9fc2b8102e59997afa1e8f9129"
+    use: "fixed finite enabled rows, support primacy, formal update, and source-presentation equivariance"
+  - path: "research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_spec_v1.yaml"
+    sha256: "936d2aa6dfea3d263675468ff581190240efde84c1241ad971a8c1383a065a97"
+    use: "machine-readable P7-T02 relation inputs and open physical burdens"
+  - path: "research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_controls_v1.yaml"
+    sha256: "af7fc976590b4ca82fca5c34c6f30091f6599428b8005cf3932ce03f92f7d779"
+    use: "finite identity, forward, product, interaction, null, and malformed control distinctions"
+  - object_id: "TEX-V21-P7-T03-SOURCE-OPERATIONAL-DEVICE-SUITE-V1"
+    path: "research_control/tasks/RT-20260728-002/artifacts/source_operational_device_suite_candidate_v1.tex"
+    sha256: "d6c818ee29f1a7e659e2f454aec21431d680b3d2d4df048fcf36f4aba87ba22a"
+    use: "five guarded protocol roles, explicit enabled rows, cross-device contracts, and semantic non-conclusions"
+  - path: "research_control/tasks/RT-20260728-002/artifacts/source_operational_device_suite_spec_v1.yaml"
+    sha256: "417c604bad008b85b153718ae04aa43307c2ff3cfa3a5c3f242e70b013c86ba4"
+    use: "machine-readable protocol fields, conditional transport requirements, and model-to-world ladder"
+  - path: "research_control/tasks/RT-20260728-002/artifacts/source_operational_device_controls_v1.yaml"
+    sha256: "7b5b7f39318bd4aa39e778c17ab3fd410f2498f20b52b03c6bd86045bdffeee7"
+    use: "explicit Clock, Rod, Signal, Detector, and intervention-indexed FreeFall enabled rows"
+  - object_id: "TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-MATTER-COUPLING-BRIDGE-TARGET-V1-FORMALIZATION"
+    path: "research_control/tasks/RT-20260614-257/artifacts/286_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_MATTER_COUPLING_BRIDGE_TARGET_V1_FORMALIZATION.tex"
+    sha256: "3d1c6dfb2ea543c8ea455ee2f3553e3cac76e3072902213ed07aff0db514605e"
+    use: "source-locality, sector-uniformity, no-target-import, and pre-tensorial downstream guards"
+  - object_id: "TEX-V15-P3-T02-SOURCE-CERTIFICATE-OPERATION-LAWS"
+    path: "research_control/tasks/RT-20260702-064/artifacts/source_certificate_operation_laws_v1.tex"
+    sha256: "2ebc781bd82b4d39ab394255e5d3836d992625bdece8b8f912a8ab809669b986"
+    use: "declared-scope transport, composition, missing-map, and target-import fail-closed discipline"
+  - path: "research_control/current_frontier.md"
+    sha256: "7813ca147a690ee10f2fed9f14c34a8c824db892b204b48f3e3fd207c118a823"
+    use: "active matter-coupling burden, P6 geometry-input freeze, and blocked physical claims"
+    authority_limit: "generated control snapshot, not a scientific premise"
+  - path: "registries/METRIC_USE_LEDGER.csv"
+    sha256: "108b1b56d9ef2d2d6cd30d7caa77461c813d8729890afd537206c6f94a1f24cb"
+    use: "metric-adjacent wording, detector-calibration, and physical-Lorentzian-metric import guards"
+
+fixed_basis:
+  p7_t02:
+    candidate_id: "SourceMatterFiniteTransitionKernelCandidate_v1"
+    status: "proposal-only"
+    finite_control: "C=(Omega,E,s,t,K_C)"
+    support_is_primary: true
+    identity_rule: "each enabled row contains a typed identity transition"
+    kernel_rule: "uniform finite rational bookkeeping coefficients on each declared row"
+    composition_index: "n in N_0"
+    exact_supplied_content:
+      - "finite configurations and enabled typed transitions"
+      - "source and target maps on transition records"
+      - "formal finite update and history composition"
+      - "row-bijective source-presentation transport"
+      - "inherited preservation of P7-T01 sector labels along supported edges"
+    not_supplied:
+      - "physical events or trajectories"
+      - "physical time or causal order"
+      - "probabilities, rates, frequencies, or propensities"
+      - "spatial locality, distance, or continuum structure"
+      - "field equations, differential operators, or principal symbols"
+      - "effective geometry or matter coupling"
+  p7_t03:
+    candidate_id: "SourceOperationalDeviceSuiteCandidate_v1"
+    status: "proposal-only"
+    protocol_roles:
+      - "Clock_src"
+      - "Rod_src"
+      - "Signal_src"
+      - "Detector_src"
+      - "FreeFall_src"
+    role_semantics: "guarded formal source-protocol labels only"
+    exact_supplied_content:
+      - "finite preparations, interventions, histories, token alphabets, and readout maps"
+      - "explicit enabled rows for five role instances"
+      - "a declared Signal_src to Detector_src history and transition bijection"
+      - "a conditional Rod_src to Signal_src address-transport contract"
+      - "a baseline and a blocked-control variant for FreeFall_src"
+    critical_type_distinction: >-
+      The five protocol roles are not declared matter sectors. P7-T01 sector
+      labels are preserved along edges, but P7-T03 does not supply one
+      parameterized protocol or relation for every admitted matter sector.
+    intervention_distinction: >-
+      FreeFall_src supplies at least two enabled-row relations, one for the
+      baseline and one for i_block_move. Therefore the exact extracted object
+      is an intervention-indexed relation family, not automatically one
+      relation per English role name.
+
+formal_relation_contract:
+  one_step_support:
+    symbol: "A_D(y,x)"
+    definition: >-
+      A_D(y,x)=1 exactly when at least one enabled declared transition of the
+      selected protocol control has source x and target y; otherwise it is
+      zero.
+    algebra: "Boolean"
+    full_support_includes_typed_identity_loops: true
+    exact_meaning: "declared finite source adjacency only"
+  nonidentity_support:
+    symbol: "N_D"
+    definition: "N_D is A_D with only the distinguished typed identity edges removed"
+    purpose: >-
+      N_D makes nontrivial cycle and hop content explicit so that ubiquitous
+      identity loops are not misreported as propagation cycles.
+    exact_meaning: "declared nonidentity source adjacency only"
+  bounded_reachability:
+    symbol: "Reach_D_le_n"
+    definition: "Reach_D_le_n = I OR A_D OR A_D^[2] OR ... OR A_D^[n] over the Boolean semiring"
+    exact_meaning: "existence of a declared source-transition word of at most n formal compositions"
+    not_meaning:
+      - "causal accessibility"
+      - "physical future"
+      - "signal transmission"
+      - "spacetime path"
+      - "finite propagation speed"
+  unbounded_finite_reachability:
+    symbol: "Reach_D_star"
+    definition: "the reflexive transitive closure of A_D on the finite declared configuration set"
+    exact_meaning: "finite graph reachability only"
+  invariant_conventions:
+    vertex_count: "cardinality of the selected finite configuration set"
+    nonidentity_edge_count: "cardinality of N_D"
+    strongly_connected_component_count: "SCC count of the directed support graph"
+    nontrivial_directed_cycle: "a directed cycle using at least one nonidentity edge"
+    reachable_pair_diameter: >-
+      Maximum shortest-path length over distinct reachable ordered pairs
+      using nonidentity edges, with value zero when no distinct pair is
+      reachable.
+    convention_guard: >-
+      Every theorem and validator must use these exact conventions. An
+      unqualified cycle count would be ambiguous because every control has
+      typed identity loops.
+
+model_to_world_ladder:
+  level_0_process_and_provenance:
+    items:
+      - "task, decision, role, AgentJob, handoff, registry, validator, cache, checkpoint, and commit records"
+    exact_role: "routing, provenance, validation, and transaction evidence only"
+    forbidden_use: "none may serve as a mathematical or physical premise"
+  level_1_stipulated_source_records:
+    items:
+      - "finite configuration names"
+      - "typed identity and nonidentity transition records"
+      - "enabled-row declarations"
+      - "intervention labels"
+      - "source-address and transition bijections"
+    status_effect: "proposal-only source-extension data"
+  level_2_candidate_derived_relation:
+    items:
+      - "Boolean support adjacency A_D"
+      - "nonidentity support N_D"
+      - "bounded and reflexive-transitive reachability"
+      - "finite graph invariant profiles"
+    status_effect: "exact only relative to the stipulated finite candidate"
+  level_3_candidate_transport_theorems:
+    items:
+      - "support conjugacy under an explicit relation-preserving bijection"
+      - "Boolean-power and reachability transport"
+      - "preservation of vertex, SCC, cycle, and diameter invariants"
+      - "conditional common C3 support skeleton for Rod_src, Signal_src, and Detector_src"
+    status_effect: "task-local theorem content, not ontology adoption"
+  level_4_scoped_obstruction:
+    item: >-
+      Incompatible finite graph invariants block one exact support relation
+      up to bijection across the current intervention-indexed suite.
+    status_effect: "precise current-candidate obstruction only"
+  level_5_physical_or_operational_interpretation:
+    status: "open_not_supplied"
+    missing_maps_and_primitives:
+      - "source configuration to localized physical event or field state"
+      - "formal composition count to physical time or duration"
+      - "source address or hop count to physical distance"
+      - "source reachability to physical causal order"
+      - "formal token transport to physical signaling"
+      - "trigger token to calibrated empirical detector outcome"
+      - "baseline intervention label to force-free or gravitational motion"
+      - "protocol family to every admitted physical matter sector"
+      - "energy variable, scale map, and low-energy regime"
+      - "continuum limit, differentiable base, field bundle, and local differential operator"
+      - "covector variables, characteristic polynomial, and characteristic set"
+      - "cone-to-metric reconstruction conditions and Lorentzian signature"
+      - "matter action, coupling map, and stress-energy semantics"
+  level_6_canonical_or_protected_status:
+    status: "human-gated"
+    blocked_here:
+      - "canonical-ontology candidate designation"
+      - "source propagation law adoption"
+      - "physical interpretation adoption"
+      - "effective metric or coupling-law adoption"
+      - "benchmark or completed-derivation promotion"
+  ladder_rule: >-
+    No graph-theoretic theorem, familiar device-role name, equal response
+    coefficient, validation result, or downstream route selection moves an
+    object from source syntax to physical interpretation or protected status.
+
+transport_theorem_premise_result_audit:
+  theorem_id: "P7T04-THM-BOOLEAN-SUPPORT-TRANSPORT-001"
+  admissible_premises:
+    - "finite source configuration sets Omega_D and Omega_E"
+    - "explicit bijection b:Omega_D->Omega_E"
+    - "A_E(b(y),b(x))=A_D(y,x) for every ordered source pair"
+    - "the same typed-identity convention on both sides"
+  exact_results:
+    - "the adjacency matrices are related by permutation conjugacy"
+    - "every Boolean power and Reach_le_n relation transports under b"
+    - "reflexive-transitive reachability transports under b"
+    - "the declared invariant profile is equal"
+  results_not_licensed:
+    - "equality of kernel weights unless transition-row transport is separately shown"
+    - "equality of readout tokens unless a token map is separately shown"
+    - "operational equivalence"
+    - "empirical indistinguishability"
+    - "common physical propagation"
+    - "common characteristic cone or metric"
+    - "universality across matter sectors"
+  converse_guard: >-
+    Equality of selected invariants is necessary but not sufficient for
+    support isomorphism. Equality of the response value one quarter is also
+    neither necessary nor sufficient for support isomorphism.
+
+three_address_subfamily_audit:
+  theorem_id: "P7T04-THM-THREE-ADDRESS-SUBFAMILY-001"
+  common_skeleton: "C3_reflexive_forward_chain"
+  skeleton_vertices: ["0", "1", "2"]
+  skeleton_nonidentity_edges: ["0->1", "1->2"]
+  protocol_profiles:
+    Rod_src:
+      vertices: ["r_0", "r_1", "r_2"]
+      nonidentity_edges: ["r_0->r_1", "r_1->r_2"]
+      profile:
+        vertex_count: 3
+        nonidentity_edge_count: 2
+        strongly_connected_component_count: 3
+        nontrivial_directed_cycle: false
+        reachable_pair_diameter: 2
+    Signal_src:
+      vertices: ["s_0", "s_1", "s_2"]
+      nonidentity_edges: ["s_0->s_1", "s_1->s_2"]
+      profile:
+        vertex_count: 3
+        nonidentity_edge_count: 2
+        strongly_connected_component_count: 3
+        nontrivial_directed_cycle: false
+        reachable_pair_diameter: 2
+    Detector_src:
+      vertices: ["q_0", "q_1", "q_2"]
+      nonidentity_edges: ["q_0->q_1", "q_1->q_2"]
+      profile:
+        vertex_count: 3
+        nonidentity_edge_count: 2
+        strongly_connected_component_count: 3
+        nontrivial_directed_cycle: false
+        reachable_pair_diameter: 2
+  transport_maps:
+    signal_to_detector:
+      map: "b_SD(s_j)=q_j for j=0,1,2"
+      provenance: "explicit P7-T03 declared history and transition bijection"
+      status: "fixed proposal-only source data"
+    rod_to_signal:
+      map: "b_RS(r_j)=s_j for j=0,1,2"
+      provenance: >-
+        P7-T03 permits the comparison only under a declared source-address
+        bijection; this concrete map must be declared by P7-T04 and checked
+        on identity and forward edges.
+      status: "new proposal-only source-extension data, not derived by current ontology"
+    rod_to_detector:
+      map: "b_RD=b_SD composed with b_RS"
+      status: "conditional composed source transport"
+  exactly_allowed_claim: >-
+    Under the explicit maps above, the three selected finite support graphs
+    are isomorphic to the same reflexive forward-chain skeleton, and their
+    Boolean reachability relations transport accordingly.
+  blocked_overreads:
+    - "the three roles are physical matter sectors"
+    - "the chain is a spacetime trajectory"
+    - "the edge orientation is physical time or causal order"
+    - "the common skeleton is a physical cone"
+    - "the endpoint count is distance"
+    - "the formal horizon is travel time"
+    - "the trigger token is empirical detection"
+    - "the subfamily establishes universal propagation"
+    - "the subfamily establishes a common metric or equivalence principle"
+
+full_suite_universality_obstruction_audit:
+  obstruction_id: "OBST-P7T04-FULL-SUITE-COMMON-PROPAGATION-001"
+  universality_predicate_tested: >-
+    There exists one finite directed support relation G and, for every
+    explicitly selected current protocol-control variant D, a bijection from
+    G to A_D that preserves and reflects every support edge.
+  relation_family:
+    Clock_src:
+      vertex_count: 2
+      nonidentity_edge_count: 2
+      strongly_connected_component_count: 1
+      nontrivial_directed_cycle: true
+      reachable_pair_diameter: 1
+    Rod_src:
+      vertex_count: 3
+      nonidentity_edge_count: 2
+      strongly_connected_component_count: 3
+      nontrivial_directed_cycle: false
+      reachable_pair_diameter: 2
+    Signal_src:
+      vertex_count: 3
+      nonidentity_edge_count: 2
+      strongly_connected_component_count: 3
+      nontrivial_directed_cycle: false
+      reachable_pair_diameter: 2
+    Detector_src:
+      vertex_count: 3
+      nonidentity_edge_count: 2
+      strongly_connected_component_count: 3
+      nontrivial_directed_cycle: false
+      reachable_pair_diameter: 2
+    FreeFall_src_baseline:
+      vertex_count: 2
+      nonidentity_edge_count: 1
+      strongly_connected_component_count: 2
+      nontrivial_directed_cycle: false
+      reachable_pair_diameter: 1
+    FreeFall_src_i_block_move:
+      vertex_count: 2
+      nonidentity_edge_count: 0
+      strongly_connected_component_count: 2
+      nontrivial_directed_cycle: false
+      reachable_pair_diameter: 0
+  minimal_same_cardinality_countermodel:
+    first_relation: "Clock_src"
+    second_relation: "FreeFall_src_baseline"
+    shared_vertex_count: 2
+    incompatible_invariants:
+      - "Clock_src has one SCC while FreeFall_src_baseline has two SCCs."
+      - "Clock_src has a nontrivial directed two-cycle while FreeFall_src_baseline is acyclic after typed identities are removed."
+    conclusion: "no relation-preserving bijection exists between these two explicit supports"
+    materiality: >-
+      The same-cardinality witness shows that the obstruction is not merely
+      an artifact of comparing a two-vertex role with a three-vertex role.
+  independent_cardinality_witness:
+    first_relation: "Clock_src"
+    second_relation: "Signal_src"
+    incompatible_invariant: "vertex_count 2 versus 3"
+  exact_conclusion: >-
+    The explicit current relation family is not one isomorphism class, so the
+    full-suite bijective-transport universality predicate is false inside
+    this fixed proposal-only candidate.
+  excluded_stronger_conclusions:
+    - "no common subrelation exists"
+    - "no common quotient, cover, embedding, product, or coarse graining exists"
+    - "no future uniform source relation can be constructed"
+    - "physical matter sectors have different characteristic cones"
+    - "birefringence or Lorentz violation occurs"
+    - "the equivalence principle fails"
+    - "universal coupling is impossible"
+    - "the global theory is false"
+
+principal_symbol_and_geometry_audit:
+  current_finite_objects:
+    - "Boolean adjacency matrices"
+    - "row-normalized rational bookkeeping matrices"
+    - "finite graph reachability relations"
+    - "finite graph invariant profiles"
+  absent_principal_symbol_inputs:
+    - "a differentiable base or source-manifold chart system"
+    - "physical or source field bundles"
+    - "local differential or pseudodifferential equations"
+    - "an operator order and highest-derivative coefficients"
+    - "cotangent variables or a Fourier covector"
+    - "a homogeneous symbol in the covector"
+    - "a continuum or scaling limit linking finite updates to an operator"
+  exact_disposition: >-
+    No principal symbol is defined by the current source data. A matrix
+    characteristic polynomial such as det(lambda I-U_D), if computed, is a
+    finite linear-algebra invariant and must not be renamed a PDE principal
+    symbol or dispersion relation.
+  absent_characteristic_set_inputs:
+    - "a principal symbol"
+    - "a noninvertibility condition in cotangent space"
+    - "a physical frequency-momentum interpretation"
+  absent_cone_inputs:
+    - "a characteristic set with conic homogeneity"
+    - "local tangent or cotangent spaces"
+    - "orientation, time orientation, and physical event localization"
+    - "hyperbolicity or finite-speed propagation theorem"
+  absent_metric_inputs:
+    - "dimension and differentiable structure"
+    - "nondegenerate symmetric bilinear form"
+    - "signature and normalization data"
+    - "a theorem reconstructing a conformal metric from characteristics"
+    - "operational calibration by physical clocks, rods, signals, or detectors"
+  exact_geometry_status: "not_derived_and_not_refuted"
+  exact_energy_or_scale_regime: >-
+    Finite task-local source controls and formal composition horizons only.
+    No energy, wavelength, momentum, continuum, infrared, ultraviolet, or
+    low-energy variable is present, so no physical low-energy regime can be
+    stated.
+
+blocked_inference_audit:
+  - inference_id: "PHIL-P7T04-TIME-001"
+    attempted_inference: "formal composition count or graph depth implies physical time or duration"
+    disposition: "blocked_underdetermined_interpretation"
+    missing: "a calibrated map from histories or composition count to a physical temporal quantity"
+  - inference_id: "PHIL-P7T04-CAUSAL-ORDER-002"
+    attempted_inference: "directed reachability is a physical causal order"
+    disposition: "blocked_underdetermined_interpretation"
+    missing: "physical event semantics, a causal-order axiom, and consistency with cycle and localization structure"
+  - inference_id: "PHIL-P7T04-SIGNAL-003"
+    attempted_inference: "Signal_src reachability is physical signal propagation"
+    disposition: "blocked_role_name_overread"
+    missing: "a physical carrier or field, localization, coupling, and empirical emission and reception maps"
+  - inference_id: "PHIL-P7T04-SPEED-004"
+    attempted_inference: "source hops divided by formal horizon define speed"
+    disposition: "blocked_dimension_and_semantics_error"
+    missing: "physical distance, physical duration, units, calibration, and a propagation theorem"
+  - inference_id: "PHIL-P7T04-PRINCIPAL-SYMBOL-005"
+    attempted_inference: "finite adjacency or update spectrum is a matter principal symbol"
+    disposition: "blocked_category_error"
+    missing: "field equations, operator order, highest-derivative terms, covectors, and a justified continuum limit"
+  - inference_id: "PHIL-P7T04-CHARACTERISTIC-CONE-006"
+    attempted_inference: "finite reachability or matrix zeros define a characteristic or causal cone"
+    disposition: "blocked_category_error"
+    missing: "a homogeneous principal symbol, characteristic set, hyperbolicity, and physical spacetime interpretation"
+  - inference_id: "PHIL-P7T04-METRIC-007"
+    attempted_inference: "a common three-node chain is one effective metric"
+    disposition: "blocked_target_import_or_overread"
+    missing: "dimension, differentiable structure, bilinear form, signature, and a lawful reconstruction theorem"
+  - inference_id: "PHIL-P7T04-DETECTOR-008"
+    attempted_inference: "Detector_src trigger reachability is an empirical detector response"
+    disposition: "blocked_role_name_overread"
+    missing: "measurement coupling, calibration, outcome semantics, noise model, and empirical validation"
+  - inference_id: "PHIL-P7T04-UNIVERSALITY-009"
+    attempted_inference: "the C3 subfamily is universal propagation across matter"
+    disposition: "blocked_scope_error"
+    missing: "a parameterized family of every admitted matter sector and a uniform relation schema across that family"
+  - inference_id: "PHIL-P7T04-EQUIVALENCE-PRINCIPLE-010"
+    attempted_inference: "formal baseline behavior or graph isomorphism establishes the equivalence principle"
+    disposition: "blocked_semantic_and_dynamical_gap"
+    missing: "physical free-fall semantics, inertial and gravitational structure, universality, local Lorentz behavior, and metric coupling"
+  - inference_id: "PHIL-P7T04-MATTER-ACTION-011"
+    attempted_inference: "a finite relation supplies a matter action or field dynamics"
+    disposition: "blocked_category_error"
+    missing: "physical fields, action functional, variational principle, locality, and coupling variables"
+  - inference_id: "PHIL-P7T04-COUPLING-012"
+    attempted_inference: "shared source support supplies a universal coupling law"
+    disposition: "blocked_downstream_promotion"
+    missing: "a source-to-effective coupling map, sector-uniform schema, no-target-import certificate, and protected adoption"
+  - inference_id: "PHIL-P7T04-STRESS-ENERGY-013"
+    attempted_inference: "bookkeeping-mass preservation or support transport supplies stress energy"
+    disposition: "blocked_semantic_and_tensorial_gap"
+    missing: "tensorial semantics, physical spacetime, matter action or another lawful derivation, and conservation interpretation"
+  - inference_id: "PHIL-P7T04-GR-014"
+    attempted_inference: "a source-relation theorem or obstruction advances to Einstein equations or exact GR"
+    disposition: "blocked_downstream_promotion"
+    missing: "metric dynamics, universal matter coupling, action or variation, field equations, benchmark recovery, and protected authority"
+
+allowed_claims:
+  - claim_id: "PHIL-LIC-P7T04-01"
+    statement: "Each selected finite control determines an exact Boolean support relation relative to its declared enabled rows."
+  - claim_id: "PHIL-LIC-P7T04-02"
+    statement: "Boolean powers and finite reachability are exact formal composition records inside the selected finite control."
+  - claim_id: "PHIL-LIC-P7T04-03"
+    statement: "An explicit support-preserving source bijection transports Boolean reachability and preserves the declared graph invariants."
+  - claim_id: "PHIL-LIC-P7T04-04"
+    statement: "With the newly declared Rod_src-to-Signal_src map and the fixed Signal_src-to-Detector_src map, those three support graphs share one C3 source skeleton."
+  - claim_id: "PHIL-LIC-P7T04-05"
+    statement: "The current intervention-indexed full-suite support family is not one isomorphism class under exact bijective transport."
+  - claim_id: "PHIL-LIC-P7T04-06"
+    statement: "The Clock_src and baseline FreeFall_src supports form a same-cardinality finite countermodel distinguished by SCC and nontrivial-cycle invariants."
+  - claim_id: "PHIL-LIC-P7T04-07"
+    statement: "The current sources define no PDE principal symbol, characteristic set, physical cone, or metric."
+  - claim_id: "PHIL-LIC-P7T04-08"
+    statement: "The result narrows the formal P7-T04 source-relation burden while physical low-energy propagation and matter-sector universality remain open."
+
+forbidden_conclusions:
+  - "physical time or duration has been derived"
+  - "directed source reachability is physical causal order"
+  - "a physical signal propagates along source edges"
+  - "a finite physical propagation speed has been derived"
+  - "a matter principal symbol or characteristic polynomial has been derived from field equations"
+  - "a characteristic set, causal cone, light cone, or effective cone has been derived"
+  - "a physical or effective metric has been derived, selected, or adopted"
+  - "a trigger token has operational detector meaning"
+  - "the protocol roles are physical matter sectors"
+  - "the C3 subfamily establishes universal propagation"
+  - "the full-suite obstruction establishes physical nonuniversality, multi-cone behavior, or birefringence"
+  - "the equivalence principle is established or violated"
+  - "a matter action, coupling law, or stress-energy object has been derived"
+  - "Einstein equations or exact-GR recovery have been advanced or completed"
+  - "validation, checkpoint, registry, role, or handoff status proves a physics theorem"
+  - "canonical ontology or a source propagation law has been modified or adopted"
+  - "the obstruction is a global no-go theorem"
+  - "future conservative source extension is impossible"
+  - "the global theory is rejected"
+
+missing_maps_and_primitives:
+  source_uniformity:
+    - "a declared relation selector for every protocol and intervention variant"
+    - "a parameterized family indexed by admitted matter sectors rather than device-role names"
+    - "uniform source transport and naturality across that sector family"
+  physical_interpretation:
+    - "event and field-state referents for source configurations"
+    - "time, distance, energy, momentum, and scale calibration"
+    - "signal emission, transport, reception, and detector calibration maps"
+    - "force, inertial, and gravitational semantics for the baseline role"
+  differential_structure:
+    - "continuum or scaling construction"
+    - "differentiable base and field bundle"
+    - "local equations and highest-derivative operator"
+    - "principal symbol, characteristic set, and hyperbolicity"
+  geometry_and_coupling:
+    - "lawful cone-to-metric reconstruction"
+    - "sector-universal matter coupling map"
+    - "matter action or other lawful dynamics"
+    - "stress-energy semantics and conservation theorem"
+  protected_status:
+    - "source-law derivation or candidate-selection basis"
+    - "Smuggling Auditor and Refuter dispositions for any new physical interpretation"
+    - "explicit human-gated authority before canonical-ontology candidate, adoption, rejection, or benchmark promotion"
+
+conservative_reopening_criteria:
+  exact_family_freeze_recommendation: >-
+    Freeze repetition of the exact P7-T02/P7-T03 support-profile calculation
+    after the parent records the theorem and obstruction. Repeating the same
+    relations, maps, and invariants is not new progress.
+  valid_reopening_classes:
+    - reopening_class: "new_uniform_source_relation_selector"
+      required_delta: >-
+        Supply a new target-atlas-free rule selecting a support relation for
+        every protocol and intervention variant, together with a proof of
+        uniform source transport.
+    - reopening_class: "new_matter_sector_family"
+      required_delta: >-
+        Supply an explicit parameterized family of admitted source-matter
+        sectors and one uniform relation schema across that family.
+    - reopening_class: "new_comparison_not_exact_isomorphism"
+      required_delta: >-
+        Define and justify a source-only quotient, embedding, common cover,
+        product, or coarse-graining predicate, state how it differs from the
+        exact-bijection predicate refuted here, and preserve all loss-of-data
+        caveats.
+    - reopening_class: "new_continuum_or_operator_construction"
+      required_delta: >-
+        Supply a reproducible source-side scaling or continuum construction,
+        local field equations, and a genuine operator from which a principal
+        symbol may be computed.
+    - reopening_class: "new_physical_interpretation_bridge"
+      required_delta: >-
+        Supply explicit calibrated maps for time, distance, signaling,
+        detection, energy regime, and sector meaning, then route them through
+        audit, stress, and protected authority.
+    - reopening_class: "protected_source_law_authority"
+      required_delta: >-
+        Supply explicit human-gated authority for canonical-ontology
+        candidate designation, adoption, or rejection; the current relay and
+        this child review cannot supply that authority.
+  invalid_reopening_bases:
+    - "renaming the same finite graph as a cone or metric"
+    - "using a target metric or desired GR result to select source edges"
+    - "treating equal response coefficients as universality"
+    - "treating a validator or checkpoint PASS as scientific evidence"
+    - "repeating the same exact relation family without a material premise delta"
+
+adoption_ladder:
+  stages:
+    - stage: "draft/control"
+      current: true
+      exact_scope: "task-local review and candidate-relative mathematical consequences"
+    - stage: "proposal-only"
+      current: true
+      exact_scope: "finite support definitions, explicit transport maps, and intervention-indexed relation data"
+    - stage: "source-extension data"
+      current: true
+      exact_scope: "the newly declared relation extraction and Rod-to-Signal transport map only"
+    - stage: "canonical-ontology candidate"
+      current: false
+      authority_required: "explicit protected human Gate Chair authorization"
+    - stage: "adopted"
+      current: false
+      authority_required: "explicit protected human adoption authority after required audits and stresses"
+    - stage: "rejected"
+      current: false
+      authority_required: "explicit protected human rejection authority with exact scope"
+    - stage: "human-gated"
+      current: true
+      exact_scope: "all canonical-candidate, adoption, rejection, physical-interpretation, metric, coupling, and benchmark transitions"
+  automatic_promotion: false
+
+downstream_route_consequences:
+  p7_t04:
+    allowed_disposition: "precise_obstruction_with_constructive_subfamily_theorem"
+    completion_scope: >-
+      The formal source-relation part of P7-T04 may be completed when the
+      parent reproduces the profiles, proves the conditional transport
+      theorem, records the full-suite exact-bijection obstruction, and
+      preserves every semantic guard.
+    remaining_open_inside_milestone:
+      - "physical low-energy propagation"
+      - "principal symbols and characteristic cones"
+      - "matter-sector universality"
+      - "effective metric structure"
+  p7_t05:
+    eligibility: "may_be_considered_only_after_validated_checkpoint"
+    exact_limit: >-
+      A later P7-T05 candidate may use this artifact only as proposal-only
+      source-relation evidence and as a preserved obstruction. It may not
+      assume a common physical cone or metric, may not equate device roles
+      with matter sectors, and must fail closed or introduce a genuinely new
+      authorized source primitive when universal coupling requires missing
+      common geometry.
+    no_automatic_result:
+      - "no universal coupling law"
+      - "no matter action"
+      - "no stress energy"
+      - "no equivalence-principle result"
+  routing_status:
+    human_pause_required_now: false
+    reason: >-
+      Conservative source-side continuation remains possible without
+      canonical adoption, so the correct status is
+      blocked_adoption_open_continuation rather than terminal impossibility.
+
+conflict_review_input:
+  blocking_conflicts_found: false
+  required_parent_resolutions:
+    - conflict_id: "PHIL-CONFLICT-P7T04-01"
+      issue: "The plan speaks of matter sectors, while the available P7-T03 objects are guarded protocol roles."
+      required_resolution: "State that the theorem and obstruction concern protocol controls only and do not establish sector universality."
+      blocking_if_unresolved: true
+    - conflict_id: "PHIL-CONFLICT-P7T04-02"
+      issue: "FreeFall_src has baseline and intervention enabled-row relations, so one English role name does not select one unique graph."
+      required_resolution: "Index every extracted relation by protocol and intervention variant, or state an explicit source-only selector."
+      blocking_if_unresolved: true
+    - conflict_id: "PHIL-CONFLICT-P7T04-03"
+      issue: "P7-T03 gives Signal-to-Detector transport explicitly but only a conditional Rod-to-Signal comparison contract."
+      required_resolution: "Declare b_RS(r_j)=s_j as new proposal-only source-extension data and verify identity and forward-edge transport."
+      blocking_if_unresolved: true
+    - conflict_id: "PHIL-CONFLICT-P7T04-04"
+      issue: "Every enabled row has an identity edge, making unqualified directed-cycle language ambiguous."
+      required_resolution: "Define nontrivial cycle using at least one nonidentity edge and record the full-support versus reduced-support convention."
+      blocking_if_unresolved: true
+    - conflict_id: "PHIL-CONFLICT-P7T04-05"
+      issue: "Equal token responses of one quarter can be mistaken for support isomorphism or operational equivalence."
+      required_resolution: "Prove support transport from explicit edge maps and keep token-response equality as a separate conditional record."
+      blocking_if_unresolved: true
+    - conflict_id: "PHIL-CONFLICT-P7T04-06"
+      issue: "A finite matrix characteristic polynomial can be mislabeled as a PDE principal symbol."
+      required_resolution: "Use finite relation invariant profile language and state why the differential-operator inputs are absent."
+      blocking_if_unresolved: true
+    - conflict_id: "PHIL-CONFLICT-P7T04-07"
+      issue: "The full-suite obstruction can be overread beyond exact bijective transport."
+      required_resolution: "Name the tested universality predicate and explicitly leave quotients, embeddings, covers, coarse grainings, and future extensions open."
+      blocking_if_unresolved: true
+    - conflict_id: "PHIL-CONFLICT-P7T04-08"
+      issue: "The milestone burden says low-energy propagation, but the sources contain no energy or scale variable."
+      required_resolution: "Record the physical low-energy question as underdetermined and state the exact finite formal regime only."
+      blocking_if_unresolved: true
+    - conflict_id: "PHIL-CONFLICT-P7T04-09"
+      issue: "A common source skeleton can be overread as a common cone, metric, or coupling premise for P7-T05."
+      required_resolution: "Repeat the missing continuum, symbol, cone, metric, sector, and coupling maps in the theorem, completion, and handoff."
+      blocking_if_unresolved: true
+
+finding_counts:
+  source_files_hashed: 14
+  protocol_role_count: 5
+  explicit_relation_variant_count: 6
+  transport_theorem_count: 1
+  constructive_subfamily_theorem_count: 1
+  scoped_obstruction_count: 1
+  same_cardinality_countermodel_count: 1
+  blocked_inference_count: 14
+  required_parent_resolution_count: 9
+  conservative_reopening_class_count: 6
+  physical_promotion_count: 0
+
+authority_limits:
+  canonical_ontology_modified: false
+  canonical_ontology_candidate_promoted: false
+  source_propagation_law_adopted: false
+  source_extension_adopted: false
+  matter_ontology_adopted: false
+  protocol_roles_promoted_to_matter_sectors: false
+  physical_time_established: false
+  physical_causal_order_established: false
+  physical_signal_propagation_established: false
+  physical_speed_established: false
+  principal_symbol_established: false
+  characteristic_set_established: false
+  physical_cone_established: false
+  effective_metric_established: false
+  detector_semantics_established: false
+  universality_established: false
+  physical_nonuniversality_established: false
+  equivalence_principle_established_or_refuted: false
+  matter_action_established: false
+  coupling_law_adopted: false
+  matter_coupling_derived: false
+  stress_energy_established: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  exact_gr_recovery_established: false
+  completed_derivation_claimed: false
+  global_no_go_claimed: false
+  global_theory_rejected: false
+  future_source_extension_impossibility_claimed: false
+  validator_or_checkpoint_used_as_proof: false
+  physics_promotion_authorized: false
+  proof_authority: false

@@ -1,0 +1,538 @@
+schema_id: "v21_p7_t04_child_phys_math_common_propagation_v1"
+artifact_id: "P7T04-CHILD-PHYS-MATH-COMMON-PROPAGATION-V1"
+task_id: "RT-20260728-003"
+job_id: "AJ-RT-20260728-003-001"
+decision_id: "DDR-20260728-003"
+plan_task_id: "P7-T04"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+artifact_status: "draft/control"
+candidate_id: "CommonSourcePropagationProfileCandidate_v1"
+relation_id: "SourceSupportRelation_v1"
+candidate_status: "proposal-only"
+source_extension_status: "source-extension data"
+adoption_status: "blocked_adoption_open_continuation"
+review_context: "internal parent-child synthesis input"
+target_derivation_milestone: "matter_coupling"
+milestone_burden: "Establish or refute universal low-energy propagation."
+claim_boundary_id: "CB-V21-P7-T04-COMMON-SOURCE-PROPAGATION-001"
+obstruction_id: "OBST-P7T04-FULL-SUITE-COMMON-PROPAGATION-001"
+
+source_hash_method: "SHA-256 of exact source bytes inspected during child execution"
+source_basis:
+  - path: "SOUL.md"
+    sha256: "bde009787dd94f6648853649da82ac5163cabc45e425117be9e69eb0c354ef8a"
+    authority_use: "repository mathematical and scientific reasoning discipline"
+  - path: "AGENTS.md"
+    sha256: "3a987a7ae1fb0bc4f91dbcbe0e1432eeecacf7febc1256e8498860016f4baf29"
+    authority_use: "root source-only, authority, and no-promotion boundary"
+  - path: "research_control/AGENTS.md"
+    sha256: "c93e14bb2cc6e7bbc5c299085f8843ca84d714cdaef99b2b78a46715b5b310ae"
+    authority_use: "tracked research-control and proposal-status constraints"
+  - path: "research_control/tasks/RT-20260728-003/DDR-20260728-003.md"
+    sha256: "78b388840fbef4a8a1dcf892cb8ab1f90d32090227516fbacac36fd97e08a541"
+    authority_use: "active P7-T04 construction-or-obstruction decision and synthesis contract"
+  - path: "research_control/tasks/RT-20260728-003/jobs/AJ-RT-20260728-003-001.yaml"
+    sha256: "6a466edc537cfb83a024fbdeaab12deffd48c7939a85b80b591ef1a748a98a8e"
+    authority_use: "immutable outer-AgentJob scope, result type, source basis, and claim limits"
+  - path: "research_control/tasks/RT-20260728-003/roles/candidate-constructor@0.2.0--RT-20260728-003.yaml"
+    sha256: "baee7456b2cb498e581137963ecfeaad38cfabb1110539eca1593a08fe4b89ec"
+    authority_use: "one-job P7-T04 execution overlay"
+  - path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+    sha256: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+    authority_use: "P7-T04 objective, theorem-or-obstruction burden, validators, and stop rules"
+  - path: "research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_candidate_v1.tex"
+    sha256: "65ac095f5cdf4c2e319365c8b0e024d031b19d9fc2b8102e59997afa1e8f9129"
+    authority_use: "fixed P7-T02 finite enabled transitions, support-primary kernel, and formal composition rule"
+  - path: "research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_spec_v1.yaml"
+    sha256: "936d2aa6dfea3d263675468ff581190240efde84c1241ad971a8c1383a065a97"
+    authority_use: "machine-readable P7-T02 types, theorem statements, and semantic limits"
+  - path: "research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_controls_v1.yaml"
+    sha256: "af7fc976590b4ca82fca5c34c6f30091f6599428b8005cf3932ce03f92f7d779"
+    authority_use: "explicit finite P7-T02 enabled-row controls"
+  - path: "research_control/tasks/RT-20260728-002/artifacts/source_operational_device_suite_candidate_v1.tex"
+    sha256: "d6c818ee29f1a7e659e2f454aec21431d680b3d2d4df048fcf36f4aba87ba22a"
+    authority_use: "fixed P7-T03 five-role protocol suite and declared cross-device transports"
+  - path: "research_control/tasks/RT-20260728-002/artifacts/source_operational_device_suite_spec_v1.yaml"
+    sha256: "417c604bad008b85b153718ae04aa43307c2ff3cfa3a5c3f242e70b013c86ba4"
+    authority_use: "machine-readable P7-T03 protocol types, roles, and source-only limits"
+  - path: "research_control/tasks/RT-20260728-002/artifacts/source_operational_device_controls_v1.yaml"
+    sha256: "7b5b7f39318bd4aa39e778c17ab3fd410f2498f20b52b03c6bd86045bdffeee7"
+    authority_use: "explicit Clock, Rod, Signal, Detector, and FreeFall finite controls"
+
+fixed_proposal_only_basis:
+  p7_t02:
+    candidate_id: "SourceMatterFiniteTransitionKernelCandidate_v1"
+    status: "draft/control proposal-only"
+    finite_control: "C=(Omega,E,s,t), with every enabled row finite, nonempty, and containing its typed identity"
+    kernel_support: "K_C(T|x)>0 exactly for enabled records T in E_x under the uniform finite-row candidate"
+    formal_update: "mu_(n+1)=U_C mu_n"
+    exact_limit: "n is a relation or update composition count, not physical time, duration, causal order, or a trajectory parameter"
+  p7_t03:
+    candidate_id: "SourceOperationalDeviceSuiteCandidate_v1"
+    status: "draft/control proposal-only"
+    protocol_roles:
+      - "Clock_src"
+      - "Rod_src"
+      - "Signal_src"
+      - "Detector_src"
+      - "FreeFall_src"
+    exact_limit: "role names and readout tokens are formal source labels, not physical clocks, rods, signals, detectors, or free fall"
+  frozen_guards:
+    - "The P7-T02 and P7-T03 candidates remain unadopted."
+    - "Only enabled finite source transitions determine support."
+    - "Only explicit source-address and transition bijections may compare protocol relations."
+    - "No target atlas, metric, covector, cone, proper time, distance, signal speed, empirical detector record, matter action, stress energy, coupling law, desired GR behavior, validator result, generated derivative, or commit state is a premise."
+
+formal_support_relation:
+  carrier:
+    notation: "X_(D,i)"
+    definition: "the finite configuration carrier of protocol D under declared intervention label i"
+  one_step_support:
+    notation: "A_(D,i)(y,x)"
+    definition: "A_(D,i)(y,x)=1 iff there exists an enabled declared source transition T with s(T)=x, t(T)=y, and K_(D,i)(T|x)>0; otherwise A_(D,i)(y,x)=0"
+    codomain: "{0,1}"
+    orientation: "matrix columns are source states x and rows are target states y; edge-list strings use x->y"
+    identity_rule: "Each typed identity transition contributes x->x."
+    off_diagonal_part: "B_(D,i)=A_(D,i) with all identity loops removed"
+    physical_interpretation: false
+  boolean_composition:
+    semiring:
+      addition: "logical OR"
+      multiplication: "logical AND"
+    zero_power: "A^[0]=I"
+    recurrence: "A^[n+1](z,x)=OR_(y in X)(A(z,y) AND A^[n](y,x))"
+    reachability: "Reach_A(z,x)=OR_(n=0 to |X|-1) A^[n](z,x)"
+    exact_meaning: "A^[n](z,x)=1 records existence of a formal n-record support composition, with identity loops able to pad a composition"
+    physical_time_claimed: false
+    physical_duration_claimed: false
+    causal_order_claimed: false
+  invariant_conventions:
+    strongly_connected_components: "computed on the directed support graph; identity loops do not merge components"
+    nontrivial_cycle: "a directed cycle containing at least one off-diagonal edge"
+    off_diagonal_reachability_diameter: "maximum shortest B-path length among distinct reachable ordered pairs; defined as 0 when no distinct pair is reachable"
+    invariance_scope: "preserved by bijective support transport only"
+
+protocol_support_profiles:
+  Clock_src_baseline:
+    control_id: "P7T03-CONTROL-CLOCK-TWO-STATE-001"
+    intervention: "baseline"
+    states: ["c_0", "c_1"]
+    support_edges:
+      - "c_0->c_0"
+      - "c_0->c_1"
+      - "c_1->c_1"
+      - "c_1->c_0"
+    adjacency_rows_target_columns_source:
+      - [1, 1]
+      - [1, 1]
+    invariant_profile:
+      source_state_cardinality: 2
+      strongly_connected_component_count: 1
+      nontrivial_strongly_connected_component_count: 1
+      off_diagonal_support_edge_count: 2
+      has_nontrivial_directed_cycle: true
+      off_diagonal_reachability_diameter: 1
+      condensation_shape: "one vertex"
+    semantic_limit: "the two-cycle is a formal transition-word structure, not a clock period or closed timelike curve"
+
+  Rod_src_baseline:
+    control_id: "P7T03-CONTROL-ROD-ADDRESS-CHAIN-001"
+    intervention: "baseline"
+    states: ["r_0", "r_1", "r_2"]
+    support_edges:
+      - "r_0->r_0"
+      - "r_0->r_1"
+      - "r_1->r_1"
+      - "r_1->r_2"
+      - "r_2->r_2"
+    adjacency_rows_target_columns_source:
+      - [1, 0, 0]
+      - [1, 1, 0]
+      - [0, 1, 1]
+    invariant_profile:
+      source_state_cardinality: 3
+      strongly_connected_component_count: 3
+      nontrivial_strongly_connected_component_count: 0
+      off_diagonal_support_edge_count: 2
+      has_nontrivial_directed_cycle: false
+      off_diagonal_reachability_diameter: 2
+      condensation_shape: "directed three-vertex chain"
+    semantic_limit: "the address order and two-edge reachability are not length, distance, rigidity, or a spatial coordinate"
+
+  Signal_src_baseline:
+    control_id: "P7T03-CONTROL-SIGNAL-CHAIN-001"
+    intervention: "baseline"
+    states: ["s_0", "s_1", "s_2"]
+    support_edges:
+      - "s_0->s_0"
+      - "s_0->s_1"
+      - "s_1->s_1"
+      - "s_1->s_2"
+      - "s_2->s_2"
+    adjacency_rows_target_columns_source:
+      - [1, 0, 0]
+      - [1, 1, 0]
+      - [0, 1, 1]
+    invariant_profile:
+      source_state_cardinality: 3
+      strongly_connected_component_count: 3
+      nontrivial_strongly_connected_component_count: 0
+      off_diagonal_support_edge_count: 2
+      has_nontrivial_directed_cycle: false
+      off_diagonal_reachability_diameter: 2
+      condensation_shape: "directed three-vertex chain"
+    semantic_limit: "least positive formal composition count is not travel time, speed, causal arrival, or a light cone"
+
+  Detector_src_baseline:
+    control_id: "P7T03-CONTROL-DETECTOR-TRANSDUCER-001"
+    intervention: "baseline"
+    states: ["q_0", "q_1", "q_2"]
+    state_labels:
+      q_0: "(s_0,d_ready)"
+      q_1: "(s_1,d_ready)"
+      q_2: "(s_2,d_triggered)"
+    support_edges:
+      - "q_0->q_0"
+      - "q_0->q_1"
+      - "q_1->q_1"
+      - "q_1->q_2"
+      - "q_2->q_2"
+    adjacency_rows_target_columns_source:
+      - [1, 0, 0]
+      - [1, 1, 0]
+      - [0, 1, 1]
+    invariant_profile:
+      source_state_cardinality: 3
+      strongly_connected_component_count: 3
+      nontrivial_strongly_connected_component_count: 0
+      off_diagonal_support_edge_count: 2
+      has_nontrivial_directed_cycle: false
+      off_diagonal_reachability_diameter: 2
+      condensation_shape: "directed three-vertex chain"
+    semantic_limit: "the terminal triggered label is not empirical detection, measurement, observation, or instrument response"
+
+  FreeFall_src_baseline:
+    control_id: "P7T03-CONTROL-FREEFALL-BASELINE-INTERVENTION-001"
+    intervention: "i_0_no_declared_intervention"
+    states: ["f_0", "f_1"]
+    support_edges:
+      - "f_0->f_0"
+      - "f_0->f_1"
+      - "f_1->f_1"
+    adjacency_rows_target_columns_source:
+      - [1, 0]
+      - [1, 1]
+    invariant_profile:
+      source_state_cardinality: 2
+      strongly_connected_component_count: 2
+      nontrivial_strongly_connected_component_count: 0
+      off_diagonal_support_edge_count: 1
+      has_nontrivial_directed_cycle: false
+      off_diagonal_reachability_diameter: 1
+      condensation_shape: "directed two-vertex chain"
+    semantic_limit: "no-declared-intervention is a source-control label, not absence of force or gravitational free fall"
+
+  FreeFall_src_block_intervention:
+    control_id: "P7T03-CONTROL-FREEFALL-BASELINE-INTERVENTION-001"
+    intervention: "i_block_move"
+    states: ["f_0", "f_1"]
+    support_edges:
+      - "f_0->f_0"
+      - "f_1->f_1"
+    adjacency_rows_target_columns_source:
+      - [1, 0]
+      - [0, 1]
+    invariant_profile:
+      source_state_cardinality: 2
+      strongly_connected_component_count: 2
+      nontrivial_strongly_connected_component_count: 0
+      off_diagonal_support_edge_count: 0
+      has_nontrivial_directed_cycle: false
+      off_diagonal_reachability_diameter: 0
+      condensation_shape: "two isolated vertices"
+    semantic_limit: "blocking one declared move is not application of a physical force or modification of a causal cone"
+
+mathematical_results:
+  - theorem_id: "P7T04-THM-BOOLEAN-SUPPORT-TRANSPORT-001"
+    title: "Bijective transport intertwines Boolean support and every finite reachability power"
+    status: "draft/control exact theorem within the proposal-only candidate"
+    hypotheses:
+      - "D and E are finite declared source protocols with carriers X_D and X_E."
+      - "b:X_D->X_E is a declared bijection."
+      - "There is a bijection beta between enabled transition records satisfying s_E(beta(T))=b(s_D(T)) and t_E(beta(T))=b(t_D(T))."
+      - "Enabled support is preserved in both directions; equivalently beta maps each enabled row of x bijectively to the enabled row of b(x)."
+    conclusions:
+      - "A_E(b(y),b(x))=A_D(y,x) for every x,y."
+      - "A_E^[n](b(y),b(x))=A_D^[n](y,x) for every n in N_0."
+      - "Reachability, source-state cardinality, strongly connected component counts, nontrivial-cycle content, off-diagonal edge count, and off-diagonal reachability diameter agree."
+    proof_sketch:
+      - "An edge x->y exists exactly when an enabled T has endpoints x,y."
+      - "The endpoint-commuting transition bijection maps such records exactly to enabled records b(x)->b(y), proving one-step support equality."
+      - "For n=0 the claim is identity preservation under b."
+      - "Assume the power claim at n; substitute z=b(w) in the finite Boolean matrix product. Bijection of intermediate states and the one-step equality give the n+1 case."
+      - "The graph invariants are defined entirely from vertices, support, and finite reachability, so the transported equality preserves them."
+    prohibited_overread: "not a theorem about physical propagation, target covariance, causal equivalence, metric isometry, or empirical universality"
+    proof_authority: false
+
+  - theorem_id: "P7T04-THM-THREE-ADDRESS-SUBFAMILY-001"
+    title: "Conditional common three-address support chain for Rod, Signal, and Detector"
+    status: "draft/control exact theorem within the proposal-only candidate"
+    common_carrier: ["0", "1", "2"]
+    common_edges:
+      - "0->0"
+      - "0->1"
+      - "1->1"
+      - "1->2"
+      - "2->2"
+    common_adjacency_rows_target_columns_source:
+      - [1, 0, 0]
+      - [1, 1, 0]
+      - [0, 1, 1]
+    explicit_transport_requirements:
+      - "b_R(r_j)=j for j=0,1,2, with identity and forward transitions transported."
+      - "b_S(s_j)=j for j=0,1,2, with identity and forward transitions transported."
+      - "b_D(q_j)=j for j=0,1,2, with identity and forward transitions transported."
+      - "The Rod-Signal address bridge is used only when its P7-T03 declared source-address bijection is present."
+      - "The Signal-Detector bridge is the P7-T03 declared history and transition bijection."
+    conclusions:
+      - "The three baseline support relations are isomorphic to the same reflexive directed chain C_3."
+      - "Their Boolean reachability powers and invariant profiles agree under the declared maps."
+      - "The unique off-diagonal shortest composition from address 0 to address 2 has length two."
+    proof_sketch:
+      - "Each listed protocol has exactly the identity loops and the two forward edges j->j+1."
+      - "The declared index maps are bijections and commute with endpoints of every enabled transition."
+      - "Apply P7T04-THM-BOOLEAN-SUPPORT-TRANSPORT-001 to each map."
+    semantic_boundary:
+      - "Common C_3 is a shared formal support skeleton."
+      - "Composition length two is not a common travel time, spatial length, signal speed, detector latency, or causal interval."
+      - "The theorem does not extend to Clock_src or FreeFall_src."
+    proof_authority: false
+
+full_suite_universality_test:
+  universality_premise_id: "P7T04-U-BIJECTIVE-FULL-SUITE-001"
+  premise: "There exists one finite relation (X_*,A_*) and, for every baseline role D in the five-role P7-T03 suite, a declared bijection b_D:X_D->X_* that intertwines A_D with A_*."
+  required_invariants:
+    - "equal carrier cardinality"
+    - "equal strongly connected component profile"
+    - "equal nontrivial directed-cycle content"
+    - "equal off-diagonal support-edge count"
+    - "equal off-diagonal reachability diameter"
+  result: "false for the current declared proposal-only controls"
+  failed_premise: "The required family of support-intertwining bijections does not exist."
+  independent_witnesses:
+    - witness_id: "P7T04-CM-CARDINALITY-001"
+      compared_relations: ["Clock_src_baseline", "Rod_src_baseline"]
+      exact_residual: "|X_clock|=2 while |X_rod|=3"
+      conclusion: "No bijection to one common carrier can cover both relations."
+    - witness_id: "P7T04-CM-EQUAL-CARDINALITY-CYCLE-001"
+      compared_relations: ["Clock_src_baseline", "FreeFall_src_baseline"]
+      shared_cardinality: 2
+      clock_invariants:
+        strongly_connected_component_count: 1
+        has_nontrivial_directed_cycle: true
+        off_diagonal_support_edge_count: 2
+      freefall_invariants:
+        strongly_connected_component_count: 2
+        has_nontrivial_directed_cycle: false
+        off_diagonal_support_edge_count: 1
+      exact_residual: "The Clock support has a two-edge directed cycle and one SCC; the FreeFall baseline is a one-way chain with two SCCs."
+      conclusion: "Even after carrier cardinality is matched, no support-preserving bijection exists."
+  minimal_reproducible_countermodel:
+    witness_id: "P7T04-CM-EQUAL-CARDINALITY-CYCLE-001"
+    carriers:
+      clock: ["c_0", "c_1"]
+      freefall: ["f_0", "f_1"]
+    off_diagonal_relations:
+      clock: ["c_0->c_1", "c_1->c_0"]
+      freefall: ["f_0->f_1"]
+    enumeration_argument:
+      - "A bijection between two two-element carriers has only two possible assignments."
+      - "Either assignment transports both Clock off-diagonal edges to two opposite FreeFall edges."
+      - "The FreeFall relation contains only one off-diagonal edge, so neither assignment can preserve support in both directions."
+    reproducibility: "Read the two enabled-row controls, delete the mandatory identity loops, list the remaining ordered pairs, and compare the edge count or SCC profile."
+
+precise_obstruction:
+  obstruction_id: "OBST-P7T04-FULL-SUITE-COMMON-PROPAGATION-001"
+  result_type: "precise_obstruction"
+  status: "draft/control"
+  statement: "The current proposal-only P7-T03 five-role suite does not derive one universal finite source-support relation up to declared bijective transport, because its explicit baseline relations have incompatible carrier, SCC, cycle, and off-diagonal support invariants."
+  exact_scope:
+    - "only the fixed P7-T02 kernel and current P7-T03 finite controls"
+    - "only one-step support and Boolean reachability"
+    - "only universality by declared bijective support transport"
+  not_established:
+    - "impossibility of a later source extension"
+    - "impossibility of a common quotient, refinement, embedding, coarse graining, continuum limit, or other comparison notion"
+    - "absence of physical universal propagation in nature"
+    - "failure of general relativity or any global theory"
+  disposition: "blocked_adoption_open_continuation"
+  conservative_source_extension_possible: true
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+
+principal_symbol_and_geometry_audit:
+  principal_symbol_status: "not defined from the current finite source data"
+  missing_inputs:
+    - "a smooth base manifold or other declared differentiable carrier"
+    - "field bundles and continuum field variables"
+    - "a differential or pseudodifferential evolution operator"
+    - "derivative order and leading coefficient tensors"
+    - "cotangent covectors xi"
+    - "an energy, wavelength, or continuum scaling map"
+  deductions:
+    - "A finite adjacency matrix is not the principal symbol of an unspecified differential operator."
+    - "Without sigma_P(x,xi), no determinant or characteristic polynomial in xi is defined."
+    - "Without a homogeneous characteristic set in a cotangent space, no characteristic variety or cone follows."
+    - "Without dimension, signature, conformal class, nondegenerate bilinear form, or an interpretation map, no metric follows."
+    - "The same finite support graph admits many inequivalent geometric embeddings, so the graph alone does not select a unique metric structure."
+  characteristic_variety_status: "not derived"
+  causal_cone_status: "not derived"
+  effective_metric_status: "not derived"
+  common_physical_propagation_status: "not derived"
+  exact_scale_regime: "not defined; the current finite candidate contains no energy, wavelength, lattice-spacing, or continuum-limit parameter"
+  no_global_impossibility_claim: true
+
+controls:
+  - control_id: "P7T04-CONTROL-THREE-CHAIN-TRANSPORT-001"
+    branch: "valid_common_subfamily"
+    inputs: ["Rod_src_baseline", "Signal_src_baseline", "Detector_src_baseline"]
+    check: "transport every state, identity loop, and forward edge to the common C_3 index relation"
+    expected_result: "all three transported adjacency matrices equal the displayed C_3 matrix"
+  - control_id: "P7T04-CONTROL-EQUAL-CARDINALITY-NONISOMORPHIC-001"
+    branch: "valid_precise_obstruction"
+    inputs: ["Clock_src_baseline", "FreeFall_src_baseline"]
+    check: "compare off-diagonal edge count, SCC count, and nontrivial-cycle content"
+    expected_result: "nonisomorphic despite both carriers having cardinality two"
+  - control_id: "P7T04-CONTROL-CARDINALITY-MISMATCH-001"
+    branch: "valid_precise_obstruction"
+    inputs: ["Clock_src_baseline", "Rod_src_baseline"]
+    check: "compare carrier cardinalities"
+    expected_result: "no common relation under bijective transport"
+  - control_id: "P7T04-CONTROL-FREEFALL-BLOCK-001"
+    branch: "valid_intervention_variant"
+    inputs: ["FreeFall_src_baseline", "FreeFall_src_block_intervention"]
+    check: "delete move_f01 under i_block_move and retain both typed identity loops"
+    expected_result: "off-diagonal edge count changes from one to zero"
+    semantic_limit: "formal intervention sensitivity only, not force response or cone deformation"
+  - control_id: "P7T04-CONTROL-MALFORMED-TARGET-IMPORT-001"
+    branch: "malformed"
+    attempted_definition: "define support, edge weight, path length, or commonality using a target metric, proper time, causal cone, empirical detector output, or desired GR behavior"
+    result: "bottom_A"
+  - control_id: "P7T04-CONTROL-UNDERDETERMINED-RELATION-001"
+    branch: "underdetermined"
+    supplied_data: "a typed protocol role name without a declared finite enabled-row control"
+    missing_data: "one-step support relation"
+    result: "undetermined_A"
+  - control_id: "P7T04-CONTROL-PRINCIPAL-SYMBOL-UNAVAILABLE-001"
+    branch: "precise_missing_structure"
+    supplied_data: "finite support matrices only"
+    missing_data: "continuum operator, leading differential part, cotangent variable, and scaling regime"
+    result: "principal_symbol_not_defined"
+
+reopening_criteria:
+  same_candidate_family:
+    - "A materially new source-only protocol relation removes the exact Clock-FreeFall invariant conflict while preserving every declared typing and no-target-import guard."
+    - "A declared comparison notion other than bijective isomorphism, such as a quotient, refinement, embedding, or functor, is specified with exact universality conditions and nontrivial controls."
+    - "A source-side continuum or scaling construction supplies field equations and a leading operator from which a principal symbol can actually be computed."
+    - "A source-derived interpretation map connects the formal relation to physical propagation with independent calibration and falsification conditions."
+  protected_adoption:
+    - "Any canonical ontology, source-law, effective-metric, or physical-propagation adoption requires separate human-gated authority."
+  non_reopening:
+    - "renaming states or tokens"
+    - "repeating the same finite invariant calculation"
+    - "validator, checkpoint, registry, or generated-derivative success"
+    - "assuming one target metric in every matter sector"
+
+open_obligations:
+  - "derive rather than stipulate any canonical source propagation primitive"
+  - "decide whether a lawful non-bijective common structure is scientifically intended"
+  - "supply continuum field equations before requesting a principal-symbol calculation"
+  - "supply a scale or limit map before using low-energy language"
+  - "supply a source-to-world interpretation and empirical calibration before calling reachability physical propagation"
+  - "derive or precisely obstruct a universal matter-coupling candidate in a separately authorized P7-T05 packet"
+  - "derive matter action, stress energy, Einstein equations, and exact-GR recovery in their own authorized stages"
+
+guarded_claims:
+  allowed_exact_candidate_relative:
+    - "Finite enabled-transition support defines exact Boolean source relations for the current controls."
+    - "Declared support-preserving bijections intertwine every Boolean reachability power."
+    - "Rod_src, Signal_src, and Detector_src share the displayed C_3 support skeleton when the explicit P7-T03 bridges are declared."
+    - "Clock_src and FreeFall_src supply an equal-cardinality nonisomorphic pair, so full-suite bijective support universality is not derived from the current data."
+    - "Current finite data do not define a principal symbol, characteristic variety, cone, or metric."
+  forbidden_conclusions:
+    - "Boolean composition count is physical time, duration, or causal order."
+    - "Finite reachability is physical propagation, causality, signal speed, detector response, or free fall."
+    - "The C_3 skeleton is a common physical cone, effective metric, length standard, or universal matter geometry."
+    - "The obstruction is a global no-go theorem, a rejection of general relativity, or proof that future source extensions are impossible."
+    - "A canonical ontology candidate, adopted source law, adopted metric, matter action, stress energy, universal coupling law, Einstein equation, exact-GR recovery, benchmark promotion, proof authority, publication, or completed derivation."
+
+recommendation_coverage:
+  V21-R22: "adds an exact source analogue of propagation and identifies why principal-symbol data are absent"
+  V21-R24: "tests common formal support across source protocols without target import"
+  V21-R25: "preserves the matter-coupling burden and records a reproducible universality obstruction"
+  V21-R30: "states exact geometry and characteristic-structure non-derivability boundaries"
+
+finding_counts:
+  baseline_protocol_relation_count: 5
+  intervention_variant_relation_count: 1
+  common_transport_subfamily_size: 3
+  transport_theorem_count: 1
+  common_subfamily_theorem_count: 1
+  precise_obstruction_count: 1
+  independent_countermodel_witness_count: 2
+  equal_cardinality_countermodel_count: 1
+  physical_propagation_claim_count: 0
+  principal_symbol_claim_count: 0
+  metric_adoption_claim_count: 0
+
+child_result:
+  result_type: "precise_obstruction"
+  result_status: "recommended_for_parent_fusion"
+  constructed_object: "CommonSourcePropagationProfileCandidate_v1"
+  decisive_summary: "The current finite controls admit an exact common C_3 support skeleton for Rod_src, Signal_src, and Detector_src under declared transports, but Clock_src and FreeFall_src form a minimal equal-cardinality nonisomorphic support pair. Therefore the fixed five-role suite does not derive one universal relation up to bijective source transport."
+  mathematical_payload:
+    - "P7T04-THM-BOOLEAN-SUPPORT-TRANSPORT-001"
+    - "P7T04-THM-THREE-ADDRESS-SUBFAMILY-001"
+    - "P7T04-CM-EQUAL-CARDINALITY-CYCLE-001"
+    - "OBST-P7T04-FULL-SUITE-COMMON-PROPAGATION-001"
+  failed_universality_premise: "P7T04-U-BIJECTIVE-FULL-SUITE-001"
+  unresolved_limitations:
+    - "support is stipulated by the proposal-only enabled rows rather than derived by current ontology"
+    - "non-bijective common structures have not been selected or tested"
+    - "no continuum operator or scaling regime exists for principal-symbol analysis"
+    - "no model-to-world map supplies physical propagation semantics"
+  no_fog_check: true
+  proof_authority: false
+
+authority_limits:
+  canonical_ontology_modified: false
+  canonical_ontology_candidate_promoted: false
+  source_law_adopted: false
+  propagation_primitive_adopted: false
+  matter_ontology_adopted: false
+  operational_semantics_adopted: false
+  physical_time_established: false
+  physical_length_established: false
+  physical_causality_established: false
+  physical_signal_established: false
+  physical_detector_established: false
+  physical_free_fall_established: false
+  principal_symbol_derived: false
+  characteristic_variety_derived: false
+  causal_cone_derived: false
+  effective_geometry_assumed: false
+  effective_metric_derived: false
+  stress_energy_established: false
+  matter_action_established: false
+  coupling_law_adopted: false
+  matter_coupling_derived: false
+  einstein_equations_derived: false
+  exact_gr_recovery_established: false
+  benchmark_promoted: false
+  completed_derivation_claimed: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+  physics_promotion_authorized: false
+  proof_authority: false

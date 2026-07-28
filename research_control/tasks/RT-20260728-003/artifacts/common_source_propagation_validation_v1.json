@@ -1,0 +1,350 @@
+{
+  "artifact_id": "P7T04-COMMON-SOURCE-PROPAGATION-VALIDATION-V1",
+  "check_count": 65,
+  "checks": [
+    {
+      "check_id": "exists:common_source_propagation_spec_v1.yaml",
+      "detail": "research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_spec_v1.yaml",
+      "status": "PASS"
+    },
+    {
+      "check_id": "exists:common_source_propagation_controls_v1.yaml",
+      "detail": "research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_controls_v1.yaml",
+      "status": "PASS"
+    },
+    {
+      "check_id": "exists:common_source_propagation_assumption_dependency_table_v1.yaml",
+      "detail": "research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_assumption_dependency_table_v1.yaml",
+      "status": "PASS"
+    },
+    {
+      "check_id": "exists:common_source_propagation_profile_candidate_v1.tex",
+      "detail": "research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_profile_candidate_v1.tex",
+      "status": "PASS"
+    },
+    {
+      "check_id": "exists:child_phys_math_p7_t04_common_propagation.yaml",
+      "detail": "research_control/tasks/RT-20260728-003/artifacts/child_phys_math_p7_t04_common_propagation.yaml",
+      "status": "PASS"
+    },
+    {
+      "check_id": "exists:child_phys_phil_p7_t04_common_propagation.yaml",
+      "detail": "research_control/tasks/RT-20260728-003/artifacts/child_phys_phil_p7_t04_common_propagation.yaml",
+      "status": "PASS"
+    },
+    {
+      "check_id": "exists:parent_conflict_review_p7_t04_common_propagation.yaml",
+      "detail": "research_control/tasks/RT-20260728-003/artifacts/parent_conflict_review_p7_t04_common_propagation.yaml",
+      "status": "PASS"
+    },
+    {
+      "check_id": "exists:parent_fusion_notes_p7_t04_common_propagation.md",
+      "detail": "research_control/tasks/RT-20260728-003/artifacts/parent_fusion_notes_p7_t04_common_propagation.md",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec_schema",
+      "detail": "spec schema",
+      "status": "PASS"
+    },
+    {
+      "check_id": "task_id",
+      "detail": "task identity",
+      "status": "PASS"
+    },
+    {
+      "check_id": "job_id",
+      "detail": "job identity",
+      "status": "PASS"
+    },
+    {
+      "check_id": "plan_task_id",
+      "detail": "plan identity",
+      "status": "PASS"
+    },
+    {
+      "check_id": "proposal_only",
+      "detail": "candidate status",
+      "status": "PASS"
+    },
+    {
+      "check_id": "adoption_blocked",
+      "detail": "adoption status",
+      "status": "PASS"
+    },
+    {
+      "check_id": "obstruction_id",
+      "detail": "precise obstruction identity",
+      "status": "PASS"
+    },
+    {
+      "check_id": "matrix_square:clock",
+      "detail": "clock",
+      "status": "PASS"
+    },
+    {
+      "check_id": "profile:clock",
+      "detail": "[2, 2, 1, True, 1] == [2, 2, 1, True, 1]",
+      "status": "PASS"
+    },
+    {
+      "check_id": "matrix_square:rod",
+      "detail": "rod",
+      "status": "PASS"
+    },
+    {
+      "check_id": "profile:rod",
+      "detail": "[3, 2, 3, False, 2] == [3, 2, 3, False, 2]",
+      "status": "PASS"
+    },
+    {
+      "check_id": "matrix_square:signal",
+      "detail": "signal",
+      "status": "PASS"
+    },
+    {
+      "check_id": "profile:signal",
+      "detail": "[3, 2, 3, False, 2] == [3, 2, 3, False, 2]",
+      "status": "PASS"
+    },
+    {
+      "check_id": "matrix_square:detector",
+      "detail": "detector",
+      "status": "PASS"
+    },
+    {
+      "check_id": "profile:detector",
+      "detail": "[3, 2, 3, False, 2] == [3, 2, 3, False, 2]",
+      "status": "PASS"
+    },
+    {
+      "check_id": "matrix_square:freefall_baseline",
+      "detail": "freefall_baseline",
+      "status": "PASS"
+    },
+    {
+      "check_id": "profile:freefall_baseline",
+      "detail": "[2, 1, 2, False, 1] == [2, 1, 2, False, 1]",
+      "status": "PASS"
+    },
+    {
+      "check_id": "matrix_square:freefall_blocked",
+      "detail": "freefall_blocked",
+      "status": "PASS"
+    },
+    {
+      "check_id": "profile:freefall_blocked",
+      "detail": "[2, 0, 2, False, 0] == [2, 0, 2, False, 0]",
+      "status": "PASS"
+    },
+    {
+      "check_id": "chain_one_step_0_to_2",
+      "detail": "no direct 0-to-2 edge",
+      "status": "PASS"
+    },
+    {
+      "check_id": "chain_two_step_0_to_2",
+      "detail": "two-step Boolean reachability",
+      "status": "PASS"
+    },
+    {
+      "check_id": "rod_signal_equal",
+      "detail": "declared b_RS intertwines",
+      "status": "PASS"
+    },
+    {
+      "check_id": "signal_detector_equal",
+      "detail": "P7-T03 b_SD intertwines",
+      "status": "PASS"
+    },
+    {
+      "check_id": "clock_freefall_nonisomorphic",
+      "detail": "equal-cardinality minimal countermodel",
+      "status": "PASS"
+    },
+    {
+      "check_id": "clock_freefall_scc_difference",
+      "detail": "SCC invariant differs",
+      "status": "PASS"
+    },
+    {
+      "check_id": "clock_freefall_cycle_difference",
+      "detail": "directed-cycle invariant differs",
+      "status": "PASS"
+    },
+    {
+      "check_id": "freefall_intervention_changes_relation",
+      "detail": "baseline and blocked relations differ",
+      "status": "PASS"
+    },
+    {
+      "check_id": "universality_precisely_obstructed",
+      "detail": "scoped result",
+      "status": "PASS"
+    },
+    {
+      "check_id": "no_global_no_go",
+      "detail": "global no-go false",
+      "status": "PASS"
+    },
+    {
+      "check_id": "future_extension_open",
+      "detail": "future extension remains open",
+      "status": "PASS"
+    },
+    {
+      "check_id": "boundary_false:principal_symbol_computed",
+      "detail": "principal_symbol_computed",
+      "status": "PASS"
+    },
+    {
+      "check_id": "boundary_false:characteristic_set_computed",
+      "detail": "characteristic_set_computed",
+      "status": "PASS"
+    },
+    {
+      "check_id": "boundary_false:cone_or_metric_derived",
+      "detail": "cone_or_metric_derived",
+      "status": "PASS"
+    },
+    {
+      "check_id": "boundary_false:energy_or_scale_regime_supplied",
+      "detail": "energy_or_scale_regime_supplied",
+      "status": "PASS"
+    },
+    {
+      "check_id": "boundary_false:finite_matrix_spectrum_is_physical_dispersion",
+      "detail": "finite_matrix_spectrum_is_physical_dispersion",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex_token:P7T04-FULL-SUITE-COMMON-PROP",
+      "detail": "P7T04-FULL-SUITE-COMMON-PROPAGATION-001",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex_token:Boolean support transport",
+      "detail": "Boolean support transport",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex_token:Common three-address source ",
+      "detail": "Common three-address source skeleton",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex_token:Why no principal symbol, con",
+      "detail": "Why no principal symbol, cone, or metric follows",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex_token:blocked\\_adoption\\_open\\_con",
+      "detail": "blocked\\_adoption\\_open\\_continuation",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex_token:future source extension",
+      "detail": "future source extension",
+      "status": "PASS"
+    },
+    {
+      "check_id": "control:P7T04-CTRL-CHAIN-BOOLEAN-REACHABILITY-001",
+      "detail": "P7T04-CTRL-CHAIN-BOOLEAN-REACHABILITY-001",
+      "status": "PASS"
+    },
+    {
+      "check_id": "control:P7T04-CTRL-CLOCK-FREEFALL-MINIMAL-COUNTERMODEL-001",
+      "detail": "P7T04-CTRL-CLOCK-FREEFALL-MINIMAL-COUNTERMODEL-001",
+      "status": "PASS"
+    },
+    {
+      "check_id": "control:P7T04-CTRL-MATRIX-SPECTRUM-SMUGGLING-001",
+      "detail": "P7T04-CTRL-MATRIX-SPECTRUM-SMUGGLING-001",
+      "status": "PASS"
+    },
+    {
+      "check_id": "control:P7T04-CTRL-LOW-ENERGY-UNDERDETERMINED-001",
+      "detail": "P7T04-CTRL-LOW-ENERGY-UNDERDETERMINED-001",
+      "status": "PASS"
+    },
+    {
+      "check_id": "control:P7T04-CTRL-FUTURE-EXTENSION-OPEN-001",
+      "detail": "P7T04-CTRL-FUTURE-EXTENSION-OPEN-001",
+      "status": "PASS"
+    },
+    {
+      "check_id": "assumption_result:P7T04-R01",
+      "detail": "P7T04-R01",
+      "status": "PASS"
+    },
+    {
+      "check_id": "assumption_result:P7T04-R02",
+      "detail": "P7T04-R02",
+      "status": "PASS"
+    },
+    {
+      "check_id": "assumption_result:P7T04-R03",
+      "detail": "P7T04-R03",
+      "status": "PASS"
+    },
+    {
+      "check_id": "assumption_result:P7T04-R04",
+      "detail": "P7T04-R04",
+      "status": "PASS"
+    },
+    {
+      "check_id": "assumption_result:P7T04-R05",
+      "detail": "P7T04-R05",
+      "status": "PASS"
+    },
+    {
+      "check_id": "child_math_identity",
+      "detail": "physicist-mathematician child",
+      "status": "PASS"
+    },
+    {
+      "check_id": "child_math_completed",
+      "detail": "child status",
+      "status": "PASS"
+    },
+    {
+      "check_id": "child_phil_identity",
+      "detail": "physicist-philosopher child",
+      "status": "PASS"
+    },
+    {
+      "check_id": "child_phil_completed",
+      "detail": "child status",
+      "status": "PASS"
+    },
+    {
+      "check_id": "conflict_resolved",
+      "detail": "parent conflict verdict",
+      "status": "PASS"
+    },
+    {
+      "check_id": "no_unresolved_conflicts",
+      "detail": "no unresolved conflicts",
+      "status": "PASS"
+    }
+  ],
+  "claim_boundary_summary": "Finite source support theorem and scoped full-suite U_bij obstruction only; no physical principal symbol cone metric coupling GR proof or promotion.",
+  "failed_check_count": 0,
+  "job_id": "AJ-RT-20260728-003-001",
+  "physics_promotion_authorized": false,
+  "plan_task_id": "P7-T04",
+  "proof_authority": false,
+  "schema_id": "common_source_propagation_validation_v1",
+  "source_hashes": {
+    "research_control/tasks/RT-20260728-003/artifacts/child_phys_math_p7_t04_common_propagation.yaml": "1d0ca5a8c075d922a7a328c582d3e7ebc8df4fdb0ca4f90bbb185989ddf99860",
+    "research_control/tasks/RT-20260728-003/artifacts/child_phys_phil_p7_t04_common_propagation.yaml": "e1211b500246c9f331212efcf0a62d062a8d54a4f9b6a9e71cd3e1cacfbe1c91",
+    "research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_assumption_dependency_table_v1.yaml": "dbb8e2692cb920d50e3e13cf358f095a98c2e02bfa887c1d3477c88850fcbf4b",
+    "research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_controls_v1.yaml": "a4039465e6f4f45db7e484cee3b5bbb213750aa395dbe9abbf820adf53b35709",
+    "research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_profile_candidate_v1.tex": "87014253023cdb8945ed67f606355d762486884ce3a6de4fa2d32e2af32e2b43",
+    "research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_spec_v1.yaml": "91422c4db2b3166da6cab9391ff3f1109d43a683d9624f8086e23d7d8ddf7001",
+    "research_control/tasks/RT-20260728-003/artifacts/parent_conflict_review_p7_t04_common_propagation.yaml": "9a553547c5e0e58b327b45af1d218dc6cdba319e7453b9d63c40f469d440232f",
+    "research_control/tasks/RT-20260728-003/artifacts/parent_fusion_notes_p7_t04_common_propagation.md": "01e1e4c4135e577df4dfec1b8098bed64a436c4a964fdbdb43fa233cf9b02e94"
+  },
+  "status": "PASS",
+  "task_id": "RT-20260728-003"
+}

@@ -1,0 +1,210 @@
+schema_id: "common_source_propagation_spec_v1"
+artifact_id: "P7T04-COMMON-SOURCE-PROPAGATION-SPEC-V1"
+task_id: "RT-20260728-003"
+job_id: "AJ-RT-20260728-003-001"
+decision_id: "DDR-20260728-003"
+plan_task_id: "P7-T04"
+status: "draft/control"
+candidate_status: "proposal-only"
+result_kind: "source-extension data"
+candidate_id: "CommonSourcePropagationProfileCandidate_v1"
+support_relation_id: "SourceSupportRelation_v1"
+obstruction_id: "OBST-P7T04-FULL-SUITE-COMMON-PROPAGATION-001"
+adoption_status: "blocked_adoption_open_continuation"
+target_derivation_milestone: "matter_coupling"
+milestone_burden: "Establish or refute universal low-energy propagation."
+
+fixed_basis:
+  transition_kernel_candidate_id: "SourceMatterFiniteTransitionKernelCandidate_v1"
+  transition_kernel_candidate_status: "proposal-only"
+  operational_suite_candidate_id: "SourceOperationalDeviceSuiteCandidate_v1"
+  operational_suite_candidate_status: "proposal-only"
+  composition_index_semantics: "formal finite update count only"
+  forbidden_fixed_inputs:
+    - "target atlas or metric"
+    - "physical time or causal order"
+    - "principal symbol or covector"
+    - "empirical detector calibration"
+    - "matter action or coupling law"
+    - "validator checkpoint or generated derivative as scientific premise"
+
+formal_relations:
+  full_support:
+    symbol: "R_C"
+    definition: "x R_C y iff some enabled declared source transition T in E_x has target y"
+    includes_typed_identity: true
+  reduced_support:
+    symbol: "R_C_circ"
+    definition: "R_C after deleting only declared typed identity transitions"
+  exact_reachability:
+    symbol: "Q_C_[n]"
+    definition: "Boolean nth power of A_C with Q_C_[0] equal to the identity"
+  bounded_reachability:
+    symbol: "Q_C_[le_n]"
+    definition: "Boolean union of exact reachability relations from zero through n"
+  semantic_limit: "finite source relation syntax only"
+
+profile_invariants:
+  - "vertex_count"
+  - "reduced_edge_count"
+  - "strongly_connected_component_count"
+  - "reduced_directed_cycle_present"
+  - "finite_reachability_diameter"
+
+protocol_profiles:
+  clock:
+    role: "Clock_src"
+    vertices: ["c0", "c1"]
+    adjacency:
+      - [1, 1]
+      - [1, 1]
+    reduced_edges: [["c0", "c1"], ["c1", "c0"]]
+    invariant_profile:
+      vertex_count: 2
+      reduced_edge_count: 2
+      strongly_connected_component_count: 1
+      reduced_directed_cycle_present: true
+      finite_reachability_diameter: 1
+  rod:
+    role: "Rod_src"
+    vertices: ["r0", "r1", "r2"]
+    adjacency:
+      - [1, 1, 0]
+      - [0, 1, 1]
+      - [0, 0, 1]
+    reduced_edges: [["r0", "r1"], ["r1", "r2"]]
+    invariant_profile:
+      vertex_count: 3
+      reduced_edge_count: 2
+      strongly_connected_component_count: 3
+      reduced_directed_cycle_present: false
+      finite_reachability_diameter: 2
+  signal:
+    role: "Signal_src"
+    vertices: ["s0", "s1", "s2"]
+    adjacency:
+      - [1, 1, 0]
+      - [0, 1, 1]
+      - [0, 0, 1]
+    reduced_edges: [["s0", "s1"], ["s1", "s2"]]
+    invariant_profile:
+      vertex_count: 3
+      reduced_edge_count: 2
+      strongly_connected_component_count: 3
+      reduced_directed_cycle_present: false
+      finite_reachability_diameter: 2
+  detector:
+    role: "Detector_src"
+    vertices: ["q0", "q1", "q2"]
+    adjacency:
+      - [1, 1, 0]
+      - [0, 1, 1]
+      - [0, 0, 1]
+    reduced_edges: [["q0", "q1"], ["q1", "q2"]]
+    invariant_profile:
+      vertex_count: 3
+      reduced_edge_count: 2
+      strongly_connected_component_count: 3
+      reduced_directed_cycle_present: false
+      finite_reachability_diameter: 2
+  freefall_baseline:
+    role: "FreeFall_src"
+    vertices: ["f0", "f1"]
+    adjacency:
+      - [1, 1]
+      - [0, 1]
+    reduced_edges: [["f0", "f1"]]
+    invariant_profile:
+      vertex_count: 2
+      reduced_edge_count: 1
+      strongly_connected_component_count: 2
+      reduced_directed_cycle_present: false
+      finite_reachability_diameter: 1
+  freefall_blocked:
+    role: "FreeFall_src"
+    vertices: ["f0", "f1"]
+    adjacency:
+      - [1, 0]
+      - [0, 1]
+    reduced_edges: []
+    invariant_profile:
+      vertex_count: 2
+      reduced_edge_count: 0
+      strongly_connected_component_count: 2
+      reduced_directed_cycle_present: false
+      finite_reachability_diameter: 0
+
+transport_maps:
+  rod_to_signal:
+    status: "new proposal-only source-extension datum"
+    mapping: {r0: s0, r1: s1, r2: s2}
+    bijective: true
+    intertwines_full_support: true
+  signal_to_detector:
+    status: "inherited declared P7-T03 history and address bijection"
+    mapping: {s0: q0, s1: q1, s2: q2}
+    bijective: true
+    intertwines_full_support: true
+
+theorems:
+  - theorem_id: "P7T04-THM-BOOLEAN-SUPPORT-TRANSPORT-001"
+    hypotheses:
+      - "b is a bijection of finite source address sets"
+      - "b transports every declared support edge and typed identity in both directions"
+    conclusions:
+      - "all exact and bounded Boolean reachability relations intertwine"
+      - "the finite support profile is invariant"
+    physical_propagation_claimed: false
+  - theorem_id: "P7T04-THM-THREE-ADDRESS-SUBFAMILY-001"
+    hypotheses:
+      - "the rod signal and detector rows are the explicit P7-T03 identity-plus-forward chains"
+      - "the rod-to-signal and signal-to-detector source bijections are declared"
+    conclusions:
+      - "all three controls are copies of the same three-address source relation"
+      - "address zero first reaches address two after two nonidentity hops"
+    physical_time_distance_cone_or_detector_claimed: false
+
+universality_claim:
+  claim_id: "P7T04-U-BIJ-001"
+  statement: "one finite relation and one bijective support intertwiner for every P7-T03 role"
+  status: "precisely obstructed for the current explicit suite"
+  minimal_countermodel:
+    left: "Clock_src two-address control"
+    right: "FreeFall_src baseline two-address control"
+    same_vertex_count: true
+    incompatible_invariants:
+      - "strongly_connected_component_count: 1 versus 2"
+      - "reduced_directed_cycle_present: true versus false"
+  scope: "current proposal-only P7-T03 explicit controls under bijective support transport"
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+
+principal_symbol_boundary:
+  principal_symbol_computed: false
+  reason: "no differential operator leading derivative covector domain or homogeneous symbol is supplied"
+  characteristic_set_computed: false
+  cone_or_metric_derived: false
+  energy_or_scale_regime_supplied: false
+  finite_matrix_spectrum_is_physical_dispersion: false
+
+reopening_criteria:
+  - "materially new source propagation carrier or relation family for every matter protocol"
+  - "nontrivial explicit comparison maps and universality criterion"
+  - "stability under allowed source presentations and interventions"
+  - "independently justified scale variable for any low-energy claim"
+  - "source-to-operator or source-analogue map sufficient to define characteristics"
+  - "separate model-to-world map before physical interpretation"
+
+authority_limits:
+  canonical_ontology_modified: false
+  source_law_adopted: false
+  physical_time_or_causality_established: false
+  principal_symbol_or_cone_established: false
+  metric_established: false
+  detector_semantics_established: false
+  universal_coupling_derived: false
+  matter_action_or_stress_energy_derived: false
+  gr_behavior_derived: false
+  proof_authority: false
+  physics_promotion_authorized: false
+  global_no_go_claimed: false

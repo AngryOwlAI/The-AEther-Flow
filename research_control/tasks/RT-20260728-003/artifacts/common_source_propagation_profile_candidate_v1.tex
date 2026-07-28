@@ -1,0 +1,364 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,longtable,array,enumitem}
+
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newtheorem{obstruction}{Precise obstruction}
+\newenvironment{nonconclusion}{\par\smallskip\noindent\textbf{Non-conclusion.}\ }{\par\smallskip}
+
+\newcommand{\Src}{\mathrm{src}}
+\newcommand{\Bool}{\mathbb B}
+\newcommand{\Rel}{\mathcal R}
+\newcommand{\Reach}{\mathcal Q}
+\newcommand{\Clock}{\mathsf{Clock}_{\Src}}
+\newcommand{\Rod}{\mathsf{Rod}_{\Src}}
+\newcommand{\Signal}{\mathsf{Signal}_{\Src}}
+\newcommand{\Detector}{\mathsf{Detector}_{\Src}}
+\newcommand{\FreeFall}{\mathsf{FreeFall}_{\Src}}
+
+\title{CommonSourcePropagationProfileCandidate\_v1\\
+\large A proposal-only finite source relation family and scoped universality obstruction}
+\author{The Aether-Flow Research Control Project}
+\date{2026-07-28}
+
+\begin{document}
+\maketitle
+
+\section{Status and exact question}
+
+This task-local object is \texttt{draft/control}, \texttt{proposal-only},
+and source-extension data.  It executes v21 P7-T04 under
+\texttt{CB-V21-P7-T04-COMMON-SOURCE-PROPAGATION-001}.  It does not modify
+canonical ontology and it does not adopt a source propagation law.
+
+P7-T02 supplies finite controls and nonnegative rational bookkeeping
+kernels.  P7-T03 supplies five guarded protocol roles with explicit finite
+source transitions and readouts.  Neither predecessor supplies physical
+time, a differential equation, a covector domain, a principal symbol, a
+characteristic variety, a causal cone, a metric, detector semantics, or a
+matter coupling.  The exact P7-T04 question is therefore:
+
+\begin{quote}
+Which finite support and reachability relations follow from the declared
+source transitions, which protocols are isomorphic as such relations under
+explicit source-address bijections, and what exact invariant obstructs one
+bijectively common relation for the present five-protocol suite?
+\end{quote}
+
+The answer has two parts.  A common three-address chain is constructible for
+the \(\Rod\), \(\Signal\), and \(\Detector\) subfamily after one explicit
+rod--signal address bijection is stipulated.  The full five-role suite does
+not admit one relation up to bijective transport: already the two-address
+\(\Clock\) and baseline \(\FreeFall\) controls have incompatible strongly
+connected-component and directed-cycle invariants.
+
+\section{Fixed source basis}
+
+Let a P7-T02 control be
+\[
+  C=(\Omega,E,s,t,K_C),
+\]
+where every finite row \(E_x\) contains its typed identity
+\(\mathbf 1_x\).  The coefficients \(K_C(T\mid x)\) are bookkeeping
+weights.  The P7-T02 composition index \(n\in\mathbb N_0\) is a formal
+update count only.
+
+The P7-T03 protocol suite is held fixed at proposal-only status.  Its role
+names \(\Clock,\Rod,\Signal,\Detector,\FreeFall\) name formal source
+protocols only.  In particular, ``signal'', ``detector'', and ``free fall''
+do not import their familiar physical meanings.
+
+\section{Finite source support and reachability}
+
+\begin{definition}[Full and reduced support]
+For a finite control \(C\), define its row-source Boolean support relation
+\(\Rel_C\subseteq\Omega\times\Omega\) by
+\[
+  x\,\Rel_C\,y
+  \quad\Longleftrightarrow\quad
+  \exists T\in E_x\ \text{with}\ t(T)=y.
+\]
+Its adjacency matrix is
+\[
+  A_C(x,y)=
+  \begin{cases}
+  1,&x\,\Rel_C\,y,\\
+  0,&\text{otherwise}.
+  \end{cases}
+\]
+The reduced relation \(\Rel_C^\circ\) deletes only the declared typed
+identity transitions.  It does not delete a nonidentity transition merely
+because its source and target labels happen to agree.
+\end{definition}
+
+\begin{definition}[Boolean reachability]
+For \(n\geq 0\), let
+\[
+  \Reach_C^{[0]}=I_\Omega,\qquad
+  \Reach_C^{[n+1]}=\Reach_C^{[n]}\odot A_C,
+\]
+where \(\odot\) is Boolean matrix multiplication.  Thus
+\(\Reach_C^{[n]}(x,y)=1\) precisely when a declared length-\(n\) transition
+word connects \(x\) to \(y\).  Let
+\(\Reach_C^{[\le n]}=\bigvee_{j=0}^{n}\Reach_C^{[j]}\).
+\end{definition}
+
+\begin{nonconclusion}
+The integer \(n\) is not physical time, duration, affine parameter, or
+energy scale.  The relation records finite source syntax and nothing more.
+\end{nonconclusion}
+
+\begin{definition}[Support profile]
+The finite support profile is
+\[
+  \Pi(C)=
+  \bigl(
+  |\Omega|,\ |\Rel_C^\circ|,\ \operatorname{scc}(A_C),\
+  \operatorname{cyc}(\Rel_C^\circ),\
+  \operatorname{diam}_{\mathrm{reach}}(A_C)
+  \bigr),
+\]
+where \(\operatorname{scc}\) is the number of strongly connected
+components, \(\operatorname{cyc}\) records whether the reduced relation has
+a directed cycle, and the reachability diameter is the largest finite
+shortest directed-path length between reachable distinct vertices.
+\end{definition}
+
+\section{Transport theorem}
+
+\begin{definition}[Compatible relation transport]
+Controls \(C\) and \(C'\) are support-transport equivalent when there is a
+bijection \(b:\Omega\to\Omega'\) such that
+\[
+  x\,\Rel_C\,y
+  \quad\Longleftrightarrow\quad
+  b(x)\,\Rel_{C'}\,b(y),
+\]
+and \(b\) carries typed identities to typed identities.  If \(P_b\) is the
+permutation matrix of \(b\), this is
+\[
+  A_{C'}=P_b^{-1}A_CP_b
+\]
+over the Boolean semiring, with the convention fixed by the row-source
+matrices above.
+\end{definition}
+
+\begin{theorem}[Boolean support transport]
+\label{thm:transport}
+If \(b\) support-transports \(C\) to \(C'\), then for every \(n\geq0\)
+\[
+  \Reach_{C'}^{[n]}
+  =P_b^{-1}\Reach_C^{[n]}P_b,
+  \qquad
+  \Reach_{C'}^{[\le n]}
+  =P_b^{-1}\Reach_C^{[\le n]}P_b.
+\]
+Consequently \(\Pi(C)=\Pi(C')\).
+\end{theorem}
+
+\begin{proof}
+The first equality at \(n=1\) is the defining intertwining relation.  The
+identity matrix is preserved at \(n=0\).  Induction and associativity of
+Boolean matrix multiplication give the exact-length result.  Boolean union
+gives the bounded-reachability result.  Vertex count, edge count, strong
+connectivity, directed cycles, and shortest directed-path lengths are
+invariants of relation isomorphism.
+\end{proof}
+
+\section{Explicit P7-T03 support matrices}
+
+All matrices below use the displayed address order and row-source
+convention.
+
+\subsection{Three-address chain}
+
+The rod, signal, and detector controls each have an identity-plus-forward
+chain, hence the matrix
+\[
+ A_{\mathrm{ch},3}=
+ \begin{pmatrix}
+ 1&1&0\\
+ 0&1&1\\
+ 0&0&1
+ \end{pmatrix}.
+\]
+The reduced relation is \(0\to1\to2\), and
+\[
+ \Pi(C_{\mathrm{ch},3})=(3,2,3,\mathrm{false},2).
+\]
+P7-T03 already declares the signal--detector bijection
+\(b_{SD}(s_j)=q_j\).  This P7-T04 candidate additionally stipulates the
+proposal-only source-address bijection \(b_{RS}(r_j)=s_j\).  No physical
+distance, timing, or detector calibration enters either bijection.
+
+\begin{theorem}[Common three-address source skeleton]
+\label{thm:subfamily}
+Under \(b_{RS}\) and the P7-T03 bijection \(b_{SD}\), the \(\Rod\),
+\(\Signal\), and \(\Detector\) support and bounded-reachability relations are
+all transported copies of \(A_{\mathrm{ch},3}\).  In particular, address
+\(0\) first reaches address \(2\) after two nonidentity forward hops.
+\end{theorem}
+
+\begin{proof}
+Each declared row has exactly its typed identity and, at addresses zero and
+one, the displayed forward transition.  Address two has only its identity.
+The two bijections carry identities and forward transitions to the
+corresponding identities and forward transitions.  Theorem~\ref{thm:transport}
+then applies.
+\end{proof}
+
+\begin{nonconclusion}
+The least formal hop count two is not a travel time or distance.  The common
+chain is not a causal cone, metric, light propagation law, detector
+universality theorem, or matter-coupling result.
+\end{nonconclusion}
+
+\subsection{Two-address clock and baseline free-fall controls}
+
+For address order \((c_0,c_1)\), the P7-T03 clock rows give
+\[
+ A_{\mathrm{clk}}=
+ \begin{pmatrix}
+ 1&1\\
+ 1&1
+ \end{pmatrix},
+ \qquad
+ \Pi(C_{\mathrm{clk}})=(2,2,1,\mathrm{true},1).
+\]
+For address order \((f_0,f_1)\), the baseline free-fall-labelled control
+gives
+\[
+ A_{\mathrm{ff},0}=
+ \begin{pmatrix}
+ 1&1\\
+ 0&1
+ \end{pmatrix},
+ \qquad
+ \Pi(C_{\mathrm{ff},0})=(2,1,2,\mathrm{false},1).
+\]
+The blocked intervention gives
+\[
+ A_{\mathrm{ff},\mathrm{block}}=
+ \begin{pmatrix}
+ 1&0\\
+ 0&1
+ \end{pmatrix}.
+\]
+These are source relations only.  The clock cycle is not periodic physical
+motion, and the baseline relation is not geodesic motion.
+
+\section{Minimal multi-relation countermodel}
+
+\begin{obstruction}[Full-suite bijective universality is not derived]
+\label{obst:universal}
+Let the full-suite universality claim \(U_{\mathrm{bij}}\) assert that one
+finite relation \((X,\Rel_\star)\) and bijections
+\(b_D:\Omega_D\to X\) intertwine the support relation of every P7-T03 role
+\(D\in\{\Clock,\Rod,\Signal,\Detector,\FreeFall\}\).
+Then the current proposal-only suite falsifies \(U_{\mathrm{bij}}\).
+\end{obstruction}
+
+\begin{proof}
+It is enough to compare the two-vertex clock and baseline free-fall
+controls, so cardinality is held fixed.  The clock relation is strongly
+connected and its reduced relation contains the directed two-cycle
+\(c_0\to c_1\to c_0\).  The baseline free-fall relation has two strongly
+connected components and its reduced relation is the acyclic single edge
+\(f_0\to f_1\).  Strongly connected-component count and directed-cycle
+content are invariant under every bijection.  Therefore no bijection
+intertwines these two relations.  A fortiori, no one relation can be
+bijectively common to all five protocols.
+\end{proof}
+
+The obstruction identifier is
+\[
+ \texttt{OBST-P7T04-FULL-SUITE-COMMON-PROPAGATION-001}.
+\]
+Its scope is exact: it rejects \(U_{\mathrm{bij}}\) for the present explicit
+P7-T03 controls.  It does not reject every possible weaker homomorphism,
+coarse quotient, enriched relation, stochastic comparison, continuum limit,
+or future source extension.  A one-point quotient would be formally common
+but would erase every discriminating relation; the current records neither
+select it nor give it physical meaning.
+
+\section{Why no principal symbol, cone, or metric follows}
+
+A principal-symbol calculation requires at least a declared differential or
+pseudodifferential operator, a leading-order term, and a covector variable
+\(\xi\) over a base space.  A characteristic set requires a polynomial or
+equivalent symbol condition in that covector.  A cone or metric
+factorization requires still more structure: dimension, differentiable
+locality, scale behavior, signature or causal interpretation, and a map from
+source records to those objects.
+
+The present finite relations supply none of:
+\begin{enumerate}[leftmargin=*]
+\item a source manifold, tangent or cotangent bundle, or covector \(\xi\);
+\item a local differential operator or leading-order derivative;
+\item a characteristic polynomial homogeneous in \(\xi\);
+\item an energy, wavelength, momentum, or low-energy scale variable;
+\item a map from Boolean reachability to a physical causal or metric
+  structure; or
+\item a derivation tying all matter sectors to one action or coupling.
+\end{enumerate}
+
+One can form an ordinary matrix characteristic polynomial
+\(\det(\lambda I-A_C)\), but \(\lambda\) is then only a spectral parameter of
+a finite adjacency matrix.  Calling it a dispersion relation or identifying
+its zeros with a physical characteristic variety would add an unauthorized
+map.  Thus P7-T04 returns a precise source-level obstruction before any
+principal-symbol or common-cone claim is well typed.
+
+\begin{nonconclusion}
+The absence of those maps from the current candidate does not prove that a
+future conservative source extension cannot supply them.  It proves only
+that they are not derived here.
+\end{nonconclusion}
+
+\section{Universality conditions and reopening criteria}
+
+A future packet may reopen the same physical burden only with materially new
+source-side data satisfying all of the following:
+\begin{enumerate}[leftmargin=*]
+\item one declared propagation carrier or relation family for every admitted
+  matter protocol;
+\item explicit comparison maps with a nontrivial universality criterion;
+\item stability of that criterion under allowed source presentations and
+  interventions;
+\item an independently justified scale or limiting parameter if
+  ``low-energy'' is asserted;
+\item a source-to-operator map sufficient to define a principal symbol, or a
+  precise source analogue with its own interpretation theorem; and
+\item a separate model-to-world map before any physical cone, metric,
+  detector, or coupling language is licensed.
+\end{enumerate}
+
+Merely renaming Boolean reachability, dropping incompatible protocols,
+quotienting every relation to one point, or importing the desired metric into
+each matter action does not reopen the obstruction.
+
+\section{Assumption and authority ledger}
+
+The new proposal inputs are the support-profile definition and the
+rod--signal address bijection \(b_{RS}\).  The transport theorem, the common
+three-address subfamily theorem, and the two-vertex countermodel follow
+exactly from those inputs and the fixed P7-T03 rows.
+
+The current ontology does not derive or adopt the support-profile choice,
+\(b_{RS}\), a universal relation, a principal-symbol map, or a physical
+interpretation.  Adoption remains
+\texttt{blocked\_adoption\_open\_continuation}.  Validator success, the
+AgentJob, the checkpoint, and this document's recency are process evidence,
+not proof or promotion authority.
+
+Forbidden conclusions include canonical ontology or source-law adoption,
+physical time or causality, signal speed, a common cone or metric, empirical
+detector meaning, universal coupling, equivalence-principle behavior, matter
+action, stress energy, Einstein equations, exact-GR benchmark recovery,
+publication, completed derivation, global theory rejection, and future
+source-extension impossibility.
+
+\end{document}

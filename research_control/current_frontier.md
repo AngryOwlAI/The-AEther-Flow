@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260728-002` and `handoff-0892`.
+`RT-20260728-003` and `handoff-0893`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260728-002` |
-| Latest handoff ID | `handoff-0892` |
-| Current status | `p7_t03_source_operational_device_suite_complete_p7_t04_ready_after_checkpoint` |
+| Active task ID | `RT-20260728-003` |
+| Latest handoff ID | `handoff-0893` |
+| Current status | `p7_t04_common_source_propagation_precise_obstruction_p7_t05_ready_for_checkpoint` |
 | V16 completed | false |
 | Current route family | construction or implementation (scientific) |
 | Target derivation milestone | `matter_coupling` |
 | Current burden | `matter_coupling` |
-| Required next authority | After the governed checkpoint commits one bounded candidate-constructor@0.2.0 packet may derive or precisely obstruct common formal source propagation across the proposal-only P7-T03 protocols. |
-| Next recommended action | Run one governed checkpoint for AJ-RT-20260728-002-001. Only after it commits may one fresh bounded candidate-constructor@0.2.0 packet execute v21 P7-T04 by deriving or precisely obstructing common formal source propagation without importing a physical cone metric detector semantics coupling or GR behavior. |
+| Required next authority | After the governed checkpoint commits one bounded candidate-constructor@0.2.0 packet may construct the actual universal matter-coupling candidate or return a distinct precise coupling obstruction while preserving the P7-T04 missing-geometry guards. |
+| Next recommended action | Run one governed checkpoint for AJ-RT-20260728-003-001. Only after it commits may one fresh bounded candidate-constructor@0.2.0 packet execute v21 P7-T05 by constructing the actual universal matter-coupling candidate or returning a distinct precise obstruction without assuming a common physical cone metric detector semantics stress energy coupling or GR behavior. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260728-002` |
-| Latest research handoff ID | `handoff-0892` |
-| Latest research next action | Run one governed checkpoint for AJ-RT-20260728-002-001. Only after it commits may one fresh bounded candidate-constructor@0.2.0 packet execute v21 P7-T04 by deriving or precisely obstructing common formal source propagation without importing a physical cone metric detector semantics coupling or GR behavior. |
+| Latest research task ID | `RT-20260728-003` |
+| Latest research handoff ID | `handoff-0893` |
+| Latest research next action | Run one governed checkpoint for AJ-RT-20260728-003-001. Only after it commits may one fresh bounded candidate-constructor@0.2.0 packet execute v21 P7-T05 by constructing the actual universal matter-coupling candidate or returning a distinct precise obstruction without assuming a common physical cone metric detector semantics stress energy coupling or GR behavior. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260728-002/00_TASK.yaml`.
-- Active task objective: Construct or precisely obstruct one proposal-only SourceOperationalDeviceSuiteCandidate_v1 with explicit source-only Clock_src Rod_src Signal_src Detector_src and FreeFall_src protocols, readout maps, interventions, success and failure branches, cross-device controls, and source-presentation naturality.
-- Latest handoff path: `research_control/handoffs/handoff-0892.yaml`.
-- Latest handoff summary: P7-T03 constructs SourceOperationalDeviceSuiteCandidate_v1 as one task-local proposal-only finite source protocol suite. Five guarded role instances have explicit preparations interventions formal token alphabets total readouts success and failure data. Exact finite token-response closure zero-sum intervention differences source-presentation naturality and bounded positive independent no-event malformed underdetermined and inconsistent controls are explicit. Current ontology does not derive or adopt the protocol data and no physical operational meaning geometry coupling GR proof or promotion follows.
+- Active task path: `research_control/tasks/RT-20260728-003/00_TASK.yaml`.
+- Active task objective: Derive or precisely obstruct one common formal source propagation structure across the proposal-only P7-T03 operational systems by computing finite support relations, compatibility invariants, and a reproducible multi-relation countermodel without importing physical cones or metrics.
+- Latest handoff path: `research_control/handoffs/handoff-0893.yaml`.
+- Latest handoff summary: P7-T04 defines task-local proposal-only finite Boolean source support and reachability profiles. Exact source bijections intertwine every reachability power and establish one common three-address-chain relation for Rod_src Signal_src and Detector_src after the proposal-only b_RS map is stipulated. The current five-role suite precisely fails the named U_bij exact-bijective universality predicate because equal-cardinality Clock_src and baseline FreeFall_src relations have incompatible SCC and nontrivial-cycle invariants. No physical low-energy propagation principal symbol cone metric matter-sector universality coupling GR result adoption or global no-go follows.
 - Current route family: construction or implementation (scientific).
-- Next recommended action: Run one governed checkpoint for AJ-RT-20260728-002-001. Only after it commits may one fresh bounded candidate-constructor@0.2.0 packet execute v21 P7-T04 by deriving or precisely obstructing common formal source propagation without importing a physical cone metric detector semantics coupling or GR behavior.
+- Next recommended action: Run one governed checkpoint for AJ-RT-20260728-003-001. Only after it commits may one fresh bounded candidate-constructor@0.2.0 packet execute v21 P7-T05 by constructing the actual universal matter-coupling candidate or returning a distinct precise obstruction without assuming a common physical cone metric detector semantics stress energy coupling or GR behavior.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -90,13 +90,13 @@ Scoped accepted evidence/preconditions:
 
 | Evidence or precondition | Status | Supports target | Does not establish | Authority |
 | --- | --- | --- | --- | --- |
-| matter_coupling burden evidence/preconditions | accepted only as scoped source-extension evidence/precondition | matter-semantics and matter-coupling continuation only | no_source_law_adoption<br>no_canonical_ontology_edit<br>no_metricdata_e_adoption<br>no_geff_scope_expansion<br>no_coupling_law_adoption<br>no_matter_coupling_derivation<br>no_matter_coupling_adoption<br>no_stress_energy_semantics<br>no_stress_energy_tensor<br>no_matter_action<br>no_detector_semantics<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation<br>no_future_source_extension_impossibility<br>no_global_theory_rejection | `research_control/tasks/RT-20260728-002/artifacts/source_operational_device_suite_candidate_v1.tex` |
+| matter_coupling burden evidence/preconditions | accepted only as scoped source-extension evidence/precondition | matter-semantics and matter-coupling continuation only | no_source_law_adoption<br>no_canonical_ontology_edit<br>no_metricdata_e_adoption<br>no_geff_scope_expansion<br>no_coupling_law_adoption<br>no_matter_coupling_derivation<br>no_matter_coupling_adoption<br>no_stress_energy_semantics<br>no_stress_energy_tensor<br>no_matter_action<br>no_detector_semantics<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation<br>no_future_source_extension_impossibility<br>no_global_theory_rejection | `research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_profile_candidate_v1.tex` |
 
 Open or blocked physical targets:
 
 | Physical target | Status | Missing burden or authority | Evidence not to overread | Next lawful route or evidence |
 | --- | --- | --- | --- | --- |
-| matter_coupling | accepted_as_scoped_evidence_precondition | SourceOperationalDeviceSuiteCandidate_v1 supplies a proposal-only finite source protocol tuple with five guarded role instances exact token-response closure zero-sum intervention differences source-presentation naturality and positive independent no-event malformed underdetermined and inconsistent controls; P7-T04 common formal propagation physical time length causality probability detector and free-fall semantics universal coupling stress energy adoption and every downstream GR burden remain open while P6 Gate B supplies no effective-geometry input | no_source_law_adoption<br>no_canonical_ontology_edit<br>no_metricdata_e_adoption<br>no_geff_scope_expansion<br>no_coupling_law_adoption<br>no_matter_coupling_derivation<br>no_matter_coupling_adoption<br>no_stress_energy_semantics<br>no_stress_energy_tensor<br>no_matter_action<br>no_detector_semantics<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation<br>no_future_source_extension_impossibility<br>no_global_theory_rejection | research_control/tasks/RT-20260728-002/artifacts/source_operational_device_suite_candidate_v1.tex |
+| matter_coupling | accepted_as_scoped_evidence_precondition | CommonSourcePropagationProfileCandidate_v1 supplies proposal-only finite Boolean source support and reachability profiles an exact transport theorem and a common three-address Rod-Signal-Detector subfamily; the current explicit five-role suite precisely fails the U_bij exact-bijective universality predicate by an equal-cardinality Clock-FreeFall SCC and nontrivial-cycle countermodel; P7-T05 actual coupling construction physical low-energy propagation principal symbols cones metrics matter-sector universality stress energy adoption and every downstream GR burden remain open while P6 Gate B supplies no effective-geometry input | no_source_law_adoption<br>no_canonical_ontology_edit<br>no_metricdata_e_adoption<br>no_geff_scope_expansion<br>no_coupling_law_adoption<br>no_matter_coupling_derivation<br>no_matter_coupling_adoption<br>no_stress_energy_semantics<br>no_stress_energy_tensor<br>no_matter_action<br>no_detector_semantics<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation<br>no_future_source_extension_impossibility<br>no_global_theory_rejection | research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_profile_candidate_v1.tex |
 | einstein_equations | not_started | dynamics action or variation | no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | research_control/program_state.yaml |
 | benchmark_promotion | blocked | all upstream derivation burdens | no_benchmark_promotion<br>no_benchmark_gate_chair_closure<br>no_completed_derivation | research_control/program_state.yaml |
 
@@ -108,7 +108,7 @@ Forbidden overreads:
 
 ## Matter-Coupling Boundary
 
-The Distance-to-GR ledger currently records the `matter_coupling` burden row with legacy status `draft object exists`, control status `accepted_as_scoped_evidence_precondition`, mathematical status `parameterized_finite_local_witness_precondition`, physical status `not_matter_coupling_not_stress_energy_not_matter_action_not_detector_semantics`, and promotion status `scoped_source_evidence_only`. Its blocking burden is: SourceOperationalDeviceSuiteCandidate_v1 supplies a proposal-only finite source protocol tuple with five guarded role instances exact token-response closure zero-sum intervention differences source-presentation naturality and positive independent no-event malformed underdetermined and inconsistent controls; P7-T04 common formal propagation physical time length causality probability detector and free-fall semantics universal coupling stress energy adoption and every downstream GR burden remain open while P6 Gate B supplies no effective-geometry input. The last evidence path is `research_control/tasks/RT-20260728-002/artifacts/source_operational_device_suite_candidate_v1.tex`.
+The Distance-to-GR ledger currently records the `matter_coupling` burden row with legacy status `draft object exists`, control status `accepted_as_scoped_evidence_precondition`, mathematical status `parameterized_finite_local_witness_precondition`, physical status `not_matter_coupling_not_stress_energy_not_matter_action_not_detector_semantics`, and promotion status `scoped_source_evidence_only`. Its blocking burden is: CommonSourcePropagationProfileCandidate_v1 supplies proposal-only finite Boolean source support and reachability profiles an exact transport theorem and a common three-address Rod-Signal-Detector subfamily; the current explicit five-role suite precisely fails the U_bij exact-bijective universality predicate by an equal-cardinality Clock-FreeFall SCC and nontrivial-cycle countermodel; P7-T05 actual coupling construction physical low-energy propagation principal symbols cones metrics matter-sector universality stress energy adoption and every downstream GR burden remain open while P6 Gate B supplies no effective-geometry input. The last evidence path is `research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_profile_candidate_v1.tex`.
 
 This ledger status must not be read as coupling-law adoption, universal matter-coupling derivation, matter-coupling adoption, stress-energy semantics, stress-energy tensor, matter action, detector semantics, Einstein equations, benchmark promotion, or completed derivation.
 
@@ -290,7 +290,7 @@ preserves the raw ledger `current_status` field for continuity.
 | `resp_lc` | `response_localization_resp_lc` | accepted only as scoped source-extension selector data | accepted | accepted_as_source_extension_data | selector_data_source_extension | not_detector_semantics_not_matter_coupling | scoped_source_object_only | no_canonical_ontology_edit<br>no_matter_coupling_derivation<br>no_detector_semantics<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/tasks/RT-20260614-060/artifacts/101_RESP_LC_SOURCE_EXTENSION_HUMAN_GATE_ADOPTION_DECISION.tex` |
 | `m_src` | `source_manifold_m_src` | adopted only as scoped source-only M_src object | accepted | gate_review_completed | scoped_source_only_adopted_object | not_target_manifold_not_metric_not_gr_derivation | scoped_source_object_only | no_metricdata_e_adoption<br>no_geff_scope_expansion<br>no_matter_coupling_derivation<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/tasks/RT-20260614-134/artifacts/165_M_SRC_GSC_INTEGRATED_SOURCE_ONLY_ADOPTION_THEOREM_GATE_CHAIR_REVIEW.tex` |
 | `g_eff` | `effective_metric_g_eff` | ScopedMetricStructureRecord_src adopted as the scoped source-extension record; g_eff^{GSC-cand} retained as exact legacy alias | accepted | gate_review_completed | scoped_source_extension_geff_object | not_unscoped_lorentzian_metric_not_matter_coupling_not_einstein_equations | scoped_source_object_only | no_source_law_adoption<br>no_metricdata_e_adoption<br>no_unscoped_geff_adoption<br>no_matter_coupling_derivation<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation<br>no_global_theory_rejection<br>no_future_source_extension_impossibility | `research_control/tasks/RT-20260727-004/artifacts/p6_t08_gate_b_separating_certificate_v1.yaml` |
-| `matter_coupling` | `matter_coupling` | accepted only as scoped source-extension evidence/precondition | draft object exists | accepted_as_scoped_evidence_precondition | parameterized_finite_local_witness_precondition | not_matter_coupling_not_stress_energy_not_matter_action_not_detector_semantics | scoped_source_evidence_only | no_source_law_adoption<br>no_canonical_ontology_edit<br>no_metricdata_e_adoption<br>no_geff_scope_expansion<br>no_coupling_law_adoption<br>no_matter_coupling_derivation<br>no_matter_coupling_adoption<br>no_stress_energy_semantics<br>no_stress_energy_tensor<br>no_matter_action<br>no_detector_semantics<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation<br>no_future_source_extension_impossibility<br>no_global_theory_rejection | `research_control/tasks/RT-20260728-002/artifacts/source_operational_device_suite_candidate_v1.tex` |
+| `matter_coupling` | `matter_coupling` | accepted only as scoped source-extension evidence/precondition | draft object exists | accepted_as_scoped_evidence_precondition | parameterized_finite_local_witness_precondition | not_matter_coupling_not_stress_energy_not_matter_action_not_detector_semantics | scoped_source_evidence_only | no_source_law_adoption<br>no_canonical_ontology_edit<br>no_metricdata_e_adoption<br>no_geff_scope_expansion<br>no_coupling_law_adoption<br>no_matter_coupling_derivation<br>no_matter_coupling_adoption<br>no_stress_energy_semantics<br>no_stress_energy_tensor<br>no_matter_action<br>no_detector_semantics<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation<br>no_future_source_extension_impossibility<br>no_global_theory_rejection | `research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_profile_candidate_v1.tex` |
 | `einstein_equations` | `einstein_equations` | not started; no positive derivation status | not started | not_started | dynamics_action_or_variation_missing | no_field_equation_derivation | none | no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/program_state.yaml` |
 | `finite_variation_robustness` | `source_equivalence_eqsrc` | Refuter stress passed | Refuter stress passed | refuter_stress_passed | conditional_theorem_candidate | downstream_gr_blocked | draft_control_only | no_source_law_adoption<br>no_matter_coupling_derivation<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/tasks/RT-20260614-101/artifacts/142_RESP_LC_M_SRC_GSC_FINITE_VARIATION_ROBUSTNESS_LAW_REFUTER_STRESS_TEST.tex` |
 | `benchmark_promotion` | `benchmark_promotion` | no benchmark promotion from scoped evidence/precondition alone | blocked by missing primitive | blocked | upstream_burdens_missing | no_exact_gr_benchmark_promotion | none | no_benchmark_promotion<br>no_benchmark_gate_chair_closure<br>no_completed_derivation | `research_control/program_state.yaml` |
@@ -302,7 +302,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one governed checkpoint for AJ-RT-20260728-002-001. Only after it commits may one fresh bounded candidate-constructor@0.2.0 packet execute v21 P7-T04 by deriving or precisely obstructing common formal source propagation without importing a physical cone metric detector semantics coupling or GR behavior.
+Run one governed checkpoint for AJ-RT-20260728-003-001. Only after it commits may one fresh bounded candidate-constructor@0.2.0 packet execute v21 P7-T05 by constructing the actual universal matter-coupling candidate or returning a distinct precise obstruction without assuming a common physical cone metric detector semantics stress energy coupling or GR behavior.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -318,11 +318,22 @@ completion or handoff says so.
 
 Layer status summary:
 
-No validation-layer status summary is available.
+| Status | Count | Meaning |
+| --- | --- | --- |
+| `PASS` | 6 | receipt complete |
+| `PENDING` | 1 | open item; evidence must explain why |
 
 Validation layers:
 
-No validation-layer split is recorded in the latest handoff.
+| Validation layer | Status | Meaning | Evidence |
+| --- | --- | --- | --- |
+| `pre_execution` | PASS | receipt complete | Generation 144 validated was atomically claimed and consumed its exact immutable P7-T04 route once.<br>The P7-T03 dependency checkpoint 36536b8f5a0c12cb1401004ab3f995bc3aa9c214 was committed before execution. |
+| `completion_internal` | PASS | receipt complete | Task-local validation passes 65 of 65 checks.<br>The scratch TeX build resolves references and renders five pages.<br>Two same-context child perspectives were fused with zero unresolved conflicts. |
+| `post_write` | PASS | receipt complete | Integrated documentation-impact improvement-signal claim-language memory registry renderer and research-control gates pass before checkpoint. |
+| `post_checkpoint` | PENDING | open item; evidence must explain why | One governed checkpoint remains; P7-T05 is unexecuted. |
+| `renderer` | PASS | receipt complete | Current frontier task index compact frontier dependency graph claim graph and v21 burden-status derivatives are synchronized before checkpoint. |
+| `memory_bootstrap` | PASS | receipt complete | Tracked memory registries wiki notes and indexes are regenerated and validate-only passes before checkpoint. |
+| `claim_language_linter` | PASS | receipt complete | Changed-source claim-language validation has zero hard failures before checkpoint. |
 
 Authorization layers:
 
@@ -334,13 +345,13 @@ Authorization layers:
 | `completed_derivation_authorized` | false (not authorized) | authorizes completed-derivation claim only when true |
 | `Gate_Chair_verdict_authorized` | False | extension authorization field |
 | `canonical_ontology_edit_authorized` | False | extension authorization field |
+| `coupling_law_adoption_authorized` | False | extension authorization field |
 | `external_outreach_authorized` | False | extension authorization field |
 | `external_publication_authorized` | False | extension authorization field |
 | `future_source_extension_impossibility_authorized` | False | extension authorization field |
 | `global_no_go_claim_authorized` | False | extension authorization field |
 | `matter_ontology_adoption_authorized` | False | extension authorization field |
 | `ontology_selection_authorized` | False | extension authorization field |
-| `operational_semantics_adoption_authorized` | False | extension authorization field |
 | `physical_interpretation_establishment_authorized` | False | extension authorization field |
 | `proof_authority` | False | extension authorization field |
 | `publication_authorized` | False | extension authorization field |
@@ -350,9 +361,9 @@ Authorization layers:
 
 Legacy compatibility records:
 
-- active task: `RT-20260728-002`;
-- latest handoff: `handoff-0892`;
-- current status: `p7_t03_source_operational_device_suite_complete_p7_t04_ready_after_checkpoint`;
+- active task: `RT-20260728-003`;
+- latest handoff: `handoff-0893`;
+- current status: `p7_t04_common_source_propagation_precise_obstruction_p7_t05_ready_for_checkpoint`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -362,8 +373,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0892.yaml`
-- `research_control/tasks/RT-20260728-002/00_TASK.yaml`
+- `research_control/handoffs/handoff-0893.yaml`
+- `research_control/tasks/RT-20260728-003/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -379,7 +390,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0892*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0893*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

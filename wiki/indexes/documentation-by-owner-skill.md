@@ -780,6 +780,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-V21-P7-T02-SOURCE-MATTER-FINITE-TRANSITION-KERNEL-RECEIPT-V1` `wiki/markdown/md-v21-p7-t02-source-matter-finite-transition-kernel-receipt-v1.md`
 - `WIKI-MD-V21-P7-T03-PARENT-FUSION-SOURCE-OPERATIONAL-DEVICE-SUITE-V1` `wiki/markdown/md-v21-p7-t03-parent-fusion-source-operational-device-suite-v1.md`
 - `WIKI-MD-V21-P7-T03-SOURCE-OPERATIONAL-DEVICE-RECEIPT-V1` `wiki/markdown/md-v21-p7-t03-source-operational-device-receipt-v1.md`
+- `WIKI-MD-V21-P7-T04-COMMON-SOURCE-PROPAGATION-RECEIPT-V1` `wiki/markdown/md-v21-p7-t04-common-source-propagation-receipt-v1.md`
+- `WIKI-MD-V21-P7-T04-PARENT-FUSION-COMMON-SOURCE-PROPAGATION-V1` `wiki/markdown/md-v21-p7-t04-parent-fusion-common-source-propagation-v1.md`
 - `WIKI-MD-VALIDATOR-OPERATOR-WORKFLOW-PUBLICATION-BRIEF` `wiki/markdown/md-validator-operator-workflow-publication-brief.md`
 
 ## obsidian-wiki
@@ -1260,6 +1262,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-V21-P7-T02-SOURCE-MATTER-FINITE-TRANSITION-KERNEL-RECEIPT-V1` `research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_receipt.md`
 - `MD-V21-P7-T03-PARENT-FUSION-SOURCE-OPERATIONAL-DEVICE-SUITE-V1` `research_control/tasks/RT-20260728-002/artifacts/parent_fusion_notes_p7_t03_operational_devices.md`
 - `MD-V21-P7-T03-SOURCE-OPERATIONAL-DEVICE-RECEIPT-V1` `research_control/tasks/RT-20260728-002/artifacts/source_operational_device_receipt.md`
+- `MD-V21-P7-T04-COMMON-SOURCE-PROPAGATION-RECEIPT-V1` `research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_receipt.md`
+- `MD-V21-P7-T04-PARENT-FUSION-COMMON-SOURCE-PROPAGATION-V1` `research_control/tasks/RT-20260728-003/artifacts/parent_fusion_notes_p7_t04_common_propagation.md`
 
 ## tex-wiki
 

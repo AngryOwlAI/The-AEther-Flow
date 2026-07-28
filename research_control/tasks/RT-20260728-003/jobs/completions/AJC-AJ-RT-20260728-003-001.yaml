@@ -1,0 +1,763 @@
+validation_status: "PASS"
+final_repository_validation_status: "PASS_READY_FOR_CHECKPOINT"
+job_id: "AJ-RT-20260728-003-001"
+completion_id: "AJC-AJ-RT-20260728-003-001"
+task_id: "RT-20260728-003"
+task_type: "v21_p7_t04_common_propagation_across_operational_systems"
+decision_id: "DDR-20260728-003"
+role_id: "candidate-constructor"
+role_version: "0.2.0"
+execution_role_ref: "candidate-constructor@0.2.0--RT-20260728-003"
+status: "completed"
+created_at: "2026-07-28T06:40:08Z"
+started_at: "2026-07-28T06:40:08Z"
+completed_at: "2026-07-28T07:08:39Z"
+objective: "Execute only the selected P7-T04 Candidate Constructor packet by deriving finite source support and reachability relations a transport-equivalent subfamily theorem and a precise scoped multi-relation obstruction to full-suite universality."
+completion_summary: "P7-T04 defines proposal-only finite Boolean source support and reachability profiles. Explicit source bijections intertwine every reachability power and give one common three-address-chain theorem for Rod_src Signal_src and Detector_src after b_RS is stipulated. The current five-role suite fails the named U_bij exact-bijective universality predicate: the equal-cardinality Clock_src and baseline FreeFall_src relations have incompatible SCC and nontrivial-cycle invariants. No energy variable differential operator principal symbol characteristic cone metric detector semantics matter-sector universality coupling or GR result follows."
+objective_result: "precise_scoped_common_source_propagation_obstruction_with_constructive_subfamily_theorem"
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 144
+  passes_consumed: 133
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:144"
+  handoff_token: "2bcf96ae7ae68803e2fe5d978102288126e280b97e90a331"
+  relay_claim_token: "6a88a2de292d16e2b3b834b98ff122a42f322ec83c9c8239"
+  route_work_item_id: "P7-T04"
+  route_worker_skill: "continue-research"
+  route_sha256: "91c4e483ee2fe481764cc3d225d31d516ff1bb177b811f1df97db47de142f761"
+  worker_skill: "continue-research"
+  worker_invocation_count: 1
+
+transaction_status: "ready_for_checkpoint"
+result_disposition: "P7_T04_PRECISE_SCOPED_OBSTRUCTION_WITH_COMMON_THREE_ADDRESS_SUBFAMILY_READY_FOR_CHECKPOINT"
+milestone_disposition: "formal_source_relation_burden_decisively_obstructed_for_current_full_suite_physical_low_energy_propagation_open"
+adoption_status: "blocked_adoption_open_continuation"
+checkpoint_commit:
+  required: true
+  attempted: false
+  committed: false
+  commit_sha: ""
+  dependency_checkpoint_commit: "36536b8f5a0c12cb1401004ab3f995bc3aa9c214"
+  push_authorized: false
+  push_performed: false
+
+is_physics_task: true
+payload_class: "precise_obstruction"
+has_new_mathematical_payload: true
+source_extension_classification_required: false
+external_red_team_finding_requires_integration: false
+physics_promotion_authorized: false
+proof_authority: false
+
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P7"
+  plan_task_id: "P7-T04"
+  work_kind: "construction_or_implementation"
+  task_class: "science"
+  expected_result_kind: "candidate_or_precise_obstruction"
+  dependency_task_ids:
+    - "P7-T02"
+    - "P7-T03"
+  dependency_completion_paths:
+    - "research_control/tasks/RT-20260728-001/jobs/completions/AJC-AJ-RT-20260728-001-001.yaml"
+    - "research_control/tasks/RT-20260728-002/jobs/completions/AJC-AJ-RT-20260728-002-001.yaml"
+  dependency_checkpoint_commits:
+    - "622ad1e0079765447feefd21b94348676424cf6c"
+    - "36536b8f5a0c12cb1401004ab3f995bc3aa9c214"
+  work_item_status: "completed_ready_for_checkpoint"
+  recommendation_ids:
+    - "V21-R18"
+    - "V21-R23"
+    - "V21-R24"
+    - "V21-R63"
+  recommendation_coverage_role: "direct_implementation"
+  scientific_claims_changed: true
+  scientific_claim_change_scope: "task-local proposal-only finite support definitions two exact theorems and one scoped full-suite U_bij obstruction"
+  physical_status_changed: false
+  distance_to_gr_delta_changed: true
+  distance_to_gr_delta_scope: "proposal_only_common_source_relation_obstruction"
+  physics_promotion_authorized: false
+  proof_authority: false
+  next_dependency_work_item: "P7-T05_after_checkpoint"
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  observed_durable_outputs:
+    physics:
+      - "proposal-only finite source support and reachability profile"
+      - "exact support-transport and three-address-subfamily theorems"
+      - "minimal multi-relation countermodel to full-suite universality"
+      - "explicit principal-symbol cone and metric non-derivability boundary"
+    project_system:
+      - "task-local deterministic validator report and compact receipt"
+      - "standard control records and generated memory derivatives"
+  accepted_criteria:
+    physics:
+      - "each compared protocol has an explicit finite support relation and invariant profile"
+      - "the transport theorem is proved from declared source bijections"
+      - "the countermodel is finite reproducible and identifies an exact incompatible invariant"
+      - "the obstruction remains scoped to current proposal-only data"
+    project_system:
+      - "task-local validation and scratch TeX build pass"
+      - "documentation-impact claim-language and research-control checks pass"
+      - "one governed checkpoint records the transaction"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+physics_payload_admission_result:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "physics"
+  declared_payload_type: "precise_obstruction"
+  realized_payload_type: "precise_obstruction"
+  candidate_family: "V21-P7-T04-COMMON-SOURCE-PROPAGATION-PROFILE-V1"
+  result: "PASS"
+  material_payload_present: true
+  process_receipts_counted_as_payload: false
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed_by_admission: false
+  physics_promotion_authorized: false
+
+family_freeze_admission_result:
+  schema_id: "family_freeze_route_admission_v1"
+  policy_id: "family_freeze_reopening_policy_v1"
+  route_id: "v21_p7_t04_common_source_propagation_profile_v1"
+  family_id: "V21-P7-T04-COMMON-SOURCE-PROPAGATION-PROFILE-V1"
+  detected_match_basis: []
+  reopening_requested: false
+  result: "PASS_UNFROZEN_PRECISE_OBSTRUCTION"
+  local_family_freeze_preserved: true
+  global_no_go_claimed: false
+  physics_promotion_authorized: false
+
+ordinary_route_guard_admission_result:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0892"
+  selected_plan_task_id: "P7-T04"
+  guard_outcome: "below_threshold"
+  result: "PASS"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  scientific_status_changed_by_guard: false
+  physics_promotion_authorized: false
+
+artifacts:
+  common_source_propagation_candidate: "research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_profile_candidate_v1.tex"
+  machine_specification: "research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_spec_v1.yaml"
+  finite_controls: "research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_controls_v1.yaml"
+  assumption_dependency_table: "research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_assumption_dependency_table_v1.yaml"
+  compact_receipt: "research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_compact_receipt_v1.json"
+  validation_report: "research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_validation_v1.json"
+  validator: "research_control/tasks/RT-20260728-003/artifacts/validate_common_source_propagation.py"
+  source_receipt: "research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_receipt.md"
+  child_phys_math: "research_control/tasks/RT-20260728-003/artifacts/child_phys_math_p7_t04_common_propagation.yaml"
+  child_phys_phil: "research_control/tasks/RT-20260728-003/artifacts/child_phys_phil_p7_t04_common_propagation.yaml"
+  conflict_review: "research_control/tasks/RT-20260728-003/artifacts/parent_conflict_review_p7_t04_common_propagation.yaml"
+  fusion_notes: "research_control/tasks/RT-20260728-003/artifacts/parent_fusion_notes_p7_t04_common_propagation.md"
+
+output_paths:
+  - "research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_profile_candidate_v1.tex"
+  - "research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_spec_v1.yaml"
+  - "research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_controls_v1.yaml"
+  - "research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_assumption_dependency_table_v1.yaml"
+  - "research_control/tasks/RT-20260728-003/artifacts/child_phys_math_p7_t04_common_propagation.yaml"
+  - "research_control/tasks/RT-20260728-003/artifacts/child_phys_phil_p7_t04_common_propagation.yaml"
+  - "research_control/tasks/RT-20260728-003/artifacts/parent_conflict_review_p7_t04_common_propagation.yaml"
+  - "research_control/tasks/RT-20260728-003/artifacts/parent_fusion_notes_p7_t04_common_propagation.md"
+  - "research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_compact_receipt_v1.json"
+  - "research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_validation_v1.json"
+  - "research_control/tasks/RT-20260728-003/artifacts/validate_common_source_propagation.py"
+  - "research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_receipt.md"
+  - "research_control/tasks/RT-20260728-003/00_TASK.yaml"
+  - "research_control/tasks/RT-20260728-003/DDR-20260728-003.md"
+  - "research_control/tasks/RT-20260728-003/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260728-003/roles/candidate-constructor@0.2.0--RT-20260728-003.yaml"
+  - "research_control/tasks/RT-20260728-003/jobs/AJ-RT-20260728-003-001.yaml"
+  - "research_control/tasks/RT-20260728-003/jobs/completions/AJC-AJ-RT-20260728-003-001.yaml"
+  - "research_control/handoffs/handoff-0893.yaml"
+  - "research_control/handoffs/handoff-0893.md"
+
+artifact_receipts:
+  - artifact_id: "TEX-V21-P7-T04-COMMON-SOURCE-PROPAGATION-PROFILE-V1"
+    path: "research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_profile_candidate_v1.tex"
+    sha256: "87014253023cdb8945ed67f606355d762486884ce3a6de4fa2d32e2af32e2b43"
+    status_label: "draft/control proposal-only"
+  - artifact_id: "P7T04-COMMON-SOURCE-PROPAGATION-SPEC-V1"
+    path: "research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_spec_v1.yaml"
+    sha256: "91422c4db2b3166da6cab9391ff3f1109d43a683d9624f8086e23d7d8ddf7001"
+    status_label: "draft/control proposal-only"
+  - artifact_id: "P7T04-COMMON-SOURCE-PROPAGATION-CONTROLS-V1"
+    path: "research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_controls_v1.yaml"
+    sha256: "a4039465e6f4f45db7e484cee3b5bbb213750aa395dbe9abbf820adf53b35709"
+    status_label: "draft/control proposal-only"
+  - artifact_id: "P7T04-COMMON-SOURCE-PROPAGATION-VALIDATION-V1"
+    path: "research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_validation_v1.json"
+    sha256: "b5a89952207d4e704ca6a27df2fc18ce0e4baaf97cfa03a11bc5cf5a7b30993a"
+    status_label: "operational_evidence"
+  - artifact_id: "P7T04-COMMON-SOURCE-PROPAGATION-COMPACT-RECEIPT-V1"
+    path: "research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_compact_receipt_v1.json"
+    sha256: "e06478e33ab893ba09e9b245e15c69e2580fc67989b7b5fe83930cceac5c75a5"
+    status_label: "operational_evidence"
+  - artifact_id: "MD-V21-P7-T04-COMMON-SOURCE-PROPAGATION-RECEIPT-V1"
+    path: "research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_receipt.md"
+    sha256: "c04e09d8c16e8ef9422d0afe3bef272d7d30a16b928a4aaa55507dbfb2c1abf0"
+    status_label: "science_draft_receipt"
+
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_execution_unit_count: 2
+  outer_agentjob_count: 1
+  child_agentjob_count: 0
+  subagent_count: 2
+
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260728-003/artifacts/child_phys_math_p7_t04_common_propagation.yaml"
+      output_sha256: "1d0ca5a8c075d922a7a328c582d3e7ebc8df4fdb0ca4f90bbb185989ddf99860"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260728-003/artifacts/child_phys_phil_p7_t04_common_propagation.yaml"
+      output_sha256: "e1211b500246c9f331212efcf0a62d062a8d54a4f9b6a9e71cd3e1cacfbe1c91"
+      status: "completed"
+  conflict_review:
+    status: "resolved"
+    review_path: "research_control/tasks/RT-20260728-003/artifacts/parent_conflict_review_p7_t04_common_propagation.yaml"
+    resolution_rounds: 1
+    resolved_conflict_count: 10
+    unresolved_conflicts: []
+  fusion:
+    fused_output_path: "research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_profile_candidate_v1.tex"
+    fusion_notes_path: "research_control/tasks/RT-20260728-003/artifacts/parent_fusion_notes_p7_t04_common_propagation.md"
+    shared_consensus_summary: "Finite enabled source transitions define exact support relations a three-address transport-equivalent subfamily and one equal-cardinality full-suite U_bij countermodel."
+    unique_phys_math_contributions: "Boolean support powers six relation profiles transport theorem subfamily theorem and finite countermodel."
+    unique_phys_phil_contributions: "Protocol-role versus matter-sector intervention-indexing low-energy principal-symbol model-to-world and downstream-use guards."
+    novelty_preservation_summary: "Fusion preserves the exact finite theorems and countermodel while naming the tested predicate and every missing physical map."
+    claim_boundary_preservation_summary: "No canonical ontology source-law physical propagation cone metric detector coupling GR proof publication global-no-go or completed-derivation authority is created."
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+
+bridge_attempt_status:
+  status: "scoped_source_relation_obstruction_recorded"
+  candidate_map: "finite enabled source transitions to Boolean support and reachability profiles under explicit source bijections"
+  missing_primitive: "one source-derived relation across all matter sectors energy-scale map differential operator principal-symbol map physical interpretation and universal coupling"
+  preserves_blocks: "Preserves M_src and g_eff scope physical propagation matter coupling Einstein equations benchmark Gate Chair proof publication completed derivation and global theory rejection blocks."
+  explanation: "P7-T04 constructs a formal three-role common skeleton and precisely obstructs full-suite exact-bijective universality but does not establish a physical matter-coupling bridge."
+
+candidate_constructor_result:
+  result_type: "precise_obstruction"
+  constructed_candidate_path: "research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_profile_candidate_v1.tex"
+  minimal_countermodel_path: "research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_profile_candidate_v1.tex"
+  obstruction_id: "OBST-P7T04-FULL-SUITE-COMMON-PROPAGATION-001"
+  formal_objects:
+    - "SourceSupportRelation_v1"
+    - "CommonSourcePropagationProfileCandidate_v1"
+    - "Boolean exact and bounded reachability powers"
+    - "six intervention-indexed finite relation profiles"
+    - "three-address source-chain transport class"
+    - "two-vertex Clock versus baseline FreeFall countermodel"
+  maps:
+    - "enabled source transition rows to Boolean support"
+    - "source-address bijection to transported support and reachability"
+    - "b_RS from rod addresses to signal addresses"
+    - "b_SD from signal addresses to detector addresses"
+  proof_obligations:
+    - "P7-T05 must not assume a common physical cone metric or matter-sector interpretation"
+    - "any low-energy claim requires an independently justified scale map"
+    - "any principal-symbol claim requires a source-to-operator and covector-domain construction"
+    - "a materially new source primitive or exact later obstruction is required when universal coupling needs missing geometry"
+  failed_components:
+    - "one U_bij relation across all five current protocol controls"
+    - "one intervention-independent relation selected by every English role label"
+    - "source-derived energy or low-energy regime"
+    - "source-derived principal symbol characteristic set cone or metric"
+  next_required_role: "none"
+  no_fog_check: true
+  no_fog_explanation: "The current five-role proposal-only suite fails the explicitly named U_bij predicate because its two-vertex Clock and baseline FreeFall relations have invariant SCC counts one versus two and nontrivial-cycle values true versus false; the same packet proves an exact common three-address relation for Rod Signal and Detector under declared proposal-only bijections."
+  claim_boundary_preserved: true
+  claim_boundary_citation: "CB-V21-P7-T04-COMMON-SOURCE-PROPAGATION-001"
+
+common_source_propagation_result:
+  candidate_id: "CommonSourcePropagationProfileCandidate_v1"
+  relation_id: "SourceSupportRelation_v1"
+  status: "draft/control"
+  adoption_status: "proposal-only"
+  result_kind: "source-extension data"
+  protocol_role_count: 5
+  explicit_relation_variant_count: 6
+  theorem_count: 2
+  common_subfamily_role_count: 3
+  common_subfamily_relation_established: true
+  full_suite_u_bij_established: false
+  minimal_countermodel_relation_count: 2
+  minimal_countermodel_vertex_count_each: 2
+  obstruction_count: 1
+  resolved_parent_conflict_count: 10
+  unresolved_parent_conflict_count: 0
+  task_local_check_count: 65
+  task_local_failed_check_count: 0
+  latex_compile_status: "PASS"
+  latex_page_count: 5
+  current_ontology_derives_support_profile: false
+  current_ontology_derives_b_rs: false
+  energy_or_scale_regime_supplied: false
+  physical_probability_established: false
+  physical_time_established: false
+  physical_causality_established: false
+  principal_symbol_established: false
+  characteristic_cone_established: false
+  effective_metric_established: false
+  detector_semantics_established: false
+  matter_sector_universality_established: false
+  matter_coupling_derived: false
+  scientific_ledgers_changed: true
+
+new_mathematical_payload:
+  - payload_id: "NMP-RT-20260728-003-001"
+    payload_type: "definition"
+    name: "Finite Boolean source support and reachability profile"
+    summary: "Defines full and reduced support Boolean powers and finite relation invariants for explicit proposal-only controls."
+  - payload_id: "NMP-RT-20260728-003-002"
+    payload_type: "theorem"
+    name: "Boolean support transport theorem"
+    summary: "Proves exact intertwining of every finite reachability power under compatible source bijections."
+  - payload_id: "NMP-RT-20260728-003-003"
+    payload_type: "theorem"
+    name: "Common three-address source skeleton theorem"
+    summary: "Proves Rod Signal and Detector share one source-chain relation under declared proposal-only maps."
+  - payload_id: "NMP-RT-20260728-003-004"
+    payload_type: "countermodel"
+    name: "Clock versus baseline FreeFall equal-cardinality countermodel"
+    summary: "Computes incompatible SCC and nontrivial-cycle invariants and precisely obstructs full-suite U_bij universality."
+
+mathematical_payload_manifest:
+  - payload_id: "PAYLOAD-RT-20260728-003-001"
+    payload_type: "definition"
+    object_name: "SourceSupportRelation_v1"
+    claim_status: "draft/control proposal-only"
+    source_path: "research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_profile_candidate_v1.tex"
+    burden_effect: "narrows"
+    summary: "Extracts exact finite source support and reachability without physical interpretation."
+  - payload_id: "PAYLOAD-RT-20260728-003-002"
+    payload_type: "theorem"
+    object_name: "P7T04-THM-BOOLEAN-SUPPORT-TRANSPORT-001"
+    claim_status: "exact within task-local proposal-only candidate"
+    source_path: "research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_profile_candidate_v1.tex"
+    burden_effect: "narrows"
+    summary: "Proves compatible source bijections intertwine Boolean reachability and preserve finite profiles."
+  - payload_id: "PAYLOAD-RT-20260728-003-003"
+    payload_type: "theorem"
+    object_name: "P7T04-THM-THREE-ADDRESS-SUBFAMILY-001"
+    claim_status: "exact within task-local proposal-only candidate"
+    source_path: "research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_profile_candidate_v1.tex"
+    burden_effect: "narrows"
+    summary: "Constructs one common three-address relation for the declared Rod Signal and Detector maps."
+  - payload_id: "PAYLOAD-RT-20260728-003-004"
+    payload_type: "countermodel"
+    object_name: "P7T04-CM-EQUAL-CARDINALITY-CYCLE-001"
+    claim_status: "exact finite local countermodel"
+    source_path: "research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_profile_candidate_v1.tex"
+    burden_effect: "obstructs"
+    summary: "Clock and baseline FreeFall have equal carrier size but incompatible SCC and nontrivial-cycle invariants."
+  - payload_id: "PAYLOAD-RT-20260728-003-005"
+    payload_type: "obstruction"
+    object_name: "OBST-P7T04-FULL-SUITE-COMMON-PROPAGATION-001"
+    claim_status: "precise scoped obstruction"
+    source_path: "research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_profile_candidate_v1.tex"
+    burden_effect: "obstructs"
+    summary: "The current five-role suite does not satisfy exact-bijective U_bij universality and supplies no principal-symbol or low-energy map."
+
+physics_progress_status:
+  status: "precise_obstruction_found"
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "Establish or refute universal low-energy propagation."
+  explanation: "P7-T04 gives an exact formal subfamily theorem and a reproducible full-suite U_bij obstruction. It narrows the source-relation burden but establishes no physical low-energy propagation common cone metric matter-sector universality coupling or adoption."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr_delta:
+  changed: true
+  effect: "obstruction_recorded"
+  burden_id: "matter_coupling"
+  milestone: "matter_coupling"
+  old_status: "draft object exists"
+  new_status: "draft object exists"
+  ledger_row_updated: true
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "The common-propagation sub-burden now has a precise candidate-relative disposition: one constructive three-role source skeleton and one full-suite exact-bijective obstruction; the higher physical matter-coupling burden remains a draft object."
+  downstream_unlocked:
+    - "P7-T05 construction-or-precise-obstruction packet after checkpoint under missing-geometry guards"
+  downstream_still_blocked:
+    - "physical source matter and source-law adoption"
+    - "physical low-energy propagation and causal geometry"
+    - "principal symbols characteristic cones and effective metric"
+    - "matter-sector universality and equivalence-principle behavior"
+    - "matter action universal coupling and stress energy"
+    - "Einstein equations"
+    - "benchmark promotion"
+  explanation: "The ledger records a real proposal-level theorem and obstruction only; no physical or promotion status changes."
+
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "unchanged; proposal-only source extensions remain unadopted"
+  - burden: "Source equivalence EqSrc"
+    status: "unchanged; general EqSrc remains open"
+  - burden: "RetainH"
+    status: "unchanged; no canonical retention law"
+  - burden: "GenH"
+    status: "unchanged; no canonical generator law"
+  - burden: "ObsLoc_lc"
+    status: "unchanged; local exact branch only"
+  - burden: "Resp_lc"
+    status: "unchanged; finite source relations do not establish detector semantics"
+  - burden: "M_src"
+    status: "unchanged; protected scoped source-only status does not supply target geometry"
+  - burden: "g_eff"
+    status: "unchanged; P6 Gate B remains zero of eight and no lawful P7 geometry input exists"
+  - burden: "matter coupling"
+    status: "formal three-role support equivalence proved and full-suite U_bij precisely obstructed; physical low-energy propagation principal symbols common cone metric universal coupling action and stress energy remain open"
+  - burden: "Einstein equations"
+    status: "not started; unchanged"
+  - burden: "finite-variation robustness"
+    status: "unchanged; finite relation controls do not establish arbitrary physical robustness"
+  - burden: "benchmark promotion"
+    status: "blocked by missing physical geometry coupling Einstein equations and protected review"
+  - burden: "Gate Chair status"
+    status: "human-gated; unchanged"
+  - burden: "current route freeze or hard-fail status"
+    status: "the exact P7-T04 U_bij family is locally frozen; P7-T05 is a distinct coupling construction-or-obstruction burden"
+
+obstruction_record:
+  present: true
+  obstruction_id: "OBST-P7T04-FULL-SUITE-COMMON-PROPAGATION-001"
+  scope: "matter_coupling"
+  failed_object: "one exact-bijective common finite source support relation across all current P7-T03 protocol controls"
+  exact_failure: "Clock_src and baseline FreeFall_src each have two source addresses but their full supports have SCC counts one and two and their reduced supports have nontrivial-cycle values true and false; no bijection can intertwine them."
+  minimal_counterexample_path: "research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_profile_candidate_v1.tex"
+  current_ontology_implication: "does_not_derive"
+  source_extension_implication: "repair_allowed"
+  consequence: "repair_candidate_allowed"
+  forbidden_overread: "This exact finite candidate obstruction does not establish physical nonuniversality birefringence a global theory rejection or future source-extension impossibility."
+
+countermodel_obligations:
+  policy_id: "minimal_countermodel_obligation_policy_v1"
+  theorem_family: "matter_coupling"
+  waiver_decision_id: ""
+  slots:
+    - countermodel_slot: "full_suite_common_relation_countermodel"
+      status: "filled"
+      scope: "exact bijective support transport across current P7-T03 protocol controls"
+      result_artifact: "research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_profile_candidate_v1.tex"
+      obstruction_id: "OBST-P7T04-FULL-SUITE-COMMON-PROPAGATION-001"
+      local_countermodel_claim: "Two two-vertex relations differ in SCC count and nontrivial-cycle content."
+      forbidden_overread: "No physical multi-cone birefringence or global no-go conclusion follows."
+    - countermodel_slot: "principal_symbol_target_import_countermodel"
+      status: "filled"
+      scope: "attempted reinterpretation of a finite adjacency characteristic polynomial as a PDE symbol"
+      result_artifact: "research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_controls_v1.yaml"
+      obstruction_id: ""
+      local_countermodel_claim: "The attempt is malformed because no base space covector differential operator leading order or scale map is supplied."
+      forbidden_overread: "This does not prove that no future source-to-operator map can be constructed."
+    - countermodel_slot: "low_energy_regime_underdetermination"
+      status: "filled"
+      scope: "physical low-energy universality request"
+      result_artifact: "research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_controls_v1.yaml"
+      obstruction_id: ""
+      local_countermodel_claim: "The request is underdetermined because the fixed source data contain no energy or scale variable."
+      forbidden_overread: "Underdetermination is not refutation or impossibility."
+
+freeze_criteria_status:
+  repeated_burden: true
+  freeze_evaluation_required: true
+  active_freeze_label: "V21-P7-T04-COMMON-SOURCE-PROPAGATION-U-BIJ-V1"
+  prior_attempts_considered:
+    - "RT-20260728-001 P7-T02 finite transition-kernel construction"
+    - "RT-20260728-002 P7-T03 finite source operational-device construction"
+    - "RT-20260728-003 P7-T04 common source propagation analysis"
+  freeze_if:
+    - "Later work repeats the same support profiles three-address theorem or Clock-FreeFall countermodel without a new theorem source datum variation class or protected decision."
+    - "Later work renames Boolean reachability or a finite matrix spectrum as physical propagation principal symbols cones or metrics."
+  do_not_freeze_if:
+    - "P7-T05 supplies a materially new coupling candidate or a distinct precise coupling obstruction."
+    - "A new source extension supplies propagation data for every admitted matter sector an energy-scale map and a source-to-operator interpretation."
+    - "A protected decision authorizes only its exact human-gated scope."
+  freeze_decision: "locally_frozen"
+  decision_reason: "The exact U_bij question for the present protocol controls has a minimal countermodel and should not be repeated; P7-T05 is a distinct coupling burden."
+  next_allowed_route: "candidate_constructor"
+  status_update_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  exact_prior_route_freeze_preserved: true
+  global_theory_rejection: false
+  future_source_extension_impossibility: false
+
+route_cycle_control:
+  cycle_family: "v21_p7_source_matter_construction"
+  current_cycle_step: "p7_t04_common_source_relation_obstructed_p7_t05_coupling_selected"
+  prior_related_tasks:
+    - "RT-20260727-007"
+    - "RT-20260728-001"
+    - "RT-20260728-002"
+    - "RT-20260728-003"
+  cycle_risk: "medium"
+  orbit_avoidance_reason: "P7-T05 must construct the actual coupling candidate or return a distinct precise coupling obstruction; it may not restate U_bij or assume the missing common metric."
+  next_role_consequence: "candidate-constructor@0.2.0 for v21 P7-T05"
+
+selected_next_route:
+  route_id: "v21_p7_t05_universal_matter_coupling"
+  route_label: "candidate-construction-packet"
+  role_family: "candidate-constructor@0.2.0"
+  worker_skill: "continue-research"
+  selected_next_packet_type: "universal_matter_coupling_candidate_or_precise_obstruction"
+  task_type: "v21_p7_t05_universal_matter_coupling_law"
+  plan_task_id: "P7-T05"
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "Build the actual coupling candidate rather than another readiness profile."
+  strategy_id: "construct_or_precisely_obstruct_universal_matter_coupling_v1"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  common_physical_cone_available: false
+  effective_geometry_available: false
+  target_metric_assumed: false
+  detector_semantics_assumed: false
+  stress_energy_assumed: false
+  coupling_assumed: false
+  gr_behavior_assumed: false
+  physics_promotion_authorized: false
+  source_handoff: "research_control/handoffs/handoff-0893.yaml"
+
+claim_boundary:
+  boundary_id: "CB-V21-P7-T04-COMMON-SOURCE-PROPAGATION-001"
+  allowed_scope: "Exact finite source support definitions Boolean transport theorem common three-address subfamily theorem scoped U_bij countermodel principal-symbol type obstruction and one P7-T05 route."
+  blocked_scope: "Canonical ontology source-law or propagation-law adoption protocol roles as matter sectors physical time causality speed principal symbol cone metric detector semantics universal coupling action stress energy Einstein equations benchmark proof publication push completed derivation global no-go or future source-extension impossibility."
+  claim_boundary_preserved: true
+
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+  summary: "The source relation theorem and countermodel are scoped proposal evidence only. They do not establish physical propagation nonuniversality a common or multiple cone metric coupling Einstein equations benchmark promotion proof publication or completed derivation."
+  forbidden_conclusions:
+    - "support-profile or rod-signal map derived from or adopted into current ontology"
+    - "protocol roles promoted to all matter sectors"
+    - "formal composition index as physical time duration or causal order"
+    - "Boolean reachability as signal speed or physical propagation"
+    - "finite adjacency characteristic polynomial as principal symbol or dispersion relation"
+    - "three-address chain as a causal cone metric or detector theorem"
+    - "Clock-FreeFall countermodel as physical birefringence nonuniversality or equivalence-principle failure"
+    - "M_src adoption or g_eff scope expansion"
+    - "matter coupling matter action universal coupling or stress energy"
+    - "Einstein-equation derivation"
+    - "benchmark promotion Gate Chair verdict publication or completed derivation"
+    - "global theory rejection or future source-extension impossibility"
+
+no_target_import_audit:
+  explicit_target_import_found: false
+  explicit_process_import_found: false
+  distinction: "Only fixed proposal-only finite controls explicit source transitions Boolean relation operations and declared source bijections enter the theorem and obstruction."
+  forbidden_inputs_absent:
+    - "target atlas"
+    - "target metric or desired causal cone"
+    - "covector momentum energy wavelength or low-energy scale"
+    - "differential operator or matter action"
+    - "empirical detector calibration"
+    - "stress energy or coupling law"
+    - "desired GR benchmark behavior"
+    - "validator checkpoint or recency as science"
+
+ordinary_route_guard:
+  schema_id: "ordinary_route_guard_evaluation_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  evaluation_id: "ORE-HANDOFF-0893"
+  ordinary_handoff_id: "handoff-0893"
+  threshold: 3
+  consecutive_project_system_tasks_before_selection: 0
+  ready_science_plan_task_ids:
+    - "P7-T05"
+    - "P14-T04"
+  selected_plan_task_id: "P7-T05"
+  selected_route_class: "physics_bearing"
+  selected_worker_skill: "continue-research"
+  outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  exception_receipt:
+    active: false
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+active_state_boundary:
+  active_task_id: "RT-20260728-003"
+  active_job_id: "AJ-RT-20260728-003-001"
+  current_status: "p7_t04_common_source_propagation_precise_obstruction_p7_t05_ready_for_checkpoint"
+  checkpoint_required: true
+  checkpoint_completed: false
+  checkpoint_invocation_count: 0
+  p7_t04_complete: true
+  selected_next_plan_task_id: "P7-T05"
+  selected_next_worker_skill: "continue-research"
+  selected_next_role_family: "candidate-constructor@0.2.0"
+  selected_next_route_label: "candidate-construction-packet"
+  selected_next_strategy_id: "construct_or_precisely_obstruct_universal_matter_coupling_v1"
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1055
+    relationship_row_count: 5281
+    semantic_row_count: 1055
+    vault_row_count: 1055
+    local_cache_only_warning_count: 0
+  authority_note: "Generated Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+  refresh_needed: true
+  refresh_performed: true
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-V21-P7-T03-SOURCE-OPERATIONAL-DEVICE-SUITE-V1 --json"
+      query_type: "lookup"
+      query_text: "TEX-V21-P7-T03-SOURCE-OPERATIONAL-DEVICE-SUITE-V1"
+      returned_object_ids:
+        - "TEX-V21-P7-T03-SOURCE-OPERATIONAL-DEVICE-SUITE-V1"
+  canonical_inspections:
+    - object_id: "TEX-V21-P7-T03-SOURCE-OPERATIONAL-DEVICE-SUITE-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260728-002/artifacts/source_operational_device_suite_candidate_v1.tex"
+      source_hash: "d6c818ee29f1a7e659e2f454aec21431d680b3d2d4df048fcf36f4aba87ba22a"
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 144 validated was atomically claimed and consumed its immutable P7-T04 route exactly once."
+      - "The P7-T03 dependency checkpoint 36536b8f5a0c12cb1401004ab3f995bc3aa9c214 was committed before execution."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Task-local validation passes 65 of 65 checks."
+      - "The scratch TeX build resolves references and renders five pages."
+      - "Two same-context child perspectives were fused with zero unresolved conflicts."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Integrated documentation-impact improvement-signal claim-language memory registry renderer and research-control gates must pass before checkpoint."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "One governed checkpoint remains; P7-T05 is unexecuted."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Current frontier task index compact frontier dependency graph claim graph and v21 burden-status derivatives are regenerated and pass freshness checks."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory registries wiki notes and indexes are regenerated and validate-only passes."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation has zero hard failures."
+
+command_results:
+  - command: ".venv/bin/python research_control/tasks/RT-20260728-003/artifacts/validate_common_source_propagation.py --check --json"
+    status: "PASS"
+    summary: "65 of 65 finite relation theorem countermodel provenance and authority checks pass"
+  - command: "pdflatex two-pass scratch build of common_source_propagation_profile_candidate_v1.tex"
+    status: "PASS"
+    summary: "five-page scratch PDF compiles with references resolved"
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+    status: "PASS"
+    summary: "tracked memory sources registries wiki derivatives and indexes are current"
+  - command: ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+    status: "PASS"
+    summary: "all changed paths are classified within the bounded AgentJob"
+  - command: ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json"
+    status: "PASS"
+    summary: "no project-improvement signal is emitted by this research completion"
+  - command: ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+    status: "PASS"
+    summary: "documentation-impact receipt covers the changed control and science surfaces"
+  - command: ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+    status: "PASS"
+    summary: "changed-source claim-language validation has zero hard failures"
+  - command: ".venv/bin/python scripts/research_control/render_dependency_graph.py --check"
+    status: "PASS"
+    summary: "dependency graph derivatives are fresh"
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not authorized; ordinary P7-T04 draft/control proposal-only source relation theorem and exact scoped obstruction only"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  publication_authorized: false
+  proof_authority: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  canonical_ontology_edit_authorized: false
+  ontology_selection_authorized: false
+  matter_ontology_adoption_authorized: false
+  operational_semantics_adoption_authorized: false
+  physical_interpretation_establishment_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+  future_source_extension_impossibility_authorized: false
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  sidecar_required: false
+  sidecar_created: false
+  reason: "No project-improvement signal was emitted."

@@ -1,0 +1,484 @@
+job_id: "AJ-RT-20260728-003-001"
+task_id: "RT-20260728-003"
+decision_id: "DDR-20260728-003"
+role_id: "candidate-constructor"
+role_version: "0.2.0"
+execution_role_ref: "candidate-constructor@0.2.0--RT-20260728-003"
+status: "completed"
+validation_status: "PASS"
+requires_human_gate: false
+created_at: "2026-07-28T06:40:08Z"
+started_at: "2026-07-28T06:40:08Z"
+completed_at: "2026-07-28T07:08:39Z"
+completion_path: "research_control/tasks/RT-20260728-003/jobs/completions/AJC-AJ-RT-20260728-003-001.yaml"
+objective: "Execute only the selected P7-T04 Candidate Constructor packet by deriving finite source support and reachability relations a transport-equivalent subfamily theorem and a precise scoped multi-relation obstruction to full-suite universality."
+target_derivation_milestone: "matter_coupling"
+milestone_burden: "Establish or refute universal low-energy propagation."
+route_label: "candidate-construction-packet"
+route_reason: "Handoff-0892 committed P7-T03 checkpoint 36536b8f5a0c12cb1401004ab3f995bc3aa9c214 v21 P7-T04 and immutable generation 144 select exactly one common-source-propagation construction-or-obstruction packet."
+immutable_route_sha256: "91c4e483ee2fe481764cc3d225d31d516ff1bb177b811f1df97db47de142f761"
+plan_task_id: "P7-T04"
+recommendation_ids:
+  - "V21-R18"
+  - "V21-R23"
+  - "V21-R24"
+  - "V21-R63"
+source_extension_classification_required: false
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 144
+  passes_consumed: 133
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:144"
+  handoff_token: "2bcf96ae7ae68803e2fe5d978102288126e280b97e90a331"
+  relay_claim_token: "6a88a2de292d16e2b3b834b98ff122a42f322ec83c9c8239"
+  route_work_item_id: "P7-T04"
+  route_worker_skill: "continue-research"
+  route_sha256: "91c4e483ee2fe481764cc3d225d31d516ff1bb177b811f1df97db47de142f761"
+  worker_skill: "continue-research"
+  worker_invocation_count: 1
+
+mathematical_decisiveness_contract:
+  contract_path: "research_control/design/mathematical_decisiveness_completion_contract.md"
+  schema_path: ".agents/schemas/PHYSICS_COMPLETION_DECISIVENESS_SCHEMA.md"
+  enforcement_mode: "hard_failure"
+  active_after: "2026-06-21T02:32:39Z"
+
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "physics"
+  payload_type: "precise_obstruction"
+  candidate_family: "V21-P7-T04-COMMON-SOURCE-PROPAGATION-PROFILE-V1"
+  assumption_delta:
+    - "Hold the P7-T02 finite bookkeeping kernel and P7-T03 five-role protocol suite fixed at proposal-only status."
+    - "Define one-step support only from enabled declared finite source transitions."
+    - "Define n-step reachability over the Boolean semiring without physical time interpretation."
+    - "Compare support relations only under explicit source-address bijections."
+    - "Use finite graph invariants to distinguish full-suite relations and to construct a minimal countermodel."
+    - "Admit no target atlas metric covector principal symbol causal cone signal speed detector semantics matter action coupling law GR behavior validator result or generated derivative as a source premise."
+  materiality_basis: "P7-T03 provides guarded protocols but no common propagation analysis. This packet adds a finite support-relation definition exact transport theorem computed invariant profiles a common three-address-chain subfamily and a reproducible full-suite universality obstruction."
+  payload_details:
+    obstruction_scope: "The current proposal-only P7-T03 five-protocol suite does not derive one source-support relation up to bijective transport because explicit protocol relations have incompatible finite invariants."
+    global_no_go_claimed: false
+    candidate_ids:
+      - "CommonSourcePropagationProfileCandidate_v1"
+      - "SourceSupportRelation_v1"
+    theorem_ids:
+      - "P7T04-THM-BOOLEAN-SUPPORT-TRANSPORT-001"
+      - "P7T04-THM-THREE-ADDRESS-SUBFAMILY-001"
+    obstruction_id: "OBST-P7T04-FULL-SUITE-COMMON-PROPAGATION-001"
+  source_basis:
+    - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+    - "TEX-V21-P7-T02-SOURCE-MATTER-FINITE-TRANSITION-KERNEL-V1"
+    - "TEX-V21-P7-T03-SOURCE-OPERATIONAL-DEVICE-SUITE-V1"
+    - "research_control/handoffs/handoff-0892.yaml"
+    - "research_control/design/frontier_theorem_inventory.md"
+    - "registries/METRIC_USE_LEDGER.csv"
+  expected_artifact_paths:
+    - "research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_profile_candidate_v1.tex"
+    - "research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_spec_v1.yaml"
+    - "research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_controls_v1.yaml"
+    - "research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_assumption_dependency_table_v1.yaml"
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+
+family_freeze_admission:
+  schema_id: "family_freeze_route_admission_v1"
+  policy_id: "family_freeze_reopening_policy_v1"
+  route_id: "v21_p7_t04_common_source_propagation_profile_v1"
+  family_id: "V21-P7-T04-COMMON-SOURCE-PROPAGATION-PROFILE-V1"
+  family_identity_sha256: "d6c818ee29f1a7e659e2f454aec21431d680b3d2d4df048fcf36f4aba87ba22a"
+  assumption_sha256es:
+    - "65ac095f5cdf4c2e319365c8b0e024d031b19d9fc2b8102e59997afa1e8f9129"
+    - "d6c818ee29f1a7e659e2f454aec21431d680b3d2d4df048fcf36f4aba87ba22a"
+  route_kind: "candidate_construction"
+  detected_match_basis: []
+  reopening:
+    requested: false
+    class: "none"
+  distinct_branch:
+    branch_identity: "common_source_propagation_after_p7_t03"
+    material_difference_basis: "This packet computes finite support relations transport invariants and a new universality countermodel after P7-T03; it does not reconstruct a frozen EqSrc or P6 effective-geometry candidate."
+    reconstructs_frozen_candidate: false
+    expected_artifact_paths:
+      - "research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_profile_candidate_v1.tex"
+  authority_limits:
+    local_family_freeze_preserved: true
+    global_no_go_claimed: false
+    automatic_candidate_adoption: false
+    theorem_truth_inferred: false
+    ontology_modified: false
+    physics_promotion_authorized: false
+
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  expected_durable_outputs:
+    physics:
+      - "proposal-only finite source support and reachability profile"
+      - "exact support-transport and three-address-subfamily theorems"
+      - "minimal multi-relation countermodel to full-suite universality"
+      - "explicit principal-symbol cone and metric non-derivability boundary"
+    project_system:
+      - "task-local deterministic validator report and compact receipt"
+      - "standard control records and generated memory derivatives"
+  acceptance_criteria:
+    physics:
+      - "each compared protocol has an explicit finite support relation and invariant profile"
+      - "the transport theorem is proved from declared source bijections"
+      - "the countermodel is finite reproducible and identifies an exact incompatible invariant"
+      - "the obstruction remains scoped to current proposal-only data"
+    project_system:
+      - "task-local validation and scratch TeX build pass"
+      - "documentation-impact claim-language and research-control checks pass"
+      - "one governed checkpoint records the transaction"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: false
+    exception_id: ""
+    evidence_path: ""
+    evidence_sha256: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0892"
+  source_handoff_path: "research_control/handoffs/handoff-0892.yaml"
+  source_handoff_sha256: "c7f7b0ca254719eebf25a94caad60a199f12140255426e74e515c0a06acd40b4"
+  selected_plan_task_id: "P7-T04"
+  guard_outcome: "below_threshold"
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  parent:
+    execution_unit_id: "parent"
+    perspective: "physicist_mathematician_philosopher"
+    responsibilities:
+      - "hold the P7-T02 and P7-T03 proposal-only source basis fixed"
+      - "enforce one shared no-target-import and no-physical-propagation boundary"
+      - "write the fused candidate specification controls assumption ledger validator and receipts"
+      - "review child outputs for mathematical semantic and authority conflicts"
+  children:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260728-003/artifacts/child_phys_math_p7_t04_common_propagation.yaml"
+      status: "pending"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260728-003/artifacts/child_phys_phil_p7_t04_common_propagation.yaml"
+      status: "pending"
+  conflict_policy:
+    review_path: "research_control/tasks/RT-20260728-003/artifacts/parent_conflict_review_p7_t04_common_propagation.yaml"
+    max_resolution_rounds: 2
+    require_parallel_child_revision: true
+    unresolved_conflict_status: "blocked"
+  fusion_policy:
+    fusion_notes_path: "research_control/tasks/RT-20260728-003/artifacts/parent_fusion_notes_p7_t04_common_propagation.md"
+    fused_output_path: "research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_profile_candidate_v1.tex"
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+    final_output_replaces_old_single_role_artifact: true
+  outer_agentjob_count: 1
+  child_agentjob_count: 0
+  subagent_count: 2
+  rationale: "Two internal perspectives independently test finite relation mathematics and model-to-world boundaries within one immutable worker invocation and one outer AgentJob."
+
+allowed_read_paths:
+  - "SOUL.md"
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - ".agents/roles/physics/candidate-constructor.v0.2.0.md"
+  - ".agents/schemas/**"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  - "research_control/design/**"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0892.yaml"
+  - "research_control/handoffs/handoff-0892.md"
+  - "research_control/tasks/RT-20260728-001/**"
+  - "research_control/tasks/RT-20260728-002/**"
+  - "research_control/tasks/RT-20260614-257/**"
+  - "research_control/tasks/RT-20260702-064/**"
+  - "registries/**"
+
+allowed_write_paths:
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_burden_status_migration_receipt.json"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status.md"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_validation.json"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_compact_receipt.json"
+  - "research_control/tasks/RT-20260728-002/00_TASK.yaml"
+  - "research_control/tasks/RT-20260728-003/**"
+  - "research_control/handoffs/handoff-0893.yaml"
+  - "research_control/handoffs/handoff-0893.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/PDF_DERIVATIVE_REGISTRY.csv"
+  - "registries/PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "registries/TEX_SOURCE_REGISTRY.csv"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/pdf/**"
+  - "wiki/tex/**"
+
+allowed_generated_paths:
+  - ".local/**"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_burden_status_migration_receipt.json"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status.md"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_validation.json"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_compact_receipt.json"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/pdf/**"
+  - "wiki/tex/**"
+
+forbidden_paths:
+  - "ontology/**"
+  - "manuscripts/**"
+  - "legacy_ontology/**"
+  - "html/**"
+  - "github-facing/**"
+  - "implementations_plans/**"
+  - ".agents/roles/**"
+  - ".codex/skills/**"
+  - "registries/METRIC_USE_LEDGER.csv"
+  - "research_control/tasks/RT-20260728-001/artifacts/**"
+  - "research_control/tasks/RT-20260728-001/jobs/**"
+  - "research_control/tasks/RT-20260728-002/artifacts/**"
+  - "research_control/tasks/RT-20260728-002/jobs/**"
+
+allowed_source_classes:
+  - "science_draft"
+  - "task_local_candidate"
+  - "task_local_theorem_synthesis"
+  - "task_local_finite_witness"
+  - "task_local_precise_obstruction"
+  - "task_local_assumption_ledger"
+  - "project_control"
+  - "registry"
+  - "role_contract"
+  - "generated_memory_derivative"
+
+forbidden_source_classes:
+  - "canonical_ontology_write"
+  - "benchmark_promotion"
+  - "gate_chair_verdict"
+  - "physics_claim_promotion"
+  - "source_law_adoption"
+  - "canonical_ontology_candidate_promotion"
+  - "candidate_reconstruction"
+  - "generated_derivative_authority"
+  - "physical_ontology_adoption"
+  - "physical_probability_or_time"
+  - "physical_conservation_law"
+  - "physical_operational_semantics"
+  - "detector_semantics"
+  - "effective_geometry"
+  - "stress_energy"
+  - "matter_action"
+  - "coupling_law"
+  - "matter_coupling_derivation"
+  - "Einstein_equations"
+  - "proof_authority"
+  - "publication_authority"
+  - "completed_derivation_claim"
+  - "global_no_go"
+  - "global_theory_rejection"
+  - "future_source_extension_impossibility"
+
+approved_commands:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-V21-P7-T03-SOURCE-OPERATIONAL-DEVICE-SUITE-V1 --json"
+  - ".venv/bin/python scripts/research_control/continue_research.py --summary"
+  - ".venv/bin/python research_control/tasks/RT-20260728-003/artifacts/validate_common_source_propagation.py --write-report --json"
+  - ".venv/bin/python research_control/tasks/RT-20260728-003/artifacts/validate_common_source_propagation.py --check --json"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --write"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --json output/research_dependency_graph.json --markdown wiki/indexes/research_dependency_graph.md --dot output/research_dependency_graph.dot"
+  - ".venv/bin/python scripts/research_control/generate_claim_graph_v1.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff"
+  - ".venv/bin/python scripts/research_control/validate_compact_current_frontier_v16.py --json"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --check"
+  - ".venv/bin/python scripts/research_control/report_physics_progress_metrics.py"
+  - ".venv/bin/python scripts/research_control/run_full_research_control_validation.py --json"
+  - "git diff --check"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260728-003-001"
+
+required_validators:
+  - "memory_preflight"
+  - "query_memory_status"
+  - "continue_research_summary"
+  - "task_local_common_source_propagation"
+  - "scratch_tex_build"
+  - "render_current_frontier_write"
+  - "render_compact_current_frontier_write"
+  - "dependency_graph_refresh"
+  - "generated_claim_graph_refresh"
+  - "memory_bootstrap"
+  - "memory_validate_only"
+  - "classify_project_changes"
+  - "collect_project_improvement_signals_validate_emitted"
+  - "validate_documentation_impact"
+  - "validate_claim_language_changed"
+  - "validate_research_control"
+  - "validate_research_control_check_diff"
+  - "validate_compact_current_frontier_v16"
+  - "dependency_graph_freshness_check"
+  - "report_physics_progress_metrics"
+  - "run_full_research_control_validation"
+  - "git_diff_check"
+  - "checkpoint_research_transaction"
+
+expected_outputs:
+  - "research_control/tasks/RT-20260728-003/artifacts/child_phys_math_p7_t04_common_propagation.yaml"
+  - "research_control/tasks/RT-20260728-003/artifacts/child_phys_phil_p7_t04_common_propagation.yaml"
+  - "research_control/tasks/RT-20260728-003/artifacts/parent_conflict_review_p7_t04_common_propagation.yaml"
+  - "research_control/tasks/RT-20260728-003/artifacts/parent_fusion_notes_p7_t04_common_propagation.md"
+  - "research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_profile_candidate_v1.tex"
+  - "research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_spec_v1.yaml"
+  - "research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_assumption_dependency_table_v1.yaml"
+  - "research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_controls_v1.yaml"
+  - "research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_compact_receipt_v1.json"
+  - "research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_validation_v1.json"
+  - "research_control/tasks/RT-20260728-003/artifacts/validate_common_source_propagation.py"
+  - "research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_receipt.md"
+  - "research_control/tasks/RT-20260728-003/00_TASK.yaml"
+  - "research_control/tasks/RT-20260728-003/DDR-20260728-003.md"
+  - "research_control/tasks/RT-20260728-003/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260728-003/roles/candidate-constructor@0.2.0--RT-20260728-003.yaml"
+  - "research_control/tasks/RT-20260728-003/jobs/AJ-RT-20260728-003-001.yaml"
+  - "research_control/tasks/RT-20260728-003/jobs/completions/AJC-AJ-RT-20260728-003-001.yaml"
+  - "research_control/handoffs/handoff-0893.yaml"
+  - "research_control/handoffs/handoff-0893.md"
+  - "research_control/current_frontier.md"
+  - "research_control/program_state.yaml"
+  - "output/compact_current_frontier_v16.yaml"
+  - "output/compact_current_frontier_v16.json"
+  - "wiki/indexes/compact_current_frontier_v16.md"
+  - "output/claim_graph_v1.json"
+  - "output/claim_graph_v1.dot"
+  - "wiki/indexes/claim_graph_v1.md"
+
+claim_boundary: "CB-V21-P7-T04-COMMON-SOURCE-PROPAGATION-001"
+documentation_impact_id: "DI-RT-20260728-003-001"
+completion_id: "AJC-AJ-RT-20260728-003-001"
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1055
+    relationship_row_count: 5281
+    semantic_row_count: 1055
+    vault_row_count: 1055
+    local_cache_only_warning_count: 0
+  authority_note: "Generated Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+  refresh_needed: true
+  refresh_performed: true
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-V21-P7-T03-SOURCE-OPERATIONAL-DEVICE-SUITE-V1 --json"
+      query_type: "lookup"
+      query_text: "TEX-V21-P7-T03-SOURCE-OPERATIONAL-DEVICE-SUITE-V1"
+      returned_object_ids:
+        - "TEX-V21-P7-T03-SOURCE-OPERATIONAL-DEVICE-SUITE-V1"
+  canonical_inspections:
+    - object_id: "TEX-V21-P7-T03-SOURCE-OPERATIONAL-DEVICE-SUITE-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260728-002/artifacts/source_operational_device_suite_candidate_v1.tex"
+      source_hash: "d6c818ee29f1a7e659e2f454aec21431d680b3d2d4df048fcf36f4aba87ba22a"
+
+selected_next_route:
+  route_id: "v21_p7_t05_universal_matter_coupling_after_checkpoint"
+  role_family: "candidate-constructor@0.2.0"
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "Build the actual coupling candidate rather than another readiness profile."
+  requires_human_gate: false
