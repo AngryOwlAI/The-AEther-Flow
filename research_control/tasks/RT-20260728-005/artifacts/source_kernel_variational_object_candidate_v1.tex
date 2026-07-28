@@ -1,0 +1,419 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs,longtable,array,enumitem}
+
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{obstruction}{Precise obstruction}
+\newenvironment{nonconclusion}{\par\smallskip\noindent\textbf{Non-conclusion.}\ }{\par\smallskip}
+
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\Vsrc}{\mathcal V_{\mathrm{src}}}
+\newcommand{\Dsrc}{\mathcal D_{\mathrm{src}}}
+\newcommand{\Jsrc}{\mathcal J_{\mathrm{src}}}
+\newcommand{\One}{\mathbf 1}
+
+\title{SourceKernelDirichletVariationalCandidate\_v1\\
+\large A finite source variational object, exact flux balance, and a scoped
+directional-update obstruction}
+\author{Ontology Formalizer Packet RT-20260728-005}
+\date{2026-07-28}
+
+\begin{document}
+\maketitle
+
+\section{Status and decisive result}
+
+This task-local object is \texttt{draft/control}, \texttt{proposal-only},
+and \texttt{source-extension data}.  It executes v21 P7-T06 under
+\texttt{CB-V21-P7-T06-SOURCE-VARIATIONAL-OBJECT-001}.  It does not modify
+canonical ontology, adopt a source law, or promote a physical interpretation.
+
+For every declared finite rational P7-T02 row kernel \(P\), the packet
+constructs the symmetric conductance
+\[
+ C=\frac12(P+P^{\mathsf T})
+\]
+and the dimensionless source functional
+\[
+ \Vsrc(q)=\frac14\sum_{x,y}C_{xy}(q_y-q_x)^2 .
+\]
+Its first variation is exactly a symmetric graph-Laplacian operator.  The
+associated antisymmetric edge record has zero total divergence on a closed
+finite carrier and an exact boundary-flux formula on every subset.
+
+The same construction deliberately discards the directional residue
+\[
+ A=\frac12(P-P^{\mathsf T}).
+\]
+For the fixed P7-T02 forward control,
+\[
+ P_{\mathrm{fwd}}=
+ \begin{pmatrix}
+ 1/2&1/2\\
+ 0&1
+ \end{pmatrix},
+ \qquad
+ I-P_{\mathrm{fwd}}=
+ \begin{pmatrix}
+ 1/2&-1/2\\
+ 0&0
+ \end{pmatrix}.
+\]
+The latter operator is nonsymmetric, whereas the Hessian of a twice
+differentiable scalar functional in the declared Euclidean pairing is
+symmetric.  Therefore this full directional update is not the gradient of a
+scalar quadratic functional in the fixed class.
+
+The decisive classification is
+\[
+ \texttt{precise\_obstruction\_with\_constructive\_restricted\_variational\_object}.
+\]
+Adoption is \texttt{blocked\_adoption\_open\_continuation}.  The obstruction
+is not a global no-go theorem: auxiliary variables, different pairings,
+nonlocal functionals, nonscalar principles, or a new source-side law remain
+outside its scope.
+
+\section{Fixed source basis and conventions}
+
+Let \(\Omega=\{x_1,\ldots,x_n\}\) be one declared finite P7-T02 carrier.
+Write the P7-T02 kernel as a row-oriented matrix
+\[
+ P_{xy}
+ =
+ \sum_{\substack{T\in E_x\\t(T)=y}}K_{\mathfrak C}(T\mid x),
+ \qquad
+ P_{xy}\in\Q_{\geq0},
+ \qquad
+ \sum_yP_{xy}=1.
+\]
+This is the transpose convention of the target-row/source-column update
+matrix used for bookkeeping states.  It changes no source record and makes
+the source-to-target direction explicit.
+
+The entries of \(P\) are dimensionless bookkeeping coefficients.  The row
+label is not physical time; \(P\) is not a propagator, transition probability,
+Hamiltonian, kinetic operator, or empirical response law.  P7-T02 sector
+preservation and the P7-T05 equipped-control comparison remain
+proposal-only.  Neither supplies a target atlas, target metric, matter
+coupling, action, stress-energy tensor, or physical conservation law.
+
+The new probe
+\[
+ q:\Omega\longrightarrow\Q
+\]
+is a dimensionless task-local test coordinate.  In particular, this \(q\)
+is \emph{not} the inherited P7-T01 charge-chain record \(q(\Psi)\).  It is
+also not a matter field, charge density, clock reading, detector outcome,
+spacetime coordinate, or observable.  The standard finite pairing
+\(\langle u,v\rangle=\sum_xu_xv_x\) is stipulated only for this candidate.
+
+\section{Symmetric source construction}
+
+\begin{definition}[Conductance and directional residue]
+For a declared finite row kernel \(P\), define
+\begin{equation}
+ C=\frac12(P+P^{\mathsf T}),
+ \qquad
+ A=\frac12(P-P^{\mathsf T}).
+ \label{eq:split}
+\end{equation}
+Then \(C^{\mathsf T}=C\), \(A^{\mathsf T}=-A\), and \(P=C+A\).
+Because \(P\) is entrywise nonnegative, \(C\) is entrywise nonnegative.
+The word ``conductance'' names a finite symmetric coefficient record only.
+\end{definition}
+
+\begin{definition}[Source variational functional]
+For \(q\in\Q^\Omega\), define
+\begin{equation}
+ \Vsrc(q)
+ =
+ \frac14\sum_{x,y\in\Omega}C_{xy}(q_y-q_x)^2.
+ \label{eq:functional}
+\end{equation}
+Let \(L_C\) be the symmetric finite Laplacian
+\begin{equation}
+ (L_C)_{xy}
+ =
+ \begin{cases}
+   -C_{xy}, & x\neq y,\\[2pt]
+   \displaystyle\sum_{z\neq x}C_{xz}, & x=y.
+ \end{cases}
+ \label{eq:laplacian}
+\end{equation}
+Then \(\Vsrc(q)=\tfrac12 q^{\mathsf T}L_Cq\).  Diagonal entries of \(C\)
+cancel from Equation~\eqref{eq:functional}.
+\end{definition}
+
+The functional is invariant under the formal shift
+\(q\mapsto q+c\One\), is nonnegative over \(\Q\), and vanishes exactly when
+\(q\) is constant on every connected component of the undirected support of
+\(C\).  These are finite algebraic facts, not physical gauge invariance,
+vacuum stability, or energy positivity.
+
+The v21 phrase ``source-equivalent'' is used here only for this source
+variational surrogate, which is derived from symmetric kernel coefficients.
+It does not mean information equivalence, dynamical equivalence to the P7-T02
+update, or equivalence to a physical matter action.  Indeed, if
+\(D_C=\operatorname{Diag}(C\One)\), then
+\begin{equation}
+ (I-P)-L_C=I-D_C-A,
+ \qquad
+ \operatorname{Sym}(I-P)=I-C.
+ \label{eq:information-loss}
+\end{equation}
+Thus \(L_C=\operatorname{Sym}(I-P)\) only when \(C\One=\One\), and even then
+a nonzero \(A\) prevents equality with the full directional operator.  The
+functional also ignores every diagonal holding weight because
+\(q_x-q_x=0\).
+
+\begin{theorem}[First variation and finite source-flux balance]
+\label{thm:variation}
+% theorem_id: P7T06-THM-SOURCE-VARIATION-FLUX-BALANCE-001
+\begin{center}
+\normalfont\small\ttfamily
+P7T06-THM-SOURCE-VARIATION-\\
+FLUX-BALANCE-001
+\end{center}
+For every \(q,\eta\in\Q^\Omega\),
+\begin{equation}
+ \left.\frac{d}{d\epsilon}\right|_{\epsilon=0}
+ \Vsrc(q+\epsilon\eta)
+ =
+ \sum_x\eta_x\Dsrc{}_{x}(q),
+ \qquad
+ \Dsrc{}_{x}(q)
+ =
+ \sum_yC_{xy}(q_x-q_y)
+ =
+ (L_Cq)_x.
+ \label{eq:first-variation}
+\end{equation}
+Define the oriented edge record
+\begin{equation}
+ \Jsrc{}_{xy}(q)=C_{xy}(q_x-q_y).
+ \label{eq:flux}
+\end{equation}
+Then
+\begin{align}
+ \Jsrc{}_{xy}&=-\Jsrc{}_{yx},                                  \label{eq:antisym}\\
+ \Dsrc{}_{x}&=\sum_y\Jsrc{}_{xy},                              \label{eq:divergence}\\
+ \sum_{x\in\Omega}\Dsrc{}_{x}&=0,                              \label{eq:closed}\\
+ \sum_{x\in B}\Dsrc{}_{x}
+ &=\sum_{\substack{x\in B\\y\notin B}}\Jsrc{}_{xy}
+ \quad\text{for every }B\subseteq\Omega.                       \label{eq:boundary}
+\end{align}
+\end{theorem}
+
+\begin{proof}
+Expanding Equation~\eqref{eq:functional} at \(q+\epsilon\eta\) and taking
+the coefficient linear in \(\epsilon\) gives
+\[
+ \frac12\sum_{x,y}C_{xy}(q_y-q_x)(\eta_y-\eta_x).
+\]
+Exchange \(x\) and \(y\) in the first contribution and use
+\(C_{xy}=C_{yx}\).  The result is
+\[
+ \sum_x\eta_x\sum_yC_{xy}(q_x-q_y),
+\]
+which proves Equation~\eqref{eq:first-variation}.  Symmetry of \(C\)
+immediately gives Equation~\eqref{eq:antisym}, and
+Equation~\eqref{eq:divergence} is the definition of \(\Dsrc\).  Summing an
+antisymmetric finite array over all ordered pairs proves
+Equation~\eqref{eq:closed}.  For a subset \(B\), the terms with both
+endpoints in \(B\) cancel in pairs, leaving only the displayed crossing
+terms in Equation~\eqref{eq:boundary}.
+\end{proof}
+
+\begin{nonconclusion}
+\(\Vsrc\) is a source-equivalent variational object only.
+\(\Dsrc\) is its finite variational derivative, not a stress-energy tensor.
+\(\Jsrc\) is an antisymmetric source-flux record, not a physical current.
+Equations~\eqref{eq:closed} and \eqref{eq:boundary} are finite cancellation
+identities, not energy-momentum conservation, a Noether theorem,
+diffeomorphism invariance, or equations of motion.
+\end{nonconclusion}
+
+\section{Boundary, anomaly, and malformed branches}
+
+The closed-carrier identity \(\sum_x\Dsrc{}_{x}=0\) requires only the finite
+carrier and symmetric \(C\).  For a retained subset \(B\), its exact
+``boundary term'' is the crossing sum in Equation~\eqref{eq:boundary}.
+No continuum boundary, normal vector, integration measure, or physical
+flux is inferred.
+
+If a proposed source extension adds a declared vector \(a\in\Q^\Omega\),
+the task-local residual equation
+\[
+ \Dsrc(q)=a
+\]
+has the necessary compatibility condition
+\[
+ \sum_xa_x=0.
+\]
+A nonzero total is classified as an \emph{algebraic balance anomaly}
+relative to this finite candidate.  It is not a quantum anomaly, dissipative
+term, external force, or empirical source.
+
+The construction fails closed when the carrier is infinite, the kernel is
+not a rational nonnegative row-normalized P7-T02 record, the probe is
+mistyped, the split in Equation~\eqref{eq:split} is not used, or any target
+metric, desired GR behavior, detector outcome, validator result, generated
+derivative, registry metadata, or checkpoint state is imported as a
+mathematical premise.
+
+\section{Directional-update obstruction}
+
+The stronger candidate would require the full directional displacement
+\begin{equation}
+ F_P(q)=(I-P)q
+ \label{eq:directional}
+\end{equation}
+to equal the Euclidean gradient of one scalar quadratic functional on
+\(\Q^\Omega\).
+
+\begin{theorem}[Hessian-symmetry criterion]
+\label{thm:hessian}
+If \(F(q)=Mq\) is the gradient of a scalar quadratic
+\[
+ W(q)=\frac12q^{\mathsf T}Hq+b^{\mathsf T}q+c
+\]
+for all \(q\), using the declared finite Euclidean pairing, then
+\(M=H_{\mathrm{sym}}=(H+H^{\mathsf T})/2\) and hence \(M=M^{\mathsf T}\).
+Conversely, every symmetric \(M\) is represented by
+\(W(q)=\tfrac12q^{\mathsf T}Mq\).
+\end{theorem}
+
+\begin{proof}
+Direct differentiation gives
+\[
+ \nabla W(q)=\frac12(H+H^{\mathsf T})q+b.
+\]
+Equality with the homogeneous map \(Mq\) for all \(q\) forces \(b=0\) and
+\(M=(H+H^{\mathsf T})/2\), which is symmetric.  The converse follows by
+direct differentiation.
+\end{proof}
+
+\begin{obstruction}[Full directional P7-T02 update]
+\label{obs:directional}
+% theorem_id: P7T06-THM-DIRECTIONAL-UPDATE-VARIATIONAL-OBSTRUCTION-001
+% obstruction_id: OBST-P7T06-DIRECTIONAL-KERNEL-NONVARIATIONAL-001
+\begin{center}
+\normalfont\small\ttfamily
+P7T06-THM-DIRECTIONAL-UPDATE-\\
+VARIATIONAL-OBSTRUCTION-001\\[2pt]
+OBST-P7T06-DIRECTIONAL-KERNEL-\\
+NONVARIATIONAL-001
+\end{center}
+For the fixed positive P7-T02 control on \(\{x_u,x_v\}\),
+\[
+ P_{\mathrm{fwd}}
+ =
+ \begin{pmatrix}
+ 1/2&1/2\\
+ 0&1
+ \end{pmatrix}.
+\]
+Therefore
+\[
+ I-P_{\mathrm{fwd}}
+ =
+ \begin{pmatrix}
+ 1/2&-1/2\\
+ 0&0
+ \end{pmatrix}
+ \neq
+ \begin{pmatrix}
+ 1/2&0\\
+ -1/2&0
+ \end{pmatrix}
+ =
+ (I-P_{\mathrm{fwd}})^{\mathsf T}.
+\]
+By Theorem~\ref{thm:hessian}, no scalar quadratic functional on the declared
+two-dimensional probe space with the declared Euclidean pairing has
+gradient \((I-P_{\mathrm{fwd}})q\) for every \(q\).
+\end{obstruction}
+
+For this control,
+\[
+ C_{\mathrm{fwd}}
+ =
+ \begin{pmatrix}
+ 1/2&1/4\\
+ 1/4&1
+ \end{pmatrix},
+ \qquad
+ A_{\mathrm{fwd}}
+ =
+ \begin{pmatrix}
+ 0&1/4\\
+ -1/4&0
+ \end{pmatrix},
+\]
+and
+\[
+ L_{C_{\mathrm{fwd}}}
+ =
+ \begin{pmatrix}
+ 1/4&-1/4\\
+ -1/4&1/4
+ \end{pmatrix}.
+\]
+Thus the constructive functional retains an exact symmetric variation while
+the nonzero \(A_{\mathrm{fwd}}\) records directional information that it
+does not reproduce.  Here \(C_{\mathrm{fwd}}\One=(3/4,5/4)^{\mathsf T}\),
+so \(L_{C_{\mathrm{fwd}}}\) is not even
+\(\operatorname{Sym}(I-P_{\mathrm{fwd}})\); the degree imbalance in
+Equation~\eqref{eq:information-loss} is additional omitted information.
+
+\begin{nonconclusion}
+The obstruction is limited to representing the fixed linear operator
+\(I-P_{\mathrm{fwd}}\) as the Euclidean gradient of a scalar quadratic on
+the same probe variables.  It does not rule out a reversible subfamily,
+auxiliary variables, constrained or nonscalar variational principles,
+different lawful pairings, nonlocal constructions, a conservative
+source-side extension, physical matter actions, or the theory as a whole.
+\end{nonconclusion}
+
+\section{Exact status relative to P7-T06}
+
+The construction supplies one reproducible source-equivalent variational
+object, one finite variational derivative, one antisymmetric flux record,
+one closed-carrier balance identity, one boundary formula, and one algebraic
+anomaly condition.  It also supplies a precise obstruction to preserving the
+full directional P7-T02 update in the fixed scalar-quadratic class.
+
+It does not satisfy the stronger physical branches of the P7-T06 title.
+No reconstructed physical matter variable or source-derived geometry is
+available; therefore no effective matter action, spacetime variation,
+stress-energy tensor, covariant divergence, physical Noether current, or
+Einstein-equation input is derived.  P7 has materially advanced at proposal
+scope, while the physical matter-coupling milestone remains open.
+
+The next bounded step is the planned P7-T07 smuggling audit.  It must test
+whether the entire P7-T01 through P7-T06 package preserves the source-only
+and model-to-world boundaries before any stronger interpretation is
+considered.
+
+\section{Authority boundary}
+
+Nothing in this packet authorizes:
+\begin{itemize}[leftmargin=*]
+\item canonical ontology, source-law, variational-law, or coupling-law
+adoption;
+\item a physical matter action, stress-energy tensor, conservation law,
+interaction, detector semantics, cone, metric, or effective geometry;
+\item Einstein equations, exact-GR recovery, benchmark promotion, proof,
+publication, push, or completed derivation;
+\item a global no-go theorem, theory rejection, or impossibility of future
+source extension; or
+\item treating child review, validator success, registry state, generated
+derivatives, or checkpoint success as mathematical or scientific authority.
+\end{itemize}
+
+\end{document}

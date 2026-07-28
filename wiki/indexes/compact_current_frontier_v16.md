@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260728-004`
-- Latest handoff: `handoff-0894`
-- Current status: `p7_t05_precise_obstruction_with_constructive_restricted_domain_p7_t06_ready_for_checkpoint`
+- Active task: `RT-20260728-005`
+- Latest handoff: `handoff-0895`
+- Current status: `p7_t06_precise_obstruction_with_constructive_restricted_variational_object_p7_t07_ready_for_checkpoint`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260728-004`
-- Latest research handoff: `handoff-0894`
-- Latest research next action: Run one governed checkpoint for AJ-RT-20260728-004-001. Only after it commits may one fresh bounded ontology-formalizer@0.2.0 ontology-law-research-packet execute v21 P7-T06 by constructing a proposal-only source-equivalent variational object or returning a precise obstruction without assuming a target metric physical coupling action stress energy or Einstein equations.
+- Latest research task: `RT-20260728-005`
+- Latest research handoff: `handoff-0895`
+- Latest research next action: Run one governed checkpoint for AJ-RT-20260728-005-001. Only after it commits may one fresh bounded smuggling-auditor@0.2.0 ontology-law-research-packet execute v21 P7-T07 by auditing the P7-T01 through P7-T06 matter package for source provenance, target import, physical-semantic smuggling, scope inflation, and unsupported adoption.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p7_t06_matter_action_after_checkpoint`
-- Role family: `ontology-formalizer@0.2.0`
+- Route ID: `v21_p7_t07_matter_package_smuggling_audit_after_checkpoint`
+- Role family: `smuggling-auditor@0.2.0`
 - Target milestone: `matter_coupling`
-- Milestone burden: Supply the variational matter input required for Einstein-equation work.
+- Milestone burden: Determine whether the package establishes genuine matter coupling in scope.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `907d3044677b207286560bd83fbd29bf8b5ce130918368b45522e945122b184d`
-- JSON SHA-256: `692459deb6fb7d43594081e01ae1112cb5f6f04ebd45e95ab94bbf259e20acf8`
+- YAML SHA-256: `ea8336fd47d436b9d0bfd1552aca6ccd2f276b6169329f35701beca38f66b62f`
+- JSON SHA-256: `2de088e4911ca5b0a2f3a00322d5a9ff73a8c96c72d7fa38ed4b518b25b9bae0`
 
 ## Authority Warning
 

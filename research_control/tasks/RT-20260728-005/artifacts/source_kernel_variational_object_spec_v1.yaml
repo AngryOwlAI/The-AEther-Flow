@@ -1,0 +1,241 @@
+schema_id: "v21_p7_t06_source_kernel_variational_object_spec_v1"
+artifact_id: "P7T06-SOURCE-KERNEL-VARIATIONAL-OBJECT-SPEC-V1"
+task_id: "RT-20260728-005"
+job_id: "AJ-RT-20260728-005-001"
+decision_id: "DDR-20260728-005"
+plan_task_id: "P7-T06"
+status: "draft/control"
+candidate_id: "SourceKernelDirichletVariationalCandidate_v1"
+source_flux_id: "SourceVariationalFluxRecord_v1"
+candidate_status: "proposal-only"
+source_extension_status: "source-extension data"
+adoption_status: "blocked_adoption_open_continuation"
+result_kind: "precise_obstruction_with_constructive_restricted_variational_object"
+target_derivation_milestone: "matter_coupling"
+milestone_burden: "Supply the variational matter input required for Einstein-equation work."
+claim_boundary_id: "CB-V21-P7-T06-SOURCE-VARIATIONAL-OBJECT-001"
+
+fixed_source_basis:
+  - object_id: "TEX-V21-P7-T02-SOURCE-MATTER-FINITE-TRANSITION-KERNEL-V1"
+    path: "research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_candidate_v1.tex"
+    sha256: "65ac095f5cdf4c2e319365c8b0e024d031b19d9fc2b8102e59997afa1e8f9129"
+    use: "finite rational row-normalized source transition kernel and forward control"
+  - object_id: "TEX-V21-P7-T05-UNIVERSAL-SOURCE-COUPLING-MAP-V1"
+    path: "research_control/tasks/RT-20260728-004/artifacts/universal_source_coupling_map_candidate_v1.tex"
+    sha256: "5a9a8f5542a7c8b714bbff7ec06c06449b0c66c0196266051562caf9ce602c6b"
+    use: "proposal-only equipped-control comparison and preserved physical-coupling boundary"
+  - object_id: "TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-MATTER-COUPLING-BRIDGE-TARGET-V1-FORMALIZATION"
+    path: "research_control/tasks/RT-20260614-257/artifacts/286_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_MATTER_COUPLING_BRIDGE_TARGET_V1_FORMALIZATION.tex"
+    sha256: "3d1c6dfb2ea543c8ea455ee2f3553e3cac76e3072902213ed07aff0db514605e"
+    use: "historical target-side matter-coupling bridge boundary; not a construction premise"
+  - object_id: "TEX-SOURCE-CERTIFICATE-OPERATION-LAWS-V1"
+    path: "research_control/tasks/RT-20260702-064/artifacts/source_certificate_operation_laws_v1.tex"
+    sha256: "2ebc781bd82b4d39ab394255e5d3836d992625bdece8b8f912a8ab809669b986"
+    use: "source-certificate operation-law boundary; not a variational-law premise"
+  - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+    path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+    sha256: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+    use: "P7-T06 theorem-or-precise-obstruction burden and validation requirements"
+  - path: "research_control/handoffs/handoff-0894.yaml"
+    sha256: "ad535ab39069b0d35845c3de0051b02ce55d4096e28b0f7ce48b434a90ba1d45"
+    use: "authorized P7-T06 route and no-target-import guards"
+
+source_types:
+  finite_carrier:
+    notation: "Omega={x_1,...,x_n}"
+    exact_status: "one declared finite P7-T02 control carrier"
+  row_kernel:
+    notation: "P_xy=sum_{T in E_x:t(T)=y} K_C(T|x)"
+    codomain: "Q_nonnegative"
+    normalization: "sum_y P_xy=1"
+    orientation: "rows source configurations and columns target configurations"
+    physical_probability: false
+    physical_time_evolution: false
+  source_probe:
+    notation: "q:Omega->Q"
+    dimension: "dimensionless"
+    exact_status: "task-local test coordinate"
+    disambiguation: "this q is not the inherited P7-T01 charge-chain record q(Psi)"
+    physical_field: false
+    observable: false
+  finite_pairing:
+    notation: "<u,v>=sum_x u_x v_x"
+    status: "stipulated candidate pairing"
+    target_metric: false
+    spacetime_geometry: false
+
+operator_split:
+  symmetric_part:
+    symbol: "C"
+    definition: "C=(P+P^T)/2"
+    properties:
+      - "C^T=C"
+      - "C_xy is nonnegative rational"
+  directional_residue:
+    symbol: "A"
+    definition: "A=(P-P^T)/2"
+    properties:
+      - "A^T=-A"
+      - "P=C+A"
+    retained_by_scalar_functional: false
+  terminology_boundary: "conductance and directional residue are finite coefficient labels only"
+
+variational_object:
+  notation: "V_src(q)=1/4 sum_(x,y) C_xy(q_y-q_x)^2"
+  equivalent_form: "V_src(q)=1/2 q^T L_C q"
+  laplacian:
+    off_diagonal: "(L_C)_xy=-C_xy for x!=y"
+    diagonal: "(L_C)_xx=sum_(z!=x) C_xz"
+    properties:
+      - "L_C^T=L_C"
+      - "L_C 1=0"
+      - "q^T L_C q>=0 over the declared rational probe space"
+  shift_identity: "V_src(q+c1)=V_src(q)"
+  nullspace: "q is constant on each connected component of the undirected positive support of C"
+  physical_action: false
+  energy_functional: false
+  gauge_symmetry_claimed: false
+  source_equivalent_qualification: "kernel-derived symmetric-conductance source variational surrogate only; not information-equivalent or dynamically equivalent to P7-T02 and not equivalent to a physical action"
+  information_loss:
+    exact_difference: "(I-P)-L_C=I-Diag(C 1)-A"
+    symmetric_residual: "Sym(I-P)=I-C"
+    equality_condition: "L_C=Sym(I-P) only when C 1=1; for row-normalized P this requires column normalization as well"
+    omitted_records:
+      - "directional residue A"
+      - "diagonal holding weights, which vanish in all q_x-q_x terms"
+      - "degree or diagonal-imbalance I-Diag(C 1)"
+
+theorems:
+  - theorem_id: "P7T06-THM-SOURCE-VARIATION-FLUX-BALANCE-001"
+    title: "Exact first variation and finite source-flux balance"
+    statement: "D V_src(q)[eta]=sum_x eta_x D_src,x(q), where D_src,x=sum_y C_xy(q_x-q_y). With J_src,xy=C_xy(q_x-q_y), J_src is antisymmetric, D_src,x=sum_y J_src,xy, the closed total sum is zero, and every subset B satisfies sum_(x in B)D_src,x=sum_(x in B,y notin B)J_src,xy."
+    proof_basis:
+      - "finite expansion of V_src(q+epsilon eta)"
+      - "index exchange using C_xy=C_yx"
+      - "pairwise cancellation of the antisymmetric edge record"
+      - "internal-edge cancellation on each finite subset"
+    exact_scope: "finite rational task-local source candidate"
+    physical_conservation_theorem: false
+    noether_theorem: false
+  - theorem_id: "P7T06-THM-DIRECTIONAL-UPDATE-VARIATIONAL-OBSTRUCTION-001"
+    title: "Fixed forward directional update fails the scalar-quadratic Hessian-symmetry criterion"
+    statement: "For P_fwd=[[1/2,1/2],[0,1]], I-P_fwd=[[1/2,-1/2],[0,0]] is nonsymmetric. Every Euclidean gradient of a scalar quadratic has symmetric linear part. Therefore no scalar quadratic on the same two probe variables has gradient (I-P_fwd)q for all q."
+    proof_basis:
+      - "direct exact rational matrix subtraction"
+      - "gradient of 1/2 q^T H q+b^T q+c equals ((H+H^T)/2)q+b"
+      - "homogeneity forces b=0 and symmetry of the linear operator"
+    exact_scope: "the fixed P7-T02 forward control, same probe variables, scalar quadratic class, and declared Euclidean pairing"
+    global_no_go_claimed: false
+
+source_flux_record:
+  source_flux_id: "SourceVariationalFluxRecord_v1"
+  definition: "J_src,xy=C_xy(q_x-q_y)"
+  antisymmetry: "J_src,xy=-J_src,yx"
+  divergence: "D_src,x=sum_y J_src,xy"
+  closed_balance: "sum_x D_src,x=0"
+  boundary_balance: "sum_(x in B)D_src,x=sum_(x in B,y notin B)J_src,xy"
+  anomaly_compatibility: "D_src(q)=a requires sum_x a_x=0"
+  stress_energy_equivalent_status: "source-side finite flux record only"
+  physical_current: false
+  stress_energy_tensor: false
+  physical_conservation_law: false
+
+forward_control_witness:
+  control_id: "P7T02-CONTROL-POSITIVE-PROPAGATION-001"
+  states: ["x_u", "x_v"]
+  row_kernel:
+    - ["1/2", "1/2"]
+    - ["0", "1"]
+  symmetric_part:
+    - ["1/2", "1/4"]
+    - ["1/4", "1"]
+  directional_residue:
+    - ["0", "1/4"]
+    - ["-1/4", "0"]
+  variational_laplacian:
+    - ["1/4", "-1/4"]
+    - ["-1/4", "1/4"]
+  full_directional_operator:
+    - ["1/2", "-1/2"]
+    - ["0", "0"]
+  exact_findings:
+    - "the symmetric construction is nontrivial and exactly variational"
+    - "the directional residue is nonzero"
+    - "the full directional operator is nonsymmetric"
+
+obstruction_record:
+  present: true
+  obstruction_id: "OBST-P7T06-DIRECTIONAL-KERNEL-NONVARIATIONAL-001"
+  result_type: "precise_obstruction"
+  failed_object: "one scalar quadratic functional on the declared probe variables and Euclidean pairing whose gradient is (I-P_fwd)q"
+  exact_failure: "I-P_fwd is nonsymmetric but the linear part of a scalar-quadratic gradient is symmetric"
+  current_ontology_implication: "does_not_derive"
+  source_extension_implication: "repair_allowed"
+  consequence: "blocked_adoption_open_continuation"
+  no_fog: true
+  global_no_go_claimed: false
+  outside_scope:
+    - "reversible or symmetric kernel subfamilies"
+    - "auxiliary-variable constructions"
+    - "constrained or nonscalar principles"
+    - "different lawfully derived pairings"
+    - "nonlocal functionals"
+    - "future conservative source-side extensions"
+    - "physical matter-action existence"
+    - "the theory as a whole"
+
+missing_source_extension_obligations:
+  - obligation_id: "P7T06-OBL-VARIATIONAL-SELECTION-001"
+    required_object: "a source-derived rule selecting the symmetric functional or another variational class rather than merely stipulating it"
+  - obligation_id: "P7T06-OBL-DIRECTIONAL-COMPATIBILITY-001"
+    required_object: "a lawful treatment of directional residue A if the full P7-T02 update must be preserved"
+  - obligation_id: "P7T06-OBL-MODEL-TO-WORLD-FIELDS-001"
+    required_object: "an interpretation map from source configurations and probes to physical matter variables"
+  - obligation_id: "P7T06-OBL-GEOMETRIC-VARIATION-001"
+    required_object: "a source-derived geometry and variation domain before a stress-energy tensor can be defined"
+  - obligation_id: "P7T06-OBL-PHYSICAL-SYMMETRY-001"
+    required_object: "a physical symmetry principle and equations of motion before a Noether or covariant conservation law can be claimed"
+
+fail_closed_outcomes:
+  valid_candidate: "finite rational row-normalized P7-T02 kernel, declared rational probe, exact symmetric split, and no target import"
+  valid_boundary: "subset boundary term retained explicitly"
+  valid_algebraic_anomaly: "declared residual a has zero total and remains source syntax"
+  incompatible_anomaly: "sum_x a_x is nonzero, so D_src(q)=a has no solution in the candidate"
+  underdetermined: "kernel, probe, pairing, or variational selection rule is absent"
+  malformed: "carrier or kernel violates P7-T02 typing, rationality, nonnegativity, or row normalization"
+  forbidden_target_import: "target metric, desired GR behavior, detector result, validator, registry, generated derivative, or commit selects a premise"
+  forbidden_physical_overread: "V_src, D_src, or J_src is promoted to matter action, stress energy, physical current, physical conservation, geometry, or GR"
+
+next_route_recommendation:
+  plan_task_id: "P7-T07"
+  role_family: "smuggling-auditor@0.2.0"
+  worker_skill: "continue-research"
+  route_label: "ontology-law-research-packet"
+  strategy_id: "audit_source_variational_matter_package_v1"
+  execution_ready_after_checkpoint: true
+  bounded_objective: "Audit P7-T01 through P7-T06 for target imports, physical-semantic smuggling, scope inflation, and unsupported adoption while preserving exact source-only mathematics."
+
+authority_limits:
+  canonical_ontology_modified: false
+  source_law_adopted: false
+  variational_law_adopted: false
+  candidate_adopted: false
+  physical_matter_variables_derived: false
+  physical_matter_coupling_derived: false
+  matter_action_derived: false
+  stress_energy_derived: false
+  physical_conservation_law_derived: false
+  noether_theorem_derived: false
+  diffeomorphism_invariance_derived: false
+  principal_symbol_derived: false
+  characteristic_cone_derived: false
+  effective_metric_derived: false
+  einstein_equations_derived: false
+  exact_gr_recovered: false
+  benchmark_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+  physics_promotion_authorized: false

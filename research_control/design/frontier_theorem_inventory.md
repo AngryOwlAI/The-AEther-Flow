@@ -31,6 +31,11 @@ snapshots, generated dependency graphs, semantic extracts, Obsidian notes, and
   synchronizing Item 1 with the protected continuum-first mainline,
   four-dimensional smooth source arena as explicit primitive debt, unresolved
   `Phi_src` slot, and preserved emergence-first fallback.
+- P7-T06 v21 matter-variational synchronization: `RT-20260728-005`,
+  adding Item 9A for one proposal-only symmetric-conductance source
+  variational object and one fixed-class directional-update obstruction while
+  leaving physical action, stress energy, conservation, coupling, and
+  downstream GR burdens open.
 - Schema source:
   `research_control/design/frontier_theorem_inventory_schema_v1.md`.
 - Inventory source:
@@ -697,6 +702,115 @@ benchmark closure, or completed derivation.
 - `overread_guard`: `no_metricdata_e_adoption;no_geff_scope_expansion;no_coupling_law_adoption;no_matter_coupling_derivation;no_matter_coupling_adoption;no_stress_energy_semantics;no_stress_energy_tensor;no_matter_action;no_detector_semantics;no_einstein_equations;no_benchmark_promotion;no_completed_derivation`
 - `external_review_notes`: The target is useful because it states what would
   have to be supplied, not because it supplies the bridge itself.
+
+### Item 9A: source_kernel_variational_object_p7t06
+
+- `frontier_item_id`: `source_kernel_variational_object_p7t06`
+- `frontier_item_class`: `definition;theorem;obstruction;source_extension_evidence`
+- `milestone`: `matter_coupling`
+- `object_type`: `task_local_candidate;theorem;obstruction`
+- `object_or_claim_name`: `SourceKernelDirichletVariationalCandidate_v1`
+  and `OBST-P7T06-DIRECTIONAL-KERNEL-NONVARIATIONAL-001`.
+- `status_layer_summary`:
+  - `control_status`: `draft_control_proposal_only`
+  - `mathematical_status`: `constructive_restricted_variational_object_with_precise_fixed_class_obstruction`
+  - `physical_status`: `not_matter_action_not_stress_energy_not_physical_conservation_not_matter_coupling`
+  - `promotion_status`: `source_extension_data_not_adopted`
+  - `overread_guard`: `no_canonical_ontology_edit;no_source_law_adoption;no_coupling_law_adoption;no_matter_coupling_derivation;no_matter_coupling_adoption;no_stress_energy_semantics;no_stress_energy_tensor;no_matter_action;no_einstein_equations;no_benchmark_promotion;no_completed_derivation;no_future_source_extension_impossibility;no_program_wide_no_go_conclusion`
+- `three_tier_classification`: `mixed_with_explicit_boundaries`.
+- `linter_status`: `PASS`; P7-T06 task-local exact rational validation and
+  claim-boundary review before checkpoint.
+- `overread_guard`: `no_canonical_ontology_edit;no_source_law_adoption;no_coupling_law_adoption;no_matter_coupling_derivation;no_matter_coupling_adoption;no_stress_energy_semantics;no_stress_energy_tensor;no_matter_action;no_einstein_equations;no_benchmark_promotion;no_completed_derivation;no_future_source_extension_impossibility;no_program_wide_no_go_conclusion`
+- `source_artifact_path`:
+  `research_control/tasks/RT-20260728-005/artifacts/source_kernel_variational_object_candidate_v1.tex`;
+  `registries/DISTANCE_TO_GR_LEDGER.csv`;
+  `registries/CLAIM_BOUNDARY_REGISTRY.csv`.
+- `authority_level`: `draft_control;registry_row`
+- `source_authority_type`: `registered_tex_artifact;distance_to_gr_ledger_row;claim_boundary_registry_row`
+- `assumptions`:
+  - One finite rational row-normalized P7-T02 kernel is separately declared.
+  - The dimensionless test coordinate is task-local and is not the P7-T01
+    charge-chain record or a physical matter field.
+  - The standard finite coordinate pairing and scalar-quadratic class are
+    stipulated only for the representability test.
+  - No target metric, detector result, physical coupling, validator, registry
+    metadata, generated derivative, or checkpoint state is a mathematical
+    premise.
+- `definitions_used`: P7-T02 finite kernel \(P\); symmetric coefficient
+  record \(C=(P+P^\mathsf T)/2\); directional residue
+  \(A=(P-P^\mathsf T)/2\).
+- `definitions_introduced`: `SourceKernelDirichletVariationalCandidate_v1`;
+  `SourceVariationalFluxRecord_v1`; finite Laplacian
+  \(L_C=\operatorname{Diag}(C\mathbf1)-C\).
+- `theorem_like_claims`:
+  - `P7T06-THM-SOURCE-VARIATION-FLUX-BALANCE-001`.
+  - `P7T06-THM-DIRECTIONAL-UPDATE-VARIATIONAL-OBSTRUCTION-001`.
+- `statement_or_decision`: The symmetric kernel coefficients define an exact
+  finite quadratic source variational surrogate with first variation,
+  antisymmetric edge record, closed-carrier cancellation, and finite-cut
+  identity. The fixed forward \(I-P\) is nonsymmetric and cannot be the
+  standard-coordinate gradient of a scalar quadratic on the same variables.
+- `mathematical_conclusion`: The constructive symmetric source object is exact
+  within the declared finite candidate. The full fixed directional update is
+  precisely obstructed only in the declared scalar-quadratic standard-gradient
+  class. In general \(L_C\neq\operatorname{Sym}(I-P)\), so no dynamical
+  equivalence is claimed.
+- `audits_passed`: Exact rational task-local validation; bounded same-context
+  physicist-mathematician and physicist-philosopher parent-child synthesis;
+  scratch TeX compilation.
+- `stress_results`: The P7-T02 forward control has nonzero directional residue
+  and nonsymmetric \(I-P\); identity and symmetric controls preserve the
+  positive representable branch.
+- `gate_chair_results`: `none`; no adoption or protected promotion was
+  requested.
+- `fail_closed_branches`: Missing or malformed kernel/probe/pairing inputs,
+  nonzero-total algebraic residual, target import, physical overread, and
+  attempted global-no-go promotion all fail closed.
+- `known_obstructions`:
+  `OBST-P7T06-DIRECTIONAL-KERNEL-NONVARIATIONAL-001`; P7-T05's missing
+  universal sector selector remains open.
+- `physical_non_conclusions`:
+  - Not a physical matter action, Lagrangian, stress-energy tensor, current,
+    conservation law, equation of motion, or Noether theorem.
+  - Not a cone, metric, spacetime geometry, universal coupling law, Einstein
+    equation, exact-GR recovery, or benchmark result.
+  - Not canonical ontology or source-law adoption, proof, publication,
+    completed derivation, theory-wide rejection conclusion, or future-extension
+    impossibility.
+- `forbidden_overread`: Finite source variation as physical action or stress
+  energy; antisymmetric cancellation as physical conservation; one
+  nonsymmetric forward control as a global no-go; task-local source-extension
+  data as adopted ontology or downstream GR input.
+- `downstream_blocked_targets`: physical matter variables; universal coupling
+  selector; source-derived geometry; physical action; metric variation;
+  stress-energy tensor; Noether or covariant conservation; Einstein equations;
+  benchmark promotion; completed derivation.
+- `allowed_reuse`:
+  - Reuse the exact finite variation, edge balance, boundary formula, and
+    scoped obstruction in the P7-T07 smuggling audit.
+  - Reuse the candidate only with its proposal-only source-extension status
+    and explicit \(L_C\) versus \(I-P\) distinction.
+- `blocked_reuse`:
+  - Do not call the functional dynamically equivalent to P7-T02.
+  - Do not call the first variation stress energy or the edge record a
+    physical conserved current.
+  - Do not generalize the obstruction beyond its declared operator, pairing,
+    variable space, and functional class.
+- `dependency_items`: `source_ontology_primitives`;
+  `matter_coupling_bridge_target_v1`; P7-T02 finite-kernel candidate; P7-T05
+  equipped-control comparison and selector obstruction.
+- `missing_theorem_or_primitive`: A source-derived variational selection law,
+  lawful treatment of the directional residue, model-to-world matter fields,
+  source-derived geometry, metric variation, and physical symmetry/equations
+  of motion.
+- `next_theorem_needed`: P7-T07 must audit P7-T01 through P7-T06 for target
+  imports, physical-semantic smuggling, scope inflation, and unsupported
+  adoption before any stronger interpretation.
+- `candidate_next_task`: `P7-T07` after the P7-T06 governed checkpoint.
+- `external_review_notes`: Review the exact matrix orientation, the
+  \(L_C\) versus \(\operatorname{Sym}(I-P)\) distinction, and the boundary
+  between finite cancellation and physical conservation. Same-context child
+  review is not external human review or independent replication.
 
 ### Item 10: matter_coupling_precondition_evidence
 

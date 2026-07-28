@@ -1,0 +1,145 @@
+schema_id: "v21_p7_t06_source_kernel_variational_assumption_dependency_table_v1"
+artifact_id: "P7T06-SOURCE-KERNEL-VARIATIONAL-ASSUMPTION-DEPENDENCY-TABLE-V1"
+task_id: "RT-20260728-005"
+job_id: "AJ-RT-20260728-005-001"
+status: "draft/control"
+candidate_status: "proposal-only"
+source_extension_status: "source-extension data"
+claim_boundary_id: "CB-V21-P7-T06-SOURCE-VARIATIONAL-OBJECT-001"
+
+assumptions:
+  - assumption_id: "P7T06-A01-P7T02-FIXED"
+    statement: "P7-T02 finite carriers, enabled rows, rational row kernel, and exact source-only status are fixed proposal-only inputs."
+    source: "TEX-V21-P7-T02-SOURCE-MATTER-FINITE-TRANSITION-KERNEL-V1"
+    status: "inherited_candidate_input"
+    physical_interpretation: false
+  - assumption_id: "P7T06-A02-P7T05-FIXED"
+    statement: "P7-T05 equipped-control comparison and sector-selection obstruction are held fixed; neither is treated as physical coupling."
+    source: "TEX-V21-P7-T05-UNIVERSAL-SOURCE-COUPLING-MAP-V1"
+    status: "inherited_candidate_input"
+    physical_interpretation: false
+  - assumption_id: "P7T06-A03-FINITE-PROBE"
+    statement: "A dimensionless rational probe q is stipulated on the finite source carrier."
+    source: "task-local P7-T06 candidate"
+    status: "new_stipulated_candidate_input"
+    physical_interpretation: false
+  - assumption_id: "P7T06-A04-EUCLIDEAN-PAIRING"
+    statement: "The standard finite coordinate pairing is stipulated for the scalar-gradient representability question."
+    source: "task-local P7-T06 candidate"
+    status: "new_stipulated_candidate_input"
+    physical_interpretation: false
+  - assumption_id: "P7T06-A05-SYMMETRIC-SPLIT"
+    statement: "The candidate selects C=(P+P^T)/2 and records A=(P-P^T)/2 separately."
+    source: "task-local P7-T06 candidate"
+    status: "new_stipulated_candidate_input"
+    physical_interpretation: false
+  - assumption_id: "P7T06-A06-SCALAR-QUADRATIC-CLASS"
+    statement: "The obstruction tests only scalar quadratic functionals on the same probe variables using the stipulated pairing."
+    source: "task-local P7-T06 candidate"
+    status: "scope_guard"
+    physical_interpretation: false
+  - assumption_id: "P7T06-A07-NO-TARGET-IMPORT"
+    statement: "No target atlas metric cone detector benchmark desired GR result validator derivative registry or checkpoint state selects a mathematical premise."
+    source: "CB-V21-P7-T06-SOURCE-VARIATIONAL-OBJECT-001"
+    status: "hard_guard"
+    physical_interpretation: false
+  - assumption_id: "P7T06-A08-NO-MODEL-TO-WORLD-MAP"
+    statement: "No interpretation map from q, C, D_src, or J_src to physical matter fields, action, stress energy, or current is supplied."
+    source: "CB-V21-P7-T06-SOURCE-VARIATIONAL-OBJECT-001"
+    status: "hard_guard"
+    physical_interpretation: false
+
+derived_dependencies:
+  - result_id: "P7T06-R01-SYMMETRIC-SPLIT"
+    depends_on: ["P7T06-A01-P7T02-FIXED", "P7T06-A05-SYMMETRIC-SPLIT"]
+    exact_result: "C is symmetric and nonnegative, A is antisymmetric, and P=C+A."
+    result_status: "exact_within_candidate"
+  - result_id: "P7T06-R02-NONNEGATIVE-FUNCTIONAL"
+    depends_on: ["P7T06-A03-FINITE-PROBE", "P7T06-A05-SYMMETRIC-SPLIT"]
+    exact_result: "V_src is a nonnegative rational quadratic difference functional with shift-null direction."
+    result_status: "exact_within_candidate"
+  - result_id: "P7T06-R03-FIRST-VARIATION"
+    depends_on: ["P7T06-A03-FINITE-PROBE", "P7T06-A04-EUCLIDEAN-PAIRING", "P7T06-A05-SYMMETRIC-SPLIT"]
+    exact_result: "D V_src(q)[eta]=sum_x eta_x sum_y C_xy(q_x-q_y)."
+    result_status: "exact_within_candidate"
+  - result_id: "P7T06-R04-SOURCE-FLUX-BALANCE"
+    depends_on: ["P7T06-A03-FINITE-PROBE", "P7T06-A05-SYMMETRIC-SPLIT"]
+    exact_result: "J_src,xy is antisymmetric, total divergence vanishes, and every subset has the exact crossing-flux formula."
+    result_status: "exact_within_candidate"
+  - result_id: "P7T06-R05-FORWARD-OBSTRUCTION"
+    depends_on: ["P7T06-A01-P7T02-FIXED", "P7T06-A04-EUCLIDEAN-PAIRING", "P7T06-A06-SCALAR-QUADRATIC-CLASS"]
+    exact_result: "The fixed forward I-P operator is nonsymmetric and cannot be the gradient of a scalar quadratic in the declared class."
+    result_status: "precise_scoped_obstruction"
+  - result_id: "P7T06-R06-NO-PHYSICAL-ACTION"
+    depends_on: ["P7T06-A07-NO-TARGET-IMPORT", "P7T06-A08-NO-MODEL-TO-WORLD-MAP"]
+    exact_result: "No physical action, stress energy, current, conservation, geometry, or GR interpretation is licensed."
+    result_status: "claim_boundary"
+
+missing_dependencies:
+  - missing_id: "P7T06-M01-VARIATIONAL-SELECTION-LAW"
+    needed_for: "deriving rather than stipulating the symmetric candidate functional"
+    current_status: "not_derived"
+    repair_class: "future source-side extension allowed"
+  - missing_id: "P7T06-M02-DIRECTIONAL-VARIATIONAL-LAW"
+    needed_for: "preserving the full P7-T02 directional update in a variational representation"
+    current_status: "precisely_obstructed_in_fixed_scalar_quadratic_class"
+    repair_class: "materially different variational class or new source law required"
+  - missing_id: "P7T06-M03-PHYSICAL-MATTER-VARIABLES"
+    needed_for: "physical matter action"
+    current_status: "not_supplied"
+    repair_class: "separate model-to-world interpretation burden"
+  - missing_id: "P7T06-M04-SOURCE-DERIVED-GEOMETRY"
+    needed_for: "geometric variation and stress-energy tensor"
+    current_status: "P6 Gate B zero of eight; no input available"
+    repair_class: "cannot be assumed or imported"
+  - missing_id: "P7T06-M05-PHYSICAL-SYMMETRY-AND-EOM"
+    needed_for: "Noether current or covariant conservation theorem"
+    current_status: "not_supplied"
+    repair_class: "separate physical-law and interpretation burden"
+  - missing_id: "P7T06-M06-COUPLING-SELECTION"
+    needed_for: "universal physical coupling of the variational object"
+    current_status: "P7-T05 current sector data do not derive the selector"
+    repair_class: "future source-side extension allowed"
+
+dimension_and_sign_audit:
+  dimension_assignment:
+    P: "dimensionless"
+    C: "dimensionless"
+    A: "dimensionless"
+    q: "dimensionless task-local probe"
+    V_src: "dimensionless task-local scalar"
+    D_src: "dimensionless task-local covector coordinates"
+    J_src: "dimensionless task-local edge record"
+  sign_checks:
+    C_nonnegative: true
+    V_src_nonnegative: true
+    laplacian_off_diagonal_nonpositive: true
+    laplacian_row_sum_zero: true
+    flux_orientation: "J_xy is defined outward from x toward y"
+    boundary_formula_sign: "sum_(x in B) D_x equals outward crossing flux"
+  physical_dimensions_inferred: false
+  physical_energy_sign_inferred: false
+
+status_matrix:
+  finite_source_variational_object_constructed: true
+  first_variation_derived: true
+  source_flux_record_constructed: true
+  finite_closed_balance_derived: true
+  finite_boundary_formula_derived: true
+  algebraic_anomaly_compatibility_derived: true
+  full_directional_scalar_quadratic_representation_derived: false
+  full_directional_representation_precisely_obstructed_for_fixed_forward_control: true
+  variational_selection_law_derived: false
+  physical_matter_variables_derived: false
+  physical_matter_coupling_derived: false
+  physical_matter_action_derived: false
+  stress_energy_tensor_derived: false
+  physical_conservation_law_derived: false
+  noether_theorem_derived: false
+  effective_geometry_derived: false
+  equivalence_principle_behavior_derived: false
+  einstein_equations_derived: false
+  ontology_or_source_law_adopted: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+  physics_promotion_authorized: false

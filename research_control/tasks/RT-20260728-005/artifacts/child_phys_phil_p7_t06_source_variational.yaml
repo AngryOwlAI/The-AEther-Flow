@@ -1,0 +1,750 @@
+schema_id: "v21_p7_t06_child_phys_phil_source_variational_review_v1"
+artifact_id: "P7T06-CHILD-PHYS-PHIL-SOURCE-VARIATIONAL-REVIEW-V1"
+task_id: "RT-20260728-005"
+job_id: "AJ-RT-20260728-005-001"
+decision_id: "DDR-20260728-005"
+plan_task_id: "P7-T06"
+execution_unit_id: "child_phys_phil"
+perspective: "physicist_philosopher"
+status: "completed"
+completed_at: "2026-07-28T10:42:23Z"
+artifact_status: "draft/control"
+candidate_status: "proposal-only"
+evidence_status: "source-extension data"
+adoption_status: "blocked_adoption_open_continuation"
+review_context: "same_context_internal_parent_child_synthesis_input"
+target_derivation_milestone: "matter_coupling"
+milestone_burden: "Supply the variational matter input required for Einstein-equation work."
+claim_boundary_id: "CB-V21-P7-T06-SOURCE-VARIATIONAL-OBJECT-001"
+
+review_question: >-
+  Can the symmetric part C=(P+P^T)/2 of one declared finite P7-T02
+  source-transition matrix define a genuine task-local scalar variational
+  object and exact edge-balance identities, while keeping the directional
+  residue A=(P-P^T)/2 and the nonsymmetric full update distinct, without
+  importing physical action, stress energy, conservation, matter dynamics,
+  spacetime geometry, ontology adoption, GR derivation, or global
+  impossibility?
+
+review_outcome:
+  result_classification: "constructive_restricted_variational_object_with_scoped_directional_obstruction"
+  candidate_id: "SourceKernelDirichletVariationalCandidate_v1"
+  source_flux_id: "SourceVariationalFluxRecord_v1"
+  theorem_ids:
+    - "P7T06-THM-SOURCE-VARIATION-FLUX-BALANCE-001"
+    - "P7T06-THM-DIRECTIONAL-UPDATE-VARIATIONAL-OBSTRUCTION-001"
+  obstruction_id: "OBST-P7T06-DIRECTIONAL-KERNEL-NONVARIATIONAL-001"
+  constructive_result: >-
+    Given one finite nonnegative source-transition matrix P and one formal
+    dimensionless test labeling phi on its finite configuration carrier, the
+    symmetric matrix C=(P+P^T)/2 defines the nonnegative quadratic functional
+    V_src(phi)=1/4 sum_(x,y) C_xy(phi_y-phi_x)^2. Its ordinary coordinate
+    gradient is the symmetric graph-Laplacian operator L_C phi, where
+    (L_C phi)_x=sum_y C_xy(phi_x-phi_y). The associated oriented-edge record
+    J_xy=C_xy(phi_x-phi_y) is antisymmetric and yields exact total-cancellation
+    and finite-cut identities.
+  obstruction_result: >-
+    For the fixed two-state forward control with row-source matrix
+    P=[[1/2,1/2],[0,1]], the linear residual I-P is nonsymmetric. The ordinary
+    coordinate gradient of every scalar quadratic functional has a symmetric
+    linear part. Therefore no scalar quadratic functional of the same
+    two-component test labeling has gradient exactly equal to (I-P)phi for
+    every phi. The transpose convention for column bookkeeping states gives
+    the equally nonsymmetric residual I-P^T and the same scoped conclusion.
+  exact_scope: >-
+    The positive result is an exact finite-algebraic consequence of separately
+    stipulated proposal-only inputs P and phi. The negative result concerns
+    only an ordinary scalar quadratic potential on the same finite coordinate
+    space with the standard coordinate gradient and exact equality to the
+    displayed directional residual. It does not exclude weighted gradients,
+    auxiliary variables, doubled-field or saddle formulations, history
+    dependence, restrictions to a subspace, nonsmooth functionals, or future
+    source-side extensions.
+  physical_result: "not_derived_and_not_refuted"
+  ontology_result: "proposal_only_source_extension_not_adopted"
+  proof_authority: false
+  physics_promotion_authorized: false
+
+evidence_inspected:
+  - path: "SOUL.md"
+    use: "science, mathematics, uncertainty, and model-versus-world discipline"
+  - path: "AGENTS.md"
+    use: "authority hierarchy, ontology-law route, status vocabulary, and generated-output boundaries"
+  - path: "research_control/AGENTS.md"
+    use: "research-control scope, underdetermination language, and human-gated adoption boundary"
+  - path: "research_control/tasks/RT-20260728-005/00_TASK.yaml"
+    use: "active objective, claim boundary, output ownership, and P7-T06 status"
+  - path: "research_control/tasks/RT-20260728-005/DDR-20260728-005.md"
+    use: "proposed C/A split, scalar functional, forward control, and parent-child question"
+  - path: "research_control/tasks/RT-20260728-005/jobs/AJ-RT-20260728-005-001.yaml"
+    use: "immutable route, physics admission, theorem identities, forbidden source classes, and authority limits"
+  - path: "research_control/tasks/RT-20260728-005/roles/ontology-formalizer@0.2.0--RT-20260728-005.yaml"
+    use: "one-job overlay and removed physical or adoption permissions"
+  - path: ".agents/roles/physics/ontology-formalizer.v0.2.0.md"
+    use: "formal-object obligation and no-promotion boundary"
+  - object_id: "TEX-V21-P7-T02-SOURCE-MATTER-FINITE-TRANSITION-KERNEL-V1"
+    path: "research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_candidate_v1.tex"
+    sha256: "65ac095f5cdf4c2e319365c8b0e024d031b19d9fc2b8102e59997afa1e8f9129"
+    use: "finite control, row-normalized kernel, bookkeeping update, forward witness, and no-time or no-probability boundary"
+  - path: "research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_spec_v1.yaml"
+    sha256: "936d2aa6dfea3d263675468ff581190240efde84c1241ad971a8c1383a065a97"
+    use: "matrix and state typing, row-selection status, and open physical interpretation"
+  - path: "research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_controls_v1.yaml"
+    sha256: "af7fc976590b4ca82fca5c34c6f30091f6599428b8005cf3932ce03f92f7d779"
+    use: "exact identity-only, forward, null, degenerate, malformed, and underdetermined branches"
+  - path: "research_control/tasks/RT-20260728-001/artifacts/parent_fusion_notes_p7_t02_finite_transition_kernel.md"
+    use: "bookkeeping-versus-physical conservation distinction and unresolved source-law selection"
+  - object_id: "TEX-V21-P7-T05-UNIVERSAL-SOURCE-COUPLING-MAP-V1"
+    path: "research_control/tasks/RT-20260728-004/artifacts/universal_source_coupling_map_candidate_v1.tex"
+    sha256: "5a9a8f5542a7c8b714bbff7ec06c06449b0c66c0196266051562caf9ce602c6b"
+    use: "restricted equipped-control comparison, current sector-selector obstruction, and explicit P7-T06 variational burden"
+  - path: "research_control/tasks/RT-20260728-004/artifacts/universal_source_coupling_map_spec_v1.yaml"
+    sha256: "75a3564fc0ea37ac776b2602c5f260514e5f48ae861ac049f87f9d92532f85db"
+    use: "source-extension status, missing variational object, and model-to-world obligations"
+  - path: "research_control/tasks/RT-20260728-004/artifacts/universal_source_coupling_controls_v1.yaml"
+    sha256: "d8f8ceabbba294be8f268367d573e028774845f7d022e1b6c61a5e16623352dd"
+    use: "row-source versus column-update matrix convention and same-sector controls"
+  - path: "research_control/tasks/RT-20260728-004/artifacts/parent_fusion_notes_p7_t05_source_coupling.md"
+    sha256: "6b2c5fcfed4a23acc6b321d17b892c2a13643d9fd382ca9166843839bd96ec3e"
+    use: "qualified P7-T06 dependency and preservation of missing physical coupling and geometry"
+
+fixed_inherited_status:
+  p7_t02:
+    candidate_id: "SourceMatterFiniteTransitionKernelCandidate_v1"
+    status: "draft/control proposal-only"
+    exact_input: >-
+      One finite enabled-row control and its dimensionless rational
+      bookkeeping kernel are separately stipulated source-control data.
+    current_ontology_derives_control_or_rows: false
+    physical_probability_or_time: false
+    physical_dynamics: false
+  p7_t05:
+    candidate_id: "SourceUniversalCouplingMapCandidate_v1"
+    status: "draft/control proposal-only source-extension data"
+    exact_result: "precise_obstruction_with_constructive_restricted_domain"
+    inherited_limit: >-
+      Explicit equipment gives exact support and update comparison only on a
+      restricted domain; current sector data do not derive a universal
+      sector-to-control or equipment selector.
+    physical_coupling_or_geometry: false
+  p7_t06_dependency_rule: >-
+    P7-T06 may construct a variational object per declared finite kernel, but
+    that construction does not repair P7-T05's missing universal selector and
+    does not make the kernel, equipment, or variational rule canonical.
+
+notation_and_type_audit:
+  transition_matrix_orientation:
+    recommended_definition: >-
+      Define P_xy as the sum of K_C(T|x) over enabled records with target y,
+      so rows are source configurations, columns are target configurations,
+      and sum_y P_xy=1.
+    relation_to_p7_t02_bookkeeping_update: >-
+      P7-T02 writes column bookkeeping states with target rows and source
+      columns, so its displayed update matrix is P^T.
+    consequence: >-
+      C=(P+P^T)/2 is independent of choosing P or P^T, while A changes sign
+      and the phrase full directional operator must specify I-P on test
+      functions or I-P^T on column bookkeeping states.
+    risk_if_omitted: "matrix-transpose ambiguity masquerading as a physical distinction"
+  probe_symbol:
+    current_risk: >-
+      P7-T01 already uses q(Psi) for a derived source charge chain. Reusing q
+      for an unrelated scalar test labeling can imply a nonexistent charge,
+      field, or matter interpretation.
+    recommendation: >-
+      Use phi:Omega->Q, f:Omega->Q, or another explicitly disjoint symbol and
+      call it a formal dimensionless source test labeling. If q is retained,
+      declare that it is not the P7-T01 charge chain q(Psi).
+  symmetric_and_directional_parts:
+    definitions:
+      C: "C=(P+P^T)/2"
+      A: "A=(P-P^T)/2"
+    exact_properties:
+      - "C^T=C and C_xy>=0 for a nonnegative P."
+      - "A^T=-A."
+      - "P=C+A."
+      - "The diagonal of C does not contribute to V_src."
+      - "For every real phi, phi^T A phi=0."
+    semantic_limits:
+      C: >-
+        A task-local symmetric edge-weight matrix only. Calling it
+        conductance does not establish physical conduction, locality,
+        reversibility, a stationary measure, or detailed balance.
+      A: >-
+        An algebraic directional residue only. It is not an arrow of physical
+        time, dissipation, causal orientation, force, or entropy production.
+  scalar_functional:
+    definition: "V_src(phi)=1/4 sum_(x,y) C_xy (phi_y-phi_x)^2"
+    exact_type: "Q-valued nonnegative scalar quadratic on a finite rational test-labeling space"
+    exact_properties:
+      - "V_src(phi)>=0."
+      - "V_src(phi+c*1)=V_src(phi)."
+      - "V_src depends only on off-diagonal symmetric edge weights."
+      - "Its stationary directions include constants on every connected component of the undirected C-support."
+    not_an_action_because_missing:
+      - "a physically interpreted configuration or field"
+      - "physical units and an action scale"
+      - "physical time or spacetime integration"
+      - "a spacetime measure or metric"
+      - "locality and causal structure"
+      - "a stationary-action postulate"
+      - "boundary and initial data with physical meaning"
+      - "a model-to-world interpretation"
+  first_variation:
+    exact_result: "(D V_src(phi))_x=sum_y C_xy(phi_x-phi_y)=(L_C phi)_x"
+    laplacian_definition: "L_C=diag(C*1)-C"
+    hessian: "L_C"
+    exact_properties:
+      - "L_C is symmetric."
+      - "L_C is positive semidefinite."
+      - "L_C*1=0."
+    crucial_nonidentity: >-
+      L_C is not generally I-C, even though I-C is the symmetric part of
+      I-P. Equality requires C*1=1, which follows if P is doubly stochastic
+      but is false for the fixed forward control.
+    consequence_for_wording: >-
+      The functional is derived from the symmetric edge weights of P; it is
+      not generally a variational representation of the symmetric part of the
+      P7-T02 update residual.
+  information_loss:
+    exact_record: >-
+      The map P -> V_src discards the skew matrix A, ignores diagonal holding
+      weights inside edge differences, and can also differ from the symmetric
+      update residual through the degree term diag(C*1).
+    consequence: >-
+      Source-equivalent may denote only a source-side variational surrogate
+      of the type requested by the plan. It must not mean information
+      equivalence, dynamical equivalence, or exact update equivalence.
+
+forward_control_check:
+  matrix_convention: "rows source, columns target"
+  P:
+    - ["1/2", "1/2"]
+    - ["0", "1"]
+  C:
+    - ["1/2", "1/4"]
+    - ["1/4", "1"]
+  A:
+    - ["0", "1/4"]
+    - ["-1/4", "0"]
+  C_row_sums: ["3/4", "5/4"]
+  L_C:
+    - ["1/4", "-1/4"]
+    - ["-1/4", "1/4"]
+  symmetric_part_of_I_minus_P:
+    formula: "I-C"
+    matrix:
+      - ["1/2", "-1/4"]
+      - ["-1/4", "0"]
+  full_directional_residual:
+    formula: "I-P"
+    matrix:
+      - ["1/2", "-1/2"]
+      - ["0", "0"]
+    symmetric: false
+  exact_variational_value: "V_src(phi)=1/8 (phi_2-phi_1)^2"
+  exact_gradient:
+    - "1/4 (phi_1-phi_2)"
+    - "1/4 (phi_2-phi_1)"
+  conclusions:
+    - "The proposed finite scalar functional is well defined and nonnegative."
+    - "Its ordinary gradient is L_C phi, not (I-P)phi."
+    - "Its Hessian is symmetric, while I-P is nonsymmetric."
+    - "The full directional residual has no exact scalar-quadratic potential in the declared standard-gradient class."
+    - "The construction preserves neither all directional information nor all diagonal imbalance information."
+
+edge_balance_audit:
+  edge_record:
+    recommended_name: "formal source-edge flux record"
+    definition: "J_xy=C_xy(phi_x-phi_y)"
+    exact_property: "J_yx=-J_xy"
+    no_physical_units_or_transport: true
+  vertex_record:
+    recommended_name: "finite source-divergence record"
+    definition: "D_x=sum_y J_xy=(L_C phi)_x"
+  total_identity:
+    formula: "sum_x D_x=0"
+    proof_source: "pairwise cancellation from J_yx=-J_xy on a finite carrier"
+    recommended_wording: "total source-divergence cancellation identity"
+    not_claimed:
+      - "conservation through physical time"
+      - "continuity equation"
+      - "Noether charge"
+      - "energy conservation"
+      - "momentum conservation"
+      - "charge conservation beyond the distinct inherited P7-T01 sector record"
+  cut_identity:
+    formula: "sum_(x in S) D_x=sum_(x in S,y notin S) J_xy"
+    exact_scope: "an arbitrary subset S of the finite configuration carrier"
+    recommended_wording: "finite-cut balance formula"
+    boundary_semantic_limit: >-
+      The cut is not a spatial boundary, spacetime hypersurface, manifold
+      boundary, causal boundary, detector surface, or physical subsystem
+      interface.
+  closed_system_term:
+    disposition: "usable_only_with_explicit_definition_or_prefer_avoid"
+    allowed_meaning: "the sum ranges over the entire finite carrier and leaves no omitted graph-cut term"
+    forbidden_meaning: "a physically isolated matter system"
+
+controlled_terminology:
+  variational_object:
+    allowed: true
+    allowed_form: "finite source-side scalar variational object"
+    exact_reason: "a scalar functional and its first variation are explicitly defined"
+    forbidden_overread:
+      - "physical action"
+      - "matter Lagrangian"
+      - "Hamiltonian"
+      - "field equation"
+      - "stationary-action law of nature"
+  source_equivalent:
+    allowed: "qualified_identifier_or_plan_label_only"
+    allowed_form: >-
+      source-side variational surrogate constructed from declared source
+      kernel data
+    forbidden_overread:
+      - "equivalent to the full P7-T02 update"
+      - "equivalent to a physical matter action"
+      - "equivalent to target-side GR matter input"
+      - "information-preserving replacement for P"
+  source_probe:
+    allowed: "qualified_with_formal_test_labeling"
+    allowed_form: "dimensionless formal source test labeling phi"
+    forbidden_overread:
+      - "measurement probe"
+      - "detector"
+      - "external physical source"
+      - "matter field"
+      - "P7-T01 charge chain"
+      - "empirical intervention"
+  balance:
+    allowed: true
+    allowed_form: "finite algebraic edge-balance or cut-balance identity"
+    forbidden_overread:
+      - "dynamical conservation law"
+      - "Noether identity"
+      - "energy-momentum balance"
+      - "physical continuity equation"
+  flux:
+    allowed: "qualified_formal_term"
+    allowed_form: "antisymmetric formal source-edge flux record"
+    forbidden_overread:
+      - "matter flux"
+      - "energy flux"
+      - "momentum flux"
+      - "spacetime current"
+      - "transport rate"
+      - "measurable flow"
+  conductance:
+    allowed: "defined_task_local_name_only"
+    allowed_form: "symmetric source edge-weight matrix C"
+    forbidden_overread:
+      - "physical conductance"
+      - "thermal or electrical response"
+      - "Markov reversibility"
+      - "detailed balance with a stationary measure"
+      - "metric weight"
+  obstruction:
+    allowed: true
+    allowed_form: >-
+      scoped obstruction to exact ordinary-gradient scalar-quadratic
+      representation of the fixed directional residual
+    forbidden_overread:
+      - "no variational formulation of any kind exists"
+      - "directionality is physically impossible"
+      - "the source ontology is globally inconsistent"
+      - "the theory is false"
+      - "future conservative extension is impossible"
+  conservation:
+    allowed: "prefer_negative_or_explicitly_analogical_use"
+    allowed_form: "formal conservation analogue, meaning only pairwise finite-edge cancellation"
+    forbidden_overread:
+      - "physical conservation law"
+      - "conserved observable along physical time"
+      - "stress-energy conservation"
+      - "covariant divergence law"
+
+model_to_world_ladder:
+  level_0_process_records:
+    items:
+      - "task, decision, role, AgentJob, validator, registry, checkpoint, and commit state"
+    exact_role: "routing, provenance, validation, and transaction evidence only"
+    mathematical_or_physical_premise: false
+  level_1_declared_source_control:
+    items:
+      - "finite configuration carrier Omega"
+      - "enabled P7-T02 rows"
+      - "row-source transition matrix P"
+    exact_role: "proposal-only source-control data"
+    ontology_derived_or_adopted: false
+  level_2_derived_matrix_decomposition:
+    items:
+      - "C=(P+P^T)/2"
+      - "A=(P-P^T)/2"
+    exact_role: "task-local finite linear algebra"
+    physical_symmetric_or_dissipative_sectors: false
+  level_3_test_labeling_and_scalar:
+    items:
+      - "formal dimensionless phi:Omega->Q"
+      - "V_src(phi)"
+    exact_role: "new stipulated source test data and one scalar quadratic"
+    physical_field_or_action: false
+  level_4_exact_candidate_relative_identities:
+    items:
+      - "first variation L_C phi"
+      - "antisymmetric edge record J"
+      - "total cancellation"
+      - "finite-cut formula"
+    exact_role: "finite algebraic theorems within the stipulated candidate"
+    physical_conservation_or_geometry: false
+  level_5_scoped_obstruction:
+    item: "nonsymmetric I-P cannot be the standard gradient matrix of a scalar quadratic on the same coordinate space"
+    exact_role: "precise representability obstruction in one declared class"
+    global_no_go: false
+  level_6_physical_interpretation:
+    status: "open_not_supplied"
+    missing_maps:
+      - "source configurations to physical matter fields or excitations"
+      - "phi to a physical field or observable"
+      - "formal composition to physical time"
+      - "finite carrier adjacency to physical locality"
+      - "C or L_C to a differential operator and principal symbol"
+      - "principal symbol to a physical cone or metric"
+      - "V_src to a dimensionful physical action"
+      - "metric variation to a stress-energy tensor"
+      - "edge cancellation to a physical continuity or Noether law"
+      - "candidate equations to calibrated predictions"
+  level_7_protected_adoption:
+    status: "human-gated"
+    blocked_here:
+      - "canonical-ontology candidate designation"
+      - "source variational law adoption"
+      - "physical matter-action interpretation"
+      - "stress-energy or conservation promotion"
+      - "effective geometry or coupling adoption"
+      - "Einstein-equation, exact-GR, benchmark, proof, publication, or completed-derivation promotion"
+  ladder_rule: >-
+    Exact finite variation and successful validation do not move the object
+    from proposal-only source algebra to physical interpretation or protected
+    ontology status.
+
+obstruction_scope_audit:
+  obstruction_id: "OBST-P7T06-DIRECTIONAL-KERNEL-NONVARIATIONAL-001"
+  failed_object: >-
+    A scalar quadratic F on the same finite coordinate space whose ordinary
+    coordinate gradient equals (I-P)phi for every phi.
+  minimum_hypotheses:
+    - "P is the explicitly declared row-source matrix."
+    - "F is a scalar quadratic function of phi alone."
+    - "Gradient means the ordinary coordinate gradient under the standard pairing."
+    - "Exact equality is required for every phi in the full finite vector space."
+  proof_basis: >-
+    Write F(phi)=1/2 phi^T H phi+b^T phi+c. Its gradient is
+    ((H+H^T)/2)phi+b, so exact equality to (I-P)phi for every phi requires
+    b=0 and I-P symmetric. The fixed forward control violates that necessary
+    condition.
+  transpose_branch: >-
+    If the operator is instead written on P7-T02 column bookkeeping states,
+    the exact matrix is I-P^T. It is also nonsymmetric, so the same
+    scalar-quadratic necessary-condition failure holds.
+  excluded_conclusions:
+    - "No scalar quadratic can represent L_C."
+    - "No scalar quadratic can represent the symmetric projection."
+    - "No variational formulation with a weighted pairing exists."
+    - "No formulation with auxiliary or doubled variables exists."
+    - "No time-dependent or history-dependent variational principle exists."
+    - "No restriction to an invariant subspace can be variational."
+    - "No future source-side law can repair the missing structure."
+    - "Physical matter dynamics are impossible."
+    - "The theory is globally rejected."
+  status_language: "current fixed directional residual is obstructed in the declared scalar-quadratic standard-gradient class; same-milestone continuation remains open"
+
+assumptions:
+  - assumption_id: "P7T06-PHIL-A01-P7T02-FIXED"
+    statement: "One valid finite nonnegative P7-T02 transition matrix P is held fixed as proposal-only source-control data."
+    status: "inherited_candidate_input"
+    not_claimed: ["canonical law", "physical dynamics", "probability", "time"]
+  - assumption_id: "P7T06-PHIL-A02-ORIENTATION"
+    statement: "P_xy uses source rows and target columns; column-state bookkeeping uses P^T."
+    status: "required_notational_declaration"
+    not_claimed: ["physical time orientation", "causal direction"]
+  - assumption_id: "P7T06-PHIL-A03-TEST-LABEL"
+    statement: "phi is a freely supplied dimensionless rational scalar labeling of Omega and is distinct from the P7-T01 charge chain q(Psi)."
+    status: "new_proposal_only_test_input"
+    not_claimed: ["matter field", "detector", "external source", "observable"]
+  - assumption_id: "P7T06-PHIL-A04-SYMMETRIZATION"
+    statement: "C and A are defined algebraically from P; no ontology principle selects symmetricization as a physical law."
+    status: "new_task_local_construction_rule"
+    not_claimed: ["reversibility", "detailed balance", "physical reciprocity"]
+  - assumption_id: "P7T06-PHIL-A05-STANDARD-GRADIENT"
+    statement: "The obstruction tests the ordinary coordinate gradient on the full finite vector space."
+    status: "scoped_obstruction_hypothesis"
+    not_claimed: ["uniqueness among all variational formalisms"]
+  - assumption_id: "P7T06-PHIL-A06-NO-TARGET-IMPORT"
+    statement: "No target atlas, metric, cone, detector, benchmark behavior, validator, registry, generated derivative, role status, handoff, or commit state is a mathematical premise."
+    status: "hard_guard"
+    not_claimed: ["effective geometry", "GR recovery", "process authority as science"]
+
+fail_closed_branches:
+  - branch_id: "P7T06-PHIL-BRANCH-VALID-SYMMETRIC-FUNCTIONAL-001"
+    trigger: "P is finite and nonnegative and phi is a typed finite scalar labeling"
+    result: "valid_proposal_only_finite_source_variational_object"
+    physical_promotion: false
+  - branch_id: "P7T06-PHIL-BRANCH-MATRIX-ORIENTATION-UNDECLARED-002"
+    trigger: "P and the P7-T02 column update matrix are conflated"
+    result: "underdetermined_operator_orientation"
+  - branch_id: "P7T06-PHIL-BRANCH-PROBE-COLLISION-003"
+    trigger: "q is used both for the P7-T01 charge chain and the new scalar test labeling without disambiguation"
+    result: "malformed_or_semantically_ambiguous_typing"
+  - branch_id: "P7T06-PHIL-BRANCH-SYMMETRIC-UPDATE-OVERCLAIM-004"
+    trigger: "L_C is identified with I-C without C*1=1"
+    result: "false_variational_equivalence_claim"
+  - branch_id: "P7T06-PHIL-BRANCH-DIRECTIONAL-EXACT-GRADIENT-005"
+    trigger: "the fixed nonsymmetric I-P is claimed to be the standard gradient matrix of a scalar quadratic"
+    result: "precisely_obstructed_in_declared_class"
+  - branch_id: "P7T06-PHIL-BRANCH-UNEQUIPPED-UNIVERSALITY-006"
+    trigger: "a per-kernel construction is promoted to one universal sector-indexed law"
+    result: "underdetermined_missing_p7_t05_selector_and_equipment"
+  - branch_id: "P7T06-PHIL-BRANCH-PHYSICAL-ACTION-007"
+    trigger: "V_src is called a physical matter action or Lagrangian"
+    result: "forbidden_model_to_world_overread"
+  - branch_id: "P7T06-PHIL-BRANCH-STRESS-ENERGY-008"
+    trigger: "variation with respect to phi is called stress energy without a physical metric variation"
+    result: "forbidden_stress_energy_overread"
+  - branch_id: "P7T06-PHIL-BRANCH-CONSERVATION-009"
+    trigger: "finite antisymmetric-edge cancellation is called a physical conservation law"
+    result: "forbidden_conservation_overread"
+  - branch_id: "P7T06-PHIL-BRANCH-GEOMETRY-010"
+    trigger: "finite configuration-graph adjacency is called spacetime geometry, locality, a cone, or a metric"
+    result: "forbidden_geometry_overread"
+  - branch_id: "P7T06-PHIL-BRANCH-GLOBAL-NO-GO-011"
+    trigger: "the fixed scalar-quadratic obstruction is generalized to all variational formalisms or all future extensions"
+    result: "forbidden_global_no_go"
+  - branch_id: "P7T06-PHIL-BRANCH-PROTECTED-ADOPTION-012"
+    trigger: "canonical-candidate, adoption, rejection, proof, publication, benchmark, or completed-derivation status is requested"
+    result: "blocked_human_gated_authority"
+
+exact_allowed_wording:
+  - "C is the task-local symmetric edge-weight matrix obtained from one declared proposal-only P7-T02 matrix P."
+  - "Phi is a dimensionless formal source test labeling, not the P7-T01 charge chain and not a physical field."
+  - "V_src is a finite source-side scalar variational object."
+  - "The ordinary first variation is the symmetric graph-Laplacian record L_C phi."
+  - "J_xy is an antisymmetric formal source-edge flux record."
+  - "The total identity is finite pairwise cancellation, not a physical conservation law."
+  - "The subset identity is a finite-cut balance formula, not a spacetime boundary law."
+  - "The fixed forward residual I-P is not the standard gradient matrix of a scalar quadratic on the same full coordinate space."
+  - "The obstruction is scoped to the declared operator and variational class."
+  - "The construction is proposal-only source-extension data and is not adopted."
+  - "Current ontology does not derive the variational rule or a universal selector."
+  - "Adoption remains blocked while conservative same-milestone continuation remains open."
+
+forbidden_wording:
+  - "The source matter action has been derived."
+  - "V_src is dynamically equivalent to the P7-T02 update."
+  - "The symmetric functional captures all nondirectional update content."
+  - "L_C is the symmetric part I-C for every row-stochastic P."
+  - "Phi is the physical matter field or the P7-T01 charge chain."
+  - "C is a physical conductance or a spacetime metric."
+  - "A is an arrow of time, dissipation, or entropy production."
+  - "J is a physical matter, energy, or momentum flux."
+  - "The zero-sum identity proves a physical conservation law."
+  - "The cut formula is a spacetime boundary conservation equation."
+  - "The first variation is a stress-energy tensor."
+  - "The stationary condition is a physical equation of motion."
+  - "No variational formulation of the directional update can exist."
+  - "Directionality is incompatible with every action principle."
+  - "The P7-T05 universal coupling obstruction has been repaired."
+  - "The ontology has adopted a source variational law."
+  - "Einstein equations, exact GR, or benchmark recovery have been derived."
+  - "The obstruction is a global no-go theorem or theory rejection."
+  - "Future source extension is impossible."
+
+physical_interpretation_audit:
+  matter_action:
+    result: "not_established"
+    reason: >-
+      A scalar quadratic on a finite configuration-label space lacks physical
+      fields, units, time or spacetime measure, locality, boundary conditions,
+      and a stationary-action interpretation.
+  stress_energy:
+    result: "not_established"
+    reason: >-
+      The task varies a scalar test labeling, not a physical spacetime metric
+      or tetrad in an interpreted matter action.
+  conservation_law:
+    result: "not_established"
+    reason: >-
+      Antisymmetric finite-edge cancellation is an algebraic identity with no
+      physical time evolution, continuity equation, symmetry, or Noether map.
+  matter_dynamics:
+    result: "not_established"
+    reason: >-
+      Phi is not a state variable and neither L_C phi=0 nor the functional's
+      minimizers are declared physical equations of motion.
+  spacetime_geometry:
+    result: "not_established"
+    reason: >-
+      A finite configuration graph and symmetric weights supply no manifold,
+      distance, signature, causal cone, localization map, or effective metric.
+  physical_coupling:
+    result: "not_established"
+    reason: >-
+      P7-T05's sector selector and model-to-world coupling maps remain absent;
+      a per-control scalar functional does not supply them.
+  einstein_equations_or_gr:
+    result: "not_established"
+    reason: >-
+      No physical action, metric variation, stress-energy tensor, universal
+      coupling, Einstein equation, or exact-GR recovery calculation is present.
+
+recommendations_to_parent:
+  - recommendation_id: "P7T06-PHIL-REC-01"
+    priority: "required"
+    recommendation: >-
+      Declare the P matrix orientation and distinguish P on test functions
+      from P^T on P7-T02 column bookkeeping states.
+  - recommendation_id: "P7T06-PHIL-REC-02"
+    priority: "required"
+    recommendation: >-
+      Rename the scalar probe q to phi or f, or explicitly disambiguate it
+      from the inherited P7-T01 charge chain q(Psi).
+  - recommendation_id: "P7T06-PHIL-REC-03"
+    priority: "required"
+    recommendation: >-
+      State the first variation as L_C phi with L_C=diag(C*1)-C. Do not call
+      it I-C or the symmetric part of I-P unless the additional condition
+      C*1=1 is proved.
+  - recommendation_id: "P7T06-PHIL-REC-04"
+    priority: "required"
+    recommendation: >-
+      Record that loss relative to I-P is not only A in the general
+      row-stochastic case: (I-P)-L_C=I-diag(C*1)-A.
+  - recommendation_id: "P7T06-PHIL-REC-05"
+    priority: "required"
+    recommendation: >-
+      Qualify source-equivalent as a plan label for a source-side variational
+      surrogate, not equivalence to the update or to a physical matter action.
+  - recommendation_id: "P7T06-PHIL-REC-06"
+    priority: "required"
+    recommendation: >-
+      Use finite source-edge flux, total cancellation, and finite-cut balance
+      language; state explicitly that no physical conservation law follows.
+  - recommendation_id: "P7T06-PHIL-REC-07"
+    priority: "required"
+    recommendation: >-
+      State the obstruction hypotheses in the theorem title or immediately
+      adjacent prose: same finite coordinate space, scalar quadratic, standard
+      coordinate gradient, full-space exact equality, and fixed P.
+  - recommendation_id: "P7T06-PHIL-REC-08"
+    priority: "required"
+    recommendation: >-
+      Preserve alternative variational classes and future conservative source
+      extensions as open; do not generalize the fixed forward witness.
+  - recommendation_id: "P7T06-PHIL-REC-09"
+    priority: "required"
+    recommendation: >-
+      State that the construction is per declared kernel and does not repair
+      P7-T05's missing universal sector selector or physical coupling map.
+  - recommendation_id: "P7T06-PHIL-REC-10"
+    priority: "required"
+    recommendation: >-
+      Retain exact statuses draft/control, proposal-only, source-extension
+      data, and blocked_adoption_open_continuation throughout candidate,
+      controls, completion, handoff, and ledger language.
+
+conflict_review_input:
+  blocking_conflicts_found: true
+  required_parent_resolutions:
+    - conflict_id: "PHIL-CONFLICT-P7T06-01"
+      issue: "The symbol q collides with the inherited P7-T01 charge-chain notation."
+      required_resolution: "Rename the scalar test labeling or explicitly disambiguate its type and semantics."
+      blocking_if_unresolved: true
+    - conflict_id: "PHIL-CONFLICT-P7T06-02"
+      issue: "P7-T02 uses a target-row/source-column update matrix while the proposed obstruction displays a source-row/target-column matrix."
+      required_resolution: "Declare the transpose convention and name the exact operator tested."
+      blocking_if_unresolved: true
+    - conflict_id: "PHIL-CONFLICT-P7T06-03"
+      issue: "The proposed functional's Hessian is L_C, not generally I-C."
+      required_resolution: >-
+        Include L_C=diag(C*1)-C and the forward-control check; do not claim
+        variational equivalence to the symmetric update residual.
+      blocking_if_unresolved: true
+    - conflict_id: "PHIL-CONFLICT-P7T06-04"
+      issue: "Separating P=C+A can suggest that A is the only information omitted by the variational functional."
+      required_resolution: >-
+        Record the additional degree/diagonal imbalance
+        I-diag(C*1) unless double stochasticity is assumed and proved.
+      blocking_if_unresolved: true
+    - conflict_id: "PHIL-CONFLICT-P7T06-05"
+      issue: "Source-equivalent can imply equivalence to the P7-T02 update or a physical action."
+      required_resolution: "Define it as a qualified source-side variational surrogate only."
+      blocking_if_unresolved: true
+    - conflict_id: "PHIL-CONFLICT-P7T06-06"
+      issue: "Flux, balance, boundary, and closed-system vocabulary can smuggle physical conservation and spacetime."
+      required_resolution: "Qualify every term as finite source-edge algebra and define boundary as a graph cut."
+      blocking_if_unresolved: true
+    - conflict_id: "PHIL-CONFLICT-P7T06-07"
+      issue: "Nonsymmetry proves an obstruction only in the declared standard-gradient scalar-quadratic class."
+      required_resolution: "List the exact hypotheses and preserve weighted, auxiliary-variable, restricted, and future-extension alternatives."
+      blocking_if_unresolved: true
+    - conflict_id: "PHIL-CONFLICT-P7T06-08"
+      issue: "A per-kernel variational object can be mistaken for a universal source law or a repair of P7-T05."
+      required_resolution: "Keep P7-T05 selector, equipment, physical coupling, and geometry burdens explicitly open."
+      blocking_if_unresolved: true
+
+finding_counts:
+  evidence_items: 16
+  constructive_variational_object_count: 1
+  exact_first_variation_count: 1
+  exact_edge_balance_identity_count: 2
+  scoped_obstruction_count: 1
+  matrix_orientation_hazard_count: 1
+  notation_collision_count: 1
+  mathematical_equivalence_hazard_count: 2
+  terminology_entries: 8
+  allowed_wording_count: 12
+  forbidden_wording_count: 19
+  fail_closed_branch_count: 12
+  missing_model_to_world_map_count: 10
+  required_parent_resolution_count: 8
+  physical_promotion_count: 0
+
+authority_limits:
+  canonical_ontology_modified: false
+  canonical_ontology_candidate_promoted: false
+  source_variational_law_adopted: false
+  source_transition_law_adopted: false
+  source_extension_adopted: false
+  source_probe_promoted_to_physical_field: false
+  p7_t01_charge_chain_identified_with_probe: false
+  physical_matter_established: false
+  physical_matter_dynamics_established: false
+  physical_action_established: false
+  lagrangian_or_hamiltonian_established: false
+  stress_energy_established: false
+  physical_conservation_law_established: false
+  physical_flux_established: false
+  physical_time_established: false
+  physical_causal_order_established: false
+  physical_locality_established: false
+  spacetime_boundary_established: false
+  principal_symbol_established: false
+  characteristic_set_established: false
+  physical_cone_established: false
+  effective_metric_established: false
+  effective_geometry_established: false
+  physical_coupling_established: false
+  universal_sector_selector_derived: false
+  p7_t05_obstruction_repaired: false
+  einstein_equations_derived: false
+  exact_gr_recovery_established: false
+  benchmark_promoted: false
+  proof_authority: false
+  publication_authority: false
+  completed_derivation_claimed: false
+  global_no_go_claimed: false
+  global_theory_rejected: false
+  future_source_extension_impossibility_claimed: false
+  validator_or_checkpoint_used_as_proof: false
+  human_gate_satisfied: false
+  physics_promotion_authorized: false

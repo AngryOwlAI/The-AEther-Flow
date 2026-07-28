@@ -1,0 +1,496 @@
+job_id: "AJ-RT-20260728-005-001"
+task_id: "RT-20260728-005"
+decision_id: "DDR-20260728-005"
+role_id: "ontology-formalizer"
+role_version: "0.2.0"
+execution_role_ref: "ontology-formalizer@0.2.0--RT-20260728-005"
+status: "completed"
+validation_status: "PASS"
+requires_human_gate: false
+created_at: "2026-07-28T10:35:08Z"
+started_at: "2026-07-28T10:35:08Z"
+completed_at: "2026-07-28T10:51:48Z"
+objective: "Execute only P7-T06 by constructing a proposal-only finite source-kernel variational object, deriving its exact source-flux balance identities, and deciding whether the full directional P7-T02 update admits a scalar quadratic variational representation."
+target_derivation_milestone: "matter_coupling"
+milestone_burden: "Supply the variational matter input required for Einstein-equation work."
+route_label: "ontology-law-research-packet"
+route_reason: "Handoff-0894 and committed checkpoint 556b0c230809b9e4f58ae6b503a8780d56a9faca select exactly one P7-T06 source-equivalent variational construction-or-precise-obstruction packet."
+immutable_route_sha256: "5fa53fe156a0078984933cd96c8f9d3a14ec520e268e2851d9643e74ca5ea0c8"
+plan_task_id: "P7-T06"
+recommendation_ids:
+  - "V21-R25"
+  - "V21-R26"
+  - "V21-R27"
+source_extension_classification_required: true
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 147
+  passes_consumed: 136
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:147"
+  handoff_token: "25f76346da52ace172b1fae40ca5a69d76d14ab111207e6e"
+  relay_claim_token: "8d5911b1da1e201aca1f031d16d5af512416dc68c3a0a05f"
+  route_work_item_id: "P7-T06"
+  route_worker_skill: "continue-research"
+  route_sha256: "5fa53fe156a0078984933cd96c8f9d3a14ec520e268e2851d9643e74ca5ea0c8"
+  worker_skill: "continue-research"
+  worker_invocation_count: 1
+
+mathematical_decisiveness_contract:
+  contract_path: "research_control/design/mathematical_decisiveness_completion_contract.md"
+  schema_path: ".agents/schemas/PHYSICS_COMPLETION_DECISIVENESS_SCHEMA.md"
+  enforcement_mode: "hard_failure"
+  active_after: "2026-06-21T02:32:39Z"
+
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "physics"
+  payload_type: "theorem"
+  candidate_family: "V21-P7-T06-SOURCE-KERNEL-VARIATIONAL-OBJECT-V1"
+  assumption_delta:
+    - "Hold P7-T01 through P7-T05 proposal-only source data and statuses fixed."
+    - "Use only the finite rational P7-T02 transition kernel and declared source configuration labels."
+    - "Define C=(P+P^T)/2 and A=(P-P^T)/2 as task-local source operators."
+    - "Use a dimensionless rational source probe q with no physical field, time, metric, or detector semantics."
+    - "Admit no target atlas, target metric, physical coupling, matter action, stress-energy tensor, Einstein equation, benchmark behavior, validator result, generated derivative, registry metadata, role status, handoff status, or commit state as a mathematical premise."
+  materiality_basis: "P7-T05 tested sector-to-control selection. P7-T06 instead constructs a new finite variational functional, derives its first variation and flux balance, and tests the distinct Hessian-symmetry obstruction for the directional update operator."
+  payload_details:
+    candidate_id: "SourceKernelDirichletVariationalCandidate_v1"
+    source_flux_id: "SourceVariationalFluxRecord_v1"
+    theorem_ids:
+      - "P7T06-THM-SOURCE-VARIATION-FLUX-BALANCE-001"
+      - "P7T06-THM-DIRECTIONAL-UPDATE-VARIATIONAL-OBSTRUCTION-001"
+    obstruction_id: "OBST-P7T06-DIRECTIONAL-KERNEL-NONVARIATIONAL-001"
+    global_no_go_claimed: false
+  source_basis:
+    - "TEX-V21-P7-T02-SOURCE-MATTER-FINITE-TRANSITION-KERNEL-V1"
+    - "TEX-V21-P7-T05-UNIVERSAL-SOURCE-COUPLING-MAP-V1"
+    - "TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-MATTER-COUPLING-BRIDGE-TARGET-V1-FORMALIZATION"
+    - "TEX-SOURCE-CERTIFICATE-OPERATION-LAWS-V1"
+    - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+    - "research_control/handoffs/handoff-0894.yaml"
+  expected_artifact_paths:
+    - "research_control/tasks/RT-20260728-005/artifacts/source_kernel_variational_object_candidate_v1.tex"
+    - "research_control/tasks/RT-20260728-005/artifacts/source_kernel_variational_object_spec_v1.yaml"
+    - "research_control/tasks/RT-20260728-005/artifacts/source_kernel_variational_controls_v1.yaml"
+    - "research_control/tasks/RT-20260728-005/artifacts/source_kernel_variational_assumption_dependency_table_v1.yaml"
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+
+family_freeze_admission:
+  schema_id: "family_freeze_route_admission_v1"
+  policy_id: "family_freeze_reopening_policy_v1"
+  route_id: "v21_p7_t06_source_kernel_variational_object_v1"
+  family_id: "V21-P7-T06-SOURCE-KERNEL-VARIATIONAL-OBJECT-V1"
+  family_identity_sha256: "6d478d839aebad0d3a8ee74513f4de02a6c6a298a37a776bffe361adaa1377fb"
+  assumption_sha256es:
+    - "65ac095f5cdf4c2e319365c8b0e024d031b19d9fc2b8102e59997afa1e8f9129"
+    - "5a9a8f5542a7c8b714bbff7ec06c06449b0c66c0196266051562caf9ce602c6b"
+  route_kind: "variation_class_investigation"
+  detected_match_basis: []
+  reopening:
+    requested: false
+    class: "none"
+  distinct_branch:
+    branch_identity: "symmetric_kernel_variation_and_directional_residue_after_p7_t05"
+    material_difference_basis: "This packet adds a scalar source functional, exact first variation, antisymmetric flux balance, boundary formula, and Hessian-symmetry obstruction; it does not repeat the P7-T05 sector-selection theorem."
+    reconstructs_frozen_candidate: false
+    expected_artifact_paths:
+      - "research_control/tasks/RT-20260728-005/artifacts/source_kernel_variational_object_candidate_v1.tex"
+  authority_limits:
+    local_family_freeze_preserved: true
+    global_no_go_claimed: false
+    automatic_candidate_adoption: false
+    theorem_truth_inferred: false
+    ontology_modified: false
+    physics_promotion_authorized: false
+
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  expected_durable_outputs:
+    physics:
+      - "proposal-only finite source-kernel variational functional"
+      - "exact first-variation and source-flux balance theorem"
+      - "scoped full-directional-update variational obstruction"
+    project_system:
+      - "task-local deterministic validator report and compact receipt"
+      - "standard control records and generated memory derivatives"
+  acceptance_criteria:
+    physics:
+      - "the functional is explicitly typed and source-derived"
+      - "the first variation and flux identity are algebraically reproducible"
+      - "the boundary and anomaly branches are explicit"
+      - "the forward-control obstruction follows from a nonsymmetric Hessian candidate"
+    project_system:
+      - "task-local validation and scratch TeX build pass"
+      - "documentation-impact claim-language and research-control checks pass"
+      - "one governed checkpoint records the transaction"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: false
+    exception_id: ""
+    evidence_path: ""
+    evidence_sha256: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0894"
+  source_handoff_path: "research_control/handoffs/handoff-0894.yaml"
+  source_handoff_sha256: "ad535ab39069b0d35845c3de0051b02ce55d4096e28b0f7ce48b434a90ba1d45"
+  selected_plan_task_id: "P7-T06"
+  guard_outcome: "below_threshold"
+  result: "PASS"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  scientific_status_changed_by_guard: false
+  physics_promotion_authorized: false
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  parent:
+    execution_unit_id: "parent"
+    perspective: "physicist_mathematician_philosopher"
+    responsibilities:
+      - "hold P7-T01 through P7-T05 statuses fixed"
+      - "write the fused candidate specification controls assumption ledger validator and receipts"
+      - "review child outputs for mathematical semantic and authority conflicts"
+  children:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260728-005/artifacts/child_phys_math_p7_t06_source_variational.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260728-005/artifacts/child_phys_phil_p7_t06_source_variational.yaml"
+      status: "completed"
+  conflict_policy:
+    review_path: "research_control/tasks/RT-20260728-005/artifacts/parent_conflict_review_p7_t06_source_variational.yaml"
+    max_resolution_rounds: 2
+    require_parallel_child_revision: true
+    unresolved_conflict_status: "blocked"
+  fusion_policy:
+    fusion_notes_path: "research_control/tasks/RT-20260728-005/artifacts/parent_fusion_notes_p7_t06_source_variational.md"
+    fused_output_path: "research_control/tasks/RT-20260728-005/artifacts/source_kernel_variational_object_candidate_v1.tex"
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+    final_output_replaces_old_single_role_artifact: true
+  outer_agentjob_count: 1
+  child_agentjob_count: 0
+  subagent_count: 2
+  rationale: "Two internal perspectives independently test the finite variational mathematics and the model-to-world boundary within one immutable worker invocation and one outer AgentJob."
+
+allowed_read_paths:
+  - "SOUL.md"
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - ".agents/roles/physics/ontology-formalizer.v0.2.0.md"
+  - ".agents/schemas/**"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  - "research_control/design/**"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0894.yaml"
+  - "research_control/handoffs/handoff-0894.md"
+  - "research_control/tasks/RT-20260614-257/**"
+  - "research_control/tasks/RT-20260702-064/**"
+  - "research_control/tasks/RT-20260728-001/**"
+  - "research_control/tasks/RT-20260728-004/**"
+  - "registries/**"
+
+allowed_write_paths:
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "research_control/design/frontier_theorem_inventory.md"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_burden_status_migration_receipt.json"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status.md"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_validation.json"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_compact_receipt.json"
+  - "research_control/tasks/RT-20260728-005/**"
+  - "research_control/handoffs/handoff-0895.yaml"
+  - "research_control/handoffs/handoff-0895.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/PDF_DERIVATIVE_REGISTRY.csv"
+  - "registries/PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "registries/TEX_SOURCE_REGISTRY.csv"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/pdf/**"
+  - "wiki/tex/**"
+
+allowed_generated_paths:
+  - ".local/**"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_burden_status_migration_receipt.json"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status.md"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_validation.json"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_compact_receipt.json"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/pdf/**"
+  - "wiki/tex/**"
+
+forbidden_paths:
+  - "ontology/**"
+  - "manuscripts/**"
+  - "legacy_ontology/**"
+  - "html/**"
+  - "github-facing/**"
+  - "implementations_plans/**"
+  - ".agents/roles/**"
+  - ".codex/skills/**"
+  - "registries/METRIC_USE_LEDGER.csv"
+  - "research_control/tasks/RT-20260614-257/artifacts/**"
+  - "research_control/tasks/RT-20260702-064/artifacts/**"
+  - "research_control/tasks/RT-20260728-001/artifacts/**"
+  - "research_control/tasks/RT-20260728-004/artifacts/**"
+
+allowed_source_classes:
+  - "science_draft"
+  - "task_local_candidate"
+  - "task_local_theorem_synthesis"
+  - "task_local_finite_witness"
+  - "task_local_precise_obstruction"
+  - "task_local_assumption_ledger"
+  - "project_control"
+  - "registry"
+  - "role_contract"
+  - "generated_memory_derivative"
+
+forbidden_source_classes:
+  - "canonical_ontology_write"
+  - "benchmark_promotion"
+  - "gate_chair_verdict"
+  - "physics_claim_promotion"
+  - "source_law_adoption"
+  - "canonical_ontology_candidate_promotion"
+  - "generated_derivative_authority"
+  - "physical_ontology_adoption"
+  - "physical_operational_semantics"
+  - "detector_semantics"
+  - "effective_geometry"
+  - "stress_energy"
+  - "matter_action"
+  - "physical_coupling_law"
+  - "matter_coupling_derivation"
+  - "Einstein_equations"
+  - "proof_authority"
+  - "publication_authority"
+  - "completed_derivation_claim"
+  - "global_no_go"
+  - "global_theory_rejection"
+  - "future_source_extension_impossibility"
+  - "candidate_reconstruction"
+
+approved_commands:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  - ".venv/bin/python scripts/research_control/continue_research.py --summary"
+  - ".venv/bin/python research_control/tasks/RT-20260728-005/artifacts/validate_source_kernel_variational.py --write-report --json"
+  - ".venv/bin/python research_control/tasks/RT-20260728-005/artifacts/validate_source_kernel_variational.py --check --json"
+  - "python3 /Users/alex.omegapy/.codex/plugins/cache/openai-bundled/latex/0.2.4/scripts/compile_latex.py /Volumes/P-SSD/AngryOwl/The-AEther-Flow/research_control/tasks/RT-20260728-005/artifacts/source_kernel_variational_object_candidate_v1.tex --compiler tectonic --output-directory /Volumes/P-SSD/AngryOwl/The-AEther-Flow/.local/tex-builds/RT-20260728-005 --json"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --write"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --json output/research_dependency_graph.json --markdown wiki/indexes/research_dependency_graph.md --dot output/research_dependency_graph.dot"
+  - ".venv/bin/python scripts/research_control/generate_claim_graph_v1.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff"
+  - ".venv/bin/python scripts/research_control/validate_compact_current_frontier_v16.py --json"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --check"
+  - ".venv/bin/python scripts/research_control/report_physics_progress_metrics.py"
+  - ".venv/bin/python scripts/research_control/run_full_research_control_validation.py --json"
+  - "git diff --check"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260728-005-001"
+
+required_validators:
+  - "memory_preflight"
+  - "query_memory_status"
+  - "continue_research_summary"
+  - "task_local_source_kernel_variational"
+  - "scratch_tex_build"
+  - "render_current_frontier_write"
+  - "render_compact_current_frontier_write"
+  - "dependency_graph_refresh"
+  - "generated_claim_graph_refresh"
+  - "memory_bootstrap"
+  - "memory_validate_only"
+  - "classify_project_changes"
+  - "collect_project_improvement_signals_validate_emitted"
+  - "validate_documentation_impact"
+  - "validate_claim_language_changed"
+  - "validate_research_control"
+  - "validate_research_control_check_diff"
+  - "validate_compact_current_frontier_v16"
+  - "dependency_graph_freshness_check"
+  - "report_physics_progress_metrics"
+  - "run_full_research_control_validation"
+  - "git_diff_check"
+  - "checkpoint_research_transaction"
+
+expected_outputs:
+  - "research_control/tasks/RT-20260728-005/artifacts/child_phys_math_p7_t06_source_variational.yaml"
+  - "research_control/tasks/RT-20260728-005/artifacts/child_phys_phil_p7_t06_source_variational.yaml"
+  - "research_control/tasks/RT-20260728-005/artifacts/parent_conflict_review_p7_t06_source_variational.yaml"
+  - "research_control/tasks/RT-20260728-005/artifacts/parent_fusion_notes_p7_t06_source_variational.md"
+  - "research_control/tasks/RT-20260728-005/artifacts/source_kernel_variational_object_candidate_v1.tex"
+  - "research_control/tasks/RT-20260728-005/artifacts/source_kernel_variational_object_spec_v1.yaml"
+  - "research_control/tasks/RT-20260728-005/artifacts/source_kernel_variational_assumption_dependency_table_v1.yaml"
+  - "research_control/tasks/RT-20260728-005/artifacts/source_kernel_variational_controls_v1.yaml"
+  - "research_control/tasks/RT-20260728-005/artifacts/source_kernel_variational_compact_receipt_v1.json"
+  - "research_control/tasks/RT-20260728-005/artifacts/source_kernel_variational_validation_v1.json"
+  - "research_control/tasks/RT-20260728-005/artifacts/validate_source_kernel_variational.py"
+  - "research_control/tasks/RT-20260728-005/artifacts/source_kernel_variational_receipt.md"
+  - "research_control/tasks/RT-20260728-005/00_TASK.yaml"
+  - "research_control/tasks/RT-20260728-005/DDR-20260728-005.md"
+  - "research_control/tasks/RT-20260728-005/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260728-005/roles/ontology-formalizer@0.2.0--RT-20260728-005.yaml"
+  - "research_control/tasks/RT-20260728-005/jobs/AJ-RT-20260728-005-001.yaml"
+  - "research_control/tasks/RT-20260728-005/jobs/completions/AJC-AJ-RT-20260728-005-001.yaml"
+  - "research_control/handoffs/handoff-0895.yaml"
+  - "research_control/handoffs/handoff-0895.md"
+  - "research_control/current_frontier.md"
+  - "research_control/program_state.yaml"
+  - "output/compact_current_frontier_v16.yaml"
+  - "output/compact_current_frontier_v16.json"
+  - "wiki/indexes/compact_current_frontier_v16.md"
+  - "output/claim_graph_v1.json"
+  - "output/claim_graph_v1.dot"
+  - "wiki/indexes/claim_graph_v1.md"
+
+claim_boundary: "CB-V21-P7-T06-SOURCE-VARIATIONAL-OBJECT-001"
+documentation_impact_id: "DI-RT-20260728-005-001"
+completion_id: "AJC-AJ-RT-20260728-005-001"
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1061
+    relationship_row_count: 5321
+    semantic_row_count: 1061
+    vault_row_count: 1061
+    local_cache_only_warning_count: 0
+  authority_note: "Generated Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+  refresh_needed: false
+  refresh_performed: false
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"source equivalent variational object\" --limit 10 --json"
+      query_type: "search"
+      query_text: "source equivalent variational object"
+      returned_object_ids:
+        - "MD-V21-P7-T05-PARENT-FUSION-UNIVERSAL-SOURCE-COUPLING-V1"
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+  canonical_inspections:
+    - object_id: "MD-V21-P7-T05-PARENT-FUSION-UNIVERSAL-SOURCE-COUPLING-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260728-004/artifacts/parent_fusion_notes_p7_t05_source_coupling.md"
+      source_hash: "6b2c5fcfed4a23acc6b321d17b892c2a13643d9fd382ca9166843839bd96ec3e"
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "95b4017ecf918394ef51a290aaab16566aae07b8c2fd3ed074c327d529da725c"
+
+selected_next_route:
+  route_id: "v21_p7_t07_matter_package_audit_after_checkpoint"
+  route_label: "ontology-law-research-packet"
+  role_family: "smuggling-auditor@0.2.0"
+  worker_skill: "continue-research"
+  selected_next_packet_type: "audit_or_review"
+  task_type: "v21_p7_t07_matter_package_audit"
+  plan_task_id: "P7-T07"
+  strategy_id: "audit_source_variational_matter_package_v1"
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "Determine whether the package establishes genuine matter coupling in scope."
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  adoption_status: "blocked_adoption_open_continuation"
+  physics_promotion_authorized: false

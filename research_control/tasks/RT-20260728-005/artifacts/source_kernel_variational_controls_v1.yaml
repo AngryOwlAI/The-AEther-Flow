@@ -1,0 +1,264 @@
+schema_id: "v21_p7_t06_source_kernel_variational_controls_v1"
+artifact_id: "P7T06-SOURCE-KERNEL-VARIATIONAL-CONTROLS-V1"
+task_id: "RT-20260728-005"
+job_id: "AJ-RT-20260728-005-001"
+plan_task_id: "P7-T06"
+status: "draft/control"
+candidate_status: "proposal-only"
+source_extension_status: "source-extension data"
+adoption_status: "blocked_adoption_open_continuation"
+claim_boundary_id: "CB-V21-P7-T06-SOURCE-VARIATIONAL-OBJECT-001"
+candidate_id: "SourceKernelDirichletVariationalCandidate_v1"
+source_flux_id: "SourceVariationalFluxRecord_v1"
+obstruction_id: "OBST-P7T06-DIRECTIONAL-KERNEL-NONVARIATIONAL-001"
+
+matrix_conventions:
+  kernel_orientation: "rows are source configurations and columns are target configurations"
+  relation_to_p7_t02_update_matrix: "the row kernel is the transpose of the target-row source-column bookkeeping update matrix"
+  row_normalization: "every kernel row sums to one"
+  coefficient_domain: "nonnegative rational numbers"
+  probe_pairing: "standard finite Euclidean pairing on Q^Omega"
+  composition_index: "formal update count only; not physical time or causal order"
+
+control_families:
+  - control_id: "P7T06-CONTROL-IDENTITY-001"
+    predecessor_control: "P7T02-CONTROL-DEGENERATE-NONNULL-001"
+    branch: "valid_degenerate"
+    states: ["x_d"]
+    row_kernel:
+      - ["1"]
+    symmetric_part:
+      - ["1"]
+    directional_residue:
+      - ["0"]
+    variational_laplacian:
+      - ["0"]
+    full_directional_operator:
+      - ["0"]
+    probe:
+      q: ["7/3"]
+    functional_value: "0"
+    first_variation: ["0"]
+    flux_matrix:
+      - ["0"]
+    closed_total: "0"
+    full_directional_scalar_quadratic_representable: true
+    status: "valid_null_variation"
+  - control_id: "P7T06-CONTROL-POSITIVE-FORWARD-001"
+    predecessor_control: "P7T02-CONTROL-POSITIVE-PROPAGATION-001"
+    branch: "valid_positive_directional"
+    states: ["x_u", "x_v"]
+    row_kernel:
+      - ["1/2", "1/2"]
+      - ["0", "1"]
+    symmetric_part:
+      - ["1/2", "1/4"]
+      - ["1/4", "1"]
+    directional_residue:
+      - ["0", "1/4"]
+      - ["-1/4", "0"]
+    variational_laplacian:
+      - ["1/4", "-1/4"]
+      - ["-1/4", "1/4"]
+    full_directional_operator:
+      - ["1/2", "-1/2"]
+      - ["0", "0"]
+    probe:
+      q: ["2", "-1"]
+      eta: ["3", "5"]
+    functional_value: "9/8"
+    first_variation: ["3/4", "-3/4"]
+    directional_derivative: "-3/2"
+    flux_matrix:
+      - ["0", "3/4"]
+      - ["-3/4", "0"]
+    closed_total: "0"
+    boundary_subset: ["x_u"]
+    boundary_flux: "3/4"
+    directional_residue_nonzero: true
+    full_directional_scalar_quadratic_representable: false
+    exact_failure: "I-P is nonsymmetric"
+    status: "constructive_variational_part_with_precise_full_update_obstruction"
+  - control_id: "P7T06-CONTROL-SYMMETRIC-AVERAGING-001"
+    source_status: "task-local algebra control"
+    branch: "valid_symmetric"
+    states: ["x_0", "x_1"]
+    row_kernel:
+      - ["1/2", "1/2"]
+      - ["1/2", "1/2"]
+    symmetric_part:
+      - ["1/2", "1/2"]
+      - ["1/2", "1/2"]
+    directional_residue:
+      - ["0", "0"]
+      - ["0", "0"]
+    variational_laplacian:
+      - ["1/2", "-1/2"]
+      - ["-1/2", "1/2"]
+    full_directional_operator:
+      - ["1/2", "-1/2"]
+      - ["-1/2", "1/2"]
+    probe:
+      q: ["1", "0"]
+    functional_value: "1/4"
+    first_variation: ["1/2", "-1/2"]
+    full_directional_scalar_quadratic_representable: true
+    exact_meaning: "the obstruction is not universal across all finite row kernels"
+    status: "valid_reversible_control"
+  - control_id: "P7T06-CONTROL-THREE-CYCLE-001"
+    source_status: "task-local algebra control"
+    branch: "valid_directional_cycle"
+    states: ["x_0", "x_1", "x_2"]
+    row_kernel:
+      - ["0", "1", "0"]
+      - ["0", "0", "1"]
+      - ["1", "0", "0"]
+    symmetric_part:
+      - ["0", "1/2", "1/2"]
+      - ["1/2", "0", "1/2"]
+      - ["1/2", "1/2", "0"]
+    directional_residue:
+      - ["0", "1/2", "-1/2"]
+      - ["-1/2", "0", "1/2"]
+      - ["1/2", "-1/2", "0"]
+    variational_laplacian:
+      - ["1", "-1/2", "-1/2"]
+      - ["-1/2", "1", "-1/2"]
+      - ["-1/2", "-1/2", "1"]
+    full_directional_operator:
+      - ["1", "-1", "0"]
+      - ["0", "1", "-1"]
+      - ["-1", "0", "1"]
+    probe:
+      q: ["2", "0", "-1"]
+    functional_value: "7/2"
+    first_variation: ["5/2", "-1/2", "-2"]
+    closed_total: "0"
+    directional_residue_nonzero: true
+    full_directional_scalar_quadratic_representable: false
+    status: "independent_exact_directional_control"
+
+variation_test_vectors:
+  - test_id: "P7T06-VAR-FORWARD-001"
+    control_id: "P7T06-CONTROL-POSITIVE-FORWARD-001"
+    q: ["2", "-1"]
+    eta: ["3", "5"]
+    epsilon: "1/7"
+    exact_difference_quotient:
+      value: "-10/7"
+      decomposition: "D V(q)[eta]+epsilon V(eta)"
+    exact_directional_derivative: "-3/2"
+    exact_quadratic_remainder: "1/14"
+  - test_id: "P7T06-VAR-CYCLE-001"
+    control_id: "P7T06-CONTROL-THREE-CYCLE-001"
+    q: ["2", "0", "-1"]
+    eta: ["-1", "3", "2"]
+    epsilon: "1/5"
+    exact_difference_quotient:
+      value: "-67/10"
+      decomposition: "D V(q)[eta]+epsilon V(eta)"
+    exact_directional_derivative: "-8"
+    exact_quadratic_remainder: "13/10"
+
+boundary_controls:
+  - boundary_id: "P7T06-BOUNDARY-FORWARD-XU-001"
+    control_id: "P7T06-CONTROL-POSITIVE-FORWARD-001"
+    subset: ["x_u"]
+    internal_flux_sum: "0"
+    outward_crossing_flux_sum: "3/4"
+    subset_divergence_sum: "3/4"
+    exact_match: true
+  - boundary_id: "P7T06-BOUNDARY-CYCLE-X0-X1-001"
+    control_id: "P7T06-CONTROL-THREE-CYCLE-001"
+    subset: ["x_0", "x_1"]
+    internal_flux_cancels: true
+    exact_match: true
+
+anomaly_controls:
+  - anomaly_id: "P7T06-ANOMALY-COMPATIBLE-001"
+    control_id: "P7T06-CONTROL-POSITIVE-FORWARD-001"
+    attempted_residual: ["3/4", "-3/4"]
+    total: "0"
+    compatibility: "compatible_with_closed_balance"
+    physical_anomaly_claimed: false
+  - anomaly_id: "P7T06-ANOMALY-INCOMPATIBLE-001"
+    control_id: "P7T06-CONTROL-POSITIVE-FORWARD-001"
+    attempted_residual: ["1", "0"]
+    total: "1"
+    compatibility: "no_solution_to_L_C_q=a"
+    exact_reason: "1^T L_C=0 forces every image vector to have zero total"
+    physical_anomaly_claimed: false
+
+malformed_controls:
+  - control_id: "P7T06-CONTROL-MALFORMED-NONNORMALIZED-001"
+    attempted_row_kernel:
+      - ["2/3", "2/3"]
+      - ["0", "1"]
+    failed_condition: "P7-T02 row normalization"
+    result: "malformed_source_kernel"
+  - control_id: "P7T06-CONTROL-MALFORMED-NEGATIVE-001"
+    attempted_row_kernel:
+      - ["2", "-1"]
+      - ["0", "1"]
+    failed_condition: "P7-T02 nonnegative rational coefficient"
+    result: "malformed_source_kernel"
+  - control_id: "P7T06-CONTROL-MALFORMED-TARGET-IMPORT-001"
+    attempted_functional_selector: "choose C or q from a target metric desired Einstein equation benchmark result detector outcome validator registry generated derivative or checkpoint"
+    failed_condition: "CB-V21-P7-T06-SOURCE-VARIATIONAL-OBJECT-001"
+    result: "forbidden_target_import"
+  - control_id: "P7T06-CONTROL-MALFORMED-PHYSICAL-OVERREAD-001"
+    attempted_interpretation: "call V_src a physical matter action D_src a stress-energy tensor or J_src a physical conserved current"
+    failed_condition: "model-to-world interpretation is absent"
+    result: "forbidden_model_to_world_overread"
+
+obstruction_scope:
+  operator: "I-P_fwd"
+  variable_space: "Q^{x_u,x_v}"
+  functional_class: "scalar quadratic functions"
+  pairing: "declared Euclidean pairing"
+  equality_required: "gradient W(q)=(I-P_fwd)q for every q"
+  exact_obstruction: "operator is nonsymmetric"
+  not_obstructed:
+    - "the symmetric source functional V_src"
+    - "identity and symmetric averaging controls"
+    - "auxiliary variables"
+    - "constrained or nonscalar variational principles"
+    - "different lawfully derived pairings"
+    - "nonlocal source constructions"
+    - "future source-side laws"
+    - "physical matter actions"
+    - "the full theory"
+
+finding_counts:
+  finite_control_families: 4
+  constructive_variational_controls: 4
+  nontrivial_constructive_controls: 3
+  full_directional_representable_controls: 2
+  full_directional_obstructed_controls: 2
+  boundary_controls: 2
+  compatible_algebraic_anomalies: 1
+  incompatible_algebraic_anomalies: 1
+  malformed_controls: 4
+  theorem_count: 2
+  obstruction_count: 1
+  physical_action_claims: 0
+  stress_energy_claims: 0
+  physical_conservation_claims: 0
+
+authority_limits:
+  current_ontology_derives_candidate: false
+  source_law_adopted: false
+  variational_law_adopted: false
+  physical_matter_coupling_derived: false
+  physical_action_derived: false
+  stress_energy_derived: false
+  physical_current_derived: false
+  physical_conservation_law_derived: false
+  effective_geometry_derived: false
+  equivalence_principle_behavior_derived: false
+  einstein_equations_derived: false
+  benchmark_recovered: false
+  proof_authority: false
+  physics_promotion_authorized: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false

@@ -1,0 +1,384 @@
+schema_id: "v21_p7_t06_child_phys_math_source_variational_v1"
+artifact_id: "P7T06-CHILD-PHYS-MATH-SOURCE-VARIATIONAL-V1"
+task_id: "RT-20260728-005"
+job_id: "AJ-RT-20260728-005-001"
+decision_id: "DDR-20260728-005"
+plan_task_id: "P7-T06"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+artifact_status: "draft/control"
+candidate_status: "proposal-only"
+source_extension_status: "source-extension data"
+adoption_status: "blocked_adoption_open_continuation"
+review_context: "internal parent-child synthesis input"
+target_derivation_milestone: "matter_coupling"
+milestone_burden: "Supply the variational matter input required for Einstein-equation work."
+claim_boundary_id: "CB-V21-P7-T06-SOURCE-VARIATIONAL-OBJECT-001"
+candidate_id: "SourceKernelDirichletVariationalCandidate_v1"
+source_flux_id: "SourceVariationalFluxRecord_v1"
+obstruction_id: "OBST-P7T06-DIRECTIONAL-KERNEL-NONVARIATIONAL-001"
+result_classification: "precise_obstruction_with_constructive_restricted_variational_object"
+
+source_hash_method: "SHA-256 of exact source bytes inspected during child execution"
+source_basis:
+  - path: "SOUL.md"
+    sha256: "bde009787dd94f6648853649da82ac5163cabc45e425117be9e69eb0c354ef8a"
+    authority_use: "repository mathematical and scientific reasoning discipline"
+  - path: "AGENTS.md"
+    sha256: "3a987a7ae1fb0bc4f91dbcbe0e1432eeecacf7febc1256e8498860016f4baf29"
+    authority_use: "root source-only, ontology-law, and no-promotion boundary"
+  - path: "research_control/AGENTS.md"
+    sha256: "c93e14bb2cc6e7bbc5c299085f8843ca84d714cdaef99b2b78a46715b5b310ae"
+    authority_use: "tracked research-control and proposal-status constraints"
+  - path: ".agents/roles/physics/ontology-formalizer.v0.2.0.md"
+    sha256: "429a37d58f93c0693e3f704ba98edc00487d77b92008565acc295e7b20dc5a6c"
+    authority_use: "formal-object, theorem-with-proof, source-extension, and no-adoption contract"
+  - path: "research_control/tasks/RT-20260728-005/00_TASK.yaml"
+    sha256: "1975a8e199babc8f7a5bbec791aa0914fda5d26e6613a1f5e9eadd5a2638ce70"
+    authority_use: "active P7-T06 objective and exact claim boundary"
+  - path: "research_control/tasks/RT-20260728-005/DDR-20260728-005.md"
+    sha256: "0461f2678992117bf8e679e4b82770699552344de6d1f6b757fefa40f3182c2c"
+    authority_use: "selected finite-kernel construction, directional-update test, and synthesis requirement"
+  - path: "research_control/tasks/RT-20260728-005/jobs/AJ-RT-20260728-005-001.yaml"
+    sha256: "4247e407fdc9343bbbfc0df96b27c5d422c32dab1878502cde2509b1fa7e0c11"
+    authority_use: "outer AgentJob assumptions, theorem IDs, obstruction ID, and authority limits at inspection time"
+  - path: "research_control/tasks/RT-20260728-005/roles/ontology-formalizer@0.2.0--RT-20260728-005.yaml"
+    sha256: "5ecdc6d132baebab93140acca21e8bf026d2d5f0a42310d2c15b9e9478caa7fb"
+    authority_use: "one-job execution overlay and source-flux-only conservation wording"
+  - path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+    sha256: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+    authority_use: "P7-T06 variational-object alternative, variation reproducibility, sign, dimension, boundary, and anomaly burdens"
+  - path: "research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_candidate_v1.tex"
+    sha256: "65ac095f5cdf4c2e319365c8b0e024d031b19d9fc2b8102e59997afa1e8f9129"
+    authority_use: "fixed P7-T02 finite enabled-row kernel, positive two-state control, and nonphysical bookkeeping semantics"
+  - path: "research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_spec_v1.yaml"
+    sha256: "936d2aa6dfea3d263675468ff581190240efde84c1241ad971a8c1383a065a97"
+    authority_use: "machine-readable P7-T02 endpoint kernel and finite update definitions"
+  - path: "research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_controls_v1.yaml"
+    sha256: "af7fc976590b4ca82fca5c34c6f30091f6599428b8005cf3932ce03f92f7d779"
+    authority_use: "identity-only and identity-plus-forward exact rational controls"
+  - path: "research_control/tasks/RT-20260728-004/artifacts/universal_source_coupling_map_candidate_v1.tex"
+    sha256: "5a9a8f5542a7c8b714bbff7ec06c06449b0c66c0196266051562caf9ce602c6b"
+    authority_use: "fixed P7-T05 restricted source comparison and universal-sector nonselection result"
+  - path: "research_control/tasks/RT-20260728-004/artifacts/universal_source_coupling_map_spec_v1.yaml"
+    sha256: "75a3564fc0ea37ac776b2602c5f260514e5f48ae861ac049f87f9d92532f85db"
+    authority_use: "machine-readable P7-T05 equipped-control scope and variational-object obligation"
+  - path: "research_control/tasks/RT-20260728-004/artifacts/universal_source_coupling_controls_v1.yaml"
+    sha256: "d8f8ceabbba294be8f268367d573e028774845f7d022e1b6c61a5e16623352dd"
+    authority_use: "P7-T05 row-target/column-source matrix convention and same-sector forward control"
+
+fixed_assumptions:
+  finite_carrier:
+    symbol: "Omega"
+    type: "finite nonempty P7-T02 configuration carrier"
+    cardinality: "n>=1"
+  endpoint_kernel:
+    symbol: "P"
+    type: "n by n matrix over Q_nonnegative"
+    convention: "P_xy is the endpoint weight from source x to target y; source configurations index rows"
+    normalization: "sum_y P_xy=1 for every x"
+    interpretation: "proposal-only endpoint bookkeeping kernel; not physical probability, rate, frequency, coupling, or evolution law"
+    column_bookkeeping_note: "With column bookkeeping vectors, the P7-T02 update matrix is P^T; this transpose convention does not change the nonsymmetry obstruction."
+  source_probe:
+    symbol: "q"
+    type: "arbitrary element of Q^Omega, extended to R^Omega only for ordinary differentiation language"
+    dimensions: "dimensionless"
+    interpretation: "formal source probe with no physical field, matter, time, detector, metric, or spacetime semantics"
+  kernel_split:
+    definitions:
+      - "C=(P+P^T)/2"
+      - "A=(P-P^T)/2"
+    exact_types:
+      C: "symmetric nonnegative rational conductance matrix"
+      A: "skew-symmetric rational directional-residue matrix"
+    identities:
+      - "P=C+A"
+      - "C^T=C"
+      - "A^T=-A"
+    semantic_limit: "C is not generally row normalized and must not be relabelled as an adopted transition kernel."
+  variational_class:
+    domain: "the full unconstrained coordinate space R^Omega"
+    pairing: "the standard coordinate pairing"
+    scalar_class: "scalar quadratic functionals for the exact representation test; the Hessian argument also covers C^2 scalar functionals whose gradient is the stated linear operator"
+    excluded_variants:
+      - "weighted inner-product gradients"
+      - "restriction to a proper constraint subspace"
+      - "auxiliary variables or doubled fields"
+      - "nonlocal path-dependent functionals"
+      - "nonsmooth generalized gradients"
+  boundary_subset:
+    symbol: "R"
+    type: "an arbitrary subset of Omega"
+    complement: "Omega minus R"
+    orientation: "J_xy is counted outward from x toward y"
+
+constructive_variational_object:
+  functional:
+    symbol: "V_src(q)"
+    definition: "V_src(q)=(1/4) sum_(x,y in Omega) C_xy (q_y-q_x)^2"
+    equivalent_unordered_form: "V_src(q)=(1/2) sum_({x,y},x!=y) C_xy (q_y-q_x)^2, with each unordered pair counted once"
+    coefficient_field: "Q on rational probes and R after scalar extension"
+    dimensions: "dimensionless"
+    sign: "V_src(q)>=0 because C_xy>=0"
+    diagonal_dependence: "none; every x=y summand vanishes"
+    shift_invariance: "V_src(q+c 1)=V_src(q)"
+    kernel_statement: "V_src(q)=0 exactly when q is constant on each connected component of the undirected positive-C support graph"
+  first_variation:
+    derivative_symbol: "D_x(q)"
+    exact_formula: "D_x(q)=partial V_src/partial q_x=sum_y C_xy(q_x-q_y)"
+    directional_formula: "delta V_src(q)[h]=sum_x D_x(q) h_x"
+    proof:
+      - "Differentiate the ordered-pair double sum once in the first-index occurrences and once in the second-index occurrences."
+      - "Each contribution carries factor 1/2 after differentiating the square."
+      - "Use C_xy=C_yx and rename the second-index sum; the two half-sums coincide."
+      - "Their sum is D_x(q)=sum_y C_xy(q_x-q_y)."
+  hessian:
+    symbol: "L_C"
+    formula: "L_C=Diag(C 1)-C"
+    exact_properties:
+      - "L_C^T=L_C"
+      - "L_C 1=0"
+      - "q^T L_C q=2 V_src(q)>=0"
+      - "D(q)=L_C q"
+    caveat: "L_C is a conductance graph Laplacian; it is not generally I-C and is not generally the symmetric part of I-P."
+  source_flux:
+    symbol: "J_xy(q)"
+    definition: "J_xy(q)=C_xy(q_x-q_y)"
+    exact_properties:
+      - "J_yx(q)=-J_xy(q)"
+      - "J_xx(q)=0"
+      - "D_x(q)=sum_y J_xy(q)"
+    interpretation: "finite antisymmetric source-flux bookkeeping record only"
+  balance_identities:
+    closed:
+      formula: "sum_x D_x(q)=sum_(x,y) J_xy(q)=0"
+      proof: "Pair each ordered edge (x,y) with (y,x); antisymmetry cancels the pair exactly."
+      required_conditions:
+        - "Omega is finite"
+        - "C is symmetric"
+        - "the full carrier Omega is summed"
+      anomaly_term: "zero within the declared finite symmetric-conductance object"
+    boundary:
+      formula: "sum_(x in R) D_x(q)=sum_(x in R,y notin R) J_xy(q)"
+      proof: "Internal terms with x,y both in R cancel pairwise; only cross-boundary terms remain."
+      orientation: "positive right-hand side is outward under J_xy=C_xy(q_x-q_y)"
+      anomaly_branches:
+        - condition: "a non-symmetric edge weight is substituted for C"
+          result: "pairwise cancellation is not established; the residual must be reported rather than called conservation"
+        - condition: "only a subset R is summed"
+          result: "the exact cross-boundary flux remains"
+        - condition: "an external source term s_x is added to D_x"
+          result: "sum_(x in R) D_x equals boundary flux plus the explicitly declared source contribution, subject to the new definition"
+        - condition: "the input is malformed or target-derived"
+          result: "no task-local variational or balance conclusion"
+
+directional_update_representation_test:
+  target_operator:
+    row_source_convention: "H=I-P"
+    column_bookkeeping_convention: "H_col=I-P^T=H^T"
+    question: "Does a scalar quadratic Q on the full standard coordinate space satisfy grad Q(q)=Hq for every q?"
+  necessary_and_sufficient_condition:
+    statement: "Such a scalar quadratic exists in this fixed class if and only if H is symmetric, equivalently P is symmetric."
+    necessity_proof:
+      - "The gradient of a scalar quadratic has the form S q+b with S symmetric, because only the symmetric part of its quadratic coefficient contributes."
+      - "Equality with the homogeneous linear map Hq for every q forces b=0 and S=H."
+      - "Therefore H=H^T, equivalently P=P^T."
+      - "More generally, if a C^2 scalar has gradient Hq on an open set, its constant Hessian is H and equality of mixed partials again forces H=H^T."
+    sufficiency_proof:
+      - "If P=P^T and P is row normalized, then C=P and C 1=1."
+      - "Therefore L_C=I-P=H."
+      - "The displayed V_src has grad V_src=Hq."
+  relation_to_kernel_split:
+    antisymmetric_part: "Skew(H)=(H-H^T)/2=-A"
+    consequence: "Any nonzero directional residue A is an immediate obstruction to full-update scalar-gradient representation in the fixed class."
+    symmetric_residual: "Sym(H)=I-C"
+    variational_hessian: "L_C=Diag(C 1)-C"
+    equality_condition: "L_C=Sym(H) exactly when C 1=1; because P 1=1, this is equivalent to P^T 1=1, i.e. P is doubly stochastic."
+    scope_warning: "Even when P is doubly stochastic, a nonzero A still obstructs H itself; only Sym(H) is represented by L_C."
+
+forward_control_exact_check:
+  control_id: "P7T02-CONTROL-POSITIVE-PROPAGATION-001"
+  state_order: ["x_u", "x_v"]
+  row_source_kernel:
+    P:
+      - ["1/2", "1/2"]
+      - ["0", "1"]
+    P_transpose:
+      - ["1/2", "0"]
+      - ["1/2", "1"]
+  split:
+    C:
+      - ["1/2", "1/4"]
+      - ["1/4", "1"]
+    A:
+      - ["0", "1/4"]
+      - ["-1/4", "0"]
+    C_row_sums: ["3/4", "5/4"]
+  constructive_object:
+    functional: "V_src(q)=((q_u-q_v)^2)/8"
+    first_variation:
+      D_u: "(q_u-q_v)/4"
+      D_v: "(q_v-q_u)/4"
+    hessian_L_C:
+      - ["1/4", "-1/4"]
+      - ["-1/4", "1/4"]
+    flux:
+      J_uv: "(q_u-q_v)/4"
+      J_vu: "(q_v-q_u)/4"
+    closed_balance: "D_u+D_v=0"
+    boundary_example: "For R={x_u}, D_u=J_uv."
+  full_update_residual:
+    I_minus_P:
+      - ["1/2", "-1/2"]
+      - ["0", "0"]
+    transpose:
+      - ["1/2", "0"]
+      - ["-1/2", "0"]
+    nonsymmetry_witness: "(I-P)_(u,v)=-1/2 while (I-P)_(v,u)=0"
+    not_equal_to_L_C: true
+    not_equal_to_symmetric_part:
+      symmetric_part_I_minus_P:
+        - ["1/2", "-1/4"]
+        - ["-1/4", "0"]
+      reason: "C is not row normalized because P is not column normalized."
+  exact_rational_probe:
+    q: ["2/3", "-5/7"]
+    h: ["11/13", "3/5"]
+    V_src_q: "841/3528"
+    D_q: ["29/84", "-29/84"]
+    J_q:
+      - ["0", "29/84"]
+      - ["-29/84", "0"]
+    global_balance: "0"
+    boundary_balance_R_xu: "29/84"
+    verification_method: "Python fractions.Fraction exact arithmetic; no floating-point tolerance"
+    verification_result: "PASS"
+
+additional_controls_recommended:
+  - control_id: "P7T06-CONTROL-IDENTITY-ONLY-001"
+    P:
+      - ["1", "0"]
+      - ["0", "1"]
+    expected:
+      - "C=P and A=0"
+      - "V_src=0"
+      - "D=0 and J=0"
+      - "I-P=0 is represented exactly"
+    purpose: "valid degenerate branch"
+  - control_id: "P7T06-CONTROL-SYMMETRIC-MIXING-001"
+    P:
+      - ["1/2", "1/2"]
+      - ["1/2", "1/2"]
+    expected:
+      - "C=P and A=0"
+      - "C 1=1"
+      - "L_C=I-P"
+      - "the full residual has the exact scalar quadratic representation"
+    purpose: "nontrivial constructive full-update positive branch"
+  - control_id: "P7T06-CONTROL-FORWARD-OBSTRUCTION-001"
+    source: "fixed P7-T02 forward control"
+    expected:
+      - "A is nonzero"
+      - "I-P is nonsymmetric"
+      - "the restricted symmetric-conductance functional remains valid"
+      - "the full update is obstructed in the fixed scalar-gradient class"
+    purpose: "precise obstruction without discarding the restricted construction"
+  - control_id: "P7T06-CONTROL-BOUNDARY-SUBSET-001"
+    expected: "sum_(x in R) D_x equals the explicitly oriented cross-boundary J sum"
+    purpose: "boundary term and sign check"
+
+mathematical_findings:
+  - finding_id: "P7T06-MATH-FINDING-CONSTRUCTIVE-DIRICHLET-001"
+    disposition: "retain"
+    statement: "Every declared finite nonnegative rational endpoint kernel P determines a proposal-only nonnegative Dirichlet functional through C=(P+P^T)/2, with exact gradient L_C q and antisymmetric source-flux balance."
+    scope: "one declared finite P7-T02 control at a time"
+    theorem_id: "P7T06-THM-SOURCE-VARIATION-FLUX-BALANCE-001"
+  - finding_id: "P7T06-MATH-FINDING-DIRECTIONAL-OBSTRUCTION-001"
+    disposition: "retain"
+    statement: "The fixed forward P7-T02 kernel has nonsymmetric I-P, so no scalar quadratic on the full standard coordinate space has gradient (I-P)q for every q."
+    scope: "the fixed forward operator and declared scalar-gradient class"
+    theorem_id: "P7T06-THM-DIRECTIONAL-UPDATE-VARIATIONAL-OBSTRUCTION-001"
+    obstruction_id: "OBST-P7T06-DIRECTIONAL-KERNEL-NONVARIATIONAL-001"
+    global_no_go_claimed: false
+  - finding_id: "P7T06-MATH-FINDING-LAPLACIAN-DISTINCTION-001"
+    disposition: "must_be_explicit_in_parent_fusion"
+    statement: "The functional Hessian is L_C=Diag(C 1)-C, not generally Sym(I-P)=I-C. Therefore the construction is kernel-derived and source-equivalent only in a restricted declared sense; it is not automatically an action for the symmetric part of the P7-T02 update residual."
+  - finding_id: "P7T06-MATH-FINDING-CONSERVATION-SCOPE-001"
+    disposition: "retain_with_guard"
+    statement: "The zero total divergence is an algebraic cancellation of an antisymmetric finite source flux. It does not derive a physical conservation law."
+
+conflicts_and_risks:
+  - risk_id: "P7T06-RISK-SOURCE-EQUIVALENT-AMBIGUITY-001"
+    severity: "high"
+    issue: "Calling V_src source-equivalent without qualification can be misread as exact equivalence to the full P7-T02 update or to a physical matter action."
+    resolution: "Use the exact phrase 'kernel-derived symmetric-conductance source variational object'; separately display L_C, I-P, and their difference."
+  - risk_id: "P7T06-RISK-MATRIX-CONVENTION-001"
+    severity: "medium"
+    issue: "P7-T02 writes its bookkeeping update with rows target and columns source, while the endpoint kernel naturally has rows source and columns target."
+    resolution: "Declare P_xy as source-row endpoint weights and state that the column-vector bookkeeping update is P^T. Show that I-P and I-P^T are both nonsymmetric for the forward control."
+  - risk_id: "P7T06-RISK-CONDUCTANCE-NORMALIZATION-001"
+    severity: "high"
+    issue: "C=(P+P^T)/2 need not be row normalized even when P is row normalized."
+    resolution: "Call C a conductance matrix, not a transition kernel; use L_C=Diag(C 1)-C rather than silently replacing it with I-C."
+  - risk_id: "P7T06-RISK-DIAGONAL-DATA-LOSS-001"
+    severity: "medium"
+    issue: "All diagonal holding weights disappear from V_src because q_x-q_x=0."
+    resolution: "Record that the functional retains only the symmetrized off-diagonal support and cannot reconstruct the full kernel."
+  - risk_id: "P7T06-RISK-OBSTRUCTION-OVERREACH-001"
+    severity: "high"
+    issue: "The nonsymmetric-Hessian argument does not exclude weighted gradients, constrained subspaces, auxiliary-field actions, path-dependent functionals, or future source extensions."
+    resolution: "Keep the obstruction scoped to the full standard coordinate space and the declared scalar-gradient class; do not state a global no-go."
+  - risk_id: "P7T06-RISK-PHYSICAL-CONSERVATION-OVERREAD-001"
+    severity: "high"
+    issue: "The identity sum_x D_x=0 may resemble a physical conservation law."
+    resolution: "Describe it only as finite source-flux balance from pairwise antisymmetry; no time derivative, Noether symmetry, energy, momentum, current, or stress-energy object is present."
+  - risk_id: "P7T06-RISK-UNIVERSALITY-001"
+    severity: "high"
+    issue: "P7-T05 proves that current sector data do not select one universal control/comparison family."
+    resolution: "Apply the construction conditionally to each explicitly declared P7-T02 kernel; do not claim universal matter-sector selection."
+
+claim_boundaries:
+  authorized:
+    - "define C and A from one declared finite rational P7-T02 kernel"
+    - "define the dimensionless proposal-only V_src"
+    - "derive its exact first variation, Hessian, source flux, closed balance, and boundary formula"
+    - "prove one fixed-class forward-kernel representability obstruction"
+    - "identify the symmetric-kernel positive branch"
+  prohibited:
+    - "physical matter action"
+    - "stress-energy tensor"
+    - "physical energy-momentum or charge conservation"
+    - "Noether theorem or diffeomorphism identity"
+    - "physical time evolution or dissipation law"
+    - "target metric, effective geometry, characteristic cone, or covariant derivative"
+    - "universal matter coupling or equivalence-principle behavior"
+    - "Einstein equations or lawful P8 matter input"
+    - "exact-GR derivation or benchmark promotion"
+    - "canonical ontology modification, candidate adoption, or source-law adoption"
+    - "proof or publication authority"
+    - "global no-go, global theory rejection, or future source-extension impossibility"
+  exact_status_pair: "blocked_adoption_open_continuation"
+  physics_promotion_authorized: false
+
+recommendations_to_parent:
+  - recommendation_id: "P7T06-REC-MATH-001"
+    action: "Retain both the constructive C-derived Dirichlet object and the distinct forward-update obstruction; neither result subsumes the other."
+  - recommendation_id: "P7T06-REC-MATH-002"
+    action: "State the first variation as D=L_C q with L_C=Diag(C 1)-C and include the exact rational forward matrices."
+  - recommendation_id: "P7T06-REC-MATH-003"
+    action: "State explicitly that L_C is not generally Sym(I-P); the forward control gives a concrete inequality."
+  - recommendation_id: "P7T06-REC-MATH-004"
+    action: "Use identity-only, symmetric-mixing, forward-obstruction, and boundary-subset controls in the deterministic validator."
+  - recommendation_id: "P7T06-REC-MATH-005"
+    action: "Fail closed if matrix orientation, row normalization, C symmetry, q typing, or source-only provenance is absent."
+  - recommendation_id: "P7T06-REC-MATH-006"
+    action: "Route the fused packet to P7-T07 adversarial source-provenance audit before any Gate or physical interpretation."
+
+child_conclusion:
+  constructive_result: "PASS within the proposal-only finite symmetric-conductance class"
+  directional_full_update_result: "PRECISE_OBSTRUCTION for the fixed forward kernel in the full standard-coordinate scalar-gradient class"
+  conservation_result: "exact finite algebraic source-flux balance only"
+  physical_action_or_stress_energy_result: "not established"
+  ontology_result: "current ontology does not derive or adopt the candidate; same-milestone continuation remains open"
+  remaining_uncertainty: "Whether a separately justified source extension supplies a physical model-to-world map, weighted variational structure, matter action, stress-energy object, or physical conservation law is unresolved."
