@@ -1,0 +1,384 @@
+% authority: science-draft
+% status: draft/control
+% route: candidate-construction-packet
+% adoption_status: blocked_adoption_open_continuation
+% candidate_constructor_result: constructed_candidate
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{xurl}
+\usepackage[hidelinks]{hyperref}
+
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newtheorem{nonconclusion}{Non-conclusion}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\One}{\mathbf 1}
+\newcommand{\Aspace}{\mathcal A_C}
+\newcommand{\Qspace}{\mathcal Q_C}
+\newcommand{\Kspace}{\mathcal K_C}
+\newcommand{\Sclosure}{S_C}
+
+\title{FiniteSourceClosureConstraintCandidate\_v1\\
+P8-T03 Proposal-Only Closure Calculation}
+\author{The \AE ther-Flow Research Project}
+\date{2026-07-29}
+
+\begin{document}
+\sloppy
+\maketitle
+
+\section{Decisive result and authority boundary}
+
+This packet constructs one nontrivial finite closure-constraint candidate
+from the exact adopted P7 finite source-matter action.  The decisive
+Candidate Constructor result is
+\[
+  \texttt{constructed\_candidate}.
+\]
+The new object is \texttt{draft/control}, \texttt{proposal-only},
+\texttt{source-extension data}, with
+\texttt{blocked\_adoption\_open\_continuation}.  It is not a canonical
+ontology candidate, an adopted gravitational law, a target-spacetime
+effective action, an effective metric, an Einstein--Hilbert action, an
+Einstein equation, or an exact-GR recovery theorem.
+
+The construction closes all ten assumptions of
+\texttt{LocalEffectiveActionClosureTarget\_v1} only in the exact finite
+candidate envelope defined below.  It does not close that target in an
+unscoped continuum or physical gravitational regime.  The labels
+``gravitational carrier'' and ``closure'' name the proposed P8 role of the
+new variable; they do not establish that physical interpretation.
+
+\section{Fixed source basis}
+
+Let \(\Omega\) be one declared finite carrier from the adopted P7-T02
+source-matter kernel and let \(P\in\Q_{\geq0}^{\Omega\times\Omega}\) use the
+row convention
+\[
+  \sum_yP_{xy}=1.
+\]
+The exact P7-T06 construction supplies
+\begin{equation}
+ C=\frac12(P+P^{\mathsf T}),\qquad
+ (L_C)_{xy}=
+ \begin{cases}
+ -C_{xy},&x\ne y,\\
+ \displaystyle\sum_{z\ne x}C_{xz},&x=y,
+ \end{cases}
+ \label{eq:laplacian}
+\end{equation}
+and the adopted source-matter action
+\begin{equation}
+ V_{\mathrm{src}}(u)
+ =\frac14\sum_{x,y}C_{xy}(u_y-u_x)^2
+ =\frac12u^{\mathsf T}L_Cu.
+ \label{eq:source-action}
+\end{equation}
+P7-T08 gives this exact finite action, its first variation \(L_Cu\), and
+its componentwise balance a physical source-matter interpretation by
+constitutive postulate in their declared domain.  It does not derive the
+P8 object below.
+
+Let \(\Pi_C\) be the connected components of the undirected support
+\(\{\{x,y\}:x\ne y,\ C_{xy}>0\}\).  Define
+\begin{align}
+ \Kspace
+   &=\ker L_C
+     =\{k\in\Q^\Omega:k\text{ is constant on every }K\in\Pi_C\},\\
+ \Qspace
+   &=\Q^\Omega/\Kspace,\\
+ \Aspace
+   &=\Kspace^\perp
+     =\left\{a\in\Q^\Omega:
+       \sum_{x\in K}a_x=0\text{ for every }K\in\Pi_C\right\}.
+ \label{eq:spaces}
+\end{align}
+The quotient \(\Qspace\) is the proposal-only finite gravitational carrier.
+The balanced space \(\Aspace\) is the exact codomain of the adopted
+source first variation
+\[
+  a_C(u):=L_Cu\in\Aspace.
+\]
+No target atlas, metric, dimension, causal cone, stress-energy tensor, or
+benchmark value enters these definitions.
+
+\section{Candidate action family and selected normalization}
+
+\begin{definition}[Finite source closure-constraint family]
+For dimensionless coefficients \(\alpha>0\) and \(\beta\in\Q\), define
+\begin{equation}
+ \Sclosure^{\alpha,\beta}([h];u)
+ =\frac{\alpha}{2}h^{\mathsf T}L_Ch
+  -\beta\,a_C(u)^{\mathsf T}h,
+ \qquad [h]\in\Qspace,\quad u\in\Q^\Omega.
+ \label{eq:action}
+\end{equation}
+Because \(a_C(u)\in\Kspace^\perp\), the right-hand side is independent of
+the representative \(h\mapsto h+k\), \(k\in\Kspace\).
+\end{definition}
+
+The named candidate
+\(\texttt{FiniteSourceClosureConstraintCandidate\_v1}\) is the
+source-normalized member
+\[
+  \alpha=\beta=1.
+\]
+This normalization is an internal candidate convention: it makes the
+solution map equal to the quotient class of the source configuration.  It
+is not a derivation or calibration of Newton's constant, the speed of
+light, a cosmological coefficient, or any physical unit.  The ratio
+\(\beta/\alpha\) remains an explicit free coefficient for any attempted
+physical interpretation.
+
+\begin{theorem}[Exact finite variation, solvability, and uniqueness]
+\label{thm:closure}
+For every \(u\in\Q^\Omega\), the first variation of
+Equation~\eqref{eq:action} in the admitted direction
+\([\eta]\in\Qspace\) is
+\begin{equation}
+ \delta\Sclosure^{\alpha,\beta}([h];u)[\eta]
+ =\eta^{\mathsf T}\bigl(\alpha L_Ch-\beta a_C(u)\bigr).
+ \label{eq:first-variation}
+\end{equation}
+The Euler--Lagrange constraint is therefore
+\begin{equation}
+ \alpha L_Ch=\beta a_C(u)=\beta L_Cu.
+ \label{eq:constraint}
+\end{equation}
+It has exactly one solution class in \(\Qspace\),
+\begin{equation}
+ [h]=\frac{\beta}{\alpha}[u].
+ \label{eq:solution}
+\end{equation}
+For \(\alpha=\beta=1\), the closure map is
+\begin{equation}
+ \mathcal C_C:\Q^\Omega\longrightarrow\Qspace,
+ \qquad
+ \mathcal C_C(u)=[L_C^+a_C(u)]=[u],
+ \label{eq:closure-map}
+\end{equation}
+where \(L_C^+\) is the componentwise Moore--Penrose inverse over the
+orthogonal complement of \(\Kspace\).
+\end{theorem}
+
+\begin{proof}
+Symmetry of \(L_C\) gives Equation~\eqref{eq:first-variation}.
+Equation~\eqref{eq:constraint} is solvable because its right-hand side lies
+in \(\operatorname{im}L_C=\Kspace^\perp\).  Its solution difference obeys
+\(L_C(h-\frac{\beta}{\alpha}u)=0\), hence lies in \(\Kspace\).
+This proves existence and uniqueness on the quotient and
+Equation~\eqref{eq:closure-map}.
+\end{proof}
+
+\begin{corollary}[On-shell value]
+For the source-normalized member,
+\begin{equation}
+ \Sclosure([u];u)
+ =-\frac12u^{\mathsf T}L_Cu
+ =-V_{\mathrm{src}}(u).
+ \label{eq:on-shell}
+\end{equation}
+This algebraic identity is not a physical gravitational-energy statement.
+\end{corollary}
+
+\section{Closure-target assumption audit}
+
+The finite candidate instantiates the ten P8-T02 assumptions as follows.
+\begin{longtable}{p{0.08\linewidth}p{0.84\linewidth}}
+\toprule
+ID & Exact finite-candidate instantiation\\
+\midrule
+A0 &
+Inputs are the fixed adopted P7 finite kernel, action, first variation, and
+componentwise balance; the new quotient action is explicitly proposal-only.\\
+A1 &
+\(X=\Omega\); locality is the weighted support of \(C\);
+\(\Qspace=\Q^\Omega/\Kspace\); and \(\Aspace=\Kspace^\perp\).  No target
+atlas or metric is used.\\
+A2 &
+The source-to-matter response map is \(u\mapsto a_C(u)=L_Cu\), and the
+source-to-closure map is \(u\mapsto[L_C^+a_C(u)]=[u]\).  Domains, codomains,
+fibers, and failure branch are explicit.\\
+A3 &
+Counting measure and weighted radius-one neighborhoods define an exact
+finite local operator \(L_C\) of graph order two.\\
+A4 &
+The regime is the exact declared finite carrier; truncation order is
+\(N=2\); the remainder is identically zero.  No continuum scale is inferred.\\
+A5 &
+The adopted source variation \(a_C(u)\) descends to the
+representative-independent response
+\(\mathcal E_C([h];u)=\alpha L_Ch-\beta a_C(u)\).\\
+A6 &
+The linearization \(\alpha L_C\) is symmetric, so the finite Helmholtz
+condition holds exactly in the stipulated counting pairing.\\
+A7 &
+The action is a global finite sum of edge and vertex densities.  A fixed
+edge-ownership partition counts every unordered edge once, so overlap
+transgressions and the gluing obstruction vanish in this finite analogue.\\
+A8 &
+Weighted-graph automorphisms act equivariantly.  Component shifts are the
+declared gauge relation, and componentwise source balance is exactly the
+condition for gauge invariance and solvability.  This is not target covariant
+conservation.\\
+A9 &
+The quotient removes all componentwise zero modes; the finite principal
+operator is \(L_C\); admitted variations are quotient classes; and the
+closed finite carrier has no additional continuum boundary datum.\\
+\bottomrule
+\end{longtable}
+
+These entries establish a finite model of the antecedent, not a continuum
+local effective gravitational action.  In particular, A4 and A7 are exact
+finite specializations, and A8 supplies only a finite balance-to-gauge bridge.
+
+\section{Local density, gluing, symmetry, and boundary controls}
+
+Choose an ordering of the unordered edges
+\(E_C=\{\{x,y\}:x<y,\ C_{xy}>0\}\).  The quadratic density
+\[
+  \ell_{\{x,y\}}(h)=\frac{\alpha}{2}C_{xy}(h_y-h_x)^2
+\]
+and the vertex density \(-\beta a_x(u)h_x\) sum to
+Equation~\eqref{eq:action}.  On a finite cover, assign weights
+\(\omega_{i,e}\in\Q_{\geq0}\) with \(\sum_i\omega_{i,e}=1\) for each edge
+and similarly for vertices.  Local sums then glue exactly to the displayed
+global action; the overlap defect is zero by construction.  This is an
+explicit finite bookkeeping theorem, not a theorem about a continuum
+variational bicomplex.
+
+Every permutation \(R\) satisfying \(R^{\mathsf T}L_CR=L_C\) acts by
+\((h,u)\mapsto(Rh,Ru)\) and preserves \(\Sclosure^{\alpha,\beta}\).
+The shift \(h\mapsto h+k\), \(k\in\Kspace\), also preserves the action
+because \(a_C(u)\perp\Kspace\).  Conversely, an arbitrary forcing vector
+\(a\) yields a representative-independent action and a solvable constraint
+if and only if
+\[
+  \sum_{x\in K}a_x=0
+  \quad\text{for each }K\in\Pi_C.
+\]
+Thus the adopted P7 componentwise balance becomes a typed compatibility
+condition; it is not renamed as a Bianchi identity.
+
+\section{Spectral control and fixed two-state calculation}
+
+Let \(\lambda_*(C)\) be the smallest positive eigenvalue of \(L_C\) on
+\(\Kspace^\perp\).  For a balanced forcing \(a\), the solution
+\([h]=(\beta/\alpha)[L_C^+a]\) obeys
+\begin{equation}
+ \|[h]\|_2
+ \leq
+ \frac{|\beta|}{\alpha\lambda_*(C)}\|a\|_2.
+ \label{eq:gap-bound}
+\end{equation}
+This is a finite conditioning bound.  It is not continuum stability,
+causal well-posedness, or robustness of a physical metric.
+
+For the fixed P7-T02 forward control,
+\[
+ P=
+ \begin{pmatrix}1/2&1/2\\0&1\end{pmatrix},
+ \quad
+ L_C=
+ \begin{pmatrix}1/4&-1/4\\-1/4&1/4\end{pmatrix},
+ \quad
+ \lambda_*(C)=1/2.
+\]
+If \(u=(s,-s)^{\mathsf T}\), then
+\[
+ a_C(u)=(s/2,-s/2)^{\mathsf T},\qquad
+ [h]=[u],\qquad
+ \Sclosure([u];u)=-s^2/2.
+\]
+Equivalently, for an independently supplied balanced
+\(a=(s,-s)^{\mathsf T}\), the source-normalized solution is
+\(h=(2s,-2s)^{\mathsf T}\) in the zero-mean representative and the on-shell
+value is \(-2s^2\).
+
+\section{Coefficient and correction ledger}
+
+\begin{longtable}{p{0.18\linewidth}p{0.18\linewidth}p{0.56\linewidth}}
+\toprule
+Term & Status & Exact control statement\\
+\midrule
+\(\alpha\) &
+free, then normalized &
+Positive quadratic coefficient.  Candidate v1 sets \(\alpha=1\) by an
+internal dimensionless normalization, not by target matching.\\
+\(\beta\) &
+free, then normalized &
+Linear source coefficient.  Candidate v1 sets \(\beta=1\) so the closure
+map is \([u]\); no physical coupling strength is derived.\\
+\(C_{xy}\) &
+fixed &
+Inherited algebraically from the exact adopted P7 kernel through
+\((P+P^{\mathsf T})/2\).\\
+Cosmological term &
+absent by definition &
+No source-derived constant or volume term is supplied.  Absence from this
+candidate is not a theorem that it vanishes physically.\\
+Higher derivative terms &
+absent by definition &
+The exact finite action uses the radius-one Laplacian only.\\
+Nonlocal terms &
+absent by definition &
+The candidate includes no pseudoinverse in the action; \(L_C^+\) appears
+only in the solved response map.\\
+Boundary terms &
+zero on declared carrier &
+The action is on the full closed finite carrier.  Subset restrictions retain
+the exact P7 crossing-edge flux.\\
+Remainder &
+\(R_{1,2}=0\) &
+Exact only for the declared finite candidate.  No continuum expansion or
+suppression scale follows.\\
+Physical dimensions &
+undetermined &
+All displayed quantities are dimensionless.  No \(G\), \(c\), length,
+energy, or action unit is derived.\\
+\bottomrule
+\end{longtable}
+
+\section{Failure branches and downstream burden}
+
+The candidate fails closed under each of the following conditions:
+\begin{enumerate}
+\item if a proposed source \(a\) is not componentwise balanced, the quotient
+action is not representative-independent and the constraint is unsolvable;
+\item if a proposed coefficient has \(\alpha=0\), there is no invertible
+quotient quadratic form; if \(\alpha<0\), the candidate loses its finite
+minimum property;
+\item if a target atlas, metric, Einstein--Hilbert term, Einstein equation,
+or benchmark coefficient is used to interpret or calibrate the construction,
+the branch is invalid under the claim boundary;
+\item if the carrier is extended beyond the declared finite P7 domain, all
+locality, gluing, spectral, and remainder claims must be reproved.
+\end{enumerate}
+
+P8-T04 may vary this exact proposal-only candidate and compare the resulting
+finite constraint structurally with the field-equation burden.  It must
+preserve the decisive limitation: the present equation
+\[
+  L_Ch=L_Cu
+\]
+is a finite source closure constraint, not an Einstein-type field equation.
+No canonical adoption, effective metric, target stress-energy tensor,
+equivalence principle, Einstein equation, exact-GR recovery, benchmark
+promotion, proof, publication, push, or completed derivation is authorized.
+
+\begin{nonconclusion}
+The candidate constructs a mathematically exact finite variational constraint
+and a source-to-closure map.  It does not establish that \([h]\) is physical
+gravity, that \(L_C\) is a spacetime differential operator, or that its
+componentwise shift identity is diffeomorphism invariance or the Bianchi
+identity.
+\end{nonconclusion}
+
+\end{document}

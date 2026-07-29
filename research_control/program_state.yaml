@@ -1,11 +1,113 @@
 mode: "director_led_research_control"
-active_task_id: "RT-20260729-005"
-latest_handoff_id: "handoff-0901"
-current_status: "p8_t02_closure_target_formalized_scoped_obstruction_ready_for_checkpoint"
-claim_boundary_summary: "RT-20260729-005 formalizes LocalEffectiveActionClosureTarget_v1 with ten typed assumptions and records OBST-P8T02-LOCAL-EFFECTIVE-ACTION-CLOSURE-DATA-ABSENT-001 because the current source record does not instantiate the closure antecedent. It constructs no action, metric, conservation identity, or field equation and changes no Distance-to-GR row."
-next_plan_task_id: "P8-T03"
+active_task_id: "RT-20260729-006"
+latest_handoff_id: "handoff-0902"
+current_status: "p8_t03_finite_source_closure_constraint_candidate_ready_for_checkpoint"
+claim_boundary_summary: "RT-20260729-006 constructs FiniteSourceClosureConstraintCandidate_v1 as an exact finite proposal-only quotient action with constraint alpha L_C h=beta L_Cu and solution [h]=(beta/alpha)[u]. It creates a finite draft object only; physical gravity, target metric, target stress energy, Einstein equations, exact-GR recovery, adoption, and promotion remain open or blocked."
+next_plan_task_id: "P8-T04"
 next_worker_skill: "continue-research"
-next_recommended_action: "Run one governed checkpoint for AJ-RT-20260729-005-001. Only after it commits may one fresh bounded P8-T03 candidate-constructor packet attempt to construct the typed closure datum and local effective-action candidate or prove one exact scoped obstruction without target matching."
+next_recommended_action: "Run one governed checkpoint for AJ-RT-20260729-006-001. Only after it commits may one fresh bounded P8-T04 ontology-formalizer packet vary the exact finite candidate, derive its constraint and identity structure, and compare it structurally without promoting it to an Einstein equation."
+
+p8_t03_finite_source_closure_constraint:
+  task_id: "RT-20260729-006"
+  parent_task_id: "RT-20260729-005"
+  parent_handoff_id: "handoff-0901"
+  plan_task_id: "P8-T03"
+  next_plan_task_id: "P8-T04"
+  claim_boundary_id: "CB-V21-P8-T03-FINITE-SOURCE-CLOSURE-CONSTRAINT-001"
+  status: "PASS_P8_T03_FINITE_SOURCE_CLOSURE_CONSTRAINT_READY_FOR_CHECKPOINT"
+  work_item_status: "completed_ready_for_checkpoint"
+  milestone_disposition: "finite_draft_constraint_object_constructed_physical_gravity_and_einstein_equations_open"
+  adoption_status: "blocked_adoption_open_continuation"
+  target_derivation_milestone: "einstein_equations"
+  milestone_burden: "Produce the central gravitational-dynamics candidate."
+  route_label: "candidate-construction-packet"
+  selected_role_family: "candidate-constructor@0.2.0"
+  selected_worker_skill: "continue-research"
+  immutable_route_sha256: "ac7f1305783acafbc09e25fcafdb0a3e43e2de7787b2c1b6691170642006a3e3"
+  route_blocker_fingerprint: "db67205f25af59b7dc4f8a76ca6a1ed7966015f7023632f86b6062b2cbbb0a7c"
+  source_handoff_path: "research_control/handoffs/handoff-0901.yaml"
+  source_handoff_sha256: "fd008e350928af6535868e0d56506ef1ddd3f2eaf9e7ef70aaa79cdf94ea57dd"
+  dependency_checkpoint_commit: "12836379a62de3a54d3cbc125835c4fa7dd77806"
+  result_status: "constructed_finite_source_closure_constraint_candidate"
+  candidate_constructor_result: "constructed_candidate"
+  candidate_id: "FiniteSourceClosureConstraintCandidate_v1"
+  candidate_path: "research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_constraint_candidate_v1.tex"
+  candidate_sha256: "82dd10d8e91be3781ca4f21e7f9fbf2ce1a9108ae7191db22fed9dfe6086f2fa"
+  specification_path: "research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_constraint_spec_v1.yaml"
+  specification_sha256: "8840b205e8aa12d73f3e782ec6936eb96385bb5694c298b1bf41a2bdfe472626"
+  coefficient_ledger_path: "research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_coefficient_ledger_v1.yaml"
+  coefficient_ledger_sha256: "5948e1ab75e42f622e5cc7309c9a6598720021ff2c893126f93c6b0bc21b7372"
+  controls_path: "research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_controls_v1.yaml"
+  controls_sha256: "b91f240487fd22b9b95b7c7752e429128d20ccb59b3a202c3430ffbbd2922b6e"
+  carrier: "Q_C=Q^Omega/ker L_C"
+  action_family: "S_C^(alpha,beta)=alpha h^T L_C h/2-beta(L_Cu)^T h"
+  constraint: "alpha L_C h=beta L_Cu"
+  unique_solution_class: "[h]=(beta/alpha)[u]"
+  source_normalized_solution: "[h]=[u]"
+  source_normalized_on_shell_value: "-V_src(u)"
+  finite_instantiated_assumption_count: 10
+  free_coefficient_count: 2
+  source_fixed_coefficient_count: 1
+  target_matched_coefficient_count: 0
+  finite_Helmholtz_check_passed: true
+  finite_gluing_check_passed: true
+  component_balance_bridge_constructed: true
+  spectral_bound_derived: true
+  fixed_two_state_calculation_passed: true
+  target_atlas_assumed: false
+  target_metric_assumed: false
+  target_stress_energy_assumed: false
+  Einstein_Hilbert_action_assumed: false
+  Einstein_equations_assumed: false
+  benchmark_success_assumed: false
+  canonical_ontology_modified: false
+  source_law_adopted: false
+  candidate_adopted: false
+  physical_gravitational_interpretation_established: false
+  effective_geometry_constructed: false
+  effective_metric_constructed: false
+  target_stress_energy_tensor_constructed: false
+  effective_conservation_identity_derived: false
+  equivalence_principle_established_or_refuted: false
+  einstein_equations_derived: false
+  exact_gr_recovery_proved: false
+  benchmark_promotion_authorized: false
+  scientific_claims_changed: true
+  scientific_claim_change_scope: "task-local proposal-only finite quotient action exact variation solution map coefficient ledger and finite A0-A9 instantiation only"
+  physical_status_changed: false
+  distance_to_gr_delta_changed: true
+  distance_to_gr_delta_scope: "Einstein-equations burden advances from not started to a finite draft constraint object only"
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+  validation_path: "research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_constraint_validation_v1.json"
+  validation_sha256: "2994198a10a9e79b9d2a63643963817144e7d2f25bc10ffccb0ac8b34379b96a"
+  task_local_check_count: 72
+  task_local_failure_count: 0
+  latex_compile_status: "PASS"
+  latex_page_count: 5
+  resolved_parent_conflict_count: 5
+  unresolved_parent_conflict_count: 0
+  completion_path: "research_control/tasks/RT-20260729-006/jobs/completions/AJC-AJ-RT-20260729-006-001.yaml"
+  completion_sha256: "3a8357715b9d85ba5979c775ac91d35aa37025aa51fc6f354e16eae646801f2e"
+  handoff_id: "handoff-0902"
+  handoff_path: "research_control/handoffs/handoff-0902.yaml"
+  handoff_yaml_sha256: "d936f86dc85bb5ae984d7a91fd6d0e097ef35889123ab8933d28f9ab03abcc2c"
+  handoff_markdown_sha256: "1aaf52442284c69b447eaa663269afd1f227216e1f425fca9723cc84502fa918"
+  checkpoint_invocation_count: 0
+  checkpoint_committed: false
+  selected_next_work_item: "P8-T04_after_successful_checkpoint"
+  selected_next_worker_skill: "continue-research"
+  selected_next_role_family: "ontology-formalizer@0.2.0"
+  selected_next_packet_type: "finite_candidate_variation_and_identity_analysis"
+  selected_next_route_label: "ontology-law-research-packet"
+  selected_next_strategy_id: "vary_finite_source_closure_constraint_v1_without_promotion"
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
+  p8_t04_executed: false
 
 p8_t02_local_effective_action_closure_target:
   task_id: "RT-20260729-005"

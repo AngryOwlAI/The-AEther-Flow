@@ -1,0 +1,294 @@
+validation_status: "PASS"
+handoff_id: "handoff-0902"
+handoff_number: 902
+task_id: "RT-20260729-006"
+decision_id: "DDR-20260729-006"
+job_id: "AJ-RT-20260729-006-001"
+completion_id: "AJC-AJ-RT-20260729-006-001"
+completion_path: "research_control/tasks/RT-20260729-006/jobs/completions/AJC-AJ-RT-20260729-006-001.yaml"
+completion_sha256: "3a8357715b9d85ba5979c775ac91d35aa37025aa51fc6f354e16eae646801f2e"
+status: "ready_after_checkpoint"
+created_at: "2026-07-29T18:13:28Z"
+parent_handoff_id: "handoff-0901"
+plan_task_id: "P8-T04"
+completed_plan_task_id: "P8-T03"
+source_role_id: "candidate-constructor"
+source_role_version: "0.2.0"
+source_execution_role_ref: "candidate-constructor@0.2.0--RT-20260729-006"
+summary: "P8-T03 constructs FiniteSourceClosureConstraintCandidate_v1 on Q_C=Q^Omega/ker L_C. The action S_C^(alpha,beta)=alpha h^T L_C h/2-beta(L_Cu)^T h has exact quotient variation alpha L_Ch=beta L_Cu and unique solution [h]=(beta/alpha)[u]. It supplies a finite A0-A9 instantiation, coefficient ledger, balance bridge, gluing check, spectral bound, and two-state witness. The result is proposal-only finite source-extension data, not physical gravity, a target metric, an Einstein-Hilbert action, or Einstein equations."
+next_action: "Run one governed checkpoint for AJ-RT-20260729-006-001. Only after it commits may one fresh bounded P8-T04 ontology-formalizer packet vary the exact finite candidate, derive its constraint and identity structure, and compare it structurally without promoting it to an Einstein equation."
+current_claim_boundary: "CB-V21-P8-T03-FINITE-SOURCE-CLOSURE-CONSTRAINT-001"
+loop_risk_route: "p8_t04_finite_candidate_variation_and_identity_analysis"
+
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260729-006"
+  latest_research_handoff_id: "handoff-0902"
+  latest_research_next_action: "Run one governed checkpoint for AJ-RT-20260729-006-001. Only after it commits may one fresh bounded P8-T04 ontology-formalizer packet vary the exact finite candidate, derive its constraint and identity structure, and compare it structurally without promoting it to an Einstein equation."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+
+claim_boundary:
+  allowed_next_scope: "After the governed checkpoint, vary only the exact P8-T03 finite proposal-only candidate, derive its finite constraint and identity structure, and compare structurally only after derivation."
+  completed_task: "RT-20260729-006"
+  completed_completion_path: "research_control/tasks/RT-20260729-006/jobs/completions/AJC-AJ-RT-20260729-006-001.yaml"
+  completed_completion_sha256: "3a8357715b9d85ba5979c775ac91d35aa37025aa51fc6f354e16eae646801f2e"
+  source_handoff_id: "handoff-0901"
+  source_handoff_path: "research_control/handoffs/handoff-0901.yaml"
+  source_handoff_sha256: "fd008e350928af6535868e0d56506ef1ddd3f2eaf9e7ef70aaa79cdf94ea57dd"
+  immutable_route_sha256: "ac7f1305783acafbc09e25fcafdb0a3e43e2de7787b2c1b6691170642006a3e3"
+  dependency_checkpoint_commit: "12836379a62de3a54d3cbc125835c4fa7dd77806"
+  result_status: "P8_T03_FINITE_SOURCE_CLOSURE_CONSTRAINT_CANDIDATE_CONSTRUCTED"
+  candidate_id: "FiniteSourceClosureConstraintCandidate_v1"
+  candidate_path: "research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_constraint_candidate_v1.tex"
+  candidate_sha256: "82dd10d8e91be3781ca4f21e7f9fbf2ce1a9108ae7191db22fed9dfe6086f2fa"
+  specification_path: "research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_constraint_spec_v1.yaml"
+  specification_sha256: "8840b205e8aa12d73f3e782ec6936eb96385bb5694c298b1bf41a2bdfe472626"
+  coefficient_ledger_path: "research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_coefficient_ledger_v1.yaml"
+  coefficient_ledger_sha256: "5948e1ab75e42f622e5cc7309c9a6598720021ff2c893126f93c6b0bc21b7372"
+  controls_path: "research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_controls_v1.yaml"
+  controls_sha256: "b91f240487fd22b9b95b7c7752e429128d20ccb59b3a202c3430ffbbd2922b6e"
+  validation_path: "research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_constraint_validation_v1.json"
+  validation_sha256: "2994198a10a9e79b9d2a63643963817144e7d2f25bc10ffccb0ac8b34379b96a"
+  candidate_constructor_result: "constructed_candidate"
+  candidate_status: "proposal-only"
+  material_class: "source-extension data"
+  adoption_status: "blocked_adoption_open_continuation"
+  finite_instantiated_assumption_count: 10
+  free_coefficient_count: 2
+  target_matched_coefficient_count: 0
+  task_local_check_count: 72
+  task_local_failure_count: 0
+  latex_compile_status: "PASS"
+  canonical_ontology_modified: false
+  source_law_adopted: false
+  candidate_adopted: false
+  physical_gravitational_interpretation_established: false
+  effective_geometry_constructed: false
+  effective_metric_constructed: false
+  target_stress_energy_tensor_constructed: false
+  effective_conservation_identity_derived: false
+  equivalence_principle_established_or_refuted: false
+  Einstein_Hilbert_action_constructed: false
+  Einstein_equations_derived: false
+  exact_GR_recovery_proved: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+  blocked_claims:
+    - "Q_C as an established physical gravitational carrier"
+    - "L_C as a spacetime differential operator"
+    - "component shifts as diffeomorphism invariance"
+    - "component balance as target covariant conservation or Bianchi identity"
+    - "target atlas metric stress energy Einstein-Hilbert action or Einstein equations"
+    - "canonical adoption exact-GR recovery benchmark proof publication push or completed derivation"
+
+plan_result:
+  plan_task_id: "P8-T03"
+  next_plan_task_id: "P8-T04"
+  title: "Derive the effective gravitational action or constraint structure"
+  result_status: "P8_T03_CONSTRUCTED_FINITE_SOURCE_CLOSURE_CONSTRAINT"
+  work_item_status: "completed"
+  expected_result_kind: "theorem_or_precise_obstruction"
+  action_or_constraint_candidate_constructed: true
+  exact_variation_derived: true
+  exact_solution_map_derived: true
+  coefficients_and_corrections_explicit: true
+  target_matching_used: false
+  task_local_check_count: 72
+  task_local_failure_count: 0
+  resolved_parent_conflict_count: 5
+  unresolved_parent_conflict_count: 0
+  p8_t04_dependency_ready_after_checkpoint: true
+  p8_t04_dependency_ready_now: false
+  p8_t04_executed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+candidate_result:
+  candidate_id: "FiniteSourceClosureConstraintCandidate_v1"
+  carrier: "Q_C=Q^Omega/ker L_C"
+  balanced_response_space: "A_C=(ker L_C)^perp"
+  action_family: "S_C^(alpha,beta)=alpha h^T L_C h/2-beta(L_Cu)^T h"
+  constraint: "alpha L_C h=beta L_Cu"
+  unique_solution_class: "[h]=(beta/alpha)[u]"
+  source_normalized_coefficients:
+    alpha: "1"
+    beta: "1"
+  source_normalized_solution: "[h]=[u]"
+  source_normalized_on_shell_value: "-V_src(u)"
+  finite_Helmholtz_status: "PASS"
+  finite_gluing_status: "PASS"
+  balance_bridge_status: "component_balance_is_gauge_descent_and_solvability_condition_only"
+  correction_status: "R_1_2=0_in_exact_finite_candidate_only"
+  physical_gravity_status: "not_established"
+  Einstein_equation_status: "not_derived"
+
+distance_to_gr:
+  changed: true
+  effect: "finite_draft_constraint_object_constructed"
+  burden_id: "einstein_equations"
+  milestone: "einstein_equations"
+  old_status: "not started"
+  new_status: "draft object exists"
+  ledger_row_updated: true
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  downstream_unlocked:
+    - "P8-T04 exact finite variation and identity analysis after checkpoint"
+  downstream_still_blocked:
+    - "physical gravitational interpretation"
+    - "unscoped effective geometry or metric"
+    - "target stress-energy tensor"
+    - "equivalence principle"
+    - "Einstein equations"
+    - "exact-GR recovery"
+    - "benchmark promotion"
+
+ordinary_route_guard:
+  schema_id: "ordinary_route_guard_evaluation_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  evaluation_id: "ORE-HANDOFF-0902"
+  ordinary_handoff_id: "handoff-0902"
+  threshold: 3
+  consecutive_project_system_tasks_before_selection: 0
+  ready_science_plan_task_ids:
+    - "P8-T04"
+    - "P14-T04"
+  selected_plan_task_id: "P8-T04"
+  selected_route_class: "physics_bearing"
+  selected_worker_skill: "continue-research"
+  outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  exception_receipt:
+    active: false
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+required_next_packet:
+  task_type: "v21_p8_t04_field_equations_and_conservation_identities"
+  plan_task_id: "P8-T04"
+  objective: "Vary or otherwise evolve the exact P8-T03 finite proposal-only candidate, derive its constraint and identity structure, and determine precisely whether any Einstein-type structure follows."
+  output_requirement: "One exact field-equation-or-constraint derivation, one identity analysis, and one source-to-effective equation map or precise scoped obstruction."
+  dependency_qualification: "P8-T03 supplies a finite proposal-only constraint candidate, not a physical gravitational action or Einstein equation."
+  dependency_ready_after_checkpoint: true
+  dependency_ready_now: false
+  exact_human_authorization_required: false
+  executed: false
+
+selected_next_route:
+  route_id: "v21_p8_t04_finite_candidate_field_equation_and_identity_analysis"
+  route_label: "ontology-law-research-packet"
+  role_family: "ontology-formalizer@0.2.0"
+  worker_skill: "continue-research"
+  selected_next_packet_type: "finite_candidate_variation_and_identity_analysis"
+  task_type: "v21_p8_t04_field_equations_and_conservation_identities"
+  plan_task_id: "P8-T04"
+  target_derivation_milestone: "einstein_equations"
+  milestone_burden: "Determine whether Einstein-type equations actually follow from the derived action or closure."
+  strategy_id: "vary_finite_source_closure_constraint_v1_without_promotion"
+  adoption_status: "blocked_adoption_open_continuation"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  target_atlas_assumed: false
+  target_metric_assumed: false
+  target_stress_energy_assumed: false
+  Einstein_Hilbert_action_assumed: false
+  Einstein_equations_assumed: false
+  benchmark_success_assumed: false
+  physics_promotion_authorized: false
+  executed: false
+  next_action: "After checkpoint, vary only the finite candidate and preserve every physical and target-side block."
+  source_handoff: "research_control/handoffs/handoff-0902.yaml"
+
+active_state_boundary:
+  active_task_id: "RT-20260729-006"
+  active_job_id: "AJ-RT-20260729-006-001"
+  current_status: "p8_t03_finite_constraint_candidate_ready_for_checkpoint"
+  checkpoint_required: true
+  checkpoint_completed: false
+  checkpoint_invocation_count: 0
+  p8_t03_complete: true
+  selected_next_plan_task_id: "P8-T04"
+  selected_next_worker_skill: "continue-research"
+  selected_next_role_family: "ontology-formalizer@0.2.0"
+  selected_next_route_label: "ontology-law-research-packet"
+  selected_next_strategy_id: "vary_finite_source_closure_constraint_v1_without_promotion"
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 159 was validated, claimed once, and consumed once."
+      - "Dependency checkpoint 12836379a62de3a54d3cbc125835c4fa7dd77806 committed before execution."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Task-local validation passes 72 of 72 checks."
+      - "Scratch Tectonic compilation succeeds with five pages."
+      - "Five parent conflicts are resolved; zero remain."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Repository control, claim-language, documentation-impact, graph, renderer, and memory checks pass."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "One governed checkpoint remains and P8-T04 is not executed before it."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  publication_authorized: false
+  proof_authority: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  canonical_ontology_edit_authorized: false
+  ontology_selection_authorized: false
+  physical_interpretation_establishment_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required_no_nonblank_signals"
+  notes: "The bounded construction emits no project-improvement signal."
+
+handoff_does_not_authorize:
+  - "P8-T04 before checkpoint"
+  - "canonical ontology source-law or candidate adoption"
+  - "the quotient variable as established physical gravity"
+  - "target atlas metric stress energy Einstein-Hilbert action or Einstein equations"
+  - "target matching to fix alpha beta or any missing term"
+  - "exact-GR recovery benchmark proof publication push or completed derivation"
+
+next_plan_task_id: "P8-T04"
+next_worker_skill: "continue-research"
+next_role_family: "ontology-formalizer@0.2.0"
+next_route_label: "ontology-law-research-packet"
+next_strategy_id: "vary_finite_source_closure_constraint_v1_without_promotion"
+notes: "P8-T04 remains unexecuted until the governed P8-T03 checkpoint commits."

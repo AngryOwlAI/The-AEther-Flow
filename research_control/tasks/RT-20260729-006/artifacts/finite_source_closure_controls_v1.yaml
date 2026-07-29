@@ -1,0 +1,97 @@
+schema_id: "finite_source_closure_controls_v1"
+artifact_id: "FiniteSourceClosureControls_v1"
+task_id: "RT-20260729-006"
+candidate_id: "FiniteSourceClosureConstraintCandidate_v1"
+status: "draft/control"
+adoption_status: "blocked_adoption_open_continuation"
+
+no_target_import_audit:
+  explicit_target_import_found: false
+  source_inputs:
+    - "finite P7 row kernel P"
+    - "symmetric conductance C"
+    - "finite Laplacian L_C"
+    - "adopted P7 source configuration and first variation"
+    - "component decomposition and balance"
+  prohibited_premises_absent:
+    target_atlas: true
+    target_metric: true
+    target_dimension: true
+    Lorentzian_signature: true
+    causal_cone: true
+    target_stress_energy_tensor: true
+    Einstein_Hilbert_action: true
+    Einstein_equations: true
+    exact_GR_benchmark: true
+    empirical_coefficient_fit: true
+    validator_or_checkpoint_as_science: true
+
+failure_branches:
+  - failure_id: "FSCC-F01"
+    trigger: "forcing vector is not componentwise balanced"
+    result: "action does not descend to Q_C and constraint is unsolvable"
+    disposition: "invalid_input_for_candidate"
+  - failure_id: "FSCC-F02"
+    trigger: "alpha equals zero"
+    result: "no quotient quadratic closure operator"
+    disposition: "degenerate_candidate"
+  - failure_id: "FSCC-F03"
+    trigger: "alpha is negative"
+    result: "finite minimum property fails"
+    disposition: "unstable_candidate_member"
+  - failure_id: "FSCC-F04"
+    trigger: "target object or benchmark used to select carrier or coefficient"
+    result: "branch violates claim boundary"
+    disposition: "invalid_under_claim_boundary"
+  - failure_id: "FSCC-F05"
+    trigger: "carrier or locality extended beyond the declared finite P7 domain"
+    result: "all locality gluing spectral and remainder claims require a new proof"
+    disposition: "outside_proved_candidate_scope"
+
+finite_controls:
+  exact_arithmetic_domain: "Q"
+  symmetry_check: "L_C^T=L_C"
+  balance_check: "a_C(u) orthogonal to ker L_C"
+  quotient_check: "S(h+k;u)=S(h;u) for k in ker L_C"
+  Helmholtz_check: "linearization alpha L_C is symmetric"
+  gluing_check: "edge and vertex ownership weights sum to one"
+  automorphism_check: "R^T L_C R=L_C"
+  spectral_check: "positive gap only on ker L_C orthogonal complement"
+  boundary_check: "full carrier closed; subset crossing-edge identity retained"
+  correction_check: "R_1_2=0 only in exact finite candidate"
+
+forbidden_conclusions:
+  - "Q_C is an adopted physical gravitational carrier"
+  - "L_C is a spacetime differential operator"
+  - "component shifts are diffeomorphism invariance"
+  - "component balance is a Bianchi identity or target covariant conservation"
+  - "the finite source response is a target stress-energy tensor"
+  - "the candidate is an Einstein-Hilbert action"
+  - "the closure constraint is an Einstein equation"
+  - "alpha or beta is a physical gravitational constant"
+  - "missing cosmological higher-derivative or nonlocal terms vanish physically"
+  - "P6 Gate B is passed or an unscoped effective metric exists"
+  - "exact GR recovery or benchmark success"
+  - "canonical ontology or source-law adoption"
+  - "proof publication push or completed derivation"
+
+next_packet_controls:
+  plan_task_id: "P8-T04"
+  role_family: "ontology-formalizer@0.2.0"
+  allowed_question: "vary the exact finite candidate, derive its constraint and identities, and compare structurally only after derivation"
+  must_preserve:
+    - "finite proposal-only scope"
+    - "free coefficient ledger"
+    - "no target import"
+    - "no physical gravitational interpretation"
+    - "no Einstein-equation claim"
+  requires_checkpoint_first: true
+
+authority_limits:
+  canonical_ontology_modified: false
+  source_law_adopted_or_rejected: false
+  physical_interpretation_established: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false

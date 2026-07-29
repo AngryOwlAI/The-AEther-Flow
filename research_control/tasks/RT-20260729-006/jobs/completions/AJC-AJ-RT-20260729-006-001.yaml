@@ -1,0 +1,933 @@
+validation_status: "PASS"
+final_repository_validation_status: "PASS_READY_FOR_CHECKPOINT"
+job_id: "AJ-RT-20260729-006-001"
+completion_id: "AJC-AJ-RT-20260729-006-001"
+task_id: "RT-20260729-006"
+task_type: "v21_p8_t03_effective_gravitational_action_or_constraint_candidate"
+decision_id: "DDR-20260729-006"
+role_id: "candidate-constructor"
+role_version: "0.2.0"
+execution_role_ref: "candidate-constructor@0.2.0--RT-20260729-006"
+status: "completed"
+created_at: "2026-07-29T18:13:28Z"
+started_at: "2026-07-29T18:13:28Z"
+completed_at: "2026-07-29T18:13:28Z"
+objective: "Execute only v21 P8-T03 by constructing one finite proposal-only closure action or constraint from the exact P8-T02 envelope and adopted P7 source action, deriving its maps, variation, coefficients, corrections, symmetries, gluing, conservation compatibility, and exact limitations without target matching."
+completion_summary: "P8-T03 constructs FiniteSourceClosureConstraintCandidate_v1 on Q_C=Q^Omega/ker L_C. The action S_C^(alpha,beta)=alpha h^T L_C h/2-beta(L_Cu)^T h has the exact quotient constraint alpha L_Ch=beta L_Cu, unique solution [h]=(beta/alpha)[u], exact on-shell value for the source-normalized member, finite Helmholtz and gluing checks, a component-balance compatibility bridge, spectral control, and a fixed two-state calculation. It constructs no physical gravitational interpretation, metric, target stress energy, Einstein-Hilbert action, Einstein equation, continuum limit, or exact-GR result."
+objective_result: "constructed_finite_source_closure_constraint_candidate_pending_p8_t04_variation_audit"
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 159
+  passes_consumed: 145
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:159"
+  handoff_token: "87db52b8fc4bfdeac31189d07d25e64a13f2bee90375dd5b"
+  relay_claim_token: "3313f398203f3be227398ba031527095a2f42b47d46a43fa"
+  route_work_item_id: "P8-T03"
+  route_worker_skill: "continue-research"
+  route_sha256: "ac7f1305783acafbc09e25fcafdb0a3e43e2de7787b2c1b6691170642006a3e3"
+  route_reason: "dependency_ready_in_scope"
+  route_strategy_id: "continue_in_scope_generation_159"
+  route_blocker_fingerprint: "db67205f25af59b7dc4f8a76ca6a1ed7966015f7023632f86b6062b2cbbb0a7c"
+  route_before_fingerprint: "db67205f25af59b7dc4f8a76ca6a1ed7966015f7023632f86b6062b2cbbb0a7c"
+  route_evidence_sha256es:
+    - "84f68c980b068dcd72bdbd7eb76638890d8e3f84bc32c52561f76c4302b0dcf1"
+    - "db67205f25af59b7dc4f8a76ca6a1ed7966015f7023632f86b6062b2cbbb0a7c"
+  worker_skill: "continue-research"
+  worker_invocation_count: 1
+
+transaction_status: "ready_for_checkpoint"
+result_disposition: "P8_T03_FINITE_SOURCE_CLOSURE_CONSTRAINT_CANDIDATE_CONSTRUCTED_READY_FOR_CHECKPOINT"
+milestone_disposition: "finite_draft_constraint_object_constructed_physical_gravity_and_einstein_equations_open"
+adoption_status: "blocked_adoption_open_continuation"
+checkpoint_commit:
+  required: true
+  attempted: false
+  committed: false
+  commit_sha: ""
+  dependency_checkpoint_commit: "12836379a62de3a54d3cbc125835c4fa7dd77806"
+  push_authorized: false
+  push_performed: false
+
+is_physics_task: true
+payload_class: "candidate_construction"
+has_new_mathematical_payload: true
+source_extension_classification_required: true
+external_red_team_finding_requires_integration: false
+physics_promotion_authorized: false
+proof_authority: false
+
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P8"
+  plan_task_id: "P8-T03"
+  work_kind: "formalization_or_theorem"
+  task_class: "science"
+  expected_result_kind: "theorem_or_precise_obstruction"
+  dependency_task_ids:
+    - "P8-T02"
+  dependency_completion_paths:
+    - "research_control/tasks/RT-20260729-005/jobs/completions/AJC-AJ-RT-20260729-005-001.yaml"
+  dependency_checkpoint_commits:
+    - "12836379a62de3a54d3cbc125835c4fa7dd77806"
+  work_item_status: "completed_ready_for_checkpoint"
+  recommendation_ids:
+    - "V21-R22"
+    - "V21-R26"
+    - "V21-R27"
+    - "V21-R29"
+  recommendation_coverage_role: "direct_implementation"
+  scientific_claims_changed: true
+  scientific_claim_change_scope: "task-local proposal-only finite quotient action, exact variation and solution theorem, finite closure map, and coefficient ledger"
+  physical_status_changed: false
+  distance_to_gr_delta_changed: true
+  distance_to_gr_delta_scope: "finite_draft_constraint_object_only"
+  physics_promotion_authorized: false
+  proof_authority: false
+  next_dependency_work_item: "P8-T04_after_checkpoint"
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  observed_durable_outputs:
+    physics:
+      - "one proposal-only finite source closure-constraint candidate"
+      - "one exact variation solvability uniqueness and on-shell derivation"
+      - "one source-to-response and source-to-closure map pair"
+      - "one coefficient correction and dimensional ledger"
+    project_system:
+      - "task-local deterministic validator report and scratch TeX build"
+      - "parent-child synthesis records and standard control state"
+  accepted_criteria:
+    physics:
+      - "the action descends to the quotient exactly"
+      - "the constraint and solution class are reproduced by exact arithmetic"
+      - "A0 through A9 are qualified to the finite envelope"
+      - "all free coefficients terms corrections and dimensions are explicit"
+    project_system:
+      - "task-local source-hash mathematical target-import parent-child and authority checks pass"
+      - "claim-language documentation-impact and research-control checks pass"
+      - "one governed checkpoint records the bounded transaction"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+    coefficient_normalization_counts_as_physical_calibration: false
+
+physics_payload_admission_result:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "physics"
+  declared_payload_type: "candidate_construction"
+  realized_payload_type: "candidate_construction"
+  candidate_family: "FiniteSourceClosureConstraintCandidate_v1"
+  result: "PASS"
+  material_payload_present: true
+  process_receipts_counted_as_payload: false
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed_by_admission: false
+  physics_promotion_authorized: false
+
+family_freeze_admission_result:
+  schema_id: "family_freeze_route_admission_v1"
+  policy_id: "family_freeze_reopening_policy_v1"
+  route_id: "v21_p8_t03_finite_source_closure_constraint_candidate_v1"
+  family_id: "FiniteSourceClosureConstraintCandidate_v1"
+  detected_match_basis: []
+  reopening_requested: false
+  result: "PASS_MATERIALLY_NEW_CANDIDATE"
+  local_family_freeze_preserved: true
+  global_no_go_claimed: false
+  physics_promotion_authorized: false
+
+ordinary_route_guard_admission_result:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0901"
+  selected_plan_task_id: "P8-T03"
+  guard_outcome: "below_threshold"
+  result: "PASS"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  scientific_status_changed_by_guard: false
+  physics_promotion_authorized: false
+
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_execution_unit_count: 2
+  outer_agentjob_count: 1
+  child_agentjob_count: 0
+  subagent_count: 0
+
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260729-006/artifacts/child_phys_math_p8_t03_finite_source_closure.yaml"
+      output_sha256: "7ac8466ebc8e0e73b3b28c9a6809c24bbf2e44ccb292d147324f8e52f63cee15"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260729-006/artifacts/child_phys_phil_p8_t03_finite_source_closure.yaml"
+      output_sha256: "37a0274254aba7ce4261c54bd31a27d21ebaa8bac76e57702859d8fe17d7ca3a"
+      status: "completed"
+  conflict_review:
+    status: "resolved"
+    review_path: "research_control/tasks/RT-20260729-006/artifacts/parent_conflict_review_p8_t03_finite_source_closure.yaml"
+    resolution_rounds: 1
+    resolved_conflict_count: 5
+    unresolved_conflicts: []
+  fusion:
+    fused_output_path: "research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_constraint_candidate_v1.tex"
+    fusion_notes_path: "research_control/tasks/RT-20260729-006/artifacts/parent_fusion_notes_p8_t03_finite_source_closure.md"
+    shared_consensus_summary: "The quotient action is an exact finite candidate whose balance condition controls gauge descent and solvability, while every physical gravitational and target-side interpretation remains open."
+    unique_phys_math_contributions: "Quotient carrier, action family, exact first variation, unique solution map, on-shell identity, finite gluing, spectral bound, and two-state calculation."
+    unique_phys_phil_contributions: "Proposed-role versus physical-interpretation boundary, finite-gauge versus diffeomorphism distinction, source balance versus Bianchi distinction, coefficient-convention guard, and Gate B preservation."
+    novelty_preservation_summary: "Fusion preserves the first coupled P8 finite closure action and source-to-closure map rather than repeating the P7 source action or P8-T02 readiness profile."
+    claim_boundary_preservation_summary: "No ontology edit, adoption, physical gravity, target geometry, metric, stress energy, Einstein equation, exact-GR result, benchmark promotion, proof, publication, push, global no-go, or completed derivation is authorized."
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+
+memory_preflight:
+  preflight_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1074
+    relationship_row_count: 5398
+    semantic_row_count: 1074
+    vault_row_count: 1074
+    local_cache_only_warning_count: 0
+    refresh_performed: true
+  refresh_needed: true
+  refresh_performed: true
+  refresh_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py"
+  before_refresh:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    warning_count: 9
+  after_refresh:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1074
+    relationship_row_count: 5398
+    semantic_row_count: 1074
+    vault_row_count: 1074
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"LocalEffectiveActionClosureTarget\" --limit 10 --json"
+      query_type: "search"
+      query_text: "LocalEffectiveActionClosureTarget"
+      returned_object_ids:
+        - "TEX-V21-P8-T02-LOCAL-EFFECTIVE-ACTION-CLOSURE-TARGET-V1"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-V21-P8-T02-LOCAL-EFFECTIVE-ACTION-CLOSURE-TARGET-V1 --json"
+      query_type: "lookup"
+      query_text: "TEX-V21-P8-T02-LOCAL-EFFECTIVE-ACTION-CLOSURE-TARGET-V1"
+      returned_object_ids:
+        - "TEX-V21-P8-T02-LOCAL-EFFECTIVE-ACTION-CLOSURE-TARGET-V1"
+  canonical_inspections:
+    - object_id: "TEX-V21-P8-T02-LOCAL-EFFECTIVE-ACTION-CLOSURE-TARGET-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260729-005/artifacts/local_effective_action_closure_target_v1.tex"
+      source_hash: "13402c3d80f114b643a0216484b0ba775a2f02d1f0733f33d8cf86044e6add96"
+    - object_id: "TEX-V21-P7-T06-SOURCE-KERNEL-VARIATIONAL-OBJECT-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260728-005/artifacts/source_kernel_variational_object_candidate_v1.tex"
+      source_hash: "386769e40167c35604625ef7250c027dc1712c82db4790e2895e0b31ac3cfbf7"
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+    - object_id: "TEX-ONTOLOGY-AETHER-FLOW-DYNAMICS"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "ontology/tex/aether_flow_dynamics.tex"
+      source_hash: "fd6e579e71ef7f2ac4c9668ceede051ad57033ee52357b2552a9e3a5a53939c7"
+    - object_id: "TEX-ONTOLOGY-AETHER-FLOW-CONSISTENCY"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "ontology/tex/aether_flow_consistency.tex"
+      source_hash: "d965519639ee8764a5c5a63798d15e8a9a380d7e208dffc43a0be02b6f245ba1"
+  authority_note: "Obsidian wiki notes, semantic extracts, the SQLite memory index, PDFs, generated registries, and .local files are retrieval layers only and are not authority."
+
+ontology_law_research_packet:
+  route: "ontology-law-research-packet"
+  trigger_classification: "derivation_critical_missing_source_law"
+  target_derivation_milestone: "einstein_equations"
+  milestone_burden: "Determine whether Einstein-type equations actually follow from the derived action or closure."
+  missing_source_law: "A source-derived law that assigns physical gravitational meaning to the finite quotient carrier and connects its exact constraint to a target-side field equation and conservation identity without importing target results."
+  underdetermination_statement: "Current ontology does not derive a physical gravitational interpretation, target carrier, source-to-target stress-energy map, continuum scale, or Einstein-leading recovery law from FiniteSourceClosureConstraintCandidate_v1."
+  no_go_theorem_status: "not_proved"
+  adoption_status:
+    current_adoption: "blocked"
+    continuation: "open"
+    status_pair: "blocked_adoption_open_continuation"
+  packet_payload_mode: "candidate_law_payload"
+  candidate_law_payload:
+    status_label: "draft/control"
+    candidate_status: "proposal-only"
+    material_class: "source-extension data"
+    source_side_definition: "The exact finite quotient action and its variation provide a candidate constraint datum whose physical and target-side interpretation remains to be derived."
+    formal_objects:
+      - "finite carrier Omega and symmetric source Laplacian L_C"
+      - "quotient carrier Q_C=Q^Omega/ker L_C"
+      - "balanced response space A_C=(ker L_C)^perp"
+      - "action family S_C^(alpha,beta)"
+      - "finite response operator E_C"
+      - "source-to-closure map C_C"
+    domains:
+      - "the exact declared finite P7 source-matter kernel and variation domain"
+      - "the proposal-only finite P8 quotient carrier"
+      - "the source-normalized alpha=beta=1 member and explicit free-coefficient family"
+    maps:
+      - "u maps to a_C(u)=L_Cu"
+      - "u maps to C_C(u)=[L_C^+a_C(u)]=[u]"
+      - "([h],u) maps to E_C([h];u)=alpha L_Ch-beta a_C(u)"
+    proof_obligations:
+      - "derive the exact finite constraint and its zero-mode identity without target import"
+      - "separate component balance from target covariant conservation"
+      - "separate finite quotient gauge from diffeomorphism invariance"
+      - "identify every condition missing for physical gravitational interpretation"
+      - "compare with Einstein-type structure only after the candidate variation is complete"
+      - "keep all coefficients corrections boundary terms and units explicit"
+  candidate_law_comparison:
+    candidates:
+      - "FiniteSourceClosureConstraintCandidate_v1"
+    comparison_basis:
+      - "exact finite quotient variation"
+      - "source-derived versus proposal-only fields"
+      - "target-import exclusion"
+    selection_status: "single_tracked_p8_t03_candidate_for_p8_t04_analysis"
+  candidate_law_refutation:
+    refuted_candidate: ""
+    refutation_basis: ""
+    surviving_obligations:
+      - "physical interpretation"
+      - "target carrier and stress-energy map"
+      - "Einstein-leading recovery"
+  human_gate_precondition:
+    blocks_payload_definition: false
+    reason: "Draft/control variation and obstruction analysis are permitted; adoption or protected physical interpretation is not."
+  exact_gr_recovery_obligations:
+    checklist:
+      - "Preserve exact GR as a read-only comparison target and never a source premise."
+      - "Derive a target carrier dimension signature and metric interpretation from source-side data."
+      - "Derive a target matter-response object and conservation identity."
+      - "Derive or independently calibrate coefficient signs units and normalizations."
+      - "Control continuum extra-mode higher-derivative boundary and nonlocal terms."
+      - "Prove an Einstein-leading recovery theorem before any field-equation claim."
+    distance_to_gr_links:
+      - "effective_metric_g_eff"
+      - "matter_coupling"
+      - "einstein_equations"
+      - "finite_variation_robustness"
+      - "benchmark_promotion"
+  no_target_import_audit_scope:
+    forbidden_source_classes:
+      - "target_atlas"
+      - "target_metric"
+      - "target_stress_energy"
+      - "Einstein_Hilbert_action"
+      - "Einstein_equations"
+      - "benchmark_success"
+      - "generated_derivative"
+      - "registry_metadata_authority"
+      - "role_authority"
+      - "validation_authority"
+    checked_objects:
+      - "finite quotient carrier"
+      - "source and closure maps"
+      - "finite response operator"
+      - "gauge and balance identity"
+      - "coefficient correction boundary and unit ledger"
+  atlas_glue_obligations:
+    profile_law: "only the finite source carrier profile is supplied"
+    selector_law: "the finite source-to-closure map is supplied; no target-carrier selector is supplied"
+    transition_law: "finite edge ownership glues exactly; no continuum chart transition law is supplied"
+    inverse_checks: "the finite quotient inverse is supplied on ker L_C orthogonal complement"
+    cocycle_checks: "finite overlap defect is zero by ownership; no continuum variational-cohomology theorem follows"
+    finite_variation_robustness: "one spectral bound is proved only for the exact finite candidate"
+  failure_branches:
+    collapse: "if the quotient is trivial, record the exact finite degeneracy and do not infer gravity"
+    nonuniqueness: "if a later extension adds free target data, preserve the family and do not select by target matching"
+    balance_defect: "if a source is not componentwise balanced, the action fails quotient descent and solvability"
+    target_import: "fail_closed_target_import"
+    physical_interpretation_absent: "retain finite proposal-only constraint status"
+    Einstein_leading_recovery_absent: "leave the field-equation burden open"
+  known_risks:
+    - "the gravitational role label may be mistaken for an established physical interpretation"
+    - "finite quotient gauge may be mistaken for diffeomorphism invariance"
+    - "component balance may be mistaken for a Bianchi identity"
+    - "unit coefficients may be mistaken for derived physical constants"
+  failed_alternatives:
+    - "Directly renaming the finite constraint as an Einstein equation fails because no target carrier metric stress-energy map or recovery theorem is supplied."
+  human_gate_request:
+    required_before_adoption: true
+    requested_decision: "No gate is requested now. Protected human authority is required before adopting, rejecting, or physically promoting the new candidate or any new source law."
+    exact_requested_ontology_edit: ""
+
+source_extension_classification:
+  checklist_id: "source_extension_classification_checklist_v1"
+  item_id: "FiniteSourceClosureConstraintCandidate_v1"
+  item_source_path: "research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_constraint_candidate_v1.tex"
+  classification: "conservative_definitional_extension"
+  evidence_paths:
+    - "research_control/tasks/RT-20260729-005/artifacts/local_effective_action_closure_target_v1.tex"
+    - "research_control/tasks/RT-20260728-005/artifacts/source_kernel_variational_object_candidate_v1.tex"
+    - "research_control/tasks/RT-20260729-001/artifacts/p7_t08_constitutive_postulate_ledger_v1.yaml"
+  relation_to_current_ontology: "conservative"
+  claim_boundary_id: "CB-V21-P8-T03-FINITE-SOURCE-CLOSURE-CONSTRAINT-001"
+  protected_authority_required: true
+  physics_promotion_authorized: false
+  downstream_promotion_authorized: false
+  allowed_conclusion: "One finite proposal-only closure action and exact source-to-closure map are constructed from the admitted P7 finite data."
+  forbidden_overreads:
+    - "canonical ontology or source-law adoption"
+    - "physical gravitational interpretation"
+    - "M_src scope expansion"
+    - "unscoped g_eff or target metric"
+    - "matter coupling derivation or target stress energy"
+    - "Einstein equations or exact-GR recovery"
+    - "benchmark promotion"
+    - "proof publication push or completed derivation"
+  next_route_if_blocked: "P8-T04 finite candidate variation and identity analysis after checkpoint"
+
+bridge_attempt_status:
+  bridge_attempted: true
+  bridge_name: "P7 finite source response to P8 quotient closure constraint"
+  bridge_result: "constructed_candidate"
+  candidate_map: "u maps to a_C(u)=L_Cu and then to C_C(u)=[L_C^+a_C(u)]=[u]"
+  missing_primitive: "A source-derived physical gravitational interpretation, continuum or spacetime carrier, physical scale and units, target stress-energy map, and Einstein-leading recovery theorem remain absent."
+  preserves_blocks: true
+  blocked_outputs:
+    - "canonical_ontology_or_source_law_adoption"
+    - "physical_gravitational_interpretation"
+    - "M_src_scope_expansion"
+    - "unscoped_g_eff_or_target_metric"
+    - "target_stress_energy"
+    - "Einstein_Hilbert_action"
+    - "Einstein_equations"
+    - "exact_GR_recovery"
+    - "benchmark_promotion"
+    - "Gate_Chair_verdict"
+    - "proof_publication_push_or_completed_derivation"
+  explanation: "The packet constructs an exact finite source-to-closure map and variational constraint, but the new quotient variable has only a proposed P8 role and no established physical gravitational or target-spacetime interpretation."
+
+candidate_constructor_result:
+  result_type: "constructed_candidate"
+  constructed_candidate_path: "research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_constraint_candidate_v1.tex"
+  minimal_countermodel_path: ""
+  obstruction_id: ""
+  formal_objects:
+    - "finite weighted source graph (Omega,C)"
+    - "componentwise gauge kernel K_C=ker L_C"
+    - "proposal-only quotient carrier Q_C=Q^Omega/K_C"
+    - "balanced response space A_C=K_C orthogonal complement"
+    - "action family S_C^(alpha,beta)"
+    - "source-normalized candidate alpha=beta=1"
+    - "finite response operator E_C"
+    - "finite edge and vertex density gluing datum"
+  maps:
+    - "u -> a_C(u)=L_Cu in A_C"
+    - "u -> C_C(u)=[L_C^+a_C(u)]=[u] in Q_C"
+    - "([h],u) -> E_C([h];u)=alpha L_Ch-beta a_C(u)"
+    - "weighted-graph automorphisms acting simultaneously on h and u"
+  proof_obligations:
+    - "P8-T04 must vary only the exact candidate and keep its finite correction and boundary terms explicit"
+    - "P8-T04 must not rename the finite constraint as an Einstein equation"
+    - "any physical gravitational interpretation requires independent source-side evidence and protected adoption"
+    - "any continuum or target comparison requires a source-derived carrier scale units and map"
+    - "any Einstein-leading claim requires a separate non-circular recovery theorem"
+  failed_components:
+    - "physical gravitational interpretation"
+    - "continuum or spacetime carrier"
+    - "physical coefficient calibration"
+    - "target stress-energy map"
+    - "Einstein-leading recovery"
+  next_required_role: "none"
+  no_fog_check: true
+  no_fog_explanation: "RT-20260729-006 constructed the exact finite quotient action S_C^(alpha,beta), derived its constraint alpha L_Ch=beta L_Cu, and proved the unique solution class [h]=(beta/alpha)[u]; the result is a proposal-only finite closure constraint with no established physical-gravity or Einstein-equation interpretation."
+  claim_boundary_preserved: true
+  claim_boundary_citation: "CB-V21-P8-T03-FINITE-SOURCE-CLOSURE-CONSTRAINT-001"
+
+finite_source_closure_result:
+  candidate_id: "FiniteSourceClosureConstraintCandidate_v1"
+  status: "draft/control"
+  candidate_status: "proposal-only"
+  material_class: "source-extension data"
+  adoption_status: "blocked_adoption_open_continuation"
+  decisive_result: "constructed_candidate"
+  closure_target_assumption_count: 10
+  finite_instantiated_assumption_count: 10
+  action_family_constructed: true
+  source_normalized_member_constructed: true
+  quotient_descent_proved: true
+  first_variation_derived: true
+  unique_solution_class_proved: true
+  on_shell_identity_proved: true
+  finite_Helmholtz_check_passed: true
+  finite_gluing_check_passed: true
+  component_balance_bridge_constructed: true
+  automorphism_equivariance_checked: true
+  spectral_bound_derived: true
+  fixed_two_state_calculation_passed: true
+  free_coefficient_count: 2
+  source_fixed_coefficient_count: 1
+  target_matched_coefficient_count: 0
+  correction_remainder: "R_1_2=0 in exact finite candidate"
+  resolved_parent_conflict_count: 5
+  unresolved_parent_conflict_count: 0
+  task_local_check_count: 72
+  task_local_failed_check_count: 0
+  latex_compile_status: "PASS"
+  latex_page_count: 5
+  physical_gravitational_interpretation_established: false
+  target_metric_established: false
+  target_stress_energy_established: false
+  Einstein_equations_derived: false
+  exact_GR_recovery_proved: false
+
+new_mathematical_payload:
+  - payload_id: "NMP-RT-20260729-006-001"
+    payload_type: "definition"
+    name: "Finite quotient closure datum"
+    summary: "Defines K_C, Q_C, A_C, the response map, and the source-to-closure map from the exact finite P7 Laplacian."
+  - payload_id: "NMP-RT-20260729-006-002"
+    payload_type: "finite_model"
+    name: "FiniteSourceClosureConstraintCandidate_v1"
+    summary: "Constructs the two-coefficient finite quotient action and its source-normalized member."
+  - payload_id: "NMP-RT-20260729-006-003"
+    payload_type: "theorem"
+    name: "Exact finite variation solvability and uniqueness theorem"
+    summary: "Derives alpha L_Ch=beta L_Cu and proves [h]=(beta/alpha)[u] on the quotient."
+  - payload_id: "NMP-RT-20260729-006-004"
+    payload_type: "explicit_witness"
+    name: "Fixed two-state forward-kernel closure calculation"
+    summary: "Computes L_C, the positive gap, source response, solution, and on-shell action in exact rational arithmetic."
+
+minimum_physics_payload:
+  minimum_payload_schema_id: "minimum_physics_payload_schema_v1"
+  source_task_id: "RT-20260729-006"
+  source_job_id: "AJ-RT-20260729-006-001"
+  source_completion_path: "research_control/tasks/RT-20260729-006/jobs/completions/AJC-AJ-RT-20260729-006-001.yaml"
+  target_derivation_milestone: "einstein_equations"
+  milestone_burden: "Produce the central gravitational-dynamics candidate."
+  payload_class: "candidate_construction"
+  payload_status: "draft/control"
+  payload_artifact_path: "research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_constraint_candidate_v1.tex"
+  payload_summary: "An exact finite proposal-only quotient action with a derived constraint and source-to-closure map."
+  payload_source_basis:
+    - "LocalEffectiveActionClosureTarget_v1"
+    - "SourceKernelDirichletVariationalCandidate_v1"
+    - "P7T08ConstitutivePostulateLedger_v1"
+  process_receipts_excluded:
+    - "validator_status"
+    - "registry_row"
+    - "handoff_status"
+    - "generated_derivative"
+    - "checkpoint_status"
+  physics_promotion_authorized: false
+  proof_authority: false
+
+mathematical_payload_manifest:
+  - payload_id: "PAYLOAD-RT006-001"
+    payload_type: "definition"
+    object_name: "FiniteSourceClosureDatum_v1"
+    claim_status: "draft/control proposal-only"
+    source_path: "research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_constraint_candidate_v1.tex"
+    burden_effect: "narrows"
+    summary: "Types the quotient carrier, balanced response space, maps, symmetry, finite locality, and boundary data."
+  - payload_id: "PAYLOAD-RT006-002"
+    payload_type: "construction"
+    object_name: "FiniteSourceClosureConstraintCandidate_v1"
+    claim_status: "draft/control proposal-only"
+    source_path: "research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_constraint_candidate_v1.tex"
+    burden_effect: "narrows"
+    summary: "Constructs the finite action family and source-normalized candidate without target matching."
+  - payload_id: "PAYLOAD-RT006-003"
+    payload_type: "theorem"
+    object_name: "P8T03 exact finite variation solvability and uniqueness theorem"
+    claim_status: "exact within the declared finite proposal-only candidate"
+    source_path: "research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_constraint_candidate_v1.tex"
+    burden_effect: "narrows"
+    summary: "Proves the constraint, quotient descent, unique solution class, and on-shell identity."
+  - payload_id: "PAYLOAD-RT006-004"
+    payload_type: "explicit_witness"
+    object_name: "P8T03 fixed two-state closure calculation"
+    claim_status: "exact finite local witness"
+    source_path: "research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_constraint_candidate_v1.tex"
+    burden_effect: "narrows"
+    summary: "Reproduces the source response, spectral gap, solution, and action in exact rational arithmetic."
+
+physics_progress_status:
+  status: "candidate_constructed_pending_audit"
+  target_derivation_milestone: "einstein_equations"
+  milestone_burden: "Produce the central gravitational-dynamics candidate."
+  explanation: "P8-T03 materially advances the mathematical burden by constructing an exact finite closure action and response map. The object remains proposal-only and finite; physical gravity, target geometry, target stress energy, Einstein equations, exact-GR recovery, and benchmark promotion remain open."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+obstruction_record:
+  present: false
+  obstruction_id: ""
+  explanation: "The decisive result is a constructed candidate, not an obstruction."
+
+distance_to_gr_delta:
+  changed: true
+  effect: "scoped_source_extension_object"
+  burden_id: "einstein_equations"
+  milestone: "einstein_equations"
+  old_status: "not started"
+  new_status: "draft object exists"
+  ledger_row_updated: true
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "P8-T03 adds the first explicit finite action-or-constraint candidate, exact variation, and source-to-closure map for this burden. The physical row remains no-field-equation-derivation and draft-control-only."
+  downstream_unlocked:
+    - "P8-T04 exact finite candidate variation and identity analysis after checkpoint"
+  downstream_still_blocked:
+    - "physical gravitational interpretation"
+    - "unscoped effective geometry or metric"
+    - "target stress-energy tensor"
+    - "equivalence principle"
+    - "Einstein equations"
+    - "exact-GR recovery"
+    - "benchmark promotion"
+  explanation: "The delta is a scoped mathematical draft object only; it is not an Einstein-equation or physical-status change."
+
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "unchanged; no canonical ontology edit or source-law adoption"
+  - burden: "Source equivalence EqSrc"
+    status: "unchanged"
+  - burden: "RetainH"
+    status: "unchanged"
+  - burden: "GenH"
+    status: "unchanged"
+  - burden: "ObsLoc_lc"
+    status: "unchanged"
+  - burden: "Resp_lc"
+    status: "unchanged; the P8 map uses only the exact admitted finite source response"
+  - burden: "M_src"
+    status: "unchanged; no scope expansion"
+  - burden: "g_eff"
+    status: "unresolved; P6 Gate B remains zero of eight and Q_C is not an effective metric"
+  - burden: "matter coupling"
+    status: "P7 source matter remains adopted by exact human postulate only in its declared source scope; no target stress-energy map follows"
+  - burden: "Einstein equations"
+    status: "draft finite constraint object exists; no physical gravitational interpretation, target field equation, or Einstein-type recovery is derived"
+  - burden: "finite-variation robustness"
+    status: "finite quotient solvability and a spectral bound are established only for the exact candidate; continuum and arbitrary-variation robustness remain open"
+  - burden: "benchmark promotion"
+    status: "blocked"
+  - burden: "Gate Chair status"
+    status: "no new protected verdict requested"
+  - burden: "current route freeze or hard-fail status"
+    status: "P8-T03 candidate family is new and not frozen; P8-T04 is eligible only after checkpoint"
+
+freeze_criteria_status:
+  freeze_evaluation_required: false
+  repeated_burden: false
+  scoped_obstruction: false
+  freeze_decision: "not_frozen"
+  active_freeze_label: ""
+  decision_reason: "The packet creates materially new mathematical payload and returns a constructed candidate rather than repeating a burden or ending in an obstruction."
+  next_allowed_route: "P8-T04 after checkpoint"
+  global_theory_rejection: false
+  future_source_extension_impossibility: false
+
+route_cycle_control:
+  cycle_family: "v21_p8_local_effective_action_closure"
+  current_cycle_step: "p8_t03_finite_constraint_candidate_constructed_p8_t04_selected"
+  prior_related_tasks:
+    - "RT-20260729-003"
+    - "RT-20260729-005"
+    - "RT-20260729-006"
+  cycle_risk: "medium"
+  orbit_avoidance_reason: "P8-T03 adds the missing quotient action and exact solution map. P8-T04 must derive the constraint and identity structure from this fixed candidate and may not restate the P8-T02 target or relabel it as Einstein equations."
+  next_role_consequence: "ontology-formalizer@0.2.0 for v21 P8-T04 after checkpoint"
+
+selected_next_route:
+  route_id: "v21_p8_t04_finite_candidate_field_equation_and_identity_analysis"
+  route_label: "ontology-law-research-packet"
+  role_family: "ontology-formalizer@0.2.0"
+  worker_skill: "continue-research"
+  selected_next_packet_type: "finite_candidate_variation_and_identity_analysis"
+  task_type: "v21_p8_t04_field_equations_and_conservation_identities"
+  plan_task_id: "P8-T04"
+  target_derivation_milestone: "einstein_equations"
+  milestone_burden: "Determine whether Einstein-type equations actually follow from the derived action or closure."
+  strategy_id: "vary_finite_source_closure_constraint_v1_without_promotion"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  candidate_path: "research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_constraint_candidate_v1.tex"
+  target_atlas_assumed: false
+  target_metric_assumed: false
+  target_stress_energy_assumed: false
+  Einstein_Hilbert_action_assumed: false
+  Einstein_equations_assumed: false
+  benchmark_success_assumed: false
+  physics_promotion_authorized: false
+  source_handoff: "research_control/handoffs/handoff-0902.yaml"
+
+claim_boundary:
+  boundary_id: "CB-V21-P8-T03-FINITE-SOURCE-CLOSURE-CONSTRAINT-001"
+  allowed_scope: "One finite proposal-only quotient action, exact variation and solution map, finite A0-A9 instantiation, coefficient/correction ledger, finite controls, justified draft-object ledger delta, and one P8-T04 route after checkpoint."
+  blocked_scope: "Canonical ontology source-law or candidate adoption physical gravitational interpretation target atlas metric stress energy diffeomorphism or Bianchi identity Einstein-Hilbert action Einstein equations exact-GR recovery benchmark proof publication push completed derivation global no-go or future impossibility."
+  claim_boundary_preserved: true
+
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+  summary: "The finite quotient action and exact constraint are proposal-only source-extension data. They do not authorize M_src adoption or scope expansion, g_eff or metric promotion, physical matter coupling or target stress energy, Einstein equations, benchmark promotion, global theory rejection, proof, publication, push, or completed derivation."
+  forbidden_conclusions:
+    - "canonical ontology source-law or candidate adoption or rejection"
+    - "Q_C as an established physical gravitational carrier"
+    - "M_src adoption or scope expansion"
+    - "g_eff or target metric construction or promotion"
+    - "L_C as a spacetime operator"
+    - "component shifts as diffeomorphism invariance"
+    - "component balance as target covariant conservation or Bianchi identity"
+    - "matter coupling derivation or target stress-energy tensor"
+    - "alpha or beta as a derived physical gravitational constant"
+    - "Einstein-Hilbert action or Einstein-equation derivation"
+    - "exact-GR recovery or benchmark promotion"
+    - "Gate Chair verdict proof publication push or completed derivation"
+    - "global theory rejection or future source-extension impossibility"
+
+no_target_import_audit:
+  explicit_target_import_found: false
+  explicit_process_import_found: false
+  distinction: "Only the exact adopted finite P7 kernel, symmetric conductance, Laplacian, source action, first variation, component decomposition, and explicitly proposal-only quotient definitions enter the construction."
+  forbidden_inputs_absent:
+    - "target atlas"
+    - "target metric or desired Lorentzian signature"
+    - "target stress-energy tensor"
+    - "Einstein-Hilbert action"
+    - "Einstein equations"
+    - "benchmark coefficients or exact-GR behavior"
+    - "empirical physical scale or units"
+    - "validator checkpoint or generated derivative as science"
+
+ordinary_route_guard:
+  schema_id: "ordinary_route_guard_evaluation_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  evaluation_id: "ORE-HANDOFF-0902"
+  ordinary_handoff_id: "handoff-0902"
+  threshold: 3
+  consecutive_project_system_tasks_before_selection: 0
+  ready_science_plan_task_ids:
+    - "P8-T04"
+    - "P14-T04"
+  selected_plan_task_id: "P8-T04"
+  selected_route_class: "physics_bearing"
+  selected_worker_skill: "continue-research"
+  outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  exception_receipt:
+    active: false
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not requested"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  publication_authorized: false
+  proof_authority: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  canonical_ontology_edit_authorized: false
+  ontology_selection_authorized: false
+  physical_interpretation_establishment_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+three_tier_claim_summary:
+  adopted_objects:
+    - "The exact unchanged P7 source-matter package remains adopted only in its declared source scope by protected human postulate."
+  accepted_evidence_preconditions:
+    - "P8-T02 formalized the A0-A9 closure target and source boundaries."
+    - "P8-T03 constructs an exact finite quotient action and source-to-closure map as proposal-only source-extension data."
+  open_or_blocked_physical_targets:
+    - "The quotient variable has no established physical gravitational interpretation."
+    - "Target metric stress energy Einstein equations exact-GR recovery and benchmark promotion remain open or blocked."
+  forbidden_overread:
+    - "A finite closure constraint is not an Einstein equation."
+    - "A draft-object ledger delta is not physical promotion."
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required_no_nonblank_signals"
+  notes: "The bounded construction emits no project-improvement signal."
+
+artifacts:
+  candidate: "research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_constraint_candidate_v1.tex"
+  specification: "research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_constraint_spec_v1.yaml"
+  coefficient_ledger: "research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_coefficient_ledger_v1.yaml"
+  controls: "research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_controls_v1.yaml"
+  human_receipt: "research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_constraint_receipt.md"
+  validation_report: "research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_constraint_validation_v1.json"
+  validator: "research_control/tasks/RT-20260729-006/artifacts/validate_finite_source_closure_candidate.py"
+
+output_paths:
+  - "research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_constraint_candidate_v1.tex"
+  - "research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_constraint_spec_v1.yaml"
+  - "research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_coefficient_ledger_v1.yaml"
+  - "research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_controls_v1.yaml"
+  - "research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_constraint_receipt.md"
+  - "research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_constraint_validation_v1.json"
+  - "research_control/tasks/RT-20260729-006/artifacts/validate_finite_source_closure_candidate.py"
+  - "research_control/tasks/RT-20260729-006/artifacts/child_phys_math_p8_t03_finite_source_closure.yaml"
+  - "research_control/tasks/RT-20260729-006/artifacts/child_phys_phil_p8_t03_finite_source_closure.yaml"
+  - "research_control/tasks/RT-20260729-006/artifacts/parent_conflict_review_p8_t03_finite_source_closure.yaml"
+  - "research_control/tasks/RT-20260729-006/artifacts/parent_fusion_notes_p8_t03_finite_source_closure.md"
+  - "research_control/tasks/RT-20260729-006/00_TASK.yaml"
+  - "research_control/tasks/RT-20260729-006/DDR-20260729-006.md"
+  - "research_control/tasks/RT-20260729-006/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260729-006/roles/candidate-constructor@0.2.0--RT-20260729-006.yaml"
+  - "research_control/tasks/RT-20260729-006/jobs/AJ-RT-20260729-006-001.yaml"
+  - "research_control/tasks/RT-20260729-006/jobs/completions/AJC-AJ-RT-20260729-006-001.yaml"
+  - "research_control/handoffs/handoff-0902.yaml"
+  - "research_control/handoffs/handoff-0902.md"
+
+artifact_receipts:
+  candidate:
+    path: "research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_constraint_candidate_v1.tex"
+    sha256: "82dd10d8e91be3781ca4f21e7f9fbf2ce1a9108ae7191db22fed9dfe6086f2fa"
+    status_label: "draft/control"
+  specification:
+    path: "research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_constraint_spec_v1.yaml"
+    sha256: "8840b205e8aa12d73f3e782ec6936eb96385bb5694c298b1bf41a2bdfe472626"
+    status_label: "draft/control"
+  coefficient_ledger:
+    path: "research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_coefficient_ledger_v1.yaml"
+    sha256: "5948e1ab75e42f622e5cc7309c9a6598720021ff2c893126f93c6b0bc21b7372"
+    status_label: "draft/control"
+  controls:
+    path: "research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_controls_v1.yaml"
+    sha256: "b91f240487fd22b9b95b7c7752e429128d20ccb59b3a202c3430ffbbd2922b6e"
+    status_label: "draft/control"
+  validation_receipt:
+    path: "research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_constraint_validation_v1.json"
+    sha256: "2994198a10a9e79b9d2a63643963817144e7d2f25bc10ffccb0ac8b34379b96a"
+    status_label: "operational_validation_only"
+  parent_fusion_notes:
+    path: "research_control/tasks/RT-20260729-006/artifacts/parent_fusion_notes_p8_t03_finite_source_closure.md"
+    sha256: "cf04362d7e05cfd3a75ea38e56542a7bb25c4084d0b34379a24898f170a8492a"
+    status_label: "draft/control"
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 159 validated, was atomically claimed once, and consumed the immutable P8-T03 continue-research route once."
+      - "Dependency checkpoint 12836379a62de3a54d3cbc125835c4fa7dd77806 committed before P8-T03 execution."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Task-local exact-arithmetic validation passes 72 of 72 checks."
+      - "Scratch Tectonic build succeeds with five pages."
+      - "Five parent conflicts are resolved and no conflict remains."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Repository-wide control, claim-language, documentation-impact, renderer, graph, and memory checks pass."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "One governed checkpoint remains; P8-T04 is not executed before it."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Current frontier, task index, compact frontier, dependency graph, claim graph, and generated memory derivatives are synchronized."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory synchronization and validate-only mode pass."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation passes."
+
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=true source_object_count=1074 relationship_row_count=5398 semantic_row_count=1074 vault_row_count=1074"
+  - ".venv/bin/python research_control/tasks/RT-20260729-006/artifacts/validate_finite_source_closure_candidate.py --write-report | exit_code=0 | status=PASS check_count=72 failure_count=0"
+  - "python3 scripts/compile_latex.py finite_source_closure_constraint_candidate_v1.tex --compiler tectonic --output-directory .local/tex-builds/RT-20260729-006 --json | exit_code=0 | pdf_page_count=5"
+
+validation_evidence:
+  - gate_id: "task_local_finite_source_closure_constraint"
+    status: "PASS"
+    receipt_path: "research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_constraint_validation_v1.json"
+    content_hash: "sha256:2994198a10a9e79b9d2a63643963817144e7d2f25bc10ffccb0ac8b34379b96a"
+    counts:
+      error_count: 0
+      warning_count: 0
+      finding_count: 72
+    relevant_finding_ids: []
+    tree_fingerprint: ""
+
+handoff_id: "handoff-0902"
+next_plan_task_id: "P8-T04"
+next_worker_skill: "continue-research"
+next_role_family: "ontology-formalizer@0.2.0"
+next_route_label: "ontology-law-research-packet"
+next_strategy_id: "vary_finite_source_closure_constraint_v1_without_promotion"
+notes: "P8-T04 remains unexecuted until the governed P8-T03 checkpoint commits."

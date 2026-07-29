@@ -1,0 +1,387 @@
+{
+  "schema_id": "finite_source_closure_constraint_validation_v1",
+  "task_id": "RT-20260729-006",
+  "candidate_id": "FiniteSourceClosureConstraintCandidate_v1",
+  "status": "PASS",
+  "check_count": 72,
+  "pass_count": 72,
+  "failure_count": 0,
+  "source_hashes": {
+    "research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_constraint_spec_v1.yaml": "8840b205e8aa12d73f3e782ec6936eb96385bb5694c298b1bf41a2bdfe472626",
+    "research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_coefficient_ledger_v1.yaml": "5948e1ab75e42f622e5cc7309c9a6598720021ff2c893126f93c6b0bc21b7372",
+    "research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_controls_v1.yaml": "b91f240487fd22b9b95b7c7752e429128d20ccb59b3a202c3430ffbbd2922b6e",
+    "research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_constraint_candidate_v1.tex": "82dd10d8e91be3781ca4f21e7f9fbf2ce1a9108ae7191db22fed9dfe6086f2fa",
+    "research_control/tasks/RT-20260729-006/artifacts/child_phys_math_p8_t03_finite_source_closure.yaml": "7ac8466ebc8e0e73b3b28c9a6809c24bbf2e44ccb292d147324f8e52f63cee15",
+    "research_control/tasks/RT-20260729-006/artifacts/child_phys_phil_p8_t03_finite_source_closure.yaml": "37a0274254aba7ce4261c54bd31a27d21ebaa8bac76e57702859d8fe17d7ca3a",
+    "research_control/tasks/RT-20260729-006/artifacts/parent_conflict_review_p8_t03_finite_source_closure.yaml": "4b4f9848ff43e60cdd4a7f2299634e162a8ff7cfd0c88ffe4e55799e9e921020",
+    "research_control/tasks/RT-20260729-006/artifacts/parent_fusion_notes_p8_t03_finite_source_closure.md": "cf04362d7e05cfd3a75ea38e56542a7bb25c4084d0b34379a24898f170a8492a",
+    "research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_constraint_receipt.md": "e4f609e2608f35da022119b774bb2d7681a090890dc59983b81a04ea091a5f3e"
+  },
+  "checks": [
+    {
+      "check_id": "file:finite_source_closure_constraint_spec_v1.yaml",
+      "status": "PASS",
+      "detail": "required task-local artifact exists"
+    },
+    {
+      "check_id": "file:finite_source_closure_coefficient_ledger_v1.yaml",
+      "status": "PASS",
+      "detail": "required task-local artifact exists"
+    },
+    {
+      "check_id": "file:finite_source_closure_controls_v1.yaml",
+      "status": "PASS",
+      "detail": "required task-local artifact exists"
+    },
+    {
+      "check_id": "file:finite_source_closure_constraint_candidate_v1.tex",
+      "status": "PASS",
+      "detail": "required task-local artifact exists"
+    },
+    {
+      "check_id": "file:child_phys_math_p8_t03_finite_source_closure.yaml",
+      "status": "PASS",
+      "detail": "required task-local artifact exists"
+    },
+    {
+      "check_id": "file:child_phys_phil_p8_t03_finite_source_closure.yaml",
+      "status": "PASS",
+      "detail": "required task-local artifact exists"
+    },
+    {
+      "check_id": "file:parent_conflict_review_p8_t03_finite_source_closure.yaml",
+      "status": "PASS",
+      "detail": "required task-local artifact exists"
+    },
+    {
+      "check_id": "file:parent_fusion_notes_p8_t03_finite_source_closure.md",
+      "status": "PASS",
+      "detail": "required task-local artifact exists"
+    },
+    {
+      "check_id": "file:finite_source_closure_constraint_receipt.md",
+      "status": "PASS",
+      "detail": "required task-local artifact exists"
+    },
+    {
+      "check_id": "status:draft_control",
+      "status": "PASS",
+      "detail": "candidate status is draft/control"
+    },
+    {
+      "check_id": "status:proposal_only",
+      "status": "PASS",
+      "detail": "candidate is proposal-only"
+    },
+    {
+      "check_id": "status:blocked_adoption_open_continuation",
+      "status": "PASS",
+      "detail": "adoption remains blocked while continuation remains open"
+    },
+    {
+      "check_id": "result:constructed_candidate",
+      "status": "PASS",
+      "detail": "one decisive Candidate Constructor result is named"
+    },
+    {
+      "check_id": "source_exists:LocalEffectiveActionClosureTarget_v1",
+      "status": "PASS",
+      "detail": "research_control/tasks/RT-20260729-005/artifacts/local_effective_action_closure_target_v1.tex"
+    },
+    {
+      "check_id": "source_hash:LocalEffectiveActionClosureTarget_v1",
+      "status": "PASS",
+      "detail": "13402c3d80f114b643a0216484b0ba775a2f02d1f0733f33d8cf86044e6add96"
+    },
+    {
+      "check_id": "source_exists:LocalEffectiveActionAssumptionEnvelope_v1",
+      "status": "PASS",
+      "detail": "research_control/tasks/RT-20260729-005/artifacts/local_effective_action_assumption_envelope_v1.yaml"
+    },
+    {
+      "check_id": "source_hash:LocalEffectiveActionAssumptionEnvelope_v1",
+      "status": "PASS",
+      "detail": "da939b16a0cb4da082068ab9954d11c4c7a7a658e746c50295dc20347fc82a65"
+    },
+    {
+      "check_id": "source_exists:SourceKernelDirichletVariationalCandidate_v1",
+      "status": "PASS",
+      "detail": "research_control/tasks/RT-20260728-005/artifacts/source_kernel_variational_object_candidate_v1.tex"
+    },
+    {
+      "check_id": "source_hash:SourceKernelDirichletVariationalCandidate_v1",
+      "status": "PASS",
+      "detail": "386769e40167c35604625ef7250c027dc1712c82db4790e2895e0b31ac3cfbf7"
+    },
+    {
+      "check_id": "source_exists:P7T08ConstitutivePostulateLedger_v1",
+      "status": "PASS",
+      "detail": "research_control/tasks/RT-20260729-001/artifacts/p7_t08_constitutive_postulate_ledger_v1.yaml"
+    },
+    {
+      "check_id": "source_hash:P7T08ConstitutivePostulateLedger_v1",
+      "status": "PASS",
+      "detail": "e11f5e4ae886932cad618caa3ee97e973bbd38d363db25776fe1fbd2c27451dc"
+    },
+    {
+      "check_id": "source_exists:P6T08GateBSeparatingCertificate_v1",
+      "status": "PASS",
+      "detail": "research_control/tasks/RT-20260727-004/artifacts/p6_t08_gate_b_separating_certificate_v1.yaml"
+    },
+    {
+      "check_id": "source_hash:P6T08GateBSeparatingCertificate_v1",
+      "status": "PASS",
+      "detail": "f3080ed6a6ba1d6847a3b7ed43c7a11ad7f7dae4deccd25486913ea9547f221b"
+    },
+    {
+      "check_id": "assumptions:count",
+      "status": "PASS",
+      "detail": "A0 through A9 are present"
+    },
+    {
+      "check_id": "assumptions:ids",
+      "status": "PASS",
+      "detail": "assumption identifiers are exact and ordered"
+    },
+    {
+      "check_id": "assumptions:finite_constructed",
+      "status": "PASS",
+      "detail": "every assumption is qualified to the finite candidate"
+    },
+    {
+      "check_id": "math:C_fixed",
+      "status": "PASS",
+      "detail": "[[Fraction(1, 2), Fraction(1, 4)], [Fraction(1, 4), Fraction(1, 1)]]"
+    },
+    {
+      "check_id": "math:L_symmetric",
+      "status": "PASS",
+      "detail": "L_C is symmetric"
+    },
+    {
+      "check_id": "math:L_row_sum",
+      "status": "PASS",
+      "detail": "component constants are zero modes"
+    },
+    {
+      "check_id": "math:source_response",
+      "status": "PASS",
+      "detail": "[Fraction(3, 2), Fraction(-3, 2)]"
+    },
+    {
+      "check_id": "math:component_balance",
+      "status": "PASS",
+      "detail": "source response is balanced"
+    },
+    {
+      "check_id": "math:constraint",
+      "status": "PASS",
+      "detail": "[Fraction(0, 1), Fraction(0, 1)]"
+    },
+    {
+      "check_id": "math:on_shell",
+      "status": "PASS",
+      "detail": "-9/2 == -9/2"
+    },
+    {
+      "check_id": "math:first_variation_on_shell",
+      "status": "PASS",
+      "detail": "0"
+    },
+    {
+      "check_id": "result:constructed_candidate",
+      "status": "PASS",
+      "detail": "constructed_candidate"
+    },
+    {
+      "check_id": "result:nontrivial_constraint_constructed",
+      "status": "PASS",
+      "detail": "nontrivial_constraint_constructed"
+    },
+    {
+      "check_id": "result:source_to_closure_map_constructed",
+      "status": "PASS",
+      "detail": "source_to_closure_map_constructed"
+    },
+    {
+      "check_id": "result:finite_Helmholtz_check_passed",
+      "status": "PASS",
+      "detail": "finite_Helmholtz_check_passed"
+    },
+    {
+      "check_id": "result:finite_gluing_check_passed",
+      "status": "PASS",
+      "detail": "finite_gluing_check_passed"
+    },
+    {
+      "check_id": "result:component_balance_bridge_constructed",
+      "status": "PASS",
+      "detail": "component_balance_bridge_constructed"
+    },
+    {
+      "check_id": "blocked:target_effective_gravitational_action_constructed",
+      "status": "PASS",
+      "detail": "target_effective_gravitational_action_constructed"
+    },
+    {
+      "check_id": "blocked:physical_gravitational_interpretation_established",
+      "status": "PASS",
+      "detail": "physical_gravitational_interpretation_established"
+    },
+    {
+      "check_id": "blocked:target_atlas_constructed_or_assumed",
+      "status": "PASS",
+      "detail": "target_atlas_constructed_or_assumed"
+    },
+    {
+      "check_id": "blocked:target_metric_constructed_or_assumed",
+      "status": "PASS",
+      "detail": "target_metric_constructed_or_assumed"
+    },
+    {
+      "check_id": "blocked:target_stress_energy_constructed",
+      "status": "PASS",
+      "detail": "target_stress_energy_constructed"
+    },
+    {
+      "check_id": "blocked:Einstein_Hilbert_action_constructed_or_assumed",
+      "status": "PASS",
+      "detail": "Einstein_Hilbert_action_constructed_or_assumed"
+    },
+    {
+      "check_id": "blocked:Einstein_equations_derived_or_assumed",
+      "status": "PASS",
+      "detail": "Einstein_equations_derived_or_assumed"
+    },
+    {
+      "check_id": "blocked:exact_GR_recovery_proved",
+      "status": "PASS",
+      "detail": "exact_GR_recovery_proved"
+    },
+    {
+      "check_id": "blocked:benchmark_promotion_authorized",
+      "status": "PASS",
+      "detail": "benchmark_promotion_authorized"
+    },
+    {
+      "check_id": "coefficients:count",
+      "status": "PASS",
+      "detail": "alpha, beta, and C_xy are explicit"
+    },
+    {
+      "check_id": "coefficients:no_target_matching",
+      "status": "PASS",
+      "detail": "no coefficient is fixed by target matching"
+    },
+    {
+      "check_id": "coefficients:target_matched_zero",
+      "status": "PASS",
+      "detail": "zero target-matched coefficients"
+    },
+    {
+      "check_id": "coefficients:dimensionful_zero",
+      "status": "PASS",
+      "detail": "no physical dimensionful constant"
+    },
+    {
+      "check_id": "audit:no_target_import",
+      "status": "PASS",
+      "detail": "no target premise"
+    },
+    {
+      "check_id": "audit:all_prohibited_absent",
+      "status": "PASS",
+      "detail": "all enumerated prohibited premises are absent"
+    },
+    {
+      "check_id": "controls:failure_count",
+      "status": "PASS",
+      "detail": "five exact fail-closed branches"
+    },
+    {
+      "check_id": "controls:forbidden_count",
+      "status": "PASS",
+      "detail": "downstream overreads are blocked"
+    },
+    {
+      "check_id": "decomposition:math_status",
+      "status": "PASS",
+      "detail": "math perspective completed"
+    },
+    {
+      "check_id": "decomposition:phil_status",
+      "status": "PASS",
+      "detail": "philosophy perspective completed"
+    },
+    {
+      "check_id": "decomposition:no_subagents_math",
+      "status": "PASS",
+      "detail": "no math subagent was created"
+    },
+    {
+      "check_id": "decomposition:no_subagents_phil",
+      "status": "PASS",
+      "detail": "no philosophy subagent was created"
+    },
+    {
+      "check_id": "conflicts:resolved",
+      "status": "PASS",
+      "detail": "parent review resolved all conflicts"
+    },
+    {
+      "check_id": "conflicts:count",
+      "status": "PASS",
+      "detail": "five conflicts are explicit"
+    },
+    {
+      "check_id": "conflicts:unresolved_zero",
+      "status": "PASS",
+      "detail": "zero unresolved conflicts"
+    },
+    {
+      "check_id": "tex:FiniteSourceClosureConstraintCandidate",
+      "status": "PASS",
+      "detail": "required source token 'FiniteSourceClosureConstraintCandidate'"
+    },
+    {
+      "check_id": "tex:constructed\\_candidate",
+      "status": "PASS",
+      "detail": "required source token 'constructed\\\\_candidate'"
+    },
+    {
+      "check_id": "tex:blocked\\_adoption\\_open\\_continuation",
+      "status": "PASS",
+      "detail": "required source token 'blocked\\\\_adoption\\\\_open\\\\_continuation'"
+    },
+    {
+      "check_id": "tex:\\alpha L_Ch=\\beta",
+      "status": "PASS",
+      "detail": "required source token '\\\\alpha L_Ch=\\\\beta'"
+    },
+    {
+      "check_id": "tex:not an Einstein",
+      "status": "PASS",
+      "detail": "required source token 'not an Einstein'"
+    },
+    {
+      "check_id": "completion:constructed_candidate",
+      "status": "PASS",
+      "detail": "completion has one decisive constructed_candidate result"
+    },
+    {
+      "check_id": "completion:no_fog",
+      "status": "PASS",
+      "detail": "Candidate Constructor no-fog check passes"
+    },
+    {
+      "check_id": "completion:claim_boundary",
+      "status": "PASS",
+      "detail": "completion preserves the claim boundary"
+    }
+  ],
+  "authority_limits": {
+    "validator_is_physics_proof": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false
+  }
+}

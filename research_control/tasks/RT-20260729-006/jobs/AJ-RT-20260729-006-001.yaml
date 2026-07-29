@@ -1,0 +1,514 @@
+job_id: "AJ-RT-20260729-006-001"
+task_id: "RT-20260729-006"
+decision_id: "DDR-20260729-006"
+role_id: "candidate-constructor"
+role_version: "0.2.0"
+execution_role_ref: "candidate-constructor@0.2.0--RT-20260729-006"
+status: "completed"
+validation_status: "PASS"
+requires_human_gate: false
+created_at: "2026-07-29T18:13:28Z"
+started_at: "2026-07-29T18:13:28Z"
+completed_at: "2026-07-29T18:13:28Z"
+completion_path: "research_control/tasks/RT-20260729-006/jobs/completions/AJC-AJ-RT-20260729-006-001.yaml"
+objective: "Execute only v21 P8-T03 by constructing one finite proposal-only closure action or constraint from the exact P8-T02 envelope and adopted P7 source action, deriving its maps, variation, coefficients, corrections, symmetries, gluing, conservation compatibility, and exact limitations without target matching."
+target_derivation_milestone: "einstein_equations"
+milestone_burden: "Produce the central gravitational-dynamics candidate."
+route_label: "candidate-construction-packet"
+route_reason: "Generation 158 checkpoint 12836379a62de3a54d3cbc125835c4fa7dd77806 committed the P8-T02 target; handoff-0901, the v21 plan, and immutable generation 159 select exactly one P8-T03 Candidate Constructor packet."
+immutable_route_sha256: "ac7f1305783acafbc09e25fcafdb0a3e43e2de7787b2c1b6691170642006a3e3"
+dependency_checkpoint_commit: "12836379a62de3a54d3cbc125835c4fa7dd77806"
+plan_task_id: "P8-T03"
+recommendation_ids:
+  - "V21-R22"
+  - "V21-R26"
+  - "V21-R27"
+  - "V21-R29"
+source_extension_classification_required: true
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 159
+  passes_consumed: 145
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:159"
+  handoff_token: "87db52b8fc4bfdeac31189d07d25e64a13f2bee90375dd5b"
+  relay_claim_token: "3313f398203f3be227398ba031527095a2f42b47d46a43fa"
+  route_work_item_id: "P8-T03"
+  route_worker_skill: "continue-research"
+  route_sha256: "ac7f1305783acafbc09e25fcafdb0a3e43e2de7787b2c1b6691170642006a3e3"
+  route_reason: "dependency_ready_in_scope"
+  route_strategy_id: "continue_in_scope_generation_159"
+  route_blocker_fingerprint: "db67205f25af59b7dc4f8a76ca6a1ed7966015f7023632f86b6062b2cbbb0a7c"
+  route_before_fingerprint: "db67205f25af59b7dc4f8a76ca6a1ed7966015f7023632f86b6062b2cbbb0a7c"
+  route_evidence_sha256es:
+    - "84f68c980b068dcd72bdbd7eb76638890d8e3f84bc32c52561f76c4302b0dcf1"
+    - "db67205f25af59b7dc4f8a76ca6a1ed7966015f7023632f86b6062b2cbbb0a7c"
+  worker_skill: "continue-research"
+  worker_invocation_count: 1
+
+mathematical_decisiveness_contract:
+  contract_path: "research_control/design/mathematical_decisiveness_completion_contract.md"
+  schema_path: ".agents/schemas/PHYSICS_COMPLETION_DECISIVENESS_SCHEMA.md"
+  enforcement_mode: "hard_failure"
+  active_after: "2026-06-21T02:32:39Z"
+
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "physics"
+  payload_type: "candidate_construction"
+  candidate_family: "FiniteSourceClosureConstraintCandidate_v1"
+  assumption_delta:
+    - "Hold the exact P8-T02 closure target and the adopted P7 finite source action, first variation, and componentwise balance fixed."
+    - "Add one proposal-only quotient carrier Q_C=Q^Omega/ker L_C."
+    - "Add one action family S_C^(alpha,beta) with explicit free coefficients."
+    - "Add the exact source-to-response map u -> L_Cu and source-to-closure map u -> [L_C^+L_Cu]=[u]."
+    - "Instantiate A0 through A9 only in the declared exact finite envelope."
+    - "Admit no target atlas, metric, stress-energy tensor, Einstein-Hilbert action, Einstein equation, benchmark coefficient, or validation result as a source premise."
+  materiality_basis: "P8-T02 supplied only a typed target and missing-antecedent obstruction. This packet adds a second varied slot, quotient carrier, coupled finite action, exact variation and solution theorem, source-to-closure map, finite Helmholtz and gluing checks, coefficient ledger, spectral bound, and reproducible two-state calculation."
+  payload_details:
+    candidate_id: "FiniteSourceClosureConstraintCandidate_v1"
+    candidate_kind: "finite_source_closure_constraint"
+    result_type: "constructed_candidate"
+    exact_constraint: "alpha L_C h=beta L_Cu"
+    unique_solution_class: "[h]=(beta/alpha)[u]"
+    physical_gravitational_interpretation_established: false
+    Einstein_equations_derived: false
+  source_basis:
+    - "TEX-V21-P8-T02-LOCAL-EFFECTIVE-ACTION-CLOSURE-TARGET-V1"
+    - "TEX-V21-P7-T06-SOURCE-KERNEL-VARIATIONAL-OBJECT-V1"
+    - "TEX-V21-P7-T08-PHYSICAL-MATTER-ADOPTION-DECISION-V1"
+    - "research_control/tasks/RT-20260729-001/artifacts/p7_t08_constitutive_postulate_ledger_v1.yaml"
+    - "research_control/tasks/RT-20260727-004/artifacts/p6_t08_gate_b_separating_certificate_v1.yaml"
+  expected_artifact_paths:
+    - "research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_constraint_candidate_v1.tex"
+    - "research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_constraint_spec_v1.yaml"
+    - "research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_coefficient_ledger_v1.yaml"
+    - "research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_controls_v1.yaml"
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+
+family_freeze_admission:
+  schema_id: "family_freeze_route_admission_v1"
+  policy_id: "family_freeze_reopening_policy_v1"
+  route_id: "v21_p8_t03_finite_source_closure_constraint_candidate_v1"
+  family_id: "FiniteSourceClosureConstraintCandidate_v1"
+  family_identity_sha256: "13402c3d80f114b643a0216484b0ba775a2f02d1f0733f33d8cf86044e6add96"
+  assumption_sha256es:
+    - "da939b16a0cb4da082068ab9954d11c4c7a7a658e746c50295dc20347fc82a65"
+    - "386769e40167c35604625ef7250c027dc1712c82db4790e2895e0b31ac3cfbf7"
+  route_kind: "candidate_construction"
+  detected_match_basis: []
+  reopening:
+    requested: false
+    class: "none"
+  distinct_branch:
+    branch_identity: "finite_source_closure_after_p8_t02"
+    material_difference_basis: "The packet constructs the previously missing quotient carrier, coupled action, exact solution map, gluing data, and coefficient ledger; it does not reconstruct a frozen EqSrc, M_src, or g_eff candidate."
+    reconstructs_frozen_candidate: false
+    expected_artifact_paths:
+      - "research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_constraint_candidate_v1.tex"
+  authority_limits:
+    local_family_freeze_preserved: true
+    global_no_go_claimed: false
+    automatic_candidate_adoption: false
+    theorem_truth_inferred: false
+    ontology_modified: false
+    physics_promotion_authorized: false
+
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  expected_durable_outputs:
+    physics:
+      - "one proposal-only finite source closure-constraint candidate"
+      - "one exact variation solvability uniqueness and on-shell derivation"
+      - "one source-to-response and source-to-closure map pair"
+      - "one coefficient correction and dimensional ledger"
+    project_system:
+      - "task-local deterministic validator report and scratch TeX build"
+      - "parent-child synthesis records and standard control state"
+  acceptance_criteria:
+    physics:
+      - "the action descends to the quotient exactly"
+      - "the constraint and solution class are reproduced by exact arithmetic"
+      - "A0 through A9 are qualified to the finite envelope"
+      - "all free coefficients terms corrections and dimensions are explicit"
+    project_system:
+      - "task-local source-hash mathematical target-import parent-child and authority checks pass"
+      - "claim-language documentation-impact and research-control checks pass"
+      - "one governed checkpoint records the bounded transaction"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: false
+    exception_id: ""
+    evidence_path: ""
+    evidence_sha256: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0901"
+  source_handoff_path: "research_control/handoffs/handoff-0901.yaml"
+  source_handoff_sha256: "fd008e350928af6535868e0d56506ef1ddd3f2eaf9e7ef70aaa79cdf94ea57dd"
+  selected_plan_task_id: "P8-T03"
+  guard_outcome: "below_threshold"
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  parent:
+    execution_unit_id: "parent"
+    perspective: "physicist_mathematician_philosopher"
+    responsibilities:
+      - "hold the P7 and P8-T02 source hashes and authority boundaries fixed"
+      - "fuse quotient-action mathematics with constitutive and model-world boundaries"
+      - "derive the final candidate coefficient ledger controls and validation"
+      - "resolve all terminology mathematical and authority conflicts"
+      - "route P8-T04 without treating the finite constraint as an Einstein equation"
+  children:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260729-006/artifacts/child_phys_math_p8_t03_finite_source_closure.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260729-006/artifacts/child_phys_phil_p8_t03_finite_source_closure.yaml"
+      status: "completed"
+  conflict_policy:
+    review_path: "research_control/tasks/RT-20260729-006/artifacts/parent_conflict_review_p8_t03_finite_source_closure.yaml"
+    max_resolution_rounds: 2
+    require_parallel_child_revision: true
+    unresolved_conflict_status: "blocked"
+  fusion_policy:
+    fusion_notes_path: "research_control/tasks/RT-20260729-006/artifacts/parent_fusion_notes_p8_t03_finite_source_closure.md"
+    fused_output_path: "research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_constraint_candidate_v1.tex"
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+    final_output_replaces_old_single_role_artifact: true
+  outer_agentjob_count: 1
+  child_agentjob_count: 0
+  subagent_count: 0
+  rationale: "Two internal analytical perspectives are recorded within the one consumed worker invocation and one outer AgentJob. No child AgentJob or subagent was created."
+
+memory_preflight:
+  preflight_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1074
+    relationship_row_count: 5398
+    semantic_row_count: 1074
+    vault_row_count: 1074
+    local_cache_only_warning_count: 0
+    refresh_performed: true
+  refresh_needed: true
+  refresh_performed: true
+  refresh_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py"
+  before_refresh:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    warning_count: 9
+  after_refresh:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1074
+    relationship_row_count: 5398
+    semantic_row_count: 1074
+    vault_row_count: 1074
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"LocalEffectiveActionClosureTarget\" --limit 10 --json"
+      query_type: "search"
+      query_text: "LocalEffectiveActionClosureTarget"
+      returned_object_ids:
+        - "TEX-V21-P8-T02-LOCAL-EFFECTIVE-ACTION-CLOSURE-TARGET-V1"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-V21-P8-T02-LOCAL-EFFECTIVE-ACTION-CLOSURE-TARGET-V1 --json"
+      query_type: "lookup"
+      query_text: "TEX-V21-P8-T02-LOCAL-EFFECTIVE-ACTION-CLOSURE-TARGET-V1"
+      returned_object_ids:
+        - "TEX-V21-P8-T02-LOCAL-EFFECTIVE-ACTION-CLOSURE-TARGET-V1"
+  canonical_inspections:
+    - object_id: "TEX-V21-P8-T02-LOCAL-EFFECTIVE-ACTION-CLOSURE-TARGET-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260729-005/artifacts/local_effective_action_closure_target_v1.tex"
+      source_hash: "13402c3d80f114b643a0216484b0ba775a2f02d1f0733f33d8cf86044e6add96"
+    - object_id: "TEX-V21-P7-T06-SOURCE-KERNEL-VARIATIONAL-OBJECT-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260728-005/artifacts/source_kernel_variational_object_candidate_v1.tex"
+      source_hash: "386769e40167c35604625ef7250c027dc1712c82db4790e2895e0b31ac3cfbf7"
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+    - object_id: "TEX-ONTOLOGY-AETHER-FLOW-DYNAMICS"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "ontology/tex/aether_flow_dynamics.tex"
+      source_hash: "fd6e579e71ef7f2ac4c9668ceede051ad57033ee52357b2552a9e3a5a53939c7"
+    - object_id: "TEX-ONTOLOGY-AETHER-FLOW-CONSISTENCY"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "ontology/tex/aether_flow_consistency.tex"
+      source_hash: "d965519639ee8764a5c5a63798d15e8a9a380d7e208dffc43a0be02b6f245ba1"
+  authority_note: "Obsidian wiki notes, semantic extracts, the SQLite memory index, PDFs, generated registries, and .local files are retrieval layers only and are not authority."
+
+allowed_read_paths:
+  - "SOUL.md"
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".codex/skills/continue-research-continue-goal/SKILL.md"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - ".agents/roles/physics/candidate-constructor.v0.2.0.md"
+  - ".agents/schemas/**"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  - "research_control/design/**"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0901.yaml"
+  - "research_control/handoffs/handoff-0901.md"
+  - "research_control/tasks/RT-20260729-005/**"
+  - "research_control/tasks/RT-20260729-001/**"
+  - "research_control/tasks/RT-20260728-005/**"
+  - "research_control/tasks/RT-20260727-004/**"
+  - "ontology/tex/aether_flow_dynamics.tex"
+  - "ontology/tex/aether_flow_consistency.tex"
+  - "registries/**"
+
+allowed_write_paths:
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_burden_status_migration_receipt.json"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status.md"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_validation.json"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_compact_receipt.json"
+  - "research_control/tasks/RT-20260729-006/**"
+  - "research_control/handoffs/handoff-0902.yaml"
+  - "research_control/handoffs/handoff-0902.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/PDF_DERIVATIVE_REGISTRY.csv"
+  - "registries/PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "registries/TEX_SOURCE_REGISTRY.csv"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/tex/**"
+
+allowed_generated_paths:
+  - ".local/**"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_burden_status_migration_receipt.json"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status.md"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_validation.json"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_compact_receipt.json"
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/tex/**"
+
+forbidden_paths:
+  - "ontology/**"
+  - "manuscripts/**"
+  - "legacy_ontology/**"
+  - "html/**"
+  - "github-facing/**"
+  - "implementations_plans/**"
+  - ".agents/roles/**"
+  - ".codex/skills/**"
+  - "registries/METRIC_USE_LEDGER.csv"
+  - "research_control/tasks/RT-20260729-005/artifacts/**"
+  - "research_control/tasks/RT-20260729-005/jobs/**"
+  - "research_control/tasks/RT-20260729-001/**"
+  - "research_control/tasks/RT-20260728-005/**"
+  - "research_control/tasks/RT-20260727-004/**"
+
+allowed_source_classes:
+  - "science_draft_read_only"
+  - "scientific_gate_read_only"
+  - "canonical_ontology_read_only"
+  - "project_control"
+  - "registry"
+  - "role_contract"
+  - "generated_memory_derivative"
+
+forbidden_source_classes:
+  - "canonical_ontology_write"
+  - "target_benchmark_as_source_premise"
+  - "target_atlas_or_metric_as_source_premise"
+  - "candidate_reconstruction"
+  - "gate_chair_verdict"
+  - "generated_derivative_authority"
+  - "source_law_adoption_or_rejection"
+  - "physical_gravitational_interpretation"
+  - "effective_metric_or_target_stress_energy_construction"
+  - "Einstein_Hilbert_action_or_Einstein_equations"
+  - "exact_GR_recovery_proof"
+  - "benchmark_promotion"
+  - "global_theory_rejection"
+  - "global_no_go_or_future_extension_impossibility"
+  - "publication_or_push"
+  - "completed_derivation_claim"
+
+approved_commands:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"LocalEffectiveActionClosureTarget\" --limit 10 --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-V21-P8-T02-LOCAL-EFFECTIVE-ACTION-CLOSURE-TARGET-V1 --json"
+  - ".venv/bin/python research_control/tasks/RT-20260729-006/artifacts/validate_finite_source_closure_candidate.py --write-report"
+  - "python3 /Users/alex.omegapy/.codex/plugins/cache/openai-bundled/latex/0.2.4/scripts/compile_latex.py /Volumes/P-SSD/AngryOwl/The-AEther-Flow/research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_constraint_candidate_v1.tex --compiler tectonic --output-directory /Volumes/P-SSD/AngryOwl/The-AEther-Flow/.local/tex-builds/RT-20260729-006 --json"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --check"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --check"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --write"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --check"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --json output/research_dependency_graph.json --markdown wiki/indexes/research_dependency_graph.md --dot output/research_dependency_graph.dot"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --check"
+  - ".venv/bin/python scripts/research_control/generate_claim_graph_v1.py --json output/claim_graph_v1.json"
+  - ".venv/bin/python scripts/research_control/validate_claim_graph_v1.py --graph output/claim_graph_v1.json --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --json-summary"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --json-summary"
+  - ".venv/bin/python scripts/research_control/report_physics_progress_metrics.py"
+  - ".venv/bin/python scripts/research_control/run_full_research_control_validation.py --json --tail-chars 2500"
+  - "git diff --check"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260729-006-001"
+
+required_validators:
+  - "memory_preflight"
+  - "p8_t03_finite_source_closure_local_validator"
+  - "scratch_tex_compile"
+  - "parent_child_synthesis"
+  - "source_hash_and_authority"
+  - "claim_language"
+  - "documentation_impact"
+  - "project_improvement_signal_parity"
+  - "research_control_validation"
+  - "memory_bootstrap"
+  - "memory_validate_only"
+  - "renderers"
+  - "graph_freshness"
+  - "git_diff_check"
+  - "checkpoint_research_transaction"
+
+expected_outputs:
+  - "research_control/tasks/RT-20260729-006/**"
+  - "research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_constraint_candidate_v1.tex"
+  - "research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_constraint_spec_v1.yaml"
+  - "research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_coefficient_ledger_v1.yaml"
+  - "research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_controls_v1.yaml"
+  - "research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_constraint_receipt.md"
+  - "research_control/handoffs/handoff-0902.yaml"
+  - "research_control/handoffs/handoff-0902.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+
+claim_boundary: "CB-V21-P8-T03-FINITE-SOURCE-CLOSURE-CONSTRAINT-001"
+documentation_impact_id: "DI-RT-20260729-006-001"
+completion_id: "AJC-AJ-RT-20260729-006-001"
+
+checkpoint_outcome:
+  required: true
+  attempted: false
+  committed: false
+  commit_sha: ""
+  push_authorized: false
+  push_performed: false
+
+stop_conditions:
+  - "Stop if any required P7 or P8-T02 source hash differs."
+  - "Stop if the action fails quotient descent or the exact arithmetic constraint check."
+  - "Stop if alpha or beta is fixed by target matching or represented as a derived physical constant."
+  - "Stop if componentwise balance is renamed as target covariant conservation or a Bianchi identity."
+  - "Stop if the finite quotient carrier is promoted to an established physical gravitational carrier or metric."
+  - "Stop if target atlas metric stress energy Einstein-Hilbert action Einstein equations or benchmark success enters as a premise."
+  - "Stop if A0 through A9 are claimed outside the exact finite envelope."
+  - "Stop if parent-child conflict review has any unresolved conflict."
+  - "Stop on the first governed checkpoint failure; do not retry in this AgentJob."

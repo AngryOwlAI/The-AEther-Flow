@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260729-005`
-- Latest handoff: `handoff-0901`
-- Current status: `p8_t02_closure_target_formalized_scoped_obstruction_ready_for_checkpoint`
+- Active task: `RT-20260729-006`
+- Latest handoff: `handoff-0902`
+- Current status: `p8_t03_finite_source_closure_constraint_candidate_ready_for_checkpoint`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260729-005`
-- Latest research handoff: `handoff-0901`
-- Latest research next action: Run one governed checkpoint for AJ-RT-20260729-005-001. Only after it commits may one fresh bounded P8-T03 candidate-constructor packet attempt to construct the typed closure datum and local effective-action candidate or prove one exact scoped obstruction without target matching.
+- Latest research task: `RT-20260729-006`
+- Latest research handoff: `handoff-0902`
+- Latest research next action: Run one governed checkpoint for AJ-RT-20260729-006-001. Only after it commits may one fresh bounded P8-T04 ontology-formalizer packet vary the exact finite candidate, derive its constraint and identity structure, and compare it structurally without promoting it to an Einstein equation.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p8_t03_local_effective_action_candidate_after_checkpoint`
-- Role family: `candidate-constructor@0.2.0`
+- Route ID: `v21_p8_t04_finite_candidate_field_equation_and_identity_analysis`
+- Role family: `ontology-formalizer@0.2.0`
 - Target milestone: `einstein_equations`
-- Milestone burden: Produce the central gravitational-dynamics candidate.
+- Milestone burden: Determine whether Einstein-type equations actually follow from the derived action or closure.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `07f24b7c8ca83f1ad2b062e6b79b2dd5c339fa0e8eebb8a4e239f7a01a906597`
-- JSON SHA-256: `437cac586545a5fdcb9ec5a7d8dfda9c1489faf259a5b78a32f90cc69ebe2c3c`
+- YAML SHA-256: `293ea0d8c750995c0d5ca28f73347d8b43c4c2c7fdb9fc6053ddb9b06f5a3b59`
+- JSON SHA-256: `2c1970f4ec4eaea1044b29267ef06adedb9b8abe721ecf9efa5d52d2e11d0730`
 
 ## Authority Warning
 

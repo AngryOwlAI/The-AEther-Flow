@@ -1,0 +1,38 @@
+schema_id: "role_decomposition_child_output_v1"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+task_id: "RT-20260729-006"
+status: "completed"
+outer_agentjob_count: 1
+child_agentjob_count: 0
+subagent_count: 0
+shared_claim_boundary: "CB-V21-P8-T03-FINITE-SOURCE-CLOSURE-CONSTRAINT-001"
+
+independent_result:
+  decisive_type: "constructed_candidate"
+  candidate: "S_C^(alpha,beta)([h];u)=(alpha/2)h^T L_C h-beta(L_Cu)^T h"
+  quotient: "Q_C=Q^Omega/ker L_C"
+  constraint: "alpha L_C h=beta L_C u"
+  solution: "[h]=(beta/alpha)[u]"
+  finite_Helmholtz: "PASS because L_C is symmetric"
+  solvability: "PASS because L_Cu is componentwise balanced"
+  uniqueness: "PASS on Q_C"
+  spectral_control: "norm bound uses the smallest positive eigenvalue of L_C"
+
+unique_contributions:
+  - "identified componentwise balance as both quotient gauge-invariance and Fredholm solvability condition"
+  - "kept alpha and beta explicit before choosing the source-normalized member"
+  - "derived the exact on-shell value -V_src(u)"
+  - "separated the local action from the pseudoinverse solution map"
+
+limitations:
+  - "finite graph operator only"
+  - "no continuum or physical scale"
+  - "no Lorentzian carrier or target stress-energy map"
+  - "no physical coefficient calibration"
+  - "no Einstein-type field equation"
+
+authority_limits:
+  physical_gravity_established: false
+  physics_promotion_authorized: false
+  proof_authority: false

@@ -1,0 +1,85 @@
+schema_id: "finite_source_closure_coefficient_ledger_v1"
+artifact_id: "FiniteSourceClosureCoefficientLedger_v1"
+task_id: "RT-20260729-006"
+candidate_id: "FiniteSourceClosureConstraintCandidate_v1"
+status: "draft/control"
+candidate_status: "proposal-only"
+units_status: "dimensionless_finite_candidate_only"
+
+coefficients:
+  - coefficient_id: "alpha"
+    term: "(alpha/2) h^T L_C h"
+    source_status: "free_candidate_coefficient"
+    named_candidate_value: "1"
+    value_basis: "internal source normalization"
+    derived_from_source: false
+    calibrated_empirically: false
+    fixed_by_target_matching: false
+    physical_interpretation: "not_established"
+  - coefficient_id: "beta"
+    term: "-beta a_C(u)^T h"
+    source_status: "free_candidate_coefficient"
+    named_candidate_value: "1"
+    value_basis: "internal normalization making [h]=[u]"
+    derived_from_source: false
+    calibrated_empirically: false
+    fixed_by_target_matching: false
+    physical_interpretation: "not_established"
+  - coefficient_id: "C_xy"
+    term: "weighted edge quadratic"
+    source_status: "algebraically_fixed"
+    named_candidate_value: "(P_xy+P_yx)/2"
+    value_basis: "exact adopted P7 finite kernel"
+    derived_from_source: true
+    calibrated_empirically: false
+    fixed_by_target_matching: false
+    physical_interpretation: "finite source coefficient only"
+
+term_ledger:
+  - term_id: "quadratic_laplacian"
+    included: true
+    derivative_or_neighborhood_order: "weighted graph order two; radius one"
+    coefficient_status: "alpha free; C fixed"
+  - term_id: "linear_source"
+    included: true
+    derivative_or_neighborhood_order: "vertex local after a_C is computed"
+    coefficient_status: "beta free"
+  - term_id: "cosmological_constant"
+    included: false
+    reason: "no source-derived constant or volume term supplied"
+    absence_is_physical_zero_theorem: false
+  - term_id: "higher_derivative"
+    included: false
+    reason: "named finite candidate is defined at graph order two"
+    absence_is_physical_zero_theorem: false
+  - term_id: "nonlocal_action"
+    included: false
+    reason: "L_C^+ occurs only in the solved closure map, not in the action"
+    absence_is_physical_zero_theorem: false
+  - term_id: "boundary"
+    included: false
+    reason: "full declared carrier is finite and closed; subset restrictions retain crossing-edge flux"
+    absence_is_physical_zero_theorem: false
+  - term_id: "correction_remainder"
+    included: true
+    value: "R_1_2=0"
+    reason: "exact finite candidate definition"
+    extrapolates_to_continuum: false
+
+coefficient_conclusions:
+  source_fixed_count: 1
+  free_then_normalized_count: 2
+  empirical_calibration_count: 0
+  target_matched_count: 0
+  dimensionful_constant_count: 0
+  Newton_constant_derived: false
+  speed_of_light_derived: false
+  cosmological_constant_derived: false
+  physical_action_unit_derived: false
+
+authority_limits:
+  coefficient_normalization_is_physics_evidence: false
+  missing_term_means_physically_zero: false
+  physical_coupling_strength_derived: false
+  Einstein_Hilbert_normalization_derived: false
+  physics_promotion_authorized: false
