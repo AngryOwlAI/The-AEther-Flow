@@ -1,0 +1,308 @@
+% authority: science-draft
+% status: draft/control
+% route: ontology-law-research-packet
+% adoption_status: blocked_adoption_open_continuation
+% result: audit_ready_conditional_target_current_antecedent_not_established
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{xurl}
+\usepackage[hidelinks]{hyperref}
+
+\newtheorem{definition}{Definition}
+\newtheorem{target}{Conditional theorem target}
+\newtheorem{proposition}{Proposition}
+\newcommand{\Dsrc}{\mathfrak D_{\mathrm{src}}}
+\newcommand{\Qeff}{\mathcal Q_{\ell}}
+\newcommand{\Meff}{\mathcal M_{\ell}}
+\newcommand{\Conf}{\Gamma_{\ell}}
+\newcommand{\Eop}{\mathcal E_{\ell}}
+\newcommand{\Seff}{S_{\ell}^{\mathrm{eff}}}
+\newcommand{\Rem}{\mathcal R_{\ell,N}}
+
+\title{LocalEffectiveActionClosureTarget\_v1\\
+P8-T02 Closure Theorem Target and Assumption Envelope}
+\author{The \AE ther-Flow Research Project}
+\date{2026-07-29}
+
+\begin{document}
+\sloppy
+\maketitle
+
+\section{Status and exact question}
+
+This document is a \texttt{draft/control}, \texttt{proposal-only}
+formalization target.  It is source-extension data, not a canonical-ontology
+candidate, an adopted law, or a field-equation derivation.  Its status pair is
+\texttt{blocked\_adoption\_open\_continuation}.
+
+The exact P8-T02 question is:
+\begin{quote}
+Which source-derived objects and mathematical hypotheses would be sufficient
+to infer a local effective variational functional from the adopted P7
+source-matter action, response precursor, and componentwise balance data,
+without using a target atlas, target metric, Einstein--Hilbert action,
+Einstein equations, or benchmark success as a premise?
+\end{quote}
+
+The answer below is a conditional target plus a fail-closed audit of its
+antecedent.  It does not assert that the required objects presently exist.
+
+\section{Typed source and effective objects}
+
+\begin{definition}[Fixed source datum]
+Let
+\[
+ \Dsrc=(\mathcal S_{\mathrm{src}},A_{\mathrm{src}},
+ \delta A_{\mathrm{src}},R_{\mathrm{src}},B_{\mathrm{src}})
+\]
+denote the exact adopted P7 package in its declared finite source domains:
+source states, the source-matter action, its admitted finite variation, its
+response precursor, and its componentwise balance records.  Adoption supplies
+their physical source-scope meaning by constitutive postulate.  It does not
+supply any source-to-effective map.
+\end{definition}
+
+\begin{definition}[Candidate effective closure datum]
+For a declared scale \(\ell\) and approximation order \(N\), an effective
+closure datum is the tuple
+\[
+ \mathfrak C_{\ell,N}=
+ (X_\ell,\mathcal U_\ell,\mu_\ell,\Qeff,\Meff,\Conf,
+ C_\ell,M_\ell,\mathsf G_\ell,\Eop,
+ \mathsf B_\ell,\mathsf H_\ell,\Rem).
+\]
+Its components have the following types.
+\begin{longtable}{p{0.19\linewidth}p{0.73\linewidth}}
+\toprule
+Symbol & Required type and meaning\\
+\midrule
+\(X_\ell\) &
+A source-derived effective site or carrier base.  It may be discrete or
+continuous, but its points, neighborhoods, and dimension may not be copied
+from a target spacetime.\\
+\(\mathcal U_\ell\) &
+A specified local cover or locality relation on \(X_\ell\), with restriction
+maps and overlap data.\\
+\(\mu_\ell\) &
+A source-derived integration or summation density on \(X_\ell\), including
+orientation or sign data when required.\\
+\(\Qeff,\Meff\) &
+Typed gravitational-carrier and matter-carrier bundles, sheaves, or finite
+analogues over \(X_\ell\).  No metric interpretation is implied by the
+symbols.\\
+\(\Conf\) &
+The admitted configuration space of sections or finite configurations,
+including regularity class, gauge quotient if any, and allowed variations.\\
+\(C_\ell\) &
+A source-to-gravitational-carrier map
+\(C_\ell:\mathcal S_{\mathrm{src}}^{(\ell)}
+\rightarrow\Gamma(\Qeff)\), with exact domain, codomain, regularity, and
+information-loss declaration.\\
+\(M_\ell\) &
+A source-matter map
+\(M_\ell:\mathcal S_{\mathrm{src}}^{(\ell)}
+\rightarrow\Gamma(\Meff)\), with the same typing obligations.\\
+\(\mathsf G_\ell\) &
+A source-derived local symmetry groupoid, pseudogroup, gauge relation, or
+explicit replacement principle acting on \(\Conf\).\\
+\(\Eop\) &
+A local differential or finite-neighborhood response operator of declared
+order \(r\), obtained from projected source variation rather than target
+matching.\\
+\(\mathsf B_\ell\) &
+Boundary, corner, support, and admissible-variation data sufficient to define
+the variational problem.\\
+\(\mathsf H_\ell\) &
+The inverse-variational data: local Helmholtz conditions, overlap
+transgressions, and the global gluing obstruction class.\\
+\(\Rem\) &
+A correction or remainder with a declared norm, source-controlled bound,
+scale interval, and truncation order \(N\).\\
+\bottomrule
+\end{longtable}
+\end{definition}
+
+\section{Assumption envelope}
+
+The closure target has the following independently auditable hypotheses.
+
+\begin{enumerate}
+\item[\(\mathbf{A0}\)] \textbf{Fixed source scope.}
+Every input is traced to \(\Dsrc\) or to an explicitly marked
+proposal-only source extension.  Process state and generated derivatives
+carry no mathematical authority.
+
+\item[\(\mathbf{A1}\)] \textbf{Source-derived carrier and locality.}
+\(X_\ell,\mathcal U_\ell,\Qeff,\Meff\), their restriction maps, and their
+dimensions are defined without target atlas or metric input.
+
+\item[\(\mathbf{A2}\)] \textbf{Typed source-to-effective maps.}
+\(C_\ell\) and \(M_\ell\) are defined on stated coarse-grained source domains;
+their codomains, regularity, covariance or replacement behavior, fibers, and
+failure sets are exact.
+
+\item[\(\mathbf{A3}\)] \textbf{Local measure and finite derivative order.}
+\(\mu_\ell\) and a jet order or finite-neighborhood radius exist, and the
+projected response at a point depends only on that declared local datum.
+
+\item[\(\mathbf{A4}\)] \textbf{Scale and correction control.}
+The coarse-graining map, valid scale interval, truncation order, and
+\(\|\Rem\|\leq\varepsilon_{\ell,N}\) bound are source-side statements.
+
+\item[\(\mathbf{A5}\)] \textbf{Projected response operator.}
+The first source variation descends through \(C_\ell\) and \(M_\ell\) to a
+well-defined local operator \(\Eop\) on \(\Conf\), independent of
+representatives up to the declared equivalence.
+
+\item[\(\mathbf{A6}\)] \textbf{Inverse-variational integrability.}
+The linearization of \(\Eop\) is formally self-adjoint modulo the declared
+boundary form, or an equivalent set of local Helmholtz conditions holds.
+These are hypotheses of the imported inverse problem of the calculus of
+variations; P7 balance alone does not imply them.
+
+\item[\(\mathbf{A7}\)] \textbf{Global gluing.}
+Local Lagrangian densities supplied by \(\mathbf{A6}\) have exact overlap
+transgressions, satisfy the required cocycle, and have vanishing declared
+variational-cohomology obstruction.  Otherwise only patchwise
+variationality is obtained.
+
+\item[\(\mathbf{A8}\)] \textbf{Symmetry and conservation bridge.}
+\(\mathsf G_\ell\) is source-derived; \(C_\ell\) and \(M_\ell\) are equivariant
+or their controlled defect is specified; and a typed map carries
+componentwise source balance to the candidate effective Noether or Ward
+identity.  Conservation is a conclusion of this bridge, not a relabeling of
+the P7 postulate.
+
+\item[\(\mathbf{A9}\)] \textbf{Boundary and well-posed variation.}
+\(\mathsf B_\ell\) cancels or controls the variational boundary form.  Gauge
+zero modes, constraints, principal symbol or finite analogue, and admitted
+initial or boundary data are stated before any well-posedness claim.
+\end{enumerate}
+
+\section{Conditional local-action closure target}
+
+\begin{target}[Local effective-action closure]
+Assume \(\mathbf{A0}\)--\(\mathbf{A9}\) for one exact
+\(\mathfrak C_{\ell,N}\).  Then the proof target is to construct, up to the
+declared boundary terms, local field redefinitions, and variationally trivial
+densities, a functional
+\[
+ \Seff[q,\psi]
+ =\int_{X_\ell}\mu_\ell\,
+   \mathcal L_{\ell,N}
+   (j^r q,j^s\psi)
+   +\Rem[q,\psi]
+\]
+whose first variation has Euler--Lagrange operator
+\(\Eop+O(\varepsilon_{\ell,N})\) on the admitted configurations.
+Local existence must follow from \(\mathbf{A6}\); global existence must follow
+from \(\mathbf{A7}\).  Equivariance and the balance bridge in
+\(\mathbf{A8}\) must yield the stated effective identity, subject to the
+boundary data in \(\mathbf{A9}\).
+\end{target}
+
+This target is an implication to be proved in a later construction packet.
+The expression above is a type signature, not a constructed action.  Even a
+successful proof would establish only a controlled effective variational
+structure in its stated regime.  It would not, by itself, identify
+\(\Qeff\) with Lorentzian metrics or identify its Euler--Lagrange equations
+with Einstein equations.
+
+\section{Separate Einstein-leading recovery burden}
+
+No GR-leading conclusion belongs in the antecedent of local-action closure.
+After an action has been independently constructed, an Einstein-leading
+comparison would require a second theorem with at least:
+\begin{enumerate}
+\item[\(\mathbf{R1}\)] a source-derived map from the effective carrier to a
+nondegenerate Lorentzian metric candidate, with dimension and signature
+derived rather than copied;
+\item[\(\mathbf{R2}\)] a source-derived invariance and locality theorem strong
+enough to classify the leading low-derivative scalar densities;
+\item[\(\mathbf{R3}\)] source-derived or independently calibrated coefficient
+signs and normalizations, never values fixed merely by target matching;
+\item[\(\mathbf{R4}\)] a source-to-effective matter-response map producing a
+typed target-side response tensor and its conservation identity;
+\item[\(\mathbf{R5}\)] a regime and norm in which extra modes, higher
+derivatives, boundary terms, and nonlocal corrections are controlled.
+\end{enumerate}
+Only after \(\mathbf{R1}\)--\(\mathbf{R5}\) are proved may variation of a
+derived leading action be compared with an Einstein-type equation.  The
+Einstein--Hilbert action, Einstein equations, and exact-GR benchmark are
+read-only comparison targets, never premises of either theorem.
+
+\section{Current antecedent audit}
+
+\begin{proposition}[Current record does not instantiate the target]
+The canonical P5--P7 record inspected by P8-T02 does not establish
+\(\mathbf{A1}\)--\(\mathbf{A9}\).  Consequently it does not presently derive
+\(\Seff\) or an Einstein-type field equation through the target above.
+\end{proposition}
+
+\begin{proof}
+P5 supplies controlled source dynamics and response data.  P6 supplies a
+scoped source-extension metric-structure record but no lawful unscoped
+effective geometry; its Gate B certificate records zero of eight positive
+components.  P7 supplies the exact source-matter action, admitted finite
+variation, response precursor, and componentwise physical balance by
+protected constitutive postulate.  None of these records supplies the
+source-derived effective base and carriers of \(\mathbf{A1}\), both maps of
+\(\mathbf{A2}\), the local measure and derivative expansion of
+\(\mathbf{A3}\)--\(\mathbf{A4}\), the descended operator and Helmholtz/gluing
+data of \(\mathbf{A5}\)--\(\mathbf{A7}\), the effective symmetry and
+conservation bridge of \(\mathbf{A8}\), or the effective boundary and
+well-posedness data of \(\mathbf{A9}\).  The antecedent is therefore not
+established, so the consequent may not be inferred.  This is a scoped
+failure-of-derivation statement, not a theorem that no such extension can
+exist.
+\end{proof}
+
+The exact control obstruction is
+\texttt{OBST-P8T02-LOCAL-EFFECTIVE-ACTION-CLOSURE-DATA-ABSENT-001}.
+It blocks present action and field-equation claims while leaving conservative
+source-extension construction open.
+
+\section{Failure branches}
+
+\begin{longtable}{p{0.31\linewidth}p{0.61\linewidth}}
+\toprule
+Failure & Fail-closed disposition\\
+\midrule
+Target atlas, metric, action, equations, or benchmark used as input &
+\texttt{fail\_closed\_target\_import}; the candidate is inadmissible.\\
+Carrier or source-to-effective maps absent &
+Record the exact missing type or construct one proposal-only source extension;
+do not infer an action.\\
+Helmholtz conditions fail &
+Record a precise scoped inverse-variational obstruction; do not call the
+response operator Euler--Lagrange.\\
+Local densities do not glue &
+Retain patchwise status and record the nonzero obstruction class; do not claim
+a global action.\\
+Conservation bridge absent &
+Keep P7 componentwise source balance separate from any effective Ward,
+Noether, or covariant conservation identity.\\
+Boundary or gauge data absent &
+Do not claim a well-posed variational problem or closed constraint system.\\
+Einstein-leading comparison unavailable &
+Retain a non-Einstein effective candidate, if one exists, and leave the
+Einstein-equations burden open.\\
+\bottomrule
+\end{longtable}
+
+\section{Disposition}
+
+P8-T02 completes the requested formalization: all fields, maps, phase-space
+or configuration variables, symmetries, locality data, derivative order,
+boundary data, correction controls, and failure branches have explicit
+places in the target.  The present source record does not fill those places.
+The next honest step is a bounded P8-T03 candidate-construction packet that
+attempts to construct the missing closure datum or proves one exact scoped
+obstruction.  Canonical-ontology or source-law adoption remains human-gated.
+
+\end{document}

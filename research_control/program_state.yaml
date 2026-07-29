@@ -1,11 +1,103 @@
 mode: "director_led_research_control"
-active_task_id: "RT-20260729-004"
-latest_handoff_id: "handoff-0900"
-current_status: "p8_t01_allowlist_parity_recovery_pass_ready_for_checkpoint"
-claim_boundary_summary: "RT-20260729-004 preserves the completed P8-T01 AgentJob completion handoff and scientific artifacts, restores exact ordered 27-item allowlist identity across its expired role overlay and both control registries, and leaves P8-T02 unexecuted. This project-system recovery changes no scientific status or Distance-to-GR row."
-next_plan_task_id: "P8-T02"
+active_task_id: "RT-20260729-005"
+latest_handoff_id: "handoff-0901"
+current_status: "p8_t02_closure_target_formalized_scoped_obstruction_ready_for_checkpoint"
+claim_boundary_summary: "RT-20260729-005 formalizes LocalEffectiveActionClosureTarget_v1 with ten typed assumptions and records OBST-P8T02-LOCAL-EFFECTIVE-ACTION-CLOSURE-DATA-ABSENT-001 because the current source record does not instantiate the closure antecedent. It constructs no action, metric, conservation identity, or field equation and changes no Distance-to-GR row."
+next_plan_task_id: "P8-T03"
 next_worker_skill: "continue-research"
-next_recommended_action: "Run one governed checkpoint for AJ-RT-20260729-004-001. Only after it commits may one fresh bounded P8-T02 ontology-formalizer packet formalize LocalEffectiveActionClosureTarget_v1 without using the Einstein-Hilbert action, target metric, Einstein equations, or exact-GR benchmark success as a source premise."
+next_recommended_action: "Run one governed checkpoint for AJ-RT-20260729-005-001. Only after it commits may one fresh bounded P8-T03 candidate-constructor packet attempt to construct the typed closure datum and local effective-action candidate or prove one exact scoped obstruction without target matching."
+
+p8_t02_local_effective_action_closure_target:
+  task_id: "RT-20260729-005"
+  parent_task_id: "RT-20260729-004"
+  parent_handoff_id: "handoff-0900"
+  plan_task_id: "P8-T02"
+  next_plan_task_id: "P8-T03"
+  claim_boundary_id: "CB-V21-P8-T02-LOCAL-EFFECTIVE-ACTION-CLOSURE-TARGET-001"
+  status: "PASS_P8_T02_CLOSURE_TARGET_SCOPED_OBSTRUCTION_READY_FOR_CHECKPOINT"
+  work_item_status: "completed_ready_for_checkpoint"
+  milestone_disposition: "closure_target_formalized_einstein_equations_burden_not_started"
+  adoption_status: "blocked_adoption_open_continuation"
+  target_derivation_milestone: "einstein_equations"
+  milestone_burden: "Define what must be proved before any field-equation claim."
+  route_label: "ontology-law-research-packet"
+  selected_role_family: "ontology-formalizer@0.2.0"
+  selected_worker_skill: "continue-research"
+  immutable_route_sha256: "85f0cb731b18d58256d0d6e504271a46482819baa1801e4773bb8df8462c6469"
+  route_blocker_fingerprint: "12e32394ff4c52186c8e064305c03597773d855b244adaf9bbad79c90808dcf0"
+  source_handoff_path: "research_control/handoffs/handoff-0900.yaml"
+  source_handoff_sha256: "3ad70386860972283ec7d9d4dc219dde4f97a1e13940db6516bffc0ad9f93fe9"
+  dependency_checkpoint_commit: "0167f5973d3e056af3afc161554367dfda70aa10"
+  result_status: "audit_ready_closure_target_current_antecedent_not_established"
+  target_id: "LocalEffectiveActionClosureTarget_v1"
+  target_path: "research_control/tasks/RT-20260729-005/artifacts/local_effective_action_closure_target_v1.tex"
+  target_sha256: "13402c3d80f114b643a0216484b0ba775a2f02d1f0733f33d8cf86044e6add96"
+  assumption_envelope_path: "research_control/tasks/RT-20260729-005/artifacts/local_effective_action_assumption_envelope_v1.yaml"
+  assumption_envelope_sha256: "da939b16a0cb4da082068ab9954d11c4c7a7a658e746c50295dc20347fc82a65"
+  forbidden_shortcuts_path: "research_control/tasks/RT-20260729-005/artifacts/local_effective_action_forbidden_shortcuts_v1.yaml"
+  forbidden_shortcuts_sha256: "3ed27d0bba3c55d5b43394a84ce0f2f3fb739e2afbcf3c5063371cf6a3000d52"
+  obstruction_id: "OBST-P8T02-LOCAL-EFFECTIVE-ACTION-CLOSURE-DATA-ABSENT-001"
+  obstruction_scope: "current P5 through P7 source record"
+  no_go_theorem_status: "not_proved"
+  assumption_count: 10
+  satisfied_or_guard_count: 1
+  partial_count: 2
+  missing_count: 7
+  forbidden_shortcut_count: 12
+  local_inverse_variational_condition_required: true
+  global_variational_gluing_required: true
+  Einstein_leading_recovery_is_separate: true
+  target_atlas_assumed: false
+  target_metric_assumed: false
+  Einstein_Hilbert_action_assumed: false
+  Einstein_equations_assumed: false
+  benchmark_success_assumed: false
+  conditional_target_proved_or_instantiated: false
+  canonical_ontology_modified: false
+  source_law_adopted: false
+  effective_geometry_constructed: false
+  effective_metric_constructed: false
+  local_effective_action_constructed: false
+  target_stress_energy_tensor_constructed: false
+  effective_conservation_identity_derived: false
+  equivalence_principle_established_or_refuted: false
+  einstein_equations_derived: false
+  exact_gr_recovery_proved: false
+  benchmark_promotion_authorized: false
+  scientific_claims_changed: true
+  scientific_claim_change_scope: "draft/control theorem target assumption envelope forbidden shortcuts and scoped current obstruction only"
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  distance_to_gr_delta_scope: "none; Einstein-equations burden remains not started"
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+  validation_path: "research_control/tasks/RT-20260729-005/artifacts/local_effective_action_closure_target_validation_v1.json"
+  validation_sha256: "dbc20fe51f26b359c93eb182a2ef0b830233ff5dfc156efd1d50842a425ebecc"
+  task_local_check_count: 46
+  task_local_failure_count: 0
+  resolved_parent_conflict_count: 4
+  unresolved_parent_conflict_count: 0
+  completion_path: "research_control/tasks/RT-20260729-005/jobs/completions/AJC-AJ-RT-20260729-005-001.yaml"
+  completion_sha256: "e5ac2567f4b6b9e243a1b72cf1e26b92442b01be8f29ef91f8fba9a9f49a6220"
+  handoff_id: "handoff-0901"
+  handoff_path: "research_control/handoffs/handoff-0901.yaml"
+  handoff_yaml_sha256: "fd008e350928af6535868e0d56506ef1ddd3f2eaf9e7ef70aaa79cdf94ea57dd"
+  handoff_markdown_sha256: "202ce970192edaca0bc13a5b04345198233622d5daea467b5d059e02740c863b"
+  checkpoint_invocation_count: 0
+  checkpoint_committed: false
+  selected_next_work_item: "P8-T03_after_successful_checkpoint"
+  selected_next_worker_skill: "continue-research"
+  selected_next_role_family: "candidate-constructor@0.2.0"
+  selected_next_packet_type: "source_extension_candidate"
+  selected_next_route_label: "candidate-construction-packet"
+  selected_next_strategy_id: "construct_p8_t03_local_effective_action_candidate_v1"
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
+  p8_t03_executed: false
 
 p8_t01_allowlist_parity_recovery:
   task_id: "RT-20260729-004"

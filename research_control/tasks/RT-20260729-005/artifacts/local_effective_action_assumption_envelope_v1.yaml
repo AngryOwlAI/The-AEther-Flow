@@ -1,0 +1,244 @@
+artifact_id: "LocalEffectiveActionAssumptionEnvelope_v1"
+task_id: "RT-20260729-005"
+plan_task_id: "P8-T02"
+status: "draft/control"
+candidate_status: "proposal-only"
+material_class: "source-extension data"
+adoption_status: "blocked_adoption_open_continuation"
+target_id: "LocalEffectiveActionClosureTarget_v1"
+target_derivation_milestone: "einstein_equations"
+milestone_burden: "Define what must be proved before any field-equation claim."
+closure_kind: "conditional_local_effective_action_form"
+current_instantiation_status: "antecedent_not_established"
+obstruction_id: "OBST-P8T02-LOCAL-EFFECTIVE-ACTION-CLOSURE-DATA-ABSENT-001"
+no_go_theorem_status: "not_proved"
+
+source_evidence:
+  - source_id: "P5SourceDynamicsMilestoneSynthesis_v1"
+    path: "research_control/tasks/RT-20260726-001/artifacts/source_dynamics_milestone_synthesis_v1.tex"
+    sha256: "a2b9c6670cdb0e09ca2e19ff30f71d9bb954e3ab2fc73a5c9727a2df10db93aa"
+    allowed_use: "controlled source dynamics and response data only"
+  - source_id: "P6GeometryInputContract_v1"
+    path: "research_control/tasks/RT-20260726-001/artifacts/p6_geometry_input_contract_v1.yaml"
+    sha256: "7b0eee4ea249a3acf99d38d312bd14619dedea79977d7b802062e9410f5b8557"
+    allowed_use: "scoped source-extension geometry-input status only"
+  - source_id: "MetricObjectNamingDecision_v1"
+    path: "research_control/tasks/RT-20260726-011/artifacts/metric_object_naming_decision_v1.yaml"
+    sha256: "4d67563b2444cfed2bd430e9d027337f26656701624d532f7cb2e357cbac2452"
+    allowed_use: "ScopedMetricStructureRecord_src naming and unresolved bare g_eff boundary only"
+  - source_id: "P6T08GateBSeparatingCertificate_v1"
+    path: "research_control/tasks/RT-20260727-004/artifacts/p6_t08_gate_b_separating_certificate_v1.yaml"
+    sha256: "f3080ed6a6ba1d6847a3b7ed43c7a11ad7f7dae4deccd25486913ea9547f221b"
+    allowed_use: "zero-of-eight Gate B result and exact missing lawful-geometry input"
+  - source_id: "P7T08ConstitutivePostulateLedger_v1"
+    path: "research_control/tasks/RT-20260729-001/artifacts/p7_t08_constitutive_postulate_ledger_v1.yaml"
+    sha256: "e11f5e4ae886932cad618caa3ee97e973bbd38d363db25776fe1fbd2c27451dc"
+    allowed_use: "adopted source action, finite variation, response precursor, and componentwise balance only"
+  - source_id: "P8T01ClosureRouteDecision_v1"
+    path: "research_control/tasks/RT-20260729-003/artifacts/gravitational_closure_route_decision_v1.yaml"
+    sha256: "49af80465727038a7022371bac9dbe8fc4442b01a37fe14e9442873b1d8fa82f"
+    allowed_use: "selected-for-formalization route and target identity only"
+  - source_id: "P8T01ClosureHypothesisComparison_v1"
+    path: "research_control/tasks/RT-20260729-003/artifacts/gravitational_closure_hypothesis_comparison_v1.yaml"
+    sha256: "c337169583c60d1e4889e820ac0388c17ead67b190875268788805dae72b63d2"
+    allowed_use: "declared prerequisite inventory only"
+
+typed_objects:
+  source_datum:
+    symbol: "D_src"
+    domain: "exact adopted finite P7 source package"
+    status: "available_in_declared_source_scope"
+  effective_site:
+    symbol: "X_l"
+    type: "source-derived site, carrier base, or finite analogue"
+    status: "missing"
+  locality_cover:
+    symbol: "U_l"
+    type: "local cover or finite-neighborhood relation with restriction and overlap maps"
+    status: "missing"
+  measure:
+    symbol: "mu_l"
+    type: "source-derived density, measure, or finite summation weight"
+    status: "missing"
+  gravitational_carrier:
+    symbol: "Q_l"
+    type: "bundle, sheaf, or finite carrier over X_l"
+    status: "missing_unscoped"
+  matter_carrier:
+    symbol: "M_l"
+    type: "bundle, sheaf, or finite matter carrier over X_l"
+    status: "missing"
+  configuration_space:
+    symbol: "Gamma_l"
+    type: "regularity-qualified configurations and admitted variations, modulo declared gauge relation"
+    status: "missing"
+  source_to_gravity_map:
+    symbol: "C_l"
+    type: "S_src^(l) -> Gamma(Q_l)"
+    status: "missing"
+  source_to_matter_map:
+    symbol: "M_l_map"
+    type: "S_src^(l) -> Gamma(M_l)"
+    status: "missing"
+  symmetry:
+    symbol: "G_l"
+    type: "source-derived local groupoid, pseudogroup, gauge relation, or explicit replacement"
+    status: "missing"
+  response_operator:
+    symbol: "E_l"
+    type: "local differential operator of declared order or finite-neighborhood analogue"
+    status: "missing_effective_projection"
+  boundary_data:
+    symbol: "B_l"
+    type: "boundary, corner, support, and admitted-variation data"
+    status: "missing_effective"
+  inverse_variational_data:
+    symbol: "H_l"
+    type: "Helmholtz conditions, overlap transgressions, and global gluing obstruction"
+    status: "missing"
+  correction_remainder:
+    symbol: "R_l_N"
+    type: "normed and bounded correction at scale l and order N"
+    status: "missing"
+
+assumptions:
+  - assumption_id: "A0"
+    name: "fixed_source_scope"
+    requirement: "Every premise is source-derived or explicitly marked proposal-only source extension."
+    p5_status: "partial_source_dynamics_available"
+    p6_status: "partial_scoped_geometry_record_available"
+    p7_status: "adopted_source_scope_data_available"
+    overall_status: "satisfied_as_provenance_guard"
+  - assumption_id: "A1"
+    name: "source_derived_carrier_and_locality"
+    requirement: "Define X_l, U_l, Q_l, and M_l without target atlas or target metric."
+    p5_status: "not_supplied"
+    p6_status: "ScopedMetricStructureRecord_src_only; unscoped Gate B zero_of_eight"
+    p7_status: "not_supplied"
+    overall_status: "missing"
+  - assumption_id: "A2"
+    name: "typed_source_to_effective_maps"
+    requirement: "Define C_l and M_l_map with domains, codomains, regularity, fibers, covariance or replacement, and failure sets."
+    p5_status: "not_supplied"
+    p6_status: "not_supplied"
+    p7_status: "not_supplied"
+    overall_status: "missing"
+  - assumption_id: "A3"
+    name: "local_measure_and_derivative_order"
+    requirement: "Define mu_l and a finite jet order or neighborhood radius."
+    p5_status: "not_supplied"
+    p6_status: "not_supplied"
+    p7_status: "finite_source_domain_only_not_effective_locality"
+    overall_status: "missing"
+  - assumption_id: "A4"
+    name: "scale_and_correction_control"
+    requirement: "Define coarse-graining, valid scale interval, truncation order, remainder norm, and bound."
+    p5_status: "not_supplied"
+    p6_status: "not_supplied"
+    p7_status: "not_supplied"
+    overall_status: "missing"
+  - assumption_id: "A5"
+    name: "projected_response_operator"
+    requirement: "Show that source variation descends to a local representative-independent effective response operator."
+    p5_status: "controlled_source_response_only"
+    p6_status: "not_supplied"
+    p7_status: "source_response_precursor_only"
+    overall_status: "partial_but_missing_bridge"
+  - assumption_id: "A6"
+    name: "inverse_variational_integrability"
+    requirement: "Prove local Helmholtz conditions or an equivalent inverse-variational criterion."
+    p5_status: "not_supplied"
+    p6_status: "not_supplied"
+    p7_status: "finite_source_variation_does_not_imply_effective_Helmholtz"
+    overall_status: "missing"
+  - assumption_id: "A7"
+    name: "global_gluing"
+    requirement: "Prove overlap transgression, cocycle, and vanishing variational-cohomology obstruction."
+    p5_status: "not_supplied"
+    p6_status: "not_supplied"
+    p7_status: "not_supplied"
+    overall_status: "missing"
+  - assumption_id: "A8"
+    name: "symmetry_and_conservation_bridge"
+    requirement: "Derive an effective symmetry or replacement and a typed map from componentwise source balance to an effective identity."
+    p5_status: "not_supplied_effectively"
+    p6_status: "not_supplied"
+    p7_status: "componentwise_source_balance_adopted_by_postulate_only"
+    overall_status: "partial_but_missing_bridge"
+  - assumption_id: "A9"
+    name: "boundary_and_well_posed_variation"
+    requirement: "Specify boundary form, gauge zero modes, constraints, principal symbol or finite analogue, and admitted data."
+    p5_status: "not_supplied_effectively"
+    p6_status: "not_supplied"
+    p7_status: "finite_source_variation_scope_only"
+    overall_status: "missing"
+
+imported_mathematical_theorem_hypotheses:
+  - theorem_family: "inverse_problem_of_the_calculus_of_variations"
+    imported_content: "Local Helmholtz conditions are sufficient for local variationality under the exact regularity and locality hypotheses stated by the chosen theorem."
+    project_status: "hypotheses_not_yet_established"
+  - theorem_family: "variational_bicomplex_gluing"
+    imported_content: "A global action requires compatible overlap transgressions and vanishing of the relevant obstruction class."
+    project_status: "hypotheses_not_yet_established"
+  - theorem_family: "Noether_or_Ward_identity"
+    imported_content: "An effective identity follows only after source-derived symmetry, equivariance, variationality, and boundary hypotheses are proved."
+    project_status: "hypotheses_not_yet_established"
+
+Einstein_leading_recovery_obligations:
+  premise_of_local_action_closure: false
+  obligations:
+    - obligation_id: "R1"
+      requirement: "derive a Lorentzian metric candidate from Q_l, including dimension, nondegeneracy, and signature"
+      status: "missing"
+    - obligation_id: "R2"
+      requirement: "derive invariance and locality sufficient to classify leading scalar densities"
+      status: "missing"
+    - obligation_id: "R3"
+      requirement: "derive or independently calibrate coefficient signs and normalizations without target matching"
+      status: "missing"
+    - obligation_id: "R4"
+      requirement: "derive the effective matter-response tensor and its conservation identity"
+      status: "missing"
+    - obligation_id: "R5"
+      requirement: "control extra modes, higher derivatives, boundaries, and nonlocal corrections in a stated regime"
+      status: "missing"
+
+failure_branches:
+  target_import: "fail_closed_target_import"
+  carrier_or_map_absent: "proposal_only_minimum_extension_or_precise_scoped_obstruction"
+  Helmholtz_failure: "precise_scoped_inverse_variational_obstruction"
+  gluing_failure: "patchwise_only_with_nonzero_obstruction_class"
+  conservation_bridge_absent: "keep_source_balance_and_effective_identity_distinct"
+  boundary_or_gauge_data_absent: "no_well_posed_variation_or_closed_constraint_claim"
+  recovery_not_derived: "retain_non_Einstein_candidate_if_any_and_leave_milestone_open"
+
+result:
+  target_formalized: true
+  all_symbols_typed: true
+  assumption_count: 10
+  currently_satisfied_or_guard_assumption_count: 1
+  partial_assumption_count: 2
+  missing_assumption_count: 7
+  closure_action_constructed: false
+  effective_metric_constructed: false
+  Einstein_equations_derived: false
+  distance_to_gr_changed: false
+  next_plan_task_id: "P8-T03"
+  next_route: "candidate-construction-packet"
+  next_role_family: "candidate-constructor@0.2.0"
+  next_objective: "Attempt to construct the exact closure datum and local action candidate or prove one precise scoped obstruction, using no target result as premise."
+
+authority_limits:
+  canonical_ontology_modified: false
+  source_law_adopted: false
+  source_law_rejected: false
+  theorem_truth_inferred: false
+  local_effective_action_constructed: false
+  target_metric_assumed: false
+  Einstein_Hilbert_action_assumed: false
+  Einstein_equations_assumed: false
+  benchmark_success_assumed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false

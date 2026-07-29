@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260729-004` and `handoff-0900`.
+`RT-20260729-005` and `handoff-0901`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260729-004` |
-| Latest handoff ID | `handoff-0900` |
-| Current status | `p8_t01_allowlist_parity_recovery_pass_ready_for_checkpoint` |
+| Active task ID | `RT-20260729-005` |
+| Latest handoff ID | `handoff-0901` |
+| Current status | `p8_t02_closure_target_formalized_scoped_obstruction_ready_for_checkpoint` |
 | V16 completed | false |
-| Current route family | benchmark or recovery (project system) |
+| Current route family | formalization or theorem (scientific) |
 | Target derivation milestone | `einstein_equations` |
 | Current burden | `einstein_equations` |
-| Required next authority | After the governed checkpoint commits, one fresh bounded P8-T02 ontology-formalizer packet may formalize only LocalEffectiveActionClosureTarget_v1 with exact source-to-effective types, maps, locality, measure, symmetry or replacement, scale and correction control, variational equivalences, conservation, and failure branches. |
-| Next recommended action | Run one governed checkpoint for AJ-RT-20260729-004-001. Only after it commits may one fresh bounded P8-T02 ontology-formalizer packet formalize LocalEffectiveActionClosureTarget_v1 without using the Einstein-Hilbert action, target metric, Einstein equations, or exact-GR benchmark success as a source premise. |
+| Required next authority | After the governed checkpoint, attempt only the P8-T03 construction of the typed P8-T02 closure datum and local effective-action candidate or prove one exact scoped obstruction. |
+| Next recommended action | Run one governed checkpoint for AJ-RT-20260729-005-001. Only after it commits may one fresh bounded P8-T03 candidate-constructor packet attempt to construct the typed closure datum and local effective-action candidate or prove one exact scoped obstruction without target matching. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260729-004` |
-| Latest research handoff ID | `handoff-0900` |
-| Latest research next action | Run one governed checkpoint for AJ-RT-20260729-004-001. Only after it commits may one fresh bounded P8-T02 ontology-formalizer packet formalize LocalEffectiveActionClosureTarget_v1 without using the Einstein-Hilbert action, target metric, Einstein equations, or exact-GR benchmark success as a source premise. |
+| Latest research task ID | `RT-20260729-005` |
+| Latest research handoff ID | `handoff-0901` |
+| Latest research next action | Run one governed checkpoint for AJ-RT-20260729-005-001. Only after it commits may one fresh bounded P8-T03 candidate-constructor packet attempt to construct the typed closure datum and local effective-action candidate or prove one exact scoped obstruction without target matching. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260729-004/00_TASK.yaml`.
-- Active task objective: Preserve AJ-RT-20260729-003-001 byte-for-byte; align its expired execution-role overlay and both registry representations to the AgentJob's exact ordered 27-item write-path contract; prove four-way parity and protected P8-T01 byte preservation; then invoke one governed checkpoint before P8-T02.
-- Latest handoff path: `research_control/handoffs/handoff-0900.yaml`.
-- Latest handoff summary: Generation 157 preserves the completed P8-T01 AgentJob byte-for-byte and restores exact ordered 27-item allowlist identity across its expired execution-role overlay and both control-registry representations. All protected P8-T01 scientific bytes and the Distance-to-GR ledger remain exact, and P8-T02 remains unexecuted pending one governed checkpoint.
-- Current route family: benchmark or recovery (project system).
-- Next recommended action: Run one governed checkpoint for AJ-RT-20260729-004-001. Only after it commits may one fresh bounded P8-T02 ontology-formalizer packet formalize LocalEffectiveActionClosureTarget_v1 without using the Einstein-Hilbert action, target metric, Einstein equations, or exact-GR benchmark success as a source premise.
+- Active task path: `research_control/tasks/RT-20260729-005/00_TASK.yaml`.
+- Active task objective: State an exact conditional theorem target connecting the admitted P5 through P7 source-side data to a local effective variational structure; type every carrier, map, locality, scale, inverse-variational, gluing, symmetry, conservation, correction, and boundary obligation; map the assumptions to evidence; and fail closed when the current antecedent is absent.
+- Latest handoff path: `research_control/handoffs/handoff-0901.yaml`.
+- Latest handoff summary: P8-T02 formalizes LocalEffectiveActionClosureTarget_v1 with ten typed assumptions, twelve forbidden shortcuts, a separate inverse-variational and global-gluing burden, and a separate Einstein-leading recovery burden. The current P5 through P7 record satisfies one provenance guard, partially supports two assumptions without their bridges, and misses seven assumptions. The exact result is the scoped obstruction OBST-P8T02-LOCAL-EFFECTIVE-ACTION-CLOSURE-DATA-ABSENT-001. No action, metric, field equation, or Distance-to-GR delta is claimed.
+- Current route family: formalization or theorem (scientific).
+- Next recommended action: Run one governed checkpoint for AJ-RT-20260729-005-001. Only after it commits may one fresh bounded P8-T03 candidate-constructor packet attempt to construct the typed closure datum and local effective-action candidate or prove one exact scoped obstruction without target matching.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -81,30 +81,20 @@ This pilot separates source-side object status from evidence/precondition status
 
 Adopted source-only or source-extension objects:
 
-| Object | Status | Authority | Scope qualifier | Blocked overread | Downstream promotion authorized |
-| --- | --- | --- | --- | --- | --- |
-| M_src | adopted only as scoped source-only M_src object | `research_control/tasks/RT-20260614-134/artifacts/165_M_SRC_GSC_INTEGRATED_SOURCE_ONLY_ADOPTION_THEOREM_GATE_CHAIR_REVIEW.tex` | not_target_manifold_not_metric_not_gr_derivation | no_metricdata_e_adoption<br>no_geff_scope_expansion<br>no_matter_coupling_derivation<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | false |
-| g_eff | ScopedMetricStructureRecord_src adopted as the scoped source-extension record; g_eff^{GSC-cand} retained as exact legacy alias | `research_control/tasks/RT-20260727-004/artifacts/p6_t08_gate_b_separating_certificate_v1.yaml` | not_unscoped_lorentzian_metric_not_matter_coupling_not_einstein_equations | no_source_law_adoption<br>no_metricdata_e_adoption<br>no_unscoped_geff_adoption<br>no_matter_coupling_derivation<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation<br>no_global_theory_rejection<br>no_future_source_extension_impossibility | false |
+No adopted source-only or source-extension objects are listed.
 
 Scoped accepted evidence/preconditions:
 
-| Evidence or precondition | Status | Supports target | Does not establish | Authority |
-| --- | --- | --- | --- | --- |
-| matter_coupling burden evidence/preconditions | accepted only as scoped source-extension evidence/precondition | matter-semantics and matter-coupling continuation only | no_source_law_adoption<br>no_canonical_ontology_edit<br>no_metricdata_e_adoption<br>no_geff_scope_expansion<br>no_coupling_law_adoption<br>no_matter_coupling_derivation<br>no_matter_coupling_adoption<br>no_stress_energy_semantics<br>no_stress_energy_tensor<br>no_matter_action<br>no_detector_semantics<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation<br>no_future_source_extension_impossibility<br>no_global_theory_rejection | `research_control/tasks/RT-20260729-001/artifacts/p7_t08_gate_c_decision_v1.tex` |
+No accepted evidence or precondition entries are listed.
 
 Open or blocked physical targets:
 
-| Physical target | Status | Missing burden or authority | Evidence not to overread | Next lawful route or evidence |
-| --- | --- | --- | --- | --- |
-| matter_coupling | accepted_as_scoped_evidence_precondition | The exact protected verdict is ADOPTED_AS_CANONICAL_PHYSICAL_MATTER_BY_EXPLICIT_HUMAN_POSTULATE for the unchanged P7-T01 through P7-T06 package within its declared finite domains and the current continuum-first source architecture. This discharges the protected constitutive decision burden but does not supply a first-principles derivation: OBST-P7T07-CROSS-LAYER-COMPOSITION-GAP-001 remains open_derivational_gap_after_constitutive_adoption, current ontology still does not derive the adopted meanings, and P6 Gate B supplies no effective-geometry input. | no_source_law_adoption<br>no_canonical_ontology_edit<br>no_metricdata_e_adoption<br>no_geff_scope_expansion<br>no_coupling_law_adoption<br>no_matter_coupling_derivation<br>no_matter_coupling_adoption<br>no_stress_energy_semantics<br>no_stress_energy_tensor<br>no_matter_action<br>no_detector_semantics<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation<br>no_future_source_extension_impossibility<br>no_global_theory_rejection | research_control/tasks/RT-20260729-001/artifacts/p7_t08_gate_c_decision_v1.tex |
-| einstein_equations | not_started | dynamics action or variation | no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | research_control/program_state.yaml |
-| benchmark_promotion | blocked | all upstream derivation burdens | no_benchmark_promotion<br>no_benchmark_gate_chair_closure<br>no_completed_derivation | research_control/program_state.yaml |
+No open or blocked physical target entries are listed.
 
 Forbidden overreads:
 
-- three-tier summary as physics proof
-- accepted evidence/preconditions as adopted objects
-- current-frontier rendering as downstream promotion
+- The theorem target is not a constructed action or proved theorem.
+- The scoped obstruction is not a global no-go theorem.
 
 ## Matter-Coupling Boundary
 
@@ -302,7 +292,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one governed checkpoint for AJ-RT-20260729-004-001. Only after it commits may one fresh bounded P8-T02 ontology-formalizer packet formalize LocalEffectiveActionClosureTarget_v1 without using the Einstein-Hilbert action, target metric, Einstein equations, or exact-GR benchmark success as a source premise.
+Run one governed checkpoint for AJ-RT-20260729-005-001. Only after it commits may one fresh bounded P8-T03 candidate-constructor packet attempt to construct the typed closure datum and local effective-action candidate or prove one exact scoped obstruction without target matching.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -327,20 +317,20 @@ Validation layers:
 
 | Validation layer | Status | Meaning | Evidence |
 | --- | --- | --- | --- |
-| `pre_execution` | PASS | receipt complete | Generation 157 validated, atomically claimed, and consumed its exact immutable recovery route once. |
-| `completion_internal` | PASS | receipt complete | The tracked recovery receipt proves exact four-way ordered allowlist identity and protected-byte preservation. |
-| `post_write` | PASS | receipt complete | Task-local, documentation, signal, research-control, continuation, memory, and whitespace gates pass. |
-| `post_checkpoint` | PENDING | open item; evidence must explain why | One governed checkpoint remains; P8-T02 is not executed before it. |
-| `renderer` | PASS | receipt complete | Tracked frontier, task-index, graph, registry, and wiki derivatives are fresh. |
-| `memory_bootstrap` | PASS | receipt complete | Tracked memory synchronization and validate-only pass. |
-| `claim_language_linter` | PASS | receipt complete | Integrated research-control validation has no hard claim-language error. |
+| `pre_execution` | PASS | receipt complete | Generation 158 validated, was atomically claimed once, and consumed the immutable P8-T02 continue-research route once.<br>Dependency checkpoint 0167f5973d3e056af3afc161554367dfda70aa10 committed before P8-T02 execution. |
+| `completion_internal` | PASS | receipt complete | Task-local validation passes 46 of 46 checks.<br>Ten assumptions are typed, twelve shortcuts fail closed, and no parent conflict remains. |
+| `post_write` | PASS | receipt complete | Repository-wide control, claim-language, documentation-impact, renderer, graph, and memory checks pass. |
+| `post_checkpoint` | PENDING | open item; evidence must explain why | One governed checkpoint remains; P8-T03 is not executed before it. |
+| `renderer` | PASS | receipt complete | Current frontier, task index, dependency graph, claim graph, and generated memory derivatives are synchronized. |
+| `memory_bootstrap` | PASS | receipt complete | Tracked memory synchronization and validate-only mode pass. |
+| `claim_language_linter` | PASS | receipt complete | Changed-source claim-language validation passes. |
 
 Authorization layers:
 
 | Authorization field | Value | Meaning |
 | --- | --- | --- |
 | `protected_scoped_gate_review_authorized` | false (not authorized) | scoped review authority only |
-| `protected_scoped_gate_review_scope` | not authorized; ordinary project-system recovery validation only | exact scope of protected review authority |
+| `protected_scoped_gate_review_scope` | not requested | exact scope of protected review authority |
 | `protected_scoped_gate_review_authority_source_path` | none | tracked source for scoped review authority |
 | `downstream_physics_promotion_authorized` | false (not authorized) | authorizes downstream physics promotion only when true |
 | `downstream_physics_promotion_authority_source_path` | none | tracked source for downstream promotion authority |
@@ -363,9 +353,9 @@ Authorization layers:
 
 Legacy compatibility records:
 
-- active task: `RT-20260729-004`;
-- latest handoff: `handoff-0900`;
-- current status: `p8_t01_allowlist_parity_recovery_pass_ready_for_checkpoint`;
+- active task: `RT-20260729-005`;
+- latest handoff: `handoff-0901`;
+- current status: `p8_t02_closure_target_formalized_scoped_obstruction_ready_for_checkpoint`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -375,8 +365,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0900.yaml`
-- `research_control/tasks/RT-20260729-004/00_TASK.yaml`
+- `research_control/handoffs/handoff-0901.yaml`
+- `research_control/tasks/RT-20260729-005/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -392,7 +382,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0900*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0901*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

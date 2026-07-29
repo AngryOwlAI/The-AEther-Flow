@@ -2,7 +2,7 @@
   "schema_id": "compact_current_frontier_v16",
   "generated_from": [
     "research_control/program_state.yaml",
-    "research_control/handoffs/handoff-0900.yaml",
+    "research_control/handoffs/handoff-0901.yaml",
     "registries/DISTANCE_TO_GR_LEDGER.csv",
     "registries/METRIC_USE_LEDGER.csv",
     "research_control/current_frontier.md",
@@ -11,17 +11,17 @@
     "research_control/design/active_state_bifurcation_policy_v1.md"
   ],
   "active_state": {
-    "active_task_id": "RT-20260729-004",
-    "latest_handoff_id": "handoff-0900",
-    "current_status": "p8_t01_allowlist_parity_recovery_pass_ready_for_checkpoint",
+    "active_task_id": "RT-20260729-005",
+    "latest_handoff_id": "handoff-0901",
+    "current_status": "p8_t02_closure_target_formalized_scoped_obstruction_ready_for_checkpoint",
     "v15_completed": false,
     "v16_completed": false,
     "v16_plan_registered": true
   },
   "active_state_bifurcation": {
-    "latest_research_task_id": "RT-20260729-004",
-    "latest_research_handoff_id": "handoff-0900",
-    "latest_research_next_action": "Run one governed checkpoint for AJ-RT-20260729-004-001. Only after it commits may one fresh bounded P8-T02 ontology-formalizer packet formalize LocalEffectiveActionClosureTarget_v1 without using the Einstein-Hilbert action, target metric, Einstein equations, or exact-GR benchmark success as a source premise.",
+    "latest_research_task_id": "RT-20260729-005",
+    "latest_research_handoff_id": "handoff-0901",
+    "latest_research_next_action": "Run one governed checkpoint for AJ-RT-20260729-005-001. Only after it commits may one fresh bounded P8-T03 candidate-constructor packet attempt to construct the typed closure datum and local effective-action candidate or prove one exact scoped obstruction without target matching.",
     "latest_project_system_task_id": "none",
     "latest_project_system_status": "none",
     "latest_project_system_sidecar_task_id": "none",
@@ -30,10 +30,10 @@
     "next_research_route_source": "latest_research_handoff"
   },
   "next_route": {
-    "route_id": "v21_p8_t02_local_effective_action_closure_target_after_checkpoint",
-    "role_family": "ontology-formalizer@0.2.0",
+    "route_id": "v21_p8_t03_local_effective_action_candidate_after_checkpoint",
+    "role_family": "candidate-constructor@0.2.0",
     "target_derivation_milestone": "einstein_equations",
-    "milestone_burden": "Define what must be proved before any field-equation claim.",
+    "milestone_burden": "Produce the central gravitational-dynamics candidate.",
     "requires_human_gate": false
   },
   "claim_boundary": {
@@ -328,7 +328,7 @@
   ],
   "distance_to_gr": {
     "delta": {
-      "effect": "none_project_system_recovery",
+      "effect": "theorem_target_and_scoped_obstruction_no_distance_delta",
       "changed": false,
       "milestone": "einstein_equations",
       "burden_id": "einstein_equations"
@@ -621,7 +621,7 @@
         "layer": "post_checkpoint",
         "status": "PENDING",
         "evidence": [
-          "One governed checkpoint remains; P8-T02 is not executed before it."
+          "One governed checkpoint remains; P8-T03 is not executed before it."
         ]
       }
     ]

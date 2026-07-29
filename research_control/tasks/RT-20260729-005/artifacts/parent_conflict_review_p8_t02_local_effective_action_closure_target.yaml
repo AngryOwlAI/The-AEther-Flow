@@ -1,0 +1,53 @@
+review_id: "ParentConflictReview-P8T02-LocalEffectiveActionClosureTarget-v1"
+task_id: "RT-20260729-005"
+plan_task_id: "P8-T02"
+status: "resolved"
+resolution_rounds: 1
+child_outputs:
+  - execution_unit_id: "child_phys_math"
+    path: "research_control/tasks/RT-20260729-005/artifacts/child_phys_math_p8_t02_local_effective_action_closure_target.yaml"
+    status: "completed"
+  - execution_unit_id: "child_phys_phil"
+    path: "research_control/tasks/RT-20260729-005/artifacts/child_phys_phil_p8_t02_local_effective_action_closure_target.yaml"
+    status: "completed"
+conflicts:
+  - conflict_id: "PCR-P8T02-001"
+    question: "Does P7 finite variation already supply effective variational closure?"
+    mathematical_position: "No; descent, Helmholtz, gluing, and boundary hypotheses remain."
+    philosophical_position: "No; constitutive source meaning cannot be relabeled as an effective consequence."
+    resolution: "Require A5 through A9 explicitly and record the present antecedent as not established."
+    status: "resolved"
+  - conflict_id: "PCR-P8T02-002"
+    question: "Should GR-leading recovery be part of the action-closure antecedent?"
+    mathematical_position: "No; it is a distinct comparison theorem after action construction."
+    philosophical_position: "No; placing it in the antecedent would make the source-to-target explanation circular."
+    resolution: "Move R1 through R5 to a separate downstream burden and forbid target matching as premise."
+    status: "resolved"
+  - conflict_id: "PCR-P8T02-003"
+    question: "Does missing closure data establish impossibility?"
+    mathematical_position: "No; only the current target antecedent fails."
+    philosophical_position: "No; conservative source-extension continuation remains open."
+    resolution: "Use a scoped obstruction and status blocked_adoption_open_continuation."
+    status: "resolved"
+  - conflict_id: "PCR-P8T02-004"
+    question: "Can P8-T02 route P8-T03 even though no action is constructed?"
+    mathematical_position: "Yes; P8-T02's purpose is to define the exact construction-or-obstruction burden."
+    philosophical_position: "Yes; routing is a control consequence and not a physics claim."
+    resolution: "Route one bounded P8-T03 candidate-construction packet after checkpoint."
+    status: "resolved"
+unresolved_conflicts: []
+fusion_result:
+  fused_output_path: "research_control/tasks/RT-20260729-005/artifacts/local_effective_action_closure_target_v1.tex"
+  fusion_notes_path: "research_control/tasks/RT-20260729-005/artifacts/parent_fusion_notes_p8_t02_local_effective_action_closure_target.md"
+  child_agentjob_count: 0
+  child_subagent_count: 0
+  outer_agentjob_count: 1
+  preserves_shared_consensus: true
+  preserves_unique_contributions: true
+  preserves_unresolved_limitations: true
+authority_limits:
+  final_output_is_adopted_law: false
+  final_output_is_constructed_action: false
+  final_output_is_field_equation: false
+  physics_promotion_authorized: false
+  proof_authority: false

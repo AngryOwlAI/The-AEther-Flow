@@ -1,0 +1,712 @@
+job_id: "AJ-RT-20260729-005-001"
+completion_id: "AJC-AJ-RT-20260729-005-001"
+task_id: "RT-20260729-005"
+task_type: "v21_p8_t02_local_effective_action_closure_target_formalization"
+decision_id: "DDR-20260729-005"
+role_id: "ontology-formalizer"
+role_version: "0.2.0"
+execution_role_ref: "ontology-formalizer@0.2.0--RT-20260729-005"
+status: "completed"
+validation_status: "PASS"
+final_repository_validation_status: "PASS_READY_FOR_CHECKPOINT"
+created_at: "2026-07-29T16:54:52Z"
+started_at: "2026-07-29T16:54:52Z"
+completed_at: "2026-07-29T16:54:52Z"
+objective: "Formalize LocalEffectiveActionClosureTarget_v1, type and evidence-map its complete assumption envelope, state its failure branches and forbidden shortcuts, and record the exact current source-side closure obstruction without constructing an action or field equation."
+completion_summary: "P8-T02 completes an audit-ready conditional local effective-action theorem target. It types ten assumptions A0 through A9: one source-provenance guard is satisfied, two assumptions have partial source precursors but lack source-to-effective bridges, and seven assumptions are missing. It separates local Helmholtz integrability, global variational gluing, effective conservation, boundary/gauge control, and later Einstein-leading recovery. The current record therefore has the precise scoped obstruction OBST-P8T02-LOCAL-EFFECTIVE-ACTION-CLOSURE-DATA-ABSENT-001. No action, metric, field equation, or Distance-to-GR delta is claimed."
+objective_result: "audit_ready_closure_target_current_antecedent_not_established"
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 158
+  passes_consumed: 144
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:158"
+  handoff_token: "3b15fb7fe3cae05592640b334a7127935680e78caa00492e"
+  relay_claim_token: "612f7eec73cdfce85487c0aa067386c8938aae68a348707b"
+  route_work_item_id: "P8-T02"
+  route_worker_skill: "continue-research"
+  route_sha256: "85f0cb731b18d58256d0d6e504271a46482819baa1801e4773bb8df8462c6469"
+  route_reason: "resume_research_after_project_system_repair"
+  route_strategy_id: "continue_in_scope_generation_158"
+  route_blocker_fingerprint: "12e32394ff4c52186c8e064305c03597773d855b244adaf9bbad79c90808dcf0"
+  worker_skill: "continue-research"
+  worker_invocation_count: 1
+
+transaction_status: "ready_for_checkpoint"
+result_disposition: "P8_T02_CLOSURE_TARGET_PASS_SCOPED_OBSTRUCTION_READY_FOR_CHECKPOINT"
+milestone_disposition: "closure_target_formalized_einstein_equations_burden_not_started"
+adoption_status: "blocked_adoption_open_continuation"
+checkpoint_commit:
+  required: true
+  attempted: false
+  committed: false
+  commit_sha: ""
+  dependency_checkpoint_commit: "0167f5973d3e056af3afc161554367dfda70aa10"
+  push_authorized: false
+  push_performed: false
+
+is_physics_task: true
+payload_class: "theorem_statement_and_obstruction_record"
+has_new_mathematical_payload: true
+source_extension_classification_required: true
+source_extension_classification:
+  checklist_id: "source_extension_classification_checklist_v1"
+  records:
+    - object_id: "LocalEffectiveActionClosureTarget_v1"
+      classification: "blocked_adoption_open_continuation"
+      relation_to_current_ontology: "blocked_open"
+      claim_boundary_id: "CB-V21-P8-T02-LOCAL-EFFECTIVE-ACTION-CLOSURE-TARGET-001"
+      blocked_overreads:
+        - "the target as an instantiated or proved closure theorem"
+        - "the target type signature as a constructed action"
+        - "canonical ontology or source-law adoption"
+        - "target atlas metric action equations or benchmark success as source premises"
+        - "g_eff matter coupling Einstein equations benchmark promotion proof or completed derivation"
+      protected_authority_required: true
+      downstream_promotion_authorized: false
+      physics_promotion_authorized: false
+external_red_team_finding_requires_integration: false
+physics_promotion_authorized: false
+proof_authority: false
+
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P8"
+  plan_task_id: "P8-T02"
+  work_kind: "formalization_or_theorem"
+  task_class: "science"
+  expected_result_kind: "completed_or_precisely_blocked"
+  dependency_task_id: "P8-T01"
+  dependency_completion_path: "research_control/tasks/RT-20260729-003/jobs/completions/AJC-AJ-RT-20260729-003-001.yaml"
+  dependency_completion_sha256: "ed2ccb3170f09488f48f5edaeb025f55441f89f82f2bcfd481115017f1b72392"
+  dependency_checkpoint_commit: "0167f5973d3e056af3afc161554367dfda70aa10"
+  work_item_status: "completed_ready_for_checkpoint"
+  recommendation_ids:
+    - "V21-R26"
+    - "V21-R27"
+    - "V21-R31"
+    - "V21-R67"
+  recommendation_coverage_role: "direct_implementation"
+  scientific_claims_changed: true
+  scientific_claim_change_scope: "draft/control theorem target, assumption envelope, forbidden-shortcut list, and scoped current obstruction only"
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  distance_to_gr_delta_scope: "none; Einstein-equations burden remains not started"
+  physics_promotion_authorized: false
+  proof_authority: false
+  next_dependency_work_item: "P8-T03_after_checkpoint"
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  observed_durable_outputs:
+    physics:
+      - "one audit-ready conditional local effective-action theorem target"
+      - "one ten-assumption evidence-mapped envelope"
+      - "one twelve-item forbidden-shortcut list"
+      - "one exact scoped current obstruction"
+    project_system:
+      - "task-local validator and compact validation receipt"
+      - "parent-child synthesis records"
+      - "standard control records and generated memory derivatives"
+  accepted_criteria:
+    physics:
+      - "every field, map, phase-space or configuration variable, symmetry, locality, derivative order, correction, and boundary datum is typed"
+      - "imported theorem hypotheses are distinct from project-derived premises"
+      - "the Einstein-Hilbert action and Einstein equations are not premises"
+      - "missing assumptions and failure branches are explicit"
+    project_system:
+      - "task-local source-hash, assumption-count, target-import, parent-child, and authority checks pass"
+      - "claim-language and documentation-impact gates pass"
+      - "one governed checkpoint records the bounded transaction"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+    theorem_target_counts_as_theorem_truth: false
+
+physics_payload_admission_result:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "physics"
+  declared_payload_type: "theorem"
+  realized_payload_type: "theorem"
+  candidate_family: "LocalEffectiveActionClosureTarget_v1"
+  result: "PASS"
+  material_payload_present: true
+  process_receipts_counted_as_payload: false
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed_by_admission: false
+  physics_promotion_authorized: false
+
+family_freeze_admission_result:
+  schema_id: "family_freeze_route_admission_v1"
+  policy_id: "family_freeze_reopening_policy_v1"
+  route_id: "v21_p8_t02_local_effective_action_closure_target_formalization"
+  family_id: "LocalEffectiveActionClosureTarget_v1"
+  detected_match_basis: []
+  reopening_requested: false
+  result: "PASS_MATERIALLY_NEW_THEOREM_TARGET"
+  local_family_freeze_preserved: true
+  global_no_go_claimed: false
+  physics_promotion_authorized: false
+
+ordinary_route_guard_admission_result:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0900"
+  selected_plan_task_id: "P8-T02"
+  guard_outcome: "below_threshold"
+  result: "PASS"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  scientific_status_changed_by_guard: false
+  physics_promotion_authorized: false
+
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_execution_unit_count: 2
+  outer_agentjob_count: 1
+  child_agentjob_count: 0
+  subagent_count: 0
+
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260729-005/artifacts/child_phys_math_p8_t02_local_effective_action_closure_target.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260729-005/artifacts/child_phys_phil_p8_t02_local_effective_action_closure_target.yaml"
+      status: "completed"
+  conflict_review:
+    status: "resolved"
+    review_path: "research_control/tasks/RT-20260729-005/artifacts/parent_conflict_review_p8_t02_local_effective_action_closure_target.yaml"
+    resolution_rounds: 1
+    resolved_conflict_count: 4
+    unresolved_conflicts: []
+  fusion:
+    fused_output_path: "research_control/tasks/RT-20260729-005/artifacts/local_effective_action_closure_target_v1.tex"
+    fusion_notes_path: "research_control/tasks/RT-20260729-005/artifacts/parent_fusion_notes_p8_t02_local_effective_action_closure_target.md"
+    shared_consensus_summary: "Both perspectives require a typed source-to-effective datum, inverse-variational and global-gluing conditions, a separate conservation bridge, and a later non-circular GR recovery theorem."
+    unique_phys_math_contributions: "Complete typed closure datum, local Helmholtz burden, global variational-gluing burden, boundary/gauge obligations, and current antecedent audit."
+    unique_phys_phil_contributions: "Constitutive-versus-derivational separation, source/effective/target layer controls, process-authority exclusion, and precise non-derivation language."
+    novelty_preservation_summary: "Fusion preserves the first exact P8 local effective-action closure target without treating the type signature as a constructed action."
+    claim_boundary_preservation_summary: "No ontology, source law, geometry, metric, action, target stress energy, conservation identity, equivalence principle, Einstein equation, GR recovery, benchmark, proof, publication, push, global no-go, future impossibility, or completed derivation is authorized."
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+
+theoretical_decision_output:
+  selected_next_packet_type: "source_extension_candidate"
+  selected_next_route_family: "candidate-construction-packet"
+  selected_next_role_family: "candidate-constructor@0.2.0"
+  selected_next_task_id: "P8-T03"
+  decision_basis: "P8-T02 now fixes the exact closure datum and proof obligations. P8-T03 can therefore attempt one source-side construction and test descent, Helmholtz, gluing, conservation, correction, and boundary conditions, or return one precise scoped obstruction."
+  theoretical_method: "Construct every carrier and map from the fixed source record or an explicitly proposal-only conservative extension; derive the projected response; test inverse-variational and gluing conditions; and stop at the first exact failure without target matching."
+  preserves_claim_blocks: true
+  requires_human_gate: false
+  human_gate_reason: "Proposal-only construction or precise obstruction is unprotected. Canonical ontology or source-law adoption remains human-gated."
+  selected_next_packet_requires_human_gate: false
+  decision_consequence: "P8-T03 may attempt the central gravitational-dynamics candidate only under the complete P8-T02 envelope; the target signature is not an existing action."
+  new_payload_novelty: "Introduces the first complete typed local effective-action closure theorem target and explicitly separates inverse-variational, gluing, and Einstein-leading burdens."
+  source_extension_category: "proposal_only_source_to_effective_closure_candidate"
+  source_extension_import_classification: "A conservative definitional extension may be proposed, but target atlas, metric, action, equations, or benchmark agreement remain forbidden imports."
+
+ontology_law_research_packet:
+  route: "ontology-law-research-packet"
+  trigger_classification: "derivation_critical_missing_source_law"
+  target_derivation_milestone: "einstein_equations"
+  milestone_burden: "Define what must be proved before any field-equation claim."
+  missing_source_law: "A lawful source-to-effective variational-closure specification connecting the adopted source action, finite variation, response precursor, and componentwise balance to a typed local effective carrier and action without importing target results."
+  underdetermination_statement: "Current ontology does not derive the source-derived effective carrier, source-to-effective maps, locality, measure, scale control, inverse-variational integrability, global gluing, effective symmetry, conservation bridge, or boundary and gauge data required by LocalEffectiveActionClosureTarget_v1."
+  no_go_theorem_status: "not_proved"
+  adoption_status:
+    current_adoption: "blocked"
+    continuation: "open"
+    status_pair: "blocked_adoption_open_continuation"
+  packet_payload_mode: "candidate_law_payload"
+  candidate_law_payload:
+    status_label: "draft/control"
+    candidate_status: "proposal-only"
+    material_class: "source-extension data"
+    source_side_definition: "A conditional closure target whose antecedent contains only exact source data or explicitly marked source extensions and whose consequent is a local variational functional modulo declared equivalences and controlled remainder."
+    formal_objects:
+      - "fixed source datum D_src"
+      - "source-derived effective site X_l and locality cover U_l"
+      - "gravitational and matter carriers Q_l and M_l"
+      - "configuration space Gamma_l and admitted variations"
+      - "source-to-effective maps C_l and M_l_map"
+      - "source-derived symmetry or replacement G_l"
+      - "local projected response operator E_l"
+      - "Helmholtz, overlap, and global obstruction data H_l"
+      - "boundary, gauge, constraint, and remainder data"
+    domains:
+      - "the exact adopted P7 source package and declared finite source domains"
+      - "source-derived effective carrier candidates only when independently constructed"
+      - "declared scale, locality, regularity, and correction regimes only"
+    maps:
+      - "C_l from coarse-grained source states to effective gravitational configurations"
+      - "M_l_map from coarse-grained source states to effective matter configurations"
+      - "descent map from source first variation to E_l"
+      - "balance bridge from componentwise source balance to an effective identity"
+    proof_obligations:
+      - "all domains, codomains, regularity, locality, derivative order, and equivalence relations are exact"
+      - "source variation descends to a representative-independent local response operator"
+      - "local Helmholtz or equivalent inverse-variational conditions hold"
+      - "local densities satisfy overlap transgression and vanishing global obstruction"
+      - "symmetry, conservation, boundary, gauge, and correction conditions hold"
+      - "the Einstein-Hilbert action, Einstein equations, and benchmark success are not premises"
+      - "Einstein-leading recovery is a separate downstream theorem"
+  candidate_law_comparison:
+    candidates: []
+    comparison_basis: []
+    selection_status: "not_applicable_single_formalization_target"
+  candidate_law_refutation:
+    refuted_candidate: ""
+    refutation_basis: ""
+    surviving_obligations: []
+  human_gate_precondition:
+    blocks_payload_definition: false
+    reason: "Draft/control theorem-target definition is permitted; canonical adoption is not."
+  exact_gr_recovery_obligations:
+    checklist:
+      - "Preserve exact GR as a read-only comparison target and never a source premise."
+      - "Derive dimension, Lorentzian signature, and metric interpretation from the source-derived carrier."
+      - "Derive invariance and locality sufficient to classify leading scalar densities."
+      - "Derive or independently calibrate coefficient signs and normalizations."
+      - "Derive the effective matter-response tensor and conservation identity."
+      - "Control extra modes, higher derivatives, boundaries, and nonlocal corrections."
+    distance_to_gr_links:
+      - "effective_metric_g_eff"
+      - "matter_coupling"
+      - "einstein_equations"
+      - "finite_variation_robustness"
+      - "benchmark_promotion"
+  no_target_import_audit_scope:
+    forbidden_source_classes:
+      - "target_atlas"
+      - "target_metric"
+      - "Einstein_Hilbert_action"
+      - "Einstein_equations"
+      - "benchmark_success"
+      - "candidate_reconstruction"
+      - "generated_derivative"
+      - "registry_metadata_authority"
+      - "role_authority"
+      - "validation_authority"
+    checked_objects:
+      - "effective site and carriers"
+      - "source-to-effective maps"
+      - "locality, measure, scale, and remainder"
+      - "response, inverse-variational, and gluing data"
+      - "symmetry, conservation, boundary, and recovery obligations"
+  atlas_glue_obligations:
+    profile_law: "source-derived carrier profile not supplied"
+    selector_law: "source-to-effective selector not supplied"
+    transition_law: "overlap transition and transgression laws not supplied"
+    inverse_checks: "source-to-effective inverse or fiber-equivalence checks not supplied"
+    cocycle_checks: "global variational cocycle and obstruction checks not supplied"
+    finite_variation_robustness: "P7 finite source variation exists only in exact source scope; no effective robust variation law follows"
+  failure_branches:
+    collapse: "if the effective carrier collapses or is trivial, record the exact source-side failure and do not infer geometry"
+    nonuniqueness: "retain a typed candidate family and free-data ledger; do not fix a member by target matching"
+    inverse_defect: "if Helmholtz conditions fail, record a precise scoped inverse-variational obstruction"
+    cocycle_defect: "if local densities do not glue, retain patchwise status and the nonzero obstruction class"
+    variation_fragility: "if boundary, gauge, or correction control fails, do not claim a well-posed or robust action"
+    target_import: "fail_closed_target_import"
+    conservation_bridge_absent: "keep source balance and effective conservation distinct"
+    Einstein_leading_recovery_absent: "leave the Einstein-equations burden open"
+  known_risks:
+    - "source labels may conceal target-derived carrier choices"
+    - "balance may be mistaken for inverse-variational integrability"
+    - "patchwise variationality may be mistaken for a global action"
+    - "free coefficients may be fixed by benchmark matching"
+  failed_alternatives:
+    - "Direct inference from the P7 source action and componentwise balance fails because descent, effective carrier, Helmholtz, gluing, conservation, and boundary data are absent."
+  human_gate_request:
+    required_before_adoption: true
+    requested_decision: "No gate is requested now. Protected human authority is required before adopting, rejecting, or canonically promoting any new ontology or source law."
+    exact_requested_ontology_edit: ""
+
+new_mathematical_payload:
+  - payload_id: "NMP-RT-20260729-005-001"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    name: "LocalEffectiveActionClosureTarget_v1 and current-antecedent proposition"
+    summary: "States the conditional local effective-action target and proves that the inspected current P5 through P7 record does not instantiate its typed antecedent."
+  - payload_id: "NMP-RT-20260729-005-002"
+    payload_type: "countermodel_or_obstruction"
+    name: "OBST-P8T02-LOCAL-EFFECTIVE-ACTION-CLOSURE-DATA-ABSENT-001"
+    summary: "Records the exact current missing-antecedent obstruction and its conservative continuation branch without claiming future-extension impossibility."
+
+minimum_physics_payload:
+  minimum_payload_schema_id: "minimum_physics_payload_schema_v1"
+  source_task_id: "RT-20260729-005"
+  source_job_id: "AJ-RT-20260729-005-001"
+  source_completion_path: "research_control/tasks/RT-20260729-005/jobs/completions/AJC-AJ-RT-20260729-005-001.yaml"
+  target_derivation_milestone: "einstein_equations"
+  milestone_burden: "Define what must be proved before any field-equation claim."
+  payload_class: "theorem_statement"
+  payload_status: "draft/control"
+  payload_artifact_path: "research_control/tasks/RT-20260729-005/artifacts/local_effective_action_closure_target_v1.tex"
+  payload_summary: "An audit-ready conditional local effective-action theorem target with exact current obstruction."
+  payload_source_basis:
+    - "P5SourceDynamicsMilestoneSynthesis_v1"
+    - "P6GeometryInputContract_v1"
+    - "P6T08GateBSeparatingCertificate_v1"
+    - "P7T08ConstitutivePostulateLedger_v1"
+    - "P8T01ClosureRouteDecision_v1"
+  process_receipts_excluded:
+    - "validator_status"
+    - "registry_row"
+    - "handoff_status"
+    - "generated_derivative"
+    - "checkpoint_status"
+  physics_promotion_authorized: false
+  proof_authority: false
+
+mathematical_payload_manifest:
+  - payload_id: "PAYLOAD-RT005-001"
+    payload_type: "theorem"
+    object_name: "LocalEffectiveActionClosureTarget_v1"
+    claim_status: "draft/control conditional theorem target"
+    source_path: "research_control/tasks/RT-20260729-005/artifacts/local_effective_action_closure_target_v1.tex"
+    burden_effect: "narrows"
+    summary: "Defines the exact sufficient-condition target without asserting its antecedent."
+  - payload_id: "PAYLOAD-RT005-002"
+    payload_type: "definition"
+    object_name: "LocalEffectiveActionAssumptionEnvelope_v1"
+    claim_status: "draft/control assumption definition"
+    source_path: "research_control/tasks/RT-20260729-005/artifacts/local_effective_action_assumption_envelope_v1.yaml"
+    burden_effect: "narrows"
+    summary: "Maps ten typed assumptions to source evidence and missing bridges."
+  - payload_id: "PAYLOAD-RT005-003"
+    payload_type: "obstruction"
+    object_name: "OBST-P8T02-LOCAL-EFFECTIVE-ACTION-CLOSURE-DATA-ABSENT-001"
+    claim_status: "precise scoped current obstruction"
+    source_path: "research_control/tasks/RT-20260729-005/artifacts/local_effective_action_closure_target_v1.tex"
+    burden_effect: "blocks"
+    summary: "Blocks present action and field-equation inference while preserving open continuation."
+
+physics_progress_status:
+  status: "burden_discharged"
+  target_derivation_milestone: "einstein_equations"
+  milestone_burden: "Define what must be proved before any field-equation claim."
+  explanation: "P8-T02 gives a materially new formal target and exact obstruction but constructs no gravitational dynamics and discharges no Distance-to-GR burden."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+obstruction_record:
+  present: true
+  obstruction_id: "OBST-P8T02-LOCAL-EFFECTIVE-ACTION-CLOSURE-DATA-ABSENT-001"
+  scope: "current_ontology_only"
+  failed_object: "LocalEffectiveActionClosureTarget_v1 antecedent A1 through A9"
+  exact_failure: "The inspected source record supplies neither the complete source-to-effective carrier and maps nor the locality scale inverse-variational gluing conservation boundary and correction data required by the conditional target."
+  current_ontology_implication: "does_not_derive"
+  source_extension_implication: "repair_allowed"
+  consequence: "repair_candidate_allowed"
+  forbidden_overread: "The current missing antecedent does not prove that every conservative source extension is impossible."
+
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "einstein_equations"
+  milestone: "einstein_equations"
+  old_status: "not_started"
+  new_status: "not_started"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  downstream_unlocked:
+    - "P8-T03 construction-or-precise-obstruction packet after governed checkpoint"
+  downstream_still_blocked:
+    - "lawful unscoped effective geometry"
+    - "source-to-effective matter map"
+    - "local effective action"
+    - "target stress-energy tensor"
+    - "equivalence principle"
+    - "Einstein equations"
+    - "exact-GR recovery"
+    - "benchmark promotion"
+  explanation: "Formalizing a conditional target and identifying its missing antecedent do not construct the target object."
+
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "unchanged; no canonical ontology edit or source-law adoption"
+  - burden: "Source equivalence EqSrc"
+    status: "unchanged"
+  - burden: "RetainH"
+    status: "unchanged"
+  - burden: "GenH"
+    status: "unchanged"
+  - burden: "ObsLoc_lc"
+    status: "unchanged"
+  - burden: "Resp_lc"
+    status: "unchanged; controlled source response is only a precursor to the missing effective response operator"
+  - burden: "M_src"
+    status: "unchanged"
+  - burden: "g_eff"
+    status: "unresolved; ScopedMetricStructureRecord_src remains scoped and Gate B remains zero of eight"
+  - burden: "matter coupling"
+    status: "P7 source-scope matter remains human-adopted by constitutive postulate; the source-to-effective bridge remains absent"
+  - burden: "Einstein equations"
+    status: "not started; P8-T02 defines the prerequisites and records their current absence"
+  - burden: "finite-variation robustness"
+    status: "unchanged; effective descent, Helmholtz, gluing, boundary, and correction control are missing"
+  - burden: "benchmark promotion"
+    status: "blocked"
+  - burden: "Gate Chair status"
+    status: "no new protected verdict requested"
+  - burden: "current route freeze or hard-fail status"
+    status: "selected local effective-action route remains open for P8-T03 under OBST-P8T02-LOCAL-EFFECTIVE-ACTION-CLOSURE-DATA-ABSENT-001; three P8-T01 alternatives remain locally frozen"
+
+freeze_criteria_status:
+  repeated_burden: false
+  freeze_evaluation_required: true
+  active_freeze_label: ""
+  prior_attempts_considered:
+    - "P8-T01 selected the local effective-action route for formalization only."
+    - "P8-T02 adds the first complete theorem target and exact missing-antecedent audit."
+  freeze_if:
+    - "A later packet repeats the theorem target without constructing a missing carrier, map, integrability condition, gluing datum, or exact new obstruction."
+    - "A later packet treats the type signature as an existing action or fixes data by target matching."
+  do_not_freeze_if:
+    - "P8-T03 constructs materially new source-side closure data."
+    - "P8-T03 proves a materially new exact scoped obstruction."
+  freeze_decision: "do_not_freeze_selected_route_continue_once_to_p8_t03"
+  decision_reason: "P8-T02 supplies new mathematical payload and creates a sharply testable P8-T03 construction-or-obstruction burden."
+  next_allowed_route: "candidate-constructor@0.2.0 for P8-T03 after checkpoint"
+  global_theory_rejection: false
+  future_source_extension_impossibility: false
+
+route_cycle_control:
+  cycle_family: "v21_p8_local_effective_action_closure"
+  current_cycle_step: "p8_t02_theorem_target_and_assumption_envelope"
+  prior_related_tasks:
+    - "RT-20260729-003"
+    - "RT-20260729-004"
+  cycle_risk: "medium"
+  orbit_avoidance_reason: "The packet adds exact Helmholtz, gluing, conservation, boundary, and correction burdens and permits P8-T03 only if it constructs a missing datum or proves a new scoped obstruction."
+  next_role_consequence: "candidate-constructor@0.2.0 for P8-T03 after checkpoint"
+
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  forbidden_conclusions:
+    - "the conditional theorem target as a proved or instantiated theorem"
+    - "the type signature as a constructed action"
+    - "canonical ontology or source-law adoption or rejection"
+    - "M_src adoption or scope expansion"
+    - "unscoped g_eff adoption or promotion"
+    - "matter coupling derivation or scope expansion"
+    - "effective geometry, metric, target stress-energy, or conservation construction"
+    - "equivalence-principle establishment or refutation"
+    - "Einstein-equation derivation or exact-GR recovery"
+    - "benchmark promotion"
+    - "global no-go, global theory rejection, or future source-extension impossibility"
+    - "Gate Chair verdict, proof, publication, push, or completed derivation"
+  summary: "P8-T02 is a theorem-target and scoped-obstruction packet only."
+
+artifacts:
+  closure_target: "research_control/tasks/RT-20260729-005/artifacts/local_effective_action_closure_target_v1.tex"
+  assumption_envelope: "research_control/tasks/RT-20260729-005/artifacts/local_effective_action_assumption_envelope_v1.yaml"
+  forbidden_shortcuts: "research_control/tasks/RT-20260729-005/artifacts/local_effective_action_forbidden_shortcuts_v1.yaml"
+  human_receipt: "research_control/tasks/RT-20260729-005/artifacts/local_effective_action_closure_target_receipt.md"
+  compact_validation_receipt: "research_control/tasks/RT-20260729-005/artifacts/local_effective_action_closure_target_validation_v1.json"
+  validator: "research_control/tasks/RT-20260729-005/artifacts/validate_local_effective_action_closure_target.py"
+  child_phys_math: "research_control/tasks/RT-20260729-005/artifacts/child_phys_math_p8_t02_local_effective_action_closure_target.yaml"
+  child_phys_phil: "research_control/tasks/RT-20260729-005/artifacts/child_phys_phil_p8_t02_local_effective_action_closure_target.yaml"
+  parent_conflict_review: "research_control/tasks/RT-20260729-005/artifacts/parent_conflict_review_p8_t02_local_effective_action_closure_target.yaml"
+  parent_fusion_notes: "research_control/tasks/RT-20260729-005/artifacts/parent_fusion_notes_p8_t02_local_effective_action_closure_target.md"
+
+output_paths:
+  - "research_control/tasks/RT-20260729-005/artifacts/local_effective_action_closure_target_v1.tex"
+  - "research_control/tasks/RT-20260729-005/artifacts/local_effective_action_assumption_envelope_v1.yaml"
+  - "research_control/tasks/RT-20260729-005/artifacts/local_effective_action_forbidden_shortcuts_v1.yaml"
+  - "research_control/tasks/RT-20260729-005/artifacts/local_effective_action_closure_target_receipt.md"
+  - "research_control/tasks/RT-20260729-005/artifacts/local_effective_action_closure_target_validation_v1.json"
+  - "research_control/tasks/RT-20260729-005/artifacts/validate_local_effective_action_closure_target.py"
+  - "research_control/tasks/RT-20260729-005/artifacts/child_phys_math_p8_t02_local_effective_action_closure_target.yaml"
+  - "research_control/tasks/RT-20260729-005/artifacts/child_phys_phil_p8_t02_local_effective_action_closure_target.yaml"
+  - "research_control/tasks/RT-20260729-005/artifacts/parent_conflict_review_p8_t02_local_effective_action_closure_target.yaml"
+  - "research_control/tasks/RT-20260729-005/artifacts/parent_fusion_notes_p8_t02_local_effective_action_closure_target.md"
+  - "research_control/tasks/RT-20260729-005/00_TASK.yaml"
+  - "research_control/tasks/RT-20260729-005/DDR-20260729-005.md"
+  - "research_control/tasks/RT-20260729-005/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260729-005/roles/ontology-formalizer@0.2.0--RT-20260729-005.yaml"
+  - "research_control/tasks/RT-20260729-005/jobs/AJ-RT-20260729-005-001.yaml"
+  - "research_control/tasks/RT-20260729-005/jobs/completions/AJC-AJ-RT-20260729-005-001.yaml"
+  - "research_control/handoffs/handoff-0901.yaml"
+  - "research_control/handoffs/handoff-0901.md"
+
+artifact_receipts:
+  closure_target:
+    path: "research_control/tasks/RT-20260729-005/artifacts/local_effective_action_closure_target_v1.tex"
+    sha256: "13402c3d80f114b643a0216484b0ba775a2f02d1f0733f33d8cf86044e6add96"
+    status_label: "draft/control"
+  assumption_envelope:
+    path: "research_control/tasks/RT-20260729-005/artifacts/local_effective_action_assumption_envelope_v1.yaml"
+    sha256: "da939b16a0cb4da082068ab9954d11c4c7a7a658e746c50295dc20347fc82a65"
+    status_label: "draft/control"
+  forbidden_shortcuts:
+    path: "research_control/tasks/RT-20260729-005/artifacts/local_effective_action_forbidden_shortcuts_v1.yaml"
+    sha256: "3ed27d0bba3c55d5b43394a84ce0f2f3fb739e2afbcf3c5063371cf6a3000d52"
+    status_label: "draft/control"
+  closure_target_receipt:
+    path: "research_control/tasks/RT-20260729-005/artifacts/local_effective_action_closure_target_receipt.md"
+    sha256: "1b39cbbb7be7d32da1d913c1107915cba79d1a484e61d49e193f75d48753df9b"
+    status_label: "draft/control"
+  validation_receipt:
+    path: "research_control/tasks/RT-20260729-005/artifacts/local_effective_action_closure_target_validation_v1.json"
+    sha256: "dbc20fe51f26b359c93eb182a2ef0b830233ff5dfc156efd1d50842a425ebecc"
+    status_label: "operational_validation_only"
+  parent_fusion_notes:
+    path: "research_control/tasks/RT-20260729-005/artifacts/parent_fusion_notes_p8_t02_local_effective_action_closure_target.md"
+    sha256: "78eaded1425862825e89c9d2cbea6396ad7b77d1c5704828cd89bdfa143a2840"
+    status_label: "draft/control"
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 158 validated, was atomically claimed once, and consumed its exact immutable P8-T02 continue-research route once."
+      - "Dependency checkpoint 0167f5973d3e056af3afc161554367dfda70aa10 contains the cumulative P8-T01 route selection and allowlist recovery transaction."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The task-local validator passes 46 of 46 source-hash, assumption, type, shortcut, parent-child, target-premise, and authority checks."
+      - "Ten assumptions are typed, twelve shortcuts fail closed, and four parent conflicts are resolved with none remaining."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Integrated claim-language, documentation-impact, project-improvement-signal, research-control, renderer, graph, and memory checks pass before checkpoint."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "One governed checkpoint remains; P8-T03 is not executed before it."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Current frontier, task index, dependency graph, claim graph, and generated memory derivatives are synchronized."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory synchronization and validate-only mode pass."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation passes."
+
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=true source_object_count=1071 relationship_row_count=5386 semantic_row_count=1071 vault_row_count=1071"
+  - ".venv/bin/python research_control/tasks/RT-20260729-005/artifacts/validate_local_effective_action_closure_target.py --write-report --json | exit_code=0 | status=PASS check_count=46 failure_count=0"
+
+validation_evidence:
+  - gate_id: "task_local_local_effective_action_closure_target"
+    status: "PASS"
+    receipt_path: "research_control/tasks/RT-20260729-005/artifacts/local_effective_action_closure_target_validation_v1.json"
+    content_hash: "sha256:dbc20fe51f26b359c93eb182a2ef0b830233ff5dfc156efd1d50842a425ebecc"
+    counts:
+      error_count: 0
+      warning_count: 0
+      finding_count: 46
+    relevant_finding_ids: []
+    tree_fingerprint: ""
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not requested; the exact P7-T08 protected adoption is read-only source evidence"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  publication_authorized: false
+  proof_authority: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  canonical_ontology_edit_authorized: false
+  ontology_selection_authorized: false
+  physical_interpretation_establishment_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  sidecar_required: false
+  sidecar_created: false
+  reason: "No nonblank project-improvement signal was emitted."
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1071
+    relationship_row_count: 5386
+    semantic_row_count: 1071
+    vault_row_count: 1071
+    local_cache_only_warning_count: 0
+    refresh_performed: true
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"LocalEffectiveActionClosureTarget_v1\" --limit 10 --json"
+      query_type: "search"
+      query_text: "LocalEffectiveActionClosureTarget_v1"
+      returned_object_ids:
+        - "MD-V21-P8-T01-PARENT-FUSION-GRAVITATIONAL-CLOSURE-ROUTE-SELECTION-V1"
+  canonical_inspections:
+    - object_id: "MD-V21-P8-T01-PARENT-FUSION-GRAVITATIONAL-CLOSURE-ROUTE-SELECTION-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260729-003/artifacts/parent_fusion_notes_p8_t01_closure_route_selection.md"
+      source_hash: "47d61e576e31de1af9e634db946aca1559d83a7791889d675f375ae06d00bb71"
+  authority_note: "Obsidian wiki notes, semantic extracts, the SQLite memory index, PDFs, and .local files are retrieval layers only and are not authority."
+
+required_next_packet:
+  plan_task_id: "P8-T03"
+  task_type: "v21_p8_t03_effective_gravitational_action_or_constraint_candidate"
+  selected_next_packet_type: "source_extension_candidate"
+  selected_next_role_family: "candidate-constructor@0.2.0"
+  route_label: "candidate-construction-packet"
+  target_id: "P8T03-LocalEffectiveActionCandidate-v1"
+  dependency_ready_after_checkpoint: true
+  dependency_ready_now: false
+  requires_human_gate: false
+  executed: false
+
+next_recommendation: "After one governed checkpoint, run one bounded P8-T03 candidate-constructor packet to construct the typed closure datum and local effective-action candidate or prove one exact scoped obstruction, with coefficients and carrier data forbidden from target matching."

@@ -1,0 +1,500 @@
+job_id: "AJ-RT-20260729-005-001"
+task_id: "RT-20260729-005"
+decision_id: "DDR-20260729-005"
+role_id: "ontology-formalizer"
+role_version: "0.2.0"
+execution_role_ref: "ontology-formalizer@0.2.0--RT-20260729-005"
+status: "completed"
+validation_status: "PASS"
+requires_human_gate: false
+created_at: "2026-07-29T16:54:52Z"
+started_at: "2026-07-29T16:54:52Z"
+completed_at: "2026-07-29T16:54:52Z"
+completion_path: "research_control/tasks/RT-20260729-005/jobs/completions/AJC-AJ-RT-20260729-005-001.yaml"
+objective: "Execute only v21 P8-T02: formalize LocalEffectiveActionClosureTarget_v1, type its full assumption envelope, map every assumption to the exact P5 through P7 record, separate imported theorem hypotheses from project-derived premises, enumerate fail-closed shortcuts and failure branches, and record the exact current obstruction without constructing an action or field equation."
+target_derivation_milestone: "einstein_equations"
+milestone_burden: "Define what must be proved before any field-equation claim."
+route_label: "ontology-law-research-packet"
+route_reason: "Generation 157 checkpointed the P8-T01 allowlist repair, P8-T01 selected LocalEffectiveActionClosureTarget_v1 for formalization, the v21 plan requires one P8-T02 Ontology Formalizer packet, and immutable generation 158 selects P8-T02 through continue-research."
+immutable_route_sha256: "85f0cb731b18d58256d0d6e504271a46482819baa1801e4773bb8df8462c6469"
+dependency_checkpoint_commit: "0167f5973d3e056af3afc161554367dfda70aa10"
+plan_task_id: "P8-T02"
+recommendation_ids:
+  - "V21-R26"
+  - "V21-R27"
+  - "V21-R31"
+  - "V21-R67"
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 158
+  passes_consumed: 144
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:158"
+  handoff_token: "3b15fb7fe3cae05592640b334a7127935680e78caa00492e"
+  relay_claim_token: "612f7eec73cdfce85487c0aa067386c8938aae68a348707b"
+  route_work_item_id: "P8-T02"
+  route_worker_skill: "continue-research"
+  route_sha256: "85f0cb731b18d58256d0d6e504271a46482819baa1801e4773bb8df8462c6469"
+  route_reason: "resume_research_after_project_system_repair"
+  route_strategy_id: "continue_in_scope_generation_158"
+  route_blocker_fingerprint: "12e32394ff4c52186c8e064305c03597773d855b244adaf9bbad79c90808dcf0"
+  route_before_fingerprint: "12e32394ff4c52186c8e064305c03597773d855b244adaf9bbad79c90808dcf0"
+  route_evidence_sha256es:
+    - "12e32394ff4c52186c8e064305c03597773d855b244adaf9bbad79c90808dcf0"
+    - "fa6980cbdbb7d82eaf04c811249d6130cf37c97527cc8407a07b5c5efb5b9029"
+  worker_skill: "continue-research"
+  worker_invocation_count: 1
+
+mathematical_decisiveness_contract:
+  contract_path: "research_control/design/mathematical_decisiveness_completion_contract.md"
+  schema_path: ".agents/schemas/PHYSICS_COMPLETION_DECISIVENESS_SCHEMA.md"
+  enforcement_mode: "hard_failure"
+  active_after: "2026-06-21T02:32:39Z"
+
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "physics"
+  payload_type: "theorem"
+  candidate_family: "LocalEffectiveActionClosureTarget_v1"
+  assumption_delta:
+    - "The exact P5 source-dynamics, P6 scoped metric-structure, P6 Gate B, P7 protected matter, and P8-T01 route records remain fixed."
+    - "The local effective-action route remains selected for formalization only; construction and adoption remain false."
+    - "Ten assumptions A0 through A9 now type the source datum, effective carrier, maps, locality, measure, scale, response, inverse-variational, gluing, symmetry, conservation, correction, boundary, gauge, and variation data."
+    - "Local Helmholtz integrability and global variational gluing are independent closure obligations."
+    - "Einstein-leading recovery obligations R1 through R5 are separated from the action-closure antecedent."
+    - "The current record satisfies one provenance guard, partially supports two assumptions without bridges, and misses seven assumptions."
+  materiality_basis: "P8-T02 supplies the first audit-ready LocalEffectiveActionClosureTarget_v1 statement, a complete typed assumption envelope, an inverse-variational and global-gluing burden split, twelve forbidden shortcuts, and one exact scoped current obstruction."
+  payload_details:
+    theorem_id: "LocalEffectiveActionClosureTarget_v1"
+    theorem_kind: "conditional_local_effective_action_form"
+    theorem_statement_status: "draft/control"
+    current_antecedent_established: false
+    obstruction_id: "OBST-P8T02-LOCAL-EFFECTIVE-ACTION-CLOSURE-DATA-ABSENT-001"
+    obstruction_scope: "current P5 through P7 source record"
+    global_no_go_claimed: false
+    next_plan_task_id: "P8-T03"
+  source_basis:
+    - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+    - "TEX-V21-P5-T08-SOURCE-DYNAMICS-MILESTONE-SYNTHESIS-V1"
+    - "research_control/tasks/RT-20260726-001/artifacts/p6_geometry_input_contract_v1.yaml"
+    - "research_control/tasks/RT-20260726-011/artifacts/metric_object_naming_decision_v1.yaml"
+    - "research_control/tasks/RT-20260727-004/artifacts/p6_t08_gate_b_separating_certificate_v1.yaml"
+    - "TEX-V21-P7-T08-PHYSICAL-MATTER-ADOPTION-DECISION-V1"
+    - "research_control/tasks/RT-20260729-001/artifacts/p7_t08_constitutive_postulate_ledger_v1.yaml"
+    - "research_control/tasks/RT-20260729-003/artifacts/gravitational_closure_route_decision_v1.yaml"
+    - "research_control/tasks/RT-20260729-003/artifacts/gravitational_closure_hypothesis_comparison_v1.yaml"
+  expected_artifact_paths:
+    - "research_control/tasks/RT-20260729-005/artifacts/local_effective_action_closure_target_v1.tex"
+    - "research_control/tasks/RT-20260729-005/artifacts/local_effective_action_assumption_envelope_v1.yaml"
+    - "research_control/tasks/RT-20260729-005/artifacts/local_effective_action_forbidden_shortcuts_v1.yaml"
+    - "research_control/tasks/RT-20260729-005/artifacts/local_effective_action_closure_target_receipt.md"
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+
+family_freeze_admission:
+  schema_id: "family_freeze_route_admission_v1"
+  policy_id: "family_freeze_reopening_policy_v1"
+  route_id: "v21_p8_t02_local_effective_action_closure_target_formalization"
+  family_id: "LocalEffectiveActionClosureTarget_v1"
+  family_identity_sha256: "13402c3d80f114b643a0216484b0ba775a2f02d1f0733f33d8cf86044e6add96"
+  assumption_sha256es:
+    - "da939b16a0cb4da082068ab9954d11c4c7a7a658e746c50295dc20347fc82a65"
+  route_kind: "theorem_investigation"
+  detected_match_basis: []
+  reopening:
+    requested: false
+    class: "none"
+  authority_limits:
+    local_family_freeze_preserved: true
+    global_no_go_claimed: false
+    automatic_candidate_adoption: false
+    theorem_truth_inferred: false
+    ontology_modified: false
+    physics_promotion_authorized: false
+
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  expected_durable_outputs:
+    physics:
+      - "one audit-ready conditional local effective-action theorem target"
+      - "one ten-assumption evidence-mapped envelope"
+      - "one twelve-item forbidden-shortcut list"
+      - "one exact scoped current obstruction"
+    project_system:
+      - "task-local validator and compact validation receipt"
+      - "parent-child synthesis records"
+      - "standard control records and generated memory derivatives"
+  acceptance_criteria:
+    physics:
+      - "every field, map, phase-space or configuration variable, symmetry, locality, derivative order, correction, and boundary datum is typed"
+      - "imported theorem hypotheses are distinct from project-derived premises"
+      - "the Einstein-Hilbert action and Einstein equations are not premises"
+      - "missing assumptions and failure branches are explicit"
+    project_system:
+      - "task-local source-hash, assumption-count, target-import, parent-child, and authority checks pass"
+      - "claim-language and documentation-impact gates pass"
+      - "one governed checkpoint records the bounded transaction"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: false
+    exception_id: ""
+    evidence_path: ""
+    evidence_sha256: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+    theorem_target_counts_as_theorem_truth: false
+
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0900"
+  source_handoff_path: "research_control/handoffs/handoff-0900.yaml"
+  source_handoff_sha256: "3ad70386860972283ec7d9d4dc219dde4f97a1e13940db6516bffc0ad9f93fe9"
+  selected_plan_task_id: "P8-T02"
+  guard_outcome: "below_threshold"
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  parent:
+    execution_unit_id: "parent"
+    perspective: "physicist_mathematician_philosopher"
+    responsibilities:
+      - "hold every P5 through P8-T01 source hash and authority boundary fixed"
+      - "fuse inverse-variational and gluing obligations with constitutive and explanatory boundaries"
+      - "type the complete theorem target and evidence map"
+      - "resolve all child conflicts before final output"
+      - "route P8-T03 without treating formalization as construction"
+  children:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260729-005/artifacts/child_phys_math_p8_t02_local_effective_action_closure_target.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260729-005/artifacts/child_phys_phil_p8_t02_local_effective_action_closure_target.yaml"
+      status: "completed"
+  conflict_policy:
+    review_path: "research_control/tasks/RT-20260729-005/artifacts/parent_conflict_review_p8_t02_local_effective_action_closure_target.yaml"
+    max_resolution_rounds: 2
+    require_parallel_child_revision: true
+    unresolved_conflict_status: "blocked"
+  fusion_policy:
+    fusion_notes_path: "research_control/tasks/RT-20260729-005/artifacts/parent_fusion_notes_p8_t02_local_effective_action_closure_target.md"
+    fused_output_path: "research_control/tasks/RT-20260729-005/artifacts/local_effective_action_closure_target_v1.tex"
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+    final_output_replaces_old_single_role_artifact: true
+  outer_agentjob_count: 1
+  child_agentjob_count: 0
+  subagent_count: 0
+  rationale: "Two internal analytical perspectives are recorded inside the one consumed worker invocation and one outer AgentJob. No child job or subagent was created."
+
+memory_preflight:
+  preflight_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1071
+    relationship_row_count: 5386
+    semantic_row_count: 1071
+    vault_row_count: 1071
+    local_cache_only_warning_count: 0
+    refresh_performed: true
+  refresh_needed: true
+  refresh_performed: true
+  refresh_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py"
+  before_refresh:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    warning_count: 7
+  after_refresh:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1071
+    relationship_row_count: 5386
+    semantic_row_count: 1071
+    vault_row_count: 1071
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"LocalEffectiveActionClosureTarget_v1\" --limit 10 --json"
+      query_type: "search"
+      query_text: "LocalEffectiveActionClosureTarget_v1"
+      returned_object_ids:
+        - "MD-V21-P8-T01-PARENT-FUSION-GRAVITATIONAL-CLOSURE-ROUTE-SELECTION-V1"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-V21-P8-T01-PARENT-FUSION-GRAVITATIONAL-CLOSURE-ROUTE-SELECTION-V1 --json"
+      query_type: "lookup"
+      query_text: "MD-V21-P8-T01-PARENT-FUSION-GRAVITATIONAL-CLOSURE-ROUTE-SELECTION-V1"
+      returned_object_ids:
+        - "MD-V21-P8-T01-PARENT-FUSION-GRAVITATIONAL-CLOSURE-ROUTE-SELECTION-V1"
+  canonical_inspections:
+    - object_id: "MD-V21-P8-T01-PARENT-FUSION-GRAVITATIONAL-CLOSURE-ROUTE-SELECTION-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260729-003/artifacts/parent_fusion_notes_p8_t01_closure_route_selection.md"
+      source_hash: "47d61e576e31de1af9e634db946aca1559d83a7791889d675f375ae06d00bb71"
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+    - object_id: "TEX-ONTOLOGY-AETHER-FLOW-CONSISTENCY"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "ontology/tex/aether_flow_consistency.tex"
+      source_hash: "d965519639ee8764a5c5a63798d15e8a9a380d7e208dffc43a0be02b6f245ba1"
+    - object_id: "TEX-ONTOLOGY-AETHER-FLOW-DYNAMICS"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "ontology/tex/aether_flow_dynamics.tex"
+      source_hash: "fd6e579e71ef7f2ac4c9668ceede051ad57033ee52357b2552a9e3a5a53939c7"
+  authority_note: "Obsidian wiki notes, semantic extracts, the SQLite memory index, PDFs, and .local files are retrieval layers only and are not authority."
+
+allowed_read_paths:
+  - "SOUL.md"
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".codex/skills/continue-research-continue-goal/SKILL.md"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - ".agents/roles/physics/ontology-formalizer.v0.2.0.md"
+  - ".agents/schemas/**"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  - "research_control/design/**"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0900.yaml"
+  - "research_control/handoffs/handoff-0900.md"
+  - "research_control/tasks/RT-20260726-001/**"
+  - "research_control/tasks/RT-20260726-011/**"
+  - "research_control/tasks/RT-20260727-004/**"
+  - "research_control/tasks/RT-20260729-001/**"
+  - "research_control/tasks/RT-20260729-003/**"
+  - "research_control/tasks/RT-20260729-004/**"
+  - "ontology/tex/aether_flow_dynamics.tex"
+  - "ontology/tex/aether_flow_consistency.tex"
+  - "ontology/tex/aether_flow_geometry.tex"
+  - "registries/**"
+
+allowed_write_paths:
+  - "research_control/tasks/RT-20260729-005/**"
+  - "research_control/handoffs/handoff-0901.yaml"
+  - "research_control/handoffs/handoff-0901.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/PDF_DERIVATIVE_REGISTRY.csv"
+  - "registries/PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "registries/TEX_SOURCE_REGISTRY.csv"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/tex/**"
+
+allowed_generated_paths:
+  - ".local/**"
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/tex/**"
+
+forbidden_paths:
+  - "ontology/**"
+  - "manuscripts/**"
+  - "html/**"
+  - "implementations_plans/**"
+  - ".agents/roles/**"
+  - "research_control/tasks/RT-20260726-001/**"
+  - "research_control/tasks/RT-20260726-011/**"
+  - "research_control/tasks/RT-20260727-004/**"
+  - "research_control/tasks/RT-20260729-001/**"
+  - "research_control/tasks/RT-20260729-003/**"
+  - "research_control/tasks/RT-20260729-004/**"
+
+allowed_source_classes:
+  - "science_draft_read_only"
+  - "scientific_gate_read_only"
+  - "canonical_ontology_read_only"
+  - "project_control"
+  - "registry"
+  - "role_contract"
+  - "generated_memory_derivative"
+
+forbidden_source_classes:
+  - "canonical_ontology_write"
+  - "target_benchmark_as_source_premise"
+  - "target_atlas_or_metric_as_source_premise"
+  - "candidate_reconstruction"
+  - "gate_chair_verdict"
+  - "generated_derivative_authority"
+  - "global_theory_rejection"
+  - "source_law_adoption_or_rejection"
+  - "effective_geometry_or_metric_construction"
+  - "local_effective_action_construction_or_adoption"
+  - "target_stress_energy_construction"
+  - "equivalence_principle_verdict"
+  - "Einstein_equations"
+  - "exact_GR_recovery_proof"
+  - "benchmark_promotion"
+  - "Gate_Chair_verdict"
+  - "global_no_go_or_future_extension_impossibility"
+  - "publication_or_push"
+  - "completed_derivation_claim"
+
+approved_commands:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"LocalEffectiveActionClosureTarget_v1\" --limit 10 --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-V21-P8-T01-PARENT-FUSION-GRAVITATIONAL-CLOSURE-ROUTE-SELECTION-V1 --json"
+  - ".venv/bin/python research_control/tasks/RT-20260729-005/artifacts/validate_local_effective_action_closure_target.py --write-report --json"
+  - ".venv/bin/python research_control/tasks/RT-20260729-005/artifacts/validate_local_effective_action_closure_target.py --check --json"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --check"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --check"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --write"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --check"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --json output/research_dependency_graph.json --markdown wiki/indexes/research_dependency_graph.md --dot output/research_dependency_graph.dot"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --check"
+  - ".venv/bin/python scripts/research_control/generate_claim_graph_v1.py --json output/claim_graph_v1.json"
+  - ".venv/bin/python scripts/research_control/validate_claim_graph_v1.py --graph output/claim_graph_v1.json --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --json-summary"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --json-summary"
+  - ".venv/bin/python scripts/research_control/report_physics_progress_metrics.py"
+  - ".venv/bin/python scripts/research_control/run_full_research_control_validation.py --json --tail-chars 2500"
+  - "git diff --check"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260729-005-001"
+
+required_validators:
+  - "memory_preflight"
+  - "p8_t02_closure_target_local_validator"
+  - "parent_child_synthesis"
+  - "source_hash_and_authority"
+  - "claim_language"
+  - "documentation_impact"
+  - "project_improvement_signal_parity"
+  - "research_control_validation"
+  - "memory_bootstrap"
+  - "memory_validate_only"
+  - "renderers"
+  - "graph_freshness"
+  - "git_diff_check"
+  - "checkpoint_research_transaction"
+
+expected_outputs:
+  - "research_control/tasks/RT-20260729-005/**"
+  - "research_control/tasks/RT-20260729-005/artifacts/local_effective_action_closure_target_v1.tex"
+  - "research_control/tasks/RT-20260729-005/artifacts/local_effective_action_assumption_envelope_v1.yaml"
+  - "research_control/tasks/RT-20260729-005/artifacts/local_effective_action_forbidden_shortcuts_v1.yaml"
+  - "research_control/tasks/RT-20260729-005/artifacts/local_effective_action_closure_target_receipt.md"
+  - "research_control/handoffs/handoff-0901.yaml"
+  - "research_control/handoffs/handoff-0901.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+
+claim_boundary: "CB-V21-P8-T02-LOCAL-EFFECTIVE-ACTION-CLOSURE-TARGET-001"
+documentation_impact_id: "DI-RT-20260729-005-001"
+completion_id: "AJC-AJ-RT-20260729-005-001"
+
+checkpoint_outcome:
+  required: true
+  attempted: false
+  committed: false
+  commit_sha: ""
+  push_authorized: false
+  push_performed: false
+
+stop_conditions:
+  - "Stop if any required P5 through P8-T01 source hash differs."
+  - "Stop if any field, map, locality, measure, derivative order, scale, correction, symmetry, boundary, gauge, or variation object is untyped."
+  - "Stop if the target theorem is true only because a target atlas, target metric, Einstein-Hilbert action, Einstein equations, or benchmark success was inserted."
+  - "Stop if P7 source variation or balance is relabeled as effective action or conservation without an explicit bridge."
+  - "Stop if a local response is called Euler-Lagrange without inverse-variational conditions or patchwise densities are called global without gluing."
+  - "Stop if current non-derivation is promoted to a global no-go or future-extension impossibility."
+  - "Stop if parent-child conflict review has any unresolved conflict."
+  - "Stop on the first governed checkpoint failure; do not retry in this AgentJob."

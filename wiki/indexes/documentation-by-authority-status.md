@@ -80,6 +80,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-V21-P7-T07-PARENT-FUSION-MATTER-PACKAGE-AUDIT-V1` `research_control/tasks/RT-20260728-006/artifacts/parent_fusion_notes_p7_t07_matter_package_audit.md`
 - `MD-V21-P7-T08-PARENT-FUSION-PHYSICAL-MATTER-ADOPTION-V1` `research_control/tasks/RT-20260729-001/artifacts/parent_fusion_notes_p7_t08_gate_c_adoption.md`
 - `MD-V21-P8-T01-PARENT-FUSION-GRAVITATIONAL-CLOSURE-ROUTE-SELECTION-V1` `research_control/tasks/RT-20260729-003/artifacts/parent_fusion_notes_p8_t01_closure_route_selection.md`
+- `MD-V21-P8-T02-PARENT-FUSION-LOCAL-EFFECTIVE-ACTION-CLOSURE-TARGET-V1` `research_control/tasks/RT-20260729-005/artifacts/parent_fusion_notes_p8_t02_local_effective_action_closure_target.md`
 
 ## explanatory_noncanonical
 
@@ -768,6 +769,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-V21-P7-T08-PARENT-FUSION-PHYSICAL-MATTER-ADOPTION-V1` `wiki/markdown/md-v21-p7-t08-parent-fusion-physical-matter-adoption-v1.md`
 - `WIKI-MD-V21-P8-T01-GRAVITATIONAL-CLOSURE-ROUTE-SELECTION-RECEIPT-V1` `wiki/markdown/md-v21-p8-t01-gravitational-closure-route-selection-receipt-v1.md`
 - `WIKI-MD-V21-P8-T01-PARENT-FUSION-GRAVITATIONAL-CLOSURE-ROUTE-SELECTION-V1` `wiki/markdown/md-v21-p8-t01-parent-fusion-gravitational-closure-route-selection-v1.md`
+- `WIKI-MD-V21-P8-T02-LOCAL-EFFECTIVE-ACTION-CLOSURE-TARGET-RECEIPT-V1` `wiki/markdown/md-v21-p8-t02-local-effective-action-closure-target-receipt-v1.md`
+- `WIKI-MD-V21-P8-T02-PARENT-FUSION-LOCAL-EFFECTIVE-ACTION-CLOSURE-TARGET-V1` `wiki/markdown/md-v21-p8-t02-parent-fusion-local-effective-action-closure-target-v1.md`
 - `WIKI-MD-VALIDATOR-OPERATOR-WORKFLOW-PUBLICATION-BRIEF` `wiki/markdown/md-validator-operator-workflow-publication-brief.md`
 
 ## project_control
@@ -1265,3 +1268,4 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-V21-P7-T06-SOURCE-VARIATIONAL-RECEIPT-V1` `research_control/tasks/RT-20260728-005/artifacts/source_kernel_variational_receipt.md`
 - `MD-V21-P7-T07-MATTER-PACKAGE-AUDIT-RECEIPT-V1` `research_control/tasks/RT-20260728-006/artifacts/matter_package_audit_receipt.md`
 - `MD-V21-P8-T01-GRAVITATIONAL-CLOSURE-ROUTE-SELECTION-RECEIPT-V1` `research_control/tasks/RT-20260729-003/artifacts/gravitational_closure_route_selection_receipt.md`
+- `MD-V21-P8-T02-LOCAL-EFFECTIVE-ACTION-CLOSURE-TARGET-RECEIPT-V1` `research_control/tasks/RT-20260729-005/artifacts/local_effective_action_closure_target_receipt.md`
