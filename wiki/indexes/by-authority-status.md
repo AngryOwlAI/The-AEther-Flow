@@ -101,6 +101,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-V21-P8-T01-PARENT-FUSION-GRAVITATIONAL-CLOSURE-ROUTE-SELECTION-V1` `research_control/tasks/RT-20260729-003/artifacts/parent_fusion_notes_p8_t01_closure_route_selection.md`
 - `MD-V21-P8-T02-PARENT-FUSION-LOCAL-EFFECTIVE-ACTION-CLOSURE-TARGET-V1` `research_control/tasks/RT-20260729-005/artifacts/parent_fusion_notes_p8_t02_local_effective_action_closure_target.md`
 - `MD-V21-P8-T03-PARENT-FUSION-FINITE-SOURCE-CLOSURE-V1` `research_control/tasks/RT-20260729-006/artifacts/parent_fusion_notes_p8_t03_finite_source_closure.md`
+- `MD-V21-P8-T04-PARENT-FUSION-FINITE-FIELD-EQUATION-V1` `research_control/tasks/RT-20260729-007/artifacts/parent_fusion_notes_p8_t04_finite_field_equation.md`
 - `TEX-EQSRC-CLOSURE-SOURCE-LAW-SMUGGLING-AUDIT-V1` `research_control/tasks/RT-20260718-017/artifacts/eqsrc_closure_source_law_smuggling_audit_v1.tex`
 - `TEX-EQSRC-CLOSURE-SOURCE-LAW-V2-SMUGGLING-AUDIT` `research_control/tasks/RT-20260718-019/artifacts/eqsrc_closure_source_law_v2_smuggling_audit.tex`
 - `TEX-EQSRC-CLOSURE-SOURCE-LAW-V3-REFUTER-STRESS` `research_control/tasks/RT-20260718-022/artifacts/eqsrc_closure_source_law_v3_refuter_stress.tex`
@@ -519,6 +520,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V21-P7-T08-PHYSICAL-MATTER-ADOPTION-DECISION-V1` `research_control/tasks/RT-20260729-001/artifacts/p7_t08_gate_c_decision_v1.tex`
 - `TEX-V21-P8-T02-LOCAL-EFFECTIVE-ACTION-CLOSURE-TARGET-V1` `research_control/tasks/RT-20260729-005/artifacts/local_effective_action_closure_target_v1.tex`
 - `TEX-V21-P8-T03-FINITE-SOURCE-CLOSURE-CONSTRAINT-CANDIDATE-V1` `research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_constraint_candidate_v1.tex`
+- `TEX-V21-P8-T04-FINITE-SOURCE-FIELD-EQUATION-IDENTITY-V1` `research_control/tasks/RT-20260729-007/artifacts/finite_source_field_equation_identity_v1.tex`
 
 ## explanatory_noncanonical
 
@@ -1227,6 +1229,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-V21-P8-T02-PARENT-FUSION-LOCAL-EFFECTIVE-ACTION-CLOSURE-TARGET-V1` `wiki/markdown/md-v21-p8-t02-parent-fusion-local-effective-action-closure-target-v1.md`
 - `WIKI-MD-V21-P8-T03-FINITE-SOURCE-CLOSURE-CONSTRAINT-RECEIPT-V1` `wiki/markdown/md-v21-p8-t03-finite-source-closure-constraint-receipt-v1.md`
 - `WIKI-MD-V21-P8-T03-PARENT-FUSION-FINITE-SOURCE-CLOSURE-V1` `wiki/markdown/md-v21-p8-t03-parent-fusion-finite-source-closure-v1.md`
+- `WIKI-MD-V21-P8-T04-FINITE-SOURCE-FIELD-EQUATION-IDENTITY-RECEIPT-V1` `wiki/markdown/md-v21-p8-t04-finite-source-field-equation-identity-receipt-v1.md`
+- `WIKI-MD-V21-P8-T04-PARENT-FUSION-FINITE-FIELD-EQUATION-V1` `wiki/markdown/md-v21-p8-t04-parent-fusion-finite-field-equation-v1.md`
 - `WIKI-MD-VALIDATOR-OPERATOR-WORKFLOW-PUBLICATION-BRIEF` `wiki/markdown/md-validator-operator-workflow-publication-brief.md`
 - `WIKI-PDF-LEGACY-ONTOLOGY-AETHER-FLOW-CONSISTENCY` `wiki/pdf/pdf-legacy-ontology-aether-flow-consistency.md`
 - `WIKI-PDF-LEGACY-ONTOLOGY-AETHER-FLOW-DYNAMICS` `wiki/pdf/pdf-legacy-ontology-aether-flow-dynamics.md`
@@ -1678,6 +1682,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-V21-P7-T08-PHYSICAL-MATTER-ADOPTION-DECISION-V1` `wiki/tex/tex-v21-p7-t08-physical-matter-adoption-decision-v1.md`
 - `WIKI-TEX-V21-P8-T02-LOCAL-EFFECTIVE-ACTION-CLOSURE-TARGET-V1` `wiki/tex/tex-v21-p8-t02-local-effective-action-closure-target-v1.md`
 - `WIKI-TEX-V21-P8-T03-FINITE-SOURCE-CLOSURE-CONSTRAINT-CANDIDATE-V1` `wiki/tex/tex-v21-p8-t03-finite-source-closure-constraint-candidate-v1.md`
+- `WIKI-TEX-V21-P8-T04-FINITE-SOURCE-FIELD-EQUATION-IDENTITY-V1` `wiki/tex/tex-v21-p8-t04-finite-source-field-equation-identity-v1.md`
 
 ## project_control
 
@@ -2176,3 +2181,4 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-V21-P8-T01-GRAVITATIONAL-CLOSURE-ROUTE-SELECTION-RECEIPT-V1` `research_control/tasks/RT-20260729-003/artifacts/gravitational_closure_route_selection_receipt.md`
 - `MD-V21-P8-T02-LOCAL-EFFECTIVE-ACTION-CLOSURE-TARGET-RECEIPT-V1` `research_control/tasks/RT-20260729-005/artifacts/local_effective_action_closure_target_receipt.md`
 - `MD-V21-P8-T03-FINITE-SOURCE-CLOSURE-CONSTRAINT-RECEIPT-V1` `research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_constraint_receipt.md`
+- `MD-V21-P8-T04-FINITE-SOURCE-FIELD-EQUATION-IDENTITY-RECEIPT-V1` `research_control/tasks/RT-20260729-007/artifacts/finite_source_field_equation_identity_receipt.md`

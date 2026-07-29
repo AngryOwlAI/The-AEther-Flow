@@ -433,6 +433,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V21-P7-T07-MATTER-PACKAGE-SMUGGLING-AUDIT-V1` `research_control/tasks/RT-20260728-006/artifacts/matter_package_smuggling_audit_v1.tex`
 - `TEX-V21-P8-T02-LOCAL-EFFECTIVE-ACTION-CLOSURE-TARGET-V1` `research_control/tasks/RT-20260729-005/artifacts/local_effective_action_closure_target_v1.tex`
 - `TEX-V21-P8-T03-FINITE-SOURCE-CLOSURE-CONSTRAINT-CANDIDATE-V1` `research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_constraint_candidate_v1.tex`
+- `TEX-V21-P8-T04-FINITE-SOURCE-FIELD-EQUATION-IDENTITY-V1` `research_control/tasks/RT-20260729-007/artifacts/finite_source_field_equation_identity_v1.tex`
 
 ## superseded
 

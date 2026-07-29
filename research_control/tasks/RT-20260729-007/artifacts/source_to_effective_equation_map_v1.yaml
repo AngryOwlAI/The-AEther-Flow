@@ -1,0 +1,75 @@
+schema_id: "source_to_effective_equation_map_v1"
+artifact_id: "FiniteSourceToEffectiveEquationMap_v1"
+task_id: "RT-20260729-007"
+plan_task_id: "P8-T04"
+status: "draft/control"
+candidate_status: "proposal-only"
+material_class: "source-extension data"
+
+spaces:
+  source_configuration: "Q^Omega"
+  source_response_quotient: "Q_C=Q^Omega/ker L_C"
+  balanced_equation_source: "A_C=(ker L_C)^perp=im L_C"
+  finite_effective_carrier: "Q_C"
+  target_tensor_space: "not_constructed"
+
+maps:
+  source_first_variation:
+    symbol: "a_C"
+    map: "Q^Omega -> A_C"
+    rule: "u -> L_Cu"
+    provenance: "adopted P7 source action"
+  quotient_projection:
+    symbol: "pi_C"
+    map: "Q^Omega -> Q_C"
+    rule: "u -> [u]"
+    provenance: "P8-T03 proposal-only carrier"
+  source_to_equation:
+    symbol: "F_C^beta"
+    map: "Q_C -> A_C"
+    rule: "[u] -> beta L_Cu"
+    well_defined: true
+    isomorphism_when: "beta is nonzero"
+  equation_operator:
+    symbol: "E_C^(alpha,beta)"
+    map: "Q_C x Q_C -> A_C"
+    rule: "([h],[u]) -> alpha L_Ch-beta L_Cu"
+    source_slot_status: "fixed during candidate variation"
+  response_solver:
+    symbol: "G_C^alpha"
+    map: "A_C -> Q_C"
+    rule: "a -> [alpha^(-1)L_C^+a]"
+    well_defined: true
+  source_to_solution:
+    symbol: "R_C^(alpha,beta)"
+    map: "Q_C -> Q_C"
+    rule: "[u] -> (beta/alpha)[u]"
+    factorization: "R_C^(alpha,beta)=G_C^alpha composed with F_C^beta"
+
+commuting_relation:
+  equation: "alpha L_C R_C^(alpha,beta)([u])=F_C^beta([u])"
+  status: "exact_in_finite_candidate"
+
+compatibility:
+  condition: "a belongs to A_C"
+  equivalent_condition: "sum_{x in K} a_x=0 for every K in Pi_C"
+  role: "solvability and quotient descent"
+  target_conservation_status: "not_established"
+
+target_bridge:
+  source_to_target_stress_energy_map: "missing"
+  finite_carrier_to_Lorentzian_metric_map: "missing"
+  finite_operator_to_curvature_operator_map: "missing"
+  finite_identity_to_contracted_Bianchi_map: "missing"
+  continuum_limit: "missing"
+  physical_coefficient_map: "missing"
+  result: "OBST-P8T04-FINITE-CONSTRAINT-EINSTEIN-TYPE-DATA-ABSENT-001"
+
+authority_limits:
+  target_atlas_assumed: false
+  target_metric_assumed: false
+  target_stress_energy_assumed: false
+  Einstein_equations_assumed_or_derived: false
+  physical_interpretation_established: false
+  candidate_adopted: false
+  physics_promotion_authorized: false

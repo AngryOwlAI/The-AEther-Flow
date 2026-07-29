@@ -1,0 +1,902 @@
+validation_status: "PASS"
+final_repository_validation_status: "PASS_READY_FOR_CHECKPOINT"
+job_id: "AJ-RT-20260729-007-001"
+completion_id: "AJC-AJ-RT-20260729-007-001"
+task_id: "RT-20260729-007"
+task_type: "v21_p8_t04_field_equations_and_conservation_identities"
+decision_id: "DDR-20260729-007"
+role_id: "ontology-formalizer"
+role_version: "0.2.0"
+execution_role_ref: "ontology-formalizer@0.2.0--RT-20260729-007"
+status: "completed"
+created_at: "2026-07-29T19:23:59Z"
+started_at: "2026-07-29T19:23:59Z"
+completed_at: "2026-07-29T19:23:59Z"
+objective: "Execute only v21 P8-T04 by varying the exact fixed P8-T03 finite candidate, deriving the exact finite Euler equation, solution, edge-flux and complete identity structure, source-to-equation map, and joint-variation diagnostic, then comparing mathematical types and recording one precise scoped obstruction without physics promotion."
+completion_summary: "P8-T04 derives the exact finite response equation E_C^(alpha,beta)=alpha L_C h-beta L_Cu=0, unique solution [h]=(beta/alpha)[u], source-to-equation and source-to-solution maps, antisymmetric edge-flux representation, cut identity, and the complete off-shell component-shift identity space ker L_C. A separately labeled formal joint variation of the unchanged expression forces [h]=[u]=0 for nonzero beta, so the fixed-source qualification is substantive. The finite equation and identities lack the target carrier, tensor source, curvature, diffeomorphism, Bianchi, continuum, coefficient, and recovery data required for an Einstein-type equation; OBST-P8T04-FINITE-CONSTRAINT-EINSTEIN-TYPE-DATA-ABSENT-001 records this precise candidate-scoped obstruction."
+objective_result: "exact_finite_equation_and_precise_scoped_obstruction"
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 160
+  passes_consumed: 146
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:160"
+  handoff_token: "d755111b39d8d8fe489960b9add00a85515b352a26797f7e"
+  relay_claim_token: "dccef09bfc2b4bf110be9e04bb748324606632aa2385d2eb"
+  route_work_item_id: "P8-T04"
+  route_worker_skill: "continue-research"
+  route_sha256: "f508b4b1294d96a9123ed622c4636e20eae3be0d263e64b8aa58e724d34f18a2"
+  route_reason: "dependency_ready_in_scope"
+  route_strategy_id: "continue_in_scope_generation_160"
+  route_blocker_fingerprint: "cbe121f5b09c25e966b72c382ab0bb88310ceb76ae7541f43914d2fa95626766"
+  route_before_fingerprint: "cbe121f5b09c25e966b72c382ab0bb88310ceb76ae7541f43914d2fa95626766"
+  route_evidence_sha256es:
+    - "45ed350aff30c48d26ecd99057b60342fda946fb48d960e276ba53eceaaa7cfc"
+    - "cbe121f5b09c25e966b72c382ab0bb88310ceb76ae7541f43914d2fa95626766"
+  worker_skill: "continue-research"
+  worker_invocation_count: 1
+
+transaction_status: "ready_for_checkpoint"
+result_disposition: "P8_T04_EXACT_FINITE_EQUATION_IDENTITY_AND_SCOPED_OBSTRUCTION_READY_FOR_CHECKPOINT"
+milestone_disposition: "finite_equation_and_identity_derived_einstein_type_bridge_missing"
+adoption_status: "blocked_adoption_open_continuation"
+checkpoint_commit:
+  required: true
+  attempted: false
+  committed: false
+  commit_sha: ""
+  dependency_checkpoint_commit: "b03e6c152e108437f9d0606b93ed733be67d1cb3"
+  push_authorized: false
+  push_performed: false
+
+is_physics_task: true
+payload_class: "exact_finite_equation_identity_and_precise_obstruction"
+has_new_mathematical_payload: true
+source_extension_classification_required: true
+external_red_team_finding_requires_integration: false
+physics_promotion_authorized: false
+proof_authority: false
+
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P8"
+  plan_task_id: "P8-T04"
+  work_kind: "formalization_or_theorem"
+  task_class: "science"
+  expected_result_kind: "theorem_or_precise_obstruction"
+  dependency_task_ids:
+    - "P8-T03"
+  dependency_completion_paths:
+    - "research_control/tasks/RT-20260729-006/jobs/completions/AJC-AJ-RT-20260729-006-001.yaml"
+  dependency_completion_sha256es:
+    - "3a8357715b9d85ba5979c775ac91d35aa37025aa51fc6f354e16eae646801f2e"
+  dependency_checkpoint_commits:
+    - "b03e6c152e108437f9d0606b93ed733be67d1cb3"
+  work_item_status: "completed_ready_for_checkpoint"
+  recommendation_ids:
+    - "V21-R26"
+    - "V21-R27"
+    - "V21-R31"
+    - "V21-R67"
+  recommendation_coverage_role: "direct_implementation"
+  scientific_claims_changed: true
+  scientific_claim_change_scope: "task-local exact finite response equation identity flux source maps joint diagnostic and candidate-scoped obstruction"
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  distance_to_gr_delta_scope: "no qualifying physical layered burden change"
+  physics_promotion_authorized: false
+  proof_authority: false
+  next_dependency_work_item: "P8-T05_after_checkpoint"
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  observed_durable_outputs:
+    physics:
+      - "one exact finite Euler equation and solution theorem"
+      - "one complete finite component-identity and edge-flux theorem"
+      - "one typed source-to-equation map"
+      - "one joint-variation diagnostic and precise scoped obstruction"
+    project_system:
+      - "task-local deterministic validator report and scratch TeX build"
+      - "parent-child synthesis records and standard control state"
+  accepted_criteria:
+    physics:
+      - "the finite response equation and solution are derived exactly"
+      - "the identity space is classified through ker L_C"
+      - "fixed-source and formal joint-variation readings are separated"
+      - "the Einstein comparison is post-derivation and typed"
+    project_system:
+      - "task-local source-hash mathematical parent-child and authority checks pass"
+      - "claim-language documentation-impact and research-control checks pass"
+      - "one governed checkpoint records the bounded transaction"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+physics_payload_admission_result:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "physics"
+  declared_payload_type: "precise_obstruction"
+  realized_payload_type: "precise_obstruction_with_exact_finite_equation"
+  candidate_family: "FiniteSourceFieldEquationIdentity_v1"
+  result: "PASS"
+  material_payload_present: true
+  process_receipts_counted_as_payload: false
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed_by_admission: false
+  physics_promotion_authorized: false
+
+family_freeze_admission_result:
+  schema_id: "family_freeze_route_admission_v1"
+  policy_id: "family_freeze_reopening_policy_v1"
+  route_id: "v21_p8_t04_finite_field_equation_identity_analysis"
+  family_id: "FiniteSourceFieldEquationIdentity_v1"
+  detected_match_basis: []
+  reopening_requested: false
+  result: "PASS_DISTINCT_PRECISE_OBSTRUCTION_BRANCH"
+  local_family_freeze_preserved: true
+  global_no_go_claimed: false
+  physics_promotion_authorized: false
+
+ordinary_route_guard_admission_result:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0902"
+  selected_plan_task_id: "P8-T04"
+  guard_outcome: "below_threshold"
+  result: "PASS"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  scientific_status_changed_by_guard: false
+  physics_promotion_authorized: false
+
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_execution_unit_count: 2
+  outer_agentjob_count: 1
+  child_agentjob_count: 0
+  subagent_count: 0
+
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260729-007/artifacts/child_phys_math_p8_t04_finite_field_equation.yaml"
+      output_sha256: "b5c1291f591cf10c27fddb13af3029f0b5dcae3fd5577d89545ab4a956ec9c50"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260729-007/artifacts/child_phys_phil_p8_t04_finite_field_equation.yaml"
+      output_sha256: "62c161b9e73ecfd91dbbb18f651d6f1382aa76cf339e50ad4e8ccbfdddafe287"
+      status: "completed"
+  conflict_review:
+    status: "resolved"
+    review_path: "research_control/tasks/RT-20260729-007/artifacts/parent_conflict_review_p8_t04_finite_field_equation.yaml"
+    review_sha256: "a92b56350da710706f191f05c9b8ed810e4de8ab260a7aeeb93619f2efd01d57"
+    resolution_rounds: 1
+    resolved_conflict_count: 6
+    unresolved_conflicts: []
+  fusion:
+    fused_output_path: "research_control/tasks/RT-20260729-007/artifacts/finite_source_field_equation_identity_v1.tex"
+    fusion_notes_path: "research_control/tasks/RT-20260729-007/artifacts/parent_fusion_notes_p8_t04_finite_field_equation.md"
+    shared_consensus_summary: "The exact finite response equation and component identities are mathematically complete in their declared graph quotient but do not instantiate the target Einstein-equation types."
+    unique_phys_math_contributions: "Exact equation, solution class, source maps, flux and cut identities, left-kernel completeness, and joint-variation collapse."
+    unique_phys_phil_contributions: "Finite-field-equation qualification, component-shift versus diffeomorphism distinction, balance versus Bianchi distinction, fixed-source boundary, and scoped no-go guard."
+    novelty_preservation_summary: "Fusion adds the first complete identity classification and joint-variation diagnostic for the fixed P8-T03 candidate rather than repeating its action definition."
+    claim_boundary_preservation_summary: "No ontology edit, adoption, physical gravity, target geometry, metric, stress energy, Bianchi identity, Einstein equation, exact-GR result, benchmark promotion, proof, publication, push, global no-go, or completed derivation is authorized."
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+
+memory_preflight:
+  preflight_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1077
+    relationship_row_count: 5425
+    semantic_row_count: 1077
+    vault_row_count: 1077
+    local_cache_only_warning_count: 0
+    refresh_performed: true
+  refresh_needed: true
+  refresh_performed: true
+  refresh_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py"
+  before_refresh:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    warning_count: 9
+  after_refresh:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    source_object_count: 1077
+    relationship_row_count: 5425
+    semantic_row_count: 1077
+    vault_row_count: 1077
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-V21-P8-T03-FINITE-SOURCE-CLOSURE-CONSTRAINT-CANDIDATE-V1 --json"
+      query_type: "lookup"
+      query_text: "TEX-V21-P8-T03-FINITE-SOURCE-CLOSURE-CONSTRAINT-CANDIDATE-V1"
+      returned_object_ids:
+        - "TEX-V21-P8-T03-FINITE-SOURCE-CLOSURE-CONSTRAINT-CANDIDATE-V1"
+  canonical_inspections:
+    - object_id: "TEX-V21-P8-T03-FINITE-SOURCE-CLOSURE-CONSTRAINT-CANDIDATE-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_constraint_candidate_v1.tex"
+      source_hash: "82dd10d8e91be3781ca4f21e7f9fbf2ce1a9108ae7191db22fed9dfe6086f2fa"
+    - object_id: "TEX-V21-P8-T02-LOCAL-EFFECTIVE-ACTION-CLOSURE-TARGET-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260729-005/artifacts/local_effective_action_closure_target_v1.tex"
+      source_hash: "13402c3d80f114b643a0216484b0ba775a2f02d1f0733f33d8cf86044e6add96"
+    - object_id: "TEX-ONTOLOGY-AETHER-FLOW-CONSISTENCY"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "ontology/tex/aether_flow_consistency.tex"
+      source_hash: "d965519639ee8764a5c5a63798d15e8a9a380d7e208dffc43a0be02b6f245ba1"
+    - object_id: "TEX-ONTOLOGY-AETHER-FLOW-DYNAMICS"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "ontology/tex/aether_flow_dynamics.tex"
+      source_hash: "fd6e579e71ef7f2ac4c9668ceede051ad57033ee52357b2552a9e3a5a53939c7"
+  authority_note: "Obsidian wiki notes, semantic extracts, the SQLite memory index, PDFs, and .local files are retrieval layers only and are not authority."
+
+ontology_law_research_packet:
+  route: "ontology-law-research-packet"
+  trigger_classification: "derivation_critical_missing_source_law"
+  target_derivation_milestone: "einstein_equations"
+  milestone_burden: "Determine whether Einstein-type equations actually follow from the derived action or closure."
+  missing_source_law: "A source-derived bridge from the finite quotient carrier, response vector, and component identities to a Lorentzian metric carrier, target tensor source, diffeomorphism identity, continuum regime, physical coefficients, and Einstein-leading dynamics."
+  underdetermination_statement: "Current ontology does not derive the target-side carrier, tensor source map, curvature operator, differential identity, continuum limit, or physical coefficient map from the unchanged finite candidate."
+  no_go_theorem_status: "not_proved"
+  adoption_status:
+    current_adoption: "blocked"
+    continuation: "open"
+    status_pair: "blocked_adoption_open_continuation"
+  packet_payload_mode: "candidate_law_payload"
+  candidate_law_payload:
+    status_label: "draft/control"
+    candidate_status: "proposal-only"
+    material_class: "source-extension data"
+    source_side_definition: "The exact finite response equation, source maps, and component identities are derived from the fixed P8-T03 action; their physical and target-side interpretation remains absent."
+    formal_objects:
+      - "finite carrier Omega and symmetric Laplacian L_C"
+      - "quotient carrier Q_C=Q^Omega/ker L_C"
+      - "balanced response space A_C=(ker L_C)^perp"
+      - "response operator E_C^(alpha,beta)"
+      - "edge flux J_xy"
+      - "source-to-equation map F_C^beta"
+      - "source-to-solution map R_C^(alpha,beta)"
+    domains:
+      - "the exact declared finite P7 source-matter kernel and variation domain"
+      - "the proposal-only finite P8 quotient carrier"
+      - "the free alpha beta family with the internal unit-normalized v1 member"
+    maps:
+      - "[u] maps to beta L_Cu in A_C"
+      - "([h],[u]) maps to alpha L_Ch-beta L_Cu in A_C"
+      - "[u] maps to (beta/alpha)[u] in Q_C"
+    proof_obligations:
+      - "derive the exact finite equation without target import"
+      - "classify every finite identity through ker L_C"
+      - "separate component balance from target covariant conservation"
+      - "separate component shifts from diffeomorphism invariance"
+      - "separate fixed-source variation from the formal joint diagnostic"
+      - "identify every missing type for Einstein-leading recovery"
+  candidate_law_comparison:
+    candidates:
+      - "FiniteSourceFieldEquationIdentity_v1"
+    comparison_basis:
+      - "exact finite equation and identity derivation"
+      - "source-derived versus proposal-only fields"
+      - "post-derivation target-type audit"
+    selection_status: "single_fixed_p8_t03_candidate_analyzed"
+  candidate_law_refutation:
+    refuted_candidate: "unchanged_finite_constraint_as_Einstein_dynamics"
+    refutation_basis: "carrier operator source identity gauge locality coefficient and regime types do not match"
+    surviving_obligations:
+      - "physical gravitational carrier"
+      - "target tensor source map"
+      - "diffeomorphism and Bianchi bridge"
+      - "continuum and Einstein-leading recovery"
+  human_gate_precondition:
+    blocks_payload_definition: false
+    reason: "Draft/control derivation and obstruction analysis are permitted; adoption or protected physical interpretation is not."
+  exact_gr_recovery_obligations:
+    checklist:
+      - "Preserve exact GR as a read-only comparison target and never a source premise."
+      - "Derive a target carrier, dimension, signature, and metric interpretation from source-side data."
+      - "Derive a target tensor matter-response object and conservation identity."
+      - "Derive or independently calibrate coefficient signs, units, and normalizations."
+      - "Control continuum, extra-mode, higher-derivative, boundary, and nonlocal terms."
+      - "Prove an Einstein-leading recovery theorem before any Einstein-equation claim."
+    distance_to_gr_links:
+      - "effective_metric_g_eff"
+      - "matter_coupling"
+      - "einstein_equations"
+      - "finite_variation_robustness"
+      - "benchmark_promotion"
+  no_target_import_audit_scope:
+    forbidden_source_classes:
+      - "target_atlas"
+      - "target_metric"
+      - "target_stress_energy"
+      - "Einstein_Hilbert_action"
+      - "Einstein_equations"
+      - "benchmark_success"
+      - "generated_derivative"
+      - "registry_metadata_authority"
+      - "role_authority"
+      - "validation_authority"
+    checked_objects:
+      - "finite response equation"
+      - "edge-flux and component identities"
+      - "source-to-equation map"
+      - "joint-variation diagnostic"
+      - "structural mismatch matrix"
+  failure_branches:
+    candidate_drift: "stop_if_fixed_P8_T03_hash_changes"
+    source_slot_drift: "stop_if_u_is_silently_varied_in_candidate_equation"
+    identity_smuggling: "stop_if_component_identity_is_called_Bianchi_or_covariant_conservation"
+    target_import: "fail_closed_target_import"
+    physical_interpretation_absent: "retain_finite_proposal_only_equation_status"
+    Einstein_leading_recovery_absent: "record_scoped_obstruction_and_leave_same_milestone_continuation_open"
+  known_risks:
+    - "finite field-equation language may be mistaken for Einstein dynamics"
+    - "component-shift identity may be mistaken for contracted Bianchi identity"
+    - "source compatibility may be mistaken for target stress-energy conservation"
+    - "zero finite corrections may be generalized outside the exact quadratic model"
+  failed_alternatives:
+    - "Directly renaming E_C=0 as an Einstein equation fails the typed carrier, operator, source, identity, gauge, locality, coefficient, and regime comparison."
+  human_gate_request:
+    required_before_adoption: true
+    requested_decision: "No gate is requested now. Protected human authority is required before adopting, rejecting, or physically promoting a new law or candidate."
+    exact_requested_ontology_edit: ""
+
+source_extension_classification:
+  checklist_id: "source_extension_classification_checklist_v1"
+  item_id: "FiniteSourceFieldEquationIdentity_v1"
+  item_source_path: "research_control/tasks/RT-20260729-007/artifacts/finite_source_field_equation_identity_v1.tex"
+  classification: "blocked_adoption_open_continuation"
+  evidence_paths:
+    - "research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_constraint_candidate_v1.tex"
+    - "research_control/tasks/RT-20260729-005/artifacts/local_effective_action_closure_target_v1.tex"
+    - "research_control/tasks/RT-20260727-004/artifacts/p6_t08_gate_b_separating_certificate_v1.yaml"
+  relation_to_current_ontology: "blocked_open"
+  claim_boundary_id: "CB-V21-P8-T04-FINITE-FIELD-EQUATION-IDENTITY-001"
+  protected_authority_required: true
+  physics_promotion_authorized: false
+  downstream_promotion_authorized: false
+  allowed_conclusion: "The exact finite equation, solution, flux, identity space, and source maps are derived, and the unchanged candidate does not currently supply Einstein-type target structures."
+  forbidden_overreads:
+    - "canonical ontology or source-law adoption"
+    - "physical gravitational interpretation"
+    - "unscoped effective geometry or target metric"
+    - "target stress-energy or covariant conservation"
+    - "diffeomorphism invariance or contracted Bianchi identity"
+    - "Einstein equations or exact-GR recovery"
+    - "benchmark promotion"
+    - "proof publication push or completed derivation"
+    - "global no-go or future-extension impossibility"
+  next_route_if_blocked: "P8-T05 finite constraint mode and stability stress after checkpoint"
+
+finite_source_field_equation_result:
+  result_id: "FiniteSourceFieldEquationIdentity_v1"
+  status: "draft/control"
+  candidate_status: "proposal-only"
+  material_class: "source-extension data"
+  adoption_status: "blocked_adoption_open_continuation"
+  decisive_result: "exact_finite_equation_and_precise_scoped_obstruction"
+  response_operator: "E_C^(alpha,beta)=alpha L_C h-beta L_Cu"
+  exact_equation: "E_C^(alpha,beta)=0"
+  exact_solution_class: "[h]=(beta/alpha)[u]"
+  source_to_equation_map: "F_C^beta([u])=beta L_Cu"
+  source_to_solution_map: "R_C^(alpha,beta)([u])=(beta/alpha)[u]"
+  edge_flux_derived: true
+  cut_identity_derived: true
+  component_identity_derived: true
+  identity_space_complete: true
+  formal_joint_variation_derived: true
+  formal_joint_variation_result: "[h]=[u]=0 for beta nonzero"
+  physical_gravitational_interpretation_established: false
+  target_metric_constructed: false
+  target_stress_energy_constructed: false
+  diffeomorphism_invariance_derived: false
+  contracted_Bianchi_identity_derived: false
+  target_covariant_conservation_derived: false
+  Einstein_equations_derived: false
+  exact_GR_recovery_proved: false
+
+new_mathematical_payload:
+  - payload_id: "NMP-RT-20260729-007-001"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    name: "Exact finite Euler equation and quotient solution theorem"
+    summary: "Derives alpha L_C h=beta L_Cu and proves the unique solution [h]=(beta/alpha)[u]."
+  - payload_id: "NMP-RT-20260729-007-002"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    name: "Finite edge-flux and complete component-identity theorem"
+    summary: "Derives the cut identity and proves that all independent linear identities are generated by ker L_C."
+  - payload_id: "NMP-RT-20260729-007-003"
+    payload_type: "countermodel_or_obstruction"
+    name: "Formal joint-variation collapse diagnostic"
+    summary: "Shows that silently varying the fixed source in the unchanged expression forces both quotient classes to vanish for nonzero beta."
+  - payload_id: "NMP-RT-20260729-007-004"
+    payload_type: "countermodel_or_obstruction"
+    name: "Finite constraint Einstein-type data obstruction"
+    summary: "Records the candidate-scoped absence of the target carrier, tensor source, curvature, diffeomorphism, Bianchi, continuum, coefficient, and recovery data."
+
+minimum_physics_payload:
+  minimum_payload_schema_id: "minimum_physics_payload_schema_v1"
+  source_task_id: "RT-20260729-007"
+  source_job_id: "AJ-RT-20260729-007-001"
+  source_completion_path: "research_control/tasks/RT-20260729-007/jobs/completions/AJC-AJ-RT-20260729-007-001.yaml"
+  target_derivation_milestone: "einstein_equations"
+  milestone_burden: "Determine whether Einstein-type equations actually follow from the derived action or closure."
+  payload_class: "exact_finite_equation_identity_and_precise_obstruction"
+  payload_status: "draft/control"
+  payload_artifact_path: "research_control/tasks/RT-20260729-007/artifacts/finite_source_field_equation_identity_v1.tex"
+  payload_summary: "An exact finite response equation, complete component identity, source maps, joint-variation diagnostic, and typed candidate-scoped obstruction."
+  payload_source_basis:
+    - "FiniteSourceClosureConstraintCandidate_v1"
+    - "LocalEffectiveActionClosureTarget_v1"
+    - "SourceKernelDirichletVariationalCandidate_v1"
+  process_receipts_excluded:
+    - "validator_status"
+    - "registry_row"
+    - "handoff_status"
+    - "generated_derivative"
+    - "checkpoint_status"
+  physics_promotion_authorized: false
+  proof_authority: false
+
+mathematical_payload_manifest:
+  - payload_id: "PAYLOAD-RT007-001"
+    payload_type: "theorem"
+    object_name: "P8T04ExactFiniteEulerEquation_v1"
+    claim_status: "exact within the declared finite proposal-only candidate"
+    source_path: "research_control/tasks/RT-20260729-007/artifacts/finite_source_field_equation_identity_v1.tex"
+    burden_effect: "narrows"
+    summary: "Derives the finite equation and unique quotient response."
+  - payload_id: "PAYLOAD-RT007-002"
+    payload_type: "theorem"
+    object_name: "P8T04CompleteFiniteIdentity_v1"
+    claim_status: "exact within the declared finite proposal-only candidate"
+    source_path: "research_control/tasks/RT-20260729-007/artifacts/finite_source_field_equation_identity_v1.tex"
+    burden_effect: "narrows"
+    summary: "Classifies the edge-flux, cut, component, and left-kernel identities."
+  - payload_id: "PAYLOAD-RT007-003"
+    payload_type: "countermodel"
+    object_name: "P8T04JointVariationCollapse_v1"
+    claim_status: "formal diagnostic for the unchanged finite expression"
+    source_path: "research_control/tasks/RT-20260729-007/artifacts/finite_source_field_equation_identity_v1.tex"
+    burden_effect: "blocks_silent_promotion"
+    summary: "Shows that the unchanged expression is not a nontrivial complete joint action."
+  - payload_id: "PAYLOAD-RT007-004"
+    payload_type: "obstruction"
+    object_name: "OBST-P8T04-FINITE-CONSTRAINT-EINSTEIN-TYPE-DATA-ABSENT-001"
+    claim_status: "candidate-scoped obstruction; no global no-go"
+    source_path: "research_control/tasks/RT-20260729-007/artifacts/finite_source_field_equation_identity_v1.tex"
+    burden_effect: "narrows_and_blocks_overread"
+    summary: "Identifies the exact missing target-side types and leaves same-milestone continuation open."
+
+physics_progress_status:
+  status: "precise_obstruction_found"
+  target_derivation_milestone: "einstein_equations"
+  milestone_burden: "Determine whether Einstein-type equations actually follow from the derived action or closure."
+  explanation: "P8-T04 materially advances the candidate-scope mathematics by deriving the exact equation, complete identities, source maps, and joint diagnostic. The target Einstein-equation burden remains not started at the layered physical/control status because the candidate has no physical gravitational interpretation or typed target bridge."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+obstruction_record:
+  present: true
+  obstruction_id: "OBST-P8T04-FINITE-CONSTRAINT-EINSTEIN-TYPE-DATA-ABSENT-001"
+  scope: "einstein_equations"
+  failed_object: "Einstein-type equation and conservation-identity derivation"
+  exact_failure: "The source record lacks a target atlas, Lorentzian metric carrier, symmetric tensor source map, curvature operator, diffeomorphism action, contracted Bianchi identity, continuum regime, physical coefficient map, and Einstein-leading theorem."
+  current_ontology_implication: "does_not_derive"
+  source_extension_implication: "repair_allowed"
+  consequence: "downstream_block_preserved"
+  forbidden_overread: "This candidate-scoped missing-data result is not a global no-go theorem or proof of future-extension impossibility."
+
+distance_to_gr_delta:
+  changed: false
+  effect: "obstruction_recorded"
+  burden_id: "einstein_equations"
+  milestone: "einstein_equations"
+  old_status: "draft object exists"
+  new_status: "draft object exists"
+  ledger_row_updated: true
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "The evidence path and notes are updated to the exact P8-T04 equation and obstruction, while the required high-risk layered statuses remain not_started, dynamics_action_or_variation_missing, no_field_equation_derivation, and none because no qualifying physical or target equation is derived."
+  downstream_unlocked:
+    - "P8-T05 exact finite constraint, mode, characteristic, and stability stress after checkpoint"
+  downstream_still_blocked:
+    - "physical gravitational interpretation"
+    - "unscoped effective geometry or metric"
+    - "target stress-energy tensor"
+    - "diffeomorphism and contracted Bianchi structure"
+    - "Einstein equations"
+    - "exact-GR recovery"
+    - "benchmark promotion"
+  explanation: "The completion adds mathematical payload but no qualifying physical Distance-to-GR status change."
+
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "unchanged; no canonical ontology edit or source-law adoption"
+  - burden: "Source equivalence EqSrc"
+    status: "unchanged"
+  - burden: "RetainH"
+    status: "unchanged"
+  - burden: "GenH"
+    status: "unchanged"
+  - burden: "ObsLoc_lc"
+    status: "unchanged"
+  - burden: "Resp_lc"
+    status: "unchanged; the P8 equation uses only the exact admitted finite source response"
+  - burden: "M_src"
+    status: "unchanged; no scope expansion"
+  - burden: "g_eff"
+    status: "unresolved; P6 Gate B remains zero of eight and Q_C is not an effective metric"
+  - burden: "matter coupling"
+    status: "P7 source matter remains adopted by exact human postulate only in its declared source scope; no target stress-energy map follows"
+  - burden: "Einstein equations"
+    status: "the exact finite equation and identities are derived, but no physical gravitational interpretation, target tensor equation, Bianchi identity, or Einstein-leading recovery follows"
+  - burden: "finite-variation robustness"
+    status: "exact finite solvability and identities are proved for the unchanged candidate; continuum, hyperbolicity, mode, and arbitrary-variation robustness remain open"
+  - burden: "benchmark promotion"
+    status: "blocked"
+  - burden: "Gate Chair status"
+    status: "no new protected verdict requested"
+  - burden: "current route freeze or hard-fail status"
+    status: "the unchanged finite equation is frozen against Einstein reinterpretation; P8-T05 finite stress testing and materially new same-milestone continuation remain open after checkpoint"
+
+freeze_criteria_status:
+  freeze_evaluation_required: true
+  repeated_burden: false
+  scoped_obstruction: true
+  freeze_decision: "locally_frozen"
+  active_freeze_label: "unchanged_finite_constraint_as_Einstein_dynamics"
+  decision_reason: "New mathematical payload prevents a repeated-burden freeze, but the typed obstruction freezes only further reinterpretation of the unchanged graph equation and component identity as Einstein dynamics."
+  criteria_evaluated:
+    - "the packet adds new mathematical payload and is not a repeated-burden result"
+    - "the unchanged finite carrier operator source and identity types do not instantiate Einstein dynamics"
+    - "finite P8-T05 stress testing remains distinct from target-side promotion"
+  freeze_if:
+    - "the unchanged graph equation component identity unit normalization or validator result is reused as an Einstein-type bridge"
+  next_allowed_route: "refuter"
+  status_update_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  global_theory_rejection: false
+  future_source_extension_impossibility: false
+
+route_cycle_control:
+  cycle_family: "v21_p8_local_effective_action_closure"
+  current_cycle_step: "p8_t04_exact_finite_equation_identity_and_scoped_obstruction_p8_t05_selected"
+  prior_related_tasks:
+    - "RT-20260729-003"
+    - "RT-20260729-005"
+    - "RT-20260729-006"
+    - "RT-20260729-007"
+  cycle_risk: "medium"
+  orbit_avoidance_reason: "P8-T04 adds a complete identity classification and joint-variation diagnostic and freezes target reinterpretation. P8-T05 must stress the exact finite candidate rather than restate the equation or claim a GR limit."
+  next_role_consequence: "refuter@0.2.0 for v21 P8-T05 after checkpoint"
+
+theoretical_decision_output:
+  selected_next_packet_type: "finite_constraint_mode_and_stability_stress"
+  selected_next_route_family: "refuter-stress-packet"
+  selected_next_role_family: "refuter@0.2.0"
+  selected_next_task_id: "P8-T05"
+  decision_basis: "P8-T04 completes the exact finite equation and identity derivation while leaving hyperbolicity, mode count, stability, and physical viability untested."
+  theoretical_method: "solve and linearize the exact finite system, classify constraints and modes, and test stability without assuming a healthy GR limit"
+  preserves_claim_blocks:
+    - "finite proposal-only scope"
+    - "no target atlas metric or stress-energy import"
+    - "no Bianchi or diffeomorphism renaming"
+    - "no Einstein-equation or exact-GR promotion"
+  requires_human_gate: false
+  human_gate_reason: ""
+  selected_next_packet_requires_human_gate: false
+  decision_consequence: "P8-T05 becomes dependency-ready only after the P8-T04 checkpoint."
+  new_payload_novelty: "P8-T05 must add explicit constraint, mode, characteristic, and stability evidence rather than repeat the P8-T04 equation."
+
+selected_next_route:
+  route_id: "v21_p8_t05_finite_constraint_mode_and_stability_stress"
+  route_label: "refuter-stress-packet"
+  role_family: "refuter@0.2.0"
+  worker_skill: "continue-research"
+  selected_next_packet_type: "finite_constraint_mode_and_stability_stress"
+  task_type: "v21_p8_t05_constraints_modes_hyperbolicity_and_stability"
+  plan_task_id: "P8-T05"
+  target_derivation_milestone: "einstein_equations"
+  milestone_burden: "Establish whether the derived gravitational sector is dynamically viable."
+  strategy_id: "stress_exact_finite_constraint_without_assuming_GR_limit"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  candidate_path: "research_control/tasks/RT-20260729-007/artifacts/finite_source_field_equation_identity_v1.tex"
+  target_atlas_assumed: false
+  target_metric_assumed: false
+  target_stress_energy_assumed: false
+  Einstein_Hilbert_action_assumed: false
+  Einstein_equations_assumed: false
+  healthy_GR_limit_assumed: false
+  physics_promotion_authorized: false
+  source_handoff: "research_control/handoffs/handoff-0903.yaml"
+
+claim_boundary:
+  boundary_id: "CB-V21-P8-T04-FINITE-FIELD-EQUATION-IDENTITY-001"
+  allowed_scope: "Exact finite Euler equation, solution, flux and identity theorems, source maps, formal joint diagnostic, post-derivation type comparison, one precise candidate-scoped obstruction, freeze against unchanged target reinterpretation, and one P8-T05 route after checkpoint."
+  blocked_scope: "Canonical ontology, source-law or candidate adoption, physical gravitational interpretation, target atlas metric stress energy, diffeomorphism or Bianchi identity, target covariant conservation, Einstein-Hilbert action, Einstein equations, exact-GR recovery, benchmark, proof, publication, push, completed derivation, global no-go, or future impossibility."
+  claim_boundary_preserved: true
+
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+  summary: "The exact finite equation and identity packet does not authorize any target-side or physical promotion."
+  forbidden_conclusions:
+    - "M_src adoption or scope expansion"
+    - "g_eff construction adoption or scope expansion"
+    - "matter coupling derivation or adoption beyond the exact protected P7 source scope"
+    - "Q_C is an adopted physical gravitational carrier"
+    - "L_C is a spacetime curvature or differential operator"
+    - "component shifts are diffeomorphism invariance"
+    - "component identity is a contracted Bianchi identity or target covariant conservation"
+    - "L_Cu is target stress energy"
+    - "the finite equation is an Einstein equation"
+    - "alpha or beta is a physical gravitational constant"
+    - "physical corrections vanish"
+    - "exact-GR recovery or benchmark promotion"
+    - "canonical adoption proof publication push or completed derivation"
+    - "global no-go or future-extension impossibility"
+    - "global theory rejection"
+
+no_target_import_audit:
+  explicit_target_import_found: false
+  explicit_process_import_found: false
+  distinction: "Canonical target equations were inspected only after the finite derivation to compare mathematical types; they did not define, normalize, or prove the candidate equation."
+  forbidden_inputs_absent:
+    target_atlas: true
+    target_metric: true
+    target_dimension: true
+    Lorentzian_signature: true
+    causal_cone: true
+    target_stress_energy_tensor: true
+    diffeomorphism_action: true
+    contracted_Bianchi_identity: true
+    Einstein_Hilbert_action: true
+    Einstein_equations: true
+    exact_GR_benchmark: true
+    empirical_coefficient_fit: true
+    validator_or_checkpoint_as_science: true
+
+ordinary_route_guard:
+  schema_id: "ordinary_route_guard_evaluation_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  evaluation_id: "ORE-HANDOFF-0903"
+  ordinary_handoff_id: "handoff-0903"
+  threshold: 3
+  consecutive_project_system_tasks_before_selection: 0
+  ready_science_plan_task_ids:
+    - "P8-T05"
+    - "P14-T04"
+  selected_plan_task_id: "P8-T05"
+  selected_route_class: "physics_bearing"
+  selected_worker_skill: "continue-research"
+  outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  exception_receipt:
+    active: false
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "none"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+
+three_tier_claim_summary:
+  adopted_objects:
+    - "The exact unchanged P7 source-matter package remains adopted only in its declared source scope by protected human postulate."
+  accepted_evidence_preconditions:
+    - "P8-T02 formalized the closure target and P8-T03 constructed the finite quotient action as proposal-only source-extension data."
+    - "P8-T04 derives the exact finite equation and identity space without changing physical status."
+  open_or_blocked_physical_targets:
+    - "The quotient variable has no established physical gravitational interpretation."
+    - "Target metric, stress energy, Bianchi identity, Einstein equations, exact-GR recovery, and benchmark promotion remain open or blocked."
+  forbidden_overread:
+    - "An exact finite field equation is not an Einstein equation."
+    - "A complete finite component identity is not a contracted Bianchi identity."
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"
+  notes: "No nonblank project-improvement signal was emitted."
+
+artifacts:
+  field_equation: "research_control/tasks/RT-20260729-007/artifacts/finite_source_field_equation_identity_v1.tex"
+  specification: "research_control/tasks/RT-20260729-007/artifacts/finite_source_field_equation_identity_spec_v1.yaml"
+  source_to_equation_map: "research_control/tasks/RT-20260729-007/artifacts/source_to_effective_equation_map_v1.yaml"
+  controls: "research_control/tasks/RT-20260729-007/artifacts/finite_source_field_equation_identity_controls_v1.yaml"
+  human_receipt: "research_control/tasks/RT-20260729-007/artifacts/finite_source_field_equation_identity_receipt.md"
+  validation_report: "research_control/tasks/RT-20260729-007/artifacts/finite_source_field_equation_identity_validation_v1.json"
+  validator: "research_control/tasks/RT-20260729-007/artifacts/validate_finite_source_field_equation_identity.py"
+  child_phys_math: "research_control/tasks/RT-20260729-007/artifacts/child_phys_math_p8_t04_finite_field_equation.yaml"
+  child_phys_phil: "research_control/tasks/RT-20260729-007/artifacts/child_phys_phil_p8_t04_finite_field_equation.yaml"
+  parent_conflict_review: "research_control/tasks/RT-20260729-007/artifacts/parent_conflict_review_p8_t04_finite_field_equation.yaml"
+  parent_fusion_notes: "research_control/tasks/RT-20260729-007/artifacts/parent_fusion_notes_p8_t04_finite_field_equation.md"
+
+output_paths:
+  - "research_control/tasks/RT-20260729-007/00_TASK.yaml"
+  - "research_control/tasks/RT-20260729-007/DDR-20260729-007.md"
+  - "research_control/tasks/RT-20260729-007/artifacts/finite_source_field_equation_identity_v1.tex"
+  - "research_control/tasks/RT-20260729-007/artifacts/finite_source_field_equation_identity_spec_v1.yaml"
+  - "research_control/tasks/RT-20260729-007/artifacts/source_to_effective_equation_map_v1.yaml"
+  - "research_control/tasks/RT-20260729-007/artifacts/finite_source_field_equation_identity_controls_v1.yaml"
+  - "research_control/tasks/RT-20260729-007/artifacts/finite_source_field_equation_identity_receipt.md"
+  - "research_control/tasks/RT-20260729-007/artifacts/finite_source_field_equation_identity_validation_v1.json"
+  - "research_control/tasks/RT-20260729-007/artifacts/validate_finite_source_field_equation_identity.py"
+  - "research_control/tasks/RT-20260729-007/artifacts/child_phys_math_p8_t04_finite_field_equation.yaml"
+  - "research_control/tasks/RT-20260729-007/artifacts/child_phys_phil_p8_t04_finite_field_equation.yaml"
+  - "research_control/tasks/RT-20260729-007/artifacts/parent_conflict_review_p8_t04_finite_field_equation.yaml"
+  - "research_control/tasks/RT-20260729-007/artifacts/parent_fusion_notes_p8_t04_finite_field_equation.md"
+  - "research_control/tasks/RT-20260729-007/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260729-007/jobs/AJ-RT-20260729-007-001.yaml"
+  - "research_control/tasks/RT-20260729-007/jobs/completions/AJC-AJ-RT-20260729-007-001.yaml"
+  - "research_control/tasks/RT-20260729-007/roles/ontology-formalizer@0.2.0--RT-20260729-007.yaml"
+  - "research_control/handoffs/handoff-0903.yaml"
+  - "research_control/handoffs/handoff-0903.md"
+
+artifact_receipts:
+  field_equation:
+    path: "research_control/tasks/RT-20260729-007/artifacts/finite_source_field_equation_identity_v1.tex"
+    sha256: "12a1cfae87cd673241aefe88144ab974b49fc3bad284a81baff90b2e806d5168"
+    status_label: "draft/control"
+  specification:
+    path: "research_control/tasks/RT-20260729-007/artifacts/finite_source_field_equation_identity_spec_v1.yaml"
+    sha256: "d37fdff6d320751d0174459c3d10bec75aa04be62c72c368480f1cafdb46e5f8"
+    status_label: "draft/control"
+  source_to_equation_map:
+    path: "research_control/tasks/RT-20260729-007/artifacts/source_to_effective_equation_map_v1.yaml"
+    sha256: "1c2b24a0b09023ed92bf1c03cf6ec1cf0d56db52a847fad5ed7eae03e817c452"
+    status_label: "draft/control"
+  controls:
+    path: "research_control/tasks/RT-20260729-007/artifacts/finite_source_field_equation_identity_controls_v1.yaml"
+    sha256: "6281c97212ecae420b21efabb7641c49f922e454b587d0363bfacc2caf67bdf7"
+    status_label: "draft/control"
+  human_receipt:
+    path: "research_control/tasks/RT-20260729-007/artifacts/finite_source_field_equation_identity_receipt.md"
+    sha256: "95e0950cbf69e25a3bc5e38aeff869314ddf8905e393b343064ab0817e05180c"
+    status_label: "project_control"
+  validation_receipt:
+    path: "research_control/tasks/RT-20260729-007/artifacts/finite_source_field_equation_identity_validation_v1.json"
+    sha256: "ab63af8888366746195d40fb7aa78a10b3b99c238a8e5e581478cca3f93dfa10"
+    status_label: "operational_validation_only"
+  parent_fusion_notes:
+    path: "research_control/tasks/RT-20260729-007/artifacts/parent_fusion_notes_p8_t04_finite_field_equation.md"
+    sha256: "e4e37f28c2cb102464dbc937c789f20c00e406d35fd16a017f8da0c8168b3dae"
+    status_label: "draft/control"
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 160 validated, was atomically claimed once, and consumed the immutable P8-T04 continue-research route once."
+      - "Dependency checkpoint b03e6c152e108437f9d0606b93ed733be67d1cb3 committed before P8-T04 execution."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Task-local exact-arithmetic validation passes 121 of 121 checks."
+      - "Scratch Tectonic build succeeds with six pages."
+      - "Six parent conflicts are resolved and no conflict remains."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Repository-wide control, claim-language, documentation-impact, renderer, graph, and memory checks pass."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "One governed checkpoint remains; P8-T05 is not executed before it."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Current frontier, task index, compact frontier, dependency graph, claim graph, and generated memory derivatives are synchronized."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory synchronization and validate-only mode pass."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation passes."
+
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=true source_object_count=1077 relationship_row_count=5425 semantic_row_count=1077 vault_row_count=1077"
+  - ".venv/bin/python research_control/tasks/RT-20260729-007/artifacts/validate_finite_source_field_equation_identity.py --write-report --json | exit_code=0 | status=PASS check_count=121 failure_count=0"
+  - "python3 scripts/compile_latex.py finite_source_field_equation_identity_v1.tex --compiler tectonic --output-directory <plugin-local-scratch> --json | exit_code=0 | pdf_page_count=6"
+
+validation_evidence:
+  - gate_id: "task_local_finite_source_field_equation_identity"
+    status: "PASS"
+    receipt_path: "research_control/tasks/RT-20260729-007/artifacts/finite_source_field_equation_identity_validation_v1.json"
+    content_hash: "sha256:ab63af8888366746195d40fb7aa78a10b3b99c238a8e5e581478cca3f93dfa10"
+    counts:
+      error_count: 0
+      warning_count: 0
+      finding_count: 121
+    relevant_finding_ids: []
+    tree_fingerprint: ""
+
+required_next_packet:
+  plan_task_id: "P8-T05"
+  task_type: "v21_p8_t05_constraints_modes_hyperbolicity_and_stability"
+  selected_next_packet_type: "finite_constraint_mode_and_stability_stress"
+  selected_next_role_family: "refuter@0.2.0"
+  route_label: "refuter-stress-packet"
+  target_id: "FiniteSourceFieldEquationIdentity_v1"
+  dependency_ready_after_checkpoint: true
+  dependency_ready_now: false
+  requires_human_gate: false
+  executed: false
+
+handoff_id: "handoff-0903"
+next_plan_task_id: "P8-T05"
+next_worker_skill: "continue-research"
+next_role_family: "refuter@0.2.0"
+next_route_label: "refuter-stress-packet"
+next_strategy_id: "stress_exact_finite_constraint_without_assuming_GR_limit"
+next_recommendation: "After one governed checkpoint, run one bounded P8-T05 refuter@0.2.0 packet to solve and stress-test the exact finite equation for constraints, modes, characteristic structure, and stability without assuming a healthy GR limit."
+notes: "P8-T05 remains unexecuted until the governed P8-T04 checkpoint commits."

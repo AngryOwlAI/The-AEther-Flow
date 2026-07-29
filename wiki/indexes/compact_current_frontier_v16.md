@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260729-006`
-- Latest handoff: `handoff-0902`
-- Current status: `p8_t03_finite_source_closure_constraint_candidate_ready_for_checkpoint`
+- Active task: `RT-20260729-007`
+- Latest handoff: `handoff-0903`
+- Current status: `p8_t04_exact_finite_equation_identity_and_scoped_obstruction_ready_for_checkpoint`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260729-006`
-- Latest research handoff: `handoff-0902`
-- Latest research next action: Run one governed checkpoint for AJ-RT-20260729-006-001. Only after it commits may one fresh bounded P8-T04 ontology-formalizer packet vary the exact finite candidate, derive its constraint and identity structure, and compare it structurally without promoting it to an Einstein equation.
+- Latest research task: `RT-20260729-007`
+- Latest research handoff: `handoff-0903`
+- Latest research next action: Run one governed checkpoint for AJ-RT-20260729-007-001. Only after it commits may one fresh bounded P8-T05 refuter@0.2.0 packet solve and stress-test the exact finite equation for constraints, modes, characteristic structure, and stability without assuming a healthy GR limit.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p8_t04_finite_candidate_field_equation_and_identity_analysis`
-- Role family: `ontology-formalizer@0.2.0`
+- Route ID: `v21_p8_t05_finite_constraint_mode_and_stability_stress`
+- Role family: `refuter@0.2.0`
 - Target milestone: `einstein_equations`
-- Milestone burden: Determine whether Einstein-type equations actually follow from the derived action or closure.
+- Milestone burden: Establish whether the derived gravitational sector is dynamically viable.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `293ea0d8c750995c0d5ca28f73347d8b43c4c2c7fdb9fc6053ddb9b06f5a3b59`
-- JSON SHA-256: `2c1970f4ec4eaea1044b29267ef06adedb9b8abe721ecf9efa5d52d2e11d0730`
+- YAML SHA-256: `e7875dea4bdef2a01a2ee954b9c39d5d343a8f2b767a9d95369660662b782659`
+- JSON SHA-256: `aebd43c1406aebafb2632d975738ff1fa4f2b2588b90d38b3f3447bf963783a2`
 
 ## Authority Warning
 

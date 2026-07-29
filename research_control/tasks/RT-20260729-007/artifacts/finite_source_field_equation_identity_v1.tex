@@ -1,0 +1,423 @@
+% authority: science-draft
+% status: draft/control
+% route: ontology-law-research-packet
+% adoption_status: blocked_adoption_open_continuation
+% ontology_formalizer_result: exact_finite_equation_and_precise_scoped_obstruction
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{xurl}
+\usepackage[hidelinks]{hyperref}
+
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newtheorem{obstruction}{Scoped obstruction}
+\newtheorem{nonconclusion}{Non-conclusion}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\Kspace}{\mathcal K_C}
+\newcommand{\Qspace}{\mathcal Q_C}
+\newcommand{\Aspace}{\mathcal A_C}
+\newcommand{\Eop}{\mathcal E_C^{\alpha,\beta}}
+
+\title{FiniteSourceFieldEquationIdentity\_v1\\
+P8-T04 Exact Finite Equation, Identity, and Scoped Obstruction}
+\author{The \AE ther-Flow Research Project}
+\date{2026-07-29}
+
+\begin{document}
+\sloppy
+\maketitle
+
+\section{Decisive result and authority boundary}
+
+This packet varies only the exact
+\texttt{FiniteSourceClosureConstraintCandidate\_v1} constructed in P8-T03.
+The decisive Ontology Formalizer result is
+\[
+ \texttt{exact\_finite\_equation\_and\_precise\_scoped\_obstruction}.
+\]
+The calculation derives an exact finite Euler equation, its complete
+component-shift identity, an edge-flux form, a source-to-equation map, and a
+joint-variation diagnostic.  It then compares those derived objects with the
+typed Einstein-equation burden.
+
+The result is \texttt{draft/control}, \texttt{proposal-only},
+\texttt{source-extension data}, with
+\texttt{blocked\_adoption\_open\_continuation}.  The finite equation is a
+field equation only in the declared finite quotient model.  It is not an
+Einstein equation.  The component identity is not a contracted Bianchi
+identity or target covariant conservation law.  No canonical ontology,
+target atlas, Lorentzian metric, target stress-energy tensor, physical
+gravitational coefficient, continuum limit, or exact-GR recovery theorem is
+created or adopted here.
+
+\section{Fixed candidate and typed spaces}
+
+Let \(\Omega\) be the fixed finite P7 carrier and let
+\(C=(P+P^{\mathsf T})/2\) be the symmetric conductance from the adopted P7
+source kernel.  Its graph Laplacian is
+\begin{equation}
+ (L_C)_{xy}=
+ \begin{cases}
+ -C_{xy},&x\ne y,\\
+ \displaystyle\sum_{z\ne x}C_{xz},&x=y.
+ \end{cases}
+ \label{eq:laplacian}
+\end{equation}
+Writing \(\Pi_C\) for the connected components of the undirected support of
+\(C\), define
+\begin{align}
+ \Kspace&=\ker L_C
+ =\{k\in\Q^\Omega:k\text{ is constant on each }K\in\Pi_C\},\\
+ \Qspace&=\Q^\Omega/\Kspace,\\
+ \Aspace&=\Kspace^\perp
+ =\left\{a\in\Q^\Omega:
+   \sum_{x\in K}a_x=0\text{ for all }K\in\Pi_C\right\}.
+ \label{eq:spaces}
+\end{align}
+The exact P8-T03 action family is
+\begin{equation}
+ S_C^{\alpha,\beta}([h];u)
+ =\frac{\alpha}{2}h^{\mathsf T}L_Ch
+  -\beta(L_Cu)^{\mathsf T}h,
+ \qquad
+ [h]\in\Qspace,\quad u\in\Q^\Omega,
+ \label{eq:action}
+\end{equation}
+with \(\alpha>0\) and \(\beta\in\Q\).  The named v1 member uses
+\(\alpha=\beta=1\) only as an internal dimensionless normalization.
+Throughout the candidate variation, \(u\) is the fixed adopted source
+configuration and \([h]\) is the only varied slot.  No target-side object
+enters Equations~\eqref{eq:laplacian}--\eqref{eq:action}.
+
+\section{Exact finite field equation}
+
+\begin{definition}[Finite response operator]
+For representatives \(h,u\in\Q^\Omega\), define
+\begin{equation}
+ \Eop([h];u)
+ :=\alpha L_Ch-\beta L_Cu\in\Aspace.
+ \label{eq:response}
+\end{equation}
+The operator is independent of \(h\mapsto h+k\), \(k\in\Kspace\).
+Because \(L_C(u+k)=L_Cu\), it also factors through the source quotient when
+only response-equivalent source configurations are distinguished.
+\end{definition}
+
+\begin{theorem}[Exact finite Euler equation and solution class]
+\label{thm:euler}
+For every admitted variation \([\eta]\in\Qspace\),
+\begin{equation}
+ D_hS_C^{\alpha,\beta}([h];u)[\eta]
+ =\eta^{\mathsf T}\Eop([h];u).
+ \label{eq:variation}
+\end{equation}
+Hence the exact finite Euler equation is
+\begin{equation}
+ \Eop([h];u)=0,
+ \qquad\text{equivalently}\qquad
+ \alpha L_Ch=\beta L_Cu.
+ \label{eq:euler}
+\end{equation}
+It has one and only one solution class
+\begin{equation}
+ [h]=\frac{\beta}{\alpha}[u]\in\Qspace.
+ \label{eq:solution}
+\end{equation}
+The source-to-equation and source-to-solution maps are
+\begin{align}
+ F_C^{\beta}:\Qspace&\longrightarrow\Aspace,
+ &F_C^{\beta}([u])&=\beta L_Cu,\\
+ R_C^{\alpha,\beta}:\Qspace&\longrightarrow\Qspace,
+ &R_C^{\alpha,\beta}([u])&=\frac{\beta}{\alpha}[u].
+ \label{eq:maps}
+\end{align}
+For \(\beta\ne0\), \(F_C^\beta\) is an isomorphism between the finite
+quotient and the balanced response space.  These maps are exact in the
+finite candidate and have no target-spacetime codomain.
+\end{theorem}
+
+\begin{proof}
+Symmetry of \(L_C\) gives Equation~\eqref{eq:variation}.  Both terms in
+Equation~\eqref{eq:response} lie in
+\(\operatorname{im}L_C=\Kspace^\perp=\Aspace\).  The Euler equation implies
+\[
+ L_C\!\left(h-\frac{\beta}{\alpha}u\right)=0,
+\]
+so its solution difference lies in \(\Kspace\), proving existence and
+uniqueness in \(\Qspace\).  The restriction of \(L_C\) to the quotient is
+injective and has image \(\Aspace\), proving the map statement.
+\end{proof}
+
+\begin{corollary}[Exact linearization and corrections]
+\label{cor:linearization}
+The linearization in the varied slot is the constant operator
+\begin{equation}
+ D_h\Eop=\alpha L_C.
+\end{equation}
+The finite candidate is exactly quadratic, so every nonlinear
+self-interaction term and every higher finite Taylor remainder in this
+declared model is identically zero.  This exact zero is not evidence that
+physical continuum, curvature, cosmological, nonlocal, or
+higher-derivative corrections vanish.
+\end{corollary}
+
+\section{Complete finite identity structure}
+
+Define the oriented edge flux
+\begin{equation}
+ J_{xy}(h,u)
+ :=C_{xy}\bigl(\alpha(h_x-h_y)-\beta(u_x-u_y)\bigr).
+ \label{eq:flux}
+\end{equation}
+Symmetry of \(C\) gives \(J_{yx}=-J_{xy}\).
+
+\begin{theorem}[Off-shell flux and component identities]
+\label{thm:identity}
+For every \(x\in\Omega\),
+\begin{equation}
+ \mathcal E_{C,x}^{\alpha,\beta}([h];u)
+ =\sum_{y\in\Omega}J_{xy}(h,u).
+ \label{eq:divergence}
+\end{equation}
+For every subset \(B\subseteq\Omega\),
+\begin{equation}
+ \sum_{x\in B}\mathcal E_{C,x}^{\alpha,\beta}([h];u)
+ =\sum_{\substack{x\in B\\y\notin B}}J_{xy}(h,u).
+ \label{eq:cut}
+\end{equation}
+In particular, for every connected component \(K\in\Pi_C\),
+\begin{equation}
+ \sum_{x\in K}\mathcal E_{C,x}^{\alpha,\beta}([h];u)=0
+ \label{eq:component}
+\end{equation}
+identically, before imposing the Euler equation.  Equivalently,
+\begin{equation}
+ k^{\mathsf T}\Eop([h];u)=0
+ \quad\text{for every }k\in\Kspace.
+ \label{eq:noether}
+\end{equation}
+Equations~\eqref{eq:component} and \eqref{eq:noether} are the complete
+identities generated by the component-shift symmetry
+\([h]\mapsto[h+k]\) of this finite action.
+\end{theorem}
+
+\begin{proof}
+Equation~\eqref{eq:divergence} is the component form of
+\(\alpha L_Ch-\beta L_Cu\).  Summing it over \(B\), the antisymmetric
+fluxes on internal edges cancel pairwise, leaving only the cut term in
+Equation~\eqref{eq:cut}.  A support component has no crossing edges, which
+proves Equation~\eqref{eq:component}.  Component indicator vectors span
+\(\Kspace\), proving Equation~\eqref{eq:noether}.  Conversely, every
+identity in the left kernel of \(D_h\Eop=\alpha L_C\) lies in
+\(\ker L_C=\Kspace\), so no additional independent linear identity exists
+in the exact finite model.
+\end{proof}
+
+\begin{proposition}[Source compatibility]
+\label{prop:compatibility}
+The forcing \(F_C^\beta([u])=\beta L_Cu\) obeys every component identity
+off shell, so Equation~\eqref{eq:euler} is solvable for every admitted
+source.  More generally, an external forcing \(a\in\Q^\Omega\) can replace
+\(\beta L_Cu\) in the candidate equation if and only if
+\[
+ a\in\Aspace
+ \quad\Longleftrightarrow\quad
+ \sum_{x\in K}a_x=0\quad\text{for every }K\in\Pi_C.
+\]
+This is a finite Fredholm compatibility condition and a quotient-descent
+condition.  It is not a target stress-energy conservation law.
+\end{proposition}
+
+\section{Joint-variation diagnostic}
+
+The exact P8-T03 candidate declares \(u\) fixed during the \(h\)-variation.
+It therefore supplies no source-matter evolution equation.  To test whether
+the same expression could be silently promoted to a complete joint action,
+consider only the formal derivative with respect to \(u\):
+\begin{equation}
+ D_uS_C^{\alpha,\beta}([h];u)[\zeta]
+ =-\beta\,\zeta^{\mathsf T}L_Ch.
+ \label{eq:uvariation}
+\end{equation}
+
+\begin{proposition}[Nontrivial joint variation collapses]
+\label{prop:joint}
+If \(\beta\ne0\) and both \(h\) and \(u\) are varied in
+Equation~\eqref{eq:action} without adding any further source action or
+coupling term, their formal Euler equations are
+\[
+ \alpha L_Ch-\beta L_Cu=0,
+ \qquad
+ -\beta L_Ch=0.
+\]
+They imply
+\[
+ [h]=[u]=0.
+\]
+Thus the exact candidate expression alone cannot serve as a complete joint
+action with nontrivial source response.  The fixed-source reading is part of
+the current candidate definition; any joint theory requires new explicit
+dynamics and a fresh derivation.
+\end{proposition}
+
+\begin{proof}
+The second equation gives \(L_Ch=0\).  Substitution in the first gives
+\(L_Cu=0\).  Both quotient classes vanish.
+\end{proof}
+
+\section{Structural comparison after derivation}
+
+Only after deriving the finite objects above do we compare them with the
+target burden.  The target Einstein-type equation has the typed form
+\[
+ G_{\mu\nu}[g]+\Lambda g_{\mu\nu}=\kappa T_{\mu\nu}
+\]
+on a Lorentzian spacetime, together with the contracted differential
+identity \(\nabla^\mu G_{\mu\nu}\equiv0\).  The comparison is diagnostic,
+not a source premise.
+
+\begin{longtable}{p{0.23\linewidth}p{0.33\linewidth}p{0.34\linewidth}}
+\toprule
+Structure & Exact finite candidate & Einstein-type target burden\\
+\midrule
+Carrier &
+Scalar site values modulo component constants &
+Lorentzian metric or equivalent geometric field on a spacetime atlas\\
+Equation type &
+Finite linear graph-Laplacian constraint &
+Nonlinear covariant tensor differential equation\\
+Equation operator &
+\(\alpha L_C\), symmetric positive semidefinite on site values &
+Metric-dependent curvature operator with tensor and differential structure\\
+Source &
+\(\beta L_Cu\in\Aspace\), a balanced finite vector &
+Typed target stress-energy tensor \(T_{\mu\nu}\)\\
+Identity &
+One algebraic zero-sum identity per support component &
+Four local differential identities from diffeomorphism covariance in four
+dimensions\\
+Gauge &
+Finite component shifts in \(\ker L_C\) &
+Spacetime diffeomorphisms acting on tensor fields\\
+Locality and signature &
+Weighted graph adjacency; no time or causal signature &
+Lorentzian locality, causal structure, and coordinate covariance\\
+Coefficients &
+Dimensionless free \(\alpha,\beta\) &
+Dimensionful gravitational and cosmological coefficients with physical
+meaning\\
+Corrections &
+Zero only for the exact quadratic finite model &
+Requires a derived regime, expansion, and controlled correction terms\\
+\bottomrule
+\end{longtable}
+
+\begin{obstruction}[Finite constraint does not supply Einstein-type data]
+\label{obs:einstein}
+Fix exactly the P8-T03 candidate, the adopted P7 finite source inputs, and no
+additional structure.  Then the source record contains no target atlas,
+Lorentzian metric carrier, symmetric rank-two target response map,
+metric-dependent curvature operator, diffeomorphism action, contracted
+Bianchi identity, continuum limit, physical coefficient map, or
+Einstein-leading recovery theorem.  Consequently the finite equation
+\(\Eop=0\) and identity \(k^{\mathsf T}\Eop\equiv0\) do not type-check as an
+Einstein-type equation or its conservation identity.
+
+This is
+\[
+\texttt{OBST-P8T04-FINITE-CONSTRAINT-EINSTEIN-TYPE-DATA-ABSENT-001}.
+\]
+It says that the current exact finite candidate does not derive the missing
+Einstein-type structures.  It is not a global no-go theorem and does not
+exclude conservative source-side extensions, continuum constructions, or a
+different same-milestone candidate.
+\end{obstruction}
+
+\section{Distance-to-GR matrix and freeze evaluation}
+
+\begin{longtable}{p{0.22\linewidth}p{0.16\linewidth}p{0.52\linewidth}}
+\toprule
+Burden & P8-T04 status & Exact disposition\\
+\midrule
+Finite variational equation &
+derived &
+Equation~\eqref{eq:euler}, exact on \(\Qspace\).\\
+Finite identity &
+derived &
+Equations~\eqref{eq:component}--\eqref{eq:noether}, exact component-shift
+identities.\\
+Source-to-equation map &
+derived &
+\(F_C^\beta([u])=\beta L_Cu\) and
+\(R_C^{\alpha,\beta}([u])=(\beta/\alpha)[u]\).\\
+Joint matter dynamics &
+obstructed for unchanged expression &
+Formal joint variation collapses nontrivial quotient response.\\
+Physical gravitational carrier &
+not established &
+\(\Qspace\) remains proposal-only finite source-extension data.\\
+Target stress energy &
+missing &
+No map to symmetric target tensors is supplied.\\
+Bianchi/covariant conservation &
+missing &
+Finite component identities have different generators, type, and locality.\\
+Einstein equations &
+not derived &
+The scoped missing-data obstruction in Obstruction~\ref{obs:einstein}
+applies.\\
+Exact-GR recovery &
+not derived &
+No continuum, Lorentzian, coefficient, or Einstein-leading theorem is
+present.\\
+\bottomrule
+\end{longtable}
+
+The P8-T04 packet adds new mathematical payload: an exact finite field
+equation, complete identity classification, flux form, joint-variation
+counter-diagnostic, and a typed obstruction.  Therefore this is not a
+repeated-burden/no-new-payload result.  The unchanged candidate family should
+nevertheless be frozen against reinterpretation as Einstein dynamics:
+repeating the same graph equation, component identity, unit normalization,
+or validator result cannot discharge the target burden.  P8-T05 may
+stress-test and solve the finite equation in representative regimes after
+checkpoint; any claim beyond the finite candidate requires materially new
+structure.
+
+\begin{nonconclusion}
+Nothing in this packet establishes physical gravity, an effective geometry
+or metric, a target stress-energy tensor, an equivalence principle, a
+contracted Bianchi identity, an Einstein--Hilbert action, Einstein equations,
+a continuum or weak-field limit, exact-GR recovery, benchmark promotion,
+canonical ontology or source-law adoption, proof authority, publication,
+push authority, a global no-go theorem, future-extension impossibility, or a
+completed derivation.
+\end{nonconclusion}
+
+\section{Fixed source record}
+
+The calculation uses these fixed sources:
+\begin{itemize}
+\item \texttt{FiniteSourceClosureConstraintCandidate\_v1}, SHA-256
+\texttt{82dd10d8e91be3781ca4f21e7f9fbf2ce1a9108ae7191db22fed9dfe6086f2fa};
+\item \texttt{LocalEffectiveActionClosureTarget\_v1}, SHA-256
+\texttt{13402c3d80f114b643a0216484b0ba775a2f02d1f0733f33d8cf86044e6add96};
+\item the P7-T06 finite source variational object, SHA-256
+\texttt{386769e40167c35604625ef7250c027dc1712c82db4790e2895e0b31ac3cfbf7};
+\item the protected P7-T08 decision, SHA-256
+\texttt{85fbf32fb9b02aeae556149cbc5c6b51bd6fedf278a3bc401545c93e29fc4827};
+\item the P6-T08 Gate B separating certificate, SHA-256
+\texttt{f3080ed6a6ba1d6847a3b7ed43c7a11ad7f7dae4deccd25486913ea9547f221b}.
+\end{itemize}
+Canonical target-side ontology sources were inspected only to type the
+post-derivation comparison.  Their equations were not used to select, define,
+normalize, or prove the finite candidate.
+
+\end{document}

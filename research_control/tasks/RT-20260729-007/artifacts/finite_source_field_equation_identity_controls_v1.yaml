@@ -1,0 +1,123 @@
+schema_id: "finite_source_field_equation_identity_controls_v1"
+artifact_id: "FiniteSourceFieldEquationIdentityControls_v1"
+task_id: "RT-20260729-007"
+candidate_id: "FiniteSourceFieldEquationIdentity_v1"
+status: "draft/control"
+adoption_status: "blocked_adoption_open_continuation"
+
+fixed_hashes:
+  P8_T03_candidate:
+    path: "research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_constraint_candidate_v1.tex"
+    sha256: "82dd10d8e91be3781ca4f21e7f9fbf2ce1a9108ae7191db22fed9dfe6086f2fa"
+  P8_T03_spec:
+    path: "research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_constraint_spec_v1.yaml"
+    sha256: "8840b205e8aa12d73f3e782ec6936eb96385bb5694c298b1bf41a2bdfe472626"
+  P8_T03_coefficients:
+    path: "research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_coefficient_ledger_v1.yaml"
+    sha256: "5948e1ab75e42f622e5cc7309c9a6598720021ff2c893126f93c6b0bc21b7372"
+  P8_T03_controls:
+    path: "research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_controls_v1.yaml"
+    sha256: "b91f240487fd22b9b95b7c7752e429128d20ccb59b3a202c3430ffbbd2922b6e"
+
+derivation_controls:
+  exact_arithmetic_domain: "Q"
+  varied_slot: "[h] only"
+  source_slot: "u fixed"
+  free_coefficients_preserved: true
+  response_operator: "alpha L_C h-beta L_Cu"
+  finite_linearization: "alpha L_C"
+  flux_antisymmetry_required: true
+  component_identity_off_shell_required: true
+  kernel_identity_completeness_required: true
+  source_compatibility_required: true
+  formal_joint_variation_separated_from_candidate_equation: true
+  target_comparison_only_after_derivation: true
+
+identity_controls:
+  component_shift_identity: "k^T E=0 for every k in ker L_C"
+  source_balance_identity: "one zero-sum condition per support component"
+  identity_classification: "finite algebraic graph identity"
+  forbidden_renamings:
+    - "diffeomorphism invariance"
+    - "contracted Bianchi identity"
+    - "target covariant conservation"
+    - "stress-energy conservation"
+
+structural_mismatch_controls:
+  carrier_rank_checked: true
+  operator_type_checked: true
+  source_type_checked: true
+  identity_generator_checked: true
+  gauge_group_checked: true
+  locality_signature_checked: true
+  physical_dimensions_checked: true
+  continuum_regime_checked: true
+  Einstein_leading_recovery_checked: true
+
+failure_branches:
+  - failure_id: "FSFEI-F01"
+    trigger: "P8-T03 source hash differs"
+    result: "stop; immutable candidate drift"
+  - failure_id: "FSFEI-F02"
+    trigger: "u is silently varied while still described as fixed"
+    result: "stop; candidate equation and joint diagnostic conflated"
+  - failure_id: "FSFEI-F03"
+    trigger: "component zero-sum identity is called Bianchi or covariant conservation"
+    result: "stop; target-side semantic smuggling"
+  - failure_id: "FSFEI-F04"
+    trigger: "finite scalar equation is called Einstein-type without a typed bridge"
+    result: "record scoped obstruction"
+  - failure_id: "FSFEI-F05"
+    trigger: "zero finite correction is generalized to physical corrections"
+    result: "stop; regime overread"
+  - failure_id: "FSFEI-F06"
+    trigger: "current missing bridge is promoted to global impossibility"
+    result: "stop; no-go overreach"
+
+freeze_controls:
+  repeated_burden_without_new_payload: false
+  new_payload:
+    - "exact finite response equation"
+    - "edge-flux form"
+    - "complete component identity"
+    - "source-to-equation map"
+    - "joint-variation collapse diagnostic"
+    - "typed Einstein-structure obstruction"
+  freeze_unchanged_candidate_against_target_reinterpretation: true
+  allow_P8_T05_finite_stress_test_after_checkpoint: true
+  allow_materially_new_same_milestone_continuation: true
+
+forbidden_conclusions:
+  - "Q_C is an adopted physical gravitational carrier"
+  - "L_C is a spacetime differential or curvature operator"
+  - "component shifts are diffeomorphism invariance"
+  - "component balance is a contracted Bianchi identity or target covariant conservation"
+  - "L_Cu is a target stress-energy tensor"
+  - "the finite equation is an Einstein equation"
+  - "alpha or beta is a physical gravitational constant"
+  - "physical continuum curvature cosmological nonlocal or higher-order corrections vanish"
+  - "P6 Gate B passes"
+  - "exact GR recovery or benchmark success"
+  - "canonical ontology or source-law adoption"
+  - "proof publication push or completed derivation"
+  - "global no-go or future-extension impossibility"
+
+next_packet_controls:
+  plan_task_id: "P8-T05"
+  allowed_question: "solve and stress-test the exact finite equation in representative source regimes"
+  must_preserve:
+    - "finite proposal-only scope"
+    - "fixed-source versus formal joint-variation distinction"
+    - "free coefficients"
+    - "no target import"
+    - "no physical or Einstein-equation promotion"
+  requires_checkpoint_first: true
+
+authority_limits:
+  canonical_ontology_modified: false
+  source_law_adopted_or_rejected: false
+  physical_interpretation_established: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false

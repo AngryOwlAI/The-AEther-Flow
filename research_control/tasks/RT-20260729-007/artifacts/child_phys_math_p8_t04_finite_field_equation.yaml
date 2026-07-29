@@ -1,0 +1,39 @@
+schema_id: "role_decomposition_child_output_v1"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+task_id: "RT-20260729-007"
+status: "completed"
+outer_agentjob_count: 1
+child_agentjob_count: 0
+subagent_count: 0
+shared_claim_boundary: "CB-V21-P8-T04-FINITE-FIELD-EQUATION-IDENTITY-001"
+
+independent_result:
+  decisive_type: "exact_finite_equation_and_identity"
+  response_operator: "E_C^(alpha,beta)=alpha L_C h-beta L_Cu"
+  equation: "E_C^(alpha,beta)=0"
+  solution: "[h]=(beta/alpha)[u]"
+  source_to_equation_map: "F_C^beta([u])=beta L_Cu"
+  edge_flux: "J_xy=C_xy(alpha(h_x-h_y)-beta(u_x-u_y))"
+  component_identity: "sum_{x in K} E_x=0 off shell"
+  identity_completeness: "left-kernel identities are exactly ker L_C"
+  joint_variation_diagnostic: "varying u as well forces [h]=[u]=0 when beta is nonzero"
+
+unique_contributions:
+  - "classified every finite linear identity through the left kernel of alpha L_C"
+  - "derived the cut-flux identity before specializing to whole components"
+  - "factored the source-to-solution map through the balanced response space"
+  - "proved the unchanged action cannot provide nontrivial joint h-u dynamics"
+
+limitations:
+  - "finite scalar graph equation only"
+  - "no target tensor or continuum carrier"
+  - "no nonlinear curvature self-coupling"
+  - "no physical coefficient calibration"
+  - "no Einstein-leading recovery theorem"
+
+authority_limits:
+  physical_gravity_established: false
+  Einstein_equations_derived: false
+  physics_promotion_authorized: false
+  proof_authority: false

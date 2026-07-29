@@ -633,6 +633,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-V21-P8-T02-PARENT-FUSION-LOCAL-EFFECTIVE-ACTION-CLOSURE-TARGET-V1` `research_control/tasks/RT-20260729-005/artifacts/parent_fusion_notes_p8_t02_local_effective_action_closure_target.md`
 - `MD-V21-P8-T03-FINITE-SOURCE-CLOSURE-CONSTRAINT-RECEIPT-V1` `research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_constraint_receipt.md`
 - `MD-V21-P8-T03-PARENT-FUSION-FINITE-SOURCE-CLOSURE-V1` `research_control/tasks/RT-20260729-006/artifacts/parent_fusion_notes_p8_t03_finite_source_closure.md`
+- `MD-V21-P8-T04-FINITE-SOURCE-FIELD-EQUATION-IDENTITY-RECEIPT-V1` `research_control/tasks/RT-20260729-007/artifacts/finite_source_field_equation_identity_receipt.md`
+- `MD-V21-P8-T04-PARENT-FUSION-FINITE-FIELD-EQUATION-V1` `research_control/tasks/RT-20260729-007/artifacts/parent_fusion_notes_p8_t04_finite_field_equation.md`
 - `MD-VALIDATOR-OPERATOR-WORKFLOW-PUBLICATION-BRIEF` `markdown/publication-briefs/validator-operator-workflow.publication-brief.md`
 
 ## wiki_markdown
@@ -1263,4 +1265,6 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-V21-P8-T02-PARENT-FUSION-LOCAL-EFFECTIVE-ACTION-CLOSURE-TARGET-V1` `wiki/markdown/md-v21-p8-t02-parent-fusion-local-effective-action-closure-target-v1.md`
 - `WIKI-MD-V21-P8-T03-FINITE-SOURCE-CLOSURE-CONSTRAINT-RECEIPT-V1` `wiki/markdown/md-v21-p8-t03-finite-source-closure-constraint-receipt-v1.md`
 - `WIKI-MD-V21-P8-T03-PARENT-FUSION-FINITE-SOURCE-CLOSURE-V1` `wiki/markdown/md-v21-p8-t03-parent-fusion-finite-source-closure-v1.md`
+- `WIKI-MD-V21-P8-T04-FINITE-SOURCE-FIELD-EQUATION-IDENTITY-RECEIPT-V1` `wiki/markdown/md-v21-p8-t04-finite-source-field-equation-identity-receipt-v1.md`
+- `WIKI-MD-V21-P8-T04-PARENT-FUSION-FINITE-FIELD-EQUATION-V1` `wiki/markdown/md-v21-p8-t04-parent-fusion-finite-field-equation-v1.md`
 - `WIKI-MD-VALIDATOR-OPERATOR-WORKFLOW-PUBLICATION-BRIEF` `wiki/markdown/md-validator-operator-workflow-publication-brief.md`

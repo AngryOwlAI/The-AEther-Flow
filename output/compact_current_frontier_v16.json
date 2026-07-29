@@ -2,7 +2,7 @@
   "schema_id": "compact_current_frontier_v16",
   "generated_from": [
     "research_control/program_state.yaml",
-    "research_control/handoffs/handoff-0902.yaml",
+    "research_control/handoffs/handoff-0903.yaml",
     "registries/DISTANCE_TO_GR_LEDGER.csv",
     "registries/METRIC_USE_LEDGER.csv",
     "research_control/current_frontier.md",
@@ -11,17 +11,17 @@
     "research_control/design/active_state_bifurcation_policy_v1.md"
   ],
   "active_state": {
-    "active_task_id": "RT-20260729-006",
-    "latest_handoff_id": "handoff-0902",
-    "current_status": "p8_t03_finite_source_closure_constraint_candidate_ready_for_checkpoint",
+    "active_task_id": "RT-20260729-007",
+    "latest_handoff_id": "handoff-0903",
+    "current_status": "p8_t04_exact_finite_equation_identity_and_scoped_obstruction_ready_for_checkpoint",
     "v15_completed": false,
     "v16_completed": false,
     "v16_plan_registered": true
   },
   "active_state_bifurcation": {
-    "latest_research_task_id": "RT-20260729-006",
-    "latest_research_handoff_id": "handoff-0902",
-    "latest_research_next_action": "Run one governed checkpoint for AJ-RT-20260729-006-001. Only after it commits may one fresh bounded P8-T04 ontology-formalizer packet vary the exact finite candidate, derive its constraint and identity structure, and compare it structurally without promoting it to an Einstein equation.",
+    "latest_research_task_id": "RT-20260729-007",
+    "latest_research_handoff_id": "handoff-0903",
+    "latest_research_next_action": "Run one governed checkpoint for AJ-RT-20260729-007-001. Only after it commits may one fresh bounded P8-T05 refuter@0.2.0 packet solve and stress-test the exact finite equation for constraints, modes, characteristic structure, and stability without assuming a healthy GR limit.",
     "latest_project_system_task_id": "none",
     "latest_project_system_status": "none",
     "latest_project_system_sidecar_task_id": "none",
@@ -30,10 +30,10 @@
     "next_research_route_source": "latest_research_handoff"
   },
   "next_route": {
-    "route_id": "v21_p8_t04_finite_candidate_field_equation_and_identity_analysis",
-    "role_family": "ontology-formalizer@0.2.0",
+    "route_id": "v21_p8_t05_finite_constraint_mode_and_stability_stress",
+    "role_family": "refuter@0.2.0",
     "target_derivation_milestone": "einstein_equations",
-    "milestone_burden": "Determine whether Einstein-type equations actually follow from the derived action or closure.",
+    "milestone_burden": "Establish whether the derived gravitational sector is dynamically viable.",
     "requires_human_gate": false
   },
   "claim_boundary": {
@@ -328,8 +328,8 @@
   ],
   "distance_to_gr": {
     "delta": {
-      "effect": "finite_draft_constraint_object_constructed",
-      "changed": true,
+      "effect": "candidate_scope_mathematics_only",
+      "changed": false,
       "milestone": "einstein_equations",
       "burden_id": "einstein_equations"
     },
@@ -519,7 +519,7 @@
           "no_benchmark_promotion",
           "no_completed_derivation"
         ],
-        "last_evidence_path": "research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_constraint_candidate_v1.tex",
+        "last_evidence_path": "research_control/tasks/RT-20260729-007/artifacts/finite_source_field_equation_identity_v1.tex",
         "high_risk_status_card": {
           "object_id": "einstein_equations",
           "positive_status": "einstein_equations remains blocked with open continuation and no positive derivation status.",
@@ -621,7 +621,7 @@
         "layer": "post_checkpoint",
         "status": "PENDING",
         "evidence": [
-          "One governed checkpoint remains and P8-T04 is not executed before it."
+          "One governed checkpoint remains and P8-T05 is not executed before it."
         ]
       }
     ]
