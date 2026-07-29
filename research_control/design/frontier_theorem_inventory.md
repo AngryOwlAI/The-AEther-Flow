@@ -40,22 +40,29 @@ snapshots, generated dependency graphs, semantic extracts, Obsidian notes, and
   Item 9B for the exact-package typed-interface cut-set theorem,
   componentwise finite-balance refinement, and zero-ready Gate C matrix while
   leaving P7-T08 protected and human-gated.
+- P7-T08 protected physical-matter adoption: `RT-20260729-001`, adding
+  Item 9C for the exact affirmative Gate C verdict, eight protected
+  constitutive postulates, and P8 matter-input authorization while preserving
+  Item 9B as the historical derivational-gap record.
 - Schema source:
   `research_control/design/frontier_theorem_inventory_schema_v1.md`.
 - Inventory source:
   `research_control/design/frontier_theorem_inventory.md`.
-- Distance-to-GR delta: false.
+- Distance-to-GR delta: true for the exact P7 physical-matter status and
+  P8-input dependency only under `approval-20260729-001`; no target-side
+  gravitational result is promoted.
 - New science-bearing theorem statements: none.
-- Distance-to-GR ledger edit: control next-action wording only; no scientific
-  Distance-to-GR status delta.
-- TeX physics source edit: P4-T06 updates only the three registered ontology
-  manuscripts under the exact P4-T05 canonical-integration authorization.
+- Distance-to-GR ledger edit: protected matter-coupling milestone discharge by
+  explicit human postulate, with the P7-T07 derivational obstruction retained.
+- TeX physics source edit: P7-T08 adds only its registered protected decision
+  artifact; the P7-T01 through P7-T06 mathematical source bytes remain fixed.
 
-The phrases `accepted`, `scoped`, `blocked`, `frozen negative`, and
-`human-gated` below are copied or summarized from tracked sources. They must
-not be read as unscoped `g_eff`, matter-coupling derivation or adoption,
-stress-energy semantics, Einstein equations, benchmark promotion, Gate Chair
-benchmark closure, or completed derivation.
+The phrases `accepted`, `scoped`, `blocked`, `frozen negative`, `adopted`, and
+`human-gated` below are copied or summarized from tracked sources. Only Item
+9C records the exact protected P7 physical-matter adoption, and it records
+adoption by constitutive postulate rather than derivation. No item establishes
+unscoped `g_eff`, target-side stress energy, Einstein equations, benchmark
+promotion, Gate Chair benchmark closure, or completed derivation.
 
 ## Inventory Items
 
@@ -941,6 +948,118 @@ benchmark closure, or completed derivation.
   hash preservation, componentwise Laplacian compatibility proof, zero-ready
   Gate C matrix, and the separation between textual hygiene, formal
   mathematics, physical interpretation, and protected authority.
+
+### Item 9C: p7_t08_protected_physical_matter_adoption
+
+- `frontier_item_id`: `p7_t08_protected_physical_matter_adoption`
+- `frontier_item_class`: `gate_decision;accepted_scoped_object;definition`
+- `milestone`: `matter_coupling`
+- `object_type`: `gate_chair_decision;scientific_status_adoption;assumption_delta`
+- `object_or_claim_name`: `P7SourceMatterPackage_v1`,
+  `P7-MATTER-POSTULATE-01` through `P7-MATTER-POSTULATE-08`, and
+  `ADOPTED_AS_CANONICAL_PHYSICAL_MATTER_BY_EXPLICIT_HUMAN_POSTULATE`.
+- `status_layer_summary`:
+  - `control_status`: `protected_gate_c_verdict_completed`
+  - `mathematical_status`: `exact_p7_t01_through_p7_t06_bytes_unchanged`
+  - `physical_status`: `canonical_physical_matter_by_explicit_human_postulate`
+  - `promotion_status`: `p7_physical_matter_package_only`
+  - `overread_guard`: `no_matter_coupling_derivation;no_geff_scope_expansion;no_stress_energy_tensor;no_einstein_equations;no_benchmark_promotion;no_completed_derivation`
+- `three_tier_classification`: `adopted_by_protected_constitutive_postulate_with_open_derivational_gap`.
+- `linter_status`: `PASS`; the P7-T08 transaction owns focused
+  authorization, source-hash, status-schema, claim-language, and repository
+  validation before checkpoint.
+- `overread_guard`: `no_matter_coupling_derivation;no_geff_scope_expansion;no_stress_energy_tensor;no_einstein_equations;no_benchmark_promotion;no_completed_derivation`
+- `source_artifact_path`:
+  `research_control/tasks/RT-20260729-001/artifacts/p7_t08_gate_c_decision_v1.tex`;
+  `research_control/tasks/RT-20260729-001/artifacts/p7_t08_dimension_adoption_matrix_v1.yaml`;
+  `research_control/tasks/RT-20260729-001/artifacts/p7_t08_constitutive_postulate_ledger_v1.yaml`;
+  `research_control/tasks/RT-20260729-001/artifacts/p7_t08_scientific_status_v1.yaml`;
+  `research_control/approvals/approval-20260729-001.yaml`.
+- `authority_level`: `protected_human_gate;registered_control;registered_tex_artifact`
+- `source_authority_type`: `gate_chair_artifact;registered_tex_artifact;registered_markdown_control;claim_boundary_registry_row;distance_to_gr_ledger_row`
+- `assumptions`:
+  - The exact P7-T01 through P7-T06 registered artifact bytes and hashes are
+    fixed.
+  - The protected human authority adopts the physical and semantic
+    interpretations as constitutive postulates within the artifacts' declared
+    finite domains and the current continuum-first source architecture.
+  - P7-T07 remains historically correct that the unchanged package did not
+    positively derive or compel those interpretations.
+  - Componentwise conservation remains componentwise; global zero sum does
+    not replace componentwise balance on disconnected support.
+- `definitions_used`: the exact P7 source-matter state, finite transition,
+  operational-device, propagation, coupling, and variational records;
+  `P7T07-THM-TYPED-INTERFACE-CUTSET-001`;
+  `P7T07-PROP-COMPONENTWISE-BALANCE-COMPATIBILITY-001`.
+- `definitions_introduced`: eight protected P7 matter constitutive postulates
+  and the additive status
+  `open_derivational_gap_after_constitutive_adoption`.
+- `theorem_like_claims`: `none`; this item records protected authority and
+  assumption delta, not a new theorem.
+- `statement_or_decision`: The exact unchanged package is the canonical
+  physical matter package by explicit protected human postulate. Its
+  source-matter ontology and dynamics, operational meanings, source-side
+  propagation, universal coupling, matter action, source-side stress-energy
+  input, and componentwise physical conservation are adopted in their exact
+  declared scope.
+- `mathematical_conclusion`: No package formula, theorem, countermodel,
+  obstruction, domain, or registered source hash changes. The decision adds
+  physical interpretation and canonical project status rather than a
+  mathematical consequence.
+- `audits_passed`: P7-T07 remains the pre-decision audit with zero of seven
+  Gate C evidence-ready dimensions and zero of ten plan-ready criteria.
+- `stress_results`: The prior semantic, interface, finite-variation, anomaly,
+  universality, and authority attacks remain valid evidence about derivation
+  scope. They do not override the later protected constitutive choice.
+- `gate_chair_results`: Affirmative protected verdict under
+  `approval-20260729-001`; physics-promotion authority is limited to the exact
+  P7 physical matter package.
+- `fail_closed_branches`: Any package-hash change, retroactive audit rewrite,
+  derivation overread, unqualified disconnected-support conservation claim,
+  or downstream target-side promotion fails closed.
+- `known_obstructions`: `OBST-P7T07-CROSS-LAYER-COMPOSITION-GAP-001` remains
+  `open_derivational_gap_after_constitutive_adoption`. It no longer blocks
+  canonical adoption, but it continues to block a first-principles derivation
+  claim.
+- `physical_non_conclusions`:
+  - The adopted matter interpretation is not uniquely or mathematically
+    forced by the lower-level source ontology.
+  - The source propagation structure is not already a Lorentzian metric or
+    `g_eff`.
+  - The source-side stress-energy input is not already a fully derived target
+    tensor \(T_{\mu\nu}\).
+  - The equivalence principle, Einstein equations, GR derivation, empirical
+    validation, benchmark promotion, proof, publication, and completed
+    derivation remain unestablished.
+- `forbidden_overread`: Protected adoption as derivation, empirical truth,
+  independent validation, target geometry, target stress energy, field
+  equations, benchmark promotion, or global no-go.
+- `downstream_blocked_targets`: `g_eff`; source-to-target geometry map;
+  target \(T_{\mu\nu}\); equivalence-principle result; gravitational action;
+  Einstein equations; exact-GR recovery; benchmark promotion; completed
+  derivation.
+- `allowed_reuse`:
+  - After a qualifying P7-T08 checkpoint, reuse the package as lawful
+    canonical matter input for P8-T01.
+  - Carry all eight postulates, fixed source hashes, declared domains, and the
+    open derivational gap into every P8 use.
+- `blocked_reuse`:
+  - Do not call the P7 package first-principles-derived merely because it is
+    adopted.
+  - Do not treat P7 source-side propagation, variation, flux, or balance as an
+    already-completed target-side geometry, stress tensor, or covariant
+    conservation law.
+- `dependency_items`: P7-T01 through P7-T07; `approval-20260729-001`;
+  `P7-T08`.
+- `missing_theorem_or_primitive`: The mapping from the adopted source-side
+  matter inputs to an effective geometry, gravitational action, target
+  stress-energy tensor, and field equations remains P8 work.
+- `next_theorem_needed`: P8-T01 must select one honest gravitational-closure
+  route while distinguishing adopted inputs from newly derived target-side
+  results.
+- `candidate_next_task`: `P8-T01` after the P7-T08 governed checkpoint.
+- `external_review_notes`: The protected authority is human, but no external
+  independent scientific replication or empirical validation was performed.
 
 ### Item 10: matter_coupling_precondition_evidence
 

@@ -1,0 +1,762 @@
+validation_status: "FAIL"
+final_repository_validation_status: "FAIL_CHECKPOINT_STAGED_GIT_DIFF_CHECK"
+job_id: "AJ-RT-20260729-001-001"
+completion_id: "AJC-AJ-RT-20260729-001-001"
+task_id: "RT-20260729-001"
+task_type: "v21_p7_t08_protected_physical_matter_adoption"
+decision_id: "DDR-20260729-001"
+role_id: "gate-chair"
+role_version: "0.1.0"
+execution_role_ref: "gate-chair@0.1.0--RT-20260729-001"
+status: "completed"
+created_at: "2026-07-29T03:10:17Z"
+started_at: "2026-07-29T03:10:17Z"
+completed_at: "2026-07-29T04:08:26Z"
+objective: "Execute only P7-T08 by recording the exact affirmative protected verdict that adopts the unchanged P7-T01 through P7-T06 package as canonical physical matter by explicit human constitutive postulate, while preserving its mathematics and the P7-T07 derivational-gap evidence."
+completion_summary: "P7-T08 consumes the exact one-time human approval and records ADOPTED_AS_CANONICAL_PHYSICAL_MATTER_BY_EXPLICIT_HUMAN_POSTULATE for the unchanged P7-T01 through P7-T06 package within its declared finite domains and the current continuum-first source architecture. The eight postulates assign physical matter, dynamics, operational, propagation, coupling, action, source-side stress-energy-input, and componentwise conservation meanings without changing any package mathematics. P7-T07 remains historically zero of seven and zero of ten, and OBST-P7T07-CROSS-LAYER-COMPOSITION-GAP-001 remains an open derivational gap. The only generation-154 checkpoint failed safely before commit on one blank line at EOF in handoff-0897.md; the entry index was restored, no retry occurred, and P8-T01 remains unexecuted pending a distinct project-system recovery."
+objective_result: "adopted_canonical_physical_matter_by_protected_human_postulate_checkpoint_blocked_single_eof"
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 154
+  passes_consumed: 140
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:154"
+  handoff_token: "e623591da1612b764516acf7168512878718193b68c98031"
+  relay_claim_token: "7783f4a4eabd6e256cc45666cdd6561a4ba2db6f6b78ef25"
+  route_work_item_id: "P7-T08"
+  route_worker_skill: "continue-research"
+  route_sha256: "540d873989b40b1c31f5e9d286dfb63c1dc91887fe2fa006a2e1be7830691140"
+  route_reason: "explicit_human_authorized_recovery"
+  route_strategy_id: "human_authorized_recovery_generation_154"
+  route_blocker_fingerprint: "11c591594496b9a1dc234e5db3e3d8191c28f5108f039e9ed9016a24beed8baf"
+  route_evidence_sha256es:
+    - "0dc8c744ea7ce13a8da045cfafa77718cba0bd4d8e3ea41bf60c05331dc38ce9"
+  worker_skill: "continue-research"
+  worker_invocation_count: 1
+
+transaction_status: "blocked_checkpoint_staged_git_diff_single_eof_recovery_required"
+result_disposition: "adoption_recorded_checkpoint_blocked"
+work_item_status: "blocked"
+milestone_disposition: "protected_constitutive_matter_adoption_complete_derivational_gap_open_p8_t01_blocked_pending_eof_recovery_checkpoint"
+adoption_status: "adopted"
+checkpoint_commit:
+  required: true
+  attempted: true
+  committed: false
+  commit_sha: ""
+  invocation_count: 1
+  status: "FAIL_STAGED_GIT_DIFF_CHECK_1_SINGLE_BLANK_AT_EOF_INDEX_RESTORED_NO_COMMIT"
+  dependency_checkpoint_commit: "79d9564df65e6f09b2742dc0b47f3d039c2ec658"
+  push_authorized: false
+  push_performed: false
+
+is_physics_task: true
+payload_class: "protected_human_gate_route_decision"
+has_new_mathematical_payload: true
+source_extension_classification_required: false
+external_red_team_finding_requires_integration: false
+physics_promotion_authorized: true
+proof_authority: false
+
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P7"
+  plan_task_id: "P7-T08"
+  work_kind: "protected_gate_review"
+  task_class: "science"
+  expected_result_kind: "protected_verdict_or_deferred_human_gate"
+  dependency_task_ids:
+    - "P7-T07"
+  dependency_completion_paths:
+    - "research_control/tasks/RT-20260728-006/jobs/completions/AJC-AJ-RT-20260728-006-001.yaml"
+  dependency_checkpoint_commits:
+    - "79d9564df65e6f09b2742dc0b47f3d039c2ec658"
+  work_item_status: "scientific_adoption_complete_checkpoint_blocked"
+  recommendation_ids:
+    - "V21-R25"
+    - "V21-R31"
+    - "V21-R33"
+    - "V21-R36"
+    - "V21-R37"
+    - "V21-R67"
+    - "V21-R68"
+  recommendation_coverage_role: "protected_physical_matter_adoption"
+  scientific_claims_changed: true
+  scientific_claim_change_scope: "protected canonical physical and interpretive status of the exact unchanged P7 package"
+  physical_status_changed: true
+  distance_to_gr_delta_changed: true
+  distance_to_gr_delta_scope: "matter-coupling milestone discharge by explicit human constitutive postulate with an open derivational gap"
+  physics_promotion_authorized: true
+  proof_authority: false
+  recovery_for_plan_task_id: "P7-T08"
+  required_recovery_strategy_id: "repair_p7_t08_single_eof_blank_line_and_checkpoint_v1"
+  next_dependency_work_item: "P8-T01_after_successful_recovery_checkpoint"
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  observed_durable_outputs:
+    physics:
+      - "research_control/tasks/RT-20260729-001/artifacts/p7_t08_gate_c_decision_v1.tex"
+      - "research_control/tasks/RT-20260729-001/artifacts/p7_t08_constitutive_postulate_ledger_v1.yaml"
+      - "registries/DISTANCE_TO_GR_LEDGER.csv"
+    project_system:
+      - "research_control/tasks/RT-20260729-001/artifacts/validate_p7_t08_gate_c_adoption.py"
+      - "research_control/tasks/RT-20260729-001/artifacts/p7_t08_gate_c_compact_receipt_v1.json"
+  accepted_criteria:
+    physics:
+      - "the exact affirmative protected verdict is recorded dimension by dimension"
+      - "all eight constitutive postulates bind exact source artifacts and hashes"
+      - "P7-T07 remains visible as derivational-gap evidence while no longer blocking adoption"
+      - "P8-T01 becomes eligible only after checkpoint"
+    project_system:
+      - "task-local validation binds authorization and all six unchanged source hashes"
+      - "repository validators distinguish recorded human authority from proof or empirical support"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+command_results:
+  - command: ".venv/bin/python research_control/tasks/RT-20260729-001/artifacts/validate_p7_t08_gate_c_adoption.py"
+    status: "PASS"
+    summary: "110 of 110 authorization immutable-source postulate dimension status handoff and boundary checks pass"
+  - command: "/opt/homebrew/bin/pdflatex two-pass scratch build of p7_t08_gate_c_decision_v1.tex"
+    status: "PASS"
+    summary: "four-page letter PDF compiles with no overfull underfull or LaTeX warnings"
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+    status: "PASS"
+    summary: "registered memory and wiki derivatives regenerate successfully"
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+    status: "PASS"
+    summary: "tracked memory sources registries wiki derivatives and indexes are current"
+  - command: ".venv/bin/python scripts/research_control/render_current_frontier.py --check"
+    status: "PASS"
+    summary: "current frontier matches tracked P7-T08 state and the post-checkpoint P8-T01 route"
+  - command: ".venv/bin/python scripts/research_control/render_task_index.py --check"
+    status: "PASS"
+    summary: "task-index CSV Markdown and wiki derivative are fresh"
+  - command: ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --check"
+    status: "PASS"
+    summary: "compact frontier is fresh and preserves all high-risk claim guards"
+  - command: ".venv/bin/python scripts/research_control/render_dependency_graph.py --check"
+    status: "PASS"
+    summary: "dependency graph JSON Markdown and DOT derivatives are fresh"
+  - command: ".venv/bin/python scripts/research_control/generate_claim_graph_v1.py --check"
+    status: "PASS"
+    summary: "claim graph output is fresh"
+  - command: ".venv/bin/python scripts/research_control/validate_claim_graph_v1.py --json"
+    status: "PASS"
+    summary: "claim graph schema authority and promotion-boundary rules pass"
+  - command: ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+    status: "PASS"
+    summary: "all changed paths are classified within the bounded AgentJob"
+  - command: ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json"
+    status: "PASS"
+    summary: "project-improvement signal registry and emitted-sidecar state validate"
+  - command: ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+    status: "PASS"
+    summary: "documentation-impact receipt covers the exact classifier reasons and live changed paths"
+  - command: ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+    status: "PASS"
+    summary: "changed-source claim-language validation has zero hard failures"
+  - command: ".venv/bin/python scripts/research_control/validate_research_control.py --json-summary"
+    status: "CORRECTION_PASS_REQUIRED"
+    summary: "initial precheckpoint pass isolated five completion-schema echo findings; this completion records their corrected exact budget and command-result forms"
+  - command: ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260729-001-001"
+    status: "FAIL_STAGED_GIT_DIFF_CHECK_1_SINGLE_BLANK_AT_EOF_INDEX_RESTORED_NO_COMMIT"
+    summary: "the only generation-154 checkpoint stopped before commit on research_control/handoffs/handoff-0897.md line 51; the entry index was restored and no retry or legacy validation was used"
+
+physics_payload_admission_result:
+  status: "admitted"
+  admission_path: "physics"
+  payload_type: "route_decision"
+  candidate_family: "V21-P7-T08-PHYSICAL-MATTER-ADOPTION-V1"
+  decision_identity: "ADOPTED_AS_CANONICAL_PHYSICAL_MATTER_BY_EXPLICIT_HUMAN_POSTULATE"
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed_by_admission: false
+  physical_status_changed_by_admission: false
+  physics_promotion_authorized_by_admission: false
+
+family_freeze_admission_result:
+  status: "admitted_unfrozen"
+  route_kind: "primitive_investigation"
+  family_id: "V21-P7-T08-PHYSICAL-MATTER-ADOPTION-V1"
+  detected_match_basis: []
+  reopening_requested: false
+  local_family_freeze_preserved: true
+  global_no_go_inferred: false
+  physics_promotion_authorized_by_admission: false
+
+ordinary_route_guard_admission_result:
+  status: "PASS"
+  source_handoff_id: "handoff-0896"
+  selected_plan_task_id: "P7-T08"
+  guard_outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  scientific_status_changed_by_guard: false
+  physics_promotion_authorized_by_guard: false
+
+artifacts:
+  human_authorization: "research_control/tasks/RT-20260729-001/artifacts/human_authorization_p7_t08_physical_matter_adoption_v1.yaml"
+  dimension_adoption_matrix: "research_control/tasks/RT-20260729-001/artifacts/p7_t08_dimension_adoption_matrix_v1.yaml"
+  constitutive_postulate_ledger: "research_control/tasks/RT-20260729-001/artifacts/p7_t08_constitutive_postulate_ledger_v1.yaml"
+  scientific_status: "research_control/tasks/RT-20260729-001/artifacts/p7_t08_scientific_status_v1.yaml"
+  protected_decision: "research_control/tasks/RT-20260729-001/artifacts/p7_t08_gate_c_decision_v1.tex"
+  compact_receipt: "research_control/tasks/RT-20260729-001/artifacts/p7_t08_gate_c_compact_receipt_v1.json"
+  validator: "research_control/tasks/RT-20260729-001/artifacts/validate_p7_t08_gate_c_adoption.py"
+  child_phys_math: "research_control/tasks/RT-20260729-001/artifacts/child_phys_math_p7_t08_gate_c_adoption.yaml"
+  child_phys_phil: "research_control/tasks/RT-20260729-001/artifacts/child_phys_phil_p7_t08_gate_c_adoption.yaml"
+  conflict_review: "research_control/tasks/RT-20260729-001/artifacts/parent_conflict_review_p7_t08_gate_c_adoption.yaml"
+  fusion_notes: "research_control/tasks/RT-20260729-001/artifacts/parent_fusion_notes_p7_t08_gate_c_adoption.md"
+  checkpoint_blocker: "research_control/tasks/RT-20260729-001/artifacts/validation_blocker_checkpoint_single_eof_handoff_0897_v1.yaml"
+
+output_paths:
+  - "research_control/approvals/approval-20260729-001.yaml"
+  - "research_control/tasks/RT-20260729-001/artifacts/human_authorization_p7_t08_physical_matter_adoption_v1.yaml"
+  - "research_control/tasks/RT-20260729-001/artifacts/child_phys_math_p7_t08_gate_c_adoption.yaml"
+  - "research_control/tasks/RT-20260729-001/artifacts/child_phys_phil_p7_t08_gate_c_adoption.yaml"
+  - "research_control/tasks/RT-20260729-001/artifacts/parent_conflict_review_p7_t08_gate_c_adoption.yaml"
+  - "research_control/tasks/RT-20260729-001/artifacts/parent_fusion_notes_p7_t08_gate_c_adoption.md"
+  - "research_control/tasks/RT-20260729-001/artifacts/p7_t08_gate_c_decision_v1.tex"
+  - "research_control/tasks/RT-20260729-001/artifacts/p7_t08_dimension_adoption_matrix_v1.yaml"
+  - "research_control/tasks/RT-20260729-001/artifacts/p7_t08_constitutive_postulate_ledger_v1.yaml"
+  - "research_control/tasks/RT-20260729-001/artifacts/p7_t08_scientific_status_v1.yaml"
+  - "research_control/tasks/RT-20260729-001/artifacts/p7_t08_gate_c_compact_receipt_v1.json"
+  - "research_control/tasks/RT-20260729-001/artifacts/p7_t08_gate_c_validation_v1.json"
+  - "research_control/tasks/RT-20260729-001/artifacts/validate_p7_t08_gate_c_adoption.py"
+  - "research_control/tasks/RT-20260729-001/artifacts/validation_blocker_checkpoint_single_eof_handoff_0897_v1.yaml"
+  - "research_control/tasks/RT-20260729-001/00_TASK.yaml"
+  - "research_control/tasks/RT-20260729-001/DDR-20260729-001.md"
+  - "research_control/tasks/RT-20260729-001/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260729-001/roles/gate-chair@0.1.0--RT-20260729-001.yaml"
+  - "research_control/tasks/RT-20260729-001/jobs/AJ-RT-20260729-001-001.yaml"
+  - "research_control/tasks/RT-20260729-001/jobs/completions/AJC-AJ-RT-20260729-001-001.yaml"
+  - "research_control/handoffs/handoff-0897.yaml"
+  - "research_control/handoffs/handoff-0897.md"
+
+artifact_receipts:
+  - artifact_id: "P7-T08-HUMAN-AUTHORIZATION-V1"
+    path: "research_control/tasks/RT-20260729-001/artifacts/human_authorization_p7_t08_physical_matter_adoption_v1.yaml"
+    sha256: "9da90540e60a9bc1b624689a4b694460c77ac5d99306319dcedefb291be9a6f2"
+    status_label: "human-gated"
+  - artifact_id: "TEX-V21-P7-T08-PHYSICAL-MATTER-ADOPTION-DECISION-V1"
+    path: "research_control/tasks/RT-20260729-001/artifacts/p7_t08_gate_c_decision_v1.tex"
+    sha256: "85fbf32fb9b02aeae556149cbc5c6b51bd6fedf278a3bc401545c93e29fc4827"
+    status_label: "adopted"
+  - artifact_id: "P7-T08-DIMENSION-ADOPTION-MATRIX-V1"
+    path: "research_control/tasks/RT-20260729-001/artifacts/p7_t08_dimension_adoption_matrix_v1.yaml"
+    sha256: "d2675d6476591f895b6f4131090cc97f80fbb916f912ea9f7ee841b91f4d049a"
+    status_label: "adopted"
+  - artifact_id: "P7-T08-CONSTITUTIVE-POSTULATE-LEDGER-V1"
+    path: "research_control/tasks/RT-20260729-001/artifacts/p7_t08_constitutive_postulate_ledger_v1.yaml"
+    sha256: "e11f5e4ae886932cad618caa3ee97e973bbd38d363db25776fe1fbd2c27451dc"
+    status_label: "adopted"
+  - artifact_id: "P7-T08-SCIENTIFIC-STATUS-V1"
+    path: "research_control/tasks/RT-20260729-001/artifacts/p7_t08_scientific_status_v1.yaml"
+    sha256: "5f84e9c0495514632e7b6c25a809e4e6c1044c69f159ce0e1e38900fc5229d73"
+    status_label: "adopted"
+  - artifact_id: "P7-T08-COMPACT-RECEIPT-V1"
+    path: "research_control/tasks/RT-20260729-001/artifacts/p7_t08_gate_c_compact_receipt_v1.json"
+    sha256: "334173c85231f2066509aab5feb4ab4674119829aa5a1683d0e228a824e73ad3"
+    status_label: "operational_evidence"
+
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_execution_unit_count: 2
+  outer_agentjob_count: 1
+  child_agentjob_count: 0
+
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260729-001/artifacts/child_phys_math_p7_t08_gate_c_adoption.yaml"
+      output_sha256: "633b022b8ac4944523ca3a970166d706a54105710f41e6ead547ef18f7b2be9f"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260729-001/artifacts/child_phys_phil_p7_t08_gate_c_adoption.yaml"
+      output_sha256: "d926f936442816cb402e9184059d02369b8b1ffa1b367305bd388d04999c39c7"
+      status: "completed"
+  conflict_review:
+    status: "resolved"
+    review_path: "research_control/tasks/RT-20260729-001/artifacts/parent_conflict_review_p7_t08_gate_c_adoption.yaml"
+    review_sha256: "e183c92a3bd9543f1b89f47ae01e7eef73b3f763077e16c7ef8c7eb0e62899ab"
+    resolution_rounds: 1
+    resolved_conflict_count: 10
+    unresolved_conflicts: []
+  fusion:
+    status: "completed"
+    fused_output_path: "research_control/tasks/RT-20260729-001/artifacts/p7_t08_gate_c_decision_v1.tex"
+    fusion_notes_path: "research_control/tasks/RT-20260729-001/artifacts/parent_fusion_notes_p7_t08_gate_c_adoption.md"
+    shared_consensus_summary: "Both perspectives affirm the exact protected verdict while preserving unchanged mathematics, historical zero-readiness evidence, componentwise scope, and every target-side block."
+    novelty_preservation_summary: "The fusion preserves exact mathematical qualifications and the distinct constitutive authority layer."
+    claim_boundary_preservation_summary: "Only the exact P7 package receives physical status; no derivation, g_eff, target tensor, equivalence-principle, Einstein-equation, GR, benchmark, proof, publication, push, or completed-derivation authority follows."
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+
+protected_gate_result:
+  gate_id: "P7-T08"
+  gate_name: "Gate C physical matter adoption"
+  human_authorization_id: "HUMAN-AUTH-P7-T08-PHYSICAL-MATTER-ADOPTION-2026-07-28-001"
+  approval_id: "approval-20260729-001"
+  decision_code: "ADOPTED_AS_CANONICAL_PHYSICAL_MATTER_BY_EXPLICIT_HUMAN_POSTULATE"
+  verdict: "adopted"
+  adoption_basis: "explicit_protected_human_constitutive_postulate"
+  package_id: "P7SourceMatterPackage_v1"
+  package_mathematics_changed: false
+  gate_c_ready_dimension_count_before_decision: 0
+  gate_c_required_dimension_count: 7
+  plan_ready_criterion_count_before_decision: 0
+  plan_required_criterion_count: 10
+  constitutive_postulate_count: 8
+  protected_adopted_dimension_count: 9
+  obstruction_id: "OBST-P7T07-CROSS-LAYER-COMPOSITION-GAP-001"
+  obstruction_status_after_adoption: "open_derivational_gap_after_constitutive_adoption"
+  p8_t01_dependency_eligible_after_checkpoint: true
+  p8_t01_execution_ready_before_checkpoint: false
+
+new_mathematical_payload:
+  - payload_id: "NMP-RT-20260729-001-001"
+    payload_type: "dependency_map_update"
+    name: "P7 protected physical-matter status dependency update"
+    summary: "Records that protected human constitutive adoption discharges the P7 matter-coupling decision burden while leaving the P7-T07 derivational gap open."
+  - payload_id: "NMP-RT-20260729-001-002"
+    payload_type: "packet_selection"
+    name: "P8-T01 post-checkpoint dependency selection"
+    summary: "Selects P8-T01 as the next distinct packet only after a qualifying P7-T08 checkpoint and without pre-establishing any gravitational-closure result."
+
+mathematical_payload_manifest:
+  - payload_id: "PAYLOAD-RT-20260729-001-001"
+    payload_type: "dependency_map_update"
+    object_name: "P7 protected physical-matter adoption decision"
+    claim_status: "adopted by explicit protected human constitutive postulate"
+    source_path: "research_control/tasks/RT-20260729-001/artifacts/p7_t08_gate_c_decision_v1.tex"
+    burden_effect: "discharges"
+    summary: "Discharges the protected P7 matter-coupling decision burden without claiming mathematical derivation or changing any P7 package equation."
+  - payload_id: "PAYLOAD-RT-20260729-001-002"
+    payload_type: "dependency_map_update"
+    object_name: "P7 constitutive postulate ledger"
+    claim_status: "adopted with exact source and scope bindings"
+    source_path: "research_control/tasks/RT-20260729-001/artifacts/p7_t08_constitutive_postulate_ledger_v1.yaml"
+    burden_effect: "discharges"
+    summary: "Binds eight adopted meanings to exact unchanged source artifacts, domains, downstream uses, forbidden overreads, and reopening conditions."
+  - payload_id: "PAYLOAD-RT-20260729-001-003"
+    payload_type: "packet_selection"
+    object_name: "P8-T01 gravitational closure input packet"
+    claim_status: "selected after checkpoint"
+    source_path: "research_control/handoffs/handoff-0897.yaml"
+    burden_effect: "selects_next"
+    summary: "Routes only the adopted P7 premises and the still-open derivational gap to P8-T01 after checkpoint."
+
+physics_progress_status:
+  status: "burden_discharged"
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "Make the protected matter-coupling decision required before gravitational closure."
+  explanation: "The exact human authorization supplies the protected constitutive decision absent from P7-T07. The project now adopts the exact unchanged P7 package as canonical physical matter in scope, while explicitly preserving that current ontology does not derive those meanings."
+  physics_promotion_authorized: true
+  promotion_authority_path: "research_control/approvals/approval-20260729-001.yaml"
+
+distance_to_gr_delta:
+  changed: true
+  effect: "milestone_discharge"
+  burden_id: "matter_coupling"
+  milestone: "matter_coupling"
+  old_status: "draft object exists"
+  new_status: "human-adopted canonical physical matter"
+  ledger_row_updated: true
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "The matter-coupling row records the exact protected verdict and distinguishes constitutive adoption from the still-open first-principles derivational gap."
+  downstream_unlocked:
+    - "P8-T01 gravitational closure packet after checkpoint"
+  downstream_still_blocked:
+    - "first-principles derivation of the adopted P7 meanings"
+    - "g_eff or a source-to-target geometry bridge"
+    - "target-side T_mu_nu"
+    - "equivalence-principle status"
+    - "Einstein equations or GR derivation"
+    - "benchmark promotion"
+  explanation: "The delta is an authorized project-level physical-status adoption, not a theorem, empirical validation, or completed derivation."
+
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "unchanged; the current continuum-first source architecture remains the declared context and its primitive debt is not retroactively derived"
+  - burden: "Source equivalence EqSrc"
+    status: "unchanged; no new EqSrc theorem follows from constitutive adoption"
+  - burden: "RetainH"
+    status: "unchanged; no canonical retention law is derived"
+  - burden: "GenH"
+    status: "unchanged; no canonical generator law is derived"
+  - burden: "ObsLoc_lc"
+    status: "unchanged; local exact-branch status remains scoped"
+  - burden: "Resp_lc"
+    status: "unchanged mathematically; adopted P7 operational meaning does not rewrite earlier Resp_lc evidence status"
+  - burden: "M_src"
+    status: "unchanged; the protected source-only M_src scope is not expanded to target spacetime"
+  - burden: "g_eff"
+    status: "still unresolved; P6 Gate B remains zero of eight and P7 adoption does not derive an effective metric"
+  - burden: "matter coupling"
+    status: "discharged as a protected constitutive adoption for the exact P7 package; first-principles derivation remains open"
+  - burden: "Einstein equations"
+    status: "not derived; P8-T01 must construct or precisely obstruct gravitational closure"
+  - burden: "finite-variation robustness"
+    status: "unchanged; adopted componentwise finite balance is not target covariant conservation"
+  - burden: "benchmark promotion"
+    status: "blocked by missing g_eff source-to-target bridge target stress-energy Einstein-equation and recovery results"
+  - burden: "Gate Chair status"
+    status: "P7-T08 protected physical-matter adoption completed under exact one-time human authority"
+  - burden: "current route freeze or hard-fail status"
+    status: "freeze physical overread or repetition of the unchanged P7 package; P8-T01 is a distinct downstream construction after checkpoint"
+
+obstruction_record:
+  present: true
+  obstruction_id: "OBST-P7T07-CROSS-LAYER-COMPOSITION-GAP-001"
+  scope: "matter_coupling"
+  failed_object: "a first-principles total positively source-derived and semantically licensed composition from the unchanged package to its adopted physical meanings"
+  exact_failure: "P7-T07 established that multiple required interfaces were stipulated, partial, conditional, or absent, with Gate C evidence readiness zero of seven and plan readiness zero of ten."
+  minimal_counterexample_path: "research_control/tasks/RT-20260728-006/artifacts/matter_package_smuggling_audit_v1.tex"
+  current_ontology_implication: "does_not_derive"
+  source_extension_implication: "repair_allowed"
+  consequence: "downstream_block_preserved"
+  status_after_adoption: "open_derivational_gap_after_constitutive_adoption"
+  forbidden_overread: "Protected constitutive adoption does not erase the obstruction, prove the adopted meanings, reject the theory, or establish any target-side result."
+
+route_cycle_control:
+  cycle_family: "v21_p7_source_matter_to_physical_coupling"
+  current_cycle_step: "p7_t08_protected_constitutive_adoption_complete"
+  prior_related_tasks:
+    - "RT-20260727-007"
+    - "RT-20260728-001"
+    - "RT-20260728-002"
+    - "RT-20260728-003"
+    - "RT-20260728-004"
+    - "RT-20260728-005"
+    - "RT-20260728-006"
+    - "RT-20260729-001"
+  cycle_risk: "low_after_protected_decision"
+  orbit_avoidance_reason: "P7-T08 adds the previously absent protected constitutive authority and closes the P7 decision rather than repeating construction or audit."
+  next_role_consequence: "P8-T01 must treat the adopted package as scoped input while independently constructing or obstructing gravitational closure."
+
+freeze_criteria_status:
+  repeated_burden: true
+  freeze_evaluation_required: true
+  active_freeze_label: "V21-P7-T08-UNCHANGED-PACKAGE-PHYSICAL-OVERREAD-FREEZE-V1"
+  prior_attempts_considered:
+    - "RT-20260727-007 through RT-20260728-005 package construction"
+    - "RT-20260728-006 integrated audit"
+    - "RT-20260729-001 protected adoption"
+  freeze_if:
+    - "Later work treats the human postulate as a first-principles or unique mathematical derivation."
+    - "Later work uses the unchanged package to assert g_eff target T_mu_nu equivalence-principle Einstein-equation GR or benchmark results without new payload."
+  do_not_freeze_if:
+    - "P8-T01 supplies a materially new closure construction theorem countermodel or precise obstruction under the adopted premises."
+    - "A later protected human decision explicitly revises the postulates within its exact authority."
+  freeze_decision: "locally_frozen"
+  decision_reason: "Only repetition and overread of the completed P7 package are frozen; the distinct P8 closure burden remains open."
+  next_allowed_route: "candidate_constructor"
+  status_update_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+
+forbidden_conclusion_summary:
+  physics_promotion_authorized: true
+  promotion_authority_path: "research_control/approvals/approval-20260729-001.yaml"
+  authorized_scope: "Canonical physical matter status for the exact unchanged P7-T01 through P7-T06 package within its declared domains and the current continuum-first source architecture"
+  forbidden_conclusions:
+    - "the adopted physical meanings are mathematically forced uniquely derived empirically validated or independently externally validated"
+    - "the P7-T07 zero-readiness record or typed-interface obstruction is erased"
+    - "g_eff or a source-to-target geometry bridge is derived"
+    - "target-side T_mu_nu is derived"
+    - "the equivalence principle is established or refuted"
+    - "Einstein equations GR or exact-GR recovery is derived"
+    - "benchmark promotion proof publication push or completed derivation"
+    - "global theory rejection or future source-extension impossibility"
+  summary: "The exact package receives protected project-level physical status by explicit human postulate. The authority does not extend to derivation, empirical truth, target-side gravity, benchmark promotion, proof, publication, push, or completed derivation."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: true
+  protected_scoped_gate_review_scope: "P7-T08 adoption of the exact unchanged P7-T01 through P7-T06 package as canonical physical matter by explicit human constitutive postulate"
+  protected_scoped_gate_review_authority_source_path: "research_control/approvals/approval-20260729-001.yaml"
+  downstream_physics_promotion_authorized: true
+  downstream_physics_promotion_authority_source_path: "research_control/approvals/approval-20260729-001.yaml"
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  publication_authorized: false
+  proof_authority: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  canonical_ontology_edit_authorized: false
+  ontology_selection_authorized: false
+  matter_ontology_adoption_authorized: true
+  operational_semantics_adoption_authorized: true
+  physical_interpretation_establishment_authorized: true
+  coupling_law_adoption_authorized: true
+  matter_action_adoption_authorized: true
+  source_side_stress_energy_input_adoption_authorized: true
+  componentwise_physical_conservation_adoption_authorized: true
+  matter_coupling_derivation_authorized: false
+  Gate_Chair_verdict_authorized: true
+  global_no_go_claim_authorized: false
+
+three_tier_claim_summary:
+  adopted_objects:
+    - "The exact unchanged P7-T01 through P7-T06 package as canonical physical matter by explicit protected human constitutive postulate in scope."
+    - "Eight exact constitutive meanings recorded in the P7-T08 postulate ledger."
+  accepted_evidence_preconditions:
+    - "P7-T07 bounded textual source-purity PASS and immutable six-source hash record"
+    - "P7-T07 zero-of-seven Gate C evidence readiness and zero-of-ten plan readiness"
+    - "P7-T07 typed-interface obstruction retained as an open derivational gap"
+  open_or_blocked_physical_targets:
+    - "first-principles derivation of the P7 meanings"
+    - "g_eff and the source-to-target geometry bridge"
+    - "target T_mu_nu and covariant conservation"
+    - "equivalence-principle status"
+    - "Einstein equations GR recovery and benchmark promotion"
+  forbidden_overread:
+    - "constitutive adoption as mathematical or empirical derivation"
+    - "P8 dependency eligibility as a pre-established P8 result"
+    - "validator checkpoint or registry state as proof"
+
+checkpoint_failure:
+  blocker_path: "research_control/tasks/RT-20260729-001/artifacts/validation_blocker_checkpoint_single_eof_handoff_0897_v1.yaml"
+  blocker_sha256: "b200ae6b0bea1d67ad7937a7ca319a7bde88b2714928798529bd306b19bd60a1"
+  checkpoint_receipt_path: ".local/validation-receipts/528658a2d6edc8398b2ed0909f94147fc3d7c2041a6c0943243cfa662bb6ba5b/RUN-CHECKPOINT-26e4b355976485c9/receipt.json"
+  checkpoint_receipt_sha256: "1a29f74f3bf66c5db2b24a62bfac058b770c64df0487d737089e92bfafa6e246"
+  checkpoint_status: "FAIL"
+  failed_gate: "git_diff_check"
+  failed_stage: "staged_acceptance_git_diff_check"
+  failure_class: "single_blank_at_eof"
+  finding_count: 1
+  target_path: "research_control/handoffs/handoff-0897.md"
+  target_sha256: "7039ad1b46765447b2cf9375ea7dba344b057242208816742296a2f5e82b569c"
+  target_line: 51
+  checkpoint_invocation_count: 1
+  checkpoint_committed: false
+  checkpoint_staged: false
+  entry_index_restored: true
+  legacy_validation_used: false
+  head_before_and_after: "79d9564df65e6f09b2742dc0b47f3d039c2ec658"
+  preservation_reason: "Generation 154 authorized one continue-research invocation and one checkpoint only. Repairing the EOF or invoking a second checkpoint requires the distinct sealed-manifest recovery route."
+
+required_recovery:
+  strategy_id: "repair_p7_t08_single_eof_blank_line_and_checkpoint_v1"
+  route_label: "project-system-recovery"
+  role_family: "process-integrity-auditor@0.1.0"
+  worker_skill: "improve-project-system"
+  plan_task_id: "P7-T08"
+  recovery_for_plan_task_id: "P7-T08"
+  next_plan_item_after_recovery: "P8-T01"
+  target_derivation_milestone: "none"
+  milestone_burden: "Project-system EOF normalization and cumulative checkpoint recovery only; the protected P7 adoption result is preserved and no scientific derivation milestone advances."
+  requires_human_gate: false
+  blocker_path: "research_control/tasks/RT-20260729-001/artifacts/validation_blocker_checkpoint_single_eof_handoff_0897_v1.yaml"
+  blocker_sha256: "b200ae6b0bea1d67ad7937a7ca319a7bde88b2714928798529bd306b19bd60a1"
+  exact_target_path: "research_control/handoffs/handoff-0897.md"
+  exact_target_before_sha256: "d9cf6ec5be8d4a91e054cb9eb1f987f6cbbc5215697d17583b19d5f52b1eda45"
+  non_target_manifest_preservation_required: true
+  scientific_claims_changed_by_recovery: false
+  distance_to_gr_delta_changed_by_recovery: false
+  p7_t08_reexecution_required: false
+  approval_reuse_required: false
+  p8_t01_executed: false
+  executed: false
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1067
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"matter package smuggling audit\" --limit 10 --json"
+      query_type: "search"
+      query_text: "matter package smuggling audit"
+      returned_object_ids:
+        - "TEX-V21-P7-T07-MATTER-PACKAGE-SMUGGLING-AUDIT-V1"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"Gate C readiness\" --limit 10 --json"
+      query_type: "search"
+      query_text: "Gate C readiness"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "TEX-V21-P7-T07-MATTER-PACKAGE-SMUGGLING-AUDIT-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260728-006/artifacts/matter_package_smuggling_audit_v1.tex"
+      source_hash: "f6e0b456dcef8ec4285d6293c76ccc6c6fbe04095e3f0d17023565ee9337187c"
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  authority_note: "Generated Obsidian wiki semantic SQLite and .local surfaces are retrieval-only navigation layers and not authority."
+
+validation_receipts:
+  task_local:
+    path: "research_control/tasks/RT-20260729-001/artifacts/p7_t08_gate_c_validation_v1.json"
+    result_status: "PASS"
+    authority: "operational_evidence_only"
+  scratch_tex_build:
+    status: "PASS"
+    authority: "operational_evidence_only"
+  repository:
+    status: "FAIL_CHECKPOINT_STAGED_GIT_DIFF_CHECK"
+    authority: "operational_evidence_only"
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 154 validated the goal, immutable P7-T08 route, repository binding, source handoff, dependency checkpoint, lease parity, and clean entry state before one atomic claim and one consumption."
+      - "The exact approval attachment is regular, hash-bound, nonblank, one-time, and consumed only by this AgentJob."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Both required child perspectives completed; ten tensions were resolved in one round and no conflict remains."
+      - "The fused decision preserves all six source hashes, the historical audit, exact scope, and every downstream non-authorization."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Task-local validation, scratch TeX build, source-hash immutability, status schema, documentation impact, claim-language, research-control, full validation, and whitespace checks pass before checkpoint."
+  post_checkpoint:
+    status: "FAIL"
+    evidence:
+      - "The only generation-154 checkpoint stopped before commit on one blank line at EOF in handoff-0897.md."
+      - "The entry index was restored, nothing was committed, no retry occurred, and legacy validation was not used."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Current frontier, compact frontier, task index, dependency graph, and claim graph derivatives are fresh."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory bootstrap and validate-only pass after registering the decision and fusion sources."
+  claim_language_linter:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "Changed-source claim-language validation has no hard failure; protected adoption wording remains qualified by exact authority and non-derivation boundaries."
+
+validators_run:
+  - ".venv/bin/python research_control/tasks/RT-20260729-001/artifacts/validate_p7_t08_gate_c_adoption.py"
+  - "bundled Tectonic scratch build of p7_t08_gate_c_decision_v1.tex"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --check"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --check"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --check"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --check"
+  - ".venv/bin/python scripts/research_control/generate_claim_graph_v1.py --check"
+  - ".venv/bin/python scripts/research_control/validate_claim_graph_v1.py --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --json-summary"
+  - ".venv/bin/python scripts/research_control/run_full_research_control_validation.py --json --tail-chars 2500"
+  - "git diff --check"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260729-001-001"
+
+documentation_impact:
+  required: true
+  status: "completed"
+  path: "research_control/tasks/RT-20260729-001/documentation_impact.yaml"
+  rationale: "The claim-bearing protected decision, frontier inventory, Distance-to-GR row, handoff, and source registries record the exact physical-status delta; generated derivatives remain non-authoritative."
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "recursive_goal_recovery_required"
+  recursive_goal_recovery_required: true
+  blocker_path: "research_control/tasks/RT-20260729-001/artifacts/validation_blocker_checkpoint_single_eof_handoff_0897_v1.yaml"
+  blocker_sha256: "b200ae6b0bea1d67ad7937a7ca319a7bde88b2714928798529bd306b19bd60a1"
+  rationale: "The scientific packet emits no general improvement signal, but the consumed checkpoint exposed one exact EOF defect that a fresh sealed-manifest recovery must own."
+
+next_handoff_id: "handoff-0897"
+selected_next_route:
+  route_id: "repair_p7_t08_single_eof_blank_line_and_checkpoint_v1"
+  route_label: "project-system-recovery"
+  role_family: "process-integrity-auditor@0.1.0"
+  worker_skill: "improve-project-system"
+  plan_task_id: "P7-T08"
+  recovery_for_plan_task_id: "P7-T08"
+  next_plan_task_after_recovery: "P8-T01"
+  target_derivation_milestone: "none"
+  milestone_burden: "Remove exactly one terminal newline from handoff-0897.md under the sealed dirty-state manifest, preserve every non-target byte at the repair boundary, and recover the cumulative checkpoint without advancing a scientific derivation burden."
+  strategy_id: "repair_p7_t08_single_eof_blank_line_and_checkpoint_v1"
+  requires_human_gate: false
+  dependency_ready: true
+  execution_ready_now: true
+  physics_promotion_authorized_by_recovery: false
+  blocker_path: "research_control/tasks/RT-20260729-001/artifacts/validation_blocker_checkpoint_single_eof_handoff_0897_v1.yaml"
+  blocker_sha256: "b200ae6b0bea1d67ad7937a7ca319a7bde88b2714928798529bd306b19bd60a1"
+  exact_target_path: "research_control/handoffs/handoff-0897.md"
+  exact_target_before_sha256: "d9cf6ec5be8d4a91e054cb9eb1f987f6cbbc5215697d17583b19d5f52b1eda45"
+  executed: false
+
+active_state_boundary:
+  checkpoint_required: true
+  checkpoint_completed: false
+  checkpoint_job_id: "AJ-RT-20260729-001-001"
+  checkpoint_invocation_count: 1
+  checkpoint_committed: false
+  entry_index_restored: true
+  current_status: "p7_t08_adoption_recorded_checkpoint_blocked_single_eof_recovery_required"
+  selected_next_plan_task_id: "P7-T08"
+  selected_next_worker_skill: "improve-project-system"
+  selected_next_role_family: "process-integrity-auditor@0.1.0"
+  selected_next_strategy_id: "repair_p7_t08_single_eof_blank_line_and_checkpoint_v1"
+  p8_t01_dependency_ready_after_recovery_checkpoint: true
+  p8_t01_execution_ready_now: false
+  p8_t01_executed: false
+
+handoff_authority_boundary:
+  this_handoff_authorizes:
+    - "Director consideration of one fresh bounded P7-T08 project-system EOF recovery under the exact sealed dirty-state manifest"
+    - "inside that recovery, one exact terminal-newline deletion and at most one fresh governed cumulative checkpoint"
+  this_handoff_does_not_authorize:
+    - "EOF repair or checkpoint retry in generation 154"
+    - "a second generation-154 worker invocation"
+    - "P8-T01 execution before checkpoint"
+    - "reuse of the one-time approval or relay generation"
+    - "mutation of P7-T01 through P7-T06 mathematics or P7-T07 audit history"
+    - "g_eff target T_mu_nu equivalence-principle Einstein-equation GR or benchmark conclusions by implication"
+    - "proof publication push global-no-go or completed-derivation claims"
+
+next_recommendation: "Run one fresh bounded improve-project-system recovery for repair_p7_t08_single_eof_blank_line_and_checkpoint_v1. Preserve the exact sealed dirty-state manifest, remove only the terminal newline named by the blocker, and invoke one fresh checkpoint before P8-T01."
+verdict: "ADOPTED_CANONICAL_PHYSICAL_MATTER_BY_PROTECTED_HUMAN_POSTULATE_CHECKPOINT_BLOCKED_SINGLE_EOF_RECOVERY_REQUIRED"

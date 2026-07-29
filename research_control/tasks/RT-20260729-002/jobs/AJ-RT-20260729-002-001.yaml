@@ -1,0 +1,378 @@
+job_id: "AJ-RT-20260729-002-001"
+task_id: "RT-20260729-002"
+decision_id: "DDR-20260729-002"
+role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260729-002"
+status: "completed"
+validation_status: "PASS"
+created_at: "2026-07-29T04:53:20Z"
+started_at: "2026-07-29T04:53:20Z"
+completed_at: "2026-07-29T04:53:20Z"
+completion_path: "research_control/tasks/RT-20260729-002/jobs/completions/AJC-AJ-RT-20260729-002-001.yaml"
+requires_human_gate: false
+human_authorization_note: "Generation 155 is a user-authorized recursive project-system recovery route. It carries no new protected decision, does not reuse approval-20260729-001, does not reexecute P7-T08, and does not execute P8-T01."
+objective: "Under the sealed generation-155 dirty-state manifest, remove exactly one final newline from handoff-0897.md, prove every non-target manifest and protected P7 adoption or approval byte remained exact at the repair boundary, synchronize ordinary control derivatives, and invoke one fresh governed cumulative checkpoint before P8-T01."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system EOF normalization and cumulative checkpoint recovery only; the protected P7 adoption result is preserved and no scientific derivation milestone advances."
+route_label: "repair_p7_t08_single_eof_blank_line_and_checkpoint_v1"
+route_reason: "The generation-154 checkpoint passed all working-tree gates and failed final staged git diff checking on exactly one final blank line, restored the index, and created no commit."
+immutable_route_sha256: "247bb15632630937ef3fa8ba20e1de6e60519f763f6be2089caf2d30e7160a54"
+plan_task_id: "P7-T08"
+recovery_for_plan_task_id: "P7-T08"
+next_plan_task_id: "P8-T01"
+next_plan_task_execution_authorized: false
+project_system_change_only: true
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 155
+  passes_consumed: 141
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:155"
+  handoff_token: "13a0c2f418d275b058dec0eb46c87799f27f81e64b2527e8"
+  relay_claim_token: "18eeceff5eada3c3f6a68b931c94649f558e752ca7190947"
+  route_work_item_id: "P7-T08"
+  route_worker_skill: "improve-project-system"
+  route_sha256: "247bb15632630937ef3fa8ba20e1de6e60519f763f6be2089caf2d30e7160a54"
+  route_reason: "checkpoint_single_eof_recovery_required"
+  route_strategy_id: "repair_p7_t08_single_eof_blank_line_and_checkpoint_v1"
+  route_blocker_fingerprint: "f4261ef3dc1096bffd304d4a115c32d673c765f9607bf82aef8fd11d814d9479"
+  route_evidence_sha256es:
+    - "02b7fce36709e5ff8703da3e3aef0f53fb51df15e58cd3f9f85e4c5a8379c864"
+    - "1a29f74f3bf66c5db2b24a62bfac058b770c64df0487d737089e92bfafa6e246"
+    - "5462a222734037f7b21eb3b99954e480bb71e9b3b93a48c922b469d5e032b2ef"
+    - "8719f2172bc5733ac369658fa8cc8cd7ff43db2fb9c52b2906e196e62aefe2b5"
+    - "9248e8128ed25f2e93cb471f86f85c88493effcf16c4829260ded2eb02e122ef"
+    - "936d831daa555eb60e836e3f1d84beff72f7864dd83a36c082ca6783163b2e14"
+    - "b200ae6b0bea1d67ad7937a7ca319a7bde88b2714928798529bd306b19bd60a1"
+    - "d9cf6ec5be8d4a91e054cb9eb1f987f6cbbc5215697d17583b19d5f52b1eda45"
+    - "f4261ef3dc1096bffd304d4a115c32d673c765f9607bf82aef8fd11d814d9479"
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  candidate_family: "not_applicable"
+  assumption_delta:
+    - "No scientific assumption changes; the packet removes only one evidence-unique terminal blank line and restores checkpoint eligibility."
+    - "The protected P7-T08 adoption, P7-T07 derivational gap, package mathematics, approval consumption, Distance-to-GR delta, and P8-T01 dependency boundary remain unchanged."
+  materiality_basis: "Repairs one validator-proven one-path whitespace defect without changing semantic Markdown, protected science, or scientific authority."
+  source_basis:
+    - "TEX-V21-P7-T08-PHYSICAL-MATTER-ADOPTION-DECISION-V1"
+    - "research_control/tasks/RT-20260729-001/artifacts/validation_blocker_checkpoint_single_eof_handoff_0897_v1.yaml"
+    - "research_control/handoffs/handoff-0897.yaml"
+    - "research_control/design/validation_obligation_resolution_policy_v1.md"
+  expected_artifact_paths:
+    - "research_control/handoffs/handoff-0897.md"
+    - "research_control/tasks/RT-20260729-002/artifacts/p7_t08_eof_checkpoint_recovery_receipt.json"
+  project_system_justification: "This is exact nonsemantic whitespace normalization and cumulative checkpoint recovery; it creates no physics payload or P8-T01 execution."
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  expected_durable_outputs:
+    physics: []
+    project_system:
+      - "one exact P7-T08 handoff terminal-newline deletion"
+      - "sealed 66-path repair-preservation receipt"
+      - "one governed cumulative checkpoint"
+  acceptance_criteria:
+    physics: []
+    project_system:
+      - "the target differs from its sealed hash by exactly one deleted final newline"
+      - "all 65 non-target dirty-manifest paths match at the repair boundary"
+      - "protected P7-T08 adoption, approval, and P7-T07 gap records remain exact"
+      - "all required working-tree gates pass"
+      - "one governed cumulative checkpoint commits"
+      - "P8-T01 remains unexecuted until checkpoint success"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: false
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0896"
+  source_handoff_path: "research_control/handoffs/handoff-0896.yaml"
+  source_handoff_sha256: "67793f272db6c82209c263a2aca371dd63ed6e95cd2bee1899d77be0be07b281"
+  selected_plan_task_id: "P7-T08"
+  guard_outcome: "below_threshold"
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+allowed_read_paths:
+  - "SOUL.md"
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research-goal/SKILL.md"
+  - ".codex/skills/continue-research-goal/references/goal-file-schema.md"
+  - ".codex/skills/continue-research-continue-goal/SKILL.md"
+  - ".codex/skills/improve-project-system/SKILL.md"
+  - ".agents/roles/research_ops/project-system-director.v0.2.0.md"
+  - ".agents/roles/research_ops/process-integrity-auditor.v0.1.0.md"
+  - ".agents/schemas/**"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  - "research_control/approvals/**"
+  - "research_control/design/**"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0896.yaml"
+  - "research_control/handoffs/handoff-0896.md"
+  - "research_control/handoffs/handoff-0897.yaml"
+  - "research_control/handoffs/handoff-0897.md"
+  - "research_control/tasks/RT-20260728-006/**"
+  - "research_control/tasks/RT-20260729-001/**"
+  - "scripts/project_control/**"
+  - "scripts/research_control/**"
+  - "scripts/validation/**"
+  - "tests/**"
+  - "registries/**"
+  - ".local/validation-receipts/**"
+
+allowed_write_paths:
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/PDF_DERIVATIVE_REGISTRY.csv"
+  - "registries/PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "registries/TEX_SOURCE_REGISTRY.csv"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "research_control/approvals/approval-20260729-001.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/design/frontier_theorem_inventory.md"
+  - "research_control/handoffs/handoff-0897.yaml"
+  - "research_control/handoffs/handoff-0897.md"
+  - "research_control/handoffs/handoff-0898.yaml"
+  - "research_control/handoffs/handoff-0898.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260721-009/**"
+  - "research_control/tasks/RT-20260729-001/**"
+  - "research_control/tasks/RT-20260729-002/**"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/pdf/**"
+  - "wiki/tex/**"
+
+allowed_generated_paths:
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/RT-20260721-009/**"
+  - "research_control/tasks/RT-20260729-002/artifacts/p7_t08_eof_checkpoint_recovery_receipt.json"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/pdf/**"
+  - "wiki/tex/**"
+
+forbidden_paths:
+  - ".agents/roles/**"
+  - ".codex/skills/**"
+  - "scripts/research_control/**"
+  - "scripts/project_control/**"
+  - "scripts/validation/**"
+  - "tests/**"
+  - "implementations_plans/**"
+  - "ontology/**"
+  - "legacy_ontology/**"
+  - "manuscripts/**"
+  - "markdown/publication-briefs/**"
+  - "markdown/html-explainer-specs/**"
+
+allowed_source_classes:
+  - "exact_nonsemantic_eof_normalization"
+  - "control_state"
+  - "registry"
+  - "execution_role_contract"
+  - "task_control_record"
+  - "active_routing_supersession"
+  - "generated_memory_derivative"
+  - "prior_authorized_transaction_checkpoint"
+  - "protected_adoption_preservation_evidence"
+
+forbidden_source_classes:
+  - "semantic_predecessor_task_artifact_job_completion_handoff_or_science_rewrite"
+  - "validator_test_schema_skill_or_base_role_semantics_change"
+  - "write_path_broadening"
+  - "P7_T08_reexecution_or_approval_reuse"
+  - "P8_T01_execution_before_checkpoint"
+  - "canonical_ontology_write"
+  - "science_source_or_scientific_ledger_mutation"
+  - "physics_claim_or_interpretation_promotion"
+  - "source_law_adoption"
+  - "M_src_adoption"
+  - "candidate_reconstruction"
+  - "gate_chair_verdict"
+  - "benchmark_promotion"
+  - "proof_authority"
+  - "publication_or_push_authority"
+  - "completed_derivation_claim"
+  - "generated_derivative_authority"
+
+approved_commands:
+  - ".venv/bin/python research_control/tasks/RT-20260729-002/artifacts/validate_p7_t08_eof_checkpoint_recovery.py --write-report --json"
+  - ".venv/bin/python research_control/tasks/RT-20260729-002/artifacts/validate_p7_t08_eof_checkpoint_recovery.py --check --json"
+  - ".venv/bin/python research_control/tasks/RT-20260729-001/artifacts/validate_p7_t08_gate_c_adoption.py"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+  - ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --check"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --check"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --write"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --check"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --check"
+  - ".venv/bin/python scripts/research_control/generate_claim_graph_v1.py"
+  - ".venv/bin/python scripts/research_control/generate_claim_graph_v1.py --check"
+  - ".venv/bin/python scripts/research_control/validate_claim_graph_v1.py --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --json-summary"
+  - ".venv/bin/python scripts/research_control/run_full_research_control_validation.py --json --tail-chars 2500"
+  - ".venv/bin/python -m unittest -v tests.test_research_control"
+  - ".venv/bin/python -m unittest discover -s tests"
+  - "git diff --check"
+  - "git diff --cached --check"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260729-002-001"
+
+required_validators:
+  - "task_local_p7_t08_eof_checkpoint_recovery"
+  - "p7_t08_task_local_validator"
+  - "project_change_classifier"
+  - "project_improvement_resolver"
+  - "project_improvement_signals"
+  - "documentation_impact"
+  - "claim_language_changed"
+  - "current_frontier_render_and_check"
+  - "task_index_render_and_check"
+  - "compact_current_frontier_render_and_check"
+  - "dependency_graph_render_and_check"
+  - "claim_graph_render_and_check"
+  - "memory_bootstrap_and_validate_only"
+  - "research_control_diff"
+  - "full_research_control_validation"
+  - "focused_research_control_tests"
+  - "repository_test_shard"
+  - "git_diff_check"
+  - "checkpoint_transaction"
+
+expected_outputs:
+  - "research_control/handoffs/handoff-0897.md"
+  - "research_control/tasks/RT-20260729-002/artifacts/validate_p7_t08_eof_checkpoint_recovery.py"
+  - "research_control/tasks/RT-20260729-002/artifacts/p7_t08_eof_checkpoint_recovery_receipt.json"
+  - "research_control/tasks/RT-20260729-002/jobs/completions/AJC-AJ-RT-20260729-002-001.yaml"
+  - "research_control/handoffs/handoff-0898.yaml"
+  - "research_control/handoffs/handoff-0898.md"
+
+stop_conditions:
+  - "the target differs by more than one final newline"
+  - "any of the 65 non-target manifest paths drifts at the repair boundary"
+  - "a protected P7-T08 adoption, approval, or derivational-gap hash changes"
+  - "a required write path is outside the AgentJob allowlist"
+  - "validation or the single governed checkpoint fails"
+  - "the repair would edit scientific semantics ontology ledgers tests validators or protected authority"
+  - "more than one AgentJob or checkpoint would be required"
+
+claim_boundary: "Repair only the checkpoint-named final blank line under the sealed manifest, preserve the P7-T08 adoption and open P7-T07 derivational gap, create ordinary recovery evidence and derivatives, and invoke at most one checkpoint; no P7 replay, approval reuse, P8-T01 execution, science, promotion, proof, publication, or Gate Chair authority."
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1069
+    relationship_row_count: 5378
+    semantic_row_count: 1069
+    vault_row_count: 1069
+    local_cache_only_warning_count: 8
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-V21-P7-T08-PHYSICAL-MATTER-ADOPTION-DECISION-V1 --json"
+      query_type: "lookup"
+      query_text: "TEX-V21-P7-T08-PHYSICAL-MATTER-ADOPTION-DECISION-V1"
+      returned_object_ids:
+        - "TEX-V21-P7-T08-PHYSICAL-MATTER-ADOPTION-DECISION-V1"
+  canonical_inspections:
+    - object_id: "TEX-V21-P7-T08-PHYSICAL-MATTER-ADOPTION-DECISION-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260729-001/artifacts/p7_t08_gate_c_decision_v1.tex"
+      source_hash: "85fbf32fb9b02aeae556149cbc5c6b51bd6fedf278a3bc401545c93e29fc4827"
+  authority_note: "Generated Obsidian, wiki, semantic, relationship, SQLite, and .local surfaces are retrieval-only navigation layers and not authority; tracked canonical sources, registries, and research-control state govern this recovery."

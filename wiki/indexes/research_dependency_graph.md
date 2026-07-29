@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-07-28T13:07:27Z`
-- Source fingerprint: `8b5e91e2114984f62de42347d30b947e8c2132667cce7ea522b4e901487ced40`
-- Nodes: `23042`
-- Edges: `74165`
+- Generated from tracked state as of: `2026-07-29T04:53:20Z`
+- Source fingerprint: `43adb2d240d837b4b7ce91ef393648fd777ebcd0bc6a7ee60c68ff16b205071b`
+- Nodes: `23108`
+- Edges: `74250`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 1135 |
+| `completion_yaml` | 1137 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 896 |
+| `handoff_yaml` | 898 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -32,33 +32,33 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 | Node class | State label | Count |
 | --- | --- | ---: |
-| `accepted_scoped_object` | `accepted_scoped` | 7 |
-| `agent_job` | `support_only` | 1135 |
+| `accepted_scoped_object` | `accepted_scoped` | 9 |
+| `agent_job` | `support_only` | 1137 |
 | `artifact` | `canonical_source` | 87 |
-| `artifact` | `support_only` | 11716 |
-| `blocked_burden` | `blocked` | 4661 |
-| `claim_boundary` | `support_only` | 1092 |
+| `artifact` | `support_only` | 11746 |
+| `blocked_burden` | `blocked` | 4676 |
+| `claim_boundary` | `support_only` | 1094 |
 | `draft_control_candidate` | `draft_control` | 768 |
 | `draft_control_candidate` | `proposal_only` | 142 |
-| `draft_control_candidate` | `science_draft` | 84 |
-| `frozen_negative` | `frozen_negative` | 142 |
-| `gate_chair_verdict` | `human_gated` | 32 |
-| `handoff` | `support_only` | 896 |
-| `human_gated_object` | `human_gated` | 550 |
-| `ledger_row` | `accepted_scoped` | 4 |
+| `draft_control_candidate` | `science_draft` | 83 |
+| `frozen_negative` | `frozen_negative` | 143 |
+| `gate_chair_verdict` | `human_gated` | 33 |
+| `handoff` | `support_only` | 898 |
+| `human_gated_object` | `human_gated` | 559 |
+| `ledger_row` | `accepted_scoped` | 6 |
 | `ledger_row` | `blocked` | 4 |
 | `ledger_row` | `frozen_negative` | 1 |
 | `ledger_row` | `human_gated` | 1 |
-| `ledger_row` | `science_draft` | 5 |
+| `ledger_row` | `science_draft` | 3 |
 | `obstruction` | `blocked` | 94 |
 | `obstruction` | `rejected` | 4 |
 | `source_extension_evidence_precondition` | `source_extension_evidence` | 40 |
 | `source_ontology_object` | `canonical_source` | 27 |
 | `source_ontology_object` | `rejected` | 50 |
-| `source_ontology_object` | `support_only` | 365 |
+| `source_ontology_object` | `support_only` | 366 |
 | `task` | `human_gated` | 29 |
 | `task` | `science_draft` | 32 |
-| `task` | `support_only` | 1074 |
+| `task` | `support_only` | 1076 |
 
 ## Frontier Table
 
@@ -71,7 +71,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | BridgeCert | `object:bridgecert` | `source_extension_evidence_precondition` | `source_extension_evidence` | Required frontier object exposed in completion text: BridgeCert. |
 | SEI-MC criteria | `object:sei_mc_criteria` | `draft_control_candidate` | `draft_control` | Required frontier object exposed in completion text: SEI-MC criteria. |
 | SEI_src^{cand} | `object:sei_src_cand` | `draft_control_candidate` | `draft_control` | Required frontier object exposed in completion text: SEI_src^{cand}. |
-| matter-coupling burden | `object:matter_coupling_burden` | `ledger_row` | `science_draft` | P7-T07 records a decisive package-scoped typed-interface obstruction with textual source-purity PASS. The result is audit evidence only: no protected Gate C ver |
+| matter-coupling burden | `object:matter_coupling_burden` | `ledger_row` | `accepted_scoped` | P7-T08 changes the exact package's project-level physical and interpretive status by explicit protected human constitutive postulate. The layer-status cells ret |
 | Einstein-equations burden | `object:einstein_equations_burden` | `blocked_burden` | `blocked` | no Einstein-equation derivation supplied |
 | benchmark-promotion burden | `object:benchmark_promotion_burden` | `human_gated_object` | `human_gated` | benchmark promotion remains blocked |
 | finite toy metric response frozen negative | `ledger:finite_toy_metric_response` | `ledger_row` | `frozen_negative` | explicit-tag-only finite toy route failed tag-removal stress and is frozen locally |
@@ -163,9 +163,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 ## Route Continuity
 
-- Active task: `RT-20260728-006`
-- Latest handoff: `handoff-0896`
-- Handoff path: `research_control/handoffs/handoff-0896.yaml`
-- Next action: Run one governed checkpoint for AJ-RT-20260728-006-001. After it commits, P7-T08 remains a protected human Gate C review and may execute only if a nonblank exact human authorization record is present. If no such authorization exists, record deferred_human_gate and select only a dependency-independent included work item without overreading or repairing the unchanged P7 package.
+- Active task: `RT-20260729-002`
+- Latest handoff: `handoff-0898`
+- Handoff path: `research_control/handoffs/handoff-0898.yaml`
+- Next action: Run the one governed cumulative checkpoint for AJ-RT-20260729-002-001. Only after it commits may one fresh bounded P8-T01 Candidate Constructor packet use the eight exact adopted P7 postulates as scoped premises while constructing or precisely obstructing the first gravitational-closure route.
 
 This graph is navigational support only; inspect the cited sources before using any claim.

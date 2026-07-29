@@ -1,0 +1,78 @@
+validation_status: "PASS"
+task_id: "RT-20260729-002"
+task_type: "project_system_p7_t08_single_eof_blank_line_checkpoint_recovery"
+title: "Repair one P7-T08 handoff EOF blank and recover the cumulative checkpoint"
+task_taxonomy:
+  schema_id: "v21_task_taxonomy_v1"
+  work_kind: "benchmark_or_recovery"
+  milestone: "matter_coupling"
+  candidate_family: "p7_t08_single_eof_checkpoint_recovery"
+  result_kind: "implemented_and_validated_or_precisely_blocked"
+  authority: "project_control"
+  scope: "project_system"
+status: "completed"
+created_at: "2026-07-29T04:53:20Z"
+updated_at: "2026-07-29T04:53:20Z"
+closed_at: "2026-07-29T04:53:20Z"
+parent_task_id: "RT-20260729-001"
+parent_handoff_id: "handoff-0897"
+supersedes_active_routing_task_id: "RT-20260729-001"
+current_decision_id: "DDR-20260729-002"
+current_job_id: "AJ-RT-20260729-002-001"
+role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260729-002"
+requires_human_gate: false
+human_authorization_note: "Generation 155 of the user-authorized recursive relay immutably routes one improve-project-system frame to remove exactly one final blank line and retry the cumulative P7-T08 checkpoint. It neither reexecutes P7-T08 nor reuses its consumed approval, and it does not execute P8-T01."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P7"
+  plan_task_id: "P7-T08"
+  recovery_for_plan_task_id: "P7-T08"
+  next_plan_task_id: "P8-T01"
+  next_plan_task_execution_authorized: false
+objective: "Under the sealed generation-155 dirty-state manifest, remove exactly one final newline from handoff-0897.md, prove all 65 non-target manifest paths and protected P7 adoption or approval bytes remained exact at the repair boundary, synchronize ordinary control derivatives, and invoke one fresh governed cumulative checkpoint before P8-T01."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system EOF normalization and cumulative checkpoint recovery only; the protected P7 adoption result is preserved and no scientific derivation milestone advances."
+route_label: "repair_p7_t08_single_eof_blank_line_and_checkpoint_v1"
+project_system_change_only: true
+dual_budget_category: "system_bearing"
+primary_budget: "project_system"
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+claim_boundary_id: "CB-V21-P7-T08-SINGLE-EOF-CHECKPOINT-RECOVERY-001"
+claim_boundary:
+  allowed_scope: "Delete exactly one terminal newline from handoff-0897.md, create bounded recovery evidence and ordinary control records, preserve the protected P7 adoption and derivational-gap distinction, and invoke one cumulative checkpoint."
+  immutable_predecessor_task: "RT-20260729-001"
+  immutable_predecessor_job: "AJ-RT-20260729-001-001"
+  immutable_predecessor_handoff: "handoff-0897"
+  immutable_route_sha256: "247bb15632630937ef3fa8ba20e1de6e60519f763f6be2089caf2d30e7160a54"
+  dirty_state_manifest_sha256: "9248e8128ed25f2e93cb471f86f85c88493effcf16c4829260ded2eb02e122ef"
+  failed_checkpoint_receipt_sha256: "1a29f74f3bf66c5db2b24a62bfac058b770c64df0487d737089e92bfafa6e246"
+  failed_gate_evidence_sha256: "0f0aaaf4e167858676c2aae33878f488e16bb360a013983cf12e0174f8f37be4"
+  target_path_count: 1
+  non_target_path_count: 65
+  p7_t08_reexecuted: false
+  approval_reused: false
+  p8_t01_executed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+documentation_impact_id: "DI-RT-20260729-002-001"
+completion_id: "AJC-AJ-RT-20260729-002-001"
+output_artifacts:
+  - "research_control/handoffs/handoff-0897.md"
+  - "research_control/tasks/RT-20260729-002/artifacts/validate_p7_t08_eof_checkpoint_recovery.py"
+  - "research_control/tasks/RT-20260729-002/artifacts/p7_t08_eof_checkpoint_recovery_receipt.json"
+  - "research_control/tasks/RT-20260729-002/jobs/completions/AJC-AJ-RT-20260729-002-001.yaml"
+  - "research_control/handoffs/handoff-0898.yaml"
+  - "research_control/handoffs/handoff-0898.md"
+closure_status: "p7_t08_single_eof_checkpoint_recovery_pass_ready_for_checkpoint"
+summary: "Generation 155 normalizes exactly one terminal blank line while preserving the protected P7-T08 adoption, the open P7-T07 derivational gap, and every target-side block."
+next_recommended_action: "Invoke the one governed cumulative checkpoint. P8-T01 remains unexecuted until that checkpoint commits."
+project_improvement_signals: []
+notes: "This packet creates no ontology, source law, scientific evidence, new physical interpretation, Distance-to-GR movement, promotion, proof, publication, push, or completed-derivation authority."

@@ -1,7 +1,7 @@
 schema_id: "compact_current_frontier_v16"
 generated_from:
   - "research_control/program_state.yaml"
-  - "research_control/handoffs/handoff-0896.yaml"
+  - "research_control/handoffs/handoff-0898.yaml"
   - "registries/DISTANCE_TO_GR_LEDGER.csv"
   - "registries/METRIC_USE_LEDGER.csv"
   - "research_control/current_frontier.md"
@@ -9,16 +9,16 @@ generated_from:
   - "research_control/design/accepted_status_calibration_v2.yaml"
   - "research_control/design/active_state_bifurcation_policy_v1.md"
 active_state:
-  active_task_id: "RT-20260728-006"
-  latest_handoff_id: "handoff-0896"
-  current_status: "p7_t07_gate_c_readiness_blocked_textual_purity_pass_p7_t08_human_gate_pending_checkpoint"
+  active_task_id: "RT-20260729-002"
+  latest_handoff_id: "handoff-0898"
+  current_status: "p7_t08_single_eof_checkpoint_recovery_pass_ready_for_checkpoint"
   v15_completed: false
   v16_completed: false
   v16_plan_registered: true
 active_state_bifurcation:
-  latest_research_task_id: "RT-20260728-006"
-  latest_research_handoff_id: "handoff-0896"
-  latest_research_next_action: "Run one governed checkpoint for AJ-RT-20260728-006-001. After it commits, P7-T08 remains a protected human Gate C review and may execute only if a nonblank exact human authorization record is present. If no such authorization exists, record deferred_human_gate and select only a dependency-independent included work item without overreading or repairing the unchanged P7 package."
+  latest_research_task_id: "RT-20260729-002"
+  latest_research_handoff_id: "handoff-0898"
+  latest_research_next_action: "Run the one governed cumulative checkpoint for AJ-RT-20260729-002-001. Only after it commits may one fresh bounded P8-T01 Candidate Constructor packet use the eight exact adopted P7 postulates as scoped premises while constructing or precisely obstructing the first gravitational-closure route."
   latest_project_system_task_id: "none"
   latest_project_system_status: "none"
   latest_project_system_sidecar_task_id: "none"
@@ -26,11 +26,11 @@ active_state_bifurcation:
   sidecar_supersedes_research_handoff: false
   next_research_route_source: "latest_research_handoff"
 next_route:
-  route_id: "v21_p7_t08_human_gate_c_review_after_checkpoint"
-  role_family: "gate-chair"
-  target_derivation_milestone: "matter_coupling"
-  milestone_burden: "Make the protected matter-coupling decision required before gravitational closure."
-  requires_human_gate: true
+  route_id: "v21_p8_t01_gravitational_closure_after_checkpoint"
+  role_family: "candidate-constructor@0.2.0"
+  target_derivation_milestone: "einstein_equations"
+  milestone_burden: "Construct or precisely obstruct the first gravitational-closure packet using the adopted P7 matter inputs without importing target results."
+  requires_human_gate: false
 claim_boundary:
   physics_claim_authority: false
   proof_authority: false
@@ -220,7 +220,7 @@ scoped_positive_objects:
 scoped_evidence_preconditions:
   - object_id: "matter_coupling"
     reader_facing_status: "accepted only as scoped source-extension evidence/precondition"
-    authority_path: "research_control/tasks/RT-20260728-006/artifacts/matter_package_smuggling_audit_v1.tex"
+    authority_path: "research_control/tasks/RT-20260729-001/artifacts/p7_t08_gate_c_decision_v1.tex"
     supports_target: "matter-semantics and matter-coupling continuation only"
     does_not_establish:
       - "no_source_law_adoption"
@@ -243,7 +243,7 @@ blocked_physical_targets:
   - target_id: "matter_coupling"
     reader_facing_status: "accepted only as scoped source-extension evidence/precondition"
     control_status: "accepted_as_scoped_evidence_precondition"
-    blocking_burden: "The exact unchanged P7-T01 through P7-T06 package passes bounded textual no-target-import hygiene and preserves its candidate-relative finite mathematics but P7T07-THM-TYPED-INTERFACE-CUTSET-001 finds no total positively source-derived semantically licensed composition through selected dynamics operational systems common physical geometry universal coupling physical action stress energy and physical conservation; Gate C is zero of seven ready dimensions and the plan matrix is zero of ten; P7T07-PROP-COMPONENTWISE-BALANCE-COMPATIBILITY-001 further shows that global residual zero sum is insufficient on disconnected support; current ontology still does not derive the missing interfaces and P6 Gate B supplies no effective-geometry input"
+    blocking_burden: "The exact protected verdict is ADOPTED_AS_CANONICAL_PHYSICAL_MATTER_BY_EXPLICIT_HUMAN_POSTULATE for the unchanged P7-T01 through P7-T06 package within its declared finite domains and the current continuum-first source architecture. This discharges the protected constitutive decision burden but does not supply a first-principles derivation: OBST-P7T07-CROSS-LAYER-COMPOSITION-GAP-001 remains open_derivational_gap_after_constitutive_adoption, current ontology still does not derive the adopted meanings, and P6 Gate B supplies no effective-geometry input."
     overread_guard:
       - "no_source_law_adoption"
       - "no_canonical_ontology_edit"
@@ -279,8 +279,8 @@ blocked_physical_targets:
       - "no_completed_derivation"
 distance_to_gr:
   delta:
-    effect: "obstruction_recorded"
-    changed: true
+    effect: "none_project_system_recovery"
+    changed: false
     milestone: "matter_coupling"
     burden_id: "matter_coupling"
   high_risk_rows:
@@ -376,7 +376,7 @@ distance_to_gr:
         status_card_version: "v2"
     - burden_id: "matter_coupling"
       reader_facing_status: "accepted only as scoped source-extension evidence/precondition"
-      legacy_status: "draft object exists"
+      legacy_status: "accepted"
       control_status: "accepted_as_scoped_evidence_precondition"
       mathematical_status: "parameterized_finite_local_witness_precondition"
       physical_status: "not_matter_coupling_not_stress_energy_not_matter_action_not_detector_semantics"
@@ -398,7 +398,7 @@ distance_to_gr:
         - "no_completed_derivation"
         - "no_future_source_extension_impossibility"
         - "no_global_theory_rejection"
-      last_evidence_path: "research_control/tasks/RT-20260728-006/artifacts/matter_package_smuggling_audit_v1.tex"
+      last_evidence_path: "research_control/tasks/RT-20260729-001/artifacts/p7_t08_gate_c_decision_v1.tex"
       high_risk_status_card:
         object_id: "matter_coupling"
         positive_status: "matter_coupling has accepted scoped evidence/precondition only for continuation."
@@ -534,18 +534,6 @@ validation:
     - layer: "post_checkpoint"
       status: "PENDING"
       evidence:
-        - "One governed checkpoint remains; P7-T08 is unexecuted and human-gated."
-    - layer: "renderer"
-      status: "PENDING"
-      evidence:
-        - "The governed checkpoint owns current-frontier task-index compact-frontier dependency-graph claim-graph and v21 burden-status synchronization."
-    - layer: "memory_bootstrap"
-      status: "PENDING"
-      evidence:
-        - "The governed checkpoint owns write-only memory synchronization and blocking memory-core validation."
-    - layer: "claim_language_linter"
-      status: "PENDING"
-      evidence:
-        - "The governed checkpoint owns final changed-claim validation on the staged transaction."
+        - "One governed cumulative checkpoint remains; P8-T01 is not executed before it."
 authority_warning:
   snapshot_only_not_authority: true

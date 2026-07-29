@@ -1,0 +1,110 @@
+schema_id: "v21_scientific_status_schema_v1"
+record_id: "STATUS-P7-T08-PHYSICAL-MATTER-PACKAGE-V1"
+subject_id: "P7SourceMatterPackage_v1"
+subject_scope: "source_extension"
+candidate_ids:
+  - "V21-P7-T08-PHYSICAL-MATTER-ADOPTION-V1"
+theorem_ids:
+  - "P7T07-THM-TYPED-INTERFACE-CUTSET-001"
+  - "P7T07-PROP-COMPONENTWISE-BALANCE-COMPATIBILITY-001"
+dimensions:
+  existence: "constructed"
+  uniqueness: "multiple"
+  naturality: "conditional"
+  covariance: "coordinate_scoped"
+  robustness: "conditional"
+  dynamics: "specified"
+  operational_meaning: "specified"
+  empirical_status: "untested"
+  mathematical_status: "computed"
+  authority: "adopted"
+evidence_by_dimension:
+  existence:
+    - "TEX-V21-P7-T01-SOURCE-MATTER-ONTOLOGY-SECTOR-TAXONOMY-V1"
+    - "TEX-V21-P7-T02-SOURCE-MATTER-FINITE-TRANSITION-KERNEL-V1"
+    - "TEX-V21-P7-T03-SOURCE-OPERATIONAL-DEVICE-SUITE-V1"
+    - "TEX-V21-P7-T04-COMMON-SOURCE-PROPAGATION-PROFILE-V1"
+    - "TEX-V21-P7-T05-UNIVERSAL-SOURCE-COUPLING-MAP-V1"
+    - "TEX-V21-P7-T06-SOURCE-KERNEL-VARIATIONAL-OBJECT-V1"
+  uniqueness:
+    - "research_control/tasks/RT-20260728-006/artifacts/matter_package_smuggling_audit_v1.tex"
+  naturality:
+    - "TEX-V21-P7-T02-SOURCE-MATTER-FINITE-TRANSITION-KERNEL-V1"
+    - "TEX-V21-P7-T05-UNIVERSAL-SOURCE-COUPLING-MAP-V1"
+  covariance: []
+  robustness:
+    - "research_control/tasks/RT-20260728-006/artifacts/refuter_stress_matter_package_v1.yaml"
+  dynamics:
+    - "TEX-V21-P7-T02-SOURCE-MATTER-FINITE-TRANSITION-KERNEL-V1"
+    - "research_control/approvals/approval-20260729-001.yaml"
+  operational_meaning:
+    - "TEX-V21-P7-T03-SOURCE-OPERATIONAL-DEVICE-SUITE-V1"
+    - "research_control/approvals/approval-20260729-001.yaml"
+  empirical_status: []
+  mathematical_status:
+    - "TEX-V21-P7-T01-SOURCE-MATTER-ONTOLOGY-SECTOR-TAXONOMY-V1"
+    - "TEX-V21-P7-T02-SOURCE-MATTER-FINITE-TRANSITION-KERNEL-V1"
+    - "TEX-V21-P7-T03-SOURCE-OPERATIONAL-DEVICE-SUITE-V1"
+    - "TEX-V21-P7-T04-COMMON-SOURCE-PROPAGATION-PROFILE-V1"
+    - "TEX-V21-P7-T05-UNIVERSAL-SOURCE-COUPLING-MAP-V1"
+    - "TEX-V21-P7-T06-SOURCE-KERNEL-VARIATIONAL-OBJECT-V1"
+    - "P7T07-THM-TYPED-INTERFACE-CUTSET-001"
+    - "P7T07-PROP-COMPONENTWISE-BALANCE-COMPATIBILITY-001"
+  authority:
+    - "research_control/approvals/approval-20260729-001.yaml"
+    - "research_control/tasks/RT-20260729-001/artifacts/human_authorization_p7_t08_physical_matter_adoption_v1.yaml"
+refutation:
+  scope: ""
+  evidence_refs: []
+  global_no_go_established: false
+authority:
+  authority_kind: "protected_human_gate"
+  authority_refs:
+    - "research_control/approvals/approval-20260729-001.yaml"
+    - "research_control/tasks/RT-20260729-001/artifacts/human_authorization_p7_t08_physical_matter_adoption_v1.yaml"
+  authority_scope: "Adopted canonical physical matter package only within the exact unchanged P7 mathematical domains and current continuum-first source architecture"
+  gate_id: "P7-T08"
+legacy_compatibility:
+  raw_label: null
+  source_record_ref: ""
+  mapped_fields: {}
+  mapping_authority: "compatibility_only"
+  historical_record_rewritten: false
+authorization_layers:
+  scoped_evidence_status_change_authorized: true
+  source_object_status_change_authorized: false
+  source_extension_object_status_change_authorized: true
+  source_law_adoption_authorized: false
+  matter_semantics_adoption_authorized: true
+  detector_semantics_adoption_authorized: true
+  coupling_law_adoption_authorized: true
+  matter_coupling_derivation_authorized: false
+  matter_coupling_adoption_authorized: true
+  stress_energy_semantics_authorized: true
+  matter_action_authorized: true
+  einstein_equation_derivation_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  downstream_physics_promotion_authorized: true
+  authority_scope: "P7 physical matter package only; downstream use as P8 matter input after checkpoint"
+  authority_source_path: "research_control/approvals/approval-20260729-001.yaml"
+  blocked_downstream_claims:
+    - "matter interpretation mathematically forced or uniquely derived"
+    - "effective metric or source-to-target geometry bridge"
+    - "target T_mu_nu"
+    - "equivalence principle"
+    - "Einstein equations or GR derivation"
+    - "benchmark promotion empirical support publication push or completed derivation"
+forbidden_conclusions:
+  - "constructed existence and computed mathematics establish empirical physical existence"
+  - "specified dynamics or operational meaning means derived or validated"
+  - "adopted authority means unique natural covariant robust or empirically supported"
+  - "the protected decision closes OBST-P7T07-CROSS-LAYER-COMPOSITION-GAP-001"
+  - "g_eff target T_mu_nu equivalence principle Einstein equations GR or exact-GR recovery is established"
+  - "benchmark promotion proof publication push global no-go or completed derivation"
+obstruction_status:
+  obstruction_id: "OBST-P7T07-CROSS-LAYER-COMPOSITION-GAP-001"
+  status: "open_derivational_gap_after_constitutive_adoption"
+  adoption_blocked: false
+  first_principles_derivation_blocked: true
+validation_status: "PASS"

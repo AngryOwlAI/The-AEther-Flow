@@ -1,0 +1,106 @@
+schema_id: "single_eof_checkpoint_blocker_v1"
+failure_id: "OCF-P7-T08-CHECKPOINT-SINGLE-EOF-HANDOFF-0897-001"
+task_id: "RT-20260729-001"
+job_id: "AJ-RT-20260729-001-001"
+plan_task_id: "P7-T08"
+failure_class: "failing_ci"
+status: "active_blocking"
+blocks_scientific_execution: true
+observed_at: "2026-07-29T04:08:26Z"
+failure_summary: "The protected P7-T08 adoption payload and every required working-tree gate pass, but the one normal planner-compare checkpoint stopped before commit because final staged Git diff checking found exactly one extra blank line at EOF in handoff-0897.md."
+remediation_route: "Run one separately governed project-system recovery that removes exactly one terminal newline from handoff-0897.md, proves every non-target dirty-manifest path and every protected P7 scientific or approval byte unchanged at the repair boundary, refreshes normal derivatives, and invokes one fresh cumulative checkpoint before P8-T01."
+
+checkpoint_evidence:
+  checkpoint_command: ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260729-001-001"
+  checkpoint_status: "FAIL"
+  validation_mode: "planner_compare"
+  failed_gate: "git_diff_check"
+  failed_stage: "staged_acceptance_git_diff_check"
+  checkpoint_error: "planner staged acceptance or legacy comparison failed"
+  failed_command: "git diff --cached --check"
+  failed_command_returncode: 2
+  checkpoint_invocation_count: 1
+  legacy_validation_flag_used: false
+  staged_acceptance_status: "FAIL"
+  entry_index_restoration_status: "PASS"
+  entry_index_restored: true
+  staged_after_failure: false
+  committed: false
+  head_before_and_after: "79d9564df65e6f09b2742dc0b47f3d039c2ec658"
+  working_tree_preserved: true
+  checkpoint_receipt_path: ".local/validation-receipts/528658a2d6edc8398b2ed0909f94147fc3d7c2041a6c0943243cfa662bb6ba5b/RUN-CHECKPOINT-26e4b355976485c9/receipt.json"
+  checkpoint_receipt_sha256: "1a29f74f3bf66c5db2b24a62bfac058b770c64df0487d737089e92bfafa6e246"
+
+root_cause:
+  finding_class: "new_blank_line_at_eof"
+  finding_count: 1
+  working_tree_git_diff_check_limitation: "The handoff Markdown is untracked in the cumulative transaction, so working-tree git diff --check did not inspect it; final staged acceptance did."
+  affected_paths:
+    - path: "research_control/handoffs/handoff-0897.md"
+      line: 51
+      finding: "new blank line at EOF"
+      sha256: "7039ad1b46765447b2cf9375ea7dba344b057242208816742296a2f5e82b569c"
+      trailing_bytes_hex: "6e2e0a0a"
+
+preservation_constraint:
+  approval_path: "research_control/approvals/approval-20260729-001.yaml"
+  approval_sha256: "936d831daa555eb60e836e3f1d84beff72f7864dd83a36c082ca6783163b2e14"
+  protected_decision_path: "research_control/tasks/RT-20260729-001/artifacts/p7_t08_gate_c_decision_v1.tex"
+  protected_decision_sha256: "85fbf32fb9b02aeae556149cbc5c6b51bd6fedf278a3bc401545c93e29fc4827"
+  protected_fusion_path: "research_control/tasks/RT-20260729-001/artifacts/parent_fusion_notes_p7_t08_gate_c_adoption.md"
+  protected_fusion_sha256: "da3f65a242b878c58312caf1dff7cd88dc9a5e04754c24a68416cc61fd9371aa"
+  pre_checkpoint_completion_path: "research_control/tasks/RT-20260729-001/jobs/completions/AJC-AJ-RT-20260729-001-001.yaml"
+  pre_checkpoint_completion_sha256: "f4352d9581ff6528b46c24cc83bdfc654d102c70ca146a03396724040ad26d2b"
+  pre_checkpoint_handoff_yaml_path: "research_control/handoffs/handoff-0897.yaml"
+  pre_checkpoint_handoff_yaml_sha256: "3cc4a9266b7487285f46a30aedc01c0d84ad2a094c0d35e431e8458b26bb3301"
+  control_record_update_note: "The completion and handoff YAML are superseded only to record this checkpoint outcome and route the distinct recovery. Their scientific adoption payload remains unchanged."
+  protected_bytes_changed: false
+  reason_target_must_not_be_repaired_in_this_frame: "Generation 154 consumed one continue-research invocation and one checkpoint invocation. Repairing the EOF or retrying the checkpoint in this frame would replay consumed work rather than route a materially distinct governed recovery."
+
+preserved_scientific_result:
+  adoption_status: "adopted"
+  decision_code: "ADOPTED_AS_CANONICAL_PHYSICAL_MATTER_BY_EXPLICIT_HUMAN_POSTULATE"
+  package_mathematics_changed: false
+  p7_t07_derivational_gap_preserved: true
+  matter_coupling_derived: false
+  p8_t01_executed: false
+
+required_recovery:
+  strategy_id: "repair_p7_t08_single_eof_blank_line_and_checkpoint_v1"
+  route_label: "project-system-recovery"
+  worker_skill: "improve-project-system"
+  role_family: "process-integrity-auditor@0.1.0"
+  work_item_id: "P7-T08"
+  next_plan_item_after_recovery: "P8-T01"
+  exact_behavior_change: "Under the exact sealed dirty-state manifest, remove exactly one terminal newline from research_control/handoffs/handoff-0897.md and change no other pre-existing file at the repair boundary."
+  recovery_target_after_control_record_update:
+    path: "research_control/handoffs/handoff-0897.md"
+    sha256: "d9cf6ec5be8d4a91e054cb9eb1f987f6cbbc5215697d17583b19d5f52b1eda45"
+    trailing_bytes_hex: "6e2e0a0a"
+    note: "The checkpoint-observed hash above records the failing staged bytes. This hash records the same still-defective target after generation 154 added only its checkpoint outcome and recovery notice."
+  required_controls:
+    - "Match the exact sealed dirty-state manifest before any recovery write."
+    - "Prove the target differs from its sealed hash by exactly one deleted terminal newline."
+    - "Prove every non-target manifest path is byte-identical at the repair boundary."
+    - "Preserve the approval, all protected P7 science, the P7-T07 audit, and the adoption versus derivation boundary."
+    - "Refresh only ordinary control and generated derivatives required by the recovery."
+    - "Invoke at most one fresh normal governed cumulative checkpoint without legacy validation."
+    - "Keep P8-T01 unexecuted until that checkpoint commits."
+  forbidden_changes:
+    - "No EOF repair or checkpoint retry in generation 154."
+    - "No second continue-research invocation for generation 154."
+    - "No approval reuse, Gate C reexecution, or P7 package mathematics change."
+    - "No broad whitespace formatting, wildcard exemption, or unrelated cleanup."
+    - "No P8-T01 execution before a committed recovery checkpoint."
+    - "No g_eff, target T_mu_nu, equivalence-principle, Einstein-equation, GR, benchmark, proof, publication, push, global-no-go, or completed-derivation claim."
+
+authority_limits:
+  scientific_adoption_result_preserved: true
+  scientific_claims_changed_by_recovery: false
+  distance_to_gr_delta_changed_by_recovery: false
+  approval_reuse_authorized: false
+  ontology_or_source_law_adopted_by_recovery: false
+  benchmark_promotion_authorized: false
+  external_review_or_publication_authorized: false
+  physics_promotion_authorized_by_recovery: false
+  proof_authority: false

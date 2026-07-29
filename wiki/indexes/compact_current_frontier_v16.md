@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260728-006`
-- Latest handoff: `handoff-0896`
-- Current status: `p7_t07_gate_c_readiness_blocked_textual_purity_pass_p7_t08_human_gate_pending_checkpoint`
+- Active task: `RT-20260729-002`
+- Latest handoff: `handoff-0898`
+- Current status: `p7_t08_single_eof_checkpoint_recovery_pass_ready_for_checkpoint`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260728-006`
-- Latest research handoff: `handoff-0896`
-- Latest research next action: Run one governed checkpoint for AJ-RT-20260728-006-001. After it commits, P7-T08 remains a protected human Gate C review and may execute only if a nonblank exact human authorization record is present. If no such authorization exists, record deferred_human_gate and select only a dependency-independent included work item without overreading or repairing the unchanged P7 package.
+- Latest research task: `RT-20260729-002`
+- Latest research handoff: `handoff-0898`
+- Latest research next action: Run the one governed cumulative checkpoint for AJ-RT-20260729-002-001. Only after it commits may one fresh bounded P8-T01 Candidate Constructor packet use the eight exact adopted P7 postulates as scoped premises while constructing or precisely obstructing the first gravitational-closure route.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,11 +26,11 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p7_t08_human_gate_c_review_after_checkpoint`
-- Role family: `gate-chair`
-- Target milestone: `matter_coupling`
-- Milestone burden: Make the protected matter-coupling decision required before gravitational closure.
-- Requires human gate: `true`
+- Route ID: `v21_p8_t01_gravitational_closure_after_checkpoint`
+- Role family: `candidate-constructor@0.2.0`
+- Target milestone: `einstein_equations`
+- Milestone burden: Construct or precisely obstruct the first gravitational-closure packet using the adopted P7 matter inputs without importing target results.
+- Requires human gate: `false`
 
 ## High-Risk Rows
 
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `76e58faf6fb101b93b3bff3f58918cc7e508266b0b34fc82fe4351230fa5de55`
-- JSON SHA-256: `0a66d686e6e6e94d0bcc0c52babd6540bafe18b5401d23dea154e3fedf72a138`
+- YAML SHA-256: `853e3f6eb311f64435bcd9e36fc231c54fe3b8b441a6a4cbe0d82b92641b317f`
+- JSON SHA-256: `733950813f9619fe100460f81510de55b8b46a6b70dcd81d7d874decda4af8fa`
 
 ## Authority Warning
 

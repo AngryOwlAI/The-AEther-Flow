@@ -44,6 +44,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V15-NARROW-MS-CERT-EQ-GATE-CHAIR-REVIEW` `research_control/tasks/RT-20260702-062/artifacts/narrow_ms_cert_eq_gate_chair_review_v1.tex`
 - `TEX-V21-P4-T05-ONTOLOGY-REGIME-GATE-CHAIR-DECISION-V1` `research_control/tasks/RT-20260724-004/artifacts/ontology_regime_gate_chair_decision_v1.tex`
 - `TEX-V21-P4-T06-SELECTED-ONTOLOGY-REGIME-INTEGRATION-V1` `research_control/tasks/RT-20260724-010/artifacts/selected_ontology_regime_integration_v1.tex`
+- `TEX-V21-P7-T08-PHYSICAL-MATTER-ADOPTION-DECISION-V1` `research_control/tasks/RT-20260729-001/artifacts/p7_t08_gate_c_decision_v1.tex`
 
 ## not_applicable
 

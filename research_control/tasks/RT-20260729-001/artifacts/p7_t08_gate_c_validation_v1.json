@@ -1,0 +1,563 @@
+{
+  "schema_id": "p7_t08_gate_c_validation_v1",
+  "task_id": "RT-20260729-001",
+  "job_id": "AJ-RT-20260729-001-001",
+  "status": "PASS",
+  "check_count": 110,
+  "failure_count": 0,
+  "source_hash_count": 6,
+  "postulate_count": 8,
+  "dimension_count": 9,
+  "checks": [
+    {
+      "check_id": "authorization_id",
+      "status": "PASS",
+      "detail": "approval binds the exact authorization ID"
+    },
+    {
+      "check_id": "authorization_decision_code",
+      "status": "PASS",
+      "detail": "approval carries the affirmative protected verdict"
+    },
+    {
+      "check_id": "approval_consumed_once",
+      "status": "PASS",
+      "detail": "one approval is consumed by the exact job"
+    },
+    {
+      "check_id": "authorization_record",
+      "status": "PASS",
+      "detail": "task-local authorization is exact and consumed"
+    },
+    {
+      "check_id": "authorization_non_authorizations",
+      "status": "PASS",
+      "detail": "authorization records explicit non-authorizations"
+    },
+    {
+      "check_id": "attachment_regular",
+      "status": "PASS",
+      "detail": "source attachment is a regular file"
+    },
+    {
+      "check_id": "attachment_hash",
+      "status": "PASS",
+      "detail": "source attachment hash matches"
+    },
+    {
+      "check_id": "source_regular:TEX-V21-P7-T01-SOURCE-MATTER-ONTOLOGY-SECTOR-TAXONOMY-V1",
+      "status": "PASS",
+      "detail": "research_control/tasks/RT-20260727-007/artifacts/source_matter_ontology_and_sector_taxonomy_v1.tex is a regular file"
+    },
+    {
+      "check_id": "source_hash:TEX-V21-P7-T01-SOURCE-MATTER-ONTOLOGY-SECTOR-TAXONOMY-V1",
+      "status": "PASS",
+      "detail": "research_control/tasks/RT-20260727-007/artifacts/source_matter_ontology_and_sector_taxonomy_v1.tex retains 8d160217bf223078a11bc63fde6593c11c39d5b50d9c48fbad7b12084f8a752d"
+    },
+    {
+      "check_id": "source_regular:TEX-V21-P7-T02-SOURCE-MATTER-FINITE-TRANSITION-KERNEL-V1",
+      "status": "PASS",
+      "detail": "research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_candidate_v1.tex is a regular file"
+    },
+    {
+      "check_id": "source_hash:TEX-V21-P7-T02-SOURCE-MATTER-FINITE-TRANSITION-KERNEL-V1",
+      "status": "PASS",
+      "detail": "research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_candidate_v1.tex retains 65ac095f5cdf4c2e319365c8b0e024d031b19d9fc2b8102e59997afa1e8f9129"
+    },
+    {
+      "check_id": "source_regular:TEX-V21-P7-T03-SOURCE-OPERATIONAL-DEVICE-SUITE-V1",
+      "status": "PASS",
+      "detail": "research_control/tasks/RT-20260728-002/artifacts/source_operational_device_suite_candidate_v1.tex is a regular file"
+    },
+    {
+      "check_id": "source_hash:TEX-V21-P7-T03-SOURCE-OPERATIONAL-DEVICE-SUITE-V1",
+      "status": "PASS",
+      "detail": "research_control/tasks/RT-20260728-002/artifacts/source_operational_device_suite_candidate_v1.tex retains d6c818ee29f1a7e659e2f454aec21431d680b3d2d4df048fcf36f4aba87ba22a"
+    },
+    {
+      "check_id": "source_regular:TEX-V21-P7-T04-COMMON-SOURCE-PROPAGATION-PROFILE-V1",
+      "status": "PASS",
+      "detail": "research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_profile_candidate_v1.tex is a regular file"
+    },
+    {
+      "check_id": "source_hash:TEX-V21-P7-T04-COMMON-SOURCE-PROPAGATION-PROFILE-V1",
+      "status": "PASS",
+      "detail": "research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_profile_candidate_v1.tex retains 87014253023cdb8945ed67f606355d762486884ce3a6de4fa2d32e2af32e2b43"
+    },
+    {
+      "check_id": "source_regular:TEX-V21-P7-T05-UNIVERSAL-SOURCE-COUPLING-MAP-V1",
+      "status": "PASS",
+      "detail": "research_control/tasks/RT-20260728-004/artifacts/universal_source_coupling_map_candidate_v1.tex is a regular file"
+    },
+    {
+      "check_id": "source_hash:TEX-V21-P7-T05-UNIVERSAL-SOURCE-COUPLING-MAP-V1",
+      "status": "PASS",
+      "detail": "research_control/tasks/RT-20260728-004/artifacts/universal_source_coupling_map_candidate_v1.tex retains 5a9a8f5542a7c8b714bbff7ec06c06449b0c66c0196266051562caf9ce602c6b"
+    },
+    {
+      "check_id": "source_regular:TEX-V21-P7-T06-SOURCE-KERNEL-VARIATIONAL-OBJECT-V1",
+      "status": "PASS",
+      "detail": "research_control/tasks/RT-20260728-005/artifacts/source_kernel_variational_object_candidate_v1.tex is a regular file"
+    },
+    {
+      "check_id": "source_hash:TEX-V21-P7-T06-SOURCE-KERNEL-VARIATIONAL-OBJECT-V1",
+      "status": "PASS",
+      "detail": "research_control/tasks/RT-20260728-005/artifacts/source_kernel_variational_object_candidate_v1.tex retains 386769e40167c35604625ef7250c027dc1712c82db4790e2895e0b31ac3cfbf7"
+    },
+    {
+      "check_id": "package_math_unchanged_in_diff",
+      "status": "PASS",
+      "detail": "changed protected package paths: []"
+    },
+    {
+      "check_id": "p7_t07_audit_hash",
+      "status": "PASS",
+      "detail": "historical audit bytes are unchanged"
+    },
+    {
+      "check_id": "p7_t07_gate_outcome",
+      "status": "PASS",
+      "detail": "historical Gate C audit remains blocked"
+    },
+    {
+      "check_id": "historical_zero_of_seven",
+      "status": "PASS",
+      "detail": "P7-T07 remains zero of seven"
+    },
+    {
+      "check_id": "historical_zero_of_ten",
+      "status": "PASS",
+      "detail": "P7-T07 remains zero of ten"
+    },
+    {
+      "check_id": "historical_record_not_rewritten",
+      "status": "PASS",
+      "detail": "historical audit is additive and unchanged"
+    },
+    {
+      "check_id": "dimension_key_set",
+      "status": "PASS",
+      "detail": "exact nine protected dimensions are present"
+    },
+    {
+      "check_id": "dimension_verdict:matter_ontology",
+      "status": "PASS",
+      "detail": "matter_ontology has verdict ADOPTED_BY_HUMAN_POSTULATE"
+    },
+    {
+      "check_id": "dimension_verdict:source_matter_dynamics",
+      "status": "PASS",
+      "detail": "source_matter_dynamics has verdict ADOPTED_BY_HUMAN_POSTULATE"
+    },
+    {
+      "check_id": "dimension_verdict:operational_semantics",
+      "status": "PASS",
+      "detail": "operational_semantics has verdict ADOPTED_BY_HUMAN_POSTULATE"
+    },
+    {
+      "check_id": "dimension_verdict:propagation_geometry_or_structure",
+      "status": "PASS",
+      "detail": "propagation_geometry_or_structure has verdict ADOPTED_AS_SOURCE_SIDE_PHYSICAL_PROPAGATION_STRUCTURE"
+    },
+    {
+      "check_id": "dimension_verdict:universal_coupling",
+      "status": "PASS",
+      "detail": "universal_coupling has verdict ADOPTED_BY_HUMAN_POSTULATE"
+    },
+    {
+      "check_id": "dimension_verdict:matter_action",
+      "status": "PASS",
+      "detail": "matter_action has verdict ADOPTED_BY_HUMAN_POSTULATE"
+    },
+    {
+      "check_id": "dimension_verdict:stress_energy_input",
+      "status": "PASS",
+      "detail": "stress_energy_input has verdict ADOPTED_AS_SOURCE_SIDE_VARIATIONAL_INPUT"
+    },
+    {
+      "check_id": "dimension_verdict:physical_conservation",
+      "status": "PASS",
+      "detail": "physical_conservation has verdict ADOPTED_WITH_COMPONENTWISE_SCOPE"
+    },
+    {
+      "check_id": "dimension_verdict:p8_matter_input",
+      "status": "PASS",
+      "detail": "p8_matter_input has verdict AUTHORIZED"
+    },
+    {
+      "check_id": "postulate_id_order",
+      "status": "PASS",
+      "detail": "all eight postulates occur once in exact order"
+    },
+    {
+      "check_id": "postulate_source:P7-MATTER-POSTULATE-01",
+      "status": "PASS",
+      "detail": "P7-MATTER-POSTULATE-01 binds a source and hash"
+    },
+    {
+      "check_id": "postulate_math_unchanged:P7-MATTER-POSTULATE-01",
+      "status": "PASS",
+      "detail": "P7-MATTER-POSTULATE-01 leaves mathematics unchanged"
+    },
+    {
+      "check_id": "postulate_adopted_not_derived:P7-MATTER-POSTULATE-01",
+      "status": "PASS",
+      "detail": "P7-MATTER-POSTULATE-01 is adopted rather than derived"
+    },
+    {
+      "check_id": "postulate_scope:P7-MATTER-POSTULATE-01",
+      "status": "PASS",
+      "detail": "P7-MATTER-POSTULATE-01 has exact scope and interpretation"
+    },
+    {
+      "check_id": "postulate_boundaries:P7-MATTER-POSTULATE-01",
+      "status": "PASS",
+      "detail": "P7-MATTER-POSTULATE-01 has uses, overreads, and revision conditions"
+    },
+    {
+      "check_id": "postulate_source:P7-MATTER-POSTULATE-02",
+      "status": "PASS",
+      "detail": "P7-MATTER-POSTULATE-02 binds a source and hash"
+    },
+    {
+      "check_id": "postulate_math_unchanged:P7-MATTER-POSTULATE-02",
+      "status": "PASS",
+      "detail": "P7-MATTER-POSTULATE-02 leaves mathematics unchanged"
+    },
+    {
+      "check_id": "postulate_adopted_not_derived:P7-MATTER-POSTULATE-02",
+      "status": "PASS",
+      "detail": "P7-MATTER-POSTULATE-02 is adopted rather than derived"
+    },
+    {
+      "check_id": "postulate_scope:P7-MATTER-POSTULATE-02",
+      "status": "PASS",
+      "detail": "P7-MATTER-POSTULATE-02 has exact scope and interpretation"
+    },
+    {
+      "check_id": "postulate_boundaries:P7-MATTER-POSTULATE-02",
+      "status": "PASS",
+      "detail": "P7-MATTER-POSTULATE-02 has uses, overreads, and revision conditions"
+    },
+    {
+      "check_id": "postulate_source:P7-MATTER-POSTULATE-03",
+      "status": "PASS",
+      "detail": "P7-MATTER-POSTULATE-03 binds a source and hash"
+    },
+    {
+      "check_id": "postulate_math_unchanged:P7-MATTER-POSTULATE-03",
+      "status": "PASS",
+      "detail": "P7-MATTER-POSTULATE-03 leaves mathematics unchanged"
+    },
+    {
+      "check_id": "postulate_adopted_not_derived:P7-MATTER-POSTULATE-03",
+      "status": "PASS",
+      "detail": "P7-MATTER-POSTULATE-03 is adopted rather than derived"
+    },
+    {
+      "check_id": "postulate_scope:P7-MATTER-POSTULATE-03",
+      "status": "PASS",
+      "detail": "P7-MATTER-POSTULATE-03 has exact scope and interpretation"
+    },
+    {
+      "check_id": "postulate_boundaries:P7-MATTER-POSTULATE-03",
+      "status": "PASS",
+      "detail": "P7-MATTER-POSTULATE-03 has uses, overreads, and revision conditions"
+    },
+    {
+      "check_id": "postulate_source:P7-MATTER-POSTULATE-04",
+      "status": "PASS",
+      "detail": "P7-MATTER-POSTULATE-04 binds a source and hash"
+    },
+    {
+      "check_id": "postulate_math_unchanged:P7-MATTER-POSTULATE-04",
+      "status": "PASS",
+      "detail": "P7-MATTER-POSTULATE-04 leaves mathematics unchanged"
+    },
+    {
+      "check_id": "postulate_adopted_not_derived:P7-MATTER-POSTULATE-04",
+      "status": "PASS",
+      "detail": "P7-MATTER-POSTULATE-04 is adopted rather than derived"
+    },
+    {
+      "check_id": "postulate_scope:P7-MATTER-POSTULATE-04",
+      "status": "PASS",
+      "detail": "P7-MATTER-POSTULATE-04 has exact scope and interpretation"
+    },
+    {
+      "check_id": "postulate_boundaries:P7-MATTER-POSTULATE-04",
+      "status": "PASS",
+      "detail": "P7-MATTER-POSTULATE-04 has uses, overreads, and revision conditions"
+    },
+    {
+      "check_id": "postulate_source:P7-MATTER-POSTULATE-05",
+      "status": "PASS",
+      "detail": "P7-MATTER-POSTULATE-05 binds a source and hash"
+    },
+    {
+      "check_id": "postulate_math_unchanged:P7-MATTER-POSTULATE-05",
+      "status": "PASS",
+      "detail": "P7-MATTER-POSTULATE-05 leaves mathematics unchanged"
+    },
+    {
+      "check_id": "postulate_adopted_not_derived:P7-MATTER-POSTULATE-05",
+      "status": "PASS",
+      "detail": "P7-MATTER-POSTULATE-05 is adopted rather than derived"
+    },
+    {
+      "check_id": "postulate_scope:P7-MATTER-POSTULATE-05",
+      "status": "PASS",
+      "detail": "P7-MATTER-POSTULATE-05 has exact scope and interpretation"
+    },
+    {
+      "check_id": "postulate_boundaries:P7-MATTER-POSTULATE-05",
+      "status": "PASS",
+      "detail": "P7-MATTER-POSTULATE-05 has uses, overreads, and revision conditions"
+    },
+    {
+      "check_id": "postulate_source:P7-MATTER-POSTULATE-06",
+      "status": "PASS",
+      "detail": "P7-MATTER-POSTULATE-06 binds a source and hash"
+    },
+    {
+      "check_id": "postulate_math_unchanged:P7-MATTER-POSTULATE-06",
+      "status": "PASS",
+      "detail": "P7-MATTER-POSTULATE-06 leaves mathematics unchanged"
+    },
+    {
+      "check_id": "postulate_adopted_not_derived:P7-MATTER-POSTULATE-06",
+      "status": "PASS",
+      "detail": "P7-MATTER-POSTULATE-06 is adopted rather than derived"
+    },
+    {
+      "check_id": "postulate_scope:P7-MATTER-POSTULATE-06",
+      "status": "PASS",
+      "detail": "P7-MATTER-POSTULATE-06 has exact scope and interpretation"
+    },
+    {
+      "check_id": "postulate_boundaries:P7-MATTER-POSTULATE-06",
+      "status": "PASS",
+      "detail": "P7-MATTER-POSTULATE-06 has uses, overreads, and revision conditions"
+    },
+    {
+      "check_id": "postulate_source:P7-MATTER-POSTULATE-07",
+      "status": "PASS",
+      "detail": "P7-MATTER-POSTULATE-07 binds a source and hash"
+    },
+    {
+      "check_id": "postulate_math_unchanged:P7-MATTER-POSTULATE-07",
+      "status": "PASS",
+      "detail": "P7-MATTER-POSTULATE-07 leaves mathematics unchanged"
+    },
+    {
+      "check_id": "postulate_adopted_not_derived:P7-MATTER-POSTULATE-07",
+      "status": "PASS",
+      "detail": "P7-MATTER-POSTULATE-07 is adopted rather than derived"
+    },
+    {
+      "check_id": "postulate_scope:P7-MATTER-POSTULATE-07",
+      "status": "PASS",
+      "detail": "P7-MATTER-POSTULATE-07 has exact scope and interpretation"
+    },
+    {
+      "check_id": "postulate_boundaries:P7-MATTER-POSTULATE-07",
+      "status": "PASS",
+      "detail": "P7-MATTER-POSTULATE-07 has uses, overreads, and revision conditions"
+    },
+    {
+      "check_id": "postulate_source:P7-MATTER-POSTULATE-08",
+      "status": "PASS",
+      "detail": "P7-MATTER-POSTULATE-08 binds a source and hash"
+    },
+    {
+      "check_id": "postulate_math_unchanged:P7-MATTER-POSTULATE-08",
+      "status": "PASS",
+      "detail": "P7-MATTER-POSTULATE-08 leaves mathematics unchanged"
+    },
+    {
+      "check_id": "postulate_adopted_not_derived:P7-MATTER-POSTULATE-08",
+      "status": "PASS",
+      "detail": "P7-MATTER-POSTULATE-08 is adopted rather than derived"
+    },
+    {
+      "check_id": "postulate_scope:P7-MATTER-POSTULATE-08",
+      "status": "PASS",
+      "detail": "P7-MATTER-POSTULATE-08 has exact scope and interpretation"
+    },
+    {
+      "check_id": "postulate_boundaries:P7-MATTER-POSTULATE-08",
+      "status": "PASS",
+      "detail": "P7-MATTER-POSTULATE-08 has uses, overreads, and revision conditions"
+    },
+    {
+      "check_id": "scientific_status_authority",
+      "status": "PASS",
+      "detail": "scientific status records adopted authority"
+    },
+    {
+      "check_id": "scientific_status_empirical",
+      "status": "PASS",
+      "detail": "empirical status remains untested"
+    },
+    {
+      "check_id": "scientific_status_dynamics",
+      "status": "PASS",
+      "detail": "dynamics is specified, not derived or validated"
+    },
+    {
+      "check_id": "scientific_status_operational",
+      "status": "PASS",
+      "detail": "operational meaning is specified, not derived or validated"
+    },
+    {
+      "check_id": "scientific_status_gate",
+      "status": "PASS",
+      "detail": "adoption binds protected Gate C authority"
+    },
+    {
+      "check_id": "no_matter_derivation_authority",
+      "status": "PASS",
+      "detail": "matter-coupling derivation remains unauthorized"
+    },
+    {
+      "check_id": "limited_p7_promotion_authority",
+      "status": "PASS",
+      "detail": "only the exact P7 physical-status promotion is recorded"
+    },
+    {
+      "check_id": "decision_token:ADOPTED\\_AS\\_CANONICAL\\_PHYSICAL\\_MATTER\\_BY\\_EXPLICIT\\_HUMAN\\_POSTULATE",
+      "status": "PASS",
+      "detail": "decision TeX contains ADOPTED\\_AS\\_CANONICAL\\_PHYSICAL\\_MATTER\\_BY\\_EXPLICIT\\_HUMAN\\_POSTULATE"
+    },
+    {
+      "check_id": "decision_token:OBST-P7T07-CROSS-LAYER-COMPOSITION-GAP-001",
+      "status": "PASS",
+      "detail": "decision TeX contains OBST-P7T07-CROSS-LAYER-COMPOSITION-GAP-001"
+    },
+    {
+      "check_id": "decision_token:zero of seven",
+      "status": "PASS",
+      "detail": "decision TeX contains zero of seven"
+    },
+    {
+      "check_id": "decision_token:zero of ten",
+      "status": "PASS",
+      "detail": "decision TeX contains zero of ten"
+    },
+    {
+      "check_id": "decision_token:not a mathematical derivation",
+      "status": "PASS",
+      "detail": "decision TeX contains not a mathematical derivation"
+    },
+    {
+      "check_id": "decision_token:target-side tensor $T_{\\mu\\nu}$",
+      "status": "PASS",
+      "detail": "decision TeX contains target-side tensor $T_{\\mu\\nu}$"
+    },
+    {
+      "check_id": "decision_token:P8-T01",
+      "status": "PASS",
+      "detail": "decision TeX contains P8-T01"
+    },
+    {
+      "check_id": "child_math_completed",
+      "status": "PASS",
+      "detail": "physicist-mathematician child completed"
+    },
+    {
+      "check_id": "child_phil_completed",
+      "status": "PASS",
+      "detail": "physicist-philosopher child completed"
+    },
+    {
+      "check_id": "conflict_review_resolved",
+      "status": "PASS",
+      "detail": "parent conflict review has no unresolved conflicts"
+    },
+    {
+      "check_id": "obstruction_visible",
+      "status": "PASS",
+      "detail": "P7-T07 obstruction remains visible"
+    },
+    {
+      "check_id": "obstruction_open_gap",
+      "status": "PASS",
+      "detail": "obstruction is an open derivational gap after adoption"
+    },
+    {
+      "check_id": "obstruction_not_adoption_block",
+      "status": "PASS",
+      "detail": "obstruction no longer blocks protected adoption"
+    },
+    {
+      "check_id": "distance_ledger_adoption",
+      "status": "PASS",
+      "detail": "Distance-to-GR matter-coupling row records protected adoption"
+    },
+    {
+      "check_id": "distance_ledger_gap",
+      "status": "PASS",
+      "detail": "Distance-to-GR ledger preserves the derivational gap"
+    },
+    {
+      "check_id": "frontier_decision",
+      "status": "PASS",
+      "detail": "frontier inventory records decision and obstruction"
+    },
+    {
+      "check_id": "claim_boundary_registry",
+      "status": "PASS",
+      "detail": "claim-boundary registry contains P7-T08"
+    },
+    {
+      "check_id": "tex_registry_decision",
+      "status": "PASS",
+      "detail": "Gate C decision TeX is registered"
+    },
+    {
+      "check_id": "task_identity",
+      "status": "PASS",
+      "detail": "task binds P7-T08"
+    },
+    {
+      "check_id": "job_route",
+      "status": "PASS",
+      "detail": "job binds generation 154 and the immutable worker"
+    },
+    {
+      "check_id": "completion_result",
+      "status": "PASS",
+      "detail": "completion records the affirmative ready-for-checkpoint disposition"
+    },
+    {
+      "check_id": "handoff_next",
+      "status": "PASS",
+      "detail": "handoff selects P8-T01 after checkpoint"
+    },
+    {
+      "check_id": "handoff_precheckpoint_guard",
+      "status": "PASS",
+      "detail": "handoff does not make P8 executable before checkpoint"
+    },
+    {
+      "check_id": "program_state_next",
+      "status": "PASS",
+      "detail": "program state points to P8-T01 after checkpoint"
+    },
+    {
+      "check_id": "compact_receipt_result",
+      "status": "PASS",
+      "detail": "compact receipt records the affirmative result"
+    },
+    {
+      "check_id": "compact_receipt_counts",
+      "status": "PASS",
+      "detail": "compact receipt counts eight postulates and nine dimensions"
+    },
+    {
+      "check_id": "git_diff_check",
+      "status": "PASS",
+      "detail": "git diff --check passes"
+    }
+  ]
+}

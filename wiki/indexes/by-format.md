@@ -626,6 +626,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-V21-P7-T06-SOURCE-VARIATIONAL-RECEIPT-V1` `research_control/tasks/RT-20260728-005/artifacts/source_kernel_variational_receipt.md`
 - `MD-V21-P7-T07-MATTER-PACKAGE-AUDIT-RECEIPT-V1` `research_control/tasks/RT-20260728-006/artifacts/matter_package_audit_receipt.md`
 - `MD-V21-P7-T07-PARENT-FUSION-MATTER-PACKAGE-AUDIT-V1` `research_control/tasks/RT-20260728-006/artifacts/parent_fusion_notes_p7_t07_matter_package_audit.md`
+- `MD-V21-P7-T08-PARENT-FUSION-PHYSICAL-MATTER-ADOPTION-V1` `research_control/tasks/RT-20260729-001/artifacts/parent_fusion_notes_p7_t08_gate_c_adoption.md`
 - `MD-VALIDATOR-OPERATOR-WORKFLOW-PUBLICATION-BRIEF` `markdown/publication-briefs/validator-operator-workflow.publication-brief.md`
 
 ## pdf
@@ -1080,6 +1081,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V21-P7-T05-UNIVERSAL-SOURCE-COUPLING-MAP-V1` `research_control/tasks/RT-20260728-004/artifacts/universal_source_coupling_map_candidate_v1.tex`
 - `TEX-V21-P7-T06-SOURCE-KERNEL-VARIATIONAL-OBJECT-V1` `research_control/tasks/RT-20260728-005/artifacts/source_kernel_variational_object_candidate_v1.tex`
 - `TEX-V21-P7-T07-MATTER-PACKAGE-SMUGGLING-AUDIT-V1` `research_control/tasks/RT-20260728-006/artifacts/matter_package_smuggling_audit_v1.tex`
+- `TEX-V21-P7-T08-PHYSICAL-MATTER-ADOPTION-DECISION-V1` `research_control/tasks/RT-20260729-001/artifacts/p7_t08_gate_c_decision_v1.tex`
 
 ## wiki_markdown
 
@@ -1702,6 +1704,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-V21-P7-T06-SOURCE-VARIATIONAL-RECEIPT-V1` `wiki/markdown/md-v21-p7-t06-source-variational-receipt-v1.md`
 - `WIKI-MD-V21-P7-T07-MATTER-PACKAGE-AUDIT-RECEIPT-V1` `wiki/markdown/md-v21-p7-t07-matter-package-audit-receipt-v1.md`
 - `WIKI-MD-V21-P7-T07-PARENT-FUSION-MATTER-PACKAGE-AUDIT-V1` `wiki/markdown/md-v21-p7-t07-parent-fusion-matter-package-audit-v1.md`
+- `WIKI-MD-V21-P7-T08-PARENT-FUSION-PHYSICAL-MATTER-ADOPTION-V1` `wiki/markdown/md-v21-p7-t08-parent-fusion-physical-matter-adoption-v1.md`
 - `WIKI-MD-VALIDATOR-OPERATOR-WORKFLOW-PUBLICATION-BRIEF` `wiki/markdown/md-validator-operator-workflow-publication-brief.md`
 - `WIKI-PDF-LEGACY-ONTOLOGY-AETHER-FLOW-CONSISTENCY` `wiki/pdf/pdf-legacy-ontology-aether-flow-consistency.md`
 - `WIKI-PDF-LEGACY-ONTOLOGY-AETHER-FLOW-DYNAMICS` `wiki/pdf/pdf-legacy-ontology-aether-flow-dynamics.md`
@@ -2150,3 +2153,4 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-V21-P7-T05-UNIVERSAL-SOURCE-COUPLING-MAP-V1` `wiki/tex/tex-v21-p7-t05-universal-source-coupling-map-v1.md`
 - `WIKI-TEX-V21-P7-T06-SOURCE-KERNEL-VARIATIONAL-OBJECT-V1` `wiki/tex/tex-v21-p7-t06-source-kernel-variational-object-v1.md`
 - `WIKI-TEX-V21-P7-T07-MATTER-PACKAGE-SMUGGLING-AUDIT-V1` `wiki/tex/tex-v21-p7-t07-matter-package-smuggling-audit-v1.md`
+- `WIKI-TEX-V21-P7-T08-PHYSICAL-MATTER-ADOPTION-DECISION-V1` `wiki/tex/tex-v21-p7-t08-physical-matter-adoption-decision-v1.md`

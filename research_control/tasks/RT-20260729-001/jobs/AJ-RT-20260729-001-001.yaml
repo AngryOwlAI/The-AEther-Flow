@@ -1,0 +1,437 @@
+job_id: "AJ-RT-20260729-001-001"
+task_id: "RT-20260729-001"
+decision_id: "DDR-20260729-001"
+role_id: "gate-chair"
+role_version: "0.1.0"
+execution_role_ref: "gate-chair@0.1.0--RT-20260729-001"
+status: "completed"
+validation_status: "FAIL"
+requires_human_gate: false
+human_authorization_id: "HUMAN-AUTH-P7-T08-PHYSICAL-MATTER-ADOPTION-2026-07-28-001"
+approval_id: "approval-20260729-001"
+created_at: "2026-07-29T03:10:17Z"
+started_at: "2026-07-29T03:10:17Z"
+completed_at: "2026-07-29T04:08:26Z"
+objective: "Execute only P7-T08 by recording the exact affirmative protected verdict that adopts the unchanged P7-T01 through P7-T06 package as canonical physical matter by explicit human constitutive postulate, while preserving its mathematics and the P7-T07 derivational-gap evidence."
+target_derivation_milestone: "matter_coupling"
+milestone_burden: "Make the protected matter-coupling decision required before gravitational closure."
+route_label: "human-gated-matter-review"
+route_reason: "Handoff-0896 selects P7-T08; the P7-T07 checkpoint is committed; the user supplied exact nonblank protected authority; and immutable generation 154 routes one continue-research invocation."
+immutable_route_sha256: "540d873989b40b1c31f5e9d286dfb63c1dc91887fe2fa006a2e1be7830691140"
+plan_task_id: "P7-T08"
+recommendation_ids:
+  - "V21-R25"
+  - "V21-R31"
+  - "V21-R33"
+  - "V21-R36"
+  - "V21-R37"
+  - "V21-R67"
+  - "V21-R68"
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 154
+  passes_consumed: 140
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:154"
+  handoff_token: "e623591da1612b764516acf7168512878718193b68c98031"
+  relay_claim_token: "7783f4a4eabd6e256cc45666cdd6561a4ba2db6f6b78ef25"
+  route_work_item_id: "P7-T08"
+  route_worker_skill: "continue-research"
+  route_sha256: "540d873989b40b1c31f5e9d286dfb63c1dc91887fe2fa006a2e1be7830691140"
+  route_reason: "explicit_human_authorized_recovery"
+  route_strategy_id: "human_authorized_recovery_generation_154"
+  route_blocker_fingerprint: "11c591594496b9a1dc234e5db3e3d8191c28f5108f039e9ed9016a24beed8baf"
+  route_evidence_sha256es:
+    - "0dc8c744ea7ce13a8da045cfafa77718cba0bd4d8e3ea41bf60c05331dc38ce9"
+  worker_skill: "continue-research"
+  worker_invocation_count: 1
+
+mathematical_decisiveness_contract:
+  contract_path: "research_control/design/mathematical_decisiveness_completion_contract.md"
+  schema_path: ".agents/schemas/PHYSICS_COMPLETION_DECISIVENESS_SCHEMA.md"
+  enforcement_mode: "hard_failure"
+  active_after: "2026-06-21T02:32:39Z"
+
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "physics"
+  payload_type: "route_decision"
+  candidate_family: "V21-P7-T08-PHYSICAL-MATTER-ADOPTION-V1"
+  assumption_delta:
+    - "Adds eight exact constitutive physical-matter postulates under protected human authority while holding all P7-T01 through P7-T06 mathematics unchanged."
+    - "Changes the exact package's canonical physical and interpretive status from proposal-only source-extension data to human-adopted canonical physical matter within its declared scope."
+    - "Preserves the P7-T07 typed-interface obstruction as an open derivational gap rather than treating it as solved."
+  materiality_basis: "P7-T07 intentionally supplied no protected verdict. The new exact human authorization supplies a previously absent affirmative physical-matter adoption decision and makes P8-T01 dependency-eligible only after checkpoint."
+  payload_details:
+    resolves_new_route_decision: true
+    decision_identity: "ADOPTED_AS_CANONICAL_PHYSICAL_MATTER_BY_EXPLICIT_HUMAN_POSTULATE"
+    not_already_encoded_evidence: "P7-T07 records zero evidence-ready dimensions and explicitly leaves P7-T08 unexecuted. The exact user attachment supplies the protected constitutive authority that no prior science artifact or validator encoded."
+  source_basis:
+    - "TEX-V21-P7-T01-SOURCE-MATTER-ONTOLOGY-SECTOR-TAXONOMY-V1"
+    - "TEX-V21-P7-T02-SOURCE-MATTER-FINITE-TRANSITION-KERNEL-V1"
+    - "TEX-V21-P7-T03-SOURCE-OPERATIONAL-DEVICE-SUITE-V1"
+    - "TEX-V21-P7-T04-COMMON-SOURCE-PROPAGATION-PROFILE-V1"
+    - "TEX-V21-P7-T05-UNIVERSAL-SOURCE-COUPLING-MAP-V1"
+    - "TEX-V21-P7-T06-SOURCE-KERNEL-VARIATIONAL-OBJECT-V1"
+    - "TEX-V21-P7-T07-MATTER-PACKAGE-SMUGGLING-AUDIT-V1"
+    - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+    - "research_control/approvals/approval-20260729-001.yaml"
+  expected_artifact_paths:
+    - "research_control/tasks/RT-20260729-001/artifacts/p7_t08_gate_c_decision_v1.tex"
+    - "research_control/tasks/RT-20260729-001/artifacts/p7_t08_dimension_adoption_matrix_v1.yaml"
+    - "research_control/tasks/RT-20260729-001/artifacts/p7_t08_constitutive_postulate_ledger_v1.yaml"
+    - "research_control/tasks/RT-20260729-001/artifacts/p7_t08_scientific_status_v1.yaml"
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+
+family_freeze_admission:
+  schema_id: "family_freeze_route_admission_v1"
+  policy_id: "family_freeze_reopening_policy_v1"
+  route_id: "v21_p7_t08_protected_physical_matter_adoption"
+  family_id: "V21-P7-T08-PHYSICAL-MATTER-ADOPTION-V1"
+  family_identity_sha256: "fe95436913338559faad64e3a6120110aacfe8f6f83c6756681466dbc4a7a808"
+  assumption_sha256es:
+    - "8b0ddd0825d523aa7d5ebd0c66fa14390a086bffdde7f2ab5c2da05c0854dd75"
+  route_kind: "primitive_investigation"
+  detected_match_basis: []
+  reopening:
+    requested: false
+    class: "none"
+  authority_limits:
+    local_family_freeze_preserved: true
+    global_no_go_claimed: false
+    automatic_candidate_adoption: false
+    theorem_truth_inferred: false
+    ontology_modified: false
+    physics_promotion_authorized: false
+
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  expected_durable_outputs:
+    physics:
+      - "research_control/tasks/RT-20260729-001/artifacts/p7_t08_gate_c_decision_v1.tex"
+      - "research_control/tasks/RT-20260729-001/artifacts/p7_t08_constitutive_postulate_ledger_v1.yaml"
+      - "registries/DISTANCE_TO_GR_LEDGER.csv"
+    project_system:
+      - "research_control/tasks/RT-20260729-001/artifacts/validate_p7_t08_gate_c_adoption.py"
+      - "research_control/tasks/RT-20260729-001/artifacts/p7_t08_gate_c_compact_receipt_v1.json"
+  acceptance_criteria:
+    physics:
+      - "the exact affirmative protected verdict is recorded dimension by dimension"
+      - "all eight constitutive postulates bind exact source artifacts and hashes"
+      - "P7-T07 remains visible as derivational-gap evidence while no longer blocking adoption"
+      - "P8-T01 becomes eligible only after checkpoint"
+    project_system:
+      - "task-local validation binds authorization and all six unchanged source hashes"
+      - "repository validators distinguish recorded human authority from proof or empirical support"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: false
+    exception_id: ""
+    evidence_path: ""
+    evidence_sha256: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0896"
+  source_handoff_path: "research_control/handoffs/handoff-0896.yaml"
+  source_handoff_sha256: "67793f272db6c82209c263a2aca371dd63ed6e95cd2bee1899d77be0be07b281"
+  selected_plan_task_id: "P7-T08"
+  guard_outcome: "below_threshold"
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  parent:
+    execution_unit_id: "parent"
+    perspective: "physicist_mathematician_philosopher"
+    responsibilities:
+      - "verify exact human authority and fixed package hashes"
+      - "separate constitutive adoption from mathematical derivation"
+      - "resolve child conflicts and preserve historical P7-T07 evidence"
+      - "fuse the dimension verdict postulate ledger and downstream boundary"
+  children:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260729-001/artifacts/child_phys_math_p7_t08_gate_c_adoption.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260729-001/artifacts/child_phys_phil_p7_t08_gate_c_adoption.yaml"
+      status: "completed"
+  conflict_policy:
+    review_path: "research_control/tasks/RT-20260729-001/artifacts/parent_conflict_review_p7_t08_gate_c_adoption.yaml"
+    max_resolution_rounds: 2
+    require_parallel_child_revision: true
+    unresolved_conflict_status: "blocked"
+  fusion_policy:
+    fusion_notes_path: "research_control/tasks/RT-20260729-001/artifacts/parent_fusion_notes_p7_t08_gate_c_adoption.md"
+    fused_output_path: "research_control/tasks/RT-20260729-001/artifacts/p7_t08_gate_c_decision_v1.tex"
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+    final_output_replaces_old_single_role_artifact: true
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1067
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"matter package smuggling audit\" --limit 10 --json"
+      query_type: "search"
+      query_text: "matter package smuggling audit"
+      returned_object_ids:
+        - "TEX-V21-P7-T07-MATTER-PACKAGE-SMUGGLING-AUDIT-V1"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"Gate C readiness\" --limit 10 --json"
+      query_type: "search"
+      query_text: "Gate C readiness"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "TEX-V21-P7-T07-MATTER-PACKAGE-SMUGGLING-AUDIT-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260728-006/artifacts/matter_package_smuggling_audit_v1.tex"
+      source_hash: "f6e0b456dcef8ec4285d6293c76ccc6c6fbe04095e3f0d17023565ee9337187c"
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  authority_note: "Obsidian wiki notes semantic extracts and .local are retrieval layers only and not authority."
+
+allowed_read_paths:
+  - "SOUL.md"
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - ".agents/roles/physics/gate-chair.v0.1.0.md"
+  - ".agents/schemas/**"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  - "research_control/approvals/README.md"
+  - "research_control/approvals/approval-20260729-001.yaml"
+  - "research_control/design/**"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0896.yaml"
+  - "research_control/handoffs/handoff-0896.md"
+  - "research_control/tasks/RT-20260727-007/**"
+  - "research_control/tasks/RT-20260728-001/**"
+  - "research_control/tasks/RT-20260728-002/**"
+  - "research_control/tasks/RT-20260728-003/**"
+  - "research_control/tasks/RT-20260728-004/**"
+  - "research_control/tasks/RT-20260728-005/**"
+  - "research_control/tasks/RT-20260728-006/**"
+  - "research_control/tasks/RT-20260614-257/**"
+  - "research_control/tasks/RT-20260702-064/**"
+  - "ontology/**"
+  - "registries/**"
+allowed_write_paths:
+  - "research_control/approvals/approval-20260729-001.yaml"
+  - "research_control/tasks/RT-20260729-001/**"
+  - "research_control/handoffs/handoff-0897.yaml"
+  - "research_control/handoffs/handoff-0897.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/design/frontier_theorem_inventory.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "registries/TEX_SOURCE_REGISTRY.csv"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/tex/**"
+allowed_generated_paths:
+  - ".local/**"
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/tex/**"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+forbidden_paths:
+  - "ontology/**"
+  - "manuscripts/**"
+  - "html/**"
+  - "implementations_plans/**"
+  - ".agents/roles/**"
+  - "registries/METRIC_USE_LEDGER.csv"
+  - "research_control/tasks/RT-20260727-007/**"
+  - "research_control/tasks/RT-20260728-001/**"
+  - "research_control/tasks/RT-20260728-002/**"
+  - "research_control/tasks/RT-20260728-003/**"
+  - "research_control/tasks/RT-20260728-004/**"
+  - "research_control/tasks/RT-20260728-005/**"
+  - "research_control/tasks/RT-20260728-006/**"
+allowed_source_classes:
+  - "human_approval"
+  - "scientific_gate"
+  - "science_draft_read_only"
+  - "canonical_ontology_read_only"
+  - "project_control"
+  - "registry"
+  - "role_contract"
+  - "generated_memory_derivative"
+forbidden_source_classes:
+  - "canonical_ontology_write"
+  - "package_mathematics_write"
+  - "target_atlas_import"
+  - "target_metric_import"
+  - "effective_metric_derivation"
+  - "target_stress_energy_derivation"
+  - "equivalence_principle_claim"
+  - "Einstein_equations"
+  - "benchmark_promotion"
+  - "completed_derivation_claim"
+  - "publication_or_push"
+approved_commands:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"matter package smuggling audit\" --limit 10 --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"Gate C readiness\" --limit 10 --json"
+  - ".venv/bin/python research_control/tasks/RT-20260729-001/artifacts/validate_p7_t08_gate_c_adoption.py"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --check"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --check"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --write"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --check"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --json output/research_dependency_graph.json --markdown wiki/indexes/research_dependency_graph.md --dot output/research_dependency_graph.dot"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --check"
+  - ".venv/bin/python scripts/research_control/generate_claim_graph_v1.py --json output/claim_graph_v1.json"
+  - ".venv/bin/python scripts/research_control/generate_claim_graph_v1.py --check"
+  - ".venv/bin/python scripts/research_control/validate_claim_graph_v1.py --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --json-summary"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --json-summary"
+  - ".venv/bin/python scripts/research_control/run_full_research_control_validation.py --json --tail-chars 2500"
+  - ".venv/bin/python scripts/research_control/report_physics_progress_metrics.py"
+  - "git diff --check"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260729-001-001"
+required_validators:
+  - "memory_preflight"
+  - "p7_t08_gate_c_local_validator"
+  - "human_authorization_scope"
+  - "parent_child_synthesis"
+  - "source_hash_immutability"
+  - "historical_audit_preservation"
+  - "assumption_and_scientific_status_schema"
+  - "distance_to_gr_ledger_parity"
+  - "claim_language"
+  - "documentation_impact"
+  - "project_improvement_signal_parity"
+  - "research_control"
+  - "full_research_control"
+  - "git_diff_check"
+expected_outputs:
+  - "research_control/tasks/RT-20260729-001/artifacts/child_phys_math_p7_t08_gate_c_adoption.yaml"
+  - "research_control/tasks/RT-20260729-001/artifacts/child_phys_phil_p7_t08_gate_c_adoption.yaml"
+  - "research_control/tasks/RT-20260729-001/artifacts/parent_conflict_review_p7_t08_gate_c_adoption.yaml"
+  - "research_control/tasks/RT-20260729-001/artifacts/parent_fusion_notes_p7_t08_gate_c_adoption.md"
+  - "research_control/tasks/RT-20260729-001/artifacts/p7_t08_gate_c_decision_v1.tex"
+  - "research_control/tasks/RT-20260729-001/artifacts/p7_t08_dimension_adoption_matrix_v1.yaml"
+  - "research_control/tasks/RT-20260729-001/artifacts/p7_t08_constitutive_postulate_ledger_v1.yaml"
+  - "research_control/tasks/RT-20260729-001/artifacts/p7_t08_scientific_status_v1.yaml"
+  - "research_control/tasks/RT-20260729-001/artifacts/p7_t08_gate_c_compact_receipt_v1.json"
+  - "research_control/tasks/RT-20260729-001/artifacts/validate_p7_t08_gate_c_adoption.py"
+  - "research_control/tasks/RT-20260729-001/artifacts/validation_blocker_checkpoint_single_eof_handoff_0897_v1.yaml"
+  - "research_control/tasks/RT-20260729-001/jobs/completions/AJC-AJ-RT-20260729-001-001.yaml"
+  - "research_control/handoffs/handoff-0897.yaml"
+  - "research_control/handoffs/handoff-0897.md"
+claim_boundary: "Adopt only the exact unchanged P7-T01 through P7-T06 package as canonical physical matter by explicit protected human postulate within its declared finite domains. Preserve the P7-T07 audit and obstruction as derivational-gap evidence. Do not alter package mathematics; claim first-principles or unique derivation; derive g_eff target T_mu_nu equivalence-principle status Einstein equations or GR; promote the benchmark; publish; push; claim empirical validation or external independent validation; assert a global no-go; or close future revision."
+stop_conditions:
+  - "source artifact hash mismatch"
+  - "approval or authorization mismatch"
+  - "P7-T07 checkpoint or handoff mismatch"
+  - "unresolved parent-child conflict"
+  - "attempted mathematical mutation or retroactive audit rewrite"
+  - "validation or checkpoint failure"
+  - "unrelated tracked change"
+
+checkpoint_outcome:
+  status: "FAIL_STAGED_GIT_DIFF_CHECK_1_SINGLE_BLANK_AT_EOF_INDEX_RESTORED_NO_COMMIT"
+  checkpoint_invocation_count: 1
+  checkpoint_committed: false
+  checkpoint_staged_after_failure: false
+  entry_index_restored: true
+  legacy_validation_used: false
+  blocker_path: "research_control/tasks/RT-20260729-001/artifacts/validation_blocker_checkpoint_single_eof_handoff_0897_v1.yaml"
+  blocker_sha256: "b200ae6b0bea1d67ad7937a7ca319a7bde88b2714928798529bd306b19bd60a1"
+  required_recovery_strategy_id: "repair_p7_t08_single_eof_blank_line_and_checkpoint_v1"
+  required_recovery_worker_skill: "improve-project-system"
+  p8_t01_executed: false
