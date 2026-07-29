@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-07-29T14:26:01Z`
-- Source fingerprint: `23610de443fb81e10f9f25d23ff50b600527668eb41ef34dfb0456394fb6114e`
-- Nodes: `23141`
-- Edges: `74296`
+- Generated from tracked state as of: `2026-07-29T15:39:47Z`
+- Source fingerprint: `31f85406a39bad75837c0520de74798d1e5f98b7c38f7c65ae3ba885a7d28774`
+- Nodes: `23161`
+- Edges: `74326`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 1138 |
+| `completion_yaml` | 1139 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 899 |
+| `handoff_yaml` | 900 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,18 +33,18 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 9 |
-| `agent_job` | `support_only` | 1138 |
+| `agent_job` | `support_only` | 1139 |
 | `artifact` | `canonical_source` | 87 |
-| `artifact` | `support_only` | 11762 |
-| `blocked_burden` | `blocked` | 4684 |
-| `claim_boundary` | `support_only` | 1095 |
+| `artifact` | `support_only` | 11769 |
+| `blocked_burden` | `blocked` | 4692 |
+| `claim_boundary` | `support_only` | 1096 |
 | `draft_control_candidate` | `draft_control` | 771 |
 | `draft_control_candidate` | `proposal_only` | 142 |
 | `draft_control_candidate` | `science_draft` | 83 |
 | `frozen_negative` | `frozen_negative` | 144 |
 | `gate_chair_verdict` | `human_gated` | 33 |
-| `handoff` | `support_only` | 899 |
-| `human_gated_object` | `human_gated` | 560 |
+| `handoff` | `support_only` | 900 |
+| `human_gated_object` | `human_gated` | 561 |
 | `ledger_row` | `accepted_scoped` | 6 |
 | `ledger_row` | `blocked` | 4 |
 | `ledger_row` | `frozen_negative` | 1 |
@@ -58,7 +58,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `source_ontology_object` | `support_only` | 366 |
 | `task` | `human_gated` | 29 |
 | `task` | `science_draft` | 32 |
-| `task` | `support_only` | 1077 |
+| `task` | `support_only` | 1078 |
 
 ## Frontier Table
 
@@ -101,6 +101,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `blocked_claim:agent_native_authority` | Blocked claim: Agent-Native authority | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:agentjob_allowlist_change` | Blocked claim: AgentJob allowlist change | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:agentjob_allowlist_expansion` | Blocked claim: AgentJob allowlist expansion | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:agentjob_completion_handoff_or_science_rewrite` | Blocked claim: AgentJob completion handoff or science rewrite | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:aggregate_truth_score` | Blocked claim: aggregate truth score | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:agreement_or_consensus_as_truth` | Blocked claim: agreement or consensus as truth | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:ai_validator_pass_as_physics_proof` | Blocked claim: AI validator PASS as physics proof | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
@@ -159,13 +160,12 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `blocked_claim:audit_pass_as_proof_authority` | Blocked claim: audit pass as proof authority | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:audit_pass_as_refuter_stress_pass` | Blocked claim: audit pass as Refuter stress pass | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:audit_pass_as_source_extension_data_adoption` | Blocked claim: audit pass as source-extension data adoption | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:audit_pass_as_source_law_adoption` | Blocked claim: audit pass as source-law adoption | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 
 ## Route Continuity
 
-- Active task: `RT-20260729-003`
-- Latest handoff: `handoff-0899`
-- Handoff path: `research_control/handoffs/handoff-0899.yaml`
-- Next action: Run one governed checkpoint for AJ-RT-20260729-003-001. Only after it commits may one fresh bounded P8-T02 ontology-formalizer packet formalize LocalEffectiveActionClosureTarget_v1 without using the Einstein-Hilbert action, target metric, Einstein equations, or exact-GR benchmark success as a source premise.
+- Active task: `RT-20260729-004`
+- Latest handoff: `handoff-0900`
+- Handoff path: `research_control/handoffs/handoff-0900.yaml`
+- Next action: Run one governed checkpoint for AJ-RT-20260729-004-001. Only after it commits may one fresh bounded P8-T02 ontology-formalizer packet formalize LocalEffectiveActionClosureTarget_v1 without using the Einstein-Hilbert action, target metric, Einstein equations, or exact-GR benchmark success as a source premise.
 
 This graph is navigational support only; inspect the cited sources before using any claim.

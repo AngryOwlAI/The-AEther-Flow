@@ -1,0 +1,360 @@
+job_id: "AJ-RT-20260729-004-001"
+task_id: "RT-20260729-004"
+decision_id: "DDR-20260729-004"
+role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260729-004"
+status: "completed"
+validation_status: "PASS"
+created_at: "2026-07-29T15:39:47Z"
+started_at: "2026-07-29T15:39:47Z"
+completed_at: "2026-07-29T15:39:47Z"
+completion_path: "research_control/tasks/RT-20260729-004/jobs/completions/AJC-AJ-RT-20260729-004-001.yaml"
+requires_human_gate: false
+human_authorization_note: "Generation 157 is a user-authorized recursive project-system recovery route. It carries no protected scientific decision and does not reexecute P8-T01 or execute P8-T02."
+objective: "Preserve AJ-RT-20260729-003-001 byte-for-byte; align its expired execution-role overlay and both registry representations to the AgentJob's exact ordered 27-item write list; prove protected P8-T01 byte preservation and routing consistency; then invoke one governed checkpoint before P8-T02."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system allowlist identity and checkpoint recovery only; the Einstein-equations burden remains not started."
+route_label: "repair_p8_t01_allowlist_parity_after_checkpoint_v1"
+route_reason: "The P8-T01 checkpoint committed successfully but post-commit continuation found two registry-order mismatches and one AgentJob-to-role allowlist mismatch."
+immutable_route_sha256: "c01e0dd8a396fb3648cc621725fd674e2f491735e0dd5ab96de3384cb025cc5a"
+plan_task_id: "P8-T02"
+recovery_for_plan_task_id: "P8-T01"
+next_plan_task_id: "P8-T02"
+next_plan_task_execution_authorized: false
+project_system_change_only: true
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 157
+  passes_consumed: 143
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:157"
+  handoff_token: "c4e29fd35bcf0b3e669379f65891e51305bfe05dbb9d73e5"
+  relay_claim_token: "5e1a4ecc2a8375bcb209ff574f2dfd4531b4032274401435"
+  route_work_item_id: "P8-T01"
+  route_worker_skill: "improve-project-system"
+  route_sha256: "c01e0dd8a396fb3648cc621725fd674e2f491735e0dd5ab96de3384cb025cc5a"
+  route_reason: "post_checkpoint_allowlist_parity_recovery_required"
+  route_strategy_id: "repair_p8_t01_allowlist_parity_after_checkpoint_v1"
+  route_blocker_fingerprint: "abd6e97d4fa6cab34e9ba013fffe848d5b13abf0751c1eb4d0f50e8f790e8506"
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  candidate_family: "not_applicable"
+  assumption_delta:
+    - "No scientific assumption changes; the packet restores exact project-control allowlist identity and checkpoint eligibility only."
+  materiality_basis: "Repairs one validator-proven ordered identity mismatch without changing the immutable P8-T01 AgentJob or scientific payload."
+  source_basis:
+    - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+    - "research_control/tasks/RT-20260729-003/jobs/AJ-RT-20260729-003-001.yaml"
+    - "research_control/tasks/RT-20260729-003/jobs/completions/AJC-AJ-RT-20260729-003-001.yaml"
+    - "research_control/handoffs/handoff-0899.yaml"
+  expected_artifact_paths:
+    - "research_control/tasks/RT-20260729-003/roles/theoretical-continuation-selector@0.1.0--RT-20260729-003.yaml"
+    - "registries/AGENT_JOB_REGISTRY.csv"
+    - "registries/ROLE_EXECUTION_REGISTRY.csv"
+    - "research_control/tasks/RT-20260729-004/artifacts/p8_t01_allowlist_parity_recovery_receipt.json"
+  project_system_justification: "This is a uniquely determined control-state parity repair and checkpoint; it creates no physics payload or P8-T02 execution."
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  expected_durable_outputs:
+    physics: []
+    project_system:
+      - "exact P8-T01 execution-role allowlist order"
+      - "exact P8-T01 AGENT_JOB and ROLE_EXECUTION registry allowlist order"
+      - "task-local four-way parity and protected-byte receipt"
+      - "one governed checkpoint"
+  acceptance_criteria:
+    physics: []
+    project_system:
+      - "AJ-RT-20260729-003-001 remains byte-identical"
+      - "all four allowlist representations equal the exact ordered 27-item AgentJob list"
+      - "P8-T01 completion handoff scientific artifacts and Distance-to-GR ledger remain exact"
+      - "live continuation reports no allowlist parity error"
+      - "all required working-tree gates pass"
+      - "one governed checkpoint commits"
+      - "P8-T02 remains unexecuted until checkpoint success"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: false
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0899"
+  source_handoff_path: "research_control/handoffs/handoff-0899.yaml"
+  source_handoff_sha256: "87c86cba003dc5c82897cbe6c569d3423530fa01160af7d3e6545cd8783435cd"
+  selected_plan_task_id: "P8-T02"
+  guard_outcome: "below_threshold"
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+allowed_read_paths:
+  - "SOUL.md"
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research-goal/SKILL.md"
+  - ".codex/skills/continue-research-goal/references/goal-file-schema.md"
+  - ".codex/skills/continue-research-continue-goal/SKILL.md"
+  - ".codex/skills/improve-project-system/SKILL.md"
+  - ".agents/roles/research_ops/project-system-director.v0.2.0.md"
+  - ".agents/roles/research_ops/process-integrity-auditor.v0.1.0.md"
+  - ".agents/schemas/**"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  - "research_control/design/**"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0898.yaml"
+  - "research_control/handoffs/handoff-0899.yaml"
+  - "research_control/handoffs/handoff-0899.md"
+  - "research_control/tasks/RT-20260729-003/**"
+  - "scripts/project_control/**"
+  - "scripts/research_control/**"
+  - "scripts/validation/**"
+  - "tests/**"
+  - "registries/**"
+  - ".local/validation-receipts/**"
+
+allowed_write_paths:
+  - "research_control/tasks/RT-20260729-003/**"
+  - "research_control/tasks/RT-20260729-004/**"
+  - "research_control/handoffs/handoff-0900.yaml"
+  - "research_control/handoffs/handoff-0900.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/PDF_DERIVATIVE_REGISTRY.csv"
+  - "registries/PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "registries/TEX_SOURCE_REGISTRY.csv"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/pdf/**"
+  - "wiki/tex/**"
+
+allowed_generated_paths:
+  - "research_control/tasks/RT-20260729-004/artifacts/p8_t01_allowlist_parity_recovery_receipt.json"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/pdf/**"
+  - "wiki/tex/**"
+
+forbidden_paths:
+  - "research_control/tasks/RT-20260729-003/jobs/AJ-RT-20260729-003-001.yaml"
+  - "research_control/tasks/RT-20260729-003/jobs/completions/AJC-AJ-RT-20260729-003-001.yaml"
+  - "research_control/tasks/RT-20260729-003/artifacts/gravitational_closure_route_decision_v1.yaml"
+  - "research_control/tasks/RT-20260729-003/artifacts/gravitational_closure_hypothesis_comparison_v1.yaml"
+  - "research_control/tasks/RT-20260729-003/artifacts/frozen_gravitational_closure_alternatives_v1.yaml"
+  - "research_control/tasks/RT-20260729-003/artifacts/gravitational_closure_route_selection_receipt.md"
+  - "research_control/tasks/RT-20260729-003/artifacts/gravitational_closure_route_selection_validation_v1.json"
+  - "research_control/handoffs/handoff-0899.yaml"
+  - "research_control/handoffs/handoff-0899.md"
+  - ".agents/roles/**"
+  - ".codex/skills/**"
+  - "scripts/**"
+  - "tests/**"
+  - "implementations_plans/**"
+  - "ontology/**"
+  - "legacy_ontology/**"
+  - "manuscripts/**"
+  - "markdown/publication-briefs/**"
+  - "markdown/html-explainer-specs/**"
+
+forbidden_source_classes:
+  - "predecessor_agent_job_completion_handoff_or_science_rewrite"
+  - "validator_test_schema_skill_or_base_role_semantics_change"
+  - "write_path_broadening"
+  - "P8_T01_reexecution"
+  - "P8_T02_execution_before_checkpoint"
+  - "canonical_ontology_write"
+  - "science_source_or_scientific_ledger_mutation"
+  - "effective_action_metric_or_field_equation_construction"
+  - "physics_claim_promotion"
+  - "benchmark_promotion"
+  - "proof_authority"
+  - "publication_or_push_authority"
+  - "completed_derivation_claim"
+
+allowed_source_classes:
+  - "control_state"
+  - "registry"
+  - "execution_role_contract"
+  - "task_control_record"
+  - "active_routing_supersession"
+  - "generated_memory_derivative"
+  - "prior_authorized_transaction_checkpoint"
+
+approved_commands:
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21 --json"
+  - ".venv/bin/python research_control/tasks/RT-20260729-004/artifacts/validate_p8_t01_allowlist_parity_recovery.py --write-report --json"
+  - ".venv/bin/python research_control/tasks/RT-20260729-004/artifacts/validate_p8_t01_allowlist_parity_recovery.py --check --json"
+  - ".venv/bin/python -m scripts.validation.cli plan --profile affected --paths research_control/tasks/RT-20260729-003/roles/theoretical-continuation-selector@0.1.0--RT-20260729-003.yaml registries/AGENT_JOB_REGISTRY.csv registries/ROLE_EXECUTION_REGISTRY.csv research_control/tasks/RT-20260729-004 --explain"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+  - ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --write"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --json-summary"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+  - ".venv/bin/python scripts/research_control/continue_research.py --summary"
+  - "git diff --check"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260729-004-001"
+
+required_validators:
+  - "memory_preflight"
+  - "physics_payload_admission"
+  - "dual_budget_allocation"
+  - "ordinary_route_guard_admission"
+  - "p8_t01_allowlist_parity_recovery"
+  - "immutable_hash_preservation"
+  - "project_change_classifier"
+  - "project_improvement_resolver"
+  - "project_improvement_signals"
+  - "documentation_impact"
+  - "claim_language_changed"
+  - "research_control_diff"
+  - "continue_research_resolution"
+  - "memory_sync"
+  - "memory_core"
+  - "git_diff_check"
+  - "checkpoint_transaction"
+
+expected_outputs:
+  - "research_control/tasks/RT-20260729-003/roles/theoretical-continuation-selector@0.1.0--RT-20260729-003.yaml"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "research_control/tasks/RT-20260729-004/00_TASK.yaml"
+  - "research_control/tasks/RT-20260729-004/DDR-20260729-004.md"
+  - "research_control/tasks/RT-20260729-004/artifacts/validate_p8_t01_allowlist_parity_recovery.py"
+  - "research_control/tasks/RT-20260729-004/artifacts/p8_t01_allowlist_parity_recovery_receipt.json"
+  - "research_control/tasks/RT-20260729-004/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260729-004/jobs/completions/AJC-AJ-RT-20260729-004-001.yaml"
+  - "research_control/tasks/RT-20260729-004/roles/process-integrity-auditor@0.1.0--RT-20260729-004.yaml"
+  - "research_control/handoffs/handoff-0900.yaml"
+  - "research_control/handoffs/handoff-0900.md"
+  - "research_control/program_state.yaml"
+
+claim_boundary: "CB-V21-P8-T01-ALLOWLIST-PARITY-CHECKPOINT-RECOVERY-001"
+resolves_signal_routing: false
+documentation_impact_id: "DI-RT-20260729-004-001"
+completion_id: "AJC-AJ-RT-20260729-004-001"
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1071
+    relationship_row_count: 5386
+    semantic_row_count: 1071
+    vault_row_count: 1071
+    local_cache_only_warning_count: 7
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  additional_canonical_inspections:
+    - canonical_path: "research_control/tasks/RT-20260729-003/jobs/AJ-RT-20260729-003-001.yaml"
+      source_hash: "dc7a44410b6a2349dcd87e148fa0e7da99afdfa0c0f149dd6269ad4b2fa17b98"
+      authority_note: "Immutable completed P8-T01 AgentJob whose ordered allowlist is the parity target."
+    - canonical_path: "research_control/tasks/RT-20260729-003/roles/theoretical-continuation-selector@0.1.0--RT-20260729-003.yaml"
+      source_hash_before_repair: "07dc5f9363bdca8a18ee8f8c46e4f715998595f8e3ea495817860a0a50a33af0"
+      authority_note: "Expired execution-role representation repaired to the immutable AgentJob order."
+  authority_note: "Generated Obsidian wiki semantic relationship SQLite and .local surfaces are retrieval-only navigation layers and not authority; the immutable route tracked job registries Git state and validators govern this repair."

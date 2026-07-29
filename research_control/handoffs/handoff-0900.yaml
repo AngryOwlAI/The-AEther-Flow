@@ -1,0 +1,268 @@
+validation_status: "PASS"
+handoff_id: "handoff-0900"
+handoff_number: 900
+task_id: "RT-20260729-004"
+decision_id: "DDR-20260729-004"
+job_id: "AJ-RT-20260729-004-001"
+completion_id: "AJC-AJ-RT-20260729-004-001"
+completion_path: "research_control/tasks/RT-20260729-004/jobs/completions/AJC-AJ-RT-20260729-004-001.yaml"
+completion_sha256: "82746af92a35eca24ede87a4087987234759a4918ebe78c8749bfe2976452421"
+status: "ready_after_checkpoint"
+created_at: "2026-07-29T15:39:47Z"
+parent_handoff_id: "handoff-0899"
+plan_task_id: "P8-T02"
+recovery_for_plan_task_id: "P8-T01"
+source_role_id: "process-integrity-auditor"
+source_role_version: "0.1.0"
+source_execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260729-004"
+summary: "Generation 157 preserves the completed P8-T01 AgentJob byte-for-byte and restores exact ordered 27-item allowlist identity across its expired execution-role overlay and both control-registry representations. All protected P8-T01 scientific bytes and the Distance-to-GR ledger remain exact, and P8-T02 remains unexecuted pending one governed checkpoint."
+next_action: "Run one governed checkpoint for AJ-RT-20260729-004-001. Only after it commits may one fresh bounded P8-T02 ontology-formalizer packet formalize LocalEffectiveActionClosureTarget_v1 without using the Einstein-Hilbert action, target metric, Einstein equations, or exact-GR benchmark success as a source premise."
+current_claim_boundary: "CB-V21-P8-T01-ALLOWLIST-PARITY-CHECKPOINT-RECOVERY-001"
+loop_risk_route: "ontology-law-research-packet"
+
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260729-004"
+  latest_research_handoff_id: "handoff-0900"
+  latest_research_next_action: "Run one governed checkpoint for AJ-RT-20260729-004-001. Only after it commits may one fresh bounded P8-T02 ontology-formalizer packet formalize LocalEffectiveActionClosureTarget_v1 without using the Einstein-Hilbert action, target metric, Einstein equations, or exact-GR benchmark success as a source premise."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+
+claim_boundary:
+  allowed_next_scope: "After the governed checkpoint commits, one fresh bounded P8-T02 ontology-formalizer packet may formalize only LocalEffectiveActionClosureTarget_v1 with exact source-to-effective types, maps, locality, measure, symmetry or replacement, scale and correction control, variational equivalences, conservation, and failure branches."
+  completed_task: "RT-20260729-004"
+  completed_completion_path: "research_control/tasks/RT-20260729-004/jobs/completions/AJC-AJ-RT-20260729-004-001.yaml"
+  completed_completion_sha256: "82746af92a35eca24ede87a4087987234759a4918ebe78c8749bfe2976452421"
+  source_handoff_id: "handoff-0899"
+  source_handoff_path: "research_control/handoffs/handoff-0899.yaml"
+  source_handoff_sha256: "87c86cba003dc5c82897cbe6c569d3423530fa01160af7d3e6545cd8783435cd"
+  immutable_route_sha256: "c01e0dd8a396fb3648cc621725fd674e2f491735e0dd5ab96de3384cb025cc5a"
+  route_blocker_fingerprint: "abd6e97d4fa6cab34e9ba013fffe848d5b13abf0751c1eb4d0f50e8f790e8506"
+  source_p8_t01_checkpoint_commit: "b91642d76ca0d4c22325c2808a62ccd97c3b0375"
+  result_status: "PASS_P8_T01_ALLOWLIST_PARITY_RECOVERY_READY_FOR_CHECKPOINT"
+  recovery_receipt_path: "research_control/tasks/RT-20260729-004/artifacts/p8_t01_allowlist_parity_recovery_receipt.json"
+  recovery_receipt_sha256: "e637a146c9bd3450646ba557234f467cda9ae7c9118b28174a1674c10c40baab"
+  recovery_validator_path: "research_control/tasks/RT-20260729-004/artifacts/validate_p8_t01_allowlist_parity_recovery.py"
+  recovery_validator_sha256: "f975df7c91bd61e84e1dc72614eaae6fdab13600c535900a571c1d1f07ee9f8d"
+  allowed_write_path_count: 27
+  ordered_representation_count: 4
+  protected_hash_mismatch_count: 0
+  checkpoint_invocation_count_before_handoff: 0
+  checkpoint_committed_before_handoff: false
+  p8_t01_science_payload_modified_by_recovery: false
+  distance_to_gr_ledger_modified_by_recovery: false
+  p8_t01_reexecuted: false
+  p8_t02_executed: false
+  scientific_status_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  ontology_adoption_authorized: false
+  source_law_adoption_authorized: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_performed: false
+  blocked_claims:
+    - "project-system allowlist parity presented as scientific progress"
+    - "P8-T01 formalization-only route selection presented as a constructed or adopted action"
+    - "P8-T02 presented as executed before checkpoint"
+    - "effective geometry metric action target stress energy equivalence principle Einstein equations exact-GR benchmark proof publication push or completed derivation"
+
+plan_result:
+  plan_task_id: "P8-T01"
+  recovery_for_plan_task_id: "P8-T01"
+  next_plan_task_id: "P8-T02"
+  title: "Restore P8-T01 ordered allowlist identity and checkpoint eligibility"
+  result_status: "P8_T01_ALLOWLIST_PARITY_RECOVERY_PASS"
+  work_item_status: "completed"
+  protected_p8_t01_payload_complete: true
+  protected_p8_t01_payload_byte_preserved: true
+  four_way_allowlist_parity_complete: true
+  p8_t02_dependency_ready_after_checkpoint: true
+  p8_t02_dependency_ready_now: false
+  p8_t02_executed: false
+  scientific_claims_changed_by_recovery: false
+  distance_to_gr_delta_changed_by_recovery: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+distance_to_gr:
+  changed: false
+  effect: "none_project_system_recovery"
+  burden_id: "einstein_equations"
+  milestone: "einstein_equations"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "The inherited P8-T01 formalization-only route selection remains byte-preserved; this recovery contributes no physics movement."
+  downstream_unlocked:
+    - "P8-T02 only after the governed checkpoint"
+  downstream_still_blocked:
+    - "P8-T02 until the governed checkpoint commits"
+    - "effective geometry or metric construction"
+    - "local effective action construction or adoption"
+    - "target stress-energy construction"
+    - "equivalence-principle verdict"
+    - "Einstein equations derivation"
+    - "exact-GR recovery"
+    - "benchmark promotion"
+
+required_next_packet:
+  task_type: "v21_p8_t02_local_effective_action_closure_target_formalization"
+  plan_task_id: "P8-T02"
+  objective: "Formalize LocalEffectiveActionClosureTarget_v1 with exact source-to-effective carriers, maps, locality, measure, symmetry or replacement, scale and correction control, variational equivalences, conservation, and failure branches before any field-equation claim."
+  dependency_ready_after_checkpoint: true
+  dependency_ready_now: false
+  executed: false
+
+selected_next_route:
+  route_id: "v21_p8_t02_local_effective_action_closure_target_after_checkpoint"
+  route_label: "ontology-law-research-packet"
+  role_family: "ontology-formalizer@0.2.0"
+  worker_skill: "continue-research"
+  selected_next_packet_type: "ontology_law_research_packet"
+  task_type: "v21_p8_t02_local_effective_action_closure_target_formalization"
+  plan_task_id: "P8-T02"
+  target_derivation_milestone: "einstein_equations"
+  milestone_burden: "Define what must be proved before any field-equation claim."
+  strategy_id: "formalize_local_effective_action_closure_target_v1"
+  trigger_classification: "derivation_critical_missing_source_law"
+  adoption_status: "blocked_adoption_open_continuation"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  target_atlas_assumed: false
+  target_metric_assumed: false
+  Einstein_Hilbert_action_assumed: false
+  Einstein_equations_assumed: false
+  benchmark_success_assumed: false
+  physics_promotion_authorized: false
+  executed: false
+  next_action: "Remain unexecuted until the generation-157 governed checkpoint commits."
+  source_handoff: "research_control/handoffs/handoff-0900.yaml"
+
+ordinary_route_guard:
+  schema_id: "ordinary_route_guard_evaluation_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  evaluation_id: "ORE-HANDOFF-0900"
+  ordinary_handoff_id: "handoff-0900"
+  threshold: 3
+  consecutive_project_system_tasks_before_selection: 1
+  ready_science_plan_task_ids:
+    - "P8-T02"
+    - "P14-T04"
+  selected_plan_task_id: "P8-T02"
+  selected_route_class: "physics_bearing"
+  selected_worker_skill: "continue-research"
+  outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  exception_receipt:
+    active: false
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+active_state_boundary:
+  active_task_id: "RT-20260729-004"
+  active_job_id: "AJ-RT-20260729-004-001"
+  current_status: "p8_t01_allowlist_parity_recovery_pass_ready_for_checkpoint"
+  checkpoint_required: true
+  checkpoint_completed: false
+  checkpoint_invocation_count: 0
+  project_system_recovery_completed: true
+  p8_t01_payload_complete: true
+  p8_t01_payload_byte_preserved: true
+  selected_next_plan_task_id: "P8-T02"
+  selected_next_worker_skill: "continue-research"
+  selected_next_role_family: "ontology-formalizer@0.2.0"
+  selected_next_route_label: "ontology-law-research-packet"
+  selected_next_strategy_id: "formalize_local_effective_action_closure_target_v1"
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 157 validated, atomically claimed, and consumed its exact immutable recovery route once."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The tracked recovery receipt proves exact four-way ordered allowlist identity and protected-byte preservation."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Task-local, documentation, signal, research-control, continuation, memory, and whitespace gates pass."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "One governed checkpoint remains; P8-T02 is not executed before it."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Tracked frontier, task-index, graph, registry, and wiki derivatives are fresh."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory synchronization and validate-only pass."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Integrated research-control validation has no hard claim-language error."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not authorized; ordinary project-system recovery validation only"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  publication_authorized: false
+  proof_authority: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  canonical_ontology_edit_authorized: false
+  ontology_selection_authorized: false
+  physical_interpretation_establishment_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required_no_nonblank_signals"
+  rationale: "The bounded parity recovery emits no new project-improvement signal."
+
+handoff_authority_boundary:
+  this_handoff_authorizes:
+    - "one governed checkpoint for AJ-RT-20260729-004-001"
+    - "after that checkpoint only, one fresh bounded P8-T02 packet"
+  this_handoff_does_not_authorize:
+    - "P8-T02 before checkpoint"
+    - "P8-T01 reexecution or scientific-payload mutation"
+    - "validator test schema skill or base-role behavior change"
+    - "effective geometry metric action target stress energy equivalence principle Einstein equations exact-GR benchmark proof publication push or completed derivation"
+
+next_plan_task_id: "P8-T02"
+next_worker_skill: "continue-research"
+next_role_family: "ontology-formalizer@0.2.0"
+next_route_label: "ontology-law-research-packet"
+next_strategy_id: "formalize_local_effective_action_closure_target_v1"
+notes: "Generation 157 is project-system control work only. P8-T02 remains unexecuted until the governed checkpoint commits."

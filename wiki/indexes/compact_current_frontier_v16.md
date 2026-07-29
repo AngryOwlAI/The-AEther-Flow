@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260729-003`
-- Latest handoff: `handoff-0899`
-- Current status: `p8_t01_local_effective_action_route_selected_for_formalization_ready_for_checkpoint`
+- Active task: `RT-20260729-004`
+- Latest handoff: `handoff-0900`
+- Current status: `p8_t01_allowlist_parity_recovery_pass_ready_for_checkpoint`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260729-003`
-- Latest research handoff: `handoff-0899`
-- Latest research next action: Run one governed checkpoint for AJ-RT-20260729-003-001. Only after it commits may one fresh bounded P8-T02 ontology-formalizer packet formalize LocalEffectiveActionClosureTarget_v1 without using the Einstein-Hilbert action, target metric, Einstein equations, or exact-GR benchmark success as a source premise.
+- Latest research task: `RT-20260729-004`
+- Latest research handoff: `handoff-0900`
+- Latest research next action: Run one governed checkpoint for AJ-RT-20260729-004-001. Only after it commits may one fresh bounded P8-T02 ontology-formalizer packet formalize LocalEffectiveActionClosureTarget_v1 without using the Einstein-Hilbert action, target metric, Einstein equations, or exact-GR benchmark success as a source premise.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `c442780050e52bc57dadd01a00b83f877a6b3894d13d1ae7b325a387153431b1`
-- JSON SHA-256: `077b85c49e5adb183c79fa89984830aedec5030b43790609cb71aa1a2e9ba54b`
+- YAML SHA-256: `f0ab667e86a5ccba8a861761a2556d94b0a5bf6f2c76aa148e11b2b62090c965`
+- JSON SHA-256: `1157abff4784711a336215284a1ddca38f0ac25ac5aa7fcb65d48c226dd05b2b`
 
 ## Authority Warning
 

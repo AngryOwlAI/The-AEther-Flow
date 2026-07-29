@@ -1,11 +1,72 @@
 mode: "director_led_research_control"
-active_task_id: "RT-20260729-003"
-latest_handoff_id: "handoff-0899"
-current_status: "p8_t01_local_effective_action_route_selected_for_formalization_ready_for_checkpoint"
-claim_boundary_summary: "RT-20260729-003 compares four P8 gravitational-closure routes, selects conditional_source_to_local_effective_action_closure_v1 for formalization only, freezes three alternatives with explicit thaw criteria, and routes P8-T02. It constructs no effective geometry metric action target stress energy equivalence principle Einstein equation or GR recovery theorem and changes no Distance-to-GR row."
+active_task_id: "RT-20260729-004"
+latest_handoff_id: "handoff-0900"
+current_status: "p8_t01_allowlist_parity_recovery_pass_ready_for_checkpoint"
+claim_boundary_summary: "RT-20260729-004 preserves the completed P8-T01 AgentJob completion handoff and scientific artifacts, restores exact ordered 27-item allowlist identity across its expired role overlay and both control registries, and leaves P8-T02 unexecuted. This project-system recovery changes no scientific status or Distance-to-GR row."
 next_plan_task_id: "P8-T02"
 next_worker_skill: "continue-research"
-next_recommended_action: "Run one governed checkpoint for AJ-RT-20260729-003-001. Only after it commits may one fresh bounded P8-T02 ontology-formalizer packet formalize LocalEffectiveActionClosureTarget_v1 without using the Einstein-Hilbert action, target metric, Einstein equations, or exact-GR benchmark success as a source premise."
+next_recommended_action: "Run one governed checkpoint for AJ-RT-20260729-004-001. Only after it commits may one fresh bounded P8-T02 ontology-formalizer packet formalize LocalEffectiveActionClosureTarget_v1 without using the Einstein-Hilbert action, target metric, Einstein equations, or exact-GR benchmark success as a source premise."
+
+p8_t01_allowlist_parity_recovery:
+  task_id: "RT-20260729-004"
+  parent_task_id: "RT-20260729-003"
+  parent_handoff_id: "handoff-0899"
+  source_task_id: "RT-20260729-003"
+  source_job_id: "AJ-RT-20260729-003-001"
+  source_handoff_id: "handoff-0899"
+  plan_task_id: "P8-T02"
+  recovery_for_plan_task_id: "P8-T01"
+  next_plan_task_id: "P8-T02"
+  claim_boundary_id: "CB-V21-P8-T01-ALLOWLIST-PARITY-CHECKPOINT-RECOVERY-001"
+  status: "PASS_P8_T01_ALLOWLIST_PARITY_RECOVERY_READY_FOR_CHECKPOINT"
+  work_item_status: "completed"
+  route_label: "repair_p8_t01_allowlist_parity_after_checkpoint_v1"
+  selected_role_family: "process-integrity-auditor@0.1.0"
+  selected_worker_skill: "improve-project-system"
+  selected_strategy_id: "repair_p8_t01_allowlist_parity_after_checkpoint_v1"
+  target_derivation_milestone: "none"
+  milestone_burden: "Project-system allowlist identity and checkpoint recovery only; the Einstein-equations burden remains not started."
+  source_head: "b91642d76ca0d4c22325c2808a62ccd97c3b0375"
+  source_p8_t01_checkpoint_commit: "b91642d76ca0d4c22325c2808a62ccd97c3b0375"
+  immutable_route_sha256: "c01e0dd8a396fb3648cc621725fd674e2f491735e0dd5ab96de3384cb025cc5a"
+  route_blocker_fingerprint: "abd6e97d4fa6cab34e9ba013fffe848d5b13abf0751c1eb4d0f50e8f790e8506"
+  source_agent_job_path: "research_control/tasks/RT-20260729-003/jobs/AJ-RT-20260729-003-001.yaml"
+  source_agent_job_sha256: "dc7a44410b6a2349dcd87e148fa0e7da99afdfa0c0f149dd6269ad4b2fa17b98"
+  source_completion_path: "research_control/tasks/RT-20260729-003/jobs/completions/AJC-AJ-RT-20260729-003-001.yaml"
+  source_completion_sha256: "ed2ccb3170f09488f48f5edaeb025f55441f89f82f2bcfd481115017f1b72392"
+  source_handoff_path: "research_control/handoffs/handoff-0899.yaml"
+  source_handoff_sha256: "87c86cba003dc5c82897cbe6c569d3423530fa01160af7d3e6545cd8783435cd"
+  required_allowed_write_path_count: 27
+  ordered_representation_count: 4
+  recovery_validator_path: "research_control/tasks/RT-20260729-004/artifacts/validate_p8_t01_allowlist_parity_recovery.py"
+  recovery_validator_sha256: "f975df7c91bd61e84e1dc72614eaae6fdab13600c535900a571c1d1f07ee9f8d"
+  recovery_receipt_path: "research_control/tasks/RT-20260729-004/artifacts/p8_t01_allowlist_parity_recovery_receipt.json"
+  recovery_receipt_sha256: "e637a146c9bd3450646ba557234f467cda9ae7c9118b28174a1674c10c40baab"
+  completion_path: "research_control/tasks/RT-20260729-004/jobs/completions/AJC-AJ-RT-20260729-004-001.yaml"
+  completion_sha256: "82746af92a35eca24ede87a4087987234759a4918ebe78c8749bfe2976452421"
+  handoff_id: "handoff-0900"
+  handoff_path: "research_control/handoffs/handoff-0900.yaml"
+  handoff_yaml_sha256: "3ad70386860972283ec7d9d4dc219dde4f97a1e13940db6516bffc0ad9f93fe9"
+  handoff_markdown_sha256: "300e99b9abbf8d14651b1ab04e88858560653ee4f698c7bd57a69a4d0a151640"
+  allowlist_parity_status: "PASS"
+  protected_byte_status: "PASS"
+  protected_hash_mismatch_count: 0
+  p8_t01_science_payload_modified_by_recovery: false
+  p8_t01_reexecuted: false
+  p8_t02_executed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  checkpoint_invocation_count: 0
+  checkpoint_committed: false
+  selected_next_work_item: "P8-T02"
+  selected_next_worker_skill: "continue-research"
+  selected_next_role_family: "ontology-formalizer@0.2.0"
+  selected_next_route_label: "ontology-law-research-packet"
+  selected_next_strategy_id: "formalize_local_effective_action_closure_target_v1"
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
 
 p8_t01_gravitational_closure_route_selection:
   task_id: "RT-20260729-003"

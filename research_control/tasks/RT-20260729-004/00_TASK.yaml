@@ -1,0 +1,76 @@
+task_id: "RT-20260729-004"
+task_type: "project_system_p8_t01_allowlist_parity_checkpoint_recovery"
+title: "Restore P8-T01 ordered allowlist identity and checkpoint eligibility"
+task_taxonomy:
+  schema_id: "v21_task_taxonomy_v1"
+  work_kind: "benchmark_or_recovery"
+  milestone: "einstein_equations"
+  candidate_family: "p8_t01_allowlist_parity_checkpoint_recovery"
+  result_kind: "implemented_and_validated_or_precisely_blocked"
+  authority: "project_control"
+  scope: "project_system"
+validation_status: "PASS"
+status: "completed"
+created_at: "2026-07-29T15:39:47Z"
+updated_at: "2026-07-29T15:39:47Z"
+closed_at: "2026-07-29T15:39:47Z"
+parent_task_id: "RT-20260729-003"
+parent_handoff_id: "handoff-0899"
+supersedes_active_routing_task_id: "RT-20260729-003"
+current_decision_id: "DDR-20260729-004"
+current_job_id: "AJ-RT-20260729-004-001"
+role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260729-004"
+requires_human_gate: false
+human_authorization_note: "Generation 157 of the immutable user-requested relay routes exactly one improve-project-system frame to repair the post-checkpoint P8-T01 ordered allowlist mismatch. It does not reexecute P8-T01 or execute P8-T02."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P8"
+  plan_task_id: "P8-T01"
+  recovery_for_plan_task_id: "P8-T01"
+  next_plan_task_id: "P8-T02"
+  next_plan_task_execution_authorized: false
+objective: "Preserve AJ-RT-20260729-003-001 byte-for-byte; align its expired execution-role overlay and both registry representations to the AgentJob's exact ordered 27-item write-path contract; prove four-way parity and protected P8-T01 byte preservation; then invoke one governed checkpoint before P8-T02."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system allowlist identity and checkpoint recovery only; the Einstein-equations burden remains not started."
+route_label: "repair_p8_t01_allowlist_parity_after_checkpoint_v1"
+project_system_change_only: true
+dual_budget_category: "system_bearing"
+primary_budget: "project_system"
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+claim_boundary_id: "CB-V21-P8-T01-ALLOWLIST-PARITY-CHECKPOINT-RECOVERY-001"
+claim_boundary:
+  allowed_scope: "Preserve the completed P8-T01 AgentJob completion handoff and scientific artifacts; make only its expired execution-role and two control-registry allowlists equal the immutable AgentJob's exact ordered 27-item list; create bounded recovery evidence and normal control records; and invoke one cumulative checkpoint."
+  immutable_predecessor_task: "RT-20260729-003"
+  immutable_predecessor_job: "AJ-RT-20260729-003-001"
+  immutable_predecessor_handoff: "handoff-0899"
+  source_head: "b91642d76ca0d4c22325c2808a62ccd97c3b0375"
+  source_job_sha256: "dc7a44410b6a2349dcd87e148fa0e7da99afdfa0c0f149dd6269ad4b2fa17b98"
+  source_completion_sha256: "ed2ccb3170f09488f48f5edaeb025f55441f89f82f2bcfd481115017f1b72392"
+  source_handoff_sha256: "87c86cba003dc5c82897cbe6c569d3423530fa01160af7d3e6545cd8783435cd"
+  immutable_route_sha256: "c01e0dd8a396fb3648cc621725fd674e2f491735e0dd5ab96de3384cb025cc5a"
+  required_allowed_write_path_count: 27
+  p8_t01_reexecuted: false
+  p8_t02_executed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+documentation_impact_id: "DI-RT-20260729-004-001"
+completion_id: "AJC-AJ-RT-20260729-004-001"
+output_artifacts:
+  - "research_control/tasks/RT-20260729-004/artifacts/validate_p8_t01_allowlist_parity_recovery.py"
+  - "research_control/tasks/RT-20260729-004/artifacts/p8_t01_allowlist_parity_recovery_receipt.json"
+  - "research_control/tasks/RT-20260729-004/jobs/completions/AJC-AJ-RT-20260729-004-001.yaml"
+  - "research_control/handoffs/handoff-0900.yaml"
+  - "research_control/handoffs/handoff-0900.md"
+closure_status: "p8_t01_allowlist_parity_recovery_pass_ready_for_checkpoint"
+summary: "Generation 157 preserves the completed P8-T01 transaction and restores exact ordered allowlist identity before P8-T02."
+next_recommended_action: "Invoke the one governed checkpoint for AJ-RT-20260729-004-001. P8-T02 remains unexecuted until that checkpoint commits."
+project_improvement_signals: []
+notes: "This packet creates no ontology action metric field equation scientific evidence Distance-to-GR movement benchmark promotion publication push proof or completed-derivation authority."
