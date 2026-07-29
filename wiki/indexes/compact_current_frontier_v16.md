@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260729-008`
-- Latest handoff: `handoff-0904`
-- Current status: `p8_t05_exact_algebraic_mode_classification_and_scoped_dynamical_viability_obstruction_ready_for_checkpoint`
+- Active task: `RT-20260729-009`
+- Latest handoff: `handoff-0905`
+- Current status: `p8_t06_repair_required_not_ready_for_positive_gate_d_ready_for_checkpoint`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260729-008`
-- Latest research handoff: `handoff-0904`
-- Latest research next action: Run one governed checkpoint for AJ-RT-20260729-008-001. Only after it commits may one fresh bounded P8-T06 external-red-team-reviewer@0.1.0 packet audit the unchanged P8-T03 through P8-T05 closure record and this scoped obstruction for target import hidden assumptions algebraic error and interpretation overread without assuming physical viability or a healthy GR limit.
+- Latest research task: `RT-20260729-009`
+- Latest research handoff: `handoff-0905`
+- Latest research next action: Run one governed checkpoint for AJ-RT-20260729-009-001. After checkpoint, stop for exact human action: P8-T07 is protected and has no authorization. Before any positive Gate D readiness claim, supply the recorded A4 and A9 status repair plus evidenced blind human review or genuinely independent replication.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,11 +26,11 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p8_t06_closure_derivation_independent_audit`
-- Role family: `external-red-team-reviewer@0.1.0`
+- Route ID: `v21_p8_t07_human_gate_d_review`
+- Role family: `gate-chair@0.1.0`
 - Target milestone: `einstein_equations`
-- Milestone burden: Calibrate the field-equation result before any protected verdict.
-- Requires human gate: `false`
+- Milestone burden: Make the protected field-equation decision before benchmark promotion.
+- Requires human gate: `true`
 
 ## High-Risk Rows
 
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `b7bde36df7019ae0239189bce3abd62d5233829d6144e76df2ed0f881904e81c`
-- JSON SHA-256: `375b537a568eec673f2ed0b4e2ce05354dc23345f5a349665a457975b5d1dc2d`
+- YAML SHA-256: `e9df3833847b22d0cbe5529c48c6a1193fccf2be6b0bd3d6ced1e33c686a6877`
+- JSON SHA-256: `35b60fce9c13a16fff89c342dcbd9772175191d570c50af36880537a15b16c09`
 
 ## Authority Warning
 

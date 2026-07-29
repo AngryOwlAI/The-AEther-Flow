@@ -2,7 +2,7 @@
   "schema_id": "compact_current_frontier_v16",
   "generated_from": [
     "research_control/program_state.yaml",
-    "research_control/handoffs/handoff-0904.yaml",
+    "research_control/handoffs/handoff-0905.yaml",
     "registries/DISTANCE_TO_GR_LEDGER.csv",
     "registries/METRIC_USE_LEDGER.csv",
     "research_control/current_frontier.md",
@@ -11,17 +11,17 @@
     "research_control/design/active_state_bifurcation_policy_v1.md"
   ],
   "active_state": {
-    "active_task_id": "RT-20260729-008",
-    "latest_handoff_id": "handoff-0904",
-    "current_status": "p8_t05_exact_algebraic_mode_classification_and_scoped_dynamical_viability_obstruction_ready_for_checkpoint",
+    "active_task_id": "RT-20260729-009",
+    "latest_handoff_id": "handoff-0905",
+    "current_status": "p8_t06_repair_required_not_ready_for_positive_gate_d_ready_for_checkpoint",
     "v15_completed": false,
     "v16_completed": false,
     "v16_plan_registered": true
   },
   "active_state_bifurcation": {
-    "latest_research_task_id": "RT-20260729-008",
-    "latest_research_handoff_id": "handoff-0904",
-    "latest_research_next_action": "Run one governed checkpoint for AJ-RT-20260729-008-001. Only after it commits may one fresh bounded P8-T06 external-red-team-reviewer@0.1.0 packet audit the unchanged P8-T03 through P8-T05 closure record and this scoped obstruction for target import hidden assumptions algebraic error and interpretation overread without assuming physical viability or a healthy GR limit.",
+    "latest_research_task_id": "RT-20260729-009",
+    "latest_research_handoff_id": "handoff-0905",
+    "latest_research_next_action": "Run one governed checkpoint for AJ-RT-20260729-009-001. After checkpoint, stop for exact human action: P8-T07 is protected and has no authorization. Before any positive Gate D readiness claim, supply the recorded A4 and A9 status repair plus evidenced blind human review or genuinely independent replication.",
     "latest_project_system_task_id": "none",
     "latest_project_system_status": "none",
     "latest_project_system_sidecar_task_id": "none",
@@ -30,11 +30,11 @@
     "next_research_route_source": "latest_research_handoff"
   },
   "next_route": {
-    "route_id": "v21_p8_t06_closure_derivation_independent_audit",
-    "role_family": "external-red-team-reviewer@0.1.0",
+    "route_id": "v21_p8_t07_human_gate_d_review",
+    "role_family": "gate-chair@0.1.0",
     "target_derivation_milestone": "einstein_equations",
-    "milestone_burden": "Calibrate the field-equation result before any protected verdict.",
-    "requires_human_gate": false
+    "milestone_burden": "Make the protected field-equation decision before benchmark promotion.",
+    "requires_human_gate": true
   },
   "claim_boundary": {
     "physics_claim_authority": false,
@@ -328,7 +328,7 @@
   ],
   "distance_to_gr": {
     "delta": {
-      "effect": "obstruction_recorded",
+      "effect": "audit_repair_status_recorded",
       "changed": false,
       "milestone": "einstein_equations",
       "burden_id": "einstein_equations"
@@ -519,7 +519,7 @@
           "no_benchmark_promotion",
           "no_completed_derivation"
         ],
-        "last_evidence_path": "research_control/tasks/RT-20260729-008/artifacts/finite_constraint_dynamical_viability_stress_v1.tex",
+        "last_evidence_path": "research_control/tasks/RT-20260729-009/artifacts/p8_t06_closure_red_team_review_v1.yaml",
         "high_risk_status_card": {
           "object_id": "einstein_equations",
           "positive_status": "einstein_equations remains blocked with open continuation and no positive derivation status.",
@@ -616,7 +616,15 @@
   },
   "validation": {
     "latest_required_status": "PASS",
-    "pending_layers": []
+    "pending_layers": [
+      {
+        "layer": "post_checkpoint",
+        "status": "PENDING",
+        "evidence": [
+          "One governed checkpoint remains; P8-T07 is unexecuted and lacks exact protected authority."
+        ]
+      }
+    ]
   },
   "authority_warning": {
     "snapshot_only_not_authority": true

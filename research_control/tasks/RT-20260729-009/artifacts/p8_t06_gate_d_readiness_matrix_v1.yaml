@@ -1,0 +1,71 @@
+schema_id: "p8_t06_gate_d_readiness_matrix_v1"
+artifact_id: "P8T06GateDReadinessMatrix_v1"
+task_id: "RT-20260729-009"
+plan_task_id: "P8-T06"
+status: "draft/control"
+overall_readiness: "NOT_READY_REPAIR_AND_INDEPENDENT_REVIEW_REQUIRED"
+
+criteria:
+  - criterion_id: "GD-01"
+    burden: "Finite action is explicitly defined and well-defined on the quotient."
+    status: "PASS_IN_PROPOSAL_SCOPE"
+    evidence: "P8-T03 action and direct reproduction."
+  - criterion_id: "GD-02"
+    burden: "Finite first variation, equation, solution, and identities are algebraically correct."
+    status: "PASS_INTERNAL_REPRODUCTION"
+    evidence: "closure_symbolic_reproduction_v1.yaml"
+  - criterion_id: "GD-03"
+    burden: "All P8-T02 A0 through A9 hypotheses are instantiated as written."
+    status: "FAIL_REPAIR_REQUIRED"
+    evidence: "A4 lacks a coarse-graining map, scale interval, remainder norm, and source-controlled bound; A9 is static only."
+  - criterion_id: "GD-04"
+    burden: "The candidate action is derived from the adopted source package rather than added as a proposal."
+    status: "NOT_ESTABLISHED"
+    evidence: "The alpha quadratic h term and alpha beta values remain proposal-only source-extension data."
+  - criterion_id: "GD-05"
+    burden: "Target atlas, metric, Einstein equations, or benchmark are not imported as premises."
+    status: "PASS_NO_IMPORT_DETECTED"
+    evidence: "p8_t06_closure_smuggling_audit_v1.yaml"
+  - criterion_id: "GD-06"
+    burden: "Physical gravitational carrier, target tensor source, covariance, and Einstein-leading bridge are derived."
+    status: "FAIL_NOT_DERIVED"
+    evidence: "P8-T04 typed mismatch and scoped obstruction."
+  - criterion_id: "GD-07"
+    burden: "Physical mode count, characteristics, hyperbolicity, and stability are determined."
+    status: "FAIL_UNDEFINED"
+    evidence: "P8-T05 static-completion nonuniqueness."
+  - criterion_id: "GD-08"
+    burden: "Correction and regime control supports extrapolation beyond the exact finite definition."
+    status: "FAIL_NOT_SUPPLIED"
+    evidence: "No continuum, scale interval, normed error, or suppression theorem exists."
+  - criterion_id: "GD-09"
+    burden: "Blind mathematical review or independent replication has completed."
+    status: "FAIL_NOT_COMPLETE"
+    evidence: "blind_mathematical_review_status_v1.yaml"
+  - criterion_id: "GD-10"
+    burden: "Protected Gate D authority is present."
+    status: "DEFERRED_NOT_REQUESTED"
+    evidence: "P8-T06 is non-protected and creates no Gate Chair authority."
+
+counts:
+  pass: 3
+  fail_or_not_established: 6
+  deferred: 1
+  total: 10
+
+calibrated_disposition:
+  finite_mathematics: "credible in exact proposal-only scope subject to ordinary human checking"
+  source_derivation: "not established"
+  physical_gravity: "not established"
+  Einstein_equations: "not derived"
+  dynamical_viability: "undefined"
+  independent_review: "not complete"
+  positive_Gate_D_verdict_ready: false
+  exact_human_action_recorded: true
+  next_plan_task: "P8-T07 only after repair, independent-review evidence, and exact protected authorization; otherwise a NOT READY gate disposition is the maximum honest action"
+
+authority_limits:
+  Gate_D_verdict_issued: false
+  physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_claimed: false

@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-07-29T20:48:32Z`
-- Source fingerprint: `11a05e34e01b23c17b118d4db11efafff7d1029346c3312d78cb978dd153c60d`
-- Nodes: `23299`
-- Edges: `74535`
+- Generated from tracked state as of: `2026-07-29T22:01:00Z`
+- Source fingerprint: `e2adf102952ea8fe97b157c1c817adcce0e1a5e2b3f21e4684b7afe32c8d5810`
+- Nodes: `23338`
+- Edges: `74582`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 1143 |
+| `completion_yaml` | 1144 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 904 |
+| `handoff_yaml` | 905 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,24 +33,24 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 9 |
-| `agent_job` | `support_only` | 1143 |
+| `agent_job` | `support_only` | 1144 |
 | `artifact` | `canonical_source` | 87 |
-| `artifact` | `support_only` | 11836 |
-| `blocked_burden` | `blocked` | 4719 |
-| `claim_boundary` | `support_only` | 1100 |
-| `draft_control_candidate` | `draft_control` | 777 |
+| `artifact` | `support_only` | 11856 |
+| `blocked_burden` | `blocked` | 4730 |
+| `claim_boundary` | `support_only` | 1101 |
+| `draft_control_candidate` | `draft_control` | 780 |
 | `draft_control_candidate` | `proposal_only` | 147 |
 | `draft_control_candidate` | `science_draft` | 88 |
 | `frozen_negative` | `frozen_negative` | 147 |
 | `gate_chair_verdict` | `human_gated` | 33 |
-| `handoff` | `support_only` | 904 |
+| `handoff` | `support_only` | 905 |
 | `human_gated_object` | `human_gated` | 563 |
 | `ledger_row` | `accepted_scoped` | 6 |
 | `ledger_row` | `blocked` | 3 |
 | `ledger_row` | `frozen_negative` | 1 |
 | `ledger_row` | `human_gated` | 1 |
 | `ledger_row` | `science_draft` | 4 |
-| `obstruction` | `blocked` | 97 |
+| `obstruction` | `blocked` | 98 |
 | `obstruction` | `rejected` | 4 |
 | `source_extension_evidence_precondition` | `source_extension_evidence` | 40 |
 | `source_ontology_object` | `canonical_source` | 27 |
@@ -58,7 +58,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `source_ontology_object` | `support_only` | 370 |
 | `task` | `human_gated` | 29 |
 | `task` | `science_draft` | 32 |
-| `task` | `support_only` | 1082 |
+| `task` | `support_only` | 1083 |
 
 ## Frontier Table
 
@@ -72,7 +72,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | SEI-MC criteria | `object:sei_mc_criteria` | `draft_control_candidate` | `draft_control` | Required frontier object exposed in completion text: SEI-MC criteria. |
 | SEI_src^{cand} | `object:sei_src_cand` | `draft_control_candidate` | `draft_control` | Required frontier object exposed in completion text: SEI_src^{cand}. |
 | matter-coupling burden | `object:matter_coupling_burden` | `ledger_row` | `accepted_scoped` | P7-T08 changes the exact package's project-level physical and interpretive status by explicit protected human constitutive postulate. The layer-status cells ret |
-| Einstein-equations burden | `object:einstein_equations_burden` | `blocked_burden` | `blocked` | P8-T05 exactly classifies the finite algebraic quotient constraints and modes and records OBST-P8T05-STATIC-FINITE-CONSTRAINT-DYNAMICS-UNDEFINED-001 using a sha |
+| Einstein-equations burden | `object:einstein_equations_burden` | `blocked_burden` | `blocked` | P8-T06 reproduces the finite closure algebra without hidden target import or finite-core algebraic error but records OBST-P8T06-CLOSURE-A4-AND-REVIEW-READINESS- |
 | benchmark-promotion burden | `object:benchmark_promotion_burden` | `human_gated_object` | `human_gated` | benchmark promotion remains blocked |
 | finite toy metric response frozen negative | `ledger:finite_toy_metric_response` | `ledger_row` | `frozen_negative` | explicit-tag-only finite toy route failed tag-removal stress and is frozen locally |
 
@@ -163,9 +163,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 ## Route Continuity
 
-- Active task: `RT-20260729-008`
-- Latest handoff: `handoff-0904`
-- Handoff path: `research_control/handoffs/handoff-0904.yaml`
-- Next action: Run one governed checkpoint for AJ-RT-20260729-008-001. Only after it commits may one fresh bounded P8-T06 external-red-team-reviewer@0.1.0 packet audit the unchanged P8-T03 through P8-T05 closure record and this scoped obstruction for target import hidden assumptions algebraic error and interpretation overread without assuming physical viability or a healthy GR limit.
+- Active task: `RT-20260729-009`
+- Latest handoff: `handoff-0905`
+- Handoff path: `research_control/handoffs/handoff-0905.yaml`
+- Next action: Run one governed checkpoint for AJ-RT-20260729-009-001. After checkpoint, stop for exact human action: P8-T07 is protected and has no authorization. Before any positive Gate D readiness claim, supply the recorded A4 and A9 status repair plus evidenced blind human review or genuinely independent replication.
 
 This graph is navigational support only; inspect the cited sources before using any claim.

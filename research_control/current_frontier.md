@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260729-008` and `handoff-0904`.
+`RT-20260729-009` and `handoff-0905`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260729-008` |
-| Latest handoff ID | `handoff-0904` |
-| Current status | `p8_t05_exact_algebraic_mode_classification_and_scoped_dynamical_viability_obstruction_ready_for_checkpoint` |
+| Active task ID | `RT-20260729-009` |
+| Latest handoff ID | `handoff-0905` |
+| Current status | `p8_t06_repair_required_not_ready_for_positive_gate_d_ready_for_checkpoint` |
 | V16 completed | false |
-| Current route family | integration or selection (scientific) |
+| Current route family | audit or review (scientific audit) |
 | Target derivation milestone | `einstein_equations` |
 | Current burden | `einstein_equations` |
-| Required next authority | After the governed checkpoint, audit only the unchanged P8-T03 through P8-T05 closure record for algebraic error hidden assumption target import and interpretation overread while preserving every physical and promotion block. |
-| Next recommended action | Run one governed checkpoint for AJ-RT-20260729-008-001. Only after it commits may one fresh bounded P8-T06 external-red-team-reviewer@0.1.0 packet audit the unchanged P8-T03 through P8-T05 closure record and this scoped obstruction for target import hidden assumptions algebraic error and interpretation overread without assuming physical viability or a healthy GR limit. |
+| Required next authority | After the governed checkpoint, P8-T07 may be discussed only as a protected human gate. It may execute only under exact human authorization. A positive readiness claim additionally requires the exact A4 and A9 status repair and independently evidenced review. |
+| Next recommended action | Run one governed checkpoint for AJ-RT-20260729-009-001. After checkpoint, stop for exact human action: P8-T07 is protected and has no authorization. Before any positive Gate D readiness claim, supply the recorded A4 and A9 status repair plus evidenced blind human review or genuinely independent replication. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260729-008` |
-| Latest research handoff ID | `handoff-0904` |
-| Latest research next action | Run one governed checkpoint for AJ-RT-20260729-008-001. Only after it commits may one fresh bounded P8-T06 external-red-team-reviewer@0.1.0 packet audit the unchanged P8-T03 through P8-T05 closure record and this scoped obstruction for target import hidden assumptions algebraic error and interpretation overread without assuming physical viability or a healthy GR limit. |
+| Latest research task ID | `RT-20260729-009` |
+| Latest research handoff ID | `handoff-0905` |
+| Latest research next action | Run one governed checkpoint for AJ-RT-20260729-009-001. After checkpoint, stop for exact human action: P8-T07 is protected and has no authorization. Before any positive Gate D readiness claim, supply the recorded A4 and A9 status repair plus evidenced blind human review or genuinely independent replication. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260729-008/00_TASK.yaml`.
-- Active task objective: Solve and stress-test only the exact P8-T04 finite equation; classify algebraic constraints and quotient modes, determine which dynamical diagnostics are defined, construct minimal countermodels to unsupported viability inferences, and record an exact scoped obstruction without assuming a healthy GR limit.
-- Latest handoff path: `research_control/handoffs/handoff-0904.yaml`.
-- Latest handoff summary: P8-T05 supplies an exact algebraic constraint and quotient-mode classification for the fixed P8-T04 equation, including c representative component shifts, n-c quotient coordinates, n-c independent equations, zero free homogeneous quotient response, and a positive quotient Hessian for alpha>0. Physical mode count characteristics hyperbolicity ghosts tachyons gradient stability and strong coupling remain undefined because the candidate has no temporal kinetic principal-symbol causal mass gradient or interaction data. Positive- and negative-kinetic task-local completions share the same static equation and support the scoped obstruction OBST-P8T05-STATIC-FINITE-CONSTRAINT-DYNAMICS-UNDEFINED-001.
-- Current route family: integration or selection (scientific).
-- Next recommended action: Run one governed checkpoint for AJ-RT-20260729-008-001. Only after it commits may one fresh bounded P8-T06 external-red-team-reviewer@0.1.0 packet audit the unchanged P8-T03 through P8-T05 closure record and this scoped obstruction for target import hidden assumptions algebraic error and interpretation overread without assuming physical viability or a healthy GR limit.
+- Active task path: `research_control/tasks/RT-20260729-009/00_TASK.yaml`.
+- Active task objective: Review the unchanged P8-T03 through P8-T05 action, equation, correction, and stability package for target import, hidden assumptions, algebraic error, and interpretation overread; attempt exact reproduction; calibrate independent-review provenance; and produce a Gate D readiness matrix plus exact human action without modifying reviewed science.
+- Latest handoff path: `research_control/handoffs/handoff-0905.yaml`.
+- Latest handoff summary: P8-T06 directly reproduces the finite P8-T03 through P8-T05 algebra without finding hidden target import or finite-core algebraic error. It finds that unchanged P8-T03 does not instantiate P8-T02 A4 as written because no coarse-graining map valid scale interval remainder norm or source-controlled bound is supplied; A9 is static only. The review is same-context AI work rather than blind human review or independent replication. The calibrated result is REPAIR_REQUIRED and NOT READY for a positive Gate D verdict.
+- Current route family: audit or review (scientific audit).
+- Next recommended action: Run one governed checkpoint for AJ-RT-20260729-009-001. After checkpoint, stop for exact human action: P8-T07 is protected and has no authorization. Before any positive Gate D readiness claim, supply the recorded A4 and A9 status repair plus evidenced blind human review or genuinely independent replication.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -97,7 +97,7 @@ Open or blocked physical targets:
 | Physical target | Status | Missing burden or authority | Evidence not to overread | Next lawful route or evidence |
 | --- | --- | --- | --- | --- |
 | matter_coupling | accepted_as_scoped_evidence_precondition | The exact protected verdict is ADOPTED_AS_CANONICAL_PHYSICAL_MATTER_BY_EXPLICIT_HUMAN_POSTULATE for the unchanged P7-T01 through P7-T06 package within its declared finite domains and the current continuum-first source architecture. This discharges the protected constitutive decision burden but does not supply a first-principles derivation: OBST-P7T07-CROSS-LAYER-COMPOSITION-GAP-001 remains open_derivational_gap_after_constitutive_adoption, current ontology still does not derive the adopted meanings, and P6 Gate B supplies no effective-geometry input. | no_source_law_adoption<br>no_canonical_ontology_edit<br>no_metricdata_e_adoption<br>no_geff_scope_expansion<br>no_coupling_law_adoption<br>no_matter_coupling_derivation<br>no_matter_coupling_adoption<br>no_stress_energy_semantics<br>no_stress_energy_tensor<br>no_matter_action<br>no_detector_semantics<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation<br>no_future_source_extension_impossibility<br>no_global_theory_rejection | research_control/tasks/RT-20260729-001/artifacts/p7_t08_gate_c_decision_v1.tex |
-| einstein_equations | not_started | physical gravitational interpretation target field equations and Einstein-leading recovery | no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | research_control/tasks/RT-20260729-008/artifacts/finite_constraint_dynamical_viability_stress_v1.tex |
+| einstein_equations | not_started | physical gravitational interpretation target field equations and Einstein-leading recovery | no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | research_control/tasks/RT-20260729-009/artifacts/p8_t06_closure_red_team_review_v1.yaml |
 | benchmark_promotion | blocked | all upstream derivation burdens | no_benchmark_promotion<br>no_benchmark_gate_chair_closure<br>no_completed_derivation | research_control/program_state.yaml |
 
 Forbidden overreads:
@@ -291,7 +291,7 @@ preserves the raw ledger `current_status` field for continuity.
 | `m_src` | `source_manifold_m_src` | adopted only as scoped source-only M_src object | accepted | gate_review_completed | scoped_source_only_adopted_object | not_target_manifold_not_metric_not_gr_derivation | scoped_source_object_only | no_metricdata_e_adoption<br>no_geff_scope_expansion<br>no_matter_coupling_derivation<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/tasks/RT-20260614-134/artifacts/165_M_SRC_GSC_INTEGRATED_SOURCE_ONLY_ADOPTION_THEOREM_GATE_CHAIR_REVIEW.tex` |
 | `g_eff` | `effective_metric_g_eff` | ScopedMetricStructureRecord_src adopted as the scoped source-extension record; g_eff^{GSC-cand} retained as exact legacy alias | accepted | gate_review_completed | scoped_source_extension_geff_object | not_unscoped_lorentzian_metric_not_matter_coupling_not_einstein_equations | scoped_source_object_only | no_source_law_adoption<br>no_metricdata_e_adoption<br>no_unscoped_geff_adoption<br>no_matter_coupling_derivation<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation<br>no_global_theory_rejection<br>no_future_source_extension_impossibility | `research_control/tasks/RT-20260727-004/artifacts/p6_t08_gate_b_separating_certificate_v1.yaml` |
 | `matter_coupling` | `matter_coupling` | accepted only as scoped source-extension evidence/precondition | accepted | accepted_as_scoped_evidence_precondition | parameterized_finite_local_witness_precondition | not_matter_coupling_not_stress_energy_not_matter_action_not_detector_semantics | scoped_source_evidence_only | no_source_law_adoption<br>no_canonical_ontology_edit<br>no_metricdata_e_adoption<br>no_geff_scope_expansion<br>no_coupling_law_adoption<br>no_matter_coupling_derivation<br>no_matter_coupling_adoption<br>no_stress_energy_semantics<br>no_stress_energy_tensor<br>no_matter_action<br>no_detector_semantics<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation<br>no_future_source_extension_impossibility<br>no_global_theory_rejection | `research_control/tasks/RT-20260729-001/artifacts/p7_t08_gate_c_decision_v1.tex` |
-| `einstein_equations` | `einstein_equations` | not started; no positive derivation status | draft object exists | not_started | dynamics_action_or_variation_missing | no_field_equation_derivation | none | no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/tasks/RT-20260729-008/artifacts/finite_constraint_dynamical_viability_stress_v1.tex` |
+| `einstein_equations` | `einstein_equations` | not started; no positive derivation status | draft object exists | not_started | dynamics_action_or_variation_missing | no_field_equation_derivation | none | no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/tasks/RT-20260729-009/artifacts/p8_t06_closure_red_team_review_v1.yaml` |
 | `finite_variation_robustness` | `source_equivalence_eqsrc` | Refuter stress passed | Refuter stress passed | refuter_stress_passed | conditional_theorem_candidate | downstream_gr_blocked | draft_control_only | no_source_law_adoption<br>no_matter_coupling_derivation<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/tasks/RT-20260614-101/artifacts/142_RESP_LC_M_SRC_GSC_FINITE_VARIATION_ROBUSTNESS_LAW_REFUTER_STRESS_TEST.tex` |
 | `benchmark_promotion` | `benchmark_promotion` | no benchmark promotion from scoped evidence/precondition alone | blocked by missing primitive | blocked | upstream_burdens_missing | no_exact_gr_benchmark_promotion | none | no_benchmark_promotion<br>no_benchmark_gate_chair_closure<br>no_completed_derivation | `research_control/program_state.yaml` |
 | `gate_chair_status` | `benchmark_promotion` | human-gated verdict authority only | human-gated | human_gated | protected_verdict_missing | no_benchmark_closure | human_gate_required | no_benchmark_gate_chair_closure<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/approvals/README.md` |
@@ -302,7 +302,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one governed checkpoint for AJ-RT-20260729-008-001. Only after it commits may one fresh bounded P8-T06 external-red-team-reviewer@0.1.0 packet audit the unchanged P8-T03 through P8-T05 closure record and this scoped obstruction for target import hidden assumptions algebraic error and interpretation overread without assuming physical viability or a healthy GR limit.
+Run one governed checkpoint for AJ-RT-20260729-009-001. After checkpoint, stop for exact human action: P8-T07 is protected and has no authorization. Before any positive Gate D readiness claim, supply the recorded A4 and A9 status repair plus evidenced blind human review or genuinely independent replication.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -318,21 +318,53 @@ completion or handoff says so.
 
 Layer status summary:
 
-No validation-layer status summary is available.
+| Status | Count | Meaning |
+| --- | --- | --- |
+| `PASS` | 6 | receipt complete |
+| `PENDING` | 1 | open item; evidence must explain why |
 
 Validation layers:
 
-No validation-layer split is recorded in the latest handoff.
+| Validation layer | Status | Meaning | Evidence |
+| --- | --- | --- | --- |
+| `pre_execution` | PASS | receipt complete | Generation 162 validated, was atomically claimed once, and consumed the immutable P8-T06 continue-research route once.<br>P8-T05 dependency checkpoint c9af10eb4cf8116eb29fe358c7d0e818a4863fc6 is committed. |
+| `completion_internal` | PASS | receipt complete | Exact finite reproduction, assumption-status audit, review-provenance calibration, Gate D matrix, and authority checks pass. |
+| `post_write` | PASS | receipt complete | Integrated control, documentation-impact, memory, renderer, claim-language, and selected test validation pass before checkpoint. |
+| `post_checkpoint` | PENDING | open item; evidence must explain why | One governed checkpoint remains; P8-T07 is unexecuted and lacks exact protected authority. |
+| `renderer` | PASS | receipt complete | Current frontier, task index, compact frontier, dependency graph, claim graph, and generated memory derivatives are synchronized. |
+| `memory_bootstrap` | PASS | receipt complete | Tracked memory synchronization and validate-only mode pass. |
+| `claim_language_linter` | PASS | receipt complete | Changed-source claim-language validation passes. |
 
 Authorization layers:
 
-No authorization-layer split is recorded in the latest handoff.
+| Authorization field | Value | Meaning |
+| --- | --- | --- |
+| `protected_scoped_gate_review_authorized` | false (not authorized) | scoped review authority only |
+| `protected_scoped_gate_review_scope` | none | exact scope of protected review authority |
+| `protected_scoped_gate_review_authority_source_path` | none | tracked source for scoped review authority |
+| `downstream_physics_promotion_authorized` | false (not authorized) | authorizes downstream physics promotion only when true |
+| `downstream_physics_promotion_authority_source_path` | none | tracked source for downstream promotion authority |
+| `benchmark_promotion_authorized` | false (not authorized) | authorizes benchmark promotion only when true |
+| `benchmark_promotion_authority_source_path` | none | tracked source for benchmark authority |
+| `completed_derivation_authorized` | false (not authorized) | authorizes completed-derivation claim only when true |
+| `completed_derivation_authority_source_path` | none | tracked source for completed-derivation authority |
+| `Einstein_equation_derivation_authorized` | False | extension authorization field |
+| `Gate_Chair_verdict_authorized` | False | extension authorization field |
+| `canonical_ontology_edit_authorized` | False | extension authorization field |
+| `external_outreach_authorized` | False | extension authorization field |
+| `external_publication_authorized` | False | extension authorization field |
+| `human_endorsement_claim_authorized` | False | extension authorization field |
+| `independent_replication_claim_authorized` | False | extension authorization field |
+| `publication_authorized` | False | extension authorization field |
+| `push_authorized` | False | extension authorization field |
+| `source_law_adoption_authorized` | False | extension authorization field |
+| `source_law_rejection_authorized` | False | extension authorization field |
 
 Legacy compatibility records:
 
-- active task: `RT-20260729-008`;
-- latest handoff: `handoff-0904`;
-- current status: `p8_t05_exact_algebraic_mode_classification_and_scoped_dynamical_viability_obstruction_ready_for_checkpoint`;
+- active task: `RT-20260729-009`;
+- latest handoff: `handoff-0905`;
+- current status: `p8_t06_repair_required_not_ready_for_positive_gate_d_ready_for_checkpoint`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -342,8 +374,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0904.yaml`
-- `research_control/tasks/RT-20260729-008/00_TASK.yaml`
+- `research_control/handoffs/handoff-0905.yaml`
+- `research_control/tasks/RT-20260729-009/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -359,7 +391,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0904*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0905*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

@@ -1,0 +1,56 @@
+schema_id: "independent_review_human_action_v1"
+artifact_id: "P8T06IndependentReviewHumanAction_v1"
+task_id: "RT-20260729-009"
+plan_task_id: "P8-T06"
+status: "HUMAN_ACTION_REQUIRED"
+action_owner: "human research lead or explicitly authorized external-review coordinator"
+action_purpose: "Obtain the missing blind mathematical review and resolve the review-provenance and assumption-status deficits before any positive Gate D readiness claim."
+
+exact_actions:
+  - action_id: "HA-P8T06-01"
+    action: "Freeze the four immutable claim-bearing sources at the hashes listed in blind_mathematical_review_status_v1.yaml and assemble a review packet that excludes validator, checkpoint, registry, and prior-verdict persuasion."
+    completion_evidence: "A tracked packet manifest with exact source hashes and exclusion list."
+  - action_id: "HA-P8T06-02"
+    action: "Assign a mathematically qualified reviewer who did not author the package and record blindness, prior context, data, code, method, institution, and human-authorship provenance."
+    completion_evidence: "A structured v21_review_context_v1 record supporting human_expert_review or a genuinely independent_replication class."
+  - action_id: "HA-P8T06-03"
+    action: "Require line-by-line reproduction of the variation, quotient solution, flux identities, identity completeness, mode count, two completion countermodels, and A0 through A9 assumption map."
+    completion_evidence: "A signed or attributable review artifact with equations, disagreements, severities, and source citations."
+  - action_id: "HA-P8T06-04"
+    action: "Resolve P8T06-F01 by either supplying an explicit source-side coarse-graining map, valid scale interval, remainder norm, and source-controlled bound, or correcting the P8-T03 A4 status to not established. Resolve P8T06-F03 by limiting A9 to static finite variational control."
+    completion_evidence: "A separately authorized repair completion and fresh audit; the External Red-Team Reviewer must not edit the reviewed sources."
+  - action_id: "HA-P8T06-05"
+    action: "Present Gate D only with the repaired assumption ledger and the evidenced independent-review artifact, or explicitly ask Gate D to record NOT READY without adopting or promoting the package."
+    completion_evidence: "Exact protected human authorization for P8-T07 and a Gate Chair record limited to the presented question."
+
+acceptance_conditions:
+  all_source_hashes_match: true
+  reviewer_provenance_evidenced: true
+  external_or_independent_claim_supported_by_context: true
+  A4_defect_resolved_or_status_corrected: true
+  A9_static_scope_explicit: true
+  disagreements_preserved: true
+  physical_and_promotion_blocks_preserved: true
+
+current_status:
+  packet_manifest_created: false
+  qualified_human_reviewer_assigned: false
+  blind_review_completed: false
+  independent_replication_completed: false
+  source_status_repair_completed: false
+  P8_T07_exact_authorization_present: false
+
+forbidden_actions:
+  - "Do not contact an external reviewer without explicit outreach authority."
+  - "Do not edit prior science inside this critique-only task."
+  - "Do not treat a same-model rerun, new prompt, or role label as independence."
+  - "Do not use target GR equations to repair source-side A4 data."
+  - "Do not promote the finite equation, physical stability, Einstein equations, exact-GR recovery, or benchmark status."
+
+authority_limits:
+  outreach_authorized: false
+  Gate_Chair_authority_created: false
+  source_repair_authorized_by_this_artifact: false
+  source_law_adopted_or_rejected: false
+  Einstein_equations_derived: false
+  physics_promotion_authorized: false

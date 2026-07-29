@@ -1,0 +1,623 @@
+validation_status: "PASS"
+final_repository_validation_status: "PASS_READY_FOR_CHECKPOINT"
+job_id: "AJ-RT-20260729-009-001"
+completion_id: "AJC-AJ-RT-20260729-009-001"
+task_id: "RT-20260729-009"
+task_type: "v21_p8_t06_closure_derivation_and_independent_review"
+decision_id: "DDR-20260729-009"
+role_id: "external-red-team-reviewer"
+role_version: "0.1.0"
+execution_role_ref: "external-red-team-reviewer@0.1.0--RT-20260729-009"
+status: "completed"
+created_at: "2026-07-29T22:01:00Z"
+started_at: "2026-07-29T22:01:00Z"
+completed_at: "2026-07-29T22:01:00Z"
+objective: "Execute only v21 P8-T06 by reviewing the unchanged P8-T03 through P8-T05 action, equation, correction, and stability package for target import, hidden assumptions, algebraic error, interpretation overread, and independent-review readiness; perform exact finite reproduction; and record a Gate D matrix plus exact human action without modifying reviewed science."
+completion_summary: "P8-T06 directly reproduces the finite first variation, quotient solution, on-shell value, flux identities, identity completeness, algebraic mode count, and shared-static-equation dynamical countermodel pair. It finds no hidden target import and no finite-core algebraic error. It finds one blocking assumption-status defect: P8-T03 does not supply the coarse-graining map, valid scale interval, remainder norm, or source-controlled bound required by unchanged P8-T02 A4. A9 is valid only for static finite variation. This same-context AI review is neither blind review nor independent replication. The calibrated result is REPAIR_REQUIRED and NOT READY for a positive Gate D verdict; exact human action is recorded."
+objective_result: "repair_required_not_ready_for_positive_gate_d"
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 162
+  passes_consumed: 148
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:162"
+  handoff_token: "63d78893553d7b2e6a218aa06b8cc83dd06b734c93dbd8a5"
+  relay_claim_token: "9049e9e5a4621d008b81d1e325a39cbbcd03a0c2b086e856"
+  route_work_item_id: "P8-T06"
+  route_worker_skill: "continue-research"
+  route_sha256: "bbed817709638de87aff2ae06d081defc4bfaa25617583a4de3a0a5a2e2c2edc"
+  route_reason: "dependency_ready_in_scope"
+  route_strategy_id: "continue_in_scope_generation_162"
+  route_blocker_fingerprint: "a6019d421cf2920af44ff8c528f82bd9c84efc394cbc46fe90d542c09147b885"
+  route_before_fingerprint: "a6019d421cf2920af44ff8c528f82bd9c84efc394cbc46fe90d542c09147b885"
+  route_evidence_sha256es:
+    - "a6019d421cf2920af44ff8c528f82bd9c84efc394cbc46fe90d542c09147b885"
+    - "e7e8eef6c2921a8c6dba656cfab58411f5cf5ad1f6af5661daec0f09b5642484"
+  worker_skill: "continue-research"
+  worker_invocation_count: 1
+
+transaction_status: "ready_for_checkpoint"
+result_disposition: "P8_T06_REPAIR_REQUIRED_NOT_READY_FOR_POSITIVE_GATE_D_READY_FOR_CHECKPOINT"
+milestone_disposition: "finite_algebra_reproduced_assumption_status_and_independent_review_deficits_recorded"
+adoption_status: "blocked_adoption_open_continuation"
+checkpoint_commit:
+  required: true
+  attempted: false
+  committed: false
+  commit_sha: ""
+  dependency_checkpoint_commit: "c9af10eb4cf8116eb29fe358c7d0e818a4863fc6"
+  push_authorized: false
+  push_performed: false
+
+is_physics_task: true
+payload_class: "audit_reproduction_and_precise_obstruction"
+has_new_mathematical_payload: true
+source_extension_classification_required: false
+external_red_team_finding_requires_integration: false
+physics_promotion_authorized: false
+proof_authority: false
+
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P8"
+  plan_task_id: "P8-T06"
+  work_kind: "audit_or_review"
+  task_class: "science"
+  expected_result_kind: "audit_verdict_or_precise_repair"
+  dependency_task_ids:
+    - "P8-T05"
+  dependency_completion_paths:
+    - "research_control/tasks/RT-20260729-008/jobs/completions/AJC-AJ-RT-20260729-008-001.yaml"
+  dependency_completion_sha256es:
+    - "10c10812a7b7e6a15a52bd9e7d9af527b1ba97e8db6d699c3e739c2148a7f317"
+  dependency_checkpoint_commits:
+    - "c9af10eb4cf8116eb29fe358c7d0e818a4863fc6"
+  work_item_status: "completed_with_precise_repair_and_exact_human_action_ready_for_checkpoint"
+  recommendation_ids:
+    - "V21-R26"
+    - "V21-R27"
+    - "V21-R29"
+    - "V21-R36"
+    - "V21-R37"
+    - "V21-R39"
+    - "V21-R55"
+    - "V21-R68"
+  recommendation_coverage_role: "direct_implementation"
+  scientific_claims_changed: true
+  scientific_claim_change_scope: "task-local exact finite reproduction A4 missing-hypothesis finding A9 static-only calibration and review-independence deficit"
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  distance_to_gr_delta_scope: "audit and repair status only; layered physical burden unchanged"
+  physics_promotion_authorized: false
+  proof_authority: false
+  next_dependency_work_item: "P8-T07_human_gate_deferred_until_exact_authorization_and_precondition_review"
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  observed_durable_outputs:
+    physics:
+      - "one external-role red-team review with exact finding severities"
+      - "one direct finite-algebra reproduction and A0 through A9 map"
+      - "one Gate D readiness matrix and exact human action"
+    project_system:
+      - "one task-local deterministic validator and compact receipt"
+      - "one structured review-context provenance record"
+  accepted_criteria:
+    physics:
+      - "the complete action equation correction and stability chain is directly audited"
+      - "finite algebra and assumption-status findings are separated"
+      - "independence and physical-status claims fail closed"
+      - "one exact repair or human action is recorded"
+    project_system:
+      - "source hashes, external-review schema, parent-child synthesis, and authority flags pass"
+      - "claim-language documentation-impact and research-control gates pass"
+      - "one governed checkpoint records the bounded transaction"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+physics_payload_admission_result:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "physics"
+  declared_payload_type: "precise_obstruction"
+  realized_payload_type: "precise_obstruction_with_exact_reproduction_and_gate_readiness_matrix"
+  candidate_family: "V21-P8-T03-THROUGH-P8-T05-CLOSURE-PACKAGE"
+  result: "PASS"
+  material_payload_present: true
+  process_receipts_counted_as_payload: false
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed_by_admission: false
+  physics_promotion_authorized: false
+
+family_freeze_admission_result:
+  schema_id: "family_freeze_route_admission_v1"
+  policy_id: "family_freeze_reopening_policy_v1"
+  route_id: "v21_p8_t06_closure_gate_d_readiness_audit"
+  family_id: "V21-P8-T03-THROUGH-P8-T05-CLOSURE-PACKAGE"
+  detected_match_basis: []
+  reopening_requested: false
+  result: "PASS_DISTINCT_AUDIT_AND_PRECISE_REPAIR_BRANCH"
+  local_family_freeze_preserved: true
+  global_no_go_claimed: false
+  physics_promotion_authorized: false
+
+ordinary_route_guard_admission_result:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0904"
+  selected_plan_task_id: "P8-T06"
+  guard_outcome: "below_threshold"
+  result: "PASS"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  scientific_status_changed_by_guard: false
+  physics_promotion_authorized: false
+
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_execution_unit_count: 2
+  outer_agentjob_count: 1
+  child_agentjob_count: 0
+  subagent_count: 0
+
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260729-009/artifacts/child_phys_math_p8_t06_closure_review.yaml"
+      output_sha256: "d8811e0f8e6dcd215cb66055559b22f0f24a966afb389c65d8175e3de7ef705a"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260729-009/artifacts/child_phys_phil_p8_t06_closure_review.yaml"
+      output_sha256: "ecca114f88f60f66109756e3b0be7387c78fe834267203c0df2143c5a8a2f3d4"
+      status: "completed"
+  conflict_review:
+    status: "resolved"
+    review_path: "research_control/tasks/RT-20260729-009/artifacts/parent_conflict_review_p8_t06_closure_review.yaml"
+    review_sha256: "a36903dbe73ebbe295335fb331148f353986d1e80e2203eb3f3a8d65df86a4d0"
+    resolution_rounds: 1
+    resolved_conflict_count: 5
+    unresolved_conflicts: []
+  fusion:
+    fused_output_path: "research_control/tasks/RT-20260729-009/artifacts/p8_t06_closure_red_team_review_v1.yaml"
+    fusion_notes_path: "research_control/tasks/RT-20260729-009/artifacts/parent_fusion_notes_p8_t06_closure_review.md"
+    shared_consensus_summary: "The finite algebra is credible in exact proposal-only scope, but A4 is not instantiated as written, A9 is static only, and positive Gate D readiness lacks independent review."
+    unique_phys_math_contributions: "Direct variation quotient identity rank-nullity two-state countermodel and A0 through A9 reproduction."
+    unique_phys_phil_contributions: "Construction-versus-derivation status finite-versus-physical terminology review-provenance calibration and exact human-action boundary."
+    novelty_preservation_summary: "Fusion adds the first exact A4 missing-hypothesis finding and complete Gate D readiness matrix for the fixed P8 closure package."
+    claim_boundary_preservation_summary: "No reviewed-source or ontology edit external outreach human or independent-review claim source-law or candidate adoption physical gravity Einstein equation Gate Chair verdict benchmark proof publication push global no-go or completed derivation is authorized."
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+
+memory_preflight:
+  preflight_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1083
+    relationship_row_count: 5491
+    semantic_row_count: 1083
+    vault_row_count: 1083
+    local_cache_only_warning_count: 0
+    refresh_performed: true
+  refresh_needed: true
+  refresh_performed: true
+  refresh_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py"
+  before_refresh:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    warning_count: 9
+  after_refresh:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    source_object_count: 1083
+    relationship_row_count: 5491
+    semantic_row_count: 1083
+    vault_row_count: 1083
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search 'closure derivation independent review' --json"
+      query_type: "search"
+      query_text: "closure derivation independent review"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-DESIGN-EXTERNAL-RED-TEAM-PACKET-TEMPLATE-V1"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-V21-P8-T05-FINITE-CONSTRAINT-DYNAMICAL-VIABILITY-STRESS-V1 --json"
+      query_type: "lookup"
+      query_text: "TEX-V21-P8-T05-FINITE-CONSTRAINT-DYNAMICAL-VIABILITY-STRESS-V1"
+      returned_object_ids:
+        - "TEX-V21-P8-T05-FINITE-CONSTRAINT-DYNAMICAL-VIABILITY-STRESS-V1"
+  canonical_inspections:
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-EXTERNAL-RED-TEAM-PACKET-TEMPLATE-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/external_red_team_packet_template_v1.md"
+      source_hash: "b73c3750a4cf82a7b021a574964ee808e05b3a6eb460e25fd42ea3d593c23f4a"
+    - object_id: "TEX-V21-P8-T05-FINITE-CONSTRAINT-DYNAMICAL-VIABILITY-STRESS-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260729-008/artifacts/finite_constraint_dynamical_viability_stress_v1.tex"
+      source_hash: "ddd39764c3b6f86e86574458b885e90271a2b044d1d141ae931723e80599acb1"
+  authority_note: "Obsidian wiki notes, semantic extracts, the SQLite memory index, PDFs, and .local files are retrieval layers only and are not authority."
+
+external_red_team_result:
+  reviewed_object_id: "V21-P8-T03-THROUGH-P8-T05-CLOSURE-PACKAGE"
+  review_mode: "same_context_internal_parent_child_review"
+  verdict: "repair_required"
+  review_context_classification: "same_context_role_review"
+  child_review_count: 2
+  blocking_finding_count: 1
+  high_finding_count: 3
+  medium_finding_count: 1
+  total_finding_count: 5
+  hidden_target_import_count: 0
+  finite_core_algebra_error_count: 0
+  resolved_difference_count: 5
+  unresolved_disagreement_count: 0
+  minimal_countermodel_attempt_count: 1
+  in_scope_countermodel_count: 1
+  actual_external_human_review_completed: false
+  blind_review_completed: false
+  independent_replication_completed: false
+  exact_human_action_recorded: true
+  Gate_D_criterion_count: 10
+  Gate_D_positive_readiness: false
+  calibrated_object_status: "finite proposal-scope algebra reproduced; full A0 through A9 closure and independently reviewed Gate D readiness not established"
+  adoption_status: "blocked_adoption_open_continuation"
+  workflow_success_disregarded_as_scientific_evidence: true
+  validator_success_disregarded_as_scientific_evidence: true
+  role_separation_disregarded_as_external_replication: true
+  finding_requires_integration: false
+  exact_finding: "The unchanged P8-T03 candidate does not supply the coarse-graining map valid scale interval remainder norm or source-controlled bound required by unchanged P8-T02 A4, and the active same-context review does not satisfy blind or independent-review provenance."
+  narrowest_continuation: "Preserve the finite algebra, satisfy the exact human-review and source-status repair action, and execute P8-T07 only under exact protected authority; otherwise the maximum honest Gate D disposition is NOT READY."
+
+new_mathematical_payload:
+  - payload_id: "P8T06-PAYLOAD-EXACT-REPRODUCTION-001"
+    payload_type: "explicit_witness"
+    name: "Independent-role exact finite closure reproduction"
+    summary: "Reproduces the variation solution on-shell value identities rank-nullity count and dynamical-completion pair without relying on validator success."
+  - payload_id: "P8T06-PAYLOAD-A4-OBSTRUCTION-001"
+    payload_type: "obstruction"
+    name: "P8-T02 A4 missing-hypothesis obstruction"
+    summary: "Shows that exact finite definition and zero remainder by definition do not supply the required coarse-graining scale norm and source-controlled bound."
+  - payload_id: "P8T06-PAYLOAD-GATE-D-MATRIX-001"
+    payload_type: "dependency_map_update"
+    name: "Ten-criterion Gate D readiness matrix"
+    summary: "Separates finite mathematics from source derivation physical dynamics Einstein structure correction control independent review and protected authority."
+
+mathematical_payload_manifest:
+  - payload_id: "P8T06-PAYLOAD-EXACT-REPRODUCTION-001"
+    payload_type: "explicit_witness"
+    object_name: "Exact finite closure reproduction"
+    claim_status: "draft/control same-context reproduction"
+    source_path: "research_control/tasks/RT-20260729-009/artifacts/closure_symbolic_reproduction_v1.yaml"
+    burden_effect: "audits"
+    summary: "Reproduces the finite algebra and records exact scope limits."
+  - payload_id: "P8T06-PAYLOAD-A4-OBSTRUCTION-001"
+    payload_type: "obstruction"
+    object_name: "OBST-P8T06-CLOSURE-A4-AND-REVIEW-READINESS-ABSENT-001"
+    claim_status: "draft/control precise scoped obstruction"
+    source_path: "research_control/tasks/RT-20260729-009/artifacts/p8_t06_closure_smuggling_audit_v1.yaml"
+    burden_effect: "obstructs"
+    summary: "The unchanged package does not instantiate A4 as written and has no independently evidenced review."
+  - payload_id: "P8T06-PAYLOAD-GATE-D-MATRIX-001"
+    payload_type: "dependency_map_update"
+    object_name: "P8-T06 Gate D readiness matrix"
+    claim_status: "draft/control audit calibration"
+    source_path: "research_control/tasks/RT-20260729-009/artifacts/p8_t06_gate_d_readiness_matrix_v1.yaml"
+    burden_effect: "requires_human_gate"
+    summary: "Records three in-scope passes, six failed or unestablished criteria, one deferred protected criterion, and NOT READY overall."
+
+physics_progress_status:
+  status: "precise_obstruction_found"
+  target_derivation_milestone: "einstein_equations"
+  milestone_burden: "Calibrate the field-equation result before any protected verdict."
+  explanation: "The finite proposal-scope algebra is reproduced, but A4 is not instantiated as written, A9 is static only, and blind or independent review is absent. The package is not ready for a positive Gate D verdict."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+loop_risk_decision:
+  category: "precise_repair"
+  next_route: "human_action_then_protected_gate"
+  rationale: "The packet adds a concrete missing-hypothesis finding and exact review-provenance action instead of repeating the finite derivation. Repeating same-context review or validator checks cannot discharge the missing evidence."
+  obstruction_summary: "The unchanged package lacks the A4 scale-and-correction tuple and independently evidenced review required for positive Gate D readiness."
+  repeated_burdens: []
+
+obstruction_record:
+  present: true
+  obstruction_id: "OBST-P8T06-CLOSURE-A4-AND-REVIEW-READINESS-ABSENT-001"
+  scope: "einstein_equations"
+  failed_object: "the unchanged P8-T03 through P8-T05 package as a fully A0-through-A9-instantiated independently reviewed Gate D-ready derivation"
+  exact_failure: "P8-T03 supplies no coarse-graining map valid scale interval remainder norm or source-controlled bound for A4; A9 is static only; and the active same-context review has no blind human or independent-replication provenance."
+  minimal_counterexample_path: "research_control/tasks/RT-20260729-008/artifacts/finite_constraint_dynamic_completion_countermodels_v1.yaml"
+  current_ontology_implication: "does_not_derive"
+  source_extension_implication: "repair_allowed"
+  consequence: "human_gate_required"
+  forbidden_overread: "This scoped readiness obstruction does not invalidate the exact finite algebra, reject the global theory, prove future repair impossible, or issue a Gate D verdict."
+
+distance_to_gr_delta:
+  changed: false
+  effect: "audit_repair_status_recorded"
+  burden_id: "einstein_equations"
+  milestone: "einstein_equations"
+  old_status: "draft object exists"
+  new_status: "draft object exists"
+  ledger_row_updated: true
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "The evidence path and notes are updated to the P8-T06 audit and precise repair finding while the control mathematical physical and promotion layers remain not_started dynamics_action_or_variation_missing no_field_equation_derivation and none."
+  downstream_unlocked:
+    - "P8-T07 protected NOT READY or other exact Gate D disposition only after checkpoint and exact human authority"
+  downstream_still_blocked:
+    - "positive Gate D readiness"
+    - "source-derived gravitational action"
+    - "physical gravitational dynamics"
+    - "target field equation"
+    - "Einstein equations"
+    - "exact-GR recovery"
+    - "benchmark promotion"
+  explanation: "The completion adds audit evidence and a repair obligation but no qualifying physical Distance-to-GR status change."
+
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "unchanged; no canonical ontology edit or source-law adoption"
+  - burden: "Source equivalence EqSrc"
+    status: "unchanged"
+  - burden: "RetainH GenH ObsLoc_lc and Resp_lc"
+    status: "unchanged"
+  - burden: "M_src"
+    status: "unchanged protected finite matter status"
+  - burden: "g_eff"
+    status: "unresolved; no target geometry or metric enters the finite reproduction"
+  - burden: "matter coupling"
+    status: "unchanged; no target stress energy or universal gravitational coupling"
+  - burden: "Einstein equations"
+    status: "finite proposal-scope algebra reproduced; A4 repair A9 static-only calibration physical dynamics target tensor structure independent review and protected Gate D verdict remain outstanding"
+  - burden: "finite-variation robustness"
+    status: "static exact finite identities survive audit; no continuum or physical correction control is established"
+  - burden: "benchmark promotion"
+    status: "blocked"
+  - burden: "Gate Chair status"
+    status: "no protected verdict or authorization exists in P8-T06"
+  - burden: "current route freeze or hard-fail status"
+    status: "positive Gate D readiness of the unchanged package is locally frozen pending exact repair and independently evidenced review"
+
+freeze_criteria_status:
+  repeated_burden: false
+  freeze_evaluation_required: true
+  active_freeze_label: "UNCHANGED_P8_CLOSURE_PACKAGE_AS_POSITIVE_GATE_D_READY"
+  candidate_freeze_label: "UNCHANGED_P8_CLOSURE_PACKAGE_WITHOUT_A4_REPAIR_OR_INDEPENDENT_REVIEW"
+  prior_attempts_considered:
+    - "RT-20260729-005"
+    - "RT-20260729-006"
+    - "RT-20260729-007"
+    - "RT-20260729-008"
+    - "RT-20260729-009"
+  freeze_if:
+    - "The unchanged exact finite equations validator results or same-context review are reused as full A0-through-A9 closure independent review physical viability or positive Gate D evidence."
+  do_not_freeze_if:
+    - "A separately authorized repair supplies the exact A4 tuple and static-only A9 calibration."
+    - "An evidenced blind human review or genuinely independent replication completes."
+    - "Exact protected authority asks Gate D only for a calibrated NOT READY disposition."
+  freeze_decision: "human_gate_required"
+  decision_reason: "No lawful local worker can manufacture blind human or independent-review provenance, and P8-T07 itself is protected. The task records exact human action and stops positive readiness."
+  next_allowed_route: "gate_chair"
+  status_update_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  exact_finite_algebra_preserved: true
+  global_theory_rejection: false
+  future_source_extension_impossibility: false
+
+route_cycle_control:
+  cycle_family: "v21_p8_local_effective_action_closure"
+  current_cycle_step: "p8_t06_exact_reproduction_repair_and_human_action"
+  prior_related_tasks:
+    - "RT-20260729-005"
+    - "RT-20260729-006"
+    - "RT-20260729-007"
+    - "RT-20260729-008"
+  cycle_risk: "high"
+  orbit_avoidance_reason: "P8-T06 finds a new exact A4 status defect, calibrates A9 and independence, and records an exact human action rather than rerunning construction, stress, or validator checks."
+  next_role_consequence: "gate-chair@0.1.0 only after exact protected authorization; positive readiness additionally requires the recorded repair and independent-review evidence, otherwise stop at human action"
+
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+  summary: "Finite algebra reproduction and validator PASS are not source derivation, physical dynamics, independent review, Gate Chair authority, or Einstein-equation evidence."
+  forbidden_conclusions:
+    - "same-context AI review as blind external human review or independent replication"
+    - "canonical ontology edit or source-law adoption or rejection"
+    - "P8 quotient carrier action equation or coefficients as adopted physical gravity"
+    - "static graph operator or positive Hessian as physical dynamics or stability"
+    - "component identity as diffeomorphism invariance Bianchi identity or target conservation"
+    - "Einstein-equation derivation or exact-GR recovery"
+    - "positive Gate D verdict or Gate Chair authority"
+    - "benchmark promotion proof publication push or completed derivation"
+    - "global theory rejection or future source-extension impossibility"
+
+selected_next_route:
+  route_id: "v21_p8_t07_human_gate_d_review"
+  route_label: "human-gated-field-equation-review"
+  role_family: "gate-chair@0.1.0"
+  worker_skill: "none_until_human_authorization"
+  plan_task_id: "P8-T07"
+  target_derivation_milestone: "einstein_equations"
+  milestone_burden: "Make the protected field-equation decision before benchmark promotion."
+  requires_human_gate: true
+  exact_human_authorization_present: false
+  independent_review_precondition_satisfied: false
+  source_status_repair_precondition_satisfied: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_after_checkpoint: false
+  physics_promotion_authorized: false
+  next_action: "After checkpoint, stop for exact human action. Do not execute P8-T07 without exact protected authorization; before any positive readiness claim, complete the repair and independently evidenced review."
+  source_handoff: "research_control/handoffs/handoff-0905.yaml"
+
+claim_boundary:
+  boundary_id: "CB-V21-P8-T06-CLOSURE-INDEPENDENT-REVIEW-001"
+  allowed_scope: "Immutable package critique direct finite reproduction A0-through-A9 audit same-context provenance calibration exact repair finding Gate D matrix and human action."
+  blocked_scope: "Reviewed-source or ontology edit external outreach blind human or independent-review claim source-law candidate or dynamics adoption physical gravity target metric stress energy Einstein equation Gate Chair verdict benchmark proof publication push completed derivation global no-go or future impossibility."
+  claim_boundary_preserved: true
+
+artifact_evidence:
+  fused_review:
+    path: "research_control/tasks/RT-20260729-009/artifacts/p8_t06_closure_red_team_review_v1.yaml"
+    sha256: "ea95f6c5a89c36ee827194501db08b53e570e9f2badbf77e10320bbc813fbde7"
+  smuggling_audit:
+    path: "research_control/tasks/RT-20260729-009/artifacts/p8_t06_closure_smuggling_audit_v1.yaml"
+    sha256: "43034c9cfbc51dee2c505e1d1c5abab2ea9863c87f1017d560b7784ec14abd57"
+  reproduction:
+    path: "research_control/tasks/RT-20260729-009/artifacts/closure_symbolic_reproduction_v1.yaml"
+    sha256: "310f2d5d38f1f6822628eae87ceeb0bc6cc1368f5f65bcc077867f3dbf23a2db"
+  blind_status:
+    path: "research_control/tasks/RT-20260729-009/artifacts/blind_mathematical_review_status_v1.yaml"
+    sha256: "31df9d0532a29dc3a716d2c3e5059839f258e5346952efb96d9fe676029e13f0"
+  human_action:
+    path: "research_control/tasks/RT-20260729-009/artifacts/independent_review_human_action_v1.yaml"
+    sha256: "b0e6cae3efcf5501a0f751e21aa1e96478751cd869364a9507dfac4f9d7a1cba"
+  gate_d_matrix:
+    path: "research_control/tasks/RT-20260729-009/artifacts/p8_t06_gate_d_readiness_matrix_v1.yaml"
+    sha256: "ca3f9252d1fe8e2e0814110dbc6a25b274f710d9220ec0e9d7933e82f3b1b3d0"
+  compact_receipt:
+    path: "research_control/tasks/RT-20260729-009/artifacts/p8_t06_closure_review_compact_receipt_v1.json"
+    sha256: "47452627a0b1fdad22a2ea69cdd7b5612092c746b3074a7b36baa17017616403"
+  validation:
+    path: "research_control/tasks/RT-20260729-009/artifacts/p8_t06_closure_review_validation_v1.json"
+    sha256: "76acd92e19b85cec772ecc6612a99f738c9c05879d0f66f6cf9ebb81f67e081d"
+
+output_paths:
+  - "research_control/tasks/RT-20260729-009/artifacts/p8_t06_closure_red_team_review_v1.yaml"
+  - "research_control/tasks/RT-20260729-009/artifacts/p8_t06_closure_smuggling_audit_v1.yaml"
+  - "research_control/tasks/RT-20260729-009/artifacts/closure_symbolic_reproduction_v1.yaml"
+  - "research_control/tasks/RT-20260729-009/artifacts/blind_mathematical_review_status_v1.yaml"
+  - "research_control/tasks/RT-20260729-009/artifacts/independent_review_human_action_v1.yaml"
+  - "research_control/tasks/RT-20260729-009/artifacts/p8_t06_gate_d_readiness_matrix_v1.yaml"
+  - "research_control/tasks/RT-20260729-009/artifacts/p8_t06_closure_review_compact_receipt_v1.json"
+  - "research_control/tasks/RT-20260729-009/artifacts/p8_t06_closure_review_validation_v1.json"
+  - "research_control/tasks/RT-20260729-009/artifacts/p8_t06_closure_review_receipt.md"
+  - "research_control/tasks/RT-20260729-009/artifacts/child_phys_math_p8_t06_closure_review.yaml"
+  - "research_control/tasks/RT-20260729-009/artifacts/child_phys_phil_p8_t06_closure_review.yaml"
+  - "research_control/tasks/RT-20260729-009/artifacts/parent_conflict_review_p8_t06_closure_review.yaml"
+  - "research_control/tasks/RT-20260729-009/artifacts/parent_fusion_notes_p8_t06_closure_review.md"
+  - "research_control/tasks/RT-20260729-009/artifacts/validate_p8_t06_closure_review.py"
+
+validation_receipts:
+  local_validator_report: "research_control/tasks/RT-20260729-009/artifacts/p8_t06_closure_review_validation_v1.json"
+  local_validator_report_hash: "76acd92e19b85cec772ecc6612a99f738c9c05879d0f66f6cf9ebb81f67e081d"
+  compact_receipt_hash: "47452627a0b1fdad22a2ea69cdd7b5612092c746b3074a7b36baa17017616403"
+  fused_review_hash: "ea95f6c5a89c36ee827194501db08b53e570e9f2badbf77e10320bbc813fbde7"
+  smuggling_audit_hash: "43034c9cfbc51dee2c505e1d1c5abab2ea9863c87f1017d560b7784ec14abd57"
+  reproduction_hash: "310f2d5d38f1f6822628eae87ceeb0bc6cc1368f5f65bcc077867f3dbf23a2db"
+  gate_d_matrix_hash: "ca3f9252d1fe8e2e0814110dbc6a25b274f710d9220ec0e9d7933e82f3b1b3d0"
+  task_local_check_count: 101
+  task_local_failed_check_count: 0
+  external_red_team_schema_status: "PASS"
+  review_context_classification: "same_context_role_review"
+  validation_status: "PASS"
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "none"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  publication_authorized: false
+  protected_gate_d_authorized: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  canonical_ontology_edit_authorized: false
+  candidate_action_adoption_authorized: false
+  independent_replication_claim_authorized: false
+  human_endorsement_claim_authorized: false
+  physical_dynamics_adoption_authorized: false
+  Einstein_equation_derivation_authorized: false
+  Gate_Chair_verdict_authorized: false
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"
+  notes: "No nonblank project-improvement signal was emitted."
+
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=true source_object_count=1083 relationship_row_count=5491 semantic_row_count=1083 vault_row_count=1083"
+  - ".venv/bin/python research_control/tasks/RT-20260729-009/artifacts/validate_p8_t06_closure_review.py --write-report --json | exit_code=0 | status=PASS check_count=101 failure_count=0"
+  - ".venv/bin/python research_control/tasks/RT-20260729-009/artifacts/validate_p8_t06_closure_review.py --check --json | exit_code=0 | status=PASS check_count=103 failure_count=0"
+  - ".venv/bin/python scripts/research_control/validate_red_team_review_artifact.py research_control/tasks/RT-20260729-009/artifacts/p8_t06_closure_red_team_review_v1.yaml --json | exit_code=0 | status=PASS review_context_classification=same_context_role_review"
+  - ".venv/bin/python -m unittest tests.test_red_team_review_artifact_validator | exit_code=0 | tests=12"
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 162 validated, was atomically claimed once, and consumed the immutable P8-T06 continue-research route once."
+      - "Dependency checkpoint c9af10eb4cf8116eb29fe358c7d0e818a4863fc6 committed before P8-T06 execution."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Task-local exact-reproduction, assumption-status, provenance, Gate D matrix, and authority validation passes 101 checks with zero failures."
+      - "External red-team artifact schema validation passes while classifying the review as same-context rather than external, human, blind, or independent."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Repository-wide control, claim-language, documentation-impact, renderer, graph, and memory checks pass before checkpoint."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "One governed checkpoint remains; P8-T07 stays unexecuted and human-gated."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Current frontier, task index, compact frontier, dependency graph, claim graph, and generated memory derivatives are synchronized."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory synchronization and validate-only mode pass."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation passes."

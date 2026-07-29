@@ -1,0 +1,62 @@
+schema_id: "blind_mathematical_review_status_v1"
+artifact_id: "P8T06BlindMathematicalReviewStatus_v1"
+task_id: "RT-20260729-009"
+plan_task_id: "P8-T06"
+status: "NOT_ACQUIRED"
+required_output_status: "CALIBRATED_MISSING_INPUT_WITH_EXACT_ACTION"
+
+current_execution:
+  reviewer_kind: "ai"
+  review_context: "same_context_role_review"
+  blind_packet_received: false
+  prior_context_access: "same_context"
+  human_expert_review_completed: false
+  independent_replication_completed: false
+  external_reviewer_contacted: false
+  external_outreach_authorized: false
+
+why_not_blind:
+  - "The active model retained the relay prompt, plan, prior completions, and construction context."
+  - "The calculation used the same repository and source package."
+  - "Role separation does not erase prompt or data dependence."
+
+blind_packet_requirements:
+  include_immutable_sources:
+    - path: "research_control/tasks/RT-20260729-005/artifacts/local_effective_action_closure_target_v1.tex"
+      sha256: "13402c3d80f114b643a0216484b0ba775a2f02d1f0733f33d8cf86044e6add96"
+    - path: "research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_constraint_candidate_v1.tex"
+      sha256: "82dd10d8e91be3781ca4f21e7f9fbf2ce1a9108ae7191db22fed9dfe6086f2fa"
+    - path: "research_control/tasks/RT-20260729-007/artifacts/finite_source_field_equation_identity_v1.tex"
+      sha256: "12a1cfae87cd673241aefe88144ab974b49fc3bad284a81baff90b2e806d5168"
+    - path: "research_control/tasks/RT-20260729-008/artifacts/finite_constraint_dynamical_viability_stress_v1.tex"
+      sha256: "ddd39764c3b6f86e86574458b885e90271a2b044d1d141ae931723e80599acb1"
+  exclude_as_scientific_evidence:
+    - "validator PASS"
+    - "checkpoint status"
+    - "registry status"
+    - "prior role confidence"
+    - "this task's proposed verdict"
+  reviewer_burden:
+    - "Reproduce the first variation and quotient solution from definitions."
+    - "Reproduce the cut and component identities and their completeness."
+    - "Reproduce rank-nullity and the two artificial dynamical completions."
+    - "Audit A0 through A9 against the exact P8-T02 wording."
+    - "Report target imports, hidden assumptions, notation overread, and disagreements."
+  provenance_required:
+    - "reviewer kind and mathematical expertise"
+    - "blindness and prior-context declaration"
+    - "data, code, and method relationship"
+    - "signed or otherwise attributable review receipt"
+
+disposition:
+  Gate_D_positive_readiness: "BLOCKED"
+  exact_action_path: "research_control/tasks/RT-20260729-009/artifacts/independent_review_human_action_v1.yaml"
+  P8_T07_execution_ready: false
+  reason: "Blind or independently evidenced review has not completed, and the A4 assumption-status defect remains unresolved."
+
+authority_limits:
+  human_reviewer_simulated: false
+  external_review_claimed: false
+  independent_replication_claimed: false
+  outreach_performed: false
+  physics_promotion_authorized: false

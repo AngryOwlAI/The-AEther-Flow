@@ -1,0 +1,494 @@
+job_id: "AJ-RT-20260729-009-001"
+task_id: "RT-20260729-009"
+decision_id: "DDR-20260729-009"
+role_id: "external-red-team-reviewer"
+role_version: "0.1.0"
+execution_role_ref: "external-red-team-reviewer@0.1.0--RT-20260729-009"
+status: "completed"
+validation_status: "PASS"
+requires_human_gate: false
+created_at: "2026-07-29T22:01:00Z"
+started_at: "2026-07-29T22:01:00Z"
+completed_at: "2026-07-29T22:01:00Z"
+completion_path: "research_control/tasks/RT-20260729-009/jobs/completions/AJC-AJ-RT-20260729-009-001.yaml"
+objective: "Execute only v21 P8-T06 by reviewing the unchanged P8-T03 through P8-T05 action, equation, correction, and stability package for target import, hidden assumptions, algebraic error, interpretation overread, and independent-review readiness; perform exact finite reproduction; and record a Gate D matrix plus exact human action without modifying reviewed science."
+target_derivation_milestone: "einstein_equations"
+milestone_burden: "Calibrate the field-equation result before any protected verdict."
+route_label: "external-review-packet"
+route_reason: "Generation 161 checkpoint c9af10eb4cf8116eb29fe358c7d0e818a4863fc6 committed P8-T05; handoff-0904, the v21 plan, and immutable generation 162 select exactly one P8-T06 External Red-Team Reviewer packet."
+immutable_route_sha256: "bbed817709638de87aff2ae06d081defc4bfaa25617583a4de3a0a5a2e2c2edc"
+dependency_checkpoint_commit: "c9af10eb4cf8116eb29fe358c7d0e818a4863fc6"
+plan_task_id: "P8-T06"
+recommendation_ids:
+  - "V21-R26"
+  - "V21-R27"
+  - "V21-R29"
+  - "V21-R36"
+  - "V21-R37"
+  - "V21-R39"
+  - "V21-R55"
+  - "V21-R68"
+source_extension_classification_required: false
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 162
+  passes_consumed: 148
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:162"
+  handoff_token: "63d78893553d7b2e6a218aa06b8cc83dd06b734c93dbd8a5"
+  relay_claim_token: "9049e9e5a4621d008b81d1e325a39cbbcd03a0c2b086e856"
+  route_work_item_id: "P8-T06"
+  route_worker_skill: "continue-research"
+  route_sha256: "bbed817709638de87aff2ae06d081defc4bfaa25617583a4de3a0a5a2e2c2edc"
+  route_reason: "dependency_ready_in_scope"
+  route_strategy_id: "continue_in_scope_generation_162"
+  route_blocker_fingerprint: "a6019d421cf2920af44ff8c528f82bd9c84efc394cbc46fe90d542c09147b885"
+  route_before_fingerprint: "a6019d421cf2920af44ff8c528f82bd9c84efc394cbc46fe90d542c09147b885"
+  route_evidence_sha256es:
+    - "a6019d421cf2920af44ff8c528f82bd9c84efc394cbc46fe90d542c09147b885"
+    - "e7e8eef6c2921a8c6dba656cfab58411f5cf5ad1f6af5661daec0f09b5642484"
+  worker_skill: "continue-research"
+  worker_invocation_count: 1
+
+mathematical_decisiveness_contract:
+  contract_path: "research_control/design/mathematical_decisiveness_completion_contract.md"
+  schema_path: ".agents/schemas/PHYSICS_COMPLETION_DECISIVENESS_SCHEMA.md"
+  enforcement_mode: "hard_failure"
+  active_after: "2026-06-21T02:32:39Z"
+
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "physics"
+  payload_type: "precise_obstruction"
+  candidate_family: "V21-P8-T03-THROUGH-P8-T05-CLOSURE-PACKAGE"
+  assumption_delta:
+    - "Hold P8-T02 through P8-T05 source bytes and statuses fixed."
+    - "Disregard workflow, validator, checkpoint, registry, and role success as scientific evidence."
+    - "Reproduce the finite action variation, quotient solution, identities, mode count, and completion countermodels directly."
+    - "Compare each P8-T03 A0 through A9 status with the unchanged P8-T02 requirement."
+    - "Distinguish exact finite definition from source-controlled scale and correction control."
+    - "Distinguish static variational operator from dynamical principal symbol and physical stability."
+    - "Record same-context review provenance and no blind or independent-review claim."
+  materiality_basis: "This packet is the first line-by-line independent-role audit of the complete P8 finite closure chain. It adds an exact A4 missing-hypothesis finding, A9 static-only calibration, direct reproduction record, structured independence deficit, Gate D matrix, and exact human action."
+  payload_details:
+    obstruction_id: "OBST-P8T06-CLOSURE-A4-AND-REVIEW-READINESS-ABSENT-001"
+    obstruction_scope: "unchanged P8-T02 through P8-T05 finite closure package as a fully instantiated independently reviewed Gate D-ready derivation"
+    global_no_go_claimed: false
+  source_basis:
+    - "TEX-V21-P8-T02-LOCAL-EFFECTIVE-ACTION-CLOSURE-TARGET-V1"
+    - "TEX-V21-P8-T03-FINITE-SOURCE-CLOSURE-CONSTRAINT-CANDIDATE-V1"
+    - "TEX-V21-P8-T04-FINITE-SOURCE-FIELD-EQUATION-IDENTITY-V1"
+    - "TEX-V21-P8-T05-FINITE-CONSTRAINT-DYNAMICAL-VIABILITY-STRESS-V1"
+    - "research_control/tasks/RT-20260729-008/artifacts/finite_constraint_dynamic_completion_countermodels_v1.yaml"
+  expected_artifact_paths:
+    - "research_control/tasks/RT-20260729-009/artifacts/p8_t06_closure_red_team_review_v1.yaml"
+    - "research_control/tasks/RT-20260729-009/artifacts/p8_t06_closure_smuggling_audit_v1.yaml"
+    - "research_control/tasks/RT-20260729-009/artifacts/closure_symbolic_reproduction_v1.yaml"
+    - "research_control/tasks/RT-20260729-009/artifacts/blind_mathematical_review_status_v1.yaml"
+    - "research_control/tasks/RT-20260729-009/artifacts/independent_review_human_action_v1.yaml"
+    - "research_control/tasks/RT-20260729-009/artifacts/p8_t06_gate_d_readiness_matrix_v1.yaml"
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+
+family_freeze_admission:
+  schema_id: "family_freeze_route_admission_v1"
+  policy_id: "family_freeze_reopening_policy_v1"
+  route_id: "v21_p8_t06_closure_gate_d_readiness_audit"
+  family_id: "V21-P8-T03-THROUGH-P8-T05-CLOSURE-PACKAGE"
+  family_identity_sha256: "ddd39764c3b6f86e86574458b885e90271a2b044d1d141ae931723e80599acb1"
+  assumption_sha256es:
+    - "13402c3d80f114b643a0216484b0ba775a2f02d1f0733f33d8cf86044e6add96"
+    - "82dd10d8e91be3781ca4f21e7f9fbf2ce1a9108ae7191db22fed9dfe6086f2fa"
+    - "12a1cfae87cd673241aefe88144ab974b49fc3bad284a81baff90b2e806d5168"
+    - "ddd39764c3b6f86e86574458b885e90271a2b044d1d141ae931723e80599acb1"
+  route_kind: "precise_obstruction"
+  detected_match_basis: []
+  reopening:
+    requested: false
+    class: "none"
+  distinct_branch:
+    branch_identity: "P8T06-CLOSURE-GATE-D-READINESS-AUDIT"
+    material_difference_basis: "The task audits the immutable package and review provenance, finds a new exact assumption-status defect, and does not reconstruct or promote the candidate."
+    reconstructs_frozen_candidate: false
+    expected_artifact_paths:
+      - "research_control/tasks/RT-20260729-009/artifacts/p8_t06_closure_red_team_review_v1.yaml"
+      - "research_control/tasks/RT-20260729-009/artifacts/p8_t06_gate_d_readiness_matrix_v1.yaml"
+  authority_limits:
+    local_family_freeze_preserved: true
+    global_no_go_claimed: false
+    automatic_candidate_adoption: false
+    theorem_truth_inferred: false
+    ontology_modified: false
+    physics_promotion_authorized: false
+
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  expected_durable_outputs:
+    physics:
+      - "one external-role red-team review with exact finding severities"
+      - "one direct finite-algebra reproduction and A0 through A9 map"
+      - "one Gate D readiness matrix and exact human action"
+    project_system:
+      - "one task-local deterministic validator and compact receipt"
+      - "one structured review-context provenance record"
+  acceptance_criteria:
+    physics:
+      - "the complete action equation correction and stability chain is directly audited"
+      - "finite algebra and assumption-status findings are separated"
+      - "independence and physical-status claims fail closed"
+      - "one exact repair or human action is recorded"
+    project_system:
+      - "source hashes, external-review schema, parent-child synthesis, and authority flags pass"
+      - "claim-language documentation-impact and research-control gates pass"
+      - "one governed checkpoint records the bounded transaction"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: false
+    exception_id: ""
+    evidence_path: ""
+    evidence_sha256: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0904"
+  source_handoff_path: "research_control/handoffs/handoff-0904.yaml"
+  source_handoff_sha256: "31437f5ed4eb3264dc749777bad4e8ab1842fa53f6176a5edd2ebf4dc8fb4970"
+  selected_plan_task_id: "P8-T06"
+  guard_outcome: "below_threshold"
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  parent:
+    execution_unit_id: "parent"
+    perspective: "physicist_mathematician_philosopher"
+    responsibilities:
+      - "hold source hashes and critique authority fixed"
+      - "fuse exact finite reproduction with assumption and interpretation audit"
+      - "calibrate review provenance"
+      - "resolve every child conflict"
+      - "record exact Gate D readiness and human action"
+  children:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260729-009/artifacts/child_phys_math_p8_t06_closure_review.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260729-009/artifacts/child_phys_phil_p8_t06_closure_review.yaml"
+      status: "completed"
+  conflict_policy:
+    review_path: "research_control/tasks/RT-20260729-009/artifacts/parent_conflict_review_p8_t06_closure_review.yaml"
+    max_resolution_rounds: 2
+    require_parallel_child_revision: true
+    unresolved_conflict_status: "blocked"
+  fusion_policy:
+    fusion_notes_path: "research_control/tasks/RT-20260729-009/artifacts/parent_fusion_notes_p8_t06_closure_review.md"
+    fused_output_path: "research_control/tasks/RT-20260729-009/artifacts/p8_t06_closure_red_team_review_v1.yaml"
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+    final_output_replaces_old_single_role_artifact: true
+  outer_agentjob_count: 1
+  child_agentjob_count: 0
+  subagent_count: 0
+  rationale: "Two internal analytical perspectives are recorded inside the one consumed worker invocation and one outer AgentJob. No child job or subagent was created."
+
+memory_preflight:
+  preflight_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1083
+    relationship_row_count: 5491
+    semantic_row_count: 1083
+    vault_row_count: 1083
+    local_cache_only_warning_count: 0
+    refresh_performed: true
+  refresh_needed: true
+  refresh_performed: true
+  refresh_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py"
+  before_refresh:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    warning_count: 9
+  after_refresh:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    source_object_count: 1083
+    relationship_row_count: 5491
+    semantic_row_count: 1083
+    vault_row_count: 1083
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search 'closure derivation independent review' --json"
+      query_type: "search"
+      query_text: "closure derivation independent review"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-DESIGN-EXTERNAL-RED-TEAM-PACKET-TEMPLATE-V1"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-V21-P8-T05-FINITE-CONSTRAINT-DYNAMICAL-VIABILITY-STRESS-V1 --json"
+      query_type: "lookup"
+      query_text: "TEX-V21-P8-T05-FINITE-CONSTRAINT-DYNAMICAL-VIABILITY-STRESS-V1"
+      returned_object_ids:
+        - "TEX-V21-P8-T05-FINITE-CONSTRAINT-DYNAMICAL-VIABILITY-STRESS-V1"
+  canonical_inspections:
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-EXTERNAL-RED-TEAM-PACKET-TEMPLATE-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/external_red_team_packet_template_v1.md"
+      source_hash: "b73c3750a4cf82a7b021a574964ee808e05b3a6eb460e25fd42ea3d593c23f4a"
+    - object_id: "TEX-V21-P8-T05-FINITE-CONSTRAINT-DYNAMICAL-VIABILITY-STRESS-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260729-008/artifacts/finite_constraint_dynamical_viability_stress_v1.tex"
+      source_hash: "ddd39764c3b6f86e86574458b885e90271a2b044d1d141ae931723e80599acb1"
+  authority_note: "Obsidian wiki notes, semantic extracts, the SQLite memory index, PDFs, and .local files are retrieval layers only and are not authority."
+
+allowed_read_paths:
+  - "SOUL.md"
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".codex/skills/continue-research-continue-goal/SKILL.md"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - ".agents/roles/physics/external-red-team-reviewer.v0.1.0.md"
+  - ".agents/schemas/**"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  - "research_control/design/**"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0904.yaml"
+  - "research_control/handoffs/handoff-0904.md"
+  - "research_control/tasks/RT-20260727-004/**"
+  - "research_control/tasks/RT-20260728-005/**"
+  - "research_control/tasks/RT-20260729-001/**"
+  - "research_control/tasks/RT-20260729-005/**"
+  - "research_control/tasks/RT-20260729-006/**"
+  - "research_control/tasks/RT-20260729-007/**"
+  - "research_control/tasks/RT-20260729-008/**"
+  - "ontology/tex/aether_flow_dynamics.tex"
+  - "ontology/tex/aether_flow_consistency.tex"
+  - "registries/**"
+
+allowed_write_paths:
+  - "research_control/tasks/RT-20260729-009/**"
+  - "research_control/handoffs/handoff-0905.yaml"
+  - "research_control/handoffs/handoff-0905.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/PDF_DERIVATIVE_REGISTRY.csv"
+  - "registries/PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "registries/TEX_SOURCE_REGISTRY.csv"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/pdf/**"
+  - "wiki/tex/**"
+
+allowed_generated_paths:
+  - ".local/**"
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/pdf/**"
+  - "wiki/tex/**"
+
+forbidden_paths:
+  - "ontology/**"
+  - "manuscripts/**"
+  - "html/**"
+  - "implementations_plans/**"
+  - ".agents/roles/**"
+  - "research_control/tasks/RT-20260727-004/**"
+  - "research_control/tasks/RT-20260728-005/**"
+  - "research_control/tasks/RT-20260729-001/**"
+  - "research_control/tasks/RT-20260729-005/**"
+  - "research_control/tasks/RT-20260729-006/**"
+  - "research_control/tasks/RT-20260729-007/**"
+  - "research_control/tasks/RT-20260729-008/**"
+  - ".codex/skills/continue-research-goal/goals/**"
+
+allowed_source_classes:
+  - "science_draft_read_only"
+  - "scientific_gate_read_only"
+  - "canonical_ontology_read_only"
+  - "project_control"
+  - "registry"
+  - "role_contract"
+  - "task_local_review_output"
+  - "generated_memory_derivative"
+
+forbidden_source_classes:
+  - "canonical_ontology_write"
+  - "benchmark_promotion"
+  - "physics_claim_promotion"
+  - "source_law_adoption"
+  - "M_src_adoption"
+  - "candidate_reconstruction"
+  - "gate_chair_verdict"
+  - "completed_derivation_claim"
+  - "generated_derivative_authority"
+  - "target_benchmark_as_source_premise"
+  - "target_atlas_or_metric_as_source_premise"
+  - "reviewed_science_modification"
+  - "external_outreach"
+  - "human_expert_or_independent_replication_claim"
+  - "physical_gravity_or_dynamics_adoption"
+  - "target_geometry_metric_or_stress_energy_construction"
+  - "diffeomorphism_or_Bianchi_claim"
+  - "Einstein_equations"
+  - "exact_GR_recovery_proof"
+  - "publication_or_push"
+  - "global_theory_rejection"
+  - "future_source_extension_impossibility"
+
+approved_commands:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search 'closure derivation independent review' --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-V21-P8-T05-FINITE-CONSTRAINT-DYNAMICAL-VIABILITY-STRESS-V1 --json"
+  - ".venv/bin/python research_control/tasks/RT-20260729-009/artifacts/validate_p8_t06_closure_review.py --write-report --json"
+  - ".venv/bin/python research_control/tasks/RT-20260729-009/artifacts/validate_p8_t06_closure_review.py --check --json"
+  - ".venv/bin/python scripts/research_control/validate_red_team_review_artifact.py research_control/tasks/RT-20260729-009/artifacts/p8_t06_closure_red_team_review_v1.yaml --json"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --check"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --check"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --json-summary"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --json-summary"
+  - ".venv/bin/python scripts/research_control/report_physics_progress_metrics.py"
+  - ".venv/bin/python -m unittest tests.test_red_team_review_artifact_validator"
+  - "git diff --check"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260729-009-001"
+
+required_validators:
+  - "research_control/tasks/RT-20260729-009/artifacts/validate_p8_t06_closure_review.py"
+  - "scripts/research_control/validate_red_team_review_artifact.py"
+  - "scripts/project_control/validate_claim_language.py"
+  - "scripts/project_control/validate_documentation_impact.py"
+  - "scripts/research_control/validate_research_control.py"
+  - "scripts/research_control/checkpoint_research_transaction.py"
+
+expected_outputs:
+  - "research_control/tasks/RT-20260729-009/artifacts/p8_t06_closure_red_team_review_v1.yaml"
+  - "research_control/tasks/RT-20260729-009/artifacts/p8_t06_closure_smuggling_audit_v1.yaml"
+  - "research_control/tasks/RT-20260729-009/artifacts/closure_symbolic_reproduction_v1.yaml"
+  - "research_control/tasks/RT-20260729-009/artifacts/blind_mathematical_review_status_v1.yaml"
+  - "research_control/tasks/RT-20260729-009/artifacts/independent_review_human_action_v1.yaml"
+  - "research_control/tasks/RT-20260729-009/artifacts/p8_t06_gate_d_readiness_matrix_v1.yaml"
+  - "research_control/tasks/RT-20260729-009/artifacts/p8_t06_closure_review_compact_receipt_v1.json"
+  - "research_control/tasks/RT-20260729-009/artifacts/p8_t06_closure_review_validation_v1.json"
+  - "research_control/tasks/RT-20260729-009/artifacts/p8_t06_closure_review_receipt.md"
+  - "research_control/tasks/RT-20260729-009/artifacts/child_phys_math_p8_t06_closure_review.yaml"
+  - "research_control/tasks/RT-20260729-009/artifacts/child_phys_phil_p8_t06_closure_review.yaml"
+  - "research_control/tasks/RT-20260729-009/artifacts/parent_conflict_review_p8_t06_closure_review.yaml"
+  - "research_control/tasks/RT-20260729-009/artifacts/parent_fusion_notes_p8_t06_closure_review.md"
+  - "research_control/tasks/RT-20260729-009/jobs/completions/AJC-AJ-RT-20260729-009-001.yaml"
+  - "research_control/handoffs/handoff-0905.yaml"
+  - "research_control/handoffs/handoff-0905.md"
+
+claim_boundary:
+  boundary_id: "CB-V21-P8-T06-CLOSURE-INDEPENDENT-REVIEW-001"
+  allowed_scope:
+    - "read and critique immutable P8-T02 through P8-T05 sources"
+    - "direct exact finite algebra reproduction"
+    - "A0 through A9 assumption-status audit"
+    - "target-import and interpretation-overread audit"
+    - "same-context review-provenance calibration"
+    - "one precise repair finding and Gate D readiness matrix"
+    - "exact human action without outreach"
+    - "standard control records registries generated derivatives and handoff"
+  blocked_scope:
+    - "reviewed science or canonical ontology edit"
+    - "external reviewer contact or outreach"
+    - "blind human external or independent review claim"
+    - "source-law candidate action dynamics physical-gravity metric stress-energy or Einstein-equation adoption"
+    - "Gate Chair verdict benchmark promotion proof publication push completed derivation global no-go or future impossibility"
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false

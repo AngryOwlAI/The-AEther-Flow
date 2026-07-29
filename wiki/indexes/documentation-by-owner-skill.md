@@ -799,6 +799,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-V21-P8-T04-PARENT-FUSION-FINITE-FIELD-EQUATION-V1` `wiki/markdown/md-v21-p8-t04-parent-fusion-finite-field-equation-v1.md`
 - `WIKI-MD-V21-P8-T05-FINITE-CONSTRAINT-MODE-STABILITY-RECEIPT-V1` `wiki/markdown/md-v21-p8-t05-finite-constraint-mode-stability-receipt-v1.md`
 - `WIKI-MD-V21-P8-T05-PARENT-FUSION-FINITE-DYNAMICAL-VIABILITY-V1` `wiki/markdown/md-v21-p8-t05-parent-fusion-finite-dynamical-viability-v1.md`
+- `WIKI-MD-V21-P8-T06-CLOSURE-REVIEW-RECEIPT-V1` `wiki/markdown/md-v21-p8-t06-closure-review-receipt-v1.md`
+- `WIKI-MD-V21-P8-T06-PARENT-FUSION-CLOSURE-REVIEW-V1` `wiki/markdown/md-v21-p8-t06-parent-fusion-closure-review-v1.md`
 - `WIKI-MD-VALIDATOR-OPERATOR-WORKFLOW-PUBLICATION-BRIEF` `wiki/markdown/md-validator-operator-workflow-publication-brief.md`
 
 ## obsidian-wiki
@@ -1298,6 +1300,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-V21-P8-T04-PARENT-FUSION-FINITE-FIELD-EQUATION-V1` `research_control/tasks/RT-20260729-007/artifacts/parent_fusion_notes_p8_t04_finite_field_equation.md`
 - `MD-V21-P8-T05-FINITE-CONSTRAINT-MODE-STABILITY-RECEIPT-V1` `research_control/tasks/RT-20260729-008/artifacts/finite_constraint_mode_stability_receipt.md`
 - `MD-V21-P8-T05-PARENT-FUSION-FINITE-DYNAMICAL-VIABILITY-V1` `research_control/tasks/RT-20260729-008/artifacts/parent_fusion_notes_p8_t05_finite_dynamical_viability.md`
+- `MD-V21-P8-T06-CLOSURE-REVIEW-RECEIPT-V1` `research_control/tasks/RT-20260729-009/artifacts/p8_t06_closure_review_receipt.md`
+- `MD-V21-P8-T06-PARENT-FUSION-CLOSURE-REVIEW-V1` `research_control/tasks/RT-20260729-009/artifacts/parent_fusion_notes_p8_t06_closure_review.md`
 
 ## tex-wiki
 
