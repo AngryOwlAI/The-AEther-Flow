@@ -1,0 +1,118 @@
+schema_id: "gravitational_closure_route_decision_v1"
+artifact_id: "V21-P8-T01-GRAVITATIONAL-CLOSURE-ROUTE-DECISION-V1"
+task_id: "RT-20260729-003"
+plan_task_id: "P8-T01"
+status_label: "draft/control"
+candidate_status: "proposal-only"
+material_class: "route-selection data"
+created_at: "2026-07-29T14:26:01Z"
+target_derivation_milestone: "einstein_equations"
+milestone_burden: "Select the minimum honest closure route before constructing field equations."
+
+decision:
+  result_status: "selected_for_formalization_only"
+  selected_route_id: "conditional_source_to_local_effective_action_closure_v1"
+  selected_route_label: "local-effective-action-closure"
+  selected_route_family: "local_effective_action"
+  selected_next_plan_task_id: "P8-T02"
+  selected_next_packet_type: "ontology_law_research_packet"
+  selected_next_route_label: "ontology-law-research-packet"
+  selected_next_role_family: "ontology-formalizer@0.2.0"
+  requires_human_gate_now: false
+  adoption_would_require_human_gate: true
+  selection_is_derivation: false
+  selection_is_adoption: false
+  selection_is_proof: false
+
+selection_rule:
+  relation_id: "P8T01-SOURCE-PRECURSOR-DOMINANCE"
+  definition: "For two routes r and s, r weakly source-precursor-dominates s only when every presently usable adopted or controlled source-side precursor used by s is also usable by r, r introduces no additional protected or target-side premise, and r has a strict advantage in at least one declared precursor or dependency depth. Incomparable routes are decided by the least-assumption-debt policy and recorded as policy choices, not theorem-level optima."
+  policy: "Choose the route with the greatest direct overlap with the adopted P7 source matter action, finite variation, source response, and componentwise conservation records, subject to zero benchmark-as-premise and zero target-geometry-as-premise imports."
+  uniqueness_claimed: false
+  global_optimality_claimed: false
+
+selected_route_current_precursors:
+  - precursor_id: "P5_SOURCE_RESPONSE_CONTEXT"
+    status: "controlled_source_side"
+    evidence_path: "research_control/tasks/RT-20260726-001/artifacts/source_dynamics_milestone_synthesis_v1.tex"
+    evidence_sha256: "a2b9c6670cdb0e09ca2e19ff30f71d9bb954e3ab2fc73a5c9727a2df10db93aa"
+  - precursor_id: "P6_SCOPED_METRIC_STRUCTURE_RECORD"
+    status: "scoped_record_only_not_effective_geometry"
+    evidence_path: "research_control/tasks/RT-20260726-011/artifacts/metric_object_naming_decision_v1.yaml"
+    evidence_sha256: "4d67563b2444cfed2bd430e9d027337f26656701624d532f7cb2e357cbac2452"
+  - precursor_id: "P7_ADOPTED_SOURCE_MATTER_PACKAGE"
+    status: "human_adopted_in_exact_source_scope"
+    evidence_path: "research_control/tasks/RT-20260729-001/artifacts/p7_t08_constitutive_postulate_ledger_v1.yaml"
+    evidence_sha256: "e11f5e4ae886932cad618caa3ee97e973bbd38d363db25776fe1fbd2c27451dc"
+  - precursor_id: "P7_FINITE_SOURCE_MATTER_ACTION_VARIATION_AND_BALANCE"
+    status: "human_adopted_in_exact_source_scope"
+    evidence_path: "research_control/tasks/RT-20260729-001/artifacts/p7_t08_gate_c_decision_v1.tex"
+    evidence_sha256: "85fbf32fb9b02aeae556149cbc5c6b51bd6fedf278a3bc401545c93e29fc4827"
+
+selected_route_missing_prerequisites:
+  - prerequisite_id: "SRC_TO_UNSCOPED_GEOMETRY_MAP"
+    required_object: "A lawful source-defined map from adopted source states to an unscoped effective carrier and geometry datum."
+    current_status: "missing"
+  - prerequisite_id: "SRC_TO_EFFECTIVE_MATTER_MAP"
+    required_object: "A source-derived map from the adopted P7 matter package to effective matter fields or an equivalent variational datum."
+    current_status: "missing"
+  - prerequisite_id: "LOCAL_MEASURE_AND_DERIVATIVE_EXPANSION"
+    required_object: "A target-atlas-free local measure, derivative expansion, and controlled truncation regime."
+    current_status: "missing"
+  - prerequisite_id: "DERIVED_INVARIANCE_OR_REPLACEMENT"
+    required_object: "A source-derived symmetry or replacement principle sufficient to constrain a local action."
+    current_status: "missing"
+  - prerequisite_id: "SCALE_AND_COARSE_GRAINING_CONTROL"
+    required_object: "A physical scale map, coarse-graining regime, coupling dimensions, and correction hierarchy."
+    current_status: "missing"
+  - prerequisite_id: "VARIATIONAL_BOUNDARY_DATA"
+    required_object: "Well-posed variational boundary data and equivalence rules under boundary terms and field redefinitions."
+    current_status: "missing"
+  - prerequisite_id: "TARGET_CONSERVATION_BRIDGE"
+    required_object: "A proved bridge from componentwise source balance to the effective conservation identity required by the closure."
+    current_status: "missing"
+  - prerequisite_id: "EINSTEIN_LEADING_TERM_RECOVERY"
+    required_object: "A theorem deriving, rather than assuming, the Einstein-leading action or equations in a declared regime."
+    current_status: "missing"
+
+next_theorem_target:
+  target_id: "LocalEffectiveActionClosureTarget_v1"
+  plan_task_id: "P8-T02"
+  route: "ontology-law-research-packet"
+  trigger_classification: "derivation_critical_missing_source_law"
+  objective: "Formalize the exact typed assumptions, source-to-effective maps, locality and symmetry obligations, variational equivalences, controlled correction regime, and failure branches that must be discharged before any effective action or field-equation claim."
+  forbidden_premise: "The Einstein-Hilbert action, Einstein equations, target benchmark success, or a target metric may not be adopted as a source premise."
+  acceptable_result_kinds:
+    - "formal_closure_target"
+    - "minimum_extension_theorem"
+    - "precise_scoped_obstruction"
+
+frozen_route_ids:
+  - "hypersurface_deformation_closure_v1"
+  - "gravitational_closure_from_matter_v1"
+  - "thermodynamic_gravity_closure_v1"
+
+distance_to_gr:
+  changed: false
+  effect: "selector_only_no_distance_delta"
+  burden_id: "einstein_equations"
+  old_status: "not_started"
+  new_status: "not_started"
+  ledger_row_updated: false
+
+authority_limits:
+  canonical_ontology_modified: false
+  source_law_adopted: false
+  effective_geometry_constructed: false
+  effective_metric_constructed: false
+  local_effective_action_constructed: false
+  target_stress_energy_tensor_constructed: false
+  equivalence_principle_established_or_refuted: false
+  einstein_equations_derived: false
+  exact_gr_recovery_proved: false
+  benchmark_promoted: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false

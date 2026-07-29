@@ -1,0 +1,664 @@
+job_id: "AJ-RT-20260729-003-001"
+completion_id: "AJC-AJ-RT-20260729-003-001"
+task_id: "RT-20260729-003"
+task_type: "v21_p8_t01_gravitational_closure_route_selection"
+decision_id: "DDR-20260729-003"
+role_id: "theoretical-continuation-selector"
+role_version: "0.1.0"
+execution_role_ref: "theoretical-continuation-selector@0.1.0--RT-20260729-003"
+status: "completed"
+validation_status: "PASS"
+final_repository_validation_status: "PASS_READY_FOR_CHECKPOINT"
+created_at: "2026-07-29T14:26:01Z"
+started_at: "2026-07-29T14:26:01Z"
+completed_at: "2026-07-29T14:26:01Z"
+objective: "Compare the four v21 P8-T01 gravitational-closure routes, select one minimum-honest-assumption route for formalization, freeze the other three with explicit thaw criteria, and choose one bounded P8-T02 theorem target."
+completion_summary: "P8-T01 selects conditional_source_to_local_effective_action_closure_v1 for formalization only. It has the closest direct interface to the controlled P5 response record and the exact adopted P7 source action, finite variation, response precursor, and componentwise balance, while every source-to-effective bridge remains explicitly missing. The hypersurface-deformation, gravitational-closure-from-matter, and thermodynamic routes are locally frozen with source-side thaw criteria. P8-T02 is selected to formalize LocalEffectiveActionClosureTarget_v1 through an ontology-law-research-packet. No action, metric, field equation, or Distance-to-GR delta is claimed."
+objective_result: "local_effective_action_route_selected_for_formalization_alternatives_locally_frozen"
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 156
+  passes_consumed: 142
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:156"
+  handoff_token: "4dd2102a33495043745f69b024f7f14c9c1d6e9653f66dab"
+  relay_claim_token: "48486bc16f17abf8649a82ec1ebdbf0bf458711c1544dca2"
+  route_work_item_id: "P8-T01"
+  route_worker_skill: "continue-research"
+  route_sha256: "4278a593b8ec10d98948b260795dc2a7c333ddf2316f4fa6c3908f685da8d357"
+  route_reason: "resume_research_after_project_system_repair"
+  route_strategy_id: "continue_in_scope_generation_156"
+  route_blocker_fingerprint: "15ca0fed9285e95cc6e59de811d50439d1ad9f7741b73c84c51a57a81850ef8b"
+  worker_skill: "continue-research"
+  worker_invocation_count: 1
+
+transaction_status: "ready_for_checkpoint"
+result_disposition: "P8_T01_LOCAL_EFFECTIVE_ACTION_ROUTE_SELECTION_PASS_READY_FOR_CHECKPOINT"
+milestone_disposition: "selector_complete_einstein_equations_burden_not_started"
+adoption_status: "blocked_adoption_open_continuation"
+checkpoint_commit:
+  required: true
+  attempted: false
+  committed: false
+  commit_sha: ""
+  dependency_checkpoint_commit: "3d07da4a705f1e12e8429129e640bbb678f77c0a"
+  push_authorized: false
+  push_performed: false
+
+is_physics_task: true
+payload_class: "route_decision_and_dependency_map"
+has_new_mathematical_payload: true
+source_extension_classification_required: false
+external_red_team_finding_requires_integration: false
+physics_promotion_authorized: false
+proof_authority: false
+
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P8"
+  plan_task_id: "P8-T01"
+  work_kind: "integration_or_selection"
+  task_class: "science"
+  expected_result_kind: "completed_or_precisely_blocked"
+  dependency_task_id: "P7-T08"
+  dependency_completion_path: "research_control/tasks/RT-20260729-001/jobs/completions/AJC-AJ-RT-20260729-001-001.yaml"
+  dependency_completion_sha256: "02b7fce36709e5ff8703da3e3aef0f53fb51df15e58cd3f9f85e4c5a8379c864"
+  dependency_checkpoint_commit: "3d07da4a705f1e12e8429129e640bbb678f77c0a"
+  work_item_status: "completed_ready_for_checkpoint"
+  recommendation_ids:
+    - "V21-R22"
+    - "V21-R26"
+    - "V21-R27"
+    - "V21-R30"
+  recommendation_coverage_role: "direct_implementation"
+  scientific_claims_changed: true
+  scientific_claim_change_scope: "draft/control route comparison, dependency map, selection, and local freeze only"
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  distance_to_gr_delta_scope: "none; Einstein-equations burden remains not started"
+  physics_promotion_authorized: false
+  proof_authority: false
+  next_dependency_work_item: "P8-T02_after_checkpoint"
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  observed_durable_outputs:
+    physics:
+      - "one four-route gravitational-closure comparison"
+      - "one formalization-only route decision and typed dependency partial order"
+      - "three local freeze records with explicit thaw criteria"
+      - "one exact P8-T02 theorem target"
+    project_system:
+      - "task-local validator and compact validation receipt"
+      - "parent-child synthesis records"
+      - "standard control records and generated memory derivatives"
+  accepted_criteria:
+    physics:
+      - "exactly one route is selected for formalization only"
+      - "all four plan routes have explicit precursor and missing-prerequisite records"
+      - "all three alternatives have reversible source-side thaw criteria"
+      - "P8-T02 forbids the target benchmark, target metric, Einstein-Hilbert action, and Einstein equations as source premises"
+    project_system:
+      - "task-local source-hash, route-count, selection, freeze, and authority checks pass"
+      - "claim-language and documentation-impact gates pass"
+      - "one governed checkpoint records the bounded transaction"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+physics_payload_admission_result:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "physics"
+  declared_payload_type: "route_decision"
+  realized_payload_type: "route_decision"
+  candidate_family: "V21-P8-T01-GRAVITATIONAL-CLOSURE-ROUTE-SELECTION-V1"
+  result: "PASS"
+  material_payload_present: true
+  process_receipts_counted_as_payload: false
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed_by_admission: false
+  physics_promotion_authorized: false
+
+family_freeze_admission_result:
+  schema_id: "family_freeze_route_admission_v1"
+  policy_id: "family_freeze_reopening_policy_v1"
+  route_id: "v21_p8_t01_gravitational_closure_route_selection"
+  family_id: "V21-P8-T01-GRAVITATIONAL-CLOSURE-ROUTE-SELECTION-V1"
+  detected_match_basis: []
+  reopening_requested: false
+  result: "PASS_ONE_ROUTE_SELECTED_THREE_ALTERNATIVES_LOCALLY_FROZEN"
+  local_family_freeze_preserved: true
+  global_no_go_claimed: false
+  physics_promotion_authorized: false
+
+ordinary_route_guard_admission_result:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0898"
+  selected_plan_task_id: "P8-T01"
+  guard_outcome: "below_threshold"
+  result: "PASS"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  scientific_status_changed_by_guard: false
+  physics_promotion_authorized: false
+
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_execution_unit_count: 2
+  outer_agentjob_count: 1
+  child_agentjob_count: 0
+  subagent_count: 0
+
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260729-003/artifacts/child_phys_math_p8_t01_closure_route_selection.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260729-003/artifacts/child_phys_phil_p8_t01_closure_route_selection.yaml"
+      status: "completed"
+  conflict_review:
+    status: "resolved"
+    review_path: "research_control/tasks/RT-20260729-003/artifacts/parent_conflict_review_p8_t01_closure_route_selection.yaml"
+    resolution_rounds: 1
+    resolved_conflict_count: 4
+    unresolved_conflicts: []
+  fusion:
+    fused_output_path: "research_control/tasks/RT-20260729-003/artifacts/gravitational_closure_route_selection_receipt.md"
+    fusion_notes_path: "research_control/tasks/RT-20260729-003/artifacts/parent_fusion_notes_p8_t01_closure_route_selection.md"
+    shared_consensus_summary: "Both perspectives select the conditional source-to-local-effective-action route for formalization only and preserve every cross-layer, adoption, benchmark, and proof boundary."
+    unique_phys_math_contributions: "Four typed precursor and missing-prerequisite sets, the source-precursor partial order, and the exact P8-T02 closure target."
+    unique_phys_phil_contributions: "Constitutive-versus-derivational separation, label-laundering controls, benchmark-premise exclusion, and reversible freeze semantics."
+    novelty_preservation_summary: "Fusion preserves the first explicit P8 closure-route dependency map without turning selection into construction or proof."
+    claim_boundary_preservation_summary: "No ontology, source law, geometry, metric, action, target stress energy, equivalence principle, Einstein equation, GR recovery, benchmark, proof, publication, push, global no-go, future impossibility, or completed derivation is authorized."
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+
+theoretical_decision_output:
+  selected_next_packet_type: "ontology_law_research_packet"
+  selected_next_route_family: "ontology-law-research-packet"
+  selected_next_role_family: "ontology-formalizer@0.2.0"
+  selected_next_task_id: "P8-T02"
+  decision_basis: "The local effective-action route has the strongest direct interface to the controlled P5 source response and exact adopted P7 source action, finite variation, response precursor, and componentwise balance, while its missing cross-layer maps can be typed individually. The other routes first require additional canonical, effective-response, or thermodynamic dictionaries."
+  theoretical_method: "Represent each route by its usable source-precursor set and missing-prerequisite set; apply the declared source-precursor dominance relation where possible; then use the explicit least-assumption-debt policy for incomparable routes without claiming theorem-level uniqueness or global optimality."
+  preserves_claim_blocks: true
+  requires_human_gate: false
+  human_gate_reason: "P8-T02 is a draft/control formalization packet. Protected human authority would be required only for canonical ontology or source-law adoption, which is not requested."
+  selected_next_packet_requires_human_gate: false
+  decision_consequence: "P8-T02 must formalize LocalEffectiveActionClosureTarget_v1 with exact types, source-to-effective maps, symmetry, locality, measure, correction control, variational equivalences, conservation, and failure branches before any construction or field-equation claim."
+  new_payload_novelty: "Introduces the first explicit four-route gravitational-closure dependency comparison, selects one formalization target, and freezes three alternatives with material source-side thaw criteria."
+  source_extension_category: "ontology_law_research_packet"
+  source_extension_import_classification: "The next packet formalizes derivation-critical missing source-side closure laws and maps. It must not import a target atlas, target metric, Einstein-Hilbert action, Einstein equations, or benchmark success."
+
+ontology_law_research_packet:
+  route: "ontology-law-research-packet"
+  trigger_classification: "derivation_critical_missing_source_law"
+  target_derivation_milestone: "einstein_equations"
+  milestone_burden: "Define what must be proved before any field-equation claim."
+  missing_source_law: "A lawful source-to-effective closure specification connecting the adopted source matter action, response, and conservation data to an effective local variational structure without importing the target benchmark."
+  underdetermination_statement: "Current ontology does not derive the source-to-effective carrier, geometry, matter, locality, measure, invariance, scale, variational-boundary, conservation, or Einstein-leading recovery laws required by LocalEffectiveActionClosureTarget_v1."
+  no_go_theorem_status: "not_proved"
+  adoption_status:
+    current_adoption: "blocked"
+    continuation: "open"
+    status_pair: "blocked_adoption_open_continuation"
+  packet_payload_mode: "candidate_law_payload"
+  candidate_law_payload:
+    status_label: "draft/control"
+    candidate_status: "proposal-only"
+    material_class: "source-extension data"
+    source_side_definition: "P8-T02 must define a typed closure target and proof obligations; it does not yet supply a candidate effective action."
+    formal_objects:
+      - "source state and adopted source matter datum"
+      - "effective carrier and geometry codomain types"
+      - "effective matter or response codomain type"
+      - "source-to-effective maps"
+      - "locality, measure, derivative expansion, and controlled correction data"
+      - "source-derived symmetry or explicit replacement"
+      - "variational boundary and equivalence rules"
+      - "source-to-effective conservation bridge"
+      - "Einstein-leading recovery obligation"
+    domains:
+      - "the exact adopted P7 source-matter package and its declared finite source domains"
+      - "source-derived effective-carrier candidates only when independently constructed"
+      - "controlled locality and derivative-expansion regimes only when explicitly typed"
+    maps:
+      - "source state to effective carrier candidate"
+      - "source matter datum to effective matter or response candidate"
+      - "source balance to effective conservation candidate"
+    proof_obligations:
+      - "all domains, codomains, maps, regularity, locality, and equivalence relations are exact"
+      - "every target-side premise is barred or independently derived"
+      - "the Einstein-Hilbert action and Einstein equations are not premises"
+      - "failure branches include minimum-extension and precise scoped-obstruction outcomes"
+      - "extra modes, corrections, stability, and controlled recovery remain downstream burdens"
+  exact_gr_recovery_obligations:
+    checklist:
+      - "Preserve the exact-GR benchmark as a read-only target and never a source premise."
+      - "Derive or explicitly mark missing every source-to-effective map."
+      - "Derive invariance, conservation, and variational structure before field equations."
+      - "Classify corrections, extra modes, stability, and the Einstein-leading regime in later packets."
+      - "Retain protected authority for canonical ontology or source-law adoption and benchmark promotion."
+    distance_to_gr_links:
+      - "effective_metric_g_eff"
+      - "matter_coupling"
+      - "einstein_equations"
+      - "benchmark_promotion"
+  no_target_import_audit_scope:
+    forbidden_source_classes:
+      - "target_atlas"
+      - "target_metric"
+      - "Einstein_Hilbert_action"
+      - "Einstein_equations"
+      - "benchmark_success"
+      - "candidate_reconstruction"
+      - "generated_derivative"
+      - "registry_metadata_authority"
+      - "role_authority"
+      - "validation_authority"
+    checked_objects:
+      - "effective carrier and geometry codomain"
+      - "effective matter and response codomain"
+      - "locality and measure"
+      - "symmetry or replacement principle"
+      - "variational and conservation identities"
+      - "Einstein-leading recovery obligation"
+  atlas_glue_obligations:
+    profile_law: "not_supplied"
+    selector_law: "not_supplied"
+    transition_law: "not_supplied"
+    inverse_checks: "not_supplied"
+    cocycle_checks: "not_supplied"
+    finite_variation_robustness: "source-side finite variation exists only in the exact adopted P7 scope; no effective robust variation law follows"
+  failure_branches:
+    target_benchmark_import: "fail_closed_target_import"
+    source_to_effective_map_absent: "minimum_extension_or_precise_scoped_obstruction"
+    invariance_or_locality_absent: "minimum_extension_or_precise_scoped_obstruction"
+    conservation_bridge_absent: "minimum_extension_or_precise_scoped_obstruction"
+    Einstein_leading_recovery_not_derived: "remain_blocked_without_field_equation_claim"
+  human_gate_request:
+    required_before_adoption: true
+    requested_decision: "No gate is requested now. Protected human authority is required before adopting, rejecting, or canonically promoting any new ontology or source law."
+    exact_requested_ontology_edit: ""
+
+new_mathematical_payload:
+  - payload_id: "NMP-RT-20260729-003-001"
+    payload_type: "dependency_map_update"
+    name: "Four-route source-precursor and missing-prerequisite comparison"
+    summary: "Represents each P8-T01 route by currently usable source precursors and distinctive missing prerequisites, with an explicit source-precursor dominance relation and no global-optimality claim."
+  - payload_id: "NMP-RT-20260729-003-002"
+    payload_type: "packet_selection"
+    name: "LocalEffectiveActionClosureTarget_v1 formalization route"
+    summary: "Selects P8-T02 to formalize the exact source-to-effective action-closure burden and freezes three alternatives with reversible thaw criteria."
+
+mathematical_payload_manifest:
+  - payload_id: "PAYLOAD-RT003-001"
+    payload_type: "dependency_map_update"
+    object_name: "P8T01-SOURCE-PRECURSOR-DOMINANCE"
+    claim_status: "draft/control route-comparison definition"
+    source_path: "research_control/tasks/RT-20260729-003/artifacts/gravitational_closure_hypothesis_comparison_v1.yaml"
+    burden_effect: "selects_next"
+    summary: "Defines the allowed partial comparison of routes without claiming a unique or global optimum."
+  - payload_id: "PAYLOAD-RT003-002"
+    payload_type: "packet_selection"
+    object_name: "LocalEffectiveActionClosureTarget_v1"
+    claim_status: "draft/control formalization target"
+    source_path: "research_control/tasks/RT-20260729-003/artifacts/gravitational_closure_route_decision_v1.yaml"
+    burden_effect: "selects_next"
+    summary: "Selects the next theorem-target formalization while keeping construction and adoption false."
+  - payload_id: "PAYLOAD-RT003-003"
+    payload_type: "dependency_map_update"
+    object_name: "P8-T01 frozen gravitational-closure alternatives"
+    claim_status: "draft/control local freeze"
+    source_path: "research_control/tasks/RT-20260729-003/artifacts/frozen_gravitational_closure_alternatives_v1.yaml"
+    burden_effect: "prevents_orbit"
+    summary: "Freezes three alternatives only until their exact source-side thaw criteria are satisfied."
+
+physics_progress_status:
+  status: "selector_only_no_distance_delta"
+  target_derivation_milestone: "einstein_equations"
+  milestone_burden: "Select the minimum honest closure route before constructing field equations."
+  explanation: "P8-T01 narrows the next formalization route and records a dependency map. It constructs no gravitational object and discharges no Distance-to-GR burden."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "einstein_equations"
+  milestone: "einstein_equations"
+  old_status: "not_started"
+  new_status: "not_started"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  downstream_unlocked:
+    - "P8-T02 LocalEffectiveActionClosureTarget_v1 formalization after governed checkpoint"
+  downstream_still_blocked:
+    - "lawful unscoped effective geometry"
+    - "source-to-effective matter map"
+    - "local effective action construction"
+    - "target stress-energy tensor"
+    - "equivalence principle"
+    - "Einstein equations"
+    - "exact-GR recovery"
+    - "benchmark promotion"
+  explanation: "Route selection is not a physical or mathematical construction and does not update the ledger."
+
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "unchanged; no canonical ontology edit or new source-law adoption"
+  - burden: "Source equivalence EqSrc"
+    status: "unchanged"
+  - burden: "RetainH"
+    status: "unchanged"
+  - burden: "GenH"
+    status: "unchanged"
+  - burden: "ObsLoc_lc"
+    status: "unchanged"
+  - burden: "Resp_lc"
+    status: "unchanged; controlled source response does not become an effective gravitational response"
+  - burden: "M_src"
+    status: "unchanged"
+  - burden: "g_eff"
+    status: "unresolved; ScopedMetricStructureRecord_src remains scoped and Gate B remains zero of eight"
+  - burden: "matter coupling"
+    status: "P7 source-scope matter is human-adopted by constitutive postulate; the cross-layer derivational gap remains open"
+  - burden: "Einstein equations"
+    status: "not started; P8-T01 selects only a P8-T02 formalization target"
+  - burden: "finite-variation robustness"
+    status: "unchanged; P7 finite source variation supplies no effective gravitational robustness theorem"
+  - burden: "benchmark promotion"
+    status: "blocked"
+  - burden: "Gate Chair status"
+    status: "no new protected verdict requested"
+  - burden: "current route freeze or hard-fail status"
+    status: "local effective-action route selected for formalization; hypersurface-deformation, matter-closure, and thermodynamic routes locally frozen with thaw criteria"
+
+freeze_criteria_status:
+  repeated_burden: false
+  freeze_evaluation_required: true
+  active_freeze_label: "P8T01-THREE-ALTERNATIVE-LOCAL-FREEZE"
+  prior_attempts_considered:
+    - "P5 provides controlled source response and P6 preserves a scoped geometry record with a negative Gate B result."
+    - "P7 provides exact source-scope constitutive matter, action, variation, response precursor, and balance."
+  freeze_if:
+    - "A later packet repeats a frozen route without satisfying at least one explicit thaw criterion."
+    - "A later packet treats the selected route label as an existing action, metric, or field equation."
+  do_not_freeze_if:
+    - "P8-T02 adds a materially new exact closure-target formalization or precise scoped obstruction."
+    - "A frozen route receives materially new source-side primitives satisfying its recorded thaw criteria."
+  freeze_decision: "three_alternatives_locally_frozen_selected_route_open"
+  decision_reason: "The selected route supports a materially new formalization target. The other routes' distinctive primitives are absent, so immediate repetition would be orbital."
+  next_allowed_route: "ontology-formalizer@0.2.0 for P8-T02"
+  global_theory_rejection: false
+  future_source_extension_impossibility: false
+
+route_cycle_control:
+  cycle_family: "v21_p8_gravitational_closure"
+  current_cycle_step: "p8_t01_four_route_selection"
+  prior_related_tasks:
+    - "RT-20260726-001"
+    - "RT-20260726-011"
+    - "RT-20260727-004"
+    - "RT-20260729-001"
+  cycle_risk: "medium"
+  orbit_avoidance_reason: "The selector freezes three unsupported route families and gives the selected route one exact new P8-T02 formalization target rather than attempting field equations from unchanged premises."
+  next_role_consequence: "ontology-formalizer@0.2.0 for P8-T02 after checkpoint"
+
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  forbidden_conclusions:
+    - "route selection as construction, adoption, theorem truth, or Distance-to-GR discharge"
+    - "canonical ontology or source-law adoption or rejection"
+    - "source-to-effective geometry or metric construction"
+    - "M_src adoption or scope expansion"
+    - "bare g_eff adoption or promotion"
+    - "matter coupling derivation or scope expansion beyond the exact P7 postulates"
+    - "local effective action or target stress-energy construction"
+    - "equivalence-principle establishment or refutation"
+    - "Einstein-equation derivation or exact-GR recovery"
+    - "benchmark promotion"
+    - "global no-go, global theory rejection, or future source-extension impossibility"
+    - "Gate Chair verdict, proof, publication, push, or completed derivation"
+  summary: "P8-T01 is a formalization-only route selector and local freeze packet."
+
+artifacts:
+  route_decision: "research_control/tasks/RT-20260729-003/artifacts/gravitational_closure_route_decision_v1.yaml"
+  route_comparison: "research_control/tasks/RT-20260729-003/artifacts/gravitational_closure_hypothesis_comparison_v1.yaml"
+  frozen_alternatives: "research_control/tasks/RT-20260729-003/artifacts/frozen_gravitational_closure_alternatives_v1.yaml"
+  human_receipt: "research_control/tasks/RT-20260729-003/artifacts/gravitational_closure_route_selection_receipt.md"
+  compact_validation_receipt: "research_control/tasks/RT-20260729-003/artifacts/gravitational_closure_route_selection_validation_v1.json"
+  validator: "research_control/tasks/RT-20260729-003/artifacts/validate_gravitational_closure_route_selection.py"
+  child_phys_math: "research_control/tasks/RT-20260729-003/artifacts/child_phys_math_p8_t01_closure_route_selection.yaml"
+  child_phys_phil: "research_control/tasks/RT-20260729-003/artifacts/child_phys_phil_p8_t01_closure_route_selection.yaml"
+  parent_conflict_review: "research_control/tasks/RT-20260729-003/artifacts/parent_conflict_review_p8_t01_closure_route_selection.yaml"
+  parent_fusion_notes: "research_control/tasks/RT-20260729-003/artifacts/parent_fusion_notes_p8_t01_closure_route_selection.md"
+
+output_paths:
+  - "research_control/tasks/RT-20260729-003/artifacts/gravitational_closure_route_decision_v1.yaml"
+  - "research_control/tasks/RT-20260729-003/artifacts/gravitational_closure_hypothesis_comparison_v1.yaml"
+  - "research_control/tasks/RT-20260729-003/artifacts/frozen_gravitational_closure_alternatives_v1.yaml"
+  - "research_control/tasks/RT-20260729-003/artifacts/gravitational_closure_route_selection_receipt.md"
+  - "research_control/tasks/RT-20260729-003/artifacts/gravitational_closure_route_selection_validation_v1.json"
+  - "research_control/tasks/RT-20260729-003/artifacts/validate_gravitational_closure_route_selection.py"
+  - "research_control/tasks/RT-20260729-003/artifacts/child_phys_math_p8_t01_closure_route_selection.yaml"
+  - "research_control/tasks/RT-20260729-003/artifacts/child_phys_phil_p8_t01_closure_route_selection.yaml"
+  - "research_control/tasks/RT-20260729-003/artifacts/parent_conflict_review_p8_t01_closure_route_selection.yaml"
+  - "research_control/tasks/RT-20260729-003/artifacts/parent_fusion_notes_p8_t01_closure_route_selection.md"
+  - "research_control/tasks/RT-20260729-003/00_TASK.yaml"
+  - "research_control/tasks/RT-20260729-003/DDR-20260729-003.md"
+  - "research_control/tasks/RT-20260729-003/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260729-003/roles/theoretical-continuation-selector@0.1.0--RT-20260729-003.yaml"
+  - "research_control/tasks/RT-20260729-003/jobs/AJ-RT-20260729-003-001.yaml"
+  - "research_control/tasks/RT-20260729-003/jobs/completions/AJC-AJ-RT-20260729-003-001.yaml"
+  - "research_control/handoffs/handoff-0899.yaml"
+  - "research_control/handoffs/handoff-0899.md"
+
+artifact_receipts:
+  route_decision:
+    path: "research_control/tasks/RT-20260729-003/artifacts/gravitational_closure_route_decision_v1.yaml"
+    sha256: "49af80465727038a7022371bac9dbe8fc4442b01a37fe14e9442873b1d8fa82f"
+    status_label: "draft/control"
+  route_comparison:
+    path: "research_control/tasks/RT-20260729-003/artifacts/gravitational_closure_hypothesis_comparison_v1.yaml"
+    sha256: "c337169583c60d1e4889e820ac0388c17ead67b190875268788805dae72b63d2"
+    status_label: "draft/control"
+  frozen_alternatives:
+    path: "research_control/tasks/RT-20260729-003/artifacts/frozen_gravitational_closure_alternatives_v1.yaml"
+    sha256: "523f3db4b98b13089ea3f7f54d91a8907790117deb4da00d89319805953a5049"
+    status_label: "draft/control"
+  route_selection_receipt:
+    path: "research_control/tasks/RT-20260729-003/artifacts/gravitational_closure_route_selection_receipt.md"
+    sha256: "5124e401a146b89c1a9019d45eb86d36a9151faca28354b9bc38a2ba011d5617"
+    status_label: "draft/control"
+  validation_receipt:
+    path: "research_control/tasks/RT-20260729-003/artifacts/gravitational_closure_route_selection_validation_v1.json"
+    sha256: "04f76dc6ad09e0f1ceab033701739a048ab2728a8880db637e57ba37d41469da"
+    status_label: "operational_validation_only"
+  parent_fusion_notes:
+    path: "research_control/tasks/RT-20260729-003/artifacts/parent_fusion_notes_p8_t01_closure_route_selection.md"
+    sha256: "47d61e576e31de1af9e634db946aca1559d83a7791889d675f375ae06d00bb71"
+    status_label: "draft/control"
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 156 validated, was atomically claimed once, and consumed its exact immutable P8-T01 continue-research route once."
+      - "Dependency checkpoint 3d07da4a705f1e12e8429129e640bbb678f77c0a contains the cumulative P7-T08 adoption and EOF recovery transaction."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The task-local validator passes 41 of 41 route, freeze, source-hash, child-synthesis, target-premise, and authority checks."
+      - "Exactly one route is selected and all three frozen routes carry explicit thaw criteria."
+      - "Four parent conflicts are resolved and none remain."
+  post_write:
+    status: "PENDING"
+    evidence:
+      - "Integrated claim-language, documentation-impact, project-improvement-signal, research-control, renderer, and memory checks remain before checkpoint."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "One governed checkpoint remains; P8-T02 is not executed before it."
+  renderer:
+    status: "PENDING"
+    evidence:
+      - "The governed workflow must synchronize current frontier, task index, dependency graph, claim graph, and generated memory derivatives."
+  memory_bootstrap:
+    status: "PENDING"
+    evidence:
+      - "Tracked memory synchronization and validate-only mode remain before checkpoint."
+  claim_language_linter:
+    status: "PENDING"
+    evidence:
+      - "Changed-source claim-language validation remains before checkpoint."
+
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=true source_object_count=1069 relationship_row_count=5378 semantic_row_count=1069 vault_row_count=1069"
+  - ".venv/bin/python research_control/tasks/RT-20260729-003/artifacts/validate_gravitational_closure_route_selection.py --write-report --json | exit_code=0 | status=PASS check_count=41 failure_count=0"
+
+validation_evidence:
+  - gate_id: "task_local_gravitational_closure_route_selection"
+    status: "PASS"
+    receipt_path: "research_control/tasks/RT-20260729-003/artifacts/gravitational_closure_route_selection_validation_v1.json"
+    content_hash: "sha256:04f76dc6ad09e0f1ceab033701739a048ab2728a8880db637e57ba37d41469da"
+    counts:
+      error_count: 0
+      warning_count: 0
+      finding_count: 41
+    relevant_finding_ids: []
+    tree_fingerprint: ""
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not requested; the exact P7-T08 protected adoption is read-only source evidence"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  publication_authorized: false
+  proof_authority: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  canonical_ontology_edit_authorized: false
+  ontology_selection_authorized: false
+  physical_interpretation_establishment_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  sidecar_required: false
+  sidecar_created: false
+  reason: "No nonblank project-improvement signal was emitted."
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1069
+    relationship_row_count: 5378
+    semantic_row_count: 1069
+    vault_row_count: 1069
+    local_cache_only_warning_count: 0
+    refresh_performed: true
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"gravitational closure adopted physical matter\" --limit 10 --json"
+      query_type: "search"
+      query_text: "gravitational closure adopted physical matter"
+      returned_object_ids:
+        - "TEX-V21-P7-T08-PHYSICAL-MATTER-ADOPTION-DECISION-V1"
+        - "TEX-ONTOLOGY-AETHER-FLOW-CONSISTENCY"
+        - "TEX-ONTOLOGY-AETHER-FLOW-GEOMETRY"
+        - "TEX-ONTOLOGY-AETHER-FLOW-DYNAMICS"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-V21-P7-T08-PHYSICAL-MATTER-ADOPTION-DECISION-V1 --json"
+      query_type: "lookup"
+      query_text: "TEX-V21-P7-T08-PHYSICAL-MATTER-ADOPTION-DECISION-V1"
+      returned_object_ids:
+        - "TEX-V21-P7-T08-PHYSICAL-MATTER-ADOPTION-DECISION-V1"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+    - object_id: "TEX-V21-P7-T08-PHYSICAL-MATTER-ADOPTION-DECISION-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260729-001/artifacts/p7_t08_gate_c_decision_v1.tex"
+      source_hash: "85fbf32fb9b02aeae556149cbc5c6b51bd6fedf278a3bc401545c93e29fc4827"
+    - object_id: "TEX-ONTOLOGY-AETHER-FLOW-CONSISTENCY"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "ontology/tex/aether_flow_consistency.tex"
+      source_hash: "d965519639ee8764a5c5a63798d15e8a9a380d7e208dffc43a0be02b6f245ba1"
+    - object_id: "TEX-ONTOLOGY-AETHER-FLOW-DYNAMICS"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "ontology/tex/aether_flow_dynamics.tex"
+      source_hash: "fd6e579e71ef7f2ac4c9668ceede051ad57033ee52357b2552a9e3a5a53939c7"
+    - object_id: "TEX-ONTOLOGY-AETHER-FLOW-GEOMETRY"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "ontology/tex/aether_flow_geometry.tex"
+      source_hash: "f60a81b63f814b03cca7190b3ac6285842a55317f4aed058cc6e75154cc0b4d7"
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index PDFs and .local files are retrieval layers only and are not authority."
+
+required_next_packet:
+  plan_task_id: "P8-T02"
+  task_type: "v21_p8_t02_local_effective_action_closure_target_formalization"
+  selected_next_packet_type: "ontology_law_research_packet"
+  selected_next_role_family: "ontology-formalizer@0.2.0"
+  route_label: "ontology-law-research-packet"
+  target_id: "LocalEffectiveActionClosureTarget_v1"
+  dependency_ready_after_checkpoint: true
+  dependency_ready_now: false
+  requires_human_gate: false
+  executed: false
+
+next_recommendation: "After one governed checkpoint, run one bounded P8-T02 ontology-formalizer packet to formalize LocalEffectiveActionClosureTarget_v1 with target imports barred and failure branches explicit."

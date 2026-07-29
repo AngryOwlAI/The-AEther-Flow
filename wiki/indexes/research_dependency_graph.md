@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-07-29T04:53:20Z`
-- Source fingerprint: `43adb2d240d837b4b7ce91ef393648fd777ebcd0bc6a7ee60c68ff16b205071b`
-- Nodes: `23108`
-- Edges: `74250`
+- Generated from tracked state as of: `2026-07-29T14:26:01Z`
+- Source fingerprint: `23610de443fb81e10f9f25d23ff50b600527668eb41ef34dfb0456394fb6114e`
+- Nodes: `23141`
+- Edges: `74296`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 1137 |
+| `completion_yaml` | 1138 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 898 |
+| `handoff_yaml` | 899 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,18 +33,18 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 9 |
-| `agent_job` | `support_only` | 1137 |
+| `agent_job` | `support_only` | 1138 |
 | `artifact` | `canonical_source` | 87 |
-| `artifact` | `support_only` | 11746 |
-| `blocked_burden` | `blocked` | 4676 |
-| `claim_boundary` | `support_only` | 1094 |
-| `draft_control_candidate` | `draft_control` | 768 |
+| `artifact` | `support_only` | 11762 |
+| `blocked_burden` | `blocked` | 4684 |
+| `claim_boundary` | `support_only` | 1095 |
+| `draft_control_candidate` | `draft_control` | 771 |
 | `draft_control_candidate` | `proposal_only` | 142 |
 | `draft_control_candidate` | `science_draft` | 83 |
-| `frozen_negative` | `frozen_negative` | 143 |
+| `frozen_negative` | `frozen_negative` | 144 |
 | `gate_chair_verdict` | `human_gated` | 33 |
-| `handoff` | `support_only` | 898 |
-| `human_gated_object` | `human_gated` | 559 |
+| `handoff` | `support_only` | 899 |
+| `human_gated_object` | `human_gated` | 560 |
 | `ledger_row` | `accepted_scoped` | 6 |
 | `ledger_row` | `blocked` | 4 |
 | `ledger_row` | `frozen_negative` | 1 |
@@ -58,7 +58,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `source_ontology_object` | `support_only` | 366 |
 | `task` | `human_gated` | 29 |
 | `task` | `science_draft` | 32 |
-| `task` | `support_only` | 1076 |
+| `task` | `support_only` | 1077 |
 
 ## Frontier Table
 
@@ -163,9 +163,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 ## Route Continuity
 
-- Active task: `RT-20260729-002`
-- Latest handoff: `handoff-0898`
-- Handoff path: `research_control/handoffs/handoff-0898.yaml`
-- Next action: Run the one governed cumulative checkpoint for AJ-RT-20260729-002-001. Only after it commits may one fresh bounded P8-T01 Candidate Constructor packet use the eight exact adopted P7 postulates as scoped premises while constructing or precisely obstructing the first gravitational-closure route.
+- Active task: `RT-20260729-003`
+- Latest handoff: `handoff-0899`
+- Handoff path: `research_control/handoffs/handoff-0899.yaml`
+- Next action: Run one governed checkpoint for AJ-RT-20260729-003-001. Only after it commits may one fresh bounded P8-T02 ontology-formalizer packet formalize LocalEffectiveActionClosureTarget_v1 without using the Einstein-Hilbert action, target metric, Einstein equations, or exact-GR benchmark success as a source premise.
 
 This graph is navigational support only; inspect the cited sources before using any claim.

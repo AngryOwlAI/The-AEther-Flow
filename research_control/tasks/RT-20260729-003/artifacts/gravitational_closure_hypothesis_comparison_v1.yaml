@@ -1,0 +1,125 @@
+schema_id: "gravitational_closure_hypothesis_comparison_v1"
+artifact_id: "V21-P8-T01-GRAVITATIONAL-CLOSURE-HYPOTHESIS-COMPARISON-V1"
+task_id: "RT-20260729-003"
+plan_task_id: "P8-T01"
+status_label: "draft/control"
+created_at: "2026-07-29T14:26:01Z"
+
+comparison_basis:
+  allowed_premises:
+    - "The exact P5 source-response records as controlled source-side evidence."
+    - "The P6 scoped metric-structure naming record and negative Gate B result."
+    - "The exact P7 human-adopted source-matter package within its declared scope."
+  forbidden_premises:
+    - "The canonical exact-GR benchmark as a source-side law or route-selection fit target."
+    - "A target atlas, target metric, Einstein-Hilbert action, Einstein equations, or target stress-energy tensor."
+    - "Validator, registry, checkpoint, generated derivative, or role authority as scientific evidence."
+  decision_semantics: "A route is selected for the next formalization packet; selection does not certify that its missing prerequisites exist or can be derived."
+
+routes:
+  - route_id: "conditional_source_to_local_effective_action_closure_v1"
+    route_label: "local-effective-action-closure"
+    disposition: "selected_for_formalization_only"
+    source_precursor_overlap:
+      - "adopted finite source matter action"
+      - "adopted finite source variation"
+      - "adopted source-side stress-energy precursor"
+      - "adopted componentwise source conservation"
+      - "controlled P5 source response"
+      - "scoped P6 metric-structure record"
+    missing_prerequisites:
+      - "lawful source-to-unscoped-geometry map"
+      - "source-to-effective-matter map"
+      - "target-atlas-free locality measure and derivative expansion"
+      - "source-derived invariance or replacement principle"
+      - "scale, coarse-graining, and correction hierarchy"
+      - "well-posed variational boundary data"
+      - "source-to-effective conservation bridge"
+      - "derived Einstein-leading regime"
+    assumption_debt_class: "high_but_lowest_declared_overlap_debt"
+    target_import_required_now: false
+    human_gate_required_now: false
+
+  - route_id: "hypersurface_deformation_closure_v1"
+    route_label: "hypersurface-deformation-closure"
+    disposition: "frozen_pending_source_canonical_data"
+    source_precursor_overlap:
+      - "adopted source dynamics"
+      - "adopted source matter package"
+    missing_prerequisites:
+      - "source-derived hypersurface or foliation object"
+      - "canonical phase space and symplectic or Poisson structure"
+      - "Hamiltonian and momentum constraint candidates"
+      - "first-class constraint theorem"
+      - "hypersurface-deformation representation and closure"
+      - "target-free source-to-spatial-geometry map"
+      - "matter Hamiltonian compatibility"
+      - "lapse and shift interpretation or source-side replacement"
+      - "recovery theorem for the covariant dynamics"
+    assumption_debt_class: "higher_canonical_structure_debt"
+    target_import_required_now: false
+    human_gate_required_now: false
+
+  - route_id: "gravitational_closure_from_matter_v1"
+    route_label: "gravitational-closure-from-matter"
+    disposition: "frozen_pending_effective_matter_response"
+    source_precursor_overlap:
+      - "adopted source matter package"
+      - "adopted source coupling"
+      - "adopted source-side stress-energy precursor"
+      - "adopted componentwise source conservation"
+    missing_prerequisites:
+      - "source-derived effective matter field space"
+      - "effective stress-energy or response tensor"
+      - "lawful source-to-geometry response map"
+      - "universal response theorem across matter sectors"
+      - "effective conservation and gauge-consistency identity"
+      - "closure equations with well-posed principal symbol"
+      - "controlled Einstein-leading regime"
+      - "extra-mode and correction classification"
+      - "exact-GR recovery theorem"
+    assumption_debt_class: "higher_cross_layer_response_debt"
+    target_import_required_now: false
+    human_gate_required_now: false
+
+  - route_id: "thermodynamic_gravity_closure_v1"
+    route_label: "thermodynamic-gravity-closure"
+    disposition: "frozen_pending_source_thermodynamic_dictionary"
+    source_precursor_overlap:
+      - "adopted source propagation"
+      - "adopted source matter balance"
+    missing_prerequisites:
+      - "source-derived local horizon or equivalent causal boundary"
+      - "source-derived local temperature"
+      - "entropy functional and area or replacement law"
+      - "heat-flux or energy-transfer functional"
+      - "equilibrium, near-equilibrium, or Clausius principle"
+      - "integrability and equation-of-state theorem"
+      - "local Lorentz or replacement structure"
+      - "nonequilibrium correction control"
+      - "matter-coupling compatibility"
+      - "Einstein-leading recovery theorem"
+    assumption_debt_class: "highest_thermodynamic_dictionary_debt"
+    target_import_required_now: false
+    human_gate_required_now: false
+
+selection_result:
+  selected_route_id: "conditional_source_to_local_effective_action_closure_v1"
+  selection_basis: "It is the only compared route whose immediate formal target can directly type and audit the already adopted source action, variation, response, and conservation records without first positing canonical hypersurfaces, an effective matter tensor, or a thermodynamic horizon dictionary."
+  theorem_level_optimality_claimed: false
+  alternatives_rejected_globally: false
+  alternatives_frozen_locally: true
+
+new_mathematical_payload:
+  payload_id: "NMP-RT-20260729-003-001"
+  payload_type: "typed_route_dependency_partial_order"
+  definition: "The comparison records each route as a pair (P_r, M_r), where P_r is its currently usable source-precursor set and M_r its missing-prerequisite set. Source-precursor dominance is permitted only under precursor inclusion, no additional protected or target premise, and strict dependency-depth advantage."
+  result: "The local effective-action route is selected by declared least-assumption-debt policy; no theorem of unique or global optimality is claimed."
+
+authority_limits:
+  selected_route_constructed: false
+  alternatives_disproved: false
+  canonical_ontology_modified: false
+  source_law_adopted: false
+  einstein_equations_derived: false
+  proof_authority: false

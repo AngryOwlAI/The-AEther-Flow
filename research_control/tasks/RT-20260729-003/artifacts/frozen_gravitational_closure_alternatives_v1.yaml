@@ -1,0 +1,42 @@
+schema_id: "frozen_gravitational_closure_alternatives_v1"
+artifact_id: "V21-P8-T01-FROZEN-GRAVITATIONAL-CLOSURE-ALTERNATIVES-V1"
+task_id: "RT-20260729-003"
+status_label: "draft/control"
+created_at: "2026-07-29T14:26:01Z"
+freeze_scope: "P8 route-selection state only"
+freeze_semantics: "A frozen route is not rejected and may be reopened only by materially new source-side evidence satisfying its explicit thaw criteria."
+
+frozen_alternatives:
+  - route_id: "hypersurface_deformation_closure_v1"
+    freeze_status: "locally_frozen"
+    freeze_reason: "The repository has no source-derived hypersurface, canonical phase space, Poisson structure, first-class constraint set, or hypersurface-deformation representation."
+    thaw_criteria:
+      - "A source-derived hypersurface or equivalent canonical decomposition is registered."
+      - "A compatible phase-space bracket and candidate constraints are constructed without target import."
+      - "A bounded closure theorem or precise obstruction packet becomes executable."
+  - route_id: "gravitational_closure_from_matter_v1"
+    freeze_status: "locally_frozen"
+    freeze_reason: "The adopted P7 source-side stress-energy precursor is not a target-side response tensor, and no source-to-effective-geometry response map or conservation bridge exists."
+    thaw_criteria:
+      - "A source-derived effective matter response object is constructed."
+      - "A universal response-to-geometry map is typed without benchmark reconstruction."
+      - "Conservation, gauge consistency, and principal-symbol obligations are executable."
+  - route_id: "thermodynamic_gravity_closure_v1"
+    freeze_status: "locally_frozen"
+    freeze_reason: "No source-derived local horizon, temperature, entropy law, heat flux, equilibrium principle, or integrability theorem exists."
+    thaw_criteria:
+      - "A source-side causal-boundary or horizon replacement is constructed."
+      - "Temperature, entropy, and heat-flow functionals are derived or explicitly proposed with source-only semantics."
+      - "An integrability and nonequilibrium-control packet is executable."
+
+selected_route:
+  route_id: "conditional_source_to_local_effective_action_closure_v1"
+  freeze_status: "not_frozen_selected_for_p8_t02_formalization"
+  next_target_id: "LocalEffectiveActionClosureTarget_v1"
+
+authority_limits:
+  frozen_means_impossible: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+  selected_route_adopted: false
+  einstein_equations_derived: false

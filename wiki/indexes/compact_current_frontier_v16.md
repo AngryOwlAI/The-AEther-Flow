@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260729-002`
-- Latest handoff: `handoff-0898`
-- Current status: `p7_t08_single_eof_checkpoint_recovery_pass_ready_for_checkpoint`
+- Active task: `RT-20260729-003`
+- Latest handoff: `handoff-0899`
+- Current status: `p8_t01_local_effective_action_route_selected_for_formalization_ready_for_checkpoint`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260729-002`
-- Latest research handoff: `handoff-0898`
-- Latest research next action: Run the one governed cumulative checkpoint for AJ-RT-20260729-002-001. Only after it commits may one fresh bounded P8-T01 Candidate Constructor packet use the eight exact adopted P7 postulates as scoped premises while constructing or precisely obstructing the first gravitational-closure route.
+- Latest research task: `RT-20260729-003`
+- Latest research handoff: `handoff-0899`
+- Latest research next action: Run one governed checkpoint for AJ-RT-20260729-003-001. Only after it commits may one fresh bounded P8-T02 ontology-formalizer packet formalize LocalEffectiveActionClosureTarget_v1 without using the Einstein-Hilbert action, target metric, Einstein equations, or exact-GR benchmark success as a source premise.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p8_t01_gravitational_closure_after_checkpoint`
-- Role family: `candidate-constructor@0.2.0`
+- Route ID: `v21_p8_t02_local_effective_action_closure_target_after_checkpoint`
+- Role family: `ontology-formalizer@0.2.0`
 - Target milestone: `einstein_equations`
-- Milestone burden: Construct or precisely obstruct the first gravitational-closure packet using the adopted P7 matter inputs without importing target results.
+- Milestone burden: Define what must be proved before any field-equation claim.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `853e3f6eb311f64435bcd9e36fc231c54fe3b8b441a6a4cbe0d82b92641b317f`
-- JSON SHA-256: `733950813f9619fe100460f81510de55b8b46a6b70dcd81d7d874decda4af8fa`
+- YAML SHA-256: `c442780050e52bc57dadd01a00b83f877a6b3894d13d1ae7b325a387153431b1`
+- JSON SHA-256: `077b85c49e5adb183c79fa89984830aedec5030b43790609cb71aa1a2e9ba54b`
 
 ## Authority Warning
 

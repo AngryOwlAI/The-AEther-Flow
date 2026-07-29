@@ -1,0 +1,53 @@
+schema_id: "parent_child_execution_unit_v1"
+execution_unit_id: "child_phys_math"
+task_id: "RT-20260729-003"
+perspective: "physicist_mathematician"
+status: "completed"
+created_at: "2026-07-29T14:26:01Z"
+assignment: "Compare the four P8-T01 gravitational-closure routes by typed source precursors, missing mathematical objects, theorem burden, and target-import risk."
+
+findings:
+  recommended_route_id: "conditional_source_to_local_effective_action_closure_v1"
+  recommendation_status: "selected_for_formalization_only"
+  mathematical_reason: "The local effective-action target can be formulated as a typed existence-and-uniqueness burden over source-derived carrier, field, locality, symmetry, measure, and variational data. It has direct interfaces to the adopted P7 source action, finite variation, response precursor, and componentwise balance. The other three routes first require additional canonical, response-tensor, or thermodynamic dictionaries."
+  no_target_import_reason: "The target benchmark action and equations are excluded as premises. P8-T02 must state the closure target abstractly and derive any Einstein-leading term only downstream."
+
+route_dependency_sets:
+  conditional_source_to_local_effective_action_closure_v1:
+    present_precursors:
+      - "finite source matter action"
+      - "finite source variation"
+      - "source response precursor"
+      - "componentwise source balance"
+    decisive_missing_objects:
+      - "source-to-effective carrier and geometry map"
+      - "locality, measure, and derivative expansion"
+      - "derived invariance or replacement principle"
+      - "effective conservation bridge"
+  hypersurface_deformation_closure_v1:
+    decisive_missing_objects:
+      - "source-derived canonical phase space"
+      - "Poisson structure"
+      - "first-class constraint algebra"
+      - "hypersurface-deformation representation"
+  gravitational_closure_from_matter_v1:
+    decisive_missing_objects:
+      - "effective matter response tensor"
+      - "universal response-to-geometry map"
+      - "effective conservation identity"
+  thermodynamic_gravity_closure_v1:
+    decisive_missing_objects:
+      - "source-derived horizon replacement"
+      - "temperature and entropy functionals"
+      - "heat-flow and integrability theorem"
+
+new_mathematical_payload:
+  payload_id: "NMP-RT-20260729-003-CHILD-MATH-001"
+  payload_type: "route_dependency_partial_order"
+  statement: "Route comparison is represented by present-precursor and missing-prerequisite sets. The selected route is a policy minimum under source-precursor overlap and dependency depth, not a proved unique mathematical optimum."
+
+nonconclusions:
+  - "No effective action exists by virtue of this selection."
+  - "No source-to-effective geometry map is constructed."
+  - "No Einstein equation or exact-GR recovery statement is derived."
+  - "No frozen alternative is globally impossible."
