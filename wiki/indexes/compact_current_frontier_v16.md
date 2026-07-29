@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260729-007`
-- Latest handoff: `handoff-0903`
-- Current status: `p8_t04_exact_finite_equation_identity_and_scoped_obstruction_ready_for_checkpoint`
+- Active task: `RT-20260729-008`
+- Latest handoff: `handoff-0904`
+- Current status: `p8_t05_exact_algebraic_mode_classification_and_scoped_dynamical_viability_obstruction_ready_for_checkpoint`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260729-007`
-- Latest research handoff: `handoff-0903`
-- Latest research next action: Run one governed checkpoint for AJ-RT-20260729-007-001. Only after it commits may one fresh bounded P8-T05 refuter@0.2.0 packet solve and stress-test the exact finite equation for constraints, modes, characteristic structure, and stability without assuming a healthy GR limit.
+- Latest research task: `RT-20260729-008`
+- Latest research handoff: `handoff-0904`
+- Latest research next action: Run one governed checkpoint for AJ-RT-20260729-008-001. Only after it commits may one fresh bounded P8-T06 external-red-team-reviewer@0.1.0 packet audit the unchanged P8-T03 through P8-T05 closure record and this scoped obstruction for target import hidden assumptions algebraic error and interpretation overread without assuming physical viability or a healthy GR limit.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p8_t05_finite_constraint_mode_and_stability_stress`
-- Role family: `refuter@0.2.0`
+- Route ID: `v21_p8_t06_closure_derivation_independent_audit`
+- Role family: `external-red-team-reviewer@0.1.0`
 - Target milestone: `einstein_equations`
-- Milestone burden: Establish whether the derived gravitational sector is dynamically viable.
+- Milestone burden: Calibrate the field-equation result before any protected verdict.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `e7875dea4bdef2a01a2ee954b9c39d5d343a8f2b767a9d95369660662b782659`
-- JSON SHA-256: `aebd43c1406aebafb2632d975738ff1fa4f2b2588b90d38b3f3447bf963783a2`
+- YAML SHA-256: `b7bde36df7019ae0239189bce3abd62d5233829d6144e76df2ed0f881904e81c`
+- JSON SHA-256: `375b537a568eec673f2ed0b4e2ce05354dc23345f5a349665a457975b5d1dc2d`
 
 ## Authority Warning
 

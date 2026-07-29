@@ -1,0 +1,60 @@
+schema_id: "finite_constraint_dynamic_completion_countermodels_v1"
+artifact_id: "FiniteConstraintDynamicCompletionCountermodels_v1"
+task_id: "RT-20260729-008"
+plan_task_id: "P8-T05"
+status: "draft/control"
+candidate_status: "proposal-only"
+purpose: "Minimal task-local countermodels showing that the exact P8-T04 static equation does not determine a dynamical stability verdict."
+
+fixed_static_system:
+  carrier: "Q_C=Q^Omega/ker L_C"
+  shifted_coordinate: "q=h-(beta/alpha)u"
+  static_equation: "alpha L_C q=0"
+  admitted_alpha: "alpha>0"
+  source_slot: "u fixed"
+
+general_pair:
+  auxiliary_assumptions:
+    - "an artificial evolution parameter tau"
+    - "an arbitrary positive-definite quotient matrix M"
+  healthy_completion:
+    lagrangian: "L_plus=dot(q)^T M dot(q)/2-alpha q^T L_C q/2"
+    euler_lagrange: "M ddot(q)+alpha L_C q=0"
+    static_limit: "alpha L_C q=0"
+    kinetic_sign: "positive"
+    quotient_spectrum: "omega_a^2=eigenvalues(alpha M^(-1/2) L_C M^(-1/2))>0"
+    task_local_verdict: "oscillatory_linear_completion"
+  pathological_completion:
+    lagrangian: "L_minus=-dot(q)^T M dot(q)/2-alpha q^T L_C q/2"
+    euler_lagrange: "M ddot(q)-alpha L_C q=0"
+    static_limit: "alpha L_C q=0"
+    kinetic_sign: "negative"
+    quotient_spectrum: "growth_a^2=eigenvalues(alpha M^(-1/2) L_C M^(-1/2))>0"
+    task_local_verdict: "ghost_and_exponential_linear_completion"
+  shared_static_equation: true
+  incompatible_dynamical_verdicts: true
+  inference_refuted: "Static quotient convexity uniquely fixes ghost tachyon gradient hyperbolicity or characteristic status."
+
+two_state_fixture:
+  laplacian:
+    - ["1/4", "-1/4"]
+    - ["-1/4", "1/4"]
+  kernel_basis:
+    - ["1", "1"]
+  quotient_eigenvalue: "1/2"
+  quotient_coordinate: "q=z(1,-1)/2"
+  static_displacement_action: "alpha z^2/8"
+  static_equation: "alpha z/4=0"
+  healthy_equation_for_M_one: "ddot(z)+(alpha/2)z=0"
+  pathological_equation_for_M_one: "ddot(z)-(alpha/2)z=0"
+  same_static_stationary_point: true
+
+scope_controls:
+  completion_adopted: false
+  source_law_adopted: false
+  physical_time_constructed: false
+  target_background_constructed: false
+  physical_gravity_claimed: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+  interpretation: "The artificial completions are logical countermodels only."

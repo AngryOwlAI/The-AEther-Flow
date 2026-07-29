@@ -1,0 +1,63 @@
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+task_id: "RT-20260729-008"
+status: "completed"
+source_candidate: "FiniteSourceFieldEquationIdentity_v1"
+
+fixed_system:
+  equation: "alpha L_C h-beta L_Cu=0"
+  quotient: "Q_C=Q^Omega/ker L_C"
+  response_space: "A_C=(ker L_C)^perp"
+  source_slot: "u fixed"
+  alpha_domain: "alpha>0"
+
+findings:
+  - finding_id: "PM-P8T05-001"
+    result: "For n finite sites and c support components rank(L_C)=n-c."
+    proof_basis: "The kernel is spanned by the c component indicators and rank-nullity applies."
+  - finding_id: "PM-P8T05-002"
+    result: "There are n-c quotient coordinates n-c independent algebraic equations and zero free homogeneous quotient-response modes."
+    proof_basis: "L_C restricted to the quotient is an isomorphism onto the balanced response space."
+  - finding_id: "PM-P8T05-003"
+    result: "The quotient Hessian eigenvalues are alpha lambda_a and are positive for alpha>0."
+    proof_basis: "Every quotient graph-Laplacian eigenvalue lambda_a is positive."
+  - finding_id: "PM-P8T05-004"
+    result: "No covector-dependent principal symbol characteristic polynomial or propagation speed is defined."
+    proof_basis: "The fixed operator alpha L_C has no time derivative spatial derivative background metric or covector argument."
+  - finding_id: "PM-P8T05-005"
+    result: "Positive and negative kinetic dynamical completions share the same static equation but have incompatible stability."
+    proof_basis: "The explicit L_plus and L_minus Euler-Lagrange equations both reduce to alpha L_C q=0 in the static limit."
+  - finding_id: "PM-P8T05-006"
+    result: "Near disconnection gives generic algebraic susceptibility proportional to 1/(alpha lambda_star) but the admitted source-generated response remains exact."
+    proof_basis: "The inverse quotient eigenvalue amplifies generic forcing while L_C appears on both sides for beta L_Cu."
+
+mode_count:
+  representative_coordinates: "n"
+  component_shift_redundancies: "c"
+  quotient_coordinates: "n-c"
+  independent_algebraic_equations: "n-c"
+  free_homogeneous_quotient_response_modes: 0
+  propagating_physical_modes: "undefined"
+
+stability_classification:
+  static_convexity: "proved_for_alpha_positive"
+  characteristic_speeds: "undefined"
+  hyperbolicity: "undefined"
+  ghosts: "undefined"
+  tachyons: "undefined"
+  gradient_instabilities: "undefined"
+  strong_coupling: "undefined"
+
+recommended_obstruction:
+  obstruction_id: "OBST-P8T05-STATIC-FINITE-CONSTRAINT-DYNAMICS-UNDEFINED-001"
+  failed_premise: "No temporal kinetic principal-symbol mass gradient or interaction datum is present."
+  minimal_countermodel_available: true
+  countermodel_path: "research_control/tasks/RT-20260729-008/artifacts/finite_constraint_dynamic_completion_countermodels_v1.yaml"
+  scope: "exact_finite_branch"
+
+authority_limits:
+  dynamical_completion_adopted: false
+  physical_gravity_established: false
+  Einstein_equations_derived: false
+  global_no_go_claimed: false
+  physics_promotion_authorized: false

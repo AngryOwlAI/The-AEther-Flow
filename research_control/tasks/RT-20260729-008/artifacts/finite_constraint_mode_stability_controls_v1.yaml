@@ -1,0 +1,112 @@
+schema_id: "finite_constraint_mode_stability_controls_v1"
+artifact_id: "FiniteConstraintModeStabilityControls_v1"
+task_id: "RT-20260729-008"
+candidate_id: "FiniteSourceFieldEquationIdentity_v1"
+stress_result_id: "FiniteConstraintDynamicalViabilityStress_v1"
+status: "draft/control"
+adoption_status: "blocked_adoption_open_continuation"
+
+fixed_hashes:
+  P8_T04_equation:
+    path: "research_control/tasks/RT-20260729-007/artifacts/finite_source_field_equation_identity_v1.tex"
+    sha256: "12a1cfae87cd673241aefe88144ab974b49fc3bad284a81baff90b2e806d5168"
+  P8_T03_candidate:
+    path: "research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_constraint_candidate_v1.tex"
+    sha256: "82dd10d8e91be3781ca4f21e7f9fbf2ce1a9108ae7191db22fed9dfe6086f2fa"
+  P8_T03_spec:
+    path: "research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_constraint_spec_v1.yaml"
+    sha256: "8840b205e8aa12d73f3e782ec6936eb96385bb5694c298b1bf41a2bdfe472626"
+  P8_T03_coefficients:
+    path: "research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_coefficient_ledger_v1.yaml"
+    sha256: "5948e1ab75e42f622e5cc7309c9a6598720021ff2c893126f93c6b0bc21b7372"
+  P8_T03_controls:
+    path: "research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_controls_v1.yaml"
+    sha256: "b91f240487fd22b9b95b7c7752e429128d20ccb59b3a202c3430ffbbd2922b6e"
+  P8_T02_closure_target:
+    path: "research_control/tasks/RT-20260729-005/artifacts/local_effective_action_closure_target_v1.tex"
+    sha256: "13402c3d80f114b643a0216484b0ba775a2f02d1f0733f33d8cf86044e6add96"
+  P7_T06_source_action:
+    path: "research_control/tasks/RT-20260728-005/artifacts/source_kernel_variational_object_candidate_v1.tex"
+    sha256: "386769e40167c35604625ef7250c027dc1712c82db4790e2895e0b31ac3cfbf7"
+  P7_T08_protected_decision:
+    path: "research_control/tasks/RT-20260729-001/artifacts/p7_t08_gate_c_decision_v1.tex"
+    sha256: "85fbf32fb9b02aeae556149cbc5c6b51bd6fedf278a3bc401545c93e29fc4827"
+  P6_T08_gate_b_certificate:
+    path: "research_control/tasks/RT-20260727-004/artifacts/p6_t08_gate_b_separating_certificate_v1.yaml"
+    sha256: "f3080ed6a6ba1d6847a3b7ed43c7a11ad7f7dae4deccd25486913ea9547f221b"
+
+stress_controls:
+  solve_exact_finite_equation_first: true
+  quotient_mode_count_required: true
+  representative_redundancy_separated_from_physical_gauge: true
+  algebraic_modes_separated_from_propagating_modes: true
+  static_hessian_separated_from_kinetic_form: true
+  graph_spectrum_separated_from_dispersion_relation: true
+  characteristic_status_requires_covector_dependent_principal_symbol: true
+  ghost_status_requires_kinetic_form: true
+  tachyon_status_requires_mass_or_dispersion_data: true
+  gradient_status_requires_spacetime_gradient_sector: true
+  strong_coupling_status_requires_kinetic_normalization_and_interactions: true
+  countermodel_pair_required: true
+  near_disconnection_control_required: true
+
+failure_branches:
+  - failure_id: "FCMS-F01"
+    trigger: "Any fixed source hash differs."
+    result: "stop; immutable dependency drift"
+  - failure_id: "FCMS-F02"
+    trigger: "A graph eigenvalue is renamed as a physical frequency mass or speed."
+    result: "stop; unsupported dynamical interpretation"
+  - failure_id: "FCMS-F03"
+    trigger: "Positive static Hessian is used as a ghost-free or gradient-stable verdict."
+    result: "stop; kinetic or spacetime-gradient data missing"
+  - failure_id: "FCMS-F04"
+    trigger: "Component shifts are called diffeomorphism gauge or first-class constraints."
+    result: "stop; target-side gauge smuggling"
+  - failure_id: "FCMS-F05"
+    trigger: "Artificial countermodel dynamics are adopted as a source law or candidate repair."
+    result: "stop; countermodel scope exceeded"
+  - failure_id: "FCMS-F06"
+    trigger: "Near-disconnection conditioning is called physical strong coupling."
+    result: "stop; kinetic normalization and interactions missing"
+  - failure_id: "FCMS-F07"
+    trigger: "Candidate-scoped non-derivation is promoted to global impossibility."
+    result: "stop; no-go overreach"
+
+freeze_controls:
+  repeated_burden_without_new_payload: false
+  new_payload:
+    - "complete algebraic quotient constraint and mode count"
+    - "exact spectral linearized system"
+    - "minimal healthy and pathological dynamical-completion countermodel pair"
+    - "parameter and topology phase diagram"
+    - "near-disconnection susceptibility theorem"
+    - "precise dynamical-data obstruction"
+  freeze_unchanged_candidate_against_physical_dynamical_viability_claim: true
+  allow_materially_new_source_dynamics: true
+  allow_independent_P8_T06_audit_after_checkpoint: true
+  global_family_freeze: false
+
+forbidden_conclusions:
+  - "zero propagating physical degrees of freedom"
+  - "component shifts are diffeomorphism gauge"
+  - "positive quotient Hessian proves ghost freedom"
+  - "graph eigenvalues are physical masses frequencies or characteristic speeds"
+  - "the finite equation is hyperbolic elliptic or causal as a spacetime equation"
+  - "near-disconnection susceptibility is a strong-coupling scale"
+  - "the countermodel completions are adopted dynamics"
+  - "the finite equation is an Einstein equation"
+  - "healthy GR limit or exact-GR recovery"
+  - "canonical ontology or source-law adoption or rejection"
+  - "benchmark promotion proof publication push or completed derivation"
+  - "global no-go or future source-extension impossibility"
+
+authority_limits:
+  canonical_ontology_modified: false
+  source_law_adopted_or_rejected: false
+  candidate_adopted_or_rejected: false
+  physical_interpretation_established: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false

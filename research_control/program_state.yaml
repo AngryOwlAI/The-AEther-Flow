@@ -1,11 +1,124 @@
 mode: "director_led_research_control"
-active_task_id: "RT-20260729-007"
-latest_handoff_id: "handoff-0903"
-current_status: "p8_t04_exact_finite_equation_identity_and_scoped_obstruction_ready_for_checkpoint"
-claim_boundary_summary: "RT-20260729-007 derives the exact finite response equation alpha L_C h-beta L_Cu=0, unique quotient solution, source maps, edge-flux and complete component-shift identities, plus one formal joint-variation diagnostic. OBST-P8T04-FINITE-CONSTRAINT-EINSTEIN-TYPE-DATA-ABSENT-001 blocks reinterpretation of the unchanged finite equation as Einstein dynamics while leaving P8-T05 stress testing and materially new same-milestone continuation open."
-next_plan_task_id: "P8-T05"
+active_task_id: "RT-20260729-008"
+latest_handoff_id: "handoff-0904"
+current_status: "p8_t05_exact_algebraic_mode_classification_and_scoped_dynamical_viability_obstruction_ready_for_checkpoint"
+claim_boundary_summary: "RT-20260729-008 proves the fixed P8-T04 system has c representative component shifts n-c quotient coordinates n-c independent algebraic equations zero free homogeneous quotient response and a positive quotient Hessian for alpha>0. OBST-P8T05-STATIC-FINITE-CONSTRAINT-DYNAMICS-UNDEFINED-001 records that physical modes characteristics hyperbolicity ghosts tachyons gradient stability and strong coupling are undefined because temporal kinetic principal-symbol causal mass gradient and interaction data are absent; the result is candidate-scoped and P8-T06 audit remains open."
+next_plan_task_id: "P8-T06"
 next_worker_skill: "continue-research"
-next_recommended_action: "Run one governed checkpoint for AJ-RT-20260729-007-001. Only after it commits may one fresh bounded P8-T05 refuter@0.2.0 packet solve and stress-test the exact finite equation for constraints, modes, characteristic structure, and stability without assuming a healthy GR limit."
+next_recommended_action: "Run one governed checkpoint for AJ-RT-20260729-008-001. Only after it commits may one fresh bounded P8-T06 external-red-team-reviewer@0.1.0 packet audit the unchanged P8-T03 through P8-T05 closure record and this scoped obstruction for target import hidden assumptions algebraic error and interpretation overread without assuming physical viability or a healthy GR limit."
+
+p8_t05_finite_constraint_dynamical_viability_stress:
+  task_id: "RT-20260729-008"
+  parent_task_id: "RT-20260729-007"
+  parent_handoff_id: "handoff-0903"
+  plan_task_id: "P8-T05"
+  next_plan_task_id: "P8-T06"
+  claim_boundary_id: "CB-V21-P8-T05-FINITE-DYNAMICAL-VIABILITY-STRESS-001"
+  status: "PASS_P8_T05_EXACT_ALGEBRAIC_MODE_CLASSIFICATION_AND_SCOPED_DYNAMICAL_VIABILITY_OBSTRUCTION_READY_FOR_CHECKPOINT"
+  work_item_status: "completed_ready_for_checkpoint"
+  milestone_disposition: "finite_algebraic_viability_classified_physical_dynamics_undefined"
+  adoption_status: "blocked_adoption_open_continuation"
+  target_derivation_milestone: "einstein_equations"
+  milestone_burden: "Establish whether the derived gravitational sector is dynamically viable."
+  route_label: "refuter-stress-packet"
+  selected_role_family: "refuter@0.2.0"
+  selected_worker_skill: "continue-research"
+  immutable_route_sha256: "1d3bb8d79db32ce92506f36a339d345254723bfcf0fd2d449f3ba923c7dc3d58"
+  route_blocker_fingerprint: "9423d1766074dcfd465f9cc7695f1c5448270dccd027c3f6cb7cad2f0ce3d31b"
+  source_handoff_path: "research_control/handoffs/handoff-0903.yaml"
+  source_handoff_sha256: "70cdb28635312433529ef6626e534847714c5fd48c473d7e637dd28797a009fc"
+  dependency_checkpoint_commit: "b63510f58bd16d7d7653f1d595b2e09fa31f02ef"
+  result_status: "scoped_obstruction"
+  result_id: "FiniteConstraintDynamicalViabilityStress_v1"
+  result_path: "research_control/tasks/RT-20260729-008/artifacts/finite_constraint_dynamical_viability_stress_v1.tex"
+  result_sha256: "ddd39764c3b6f86e86574458b885e90271a2b044d1d141ae931723e80599acb1"
+  countermodel_path: "research_control/tasks/RT-20260729-008/artifacts/finite_constraint_dynamic_completion_countermodels_v1.yaml"
+  countermodel_sha256: "c73615d9dd69a4f81f75da037e94801de4c7ec0ef8ba062abe5aafc7626e81a1"
+  phase_diagram_path: "research_control/tasks/RT-20260729-008/artifacts/finite_constraint_stability_phase_diagram_v1.yaml"
+  phase_diagram_sha256: "59ac3d8baf948f2def63df6052b066fdce876cc48223652a8b64845334286473"
+  controls_path: "research_control/tasks/RT-20260729-008/artifacts/finite_constraint_mode_stability_controls_v1.yaml"
+  controls_sha256: "cef2c104e3e7c410b82235b67609ae4989c4b9d9a855de986ae05c1f79b6680f"
+  representative_coordinate_count: "n"
+  support_component_count: "c"
+  representative_redundancy_count: "c"
+  quotient_coordinate_count: "n-c"
+  independent_algebraic_equation_count: "n-c"
+  free_homogeneous_quotient_response_modes: 0
+  propagating_physical_degree_of_freedom_count: "undefined"
+  quotient_hessian_status: "positive_definite_for_alpha_positive"
+  principal_symbol_status: "absent"
+  characteristic_speed_status: "undefined"
+  hyperbolicity_status: "undefined"
+  ghost_status: "undefined"
+  tachyon_status: "undefined"
+  gradient_instability_status: "undefined"
+  strong_coupling_status: "undefined"
+  minimal_countermodel_available: true
+  countermodel_shared_static_equation: true
+  countermodel_incompatible_dynamical_verdicts: true
+  countermodel_adopted: false
+  obstruction_id: "OBST-P8T05-STATIC-FINITE-CONSTRAINT-DYNAMICS-UNDEFINED-001"
+  obstruction_scope: "unchanged exact P8-T04 finite equation and fixed admitted dependencies"
+  no_go_theorem_status: "not_proved"
+  same_milestone_continuation_open: true
+  unchanged_candidate_overread_blocked: true
+  target_atlas_assumed: false
+  target_metric_assumed: false
+  target_stress_energy_assumed: false
+  Einstein_Hilbert_action_assumed: false
+  Einstein_equations_assumed: false
+  healthy_GR_limit_assumed: false
+  canonical_ontology_modified: false
+  source_law_adopted: false
+  candidate_adopted_or_rejected: false
+  physical_time_or_dynamics_constructed: false
+  physical_gravitational_interpretation_established: false
+  effective_geometry_constructed: false
+  effective_metric_constructed: false
+  target_stress_energy_tensor_constructed: false
+  diffeomorphism_invariance_derived: false
+  contracted_Bianchi_identity_derived: false
+  target_covariant_conservation_derived: false
+  equivalence_principle_established_or_refuted: false
+  Einstein_equations_derived: false
+  exact_GR_recovery_proved: false
+  benchmark_promotion_authorized: false
+  scientific_claims_changed: true
+  scientific_claim_change_scope: "task-local algebraic constraint mode spectrum countermodels phase diagram and candidate-scoped dynamical-data obstruction only"
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  distance_to_gr_delta_scope: "candidate-scope mathematics and obstruction only; layered physical burden unchanged"
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+  validation_path: "research_control/tasks/RT-20260729-008/artifacts/finite_constraint_mode_stability_validation_v1.json"
+  validation_sha256: "8bdbecf62dce7573a10b9a54922d1c0bf7290560e04cade822b109801abef10f"
+  task_local_check_count: 113
+  task_local_failure_count: 0
+  latex_compile_status: "PASS"
+  latex_page_count: 6
+  resolved_parent_conflict_count: 6
+  unresolved_parent_conflict_count: 0
+  completion_path: "research_control/tasks/RT-20260729-008/jobs/completions/AJC-AJ-RT-20260729-008-001.yaml"
+  completion_sha256: "10c10812a7b7e6a15a52bd9e7d9af527b1ba97e8db6d699c3e739c2148a7f317"
+  handoff_id: "handoff-0904"
+  handoff_path: "research_control/handoffs/handoff-0904.yaml"
+  handoff_yaml_sha256: "31437f5ed4eb3264dc749777bad4e8ab1842fa53f6176a5edd2ebf4dc8fb4970"
+  handoff_markdown_sha256: "70d6802d10fea0f1d5e72a6870f37d08216bcab6044bd85debe0f38b250fd94a"
+  checkpoint_invocation_count: 0
+  checkpoint_committed: false
+  selected_next_work_item: "P8-T06_after_successful_checkpoint"
+  selected_next_worker_skill: "continue-research"
+  selected_next_role_family: "external-red-team-reviewer@0.1.0"
+  selected_next_packet_type: "p8_closure_derivation_independent_audit"
+  selected_next_route_label: "external-review-packet"
+  selected_next_strategy_id: "audit_unchanged_p8_closure_without_target_import_or_viability_assumption"
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
+  p8_t06_executed: false
 
 p8_t04_finite_field_equation_identity:
   task_id: "RT-20260729-007"

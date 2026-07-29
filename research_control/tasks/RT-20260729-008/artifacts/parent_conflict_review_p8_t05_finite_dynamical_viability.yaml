@@ -1,0 +1,42 @@
+schema_id: "parent_conflict_review_v1"
+task_id: "RT-20260729-008"
+status: "resolved"
+resolution_rounds: 1
+resolved_conflict_count: 6
+unresolved_conflicts: []
+
+conflicts:
+  - conflict_id: "P8T05-C01"
+    phys_math_position: "The homogeneous quotient solution has dimension zero."
+    phys_phil_risk: "Readers may call that zero physical propagating modes."
+    resolution: "State zero free homogeneous algebraic response modes and keep the physical propagating degree-of-freedom count undefined."
+  - conflict_id: "P8T05-C02"
+    phys_math_position: "The quotient Hessian is positive definite."
+    phys_phil_risk: "Readers may infer ghost freedom or physical vacuum stability."
+    resolution: "Classify the result as static convexity only and require a kinetic form for any ghost verdict."
+  - conflict_id: "P8T05-C03"
+    phys_math_position: "The graph has positive eigenvalues and a spectral gap."
+    phys_phil_risk: "Readers may rename them masses frequencies or speeds."
+    resolution: "Use graph eigenvalues only for algebraic conditioning and show that arbitrary kinetic matrices change frequencies."
+  - conflict_id: "P8T05-C04"
+    phys_math_position: "Component shifts remove c representative directions."
+    phys_phil_risk: "Readers may identify them with first-class constraints or diffeomorphisms."
+    resolution: "Use quotient redundancy language and explicitly withhold Hamiltonian and spacetime gauge interpretation."
+  - conflict_id: "P8T05-C05"
+    phys_math_position: "Dynamical completions make the underdetermination theorem explicit."
+    phys_phil_risk: "The completions may be mistaken for adopted candidate repairs."
+    resolution: "Label both completions artificial task-local countermodels and forbid adoption."
+  - conflict_id: "P8T05-C06"
+    phys_math_position: "Near-disconnection gives inverse-gap amplification."
+    phys_phil_risk: "The amplification may be called strong coupling."
+    resolution: "Call it algebraic susceptibility and require kinetic normalization plus nonlinear interactions for strong-coupling language."
+
+fusion_decision:
+  result_classification: "scoped_obstruction"
+  obstruction_id: "OBST-P8T05-STATIC-FINITE-CONSTRAINT-DYNAMICS-UNDEFINED-001"
+  new_mathematical_payload: true
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  next_plan_task_id: "P8-T06"
+  next_role_family: "external-red-team-reviewer@0.1.0"
+  requires_checkpoint_first: true

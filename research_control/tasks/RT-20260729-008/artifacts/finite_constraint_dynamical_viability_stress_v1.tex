@@ -1,0 +1,388 @@
+% authority: science-draft
+% status: draft/control
+% route: refuter-stress-packet
+% adoption_status: blocked_adoption_open_continuation
+% refuter_result: scoped_obstruction
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{xurl}
+\usepackage[hidelinks]{hyperref}
+
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newtheorem{obstruction}{Scoped obstruction}
+\newtheorem{nonconclusion}{Non-conclusion}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\Kspace}{\mathcal K_C}
+\newcommand{\Qspace}{\mathcal Q_C}
+\newcommand{\Aspace}{\mathcal A_C}
+\newcommand{\Eop}{\mathcal E_C^{\alpha,\beta}}
+
+\title{FiniteConstraintDynamicalViabilityStress\_v1\\
+P8-T05 Constraint, Mode, Characteristic, and Stability Analysis}
+\author{The \AE ther-Flow Research Project}
+\date{2026-07-29}
+
+\begin{document}
+\sloppy
+\maketitle
+
+\section{Decisive result and authority boundary}
+
+This packet stress-tests only the exact P8-T04 finite equation
+\begin{equation}
+ \Eop([h];u)=\alpha L_Ch-\beta L_Cu=0,
+ \qquad
+ [h]=\frac{\beta}{\alpha}[u],
+ \label{eq:fixed}
+\end{equation}
+with the P8-T03 candidate restrictions \(\alpha>0\), \(\beta\in\Q\),
+fixed source \(u\), and varied quotient slot
+\(\Qspace=\Q^\Omega/\ker L_C\).  The result classification required by the
+Refuter role is
+\[
+ \boxed{\texttt{scoped\_obstruction}}.
+\]
+
+The exact finite system has a complete algebraic constraint and mode count:
+if \(n=|\Omega|\) and \(c=|\Pi_C|\) is the number of connected support
+components, then it has \(c\) redundant component-shift directions,
+\(n-c\) quotient coordinates, \(n-c\) independent algebraic equations, and
+zero free homogeneous quotient-response modes after the fixed-source
+constraint is imposed.  For \(\alpha>0\), its quotient Hessian is positive
+definite.  This is a static convexity and solvability result.
+
+The fixed record contains no time parameter, time derivative, kinetic form,
+symplectic form, Hamiltonian constraint system, mass matrix, Lorentzian
+background, causal cone, or nonlinear interaction.  Therefore physical
+degrees of freedom, characteristic speeds, hyperbolicity, ghosts, tachyons,
+gradient instabilities, and a strong-coupling scale are not defined by the
+candidate.  A pair of explicit dynamical completions with the same static
+equation but incompatible stability verdicts proves that no such verdict can
+be inferred from Equation~\eqref{eq:fixed}.
+
+The obstruction identifier is
+\[
+\texttt{OBST-P8T05-STATIC-FINITE-CONSTRAINT-DYNAMICS-UNDEFINED-001}.
+\]
+It is local to the unchanged P8-T04 candidate.  It is not a global no-go
+theorem and does not establish future source-extension impossibility.
+
+\section{Fixed finite system}
+
+Let \(C=(P+P^{\mathsf T})/2\) be the symmetric conductance fixed by the
+adopted P7 source package, and let \(L_C\) be its graph Laplacian.  If
+\(\Pi_C\) is the set of connected components of the undirected support of
+\(C\), define
+\begin{align}
+ \Kspace&=\ker L_C
+ =\{k\in\Q^\Omega:k\text{ is constant on each }K\in\Pi_C\},\\
+ \Qspace&=\Q^\Omega/\Kspace,\\
+ \Aspace&=\Kspace^\perp.
+\end{align}
+The fixed-source action and its exact response operator are
+\begin{align}
+ S_C^{\alpha,\beta}([h];u)
+ &=\frac{\alpha}{2}h^{\mathsf T}L_Ch
+   -\beta(L_Cu)^{\mathsf T}h,\\
+ \Eop([h];u)&=\alpha L_Ch-\beta L_Cu.
+ \label{eq:action-response}
+\end{align}
+No target-side object enters this definition.  In particular, the row label
+of the underlying finite source kernel is not target-spacetime time, and
+\(L_C\) is not a spacetime differential or curvature operator.
+
+\section{Algebraic constraints and mode count}
+
+\begin{theorem}[Complete algebraic count]
+\label{thm:count}
+Let \(n=|\Omega|\), \(c=|\Pi_C|\), and \(r=n-c=\operatorname{rank}L_C\).
+Then:
+\begin{enumerate}
+ \item the redundant representative \(h\in\Q^\Omega\) has \(n\)
+ coordinates and exactly \(c\) component-shift directions in \(\Kspace\);
+ \item the quotient carrier \(\Qspace\) has dimension \(r\);
+ \item Equation~\eqref{eq:fixed} supplies exactly \(r\) independent
+ algebraic equations in \(\Aspace\);
+ \item the fixed-source solution set in the quotient is the singleton
+ \([h]=(\beta/\alpha)[u]\); and
+ \item the homogeneous linearized quotient equation has zero free solution
+ dimension.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+The component indicators form a basis of \(\ker L_C\), so
+\(\dim\Kspace=c\).  Rank--nullity gives
+\(\dim\Qspace=\operatorname{rank}L_C=n-c=r\).  The restriction of \(L_C\)
+to \(\Qspace\) is an isomorphism onto \(\Aspace\).  Hence
+\(\alpha L_C[h]=\beta L_C[u]\) supplies \(r\) independent algebraic
+equations and has the unique quotient solution in
+Equation~\eqref{eq:fixed}.  Linearizing at that solution gives
+\(\alpha L_C[\delta h]=0\), whose quotient kernel is trivial.
+\end{proof}
+
+\begin{corollary}[Spectral form]
+\label{cor:spectral}
+Choose an orthonormal quotient eigenbasis
+\(\{v_a\}_{a=1}^{r}\) with \(L_Cv_a=\lambda_av_a\) and
+\(\lambda_a>0\).  For
+\[
+ q:=h-\frac{\beta}{\alpha}u
+ =\sum_{a=1}^{r}q_av_a,
+\]
+the exact quadratic displacement action and linearized equations are
+\begin{align}
+ S_C^{\alpha,\beta}([h];u)-S_C^{\alpha,\beta}
+ \!\left(\frac{\beta}{\alpha}[u];u\right)
+ &=\frac{\alpha}{2}\sum_{a=1}^{r}\lambda_aq_a^2,\\
+ \alpha\lambda_aq_a&=0,\qquad a=1,\ldots,r.
+ \label{eq:spectral}
+\end{align}
+For \(\alpha>0\), every quotient Hessian eigenvalue
+\(\alpha\lambda_a\) is positive.
+\end{corollary}
+
+The phrases ``zero free homogeneous quotient-response modes'' and
+``positive quotient Hessian'' are algebraic statements.  They do not say
+that the model has zero propagating physical degrees of freedom.  A
+propagating degree-of-freedom count requires a temporal phase space and a
+constraint evolution law, neither of which is present.
+
+\section{Exact two-state control}
+
+For the P7 two-state forward control,
+\[
+ L_C=
+ \begin{pmatrix}
+ 1/4&-1/4\\
+ -1/4&1/4
+ \end{pmatrix}.
+\]
+Its eigenvalues are \(0\) and \(1/2\).  The kernel is spanned by
+\((1,1)^{\mathsf T}\), the quotient is one-dimensional, and the sole
+quotient Hessian eigenvalue is \(\alpha/2>0\).  Writing
+\(q=(z/2,-z/2)^{\mathsf T}\) gives
+\[
+ \frac{\alpha}{2}q^{\mathsf T}L_Cq=\frac{\alpha}{8}z^2,
+ \qquad
+ \frac{\partial}{\partial z}\frac{\alpha}{8}z^2
+ =\frac{\alpha}{4}z.
+\]
+Thus the fixed-source solution is unique modulo the common shift.  No
+frequency \(\omega\), wave number \(k\), characteristic speed, or kinetic
+sign occurs in this exact calculation.
+
+\section{Characteristic and hyperbolicity obstruction}
+
+\begin{proposition}[No dynamical principal symbol is defined]
+\label{prop:principal}
+The linearized operator supplied by the fixed candidate is the finite
+algebraic matrix
+\[
+ D_h\Eop=\alpha L_C.
+\]
+It is independent of a temporal frequency, spatial covector, background
+metric, or differential order.  Consequently the candidate supplies no
+principal symbol \(\sigma(\omega,\xi)\), no characteristic polynomial, no
+characteristic cone, no propagation speed, and no hyperbolicity
+classification.
+\end{proposition}
+
+\begin{proof}
+A dynamical characteristic calculation requires the highest-derivative
+part of an evolution equation and therefore a covector-dependent principal
+symbol.  Equation~\eqref{eq:fixed} contains no derivative with respect to
+any evolution parameter and no map from the finite support to a spacetime
+cotangent bundle.  Calling the constant matrix \(\alpha L_C\) a
+``principal symbol'' would not create the missing covector dependence or
+evolution structure.
+\end{proof}
+
+The same missing datum blocks a Hamiltonian or gauge-invariant physical
+mode count.  Component shifts are quotient redundancy of a static graph
+functional; they have not been derived as first-class Hamiltonian
+constraints or spacetime diffeomorphisms.
+
+\section{Minimal dynamical-completion countermodels}
+
+\begin{theorem}[Static-equation nonuniqueness]
+\label{thm:countermodel}
+Let \(M\) be any positive-definite matrix on \(\Qspace\), and let
+\(q=h-(\beta/\alpha)u\).  The two task-local dynamical completions
+\begin{align}
+ \mathcal L_{+}(q,\dot q)
+ &=\frac12\dot q^{\mathsf T}M\dot q
+   -\frac{\alpha}{2}q^{\mathsf T}L_Cq,\\
+ \mathcal L_{-}(q,\dot q)
+ &=-\frac12\dot q^{\mathsf T}M\dot q
+   -\frac{\alpha}{2}q^{\mathsf T}L_Cq
+ \label{eq:completions}
+\end{align}
+have the same static stationary equation
+\(\alpha L_Cq=0\), and hence the same fixed P8-T04 solution.  Their
+dynamical verdicts are incompatible:
+\begin{align}
+ M\ddot q+\alpha L_Cq&=0
+ &&\text{for }\mathcal L_{+},\\
+ M\ddot q-\alpha L_Cq&=0
+ &&\text{for }\mathcal L_{-}.
+\end{align}
+The first has positive kinetic energy and positive squared normal-mode
+frequencies; the second has a negative kinetic form and exponentially
+growing quotient branches.  Varying \(M\) changes the normal-mode
+frequencies while preserving the same static equation.
+\end{theorem}
+
+\begin{proof}
+The displayed Euler--Lagrange equations follow directly from
+Equation~\eqref{eq:completions}.  Setting \(\dot q=\ddot q=0\) reduces both
+to \(\alpha L_Cq=0\).  On the quotient, the eigenvalues of
+\(\alpha M^{-1/2}L_CM^{-1/2}\) are strictly positive.  They are squared
+frequencies for \(\mathcal L_{+}\) and growth-rate squares for
+\(\mathcal L_{-}\).  The negative kinetic form of \(\mathcal L_{-}\)
+also makes its Hamiltonian unbounded below.  Neither completion is adopted;
+their sole use is to refute inference of a unique dynamical verdict from
+the static equation.
+\end{proof}
+
+These countermodels add an artificial evolution parameter only for the
+logical test.  They are not candidate repairs, source laws, physical
+theories, or evidence that either branch describes the project.
+
+\section{Stability phase diagram in the exact scope}
+
+\begin{longtable}{p{0.18\linewidth}p{0.32\linewidth}p{0.40\linewidth}}
+\toprule
+Diagnostic & Exact finite result & Scope and non-conclusion\\
+\midrule
+Algebraic solvability &
+Unique quotient solution for \(\alpha>0\) &
+Exact static result; not a physical evolution theorem\\
+Static Hessian &
+\(\alpha L_C\) positive definite on \(\Qspace\) &
+Convexity only; not a ghost or gradient-stability result\\
+Redundancy &
+\(c\) component shifts in representatives &
+Not established first-class constraints or diffeomorphisms\\
+Free algebraic response &
+Zero-dimensional homogeneous quotient solution &
+Propagating physical degree-of-freedom count is undefined\\
+Principal symbol &
+Absent &
+Characteristic speeds and hyperbolicity are undefined\\
+Kinetic matrix &
+Absent &
+Ghost status is undefined\\
+Mass matrix and dispersion &
+Absent &
+Tachyon status is undefined\\
+Spatial-gradient term on a spacetime &
+Absent &
+Gradient-instability status is undefined\\
+Nonlinear interaction vertices &
+Identically absent in the exact quadratic finite model &
+No physical strong-coupling scale follows\\
+\bottomrule
+\end{longtable}
+
+The coefficient and topology branches are:
+\begin{enumerate}
+ \item \(\alpha>0\), \(\beta\in\Q\): the admitted branch; the quotient
+ Hessian is positive and the solution is unique.
+ \item \(\beta=0\): the source decouples and the quotient solution is
+ \([h]=0\); the dynamical classifications remain undefined.
+ \item \(\alpha=0\): outside the admitted candidate; the response equation
+ loses its invertible quotient Hessian and is generically inconsistent for
+ nonzero \(\beta L_Cu\).
+ \item \(\alpha<0\): outside the admitted candidate; the static quadratic
+ form is unbounded below on every nontrivial quotient component.
+ \item \(\lambda_\star\downarrow0\): a near-disconnection limit; the
+ generic balanced susceptibility scales as
+ \(1/(\alpha\lambda_\star)\), while the special source-generated forcing
+ \(\beta L_Cu\) retains the exact response
+ \([h]=(\beta/\alpha)[u]\).
+ \item \(\lambda_\star=0\) after a topology change: the kernel and quotient
+ dimension change.  The correct response is to rebuild the component
+ quotient, not to call the jump a tachyon, ghost, or loss of
+ hyperbolicity.
+\end{enumerate}
+
+\begin{proposition}[Near-disconnection control]
+For the two-vertex Laplacian
+\[
+ L_\varepsilon=
+ \begin{pmatrix}\varepsilon&-\varepsilon\\
+ -\varepsilon&\varepsilon\end{pmatrix},
+ \qquad \varepsilon>0,
+\]
+the nonzero eigenvalue is \(2\varepsilon\).  Under an arbitrary balanced
+external forcing in that mode, the response norm scales as
+\((2\alpha\varepsilon)^{-1}\).  Under the admitted source-generated
+forcing \(\beta L_\varepsilon u\), the factor of \(\varepsilon\) cancels
+and the exact solution remains
+\([h]=(\beta/\alpha)[u]\).
+\end{proposition}
+
+The first behavior is algebraic ill-conditioning of a generic forced
+system.  It is not a derived strong-coupling regime.  Strong coupling
+requires a normalized kinetic sector and nonlinear interaction vertices,
+both absent here.
+
+\section{Scoped obstruction and freeze consequence}
+
+\begin{obstruction}[Static finite constraint does not determine dynamical
+viability]
+\label{obs:dynamics}
+The target claim under stress is: ``the exact P8-T04 equation determines a
+dynamically viable gravitational sector.''  Its failed premise is the
+absence of any source-derived temporal evolution law, kinetic form,
+principal symbol, causal background, mass or gradient operator, and
+interaction normalization.  The countermodel pair in
+Theorem~\ref{thm:countermodel} shows that inequivalent healthy and
+pathological dynamical completions share the same static equation.
+Therefore the unchanged candidate does not determine physical degrees of
+freedom, characteristic speeds, hyperbolicity, ghost status, tachyon
+status, gradient stability, or strong coupling.
+\end{obstruction}
+
+This freezes the unchanged finite equation against reuse as evidence of
+physical dynamical viability or a healthy GR limit.  It does not freeze
+materially new source-side dynamics, a new kinetic or evolution law, a new
+continuum construction, or independent audit.  P8-T06 may audit the exact
+P8-T03--P8-T05 closure record after checkpoint, while every physical and
+promotion block remains in force.
+
+\begin{nonconclusion}
+Positive static curvature is not ghost freedom.  A graph spectral gap is
+not a mass gap, wave speed, or causal cone.  Component shifts are not
+diffeomorphism gauge.  Algebraic near-singularity is not strong coupling.
+The countermodel pair is not adopted physics.  No target metric,
+stress-energy tensor, Einstein equation, exact-GR recovery, benchmark
+promotion, canonical ontology edit, proof, publication, push, global no-go,
+future source-extension impossibility, or completed derivation follows.
+\end{nonconclusion}
+
+\section{Internal source materials}
+
+\begin{itemize}
+ \item The exact P8-T04 finite equation, identity, specification, and
+ controls.
+ \item The P8-T03 finite candidate, coefficient ledger, and controls.
+ \item The P8-T02 local effective-action closure target.
+ \item The exact P7 finite source action and protected P7-T08 decision.
+ \item The P6 Gate B separating certificate.
+ \item The v21 P8-T05 plan and the active Distance-to-GR burden map.
+\end{itemize}
+
+No external source is used.  The dynamical completions are new
+task-local countermodels derived in this packet.
+
+\end{document}

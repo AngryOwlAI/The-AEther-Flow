@@ -1,0 +1,497 @@
+job_id: "AJ-RT-20260729-008-001"
+task_id: "RT-20260729-008"
+decision_id: "DDR-20260729-008"
+role_id: "refuter"
+role_version: "0.2.0"
+execution_role_ref: "refuter@0.2.0--RT-20260729-008"
+status: "completed"
+validation_status: "PASS"
+requires_human_gate: false
+created_at: "2026-07-29T20:48:32Z"
+started_at: "2026-07-29T20:48:32Z"
+completed_at: "2026-07-29T20:48:32Z"
+completion_path: "research_control/tasks/RT-20260729-008/jobs/completions/AJC-AJ-RT-20260729-008-001.yaml"
+objective: "Execute only v21 P8-T05 by solving and stress-testing the exact fixed P8-T04 finite equation, deriving the complete algebraic constraint and quotient-mode count, determining which dynamical diagnostics are defined, constructing minimal countermodels to unsupported viability inferences, and recording one precise scoped obstruction without a healthy-GR assumption."
+target_derivation_milestone: "einstein_equations"
+milestone_burden: "Establish whether the derived gravitational sector is dynamically viable."
+route_label: "refuter-stress-packet"
+route_reason: "Generation 160 checkpoint b63510f58bd16d7d7653f1d595b2e09fa31f02ef committed the P8-T04 equation and identity packet; handoff-0903, the v21 plan, and immutable generation 161 select exactly one P8-T05 Refuter stress packet."
+immutable_route_sha256: "1d3bb8d79db32ce92506f36a339d345254723bfcf0fd2d449f3ba923c7dc3d58"
+dependency_checkpoint_commit: "b63510f58bd16d7d7653f1d595b2e09fa31f02ef"
+plan_task_id: "P8-T05"
+recommendation_ids:
+  - "V21-R27"
+  - "V21-R28"
+  - "V21-R63"
+source_extension_classification_required: false
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 161
+  passes_consumed: 147
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:161"
+  handoff_token: "bb6b9fd11f93851797fef8a22d99b7c0ff1969aeba5040b6"
+  relay_claim_token: "661c028686ed6053b67a6e0e72b493ed43a459444185f577"
+  route_work_item_id: "P8-T05"
+  route_worker_skill: "continue-research"
+  route_sha256: "1d3bb8d79db32ce92506f36a339d345254723bfcf0fd2d449f3ba923c7dc3d58"
+  route_reason: "dependency_ready_in_scope"
+  route_strategy_id: "continue_in_scope_generation_161"
+  route_blocker_fingerprint: "9423d1766074dcfd465f9cc7695f1c5448270dccd027c3f6cb7cad2f0ce3d31b"
+  route_before_fingerprint: "9423d1766074dcfd465f9cc7695f1c5448270dccd027c3f6cb7cad2f0ce3d31b"
+  route_evidence_sha256es:
+    - "9423d1766074dcfd465f9cc7695f1c5448270dccd027c3f6cb7cad2f0ce3d31b"
+    - "cbd70d1388cba21c354d0c8bc6d27bf8e718b222d809ac4da7c317af0316a8a9"
+  worker_skill: "continue-research"
+  worker_invocation_count: 1
+
+mathematical_decisiveness_contract:
+  contract_path: "research_control/design/mathematical_decisiveness_completion_contract.md"
+  schema_path: ".agents/schemas/PHYSICS_COMPLETION_DECISIVENESS_SCHEMA.md"
+  enforcement_mode: "hard_failure"
+  active_after: "2026-06-21T02:32:39Z"
+
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "physics"
+  payload_type: "precise_obstruction"
+  candidate_family: "FiniteConstraintDynamicalViabilityStress_v1"
+  assumption_delta:
+    - "Hold the exact P8-T04 finite equation and every P8-T03 P8-T02 P7 and P6 dependency hash fixed."
+    - "Derive the complete rank-nullity constraint and quotient-mode count."
+    - "Diagonalize the exact static quotient Hessian and reproduce the two-state control."
+    - "Audit the candidate for temporal kinetic principal-symbol mass gradient causal and interaction data."
+    - "Construct positive- and negative-kinetic task-local countermodels sharing the exact static equation."
+    - "Stress alpha beta spectral-gap and topology branches without target import."
+    - "Record one candidate-scoped dynamical-data obstruction and an overread freeze."
+  materiality_basis: "P8-T04 derived a finite equation but did not count its independent algebraic modes, distinguish them from physical degrees of freedom, test whether a dynamical principal symbol exists, construct countermodels to stability overread, or classify parameter and topology branches. This packet adds each result."
+  payload_details:
+    obstruction_id: "OBST-P8T05-STATIC-FINITE-CONSTRAINT-DYNAMICS-UNDEFINED-001"
+    obstruction_scope: "unchanged exact P8-T04 finite equation and fixed admitted dependencies"
+    algebraic_mode_count: "n-c quotient coordinates n-c independent equations zero free homogeneous quotient response"
+    quotient_hessian: "alpha L_C positive definite on Q_C for alpha>0"
+    minimal_countermodel_available: true
+    countermodel_pair: "positive and negative kinetic completions with one shared static equation"
+    global_no_go_claimed: false
+    same_milestone_continuation_open: true
+  source_basis:
+    - "TEX-V21-P8-T04-FINITE-SOURCE-FIELD-EQUATION-IDENTITY-V1"
+    - "TEX-V21-P8-T03-FINITE-SOURCE-CLOSURE-CONSTRAINT-CANDIDATE-V1"
+    - "TEX-V21-P8-T02-LOCAL-EFFECTIVE-ACTION-CLOSURE-TARGET-V1"
+    - "TEX-V21-P7-T06-SOURCE-KERNEL-VARIATIONAL-OBJECT-V1"
+    - "TEX-V21-P7-T08-PHYSICAL-MATTER-ADOPTION-DECISION-V1"
+    - "research_control/tasks/RT-20260727-004/artifacts/p6_t08_gate_b_separating_certificate_v1.yaml"
+  expected_artifact_paths:
+    - "research_control/tasks/RT-20260729-008/artifacts/finite_constraint_dynamical_viability_stress_v1.tex"
+    - "research_control/tasks/RT-20260729-008/artifacts/finite_constraint_dynamic_completion_countermodels_v1.yaml"
+    - "research_control/tasks/RT-20260729-008/artifacts/finite_constraint_stability_phase_diagram_v1.yaml"
+    - "research_control/tasks/RT-20260729-008/artifacts/finite_constraint_mode_stability_controls_v1.yaml"
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+
+family_freeze_admission:
+  schema_id: "family_freeze_route_admission_v1"
+  policy_id: "family_freeze_reopening_policy_v1"
+  route_id: "v21_p8_t05_finite_constraint_mode_and_stability_stress"
+  family_id: "FiniteConstraintDynamicalViabilityStress_v1"
+  family_identity_sha256: "ddd39764c3b6f86e86574458b885e90271a2b044d1d141ae931723e80599acb1"
+  assumption_sha256es:
+    - "12a1cfae87cd673241aefe88144ab974b49fc3bad284a81baff90b2e806d5168"
+    - "82dd10d8e91be3781ca4f21e7f9fbf2ce1a9108ae7191db22fed9dfe6086f2fa"
+  route_kind: "precise_obstruction"
+  detected_match_basis: []
+  reopening:
+    requested: false
+    class: "none"
+  authority_limits:
+    local_family_freeze_preserved: true
+    global_no_go_claimed: false
+    automatic_candidate_adoption: false
+    theorem_truth_inferred: false
+    ontology_modified: false
+    physics_promotion_authorized: false
+
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  expected_durable_outputs:
+    physics:
+      - "one complete exact algebraic constraint and quotient-mode classification"
+      - "one exact spectral linearized system with two-state and near-disconnection controls"
+      - "one minimal dynamical-completion countermodel pair"
+      - "one stability phase diagram and precise scoped obstruction"
+    project_system:
+      - "task-local deterministic validator report and scratch TeX build"
+      - "parent-child synthesis records and standard control state"
+  acceptance_criteria:
+    physics:
+      - "the finite algebraic mode count is exact and distinguishes physical degrees of freedom"
+      - "every dynamical diagnostic states its required missing datum"
+      - "the countermodel pair shares the static equation and differs dynamically"
+      - "the result remains candidate-scoped"
+    project_system:
+      - "task-local source-hash mathematical parent-child and authority checks pass"
+      - "claim-language documentation-impact and research-control checks pass"
+      - "one governed checkpoint records the bounded transaction"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: false
+    exception_id: ""
+    evidence_path: ""
+    evidence_sha256: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0903"
+  source_handoff_path: "research_control/handoffs/handoff-0903.yaml"
+  source_handoff_sha256: "70cdb28635312433529ef6626e534847714c5fd48c473d7e637dd28797a009fc"
+  selected_plan_task_id: "P8-T05"
+  guard_outcome: "below_threshold"
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  parent:
+    execution_unit_id: "parent"
+    perspective: "physicist_mathematician_philosopher"
+    responsibilities:
+      - "hold every P6 P7 P8-T02 P8-T03 and P8-T04 source hash and authority boundary fixed"
+      - "fuse exact algebraic mode mathematics with dynamical-data and interpretation boundaries"
+      - "derive the final countermodel phase diagram obstruction and controls"
+      - "resolve every child conflict before final output"
+      - "route P8-T06 without treating the static equation as viable gravity"
+  children:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260729-008/artifacts/child_phys_math_p8_t05_finite_dynamical_viability.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260729-008/artifacts/child_phys_phil_p8_t05_finite_dynamical_viability.yaml"
+      status: "completed"
+  conflict_policy:
+    review_path: "research_control/tasks/RT-20260729-008/artifacts/parent_conflict_review_p8_t05_finite_dynamical_viability.yaml"
+    max_resolution_rounds: 2
+    require_parallel_child_revision: true
+    unresolved_conflict_status: "blocked"
+  fusion_policy:
+    fusion_notes_path: "research_control/tasks/RT-20260729-008/artifacts/parent_fusion_notes_p8_t05_finite_dynamical_viability.md"
+    fused_output_path: "research_control/tasks/RT-20260729-008/artifacts/finite_constraint_dynamical_viability_stress_v1.tex"
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+    final_output_replaces_old_single_role_artifact: true
+  outer_agentjob_count: 1
+  child_agentjob_count: 0
+  subagent_count: 0
+  rationale: "Two internal analytical perspectives are recorded inside the one consumed worker invocation and one outer AgentJob. No child job or subagent was created."
+
+memory_preflight:
+  preflight_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1080
+    relationship_row_count: 5467
+    semantic_row_count: 1080
+    vault_row_count: 1080
+    local_cache_only_warning_count: 0
+    refresh_performed: true
+  refresh_needed: true
+  refresh_performed: true
+  refresh_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py"
+  before_refresh:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    warning_count: 9
+  after_refresh:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1080
+    relationship_row_count: 5467
+    semantic_row_count: 1080
+    vault_row_count: 1080
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-V21-P8-T04-FINITE-SOURCE-FIELD-EQUATION-IDENTITY-V1 --json"
+      query_type: "lookup"
+      query_text: "TEX-V21-P8-T04-FINITE-SOURCE-FIELD-EQUATION-IDENTITY-V1"
+      returned_object_ids:
+        - "TEX-V21-P8-T04-FINITE-SOURCE-FIELD-EQUATION-IDENTITY-V1"
+  canonical_inspections:
+    - object_id: "TEX-V21-P8-T04-FINITE-SOURCE-FIELD-EQUATION-IDENTITY-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260729-007/artifacts/finite_source_field_equation_identity_v1.tex"
+      source_hash: "12a1cfae87cd673241aefe88144ab974b49fc3bad284a81baff90b2e806d5168"
+    - object_id: "TEX-V21-P8-T03-FINITE-SOURCE-CLOSURE-CONSTRAINT-CANDIDATE-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_constraint_candidate_v1.tex"
+      source_hash: "82dd10d8e91be3781ca4f21e7f9fbf2ce1a9108ae7191db22fed9dfe6086f2fa"
+    - object_id: "TEX-ONTOLOGY-AETHER-FLOW-CONSISTENCY"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "ontology/tex/aether_flow_consistency.tex"
+      source_hash: "d965519639ee8764a5c5a63798d15e8a9a380d7e208dffc43a0be02b6f245ba1"
+    - object_id: "TEX-ONTOLOGY-AETHER-FLOW-DYNAMICS"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "ontology/tex/aether_flow_dynamics.tex"
+      source_hash: "fd6e579e71ef7f2ac4c9668ceede051ad57033ee52357b2552a9e3a5a53939c7"
+  authority_note: "Obsidian wiki notes, semantic extracts, the SQLite memory index, PDFs, and .local files are retrieval layers only and are not authority."
+
+allowed_read_paths:
+  - "SOUL.md"
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".codex/skills/continue-research-continue-goal/SKILL.md"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - ".agents/roles/physics/refuter.v0.2.0.md"
+  - ".agents/schemas/**"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  - "research_control/design/**"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0903.yaml"
+  - "research_control/handoffs/handoff-0903.md"
+  - "research_control/tasks/RT-20260727-004/**"
+  - "research_control/tasks/RT-20260728-005/**"
+  - "research_control/tasks/RT-20260729-001/**"
+  - "research_control/tasks/RT-20260729-005/**"
+  - "research_control/tasks/RT-20260729-006/**"
+  - "research_control/tasks/RT-20260729-007/**"
+  - "ontology/tex/aether_flow_dynamics.tex"
+  - "ontology/tex/aether_flow_consistency.tex"
+  - "registries/**"
+
+allowed_write_paths:
+  - "research_control/tasks/RT-20260729-008/**"
+  - "research_control/handoffs/handoff-0904.yaml"
+  - "research_control/handoffs/handoff-0904.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/PDF_DERIVATIVE_REGISTRY.csv"
+  - "registries/PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "registries/TEX_SOURCE_REGISTRY.csv"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/tex/**"
+
+allowed_generated_paths:
+  - ".local/**"
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/tex/**"
+
+forbidden_paths:
+  - "ontology/**"
+  - "manuscripts/**"
+  - "html/**"
+  - "implementations_plans/**"
+  - ".agents/roles/**"
+  - "research_control/tasks/RT-20260727-004/**"
+  - "research_control/tasks/RT-20260728-005/**"
+  - "research_control/tasks/RT-20260729-001/**"
+  - "research_control/tasks/RT-20260729-005/**"
+  - "research_control/tasks/RT-20260729-006/**"
+  - "research_control/tasks/RT-20260729-007/**"
+
+allowed_source_classes:
+  - "science_draft_read_only"
+  - "scientific_gate_read_only"
+  - "canonical_ontology_read_only"
+  - "project_control"
+  - "registry"
+  - "role_contract"
+  - "generated_memory_derivative"
+
+forbidden_source_classes:
+  - "canonical_ontology_write"
+  - "benchmark_promotion"
+  - "candidate_reconstruction"
+  - "gate_chair_verdict"
+  - "completed_derivation_claim"
+  - "global_theory_rejection"
+  - "generated_derivative_authority"
+  - "target_benchmark_as_source_premise"
+  - "target_atlas_or_metric_as_source_premise"
+  - "dynamical_countermodel_adoption"
+  - "source_law_adoption_or_rejection"
+  - "physical_gravitational_interpretation"
+  - "target_geometry_metric_or_stress_energy_construction"
+  - "diffeomorphism_or_Bianchi_claim"
+  - "Einstein_equations"
+  - "exact_GR_recovery_proof"
+  - "publication_or_push"
+
+approved_commands:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-V21-P8-T04-FINITE-SOURCE-FIELD-EQUATION-IDENTITY-V1 --json"
+  - ".venv/bin/python research_control/tasks/RT-20260729-008/artifacts/validate_finite_constraint_mode_stability.py --write-report --json"
+  - ".venv/bin/python research_control/tasks/RT-20260729-008/artifacts/validate_finite_constraint_mode_stability.py --check --json"
+  - "python3 scripts/compile_latex.py research_control/tasks/RT-20260729-008/artifacts/finite_constraint_dynamical_viability_stress_v1.tex --compiler tectonic --output-directory <plugin-local-scratch> --json"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --check"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --check"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --write"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --check"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --json output/research_dependency_graph.json --markdown wiki/indexes/research_dependency_graph.md --dot output/research_dependency_graph.dot"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --check"
+  - ".venv/bin/python scripts/research_control/generate_claim_graph_v1.py --json output/claim_graph_v1.json"
+  - ".venv/bin/python scripts/research_control/validate_claim_graph_v1.py --graph output/claim_graph_v1.json --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --json-summary"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --json-summary"
+  - ".venv/bin/python scripts/research_control/report_physics_progress_metrics.py"
+  - ".venv/bin/python scripts/research_control/run_full_research_control_validation.py --json --tail-chars 2500"
+  - "git diff --check"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260729-008-001"
+
+required_validators:
+  - "memory_preflight"
+  - "p8_t05_finite_constraint_mode_stability_local_validator"
+  - "parent_child_synthesis"
+  - "source_hash_and_authority"
+  - "claim_language"
+  - "documentation_impact"
+  - "project_improvement_signal_parity"
+  - "research_control_validation"
+  - "memory_bootstrap"
+  - "memory_validate_only"
+  - "renderers"
+  - "graph_freshness"
+  - "git_diff_check"
+  - "checkpoint_research_transaction"
+
+expected_outputs:
+  - "research_control/tasks/RT-20260729-008/**"
+  - "research_control/tasks/RT-20260729-008/artifacts/finite_constraint_dynamical_viability_stress_v1.tex"
+  - "research_control/tasks/RT-20260729-008/artifacts/finite_constraint_dynamic_completion_countermodels_v1.yaml"
+  - "research_control/tasks/RT-20260729-008/artifacts/finite_constraint_stability_phase_diagram_v1.yaml"
+  - "research_control/tasks/RT-20260729-008/artifacts/finite_constraint_mode_stability_controls_v1.yaml"
+  - "research_control/tasks/RT-20260729-008/artifacts/finite_constraint_mode_stability_receipt.md"
+  - "research_control/tasks/RT-20260729-008/artifacts/finite_constraint_mode_stability_validation_v1.json"
+  - "research_control/tasks/RT-20260729-008/artifacts/validate_finite_constraint_mode_stability.py"
+  - "research_control/tasks/RT-20260729-008/artifacts/child_phys_math_p8_t05_finite_dynamical_viability.yaml"
+  - "research_control/tasks/RT-20260729-008/artifacts/child_phys_phil_p8_t05_finite_dynamical_viability.yaml"
+  - "research_control/tasks/RT-20260729-008/artifacts/parent_conflict_review_p8_t05_finite_dynamical_viability.yaml"
+  - "research_control/tasks/RT-20260729-008/artifacts/parent_fusion_notes_p8_t05_finite_dynamical_viability.md"
+  - "research_control/handoffs/handoff-0904.yaml"
+  - "research_control/handoffs/handoff-0904.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+
+claim_boundary: "CB-V21-P8-T05-FINITE-DYNAMICAL-VIABILITY-STRESS-001"
+documentation_impact_id: "DI-RT-20260729-008-001"
+completion_id: "AJC-AJ-RT-20260729-008-001"
+
+checkpoint_outcome:
+  required: true
+  attempted: false
+  committed: false
+  commit_sha: ""
+  push_authorized: false
+  push_performed: false
+
+stop_conditions:
+  - "Stop if any fixed P8 P7 or P6 source hash differs."
+  - "Stop if an artificial evolution parameter or kinetic matrix is presented as derived or adopted."
+  - "Stop if a graph eigenvalue is renamed as a physical mass frequency or characteristic speed."
+  - "Stop if positive static Hessian is presented as ghost freedom or gradient stability."
+  - "Stop if component shifts are called Hamiltonian gauge or diffeomorphisms."
+  - "Stop if near-disconnection conditioning is called physical strong coupling."
+  - "Stop if the current scoped obstruction is promoted to global no-go or future-extension impossibility."
+  - "Stop if parent-child conflict review has any unresolved conflict."
+  - "Stop on the first governed checkpoint failure; do not retry in this AgentJob."
