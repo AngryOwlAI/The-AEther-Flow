@@ -639,6 +639,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-V21-P8-T05-PARENT-FUSION-FINITE-DYNAMICAL-VIABILITY-V1` `research_control/tasks/RT-20260729-008/artifacts/parent_fusion_notes_p8_t05_finite_dynamical_viability.md`
 - `MD-V21-P8-T06-CLOSURE-REVIEW-RECEIPT-V1` `research_control/tasks/RT-20260729-009/artifacts/p8_t06_closure_review_receipt.md`
 - `MD-V21-P8-T06-PARENT-FUSION-CLOSURE-REVIEW-V1` `research_control/tasks/RT-20260729-009/artifacts/parent_fusion_notes_p8_t06_closure_review.md`
+- `MD-V21-P8-T07-PARENT-FUSION-GATE-D-REVIEW-V1` `research_control/tasks/RT-20260729-011/artifacts/parent_fusion_notes_p8_t07_gate_d_review.md`
 - `MD-VALIDATOR-OPERATOR-WORKFLOW-PUBLICATION-BRIEF` `markdown/publication-briefs/validator-operator-workflow.publication-brief.md`
 
 ## wiki_markdown
@@ -1275,4 +1276,5 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-V21-P8-T05-PARENT-FUSION-FINITE-DYNAMICAL-VIABILITY-V1` `wiki/markdown/md-v21-p8-t05-parent-fusion-finite-dynamical-viability-v1.md`
 - `WIKI-MD-V21-P8-T06-CLOSURE-REVIEW-RECEIPT-V1` `wiki/markdown/md-v21-p8-t06-closure-review-receipt-v1.md`
 - `WIKI-MD-V21-P8-T06-PARENT-FUSION-CLOSURE-REVIEW-V1` `wiki/markdown/md-v21-p8-t06-parent-fusion-closure-review-v1.md`
+- `WIKI-MD-V21-P8-T07-PARENT-FUSION-GATE-D-REVIEW-V1` `wiki/markdown/md-v21-p8-t07-parent-fusion-gate-d-review-v1.md`
 - `WIKI-MD-VALIDATOR-OPERATOR-WORKFLOW-PUBLICATION-BRIEF` `wiki/markdown/md-validator-operator-workflow-publication-brief.md`

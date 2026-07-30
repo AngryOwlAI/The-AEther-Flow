@@ -2,7 +2,7 @@
   "schema_id": "compact_current_frontier_v16",
   "generated_from": [
     "research_control/program_state.yaml",
-    "research_control/handoffs/handoff-0906.yaml",
+    "research_control/handoffs/handoff-0907.yaml",
     "registries/DISTANCE_TO_GR_LEDGER.csv",
     "registries/METRIC_USE_LEDGER.csv",
     "research_control/current_frontier.md",
@@ -11,17 +11,17 @@
     "research_control/design/active_state_bifurcation_policy_v1.md"
   ],
   "active_state": {
-    "active_task_id": "RT-20260729-010",
-    "latest_handoff_id": "handoff-0906",
-    "current_status": "p8_t06_allowlist_order_parity_recovery_pass_ready_for_checkpoint",
+    "active_task_id": "RT-20260729-011",
+    "latest_handoff_id": "handoff-0907",
+    "current_status": "protected_gate_d_not_ready_ready_for_checkpoint",
     "v15_completed": false,
     "v16_completed": false,
     "v16_plan_registered": true
   },
   "active_state_bifurcation": {
-    "latest_research_task_id": "RT-20260729-010",
-    "latest_research_handoff_id": "handoff-0906",
-    "latest_research_next_action": "Run one governed checkpoint for AJ-RT-20260729-010-001. After it commits, do not execute P8-T07 without exact human Gate Chair authorization; preserve the recorded A4 and A9 repair requirements and independent-review deficit.",
+    "latest_research_task_id": "RT-20260729-011",
+    "latest_research_handoff_id": "handoff-0907",
+    "latest_research_next_action": "Run one governed checkpoint for AJ-RT-20260729-011-001. After checkpoint, execute at most one P9-T01 packet limited to source-only weak-field and recovery benchmark protocol design plus an explicit claim firewall; preserve Gate D NOT READY and do not claim a benchmark result, promotion, Einstein equations, or exact-GR recovery.",
     "latest_project_system_task_id": "none",
     "latest_project_system_status": "none",
     "latest_project_system_sidecar_task_id": "none",
@@ -30,11 +30,11 @@
     "next_research_route_source": "latest_research_handoff"
   },
   "next_route": {
-    "route_id": "v21_p8_t07_protected_gate_d_review_after_checkpoint",
-    "role_family": "gate-chair@0.1.0",
-    "target_derivation_milestone": "einstein_equations",
-    "milestone_burden": "Calibrate the field-equation result before any protected verdict.",
-    "requires_human_gate": true
+    "route_id": "v21_p9_t01_source_only_benchmark_protocol_after_checkpoint",
+    "role_family": "benchmark-designer",
+    "target_derivation_milestone": "exact_gr_recovery",
+    "milestone_burden": "Define the source-only weak-field and recovery benchmark protocol without treating protocol design as recovered GR.",
+    "requires_human_gate": false
   },
   "claim_boundary": {
     "physics_claim_authority": false,
@@ -311,7 +311,9 @@
       "overread_guard": [
         "no_einstein_equations",
         "no_benchmark_promotion",
-        "no_completed_derivation"
+        "no_completed_derivation",
+        "no_global_theory_rejection",
+        "no_future_source_extension_impossibility"
       ]
     },
     {
@@ -328,7 +330,7 @@
   ],
   "distance_to_gr": {
     "delta": {
-      "effect": "none_project_system_recovery",
+      "effect": "no_distance_delta",
       "changed": false,
       "milestone": "einstein_equations",
       "burden_id": "einstein_equations"
@@ -517,9 +519,11 @@
         "overread_guard": [
           "no_einstein_equations",
           "no_benchmark_promotion",
-          "no_completed_derivation"
+          "no_completed_derivation",
+          "no_global_theory_rejection",
+          "no_future_source_extension_impossibility"
         ],
-        "last_evidence_path": "research_control/tasks/RT-20260729-009/artifacts/p8_t06_closure_red_team_review_v1.yaml",
+        "last_evidence_path": "research_control/tasks/RT-20260729-011/artifacts/p8_t07_gate_d_decision_v1.tex",
         "high_risk_status_card": {
           "object_id": "einstein_equations",
           "positive_status": "einstein_equations remains blocked with open continuation and no positive derivation status.",
@@ -621,7 +625,7 @@
         "layer": "post_checkpoint",
         "status": "PENDING",
         "evidence": [
-          "One governed checkpoint remains; P8-T07 is not executed or authorized."
+          "One governed checkpoint remains; P9-T01 is not executed."
         ]
       }
     ]

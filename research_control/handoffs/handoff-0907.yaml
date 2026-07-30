@@ -1,0 +1,246 @@
+handoff_id: "handoff-0907"
+handoff_number: 907
+task_id: "RT-20260729-011"
+decision_id: "DDR-20260729-011"
+job_id: "AJ-RT-20260729-011-001"
+completion_id: "AJC-AJ-RT-20260729-011-001"
+completion_path: "research_control/tasks/RT-20260729-011/jobs/completions/AJC-AJ-RT-20260729-011-001.yaml"
+completion_sha256: "e9ab692e9638395290959388d14cd574eee9b67906a00afbe4674f0205ef3f23"
+status: "ready_after_checkpoint"
+created_at: "2026-07-30T02:10:16Z"
+parent_handoff_id: "handoff-0906"
+plan_task_id: "P8-T07"
+source_role_id: "gate-chair"
+source_role_version: "0.1.0"
+source_execution_role_ref: "gate-chair@0.1.0--RT-20260729-011"
+summary: "P8-T07 consumes exact protected authority and issues NOT_READY_EINSTEIN_SECTOR_DERIVATION_REQUIREMENTS_UNMET for the fixed P8-T02 through P8-T06 package. Four criteria pass only in narrow finite or authority scope; six required Einstein-sector criteria remain unmet. The package is locally frozen against positive Gate D, Einstein-sector adoption, exact-GR recovery, and benchmark use while materially new repair remains open."
+next_action: "Run one governed checkpoint for AJ-RT-20260729-011-001. After checkpoint, execute at most one P9-T01 packet limited to source-only weak-field and recovery benchmark protocol design plus an explicit claim firewall; preserve Gate D NOT READY and do not claim a benchmark result, promotion, Einstein equations, or exact-GR recovery."
+current_claim_boundary: "CB-V21-P8-T07-PROTECTED-GATE-D-NOT-READY-001"
+loop_risk_route: "continue_bridge_facing_candidate_path"
+
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260729-011"
+  latest_research_handoff_id: "handoff-0907"
+  latest_research_next_action: "Run one governed checkpoint for AJ-RT-20260729-011-001. After checkpoint, execute at most one P9-T01 packet limited to source-only weak-field and recovery benchmark protocol design plus an explicit claim firewall; preserve Gate D NOT READY and do not claim a benchmark result, promotion, Einstein equations, or exact-GR recovery."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+
+claim_boundary:
+  allowed_next_scope: "One governed checkpoint for AJ-RT-20260729-011-001. After checkpoint, one bounded P9-T01 protocol and claim-firewall design packet may run."
+  completed_task: "RT-20260729-011"
+  completed_completion_path: "research_control/tasks/RT-20260729-011/jobs/completions/AJC-AJ-RT-20260729-011-001.yaml"
+  completed_completion_sha256: "e9ab692e9638395290959388d14cd574eee9b67906a00afbe4674f0205ef3f23"
+  source_handoff_id: "handoff-0906"
+  source_handoff_path: "research_control/handoffs/handoff-0906.yaml"
+  source_handoff_sha256: "93520ee180485d6061e6299ea07c11f6359f19332d1aed1947db32a71354945f"
+  immutable_route_sha256: "dc0b7b9ef680a242ef144504e7af0f762d78109f088d208d6e0ba24763b6086a"
+  route_blocker_fingerprint: "0a715881c9bdcf108a6f36d3de56eaf4277bc179db235631ad50bef4f481802a"
+  dependency_checkpoint_commit: "fcf24eb119be5e67c05194ee51708967e15252ff"
+  approval_id: "approval-20260729-002"
+  result_status: "NOT_READY_EINSTEIN_SECTOR_DERIVATION_REQUIREMENTS_UNMET"
+  decision_path: "research_control/tasks/RT-20260729-011/artifacts/p8_t07_gate_d_decision_v1.tex"
+  decision_sha256: "035ea88a612d861a00d0703ec2bd1094e01194c113d7ff2588e3a4ad8bf47d63"
+  verdict_matrix_path: "research_control/tasks/RT-20260729-011/artifacts/p8_t07_gate_d_verdict_matrix_v1.yaml"
+  verdict_matrix_sha256: "89e484d18aca681a9f79484331a38ee9b98478e5169af4bb9de2762c71e473a4"
+  protected_gate_review_completed: true
+  positive_gate_d_verdict_issued: false
+  scientific_claims_changed: true
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  ontology_adoption_authorized: false
+  source_law_adoption_authorized: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_performed: false
+  blocked_claims:
+    - "protected authority presented as new mathematical or physical evidence"
+    - "finite exactness presented as A4 scale or correction control"
+    - "static graph equation presented as physical dynamics or Einstein equations"
+    - "same-context AI review presented as blind human review or independent replication"
+    - "P9-T01 protocol eligibility presented as a benchmark result or promotion"
+    - "exact-GR recovery proof publication push completed derivation global no-go or future impossibility"
+
+plan_result:
+  plan_task_id: "P8-T07"
+  next_plan_task_id: "P9-T01"
+  title: "Protected Gate D field-equation decision"
+  result_status: "NOT_READY_EINSTEIN_SECTOR_DERIVATION_REQUIREMENTS_UNMET"
+  work_item_status: "completed"
+  protected_gate_review_complete: true
+  criterion_count: 10
+  pass_or_narrow_pass_count: 4
+  fail_or_not_established_count: 6
+  positive_gate_d_ready: false
+  p9_t01_dependency_ready_after_checkpoint: true
+  p9_t01_dependency_ready_now: false
+  scientific_claims_changed: true
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+distance_to_gr:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "einstein_equations"
+  milestone: "einstein_equations"
+  ledger_row_updated: true
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "Latest protected evidence and control status update only; no mathematical or physical Einstein-sector burden is discharged."
+  downstream_unlocked:
+    - "P9-T01 protocol and claim-firewall design after checkpoint"
+  downstream_still_blocked:
+    - "positive Gate D readiness"
+    - "source-derived gravitational action"
+    - "physical gravitational dynamics"
+    - "target field equation and Einstein equations"
+    - "exact-GR recovery"
+    - "benchmark result or promotion"
+
+required_next_packet:
+  task_type: "v21_p9_t01_source_only_benchmark_protocol"
+  plan_task_id: "P9-T01"
+  objective: "Define a source-only weak-field and recovery benchmark protocol and explicit claim firewall without treating protocol design as benchmark recovery."
+  dependency_ready_after_checkpoint: true
+  dependency_ready_now: false
+  requires_human_gate: false
+  physics_promotion_authorized: false
+
+selected_next_route:
+  route_id: "v21_p9_t01_source_only_benchmark_protocol_after_checkpoint"
+  route_label: "benchmark-protocol-and-claim-firewall"
+  role_family: "benchmark-designer"
+  worker_skill: "continue-research"
+  selected_next_packet_type: "source_only_benchmark_protocol_and_claim_firewall"
+  task_type: "v21_p9_t01_source_only_benchmark_protocol"
+  plan_task_id: "P9-T01"
+  target_derivation_milestone: "exact_gr_recovery"
+  milestone_burden: "Define the source-only weak-field and recovery benchmark protocol without treating protocol design as recovered GR."
+  strategy_id: "define_source_only_benchmark_protocol_and_claim_firewall"
+  trigger_classification: "dependency_ready_after_protected_negative_gate"
+  adoption_status: "blocked_adoption_open_continuation"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  physics_promotion_authorized: false
+  next_action: "After checkpoint, define protocol and firewall only."
+  source_handoff: "research_control/handoffs/handoff-0907.yaml"
+
+ordinary_route_guard:
+  schema_id: "ordinary_route_guard_evaluation_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  evaluation_id: "ORE-HANDOFF-0907"
+  ordinary_handoff_id: "handoff-0907"
+  threshold: 3
+  consecutive_project_system_tasks_before_selection: 0
+  ready_science_plan_task_ids:
+    - "P9-T01"
+    - "P14-T04"
+  selected_plan_task_id: "P9-T01"
+  selected_route_class: "physics_bearing"
+  selected_worker_skill: "continue-research"
+  outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  exception_receipt:
+    active: false
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+active_state_boundary:
+  active_task_id: "RT-20260729-011"
+  active_job_id: "AJ-RT-20260729-011-001"
+  current_status: "protected_gate_d_not_ready_ready_for_checkpoint"
+  checkpoint_required: true
+  checkpoint_completed: false
+  checkpoint_invocation_count: 0
+  protected_gate_review_completed: true
+  decision_code: "NOT_READY_EINSTEIN_SECTOR_DERIVATION_REQUIREMENTS_UNMET"
+  selected_next_plan_task_id: "P9-T01"
+  selected_next_worker_skill: "continue-research"
+  selected_next_role_family: "benchmark-designer"
+  selected_next_route_label: "benchmark-protocol-and-claim-firewall"
+  selected_next_strategy_id: "define_source_only_benchmark_protocol_and_claim_firewall"
+  selected_next_requires_human_gate: false
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 165 validated, atomically claimed, and consumed exactly one protected P8-T07 worker route."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The protected decision, ten-criterion matrix, status record, compact receipt, and parent-child synthesis agree on NOT READY."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Task-local, documentation, signal, research-control, continuation, memory, renderer, and whitespace gates pass."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "One governed checkpoint remains; P9-T01 is not executed."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Tracked frontier, task-index, graph, registry, and wiki derivatives are fresh."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory synchronization and validate-only pass."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation has no hard failure."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: true
+  protected_scoped_gate_review_scope: "One evidence-bound P8-T07 Gate D verdict over the fixed P8-T02 through P8-T06 package."
+  protected_scoped_gate_review_authority_source_path: "research_control/approvals/approval-20260729-002.yaml"
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  push_authorized: false
+  external_outreach_authorized: false
+  publication_authorized: false
+  source_law_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  Gate_Chair_verdict_authorized: true
+  global_no_go_claim_authorized: false
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required_no_nonblank_signals"
+  rationale: "The protected Gate D decision emits no new project-improvement signal."
+
+handoff_authority_boundary:
+  this_handoff_authorizes:
+    - "one governed checkpoint for AJ-RT-20260729-011-001"
+    - "after checkpoint, one bounded P9-T01 source-only benchmark protocol and claim-firewall design packet"
+  this_handoff_does_not_authorize:
+    - "P8 reviewed-science or canonical-ontology modification"
+    - "positive Gate D verdict Einstein-sector adoption or independent-review claim"
+    - "benchmark result or promotion"
+    - "Einstein equations exact-GR recovery proof publication push completed derivation global no-go or future impossibility"
+
+next_plan_task_id: "P9-T01"

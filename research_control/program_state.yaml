@@ -1,11 +1,89 @@
 mode: "director_led_research_control"
-active_task_id: "RT-20260729-010"
-latest_handoff_id: "handoff-0906"
-current_status: "p8_t06_allowlist_order_parity_recovery_pass_ready_for_checkpoint"
-claim_boundary_summary: "RT-20260729-010 repairs only the ordered allowlist identity of the expired RT-20260729-009 execution-role overlay and its ROLE_EXECUTION registry row. The immutable P8-T06 AgentJob, completion, handoff, scientific artifacts, review result, and Distance-to-GR ledger remain protected. P8-T06 was not replayed, P8-T07 remains unexecuted and human-gated, and no scientific claim or Gate D verdict changed."
-next_plan_task_id: "P8-T07"
-next_worker_skill: "none_until_human_authorization"
-next_recommended_action: "Run one governed checkpoint for AJ-RT-20260729-010-001. After it commits, do not execute P8-T07 without exact human Gate Chair authorization; preserve the recorded A4 and A9 repair requirements and independent-review deficit."
+active_task_id: "RT-20260729-011"
+latest_handoff_id: "handoff-0907"
+current_status: "protected_gate_d_not_ready_ready_for_checkpoint"
+claim_boundary_summary: "RT-20260729-011 consumes exact protected P8-T07 authority and issues NOT_READY_EINSTEIN_SECTOR_DERIVATION_REQUIREMENTS_UNMET over the fixed P8 package. The verdict completes the protected decision only: it repairs no source, adds no independent review, establishes no physical or Einstein-sector equation, and authorizes no adoption, benchmark result, promotion, proof, publication, push, or completed derivation."
+next_plan_task_id: "P9-T01"
+next_worker_skill: "continue-research"
+next_recommended_action: "Run one governed checkpoint for AJ-RT-20260729-011-001. After checkpoint, execute at most one P9-T01 packet limited to source-only weak-field and recovery benchmark protocol design plus an explicit claim firewall; preserve Gate D NOT READY and do not claim a benchmark result, promotion, Einstein equations, or exact-GR recovery."
+
+p8_t07_protected_gate_d_review:
+  task_id: "RT-20260729-011"
+  parent_task_id: "RT-20260729-010"
+  parent_handoff_id: "handoff-0906"
+  plan_task_id: "P8-T07"
+  next_plan_task_id: "P9-T01"
+  claim_boundary_id: "CB-V21-P8-T07-PROTECTED-GATE-D-NOT-READY-001"
+  status: "PASS_PROTECTED_GATE_D_NOT_READY_READY_FOR_CHECKPOINT"
+  work_item_status: "completed"
+  milestone_disposition: "protected_negative_disposition_complete_einstein_sector_derivation_burdens_unmet"
+  adoption_status: "blocked_adoption_open_continuation"
+  target_derivation_milestone: "einstein_equations"
+  milestone_burden: "Make the protected field-equation decision before benchmark promotion."
+  route_label: "human-gated-field-equation-review"
+  selected_role_family: "gate-chair@0.1.0"
+  selected_worker_skill: "continue-research"
+  immutable_route_sha256: "dc0b7b9ef680a242ef144504e7af0f762d78109f088d208d6e0ba24763b6086a"
+  route_blocker_fingerprint: "0a715881c9bdcf108a6f36d3de56eaf4277bc179db235631ad50bef4f481802a"
+  source_handoff_path: "research_control/handoffs/handoff-0906.yaml"
+  source_handoff_sha256: "93520ee180485d6061e6299ea07c11f6359f19332d1aed1947db32a71354945f"
+  dependency_checkpoint_commit: "fcf24eb119be5e67c05194ee51708967e15252ff"
+  approval_id: "approval-20260729-002"
+  approval_path: "research_control/approvals/approval-20260729-002.yaml"
+  approval_sha256: "6d525692f641d0fc97df7152e1be5f5bba7c34c1e0bc271617dda122a6bca7c5"
+  protected_review_authorized: true
+  approval_consumed_once: true
+  result_status: "NOT_READY_EINSTEIN_SECTOR_DERIVATION_REQUIREMENTS_UNMET"
+  decision_path: "research_control/tasks/RT-20260729-011/artifacts/p8_t07_gate_d_decision_v1.tex"
+  decision_sha256: "035ea88a612d861a00d0703ec2bd1094e01194c113d7ff2588e3a4ad8bf47d63"
+  verdict_matrix_path: "research_control/tasks/RT-20260729-011/artifacts/p8_t07_gate_d_verdict_matrix_v1.yaml"
+  verdict_matrix_sha256: "89e484d18aca681a9f79484331a38ee9b98478e5169af4bb9de2762c71e473a4"
+  scientific_status_path: "research_control/tasks/RT-20260729-011/artifacts/p8_t07_scientific_status_v1.yaml"
+  scientific_status_sha256: "af2f291a03511116c51db1a78bcd62caedd3c1e1b161acc749b8bb371093ac2e"
+  criterion_count: 10
+  pass_or_narrow_pass_count: 4
+  fail_or_not_established_count: 6
+  positive_gate_d_ready: false
+  finite_algebra_status: "credible_in_exact_proposal_scope"
+  A4_status: "repair_required"
+  A9_status: "static_finite_variation_only"
+  candidate_action_source_derived: false
+  physical_gravitational_carrier_derived: false
+  target_tensor_or_covariance_bridge_derived: false
+  physical_dynamics_and_stability_established: false
+  correction_regime_controlled: false
+  blind_review_completed: false
+  independent_replication_completed: false
+  Einstein_equations_derived: false
+  exact_GR_recovery_proved: false
+  benchmark_result_established: false
+  benchmark_promotion_authorized: false
+  local_freeze_active: true
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+  scientific_claims_changed: true
+  scientific_claim_change_scope: "first protected Gate D disposition over the fixed package"
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false
+  completion_path: "research_control/tasks/RT-20260729-011/jobs/completions/AJC-AJ-RT-20260729-011-001.yaml"
+  completion_sha256: "e9ab692e9638395290959388d14cd574eee9b67906a00afbe4674f0205ef3f23"
+  handoff_id: "handoff-0907"
+  handoff_path: "research_control/handoffs/handoff-0907.yaml"
+  checkpoint_invocation_count: 0
+  checkpoint_committed: false
+  selected_next_work_item: "P9-T01_after_successful_checkpoint"
+  selected_next_worker_skill: "continue-research"
+  selected_next_role_family: "benchmark-designer"
+  selected_next_packet_type: "source_only_benchmark_protocol_and_claim_firewall"
+  selected_next_route_label: "benchmark-protocol-and-claim-firewall"
+  selected_next_strategy_id: "define_source_only_benchmark_protocol_and_claim_firewall"
+  selected_next_requires_human_gate: false
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
 
 p8_t06_allowlist_order_parity_recovery:
   task_id: "RT-20260729-010"

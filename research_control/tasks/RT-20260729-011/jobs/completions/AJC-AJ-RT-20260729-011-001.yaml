@@ -1,0 +1,534 @@
+validation_status: "PASS"
+final_repository_validation_status: "PASS_READY_FOR_CHECKPOINT"
+job_id: "AJ-RT-20260729-011-001"
+completion_id: "AJC-AJ-RT-20260729-011-001"
+task_id: "RT-20260729-011"
+task_type: "v21_p8_t07_protected_gate_d_review"
+decision_id: "DDR-20260729-011"
+role_id: "gate-chair"
+role_version: "0.1.0"
+execution_role_ref: "gate-chair@0.1.0--RT-20260729-011"
+status: "completed"
+created_at: "2026-07-30T02:10:16Z"
+started_at: "2026-07-30T02:10:16Z"
+completed_at: "2026-07-30T02:10:16Z"
+objective: "Execute only P8-T07 by issuing the protected evidence-bound Gate D verdict for the fixed P8-T02 through P8-T06 package, without repairing or promoting that package."
+completion_summary: "P8-T07 consumes the exact one-time protected authority and issues NOT_READY_EINSTEIN_SECTOR_DERIVATION_REQUIREMENTS_UNMET. Gate D accepts only the exact finite proposal-scope algebra and no-target-import finding. A4, A9, source derivation, physical and target-side bridge, dynamics, correction control, and independent review remain unmet. The exact package is locally frozen against positive Gate D, Einstein-sector adoption, exact-GR recovery, and benchmark use while materially new same-milestone repair remains open."
+objective_result: "protected_gate_d_not_ready_einstein_sector_requirements_unmet"
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 165
+  passes_consumed: 150
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:165"
+  handoff_token: "05da7c9e28b3a842e674e530a9347aaa5bb7a9e311ffec02"
+  relay_claim_token: "f8dc905b618a20b7e0f3a3a23adb31dbeeee55e16123b3c2"
+  route_work_item_id: "P8-T07"
+  route_worker_skill: "continue-research"
+  route_sha256: "dc0b7b9ef680a242ef144504e7af0f762d78109f088d208d6e0ba24763b6086a"
+  route_reason: "explicit_human_authorized_recovery"
+  route_strategy_id: "human_authorized_recovery_generation_165"
+  route_blocker_fingerprint: "0a715881c9bdcf108a6f36d3de56eaf4277bc179db235631ad50bef4f481802a"
+  route_before_fingerprint: "0a715881c9bdcf108a6f36d3de56eaf4277bc179db235631ad50bef4f481802a"
+  route_evidence_sha256es:
+    - "0b5950d7236720cb60f6db570f6e22148fdb0f50706aca0f3e0feb8591f53272"
+  worker_skill: "continue-research"
+  worker_invocation_count: 1
+
+transaction_status: "ready_for_checkpoint"
+result_disposition: "PROTECTED_GATE_D_NOT_READY_READY_FOR_CHECKPOINT"
+work_item_status: "completed"
+milestone_disposition: "protected_negative_disposition_complete_einstein_sector_derivation_burdens_unmet"
+adoption_status: "blocked_adoption_open_continuation"
+checkpoint_commit:
+  required: true
+  attempted: false
+  committed: false
+  commit_sha: ""
+  dependency_checkpoint_commit: "fcf24eb119be5e67c05194ee51708967e15252ff"
+  push_authorized: false
+  push_performed: false
+
+is_physics_task: true
+payload_class: "protected_human_gate_route_decision"
+has_new_mathematical_payload: true
+source_extension_classification_required: false
+external_red_team_finding_requires_integration: false
+physics_promotion_authorized: false
+proof_authority: false
+
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P8"
+  plan_task_id: "P8-T07"
+  work_kind: "protected_gate_review"
+  task_class: "science"
+  expected_result_kind: "protected_verdict_or_deferred_human_gate"
+  dependency_task_ids:
+    - "P8-T06"
+  dependency_completion_paths:
+    - "research_control/tasks/RT-20260729-009/jobs/completions/AJC-AJ-RT-20260729-009-001.yaml"
+  dependency_completion_sha256es:
+    - "72930cd1b39b983d3a2948360f6f7e6c79f34b661df8de58c21c6f3bde7236f8"
+  dependency_checkpoint_commits:
+    - "fcf24eb119be5e67c05194ee51708967e15252ff"
+  work_item_status: "completed_protected_not_ready_ready_for_checkpoint"
+  recommendation_ids:
+    - "V21-R26"
+    - "V21-R27"
+    - "V21-R31"
+    - "V21-R33"
+    - "V21-R67"
+    - "V21-R68"
+  recommendation_coverage_role: "protected_field_equation_gate_disposition"
+  scientific_claims_changed: true
+  scientific_claim_change_scope: "first protected Gate D verdict over the fixed package; NOT READY only"
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  distance_to_gr_delta_scope: "protected control disposition and evidence-path update only; no mathematical or physical distance reduction"
+  physics_promotion_authorized: false
+  proof_authority: false
+  next_dependency_work_item: "P9-T01_protocol_design_after_successful_checkpoint"
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  observed_durable_outputs:
+    physics:
+      - "one protected Gate D decision"
+      - "one ten-criterion verdict matrix"
+      - "one scientific status boundary"
+    project_system:
+      - "one task-local deterministic validator and compact receipt"
+      - "one protected-authorization receipt"
+  accepted_criteria:
+    physics:
+      - "the verdict is uniquely evidence-bound and protected"
+      - "every unmet Einstein-sector burden remains visible"
+      - "the local freeze and open repair path are both explicit"
+      - "no adoption promotion or completed derivation is inferred"
+    project_system:
+      - "authorization source hashes and immutable science hashes validate"
+      - "parent-child synthesis and control registries validate"
+      - "one governed checkpoint records the transaction"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+physics_payload_admission_result:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "physics"
+  declared_payload_type: "route_decision"
+  realized_payload_type: "protected_gate_d_route_decision_and_dependency_map_update"
+  candidate_family: "V21-P8-FIXED-CLOSURE-PACKAGE-GATE-D-V1"
+  decision_identity: "NOT_READY_EINSTEIN_SECTOR_DERIVATION_REQUIREMENTS_UNMET"
+  result: "PASS"
+  material_payload_present: true
+  process_receipts_counted_as_payload: false
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed_by_admission: false
+  physics_promotion_authorized: false
+
+family_freeze_admission_result:
+  schema_id: "family_freeze_route_admission_v1"
+  policy_id: "family_freeze_reopening_policy_v1"
+  route_id: "v21_p8_t07_protected_gate_d_review"
+  family_id: "V21-P8-FIXED-CLOSURE-PACKAGE-GATE-D-V1"
+  detected_match_basis: []
+  reopening_requested: false
+  result: "PASS_FIRST_PROTECTED_DECISION_DISTINCT_FROM_CANDIDATE_RECONSTRUCTION"
+  local_family_freeze_preserved: true
+  global_no_go_claimed: false
+  physics_promotion_authorized: false
+
+ordinary_route_guard_admission_result:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0906"
+  selected_plan_task_id: "P8-T07"
+  guard_outcome: "below_threshold"
+  result: "PASS"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  scientific_status_changed_by_guard: false
+  physics_promotion_authorized: false
+
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_execution_unit_count: 2
+  outer_agentjob_count: 1
+  child_agentjob_count: 0
+  subagent_count: 2
+
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260729-011/artifacts/child_phys_math_p8_t07_gate_d_review.yaml"
+      output_sha256: "f0ec1c6af9d9bf9bd1e155b52224235ca3085ef516dd8d8971b535c6fa7dbe83"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260729-011/artifacts/child_phys_phil_p8_t07_gate_d_review.yaml"
+      output_sha256: "bff631ddce36f5766ecc2a8e508de8fdf3ad71e2a855ab113f4c2531e31c912a"
+      status: "completed"
+  conflict_review:
+    status: "resolved"
+    review_path: "research_control/tasks/RT-20260729-011/artifacts/parent_conflict_review_p8_t07_gate_d_review.yaml"
+    review_sha256: "51a11b1d4a97a98c154de919e8c23a527cccac1cb39ca0e251b52c665daffbbd"
+    resolution_rounds: 1
+    resolved_conflict_count: 6
+    unresolved_conflicts: []
+  fusion:
+    fused_output_path: "research_control/tasks/RT-20260729-011/artifacts/p8_t07_gate_d_decision_v1.tex"
+    fusion_notes_path: "research_control/tasks/RT-20260729-011/artifacts/parent_fusion_notes_p8_t07_gate_d_review.md"
+    shared_consensus_summary: "Finite proposal-scope algebra is credible, but six required Einstein-sector criteria remain unmet and protected authority adds no missing evidence."
+    unique_phys_math_contributions: "Exact criterion map, finite algebra boundary, dynamical underdetermination, and fixed source hashes."
+    unique_phys_phil_contributions: "Authority-versus-evidence distinction, construction-versus-derivation calibration, provenance limits, and protocol-only downstream boundary."
+    novelty_preservation_summary: "Fusion records the first protected Gate D disposition for the fixed P8 package and an exact local-freeze/open-repair boundary."
+    claim_boundary_preservation_summary: "No reviewed-source or ontology edit, independent-review claim, adoption, promotion, benchmark result, proof, publication, push, global no-go, or completed derivation is authorized."
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+
+memory_preflight:
+  preflight_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1085
+    relationship_row_count: 5499
+    semantic_row_count: 1085
+    vault_row_count: 1085
+    local_cache_only_warning_count: 0
+    refresh_performed: false
+  refresh_needed: false
+  refresh_performed: false
+  refresh_command: ""
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"Gate D readiness matrix independent review\" --limit 10 --json"
+      query_type: "search"
+      query_text: "Gate D readiness matrix independent review"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  authority_note: "Generated Obsidian wiki notes semantic extracts SQLite memory PDFs and .local files are retrieval layers only and are not authority."
+
+Gate_D_result:
+  reviewed_object_id: "V21-P8-FIXED-CLOSURE-PACKAGE-GATE-D-V1"
+  protected_review_authorized: true
+  approval_id: "approval-20260729-002"
+  approval_consumed_once: true
+  decision_code: "NOT_READY_EINSTEIN_SECTOR_DERIVATION_REQUIREMENTS_UNMET"
+  overall_readiness: "NOT_READY"
+  criterion_count: 10
+  pass_or_narrow_pass_count: 4
+  fail_or_not_established_count: 6
+  positive_verdict_issued: false
+  finite_algebra_status: "credible_in_exact_proposal_scope"
+  physical_gravity_status: "not_established"
+  target_field_equation_status: "not_derived"
+  Einstein_leading_regime_status: "not_derived"
+  exact_GR_recovery_status: "not_established"
+  independent_review_status: "not_acquired"
+  adoption_status: "blocked_adoption_open_continuation"
+  local_freeze_active: true
+  global_no_go_claimed: false
+  P9_T01_dependency_eligible_after_checkpoint: true
+  P9_T01_scope: "source-only benchmark protocol and claim-firewall design"
+
+new_mathematical_payload:
+  - payload_id: "P8T07-PAYLOAD-GATE-D-DECISION-001"
+    payload_type: "dependency_map_update"
+    name: "Protected ten-criterion Gate D disposition"
+    summary: "Updates the criterion map by satisfying only protected authority GD-10 and records six unmet Einstein-sector burdens, yielding NOT READY without adoption or promotion."
+  - payload_id: "P8T07-PAYLOAD-P9-PROTOCOL-SELECTION-001"
+    payload_type: "packet_selection"
+    name: "Post-checkpoint P9-T01 protocol-design selection"
+    summary: "Selects only source-only benchmark protocol and claim-firewall design after checkpoint while retaining every benchmark-result and Einstein-equation block."
+
+mathematical_payload_manifest:
+  - payload_id: "P8T07-PAYLOAD-GATE-D-DECISION-001"
+    payload_type: "dependency_map_update"
+    object_name: "P8-T07 protected Gate D verdict matrix"
+    claim_status: "human-gated protected negative disposition"
+    source_path: "research_control/tasks/RT-20260729-011/artifacts/p8_t07_gate_d_verdict_matrix_v1.yaml"
+    burden_effect: "audits"
+    summary: "Records four narrow passes, six unmet criteria, and the evidence-bound NOT READY verdict."
+  - payload_id: "P8T07-PAYLOAD-P9-PROTOCOL-SELECTION-001"
+    payload_type: "packet_selection"
+    object_name: "P9-T01 protocol-only dependency boundary"
+    claim_status: "draft/control routing boundary"
+    source_path: "research_control/tasks/RT-20260729-011/artifacts/p8_t07_scientific_status_v1.yaml"
+    burden_effect: "selects_next"
+    summary: "Permits protocol and firewall design after checkpoint without a benchmark result, promotion, or Einstein-equation claim."
+
+physics_progress_status:
+  status: "no_distance_delta"
+  target_derivation_milestone: "einstein_equations"
+  milestone_burden: "Make the protected field-equation decision before benchmark promotion."
+  explanation: "The protected decision burden is completed, but the mathematical and physical Einstein-sector burden is not reduced: Gate D records NOT READY and preserves all missing evidence."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+loop_risk_decision:
+  category: "bridge_facing_candidate_path"
+  next_route: "continue_bridge_facing_candidate_path"
+  rationale: "The first protected Gate D decision closes the decision step without repeating construction. After checkpoint, P9-T01 may design only a source-only benchmark protocol and claim firewall while the fixed package remains NOT READY."
+  repeated_burdens: []
+
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "einstein_equations"
+  milestone: "einstein_equations"
+  old_status: "draft object exists"
+  new_status: "draft object exists"
+  ledger_row_updated: true
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "The latest evidence path and control status are updated to the protected NOT READY decision, while the mathematical physical and promotion layers remain no field-equation derivation and no promotion."
+  downstream_unlocked:
+    - "P9-T01 protocol and claim-firewall design after checkpoint"
+  downstream_still_blocked:
+    - "positive Gate D readiness"
+    - "source-derived gravitational action"
+    - "physical gravitational dynamics"
+    - "target field equation"
+    - "Einstein equations"
+    - "exact-GR recovery"
+    - "benchmark result or promotion"
+  explanation: "The decision is scientifically material as a protected disposition but contributes no Einstein-sector derivation evidence."
+
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "unchanged; no canonical ontology edit or source-law adoption"
+  - burden: "Source equivalence EqSrc"
+    status: "unchanged"
+  - burden: "RetainH GenH ObsLoc_lc and Resp_lc"
+    status: "unchanged"
+  - burden: "M_src"
+    status: "unchanged protected finite matter status"
+  - burden: "g_eff"
+    status: "unresolved; Gate D imports no target geometry or metric"
+  - burden: "matter coupling"
+    status: "unchanged; no target stress energy or universal gravitational coupling"
+  - burden: "Einstein equations"
+    status: "protected Gate D NOT READY; A4 A9 source derivation physical bridge dynamics correction control and independent review remain unmet"
+  - burden: "finite-variation robustness"
+    status: "static exact finite identities survive; no continuum or physical correction control is established"
+  - burden: "benchmark promotion"
+    status: "blocked; P9-T01 may design a protocol only after checkpoint"
+  - burden: "Gate Chair status"
+    status: "protected P8-T07 verdict completed: NOT_READY_EINSTEIN_SECTOR_DERIVATION_REQUIREMENTS_UNMET"
+  - burden: "current route freeze or hard-fail status"
+    status: "exact unchanged P8 package locally frozen against positive Gate D Einstein-sector adoption exact-GR recovery and benchmark use; material repair remains open"
+
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+  summary: "Protected decision authority and finite proposal-scope algebra do not establish a physical target field equation, Einstein-leading regime, independent review, exact-GR recovery, or benchmark result."
+  forbidden_conclusions:
+    - "protected authority as a missing mathematical or physical premise"
+    - "finite exactness as A4 scale and correction control"
+    - "static graph operator as physical dynamics hyperbolicity or stability"
+    - "component identity as target covariance Bianchi identity or stress-energy conservation"
+    - "same-context AI review as blind human review or independent replication"
+    - "candidate action or equation as adopted physical gravity or Einstein equations"
+    - "P9-T01 protocol eligibility as a benchmark result or promotion"
+    - "exact-GR recovery proof publication push or completed derivation"
+    - "local freeze as global theory rejection or future source-extension impossibility"
+
+selected_next_route:
+  route_id: "v21_p9_t01_source_only_benchmark_protocol"
+  route_label: "benchmark-protocol-and-claim-firewall"
+  role_family: "benchmark-designer"
+  worker_skill: "continue-research"
+  plan_task_id: "P9-T01"
+  target_derivation_milestone: "exact_gr_recovery"
+  milestone_burden: "Define the source-only weak-field and recovery benchmark protocol without treating a protocol as a recovered benchmark."
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_after_checkpoint: true
+  physics_promotion_authorized: false
+  next_action: "After checkpoint, define only the source-only benchmark protocol and explicit claim firewall; preserve Gate D NOT READY and every benchmark-result block."
+  source_handoff: "research_control/handoffs/handoff-0907.yaml"
+
+claim_boundary:
+  boundary_id: "CB-V21-P8-T07-PROTECTED-GATE-D-NOT-READY-001"
+  allowed_scope: "One protected evidence-bound Gate D verdict, exact unmet burdens, local freeze, open repair path, and post-checkpoint P9-T01 protocol-design boundary."
+  blocked_scope: "Reviewed-source or ontology edit external outreach independent-review claim source-law candidate action physical-gravity metric stress-energy Einstein-equation adoption positive verdict benchmark result or promotion exact-GR recovery proof publication push completed derivation global no-go or future impossibility."
+  claim_boundary_preserved: true
+
+artifact_evidence:
+  authorization:
+    path: "research_control/tasks/RT-20260729-011/artifacts/human_authorization_p8_t07_gate_d_review_v1.yaml"
+    sha256: "c1de70d4431e432a9f9b0f092cf4469b4f514ba6154a35976c62cfe44636d56d"
+  protected_decision:
+    path: "research_control/tasks/RT-20260729-011/artifacts/p8_t07_gate_d_decision_v1.tex"
+    sha256: "035ea88a612d861a00d0703ec2bd1094e01194c113d7ff2588e3a4ad8bf47d63"
+  verdict_matrix:
+    path: "research_control/tasks/RT-20260729-011/artifacts/p8_t07_gate_d_verdict_matrix_v1.yaml"
+    sha256: "89e484d18aca681a9f79484331a38ee9b98478e5169af4bb9de2762c71e473a4"
+  scientific_status:
+    path: "research_control/tasks/RT-20260729-011/artifacts/p8_t07_scientific_status_v1.yaml"
+    sha256: "af2f291a03511116c51db1a78bcd62caedd3c1e1b161acc749b8bb371093ac2e"
+  compact_receipt:
+    path: "research_control/tasks/RT-20260729-011/artifacts/p8_t07_gate_d_compact_receipt_v1.json"
+    sha256: "aad52549e9eaae59ebb5be1700253939db30fcd2a6d8ab8e1677732c2f3d13ff"
+
+output_paths:
+  - "research_control/approvals/approval-20260729-002.yaml"
+  - "research_control/tasks/RT-20260729-011/artifacts/human_authorization_p8_t07_gate_d_review_v1.yaml"
+  - "research_control/tasks/RT-20260729-011/artifacts/child_phys_math_p8_t07_gate_d_review.yaml"
+  - "research_control/tasks/RT-20260729-011/artifacts/child_phys_phil_p8_t07_gate_d_review.yaml"
+  - "research_control/tasks/RT-20260729-011/artifacts/parent_conflict_review_p8_t07_gate_d_review.yaml"
+  - "research_control/tasks/RT-20260729-011/artifacts/parent_fusion_notes_p8_t07_gate_d_review.md"
+  - "research_control/tasks/RT-20260729-011/artifacts/p8_t07_gate_d_decision_v1.tex"
+  - "research_control/tasks/RT-20260729-011/artifacts/p8_t07_gate_d_verdict_matrix_v1.yaml"
+  - "research_control/tasks/RT-20260729-011/artifacts/p8_t07_scientific_status_v1.yaml"
+  - "research_control/tasks/RT-20260729-011/artifacts/p8_t07_gate_d_compact_receipt_v1.json"
+  - "research_control/tasks/RT-20260729-011/artifacts/p8_t07_gate_d_validation_v1.json"
+  - "research_control/tasks/RT-20260729-011/artifacts/validate_p8_t07_gate_d_review.py"
+  - "research_control/tasks/RT-20260729-011/00_TASK.yaml"
+  - "research_control/tasks/RT-20260729-011/DDR-20260729-011.md"
+  - "research_control/tasks/RT-20260729-011/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260729-011/roles/gate-chair@0.1.0--RT-20260729-011.yaml"
+  - "research_control/tasks/RT-20260729-011/jobs/AJ-RT-20260729-011-001.yaml"
+  - "research_control/tasks/RT-20260729-011/jobs/completions/AJC-AJ-RT-20260729-011-001.yaml"
+  - "research_control/handoffs/handoff-0907.yaml"
+  - "research_control/handoffs/handoff-0907.md"
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: true
+  protected_scoped_gate_review_scope: "One evidence-bound P8-T07 Gate D verdict over the fixed P8-T02 through P8-T06 package."
+  protected_scoped_gate_review_authority_source_path: "research_control/approvals/approval-20260729-002.yaml"
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  push_authorized: false
+  external_outreach_authorized: false
+  publication_authorized: false
+  source_law_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  candidate_action_adoption_authorized: false
+  independent_replication_claim_authorized: false
+  Einstein_equation_derivation_authorized: false
+  exact_GR_recovery_authorized: false
+  Gate_Chair_verdict_authorized: true
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 165 validated, atomically claimed, and consumed its immutable P8-T07 route once after the dependency checkpoint and exact protected authorization."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The protected decision, ten-criterion matrix, scientific-status record, compact receipt, and resolved parent-child synthesis agree on NOT READY."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Task-local, claim-language, documentation-impact, research-control, memory, renderer, and whitespace checks pass."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "One governed checkpoint remains; P9-T01 is eligible only after that checkpoint."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Tracked frontier, task-index, graph, registry, and wiki derivatives are fresh."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory synchronization and validate-only pass."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation has no hard failure."
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required_no_nonblank_signals"
+  rationale: "The bounded protected decision emits no new project-improvement signal."
+
+handoff_authority_boundary:
+  this_handoff_authorizes:
+    - "one governed checkpoint for AJ-RT-20260729-011-001"
+    - "after checkpoint, one bounded P9-T01 source-only benchmark protocol and claim-firewall design packet"
+  this_handoff_does_not_authorize:
+    - "repair or modification of P8 reviewed science or canonical ontology"
+    - "positive Gate D verdict or Einstein-sector adoption"
+    - "independent-review claim or external outreach"
+    - "benchmark result or promotion"
+    - "Einstein equations exact-GR recovery proof publication push completed derivation global no-go or future impossibility"
+
+command_results:
+  - command: ".venv/bin/python research_control/tasks/RT-20260729-011/artifacts/validate_p8_t07_gate_d_review.py --write-report --json"
+    status: "PASS"
+    summary: "Task-local authorization source-hash criterion synthesis registry ledger and handoff checks pass."
+  - command: "latex-compile auto-mode Tectonic two-pass scratch build of p8_t07_gate_d_decision_v1.tex"
+    status: "PASS"
+    summary: "Bundled Tectonic compiles the protected decision to a three-page scratch PDF after its automatic second pass."
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+    status: "PASS"
+    summary: "Registered memory and wiki derivatives regenerate successfully."
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+    status: "PASS"
+    summary: "Tracked memory sources registries wiki derivatives and indexes are current."
+  - command: ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+    status: "PASS"
+    summary: "Documentation-impact receipt covers the bounded changed paths."
+  - command: ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+    status: "PASS"
+    summary: "Changed-source claim-language validation has no hard failures."
+  - command: ".venv/bin/python scripts/research_control/validate_research_control.py --json-summary"
+    status: "PASS"
+    summary: "Research-control schema authority routing and claim boundaries pass."
+  - command: "git diff --check"
+    status: "PASS"
+    summary: "No whitespace errors."

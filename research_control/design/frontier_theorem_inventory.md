@@ -2163,56 +2163,80 @@ promotion, Gate Chair benchmark closure, or completed derivation.
 - `frontier_item_class`: `missing_theorem`
 - `milestone`: `einstein_equations`
 - `object_type`: `missing_theorem`
-- `object_or_claim_name`: Einstein equations not-started status.
+- `object_or_claim_name`: Einstein equations protected Gate D NOT READY status.
 - `status_layer_summary`:
-  - `control_status`: `not_started`
-  - `mathematical_status`: `dynamics_action_or_variation_missing`
+  - `control_status`: `gate_review_completed_not_ready`
+  - `mathematical_status`: `finite_proposal_scope_algebra_only_no_einstein_field_equation_derivation`
   - `physical_status`: `no_field_equation_derivation`
   - `promotion_status`: `none`
   - `overread_guard`: `no_einstein_equations;no_benchmark_promotion;no_completed_derivation`
 - `three_tier_classification`: `open_or_blocked_physical_target`.
 - `linter_status`: `PASS`; P7-T02 inventory population claim-language scan.
 - `overread_guard`: `no_einstein_equations;no_benchmark_promotion;no_completed_derivation`
-- `source_artifact_path`: `registries/DISTANCE_TO_GR_LEDGER.csv` row
-  `einstein_equations`; `research_control/design/gr_derivation_burden_map.md`.
+- `source_artifact_path`:
+  `research_control/tasks/RT-20260729-011/artifacts/p8_t07_gate_d_decision_v1.tex`;
+  `research_control/tasks/RT-20260729-011/artifacts/p8_t07_gate_d_verdict_matrix_v1.yaml`;
+  `registries/DISTANCE_TO_GR_LEDGER.csv` row `einstein_equations`;
+  `research_control/design/gr_derivation_burden_map.md`.
 - `authority_level`: `registry_row;registered_control_markdown`
 - `source_authority_type`: `distance_to_gr_ledger_row;registered_markdown_control`
 - `assumptions`:
-  - Einstein-equation derivation requires dynamics, action, variation, or an
-    equivalent source-side field-equation route not present here.
-  - Prior scoped `g_eff` and matter-coupling precondition evidence are
-    insufficient.
-- `definitions_used`: Einstein-equation burden; dynamics/action/variation
-  missing.
-- `definitions_introduced`: `none`; the row records a downstream missing-theorem burden.
-- `theorem_like_claims`: No field-equation derivation is present.
-- `statement_or_decision`: The Einstein-equations milestone remains not
-  started.
-- `mathematical_conclusion`: none_supplied; no field-equation derivation is
-  present.
-- `audits_passed`: `none`.
-- `stress_results`: `none`.
-- `gate_chair_results`: `none`.
-- `fail_closed_branches`: `none`.
-- `known_obstructions`: Dynamics, action, variation, or equivalent field-equation route remains missing.
+  - The finite P8 quotient action and Euler equation remain proposal-only.
+  - Positive Gate D requires every recorded criterion, including A4 and A9
+    closure, source derivation, a physical and target-side covariance bridge,
+    dynamical and correction control, and evidenced independent review.
+- `definitions_used`: Einstein-equation burden; P8 Gate D ten-criterion
+  readiness matrix; protected decision authority.
+- `definitions_introduced`: `none`; the protected decision records status and
+  does not introduce a source law, physical field, or target equation.
+- `theorem_like_claims`: The finite quotient equation reproduces in exact
+  proposal scope; no target field equation or Einstein-leading theorem is
+  derived.
+- `statement_or_decision`:
+  `NOT_READY_EINSTEIN_SECTOR_DERIVATION_REQUIREMENTS_UNMET`.
+- `mathematical_conclusion`: Four criteria pass only in finite or authority
+  scope and six required Einstein-sector criteria remain unmet; no
+  Distance-to-GR reduction follows.
+- `audits_passed`: Finite proposal-scope algebra reproduction and
+  no-target-import audit only.
+- `stress_results`: Static finite dynamics remain underdetermined; opposite
+  dynamical completions share the exact static equation.
+- `gate_chair_results`: P8-T07 protected verdict is `NOT_READY`; adoption and
+  promotion remain blocked.
+- `fail_closed_branches`: The exact unchanged P8 package is locally frozen
+  against positive Gate D, Einstein-sector adoption, exact-GR recovery, and
+  benchmark use.
+- `known_obstructions`: A4 scale and remainder control, A9 beyond static
+  variation, source derivation of the action, the physical and target-side
+  bridge, dynamics and correction control, and independent review remain
+  absent.
 - `physical_non_conclusions`:
   - No Einstein equations.
   - No benchmark promotion.
   - No completed derivation.
-- `forbidden_overread`: Scoped `g_eff`, matter-coupling preconditions, or checker outputs as Einstein equations.
+- `forbidden_overread`: Protected authority, finite exactness, scoped
+  `g_eff`, matter-coupling inputs, static identities, review-role separation,
+  validator state, or P9-T01 protocol eligibility as Einstein equations or
+  benchmark recovery.
 - `downstream_blocked_targets`: Einstein equations, benchmark promotion, completed derivation.
-- `allowed_reuse`: Use as a hard downstream missing-theorem marker.
-- `blocked_reuse`: Do not infer field equations from `M_src`, scoped `g_eff`,
-  matter-coupling preconditions, checker outputs, or route progress.
+- `allowed_reuse`: Use as the protected negative Gate D disposition and the
+  exact repair checklist for materially new same-milestone continuation.
+- `blocked_reuse`: Do not infer field equations, physical gravity,
+  independent review, exact-GR recovery, or benchmark promotion from the
+  finite proposal, protected authority, workflow state, or protocol design.
 - `dependency_items`: `g_eff_gsc_cand`; `matter_coupling_precondition_evidence`
-- `missing_theorem_or_primitive`: Dynamics/action/variation principle and
-  source-side field-equation theorem.
-- `next_theorem_needed`: Source-side dynamics/action/variation principle and field-equation theorem.
-- `candidate_next_task`: none from this inventory; future route must be
-  separately selected.
+- `missing_theorem_or_primitive`: Source-derived physical action and
+  target-side field-equation bridge with covariance, dynamics, correction
+  control, and independent review.
+- `next_theorem_needed`: A materially repaired Einstein-sector derivation
+  packet; P9-T01 may first define only a source-only benchmark protocol and
+  claim firewall after checkpoint.
+- `candidate_next_task`: `P9-T01` protocol design after the P8-T07 governed
+  checkpoint; no benchmark result or promotion is authorized.
 - `overread_guard`: `no_einstein_equations;no_benchmark_promotion;no_completed_derivation`
-- `external_review_notes`: This item is intentionally minimal: the project has
-  not started this derivation burden.
+- `external_review_notes`: Same-context reproduction is not blind human review
+  or genuinely independent replication; P8-T07 records that deficit rather
+  than simulating it.
 
 ### Item 14: benchmark_promotion
 

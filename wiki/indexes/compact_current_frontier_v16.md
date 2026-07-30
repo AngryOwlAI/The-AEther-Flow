@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260729-010`
-- Latest handoff: `handoff-0906`
-- Current status: `p8_t06_allowlist_order_parity_recovery_pass_ready_for_checkpoint`
+- Active task: `RT-20260729-011`
+- Latest handoff: `handoff-0907`
+- Current status: `protected_gate_d_not_ready_ready_for_checkpoint`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260729-010`
-- Latest research handoff: `handoff-0906`
-- Latest research next action: Run one governed checkpoint for AJ-RT-20260729-010-001. After it commits, do not execute P8-T07 without exact human Gate Chair authorization; preserve the recorded A4 and A9 repair requirements and independent-review deficit.
+- Latest research task: `RT-20260729-011`
+- Latest research handoff: `handoff-0907`
+- Latest research next action: Run one governed checkpoint for AJ-RT-20260729-011-001. After checkpoint, execute at most one P9-T01 packet limited to source-only weak-field and recovery benchmark protocol design plus an explicit claim firewall; preserve Gate D NOT READY and do not claim a benchmark result, promotion, Einstein equations, or exact-GR recovery.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,11 +26,11 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p8_t07_protected_gate_d_review_after_checkpoint`
-- Role family: `gate-chair@0.1.0`
-- Target milestone: `einstein_equations`
-- Milestone burden: Calibrate the field-equation result before any protected verdict.
-- Requires human gate: `true`
+- Route ID: `v21_p9_t01_source_only_benchmark_protocol_after_checkpoint`
+- Role family: `benchmark-designer`
+- Target milestone: `exact_gr_recovery`
+- Milestone burden: Define the source-only weak-field and recovery benchmark protocol without treating protocol design as recovered GR.
+- Requires human gate: `false`
 
 ## High-Risk Rows
 
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `fb1c3cdef4e04a19a9cb0afa7b21db342000ae02d51ad0e55ca741ab9619dac8`
-- JSON SHA-256: `60c3d0827cdc0db5063cf345baa15f8c062e19848d9f88a54100c2ce73668e94`
+- YAML SHA-256: `442231bb606a8b285cd7dc14c87b1df6527988e8e2ac2f15c408a71d44b8ef79`
+- JSON SHA-256: `18f9177aa2f8bfdcb25da70518fb3cd5c23b287a87387050b5cc2b86002d00e3`
 
 ## Authority Warning
 
