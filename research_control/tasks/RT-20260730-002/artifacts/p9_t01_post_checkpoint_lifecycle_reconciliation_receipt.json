@@ -1,0 +1,133 @@
+{
+  "authority_limits": {
+    "benchmark_promotion_authorized": false,
+    "completed_derivation_authorized": false,
+    "distance_to_gr_changed": false,
+    "p9_t01_reexecuted": false,
+    "p9_t02_executed": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "publication_authorized": false,
+    "push_authorized": false,
+    "scientific_status_changed": false
+  },
+  "check_count": 13,
+  "checkpoint_commit": "14a82f7be9762567359300c9082d3c5bc3d2ee3e",
+  "checkpoint_parent": "c65c2d40cff97ecd96de1c59bd220a9f1274dfc6",
+  "checkpoint_tree": "add8aa8abc4ea37bb3f3871626a2ac32e2975c40",
+  "checks": [
+    {
+      "check_id": "checkpoint_identity",
+      "evidence": "14a82f7be9762567359300c9082d3c5bc3d2ee3e",
+      "status": "PASS"
+    },
+    {
+      "check_id": "checkpoint_tree",
+      "evidence": "add8aa8abc4ea37bb3f3871626a2ac32e2975c40",
+      "status": "PASS"
+    },
+    {
+      "check_id": "checkpoint_parent",
+      "evidence": "c65c2d40cff97ecd96de1c59bd220a9f1274dfc6",
+      "status": "PASS"
+    },
+    {
+      "check_id": "checkpoint_is_ancestor",
+      "evidence": "14a82f7be9762567359300c9082d3c5bc3d2ee3e",
+      "status": "PASS"
+    },
+    {
+      "check_id": "checkpoint_contains_completion",
+      "evidence": "fcc1f5d90ee5b4c70293b1cf98e4fef92db542721bee847c14b7ec169978248a",
+      "status": "PASS"
+    },
+    {
+      "check_id": "immutable_predecessor_hashes",
+      "evidence": {
+        "research_control/handoffs/handoff-0908.md": "d2edce09694674ffb5d716f89705b086613b3a3cc4b6dbb7d9962254f637c058",
+        "research_control/handoffs/handoff-0908.yaml": "6b690aa475ae901cb981eb2a444145db21c098d34ed88b77d78142835a40ff58",
+        "research_control/handoffs/handoff-0909.md": "9ec6f581009f9113e7ce397aade276a583583a2c3e477a0db21a45cf6aa88bbe",
+        "research_control/handoffs/handoff-0909.yaml": "9168059352723b2d6d36b920e48d054c506563cac134aabf9050510ffe0b4a35",
+        "research_control/tasks/RT-20260729-012/artifacts/source_derived_benchmark_protocol_v1.tex": "88ef097bf712ad115e9af62cc18a8b3eabb12f8545350f714ad065f702471007",
+        "research_control/tasks/RT-20260730-001/jobs/completions/AJC-AJ-RT-20260730-001-001.yaml": "fcc1f5d90ee5b4c70293b1cf98e4fef92db542721bee847c14b7ec169978248a"
+      },
+      "status": "PASS"
+    },
+    {
+      "check_id": "immutable_p9_t01_records_preserved",
+      "evidence": {
+        "completion_status": "completed",
+        "job_status": "active",
+        "validation_status": "PASS"
+      },
+      "status": "PASS"
+    },
+    {
+      "check_id": "registry_lifecycle_reconciled",
+      "evidence": {
+        "new_job_status": "completed",
+        "new_task_status": "completed",
+        "stale_job_status": "completed"
+      },
+      "status": "PASS"
+    },
+    {
+      "check_id": "program_state_active_pointer",
+      "evidence": {
+        "active_task_id": "RT-20260730-002",
+        "latest_handoff_id": "handoff-0910",
+        "next_plan_task_id": "P9-T02"
+      },
+      "status": "PASS"
+    },
+    {
+      "check_id": "program_state_checkpoint_truth",
+      "evidence": {
+        "lifecycle_checkpoint": "14a82f7be9762567359300c9082d3c5bc3d2ee3e",
+        "prior_checkpoint": "14a82f7be9762567359300c9082d3c5bc3d2ee3e",
+        "protocol_checkpoint": "14a82f7be9762567359300c9082d3c5bc3d2ee3e"
+      },
+      "status": "PASS"
+    },
+    {
+      "check_id": "handoff_0910_lifecycle",
+      "evidence": {
+        "handoff_id": "handoff-0910",
+        "p9_t02_executed": false,
+        "parent_handoff_id": "handoff-0909",
+        "reconciled_checkpoint_commit": "14a82f7be9762567359300c9082d3c5bc3d2ee3e"
+      },
+      "status": "PASS"
+    },
+    {
+      "check_id": "continuation_boundary_inputs",
+      "evidence": {
+        "active_task_id": "RT-20260730-002",
+        "expected_boundary": "director_decision_required",
+        "latest_handoff_id": "handoff-0910",
+        "pending_or_active_job_ids": []
+      },
+      "status": "PASS"
+    },
+    {
+      "check_id": "forbidden_paths_unchanged",
+      "evidence": {
+        "forbidden_changed": []
+      },
+      "status": "PASS"
+    }
+  ],
+  "error_count": 0,
+  "immutable_predecessor_hashes": {
+    "research_control/handoffs/handoff-0908.md": "d2edce09694674ffb5d716f89705b086613b3a3cc4b6dbb7d9962254f637c058",
+    "research_control/handoffs/handoff-0908.yaml": "6b690aa475ae901cb981eb2a444145db21c098d34ed88b77d78142835a40ff58",
+    "research_control/handoffs/handoff-0909.md": "9ec6f581009f9113e7ce397aade276a583583a2c3e477a0db21a45cf6aa88bbe",
+    "research_control/handoffs/handoff-0909.yaml": "9168059352723b2d6d36b920e48d054c506563cac134aabf9050510ffe0b4a35",
+    "research_control/tasks/RT-20260729-012/artifacts/source_derived_benchmark_protocol_v1.tex": "88ef097bf712ad115e9af62cc18a8b3eabb12f8545350f714ad065f702471007",
+    "research_control/tasks/RT-20260730-001/jobs/completions/AJC-AJ-RT-20260730-001-001.yaml": "fcc1f5d90ee5b4c70293b1cf98e4fef92db542721bee847c14b7ec169978248a"
+  },
+  "route_sha256": "0c3e04e946add84e44b6655cbe4091da99481b2041e219a0cf3dbae5e74ebeda",
+  "schema_id": "p9_t01_post_checkpoint_lifecycle_reconciliation_receipt_v1",
+  "status": "PASS",
+  "strategy_id": "repair_p9_t01_post_checkpoint_lifecycle_and_activate_p9_t02_v1"
+}

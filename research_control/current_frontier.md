@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260730-001` and `handoff-0909`.
+`RT-20260730-005` and `handoff-0913`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260730-001` |
-| Latest handoff ID | `handoff-0909` |
-| Current status | `p9_t01_handoff_identity_checkpoint_recovery_pass_ready_for_checkpoint` |
+| Active task ID | `RT-20260730-005` |
+| Latest handoff ID | `handoff-0913` |
+| Current status | `p9_t01_task_taxonomy_candidate_family_slug_recovery_pass_ready_for_checkpoint` |
 | V16 completed | false |
 | Current route family | benchmark or recovery (project system) |
-| Target derivation milestone | `benchmark_promotion` |
+| Target derivation milestone | none; this is project-control tooling work |
 | Current burden | `benchmark_promotion` |
-| Required next authority | One governed cumulative checkpoint for AJ-RT-20260730-001-001. After checkpoint only, one bounded P9-T02 source-only vacuum Minkowski construction or precise PASS, FAIL, or INCONCLUSIVE packet may run under the frozen protocol. |
-| Next recommended action | Run the one governed cumulative checkpoint for AJ-RT-20260730-001-001. Only after it commits may one fresh bounded P9-T02 candidate-construction packet construct or derive a source state for the vacuum Minkowski benchmark under the frozen source-only protocol and return PASS, FAIL, or INCONCLUSIVE without target-informed source repair. |
+| Required next authority | One governed cumulative checkpoint, then one separately claimed source-only P9-T02 benchmark-case construction packet. |
+| Next recommended action | Invoke the one governed cumulative checkpoint for AJ-RT-20260730-005-001 only after every required precheckpoint gate passes. After that commit, one fresh bounded continue-research packet may execute P9-T02 under the source-only benchmark firewall. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260730-001` |
-| Latest research handoff ID | `handoff-0909` |
-| Latest research next action | Run the one governed cumulative checkpoint for AJ-RT-20260730-001-001. Only after it commits may one fresh bounded P9-T02 candidate-construction packet construct or derive a source state for the vacuum Minkowski benchmark under the frozen source-only protocol and return PASS, FAIL, or INCONCLUSIVE without target-informed source repair. |
+| Latest research task ID | `RT-20260730-005` |
+| Latest research handoff ID | `handoff-0913` |
+| Latest research next action | Invoke the one governed cumulative checkpoint for AJ-RT-20260730-005-001 only after every required precheckpoint gate passes. After that commit, one fresh bounded continue-research packet may execute P9-T02 under the source-only benchmark firewall. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260730-001/00_TASK.yaml`.
-- Active task objective: Under the sealed generation-167 dirty-state manifest, insert the literal identity handoff-0908 into the existing handoff-0908 Markdown heading, prove the other 60 sealed paths and all P9-T01 scientific bytes remained exact at the repair boundary, synchronize ordinary control derivatives, and invoke one governed cumulative checkpoint before P9-T02.
-- Latest handoff path: `research_control/handoffs/handoff-0909.yaml`.
-- Latest handoff summary: Generation 167 inserts only the missing literal handoff-0908 identity into the P9-T01 Markdown heading. The sealed receipt proves the exact eight-byte insertion, zero drift across the other 60 dirty-manifest paths, exact failed-checkpoint evidence, and preservation of the complete P9-T01 protocol. All six cases remain NOT_RUN, Gate D and Gate E remain unchanged, and P9-T02 remains unexecuted.
+- Active task path: `research_control/tasks/RT-20260730-005/00_TASK.yaml`.
+- Active task objective: Under generation 172's sealed dirty-state recovery route, change only RT-20260729-012 task_taxonomy.candidate_family from SourceDerivedBenchmarkProtocol_v1 to source_derived_benchmark_protocol_v1, prove exact preimage reconstruction, preserve every other target byte and all generation-171 repairs, rerun the complete validation stack, and invoke at most one governed cumulative checkpoint before P9-T02.
+- Latest handoff path: `research_control/handoffs/handoff-0913.yaml`.
+- Latest handoff summary: Generation 172 normalizes exactly one historical P9-T01 task-taxonomy candidate-family scalar, reconstructs the sealed preimage, preserves every protected generation-171 and P9-T01 hash, restores zero-error repository taxonomy, and leaves all six cases NOT_RUN. One governed cumulative checkpoint remains pending before P9-T02.
 - Current route family: benchmark or recovery (project system).
-- Next recommended action: Run the one governed cumulative checkpoint for AJ-RT-20260730-001-001. Only after it commits may one fresh bounded P9-T02 candidate-construction packet construct or derive a source state for the vacuum Minkowski benchmark under the frozen source-only protocol and return PASS, FAIL, or INCONCLUSIVE without target-informed source repair.
+- Next recommended action: Invoke the one governed cumulative checkpoint for AJ-RT-20260730-005-001 only after every required precheckpoint gate passes. After that commit, one fresh bounded continue-research packet may execute P9-T02 under the source-only benchmark firewall.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -302,7 +302,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run the one governed cumulative checkpoint for AJ-RT-20260730-001-001. Only after it commits may one fresh bounded P9-T02 candidate-construction packet construct or derive a source state for the vacuum Minkowski benchmark under the frozen source-only protocol and return PASS, FAIL, or INCONCLUSIVE without target-informed source repair.
+Invoke the one governed cumulative checkpoint for AJ-RT-20260730-005-001 only after every required precheckpoint gate passes. After that commit, one fresh bounded continue-research packet may execute P9-T02 under the source-only benchmark firewall.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -320,27 +320,27 @@ Layer status summary:
 
 | Status | Count | Meaning |
 | --- | --- | --- |
-| `PASS` | 6 | receipt complete |
-| `PENDING` | 1 | open item; evidence must explain why |
+| `PASS` | 2 | receipt complete |
+| `PENDING` | 5 | open item; evidence must explain why |
 
 Validation layers:
 
 | Validation layer | Status | Meaning | Evidence |
 | --- | --- | --- | --- |
-| `pre_execution` | PASS | receipt complete | Generation 167 validated, atomically claimed, and consumed its exact immutable recovery route once. |
-| `completion_internal` | PASS | receipt complete | The tracked receipt proves the exact eight-byte identity insertion, 60 non-target hash matches, and P9-T01 scientific preservation. |
-| `post_write` | PASS | receipt complete | Task-local preservation, P9-T01 protocol, documentation, signal, research-control, memory, generated-surface, and whitespace gates pass. |
-| `post_checkpoint` | PENDING | open item; evidence must explain why | One governed cumulative checkpoint remains; P9-T02 is not executed before it. |
-| `renderer` | PASS | receipt complete | Tracked frontier, task-index, graph, registry, and wiki derivatives are fresh. |
-| `memory_bootstrap` | PASS | receipt complete | Tracked memory synchronization and validate-only pass; local retrieval warnings are cache-only. |
-| `claim_language_linter` | PASS | receipt complete | Changed-source claim-language validation has no hard failure. |
+| `pre_execution` | PASS | receipt complete | Generation 172 route, claim, lease, repository binding, and exact inherited manifest validated. |
+| `completion_internal` | PASS | receipt complete | Exact scalar, sealed preimage, protected hashes, zero-error taxonomy, and P9-T01 protocol checks pass. |
+| `post_write` | PENDING | open item; evidence must explain why | Final repository-wide validation follows handoff and derivative synchronization. |
+| `post_checkpoint` | PENDING | open item; evidence must explain why | One governed cumulative checkpoint remains uninvoked. |
+| `renderer` | PENDING | open item; evidence must explain why | Final render-and-check pass follows this handoff. |
+| `memory_bootstrap` | PENDING | open item; evidence must explain why | Final tracked memory synchronization and validate-only pass remain. |
+| `claim_language_linter` | PENDING | open item; evidence must explain why | Changed-claim lint remains in the precheckpoint stack. |
 
 Authorization layers:
 
 | Authorization field | Value | Meaning |
 | --- | --- | --- |
 | `protected_scoped_gate_review_authorized` | false (not authorized) | scoped review authority only |
-| `protected_scoped_gate_review_scope` | not authorized; project-system handoff-identity recovery only | exact scope of protected review authority |
+| `protected_scoped_gate_review_scope` | project-system task-taxonomy scalar recovery only | exact scope of protected review authority |
 | `protected_scoped_gate_review_authority_source_path` | none | tracked source for scoped review authority |
 | `downstream_physics_promotion_authorized` | false (not authorized) | authorizes downstream physics promotion only when true |
 | `downstream_physics_promotion_authority_source_path` | none | tracked source for downstream promotion authority |
@@ -363,9 +363,9 @@ Authorization layers:
 
 Legacy compatibility records:
 
-- active task: `RT-20260730-001`;
-- latest handoff: `handoff-0909`;
-- current status: `p9_t01_handoff_identity_checkpoint_recovery_pass_ready_for_checkpoint`;
+- active task: `RT-20260730-005`;
+- latest handoff: `handoff-0913`;
+- current status: `p9_t01_task_taxonomy_candidate_family_slug_recovery_pass_ready_for_checkpoint`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -375,8 +375,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0909.yaml`
-- `research_control/tasks/RT-20260730-001/00_TASK.yaml`
+- `research_control/handoffs/handoff-0913.yaml`
+- `research_control/tasks/RT-20260730-005/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -392,7 +392,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0909*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0913*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

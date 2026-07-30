@@ -1,0 +1,134 @@
+validation_status: "FAIL"
+schema_id: "precheckpoint_p9_t01_task_taxonomy_candidate_family_slug_blocker_v1"
+task_id: "RT-20260730-004"
+job_id: "AJ-RT-20260730-004-001"
+plan_task_id: "P9-T01"
+route_work_item_id: "P9-T02"
+recovery_for_plan_task_id: "P9-T01"
+observed_at: "2026-07-30T11:15:13Z"
+checkpoint_command: ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260730-004-001"
+checkpoint_status: "NOT_INVOKED_PRECHECKPOINT_GATE_FAILED"
+checkpoint_committed: false
+checkpoint_staged: false
+checkpoint_invocation_count: 0
+legacy_validation_used: false
+failed_gate: "repository_test_shard"
+failed_stage: "precheckpoint_repository_validation"
+failure_summary: "Generation 171's exact two-field recovery-task identity repair passes its task-local checks, restores ordinary-route parity, preserves all protected P9-T01 hashes, and passes the hard research-control diff. The repository-wide test shard then finds one pre-existing explicit task-taxonomy error in RT-20260729-012: candidate_family SourceDerivedBenchmarkProtocol_v1 violates the executable lowercase-slug contract. That source task and the taxonomy contract are unchanged from HEAD, and RT-20260729-012/00_TASK.yaml is outside generation 171's immutable write scope. No checkpoint was invoked and P9-T02 remains unexecuted."
+
+successful_target_repair:
+  target_task_paths:
+    - "research_control/tasks/RT-20260730-002/00_TASK.yaml"
+    - "research_control/tasks/RT-20260730-003/00_TASK.yaml"
+  target_task_sha256_before:
+    - "28f794fa1b42daa976af4478b2006e23247f0c86f07b5982903b8b07b13124a0"
+    - "6de25c65f7009cd0566eefabd52ba8eb67270584f9cccabc2d5ab130afa491ec"
+  target_task_sha256_after:
+    - "6c06056bca781c7d197c2d7469cb9f3db88a366bba645448c2efc1749615221e"
+    - "4356cafade0ab6a868e04c6df560b2dd0dee9d5ae49049e93b09c2a46c444cfe"
+  reconstructed_preimage_sha256:
+    - "28f794fa1b42daa976af4478b2006e23247f0c86f07b5982903b8b07b13124a0"
+    - "6de25c65f7009cd0566eefabd52ba8eb67270584f9cccabc2d5ab130afa491ec"
+  task_local_receipt_path: "research_control/tasks/RT-20260730-004/artifacts/p9_recovery_task_plan_identity_guard_parity_receipt.json"
+  task_local_receipt_sha256: "4c39a83bbec76280618552adbda587cc641973cedd0382ee1e12a0e04e10d781"
+  task_local_validator_path: "research_control/tasks/RT-20260730-004/artifacts/validate_p9_recovery_task_plan_identity_guard_parity.py"
+  task_local_validator_sha256: "2b2487c28e651fbf9fa0ac845baa426e2b956840f3ae58007b66cb9e9438b4d0"
+  task_local_check_count: 6
+  task_local_error_count: 0
+  protected_hash_mismatch_count: 0
+
+integrated_validation:
+  command: ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --job-id AJ-RT-20260730-004-001 --json-summary"
+  status: "PASS"
+  error_count: 0
+  warning_count: 1810
+  receipt_path: ".local/validation-receipts/working-sha256-93f1115f7954c4297512b844491e6a462cad775cacc7bacb1528817808045f74/RESEARCH-CONTROL-DIFF-93F1115F7954C429/full.json"
+  receipt_sha256: "68630962d8fd8888d19d8a58cb1fa04e46c6b6e762e942e50c9e09d9a5947344"
+
+repository_test_evidence:
+  command: ".venv/bin/python -m unittest discover -s tests"
+  status: "FAIL"
+  tests_run: 1266
+  failure_count: 1
+  error_count: 0
+  skipped_count: 1
+  failed_test: "tests.test_task_taxonomy.TaskTaxonomyTests.test_repository_report_records_zero_mutation_and_strengthening"
+  isolated_command: ".venv/bin/python -m unittest -v tests.test_task_taxonomy"
+  isolated_tests_run: 6
+  isolated_failure_count: 1
+  full_validation_command: ".venv/bin/python scripts/research_control/run_full_research_control_validation.py --json --tail-chars 2500"
+  full_validation_status: "FAIL"
+  full_validation_failed_stage: "legacy_validate_project_control"
+  full_validation_root_failure: "the same task-taxonomy repository-report test"
+
+taxonomy_report:
+  command: ".venv/bin/python scripts/research_control/task_taxonomy.py --validate-repository --json"
+  status: "FAIL"
+  schema_id: "v21_task_taxonomy_compact_receipt_v1"
+  report_sha256: "119bc48b30bf61474b37eac27de4372523457818ac6906f7e17247a51038c75d"
+  task_count: 1155
+  historical_task_count: 1040
+  explicit_required_task_count: 115
+  explicit_required_error_count: 1
+  historical_source_mutation_count: 0
+  stronger_science_inference_count: 0
+  required_task_id: "RT-20260729-012"
+  required_error: "task_taxonomy_invalid_candidate_family:SourceDerivedBenchmarkProtocol_v1"
+
+root_finding:
+  finding_class: "explicit_task_taxonomy_candidate_family_slug_contract_mismatch"
+  target_task_path: "research_control/tasks/RT-20260729-012/00_TASK.yaml"
+  target_task_sha256: "4f85641999afa719e6f81156fff3f5e6a089ece5d9c92849f51d849b9ac959d0"
+  field_path: "task_taxonomy.candidate_family"
+  value_before: "SourceDerivedBenchmarkProtocol_v1"
+  required_value_after: "source_derived_benchmark_protocol_v1"
+  validator_path: "scripts/research_control/task_taxonomy.py"
+  validator_sha256: "e03bb7974f17003b2786e2e68d3057a6239872c75c8684b63ec2b8deb853bae0"
+  policy_path: "research_control/design/v21_task_taxonomy_policy.md"
+  policy_sha256: "7460702270a26079f39f64ced2b5934e6a67a721983d913e4d3d114917ecca0b"
+  test_path: "tests/test_task_taxonomy.py"
+  test_sha256: "fb1fdcdf8a936b282cb00025868cfc9887709d03f372be9c547f465251832804"
+  executable_contract: "^[a-z0-9][a-z0-9_]{0,95}$"
+  hypothetical_exact_correction_error_count: 0
+  source_and_contract_differ_from_head: false
+  generation_171_target_authorized: false
+
+preservation_constraint:
+  generation_171_target_repairs_preserved: true
+  predecessor_status_repair_preserved: true
+  protected_hash_mismatch_count: 0
+  p9_t01_protocol_changed: false
+  p9_t01_reexecuted: false
+  p9_t02_executed: false
+  benchmark_case_executed: false
+  Gate_D_changed: false
+  Gate_E_changed: false
+
+required_recovery:
+  strategy_id: "repair_p9_t01_benchmark_protocol_task_taxonomy_candidate_family_slug_v1"
+  worker_skill: "improve-project-system"
+  role_family: "process-integrity-auditor@0.1.0"
+  work_item_id: "P9-T02"
+  exact_behavior_change: "Under one fresh explicitly scoped project-system AgentJob, change only RT-20260729-012 task_taxonomy.candidate_family from SourceDerivedBenchmarkProtocol_v1 to source_derived_benchmark_protocol_v1, prove every other byte of that task is preserved, preserve all generation-171 repairs and P9-T01 scientific artifacts, regenerate ordinary control derivatives, run the complete validation stack, and invoke one future cumulative checkpoint only after every gate passes."
+  required_controls:
+    - "Change exactly one candidate_family scalar and preserve the semantic family identity."
+    - "Do not alter the taxonomy validator policy tests or historical-classification authority boundary."
+    - "Preserve both generation-171 target hashes, the predecessor status repair, and every protected P9-T01 scientific hash."
+    - "Do not reexecute P9-T01 or execute P9-T02."
+    - "Keep P9-T02 unexecuted until the future cumulative checkpoint commits."
+  fallback_forbidden: "Do not weaken the slug contract, relabel scientific status, replay P9-T01, execute P9-T02, retry this frame's uninvoked checkpoint, publish, or push."
+  next_plan_item_after_recovery: "P9-T02"
+  next_plan_item_executed: false
+
+authority_boundary:
+  target_task_identity_repair_passed: true
+  repository_validation_passed: false
+  checkpoint_complete: false
+  p9_t02_execution_ready: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  ontology_or_source_law_adopted: false
+  benchmark_result_or_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_or_push_authorized: false

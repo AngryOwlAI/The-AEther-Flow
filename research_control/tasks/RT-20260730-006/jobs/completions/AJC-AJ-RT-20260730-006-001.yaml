@@ -1,0 +1,302 @@
+validation_status: "PASS"
+final_repository_validation_status: "PASS_CHECKPOINT_READY"
+job_id: "AJ-RT-20260730-006-001"
+completion_id: "AJC-AJ-RT-20260730-006-001"
+task_id: "RT-20260730-006"
+task_type: "project_system_documentation_impact_folder_map_checkpoint_recovery"
+decision_id: "DDR-20260730-006"
+role_id: "process-integrity-auditor"
+source_role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260730-006"
+status: "completed"
+created_at: "2026-07-30T14:05:15Z"
+started_at: "2026-07-30T14:05:15Z"
+completed_at: "2026-07-30T14:06:26Z"
+objective: "Add exactly FOLDER_MAP.md to RT-002's documentation-impact generated_derivatives; synchronize cumulative documentation-impact coverage; prove protected P9-T01 and routing sources unchanged; and invoke one governed checkpoint before P9-T02."
+completion_summary: "Generation 173 adds exactly one FOLDER_MAP.md item to RT-002 generated-derivative coverage and synchronizes only the cumulative documentation-impact changed-path receipts. Focused and cumulative documentation-impact, task-taxonomy, prior recovery, P9-T01 protocol, signal, claim-language, research-control, renderer, graph, memory, and whitespace checks pass. Protected P9-T01 and routing sources remain unchanged, P9-T02 remains unexecuted, and one governed checkpoint remains pending."
+objective_result: "PASS_EXACT_FOLDER_MAP_DOCUMENTATION_IMPACT_COVERAGE_READY_FOR_CHECKPOINT"
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 173
+  passes_consumed: 157
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:173"
+  handoff_token: "16c02f07eba27f694992ae56f52fea24cea55fe844c74805"
+  relay_claim_token: "12318e71cd6f2cb841c1170b255fb07ae9510a3d74153bd9"
+  route_work_item_id: "P9-T02"
+  route_worker_skill: "improve-project-system"
+  route_sha256: "d8ac30e4a4076b7ebb830f4c25abbbc4d9cef345b7966b67152a084a07752822"
+  route_reason: "checkpoint_generated_folder_map_documentation_impact_coverage_recovery_required"
+  route_strategy_id: "repair_checkpoint_generated_folder_map_documentation_impact_coverage_v1"
+  route_blocker_fingerprint: "bdd9e5298e4dcec209bb4b070bab7478d2bbdd82204c6e52d22a1672bc11cef7"
+  route_dirty_state_manifest_sha256: "c57798d6f90266791433f79af6c31b53e1a3305fc09ef09933d5de2821a0458f"
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+
+transaction_status: "completed_checkpoint_ready"
+result_disposition: "folder_map_documentation_impact_coverage_pass_one_checkpoint_pending"
+work_item_status: "repair_completed"
+plan_task_id: "P9-T02"
+recovery_for_plan_task_id: "P9-T01"
+task_implementation_plan_task_id: "P9-T01"
+checkpoint_commit: "none_checkpoint_pending"
+checkpoint_invocation_count: 0
+checkpoint_staged: false
+legacy_validation_used: false
+project_system_change_only: true
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS_CHECKPOINT_READY"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  observed_durable_outputs:
+    physics: []
+    project_system:
+      - "research_control/tasks/RT-20260730-002/documentation_impact.yaml"
+      - "research_control/tasks/RT-20260730-006/artifacts/folder_map_documentation_impact_checkpoint_recovery_receipt.json"
+  accepted_criteria:
+    physics: []
+    project_system:
+      - "RT-002 generated_derivatives includes exactly one FOLDER_MAP.md declaration"
+      - "all live documentation-impact receipts cover the cumulative transaction"
+      - "protected P9-T01 and routing source hashes remain unchanged"
+      - "handoff-0913 remains authoritative and P9-T02 remains unexecuted"
+      - "one governed checkpoint commits without legacy validation"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+physics_payload_admission_result:
+  status: "PASS_PROJECT_SYSTEM_NOT_APPLICABLE"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+
+ordinary_route_guard_admission_result:
+  status: "PASS"
+  source_handoff_id: "handoff-0909"
+  selected_plan_task_id: "P9-T02"
+  guard_outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  system_success_counts_as_physics: false
+  system_success_counts_as_distance_to_gr: false
+  scientific_status_changed: false
+  physics_promotion_authorized: false
+
+artifacts:
+  - "research_control/tasks/RT-20260730-006/artifacts/folder_map_documentation_impact_checkpoint_recovery_receipt.json"
+output_paths:
+  - "research_control/tasks/RT-20260730-002/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260730-003/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260730-004/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260730-005/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260730-006/**"
+
+folder_map_documentation_impact_recovery_result:
+  strategy_id: "repair_checkpoint_generated_folder_map_documentation_impact_coverage_v1"
+  route_blocker_fingerprint: "bdd9e5298e4dcec209bb4b070bab7478d2bbdd82204c6e52d22a1672bc11cef7"
+  failed_gate_evidence_sha256: "007386c8285978dbf34d19834d2bd96540c7d8c4ca1720062295e439cd7e2535"
+  target_path: "research_control/tasks/RT-20260730-002/documentation_impact.yaml"
+  target_sha256_before: "a4c36c0ec33de4e859b36c32488595e01b93fccd4b8b157dd8a8368c3b7c9726"
+  target_sha256_after_direct_repair: "90a715a3874ae873ff7971f4e93f3c9fdfdd3b5d0d0948a58c75fbcdf63f8a68"
+  target_sha256_after_cumulative_receipt_sync: "dfcae7b2bc00e3e5d7000ef707a71a559104c6c0906b36e5a68bdbfc3359850e"
+  required_generated_derivative_item: "FOLDER_MAP.md"
+  required_item_occurrence_count: 1
+  primary_repair_status: "PASS_EXACT_ITEM_PRESENT"
+  predecessor_documentation_impact_updated_for_cumulative_gate: true
+  focused_documentation_impact_regression_status: "PASS_1_OF_1"
+  protected_hash_mismatch_count: 0
+  p9_t01_reexecuted: false
+  p9_t02_executed: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+
+preserved_hashes:
+  inherited_manifest_sha256: "c57798d6f90266791433f79af6c31b53e1a3305fc09ef09933d5de2821a0458f"
+  program_state_sha256: "cebb6dce62e568600db2021034007756a89776cfaaa4b7739d65a588395a0978"
+  handoff_0913_yaml_sha256: "f5df7a6bde72167fdfed71b2f9d010b4e92654c481bc4470b62968ae179a101d"
+  handoff_0913_markdown_sha256: "5e2261002658d9f2c3588a775c199e77bcd09aedb425327c0fa33dddada2ce79"
+  rt005_task_sha256: "ee1813e7a00b72e936500be9d4cdc1e7f50ad8580bf9ed8042db4f42dd650d80"
+  rt005_job_sha256: "427e2458d1c862d9baf6d691586aa27d354bdd169adb15c51c0137f4ac6834f1"
+  rt005_completion_sha256: "9f046899380f9316a4e669c6fec028c24e07dcb48ee02082cab0811d99ed2c85"
+  p9_t01_task_sha256: "249885ae2e010f43868bdf3d44b0336ac3058ed568c4120cd1781658905eeec9"
+  p9_t01_job_sha256: "c1444fb0cd15f4248c1f3886daab4fdfbe7f6f80dc4a42ead25af3e32a24848a"
+  p9_t01_protocol_sha256: "88ef097bf712ad115e9af62cc18a8b3eabb12f8545350f714ad065f702471007"
+
+command_results:
+  - command: ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+    status: "PASS_ZERO_ERRORS_ZERO_WARNINGS"
+  - command: ".venv/bin/python -m unittest -v tests.test_project_change_classifier.ProjectChangeClassifierTests.test_documentation_impact_validator_accepts_current_record"
+    status: "PASS_1_OF_1"
+  - command: ".venv/bin/python scripts/research_control/task_taxonomy.py --validate-repository --json"
+    status: "PASS_ZERO_ERRORS_ZERO_MUTATIONS_ZERO_STRENGTHENING"
+  - command: ".venv/bin/python research_control/tasks/RT-20260729-012/artifacts/validate_source_derived_benchmark_protocol.py --check --json"
+    status: "PASS_84_CHECKS_SIX_NOT_RUN"
+  - command: ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted"
+    status: "PASS"
+  - command: ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+    status: "PASS_ZERO_HARD_FAILURES"
+  - command: ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --job-id AJ-RT-20260730-006-001 --json-summary"
+    status: "PASS_ZERO_ERRORS"
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+    status: "PASS_CORE_LOCAL_CACHE_WARNINGS_NONBLOCKING"
+  - command: "git diff --check"
+    status: "PASS"
+
+validation_summary:
+  status: "PASS_CHECKPOINT_READY"
+  focused_documentation_impact_test_count: 1
+  protected_hash_mismatch_count: 0
+  checkpoint_invocation_count: 0
+  checkpoint:
+    invoked: false
+    invocation_count: 0
+    reason: "One governed checkpoint remains authorized after all precheckpoint gates pass."
+  staging:
+    attempted: false
+    index_changed: false
+  commit:
+    created: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 173 lease parity repository identity maximum reasoning effort exact 75-path dirty manifest predecessor inactivity and immutable improve-project-system route were verified before one claim and consume."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "RT-002 contains exactly one FOLDER_MAP.md entry in generated_derivatives."
+      - "The receipt binds the route failed-gate evidence before direct-repair and cumulative target hashes plus protected sources."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Focused and cumulative documentation-impact task-taxonomy prior recovery P9-T01 signal claim-language and research-control gates pass."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "One governed cumulative checkpoint is authorized and has not yet been invoked."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Task index current frontier compact frontier dependency graph and claim graph are fresh while handoff-0913 remains authoritative."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory synchronization and validate-only pass; local retrieval-cache warnings are nonblocking."
+  claim_language_linter:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "Changed-source claim-language validation has zero hard failures; historical warnings remain nonblocking."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "project-system documentation-impact coverage only"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  push_authorized: false
+  publication_authorized: false
+  proof_authority: false
+
+distance_to_gr_delta:
+  changed: false
+  effect: "none_project_system_only"
+  burden_id: "benchmark_promotion"
+  milestone: "none"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "The recovery changes one project-control documentation-impact declaration and bounded control evidence only."
+  downstream_unlocked:
+    - "P9-T02_after_governed_checkpoint"
+  downstream_still_blocked:
+    - "P9-T02_until_governed_checkpoint"
+    - "P9-T03_through_P9-T07_dependency_order"
+    - "Gate_E_benchmark_promotion"
+
+routing_delta_summary: "No resolver policy skill contract program-state or ordinary handoff changed; handoff-0913 remains research authority and P9-T02 remains unexecuted until checkpoint."
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  sidecar_path: ""
+  recursive_goal_recovery_required: false
+  reason: "No nonblank project-improvement signal or open sidecar exists."
+
+next_work_item:
+  plan_task_id: "P9-T02"
+  source_handoff_id: "handoff-0913"
+  worker_skill: "continue-research"
+  dependency_ready_after_checkpoint: true
+  executed: false
+  physics_promotion_authorized: false
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1089
+    relationship_row_count: 5515
+    semantic_row_count: 1089
+    vault_row_count: 1089
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  authority_note: "Generated wiki Obsidian semantic relationship and .local retrieval layers are navigation only and not authority; registered canonical sources tracked control state the live validator finding and the immutable relay route govern this recovery."
+
+out_of_scope_remaining_work:
+  - "One governed checkpoint remains pending for the cumulative project-system transaction."
+  - "P9-T02 remains unexecuted until that checkpoint commits."
+  - "No scientific source ontology ledger Distance-to-GR promotion benchmark promotion proof publication push or protected human-gated decision is authorized."
+forbidden_conclusion_summary: "This recovery supplies no authority to change validation semantics scientific results sources ontology candidates ledgers Distance-to-GR status benchmark status proof publication push or Gate Chair decisions and does not execute P9-T02."
+verdict: "folder_map_documentation_impact_coverage_repaired_checkpoint_ready_no_physics_delta"
+next_recommendation: "Run the one authorized governed checkpoint for AJ-RT-20260730-006-001. After commit continue from handoff-0913 to P9-T02."

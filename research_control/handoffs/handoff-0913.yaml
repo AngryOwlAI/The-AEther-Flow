@@ -1,0 +1,276 @@
+validation_status: "PASS"
+handoff_id: "handoff-0913"
+task_id: "RT-20260730-005"
+job_id: "AJ-RT-20260730-005-001"
+completion_id: "AJC-AJ-RT-20260730-005-001"
+completion_path: "research_control/tasks/RT-20260730-005/jobs/completions/AJC-AJ-RT-20260730-005-001.yaml"
+completion_sha256: "9f046899380f9316a4e669c6fec028c24e07dcb48ee02082cab0811d99ed2c85"
+status: "ready_after_checkpoint"
+created_at: "2026-07-30T12:32:16Z"
+parent_handoff_id: "handoff-0912"
+plan_task_id: "P9-T01"
+recovery_for_plan_task_id: "P9-T01"
+source_role_id: "process-integrity-auditor"
+source_role_version: "0.1.0"
+source_execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260730-005"
+summary: "Generation 172 normalizes exactly one historical P9-T01 task-taxonomy candidate-family scalar, reconstructs the sealed preimage, preserves every protected generation-171 and P9-T01 hash, restores zero-error repository taxonomy, and leaves all six cases NOT_RUN. One governed cumulative checkpoint remains pending before P9-T02."
+next_action: "Invoke the one governed cumulative checkpoint for AJ-RT-20260730-005-001 only after every required precheckpoint gate passes. After that commit, one fresh bounded continue-research packet may execute P9-T02 under the source-only benchmark firewall."
+current_claim_boundary: "Project-system scalar normalization and checkpoint eligibility only. No P9-T01 replay, P9-T02 execution, benchmark result, scientific progress, Distance-to-GR movement, ontology or source-law change, promotion, proof, publication, push, or completed derivation."
+loop_risk_route: "ordinary_route_guard_physics_bearing_route_selected"
+
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260730-005"
+  latest_research_handoff_id: "handoff-0913"
+  latest_research_next_action: "Invoke the one governed cumulative checkpoint for AJ-RT-20260730-005-001 only after every required precheckpoint gate passes. After that commit, one fresh bounded continue-research packet may execute P9-T02 under the source-only benchmark firewall."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+
+claim_boundary:
+  allowed_next_scope: "One governed cumulative checkpoint, then one separately claimed source-only P9-T02 benchmark-case construction packet."
+  completed_task: "RT-20260730-005"
+  completed_completion_path: "research_control/tasks/RT-20260730-005/jobs/completions/AJC-AJ-RT-20260730-005-001.yaml"
+  completed_completion_sha256: "9f046899380f9316a4e669c6fec028c24e07dcb48ee02082cab0811d99ed2c85"
+  source_handoff_id: "handoff-0912"
+  source_handoff_path: "research_control/handoffs/handoff-0912.yaml"
+  source_handoff_sha256: "8a7f732c1729047a4b403496d1419925ba603b6d067e57e6e22f14bcf2d451a8"
+  immutable_route_sha256: "4a8a987a9e3a15605f13baf8942ba228c437ea159ac620ee48964b0523022486"
+  route_blocker_fingerprint: "87dc56aabde5f3f6dcf0a83f47e75707c55136b165cc3e5b82fdb48fd13640c6"
+  dirty_state_manifest_sha256: "480933dd2afefa5ec491c8bc47327dbb9d23536102444fe0bacc61987a46f2ba"
+  failed_gate_evidence_sha256: "4fd172c52b27469da5b34bf4ccf78860afbe6a221697529b8df2753ee1db0e92"
+  source_blocker_path: "research_control/tasks/RT-20260730-004/artifacts/validation_blocker_precheckpoint_p9_t01_task_taxonomy_candidate_family_slug_v1.yaml"
+  source_blocker_sha256: "4fd172c52b27469da5b34bf4ccf78860afbe6a221697529b8df2753ee1db0e92"
+  recovery_receipt_path: "research_control/tasks/RT-20260730-005/artifacts/p9_t01_task_taxonomy_candidate_family_slug_recovery_receipt.json"
+  recovery_receipt_sha256: "64bc66b257b096f82aaef0c33811cc9a06c5f11b95c6f05534ecd6858c19795c"
+  recovery_validator_path: "research_control/tasks/RT-20260730-005/artifacts/validate_p9_t01_task_taxonomy_candidate_family_slug_recovery.py"
+  recovery_validator_sha256: "7a0ebd401464c450e38f069dd7cdf0f40252867d713d4f97db23deed46fc36de"
+  target_path: "research_control/tasks/RT-20260729-012/00_TASK.yaml"
+  target_field_path: "task_taxonomy.candidate_family"
+  target_value_before: "SourceDerivedBenchmarkProtocol_v1"
+  target_value_after: "source_derived_benchmark_protocol_v1"
+  target_sha256_before: "4f85641999afa719e6f81156fff3f5e6a089ece5d9c92849f51d849b9ac959d0"
+  target_sha256_after: "249885ae2e010f43868bdf3d44b0336ac3058ed568c4120cd1781658905eeec9"
+  reconstructed_preimage_sha256: "4f85641999afa719e6f81156fff3f5e6a089ece5d9c92849f51d849b9ac959d0"
+  target_path_count: 1
+  target_field_count: 1
+  protected_hash_count: 8
+  protected_hash_mismatch_count: 0
+  checkpoint_invocation_count_before_handoff: 0
+  checkpoint_committed_before_handoff: false
+  p9_t01_protocol_preserved: true
+  p9_t01_science_payload_modified_by_recovery: false
+  p9_t01_reexecuted: false
+  p9_t02_executed: false
+  benchmark_case_executed: false
+  Gate_D_changed: false
+  Gate_E_verdict_issued: false
+  scientific_status_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  ontology_adoption_authorized: false
+  source_law_adoption_authorized: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_performed: false
+  blocked_claims:
+    - "benchmark result or success"
+    - "Gate D or Gate E movement"
+    - "effective geometry or Einstein-equation recovery"
+    - "ontology or source-law adoption"
+    - "physics promotion proof publication push or completed derivation"
+
+plan_result:
+  plan_task_id: "P9-T01"
+  recovery_for_plan_task_id: "P9-T01"
+  next_plan_task_id: "P9-T02"
+  title: "P9-T01 historical task-taxonomy candidate-family slug recovery"
+  result_status: "PASS_EXACT_SCALAR_RECOVERY_READY_FOR_CHECKPOINT"
+  work_item_status: "completed"
+  protected_p9_t01_protocol_complete: true
+  protected_p9_t01_protocol_byte_preserved: true
+  exact_task_taxonomy_slug_repair_complete: true
+  repository_taxonomy_error_count: 0
+  p9_t02_dependency_ready_after_checkpoint: true
+  p9_t02_dependency_ready_now: false
+  p9_t02_executed: false
+  scientific_claims_changed_by_recovery: false
+  distance_to_gr_delta_changed_by_recovery: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+distance_to_gr:
+  changed: false
+  effect: "none_project_system_only"
+  burden_id: "benchmark_promotion"
+  milestone: "none"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "Task-taxonomy normalization creates no scientific evidence or Distance-to-GR movement."
+  downstream_unlocked:
+    - "P9-T02 only after the pending cumulative checkpoint commits"
+  downstream_still_blocked:
+    - "P9-T03 through P9-T07 remain dependency-ordered and unexecuted"
+    - "Gate E remains NOT_READY_NO_BENCHMARK_CASE_EXECUTED"
+
+required_next_packet:
+  task_type: "v21_p9_t02_vacuum_minkowski_source_only_case"
+  plan_task_id: "P9-T02"
+  objective: "Construct and run the first source-only vacuum/Minkowski benchmark case without target-informed repair or adopted GR dynamics."
+  output_requirement: "One source-input seal, declared intermediates, firewall-compliant comparison, and honest pass/fail/inconclusive result."
+  dependency_qualification: "The exact slug repair and one governed cumulative checkpoint must complete first."
+  dependency_ready_after_recovery_checkpoint: true
+  dependency_ready_now: false
+  exact_human_authorization_required: false
+  executed: false
+
+selected_next_route:
+  route_id: "v21_p9_t02_vacuum_minkowski_source_only_case_after_taxonomy_recovery_checkpoint"
+  route_label: "benchmark-recovery-packet"
+  role_family: "candidate-constructor@0.2.0"
+  worker_skill: "continue-research"
+  selected_next_packet_type: "source_only_benchmark_case_construction"
+  task_type: "v21_p9_t02_vacuum_minkowski_source_only_case"
+  plan_task_id: "P9-T02"
+  target_derivation_milestone: "benchmark_promotion"
+  milestone_burden: "Test the simplest nontrivial source-derived background."
+  strategy_id: "construct_p9_t02_vacuum_minkowski_source_only_case_v1"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  target_atlas_assumed: false
+  target_metric_assumed: false
+  target_informed_source_repair_authorized: false
+  benchmark_result_preestablished: false
+  Gate_E_verdict_preestablished: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  executed: false
+  next_action: "Remain unexecuted until the generation-172 governed cumulative checkpoint commits."
+  source_handoff: "research_control/handoffs/handoff-0913.yaml"
+
+ordinary_route_guard:
+  schema_id: "ordinary_route_guard_evaluation_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  evaluation_id: "ORE-HANDOFF-0913"
+  ordinary_handoff_id: "handoff-0913"
+  threshold: 3
+  consecutive_project_system_tasks_before_selection: 5
+  ready_science_plan_task_ids:
+    - "P9-T02"
+    - "P14-T04"
+  selected_plan_task_id: "P9-T02"
+  selected_route_class: "physics_bearing"
+  selected_worker_skill: "continue-research"
+  outcome: "physics_bearing_route_selected"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  exception_receipt:
+    active: false
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+active_state_boundary:
+  active_task_id: "RT-20260730-005"
+  active_job_id: "AJ-RT-20260730-005-001"
+  current_status: "p9_t01_task_taxonomy_candidate_family_slug_recovery_pass_ready_for_checkpoint"
+  checkpoint_required: true
+  checkpoint_completed: false
+  checkpoint_invocation_count: 0
+  project_system_recovery_completed: true
+  p9_t01_protocol_complete: true
+  p9_t01_protocol_byte_preserved: true
+  selected_next_plan_task_id: "P9-T02"
+  selected_next_worker_skill: "continue-research"
+  selected_next_role_family: "candidate-constructor@0.2.0"
+  selected_next_route_label: "benchmark-recovery-packet"
+  selected_next_strategy_id: "construct_p9_t02_vacuum_minkowski_source_only_case_v1"
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 172 route, claim, lease, repository binding, and exact inherited manifest validated."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Exact scalar, sealed preimage, protected hashes, zero-error taxonomy, and P9-T01 protocol checks pass."
+  post_write:
+    status: "PENDING"
+    evidence:
+      - "Final repository-wide validation follows handoff and derivative synchronization."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "One governed cumulative checkpoint remains uninvoked."
+  renderer:
+    status: "PENDING"
+    evidence:
+      - "Final render-and-check pass follows this handoff."
+  memory_bootstrap:
+    status: "PENDING"
+    evidence:
+      - "Final tracked memory synchronization and validate-only pass remain."
+  claim_language_linter:
+    status: "PENDING"
+    evidence:
+      - "Changed-claim lint remains in the precheckpoint stack."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "project-system task-taxonomy scalar recovery only"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  publication_authorized: false
+  proof_authority: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  canonical_ontology_edit_authorized: false
+  ontology_selection_authorized: false
+  physical_interpretation_establishment_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"
+  rationale: "No nonblank project-improvement signal was emitted."
+
+handoff_authority_boundary:
+  this_handoff_authorizes:
+    - "one governed cumulative checkpoint for AJ-RT-20260730-005-001"
+    - "after checkpoint, one separately claimed P9-T02 source-only benchmark packet"
+  this_handoff_does_not_authorize:
+    - "P9-T02 execution before checkpoint"
+    - "target-informed source repair or adopted GR dynamics"
+    - "benchmark success, Gate E verdict, ontology change, promotion, proof, publication, or push"
+
+next_plan_task_id: "P9-T02"
+next_worker_skill: "continue-research"
+next_role_family: "candidate-constructor@0.2.0"
+next_route_label: "benchmark-recovery-packet"
+next_strategy_id: "construct_p9_t02_vacuum_minkowski_source_only_case_v1"
+notes: "One exact historical project-control scalar repair only. All six benchmark cases remain NOT_RUN and the next physics packet remains checkpoint-gated."

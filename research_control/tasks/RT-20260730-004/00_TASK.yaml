@@ -1,0 +1,86 @@
+validation_status: "FAIL"
+task_id: "RT-20260730-004"
+task_type: "project_system_p9_recovery_task_plan_identity_and_ordinary_guard_parity"
+title: "Repair P9 recovery task plan identity and ordinary-route parity"
+task_taxonomy:
+  schema_id: "v21_task_taxonomy_v1"
+  work_kind: "benchmark_or_recovery"
+  milestone: "benchmark_promotion"
+  candidate_family: "p9_recovery_task_plan_identity_and_ordinary_guard_parity"
+  result_kind: "implemented_and_validated_or_precisely_blocked"
+  authority: "project_control"
+  scope: "project_system"
+status: "completed"
+created_at: "2026-07-30T09:38:39Z"
+updated_at: "2026-07-30T11:15:13Z"
+closed_at: "2026-07-30T11:15:13Z"
+parent_task_id: "RT-20260730-003"
+parent_handoff_id: "handoff-0911"
+supersedes_active_routing_task_id: "RT-20260730-003"
+current_decision_id: "DDR-20260730-004"
+current_job_id: "AJ-RT-20260730-004-001"
+role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260730-004"
+requires_human_gate: false
+human_authorization_note: "Generation 171 of the user-authorized recursive relay immutably routes one improve-project-system frame to reconcile exactly two P9-T01 recovery task implementation identities and restore ordinary-route parity. It does not replay P9-T01 or execute P9-T02."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P9"
+  plan_task_id: "P9-T01"
+  recovery_for_plan_task_id: "P9-T01"
+  next_plan_task_id: "P9-T02"
+  next_plan_task_execution_authorized: false
+objective: "Under generation 171's sealed dirty-state recovery route, change only the implementation-plan plan_task_id in RT-20260730-002 and RT-20260730-003 from P9-T02 to P9-T01, prove exact preimage reconstruction, restore handoff-0911 ordinary-route parity with P9-T02 still unexecuted, preserve the successful predecessor status-token repair and all P9-T01 science, synchronize ordinary control derivatives, and invoke one governed cumulative checkpoint before P9-T02."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system recovery-task identity and ordinary-route parity only; the benchmark-promotion burden does not advance."
+route_label: "repair_p9_recovery_task_plan_identity_and_ordinary_guard_parity_v1"
+project_system_change_only: true
+dual_budget_category: "system_bearing"
+primary_budget: "project_system"
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+claim_boundary_id: "CB-V21-P9-T01-RECOVERY-TASK-PLAN-IDENTITY-GUARD-PARITY-001"
+claim_boundary:
+  allowed_scope: "Change only the implementation-plan plan_task_id in RT-20260730-002 and RT-20260730-003 from P9-T02 to P9-T01, correct the resulting handoff-0911 ordinary-route evaluation, create bounded proof and ordinary control records, preserve the successful status-token repair and all P9-T01 science, and invoke one cumulative checkpoint."
+  target_task_paths:
+    - "research_control/tasks/RT-20260730-002/00_TASK.yaml"
+    - "research_control/tasks/RT-20260730-003/00_TASK.yaml"
+  target_sha256_before:
+    - "28f794fa1b42daa976af4478b2006e23247f0c86f07b5982903b8b07b13124a0"
+    - "6de25c65f7009cd0566eefabd52ba8eb67270584f9cccabc2d5ab130afa491ec"
+  target_sha256_after:
+    - "6c06056bca781c7d197c2d7469cb9f3db88a366bba645448c2efc1749615221e"
+    - "4356cafade0ab6a868e04c6df560b2dd0dee9d5ae49049e93b09c2a46c444cfe"
+  immutable_route_sha256: "e7d29475da4a72d5a82359b83996fd95b75a82c8bc11eba6b6335743c00417c0"
+  route_blocker_fingerprint: "d58f960f940a6fce14e4466c5987d73ff3f883090d78d6b7c20ee012187d9803"
+  failed_gate_evidence_sha256: "cc274f37a9701b1e46eef55b1bab0c7baef18a7070857eb147155bff552b4bd0"
+  blocker_sha256: "94ae594123b13cd4a0bd9b2fc4804d8b0db7814a405cb9342e5832aad79b4637"
+  target_path_count: 2
+  target_field_count: 2
+  p9_t01_reexecuted: false
+  p9_t02_executed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+documentation_impact_id: "DI-RT-20260730-004-001"
+completion_id: "AJC-AJ-RT-20260730-004-001"
+output_artifacts:
+  - "research_control/tasks/RT-20260730-002/00_TASK.yaml"
+  - "research_control/tasks/RT-20260730-003/00_TASK.yaml"
+  - "research_control/handoffs/handoff-0911.yaml"
+  - "research_control/tasks/RT-20260730-004/artifacts/validate_p9_recovery_task_plan_identity_guard_parity.py"
+  - "research_control/tasks/RT-20260730-004/artifacts/p9_recovery_task_plan_identity_guard_parity_receipt.json"
+  - "research_control/tasks/RT-20260730-004/artifacts/validation_blocker_precheckpoint_p9_t01_task_taxonomy_candidate_family_slug_v1.yaml"
+  - "research_control/tasks/RT-20260730-004/jobs/completions/AJC-AJ-RT-20260730-004-001.yaml"
+  - "research_control/handoffs/handoff-0912.yaml"
+  - "research_control/handoffs/handoff-0912.md"
+closure_status: "p9_recovery_task_plan_identity_guard_parity_pass_precheckpoint_blocked_task_taxonomy_candidate_family_slug"
+summary: "Generation 171 changes exactly two implementation-plan identities from P9-T02 to P9-T01, reconstructs both sealed preimages, restores handoff-0911 ordinary-route parity, and preserves the successful status-token repair and all P9-T01 science. Repository-wide validation then stops before checkpoint on one pre-existing out-of-scope candidate_family slug error in RT-20260729-012. P9-T02 remains unexecuted."
+next_recommended_action: "Run one fresh bounded improve-project-system recovery that changes only RT-20260729-012 task_taxonomy.candidate_family from SourceDerivedBenchmarkProtocol_v1 to source_derived_benchmark_protocol_v1, preserves all other bytes and generation-171 repairs, reruns the complete validation stack, and invokes one future cumulative checkpoint only after every gate passes."
+project_improvement_signals: []
+notes: "The authorized repair succeeded, but generation 171 invoked no checkpoint because a pre-existing out-of-scope taxonomy slug failed the repository-wide gate. This packet creates no ontology, source law, scientific evidence, benchmark result, Distance-to-GR movement, promotion, proof, publication, push, or completed-derivation authority."

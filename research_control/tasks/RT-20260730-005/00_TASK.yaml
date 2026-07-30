@@ -1,0 +1,80 @@
+validation_status: "PASS"
+task_id: "RT-20260730-005"
+task_type: "project_system_p9_t01_benchmark_protocol_task_taxonomy_candidate_family_slug_recovery"
+title: "Normalize the P9-T01 benchmark-protocol task-taxonomy candidate-family slug"
+task_taxonomy:
+  schema_id: "v21_task_taxonomy_v1"
+  work_kind: "benchmark_or_recovery"
+  milestone: "benchmark_promotion"
+  candidate_family: "p9_t01_benchmark_protocol_task_taxonomy_candidate_family_slug_recovery"
+  result_kind: "implemented_and_validated_or_precisely_blocked"
+  authority: "project_control"
+  scope: "project_system"
+status: "completed"
+created_at: "2026-07-30T12:03:21Z"
+updated_at: "2026-07-30T12:32:16Z"
+closed_at: "2026-07-30T12:32:16Z"
+parent_task_id: "RT-20260730-004"
+parent_handoff_id: "handoff-0912"
+supersedes_active_routing_task_id: "RT-20260730-004"
+current_decision_id: "DDR-20260730-005"
+current_job_id: "AJ-RT-20260730-005-001"
+role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260730-005"
+requires_human_gate: false
+human_authorization_note: "Generation 172 of the user-authorized recursive relay immutably routes one improve-project-system frame to normalize exactly one historical P9-T01 task-taxonomy candidate-family slug and attempt one cumulative checkpoint. It does not replay P9-T01 or execute P9-T02."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P9"
+  plan_task_id: "P9-T01"
+  recovery_for_plan_task_id: "P9-T01"
+  next_plan_task_id: "P9-T02"
+  next_plan_task_execution_authorized: false
+objective: "Under generation 172's sealed dirty-state recovery route, change only RT-20260729-012 task_taxonomy.candidate_family from SourceDerivedBenchmarkProtocol_v1 to source_derived_benchmark_protocol_v1, prove exact preimage reconstruction, preserve every other target byte and all generation-171 repairs, rerun the complete validation stack, and invoke at most one governed cumulative checkpoint before P9-T02."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system task-taxonomy slug recovery and checkpoint eligibility only; the benchmark-promotion burden does not advance."
+route_label: "repair_p9_t01_benchmark_protocol_task_taxonomy_candidate_family_slug_v1"
+project_system_change_only: true
+dual_budget_category: "system_bearing"
+primary_budget: "project_system"
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+claim_boundary_id: "CB-V21-P9-T01-BENCHMARK-PROTOCOL-TASK-TAXONOMY-SLUG-RECOVERY-001"
+claim_boundary:
+  allowed_scope: "Normalize exactly one task-taxonomy candidate-family scalar, prove exact target preimage reconstruction and protected predecessor preservation, synchronize ordinary control records and derivatives, rerun all gates, and invoke at most one cumulative checkpoint."
+  target_task_path: "research_control/tasks/RT-20260729-012/00_TASK.yaml"
+  target_field_path: "task_taxonomy.candidate_family"
+  target_value_before: "SourceDerivedBenchmarkProtocol_v1"
+  target_value_after: "source_derived_benchmark_protocol_v1"
+  target_sha256_before: "4f85641999afa719e6f81156fff3f5e6a089ece5d9c92849f51d849b9ac959d0"
+  target_sha256_after: "249885ae2e010f43868bdf3d44b0336ac3058ed568c4120cd1781658905eeec9"
+  immutable_route_sha256: "4a8a987a9e3a15605f13baf8942ba228c437ea159ac620ee48964b0523022486"
+  route_blocker_fingerprint: "87dc56aabde5f3f6dcf0a83f47e75707c55136b165cc3e5b82fdb48fd13640c6"
+  failed_gate_evidence_sha256: "4fd172c52b27469da5b34bf4ccf78860afbe6a221697529b8df2753ee1db0e92"
+  dirty_state_manifest_sha256: "480933dd2afefa5ec491c8bc47327dbb9d23536102444fe0bacc61987a46f2ba"
+  target_path_count: 1
+  target_field_count: 1
+  p9_t01_reexecuted: false
+  p9_t02_executed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+documentation_impact_id: "DI-RT-20260730-005-001"
+completion_id: "AJC-AJ-RT-20260730-005-001"
+output_artifacts:
+  - "research_control/tasks/RT-20260729-012/00_TASK.yaml"
+  - "research_control/tasks/RT-20260730-005/artifacts/validate_p9_t01_task_taxonomy_candidate_family_slug_recovery.py"
+  - "research_control/tasks/RT-20260730-005/artifacts/p9_t01_task_taxonomy_candidate_family_slug_recovery_receipt.json"
+  - "research_control/tasks/RT-20260730-005/jobs/completions/AJC-AJ-RT-20260730-005-001.yaml"
+  - "research_control/handoffs/handoff-0913.yaml"
+  - "research_control/handoffs/handoff-0913.md"
+closure_status: "p9_t01_task_taxonomy_candidate_family_slug_recovery_pass_ready_for_checkpoint"
+summary: "Generation 172 normalizes exactly one historical candidate-family scalar, reconstructs the sealed target preimage, preserves all protected generation-171 and P9-T01 hashes, restores zero-error repository taxonomy, and leaves all six benchmark cases NOT_RUN. One governed cumulative checkpoint remains pending; P9-T02 is unexecuted."
+next_recommended_action: "Invoke the one governed cumulative checkpoint for AJ-RT-20260730-005-001 only after the complete precheckpoint validation stack passes. After that commit, a fresh continue-research packet may execute P9-T02 under its source-only benchmark firewall."
+project_improvement_signals: []
+notes: "The exact scalar recovery is complete and checkpoint-ready. It creates no ontology, source law, scientific evidence, benchmark result, Distance-to-GR movement, promotion, proof, publication, push, or completed-derivation authority."

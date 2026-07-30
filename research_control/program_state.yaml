@@ -1,11 +1,299 @@
 mode: "director_led_research_control"
-active_task_id: "RT-20260730-001"
-latest_handoff_id: "handoff-0909"
-current_status: "p9_t01_handoff_identity_checkpoint_recovery_pass_ready_for_checkpoint"
-claim_boundary_summary: "RT-20260730-001 inserts only the missing literal handoff-0908 identity and proves zero drift across the other 60 sealed paths. P9-T01 science and its six NOT_RUN cases are preserved; Gate D and Gate E remain unchanged, P9-T02 remains unexecuted, and no scientific, physical, Distance-to-GR, promotion, proof, publication, push, or completed-derivation authority is created."
+active_task_id: "RT-20260730-005"
+latest_handoff_id: "handoff-0913"
+current_status: "p9_t01_task_taxonomy_candidate_family_slug_recovery_pass_ready_for_checkpoint"
+claim_boundary_summary: "RT-20260730-005 normalizes exactly one task_taxonomy.candidate_family scalar in RT-20260729-012, reconstructs its sealed preimage, preserves all protected generation-171 and P9-T01 hashes, and restores zero-error task taxonomy. All six cases remain NOT_RUN. One cumulative checkpoint is pending; P9-T02 is unexecuted, and no scientific, physical, Distance-to-GR, promotion, proof, publication, push, or completed-derivation authority is created."
 next_plan_task_id: "P9-T02"
 next_worker_skill: "continue-research"
-next_recommended_action: "Run the one governed cumulative checkpoint for AJ-RT-20260730-001-001. Only after it commits may one fresh bounded P9-T02 candidate-construction packet construct or derive a source state for the vacuum Minkowski benchmark under the frozen source-only protocol and return PASS, FAIL, or INCONCLUSIVE without target-informed source repair."
+next_recommended_action: "Invoke the one governed cumulative checkpoint for AJ-RT-20260730-005-001 only after every required precheckpoint gate passes. After that commit, one fresh bounded continue-research packet may execute P9-T02 under the source-only benchmark firewall."
+
+p9_t01_task_taxonomy_candidate_family_slug_recovery:
+  task_id: "RT-20260730-005"
+  parent_task_id: "RT-20260730-004"
+  parent_handoff_id: "handoff-0912"
+  source_task_id: "RT-20260730-004"
+  source_job_id: "AJ-RT-20260730-004-001"
+  source_handoff_id: "handoff-0912"
+  plan_task_id: "P9-T01"
+  route_work_item_id: "P9-T02"
+  recovery_for_plan_task_id: "P9-T01"
+  next_plan_task_id: "P9-T02"
+  claim_boundary_id: "CB-V21-P9-T01-BENCHMARK-PROTOCOL-TASK-TAXONOMY-SLUG-RECOVERY-001"
+  status: "PASS_EXACT_SCALAR_RECOVERY_READY_FOR_CHECKPOINT"
+  work_item_status: "completed"
+  route_label: "repair_p9_t01_benchmark_protocol_task_taxonomy_candidate_family_slug_v1"
+  selected_role_family: "process-integrity-auditor@0.1.0"
+  selected_worker_skill: "improve-project-system"
+  selected_strategy_id: "repair_p9_t01_benchmark_protocol_task_taxonomy_candidate_family_slug_v1"
+  target_derivation_milestone: "none"
+  milestone_burden: "Project-system task-taxonomy slug recovery and checkpoint eligibility only; the benchmark-promotion burden does not advance."
+  source_head: "14a82f7be9762567359300c9082d3c5bc3d2ee3e"
+  reconciled_checkpoint_commit: "14a82f7be9762567359300c9082d3c5bc3d2ee3e"
+  immutable_route_sha256: "4a8a987a9e3a15605f13baf8942ba228c437ea159ac620ee48964b0523022486"
+  route_blocker_fingerprint: "87dc56aabde5f3f6dcf0a83f47e75707c55136b165cc3e5b82fdb48fd13640c6"
+  dirty_state_manifest_sha256: "480933dd2afefa5ec491c8bc47327dbb9d23536102444fe0bacc61987a46f2ba"
+  failed_gate_evidence_sha256: "4fd172c52b27469da5b34bf4ccf78860afbe6a221697529b8df2753ee1db0e92"
+  blocker_path: "research_control/tasks/RT-20260730-004/artifacts/validation_blocker_precheckpoint_p9_t01_task_taxonomy_candidate_family_slug_v1.yaml"
+  blocker_sha256: "4fd172c52b27469da5b34bf4ccf78860afbe6a221697529b8df2753ee1db0e92"
+  target_task_path: "research_control/tasks/RT-20260729-012/00_TASK.yaml"
+  target_field_path: "task_taxonomy.candidate_family"
+  target_value_before: "SourceDerivedBenchmarkProtocol_v1"
+  target_value_after: "source_derived_benchmark_protocol_v1"
+  target_task_sha256_before: "4f85641999afa719e6f81156fff3f5e6a089ece5d9c92849f51d849b9ac959d0"
+  target_task_sha256_after: "249885ae2e010f43868bdf3d44b0336ac3058ed568c4120cd1781658905eeec9"
+  source_completion_sha256: "590535e876fa70e84e8de5f48e2fa9a22fe32afed7a6cec27698b5c284f9c1ce"
+  source_protocol_sha256: "88ef097bf712ad115e9af62cc18a8b3eabb12f8545350f714ad065f702471007"
+  recovery_validator_path: "research_control/tasks/RT-20260730-005/artifacts/validate_p9_t01_task_taxonomy_candidate_family_slug_recovery.py"
+  recovery_validator_sha256: "7a0ebd401464c450e38f069dd7cdf0f40252867d713d4f97db23deed46fc36de"
+  recovery_receipt_path: "research_control/tasks/RT-20260730-005/artifacts/p9_t01_task_taxonomy_candidate_family_slug_recovery_receipt.json"
+  recovery_receipt_sha256: "64bc66b257b096f82aaef0c33811cc9a06c5f11b95c6f05534ecd6858c19795c"
+  completion_path: "research_control/tasks/RT-20260730-005/jobs/completions/AJC-AJ-RT-20260730-005-001.yaml"
+  completion_sha256: "9f046899380f9316a4e669c6fec028c24e07dcb48ee02082cab0811d99ed2c85"
+  handoff_id: "handoff-0913"
+  handoff_path: "research_control/handoffs/handoff-0913.yaml"
+  target_path_count: 1
+  target_field_count: 1
+  p9_t01_protocol_preserved: true
+  p9_t01_science_payload_modified_by_recovery: false
+  p9_t01_reexecuted: false
+  p9_t02_executed: false
+  benchmark_case_executed: false
+  Gate_D_changed: false
+  Gate_E_verdict_issued: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  checkpoint_invocation_count: 0
+  checkpoint_committed: false
+  selected_next_work_item: "P9-T02"
+  selected_next_worker_skill: "continue-research"
+  selected_next_role_family: "candidate-constructor@0.2.0"
+  selected_next_packet_type: "source_only_benchmark_case_construction"
+  selected_next_route_label: "benchmark-recovery-packet"
+  selected_next_strategy_id: "construct_p9_t02_vacuum_minkowski_source_only_case_v1"
+  selected_next_requires_human_gate: false
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
+
+p9_recovery_task_plan_identity_guard_parity:
+  task_id: "RT-20260730-004"
+  parent_task_id: "RT-20260730-003"
+  parent_handoff_id: "handoff-0911"
+  source_task_id: "RT-20260730-003"
+  source_job_id: "AJ-RT-20260730-003-001"
+  source_handoff_id: "handoff-0911"
+  plan_task_id: "P9-T01"
+  route_work_item_id: "P9-T02"
+  recovery_for_plan_task_id: "P9-T01"
+  next_plan_task_id: "P9-T02"
+  claim_boundary_id: "CB-V21-P9-T01-RECOVERY-TASK-PLAN-IDENTITY-GUARD-PARITY-001"
+  status: "PASS_RECOVERY_TASK_PLAN_IDENTITY_GUARD_PARITY_PRECHECKPOINT_BLOCKED_TASK_TAXONOMY_CANDIDATE_FAMILY_SLUG"
+  work_item_status: "blocked"
+  route_label: "repair_p9_recovery_task_plan_identity_and_ordinary_guard_parity_v1"
+  selected_role_family: "process-integrity-auditor@0.1.0"
+  selected_worker_skill: "improve-project-system"
+  selected_strategy_id: "repair_p9_recovery_task_plan_identity_and_ordinary_guard_parity_v1"
+  target_derivation_milestone: "none"
+  milestone_burden: "Project-system recovery-task identity and ordinary-route parity only; the benchmark-promotion burden does not advance."
+  source_head: "14a82f7be9762567359300c9082d3c5bc3d2ee3e"
+  reconciled_checkpoint_commit: "14a82f7be9762567359300c9082d3c5bc3d2ee3e"
+  immutable_route_sha256: "e7d29475da4a72d5a82359b83996fd95b75a82c8bc11eba6b6335743c00417c0"
+  route_blocker_fingerprint: "d58f960f940a6fce14e4466c5987d73ff3f883090d78d6b7c20ee012187d9803"
+  failed_gate_evidence_sha256: "cc274f37a9701b1e46eef55b1bab0c7baef18a7070857eb147155bff552b4bd0"
+  blocker_path: "research_control/tasks/RT-20260730-003/artifacts/validation_blocker_precheckpoint_recovery_task_plan_identity_guard_parity_v1.yaml"
+  blocker_sha256: "94ae594123b13cd4a0bd9b2fc4804d8b0db7814a405cb9342e5832aad79b4637"
+  target_task_paths:
+    - "research_control/tasks/RT-20260730-002/00_TASK.yaml"
+    - "research_control/tasks/RT-20260730-003/00_TASK.yaml"
+  target_task_sha256_before:
+    - "28f794fa1b42daa976af4478b2006e23247f0c86f07b5982903b8b07b13124a0"
+    - "6de25c65f7009cd0566eefabd52ba8eb67270584f9cccabc2d5ab130afa491ec"
+  target_task_sha256_after:
+    - "6c06056bca781c7d197c2d7469cb9f3db88a366bba645448c2efc1749615221e"
+    - "4356cafade0ab6a868e04c6df560b2dd0dee9d5ae49049e93b09c2a46c444cfe"
+  reconstructed_preimage_sha256:
+    - "28f794fa1b42daa976af4478b2006e23247f0c86f07b5982903b8b07b13124a0"
+    - "6de25c65f7009cd0566eefabd52ba8eb67270584f9cccabc2d5ab130afa491ec"
+  source_status_repair_sha256: "c1444fb0cd15f4248c1f3886daab4fdfbe7f6f80dc4a42ead25af3e32a24848a"
+  recovery_validator_path: "research_control/tasks/RT-20260730-004/artifacts/validate_p9_recovery_task_plan_identity_guard_parity.py"
+  recovery_validator_sha256: "2b2487c28e651fbf9fa0ac845baa426e2b956840f3ae58007b66cb9e9438b4d0"
+  recovery_receipt_path: "research_control/tasks/RT-20260730-004/artifacts/p9_recovery_task_plan_identity_guard_parity_receipt.json"
+  recovery_receipt_sha256: "4c39a83bbec76280618552adbda587cc641973cedd0382ee1e12a0e04e10d781"
+  precheckpoint_blocker_path: "research_control/tasks/RT-20260730-004/artifacts/validation_blocker_precheckpoint_p9_t01_task_taxonomy_candidate_family_slug_v1.yaml"
+  precheckpoint_blocker_sha256: "4fd172c52b27469da5b34bf4ccf78860afbe6a221697529b8df2753ee1db0e92"
+  failed_repository_gate: "repository_test_shard"
+  failed_repository_test: "tests.test_task_taxonomy.TaskTaxonomyTests.test_repository_report_records_zero_mutation_and_strengthening"
+  taxonomy_target_task_path: "research_control/tasks/RT-20260729-012/00_TASK.yaml"
+  taxonomy_target_field_path: "task_taxonomy.candidate_family"
+  taxonomy_target_value_before: "SourceDerivedBenchmarkProtocol_v1"
+  taxonomy_target_value_after: "source_derived_benchmark_protocol_v1"
+  taxonomy_target_authorized_by_generation_171: false
+  completion_path: "research_control/tasks/RT-20260730-004/jobs/completions/AJC-AJ-RT-20260730-004-001.yaml"
+  completion_sha256: "590535e876fa70e84e8de5f48e2fa9a22fe32afed7a6cec27698b5c284f9c1ce"
+  handoff_id: "handoff-0912"
+  handoff_path: "research_control/handoffs/handoff-0912.yaml"
+  target_path_count: 2
+  target_field_count: 2
+  protected_hash_mismatch_count: 0
+  ready_science_plan_task_ids:
+    - "P9-T02"
+    - "P14-T04"
+  ordinary_route_selected_plan_task_id: "P9-T02"
+  p9_t01_protocol_preserved: true
+  p9_t01_science_payload_modified_by_recovery: false
+  p9_t01_reexecuted: false
+  p9_t02_executed: false
+  benchmark_case_executed: false
+  Gate_D_changed: false
+  Gate_E_verdict_issued: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  checkpoint_invocation_count: 0
+  checkpoint_committed: false
+  selected_next_work_item: "P9-T02_task_taxonomy_candidate_family_slug_recovery"
+  selected_next_worker_skill: "improve-project-system"
+  selected_next_role_family: "process-integrity-auditor@0.1.0"
+  selected_next_packet_type: "task_taxonomy_candidate_family_slug_recovery"
+  selected_next_route_label: "project-system-recovery"
+  selected_next_strategy_id: "repair_p9_t01_benchmark_protocol_task_taxonomy_candidate_family_slug_v1"
+  selected_next_requires_human_gate: false
+  selected_next_execution_ready_after_checkpoint: false
+  selected_next_execution_ready_now: false
+
+p9_t01_immutable_agentjob_status_parity_recovery:
+  task_id: "RT-20260730-003"
+  parent_task_id: "RT-20260730-002"
+  parent_handoff_id: "handoff-0910"
+  source_task_id: "RT-20260730-002"
+  source_job_id: "AJ-RT-20260730-002-001"
+  source_handoff_id: "handoff-0910"
+  plan_task_id: "P9-T01"
+  recovery_for_plan_task_id: "P9-T01"
+  next_plan_task_id: "P9-T02"
+  claim_boundary_id: "CB-V21-P9-T01-IMMUTABLE-AGENTJOB-STATUS-PARITY-RECOVERY-001"
+  status: "PASS_TARGET_STATUS_PARITY_REPAIR_PRECHECKPOINT_BLOCKED_RECOVERY_TASK_PLAN_IDENTITY_GUARD_CONFLICT"
+  work_item_status: "blocked"
+  route_label: "repair_p9_t01_immutable_agentjob_registry_status_parity_v1"
+  selected_role_family: "process-integrity-auditor@0.1.0"
+  selected_worker_skill: "improve-project-system"
+  selected_strategy_id: "repair_p9_t01_immutable_agentjob_registry_status_parity_v1"
+  target_derivation_milestone: "none"
+  milestone_burden: "Project-system lifecycle parity and checkpoint eligibility only; the benchmark-promotion burden does not advance."
+  source_head: "14a82f7be9762567359300c9082d3c5bc3d2ee3e"
+  reconciled_checkpoint_commit: "14a82f7be9762567359300c9082d3c5bc3d2ee3e"
+  immutable_route_sha256: "efe704de4598750ad0672909725cfd71f731305094b6f7c02d0489ce84397c39"
+  route_blocker_fingerprint: "9bd1c36daa629bf58294972c4e20e89f2261d318a576a104f7324979cc6115ce"
+  dirty_state_manifest_sha256: "a1d59865e071c55c4ca3995912dfac9a7efebc77497e95afa149301d4817550a"
+  failed_gate_evidence_sha256: "55fbf1b6225267f41b31d675e329ac9a01d86d28d9bb721cdc663485a4321db7"
+  blocker_path: "research_control/tasks/RT-20260730-002/artifacts/validation_blocker_precheckpoint_immutable_agentjob_registry_status_parity_v1.yaml"
+  blocker_sha256: "398d1ef9b552d7c1b8fcfdfae306464c7cda028b446c69d828533f9cc27cbc98"
+  target_job_path: "research_control/tasks/RT-20260729-012/jobs/AJ-RT-20260729-012-001.yaml"
+  target_job_sha256_before: "0de2bcf0b70cffde72dd4a823ee0b56a18d92b0c1ee33504769c3bb821191bd0"
+  target_job_sha256_after: "c1444fb0cd15f4248c1f3886daab4fdfbe7f6f80dc4a42ead25af3e32a24848a"
+  reconstructed_preimage_sha256: "0de2bcf0b70cffde72dd4a823ee0b56a18d92b0c1ee33504769c3bb821191bd0"
+  recovery_validator_path: "research_control/tasks/RT-20260730-003/artifacts/validate_p9_t01_immutable_agentjob_status_parity_recovery.py"
+  recovery_receipt_path: "research_control/tasks/RT-20260730-003/artifacts/p9_t01_immutable_agentjob_status_parity_recovery_receipt.json"
+  precheckpoint_blocker_path: "research_control/tasks/RT-20260730-003/artifacts/validation_blocker_precheckpoint_recovery_task_plan_identity_guard_parity_v1.yaml"
+  completion_path: "research_control/tasks/RT-20260730-003/jobs/completions/AJC-AJ-RT-20260730-003-001.yaml"
+  handoff_id: "handoff-0911"
+  handoff_path: "research_control/handoffs/handoff-0911.yaml"
+  target_path_count: 1
+  target_field_count: 1
+  protected_hash_mismatch_count: 0
+  p9_t01_protocol_preserved: true
+  p9_t01_science_payload_modified_by_recovery: false
+  p9_t01_reexecuted: false
+  p9_t02_executed: false
+  benchmark_case_executed: false
+  Gate_D_changed: false
+  Gate_E_verdict_issued: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  checkpoint_invocation_count: 0
+  checkpoint_committed: false
+  selected_next_work_item: "P9-T02_recovery_task_plan_identity_guard_parity_recovery"
+  selected_next_worker_skill: "improve-project-system"
+  selected_next_role_family: "process-integrity-auditor@0.1.0"
+  selected_next_packet_type: "recovery_task_plan_identity_and_ordinary_guard_parity"
+  selected_next_route_label: "project-system-recovery"
+  selected_next_strategy_id: "repair_p9_recovery_task_plan_identity_and_ordinary_guard_parity_v1"
+  selected_next_requires_human_gate: false
+  selected_next_execution_ready_after_checkpoint: false
+  selected_next_execution_ready_now: false
+
+p9_t01_post_checkpoint_lifecycle_reconciliation:
+  task_id: "RT-20260730-002"
+  parent_task_id: "RT-20260730-001"
+  parent_handoff_id: "handoff-0909"
+  source_task_id: "RT-20260730-001"
+  source_job_id: "AJ-RT-20260730-001-001"
+  source_handoff_id: "handoff-0909"
+  plan_task_id: "P9-T01"
+  recovery_for_plan_task_id: "P9-T01"
+  next_plan_task_id: "P9-T02"
+  claim_boundary_id: "CB-V21-P9-T01-POST-CHECKPOINT-LIFECYCLE-RECONCILIATION-001"
+  status: "PASS_REGISTRY_AND_ROUTING_CORRECTION_PRECHECKPOINT_BLOCKED_IMMUTABLE_AGENTJOB_STATUS_PARITY"
+  work_item_status: "blocked"
+  route_label: "repair_p9_t01_post_checkpoint_lifecycle_and_activate_p9_t02_v1"
+  selected_role_family: "process-integrity-auditor@0.1.0"
+  selected_worker_skill: "improve-project-system"
+  selected_strategy_id: "repair_p9_t01_post_checkpoint_lifecycle_and_activate_p9_t02_v1"
+  target_derivation_milestone: "none"
+  milestone_burden: "Project-system post-checkpoint lifecycle reconciliation only; P9-T01 science and the benchmark-promotion burden remain unchanged."
+  source_head: "14a82f7be9762567359300c9082d3c5bc3d2ee3e"
+  reconciled_checkpoint_commit: "14a82f7be9762567359300c9082d3c5bc3d2ee3e"
+  reconciled_checkpoint_tree: "add8aa8abc4ea37bb3f3871626a2ac32e2975c40"
+  reconciled_checkpoint_parent: "c65c2d40cff97ecd96de1c59bd220a9f1274dfc6"
+  immutable_route_sha256: "0c3e04e946add84e44b6655cbe4091da99481b2041e219a0cf3dbae5e74ebeda"
+  route_blocker_fingerprint: "33c88653e75e31afe744af946c754ea3e7b72fa463c6a78a5d3bc81693e6600a"
+  dirty_state_manifest_sha256: "ea088c25056175fe7bf698e26bb026475af8d974216738760b08e0b61d729331"
+  source_completion_path: "research_control/tasks/RT-20260730-001/jobs/completions/AJC-AJ-RT-20260730-001-001.yaml"
+  source_completion_sha256: "fcc1f5d90ee5b4c70293b1cf98e4fef92db542721bee847c14b7ec169978248a"
+  source_protocol_path: "research_control/tasks/RT-20260729-012/artifacts/source_derived_benchmark_protocol_v1.tex"
+  source_protocol_sha256: "88ef097bf712ad115e9af62cc18a8b3eabb12f8545350f714ad065f702471007"
+  source_handoff_yaml_sha256: "9168059352723b2d6d36b920e48d054c506563cac134aabf9050510ffe0b4a35"
+  source_handoff_markdown_sha256: "9ec6f581009f9113e7ce397aade276a583583a2c3e477a0db21a45cf6aa88bbe"
+  recovery_validator_path: "research_control/tasks/RT-20260730-002/artifacts/validate_p9_t01_post_checkpoint_lifecycle_reconciliation.py"
+  recovery_validator_sha256: "29fdcf54f002989521493df8d35bc33c1781b373244942a1fa7a6b1841dd6b5f"
+  recovery_receipt_path: "research_control/tasks/RT-20260730-002/artifacts/p9_t01_post_checkpoint_lifecycle_reconciliation_receipt.json"
+  recovery_receipt_sha256: "9182120df1326061173349e6bc858ca03c0a761fa1d01779718539a2ca30ccb6"
+  completion_path: "research_control/tasks/RT-20260730-002/jobs/completions/AJC-AJ-RT-20260730-002-001.yaml"
+  completion_sha256: "13c0096045d19668b13abe1a4ca9c72ab042fb4f0fca7429ddfc8a3958815b8a"
+  precheckpoint_blocker_path: "research_control/tasks/RT-20260730-002/artifacts/validation_blocker_precheckpoint_immutable_agentjob_registry_status_parity_v1.yaml"
+  precheckpoint_blocker_sha256: "398d1ef9b552d7c1b8fcfdfae306464c7cda028b446c69d828533f9cc27cbc98"
+  handoff_id: "handoff-0910"
+  handoff_path: "research_control/handoffs/handoff-0910.yaml"
+  stale_registry_job_id: "AJ-RT-20260729-012-001"
+  stale_registry_status_before: "active"
+  stale_registry_status_after: "completed"
+  immutable_predecessor_hash_mismatch_count: 0
+  p9_t01_protocol_preserved: true
+  p9_t01_science_payload_modified_by_recovery: false
+  p9_t01_reexecuted: false
+  p9_t02_executed: false
+  benchmark_case_executed: false
+  Gate_D_changed: false
+  Gate_E_verdict_issued: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  checkpoint_invocation_count: 0
+  checkpoint_committed: false
+  selected_next_work_item: "P9-T02_status_parity_recovery"
+  selected_next_worker_skill: "improve-project-system"
+  selected_next_role_family: "process-integrity-auditor@0.1.0"
+  selected_next_packet_type: "immutable_agentjob_registry_status_parity_recovery"
+  selected_next_route_label: "project-system-recovery"
+  selected_next_strategy_id: "repair_p9_t01_immutable_agentjob_registry_status_parity_v1"
+  selected_next_requires_human_gate: false
+  selected_next_execution_ready_after_checkpoint: false
+  selected_next_execution_ready_now: false
 
 p9_t01_handoff_identity_checkpoint_recovery:
   task_id: "RT-20260730-001"
@@ -58,8 +346,9 @@ p9_t01_handoff_identity_checkpoint_recovery:
   distance_to_gr_delta_changed: false
   physics_promotion_authorized: false
   proof_authority: false
-  checkpoint_invocation_count: 0
-  checkpoint_committed: false
+  checkpoint_invocation_count: 1
+  checkpoint_committed: true
+  checkpoint_commit_sha: "14a82f7be9762567359300c9082d3c5bc3d2ee3e"
   selected_next_work_item: "P9-T02_after_successful_checkpoint"
   selected_next_worker_skill: "continue-research"
   selected_next_role_family: "candidate-constructor@0.2.0"
@@ -126,8 +415,8 @@ p9_t01_source_derived_benchmark_protocol:
   completion_sha256: "645d5934a58ded9cafbbbd3af59ad9d3aa91efd5ec9bfe51ab231fd7488c07c4"
   handoff_path: "research_control/handoffs/handoff-0908.yaml"
   checkpoint_required: true
-  checkpoint_completed: false
-  checkpoint_commit: ""
+  checkpoint_completed: true
+  checkpoint_commit: "14a82f7be9762567359300c9082d3c5bc3d2ee3e"
   selected_next_route:
     route_id: "v21_p9_t02_vacuum_minkowski_source_only_case_after_checkpoint"
     route_label: "candidate-construction-packet"
@@ -8696,9 +8985,9 @@ project_improvement_bridge:
   resolution_evidence_path: "research_control/tasks/RT-20260725-002/jobs/completions/AJC-AJ-RT-20260725-002-001.yaml"
 
 active_state_bifurcation:
-  latest_research_task_id: "RT-20260728-003"
-  latest_research_handoff_id: "handoff-0893"
-  latest_research_next_action: "Run one governed checkpoint for AJ-RT-20260728-003-001. Only after it commits may one fresh bounded candidate-constructor@0.2.0 packet execute v21 P7-T05 by constructing the actual universal matter-coupling candidate or returning a distinct precise obstruction without assuming a common physical cone metric detector semantics stress energy coupling or GR behavior."
+  latest_research_task_id: "RT-20260730-005"
+  latest_research_handoff_id: "handoff-0913"
+  latest_research_next_action: "Invoke the one governed cumulative checkpoint for AJ-RT-20260730-005-001 only after every required precheckpoint gate passes. After that commit, one fresh bounded continue-research packet may execute P9-T02 under the source-only benchmark firewall."
   latest_project_system_task_id: "none"
   latest_project_system_status: "none"
   latest_project_system_sidecar_task_id: "none"

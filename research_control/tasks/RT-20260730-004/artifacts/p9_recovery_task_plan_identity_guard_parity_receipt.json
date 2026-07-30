@@ -1,0 +1,99 @@
+{
+  "check_count": 6,
+  "checks": [
+    {
+      "detail": {
+        "after_sha256": "6c06056bca781c7d197c2d7469cb9f3db88a366bba645448c2efc1749615221e",
+        "new_pair_count": 1,
+        "path": "research_control/tasks/RT-20260730-002/00_TASK.yaml",
+        "reconstructed_before_sha256": "28f794fa1b42daa976af4478b2006e23247f0c86f07b5982903b8b07b13124a0"
+      },
+      "name": "target_RT-20260730-002_00_TASK.yaml",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "after_sha256": "4356cafade0ab6a868e04c6df560b2dd0dee9d5ae49049e93b09c2a46c444cfe",
+        "new_pair_count": 1,
+        "path": "research_control/tasks/RT-20260730-003/00_TASK.yaml",
+        "reconstructed_before_sha256": "6de25c65f7009cd0566eefabd52ba8eb67270584f9cccabc2d5ab130afa491ec"
+      },
+      "name": "target_RT-20260730-003_00_TASK.yaml",
+      "status": "PASS"
+    },
+    {
+      "detail": "all exact",
+      "name": "protected_hashes",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "errors": [],
+        "expected_outcome": "below_threshold",
+        "observed_run_length": 2,
+        "policy_required": true,
+        "ready_science_plan_task_ids": [
+          "P9-T02",
+          "P14-T04"
+        ],
+        "selected_plan_task_id": "P9-T02",
+        "status": "WARN",
+        "warnings": [
+          "ordinary_route_guard_threshold_next"
+        ]
+      },
+      "name": "handoff_0911_ordinary_route_guard",
+      "status": "PASS"
+    },
+    {
+      "detail": "c1444fb0cd15f4248c1f3886daab4fdfbe7f6f80dc4a42ead25af3e32a24848a",
+      "name": "predecessor_status_repair_preserved",
+      "status": "PASS"
+    },
+    {
+      "detail": "no P9-T02 or benchmark execution token is present",
+      "name": "p9_t02_unexecuted",
+      "status": "PASS"
+    }
+  ],
+  "distance_to_gr_delta_changed": false,
+  "error_count": 0,
+  "handoff_0911_sha256": "3aa9c5ce80c76be5801c6ee9f271bef690936d35b796ffc59992c906fe737260",
+  "job_id": "AJ-RT-20260730-004-001",
+  "p9_t01_reexecuted": false,
+  "p9_t02_executed": false,
+  "protected_hash_count": 16,
+  "protected_hash_mismatch_count": 0,
+  "ready_science_plan_task_ids": [
+    "P9-T02",
+    "P14-T04"
+  ],
+  "schema_id": "p9_recovery_task_plan_identity_guard_parity_receipt_v1",
+  "scientific_claims_changed": false,
+  "selected_plan_task_id": "P9-T02",
+  "status": "PASS",
+  "strategy_id": "repair_p9_recovery_task_plan_identity_and_ordinary_guard_parity_v1",
+  "target_field_count": 2,
+  "target_path_count": 2,
+  "targets": [
+    {
+      "changed_field": "implementation_plan.plan_task_id",
+      "path": "research_control/tasks/RT-20260730-002/00_TASK.yaml",
+      "reconstructed_preimage_sha256": "28f794fa1b42daa976af4478b2006e23247f0c86f07b5982903b8b07b13124a0",
+      "sha256_after": "6c06056bca781c7d197c2d7469cb9f3db88a366bba645448c2efc1749615221e",
+      "sha256_before": "28f794fa1b42daa976af4478b2006e23247f0c86f07b5982903b8b07b13124a0",
+      "value_after": "P9-T01",
+      "value_before": "P9-T02"
+    },
+    {
+      "changed_field": "implementation_plan.plan_task_id",
+      "path": "research_control/tasks/RT-20260730-003/00_TASK.yaml",
+      "reconstructed_preimage_sha256": "6de25c65f7009cd0566eefabd52ba8eb67270584f9cccabc2d5ab130afa491ec",
+      "sha256_after": "4356cafade0ab6a868e04c6df560b2dd0dee9d5ae49049e93b09c2a46c444cfe",
+      "sha256_before": "6de25c65f7009cd0566eefabd52ba8eb67270584f9cccabc2d5ab130afa491ec",
+      "value_after": "P9-T01",
+      "value_before": "P9-T02"
+    }
+  ],
+  "task_id": "RT-20260730-004"
+}

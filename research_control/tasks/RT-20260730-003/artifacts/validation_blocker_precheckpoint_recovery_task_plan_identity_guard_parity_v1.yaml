@@ -1,0 +1,104 @@
+validation_status: "FAIL"
+schema_id: "precheckpoint_recovery_task_plan_identity_guard_parity_blocker_v1"
+task_id: "RT-20260730-003"
+job_id: "AJ-RT-20260730-003-001"
+plan_task_id: "P9-T02"
+recovery_for_plan_task_id: "P9-T01"
+observed_at: "2026-07-30T08:48:41Z"
+checkpoint_command: ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260730-003-001"
+checkpoint_status: "NOT_INVOKED_PRECHECKPOINT_GATE_FAILED"
+checkpoint_committed: false
+checkpoint_staged: false
+checkpoint_invocation_count: 0
+legacy_validation_used: false
+failed_gate: "research_control_diff"
+failed_stage: "precheckpoint_working_tree_validation"
+failure_summary: "The exact AJ-RT-20260729-012-001 top-level status-token repair passes all ten task-local checks and resolves the generation-169 status-parity finding. The canonical ordinary-route guard then derives a trailing three-task project-system run and treats P9-T02 as already completed because RT-20260730-002 and RT-20260730-003 carry plan_task_id P9-T02 despite explicitly being recovery for P9-T01. It therefore admits P9-T03 and rejects the required still-unexecuted P9-T02 route. Correcting those recovery-task plan identities is outside generation-170's one-field predecessor authority. No checkpoint was invoked and P9-T02 remains unexecuted."
+
+successful_target_repair:
+  target_job_path: "research_control/tasks/RT-20260729-012/jobs/AJ-RT-20260729-012-001.yaml"
+  target_job_sha256_before: "0de2bcf0b70cffde72dd4a823ee0b56a18d92b0c1ee33504769c3bb821191bd0"
+  target_job_sha256_after: "c1444fb0cd15f4248c1f3886daab4fdfbe7f6f80dc4a42ead25af3e32a24848a"
+  reconstructed_preimage_sha256: "0de2bcf0b70cffde72dd4a823ee0b56a18d92b0c1ee33504769c3bb821191bd0"
+  task_local_receipt_path: "research_control/tasks/RT-20260730-003/artifacts/p9_t01_immutable_agentjob_status_parity_recovery_receipt.json"
+  task_local_receipt_sha256: "8424a10dbac57f6d789d60b0dbdb16627d7d4e0bf905b1794dc36560771c2e9e"
+  task_local_validator_path: "research_control/tasks/RT-20260730-003/artifacts/validate_p9_t01_immutable_agentjob_status_parity_recovery.py"
+  task_local_validator_sha256: "6d39cd1d26407538243c219cebe3912650b866e3f9972ea7d72dbf6cab94fa3f"
+  task_local_check_count: 10
+  task_local_error_count: 0
+  protected_hash_mismatch_count: 0
+
+integrated_validation:
+  command: ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --job-id AJ-RT-20260730-003-001 --json-summary"
+  run_id: "RESEARCH-CONTROL-DIFF-0F93677AB105EF79"
+  status: "FAIL"
+  error_count: 4
+  warning_count: 1809
+  receipt_path: ".local/validation-receipts/working-sha256-0f93677ab105ef7982eeae1cd4e0ecdcf6ceeeb85ca277f47673df71ff8677d6/RESEARCH-CONTROL-DIFF-0F93677AB105EF79/full.json"
+  receipt_sha256: "cc274f37a9701b1e46eef55b1bab0c7baef18a7070857eb147155bff552b4bd0"
+  root_findings:
+    - finding_id: "RESEARCH-CONTROL-DIFF-ERROR-911152FB304A"
+      finding: "handoff-0911 ordinary-route consecutive project-system task count does not match the derived three-task run"
+    - finding_id: "RESEARCH-CONTROL-DIFF-ERROR-992E8D7C4C85"
+      finding: "the selected P9-T02 physics route is not dependency-ready because recovery records are counted as P9-T02 completion"
+    - finding_id: "RESEARCH-CONTROL-DIFF-ERROR-0AEF6728E6DC"
+      finding: "the declared ordinary-route outcome does not match the derived threshold outcome"
+  derivative_finding:
+    finding_id: "RESEARCH-CONTROL-DIFF-ERROR-5594078D0D43"
+    finding: "current-frontier next-action snapshot drifted before blocked-state finalization"
+
+root_finding:
+  finding_class: "recovery_task_plan_identity_false_completion_guard_conflict"
+  recovery_task_paths:
+    - "research_control/tasks/RT-20260730-002/00_TASK.yaml"
+    - "research_control/tasks/RT-20260730-003/00_TASK.yaml"
+  declared_plan_task_id: "P9-T02"
+  declared_recovery_for_plan_task_id: "P9-T01"
+  scientific_p9_t02_execution_status: "NOT_EXECUTED"
+  derived_trailing_project_system_run_length: 3
+  derived_ready_science_plan_task_ids:
+    - "P9-T03"
+    - "P14-T04"
+  required_unexecuted_next_plan_task_id: "P9-T02"
+  validator_path: "scripts/research_control/ordinary_route_guard.py"
+  validator_contract: "completed recovery tasks contribute their task implementation plan_task_id to completed_plan_task_ids; the handoff guard must select a dependency-ready science route at a three-task threshold."
+
+preservation_constraint:
+  target_status_repair_preserved: true
+  predecessor_other_bytes_preserved: true
+  protected_hash_mismatch_count: 0
+  p9_t01_protocol_changed: false
+  p9_t01_reexecuted: false
+  p9_t02_executed: false
+  benchmark_case_executed: false
+  Gate_D_changed: false
+  Gate_E_changed: false
+
+required_recovery:
+  strategy_id: "repair_p9_recovery_task_plan_identity_and_ordinary_guard_parity_v1"
+  worker_skill: "improve-project-system"
+  role_family: "process-integrity-auditor@0.1.0"
+  work_item_id: "P9-T02"
+  exact_behavior_change: "Under one fresh explicitly scoped project-system AgentJob, reconcile only the implementation plan identities of the two uncheckpointed P9-T01 recovery task records so they no longer count P9-T02 as completed, regenerate the ordinary-route guard and routing derivatives, preserve the successful one-token predecessor status repair and every protected P9-T01 scientific byte, run full validation, and invoke one future cumulative checkpoint only after all gates pass."
+  required_controls:
+    - "Do not change P9-T02 scientific execution status or treat recovery bookkeeping as P9-T02 completion."
+    - "Preserve the c1444f target job hash and exact 0de2bc reconstructed preimage."
+    - "Preserve the completed P9-T01 completion protocol handoffs and checkpoint 14a82f7."
+    - "Do not weaken ordinary-route guard shared validator schema test or checkpoint semantics."
+    - "Keep P9-T02 unexecuted until the future cumulative checkpoint commits."
+  fallback_forbidden: "Do not execute P9-T03, skip P9-T02, replay P9-T01, alter scientific authority, retry this frame's uninvoked checkpoint, publish, or push."
+  next_plan_item_after_recovery: "P9-T02"
+  next_plan_item_executed: false
+
+authority_boundary:
+  target_status_parity_repaired: true
+  integrated_validation_passed: false
+  checkpoint_complete: false
+  p9_t02_execution_ready: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  ontology_or_source_law_adopted: false
+  benchmark_result_or_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_or_push_authorized: false

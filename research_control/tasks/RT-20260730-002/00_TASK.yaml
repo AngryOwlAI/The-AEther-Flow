@@ -1,0 +1,74 @@
+validation_status: "FAIL"
+task_id: "RT-20260730-002"
+task_type: "project_system_p9_t01_post_checkpoint_lifecycle_reconciliation"
+title: "Reconcile the committed P9-T01 checkpoint lifecycle"
+task_taxonomy:
+  schema_id: "v21_task_taxonomy_v1"
+  work_kind: "benchmark_or_recovery"
+  milestone: "benchmark_promotion"
+  candidate_family: "p9_t01_post_checkpoint_lifecycle_reconciliation"
+  result_kind: "implemented_and_validated_or_precisely_blocked"
+  authority: "project_control"
+  scope: "project_system"
+status: "completed"
+created_at: "2026-07-30T06:39:07Z"
+updated_at: "2026-07-30T06:39:07Z"
+closed_at: "2026-07-30T06:39:07Z"
+parent_task_id: "RT-20260730-001"
+parent_handoff_id: "handoff-0909"
+supersedes_active_routing_task_id: "RT-20260730-001"
+current_decision_id: "DDR-20260730-002"
+current_job_id: "AJ-RT-20260730-002-001"
+role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260730-002"
+requires_human_gate: false
+human_authorization_note: "Generation 169 of the user-authorized recursive relay immutably routes one improve-project-system frame to reconcile the uniquely evidenced post-checkpoint lifecycle state. It does not execute P9-T02 or create scientific authority."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P9"
+  plan_task_id: "P9-T01"
+  recovery_for_plan_task_id: "P9-T01"
+  next_plan_task_id: "P9-T02"
+  next_plan_task_execution_authorized: false
+objective: "Reconcile the successful P9-T01 cumulative checkpoint at 14a82f7 with the stale tracked lifecycle surfaces by correcting the uniquely determined AgentJob registry status, recording the committed checkpoint in mutable program state, creating one superseding recovery handoff, and restoring an honest P9-T02 Director-decision boundary without executing P9-T02."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system post-checkpoint lifecycle reconciliation only; P9-T01 science and the benchmark-promotion burden remain unchanged."
+route_label: "repair_p9_t01_post_checkpoint_lifecycle_and_activate_p9_t02_v1"
+project_system_change_only: true
+dual_budget_category: "system_bearing"
+primary_budget: "project_system"
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+claim_boundary_id: "CB-V21-P9-T01-POST-CHECKPOINT-LIFECYCLE-RECONCILIATION-001"
+claim_boundary:
+  allowed_scope: "Correct only the evidence-unique P9-T01 post-checkpoint lifecycle state, preserve immutable P9-T01 task, AgentJob, completion, and handoff records, create task-local evidence and one superseding handoff, synchronize ordinary control derivatives, and invoke one cumulative checkpoint."
+  immutable_predecessor_task: "RT-20260730-001"
+  immutable_predecessor_job: "AJ-RT-20260730-001-001"
+  immutable_predecessor_handoff: "handoff-0909"
+  committed_checkpoint: "14a82f7be9762567359300c9082d3c5bc3d2ee3e"
+  immutable_route_sha256: "0c3e04e946add84e44b6655cbe4091da99481b2041e219a0cf3dbae5e74ebeda"
+  dirty_state_manifest_sha256: "ea088c25056175fe7bf698e26bb026475af8d974216738760b08e0b61d729331"
+  p9_t01_reexecuted: false
+  p9_t02_executed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+documentation_impact_id: "DI-RT-20260730-002-001"
+completion_id: "AJC-AJ-RT-20260730-002-001"
+output_artifacts:
+  - "research_control/tasks/RT-20260730-002/artifacts/validate_p9_t01_post_checkpoint_lifecycle_reconciliation.py"
+  - "research_control/tasks/RT-20260730-002/artifacts/p9_t01_post_checkpoint_lifecycle_reconciliation_receipt.json"
+  - "research_control/tasks/RT-20260730-002/artifacts/validation_blocker_precheckpoint_immutable_agentjob_registry_status_parity_v1.yaml"
+  - "research_control/tasks/RT-20260730-002/jobs/completions/AJC-AJ-RT-20260730-002-001.yaml"
+  - "research_control/handoffs/handoff-0910.yaml"
+  - "research_control/handoffs/handoff-0910.md"
+closure_status: "p9_t01_registry_correction_implemented_precheckpoint_blocked_immutable_agentjob_status_parity"
+summary: "Generation 169 verifies checkpoint 14a82f7, preserves every protected P9-T01 scientific record, and writes the uniquely intended registry and routing lifecycle correction. Precheckpoint research-control validation then fails because the protected predecessor AgentJob YAML remains active while its corrected registry row is completed. The required predecessor write is outside this AgentJob, no checkpoint ran, and P9-T02 remains unexecuted."
+next_recommended_action: "Run one fresh bounded improve-project-system recovery for repair_p9_t01_immutable_agentjob_registry_status_parity_v1. Explicitly authorize only the AJ-RT-20260729-012-001 lifecycle-status representation needed to match its completed registry row, preserve every other predecessor byte, then run one future governed checkpoint before P9-T02."
+project_improvement_signals: []
+notes: "This packet creates no ontology, source law, benchmark result, Distance-to-GR movement, promotion, proof, publication, push, or completed-derivation authority."

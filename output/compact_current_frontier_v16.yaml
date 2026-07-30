@@ -1,7 +1,7 @@
 schema_id: "compact_current_frontier_v16"
 generated_from:
   - "research_control/program_state.yaml"
-  - "research_control/handoffs/handoff-0909.yaml"
+  - "research_control/handoffs/handoff-0913.yaml"
   - "registries/DISTANCE_TO_GR_LEDGER.csv"
   - "registries/METRIC_USE_LEDGER.csv"
   - "research_control/current_frontier.md"
@@ -9,16 +9,16 @@ generated_from:
   - "research_control/design/accepted_status_calibration_v2.yaml"
   - "research_control/design/active_state_bifurcation_policy_v1.md"
 active_state:
-  active_task_id: "RT-20260730-001"
-  latest_handoff_id: "handoff-0909"
-  current_status: "p9_t01_handoff_identity_checkpoint_recovery_pass_ready_for_checkpoint"
+  active_task_id: "RT-20260730-005"
+  latest_handoff_id: "handoff-0913"
+  current_status: "p9_t01_task_taxonomy_candidate_family_slug_recovery_pass_ready_for_checkpoint"
   v15_completed: false
   v16_completed: false
   v16_plan_registered: true
 active_state_bifurcation:
-  latest_research_task_id: "RT-20260730-001"
-  latest_research_handoff_id: "handoff-0909"
-  latest_research_next_action: "Run the one governed cumulative checkpoint for AJ-RT-20260730-001-001. Only after it commits may one fresh bounded P9-T02 candidate-construction packet construct or derive a source state for the vacuum Minkowski benchmark under the frozen source-only protocol and return PASS, FAIL, or INCONCLUSIVE without target-informed source repair."
+  latest_research_task_id: "RT-20260730-005"
+  latest_research_handoff_id: "handoff-0913"
+  latest_research_next_action: "Invoke the one governed cumulative checkpoint for AJ-RT-20260730-005-001 only after every required precheckpoint gate passes. After that commit, one fresh bounded continue-research packet may execute P9-T02 under the source-only benchmark firewall."
   latest_project_system_task_id: "none"
   latest_project_system_status: "none"
   latest_project_system_sidecar_task_id: "none"
@@ -26,10 +26,10 @@ active_state_bifurcation:
   sidecar_supersedes_research_handoff: false
   next_research_route_source: "latest_research_handoff"
 next_route:
-  route_id: "v21_p9_t02_vacuum_minkowski_source_only_case_after_checkpoint"
+  route_id: "v21_p9_t02_vacuum_minkowski_source_only_case_after_taxonomy_recovery_checkpoint"
   role_family: "candidate-constructor@0.2.0"
   target_derivation_milestone: "benchmark_promotion"
-  milestone_burden: "Run the first source-derived benchmark without reusing adopted GR dynamics."
+  milestone_burden: "Test the simplest nontrivial source-derived background."
   requires_human_gate: false
 claim_boundary:
   physics_claim_authority: false
@@ -281,9 +281,9 @@ blocked_physical_targets:
       - "no_completed_derivation"
 distance_to_gr:
   delta:
-    effect: "none_project_system_recovery"
+    effect: "none_project_system_only"
     changed: false
-    milestone: "benchmark_promotion"
+    milestone: "none"
     burden_id: "benchmark_promotion"
   high_risk_rows:
     - burden_id: "m_src"
@@ -535,9 +535,25 @@ metric_use_ledger:
 validation:
   latest_required_status: "PASS"
   pending_layers:
+    - layer: "post_write"
+      status: "PENDING"
+      evidence:
+        - "Final repository-wide validation follows handoff and derivative synchronization."
     - layer: "post_checkpoint"
       status: "PENDING"
       evidence:
-        - "One governed cumulative checkpoint remains; P9-T02 is not executed before it."
+        - "One governed cumulative checkpoint remains uninvoked."
+    - layer: "renderer"
+      status: "PENDING"
+      evidence:
+        - "Final render-and-check pass follows this handoff."
+    - layer: "memory_bootstrap"
+      status: "PENDING"
+      evidence:
+        - "Final tracked memory synchronization and validate-only pass remain."
+    - layer: "claim_language_linter"
+      status: "PENDING"
+      evidence:
+        - "Changed-claim lint remains in the precheckpoint stack."
 authority_warning:
   snapshot_only_not_authority: true

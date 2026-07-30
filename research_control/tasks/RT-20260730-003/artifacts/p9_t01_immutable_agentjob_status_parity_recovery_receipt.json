@@ -1,0 +1,71 @@
+{
+  "check_count": 10,
+  "checks": [
+    {
+      "detail": "c1444fb0cd15f4248c1f3886daab4fdfbe7f6f80dc4a42ead25af3e32a24848a",
+      "name": "target_after_hash",
+      "status": "PASS"
+    },
+    {
+      "detail": "the first top-level lifecycle status is completed",
+      "name": "top_level_status_completed",
+      "status": "PASS"
+    },
+    {
+      "detail": "0de2bcf0b70cffde72dd4a823ee0b56a18d92b0c1ee33504769c3bb821191bd0",
+      "name": "sealed_preimage_reconstructed",
+      "status": "PASS"
+    },
+    {
+      "detail": "before=27185 after=27188 delta=3",
+      "name": "exact_token_length_delta",
+      "status": "PASS"
+    },
+    {
+      "detail": "all exact",
+      "name": "protected_hashes",
+      "status": "PASS"
+    },
+    {
+      "detail": "completed",
+      "name": "registry_status_completed",
+      "status": "PASS"
+    },
+    {
+      "detail": "PASS",
+      "name": "registry_validation_pass",
+      "status": "PASS"
+    },
+    {
+      "detail": "RT-20260730-003 and handoff-0911 are active",
+      "name": "program_state_routes_recovery",
+      "status": "PASS"
+    },
+    {
+      "detail": "no P9-T02 or benchmark execution token is present",
+      "name": "p9_t02_unexecuted",
+      "status": "PASS"
+    },
+    {
+      "detail": "P9-T02 remains unexecuted behind the distinct plan-identity recovery",
+      "name": "handoff_preserves_blocked_zero_execution",
+      "status": "PASS"
+    }
+  ],
+  "distance_to_gr_delta_changed": false,
+  "error_count": 0,
+  "job_id": "AJ-RT-20260730-003-001",
+  "p9_t01_reexecuted": false,
+  "p9_t02_executed": false,
+  "protected_hash_count": 11,
+  "protected_hash_mismatch_count": 0,
+  "reconstructed_preimage_sha256": "0de2bcf0b70cffde72dd4a823ee0b56a18d92b0c1ee33504769c3bb821191bd0",
+  "schema_id": "p9_t01_immutable_agentjob_status_parity_recovery_receipt_v1",
+  "scientific_claims_changed": false,
+  "status": "PASS",
+  "strategy_id": "repair_p9_t01_immutable_agentjob_registry_status_parity_v1",
+  "target_path": "research_control/tasks/RT-20260729-012/jobs/AJ-RT-20260729-012-001.yaml",
+  "target_sha256_after": "c1444fb0cd15f4248c1f3886daab4fdfbe7f6f80dc4a42ead25af3e32a24848a",
+  "target_sha256_before": "0de2bcf0b70cffde72dd4a823ee0b56a18d92b0c1ee33504769c3bb821191bd0",
+  "task_id": "RT-20260730-003"
+}

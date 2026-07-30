@@ -1,0 +1,282 @@
+handoff_id: "handoff-0911"
+handoff_number: 911
+task_id: "RT-20260730-003"
+decision_id: "DDR-20260730-003"
+job_id: "AJ-RT-20260730-003-001"
+completion_id: "AJC-AJ-RT-20260730-003-001"
+completion_path: "research_control/tasks/RT-20260730-003/jobs/completions/AJC-AJ-RT-20260730-003-001.yaml"
+status: "blocked_validation"
+created_at: "2026-07-30T08:12:09Z"
+parent_handoff_id: "handoff-0910"
+plan_task_id: "P9-T02"
+recovery_for_plan_task_id: "P9-T01"
+source_role_id: "process-integrity-auditor"
+source_role_version: "0.1.0"
+source_execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260730-003"
+summary: "Generation 170 changes only the first top-level AJ-RT-20260729-012-001 status token from active to completed and proves exact sealed-preimage reconstruction. Integrated validation then finds that the two uncheckpointed P9-T01 recovery task records falsely contribute P9-T02 completion identity to the ordinary-route guard. Correcting those additional records is outside this AgentJob. No checkpoint ran and P9-T02 remains unexecuted."
+next_action: "Run one fresh bounded improve-project-system recovery for repair_p9_recovery_task_plan_identity_and_ordinary_guard_parity_v1. Reconcile only the implementation plan identities of RT-20260730-002 and RT-20260730-003 so recovery bookkeeping no longer counts P9-T02 as completed, preserve the successful one-token status repair and all P9-T01 science, then run one future governed checkpoint before P9-T02."
+current_claim_boundary: "CB-V21-P9-T01-IMMUTABLE-AGENTJOB-STATUS-PARITY-RECOVERY-001"
+loop_risk_route: "candidate-construction-packet"
+
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260730-003"
+  latest_research_handoff_id: "handoff-0911"
+  latest_research_next_action: "Run one fresh bounded improve-project-system recovery for repair_p9_recovery_task_plan_identity_and_ordinary_guard_parity_v1. Reconcile only the implementation plan identities of RT-20260730-002 and RT-20260730-003 so recovery bookkeeping no longer counts P9-T02 as completed, preserve the successful one-token status repair and all P9-T01 science, then run one future governed checkpoint before P9-T02."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+
+claim_boundary:
+  allowed_next_scope: "One fresh bounded project-system recovery may reconcile only the implementation plan identities of the two uncheckpointed P9-T01 recovery tasks, preserve the successful one-token status repair and every protected P9-T01 scientific byte, prove full validation passes, and invoke one future cumulative checkpoint. P9-T02 remains unexecuted."
+  completed_task: "RT-20260730-003"
+  completed_completion_path: "research_control/tasks/RT-20260730-003/jobs/completions/AJC-AJ-RT-20260730-003-001.yaml"
+  source_handoff_id: "handoff-0910"
+  source_handoff_path: "research_control/handoffs/handoff-0910.yaml"
+  source_handoff_sha256: "1fc821cbc05287f99f3e75b46963eeee4eed4f382770cf2806e6c5a617c98e56"
+  immutable_route_sha256: "efe704de4598750ad0672909725cfd71f731305094b6f7c02d0489ce84397c39"
+  route_blocker_fingerprint: "9bd1c36daa629bf58294972c4e20e89f2261d318a576a104f7324979cc6115ce"
+  dirty_state_manifest_sha256: "a1d59865e071c55c4ca3995912dfac9a7efebc77497e95afa149301d4817550a"
+  failed_gate_evidence_sha256: "55fbf1b6225267f41b31d675e329ac9a01d86d28d9bb721cdc663485a4321db7"
+  result_status: "PASS_TARGET_STATUS_PARITY_REPAIR_PRECHECKPOINT_BLOCKED_RECOVERY_TASK_PLAN_IDENTITY_GUARD_CONFLICT"
+  target_job_path: "research_control/tasks/RT-20260729-012/jobs/AJ-RT-20260729-012-001.yaml"
+  target_job_sha256_before: "0de2bcf0b70cffde72dd4a823ee0b56a18d92b0c1ee33504769c3bb821191bd0"
+  target_job_sha256_after: "c1444fb0cd15f4248c1f3886daab4fdfbe7f6f80dc4a42ead25af3e32a24848a"
+  reconstructed_preimage_sha256: "0de2bcf0b70cffde72dd4a823ee0b56a18d92b0c1ee33504769c3bb821191bd0"
+  checkpoint_invocation_count_before_handoff: 0
+  checkpoint_committed_before_handoff: false
+  p9_t01_protocol_preserved: true
+  p9_t01_science_payload_modified_by_recovery: false
+  p9_t01_reexecuted: false
+  p9_t02_executed: false
+  benchmark_case_executed: false
+  Gate_D_changed: false
+  Gate_E_verdict_issued: false
+  scientific_status_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  ontology_adoption_authorized: false
+  source_law_adoption_authorized: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_performed: false
+  blocked_claims:
+    - "project-system lifecycle-status parity presented as scientific progress"
+    - "P9-T01 presented as reexecuted or scientifically modified"
+    - "a benchmark case presented as executed or passed"
+    - "Gate D or Gate E presented as changed"
+    - "P9-T02 presented as executed before checkpoint"
+    - "effective geometry Einstein equations exact-GR recovery benchmark promotion proof publication push or completed derivation"
+
+plan_result:
+  plan_task_id: "P9-T02"
+  recovery_for_plan_task_id: "P9-T01"
+  next_plan_task_id: "P9-T02"
+  title: "Repair the immutable P9-T01 AgentJob status parity"
+  result_status: "P9_T01_IMMUTABLE_AGENTJOB_STATUS_PARITY_RECOVERY_PASS"
+  work_item_status: "completed"
+  protected_p9_t01_protocol_complete: true
+  protected_p9_t01_protocol_byte_preserved: true
+  exact_status_parity_repair_complete: true
+  p9_t02_dependency_ready_after_checkpoint: true
+  p9_t02_dependency_ready_now: false
+  p9_t02_executed: false
+  scientific_claims_changed_by_recovery: false
+  distance_to_gr_delta_changed_by_recovery: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+distance_to_gr:
+  changed: false
+  effect: "none_project_system_recovery"
+  burden_id: "benchmark_promotion"
+  milestone: "benchmark_promotion"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "The inherited P9-T01 protocol and zero-execution benchmark status remain exact; lifecycle-status parity contributes no physics movement."
+  downstream_unlocked:
+    - "P9-T02 only after the governed cumulative checkpoint"
+  downstream_still_blocked:
+    - "P9-T02 until the governed cumulative checkpoint commits"
+    - "any benchmark result"
+    - "Gate E verdict"
+    - "exact-GR recovery"
+    - "benchmark promotion"
+
+required_next_packet:
+  task_type: "v21_p9_t02_vacuum_minkowski_source_only_case"
+  plan_task_id: "P9-T02"
+  objective: "Construct or derive a source state whose effective geometry, matter vacuum, and perturbative behavior recover the vacuum Minkowski benchmark within declared scope under the frozen source-only protocol."
+  output_requirement: "A sealed source-only case record returning PASS, FAIL, or INCONCLUSIVE without target-informed source selection, tuning, or repair."
+  dependency_qualification: "P9-T01 supplies only a protocol and firewall; no benchmark result or physical recovery is pre-established."
+  dependency_ready_after_checkpoint: true
+  dependency_ready_now: false
+  exact_human_authorization_required: false
+  executed: false
+
+selected_next_route:
+  route_id: "v21_p9_t02_vacuum_minkowski_source_only_case_after_plan_identity_recovery_checkpoint"
+  route_label: "benchmark-recovery-packet"
+  role_family: "candidate-constructor@0.2.0"
+  worker_skill: "continue-research"
+  selected_next_packet_type: "source_only_benchmark_case_construction"
+  task_type: "v21_p9_t02_vacuum_minkowski_source_only_case"
+  plan_task_id: "P9-T02"
+  target_derivation_milestone: "benchmark_promotion"
+  milestone_burden: "Test the simplest nontrivial source-derived background."
+  strategy_id: "construct_p9_t02_vacuum_minkowski_source_only_case_v1"
+  requires_human_gate: false
+  dependency_ready_after_recovery_checkpoint: true
+  execution_ready_now: false
+  target_atlas_assumed: false
+  target_metric_assumed: false
+  target_informed_source_repair_authorized: false
+  benchmark_result_preestablished: false
+  Gate_E_verdict_preestablished: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  executed: false
+  next_action: "Do not execute before the distinct project-system plan-identity recovery checkpoint commits. After that checkpoint, construct one source-only vacuum Minkowski case under the frozen protocol."
+  source_handoff: "research_control/handoffs/handoff-0911.yaml"
+
+ordinary_route_guard:
+  schema_id: "ordinary_route_guard_evaluation_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  evaluation_id: "ORE-HANDOFF-0911"
+  ordinary_handoff_id: "handoff-0911"
+  threshold: 3
+  consecutive_project_system_tasks_before_selection: 2
+  ready_science_plan_task_ids:
+    - "P9-T02"
+    - "P14-T04"
+  selected_plan_task_id: "P9-T02"
+  selected_route_class: "physics_bearing"
+  selected_worker_skill: "continue-research"
+  outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  exception_receipt:
+    active: false
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+active_state_boundary:
+  active_task_id: "RT-20260730-003"
+  active_job_id: "AJ-RT-20260730-003-001"
+  current_status: "p9_t01_status_parity_repaired_precheckpoint_blocked_recovery_task_plan_identity_guard_conflict"
+  checkpoint_required: false
+  checkpoint_completed: false
+  checkpoint_invocation_count: 0
+  project_system_recovery_completed: false
+  reconciled_checkpoint_commit: "14a82f7be9762567359300c9082d3c5bc3d2ee3e"
+  p9_t01_protocol_complete: true
+  p9_t01_protocol_byte_preserved: true
+  selected_next_plan_task_id: "P9-T02"
+  selected_next_worker_skill: "continue-research"
+  selected_next_role_family: "candidate-constructor@0.2.0"
+  selected_next_route_label: "benchmark-recovery-packet"
+  selected_next_strategy_id: "construct_p9_t02_vacuum_minkowski_source_only_case_v1"
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 170 validated, atomically claimed, and consumed its exact immutable recovery route once."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The tracked receipt proves the exact status-token correction, sealed preimage reconstruction, and protected P9-T01 hash preservation."
+  post_write:
+    status: "FAIL"
+    evidence:
+      - "The exact target status repair and task-local preservation checks pass."
+      - "Integrated research-control validation rejects the required P9-T02 handoff because uncheckpointed recovery task plan identities falsely mark P9-T02 completed."
+  post_checkpoint:
+    status: "NOT_RUN"
+    evidence:
+      - "No checkpoint was invoked after the precheckpoint gate failed; P9-T02 remains unexecuted."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Tracked frontier, task-index, graph, registry, and wiki derivatives are fresh."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory synchronization and validate-only pass; local retrieval warnings are cache-only."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation has no hard failure."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not authorized; project-system lifecycle-status parity recovery only"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  publication_authorized: false
+  proof_authority: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  canonical_ontology_edit_authorized: false
+  ontology_selection_authorized: false
+  physical_interpretation_establishment_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required_no_nonblank_signals"
+  rationale: "The bounded status-parity recovery emits no new project-improvement signal."
+
+handoff_authority_boundary:
+  this_handoff_authorizes:
+    - "one fresh bounded project-system recovery for repair_p9_recovery_task_plan_identity_and_ordinary_guard_parity_v1"
+  this_handoff_does_not_authorize:
+    - "any predecessor byte change outside the exact lifecycle status token"
+    - "P9-T01 reexecution or scientific-payload mutation"
+    - "P9-T02 execution before checkpoint"
+    - "target-informed source selection tuning or repair"
+    - "benchmark result Gate D or Gate E change"
+    - "ontology source-law effective geometry Einstein-equation exact-GR promotion proof publication push or completed derivation"
+
+required_recovery:
+  task_type: "project_system_p9_recovery_task_plan_identity_and_ordinary_guard_parity"
+  plan_task_id: "P9-T02"
+  recovery_for_plan_task_id: "P9-T01"
+  strategy_id: "repair_p9_recovery_task_plan_identity_and_ordinary_guard_parity_v1"
+  worker_skill: "improve-project-system"
+  role_family: "process-integrity-auditor@0.1.0"
+  objective: "Reconcile only the implementation plan identities of RT-20260730-002 and RT-20260730-003 so P9-T01 recovery bookkeeping no longer counts P9-T02 as completed, preserve the successful one-token status repair and all P9-T01 science, restore a valid P9-T02 ordinary route, and invoke one future governed checkpoint only after full validation passes."
+  blocker_path: "research_control/tasks/RT-20260730-003/artifacts/validation_blocker_precheckpoint_recovery_task_plan_identity_guard_parity_v1.yaml"
+  checkpoint_invocation_count: 0
+  p9_t02_executed: false
+
+next_plan_task_id: "P9-T02"
+next_worker_skill: "improve-project-system"
+next_role_family: "process-integrity-auditor@0.1.0"
+next_route_label: "project-system-recovery"
+next_strategy_id: "repair_p9_recovery_task_plan_identity_and_ordinary_guard_parity_v1"
+notes: "Generation 170 repairs the exact status-parity target but stops before checkpoint on a distinct recovery-task plan-identity guard conflict. P9-T02 remains unexecuted."

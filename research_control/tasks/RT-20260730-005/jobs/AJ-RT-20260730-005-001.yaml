@@ -1,0 +1,442 @@
+job_id: "AJ-RT-20260730-005-001"
+task_id: "RT-20260730-005"
+decision_id: "DDR-20260730-005"
+role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260730-005"
+status: "completed"
+validation_status: "PASS"
+created_at: "2026-07-30T12:03:21Z"
+started_at: "2026-07-30T12:03:21Z"
+completed_at: "2026-07-30T12:32:16Z"
+completion_path: "research_control/tasks/RT-20260730-005/jobs/completions/AJC-AJ-RT-20260730-005-001.yaml"
+requires_human_gate: false
+human_authorization_note: "Generation 172 is one user-authorized recursive project-system recovery frame. It authorizes exactly one historical candidate-family slug correction and at most one cumulative checkpoint, not P9-T01 replay, P9-T02 execution, or protected scientific authority."
+objective: "Under the sealed generation-172 recovery route, normalize only RT-20260729-012 task_taxonomy.candidate_family, prove exact preimage reconstruction and protected generation-171 preservation, rerun the complete validation stack, and invoke at most one governed cumulative checkpoint before P9-T02."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system task-taxonomy slug recovery and checkpoint eligibility only; the benchmark-promotion burden does not advance."
+route_label: "repair_p9_t01_benchmark_protocol_task_taxonomy_candidate_family_slug_v1"
+route_reason: "The generation-171 repository test shard proved one historical P9-T01 task candidate-family value violates the executable lowercase-slug contract."
+immutable_route_sha256: "4a8a987a9e3a15605f13baf8942ba228c437ea159ac620ee48964b0523022486"
+plan_task_id: "P9-T02"
+recovery_for_plan_task_id: "P9-T01"
+task_implementation_plan_task_id: "P9-T01"
+next_plan_task_id: "P9-T02"
+next_plan_task_execution_authorized: false
+project_system_change_only: true
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 172
+  passes_consumed: 156
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:172"
+  handoff_token: "b1052c7b1aa1cd28f2596428857fda8779ed2e70266b6785"
+  relay_claim_token: "bf833f2be26f2fe4126a6e3c373d1c04fa70561a44368df3"
+  route_work_item_id: "P9-T02"
+  route_worker_skill: "improve-project-system"
+  route_sha256: "4a8a987a9e3a15605f13baf8942ba228c437ea159ac620ee48964b0523022486"
+  route_reason: "precheckpoint_p9_t01_task_taxonomy_candidate_family_slug_recovery_required"
+  route_strategy_id: "repair_p9_t01_benchmark_protocol_task_taxonomy_candidate_family_slug_v1"
+  route_blocker_fingerprint: "87dc56aabde5f3f6dcf0a83f47e75707c55136b165cc3e5b82fdb48fd13640c6"
+  route_before_fingerprint: "87dc56aabde5f3f6dcf0a83f47e75707c55136b165cc3e5b82fdb48fd13640c6"
+  route_recovery_ledger_sequence: 66
+  route_dirty_state_manifest_sha256: "480933dd2afefa5ec491c8bc47327dbb9d23536102444fe0bacc61987a46f2ba"
+  route_evidence_sha256es:
+    - "4f85641999afa719e6f81156fff3f5e6a089ece5d9c92849f51d849b9ac959d0"
+    - "4fd172c52b27469da5b34bf4ccf78860afbe6a221697529b8df2753ee1db0e92"
+    - "590535e876fa70e84e8de5f48e2fa9a22fe32afed7a6cec27698b5c284f9c1ce"
+    - "7460702270a26079f39f64ced2b5934e6a67a721983d913e4d3d114917ecca0b"
+    - "87dc56aabde5f3f6dcf0a83f47e75707c55136b165cc3e5b82fdb48fd13640c6"
+    - "e03bb7974f17003b2786e2e68d3057a6239872c75c8684b63ec2b8deb853bae0"
+    - "e333455c901cd2e972a7b027c8adfcbb21e56865478836e1de08e0fe0b635eb0"
+    - "fb1fdcdf8a936b282cb00025868cfc9887709d03f372be9c547f465251832804"
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  candidate_family: "not_applicable"
+  assumption_delta:
+    - "No scientific assumption changes; the packet normalizes one historical project-control taxonomy scalar."
+    - "The P9-T01 protocol, firewall theorem, six NOT_RUN cases, Gate D NOT_READY, Gate E NOT_READY_NO_BENCHMARK_CASE_EXECUTED, and every promotion block remain unchanged."
+  materiality_basis: "Removes the sole repository taxonomy error so the inherited P9-T01 transaction can reach a governed checkpoint."
+  source_basis:
+    - "research_control/handoffs/handoff-0912.yaml"
+    - "research_control/tasks/RT-20260730-004/artifacts/validation_blocker_precheckpoint_p9_t01_task_taxonomy_candidate_family_slug_v1.yaml"
+    - "research_control/tasks/RT-20260729-012/00_TASK.yaml"
+    - "research_control/design/v21_task_taxonomy_policy.md"
+  expected_artifact_paths:
+    - "research_control/tasks/RT-20260729-012/00_TASK.yaml"
+    - "research_control/tasks/RT-20260730-005/artifacts/p9_t01_task_taxonomy_candidate_family_slug_recovery_receipt.json"
+  project_system_justification: "This is exact task-taxonomy bookkeeping and checkpoint recovery; it creates no physics payload or P9-T02 execution."
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  expected_durable_outputs:
+    physics: []
+    project_system:
+      - "one exact historical task-taxonomy slug correction"
+      - "one byte-preservation and taxonomy receipt"
+      - "one superseding recovery handoff"
+      - "one governed cumulative checkpoint"
+  acceptance_criteria:
+    physics: []
+    project_system:
+      - "the repaired target hash equals its deterministic after hash"
+      - "reversing the scalar correction reproduces its sealed predecessor hash"
+      - "all protected generation-171 and P9-T01 hashes remain exact"
+      - "repository taxonomy reports zero errors"
+      - "P9-T01 validation retains 84 checks and zero executed cases"
+      - "all required working-tree gates pass"
+      - "one governed cumulative checkpoint commits"
+      - "P9-T02 remains unexecuted until checkpoint success"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: false
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0909"
+  source_handoff_path: "research_control/handoffs/handoff-0909.yaml"
+  source_handoff_sha256: "9168059352723b2d6d36b920e48d054c506563cac134aabf9050510ffe0b4a35"
+  selected_plan_task_id: "P9-T02"
+  guard_outcome: "below_threshold"
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+allowed_read_paths:
+  - "SOUL.md"
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research-goal/SKILL.md"
+  - ".codex/skills/continue-research-goal/references/goal-file-schema.md"
+  - ".codex/skills/continue-research-continue-goal/SKILL.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".codex/skills/improve-project-system/SKILL.md"
+  - ".agents/roles/research_ops/project-system-director.v0.2.0.md"
+  - ".agents/roles/research_ops/process-integrity-auditor.v0.1.0.md"
+  - ".agents/schemas/**"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  - "research_control/design/**"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0908.yaml"
+  - "research_control/handoffs/handoff-0909.yaml"
+  - "research_control/handoffs/handoff-0910.yaml"
+  - "research_control/handoffs/handoff-0911.yaml"
+  - "research_control/handoffs/handoff-0912.yaml"
+  - "research_control/tasks/RT-20260729-012/**"
+  - "research_control/tasks/RT-20260730-002/**"
+  - "research_control/tasks/RT-20260730-003/**"
+  - "research_control/tasks/RT-20260730-004/**"
+  - "scripts/project_control/**"
+  - "scripts/research_control/**"
+  - "scripts/validation/**"
+  - "tests/**"
+  - "registries/**"
+  - ".local/validation-receipts/**"
+
+allowed_write_paths:
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/PDF_DERIVATIVE_REGISTRY.csv"
+  - "registries/PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "registries/TEX_SOURCE_REGISTRY.csv"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0910.yaml"
+  - "research_control/handoffs/handoff-0910.md"
+  - "research_control/handoffs/handoff-0911.yaml"
+  - "research_control/handoffs/handoff-0911.md"
+  - "research_control/handoffs/handoff-0912.yaml"
+  - "research_control/handoffs/handoff-0912.md"
+  - "research_control/handoffs/handoff-0913.yaml"
+  - "research_control/handoffs/handoff-0913.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260729-012/00_TASK.yaml"
+  - "research_control/tasks/RT-20260729-012/jobs/AJ-RT-20260729-012-001.yaml"
+  - "research_control/tasks/RT-20260730-002/**"
+  - "research_control/tasks/RT-20260730-003/**"
+  - "research_control/tasks/RT-20260730-004/**"
+  - "research_control/tasks/RT-20260730-005/**"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/pdf/**"
+  - "wiki/tex/**"
+
+allowed_generated_paths:
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/RT-20260730-005/artifacts/p9_t01_task_taxonomy_candidate_family_slug_recovery_receipt.json"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/pdf/**"
+  - "wiki/tex/**"
+
+forbidden_paths:
+  - ".agents/roles/**"
+  - ".codex/skills/**"
+  - "scripts/research_control/**"
+  - "scripts/project_control/**"
+  - "scripts/validation/**"
+  - "tests/**"
+  - "implementations_plans/**"
+  - "ontology/**"
+  - "legacy_ontology/**"
+  - "manuscripts/**"
+  - "markdown/publication-briefs/**"
+  - "markdown/html-explainer-specs/**"
+  - "research_control/tasks/RT-20260729-012/DDR-20260729-012.md"
+  - "research_control/tasks/RT-20260729-012/artifacts/**"
+  - "research_control/tasks/RT-20260729-012/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260729-012/jobs/completions/**"
+  - "research_control/tasks/RT-20260729-012/roles/**"
+  - "research_control/tasks/RT-20260730-001/**"
+  - "research_control/tasks/RT-20260730-002/DDR-20260730-002.md"
+  - "research_control/tasks/RT-20260730-002/artifacts/**"
+  - "research_control/tasks/RT-20260730-002/jobs/**"
+  - "research_control/tasks/RT-20260730-002/roles/**"
+  - "research_control/tasks/RT-20260730-003/DDR-20260730-003.md"
+  - "research_control/tasks/RT-20260730-003/artifacts/**"
+  - "research_control/tasks/RT-20260730-003/jobs/**"
+  - "research_control/tasks/RT-20260730-003/roles/**"
+  - "research_control/handoffs/handoff-0908.yaml"
+  - "research_control/handoffs/handoff-0908.md"
+  - "research_control/handoffs/handoff-0909.yaml"
+  - "research_control/handoffs/handoff-0909.md"
+
+allowed_source_classes:
+  - "evidence_unique_task_taxonomy_slug_repair"
+  - "control_state"
+  - "registry"
+  - "execution_role_contract"
+  - "task_control_record"
+  - "active_routing_supersession"
+  - "generated_memory_derivative"
+  - "prior_authorized_transaction_checkpoint"
+  - "scientific_payload_preservation_evidence"
+
+forbidden_source_classes:
+  - "target_task_change_outside_exact_candidate_family_scalar"
+  - "taxonomy_validator_test_schema_skill_or_base_role_semantics_change"
+  - "write_path_broadening"
+  - "P9_T01_reexecution"
+  - "P9_T02_execution_before_checkpoint"
+  - "canonical_ontology_write"
+  - "science_source_or_scientific_ledger_mutation"
+  - "physics_claim_or_interpretation_promotion"
+  - "source_law_adoption"
+  - "candidate_reconstruction"
+  - "gate_chair_verdict"
+  - "benchmark_result_or_promotion"
+  - "proof_authority"
+  - "publication_or_push_authority"
+  - "completed_derivation_claim"
+  - "generated_derivative_authority"
+
+approved_commands:
+  - ".venv/bin/python research_control/tasks/RT-20260730-005/artifacts/validate_p9_t01_task_taxonomy_candidate_family_slug_recovery.py --write-report --json"
+  - ".venv/bin/python research_control/tasks/RT-20260730-005/artifacts/validate_p9_t01_task_taxonomy_candidate_family_slug_recovery.py --check --json"
+  - ".venv/bin/python research_control/tasks/RT-20260730-004/artifacts/validate_p9_recovery_task_plan_identity_guard_parity.py --check --json"
+  - ".venv/bin/python research_control/tasks/RT-20260730-003/artifacts/validate_p9_t01_immutable_agentjob_status_parity_recovery.py --check --json"
+  - ".venv/bin/python research_control/tasks/RT-20260729-012/artifacts/validate_source_derived_benchmark_protocol.py --check --json"
+  - ".venv/bin/python scripts/research_control/task_taxonomy.py --validate-repository --json"
+  - ".venv/bin/python -m unittest -v tests.test_task_taxonomy tests.test_ordinary_route_guard"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+  - ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+  - ".venv/bin/python scripts/research_control/continue_research.py --json"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --check"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --check"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --write"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --check"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --check"
+  - ".venv/bin/python scripts/research_control/generate_claim_graph_v1.py"
+  - ".venv/bin/python scripts/research_control/generate_claim_graph_v1.py --check"
+  - ".venv/bin/python scripts/research_control/validate_claim_graph_v1.py --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --job-id AJ-RT-20260730-005-001 --json-summary"
+  - ".venv/bin/python scripts/research_control/run_full_research_control_validation.py --json --tail-chars 2500"
+  - ".venv/bin/python -m unittest -v tests.test_research_control tests.test_task_taxonomy tests.test_ordinary_route_guard"
+  - ".venv/bin/python -m unittest discover -s tests"
+  - "git diff --check"
+  - "git diff --cached --check"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260730-005-001"
+
+required_validators:
+  - "task_local_p9_t01_task_taxonomy_candidate_family_slug_recovery"
+  - "predecessor_recovery_non_regression"
+  - "prior_status_repair_non_regression"
+  - "p9_t01_task_local_validator"
+  - "task_taxonomy_repository"
+  - "task_taxonomy_and_ordinary_route_guard_regression"
+  - "continuation_boundary"
+  - "project_change_classifier"
+  - "project_improvement_resolver"
+  - "project_improvement_signals"
+  - "documentation_impact"
+  - "claim_language_changed"
+  - "current_frontier_render_and_check"
+  - "task_index_render_and_check"
+  - "compact_current_frontier_render_and_check"
+  - "dependency_graph_render_and_check"
+  - "claim_graph_render_and_check"
+  - "memory_bootstrap_and_validate_only"
+  - "research_control_diff"
+  - "full_research_control_validation"
+  - "focused_research_control_tests"
+  - "repository_test_shard"
+  - "git_diff_check"
+  - "checkpoint_transaction"
+
+expected_outputs:
+  - "research_control/tasks/RT-20260729-012/00_TASK.yaml"
+  - "research_control/tasks/RT-20260730-005/artifacts/validate_p9_t01_task_taxonomy_candidate_family_slug_recovery.py"
+  - "research_control/tasks/RT-20260730-005/artifacts/p9_t01_task_taxonomy_candidate_family_slug_recovery_receipt.json"
+  - "research_control/tasks/RT-20260730-005/jobs/completions/AJC-AJ-RT-20260730-005-001.yaml"
+  - "research_control/handoffs/handoff-0913.yaml"
+  - "research_control/handoffs/handoff-0913.md"
+
+stop_conditions:
+  - "the target change differs from the exact candidate-family scalar normalization"
+  - "reversing the correction does not reproduce the sealed predecessor hash"
+  - "any other target byte or protected generation-171 hash changes"
+  - "the taxonomy validator reports any remaining error"
+  - "a protected P9-T01 case is executed or scientific hash changes"
+  - "a required write path is outside the AgentJob allowlist"
+  - "validation or the single governed checkpoint fails"
+  - "the repair would edit scientific semantics ontology ledgers tests validators or protected authority"
+  - "more than one AgentJob or checkpoint would be required"
+
+claim_boundary: "Normalize only the checkpoint-named historical candidate-family scalar, preserve every other target byte and all generation-171 and P9-T01 evidence, create ordinary recovery records and derivatives, and invoke at most one checkpoint; no P9 replay, P9-T02 execution, science, promotion, proof, publication, or Gate Chair authority."
+documentation_impact_id: "DI-RT-20260730-005-001"
+completion_id: "AJC-AJ-RT-20260730-005-001"
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1089
+    relationship_row_count: 5515
+    semantic_row_count: 1089
+    vault_row_count: 1089
+    local_cache_only_warning_count: 7
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search p9 t01 benchmark protocol task taxonomy candidate family slug --limit 10 --json"
+      query_type: "search"
+      query_text: "p9 t01 benchmark protocol task taxonomy candidate family slug"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  authority_note: "Generated Obsidian wiki semantic relationship SQLite and .local surfaces are retrieval-only navigation layers and not authority; tracked canonical sources registries research-control state Git and validators govern this recovery."
+
+blocked_predecessor:
+  task_id: "RT-20260730-004"
+  job_id: "AJ-RT-20260730-004-001"
+  handoff_id: "handoff-0912"
+  blocker_path: "research_control/tasks/RT-20260730-004/artifacts/validation_blocker_precheckpoint_p9_t01_task_taxonomy_candidate_family_slug_v1.yaml"
+  blocker_sha256: "4fd172c52b27469da5b34bf4ccf78860afbe6a221697529b8df2753ee1db0e92"
+  failed_gate: "repository_test_shard"
+  failure_status: "FAIL_P9_T01_TASK_TAXONOMY_CANDIDATE_FAMILY_SLUG"
+  source_head: "14a82f7be9762567359300c9082d3c5bc3d2ee3e"
+  source_completion_sha256: "590535e876fa70e84e8de5f48e2fa9a22fe32afed7a6cec27698b5c284f9c1ce"
+  target_task_path: "research_control/tasks/RT-20260729-012/00_TASK.yaml"
+  target_field_path: "task_taxonomy.candidate_family"
+  target_value_before: "SourceDerivedBenchmarkProtocol_v1"
+  target_value_after: "source_derived_benchmark_protocol_v1"
+  target_task_sha256_before: "4f85641999afa719e6f81156fff3f5e6a089ece5d9c92849f51d849b9ac959d0"
+  target_task_sha256_after: "249885ae2e010f43868bdf3d44b0336ac3058ed568c4120cd1781658905eeec9"
+  immutable_protocol_sha256: "88ef097bf712ad115e9af62cc18a8b3eabb12f8545350f714ad065f702471007"
+  checkpoint_invocation_count: 0
+
+notes: "The exact one-field taxonomy repair passes its scoped checks and is ready for one governed cumulative checkpoint. P9-T01 was not replayed and P9-T02 remains unexecuted."

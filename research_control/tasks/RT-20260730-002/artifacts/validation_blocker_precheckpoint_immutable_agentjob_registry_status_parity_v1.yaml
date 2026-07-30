@@ -1,0 +1,106 @@
+schema_id: "precheckpoint_immutable_agentjob_registry_status_parity_blocker_v1"
+task_id: "RT-20260730-002"
+job_id: "AJ-RT-20260730-002-001"
+plan_task_id: "P9-T02"
+recovery_for_plan_task_id: "P9-T01"
+observed_at: "2026-07-30T06:39:07Z"
+checkpoint_command: ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260730-002-001"
+checkpoint_status: "NOT_INVOKED_PRECHECKPOINT_GATE_FAILED"
+checkpoint_committed: false
+checkpoint_staged: false
+checkpoint_invocation_count: 0
+legacy_validation_used: false
+failed_gate: "research_control_diff"
+failed_stage: "precheckpoint_working_tree_validation"
+failure_summary: "The bounded lifecycle packet verifies checkpoint 14a82f7, preserves the protected P9-T01 records, and corrects the stale AJ-RT-20260729-012-001 registry row to completed. The canonical validator then rejects that correction because the protected predecessor AgentJob YAML still records status active. This AgentJob forbids edits to the predecessor task and to shared validators, schemas, and tests, so the remaining parity repair is outside the sealed generation-169 write authority. P9-T02 remains unexecuted and no checkpoint was invoked."
+
+root_finding:
+  finding_class: "immutable_agentjob_registry_status_parity_conflict"
+  predecessor_job_id: "AJ-RT-20260729-012-001"
+  predecessor_job_path: "research_control/tasks/RT-20260729-012/jobs/AJ-RT-20260729-012-001.yaml"
+  predecessor_job_sha256: "0de2bcf0b70cffde72dd4a823ee0b56a18d92b0c1ee33504769c3bb821191bd0"
+  predecessor_job_status: "active"
+  predecessor_completion_path: "research_control/tasks/RT-20260729-012/jobs/completions/AJC-AJ-RT-20260729-012-001.yaml"
+  predecessor_completion_sha256: "645d5934a58ded9cafbbbd3af59ad9d3aa91efd5ec9bfe51ab231fd7488c07c4"
+  predecessor_completion_status: "completed"
+  corrected_registry_status: "completed"
+  validator_path: "scripts/research_control/validate_research_control.py"
+  validator_sha256: "06a54df553eb2afcd3e8118c97934c71721ae1356c0343bc31322fe2c407ae21"
+  validator_contract: "AgentJob YAML status must equal AGENT_JOB_REGISTRY.csv status."
+  finding_id: "RESEARCH-CONTROL-DIFF-ERROR-81F5DAB8DE8F"
+  finding: "research_control/tasks/RT-20260729-012/jobs/AJ-RT-20260729-012-001.yaml: status does not match AGENT_JOB_REGISTRY.csv"
+
+initial_precheckpoint_validation:
+  command: ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --job-id AJ-RT-20260730-002-001 --json-summary"
+  run_id: "RESEARCH-CONTROL-DIFF-130AF511FC7F397C"
+  status: "FAIL"
+  error_count: 2
+  warning_count: 1809
+  receipt_path: ".local/validation-receipts/working-sha256-130af511fc7f397ce8d3b65958ce62b67a16870123515f6fcb380d5af4062e65/RESEARCH-CONTROL-DIFF-130AF511FC7F397C/full.json"
+  receipt_sha256: "32d92ec046b9291e03553bb94a239a6e63b0adc6e2d15d5da38cd6b993321048"
+  findings:
+    - finding_id: "RESEARCH-CONTROL-DIFF-ERROR-81F5DAB8DE8F"
+      disposition: "BLOCKING_OUTSIDE_CURRENT_AGENTJOB"
+      message: "research_control/tasks/RT-20260729-012/jobs/AJ-RT-20260729-012-001.yaml: status does not match AGENT_JOB_REGISTRY.csv"
+    - finding_id: "RESEARCH-CONTROL-DIFF-ERROR-97309E29C1E5"
+      disposition: "REPAIRED_CURRENT_COMPLETION_CRITERIA_PARITY"
+      message: "The generation-169 completion now carries the two exact project-system acceptance strings required by its AgentJob."
+
+focused_research_control_tests:
+  command: ".venv/bin/python -m unittest -v tests.test_research_control"
+  tests_run: 142
+  passes: 140
+  failures: 1
+  errors: 1
+  elapsed_seconds: 1117.628
+  status: "FAIL"
+  findings:
+    - test: "test_static_research_control_validation_passes"
+      disposition: "ROOT_VALIDATOR_FAILURE"
+      message: "The static repository validator reports the AgentJob YAML versus registry status mismatch and the now-repaired completion criteria mismatch."
+    - test: "test_continue_research_reports_director_context_packet"
+      disposition: "CASCADE_FROM_BLOCKED_ROUTING_SNAPSHOT"
+      message: "No director-context routing snapshot is available while the repository validation boundary is blocked."
+
+preservation_constraint:
+  committed_checkpoint: "14a82f7be9762567359300c9082d3c5bc3d2ee3e"
+  task_local_lifecycle_receipt_status: "PASS"
+  protected_hash_mismatch_count: 0
+  predecessor_job_changed: false
+  predecessor_completion_changed: false
+  p9_t01_protocol_changed: false
+  handoff_0908_changed: false
+  handoff_0909_changed: false
+  p9_t01_reexecuted: false
+  p9_t02_executed: false
+  benchmark_case_executed: false
+
+required_recovery:
+  strategy_id: "repair_p9_t01_immutable_agentjob_registry_status_parity_v1"
+  worker_skill: "improve-project-system"
+  role_family: "process-integrity-auditor@0.1.0"
+  work_item_id: "P9-T02"
+  exact_behavior_change: "Under one fresh explicitly scoped project-system AgentJob, reconcile the single AJ-RT-20260729-012-001 status representation so its tracked AgentJob YAML and AGENT_JOB_REGISTRY.csv row agree on completed. Preserve every other predecessor byte and all P9-T01 scientific status, rerun the full validator, and invoke one future governed cumulative checkpoint only after all required gates pass."
+  required_controls:
+    - "Authorize exactly the predecessor AgentJob status representation that generation 169 forbids; do not broaden to any other predecessor field or path."
+    - "Preserve the completed P9-T01 completion, protocol, handoff-0908, handoff-0909, checkpoint 14a82f7, and all scientific and Distance-to-GR status."
+    - "Do not weaken shared validator, schema, test, routing, or checkpoint semantics merely to silence the mismatch."
+    - "Prove byte preservation for every predecessor byte outside the exact lifecycle-status representation."
+    - "Keep P9-T02 unexecuted until the future cumulative checkpoint commits."
+  fallback_forbidden: "Do not edit the protected predecessor under generation-169 authority, weaken validator parity, infer benchmark success, replay P9-T01, execute P9-T02, alter scientific authority, retry this frame's uninvoked checkpoint, publish, or push."
+  next_plan_item_after_recovery: "P9-T02"
+  next_plan_item_executed: false
+
+authority_boundary:
+  lifecycle_registry_correction_written: true
+  lifecycle_reconciliation_validated: false
+  checkpoint_complete: false
+  p9_t02_execution_ready: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  ontology_or_source_law_adopted: false
+  benchmark_result_or_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_or_push_authorized: false
+validation_status: "FAIL"

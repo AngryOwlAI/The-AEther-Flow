@@ -1,0 +1,393 @@
+final_repository_validation_status: "FAIL_P9_T01_TASK_TAXONOMY_CANDIDATE_FAMILY_SLUG"
+job_id: "AJ-RT-20260730-004-001"
+completion_id: "AJC-AJ-RT-20260730-004-001"
+task_id: "RT-20260730-004"
+task_type: "project_system_p9_recovery_task_plan_identity_and_ordinary_guard_parity"
+decision_id: "DDR-20260730-004"
+role_id: "process-integrity-auditor"
+source_role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260730-004"
+status: "completed"
+validation_status: "FAIL"
+created_at: "2026-07-30T09:38:39Z"
+started_at: "2026-07-30T09:38:39Z"
+completed_at: "2026-07-30T11:15:13Z"
+objective: "Under the sealed generation-171 recovery route, change only the implementation-plan plan_task_id in RT-20260730-002 and RT-20260730-003 from P9-T02 to P9-T01, prove exact preimage reconstruction, restore the P9-T02 ordinary route while preserving zero execution and all P9-T01 science, synchronize ordinary control derivatives, and invoke one governed cumulative checkpoint before P9-T02."
+completion_summary: "Generation 171 changes exactly two recovery-task implementation-plan identities from P9-T02 to P9-T01. Reversing either substitution reproduces its exact sealed preimage. Handoff-0911 now derives the ready science set P9-T02 and P14-T04 and selects P9-T02 without counting it completed. The successful predecessor status-token repair and all protected P9-T01 hashes remain exact. Repository-wide validation then finds one pre-existing candidate_family slug error in RT-20260729-012, outside this job's immutable write scope. No checkpoint ran and P9-T02 remains unexecuted."
+objective_result: "p9_recovery_task_plan_identity_guard_parity_pass_precheckpoint_blocked_task_taxonomy_candidate_family_slug"
+
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P9"
+  plan_task_id: "P9-T01"
+  recovery_for_plan_task_id: "P9-T01"
+  implementation_status: "recovery_task_plan_identity_and_ordinary_guard_parity_implemented_precheckpoint_blocked_task_taxonomy_candidate_family_slug"
+  protected_p9_t01_status: "protocol_complete_preserved"
+  completed_v21_tasks_added: []
+  next_dependency_ready_work_item: "P9-T02_after_taxonomy_recovery_and_checkpoint"
+  next_work_item_executed: false
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 171
+  passes_consumed: 155
+  route_work_item_id: "P9-T02"
+  route_worker_skill: "improve-project-system"
+  route_sha256: "e7d29475da4a72d5a82359b83996fd95b75a82c8bc11eba6b6335743c00417c0"
+  route_reason: "precheckpoint_recovery_task_plan_identity_ordinary_guard_parity_required"
+  route_strategy_id: "repair_p9_recovery_task_plan_identity_and_ordinary_guard_parity_v1"
+  route_blocker_fingerprint: "d58f960f940a6fce14e4466c5987d73ff3f883090d78d6b7c20ee012187d9803"
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:171"
+  handoff_token: "8e15b785e7ab0fbf60d7053c7c14ef8993bb8ea4359aef78"
+  relay_claim_token: "96b21e77e11012bca20e3cfe024464099aabcca423a96878"
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+
+transaction_status: "blocked_validation"
+result_disposition: "exact_repair_implemented_precheckpoint_blocked"
+work_item_status: "completed"
+plan_task_id: "P9-T01"
+route_work_item_id: "P9-T02"
+recovery_for_plan_task_id: "P9-T01"
+next_plan_task_id: "P9-T02"
+checkpoint_commit: "none_precheckpoint_validation_failed"
+checkpoint_invocation_count: 0
+checkpoint_staged: false
+legacy_validation_used: false
+project_system_change_only: true
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS_IMPLEMENTATION_PRECHECKPOINT_BLOCKED"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  observed_durable_outputs:
+    physics: []
+    project_system:
+      - "two exact recovery-task implementation-plan identity corrections"
+      - "one byte-preservation and ordinary-route parity receipt"
+      - "one superseding recovery handoff"
+      - "one precise precheckpoint taxonomy-slug blocker"
+      - "one governed cumulative checkpoint"
+  accepted_criteria:
+    physics: []
+    project_system:
+      - "both repaired task hashes equal their deterministic after hashes"
+      - "reversing each identity correction reproduces its sealed predecessor hash"
+      - "all protected P9-T01 completion protocol and status-repair hashes remain exact"
+      - "handoff-0911 ordinary routing derives P9-T02 and P14-T04 ready and selects P9-T02"
+      - "all required working-tree gates pass"
+      - "one governed cumulative checkpoint commits"
+      - "P9-T02 remains unexecuted until checkpoint success"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+physics_payload_admission_result:
+  status: "admitted"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+
+ordinary_route_guard_admission_result:
+  status: "PASS"
+  source_handoff_id: "handoff-0909"
+  selected_plan_task_id: "P9-T02"
+  guard_outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  system_success_counts_as_physics: false
+  system_success_counts_as_distance_to_gr: false
+  scientific_status_changed: false
+  physics_promotion_authorized: false
+
+recovery_result:
+  status: "PASS_TARGET_REPAIR_PRECHECKPOINT_BLOCKED_TASK_TAXONOMY_CANDIDATE_FAMILY_SLUG"
+  strategy_id: "repair_p9_recovery_task_plan_identity_and_ordinary_guard_parity_v1"
+  source_task_id: "RT-20260730-003"
+  source_job_id: "AJ-RT-20260730-003-001"
+  source_handoff_id: "handoff-0911"
+  source_head: "14a82f7be9762567359300c9082d3c5bc3d2ee3e"
+  route_sha256: "e7d29475da4a72d5a82359b83996fd95b75a82c8bc11eba6b6335743c00417c0"
+  route_blocker_fingerprint: "d58f960f940a6fce14e4466c5987d73ff3f883090d78d6b7c20ee012187d9803"
+  failed_gate_evidence_sha256: "cc274f37a9701b1e46eef55b1bab0c7baef18a7070857eb147155bff552b4bd0"
+  blocker_sha256: "94ae594123b13cd4a0bd9b2fc4804d8b0db7814a405cb9342e5832aad79b4637"
+  target_task_paths:
+    - "research_control/tasks/RT-20260730-002/00_TASK.yaml"
+    - "research_control/tasks/RT-20260730-003/00_TASK.yaml"
+  target_task_sha256_before:
+    - "28f794fa1b42daa976af4478b2006e23247f0c86f07b5982903b8b07b13124a0"
+    - "6de25c65f7009cd0566eefabd52ba8eb67270584f9cccabc2d5ab130afa491ec"
+  target_task_sha256_after:
+    - "6c06056bca781c7d197c2d7469cb9f3db88a366bba645448c2efc1749615221e"
+    - "4356cafade0ab6a868e04c6df560b2dd0dee9d5ae49049e93b09c2a46c444cfe"
+  reconstructed_preimage_sha256:
+    - "28f794fa1b42daa976af4478b2006e23247f0c86f07b5982903b8b07b13124a0"
+    - "6de25c65f7009cd0566eefabd52ba8eb67270584f9cccabc2d5ab130afa491ec"
+  source_status_repair_sha256: "c1444fb0cd15f4248c1f3886daab4fdfbe7f6f80dc4a42ead25af3e32a24848a"
+  source_completion_sha256: "645d5934a58ded9cafbbbd3af59ad9d3aa91efd5ec9bfe51ab231fd7488c07c4"
+  source_protocol_sha256: "88ef097bf712ad115e9af62cc18a8b3eabb12f8545350f714ad065f702471007"
+  recovery_validator_path: "research_control/tasks/RT-20260730-004/artifacts/validate_p9_recovery_task_plan_identity_guard_parity.py"
+  recovery_validator_sha256: "2b2487c28e651fbf9fa0ac845baa426e2b956840f3ae58007b66cb9e9438b4d0"
+  recovery_receipt_path: "research_control/tasks/RT-20260730-004/artifacts/p9_recovery_task_plan_identity_guard_parity_receipt.json"
+  recovery_receipt_sha256: "4c39a83bbec76280618552adbda587cc641973cedd0382ee1e12a0e04e10d781"
+  precheckpoint_blocker_path: "research_control/tasks/RT-20260730-004/artifacts/validation_blocker_precheckpoint_p9_t01_task_taxonomy_candidate_family_slug_v1.yaml"
+  precheckpoint_blocker_sha256: "4fd172c52b27469da5b34bf4ccf78860afbe6a221697529b8df2753ee1db0e92"
+  target_path_count: 2
+  target_field_count: 2
+  protected_hash_mismatch_count: 0
+  ready_science_plan_task_ids:
+    - "P9-T02"
+    - "P14-T04"
+  selected_plan_task_id: "P9-T02"
+  p9_t01_protocol_preserved: true
+  p9_t01_science_payload_modified: false
+  p9_t01_reexecuted: false
+  p9_t02_executed: false
+
+output_paths:
+  - "research_control/tasks/RT-20260730-002/00_TASK.yaml"
+  - "research_control/tasks/RT-20260730-003/00_TASK.yaml"
+  - "research_control/handoffs/handoff-0910.yaml"
+  - "research_control/handoffs/handoff-0911.yaml"
+  - "research_control/tasks/RT-20260730-004/**"
+  - "research_control/tasks/RT-20260730-004/artifacts/validation_blocker_precheckpoint_p9_t01_task_taxonomy_candidate_family_slug_v1.yaml"
+  - "research_control/handoffs/handoff-0912.yaml"
+  - "research_control/handoffs/handoff-0912.md"
+  - "research_control/program_state.yaml"
+
+command_results:
+  - command: "generation-171 immutable worker route validation claim and consume"
+    status: "PASS"
+    summary: "one improve-project-system worker invocation authorized for exact task-identity and ordinary-route parity recovery"
+  - command: ".venv/bin/python research_control/tasks/RT-20260730-004/artifacts/validate_p9_recovery_task_plan_identity_guard_parity.py --write-report --json"
+    status: "PASS"
+    summary: "two exact identity corrections, sealed preimage reconstruction, and route-guard parity"
+  - command: ".venv/bin/python research_control/tasks/RT-20260730-004/artifacts/validate_p9_recovery_task_plan_identity_guard_parity.py --check --json"
+    status: "PASS"
+    summary: "the live targets and handoff match the deterministic recovery receipt"
+  - command: ".venv/bin/python research_control/tasks/RT-20260730-003/artifacts/validate_p9_t01_immutable_agentjob_status_parity_recovery.py --check --json"
+    status: "PASS"
+    summary: "the predecessor status-token repair and protected hashes remain exact"
+  - command: ".venv/bin/python research_control/tasks/RT-20260729-012/artifacts/validate_source_derived_benchmark_protocol.py --check --json"
+    status: "PASS"
+    summary: "84 checks pass and all six benchmark cases remain NOT_RUN"
+  - command: ".venv/bin/python -m unittest -v tests.test_ordinary_route_guard"
+    status: "PASS"
+    summary: "20 ordinary-route guard regressions pass"
+  - command: ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --job-id AJ-RT-20260730-004-001 --json-summary"
+    status: "PASS"
+    summary: "zero hard errors; 1810 historical warnings"
+  - command: ".venv/bin/python -m unittest discover -s tests"
+    status: "FAIL"
+    summary: "1266 tests run with one failure and one skip; the sole failure is the repository task-taxonomy report"
+  - command: ".venv/bin/python scripts/research_control/task_taxonomy.py --validate-repository --json"
+    status: "FAIL"
+    summary: "one explicit required-task error: RT-20260729-012 candidate_family SourceDerivedBenchmarkProtocol_v1 violates the lowercase slug contract"
+  - command: ".venv/bin/python scripts/research_control/run_full_research_control_validation.py --json --tail-chars 2500"
+    status: "FAIL"
+    summary: "all earlier stages pass; legacy_validate_project_control stops on the same task-taxonomy repository-report test"
+
+validation_summary:
+  status: "FAIL_P9_T01_TASK_TAXONOMY_CANDIDATE_FAMILY_SLUG"
+  task_local_check_count: 6
+  task_local_error_count: 0
+  protected_hash_mismatch_count: 0
+  executed_benchmark_case_count: 0
+  checkpoint_invocation_count: 0
+  blocking_finding_count: 1
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 171 validated, atomically claimed, and consumed the exact immutable recovery route once."
+      - "The exact 52-path manifest, repository identity, lease, route, and predecessor state matched before writes."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The task-local receipt proves two exact field corrections, two sealed-preimage reconstructions, and protected P9-T01 hash preservation."
+  post_write:
+    status: "FAIL"
+    evidence:
+      - "The target, prior status repair, P9-T01 protocol, ordinary-route regression, and hard research-control diff checks pass."
+      - "The repository-wide test shard rejects one pre-existing RT-20260729-012 candidate_family value that violates the lowercase slug contract."
+  post_checkpoint:
+    status: "NOT_RUN"
+    evidence:
+      - "No checkpoint was invoked after the precheckpoint repository gate failed; P9-T02 remains unexecuted."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Current frontier, task index, compact frontier, dependency graph, claim graph, and semantic derivatives were synchronized before blocker finalization."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory synchronization and validate-only mode pass; local retrieval warnings remain non-authoritative."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation reports no hard failure."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not authorized; project-system task-identity parity recovery only"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  publication_authorized: false
+  proof_authority: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  canonical_ontology_edit_authorized: false
+  ontology_selection_authorized: false
+  physical_interpretation_establishment_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+distance_to_gr_delta:
+  changed: false
+  effect: "none_project_system_recovery"
+  burden_id: "benchmark_promotion"
+  milestone: "benchmark_promotion"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "The inherited P9-T01 protocol and zero-execution benchmark status remain exact; task-identity parity contributes no physics movement."
+
+physics_progress_status:
+  status: "none_project_system_only"
+  new_mathematical_payload: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+
+selected_next_route:
+  route_id: "repair_p9_t01_benchmark_protocol_task_taxonomy_candidate_family_slug_v1"
+  route_label: "project-system-recovery"
+  role_family: "process-integrity-auditor@0.1.0"
+  worker_skill: "improve-project-system"
+  selected_next_packet_type: "task_taxonomy_candidate_family_slug_recovery"
+  task_type: "project_system_p9_t01_benchmark_protocol_task_taxonomy_candidate_family_slug_recovery"
+  plan_task_id: "P9-T02"
+  recovery_for_plan_task_id: "P9-T01"
+  target_derivation_milestone: "none"
+  milestone_burden: "Project-system task-taxonomy slug parity and checkpoint eligibility only; the benchmark-promotion burden does not advance."
+  strategy_id: "repair_p9_t01_benchmark_protocol_task_taxonomy_candidate_family_slug_v1"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: false
+  execution_ready_now: false
+  target_informed_source_repair_authorized: false
+  benchmark_result_preestablished: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  executed: false
+
+required_recovery:
+  strategy_id: "repair_p9_t01_benchmark_protocol_task_taxonomy_candidate_family_slug_v1"
+  worker_skill: "improve-project-system"
+  role_family: "process-integrity-auditor@0.1.0"
+  work_item_id: "P9-T02"
+  blocker_path: "research_control/tasks/RT-20260730-004/artifacts/validation_blocker_precheckpoint_p9_t01_task_taxonomy_candidate_family_slug_v1.yaml"
+  blocker_sha256: "4fd172c52b27469da5b34bf4ccf78860afbe6a221697529b8df2753ee1db0e92"
+  exact_behavior_change: "Change only RT-20260729-012 task_taxonomy.candidate_family from SourceDerivedBenchmarkProtocol_v1 to source_derived_benchmark_protocol_v1 under one fresh bounded project-system AgentJob, preserve every other byte and all generation-171 repairs, rerun complete validation, and invoke one future cumulative checkpoint only after every gate passes."
+  next_plan_item_after_recovery: "P9-T02"
+  next_plan_item_executed: false
+
+precheckpoint_blocker:
+  status: "FAIL"
+  blocker_path: "research_control/tasks/RT-20260730-004/artifacts/validation_blocker_precheckpoint_p9_t01_task_taxonomy_candidate_family_slug_v1.yaml"
+  finding_class: "explicit_task_taxonomy_candidate_family_slug_contract_mismatch"
+  repository_test_failure_count: 1
+  checkpoint_invocation_count: 0
+  checkpoint_committed: false
+  required_recovery_strategy: "repair_p9_t01_benchmark_protocol_task_taxonomy_candidate_family_slug_v1"
+  required_recovery_worker_skill: "improve-project-system"
+  next_plan_item_executed: false
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required_no_nonblank_signals"
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1089
+    relationship_row_count: 5515
+    semantic_row_count: 1089
+    vault_row_count: 1089
+    local_cache_only_warning_count: 7
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search recovery task plan identity ordinary guard parity --limit 10 --json"
+      query_type: "search"
+      query_text: "recovery task plan identity ordinary guard parity"
+      returned_object_ids:
+        - "MD-SKILL-CONTINUE-RESEARCH-CONTINUE-GOAL"
+        - "MD-SKILL-CONTINUE-RESEARCH-GOAL-SCHEMA"
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-SKILL-CONTINUE-RESEARCH-CONTINUE-GOAL"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: ".codex/skills/continue-research-continue-goal/SKILL.md"
+      source_hash: "1c104985bb950cd1e1fe646f69dffce53d466a49b34f228c24f55efb58d0ac54"
+    - object_id: "MD-SKILL-CONTINUE-RESEARCH-GOAL-SCHEMA"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: ".codex/skills/continue-research-goal/references/goal-file-schema.md"
+      source_hash: "35b1477ee973f268a7d2e7947a75b247a8294cbf6c4843f031f9f686e1c47018"
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  authority_note: "Generated Obsidian wiki semantic relationship SQLite and .local surfaces are retrieval-only navigation layers and not authority; tracked canonical sources registries research-control state Git and validators govern this recovery."
+
+documentation_impact_id: "DI-RT-20260730-004-001"
+notes: "Exactly two recovery-task implementation identities change and remain verified. Every protected P9-T01 and status-repair byte remains preserved. Repository-wide validation stops before checkpoint on one pre-existing out-of-scope task-taxonomy slug; P9-T02 remains unexecuted."

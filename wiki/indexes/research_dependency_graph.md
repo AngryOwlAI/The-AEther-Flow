@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-07-30T05:30:27Z`
-- Source fingerprint: `bf225c99b7d629307082da86ef5e290197d22790ab95926b867e83de8d7ac5ca`
-- Nodes: `23449`
-- Edges: `74735`
+- Generated from tracked state as of: `2026-07-30T12:32:16Z`
+- Source fingerprint: `9f7eea3abfdde2c2d2195ed60fbcc8250dc1395e9ed525d8021d39904bda8b00`
+- Nodes: `23517`
+- Edges: `74876`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 1148 |
+| `completion_yaml` | 1153 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 909 |
+| `handoff_yaml` | 913 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,18 +33,18 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 9 |
-| `agent_job` | `support_only` | 1148 |
+| `agent_job` | `support_only` | 1153 |
 | `artifact` | `canonical_source` | 87 |
-| `artifact` | `support_only` | 11910 |
-| `blocked_burden` | `blocked` | 4761 |
-| `claim_boundary` | `support_only` | 1105 |
+| `artifact` | `support_only` | 11941 |
+| `blocked_burden` | `blocked` | 4778 |
+| `claim_boundary` | `support_only` | 1110 |
 | `draft_control_candidate` | `draft_control` | 782 |
 | `draft_control_candidate` | `proposal_only` | 147 |
 | `draft_control_candidate` | `science_draft` | 88 |
 | `frozen_negative` | `frozen_negative` | 147 |
 | `gate_chair_verdict` | `human_gated` | 34 |
-| `handoff` | `support_only` | 909 |
-| `human_gated_object` | `human_gated` | 568 |
+| `handoff` | `support_only` | 913 |
+| `human_gated_object` | `human_gated` | 569 |
 | `ledger_row` | `accepted_scoped` | 6 |
 | `ledger_row` | `blocked` | 3 |
 | `ledger_row` | `frozen_negative` | 1 |
@@ -57,8 +57,8 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `source_ontology_object` | `rejected` | 50 |
 | `source_ontology_object` | `support_only` | 372 |
 | `task` | `human_gated` | 29 |
-| `task` | `science_draft` | 32 |
-| `task` | `support_only` | 1087 |
+| `task` | `science_draft` | 33 |
+| `task` | `support_only` | 1091 |
 
 ## Frontier Table
 
@@ -103,6 +103,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `blocked_claim:agentjob_allowlist_change` | Blocked claim: AgentJob allowlist change | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:agentjob_allowlist_expansion` | Blocked claim: AgentJob allowlist expansion | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:agentjob_completion_handoff_or_science_rewrite` | Blocked claim: AgentJob completion handoff or science rewrite | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:agentjob_completion_or_registry_plan_identity_rewrite` | Blocked claim: AgentJob completion or registry plan-identity rewrite | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:aggregate_truth_score` | Blocked claim: aggregate truth score | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:agreement_or_consensus_as_truth` | Blocked claim: agreement or consensus as truth | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:ai_validator_pass_as_physics_proof` | Blocked claim: AI validator PASS as physics proof | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
@@ -111,6 +112,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `blocked_claim:alias_or_status_language_as_physics_authority` | Blocked claim: alias or status language as physics authority | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:ann_v_as_physical_null_cone` | Blocked claim: Ann(V) as physical null cone | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:another_plan_task_or_successor_execution` | Blocked permission: another plan task or successor execution | `registries/ROLE_EXECUTION_REGISTRY.csv` |
+| `blocked_claim:any_other_predecessor_byte_change` | Blocked claim: any other predecessor byte change | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:any_other_rt_20260729_012_task_change` | Blocked permission: any other RT-20260729-012 task change | `registries/ROLE_EXECUTION_REGISTRY.csv` |
+| `blocked_claim:any_other_target_task_change` | Blocked claim: any other target task change | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:any_predecessor_byte_change_outside_the_exact_top_level_lifecycle_status_token` | Blocked permission: any predecessor byte change outside the exact top-level lifecycle status token | `registries/ROLE_EXECUTION_REGISTRY.csv` |
+| `blocked_claim:any_rt_20260730_002_or_rt_20260730_003_task_change_outside_the_exact_implementation_plan_identity_field` | Blocked permission: any RT-20260730-002 or RT-20260730-003 task change outside the exact implementation-plan identity field | `registries/ROLE_EXECUTION_REGISTRY.csv` |
 | `blocked_claim:approval_as_claim_promotion` | Blocked claim: approval as claim promotion | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:approval_as_proof` | Blocked claim: approval as proof | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:approval_reuse` | Blocked claim: approval reuse | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
@@ -154,18 +160,12 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `blocked_claim:audit_pass_as_gate_chair_verdict` | Blocked claim: audit pass as Gate Chair verdict | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:audit_pass_as_global_theory_rejection` | Blocked claim: audit pass as global theory rejection | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:audit_pass_as_matter_action` | Blocked claim: audit pass as matter action | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:audit_pass_as_matter_coupling` | Blocked claim: audit pass as matter coupling | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:audit_pass_as_matter_semantics_adoption` | Blocked claim: audit pass as matter-semantics adoption | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:audit_pass_as_metricdata_e_adoption` | Blocked claim: audit pass as MetricData(E) adoption | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:audit_pass_as_ontology_edit` | Blocked claim: audit pass as ontology edit | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:audit_pass_as_proof_authority` | Blocked claim: audit pass as proof authority | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:audit_pass_as_refuter_stress_pass` | Blocked claim: audit pass as Refuter stress pass | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 
 ## Route Continuity
 
-- Active task: `RT-20260730-001`
-- Latest handoff: `handoff-0909`
-- Handoff path: `research_control/handoffs/handoff-0909.yaml`
-- Next action: Run the one governed cumulative checkpoint for AJ-RT-20260730-001-001. Only after it commits may one fresh bounded P9-T02 candidate-construction packet construct or derive a source state for the vacuum Minkowski benchmark under the frozen source-only protocol and return PASS, FAIL, or INCONCLUSIVE without target-informed source repair.
+- Active task: `RT-20260730-005`
+- Latest handoff: `handoff-0913`
+- Handoff path: `research_control/handoffs/handoff-0913.yaml`
+- Next action: Invoke the one governed cumulative checkpoint for AJ-RT-20260730-005-001 only after every required precheckpoint gate passes. After that commit, one fresh bounded continue-research packet may execute P9-T02 under the source-only benchmark firewall.
 
 This graph is navigational support only; inspect the cited sources before using any claim.
