@@ -1,0 +1,498 @@
+job_id: "AJ-RT-20260730-010-001"
+task_id: "RT-20260730-010"
+decision_id: "DDR-20260730-010"
+role_id: "candidate-constructor"
+role_version: "0.2.0"
+execution_role_ref: "candidate-constructor@0.2.0--RT-20260730-010"
+status: "completed"
+validation_status: "PASS"
+requires_human_gate: false
+created_at: "2026-07-30T22:03:48Z"
+started_at: "2026-07-30T22:03:48Z"
+completed_at: "2026-07-30T22:03:48Z"
+completion_path: "research_control/tasks/RT-20260730-010/jobs/completions/AJC-AJ-RT-20260730-010-001.yaml"
+objective: "Execute only v21 P9-T03 by deriving finite source-only weak-field and operational-device responses or returning a precise obstruction, without importing target potential, redshift, clock, free-fall, metric, or desired-agreement formulas."
+target_derivation_milestone: "benchmark_promotion"
+milestone_burden: "Test local weak-field physics from the source theory."
+route_label: "benchmark-recovery-packet"
+route_reason: "The checkpointed cumulative predecessor a88a894, handoff-0916, v21 plan, and immutable generation 178 select exactly one P9-T03 Candidate Constructor packet."
+immutable_route_sha256: "470a26119c8de4049d3aa05017696d6d921af81dce852a130815f130cbf9912a"
+dependency_checkpoint_commit: "a88a894ed31798e91bef598da7f5185ca994b235"
+plan_task_id: "P9-T03"
+recommendation_ids:
+  - "V21-R18"
+  - "V21-R23"
+  - "V21-R28"
+  - "V21-R29"
+source_extension_classification_required: true
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 178
+  passes_consumed: 162
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:178"
+  handoff_token: "82615d50e071b5c1e9e69b2678a6e31a12c3c5879f16465a"
+  relay_claim_token: "59466d22a66d88cd9b3ca0acb38e040dafe311063f3b67b2"
+  route_work_item_id: "P9-T03"
+  route_worker_skill: "continue-research"
+  route_sha256: "470a26119c8de4049d3aa05017696d6d921af81dce852a130815f130cbf9912a"
+  route_reason: "resume_research_after_project_system_repair"
+  route_strategy_id: "continue_in_scope_generation_178"
+  route_blocker_fingerprint: "e408a810e2235ecd456ed8c03253a21dee51b00502355b5371ab5fc78ec55204"
+  route_before_fingerprint: "e408a810e2235ecd456ed8c03253a21dee51b00502355b5371ab5fc78ec55204"
+  route_evidence_sha256es:
+    - "e408a810e2235ecd456ed8c03253a21dee51b00502355b5371ab5fc78ec55204"
+    - "a88a894ed31798e91bef598da7f5185ca994b235"
+  worker_skill: "continue-research"
+  worker_invocation_count: 1
+
+mathematical_decisiveness_contract:
+  contract_path: "research_control/design/mathematical_decisiveness_completion_contract.md"
+  schema_path: ".agents/schemas/PHYSICS_COMPLETION_DECISIVENESS_SCHEMA.md"
+  enforcement_mode: "hard_failure"
+  active_after: "2026-06-21T02:32:39Z"
+
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "physics"
+  payload_type: "candidate_construction"
+  candidate_family: "WeakFieldOperationalCouplingNonuniqueness_v1"
+  assumption_delta:
+    - "Hold the P9-T01 protocol, P9-T02 INCONCLUSIVE outcome, P7 physical source scope, and P8 proposal-only closure scope fixed."
+    - "Use one finite three-address chain and the exact static response h_epsilon=epsilon(-1,0,1)."
+    - "Allow only normalized target-free device-response weights parameterized by independent source coefficients."
+    - "Use two explicit coefficient records solely to test source-law nonselection."
+    - "Admit no target potential metric clock redshift free-fall geodesic formula desired residual tolerance or fitted coefficient."
+  materiality_basis: "P9-T02 executed only a null-background source case. This packet constructs the first finite weak operational-response family, derives its exact outputs, and proves a new coefficient-law nonselection obstruction."
+  payload_details:
+    candidate_id: "WeakFieldOperationalCouplingNonuniqueness_v1"
+    candidate_kind: "finite_source_operational_response_counterfamily"
+    result_type: "precise_obstruction"
+    theorem_id: "P9T03-THM-OPERATIONAL-COUPLING-NONSELECTION-001"
+    obstruction_id: "OBST-P9T03-WEAK-FIELD-OPERATIONAL-COUPLING-LAW-ABSENT-001"
+    benchmark_case_outcome: "INCONCLUSIVE"
+    secondary_label: "FORMAL_ANALOGY"
+  source_basis:
+    - "TEX-V21-P9-T01-SOURCE-DERIVED-BENCHMARK-PROTOCOL-V1"
+    - "TEX-V21-P7-T08-PHYSICAL-MATTER-ADOPTION-DECISION-V1"
+    - "TEX-V21-P7-T03-SOURCE-OPERATIONAL-DEVICE-SUITE-V1"
+    - "TEX-V21-P8-T03-FINITE-SOURCE-CLOSURE-CONSTRAINT-CANDIDATE-V1"
+    - "research_control/tasks/RT-20260730-008/artifacts/p9_t02_vacuum_minkowski_case_v1.yaml"
+  expected_artifact_paths:
+    - "research_control/tasks/RT-20260730-010/artifacts/weak_field_operational_coupling_nonuniqueness_v1.tex"
+    - "research_control/tasks/RT-20260730-010/artifacts/p9_t03_weak_field_clock_case_v1.yaml"
+    - "research_control/tasks/RT-20260730-010/artifacts/p9_t03_parameter_correction_table_v1.yaml"
+    - "research_control/tasks/RT-20260730-010/artifacts/p9_t03_weak_field_clock_receipt_v1.json"
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+
+family_freeze_admission:
+  schema_id: "family_freeze_route_admission_v1"
+  policy_id: "family_freeze_reopening_policy_v1"
+  route_id: "v21_p9_t03_weak_field_operational_coupling_nonuniqueness_v1"
+  family_id: "WeakFieldOperationalCouplingNonuniqueness_v1"
+  family_identity_sha256: "1764daa847a7d19479e89ead7105da96c8c503948aa59794d0b3973018c16fd3"
+  assumption_sha256es:
+    - "88ef097bf712ad115e9af62cc18a8b3eabb12f8545350f714ad065f702471007"
+    - "85fbf32fb9b02aeae556149cbc5c6b51bd6fedf278a3bc401545c93e29fc4827"
+    - "417c604bad008b85b153718ae04aa43307c2ff3cfa3a5c3f242e70b013c86ba4"
+    - "8840b205e8aa12d73f3e782ec6936eb96385bb5694c298b1bf41a2bdfe472626"
+    - "2fadb19c5849f1da5843c0e0599dbdc31790eab46587ce6718abbf4d3a0be79c"
+  route_kind: "candidate_construction"
+  detected_match_basis: []
+  reopening:
+    requested: false
+    class: "none"
+  distinct_branch:
+    branch_identity: "first_instantiated_weak_operational_response_counterfamily"
+    material_difference_basis: "The packet constructs and executes weak source-device response laws rather than rerunning or reinterpreting the P9-T02 null-background case."
+    reconstructs_frozen_candidate: false
+    expected_artifact_paths:
+      - "research_control/tasks/RT-20260730-010/artifacts/weak_field_operational_coupling_nonuniqueness_v1.tex"
+      - "research_control/tasks/RT-20260730-010/artifacts/p9_t03_weak_field_clock_case_v1.yaml"
+  authority_limits:
+    local_family_freeze_preserved: true
+    global_no_go_claimed: false
+    automatic_candidate_adoption: false
+    theorem_truth_inferred: false
+    ontology_modified: false
+    physics_promotion_authorized: false
+
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  expected_durable_outputs:
+    physics:
+      - "one exact finite weak closure response and device-response family"
+      - "one explicit two-record nonselection counterfamily"
+      - "one precise INCONCLUSIVE weak-field case disposition"
+    project_system:
+      - "one task-local deterministic validator and compact receipt"
+      - "parent-child synthesis and target-exposure records"
+      - "standard control records and generated-memory synchronization"
+  acceptance_criteria:
+    physics:
+      - "finite source response and exact ratios reproduce"
+      - "two admissible coefficient records produce distinct outputs"
+      - "missing operational-coupling law produces INCONCLUSIVE rather than a fitted pass"
+      - "zero target comparisons, target-informed reruns, and benchmark passes"
+    project_system:
+      - "task-local source-hash, math, DAG, seal, exposure, and parent-child checks pass"
+      - "claim-language and documentation-impact gates pass"
+      - "one governed checkpoint records the bounded transaction"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: false
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0916"
+  source_handoff_path: "research_control/handoffs/handoff-0916.yaml"
+  source_handoff_sha256: "1bcdf09eab26895fb87fd9439bc2cfc48a41d645d5ae3d377d58b49e93b43bbd"
+  selected_plan_task_id: "P9-T03"
+  guard_outcome: "below_threshold"
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  parent:
+    execution_unit_id: "parent"
+    perspective: "physicist_mathematician_philosopher"
+    responsibilities:
+      - "hold the protocol and prior case dispositions fixed"
+      - "fuse exact finite response mathematics with operational and model-to-world boundaries"
+      - "resolve coefficient and interpretation conflicts"
+      - "classify the case without target-informed repair"
+  children:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260730-010/artifacts/child_phys_math_p9_t03_weak_field_clock.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260730-010/artifacts/child_phys_phil_p9_t03_weak_field_clock.yaml"
+      status: "completed"
+  conflict_policy:
+    review_path: "research_control/tasks/RT-20260730-010/artifacts/parent_conflict_review_p9_t03_weak_field_clock.yaml"
+    max_resolution_rounds: 2
+    require_parallel_child_revision: true
+    unresolved_conflict_status: "blocked"
+  fusion_policy:
+    fusion_notes_path: "research_control/tasks/RT-20260730-010/artifacts/parent_fusion_notes_p9_t03_weak_field_clock.md"
+    fused_output_path: "research_control/tasks/RT-20260730-010/artifacts/weak_field_operational_coupling_nonuniqueness_v1.tex"
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+    final_output_replaces_old_single_role_artifact: true
+  outer_agentjob_count: 1
+  child_agentjob_count: 0
+  subagent_count: 0
+  rationale: "Two internal analytical perspectives are recorded within the one consumed worker invocation and one outer AgentJob. No child AgentJob or subagent was created."
+
+memory_preflight:
+  preflight_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1091
+    relationship_row_count: 5526
+    semantic_row_count: 1091
+    vault_row_count: 1091
+    local_cache_only_warning_count: 0
+    refresh_performed: true
+  refresh_needed: true
+  refresh_performed: true
+  refresh_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py"
+  before_refresh:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+  after_refresh:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    source_object_count: 1091
+    relationship_row_count: 5526
+    semantic_row_count: 1091
+    vault_row_count: 1091
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"weak field redshift clock\" --limit 10 --json"
+      query_type: "search"
+      query_text: "weak field redshift clock"
+      returned_object_ids:
+        - "MD-V21-P9-T02-PARENT-FUSION-VACUUM-MINKOWSKI-CASE-V1"
+        - "TEX-V21-P9-T01-SOURCE-DERIVED-BENCHMARK-PROTOCOL-V1"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+    - object_id: "MD-V21-P9-T02-PARENT-FUSION-VACUUM-MINKOWSKI-CASE-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260730-008/artifacts/parent_fusion_notes_p9_t02_vacuum_minkowski_case.md"
+      source_hash: "33d9576376607f5d2912f557924d4c0268f251f20dd06b1fd328e90f282cc3b8"
+    - object_id: "TEX-V21-P9-T01-SOURCE-DERIVED-BENCHMARK-PROTOCOL-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260729-012/artifacts/source_derived_benchmark_protocol_v1.tex"
+      source_hash: "88ef097bf712ad115e9af62cc18a8b3eabb12f8545350f714ad065f702471007"
+    - object_id: "TEX-V21-P7-T08-PHYSICAL-MATTER-ADOPTION-DECISION-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260729-001/artifacts/p7_t08_gate_c_decision_v1.tex"
+      source_hash: "85fbf32fb9b02aeae556149cbc5c6b51bd6fedf278a3bc401545c93e29fc4827"
+  authority_note: "Obsidian wiki notes semantic extracts PDFs and .local files are retrieval layers only and not authority. Target-side ontology files were inspected only as required authority boundaries and supplied no source value formula parameter branch tolerance or output."
+
+allowed_read_paths:
+  - "SOUL.md"
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - ".agents/roles/physics/candidate-constructor.v0.2.0.md"
+  - ".agents/schemas/PHYSICS_COMPLETION_DECISIVENESS_SCHEMA.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  - "research_control/design/**"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0915.yaml"
+  - "research_control/handoffs/handoff-0916.yaml"
+  - "research_control/tasks/RT-20260728-002/**"
+  - "research_control/tasks/RT-20260729-001/**"
+  - "research_control/tasks/RT-20260729-006/**"
+  - "research_control/tasks/RT-20260729-012/**"
+  - "research_control/tasks/RT-20260730-008/**"
+  - "ontology/tex/**"
+  - "registries/**"
+
+allowed_write_paths:
+  - "research_control/tasks/RT-20260730-010/**"
+  - "research_control/handoffs/handoff-0917.yaml"
+  - "research_control/handoffs/handoff-0917.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/PDF_DERIVATIVE_REGISTRY.csv"
+  - "registries/PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "registries/TEX_SOURCE_REGISTRY.csv"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/tex/**"
+
+allowed_generated_paths:
+  - ".local/**"
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/tex/**"
+
+forbidden_paths:
+  - "ontology/**"
+  - "legacy_ontology/**"
+  - "manuscripts/**"
+  - "html/**"
+  - "github-facing/**"
+  - "implementations_plans/**"
+  - ".agents/**"
+  - ".codex/skills/**"
+  - "scripts/**"
+  - "tests/**"
+  - "registries/METRIC_USE_LEDGER.csv"
+  - "research_control/tasks/RT-20260728-002/**"
+  - "research_control/tasks/RT-20260729-001/**"
+  - "research_control/tasks/RT-20260729-006/**"
+  - "research_control/tasks/RT-20260729-012/**"
+  - "research_control/tasks/RT-20260730-008/**"
+  - "research_control/tasks/RT-20260730-009/**"
+  - "research_control/handoffs/handoff-0915.yaml"
+  - "research_control/handoffs/handoff-0916.yaml"
+
+allowed_source_classes:
+  - "science_draft_read_only"
+  - "scientific_gate_read_only"
+  - "canonical_target_definition_read_only"
+  - "task_local_science_draft"
+  - "task_control_record"
+  - "registry"
+  - "generated_memory_derivative"
+
+forbidden_source_classes:
+  - "benchmark_promotion"
+  - "candidate_reconstruction"
+  - "completed_derivation_claim"
+  - "gate_chair_verdict"
+  - "generated_derivative_authority"
+  - "global_theory_rejection"
+  - "canonical_ontology_write"
+  - "target_potential_metric_clock_redshift_freefall_or_geodesic_as_source_premise"
+  - "target_informed_source_parameter_branch_tolerance_or_repair"
+  - "source_law_adoption_or_rejection"
+  - "physical_redshift_clock_rate_frequency_acceleration_or_potential_identification"
+  - "independent_reproduction_claim"
+  - "Gate_D_change"
+  - "Gate_E_verdict"
+  - "Einstein_equations_or_exact_GR_recovery"
+  - "benchmark_pass_or_promotion"
+  - "global_no_go_or_future_extension_impossibility"
+  - "publication_push_or_completed_derivation"
+
+approved_commands:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21 --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"weak field redshift clock\" --limit 10 --json"
+  - ".venv/bin/python research_control/tasks/RT-20260730-010/artifacts/validate_p9_t03_weak_field_clock.py --check --json"
+  - "python3 /Users/alex.omegapy/.codex/plugins/cache/openai-bundled/latex/0.2.4/scripts/compile_latex.py /Volumes/P-SSD/AngryOwl/The-AEther-Flow/research_control/tasks/RT-20260730-010/artifacts/weak_field_operational_coupling_nonuniqueness_v1.tex --compiler tectonic --output-directory /Volumes/P-SSD/AngryOwl/The-AEther-Flow/.local/tex-builds/RT-20260730-010 --json"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --write"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py"
+  - ".venv/bin/python scripts/research_control/generate_claim_graph_v1.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+  - ".venv/bin/python scripts/research_control/task_taxonomy.py --validate-repository --json"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --json-summary"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --job-id AJ-RT-20260730-010-001 --json-summary"
+  - ".venv/bin/python scripts/research_control/report_physics_progress_metrics.py"
+  - ".venv/bin/python scripts/research_control/run_full_research_control_validation.py --json --tail-chars 2500"
+  - "git diff --check"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260730-010-001"
+
+required_validators:
+  - "memory_preflight"
+  - "p9_t03_source_only_case_local_validator"
+  - "scratch_tex_compile"
+  - "parent_child_synthesis"
+  - "source_hash_and_target_import_firewall"
+  - "target_exposure"
+  - "claim_language"
+  - "documentation_impact"
+  - "project_improvement_signal_parity"
+  - "task_taxonomy"
+  - "research_control_validation"
+  - "memory_bootstrap"
+  - "memory_validate_only"
+  - "renderers"
+  - "graph_freshness"
+  - "git_diff_check"
+  - "checkpoint_research_transaction"
+
+expected_outputs:
+  - "research_control/tasks/RT-20260730-010/**"
+  - "research_control/tasks/RT-20260730-010/artifacts/weak_field_operational_coupling_nonuniqueness_v1.tex"
+  - "research_control/handoffs/handoff-0917.yaml"
+  - "research_control/handoffs/handoff-0917.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+
+claim_boundary: "CB-V21-P9-T03-WEAK-FIELD-OPERATIONAL-COUPLING-NONSELECTION-001"
+documentation_impact_id: "DI-RT-20260730-010-001"
+completion_id: "AJC-AJ-RT-20260730-010-001"
+
+checkpoint_outcome:
+  required: true
+  attempted: false
+  committed: false
+  commit_sha: ""
+  push_authorized: false
+  push_performed: false
+
+stop_conditions:
+  - "Stop if any frozen protocol, P7, P8, or P9-T02 source hash differs."
+  - "Stop if any target potential metric clock redshift free-fall geodesic residual desired agreement coefficient branch tolerance or success label reaches the source construction."
+  - "Stop if the exact finite response or two-record nonselection calculation fails."
+  - "Stop if the source output, DAG, coefficient record, or comparison rule changes after the seal."
+  - "Stop if source token ratios are represented as physical redshift proper time or frequency."
+  - "Stop if signed address contrast is represented as physical velocity acceleration or free fall."
+  - "Stop if same-context validation is represented as independent reproduction."
+  - "Stop if the scoped obstruction is represented as a global no-go or future-extension impossibility."
+  - "Stop if parent-child conflict review has any unresolved blocking conflict."
+  - "Stop on the first governed checkpoint failure; do not retry in this AgentJob."

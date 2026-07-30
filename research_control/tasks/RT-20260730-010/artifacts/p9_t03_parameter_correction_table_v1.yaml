@@ -1,0 +1,68 @@
+schema_id: "p9_t03_parameter_correction_table_v1"
+task_id: "RT-20260730-010"
+case_id: "P9-BENCH-WEAK-FIELD-CLOCK-V1"
+status: "completed"
+parameters:
+  - symbol: "epsilon"
+    source_role: "dimensionless weak-source amplitude"
+    fixed_or_free: "free within |epsilon|<=1/4 for the explicit counterfamily"
+    derivation_status: "declared source-stage control"
+    physical_calibration: "absent"
+  - symbol: "alpha"
+    source_role: "P8 finite closure coefficient"
+    fixed_or_free: "fixed to 1 internally"
+    derivation_status: "proposal-only"
+    physical_calibration: "absent"
+  - symbol: "beta"
+    source_role: "P8 finite source-response coefficient"
+    fixed_or_free: "fixed to 1 internally"
+    derivation_status: "proposal-only"
+    physical_calibration: "absent"
+  - symbol: "lambda_C"
+    source_role: "closure-response to Clock_src transition-weight coefficient"
+    fixed_or_free: "independent"
+    derivation_status: "not selected by current source package"
+    physical_calibration: "absent"
+  - symbol: "lambda_S"
+    source_role: "closure-response to Signal_src transition-weight coefficient"
+    fixed_or_free: "independent"
+    derivation_status: "not selected by current source package"
+    physical_calibration: "absent"
+  - symbol: "lambda_F"
+    source_role: "closure-response to FreeFall_src address-response coefficient"
+    fixed_or_free: "independent"
+    derivation_status: "not selected by current source package"
+    physical_calibration: "absent"
+explicit_records:
+  - record_id: "lambda_A"
+    values: ["0", "0", "0"]
+    order: ["lambda_C", "lambda_S", "lambda_F"]
+    clock_ratio_leading: "1"
+    signal_ratio_leading: "1"
+    freefall_address_contrast: "0"
+  - record_id: "lambda_B"
+    values: ["1/8", "1/16", "1/4"]
+    order: ["lambda_C", "lambda_S", "lambda_F"]
+    clock_ratio_leading: "1+epsilon+O(epsilon^2)"
+    signal_ratio_leading: "1+(1/2)epsilon+O(epsilon^2)"
+    freefall_address_contrast: "(1/2)epsilon"
+corrections:
+  finite_algebraic: "exact"
+  weak_series: "quadratic displayed; O(epsilon^3) remainder"
+  finite_size: "three-address source carrier; physical correction uncontrolled"
+  device: "operational coefficient-selection law absent"
+  coarse_graining: "absent"
+  continuum: "absent"
+  units: "dimensionless source quantities only"
+  uncertainty: "absent for physical observables"
+  tolerance: "unset"
+  independent_reproduction: "not acquired"
+post_newtonian_parameters:
+  status: "NOT_DEFINED"
+  reason: "No physical potential metric slow-motion map units or source-selected operational coefficients exist."
+authority_limits:
+  target_fit_used: false
+  physical_parameter_inferred: false
+  post_Newtonian_parameter_established: false
+  benchmark_pass_established: false
+  physics_promotion_authorized: false

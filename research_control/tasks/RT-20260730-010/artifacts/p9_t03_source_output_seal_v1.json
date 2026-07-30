@@ -1,0 +1,48 @@
+{
+  "schema_id": "p9_t03_source_output_seal_v1",
+  "task_id": "RT-20260730-010",
+  "case_id": "P9-BENCH-WEAK-FIELD-CLOCK-V1",
+  "protocol_version": "SourceDerivedBenchmarkProtocol_v1",
+  "sealed_at": "2026-07-30T22:03:48Z",
+  "randomness_policy": "deterministic_exact_rational_no_randomness",
+  "target_family_known_before_execution": true,
+  "blindness_claimed": false,
+  "target_formula_used_as_source_input": false,
+  "target_value_used_as_source_input": false,
+  "target_selected_parameter_count": 0,
+  "target_informed_rerun_count": 0,
+  "target_oracle_opened": false,
+  "mutation_after_seal_authorized": false,
+  "source_output": {
+    "finite_carrier": ["-", "0", "+"],
+    "weak_source_profile": ["-epsilon", "0", "epsilon"],
+    "weak_closure_response": ["-epsilon", "0", "epsilon"],
+    "clock_ratio": "((1+2 lambda_C epsilon)/(1-2 lambda_C epsilon))^2",
+    "signal_ratio": "((1+2 lambda_S epsilon)/(1-2 lambda_S epsilon))^2",
+    "freefall_address_contrast": "2 lambda_F epsilon",
+    "record_A": ["0", "0", "0"],
+    "record_B": ["1/8", "1/16", "1/4"],
+    "obstruction_id": "OBST-P9T03-WEAK-FIELD-OPERATIONAL-COUPLING-LAW-ABSENT-001",
+    "case_outcome": "INCONCLUSIVE"
+  },
+  "comparison_rules": {
+    "target_comparison_may_open": false,
+    "reason": "The current source package does not select the operational coefficients or supply a physical model-to-world map.",
+    "source_output_mutation_after_target_access": false,
+    "target_fit_allowed": false
+  },
+  "missing_burdens": [
+    "source-derived operational-coupling selector",
+    "physical time frequency distance acceleration and potential codomain",
+    "units and scale calibration",
+    "physical corrections and uncertainty model",
+    "independent reproduction"
+  ],
+  "authority_limits": {
+    "seal_is_physics_proof": false,
+    "physical_weak_field_recovery_established": false,
+    "benchmark_pass_established": false,
+    "benchmark_promotion_authorized": false,
+    "physics_promotion_authorized": false
+  }
+}

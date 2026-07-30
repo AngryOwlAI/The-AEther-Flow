@@ -107,6 +107,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-V21-P8-T07-PARENT-FUSION-GATE-D-REVIEW-V1` `research_control/tasks/RT-20260729-011/artifacts/parent_fusion_notes_p8_t07_gate_d_review.md`
 - `MD-V21-P9-T01-PARENT-FUSION-BENCHMARK-PROTOCOL-V1` `research_control/tasks/RT-20260729-012/artifacts/parent_fusion_notes_p9_t01_benchmark_protocol.md`
 - `MD-V21-P9-T02-PARENT-FUSION-VACUUM-MINKOWSKI-CASE-V1` `research_control/tasks/RT-20260730-008/artifacts/parent_fusion_notes_p9_t02_vacuum_minkowski_case.md`
+- `MD-V21-P9-T03-PARENT-FUSION-WEAK-FIELD-CLOCK-V1` `research_control/tasks/RT-20260730-010/artifacts/parent_fusion_notes_p9_t03_weak_field_clock.md`
 - `TEX-EQSRC-CLOSURE-SOURCE-LAW-SMUGGLING-AUDIT-V1` `research_control/tasks/RT-20260718-017/artifacts/eqsrc_closure_source_law_smuggling_audit_v1.tex`
 - `TEX-EQSRC-CLOSURE-SOURCE-LAW-V2-SMUGGLING-AUDIT` `research_control/tasks/RT-20260718-019/artifacts/eqsrc_closure_source_law_v2_smuggling_audit.tex`
 - `TEX-EQSRC-CLOSURE-SOURCE-LAW-V3-REFUTER-STRESS` `research_control/tasks/RT-20260718-022/artifacts/eqsrc_closure_source_law_v3_refuter_stress.tex`
@@ -530,6 +531,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V21-P8-T07-GATE-D-DECISION-V1` `research_control/tasks/RT-20260729-011/artifacts/p8_t07_gate_d_decision_v1.tex`
 - `TEX-V21-P9-T01-SOURCE-DERIVED-BENCHMARK-PROTOCOL-V1` `research_control/tasks/RT-20260729-012/artifacts/source_derived_benchmark_protocol_v1.tex`
 - `TEX-V21-P9-T02-FINITE-SOURCE-NULL-BACKGROUND-BENCHMARK-ATTEMPT-V1` `research_control/tasks/RT-20260730-008/artifacts/finite_source_null_background_benchmark_attempt_v1.tex`
+- `TEX-V21-P9-T03-WEAK-FIELD-OPERATIONAL-COUPLING-NONUNIQUENESS-V1` `research_control/tasks/RT-20260730-010/artifacts/weak_field_operational_coupling_nonuniqueness_v1.tex`
 
 ## explanatory_noncanonical
 
@@ -1247,6 +1249,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-V21-P8-T07-PARENT-FUSION-GATE-D-REVIEW-V1` `wiki/markdown/md-v21-p8-t07-parent-fusion-gate-d-review-v1.md`
 - `WIKI-MD-V21-P9-T01-PARENT-FUSION-BENCHMARK-PROTOCOL-V1` `wiki/markdown/md-v21-p9-t01-parent-fusion-benchmark-protocol-v1.md`
 - `WIKI-MD-V21-P9-T02-PARENT-FUSION-VACUUM-MINKOWSKI-CASE-V1` `wiki/markdown/md-v21-p9-t02-parent-fusion-vacuum-minkowski-case-v1.md`
+- `WIKI-MD-V21-P9-T03-PARENT-FUSION-WEAK-FIELD-CLOCK-V1` `wiki/markdown/md-v21-p9-t03-parent-fusion-weak-field-clock-v1.md`
 - `WIKI-MD-VALIDATOR-OPERATOR-WORKFLOW-PUBLICATION-BRIEF` `wiki/markdown/md-validator-operator-workflow-publication-brief.md`
 - `WIKI-PDF-LEGACY-ONTOLOGY-AETHER-FLOW-CONSISTENCY` `wiki/pdf/pdf-legacy-ontology-aether-flow-consistency.md`
 - `WIKI-PDF-LEGACY-ONTOLOGY-AETHER-FLOW-DYNAMICS` `wiki/pdf/pdf-legacy-ontology-aether-flow-dynamics.md`
@@ -1703,6 +1706,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-V21-P8-T07-GATE-D-DECISION-V1` `wiki/tex/tex-v21-p8-t07-gate-d-decision-v1.md`
 - `WIKI-TEX-V21-P9-T01-SOURCE-DERIVED-BENCHMARK-PROTOCOL-V1` `wiki/tex/tex-v21-p9-t01-source-derived-benchmark-protocol-v1.md`
 - `WIKI-TEX-V21-P9-T02-FINITE-SOURCE-NULL-BACKGROUND-BENCHMARK-ATTEMPT-V1` `wiki/tex/tex-v21-p9-t02-finite-source-null-background-benchmark-attempt-v1.md`
+- `WIKI-TEX-V21-P9-T03-WEAK-FIELD-OPERATIONAL-COUPLING-NONUNIQUENESS-V1` `wiki/tex/tex-v21-p9-t03-weak-field-operational-coupling-nonuniqueness-v1.md`
 
 ## project_control
 

@@ -1,0 +1,292 @@
+handoff_id: "handoff-0917"
+handoff_number: 917
+task_id: "RT-20260730-010"
+decision_id: "DDR-20260730-010"
+job_id: "AJ-RT-20260730-010-001"
+completion_id: "AJC-AJ-RT-20260730-010-001"
+completion_path: "research_control/tasks/RT-20260730-010/jobs/completions/AJC-AJ-RT-20260730-010-001.yaml"
+completion_sha256: "79e3d2a287a5b50c7fd81cb3561d9c2f33f92f5292759625ad6c1dbad0605178"
+status: "ready_after_checkpoint"
+created_at: "2026-07-30T22:03:48Z"
+parent_handoff_id: "handoff-0916"
+plan_task_id: "P9-T04"
+source_role_id: "candidate-constructor"
+source_role_version: "0.2.0"
+source_execution_role_ref: "candidate-constructor@0.2.0--RT-20260730-010"
+summary: "P9-T03 constructs an exact finite weak closure response and normalized Clock_src Signal_src and FreeFall_src response family. Two target-free coefficient records satisfy identical source constraints but yield distinct leading outputs, proving that the current sources do not select the operational coupling law needed for unique physical weak-field predictions. The case is INCONCLUSIVE with secondary FORMAL_ANALOGY, zero target comparisons, zero passes, and no promotion."
+next_action: "Invoke the one governed checkpoint for AJ-RT-20260730-010-001. After that commit, use one fresh bounded Candidate Constructor packet for P9-T04 to execute the distinct source-only null-propagation, local-inertial, and universal-free-fall case while carrying the P9-T02 and P9-T03 INCONCLUSIVE dispositions and the operational-coupling obstruction."
+current_claim_boundary: "CB-V21-P9-T03-WEAK-FIELD-OPERATIONAL-COUPLING-NONSELECTION-001"
+loop_risk_route: "distinct_benchmark_case_after_local_freeze"
+p9_t02_outcome: "INCONCLUSIVE"
+p9_t03_outcome: "INCONCLUSIVE"
+p9_t03_secondary_label: "FORMAL_ANALOGY"
+p9_t03_executed: true
+p9_t04_executed: false
+
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260730-010"
+  latest_research_handoff_id: "handoff-0917"
+  latest_research_next_action: "Invoke the one governed checkpoint for AJ-RT-20260730-010-001. After that commit, use one fresh bounded Candidate Constructor packet for P9-T04 to execute the distinct source-only null-propagation, local-inertial, and universal-free-fall case while carrying the P9-T02 and P9-T03 INCONCLUSIVE dispositions and the operational-coupling obstruction."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+
+claim_boundary:
+  allowed_next_scope: "One governed RT-010 checkpoint and then one separately claimed source-only P9-T04 causal, local-inertial, and universal-free-fall case."
+  completed_task: "RT-20260730-010"
+  completed_completion_path: "research_control/tasks/RT-20260730-010/jobs/completions/AJC-AJ-RT-20260730-010-001.yaml"
+  completed_completion_sha256: "79e3d2a287a5b50c7fd81cb3561d9c2f33f92f5292759625ad6c1dbad0605178"
+  source_handoff_id: "handoff-0916"
+  source_handoff_path: "research_control/handoffs/handoff-0916.yaml"
+  immutable_route_sha256: "470a26119c8de4049d3aa05017696d6d921af81dce852a130815f130cbf9912a"
+  route_blocker_fingerprint: "e408a810e2235ecd456ed8c03253a21dee51b00502355b5371ab5fc78ec55204"
+  source_artifact_path: "research_control/tasks/RT-20260730-010/artifacts/weak_field_operational_coupling_nonuniqueness_v1.tex"
+  source_artifact_sha256: "1764daa847a7d19479e89ead7105da96c8c503948aa59794d0b3973018c16fd3"
+  case_path: "research_control/tasks/RT-20260730-010/artifacts/p9_t03_weak_field_clock_case_v1.yaml"
+  case_sha256: "45b79d5e3e371b3a2bcdde3f26296dad8c6ff65306d17cdf672bf76383eeb864"
+  source_seal_path: "research_control/tasks/RT-20260730-010/artifacts/p9_t03_source_output_seal_v1.json"
+  source_seal_sha256: "a1b12e2a8277c94c6a626092a6dd9c5c7ab79399e420551dcd9e8ddae22194c0"
+  obstruction_id: "OBST-P9T03-WEAK-FIELD-OPERATIONAL-COUPLING-LAW-ABSENT-001"
+  checkpoint_invocation_count_before_handoff: 0
+  checkpoint_committed_before_handoff: false
+  source_stage_executed: true
+  source_stage_firewall_passed: true
+  source_output_sealed: true
+  target_comparison_oracle_invoked: false
+  target_informed_rerun_count: 0
+  independent_reproduction_acquired: false
+  executed_case_count: 1
+  inconclusive_case_count: 1
+  passed_case_count: 0
+  physical_Newtonian_potential_established: false
+  physical_freefall_established: false
+  physical_redshift_established: false
+  physical_clock_rate_established: false
+  effective_geometry_established: false
+  Gate_D_changed: false
+  Gate_E_verdict_issued: false
+  scientific_status_changed: true
+  scientific_status_change_scope: "exact finite operational-response counterfamily and precise current-source coupling-law nonselection obstruction only"
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  ontology_adoption_authorized: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_performed: false
+  blocked_claims:
+    - "finite closure response presented as a Newtonian potential or metric"
+    - "source token-response ratio presented as proper-time redshift physical frequency or clock rate"
+    - "signed address contrast presented as velocity acceleration or universal free fall"
+    - "arbitrary lambda coefficients presented as source-derived or physically calibrated"
+    - "same-context validation presented as independent reproduction"
+    - "P9-T03 presented as a benchmark pass"
+    - "Gate D or Gate E presented as changed"
+    - "P9-T04 presented as executed before the RT-010 checkpoint"
+    - "Einstein equations exact-GR recovery benchmark promotion proof publication push or completed derivation"
+    - "scoped obstruction presented as global no-go or future impossibility"
+
+plan_result:
+  plan_task_id: "P9-T03"
+  next_plan_task_id: "P9-T04"
+  title: "Recover the Newtonian, weak-field, redshift, and clock benchmarks"
+  result_status: "P9_T03_OPERATIONAL_COUPLING_NONSELECTION_OBSTRUCTION_CASE_INCONCLUSIVE_READY_FOR_CHECKPOINT"
+  work_item_status: "completed"
+  finite_weak_response_constructed: true
+  operational_response_family_constructed: true
+  two_record_counterfamily_executed: true
+  source_output_sealed: true
+  case_outcome: "INCONCLUSIVE"
+  secondary_label: "FORMAL_ANALOGY"
+  physical_weak_field_recovery_established: false
+  benchmark_pass_count: 0
+  p9_t04_dependency_ready_after_checkpoint: true
+  p9_t04_dependency_ready_now: false
+  p9_t04_executed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+distance_to_gr:
+  changed: false
+  effect: "obstruction_recorded_no_physical_delta"
+  burden_id: "benchmark_promotion"
+  milestone: "benchmark_promotion"
+  ledger_row_updated: true
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "The row gains the exact P9-T03 coefficient-law nonselection obstruction and finite response path, but remains blocked with zero physical benchmark passes."
+  downstream_unlocked:
+    - "none"
+  downstream_still_blocked:
+    - "physical weak-field potential"
+    - "physical free-fall acceleration"
+    - "physical redshift and clock rate"
+    - "effective geometry"
+    - "Einstein equations"
+    - "exact-GR recovery"
+    - "benchmark promotion"
+
+required_next_packet:
+  task_type: "v21_p9_t04_causal_local_inertial_universal_freefall_source_only_case"
+  plan_task_id: "P9-T04"
+  objective: "Derive source-only null propagation, local inertial behavior, and universal free fall from multiple physical source matter sectors without importing target null cones or geodesics."
+  output_requirement: "One sealed source causal or propagation response, multiple-sector free-fall comparison, declared corrections and model-to-world map, or one exact inconclusive or obstruction result."
+  dependency_qualification: "P9-T03 is finalized as an exact finite counterfamily plus INCONCLUSIVE physical case; the RT-010 checkpoint must commit first."
+  dependency_ready_after_checkpoint: true
+  dependency_ready_now: false
+  exact_human_authorization_required: false
+  p9_t02_outcome_carried_forward: "INCONCLUSIVE"
+  p9_t03_outcome_carried_forward: "INCONCLUSIVE"
+  operational_coupling_obstruction_carried_forward: "OBST-P9T03-WEAK-FIELD-OPERATIONAL-COUPLING-LAW-ABSENT-001"
+  executed: false
+
+selected_next_route:
+  route_id: "v21_p9_t04_causal_local_inertial_universal_freefall_source_only_case_after_p9_t03_inconclusive"
+  route_label: "benchmark-recovery-packet"
+  role_family: "candidate-constructor@0.2.0"
+  worker_skill: "continue-research"
+  selected_next_packet_type: "source_only_causal_local_inertial_universal_freefall_case"
+  task_type: "v21_p9_t04_causal_local_inertial_universal_freefall_source_only_case"
+  plan_task_id: "P9-T04"
+  target_derivation_milestone: "benchmark_promotion"
+  milestone_burden: "Test null propagation, local inertial behavior, and universal free fall from source dynamics and multiple physical source-matter sectors."
+  strategy_id: "construct_p9_t04_causal_local_inertial_universal_freefall_source_only_case_v1"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  p9_t02_outcome_carried_forward: "INCONCLUSIVE"
+  p9_t03_outcome_carried_forward: "INCONCLUSIVE"
+  target_null_cone_assumed: false
+  target_geodesic_assumed: false
+  formal_address_contrast_as_physical_freefall_forbidden: true
+  target_informed_source_repair_authorized: false
+  benchmark_result_preestablished: false
+  Gate_E_verdict_preestablished: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  executed: false
+  next_action: "Remain unexecuted until the RT-010 governed checkpoint commits."
+  source_handoff: "research_control/handoffs/handoff-0917.yaml"
+
+ordinary_route_guard:
+  schema_id: "ordinary_route_guard_evaluation_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  evaluation_id: "ORE-HANDOFF-0917"
+  ordinary_handoff_id: "handoff-0917"
+  threshold: 3
+  consecutive_project_system_tasks_before_selection: 0
+  ready_science_plan_task_ids:
+    - "P9-T04"
+    - "P14-T04"
+  selected_plan_task_id: "P9-T04"
+  selected_route_class: "physics_bearing"
+  selected_worker_skill: "continue-research"
+  outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  exception_receipt:
+    active: false
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+active_state_boundary:
+  active_task_id: "RT-20260730-010"
+  active_job_id: "AJ-RT-20260730-010-001"
+  current_status: "weak_field_operational_coupling_nonselection_precisely_obstructed_case_inconclusive_ready_for_checkpoint"
+  checkpoint_required: true
+  checkpoint_completed: false
+  checkpoint_invocation_count: 0
+  p9_t03_completed: true
+  p9_t03_outcome: "INCONCLUSIVE"
+  selected_next_plan_task_id: "P9-T04"
+  selected_next_worker_skill: "continue-research"
+  selected_next_role_family: "candidate-constructor@0.2.0"
+  selected_next_route_label: "benchmark-recovery-packet"
+  selected_next_strategy_id: "construct_p9_t04_causal_local_inertial_universal_freefall_source_only_case_v1"
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 178 route claim lease repository binding effort and clean manifest validated."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Exact source hashes rational calculation positivity normalization DAG seal exposure parent-child and no-fog checks pass."
+      - "Task-local validator passes 82 of 82 checks and scratch TeX compilation passes."
+  post_write:
+    status: "PENDING"
+    evidence:
+      - "Final repository-wide validation follows handoff registry and derivative synchronization."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "One governed RT-010 checkpoint remains uninvoked."
+  renderer:
+    status: "PENDING"
+    evidence:
+      - "Final render-and-check pass follows this handoff."
+  memory_bootstrap:
+    status: "PENDING"
+    evidence:
+      - "Final tracked memory synchronization and validate-only pass remain."
+  claim_language_linter:
+    status: "PENDING"
+    evidence:
+      - "Changed-source claim-language validation remains in the precheckpoint stack."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "none"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  publication_authorized: false
+  proof_authority: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  canonical_ontology_edit_authorized: false
+  ontology_selection_authorized: false
+  physical_interpretation_establishment_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required_no_nonblank_signals"
+  rationale: "The bounded P9-T03 physics packet emits no project-improvement signal."
+
+handoff_authority_boundary:
+  canonical_sources_unchanged: true
+  scientific_status_changed: true
+  scientific_status_change_scope: "task-local finite weak operational-response counterfamily and precise current-source coupling-law nonselection obstruction only"
+  physical_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false

@@ -1,0 +1,276 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs,longtable,array}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xurl}
+
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{obstruction}{Precise obstruction}
+\newenvironment{nonconclusion}{\par\smallskip\noindent\textbf{Non-conclusion.}\ }{\par\smallskip}
+
+\title{P9-T03 Source-Only Weak-Field Operational Response Attempt:\\
+An Exact Finite Counterfamily and a Scoped Coupling-Law Obstruction}
+\author{Candidate Constructor Packet RT-20260730-010}
+\date{2026-07-30}
+
+\begin{document}
+\sloppy
+\maketitle
+
+\section{Status and decisive result}
+
+This task-local object is \texttt{draft/control}, \texttt{proposal-only},
+and source-extension data.  It executes only the source stage of
+\texttt{P9-BENCH-WEAK-FIELD-CLOCK-V1}.  The result is
+\texttt{precise\_obstruction}, supported by an exact constructive
+counterfamily:
+\[
+ \boxed{\texttt{OBST-P9T03-WEAK-FIELD-OPERATIONAL-COUPLING-LAW-ABSENT-001}}.
+\]
+
+The fixed P7 package gives physical source-side matter, operational, and
+coupling semantics within its declared finite scope.  The P8 closure candidate
+gives the proposal-only static quotient equation
+\[
+ \alpha L_C h=\beta L_C u.
+\]
+Neither source fixes how a weak closure response \(h\) changes the transition
+weights or readout responses of \(\mathrm{Clock}_{\rm src}\),
+\(\mathrm{Signal}_{\rm src}\), or \(\mathrm{FreeFall}_{\rm src}\).
+The family below makes that missing law mathematically explicit.
+
+The benchmark case outcome is \texttt{INCONCLUSIVE}.  Its finite response
+ratios are at most \texttt{FORMAL\_ANALOGY}: there is no derived physical-time
+unit, target-frequency map, target-distance map, target acceleration, or
+source-to-target model-to-world map.  The target oracle is not opened for a
+comparison, no target formula is a boundary datum, and there is no benchmark
+pass.
+
+\section{Frozen source boundary}
+
+Let the source carrier be the explicitly declared three-address chain
+\[
+ X=\{-,0,+\}.
+\]
+For the fixed symmetric source conductance
+\[
+ C=\begin{pmatrix}
+  3/4&1/4&0\\
+  1/4&1/2&1/4\\
+  0&1/4&3/4
+ \end{pmatrix},
+ \qquad
+ L_C=I-C
+ =\frac14\begin{pmatrix}
+  1&-1&0\\
+  -1&2&-1\\
+  0&-1&1
+ \end{pmatrix},
+\]
+take \(\alpha=\beta=1\) and the zero-mean weak source datum
+\[
+ u_\varepsilon=\varepsilon(-1,0,1)^{\mathsf T}.
+\]
+The P8 quotient equation has the exact class
+\[
+ [h_\varepsilon]=[u_\varepsilon],
+\]
+and the zero-mean representative is
+\[
+ h_\varepsilon=\varepsilon(-1,0,1)^{\mathsf T}.
+\]
+Indeed,
+\[
+ L_Cu_\varepsilon
+ =\frac{\varepsilon}{4}(-1,0,1)^{\mathsf T}
+ =L_Ch_\varepsilon .
+\]
+
+This is an exact finite static response.  It is not a Newtonian potential,
+Lorentzian metric component, physical gravitational field, temporal evolution,
+or continuum weak-field limit.  The parameter \(\varepsilon\) and the ratio
+\(\beta/\alpha\) are dimensionless source quantities with no physical unit
+calibration.
+
+\section{Target-free operational response family}
+
+\begin{definition}[Admissible weak operational response family]
+For rational coefficients
+\[
+ \lambda=(\lambda_C,\lambda_S,\lambda_F)\in\mathbb Q^3
+\]
+and rational \(\varepsilon\) satisfying
+\[
+ |\lambda_C\varepsilon|<\frac12,\qquad
+ |\lambda_S\varepsilon|<\frac12,\qquad
+ |\lambda_F\varepsilon|<\frac12,
+\]
+define the following source-only transition weights.
+
+At endpoint \(x\in\{-,+\}\), with
+\(\widehat h_-=-1\) and \(\widehat h_+=1\), a two-step
+\(\mathrm{Clock}_{\rm src}\) cycle uses
+\[
+ p_x=\frac12+\lambda_C\varepsilon\widehat h_x,
+ \qquad
+ R_C(x)=p_x^2.
+\]
+On each oriented hop of the two-hop
+\(\mathrm{Signal}_{\rm src}\) chain, define
+\[
+ s_{\rightarrow}=\frac12+\lambda_S\varepsilon,\qquad
+ s_{\leftarrow}=\frac12-\lambda_S\varepsilon,
+\]
+with two-hop arrival responses
+\[
+ R_S^\rightarrow=s_{\rightarrow}^2,\qquad
+ R_S^\leftarrow=s_{\leftarrow}^2.
+\]
+From the middle address, define the one-step
+\(\mathrm{FreeFall}_{\rm src}\) address responses
+\[
+ q_+=\frac12+\lambda_F\varepsilon,\qquad
+ q_-=\frac12-\lambda_F\varepsilon,
+\]
+and the formal signed-address contrast
+\[
+ A_F=q_+-q_-=2\lambda_F\varepsilon.
+\]
+\end{definition}
+
+Every displayed pair is normalized and strictly nonnegative in the stated
+domain.  Each law is source-presentation covariant under the simultaneous
+exchange \(+\leftrightarrow-\), \(\varepsilon\leftrightarrow-\varepsilon\).
+No target potential, redshift formula, geodesic equation, target metric,
+physical constant, target unit, or desired agreement enters the definition.
+
+\begin{theorem}[Exact response coefficients]
+\label{thm:responses}
+For every admissible \(\lambda\),
+\begin{align}
+ R_C(+)-R_C(-)&=2\lambda_C\varepsilon,\\
+ \frac{R_C(+)}{R_C(-)}
+ &=\left(\frac{1+2\lambda_C\varepsilon}
+              {1-2\lambda_C\varepsilon}\right)^2
+ =1+8\lambda_C\varepsilon
+   +32\lambda_C^2\varepsilon^2+O(\varepsilon^3),\\
+ \frac{R_S^\rightarrow}{R_S^\leftarrow}
+ &=\left(\frac{1+2\lambda_S\varepsilon}
+              {1-2\lambda_S\varepsilon}\right)^2
+ =1+8\lambda_S\varepsilon
+   +32\lambda_S^2\varepsilon^2+O(\varepsilon^3),\\
+ A_F&=2\lambda_F\varepsilon.
+\end{align}
+\end{theorem}
+
+\begin{proof}
+The first and fourth identities follow by direct subtraction.  The two ratios
+follow by factoring \(1/2\) and expanding
+\((1+x)^2(1-x)^{-2}=1+4x+8x^2+O(x^3)\) at
+\(x=2\lambda_{C,S}\varepsilon\).
+\end{proof}
+
+\section{Exact nonselection counterfamily}
+
+Consider the same frozen \(C,L_C,u_\varepsilon,h_\varepsilon\) and the same
+P7 operational roles under the two source-only coefficient records
+\[
+ \lambda^{(A)}=(0,0,0),
+ \qquad
+ \lambda^{(B)}=\left(\frac18,\frac1{16},\frac14\right).
+\]
+For \(|\varepsilon|\leq 1/4\), both records satisfy every positivity,
+normalization, finite-source, relabeling, and no-target-import condition above.
+Yet their leading outputs differ:
+\[
+\begin{array}{c|ccc}
+ & R_C(+)/R_C(-) & R_S^\rightarrow/R_S^\leftarrow & A_F\\
+\hline
+\lambda^{(A)}
+ &1&1&0\\
+\lambda^{(B)}
+ &1+\varepsilon+O(\varepsilon^2)
+ &1+\frac12\varepsilon+O(\varepsilon^2)
+ &\frac12\varepsilon .
+\end{array}
+\]
+
+\begin{obstruction}[Operational coupling-law nonselection]
+The current fixed P7/P8 sources do not derive a selector
+\[
+ \Lambda_{\rm op}:
+ (C,u,h,\mathrm{device\ role})
+ \longmapsto(\lambda_C,\lambda_S,\lambda_F)
+\]
+or any equivalent law fixing the three response coefficients.  Therefore the
+same source state and closure response admit at least the two exact,
+source-normalized response records above with distinct leading clock, signal,
+and address-contrast outputs.  The current ontology consequently does not
+derive a unique weak-field clock ratio, signal-frequency ratio, free-fall
+acceleration, or Newtonian potential calibration from these data.
+\end{obstruction}
+
+This is a current-source nonselection result.  It is not a theorem that no
+future conservative source-side law can select \(\Lambda_{\rm op}\), nor that
+the project cannot recover the target behavior.  A source extension could
+specify a device-response coupling, dimensional calibration, temporal
+interpretation, and model-to-world map, after which a fresh firewall-controlled
+case could be executed.
+
+\section{Parameter, correction, and comparison disposition}
+
+\begin{longtable}{p{0.23\linewidth}p{0.31\linewidth}p{0.36\linewidth}}
+\toprule
+Quantity & Exact source status & Physical/benchmark status\\
+\midrule
+\(\varepsilon\) & dimensionless rational weak-source parameter &
+no physical potential or scale calibration\\
+\(\alpha,\beta\) & proposal-only P8 coefficients; fixed to one internally &
+no \(G\), \(c\), mass, length, or time normalization\\
+\(\lambda_C,\lambda_S,\lambda_F\) & independent source-extension coefficients &
+not selected by current source law or target fit\\
+clock and signal ratios & exact finite token-response ratios &
+not proper-time or frequency ratios\\
+\(A_F\) & exact signed-address contrast &
+not velocity or acceleration\\
+nonlinear correction & exact rational functions; displayed through
+\(O(\varepsilon^2)\) & no post-Newtonian interpretation\\
+finite size & exactly three addresses & uncontrolled physical finite-size map\\
+coarse graining & none used & absent\\
+uncertainty and tolerance & exact rational source algebra & unset physically\\
+independent reproduction & same-context exact validator only & not acquired\\
+\bottomrule
+\end{longtable}
+
+Because the physical codomain, units, uncertainty model, independent
+reproduction, and coefficient-selection law are absent, the preregistered
+\texttt{INCONCLUSIVE} branch fires before target comparison.  The target
+formulas are not loaded as an oracle and no coefficient is fitted.
+
+\section{Distance-to-GR and next-route boundary}
+
+This packet adds an exact finite weak-response calculation and a precise
+obstruction but changes no Distance-to-GR status.  It locally freezes only the
+unchanged P9-T03 branch that attempts to infer physical weak-field observables
+without a new source operational-coupling law or lawful calibration.
+
+P9-T04 may proceed only as a distinct source-only causal/free-fall benchmark
+case carrying this obstruction, the P9-T02 \texttt{INCONCLUSIVE} result, and
+all existing physical and promotion blocks.  It may not reinterpret
+\(A_F\) as universal free fall or use target null cones or geodesics as source
+premises.
+
+\begin{nonconclusion}
+No canonical ontology or source law is edited or adopted.  No Newtonian
+potential, physical acceleration, proper-time redshift, signal-frequency
+shift, effective metric, equivalence principle, Einstein equation, exact-GR
+recovery, benchmark pass, Gate E verdict, promotion, proof, publication, push,
+global no-go, future-impossibility, or completed derivation is established.
+\end{nonconclusion}
+
+\end{document}

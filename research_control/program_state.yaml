@@ -1,11 +1,87 @@
 mode: "director_led_research_control"
-active_task_id: "RT-20260730-009"
-latest_handoff_id: "handoff-0916"
-current_status: "rt008_agentjob_registry_ordered_write_allowlist_parity_recovered_ready_for_checkpoint"
-claim_boundary_summary: "RT-20260730-009 restores exact ordered identity for the RT-008 AgentJob registry write allowlist while preserving the RT-008 AgentJob, role, completion, handoff-0915, and P9-T02 scientific payload byte-for-byte. This is project-system recovery only: P9-T02 remains INCONCLUSIVE, P9-T03 is unexecuted, and no physical, Distance-to-GR, benchmark, Gate E, promotion, proof, publication, push, or completed-derivation authority follows."
-next_plan_task_id: "P9-T03"
+active_task_id: "RT-20260730-010"
+latest_handoff_id: "handoff-0917"
+current_status: "weak_field_operational_coupling_nonselection_precisely_obstructed_case_inconclusive_ready_for_checkpoint"
+claim_boundary_summary: "RT-20260730-010 constructs an exact finite P9-T03 weak operational-response counterfamily and proves that the current source package does not select the device-coupling coefficients or physical model-to-world map. The case is INCONCLUSIVE with secondary FORMAL_ANALOGY, zero target comparisons, zero benchmark passes, and no physical, Distance-to-GR, Gate E, promotion, proof, publication, push, global-no-go, future-impossibility, or completed-derivation authority."
+next_plan_task_id: "P9-T04"
 next_worker_skill: "continue-research"
-next_recommended_action: "Invoke the one governed cumulative checkpoint for AJ-RT-20260730-009-001. After that commit, use one fresh bounded Candidate Constructor packet for P9-T03 to attempt source-only weak-field potentials, free fall, redshift, and clock-rate relations while carrying the P9-T02 INCONCLUSIVE disposition."
+next_recommended_action: "Invoke the one governed checkpoint for AJ-RT-20260730-010-001. After that commit, use one fresh bounded Candidate Constructor packet for P9-T04 to execute the distinct source-only null-propagation, local-inertial, and universal-free-fall case while carrying the P9-T02 and P9-T03 INCONCLUSIVE dispositions and the operational-coupling obstruction."
+
+p9_t03_weak_field_redshift_clock_source_only_case:
+  task_id: "RT-20260730-010"
+  parent_task_id: "RT-20260730-009"
+  parent_handoff_id: "handoff-0916"
+  plan_task_id: "P9-T03"
+  next_plan_task_id: "P9-T04"
+  claim_boundary_id: "CB-V21-P9-T03-WEAK-FIELD-OPERATIONAL-COUPLING-NONSELECTION-001"
+  status: "P9_T03_OPERATIONAL_COUPLING_NONSELECTION_OBSTRUCTION_CASE_INCONCLUSIVE_READY_FOR_CHECKPOINT"
+  work_item_status: "completed"
+  route_label: "benchmark-recovery-packet"
+  selected_role_family: "candidate-constructor@0.2.0"
+  selected_worker_skill: "continue-research"
+  selected_strategy_id: "construct_p9_t03_weak_field_redshift_clock_source_only_case_v1"
+  target_derivation_milestone: "benchmark_promotion"
+  milestone_burden: "Test local weak-field physics from the source theory."
+  dependency_checkpoint_commit: "a88a894ed31798e91bef598da7f5185ca994b235"
+  immutable_route_sha256: "470a26119c8de4049d3aa05017696d6d921af81dce852a130815f130cbf9912a"
+  route_blocker_fingerprint: "e408a810e2235ecd456ed8c03253a21dee51b00502355b5371ab5fc78ec55204"
+  source_artifact_path: "research_control/tasks/RT-20260730-010/artifacts/weak_field_operational_coupling_nonuniqueness_v1.tex"
+  source_artifact_sha256: "1764daa847a7d19479e89ead7105da96c8c503948aa59794d0b3973018c16fd3"
+  source_case_path: "research_control/tasks/RT-20260730-010/artifacts/p9_t03_weak_field_clock_case_v1.yaml"
+  source_case_sha256: "45b79d5e3e371b3a2bcdde3f26296dad8c6ff65306d17cdf672bf76383eeb864"
+  source_seal_path: "research_control/tasks/RT-20260730-010/artifacts/p9_t03_source_output_seal_v1.json"
+  source_seal_sha256: "a1b12e2a8277c94c6a626092a6dd9c5c7ab79399e420551dcd9e8ddae22194c0"
+  provenance_dag_sha256: "59fea0af53cf4b1c7277b239937ce6f868df8ada20e4c1cd9e651282e5bcbfb4"
+  target_exposure_ledger_sha256: "6b6661d96a01f87b7ef66deaefd1154b26420c8a242405ee661d00f92d9d6586"
+  benchmark_case_receipt_sha256: "2142b17e344c5877fc056aa8d757d88b27b1b5fd58f450ff79eff29a45e142da"
+  completion_path: "research_control/tasks/RT-20260730-010/jobs/completions/AJC-AJ-RT-20260730-010-001.yaml"
+  completion_sha256: "79e3d2a287a5b50c7fd81cb3561d9c2f33f92f5292759625ad6c1dbad0605178"
+  handoff_id: "handoff-0917"
+  handoff_path: "research_control/handoffs/handoff-0917.yaml"
+  handoff_yaml_sha256: "16b85ad658e82c857188026ff487fdd321937173ce5b5f801f5c00005f7609a5"
+  handoff_markdown_sha256: "0bfb11acdf1c2f638a7a848a283eb3a64c143fcfbd27a9ab9a3bfa9fc33083e8"
+  obstruction_id: "OBST-P9T03-WEAK-FIELD-OPERATIONAL-COUPLING-LAW-ABSENT-001"
+  source_stage_executed: true
+  source_stage_firewall_passed: true
+  source_output_sealed: true
+  finite_weak_response_constructed: true
+  operational_response_family_constructed: true
+  two_record_counterfamily_executed: true
+  benchmark_case_outcome: "INCONCLUSIVE"
+  benchmark_case_secondary_label: "FORMAL_ANALOGY"
+  executed_case_count: 1
+  inconclusive_case_count: 1
+  benchmark_pass_count: 0
+  target_comparison_oracle_invoked: false
+  target_informed_rerun_count: 0
+  physical_Newtonian_potential_established: false
+  physical_freefall_established: false
+  physical_redshift_established: false
+  physical_clock_rate_established: false
+  effective_geometry_established: false
+  Gate_D_changed: false
+  Gate_E_verdict_issued: false
+  scientific_claims_changed: true
+  scientific_claim_change_scope: "task-local exact finite operational-response counterfamily and precise current-source coupling-law nonselection obstruction only"
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  ontology_adoption_authorized: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  checkpoint_invocation_count: 0
+  checkpoint_committed: false
+  selected_next_work_item: "P9-T04"
+  selected_next_worker_skill: "continue-research"
+  selected_next_role_family: "candidate-constructor@0.2.0"
+  selected_next_packet_type: "source_only_causal_local_inertial_universal_freefall_case"
+  selected_next_route_label: "benchmark-recovery-packet"
+  selected_next_strategy_id: "construct_p9_t04_causal_local_inertial_universal_freefall_source_only_case_v1"
+  selected_next_requires_human_gate: false
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
 
 rt008_agentjob_registry_ordered_write_allowlist_parity_recovery:
   task_id: "RT-20260730-009"
@@ -9168,9 +9244,9 @@ project_improvement_bridge:
   resolution_evidence_path: "research_control/tasks/RT-20260725-002/jobs/completions/AJC-AJ-RT-20260725-002-001.yaml"
 
 active_state_bifurcation:
-  latest_research_task_id: "RT-20260730-009"
-  latest_research_handoff_id: "handoff-0916"
-  latest_research_next_action: "Invoke the one governed cumulative checkpoint for AJ-RT-20260730-009-001. After that commit, use one fresh bounded Candidate Constructor packet for P9-T03 to attempt source-only weak-field potentials, free fall, redshift, and clock-rate relations while carrying the P9-T02 INCONCLUSIVE disposition."
+  latest_research_task_id: "RT-20260730-010"
+  latest_research_handoff_id: "handoff-0917"
+  latest_research_next_action: "Invoke the one governed checkpoint for AJ-RT-20260730-010-001. After that commit, use one fresh bounded Candidate Constructor packet for P9-T04 to execute the distinct source-only null-propagation, local-inertial, and universal-free-fall case while carrying the P9-T02 and P9-T03 INCONCLUSIVE dispositions and the operational-coupling obstruction."
   latest_project_system_task_id: "none"
   latest_project_system_status: "none"
   latest_project_system_sidecar_task_id: "none"

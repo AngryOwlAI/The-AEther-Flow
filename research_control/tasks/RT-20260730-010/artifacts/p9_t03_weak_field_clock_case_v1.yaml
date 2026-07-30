@@ -1,0 +1,248 @@
+schema_id: "p9_t03_weak_field_clock_case_v1"
+artifact_id: "P9T03WeakFieldClockSourceOnlyCase_v1"
+task_id: "RT-20260730-010"
+job_id: "AJ-RT-20260730-010-001"
+case_id: "P9-BENCH-WEAK-FIELD-CLOCK-V1"
+downstream_plan_task_id: "P9-T03"
+protocol_id: "SourceDerivedBenchmarkProtocol_v1"
+firewall_id: "TargetImportFirewall_v1"
+status: "completed"
+candidate_status: "proposal-only"
+candidate_constructor_result: "precise_obstruction"
+execution_status: "INCONCLUSIVE"
+source_execution_status: "COMPLETED"
+source_stage_firewall_status: "PASS"
+source_output_seal_status: "SEALED"
+target_comparison_status: "NOT_OPENED"
+independent_reproduction_status: "NOT_ACQUIRED"
+target_derivation_milestone: "benchmark_promotion"
+milestone_burden: "Test local weak-field physics from the source theory."
+benchmark_scope: "Newtonian weak-field redshift and clock behavior"
+source_only_attempt_id: "WeakFieldOperationalCouplingNonuniqueness_v1"
+obstruction_id: "OBST-P9T03-WEAK-FIELD-OPERATIONAL-COUPLING-LAW-ABSENT-001"
+obstruction_scope: "current fixed P7 physical source-matter package plus proposal-only P8 finite closure"
+adoption_status: "blocked_adoption_open_continuation"
+
+source_inputs:
+  - input_id: "source_defined_localized_matter_state"
+    source_stage_value: "three-address finite source chain X={-,0,+} with u_epsilon=epsilon(-1,0,1)"
+    status: "constructed_finite_source_control"
+    physical_status: "physical source-side matter scope only"
+    source_extension_status: "proposal-only weak profile"
+  - input_id: "source_derived_weak_field_equations"
+    source_stage_value: "alpha L_C h=beta L_C u with alpha=beta=1 and h_epsilon=u_epsilon"
+    status: "exact_static_finite_response"
+    physical_status: "not_Newtonian_potential_or_temporal_field_equation"
+    source_extension_status: "proposal-only P8 ancestry"
+  - input_id: "physical_Clock_src_Signal_src_FreeFall_src_semantics"
+    source_stage_value: "P7 physical source operational roles plus coefficient family lambda=(lambda_C,lambda_S,lambda_F)"
+    status: "source_physical_roles_adopted_but_h_to_device_coupling_not_derived"
+    physical_status: "no target proper-time frequency distance or acceleration map"
+    source_extension_status: "coefficient family is proposal-only"
+
+derived_intermediate_objects:
+  - object_id: "finite_weak_closure_response"
+    value: "h_epsilon=epsilon(-1,0,1), L_C h_epsilon=L_C u_epsilon"
+    status: "exact_static_source_algebra"
+  - object_id: "clock_endpoint_ratio_family"
+    value: "R_C(+)/R_C(-)=((1+2 lambda_C epsilon)/(1-2 lambda_C epsilon))^2"
+    status: "exact_formal_source_token_response"
+  - object_id: "signal_direction_ratio_family"
+    value: "R_S_forward/R_S_reverse=((1+2 lambda_S epsilon)/(1-2 lambda_S epsilon))^2"
+    status: "exact_formal_source_token_response"
+  - object_id: "freefall_address_contrast_family"
+    value: "A_F=2 lambda_F epsilon"
+    status: "exact_source_address_contrast"
+  - object_id: "operational_coupling_nonselection"
+    value: "lambda^(A)=(0,0,0) and lambda^(B)=(1/8,1/16,1/4) obey the same source constraints but yield distinct leading outputs"
+    status: "precise_scoped_obstruction"
+
+target_observable:
+  identity: "Newtonian potential, slow-motion acceleration, gravitational redshift, and proper clock-rate ratio"
+  stage: "comparison_only_after_seal"
+  oracle_opened: false
+  content_loaded_for_comparison: false
+  comparison_executed: false
+  reason: "The source operational-coupling selector, physical codomain, units, and model-to-world map are absent, so INCONCLUSIVE fires before comparison."
+
+imported_assumptions: []
+
+approximation_order:
+  source_calculation: "exact finite rational identities with ratios expanded through O(epsilon^2)"
+  weak_source_order: "leading O(epsilon), exact rational functions retained"
+  slow_motion_order: "UNSET"
+  continuum_order: "UNSET"
+  validity_domain: "rational epsilon and coefficients satisfying |lambda_i epsilon|<1/2"
+  physical_validity_domain: "NOT_ESTABLISHED"
+
+residual_corrections:
+  finite_algebraic_remainder: "zero for exact displayed rational functions"
+  weak_series_remainder: "O(epsilon^3) after displayed quadratic terms"
+  finite_size: "exactly three source addresses; uncontrolled physically"
+  coarse_graining: "ABSENT"
+  discretization: "NO_PHYSICAL_CONTINUUM_MAP"
+  truncation: "controlled only as formal epsilon series"
+  boundary: "fixed finite endpoints; no physical boundary map"
+  calibration: "ABSENT"
+  stochastic: "NOT_APPLICABLE_TO_EXACT_BOOKKEEPING"
+  device: "coefficient-selection law absent"
+  physical_correction_control: "ABSENT"
+
+analytic_equivalence:
+  status: "UNSET"
+  equivalence_relation: "ABSENT_FOR_TARGET"
+  domain_and_regularities: "FINITE_SOURCE_ONLY"
+  units_or_dimensionless_status: "ALL_SOURCE_VALUES_DIMENSIONLESS_PHYSICAL_UNITS_ABSENT"
+  gauge_or_presentation_quotient: "finite component-shift quotient and endpoint relabeling only"
+  boundary_conditions: "finite three-address chain"
+  target_label_reuse_is_equivalence: false
+
+numerical_tolerance:
+  status: "UNSET"
+  norm_W: ""
+  sampling_domain: ""
+  s_prereg: ""
+  epsilon_floor: ""
+  uncertainty_propagation: ""
+  threshold_tau: ""
+  threshold_units: ""
+  error_budget_basis: ""
+  calibration_source: ""
+  target_fit_used: false
+
+success_criteria:
+  status: "NOT_SATISFIED"
+  rule: "unique source-derived operational responses with physical units and model-to-world map, firewall PASS, independent reproduction, and preregistered target comparison PASS"
+failure_criteria:
+  status: "NOT_TRIGGERED"
+  rule: "source invalidity, firewall breach, or decisive target deviation after lawful physical comparison"
+inconclusive_criteria:
+  status: "TRIGGERED"
+  rule: "missing physical device coupling, physical codomain, units, correction control, tolerance, uncertainty bound, or independent reproduction"
+  triggered_items:
+    - "source law selecting lambda_C lambda_S and lambda_F absent"
+    - "target proper-time frequency distance and acceleration map absent"
+    - "physical units and scale calibration absent"
+    - "physical correction and uncertainty controls absent"
+    - "target equivalence and tolerance absent"
+    - "independent reproduction absent"
+
+source_hash_manifest:
+  - source_id: "SourceDerivedBenchmarkProtocol_v1"
+    path: "research_control/tasks/RT-20260729-012/artifacts/source_derived_benchmark_protocol_v1.tex"
+    sha256: "88ef097bf712ad115e9af62cc18a8b3eabb12f8545350f714ad065f702471007"
+    allowed_use: "frozen source-stage and comparison protocol"
+  - source_id: "SourceDerivedBenchmarkCaseSchema_v1"
+    path: "research_control/tasks/RT-20260729-012/artifacts/source_derived_benchmark_case_schema_v1.yaml"
+    sha256: "5045de8fbaeb6c80b89ec88b71143a8aeaca1c892efadc4b7293cb438ee808d8"
+    allowed_use: "frozen case fields and INCONCLUSIVE classifier"
+  - source_id: "TargetImportFirewall_v1"
+    path: "research_control/tasks/RT-20260729-012/artifacts/target_import_firewall_v1.yaml"
+    sha256: "ccb9297f817a9b4eeb886834a510e1f21d518a2668bc3fde9695b909d6884acf"
+    allowed_use: "fail-closed target-import boundary"
+  - source_id: "P7T08PhysicalMatterAdoptionDecision_v1"
+    path: "research_control/tasks/RT-20260729-001/artifacts/p7_t08_gate_c_decision_v1.tex"
+    sha256: "85fbf32fb9b02aeae556149cbc5c6b51bd6fedf278a3bc401545c93e29fc4827"
+    allowed_use: "exact physical source-side operational semantics and explicit target-spacetime exclusions"
+  - source_id: "SourceOperationalDeviceSuiteSpec_v1"
+    path: "research_control/tasks/RT-20260728-002/artifacts/source_operational_device_suite_spec_v1.yaml"
+    sha256: "417c604bad008b85b153718ae04aa43307c2ff3cfa3a5c3f242e70b013c86ba4"
+    allowed_use: "finite Clock_src Signal_src and FreeFall_src protocol grammar"
+  - source_id: "FiniteSourceClosureConstraintSpec_v1"
+    path: "research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_constraint_spec_v1.yaml"
+    sha256: "8840b205e8aa12d73f3e782ec6936eb96385bb5694c298b1bf41a2bdfe472626"
+    allowed_use: "proposal-only finite quotient response equation"
+  - source_id: "P9T02VacuumMinkowskiSourceOnlyCase_v1"
+    path: "research_control/tasks/RT-20260730-008/artifacts/p9_t02_vacuum_minkowski_case_v1.yaml"
+    sha256: "2fadb19c5849f1da5843c0e0599dbdc31790eab46587ce6718abbf4d3a0be79c"
+    allowed_use: "carried-forward INCONCLUSIVE disposition and zero benchmark passes"
+
+code_hash_manifest:
+  - code_id: "RepositoryPythonProjectManifest"
+    path: "pyproject.toml"
+    sha256: "c30be88711317ef594cdee96755d6a5df302bc8094e32c483cf24fa5d760a52e"
+  - code_id: "RepositoryPythonRequirements"
+    path: "requirements.txt"
+    sha256: "e74839bd2ea007c2c9ce1a267c74c376a0603591c8943b0e4e45de7f29f21080"
+
+provenance_dag:
+  path: "research_control/tasks/RT-20260730-010/artifacts/p9_t03_provenance_dag_v1.yaml"
+  source_graph_acyclic: true
+  forbidden_target_to_source_path_count: 0
+  target_to_seal_path_count: 0
+
+source_output_seal:
+  path: "research_control/tasks/RT-20260730-010/artifacts/p9_t03_source_output_seal_v1.json"
+  sealed_at: "2026-07-30T22:03:48Z"
+  mutation_after_seal_authorized: false
+
+independent_reproduction:
+  status: "NOT_ACQUIRED"
+  same_context_exact_validation_available: true
+  same_context_validation_counts_as_independent: false
+  fresh_executor_or_team: false
+  fresh_environment: false
+  independent_code_or_method: false
+  disposition: "INCONCLUSIVE"
+
+model_to_world_map:
+  status: "MISSING"
+  source_and_token_domain: "finite three-address carrier, static closure response, and rational device-token responses"
+  physical_or_empirical_codomain: "proper time frequency distance acceleration and Newtonian potential ABSENT"
+  preparation_and_intervention_semantics: "physical source-side semantics adopted only within P7 finite domain"
+  unit_and_scale_calibration_provenance: "ABSENT"
+  uncertainty_and_failure_model: "ABSENT_FOR_PHYSICAL_OBSERVABLES"
+  regime_of_validity: "exact finite source algebra and formal weak parameter only"
+  cross_device_or_cross_sector_identification: "formal source roles only; no target identification"
+  independent_reproduction_method: "ABSENT"
+  disposition: "INCONCLUSIVE"
+
+target_exposure_ledger:
+  path: "research_control/tasks/RT-20260730-010/artifacts/p9_t03_target_exposure_ledger_v1.yaml"
+  target_family_known: true
+  blindness_claimed: false
+  target_oracle_opened: false
+  target_informed_rerun_count: 0
+
+source_stage_result:
+  theorem_id: "P9T03-THM-OPERATIONAL-COUPLING-NONSELECTION-001"
+  theorem_status: "draft/control"
+  exact_statement: "The fixed finite weak source response admits normalized source-only operational laws with independent coefficients lambda_C lambda_S lambda_F; two admissible coefficient records yield distinct leading clock signal and address-contrast outputs."
+  fixed_execution: "lambda^(A)=(0,0,0) and lambda^(B)=(1/8,1/16,1/4), with |epsilon|<=1/4"
+  source_validity_status: "PASS"
+  physical_interpretation_status: "NOT_ESTABLISHED"
+
+case_classification:
+  outcome: "INCONCLUSIVE"
+  secondary_label: "FORMAL_ANALOGY"
+  primary_reason: "current source package does not select the operational-coupling coefficients or supply a physical model-to-world map"
+  firewall_failure: false
+  source_failure: false
+  target_comparison_failure: false
+  target_comparison_executed: false
+  formal_analogy_present: true
+  conditional_source_extension_ancestry: true
+  benchmark_pass: false
+  local_pass_implies_benchmark_promotion: false
+
+authority_limits:
+  source_law_adopted_or_rejected: false
+  canonical_ontology_modified: false
+  Newtonian_potential_established: false
+  physical_free_fall_established: false
+  physical_redshift_established: false
+  physical_clock_rate_established: false
+  effective_geometry_established: false
+  equivalence_principle_established: false
+  Einstein_equations_established: false
+  exact_GR_recovery_established: false
+  Gate_D_changed: false
+  Gate_E_verdict_issued: false
+  benchmark_pass_established: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false

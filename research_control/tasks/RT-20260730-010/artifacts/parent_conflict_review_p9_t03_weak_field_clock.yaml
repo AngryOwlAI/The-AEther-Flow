@@ -1,0 +1,35 @@
+schema_id: "parent_child_conflict_review_v1"
+task_id: "RT-20260730-010"
+status: "resolved"
+resolution_rounds: 1
+unresolved_conflict_count: 0
+unresolved_conflicts: []
+conflicts:
+  - conflict_id: "P9T03-CONFLICT-PHYSICAL-SEMANTICS-001"
+    type: "scope_conflict"
+    severity: "blocking"
+    phys_math_position: "P7 device roles can support exact finite response ratios."
+    phys_phil_position: "P7-T08 does not identify those ratios with proper time or frequency."
+    resolution: "Retain exact source ratios and classify physical comparison as INCONCLUSIVE and FORMAL_ANALOGY."
+  - conflict_id: "P9T03-CONFLICT-COEFFICIENTS-001"
+    type: "assumption_conflict"
+    severity: "blocking"
+    phys_math_position: "A coefficient family is sufficient to calculate source responses."
+    phys_phil_position: "No coefficient value may be presented as derived or physically calibrated."
+    resolution: "Use two explicit proposal-only records solely as a nonselection counterfamily."
+  - conflict_id: "P9T03-CONFLICT-TARGET-ACCESS-001"
+    type: "evidence_conflict"
+    severity: "major"
+    phys_math_position: "No target formula is required for the counterfamily."
+    phys_phil_position: "Prior target-family and authority inspection must be disclosed."
+    resolution: "Record nonblind prior knowledge, keep the comparison oracle closed, and prohibit target-informed reruns."
+  - conflict_id: "P9T03-CONFLICT-ROUTE-001"
+    type: "route_conflict"
+    severity: "major"
+    phys_math_position: "The exact obstruction completes the weak-field case disposition."
+    phys_phil_position: "A conservative source-side coupling law could reopen the case."
+    resolution: "Complete P9-T03 as INCONCLUSIVE with a local freeze and keep source-extension continuation open."
+authority_limits:
+  conflict_resolution_is_physics_proof: false
+  benchmark_pass_established: false
+  physics_promotion_authorized: false

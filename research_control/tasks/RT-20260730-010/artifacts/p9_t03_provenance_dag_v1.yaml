@@ -1,0 +1,54 @@
+schema_id: "p9_t03_provenance_dag_v1"
+task_id: "RT-20260730-010"
+case_id: "P9-BENCH-WEAK-FIELD-CLOCK-V1"
+status: "sealed"
+nodes:
+  - node_id: "p7_operational_source"
+    stage: "source_root"
+    path: "research_control/tasks/RT-20260728-002/artifacts/source_operational_device_suite_spec_v1.yaml"
+  - node_id: "p7_physical_adoption"
+    stage: "source_root"
+    path: "research_control/tasks/RT-20260729-001/artifacts/p7_t08_gate_c_decision_v1.tex"
+  - node_id: "p8_closure_source"
+    stage: "source_root"
+    path: "research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_constraint_spec_v1.yaml"
+  - node_id: "p9_protocol"
+    stage: "source_root"
+    path: "research_control/tasks/RT-20260729-012/artifacts/source_derived_benchmark_protocol_v1.tex"
+  - node_id: "finite_weak_response"
+    stage: "source_stage"
+  - node_id: "operational_response_family"
+    stage: "source_stage"
+  - node_id: "two_record_counterfamily"
+    stage: "source_stage"
+  - node_id: "coupling_nonselection_obstruction"
+    stage: "source_stage"
+  - node_id: "source_seal"
+    stage: "seal"
+    path: "research_control/tasks/RT-20260730-010/artifacts/p9_t03_source_output_seal_v1.json"
+  - node_id: "target_weak_field_family"
+    stage: "target_root"
+  - node_id: "case_classification"
+    stage: "classification"
+edges:
+  - ["p7_operational_source", "operational_response_family"]
+  - ["p7_physical_adoption", "operational_response_family"]
+  - ["p8_closure_source", "finite_weak_response"]
+  - ["p9_protocol", "finite_weak_response"]
+  - ["finite_weak_response", "operational_response_family"]
+  - ["operational_response_family", "two_record_counterfamily"]
+  - ["two_record_counterfamily", "coupling_nonselection_obstruction"]
+  - ["coupling_nonselection_obstruction", "source_seal"]
+  - ["source_seal", "case_classification"]
+target_oracle_opened: false
+forbidden_reachability_result:
+  target_root_count: 1
+  target_to_source_stage_path_count: 0
+  target_to_seal_path_count: 0
+  firewall_result: "PASS_SOURCE_STAGE"
+known_target_family_disclosure: "The target weak-field family and required ontology authority files were known before execution; no target value formula boundary condition tolerance branch or desired agreement selected a source datum."
+authority_limits:
+  provenance_graph_is_physics_proof: false
+  target_blindness_claimed: false
+  benchmark_pass_established: false
+  physics_promotion_authorized: false
