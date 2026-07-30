@@ -1,0 +1,60 @@
+schema_id: "p9_t02_target_exposure_ledger_v1"
+artifact_id: "P9T02TargetExposureLedger_v1"
+task_id: "RT-20260730-008"
+case_id: "P9-BENCH-VACUUM-MINKOWSKI-V1"
+status: "complete_for_source_stage"
+
+known_before_execution:
+  target_family_name: "Minkowski equivalence class and vacuum perturbative reference"
+  test_question_known: true
+  expected_general_target_property_known: "flat vacuum background"
+  source_answer_selected_from_target_content: false
+  blindness_claimed: false
+
+oracle_access:
+  target_oracle_opened: false
+  target_reference_files_opened_during_case_source_stage: []
+  target_payload_copied_into_source_inputs: false
+  target_residual_observed: false
+  target_tuned_parameter_count: 0
+  target_selected_branch_count: 0
+  target_selected_tolerance_count: 0
+  target_informed_rerun_count: 0
+
+post_seal_authority_inspection:
+  performed: true
+  timing: "after the source output and source-stage DAG were sealed"
+  paths:
+    - "ontology/tex/aether_flow_dynamics.tex"
+    - "ontology/tex/aether_flow_relativistic_recovery.tex"
+    - "ontology/tex/aether_flow_consistency.tex"
+  purpose: "Read-only verification of the adopted target-side claim boundary required by the P9-T02 plan."
+  target_comparison_oracle_invoked: false
+  target_observable_extracted_for_comparison: false
+  source_value_parameter_branch_tolerance_or_seal_changed: false
+  target_informed_rerun_performed: false
+
+source_stage_exposure:
+  fixed_source_paths_only: true
+  target_atlas_used: false
+  target_metric_used: false
+  target_solution_used: false
+  Einstein_Hilbert_action_used: false
+  Einstein_equations_used: false
+  desired_agreement_used: false
+  benchmark_success_label_used: false
+  generated_derivative_used_as_scientific_authority: false
+  process_receipt_used_as_scientific_authority: false
+
+classification_effect:
+  source_stage_firewall_status: "PASS"
+  target_comparison_status: "NOT_OPENED"
+  case_outcome: "INCONCLUSIVE"
+  reason: "Known target-family semantics defined the test question, but missing physical mapping and dynamics prevented a lawful target comparison; the source output was not repaired."
+
+authority_limits:
+  cognitive_exposure_absence_proved: false
+  blind_prediction_claimed: false
+  independent_reproduction_claimed: false
+  Minkowski_recovery_established: false
+  benchmark_promotion_authorized: false

@@ -1,0 +1,37 @@
+schema_id: "role_decomposition_child_output_v1"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+task_id: "RT-20260730-008"
+status: "completed"
+outer_agentjob_count: 1
+child_agentjob_count: 0
+subagent_count: 0
+shared_claim_boundary: "CB-V21-P9-T02-VACUUM-MINKOWSKI-SOURCE-ONLY-CASE-001"
+
+independent_result:
+  decisive_type: "constructed_candidate"
+  candidate: "FiniteSourceNullBackgroundBenchmarkAttempt_v1"
+  theorem: "u0 in ker L_C implies a_C(u0)=0, [h0]=0, and delta[h]=(beta/alpha)delta[u] on Q_C"
+  two_state_execution: "u0=(1,1), L_Cu0=(0,0), [h0]=0"
+  source_stage_status: "PASS"
+  case_outcome: "INCONCLUSIVE"
+
+unique_contributions:
+  - "proved existence and quotient uniqueness of the source algebraic null background"
+  - "derived the exact static quotient linearization around the null class"
+  - "executed the two-state source control with exact rational arithmetic"
+  - "identified the absent effective-geometry and temporal-dynamics maps as prerequisites to comparison"
+
+limitations:
+  - "finite algebraic carrier only"
+  - "no physical vacuum semantics"
+  - "no Lorentzian metric or Minkowski equivalence map"
+  - "no time evolution, characteristics, or physical stability result"
+  - "no independent reproduction"
+
+authority_limits:
+  target_oracle_opened: false
+  physical_Minkowski_recovery_established: false
+  benchmark_pass_established: false
+  physics_promotion_authorized: false
+  proof_authority: false

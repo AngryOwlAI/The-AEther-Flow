@@ -1,0 +1,148 @@
+{
+  "schema_id": "p9_t02_source_output_seal_v1",
+  "seal_id": "SEAL-P9-BENCH-VACUUM-MINKOWSKI-V1-001",
+  "case_id": "P9-BENCH-VACUUM-MINKOWSKI-V1",
+  "protocol_version": "SourceDerivedBenchmarkProtocol_v1",
+  "task_id": "RT-20260730-008",
+  "job_id": "AJ-RT-20260730-008-001",
+  "sealed_at": "2026-07-30T18:14:40Z",
+  "serialization": "UTF-8 JSON; source_output hash uses sorted keys and compact separators",
+  "hash_algorithm": "SHA-256",
+  "source_input_paths_and_hashes": [
+    {
+      "path": "research_control/tasks/RT-20260729-012/artifacts/source_derived_benchmark_protocol_v1.tex",
+      "sha256": "88ef097bf712ad115e9af62cc18a8b3eabb12f8545350f714ad065f702471007"
+    },
+    {
+      "path": "research_control/tasks/RT-20260729-012/artifacts/source_derived_benchmark_case_schema_v1.yaml",
+      "sha256": "5045de8fbaeb6c80b89ec88b71143a8aeaca1c892efadc4b7293cb438ee808d8"
+    },
+    {
+      "path": "research_control/tasks/RT-20260729-012/artifacts/target_import_firewall_v1.yaml",
+      "sha256": "ccb9297f817a9b4eeb886834a510e1f21d518a2668bc3fde9695b909d6884acf"
+    },
+    {
+      "path": "research_control/tasks/RT-20260727-004/artifacts/p6_t08_gate_b_separating_certificate_v1.yaml",
+      "sha256": "f3080ed6a6ba1d6847a3b7ed43c7a11ad7f7dae4deccd25486913ea9547f221b"
+    }
+  ],
+  "source_extension_status_and_hashes": [
+    {
+      "status": "proposal-only source-extension data",
+      "path": "research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_constraint_spec_v1.yaml",
+      "sha256": "8840b205e8aa12d73f3e782ec6936eb96385bb5694c298b1bf41a2bdfe472626"
+    },
+    {
+      "status": "proposal-only finite equation identity",
+      "path": "research_control/tasks/RT-20260729-007/artifacts/finite_source_field_equation_identity_spec_v1.yaml",
+      "sha256": "d37fdff6d320751d0174459c3d10bec75aa04be62c72c368480f1cafdb46e5f8"
+    }
+  ],
+  "independent_calibration_provenance_and_hashes": [],
+  "independent_calibration_status": "not_used_no_numerical_threshold_or_physical_scale",
+  "code_environment_and_dependency_hashes": [
+    {
+      "path": "research_control/tasks/RT-20260730-008/artifacts/validate_p9_t02_vacuum_minkowski_case.py",
+      "sha256": "ff2442844ef76ed31e89201352630be0c18eafab8dd439b89d0b17d4b78e58f6"
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "c30be88711317ef594cdee96755d6a5df302bc8094e32c483cf24fa5d760a52e"
+    },
+    {
+      "path": "requirements.txt",
+      "sha256": "e74839bd2ea007c2c9ce1a267c74c376a0603591c8943b0e4e45de7f29f21080"
+    }
+  ],
+  "runtime_identity": "Python 3.12.13 exact Fraction arithmetic in repository environment",
+  "randomness_policy": "deterministic_exact_rational_no_randomness",
+  "randomness_seed_commitment": "not_applicable",
+  "derived_intermediate_manifest_and_hashes": [
+    {
+      "object_id": "two_state_conductance_laplacian",
+      "canonical_value": "[[1/4,-1/4],[-1/4,1/4]]"
+    },
+    {
+      "object_id": "source_null_response",
+      "canonical_value": "[0,0]"
+    },
+    {
+      "object_id": "quotient_stationary_class",
+      "canonical_value": "zero"
+    },
+    {
+      "object_id": "static_linearized_response",
+      "canonical_value": "delta[h]=delta[u] on Q_C"
+    }
+  ],
+  "source_output": {
+    "alpha": "1",
+    "beta": "1",
+    "carrier": "two_state_source_carrier",
+    "h_class": "zero",
+    "laplacian": [
+      [
+        "1/4",
+        "-1/4"
+      ],
+      [
+        "-1/4",
+        "1/4"
+      ]
+    ],
+    "linearized_response": "delta[h]=delta[u] on Q_C",
+    "source_response": [
+      "0",
+      "0"
+    ],
+    "u_vac": [
+      "1",
+      "1"
+    ]
+  },
+  "source_output_sha256": "15f671fc1de1f4e546f0cd382cb25de538bba5c2a2006855f30d7830649dafba",
+  "approximation_order_and_validity_domain": {
+    "source_algebra": "exact finite rational arithmetic",
+    "carrier_scope": "fixed two-state source carrier and theorem-level finite conductance Laplacian family",
+    "continuum_approximation": "not_defined",
+    "physical_spacetime_regime": "not_defined"
+  },
+  "residual_corrections_and_bounds": {
+    "finite_algebraic_remainder": "zero in the declared exact calculation",
+    "finite_size": "uncontrolled_for_physical_interpretation",
+    "coarse_graining": "uncontrolled",
+    "discretization": "not_connected_to_physical_continuum",
+    "truncation": "uncontrolled_for_physical_interpretation",
+    "boundary": "uncontrolled_for_physical_interpretation",
+    "calibration": "absent",
+    "stochastic": "not_applicable",
+    "physical_correction_control": "ABSENT"
+  },
+  "analytic_equivalence_or_numerical_tolerance": {
+    "analytic_equivalence_status": "UNSET_NO_MODEL_TO_WORLD_MAP",
+    "numerical_tolerance_status": "UNSET_NO_PHYSICAL_OBSERVABLE",
+    "target_fit_used": false
+  },
+  "success_failure_and_inconclusive_rules": {
+    "success": "requires a lawful physical source observable, firewall pass, independent reproduction, and preregistered Minkowski comparison pass",
+    "failure": "requires a source-stage validity failure, firewall breach, or decisive comparison miss",
+    "inconclusive": "missing physical carrier, geometry map, dynamics, semantics, correction control, tolerance, uncertainty bound, or independent reproduction",
+    "inconclusive_triggered": true
+  },
+  "provenance_dag_path": "research_control/tasks/RT-20260730-008/artifacts/p9_t02_provenance_dag_v1.yaml",
+  "provenance_dag_sha256": "163d9154e81a7249cdd145841e28c0313fd4ee7b4dccb9621f29bb6b61633e7e",
+  "target_reference_identity_preregistered": "Minkowski equivalence class and vacuum perturbative reference",
+  "target_reference_content_available_before_seal": false,
+  "target_reference_hashes_in_source_manifest": [],
+  "source_mutation_after_seal_authorized": false,
+  "target_informed_rerun_authorized": false,
+  "sealed_source_stage_result": "PASS",
+  "case_outcome_after_preregistered_missing-bridge_classification": "INCONCLUSIVE",
+  "authority_limits": {
+    "physical_vacuum_established": false,
+    "effective_geometry_established": false,
+    "Minkowski_recovery_established": false,
+    "benchmark_pass_established": false,
+    "benchmark_promotion_authorized": false
+  }
+}

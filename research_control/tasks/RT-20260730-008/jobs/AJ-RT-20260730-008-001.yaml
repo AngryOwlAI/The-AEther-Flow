@@ -1,0 +1,537 @@
+job_id: "AJ-RT-20260730-008-001"
+task_id: "RT-20260730-008"
+decision_id: "DDR-20260730-008"
+role_id: "candidate-constructor"
+role_version: "0.2.0"
+execution_role_ref: "candidate-constructor@0.2.0--RT-20260730-008"
+status: "completed"
+validation_status: "PASS"
+requires_human_gate: false
+created_at: "2026-07-30T18:14:40Z"
+started_at: "2026-07-30T18:14:40Z"
+completed_at: "2026-07-30T18:14:40Z"
+completion_path: "research_control/tasks/RT-20260730-008/jobs/completions/AJC-AJ-RT-20260730-008-001.yaml"
+objective: "Execute only v21 P9-T02 by constructing the narrowest source-only null background available from the fixed source package, proving and executing its finite response before target access, sealing all source outputs and rules, and classifying the vacuum/Minkowski case without target-informed repair."
+target_derivation_milestone: "benchmark_promotion"
+milestone_burden: "Execute the first source-only vacuum and Minkowski recovery case under SourceDerivedBenchmarkProtocol_v1 without importing the target metric or desired agreement."
+route_label: "benchmark-recovery-packet"
+route_reason: "The checkpointed RT-007 reconciliation, handoff-0914, the v21 plan, and immutable generation 176 select exactly one P9-T02 Candidate Constructor packet."
+immutable_route_sha256: "a03d3b9ed2919fc3e3c6d4af66b935c6cc5ac6abb27ca6d9b315c3ab549ffd3e"
+dependency_checkpoint_commit: "8b3d042d68bf0c530c34dab518622adcb5c64c30"
+plan_task_id: "P9-T02"
+recommendation_ids:
+  - "V21-R28"
+  - "V21-R29"
+  - "V21-R66"
+source_extension_classification_required: true
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 176
+  passes_consumed: 160
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:176"
+  handoff_token: "4525ec65d91abd13926d3caff5a6ae52817b7ef70606cd1e"
+  relay_claim_token: "16ab9fbcf3e9b87077da3f58b00b0ce1c664d82360101bd2"
+  route_work_item_id: "P9-T02"
+  route_worker_skill: "continue-research"
+  route_sha256: "a03d3b9ed2919fc3e3c6d4af66b935c6cc5ac6abb27ca6d9b315c3ab549ffd3e"
+  route_reason: "resume_research_after_project_system_repair"
+  route_strategy_id: "continue_in_scope_generation_176"
+  route_blocker_fingerprint: "022d2ad4165956651ccf6dc58171dd4bdff74f3cf2e518d029f9a009985fabbb"
+  route_before_fingerprint: "022d2ad4165956651ccf6dc58171dd4bdff74f3cf2e518d029f9a009985fabbb"
+  route_evidence_sha256es:
+    - "022d2ad4165956651ccf6dc58171dd4bdff74f3cf2e518d029f9a009985fabbb"
+    - "10e68692224d05764ac0138dc58aad13b2a1c6c7d992e8df8e66d8dd592e6063"
+  worker_skill: "continue-research"
+  worker_invocation_count: 1
+
+mathematical_decisiveness_contract:
+  contract_path: "research_control/design/mathematical_decisiveness_completion_contract.md"
+  schema_path: ".agents/schemas/PHYSICS_COMPLETION_DECISIVENESS_SCHEMA.md"
+  enforcement_mode: "hard_failure"
+  active_after: "2026-06-21T02:32:39Z"
+
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "physics"
+  payload_type: "candidate_construction"
+  candidate_family: "FiniteSourceNullBackgroundBenchmarkAttempt_v1"
+  assumption_delta:
+    - "Hold SourceDerivedBenchmarkProtocol_v1, its case schema, target-import firewall, and the fixed P6 through P8 source records unchanged."
+    - "Select source algebraic null backgrounds only by u0 in ker L_C, before target content access."
+    - "Use the exact finite quotient equation alpha L_C h=beta L_C u with alpha>0."
+    - "Execute the fixed two-state source datum P=[[1/2,1/2],[0,1]], alpha=beta=1, and u0=(1,1)."
+    - "Seal the exact source response, quotient response, static linearization, comparison rules, and missing-burden record before target-side authority inspection."
+    - "Admit no target atlas, metric, solution, boundary datum, Einstein-Hilbert action, Einstein equation, desired residual, tuned parameter, target-selected branch, or benchmark success label as a source premise."
+  materiality_basis: "P9-T01 supplied only a protocol and six NOT_RUN templates. This packet instantiates and executes the first source stage, proves the exact null-background theorem, seals a concrete output, and records the first case disposition while preserving every physical and promotion block."
+  payload_details:
+    candidate_id: "FiniteSourceNullBackgroundBenchmarkAttempt_v1"
+    candidate_kind: "source_algebraic_null_background"
+    result_type: "constructed_candidate"
+    theorem_id: "FiniteSourceNullBackgroundTheorem_v1"
+    exact_result: "u0 in ker L_C implies a_C(u0)=0, unique [h0]=0, and delta[h]=(beta/alpha)delta[u]"
+    benchmark_case_outcome: "INCONCLUSIVE"
+    physical_Minkowski_recovery_established: false
+  source_basis:
+    - "TEX-V21-P9-T01-SOURCE-DERIVED-BENCHMARK-PROTOCOL-V1"
+    - "TEX-V21-P8-T03-FINITE-SOURCE-CLOSURE-CONSTRAINT-CANDIDATE-V1"
+    - "TEX-V21-P8-T04-FINITE-SOURCE-FIELD-EQUATION-IDENTITY-V1"
+    - "research_control/tasks/RT-20260729-008/artifacts/finite_constraint_stability_phase_diagram_v1.yaml"
+    - "research_control/tasks/RT-20260727-004/artifacts/p6_t08_gate_b_separating_certificate_v1.yaml"
+  expected_artifact_paths:
+    - "research_control/tasks/RT-20260730-008/artifacts/finite_source_null_background_benchmark_attempt_v1.tex"
+    - "research_control/tasks/RT-20260730-008/artifacts/p9_t02_vacuum_minkowski_case_v1.yaml"
+    - "research_control/tasks/RT-20260730-008/artifacts/p9_t02_source_output_seal_v1.json"
+    - "research_control/tasks/RT-20260730-008/artifacts/p9_t02_provenance_dag_v1.yaml"
+    - "research_control/tasks/RT-20260730-008/artifacts/p9_t02_benchmark_case_receipt_v1.json"
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+
+family_freeze_admission:
+  schema_id: "family_freeze_route_admission_v1"
+  policy_id: "family_freeze_reopening_policy_v1"
+  route_id: "v21_p9_t02_finite_source_null_background_benchmark_attempt_v1"
+  family_id: "FiniteSourceNullBackgroundBenchmarkAttempt_v1"
+  family_identity_sha256: "8115e6d413659738dde66edfd4f2ae7d1d62a6e3ea1bf898208c512f211d3dd6"
+  assumption_sha256es:
+    - "88ef097bf712ad115e9af62cc18a8b3eabb12f8545350f714ad065f702471007"
+    - "5045de8fbaeb6c80b89ec88b71143a8aeaca1c892efadc4b7293cb438ee808d8"
+    - "8840b205e8aa12d73f3e782ec6936eb96385bb5694c298b1bf41a2bdfe472626"
+    - "249be0c7bf67fafee42e10785367e59c81da75d003521730855915d76582b5d4"
+  route_kind: "candidate_construction"
+  detected_match_basis: []
+  reopening:
+    requested: false
+    class: "none"
+  distinct_branch:
+    branch_identity: "first_instantiated_source_only_null_background_case"
+    material_difference_basis: "The packet executes and seals the first P9 source stage and returns a case disposition; it does not reconstruct or promote the frozen P8 candidate."
+    reconstructs_frozen_candidate: false
+    expected_artifact_paths:
+      - "research_control/tasks/RT-20260730-008/artifacts/finite_source_null_background_benchmark_attempt_v1.tex"
+      - "research_control/tasks/RT-20260730-008/artifacts/p9_t02_vacuum_minkowski_case_v1.yaml"
+  authority_limits:
+    local_family_freeze_preserved: true
+    global_no_go_claimed: false
+    automatic_candidate_adoption: false
+    theorem_truth_inferred: false
+    ontology_modified: false
+    physics_promotion_authorized: false
+
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  expected_durable_outputs:
+    physics:
+      - "one exact finite source null-background theorem and fixed execution"
+      - "one sealed source-stage output and provenance DAG"
+      - "one precise INCONCLUSIVE vacuum/Minkowski case disposition"
+    project_system:
+      - "one task-local deterministic validator and compact receipt"
+      - "parent-child synthesis and target-exposure records"
+      - "standard control records and generated memory derivatives"
+  acceptance_criteria:
+    physics:
+      - "source null background is selected without target content"
+      - "exact response and quotient theorem reproduces"
+      - "source-stage provenance and seal pass the frozen firewall"
+      - "missing physical bridge produces INCONCLUSIVE rather than pass by definition"
+      - "zero benchmark passes, zero target-informed reruns, and zero promotion claims"
+    project_system:
+      - "task-local hash, DAG, exact-math, parent-child, exposure, and authority checks pass"
+      - "claim-language and documentation-impact gates pass"
+      - "one governed checkpoint records the bounded transaction"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: false
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0914"
+  source_handoff_path: "research_control/handoffs/handoff-0914.yaml"
+  source_handoff_sha256: "2b6bfb76933391421bb71b2710bbc3773c09f0b7f8e334554daab53d44edce7c"
+  selected_plan_task_id: "P9-T02"
+  guard_outcome: "physics_bearing_route_selected"
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  parent:
+    execution_unit_id: "parent"
+    perspective: "physicist_mathematician_philosopher"
+    responsibilities:
+      - "hold the frozen protocol and source hashes fixed"
+      - "seal source outputs before target-side authority inspection"
+      - "fuse exact finite mathematics with model-to-world and exposure boundaries"
+      - "resolve all terminology and authority conflicts"
+      - "classify the case without target-informed repair"
+  children:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260730-008/artifacts/child_phys_math_p9_t02_vacuum_minkowski_case.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260730-008/artifacts/child_phys_phil_p9_t02_vacuum_minkowski_case.yaml"
+      status: "completed"
+  conflict_policy:
+    review_path: "research_control/tasks/RT-20260730-008/artifacts/parent_conflict_review_p9_t02_vacuum_minkowski_case.yaml"
+    max_resolution_rounds: 2
+    require_parallel_child_revision: true
+    unresolved_conflict_status: "blocked"
+  fusion_policy:
+    fusion_notes_path: "research_control/tasks/RT-20260730-008/artifacts/parent_fusion_notes_p9_t02_vacuum_minkowski_case.md"
+    fused_output_path: "research_control/tasks/RT-20260730-008/artifacts/finite_source_null_background_benchmark_attempt_v1.tex"
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+    final_output_replaces_old_single_role_artifact: true
+  outer_agentjob_count: 1
+  child_agentjob_count: 0
+  subagent_count: 0
+  rationale: "Two internal analytical perspectives are recorded within the one consumed worker invocation and one outer AgentJob. No child AgentJob or subagent was created."
+
+memory_preflight:
+  preflight_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1089
+    relationship_row_count: 5515
+    semantic_row_count: 1089
+    vault_row_count: 1089
+    local_cache_only_warning_count: 0
+    refresh_performed: true
+  refresh_needed: true
+  refresh_performed: true
+  refresh_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py"
+  before_refresh:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+  after_refresh:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    source_object_count: 1089
+    relationship_row_count: 5515
+    semantic_row_count: 1089
+    vault_row_count: 1089
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"Minkowski benchmark\" --limit 10 --json"
+      query_type: "search"
+      query_text: "Minkowski benchmark"
+      returned_object_ids:
+        - "MD-V21-P9-T01-PARENT-FUSION-BENCHMARK-PROTOCOL-V1"
+        - "TEX-V21-P9-T01-SOURCE-DERIVED-BENCHMARK-PROTOCOL-V1"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+    - object_id: "MD-V21-P9-T01-PARENT-FUSION-BENCHMARK-PROTOCOL-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260729-012/artifacts/parent_fusion_notes_p9_t01_benchmark_protocol.md"
+      source_hash: "9ca58abe6eb1151614b4e5124df9a2e2aac4ecff301cea634dc4e7ad6cbcde03"
+    - object_id: "TEX-V21-P9-T01-SOURCE-DERIVED-BENCHMARK-PROTOCOL-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260729-012/artifacts/source_derived_benchmark_protocol_v1.tex"
+      source_hash: "88ef097bf712ad115e9af62cc18a8b3eabb12f8545350f714ad065f702471007"
+    - object_id: "TEX-V21-P8-T07-GATE-D-DECISION-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260729-011/artifacts/p8_t07_gate_d_decision_v1.tex"
+      source_hash: "035ea88a612d861a00d0703ec2bd1094e01194c113d7ff2588e3a4ad8bf47d63"
+    - object_id: "TEX-ONTOLOGY-AETHER-FLOW-DYNAMICS"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "ontology/tex/aether_flow_dynamics.tex"
+      source_hash: "fd6e579e71ef7f2ac4c9668ceede051ad57033ee52357b2552a9e3a5a53939c7"
+      inspection_stage: "post_source_seal_target_definition_boundary_only"
+    - object_id: "TEX-ONTOLOGY-AETHER-FLOW-RELATIVISTIC-RECOVERY"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "ontology/tex/aether_flow_relativistic_recovery.tex"
+      source_hash: "77d5c2db56f122870343834f853bf2f375a912116a347d7c5710405c8707d69c"
+      inspection_stage: "post_source_seal_target_definition_boundary_only"
+    - object_id: "TEX-ONTOLOGY-AETHER-FLOW-CONSISTENCY"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "ontology/tex/aether_flow_consistency.tex"
+      source_hash: "d965519639ee8764a5c5a63798d15e8a9a380d7e208dffc43a0be02b6f245ba1"
+      inspection_stage: "post_source_seal_target_definition_boundary_only"
+  authority_note: "Generated wiki, Obsidian, semantic, PDF, and .local retrieval layers are navigation only and are not authority. Registered canonical sources and tracked control state govern. Target-side ontology manuscripts were inspected only after the source seal and did not change a source datum, branch, rule, output, tolerance, or seal."
+
+allowed_read_paths:
+  - "SOUL.md"
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research-goal/**"
+  - ".codex/skills/continue-research-continue-goal/**"
+  - ".codex/skills/continue-research/**"
+  - ".agents/roles/research_ops/**"
+  - ".agents/roles/physics/candidate-constructor.v0.2.0.md"
+  - ".agents/schemas/**"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  - "research_control/design/**"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0914.yaml"
+  - "research_control/handoffs/handoff-0914.md"
+  - "research_control/tasks/RT-20260729-006/**"
+  - "research_control/tasks/RT-20260729-007/**"
+  - "research_control/tasks/RT-20260729-008/**"
+  - "research_control/tasks/RT-20260729-009/**"
+  - "research_control/tasks/RT-20260729-011/**"
+  - "research_control/tasks/RT-20260729-012/**"
+  - "research_control/tasks/RT-20260727-004/**"
+  - "ontology/tex/aether_flow_dynamics.tex"
+  - "ontology/tex/aether_flow_relativistic_recovery.tex"
+  - "ontology/tex/aether_flow_consistency.tex"
+  - "scripts/project_control/**"
+  - "scripts/research_control/**"
+  - "scripts/validation/**"
+  - "tests/**"
+  - "registries/**"
+
+allowed_write_paths:
+  - "research_control/tasks/RT-20260730-008/**"
+  - "research_control/handoffs/handoff-0915.yaml"
+  - "research_control/handoffs/handoff-0915.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/PDF_DERIVATIVE_REGISTRY.csv"
+  - "registries/PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "registries/TEX_SOURCE_REGISTRY.csv"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/tex/**"
+
+allowed_generated_paths:
+  - ".local/**"
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/tex/**"
+
+forbidden_paths:
+  - "ontology/**"
+  - "legacy_ontology/**"
+  - "manuscripts/**"
+  - "html/**"
+  - "github-facing/**"
+  - "implementations_plans/**"
+  - ".agents/**"
+  - ".codex/skills/**"
+  - "scripts/project_control/**"
+  - "scripts/research_control/**"
+  - "scripts/validation/**"
+  - "tests/**"
+  - "registries/METRIC_USE_LEDGER.csv"
+  - "research_control/tasks/RT-20260729-006/**"
+  - "research_control/tasks/RT-20260729-007/**"
+  - "research_control/tasks/RT-20260729-008/**"
+  - "research_control/tasks/RT-20260729-009/**"
+  - "research_control/tasks/RT-20260729-011/**"
+  - "research_control/tasks/RT-20260729-012/**"
+  - "research_control/handoffs/handoff-0914.yaml"
+  - "research_control/handoffs/handoff-0914.md"
+
+allowed_source_classes:
+  - "science_draft_read_only"
+  - "scientific_gate_read_only"
+  - "canonical_target_definition_read_only_after_source_seal"
+  - "task_local_science_draft"
+  - "task_control_record"
+  - "registry"
+  - "generated_memory_derivative"
+
+forbidden_source_classes:
+  - "benchmark_promotion"
+  - "candidate_reconstruction"
+  - "completed_derivation_claim"
+  - "gate_chair_verdict"
+  - "generated_derivative_authority"
+  - "global_theory_rejection"
+  - "canonical_ontology_write"
+  - "target_atlas_metric_solution_or_dynamics_as_source_premise"
+  - "target_informed_source_parameter_branch_tolerance_or_repair"
+  - "source_law_adoption_or_rejection"
+  - "physical_vacuum_or_Minkowski_identification"
+  - "independent_reproduction_claim"
+  - "Gate_D_change"
+  - "Gate_E_verdict"
+  - "Einstein_equations_or_exact_GR_recovery"
+  - "benchmark_pass_or_promotion"
+  - "global_no_go_or_future_extension_impossibility"
+  - "publication_push_or_completed_derivation"
+
+approved_commands:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21 --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"Minkowski benchmark\" --limit 10 --json"
+  - ".venv/bin/python research_control/tasks/RT-20260730-008/artifacts/validate_p9_t02_vacuum_minkowski_case.py --write-report --json"
+  - ".venv/bin/python research_control/tasks/RT-20260730-008/artifacts/validate_p9_t02_vacuum_minkowski_case.py --check --json"
+  - "python3 /Users/alex.omegapy/.codex/plugins/cache/openai-bundled/latex/0.2.4/scripts/compile_latex.py /Volumes/P-SSD/AngryOwl/The-AEther-Flow/research_control/tasks/RT-20260730-008/artifacts/finite_source_null_background_benchmark_attempt_v1.tex --compiler tectonic --output-directory /Volumes/P-SSD/AngryOwl/The-AEther-Flow/.local/tex-builds/RT-20260730-008 --json"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --check"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --check"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --write"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --check"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --json output/research_dependency_graph.json --markdown wiki/indexes/research_dependency_graph.md --dot output/research_dependency_graph.dot"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --check"
+  - ".venv/bin/python scripts/research_control/generate_claim_graph_v1.py --json output/claim_graph_v1.json"
+  - ".venv/bin/python scripts/research_control/validate_claim_graph_v1.py --graph output/claim_graph_v1.json --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+  - ".venv/bin/python scripts/research_control/task_taxonomy.py --validate-repository --json"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --json-summary"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --job-id AJ-RT-20260730-008-001 --json-summary"
+  - ".venv/bin/python scripts/research_control/report_physics_progress_metrics.py"
+  - ".venv/bin/python scripts/research_control/run_full_research_control_validation.py --json --tail-chars 2500"
+  - "git diff --check"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260730-008-001"
+
+required_validators:
+  - "memory_preflight"
+  - "p9_t02_source_only_case_local_validator"
+  - "scratch_tex_compile"
+  - "parent_child_synthesis"
+  - "source_hash_and_target_import_firewall"
+  - "target_exposure"
+  - "claim_language"
+  - "documentation_impact"
+  - "project_improvement_signal_parity"
+  - "task_taxonomy"
+  - "research_control_validation"
+  - "memory_bootstrap"
+  - "memory_validate_only"
+  - "renderers"
+  - "graph_freshness"
+  - "git_diff_check"
+  - "checkpoint_research_transaction"
+
+expected_outputs:
+  - "research_control/tasks/RT-20260730-008/**"
+  - "research_control/tasks/RT-20260730-008/artifacts/finite_source_null_background_benchmark_attempt_v1.tex"
+  - "research_control/handoffs/handoff-0915.yaml"
+  - "research_control/handoffs/handoff-0915.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+
+claim_boundary: "CB-V21-P9-T02-VACUUM-MINKOWSKI-SOURCE-ONLY-CASE-001"
+documentation_impact_id: "DI-RT-20260730-008-001"
+completion_id: "AJC-AJ-RT-20260730-008-001"
+
+checkpoint_outcome:
+  required: true
+  attempted: false
+  committed: false
+  commit_sha: ""
+  push_authorized: false
+  push_performed: false
+
+stop_conditions:
+  - "Stop if any frozen P9-T01 protocol or direct source hash differs."
+  - "Stop if any target atlas, metric, solution, dynamics, residual, desired agreement, coefficient, branch, tolerance, or success label reaches the source stage."
+  - "Stop if the exact source null-response or quotient calculation fails."
+  - "Stop if the source output, DAG, or preregistered rule changes after the seal."
+  - "Stop if algebraic null response is represented as physical vacuum, geometric flatness, or Minkowski recovery."
+  - "Stop if static quotient linearization is represented as physical temporal dynamics or stability."
+  - "Stop if same-context validation is represented as independent reproduction."
+  - "Stop if the missing bridge is represented as a global no-go or future-extension impossibility."
+  - "Stop if parent-child conflict review has any unresolved conflict."
+  - "Stop on the first governed checkpoint failure; do not retry in this AgentJob."

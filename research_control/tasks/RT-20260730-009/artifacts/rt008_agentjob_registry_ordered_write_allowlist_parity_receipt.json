@@ -1,0 +1,95 @@
+{
+  "authority_limits": {
+    "distance_to_gr_changed": false,
+    "p9_t02_reexecuted": false,
+    "p9_t03_executed": false,
+    "physics_promotion_authorized": false,
+    "scientific_claims_changed": false
+  },
+  "checks": {
+    "active_task_id": "RT-20260730-009",
+    "agent_job_registry_matches_expected_order": true,
+    "agent_job_registry_path_count": 27,
+    "all_four_representations_equal": true,
+    "latest_handoff_id": "handoff-0916",
+    "next_plan_task_id": "P9-T03",
+    "next_worker_skill": "continue-research",
+    "ordered_representation_count": 4,
+    "protected_hashes": {
+      "research_control/handoffs/handoff-0915.md": {
+        "expected_sha256": "9df1327eb300def92f57dc8302344ea65718d92104868d4f84dd098230fa3386",
+        "match": true,
+        "observed_sha256": "9df1327eb300def92f57dc8302344ea65718d92104868d4f84dd098230fa3386"
+      },
+      "research_control/handoffs/handoff-0915.yaml": {
+        "expected_sha256": "9769db1d0b36fae321d899d9e5012aa44d2b006fa0f13e10ffc3276b9aeb4023",
+        "match": true,
+        "observed_sha256": "9769db1d0b36fae321d899d9e5012aa44d2b006fa0f13e10ffc3276b9aeb4023"
+      },
+      "research_control/tasks/RT-20260730-008/artifacts/finite_source_null_background_benchmark_attempt_v1.tex": {
+        "expected_sha256": "6b3a4b386567139f4e9a88b0ce61698b681d2193d9b052672638fedbc8bf94b3",
+        "match": true,
+        "observed_sha256": "6b3a4b386567139f4e9a88b0ce61698b681d2193d9b052672638fedbc8bf94b3"
+      },
+      "research_control/tasks/RT-20260730-008/artifacts/p9_t02_benchmark_case_receipt_v1.json": {
+        "expected_sha256": "49172f707fbaa243462788a2c22a63e19fcdd3ac0656142281fc1f013c8d884b",
+        "match": true,
+        "observed_sha256": "49172f707fbaa243462788a2c22a63e19fcdd3ac0656142281fc1f013c8d884b"
+      },
+      "research_control/tasks/RT-20260730-008/artifacts/p9_t02_benchmark_case_validation_v1.json": {
+        "expected_sha256": "80593070d175a116e7952fac1bba008b60c54541be0db388ee4ecc1074975c5f",
+        "match": true,
+        "observed_sha256": "80593070d175a116e7952fac1bba008b60c54541be0db388ee4ecc1074975c5f"
+      },
+      "research_control/tasks/RT-20260730-008/artifacts/p9_t02_provenance_dag_v1.yaml": {
+        "expected_sha256": "163d9154e81a7249cdd145841e28c0313fd4ee7b4dccb9621f29bb6b61633e7e",
+        "match": true,
+        "observed_sha256": "163d9154e81a7249cdd145841e28c0313fd4ee7b4dccb9621f29bb6b61633e7e"
+      },
+      "research_control/tasks/RT-20260730-008/artifacts/p9_t02_source_output_seal_v1.json": {
+        "expected_sha256": "71b7dfb67b40d748867a5c49abf7b50c684f9e4a7f5962d8787a960a3dc541dd",
+        "match": true,
+        "observed_sha256": "71b7dfb67b40d748867a5c49abf7b50c684f9e4a7f5962d8787a960a3dc541dd"
+      },
+      "research_control/tasks/RT-20260730-008/artifacts/p9_t02_target_exposure_ledger_v1.yaml": {
+        "expected_sha256": "2bcb4a9c82508af58e680ea488e862e74a379ac82bc66253db4d120c71b3ac3b",
+        "match": true,
+        "observed_sha256": "2bcb4a9c82508af58e680ea488e862e74a379ac82bc66253db4d120c71b3ac3b"
+      },
+      "research_control/tasks/RT-20260730-008/artifacts/p9_t02_vacuum_minkowski_case_v1.yaml": {
+        "expected_sha256": "2fadb19c5849f1da5843c0e0599dbdc31790eab46587ce6718abbf4d3a0be79c",
+        "match": true,
+        "observed_sha256": "2fadb19c5849f1da5843c0e0599dbdc31790eab46587ce6718abbf4d3a0be79c"
+      },
+      "research_control/tasks/RT-20260730-008/jobs/AJ-RT-20260730-008-001.yaml": {
+        "expected_sha256": "ada7b470952ebbbb520ed7905949ccb10ec2295373c92f0c97413b0462983499",
+        "match": true,
+        "observed_sha256": "ada7b470952ebbbb520ed7905949ccb10ec2295373c92f0c97413b0462983499"
+      },
+      "research_control/tasks/RT-20260730-008/jobs/completions/AJC-AJ-RT-20260730-008-001.yaml": {
+        "expected_sha256": "1ad072d427eb2782f974a329ba30d40a390c6c0a5793ebfd22aea851225f3acc",
+        "match": true,
+        "observed_sha256": "1ad072d427eb2782f974a329ba30d40a390c6c0a5793ebfd22aea851225f3acc"
+      },
+      "research_control/tasks/RT-20260730-008/roles/candidate-constructor@0.2.0--RT-20260730-008.yaml": {
+        "expected_sha256": "c250e1fbf6558856a52e25af6b2b6448cc38472ef7c370a8078f9a3a391b3a3f",
+        "match": true,
+        "observed_sha256": "c250e1fbf6558856a52e25af6b2b6448cc38472ef7c370a8078f9a3a391b3a3f"
+      }
+    },
+    "role_execution_registry_matches_expected_order": true,
+    "role_execution_registry_path_count": 27,
+    "source_agent_job_matches_expected_order": true,
+    "source_agent_job_path_count": 27,
+    "source_execution_role_matches_expected_order": true,
+    "source_execution_role_path_count": 27
+  },
+  "errors": [],
+  "expected_allowed_write_path_count": 27,
+  "job_id": "AJ-RT-20260730-009-001",
+  "schema_id": "rt008_agentjob_registry_ordered_write_allowlist_parity_receipt_v1",
+  "source_job_id": "AJ-RT-20260730-008-001",
+  "status": "PASS",
+  "strategy_id": "repair_rt008_agentjob_registry_ordered_write_allowlist_parity_v1",
+  "task_id": "RT-20260730-009"
+}

@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260730-007`
-- Latest handoff: `handoff-0914`
-- Current status: `rt005_cumulative_checkpoint_identity_reconciled_p9_t02_ready_after_checkpoint`
+- Active task: `RT-20260730-009`
+- Latest handoff: `handoff-0916`
+- Current status: `rt008_agentjob_registry_ordered_write_allowlist_parity_recovered_ready_for_checkpoint`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260730-007`
-- Latest research handoff: `handoff-0914`
-- Latest research next action: Invoke the one governed checkpoint for AJ-RT-20260730-007-001. After that commit, use one fresh bounded continue-research packet for P9-T02 under the source-only benchmark firewall.
+- Latest research task: `RT-20260730-009`
+- Latest research handoff: `handoff-0916`
+- Latest research next action: Invoke the one governed cumulative checkpoint for AJ-RT-20260730-009-001. After that commit, use one fresh bounded Candidate Constructor packet for P9-T03 to attempt source-only weak-field potentials, free fall, redshift, and clock-rate relations while carrying the P9-T02 INCONCLUSIVE disposition.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p9_t02_vacuum_minkowski_source_only_case_after_rt005_checkpoint_identity_reconciliation`
+- Route ID: `v21_p9_t03_weak_field_redshift_clock_source_only_case_after_rt009_checkpoint`
 - Role family: `candidate-constructor@0.2.0`
 - Target milestone: `benchmark_promotion`
-- Milestone burden: Test the simplest nontrivial source-derived background.
+- Milestone burden: Derive weak-field potentials, free-fall acceleration, redshift, and clock-rate relations from source dynamics and operational devices.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `a774b503bcf1a5ac78081f45d5a2ec338735123db931f523df66f323aa32e68c`
-- JSON SHA-256: `6eb8baa2d5971ff6d25c2a4d67a3cb729841a7aeeb1088dfce6d736e754e5d7c`
+- YAML SHA-256: `1e995523cc3c3f5eaae78b4a70e6e715950905f3c4f8d5bda2f56d3c138841ab`
+- JSON SHA-256: `7a66304f62f344ad390354d6a3b8cabb60a09e94568339e25d165dea1626f05f`
 
 ## Authority Warning
 

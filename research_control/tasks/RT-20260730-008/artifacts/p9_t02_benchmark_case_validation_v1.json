@@ -1,0 +1,451 @@
+{
+  "schema_id": "p9_t02_benchmark_case_validation_v1",
+  "task_id": "RT-20260730-008",
+  "case_id": "P9-BENCH-VACUUM-MINKOWSKI-V1",
+  "candidate_id": "FiniteSourceNullBackgroundBenchmarkAttempt_v1",
+  "status": "PASS",
+  "check_count": 84,
+  "pass_count": 84,
+  "failure_count": 0,
+  "source_hashes": {
+    "research_control/tasks/RT-20260730-008/artifacts/p9_t02_vacuum_minkowski_case_v1.yaml": "2fadb19c5849f1da5843c0e0599dbdc31790eab46587ce6718abbf4d3a0be79c",
+    "research_control/tasks/RT-20260730-008/artifacts/p9_t02_provenance_dag_v1.yaml": "163d9154e81a7249cdd145841e28c0313fd4ee7b4dccb9621f29bb6b61633e7e",
+    "research_control/tasks/RT-20260730-008/artifacts/p9_t02_source_output_seal_v1.json": "71b7dfb67b40d748867a5c49abf7b50c684f9e4a7f5962d8787a960a3dc541dd",
+    "research_control/tasks/RT-20260730-008/artifacts/p9_t02_target_exposure_ledger_v1.yaml": "2bcb4a9c82508af58e680ea488e862e74a379ac82bc66253db4d120c71b3ac3b",
+    "research_control/tasks/RT-20260730-008/artifacts/p9_t02_benchmark_case_receipt_v1.json": "49172f707fbaa243462788a2c22a63e19fcdd3ac0656142281fc1f013c8d884b",
+    "research_control/tasks/RT-20260730-008/artifacts/finite_source_null_background_benchmark_attempt_v1.tex": "6b3a4b386567139f4e9a88b0ce61698b681d2193d9b052672638fedbc8bf94b3",
+    "research_control/tasks/RT-20260730-008/artifacts/child_phys_math_p9_t02_vacuum_minkowski_case.yaml": "c1388c399045cd6e4f180a5227c5232986bb1926a856444eba6d207028972abd",
+    "research_control/tasks/RT-20260730-008/artifacts/child_phys_phil_p9_t02_vacuum_minkowski_case.yaml": "b9a9166e5de14c2608258d000f0b8c868814ca821f9b83a65223dd9463575618",
+    "research_control/tasks/RT-20260730-008/artifacts/parent_conflict_review_p9_t02_vacuum_minkowski_case.yaml": "56e8dcd1351ce1a00605a8a2f644d09d8bfff0e782fe5d5efdc3e8530733b89a",
+    "research_control/tasks/RT-20260730-008/artifacts/parent_fusion_notes_p9_t02_vacuum_minkowski_case.md": "33d9576376607f5d2912f557924d4c0268f251f20dd06b1fd328e90f282cc3b8"
+  },
+  "checks": [
+    {
+      "check_id": "file:p9_t02_vacuum_minkowski_case_v1.yaml",
+      "status": "PASS",
+      "detail": "required task-local artifact exists"
+    },
+    {
+      "check_id": "file:p9_t02_provenance_dag_v1.yaml",
+      "status": "PASS",
+      "detail": "required task-local artifact exists"
+    },
+    {
+      "check_id": "file:p9_t02_source_output_seal_v1.json",
+      "status": "PASS",
+      "detail": "required task-local artifact exists"
+    },
+    {
+      "check_id": "file:p9_t02_target_exposure_ledger_v1.yaml",
+      "status": "PASS",
+      "detail": "required task-local artifact exists"
+    },
+    {
+      "check_id": "file:p9_t02_benchmark_case_receipt_v1.json",
+      "status": "PASS",
+      "detail": "required task-local artifact exists"
+    },
+    {
+      "check_id": "file:finite_source_null_background_benchmark_attempt_v1.tex",
+      "status": "PASS",
+      "detail": "required task-local artifact exists"
+    },
+    {
+      "check_id": "file:child_phys_math_p9_t02_vacuum_minkowski_case.yaml",
+      "status": "PASS",
+      "detail": "required task-local artifact exists"
+    },
+    {
+      "check_id": "file:child_phys_phil_p9_t02_vacuum_minkowski_case.yaml",
+      "status": "PASS",
+      "detail": "required task-local artifact exists"
+    },
+    {
+      "check_id": "file:parent_conflict_review_p9_t02_vacuum_minkowski_case.yaml",
+      "status": "PASS",
+      "detail": "required task-local artifact exists"
+    },
+    {
+      "check_id": "file:parent_fusion_notes_p9_t02_vacuum_minkowski_case.md",
+      "status": "PASS",
+      "detail": "required task-local artifact exists"
+    },
+    {
+      "check_id": "case:id",
+      "status": "PASS",
+      "detail": "exact case"
+    },
+    {
+      "check_id": "case:plan",
+      "status": "PASS",
+      "detail": "exact plan item"
+    },
+    {
+      "check_id": "case:status",
+      "status": "PASS",
+      "detail": "honest outcome"
+    },
+    {
+      "check_id": "case:source_executed",
+      "status": "PASS",
+      "detail": "source ran"
+    },
+    {
+      "check_id": "case:comparison_not_opened",
+      "status": "PASS",
+      "detail": "oracle closed"
+    },
+    {
+      "check_id": "case:constructor_result",
+      "status": "PASS",
+      "detail": "one decisive construction"
+    },
+    {
+      "check_id": "case:required_fields",
+      "status": "PASS",
+      "detail": "all protocol-required case fields are instantiated"
+    },
+    {
+      "check_id": "case:imported_assumptions_empty",
+      "status": "PASS",
+      "detail": "no target imports"
+    },
+    {
+      "check_id": "source_exists:SourceDerivedBenchmarkProtocol_v1",
+      "status": "PASS",
+      "detail": "research_control/tasks/RT-20260729-012/artifacts/source_derived_benchmark_protocol_v1.tex"
+    },
+    {
+      "check_id": "source_hash:SourceDerivedBenchmarkProtocol_v1",
+      "status": "PASS",
+      "detail": "88ef097bf712ad115e9af62cc18a8b3eabb12f8545350f714ad065f702471007"
+    },
+    {
+      "check_id": "source_exists:SourceDerivedBenchmarkCaseSchema_v1",
+      "status": "PASS",
+      "detail": "research_control/tasks/RT-20260729-012/artifacts/source_derived_benchmark_case_schema_v1.yaml"
+    },
+    {
+      "check_id": "source_hash:SourceDerivedBenchmarkCaseSchema_v1",
+      "status": "PASS",
+      "detail": "5045de8fbaeb6c80b89ec88b71143a8aeaca1c892efadc4b7293cb438ee808d8"
+    },
+    {
+      "check_id": "source_exists:TargetImportFirewall_v1",
+      "status": "PASS",
+      "detail": "research_control/tasks/RT-20260729-012/artifacts/target_import_firewall_v1.yaml"
+    },
+    {
+      "check_id": "source_hash:TargetImportFirewall_v1",
+      "status": "PASS",
+      "detail": "ccb9297f817a9b4eeb886834a510e1f21d518a2668bc3fde9695b909d6884acf"
+    },
+    {
+      "check_id": "source_exists:FiniteSourceClosureConstraintSpec_v1",
+      "status": "PASS",
+      "detail": "research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_constraint_spec_v1.yaml"
+    },
+    {
+      "check_id": "source_hash:FiniteSourceClosureConstraintSpec_v1",
+      "status": "PASS",
+      "detail": "8840b205e8aa12d73f3e782ec6936eb96385bb5694c298b1bf41a2bdfe472626"
+    },
+    {
+      "check_id": "source_exists:FiniteSourceFieldEquationIdentitySpec_v1",
+      "status": "PASS",
+      "detail": "research_control/tasks/RT-20260729-007/artifacts/finite_source_field_equation_identity_spec_v1.yaml"
+    },
+    {
+      "check_id": "source_hash:FiniteSourceFieldEquationIdentitySpec_v1",
+      "status": "PASS",
+      "detail": "d37fdff6d320751d0174459c3d10bec75aa04be62c72c368480f1cafdb46e5f8"
+    },
+    {
+      "check_id": "source_exists:FiniteConstraintStabilityPhaseDiagram_v1",
+      "status": "PASS",
+      "detail": "research_control/tasks/RT-20260729-008/artifacts/finite_constraint_stability_phase_diagram_v1.yaml"
+    },
+    {
+      "check_id": "source_hash:FiniteConstraintStabilityPhaseDiagram_v1",
+      "status": "PASS",
+      "detail": "59ac3d8baf948f2def63df6052b066fdce876cc48223652a8b64845334286473"
+    },
+    {
+      "check_id": "source_exists:P6T08GateBSeparatingCertificate_v1",
+      "status": "PASS",
+      "detail": "research_control/tasks/RT-20260727-004/artifacts/p6_t08_gate_b_separating_certificate_v1.yaml"
+    },
+    {
+      "check_id": "source_hash:P6T08GateBSeparatingCertificate_v1",
+      "status": "PASS",
+      "detail": "f3080ed6a6ba1d6847a3b7ed43c7a11ad7f7dae4deccd25486913ea9547f221b"
+    },
+    {
+      "check_id": "code_exists:P9T02CaseValidator_v1",
+      "status": "PASS",
+      "detail": "research_control/tasks/RT-20260730-008/artifacts/validate_p9_t02_vacuum_minkowski_case.py"
+    },
+    {
+      "check_id": "code_hash:P9T02CaseValidator_v1",
+      "status": "PASS",
+      "detail": "ff2442844ef76ed31e89201352630be0c18eafab8dd439b89d0b17d4b78e58f6"
+    },
+    {
+      "check_id": "code_exists:RepositoryPythonProjectManifest",
+      "status": "PASS",
+      "detail": "pyproject.toml"
+    },
+    {
+      "check_id": "code_hash:RepositoryPythonProjectManifest",
+      "status": "PASS",
+      "detail": "c30be88711317ef594cdee96755d6a5df302bc8094e32c483cf24fa5d760a52e"
+    },
+    {
+      "check_id": "code_exists:RepositoryPythonRequirements",
+      "status": "PASS",
+      "detail": "requirements.txt"
+    },
+    {
+      "check_id": "code_hash:RepositoryPythonRequirements",
+      "status": "PASS",
+      "detail": "e74839bd2ea007c2c9ce1a267c74c376a0603591c8943b0e4e45de7f29f21080"
+    },
+    {
+      "check_id": "math:C",
+      "status": "PASS",
+      "detail": "[[Fraction(1, 2), Fraction(1, 4)], [Fraction(1, 4), Fraction(1, 1)]]"
+    },
+    {
+      "check_id": "math:L_symmetric",
+      "status": "PASS",
+      "detail": "L_C symmetric"
+    },
+    {
+      "check_id": "math:L_rows_zero",
+      "status": "PASS",
+      "detail": "constants in kernel"
+    },
+    {
+      "check_id": "math:null_response",
+      "status": "PASS",
+      "detail": "[Fraction(0, 1), Fraction(0, 1)]"
+    },
+    {
+      "check_id": "math:perturbation_response",
+      "status": "PASS",
+      "detail": "[Fraction(3, 2), Fraction(-3, 2)]"
+    },
+    {
+      "check_id": "seal:output_hash",
+      "status": "PASS",
+      "detail": "15f671fc1de1f4e546f0cd382cb25de538bba5c2a2006855f30d7830649dafba"
+    },
+    {
+      "check_id": "seal:case",
+      "status": "PASS",
+      "detail": "case identity sealed"
+    },
+    {
+      "check_id": "seal:protocol",
+      "status": "PASS",
+      "detail": "protocol exact"
+    },
+    {
+      "check_id": "seal:target_content_absent",
+      "status": "PASS",
+      "detail": "target unavailable"
+    },
+    {
+      "check_id": "seal:target_hashes_absent",
+      "status": "PASS",
+      "detail": "no target content hash"
+    },
+    {
+      "check_id": "seal:randomness",
+      "status": "PASS",
+      "detail": "deterministic"
+    },
+    {
+      "check_id": "seal:dag_hash",
+      "status": "PASS",
+      "detail": "DAG sealed"
+    },
+    {
+      "check_id": "case:dag_hash",
+      "status": "PASS",
+      "detail": "case binds DAG"
+    },
+    {
+      "check_id": "dag:acyclic",
+      "status": "PASS",
+      "detail": "finite DAG"
+    },
+    {
+      "check_id": "dag:target_to_source_zero",
+      "status": "PASS",
+      "detail": "0"
+    },
+    {
+      "check_id": "dag:oracle_closed",
+      "status": "PASS",
+      "detail": "oracle not opened"
+    },
+    {
+      "check_id": "dag:firewall",
+      "status": "PASS",
+      "detail": "source-stage firewall passes"
+    },
+    {
+      "check_id": "exposure:not_blind",
+      "status": "PASS",
+      "detail": "prior target-family knowledge disclosed"
+    },
+    {
+      "check_id": "exposure:oracle_closed",
+      "status": "PASS",
+      "detail": "oracle closed"
+    },
+    {
+      "check_id": "exposure:no_target_files",
+      "status": "PASS",
+      "detail": "zero target files"
+    },
+    {
+      "check_id": "exposure:no_rerun",
+      "status": "PASS",
+      "detail": "zero target-informed reruns"
+    },
+    {
+      "check_id": "bridge:missing",
+      "status": "PASS",
+      "detail": "physical bridge absent"
+    },
+    {
+      "check_id": "reproduction:missing",
+      "status": "PASS",
+      "detail": "no independent reproduction"
+    },
+    {
+      "check_id": "corrections:uncontrolled",
+      "status": "PASS",
+      "detail": "physical corrections absent"
+    },
+    {
+      "check_id": "tolerance:unset",
+      "status": "PASS",
+      "detail": "no fitted tolerance"
+    },
+    {
+      "check_id": "receipt:source_case_count",
+      "status": "PASS",
+      "detail": "one source stage executed"
+    },
+    {
+      "check_id": "receipt:inconclusive_count",
+      "status": "PASS",
+      "detail": "one inconclusive case"
+    },
+    {
+      "check_id": "receipt:pass_count",
+      "status": "PASS",
+      "detail": "zero case passes"
+    },
+    {
+      "check_id": "receipt:oracle_count",
+      "status": "PASS",
+      "detail": "zero opened target oracles"
+    },
+    {
+      "check_id": "receipt:no_promotion",
+      "status": "PASS",
+      "detail": "no promotion"
+    },
+    {
+      "check_id": "decomposition:math",
+      "status": "PASS",
+      "detail": "math perspective complete"
+    },
+    {
+      "check_id": "decomposition:phil",
+      "status": "PASS",
+      "detail": "philosophy perspective complete"
+    },
+    {
+      "check_id": "decomposition:no_subagents_math",
+      "status": "PASS",
+      "detail": "no subagent"
+    },
+    {
+      "check_id": "decomposition:no_subagents_phil",
+      "status": "PASS",
+      "detail": "no subagent"
+    },
+    {
+      "check_id": "conflicts:resolved",
+      "status": "PASS",
+      "detail": "all conflicts resolved"
+    },
+    {
+      "check_id": "conflicts:five",
+      "status": "PASS",
+      "detail": "five explicit conflicts"
+    },
+    {
+      "check_id": "conflicts:none_open",
+      "status": "PASS",
+      "detail": "none unresolved"
+    },
+    {
+      "check_id": "tex:FiniteSourceNullBackgroundBenchmarkAttempt",
+      "status": "PASS",
+      "detail": "required token 'FiniteSourceNullBackgroundBenchmarkAttempt'"
+    },
+    {
+      "check_id": "tex:constructed\\_candidate",
+      "status": "PASS",
+      "detail": "required token 'constructed\\\\_candidate'"
+    },
+    {
+      "check_id": "tex:INCONCLUSIVE",
+      "status": "PASS",
+      "detail": "required token 'INCONCLUSIVE'"
+    },
+    {
+      "check_id": "tex:OBST-P9T02-PHYSICAL-MINKOWSKI-BRIDGE-ABSENT-001",
+      "status": "PASS",
+      "detail": "required token 'OBST-P9T02-PHYSICAL-MINKOWSKI-BRIDGE-ABSENT-001'"
+    },
+    {
+      "check_id": "tex:not a physical vacuum",
+      "status": "PASS",
+      "detail": "required token 'not a physical vacuum'"
+    },
+    {
+      "check_id": "tex:target oracle is not opened",
+      "status": "PASS",
+      "detail": "required token 'target oracle is not opened'"
+    },
+    {
+      "check_id": "completion:constructed",
+      "status": "PASS",
+      "detail": "decisive result"
+    },
+    {
+      "check_id": "completion:no_fog",
+      "status": "PASS",
+      "detail": "no-fog discipline"
+    },
+    {
+      "check_id": "completion:case_inconclusive",
+      "status": "PASS",
+      "detail": "case outcome"
+    }
+  ],
+  "authority_limits": {
+    "validator_is_physics_proof": false,
+    "physical_Minkowski_recovery_established": false,
+    "benchmark_pass_established": false,
+    "benchmark_promotion_authorized": false,
+    "proof_authority": false
+  }
+}

@@ -1,0 +1,230 @@
+% authority: science-draft
+% status: draft/control
+% route: benchmark-recovery-packet
+% candidate_status: proposal-only
+% candidate_constructor_result: constructed_candidate
+% benchmark_case_result: INCONCLUSIVE
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{xurl}
+\usepackage[hidelinks]{hyperref}
+
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\newtheorem{nonconclusion}{Non-conclusion}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\One}{\mathbf 1}
+\newcommand{\Qspace}{\mathcal Q_C}
+
+\title{FiniteSourceNullBackgroundBenchmarkAttempt\_v1\\
+P9-T02 Source-Only Vacuum/Minkowski Case}
+\author{The \AE ther-Flow Research Project}
+\date{2026-07-30}
+
+\begin{document}
+\sloppy
+\maketitle
+
+\section{Decisive result}
+
+This packet executes the source stage of
+\texttt{P9-BENCH-VACUUM-MINKOWSKI-V1} under
+\texttt{SourceDerivedBenchmarkProtocol\_v1}.  It constructs and proves one
+source-side object,
+\texttt{FiniteSourceNullBackgroundBenchmarkAttempt\_v1}.  The decisive
+Candidate Constructor result is
+\[
+  \texttt{constructed\_candidate},
+\]
+while the benchmark-case outcome is
+\[
+  \texttt{INCONCLUSIVE}.
+\]
+
+The construction identifies an exact algebraic null-background class of the
+fixed finite source candidate.  It does not identify a physical vacuum,
+construct an effective spacetime metric, derive Minkowski geometry, supply
+physical perturbative dynamics, or compare a physical observable with a
+target oracle.  The source output is sealed before any target content is
+opened.  Because the required model-to-world and source-to-effective-geometry
+maps are absent, the preregistered inconclusive branch fires and the target
+oracle remains closed.
+
+\section{Fixed source-only basis}
+
+Let \(\Omega\) be a finite source carrier, let \(P\) be row stochastic, and
+define
+\[
+  C=\frac12(P+P^{\mathsf T}),\qquad
+  (L_C)_{xy}=
+  \begin{cases}
+    -C_{xy},&x\ne y,\\
+    \displaystyle\sum_{z\ne x}C_{xz},&x=y.
+  \end{cases}
+\]
+The exact P8 finite candidate uses
+\[
+  \Qspace=\Q^\Omega/\ker L_C,
+\]
+and
+\begin{equation}
+  S_C^{\alpha,\beta}([h];u)
+  =\frac{\alpha}{2}h^{\mathsf T}L_Ch
+   -\beta(L_Cu)^{\mathsf T}h,
+  \qquad \alpha>0.
+  \label{eq:action}
+\end{equation}
+Its source response and Euler relation are
+\[
+  a_C(u)=L_Cu,\qquad
+  \alpha L_Ch=\beta L_Cu.
+\]
+All of these objects predate target-oracle access.  No target atlas, metric,
+solution, boundary datum, Einstein--Hilbert action, Einstein equation,
+desired residual, tuned coefficient, target-selected branch, or benchmark
+success label appears in the source-stage premises.
+
+\begin{definition}[Source algebraic null background]
+A source state \(u_0\) is a \emph{source algebraic null background} for the
+fixed finite candidate when
+\[
+  u_0\in\ker L_C.
+\]
+This definition means only that the finite source response vanishes.  It is
+not a physical vacuum, not a definition of physical vacuum, and not an identification with
+Minkowski spacetime.
+\end{definition}
+
+\begin{theorem}[Finite source null-background theorem]
+\label{thm:null}
+Let \(L_C\) be the symmetric conductance Laplacian of a finite source carrier,
+let \(\alpha>0\), and let \(u_0\in\ker L_C\).  Then:
+\begin{enumerate}
+\item \(a_C(u_0)=0\);
+\item every stationary solution of \eqref{eq:action} satisfies
+      \([h_0]=0\) in \(\Qspace\);
+\item \([h_0]=0\) is the unique quotient minimum;
+\item for a source perturbation \(\delta u\), the exact static quotient
+      linearization is
+      \[
+        \delta[h]=\frac{\beta}{\alpha}\delta[u].
+      \]
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+Because \(u_0\in\ker L_C\), one has \(a_C(u_0)=L_Cu_0=0\).  The stationary
+equation becomes \(\alpha L_Ch_0=0\).  Since \(\alpha\ne0\),
+\(h_0\in\ker L_C\), hence \([h_0]=0\) in \(\Qspace\).
+The Hessian is \(\alpha L_C\), which is positive definite after quotienting
+by \(\ker L_C\); therefore the quotient stationary point is the unique
+minimum.  Linearizing the exact equation gives
+\(\alpha L_C\delta h=\beta L_C\delta u\).  Applying the quotient inverse of
+\(L_C\) yields
+\(\delta[h]=(\beta/\alpha)\delta[u]\).
+\end{proof}
+
+\section{Fixed two-state source execution}
+
+The sealed control execution uses
+\[
+  P=\begin{pmatrix}\frac12&\frac12\\0&1\end{pmatrix},
+  \qquad
+  L_C=\begin{pmatrix}\frac14&-\frac14\\-\frac14&\frac14\end{pmatrix},
+  \qquad
+  \alpha=\beta=1.
+\]
+For the componentwise-constant source state
+\[
+  u_0=(1,1)^{\mathsf T},
+\]
+exact arithmetic gives
+\[
+  L_Cu_0=(0,0)^{\mathsf T},\qquad [h_0]=0.
+\]
+For the zero-sum source perturbation
+\(\delta u=(s,-s)^{\mathsf T}\),
+\[
+  L_C\delta u=(s/2,-s/2)^{\mathsf T},
+  \qquad
+  \delta[h]=\delta[u].
+\]
+These equalities are exact finite algebra.  They define neither a time
+evolution nor a wave, causal, stability, signature, curvature, geodesic, or
+physical clock response.
+
+\section{Preregistered comparison and inconclusive branch}
+
+\begin{longtable}{p{0.24\linewidth}p{0.70\linewidth}}
+\toprule
+Required benchmark item & Source-stage disposition\\
+\midrule
+Source background &
+Constructed only as the algebraic condition \(u_0\in\ker L_C\).\\
+Physical vacuum semantics &
+Absent; no preparation, intervention, energy, matter-vacuum, or empirical
+codomain map is derived.\\
+Source-to-effective geometry map &
+Absent; the protected Gate B record remains zero of eight positive geometry
+inputs.\\
+Metric and Minkowski equivalence class &
+Not constructed or assumed at source stage.\\
+Perturbative dynamics &
+Absent; only the static derivative
+\(\delta[h]=(\beta/\alpha)\delta[u]\) is defined.\\
+Approximation and residual corrections &
+The finite algebra is exact, but continuum, coarse-graining, finite-size,
+boundary, scale, and physical correction controls are absent.\\
+Tolerance or analytic equivalence &
+Unset because no lawful source-to-target observable map exists.\\
+Independent reproduction &
+Not acquired; same-context exact reruns are validation, not independent
+reproduction.\\
+\bottomrule
+\end{longtable}
+
+The preregistered inconclusive criterion includes missing physical carrier,
+dynamics, semantics, correction control, tolerance, or independent
+reproduction.  Several of these conditions hold before a target comparison
+could be meaningful.  Therefore the source output is preserved and sealed,
+the target oracle is not opened, and the case is classified
+\texttt{INCONCLUSIVE}.  No target-informed repair or rerun is authorized.
+
+\section{Scoped obstruction and next burden}
+
+The exact obstruction is
+\[
+ \texttt{OBST-P9T02-PHYSICAL-MINKOWSKI-BRIDGE-ABSENT-001}.
+\]
+For the unchanged finite source package, the algebraic implication
+\[
+  u_0\in\ker L_C\Longrightarrow [h_0]=0
+\]
+does not supply a source-derived map from \([h_0]\) to a Lorentzian metric,
+does not supply physical vacuum semantics, and does not supply a temporal
+perturbation law.  Current ontology does not derive those missing bridges.
+This is a scoped obstruction, not a no-go theorem: a materially new
+source-side geometry, semantics, or dynamics construction could continue the
+same milestone.
+
+The next plan item may attempt a weak-field construction only while carrying
+this inconclusive result explicitly.  It may not treat the null quotient
+response as Minkowski recovery, reuse a target Newtonian potential as source
+data, or infer physical clocks, free fall, redshift, Einstein equations,
+exact-GR recovery, or benchmark promotion.
+
+\begin{nonconclusion}
+Zero finite source response and zero quotient closure response are not a
+physical vacuum theorem, not a flat-spacetime theorem, and not a Minkowski
+benchmark pass.  Source-stage mathematical exactness does not repair the
+missing model-to-world, geometry, dynamics, correction, tolerance, or
+independent-reproduction burdens.
+\end{nonconclusion}
+
+\end{document}

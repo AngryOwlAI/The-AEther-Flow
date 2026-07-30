@@ -1,0 +1,252 @@
+schema_id: "p9_t02_vacuum_minkowski_case_v1"
+artifact_id: "P9T02VacuumMinkowskiSourceOnlyCase_v1"
+task_id: "RT-20260730-008"
+job_id: "AJ-RT-20260730-008-001"
+case_id: "P9-BENCH-VACUUM-MINKOWSKI-V1"
+downstream_plan_task_id: "P9-T02"
+protocol_id: "SourceDerivedBenchmarkProtocol_v1"
+firewall_id: "TargetImportFirewall_v1"
+status: "completed"
+candidate_status: "proposal-only"
+candidate_constructor_result: "constructed_candidate"
+execution_status: "INCONCLUSIVE"
+source_execution_status: "COMPLETED"
+source_stage_firewall_status: "PASS"
+source_output_seal_status: "SEALED"
+target_comparison_status: "NOT_OPENED"
+independent_reproduction_status: "NOT_ACQUIRED"
+target_derivation_milestone: "benchmark_promotion"
+milestone_burden: "Execute the first source-only vacuum and Minkowski recovery case under SourceDerivedBenchmarkProtocol_v1 without importing the target metric or desired agreement."
+
+benchmark_scope: "vacuum and Minkowski effective limit"
+source_only_attempt_id: "FiniteSourceNullBackgroundBenchmarkAttempt_v1"
+obstruction_id: "OBST-P9T02-PHYSICAL-MINKOWSKI-BRIDGE-ABSENT-001"
+obstruction_scope: "unchanged finite source closure and field-equation package under the frozen P9-T01 protocol"
+adoption_status: "blocked_adoption_open_continuation"
+
+source_inputs:
+  - input_id: "source_vacuum_or_stationary_state"
+    source_stage_value: "u0 in ker L_C; fixed execution u0=(1,1)"
+    status: "constructed_as_source_algebraic_null_background"
+    physical_status: "not_physical_vacuum"
+    source_extension_status: "proposal-only"
+  - input_id: "source_to_effective_geometry_map"
+    source_stage_value: ""
+    status: "missing_gate_b_zero_of_eight"
+    physical_status: "no_lorentzian_metric_or_Minkowski_equivalence_map"
+    source_extension_status: "absent"
+  - input_id: "source_perturbation_and_dynamics"
+    source_stage_value: "delta[h]=(beta/alpha)delta[u] on Q_C"
+    status: "static_linearization_only"
+    physical_status: "no_temporal_kinetic_characteristic_or_stability_law"
+    source_extension_status: "proposal-only"
+
+derived_intermediate_objects:
+  - object_id: "two_state_conductance_laplacian"
+    value: "L_C=[[1/4,-1/4],[-1/4,1/4]]"
+    status: "exact_source_algebra"
+  - object_id: "source_null_response"
+    value: "L_Cu0=(0,0)"
+    status: "exact_source_algebra"
+  - object_id: "quotient_stationary_class"
+    value: "[h0]=0 in Q_C"
+    status: "exact_source_algebra"
+  - object_id: "static_quotient_linearization"
+    value: "delta[h]=(beta/alpha)delta[u]; beta/alpha=1 in fixed execution"
+    status: "exact_static_source_algebra"
+  - object_id: "physical_bridge_gap"
+    value: "physical vacuum, effective geometry, temporal dynamics, scale, corrections, tolerance, and independent reproduction absent"
+    status: "precise_scoped_obstruction"
+
+target_observable:
+  identity: "Minkowski equivalence class and vacuum perturbative reference"
+  stage: "comparison_only_after_seal"
+  oracle_opened: false
+  content_loaded: false
+  comparison_executed: false
+  reason: "A lawful source-to-physical-observable map is absent, so the preregistered INCONCLUSIVE branch fires before comparison."
+
+imported_assumptions: []
+
+approximation_order:
+  source_calculation: "exact finite rational arithmetic"
+  finite_candidate_scope: "no expansion"
+  continuum_order: "UNSET"
+  physical_weak_field_order: "UNSET"
+  validity_domain: "fixed finite conductance-Laplacian family and fixed two-state execution"
+  physical_validity_domain: "NOT_ESTABLISHED"
+
+residual_corrections:
+  finite_algebraic_remainder: "zero in exact source calculation"
+  finite_size: "UNCONTROLLED_FOR_PHYSICAL_INTERPRETATION"
+  coarse_graining: "UNCONTROLLED"
+  discretization: "NO_PHYSICAL_CONTINUUM_MAP"
+  truncation: "UNCONTROLLED_FOR_PHYSICAL_INTERPRETATION"
+  boundary: "UNCONTROLLED_FOR_PHYSICAL_INTERPRETATION"
+  calibration: "ABSENT"
+  stochastic: "NOT_APPLICABLE"
+  physical_correction_control: "ABSENT"
+
+analytic_equivalence:
+  status: "UNSET"
+  equivalence_relation: "ABSENT"
+  domain_and_regularities: "ABSENT_FOR_TARGET"
+  units_or_dimensionless_status: "SOURCE_VALUES_DIMENSIONLESS_PHYSICAL_UNITS_ABSENT"
+  gauge_or_presentation_quotient: "FINITE_COMPONENT_SHIFT_QUOTIENT_ONLY_NOT_TARGET_GAUGE"
+  boundary_conditions: "FINITE_CARRIER_ONLY"
+  target_label_reuse_is_equivalence: false
+
+numerical_tolerance:
+  status: "UNSET"
+  norm_W: ""
+  sampling_domain: ""
+  s_prereg: ""
+  epsilon_floor: ""
+  uncertainty_propagation: ""
+  threshold_tau: ""
+  threshold_units: ""
+  error_budget_basis: ""
+  calibration_source: ""
+  target_fit_used: false
+
+success_criteria:
+  status: "NOT_SATISFIED"
+  rule: "lawful physical source output, firewall PASS, independent reproduction, and preregistered Minkowski comparison PASS"
+failure_criteria:
+  status: "NOT_TRIGGERED"
+  rule: "source invalidity, firewall breach, or decisive non-Minkowski output after lawful comparison"
+inconclusive_criteria:
+  status: "TRIGGERED"
+  rule: "missing physical carrier, dynamics, semantics, correction control, tolerance, uncertainty bound, or independent reproduction"
+  triggered_items:
+    - "physical vacuum semantics absent"
+    - "source-to-effective geometry map absent"
+    - "temporal perturbative dynamics absent"
+    - "physical correction and uncertainty controls absent"
+    - "analytic equivalence and numerical tolerance absent"
+    - "independent reproduction absent"
+
+source_hash_manifest:
+  - source_id: "SourceDerivedBenchmarkProtocol_v1"
+    path: "research_control/tasks/RT-20260729-012/artifacts/source_derived_benchmark_protocol_v1.tex"
+    sha256: "88ef097bf712ad115e9af62cc18a8b3eabb12f8545350f714ad065f702471007"
+    allowed_use: "frozen source-stage and comparison protocol"
+  - source_id: "SourceDerivedBenchmarkCaseSchema_v1"
+    path: "research_control/tasks/RT-20260729-012/artifacts/source_derived_benchmark_case_schema_v1.yaml"
+    sha256: "5045de8fbaeb6c80b89ec88b71143a8aeaca1c892efadc4b7293cb438ee808d8"
+    allowed_use: "frozen case fields and INCONCLUSIVE classifier"
+  - source_id: "TargetImportFirewall_v1"
+    path: "research_control/tasks/RT-20260729-012/artifacts/target_import_firewall_v1.yaml"
+    sha256: "ccb9297f817a9b4eeb886834a510e1f21d518a2668bc3fde9695b909d6884acf"
+    allowed_use: "fail-closed target-import boundary"
+  - source_id: "FiniteSourceClosureConstraintSpec_v1"
+    path: "research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_constraint_spec_v1.yaml"
+    sha256: "8840b205e8aa12d73f3e782ec6936eb96385bb5694c298b1bf41a2bdfe472626"
+    allowed_use: "proposal-only finite quotient action and solution map"
+  - source_id: "FiniteSourceFieldEquationIdentitySpec_v1"
+    path: "research_control/tasks/RT-20260729-007/artifacts/finite_source_field_equation_identity_spec_v1.yaml"
+    sha256: "d37fdff6d320751d0174459c3d10bec75aa04be62c72c368480f1cafdb46e5f8"
+    allowed_use: "exact finite equation and identity only"
+  - source_id: "FiniteConstraintStabilityPhaseDiagram_v1"
+    path: "research_control/tasks/RT-20260729-008/artifacts/finite_constraint_stability_phase_diagram_v1.yaml"
+    sha256: "59ac3d8baf948f2def63df6052b066fdce876cc48223652a8b64845334286473"
+    allowed_use: "absence of physical temporal dynamics"
+  - source_id: "P6T08GateBSeparatingCertificate_v1"
+    path: "research_control/tasks/RT-20260727-004/artifacts/p6_t08_gate_b_separating_certificate_v1.yaml"
+    sha256: "f3080ed6a6ba1d6847a3b7ed43c7a11ad7f7dae4deccd25486913ea9547f221b"
+    allowed_use: "zero-of-eight effective-geometry input status"
+
+code_hash_manifest:
+  - code_id: "P9T02CaseValidator_v1"
+    path: "research_control/tasks/RT-20260730-008/artifacts/validate_p9_t02_vacuum_minkowski_case.py"
+    sha256: "ff2442844ef76ed31e89201352630be0c18eafab8dd439b89d0b17d4b78e58f6"
+  - code_id: "RepositoryPythonProjectManifest"
+    path: "pyproject.toml"
+    sha256: "c30be88711317ef594cdee96755d6a5df302bc8094e32c483cf24fa5d760a52e"
+  - code_id: "RepositoryPythonRequirements"
+    path: "requirements.txt"
+    sha256: "e74839bd2ea007c2c9ce1a267c74c376a0603591c8943b0e4e45de7f29f21080"
+
+provenance_dag:
+  path: "research_control/tasks/RT-20260730-008/artifacts/p9_t02_provenance_dag_v1.yaml"
+  sha256: "163d9154e81a7249cdd145841e28c0313fd4ee7b4dccb9621f29bb6b61633e7e"
+  source_graph_acyclic: true
+  forbidden_target_to_source_path_count: 0
+  target_to_seal_path_count: 0
+
+source_output_seal:
+  path: "research_control/tasks/RT-20260730-008/artifacts/p9_t02_source_output_seal_v1.json"
+  sha256: "71b7dfb67b40d748867a5c49abf7b50c684f9e4a7f5962d8787a960a3dc541dd"
+  sealed_at: "2026-07-30T18:14:40Z"
+  mutation_after_seal_authorized: false
+
+independent_reproduction:
+  status: "NOT_ACQUIRED"
+  same_context_exact_validation_available: true
+  same_context_validation_counts_as_independent: false
+  fresh_executor_or_team: false
+  fresh_environment: false
+  independent_code_or_method: false
+  primary_intermediate_sharing: "not_applicable_no_reproduction"
+  disposition: "INCONCLUSIVE"
+
+model_to_world_map:
+  status: "MISSING"
+  source_and_token_domain: "finite rational carrier, conductance Laplacian, quotient response"
+  physical_or_empirical_codomain: "ABSENT"
+  preparation_and_intervention_semantics: "ABSENT"
+  unit_and_scale_calibration_provenance: "ABSENT"
+  uncertainty_and_failure_model: "ABSENT_FOR_PHYSICAL_OBSERVABLE"
+  regime_of_validity: "exact finite source algebra only"
+  cross_device_or_cross_sector_identification: "ABSENT"
+  independent_reproduction_method: "ABSENT"
+  disposition: "INCONCLUSIVE"
+
+target_exposure_ledger:
+  path: "research_control/tasks/RT-20260730-008/artifacts/p9_t02_target_exposure_ledger_v1.yaml"
+  sha256: "2bcb4a9c82508af58e680ea488e862e74a379ac82bc66253db4d120c71b3ac3b"
+  target_family_known: true
+  blindness_claimed: false
+  target_oracle_opened: false
+  target_informed_rerun_count: 0
+  post_seal_target_definition_authority_inspection_performed: true
+  post_seal_inspection_changed_source_stage: false
+
+source_stage_result:
+  theorem_id: "FiniteSourceNullBackgroundTheorem_v1"
+  theorem_status: "draft/control"
+  exact_statement: "For alpha>0 and u0 in ker L_C, a_C(u0)=0, [h0]=0 is the unique quotient minimum, and delta[h]=(beta/alpha)delta[u]."
+  fixed_execution: "P=[[1/2,1/2],[0,1]], u0=(1,1), alpha=beta=1 gives L_Cu0=(0,0) and [h0]=0."
+  source_validity_status: "PASS"
+  physical_interpretation_status: "NOT_ESTABLISHED"
+
+case_classification:
+  outcome: "INCONCLUSIVE"
+  primary_reason: "required physical source-to-Minkowski comparison map and dynamics are absent"
+  firewall_failure: false
+  source_failure: false
+  target_comparison_failure: false
+  target_comparison_executed: false
+  formal_analogy_present: true
+  conditional_source_extension_ancestry: true
+  benchmark_pass: false
+  local_pass_implies_benchmark_promotion: false
+
+authority_limits:
+  source_law_adopted_or_rejected: false
+  canonical_ontology_modified: false
+  physical_vacuum_established: false
+  effective_geometry_established: false
+  Minkowski_recovery_established: false
+  Einstein_equations_established: false
+  exact_GR_recovery_established: false
+  Gate_D_changed: false
+  Gate_E_verdict_issued: false
+  benchmark_pass_established: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false

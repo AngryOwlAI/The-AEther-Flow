@@ -1,11 +1,134 @@
 mode: "director_led_research_control"
-active_task_id: "RT-20260730-007"
-latest_handoff_id: "handoff-0914"
-current_status: "rt005_cumulative_checkpoint_identity_reconciled_p9_t02_ready_after_checkpoint"
-claim_boundary_summary: "RT-20260730-007 binds the already-existing cumulative commit e4a644e to the exact completed RT-005 and RT-006 transaction and records generation 174's clean no_action without inventing a second commit. Protected P9-T01 bytes remain exact and all six cases remain NOT_RUN. One RT-007 checkpoint is pending; P9-T02 is unexecuted and no scientific or protected authority is created."
-next_plan_task_id: "P9-T02"
+active_task_id: "RT-20260730-009"
+latest_handoff_id: "handoff-0916"
+current_status: "rt008_agentjob_registry_ordered_write_allowlist_parity_recovered_ready_for_checkpoint"
+claim_boundary_summary: "RT-20260730-009 restores exact ordered identity for the RT-008 AgentJob registry write allowlist while preserving the RT-008 AgentJob, role, completion, handoff-0915, and P9-T02 scientific payload byte-for-byte. This is project-system recovery only: P9-T02 remains INCONCLUSIVE, P9-T03 is unexecuted, and no physical, Distance-to-GR, benchmark, Gate E, promotion, proof, publication, push, or completed-derivation authority follows."
+next_plan_task_id: "P9-T03"
 next_worker_skill: "continue-research"
-next_recommended_action: "Invoke the one governed checkpoint for AJ-RT-20260730-007-001. After that commit, use one fresh bounded continue-research packet for P9-T02 under the source-only benchmark firewall."
+next_recommended_action: "Invoke the one governed cumulative checkpoint for AJ-RT-20260730-009-001. After that commit, use one fresh bounded Candidate Constructor packet for P9-T03 to attempt source-only weak-field potentials, free fall, redshift, and clock-rate relations while carrying the P9-T02 INCONCLUSIVE disposition."
+
+rt008_agentjob_registry_ordered_write_allowlist_parity_recovery:
+  task_id: "RT-20260730-009"
+  parent_task_id: "RT-20260730-008"
+  parent_handoff_id: "handoff-0915"
+  source_task_id: "RT-20260730-008"
+  source_job_id: "AJ-RT-20260730-008-001"
+  source_handoff_id: "handoff-0915"
+  plan_task_id: "P9-T02"
+  recovery_for_plan_task_id: "P9-T02"
+  next_plan_task_id: "P9-T03"
+  claim_boundary_id: "CB-PS-P9-T02-RT008-AGENTJOB-REGISTRY-ORDERED-WRITE-ALLOWLIST-PARITY-001"
+  status: "PASS_RT008_AGENTJOB_REGISTRY_ORDERED_WRITE_ALLOWLIST_PARITY_RECOVERED_READY_FOR_CHECKPOINT"
+  work_item_status: "completed"
+  route_label: "repair_rt008_agentjob_registry_ordered_write_allowlist_parity_v1"
+  selected_role_family: "process-integrity-auditor@0.1.0"
+  selected_worker_skill: "improve-project-system"
+  selected_strategy_id: "repair_rt008_agentjob_registry_ordered_write_allowlist_parity_v1"
+  target_derivation_milestone: "none"
+  milestone_burden: "Project-system ordered allowlist identity and checkpoint recovery only; the benchmark-promotion burden and P9-T02 INCONCLUSIVE disposition remain unchanged."
+  source_head: "8b3d042d68bf0c530c34dab518622adcb5c64c30"
+  source_job_sha256: "ada7b470952ebbbb520ed7905949ccb10ec2295373c92f0c97413b0462983499"
+  source_role_sha256: "c250e1fbf6558856a52e25af6b2b6448cc38472ef7c370a8078f9a3a391b3a3f"
+  source_completion_sha256: "1ad072d427eb2782f974a329ba30d40a390c6c0a5793ebfd22aea851225f3acc"
+  source_handoff_yaml_sha256: "9769db1d0b36fae321d899d9e5012aa44d2b006fa0f13e10ffc3276b9aeb4023"
+  source_handoff_markdown_sha256: "9df1327eb300def92f57dc8302344ea65718d92104868d4f84dd098230fa3386"
+  immutable_route_sha256: "3cb0f74aec34d518e68dd3d715fdd35be3f2c2b9b525be5de2d48f3bd8474a1b"
+  route_blocker_fingerprint: "253831d1b9c4a6882ff03b3270df4c8d2863b5b6aebe6b3348fa700b3f74fa1c"
+  failed_gate_evidence_sha256: "f2dc1792d53f48f5e8a3e5cbc6e218b343206427bd8e8fffbf94e704d34ef73b"
+  dirty_manifest_sha256: "6c4791da2cdc388aa374dd3c533fa3a356f79803dff763b9c1328da8eb303e1b"
+  allowed_write_path_count: 27
+  ordered_representation_count: 4
+  protected_hash_mismatch_count: 0
+  checkpoint_invocation_count: 0
+  checkpoint_committed: false
+  p9_t02_reexecuted: false
+  p9_t02_outcome: "INCONCLUSIVE"
+  p9_t03_executed: false
+  scientific_claims_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  selected_next_work_item: "P9-T03_after_successful_checkpoint"
+  selected_next_worker_skill: "continue-research"
+  selected_next_role_family: "candidate-constructor@0.2.0"
+  selected_next_packet_type: "source_only_weak_field_operational_case_construction"
+  selected_next_route_label: "benchmark-recovery-packet"
+  selected_next_strategy_id: "construct_p9_t03_weak_field_redshift_clock_source_only_case_v1"
+  selected_next_requires_human_gate: false
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
+
+p9_t02_vacuum_minkowski_source_only_case:
+  task_id: "RT-20260730-008"
+  parent_task_id: "RT-20260730-007"
+  parent_handoff_id: "handoff-0914"
+  plan_task_id: "P9-T02"
+  next_plan_task_id: "P9-T03"
+  claim_boundary_id: "CB-V21-P9-T02-VACUUM-MINKOWSKI-SOURCE-ONLY-CASE-001"
+  status: "P9_T02_SOURCE_NULL_BACKGROUND_CONSTRUCTED_CASE_INCONCLUSIVE_READY_FOR_CHECKPOINT"
+  work_item_status: "completed"
+  route_label: "benchmark-recovery-packet"
+  selected_role_family: "candidate-constructor@0.2.0"
+  selected_worker_skill: "continue-research"
+  selected_strategy_id: "construct_p9_t02_vacuum_minkowski_source_only_case_v1"
+  target_derivation_milestone: "benchmark_promotion"
+  milestone_burden: "Execute the first source-only vacuum and Minkowski recovery case under SourceDerivedBenchmarkProtocol_v1 without importing the target metric or desired agreement."
+  dependency_checkpoint_commit: "8b3d042d68bf0c530c34dab518622adcb5c64c30"
+  immutable_route_sha256: "a03d3b9ed2919fc3e3c6d4af66b935c6cc5ac6abb27ca6d9b315c3ab549ffd3e"
+  route_blocker_fingerprint: "022d2ad4165956651ccf6dc58171dd4bdff74f3cf2e518d029f9a009985fabbb"
+  source_artifact_path: "research_control/tasks/RT-20260730-008/artifacts/finite_source_null_background_benchmark_attempt_v1.tex"
+  source_artifact_sha256: "6b3a4b386567139f4e9a88b0ce61698b681d2193d9b052672638fedbc8bf94b3"
+  source_case_path: "research_control/tasks/RT-20260730-008/artifacts/p9_t02_vacuum_minkowski_case_v1.yaml"
+  source_case_sha256: "2fadb19c5849f1da5843c0e0599dbdc31790eab46587ce6718abbf4d3a0be79c"
+  source_seal_path: "research_control/tasks/RT-20260730-008/artifacts/p9_t02_source_output_seal_v1.json"
+  source_seal_sha256: "71b7dfb67b40d748867a5c49abf7b50c684f9e4a7f5962d8787a960a3dc541dd"
+  provenance_dag_sha256: "163d9154e81a7249cdd145841e28c0313fd4ee7b4dccb9621f29bb6b61633e7e"
+  target_exposure_ledger_sha256: "2bcb4a9c82508af58e680ea488e862e74a379ac82bc66253db4d120c71b3ac3b"
+  benchmark_case_receipt_sha256: "49172f707fbaa243462788a2c22a63e19fcdd3ac0656142281fc1f013c8d884b"
+  benchmark_case_validation_sha256: "80593070d175a116e7952fac1bba008b60c54541be0db388ee4ecc1074975c5f"
+  completion_path: "research_control/tasks/RT-20260730-008/jobs/completions/AJC-AJ-RT-20260730-008-001.yaml"
+  completion_sha256: "1ad072d427eb2782f974a329ba30d40a390c6c0a5793ebfd22aea851225f3acc"
+  handoff_id: "handoff-0915"
+  handoff_path: "research_control/handoffs/handoff-0915.yaml"
+  handoff_yaml_sha256: "9769db1d0b36fae321d899d9e5012aa44d2b006fa0f13e10ffc3276b9aeb4023"
+  handoff_markdown_sha256: "9df1327eb300def92f57dc8302344ea65718d92104868d4f84dd098230fa3386"
+  source_stage_executed: true
+  source_stage_firewall_passed: true
+  source_output_sealed: true
+  source_algebraic_null_background_constructed: true
+  exact_static_quotient_linearization_established: true
+  benchmark_case_outcome: "INCONCLUSIVE"
+  executed_case_count: 1
+  inconclusive_case_count: 1
+  benchmark_pass_count: 0
+  target_comparison_oracle_invoked: false
+  target_informed_rerun_count: 0
+  physical_vacuum_established: false
+  effective_geometry_established: false
+  Minkowski_recovery_established: false
+  Gate_D_changed: false
+  Gate_E_verdict_issued: false
+  scientific_claims_changed: true
+  scientific_claim_change_scope: "task-local exact finite null-background theorem, sealed source-stage execution, and precise physical-Minkowski bridge obstruction only"
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  ontology_adoption_authorized: false
+  source_law_adoption_authorized: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  checkpoint_invocation_count: 0
+  checkpoint_committed: false
+  selected_next_work_item: "P9-T03"
+  selected_next_worker_skill: "continue-research"
+  selected_next_role_family: "candidate-constructor@0.2.0"
+  selected_next_packet_type: "source_only_weak_field_operational_case_construction"
+  selected_next_route_label: "benchmark-recovery-packet"
+  selected_next_strategy_id: "construct_p9_t03_weak_field_redshift_clock_source_only_case_v1"
+  selected_next_requires_human_gate: false
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
 
 rt005_cumulative_checkpoint_identity_reconciliation:
   task_id: "RT-20260730-007"
@@ -9045,9 +9168,9 @@ project_improvement_bridge:
   resolution_evidence_path: "research_control/tasks/RT-20260725-002/jobs/completions/AJC-AJ-RT-20260725-002-001.yaml"
 
 active_state_bifurcation:
-  latest_research_task_id: "RT-20260730-007"
-  latest_research_handoff_id: "handoff-0914"
-  latest_research_next_action: "Invoke the one governed checkpoint for AJ-RT-20260730-007-001 only after every required precheckpoint gate passes. After that commit, one fresh bounded continue-research packet may execute P9-T02 under the source-only benchmark firewall."
+  latest_research_task_id: "RT-20260730-009"
+  latest_research_handoff_id: "handoff-0916"
+  latest_research_next_action: "Invoke the one governed cumulative checkpoint for AJ-RT-20260730-009-001. After that commit, use one fresh bounded Candidate Constructor packet for P9-T03 to attempt source-only weak-field potentials, free fall, redshift, and clock-rate relations while carrying the P9-T02 INCONCLUSIVE disposition."
   latest_project_system_task_id: "none"
   latest_project_system_status: "none"
   latest_project_system_sidecar_task_id: "none"

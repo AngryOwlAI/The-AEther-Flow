@@ -1,0 +1,760 @@
+validation_status: "PASS"
+final_repository_validation_status: "PASS_READY_FOR_CHECKPOINT"
+job_id: "AJ-RT-20260730-008-001"
+completion_id: "AJC-AJ-RT-20260730-008-001"
+task_id: "RT-20260730-008"
+task_type: "v21_p9_t02_vacuum_minkowski_source_only_case"
+decision_id: "DDR-20260730-008"
+role_id: "candidate-constructor"
+role_version: "0.2.0"
+execution_role_ref: "candidate-constructor@0.2.0--RT-20260730-008"
+status: "completed"
+created_at: "2026-07-30T18:14:40Z"
+started_at: "2026-07-30T18:14:40Z"
+completed_at: "2026-07-30T18:14:40Z"
+objective: "Execute only v21 P9-T02 by constructing the narrowest source-only null background available from the fixed source package, proving and executing its finite response before target access, sealing all source outputs and rules, and classifying the vacuum/Minkowski case without target-informed repair."
+completion_summary: "P9-T02 constructs FiniteSourceNullBackgroundBenchmarkAttempt_v1 and proves that u0 in ker L_C gives zero source response, unique zero quotient response, and exact static quotient linearization. The fixed two-state source stage passes and is sealed before target-side inspection. The frozen case is INCONCLUSIVE because physical-vacuum semantics, effective geometry, temporal dynamics, correction control, tolerance, and independent reproduction are absent. Zero benchmark passes, zero target-informed reruns, and no promotion authority result."
+objective_result: "constructed_source_null_background_case_inconclusive_ready_for_checkpoint"
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 176
+  passes_consumed: 160
+  route_work_item_id: "P9-T02"
+  route_worker_skill: "continue-research"
+  route_sha256: "a03d3b9ed2919fc3e3c6d4af66b935c6cc5ac6abb27ca6d9b315c3ab549ffd3e"
+  route_reason: "resume_research_after_project_system_repair"
+  route_strategy_id: "continue_in_scope_generation_176"
+  route_blocker_fingerprint: "022d2ad4165956651ccf6dc58171dd4bdff74f3cf2e518d029f9a009985fabbb"
+  route_before_fingerprint: "022d2ad4165956651ccf6dc58171dd4bdff74f3cf2e518d029f9a009985fabbb"
+  route_evidence_sha256es:
+    - "022d2ad4165956651ccf6dc58171dd4bdff74f3cf2e518d029f9a009985fabbb"
+    - "10e68692224d05764ac0138dc58aad13b2a1c6c7d992e8df8e66d8dd592e6063"
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:176"
+  handoff_token: "4525ec65d91abd13926d3caff5a6ae52817b7ef70606cd1e"
+  relay_claim_token: "16ab9fbcf3e9b87077da3f58b00b0ce1c664d82360101bd2"
+  worker_skill: "continue-research"
+  worker_invocation_count: 1
+
+transaction_status: "ready_for_checkpoint"
+result_disposition: "P9_T02_SOURCE_NULL_BACKGROUND_CONSTRUCTED_CASE_INCONCLUSIVE_READY_FOR_CHECKPOINT"
+milestone_disposition: "first_source_stage_executed_inconclusive_physical_Minkowski_recovery_open"
+adoption_status: "blocked_adoption_open_continuation"
+checkpoint_commit:
+  required: true
+  attempted: false
+  committed: false
+  commit_sha: ""
+  dependency_checkpoint_commit: "8b3d042d68bf0c530c34dab518622adcb5c64c30"
+  push_authorized: false
+  push_performed: false
+
+is_physics_task: true
+payload_class: "candidate_construction"
+has_new_mathematical_payload: true
+source_extension_classification_required: true
+external_red_team_finding_requires_integration: false
+physics_promotion_authorized: false
+proof_authority: false
+
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P9"
+  plan_task_id: "P9-T02"
+  work_kind: "benchmark_or_recovery"
+  task_class: "science"
+  expected_result_kind: "completed_or_precisely_blocked"
+  dependency_task_ids:
+    - "P9-T01"
+  dependency_completion_paths:
+    - "research_control/tasks/RT-20260729-012/jobs/completions/AJC-AJ-RT-20260729-012-001.yaml"
+  dependency_checkpoint_commits:
+    - "8b3d042d68bf0c530c34dab518622adcb5c64c30"
+  work_item_status: "completed_ready_for_checkpoint"
+  recommendation_ids:
+    - "V21-R28"
+    - "V21-R29"
+    - "V21-R66"
+  recommendation_coverage_role: "direct_implementation"
+  scientific_claims_changed: true
+  scientific_claim_change_scope: "exact finite null-background theorem, sealed source execution, and precise physical-Minkowski bridge obstruction"
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  next_dependency_work_item: "P9-T03_after_checkpoint"
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  observed_durable_outputs:
+    physics:
+      - "one exact finite source null-background theorem and fixed execution"
+      - "one sealed source-stage output and provenance DAG"
+      - "one precise INCONCLUSIVE vacuum/Minkowski case disposition"
+    project_system:
+      - "one task-local deterministic validator and compact receipt"
+      - "parent-child synthesis and target-exposure records"
+      - "standard control records and generated memory derivatives"
+  accepted_criteria:
+    physics:
+      - "source null background is selected without target content"
+      - "exact response and quotient theorem reproduces"
+      - "source-stage provenance and seal pass the frozen firewall"
+      - "missing physical bridge produces INCONCLUSIVE rather than pass by definition"
+      - "zero benchmark passes, zero target-informed reruns, and zero promotion claims"
+    project_system:
+      - "task-local hash, DAG, exact-math, parent-child, exposure, and authority checks pass"
+      - "claim-language and documentation-impact gates pass"
+      - "one governed checkpoint records the bounded transaction"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+physics_payload_admission_result:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "physics"
+  declared_payload_type: "candidate_construction"
+  realized_payload_type: "candidate_construction_with_exact_theorem_and_scoped_obstruction"
+  candidate_family: "FiniteSourceNullBackgroundBenchmarkAttempt_v1"
+  decision_identity: "FiniteSourceNullBackgroundTheorem_v1"
+  result: "PASS"
+  material_payload_present: true
+  process_receipts_counted_as_payload: false
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed_by_admission: false
+  physics_promotion_authorized: false
+
+family_freeze_admission_result:
+  schema_id: "family_freeze_route_admission_v1"
+  policy_id: "family_freeze_reopening_policy_v1"
+  route_id: "v21_p9_t02_finite_source_null_background_benchmark_attempt_v1"
+  family_id: "FiniteSourceNullBackgroundBenchmarkAttempt_v1"
+  detected_match_basis: []
+  reopening_requested: false
+  result: "PASS_MATERIALLY_NEW_CASE_EXECUTION"
+  local_family_freeze_preserved: true
+  global_no_go_claimed: false
+  physics_promotion_authorized: false
+
+ordinary_route_guard_admission_result:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0914"
+  selected_plan_task_id: "P9-T02"
+  guard_outcome: "physics_bearing_route_selected"
+  result: "PASS"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  scientific_status_changed_by_guard: false
+  physics_promotion_authorized: false
+
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_execution_unit_count: 2
+  outer_agentjob_count: 1
+  child_agentjob_count: 0
+  subagent_count: 0
+
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260730-008/artifacts/child_phys_math_p9_t02_vacuum_minkowski_case.yaml"
+      output_sha256: "c1388c399045cd6e4f180a5227c5232986bb1926a856444eba6d207028972abd"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260730-008/artifacts/child_phys_phil_p9_t02_vacuum_minkowski_case.yaml"
+      output_sha256: "b9a9166e5de14c2608258d000f0b8c868814ca821f9b83a65223dd9463575618"
+      status: "completed"
+  conflict_review:
+    status: "resolved"
+    review_path: "research_control/tasks/RT-20260730-008/artifacts/parent_conflict_review_p9_t02_vacuum_minkowski_case.yaml"
+    review_sha256: "56e8dcd1351ce1a00605a8a2f644d09d8bfff0e782fe5d5efdc3e8530733b89a"
+    resolution_rounds: 1
+    resolved_conflict_count: 5
+    unresolved_conflicts: []
+  fusion:
+    fused_output_path: "research_control/tasks/RT-20260730-008/artifacts/finite_source_null_background_benchmark_attempt_v1.tex"
+    fusion_notes_path: "research_control/tasks/RT-20260730-008/artifacts/parent_fusion_notes_p9_t02_vacuum_minkowski_case.md"
+    shared_consensus_summary: "The fixed finite candidate has an exact algebraic null-background class, but no physical Minkowski conclusion exists without a source-derived geometry, dynamics, semantics, corrections, tolerance, and independent reproduction."
+    unique_phys_math_contributions: "Kernel null-background theorem, quotient uniqueness, exact static linearization, fixed two-state execution, and source-output seal."
+    unique_phys_phil_contributions: "Physical-vacuum boundary, model-to-world gap, target-exposure disclosure, blindness and independence calibration, and pass-by-label block."
+    novelty_preservation_summary: "Fusion preserves the first executed and sealed P9 source case while retaining its INCONCLUSIVE physical disposition."
+    claim_boundary_preservation_summary: "No physical vacuum, effective metric, Minkowski recovery, Einstein equation, exact-GR recovery, benchmark pass, Gate E verdict, promotion, proof, publication, push, global no-go, or completed derivation is authorized."
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+
+memory_preflight:
+  preflight_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1089
+    relationship_row_count: 5515
+    semantic_row_count: 1089
+    vault_row_count: 1089
+    local_cache_only_warning_count: 0
+    refresh_performed: true
+  refresh_needed: true
+  refresh_performed: true
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"Minkowski benchmark\" --limit 10 --json"
+      query_type: "search"
+      query_text: "Minkowski benchmark"
+      returned_object_ids:
+        - "MD-V21-P9-T01-PARENT-FUSION-BENCHMARK-PROTOCOL-V1"
+        - "TEX-V21-P9-T01-SOURCE-DERIVED-BENCHMARK-PROTOCOL-V1"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+    - object_id: "MD-V21-P9-T01-PARENT-FUSION-BENCHMARK-PROTOCOL-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260729-012/artifacts/parent_fusion_notes_p9_t01_benchmark_protocol.md"
+      source_hash: "9ca58abe6eb1151614b4e5124df9a2e2aac4ecff301cea634dc4e7ad6cbcde03"
+    - object_id: "TEX-V21-P9-T01-SOURCE-DERIVED-BENCHMARK-PROTOCOL-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260729-012/artifacts/source_derived_benchmark_protocol_v1.tex"
+      source_hash: "88ef097bf712ad115e9af62cc18a8b3eabb12f8545350f714ad065f702471007"
+    - object_id: "TEX-V21-P8-T07-GATE-D-DECISION-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260729-011/artifacts/p8_t07_gate_d_decision_v1.tex"
+      source_hash: "035ea88a612d861a00d0703ec2bd1094e01194c113d7ff2588e3a4ad8bf47d63"
+    - object_id: "TEX-ONTOLOGY-AETHER-FLOW-DYNAMICS"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "ontology/tex/aether_flow_dynamics.tex"
+      source_hash: "fd6e579e71ef7f2ac4c9668ceede051ad57033ee52357b2552a9e3a5a53939c7"
+      inspection_stage: "post_source_seal_target_definition_boundary_only"
+    - object_id: "TEX-ONTOLOGY-AETHER-FLOW-RELATIVISTIC-RECOVERY"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "ontology/tex/aether_flow_relativistic_recovery.tex"
+      source_hash: "77d5c2db56f122870343834f853bf2f375a912116a347d7c5710405c8707d69c"
+      inspection_stage: "post_source_seal_target_definition_boundary_only"
+    - object_id: "TEX-ONTOLOGY-AETHER-FLOW-CONSISTENCY"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "ontology/tex/aether_flow_consistency.tex"
+      source_hash: "d965519639ee8764a5c5a63798d15e8a9a380d7e208dffc43a0be02b6f245ba1"
+      inspection_stage: "post_source_seal_target_definition_boundary_only"
+  authority_note: "Obsidian wiki notes, semantic extracts, PDFs, and .local files are retrieval layers only and are not authority. Target-side ontology manuscripts were inspected only after the source seal and did not change a source datum, branch, rule, output, tolerance, or seal."
+
+benchmark_case_result:
+  protocol_id: "SourceDerivedBenchmarkProtocol_v1"
+  case_id: "P9-BENCH-VACUUM-MINKOWSKI-V1"
+  candidate_id: "FiniteSourceNullBackgroundBenchmarkAttempt_v1"
+  outcome: "INCONCLUSIVE"
+  source_execution_status: "COMPLETED"
+  source_stage_firewall_status: "PASS"
+  source_output_seal_status: "SEALED"
+  target_comparison_status: "NOT_OPENED"
+  independent_reproduction_status: "NOT_ACQUIRED"
+  executed_case_count: 1
+  passed_case_count: 0
+  failed_case_count: 0
+  inconclusive_case_count: 1
+  opened_target_oracle_count: 0
+  target_informed_rerun_count: 0
+  exact_source_result: "u0 in ker L_C gives a_C(u0)=0, unique [h0]=0, and delta[h]=(beta/alpha)delta[u]"
+  fixed_execution_result: "u0=(1,1), alpha=beta=1, L_Cu0=(0,0), [h0]=0"
+  primary_inconclusive_reason: "No source-derived physical-vacuum semantics, effective geometry, temporal dynamics, physical correction control, tolerance, or independent reproduction exists."
+  obstruction_id: "OBST-P9T02-PHYSICAL-MINKOWSKI-BRIDGE-ABSENT-001"
+  Gate_D_status: "NOT_READY_EINSTEIN_SECTOR_DERIVATION_REQUIREMENTS_UNMET"
+  Gate_D_changed: false
+  Gate_E_status: "NOT_READY_ONE_INCONCLUSIVE_CASE_ZERO_PASSES"
+  Gate_E_verdict_issued: false
+  physical_Minkowski_recovery_established: false
+  exact_GR_recovery_established: false
+  benchmark_promotion_authorized: false
+
+new_mathematical_payload:
+  - payload_id: "NMP-RT-20260730-008-001"
+    payload_type: "definition"
+    name: "Source algebraic null background"
+    summary: "Defines the finite source null class by u0 in ker L_C without assigning physical-vacuum or geometric meaning."
+  - payload_id: "NMP-RT-20260730-008-002"
+    payload_type: "theorem"
+    name: "FiniteSourceNullBackgroundTheorem_v1"
+    summary: "Proves zero source response, unique zero quotient minimum, and exact static quotient linearization for alpha>0."
+  - payload_id: "NMP-RT-20260730-008-003"
+    payload_type: "explicit_witness"
+    name: "P9-T02 fixed two-state source execution"
+    summary: "Reproduces the theorem using exact rational arithmetic on the fixed two-state carrier."
+  - payload_id: "NMP-RT-20260730-008-004"
+    payload_type: "obstruction"
+    name: "Physical Minkowski bridge obstruction"
+    summary: "Records the exact missing physical geometry, dynamics, semantics, corrections, tolerance, and reproduction bundle that forces INCONCLUSIVE."
+
+minimum_physics_payload:
+  minimum_payload_schema_id: "minimum_physics_payload_schema_v1"
+  source_task_id: "RT-20260730-008"
+  source_job_id: "AJ-RT-20260730-008-001"
+  source_completion_path: "research_control/tasks/RT-20260730-008/jobs/completions/AJC-AJ-RT-20260730-008-001.yaml"
+  target_derivation_milestone: "benchmark_promotion"
+  milestone_burden: "Execute the first source-only vacuum and Minkowski recovery case under SourceDerivedBenchmarkProtocol_v1 without importing the target metric or desired agreement."
+  payload_class: "candidate_construction"
+  payload_status: "draft/control"
+  payload_artifact_path: "research_control/tasks/RT-20260730-008/artifacts/finite_source_null_background_benchmark_attempt_v1.tex"
+  payload_summary: "An exact finite source null-background theorem, sealed source execution, and precise INCONCLUSIVE benchmark disposition."
+  payload_source_basis:
+    - "SourceDerivedBenchmarkProtocol_v1"
+    - "FiniteSourceClosureConstraintSpec_v1"
+    - "FiniteSourceFieldEquationIdentitySpec_v1"
+    - "P6T08GateBSeparatingCertificate_v1"
+  process_receipts_excluded:
+    - "validator_status"
+    - "registry_row"
+    - "handoff_status"
+    - "generated_derivative"
+    - "checkpoint_status"
+  physics_promotion_authorized: false
+  proof_authority: false
+
+mathematical_payload_manifest:
+  - payload_id: "PAYLOAD-RT008-001"
+    payload_type: "definition"
+    object_name: "SourceAlgebraicNullBackground_v1"
+    claim_status: "draft/control proposal-only"
+    source_path: "research_control/tasks/RT-20260730-008/artifacts/finite_source_null_background_benchmark_attempt_v1.tex"
+    burden_effect: "narrows"
+    summary: "Types the exact source null-response class without physical-vacuum or geometry overread."
+  - payload_id: "PAYLOAD-RT008-002"
+    payload_type: "theorem"
+    object_name: "FiniteSourceNullBackgroundTheorem_v1"
+    claim_status: "exact within the declared finite proposal-only candidate"
+    source_path: "research_control/tasks/RT-20260730-008/artifacts/finite_source_null_background_benchmark_attempt_v1.tex"
+    burden_effect: "narrows"
+    summary: "Proves zero response, unique quotient minimum, and exact static quotient linearization."
+  - payload_id: "PAYLOAD-RT008-003"
+    payload_type: "explicit_witness"
+    object_name: "P9-T02 fixed two-state source execution"
+    claim_status: "exact finite source witness"
+    source_path: "research_control/tasks/RT-20260730-008/artifacts/finite_source_null_background_benchmark_attempt_v1.tex"
+    burden_effect: "narrows"
+    summary: "Executes the frozen source datum and seals the exact output before target-side inspection."
+  - payload_id: "PAYLOAD-RT008-004"
+    payload_type: "obstruction"
+    object_name: "OBST-P9T02-PHYSICAL-MINKOWSKI-BRIDGE-ABSENT-001"
+    claim_status: "scoped obstruction for unchanged finite source package"
+    source_path: "research_control/tasks/RT-20260730-008/artifacts/finite_source_null_background_benchmark_attempt_v1.tex"
+    burden_effect: "obstructs"
+    summary: "The source algebra lacks the physical geometry, dynamics, semantics, corrections, tolerance, and independent reproduction required for a Minkowski result."
+
+candidate_constructor_result:
+  result_type: "constructed_candidate"
+  constructed_candidate_path: "research_control/tasks/RT-20260730-008/artifacts/finite_source_null_background_benchmark_attempt_v1.tex"
+  minimal_countermodel_path: ""
+  obstruction_id: "OBST-P9T02-PHYSICAL-MINKOWSKI-BRIDGE-ABSENT-001"
+  formal_objects:
+    - "finite source carrier and symmetric conductance Laplacian L_C"
+    - "componentwise kernel ker L_C"
+    - "source algebraic null background u0 in ker L_C"
+    - "quotient response class [h0]=0"
+    - "exact static response map delta[h]=(beta/alpha)delta[u]"
+    - "source-output seal and provenance DAG"
+  maps:
+    - "u0 -> a_C(u0)=L_Cu0=0"
+    - "u0 -> [h0]=0 in Q_C"
+    - "delta[u] -> delta[h]=(beta/alpha)delta[u]"
+    - "sealed source record plus missing-burden rule -> INCONCLUSIVE case classification"
+  proof_obligations:
+    - "any physical-vacuum claim requires source-derived preparation, matter-vacuum, energy, and observable semantics"
+    - "any Minkowski claim requires a source-derived Lorentzian metric and equivalence relation"
+    - "any perturbative recovery claim requires temporal dynamics, characteristics, mode count, and stability"
+    - "any physical comparison requires controlled corrections, uncertainty, tolerance, and model-to-world calibration"
+    - "any decisive benchmark claim requires genuinely independent reproduction"
+    - "P9-T03 must not use the adopted target Newtonian potential, redshift, clock, or free-fall relations as source premises"
+  failed_components:
+    - "physical vacuum semantics"
+    - "source-to-effective Lorentzian geometry map"
+    - "temporal perturbative dynamics"
+    - "physical correction and uncertainty control"
+    - "analytic equivalence or numerical tolerance"
+    - "independent reproduction"
+  next_required_role: "none"
+  no_fog_check: true
+  no_fog_explanation: "RT-20260730-008 constructed and exactly executed a finite source null-background candidate with zero response and unique zero quotient class; the physical Minkowski case is INCONCLUSIVE because the unchanged package lacks a source-derived geometry, physical-vacuum semantics, temporal dynamics, controlled corrections, tolerance, and independent reproduction."
+  claim_boundary_preserved: true
+  claim_boundary_citation: "CB-V21-P9-T02-VACUUM-MINKOWSKI-SOURCE-ONLY-CASE-001"
+
+obstruction_record:
+  present: true
+  obstruction_id: "OBST-P9T02-PHYSICAL-MINKOWSKI-BRIDGE-ABSENT-001"
+  scope: "benchmark_promotion"
+  failed_object: "physical source-to-Minkowski comparison bridge for the unchanged finite source package"
+  exact_failure: "The algebraic null response has no source-derived Lorentzian metric, physical-vacuum semantics, temporal dynamics, controlled physical corrections, target equivalence or tolerance, or independent reproduction; therefore the protocol cannot classify it as a Minkowski pass."
+  minimal_counterexample_path: ""
+  current_ontology_implication: "does_not_derive"
+  source_extension_implication: "repair_allowed"
+  consequence: "repair_candidate_allowed"
+  forbidden_overread: "This scoped missing-bridge result does not imply that a physical Minkowski recovery is impossible under a materially new source-side geometry, dynamics, semantics, or reproduction packet, and it does not reject the global theory."
+
+physics_progress_status:
+  status: "precise_obstruction_found"
+  target_derivation_milestone: "benchmark_promotion"
+  milestone_burden: "Execute the first source-only vacuum and Minkowski recovery case under SourceDerivedBenchmarkProtocol_v1 without importing the target metric or desired agreement."
+  explanation: "P9-T02 adds an exact source null-background theorem and sealed source execution, but the case-level benchmark burden ends in a precise scoped obstruction: the fixed package cannot support a physical Minkowski comparison. The outcome is INCONCLUSIVE, not a pass or global no-go."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "benchmark_promotion"
+  milestone: "benchmark_promotion"
+  old_status: "blocked by missing primitive; source-derived protocol defined with six NOT_RUN case templates"
+  new_status: "blocked by missing primitive; first source stage executed and classified INCONCLUSIVE with zero benchmark passes"
+  ledger_row_updated: true
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "The row gains the first executed source-case evidence and exact obstruction path, but its mathematical, physical, and promotion status remain blocked."
+  downstream_unlocked:
+    - "P9-T03 source-only weak-field free-fall redshift and clock construction after checkpoint, carrying the P9-T02 INCONCLUSIVE disposition"
+  downstream_still_blocked:
+    - "physical Minkowski recovery"
+    - "any passed physical benchmark"
+    - "positive Gate E verdict"
+    - "Einstein equations"
+    - "exact-GR recovery"
+    - "benchmark promotion"
+  explanation: "Exact source-side null-response mathematics and an inconclusive case disposition improve evidence but do not move physical or promotion status."
+
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "unchanged; no canonical ontology edit or source-law adoption"
+  - burden: "Source equivalence EqSrc"
+    status: "unchanged"
+  - burden: "RetainH"
+    status: "unchanged"
+  - burden: "GenH"
+    status: "unchanged"
+  - burden: "ObsLoc_lc"
+    status: "unchanged"
+  - burden: "Resp_lc"
+    status: "unchanged; exact finite null response only"
+  - burden: "M_src"
+    status: "unchanged; no scope expansion or physical-vacuum meaning"
+  - burden: "g_eff"
+    status: "unresolved; Gate B remains zero of eight and [h0]=0 is not a metric"
+  - burden: "matter coupling"
+    status: "unchanged; no physical matter-vacuum classifier or target stress-energy map"
+  - burden: "Einstein equations"
+    status: "unresolved; no physical gravitational dynamics or field equation is derived"
+  - burden: "finite-variation robustness"
+    status: "exact static finite linearization only; physical temporal and continuum robustness absent"
+  - burden: "benchmark promotion"
+    status: "blocked; one source stage executed, one INCONCLUSIVE case, zero passes"
+  - burden: "Gate Chair status"
+    status: "Gate D protected NOT_READY unchanged; no Gate E verdict"
+  - burden: "current route freeze or hard-fail status"
+    status: "P9-T02 exact case is preserved as INCONCLUSIVE; materially different P9-T03 same-suite continuation remains open after checkpoint"
+
+freeze_criteria_status:
+  repeated_burden: false
+  scoped_obstruction: true
+  freeze_evaluation_required: true
+  active_freeze_label: "P9T02-UNCHANGED-FINITE-SOURCE-PHYSICAL-MINKOWSKI-BRIDGE-ABSENT"
+  prior_attempts_considered:
+    - "RT-20260729-012"
+    - "RT-20260730-008"
+  freeze_if:
+    - "The exact unchanged finite source null-response case is rerun without a materially new geometry, dynamics, semantics, correction, tolerance, or independent-reproduction payload."
+    - "A later packet changes source parameters or branches using target residuals."
+  do_not_freeze_if:
+    - "A materially new source-only weak-field or geometry bridge is constructed and preserves the P9-T02 INCONCLUSIVE record."
+    - "A genuinely independent reproduction method is acquired without sharing primary intermediates."
+  freeze_decision: "not_frozen"
+  decision_reason: "The exact P9-T02 case is locally preserved and must not be rerun unchanged, while P9-T03 poses a distinct weak-field and operational-device construction burden with a new output contract."
+  next_allowed_route: "candidate_constructor"
+  global_theory_rejection: false
+  future_source_extension_impossibility: false
+
+loop_risk_decision:
+  category: "bridge_facing_candidate_path"
+  next_route: "continue_bridge_facing_candidate_path"
+  rationale: "P9-T02 executes and freezes one exact null-background case disposition. P9-T03 must construct distinct source weak-field and operational observables rather than reinterpret or rerun the null response."
+  repeated_burdens:
+    - "physical source-to-effective geometry remains absent"
+    - "physical temporal dynamics remain absent"
+
+route_cycle_control:
+  cycle_family: "v21_p9_source_derived_benchmark_suite"
+  current_cycle_step: "P9-T02_source_null_background_case_inconclusive"
+  cycle_risk: "A later packet could relabel the zero quotient response as Minkowski recovery or reuse target weak-field formulas as source inputs."
+  prior_related_tasks:
+    - "RT-20260729-011"
+    - "RT-20260729-012"
+    - "RT-20260730-008"
+  orbit_avoidance_reason: "P9-T02 adds the first sealed source execution and exact case disposition. P9-T03 must create new weak-field, free-fall, redshift, and clock source objects and may not rerun or reinterpret the null case."
+  next_role_consequence: "candidate-constructor@0.2.0 for v21 P9-T03 after checkpoint"
+
+source_extension_classification:
+  checklist_id: "source_extension_classification_checklist_v1"
+  item_id: "FiniteSourceNullBackgroundBenchmarkAttempt_v1"
+  item_source_path: "research_control/tasks/RT-20260730-008/artifacts/finite_source_null_background_benchmark_attempt_v1.tex"
+  classification: "conservative_definitional_extension"
+  evidence_paths:
+    - "research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_constraint_spec_v1.yaml"
+    - "research_control/tasks/RT-20260729-007/artifacts/finite_source_field_equation_identity_spec_v1.yaml"
+    - "research_control/tasks/RT-20260729-012/artifacts/source_derived_benchmark_protocol_v1.tex"
+  relation_to_current_ontology: "conservative"
+  claim_boundary_id: "CB-V21-P9-T02-VACUUM-MINKOWSKI-SOURCE-ONLY-CASE-001"
+  protected_authority_required: true
+  physics_promotion_authorized: false
+  downstream_promotion_authorized: false
+  allowed_conclusion: "One exact finite source algebraic null background and sealed source execution are established inside the fixed proposal-only candidate; the physical vacuum and Minkowski benchmark case remains INCONCLUSIVE."
+  forbidden_overreads:
+    - "source algebraic null response as physical vacuum"
+    - "zero quotient response as flat spacetime or Minkowski recovery"
+    - "static quotient linearization as physical temporal dynamics or stability"
+    - "target-side adopted GR dynamics as source derivation"
+    - "same-context validation as independent reproduction"
+    - "benchmark pass Gate E verdict or benchmark promotion"
+    - "ontology or source-law adoption"
+    - "Einstein equations exact-GR recovery proof publication push global no-go future impossibility or completed derivation"
+  next_route_if_blocked: "P9-T03 source-only weak-field free-fall redshift and clock construction after checkpoint"
+
+bridge_attempt_status:
+  bridge_attempted: true
+  bridge_name: "finite source algebraic null background to physical Minkowski benchmark"
+  bridge_result: "precise_obstruction"
+  candidate_map: "u0 in ker L_C maps to a_C(u0)=0 and [h0]=0; no map from [h0] to a physical Lorentzian metric or physical vacuum is derived"
+  missing_primitive: "Source-derived physical-vacuum semantics, Lorentzian geometry, temporal dynamics, controlled physical corrections, target-equivalence or tolerance data, and independent reproduction remain absent."
+  preserves_blocks: true
+  blocked_outputs:
+    - "physical_vacuum"
+    - "effective_geometry_or_metric"
+    - "Minkowski_recovery"
+    - "physical_perturbative_dynamics"
+    - "Einstein_equations"
+    - "exact_GR_recovery"
+    - "benchmark_pass_or_promotion"
+    - "Gate_E_verdict"
+    - "proof_publication_push_or_completed_derivation"
+  explanation: "The source side supplies an exact algebraic null-response class, but there is no lawful physical map that would make it a Minkowski result."
+
+selected_next_route:
+  route_id: "v21_p9_t03_weak_field_redshift_clock_source_only_case_after_p9_t02_inconclusive"
+  route_label: "benchmark-recovery-packet"
+  role_family: "candidate-constructor@0.2.0"
+  worker_skill: "continue-research"
+  selected_next_packet_type: "source_only_weak_field_operational_case_construction"
+  task_type: "v21_p9_t03_weak_field_redshift_clock_source_only_case"
+  plan_task_id: "P9-T03"
+  target_derivation_milestone: "benchmark_promotion"
+  milestone_burden: "Derive weak-field potentials, free-fall acceleration, redshift, and clock-rate relations from source dynamics and operational devices."
+  strategy_id: "construct_p9_t03_weak_field_redshift_clock_source_only_case_v1"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  p9_t02_outcome_carried_forward: "INCONCLUSIVE"
+  target_Newtonian_potential_assumed: false
+  target_free_fall_assumed: false
+  target_redshift_assumed: false
+  target_clock_rate_assumed: false
+  target_informed_source_repair_authorized: false
+  benchmark_result_preestablished: false
+  Gate_E_verdict_preestablished: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  source_handoff: "research_control/handoffs/handoff-0915.yaml"
+
+claim_boundary:
+  boundary_id: "CB-V21-P9-T02-VACUUM-MINKOWSKI-SOURCE-ONLY-CASE-001"
+  allowed_scope: "One proposal-only finite source algebraic null background, exact theorem and fixed execution, immutable source seal, target-exposure record, one INCONCLUSIVE case disposition, precise scoped obstruction, ledger evidence update, and one P9-T03 route after checkpoint."
+  blocked_scope: "Physical vacuum or Minkowski identification; target atlas metric solution dynamics or desired agreement as source input; target-informed repair; independent reproduction claim; Gate D change; Gate E verdict; ontology or source-law adoption; Einstein equations; exact-GR recovery; benchmark pass or promotion; proof publication push completed derivation global no-go or future impossibility."
+  claim_boundary_preserved: true
+
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+  summary: "The exact finite null response is a proposal-only source result and the benchmark case is INCONCLUSIVE. Validator PASS, source-stage exactness, case execution, role authority, and checkpoint status do not establish physical vacuum, Minkowski recovery, Einstein equations, exact-GR recovery, benchmark pass, Gate E closure, or promotion."
+  forbidden_conclusions:
+    - "canonical ontology source-law or candidate adoption or rejection"
+    - "source algebraic null background as physical vacuum"
+    - "zero quotient response as flat spacetime or Minkowski geometry"
+    - "static quotient linearization as physical temporal dynamics or stability"
+    - "target-side adopted GR dynamics as a source derivation"
+    - "same-context validation as independent reproduction"
+    - "M_src adoption or scope expansion"
+    - "g_eff or target metric construction or promotion"
+    - "matter coupling derivation or target stress-energy tensor"
+    - "Einstein-Hilbert action or Einstein-equation derivation"
+    - "exact-GR recovery or benchmark pass or promotion"
+    - "Gate D change or Gate E verdict"
+    - "proof publication push or completed derivation"
+    - "global theory rejection or future source-extension impossibility"
+
+no_target_import_audit:
+  explicit_target_import_found: false
+  explicit_process_import_found: false
+  target_family_known_before_execution: true
+  blindness_claimed: false
+  source_stage_target_file_access_count: 0
+  post_seal_target_definition_inspection_count: 3
+  target_comparison_oracle_invoked: false
+  target_informed_rerun_count: 0
+  source_mutation_after_seal_count: 0
+  distinction: "Only frozen source records and exact task-local source data enter the source calculation. Canonical target-side manuscripts were inspected after the seal solely to verify the adopted target claim boundary and did not alter the source record."
+  forbidden_inputs_absent:
+    - "target atlas"
+    - "target metric or Minkowski solution"
+    - "Einstein-Hilbert action or Einstein equations"
+    - "target boundary or initial data"
+    - "target residual or desired agreement"
+    - "target-tuned coefficient branch stopping rule or tolerance"
+    - "benchmark success label"
+    - "validator checkpoint or generated derivative as science"
+
+artifacts:
+  - path: "research_control/tasks/RT-20260730-008/artifacts/finite_source_null_background_benchmark_attempt_v1.tex"
+    sha256: "6b3a4b386567139f4e9a88b0ce61698b681d2193d9b052672638fedbc8bf94b3"
+  - path: "research_control/tasks/RT-20260730-008/artifacts/p9_t02_vacuum_minkowski_case_v1.yaml"
+    sha256: "2fadb19c5849f1da5843c0e0599dbdc31790eab46587ce6718abbf4d3a0be79c"
+  - path: "research_control/tasks/RT-20260730-008/artifacts/p9_t02_source_output_seal_v1.json"
+    sha256: "71b7dfb67b40d748867a5c49abf7b50c684f9e4a7f5962d8787a960a3dc541dd"
+  - path: "research_control/tasks/RT-20260730-008/artifacts/p9_t02_provenance_dag_v1.yaml"
+    sha256: "163d9154e81a7249cdd145841e28c0313fd4ee7b4dccb9621f29bb6b61633e7e"
+  - path: "research_control/tasks/RT-20260730-008/artifacts/p9_t02_target_exposure_ledger_v1.yaml"
+    sha256: "2bcb4a9c82508af58e680ea488e862e74a379ac82bc66253db4d120c71b3ac3b"
+  - path: "research_control/tasks/RT-20260730-008/artifacts/p9_t02_benchmark_case_receipt_v1.json"
+    sha256: "49172f707fbaa243462788a2c22a63e19fcdd3ac0656142281fc1f013c8d884b"
+
+output_paths:
+  - "research_control/tasks/RT-20260730-008/**"
+  - "research_control/tasks/RT-20260730-008/artifacts/finite_source_null_background_benchmark_attempt_v1.tex"
+  - "research_control/handoffs/handoff-0915.yaml"
+  - "research_control/handoffs/handoff-0915.md"
+  - "research_control/program_state.yaml"
+
+command_results:
+  - command: ".venv/bin/python research_control/tasks/RT-20260730-008/artifacts/validate_p9_t02_vacuum_minkowski_case.py --write-report --json"
+    status: "PASS"
+    summary: "Exact source hashes, rational calculation, DAG, seal, exposure, parent-child, obstruction, and authority checks pass."
+  - command: "scratch TeX compile for finite_source_null_background_benchmark_attempt_v1.tex"
+    status: "PENDING_FINAL_STACK"
+    summary: "Compile follows final record creation."
+  - command: ".venv/bin/python scripts/research_control/task_taxonomy.py --validate-repository --json"
+    status: "PENDING_FINAL_STACK"
+    summary: "Repository taxonomy validation follows final record creation."
+  - command: ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --job-id AJ-RT-20260730-008-001 --json-summary"
+    status: "PENDING_FINAL_STACK"
+    summary: "Integrated validation follows derivative synchronization."
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+    status: "PENDING_FINAL_STACK"
+    summary: "Validate-only follows generated-memory synchronization."
+  - command: "git diff --check"
+    status: "PENDING_FINAL_STACK"
+    summary: "Whitespace validation follows final writes."
+
+validation_summary:
+  status: "PASS_READY_FOR_CHECKPOINT"
+  task_local_check_count: 84
+  task_local_failed_check_count: 0
+  executed_case_count: 1
+  inconclusive_case_count: 1
+  passed_case_count: 0
+  target_informed_rerun_count: 0
+  checkpoint_invocation_count: 0
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 176 route, claim, lease, repository binding, effort, exact clean manifest, and worker identity validated."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Exact source hashes, rational calculation, provenance DAG, source seal, target exposure, parent-child synthesis, and no-fog outcome pass."
+  post_write:
+    status: "PENDING"
+    evidence:
+      - "Final integrated validators, renderers, memory synchronization, and whitespace checks follow record creation."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "Exactly one governed RT-008 checkpoint remains uninvoked."
+  renderer:
+    status: "PENDING"
+    evidence:
+      - "Final render-and-check pass follows this completion and handoff."
+  memory_bootstrap:
+    status: "PENDING"
+    evidence:
+      - "Final tracked memory synchronization and validate-only pass remain."
+  claim_language_linter:
+    status: "PENDING"
+    evidence:
+      - "Changed-source claim-language validation remains in the precheckpoint stack."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "none"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  publication_authorized: false
+  proof_authority: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  canonical_ontology_edit_authorized: false
+  ontology_selection_authorized: false
+  physical_interpretation_establishment_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []

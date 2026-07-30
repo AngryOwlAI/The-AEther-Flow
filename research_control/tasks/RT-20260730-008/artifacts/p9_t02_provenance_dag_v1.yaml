@@ -1,0 +1,125 @@
+schema_id: "p9_t02_provenance_dag_v1"
+artifact_id: "P9T02VacuumMinkowskiProvenanceDAG_v1"
+task_id: "RT-20260730-008"
+case_id: "P9-BENCH-VACUUM-MINKOWSKI-V1"
+protocol_id: "SourceDerivedBenchmarkProtocol_v1"
+status: "sealed_source_stage"
+graph_kind: "finite_directed_acyclic_graph"
+edge_semantics: "u_to_v means v depends on u"
+complete_edge_manifest: true
+target_oracle_opened: false
+target_reference_content_available_to_source_stage: false
+
+nodes:
+  - node_id: "SRC-PROTOCOL"
+    node_class: "fixed_source_datum"
+    stage: "source_root"
+    path: "research_control/tasks/RT-20260729-012/artifacts/source_derived_benchmark_protocol_v1.tex"
+    sha256: "88ef097bf712ad115e9af62cc18a8b3eabb12f8545350f714ad065f702471007"
+  - node_id: "SRC-CASE-SCHEMA"
+    node_class: "fixed_source_datum"
+    stage: "source_root"
+    path: "research_control/tasks/RT-20260729-012/artifacts/source_derived_benchmark_case_schema_v1.yaml"
+    sha256: "5045de8fbaeb6c80b89ec88b71143a8aeaca1c892efadc4b7293cb438ee808d8"
+  - node_id: "SRC-FIREWALL"
+    node_class: "fixed_source_datum"
+    stage: "source_root"
+    path: "research_control/tasks/RT-20260729-012/artifacts/target_import_firewall_v1.yaml"
+    sha256: "ccb9297f817a9b4eeb886834a510e1f21d518a2668bc3fde9695b909d6884acf"
+  - node_id: "SRC-FINITE-CLOSURE"
+    node_class: "disclosed_proposal_only_source_extension"
+    stage: "source_root"
+    path: "research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_constraint_spec_v1.yaml"
+    sha256: "8840b205e8aa12d73f3e782ec6936eb96385bb5694c298b1bf41a2bdfe472626"
+  - node_id: "SRC-FINITE-EQUATION"
+    node_class: "disclosed_proposal_only_source_extension"
+    stage: "source_root"
+    path: "research_control/tasks/RT-20260729-007/artifacts/finite_source_field_equation_identity_spec_v1.yaml"
+    sha256: "d37fdff6d320751d0174459c3d10bec75aa04be62c72c368480f1cafdb46e5f8"
+  - node_id: "SRC-GATE-B"
+    node_class: "fixed_source_datum"
+    stage: "source_root"
+    path: "research_control/tasks/RT-20260727-004/artifacts/p6_t08_gate_b_separating_certificate_v1.yaml"
+    sha256: "f3080ed6a6ba1d6847a3b7ed43c7a11ad7f7dae4deccd25486913ea9547f221b"
+  - node_id: "CODE-VALIDATOR"
+    node_class: "hashed_code_algorithm_environment_and_randomness_policy"
+    stage: "source_root"
+    path: "research_control/tasks/RT-20260730-008/artifacts/validate_p9_t02_vacuum_minkowski_case.py"
+    sha256: "ff2442844ef76ed31e89201352630be0c18eafab8dd439b89d0b17d4b78e58f6"
+  - node_id: "SOURCE-TWO-STATE-DATA"
+    node_class: "source_input"
+    stage: "source_stage"
+    value: "P=[[1/2,1/2],[0,1]], alpha=beta=1, u0=(1,1)"
+  - node_id: "SOURCE-LAPLACIAN"
+    node_class: "source_intermediate"
+    stage: "source_stage"
+    value: "L_C=[[1/4,-1/4],[-1/4,1/4]]"
+  - node_id: "SOURCE-NULL-RESPONSE"
+    node_class: "source_output"
+    stage: "source_stage"
+    value: "L_C u0=(0,0), [h0]=0"
+  - node_id: "SOURCE-STATIC-LINEARIZATION"
+    node_class: "source_output"
+    stage: "source_stage"
+    value: "delta[h]=delta[u] on Q_C"
+  - node_id: "SOURCE-MISSING-BRIDGE"
+    node_class: "source_uncertainty_and_correction"
+    stage: "source_stage"
+    value: "physical vacuum, effective geometry, temporal dynamics, correction control, tolerance, and independent reproduction absent"
+  - node_id: "SOURCE-SEAL"
+    node_class: "immutable_source_manifest"
+    stage: "seal"
+    path: "research_control/tasks/RT-20260730-008/artifacts/p9_t02_source_output_seal_v1.json"
+  - node_id: "PREREG-INCONCLUSIVE-RULE"
+    node_class: "preregistered_comparison_rule"
+    stage: "seal"
+    value: "missing physical carrier, dynamics, semantics, correction control, tolerance, or reproduction implies INCONCLUSIVE"
+  - node_id: "TARGET-MINKOWSKI-FAMILY"
+    node_class: "read_only_target_reference"
+    stage: "target_root"
+    availability: "identity known; content oracle not opened"
+  - node_id: "CASE-CLASSIFIER"
+    node_class: "outcome_classifier"
+    stage: "comparison_stage"
+    value: "INCONCLUSIVE without target comparison"
+
+edges:
+  - ["SRC-FINITE-CLOSURE", "SOURCE-TWO-STATE-DATA"]
+  - ["SRC-FINITE-EQUATION", "SOURCE-TWO-STATE-DATA"]
+  - ["SOURCE-TWO-STATE-DATA", "SOURCE-LAPLACIAN"]
+  - ["SOURCE-LAPLACIAN", "SOURCE-NULL-RESPONSE"]
+  - ["SOURCE-LAPLACIAN", "SOURCE-STATIC-LINEARIZATION"]
+  - ["SRC-GATE-B", "SOURCE-MISSING-BRIDGE"]
+  - ["SRC-PROTOCOL", "PREREG-INCONCLUSIVE-RULE"]
+  - ["SRC-CASE-SCHEMA", "PREREG-INCONCLUSIVE-RULE"]
+  - ["SRC-FIREWALL", "PREREG-INCONCLUSIVE-RULE"]
+  - ["CODE-VALIDATOR", "SOURCE-SEAL"]
+  - ["SOURCE-NULL-RESPONSE", "SOURCE-SEAL"]
+  - ["SOURCE-STATIC-LINEARIZATION", "SOURCE-SEAL"]
+  - ["SOURCE-MISSING-BRIDGE", "SOURCE-SEAL"]
+  - ["PREREG-INCONCLUSIVE-RULE", "SOURCE-SEAL"]
+  - ["SOURCE-SEAL", "CASE-CLASSIFIER"]
+  - ["SOURCE-MISSING-BRIDGE", "CASE-CLASSIFIER"]
+  - ["PREREG-INCONCLUSIVE-RULE", "CASE-CLASSIFIER"]
+
+forbidden_reachability_result:
+  forbidden_target_to_source_path_count: 0
+  target_to_seal_path_count: 0
+  comparison_to_source_feedback_path_count: 0
+  undeclared_edge_count: 0
+  source_graph_acyclic: true
+  firewall_result: "PASS_SOURCE_STAGE"
+
+target_stage_disposition:
+  target_oracle_node_declared: true
+  target_oracle_opened: false
+  target_reference_content_hash_recorded: false
+  target_comparison_executed: false
+  reason: "The sealed source record meets a preregistered INCONCLUSIVE trigger before a lawful physical comparison is available."
+
+authority_limits:
+  dag_proves_implementation_side_channels_absent: false
+  physical_semantics_established: false
+  Minkowski_recovery_established: false
+  benchmark_pass_established: false
+  benchmark_promotion_authorized: false

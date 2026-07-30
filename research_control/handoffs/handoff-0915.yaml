@@ -1,0 +1,280 @@
+handoff_id: "handoff-0915"
+handoff_number: 915
+task_id: "RT-20260730-008"
+decision_id: "DDR-20260730-008"
+job_id: "AJ-RT-20260730-008-001"
+completion_id: "AJC-AJ-RT-20260730-008-001"
+completion_path: "research_control/tasks/RT-20260730-008/jobs/completions/AJC-AJ-RT-20260730-008-001.yaml"
+completion_sha256: "1ad072d427eb2782f974a329ba30d40a390c6c0a5793ebfd22aea851225f3acc"
+status: "ready_after_checkpoint"
+created_at: "2026-07-30T18:14:40Z"
+parent_handoff_id: "handoff-0914"
+plan_task_id: "P9-T03"
+source_role_id: "candidate-constructor"
+source_role_version: "0.2.0"
+source_execution_role_ref: "candidate-constructor@0.2.0--RT-20260730-008"
+summary: "P9-T02 constructs and exactly executes a finite source algebraic null background, seals the zero-response and static-linearization result before target-side inspection, and classifies the vacuum/Minkowski case INCONCLUSIVE. The fixed package lacks physical-vacuum semantics, source-derived effective geometry, temporal dynamics, physical correction control, tolerance, and independent reproduction. There are zero benchmark passes, no target-informed reruns, no Gate E verdict, and no promotion."
+next_action: "Invoke the one governed checkpoint for AJ-RT-20260730-008-001. After that commit, use one fresh bounded Candidate Constructor packet for P9-T03 to attempt source-only weak-field potentials, free fall, redshift, and clock-rate relations while carrying the P9-T02 INCONCLUSIVE disposition."
+current_claim_boundary: "CB-V21-P9-T02-VACUUM-MINKOWSKI-SOURCE-ONLY-CASE-001"
+loop_risk_route: "bridge_facing_candidate_path"
+p9_t02_outcome: "INCONCLUSIVE"
+p9_t03_executed: false
+
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260730-008"
+  latest_research_handoff_id: "handoff-0915"
+  latest_research_next_action: "Invoke the one governed checkpoint for AJ-RT-20260730-008-001. After that commit, use one fresh bounded Candidate Constructor packet for P9-T03 to attempt source-only weak-field potentials, free fall, redshift, and clock-rate relations while carrying the P9-T02 INCONCLUSIVE disposition."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+
+claim_boundary:
+  allowed_next_scope: "One governed RT-008 checkpoint and then one separately claimed source-only P9-T03 weak-field, free-fall, redshift, and clock construction packet."
+  completed_task: "RT-20260730-008"
+  completed_completion_path: "research_control/tasks/RT-20260730-008/jobs/completions/AJC-AJ-RT-20260730-008-001.yaml"
+  completed_completion_sha256: "1ad072d427eb2782f974a329ba30d40a390c6c0a5793ebfd22aea851225f3acc"
+  source_handoff_id: "handoff-0914"
+  source_handoff_path: "research_control/handoffs/handoff-0914.yaml"
+  source_handoff_sha256: "2b6bfb76933391421bb71b2710bbc3773c09f0b7f8e334554daab53d44edce7c"
+  immutable_route_sha256: "a03d3b9ed2919fc3e3c6d4af66b935c6cc5ac6abb27ca6d9b315c3ab549ffd3e"
+  route_blocker_fingerprint: "022d2ad4165956651ccf6dc58171dd4bdff74f3cf2e518d029f9a009985fabbb"
+  source_artifact_path: "research_control/tasks/RT-20260730-008/artifacts/finite_source_null_background_benchmark_attempt_v1.tex"
+  source_artifact_sha256: "6b3a4b386567139f4e9a88b0ce61698b681d2193d9b052672638fedbc8bf94b3"
+  case_path: "research_control/tasks/RT-20260730-008/artifacts/p9_t02_vacuum_minkowski_case_v1.yaml"
+  case_sha256: "2fadb19c5849f1da5843c0e0599dbdc31790eab46587ce6718abbf4d3a0be79c"
+  source_seal_path: "research_control/tasks/RT-20260730-008/artifacts/p9_t02_source_output_seal_v1.json"
+  source_seal_sha256: "71b7dfb67b40d748867a5c49abf7b50c684f9e4a7f5962d8787a960a3dc541dd"
+  checkpoint_invocation_count_before_handoff: 0
+  checkpoint_committed_before_handoff: false
+  source_stage_executed: true
+  source_stage_firewall_passed: true
+  source_output_sealed: true
+  target_comparison_oracle_invoked: false
+  target_informed_rerun_count: 0
+  independent_reproduction_acquired: false
+  executed_case_count: 1
+  inconclusive_case_count: 1
+  passed_case_count: 0
+  physical_vacuum_established: false
+  effective_geometry_established: false
+  Minkowski_recovery_established: false
+  Gate_D_changed: false
+  Gate_E_verdict_issued: false
+  scientific_status_changed: true
+  scientific_status_change_scope: "exact finite source null-background theorem and INCONCLUSIVE case disposition only"
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  ontology_adoption_authorized: false
+  source_law_adoption_authorized: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_performed: false
+  blocked_claims:
+    - "source algebraic null background presented as physical vacuum"
+    - "zero quotient response presented as flat spacetime or Minkowski recovery"
+    - "static quotient linearization presented as physical temporal dynamics or stability"
+    - "target-side adopted GR dynamics presented as source derivation"
+    - "same-context validation presented as independent reproduction"
+    - "P9-T02 case execution presented as a benchmark pass"
+    - "Gate D or Gate E presented as changed"
+    - "P9-T03 presented as executed before the RT-008 checkpoint"
+    - "Einstein equations exact-GR recovery benchmark promotion proof publication push or completed derivation"
+    - "scoped obstruction presented as global no-go or future impossibility"
+
+plan_result:
+  plan_task_id: "P9-T02"
+  next_plan_task_id: "P9-T03"
+  title: "Recover the vacuum and Minkowski effective limit from source inputs"
+  result_status: "P9_T02_SOURCE_NULL_BACKGROUND_CONSTRUCTED_CASE_INCONCLUSIVE_READY_FOR_CHECKPOINT"
+  work_item_status: "completed"
+  source_null_background_constructed: true
+  fixed_source_execution_completed: true
+  source_output_sealed: true
+  case_outcome: "INCONCLUSIVE"
+  physical_Minkowski_recovery_established: false
+  benchmark_pass_count: 0
+  p9_t03_dependency_ready_after_checkpoint: true
+  p9_t03_dependency_ready_now: false
+  p9_t03_executed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+distance_to_gr:
+  changed: false
+  effect: "source_case_evidence_only_no_physical_delta"
+  burden_id: "benchmark_promotion"
+  milestone: "benchmark_promotion"
+  ledger_row_updated: true
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "The row gains the first executed source-case evidence and exact obstruction path, but remains blocked with zero physical benchmark passes."
+  downstream_unlocked:
+    - "P9-T03 only after the RT-008 checkpoint commits and only with the P9-T02 INCONCLUSIVE disposition preserved"
+  downstream_still_blocked:
+    - "physical Minkowski recovery"
+    - "any passed physical benchmark"
+    - "positive Gate E verdict"
+    - "Einstein equations"
+    - "exact-GR recovery"
+    - "benchmark promotion"
+
+required_next_packet:
+  task_type: "v21_p9_t03_weak_field_redshift_clock_source_only_case"
+  plan_task_id: "P9-T03"
+  objective: "Derive source-only weak-field potentials, free-fall acceleration, redshift, and clock-rate relations from source dynamics and operational devices without importing the adopted target formulas."
+  output_requirement: "One source-input seal, source-derived potential or typed analogue, operational free-fall/redshift/clock maps, declared corrections and tolerances or an exact inconclusive/obstruction result."
+  dependency_qualification: "P9-T02 is finalized as an exact source construction plus INCONCLUSIVE physical case; the RT-008 checkpoint must commit first."
+  dependency_ready_after_checkpoint: true
+  dependency_ready_now: false
+  exact_human_authorization_required: false
+  p9_t02_outcome_carried_forward: "INCONCLUSIVE"
+  executed: false
+
+selected_next_route:
+  route_id: "v21_p9_t03_weak_field_redshift_clock_source_only_case_after_p9_t02_inconclusive"
+  route_label: "benchmark-recovery-packet"
+  role_family: "candidate-constructor@0.2.0"
+  worker_skill: "continue-research"
+  selected_next_packet_type: "source_only_weak_field_operational_case_construction"
+  task_type: "v21_p9_t03_weak_field_redshift_clock_source_only_case"
+  plan_task_id: "P9-T03"
+  target_derivation_milestone: "benchmark_promotion"
+  milestone_burden: "Derive weak-field potentials, free-fall acceleration, redshift, and clock-rate relations from source dynamics and operational devices."
+  strategy_id: "construct_p9_t03_weak_field_redshift_clock_source_only_case_v1"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  p9_t02_outcome_carried_forward: "INCONCLUSIVE"
+  target_Newtonian_potential_assumed: false
+  target_free_fall_assumed: false
+  target_redshift_assumed: false
+  target_clock_rate_assumed: false
+  target_informed_source_repair_authorized: false
+  benchmark_result_preestablished: false
+  Gate_E_verdict_preestablished: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  executed: false
+  next_action: "Remain unexecuted until the RT-008 governed checkpoint commits."
+  source_handoff: "research_control/handoffs/handoff-0915.yaml"
+
+ordinary_route_guard:
+  schema_id: "ordinary_route_guard_evaluation_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  evaluation_id: "ORE-HANDOFF-0915"
+  ordinary_handoff_id: "handoff-0915"
+  threshold: 3
+  consecutive_project_system_tasks_before_selection: 0
+  ready_science_plan_task_ids:
+    - "P9-T03"
+    - "P14-T04"
+  selected_plan_task_id: "P9-T03"
+  selected_route_class: "physics_bearing"
+  selected_worker_skill: "continue-research"
+  outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  exception_receipt:
+    active: false
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+active_state_boundary:
+  active_task_id: "RT-20260730-008"
+  active_job_id: "AJ-RT-20260730-008-001"
+  current_status: "source_null_background_constructed_minkowski_case_inconclusive_ready_for_checkpoint"
+  checkpoint_required: true
+  checkpoint_completed: false
+  checkpoint_invocation_count: 0
+  p9_t02_completed: true
+  p9_t02_outcome: "INCONCLUSIVE"
+  selected_next_plan_task_id: "P9-T03"
+  selected_next_worker_skill: "continue-research"
+  selected_next_role_family: "candidate-constructor@0.2.0"
+  selected_next_route_label: "benchmark-recovery-packet"
+  selected_next_strategy_id: "construct_p9_t03_weak_field_redshift_clock_source_only_case_v1"
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 176 route, claim, lease, repository binding, effort, and clean manifest validated."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Exact source hashes, rational calculation, DAG, seal, exposure ledger, parent-child synthesis, and no-fog classification pass."
+  post_write:
+    status: "PENDING"
+    evidence:
+      - "Final repository-wide validation follows handoff and derivative synchronization."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "One governed RT-008 checkpoint remains uninvoked."
+  renderer:
+    status: "PENDING"
+    evidence:
+      - "Final render-and-check pass follows this handoff."
+  memory_bootstrap:
+    status: "PENDING"
+    evidence:
+      - "Final tracked memory synchronization and validate-only pass remain."
+  claim_language_linter:
+    status: "PENDING"
+    evidence:
+      - "Changed-source claim-language validation remains in the precheckpoint stack."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "none"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  publication_authorized: false
+  proof_authority: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  canonical_ontology_edit_authorized: false
+  ontology_selection_authorized: false
+  physical_interpretation_establishment_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required_no_nonblank_signals"
+  rationale: "The bounded P9-T02 physics packet emits no project-improvement signal."
+
+handoff_authority_boundary:
+  canonical_sources_unchanged: true
+  scientific_status_changed: true
+  scientific_status_change_scope: "task-local finite null-background theorem and INCONCLUSIVE case disposition only"
+  physical_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false

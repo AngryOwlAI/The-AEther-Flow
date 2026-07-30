@@ -1,0 +1,80 @@
+{
+  "schema_id": "p9_t02_benchmark_case_receipt_v1",
+  "receipt_id": "P9T02VacuumMinkowskiBenchmarkCaseReceipt_v1",
+  "task_id": "RT-20260730-008",
+  "job_id": "AJ-RT-20260730-008-001",
+  "case_id": "P9-BENCH-VACUUM-MINKOWSKI-V1",
+  "plan_task_id": "P9-T02",
+  "created_at": "2026-07-30T18:14:40Z",
+  "status": "PASS_SOURCE_STAGE_CASE_INCONCLUSIVE",
+  "candidate_constructor_result": "constructed_candidate",
+  "case_outcome": "INCONCLUSIVE",
+  "obstruction_id": "OBST-P9T02-PHYSICAL-MINKOWSKI-BRIDGE-ABSENT-001",
+  "artifacts": {
+    "source_artifact": {
+      "path": "research_control/tasks/RT-20260730-008/artifacts/finite_source_null_background_benchmark_attempt_v1.tex",
+      "sha256": "6b3a4b386567139f4e9a88b0ce61698b681d2193d9b052672638fedbc8bf94b3"
+    },
+    "case_record": {
+      "path": "research_control/tasks/RT-20260730-008/artifacts/p9_t02_vacuum_minkowski_case_v1.yaml",
+      "sha256": "2fadb19c5849f1da5843c0e0599dbdc31790eab46587ce6718abbf4d3a0be79c"
+    },
+    "source_output_seal": {
+      "path": "research_control/tasks/RT-20260730-008/artifacts/p9_t02_source_output_seal_v1.json",
+      "sha256": "71b7dfb67b40d748867a5c49abf7b50c684f9e4a7f5962d8787a960a3dc541dd"
+    },
+    "provenance_dag": {
+      "path": "research_control/tasks/RT-20260730-008/artifacts/p9_t02_provenance_dag_v1.yaml",
+      "sha256": "163d9154e81a7249cdd145841e28c0313fd4ee7b4dccb9621f29bb6b61633e7e"
+    },
+    "target_exposure_ledger": {
+      "path": "research_control/tasks/RT-20260730-008/artifacts/p9_t02_target_exposure_ledger_v1.yaml",
+      "sha256": "2bcb4a9c82508af58e680ea488e862e74a379ac82bc66253db4d120c71b3ac3b"
+    },
+    "validator": {
+      "path": "research_control/tasks/RT-20260730-008/artifacts/validate_p9_t02_vacuum_minkowski_case.py",
+      "sha256": "ff2442844ef76ed31e89201352630be0c18eafab8dd439b89d0b17d4b78e58f6"
+    }
+  },
+  "result": {
+    "executed_case_count": 1,
+    "executed_source_case_count": 1,
+    "source_stage_pass_count": 1,
+    "opened_target_oracle_count": 0,
+    "target_comparison_count": 0,
+    "independent_reproduction_count": 0,
+    "inconclusive_case_count": 1,
+    "passed_case_count": 0,
+    "failed_case_count": 0,
+    "firewall_failure_count": 0,
+    "source_failure_count": 0,
+    "target_informed_rerun_count": 0,
+    "physical_vacuum_established": false,
+    "effective_geometry_established": false,
+    "Minkowski_recovery_established": false,
+    "exact_GR_recovery_established": false,
+    "Gate_D_changed": false,
+    "Gate_E_verdict_issued": false,
+    "benchmark_promotion_authorized": false,
+    "physics_promotion_authorized": false
+  },
+  "source_stage_summary": "For alpha>0 and u0 in ker L_C, exact finite source algebra gives a_C(u0)=0, unique [h0]=0, and static quotient response delta[h]=(beta/alpha)delta[u]. The fixed two-state execution reproduces the theorem.",
+  "classification_summary": "The algebraic null background has no source-derived physical-vacuum semantics, Lorentzian metric map, temporal dynamics, controlled physical corrections, tolerance, or independent reproduction. The frozen missing-burden rule therefore returns INCONCLUSIVE before target content is opened.",
+  "distance_to_gr_effect": {
+    "changed": false,
+    "ledger_row_updated": true,
+    "old_status": "blocked by missing primitive; source-derived protocol defined with six NOT_RUN case templates",
+    "new_status": "blocked by missing primitive; first source stage executed and classified INCONCLUSIVE with zero benchmark passes",
+    "rationale": "The packet adds exact source-side null-background mathematics and a case disposition but no physical recovery evidence or promotion status."
+  },
+  "authority_limits": {
+    "validator_or_receipt_is_physics_proof": false,
+    "formal_null_response_is_physical_flatness": false,
+    "case_execution_is_benchmark_pass": false,
+    "inconclusive_result_is_global_no_go": false,
+    "benchmark_promotion_authorized": false,
+    "proof_authority": false,
+    "publication_authorized": false,
+    "push_authorized": false
+  }
+}

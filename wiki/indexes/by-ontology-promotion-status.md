@@ -437,6 +437,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V21-P8-T05-FINITE-CONSTRAINT-DYNAMICAL-VIABILITY-STRESS-V1` `research_control/tasks/RT-20260729-008/artifacts/finite_constraint_dynamical_viability_stress_v1.tex`
 - `TEX-V21-P8-T07-GATE-D-DECISION-V1` `research_control/tasks/RT-20260729-011/artifacts/p8_t07_gate_d_decision_v1.tex`
 - `TEX-V21-P9-T01-SOURCE-DERIVED-BENCHMARK-PROTOCOL-V1` `research_control/tasks/RT-20260729-012/artifacts/source_derived_benchmark_protocol_v1.tex`
+- `TEX-V21-P9-T02-FINITE-SOURCE-NULL-BACKGROUND-BENCHMARK-ATTEMPT-V1` `research_control/tasks/RT-20260730-008/artifacts/finite_source_null_background_benchmark_attempt_v1.tex`
 
 ## superseded
 

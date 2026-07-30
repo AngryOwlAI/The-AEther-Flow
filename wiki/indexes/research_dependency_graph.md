@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-07-30T16:10:29Z`
-- Source fingerprint: `b245c82af3dcc7a0e04113119a0775b4a265399d6ecbabcc77e7ba05a1a6caa9`
-- Nodes: `23533`
-- Edges: `74906`
+- Generated from tracked state as of: `2026-07-30T20:30:03Z`
+- Source fingerprint: `27f339d3db0f44b7a3e6a9cbb527b0d1bc3d1fcf56b1288f73dcd559b90a64e4`
+- Nodes: `23602`
+- Edges: `74993`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 1154 |
+| `completion_yaml` | 1156 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 914 |
+| `handoff_yaml` | 916 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,32 +33,32 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 9 |
-| `agent_job` | `support_only` | 1154 |
+| `agent_job` | `support_only` | 1156 |
 | `artifact` | `canonical_source` | 87 |
-| `artifact` | `support_only` | 11950 |
-| `blocked_burden` | `blocked` | 4781 |
-| `claim_boundary` | `support_only` | 1111 |
+| `artifact` | `support_only` | 11982 |
+| `blocked_burden` | `blocked` | 4802 |
+| `claim_boundary` | `support_only` | 1113 |
 | `draft_control_candidate` | `draft_control` | 782 |
-| `draft_control_candidate` | `proposal_only` | 147 |
-| `draft_control_candidate` | `science_draft` | 88 |
+| `draft_control_candidate` | `proposal_only` | 149 |
+| `draft_control_candidate` | `science_draft` | 90 |
 | `frozen_negative` | `frozen_negative` | 147 |
 | `gate_chair_verdict` | `human_gated` | 34 |
-| `handoff` | `support_only` | 914 |
-| `human_gated_object` | `human_gated` | 569 |
+| `handoff` | `support_only` | 916 |
+| `human_gated_object` | `human_gated` | 571 |
 | `ledger_row` | `accepted_scoped` | 6 |
 | `ledger_row` | `blocked` | 3 |
 | `ledger_row` | `frozen_negative` | 1 |
 | `ledger_row` | `human_gated` | 1 |
 | `ledger_row` | `science_draft` | 4 |
-| `obstruction` | `blocked` | 98 |
+| `obstruction` | `blocked` | 99 |
 | `obstruction` | `rejected` | 4 |
 | `source_extension_evidence_precondition` | `source_extension_evidence` | 40 |
 | `source_ontology_object` | `canonical_source` | 27 |
 | `source_ontology_object` | `rejected` | 50 |
-| `source_ontology_object` | `support_only` | 372 |
+| `source_ontology_object` | `support_only` | 373 |
 | `task` | `human_gated` | 29 |
 | `task` | `science_draft` | 33 |
-| `task` | `support_only` | 1092 |
+| `task` | `support_only` | 1094 |
 
 ## Frontier Table
 
@@ -73,7 +73,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | SEI_src^{cand} | `object:sei_src_cand` | `draft_control_candidate` | `draft_control` | Required frontier object exposed in completion text: SEI_src^{cand}. |
 | matter-coupling burden | `object:matter_coupling_burden` | `ledger_row` | `accepted_scoped` | P7-T08 changes the exact package's project-level physical and interpretive status by explicit protected human constitutive postulate. The layer-status cells ret |
 | Einstein-equations burden | `object:einstein_equations_burden` | `blocked_burden` | `blocked` | P8-T07 consumes exact protected authority and issues NOT_READY_EINSTEIN_SECTOR_DERIVATION_REQUIREMENTS_UNMET; four criteria pass only in narrow finite or author |
-| benchmark-promotion burden | `object:benchmark_promotion_burden` | `human_gated_object` | `human_gated` | P9-T01 defines a target-import-safe protocol and six NOT_RUN case templates; it supplies no physical benchmark Einstein equation exact-GR recovery or promotion |
+| benchmark-promotion burden | `object:benchmark_promotion_burden` | `human_gated_object` | `human_gated` | P9-T02 executes the first sealed source stage and proves an exact algebraic null-background response but the physical vacuum and Minkowski case is INCONCLUSIVE |
 | finite toy metric response frozen negative | `ledger:finite_toy_metric_response` | `ledger_row` | `frozen_negative` | explicit-tag-only finite toy route failed tag-removal stress and is frozen locally |
 
 ## Blocked Downstream Claims
@@ -163,9 +163,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 ## Route Continuity
 
-- Active task: `RT-20260730-007`
-- Latest handoff: `handoff-0914`
-- Handoff path: `research_control/handoffs/handoff-0914.yaml`
-- Next action: Invoke the one governed checkpoint for AJ-RT-20260730-007-001. After that commit, use one fresh bounded continue-research packet for P9-T02 under the source-only benchmark firewall.
+- Active task: `RT-20260730-009`
+- Latest handoff: `handoff-0916`
+- Handoff path: `research_control/handoffs/handoff-0916.yaml`
+- Next action: Invoke the one governed cumulative checkpoint for AJ-RT-20260730-009-001. After that commit, use one fresh bounded Candidate Constructor packet for P9-T03 to attempt source-only weak-field potentials, free fall, redshift, and clock-rate relations while carrying the P9-T02 INCONCLUSIVE disposition.
 
 This graph is navigational support only; inspect the cited sources before using any claim.

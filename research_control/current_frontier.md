@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260730-007` and `handoff-0914`.
+`RT-20260730-009` and `handoff-0916`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260730-007` |
-| Latest handoff ID | `handoff-0914` |
-| Current status | `rt005_cumulative_checkpoint_identity_reconciled_p9_t02_ready_after_checkpoint` |
+| Active task ID | `RT-20260730-009` |
+| Latest handoff ID | `handoff-0916` |
+| Current status | `rt008_agentjob_registry_ordered_write_allowlist_parity_recovered_ready_for_checkpoint` |
 | V16 completed | false |
 | Current route family | benchmark or recovery (project system) |
-| Target derivation milestone | none; this is project-control tooling work |
+| Target derivation milestone | `benchmark_promotion` |
 | Current burden | `benchmark_promotion` |
-| Required next authority | One governed RT-007 checkpoint and then one separately claimed source-only P9-T02 benchmark-case construction packet. |
-| Next recommended action | Invoke the one governed checkpoint for AJ-RT-20260730-007-001. After that commit, use one fresh bounded continue-research packet for P9-T02 under the source-only benchmark firewall. |
+| Required next authority | One governed cumulative checkpoint for AJ-RT-20260730-009-001 and then one separately claimed source-only P9-T03 weak-field, free-fall, redshift, and clock construction packet. |
+| Next recommended action | Invoke the one governed cumulative checkpoint for AJ-RT-20260730-009-001. After that commit, use one fresh bounded Candidate Constructor packet for P9-T03 to attempt source-only weak-field potentials, free fall, redshift, and clock-rate relations while carrying the P9-T02 INCONCLUSIVE disposition. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260730-007` |
-| Latest research handoff ID | `handoff-0914` |
-| Latest research next action | Invoke the one governed checkpoint for AJ-RT-20260730-007-001. After that commit, use one fresh bounded continue-research packet for P9-T02 under the source-only benchmark firewall. |
+| Latest research task ID | `RT-20260730-009` |
+| Latest research handoff ID | `handoff-0916` |
+| Latest research next action | Invoke the one governed cumulative checkpoint for AJ-RT-20260730-009-001. After that commit, use one fresh bounded Candidate Constructor packet for P9-T03 to attempt source-only weak-field potentials, free fall, redshift, and clock-rate relations while carrying the P9-T02 INCONCLUSIVE disposition. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260730-007/00_TASK.yaml`.
-- Active task objective: Bind the already committed cumulative checkpoint e4a644e to the completed RT-005 and RT-006 records, preserve all immutable predecessor and P9-T01 bytes, record generation 174's clean no-action result without demanding a fictitious second commit, supersede the stale pending-checkpoint routing instruction, and restore a fresh P9-T02 Director-decision boundary without executing P9-T02.
-- Latest handoff path: `research_control/handoffs/handoff-0914.yaml`.
-- Latest handoff summary: Generation 175 verifies that cumulative commit e4a644e contains the exact completed RT-005 and RT-006 transaction, preserves all protected P9-T01 bytes, and records generation 174's clean no_action without inventing a second commit. The stale pending-checkpoint instruction is superseded; P9-T02 remains unexecuted until one RT-007 checkpoint commits.
+- Active task path: `research_control/tasks/RT-20260730-009/00_TASK.yaml`.
+- Active task objective: Preserve the completed RT-008 AgentJob, execution role, completion, handoff-0915, and all P9-T02 scientific artifacts byte-for-byte; reorder only the AJ-RT-20260730-008-001 AGENT_JOB_REGISTRY allowed_write_paths representation to the immutable AgentJob's exact ordered 27-item contract; prove four-way parity and protected-byte preservation; then invoke one governed cumulative checkpoint while P9-T03 remains unexecuted.
+- Latest handoff path: `research_control/handoffs/handoff-0916.yaml`.
+- Latest handoff summary: Generation 177 preserves the completed RT-008 AgentJob, role, completion, handoff-0915, and P9-T02 scientific payload byte-for-byte and restores exact ordered 27-item write-allowlist identity across the AgentJob, execution role, AGENT_JOB registry, and ROLE_EXECUTION registry. P9-T02 was not replayed; its INCONCLUSIVE result and zero benchmark passes remain exact. P9-T03 is unexecuted.
 - Current route family: benchmark or recovery (project system).
-- Next recommended action: Invoke the one governed checkpoint for AJ-RT-20260730-007-001. After that commit, use one fresh bounded continue-research packet for P9-T02 under the source-only benchmark firewall.
+- Next recommended action: Invoke the one governed cumulative checkpoint for AJ-RT-20260730-009-001. After that commit, use one fresh bounded Candidate Constructor packet for P9-T03 to attempt source-only weak-field potentials, free fall, redshift, and clock-rate relations while carrying the P9-T02 INCONCLUSIVE disposition.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -98,7 +98,7 @@ Open or blocked physical targets:
 | --- | --- | --- | --- | --- |
 | matter_coupling | accepted_as_scoped_evidence_precondition | The exact protected verdict is ADOPTED_AS_CANONICAL_PHYSICAL_MATTER_BY_EXPLICIT_HUMAN_POSTULATE for the unchanged P7-T01 through P7-T06 package within its declared finite domains and the current continuum-first source architecture. This discharges the protected constitutive decision burden but does not supply a first-principles derivation: OBST-P7T07-CROSS-LAYER-COMPOSITION-GAP-001 remains open_derivational_gap_after_constitutive_adoption, current ontology still does not derive the adopted meanings, and P6 Gate B supplies no effective-geometry input. | no_source_law_adoption<br>no_canonical_ontology_edit<br>no_metricdata_e_adoption<br>no_geff_scope_expansion<br>no_coupling_law_adoption<br>no_matter_coupling_derivation<br>no_matter_coupling_adoption<br>no_stress_energy_semantics<br>no_stress_energy_tensor<br>no_matter_action<br>no_detector_semantics<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation<br>no_future_source_extension_impossibility<br>no_global_theory_rejection | research_control/tasks/RT-20260729-001/artifacts/p7_t08_gate_c_decision_v1.tex |
 | einstein_equations | not_started | physical gravitational interpretation target field equations and Einstein-leading recovery | no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation<br>no_global_theory_rejection<br>no_future_source_extension_impossibility | research_control/tasks/RT-20260729-011/artifacts/p8_t07_gate_d_decision_v1.tex |
-| benchmark_promotion | blocked | all upstream derivation burdens | no_benchmark_promotion<br>no_benchmark_gate_chair_closure<br>no_completed_derivation | research_control/tasks/RT-20260729-012/artifacts/source_derived_benchmark_protocol_v1.tex |
+| benchmark_promotion | blocked | all upstream derivation burdens | no_benchmark_promotion<br>no_benchmark_gate_chair_closure<br>no_completed_derivation | research_control/tasks/RT-20260730-008/artifacts/finite_source_null_background_benchmark_attempt_v1.tex |
 
 Forbidden overreads:
 
@@ -293,7 +293,7 @@ preserves the raw ledger `current_status` field for continuity.
 | `matter_coupling` | `matter_coupling` | accepted only as scoped source-extension evidence/precondition | accepted | accepted_as_scoped_evidence_precondition | parameterized_finite_local_witness_precondition | not_matter_coupling_not_stress_energy_not_matter_action_not_detector_semantics | scoped_source_evidence_only | no_source_law_adoption<br>no_canonical_ontology_edit<br>no_metricdata_e_adoption<br>no_geff_scope_expansion<br>no_coupling_law_adoption<br>no_matter_coupling_derivation<br>no_matter_coupling_adoption<br>no_stress_energy_semantics<br>no_stress_energy_tensor<br>no_matter_action<br>no_detector_semantics<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation<br>no_future_source_extension_impossibility<br>no_global_theory_rejection | `research_control/tasks/RT-20260729-001/artifacts/p7_t08_gate_c_decision_v1.tex` |
 | `einstein_equations` | `einstein_equations` | not started; no positive derivation status | draft object exists | not_started | dynamics_action_or_variation_missing | no_field_equation_derivation | none | no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation<br>no_global_theory_rejection<br>no_future_source_extension_impossibility | `research_control/tasks/RT-20260729-011/artifacts/p8_t07_gate_d_decision_v1.tex` |
 | `finite_variation_robustness` | `source_equivalence_eqsrc` | Refuter stress passed | Refuter stress passed | refuter_stress_passed | conditional_theorem_candidate | downstream_gr_blocked | draft_control_only | no_source_law_adoption<br>no_matter_coupling_derivation<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/tasks/RT-20260614-101/artifacts/142_RESP_LC_M_SRC_GSC_FINITE_VARIATION_ROBUSTNESS_LAW_REFUTER_STRESS_TEST.tex` |
-| `benchmark_promotion` | `benchmark_promotion` | no benchmark promotion from scoped evidence/precondition alone | blocked by missing primitive | blocked | upstream_burdens_missing | no_exact_gr_benchmark_promotion | none | no_benchmark_promotion<br>no_benchmark_gate_chair_closure<br>no_completed_derivation | `research_control/tasks/RT-20260729-012/artifacts/source_derived_benchmark_protocol_v1.tex` |
+| `benchmark_promotion` | `benchmark_promotion` | no benchmark promotion from scoped evidence/precondition alone | blocked by missing primitive | blocked | upstream_burdens_missing | no_exact_gr_benchmark_promotion | none | no_benchmark_promotion<br>no_benchmark_gate_chair_closure<br>no_completed_derivation | `research_control/tasks/RT-20260730-008/artifacts/finite_source_null_background_benchmark_attempt_v1.tex` |
 | `gate_chair_status` | `benchmark_promotion` | human-gated verdict authority only | human-gated | human_gated | protected_verdict_missing | no_benchmark_closure | human_gate_required | no_benchmark_gate_chair_closure<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/approvals/README.md` |
 | `finite_toy_metric_response` | `finite_toy_metric_response` | frozen negative local toy route only | frozen negative | frozen_negative | tag_removal_obstruction | local_toy_route_frozen_not_global_theory_rejection | frozen_negative_no_promotion | no_geff_scope_expansion<br>no_matter_coupling_derivation<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation<br>no_global_theory_rejection<br>no_future_source_extension_impossibility | `research_control/tasks/RT-20260614-055/artifacts/96_RESP_LC_FINITE_TOY_METRIC_RESPONSE_MODEL_REFUTER_STRESS_TEST.tex` |
 
@@ -302,7 +302,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Invoke the one governed checkpoint for AJ-RT-20260730-007-001. After that commit, use one fresh bounded continue-research packet for P9-T02 under the source-only benchmark firewall.
+Invoke the one governed cumulative checkpoint for AJ-RT-20260730-009-001. After that commit, use one fresh bounded Candidate Constructor packet for P9-T03 to attempt source-only weak-field potentials, free fall, redshift, and clock-rate relations while carrying the P9-T02 INCONCLUSIVE disposition.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -320,27 +320,27 @@ Layer status summary:
 
 | Status | Count | Meaning |
 | --- | --- | --- |
-| `PASS` | 2 | receipt complete |
-| `PENDING` | 5 | open item; evidence must explain why |
+| `PASS` | 6 | receipt complete |
+| `PENDING` | 1 | open item; evidence must explain why |
 
 Validation layers:
 
 | Validation layer | Status | Meaning | Evidence |
 | --- | --- | --- | --- |
-| `pre_execution` | PASS | receipt complete | Generation 175 route, claim, lease, repository binding, and clean manifest validated. |
-| `completion_internal` | PASS | receipt complete | Direct Git identity and immutable-hash checks uniquely reconcile the cumulative checkpoint and later no-action result. |
-| `post_write` | PENDING | open item; evidence must explain why | Final repository-wide validation follows handoff and derivative synchronization. |
-| `post_checkpoint` | PENDING | open item; evidence must explain why | One governed RT-007 checkpoint remains uninvoked. |
-| `renderer` | PENDING | open item; evidence must explain why | Final render-and-check pass follows this handoff. |
-| `memory_bootstrap` | PENDING | open item; evidence must explain why | Final tracked memory synchronization and validate-only pass remain. |
-| `claim_language_linter` | PENDING | open item; evidence must explain why | Changed-source claim-language validation remains in the precheckpoint stack. |
+| `pre_execution` | PASS | receipt complete | Generation 177 validated, atomically claimed, and consumed the exact immutable recovery route once. |
+| `completion_internal` | PASS | receipt complete | The tracked recovery receipt proves exact four-way ordered allowlist identity and protected-byte preservation. |
+| `post_write` | PASS | receipt complete | Task-local, documentation, signal, research-control, continuation, memory, and whitespace gates pass. |
+| `post_checkpoint` | PENDING | open item; evidence must explain why | One governed cumulative checkpoint remains; P9-T03 is not executed. |
+| `renderer` | PASS | receipt complete | Tracked frontier, task-index, graph, registry, and wiki derivatives are fresh. |
+| `memory_bootstrap` | PASS | receipt complete | Tracked memory synchronization and validate-only pass. |
+| `claim_language_linter` | PASS | receipt complete | Changed-source and integrated claim-language validation have no hard failure. |
 
 Authorization layers:
 
 | Authorization field | Value | Meaning |
 | --- | --- | --- |
 | `protected_scoped_gate_review_authorized` | false (not authorized) | scoped review authority only |
-| `protected_scoped_gate_review_scope` | project-system checkpoint-identity reconciliation only | exact scope of protected review authority |
+| `protected_scoped_gate_review_scope` | none; project-system ordered allowlist recovery only | exact scope of protected review authority |
 | `protected_scoped_gate_review_authority_source_path` | none | tracked source for scoped review authority |
 | `downstream_physics_promotion_authorized` | false (not authorized) | authorizes downstream physics promotion only when true |
 | `downstream_physics_promotion_authority_source_path` | none | tracked source for downstream promotion authority |
@@ -351,21 +351,17 @@ Authorization layers:
 | `Gate_Chair_verdict_authorized` | False | extension authorization field |
 | `canonical_ontology_edit_authorized` | False | extension authorization field |
 | `external_outreach_authorized` | False | extension authorization field |
-| `external_publication_authorized` | False | extension authorization field |
 | `global_no_go_claim_authorized` | False | extension authorization field |
-| `ontology_selection_authorized` | False | extension authorization field |
-| `physical_interpretation_establishment_authorized` | False | extension authorization field |
 | `proof_authority` | False | extension authorization field |
 | `publication_authorized` | False | extension authorization field |
 | `push_authorized` | False | extension authorization field |
 | `source_law_adoption_authorized` | False | extension authorization field |
-| `source_law_rejection_authorized` | False | extension authorization field |
 
 Legacy compatibility records:
 
-- active task: `RT-20260730-007`;
-- latest handoff: `handoff-0914`;
-- current status: `rt005_cumulative_checkpoint_identity_reconciled_p9_t02_ready_after_checkpoint`;
+- active task: `RT-20260730-009`;
+- latest handoff: `handoff-0916`;
+- current status: `rt008_agentjob_registry_ordered_write_allowlist_parity_recovered_ready_for_checkpoint`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -375,8 +371,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0914.yaml`
-- `research_control/tasks/RT-20260730-007/00_TASK.yaml`
+- `research_control/handoffs/handoff-0916.yaml`
+- `research_control/tasks/RT-20260730-009/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -392,7 +388,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0914*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0916*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations
