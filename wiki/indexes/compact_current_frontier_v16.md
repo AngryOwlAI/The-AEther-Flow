@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260730-005`
-- Latest handoff: `handoff-0913`
-- Current status: `p9_t01_task_taxonomy_candidate_family_slug_recovery_pass_ready_for_checkpoint`
+- Active task: `RT-20260730-007`
+- Latest handoff: `handoff-0914`
+- Current status: `rt005_cumulative_checkpoint_identity_reconciled_p9_t02_ready_after_checkpoint`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260730-005`
-- Latest research handoff: `handoff-0913`
-- Latest research next action: Invoke the one governed cumulative checkpoint for AJ-RT-20260730-005-001 only after every required precheckpoint gate passes. After that commit, one fresh bounded continue-research packet may execute P9-T02 under the source-only benchmark firewall.
+- Latest research task: `RT-20260730-007`
+- Latest research handoff: `handoff-0914`
+- Latest research next action: Invoke the one governed checkpoint for AJ-RT-20260730-007-001. After that commit, use one fresh bounded continue-research packet for P9-T02 under the source-only benchmark firewall.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,7 +26,7 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p9_t02_vacuum_minkowski_source_only_case_after_taxonomy_recovery_checkpoint`
+- Route ID: `v21_p9_t02_vacuum_minkowski_source_only_case_after_rt005_checkpoint_identity_reconciliation`
 - Role family: `candidate-constructor@0.2.0`
 - Target milestone: `benchmark_promotion`
 - Milestone burden: Test the simplest nontrivial source-derived background.
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `3b386181c90dde36b5b030ad334227cf6158164155ba528a1e69eb62c0c744e0`
-- JSON SHA-256: `daf1b65881d59457ed84d2e9178d640a85372b16c6c07a6d0430a5bf68c81cd3`
+- YAML SHA-256: `a774b503bcf1a5ac78081f45d5a2ec338735123db931f523df66f323aa32e68c`
+- JSON SHA-256: `6eb8baa2d5971ff6d25c2a4d67a3cb729841a7aeeb1088dfce6d736e754e5d7c`
 
 ## Authority Warning
 

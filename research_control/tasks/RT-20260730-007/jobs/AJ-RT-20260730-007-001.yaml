@@ -1,0 +1,363 @@
+job_id: "AJ-RT-20260730-007-001"
+task_id: "RT-20260730-007"
+decision_id: "DDR-20260730-007"
+role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260730-007"
+status: "completed"
+validation_status: "PASS"
+created_at: "2026-07-30T16:10:29Z"
+started_at: "2026-07-30T16:10:29Z"
+completed_at: "2026-07-30T16:10:29Z"
+completion_path: "research_control/tasks/RT-20260730-007/jobs/completions/AJC-AJ-RT-20260730-007-001.yaml"
+requires_human_gate: false
+human_authorization_note: "Generation 175 authorizes exactly one improve-project-system invocation for the immutable RT-005 clean cumulative checkpoint identity reconciliation route and at most one fresh checkpoint."
+objective: "Bind cumulative commit e4a644e to the completed RT-005 and RT-006 transaction, preserve every immutable predecessor and P9-T01 byte, record generation 174's clean no-action result, supersede only stale mutable routing, and restore P9-T02 eligibility after one RT-007 checkpoint without executing P9-T02."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system checkpoint-identity reconciliation only; the benchmark-promotion burden does not advance."
+route_label: "reconcile_rt005_checkpoint_identity_after_clean_cumulative_commit_v1"
+route_reason: "checkpoint_no_action_clean_commit_identity_reconciliation_required"
+immutable_route_sha256: "3621ff9a8c9a54cf7e2b37dbe35086f2012113d6c437e2be92767784997d2c7c"
+route_blocker_fingerprint: "e46501e5887368fbb548933a386e80d361ec72450444e51ba50cb76b3f48bc9c"
+failed_gate_evidence_sha256: "988a339be22ed4a76a4d3b808d40fb494a6bffea6fa88a25034df43ad2fcfb88"
+plan_task_id: "P9-T02"
+recovery_for_plan_task_id: "P9-T01"
+task_implementation_plan_task_id: "P9-T01"
+next_plan_task_id: "P9-T02"
+next_plan_task_execution_authorized: false
+project_system_change_only: true
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 175
+  passes_consumed: 159
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:175"
+  handoff_token: "b4a22f9aba5a4360ccc8b65583ebec0f686dd0614ed880f6"
+  relay_claim_token: "88c605531373b6d378be5548e0c4b219839d96d381ea553d"
+  route_work_item_id: "P9-T02"
+  route_worker_skill: "improve-project-system"
+  route_sha256: "3621ff9a8c9a54cf7e2b37dbe35086f2012113d6c437e2be92767784997d2c7c"
+  route_reason: "checkpoint_no_action_clean_commit_identity_reconciliation_required"
+  route_strategy_id: "reconcile_rt005_checkpoint_identity_after_clean_cumulative_commit_v1"
+  route_blocker_fingerprint: "e46501e5887368fbb548933a386e80d361ec72450444e51ba50cb76b3f48bc9c"
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  candidate_family: "not_applicable"
+  assumption_delta:
+    - "No scientific, source, handoff-0913, validation-semantic, or Distance-to-GR assumption changes; only prior checkpoint identity and mutable routing truth are reconciled."
+    - "P9-T01 remains byte-preserved, all six cases remain NOT_RUN, Gate D remains NOT_READY, and Gate E remains NOT_READY_NO_BENCHMARK_CASE_EXECUTED."
+  materiality_basis: "Restores exact tracked transaction identity after an already-existing cumulative commit and a later honest clean no-action checkpoint."
+  source_basis:
+    - "Git commit e4a644e3d21969ae9deff0541f8696eb59b26a74"
+    - "research_control/tasks/RT-20260730-005/jobs/completions/AJC-AJ-RT-20260730-005-001.yaml"
+    - "research_control/tasks/RT-20260730-006/jobs/completions/AJC-AJ-RT-20260730-006-001.yaml"
+    - "research_control/handoffs/handoff-0913.yaml"
+  expected_artifact_paths:
+    - "research_control/tasks/RT-20260730-007/artifacts/rt005_cumulative_checkpoint_identity_reconciliation_receipt.json"
+    - "research_control/handoffs/handoff-0914.yaml"
+  project_system_justification: "This packet reconciles project-control checkpoint identity and routing only; it creates no physics payload or P9-T02 execution."
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  expected_durable_outputs:
+    physics: []
+    project_system:
+      - "research_control/tasks/RT-20260730-007/artifacts/rt005_cumulative_checkpoint_identity_reconciliation_receipt.json"
+      - "research_control/handoffs/handoff-0914.yaml"
+  acceptance_criteria:
+    physics: []
+    project_system:
+      - "commit e4a644e identity parent tree ancestry and committed RT-005 and RT-006 completions are exact"
+      - "immutable RT-005 RT-006 handoff-0913 and P9-T01 bytes remain exact"
+      - "generation 174 no_action is recorded without fabricating a second commit"
+      - "P9-T02 remains unexecuted"
+      - "one governed RT-007 checkpoint commits without legacy validation"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: false
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0913"
+  source_handoff_path: "research_control/handoffs/handoff-0913.yaml"
+  source_handoff_sha256: "f5df7a6bde72167fdfed71b2f9d010b4e92654c481bc4470b62968ae179a101d"
+  selected_plan_task_id: "P9-T02"
+  guard_outcome: "physics_bearing_route_selected"
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1089
+    relationship_row_count: 5515
+    semantic_row_count: 1089
+    vault_row_count: 1089
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  authority_note: "Generated wiki Obsidian semantic relationship and .local retrieval layers are navigation only and not authority; registered canonical sources, tracked control state, direct Git evidence, and the immutable relay route govern this recovery."
+
+allowed_read_paths:
+  - "SOUL.md"
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research-goal/**"
+  - ".codex/skills/continue-research-continue-goal/**"
+  - ".codex/skills/continue-research/**"
+  - ".codex/skills/improve-project-system/**"
+  - ".agents/roles/research_ops/**"
+  - ".agents/schemas/**"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  - "research_control/design/**"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0913.yaml"
+  - "research_control/handoffs/handoff-0913.md"
+  - "research_control/tasks/RT-20260729-012/**"
+  - "research_control/tasks/RT-20260730-005/**"
+  - "research_control/tasks/RT-20260730-006/**"
+  - "scripts/project_control/**"
+  - "scripts/research_control/**"
+  - "scripts/validation/**"
+  - "tests/**"
+  - "registries/**"
+  - ".local/validation-receipts/**"
+allowed_write_paths:
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/PDF_DERIVATIVE_REGISTRY.csv"
+  - "registries/PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "registries/TEX_SOURCE_REGISTRY.csv"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0914.yaml"
+  - "research_control/handoffs/handoff-0914.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260730-007/**"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/pdf/**"
+  - "wiki/tex/**"
+allowed_generated_paths:
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/pdf/**"
+  - "wiki/tex/**"
+forbidden_paths:
+  - ".agents/**"
+  - ".codex/skills/**"
+  - "scripts/project_control/**"
+  - "scripts/research_control/**"
+  - "scripts/validation/**"
+  - "tests/**"
+  - "implementations_plans/**"
+  - "ontology/**"
+  - "legacy_ontology/**"
+  - "manuscripts/**"
+  - "markdown/publication-briefs/**"
+  - "markdown/html-explainer-specs/**"
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "registries/METRIC_USE_LEDGER.csv"
+  - "research_control/tasks/RT-20260730-005/**"
+  - "research_control/tasks/RT-20260730-006/**"
+  - "research_control/handoffs/handoff-0913.yaml"
+  - "research_control/handoffs/handoff-0913.md"
+allowed_source_classes:
+  - "evidence_unique_checkpoint_identity_reconciliation"
+  - "task_control_record"
+  - "project_control_receipt"
+  - "registry"
+  - "generated_memory_derivative"
+  - "prior_authorized_transaction_checkpoint"
+  - "scientific_payload_preservation_evidence"
+forbidden_source_classes:
+  - "checkpoint_validator_or_test_semantics_change"
+  - "historical_completion_or_handoff_rewrite"
+  - "P9_T01_science_reexecution"
+  - "P9_T02_execution"
+  - "canonical_ontology_write"
+  - "science_source_mutation"
+  - "scientific_ledger_mutation"
+  - "source_law_adoption"
+  - "physics_claim_promotion"
+  - "benchmark_promotion"
+  - "gate_chair_verdict"
+  - "proof_authority"
+  - "publication_or_push_authority"
+  - "completed_derivation_claim"
+  - "external_system_mutation"
+approved_commands:
+  - "git show -s --format=%H%n%P%n%T%n%s e4a644e3d21969ae9deff0541f8696eb59b26a74"
+  - "git merge-base --is-ancestor e4a644e3d21969ae9deff0541f8696eb59b26a74 HEAD"
+  - "git show e4a644e3d21969ae9deff0541f8696eb59b26a74:<path>"
+  - "sha256sum <path>"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21 --json"
+  - ".venv/bin/python research_control/tasks/RT-20260729-012/artifacts/validate_source_derived_benchmark_protocol.py --check --json"
+  - ".venv/bin/python scripts/research_control/task_taxonomy.py --validate-repository --json"
+  - ".venv/bin/python scripts/research_control/continue_research.py --json"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+  - ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --job-id AJ-RT-20260730-007-001 --json-summary"
+  - ".venv/bin/python scripts/research_control/run_full_research_control_validation.py --json --tail-chars 2500"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --check"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --check"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --write"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --check"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --check"
+  - ".venv/bin/python scripts/research_control/generate_claim_graph_v1.py"
+  - ".venv/bin/python scripts/research_control/generate_claim_graph_v1.py --check"
+  - ".venv/bin/python scripts/research_control/validate_claim_graph_v1.py --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+  - "git diff --check"
+  - "git diff --cached --check"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260730-007-001"
+required_validators:
+  - "memory_preflight"
+  - "physics_payload_admission"
+  - "dual_budget_allocation"
+  - "ordinary_route_guard_admission"
+  - "direct_checkpoint_identity_and_ancestry"
+  - "committed_completion_hashes"
+  - "immutable_predecessor_hash_preservation"
+  - "p9_t01_protocol_validator"
+  - "task_taxonomy_repository"
+  - "continuation_boundary"
+  - "project_change_classifier"
+  - "project_improvement_resolver"
+  - "project_improvement_signals"
+  - "documentation_impact"
+  - "claim_language_changed"
+  - "research_control_diff"
+  - "full_research_control_validation"
+  - "current_frontier_renderer"
+  - "task_index_renderer"
+  - "compact_frontier_renderer"
+  - "dependency_graph"
+  - "claim_graph"
+  - "memory_sync"
+  - "memory_core"
+  - "git_diff_check"
+  - "checkpoint_transaction"
+expected_outputs:
+  - "research_control/tasks/RT-20260730-007/00_TASK.yaml"
+  - "research_control/tasks/RT-20260730-007/DDR-20260730-007.md"
+  - "research_control/tasks/RT-20260730-007/artifacts/rt005_cumulative_checkpoint_identity_reconciliation_receipt.json"
+  - "research_control/tasks/RT-20260730-007/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260730-007/jobs/completions/AJC-AJ-RT-20260730-007-001.yaml"
+  - "research_control/tasks/RT-20260730-007/roles/process-integrity-auditor@0.1.0--RT-20260730-007.yaml"
+  - "research_control/handoffs/handoff-0914.yaml"
+  - "research_control/handoffs/handoff-0914.md"
+claim_boundary: "CB-PS-P9-T01-RT005-CUMULATIVE-CHECKPOINT-IDENTITY-RECONCILIATION-001"
+resolves_signal_routing: false
+stop_conditions:
+  - "commit e4a644e identity parent tree ancestry or committed RT-005 and RT-006 completion hashes differ"
+  - "any immutable RT-005 RT-006 handoff-0913 or P9-T01 protected byte differs"
+  - "the clean no-action checkpoint result is not uniquely reconcilable"
+  - "a required write path is outside the AgentJob allowlist"
+  - "validation or the single governed RT-007 checkpoint fails"
+  - "the repair would edit scientific semantics ontology ledgers tests validators or protected authority"
+  - "more than one AgentJob or checkpoint would be required"

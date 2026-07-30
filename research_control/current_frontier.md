@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260730-005` and `handoff-0913`.
+`RT-20260730-007` and `handoff-0914`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260730-005` |
-| Latest handoff ID | `handoff-0913` |
-| Current status | `p9_t01_task_taxonomy_candidate_family_slug_recovery_pass_ready_for_checkpoint` |
+| Active task ID | `RT-20260730-007` |
+| Latest handoff ID | `handoff-0914` |
+| Current status | `rt005_cumulative_checkpoint_identity_reconciled_p9_t02_ready_after_checkpoint` |
 | V16 completed | false |
 | Current route family | benchmark or recovery (project system) |
 | Target derivation milestone | none; this is project-control tooling work |
 | Current burden | `benchmark_promotion` |
-| Required next authority | One governed cumulative checkpoint, then one separately claimed source-only P9-T02 benchmark-case construction packet. |
-| Next recommended action | Invoke the one governed cumulative checkpoint for AJ-RT-20260730-005-001 only after every required precheckpoint gate passes. After that commit, one fresh bounded continue-research packet may execute P9-T02 under the source-only benchmark firewall. |
+| Required next authority | One governed RT-007 checkpoint and then one separately claimed source-only P9-T02 benchmark-case construction packet. |
+| Next recommended action | Invoke the one governed checkpoint for AJ-RT-20260730-007-001. After that commit, use one fresh bounded continue-research packet for P9-T02 under the source-only benchmark firewall. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260730-005` |
-| Latest research handoff ID | `handoff-0913` |
-| Latest research next action | Invoke the one governed cumulative checkpoint for AJ-RT-20260730-005-001 only after every required precheckpoint gate passes. After that commit, one fresh bounded continue-research packet may execute P9-T02 under the source-only benchmark firewall. |
+| Latest research task ID | `RT-20260730-007` |
+| Latest research handoff ID | `handoff-0914` |
+| Latest research next action | Invoke the one governed checkpoint for AJ-RT-20260730-007-001. After that commit, use one fresh bounded continue-research packet for P9-T02 under the source-only benchmark firewall. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260730-005/00_TASK.yaml`.
-- Active task objective: Under generation 172's sealed dirty-state recovery route, change only RT-20260729-012 task_taxonomy.candidate_family from SourceDerivedBenchmarkProtocol_v1 to source_derived_benchmark_protocol_v1, prove exact preimage reconstruction, preserve every other target byte and all generation-171 repairs, rerun the complete validation stack, and invoke at most one governed cumulative checkpoint before P9-T02.
-- Latest handoff path: `research_control/handoffs/handoff-0913.yaml`.
-- Latest handoff summary: Generation 172 normalizes exactly one historical P9-T01 task-taxonomy candidate-family scalar, reconstructs the sealed preimage, preserves every protected generation-171 and P9-T01 hash, restores zero-error repository taxonomy, and leaves all six cases NOT_RUN. One governed cumulative checkpoint remains pending before P9-T02.
+- Active task path: `research_control/tasks/RT-20260730-007/00_TASK.yaml`.
+- Active task objective: Bind the already committed cumulative checkpoint e4a644e to the completed RT-005 and RT-006 records, preserve all immutable predecessor and P9-T01 bytes, record generation 174's clean no-action result without demanding a fictitious second commit, supersede the stale pending-checkpoint routing instruction, and restore a fresh P9-T02 Director-decision boundary without executing P9-T02.
+- Latest handoff path: `research_control/handoffs/handoff-0914.yaml`.
+- Latest handoff summary: Generation 175 verifies that cumulative commit e4a644e contains the exact completed RT-005 and RT-006 transaction, preserves all protected P9-T01 bytes, and records generation 174's clean no_action without inventing a second commit. The stale pending-checkpoint instruction is superseded; P9-T02 remains unexecuted until one RT-007 checkpoint commits.
 - Current route family: benchmark or recovery (project system).
-- Next recommended action: Invoke the one governed cumulative checkpoint for AJ-RT-20260730-005-001 only after every required precheckpoint gate passes. After that commit, one fresh bounded continue-research packet may execute P9-T02 under the source-only benchmark firewall.
+- Next recommended action: Invoke the one governed checkpoint for AJ-RT-20260730-007-001. After that commit, use one fresh bounded continue-research packet for P9-T02 under the source-only benchmark firewall.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -302,7 +302,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Invoke the one governed cumulative checkpoint for AJ-RT-20260730-005-001 only after every required precheckpoint gate passes. After that commit, one fresh bounded continue-research packet may execute P9-T02 under the source-only benchmark firewall.
+Invoke the one governed checkpoint for AJ-RT-20260730-007-001. After that commit, use one fresh bounded continue-research packet for P9-T02 under the source-only benchmark firewall.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -327,20 +327,20 @@ Validation layers:
 
 | Validation layer | Status | Meaning | Evidence |
 | --- | --- | --- | --- |
-| `pre_execution` | PASS | receipt complete | Generation 172 route, claim, lease, repository binding, and exact inherited manifest validated. |
-| `completion_internal` | PASS | receipt complete | Exact scalar, sealed preimage, protected hashes, zero-error taxonomy, and P9-T01 protocol checks pass. |
+| `pre_execution` | PASS | receipt complete | Generation 175 route, claim, lease, repository binding, and clean manifest validated. |
+| `completion_internal` | PASS | receipt complete | Direct Git identity and immutable-hash checks uniquely reconcile the cumulative checkpoint and later no-action result. |
 | `post_write` | PENDING | open item; evidence must explain why | Final repository-wide validation follows handoff and derivative synchronization. |
-| `post_checkpoint` | PENDING | open item; evidence must explain why | One governed cumulative checkpoint remains uninvoked. |
+| `post_checkpoint` | PENDING | open item; evidence must explain why | One governed RT-007 checkpoint remains uninvoked. |
 | `renderer` | PENDING | open item; evidence must explain why | Final render-and-check pass follows this handoff. |
 | `memory_bootstrap` | PENDING | open item; evidence must explain why | Final tracked memory synchronization and validate-only pass remain. |
-| `claim_language_linter` | PENDING | open item; evidence must explain why | Changed-claim lint remains in the precheckpoint stack. |
+| `claim_language_linter` | PENDING | open item; evidence must explain why | Changed-source claim-language validation remains in the precheckpoint stack. |
 
 Authorization layers:
 
 | Authorization field | Value | Meaning |
 | --- | --- | --- |
 | `protected_scoped_gate_review_authorized` | false (not authorized) | scoped review authority only |
-| `protected_scoped_gate_review_scope` | project-system task-taxonomy scalar recovery only | exact scope of protected review authority |
+| `protected_scoped_gate_review_scope` | project-system checkpoint-identity reconciliation only | exact scope of protected review authority |
 | `protected_scoped_gate_review_authority_source_path` | none | tracked source for scoped review authority |
 | `downstream_physics_promotion_authorized` | false (not authorized) | authorizes downstream physics promotion only when true |
 | `downstream_physics_promotion_authority_source_path` | none | tracked source for downstream promotion authority |
@@ -363,9 +363,9 @@ Authorization layers:
 
 Legacy compatibility records:
 
-- active task: `RT-20260730-005`;
-- latest handoff: `handoff-0913`;
-- current status: `p9_t01_task_taxonomy_candidate_family_slug_recovery_pass_ready_for_checkpoint`;
+- active task: `RT-20260730-007`;
+- latest handoff: `handoff-0914`;
+- current status: `rt005_cumulative_checkpoint_identity_reconciled_p9_t02_ready_after_checkpoint`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -375,8 +375,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0913.yaml`
-- `research_control/tasks/RT-20260730-005/00_TASK.yaml`
+- `research_control/handoffs/handoff-0914.yaml`
+- `research_control/tasks/RT-20260730-007/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -392,7 +392,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0913*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0914*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

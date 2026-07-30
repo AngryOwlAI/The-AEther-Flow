@@ -1,7 +1,7 @@
 schema_id: "compact_current_frontier_v16"
 generated_from:
   - "research_control/program_state.yaml"
-  - "research_control/handoffs/handoff-0913.yaml"
+  - "research_control/handoffs/handoff-0914.yaml"
   - "registries/DISTANCE_TO_GR_LEDGER.csv"
   - "registries/METRIC_USE_LEDGER.csv"
   - "research_control/current_frontier.md"
@@ -9,16 +9,16 @@ generated_from:
   - "research_control/design/accepted_status_calibration_v2.yaml"
   - "research_control/design/active_state_bifurcation_policy_v1.md"
 active_state:
-  active_task_id: "RT-20260730-005"
-  latest_handoff_id: "handoff-0913"
-  current_status: "p9_t01_task_taxonomy_candidate_family_slug_recovery_pass_ready_for_checkpoint"
+  active_task_id: "RT-20260730-007"
+  latest_handoff_id: "handoff-0914"
+  current_status: "rt005_cumulative_checkpoint_identity_reconciled_p9_t02_ready_after_checkpoint"
   v15_completed: false
   v16_completed: false
   v16_plan_registered: true
 active_state_bifurcation:
-  latest_research_task_id: "RT-20260730-005"
-  latest_research_handoff_id: "handoff-0913"
-  latest_research_next_action: "Invoke the one governed cumulative checkpoint for AJ-RT-20260730-005-001 only after every required precheckpoint gate passes. After that commit, one fresh bounded continue-research packet may execute P9-T02 under the source-only benchmark firewall."
+  latest_research_task_id: "RT-20260730-007"
+  latest_research_handoff_id: "handoff-0914"
+  latest_research_next_action: "Invoke the one governed checkpoint for AJ-RT-20260730-007-001. After that commit, use one fresh bounded continue-research packet for P9-T02 under the source-only benchmark firewall."
   latest_project_system_task_id: "none"
   latest_project_system_status: "none"
   latest_project_system_sidecar_task_id: "none"
@@ -26,7 +26,7 @@ active_state_bifurcation:
   sidecar_supersedes_research_handoff: false
   next_research_route_source: "latest_research_handoff"
 next_route:
-  route_id: "v21_p9_t02_vacuum_minkowski_source_only_case_after_taxonomy_recovery_checkpoint"
+  route_id: "v21_p9_t02_vacuum_minkowski_source_only_case_after_rt005_checkpoint_identity_reconciliation"
   role_family: "candidate-constructor@0.2.0"
   target_derivation_milestone: "benchmark_promotion"
   milestone_burden: "Test the simplest nontrivial source-derived background."
@@ -542,7 +542,7 @@ validation:
     - layer: "post_checkpoint"
       status: "PENDING"
       evidence:
-        - "One governed cumulative checkpoint remains uninvoked."
+        - "One governed RT-007 checkpoint remains uninvoked."
     - layer: "renderer"
       status: "PENDING"
       evidence:
@@ -554,6 +554,6 @@ validation:
     - layer: "claim_language_linter"
       status: "PENDING"
       evidence:
-        - "Changed-claim lint remains in the precheckpoint stack."
+        - "Changed-source claim-language validation remains in the precheckpoint stack."
 authority_warning:
   snapshot_only_not_authority: true

@@ -1,11 +1,71 @@
 mode: "director_led_research_control"
-active_task_id: "RT-20260730-005"
-latest_handoff_id: "handoff-0913"
-current_status: "p9_t01_task_taxonomy_candidate_family_slug_recovery_pass_ready_for_checkpoint"
-claim_boundary_summary: "RT-20260730-005 normalizes exactly one task_taxonomy.candidate_family scalar in RT-20260729-012, reconstructs its sealed preimage, preserves all protected generation-171 and P9-T01 hashes, and restores zero-error task taxonomy. All six cases remain NOT_RUN. One cumulative checkpoint is pending; P9-T02 is unexecuted, and no scientific, physical, Distance-to-GR, promotion, proof, publication, push, or completed-derivation authority is created."
+active_task_id: "RT-20260730-007"
+latest_handoff_id: "handoff-0914"
+current_status: "rt005_cumulative_checkpoint_identity_reconciled_p9_t02_ready_after_checkpoint"
+claim_boundary_summary: "RT-20260730-007 binds the already-existing cumulative commit e4a644e to the exact completed RT-005 and RT-006 transaction and records generation 174's clean no_action without inventing a second commit. Protected P9-T01 bytes remain exact and all six cases remain NOT_RUN. One RT-007 checkpoint is pending; P9-T02 is unexecuted and no scientific or protected authority is created."
 next_plan_task_id: "P9-T02"
 next_worker_skill: "continue-research"
-next_recommended_action: "Invoke the one governed cumulative checkpoint for AJ-RT-20260730-005-001 only after every required precheckpoint gate passes. After that commit, one fresh bounded continue-research packet may execute P9-T02 under the source-only benchmark firewall."
+next_recommended_action: "Invoke the one governed checkpoint for AJ-RT-20260730-007-001. After that commit, use one fresh bounded continue-research packet for P9-T02 under the source-only benchmark firewall."
+
+rt005_cumulative_checkpoint_identity_reconciliation:
+  task_id: "RT-20260730-007"
+  parent_task_id: "RT-20260730-006"
+  parent_handoff_id: "handoff-0913"
+  source_task_id: "RT-20260730-005"
+  source_job_id: "AJ-RT-20260730-005-001"
+  source_handoff_id: "handoff-0913"
+  plan_task_id: "P9-T01"
+  route_work_item_id: "P9-T02"
+  recovery_for_plan_task_id: "P9-T01"
+  next_plan_task_id: "P9-T02"
+  claim_boundary_id: "CB-PS-P9-T01-RT005-CUMULATIVE-CHECKPOINT-IDENTITY-RECONCILIATION-001"
+  status: "PASS_RT005_CUMULATIVE_CHECKPOINT_IDENTITY_RECONCILED_READY_FOR_RT007_CHECKPOINT"
+  work_item_status: "completed"
+  route_label: "reconcile_rt005_checkpoint_identity_after_clean_cumulative_commit_v1"
+  selected_role_family: "process-integrity-auditor@0.1.0"
+  selected_worker_skill: "improve-project-system"
+  selected_strategy_id: "reconcile_rt005_checkpoint_identity_after_clean_cumulative_commit_v1"
+  target_derivation_milestone: "none"
+  milestone_burden: "Project-system checkpoint-identity reconciliation only; the benchmark-promotion burden does not advance."
+  reconciled_checkpoint_commit: "e4a644e3d21969ae9deff0541f8696eb59b26a74"
+  reconciled_checkpoint_parent: "14a82f7be9762567359300c9082d3c5bc3d2ee3e"
+  reconciled_checkpoint_tree: "2539fec0383e9e5553e993115109180cb3775eab"
+  immutable_route_sha256: "3621ff9a8c9a54cf7e2b37dbe35086f2012113d6c437e2be92767784997d2c7c"
+  route_blocker_fingerprint: "e46501e5887368fbb548933a386e80d361ec72450444e51ba50cb76b3f48bc9c"
+  failed_gate_evidence_sha256: "988a339be22ed4a76a4d3b808d40fb494a6bffea6fa88a25034df43ad2fcfb88"
+  rt005_completion_sha256: "9f046899380f9316a4e669c6fec028c24e07dcb48ee02082cab0811d99ed2c85"
+  rt006_completion_sha256: "8ba59824a570def5e74dd9dfccda57f7510b9f6506d724a95c6a7be83f2a7212"
+  handoff_0913_sha256: "f5df7a6bde72167fdfed71b2f9d010b4e92654c481bc4470b62968ae179a101d"
+  generation_174_checkpoint_outcome: "no_action_clean_tree"
+  generation_174_created_commit: false
+  reconciliation_receipt_path: "research_control/tasks/RT-20260730-007/artifacts/rt005_cumulative_checkpoint_identity_reconciliation_receipt.json"
+  reconciliation_receipt_sha256: "dc7c5d278e58b436436c52a47a4c10c3f4fb5c688195173ed7ccd2668a4ed807"
+  completion_path: "research_control/tasks/RT-20260730-007/jobs/completions/AJC-AJ-RT-20260730-007-001.yaml"
+  completion_sha256: "f433db714573a45a1a6e61345a1dc354500e365d280ff2c88322bbac81012d7b"
+  handoff_id: "handoff-0914"
+  handoff_path: "research_control/handoffs/handoff-0914.yaml"
+  p9_t01_protocol_preserved: true
+  p9_t01_science_payload_modified_by_recovery: false
+  p9_t01_reexecuted: false
+  p9_t02_executed: false
+  benchmark_case_executed: false
+  Gate_D_changed: false
+  Gate_E_verdict_issued: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  checkpoint_invocation_count: 0
+  checkpoint_committed: false
+  selected_next_work_item: "P9-T02"
+  selected_next_worker_skill: "continue-research"
+  selected_next_role_family: "candidate-constructor@0.2.0"
+  selected_next_packet_type: "source_only_benchmark_case_construction"
+  selected_next_route_label: "benchmark-recovery-packet"
+  selected_next_strategy_id: "construct_p9_t02_vacuum_minkowski_source_only_case_v1"
+  selected_next_requires_human_gate: false
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
 
 p9_t01_task_taxonomy_candidate_family_slug_recovery:
   task_id: "RT-20260730-005"
@@ -8985,9 +9045,9 @@ project_improvement_bridge:
   resolution_evidence_path: "research_control/tasks/RT-20260725-002/jobs/completions/AJC-AJ-RT-20260725-002-001.yaml"
 
 active_state_bifurcation:
-  latest_research_task_id: "RT-20260730-005"
-  latest_research_handoff_id: "handoff-0913"
-  latest_research_next_action: "Invoke the one governed cumulative checkpoint for AJ-RT-20260730-005-001 only after every required precheckpoint gate passes. After that commit, one fresh bounded continue-research packet may execute P9-T02 under the source-only benchmark firewall."
+  latest_research_task_id: "RT-20260730-007"
+  latest_research_handoff_id: "handoff-0914"
+  latest_research_next_action: "Invoke the one governed checkpoint for AJ-RT-20260730-007-001 only after every required precheckpoint gate passes. After that commit, one fresh bounded continue-research packet may execute P9-T02 under the source-only benchmark firewall."
   latest_project_system_task_id: "none"
   latest_project_system_status: "none"
   latest_project_system_sidecar_task_id: "none"

@@ -1,0 +1,60 @@
+{
+  "schema_id": "rt005_cumulative_checkpoint_identity_reconciliation_receipt_v1",
+  "status": "PASS",
+  "task_id": "RT-20260730-007",
+  "job_id": "AJ-RT-20260730-007-001",
+  "strategy_id": "reconcile_rt005_checkpoint_identity_after_clean_cumulative_commit_v1",
+  "route_sha256": "3621ff9a8c9a54cf7e2b37dbe35086f2012113d6c437e2be92767784997d2c7c",
+  "route_blocker_fingerprint": "e46501e5887368fbb548933a386e80d361ec72450444e51ba50cb76b3f48bc9c",
+  "failed_gate_evidence_sha256": "988a339be22ed4a76a4d3b808d40fb494a6bffea6fa88a25034df43ad2fcfb88",
+  "reconciled_checkpoint": {
+    "commit": "e4a644e3d21969ae9deff0541f8696eb59b26a74",
+    "parent": "14a82f7be9762567359300c9082d3c5bc3d2ee3e",
+    "tree": "2539fec0383e9e5553e993115109180cb3775eab",
+    "subject": "Research control: RT-20260730-006 process-integrity-auditor@0.1.0--RT-20260730-006 completion",
+    "ancestor_of_current_head": true,
+    "contains_rt005_completion": true,
+    "contains_rt006_completion": true,
+    "contains_handoff_0913": true
+  },
+  "committed_sha256": {
+    "rt005_completion": "9f046899380f9316a4e669c6fec028c24e07dcb48ee02082cab0811d99ed2c85",
+    "rt006_completion": "8ba59824a570def5e74dd9dfccda57f7510b9f6506d724a95c6a7be83f2a7212",
+    "handoff_0913_yaml": "f5df7a6bde72167fdfed71b2f9d010b4e92654c481bc4470b62968ae179a101d"
+  },
+  "live_preserved_sha256": {
+    "rt005_task": "ee1813e7a00b72e936500be9d4cdc1e7f50ad8580bf9ed8042db4f42dd650d80",
+    "rt005_job": "427e2458d1c862d9baf6d691586aa27d354bdd169adb15c51c0137f4ac6834f1",
+    "rt005_completion": "9f046899380f9316a4e669c6fec028c24e07dcb48ee02082cab0811d99ed2c85",
+    "rt006_task": "e83f8c59236e7e7818ff3a05ce02c41aa764cb6eb6bdef702a414aa184b3dbef",
+    "rt006_job": "fe6b69e492e3c4be2496f8e3f19dd7dfd97ee72171dfb7bfa2869211389cb158",
+    "rt006_completion": "8ba59824a570def5e74dd9dfccda57f7510b9f6506d724a95c6a7be83f2a7212",
+    "handoff_0913_yaml": "f5df7a6bde72167fdfed71b2f9d010b4e92654c481bc4470b62968ae179a101d",
+    "handoff_0913_markdown": "5e2261002658d9f2c3588a775c199e77bcd09aedb425327c0fa33dddada2ce79",
+    "p9_t01_task": "249885ae2e010f43868bdf3d44b0336ac3058ed568c4120cd1781658905eeec9",
+    "p9_t01_job": "c1444fb0cd15f4248c1f3886daab4fdfbe7f6f80dc4a42ead25af3e32a24848a",
+    "p9_t01_protocol": "88ef097bf712ad115e9af62cc18a8b3eabb12f8545350f714ad065f702471007",
+    "program_state_before_reconciliation": "cebb6dce62e568600db2021034007756a89776cfaaa4b7739d65a588395a0978"
+  },
+  "generation_174_checkpoint_result": {
+    "owner_job_id": "AJ-RT-20260730-005-001",
+    "outcome": "no_action",
+    "head": "e4a644e3d21969ae9deff0541f8696eb59b26a74",
+    "porcelain": "",
+    "changed_paths": [],
+    "new_commit_created": false,
+    "interpretation": "The clean no-action result does not erase the already committed cumulative RT-005 and RT-006 transaction at e4a644e."
+  },
+  "scientific_boundary": {
+    "p9_t01_reexecuted": false,
+    "p9_t02_executed": false,
+    "benchmark_case_executed": false,
+    "scientific_status_changed": false,
+    "distance_to_gr_changed": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "publication_authorized": false,
+    "push_performed": false
+  },
+  "result": "The tracked lifecycle may now supersede the stale pending-checkpoint instruction and route one fresh P9-T02 Director decision only after RT-007 itself is checkpointed."
+}

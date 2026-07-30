@@ -1,0 +1,260 @@
+validation_status: "PASS"
+final_repository_validation_status: "PASS_CHECKPOINT_READY"
+job_id: "AJ-RT-20260730-007-001"
+completion_id: "AJC-AJ-RT-20260730-007-001"
+task_id: "RT-20260730-007"
+task_type: "project_system_rt005_cumulative_checkpoint_identity_reconciliation"
+decision_id: "DDR-20260730-007"
+role_id: "process-integrity-auditor"
+source_role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260730-007"
+status: "completed"
+created_at: "2026-07-30T16:10:29Z"
+started_at: "2026-07-30T16:10:29Z"
+completed_at: "2026-07-30T16:10:29Z"
+objective: "Bind cumulative commit e4a644e to the completed RT-005 and RT-006 transaction, preserve every immutable predecessor and P9-T01 byte, record generation 174's clean no-action result, supersede only stale mutable routing, and restore P9-T02 eligibility after one RT-007 checkpoint without executing P9-T02."
+completion_summary: "Generation 175 directly verifies commit e4a644e, its parent and tree, and the exact committed RT-005 and RT-006 completions. It preserves RT-005, RT-006, handoff-0913, and the P9-T01 protocol; records generation 174's clean no_action without fabricating another commit; and creates a superseding P9-T02 routing boundary. P9-T02 remains unexecuted and one RT-007 checkpoint remains pending."
+objective_result: "PASS_RT005_CUMULATIVE_CHECKPOINT_IDENTITY_RECONCILED_READY_FOR_RT007_CHECKPOINT"
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 175
+  passes_consumed: 159
+  route_work_item_id: "P9-T02"
+  route_worker_skill: "improve-project-system"
+  route_sha256: "3621ff9a8c9a54cf7e2b37dbe35086f2012113d6c437e2be92767784997d2c7c"
+  route_reason: "checkpoint_no_action_clean_commit_identity_reconciliation_required"
+  route_strategy_id: "reconcile_rt005_checkpoint_identity_after_clean_cumulative_commit_v1"
+  route_blocker_fingerprint: "e46501e5887368fbb548933a386e80d361ec72450444e51ba50cb76b3f48bc9c"
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:175"
+  handoff_token: "b4a22f9aba5a4360ccc8b65583ebec0f686dd0614ed880f6"
+  relay_claim_token: "88c605531373b6d378be5548e0c4b219839d96d381ea553d"
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+
+transaction_status: "completed_checkpoint_ready"
+result_disposition: "prior_cumulative_checkpoint_identity_reconciled_one_rt007_checkpoint_pending"
+work_item_status: "repair_completed"
+plan_task_id: "P9-T02"
+recovery_for_plan_task_id: "P9-T01"
+task_implementation_plan_task_id: "P9-T01"
+next_plan_task_id: "P9-T02"
+checkpoint_commit: "none_rt007_checkpoint_pending"
+checkpoint_invocation_count: 0
+checkpoint_staged: false
+legacy_validation_used: false
+project_system_change_only: true
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1089
+    relationship_row_count: 5515
+    semantic_row_count: 1089
+    vault_row_count: 1089
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  authority_note: "Generated wiki Obsidian semantic relationship and .local retrieval layers are navigation only and not authority; registered canonical sources, tracked control state, direct Git evidence, and the immutable relay route govern this recovery."
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS_CHECKPOINT_READY"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  observed_durable_outputs:
+    physics: []
+    project_system:
+      - "research_control/tasks/RT-20260730-007/artifacts/rt005_cumulative_checkpoint_identity_reconciliation_receipt.json"
+      - "research_control/handoffs/handoff-0914.yaml"
+  accepted_criteria:
+    physics: []
+    project_system:
+      - "commit e4a644e identity parent tree ancestry and committed RT-005 and RT-006 completions are exact"
+      - "immutable RT-005 RT-006 handoff-0913 and P9-T01 bytes remain exact"
+      - "generation 174 no_action is recorded without fabricating a second commit"
+      - "P9-T02 remains unexecuted"
+      - "one governed RT-007 checkpoint commits without legacy validation"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+physics_payload_admission_result:
+  status: "PASS_PROJECT_SYSTEM_NOT_APPLICABLE"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+
+ordinary_route_guard_admission_result:
+  status: "PASS"
+  source_handoff_id: "handoff-0913"
+  selected_plan_task_id: "P9-T02"
+  guard_outcome: "physics_bearing_route_selected"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  system_success_counts_as_physics: false
+  system_success_counts_as_distance_to_gr: false
+  scientific_status_changed: false
+  physics_promotion_authorized: false
+
+checkpoint_identity_reconciliation_result:
+  status: "PASS"
+  strategy_id: "reconcile_rt005_checkpoint_identity_after_clean_cumulative_commit_v1"
+  route_sha256: "3621ff9a8c9a54cf7e2b37dbe35086f2012113d6c437e2be92767784997d2c7c"
+  route_blocker_fingerprint: "e46501e5887368fbb548933a386e80d361ec72450444e51ba50cb76b3f48bc9c"
+  failed_gate_evidence_sha256: "988a339be22ed4a76a4d3b808d40fb494a6bffea6fa88a25034df43ad2fcfb88"
+  reconciled_checkpoint_commit: "e4a644e3d21969ae9deff0541f8696eb59b26a74"
+  reconciled_checkpoint_parent: "14a82f7be9762567359300c9082d3c5bc3d2ee3e"
+  reconciled_checkpoint_tree: "2539fec0383e9e5553e993115109180cb3775eab"
+  committed_rt005_completion_sha256: "9f046899380f9316a4e669c6fec028c24e07dcb48ee02082cab0811d99ed2c85"
+  committed_rt006_completion_sha256: "8ba59824a570def5e74dd9dfccda57f7510b9f6506d724a95c6a7be83f2a7212"
+  committed_handoff_0913_sha256: "f5df7a6bde72167fdfed71b2f9d010b4e92654c481bc4470b62968ae179a101d"
+  generation_174_checkpoint_outcome: "no_action_clean_tree"
+  generation_174_created_commit: false
+  immutable_predecessor_hash_mismatch_count: 0
+  p9_t01_protocol_preserved: true
+  p9_t01_reexecuted: false
+  p9_t02_executed: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+
+distance_to_gr_delta:
+  changed: false
+  effect: "none_project_system_only"
+  ledger_updated: false
+  rationale: "Checkpoint-identity reconciliation creates no mathematical or scientific evidence."
+
+artifacts:
+  - path: "research_control/tasks/RT-20260730-007/artifacts/rt005_cumulative_checkpoint_identity_reconciliation_receipt.json"
+    sha256: "dc7c5d278e58b436436c52a47a4c10c3f4fb5c688195173ed7ccd2668a4ed807"
+output_paths:
+  - "research_control/tasks/RT-20260730-007/**"
+  - "research_control/handoffs/handoff-0914.yaml"
+  - "research_control/handoffs/handoff-0914.md"
+  - "research_control/program_state.yaml"
+
+command_results:
+  - command: "git show -s --format identity parent tree subject e4a644e and git merge-base --is-ancestor e4a644e HEAD"
+    status: "PASS"
+    summary: "e4a644e has exact parent 14a82f7 tree 2539fec and is the current ancestral cumulative checkpoint"
+  - command: "git show e4a644e:<protected path> piped to SHA-256"
+    status: "PASS"
+    summary: "the committed RT-005 completion RT-006 completion and handoff-0913 hashes are exact"
+  - command: "sha256sum protected RT-005 RT-006 handoff-0913 and P9-T01 paths"
+    status: "PASS"
+    summary: "all live protected hashes match their sealed values"
+  - command: ".venv/bin/python scripts/research_control/task_taxonomy.py --validate-repository --json"
+    status: "PENDING_FINAL_STACK"
+  - command: ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --job-id AJ-RT-20260730-007-001 --json-summary"
+    status: "PENDING_FINAL_STACK"
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+    status: "PENDING_FINAL_STACK"
+  - command: "git diff --check"
+    status: "PENDING_FINAL_STACK"
+
+validation_summary:
+  status: "PASS_CHECKPOINT_READY"
+  checkpoint_identity_error_count: 0
+  immutable_predecessor_hash_mismatch_count: 0
+  executed_benchmark_case_count: 0
+  checkpoint_invocation_count: 0
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 175 route, claim, lease, repository binding, exact clean manifest, and worker identity validated."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Direct Git and immutable-hash evidence uniquely reconcile the prior cumulative checkpoint and clean no-action result."
+  post_write:
+    status: "PENDING"
+    evidence:
+      - "Final integrated validators, renderers, memory synchronization, and whitespace checks follow record creation."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "Exactly one governed RT-007 checkpoint remains uninvoked."
+  renderer:
+    status: "PENDING"
+    evidence:
+      - "Final render-and-check pass follows this completion and handoff."
+  memory_bootstrap:
+    status: "PENDING"
+    evidence:
+      - "Final tracked memory synchronization and validate-only pass remain."
+  claim_language_linter:
+    status: "PENDING"
+    evidence:
+      - "Changed-source claim-language validation remains in the precheckpoint stack."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "project-system checkpoint-identity reconciliation only"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  publication_authorized: false
+  proof_authority: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  canonical_ontology_edit_authorized: false
+  ontology_selection_authorized: false
+  physical_interpretation_establishment_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []
