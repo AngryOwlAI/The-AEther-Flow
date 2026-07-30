@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-07-29T22:01:00Z`
-- Source fingerprint: `e2adf102952ea8fe97b157c1c817adcce0e1a5e2b3f21e4684b7afe32c8d5810`
-- Nodes: `23338`
-- Edges: `74582`
+- Generated from tracked state as of: `2026-07-29T23:44:12Z`
+- Source fingerprint: `5b2516f7e28a52deacde32afbb25aa4d811d99454fe1a68f6a3daa09f15de339`
+- Nodes: `23356`
+- Edges: `74612`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 1144 |
+| `completion_yaml` | 1145 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 905 |
+| `handoff_yaml` | 906 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,18 +33,18 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 9 |
-| `agent_job` | `support_only` | 1144 |
+| `agent_job` | `support_only` | 1145 |
 | `artifact` | `canonical_source` | 87 |
-| `artifact` | `support_only` | 11856 |
-| `blocked_burden` | `blocked` | 4730 |
-| `claim_boundary` | `support_only` | 1101 |
+| `artifact` | `support_only` | 11864 |
+| `blocked_burden` | `blocked` | 4735 |
+| `claim_boundary` | `support_only` | 1102 |
 | `draft_control_candidate` | `draft_control` | 780 |
 | `draft_control_candidate` | `proposal_only` | 147 |
 | `draft_control_candidate` | `science_draft` | 88 |
 | `frozen_negative` | `frozen_negative` | 147 |
 | `gate_chair_verdict` | `human_gated` | 33 |
-| `handoff` | `support_only` | 905 |
-| `human_gated_object` | `human_gated` | 563 |
+| `handoff` | `support_only` | 906 |
+| `human_gated_object` | `human_gated` | 564 |
 | `ledger_row` | `accepted_scoped` | 6 |
 | `ledger_row` | `blocked` | 3 |
 | `ledger_row` | `frozen_negative` | 1 |
@@ -58,7 +58,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `source_ontology_object` | `support_only` | 370 |
 | `task` | `human_gated` | 29 |
 | `task` | `science_draft` | 32 |
-| `task` | `support_only` | 1083 |
+| `task` | `support_only` | 1084 |
 
 ## Frontier Table
 
@@ -80,6 +80,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 | Claim node | Summary | Source |
 | --- | --- | --- |
+| `blocked_claim:a4_a9_independent_review_or_gate_d_scientific_repair` | Blocked claim: A4 A9 independent-review or Gate D scientific repair | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:acceptance_main_use` | Blocked claim: acceptance main use | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:accepted_bridge_evidence_as_matter_coupling` | Blocked claim: accepted bridge evidence as matter coupling | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:accepted_evidence_as_adoption` | Blocked claim: accepted evidence as adoption | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
@@ -159,13 +160,12 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `blocked_claim:audit_pass_as_ontology_edit` | Blocked claim: audit pass as ontology edit | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:audit_pass_as_proof_authority` | Blocked claim: audit pass as proof authority | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:audit_pass_as_refuter_stress_pass` | Blocked claim: audit pass as Refuter stress pass | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:audit_pass_as_source_extension_data_adoption` | Blocked claim: audit pass as source-extension data adoption | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 
 ## Route Continuity
 
-- Active task: `RT-20260729-009`
-- Latest handoff: `handoff-0905`
-- Handoff path: `research_control/handoffs/handoff-0905.yaml`
-- Next action: Run one governed checkpoint for AJ-RT-20260729-009-001. After checkpoint, stop for exact human action: P8-T07 is protected and has no authorization. Before any positive Gate D readiness claim, supply the recorded A4 and A9 status repair plus evidenced blind human review or genuinely independent replication.
+- Active task: `RT-20260729-010`
+- Latest handoff: `handoff-0906`
+- Handoff path: `research_control/handoffs/handoff-0906.yaml`
+- Next action: Run one governed checkpoint for AJ-RT-20260729-010-001. After it commits, do not execute P8-T07 without exact human Gate Chair authorization; preserve the recorded A4 and A9 repair requirements and independent-review deficit.
 
 This graph is navigational support only; inspect the cited sources before using any claim.

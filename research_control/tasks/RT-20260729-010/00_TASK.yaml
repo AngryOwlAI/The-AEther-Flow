@@ -1,0 +1,78 @@
+task_id: "RT-20260729-010"
+task_type: "project_system_p8_t06_allowlist_order_parity_checkpoint_recovery"
+title: "Restore P8-T06 ordered allowlist identity and checkpoint eligibility"
+task_taxonomy:
+  schema_id: "v21_task_taxonomy_v1"
+  work_kind: "benchmark_or_recovery"
+  milestone: "einstein_equations"
+  candidate_family: "p8_t06_allowlist_order_parity_checkpoint_recovery"
+  result_kind: "implemented_and_validated_or_precisely_blocked"
+  authority: "project_control"
+  scope: "project_system"
+validation_status: "PASS"
+status: "completed"
+created_at: "2026-07-29T23:44:12Z"
+updated_at: "2026-07-29T23:44:12Z"
+closed_at: "2026-07-29T23:44:12Z"
+parent_task_id: "RT-20260729-009"
+parent_handoff_id: "handoff-0905"
+supersedes_active_routing_task_id: "RT-20260729-009"
+current_decision_id: "DDR-20260729-010"
+current_job_id: "AJ-RT-20260729-010-001"
+role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260729-010"
+requires_human_gate: false
+human_authorization_note: "Generation 163 of the immutable user-requested relay routes exactly one improve-project-system frame to repair the post-checkpoint P8-T06 ordered allowlist mismatch. It does not reexecute P8-T06 or execute protected P8-T07."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P8"
+  plan_task_id: "P8-T06"
+  recovery_for_plan_task_id: "P8-T06"
+  next_plan_task_id: "P8-T07"
+  next_plan_task_execution_authorized: false
+objective: "Preserve AJ-RT-20260729-009-001, its completion, handoff, and scientific artifacts byte-for-byte; align only its expired execution-role overlay and ROLE_EXECUTION registry representation to the AgentJob's exact ordered 28-item write-path contract; prove four-way parity and protected P8-T06 byte preservation; then invoke one governed checkpoint while P8-T07 remains zero-worker and human-gated."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system allowlist identity and checkpoint recovery only; the Einstein-equations burden and protected Gate D decision remain unchanged."
+route_label: "repair_p8_t06_allowlist_order_parity_after_checkpoint_v1"
+project_system_change_only: true
+dual_budget_category: "system_bearing"
+primary_budget: "project_system"
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+claim_boundary_id: "CB-V21-P8-T06-ALLOWLIST-ORDER-PARITY-CHECKPOINT-RECOVERY-001"
+claim_boundary:
+  allowed_scope: "Preserve the completed P8-T06 AgentJob, completion, handoff, and scientific artifacts; make only its expired execution-role and ROLE_EXECUTION registry allowlist equal the immutable AgentJob's exact ordered 28-item list; create bounded recovery evidence and normal control records; and invoke one cumulative checkpoint."
+  immutable_predecessor_task: "RT-20260729-009"
+  immutable_predecessor_job: "AJ-RT-20260729-009-001"
+  immutable_predecessor_handoff: "handoff-0905"
+  source_head: "be951b2b4f51b1b9b9efed893d525ae21843f1ab"
+  source_job_sha256: "7a836fd1be75b2cacfe14892f5c1ae639bd9cab97ff66c20396075800d2b3da3"
+  source_role_sha256_before_repair: "a45010a653f5ce8dd2bff1b30211e477094d0f79a611b9c8be08a0a904ce5b1b"
+  source_completion_sha256: "72930cd1b39b983d3a2948360f6f7e6c79f34b661df8de58c21c6f3bde7236f8"
+  source_handoff_sha256: "c9c3bea0f05e58330bbc2780b18709488aa54c4d14f40ac3f8796b9d56680aae"
+  immutable_route_sha256: "18712d77363555bf08c7c513efffaf9c1296a04ccd1663273ceef803916bb71d"
+  route_blocker_fingerprint: "018a274bb10db84cd237fbf6696a4c9225d6f72b35eabc9ecd38db5a3a2336ef"
+  required_allowed_write_path_count: 28
+  p8_t06_reexecuted: false
+  p8_t07_executed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+documentation_impact_id: "DI-RT-20260729-010-001"
+completion_id: "AJC-AJ-RT-20260729-010-001"
+output_artifacts:
+  - "research_control/tasks/RT-20260729-010/artifacts/validate_p8_t06_allowlist_order_parity_recovery.py"
+  - "research_control/tasks/RT-20260729-010/artifacts/p8_t06_allowlist_order_parity_recovery_receipt.json"
+  - "research_control/tasks/RT-20260729-010/jobs/completions/AJC-AJ-RT-20260729-010-001.yaml"
+  - "research_control/handoffs/handoff-0906.yaml"
+  - "research_control/handoffs/handoff-0906.md"
+closure_status: "p8_t06_allowlist_order_parity_recovery_pass_ready_for_checkpoint"
+summary: "Generation 163 preserves the completed P8-T06 transaction and restores exact ordered allowlist identity while P8-T07 remains protected and unauthorized."
+next_recommended_action: "Invoke the one governed checkpoint for AJ-RT-20260729-010-001. After checkpoint, P8-T07 remains zero-worker unless exact protected human authorization is supplied; a positive Gate D readiness claim also still requires the recorded A4/A9 repair and independently evidenced review."
+project_improvement_signals: []
+notes: "This packet creates no ontology, action, metric, field-equation, scientific, Gate Chair, Distance-to-GR, benchmark, promotion, publication, push, proof, or completed-derivation authority."

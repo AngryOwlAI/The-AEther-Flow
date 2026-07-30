@@ -1,0 +1,320 @@
+final_repository_validation_status: "PASS_PRECHECKPOINT_READY"
+job_id: "AJ-RT-20260729-010-001"
+completion_id: "AJC-AJ-RT-20260729-010-001"
+task_id: "RT-20260729-010"
+task_type: "project_system_p8_t06_allowlist_order_parity_checkpoint_recovery"
+decision_id: "DDR-20260729-010"
+role_id: "process-integrity-auditor"
+source_role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260729-010"
+status: "completed"
+created_at: "2026-07-29T23:44:12Z"
+started_at: "2026-07-29T23:44:12Z"
+completed_at: "2026-07-29T23:44:12Z"
+objective: "Preserve AJ-RT-20260729-009-001, its completion, handoff, and scientific artifacts byte-for-byte; align only its expired execution-role overlay and ROLE_EXECUTION registry representation to the AgentJob's exact ordered 28-item write list; prove protected P8-T06 byte preservation and routing consistency; then invoke one governed checkpoint while P8-T07 remains human-gated."
+completion_summary: "The immutable P8-T06 AgentJob remains byte-identical. Its expired execution-role overlay, AGENT_JOB_REGISTRY row, and ROLE_EXECUTION_REGISTRY row now equal the exact ordered 28-item AgentJob list. The task-local receipt preserves the P8-T06 completion, handoff, scientific artifacts, review boundary, and Distance-to-GR ledger hashes. P8-T06 was not replayed, and P8-T07 remains unexecuted and human-gated pending exact authorization."
+objective_result: "p8_t06_allowlist_order_parity_recovery_pass_ready_for_checkpoint"
+
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P8"
+  plan_task_id: "P8-T07"
+  recovery_for_plan_task_id: "P8-T06"
+  implementation_status: "allowlist_order_parity_recovery_implemented_checkpoint_ready"
+  protected_p8_t06_status: "complete_preserved"
+  completed_v21_tasks_added: []
+  next_dependency_ready_work_item: "P8-T07_human_gate_after_checkpoint"
+  next_work_item_executed: false
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 163
+  passes_consumed: 149
+  route_work_item_id: "P8-T06"
+  route_worker_skill: "improve-project-system"
+  route_sha256: "18712d77363555bf08c7c513efffaf9c1296a04ccd1663273ceef803916bb71d"
+  route_reason: "post_checkpoint_allowlist_order_parity_recovery_required"
+  route_strategy_id: "repair_p8_t06_allowlist_order_parity_after_checkpoint_v1"
+  route_blocker_fingerprint: "018a274bb10db84cd237fbf6696a4c9225d6f72b35eabc9ecd38db5a3a2336ef"
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:163"
+  handoff_token: "ca6695a66b055a639cffb68cd2c2dcc5145ca1f465c2d5b6"
+  relay_claim_token: "93df70e8cdfa2d4a59295f1466adf32912c46c0772869180"
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+
+transaction_status: "ready_for_governed_checkpoint"
+result_disposition: "repair_implemented_and_validated"
+work_item_status: "completed"
+plan_task_id: "P8-T07"
+recovery_for_plan_task_id: "P8-T06"
+next_plan_task_id: "P8-T07"
+checkpoint_commit: "none_checkpoint_pending"
+checkpoint_invocation_count: 0
+checkpoint_staged: false
+legacy_validation_used: false
+project_system_change_only: true
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS_PRECHECKPOINT_READY"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  observed_durable_outputs:
+    physics: []
+    project_system:
+      - "exact P8-T06 execution-role allowlist order"
+      - "exact P8-T06 ROLE_EXECUTION registry allowlist order"
+      - "task-local four-way parity and protected-byte receipt"
+      - "one governed checkpoint"
+  accepted_criteria:
+    physics: []
+    project_system:
+      - "AJ-RT-20260729-009-001 remains byte-identical"
+      - "all four allowlist representations equal the exact ordered 28-item AgentJob list"
+      - "P8-T06 completion handoff scientific artifacts and Distance-to-GR ledger remain exact"
+      - "live continuation reports no allowlist-order parity error"
+      - "all required working-tree gates pass"
+      - "one governed checkpoint commits"
+      - "P8-T07 remains unexecuted and human-gated"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+physics_payload_admission_result:
+  status: "admitted"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+
+ordinary_route_guard_admission_result:
+  status: "PASS"
+  source_handoff_id: "handoff-0905"
+  selected_plan_task_id: "P8-T07"
+  guard_outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  system_success_counts_as_physics: false
+  system_success_counts_as_distance_to_gr: false
+  scientific_status_changed: false
+  physics_promotion_authorized: false
+
+recovery_result:
+  status: "PASS"
+  strategy_id: "repair_p8_t06_allowlist_order_parity_after_checkpoint_v1"
+  source_task_id: "RT-20260729-009"
+  source_job_id: "AJ-RT-20260729-009-001"
+  source_handoff_id: "handoff-0905"
+  source_head: "be951b2b4f51b1b9b9efed893d525ae21843f1ab"
+  route_blocker_fingerprint: "018a274bb10db84cd237fbf6696a4c9225d6f72b35eabc9ecd38db5a3a2336ef"
+  source_agent_job_sha256: "7a836fd1be75b2cacfe14892f5c1ae639bd9cab97ff66c20396075800d2b3da3"
+  source_completion_sha256: "72930cd1b39b983d3a2948360f6f7e6c79f34b661df8de58c21c6f3bde7236f8"
+  source_handoff_sha256: "c9c3bea0f05e58330bbc2780b18709488aa54c4d14f40ac3f8796b9d56680aae"
+  recovery_validator_path: "research_control/tasks/RT-20260729-010/artifacts/validate_p8_t06_allowlist_order_parity_recovery.py"
+  recovery_validator_sha256: "f5771fb6a819861f710620b9aa5601172fbb129e5ddadec4dd395d6415d9fc93"
+  recovery_receipt_path: "research_control/tasks/RT-20260729-010/artifacts/p8_t06_allowlist_order_parity_recovery_receipt.json"
+  recovery_receipt_sha256: "ad8ef2785d28b5792704919402929ece83bfb7a1469bba5c16488c439be6240f"
+  required_allowed_write_path_count: 28
+  ordered_representation_count: 4
+  protected_hash_mismatch_count: 0
+  p8_t06_science_payload_modified: false
+  p8_t06_reexecuted: false
+  p8_t07_executed: false
+
+artifacts:
+  - path: "research_control/tasks/RT-20260729-010/artifacts/validate_p8_t06_allowlist_order_parity_recovery.py"
+    sha256: "f5771fb6a819861f710620b9aa5601172fbb129e5ddadec4dd395d6415d9fc93"
+  - path: "research_control/tasks/RT-20260729-010/artifacts/p8_t06_allowlist_order_parity_recovery_receipt.json"
+    sha256: "ad8ef2785d28b5792704919402929ece83bfb7a1469bba5c16488c439be6240f"
+
+output_paths:
+  - "research_control/tasks/RT-20260729-009/roles/external-red-team-reviewer@0.1.0--RT-20260729-009.yaml"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "research_control/tasks/RT-20260729-010/**"
+  - "research_control/handoffs/handoff-0906.yaml"
+  - "research_control/handoffs/handoff-0906.md"
+  - "research_control/program_state.yaml"
+
+command_results:
+  - command: ".venv/bin/python research_control/tasks/RT-20260729-010/artifacts/validate_p8_t06_allowlist_order_parity_recovery.py --check --json"
+    status: "PASS"
+    summary: "all four ordered 28-item representations match and all protected hashes remain exact"
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+    status: "PASS"
+    summary: "tracked memory, registry, and wiki derivatives synchronize successfully; local cache warnings remain retrieval-only"
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+    status: "PASS"
+    summary: "tracked memory core validation passes"
+  - command: "project change classifier, documentation-impact gate, project-improvement-signal gate, claim-language gate, and integrated research-control validation"
+    status: "PASS"
+    summary: "all required project-system and research-control gates pass"
+  - command: ".venv/bin/python scripts/research_control/continue_research.py --summary"
+    status: "PASS"
+    summary: "the allowlist-order mismatch is absent and P8-T07 remains protected and unauthorized"
+  - command: "git diff --check"
+    status: "PASS"
+    summary: "working-tree whitespace validation passes"
+
+validation_summary:
+  status: "PASS_PRECHECKPOINT_READY"
+  task_local_error_count: 0
+  allowed_write_path_count: 28
+  ordered_representation_count: 4
+  protected_hash_mismatch_count: 0
+  checkpoint_invocation_count: 0
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 163 validated, atomically claimed, and consumed the exact immutable recovery route once."
+      - "The clean source manifest, repository identity, lease, route, and predecessor state matched before writes."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The tracked recovery receipt proves exact ordered identity across four representations and preserves every named predecessor hash."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Task-local, documentation-impact, signal, integrated control, diff allowlist, memory, continuation, and whitespace gates pass."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "The one governed checkpoint is the next authorized action; P8-T07 remains unexecuted and human-gated."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Tracked frontier, task-index, graph, registry, and wiki derivatives are fresh."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory synchronization and validate-only pass; local retrieval warnings are cache-only."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Integrated research-control validation has no hard claim-language error."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not authorized; project-system allowlist-order recovery validation only"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  publication_authorized: false
+  proof_authority: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  canonical_ontology_edit_authorized: false
+  ontology_selection_authorized: false
+  physical_interpretation_establishment_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+distance_to_gr_delta:
+  changed: false
+  effect: "none_project_system_recovery"
+  burden_id: "einstein_equations"
+  milestone: "einstein_equations"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "The inherited P8-T06 review result and Gate D boundary remain byte-preserved; this recovery contributes no physics movement."
+
+physics_progress_status:
+  status: "none_project_system_only"
+  new_mathematical_payload: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+
+selected_next_route:
+  route_id: "v21_p8_t07_protected_gate_d_review_after_checkpoint"
+  route_label: "human-gated-field-equation-review"
+  role_family: "gate-chair@0.1.0"
+  worker_skill: "none_until_human_authorization"
+  selected_next_packet_type: "protected_gate_d_review_or_deferred_human_gate"
+  task_type: "v21_p8_t07_protected_gate_d_review"
+  plan_task_id: "P8-T07"
+  target_derivation_milestone: "einstein_equations"
+  milestone_burden: "Calibrate the field-equation result before any protected verdict."
+  strategy_id: "defer_until_exact_gate_d_authorization_and_preserve_repair_preconditions"
+  trigger_classification: "human_gate_required"
+  adoption_status: "blocked_adoption_open_continuation"
+  requires_human_gate: true
+  exact_human_authorization_present: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  physics_promotion_authorized: false
+  executed: false
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required_no_nonblank_signals"
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1085
+    relationship_row_count: 5499
+    semantic_row_count: 1085
+    vault_row_count: 1085
+    local_cache_only_warning_count: 7
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  authority_note: "Generated Obsidian, wiki, semantic, relationship, SQLite, and .local surfaces are retrieval-only navigation layers and not authority; tracked canonical sources, registries, and research-control state govern this recovery."
+validation_status: "PASS"

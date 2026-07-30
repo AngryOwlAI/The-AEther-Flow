@@ -1,7 +1,7 @@
 schema_id: "compact_current_frontier_v16"
 generated_from:
   - "research_control/program_state.yaml"
-  - "research_control/handoffs/handoff-0905.yaml"
+  - "research_control/handoffs/handoff-0906.yaml"
   - "registries/DISTANCE_TO_GR_LEDGER.csv"
   - "registries/METRIC_USE_LEDGER.csv"
   - "research_control/current_frontier.md"
@@ -9,16 +9,16 @@ generated_from:
   - "research_control/design/accepted_status_calibration_v2.yaml"
   - "research_control/design/active_state_bifurcation_policy_v1.md"
 active_state:
-  active_task_id: "RT-20260729-009"
-  latest_handoff_id: "handoff-0905"
-  current_status: "p8_t06_repair_required_not_ready_for_positive_gate_d_ready_for_checkpoint"
+  active_task_id: "RT-20260729-010"
+  latest_handoff_id: "handoff-0906"
+  current_status: "p8_t06_allowlist_order_parity_recovery_pass_ready_for_checkpoint"
   v15_completed: false
   v16_completed: false
   v16_plan_registered: true
 active_state_bifurcation:
-  latest_research_task_id: "RT-20260729-009"
-  latest_research_handoff_id: "handoff-0905"
-  latest_research_next_action: "Run one governed checkpoint for AJ-RT-20260729-009-001. After checkpoint, stop for exact human action: P8-T07 is protected and has no authorization. Before any positive Gate D readiness claim, supply the recorded A4 and A9 status repair plus evidenced blind human review or genuinely independent replication."
+  latest_research_task_id: "RT-20260729-010"
+  latest_research_handoff_id: "handoff-0906"
+  latest_research_next_action: "Run one governed checkpoint for AJ-RT-20260729-010-001. After it commits, do not execute P8-T07 without exact human Gate Chair authorization; preserve the recorded A4 and A9 repair requirements and independent-review deficit."
   latest_project_system_task_id: "none"
   latest_project_system_status: "none"
   latest_project_system_sidecar_task_id: "none"
@@ -26,10 +26,10 @@ active_state_bifurcation:
   sidecar_supersedes_research_handoff: false
   next_research_route_source: "latest_research_handoff"
 next_route:
-  route_id: "v21_p8_t07_human_gate_d_review"
+  route_id: "v21_p8_t07_protected_gate_d_review_after_checkpoint"
   role_family: "gate-chair@0.1.0"
   target_derivation_milestone: "einstein_equations"
-  milestone_burden: "Make the protected field-equation decision before benchmark promotion."
+  milestone_burden: "Calibrate the field-equation result before any protected verdict."
   requires_human_gate: true
 claim_boundary:
   physics_claim_authority: false
@@ -279,7 +279,7 @@ blocked_physical_targets:
       - "no_completed_derivation"
 distance_to_gr:
   delta:
-    effect: "audit_repair_status_recorded"
+    effect: "none_project_system_recovery"
     changed: false
     milestone: "einstein_equations"
     burden_id: "einstein_equations"
@@ -534,6 +534,6 @@ validation:
     - layer: "post_checkpoint"
       status: "PENDING"
       evidence:
-        - "One governed checkpoint remains; P8-T07 is unexecuted and lacks exact protected authority."
+        - "One governed checkpoint remains; P8-T07 is not executed or authorized."
 authority_warning:
   snapshot_only_not_authority: true

@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260729-009`
-- Latest handoff: `handoff-0905`
-- Current status: `p8_t06_repair_required_not_ready_for_positive_gate_d_ready_for_checkpoint`
+- Active task: `RT-20260729-010`
+- Latest handoff: `handoff-0906`
+- Current status: `p8_t06_allowlist_order_parity_recovery_pass_ready_for_checkpoint`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260729-009`
-- Latest research handoff: `handoff-0905`
-- Latest research next action: Run one governed checkpoint for AJ-RT-20260729-009-001. After checkpoint, stop for exact human action: P8-T07 is protected and has no authorization. Before any positive Gate D readiness claim, supply the recorded A4 and A9 status repair plus evidenced blind human review or genuinely independent replication.
+- Latest research task: `RT-20260729-010`
+- Latest research handoff: `handoff-0906`
+- Latest research next action: Run one governed checkpoint for AJ-RT-20260729-010-001. After it commits, do not execute P8-T07 without exact human Gate Chair authorization; preserve the recorded A4 and A9 repair requirements and independent-review deficit.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p8_t07_human_gate_d_review`
+- Route ID: `v21_p8_t07_protected_gate_d_review_after_checkpoint`
 - Role family: `gate-chair@0.1.0`
 - Target milestone: `einstein_equations`
-- Milestone burden: Make the protected field-equation decision before benchmark promotion.
+- Milestone burden: Calibrate the field-equation result before any protected verdict.
 - Requires human gate: `true`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `e9df3833847b22d0cbe5529c48c6a1193fccf2be6b0bd3d6ced1e33c686a6877`
-- JSON SHA-256: `35b60fce9c13a16fff89c342dcbd9772175191d570c50af36880537a15b16c09`
+- YAML SHA-256: `fb1c3cdef4e04a19a9cb0afa7b21db342000ae02d51ad0e55ca741ab9619dac8`
+- JSON SHA-256: `60c3d0827cdc0db5063cf345baa15f8c062e19848d9f88a54100c2ce73668e94`
 
 ## Authority Warning
 

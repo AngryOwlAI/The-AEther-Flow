@@ -1,0 +1,265 @@
+handoff_id: "handoff-0906"
+handoff_number: 906
+task_id: "RT-20260729-010"
+decision_id: "DDR-20260729-010"
+job_id: "AJ-RT-20260729-010-001"
+completion_id: "AJC-AJ-RT-20260729-010-001"
+completion_path: "research_control/tasks/RT-20260729-010/jobs/completions/AJC-AJ-RT-20260729-010-001.yaml"
+completion_sha256: "827e6aeb506bddb88ab799cb5e7e5af1ed9565c9bba07ac9d71b894b8b2ee8e7"
+status: "ready_after_checkpoint"
+created_at: "2026-07-29T23:44:12Z"
+parent_handoff_id: "handoff-0905"
+plan_task_id: "P8-T07"
+recovery_for_plan_task_id: "P8-T06"
+source_role_id: "process-integrity-auditor"
+source_role_version: "0.1.0"
+source_execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260729-010"
+summary: "Generation 163 preserves the completed P8-T06 AgentJob byte-for-byte and restores exact ordered 28-item allowlist identity across its expired execution-role overlay and both control-registry representations. All protected P8-T06 scientific bytes, its review boundary, and the Distance-to-GR ledger remain exact. P8-T06 was not replayed, and P8-T07 remains unexecuted and human-gated."
+next_action: "Run one governed checkpoint for AJ-RT-20260729-010-001. After it commits, do not execute P8-T07 without exact human Gate Chair authorization; preserve the recorded A4 and A9 repair requirements and independent-review deficit."
+current_claim_boundary: "CB-V21-P8-T06-ALLOWLIST-ORDER-PARITY-CHECKPOINT-RECOVERY-001"
+loop_risk_route: "human-gated-field-equation-review"
+
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260729-010"
+  latest_research_handoff_id: "handoff-0906"
+  latest_research_next_action: "Run one governed checkpoint for AJ-RT-20260729-010-001. After it commits, do not execute P8-T07 without exact human Gate Chair authorization; preserve the recorded A4 and A9 repair requirements and independent-review deficit."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+
+claim_boundary:
+  allowed_next_scope: "One governed checkpoint for AJ-RT-20260729-010-001. After checkpoint, P8-T07 remains a protected Gate D review requiring exact human authorization; no worker execution is authorized."
+  completed_task: "RT-20260729-010"
+  completed_completion_path: "research_control/tasks/RT-20260729-010/jobs/completions/AJC-AJ-RT-20260729-010-001.yaml"
+  completed_completion_sha256: "827e6aeb506bddb88ab799cb5e7e5af1ed9565c9bba07ac9d71b894b8b2ee8e7"
+  source_handoff_id: "handoff-0905"
+  source_handoff_path: "research_control/handoffs/handoff-0905.yaml"
+  source_handoff_sha256: "c9c3bea0f05e58330bbc2780b18709488aa54c4d14f40ac3f8796b9d56680aae"
+  immutable_route_sha256: "18712d77363555bf08c7c513efffaf9c1296a04ccd1663273ceef803916bb71d"
+  route_blocker_fingerprint: "018a274bb10db84cd237fbf6696a4c9225d6f72b35eabc9ecd38db5a3a2336ef"
+  source_p8_t06_checkpoint_commit: "be951b2b4f51b1b9b9efed893d525ae21843f1ab"
+  result_status: "PASS_P8_T06_ALLOWLIST_ORDER_PARITY_RECOVERY_READY_FOR_CHECKPOINT"
+  recovery_receipt_path: "research_control/tasks/RT-20260729-010/artifacts/p8_t06_allowlist_order_parity_recovery_receipt.json"
+  recovery_receipt_sha256: "ad8ef2785d28b5792704919402929ece83bfb7a1469bba5c16488c439be6240f"
+  recovery_validator_path: "research_control/tasks/RT-20260729-010/artifacts/validate_p8_t06_allowlist_order_parity_recovery.py"
+  recovery_validator_sha256: "f5771fb6a819861f710620b9aa5601172fbb129e5ddadec4dd395d6415d9fc93"
+  allowed_write_path_count: 28
+  ordered_representation_count: 4
+  protected_hash_mismatch_count: 0
+  checkpoint_invocation_count_before_handoff: 0
+  checkpoint_committed_before_handoff: false
+  p8_t06_science_payload_modified_by_recovery: false
+  distance_to_gr_ledger_modified_by_recovery: false
+  p8_t06_reexecuted: false
+  p8_t07_executed: false
+  scientific_status_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  ontology_adoption_authorized: false
+  source_law_adoption_authorized: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_performed: false
+  blocked_claims:
+    - "project-system allowlist-order parity presented as scientific progress"
+    - "P8-T06 review repair requirements presented as satisfied"
+    - "same-context review presented as blind human review or genuinely independent replication"
+    - "P8-T07 presented as executed or authorized"
+    - "positive Gate D readiness effective geometry metric action target stress energy equivalence principle Einstein equations exact-GR benchmark proof publication push or completed derivation"
+
+plan_result:
+  plan_task_id: "P8-T06"
+  recovery_for_plan_task_id: "P8-T06"
+  next_plan_task_id: "P8-T07"
+  title: "Restore P8-T06 ordered allowlist identity and checkpoint eligibility"
+  result_status: "P8_T06_ALLOWLIST_ORDER_PARITY_RECOVERY_PASS"
+  work_item_status: "completed"
+  protected_p8_t06_payload_complete: true
+  protected_p8_t06_payload_byte_preserved: true
+  four_way_allowlist_order_parity_complete: true
+  p8_t07_dependency_ready_after_checkpoint: true
+  p8_t07_dependency_ready_now: false
+  p8_t07_exact_human_authorization_present: false
+  p8_t07_executed: false
+  scientific_claims_changed_by_recovery: false
+  distance_to_gr_delta_changed_by_recovery: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+distance_to_gr:
+  changed: false
+  effect: "none_project_system_recovery"
+  burden_id: "einstein_equations"
+  milestone: "einstein_equations"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "The inherited P8-T06 result and protected Gate D boundary remain byte-preserved; this recovery contributes no physics movement."
+  downstream_unlocked: []
+  downstream_still_blocked:
+    - "P8-T07 without exact human Gate Chair authorization"
+    - "positive Gate D readiness without the recorded A4 and A9 repairs and evidenced independent review"
+    - "Einstein equations derivation"
+    - "exact-GR recovery"
+    - "benchmark promotion"
+
+required_next_packet:
+  task_type: "v21_p8_t07_protected_gate_d_review"
+  plan_task_id: "P8-T07"
+  objective: "Conduct the protected Gate D review only after exact human authorization and only against the preserved A4, A9, and independent-review requirements."
+  dependency_ready_after_checkpoint: true
+  dependency_ready_now: false
+  requires_human_gate: true
+  exact_human_authorization_present: false
+  executed: false
+
+selected_next_route:
+  route_id: "v21_p8_t07_protected_gate_d_review_after_checkpoint"
+  route_label: "human-gated-field-equation-review"
+  role_family: "gate-chair@0.1.0"
+  worker_skill: "none_until_human_authorization"
+  selected_next_packet_type: "protected_gate_d_review_or_deferred_human_gate"
+  task_type: "v21_p8_t07_protected_gate_d_review"
+  plan_task_id: "P8-T07"
+  target_derivation_milestone: "einstein_equations"
+  milestone_burden: "Calibrate the field-equation result before any protected verdict."
+  strategy_id: "defer_until_exact_gate_d_authorization_and_preserve_repair_preconditions"
+  trigger_classification: "human_gate_required"
+  adoption_status: "blocked_adoption_open_continuation"
+  requires_human_gate: true
+  exact_human_authorization_present: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  physics_promotion_authorized: false
+  executed: false
+  next_action: "Remain unexecuted unless exact human Gate Chair authorization is supplied."
+  source_handoff: "research_control/handoffs/handoff-0906.yaml"
+
+ordinary_route_guard:
+  schema_id: "ordinary_route_guard_evaluation_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  evaluation_id: "ORE-HANDOFF-0906"
+  ordinary_handoff_id: "handoff-0906"
+  threshold: 3
+  consecutive_project_system_tasks_before_selection: 1
+  ready_science_plan_task_ids:
+    - "P8-T07"
+    - "P14-T04"
+  selected_plan_task_id: "P8-T07"
+  selected_route_class: "physics_bearing"
+  selected_worker_skill: "none_until_human_authorization"
+  outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  exception_receipt:
+    active: false
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+active_state_boundary:
+  active_task_id: "RT-20260729-010"
+  active_job_id: "AJ-RT-20260729-010-001"
+  current_status: "p8_t06_allowlist_order_parity_recovery_pass_ready_for_checkpoint"
+  checkpoint_required: true
+  checkpoint_completed: false
+  checkpoint_invocation_count: 0
+  project_system_recovery_completed: true
+  p8_t06_payload_complete: true
+  p8_t06_payload_byte_preserved: true
+  selected_next_plan_task_id: "P8-T07"
+  selected_next_worker_skill: "none_until_human_authorization"
+  selected_next_role_family: "gate-chair@0.1.0"
+  selected_next_route_label: "human-gated-field-equation-review"
+  selected_next_strategy_id: "defer_until_exact_gate_d_authorization_and_preserve_repair_preconditions"
+  selected_next_requires_human_gate: true
+  selected_next_exact_human_authorization_present: false
+  selected_next_execution_ready_after_checkpoint: false
+  selected_next_execution_ready_now: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 163 validated, atomically claimed, and consumed its exact immutable recovery route once."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The tracked recovery receipt proves exact four-way ordered allowlist identity and protected-byte preservation."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Task-local, documentation, signal, research-control, continuation, memory, and whitespace gates pass."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "One governed checkpoint remains; P8-T07 is not executed or authorized."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Tracked frontier, task-index, graph, registry, and wiki derivatives are fresh."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory synchronization and validate-only pass."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Integrated research-control validation has no hard claim-language error."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not authorized; project-system allowlist-order recovery validation only"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  publication_authorized: false
+  proof_authority: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  canonical_ontology_edit_authorized: false
+  ontology_selection_authorized: false
+  physical_interpretation_establishment_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required_no_nonblank_signals"
+  rationale: "The bounded allowlist-order recovery emits no new project-improvement signal."
+
+handoff_authority_boundary:
+  this_handoff_authorizes:
+    - "one governed checkpoint for AJ-RT-20260729-010-001"
+  this_handoff_does_not_authorize:
+    - "P8-T06 reexecution or scientific-payload mutation"
+    - "P8-T07 execution or Gate Chair verdict"
+    - "A4 A9 or independent-review deficit repair"
+    - "validator test schema skill or base-role behavior change"
+    - "positive Gate D readiness effective geometry metric action target stress energy equivalence principle Einstein equations exact-GR benchmark proof publication push or completed derivation"
+
+next_plan_task_id: "P8-T07"
+next_worker_skill: "none_until_human_authorization"
+next_role_family: "gate-chair@0.1.0"
+next_route_label: "human-gated-field-equation-review"
+next_strategy_id: "defer_until_exact_gate_d_authorization_and_preserve_repair_preconditions"
+notes: "Generation 163 is project-system control work only. P8-T07 remains unexecuted and human-gated."

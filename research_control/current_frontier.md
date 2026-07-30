@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260729-009` and `handoff-0905`.
+`RT-20260729-010` and `handoff-0906`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260729-009` |
-| Latest handoff ID | `handoff-0905` |
-| Current status | `p8_t06_repair_required_not_ready_for_positive_gate_d_ready_for_checkpoint` |
+| Active task ID | `RT-20260729-010` |
+| Latest handoff ID | `handoff-0906` |
+| Current status | `p8_t06_allowlist_order_parity_recovery_pass_ready_for_checkpoint` |
 | V16 completed | false |
-| Current route family | audit or review (scientific audit) |
+| Current route family | benchmark or recovery (project system) |
 | Target derivation milestone | `einstein_equations` |
 | Current burden | `einstein_equations` |
-| Required next authority | After the governed checkpoint, P8-T07 may be discussed only as a protected human gate. It may execute only under exact human authorization. A positive readiness claim additionally requires the exact A4 and A9 status repair and independently evidenced review. |
-| Next recommended action | Run one governed checkpoint for AJ-RT-20260729-009-001. After checkpoint, stop for exact human action: P8-T07 is protected and has no authorization. Before any positive Gate D readiness claim, supply the recorded A4 and A9 status repair plus evidenced blind human review or genuinely independent replication. |
+| Required next authority | One governed checkpoint for AJ-RT-20260729-010-001. After checkpoint, P8-T07 remains a protected Gate D review requiring exact human authorization; no worker execution is authorized. |
+| Next recommended action | Run one governed checkpoint for AJ-RT-20260729-010-001. After it commits, do not execute P8-T07 without exact human Gate Chair authorization; preserve the recorded A4 and A9 repair requirements and independent-review deficit. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260729-009` |
-| Latest research handoff ID | `handoff-0905` |
-| Latest research next action | Run one governed checkpoint for AJ-RT-20260729-009-001. After checkpoint, stop for exact human action: P8-T07 is protected and has no authorization. Before any positive Gate D readiness claim, supply the recorded A4 and A9 status repair plus evidenced blind human review or genuinely independent replication. |
+| Latest research task ID | `RT-20260729-010` |
+| Latest research handoff ID | `handoff-0906` |
+| Latest research next action | Run one governed checkpoint for AJ-RT-20260729-010-001. After it commits, do not execute P8-T07 without exact human Gate Chair authorization; preserve the recorded A4 and A9 repair requirements and independent-review deficit. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260729-009/00_TASK.yaml`.
-- Active task objective: Review the unchanged P8-T03 through P8-T05 action, equation, correction, and stability package for target import, hidden assumptions, algebraic error, and interpretation overread; attempt exact reproduction; calibrate independent-review provenance; and produce a Gate D readiness matrix plus exact human action without modifying reviewed science.
-- Latest handoff path: `research_control/handoffs/handoff-0905.yaml`.
-- Latest handoff summary: P8-T06 directly reproduces the finite P8-T03 through P8-T05 algebra without finding hidden target import or finite-core algebraic error. It finds that unchanged P8-T03 does not instantiate P8-T02 A4 as written because no coarse-graining map valid scale interval remainder norm or source-controlled bound is supplied; A9 is static only. The review is same-context AI work rather than blind human review or independent replication. The calibrated result is REPAIR_REQUIRED and NOT READY for a positive Gate D verdict.
-- Current route family: audit or review (scientific audit).
-- Next recommended action: Run one governed checkpoint for AJ-RT-20260729-009-001. After checkpoint, stop for exact human action: P8-T07 is protected and has no authorization. Before any positive Gate D readiness claim, supply the recorded A4 and A9 status repair plus evidenced blind human review or genuinely independent replication.
+- Active task path: `research_control/tasks/RT-20260729-010/00_TASK.yaml`.
+- Active task objective: Preserve AJ-RT-20260729-009-001, its completion, handoff, and scientific artifacts byte-for-byte; align only its expired execution-role overlay and ROLE_EXECUTION registry representation to the AgentJob's exact ordered 28-item write-path contract; prove four-way parity and protected P8-T06 byte preservation; then invoke one governed checkpoint while P8-T07 remains zero-worker and human-gated.
+- Latest handoff path: `research_control/handoffs/handoff-0906.yaml`.
+- Latest handoff summary: Generation 163 preserves the completed P8-T06 AgentJob byte-for-byte and restores exact ordered 28-item allowlist identity across its expired execution-role overlay and both control-registry representations. All protected P8-T06 scientific bytes, its review boundary, and the Distance-to-GR ledger remain exact. P8-T06 was not replayed, and P8-T07 remains unexecuted and human-gated.
+- Current route family: benchmark or recovery (project system).
+- Next recommended action: Run one governed checkpoint for AJ-RT-20260729-010-001. After it commits, do not execute P8-T07 without exact human Gate Chair authorization; preserve the recorded A4 and A9 repair requirements and independent-review deficit.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -302,7 +302,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one governed checkpoint for AJ-RT-20260729-009-001. After checkpoint, stop for exact human action: P8-T07 is protected and has no authorization. Before any positive Gate D readiness claim, supply the recorded A4 and A9 status repair plus evidenced blind human review or genuinely independent replication.
+Run one governed checkpoint for AJ-RT-20260729-010-001. After it commits, do not execute P8-T07 without exact human Gate Chair authorization; preserve the recorded A4 and A9 repair requirements and independent-review deficit.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -327,20 +327,20 @@ Validation layers:
 
 | Validation layer | Status | Meaning | Evidence |
 | --- | --- | --- | --- |
-| `pre_execution` | PASS | receipt complete | Generation 162 validated, was atomically claimed once, and consumed the immutable P8-T06 continue-research route once.<br>P8-T05 dependency checkpoint c9af10eb4cf8116eb29fe358c7d0e818a4863fc6 is committed. |
-| `completion_internal` | PASS | receipt complete | Exact finite reproduction, assumption-status audit, review-provenance calibration, Gate D matrix, and authority checks pass. |
-| `post_write` | PASS | receipt complete | Integrated control, documentation-impact, memory, renderer, claim-language, and selected test validation pass before checkpoint. |
-| `post_checkpoint` | PENDING | open item; evidence must explain why | One governed checkpoint remains; P8-T07 is unexecuted and lacks exact protected authority. |
-| `renderer` | PASS | receipt complete | Current frontier, task index, compact frontier, dependency graph, claim graph, and generated memory derivatives are synchronized. |
-| `memory_bootstrap` | PASS | receipt complete | Tracked memory synchronization and validate-only mode pass. |
-| `claim_language_linter` | PASS | receipt complete | Changed-source claim-language validation passes. |
+| `pre_execution` | PASS | receipt complete | Generation 163 validated, atomically claimed, and consumed its exact immutable recovery route once. |
+| `completion_internal` | PASS | receipt complete | The tracked recovery receipt proves exact four-way ordered allowlist identity and protected-byte preservation. |
+| `post_write` | PASS | receipt complete | Task-local, documentation, signal, research-control, continuation, memory, and whitespace gates pass. |
+| `post_checkpoint` | PENDING | open item; evidence must explain why | One governed checkpoint remains; P8-T07 is not executed or authorized. |
+| `renderer` | PASS | receipt complete | Tracked frontier, task-index, graph, registry, and wiki derivatives are fresh. |
+| `memory_bootstrap` | PASS | receipt complete | Tracked memory synchronization and validate-only pass. |
+| `claim_language_linter` | PASS | receipt complete | Integrated research-control validation has no hard claim-language error. |
 
 Authorization layers:
 
 | Authorization field | Value | Meaning |
 | --- | --- | --- |
 | `protected_scoped_gate_review_authorized` | false (not authorized) | scoped review authority only |
-| `protected_scoped_gate_review_scope` | none | exact scope of protected review authority |
+| `protected_scoped_gate_review_scope` | not authorized; project-system allowlist-order recovery validation only | exact scope of protected review authority |
 | `protected_scoped_gate_review_authority_source_path` | none | tracked source for scoped review authority |
 | `downstream_physics_promotion_authorized` | false (not authorized) | authorizes downstream physics promotion only when true |
 | `downstream_physics_promotion_authority_source_path` | none | tracked source for downstream promotion authority |
@@ -348,13 +348,14 @@ Authorization layers:
 | `benchmark_promotion_authority_source_path` | none | tracked source for benchmark authority |
 | `completed_derivation_authorized` | false (not authorized) | authorizes completed-derivation claim only when true |
 | `completed_derivation_authority_source_path` | none | tracked source for completed-derivation authority |
-| `Einstein_equation_derivation_authorized` | False | extension authorization field |
 | `Gate_Chair_verdict_authorized` | False | extension authorization field |
 | `canonical_ontology_edit_authorized` | False | extension authorization field |
 | `external_outreach_authorized` | False | extension authorization field |
 | `external_publication_authorized` | False | extension authorization field |
-| `human_endorsement_claim_authorized` | False | extension authorization field |
-| `independent_replication_claim_authorized` | False | extension authorization field |
+| `global_no_go_claim_authorized` | False | extension authorization field |
+| `ontology_selection_authorized` | False | extension authorization field |
+| `physical_interpretation_establishment_authorized` | False | extension authorization field |
+| `proof_authority` | False | extension authorization field |
 | `publication_authorized` | False | extension authorization field |
 | `push_authorized` | False | extension authorization field |
 | `source_law_adoption_authorized` | False | extension authorization field |
@@ -362,9 +363,9 @@ Authorization layers:
 
 Legacy compatibility records:
 
-- active task: `RT-20260729-009`;
-- latest handoff: `handoff-0905`;
-- current status: `p8_t06_repair_required_not_ready_for_positive_gate_d_ready_for_checkpoint`;
+- active task: `RT-20260729-010`;
+- latest handoff: `handoff-0906`;
+- current status: `p8_t06_allowlist_order_parity_recovery_pass_ready_for_checkpoint`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -374,8 +375,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0905.yaml`
-- `research_control/tasks/RT-20260729-009/00_TASK.yaml`
+- `research_control/handoffs/handoff-0906.yaml`
+- `research_control/tasks/RT-20260729-010/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -391,7 +392,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0905*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0906*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations
