@@ -1,0 +1,543 @@
+job_id: "AJ-RT-20260729-012-001"
+task_id: "RT-20260729-012"
+decision_id: "DDR-20260729-012"
+role_id: "ontology-formalizer"
+role_version: "0.2.0"
+execution_role_ref: "ontology-formalizer@0.2.0--RT-20260729-012"
+status: "active"
+validation_status: "PENDING"
+requires_human_gate: false
+created_at: "2026-07-30T03:18:05Z"
+started_at: "2026-07-30T03:18:05Z"
+completed_at: ""
+completion_path: "research_control/tasks/RT-20260729-012/jobs/completions/AJC-AJ-RT-20260729-012-001.yaml"
+objective: "Execute only v21 P9-T01: formalize SourceDerivedBenchmarkProtocol_v1, a typed case schema, an explicit target-import firewall, and a Gate E readiness checklist; prove the firewall's protocol-level non-circularity under exact hypotheses; and leave every benchmark case unexecuted."
+target_derivation_milestone: "benchmark_promotion"
+milestone_burden: "Create a benchmark contract that cannot be satisfied by reusing adopted GR dynamics."
+route_label: "benchmark-design-packet"
+route_reason: "Generation 165 completed and checkpointed the protected P8-T07 NOT READY disposition; handoff-0907 and immutable generation 166 select the dependency-ready P9-T01 benchmark protocol packet."
+immutable_route_sha256: "4aa5eaaa1dffb7a1bda5ab14bdfea8781183317abe97cdcf526f118e1f5a66db"
+dependency_checkpoint_commit: "c65c2d40cff97ecd96de1c59bd220a9f1274dfc6"
+plan_task_id: "P9-T01"
+recommendation_ids:
+  - "V21-R28"
+  - "V21-R29"
+  - "V21-R63"
+  - "V21-R66"
+  - "V21-R67"
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 166
+  passes_consumed: 151
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:166"
+  handoff_token: "7a15a0d575eb479c070d1461dedf34dfd734c2afb2624348"
+  relay_claim_token: "e7997b9d02f4d9b318223aab4a8e537a84b0fe82f90467d3"
+  route_work_item_id: "P9-T01"
+  route_worker_skill: "continue-research"
+  route_sha256: "4aa5eaaa1dffb7a1bda5ab14bdfea8781183317abe97cdcf526f118e1f5a66db"
+  route_reason: "dependency_ready_in_scope"
+  route_strategy_id: "continue_in_scope_generation_166"
+  route_blocker_fingerprint: "423d9c1d28c144fb014b7639396a60c4d16506b4e592c490384f189da9c373fe"
+  route_before_fingerprint: "423d9c1d28c144fb014b7639396a60c4d16506b4e592c490384f189da9c373fe"
+  worker_skill: "continue-research"
+  worker_invocation_count: 1
+
+mathematical_decisiveness_contract:
+  contract_path: "research_control/design/mathematical_decisiveness_completion_contract.md"
+  schema_path: ".agents/schemas/PHYSICS_COMPLETION_DECISIVENESS_SCHEMA.md"
+  enforcement_mode: "hard_failure"
+  active_after: "2026-06-21T02:32:39Z"
+
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "physics"
+  payload_type: "theorem"
+  candidate_family: "SourceDerivedBenchmarkProtocol_v1"
+  assumption_delta:
+    - "The protected P8-T07 NOT READY disposition and fixed P5 through P8 source records remain unchanged."
+    - "Every benchmark case is represented by a provenance-directed acyclic graph with typed roots, intermediates, sealed outputs, and a post-seal target oracle."
+    - "Only source-derived, explicitly proposal-only source-extension, independently calibrated, and hashed code roots may reach source computation."
+    - "Target atlas, target metric, target solution, Einstein-Hilbert action, Einstein equations, and benchmark success are forbidden upstream roots."
+    - "A comparison oracle is opened only after source outputs and provenance hashes are sealed."
+    - "Analytic equivalence, numerical tolerance, residual corrections, failure, and inconclusive branches are case-local and cannot tune the source computation."
+    - "Independent reproduction requires a fresh execution environment, exact hashes, and no shared intermediates."
+  materiality_basis: "P9-T01 supplies the first typed source-only benchmark contract and a formal reachability theorem showing that target agreement cannot be caused by an upstream forbidden target import when the firewall hypotheses hold."
+  payload_details:
+    theorem_id: "TargetImportFirewallSoundness_v1"
+    theorem_kind: "provenance_dag_non_circularity"
+    theorem_statement_status: "draft/control"
+    benchmark_case_executed: false
+    benchmark_result_established: false
+    next_plan_task_id: "P9-T02"
+  source_basis:
+    - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+    - "research_control/handoffs/handoff-0907.yaml"
+    - "research_control/tasks/RT-20260729-011/artifacts/p8_t07_gate_d_verdict_matrix_v1.yaml"
+    - "TEX-ONTOLOGY-AETHER-FLOW-DYNAMICS"
+    - "TEX-ONTOLOGY-AETHER-FLOW-RELATIVISTIC-RECOVERY"
+    - "TEX-ONTOLOGY-AETHER-FLOW-CONSISTENCY"
+    - "research_control/tasks/RT-20260726-001/artifacts/p6_geometry_input_contract_v1.yaml"
+    - "research_control/tasks/RT-20260727-004/artifacts/p6_t08_gate_b_separating_certificate_v1.yaml"
+    - "research_control/tasks/RT-20260728-002/artifacts/source_operational_device_suite_spec_v1.yaml"
+    - "research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_spec_v1.yaml"
+    - "research_control/tasks/RT-20260729-005/artifacts/local_effective_action_assumption_envelope_v1.yaml"
+    - "research_control/tasks/RT-20260729-007/artifacts/finite_source_field_equation_identity_spec_v1.yaml"
+    - "research_control/tasks/RT-20260729-008/artifacts/finite_constraint_dynamic_completion_countermodels_v1.yaml"
+  expected_artifact_paths:
+    - "research_control/tasks/RT-20260729-012/artifacts/source_derived_benchmark_protocol_v1.tex"
+    - "research_control/tasks/RT-20260729-012/artifacts/source_derived_benchmark_case_schema_v1.yaml"
+    - "research_control/tasks/RT-20260729-012/artifacts/target_import_firewall_v1.yaml"
+    - "research_control/tasks/RT-20260729-012/artifacts/gate_e_readiness_checklist_v1.yaml"
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+
+family_freeze_admission:
+  schema_id: "family_freeze_route_admission_v1"
+  policy_id: "family_freeze_reopening_policy_v1"
+  route_id: "v21_p9_t01_source_derived_benchmark_protocol"
+  family_id: "SourceDerivedBenchmarkProtocol_v1"
+  family_identity_sha256: "b8df12b9e293c010d4879acee05d77c10d9deccc23e7d59543c8fc5f8ad46bdf"
+  assumption_sha256es:
+    - "b01dfaf4a0447531fea022ba42de42e4be73d83ca4515ab3dceadef287647f2c"
+  route_kind: "theorem_investigation"
+  detected_match_basis: []
+  reopening:
+    requested: false
+    class: "none"
+  distinct_branch:
+    branch_identity: "target_import_firewall_protocol_theorem_v1"
+    material_difference_basis: "This protocol theorem neither reconstructs nor reinterprets a frozen source candidate; it defines a new downstream provenance and comparison contract."
+    reconstructs_frozen_candidate: false
+    expected_artifact_paths:
+      - "research_control/tasks/RT-20260729-012/artifacts/source_derived_benchmark_protocol_v1.tex"
+      - "research_control/tasks/RT-20260729-012/artifacts/target_import_firewall_v1.yaml"
+  authority_limits:
+    local_family_freeze_preserved: true
+    global_no_go_claimed: false
+    automatic_candidate_adoption: false
+    theorem_truth_inferred: false
+    ontology_modified: false
+    physics_promotion_authorized: false
+
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  expected_durable_outputs:
+    physics:
+      - "one typed source-derived benchmark protocol"
+      - "one target-import firewall soundness theorem"
+      - "one benchmark case schema and Gate E readiness checklist"
+    project_system:
+      - "one task-local validator and compact validation receipt"
+      - "parent-child synthesis records"
+      - "standard control records and generated memory derivatives"
+  acceptance_criteria:
+    physics:
+      - "every case separates source execution from post-seal target comparison"
+      - "forbidden target roots cannot reach source computation"
+      - "success, failure, inconclusive, analytic-equivalence, numerical-tolerance, residual, and independent-reproduction rules are explicit"
+      - "no benchmark case is executed or passed"
+    project_system:
+      - "task-local schema, reachability, hash, parent-child, and authority checks pass"
+      - "claim-language and documentation-impact gates pass"
+      - "one governed checkpoint records the bounded transaction"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: false
+    exception_id: ""
+    evidence_path: ""
+    evidence_sha256: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0907"
+  source_handoff_path: "research_control/handoffs/handoff-0907.yaml"
+  source_handoff_sha256: "d4229819dd85f4ae8b290c15dc408b036d2bf2644f2fd691b5ebea26c6f8c835"
+  selected_plan_task_id: "P9-T01"
+  guard_outcome: "below_threshold"
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  parent:
+    execution_unit_id: "parent"
+    perspective: "physicist_mathematician_philosopher"
+    responsibilities:
+      - "hold the P5 through P8 source hashes and Gate D NOT READY boundary fixed"
+      - "type the full benchmark protocol and provenance graph"
+      - "separate source computation from target comparison and protected promotion"
+      - "resolve all child conflicts before final output"
+      - "route P9-T02 without treating protocol design as recovery"
+  children:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260729-012/artifacts/child_phys_math_p9_t01_benchmark_protocol.yaml"
+      status: "planned"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260729-012/artifacts/child_phys_phil_p9_t01_benchmark_protocol.yaml"
+      status: "planned"
+  conflict_policy:
+    review_path: "research_control/tasks/RT-20260729-012/artifacts/parent_conflict_review_p9_t01_benchmark_protocol.yaml"
+    max_resolution_rounds: 2
+    require_parallel_child_revision: true
+    unresolved_conflict_status: "blocked"
+  fusion_policy:
+    fusion_notes_path: "research_control/tasks/RT-20260729-012/artifacts/parent_fusion_notes_p9_t01_benchmark_protocol.md"
+    fused_output_path: "research_control/tasks/RT-20260729-012/artifacts/source_derived_benchmark_protocol_v1.tex"
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+    final_output_replaces_old_single_role_artifact: true
+  outer_agentjob_count: 1
+  child_agentjob_count: 0
+  rationale: "Two internal analytical perspectives operate inside the one consumed worker invocation and one outer AgentJob."
+
+memory_preflight:
+  preflight_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1087
+    relationship_row_count: 5507
+    semantic_row_count: 1087
+    vault_row_count: 1087
+    local_cache_only_warning_count: 0
+    refresh_performed: true
+  refresh_needed: true
+  refresh_performed: true
+  refresh_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py"
+  before_refresh:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    warning_count: 8
+  after_refresh:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1087
+    relationship_row_count: 5507
+    semantic_row_count: 1087
+    vault_row_count: 1087
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v21.md --json"
+      query_type: "lookup"
+      query_text: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"benchmark protocol target import firewall\" --limit 10 --json"
+      query_type: "search"
+      query_text: "benchmark protocol target import firewall"
+      returned_object_ids:
+        - "TEX-V21-P8-T07-GATE-D-DECISION-V1"
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+    - object_id: "TEX-V21-P8-T07-GATE-D-DECISION-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260729-011/artifacts/p8_t07_gate_d_decision_v1.tex"
+      source_hash: "035ea88a612d861a00d0703ec2bd1094e01194c113d7ff2588e3a4ad8bf47d63"
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "cc7ca9b540c7f0ac3906cdfa046d274be8c966eb851ad783bcb851a34b6eafb7"
+    - object_id: "TEX-ONTOLOGY-AETHER-FLOW-DYNAMICS"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "ontology/tex/aether_flow_dynamics.tex"
+      source_hash: "fd6e579e71ef7f2ac4c9668ceede051ad57033ee52357b2552a9e3a5a53939c7"
+    - object_id: "TEX-ONTOLOGY-AETHER-FLOW-RELATIVISTIC-RECOVERY"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "ontology/tex/aether_flow_relativistic_recovery.tex"
+      source_hash: "77d5c2db56f122870343834f853bf2f375a912116a347d7c5710405c8707d69c"
+    - object_id: "TEX-ONTOLOGY-AETHER-FLOW-CONSISTENCY"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "ontology/tex/aether_flow_consistency.tex"
+      source_hash: "d965519639ee8764a5c5a63798d15e8a9a380d7e208dffc43a0be02b6f245ba1"
+  authority_note: "Obsidian wiki notes, semantic extracts, the SQLite memory index, PDFs, and .local files are retrieval layers only and are not authority."
+
+allowed_read_paths:
+  - "SOUL.md"
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".codex/skills/continue-research-continue-goal/SKILL.md"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - ".agents/roles/physics/ontology-formalizer.v0.2.0.md"
+  - ".agents/schemas/**"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  - "research_control/design/**"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0907.yaml"
+  - "research_control/handoffs/handoff-0907.md"
+  - "research_control/tasks/RT-20260726-001/**"
+  - "research_control/tasks/RT-20260727-004/**"
+  - "research_control/tasks/RT-20260728-002/**"
+  - "research_control/tasks/RT-20260728-003/**"
+  - "research_control/tasks/RT-20260728-005/**"
+  - "research_control/tasks/RT-20260729-001/**"
+  - "research_control/tasks/RT-20260729-003/**"
+  - "research_control/tasks/RT-20260729-005/**"
+  - "research_control/tasks/RT-20260729-006/**"
+  - "research_control/tasks/RT-20260729-007/**"
+  - "research_control/tasks/RT-20260729-008/**"
+  - "research_control/tasks/RT-20260729-009/**"
+  - "research_control/tasks/RT-20260729-011/**"
+  - "ontology/tex/aether_flow_dynamics.tex"
+  - "ontology/tex/aether_flow_relativistic_recovery.tex"
+  - "ontology/tex/aether_flow_consistency.tex"
+  - "registries/**"
+
+allowed_write_paths:
+  - "research_control/tasks/RT-20260729-012/**"
+  - "research_control/handoffs/handoff-0908.yaml"
+  - "research_control/handoffs/handoff-0908.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/PDF_DERIVATIVE_REGISTRY.csv"
+  - "registries/PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "registries/TEX_SOURCE_REGISTRY.csv"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/tex/**"
+
+allowed_generated_paths:
+  - ".local/**"
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/tex/**"
+
+forbidden_paths:
+  - "ontology/**"
+  - "manuscripts/**"
+  - "html/**"
+  - "implementations_plans/**"
+  - ".agents/roles/**"
+  - "research_control/tasks/RT-20260726-001/**"
+  - "research_control/tasks/RT-20260727-004/**"
+  - "research_control/tasks/RT-20260728-002/**"
+  - "research_control/tasks/RT-20260728-003/**"
+  - "research_control/tasks/RT-20260728-005/**"
+  - "research_control/tasks/RT-20260729-001/**"
+  - "research_control/tasks/RT-20260729-003/**"
+  - "research_control/tasks/RT-20260729-005/**"
+  - "research_control/tasks/RT-20260729-006/**"
+  - "research_control/tasks/RT-20260729-007/**"
+  - "research_control/tasks/RT-20260729-008/**"
+  - "research_control/tasks/RT-20260729-009/**"
+  - "research_control/tasks/RT-20260729-011/**"
+
+allowed_source_classes:
+  - "science_draft_read_only"
+  - "scientific_gate_read_only"
+  - "canonical_ontology_target_reference_read_only"
+  - "project_control"
+  - "registry"
+  - "role_contract"
+  - "generated_memory_derivative"
+
+forbidden_source_classes:
+  - "canonical_ontology_write"
+  - "target_benchmark_as_source_premise"
+  - "target_atlas_or_metric_as_source_premise"
+  - "target_solution_as_source_premise"
+  - "Einstein_Hilbert_action_as_source_premise"
+  - "Einstein_equations_as_source_premise"
+  - "benchmark_success_as_source_premise"
+  - "candidate_reconstruction"
+  - "gate_chair_verdict"
+  - "generated_derivative_authority"
+  - "physics_claim_promotion"
+  - "source_law_adoption"
+  - "M_src_adoption"
+  - "effective_geometry_or_metric_construction"
+  - "Einstein_equations"
+  - "exact_GR_recovery"
+  - "benchmark_execution"
+  - "benchmark_promotion"
+  - "completed_derivation_claim"
+  - "global_theory_rejection"
+  - "global_no_go_or_future_extension_impossibility"
+  - "publication_or_push"
+
+approved_commands:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v21.md --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"benchmark protocol target import firewall\" --limit 10 --json"
+  - ".venv/bin/python research_control/tasks/RT-20260729-012/artifacts/validate_source_derived_benchmark_protocol.py --write-report --json"
+  - ".venv/bin/python research_control/tasks/RT-20260729-012/artifacts/validate_source_derived_benchmark_protocol.py --check --json"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --check"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --check"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --write"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --check"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --json output/research_dependency_graph.json --markdown wiki/indexes/research_dependency_graph.md --dot output/research_dependency_graph.dot"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --check"
+  - ".venv/bin/python scripts/research_control/generate_claim_graph_v1.py --json output/claim_graph_v1.json"
+  - ".venv/bin/python scripts/research_control/validate_claim_graph_v1.py --graph output/claim_graph_v1.json --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --json-summary"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --json-summary"
+  - ".venv/bin/python scripts/research_control/report_physics_progress_metrics.py"
+  - ".venv/bin/python scripts/research_control/run_full_research_control_validation.py --json --tail-chars 2500"
+  - "git diff --check"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260729-012-001"
+
+required_validators:
+  - "memory_preflight"
+  - "p9_t01_benchmark_protocol_local_validator"
+  - "parent_child_synthesis"
+  - "source_hash_and_authority"
+  - "provenance_reachability_firewall"
+  - "claim_language"
+  - "documentation_impact"
+  - "project_improvement_signal_parity"
+  - "research_control_validation"
+  - "memory_bootstrap"
+  - "memory_validate_only"
+  - "renderers"
+  - "graph_freshness"
+  - "git_diff_check"
+  - "checkpoint_research_transaction"
+
+expected_outputs:
+  - "research_control/tasks/RT-20260729-012/**"
+  - "research_control/tasks/RT-20260729-012/artifacts/source_derived_benchmark_protocol_v1.tex"
+  - "research_control/tasks/RT-20260729-012/artifacts/source_derived_benchmark_case_schema_v1.yaml"
+  - "research_control/tasks/RT-20260729-012/artifacts/target_import_firewall_v1.yaml"
+  - "research_control/tasks/RT-20260729-012/artifacts/gate_e_readiness_checklist_v1.yaml"
+  - "research_control/tasks/RT-20260729-012/artifacts/source_derived_benchmark_protocol_compact_receipt_v1.json"
+  - "research_control/tasks/RT-20260729-012/artifacts/source_derived_benchmark_protocol_validation_v1.json"
+  - "research_control/tasks/RT-20260729-012/artifacts/validate_source_derived_benchmark_protocol.py"
+  - "research_control/tasks/RT-20260729-012/artifacts/child_phys_math_p9_t01_benchmark_protocol.yaml"
+  - "research_control/tasks/RT-20260729-012/artifacts/child_phys_phil_p9_t01_benchmark_protocol.yaml"
+  - "research_control/tasks/RT-20260729-012/artifacts/parent_conflict_review_p9_t01_benchmark_protocol.yaml"
+  - "research_control/tasks/RT-20260729-012/artifacts/parent_fusion_notes_p9_t01_benchmark_protocol.md"
+  - "research_control/handoffs/handoff-0908.yaml"
+  - "research_control/handoffs/handoff-0908.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+
+claim_boundary: "CB-V21-P9-T01-SOURCE-DERIVED-BENCHMARK-PROTOCOL-001"
+documentation_impact_id: "DI-RT-20260729-012-001"
+completion_id: "AJC-AJ-RT-20260729-012-001"
+
+checkpoint_outcome:
+  required: true
+  attempted: false
+  committed: false
+  commit_sha: ""
+  push_authorized: false
+  push_performed: false
+
+stop_conditions:
+  - "Stop if any fixed P5 through P8 source hash differs."
+  - "Stop if a target atlas, metric, solution, action, equation, desired residual, or benchmark success reaches source computation."
+  - "Stop if the target oracle is opened before source outputs and provenance hashes are sealed."
+  - "Stop if a case lacks typed source inputs, derived intermediates, approximation order, residual corrections, success and failure criteria, or independent-reproduction requirements."
+  - "Stop if a numerical tolerance is missing, target-tuned, or used as a source-side selection rule."
+  - "Stop if protocol correctness is presented as physical benchmark recovery."
+  - "Stop if Gate D NOT READY is repaired or reversed."
+  - "Stop if current non-derivation is promoted to a global no-go or future-extension impossibility."
+  - "Stop if parent-child conflict review has any unresolved conflict."
+  - "Stop on the first governed checkpoint failure; do not retry in this AgentJob."

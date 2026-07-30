@@ -1,0 +1,439 @@
+{
+  "case_template_count": 6,
+  "check_count": 84,
+  "checks": [
+    {
+      "check_id": "exists:source_derived_benchmark_protocol_v1.tex",
+      "detail": "research_control/tasks/RT-20260729-012/artifacts/source_derived_benchmark_protocol_v1.tex",
+      "status": "PASS"
+    },
+    {
+      "check_id": "exists:source_derived_benchmark_case_schema_v1.yaml",
+      "detail": "research_control/tasks/RT-20260729-012/artifacts/source_derived_benchmark_case_schema_v1.yaml",
+      "status": "PASS"
+    },
+    {
+      "check_id": "exists:target_import_firewall_v1.yaml",
+      "detail": "research_control/tasks/RT-20260729-012/artifacts/target_import_firewall_v1.yaml",
+      "status": "PASS"
+    },
+    {
+      "check_id": "exists:gate_e_readiness_checklist_v1.yaml",
+      "detail": "research_control/tasks/RT-20260729-012/artifacts/gate_e_readiness_checklist_v1.yaml",
+      "status": "PASS"
+    },
+    {
+      "check_id": "exists:child_phys_math_p9_t01_benchmark_protocol.yaml",
+      "detail": "research_control/tasks/RT-20260729-012/artifacts/child_phys_math_p9_t01_benchmark_protocol.yaml",
+      "status": "PASS"
+    },
+    {
+      "check_id": "exists:child_phys_phil_p9_t01_benchmark_protocol.yaml",
+      "detail": "research_control/tasks/RT-20260729-012/artifacts/child_phys_phil_p9_t01_benchmark_protocol.yaml",
+      "status": "PASS"
+    },
+    {
+      "check_id": "exists:parent_conflict_review_p9_t01_benchmark_protocol.yaml",
+      "detail": "research_control/tasks/RT-20260729-012/artifacts/parent_conflict_review_p9_t01_benchmark_protocol.yaml",
+      "status": "PASS"
+    },
+    {
+      "check_id": "exists:parent_fusion_notes_p9_t01_benchmark_protocol.md",
+      "detail": "research_control/tasks/RT-20260729-012/artifacts/parent_fusion_notes_p9_t01_benchmark_protocol.md",
+      "status": "PASS"
+    },
+    {
+      "check_id": "exists:source_derived_benchmark_protocol_compact_receipt_v1.json",
+      "detail": "research_control/tasks/RT-20260729-012/artifacts/source_derived_benchmark_protocol_compact_receipt_v1.json",
+      "status": "PASS"
+    },
+    {
+      "check_id": "structured_artifact_load",
+      "detail": "Six YAML artifacts and one JSON receipt parsed.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "declared_required_case_fields",
+      "detail": "analytic_equivalence,approximation_order,benchmark_scope,case_id,code_hash_manifest,derived_intermediate_objects,downstream_plan_task_id,execution_status,failure_criteria,imported_assumptions,inconclusive_criteria,independent_reproduction,model_to_world_map,numerical_tolerance,provenance_dag,residual_corrections,source_hash_manifest,source_inputs,source_output_seal,success_criteria,target_exposure_ledger,target_observable",
+      "status": "PASS"
+    },
+    {
+      "check_id": "case_count",
+      "detail": "6",
+      "status": "PASS"
+    },
+    {
+      "check_id": "case_identity_set",
+      "detail": "P9-BENCH-CAUSAL-FREEFALL-V1,P9-BENCH-FLRW-COSMOLOGY-V1,P9-BENCH-NONLINEAR-COMPACT-SOURCE-V1,P9-BENCH-RADIATIVE-SECTOR-V1,P9-BENCH-VACUUM-MINKOWSKI-V1,P9-BENCH-WEAK-FIELD-CLOCK-V1",
+      "status": "PASS"
+    },
+    {
+      "check_id": "case_plan_mapping",
+      "detail": "{\"P9-BENCH-CAUSAL-FREEFALL-V1\": \"P9-T04\", \"P9-BENCH-FLRW-COSMOLOGY-V1\": \"P9-T05\", \"P9-BENCH-NONLINEAR-COMPACT-SOURCE-V1\": \"P9-T07\", \"P9-BENCH-RADIATIVE-SECTOR-V1\": \"P9-T06\", \"P9-BENCH-VACUUM-MINKOWSKI-V1\": \"P9-T02\", \"P9-BENCH-WEAK-FIELD-CLOCK-V1\": \"P9-T03\"}",
+      "status": "PASS"
+    },
+    {
+      "check_id": "case_field_completeness",
+      "detail": "{\"P9-BENCH-CAUSAL-FREEFALL-V1\": [], \"P9-BENCH-FLRW-COSMOLOGY-V1\": [], \"P9-BENCH-NONLINEAR-COMPACT-SOURCE-V1\": [], \"P9-BENCH-RADIATIVE-SECTOR-V1\": [], \"P9-BENCH-VACUUM-MINKOWSKI-V1\": [], \"P9-BENCH-WEAK-FIELD-CLOCK-V1\": []}",
+      "status": "PASS"
+    },
+    {
+      "check_id": "all_cases_not_run",
+      "detail": "NOT_RUN,NOT_RUN,NOT_RUN,NOT_RUN,NOT_RUN,NOT_RUN",
+      "status": "PASS"
+    },
+    {
+      "check_id": "all_cases_have_source_inputs",
+      "detail": "6",
+      "status": "PASS"
+    },
+    {
+      "check_id": "all_cases_have_intermediates",
+      "detail": "6",
+      "status": "PASS"
+    },
+    {
+      "check_id": "no_imported_target_assumptions",
+      "detail": "{\"P9-BENCH-CAUSAL-FREEFALL-V1\": [], \"P9-BENCH-FLRW-COSMOLOGY-V1\": [], \"P9-BENCH-NONLINEAR-COMPACT-SOURCE-V1\": [], \"P9-BENCH-RADIATIVE-SECTOR-V1\": [], \"P9-BENCH-VACUUM-MINKOWSKI-V1\": [], \"P9-BENCH-WEAK-FIELD-CLOCK-V1\": []}",
+      "status": "PASS"
+    },
+    {
+      "check_id": "success_failure_inconclusive_present",
+      "detail": "All six cases carry three nonblank outcome criteria.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "lawful_program_defined",
+      "detail": "True",
+      "status": "PASS"
+    },
+    {
+      "check_id": "next_plan_task",
+      "detail": "P9-T02",
+      "status": "PASS"
+    },
+    {
+      "check_id": "next_role",
+      "detail": "candidate-constructor@0.2.0",
+      "status": "PASS"
+    },
+    {
+      "check_id": "no_physical_recovery",
+      "detail": "False",
+      "status": "PASS"
+    },
+    {
+      "check_id": "forbidden_root_classes",
+      "detail": "Einstein_Hilbert_action,Einstein_equations,benchmark_success_label,observed_target_residual_or_desired_agreement,target_atlas,target_boundary_or_initial_data,target_contaminated_code_lookup_table_training_data_prior_or_cache,target_metric,target_selected_branch_basis_or_gauge,target_solution,target_tuned_parameter_calibration_or_regularization,validator_registry_checkpoint_role_or_handoff_status,wiki_pdf_memory_index_or_local_cache_as_scientific_authority",
+      "status": "PASS"
+    },
+    {
+      "check_id": "firewall_fail_closed",
+      "detail": "fail_closed",
+      "status": "PASS"
+    },
+    {
+      "check_id": "provenance_dag_required",
+      "detail": "{\"acyclicity_required\": true, \"complete_edge_manifest_required\": true, \"edge_semantics\": \"u_to_v means the value or selection of v depends on u\", \"graph_kind\": \"finite_directed_acyclic_graph\", \"node_classes\": {\"admissible_roots\": [\"fixed_source_datum\", \"disclosed_proposal_only_source_extension\", \"independent_calibration_not_selected_by_target_fit\", \"hashed_code_algorithm_environment_and_randomness_policy\"], \"comparison_stage\": [\"target_observable\", \"comparison_residual\", \"outcome_classifier\"], \"seal\": [\"immutable_source_manifest\", \"preregistered_comparison_rule\"], \"source_stage\": [\"source_input\", \"source_parameter\", \"source_initial_or_boundary_datum\", \"source_branch_or_stopping_rule\", \"source_intermediate\", \"source_output\", \"source_uncertainty_and_correction\"], \"target_roots\": [\"read_only_target_reference\", \"external_observational_reference\"]}, \"required_partition_disjointness\": true, \"undeclared_side_channel_disposition\": \"FAIL_FIREWALL\"}",
+      "status": "PASS"
+    },
+    {
+      "check_id": "complete_edges_required",
+      "detail": "True",
+      "status": "PASS"
+    },
+    {
+      "check_id": "target_oracle_closed_during_source",
+      "detail": "False",
+      "status": "PASS"
+    },
+    {
+      "check_id": "oracle_requires_seal",
+      "detail": "seal verifies byte-for-byte",
+      "status": "PASS"
+    },
+    {
+      "check_id": "post_seal_source_immutable",
+      "detail": "False",
+      "status": "PASS"
+    },
+    {
+      "check_id": "theorem_identity",
+      "detail": "TargetImportFirewallSoundness_v1",
+      "status": "PASS"
+    },
+    {
+      "check_id": "theorem_hypothesis_count",
+      "detail": "6",
+      "status": "PASS"
+    },
+    {
+      "check_id": "theorem_proof_method",
+      "detail": "topological induction over source-stage nodes followed by seal immutability",
+      "status": "PASS"
+    },
+    {
+      "check_id": "theorem_limitations",
+      "detail": "5",
+      "status": "PASS"
+    },
+    {
+      "check_id": "minimal_counterexample_rejected",
+      "detail": "FAIL_FIREWALL",
+      "status": "PASS"
+    },
+    {
+      "check_id": "post_hoc_tolerance_rejected",
+      "detail": "FAIL_FIREWALL",
+      "status": "PASS"
+    },
+    {
+      "check_id": "same_context_not_independent",
+      "detail": "False",
+      "status": "PASS"
+    },
+    {
+      "check_id": "independent_method_required",
+      "detail": "True",
+      "status": "PASS"
+    },
+    {
+      "check_id": "suite_parameter_freeze",
+      "detail": "True",
+      "status": "PASS"
+    },
+    {
+      "check_id": "target_exposure_ledger",
+      "detail": "True",
+      "status": "PASS"
+    },
+    {
+      "check_id": "model_to_world_required",
+      "detail": "True",
+      "status": "PASS"
+    },
+    {
+      "check_id": "gate_e_not_ready",
+      "detail": "NOT_READY_NO_BENCHMARK_CASE_EXECUTED",
+      "status": "PASS"
+    },
+    {
+      "check_id": "gate_e_criterion_count",
+      "detail": "10",
+      "status": "PASS"
+    },
+    {
+      "check_id": "gate_e_protocol_pass_count",
+      "detail": "2",
+      "status": "PASS"
+    },
+    {
+      "check_id": "gate_e_deferred_count",
+      "detail": "1",
+      "status": "PASS"
+    },
+    {
+      "check_id": "gate_e_no_verdict",
+      "detail": "False",
+      "status": "PASS"
+    },
+    {
+      "check_id": "gate_d_unchanged",
+      "detail": "False",
+      "status": "PASS"
+    },
+    {
+      "check_id": "math_child_complete",
+      "detail": "completed",
+      "status": "PASS"
+    },
+    {
+      "check_id": "phil_child_complete",
+      "detail": "completed",
+      "status": "PASS"
+    },
+    {
+      "check_id": "parent_conflicts_resolved",
+      "detail": "[]",
+      "status": "PASS"
+    },
+    {
+      "check_id": "one_outer_agentjob",
+      "detail": "1",
+      "status": "PASS"
+    },
+    {
+      "check_id": "no_child_agentjobs",
+      "detail": "0",
+      "status": "PASS"
+    },
+    {
+      "check_id": "two_internal_subagents",
+      "detail": "2",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex_theorem_present",
+      "detail": "TargetImportFirewallSoundness_v1",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex_proof_present",
+      "detail": "Proof uses topological ordering.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex_post_seal_boundary",
+      "detail": "Post-seal target oracle boundary.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex_protocol_not_recovery",
+      "detail": "Protocol and recovery are separated.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "fusion_preserves_gate_d",
+      "detail": "Fusion preserves Gate D NOT READY.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "receipt_status",
+      "detail": "PASS_PROTOCOL_DEFINED_NO_CASE_EXECUTED",
+      "status": "PASS"
+    },
+    {
+      "check_id": "receipt_case_count",
+      "detail": "6",
+      "status": "PASS"
+    },
+    {
+      "check_id": "receipt_execution_count",
+      "detail": "0",
+      "status": "PASS"
+    },
+    {
+      "check_id": "receipt_pass_count",
+      "detail": "0",
+      "status": "PASS"
+    },
+    {
+      "check_id": "receipt_validator_id",
+      "detail": "[\"p9_t01_benchmark_protocol_local_validator\", \"provenance_reachability_firewall\", \"source_hash_and_authority\", \"parent_child_synthesis\"]",
+      "status": "PASS"
+    },
+    {
+      "check_id": "authority_flags_false:SourceDerivedBenchmarkCaseSchema_v1",
+      "detail": "Gate_D_reversed,Gate_E_verdict_issued,benchmark_case_executed,benchmark_result_established,canonical_ontology_modified,exact_GR_recovery_proved,future_source_extension_impossibility_claimed,global_no_go_claimed,physics_promotion_authorized,proof_authority,publication_authorized,push_authorized,source_law_adopted_or_rejected",
+      "status": "PASS"
+    },
+    {
+      "check_id": "authority_flags_false:TargetImportFirewall_v1",
+      "detail": "Gate_D_reversed,Gate_E_verdict_issued,benchmark_case_executed,benchmark_promotion_authorized,benchmark_result_established,canonical_ontology_modified,exact_GR_recovery_proved,future_source_extension_impossibility_claimed,global_no_go_claimed,physics_promotion_authorized,proof_authority,publication_authorized,push_authorized,source_law_adopted_or_rejected",
+      "status": "PASS"
+    },
+    {
+      "check_id": "authority_flags_false:GateEReadinessChecklist_v1",
+      "detail": "Gate_D_reversed,benchmark_promotion_authorized,benchmark_result_established,exact_GR_recovery_proved,future_source_extension_impossibility_claimed,global_no_go_claimed,physics_promotion_authorized,proof_authority,publication_authorized,push_authorized",
+      "status": "PASS"
+    },
+    {
+      "check_id": "source_hash:implementations_plans/recommendations_implementation_plan_continue_task-v21.md",
+      "detail": "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087",
+      "status": "PASS"
+    },
+    {
+      "check_id": "source_hash:research_control/handoffs/handoff-0907.yaml",
+      "detail": "d4229819dd85f4ae8b290c15dc408b036d2bf2644f2fd691b5ebea26c6f8c835",
+      "status": "PASS"
+    },
+    {
+      "check_id": "source_hash:research_control/tasks/RT-20260726-001/artifacts/source_dynamics_milestone_synthesis_v1.tex",
+      "detail": "a2b9c6670cdb0e09ca2e19ff30f71d9bb954e3ab2fc73a5c9727a2df10db93aa",
+      "status": "PASS"
+    },
+    {
+      "check_id": "source_hash:research_control/tasks/RT-20260726-001/artifacts/p6_geometry_input_contract_v1.yaml",
+      "detail": "7b0eee4ea249a3acf99d38d312bd14619dedea79977d7b802062e9410f5b8557",
+      "status": "PASS"
+    },
+    {
+      "check_id": "source_hash:research_control/tasks/RT-20260727-004/artifacts/p6_t08_gate_b_separating_certificate_v1.yaml",
+      "detail": "f3080ed6a6ba1d6847a3b7ed43c7a11ad7f7dae4deccd25486913ea9547f221b",
+      "status": "PASS"
+    },
+    {
+      "check_id": "source_hash:research_control/tasks/RT-20260728-002/artifacts/source_operational_device_suite_spec_v1.yaml",
+      "detail": "417c604bad008b85b153718ae04aa43307c2ff3cfa3a5c3f242e70b013c86ba4",
+      "status": "PASS"
+    },
+    {
+      "check_id": "source_hash:research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_spec_v1.yaml",
+      "detail": "91422c4db2b3166da6cab9391ff3f1109d43a683d9624f8086e23d7d8ddf7001",
+      "status": "PASS"
+    },
+    {
+      "check_id": "source_hash:research_control/tasks/RT-20260728-005/artifacts/source_kernel_variational_object_candidate_v1.tex",
+      "detail": "386769e40167c35604625ef7250c027dc1712c82db4790e2895e0b31ac3cfbf7",
+      "status": "PASS"
+    },
+    {
+      "check_id": "source_hash:research_control/tasks/RT-20260729-005/artifacts/local_effective_action_assumption_envelope_v1.yaml",
+      "detail": "da939b16a0cb4da082068ab9954d11c4c7a7a658e746c50295dc20347fc82a65",
+      "status": "PASS"
+    },
+    {
+      "check_id": "source_hash:research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_constraint_spec_v1.yaml",
+      "detail": "8840b205e8aa12d73f3e782ec6936eb96385bb5694c298b1bf41a2bdfe472626",
+      "status": "PASS"
+    },
+    {
+      "check_id": "source_hash:research_control/tasks/RT-20260729-007/artifacts/finite_source_field_equation_identity_spec_v1.yaml",
+      "detail": "d37fdff6d320751d0174459c3d10bec75aa04be62c72c368480f1cafdb46e5f8",
+      "status": "PASS"
+    },
+    {
+      "check_id": "source_hash:research_control/tasks/RT-20260729-008/artifacts/finite_constraint_stability_phase_diagram_v1.yaml",
+      "detail": "59ac3d8baf948f2def63df6052b066fdce876cc48223652a8b64845334286473",
+      "status": "PASS"
+    },
+    {
+      "check_id": "source_hash:research_control/tasks/RT-20260729-009/artifacts/blind_mathematical_review_status_v1.yaml",
+      "detail": "31df9d0532a29dc3a716d2c3e5059839f258e5346952efb96d9fe676029e13f0",
+      "status": "PASS"
+    },
+    {
+      "check_id": "source_hash:research_control/tasks/RT-20260729-011/artifacts/p8_t07_gate_d_verdict_matrix_v1.yaml",
+      "detail": "89e484d18aca681a9f79484331a38ee9b98478e5169af4bb9de2762c71e473a4",
+      "status": "PASS"
+    },
+    {
+      "check_id": "source_hash:ontology/tex/aether_flow_dynamics.tex",
+      "detail": "fd6e579e71ef7f2ac4c9668ceede051ad57033ee52357b2552a9e3a5a53939c7",
+      "status": "PASS"
+    },
+    {
+      "check_id": "source_hash:ontology/tex/aether_flow_relativistic_recovery.tex",
+      "detail": "77d5c2db56f122870343834f853bf2f375a912116a347d7c5710405c8707d69c",
+      "status": "PASS"
+    },
+    {
+      "check_id": "source_hash:ontology/tex/aether_flow_consistency.tex",
+      "detail": "d965519639ee8764a5c5a63798d15e8a9a380d7e208dffc43a0be02b6f245ba1",
+      "status": "PASS"
+    }
+  ],
+  "distance_to_gr_changed": false,
+  "executed_case_count": 0,
+  "failure_count": 0,
+  "firewall_id": "TargetImportFirewall_v1",
+  "next_plan_task_id": "P9-T02",
+  "passed_case_count": 0,
+  "physics_promotion_authorized": false,
+  "plan_task_id": "P9-T01",
+  "protocol_id": "SourceDerivedBenchmarkProtocol_v1",
+  "schema_id": "source_derived_benchmark_protocol_validation_v1",
+  "status": "PASS",
+  "task_id": "RT-20260729-012",
+  "theorem_id": "TargetImportFirewallSoundness_v1"
+}

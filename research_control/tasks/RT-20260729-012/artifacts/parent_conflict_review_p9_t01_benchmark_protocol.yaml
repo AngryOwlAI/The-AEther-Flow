@@ -1,0 +1,111 @@
+schema_id: "parent_conflict_review_v1"
+artifact_id: "ParentConflictReviewP9T01BenchmarkProtocol_v1"
+task_id: "RT-20260729-012"
+job_id: "AJ-RT-20260729-012-001"
+plan_task_id: "P9-T01"
+status: "resolved"
+resolution_rounds: 1
+max_resolution_rounds: 2
+reviewed_children:
+  - execution_unit_id: "child_phys_math"
+    perspective: "physicist_mathematician"
+    path: "research_control/tasks/RT-20260729-012/artifacts/child_phys_math_p9_t01_benchmark_protocol.yaml"
+    sha256: "fd9e2a5f7836c20d94847cfc1b177d15691213fea92cfddc148c28fe0c204cab"
+    status: "completed"
+  - execution_unit_id: "child_phys_phil"
+    perspective: "physicist_philosopher"
+    path: "research_control/tasks/RT-20260729-012/artifacts/child_phys_phil_p9_t01_benchmark_protocol.yaml"
+    sha256: "96dca88853f91a45ca6ee2da1cded2c9dfeffda9541dc523792211afdb473808"
+    status: "completed"
+
+shared_consensus:
+  - "The benchmark must use a complete typed provenance DAG and a binding source-output seal."
+  - "The target oracle is comparison-only and opens after the source output, tolerances, corrections, and comparison rules are sealed."
+  - "Target atlas, metric, solution, Einstein-Hilbert action, Einstein equations, target-tuned parameters, and benchmark success are forbidden source ancestors."
+  - "TargetImportFirewallSoundness_v1 proves conditional protocol-level non-circularity, not physical recovery."
+  - "Analytic equivalence and numerical tolerance are distinct and must be preregistered."
+  - "Independent reproduction requires a fresh environment, no shared intermediates, and independent code or method provenance."
+  - "All six P9-T02 through P9-T07 cases remain NOT_RUN."
+  - "Gate D remains NOT READY and Gate E remains unopened."
+
+conflicts:
+  - conflict_id: "PCR-P9T01-001"
+    topic: "theorem_hypothesis_granularity"
+    child_phys_math_position: "Use eight separately named hypotheses including graph completeness root classification preregistration post-seal oracle and revision immutability."
+    child_phys_phil_position: "Treat computational non-reachability as conditional and separately expose cognitive target knowledge and undocumented dependencies."
+    resolution: "The fused theorem uses six consolidated mathematical hypotheses and separately records completeness truthful classification implementation side channels and cognitive exposure as limitations and ledger obligations."
+    status: "resolved"
+  - conflict_id: "PCR-P9T01-002"
+    topic: "outcome_vocabulary"
+    child_phys_math_position: "Use a detailed lattice of PASS FAIL INCONCLUSIVE INVALID and NOT_RUN outcomes."
+    child_phys_phil_position: "Keep protocol rejection benchmark failure conditional proposal-only behavior formal analogy and physical inconclusiveness distinct."
+    resolution: "The machine contract retains fail-closed PASS FAIL INCONCLUSIVE and NOT_RUN branches and adds CONDITIONAL and FORMAL_ANALOGY semantic classifications; no branch may be collapsed into pass."
+    status: "resolved"
+  - conflict_id: "PCR-P9T01-003"
+    topic: "independent_reproduction"
+    child_phys_math_position: "Require fresh executor environment exact hashes no shared intermediates and an independent seal."
+    child_phys_phil_position: "A rerun of identical code is insufficient; code or method provenance must itself be independently established."
+    resolution: "The fused contract requires both sets: fresh execution control and independent code or method provenance with no shared intermediates."
+    status: "resolved"
+  - conflict_id: "PCR-P9T01-004"
+    topic: "target_exposure_and_calibration"
+    child_phys_math_position: "Post-seal oracle isolation and immutable revisions block target feedback inside a case."
+    child_phys_phil_position: "Known target families cognitive exposure calibration/test double use and cross-case retuning require suite-wide controls beyond the DAG."
+    resolution: "The fused protocol adds a target-exposure ledger a calibration-validation-holdout partition suite-wide parameter freezing and a rule that oracle-informed reruns become new nonblind revisions."
+    status: "resolved"
+  - conflict_id: "PCR-P9T01-005"
+    topic: "physical_operational_semantics"
+    child_phys_math_position: "Case schemas can type operational outputs and comparisons."
+    child_phys_phil_position: "P7 operational tokens remain formal and need an explicit model-to-world map before any physical comparison."
+    resolution: "Every case now requires a model_to_world_map field; its absence yields FORMAL_ANALOGY or INCONCLUSIVE rather than a physical pass."
+    status: "resolved"
+  - conflict_id: "PCR-P9T01-006"
+    topic: "case_identifiers"
+    child_phys_math_position: "Use SRC-BENCH-P9T02 through SRC-BENCH-P9T07 identifiers."
+    child_phys_phil_position: "Audit by plan task and semantic case name."
+    resolution: "The fused schema uses stable P9-BENCH semantic identifiers with exact one-to-one downstream plan-task mappings; identifier spelling has no scientific effect."
+    status: "resolved"
+
+resolved_conflict_count: 6
+unresolved_conflicts: []
+
+fusion_result:
+  outer_agentjob_count: 1
+  child_agentjob_count: 0
+  child_subagent_count: 2
+  child_outputs_preserved: true
+  shared_consensus_preserved: true
+  unique_phys_math_contributions_preserved:
+    - "typed provenance-DAG reachability theorem"
+    - "binding source seal and post-seal target oracle"
+    - "analytic versus numerical comparison contract"
+    - "target-contaminated code reclassification"
+    - "six downstream case contracts"
+  unique_phys_phil_contributions_preserved:
+    - "source model source extension calibration and target-exposure distinctions"
+    - "model-to-world map requirement for physical semantics"
+    - "suite-wide calibration holdout and no-retuning rules"
+    - "conditional and formal-analogy outcome classifications"
+    - "independent code or method provenance"
+  fused_output_path: "research_control/tasks/RT-20260729-012/artifacts/source_derived_benchmark_protocol_v1.tex"
+  fusion_notes_path: "research_control/tasks/RT-20260729-012/artifacts/parent_fusion_notes_p9_t01_benchmark_protocol.md"
+  claim_boundary_preserved: true
+  Gate_D_status_preserved: "NOT_READY_EINSTEIN_SECTOR_DERIVATION_REQUIREMENTS_UNMET"
+  benchmark_case_execution_count: 0
+  benchmark_result_established: false
+  physics_promotion_authorized: false
+
+authority_limits:
+  child_outputs_create_independent_replication: false
+  protocol_correctness_creates_physical_recovery: false
+  canonical_ontology_modified: false
+  source_law_adopted_or_rejected: false
+  benchmark_case_executed: false
+  benchmark_result_established: false
+  Gate_D_reversed: false
+  Gate_E_verdict_issued: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false

@@ -1,0 +1,49 @@
+{
+  "artifact_id": "SourceDerivedBenchmarkProtocolCompactReceipt_v1",
+  "authority_limits": {
+    "benchmark_case_executed": false,
+    "benchmark_promotion_authorized": false,
+    "benchmark_result_established": false,
+    "canonical_ontology_modified": false,
+    "exact_GR_recovery_proved": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false
+  },
+  "claim_boundary_summary": "P9-T01 defines a draft/control benchmark protocol, typed case templates, a fail-closed target-import firewall, a protocol-soundness theorem, and a Gate E readiness checklist. It executes no case, changes no physical status, preserves Gate D NOT READY, and authorizes no recovery or promotion.",
+  "finding_counts": {
+    "case_template_count": 6,
+    "executed_case_count": 0,
+    "forbidden_upstream_root_count": 13,
+    "gate_e_deferred_count": 1,
+    "gate_e_fail_or_not_established_count": 7,
+    "gate_e_protocol_pass_count": 2,
+    "passed_case_count": 0,
+    "source_basis_count": 12,
+    "target_reference_count": 3
+  },
+  "firewall_id": "TargetImportFirewall_v1",
+  "job_id": "AJ-RT-20260729-012-001",
+  "next_plan_task_id": "P9-T02",
+  "plan_task_id": "P9-T01",
+  "protocol_id": "SourceDerivedBenchmarkProtocol_v1",
+  "schema_id": "source_derived_benchmark_protocol_compact_receipt_v1",
+  "source_hashes": {
+    "P5SourceDynamicsMilestoneSynthesis_v1": "a2b9c6670cdb0e09ca2e19ff30f71d9bb954e3ab2fc73a5c9727a2df10db93aa",
+    "P6GeometryInputContract_v1": "7b0eee4ea249a3acf99d38d312bd14619dedea79977d7b802062e9410f5b8557",
+    "P6T08GateBSeparatingCertificate_v1": "f3080ed6a6ba1d6847a3b7ed43c7a11ad7f7dae4deccd25486913ea9547f221b",
+    "P8T07GateDVerdictMatrix_v1": "89e484d18aca681a9f79484331a38ee9b98478e5169af4bb9de2762c71e473a4",
+    "SourceOperationalDeviceSuiteCandidate_v1": "417c604bad008b85b153718ae04aa43307c2ff3cfa3a5c3f242e70b013c86ba4",
+    "aether_flow_consistency": "d965519639ee8764a5c5a63798d15e8a9a380d7e208dffc43a0be02b6f245ba1",
+    "aether_flow_dynamics": "fd6e579e71ef7f2ac4c9668ceede051ad57033ee52357b2552a9e3a5a53939c7",
+    "aether_flow_relativistic_recovery": "77d5c2db56f122870343834f853bf2f375a912116a347d7c5710405c8707d69c"
+  },
+  "status": "PASS_PROTOCOL_DEFINED_NO_CASE_EXECUTED",
+  "task_id": "RT-20260729-012",
+  "theorem_id": "TargetImportFirewallSoundness_v1",
+  "validator_ids": [
+    "p9_t01_benchmark_protocol_local_validator",
+    "provenance_reachability_firewall",
+    "source_hash_and_authority",
+    "parent_child_synthesis"
+  ]
+}

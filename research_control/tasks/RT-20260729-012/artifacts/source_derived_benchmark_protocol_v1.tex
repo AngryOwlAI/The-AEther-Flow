@@ -1,0 +1,350 @@
+% authority: science-draft
+% status: draft/control
+% route: benchmark-design-packet
+% result: protocol_defined_no_case_executed
+% physics_promotion_authorized: false
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{xurl}
+\usepackage[hidelinks]{hyperref}
+
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newcommand{\Src}{\mathsf{Src}}
+\newcommand{\Seal}{\mathsf{Seal}}
+\newcommand{\Oracle}{\mathsf{Oracle}}
+\newcommand{\Compare}{\mathsf{Compare}}
+\newcommand{\Reach}{\operatorname{Reach}}
+
+\title{SourceDerivedBenchmarkProtocol\_v1\\
+P9-T01 Source-Only Benchmark Contract and Target-Import Firewall}
+\author{The \AE ther-Flow Research Project}
+\date{2026-07-30}
+
+\begin{document}
+\sloppy
+\maketitle
+
+\section{Status and exact question}
+
+This artifact is \texttt{draft/control} benchmark-protocol data.  It defines
+how later source-derived recovery cases must be run; it does not run any case.
+The P8-T07 protected decision remains
+\texttt{NOT\_READY\_EINSTEIN\_SECTOR\_DERIVATION\_REQUIREMENTS\_UNMET}.
+No benchmark result, Gate E verdict, exact-GR recovery, or physics promotion is
+created here.
+
+The exact P9-T01 question is:
+\begin{quote}
+How can a benchmark compare a source-derived output with an adopted GR target
+without letting the target atlas, metric, solution, action, equations,
+boundary data, tuning information, or desired agreement create the source
+output being tested?
+\end{quote}
+
+The answer is a two-stage contract: a source computation is executed and
+cryptographically sealed first; only then is a read-only target oracle opened
+for comparison.  A provenance graph makes every upstream dependency auditable.
+
+\section{Typed benchmark record}
+
+\begin{definition}[Benchmark case]
+A benchmark case is the tuple
+\[
+ \mathfrak B =
+ (I_{\rm src},I_{\rm ext},C,A,X,O_{\rm src},
+  \Seal,\Oracle,O_{\rm tgt},E,\tau,R,\mathcal F).
+\]
+The fields have the following types.
+\begin{longtable}{p{0.18\linewidth}p{0.74\linewidth}}
+\toprule
+Field & Required meaning\\
+\midrule
+\(I_{\rm src}\) &
+Exact source-derived inputs, each with authority status, domain, units or
+explicitly dimensionless status, repository path, and SHA-256.\\
+\(I_{\rm ext}\) &
+Explicit proposal-only source extensions or independent calibrations.  Each
+must disclose that it is not derived from current ontology and must be chosen
+without target tuning.\\
+\(C\) &
+Exact code and algorithm manifest, including executable version, environment,
+randomness policy, and hashes.\\
+\(A\) &
+Declared approximation regime and order, with a source-side validity domain.
+If no controlled regime is available, the case is inconclusive before target
+comparison.\\
+\(X\) &
+Ordered derived-intermediate manifest.  Every intermediate has typed inputs,
+an algorithm or theorem identity, output type, and provenance parents.\\
+\(O_{\rm src}\) &
+The source output and uncertainty or exact-arithmetic record.  Physical
+meaning may be asserted only if a separately established model-to-world map
+supplies it.\\
+\(\mathsf M_{\rm world}\) &
+A typed model-to-world map from source states and formal tokens to physical
+preparations, quantities, units, interventions, measurement records,
+uncertainties, and failure modes.  If absent, a structural comparison remains
+formal or physically inconclusive.\\
+\(\Seal\) &
+An immutable manifest containing hashes of all source roots, code,
+intermediates, outputs, approximations, tolerances, and preregistered
+comparison rules.\\
+\(\Oracle\) &
+A read-only target-reference loader that is unavailable until the seal
+verifies.  Canonical GR sources define comparison targets only.\\
+\(O_{\rm tgt}\) &
+The target observable or equivalence class loaded after sealing.\\
+\(E\) &
+An analytic equivalence relation or a dimensionless residual functional
+defined before source execution.\\
+\(\tau\) &
+A preregistered numerical tolerance with units, error budget, calibration
+basis, and uncertainty rule.  An unset or target-tuned tolerance makes the
+case inconclusive or fail-closed.\\
+\(R\) &
+Declared residual corrections, truncation errors, finite-size effects, and
+their bounds.  Uncontrolled corrections cannot be silently normalized away.\\
+\(\mathcal F\) &
+Outcome classifier with \texttt{PASS}, \texttt{FAIL\_COMPARISON},
+\texttt{FAIL\_FIREWALL}, \texttt{FAIL\_SOURCE},
+\texttt{INCONCLUSIVE}, and \texttt{NOT\_RUN} branches.\\
+\bottomrule
+\end{longtable}
+\end{definition}
+
+\section{Provenance graph and stage separation}
+
+\begin{definition}[Provenance DAG]
+Let \(G=(V,E)\) be a finite directed acyclic graph.  An edge \(u\to v\)
+means that the value or selection of \(v\) depends on \(u\).  Partition the
+vertices into:
+\[
+ V=V_{\rm adm}\sqcup V_{\rm forbidden}\sqcup V_{\rm src}
+   \sqcup\{\Seal\}\sqcup V_{\rm target}\sqcup V_{\rm cmp}.
+\]
+\(V_{\rm adm}\) contains fixed source roots, disclosed proposal-only source
+extensions, independently justified calibration roots, and hashed code.
+\(V_{\rm forbidden}\) contains target atlas, metric, solution,
+Einstein--Hilbert action, Einstein equations, target boundary data, target
+residuals, desired benchmark result, target-tuned parameters, and target-based
+branch or stopping choices.  \(V_{\rm src}\) contains source-stage
+intermediates and outputs.  \(V_{\rm target}\) and \(V_{\rm cmp}\) exist only
+after the seal.
+\end{definition}
+
+The firewall requires
+\[
+ \Reach_G(V_{\rm forbidden})\cap V_{\rm src}=\varnothing ,
+ \qquad
+ \Reach_G(V_{\rm target})\cap
+ (V_{\rm src}\cup\{\Seal\})=\varnothing.
+\]
+Allowed cross-stage edges point only from sealed source output and the seal
+into comparison nodes.  There is no comparison-to-source feedback edge.
+Tolerances, equivalence relations, parameter ranges, stopping rules, and
+failure classifiers are sealed before the target oracle opens.
+
+\begin{theorem}[TargetImportFirewallSoundness\_v1]
+Let \(G\) satisfy the partition and reachability conditions above.  Suppose:
+\begin{enumerate}
+\item every source-stage node is a deterministic function of its parents, or
+      uses randomness whose distribution and seed policy are sealed;
+\item every parent edge is complete, so undeclared side channels are absent;
+\item source outputs and the full source manifest are immutable after
+      \(\Seal\);
+\item the target oracle is unavailable before the seal verifies; and
+\item comparison nodes cannot alter any source-stage value, branch, tolerance,
+      or stopping rule.
+\end{enumerate}
+Then \(O_{\rm src}\) is invariant under arbitrary changes to target-reference
+roots that preserve the source-stage roots.  Consequently, a later agreement
+between \(O_{\rm src}\) and \(O_{\rm tgt}\) cannot be caused by a declared
+upstream target import.
+\end{theorem}
+
+\begin{proof}
+Choose a topological ordering of \(G\).  Every source-stage root lies in
+\(V_{\rm adm}\), and no forbidden or target root reaches a source-stage node.
+Induct along the ordering.  If all parents of a source node are invariant
+under a change of target roots, its deterministic value is invariant; the
+same conclusion holds for a randomized node because its distribution and
+seed policy are fixed by invariant sealed parents.  Thus every source-stage
+node, including \(O_{\rm src}\), is invariant.  Immutability at \(\Seal\)
+prevents later target or comparison nodes from revising that result.  The
+agreement classifier may change when the target changes, but the tested source
+output cannot.  Hence declared target data cannot be the upstream cause of the
+source output or its agreement.
+\end{proof}
+
+This theorem is necessary protocol discipline, not a recovery theorem.  It
+does not prove that the edge manifest is complete in an untrusted
+implementation, that a source-extension premise follows from canonical
+ontology, that an operational token has physical meaning, or that any case
+will agree with GR.  Code, lookup tables, training data, priors, boundary
+records, or calibration objects containing target information must be
+reclassified as forbidden roots even if their filenames say ``source'' or
+``code.''  The theorem also cannot erase target knowledge already held by a
+human designer; every such exposure belongs in a target-exposure ledger and
+limits any claim of blindness.
+
+\begin{proposition}[Minimal rejected counterexample]
+Suppose a target metric or target solution fixes a source boundary value,
+initial condition, free coefficient, branch, tolerance, or stopping rule.
+Then the provenance graph contains a path from a forbidden target root to a
+source-stage node.  The firewall rejects the case before comparison, even if
+the resulting output agrees exactly with the target.
+\end{proposition}
+
+\section{Comparison rules}
+
+\subsection{Analytic equivalence}
+
+When an exact relation is available, a case must preregister the quotient or
+equivalence relation---for example, equality after a declared source-derived
+presentation map.  Analytic equivalence passes only if the independently
+produced source output belongs to the target equivalence class and every
+domain, regularity, unit, gauge, and boundary obligation is satisfied.
+Renaming a source object with a target label is not analytic equivalence.
+
+\subsection{Numerical comparison}
+
+When a numerical comparison is necessary, the default normalized residual is
+\[
+ \rho =
+ \frac{\|O_{\rm src}-O_{\rm tgt}\|_W}
+ {\max(s_{\rm prereg},\|O_{\rm tgt}\|_W,\epsilon_{\rm floor})}.
+\]
+The norm \(W\), preregistered scale \(s_{\rm prereg}\), floor,
+sampling domain, uncertainty propagation, and threshold \(\tau\) are case
+fields.  P9-T01 assigns no physical numerical tolerance.  A later case must
+justify its value independently of the observed target mismatch and seal it
+before execution.  Missing, altered, or post-hoc tolerance data yield
+\texttt{INCONCLUSIVE} or \texttt{FAIL\_FIREWALL}, never a pass.
+
+\subsection{Residual corrections}
+
+Every finite-size, coarse-graining, discretization, truncation, boundary,
+calibration, or stochastic correction is recorded separately.  A comparison
+passes only if the residual plus its uncertainty lies within the preregistered
+criterion and every correction has a source-side bound.  Uncontrolled
+corrections remain visible and block a decisive pass.
+
+\section{Independent reproduction}
+
+A qualifying reproduction uses a fresh executor or team, a fresh working
+environment, independently established code or method provenance, exact
+immutable source hashes, and no copied intermediate or output files.  It
+receives the sealed protocol, not the primary run's internal state.  It must
+independently reconstruct the provenance graph, verify the firewall, execute
+the source stage, seal its output, and open the same target oracle only
+afterward.  Agreement between primary and reproduction source outputs is
+distinct from agreement with the target.  Same-context role separation or a
+rerun of identical code in the same environment is not independent
+replication.
+
+\section{Suite calibration, target exposure, and semantic status}
+
+Calibration inputs, validation inputs, and held-out benchmark inputs are
+separate sets.  A quantity fitted to one target case is labeled calibrated,
+frozen suite-wide before any later held-out oracle opens, and is not counted
+as an independent prediction in its calibration case.  Any later retuning
+creates a new suite version and invalidates the earlier blind-test label.
+Proposal-only source-extension ancestry and target exposure propagate to every
+descendant and to the final classification.
+
+Known target structures may legitimately determine which questions are
+tested, but that cognitive exposure is recorded.  An oracle-informed repair or
+rerun is a new nonblind case revision; it cannot replace the immutable
+original result.  Formal \texttt{Clock\_src}, \texttt{Rod\_src},
+\texttt{Signal\_src}, \texttt{Detector\_src}, or \texttt{FreeFall\_src}
+tokens remain formal analogies until a typed model-to-world map licenses
+physical time, distance, propagation, measurement, or free-fall claims.
+
+\section{Planned benchmark cases}
+
+The case schema creates six unexecuted contracts aligned to later v21 tasks:
+
+\begin{enumerate}
+\item \textbf{P9-T02 vacuum and Minkowski effective limit.}
+      Requires a source-defined vacuum or stationary state, a lawful
+      source-to-effective carrier, and perturbative behavior.  The target
+      Minkowski metric is comparison-only.
+\item \textbf{P9-T03 Newtonian, weak-field, redshift, and clock behavior.}
+      Requires source-derived potentials or observables and lawful
+      \texttt{Clock\_src}/\texttt{Signal\_src} physical semantics.  Target
+      potentials and clock formulas cannot be boundary data.
+\item \textbf{P9-T04 null propagation, local inertial behavior, and universal
+      free fall.} Requires multiple physically interpreted source matter
+      sectors and a derived comparison map.  Target null cones and geodesics
+      are comparison-only.
+\item \textbf{P9-T05 FLRW and cosmological observables.}
+      Requires a source-defined homogeneous/isotropic state and derived
+      expansion observable.  Target FLRW equations and \(\Lambda\) cannot
+      select a branch.
+\item \textbf{P9-T06 radiative degrees of freedom.}
+      Requires an admitted background, physical dynamical operator,
+      characteristics, polarizations, and detector semantics.  GR tensor
+      modes are comparison-only.
+\item \textbf{P9-T07 conservation, constraint closure, and a compact source.}
+      Requires a nonlinear source-defined configuration, dynamical constraint
+      propagation, and a physical observable map.  A GR compact-source
+      solution cannot seed the source solution.
+\end{enumerate}
+
+All six cases are \texttt{NOT\_RUN}.  Their current source records expose
+missing prerequisites rather than physical results.
+
+\section{Outcome semantics}
+
+\begin{longtable}{p{0.24\linewidth}p{0.67\linewidth}}
+\toprule
+Outcome & Meaning\\
+\midrule
+\texttt{NOT\_RUN} & The protocol exists but execution has not begun.\\
+\texttt{FAIL\_FIREWALL} & A forbidden target path, post-hoc tolerance,
+undeclared side channel, altered seal, or comparison feedback is detected.\\
+\texttt{FAIL\_SOURCE} & The source computation is ill-typed, fails its own
+equations or controls, or violates its declared validity regime.\\
+\texttt{INCONCLUSIVE} & Required source inputs, physical semantics, tolerance,
+uncertainty control, corrections, or independent reproduction are absent.\\
+\texttt{CONDITIONAL} & The case is otherwise valid but its result depends on
+an underived proposal-only source extension or an exposed calibration; it is
+not recovery from unchanged ontology.\\
+\texttt{FORMAL\_ANALOGY} & Only uncalibrated source syntax or operational
+tokens are compared with physical target observables.\\
+\texttt{FAIL\_COMPARISON} & A valid sealed source output is decisively outside
+the preregistered target criterion.  The deviation remains recorded.\\
+\texttt{PASS} & The firewall, source validity, primary and independent
+reproduction, and preregistered comparison all pass in the exact case scope.\\
+\bottomrule
+\end{longtable}
+
+A case cannot pass merely because it reuses adopted GR dynamics, repeats the
+target equations, or is defined to emit the target output.  A local case pass
+would not by itself authorize benchmark promotion.  Failed, rejected,
+conditional, formal, and inconclusive cases remain individually visible; a
+weighted average or majority vote cannot erase them.
+
+\section{Current result and authority boundary}
+
+P9-T01 defines a lawful benchmark program and the protocol-level theorem
+\texttt{TargetImportFirewallSoundness\_v1}.  It narrows the
+\texttt{benchmark\_promotion} burden by making circular cases machine
+rejectable, but it changes no physical or Distance-to-GR status.  Gate E
+remains not ready because no case is executed, no physical model-to-world
+bridge is established, and no independent reproduction exists.
+
+No canonical ontology or reviewed P5--P8 source is modified.  No effective
+metric, matter-coupling law, Einstein equation, exact-GR recovery theorem,
+benchmark result, Gate E verdict, physics promotion, proof authority,
+publication, push, global no-go, future-extension impossibility, or completed
+derivation is authorized.
+
+\end{document}

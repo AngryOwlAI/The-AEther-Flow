@@ -1,0 +1,331 @@
+final_repository_validation_status: "PASS_PRECHECKPOINT_RECOVERY_READY"
+job_id: "AJ-RT-20260730-001-001"
+completion_id: "AJC-AJ-RT-20260730-001-001"
+task_id: "RT-20260730-001"
+task_type: "project_system_p9_t01_handoff_identity_checkpoint_recovery"
+decision_id: "DDR-20260730-001"
+role_id: "process-integrity-auditor"
+source_role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260730-001"
+status: "completed"
+created_at: "2026-07-30T05:22:00Z"
+started_at: "2026-07-30T05:22:00Z"
+completed_at: "2026-07-30T05:30:27Z"
+objective: "Under the sealed generation-167 dirty-state manifest, insert the literal identity handoff-0908 into the existing handoff-0908 Markdown heading, prove the other 60 sealed paths and all P9-T01 scientific bytes remained exact at the repair boundary, synchronize ordinary control derivatives, and invoke one governed cumulative checkpoint before P9-T02."
+completion_summary: "Generation 167 inserts only the missing literal handoff-0908 identity into the Markdown heading. The sealed receipt proves the exact eight-byte insertion, zero drift across the other 60 dirty-manifest paths, exact failed-checkpoint evidence, and preservation of P9-T01 science. All six benchmark cases remain NOT_RUN, Gate D and Gate E remain unchanged, and P9-T02 remains unexecuted pending one governed cumulative checkpoint."
+objective_result: "p9_t01_handoff_identity_checkpoint_recovery_pass_ready_for_checkpoint"
+
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P9"
+  plan_task_id: "P9-T01"
+  recovery_for_plan_task_id: "P9-T01"
+  implementation_status: "handoff_identity_recovery_implemented_checkpoint_ready"
+  protected_p9_t01_status: "protocol_complete_preserved"
+  completed_v21_tasks_added: []
+  next_dependency_ready_work_item: "P9-T02_after_checkpoint"
+  next_work_item_executed: false
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 167
+  passes_consumed: 152
+  route_work_item_id: "P9-T01"
+  route_worker_skill: "improve-project-system"
+  route_sha256: "df43b73405e46c75791ee8499dbec1d30ddb97bfecfdb42fa3089c843da02a28"
+  route_reason: "required_checkpoint_repository_test_handoff_identity_recovery"
+  route_strategy_id: "repair_handoff_0908_markdown_identity_and_checkpoint_p9_t01_v1"
+  route_blocker_fingerprint: "7b18e6586a69b56bf049ae7011b93864cace9ba771f99643d85c595c19efeedd"
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:167"
+  handoff_token: "467683cbd3c68c6dc9819b64a49577bf26a9e5a239431d37"
+  relay_claim_token: "d782a9cddf58f8f072a500fdb2060ca926d21dafd52d3b38"
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+
+transaction_status: "ready_for_governed_checkpoint"
+result_disposition: "repair_implemented_and_validated"
+work_item_status: "completed"
+plan_task_id: "P9-T01"
+recovery_for_plan_task_id: "P9-T01"
+next_plan_task_id: "P9-T02"
+checkpoint_commit: "none_checkpoint_pending"
+checkpoint_invocation_count: 0
+checkpoint_staged: false
+legacy_validation_used: false
+project_system_change_only: true
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS_PRECHECKPOINT_READY"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  observed_durable_outputs:
+    physics: []
+    project_system:
+      - "one exact P9-T01 handoff identity insertion"
+      - "sealed 61-path repair-preservation receipt"
+      - "one governed cumulative checkpoint"
+  accepted_criteria:
+    physics: []
+    project_system:
+      - "the target differs from its sealed hash by exactly the eight-byte handoff- identity insertion"
+      - "all 60 non-target dirty-manifest paths match at the repair boundary"
+      - "P9-T01 scientific artifacts and zero-execution status remain exact"
+      - "all required working-tree gates pass"
+      - "one governed cumulative checkpoint commits"
+      - "P9-T02 remains unexecuted until checkpoint success"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+physics_payload_admission_result:
+  status: "admitted"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+
+ordinary_route_guard_admission_result:
+  status: "PASS"
+  source_handoff_id: "handoff-0907"
+  selected_plan_task_id: "P9-T01"
+  guard_outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  system_success_counts_as_physics: false
+  system_success_counts_as_distance_to_gr: false
+  scientific_status_changed: false
+  physics_promotion_authorized: false
+
+recovery_result:
+  status: "PASS"
+  strategy_id: "repair_handoff_0908_markdown_identity_and_checkpoint_p9_t01_v1"
+  source_task_id: "RT-20260729-012"
+  source_job_id: "AJ-RT-20260729-012-001"
+  source_handoff_id: "handoff-0908"
+  source_head: "c65c2d40cff97ecd96de1c59bd220a9f1274dfc6"
+  route_sha256: "df43b73405e46c75791ee8499dbec1d30ddb97bfecfdb42fa3089c843da02a28"
+  dirty_state_manifest_sha256: "769f2b443466d320ecb29b4d9b28e7148c22625969b786dc7d1180450c631576"
+  failed_checkpoint_receipt_sha256: "274c48f32e09a36fa7b5abd813c1c9d11beee746f54880f8032a730a24819288"
+  failed_gate_evidence_sha256: "17d12413e2841f9d4c1a79053e2d2f29a368b20ae19fd9e84afd8879b06abb6d"
+  source_completion_sha256: "645d5934a58ded9cafbbbd3af59ad9d3aa91efd5ec9bfe51ab231fd7488c07c4"
+  source_protocol_sha256: "88ef097bf712ad115e9af62cc18a8b3eabb12f8545350f714ad065f702471007"
+  source_handoff_yaml_sha256: "6b690aa475ae901cb981eb2a444145db21c098d34ed88b77d78142835a40ff58"
+  recovery_validator_path: "research_control/tasks/RT-20260730-001/artifacts/validate_p9_t01_handoff_identity_checkpoint_recovery.py"
+  recovery_validator_sha256: "86160ac1f93dd2387a77a7a062ff42f2020e1958709c67b44de3705d2d81e949"
+  recovery_receipt_path: "research_control/tasks/RT-20260730-001/artifacts/p9_t01_handoff_identity_checkpoint_recovery_receipt.json"
+  recovery_receipt_sha256: "68a5e87e137f98a87c44ee9d34ad6a403c499e756e8872cc93558c47bd9f37b4"
+  manifest_path_count: 61
+  target_path_count: 1
+  non_target_path_count: 60
+  non_target_hash_mismatch_count: 0
+  exact_identity_insertion_byte_count: 8
+  target_hashes_after:
+    - path: "research_control/handoffs/handoff-0908.md"
+      sha256: "d2edce09694674ffb5d716f89705b086613b3a3cc4b6dbb7d9962254f637c058"
+  p9_t01_protocol_preserved: true
+  p9_t01_science_payload_modified: false
+  p9_t01_reexecuted: false
+  p9_t02_executed: false
+
+artifacts:
+  - path: "research_control/tasks/RT-20260730-001/artifacts/validate_p9_t01_handoff_identity_checkpoint_recovery.py"
+    sha256: "86160ac1f93dd2387a77a7a062ff42f2020e1958709c67b44de3705d2d81e949"
+  - path: "research_control/tasks/RT-20260730-001/artifacts/p9_t01_handoff_identity_checkpoint_recovery_receipt.json"
+    sha256: "68a5e87e137f98a87c44ee9d34ad6a403c499e756e8872cc93558c47bd9f37b4"
+
+output_paths:
+  - "research_control/handoffs/handoff-0908.md"
+  - "research_control/tasks/RT-20260730-001/**"
+  - "research_control/handoffs/handoff-0909.yaml"
+  - "research_control/handoffs/handoff-0909.md"
+  - "research_control/program_state.yaml"
+
+command_results:
+  - command: ".venv/bin/python research_control/tasks/RT-20260730-001/artifacts/validate_p9_t01_handoff_identity_checkpoint_recovery.py --write-report --json"
+    status: "PASS"
+    summary: "one exact eight-byte identity insertion and zero drift across the other 60 sealed paths"
+  - command: ".venv/bin/python research_control/tasks/RT-20260730-001/artifacts/validate_p9_t01_handoff_identity_checkpoint_recovery.py --check --json"
+    status: "PASS"
+    summary: "the live target matches the sealed recovery receipt"
+  - command: ".venv/bin/python research_control/tasks/RT-20260729-012/artifacts/validate_source_derived_benchmark_protocol.py --check --json"
+    status: "PASS"
+    summary: "84 P9-T01 protocol and firewall checks pass with six NOT_RUN cases"
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+    status: "PASS"
+    summary: "tracked memory registry and wiki derivatives synchronize; local cache warnings remain retrieval-only"
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+    status: "PASS"
+    summary: "tracked memory core validation passes"
+  - command: "project change classifier documentation-impact project-improvement-signal claim-language and integrated research-control gates"
+    status: "PASS"
+    summary: "all required project-system and research-control gates pass"
+  - command: "git diff --check"
+    status: "PASS"
+    summary: "working-tree whitespace validation passes"
+
+validation_summary:
+  status: "PASS_PRECHECKPOINT_RECOVERY_READY"
+  task_local_error_count: 0
+  p9_t01_check_count: 84
+  p9_t01_failure_count: 0
+  manifest_path_count: 61
+  target_path_count: 1
+  non_target_hash_mismatch_count: 0
+  executed_benchmark_case_count: 0
+  checkpoint_invocation_count: 0
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 167 validated, atomically claimed, and consumed the exact immutable recovery route once."
+      - "The exact 61-path manifest, repository identity, lease, route, and predecessor state matched before writes."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The sealed receipt proves the exact eight-byte identity insertion, zero drift across 60 non-target paths, and P9-T01 scientific preservation."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Task-local preservation, P9-T01 protocol, documentation-impact, signal, integrated control, memory, generated-surface, and whitespace gates pass."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "The one governed cumulative checkpoint is pending; P9-T02 remains unexecuted."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Current frontier, task index, compact frontier, dependency graph, claim graph, and their semantic checks are fresh."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory synchronization and validate-only mode pass; local retrieval warnings are cache-only and non-authoritative."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation reports no hard failure."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not authorized; project-system handoff-identity recovery only"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  publication_authorized: false
+  proof_authority: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  canonical_ontology_edit_authorized: false
+  ontology_selection_authorized: false
+  physical_interpretation_establishment_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+distance_to_gr_delta:
+  changed: false
+  effect: "none_project_system_recovery"
+  burden_id: "benchmark_promotion"
+  milestone: "benchmark_promotion"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "The inherited P9-T01 protocol and zero-execution benchmark status remain exact; this recovery contributes no physics movement."
+
+physics_progress_status:
+  status: "none_project_system_only"
+  new_mathematical_payload: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+
+selected_next_route:
+  route_id: "v21_p9_t02_vacuum_minkowski_source_only_case_after_checkpoint"
+  route_label: "candidate-construction-packet"
+  role_family: "candidate-constructor@0.2.0"
+  worker_skill: "continue-research"
+  selected_next_packet_type: "source_only_benchmark_case_construction"
+  task_type: "v21_p9_t02_vacuum_minkowski_source_only_case"
+  plan_task_id: "P9-T02"
+  target_derivation_milestone: "benchmark_promotion"
+  milestone_burden: "Run the first source-derived benchmark without reusing adopted GR dynamics."
+  strategy_id: "construct_p9_t02_vacuum_minkowski_source_only_case_v1"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  target_informed_source_repair_authorized: false
+  benchmark_result_preestablished: false
+  physics_promotion_authorized: false
+  executed: false
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required_no_nonblank_signals"
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1089
+    relationship_row_count: 5515
+    semantic_row_count: 1089
+    vault_row_count: 1089
+    local_cache_only_warning_count: 7
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"source derived benchmark protocol\" --limit 10 --json"
+      query_type: "search"
+      query_text: "source derived benchmark protocol"
+      returned_object_ids:
+        - "TEX-V21-P8-T07-GATE-D-DECISION-V1"
+  canonical_inspections:
+    - object_id: "TEX-V21-P8-T07-GATE-D-DECISION-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260729-011/artifacts/p8_t07_gate_d_decision_v1.tex"
+      source_hash: "035ea88a612d861a00d0703ec2bd1094e01194c113d7ff2588e3a4ad8bf47d63"
+  authority_note: "Generated Obsidian wiki semantic relationship SQLite and .local surfaces are retrieval-only navigation layers and not authority; tracked canonical sources registries research-control state Git and validators govern this recovery."
+validation_status: "PASS"

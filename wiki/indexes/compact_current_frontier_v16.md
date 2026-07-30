@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260729-011`
-- Latest handoff: `handoff-0907`
-- Current status: `protected_gate_d_not_ready_ready_for_checkpoint`
+- Active task: `RT-20260730-001`
+- Latest handoff: `handoff-0909`
+- Current status: `p9_t01_handoff_identity_checkpoint_recovery_pass_ready_for_checkpoint`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260729-011`
-- Latest research handoff: `handoff-0907`
-- Latest research next action: Run one governed checkpoint for AJ-RT-20260729-011-001. After checkpoint, execute at most one P9-T01 packet limited to source-only weak-field and recovery benchmark protocol design plus an explicit claim firewall; preserve Gate D NOT READY and do not claim a benchmark result, promotion, Einstein equations, or exact-GR recovery.
+- Latest research task: `RT-20260730-001`
+- Latest research handoff: `handoff-0909`
+- Latest research next action: Run the one governed cumulative checkpoint for AJ-RT-20260730-001-001. Only after it commits may one fresh bounded P9-T02 candidate-construction packet construct or derive a source state for the vacuum Minkowski benchmark under the frozen source-only protocol and return PASS, FAIL, or INCONCLUSIVE without target-informed source repair.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p9_t01_source_only_benchmark_protocol_after_checkpoint`
-- Role family: `benchmark-designer`
-- Target milestone: `exact_gr_recovery`
-- Milestone burden: Define the source-only weak-field and recovery benchmark protocol without treating protocol design as recovered GR.
+- Route ID: `v21_p9_t02_vacuum_minkowski_source_only_case_after_checkpoint`
+- Role family: `candidate-constructor@0.2.0`
+- Target milestone: `benchmark_promotion`
+- Milestone burden: Run the first source-derived benchmark without reusing adopted GR dynamics.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `442231bb606a8b285cd7dc14c87b1df6527988e8e2ac2f15c408a71d44b8ef79`
-- JSON SHA-256: `18f9177aa2f8bfdcb25da70518fb3cd5c23b287a87387050b5cc2b86002d00e3`
+- YAML SHA-256: `0e6752be433b19e0083bf762b86095ab70f0e5f3704f31ca2b0774780a068461`
+- JSON SHA-256: `5d6def866a9d4ee35142679d30b5dcc6cb8f253b2a0eecd3b2149909e4fe828b`
 
 ## Authority Warning
 

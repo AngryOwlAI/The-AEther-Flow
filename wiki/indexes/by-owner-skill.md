@@ -802,6 +802,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-V21-P8-T06-CLOSURE-REVIEW-RECEIPT-V1` `wiki/markdown/md-v21-p8-t06-closure-review-receipt-v1.md`
 - `WIKI-MD-V21-P8-T06-PARENT-FUSION-CLOSURE-REVIEW-V1` `wiki/markdown/md-v21-p8-t06-parent-fusion-closure-review-v1.md`
 - `WIKI-MD-V21-P8-T07-PARENT-FUSION-GATE-D-REVIEW-V1` `wiki/markdown/md-v21-p8-t07-parent-fusion-gate-d-review-v1.md`
+- `WIKI-MD-V21-P9-T01-PARENT-FUSION-BENCHMARK-PROTOCOL-V1` `wiki/markdown/md-v21-p9-t01-parent-fusion-benchmark-protocol-v1.md`
 - `WIKI-MD-VALIDATOR-OPERATOR-WORKFLOW-PUBLICATION-BRIEF` `wiki/markdown/md-validator-operator-workflow-publication-brief.md`
 - `WIKI-PDF-LEGACY-ONTOLOGY-AETHER-FLOW-CONSISTENCY` `wiki/pdf/pdf-legacy-ontology-aether-flow-consistency.md`
 - `WIKI-PDF-LEGACY-ONTOLOGY-AETHER-FLOW-DYNAMICS` `wiki/pdf/pdf-legacy-ontology-aether-flow-dynamics.md`
@@ -1256,6 +1257,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-V21-P8-T04-FINITE-SOURCE-FIELD-EQUATION-IDENTITY-V1` `wiki/tex/tex-v21-p8-t04-finite-source-field-equation-identity-v1.md`
 - `WIKI-TEX-V21-P8-T05-FINITE-CONSTRAINT-DYNAMICAL-VIABILITY-STRESS-V1` `wiki/tex/tex-v21-p8-t05-finite-constraint-dynamical-viability-stress-v1.md`
 - `WIKI-TEX-V21-P8-T07-GATE-D-DECISION-V1` `wiki/tex/tex-v21-p8-t07-gate-d-decision-v1.md`
+- `WIKI-TEX-V21-P9-T01-SOURCE-DERIVED-BENCHMARK-PROTOCOL-V1` `wiki/tex/tex-v21-p9-t01-source-derived-benchmark-protocol-v1.md`
 
 ## obsidian-wiki
 
@@ -1773,6 +1775,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-V21-P8-T06-CLOSURE-REVIEW-RECEIPT-V1` `research_control/tasks/RT-20260729-009/artifacts/p8_t06_closure_review_receipt.md`
 - `MD-V21-P8-T06-PARENT-FUSION-CLOSURE-REVIEW-V1` `research_control/tasks/RT-20260729-009/artifacts/parent_fusion_notes_p8_t06_closure_review.md`
 - `MD-V21-P8-T07-PARENT-FUSION-GATE-D-REVIEW-V1` `research_control/tasks/RT-20260729-011/artifacts/parent_fusion_notes_p8_t07_gate_d_review.md`
+- `MD-V21-P9-T01-PARENT-FUSION-BENCHMARK-PROTOCOL-V1` `research_control/tasks/RT-20260729-012/artifacts/parent_fusion_notes_p9_t01_benchmark_protocol.md`
 
 ## tex-wiki
 
@@ -2214,6 +2217,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V21-P8-T04-FINITE-SOURCE-FIELD-EQUATION-IDENTITY-V1` `research_control/tasks/RT-20260729-007/artifacts/finite_source_field_equation_identity_v1.tex`
 - `TEX-V21-P8-T05-FINITE-CONSTRAINT-DYNAMICAL-VIABILITY-STRESS-V1` `research_control/tasks/RT-20260729-008/artifacts/finite_constraint_dynamical_viability_stress_v1.tex`
 - `TEX-V21-P8-T07-GATE-D-DECISION-V1` `research_control/tasks/RT-20260729-011/artifacts/p8_t07_gate_d_decision_v1.tex`
+- `TEX-V21-P9-T01-SOURCE-DERIVED-BENCHMARK-PROTOCOL-V1` `research_control/tasks/RT-20260729-012/artifacts/source_derived_benchmark_protocol_v1.tex`
 
 ## user-modified-project
 

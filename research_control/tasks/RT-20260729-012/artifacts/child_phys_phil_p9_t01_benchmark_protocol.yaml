@@ -1,0 +1,738 @@
+schema_id: "v21_p9_t01_child_phys_phil_benchmark_protocol_audit_v1"
+artifact_id: "P9T01-CHILD-PHYS-PHIL-BENCHMARK-PROTOCOL-AUDIT-V1"
+task_id: "RT-20260729-012"
+job_id: "AJ-RT-20260729-012-001"
+decision_id: "DDR-20260729-012"
+plan_task_id: "P9-T01"
+execution_unit_id: "child_phys_phil"
+perspective: "physicist_philosopher"
+status: "completed"
+artifact_status: "draft/control"
+review_context: "same_context_internal_parent_child_synthesis_input"
+target_derivation_milestone: "benchmark_promotion"
+milestone_burden: "Create a benchmark contract that cannot be satisfied by reusing adopted GR dynamics."
+benchmark_case_executed: false
+benchmark_result_established: false
+Gate_D_status: "NOT_READY"
+Gate_E_status: "not_open_checklist_only"
+physics_promotion_authorized: false
+
+review_question: >-
+  What epistemic and provenance distinctions must
+  SourceDerivedBenchmarkProtocol_v1 enforce so that a post-seal agreement
+  with a target oracle is evidence about a source computation rather than a
+  consequence of target import, semantic relabeling, case-specific tuning, or
+  process authority, and how must those distinctions govern the proposed
+  P9-T02 through P9-T07 cases?
+
+source_basis:
+  - path: "research_control/tasks/RT-20260729-012/jobs/AJ-RT-20260729-012-001.yaml"
+    use: "active outer AgentJob, child decomposition, payload admission, and immutable authority boundary"
+  - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+    path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+    sha256: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+    use: "P9-T01 protocol requirements and P9-T02 through P9-T07 case objectives"
+  - path: "research_control/tasks/RT-20260726-001/artifacts/p6_geometry_input_contract_v1.yaml"
+    sha256: "7b0eee4ea249a3acf99d38d312bd14619dedea79977d7b802062e9410f5b8557"
+    use: "fixed source-response input and missing positive local-geometry components"
+  - path: "research_control/tasks/RT-20260726-001/artifacts/source_dynamics_theorem_inventory_v1.yaml"
+    sha256: "3be2942e28aeb5d96f8c274ce8b887d72bf36a1848b7b34ce21d4ec6c0913a79"
+    use: "candidate-relative source-dynamics results and exact obstruction scope"
+  - path: "research_control/tasks/RT-20260727-004/artifacts/p6_t08_gate_b_separating_certificate_v1.yaml"
+    sha256: "f3080ed6a6ba1d6847a3b7ed43c7a11ad7f7dae4deccd25486913ea9547f221b"
+    use: "zero-of-eight Gate B result and absent lawful effective-geometry input"
+  - path: "research_control/tasks/RT-20260728-002/artifacts/source_operational_device_suite_spec_v1.yaml"
+    sha256: "417c604bad008b85b153718ae04aa43307c2ff3cfa3a5c3f242e70b013c86ba4"
+    use: "formal-only Clock_src, Rod_src, Signal_src, Detector_src, and FreeFall_src token semantics"
+  - path: "research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_spec_v1.yaml"
+    sha256: "91422c4db2b3166da6cab9391ff3f1109d43a683d9624f8086e23d7d8ddf7001"
+    use: "finite support transport, current-suite universality obstruction, and absent principal symbol"
+  - path: "research_control/tasks/RT-20260729-005/artifacts/local_effective_action_assumption_envelope_v1.yaml"
+    sha256: "da939b16a0cb4da082068ab9954d11c4c7a7a658e746c50295dc20347fc82a65"
+    use: "missing locality, carrier, scale, correction, variational, gluing, symmetry, and boundary burdens"
+  - path: "research_control/tasks/RT-20260729-005/artifacts/local_effective_action_forbidden_shortcuts_v1.yaml"
+    sha256: "3ed27d0bba3c55d5b43394a84ce0f2f3fb739e2afbcf3c5063371cf6a3000d52"
+    use: "existing fail-closed target-import and cross-layer relabeling rules"
+  - path: "research_control/tasks/RT-20260729-007/artifacts/finite_source_field_equation_identity_spec_v1.yaml"
+    sha256: "d37fdff6d320751d0174459c3d10bec75aa04be62c72c368480f1cafdb46e5f8"
+    use: "exact finite equation, source-to-equation map, typed target mismatch, and scoped obstruction"
+  - path: "research_control/tasks/RT-20260729-008/artifacts/finite_constraint_dynamic_completion_countermodels_v1.yaml"
+    sha256: "c73615d9dd69a4f81f75da037e94801de4c7ec0ef8ba062abe5aafc7626e81a1"
+    use: "underdetermination of physical dynamics by the static finite equation"
+  - path: "research_control/tasks/RT-20260729-008/artifacts/finite_constraint_mode_stability_controls_v1.yaml"
+    sha256: "cef2c104e3e7c410b82235b67609ae4989c4b9d9a855de986ae05c1f79b6680f"
+    use: "separation of graph spectra from physical modes, characteristics, and stability"
+  - path: "research_control/tasks/RT-20260729-009/artifacts/p8_t06_closure_smuggling_audit_v1.yaml"
+    sha256: "43034c9cfbc51dee2c505e1d1c5abab2ea9863c87f1017d560b7784ec14abd57"
+    use: "same-context audit limits, missing A4 control, and construction-versus-derivation finding"
+  - path: "research_control/tasks/RT-20260729-009/artifacts/p8_t06_gate_d_readiness_matrix_v1.yaml"
+    sha256: "ca3f9252d1fe8e2e0814110dbc6a25b274f710d9220ec0e9d7933e82f3b1b3d0"
+    use: "pre-verdict Gate D burden matrix"
+  - path: "research_control/tasks/RT-20260729-011/artifacts/p8_t07_gate_d_verdict_matrix_v1.yaml"
+    sha256: "89e484d18aca681a9f79484331a38ee9b98478e5169af4bb9de2762c71e473a4"
+    use: "protected Gate D NOT READY disposition and downstream P9-T01 boundary"
+  - object_id: "TEX-ONTOLOGY-AETHER-FLOW-DYNAMICS"
+    path: "ontology/tex/aether_flow_dynamics.tex"
+    sha256: "fd6e579e71ef7f2ac4c9668ceede051ad57033ee52357b2552a9e3a5a53939c7"
+    use: "read-only target oracle after source-output seal; never a source-computation premise"
+  - object_id: "TEX-ONTOLOGY-AETHER-FLOW-RELATIVISTIC-RECOVERY"
+    path: "ontology/tex/aether_flow_relativistic_recovery.tex"
+    sha256: "77d5c2db56f122870343834f853bf2f375a912116a347d7c5710405c8707d69c"
+    use: "read-only target benchmark definitions after source-output seal"
+  - object_id: "TEX-ONTOLOGY-AETHER-FLOW-CONSISTENCY"
+    path: "ontology/tex/aether_flow_consistency.tex"
+    sha256: "d965519639ee8764a5c5a63798d15e8a9a380d7e208dffc43a0be02b6f245ba1"
+    use: "read-only target consistency and radiative expectations after source-output seal"
+
+fixed_epistemic_state:
+  protected_Gate_D:
+    decision_code: "NOT_READY_EINSTEIN_SECTOR_DERIVATION_REQUIREMENTS_UNMET"
+    exact_unchanged_package_frozen_against_positive_Gate_D: true
+    benchmark_use_of_unchanged_package_blocked: true
+    same_milestone_material_continuation_open: true
+  source_record:
+    positive_local_effective_geometry_input_exists: false
+    lawful_unscoped_effective_metric_exists: false
+    physical_principal_symbol_exists: false
+    physical_dynamical_completion_exists: false
+    Einstein_equations_derived: false
+    exact_GR_recovery_established: false
+  operational_record:
+    source_device_tokens_exist: true
+    source_device_tokens_status: "proposal-only formal syntax"
+    empirical_device_semantics_exist: false
+    model_to_world_map_exists: false
+    common_physical_propagation_exists: false
+  present_task:
+    protocol_design_only: true
+    case_execution_count: 0
+    case_pass_count: 0
+    benchmark_promotion: false
+
+epistemic_type_separation:
+  source_model:
+    definition: >-
+      Canonical or lawfully adopted source ontology, source laws, source
+      states, and source-side consequences with exact version and provenance.
+    admissible_use: "May be an upstream source-computation root within its exact declared scope."
+    required_metadata:
+      - "object identity and authority status"
+      - "exact source hash"
+      - "derivation or adoption provenance"
+      - "domain, codomain, regime, and failure set"
+    does_not_include:
+      - "a familiar target-side name attached to an untyped source token"
+      - "a proposal-only extension silently treated as derived"
+      - "a validator, checkpoint, registry row, or role declaration used as scientific evidence"
+  source_extension_construction:
+    definition: >-
+      An explicitly introduced proposal-only source-side object, law, map,
+      ansatz, completion, or coefficient not derived by the fixed source
+      model.
+    admissible_use: >-
+      May be explored as a declared source-extension root, but its contribution
+      must remain visible in the case result and cannot establish recovery from
+      the unchanged ontology.
+    result_ceiling_without_adoption_or_derivation: "conditional_on_proposal_only_source_extension"
+    target_exposure_rule: >-
+      If the extension was designed, selected, or altered after exposure to a
+      target oracle, its matching case is calibration or construction evidence,
+      not an independent benchmark test.
+    holdout_rule: >-
+      A proposal-only extension frozen before unopened later cases may support
+      conditional holdout evidence for those later cases, but it still does
+      not become canonical, adopted, or source-derived.
+  independent_calibration:
+    definition: >-
+      A declared unit, scale, nuisance parameter, or empirical calibration
+      fixed by a provenance source independent of the target case being tested.
+    required_partition:
+      - "calibration inputs and cases"
+      - "validation inputs and cases"
+      - "held-out benchmark inputs and cases"
+    suite_rule: >-
+      A quantity calibrated on one case must be frozen suite-wide before later
+      target oracles are opened. The calibration case cannot simultaneously be
+      counted as an independent prediction of the calibrated quantity.
+    forbidden:
+      - "choosing signs, normalizations, dimension, signature, or branch from target agreement and calling the choice source-derived"
+      - "case-specific retuning without a preregistered universal source rule"
+      - "using a target residual to change preprocessing, solver settings, approximation order, stopping rules, or accepted output"
+  operational_tokens:
+    definition: >-
+      Formal source-syntax outputs such as Clock_src ticks, Rod_src hops,
+      Signal_src arrivals, Detector_src triggers, and FreeFall_src contrasts.
+    current_status: "formal_only_no_empirical_referent"
+    licensed_claims:
+      - "typed source history produced a declared formal token"
+      - "formal token counts or rational bookkeeping responses agree or differ"
+    blocked_claims_without_model_to_world_map:
+      - "elapsed physical time or clock rate"
+      - "physical distance, rigidity, or rod length"
+      - "physical causal propagation or signal speed"
+      - "measurement, detection, or observed response"
+      - "physical free fall, acceleration, or geodesic motion"
+  target_oracle:
+    definition: >-
+      A read-only target theory, target solution, benchmark expectation, or
+      empirical comparison record that is inaccessible to source computation
+      until the source output and its complete provenance are sealed.
+    permitted_use:
+      - "define a post-seal comparison object"
+      - "evaluate preregistered analytic-equivalence or numerical-residual rules"
+      - "report agreement, deviation, failure, or inconclusive status"
+    forbidden_use:
+      - "select source inputs, fields, ansatz, branch, coefficients, boundary data, gauge, code path, tolerance, or stopping rule"
+      - "repair or rerun the same sealed case while preserving its blind-test label"
+  comparison:
+    definition: >-
+      A post-seal operation that maps an immutable source output and an opened
+      target oracle into preregistered residual and classification objects.
+    epistemic_effect: >-
+      Agreement is evidence of output correspondence under the declared case;
+      it is not a derivation of the source model, a proof of unique explanation,
+      an ontology adoption, or a protected benchmark promotion.
+  protocol_correctness:
+    definition: >-
+      Satisfaction of schema, provenance-DAG, root classification, reachability,
+      hashing, sealing, and outcome-classification rules.
+    possible_theorem_scope: >-
+      Under explicit hypotheses, a forbidden target root is not an ancestor of
+      any source output and cannot cause agreement through an encoded upstream
+      dataflow edge.
+    cannot_establish:
+      - "truth or physical adequacy of source premises"
+      - "absence of target influence in an author's prior knowledge"
+      - "physical meaning of formal tokens"
+      - "numerical correctness of an implementation"
+      - "independent replication"
+      - "physical recovery or Gate E promotion"
+  physical_recovery:
+    definition: >-
+      A case-qualified relation from source-model inputs through derived
+      physical observables and a justified model-to-world map to a target
+      benchmark within a controlled regime.
+    necessary_not_sufficient_conditions:
+      - "all scientific roots have exact status and provenance"
+      - "no forbidden target ancestor or target-conditioned control flow"
+      - "source-derived or explicitly scoped construction path"
+      - "physical observable typing and model-to-world semantics"
+      - "units, approximation order, residual corrections, and uncertainty"
+      - "case-local success and failure criteria fixed before execution"
+      - "suite-global parameters frozen according to the calibration partition"
+      - "independent reproduction without shared intermediates"
+    underdetermination_guard: >-
+      Agreement on selected benchmarks does not by itself establish that the
+      source ontology is true, uniquely explanatory, or derivationally complete.
+  protected_Gate_E_promotion:
+    definition: "A later exact human-gated verdict over the complete benchmark and replication package."
+    prerequisites:
+      - "P9-T02 through P9-T07 have explicit decisive or preserved inconclusive outcomes"
+      - "P9-T08 target-import audit and genuinely independent reproduction are complete"
+      - "all earlier protected gate statuses and unresolved failures are visible"
+      - "exact nonblank human Gate E authority is present and consumed once"
+    not_created_by:
+      - "this protocol"
+      - "a protocol-soundness theorem"
+      - "one or more case matches"
+      - "validator PASS"
+      - "checkpoint or commit"
+      - "internal parent-child synthesis"
+  model_to_world_semantics:
+    definition: >-
+      A typed, independently justified map from source states and formal tokens
+      to preparation procedures, physical quantities, units, interventions,
+      measurement records, and uncertainty-bearing observables.
+    minimum_fields:
+      - "source domain and formal token domain"
+      - "physical or empirical codomain"
+      - "preparation and intervention semantics"
+      - "unit and scale calibration provenance"
+      - "uncertainty and failure model"
+      - "regime of validity"
+      - "cross-device and cross-sector identification rule"
+      - "independent reproduction method"
+    current_status: "not_supplied_by_fixed_P5_through_P8_package"
+
+provenance_dag_audit:
+  admissible_upstream_root_classes:
+    - "fixed_source_model"
+    - "declared_proposal_only_source_extension"
+    - "independent_calibration"
+    - "hashed_code_and_environment"
+  prohibited_upstream_root_classes:
+    - "target_atlas"
+    - "target_metric_or_connection"
+    - "target_solution_or_ansatz"
+    - "Einstein_Hilbert_action"
+    - "Einstein_equations_or_target_constraints"
+    - "target_benchmark_success_or_residual"
+    - "target_derived_parameter_or_branch_selection"
+    - "target_conditioned_tolerance_or_stopping_rule"
+  node_level_requirements:
+    - "stable node identity, type, content hash, and authority status"
+    - "declared parent edges with semantic roles"
+    - "source-extension and calibration flags propagated to every descendant"
+    - "deterministic or explicitly seeded transformation record"
+    - "no mutable external dependency without an exact snapshot hash"
+  pre_seal_reachability_rule: >-
+    Every source input, intermediate, branch selector, parameter, approximation,
+    residual estimator, solver setting, stopping rule, and output must be
+    reachable only from admissible upstream roots.
+  seal_record_requirements:
+    - "case schema hash"
+    - "complete provenance-DAG hash"
+    - "all source, calibration, code, dependency, and environment hashes"
+    - "source output and intermediate hashes"
+    - "parameter, approximation, tolerance, and stopping-rule commitments"
+    - "timestamped immutable run identifier"
+    - "target-exposure ledger"
+  post_seal_rule: >-
+    The target oracle may be opened only after a valid seal exists. Comparison
+    edges point from the sealed output and oracle into a comparison record;
+    no edge may return to the sealed source graph.
+  rerun_rule: >-
+    Any change after oracle exposure creates a new protocol version and a new
+    nonblind run. The original sealed result remains preserved. A repaired run
+    cannot inherit the original run's blind or independent-test status.
+  theorem_limit: >-
+    DAG non-reachability proves a syntactic and computational firewall under
+    the declared graph. It cannot represent unrecorded human knowledge,
+    undocumented manual edits, omitted dependencies, or covert channels.
+
+target_import_channels:
+  - channel_id: "TI-PHIL-001"
+    severity: "blocking"
+    channel: "direct_equation_or_solution_import"
+    trigger: "Target action, equation, metric, solution, or benchmark output is an ancestor of source computation."
+    disposition: "fail_closed_target_import"
+  - channel_id: "TI-PHIL-002"
+    severity: "blocking"
+    channel: "target_shaped_ansatz_or_boundary_data"
+    trigger: "Dimension, signature, symmetry, gauge, ansatz, initial data, or boundary data are selected because they reproduce the target."
+    disposition: "fail_closed_target_conditioned_construction"
+  - channel_id: "TI-PHIL-003"
+    severity: "blocking"
+    channel: "parameter_and_branch_tuning"
+    trigger: "A target residual selects coefficients, signs, normalizations, branch, seed, or case-specific exception."
+    disposition: "fail_closed_target_tuning"
+  - channel_id: "TI-PHIL-004"
+    severity: "blocking"
+    channel: "algorithmic_feedback"
+    trigger: "Target comparison alters discretization, approximation order, preprocessing, solver path, stopping criterion, or accepted output."
+    disposition: "fail_closed_oracle_feedback"
+  - channel_id: "TI-PHIL-005"
+    severity: "blocking"
+    channel: "oracle_fixture_or_shared_library_leakage"
+    trigger: "Golden target fixtures, target-derived helper code, cached target intermediates, or shared target libraries enter source execution."
+    disposition: "fail_closed_dependency_leakage"
+  - channel_id: "TI-PHIL-006"
+    severity: "high"
+    channel: "semantic_relabeling"
+    trigger: "A formal hop, tick, transition index, graph eigenvalue, component shift, or source balance is renamed as distance, time, frequency, mass, gauge, or covariant conservation."
+    disposition: "inconclusive_physical_semantics_or_fail_closed_if_used_as_premise"
+  - channel_id: "TI-PHIL-007"
+    severity: "blocking"
+    channel: "proposal_derivation_laundering"
+    trigger: "A proposal-only source extension is presented as a consequence of the unchanged source ontology."
+    disposition: "fail_closed_status_laundering"
+  - channel_id: "TI-PHIL-008"
+    severity: "blocking"
+    channel: "calibration_test_double_use"
+    trigger: "The same target datum fixes a parameter and is then counted as an independent prediction of that parameter."
+    disposition: "reclassify_as_calibration_not_test"
+  - channel_id: "TI-PHIL-009"
+    severity: "high"
+    channel: "cross_case_retuning"
+    trigger: "A suite-global source parameter changes between P9 cases without a preregistered source rule and independent calibration."
+    disposition: "fail_closed_suite_inconsistency"
+  - channel_id: "TI-PHIL-010"
+    severity: "high"
+    channel: "selective_reporting"
+    trigger: "Failed, unstable, nonconvergent, or inconclusive branches are omitted, averaged away, or excluded after seeing target agreement."
+    disposition: "fail_closed_reporting_bias"
+  - channel_id: "TI-PHIL-011"
+    severity: "high"
+    channel: "process_authority_laundering"
+    trigger: "Validator, task, role, checkpoint, commit, registry, or internal review status is treated as proof of physical recovery."
+    disposition: "fail_closed_process_authority"
+  - channel_id: "TI-PHIL-012"
+    severity: "high"
+    channel: "cognitive_target_exposure"
+    trigger: "Authors know target structures while designing source constructions, but the exposure is omitted from provenance."
+    disposition: "record_target_exposure_and_limit_independence_claim"
+
+benchmark_lifecycle_contract:
+  preregistration_before_any_case_run:
+    required:
+      - "case identity and exact source question"
+      - "scientific root allowlist with statuses and hashes"
+      - "source-extension and calibration ledger"
+      - "complete computation graph and code/environment hashes"
+      - "all free parameters, branch rules, seeds, and boundary data"
+      - "approximation order, valid regime, correction terms, residual norm, and uncertainty model"
+      - "analytic-equivalence criterion and numerical tolerance"
+      - "success, benchmark-failure, protocol-rejection, and inconclusive rules"
+      - "target oracle identity or sealed hash commitment"
+      - "model-to-world map or explicit statement that physical interpretation is unavailable"
+      - "independent-reproduction plan"
+    missing_required_field_disposition: "protocol_invalid_not_run"
+  source_execution:
+    oracle_access: "forbidden"
+    undeclared_manual_intervention: "forbidden"
+    provenance_capture: "mandatory_for_every_node_and_edge"
+    hash_drift_disposition: "fail_closed_dependency_drift"
+  output_seal:
+    required_before_comparison: true
+    seal_is_immutable: true
+    seal_failure_disposition: "protocol_invalid_no_comparison"
+  post_seal_comparison:
+    oracle_access: "permitted_read_only"
+    feedback_to_source_graph: "forbidden"
+    result_preservation: "mandatory_including_failure_and_inconclusive"
+  independent_reproduction:
+    required_for_recovery_evidence: true
+    minimum_conditions:
+      - "fresh execution environment"
+      - "independently established code or method provenance"
+      - "no shared source intermediates or cached outputs"
+      - "same public protocol and exact scientific-root hashes"
+      - "oracle remains inaccessible until the independent output seal"
+      - "all divergences and failed attempts are retained"
+    does_not_count:
+      - "rerunning the same code in the same environment"
+      - "same-context parent-child role separation"
+      - "copying shared intermediates"
+      - "reviewing only the final comparison table"
+      - "validator PASS"
+
+outcome_taxonomy:
+  protocol_invalid_not_run:
+    applies_when:
+      - "required schema, provenance, hashes, tolerances, or branch rules are absent"
+      - "source graph cannot be sealed"
+    benchmark_meaning: "none"
+  firewall_rejected:
+    applies_when:
+      - "a forbidden target root reaches source computation"
+      - "oracle feedback or undeclared dependency is detected"
+      - "proposal, calibration, or process status is laundered"
+    benchmark_meaning: "none; preserve as a protocol failure"
+  benchmark_fail:
+    applies_when:
+      - "a valid sealed source output is outside preregistered analytic or numerical acceptance criteria"
+      - "a required stability, universality, conservation, or residual criterion fails"
+    benchmark_meaning: "negative evidence in the exact declared scope"
+  inconclusive:
+    applies_when:
+      - "numerical or analytic uncertainty straddles the threshold"
+      - "a required physical observable or model-to-world map is missing"
+      - "correction or regime control is insufficient"
+      - "independent reproduction is absent or conflicts without resolution"
+      - "multiple source branches remain admissible with incompatible target outcomes"
+    benchmark_meaning: "no pass or fail; exact missing datum must be named"
+  conditional_on_proposal_only_source_extension:
+    applies_when:
+      - "the case is valid but a result depends on an unadopted or underived source-extension construction"
+    benchmark_meaning: "conditional candidate behavior, not recovery from the unchanged ontology"
+  formal_analogy_only:
+    applies_when:
+      - "only uncalibrated formal tokens or structural source objects are compared to physical target observables"
+    benchmark_meaning: "mathematical resemblance without physical recovery"
+  pass_eligible:
+    applies_when:
+      - "the protocol, firewall, physical typing, model-to-world semantics, tolerances, corrections, and independent reproduction all pass"
+    benchmark_meaning: "case-qualified recovery evidence only"
+    automatic_Gate_E_or_completed_derivation: false
+  current_P9_T01_status: "protocol_only_not_run"
+
+proposed_case_audits:
+  - plan_task_id: "P9-T02"
+    case_name: "vacuum_and_Minkowski_effective_limit"
+    target_question: "Does a source-defined vacuum or stationary phase yield a physically typed flat effective background and controlled perturbative behavior?"
+    required_source_side_products:
+      - "source-defined vacuum or stationary-state predicate independent of target flatness"
+      - "source-derived effective carrier, metric or lawful replacement, dimension, signature, and locality"
+      - "source-derived matter-vacuum criterion"
+      - "source-derived perturbative operator, physical mode interpretation, and stability regime"
+      - "correction and finite-size or coarse-graining control"
+    live_fixed_constraints:
+      - "P6 Gate B reports zero of eight and no lawful unscoped effective metric."
+      - "P8 supplies an exact finite static equation but no physical dynamical completion."
+      - "Gate D remains NOT READY."
+    principal_circularity_channels:
+      - "defining vacuum as vanishing target stress energy or curvature"
+      - "selecting four dimensions, Lorentz signature, flat atlas, constant target metric, or zero target connection because the desired oracle is Minkowski"
+      - "using the target linearized equations or target mode count as the source perturbation operator"
+      - "choosing a source branch because its post hoc reconstruction looks flat"
+    oracle_only_content:
+      - "Minkowski invariant and coordinate-independent flatness expectations"
+      - "target matter-vacuum and perturbative comparison data"
+    fail_closed_if:
+      - "target flat geometry or target vacuum is an upstream definition"
+      - "target perturbations select the source operator or branch"
+    inconclusive_if:
+      - "no source-derived effective geometry or physical vacuum map exists"
+      - "flatness is only a formal finite-graph analogy"
+      - "physical perturbation and stability semantics remain absent"
+    current_case_status: "NOT_RUN_PROTOCOL_ONLY"
+
+  - plan_task_id: "P9-T03"
+    case_name: "Newtonian_weak_field_redshift_and_clock"
+    target_question: "Do source-derived weak-field observables reproduce potential, slow-motion, redshift, and clock relations in a declared regime?"
+    required_source_side_products:
+      - "source-derived weak-response expansion with units and approximation order"
+      - "physical matter-source map and independently calibrated coupling scale"
+      - "physical FreeFall_src, Clock_src, and Signal_src model-to-world maps"
+      - "source-derived boundary and initial data"
+      - "post-Newtonian and correction quantities computed before target comparison"
+    live_fixed_constraints:
+      - "Clock_src, Signal_src, and FreeFall_src are formal proposal-only roles without empirical semantics."
+      - "The finite P8 coefficients are dimensionless and free, not physical gravitational constants."
+      - "No source-derived target tensor source, effective metric, or continuum regime exists in the fixed package."
+    principal_circularity_channels:
+      - "inserting the Newtonian potential or Poisson equation as boundary data or evolution law"
+      - "choosing metric ansatz, sign, normalization, c, G, or PPN parameters from desired target agreement"
+      - "renaming cycle count as proper time, hop count as distance, or intervention contrast as physical acceleration"
+      - "using target redshift or clock rates to calibrate and then count the same relation as prediction"
+    oracle_only_content:
+      - "Newtonian and weak-field target relations"
+      - "redshift, clock-rate, and PPN comparison values"
+    fail_closed_if:
+      - "target potential, metric coefficients, or PPN values enter source computation"
+      - "a calibration datum is double-counted as an independent test"
+    inconclusive_if:
+      - "operational tokens lack physical semantics, units, or uncertainty"
+      - "coupling normalization or correction control is missing"
+    current_case_status: "NOT_RUN_PROTOCOL_ONLY"
+
+  - plan_task_id: "P9-T04"
+    case_name: "null_propagation_local_inertial_behavior_and_universal_free_fall"
+    target_question: "Do independently typed source matter sectors share one derived causal and free-fall structure with controlled residuals?"
+    required_source_side_products:
+      - "source-derived principal symbol or explicit lawful characteristic replacement"
+      - "physical signal, clock, rod, detector, and free-fall semantics"
+      - "at least two independently defined matter sectors"
+      - "one source-derived universality relation and comparison map"
+      - "preferred-frame, birefringence, and nonuniversality residual definitions"
+    live_fixed_constraints:
+      - "P7-T04 has no principal symbol, characteristic set, physical cone, or scale regime."
+      - "The current explicit device suite has a scoped common-propagation obstruction."
+      - "Finite reachability and formal first-arrival indices are not physical causal propagation."
+    principal_circularity_channels:
+      - "importing a target null cone, geodesic equation, Lorentz frame, or equivalence principle as a source rule"
+      - "making matter sectors universal by giving them the same target-derived propagation law by construction"
+      - "calling a finite support relation a light cone or a graph path a geodesic"
+      - "calibrating every sector separately until free-fall residuals vanish"
+    oracle_only_content:
+      - "target null, local-inertial, and equivalence-principle relations"
+      - "post-seal residuals for speed, birefringence, preferred-frame behavior, and universality"
+    fail_closed_if:
+      - "target geodesics, cone, or Lorentz transformations define source trajectories or comparisons"
+      - "sector-specific target tuning is used"
+    inconclusive_if:
+      - "no physical principal symbol, matter-sector map, or model-to-world semantics exists"
+      - "only the current finite source-support relations are available"
+    current_case_status: "NOT_RUN_PROTOCOL_ONLY"
+
+  - plan_task_id: "P9-T05"
+    case_name: "FLRW_background_and_cosmological_observables"
+    target_question: "Does a source-defined large-scale state yield a physically interpreted homogeneous and isotropic expansion law and matter evolution?"
+    required_source_side_products:
+      - "source-defined homogeneity and isotropy predicates"
+      - "source-derived coarse-graining map, scale variable, clock, and spatial calibration"
+      - "effective expansion observable and matter-density map"
+      - "source-derived conservation or evolution law"
+      - "initial-condition, attractor, and residual-correction analysis"
+    live_fixed_constraints:
+      - "P8 A4 lacks a coarse-graining map, scale interval, remainder norm, and source-controlled bound."
+      - "The fixed package has no physical clock, rod, target conservation bridge, or continuum limit."
+    principal_circularity_channels:
+      - "assuming three-dimensional homogeneous isotropic slices, cosmic time, or a scale factor because the target is FLRW"
+      - "inserting Friedmann equations, Lambda, a target equation of state, or target density evolution as source dynamics"
+      - "selecting the cosmological branch by agreement with LambdaCDM"
+      - "fitting Lambda or an effective dark sector to the comparison and reporting it as source-derived"
+    oracle_only_content:
+      - "FLRW, Friedmann, and declared cosmological-observable comparison records"
+      - "LambdaCDM comparison only after source-output seal"
+    fail_closed_if:
+      - "target FLRW symmetry, equations, Lambda, or branch selection is upstream"
+      - "target cosmology chooses the source ansatz or initial conditions"
+    inconclusive_if:
+      - "coarse-graining, physical scale, time, or model-to-world maps are absent"
+      - "the result is only a formal homogeneous finite configuration"
+    current_case_status: "NOT_RUN_PROTOCOL_ONLY"
+
+  - plan_task_id: "P9-T06"
+    case_name: "gravitational_wave_propagation_and_radiative_degrees_of_freedom"
+    target_question: "Does a source-derived dynamical operator possess a stable radiative sector whose physical detector response agrees with the target?"
+    required_source_side_products:
+      - "admitted source-derived background"
+      - "source-derived physical dynamical operator and gauge or explicit replacement"
+      - "covector-dependent principal symbol, characteristics, and well-posedness data"
+      - "mode, polarization, damping, dispersion, and stability classification"
+      - "physical Detector_src response map with uncertainty"
+    live_fixed_constraints:
+      - "P8-T05 proves that the static finite equation admits incompatible healthy and pathological artificial completions."
+      - "Graph spectra are not physical frequencies, speeds, masses, or dispersion."
+      - "Detector_src remains a formal token transducer without empirical calibration."
+    principal_circularity_channels:
+      - "importing the target wave equation, transverse-traceless gauge, two-polarization count, or luminal speed"
+      - "choosing the dynamical completion that reproduces target radiative behavior"
+      - "calling graph eigenmodes physical gravitational waves"
+      - "building Detector_src response from the target interferometer response"
+    oracle_only_content:
+      - "target tensor-mode, polarization, propagation, damping, and detector-response expectations"
+    fail_closed_if:
+      - "target radiative structures choose the source completion, gauge, or mode basis"
+      - "an artificial P8 countermodel completion is adopted as source dynamics"
+    inconclusive_if:
+      - "no physical dynamics, principal symbol, stability data, or detector semantics exists"
+      - "extra modes or strong-coupling behavior cannot be controlled"
+    current_case_status: "NOT_RUN_PROTOCOL_ONLY"
+
+  - plan_task_id: "P9-T07"
+    case_name: "conservation_constraint_closure_and_compact_source"
+    target_question: "Does the source-derived nonlinear system propagate its own constraints and yield one controlled physical compact-source solution?"
+    required_source_side_products:
+      - "nonlinear source-derived field and matter equations"
+      - "source-derived symmetry or replacement and conservation bridge"
+      - "well-posed initial-boundary data and constraint propagation theorem or computation"
+      - "physically typed compact matter source and exterior observable map"
+      - "reproducible solver, residual norm, and breakdown classifier"
+    live_fixed_constraints:
+      - "The P8 finite component-zero-sum identity is not a contracted Bianchi identity."
+      - "Component shifts are not diffeomorphism gauge."
+      - "No target stress-energy map, nonlinear curvature operator, continuum limit, or physical boundary data is derived."
+    principal_circularity_channels:
+      - "importing Bianchi identities, GR constraints, diffeomorphism gauge, or covariant conservation"
+      - "using Schwarzschild, TOV, or another target compact-source solution as source ansatz, initial data, boundary data, or solver seed"
+      - "defining the exterior observable by target mass or areal radius"
+      - "discarding singular or nonconvergent branches because they disagree with the target"
+    oracle_only_content:
+      - "target conservation, constraint, exterior-field, and compact-source solution records"
+    fail_closed_if:
+      - "a target identity, constraint, solution, or target-derived boundary condition is upstream"
+      - "the finite graph identity is relabeled as target covariant conservation"
+    inconclusive_if:
+      - "physical nonlinear equations, conservation bridge, boundary provenance, or compact-source semantics are absent"
+      - "solver residuals or singular behavior prevent controlled comparison"
+    current_case_status: "NOT_RUN_PROTOCOL_ONLY"
+
+cross_case_suite_audit:
+  immutable_suite_commitments:
+    - "one fixed source ontology and adopted-law version unless a new suite version is opened"
+    - "one explicit ledger of proposal-only extensions and target exposure"
+    - "suite-global physical constants and calibration rules"
+    - "shared model-to-world maps or explicit reasons for lawful case-local differences"
+    - "stable unit conventions and uncertainty semantics"
+    - "stable approximation and correction hierarchy"
+  consistency_failures:
+    - "case-specific parameter retuning"
+    - "case-specific source ontology or hidden source-extension changes"
+    - "using an earlier target-exposed case result as an unmarked source derivation in a later case"
+    - "different physical meanings assigned to the same formal operational token"
+    - "excluding a fatal case from the aggregate verdict"
+  calibration_sequence_rule: >-
+    If P9-T02 or another early case fixes a parameter using target information,
+    that case is a calibration case for that parameter. Only later cases whose
+    oracles remained unopened after the parameter freeze may provide
+    out-of-sample evidence, and every result remains conditional on the status
+    of any proposal-only extension.
+  aggregation_rule: >-
+    Report every pass, failure, rejection, and inconclusive case separately.
+    No weighted average, majority vote, or broad qualitative resemblance may
+    erase a fatal target import, uncontrolled instability, missing physical
+    semantics, or failed required benchmark.
+
+findings:
+  - finding_id: "P9T01-PHIL-001"
+    severity: "blocking_against_overclaim"
+    statement: "A provenance-DAG non-reachability theorem can establish protocol-level computational non-circularity under explicit hypotheses; it cannot establish physical recovery, theorem truth outside those hypotheses, or absence of unrecorded human target influence."
+  - finding_id: "P9T01-PHIL-002"
+    severity: "blocking_against_overclaim"
+    statement: "A result depending on proposal-only source-extension data must remain conditional and cannot be reported as recovery from the unchanged ontology."
+  - finding_id: "P9T01-PHIL-003"
+    severity: "blocking"
+    statement: "The fixed P7 operational roles remain formal tokens; without a model-to-world map, clock, rod, signal, detector, and free-fall comparisons are formal analogies or physically inconclusive."
+  - finding_id: "P9T01-PHIL-004"
+    severity: "high"
+    statement: "Calibration and testing require an explicit partition; a target datum used to fix a parameter cannot also count as an independent prediction of that parameter."
+  - finding_id: "P9T01-PHIL-005"
+    severity: "high"
+    statement: "The post-seal boundary must be one-way. Any oracle-informed rerun is a new target-exposed protocol version, not continuation of the original blind case."
+  - finding_id: "P9T01-PHIL-006"
+    severity: "high"
+    statement: "Independent reproduction requires independent code or method provenance and no shared intermediates; same-context parent-child synthesis and ordinary reruns do not qualify."
+  - finding_id: "P9T01-PHIL-007"
+    severity: "high"
+    statement: "Current fixed P5 through P8 evidence lacks the effective metric, physical dynamics, principal symbol, scale control, and model-to-world semantics needed by the proposed cases; a future case must add materially new lawful payload or return an exact inconclusive or failure status."
+  - finding_id: "P9T01-PHIL-008"
+    severity: "blocking_against_promotion"
+    statement: "Protocol correctness, case agreement, validators, commits, and internal review do not create Gate E authority or repair the protected Gate D NOT READY verdict."
+  - finding_id: "P9T01-PHIL-009"
+    severity: "high"
+    statement: "Suite-global parameter, source-status, semantic, and correction commitments must be frozen across P9-T02 through P9-T07; unexplained case-specific changes are target-tuning evidence."
+  - finding_id: "P9T01-PHIL-010"
+    severity: "high"
+    statement: "Firewall rejection, benchmark failure, conditional proposal-only agreement, formal analogy, and physical inconclusiveness are distinct outcomes and must never be collapsed into pass."
+  - finding_id: "P9T01-PHIL-011"
+    severity: "medium"
+    statement: "Known target cases can legitimately guide what is tested, but target exposure must be recorded; it weakens claims of blind discovery and increases the importance of held-out cases and independent replication."
+  - finding_id: "P9T01-PHIL-012"
+    severity: "high"
+    statement: "A post-seal match shows correspondence within the declared regime; it does not establish ontological truth, uniqueness, completed derivation, or empirical novelty."
+
+recommended_parent_fusion:
+  mandatory:
+    - "Represent source model, proposal-only source extension, independent calibration, formal operational token, target oracle, comparison, and protected promotion as different node or status types."
+    - "Propagate source-extension and target-exposure flags to every descendant and into the final case classification."
+    - "Require preregistration and an immutable source-output seal before oracle access."
+    - "Make the target-comparison edge one-way and version any oracle-informed rerun as nonblind."
+    - "Add an explicit model-to-world map field and classify its absence as physical inconclusiveness, not a benchmark pass."
+    - "Encode suite-global calibration and no-retuning rules across P9-T02 through P9-T07."
+    - "Keep fail-closed protocol rejection distinct from a scientifically valid benchmark failure and from inconclusive evidence."
+    - "Require independent implementation or method provenance, fresh environment, and no shared intermediates."
+    - "Keep all six proposed case records NOT_RUN in P9-T01."
+  advisory:
+    - "Use P9-T02 as calibration only for any quantity actually fixed from its target; reserve unopened later cases as holdouts."
+    - "Record a target-exposure ledger because the research program and protocol designers already know the GR benchmark family."
+    - "Preserve fatal failures and unresolved cases individually in any later aggregate Gate E matrix."
+
+review_disposition:
+  protocol_formulation_lawful: true
+  protocol_soundness_theorem_lawful_under_explicit_hypotheses: true
+  physical_benchmark_run_lawful_in_this_task: false
+  benchmark_result_available: false
+  current_ontology_recovery_established: false
+  independent_replication_completed: false
+  protected_Gate_E_authority_present: false
+  recommendation: >-
+    Complete P9-T01 as a draft/control protocol and firewall theorem only.
+    Preserve Gate D NOT READY, mark every P9-T02 through P9-T07 case NOT_RUN,
+    and permit later cases to return pass, fail, conditional, rejected, or
+    inconclusive outcomes without semantic or authority laundering.
+
+authority_limits:
+  reviewed_sources_modified: false
+  canonical_ontology_modified: false
+  source_law_adopted_or_rejected: false
+  source_extension_adopted: false
+  operational_semantics_adopted: false
+  model_to_world_map_established: false
+  effective_metric_established: false
+  physical_dynamics_established: false
+  Einstein_equations_derived: false
+  exact_GR_recovery_established: false
+  benchmark_case_executed: false
+  benchmark_result_established: false
+  Gate_D_repaired_or_reversed: false
+  Gate_E_verdict_issued: false
+  independent_replication_claimed: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+  completed_derivation_claimed: false
+  physics_promotion_authorized: false

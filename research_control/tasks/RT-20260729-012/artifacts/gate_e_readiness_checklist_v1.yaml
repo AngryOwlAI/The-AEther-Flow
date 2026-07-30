@@ -1,0 +1,153 @@
+schema_id: "gate_e_readiness_checklist_v1"
+artifact_id: "GateEReadinessChecklist_v1"
+task_id: "RT-20260729-012"
+job_id: "AJ-RT-20260729-012-001"
+plan_task_id: "P9-T01"
+status: "draft/control checklist"
+overall_readiness: "NOT_READY_NO_BENCHMARK_CASE_EXECUTED"
+Gate_D_status: "NOT_READY_EINSTEIN_SECTOR_DERIVATION_REQUIREMENTS_UNMET"
+Gate_D_status_changed: false
+Gate_E_verdict_issued: false
+protected_authority_present: false
+benchmark_promotion_authorized: false
+
+criteria:
+  - criterion_id: "GE-01"
+    burden: "A versioned source-derived benchmark protocol exists with typed mandatory fields and outcome semantics."
+    status: "PASS_PROTOCOL_SCOPE"
+    evidence: "SourceDerivedBenchmarkProtocol_v1 and SourceDerivedBenchmarkCaseSchema_v1"
+    promotion_effect: "none"
+  - criterion_id: "GE-02"
+    burden: "A fail-closed target-import firewall separates source execution from post-seal comparison."
+    status: "PASS_PROTOCOL_SCOPE"
+    evidence: "TargetImportFirewall_v1 and TargetImportFirewallSoundness_v1"
+    promotion_effect: "none"
+  - criterion_id: "GE-03"
+    burden: "Every required benchmark case has an instantiated source input code provenance tolerance correction and comparison manifest."
+    status: "FAIL_NOT_INSTANTIATED"
+    evidence: "All six P9-T02 through P9-T07 case templates contain missing prerequisites and unset tolerances."
+    promotion_effect: "blocks case execution"
+  - criterion_id: "GE-04"
+    burden: "The source theory derives the physical carrier dynamics matter coupling and model-to-world observables needed by the cases."
+    status: "FAIL_NOT_DERIVED"
+    evidence: "P8-T07 preserves Gate D NOT READY and the physical Einstein-sector bridge remains absent."
+    promotion_effect: "blocks physical benchmark interpretation"
+  - criterion_id: "GE-05"
+    burden: "All planned cases have been executed without target import and have decisive recorded outcomes."
+    status: "FAIL_NO_CASE_EXECUTED"
+    evidence: "case_execution_count=0 and case_pass_count=0"
+    promotion_effect: "blocks recovery and promotion"
+  - criterion_id: "GE-06"
+    burden: "Every claimed case result has a genuinely independent reproduction with fresh environment and no shared intermediates."
+    status: "FAIL_NOT_ACQUIRED"
+    evidence: "No P9 case execution or independent reproduction exists."
+    promotion_effect: "blocks decisive benchmark claim"
+  - criterion_id: "GE-07"
+    burden: "Numerical tolerances analytic equivalences uncertainty budgets and residual corrections are preregistered and independently justified."
+    status: "FAIL_CASE_LOCAL_DATA_ABSENT"
+    evidence: "P9-T01 specifies required fields but assigns no physical tolerance."
+    promotion_effect: "blocks numerical pass"
+  - criterion_id: "GE-08"
+    burden: "Cross-case calibration holdout consistency target-exposure status and failure handling preserve deviations extra modes and uncontrolled corrections."
+    status: "FAIL_NO_CASE_EVIDENCE"
+    evidence: "Only protocol rules exist."
+    promotion_effect: "blocks integrated recovery"
+  - criterion_id: "GE-09"
+    burden: "Exact-GR recovery obligations are satisfied without reusing adopted GR dynamics as source input."
+    status: "FAIL_NOT_ESTABLISHED"
+    evidence: "P8-T07 records no Einstein equations or exact-GR recovery; P9-T01 is protocol only."
+    promotion_effect: "blocks benchmark promotion"
+  - criterion_id: "GE-10"
+    burden: "Exact protected Gate E or benchmark-promotion authority is present and may be consumed once."
+    status: "DEFERRED_NOT_REQUESTED"
+    evidence: "P9-T01 requires no human gate and creates no protected authority."
+    promotion_effect: "blocks protected promotion even if later scientific evidence exists"
+
+counts:
+  pass_protocol_scope: 2
+  fail_or_not_established: 7
+  deferred: 1
+  total: 10
+  executed_case_count: 0
+  passed_case_count: 0
+
+case_readiness:
+  - case_id: "P9-BENCH-VACUUM-MINKOWSKI-V1"
+    downstream_plan_task_id: "P9-T02"
+    status: "NOT_READY"
+    exact_missing_bundle:
+      - "source-derived physical vacuum or stationary state"
+      - "lawful effective geometry map"
+      - "physical perturbative dynamics"
+      - "case-local tolerance correction and reproduction manifests"
+  - case_id: "P9-BENCH-WEAK-FIELD-CLOCK-V1"
+    downstream_plan_task_id: "P9-T03"
+    status: "NOT_READY_DEPENDS_ON_P9_T02"
+    exact_missing_bundle:
+      - "source-derived weak-field equations"
+      - "physical operational-device semantics"
+      - "source-derived potential and observable maps"
+  - case_id: "P9-BENCH-CAUSAL-FREEFALL-V1"
+    downstream_plan_task_id: "P9-T04"
+    status: "NOT_READY_DEPENDS_ON_P9_T03"
+    exact_missing_bundle:
+      - "multiple physical source matter sectors"
+      - "source-derived characteristic structure"
+      - "universal coupling and free-fall comparison map"
+  - case_id: "P9-BENCH-FLRW-COSMOLOGY-V1"
+    downstream_plan_task_id: "P9-T05"
+    status: "NOT_READY_DEPENDS_ON_P9_T04"
+    exact_missing_bundle:
+      - "source homogeneous and isotropic state"
+      - "source-derived expansion observable and matter evolution"
+      - "controlled cosmological correction regime"
+  - case_id: "P9-BENCH-RADIATIVE-SECTOR-V1"
+    downstream_plan_task_id: "P9-T06"
+    status: "NOT_READY_DEPENDS_ON_P9_T05"
+    exact_missing_bundle:
+      - "physical background and dynamical operator"
+      - "characteristics modes and stability"
+      - "physical detector semantics"
+  - case_id: "P9-BENCH-NONLINEAR-COMPACT-SOURCE-V1"
+    downstream_plan_task_id: "P9-T07"
+    status: "NOT_READY_DEPENDS_ON_P9_T06"
+    exact_missing_bundle:
+      - "source-defined compact matter state"
+      - "nonlinear coupled dynamics"
+      - "constraint propagation conservation and exterior observable bridge"
+
+positive_readiness_rule:
+  all_criteria_required: true
+  protocol_checks_are_necessary_not_sufficient: true
+  any_firewall_failure_blocks_case: true
+  any_uncontrolled_physical_semantics_blocks_physical_result: true
+  any_missing_independent_reproduction_blocks_decisive_result: true
+  exact_protected_authority_required_before_promotion: true
+  physical_result_requires_model_to_world_map: true
+  calibration_case_cannot_double_as_prediction: true
+  suite_global_parameters_frozen_before_holdout_oracles: true
+
+current_disposition:
+  protocol_ready_for_first_case_construction_after_checkpoint: true
+  next_plan_task_id: "P9-T02"
+  next_role_family: "candidate-constructor@0.2.0"
+  next_scope: "Attempt the vacuum and Minkowski source-only case under the protocol; pass fail or record a precise obstruction."
+  requires_human_gate: false
+  benchmark_result_authorized_by_this_checklist: false
+  benchmark_promotion_authorized_by_this_checklist: false
+
+authority_limits:
+  checklist_is_Gate_E_verdict: false
+  protocol_pass_is_benchmark_pass: false
+  Gate_D_reversed: false
+  physical_status_changed: false
+  distance_to_gr_changed: false
+  exact_GR_recovery_proved: false
+  benchmark_result_established: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false

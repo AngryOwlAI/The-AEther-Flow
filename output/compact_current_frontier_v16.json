@@ -2,7 +2,7 @@
   "schema_id": "compact_current_frontier_v16",
   "generated_from": [
     "research_control/program_state.yaml",
-    "research_control/handoffs/handoff-0907.yaml",
+    "research_control/handoffs/handoff-0909.yaml",
     "registries/DISTANCE_TO_GR_LEDGER.csv",
     "registries/METRIC_USE_LEDGER.csv",
     "research_control/current_frontier.md",
@@ -11,17 +11,17 @@
     "research_control/design/active_state_bifurcation_policy_v1.md"
   ],
   "active_state": {
-    "active_task_id": "RT-20260729-011",
-    "latest_handoff_id": "handoff-0907",
-    "current_status": "protected_gate_d_not_ready_ready_for_checkpoint",
+    "active_task_id": "RT-20260730-001",
+    "latest_handoff_id": "handoff-0909",
+    "current_status": "p9_t01_handoff_identity_checkpoint_recovery_pass_ready_for_checkpoint",
     "v15_completed": false,
     "v16_completed": false,
     "v16_plan_registered": true
   },
   "active_state_bifurcation": {
-    "latest_research_task_id": "RT-20260729-011",
-    "latest_research_handoff_id": "handoff-0907",
-    "latest_research_next_action": "Run one governed checkpoint for AJ-RT-20260729-011-001. After checkpoint, execute at most one P9-T01 packet limited to source-only weak-field and recovery benchmark protocol design plus an explicit claim firewall; preserve Gate D NOT READY and do not claim a benchmark result, promotion, Einstein equations, or exact-GR recovery.",
+    "latest_research_task_id": "RT-20260730-001",
+    "latest_research_handoff_id": "handoff-0909",
+    "latest_research_next_action": "Run the one governed cumulative checkpoint for AJ-RT-20260730-001-001. Only after it commits may one fresh bounded P9-T02 candidate-construction packet construct or derive a source state for the vacuum Minkowski benchmark under the frozen source-only protocol and return PASS, FAIL, or INCONCLUSIVE without target-informed source repair.",
     "latest_project_system_task_id": "none",
     "latest_project_system_status": "none",
     "latest_project_system_sidecar_task_id": "none",
@@ -30,10 +30,10 @@
     "next_research_route_source": "latest_research_handoff"
   },
   "next_route": {
-    "route_id": "v21_p9_t01_source_only_benchmark_protocol_after_checkpoint",
-    "role_family": "benchmark-designer",
-    "target_derivation_milestone": "exact_gr_recovery",
-    "milestone_burden": "Define the source-only weak-field and recovery benchmark protocol without treating protocol design as recovered GR.",
+    "route_id": "v21_p9_t02_vacuum_minkowski_source_only_case_after_checkpoint",
+    "role_family": "candidate-constructor@0.2.0",
+    "target_derivation_milestone": "benchmark_promotion",
+    "milestone_burden": "Run the first source-derived benchmark without reusing adopted GR dynamics.",
     "requires_human_gate": false
   },
   "claim_boundary": {
@@ -330,10 +330,10 @@
   ],
   "distance_to_gr": {
     "delta": {
-      "effect": "no_distance_delta",
+      "effect": "none_project_system_recovery",
       "changed": false,
-      "milestone": "einstein_equations",
-      "burden_id": "einstein_equations"
+      "milestone": "benchmark_promotion",
+      "burden_id": "benchmark_promotion"
     },
     "high_risk_rows": [
       {
@@ -565,7 +565,7 @@
           "no_benchmark_gate_chair_closure",
           "no_completed_derivation"
         ],
-        "last_evidence_path": "research_control/program_state.yaml",
+        "last_evidence_path": "research_control/tasks/RT-20260729-012/artifacts/source_derived_benchmark_protocol_v1.tex",
         "high_risk_status_card": {
           "object_id": "benchmark_promotion",
           "positive_status": "benchmark_promotion remains blocked by upstream derivation burdens and protected authority.",
@@ -625,7 +625,7 @@
         "layer": "post_checkpoint",
         "status": "PENDING",
         "evidence": [
-          "One governed checkpoint remains; P9-T01 is not executed."
+          "One governed cumulative checkpoint remains; P9-T02 is not executed before it."
         ]
       }
     ]

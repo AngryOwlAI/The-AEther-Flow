@@ -1,0 +1,594 @@
+validation_status: "PASS"
+final_repository_validation_status: "PASS_READY_FOR_CHECKPOINT"
+job_id: "AJ-RT-20260729-012-001"
+completion_id: "AJC-AJ-RT-20260729-012-001"
+task_id: "RT-20260729-012"
+task_type: "v21_p9_t01_source_derived_benchmark_protocol"
+decision_id: "DDR-20260729-012"
+role_id: "ontology-formalizer"
+role_version: "0.2.0"
+execution_role_ref: "ontology-formalizer@0.2.0--RT-20260729-012"
+status: "completed"
+created_at: "2026-07-30T03:18:05Z"
+started_at: "2026-07-30T03:18:05Z"
+completed_at: "2026-07-30T03:37:03Z"
+objective: "Execute only v21 P9-T01: formalize SourceDerivedBenchmarkProtocol_v1, a typed case schema, an explicit target-import firewall, and a Gate E readiness checklist; prove the firewall's protocol-level non-circularity under exact hypotheses; and leave every benchmark case unexecuted."
+completion_summary: "P9-T01 defines an audit-ready draft/control benchmark protocol, six typed NOT_RUN case templates, a fail-closed target-import firewall, and TargetImportFirewallSoundness_v1. The theorem proves only that, under a complete typed provenance DAG and an immutable post-seal target-oracle boundary, forbidden target roots cannot influence sealed source outputs. It neither supplies a physical source output nor executes, passes, or promotes a benchmark. Gate D remains NOT_READY and Gate E remains NOT_READY_NO_BENCHMARK_CASE_EXECUTED."
+objective_result: "protocol_defined_no_case_executed_no_distance_delta"
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 166
+  passes_consumed: 151
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:166"
+  handoff_token: "7a15a0d575eb479c070d1461dedf34dfd734c2afb2624348"
+  relay_claim_token: "e7997b9d02f4d9b318223aab4a8e537a84b0fe82f90467d3"
+  route_work_item_id: "P9-T01"
+  route_worker_skill: "continue-research"
+  route_sha256: "4aa5eaaa1dffb7a1bda5ab14bdfea8781183317abe97cdcf526f118e1f5a66db"
+  route_reason: "dependency_ready_in_scope"
+  route_strategy_id: "continue_in_scope_generation_166"
+  route_blocker_fingerprint: "423d9c1d28c144fb014b7639396a60c4d16506b4e592c490384f189da9c373fe"
+  route_before_fingerprint: "423d9c1d28c144fb014b7639396a60c4d16506b4e592c490384f189da9c373fe"
+  worker_skill: "continue-research"
+  worker_invocation_count: 1
+
+transaction_status: "ready_for_checkpoint"
+result_disposition: "PASS_PROTOCOL_DEFINED_NO_CASE_EXECUTED_READY_FOR_CHECKPOINT"
+work_item_status: "completed"
+milestone_disposition: "benchmark_contract_burden_discharged_physical_recovery_unestablished"
+adoption_status: "blocked_adoption_open_continuation"
+checkpoint_commit:
+  required: true
+  attempted: false
+  committed: false
+  commit_sha: ""
+  dependency_checkpoint_commit: "c65c2d40cff97ecd96de1c59bd220a9f1274dfc6"
+  push_authorized: false
+  push_performed: false
+
+is_physics_task: true
+payload_class: "source_derived_benchmark_protocol_theorem"
+has_new_mathematical_payload: true
+source_extension_classification_required: false
+external_red_team_finding_requires_integration: false
+physics_promotion_authorized: false
+proof_authority: false
+
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P9"
+  plan_task_id: "P9-T01"
+  work_kind: "benchmark_or_recovery"
+  task_class: "science"
+  expected_result_kind: "theorem_or_precise_obstruction"
+  dependency_task_ids:
+    - "P8-T07"
+  dependency_completion_paths:
+    - "research_control/tasks/RT-20260729-011/jobs/completions/AJC-AJ-RT-20260729-011-001.yaml"
+  dependency_completion_sha256es:
+    - "e9ab692e9638395290959388d14cd574eee9b67906a00afbe4674f0205ef3f23"
+  dependency_checkpoint_commits:
+    - "c65c2d40cff97ecd96de1c59bd220a9f1274dfc6"
+  work_item_status: "completed_protocol_defined_no_case_executed_ready_for_checkpoint"
+  recommendation_ids:
+    - "V21-R28"
+    - "V21-R29"
+    - "V21-R63"
+    - "V21-R66"
+    - "V21-R67"
+  recommendation_coverage_role: "source_derived_benchmark_contract_and_target_import_firewall"
+  scientific_claims_changed: true
+  scientific_claim_change_scope: "new draft/control protocol theorem and typed benchmark contract only"
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  distance_to_gr_delta_scope: "protocol precondition only; no physical source output or recovered benchmark"
+  physics_promotion_authorized: false
+  proof_authority: false
+  next_dependency_work_item: "P9-T02_vacuum_minkowski_source_only_case_after_successful_checkpoint"
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  observed_durable_outputs:
+    physics:
+      - "one typed source-derived benchmark protocol"
+      - "one target-import firewall soundness theorem"
+      - "one benchmark case schema and Gate E readiness checklist"
+    project_system:
+      - "one task-local validator and compact validation receipt"
+      - "parent-child synthesis records"
+      - "standard control records and generated memory derivatives"
+  accepted_criteria:
+    physics:
+      - "every case separates source execution from post-seal target comparison"
+      - "forbidden target roots cannot reach source computation"
+      - "success, failure, inconclusive, analytic-equivalence, numerical-tolerance, residual, and independent-reproduction rules are explicit"
+      - "no benchmark case is executed or passed"
+    project_system:
+      - "task-local schema, reachability, hash, parent-child, and authority checks pass"
+      - "claim-language and documentation-impact gates pass"
+      - "one governed checkpoint records the bounded transaction"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+physics_payload_admission_result:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "physics"
+  declared_payload_type: "theorem"
+  realized_payload_type: "theorem_with_hypotheses_and_proof"
+  candidate_family: "SourceDerivedBenchmarkProtocol_v1"
+  decision_identity: "TargetImportFirewallSoundness_v1"
+  result: "PASS"
+  material_payload_present: true
+  process_receipts_counted_as_payload: false
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed_by_admission: false
+  physics_promotion_authorized: false
+
+family_freeze_admission_result:
+  schema_id: "family_freeze_route_admission_v1"
+  policy_id: "family_freeze_reopening_policy_v1"
+  route_id: "v21_p9_t01_source_derived_benchmark_protocol"
+  family_id: "SourceDerivedBenchmarkProtocol_v1"
+  detected_match_basis: []
+  reopening_requested: false
+  result: "PASS_DISTINCT_DOWNSTREAM_PROTOCOL_FAMILY"
+  local_family_freeze_preserved: true
+  global_no_go_claimed: false
+  physics_promotion_authorized: false
+
+ordinary_route_guard_admission_result:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0907"
+  selected_plan_task_id: "P9-T01"
+  guard_outcome: "below_threshold"
+  result: "PASS"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  scientific_status_changed_by_guard: false
+  physics_promotion_authorized: false
+
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_execution_unit_count: 2
+  outer_agentjob_count: 1
+  child_agentjob_count: 0
+  subagent_count: 2
+
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260729-012/artifacts/child_phys_math_p9_t01_benchmark_protocol.yaml"
+      output_sha256: "fd9e2a5f7836c20d94847cfc1b177d15691213fea92cfddc148c28fe0c204cab"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260729-012/artifacts/child_phys_phil_p9_t01_benchmark_protocol.yaml"
+      output_sha256: "96dca88853f91a45ca6ee2da1cded2c9dfeffda9541dc523792211afdb473808"
+      status: "completed"
+  conflict_review:
+    status: "resolved"
+    review_path: "research_control/tasks/RT-20260729-012/artifacts/parent_conflict_review_p9_t01_benchmark_protocol.yaml"
+    review_sha256: "56df9328455ff96116fc4c6206609f3359857c11c72a30e746d79033e34f54fb"
+    resolution_rounds: 1
+    resolved_conflict_count: 6
+    unresolved_conflicts: []
+  fusion:
+    fused_output_path: "research_control/tasks/RT-20260729-012/artifacts/source_derived_benchmark_protocol_v1.tex"
+    fusion_notes_path: "research_control/tasks/RT-20260729-012/artifacts/parent_fusion_notes_p9_t01_benchmark_protocol.md"
+    shared_consensus_summary: "A benchmark is source-derived only when its entire source-stage provenance is target-independent, sealed before target comparison, and audited fail closed."
+    unique_phys_math_contributions: "Typed provenance DAG, reachability theorem, topological-induction proof, outcome partition, tolerance controls, and minimal contaminating counterexample."
+    unique_phys_phil_contributions: "Epistemic firewall, model-to-world bridge requirement, target-exposure ledger, blindness and independence calibration, and claim-level promotion boundary."
+    novelty_preservation_summary: "Fusion supplies the first project-wide typed benchmark contract and target-import firewall without fabricating a benchmark result."
+    claim_boundary_preservation_summary: "No benchmark case, physical recovery, Gate D repair, Gate E verdict, ontology adoption, Einstein equation, exact-GR recovery, proof authority, publication, push, global no-go, or completed derivation is authorized."
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+
+memory_preflight:
+  preflight_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1087
+    relationship_row_count: 5507
+    semantic_row_count: 1087
+    vault_row_count: 1087
+    local_cache_only_warning_count: 0
+    refresh_performed: true
+  refresh_needed: true
+  refresh_performed: true
+  refresh_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py"
+  before_refresh:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    warning_count: 8
+  after_refresh:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1087
+    relationship_row_count: 5507
+    semantic_row_count: 1087
+    vault_row_count: 1087
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v21.md --json"
+      query_type: "lookup"
+      query_text: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"benchmark protocol target import firewall\" --limit 10 --json"
+      query_type: "search"
+      query_text: "benchmark protocol target import firewall"
+      returned_object_ids:
+        - "TEX-V21-P8-T07-GATE-D-DECISION-V1"
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+    - object_id: "TEX-V21-P8-T07-GATE-D-DECISION-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260729-011/artifacts/p8_t07_gate_d_decision_v1.tex"
+      source_hash: "035ea88a612d861a00d0703ec2bd1094e01194c113d7ff2588e3a4ad8bf47d63"
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "cc7ca9b540c7f0ac3906cdfa046d274be8c966eb851ad783bcb851a34b6eafb7"
+    - object_id: "TEX-ONTOLOGY-AETHER-FLOW-DYNAMICS"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "ontology/tex/aether_flow_dynamics.tex"
+      source_hash: "fd6e579e71ef7f2ac4c9668ceede051ad57033ee52357b2552a9e3a5a53939c7"
+    - object_id: "TEX-ONTOLOGY-AETHER-FLOW-RELATIVISTIC-RECOVERY"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "ontology/tex/aether_flow_relativistic_recovery.tex"
+      source_hash: "77d5c2db56f122870343834f853bf2f375a912116a347d7c5710405c8707d69c"
+    - object_id: "TEX-ONTOLOGY-AETHER-FLOW-CONSISTENCY"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "ontology/tex/aether_flow_consistency.tex"
+      source_hash: "d965519639ee8764a5c5a63798d15e8a9a380d7e208dffc43a0be02b6f245ba1"
+  authority_note: "Obsidian wiki notes, semantic extracts, the SQLite memory index, PDFs, and .local files are retrieval layers only and are not authority."
+
+protocol_result:
+  protocol_id: "SourceDerivedBenchmarkProtocol_v1"
+  firewall_id: "TargetImportFirewall_v1"
+  theorem_id: "TargetImportFirewallSoundness_v1"
+  theorem_status: "draft/control"
+  theorem_hypothesis_count: 6
+  theorem_proof_method: "topological induction over source-stage nodes followed by seal immutability"
+  case_template_count: 6
+  executed_case_count: 0
+  passed_case_count: 0
+  failed_case_count: 0
+  inconclusive_case_count: 0
+  Gate_D_status: "NOT_READY"
+  Gate_D_changed: false
+  Gate_E_status: "NOT_READY_NO_BENCHMARK_CASE_EXECUTED"
+  Gate_E_verdict_issued: false
+  model_to_world_map_required: true
+  target_exposure_ledger_required: true
+  independent_method_required: true
+  same_context_child_review_is_independent_replication: false
+  benchmark_result_established: false
+  exact_GR_recovery_established: false
+  physics_promotion_authorized: false
+
+new_mathematical_payload:
+  - payload_id: "P9T01-PAYLOAD-TARGET-IMPORT-FIREWALL-SOUNDNESS-001"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    name: "TargetImportFirewallSoundness_v1"
+    summary: "For a complete properly typed finite provenance DAG whose source-stage ancestors exclude every target or forbidden root, whose source outputs are sealed before a read-only target oracle opens, and whose revisions are immutable, topological induction proves that sealed source outputs are invariant under target-root variation. This establishes protocol-level non-circularity only."
+
+mathematical_payload_manifest:
+  - payload_id: "P9T01-PAYLOAD-TARGET-IMPORT-FIREWALL-SOUNDNESS-001"
+    payload_type: "theorem"
+    object_name: "TargetImportFirewallSoundness_v1"
+    claim_status: "draft/control protocol theorem"
+    source_path: "research_control/tasks/RT-20260729-012/artifacts/source_derived_benchmark_protocol_v1.tex"
+    burden_effect: "narrows"
+    summary: "Defines the exact provenance hypotheses under which target agreement cannot be caused by reusing the target theory upstream of a sealed source result."
+
+countermodel_obligations:
+  policy_id: "minimal_countermodel_obligation_policy_v1"
+  theorem_family: "other"
+  waiver_decision_id: ""
+  slots:
+    - countermodel_slot: "target_tuned_parameter_contamination"
+      status: "filled"
+      scope: "minimal provenance-DAG violation"
+      result_artifact: "research_control/tasks/RT-20260729-012/artifacts/target_import_firewall_v1.yaml"
+      result: "A target residual selecting a source parameter creates a forbidden target-to-source path and is rejected as FAIL_FIREWALL."
+
+physics_progress_status:
+  status: "burden_discharged"
+  target_derivation_milestone: "benchmark_promotion"
+  milestone_burden: "Create a benchmark contract that cannot be satisfied by reusing adopted GR dynamics."
+  explanation: "The protocol-design burden is discharged. No source calculation, target observable, physical benchmark, Einstein equation, exact-GR recovery, or benchmark-promotion burden is discharged."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+loop_risk_decision:
+  category: "bridge_facing_candidate_path"
+  next_route: "continue_bridge_facing_candidate_path"
+  rationale: "P9-T01 introduces a new downstream protocol object rather than reconstructing a frozen P8 candidate. P9-T02 must attempt the first source-only case under the frozen protocol and return PASS, FAIL, or INCONCLUSIVE without target-informed repair."
+  repeated_burdens: []
+
+route_cycle_control:
+  cycle_family: "v21_p9_source_derived_benchmark_suite"
+  current_cycle_step: "P9-T01_protocol_definition"
+  cycle_risk: "A later case could tune source inputs, code, tolerances, or branches using target residuals and falsely report recovery."
+  prior_related_tasks:
+    - "RT-20260729-011"
+    - "RT-20260729-009"
+  orbit_avoidance_reason: "The next task must instantiate a frozen case template and may not revise protocol parameters in response to target comparison."
+  next_role_consequence: "Route one P9-T02 candidate-constructor packet after checkpoint; any target exposure or missing source output must fail closed or return inconclusive."
+
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "benchmark_promotion"
+  milestone: "benchmark_promotion"
+  old_status: "blocked by missing primitive"
+  new_status: "blocked by missing primitive; source-derived benchmark protocol defined but no case executed"
+  ledger_row_updated: true
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "The benchmark-promotion row gains a protocol-level evidence path and records zero executed cases; mathematical, physical, and promotion status remain blocked."
+  downstream_unlocked:
+    - "P9-T02 source-only vacuum and Minkowski case construction after checkpoint"
+  downstream_still_blocked:
+    - "any passed physical benchmark"
+    - "positive Gate E verdict"
+    - "Einstein equations"
+    - "exact-GR recovery"
+    - "benchmark promotion"
+  explanation: "A non-circular benchmark contract is a necessary control precondition but supplies no physical recovery evidence."
+
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "unchanged; no canonical ontology edit or source-law adoption"
+  - burden: "Source equivalence EqSrc"
+    status: "unchanged"
+  - burden: "RetainH"
+    status: "unchanged"
+  - burden: "GenH"
+    status: "unchanged"
+  - burden: "ObsLoc_lc"
+    status: "unchanged"
+  - burden: "Resp_lc"
+    status: "unchanged"
+  - burden: "M_src"
+    status: "unchanged protected finite matter status"
+  - burden: "g_eff"
+    status: "unresolved; the protocol forbids importing a target metric as a source premise"
+  - burden: "matter coupling"
+    status: "unchanged; no universal source-derived matter coupling"
+  - burden: "Einstein equations"
+    status: "unresolved; Gate D remains NOT_READY and the protocol derives no field equation"
+  - burden: "finite-variation robustness"
+    status: "unchanged; case schemas require correction control but provide none"
+  - burden: "benchmark promotion"
+    status: "blocked; protocol defined, six case templates NOT_RUN, Gate E NOT_READY"
+  - burden: "Gate Chair status"
+    status: "P8-T07 protected NOT_READY remains unchanged; no P9 Gate E verdict"
+  - burden: "current route freeze or hard-fail status"
+    status: "P8 package local freeze preserved; protocol revisions fail closed after target exposure and P9-T02 remains open after checkpoint"
+
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+  summary: "Protocol soundness prevents one form of circular target reuse under explicit hypotheses; it does not establish a source-derived observable, physical benchmark result, Einstein equation, or exact-GR recovery."
+  forbidden_conclusions:
+    - "a complete provenance DAG as evidence that the source theory produces a physical observable"
+    - "post-seal target comparison as source-derived agreement"
+    - "protocol soundness as benchmark success"
+    - "same-context child synthesis as independent reproduction"
+    - "draft/control source records as M_src adoption"
+    - "the source protocol as g_eff"
+    - "the source protocol as matter coupling"
+    - "target-contaminated code training data priors lookup tables or caches as admissible source roots"
+    - "target-tuned tolerances parameters branches stopping rules or residual corrections"
+    - "Gate D repair or Gate E readiness"
+    - "Einstein equations exact-GR recovery benchmark promotion proof publication push or completed derivation"
+    - "current non-derivation as global no-go or future source-extension impossibility"
+    - "current non-derivation as global theory rejection"
+
+selected_next_route:
+  route_id: "v21_p9_t02_vacuum_minkowski_source_only_case"
+  route_label: "candidate-construction-packet"
+  role_family: "candidate-constructor"
+  role_version: "0.2.0"
+  worker_skill: "continue-research"
+  plan_task_id: "P9-T02"
+  target_derivation_milestone: "benchmark_promotion"
+  milestone_burden: "Execute the first source-only vacuum and Minkowski recovery case under SourceDerivedBenchmarkProtocol_v1 without importing the target metric or desired agreement."
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_after_checkpoint: true
+  physics_promotion_authorized: false
+  next_action: "After checkpoint, freeze the P9-T02 case manifest, execute only source-side construction if the current ontology supplies the required inputs, open the target oracle only after sealing, and report PASS, FAIL, or INCONCLUSIVE."
+  source_handoff: "research_control/handoffs/handoff-0908.yaml"
+
+claim_boundary:
+  boundary_id: "CB-V21-P9-T01-SOURCE-DERIVED-BENCHMARK-PROTOCOL-001"
+  allowed_scope: "One draft/control source-derived benchmark protocol, typed six-case schema, fail-closed target-import firewall, protocol-soundness theorem, Gate E readiness checklist without verdict, and post-checkpoint P9-T02 route."
+  blocked_scope: "Benchmark execution or pass, target-informed source selection, Gate D repair, Gate E verdict, canonical ontology or source-law edit, physical metric dynamics coupling or Einstein equation, exact-GR recovery, benchmark promotion, proof, publication, push, completed derivation, global no-go, or future impossibility."
+  claim_boundary_preserved: true
+
+artifact_evidence:
+  protocol:
+    path: "research_control/tasks/RT-20260729-012/artifacts/source_derived_benchmark_protocol_v1.tex"
+    sha256: "88ef097bf712ad115e9af62cc18a8b3eabb12f8545350f714ad065f702471007"
+  case_schema:
+    path: "research_control/tasks/RT-20260729-012/artifacts/source_derived_benchmark_case_schema_v1.yaml"
+    sha256: "5045de8fbaeb6c80b89ec88b71143a8aeaca1c892efadc4b7293cb438ee808d8"
+  firewall:
+    path: "research_control/tasks/RT-20260729-012/artifacts/target_import_firewall_v1.yaml"
+    sha256: "ccb9297f817a9b4eeb886834a510e1f21d518a2668bc3fde9695b909d6884acf"
+  gate_e_checklist:
+    path: "research_control/tasks/RT-20260729-012/artifacts/gate_e_readiness_checklist_v1.yaml"
+    sha256: "a9cefe08cc6bc8b0653fdfc72144d24e54fb14e565f8a499be49093bc615bb76"
+  compact_receipt:
+    path: "research_control/tasks/RT-20260729-012/artifacts/source_derived_benchmark_protocol_compact_receipt_v1.json"
+    sha256: "255db6ef55edbe17393b9fd032b44b21e7d7fa0814c89465a037d708061204cb"
+  validation_report:
+    path: "research_control/tasks/RT-20260729-012/artifacts/source_derived_benchmark_protocol_validation_v1.json"
+    sha256: "cfda0bf2d550f94f0e11d76467332895ffc0234c538ecc94ea6dfbdf8a498d71"
+
+output_paths:
+  - "research_control/tasks/RT-20260729-012/artifacts/source_derived_benchmark_protocol_v1.tex"
+  - "research_control/tasks/RT-20260729-012/artifacts/source_derived_benchmark_case_schema_v1.yaml"
+  - "research_control/tasks/RT-20260729-012/artifacts/target_import_firewall_v1.yaml"
+  - "research_control/tasks/RT-20260729-012/artifacts/gate_e_readiness_checklist_v1.yaml"
+  - "research_control/tasks/RT-20260729-012/artifacts/source_derived_benchmark_protocol_compact_receipt_v1.json"
+  - "research_control/tasks/RT-20260729-012/artifacts/source_derived_benchmark_protocol_validation_v1.json"
+  - "research_control/tasks/RT-20260729-012/artifacts/validate_source_derived_benchmark_protocol.py"
+  - "research_control/tasks/RT-20260729-012/artifacts/child_phys_math_p9_t01_benchmark_protocol.yaml"
+  - "research_control/tasks/RT-20260729-012/artifacts/child_phys_phil_p9_t01_benchmark_protocol.yaml"
+  - "research_control/tasks/RT-20260729-012/artifacts/parent_conflict_review_p9_t01_benchmark_protocol.yaml"
+  - "research_control/tasks/RT-20260729-012/artifacts/parent_fusion_notes_p9_t01_benchmark_protocol.md"
+  - "research_control/tasks/RT-20260729-012/00_TASK.yaml"
+  - "research_control/tasks/RT-20260729-012/DDR-20260729-012.md"
+  - "research_control/tasks/RT-20260729-012/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260729-012/roles/ontology-formalizer@0.2.0--RT-20260729-012.yaml"
+  - "research_control/tasks/RT-20260729-012/jobs/AJ-RT-20260729-012-001.yaml"
+  - "research_control/tasks/RT-20260729-012/jobs/completions/AJC-AJ-RT-20260729-012-001.yaml"
+  - "research_control/handoffs/handoff-0908.yaml"
+  - "research_control/handoffs/handoff-0908.md"
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "none; P9-T01 is a nonprotected draft/control protocol packet"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  push_authorized: false
+  external_outreach_authorized: false
+  publication_authorized: false
+  source_law_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 166 validated, atomically claimed, and consumed exactly one immutable P9-T01 continue-research route after the P8-T07 checkpoint."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The protocol, six-case schema, firewall, Gate E checklist, compact receipt, local validator, and resolved parent-child synthesis agree on zero executed cases and no promotion."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Task-local, documentation-impact, signal, research-control, memory, renderer, graph, claim-language, and whitespace checks pass."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "One governed checkpoint remains; P9-T02 is eligible only after that checkpoint."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Tracked frontier, task-index, graph, registry, and wiki derivatives are fresh."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory synchronization and validate-only pass."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation has no hard failure."
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required_no_nonblank_signals"
+  rationale: "The bounded protocol packet emits no new project-improvement signal."
+
+handoff_authority_boundary:
+  this_handoff_authorizes:
+    - "one governed checkpoint for AJ-RT-20260729-012-001"
+    - "after checkpoint, one bounded P9-T02 source-only vacuum and Minkowski case construction packet under the frozen protocol"
+  this_handoff_does_not_authorize:
+    - "target-informed source input parameter code branch stopping rule tolerance or residual selection"
+    - "benchmark pass or promotion"
+    - "Gate D repair or Gate E verdict"
+    - "ontology source-law metric dynamics coupling or Einstein-equation adoption"
+    - "exact-GR recovery proof publication push completed derivation global no-go or future impossibility"
+
+command_results:
+  - command: ".venv/bin/python research_control/tasks/RT-20260729-012/artifacts/validate_source_derived_benchmark_protocol.py --write-report --json"
+    status: "PASS"
+    summary: "All 84 protocol schema provenance firewall hash synthesis and authority checks pass; six cases remain NOT_RUN."
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+    status: "PASS"
+    summary: "Registered memory and wiki derivatives regenerate successfully."
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+    status: "PASS"
+    summary: "Tracked memory sources registries wiki derivatives and indexes are current."
+  - command: ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+    status: "PASS"
+    summary: "Documentation-impact receipt covers the bounded changed paths."
+  - command: ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+    status: "PASS"
+    summary: "Changed-source claim-language validation has no hard failures."
+  - command: ".venv/bin/python scripts/research_control/validate_research_control.py --json-summary"
+    status: "PASS"
+    summary: "Research-control schema authority routing payload and claim boundaries pass."
+  - command: "git diff --check"
+    status: "PASS"
+    summary: "No whitespace errors."

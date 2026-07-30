@@ -1,0 +1,348 @@
+schema_id: "target_import_firewall_v1"
+artifact_id: "TargetImportFirewall_v1"
+task_id: "RT-20260729-012"
+job_id: "AJ-RT-20260729-012-001"
+plan_task_id: "P9-T01"
+status: "draft/control"
+enforcement: "fail_closed"
+protocol_id: "SourceDerivedBenchmarkProtocol_v1"
+theorem_id: "TargetImportFirewallSoundness_v1"
+theorem_status: "draft/control theorem with explicit hypotheses"
+target_derivation_milestone: "benchmark_promotion"
+milestone_burden: "Create a benchmark contract that cannot be satisfied by reusing adopted GR dynamics."
+
+provenance_graph:
+  graph_kind: "finite_directed_acyclic_graph"
+  edge_semantics: "u_to_v means the value or selection of v depends on u"
+  node_classes:
+    admissible_roots:
+      - "fixed_source_datum"
+      - "disclosed_proposal_only_source_extension"
+      - "independent_calibration_not_selected_by_target_fit"
+      - "hashed_code_algorithm_environment_and_randomness_policy"
+    source_stage:
+      - "source_input"
+      - "source_parameter"
+      - "source_initial_or_boundary_datum"
+      - "source_branch_or_stopping_rule"
+      - "source_intermediate"
+      - "source_output"
+      - "source_uncertainty_and_correction"
+    seal:
+      - "immutable_source_manifest"
+      - "preregistered_comparison_rule"
+    target_roots:
+      - "read_only_target_reference"
+      - "external_observational_reference"
+    comparison_stage:
+      - "target_observable"
+      - "comparison_residual"
+      - "outcome_classifier"
+  required_partition_disjointness: true
+  acyclicity_required: true
+  complete_edge_manifest_required: true
+  undeclared_side_channel_disposition: "FAIL_FIREWALL"
+
+forbidden_upstream_roots:
+  - root_id: "TI-F01-TARGET-ATLAS"
+    class: "target_atlas"
+    forbidden_reach:
+      - "source_stage"
+      - "seal"
+  - root_id: "TI-F02-TARGET-METRIC"
+    class: "target_metric"
+    forbidden_reach:
+      - "source_stage"
+      - "seal"
+  - root_id: "TI-F03-TARGET-SOLUTION"
+    class: "target_solution"
+    forbidden_reach:
+      - "source_stage"
+      - "seal"
+  - root_id: "TI-F04-EINSTEIN-HILBERT"
+    class: "Einstein_Hilbert_action"
+    forbidden_reach:
+      - "source_stage"
+      - "seal"
+  - root_id: "TI-F05-EINSTEIN-EQUATIONS"
+    class: "Einstein_equations"
+    forbidden_reach:
+      - "source_stage"
+      - "seal"
+  - root_id: "TI-F06-TARGET-BOUNDARY"
+    class: "target_boundary_or_initial_data"
+    forbidden_reach:
+      - "source_stage"
+      - "seal"
+  - root_id: "TI-F07-TARGET-RESIDUAL"
+    class: "observed_target_residual_or_desired_agreement"
+    forbidden_reach:
+      - "source_parameter"
+      - "source_branch_or_stopping_rule"
+      - "preregistered_comparison_rule"
+  - root_id: "TI-F08-TARGET-TUNING"
+    class: "target_tuned_parameter_calibration_or_regularization"
+    forbidden_reach:
+      - "source_stage"
+      - "seal"
+  - root_id: "TI-F09-TARGET-BRANCH"
+    class: "target_selected_branch_basis_or_gauge"
+    forbidden_reach:
+      - "source_stage"
+      - "seal"
+  - root_id: "TI-F10-BENCHMARK-SUCCESS"
+    class: "benchmark_success_label"
+    forbidden_reach:
+      - "source_stage"
+      - "seal"
+  - root_id: "TI-F11-PROCESS-AUTHORITY"
+    class: "validator_registry_checkpoint_role_or_handoff_status"
+    forbidden_reach:
+      - "scientific_source_stage"
+  - root_id: "TI-F12-GENERATED-DERIVATIVE"
+    class: "wiki_pdf_memory_index_or_local_cache_as_scientific_authority"
+    forbidden_reach:
+      - "scientific_source_stage"
+  - root_id: "TI-F13-CONTAMINATED-CODE"
+    class: "target_contaminated_code_lookup_table_training_data_prior_or_cache"
+    forbidden_reach:
+      - "source_stage"
+      - "seal"
+
+allowed_edges:
+  source_stage:
+    - "admissible_root_to_source_input"
+    - "source_input_to_source_intermediate"
+    - "source_intermediate_to_source_intermediate"
+    - "source_intermediate_to_source_output"
+    - "source_output_to_source_uncertainty_or_correction"
+  seal:
+    - "source_root_intermediate_output_code_and_rule_to_seal"
+  comparison_stage:
+    - "verified_seal_to_target_oracle_open"
+    - "sealed_source_output_to_comparison"
+    - "target_reference_to_comparison"
+    - "preregistered_rule_to_comparison"
+    - "comparison_to_outcome_classifier"
+
+forbidden_edges:
+  - "target_root_to_source_input"
+  - "target_root_to_source_parameter"
+  - "target_root_to_source_initial_or_boundary_datum"
+  - "target_root_to_source_branch_or_stopping_rule"
+  - "target_root_to_source_intermediate"
+  - "target_root_to_source_output"
+  - "target_root_to_tolerance_or_equivalence_selection"
+  - "comparison_residual_to_source_parameter"
+  - "comparison_residual_to_source_branch"
+  - "comparison_residual_to_source_stopping_rule"
+  - "outcome_classifier_to_source_stage"
+  - "target_oracle_to_seal"
+  - "post_seal_mutation_of_source_manifest"
+
+stage_machine:
+  initial_state: "PREREGISTRATION"
+  states:
+    PREREGISTRATION:
+      required:
+        - "complete case schema"
+        - "source and code hash manifest"
+        - "provenance DAG"
+        - "analytic equivalence or numerical tolerance definition"
+        - "failure and inconclusive rules"
+      next: "FIREWALL_PRECHECK"
+    FIREWALL_PRECHECK:
+      required:
+        - "DAG parses and is acyclic"
+        - "every node is classified"
+        - "every edge is declared"
+        - "no forbidden root reaches source stage"
+      failure: "FAIL_FIREWALL"
+      next: "SOURCE_EXECUTION"
+    SOURCE_EXECUTION:
+      target_oracle_available: false
+      required:
+        - "exact manifest verified"
+        - "source validity checks run"
+        - "all intermediates recorded"
+      failure: "FAIL_SOURCE"
+      next: "SOURCE_SEAL"
+    SOURCE_SEAL:
+      required:
+        - "canonical serialization"
+        - "SHA-256 for roots code intermediates outputs rules and corrections"
+        - "immutable write-once receipt"
+      failure: "FAIL_FIREWALL"
+      next: "TARGET_ORACLE_OPEN"
+    TARGET_ORACLE_OPEN:
+      precondition: "seal verifies byte-for-byte"
+      source_mutation_allowed: false
+      next: "COMPARISON"
+    COMPARISON:
+      source_feedback_allowed: false
+      post_hoc_tuning_allowed: false
+      missing_control_disposition: "INCONCLUSIVE"
+      next: "INDEPENDENT_REPRODUCTION"
+    INDEPENDENT_REPRODUCTION:
+      primary_intermediate_sharing_allowed: false
+      target_oracle_before_reproduction_seal_allowed: false
+      next: "CLASSIFICATION"
+    CLASSIFICATION:
+      allowed_results:
+        - "PASS"
+        - "FAIL_COMPARISON"
+        - "FAIL_FIREWALL"
+        - "FAIL_SOURCE"
+        - "INCONCLUSIVE"
+      benchmark_promotion_effect: false
+
+source_output_seal:
+  serialization: "canonical JSON or an exactly specified byte serialization"
+  hash_algorithm: "SHA-256"
+  required_entries:
+    - "case_id"
+    - "protocol_version"
+    - "source_input_paths_and_hashes"
+    - "source_extension_status_and_hashes"
+    - "independent_calibration_provenance_and_hashes"
+    - "code_environment_and_dependency_hashes"
+    - "randomness_policy_and_seed_commitment"
+    - "derived_intermediate_manifest_and_hashes"
+    - "source_output_and_hash"
+    - "approximation_order_and_validity_domain"
+    - "residual_corrections_and_bounds"
+    - "analytic_equivalence_or_numerical_tolerance"
+    - "success_failure_and_inconclusive_rules"
+    - "provenance_dag_and_hash"
+  target_reference_hashes_in_source_execution_manifest: false
+  target_reference_identity_may_be_preregistered: true
+  target_reference_content_available_before_seal: false
+  seal_mutation_disposition: "FAIL_FIREWALL"
+
+soundness_theorem:
+  theorem_id: "TargetImportFirewallSoundness_v1"
+  hypotheses:
+    - hypothesis_id: "TF-H1"
+      statement: "The provenance record is a finite DAG with a complete node and edge manifest."
+    - hypothesis_id: "TF-H2"
+      statement: "Every source-stage root is admissible and no forbidden or target root reaches any source-stage node."
+    - hypothesis_id: "TF-H3"
+      statement: "Every source node is a deterministic function of its parents or uses a sealed randomness distribution and seed policy."
+    - hypothesis_id: "TF-H4"
+      statement: "The full source manifest and outputs are immutable after the seal."
+    - hypothesis_id: "TF-H5"
+      statement: "The target oracle is unavailable until the seal verifies."
+    - hypothesis_id: "TF-H6"
+      statement: "Comparison nodes cannot alter a source value branch tolerance stopping rule or seal."
+  conclusion: "The sealed source output is invariant under changes to target-reference roots that leave admissible source roots fixed; declared target data therefore cannot be the upstream cause of the source output or its later agreement."
+  proof_method: "topological induction over source-stage nodes followed by seal immutability"
+  necessary_not_sufficient:
+    - "does not prove the manifest has no implementation side channel"
+    - "does not prove a proposal-only source extension follows from current ontology"
+    - "does not supply model-to-world semantics"
+    - "does not execute or pass a benchmark"
+    - "does not authorize Gate E or benchmark promotion"
+
+counterexample_control:
+  control_id: "TARGET-IMPORT-MINIMAL-COUNTEREXAMPLE-001"
+  target_root: "target_metric_or_solution"
+  illicit_edge: "target_root_to_source_boundary_parameter"
+  downstream_path:
+    - "source_boundary_parameter"
+    - "source_solver"
+    - "source_output"
+  observed_agreement: "may_be_exact"
+  expected_firewall_result: "FAIL_FIREWALL"
+  lesson: "Exact agreement does not cure circular provenance."
+
+tolerance_firewall:
+  preregistration_required: true
+  target_mismatch_may_select_threshold: false
+  target_mismatch_may_select_norm: false
+  target_mismatch_may_select_sampling_domain: false
+  target_mismatch_may_select_error_floor: false
+  missing_tolerance: "INCONCLUSIVE"
+  post_hoc_tolerance_change: "FAIL_FIREWALL"
+  units_required: true
+  error_budget_basis_required: true
+  independent_calibration_required_when_not_analytic: true
+
+independent_reproduction_firewall:
+  fresh_executor_or_team_required: true
+  fresh_environment_required: true
+  independent_code_or_method_provenance_required: true
+  exact_source_and_code_hashes_required: true
+  primary_intermediates_or_outputs_may_be_copied: false
+  same_context_role_separation_counts_as_independent: false
+  target_oracle_open_only_after_reproduction_seal: true
+  reproduction_source_output_agreement_separate_from_target_agreement: true
+  missing_reproduction_disposition: "INCONCLUSIVE"
+
+suite_and_exposure_firewall:
+  calibration_validation_holdout_partition_required: true
+  target_fitted_parameter_counts_as_prediction_in_calibration_case: false
+  suite_global_parameter_freeze_before_holdout_oracle: true
+  case_specific_retuning: "FAIL_FIREWALL"
+  target_exposure_ledger_required: true
+  cognitive_exposure_absence_proved_by_DAG: false
+  oracle_informed_rerun: "new_nonblind_revision"
+  original_sealed_result_preserved: true
+  proposal_only_ancestry_propagates_to_classification: true
+  model_to_world_map_required_for_physical_claim: true
+  missing_model_to_world_map: "FORMAL_ANALOGY_OR_INCONCLUSIVE"
+
+failure_branches:
+  - failure_id: "TIF-F01"
+    trigger: "A forbidden target root reaches a source-stage node."
+    result: "FAIL_FIREWALL"
+  - failure_id: "TIF-F02"
+    trigger: "The provenance graph is cyclic incomplete or contains an unclassified node."
+    result: "FAIL_FIREWALL"
+  - failure_id: "TIF-F03"
+    trigger: "The target oracle opens before the source seal verifies."
+    result: "FAIL_FIREWALL"
+  - failure_id: "TIF-F04"
+    trigger: "A source value parameter branch tolerance or stopping rule changes after target comparison."
+    result: "FAIL_FIREWALL"
+  - failure_id: "TIF-F05"
+    trigger: "A fixed source or code hash differs."
+    result: "FAIL_SOURCE"
+  - failure_id: "TIF-F06"
+    trigger: "Source equations controls units or validity regime fail."
+    result: "FAIL_SOURCE"
+  - failure_id: "TIF-F07"
+    trigger: "Tolerance correction uncertainty physical semantics or reproduction evidence is missing."
+    result: "INCONCLUSIVE"
+  - failure_id: "TIF-F08"
+    trigger: "A valid sealed independently reproduced source output misses the preregistered criterion."
+    result: "FAIL_COMPARISON"
+
+current_result:
+  firewall_formalized: true
+  soundness_theorem_stated: true
+  proof_sketch_supplied: true
+  minimal_counterexample_supplied: true
+  target_oracle_post_seal_only: true
+  target_feedback_forbidden: true
+  benchmark_case_executed: false
+  benchmark_result_established: false
+  Gate_E_ready: false
+
+authority_limits:
+  canonical_ontology_modified: false
+  reviewed_source_modified: false
+  source_law_adopted_or_rejected: false
+  manifest_completeness_proved_for_future_implementations: false
+  physical_semantics_established: false
+  benchmark_case_executed: false
+  benchmark_result_established: false
+  exact_GR_recovery_proved: false
+  Gate_D_reversed: false
+  Gate_E_verdict_issued: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
