@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260730-012`
-- Latest handoff: `handoff-0919`
-- Current status: `source_cosmology_decoder_calibration_precisely_obstructed_case_inconclusive_ready_for_checkpoint`
+- Active task: `RT-20260730-013`
+- Latest handoff: `handoff-0920`
+- Current status: `radiative_dynamics_detector_nonselection_precisely_obstructed_case_inconclusive_ready_for_checkpoint`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260730-012`
-- Latest research handoff: `handoff-0919`
-- Latest research next action: Invoke the one governed checkpoint for AJ-RT-20260730-012-001. After that commit, use one fresh bounded Candidate Constructor packet for P9-T06 to execute the distinct radiative-sector benchmark case while carrying P9-T02 through P9-T05 INCONCLUSIVE dispositions and zero benchmark passes.
+- Latest research task: `RT-20260730-013`
+- Latest research handoff: `handoff-0920`
+- Latest research next action: Invoke the one governed checkpoint for AJ-RT-20260730-013-001. After that commit, use one fresh bounded Candidate Constructor packet for P9-T07 to execute the distinct nonlinear conservation, constraint-closure, and compact-source benchmark case while carrying P9-T02 through P9-T06 INCONCLUSIVE dispositions and zero benchmark passes.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p9_t06_radiative_sector_after_p9_t05_inconclusive`
+- Route ID: `v21_p9_t07_nonlinear_conservation_compact_source_after_p9_t06_inconclusive`
 - Role family: `candidate-constructor@0.2.0`
 - Target milestone: `benchmark_promotion`
-- Milestone burden: Test radiative-sector recovery without adopting target wave equations, polarizations, speed, damping, dispersion, or detector response.
+- Milestone burden: Move beyond linear and homogeneous controls.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `ad903cc6932e4d51017cf2452ec4cb9c5aa6a7fc4a821598c4eae7805e44764b`
-- JSON SHA-256: `9219ba8c0e69b70e1139f3208e79950244120301495c47e5c72e4698811bfc6b`
+- YAML SHA-256: `698ff60b3c43ae6fa953ebb79aa973e53cecae050cd96faba14f736a22364ba5`
+- JSON SHA-256: `7f093dc0affcb16fd7a3bd4c9059cd03f6b601868fb1f977218278e2ab75c901`
 
 ## Authority Warning
 

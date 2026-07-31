@@ -1,0 +1,26 @@
+schema_id: "p9_t06_internal_perspective_v1"
+task_id: "RT-20260730-013"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+outer_agentjob_count: 1
+child_agentjob_count: 0
+subagent_count: 0
+result:
+  exact_objects:
+    - "C4 Laplacian with quotient spectrum {2,2,4}"
+    - "positive-kinetic completion family m q_ddot + 2m gamma q_dot + L_C q = 0"
+    - "completion A roots +/- i sqrt(2), +/- 2i"
+    - "completion B roots -1/4 +/- i sqrt(7)/4 and -1/4 +/- i sqrt(15)/4"
+    - "commuting projectors Pi_2 and Pi_3 of ranks 2 and 3"
+    - "linear readout family D_d[q]=d^Tq"
+  conclusion: "The fixed static equation does not select the kinetic coefficient, damping, formal modal spectrum, radiative projector, or readout."
+  proof_obligations_remaining:
+    - "derive a physical time and length map"
+    - "derive a physical kinetic and causal operator"
+    - "derive a polarization selector and detector interaction"
+authority_limits:
+  source_extension_data_only: true
+  target_imported_as_source: false
+  physical_interpretation_established: false
+  physics_promotion_authorized: false

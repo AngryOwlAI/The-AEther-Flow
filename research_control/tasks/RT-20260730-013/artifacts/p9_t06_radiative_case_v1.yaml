@@ -1,0 +1,149 @@
+schema_id: "p9_t06_radiative_case_v1"
+artifact_id: "P9T06RadiativeSourceOnlyCase_v1"
+task_id: "RT-20260730-013"
+job_id: "AJ-RT-20260730-013-001"
+case_id: "P9-BENCH-RADIATIVE-V1"
+downstream_plan_task_id: "P9-T06"
+protocol_id: "SourceDerivedBenchmarkProtocol_v1"
+firewall_id: "TargetImportFirewall_v1"
+status: "completed"
+candidate_status: "draft/control"
+candidate_constructor_result: "precise_obstruction"
+execution_status: "INCONCLUSIVE"
+secondary_label: "FORMAL_ANALOGY"
+source_execution_status: "COMPLETED"
+source_stage_firewall_status: "PASS"
+source_output_seal_status: "SEALED"
+target_comparison_status: "OPENED_AFTER_SEAL_TYPED_BURDEN_ONLY"
+independent_reproduction_status: "NOT_ACQUIRED"
+target_derivation_milestone: "benchmark_promotion"
+milestone_burden: "Test the dynamical spin-2 or alternative radiative content."
+benchmark_scope: "radiative sector, polarizations, propagation speed, damping, dispersion, and detector coupling"
+source_only_attempt_id: "FiniteRadiativeCompletionFamily_v1"
+theorem_id: "P9T06-THM-STATIC-PRESERVING-RADIATIVE-COMPLETION-NONSELECTION-001"
+obstruction_id: "OBST-P9T06-RADIATIVE-DYNAMICS-DETECTOR-NONSELECTION-001"
+obstruction_scope: "current registered static finite source equation and operational-token package under the sealed P9 protocol"
+adoption_status: "blocked_adoption_open_continuation"
+source_inputs:
+  - object_id: "TEX-V21-P8-T04-FINITE-SOURCE-FIELD-EQUATION-IDENTITY-V1"
+    use: "registered static finite equation"
+  - object_id: "TEX-V21-P8-T05-FINITE-CONSTRAINT-DYNAMICAL-VIABILITY-STRESS-V1"
+    use: "registered proof that static data do not select dynamics"
+  - object_id: "TEX-V21-P7-T03-SOURCE-OPERATIONAL-DEVICE-SUITE-V1"
+    use: "registered source-token readout boundary"
+  - object_id: "TEX-V21-P9-T01-SOURCE-DERIVED-BENCHMARK-PROTOCOL-V1"
+    use: "case schema and target-import firewall"
+source_stage_result:
+  finite_carrier: "cycle C4"
+  quotient_spectrum: [2, 2, 4]
+  static_equation: "L_C q = 0"
+  completion_A: "m=1, gamma=0"
+  completion_B: "m=4, gamma=1/4"
+  exact_distinct_response_demonstrated: true
+  commuting_projector_ranks: [2, 3]
+  linear_readout_family_constructed: true
+radiative_sector_audit:
+  formal_nonzero_mode_count: 3
+  physical_radiative_mode_count_selected: false
+  physical_spin_representation_derived: false
+  physical_gauge_structure_derived: false
+polarization_audit:
+  rank_two_formal_projector_exists: true
+  rank_three_formal_projector_exists: true
+  physical_projector_selected: false
+  physical_polarization_count_derived: false
+propagation_audit:
+  formal_modal_roots_derived: true
+  physical_time_map_derived: false
+  physical_length_or_wavenumber_map_derived: false
+  physical_characteristic_cone_derived: false
+  physical_speed_derived: false
+damping_dispersion_audit:
+  formal_damping_counterfamily_derived: true
+  formal_dispersion_counterfamily_derived: true
+  physical_damping_derived: false
+  physical_dispersion_derived: false
+detector_audit:
+  formal_linear_readout_family_derived: true
+  physical_detector_interaction_derived: false
+  physical_strain_map_derived: false
+  physical_calibration_derived: false
+model_to_world_map:
+  source_update_to_physical_time: "absent"
+  graph_mode_to_physical_wavevector: "absent"
+  quotient_mode_to_physical_polarization: "absent"
+  token_readout_to_detector_strain: "absent"
+approximation_order:
+  source_order: "exact finite linear task-local completion family"
+  physical_order: "undefined because the model-to-world map is absent"
+residual_corrections:
+  status: "not_physically_defined"
+  reason: "No physical observable map or common units exist."
+analytic_equivalence:
+  status: "not_established"
+  formal_analogy: "The C4 Laplacian has a two-dimensional degenerate eigenspace, but no source rule identifies it with the target tensor sector."
+numerical_tolerance:
+  source_validation_tolerance: 1.0e-12
+  physical_comparison_tolerance: "undefined"
+target_observable:
+  opened_after_seal: true
+  target_side_only:
+    - "two physical tensor polarizations"
+    - "luminal vacuum propagation"
+    - "controlled vacuum damping and dispersion"
+    - "metric detector response"
+success_criteria:
+  satisfied: false
+  reason: "No source-derived physical polarization, speed, damping/dispersion, or detector map exists."
+failure_criteria:
+  satisfied: false
+  reason: "The source stage did not produce a typed physical prediction that could disagree with the target."
+inconclusive_criteria:
+  satisfied: true
+  reasons:
+    - "multiple inequivalent source completions preserve the same static equation"
+    - "rank-two and rank-three commuting projectors are both unselected"
+    - "formal readouts lack physical detector semantics"
+    - "physical time and length maps are absent"
+source_hash_manifest:
+  status: "SEALED"
+  source_artifact_sha256: "35f11be04dcfdc5c2e1a1b7f7512659807e6c00da2f0dea17326f5b410c19e5e"
+  source_record_sha256: "1066d8d4355640e0d13b57f63ad031ba34ea38419343193e5d66e1f857629753"
+  child_math_sha256: "68ef59c060d32bb11c10156553be4fc3173175b360bf155dd1375c832bddc69e"
+  child_phil_sha256: "7107308a7710444d127840aa0e1b2cde53ff691bade4f54aa2b48cc2c1dc9c18"
+  conflict_review_sha256: "1173f64015e9482b6651dc4097183505282f777809b23b15c0753c8ab7031d8c"
+  parent_fusion_sha256: "d328415da6f6bf445170942301ada8fceec889f3b9151610fe9c666411794c0f"
+provenance_dag:
+  path: "research_control/tasks/RT-20260730-013/artifacts/p9_t06_provenance_dag_v1.yaml"
+  status: "PASS"
+source_output_seal:
+  path: "research_control/tasks/RT-20260730-013/artifacts/p9_t06_source_output_seal_v1.json"
+  status: "SEALED"
+independent_reproduction:
+  executed_by_independent_context: false
+  same_context_validation_only: true
+  status: "NOT_ACQUIRED"
+target_exposure_ledger:
+  path: "research_control/tasks/RT-20260730-013/artifacts/p9_t06_target_exposure_ledger_v1.yaml"
+  target_informed_rerun_count: 0
+  source_mutation_after_target_comparison_count: 0
+case_classification:
+  outcome: "INCONCLUSIVE"
+  secondary_label: "FORMAL_ANALOGY"
+  executed_case_count: 1
+  cumulative_executed_case_count: 5
+  inconclusive_case_count: 1
+  cumulative_inconclusive_case_count: 5
+  benchmark_pass_count: 0
+  gate_e_verdict_issued: false
+authority_limits:
+  canonical_ontology_modified: false
+  source_law_adopted_or_rejected: false
+  physical_radiative_sector_established: false
+  effective_geometry_established: false
+  Einstein_equations_established: false
+  exact_GR_recovery_established: false
+  benchmark_promotion_authorized: false
+  proof_authority: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false

@@ -1,0 +1,190 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[T1]{fontenc}
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\newcommand{\Qspace}{\mathcal Q}
+\newcommand{\LC}{L_C}
+
+\title{Finite Radiative-Completion and Detector Nonselection}
+\author{The \AE ther-Flow Research Project}
+\date{2026-07-30}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This draft/control source-stage note executes one bounded P9-T06 radiative
+case without importing target wave equations.  On the four-cycle it constructs
+an exact family of second-order completions of the registered proposal-only
+static constraint.  Two positive-kinetic members have the same static equation
+but different damping and modal frequencies.  The same finite record also
+admits inequivalent rank-two and rank-three mode projectors and inequivalent
+linear readouts.  The current source package therefore selects neither a
+physical radiative sector nor physical polarizations, speed, damping,
+dispersion, or detector coupling.  This is a scoped current-source
+nonselection obstruction, not a global impossibility result.
+\end{abstract}
+
+\section{Source-sealed finite record}
+
+Let \(C_4\) be the cycle on four source addresses and let
+\[
+\LC=
+\begin{pmatrix}
+2&-1&0&-1\\
+-1&2&-1&0\\
+0&-1&2&-1\\
+-1&0&-1&2
+\end{pmatrix}.
+\]
+The registered P8 finite response equation is
+\[
+ \alpha\LC h-\beta\LC u=0.
+\]
+For this task take the already admitted null-source fixture \(u=0\),
+\(\alpha=\beta=1\), and background \(h_0=0\).  Component shifts are removed
+by the quotient
+\[
+ \Qspace=\mathbb R^4/\operatorname{span}\{(1,1,1,1)\}.
+\]
+No physical time, spatial length, causal cone, kinetic law, or detector map is
+contained in this static record.
+
+An orthonormal eigenbasis is
+\[
+\begin{aligned}
+ v_0&=\tfrac12(1,1,1,1), &\lambda_0&=0,\\
+ v_1&=\tfrac1{\sqrt2}(1,0,-1,0), &\lambda_1&=2,\\
+ v_2&=\tfrac1{\sqrt2}(0,1,0,-1), &\lambda_2&=2,\\
+ v_3&=\tfrac12(1,-1,1,-1), &\lambda_3&=4 .
+\end{aligned}
+\]
+Thus \(\Qspace=\operatorname{span}\{v_1,v_2,v_3\}\).
+
+\begin{definition}[Proposal-only completion family]
+For \(m>0\) and \(\gamma\geq0\), define the bookkeeping evolution
+\[
+  m\ddot q+2m\gamma\dot q+\LC q=0,
+  \qquad q(\tau)\in\Qspace .
+  \tag{1}
+\]
+The dots refer only to the task-local update parameter \(\tau\).  Equation
+(1) is source-extension data for a nonselection test; it is not adopted as a
+physical source law.
+\end{definition}
+
+\begin{theorem}[Static-equation-preserving dynamical counterfamily]
+\label{thm:counterfamily}
+Every member of (1) has the same stationary equation \(\LC q=0\).  On an
+eigenmode with eigenvalue \(\lambda\in\{2,4\}\), the characteristic roots are
+\[
+  s_\lambda=-\gamma\pm
+  \sqrt{\gamma^2-\frac{\lambda}{m}} .
+  \tag{2}
+\]
+In particular, the two positive-kinetic fixtures
+\[
+  A:(m,\gamma)=(1,0),\qquad
+  B:(m,\gamma)=(4,\tfrac14)
+\]
+share the same static equation but have incompatible update spectra:
+\[
+\begin{array}{c|cc}
+ &\lambda=2&\lambda=4\\ \hline
+A&\pm i\sqrt2&\pm2i\\
+B&-\tfrac14\pm i\tfrac{\sqrt7}{4}
+  &-\tfrac14\pm i\tfrac{\sqrt{15}}4 .
+\end{array}
+\]
+Consequently the static source equation does not select a unique kinetic
+coefficient, damping coefficient, or modal frequency law.
+\end{theorem}
+
+\begin{proof}
+Setting \(\dot q=\ddot q=0\) in (1) gives \(\LC q=0\), independently of
+\(m\) and \(\gamma\).  Substitution of \(q=e^{s\tau}v\), with
+\(\LC v=\lambda v\), gives
+\(m s^2+2m\gamma s+\lambda=0\), whose roots are (2).
+The two displayed fixtures follow by direct substitution.
+\end{proof}
+
+\begin{corollary}[Exact response disagreement]
+For \(q(0)=v_1+v_3\) and \(\dot q(0)=0\), fixture \(A\) gives
+\[
+ q_A(\tau)=\cos(\sqrt2\,\tau)v_1+\cos(2\tau)v_3 .
+\]
+Fixture \(B\) gives, for \(\lambda\in\{2,4\}\),
+\[
+ x_{\lambda,B}(\tau)=e^{-\tau/4}
+ \left[
+ \cos(\omega_\lambda\tau)
+ \frac{1}{4\omega_\lambda}\sin(\omega_\lambda\tau)
+ \right],
+\quad
+\omega_2=\frac{\sqrt7}{4},\quad
+\omega_4=\frac{\sqrt{15}}4 .
+\]
+At \(\tau=1\), the \(v_1\) coefficients are respectively
+\(0.155943694765374\) and \(0.795370023998395\), while the \(v_3\)
+coefficients are respectively \(-0.416146836547142\) and
+\(0.607054849167036\).
+\end{corollary}
+
+\section{Mode and detector nonselection}
+
+Two exact projectors commute with \(\LC\):
+\[
+ \Pi_2=v_1v_1^\mathsf T+v_2v_2^\mathsf T,\qquad
+ \Pi_3=I-v_0v_0^\mathsf T.
+\]
+They have ranks two and three.  The source record contains no predicate that
+selects either image as the physical radiative subspace.  Calling the
+two-dimensional degenerate eigenspace ``two polarizations'' would therefore
+be a target-facing interpretation, not a source-derived result.
+
+Likewise every \(d\in\Qspace\) defines a formal linear readout
+\[
+ D_d[q]=d^\mathsf Tq.
+\]
+For the exact fixture above, \(d=v_1\) and \(d=v_3\) return different
+histories.  The registered P7 operational-device suite supplies guarded source
+tokens but no physical interferometer response, arm geometry, strain map, or
+calibration selecting \(d\).
+
+The graph eigenvalues provide a formal dispersion token
+\(\omega_\lambda^2=\lambda/m-\gamma^2\).  They do not provide a physical
+wavenumber or speed: any conversion requires a source-derived physical length
+map and physical clock.  Thus neither a luminal speed nor physical damping or
+dispersion follows from (1).
+
+\section{Typed target comparison and exact obstruction}
+
+Only after the source outputs were sealed was the registered comparison
+family opened.  The target-side exact-GR benchmark has two tensor
+polarizations, luminal vacuum propagation, no target vacuum damping or
+dispersion, and a metric detector response.  Those facts are comparison-side
+burdens only.  They were not premises of \(\LC\), (1), \(\Pi_2\), \(\Pi_3\),
+or \(D_d\), and they selected no parameter, projector, readout, or rerun.
+
+The failed object is a total source-derived map from the current static finite
+record to a physical radiative sector, polarization space, causal speed,
+damping/dispersion law, and detector coupling.  Its present absence is
+recorded as
+\[
+\texttt{OBST-P9T06-RADIATIVE-DYNAMICS-DETECTOR-NONSELECTION-001}.
+\]
+The P9-T06 case is therefore \texttt{INCONCLUSIVE}, with secondary label
+\texttt{FORMAL\_ANALOGY}; the rank-two degeneracy is not a benchmark pass.
+
+This result has status \texttt{blocked\_adoption\_open\_continuation}.
+A materially new source-derived kinetic law, physical clock and length map,
+radiative-sector selector, and detector interaction can reopen the burden.
+No canonical ontology or source law is adopted or rejected.  No effective
+metric, Einstein equation, exact-GR recovery, benchmark promotion, Gate E
+verdict, proof, publication, push, global no-go theorem, future-extension
+impossibility, or completed derivation follows.
+
+\end{document}

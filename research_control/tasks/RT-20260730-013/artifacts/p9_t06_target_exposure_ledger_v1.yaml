@@ -1,0 +1,34 @@
+schema_id: "p9_t06_target_exposure_ledger_v1"
+task_id: "RT-20260730-013"
+case_id: "P9-BENCH-RADIATIVE-V1"
+status: "completed"
+known_before_execution:
+  - "The registered P9 protocol names radiative sector, polarizations, speed, damping, dispersion, and detector coupling as comparison burdens."
+  - "The target family is exact GR; target blindness is not claimed."
+source_stage_exposure:
+  target_equation_count: 0
+  target_numeric_value_count: 0
+  target_polarization_count_used_as_selector: false
+  target_speed_used_as_selector: false
+  target_damping_or_dispersion_used_as_selector: false
+  target_detector_response_used_as_selector: false
+  desired_agreement_used: false
+  target_informed_rerun_count: 0
+permitted_prior_knowledge:
+  - "the typed burden names"
+  - "the existence of a registered comparison family"
+prohibited_and_not_used:
+  - "target wave equation as a source premise"
+  - "target two-mode content as a source projector selector"
+  - "target luminal propagation as a source parameter selector"
+  - "target detector response as a source readout selector"
+comparison_stage:
+  opened_after_source_seal: true
+  source_mutation_after_open_count: 0
+  target_side_summary: "Exact-GR comparison requires two physical tensor modes, luminal vacuum propagation, controlled damping/dispersion, and a metric detector response."
+  comparison_effect: "The source record lacks the physical maps needed for a typed equality or residual; case remains INCONCLUSIVE."
+authority_limits:
+  source_output_sealed: true
+  independent_reproduction_acquired: false
+  benchmark_pass_count: 0
+  physics_promotion_authorized: false

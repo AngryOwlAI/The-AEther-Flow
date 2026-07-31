@@ -1,0 +1,245 @@
+handoff_id: "handoff-0920"
+handoff_number: 920
+task_id: "RT-20260730-013"
+decision_id: "DDR-20260730-013"
+job_id: "AJ-RT-20260730-013-001"
+completion_id: "AJC-AJ-RT-20260730-013-001"
+completion_path: "research_control/tasks/RT-20260730-013/jobs/completions/AJC-AJ-RT-20260730-013-001.yaml"
+completion_sha256: "0ebe9ab415b60e01b8daf8fb235d18314c8ca52b4db2a60c86e99c1abb10ed70"
+status: "ready_after_checkpoint"
+created_at: "2026-07-31T03:02:39Z"
+parent_handoff_id: "handoff-0919"
+plan_task_id: "P9-T07"
+source_role_id: "candidate-constructor"
+source_role_version: "0.2.0"
+source_execution_role_ref: "candidate-constructor@0.2.0--RT-20260730-013"
+summary: "P9-T06 derives the exact C4 quotient spectrum {2,2,4}, two positive-kinetic proposal-only completions with the same stationary equation but incompatible modal roots and responses, commuting rank-two/rank-three projectors, and distinct linear readouts. The current source package selects no physical kinetic law, clock, length map, radiative projector, polarization semantics, or detector interaction. The case is INCONCLUSIVE with secondary FORMAL_ANALOGY, five cumulative inconclusive cases, zero passes, and no promotion."
+next_action: "Invoke the one governed checkpoint for AJ-RT-20260730-013-001. After that commit, use one fresh bounded Candidate Constructor packet for P9-T07 to execute the distinct nonlinear conservation, constraint-closure, and compact-source benchmark case while carrying P9-T02 through P9-T06 INCONCLUSIVE dispositions and zero benchmark passes."
+current_claim_boundary: "CB-V21-P9-T06-RADIATIVE-DYNAMICS-DETECTOR-NONSELECTION-001"
+loop_risk_route: "distinct_benchmark_case_after_local_freeze"
+p9_t02_outcome: "INCONCLUSIVE"
+p9_t03_outcome: "INCONCLUSIVE"
+p9_t04_outcome: "INCONCLUSIVE"
+p9_t05_outcome: "INCONCLUSIVE"
+p9_t06_outcome: "INCONCLUSIVE"
+p9_t06_secondary_label: "FORMAL_ANALOGY"
+p9_t06_executed: true
+p9_t07_executed: false
+
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260730-013"
+  latest_research_handoff_id: "handoff-0920"
+  latest_research_next_action: "Invoke the one governed checkpoint for AJ-RT-20260730-013-001. After that commit, use one fresh bounded Candidate Constructor packet for P9-T07 to execute the distinct nonlinear conservation, constraint-closure, and compact-source benchmark case while carrying P9-T02 through P9-T06 INCONCLUSIVE dispositions and zero benchmark passes."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+  project_improvement_sidecar_required: false
+  research_handoff_remains_authoritative: true
+
+claim_boundary:
+  allowed:
+    - "exact C4 quotient spectrum {2,2,4}"
+    - "one proposal-only positive-kinetic completion counterfamily"
+    - "two exact incompatible completion and response fixtures"
+    - "formal rank-two/rank-three projector and linear readout counterfamilies"
+    - "one precise current-source radiative dynamics and detector nonselection obstruction"
+    - "one INCONCLUSIVE case disposition with secondary FORMAL_ANALOGY"
+    - "P9-T07 route only after checkpoint"
+  forbidden:
+    - "completion adoption or rejection"
+    - "physical time, length, wavenumber, kinetic law, radiative sector, polarization, speed, damping, dispersion, or detector response"
+    - "effective geometry, Einstein equations, or exact-GR recovery"
+    - "benchmark pass, Gate E verdict, or promotion"
+    - "proof, publication, push, global no-go, future impossibility, or completed derivation"
+  obstruction_id: "OBST-P9T06-RADIATIVE-DYNAMICS-DETECTOR-NONSELECTION-001"
+  adoption_status: "blocked_adoption_open_continuation"
+  current_ontology_only: true
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+
+plan_result:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  completed_plan_task_id: "P9-T06"
+  completed_work_kind: "benchmark_or_recovery"
+  result_kind: "precise_obstruction"
+  work_item_status: "completed_ready_for_checkpoint"
+  recommendation_ids:
+    - "V21-R27"
+    - "V21-R28"
+    - "V21-R29"
+  executed_case_count: 1
+  cumulative_executed_case_count: 5
+  cumulative_inconclusive_case_count: 5
+  benchmark_pass_count: 0
+  next_dependency_work_item: "P9-T07_after_checkpoint"
+
+distance_to_gr:
+  changed: false
+  effect: "obstruction_recorded_no_physical_delta"
+  burden_id: "benchmark_promotion"
+  milestone: "benchmark_promotion"
+  ledger_row_updated: true
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "The row gains the exact P9-T06 radiative-dynamics and detector nonselection obstruction and source paths, but remains blocked with zero physical benchmark passes."
+  target_derivation_milestone: "benchmark_promotion"
+  milestone_burden: "Test the dynamical spin-2 or alternative radiative content."
+  distance_to_gr_delta_changed: false
+  current_status: "blocked_by_missing_physical_kinetic_and_model_to_world_maps"
+  exact_new_evidence:
+    - "C4 quotient spectrum {2,2,4}"
+    - "same-static-equation completion roots differ for (m,gamma)=(1,0) and (4,1/4)"
+    - "rank-two/rank-three projectors and readout vectors remain unselected"
+  unresolved_burdens:
+    - "physical kinetic operator and characteristic cone"
+    - "physical clock, length, and wavenumber map"
+    - "physical radiative-sector and polarization selector"
+    - "physical detector interaction, strain observable, and calibration"
+    - "effective geometry and Einstein equations"
+    - "benchmark promotion"
+  downstream_unlocked:
+    - "none"
+  downstream_still_blocked:
+    - "physical radiative-sector and polarization content"
+    - "physical wave speed, damping, and dispersion"
+    - "physical detector coupling and strain observable"
+    - "effective geometry"
+    - "matter coupling"
+    - "Einstein equations"
+    - "exact-GR recovery"
+    - "benchmark promotion"
+  Gate_D_changed: false
+  Gate_E_verdict_issued: false
+  physics_promotion_authorized: false
+
+required_next_packet:
+  after_checkpoint_only: true
+  plan_task_id: "P9-T07"
+  packet_type: "source_only_nonlinear_conservation_compact_source_case"
+  route_label: "benchmark-recovery-packet"
+  role_family: "candidate-constructor@0.2.0"
+  worker_skill: "continue-research"
+  objective: "Test nonlinear consistency through conservation, constraint propagation, and one nontrivial compact-source or strong-field solution."
+  target_derivation_milestone: "benchmark_promotion"
+  milestone_burden: "Move beyond linear and homogeneous controls."
+  must_carry_forward:
+    - "P9-T02 through P9-T06 are INCONCLUSIVE"
+    - "cumulative benchmark pass count is zero"
+    - "P9-T06 formal modes are not physical observables"
+    - "Gate D NOT_READY remains unchanged"
+    - "no target solution may select a source ansatz"
+
+selected_next_route:
+  route_id: "v21_p9_t07_nonlinear_conservation_compact_source_after_p9_t06_inconclusive"
+  strategy_id: "construct_p9_t07_distinct_source_derived_nonlinear_compact_case_v1"
+  plan_task_id: "P9-T07"
+  selected_plan_task_id: "P9-T07"
+  role_family: "candidate-constructor@0.2.0"
+  target_derivation_milestone: "benchmark_promotion"
+  milestone_burden: "Move beyond linear and homogeneous controls."
+  selected_worker_skill: "continue-research"
+  selected_role_family: "candidate-constructor@0.2.0"
+  route_label: "benchmark-recovery-packet"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  distinct_from_current_case: true
+  reason: "P9-T07 tests nonlinear conservation, constraint propagation, and compact-source behavior rather than rerunning the static finite radiative nonselection branch."
+  blocked_route_repetitions:
+    - "reuse C4 rank-two degeneracy as physical polarization evidence"
+    - "select completion parameters or readouts from target wave expectations"
+    - "treat validation or checkpoint success as physics progress"
+
+ordinary_route_guard:
+  schema_id: "ordinary_route_guard_evaluation_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  evaluation_id: "ORE-HANDOFF-0920"
+  ordinary_handoff_id: "handoff-0920"
+  threshold: 3
+  consecutive_project_system_tasks_before_selection: 0
+  ready_science_plan_task_ids:
+    - "P9-T07"
+    - "P14-T04"
+  selected_plan_task_id: "P9-T07"
+  selected_route_class: "physics_bearing"
+  selected_worker_skill: "continue-research"
+  outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  exception_receipt:
+    active: false
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+active_state_boundary:
+  active_task_id: "RT-20260730-013"
+  active_job_id: "AJ-RT-20260730-013-001"
+  current_status: "radiative_dynamics_detector_nonselection_precisely_obstructed_case_inconclusive_ready_for_checkpoint"
+  checkpoint_required: true
+  checkpoint_invocation_count: 0
+  checkpoint_committed: false
+  dependency_checkpoint_commit: "cc71d192fd3e43dd93b020114cf25b6465d134ac"
+  push_authorized: false
+  push_performed: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 181 route, goal and global lease parity, repository root, main branch, checkpoint HEAD, clean-tree manifest, and max reasoning effort matched."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Task-local validator passes 39 of 39 source-hash, C4 eigenpair, modal-root, response, seal, DAG, exposure, comparison, and parent-child checks."
+      - "Tectonic compiles the task-local TeX artifact to three pages."
+  post_write:
+    status: "PENDING"
+    evidence:
+      - "Repository-wide render, registry, memory, documentation, claim-language, taxonomy, and research-control gates run before checkpoint."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "Exactly one governed checkpoint remains."
+  independent_reproduction:
+    status: "NOT_ACQUIRED"
+    evidence:
+      - "All current calculation and validation occurred in the same execution context."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  canonical_ontology_edit_authorized: false
+  physical_interpretation_establishment_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+  publication_authorized: false
+  push_authorized: false
+  proof_authority: false
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  route: "none"
+  signal_ids: []
+  sidecar_supersedes_research_handoff: false
+  status: "not_required"
+
+handoff_authority_boundary:
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_authoritative: false
+  generated_artifacts_independent_authority: false
+  source_outputs_status: "draft/control and source-extension data"
+  target_comparison_status: "comparison-only after source seal"
+  no_promotion_from_handoff: true

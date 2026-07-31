@@ -1,0 +1,121 @@
+schema_id: "source_radiative_completion_family_v1"
+artifact_id: "FiniteRadiativeCompletionFamily_v1"
+task_id: "RT-20260730-013"
+job_id: "AJ-RT-20260730-013-001"
+candidate_status: "source-extension data"
+adoption_status: "blocked_adoption_open_continuation"
+source_stage_status: "completed_before_target_comparison"
+source_basis:
+  static_equation_object_id: "TEX-V21-P8-T04-FINITE-SOURCE-FIELD-EQUATION-IDENTITY-V1"
+  dynamics_nonselection_object_id: "TEX-V21-P8-T05-FINITE-CONSTRAINT-DYNAMICAL-VIABILITY-STRESS-V1"
+  operational_device_object_id: "TEX-V21-P7-T03-SOURCE-OPERATIONAL-DEVICE-SUITE-V1"
+  benchmark_protocol_object_id: "TEX-V21-P9-T01-SOURCE-DERIVED-BENCHMARK-PROTOCOL-V1"
+finite_carrier:
+  name: "cycle_C4"
+  source_address_count: 4
+  edge_set:
+    - [0, 1]
+    - [1, 2]
+    - [2, 3]
+    - [3, 0]
+  laplacian:
+    - [2, -1, 0, -1]
+    - [-1, 2, -1, 0]
+    - [0, -1, 2, -1]
+    - [-1, 0, -1, 2]
+  component_shift_vector: [0.5, 0.5, 0.5, 0.5]
+  quotient_dimension: 3
+  eigenbasis:
+    - id: "v0"
+      eigenvalue: 0
+      coordinates: [0.5, 0.5, 0.5, 0.5]
+      quotient_mode: false
+    - id: "v1"
+      eigenvalue: 2
+      coordinates: [0.7071067811865476, 0.0, -0.7071067811865476, 0.0]
+      quotient_mode: true
+    - id: "v2"
+      eigenvalue: 2
+      coordinates: [0.0, 0.7071067811865476, 0.0, -0.7071067811865476]
+      quotient_mode: true
+    - id: "v3"
+      eigenvalue: 4
+      coordinates: [0.5, -0.5, 0.5, -0.5]
+      quotient_mode: true
+static_fixture:
+  alpha: 1
+  beta: 1
+  source_u: [0, 0, 0, 0]
+  background_h0: [0, 0, 0, 0]
+  equation: "alpha L_C h - beta L_C u = 0"
+  quotient_equation: "L_C q = 0"
+completion_family:
+  status: "proposal-only"
+  equation: "m q_ddot + 2 m gamma q_dot + L_C q = 0"
+  domain: "q in quotient Q, m > 0, gamma >= 0"
+  stationary_equation: "L_C q = 0"
+  modal_characteristic_equation: "m s^2 + 2 m gamma s + lambda = 0"
+  modal_roots: "s = -gamma +/- sqrt(gamma^2 - lambda/m)"
+  formal_dispersion_token: "omega_lambda^2 = lambda/m - gamma^2"
+  physical_time_identified: false
+  physical_length_identified: false
+  physical_speed_identified: false
+fixtures:
+  - id: "completion_A"
+    m: 1
+    gamma: 0
+    roots:
+      lambda_2: ["+i sqrt(2)", "-i sqrt(2)"]
+      lambda_4: ["+2i", "-2i"]
+  - id: "completion_B"
+    m: 4
+    gamma: 0.25
+    roots:
+      lambda_2: ["-1/4 + i sqrt(7)/4", "-1/4 - i sqrt(7)/4"]
+      lambda_4: ["-1/4 + i sqrt(15)/4", "-1/4 - i sqrt(15)/4"]
+exact_response_fixture:
+  initial_q: "v1 + v3"
+  initial_q_dot: "0"
+  sample_tau: 1.0
+  completion_A:
+    v1_coefficient: 0.15594369476537437
+    v3_coefficient: -0.4161468365471424
+  completion_B:
+    v1_coefficient: 0.7953700239983948
+    v3_coefficient: 0.6070548491670357
+radiative_projector_family:
+  - id: "Pi_2"
+    image_basis: ["v1", "v2"]
+    rank: 2
+    commutes_with_laplacian: true
+    physical_polarization_map: false
+  - id: "Pi_3"
+    image_basis: ["v1", "v2", "v3"]
+    rank: 3
+    commutes_with_laplacian: true
+    physical_polarization_map: false
+detector_readout_family:
+  definition: "D_d[q] = d^T q for d in Q"
+  fixtures:
+    - id: "D_v1"
+      readout_vector: "v1"
+    - id: "D_v3"
+      readout_vector: "v3"
+  physical_detector_coupling_selected: false
+source_conclusions:
+  same_static_equation_distinct_dynamics: true
+  source_radiative_projector_selected: false
+  source_physical_polarization_count_selected: false
+  source_physical_speed_selected: false
+  source_physical_damping_or_dispersion_selected: false
+  source_physical_detector_coupling_selected: false
+  obstruction_id: "OBST-P9T06-RADIATIVE-DYNAMICS-DETECTOR-NONSELECTION-001"
+authority_limits:
+  canonical_ontology_modified: false
+  source_law_adopted_or_rejected: false
+  physical_radiative_sector_established: false
+  target_equation_used_as_source_premise: false
+  benchmark_pass_count: 0
+  physics_promotion_authorized: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false

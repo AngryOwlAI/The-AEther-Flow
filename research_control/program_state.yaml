@@ -1,11 +1,94 @@
 mode: "director_led_research_control"
-active_task_id: "RT-20260730-012"
-latest_handoff_id: "handoff-0919"
-current_status: "source_cosmology_decoder_calibration_precisely_obstructed_case_inconclusive_ready_for_checkpoint"
-claim_boundary_summary: "RT-20260730-012 derives exact proposal-only source amplitude, expansion-token, and density-token counterfamilies and proves that the current source package does not select a physical scale decoder, clock, spatial-volume map, curvature object, or constant-term interpretation. The case is INCONCLUSIVE with secondary FORMAL_ANALOGY, four cumulative inconclusive cases, zero benchmark passes, and no physical, Distance-to-GR, Gate E, promotion, proof, publication, push, global-no-go, future-impossibility, or completed-derivation authority."
-next_plan_task_id: "P9-T06"
+active_task_id: "RT-20260730-013"
+latest_handoff_id: "handoff-0920"
+current_status: "radiative_dynamics_detector_nonselection_precisely_obstructed_case_inconclusive_ready_for_checkpoint"
+claim_boundary_summary: "RT-20260730-013 derives exact proposal-only C4 completion, modal, projector, and readout counterfamilies and proves that the current source package does not select a physical kinetic law, clock, length map, radiative projector, polarization semantics, propagation law, or detector interaction. The case is INCONCLUSIVE with secondary FORMAL_ANALOGY, five cumulative inconclusive cases, zero benchmark passes, and no physical, Distance-to-GR, Gate E, promotion, proof, publication, push, global-no-go, future-impossibility, or completed-derivation authority."
+next_plan_task_id: "P9-T07"
 next_worker_skill: "continue-research"
-next_recommended_action: "Invoke the one governed checkpoint for AJ-RT-20260730-012-001. After that commit, use one fresh bounded Candidate Constructor packet for P9-T06 to execute the distinct radiative-sector benchmark case while carrying P9-T02 through P9-T05 INCONCLUSIVE dispositions and zero benchmark passes."
+next_recommended_action: "Invoke the one governed checkpoint for AJ-RT-20260730-013-001. After that commit, use one fresh bounded Candidate Constructor packet for P9-T07 to execute the distinct nonlinear conservation, constraint-closure, and compact-source benchmark case while carrying P9-T02 through P9-T06 INCONCLUSIVE dispositions and zero benchmark passes."
+
+p9_t06_finite_radiative_dynamics_detector_nonselection_case:
+  task_id: "RT-20260730-013"
+  parent_task_id: "RT-20260730-012"
+  parent_handoff_id: "handoff-0919"
+  plan_task_id: "P9-T06"
+  next_plan_task_id: "P9-T07"
+  claim_boundary_id: "CB-V21-P9-T06-RADIATIVE-DYNAMICS-DETECTOR-NONSELECTION-001"
+  status: "P9_T06_RADIATIVE_DYNAMICS_DETECTOR_NONSELECTION_OBSTRUCTION_CASE_INCONCLUSIVE_READY_FOR_CHECKPOINT"
+  work_item_status: "completed"
+  route_label: "benchmark-recovery-packet"
+  selected_role_family: "candidate-constructor@0.2.0"
+  selected_worker_skill: "continue-research"
+  selected_strategy_id: "construct_p9_t06_distinct_source_derived_radiative_case_v1"
+  target_derivation_milestone: "benchmark_promotion"
+  milestone_burden: "Test the dynamical spin-2 or alternative radiative content."
+  dependency_checkpoint_commit: "cc71d192fd3e43dd93b020114cf25b6465d134ac"
+  immutable_route_sha256: "34a1e321ad1d276ce8b3c13e5622892528476019f0a30cfc4bce7448fc793c56"
+  route_blocker_fingerprint: "aa98e61c061432a2fe20cdb462bc5834256def61c876f35bc5cb0e4d7ca39596"
+  source_artifact_path: "research_control/tasks/RT-20260730-013/artifacts/finite_radiative_completion_nonselection_v1.tex"
+  source_artifact_sha256: "35f11be04dcfdc5c2e1a1b7f7512659807e6c00da2f0dea17326f5b410c19e5e"
+  source_record_path: "research_control/tasks/RT-20260730-013/artifacts/source_radiative_completion_family_v1.yaml"
+  source_record_sha256: "1066d8d4355640e0d13b57f63ad031ba34ea38419343193e5d66e1f857629753"
+  source_case_path: "research_control/tasks/RT-20260730-013/artifacts/p9_t06_radiative_case_v1.yaml"
+  source_case_sha256: "5fd283fa7d2fd0e76ad317270eb33cae33e9f0f5e42378dba846963f706de5dc"
+  source_seal_path: "research_control/tasks/RT-20260730-013/artifacts/p9_t06_source_output_seal_v1.json"
+  source_seal_sha256: "75652be75e31376fad01ab5ed45f7685108609e57ad7a185b287443c5d2f00a6"
+  provenance_dag_sha256: "f4b9b45bccbd6d768fa7de9b07cdc03638c3f742a54128a61273c65e9a83b929"
+  target_exposure_ledger_sha256: "f24d62e6289ee6021555b8e7199fd9c13d6b0d6a93cf5015ad385a093d25352d"
+  benchmark_case_receipt_sha256: "23cb0118404723f3151e70d2c96c17841a448118b31b1978dd0071ccd4343a6f"
+  completion_path: "research_control/tasks/RT-20260730-013/jobs/completions/AJC-AJ-RT-20260730-013-001.yaml"
+  completion_sha256: "0ebe9ab415b60e01b8daf8fb235d18314c8ca52b4db2a60c86e99c1abb10ed70"
+  handoff_id: "handoff-0920"
+  handoff_path: "research_control/handoffs/handoff-0920.yaml"
+  handoff_yaml_sha256: "1dba29ed5bfa13291ce72449dba3bd6e30da65e493fd24b12a0711c97b52b4df"
+  handoff_markdown_sha256: "1385b646fca4fd79a453811d4de22f97946c992e074b965db6641050bc603ca1"
+  obstruction_id: "OBST-P9T06-RADIATIVE-DYNAMICS-DETECTOR-NONSELECTION-001"
+  source_stage_executed: true
+  source_stage_firewall_passed: true
+  source_output_sealed: true
+  c4_quotient_spectrum_derived: true
+  positive_kinetic_completion_counterfamily_constructed: true
+  formal_projector_counterfamily_constructed: true
+  formal_detector_readout_counterfamily_constructed: true
+  typed_target_comparison_opened_after_seal: true
+  source_mutation_after_target_comparison_count: 0
+  benchmark_case_outcome: "INCONCLUSIVE"
+  benchmark_case_secondary_label: "FORMAL_ANALOGY"
+  executed_case_count: 1
+  cumulative_executed_case_count: 5
+  inconclusive_case_count: 1
+  cumulative_inconclusive_case_count: 5
+  benchmark_pass_count: 0
+  target_informed_rerun_count: 0
+  physical_radiative_sector_established: false
+  physical_polarization_content_established: false
+  physical_propagation_speed_established: false
+  physical_damping_or_dispersion_established: false
+  physical_detector_coupling_established: false
+  effective_geometry_established: false
+  Gate_D_changed: false
+  Gate_E_verdict_issued: false
+  scientific_claims_changed: true
+  scientific_claim_change_scope: "task-local exact finite completion, projector, and readout counterfamilies plus precise current-source radiative model-to-world nonselection obstruction only"
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  ontology_adoption_authorized: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  checkpoint_invocation_count: 0
+  checkpoint_committed: false
+  selected_next_work_item: "P9-T07"
+  selected_next_worker_skill: "continue-research"
+  selected_next_role_family: "candidate-constructor@0.2.0"
+  selected_next_packet_type: "source_only_nonlinear_conservation_compact_source_case"
+  selected_next_route_label: "benchmark-recovery-packet"
+  selected_next_strategy_id: "construct_p9_t07_distinct_source_derived_nonlinear_compact_case_v1"
+  selected_next_requires_human_gate: false
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
 
 p9_t05_source_cosmology_decoder_nonselection_case:
   task_id: "RT-20260730-012"
@@ -9407,9 +9490,9 @@ project_improvement_bridge:
   resolution_evidence_path: "research_control/tasks/RT-20260725-002/jobs/completions/AJC-AJ-RT-20260725-002-001.yaml"
 
 active_state_bifurcation:
-  latest_research_task_id: "RT-20260730-012"
-  latest_research_handoff_id: "handoff-0919"
-  latest_research_next_action: "Invoke the one governed checkpoint for AJ-RT-20260730-012-001. After that commit, use one fresh bounded Candidate Constructor packet for P9-T06 to execute the distinct radiative-sector benchmark case while carrying P9-T02 through P9-T05 INCONCLUSIVE dispositions and zero benchmark passes."
+  latest_research_task_id: "RT-20260730-013"
+  latest_research_handoff_id: "handoff-0920"
+  latest_research_next_action: "Invoke the one governed checkpoint for AJ-RT-20260730-013-001. After that commit, use one fresh bounded Candidate Constructor packet for P9-T07 to execute the distinct nonlinear conservation, constraint-closure, and compact-source benchmark case while carrying P9-T02 through P9-T06 INCONCLUSIVE dispositions and zero benchmark passes."
   latest_project_system_task_id: "none"
   latest_project_system_status: "none"
   latest_project_system_sidecar_task_id: "none"

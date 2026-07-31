@@ -1,0 +1,46 @@
+schema_id: "p9_t06_provenance_dag_v1"
+task_id: "RT-20260730-013"
+case_id: "P9-BENCH-RADIATIVE-V1"
+status: "sealed"
+nodes:
+  - id: "registered_static_source"
+    stage: "source"
+    source_class: "registered draft/control source"
+  - id: "cycle_C4_fixture"
+    stage: "source"
+    source_class: "task-local finite fixture"
+  - id: "completion_counterfamily"
+    stage: "source"
+    source_class: "source-extension data"
+  - id: "projector_readout_counterfamily"
+    stage: "source"
+    source_class: "source-extension data"
+  - id: "source_output_seal"
+    stage: "seal"
+    source_class: "control receipt"
+  - id: "target_radiative_burden"
+    stage: "comparison"
+    source_class: "registered target benchmark"
+  - id: "case_disposition"
+    stage: "comparison"
+    source_class: "typed benchmark disposition"
+edges:
+  - ["registered_static_source", "cycle_C4_fixture"]
+  - ["cycle_C4_fixture", "completion_counterfamily"]
+  - ["completion_counterfamily", "projector_readout_counterfamily"]
+  - ["projector_readout_counterfamily", "source_output_seal"]
+  - ["source_output_seal", "case_disposition"]
+  - ["target_radiative_burden", "case_disposition"]
+target_comparison_opened_after_seal: true
+forbidden_reachability_result:
+  target_to_cycle_C4_fixture: false
+  target_to_completion_counterfamily: false
+  target_to_projector_readout_counterfamily: false
+  target_to_source_output_seal: false
+  status: "PASS"
+known_target_family_disclosure: "The registered comparison family was known before execution. No target wave equation, polarization count, speed, damping, dispersion, detector response, desired agreement, branch, or tolerance selected a source parameter, projector, readout, or rerun."
+authority_limits:
+  target_as_source_premise: false
+  blindness_claimed: false
+  benchmark_pass_inferred: false
+  physics_promotion_authorized: false

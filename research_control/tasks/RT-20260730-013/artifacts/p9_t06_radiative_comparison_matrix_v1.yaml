@@ -1,0 +1,41 @@
+schema_id: "p9_t06_radiative_comparison_matrix_v1"
+task_id: "RT-20260730-013"
+case_id: "P9-BENCH-RADIATIVE-V1"
+status: "completed"
+source_sealed_before_comparison: true
+rows:
+  - burden: "radiative sector"
+    source_result: "three formal quotient modes; rank-two and rank-three commuting projectors both admissible"
+    target_requirement: "physical tensor radiative sector"
+    typed_comparison: "undefined without a source-derived physical sector map"
+    disposition: "INCONCLUSIVE"
+  - burden: "polarizations"
+    source_result: "unselected formal projector ranks 2 and 3"
+    target_requirement: "two physical tensor polarizations"
+    typed_comparison: "rank-two resemblance is formal analogy only"
+    disposition: "INCONCLUSIVE"
+  - burden: "propagation speed"
+    source_result: "modal roots exist in update parameter tau"
+    target_requirement: "luminal physical vacuum propagation"
+    typed_comparison: "undefined without physical clock, length, wavenumber, and causal cone"
+    disposition: "INCONCLUSIVE"
+  - burden: "damping and dispersion"
+    source_result: "completion A and B have distinct exact formal damping and frequency laws"
+    target_requirement: "controlled target vacuum damping and dispersion"
+    typed_comparison: "undefined without a selected physical kinetic operator and units"
+    disposition: "INCONCLUSIVE"
+  - burden: "detector coupling"
+    source_result: "unselected linear readout family D_d"
+    target_requirement: "physical metric detector response"
+    typed_comparison: "undefined without interaction, strain, geometry, and calibration maps"
+    disposition: "INCONCLUSIVE"
+summary:
+  outcome: "INCONCLUSIVE"
+  secondary_label: "FORMAL_ANALOGY"
+  benchmark_pass_count: 0
+  target_informed_rerun_count: 0
+  obstruction_id: "OBST-P9T06-RADIATIVE-DYNAMICS-DETECTOR-NONSELECTION-001"
+authority_limits:
+  formal_similarity_counts_as_recovery: false
+  target_selected_source_data: false
+  benchmark_promotion_authorized: false

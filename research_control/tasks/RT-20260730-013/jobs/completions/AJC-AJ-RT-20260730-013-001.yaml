@@ -1,0 +1,756 @@
+validation_status: "PASS"
+final_repository_validation_status: "PASS_READY_FOR_CHECKPOINT"
+job_id: "AJ-RT-20260730-013-001"
+completion_id: "AJC-AJ-RT-20260730-013-001"
+task_id: "RT-20260730-013"
+task_type: "v21_p9_t06_radiative_dynamics_detector_nonselection_case"
+decision_id: "DDR-20260730-013"
+role_id: "candidate-constructor"
+role_version: "0.2.0"
+execution_role_ref: "candidate-constructor@0.2.0--RT-20260730-013"
+status: "completed"
+created_at: "2026-07-31T03:02:39Z"
+started_at: "2026-07-31T03:02:39Z"
+completed_at: "2026-07-31T03:02:39Z"
+objective: "Execute only v21 P9-T06 by deriving a source-side radiative sector, polarizations, speed, damping, dispersion, and detector response or returning a precise obstruction, without adopting target wave equations or using desired agreement to select a source completion."
+completion_summary: "P9-T06 constructs the exact C4 quotient spectrum {2,2,4}, two positive-kinetic dynamical completions with the same static equation but different damping and modal roots, commuting rank-two and rank-three projectors, and distinct linear readouts. The current source package selects no physical kinetic law, clock, length map, radiative projector, polarization semantics, or detector interaction. The case is INCONCLUSIVE with secondary FORMAL_ANALOGY, five cumulative inconclusive cases, zero benchmark passes, and no promotion authority."
+objective_result: "precise_radiative_dynamics_detector_nonselection_obstruction_case_inconclusive_ready_for_checkpoint"
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 181
+  passes_consumed: 165
+  route_work_item_id: "P9-T06"
+  route_worker_skill: "continue-research"
+  route_sha256: "34a1e321ad1d276ce8b3c13e5622892528476019f0a30cfc4bce7448fc793c56"
+  route_reason: "dependency_ready_in_scope"
+  route_strategy_id: "continue_in_scope_generation_181"
+  route_blocker_fingerprint: "aa98e61c061432a2fe20cdb462bc5834256def61c876f35bc5cb0e4d7ca39596"
+  route_before_fingerprint: "aa98e61c061432a2fe20cdb462bc5834256def61c876f35bc5cb0e4d7ca39596"
+  route_evidence_sha256es:
+    - "aa98e61c061432a2fe20cdb462bc5834256def61c876f35bc5cb0e4d7ca39596"
+    - "af7a66caee49b54ef7f570be6a62fc26f1b4c1a40446d5caaa86f5f6e0f9faae"
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:181"
+  handoff_token: "0a32fd5f3957aa01817c6993103a546072c049042a9a24e8"
+  relay_claim_token: "253087c24228330a4b17ea82e1476e678f3552b09bd21b75"
+  worker_skill: "continue-research"
+  worker_invocation_count: 1
+
+transaction_status: "ready_for_checkpoint"
+result_disposition: "P9_T06_RADIATIVE_DYNAMICS_DETECTOR_NONSELECTION_OBSTRUCTION_CASE_INCONCLUSIVE_READY_FOR_CHECKPOINT"
+milestone_disposition: "finite_radiative_completion_counterfamily_executed_physical_recovery_open"
+adoption_status: "blocked_adoption_open_continuation"
+checkpoint_commit:
+  required: true
+  attempted: false
+  committed: false
+  commit_sha: ""
+  dependency_checkpoint_commit: "cc71d192fd3e43dd93b020114cf25b6465d134ac"
+  push_authorized: false
+  push_performed: false
+
+is_physics_task: true
+payload_class: "candidate_construction"
+has_new_mathematical_payload: true
+source_extension_classification_required: true
+external_red_team_finding_requires_integration: false
+physics_promotion_authorized: false
+proof_authority: false
+
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P9"
+  plan_task_id: "P9-T06"
+  work_kind: "benchmark_or_recovery"
+  task_class: "science"
+  expected_result_kind: "completed_or_precisely_blocked"
+  dependency_task_ids:
+    - "P9-T05"
+  dependency_completion_paths:
+    - "research_control/tasks/RT-20260730-012/jobs/completions/AJC-AJ-RT-20260730-012-001.yaml"
+  dependency_checkpoint_commits:
+    - "cc71d192fd3e43dd93b020114cf25b6465d134ac"
+  work_item_status: "completed_ready_for_checkpoint"
+  recommendation_ids:
+    - "V21-R27"
+    - "V21-R28"
+    - "V21-R29"
+  recommendation_coverage_role: "direct_implementation"
+  scientific_claims_changed: true
+  scientific_claim_change_scope: "exact finite source-extension completion, projector, and readout counterfamilies plus one precise current-source physical radiative nonselection obstruction"
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  next_dependency_work_item: "P9-T07_after_checkpoint"
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  observed_durable_outputs:
+    physics:
+      - "one exact finite static-equation-preserving dynamical completion counterfamily"
+      - "one exact modal, projector, and readout nonselection construction"
+      - "one precise INCONCLUSIVE radiative case disposition"
+    project_system:
+      - "one task-local deterministic validator and compact receipt"
+      - "provenance, seal, exposure, comparison, and parent-child records"
+      - "standard control records and generated-memory synchronization"
+  accepted_criteria:
+    physics:
+      - "C4 quotient spectrum and modal roots reproduce"
+      - "two positive-kinetic completions preserve the same static equation but disagree dynamically"
+      - "rank-two/rank-three projectors and readouts remain source-unselected"
+      - "missing physical maps produce INCONCLUSIVE rather than an inferred radiative result"
+      - "zero target-informed reruns and benchmark passes"
+    project_system:
+      - "source-hash, math, DAG, seal, exposure, and parent-child checks pass"
+      - "claim-language and documentation-impact gates pass"
+      - "one governed checkpoint records the bounded transaction"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: false
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+physics_payload_admission_result:
+  schema_id: "physics_payload_admission_result_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  status: "PASS"
+  admission_path: "physics"
+  payload_type: "candidate_construction"
+  candidate_family: "FiniteRadiativeCompletionFamily_v1"
+  candidate_identity_sha256: "35f11be04dcfdc5c2e1a1b7f7512659807e6c00da2f0dea17326f5b410c19e5e"
+  result_type: "precise_obstruction"
+  process_receipt_substitution_detected: false
+  theorem_truth_inferred_from_validation: false
+  physics_promotion_authorized: false
+
+family_freeze_admission_result:
+  schema_id: "family_freeze_route_admission_result_v1"
+  policy_id: "family_freeze_reopening_policy_v1"
+  status: "PASS_DISTINCT_BRANCH"
+  family_id: "FiniteRadiativeCompletionFamily_v1"
+  family_identity_sha256: "35f11be04dcfdc5c2e1a1b7f7512659807e6c00da2f0dea17326f5b410c19e5e"
+  exact_family_match_detected: false
+  reopening_requested: false
+  distinct_branch_verified: true
+  local_family_freeze_preserved: true
+  global_no_go_claimed: false
+  physics_promotion_authorized: false
+
+ordinary_route_guard_admission_result:
+  schema_id: "ordinary_route_guard_admission_result_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  status: "PASS"
+  source_handoff_id: "handoff-0919"
+  selected_plan_task_id: "P9-T06"
+  guard_outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_execution_unit_count: 2
+  outer_agentjob_count: 1
+  child_agentjob_count: 0
+  subagent_count: 0
+
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260730-013/artifacts/child_phys_math_p9_t06_radiative.yaml"
+      output_sha256: "68ef59c060d32bb11c10156553be4fc3173175b360bf155dd1375c832bddc69e"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260730-013/artifacts/child_phys_phil_p9_t06_radiative.yaml"
+      output_sha256: "7107308a7710444d127840aa0e1b2cde53ff691bade4f54aa2b48cc2c1dc9c18"
+      status: "completed"
+  conflict_review:
+    status: "resolved"
+    review_path: "research_control/tasks/RT-20260730-013/artifacts/parent_conflict_review_p9_t06_radiative.yaml"
+    review_sha256: "1173f64015e9482b6651dc4097183505282f777809b23b15c0753c8ab7031d8c"
+    resolution_rounds: 1
+    resolved_conflict_count: 2
+    unresolved_conflicts: []
+  fusion:
+    fused_output_path: "research_control/tasks/RT-20260730-013/artifacts/finite_radiative_completion_nonselection_v1.tex"
+    fusion_notes_path: "research_control/tasks/RT-20260730-013/artifacts/parent_fusion_notes_p9_t06_radiative.md"
+    shared_consensus_summary: "The C4 spectrum, two positive-kinetic completions, projector ranks, and readout counterfamily are exact formal source objects, but current sources do not select a physical kinetic law, clock, length map, radiative projector, polarization semantics, or detector interaction."
+    unique_phys_math_contributions: "Exact quotient spectrum, modal roots, response disagreement, commuting projector ranks, and readout family."
+    unique_phys_phil_contributions: "Graph-mode versus physical-polarization boundary, update-index and graph-scale nonidentification, detector model-to-world gap, and conservative-extension qualification."
+    novelty_preservation_summary: "Fusion preserves the first executed P9 finite radiative-completion counterfamily and its precise current-source nonselection result."
+    claim_boundary_preservation_summary: "No physical radiative sector, polarization, speed, damping, dispersion, detector response, effective geometry, Einstein equation, benchmark pass, Gate E verdict, promotion, proof, publication, push, global no-go, or completed derivation is authorized."
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+
+memory_preflight:
+  preflight_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1095
+    relationship_row_count: 5543
+    semantic_row_count: 1095
+    vault_row_count: 1095
+    local_cache_only_warning_count: 0
+    refresh_performed: true
+  refresh_needed: true
+  refresh_performed: true
+  refresh_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search 'radiative sector gravitational wave benchmark detector coupling' --limit 10 --json"
+      query_type: "search"
+      query_text: "radiative sector gravitational wave benchmark detector coupling"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+        - "TEX-ONTOLOGY-AETHER-FLOW-GEOMETRY"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search 'P9 T06 source derived field equations polarizations speed damping dispersion' --limit 10 --json"
+      query_type: "search"
+      query_text: "P9 T06 source derived field equations polarizations speed damping dispersion"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+        - "TEX-V21-P8-T05-FINITE-CONSTRAINT-DYNAMICAL-VIABILITY-STRESS-V1"
+        - "TEX-V21-P9-T01-SOURCE-DERIVED-BENCHMARK-PROTOCOL-V1"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+    - object_id: "TEX-V21-P9-T01-SOURCE-DERIVED-BENCHMARK-PROTOCOL-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260729-012/artifacts/source_derived_benchmark_protocol_v1.tex"
+      source_hash: "88ef097bf712ad115e9af62cc18a8b3eabb12f8545350f714ad065f702471007"
+    - object_id: "TEX-V21-P8-T04-FINITE-SOURCE-FIELD-EQUATION-IDENTITY-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260729-007/artifacts/finite_source_field_equation_identity_v1.tex"
+      source_hash: "12a1cfae87cd673241aefe88144ab974b49fc3bad284a81baff90b2e806d5168"
+    - object_id: "TEX-V21-P8-T05-FINITE-CONSTRAINT-DYNAMICAL-VIABILITY-STRESS-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260729-008/artifacts/finite_constraint_dynamical_viability_stress_v1.tex"
+      source_hash: "ddd39764c3b6f86e86574458b885e90271a2b044d1d141ae931723e80599acb1"
+    - object_id: "TEX-V21-P7-T03-SOURCE-OPERATIONAL-DEVICE-SUITE-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260728-002/artifacts/source_operational_device_suite_candidate_v1.tex"
+      source_hash: "d6c818ee29f1a7e659e2f454aec21431d680b3d2d4df048fcf36f4aba87ba22a"
+    - object_id: "TEX-ONTOLOGY-AETHER-FLOW-GEOMETRY"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "ontology/tex/aether_flow_geometry.tex"
+      source_hash: "f60a81b63f814b03cca7190b3ac6285842a55317f4aed058cc6e75154cc0b4d7"
+  authority_note: "Obsidian wiki notes, semantic extracts, PDFs, and .local files are retrieval layers only and are not authority. Target-side ontology inspection supplied no source value, formula, parameter, projector, readout, tolerance, or output."
+
+benchmark_case_result:
+  protocol_id: "SourceDerivedBenchmarkProtocol_v1"
+  case_id: "P9-BENCH-RADIATIVE-V1"
+  candidate_id: "FiniteRadiativeCompletionFamily_v1"
+  outcome: "INCONCLUSIVE"
+  secondary_label: "FORMAL_ANALOGY"
+  source_execution_status: "COMPLETED"
+  source_stage_firewall_status: "PASS"
+  source_output_seal_status: "SEALED"
+  target_comparison_status: "OPENED_AFTER_SEAL_TYPED_BURDEN_ONLY"
+  independent_reproduction_status: "NOT_ACQUIRED"
+  executed_case_count: 1
+  cumulative_executed_case_count: 5
+  cumulative_inconclusive_case_count: 5
+  passed_case_count: 0
+  target_informed_rerun_count: 0
+  physical_radiative_recovery_established: false
+  benchmark_promotion_authorized: false
+
+new_mathematical_payload:
+  - payload_id: "NMP-RT-20260730-013-001"
+    payload_type: "theorem"
+    name: "Static-equation-preserving completion counterfamily"
+    summary: "Derives s=-gamma +/- sqrt(gamma^2-lambda/m) on the C4 quotient and proves every m>0, gamma>=0 member retains the stationary equation L_C q=0."
+  - payload_id: "NMP-RT-20260730-013-002"
+    payload_type: "explicit_witness"
+    name: "Two positive-kinetic incompatible response fixtures"
+    summary: "Completions (m,gamma)=(1,0) and (4,1/4) have distinct exact roots and distinct coefficients at tau=1 for the same initial data."
+  - payload_id: "NMP-RT-20260730-013-003"
+    payload_type: "definition"
+    name: "Formal radiative projector and readout counterfamilies"
+    summary: "Defines commuting rank-two and rank-three projectors plus D_d[q]=d^Tq, none selected by the current source record."
+  - payload_id: "NMP-RT-20260730-013-004"
+    payload_type: "obstruction"
+    name: "Radiative dynamics and detector nonselection"
+    summary: "Current sources do not derive the physical kinetic, time, length, polarization, propagation, or detector maps required for radiative recovery."
+
+minimum_physics_payload:
+  minimum_payload_schema_id: "minimum_physics_payload_schema_v1"
+  source_task_id: "RT-20260730-013"
+  source_job_id: "AJ-RT-20260730-013-001"
+  source_completion_path: "research_control/tasks/RT-20260730-013/jobs/completions/AJC-AJ-RT-20260730-013-001.yaml"
+  target_derivation_milestone: "benchmark_promotion"
+  milestone_burden: "Test the dynamical spin-2 or alternative radiative content."
+  payload_class: "candidate_construction"
+  payload_status: "draft/control"
+  payload_artifact_path: "research_control/tasks/RT-20260730-013/artifacts/finite_radiative_completion_nonselection_v1.tex"
+  payload_summary: "Exact finite completion, modal-root, projector, and readout counterfamilies plus a precise INCONCLUSIVE physical-radiative disposition."
+  payload_source_basis:
+    - "P8T04FiniteSourceFieldEquationIdentity_v1"
+    - "P8T05FiniteConstraintDynamicalViabilityStress_v1"
+    - "P7T03SourceOperationalDeviceSuite_v1"
+    - "SourceDerivedBenchmarkProtocol_v1"
+    - "P9T05CosmologySourceOnlyCase_v1"
+  process_receipts_excluded:
+    - "validator_status"
+    - "registry_row"
+    - "handoff_status"
+    - "generated_derivative"
+    - "checkpoint_status"
+  physics_promotion_authorized: false
+  proof_authority: false
+
+mathematical_payload_manifest:
+  - payload_id: "PAYLOAD-P9T06-001"
+    payload_type: "theorem"
+    object_name: "Static-equation-preserving finite dynamical completion theorem"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260730-013/artifacts/finite_radiative_completion_nonselection_v1.tex"
+    burden_effect: "narrows"
+    summary: "The same C4 stationary equation admits a continuum of positive-kinetic completion spectra."
+  - payload_id: "PAYLOAD-P9T06-002"
+    payload_type: "explicit_witness"
+    object_name: "Two-completion exact response disagreement"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260730-013/artifacts/source_radiative_completion_family_v1.yaml"
+    burden_effect: "obstructs"
+    summary: "Two exact fixtures with the same static equation return different modal roots and response coefficients."
+  - payload_id: "PAYLOAD-P9T06-003"
+    payload_type: "obstruction"
+    object_name: "Radiative dynamics and detector model-to-world nonselection obstruction"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260730-013/artifacts/finite_radiative_completion_nonselection_v1.tex"
+    burden_effect: "obstructs"
+    summary: "The current source package does not derive the physical kinetic, time, length, polarization, propagation, and detector maps required for recovery."
+
+candidate_constructor_result:
+  result_type: "precise_obstruction"
+  constructed_candidate_path: ""
+  minimal_countermodel_path: "research_control/tasks/RT-20260730-013/artifacts/finite_radiative_completion_nonselection_v1.tex"
+  obstruction_id: "OBST-P9T06-RADIATIVE-DYNAMICS-DETECTOR-NONSELECTION-001"
+  formal_objects:
+    - "C4 quotient spectrum {2,2,4}"
+    - "proposal-only completion family m q_ddot + 2m gamma q_dot + L_C q = 0"
+    - "completion A roots +/-i sqrt(2), +/-2i"
+    - "completion B roots -1/4 +/-i sqrt(7)/4 and -1/4 +/-i sqrt(15)/4"
+    - "commuting projectors Pi_2 and Pi_3 of ranks 2 and 3"
+    - "linear readout family D_d[q]=d^Tq"
+  maps:
+    - "(L_C,m,gamma) -> formal modal roots"
+    - "(q,Pi_r) -> formal selected mode subspace"
+    - "(q,d) -> formal readout token"
+    - "sealed missing-model-to-world record -> INCONCLUSIVE case classification"
+  proof_obligations:
+    - "any physical propagation claim requires a source-derived kinetic operator, clock, length map, and characteristic cone"
+    - "any physical polarization claim requires a source-derived radiative-sector and representation map"
+    - "any physical detector claim requires an interaction, strain observable, geometry, and calibration"
+    - "any target comparison requires common physical types, corrections, uncertainty, tolerance, and independent reproduction"
+  failed_components:
+    - "selected physical kinetic operator"
+    - "physical clock and length or wavenumber map"
+    - "physical causal cone and speed"
+    - "physical radiative-sector projector and polarization semantics"
+    - "physical damping and dispersion interpretation"
+    - "physical detector interaction and calibration"
+    - "physical correction and uncertainty control"
+    - "independent reproduction"
+  next_required_role: "none"
+  no_fog_check: true
+  no_fog_explanation: "RT-20260730-013 exactly evaluates two positive-kinetic completion fixtures, two projector ranks, and two readouts; incompatible formal outputs remain admissible and no physical kinetic, clock, length, polarization, propagation, or detector map is selected, so the physical radiative case is INCONCLUSIVE."
+  claim_boundary_preserved: true
+  claim_boundary_citation: "CB-V21-P9-T06-RADIATIVE-DYNAMICS-DETECTOR-NONSELECTION-001"
+
+obstruction_record:
+  present: true
+  obstruction_id: "OBST-P9T06-RADIATIVE-DYNAMICS-DETECTOR-NONSELECTION-001"
+  scope: "current_ontology_only"
+  failed_object: "total source-derived physical radiative map from the registered static finite equation to kinetic evolution, polarizations, propagation speed, damping, dispersion, and detector response"
+  exact_failure: "The same fixed C4 stationary equation admits at least two positive-kinetic completions with incompatible modal roots and responses, while rank-two/rank-three projectors and readout vectors remain unselected and no physical clock or length map exists."
+  minimal_counterexample_path: "research_control/tasks/RT-20260730-013/artifacts/finite_radiative_completion_nonselection_v1.tex"
+  current_ontology_implication: "does_not_derive"
+  source_extension_implication: "new_primitive_required"
+  consequence: "new_primitive_required"
+  forbidden_overread: "This scoped nonselection result does not show that no conservative future source extension can derive a physical radiative sector and does not reject the ontology globally."
+
+physics_progress_status:
+  status: "precise_obstruction_found"
+  target_derivation_milestone: "benchmark_promotion"
+  milestone_burden: "Test the dynamical spin-2 or alternative radiative content."
+  explanation: "The packet adds exact finite completion, modal, projector, and readout counterfamilies and identifies the missing physical kinetic and model-to-world maps; it does not establish physical waves, polarizations, speed, damping, dispersion, detector response, or a benchmark pass."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr_delta:
+  effect: "obstruction_recorded"
+  changed: false
+  burden_id: "benchmark_promotion"
+  milestone: "benchmark_promotion"
+  old_status: "blocked by missing primitive"
+  new_status: "blocked by missing primitive"
+  ledger_row_updated: true
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  downstream_unlocked:
+    - "none"
+  downstream_still_blocked:
+    - "physical radiative-sector definition"
+    - "physical polarization content"
+    - "physical propagation speed, damping, and dispersion"
+    - "physical detector coupling"
+    - "g_eff"
+    - "matter_coupling"
+    - "einstein_equations"
+    - "benchmark_promotion"
+  explanation: "The ledger gains a precise P9-T06 radiative-dynamics and detector obstruction path but no physical or promotion status changes."
+
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "unchanged; no canonical ontology edit or source-law adoption"
+  - burden: "Source dynamics"
+    status: "task-local source-extension completion family only; no physical kinetic law selected"
+  - burden: "Source equivalence EqSrc"
+    status: "unchanged"
+  - burden: "RetainH"
+    status: "unchanged"
+  - burden: "GenH"
+    status: "unchanged"
+  - burden: "ObsLoc_lc"
+    status: "unchanged; formal readouts lack physical detector semantics"
+  - burden: "Resp_lc"
+    status: "unchanged; formal C4 response fixtures only"
+  - burden: "M_src"
+    status: "unchanged; no physical time, length, wavenumber, or causal map"
+  - burden: "g_eff"
+    status: "unresolved; formal modes and projectors are not an effective metric or spin-2 sector"
+  - burden: "matter coupling"
+    status: "unresolved; no physical detector interaction or strain map"
+  - burden: "Einstein equations"
+    status: "unresolved; no physical hyperbolic field equation is derived"
+  - burden: "benchmark promotion"
+    status: "blocked; five source cases executed across P9-T02 through P9-T06, five INCONCLUSIVE outcomes, zero passes"
+  - burden: "Gate Chair status"
+    status: "Gate D protected NOT_READY unchanged; no Gate E verdict"
+  - burden: "finite-variation robustness"
+    status: "exact finite modal calculations only; physical kinetic and model-to-world robustness absent"
+  - burden: "current route freeze or hard-fail status"
+    status: "unchanged P9-T06 static-inference branch locally frozen without new physical kinetic, scale, polarization, and detector laws; distinct P9-T07 case remains open after checkpoint"
+
+freeze_criteria_status:
+  repeated_burden: true
+  scoped_obstruction: true
+  freeze_evaluation_required: true
+  active_freeze_label: "P9T06-UNCHANGED-STATIC-FINITE-RADIATIVE-MAP-ABSENT"
+  prior_attempts_considered:
+    - "RT-20260729-007"
+    - "RT-20260729-008"
+    - "RT-20260729-011"
+    - "RT-20260729-012"
+    - "RT-20260730-008"
+    - "RT-20260730-010"
+    - "RT-20260730-011"
+    - "RT-20260730-012"
+    - "RT-20260730-013"
+  freeze_if:
+    - "The same static C4 equation is rerun while choosing m, gamma, a rank-two projector, or a readout from target expectations."
+    - "The two-dimensional formal eigenspace is relabeled as physical tensor polarizations without a source-derived map."
+    - "The update parameter and graph eigenvalues are relabeled as physical time, wavenumber, or luminal propagation."
+  do_not_freeze_if:
+    - "A materially new source-derived kinetic operator, physical clock and length map, characteristic cone, radiative selector, and detector interaction are constructed with exact provenance and no target import."
+    - "A distinct P9-T07 nonlinear conservation and compact-source benchmark case is executed without reusing the P9-T06 formal modes as physical observables."
+  freeze_decision: "locally_frozen"
+  decision_reason: "The exact completion, projector, and readout counterfamilies close physical inference from the unchanged static finite record, while conservative source-law construction and the distinct P9-T07 burden remain open."
+  next_allowed_route: "candidate_constructor"
+  ledger_or_registry_update_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  status_update_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  global_theory_rejection: false
+  future_source_extension_impossibility: false
+
+loop_risk_decision:
+  category: "bridge_facing_candidate_path"
+  next_route: "continue_distinct_benchmark_case"
+  rationale: "P9-T06 freezes inference from the unchanged static finite equation without a physical kinetic and detector map. P9-T07 must execute the distinct nonlinear conservation and compact-source burden."
+  repeated_burdens:
+    - "physical source-to-target observable map remains absent"
+    - "physical temporal and spatial units remain absent"
+    - "source-derived geometry and physical field equations remain absent"
+
+route_cycle_control:
+  cycle_family: "v21_p9_source_derived_benchmark_suite"
+  current_cycle_step: "P9-T06_finite_radiative_completion_nonselection_inconclusive"
+  cycle_risk: "A later packet could choose the rank-two eigenspace, kinetic normalization, damping, or readout from target expectations and mislabel a formal finite analogy as gravitational-wave recovery."
+  prior_related_tasks:
+    - "RT-20260729-012"
+    - "RT-20260730-008"
+    - "RT-20260730-010"
+    - "RT-20260730-011"
+    - "RT-20260730-012"
+    - "RT-20260730-013"
+  orbit_avoidance_reason: "P9-T06 adds a new exact finite completion, projector, and readout counterfamily plus a radiative model-to-world nonselection theorem. P9-T07 must use its own nonlinear conservation and compact-source case schema."
+  next_role_consequence: "candidate-constructor@0.2.0 for v21 P9-T07 after checkpoint"
+
+source_extension_classification:
+  checklist_id: "source_extension_classification_checklist_v1"
+  item_id: "FiniteRadiativeCompletionFamily_v1"
+  item_source_path: "research_control/tasks/RT-20260730-013/artifacts/finite_radiative_completion_nonselection_v1.tex"
+  classification: "conservative_definitional_extension"
+  evidence_paths:
+    - "research_control/tasks/RT-20260729-007/artifacts/finite_source_field_equation_identity_v1.tex"
+    - "research_control/tasks/RT-20260729-008/artifacts/finite_constraint_dynamical_viability_stress_v1.tex"
+    - "research_control/tasks/RT-20260728-002/artifacts/source_operational_device_suite_candidate_v1.tex"
+    - "research_control/tasks/RT-20260729-012/artifacts/source_derived_benchmark_protocol_v1.tex"
+  relation_to_current_ontology: "conservative"
+  claim_boundary_id: "CB-V21-P9-T06-RADIATIVE-DYNAMICS-DETECTOR-NONSELECTION-001"
+  protected_authority_required: true
+  physics_promotion_authorized: false
+  downstream_promotion_authorized: false
+  allowed_conclusion: "One exact proposal-only finite completion, projector, and readout counterfamily and current-source physical-radiative nonselection obstruction are established; the physical radiative case remains INCONCLUSIVE."
+  forbidden_overreads:
+    - "task-local completion as an adopted physical source law"
+    - "graph eigenmodes as physical gravitational-wave polarizations"
+    - "tau as physical time or graph eigenvalues as physical wavenumbers"
+    - "formal modal roots as a physical speed, damping, or dispersion law"
+    - "D_d as a physical detector coupling or strain response"
+    - "benchmark pass Gate E verdict or benchmark promotion"
+    - "source-law adoption or rejection"
+    - "effective geometry Einstein equations exact-GR recovery proof publication push global no-go future impossibility or completed derivation"
+  next_route_if_blocked: "P9-T07 distinct nonlinear conservation and compact-source benchmark case after checkpoint"
+
+bridge_attempt_status:
+  bridge_attempted: true
+  bridge_name: "registered finite static equation to physical radiative sector, polarizations, propagation, damping, dispersion, and detector response"
+  bridge_result: "precise_obstruction"
+  candidate_map: "the static C4 equation maps to exact proposal-only modal, projector, and readout counterfamilies; no source-derived selector or model-to-world calibration reaches unique physical radiative observables"
+  missing_primitive: "A source-derived physical kinetic operator, clock, length and wavenumber map, characteristic cone, radiative-sector and polarization selector, detector interaction, strain observable, corrections, uncertainty, tolerance, and independent reproduction remain absent."
+  preserves_blocks: true
+  blocked_outputs:
+    - "physical_radiative_sector"
+    - "physical_polarization_content"
+    - "physical_propagation_speed"
+    - "physical_damping_or_dispersion"
+    - "physical_detector_response"
+    - "effective_geometry_or_metric"
+    - "Einstein_equations"
+    - "exact_GR_recovery"
+    - "benchmark_pass_or_promotion"
+    - "Gate_E_verdict"
+    - "proof_publication_push_or_completed_derivation"
+  explanation: "The source side supplies exact formal counterfamilies, but their selector, physical codomain, and calibration are not derived."
+
+selected_next_route:
+  route_id: "v21_p9_t07_nonlinear_conservation_compact_source_after_p9_t06_inconclusive"
+  route_label: "benchmark-recovery-packet"
+  role_family: "candidate-constructor@0.2.0"
+  worker_skill: "continue-research"
+  selected_next_packet_type: "source_only_nonlinear_conservation_compact_source_case"
+  task_type: "v21_p9_t07_nonlinear_conservation_compact_source_benchmark_case"
+  plan_task_id: "P9-T07"
+  target_derivation_milestone: "benchmark_promotion"
+  milestone_burden: "Move beyond linear and homogeneous controls."
+  strategy_id: "construct_p9_t07_distinct_source_derived_nonlinear_compact_case_v1"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  p9_t02_outcome_carried_forward: "INCONCLUSIVE"
+  p9_t03_outcome_carried_forward: "INCONCLUSIVE"
+  p9_t04_outcome_carried_forward: "INCONCLUSIVE"
+  p9_t05_outcome_carried_forward: "INCONCLUSIVE"
+  p9_t06_outcome_carried_forward: "INCONCLUSIVE"
+  cumulative_benchmark_pass_count: 0
+  target_informed_source_repair_authorized: false
+  benchmark_result_preestablished: false
+  Gate_E_verdict_preestablished: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+claim_boundary:
+  allowed:
+    - "one exact proposal-only finite completion counterfamily"
+    - "one exact formal mode, projector, and readout analysis"
+    - "one exact current-source radiative dynamics and detector nonselection obstruction"
+    - "one source seal and post-seal typed comparison"
+    - "one INCONCLUSIVE case classification with FORMAL_ANALOGY secondary label"
+    - "P9-T07 route only after checkpoint"
+  forbidden:
+    - "source-law or completion adoption or rejection"
+    - "physical time length wavenumber radiative sector polarization speed damping dispersion or detector identification"
+    - "effective geometry Einstein equations exact-GR recovery"
+    - "benchmark pass Gate E verdict promotion proof publication push or completed derivation"
+    - "global no-go or future source-extension impossibility"
+
+forbidden_conclusion_summary:
+  forbidden_conclusions:
+    - "canonical ontology edit"
+    - "m_src adoption"
+    - "physical kinetic law"
+    - "physical gravitational-wave polarization count"
+    - "physical propagation speed damping or dispersion"
+    - "physical detector response"
+    - "g_eff"
+    - "matter coupling"
+    - "Einstein-equation claim"
+    - "benchmark pass or promotion"
+    - "Gate Chair verdict"
+    - "completed derivation"
+    - "global theory rejection"
+    - "future source-extension impossibility"
+  physics_promotion_authorized: false
+  summary: "The exact source counterfamily establishes only current-source radiative and detector nonselection and an INCONCLUSIVE case; every physical target, promotion, proof, publication, push, global no-go, future-impossibility, and completed-derivation conclusion remains blocked."
+
+no_target_import_audit:
+  status: "PASS"
+  target_family_known: true
+  blindness_claimed: false
+  source_stage_target_formula_count: 0
+  source_stage_target_value_count: 0
+  target_comparison_opened_before_seal: false
+  target_comparison_opened_after_seal: true
+  source_mutation_after_target_comparison_count: 0
+  target_selected_parameter_count: 0
+  target_selected_projector_or_readout_count: 0
+  target_informed_rerun_count: 0
+  desired_agreement_used: false
+
+artifacts:
+  source_artifact: "research_control/tasks/RT-20260730-013/artifacts/finite_radiative_completion_nonselection_v1.tex"
+  source_record: "research_control/tasks/RT-20260730-013/artifacts/source_radiative_completion_family_v1.yaml"
+  case: "research_control/tasks/RT-20260730-013/artifacts/p9_t06_radiative_case_v1.yaml"
+  comparison_matrix: "research_control/tasks/RT-20260730-013/artifacts/p9_t06_radiative_comparison_matrix_v1.yaml"
+  provenance_dag: "research_control/tasks/RT-20260730-013/artifacts/p9_t06_provenance_dag_v1.yaml"
+  source_seal: "research_control/tasks/RT-20260730-013/artifacts/p9_t06_source_output_seal_v1.json"
+  target_exposure_ledger: "research_control/tasks/RT-20260730-013/artifacts/p9_t06_target_exposure_ledger_v1.yaml"
+  receipt: "research_control/tasks/RT-20260730-013/artifacts/p9_t06_radiative_receipt_v1.json"
+  validator: "research_control/tasks/RT-20260730-013/artifacts/validate_p9_t06_radiative.py"
+  parent_fusion: "research_control/tasks/RT-20260730-013/artifacts/parent_fusion_notes_p9_t06_radiative.md"
+
+output_paths:
+  - "research_control/tasks/RT-20260730-013/00_TASK.yaml"
+  - "research_control/tasks/RT-20260730-013/DDR-20260730-013.md"
+  - "research_control/tasks/RT-20260730-013/artifacts/finite_radiative_completion_nonselection_v1.tex"
+  - "research_control/tasks/RT-20260730-013/artifacts/**"
+  - "research_control/tasks/RT-20260730-013/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260730-013/jobs/AJ-RT-20260730-013-001.yaml"
+  - "research_control/tasks/RT-20260730-013/roles/candidate-constructor@0.2.0--RT-20260730-013.yaml"
+  - "research_control/handoffs/handoff-0920.yaml"
+  - "research_control/handoffs/handoff-0920.md"
+  - "research_control/program_state.yaml"
+  - "registries/**"
+  - "generated memory and navigation derivatives"
+
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | status=pass_after_refresh"
+  - ".venv/bin/python research_control/tasks/RT-20260730-013/artifacts/validate_p9_t06_radiative.py --check --json | exit_code=0 | status=pass | checks=39"
+  - "scratch Tectonic compilation | exit_code=0 | status=pass | pages=3"
+  - "git diff --check | exit_code=0 | status=pass"
+
+validation_summary:
+  task_local_check_count: 39
+  task_local_failed_check_count: 0
+  source_hash_check_count: 6
+  source_hash_mismatch_count: 0
+  benchmark_pass_count: 0
+  target_informed_rerun_count: 0
+  independent_reproduction_count: 0
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 181 route claim, repository binding, reasoning effort, clean manifest, and dependency checkpoint cc71d192 were validated."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Exact source hashes, C4 eigenpairs, modal roots, response fixtures, DAG, seal, exposure, comparison, parent-child, and no-fog checks pass."
+      - "Task-local validator passes 39 of 39 checks."
+  post_write:
+    status: "PENDING"
+    evidence:
+      - "Final repository-wide validation follows handoff, registry, and derivative synchronization."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "One governed RT-013 checkpoint remains uninvoked."
+  renderer:
+    status: "PENDING"
+    evidence:
+      - "Final render-and-check pass follows this completion record."
+  memory_bootstrap:
+    status: "PENDING"
+    evidence:
+      - "Final tracked memory synchronization and validate-only pass remain."
+  claim_language_linter:
+    status: "PENDING"
+    evidence:
+      - "Changed-source claim-language validation remains in the precheckpoint stack."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "none"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  publication_authorized: false
+  proof_authority: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  canonical_ontology_edit_authorized: false
+  ontology_selection_authorized: false
+  physical_interpretation_establishment_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []

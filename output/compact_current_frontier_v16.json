@@ -2,7 +2,7 @@
   "schema_id": "compact_current_frontier_v16",
   "generated_from": [
     "research_control/program_state.yaml",
-    "research_control/handoffs/handoff-0919.yaml",
+    "research_control/handoffs/handoff-0920.yaml",
     "registries/DISTANCE_TO_GR_LEDGER.csv",
     "registries/METRIC_USE_LEDGER.csv",
     "research_control/current_frontier.md",
@@ -11,17 +11,17 @@
     "research_control/design/active_state_bifurcation_policy_v1.md"
   ],
   "active_state": {
-    "active_task_id": "RT-20260730-012",
-    "latest_handoff_id": "handoff-0919",
-    "current_status": "source_cosmology_decoder_calibration_precisely_obstructed_case_inconclusive_ready_for_checkpoint",
+    "active_task_id": "RT-20260730-013",
+    "latest_handoff_id": "handoff-0920",
+    "current_status": "radiative_dynamics_detector_nonselection_precisely_obstructed_case_inconclusive_ready_for_checkpoint",
     "v15_completed": false,
     "v16_completed": false,
     "v16_plan_registered": true
   },
   "active_state_bifurcation": {
-    "latest_research_task_id": "RT-20260730-012",
-    "latest_research_handoff_id": "handoff-0919",
-    "latest_research_next_action": "Invoke the one governed checkpoint for AJ-RT-20260730-012-001. After that commit, use one fresh bounded Candidate Constructor packet for P9-T06 to execute the distinct radiative-sector benchmark case while carrying P9-T02 through P9-T05 INCONCLUSIVE dispositions and zero benchmark passes.",
+    "latest_research_task_id": "RT-20260730-013",
+    "latest_research_handoff_id": "handoff-0920",
+    "latest_research_next_action": "Invoke the one governed checkpoint for AJ-RT-20260730-013-001. After that commit, use one fresh bounded Candidate Constructor packet for P9-T07 to execute the distinct nonlinear conservation, constraint-closure, and compact-source benchmark case while carrying P9-T02 through P9-T06 INCONCLUSIVE dispositions and zero benchmark passes.",
     "latest_project_system_task_id": "none",
     "latest_project_system_status": "none",
     "latest_project_system_sidecar_task_id": "none",
@@ -30,10 +30,10 @@
     "next_research_route_source": "latest_research_handoff"
   },
   "next_route": {
-    "route_id": "v21_p9_t06_radiative_sector_after_p9_t05_inconclusive",
+    "route_id": "v21_p9_t07_nonlinear_conservation_compact_source_after_p9_t06_inconclusive",
     "role_family": "candidate-constructor@0.2.0",
     "target_derivation_milestone": "benchmark_promotion",
-    "milestone_burden": "Test radiative-sector recovery without adopting target wave equations, polarizations, speed, damping, dispersion, or detector response.",
+    "milestone_burden": "Move beyond linear and homogeneous controls.",
     "requires_human_gate": false
   },
   "claim_boundary": {
@@ -565,7 +565,7 @@
           "no_benchmark_gate_chair_closure",
           "no_completed_derivation"
         ],
-        "last_evidence_path": "research_control/tasks/RT-20260730-012/artifacts/source_expansion_decoder_nonselection_v1.tex",
+        "last_evidence_path": "research_control/tasks/RT-20260730-013/artifacts/finite_radiative_completion_nonselection_v1.tex",
         "high_risk_status_card": {
           "object_id": "benchmark_promotion",
           "positive_status": "benchmark_promotion remains blocked by upstream derivation burdens and protected authority.",
@@ -625,30 +625,15 @@
         "layer": "post_write",
         "status": "PENDING",
         "evidence": [
-          "Final repository-wide validation follows handoff, registry, and derivative synchronization."
+          "Repository-wide render, registry, memory, documentation, claim-language, taxonomy, and research-control gates run before checkpoint."
         ]
       },
       {
         "layer": "post_checkpoint",
         "status": "PENDING",
         "evidence": [
-          "One governed RT-012 checkpoint remains uninvoked."
+          "Exactly one governed checkpoint remains."
         ]
-      },
-      {
-        "layer": "renderer",
-        "status": "PENDING",
-        "evidence": []
-      },
-      {
-        "layer": "memory_bootstrap",
-        "status": "PENDING",
-        "evidence": []
-      },
-      {
-        "layer": "claim_language_linter",
-        "status": "PENDING",
-        "evidence": []
       }
     ]
   },
