@@ -1,0 +1,20 @@
+schema_id: "p9_t05_internal_perspective_v1"
+task_id: "RT-20260730-012"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+outer_agentjob_count: 1
+child_agentjob_count: 0
+subagent_count: 0
+result:
+  theorem_id: "P9T05-THM-SOURCE-DECODER-NONSELECTION-001"
+  exact_solution: "A=A_0/sqrt(1+2 gamma A_0^2 lambda)"
+  counterfamily: "b_p=(A_0/A)^p, E_p=p gamma A^2, Q_p=2/p-1"
+  density_family: "rho_{p,r}=M_0 b_p^(-r)"
+  conclusion: "same source history gives distinct exact expansion and density tokens for unselected p and r"
+  candidate_constructor_result: "precise_obstruction"
+authority_limits:
+  internal_perspective_is_independent_reproduction: false
+  theorem_is_source_conditional: true
+  physical_cosmology_established: false
+  physics_promotion_authorized: false

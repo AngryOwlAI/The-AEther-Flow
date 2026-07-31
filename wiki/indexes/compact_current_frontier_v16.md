@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260730-011`
-- Latest handoff: `handoff-0918`
-- Current status: `causal_freefall_sector_selector_precisely_obstructed_case_inconclusive_ready_for_checkpoint`
+- Active task: `RT-20260730-012`
+- Latest handoff: `handoff-0919`
+- Current status: `source_cosmology_decoder_calibration_precisely_obstructed_case_inconclusive_ready_for_checkpoint`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260730-011`
-- Latest research handoff: `handoff-0918`
-- Latest research next action: Invoke the one governed checkpoint for AJ-RT-20260730-011-001. After that commit, use one fresh bounded Candidate Constructor packet for P9-T05 to execute the next distinct source-derived benchmark case while carrying the P9-T02 through P9-T04 INCONCLUSIVE dispositions and zero benchmark passes.
+- Latest research task: `RT-20260730-012`
+- Latest research handoff: `handoff-0919`
+- Latest research next action: Invoke the one governed checkpoint for AJ-RT-20260730-012-001. After that commit, use one fresh bounded Candidate Constructor packet for P9-T06 to execute the distinct radiative-sector benchmark case while carrying P9-T02 through P9-T05 INCONCLUSIVE dispositions and zero benchmark passes.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p9_t05_distinct_source_derived_benchmark_case_after_p9_t04_inconclusive`
+- Route ID: `v21_p9_t06_radiative_sector_after_p9_t05_inconclusive`
 - Role family: `candidate-constructor@0.2.0`
 - Target milestone: `benchmark_promotion`
-- Milestone burden: Execute the next distinct source-derived benchmark case under the sealed protocol and carried-forward inconclusive dispositions.
+- Milestone burden: Test radiative-sector recovery without adopting target wave equations, polarizations, speed, damping, dispersion, or detector response.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `36141886c88fe8577f8b249f3301863d001033a5eec779fbccbc8eaa709aeb96`
-- JSON SHA-256: `e67768d464a83ac77a25cdf6a79a616fa69efff41b487d8e0436e2d547dc5f62`
+- YAML SHA-256: `ad903cc6932e4d51017cf2452ec4cb9c5aa6a7fc4a821598c4eae7805e44764b`
+- JSON SHA-256: `9219ba8c0e69b70e1139f3208e79950244120301495c47e5c72e4698811bfc6b`
 
 ## Authority Warning
 

@@ -1,0 +1,59 @@
+{
+  "schema_id": "p9_t05_cosmology_receipt_v1",
+  "task_id": "RT-20260730-012",
+  "job_id": "AJ-RT-20260730-012-001",
+  "case_id": "P9-BENCH-COSMOLOGY-V1",
+  "status": "completed",
+  "created_at": "2026-07-31T01:02:22Z",
+  "candidate_constructor_result": "precise_obstruction",
+  "case_classification": {
+    "outcome": "INCONCLUSIVE",
+    "secondary_label": "FORMAL_ANALOGY",
+    "executed_case_count": 1,
+    "cumulative_executed_case_count": 4,
+    "cumulative_inconclusive_case_count": 4,
+    "passed_case_count": 0,
+    "typed_target_comparison_count": 1,
+    "target_informed_rerun_count": 0,
+    "independent_reproduction_count": 0,
+    "distance_to_gr_delta_changed": false,
+    "benchmark_promotion_authorized": false,
+    "physics_promotion_authorized": false
+  },
+  "mathematical_payload": {
+    "amplitude_solution": "A=A_0/sqrt(1+2 gamma A_0^2 lambda)",
+    "decoder_family": "b_p=(A_0/A)^p",
+    "rate_family": "E_p=p gamma A^2",
+    "deceleration_family": "Q_p=2/p-1",
+    "density_family": "rho_{p,r}=M_0 b_p^(-r)",
+    "fixture_endpoint_amplitude": "1/sqrt(5)",
+    "fixture_decoder_exponents": ["1", "2", "4"],
+    "fixture_endpoint_tokens": ["sqrt(5)", "5", "25"],
+    "fixture_deceleration_tokens": ["1", "0", "-1/2"],
+    "exact_failure": "The current source package does not derive a total map from the proposal-only amplitude history to a unique physical scale, clock, volume, density, curvature, and constant-term interpretation."
+  },
+  "source_hashes": {
+    "P5T08SourceDynamicsMilestoneSynthesis_v1": "a2b9c6670cdb0e09ca2e19ff30f71d9bb954e3ab2fc73a5c9727a2df10db93aa",
+    "P7T08PhysicalMatterAdoptionDecision_v1": "85fbf32fb9b02aeae556149cbc5c6b51bd6fedf278a3bc401545c93e29fc4827",
+    "SourceDerivedBenchmarkProtocol_v1": "88ef097bf712ad115e9af62cc18a8b3eabb12f8545350f714ad065f702471007",
+    "P9T04CausalFreeFallSourceOnlyCase_v1": "f3ee6d0d7c19f68daf9f6ed9a2e10cec964633694688cc62074edc9089f66255",
+    "SourceHomogeneousAmplitudeRecord_v1": "dc0481df6d3b628b9af402b372d78c10047a48dec94b9dce3cc1b5579707c14b",
+    "SourceExpansionDecoderNonselection_v1": "8de49fa7a57c4e02f1b44147a0fa5f17dad89a1ec5f2ebf5695aaa4d8b14f1cf"
+  },
+  "validation_expectation": {
+    "source_hashes_match": true,
+    "exact_formula_checks_pass": true,
+    "fixed_step_rk4_error_below_2e_minus_12": true,
+    "decoder_outputs_are_distinct": true,
+    "source_firewall_passes": true,
+    "source_mutation_after_seal_count": 0,
+    "benchmark_pass_count": 0
+  },
+  "authority_limits": {
+    "validator_is_physics_proof": false,
+    "physical_cosmology_established": false,
+    "benchmark_pass_established": false,
+    "benchmark_promotion_authorized": false,
+    "physics_promotion_authorized": false
+  }
+}

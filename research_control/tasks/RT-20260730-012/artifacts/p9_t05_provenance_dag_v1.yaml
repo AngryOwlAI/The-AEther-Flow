@@ -1,0 +1,60 @@
+schema_id: "p9_t05_provenance_dag_v1"
+task_id: "RT-20260730-012"
+case_id: "P9-BENCH-COSMOLOGY-V1"
+status: "sealed"
+nodes:
+  - node_id: "p5_source_dynamics"
+    stage: "source_root"
+    path: "research_control/tasks/RT-20260726-001/artifacts/source_dynamics_milestone_synthesis_v1.tex"
+  - node_id: "p7_physical_matter_scope"
+    stage: "source_root"
+    path: "research_control/tasks/RT-20260729-001/artifacts/p7_t08_gate_c_decision_v1.tex"
+  - node_id: "p9_protocol"
+    stage: "source_root"
+    path: "research_control/tasks/RT-20260729-012/artifacts/source_derived_benchmark_protocol_v1.tex"
+  - node_id: "single_mode_amplitude_solution"
+    stage: "source_stage"
+    path: "research_control/tasks/RT-20260730-012/artifacts/source_homogeneous_amplitude_record_v1.yaml"
+  - node_id: "decoder_counterfamily"
+    stage: "source_stage"
+    path: "research_control/tasks/RT-20260730-012/artifacts/source_expansion_decoder_nonselection_v1.tex"
+  - node_id: "density_counterfamily"
+    stage: "source_stage"
+  - node_id: "decoder_nonselection_obstruction"
+    stage: "source_stage"
+  - node_id: "source_seal"
+    stage: "seal"
+    path: "research_control/tasks/RT-20260730-012/artifacts/p9_t05_source_output_seal_v1.json"
+  - node_id: "registered_target_background_family"
+    stage: "target_root"
+    path: "ontology/tex/aether_flow_relativistic_recovery.tex"
+  - node_id: "typed_burden_comparison"
+    stage: "comparison_after_seal"
+    path: "research_control/tasks/RT-20260730-012/artifacts/p9_t05_cosmology_comparison_matrix_v1.yaml"
+  - node_id: "case_classification"
+    stage: "classification"
+edges:
+  - ["p5_source_dynamics", "single_mode_amplitude_solution"]
+  - ["p9_protocol", "single_mode_amplitude_solution"]
+  - ["single_mode_amplitude_solution", "decoder_counterfamily"]
+  - ["p7_physical_matter_scope", "density_counterfamily"]
+  - ["decoder_counterfamily", "density_counterfamily"]
+  - ["decoder_counterfamily", "decoder_nonselection_obstruction"]
+  - ["density_counterfamily", "decoder_nonselection_obstruction"]
+  - ["decoder_nonselection_obstruction", "source_seal"]
+  - ["source_seal", "typed_burden_comparison"]
+  - ["registered_target_background_family", "typed_burden_comparison"]
+  - ["typed_burden_comparison", "case_classification"]
+target_comparison_opened_after_seal: true
+forbidden_reachability_result:
+  target_root_count: 1
+  target_to_source_stage_path_count: 0
+  target_to_seal_path_count: 0
+  source_mutation_after_target_comparison_count: 0
+  firewall_result: "PASS_SOURCE_STAGE"
+known_target_family_disclosure: "The registered comparison family and required ontology files were known before execution. No target equation, value, branch, tolerance, or desired agreement selected p, r, a clock calibration, a source datum, or a rerun."
+authority_limits:
+  provenance_graph_is_physics_proof: false
+  target_blindness_claimed: false
+  benchmark_pass_established: false
+  physics_promotion_authorized: false

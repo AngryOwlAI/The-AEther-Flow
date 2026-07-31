@@ -1,0 +1,40 @@
+schema_id: "p9_t05_target_exposure_ledger_v1"
+task_id: "RT-20260730-012"
+case_id: "P9-BENCH-COSMOLOGY-V1"
+status: "completed"
+known_before_execution:
+  target_family_known: true
+  target_family: "registered homogeneous and isotropic exact-GR background comparison"
+  required_target_authority_files_inspected: true
+  blindness_claimed: false
+source_stage_exposure:
+  target_comparison_opened: false
+  target_value_loaded: false
+  target_formula_loaded_as_source_input: false
+  target_boundary_condition_loaded_as_source_input: false
+  target_tolerance_loaded_as_source_input: false
+  desired_agreement_loaded_as_source_input: false
+  target_selected_parameter_count: 0
+  target_informed_rerun_count: 0
+permitted_prior_knowledge:
+  - "the target background benchmark family exists"
+  - "target background equations and constant terms are comparison-only objects"
+  - "P9-T05 requires a source-defined homogeneous/isotropic state and derived expansion observable"
+prohibited_and_not_used:
+  - "target scale-factor or background equations as source premises"
+  - "target matter-continuity exponent as the source volume decoder"
+  - "target constant term as a source-side additive term"
+  - "target-fitted decoder exponents, clock calibrations, tolerances, or reruns"
+comparison_stage:
+  opened: true
+  opened_after_source_seal: true
+  comparison_kind: "typed burden comparison"
+  target_file: "ontology/tex/aether_flow_relativistic_recovery.tex"
+  source_mutation_after_open: false
+  target_informed_rerun_count: 0
+  disposition: "INCONCLUSIVE"
+authority_limits:
+  disclosure_is_blindness_claim: false
+  target_exposure_ledger_is_physics_proof: false
+  benchmark_pass_established: false
+  physics_promotion_authorized: false

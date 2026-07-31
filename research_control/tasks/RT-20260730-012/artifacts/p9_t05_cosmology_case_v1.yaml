@@ -1,0 +1,218 @@
+schema_id: "p9_t05_cosmology_case_v1"
+artifact_id: "P9T05CosmologySourceOnlyCase_v1"
+task_id: "RT-20260730-012"
+job_id: "AJ-RT-20260730-012-001"
+case_id: "P9-BENCH-COSMOLOGY-V1"
+downstream_plan_task_id: "P9-T05"
+protocol_id: "SourceDerivedBenchmarkProtocol_v1"
+firewall_id: "TargetImportFirewall_v1"
+status: "completed"
+candidate_status: "draft/control"
+candidate_constructor_result: "precise_obstruction"
+execution_status: "INCONCLUSIVE"
+secondary_label: "FORMAL_ANALOGY"
+source_execution_status: "COMPLETED"
+source_stage_firewall_status: "PASS"
+source_output_seal_status: "SEALED"
+target_comparison_status: "OPENED_AFTER_SEAL_TYPED_BURDEN_ONLY"
+independent_reproduction_status: "NOT_ACQUIRED"
+target_derivation_milestone: "benchmark_promotion"
+milestone_burden: "Test cosmological recovery without adopting the target FLRW equations."
+benchmark_scope: "homogeneous/isotropic background, expansion law, matter evolution, and controlled constant-term status"
+source_only_attempt_id: "SourceCosmologyDecoderNonselection_v1"
+theorem_id: "P9T05-THM-SOURCE-DECODER-NONSELECTION-001"
+obstruction_id: "OBST-P9T05-SOURCE-COSMOLOGY-DECODER-CALIBRATION-NONSELECTION-001"
+obstruction_scope: "current proposal-only P5 source-dynamics package under the sealed P9 protocol"
+adoption_status: "blocked_adoption_open_continuation"
+
+source_inputs:
+  amplitude_family: "q_A(theta)=A sin(theta_1)"
+  evolution_equation: "dA/dlambda=-gamma A^3"
+  exact_solution: "A=A_0/sqrt(1+2 gamma A_0^2 lambda)"
+  source_status: "proposal-only"
+  physical_matter_scope: "P7-T08 adopted source-side physical matter only; no physical spacetime volume or time"
+  carried_case_outcomes:
+    P9_T02: "INCONCLUSIVE"
+    P9_T03: "INCONCLUSIVE"
+    P9_T04: "INCONCLUSIVE"
+  carried_benchmark_pass_count: 0
+
+source_stage_result:
+  exact_statement: "The fixed source amplitude record admits the exact positive decoder family b_p=(A_0/A)^p with E_p=p gamma A^2 and Q_p=2/p-1, plus the density-token family rho_{p,r}=M_0 b_p^(-r)."
+  nonselection_statement: "Distinct p and r values give distinct exact output histories from the same source record, and the current source package selects neither exponent nor a physical clock or volume calibration."
+  failed_object: "a source-derived total map from the proposal-only amplitude record to a unique physical scale, clock, volume, density, curvature, and constant-term interpretation"
+  current_ontology_implication: "does_not_derive"
+  source_extension_implication: "new_primitive_required"
+  physical_interpretation_status: "NOT_ESTABLISHED"
+
+source_symmetry_audit:
+  source_uniformity_definition: "one global amplitude with no independent spatial labels"
+  source_uniformity_satisfied: true
+  source_spatial_arena_present: false
+  source_rotation_action_present: false
+  physical_homogeneity_established: false
+  physical_isotropy_established: false
+  disposition: "SINGLE_MODE_UNIFORMITY_ONLY"
+
+expansion_audit:
+  decoder_family_present: true
+  unique_decoder_selected: false
+  physical_clock_selected: false
+  physical_scale_factor_established: false
+  physical_expansion_rate_established: false
+  initial_condition_dependence_declared: true
+  source_asymptotic: "A tends to zero and b_p diverges as lambda tends to infinity for every p>0"
+  physical_attractor_established: false
+
+matter_evolution_audit:
+  conserved_source_amount: "M_0"
+  density_token_family: "rho_{p,r}=M_0 b_p^(-r)"
+  continuity_identity: "d rho_{p,r}/dlambda=-r E_p rho_{p,r}"
+  unique_volume_exponent_selected: false
+  physical_volume_map_present: false
+  physical_density_evolution_established: false
+
+constant_term_audit:
+  independent_constant_in_fixed_source_equation: false
+  source_derived_constant_to_expansion_map_present: false
+  physical_vacuum_status: "NOT_ESTABLISHED"
+  controlled_dark_energy_status: "UNRESOLVED_CURRENT_SOURCE_PACKAGE"
+  forbidden_overread: "The absence of an independent constant in this proposal-only amplitude equation does not establish a vanishing physical vacuum term."
+
+model_to_world_map:
+  status: "MISSING"
+  source_domain: "one proposal-only amplitude history and source bookkeeping token families"
+  physical_codomain: "physical spatial scale, time, volume, density, curvature, and vacuum observables ABSENT"
+  unit_and_scale_calibration: "ABSENT"
+  uncertainty_and_failure_model: "ABSENT_FOR_PHYSICAL_OBSERVABLES"
+  regime_of_validity: "exact conditional one-mode source mathematics only"
+  independent_reproduction_method: "ABSENT"
+
+approximation_order:
+  source_calculation: "exact analytic formulas with deterministic fixed-step RK4 support"
+  temporal_order: "formal nonnegative update parameter only"
+  spatial_order: "UNSET"
+  continuum_order: "UNSET"
+  physical_validity_domain: "NOT_ESTABLISHED"
+residual_corrections:
+  analytic_source_error: "0"
+  numerical_source_error: "bounded by 2e-12 at the fixed endpoint"
+  finite_size: "one-mode source family; physical correction uncontrolled"
+  coarse_graining: "ABSENT"
+  continuum: "ABSENT"
+  clock_calibration: "ABSENT"
+  volume_calibration: "ABSENT"
+  curvature: "ABSENT"
+  physical_correction_control: "ABSENT"
+analytic_equivalence:
+  status: "UNSET"
+  equivalence_relation: "ABSENT_FOR_PHYSICAL_TARGET"
+  domain_and_regularities: "SOURCE_ONE_MODE_ONLY"
+  units_or_dimensionless_status: "SOURCE_TOKENS_DIMENSIONLESS_PHYSICAL_UNITS_ABSENT"
+  target_label_reuse_is_equivalence: false
+numerical_tolerance:
+  status: "SET_FOR_SOURCE_ODE_REPRODUCTION_ONLY"
+  norm_W: "absolute endpoint amplitude error"
+  sampling_domain: "lambda in [0,2]"
+  threshold_tau: "2e-12"
+  threshold_units: "source-amplitude units"
+  uncertainty_propagation: "not a physical uncertainty model"
+  calibration_source: "precomparison exact source solution"
+  target_fit_used: false
+
+target_observable:
+  identity: "registered homogeneous and isotropic background expansion, matter evolution, and constant-term family"
+  stage: "typed comparison only after seal"
+  comparison_opened: true
+  numerical_target_value_loaded: false
+  source_record_mutated_after_comparison: false
+  target_informed_rerun_count: 0
+  reason: "The sealed source record was compared structurally, but the missing physical codomain, selector, and calibration make every requested physical row noncomparable or nonunique."
+
+success_criteria:
+  status: "NOT_SATISFIED"
+  rule: "source-derived physical spatial symmetries, unique expansion and density evolution, controlled constant-term status, corrections, uncertainty, preregistered comparison, and independent reproduction"
+failure_criteria:
+  status: "NOT_TRIGGERED"
+  rule: "source invalidity, firewall breach, or decisive physical target deviation after lawful comparison"
+inconclusive_criteria:
+  status: "TRIGGERED"
+  triggered_items:
+    - "physical spatial arena and homogeneity/isotropy definition absent"
+    - "unique scale decoder and physical clock absent"
+    - "physical volume and matter-density map absent"
+    - "source-derived curvature and constant-term map absent"
+    - "physical corrections and uncertainty absent"
+    - "independent reproduction absent"
+
+source_hash_manifest:
+  - source_id: "P5T08SourceDynamicsMilestoneSynthesis_v1"
+    path: "research_control/tasks/RT-20260726-001/artifacts/source_dynamics_milestone_synthesis_v1.tex"
+    sha256: "a2b9c6670cdb0e09ca2e19ff30f71d9bb954e3ab2fc73a5c9727a2df10db93aa"
+  - source_id: "P7T08PhysicalMatterAdoptionDecision_v1"
+    path: "research_control/tasks/RT-20260729-001/artifacts/p7_t08_gate_c_decision_v1.tex"
+    sha256: "85fbf32fb9b02aeae556149cbc5c6b51bd6fedf278a3bc401545c93e29fc4827"
+  - source_id: "SourceDerivedBenchmarkProtocol_v1"
+    path: "research_control/tasks/RT-20260729-012/artifacts/source_derived_benchmark_protocol_v1.tex"
+    sha256: "88ef097bf712ad115e9af62cc18a8b3eabb12f8545350f714ad065f702471007"
+  - source_id: "P9T04CausalFreeFallSourceOnlyCase_v1"
+    path: "research_control/tasks/RT-20260730-011/artifacts/p9_t04_causal_freefall_case_v1.yaml"
+    sha256: "f3ee6d0d7c19f68daf9f6ed9a2e10cec964633694688cc62074edc9089f66255"
+
+provenance_dag:
+  path: "research_control/tasks/RT-20260730-012/artifacts/p9_t05_provenance_dag_v1.yaml"
+  source_graph_acyclic: true
+  forbidden_target_to_source_path_count: 0
+source_output_seal:
+  path: "research_control/tasks/RT-20260730-012/artifacts/p9_t05_source_output_seal_v1.json"
+  sealed_at: "2026-07-31T01:02:22Z"
+  mutation_after_seal_authorized: false
+independent_reproduction:
+  status: "NOT_ACQUIRED"
+  same_context_exact_validation_available: true
+  same_context_validation_counts_as_independent: false
+  fresh_executor_or_team: false
+  disposition: "INCONCLUSIVE"
+target_exposure_ledger:
+  path: "research_control/tasks/RT-20260730-012/artifacts/p9_t05_target_exposure_ledger_v1.yaml"
+  target_family_known: true
+  blindness_claimed: false
+  target_comparison_opened_after_seal: true
+  target_informed_rerun_count: 0
+
+case_classification:
+  outcome: "INCONCLUSIVE"
+  secondary_label: "FORMAL_ANALOGY"
+  primary_reason: "current source package supplies an exact amplitude history but no unique physical decoder, clock, volume, spatial geometry, curvature, or constant-term map"
+  firewall_failure: false
+  source_failure: false
+  typed_target_comparison_executed: true
+  formal_analogy_present: true
+  benchmark_pass: false
+  cumulative_executed_case_count: 4
+  cumulative_inconclusive_case_count: 4
+  cumulative_pass_count: 0
+
+authority_limits:
+  source_law_adopted_or_rejected: false
+  canonical_ontology_modified: false
+  physical_homogeneity_established: false
+  physical_isotropy_established: false
+  physical_scale_factor_established: false
+  physical_expansion_law_established: false
+  physical_matter_evolution_established: false
+  physical_constant_term_established: false
+  dark_energy_established_or_refuted: false
+  effective_geometry_established: false
+  Einstein_equations_established: false
+  exact_GR_recovery_established: false
+  Gate_D_changed: false
+  Gate_E_verdict_issued: false
+  benchmark_pass_established: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false

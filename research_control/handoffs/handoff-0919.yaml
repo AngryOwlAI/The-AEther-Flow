@@ -1,0 +1,296 @@
+handoff_id: "handoff-0919"
+handoff_number: 919
+task_id: "RT-20260730-012"
+decision_id: "DDR-20260730-012"
+job_id: "AJ-RT-20260730-012-001"
+completion_id: "AJC-AJ-RT-20260730-012-001"
+completion_path: "research_control/tasks/RT-20260730-012/jobs/completions/AJC-AJ-RT-20260730-012-001.yaml"
+completion_sha256: "dd2fc78b2f4d1af887a8991e284249616385a306648cdc8676db41a3fc00bef3"
+status: "ready_after_checkpoint"
+created_at: "2026-07-31T01:02:22Z"
+parent_handoff_id: "handoff-0918"
+plan_task_id: "P9-T06"
+source_role_id: "candidate-constructor"
+source_role_version: "0.2.0"
+source_execution_role_ref: "candidate-constructor@0.2.0--RT-20260730-012"
+summary: "P9-T05 derives one exact proposal-only amplitude history and the counterfamilies b_p=(A_0/A)^p, E_p=p gamma A^2, Q_p=2/p-1, and rho_{p,r}=M_0 b_p^(-r). The same source record yields distinct exact histories for distinct p and r, while the current sources select no physical clock, spatial-volume map, curvature object, or constant-term interpretation. The case is INCONCLUSIVE with secondary FORMAL_ANALOGY, four cumulative inconclusive cases, zero passes, and no promotion."
+next_action: "Invoke the one governed checkpoint for AJ-RT-20260730-012-001. After that commit, use one fresh bounded Candidate Constructor packet for P9-T06 to execute the distinct radiative-sector benchmark case while carrying P9-T02 through P9-T05 INCONCLUSIVE dispositions and zero benchmark passes."
+current_claim_boundary: "CB-V21-P9-T05-SOURCE-COSMOLOGY-DECODER-NONSELECTION-001"
+loop_risk_route: "distinct_benchmark_case_after_local_freeze"
+p9_t02_outcome: "INCONCLUSIVE"
+p9_t03_outcome: "INCONCLUSIVE"
+p9_t04_outcome: "INCONCLUSIVE"
+p9_t05_outcome: "INCONCLUSIVE"
+p9_t05_secondary_label: "FORMAL_ANALOGY"
+p9_t05_executed: true
+p9_t06_executed: false
+
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260730-012"
+  latest_research_handoff_id: "handoff-0919"
+  latest_research_next_action: "Invoke the one governed checkpoint for AJ-RT-20260730-012-001. After that commit, use one fresh bounded Candidate Constructor packet for P9-T06 to execute the distinct radiative-sector benchmark case while carrying P9-T02 through P9-T05 INCONCLUSIVE dispositions and zero benchmark passes."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+
+claim_boundary:
+  allowed_next_scope: "One governed RT-012 checkpoint and then one separately claimed source-only P9-T06 radiative benchmark case."
+  completed_task: "RT-20260730-012"
+  completed_completion_path: "research_control/tasks/RT-20260730-012/jobs/completions/AJC-AJ-RT-20260730-012-001.yaml"
+  completed_completion_sha256: "dd2fc78b2f4d1af887a8991e284249616385a306648cdc8676db41a3fc00bef3"
+  source_handoff_id: "handoff-0918"
+  source_handoff_path: "research_control/handoffs/handoff-0918.yaml"
+  immutable_route_sha256: "27f778f658caf16f0f5c64fb98bafe048075367480bfa5a923d6009f8586c644"
+  route_blocker_fingerprint: "d92614359574193b54ea14c6d0319b2b2182fcaf0d9648c1e908d3e251d3ac82"
+  source_artifact_path: "research_control/tasks/RT-20260730-012/artifacts/source_expansion_decoder_nonselection_v1.tex"
+  source_artifact_sha256: "8de49fa7a57c4e02f1b44147a0fa5f17dad89a1ec5f2ebf5695aaa4d8b14f1cf"
+  source_record_path: "research_control/tasks/RT-20260730-012/artifacts/source_homogeneous_amplitude_record_v1.yaml"
+  source_record_sha256: "dc0481df6d3b628b9af402b372d78c10047a48dec94b9dce3cc1b5579707c14b"
+  case_path: "research_control/tasks/RT-20260730-012/artifacts/p9_t05_cosmology_case_v1.yaml"
+  case_sha256: "bfe3f84f49b083c566486a9b2281ee1bfd3798f81832203ec9a10264afd1ba4f"
+  source_seal_path: "research_control/tasks/RT-20260730-012/artifacts/p9_t05_source_output_seal_v1.json"
+  source_seal_sha256: "a76522a8e3598498bb5e946653ce235f8589bd860af1ab0c5bc4446072c3be86"
+  obstruction_id: "OBST-P9T05-SOURCE-COSMOLOGY-DECODER-CALIBRATION-NONSELECTION-001"
+  checkpoint_invocation_count_before_handoff: 0
+  checkpoint_committed_before_handoff: false
+  source_stage_executed: true
+  source_stage_firewall_passed: true
+  source_output_sealed: true
+  typed_target_comparison_opened_after_seal: true
+  source_mutation_after_target_comparison_count: 0
+  target_informed_rerun_count: 0
+  independent_reproduction_acquired: false
+  executed_case_count: 1
+  cumulative_executed_case_count: 4
+  cumulative_inconclusive_case_count: 4
+  passed_case_count: 0
+  physical_homogeneity_established: false
+  physical_isotropy_established: false
+  physical_expansion_established: false
+  physical_matter_evolution_established: false
+  physical_constant_term_established: false
+  dark_energy_established_or_refuted: false
+  effective_geometry_established: false
+  Gate_D_changed: false
+  Gate_E_verdict_issued: false
+  scientific_status_changed: true
+  scientific_status_change_scope: "exact proposal-only source decoder and density-token counterfamilies plus precise current-source physical-decoder nonselection obstruction only"
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  ontology_adoption_authorized: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_performed: false
+  blocked_claims:
+    - "single-mode source uniformity presented as physical homogeneity or isotropy"
+    - "lambda presented as physical time"
+    - "b_p presented as a physically selected scale factor or E_p as a physical expansion rate"
+    - "rho_{p,r} presented as a physically selected matter density"
+    - "absence of a source constant presented as a vanishing physical vacuum term"
+    - "same-context validation presented as independent reproduction"
+    - "P9-T05 presented as a benchmark pass"
+    - "Gate D or Gate E presented as changed"
+    - "P9-T06 presented as executed before the RT-012 checkpoint"
+    - "effective geometry Einstein equations exact-GR recovery benchmark promotion proof publication push or completed derivation"
+    - "scoped obstruction presented as global no-go or future impossibility"
+
+plan_result:
+  plan_task_id: "P9-T05"
+  next_plan_task_id: "P9-T06"
+  title: "Recover FLRW background evolution and cosmological observables"
+  result_status: "P9_T05_SOURCE_COSMOLOGY_DECODER_CALIBRATION_NONSELECTION_OBSTRUCTION_CASE_INCONCLUSIVE_READY_FOR_CHECKPOINT"
+  work_item_status: "completed"
+  source_amplitude_solution_executed: true
+  decoder_counterfamily_constructed: true
+  density_counterfamily_constructed: true
+  source_output_sealed: true
+  typed_target_comparison_opened_after_seal: true
+  case_outcome: "INCONCLUSIVE"
+  secondary_label: "FORMAL_ANALOGY"
+  physical_cosmology_recovery_established: false
+  benchmark_pass_count: 0
+  p9_t06_dependency_ready_after_checkpoint: true
+  p9_t06_dependency_ready_now: false
+  p9_t06_executed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+distance_to_gr:
+  changed: false
+  effect: "obstruction_recorded_no_physical_delta"
+  burden_id: "benchmark_promotion"
+  milestone: "benchmark_promotion"
+  ledger_row_updated: true
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "The row gains the exact P9-T05 decoder and calibration nonselection obstruction and source paths, but remains blocked with zero physical benchmark passes."
+  downstream_unlocked:
+    - "none"
+  downstream_still_blocked:
+    - "physical homogeneous and isotropic background"
+    - "physical expansion and matter evolution"
+    - "controlled physical constant-term status"
+    - "effective geometry"
+    - "matter coupling"
+    - "Einstein equations"
+    - "exact-GR recovery"
+    - "benchmark promotion"
+
+required_next_packet:
+  task_type: "v21_p9_t06_radiative_sector_source_derived_benchmark_case"
+  plan_task_id: "P9-T06"
+  objective: "Execute the distinct source-derived radiative-sector benchmark case under the sealed protocol without reusing P9-T05 source tokens as physical wave observables."
+  output_requirement: "One sealed source-only radiative case with declared corrections and model-to-world map, or one exact inconclusive or obstruction result."
+  dependency_qualification: "P9-T05 is finalized as an exact decoder counterfamily plus INCONCLUSIVE physical case; the RT-012 checkpoint must commit first."
+  dependency_ready_after_checkpoint: true
+  dependency_ready_now: false
+  exact_human_authorization_required: false
+  p9_t02_outcome_carried_forward: "INCONCLUSIVE"
+  p9_t03_outcome_carried_forward: "INCONCLUSIVE"
+  p9_t04_outcome_carried_forward: "INCONCLUSIVE"
+  p9_t05_outcome_carried_forward: "INCONCLUSIVE"
+  cumulative_benchmark_pass_count: 0
+  decoder_obstruction_carried_forward: "OBST-P9T05-SOURCE-COSMOLOGY-DECODER-CALIBRATION-NONSELECTION-001"
+  executed: false
+
+selected_next_route:
+  route_id: "v21_p9_t06_radiative_sector_after_p9_t05_inconclusive"
+  route_label: "benchmark-recovery-packet"
+  role_family: "candidate-constructor@0.2.0"
+  worker_skill: "continue-research"
+  selected_next_packet_type: "source_only_radiative_sector_case"
+  task_type: "v21_p9_t06_radiative_sector_source_derived_benchmark_case"
+  plan_task_id: "P9-T06"
+  target_derivation_milestone: "benchmark_promotion"
+  milestone_burden: "Test radiative-sector recovery without adopting target wave equations, polarizations, speed, damping, dispersion, or detector response."
+  strategy_id: "construct_p9_t06_distinct_source_derived_radiative_case_v1"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  p9_t02_outcome_carried_forward: "INCONCLUSIVE"
+  p9_t03_outcome_carried_forward: "INCONCLUSIVE"
+  p9_t04_outcome_carried_forward: "INCONCLUSIVE"
+  p9_t05_outcome_carried_forward: "INCONCLUSIVE"
+  cumulative_benchmark_pass_count: 0
+  target_informed_source_repair_authorized: false
+  benchmark_result_preestablished: false
+  Gate_E_verdict_preestablished: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  executed: false
+  next_action: "Remain unexecuted until the RT-012 governed checkpoint commits."
+  source_handoff: "research_control/handoffs/handoff-0919.yaml"
+
+ordinary_route_guard:
+  schema_id: "ordinary_route_guard_evaluation_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  evaluation_id: "ORE-HANDOFF-0919"
+  ordinary_handoff_id: "handoff-0919"
+  threshold: 3
+  consecutive_project_system_tasks_before_selection: 0
+  ready_science_plan_task_ids:
+    - "P9-T06"
+    - "P14-T04"
+  selected_plan_task_id: "P9-T06"
+  selected_route_class: "physics_bearing"
+  selected_worker_skill: "continue-research"
+  outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  exception_receipt:
+    active: false
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+active_state_boundary:
+  active_task_id: "RT-20260730-012"
+  active_job_id: "AJ-RT-20260730-012-001"
+  current_status: "source_cosmology_decoder_calibration_precisely_obstructed_case_inconclusive_ready_for_checkpoint"
+  checkpoint_required: true
+  checkpoint_completed: false
+  checkpoint_invocation_count: 0
+  p9_t05_completed: true
+  p9_t05_outcome: "INCONCLUSIVE"
+  selected_next_plan_task_id: "P9-T06"
+  selected_next_worker_skill: "continue-research"
+  selected_next_role_family: "candidate-constructor@0.2.0"
+  selected_next_route_label: "benchmark-recovery-packet"
+  selected_next_strategy_id: "construct_p9_t06_distinct_source_derived_radiative_case_v1"
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 180 route claim, repository binding, reasoning effort, clean manifest, and dependency checkpoint 91b41005 were validated."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Exact source hashes, decoder formulas, RK4 integration, DAG, seal, exposure, comparison, parent-child, and no-fog checks pass."
+      - "Task-local validator passes 21 of 21 checks."
+  post_write:
+    status: "PENDING"
+    evidence:
+      - "Final repository-wide validation follows handoff, registry, and derivative synchronization."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "One governed RT-012 checkpoint remains uninvoked."
+  renderer:
+    status: "PENDING"
+  memory_bootstrap:
+    status: "PENDING"
+  claim_language_linter:
+    status: "PENDING"
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "none"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  publication_authorized: false
+  proof_authority: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  canonical_ontology_edit_authorized: false
+  ontology_selection_authorized: false
+  physical_interpretation_establishment_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required_no_nonblank_signals"
+  rationale: "The bounded P9-T05 physics packet emits no project-improvement signal."
+
+handoff_authority_boundary:
+  canonical_sources_unchanged: true
+  scientific_status_changed: true
+  scientific_status_change_scope: "task-local exact proposal-only decoder and density-token counterfamilies plus precise current-source physical-decoder nonselection obstruction only"
+  physical_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false

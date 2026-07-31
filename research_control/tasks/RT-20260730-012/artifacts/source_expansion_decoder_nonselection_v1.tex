@@ -1,0 +1,146 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[T1]{fontenc}
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\newcommand{\Ainit}{A_{\!0}}
+\newcommand{\Etoken}{\mathcal E}
+\newcommand{\Qtoken}{\mathcal Q}
+
+\title{Source Expansion-Token Decoder Nonselection}
+\author{The \AE ther-Flow Research Project}
+\date{2026-07-30}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This draft/control source-stage note tests what the registered proposal-only
+one-mode amplitude flow determines before any comparison oracle is opened.
+It derives an exact positive one-parameter counterfamily of normalized
+expansion tokens, their logarithmic rates and deceleration tokens, and a
+two-parameter amount-to-density bookkeeping family.  The same amplitude
+history supports mutually distinct outputs, while the current source package
+contains no selector for the decoder exponent, physical clock, volume map, or
+constant-term interpretation.  The result is a precise current-source
+nonselection obstruction, not a global impossibility result.
+\end{abstract}
+
+\section{Fixed source record}
+
+The only dynamical input is the registered P5 proposal-only one-mode record
+\[
+ q_A(\theta)=A\sin\theta_1,\qquad
+ \frac{dA}{d\lambda}=-\gamma A^3,\qquad
+ \gamma>0,\quad A(0)=\Ainit>0 .
+\]
+Its exact forward solution is
+\[
+ A(\lambda)
+   =\frac{\Ainit}{\sqrt{1+2\gamma\Ainit^2\lambda}},
+ \qquad \lambda\geq0 .
+\]
+The source record has one global amplitude and no independent spatial labels.
+We call this \emph{single-mode source uniformity}.  It does not establish a
+physical spatial homogeneity or isotropy, and \(\lambda\) is not identified
+with physical time.
+
+\begin{definition}[Decoder counterfamily]
+For every \(p>0\), define the normalized positive token
+\[
+ b_p(\lambda)
+   :=\left(\frac{\Ainit}{A(\lambda)}\right)^p
+    =\left(1+2\gamma\Ainit^2\lambda\right)^{p/2}.
+\]
+Define its update-index logarithmic rate and deceleration token by
+\[
+ \Etoken_p:=\frac{d}{d\lambda}\log b_p,\qquad
+ \Qtoken_p:=-\frac{b_p b_p''}{(b_p')^2}.
+\]
+These are source bookkeeping tokens only.
+\end{definition}
+
+\begin{theorem}[Exact decoder nonselection]
+\label{thm:decoder}
+For the fixed amplitude record and every \(p>0\),
+\[
+ \Etoken_p(\lambda)
+    =p\gamma A(\lambda)^2
+    =\frac{p\gamma\Ainit^2}
+           {1+2\gamma\Ainit^2\lambda},
+ \qquad
+ \frac{d\Etoken_p}{d\lambda}
+    =-2p\gamma^2 A(\lambda)^4,
+\]
+and
+\[
+ \Qtoken_p=\frac{2}{p}-1.
+\]
+If \(p\neq p'\), then \(b_p\neq b_{p'}\) on every interval containing a
+positive value of \(\lambda\).  Hence the same exact source history determines
+no unique member of this counterfamily unless a selector for \(p\) is added.
+\end{theorem}
+
+\begin{proof}
+Substitution of the exact amplitude solution gives the displayed expression
+for \(b_p\).  Logarithmic differentiation and the source evolution equation
+give
+\[
+ \Etoken_p=-p\frac{A'}A=p\gamma A^2
+ \quad\text{and}\quad
+ \Etoken_p'=2p\gamma A A'=-2p\gamma^2 A^4.
+\]
+Writing \(b_p=(1+c\lambda)^\alpha\) with
+\(c=2\gamma\Ainit^2\) and \(\alpha=p/2\) yields
+\[
+ -\frac{b_p b_p''}{(b_p')^2}
+   =-\frac{\alpha(\alpha-1)}{\alpha^2}
+   =\frac{2}{p}-1 .
+\]
+For \(\lambda>0\), the base \(1+2\gamma\Ainit^2\lambda\) is greater than one,
+so unequal positive exponents give unequal tokens.
+\end{proof}
+
+\begin{corollary}[Clock-calibration nonselection]
+For every \(s>0\), the monotone calibration \(t_s=s\lambda\) changes the
+logarithmic rate to
+\[
+ \frac{d}{dt_s}\log b_p=\frac{\Etoken_p}{s}.
+\]
+The source record therefore does not select a physical rate even after a
+decoder exponent is fixed.
+\end{corollary}
+
+\section{Amount-to-density bookkeeping}
+
+Let \(M_0\) be a conserved source amount.  For every \(r>0\), define
+\[
+ V_{p,r}:=b_p^r,\qquad
+ \rho_{p,r}:=M_0 b_p^{-r}.
+\]
+Then the exact identity
+\[
+ \frac{d\rho_{p,r}}{d\lambda}
+   =-r\Etoken_p\rho_{p,r}
+\]
+holds.  It is not a physical continuity equation: the current source package
+does not supply a physical volume map or select \(r\).  Likewise, the fixed
+amplitude equation contains no independent constant term and supplies no
+source-derived map from such a term to a physical vacuum interpretation.
+
+\section{Exact obstruction and scope}
+
+The failed object is a total source-derived map from the proposal-only
+amplitude record to a unique physical scale, clock, volume, matter density,
+and constant-term interpretation.  Its absence is recorded as
+\[
+\texttt{OBST-P9T05-SOURCE-COSMOLOGY-DECODER-CALIBRATION-NONSELECTION-001}.
+\]
+The current source package does not derive that map.  Conservative
+source-side extensions with independent local data, a physical clock,
+spatial-volume semantics, or another selector remain open.  No source law is
+adopted or rejected, and no future source extension is ruled out.
+
+\end{document}

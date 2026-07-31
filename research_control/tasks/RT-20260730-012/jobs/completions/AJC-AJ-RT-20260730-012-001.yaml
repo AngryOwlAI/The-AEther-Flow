@@ -1,0 +1,725 @@
+validation_status: "PASS"
+final_repository_validation_status: "PASS_READY_FOR_CHECKPOINT"
+job_id: "AJ-RT-20260730-012-001"
+completion_id: "AJC-AJ-RT-20260730-012-001"
+task_id: "RT-20260730-012"
+task_type: "v21_p9_t05_source_cosmology_decoder_nonselection_case"
+decision_id: "DDR-20260730-012"
+role_id: "candidate-constructor"
+role_version: "0.2.0"
+execution_role_ref: "candidate-constructor@0.2.0--RT-20260730-012"
+status: "completed"
+created_at: "2026-07-31T01:02:22Z"
+started_at: "2026-07-31T01:02:22Z"
+completed_at: "2026-07-31T01:02:22Z"
+objective: "Execute only v21 P9-T05 by deriving a source-side homogeneous/isotropic background, expansion law, matter evolution, and controlled constant-term status or returning a precise obstruction, without adopting target background equations or using desired agreement to select source decoders."
+completion_summary: "P9-T05 derives the exact proposal-only one-mode amplitude solution and the counterfamilies b_p=(A_0/A)^p, E_p=p gamma A^2, Q_p=2/p-1, and rho_{p,r}=M_0 b_p^(-r). Distinct p and r yield distinct exact histories from the same source record, while the current package selects no physical clock, spatial-volume map, curvature object, or constant-term interpretation. The case is INCONCLUSIVE with secondary FORMAL_ANALOGY, four cumulative inconclusive cases, zero benchmark passes, and no promotion authority."
+objective_result: "precise_source_cosmology_decoder_calibration_nonselection_obstruction_case_inconclusive_ready_for_checkpoint"
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 180
+  passes_consumed: 164
+  route_work_item_id: "P9-T05"
+  route_worker_skill: "continue-research"
+  route_sha256: "27f778f658caf16f0f5c64fb98bafe048075367480bfa5a923d6009f8586c644"
+  route_reason: "dependency_ready_in_scope"
+  route_strategy_id: "continue_in_scope_generation_180"
+  route_blocker_fingerprint: "d92614359574193b54ea14c6d0319b2b2182fcaf0d9648c1e908d3e251d3ac82"
+  route_before_fingerprint: "d92614359574193b54ea14c6d0319b2b2182fcaf0d9648c1e908d3e251d3ac82"
+  route_evidence_sha256es:
+    - "d92614359574193b54ea14c6d0319b2b2182fcaf0d9648c1e908d3e251d3ac82"
+    - "91b41005c0780fdf27d15797c57ad0821328e265"
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:180"
+  handoff_token: "3ff782d1e7d105138433ca591f6938de188835b6201e8436"
+  relay_claim_token: "52a7b081e73571d82960d4218828bf6f73001c74178be94e"
+  worker_skill: "continue-research"
+  worker_invocation_count: 1
+
+transaction_status: "ready_for_checkpoint"
+result_disposition: "P9_T05_SOURCE_COSMOLOGY_DECODER_CALIBRATION_NONSELECTION_OBSTRUCTION_CASE_INCONCLUSIVE_READY_FOR_CHECKPOINT"
+milestone_disposition: "source_cosmology_token_families_executed_physical_recovery_open"
+adoption_status: "blocked_adoption_open_continuation"
+checkpoint_commit:
+  required: true
+  attempted: false
+  committed: false
+  commit_sha: ""
+  dependency_checkpoint_commit: "91b41005c0780fdf27d15797c57ad0821328e265"
+  push_authorized: false
+  push_performed: false
+
+is_physics_task: true
+payload_class: "candidate_construction"
+has_new_mathematical_payload: true
+source_extension_classification_required: true
+external_red_team_finding_requires_integration: false
+physics_promotion_authorized: false
+proof_authority: false
+
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P9"
+  plan_task_id: "P9-T05"
+  work_kind: "benchmark_or_recovery"
+  task_class: "science"
+  expected_result_kind: "completed_or_precisely_blocked"
+  dependency_task_ids:
+    - "P9-T04"
+  dependency_completion_paths:
+    - "research_control/tasks/RT-20260730-011/jobs/completions/AJC-AJ-RT-20260730-011-001.yaml"
+  dependency_checkpoint_commits:
+    - "91b41005c0780fdf27d15797c57ad0821328e265"
+  work_item_status: "completed_ready_for_checkpoint"
+  recommendation_ids:
+    - "V21-R28"
+    - "V21-R29"
+    - "V21-R62"
+  recommendation_coverage_role: "direct_implementation"
+  scientific_claims_changed: true
+  scientific_claim_change_scope: "exact proposal-only source decoder and density-token counterfamilies plus precise current-source physical-decoder nonselection obstruction"
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  next_dependency_work_item: "P9-T06_after_checkpoint"
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  observed_durable_outputs:
+    physics:
+      - "one exact source amplitude, expansion-token, and density-token construction"
+      - "one explicit decoder counterfamily and current-source nonselection theorem"
+      - "one precise INCONCLUSIVE cosmology case disposition"
+    project_system:
+      - "one task-local deterministic validator and compact receipt"
+      - "provenance, seal, exposure, comparison, and parent-child records"
+      - "standard control records and generated-memory synchronization"
+  accepted_criteria:
+    physics:
+      - "exact source formulas and fixed-step integration reproduce"
+      - "p=1,2,4 produce distinct exact tokens from one source history"
+      - "missing decoder and calibration maps produce INCONCLUSIVE rather than an inferred physical result"
+      - "zero target-informed reruns and benchmark passes"
+    project_system:
+      - "source-hash, math, DAG, seal, exposure, and parent-child checks pass"
+      - "claim-language and documentation-impact gates pass"
+      - "one governed checkpoint records the bounded transaction"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: false
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+physics_payload_admission_result:
+  schema_id: "physics_payload_admission_result_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  status: "PASS"
+  admission_path: "physics"
+  payload_type: "candidate_construction"
+  candidate_family: "SourceCosmologyDecoderNonselection_v1"
+  candidate_identity_sha256: "8de49fa7a57c4e02f1b44147a0fa5f17dad89a1ec5f2ebf5695aaa4d8b14f1cf"
+  result_type: "precise_obstruction"
+  process_receipt_substitution_detected: false
+  theorem_truth_inferred_from_validation: false
+  physics_promotion_authorized: false
+
+family_freeze_admission_result:
+  schema_id: "family_freeze_route_admission_result_v1"
+  policy_id: "family_freeze_reopening_policy_v1"
+  status: "PASS_DISTINCT_BRANCH"
+  family_id: "SourceCosmologyDecoderNonselection_v1"
+  family_identity_sha256: "8de49fa7a57c4e02f1b44147a0fa5f17dad89a1ec5f2ebf5695aaa4d8b14f1cf"
+  exact_family_match_detected: false
+  reopening_requested: false
+  distinct_branch_verified: true
+  local_family_freeze_preserved: true
+  global_no_go_claimed: false
+  physics_promotion_authorized: false
+
+ordinary_route_guard_admission_result:
+  schema_id: "ordinary_route_guard_admission_result_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  status: "PASS"
+  source_handoff_id: "handoff-0918"
+  selected_plan_task_id: "P9-T05"
+  guard_outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_execution_unit_count: 2
+  outer_agentjob_count: 1
+  child_agentjob_count: 0
+  subagent_count: 0
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260730-012/artifacts/child_phys_math_p9_t05_cosmology.yaml"
+      output_sha256: "54b8d5dada263bd52f6aad33de37c198e1a0efc2f565a357221c8612ee82d4c2"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260730-012/artifacts/child_phys_phil_p9_t05_cosmology.yaml"
+      output_sha256: "8eaaea9209f047b0882c42efdcd637263f0e5648ffa43ad09fb5444461160df2"
+      status: "completed"
+  conflict_review:
+    status: "resolved"
+    review_path: "research_control/tasks/RT-20260730-012/artifacts/parent_conflict_review_p9_t05_cosmology.yaml"
+    review_sha256: "3c572ca665d53fbcbef2b1bb1ce82ec065f32d81bb134078c8c8c962a0e31964"
+    resolution_rounds: 1
+    resolved_conflict_count: 2
+    unresolved_conflicts: []
+  fusion:
+    fused_output_path: "research_control/tasks/RT-20260730-012/artifacts/source_expansion_decoder_nonselection_v1.tex"
+    fusion_notes_path: "research_control/tasks/RT-20260730-012/artifacts/parent_fusion_notes_p9_t05_cosmology.md"
+    shared_consensus_summary: "The source amplitude, decoder, rate, deceleration, and density-token formulas are exact within the proposal-only one-mode model, but current sources do not select the physical decoder, clock, volume, spatial geometry, curvature, or constant-term map required for cosmological recovery."
+    unique_phys_math_contributions: "Exact amplitude solution, decoder counterfamily, rate and deceleration formulas, density-token continuity identity, and deterministic fixture."
+    unique_phys_phil_contributions: "Single-mode-uniformity boundary, model-to-world gap, nonblind exposure disclosure, constant-term non-overread, and conservative-extension qualification."
+    novelty_preservation_summary: "Fusion preserves the first executed P9 source-cosmology decoder counterfamily and its precise current-source nonselection result."
+    claim_boundary_preservation_summary: "No physical homogeneity isotropy time expansion matter density curvature vacuum effective geometry Einstein equation benchmark pass Gate E promotion proof publication push global no-go or completed derivation is authorized."
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+
+memory_preflight:
+  preflight_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1095
+    relationship_row_count: 5543
+    semantic_row_count: 1095
+    vault_row_count: 1095
+    local_cache_only_warning_count: 0
+    refresh_performed: true
+  refresh_needed: true
+  refresh_performed: true
+  refresh_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search 'P9 T05 source derived benchmark' --limit 10 --json"
+      query_type: "search"
+      query_text: "P9 T05 source derived benchmark"
+      returned_object_ids:
+        - "TEX-V21-P9-T01-SOURCE-DERIVED-BENCHMARK-PROTOCOL-V1"
+        - "TEX-V21-P9-T04-FINITE-TWO-SECTOR-CAUSAL-FREEFALL-NONSELECTION-V1"
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+    - object_id: "TEX-V21-P9-T01-SOURCE-DERIVED-BENCHMARK-PROTOCOL-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260729-012/artifacts/source_derived_benchmark_protocol_v1.tex"
+      source_hash: "88ef097bf712ad115e9af62cc18a8b3eabb12f8545350f714ad065f702471007"
+    - object_id: "TEX-V21-P9-T04-FINITE-TWO-SECTOR-CAUSAL-FREEFALL-NONSELECTION-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260730-011/artifacts/finite_two_sector_causal_freefall_nonselection_v1.tex"
+      source_hash: "7f5ef217faba0b4005885bed7a88cf9941c39b495976530bc912c5c742bc5124"
+  authority_note: "Obsidian wiki notes, semantic extracts, PDFs, and .local files are retrieval layers only and are not authority. Target-side ontology inspection supplied no source value, formula, parameter, branch, tolerance, or output."
+
+benchmark_case_result:
+  protocol_id: "SourceDerivedBenchmarkProtocol_v1"
+  case_id: "P9-BENCH-COSMOLOGY-V1"
+  candidate_id: "SourceCosmologyDecoderNonselection_v1"
+  outcome: "INCONCLUSIVE"
+  secondary_label: "FORMAL_ANALOGY"
+  source_execution_status: "COMPLETED"
+  source_stage_firewall_status: "PASS"
+  source_output_seal_status: "SEALED"
+  target_comparison_status: "OPENED_AFTER_SEAL_TYPED_BURDEN_ONLY"
+  independent_reproduction_status: "NOT_ACQUIRED"
+  executed_case_count: 1
+  cumulative_executed_case_count: 4
+  cumulative_inconclusive_case_count: 4
+  passed_case_count: 0
+  target_informed_rerun_count: 0
+  physical_cosmology_recovery_established: false
+  benchmark_promotion_authorized: false
+
+new_mathematical_payload:
+  - payload_id: "NMP-RT-20260730-012-001"
+    payload_type: "theorem"
+    name: "Exact source decoder nonselection theorem"
+    summary: "Derives b_p=(A_0/A)^p, E_p=p gamma A^2, and Q_p=2/p-1 for every p>0 from one fixed source history."
+  - payload_id: "NMP-RT-20260730-012-002"
+    payload_type: "definition"
+    name: "Amount-to-density token counterfamily"
+    summary: "Defines rho_{p,r}=M_0 b_p^(-r) and proves its exact update-index continuity identity for every r>0."
+  - payload_id: "NMP-RT-20260730-012-003"
+    payload_type: "explicit_witness"
+    name: "p=1,2,4 decoder fixture"
+    summary: "One source endpoint produces distinct exact tokens sqrt(5), 5, and 25 and deceleration tokens 1, 0, and -1/2."
+  - payload_id: "NMP-RT-20260730-012-004"
+    payload_type: "obstruction"
+    name: "Physical decoder and calibration nonselection"
+    summary: "Current sources do not derive a total map to unique physical scale, clock, volume, density, curvature, and constant-term observables."
+
+minimum_physics_payload:
+  minimum_payload_schema_id: "minimum_physics_payload_schema_v1"
+  source_task_id: "RT-20260730-012"
+  source_job_id: "AJ-RT-20260730-012-001"
+  source_completion_path: "research_control/tasks/RT-20260730-012/jobs/completions/AJC-AJ-RT-20260730-012-001.yaml"
+  target_derivation_milestone: "benchmark_promotion"
+  milestone_burden: "Test cosmological recovery without adopting the target FLRW equations."
+  payload_class: "candidate_construction"
+  payload_status: "draft/control"
+  payload_artifact_path: "research_control/tasks/RT-20260730-012/artifacts/source_expansion_decoder_nonselection_v1.tex"
+  payload_summary: "Exact source amplitude, expansion-token, and density-token families plus a precise INCONCLUSIVE physical-cosmology disposition."
+  payload_source_basis:
+    - "P5T08SourceDynamicsMilestoneSynthesis_v1"
+    - "P7T08PhysicalMatterAdoptionDecision_v1"
+    - "SourceDerivedBenchmarkProtocol_v1"
+    - "P9T04CausalFreeFallSourceOnlyCase_v1"
+  process_receipts_excluded:
+    - "validator_status"
+    - "registry_row"
+    - "handoff_status"
+    - "generated_derivative"
+    - "checkpoint_status"
+  physics_promotion_authorized: false
+  proof_authority: false
+
+mathematical_payload_manifest:
+  - payload_id: "PAYLOAD-P9T05-001"
+    payload_type: "theorem"
+    object_name: "Exact source decoder nonselection theorem"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260730-012/artifacts/source_expansion_decoder_nonselection_v1.tex"
+    burden_effect: "narrows"
+    summary: "The same one-mode source history supports distinct normalized positive token histories for every p>0."
+  - payload_id: "PAYLOAD-P9T05-002"
+    payload_type: "explicit_witness"
+    object_name: "Three-decoder endpoint witness"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260730-012/artifacts/source_homogeneous_amplitude_record_v1.yaml"
+    burden_effect: "obstructs"
+    summary: "The p=1,2,4 decoders yield distinct exact endpoint and deceleration tokens."
+  - payload_id: "PAYLOAD-P9T05-003"
+    payload_type: "obstruction"
+    object_name: "Source cosmology decoder and calibration nonselection obstruction"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260730-012/artifacts/source_expansion_decoder_nonselection_v1.tex"
+    burden_effect: "obstructs"
+    summary: "The current source package does not derive the physical scale, clock, volume, density, curvature, and constant-term map required for cosmological recovery."
+
+candidate_constructor_result:
+  result_type: "precise_obstruction"
+  constructed_candidate_path: ""
+  minimal_countermodel_path: "research_control/tasks/RT-20260730-012/artifacts/source_expansion_decoder_nonselection_v1.tex"
+  obstruction_id: "OBST-P9T05-SOURCE-COSMOLOGY-DECODER-CALIBRATION-NONSELECTION-001"
+  formal_objects:
+    - "proposal-only amplitude solution A=A_0/sqrt(1+2 gamma A_0^2 lambda)"
+    - "positive decoder family b_p=(A_0/A)^p"
+    - "logarithmic rate family E_p=p gamma A^2"
+    - "deceleration token family Q_p=2/p-1"
+    - "density-token family rho_{p,r}=M_0 b_p^(-r)"
+    - "p=1,2,4 deterministic fixture"
+  maps:
+    - "(A_0,gamma,lambda) -> source amplitude A(lambda)"
+    - "(A,p) -> normalized token b_p"
+    - "(b_p,r,M_0) -> density token rho_{p,r}"
+    - "sealed missing-decoder record -> INCONCLUSIVE case classification"
+  proof_obligations:
+    - "any physical expansion claim requires a source-derived unique decoder and physical clock"
+    - "any physical density claim requires a source-derived spatial-volume map"
+    - "any spatial homogeneity/isotropy claim requires a source spatial arena and symmetry action"
+    - "any constant-term claim requires a source-derived physical interpretation map"
+    - "any target comparison requires physical corrections, uncertainty, tolerance, and independent reproduction"
+  failed_components:
+    - "physical spatial arena and homogeneity/isotropy definition"
+    - "unique source-derived scale decoder"
+    - "physical clock and unit calibration"
+    - "physical volume and density map"
+    - "source-derived curvature object"
+    - "source-derived physical constant-term map"
+    - "physical correction and uncertainty control"
+    - "independent reproduction"
+  next_required_role: "none"
+  no_fog_check: true
+  no_fog_explanation: "RT-20260730-012 exactly evaluated one proposal-only amplitude history under a continuum of source-only decoders; distinct exact outputs remain admissible and no physical clock, volume, spatial-geometry, curvature, or constant-term map is selected, so the physical cosmology case is INCONCLUSIVE."
+  claim_boundary_preserved: true
+  claim_boundary_citation: "CB-V21-P9-T05-SOURCE-COSMOLOGY-DECODER-NONSELECTION-001"
+
+obstruction_record:
+  present: true
+  obstruction_id: "OBST-P9T05-SOURCE-COSMOLOGY-DECODER-CALIBRATION-NONSELECTION-001"
+  scope: "current_ontology_only"
+  failed_object: "total source-derived physical cosmology decoder from the proposal-only amplitude history to scale, clock, spatial volume, density, curvature, and constant-term observables"
+  exact_failure: "The same fixed source amplitude history admits b_p and rho_{p,r} for all p,r>0, with distinct exact outputs, while the current source package selects neither exponent nor a physical clock, spatial arena, volume map, curvature object, or constant-term interpretation."
+  minimal_counterexample_path: "research_control/tasks/RT-20260730-012/artifacts/source_expansion_decoder_nonselection_v1.tex"
+  current_ontology_implication: "does_not_derive"
+  source_extension_implication: "new_primitive_required"
+  consequence: "new_primitive_required"
+  forbidden_overread: "This scoped nonselection result does not show that no conservative future source extension can derive a physical cosmology, does not establish a vanishing physical vacuum term, and does not reject the ontology globally."
+
+physics_progress_status:
+  status: "precise_obstruction_found"
+  target_derivation_milestone: "benchmark_promotion"
+  milestone_burden: "Test cosmological recovery without adopting the target FLRW equations."
+  explanation: "The packet adds exact source expansion and density-token counterfamilies and identifies the missing physical decoder and calibration map; it does not establish physical homogeneity, isotropy, expansion, matter evolution, a constant term, or a benchmark pass."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr_delta:
+  effect: "obstruction_recorded"
+  changed: false
+  burden_id: "benchmark_promotion"
+  milestone: "benchmark_promotion"
+  old_status: "blocked by missing primitive"
+  new_status: "blocked by missing primitive"
+  ledger_row_updated: true
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  downstream_unlocked:
+    - "none"
+  downstream_still_blocked:
+    - "physical background homogeneity and isotropy"
+    - "physical expansion and matter evolution"
+    - "controlled physical constant-term status"
+    - "g_eff"
+    - "matter_coupling"
+    - "einstein_equations"
+    - "benchmark_promotion"
+  explanation: "The ledger gains a precise P9-T05 decoder and calibration obstruction path but no physical or promotion status changes."
+
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "unchanged; no canonical ontology edit or source-law adoption"
+  - burden: "Source dynamics"
+    status: "proposal-only one-mode conditional flow only"
+  - burden: "Source equivalence EqSrc"
+    status: "unchanged"
+  - burden: "RetainH"
+    status: "unchanged"
+  - burden: "GenH"
+    status: "unchanged"
+  - burden: "ObsLoc_lc"
+    status: "unchanged"
+  - burden: "Resp_lc"
+    status: "unchanged; one-mode source token response only"
+  - burden: "M_src"
+    status: "unchanged; no spatial source arena or physical time map"
+  - burden: "g_eff"
+    status: "unresolved; source scale tokens are not an effective metric"
+  - burden: "matter coupling"
+    status: "unresolved; no physical volume or density map"
+  - burden: "Einstein equations"
+    status: "unresolved; no physical background field equation is derived"
+  - burden: "benchmark promotion"
+    status: "blocked; four source cases executed across P9-T02 through P9-T05, four INCONCLUSIVE outcomes, zero passes"
+  - burden: "Gate Chair status"
+    status: "Gate D protected NOT_READY unchanged; no Gate E verdict"
+  - burden: "finite-variation robustness"
+    status: "exact one-mode source formulas only; physical temporal spatial and decoder robustness absent"
+  - burden: "current route freeze or hard-fail status"
+    status: "unchanged P9-T05 inference branch locally frozen without a new physical decoder and calibration map; distinct P9-T06 case remains open after checkpoint"
+
+freeze_criteria_status:
+  repeated_burden: true
+  scoped_obstruction: true
+  freeze_evaluation_required: true
+  active_freeze_label: "P9T05-UNCHANGED-SOURCE-COSMOLOGY-DECODER-ABSENT"
+  prior_attempts_considered:
+    - "RT-20260726-001"
+    - "RT-20260729-001"
+    - "RT-20260729-012"
+    - "RT-20260730-008"
+    - "RT-20260730-010"
+    - "RT-20260730-011"
+    - "RT-20260730-012"
+  freeze_if:
+    - "The same one-mode history is rerun while choosing p, r, or a clock from target expectations."
+    - "Single-mode source uniformity is relabeled as physical homogeneity or isotropy."
+    - "Absence of a source constant is relabeled as a vanishing physical vacuum contribution."
+  do_not_freeze_if:
+    - "A materially new source-side spatial arena, clock, decoder, volume, curvature, and constant-term map is constructed with exact provenance and no target import."
+    - "A distinct P9-T06 radiative benchmark case is executed without reusing the P9-T05 tokens as physical observables."
+  freeze_decision: "locally_frozen"
+  decision_reason: "The continuum decoder counterfamily exactly closes physical inference from the unchanged one-mode record, while conservative source-law construction and the distinct P9-T06 burden remain open."
+  next_allowed_route: "candidate_constructor"
+  ledger_or_registry_update_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  status_update_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  global_theory_rejection: false
+  future_source_extension_impossibility: false
+
+loop_risk_decision:
+  category: "bridge_facing_candidate_path"
+  next_route: "continue_distinct_benchmark_case"
+  rationale: "P9-T05 freezes inference from the unchanged one-mode token family without a physical decoder. P9-T06 must execute the distinct radiative-sector burden."
+  repeated_burdens:
+    - "physical source-to-target observable map remains absent"
+    - "physical temporal and spatial units remain absent"
+    - "source-derived geometry and field equations remain absent"
+
+route_cycle_control:
+  cycle_family: "v21_p9_source_derived_benchmark_suite"
+  current_cycle_step: "P9-T05_source_cosmology_decoder_nonselection_inconclusive"
+  cycle_risk: "A later packet could choose p=2, r=3, or a clock calibration from target background expectations and mislabel a formal token identity as recovery."
+  prior_related_tasks:
+    - "RT-20260729-012"
+    - "RT-20260730-008"
+    - "RT-20260730-010"
+    - "RT-20260730-011"
+    - "RT-20260730-012"
+  orbit_avoidance_reason: "P9-T05 adds a new exact continuum of expansion and density tokens plus a decoder nonselection theorem. P9-T06 must use its own radiative case schema and cannot reuse these tokens as physical observables."
+  next_role_consequence: "candidate-constructor@0.2.0 for v21 P9-T06 after checkpoint"
+
+source_extension_classification:
+  checklist_id: "source_extension_classification_checklist_v1"
+  item_id: "SourceCosmologyDecoderNonselection_v1"
+  item_source_path: "research_control/tasks/RT-20260730-012/artifacts/source_expansion_decoder_nonselection_v1.tex"
+  classification: "conservative_definitional_extension"
+  evidence_paths:
+    - "research_control/tasks/RT-20260726-001/artifacts/source_dynamics_milestone_synthesis_v1.tex"
+    - "research_control/tasks/RT-20260729-001/artifacts/p7_t08_gate_c_decision_v1.tex"
+    - "research_control/tasks/RT-20260729-012/artifacts/source_derived_benchmark_protocol_v1.tex"
+  relation_to_current_ontology: "conservative"
+  claim_boundary_id: "CB-V21-P9-T05-SOURCE-COSMOLOGY-DECODER-NONSELECTION-001"
+  protected_authority_required: true
+  physics_promotion_authorized: false
+  downstream_promotion_authorized: false
+  allowed_conclusion: "One exact proposal-only source decoder counterfamily and current-source physical-decoder nonselection obstruction are established; the physical cosmology case remains INCONCLUSIVE."
+  forbidden_overreads:
+    - "single-mode uniformity as physical homogeneity or isotropy"
+    - "lambda as physical time"
+    - "b_p as a physically selected scale factor"
+    - "rho_{p,r} as a physically selected matter density"
+    - "absence of a source constant as a vanishing physical vacuum contribution"
+    - "benchmark pass Gate E verdict or benchmark promotion"
+    - "source-law adoption or rejection"
+    - "effective geometry Einstein equations exact-GR recovery proof publication push global no-go future impossibility or completed derivation"
+  next_route_if_blocked: "P9-T06 distinct source-only radiative benchmark case after checkpoint"
+
+bridge_attempt_status:
+  bridge_attempted: true
+  bridge_name: "proposal-only one-mode amplitude flow to physical homogeneous/isotropic background, expansion, matter evolution, and constant-term observables"
+  bridge_result: "precise_obstruction"
+  candidate_map: "the source amplitude maps to exact b_p and rho_{p,r} token families; no source-derived selector or calibration map reaches unique physical observables"
+  missing_primitive: "A source-derived spatial arena, symmetry action, unique scale decoder, physical clock, volume map, curvature object, constant-term interpretation, corrections, uncertainty, tolerance, and independent reproduction remain absent."
+  preserves_blocks: true
+  blocked_outputs:
+    - "physical_homogeneity_or_isotropy"
+    - "physical_scale_factor_or_expansion_rate"
+    - "physical_matter_density_evolution"
+    - "physical_curvature_or_constant_term"
+    - "effective_geometry_or_metric"
+    - "Einstein_equations"
+    - "exact_GR_recovery"
+    - "benchmark_pass_or_promotion"
+    - "Gate_E_verdict"
+    - "proof_publication_push_or_completed_derivation"
+  explanation: "The source side supplies exact token families, but their selector, physical codomain, and calibration are not derived."
+
+selected_next_route:
+  route_id: "v21_p9_t06_radiative_sector_after_p9_t05_inconclusive"
+  route_label: "benchmark-recovery-packet"
+  role_family: "candidate-constructor@0.2.0"
+  worker_skill: "continue-research"
+  selected_next_packet_type: "source_only_radiative_sector_case"
+  task_type: "v21_p9_t06_radiative_sector_source_derived_benchmark_case"
+  plan_task_id: "P9-T06"
+  target_derivation_milestone: "benchmark_promotion"
+  milestone_burden: "Test radiative-sector recovery without adopting target wave equations, polarizations, speed, damping, dispersion, or detector response."
+  strategy_id: "construct_p9_t06_distinct_source_derived_radiative_case_v1"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  p9_t02_outcome_carried_forward: "INCONCLUSIVE"
+  p9_t03_outcome_carried_forward: "INCONCLUSIVE"
+  p9_t04_outcome_carried_forward: "INCONCLUSIVE"
+  p9_t05_outcome_carried_forward: "INCONCLUSIVE"
+  cumulative_benchmark_pass_count: 0
+  target_informed_source_repair_authorized: false
+  benchmark_result_preestablished: false
+  Gate_E_verdict_preestablished: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+claim_boundary:
+  allowed:
+    - "one exact proposal-only source amplitude solution"
+    - "one exact continuum of expansion and density-token outputs"
+    - "one exact current-source decoder and calibration nonselection obstruction"
+    - "one source seal and post-seal typed comparison"
+    - "one INCONCLUSIVE case classification with FORMAL_ANALOGY secondary label"
+    - "P9-T06 route only after checkpoint"
+  forbidden:
+    - "source-law or decoder adoption or rejection"
+    - "physical homogeneity isotropy time expansion density curvature or vacuum identification"
+    - "effective geometry Einstein equations exact-GR recovery"
+    - "benchmark pass Gate E verdict promotion proof publication push or completed derivation"
+    - "global no-go or future source-extension impossibility"
+
+forbidden_conclusion_summary:
+  forbidden_conclusions:
+    - "canonical ontology edit"
+    - "m_src adoption"
+    - "physical homogeneity or isotropy"
+    - "physical scale factor or expansion rate"
+    - "physical matter-density evolution"
+    - "physical curvature or vacuum-term status"
+    - "g_eff"
+    - "matter coupling"
+    - "Einstein-equation claim"
+    - "benchmark pass or promotion"
+    - "Gate Chair verdict"
+    - "completed derivation"
+    - "global theory rejection"
+    - "future source-extension impossibility"
+  physics_promotion_authorized: false
+  summary: "The exact source counterfamily establishes only current-source decoder nonselection and an INCONCLUSIVE case; every physical target, promotion, proof, publication, push, global no-go, future-impossibility, and completed-derivation conclusion remains blocked."
+
+no_target_import_audit:
+  status: "PASS"
+  target_family_known: true
+  blindness_claimed: false
+  source_stage_target_formula_count: 0
+  source_stage_target_value_count: 0
+  target_comparison_opened_before_seal: false
+  target_comparison_opened_after_seal: true
+  source_mutation_after_target_comparison_count: 0
+  target_selected_parameter_count: 0
+  target_informed_rerun_count: 0
+  desired_agreement_used: false
+
+artifacts:
+  source_artifact: "research_control/tasks/RT-20260730-012/artifacts/source_expansion_decoder_nonselection_v1.tex"
+  source_record: "research_control/tasks/RT-20260730-012/artifacts/source_homogeneous_amplitude_record_v1.yaml"
+  case: "research_control/tasks/RT-20260730-012/artifacts/p9_t05_cosmology_case_v1.yaml"
+  comparison_matrix: "research_control/tasks/RT-20260730-012/artifacts/p9_t05_cosmology_comparison_matrix_v1.yaml"
+  provenance_dag: "research_control/tasks/RT-20260730-012/artifacts/p9_t05_provenance_dag_v1.yaml"
+  source_seal: "research_control/tasks/RT-20260730-012/artifacts/p9_t05_source_output_seal_v1.json"
+  target_exposure_ledger: "research_control/tasks/RT-20260730-012/artifacts/p9_t05_target_exposure_ledger_v1.yaml"
+  receipt: "research_control/tasks/RT-20260730-012/artifacts/p9_t05_cosmology_receipt_v1.json"
+  validator: "research_control/tasks/RT-20260730-012/artifacts/validate_p9_t05_cosmology.py"
+  parent_fusion: "research_control/tasks/RT-20260730-012/artifacts/parent_fusion_notes_p9_t05_cosmology.md"
+
+output_paths:
+  - "research_control/tasks/RT-20260730-012/00_TASK.yaml"
+  - "research_control/tasks/RT-20260730-012/DDR-20260730-012.md"
+  - "research_control/tasks/RT-20260730-012/artifacts/source_expansion_decoder_nonselection_v1.tex"
+  - "research_control/tasks/RT-20260730-012/artifacts/**"
+  - "research_control/tasks/RT-20260730-012/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260730-012/jobs/AJ-RT-20260730-012-001.yaml"
+  - "research_control/tasks/RT-20260730-012/roles/candidate-constructor@0.2.0--RT-20260730-012.yaml"
+  - "research_control/handoffs/handoff-0919.yaml"
+  - "research_control/handoffs/handoff-0919.md"
+  - "research_control/program_state.yaml"
+  - "registries/**"
+  - "generated memory and navigation derivatives"
+
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | status=pass_after_refresh"
+  - ".venv/bin/python research_control/tasks/RT-20260730-012/artifacts/validate_p9_t05_cosmology.py --check --json | exit_code=0 | status=pass | checks=21"
+  - "scratch Tectonic compilation | exit_code=0 | status=pass | pages=2"
+  - "git diff --check | exit_code=0 | status=pass"
+
+validation_summary:
+  task_local_check_count: 21
+  task_local_failed_check_count: 0
+  source_hash_check_count: 6
+  source_hash_mismatch_count: 0
+  benchmark_pass_count: 0
+  target_informed_rerun_count: 0
+  independent_reproduction_count: 0
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 180 route claim, repository binding, reasoning effort, clean manifest, and dependency checkpoint 91b41005 were validated."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Exact source hashes, decoder formulas, RK4 integration, DAG, seal, exposure, comparison, parent-child, and no-fog checks pass."
+      - "Task-local validator passes 21 of 21 checks."
+  post_write:
+    status: "PENDING"
+    evidence:
+      - "Final repository-wide validation follows handoff, registry, and derivative synchronization."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "One governed RT-012 checkpoint remains uninvoked."
+  renderer:
+    status: "PENDING"
+    evidence:
+      - "Final render-and-check pass follows this completion record."
+  memory_bootstrap:
+    status: "PENDING"
+    evidence:
+      - "Final tracked memory synchronization and validate-only pass remain."
+  claim_language_linter:
+    status: "PENDING"
+    evidence:
+      - "Changed-source claim-language validation remains in the precheckpoint stack."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "none"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  publication_authorized: false
+  proof_authority: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  canonical_ontology_edit_authorized: false
+  ontology_selection_authorized: false
+  physical_interpretation_establishment_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []

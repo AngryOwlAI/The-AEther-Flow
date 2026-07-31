@@ -1,0 +1,92 @@
+schema_id: "source_homogeneous_amplitude_record_v1"
+artifact_id: "SourceHomogeneousAmplitudeRecord_v1"
+task_id: "RT-20260730-012"
+job_id: "AJ-RT-20260730-012-001"
+status: "sealed_source_stage_candidate"
+claim_status: "draft/control"
+source_basis_status: "proposal-only"
+source_basis:
+  object_id: "TEX-V21-P5-T08-SOURCE-DYNAMICS-MILESTONE-SYNTHESIS-V1"
+  path: "research_control/tasks/RT-20260726-001/artifacts/source_dynamics_milestone_synthesis_v1.tex"
+  sha256: "a2b9c6670cdb0e09ca2e19ff30f71d9bb954e3ab2fc73a5c9727a2df10db93aa"
+
+source_state:
+  family: "q_A(theta)=A sin(theta_1)"
+  amplitude_initial_value: "A_0>0"
+  coefficient: "gamma>0"
+  update_parameter_domain: "lambda>=0"
+  evolution_equation: "dA/dlambda=-gamma A^3"
+  exact_solution: "A(lambda)=A_0/sqrt(1+2 gamma A_0^2 lambda)"
+  spatial_label_count: 0
+  source_uniformity_status: "single global amplitude with no independent spatial labels"
+  physical_homogeneity_status: "NOT_ESTABLISHED"
+  physical_isotropy_status: "NOT_ESTABLISHED"
+  physical_time_status: "NOT_ESTABLISHED"
+
+decoder_counterfamily:
+  parameter_domain: "p>0"
+  token_definition: "b_p(lambda)=(A_0/A(lambda))^p=(1+2 gamma A_0^2 lambda)^(p/2)"
+  logarithmic_rate: "E_p(lambda)=d(log b_p)/dlambda=p gamma A(lambda)^2"
+  rate_derivative: "dE_p/dlambda=-2 p gamma^2 A(lambda)^4"
+  deceleration_token: "Q_p=-b_p b_p''/(b_p')^2=2/p-1"
+  theorem_statement: "For every p>0 the same source amplitude record yields a distinct normalized positive token b_p; the current source basis supplies no rule selecting p."
+  selected_decoder: "ABSENT"
+  selected_physical_clock_map: "ABSENT"
+  physical_scale_factor_status: "NOT_ESTABLISHED"
+  physical_expansion_rate_status: "NOT_ESTABLISHED"
+
+matter_bookkeeping_counterfamily:
+  conserved_source_amount: "M_0"
+  volume_exponent_domain: "r>0"
+  volume_token: "V_{p,r}(lambda)=b_p(lambda)^r"
+  density_token: "rho_{p,r}(lambda)=M_0 b_p(lambda)^(-r)"
+  continuity_identity: "d rho_{p,r}/dlambda=-r E_p rho_{p,r}"
+  selected_volume_exponent: "ABSENT"
+  selected_physical_volume_map: "ABSENT"
+  physical_matter_density_status: "NOT_ESTABLISHED"
+
+constant_term_audit:
+  independent_constant_in_amplitude_equation: false
+  source_derived_constant_to_rate_map: "ABSENT"
+  physical_vacuum_interpretation_status: "NOT_ESTABLISHED"
+
+deterministic_fixture:
+  gamma: "1"
+  A_0: "1"
+  lambda_domain: ["0", "2"]
+  rk4_step: "1/10000"
+  exact_endpoint_amplitude: "1/sqrt(5)"
+  absolute_error_threshold: "2e-12"
+  decoder_exponents: ["1", "2", "4"]
+  endpoint_tokens:
+    p_1: "sqrt(5)"
+    p_2: "5"
+    p_4: "25"
+  endpoint_logarithmic_rates:
+    p_1: "1/5"
+    p_2: "2/5"
+    p_4: "4/5"
+  deceleration_tokens:
+    p_1: "1"
+    p_2: "0"
+    p_4: "-1/2"
+  randomness_used: false
+  target_data_used: false
+
+source_stage_result:
+  theorem_id: "P9T05-THM-SOURCE-DECODER-NONSELECTION-001"
+  obstruction_id: "OBST-P9T05-SOURCE-COSMOLOGY-DECODER-CALIBRATION-NONSELECTION-001"
+  failed_object: "a source-derived total map from the proposal-only amplitude record to a unique physical scale, clock, volume, matter-density, and constant-term interpretation"
+  current_source_implication: "does_not_derive"
+  source_extension_implication: "new_primitive_required"
+  adoption_status: "blocked_adoption_open_continuation"
+
+authority_limits:
+  proposal_only_source_law_adopted: false
+  physical_time_established: false
+  physical_spatial_symmetry_established: false
+  physical_scale_established: false
+  physical_density_established: false
+  physical_constant_term_established: false
+  source_extension_impossibility_claimed: false
+  physics_promotion_authorized: false

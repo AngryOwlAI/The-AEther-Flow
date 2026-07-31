@@ -1,0 +1,67 @@
+{
+  "schema_id": "p9_t05_source_output_seal_v1",
+  "task_id": "RT-20260730-012",
+  "case_id": "P9-BENCH-COSMOLOGY-V1",
+  "protocol_version": "SourceDerivedBenchmarkProtocol_v1",
+  "sealed_at": "2026-07-31T01:02:22Z",
+  "randomness_policy": "deterministic_exact_formula_and_fixed_step_rk4",
+  "target_family_known_before_execution": true,
+  "blindness_claimed": false,
+  "target_formula_used_as_source_input": false,
+  "target_value_used_as_source_input": false,
+  "target_selected_parameter_count": 0,
+  "target_informed_rerun_count": 0,
+  "target_comparison_opened_before_seal": false,
+  "mutation_after_seal_authorized": false,
+  "sealed_source_files": {
+    "source_homogeneous_amplitude_record_v1.yaml": "dc0481df6d3b628b9af402b372d78c10047a48dec94b9dce3cc1b5579707c14b",
+    "source_expansion_decoder_nonselection_v1.tex": "8de49fa7a57c4e02f1b44147a0fa5f17dad89a1ec5f2ebf5695aaa4d8b14f1cf"
+  },
+  "source_output": {
+    "amplitude_solution": "A(lambda)=A_0/sqrt(1+2 gamma A_0^2 lambda)",
+    "decoder_family": "b_p(lambda)=(A_0/A(lambda))^p for p>0",
+    "logarithmic_rate_family": "E_p(lambda)=p gamma A(lambda)^2",
+    "deceleration_token_family": "Q_p=2/p-1",
+    "density_token_family": "rho_{p,r}(lambda)=M_0 b_p(lambda)^(-r) for r>0",
+    "fixture": {
+      "gamma": "1",
+      "A_0": "1",
+      "lambda_endpoint": "2",
+      "exact_endpoint_amplitude": "1/sqrt(5)",
+      "decoder_exponents": ["1", "2", "4"],
+      "endpoint_tokens": ["sqrt(5)", "5", "25"],
+      "endpoint_rates": ["1/5", "2/5", "4/5"],
+      "deceleration_tokens": ["1", "0", "-1/2"]
+    },
+    "selected_decoder": "ABSENT",
+    "selected_clock_map": "ABSENT",
+    "selected_volume_map": "ABSENT",
+    "selected_constant_term_map": "ABSENT",
+    "obstruction_id": "OBST-P9T05-SOURCE-COSMOLOGY-DECODER-CALIBRATION-NONSELECTION-001",
+    "case_outcome": "INCONCLUSIVE",
+    "secondary_label": "FORMAL_ANALOGY"
+  },
+  "comparison_rules": {
+    "target_comparison_may_open_after_seal": true,
+    "comparison_scope": "typed burden comparison only",
+    "source_output_mutation_after_target_access": false,
+    "target_fit_allowed": false,
+    "target_selected_decoder_allowed": false
+  },
+  "missing_burdens": [
+    "source-derived spatial arena and physical homogeneity/isotropy definition",
+    "source-derived unique scale decoder",
+    "physical time and unit calibration",
+    "physical volume and matter-density map",
+    "source-derived curvature and constant-term map",
+    "physical corrections and uncertainty model",
+    "independent reproduction"
+  ],
+  "authority_limits": {
+    "seal_is_physics_proof": false,
+    "physical_cosmology_established": false,
+    "benchmark_pass_established": false,
+    "benchmark_promotion_authorized": false,
+    "physics_promotion_authorized": false
+  }
+}

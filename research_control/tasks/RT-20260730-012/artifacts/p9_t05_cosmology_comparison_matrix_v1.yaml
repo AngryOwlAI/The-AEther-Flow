@@ -1,0 +1,62 @@
+schema_id: "p9_t05_cosmology_comparison_matrix_v1"
+task_id: "RT-20260730-012"
+case_id: "P9-BENCH-COSMOLOGY-V1"
+status: "completed_after_source_seal"
+source_seal_path: "research_control/tasks/RT-20260730-012/artifacts/p9_t05_source_output_seal_v1.json"
+comparison_target_path: "ontology/tex/aether_flow_relativistic_recovery.tex"
+comparison_scope: "typed burden comparison; no target fitting"
+rows:
+  - burden_id: "source_spatial_symmetry"
+    sealed_source_output: "one global amplitude with no independent spatial labels"
+    comparison_requirement: "physical homogeneous and isotropic spatial state"
+    disposition: "NONCOMPARABLE"
+    exact_reason: "single-mode source uniformity supplies no spatial arena or rotation action"
+  - burden_id: "expansion_observable"
+    sealed_source_output: "b_p=(A_0/A)^p and E_p=p gamma A^2 for every p>0"
+    comparison_requirement: "one physically calibrated scale and expansion rate"
+    disposition: "NONUNIQUE"
+    exact_reason: "the current source package selects neither p nor a clock calibration"
+  - burden_id: "matter_evolution"
+    sealed_source_output: "rho_{p,r}=M_0 b_p^(-r) for every r>0"
+    comparison_requirement: "physical density evolution under a defined spatial volume"
+    disposition: "NONUNIQUE"
+    exact_reason: "the current source package supplies no physical volume map or selected r"
+  - burden_id: "curvature_term"
+    sealed_source_output: "none"
+    comparison_requirement: "spatial-curvature contribution in a physical background equation"
+    disposition: "ABSENT_SOURCE_OBJECT"
+    exact_reason: "no source-derived spatial geometry or curvature scalar exists"
+  - burden_id: "constant_term"
+    sealed_source_output: "no independent constant in the fixed amplitude equation"
+    comparison_requirement: "controlled physical constant-term or vacuum-sector status"
+    disposition: "ABSENT_MAP"
+    exact_reason: "absence from a proposal-only amplitude ODE is not a physical vacuum result"
+  - burden_id: "initial_condition_and_attractor"
+    sealed_source_output: "A(lambda) decays monotonically for every A_0>0; decoder outputs retain p and clock dependence"
+    comparison_requirement: "physical background branch and attractor statement"
+    disposition: "SOURCE_ONLY_CONDITIONAL"
+    exact_reason: "the source asymptotic is exact but lacks a physical clock and scale interpretation"
+  - burden_id: "corrections_and_uncertainty"
+    sealed_source_output: "exact analytic formulas plus fixed-step RK4 source check"
+    comparison_requirement: "controlled physical correction budget and uncertainty propagation"
+    disposition: "ABSENT_PHYSICAL_CONTROL"
+    exact_reason: "source numerical error does not bound model-to-world or physical corrections"
+  - burden_id: "independent_reproduction"
+    sealed_source_output: "same-context deterministic validation"
+    comparison_requirement: "independent reproduction"
+    disposition: "NOT_ACQUIRED"
+    exact_reason: "same executor and environment do not count as independent"
+summary:
+  comparable_row_count: 0
+  nonunique_or_missing_row_count: 8
+  target_informed_source_rerun_count: 0
+  source_mutation_after_seal_count: 0
+  benchmark_pass_count: 0
+  outcome: "INCONCLUSIVE"
+  secondary_label: "FORMAL_ANALOGY"
+authority_limits:
+  formal_token_matching_is_physical_equivalence: false
+  target_equations_adopted_as_source: false
+  physical_cosmology_established: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
