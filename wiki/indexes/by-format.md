@@ -588,6 +588,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-V21-P13-T04-QUALITY-PORTABILITY-POLICY-V1` `research_control/tasks/RT-20260723-020/artifacts/quality_portability_policy_v1.md`
 - `MD-V21-P13-T04-VALIDATOR-API-CONTRACT-V1` `research_control/tasks/RT-20260723-020/artifacts/validator_api_contract_v1.md`
 - `MD-V21-P13-T05-SECURITY-SCAN-POLICY-V1` `research_control/tasks/RT-20260724-002/artifacts/security_scan_policy_v1.md`
+- `MD-V21-P14-T04-PARENT-FUSION-CONGRUENCE-STATUS-V1` `research_control/tasks/RT-20260731-005/artifacts/parent_fusion_notes_p14_t04_congruence_status.md`
 - `MD-V21-P15-T01-EXACT-GR-INTERPRETIVE-MANUSCRIPT-V1` `research_control/tasks/RT-20260722-021/artifacts/exact_gr_interpretive_manuscript_v1.md`
 - `MD-V21-P15-T04-PARENT-FUSION-SOURCE-DYNAMICS-RECONSTRUCTION-V1` `research_control/tasks/RT-20260727-006/artifacts/parent_fusion_notes_p15_t04_report.md`
 - `MD-V21-P15-T04-SOURCE-DYNAMICS-RECONSTRUCTION-RECEIPT-V1` `research_control/tasks/RT-20260727-006/artifacts/source_dynamics_reconstruction_receipt.md`
@@ -1063,6 +1064,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V21-P14-T01-PROJECT-SUCCESS-CATEGORIES` `research_control/tasks/RT-20260722-016/artifacts/four_project_success_categories_v1.tex`
 - `TEX-V21-P14-T02-NON-EMPIRICAL-ONTOLOGY-SUCCESS-CRITERIA-V1` `research_control/tasks/RT-20260722-018/artifacts/non_empirical_ontology_success_criteria_v1.tex`
 - `TEX-V21-P14-T03-NO-TARGET-POSITIVE-SUFFICIENCY-POLICY-V1` `research_control/tasks/RT-20260722-019/artifacts/no_target_positive_provenance_sufficiency_policy_v1.tex`
+- `TEX-V21-P14-T04-PROTECTED-CONGRUENCE-STATUS-DECISION-V1` `research_control/tasks/RT-20260731-005/artifacts/p14_t04_congruence_status_decision_v1.tex`
 - `TEX-V21-P14-T05-NEGATIVE-RESULT-SUCCESS-PATHWAY-V1` `research_control/tasks/RT-20260722-020/artifacts/negative_result_success_pathway_v1.tex`
 - `TEX-V21-P15-T03-SELECTOR-MINIMUM-EXTENSION-THEOREM-MANUSCRIPT-V1` `research_control/tasks/RT-20260723-003/artifacts/selector_minimum_extension_theorem_manuscript_v1.tex`
 - `TEX-V21-P15-T04-SOURCE-DYNAMICS-RECONSTRUCTION-TECHNICAL-REPORT-V1` `research_control/tasks/RT-20260727-006/artifacts/source_dynamics_reconstruction_technical_report_v1.tex`
@@ -1702,6 +1704,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-V21-P13-T04-QUALITY-PORTABILITY-POLICY-V1` `wiki/markdown/md-v21-p13-t04-quality-portability-policy-v1.md`
 - `WIKI-MD-V21-P13-T04-VALIDATOR-API-CONTRACT-V1` `wiki/markdown/md-v21-p13-t04-validator-api-contract-v1.md`
 - `WIKI-MD-V21-P13-T05-SECURITY-SCAN-POLICY-V1` `wiki/markdown/md-v21-p13-t05-security-scan-policy-v1.md`
+- `WIKI-MD-V21-P14-T04-PARENT-FUSION-CONGRUENCE-STATUS-V1` `wiki/markdown/md-v21-p14-t04-parent-fusion-congruence-status-v1.md`
 - `WIKI-MD-V21-P15-T01-EXACT-GR-INTERPRETIVE-MANUSCRIPT-V1` `wiki/markdown/md-v21-p15-t01-exact-gr-interpretive-manuscript-v1.md`
 - `WIKI-MD-V21-P15-T04-PARENT-FUSION-SOURCE-DYNAMICS-RECONSTRUCTION-V1` `wiki/markdown/md-v21-p15-t04-parent-fusion-source-dynamics-reconstruction-v1.md`
 - `WIKI-MD-V21-P15-T04-SOURCE-DYNAMICS-RECONSTRUCTION-RECEIPT-V1` `wiki/markdown/md-v21-p15-t04-source-dynamics-reconstruction-receipt-v1.md`
@@ -2171,6 +2174,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-V21-P14-T01-PROJECT-SUCCESS-CATEGORIES` `wiki/tex/tex-v21-p14-t01-project-success-categories.md`
 - `WIKI-TEX-V21-P14-T02-NON-EMPIRICAL-ONTOLOGY-SUCCESS-CRITERIA-V1` `wiki/tex/tex-v21-p14-t02-non-empirical-ontology-success-criteria-v1.md`
 - `WIKI-TEX-V21-P14-T03-NO-TARGET-POSITIVE-SUFFICIENCY-POLICY-V1` `wiki/tex/tex-v21-p14-t03-no-target-positive-sufficiency-policy-v1.md`
+- `WIKI-TEX-V21-P14-T04-PROTECTED-CONGRUENCE-STATUS-DECISION-V1` `wiki/tex/tex-v21-p14-t04-protected-congruence-status-decision-v1.md`
 - `WIKI-TEX-V21-P14-T05-NEGATIVE-RESULT-SUCCESS-PATHWAY-V1` `wiki/tex/tex-v21-p14-t05-negative-result-success-pathway-v1.md`
 - `WIKI-TEX-V21-P15-T03-SELECTOR-MINIMUM-EXTENSION-THEOREM-MANUSCRIPT-V1` `wiki/tex/tex-v21-p15-t03-selector-minimum-extension-theorem-manuscript-v1.md`
 - `WIKI-TEX-V21-P15-T04-SOURCE-DYNAMICS-RECONSTRUCTION-TECHNICAL-REPORT-V1` `wiki/tex/tex-v21-p15-t04-source-dynamics-reconstruction-technical-report-v1.md`

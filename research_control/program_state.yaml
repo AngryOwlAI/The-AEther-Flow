@@ -1,11 +1,66 @@
 mode: "director_led_research_control"
-active_task_id: "RT-20260731-004"
-latest_handoff_id: "handoff-0926"
-current_status: "p9_t09_protected_gate_e_completed_not_ready_ready_for_checkpoint_fixed_package_locally_frozen"
-claim_boundary_summary: "RT-20260731-004 consumes exact one-time protected P9-T09 review authority and records NOT_READY_BENCHMARK_AND_COMPLETED_DERIVATION_REQUIREMENTS_UNMET. Six cases remain INCONCLUSIVE with zero passes, qualifying independent replication is absent, no source-derived physical recovery bridge exists, and Gate D remains NOT READY. Benchmark promotion is denied; exact and controlled approximate GR recovery are not established; completed first-principles derivation wording is prohibited for the fixed evidence. No publication, push, ontology modification, or broader scientific authority is granted."
-next_plan_task_id: ""
-next_worker_skill: "none"
-next_recommended_action: "Run one governed checkpoint for AJ-RT-20260731-004-001. After checkpoint, preserve the local fixed-package freeze. Do not select or execute another package from this handoff; any reopening requires materially new source-derived physical recovery evidence, at least one lawful preregistered physical benchmark pass, qualifying independent replication, and fresh protected authority."
+active_task_id: "RT-20260731-005"
+latest_handoff_id: "handoff-0927"
+current_status: "p14_t04_protected_congruence_status_completed_ready_for_checkpoint"
+claim_boundary_summary: "RT-20260731-005 consumes exact one-time protected P14-T04 authority and selects INTERPRETIVE_REPRESENTATIVE_TARGET_CONGRUENCE_ONLY. The target-side u is an admissible generally nonunique observer representative in the fixed exact-GR benchmark; it is not Phi_src, not dynamically selected by current source dynamics, not established pure gauge, and not an independent benchmark field. Representative independence applies to fixed-solution content under a fixed physical protocol while observer-relative quantities may differ. No canonical ontology edit, source bridge, physical field adoption, Distance-to-GR delta, promotion, proof, publication, or push occurs."
+next_plan_task_id: "P14-T06"
+next_worker_skill: "improve-project-system"
+next_recommended_action: "Run one governed checkpoint for AJ-RT-20260731-005-001. After checkpoint, create one fresh bounded P14-T06 project-system AgentJob under its exact plan and write scope to align public status, glossary, and claim examples."
+
+p14_t04_protected_congruence_status_decision:
+  task_id: "RT-20260731-005"
+  parent_task_id: "RT-20260731-004"
+  parent_handoff_id: "handoff-0926"
+  plan_task_id: "P14-T04"
+  next_plan_task_id: "P14-T06"
+  claim_boundary_id: "CB-V21-P14-T04-CONGRUENCE-INTERPRETIVE-REPRESENTATIVE-001"
+  status: "INTERPRETIVE_REPRESENTATIVE_TARGET_CONGRUENCE_ONLY"
+  work_item_status: "completed"
+  route_label: "human-gated-ontology-decision"
+  selected_role_family: "gate-chair@0.1.0"
+  selected_worker_skill: "continue-research"
+  target_derivation_milestone: "source_ontology"
+  milestone_burden: "Eliminate ambiguity between interpretation and physical field content."
+  dependency_checkpoint_commit: "80c946758f90840a97b9a87ee0cd5d0555c29056"
+  approval_id: "approval-20260731-002"
+  approval_sha256: "16b5f340c0b997b14945728bc3375a02c103f6ed483b0df5c4422b97fc394a98"
+  controlling_handoff_yaml_sha256: "d1d3b56b0a40417a87118f026ccdb5c1ce923e2759da2b24e1c3cff28c10db42"
+  decision_path: "research_control/tasks/RT-20260731-005/artifacts/p14_t04_congruence_status_decision_v1.tex"
+  decision_sha256: "894d53ceffb182835e216ab2ad5722a8f6d60551d75fa48681397284e9060147"
+  downstream_requirement_path: "research_control/tasks/RT-20260731-005/artifacts/p14_t04_downstream_requirement_update_v1.yaml"
+  downstream_requirement_sha256: "d0b6c6da1f2c103d79e34f6155b70533b594a5007141f2e14dfb6ad276b2b3de"
+  completion_path: "research_control/tasks/RT-20260731-005/jobs/completions/AJC-AJ-RT-20260731-005-001.yaml"
+  completion_sha256: "9592bcac19a7095feb603d61b2be689468b2c19e3aad7f22b34360e6bd6c8df0"
+  handoff_id: "handoff-0927"
+  handoff_path: "research_control/handoffs/handoff-0927.yaml"
+  handoff_yaml_sha256: "6ba67c71d3e8920cacc02215d69da0d91f7b1f1dd45fa9b28a3de28af50236ed"
+  handoff_markdown_sha256: "d25d4f490040375e5d727712e7eee3ec1478e728742ab73bb87d55cd30c8a358"
+  theorem_id: "P14T04-THM-TARGET-BENCHMARK-REPRESENTATIVE-INDEPENDENCE-V1"
+  authorization_consumed_once: true
+  positive_verdict_predetermined: false
+  interpretive_representative_status_selected: true
+  pure_gauge_status_established: false
+  source_dynamic_selection_established: false
+  independent_field_status_established: false
+  canonical_ontology_modified: false
+  source_law_adopted: false
+  source_bridge_constructed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false
+  checkpoint_invocation_count: 0
+  checkpoint_committed: false
+  selected_next_work_item: "P14-T06"
+  selected_next_worker_skill: "improve-project-system"
+  selected_next_role_family: "documentation-curator@2.0.0"
+  selected_next_route_label: "ordinary-research-packet"
+  selected_next_strategy_id: "align_public_status_glossary_and_claim_examples_with_p14_t04_v1"
+  selected_next_requires_human_gate: false
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
 
 p9_t09_protected_gate_e_review:
   task_id: "RT-20260731-004"

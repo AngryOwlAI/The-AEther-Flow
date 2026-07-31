@@ -2394,6 +2394,96 @@ promotion, Gate Chair benchmark closure, or completed derivation.
   authority only. It does not make the same-context audit external, blind,
   human, or independently replicated.
 
+### Item 16: target_congruence_representative_status
+
+- `frontier_item_id`: `target_congruence_representative_status`
+- `frontier_item_class`: `gate_decision;theorem`
+- `milestone`: `source_ontology`
+- `object_type`: `gate_decision;theorem`
+- `object_or_claim_name`: Protected target-congruence status and target-benchmark
+  representative-independence theorem.
+- `status_layer_summary`:
+  - `control_status`: `protected_decision_completed`
+  - `mathematical_status`: `target_benchmark_theorem_recorded`
+  - `physical_status`: `interpretive_representative_target_congruence_only`
+  - `promotion_status`: `no_physics_promotion`
+  - `overread_guard`: `no_canonical_ontology_edit;no_source_to_congruence_bridge;no_preferred_frame;no_independent_vector_field;no_metric_adoption;no_matter_coupling_derivation;no_einstein_equations;no_benchmark_promotion;no_completed_derivation;no_future_source_extension_impossibility;no_global_theory_rejection`
+- `three_tier_classification`: `accepted_scoped_evidence`.
+- `linter_status`: `PASS`; P14-T04 protected decision claim-language scan.
+- `overread_guard`: `no_canonical_ontology_edit;no_source_to_congruence_bridge;no_preferred_frame;no_independent_vector_field;no_metric_adoption;no_matter_coupling_derivation;no_einstein_equations;no_benchmark_promotion;no_completed_derivation;no_future_source_extension_impossibility;no_global_theory_rejection`
+- `source_artifact_path`:
+  `research_control/tasks/RT-20260731-005/artifacts/p14_t04_congruence_status_decision_v1.tex`;
+  `research_control/tasks/RT-20260731-005/artifacts/p14_t04_downstream_requirement_update_v1.yaml`;
+  `research_control/approvals/approval-20260731-002.yaml`.
+- `authority_level`: `registered_control_markdown;protected_gate_decision;draft_control_theorem`
+- `source_authority_type`: `registered_markdown_control;registered_tex_artifact;gate_chair_artifact`
+- `assumptions`:
+  - The exact-GR target solution and physical measurement protocol are fixed.
+  - The compared timelike unit congruences are admissible auxiliary target-side
+    representatives on their common domain.
+  - Current source ontology does not supply a source-to-congruence bridge,
+    selector, or independent congruence-field dynamics.
+- `definitions_used`: Target-side congruence; interpretive representative;
+  fixed target benchmark; fixed physical protocol; source/target type
+  separation.
+- `definitions_introduced`: `none`; the decision classifies target-benchmark
+  use and does not add a canonical ontology primitive.
+- `theorem_like_claims`: Base observables and target field equations that do
+  not depend on the replaceable auxiliary congruence remain unchanged under
+  representative replacement at fixed solution and protocol; congruence-
+  explicit kinematics and distinct observer measurements may differ.
+- `statement_or_decision`:
+  `INTERPRETIVE_REPRESENTATIVE_TARGET_CONGRUENCE_ONLY`.
+- `burden_id`: `source_ontology_primitives`
+- `object_or_theorem`: Target-side observer congruence status and
+  `P14T04-THM-TARGET-BENCHMARK-REPRESENTATIVE-INDEPENDENCE-V1`.
+- `source_path`:
+  `research_control/tasks/RT-20260731-005/artifacts/p14_t04_congruence_status_decision_v1.tex`
+- `status`: protected decision completed: interpretive representative target
+  congruence only.
+- `mathematical_conclusion`: For a fixed target Einstein--matter solution
+  `(M,g,psi)`, changing between admissible timelike unit congruences leaves
+  every observable defined only from `(g,psi)` and the target field equations
+  unchanged; congruence-explicit kinematic decompositions may change.
+- `audits_passed`: Exact protected authorization, canonical source/target type
+  separation, and finalized P4-T05, P5-T08, and P14-T03 dependency review.
+- `stress_results`: Pure-gauge, dynamically selected, and independent-field
+  readings fail their positive-evidence burdens under the current package.
+- `gate_chair_results`: The congruence is selected only as an admissible,
+  generally nonunique, interpretive target representative. It is not
+  `Phi_src`, not dynamically selected by current source dynamics, and not an
+  independent physical field in the exact-GR benchmark.
+- `fail_closed_branches`: No gauge claim without an equivalence theorem; no
+  dynamic-selection claim without a source bridge and selector; no
+  independent-field claim without action, equations, modes, stability,
+  coupling, constraints, and separate protected adoption.
+- `known_obstructions`: The current ontology leaves `Phi_src` unresolved and
+  P5-T08 supplies no positive local geometry input.
+- `physical_non_conclusions`:
+  - No preferred physical frame.
+  - No source-to-congruence bridge.
+  - No new vector sector or field equation.
+  - No metric, matter-coupling, Einstein-equation, or benchmark promotion.
+- `forbidden_overread`: Target representative independence as a source-side
+  gauge theorem, unique physical congruence, or derived source flow.
+- `downstream_blocked_targets`: Gauge equivalence, source-side selection,
+  independent-field adoption, and every downstream GR promotion.
+- `allowed_reuse`: Use as the controlling status vocabulary and as the exact
+  target-benchmark representative-independence theorem.
+- `blocked_reuse`: Do not use it to identify `u` with `Phi_src`, erase
+  observer-relative measurements, or claim future bridge or field extensions
+  impossible.
+- `dependency_items`: `source_ontology_primitives`
+- `missing_theorem_or_primitive`: A source-side bridge, selector, or field
+  dynamics remains missing for every stronger physical reading.
+- `next_theorem_needed`: Only if a stronger reading is proposed: gauge-orbit
+  theorem, selection-law theorem, or independent-field action and stability
+  package as appropriate.
+- `candidate_next_task`: `P14-T06`
+- `overread_guard`: `no_canonical_ontology_edit;no_source_to_congruence_bridge;no_preferred_frame;no_independent_vector_field;no_metric_adoption;no_matter_coupling_derivation;no_einstein_equations;no_benchmark_promotion;no_completed_derivation;no_future_source_extension_impossibility;no_global_theory_rejection`
+- `external_review_notes`: Parent--child review is same-context internal
+  synthesis and is not external or independently replicated.
+
 ## Coverage Receipt
 
 P2-T03 minimum item coverage:

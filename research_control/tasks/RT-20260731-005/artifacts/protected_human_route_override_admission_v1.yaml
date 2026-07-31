@@ -1,0 +1,70 @@
+schema_id: "protected_human_route_override_admission_v1"
+policy_id: "ordinary_route_guard_policy_v1"
+status: "active"
+admission_purpose: "protected_execution"
+
+admitted_job:
+  job_id: "AJ-RT-20260731-005-001"
+  task_id: "RT-20260731-005"
+  decision_id: "DDR-20260731-005"
+  plan_task_id: "P14-T04"
+
+protected_job:
+  job_id: "AJ-RT-20260731-005-001"
+  task_id: "RT-20260731-005"
+  decision_id: "DDR-20260731-005"
+  plan_task_id: "P14-T04"
+
+source_handoff:
+  handoff_id: "handoff-0926"
+  path: "research_control/handoffs/handoff-0926.yaml"
+  sha256: "d1d3b56b0a40417a87118f026ccdb5c1ce923e2759da2b24e1c3cff28c10db42"
+  selected_plan_task_id: "P9-T09"
+  guard_outcome: "below_threshold"
+
+approval:
+  approval_id: "approval-20260731-002"
+  path: "research_control/approvals/approval-20260731-002.yaml"
+  sha256: "16b5f340c0b997b14945728bc3375a02c103f6ed483b0df5c4422b97fc394a98"
+
+director_decision:
+  path: "research_control/tasks/RT-20260731-005/DDR-20260731-005.md"
+  sha256: "72b608442f48487f7efe266597085b829b8b58a4115b360c4d3f3bfc406ec78f"
+
+human_authorization:
+  path: "research_control/tasks/RT-20260731-005/artifacts/protected_human_route_authorization_v1.yaml"
+  sha256: "dc78a2dc776bf6d20fc51ba36efe32c5ae939d278154b37bf0ce573a6e6e7d5c"
+
+protected_route:
+  evidence_path: "research_control/tasks/RT-20260731-005/jobs/completions/AJC-AJ-RT-20260731-005-001.yaml"
+  evidence_sha256: "9592bcac19a7095feb603d61b2be689468b2c19e3aad7f22b34360e6bd6c8df0"
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  generation: 191
+  plan_task_id: "P14-T04"
+  worker_skill: "continue-research"
+  route_sha256: "9f9cee24a78ffa1dc0e44cc1d0af5ed82ce1532ba695ac20ccadf3177ff1df37"
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:191"
+
+admitted_route:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  generation: 191
+  plan_task_id: "P14-T04"
+  worker_skill: "continue-research"
+  route_sha256: "9f9cee24a78ffa1dc0e44cc1d0af5ed82ce1532ba695ac20ccadf3177ff1df37"
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:191"
+
+approval_consumption:
+  one_time_use: true
+  consumed: true
+  consumed_by: "AJ-RT-20260731-005-001"
+  reused_for_admitted_job: false
+
+authority_limits:
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  system_success_counts_as_physics: false
+  system_success_counts_as_distance_to_gr: false
+  scientific_status_changed: false
+  physics_promotion_authorized: false
+
+authority_note: "This receipt admits only the exact generation-191 protected P14-T04 route. It does not create ontology, source-law, source-bridge, field, metric, coupling, benchmark, proof, publication, push, or completed-derivation authority."

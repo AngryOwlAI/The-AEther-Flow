@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-07-31T10:31:14Z`
-- Source fingerprint: `8c44f4251eb6a3d1c09bc28766ed14ed1075faa51d48c8c38bf7731ff8d0fcf0`
-- Nodes: `23914`
-- Edges: `75425`
+- Generated from tracked state as of: `2026-07-31T18:57:07Z`
+- Source fingerprint: `6822ea395bf6c30bc27f0524f63b8998add3f87944b012fcb664a25ac63b8428`
+- Nodes: `23972`
+- Edges: `75513`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 1165 |
+| `completion_yaml` | 1167 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 925 |
+| `handoff_yaml` | 927 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,32 +33,32 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 9 |
-| `agent_job` | `support_only` | 1165 |
+| `agent_job` | `support_only` | 1167 |
 | `artifact` | `canonical_source` | 87 |
-| `artifact` | `support_only` | 12141 |
-| `blocked_burden` | `blocked` | 4880 |
-| `claim_boundary` | `support_only` | 1122 |
-| `draft_control_candidate` | `draft_control` | 801 |
+| `artifact` | `support_only` | 12165 |
+| `blocked_burden` | `blocked` | 4894 |
+| `claim_boundary` | `support_only` | 1124 |
+| `draft_control_candidate` | `draft_control` | 803 |
 | `draft_control_candidate` | `proposal_only` | 149 |
 | `draft_control_candidate` | `science_draft` | 90 |
-| `frozen_negative` | `frozen_negative` | 149 |
-| `gate_chair_verdict` | `human_gated` | 34 |
-| `handoff` | `support_only` | 925 |
-| `human_gated_object` | `human_gated` | 578 |
+| `frozen_negative` | `frozen_negative` | 150 |
+| `gate_chair_verdict` | `human_gated` | 36 |
+| `handoff` | `support_only` | 927 |
+| `human_gated_object` | `human_gated` | 582 |
 | `ledger_row` | `accepted_scoped` | 6 |
 | `ledger_row` | `blocked` | 3 |
 | `ledger_row` | `frozen_negative` | 1 |
 | `ledger_row` | `human_gated` | 1 |
 | `ledger_row` | `science_draft` | 4 |
-| `obstruction` | `blocked` | 105 |
+| `obstruction` | `blocked` | 106 |
 | `obstruction` | `rejected` | 4 |
 | `source_extension_evidence_precondition` | `source_extension_evidence` | 40 |
 | `source_ontology_object` | `canonical_source` | 27 |
 | `source_ontology_object` | `rejected` | 50 |
-| `source_ontology_object` | `support_only` | 378 |
+| `source_ontology_object` | `support_only` | 380 |
 | `task` | `human_gated` | 29 |
 | `task` | `science_draft` | 33 |
-| `task` | `support_only` | 1103 |
+| `task` | `support_only` | 1105 |
 
 ## Frontier Table
 
@@ -73,7 +73,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | SEI_src^{cand} | `object:sei_src_cand` | `draft_control_candidate` | `draft_control` | Required frontier object exposed in completion text: SEI_src^{cand}. |
 | matter-coupling burden | `object:matter_coupling_burden` | `ledger_row` | `accepted_scoped` | P7-T08 changes the exact package's project-level physical and interpretive status by explicit protected human constitutive postulate. The layer-status cells ret |
 | Einstein-equations burden | `object:einstein_equations_burden` | `blocked_burden` | `blocked` | P8-T07 consumes exact protected authority and issues NOT_READY_EINSTEIN_SECTOR_DERIVATION_REQUIREMENTS_UNMET; four criteria pass only in narrow finite or author |
-| benchmark-promotion burden | `object:benchmark_promotion_burden` | `human_gated_object` | `human_gated` | P9-T08 cumulatively audits the immutable P9-T02 through P9-T07 suite and finds no declared target-import path, target-informed rerun, or post-seal source mutati |
+| benchmark-promotion burden | `object:benchmark_promotion_burden` | `human_gated_object` | `human_gated` | P9-T09 completes the protected Gate E review over the fixed checkpointed package and issues NOT_READY_BENCHMARK_AND_COMPLETED_DERIVATION_REQUIREMENTS_UNMET. All |
 | finite toy metric response frozen negative | `ledger:finite_toy_metric_response` | `ledger_row` | `frozen_negative` | explicit-tag-only finite toy route failed tag-removal stress and is frozen locally |
 
 ## Blocked Downstream Claims
@@ -163,9 +163,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 ## Route Continuity
 
-- Active task: `RT-20260731-003`
-- Latest handoff: `handoff-0925`
-- Handoff path: `research_control/handoffs/handoff-0925.yaml`
-- Next action: Run the one governed cumulative checkpoint for AJ-RT-20260731-003-001. After it commits, do not execute P9-T09 without a nonblank exact protected human Gate Chair authorization; if authorization is absent, record deferred_human_gate and continue only dependency-independent included work or terminalize according to the relay scope.
+- Active task: `RT-20260731-005`
+- Latest handoff: `handoff-0927`
+- Handoff path: `research_control/handoffs/handoff-0927.yaml`
+- Next action: Run one governed checkpoint for AJ-RT-20260731-005-001. After checkpoint, create one fresh bounded P14-T06 project-system AgentJob under its exact plan and write scope to align public status, glossary, and claim examples.
 
 This graph is navigational support only; inspect the cited sources before using any claim.

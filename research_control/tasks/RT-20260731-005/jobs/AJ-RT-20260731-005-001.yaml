@@ -1,0 +1,409 @@
+job_id: "AJ-RT-20260731-005-001"
+task_id: "RT-20260731-005"
+decision_id: "DDR-20260731-005"
+role_id: "gate-chair"
+role_version: "0.1.0"
+execution_role_ref: "gate-chair@0.1.0--RT-20260731-005"
+status: "completed"
+validation_status: "PASS"
+requires_human_gate: false
+human_authorization_id: "HUMAN-AUTH-P14-T04-CONGRUENCE-STATUS-2026-07-31-001"
+approval_id: "approval-20260731-002"
+created_at: "2026-07-31T18:41:27Z"
+started_at: "2026-07-31T18:41:27Z"
+completed_at: "2026-07-31T18:57:07Z"
+completion_path: "research_control/tasks/RT-20260731-005/jobs/completions/AJC-AJ-RT-20260731-005-001.yaml"
+objective: "Execute only P14-T04 by issuing the protected evidence-bound status decision for the target-side observer congruence and recording the exact downstream burdens without editing canonical ontology or constructing missing physics."
+target_derivation_milestone: "source_ontology"
+milestone_burden: "Eliminate ambiguity between interpretation and physical field content."
+route_label: "human-gated-ontology-decision"
+route_reason: "Goal-journal entry 1459 supplies exact narrow human authority and finalized P4-T05 P5-T08 and P14-T03 completion hashes satisfy the dependencies."
+dependency_checkpoint_commit: "80c946758f90840a97b9a87ee0cd5d0555c29056"
+plan_task_id: "P14-T04"
+recommendation_ids:
+  - "V21-R13"
+  - "V21-R31"
+  - "V21-R64"
+  - "V21-R67"
+physics_promotion_authorized: false
+proof_authority: false
+is_physics_task: true
+payload_class: "theorem"
+has_new_mathematical_payload: true
+payload_artifact_path: "research_control/tasks/RT-20260731-005/artifacts/p14_t04_congruence_status_decision_v1.tex"
+payload_summary: "A protected status decision plus a target-benchmark representative-independence theorem separates invariant GR solution content from observer-relative congruence kinematics."
+external_red_team_finding_requires_integration: false
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 191
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:191"
+  handoff_token: "200d4760300c1303637387c04ff07116f1855219c176fdab"
+  relay_claim_token: "1c85df5051a72c283b9d949c627964bcd0ac5510ece09e37"
+  route_sha256: "9f9cee24a78ffa1dc0e44cc1d0af5ed82ce1532ba695ac20ccadf3177ff1df37"
+  route_work_item_id: "P14-T04"
+  route_worker_skill: "continue-research"
+  worker_invocation_count: 1
+
+mathematical_decisiveness_contract:
+  contract_path: "research_control/design/mathematical_decisiveness_completion_contract.md"
+  schema_path: ".agents/schemas/PHYSICS_COMPLETION_DECISIVENESS_SCHEMA.md"
+  enforcement_mode: "hard_failure"
+  active_after: "2026-06-21T02:32:39Z"
+
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "physics"
+  payload_type: "route_decision"
+  candidate_family: "V21-P14-TARGET-CONGRUENCE-STATUS-V1"
+  assumption_delta:
+    - "Hold the canonical source/target separation and finalized dependency evidence fixed."
+    - "Treat protected authority as decision authority rather than a missing physical premise."
+    - "Separate observer-representative invariance from source-side gauge equivalence."
+    - "Require explicit positive evidence before dynamically selected or independent-field language."
+  materiality_basis: "No protected P14-T04 congruence-status decision previously exists; the canonical geometry text is interpretive source evidence but not the protected cross-project status disposition required by the plan."
+  payload_details:
+    resolves_new_route_decision: true
+    decision_identity: "P14T04-PROTECTED-TARGET-CONGRUENCE-STATUS-DECISION-V1"
+    not_already_encoded_evidence: "P14-T04 was previously deferred at its human gate and the current exact authorization supplies the first lawful protected decision frame."
+  source_basis:
+    - "ontology/tex/aether_flow_foundations.tex"
+    - "ontology/tex/aether_flow_geometry.tex"
+    - "research_control/tasks/RT-20260724-004/artifacts/ontology_regime_gate_chair_decision_v1.tex"
+    - "research_control/tasks/RT-20260726-001/artifacts/source_dynamics_milestone_synthesis_v1.tex"
+    - "research_control/tasks/RT-20260722-019/artifacts/no_target_positive_provenance_sufficiency_policy_v1.tex"
+    - "research_control/approvals/approval-20260731-002.yaml"
+  expected_artifact_paths:
+    - "research_control/tasks/RT-20260731-005/artifacts/p14_t04_congruence_status_decision_v1.tex"
+    - "research_control/tasks/RT-20260731-005/artifacts/p14_t04_downstream_requirement_update_v1.yaml"
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+
+family_freeze_admission:
+  schema_id: "family_freeze_route_admission_v1"
+  policy_id: "family_freeze_reopening_policy_v1"
+  route_id: "v21_p14_t04_protected_congruence_status_decision"
+  family_id: "V21-P14-TARGET-CONGRUENCE-STATUS-V1"
+  family_identity_sha256: "f60a81b63f814b03cca7190b3ac6285842a55317f4aed058cc6e75154cc0b4d7"
+  assumption_sha256es:
+    - "4749d9e8b6858a43230e99029cccc3274b55fc2ae2a2cdf45a983a60c98e5b59"
+    - "a2b9c6670cdb0e09ca2e19ff30f71d9bb954e3ab2fc73a5c9727a2df10db93aa"
+    - "52c30a55019d38dbc5cb697749189dba4a0bc17db9566dd4c505b21f7db2e456"
+  route_kind: "primitive_investigation"
+  detected_match_basis: []
+  reopening:
+    requested: false
+    class: "none"
+  distinct_branch:
+    branch_identity: "P14T04-PROTECTED-TARGET-CONGRUENCE-STATUS-DECISION"
+    material_difference_basis: "This is the first protected status classification and representative-independence theorem; it reconstructs no frozen source candidate."
+    reconstructs_frozen_candidate: false
+    expected_artifact_paths:
+      - "research_control/tasks/RT-20260731-005/artifacts/p14_t04_congruence_status_decision_v1.tex"
+  authority_limits:
+    local_family_freeze_preserved: true
+    global_no_go_claimed: false
+    automatic_candidate_adoption: false
+    theorem_truth_inferred: false
+    ontology_modified: false
+    physics_promotion_authorized: false
+
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  expected_durable_outputs:
+    physics:
+      - "one protected congruence-status decision"
+      - "one target-benchmark representative-independence theorem"
+      - "one downstream evidence-burden update"
+    project_system:
+      - "one task-local validator and compact receipt"
+      - "one exact protected-authorization receipt"
+  acceptance_criteria:
+    physics:
+      - "the verdict follows the fixed source and dependency evidence"
+      - "target representative independence is mathematically explicit"
+      - "gauge dynamically selected and independent-field overreads remain blocked"
+    project_system:
+      - "authorization and dependency hashes validate"
+      - "parent-child synthesis and control registries validate"
+      - "one governed checkpoint records the transaction"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: false
+    exception_id: ""
+    evidence_path: ""
+    evidence_sha256: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0926"
+  source_handoff_path: "research_control/handoffs/handoff-0926.yaml"
+  source_handoff_sha256: "d1d3b56b0a40417a87118f026ccdb5c1ce923e2759da2b24e1c3cff28c10db42"
+  selected_plan_task_id: "P9-T09"
+  guard_outcome: "below_threshold"
+  override_authority:
+    present: true
+    exact_plan_task_id: "P14-T04"
+    receipt_path: "research_control/tasks/RT-20260731-005/artifacts/protected_human_route_override_admission_v1.yaml"
+    receipt_sha256: "69c04ffbccfd57557a6337aa6a20c0a6623b3f19f748ed7cad0f7690fd4466ca"
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  parent:
+    execution_unit_id: "parent"
+    perspective: "physicist_mathematician_philosopher"
+    responsibilities:
+      - "verify exact authority and dependency hashes"
+      - "separate target representative structure from source Phi_src"
+      - "resolve every child conflict"
+      - "issue and bound the protected verdict"
+  children:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260731-005/artifacts/child_phys_math_p14_t04_congruence_status.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260731-005/artifacts/child_phys_phil_p14_t04_congruence_status.yaml"
+      status: "completed"
+  conflict_policy:
+    review_path: "research_control/tasks/RT-20260731-005/artifacts/parent_conflict_review_p14_t04_congruence_status.yaml"
+    max_resolution_rounds: 2
+    require_parallel_child_revision: true
+    unresolved_conflict_status: "blocked"
+  fusion_policy:
+    fusion_notes_path: "research_control/tasks/RT-20260731-005/artifacts/parent_fusion_notes_p14_t04_congruence_status.md"
+    fused_output_path: "research_control/tasks/RT-20260731-005/artifacts/p14_t04_congruence_status_decision_v1.tex"
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+    final_output_replaces_old_single_role_artifact: true
+
+memory_preflight:
+  preflight_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1105
+    relationship_row_count: 5586
+    semantic_row_count: 1105
+    vault_row_count: 1105
+    local_cache_only_warning_count: 0
+  refresh_needed: false
+  refresh_performed: false
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"congruence status\" --limit 10 --json"
+      query_type: "search"
+      query_text: "congruence status"
+      returned_object_ids:
+        - "TEX-ONTOLOGY-AETHER-FLOW-GEOMETRY"
+  canonical_inspections:
+    - object_id: "TEX-ONTOLOGY-AETHER-FLOW-GEOMETRY"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "ontology/tex/aether_flow_geometry.tex"
+      source_hash: "f60a81b63f814b03cca7190b3ac6285842a55317f4aed058cc6e75154cc0b4d7"
+  authority_note: "Generated Obsidian wiki notes, semantic extracts, SQLite memory, PDFs, and .local files are retrieval layers only and are not authority."
+
+allowed_read_paths:
+  - "SOUL.md"
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - ".agents/roles/physics/gate-chair.v0.1.0.md"
+  - ".agents/schemas/**"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  - "ontology/tex/aether_flow_foundations.tex"
+  - "ontology/tex/aether_flow_geometry.tex"
+  - "research_control/design/**"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0926.yaml"
+  - "research_control/handoffs/handoff-0926.md"
+  - "research_control/approvals/approval-20260731-002.yaml"
+  - "research_control/tasks/RT-20260722-019/**"
+  - "research_control/tasks/RT-20260724-004/**"
+  - "research_control/tasks/RT-20260724-009/**"
+  - "research_control/tasks/RT-20260726-001/**"
+  - "registries/**"
+
+allowed_write_paths:
+  - "research_control/approvals/approval-20260731-002.yaml"
+  - "research_control/tasks/RT-20260731-005/**"
+  - "research_control/handoffs/handoff-0927.yaml"
+  - "research_control/handoffs/handoff-0927.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/design/frontier_theorem_inventory.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/PDF_DERIVATIVE_REGISTRY.csv"
+  - "registries/PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "registries/TEX_SOURCE_REGISTRY.csv"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/pdf/**"
+  - "wiki/tex/**"
+
+allowed_generated_paths:
+  - ".local/**"
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/pdf/**"
+  - "wiki/tex/**"
+
+forbidden_paths:
+  - "ontology/**"
+  - "manuscripts/**"
+  - "html/**"
+  - "implementations_plans/**"
+  - ".agents/roles/**"
+  - ".codex/skills/continue-research-goal/goals/**"
+  - "registries/METRIC_USE_LEDGER.csv"
+  - "research_control/tasks/RT-20260722-019/**"
+  - "research_control/tasks/RT-20260724-004/**"
+  - "research_control/tasks/RT-20260724-009/**"
+  - "research_control/tasks/RT-20260726-001/**"
+  - "research_control/tasks/RT-20260731-004/**"
+
+allowed_source_classes:
+  - "science_draft"
+  - "control_state"
+  - "registry"
+  - "canonical_ontology_read"
+  - "human_authorization"
+forbidden_source_classes:
+  - "canonical_ontology_write"
+  - "source_law_adoption"
+  - "source_to_target_bridge_construction"
+  - "unapproved_physics_claim_promotion"
+  - "completed_derivation_claim"
+  - "generated_derivative_authority"
+
+approved_commands:
+  - ".venv/bin/python research_control/tasks/RT-20260731-005/artifacts/validate_p14_t04_congruence_status.py"
+  - "tectonic -X compile --outdir <scratch> research_control/tasks/RT-20260731-005/artifacts/p14_t04_congruence_status_decision_v1.tex"
+  - "pdflatex -interaction=nonstopmode -halt-on-error -output-directory=<scratch> research_control/tasks/RT-20260731-005/artifacts/p14_t04_congruence_status_decision_v1.tex"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+  - ".venv/bin/python -m scripts.validation.cli plan --profile affected --paths <changed-paths> --explain"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py"
+  - "git diff --check"
+
+required_validators:
+  - "task_local_p14_t04_congruence_status"
+  - "scratch_tex_compile"
+  - "memory_core"
+  - "documentation_impact"
+  - "project_improvement_signals"
+  - "research_control_diff"
+  - "claim_language_changed"
+  - "task_selected_test_shard"
+  - "git_diff_check"
+  - "checkpoint_transaction"
+
+expected_outputs:
+  - "research_control/tasks/RT-20260731-005/artifacts/human_authorization_p14_t04_congruence_status_v1.yaml"
+  - "research_control/tasks/RT-20260731-005/artifacts/child_phys_math_p14_t04_congruence_status.yaml"
+  - "research_control/tasks/RT-20260731-005/artifacts/child_phys_phil_p14_t04_congruence_status.yaml"
+  - "research_control/tasks/RT-20260731-005/artifacts/parent_conflict_review_p14_t04_congruence_status.yaml"
+  - "research_control/tasks/RT-20260731-005/artifacts/parent_fusion_notes_p14_t04_congruence_status.md"
+  - "research_control/tasks/RT-20260731-005/artifacts/p14_t04_congruence_status_decision_v1.tex"
+  - "research_control/tasks/RT-20260731-005/artifacts/p14_t04_downstream_requirement_update_v1.yaml"
+  - "research_control/tasks/RT-20260731-005/artifacts/p14_t04_congruence_status_compact_receipt_v1.json"
+  - "research_control/tasks/RT-20260731-005/artifacts/p14_t04_congruence_status_validation_v1.json"
+  - "research_control/tasks/RT-20260731-005/artifacts/validate_p14_t04_congruence_status.py"
+  - "research_control/tasks/RT-20260731-005/artifacts/protected_human_route_authorization_v1.yaml"
+  - "research_control/tasks/RT-20260731-005/artifacts/protected_human_route_override_admission_v1.yaml"
+  - "research_control/tasks/RT-20260731-005/jobs/completions/AJC-AJ-RT-20260731-005-001.yaml"
+  - "research_control/handoffs/handoff-0927.yaml"
+  - "research_control/handoffs/handoff-0927.md"
+
+stop_conditions:
+  - "authorization or dependency hash mismatch"
+  - "canonical ontology write"
+  - "unresolved child conflict"
+  - "unreviewed physical field introduction"
+  - "validation or checkpoint failure"
+  - "publication push or external-system mutation"

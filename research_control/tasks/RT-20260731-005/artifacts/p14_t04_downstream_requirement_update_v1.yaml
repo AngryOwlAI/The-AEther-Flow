@@ -1,0 +1,72 @@
+schema_id: "v21_p14_t04_downstream_requirement_update_v1"
+artifact_id: "P14T04-DOWNSTREAM-CONGRUENCE-STATUS-REQUIREMENTS-V1"
+task_id: "RT-20260731-005"
+plan_task_id: "P14-T04"
+decision_code: "INTERPRETIVE_REPRESENTATIVE_TARGET_CONGRUENCE_ONLY"
+positive_status: "The target-side congruence is an admissible generally nonunique interpretive representative observer field within the fixed exact-GR benchmark."
+scope: "target-side exact-GR benchmark decomposition only"
+type_separation:
+  source_object: "Phi_src unresolved abstract source-order or evolution slot"
+  target_object: "u^mu admissible future timelike unit observer congruence"
+  identification_adopted: false
+  source_to_target_bridge_adopted: false
+required_representative_independence:
+  theorem_id: "P14T04-THM-TARGET-BENCHMARK-REPRESENTATIVE-INDEPENDENCE-V1"
+  invariant_class: "functionals of fixed target solution data (g, psi) under a physical protocol fixed independently of the selected congruence"
+  observer_relative_class: "projector expansion shear vorticity acceleration and measured decompositions that explicitly use u"
+  source_gauge_equivalence_proved: false
+status_matrix:
+  interpretive_representative:
+    status: "selected"
+    reason: "canonical geometry uses u only as a generally nonunique target observer dictionary"
+  pure_gauge:
+    status: "not_established"
+    upgrade_requires:
+      - "defined equivalence relation or group action on congruence representatives"
+      - "invariant observable class"
+      - "quotient or orbit theorem"
+  dynamically_selected:
+    status: "not_established"
+    upgrade_requires:
+      - "target-atlas-free source-to-congruence bridge"
+      - "source-derived selection law and selected state"
+      - "uniqueness covariance robustness and stability"
+  independent_dynamical_field:
+    status: "not_established"
+    upgrade_requires:
+      - "action or variational principle"
+      - "field equations and constraints"
+      - "degrees of freedom and mode analysis"
+      - "stability and matter coupling"
+      - "observational constraints"
+      - "separate protected adoption authority"
+public_language_requirements:
+  required_phrase: "interpretive representative target congruence"
+  required_qualifiers:
+    - "target-side"
+    - "generally nonunique"
+    - "not Phi_src"
+    - "not dynamically selected by the current source package"
+    - "not an independent physical field in the exact-GR benchmark"
+  forbidden_overreads:
+    - "preferred physical frame"
+    - "pure gauge without theorem"
+    - "source flow identified with observer flow"
+    - "new vector sector or added field equation"
+    - "canonical ontology or source-law adoption"
+downstream_tasks:
+  P14_T06:
+    status: "dependency_ready_after_checkpoint"
+    required_action: "align public status glossary and claim examples with the protected decision"
+  P15_T01:
+    status: "existing_dependency_state_unchanged"
+    required_action: "keep exact-GR interpretive manuscript language within the target-representative boundary"
+authority:
+  canonical_ontology_modified: false
+  source_law_adopted: false
+  physical_field_adopted: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false

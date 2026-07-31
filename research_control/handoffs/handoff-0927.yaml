@@ -1,0 +1,243 @@
+validation_status: "PASS"
+handoff_id: "handoff-0927"
+handoff_number: 927
+task_id: "RT-20260731-005"
+decision_id: "DDR-20260731-005"
+job_id: "AJ-RT-20260731-005-001"
+completion_id: "AJC-AJ-RT-20260731-005-001"
+completion_path: "research_control/tasks/RT-20260731-005/jobs/completions/AJC-AJ-RT-20260731-005-001.yaml"
+completion_sha256: "9592bcac19a7095feb603d61b2be689468b2c19e3aad7f22b34360e6bd6c8df0"
+status: "ready_after_checkpoint"
+created_at: "2026-07-31T18:57:07Z"
+parent_handoff_id: "handoff-0926"
+plan_task_id: "P14-T04"
+source_role_id: "gate-chair"
+source_role_version: "0.1.0"
+source_execution_role_ref: "gate-chair@0.1.0--RT-20260731-005"
+summary: "P14-T04 consumes exact one-time protected authority and selects INTERPRETIVE_REPRESENTATIVE_TARGET_CONGRUENCE_ONLY. In the fixed exact-GR benchmark, u is an admissible generally nonunique target-side observer representative: not Phi_src, not dynamically selected by the current source package, not established pure gauge, and not an independent dynamical field in the benchmark. The representative-independence theorem preserves fixed-solution content under auxiliary congruence replacement with a fixed physical protocol while observer-relative quantities may differ."
+next_action: "Run one governed checkpoint for AJ-RT-20260731-005-001. After checkpoint, create one fresh bounded P14-T06 project-system AgentJob under its exact plan and write scope to align public status, glossary, and claim examples."
+current_claim_boundary: "CB-V21-P14-T04-CONGRUENCE-INTERPRETIVE-REPRESENTATIVE-001"
+loop_risk_route: "public_status_alignment_not_science_replay"
+
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260731-005"
+  latest_research_handoff_id: "handoff-0927"
+  latest_research_next_action: "Run one governed checkpoint for AJ-RT-20260731-005-001. After checkpoint, create one fresh bounded P14-T06 project-system AgentJob under its exact plan and write scope to align public status, glossary, and claim examples."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+  project_improvement_sidecar_required: false
+  research_handoff_remains_authoritative: true
+
+claim_boundary:
+  allowed_next_scope: "One governed checkpoint followed by a fresh P14-T06 public-status alignment AgentJob; no P14-T06 writes occur before checkpoint."
+  completed_task: "RT-20260731-005"
+  completed_completion_path: "research_control/tasks/RT-20260731-005/jobs/completions/AJC-AJ-RT-20260731-005-001.yaml"
+  completed_completion_sha256: "9592bcac19a7095feb603d61b2be689468b2c19e3aad7f22b34360e6bd6c8df0"
+  source_handoff_id: "handoff-0926"
+  source_handoff_path: "research_control/handoffs/handoff-0926.yaml"
+  source_handoff_sha256: "d1d3b56b0a40417a87118f026ccdb5c1ce923e2759da2b24e1c3cff28c10db42"
+  dependency_checkpoint_commit: "80c946758f90840a97b9a87ee0cd5d0555c29056"
+  approval_id: "approval-20260731-002"
+  approval_sha256: "16b5f340c0b997b14945728bc3375a02c103f6ed483b0df5c4422b97fc394a98"
+  result_status: "INTERPRETIVE_REPRESENTATIVE_TARGET_CONGRUENCE_ONLY"
+  decision_path: "research_control/tasks/RT-20260731-005/artifacts/p14_t04_congruence_status_decision_v1.tex"
+  decision_sha256: "894d53ceffb182835e216ab2ad5722a8f6d60551d75fa48681397284e9060147"
+  downstream_requirement_path: "research_control/tasks/RT-20260731-005/artifacts/p14_t04_downstream_requirement_update_v1.yaml"
+  downstream_requirement_sha256: "d0b6c6da1f2c103d79e34f6155b70533b594a5007141f2e14dfb6ad276b2b3de"
+  protected_gate_review_completed: true
+  interpretive_representative_status_selected: true
+  pure_gauge_status_established: false
+  source_dynamic_selection_established: false
+  independent_field_status_established: false
+  scientific_claims_changed: true
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  ontology_adoption_authorized: false
+  source_law_adoption_authorized: false
+  source_bridge_authorized: false
+  physical_field_adoption_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_performed: false
+  blocked_claims:
+    - "u identified with Phi_src or source flow"
+    - "target representative independence presented as pure gauge"
+    - "observer-relative measurements presented as all equal"
+    - "current source dynamics presented as selecting a preferred frame"
+    - "u presented as an independent physical vector sector in the benchmark"
+    - "canonical ontology metric coupling matter Einstein-equation benchmark proof publication push or completed-derivation promotion"
+
+plan_result:
+  plan_task_id: "P14-T04"
+  next_plan_task_id: "P14-T06"
+  title: "Human decision on the physical status of the Aether-flow congruence"
+  result_status: "INTERPRETIVE_REPRESENTATIVE_TARGET_CONGRUENCE_ONLY"
+  work_item_status: "completed"
+  protected_gate_review_complete: true
+  theorem_id: "P14T04-THM-TARGET-BENCHMARK-REPRESENTATIVE-INDEPENDENCE-V1"
+  selected_status_count: 1
+  not_established_stronger_status_count: 3
+  resolved_conflict_count: 5
+  unresolved_conflict_count: 0
+  p14_t06_dependency_ready_after_checkpoint: true
+  p14_t06_executed: false
+  scientific_claims_changed: true
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+distance_to_gr:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "source_ontology_primitives"
+  milestone: "source_ontology"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "The task changes protected target-congruence status and adds a target-benchmark theorem but derives no source primitive law bridge field metric coupling or physical GR burden."
+  downstream_unlocked:
+    - "P14-T06 public status alignment after checkpoint"
+  downstream_still_blocked:
+    - "source-to-congruence bridge"
+    - "source dynamic selection"
+    - "independent congruence field adoption"
+    - "effective metric"
+    - "matter coupling"
+    - "Einstein equations"
+    - "benchmark promotion"
+    - "completed derivation"
+
+selected_next_route:
+  route_id: "v21_p14_t06_public_status_alignment"
+  route_label: "ordinary-research-packet"
+  role_family: "documentation-curator@2.0.0"
+  worker_skill: "improve-project-system"
+  selected_next_packet_type: "public_status_glossary_claim_examples_alignment"
+  plan_task_id: "P14-T06"
+  target_derivation_milestone: "source_ontology"
+  milestone_burden: "Make public explanations accurately reflect protected decisions and scientific status."
+  strategy_id: "align_public_status_glossary_and_claim_examples_with_p14_t04_v1"
+  trigger_classification: "dependency_ready_planned_project_system_work"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  physics_promotion_authorized: false
+  next_action: "After checkpoint, create one fresh bounded P14-T06 AgentJob; this handoff does not itself edit public documentation."
+  source_handoff: "research_control/handoffs/handoff-0927.yaml"
+
+ordinary_route_guard:
+  schema_id: "ordinary_route_guard_evaluation_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  evaluation_id: "ORE-HANDOFF-0927"
+  ordinary_handoff_id: "handoff-0927"
+  threshold: 3
+  consecutive_project_system_tasks_before_selection: 0
+  ready_science_plan_task_ids:
+    - "P15-T05"
+  selected_plan_task_id: "P14-T06"
+  selected_route_class: "project_system"
+  selected_worker_skill: "improve-project-system"
+  outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  exception_receipt:
+    active: false
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+active_state_boundary:
+  active_task_id: "RT-20260731-005"
+  active_job_id: "AJ-RT-20260731-005-001"
+  current_status: "p14_t04_protected_congruence_status_completed_ready_for_checkpoint"
+  checkpoint_required: true
+  checkpoint_completed: false
+  checkpoint_invocation_count: 0
+  protected_gate_review_completed: true
+  decision_code: "INTERPRETIVE_REPRESENTATIVE_TARGET_CONGRUENCE_ONLY"
+  selected_next_plan_task_id: "P14-T06"
+  selected_next_worker_skill: "improve-project-system"
+  selected_next_role_family: "documentation-curator@2.0.0"
+  selected_next_route_label: "ordinary-research-packet"
+  selected_next_strategy_id: "align_public_status_glossary_and_claim_examples_with_p14_t04_v1"
+  selected_next_requires_human_gate: false
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 191 and exact one-time authorization validated and were consumed once."
+      - "P4-T05 P5-T08 and P14-T03 finalized completion hashes are exact."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Both child perspectives converge; five conflicts are resolved and none remain."
+      - "Decision theorem downstream requirement and compact receipt agree."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Task-local documentation signal research-control memory renderer TeX claim-language and whitespace gates pass."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "One governed checkpoint remains; P14-T06 has not executed."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Tracked frontier task-index graph registry and wiki derivatives are fresh."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory synchronization and validate-only checks pass."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation has no hard failure."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: true
+  protected_scoped_gate_review_scope: "One bounded P14-T04 congruence-status decision under the recorded v21 scope."
+  protected_scoped_gate_review_authority_source_path: "research_control/approvals/approval-20260731-002.yaml"
+  Gate_Chair_verdict_authorized: true
+  canonical_ontology_edit_authorized: false
+  source_law_adoption_authorized: false
+  source_to_congruence_bridge_authorized: false
+  independent_field_adoption_authorized: false
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  publication_authorized: false
+  push_authorized: false
+  global_no_go_claim_authorized: false
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required_no_nonblank_signals"
+  rationale: "P14-T06 is an explicit included project-system work item, not a repair signal emitted by P14-T04."
+
+handoff_authority_boundary:
+  this_handoff_authorizes:
+    - "one governed checkpoint for AJ-RT-20260731-005-001"
+    - "fresh P14-T06 AgentJob creation after checkpoint under the exact v21 plan"
+  this_handoff_does_not_authorize:
+    - "P14-T06 writes before checkpoint or inside AJ-RT-20260731-005-001"
+    - "canonical ontology or reviewed-science modification"
+    - "u and Phi_src identification gauge adoption source selection or independent-field adoption"
+    - "metric matter coupling Einstein equations benchmark promotion proof publication push completed derivation global no-go or future impossibility"
+
+next_plan_task_id: "P14-T06"

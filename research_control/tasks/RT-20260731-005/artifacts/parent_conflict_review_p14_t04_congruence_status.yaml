@@ -1,0 +1,52 @@
+schema_id: "parent_child_conflict_review_v1"
+artifact_id: "P14T04-ParentConflictReview-CongruenceStatus-v1"
+task_id: "RT-20260731-005"
+agent_job_id: "AJ-RT-20260731-005-001"
+plan_task_id: "P14-T04"
+status: "resolved"
+resolution_rounds: 0
+child_outputs:
+  - execution_unit_id: "child_phys_math"
+    path: "research_control/tasks/RT-20260731-005/artifacts/child_phys_math_p14_t04_congruence_status.yaml"
+    sha256: "771e852e3f7c32a3cec50abe3c22ddc9bc42ed7a821f1a712a2a927e8e35cf4e"
+    recommendation_code: "INTERPRETIVE_TARGET_BENCHMARK_REPRESENTATIVE_OBSERVER_STRUCTURE"
+  - execution_unit_id: "child_phys_phil"
+    path: "research_control/tasks/RT-20260731-005/artifacts/child_phys_phil_p14_t04_congruence_status.yaml"
+    sha256: "e2f664861bd4dd9ef04b0c572085a5cacf7c8eaaf18b1e6a926827941c2be8ee"
+    recommendation_code: "INTERPRETIVE_TARGET_SIDE_OBSERVER_REPRESENTATIVE"
+shared_consensus:
+  - "u is an admissible generally nonunique target-side interpretive observer representative"
+  - "u is not identified with unresolved source-side Phi_src"
+  - "pure-gauge status is not established"
+  - "current source dynamics do not select u"
+  - "u is not an independent dynamical field in the current exact-GR benchmark"
+  - "stronger future statuses remain possible only through new positive evidence and protected authority"
+resolved_conflicts:
+  - conflict_id: "P14T04-CONFLICT-01-STATUS-CODE"
+    issue: "The children used distinct but extensionally compatible recommendation codes."
+    resolution: "Use parent code INTERPRETIVE_REPRESENTATIVE_TARGET_CONGRUENCE_ONLY and preserve both child formulations as provenance."
+  - conflict_id: "P14T04-CONFLICT-02-THEOREM-IDENTITY"
+    issue: "The children proposed different theorem identifiers and levels of protocol detail."
+    resolution: "Adopt P14T04-THM-TARGET-BENCHMARK-REPRESENTATIVE-INDEPENDENCE-V1 and include the mathematical child's fixed-protocol hypotheses plus the philosophy child's fixed-solution projection interpretation."
+  - conflict_id: "P14T04-CONFLICT-03-REPRESENTATIVE-VERSUS-GAUGE"
+    issue: "Representative language could be overread as pure gauge."
+    resolution: "Define only base-solution representative independence. Require a separate equivalence group quotient and complete-observable theorem before pure-gauge language."
+  - conflict_id: "P14T04-CONFLICT-04-OBSERVER-MEASUREMENT"
+    issue: "Base-observable invariance could be overread as equality of all observer measurements."
+    resolution: "Hold the physical protocol fixed in the theorem and state that different observer worldlines or congruence-explicit decompositions may produce different lawful readings."
+  - conflict_id: "P14T04-CONFLICT-05-INDEPENDENT-FIELD-SCOPE"
+    issue: "Current-benchmark exclusion could be overread as global impossibility."
+    resolution: "State only that no independent u field is present in the current benchmark; future extensions remain open under action dynamics stability coupling observational and protected-authority burdens."
+unresolved_conflicts: []
+blocking_conflict_present: false
+protected_verdict_predetermined_by_children: false
+parent_decision_code: "INTERPRETIVE_REPRESENTATIVE_TARGET_CONGRUENCE_ONLY"
+authority:
+  canonical_ontology_modified: false
+  source_law_adopted: false
+  source_bridge_constructed: false
+  physical_field_adopted: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false

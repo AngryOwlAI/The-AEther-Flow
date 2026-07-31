@@ -1,0 +1,207 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs,longtable,array,enumitem}
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\newcommand{\MGR}{\mathcal M_{\mathrm{GR}}}
+\newcommand{\PhiSrc}{\Phi_{\mathrm{src}}}
+\title{V21 P14-T04: Protected Decision on the Status of the Target-Side Congruence}
+\author{Gate Chair parent--child synthesis}
+\date{2026-07-31}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+\fbox{\parbox{0.93\linewidth}{\textbf{Protected verdict.}
+Within the exact-GR benchmark, the field $u^\mu$ is an
+\emph{interpretive representative observer congruence}: admissible,
+generally nonunique target-side structure used to decompose a fixed GR
+solution.  Current source ontology and dynamics do not identify it with
+$\PhiSrc$, dynamically select it, or supply it as an independent physical
+field.  This verdict does not classify $u^\mu$ as pure gauge and does not
+prove that no future source-side bridge or field extension can exist.}}
+\end{center}
+
+\section{Authority and fixed evidence}
+
+Approval \texttt{approval-20260731-002} authorizes exactly one verdict-neutral
+P14-T04 decision.  It supplies decision authority, not a missing source law,
+bridge, action, equation, mode, stability result, coupling, or observational
+constraint.  The review holds fixed the registered foundations and geometry
+sources and the finalized P4-T05, P5-T08, and P14-T03 evidence.
+
+The canonical source boundary is decisive.  The source pair consists of a
+smooth four-dimensional arena carried as primitive debt and an unresolved
+source-order or evolution slot $\PhiSrc$.  No source-to-target bridge is
+adopted.  The target-side congruence $u^\mu$ is instead an admissible future
+timelike unit observer field on a fixed GR spacetime $(\MGR,g)$.
+
+\section{Type and status separation}
+
+\begin{longtable}{p{0.23\linewidth}p{0.28\linewidth}p{0.39\linewidth}}
+\toprule
+Candidate reading & P14-T04 status & Evidence boundary \\
+\midrule
+\endhead
+Interpretive representative & \textbf{selected} & The geometry source defines
+$u^\mu$ as a generally nonunique observer congruence whose kinematics
+re-express a fixed GR solution without adding field equations. \\
+Pure gauge & not established & No source-side equivalence group, quotient,
+orbit theorem, or transformation law identifying congruence choices as gauge
+has been derived. \\
+Dynamically selected state & not established & Neither the unresolved
+$\PhiSrc$ slot nor the proposal-only P5 candidate supplies a lawful
+source-to-congruence selector, positive local geometry input, or uniqueness
+and stability theorem. \\
+Independent dynamical field & not established & No independent action,
+Euler--Lagrange equation, constraints, propagating modes, stability analysis,
+matter coupling, or observational bound for $u^\mu$ is part of the exact-GR
+benchmark or current source package. \\
+\bottomrule
+\end{longtable}
+
+The selected status is positive but narrow: $u^\mu$ exists as an admissible
+target-side representative used for observer-relative interpretation.  It is
+not promoted to a source primitive or additional physical degree of freedom.
+
+\section{Representative-independence theorem}
+
+\begin{definition}[Benchmark base and representative observables]
+Let $(M,g,\psi)$ be a fixed solution of the target-side Einstein--matter
+system, and let
+\[
+  \mathcal U(g)=\{u\in\Gamma(TM):g(u,u)=-1,\ u\text{ future directed and
+  smooth on its stated domain}\}.
+\]
+A \emph{base observable} is a functional $\mathcal O[g,\psi;P]$ whose
+definition contains no selected member of $\mathcal U(g)$ and whose physical
+protocol $P$ is fixed independently of the replaceable congruence.  A
+\emph{representative observable} is a functional
+$\mathcal K[g,\psi;u]$ whose definition explicitly uses $u$, for example the
+projector $h^{(u)}_{\mu\nu}=g_{\mu\nu}+u_\mu u_\nu$, expansion, shear,
+vorticity, acceleration, or an observer-measured matter decomposition.
+\end{definition}
+
+\begin{theorem}[P14T04-THM-TARGET-BENCHMARK-REPRESENTATIVE-INDEPENDENCE-V1]
+Fix $(M,g,\psi)$ and its initial or boundary data, let
+$u,v\in\mathcal U(g)$ be two admissible congruence representatives on a
+common domain, and hold fixed a physical protocol $P$ defined independently
+of $u$ and $v$.  Assume the benchmark action varies only $(g,\psi)$, matter
+has no additional coupling to the congruence, and no identification with
+$\PhiSrc$ or source-to-congruence bridge is used.  Then:
+\begin{enumerate}[label=(\roman*)]
+  \item every base observable is representative independent,
+  \[
+     \mathcal O[g,\psi;u,P]=\mathcal O[g,\psi;v,P]
+     =\mathcal O[g,\psi;P];
+  \]
+  \item replacing $u$ by $v$ changes neither the Einstein--matter equations
+  satisfied by $(g,\psi)$ nor the solution pair itself;
+  \item representative observables may differ,
+  $\mathcal K[g,\psi;u]\neq\mathcal K[g,\psi;v]$, and that difference is an
+  observer-relative decomposition of the same fixed target solution, not an
+  added target equation or source-side evolution law.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+By definition, a base observable factors through the projection
+$(g,\psi,u,P)\mapsto(g,\psi,P)$, so substitution of either $u$ or $v$ leaves
+its arguments unchanged, proving (i).  The target field equations in the
+fixed benchmark are obtained from the Einstein--matter action and contain no
+independently varied congruence field; replacing an auxiliary observer
+representative therefore changes neither the equations nor the fixed
+solution, proving (ii).  Quantities such as
+$h^{(u)}$, $\nabla_\mu u^\mu$, $u^\nu\nabla_\nu u^\mu$, shear, and vorticity
+contain the representative explicitly, so they can change under
+$u\mapsto v$.  Their change is consequently confined to the representative
+decomposition, proving (iii).
+\end{proof}
+
+\begin{corollary}[Single-law benchmark boundary]
+For the fixed exact-GR benchmark, choosing a static, comoving, ZAMO, or
+free-fall congruence may change the observer-relative kinematic dictionary but
+does not introduce a second gravitational law or a new vector-sector degree
+of freedom.
+\end{corollary}
+
+\paragraph{Limit of the theorem.}
+The theorem is intentionally conditional on the fixed target solution, a
+common domain, and base observables whose physical protocols do not use the
+replaceable representative.  If $u$ and $v$ denote different detector or
+observer worldlines, the physical protocol has changed rather than merely its
+representative label; measured energies, velocities, accelerations,
+redshifts, or tidal splits may then differ.  A fluid four-velocity may also be
+selected by target-side matter equations and initial data without being
+selected by $\PhiSrc$.  The theorem is therefore not a claim that all observer
+measurements are numerically equal, a source-side gauge-equivalence theorem,
+an ontology-uniqueness theorem, or a no-go theorem against future dynamically
+selected or independent-field extensions.
+
+\section{Protected decision}
+
+The exact P14-T04 decision code is
+\[
+\texttt{INTERPRETIVE\_REPRESENTATIVE\_TARGET\_CONGRUENCE\_ONLY}.
+\]
+It carries the following controlled meanings:
+\begin{enumerate}
+  \item $u^\mu$ is target-side benchmark structure and is not $\PhiSrc$.
+  \item Its admissible choice is generally nonunique under current sources.
+  \item Its role is interpretive and representative; it adds a kinematic
+  dictionary rather than an independently varied field equation.
+  \item Current source dynamics do not select it.
+  \item Pure-gauge and independent-field classifications remain unestablished
+  rather than rejected as globally impossible.
+\end{enumerate}
+
+\section{Downstream burden update}
+
+All future uses must type the object explicitly as either source-side
+$\PhiSrc$ or target-side $u^\mu$.  A stronger status requires new positive
+evidence:
+\begin{itemize}
+  \item \textbf{Gauge:} define the congruence-choice equivalence relation or
+  group action, its invariant observables, and a quotient or orbit theorem.
+  \item \textbf{Dynamically selected:} derive a target-atlas-free source
+  bridge, selection functional or law, selected state, and uniqueness,
+  covariance, robustness, and stability results.
+  \item \textbf{Independent field:} supply an action, equations, constraints,
+  degrees of freedom, mode and stability analysis, matter coupling, and
+  observational constraints, followed by separately protected adoption.
+  \item \textbf{Public language:} lead with ``interpretive representative
+  target congruence,'' state its generally nonunique scope, and block
+  preferred-frame or added-vector-sector overreads.
+\end{itemize}
+
+\section{Distance-to-GR and explicit nonconclusions}
+
+P14-T04 discharges the protected status-ambiguity burden and adds a
+target-benchmark theorem.  It does not reduce a physical source-to-GR burden
+or update the Distance-to-GR ledger.  In particular, it does not adopt or
+modify canonical ontology, derive $\PhiSrc$, construct a source-to-target
+bridge, select a preferred frame, add a physical vector field, derive a
+metric, matter coupling, or Einstein equations, promote the benchmark, prove
+a completed derivation, publish, push, globally reject the program, or show
+future source extensions impossible.
+
+\section{Source materials}
+
+The \AE ther-Flow Research Project. (2026, July 24). \emph{V21 P4-T05:
+protected ontology-regime decision} [Internal research-control artifact].
+
+The \AE ther-Flow Research Project. (2026, July 26). \emph{P5 source-dynamics
+milestone synthesis} [Internal research-control artifact].
+
+The \AE ther-Flow Research Project. (2026, July 31). \emph{Foundations of the
+\AE ther-flow interpretation} and \emph{\AE ther-flow geometry} [Registered
+canonical ontology sources].
+
+\end{document}

@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260731-004` and `handoff-0926`.
+`RT-20260731-005` and `handoff-0927`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260731-004` |
-| Latest handoff ID | `handoff-0926` |
-| Current status | `p9_t09_protected_gate_e_completed_not_ready_ready_for_checkpoint_fixed_package_locally_frozen` |
+| Active task ID | `RT-20260731-005` |
+| Latest handoff ID | `handoff-0927` |
+| Current status | `p14_t04_protected_congruence_status_completed_ready_for_checkpoint` |
 | V16 completed | false |
 | Current route family | protected gate review (scientific) |
-| Target derivation milestone | `benchmark_promotion` |
-| Current burden | `benchmark_promotion` |
-| Required next authority | One governed checkpoint for AJ-RT-20260731-004-001 followed by preservation of the exact fixed-package local freeze. |
-| Next recommended action | Run one governed checkpoint for AJ-RT-20260731-004-001. After checkpoint, preserve the local fixed-package freeze. Do not select or execute another package from this handoff; any reopening requires materially new source-derived physical recovery evidence, at least one lawful preregistered physical benchmark pass, qualifying independent replication, and fresh protected authority. |
+| Target derivation milestone | `source_ontology` |
+| Current burden | `source_ontology_primitives` |
+| Required next authority | One governed checkpoint followed by a fresh P14-T06 public-status alignment AgentJob; no P14-T06 writes occur before checkpoint. |
+| Next recommended action | Run one governed checkpoint for AJ-RT-20260731-005-001. After checkpoint, create one fresh bounded P14-T06 project-system AgentJob under its exact plan and write scope to align public status, glossary, and claim examples. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260731-004` |
-| Latest research handoff ID | `handoff-0926` |
-| Latest research next action | Run one governed checkpoint for AJ-RT-20260731-004-001. After checkpoint, preserve the local fixed-package freeze. Do not select or execute another package from this handoff; any reopening requires materially new source-derived physical recovery evidence, at least one lawful preregistered physical benchmark pass, qualifying independent replication, and fresh protected authority. |
+| Latest research task ID | `RT-20260731-005` |
+| Latest research handoff ID | `handoff-0927` |
+| Latest research next action | Run one governed checkpoint for AJ-RT-20260731-005-001. After checkpoint, create one fresh bounded P14-T06 project-system AgentJob under its exact plan and write scope to align public status, glossary, and claim examples. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260731-004/00_TASK.yaml`.
-- Active task objective: Under exact protected human authority, decide benchmark promotion, exact or approximate GR recovery, and whether a completed first-principles derivation may be claimed from the fixed checkpointed P9 evidence package.
-- Latest handoff path: `research_control/handoffs/handoff-0926.yaml`.
-- Latest handoff summary: P9-T09 consumes exact one-time protected review authority and issues NOT_READY_BENCHMARK_AND_COMPLETED_DERIVATION_REQUIREMENTS_UNMET for the fixed checkpointed P9-T01 through P9-T08 package. All six cases remain INCONCLUSIVE with zero passes, no qualifying independent replication, no source-derived physical recovery bridge, and unchanged Gate D nonreadiness. Benchmark promotion is denied; exact and controlled approximate GR recovery are not established; completed first-principles derivation wording is prohibited for the fixed evidence.
+- Active task path: `research_control/tasks/RT-20260731-005/00_TASK.yaml`.
+- Active task objective: Under exact protected authority, decide whether the target-side congruence is interpretive, gauge or representative structure, dynamically selected state, or an independent dynamical field.
+- Latest handoff path: `research_control/handoffs/handoff-0927.yaml`.
+- Latest handoff summary: P14-T04 consumes exact one-time protected authority and selects INTERPRETIVE_REPRESENTATIVE_TARGET_CONGRUENCE_ONLY. In the fixed exact-GR benchmark, u is an admissible generally nonunique target-side observer representative: not Phi_src, not dynamically selected by the current source package, not established pure gauge, and not an independent dynamical field in the benchmark. The representative-independence theorem preserves fixed-solution content under auxiliary congruence replacement with a fixed physical protocol while observer-relative quantities may differ.
 - Current route family: protected gate review (scientific).
-- Next recommended action: Run one governed checkpoint for AJ-RT-20260731-004-001. After checkpoint, preserve the local fixed-package freeze. Do not select or execute another package from this handoff; any reopening requires materially new source-derived physical recovery evidence, at least one lawful preregistered physical benchmark pass, qualifying independent replication, and fresh protected authority.
+- Next recommended action: Run one governed checkpoint for AJ-RT-20260731-005-001. After checkpoint, create one fresh bounded P14-T06 project-system AgentJob under its exact plan and write scope to align public status, glossary, and claim examples.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -302,7 +302,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one governed checkpoint for AJ-RT-20260731-004-001. After checkpoint, preserve the local fixed-package freeze. Do not select or execute another package from this handoff; any reopening requires materially new source-derived physical recovery evidence, at least one lawful preregistered physical benchmark pass, qualifying independent replication, and fresh protected authority.
+Run one governed checkpoint for AJ-RT-20260731-005-001. After checkpoint, create one fresh bounded P14-T06 project-system AgentJob under its exact plan and write scope to align public status, glossary, and claim examples.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -327,10 +327,10 @@ Validation layers:
 
 | Validation layer | Status | Meaning | Evidence |
 | --- | --- | --- | --- |
-| `pre_execution` | PASS | receipt complete | Checkpoint 640c799d5e04d166f735dd4c35e838e854f27d25 committed the controlling evidence before review.<br>The exact one-time user approval names P9-T09 and handoff-0925 and was consumed only by this job. |
-| `completion_internal` | PASS | receipt complete | The protected decision ten-criterion matrix scientific status compact receipt and parent-child synthesis agree on NOT READY. |
+| `pre_execution` | PASS | receipt complete | Generation 191 and exact one-time authorization validated and were consumed once.<br>P4-T05 P5-T08 and P14-T03 finalized completion hashes are exact. |
+| `completion_internal` | PASS | receipt complete | Both child perspectives converge; five conflicts are resolved and none remain.<br>Decision theorem downstream requirement and compact receipt agree. |
 | `post_write` | PASS | receipt complete | Task-local documentation signal research-control memory renderer TeX claim-language and whitespace gates pass. |
-| `post_checkpoint` | PENDING | open item; evidence must explain why | One governed checkpoint remains; no next packet is authorized or selected. |
+| `post_checkpoint` | PENDING | open item; evidence must explain why | One governed checkpoint remains; P14-T06 has not executed. |
 | `renderer` | PASS | receipt complete | Tracked frontier task-index graph registry and wiki derivatives are fresh. |
 | `memory_bootstrap` | PASS | receipt complete | Tracked memory synchronization and validate-only checks pass. |
 | `claim_language_linter` | PASS | receipt complete | Changed-source claim-language validation has no hard failure. |
@@ -340,28 +340,25 @@ Authorization layers:
 | Authorization field | Value | Meaning |
 | --- | --- | --- |
 | `protected_scoped_gate_review_authorized` | true (authorized) | scoped review authority only |
-| `protected_scoped_gate_review_scope` | One evidence-bound P9-T09 Gate E verdict over the fixed checkpointed P9-T01 through P9-T08 package. | exact scope of protected review authority |
-| `protected_scoped_gate_review_authority_source_path` | research_control/approvals/approval-20260731-001.yaml | tracked source for scoped review authority |
+| `protected_scoped_gate_review_scope` | One bounded P14-T04 congruence-status decision under the recorded v21 scope. | exact scope of protected review authority |
+| `protected_scoped_gate_review_authority_source_path` | research_control/approvals/approval-20260731-002.yaml | tracked source for scoped review authority |
 | `downstream_physics_promotion_authorized` | false (not authorized) | authorizes downstream physics promotion only when true |
-| `downstream_physics_promotion_authority_source_path` | none | tracked source for downstream promotion authority |
 | `benchmark_promotion_authorized` | false (not authorized) | authorizes benchmark promotion only when true |
-| `benchmark_promotion_authority_source_path` | none | tracked source for benchmark authority |
 | `completed_derivation_authorized` | false (not authorized) | authorizes completed-derivation claim only when true |
-| `completed_derivation_authority_source_path` | none | tracked source for completed-derivation authority |
 | `Gate_Chair_verdict_authorized` | True | extension authorization field |
 | `canonical_ontology_edit_authorized` | False | extension authorization field |
-| `exact_or_approximate_GR_recovery_authorized` | False | extension authorization field |
-| `external_outreach_authorized` | False | extension authorization field |
 | `global_no_go_claim_authorized` | False | extension authorization field |
+| `independent_field_adoption_authorized` | False | extension authorization field |
 | `publication_authorized` | False | extension authorization field |
 | `push_authorized` | False | extension authorization field |
 | `source_law_adoption_authorized` | False | extension authorization field |
+| `source_to_congruence_bridge_authorized` | False | extension authorization field |
 
 Legacy compatibility records:
 
-- active task: `RT-20260731-004`;
-- latest handoff: `handoff-0926`;
-- current status: `p9_t09_protected_gate_e_completed_not_ready_ready_for_checkpoint_fixed_package_locally_frozen`;
+- active task: `RT-20260731-005`;
+- latest handoff: `handoff-0927`;
+- current status: `p14_t04_protected_congruence_status_completed_ready_for_checkpoint`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -371,8 +368,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0926.yaml`
-- `research_control/tasks/RT-20260731-004/00_TASK.yaml`
+- `research_control/handoffs/handoff-0927.yaml`
+- `research_control/tasks/RT-20260731-005/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -388,7 +385,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0926*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0927*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

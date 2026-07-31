@@ -392,6 +392,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V21-P14-T01-PROJECT-SUCCESS-CATEGORIES` `research_control/tasks/RT-20260722-016/artifacts/four_project_success_categories_v1.tex`
 - `TEX-V21-P14-T02-NON-EMPIRICAL-ONTOLOGY-SUCCESS-CRITERIA-V1` `research_control/tasks/RT-20260722-018/artifacts/non_empirical_ontology_success_criteria_v1.tex`
 - `TEX-V21-P14-T03-NO-TARGET-POSITIVE-SUFFICIENCY-POLICY-V1` `research_control/tasks/RT-20260722-019/artifacts/no_target_positive_provenance_sufficiency_policy_v1.tex`
+- `TEX-V21-P14-T04-PROTECTED-CONGRUENCE-STATUS-DECISION-V1` `research_control/tasks/RT-20260731-005/artifacts/p14_t04_congruence_status_decision_v1.tex`
 - `TEX-V21-P14-T05-NEGATIVE-RESULT-SUCCESS-PATHWAY-V1` `research_control/tasks/RT-20260722-020/artifacts/negative_result_success_pathway_v1.tex`
 - `TEX-V21-P15-T03-SELECTOR-MINIMUM-EXTENSION-THEOREM-MANUSCRIPT-V1` `research_control/tasks/RT-20260723-003/artifacts/selector_minimum_extension_theorem_manuscript_v1.tex`
 - `TEX-V21-P15-T04-SOURCE-DYNAMICS-RECONSTRUCTION-TECHNICAL-REPORT-V1` `research_control/tasks/RT-20260727-006/artifacts/source_dynamics_reconstruction_technical_report_v1.tex`

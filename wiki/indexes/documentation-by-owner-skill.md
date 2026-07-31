@@ -750,6 +750,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-V21-P13-T04-QUALITY-PORTABILITY-POLICY-V1` `wiki/markdown/md-v21-p13-t04-quality-portability-policy-v1.md`
 - `WIKI-MD-V21-P13-T04-VALIDATOR-API-CONTRACT-V1` `wiki/markdown/md-v21-p13-t04-validator-api-contract-v1.md`
 - `WIKI-MD-V21-P13-T05-SECURITY-SCAN-POLICY-V1` `wiki/markdown/md-v21-p13-t05-security-scan-policy-v1.md`
+- `WIKI-MD-V21-P14-T04-PARENT-FUSION-CONGRUENCE-STATUS-V1` `wiki/markdown/md-v21-p14-t04-parent-fusion-congruence-status-v1.md`
 - `WIKI-MD-V21-P15-T01-EXACT-GR-INTERPRETIVE-MANUSCRIPT-V1` `wiki/markdown/md-v21-p15-t01-exact-gr-interpretive-manuscript-v1.md`
 - `WIKI-MD-V21-P15-T04-PARENT-FUSION-SOURCE-DYNAMICS-RECONSTRUCTION-V1` `wiki/markdown/md-v21-p15-t04-parent-fusion-source-dynamics-reconstruction-v1.md`
 - `WIKI-MD-V21-P15-T04-SOURCE-DYNAMICS-RECONSTRUCTION-RECEIPT-V1` `wiki/markdown/md-v21-p15-t04-source-dynamics-reconstruction-receipt-v1.md`
@@ -1262,6 +1263,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-V21-P13-T04-QUALITY-PORTABILITY-POLICY-V1` `research_control/tasks/RT-20260723-020/artifacts/quality_portability_policy_v1.md`
 - `MD-V21-P13-T04-VALIDATOR-API-CONTRACT-V1` `research_control/tasks/RT-20260723-020/artifacts/validator_api_contract_v1.md`
 - `MD-V21-P13-T05-SECURITY-SCAN-POLICY-V1` `research_control/tasks/RT-20260724-002/artifacts/security_scan_policy_v1.md`
+- `MD-V21-P14-T04-PARENT-FUSION-CONGRUENCE-STATUS-V1` `research_control/tasks/RT-20260731-005/artifacts/parent_fusion_notes_p14_t04_congruence_status.md`
 - `MD-V21-P15-T01-EXACT-GR-INTERPRETIVE-MANUSCRIPT-V1` `research_control/tasks/RT-20260722-021/artifacts/exact_gr_interpretive_manuscript_v1.md`
 - `MD-V21-P15-T04-PARENT-FUSION-SOURCE-DYNAMICS-RECONSTRUCTION-V1` `research_control/tasks/RT-20260727-006/artifacts/parent_fusion_notes_p15_t04_report.md`
 - `MD-V21-P15-T04-SOURCE-DYNAMICS-RECONSTRUCTION-RECEIPT-V1` `research_control/tasks/RT-20260727-006/artifacts/source_dynamics_reconstruction_receipt.md`

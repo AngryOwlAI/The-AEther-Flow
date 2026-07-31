@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260731-004`
-- Latest handoff: `handoff-0926`
-- Current status: `p9_t09_protected_gate_e_completed_not_ready_ready_for_checkpoint_fixed_package_locally_frozen`
+- Active task: `RT-20260731-005`
+- Latest handoff: `handoff-0927`
+- Current status: `p14_t04_protected_congruence_status_completed_ready_for_checkpoint`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260731-004`
-- Latest research handoff: `handoff-0926`
-- Latest research next action: Run one governed checkpoint for AJ-RT-20260731-004-001. After checkpoint, preserve the local fixed-package freeze. Do not select or execute another package from this handoff; any reopening requires materially new source-derived physical recovery evidence, at least one lawful preregistered physical benchmark pass, qualifying independent replication, and fresh protected authority.
+- Latest research task: `RT-20260731-005`
+- Latest research handoff: `handoff-0927`
+- Latest research next action: Run one governed checkpoint for AJ-RT-20260731-005-001. After checkpoint, create one fresh bounded P14-T06 project-system AgentJob under its exact plan and write scope to align public status, glossary, and claim examples.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,11 +26,11 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p9_t09_fixed_package_locally_frozen`
-- Role family: `none`
-- Target milestone: `benchmark_promotion`
-- Milestone burden: The protected verdict is complete; the fixed package has no automatic continuation.
-- Requires human gate: `true`
+- Route ID: `v21_p14_t06_public_status_alignment`
+- Role family: `documentation-curator@2.0.0`
+- Target milestone: `source_ontology`
+- Milestone burden: Make public explanations accurately reflect protected decisions and scientific status.
+- Requires human gate: `false`
 
 ## High-Risk Rows
 
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `d5eabb4c53fbb0d9c1838aa8021c1669ba72afb4cd8646fe6ba87c753b3710ed`
-- JSON SHA-256: `b1338a7d4e33e56757d61af5a21156b49d3c03ed561ab780625c04213eae5d85`
+- YAML SHA-256: `1787025b6eefab49e0a884c45bfbdad68a3c40db33744c65981abd153cdeb7cc`
+- JSON SHA-256: `a7b67d34fad4e0f60572b687dd18f878a2dcfe41b9c4f8182a49215b2721e63d`
 
 ## Authority Warning
 
