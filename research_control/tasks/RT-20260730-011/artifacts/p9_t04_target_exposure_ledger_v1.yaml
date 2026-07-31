@@ -1,0 +1,35 @@
+schema_id: "p9_t04_target_exposure_ledger_v1"
+task_id: "RT-20260730-011"
+case_id: "P9-BENCH-CAUSAL-FREEFALL-V1"
+status: "completed"
+known_before_execution:
+  target_family_known: true
+  target_family: "GR causal propagation, local inertial behavior, and universal free fall"
+  required_target_authority_files_inspected: true
+  blindness_claimed: false
+source_stage_exposure:
+  target_oracle_opened: false
+  target_value_loaded: false
+  target_formula_loaded_as_source_input: false
+  target_boundary_condition_loaded_as_source_input: false
+  target_tolerance_loaded_as_source_input: false
+  desired_agreement_loaded_as_source_input: false
+  target_selected_parameter_count: 0
+  target_informed_rerun_count: 0
+permitted_prior_knowledge:
+  - "the target benchmark family exists"
+  - "target null cones and geodesics are comparison-only objects"
+  - "P9-T04 requires multiple physically interpreted source-matter sectors"
+prohibited_and_not_used:
+  - "target metric components or target null-cone equations as source premises"
+  - "target geodesic equations as source free-fall laws"
+  - "target propagation speeds, Lorentz transforms, or equivalence-principle residuals as source values"
+  - "target-fitted sector selectors, tolerances, calibrations, or reruns"
+comparison_stage:
+  opened: false
+  reason: "INCONCLUSIVE was triggered by missing source selector and physical model-to-world burdens before target comparison."
+authority_limits:
+  disclosure_is_blindness_claim: false
+  target_exposure_ledger_is_physics_proof: false
+  benchmark_pass_established: false
+  physics_promotion_authorized: false

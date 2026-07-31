@@ -1,0 +1,55 @@
+{
+  "schema_id": "p9_t04_causal_freefall_receipt_v1",
+  "task_id": "RT-20260730-011",
+  "job_id": "AJ-RT-20260730-011-001",
+  "case_id": "P9-BENCH-CAUSAL-FREEFALL-V1",
+  "status": "completed",
+  "created_at": "2026-07-30T23:41:30Z",
+  "candidate_constructor_result": "precise_obstruction",
+  "case_classification": {
+    "outcome": "INCONCLUSIVE",
+    "secondary_label": "FORMAL_ANALOGY",
+    "executed_case_count": 1,
+    "cumulative_executed_case_count": 3,
+    "passed_case_count": 0,
+    "opened_target_oracle_count": 0,
+    "target_informed_rerun_count": 0,
+    "independent_reproduction_count": 0,
+    "distance_to_gr_delta_changed": false,
+    "benchmark_promotion_authorized": false,
+    "physics_promotion_authorized": false
+  },
+  "mathematical_payload": {
+    "sector_pair": ["(1,[0])", "(2,[0])"],
+    "movable_endpoint_response": "1-2^(-n)",
+    "identity_endpoint_response": "0",
+    "response_order": ["propagation", "freefall", "clock", "rod", "signal"],
+    "common_residual_vector": ["0", "0", "0", "0", "0"],
+    "split_residual_vector": ["1", "1/2", "1/4", "1/4", "1/4"],
+    "formal_direction_asymmetry": "1/2",
+    "arithmetic_uncertainty": "0",
+    "exact_failure": "The current ontology does not derive a total selector from source sector and operational role to control, equipment, physical calibration, and model-to-world map; common and split task-local records therefore yield distinct exact residual vectors."
+  },
+  "source_hashes": {
+    "SourceDerivedBenchmarkProtocol_v1": "88ef097bf712ad115e9af62cc18a8b3eabb12f8545350f714ad065f702471007",
+    "SourceDerivedBenchmarkCaseSchema_v1": "5045de8fbaeb6c80b89ec88b71143a8aeaca1c892efadc4b7293cb438ee808d8",
+    "TargetImportFirewall_v1": "ccb9297f817a9b4eeb886834a510e1f21d518a2668bc3fde9695b909d6884acf",
+    "P7T01SourceMatterSectorTaxonomy_v1": "0b7bb06a63b20469185badab4b2664eaa23d5b4e47752b953d51c2508f283c59",
+    "P7T02FiniteTransitionKernel_v1": "65ac095f5cdf4c2e319365c8b0e024d031b19d9fc2b8102e59997afa1e8f9129",
+    "P7T03SourceOperationalDeviceSuite_v1": "d6c818ee29f1a7e659e2f454aec21431d680b3d2d4df048fcf36f4aba87ba22a",
+    "P7T08PhysicalMatterAdoptionDecision_v1": "85fbf32fb9b02aeae556149cbc5c6b51bd6fedf278a3bc401545c93e29fc4827",
+    "P9T02VacuumMinkowskiCase_v1": "2fadb19c5849f1da5843c0e0599dbdc31790eab46587ce6718abbf4d3a0be79c",
+    "P9T03WeakFieldClockCase_v1": "45b79d5e3e371b3a2bcdde3f26296dad8c6ff65306d17cdf672bf76383eeb864"
+  },
+  "claim_boundary_summary": "Exact finite two-sector source traces, residual counterfamily, and current-source selector obstruction only; no physical speed, causal cone, local Lorentz behavior, local inertial frame, universal free fall, equivalence principle, preferred frame, birefringence, effective metric, Einstein equation, exact-GR recovery, benchmark pass, promotion, proof, publication, push, global no-go, future impossibility, or completed derivation.",
+  "next_route": "P9-T05 as a distinct source-only benchmark case after checkpoint, carrying three INCONCLUSIVE dispositions and zero passes.",
+  "authority_limits": {
+    "receipt_is_physics_proof": false,
+    "source_law_adopted_or_rejected": false,
+    "physical_causal_or_freefall_recovery_established": false,
+    "benchmark_pass_established": false,
+    "benchmark_promotion_authorized": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false
+  }
+}

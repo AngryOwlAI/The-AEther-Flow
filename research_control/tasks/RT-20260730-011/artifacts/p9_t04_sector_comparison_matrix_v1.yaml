@@ -1,0 +1,40 @@
+schema_id: "p9_t04_sector_comparison_matrix_v1"
+task_id: "RT-20260730-011"
+case_id: "P9-BENCH-CAUSAL-FREEFALL-V1"
+status: "completed"
+sector_order: ["sigma_1=(1,[0])", "sigma_2=(2,[0])"]
+observable_order:
+  - "formal_source_propagation"
+  - "FreeFall_src_horizon_1"
+  - "Clock_src_horizon_2"
+  - "Rod_src_horizon_2"
+  - "Signal_src_horizon_2"
+records:
+  - record_id: "E_common"
+    source_extension_status: "task-local source-extension data"
+    controls: ["movable", "movable"]
+    sector_1_values: ["1", "1/2", "1/4", "1/4", "1/4"]
+    sector_2_values: ["1", "1/2", "1/4", "1/4", "1/4"]
+    exact_residual_vector: ["0", "0", "0", "0", "0"]
+  - record_id: "E_split"
+    source_extension_status: "task-local source-extension data"
+    controls: ["movable", "identity_only"]
+    sector_1_values: ["1", "1/2", "1/4", "1/4", "1/4"]
+    sector_2_values: ["0", "0", "0", "0", "0"]
+    exact_residual_vector: ["1", "1/2", "1/4", "1/4", "1/4"]
+kernel_diagnostics:
+  movable_first_positive_arrival_index: "1"
+  identity_first_positive_arrival_index: "infinity"
+  movable_direction_asymmetry: "1/2"
+  arithmetic_uncertainty: "0"
+interpretation:
+  common_record: "constructible exact equality across two source sectors"
+  split_record: "constructible sector dependence under the same fixed source basis"
+  selected_by_current_ontology: false
+  physical_speed_or_freefall_inference_authorized: false
+  selector_missing: "Lambda_op(Sec_src, role)"
+authority_limits:
+  source_records_adopted: false
+  physical_sector_universality_established: false
+  benchmark_pass_established: false
+  physics_promotion_authorized: false

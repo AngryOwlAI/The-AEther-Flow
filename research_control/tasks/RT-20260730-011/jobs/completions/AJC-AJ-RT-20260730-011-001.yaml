@@ -1,0 +1,764 @@
+validation_status: "PASS"
+final_repository_validation_status: "PASS_READY_FOR_CHECKPOINT"
+job_id: "AJ-RT-20260730-011-001"
+completion_id: "AJC-AJ-RT-20260730-011-001"
+task_id: "RT-20260730-011"
+task_type: "v21_p9_t04_causal_local_inertial_universal_freefall_source_only_case"
+decision_id: "DDR-20260730-011"
+role_id: "candidate-constructor"
+role_version: "0.2.0"
+execution_role_ref: "candidate-constructor@0.2.0--RT-20260730-011"
+status: "completed"
+created_at: "2026-07-30T23:41:30Z"
+started_at: "2026-07-30T23:41:30Z"
+completed_at: "2026-07-30T23:41:30Z"
+objective: "Execute only v21 P9-T04 by deriving finite source-only causal, local-inertial, and universal-free-fall responses across multiple physical source sectors or returning a precise obstruction, without importing target cones, geodesics, Lorentz transforms, speeds, accelerations, residuals, or desired-agreement formulas."
+completion_summary: "P9-T04 constructs exact formal propagation and P7 operational-device traces in two physically interpreted source sectors. A common task-local equipment record gives zero sector residuals, while a split record gives the exact vector (1,1/2,1/4,1/4,1/4), proving that the current source package does not select the sector/role equipment and calibration law required for physical causal, local-inertial, or universal-free-fall recovery. The case is INCONCLUSIVE with secondary FORMAL_ANALOGY, zero target comparisons, zero benchmark passes, and no promotion authority."
+objective_result: "precise_sector_operational_selector_nonselection_obstruction_case_inconclusive_ready_for_checkpoint"
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 179
+  passes_consumed: 163
+  route_work_item_id: "P9-T04"
+  route_worker_skill: "continue-research"
+  route_sha256: "41bbf97cd126df07fd97ddf65202a22c734ce44d20710ff96d170b0dfa4f742e"
+  route_reason: "continue_dependency_ready_p9_t04_after_p9_t03_checkpoint"
+  route_strategy_id: "continue_in_scope_generation_179"
+  route_blocker_fingerprint: "a1cfc01f302abe523cd299c02ef430102c9e86e656adfe0ab2547dc62c26453d"
+  route_before_fingerprint: "a1cfc01f302abe523cd299c02ef430102c9e86e656adfe0ab2547dc62c26453d"
+  route_evidence_sha256es:
+    - "a1cfc01f302abe523cd299c02ef430102c9e86e656adfe0ab2547dc62c26453d"
+    - "29a277cd80154f5f34f784b659cc5880b9782ba3"
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:179"
+  handoff_token: "57442a479a6950b7bbd1de91b77512d23f10c40dd43e5cfb"
+  relay_claim_token: "abbf610cfb013de4718a5d761dc81fb7d8cfaab8d4d82219"
+  worker_skill: "continue-research"
+  worker_invocation_count: 1
+
+transaction_status: "ready_for_checkpoint"
+result_disposition: "P9_T04_SECTOR_OPERATIONAL_SELECTOR_NONSELECTION_OBSTRUCTION_CASE_INCONCLUSIVE_READY_FOR_CHECKPOINT"
+milestone_disposition: "finite_two_sector_causal_freefall_source_response_executed_physical_recovery_open"
+adoption_status: "blocked_adoption_open_continuation"
+checkpoint_commit:
+  required: true
+  attempted: false
+  committed: false
+  commit_sha: ""
+  dependency_checkpoint_commit: "29a277cd80154f5f34f784b659cc5880b9782ba3"
+  push_authorized: false
+  push_performed: false
+
+is_physics_task: true
+payload_class: "candidate_construction"
+has_new_mathematical_payload: true
+source_extension_classification_required: true
+external_red_team_finding_requires_integration: false
+physics_promotion_authorized: false
+proof_authority: false
+
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P9"
+  plan_task_id: "P9-T04"
+  work_kind: "benchmark_or_recovery"
+  task_class: "science"
+  expected_result_kind: "completed_or_precisely_blocked"
+  dependency_task_ids:
+    - "P9-T03"
+  dependency_completion_paths:
+    - "research_control/tasks/RT-20260730-010/jobs/completions/AJC-AJ-RT-20260730-010-001.yaml"
+  dependency_checkpoint_commits:
+    - "29a277cd80154f5f34f784b659cc5880b9782ba3"
+  work_item_status: "completed_ready_for_checkpoint"
+  recommendation_ids:
+    - "V21-R23"
+    - "V21-R24"
+    - "V21-R25"
+    - "V21-R28"
+    - "V21-R29"
+  recommendation_coverage_role: "direct_implementation"
+  scientific_claims_changed: true
+  scientific_claim_change_scope: "exact finite two-sector response counterfamily and precise current-source sector/role selector nonselection obstruction"
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  next_dependency_work_item: "P9-T05_after_checkpoint"
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  observed_durable_outputs:
+    physics:
+      - "one exact finite two-sector propagation and device-response construction"
+      - "one explicit common-versus-split sector residual counterfamily"
+      - "one precise INCONCLUSIVE causal/local-inertial/free-fall case disposition"
+    project_system:
+      - "one task-local deterministic validator and compact receipt"
+      - "parent-child synthesis, provenance, seal, and target-exposure records"
+      - "standard control records and generated-memory synchronization"
+  accepted_criteria:
+    physics:
+      - "finite kernel powers and P7 operational traces reproduce"
+      - "common and split records produce distinct exact residual vectors"
+      - "missing sector/role selector produces INCONCLUSIVE rather than an inferred physical universality result"
+      - "zero target comparisons, target-informed reruns, and benchmark passes"
+    project_system:
+      - "task-local source-hash, math, DAG, seal, exposure, and parent-child checks pass"
+      - "claim-language and documentation-impact gates pass"
+      - "one governed checkpoint records the bounded transaction"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+physics_payload_admission_result:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "physics"
+  declared_payload_type: "candidate_construction"
+  realized_payload_type: "exact_finite_two_sector_counterfamily_with_scoped_obstruction"
+  candidate_family: "FiniteTwoSectorCausalFreeFallNonselection_v1"
+  decision_identity: "P9T04-THM-SECTOR-CAUSAL-FREEFALL-NONSELECTION-001"
+  result: "PASS"
+  material_payload_present: true
+  process_receipts_counted_as_payload: false
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed_by_admission: false
+  physics_promotion_authorized: false
+
+family_freeze_admission_result:
+  schema_id: "family_freeze_route_admission_v1"
+  policy_id: "family_freeze_reopening_policy_v1"
+  route_id: "v21_p9_t04_finite_two_sector_causal_freefall_nonselection_v1"
+  family_id: "FiniteTwoSectorCausalFreeFallNonselection_v1"
+  detected_match_basis: []
+  reopening_requested: false
+  result: "PASS_MATERIALLY_NEW_CASE_EXECUTION"
+  local_family_freeze_preserved: true
+  global_no_go_claimed: false
+  physics_promotion_authorized: false
+
+ordinary_route_guard_admission_result:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0917"
+  selected_plan_task_id: "P9-T04"
+  guard_outcome: "below_threshold"
+  result: "PASS"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  scientific_status_changed_by_guard: false
+  physics_promotion_authorized: false
+
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_execution_unit_count: 2
+  outer_agentjob_count: 1
+  child_agentjob_count: 0
+  subagent_count: 0
+
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260730-011/artifacts/child_phys_math_p9_t04_causal_freefall.yaml"
+      output_sha256: "096dc8cafc8096ad365ae1c4f3e399f44fd9c9cba22bff1678d70dea56e1385b"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260730-011/artifacts/child_phys_phil_p9_t04_causal_freefall.yaml"
+      output_sha256: "51fa5a92b711191aacdc90b64c7ad6f95f914b61c94cd497a5dd4906e27bd647"
+      status: "completed"
+  conflict_review:
+    status: "resolved"
+    review_path: "research_control/tasks/RT-20260730-011/artifacts/parent_conflict_review_p9_t04_causal_freefall.yaml"
+    review_sha256: "4f50c66ee52de560bac7ece9f3a36fc305b080b8b334808dad711e2412afdb98"
+    resolution_rounds: 1
+    resolved_conflict_count: 4
+    unresolved_conflicts: []
+  fusion:
+    fused_output_path: "research_control/tasks/RT-20260730-011/artifacts/finite_two_sector_causal_freefall_nonselection_v1.tex"
+    fusion_notes_path: "research_control/tasks/RT-20260730-011/artifacts/parent_fusion_notes_p9_t04_causal_freefall.md"
+    shared_consensus_summary: "The finite two-sector traces and residuals are exact, but current sources do not select the cross-sector equipment or provide the physical characteristic and model-to-world objects required for causal, local-inertial, or universal-free-fall recovery."
+    unique_phys_math_contributions: "Exact kernel powers, operational traces, common and split residual vectors, direction diagnostic, and selector nonselection theorem."
+    unique_phys_phil_contributions: "Formal-versus-physical propagation boundary, model-to-world gap, nonblind exposure disclosure, and conservative-extension qualification."
+    novelty_preservation_summary: "Fusion preserves the first executed P9 multiple-sector causal/free-fall response counterfamily and its precise current-source nonselection result."
+    claim_boundary_preservation_summary: "No physical speed cone local Lorentz local-inertial behavior universal free fall equivalence principle preferred frame birefringence effective geometry Einstein equation benchmark pass Gate E promotion proof publication push global no-go or completed derivation is authorized."
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+
+memory_preflight:
+  preflight_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1093
+    relationship_row_count: 5535
+    semantic_row_count: 1093
+    vault_row_count: 1093
+    local_cache_only_warning_count: 0
+    refresh_performed: true
+  refresh_needed: true
+  refresh_performed: true
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search '\"null propagation local inertial universal free fall\"' --limit 10 --json"
+      query_type: "search"
+      query_text: "null propagation local inertial universal free fall"
+      returned_object_ids:
+        - "TEX-V21-P9-T01-SOURCE-DERIVED-BENCHMARK-PROTOCOL-V1"
+        - "TEX-V21-P7-T03-SOURCE-OPERATIONAL-DEVICE-SUITE-V1"
+        - "MD-V21-P9-T03-PARENT-FUSION-WEAK-FIELD-CLOCK-V1"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+    - object_id: "TEX-V21-P9-T01-SOURCE-DERIVED-BENCHMARK-PROTOCOL-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260729-012/artifacts/source_derived_benchmark_protocol_v1.tex"
+      source_hash: "88ef097bf712ad115e9af62cc18a8b3eabb12f8545350f714ad065f702471007"
+    - object_id: "TEX-V21-P7-T03-SOURCE-OPERATIONAL-DEVICE-SUITE-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260728-002/artifacts/source_operational_device_suite_candidate_v1.tex"
+      source_hash: "d6c818ee29f1a7e659e2f454aec21431d680b3d2d4df048fcf36f4aba87ba22a"
+    - object_id: "MD-V21-P9-T03-PARENT-FUSION-WEAK-FIELD-CLOCK-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260730-010/artifacts/parent_fusion_notes_p9_t03_weak_field_clock.md"
+      source_hash: "3f776c86fbf0b90fe2117e231101bd1def9a538d57f46f5e8171f9d008fdbaf9"
+  authority_note: "Obsidian wiki notes, semantic extracts, PDFs, and .local files are retrieval layers only and are not authority. Target-side ontology inspection supplied no source value, formula, parameter, branch, tolerance, or output."
+
+benchmark_case_result:
+  protocol_id: "SourceDerivedBenchmarkProtocol_v1"
+  case_id: "P9-BENCH-CAUSAL-FREEFALL-V1"
+  candidate_id: "FiniteTwoSectorCausalFreeFallNonselection_v1"
+  outcome: "INCONCLUSIVE"
+  secondary_label: "FORMAL_ANALOGY"
+  source_execution_status: "COMPLETED"
+  source_stage_firewall_status: "PASS"
+  source_output_seal_status: "SEALED"
+  target_comparison_status: "NOT_OPENED"
+  independent_reproduction_status: "NOT_ACQUIRED"
+  executed_case_count: 1
+  cumulative_executed_case_count: 3
+  passed_case_count: 0
+  target_informed_rerun_count: 0
+  physical_causal_local_inertial_freefall_recovery_established: false
+  benchmark_promotion_authorized: false
+
+new_mathematical_payload:
+  - payload_id: "NMP-RT-20260730-011-001"
+    payload_type: "finite_model"
+    name: "Two-sector exact transition-kernel response"
+    summary: "Constructs exact movable and identity-only traces in two physically interpreted P7 source sectors."
+  - payload_id: "NMP-RT-20260730-011-002"
+    payload_type: "definition"
+    name: "Five-component formal sector-residual vector"
+    summary: "Defines exact propagation, FreeFall_src, Clock_src, Rod_src, and Signal_src sector differences."
+  - payload_id: "NMP-RT-20260730-011-003"
+    payload_type: "explicit_witness"
+    name: "Common-versus-split equipment counterfamily"
+    summary: "Two target-free equipment records yield residual vectors (0,0,0,0,0) and (1,1/2,1/4,1/4,1/4)."
+  - payload_id: "NMP-RT-20260730-011-004"
+    payload_type: "obstruction"
+    name: "Sector/role operational selector nonselection"
+    summary: "Current sources do not derive a total selector from sector and operational role to control, equipment, calibration, and model-to-world map."
+
+minimum_physics_payload:
+  minimum_payload_schema_id: "minimum_physics_payload_schema_v1"
+  source_task_id: "RT-20260730-011"
+  source_job_id: "AJ-RT-20260730-011-001"
+  source_completion_path: "research_control/tasks/RT-20260730-011/jobs/completions/AJC-AJ-RT-20260730-011-001.yaml"
+  target_derivation_milestone: "benchmark_promotion"
+  milestone_burden: "Test null propagation, local inertial behavior, and universal free fall from source dynamics and multiple physical source-matter sectors."
+  payload_class: "candidate_construction"
+  payload_status: "draft/control"
+  payload_artifact_path: "research_control/tasks/RT-20260730-011/artifacts/finite_two_sector_causal_freefall_nonselection_v1.tex"
+  payload_summary: "Exact finite two-sector propagation and operational traces, an explicit residual counterfamily, and a precise INCONCLUSIVE benchmark disposition."
+  payload_source_basis:
+    - "SourceDerivedBenchmarkProtocol_v1"
+    - "P7T01SourceMatterSectorTaxonomy_v1"
+    - "P7T02FiniteTransitionKernel_v1"
+    - "P7T03SourceOperationalDeviceSuite_v1"
+    - "P7T08PhysicalMatterAdoptionDecision_v1"
+    - "P9T02VacuumMinkowskiSourceOnlyCase_v1"
+    - "P9T03WeakFieldClockSourceOnlyCase_v1"
+  process_receipts_excluded:
+    - "validator_status"
+    - "registry_row"
+    - "handoff_status"
+    - "generated_derivative"
+    - "checkpoint_status"
+  physics_promotion_authorized: false
+  proof_authority: false
+
+mathematical_payload_manifest:
+  - payload_id: "PAYLOAD-P9T04-001"
+    payload_type: "finite_model"
+    object_name: "Two-sector exact propagation and operational-response construction"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260730-011/artifacts/finite_two_sector_causal_freefall_nonselection_v1.tex"
+    burden_effect: "narrows"
+    summary: "Provides exact source traces in two physical source sectors without physical-speed or target-cone identification."
+  - payload_id: "PAYLOAD-P9T04-002"
+    payload_type: "explicit_witness"
+    object_name: "Common-versus-split sector residual counterfamily"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260730-011/artifacts/finite_two_sector_causal_freefall_nonselection_v1.tex"
+    burden_effect: "obstructs"
+    summary: "Two target-free equipment records produce distinct exact five-component residual vectors."
+  - payload_id: "PAYLOAD-P9T04-003"
+    payload_type: "obstruction"
+    object_name: "Sector/role operational selector nonselection obstruction"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260730-011/artifacts/finite_two_sector_causal_freefall_nonselection_v1.tex"
+    burden_effect: "obstructs"
+    summary: "The current ontology does not derive the selector and physical map required for universal causal and free-fall observables."
+
+candidate_constructor_result:
+  result_type: "precise_obstruction"
+  constructed_candidate_path: ""
+  minimal_countermodel_path: "research_control/tasks/RT-20260730-011/artifacts/finite_two_sector_causal_freefall_nonselection_v1.tex"
+  obstruction_id: "OBST-P9T04-SECTOR-CAUSAL-FREEFALL-SELECTOR-ABSENT-001"
+  formal_objects:
+    - "two physical source sectors sigma_1=(1,[0]) and sigma_2=(2,[0])"
+    - "movable and identity-only two-state kernels"
+    - "exact endpoint response families 1-2^(-n) and 0"
+    - "P7 Clock_src Rod_src Signal_src and FreeFall_src response traces"
+    - "common and split task-local equipment records"
+    - "five-component exact sector-residual vectors"
+  maps:
+    - "(mu_0,U,n) -> endpoint source response"
+    - "U -> formal first-arrival index and address-hop slope"
+    - "(sector,equipment record,role) -> source operational response token"
+    - "two sector response tuples -> exact residual vector"
+    - "sealed missing-selector record -> INCONCLUSIVE case classification"
+  proof_obligations:
+    - "any physical propagation claim requires a derived characteristic equation and physical time/length calibration"
+    - "any local-inertial claim requires reciprocal propagation support and a source-derived local transformation law"
+    - "any universal free-fall claim requires a source-derived sector/role selector and physical trajectory/acceleration map"
+    - "any target comparison requires corrections uncertainty tolerance and independent reproduction"
+  failed_components:
+    - "total source-derived sector/role equipment selector Lambda_op"
+    - "physical characteristic equation and propagation speed calibration"
+    - "common physical time and length units"
+    - "source-derived local transformation law"
+    - "physical trajectory velocity and acceleration map"
+    - "physical correction and uncertainty control"
+    - "analytic equivalence or numerical tolerance"
+    - "independent reproduction"
+  next_required_role: "none"
+  no_fog_check: true
+  no_fog_explanation: "RT-20260730-011 exactly evaluated two physical source sectors under common and split equipment records; the residual vectors differ, so the unchanged source package does not uniquely determine physical causal, local-inertial, or universal-free-fall behavior and the case is INCONCLUSIVE."
+  claim_boundary_preserved: true
+  claim_boundary_citation: "CB-V21-P9-T04-CAUSAL-FREEFALL-SECTOR-NONSELECTION-001"
+
+obstruction_record:
+  present: true
+  obstruction_id: "OBST-P9T04-SECTOR-CAUSAL-FREEFALL-SELECTOR-ABSENT-001"
+  scope: "current_ontology_only"
+  failed_object: "total source-derived operational selector Lambda_op from source sector and role to control, equipment, physical calibration, and model-to-world map"
+  exact_failure: "The same fixed P7 source basis admits a common task-local equipment record with zero sector residuals and a split record with residual vector (1,1/2,1/4,1/4,1/4); the current sector and operational records do not select between them."
+  minimal_counterexample_path: "research_control/tasks/RT-20260730-011/artifacts/finite_two_sector_causal_freefall_nonselection_v1.tex"
+  current_ontology_implication: "does_not_derive"
+  source_extension_implication: "new_primitive_required"
+  consequence: "new_primitive_required"
+  forbidden_overread: "This scoped nonselection result does not show that no conservative future source selector or calibration law can exist, does not establish or refute a physical equivalence principle, and does not reject the ontology globally."
+
+physics_progress_status:
+  status: "precise_obstruction_found"
+  target_derivation_milestone: "benchmark_promotion"
+  milestone_burden: "Test null propagation, local inertial behavior, and universal free fall from source dynamics and multiple physical source-matter sectors."
+  explanation: "The packet adds exact two-sector causal/free-fall source traces and identifies the specific missing operational selector and physical map; it does not establish a physical causal structure, local-inertial law, universal free fall, or benchmark pass."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr_delta:
+  effect: "obstruction_recorded"
+  changed: false
+  burden_id: "benchmark_promotion"
+  milestone: "benchmark_promotion"
+  old_status: "blocked by missing primitive"
+  new_status: "blocked by missing primitive"
+  ledger_row_updated: true
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  downstream_unlocked:
+    - "none"
+  downstream_still_blocked:
+    - "physical null propagation and local inertial behavior"
+    - "universal physical free fall and equivalence principle"
+    - "g_eff"
+    - "matter_coupling"
+    - "einstein_equations"
+    - "benchmark_promotion"
+  explanation: "The ledger gains a precise P9-T04 two-sector selector obstruction path but no physical or promotion status changes."
+
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "unchanged; no canonical ontology edit or source-law adoption"
+  - burden: "Source equivalence EqSrc"
+    status: "unchanged"
+  - burden: "RetainH"
+    status: "unchanged"
+  - burden: "GenH"
+    status: "unchanged"
+  - burden: "ObsLoc_lc"
+    status: "unchanged"
+  - burden: "Resp_lc"
+    status: "unchanged; exact finite two-sector source response only"
+  - burden: "M_src"
+    status: "unchanged; P7 physical source scope does not supply target-spacetime causal or free-fall semantics"
+  - burden: "g_eff"
+    status: "unresolved; finite kernel support is not a physical causal cone or metric"
+  - burden: "matter coupling"
+    status: "current source package does not derive the sector/role operational selector required for universal response"
+  - burden: "Einstein equations"
+    status: "unresolved; no physical gravitational dynamics or field equation is derived"
+  - burden: "finite-variation robustness"
+    status: "exact finite common and split records only; physical temporal continuum calibration and cross-sector robustness absent"
+  - burden: "benchmark promotion"
+    status: "blocked; three source cases executed across P9-T02 through P9-T04, three INCONCLUSIVE outcomes, zero passes"
+  - burden: "Gate Chair status"
+    status: "Gate D protected NOT_READY unchanged; no Gate E verdict"
+  - burden: "current route freeze or hard-fail status"
+    status: "unchanged P9-T04 inference branch locally frozen without a new source selector and physical calibration; distinct P9-T05 case remains open after checkpoint"
+
+freeze_criteria_status:
+  repeated_burden: true
+  scoped_obstruction: true
+  freeze_evaluation_required: true
+  active_freeze_label: "P9T04-UNCHANGED-SECTOR-OPERATIONAL-SELECTOR-ABSENT"
+  prior_attempts_considered:
+    - "RT-20260728-001"
+    - "RT-20260728-002"
+    - "RT-20260728-004"
+    - "RT-20260730-008"
+    - "RT-20260730-010"
+    - "RT-20260730-011"
+  criteria_evaluated:
+    - "whether a physical propagation cone was inferred from formal support without a characteristic law"
+    - "whether cross-sector equality was selected rather than merely constructed"
+    - "whether a second formal cone or sector-dependent response remains uncontrolled"
+    - "whether the next plan item is a materially distinct benchmark case"
+  freeze_if:
+    - "The same formal kernel support is rerun while relabeling address-hops per update as physical propagation speed or a null cone."
+    - "The common equipment record is presented as derived universality while the split record remains source-admissible."
+    - "An uncontrolled second formal cone or sector-dependent free-fall response is ignored."
+    - "A later packet fits equipment, physical units, or a selector using target residuals."
+  do_not_freeze_if:
+    - "A materially new source-only sector/role selector and physical calibration law is constructed with exact provenance and no target import."
+    - "A distinct P9-T05 benchmark case is executed without reusing the formal P9-T04 residuals as physical results."
+  freeze_decision: "locally_frozen"
+  decision_reason: "The common-versus-split counterfamily exactly closes the unchanged P9-T04 inference path, while conservative source-law construction and the distinct P9-T05 burden remain open."
+  rationale: "Freeze only inference from the unchanged formal traces; preserve blocked_adoption_open_continuation and the dependency-ordered P9-T05 route."
+  next_allowed_route: "candidate_constructor"
+  ledger_or_registry_update_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  status_update_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  no_status_update_rationale: ""
+  candidate_freeze_label: "P9T04-UNCHANGED-SECTOR-OPERATIONAL-SELECTOR-ABSENT"
+  global_theory_rejection: false
+  future_source_extension_impossibility: false
+
+loop_risk_decision:
+  category: "bridge_facing_candidate_path"
+  next_route: "continue_distinct_benchmark_case"
+  rationale: "P9-T04 freezes inference from unchanged finite sector responses without a selector or physical calibration. P9-T05 must execute a distinct benchmark burden rather than relabeling the present formal residuals."
+  repeated_burdens:
+    - "physical source-to-target observable map remains absent"
+    - "physical temporal and spatial units remain absent"
+    - "sector/role operational selector remains absent"
+
+route_cycle_control:
+  cycle_family: "v21_p9_source_derived_benchmark_suite"
+  current_cycle_step: "P9-T04_two_sector_causal_freefall_nonselection_inconclusive"
+  cycle_risk: "A later packet could choose the common record from target universality expectations or relabel formal source slopes as physical causal speeds."
+  prior_related_tasks:
+    - "RT-20260729-012"
+    - "RT-20260730-008"
+    - "RT-20260730-010"
+    - "RT-20260730-011"
+  orbit_avoidance_reason: "P9-T04 adds a new multiple-sector propagation/device residual counterfamily and exact selector nonselection theorem. P9-T05 must use its own distinct case schema and cannot reuse these formal residuals as physical results."
+  next_role_consequence: "candidate-constructor@0.2.0 for v21 P9-T05 after checkpoint"
+
+source_extension_classification:
+  checklist_id: "source_extension_classification_checklist_v1"
+  item_id: "FiniteTwoSectorCausalFreeFallNonselection_v1"
+  item_source_path: "research_control/tasks/RT-20260730-011/artifacts/finite_two_sector_causal_freefall_nonselection_v1.tex"
+  classification: "conservative_definitional_extension"
+  evidence_paths:
+    - "research_control/tasks/RT-20260727-007/artifacts/source_matter_sector_charge_taxonomy_v1.yaml"
+    - "research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_candidate_v1.tex"
+    - "research_control/tasks/RT-20260728-002/artifacts/source_operational_device_suite_candidate_v1.tex"
+    - "research_control/tasks/RT-20260729-012/artifacts/source_derived_benchmark_protocol_v1.tex"
+  relation_to_current_ontology: "conservative"
+  claim_boundary_id: "CB-V21-P9-T04-CAUSAL-FREEFALL-SECTOR-NONSELECTION-001"
+  protected_authority_required: true
+  physics_promotion_authorized: false
+  downstream_promotion_authorized: false
+  allowed_conclusion: "One exact finite two-sector response counterfamily and current-source selector nonselection obstruction are established; the physical causal, local-inertial, and universal-free-fall case remains INCONCLUSIVE."
+  forbidden_overreads:
+    - "formal address-hop slope as physical propagation speed or a null cone"
+    - "source-token equality as local Lorentz invariance local-inertial behavior or the equivalence principle"
+    - "source endpoint response as a physical trajectory acceleration or universal free fall"
+    - "kernel direction asymmetry as a preferred-frame or birefringence measurement"
+    - "the common equipment record as a derived or adopted selector law"
+    - "benchmark pass Gate E verdict or benchmark promotion"
+    - "source-law adoption or rejection"
+    - "effective geometry Einstein equations exact-GR recovery proof publication push global no-go future impossibility or completed derivation"
+  next_route_if_blocked: "P9-T05 distinct source-only benchmark case after checkpoint"
+
+bridge_attempt_status:
+  bridge_attempted: true
+  bridge_name: "finite source sector kernels and operational-device traces to physical causal, local-inertial, and universal-free-fall observables"
+  bridge_result: "precise_obstruction"
+  candidate_map: "sector, task-local equipment, and formal update traces map to exact source residuals; no source-derived selector fixes the equipment and no map reaches calibrated physical observables"
+  missing_primitive: "A source-derived sector/role selector, characteristic law, physical temporal and spatial units, local transformation law, model-to-world semantics, corrections, uncertainty, tolerance, and independent reproduction remain absent."
+  preserves_blocks: true
+  blocked_outputs:
+    - "physical_propagation_speed_or_null_cone"
+    - "local_Lorentz_or_local_inertial_behavior"
+    - "physical_free_fall_trajectory_or_acceleration"
+    - "equivalence_principle"
+    - "preferred_frame_or_birefringence"
+    - "effective_geometry_or_metric"
+    - "Einstein_equations"
+    - "exact_GR_recovery"
+    - "benchmark_pass_or_promotion"
+    - "Gate_E_verdict"
+    - "proof_publication_push_or_completed_derivation"
+  explanation: "The source side supplies exact formal sector responses, but their selector, physical codomain, and calibration are not derived."
+
+selected_next_route:
+  route_id: "v21_p9_t05_distinct_source_derived_benchmark_case_after_p9_t04_inconclusive"
+  route_label: "benchmark-recovery-packet"
+  role_family: "candidate-constructor@0.2.0"
+  worker_skill: "continue-research"
+  selected_next_packet_type: "source_only_remaining_benchmark_case"
+  task_type: "v21_p9_t05_source_derived_benchmark_case"
+  plan_task_id: "P9-T05"
+  target_derivation_milestone: "benchmark_promotion"
+  milestone_burden: "Execute the next distinct source-derived benchmark case under the sealed protocol and carried-forward inconclusive dispositions."
+  strategy_id: "construct_p9_t05_distinct_source_derived_benchmark_case_v1"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  p9_t02_outcome_carried_forward: "INCONCLUSIVE"
+  p9_t03_outcome_carried_forward: "INCONCLUSIVE"
+  p9_t04_outcome_carried_forward: "INCONCLUSIVE"
+  cumulative_benchmark_pass_count: 0
+  target_informed_source_repair_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+claim_boundary:
+  allowed:
+    - "one exact finite two-sector propagation and operational-response construction"
+    - "two explicit task-local source equipment records"
+    - "one exact five-component residual counterfamily"
+    - "one exact current-source selector nonselection obstruction"
+    - "one INCONCLUSIVE case classification with FORMAL_ANALOGY secondary label"
+    - "P9-T05 route only after checkpoint"
+  forbidden:
+    - "source-law or selector adoption or rejection"
+    - "physical speed cone local Lorentz local-inertial free-fall or equivalence-principle identification"
+    - "preferred-frame or birefringence establishment or refutation"
+    - "effective geometry Einstein equations exact-GR recovery"
+    - "benchmark pass Gate E verdict promotion proof publication push or completed derivation"
+    - "global no-go or future source-extension impossibility"
+
+forbidden_conclusion_summary:
+  forbidden_conclusions:
+    - "canonical ontology edit"
+    - "m_src adoption"
+    - "source sector/role selector law adoption or rejection"
+    - "physical propagation speed or null cone"
+    - "local Lorentz invariance or local inertial behavior"
+    - "physical free-fall trajectory or acceleration"
+    - "equivalence principle established or refuted"
+    - "preferred frame or birefringence established or refuted"
+    - "g_eff"
+    - "matter coupling"
+    - "Einstein-equation claim"
+    - "benchmark pass or promotion"
+    - "Gate Chair verdict"
+    - "completed derivation"
+    - "global theory rejection"
+    - "future source-extension impossibility"
+  physics_promotion_authorized: false
+  summary: "The exact finite counterfamily establishes only current-source selector nonselection and an INCONCLUSIVE case; every physical target, promotion, proof, publication, push, global no-go, future-impossibility, and completed-derivation conclusion remains blocked."
+
+no_target_import_audit:
+  status: "PASS"
+  target_family_known: true
+  blindness_claimed: false
+  target_oracle_opened: false
+  imported_target_assumption_count: 0
+  target_selected_parameter_count: 0
+  target_selected_branch_count: 0
+  target_selected_tolerance_count: 0
+  target_informed_rerun_count: 0
+  source_output_mutation_after_seal_count: 0
+
+artifacts:
+  - path: "research_control/tasks/RT-20260730-011/artifacts/finite_two_sector_causal_freefall_nonselection_v1.tex"
+    sha256: "7f5ef217faba0b4005885bed7a88cf9941c39b495976530bc912c5c742bc5124"
+  - path: "research_control/tasks/RT-20260730-011/artifacts/p9_t04_causal_freefall_case_v1.yaml"
+    sha256: "f3ee6d0d7c19f68daf9f6ed9a2e10cec964633694688cc62074edc9089f66255"
+  - path: "research_control/tasks/RT-20260730-011/artifacts/p9_t04_sector_comparison_matrix_v1.yaml"
+    sha256: "820e51c4a048066f1aeabb2f363220ef5f138bbc8ed335df1050055dd5c8dcec"
+  - path: "research_control/tasks/RT-20260730-011/artifacts/p9_t04_equivalence_principle_residuals_v1.yaml"
+    sha256: "2622e21820b3bb8e506b9bc23fac12e5d24c50042584f2f1635536dc9d74ed98"
+  - path: "research_control/tasks/RT-20260730-011/artifacts/p9_t04_provenance_dag_v1.yaml"
+    sha256: "bfa67fbe669ff42f13e9a18f6f95b6492d621bee861e569e02f20dec864e3fb4"
+  - path: "research_control/tasks/RT-20260730-011/artifacts/p9_t04_source_output_seal_v1.json"
+    sha256: "852e029864b6ac3ee3d7f4803c7787049d9d23d2a9c5efc2bfdedbc324a3eb60"
+  - path: "research_control/tasks/RT-20260730-011/artifacts/p9_t04_target_exposure_ledger_v1.yaml"
+    sha256: "421612292120ef16792972dacb3467c447627322d780c9e7a96ffb8368053fb6"
+  - path: "research_control/tasks/RT-20260730-011/artifacts/p9_t04_causal_freefall_receipt_v1.json"
+    sha256: "fe12f4fed9561cd2e282b3a26bdac357e6862af4a915f10961caa77a31ed86ec"
+  - path: "research_control/tasks/RT-20260730-011/artifacts/validate_p9_t04_causal_freefall.py"
+    sha256: "96a96466787a02a7e9bffd5520380d8e6160e4a12b386e6d471305cca31ef878"
+  - path: "research_control/tasks/RT-20260730-011/artifacts/child_phys_math_p9_t04_causal_freefall.yaml"
+    sha256: "096dc8cafc8096ad365ae1c4f3e399f44fd9c9cba22bff1678d70dea56e1385b"
+  - path: "research_control/tasks/RT-20260730-011/artifacts/child_phys_phil_p9_t04_causal_freefall.yaml"
+    sha256: "51fa5a92b711191aacdc90b64c7ad6f95f914b61c94cd497a5dd4906e27bd647"
+  - path: "research_control/tasks/RT-20260730-011/artifacts/parent_conflict_review_p9_t04_causal_freefall.yaml"
+    sha256: "4f50c66ee52de560bac7ece9f3a36fc305b080b8b334808dad711e2412afdb98"
+  - path: "research_control/tasks/RT-20260730-011/artifacts/parent_fusion_notes_p9_t04_causal_freefall.md"
+    sha256: "a21e75496322f525e32fc456e8e356c593ff6b7561cd955abd75421adc06358e"
+
+output_paths:
+  - "research_control/tasks/RT-20260730-011/00_TASK.yaml"
+  - "research_control/tasks/RT-20260730-011/DDR-20260730-011.md"
+  - "research_control/tasks/RT-20260730-011/artifacts/finite_two_sector_causal_freefall_nonselection_v1.tex"
+  - "research_control/tasks/RT-20260730-011/artifacts/p9_t04_causal_freefall_case_v1.yaml"
+  - "research_control/tasks/RT-20260730-011/artifacts/p9_t04_sector_comparison_matrix_v1.yaml"
+  - "research_control/tasks/RT-20260730-011/artifacts/p9_t04_equivalence_principle_residuals_v1.yaml"
+  - "research_control/tasks/RT-20260730-011/artifacts/p9_t04_provenance_dag_v1.yaml"
+  - "research_control/tasks/RT-20260730-011/artifacts/p9_t04_source_output_seal_v1.json"
+  - "research_control/tasks/RT-20260730-011/artifacts/p9_t04_target_exposure_ledger_v1.yaml"
+  - "research_control/tasks/RT-20260730-011/artifacts/p9_t04_causal_freefall_receipt_v1.json"
+  - "research_control/tasks/RT-20260730-011/artifacts/validate_p9_t04_causal_freefall.py"
+  - "research_control/tasks/RT-20260730-011/artifacts/child_phys_math_p9_t04_causal_freefall.yaml"
+  - "research_control/tasks/RT-20260730-011/artifacts/child_phys_phil_p9_t04_causal_freefall.yaml"
+  - "research_control/tasks/RT-20260730-011/artifacts/parent_conflict_review_p9_t04_causal_freefall.yaml"
+  - "research_control/tasks/RT-20260730-011/artifacts/parent_fusion_notes_p9_t04_causal_freefall.md"
+  - "research_control/tasks/RT-20260730-011/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260730-011/jobs/completions/AJC-AJ-RT-20260730-011-001.yaml"
+  - "research_control/tasks/RT-20260730-011/roles/candidate-constructor@0.2.0--RT-20260730-011.yaml"
+  - "research_control/handoffs/handoff-0918.yaml"
+  - "research_control/handoffs/handoff-0918.md"
+
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | status=pass_after_refresh"
+  - ".venv/bin/python research_control/tasks/RT-20260730-011/artifacts/validate_p9_t04_causal_freefall.py --check --json | exit_code=0 | status=pass | checks=20"
+  - "scratch Tectonic compilation | exit_code=0 | status=pass | pages=4"
+  - "git diff --check | exit_code=0 | status=pass"
+
+validation_summary:
+  task_local_status: "PASS"
+  task_local_check_count: 20
+  task_local_failure_count: 0
+  scratch_tex_compile_status: "PASS"
+  final_repository_status: "PASS_READY_FOR_CHECKPOINT"
+  checkpoint_status: "PENDING"
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 179 route claim, repository binding, reasoning effort, clean manifest, and dependency checkpoint 29a277cd were validated."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Exact source hashes, kernel arithmetic, residual vectors, DAG, seal, exposure, parent-child, and no-fog checks pass."
+      - "Task-local validator passes 20 of 20 checks."
+      - "Scratch Tectonic build passes for the four-page TeX artifact."
+  post_write:
+    status: "PENDING"
+    evidence:
+      - "Final repository-wide validation follows handoff, registry, and derivative synchronization."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "One governed RT-011 checkpoint remains uninvoked."
+  renderer:
+    status: "PENDING"
+    evidence:
+      - "Final render-and-check pass follows handoff and registry updates."
+  memory_bootstrap:
+    status: "PENDING"
+    evidence:
+      - "Final tracked memory synchronization and validate-only pass remain."
+  claim_language_linter:
+    status: "PENDING"
+    evidence:
+      - "Changed-source claim-language validation remains in the precheckpoint stack."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "none"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  publication_authorized: false
+  proof_authority: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  canonical_ontology_edit_authorized: false
+  ontology_selection_authorized: false
+  physical_interpretation_establishment_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []

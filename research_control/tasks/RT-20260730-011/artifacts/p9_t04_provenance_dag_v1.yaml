@@ -1,0 +1,70 @@
+schema_id: "p9_t04_provenance_dag_v1"
+task_id: "RT-20260730-011"
+case_id: "P9-BENCH-CAUSAL-FREEFALL-V1"
+status: "sealed"
+nodes:
+  - node_id: "p7_sector_source"
+    stage: "source_root"
+    path: "research_control/tasks/RT-20260727-007/artifacts/source_matter_sector_charge_taxonomy_v1.yaml"
+  - node_id: "p7_transition_source"
+    stage: "source_root"
+    path: "research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_candidate_v1.tex"
+  - node_id: "p7_operational_source"
+    stage: "source_root"
+    path: "research_control/tasks/RT-20260728-002/artifacts/source_operational_device_suite_candidate_v1.tex"
+  - node_id: "p7_physical_adoption"
+    stage: "source_root"
+    path: "research_control/tasks/RT-20260729-001/artifacts/p7_t08_gate_c_decision_v1.tex"
+  - node_id: "p9_protocol"
+    stage: "source_root"
+    path: "research_control/tasks/RT-20260729-012/artifacts/source_derived_benchmark_protocol_v1.tex"
+  - node_id: "two_sector_selection"
+    stage: "source_stage"
+  - node_id: "exact_kernel_powers"
+    stage: "source_stage"
+  - node_id: "operational_traces"
+    stage: "source_stage"
+  - node_id: "common_equipment_record"
+    stage: "source_extension_test"
+  - node_id: "split_equipment_record"
+    stage: "source_extension_test"
+  - node_id: "sector_residual_counterfamily"
+    stage: "source_stage"
+  - node_id: "selector_nonselection_obstruction"
+    stage: "source_stage"
+  - node_id: "source_seal"
+    stage: "seal"
+    path: "research_control/tasks/RT-20260730-011/artifacts/p9_t04_source_output_seal_v1.json"
+  - node_id: "target_causal_freefall_family"
+    stage: "target_root"
+  - node_id: "case_classification"
+    stage: "classification"
+edges:
+  - ["p7_sector_source", "two_sector_selection"]
+  - ["p7_transition_source", "exact_kernel_powers"]
+  - ["p7_operational_source", "operational_traces"]
+  - ["p7_physical_adoption", "two_sector_selection"]
+  - ["p9_protocol", "two_sector_selection"]
+  - ["two_sector_selection", "common_equipment_record"]
+  - ["two_sector_selection", "split_equipment_record"]
+  - ["exact_kernel_powers", "common_equipment_record"]
+  - ["exact_kernel_powers", "split_equipment_record"]
+  - ["operational_traces", "common_equipment_record"]
+  - ["operational_traces", "split_equipment_record"]
+  - ["common_equipment_record", "sector_residual_counterfamily"]
+  - ["split_equipment_record", "sector_residual_counterfamily"]
+  - ["sector_residual_counterfamily", "selector_nonselection_obstruction"]
+  - ["selector_nonselection_obstruction", "source_seal"]
+  - ["source_seal", "case_classification"]
+target_oracle_opened: false
+forbidden_reachability_result:
+  target_root_count: 1
+  target_to_source_stage_path_count: 0
+  target_to_seal_path_count: 0
+  firewall_result: "PASS_SOURCE_STAGE"
+known_target_family_disclosure: "The target null-propagation, local-inertial, and universal-free-fall family and required ontology authority files were known before execution; no target value, formula, branch, tolerance, or desired agreement selected a source datum."
+authority_limits:
+  provenance_graph_is_physics_proof: false
+  target_blindness_claimed: false
+  benchmark_pass_established: false
+  physics_promotion_authorized: false

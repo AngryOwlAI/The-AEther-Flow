@@ -1,0 +1,56 @@
+{
+  "schema_id": "p9_t04_source_output_seal_v1",
+  "task_id": "RT-20260730-011",
+  "case_id": "P9-BENCH-CAUSAL-FREEFALL-V1",
+  "protocol_version": "SourceDerivedBenchmarkProtocol_v1",
+  "sealed_at": "2026-07-30T23:41:30Z",
+  "randomness_policy": "deterministic_exact_rational_no_randomness",
+  "target_family_known_before_execution": true,
+  "blindness_claimed": false,
+  "target_formula_used_as_source_input": false,
+  "target_value_used_as_source_input": false,
+  "target_selected_parameter_count": 0,
+  "target_informed_rerun_count": 0,
+  "target_oracle_opened": false,
+  "mutation_after_seal_authorized": false,
+  "source_output": {
+    "sector_1": "(1,[0])",
+    "sector_2": "(2,[0])",
+    "movable_kernel": [["1/2", "1/2"], ["0", "1"]],
+    "identity_kernel": [["1", "0"], ["0", "1"]],
+    "movable_endpoint_response": "1-2^(-n)",
+    "identity_endpoint_response": "0",
+    "response_order": ["propagation", "freefall", "clock", "rod", "signal"],
+    "common_residual_vector": ["0", "0", "0", "0", "0"],
+    "split_residual_vector": ["1", "1/2", "1/4", "1/4", "1/4"],
+    "formal_direction_asymmetry": "1/2",
+    "arithmetic_uncertainty": "0",
+    "obstruction_id": "OBST-P9T04-SECTOR-CAUSAL-FREEFALL-SELECTOR-ABSENT-001",
+    "case_outcome": "INCONCLUSIVE",
+    "secondary_label": "FORMAL_ANALOGY"
+  },
+  "comparison_rules": {
+    "target_comparison_may_open": false,
+    "reason": "The current source package does not select cross-sector equipment or supply physical characteristics, calibration, correction control, and a model-to-world map.",
+    "source_output_mutation_after_target_access": false,
+    "target_fit_allowed": false
+  },
+  "missing_burdens": [
+    "source-derived sector and role equipment selector",
+    "physical propagation characteristics and common calibration",
+    "local transformation law",
+    "physical free-fall trajectory and acceleration map",
+    "physical corrections and uncertainty model",
+    "target equivalence relation and tolerance",
+    "independent reproduction"
+  ],
+  "authority_limits": {
+    "seal_is_physics_proof": false,
+    "physical_null_propagation_established": false,
+    "local_inertial_behavior_established": false,
+    "universal_free_fall_established": false,
+    "benchmark_pass_established": false,
+    "benchmark_promotion_authorized": false,
+    "physics_promotion_authorized": false
+  }
+}

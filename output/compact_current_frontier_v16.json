@@ -2,7 +2,7 @@
   "schema_id": "compact_current_frontier_v16",
   "generated_from": [
     "research_control/program_state.yaml",
-    "research_control/handoffs/handoff-0917.yaml",
+    "research_control/handoffs/handoff-0918.yaml",
     "registries/DISTANCE_TO_GR_LEDGER.csv",
     "registries/METRIC_USE_LEDGER.csv",
     "research_control/current_frontier.md",
@@ -11,17 +11,17 @@
     "research_control/design/active_state_bifurcation_policy_v1.md"
   ],
   "active_state": {
-    "active_task_id": "RT-20260730-010",
-    "latest_handoff_id": "handoff-0917",
-    "current_status": "weak_field_operational_coupling_nonselection_precisely_obstructed_case_inconclusive_ready_for_checkpoint",
+    "active_task_id": "RT-20260730-011",
+    "latest_handoff_id": "handoff-0918",
+    "current_status": "causal_freefall_sector_selector_precisely_obstructed_case_inconclusive_ready_for_checkpoint",
     "v15_completed": false,
     "v16_completed": false,
     "v16_plan_registered": true
   },
   "active_state_bifurcation": {
-    "latest_research_task_id": "RT-20260730-010",
-    "latest_research_handoff_id": "handoff-0917",
-    "latest_research_next_action": "Invoke the one governed checkpoint for AJ-RT-20260730-010-001. After that commit, use one fresh bounded Candidate Constructor packet for P9-T04 to execute the distinct source-only null-propagation, local-inertial, and universal-free-fall case while carrying the P9-T02 and P9-T03 INCONCLUSIVE dispositions and the operational-coupling obstruction.",
+    "latest_research_task_id": "RT-20260730-011",
+    "latest_research_handoff_id": "handoff-0918",
+    "latest_research_next_action": "Invoke the one governed checkpoint for AJ-RT-20260730-011-001. After that commit, use one fresh bounded Candidate Constructor packet for P9-T05 to execute the next distinct source-derived benchmark case while carrying the P9-T02 through P9-T04 INCONCLUSIVE dispositions and zero benchmark passes.",
     "latest_project_system_task_id": "none",
     "latest_project_system_status": "none",
     "latest_project_system_sidecar_task_id": "none",
@@ -30,10 +30,10 @@
     "next_research_route_source": "latest_research_handoff"
   },
   "next_route": {
-    "route_id": "v21_p9_t04_causal_local_inertial_universal_freefall_source_only_case_after_p9_t03_inconclusive",
+    "route_id": "v21_p9_t05_distinct_source_derived_benchmark_case_after_p9_t04_inconclusive",
     "role_family": "candidate-constructor@0.2.0",
     "target_derivation_milestone": "benchmark_promotion",
-    "milestone_burden": "Test null propagation, local inertial behavior, and universal free fall from source dynamics and multiple physical source-matter sectors.",
+    "milestone_burden": "Execute the next distinct source-derived benchmark case under the sealed protocol and carried-forward inconclusive dispositions.",
     "requires_human_gate": false
   },
   "claim_boundary": {
@@ -565,7 +565,7 @@
           "no_benchmark_gate_chair_closure",
           "no_completed_derivation"
         ],
-        "last_evidence_path": "research_control/tasks/RT-20260730-010/artifacts/weak_field_operational_coupling_nonuniqueness_v1.tex",
+        "last_evidence_path": "research_control/tasks/RT-20260730-011/artifacts/finite_two_sector_causal_freefall_nonselection_v1.tex",
         "high_risk_status_card": {
           "object_id": "benchmark_promotion",
           "positive_status": "benchmark_promotion remains blocked by upstream derivation burdens and protected authority.",
@@ -625,14 +625,14 @@
         "layer": "post_write",
         "status": "PENDING",
         "evidence": [
-          "Final repository-wide validation follows handoff registry and derivative synchronization."
+          "Final repository-wide validation follows handoff, registry, and derivative synchronization."
         ]
       },
       {
         "layer": "post_checkpoint",
         "status": "PENDING",
         "evidence": [
-          "One governed RT-010 checkpoint remains uninvoked."
+          "One governed RT-011 checkpoint remains uninvoked."
         ]
       },
       {

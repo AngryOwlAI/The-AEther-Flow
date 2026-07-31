@@ -1,0 +1,42 @@
+schema_id: "p9_t04_equivalence_principle_residuals_v1"
+task_id: "RT-20260730-011"
+case_id: "P9-BENCH-CAUSAL-FREEFALL-V1"
+status: "completed"
+residual_definition:
+  formal_expression: "Delta(E)=(|v_1-v_2|,|F_1-F_2|,|C_1-C_2|,|R_1-R_2|,|S_1-S_2|)"
+  order: ["propagation", "freefall", "clock", "rod", "signal"]
+  arithmetic_domain: "exact rational source values"
+  arithmetic_uncertainty: "0"
+  physical_norm: "UNSET"
+  physical_units: "ABSENT"
+  physical_tolerance: "UNSET"
+  physical_uncertainty_propagation: "ABSENT"
+records:
+  - record_id: "E_common"
+    residual_vector: ["0", "0", "0", "0", "0"]
+    formal_cross_sector_equality: true
+    physical_equivalence_principle_result: "NOT_ESTABLISHED"
+  - record_id: "E_split"
+    residual_vector: ["1", "1/2", "1/4", "1/4", "1/4"]
+    formal_cross_sector_equality: false
+    physical_equivalence_principle_result: "NOT_ESTABLISHED"
+missing_burdens:
+  - "source-derived sector and role equipment selector"
+  - "physical characteristic and propagation law"
+  - "common time and length calibration"
+  - "physical free-fall trajectory and acceleration map"
+  - "source-derived local transformation law"
+  - "correction, uncertainty, and failure model"
+  - "target equivalence relation and preregistered tolerance"
+  - "independent reproduction"
+classification:
+  source_arithmetic_status: "PASS"
+  physical_equivalence_test_status: "INCONCLUSIVE"
+  secondary_label: "FORMAL_ANALOGY"
+  reason: "The exact source residuals have no derived physical codomain, and current source records do not select between the common and split equipment records."
+authority_limits:
+  equivalence_principle_established_or_refuted: false
+  preferred_frame_established_or_refuted: false
+  birefringence_established_or_refuted: false
+  benchmark_pass_established: false
+  physics_promotion_authorized: false

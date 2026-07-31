@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260730-010` and `handoff-0917`.
+`RT-20260730-011` and `handoff-0918`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260730-010` |
-| Latest handoff ID | `handoff-0917` |
-| Current status | `weak_field_operational_coupling_nonselection_precisely_obstructed_case_inconclusive_ready_for_checkpoint` |
+| Active task ID | `RT-20260730-011` |
+| Latest handoff ID | `handoff-0918` |
+| Current status | `causal_freefall_sector_selector_precisely_obstructed_case_inconclusive_ready_for_checkpoint` |
 | V16 completed | false |
 | Current route family | benchmark or recovery (scientific) |
 | Target derivation milestone | `benchmark_promotion` |
 | Current burden | `benchmark_promotion` |
-| Required next authority | One governed RT-010 checkpoint and then one separately claimed source-only P9-T04 causal, local-inertial, and universal-free-fall case. |
-| Next recommended action | Invoke the one governed checkpoint for AJ-RT-20260730-010-001. After that commit, use one fresh bounded Candidate Constructor packet for P9-T04 to execute the distinct source-only null-propagation, local-inertial, and universal-free-fall case while carrying the P9-T02 and P9-T03 INCONCLUSIVE dispositions and the operational-coupling obstruction. |
+| Required next authority | One governed RT-011 checkpoint and then one separately claimed source-only P9-T05 benchmark case. |
+| Next recommended action | Invoke the one governed checkpoint for AJ-RT-20260730-011-001. After that commit, use one fresh bounded Candidate Constructor packet for P9-T05 to execute the next distinct source-derived benchmark case while carrying the P9-T02 through P9-T04 INCONCLUSIVE dispositions and zero benchmark passes. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260730-010` |
-| Latest research handoff ID | `handoff-0917` |
-| Latest research next action | Invoke the one governed checkpoint for AJ-RT-20260730-010-001. After that commit, use one fresh bounded Candidate Constructor packet for P9-T04 to execute the distinct source-only null-propagation, local-inertial, and universal-free-fall case while carrying the P9-T02 and P9-T03 INCONCLUSIVE dispositions and the operational-coupling obstruction. |
+| Latest research task ID | `RT-20260730-011` |
+| Latest research handoff ID | `handoff-0918` |
+| Latest research next action | Invoke the one governed checkpoint for AJ-RT-20260730-011-001. After that commit, use one fresh bounded Candidate Constructor packet for P9-T05 to execute the next distinct source-derived benchmark case while carrying the P9-T02 through P9-T04 INCONCLUSIVE dispositions and zero benchmark passes. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260730-010/00_TASK.yaml`.
-- Active task objective: Derive source-only weak-field potentials or typed analogues, free-fall responses, redshift, and clock-rate relations from the fixed source package, or return an exact obstruction without importing target formulas.
-- Latest handoff path: `research_control/handoffs/handoff-0917.yaml`.
-- Latest handoff summary: P9-T03 constructs an exact finite weak closure response and normalized Clock_src Signal_src and FreeFall_src response family. Two target-free coefficient records satisfy identical source constraints but yield distinct leading outputs, proving that the current sources do not select the operational coupling law needed for unique physical weak-field predictions. The case is INCONCLUSIVE with secondary FORMAL_ANALOGY, zero target comparisons, zero passes, and no promotion.
+- Active task path: `research_control/tasks/RT-20260730-011/00_TASK.yaml`.
+- Active task objective: Derive source-only null propagation, local inertial behavior, and universal free fall from multiple physically interpreted source-matter sectors, or return an exact obstruction without importing target null cones, geodesics, Lorentz transforms, or desired-agreement formulas.
+- Latest handoff path: `research_control/handoffs/handoff-0918.yaml`.
+- Latest handoff summary: P9-T04 constructs exact formal propagation and P7 operational-device traces in two physically interpreted source sectors. A common task-local equipment record gives zero sector residuals, while a split record gives the exact vector (1,1/2,1/4,1/4,1/4), proving that the current sources do not select the sector/role equipment and calibration law required for physical causal, local-inertial, or universal-free-fall recovery. The case is INCONCLUSIVE with secondary FORMAL_ANALOGY, zero target comparisons, zero passes, and no promotion.
 - Current route family: benchmark or recovery (scientific).
-- Next recommended action: Invoke the one governed checkpoint for AJ-RT-20260730-010-001. After that commit, use one fresh bounded Candidate Constructor packet for P9-T04 to execute the distinct source-only null-propagation, local-inertial, and universal-free-fall case while carrying the P9-T02 and P9-T03 INCONCLUSIVE dispositions and the operational-coupling obstruction.
+- Next recommended action: Invoke the one governed checkpoint for AJ-RT-20260730-011-001. After that commit, use one fresh bounded Candidate Constructor packet for P9-T05 to execute the next distinct source-derived benchmark case while carrying the P9-T02 through P9-T04 INCONCLUSIVE dispositions and zero benchmark passes.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -98,7 +98,7 @@ Open or blocked physical targets:
 | --- | --- | --- | --- | --- |
 | matter_coupling | accepted_as_scoped_evidence_precondition | The exact protected verdict is ADOPTED_AS_CANONICAL_PHYSICAL_MATTER_BY_EXPLICIT_HUMAN_POSTULATE for the unchanged P7-T01 through P7-T06 package within its declared finite domains and the current continuum-first source architecture. This discharges the protected constitutive decision burden but does not supply a first-principles derivation: OBST-P7T07-CROSS-LAYER-COMPOSITION-GAP-001 remains open_derivational_gap_after_constitutive_adoption, current ontology still does not derive the adopted meanings, and P6 Gate B supplies no effective-geometry input. | no_source_law_adoption<br>no_canonical_ontology_edit<br>no_metricdata_e_adoption<br>no_geff_scope_expansion<br>no_coupling_law_adoption<br>no_matter_coupling_derivation<br>no_matter_coupling_adoption<br>no_stress_energy_semantics<br>no_stress_energy_tensor<br>no_matter_action<br>no_detector_semantics<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation<br>no_future_source_extension_impossibility<br>no_global_theory_rejection | research_control/tasks/RT-20260729-001/artifacts/p7_t08_gate_c_decision_v1.tex |
 | einstein_equations | not_started | physical gravitational interpretation target field equations and Einstein-leading recovery | no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation<br>no_global_theory_rejection<br>no_future_source_extension_impossibility | research_control/tasks/RT-20260729-011/artifacts/p8_t07_gate_d_decision_v1.tex |
-| benchmark_promotion | blocked | all upstream derivation burdens | no_benchmark_promotion<br>no_benchmark_gate_chair_closure<br>no_completed_derivation | research_control/tasks/RT-20260730-010/artifacts/weak_field_operational_coupling_nonuniqueness_v1.tex |
+| benchmark_promotion | blocked | all upstream derivation burdens | no_benchmark_promotion<br>no_benchmark_gate_chair_closure<br>no_completed_derivation | research_control/tasks/RT-20260730-011/artifacts/finite_two_sector_causal_freefall_nonselection_v1.tex |
 
 Forbidden overreads:
 
@@ -293,7 +293,7 @@ preserves the raw ledger `current_status` field for continuity.
 | `matter_coupling` | `matter_coupling` | accepted only as scoped source-extension evidence/precondition | accepted | accepted_as_scoped_evidence_precondition | parameterized_finite_local_witness_precondition | not_matter_coupling_not_stress_energy_not_matter_action_not_detector_semantics | scoped_source_evidence_only | no_source_law_adoption<br>no_canonical_ontology_edit<br>no_metricdata_e_adoption<br>no_geff_scope_expansion<br>no_coupling_law_adoption<br>no_matter_coupling_derivation<br>no_matter_coupling_adoption<br>no_stress_energy_semantics<br>no_stress_energy_tensor<br>no_matter_action<br>no_detector_semantics<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation<br>no_future_source_extension_impossibility<br>no_global_theory_rejection | `research_control/tasks/RT-20260729-001/artifacts/p7_t08_gate_c_decision_v1.tex` |
 | `einstein_equations` | `einstein_equations` | not started; no positive derivation status | draft object exists | not_started | dynamics_action_or_variation_missing | no_field_equation_derivation | none | no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation<br>no_global_theory_rejection<br>no_future_source_extension_impossibility | `research_control/tasks/RT-20260729-011/artifacts/p8_t07_gate_d_decision_v1.tex` |
 | `finite_variation_robustness` | `source_equivalence_eqsrc` | Refuter stress passed | Refuter stress passed | refuter_stress_passed | conditional_theorem_candidate | downstream_gr_blocked | draft_control_only | no_source_law_adoption<br>no_matter_coupling_derivation<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/tasks/RT-20260614-101/artifacts/142_RESP_LC_M_SRC_GSC_FINITE_VARIATION_ROBUSTNESS_LAW_REFUTER_STRESS_TEST.tex` |
-| `benchmark_promotion` | `benchmark_promotion` | no benchmark promotion from scoped evidence/precondition alone | blocked by missing primitive | blocked | upstream_burdens_missing | no_exact_gr_benchmark_promotion | none | no_benchmark_promotion<br>no_benchmark_gate_chair_closure<br>no_completed_derivation | `research_control/tasks/RT-20260730-010/artifacts/weak_field_operational_coupling_nonuniqueness_v1.tex` |
+| `benchmark_promotion` | `benchmark_promotion` | no benchmark promotion from scoped evidence/precondition alone | blocked by missing primitive | blocked | upstream_burdens_missing | no_exact_gr_benchmark_promotion | none | no_benchmark_promotion<br>no_benchmark_gate_chair_closure<br>no_completed_derivation | `research_control/tasks/RT-20260730-011/artifacts/finite_two_sector_causal_freefall_nonselection_v1.tex` |
 | `gate_chair_status` | `benchmark_promotion` | human-gated verdict authority only | human-gated | human_gated | protected_verdict_missing | no_benchmark_closure | human_gate_required | no_benchmark_gate_chair_closure<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/approvals/README.md` |
 | `finite_toy_metric_response` | `finite_toy_metric_response` | frozen negative local toy route only | frozen negative | frozen_negative | tag_removal_obstruction | local_toy_route_frozen_not_global_theory_rejection | frozen_negative_no_promotion | no_geff_scope_expansion<br>no_matter_coupling_derivation<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation<br>no_global_theory_rejection<br>no_future_source_extension_impossibility | `research_control/tasks/RT-20260614-055/artifacts/96_RESP_LC_FINITE_TOY_METRIC_RESPONSE_MODEL_REFUTER_STRESS_TEST.tex` |
 
@@ -302,7 +302,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Invoke the one governed checkpoint for AJ-RT-20260730-010-001. After that commit, use one fresh bounded Candidate Constructor packet for P9-T04 to execute the distinct source-only null-propagation, local-inertial, and universal-free-fall case while carrying the P9-T02 and P9-T03 INCONCLUSIVE dispositions and the operational-coupling obstruction.
+Invoke the one governed checkpoint for AJ-RT-20260730-011-001. After that commit, use one fresh bounded Candidate Constructor packet for P9-T05 to execute the next distinct source-derived benchmark case while carrying the P9-T02 through P9-T04 INCONCLUSIVE dispositions and zero benchmark passes.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -327,10 +327,10 @@ Validation layers:
 
 | Validation layer | Status | Meaning | Evidence |
 | --- | --- | --- | --- |
-| `pre_execution` | PASS | receipt complete | Generation 178 route claim lease repository binding effort and clean manifest validated. |
-| `completion_internal` | PASS | receipt complete | Exact source hashes rational calculation positivity normalization DAG seal exposure parent-child and no-fog checks pass.<br>Task-local validator passes 82 of 82 checks and scratch TeX compilation passes. |
-| `post_write` | PENDING | open item; evidence must explain why | Final repository-wide validation follows handoff registry and derivative synchronization. |
-| `post_checkpoint` | PENDING | open item; evidence must explain why | One governed RT-010 checkpoint remains uninvoked. |
+| `pre_execution` | PASS | receipt complete | Generation 179 route claim, repository binding, reasoning effort, clean manifest, and dependency checkpoint 29a277cd were validated. |
+| `completion_internal` | PASS | receipt complete | Exact source hashes, kernel arithmetic, residual vectors, DAG, seal, exposure, parent-child, and no-fog checks pass.<br>Task-local validator passes 20 of 20 checks and scratch TeX compilation passes. |
+| `post_write` | PENDING | open item; evidence must explain why | Final repository-wide validation follows handoff, registry, and derivative synchronization. |
+| `post_checkpoint` | PENDING | open item; evidence must explain why | One governed RT-011 checkpoint remains uninvoked. |
 | `renderer` | PENDING | open item; evidence must explain why | Final render-and-check pass follows this handoff. |
 | `memory_bootstrap` | PENDING | open item; evidence must explain why | Final tracked memory synchronization and validate-only pass remain. |
 | `claim_language_linter` | PENDING | open item; evidence must explain why | Changed-source claim-language validation remains in the precheckpoint stack. |
@@ -363,9 +363,9 @@ Authorization layers:
 
 Legacy compatibility records:
 
-- active task: `RT-20260730-010`;
-- latest handoff: `handoff-0917`;
-- current status: `weak_field_operational_coupling_nonselection_precisely_obstructed_case_inconclusive_ready_for_checkpoint`;
+- active task: `RT-20260730-011`;
+- latest handoff: `handoff-0918`;
+- current status: `causal_freefall_sector_selector_precisely_obstructed_case_inconclusive_ready_for_checkpoint`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -375,8 +375,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0917.yaml`
-- `research_control/tasks/RT-20260730-010/00_TASK.yaml`
+- `research_control/handoffs/handoff-0918.yaml`
+- `research_control/tasks/RT-20260730-011/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -392,7 +392,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0917*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0918*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

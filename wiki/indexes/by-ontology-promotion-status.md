@@ -439,6 +439,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V21-P9-T01-SOURCE-DERIVED-BENCHMARK-PROTOCOL-V1` `research_control/tasks/RT-20260729-012/artifacts/source_derived_benchmark_protocol_v1.tex`
 - `TEX-V21-P9-T02-FINITE-SOURCE-NULL-BACKGROUND-BENCHMARK-ATTEMPT-V1` `research_control/tasks/RT-20260730-008/artifacts/finite_source_null_background_benchmark_attempt_v1.tex`
 - `TEX-V21-P9-T03-WEAK-FIELD-OPERATIONAL-COUPLING-NONUNIQUENESS-V1` `research_control/tasks/RT-20260730-010/artifacts/weak_field_operational_coupling_nonuniqueness_v1.tex`
+- `TEX-V21-P9-T04-FINITE-TWO-SECTOR-CAUSAL-FREEFALL-NONSELECTION-V1` `research_control/tasks/RT-20260730-011/artifacts/finite_two_sector_causal_freefall_nonselection_v1.tex`
 
 ## superseded
 

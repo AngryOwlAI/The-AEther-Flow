@@ -1,0 +1,296 @@
+handoff_id: "handoff-0918"
+handoff_number: 918
+task_id: "RT-20260730-011"
+decision_id: "DDR-20260730-011"
+job_id: "AJ-RT-20260730-011-001"
+completion_id: "AJC-AJ-RT-20260730-011-001"
+completion_path: "research_control/tasks/RT-20260730-011/jobs/completions/AJC-AJ-RT-20260730-011-001.yaml"
+completion_sha256: "30f3b17f9314e23b81bd7adbfcaee30b1cce0bee92a7eae4106430d984c1430b"
+status: "ready_after_checkpoint"
+created_at: "2026-07-30T23:41:30Z"
+parent_handoff_id: "handoff-0917"
+plan_task_id: "P9-T05"
+source_role_id: "candidate-constructor"
+source_role_version: "0.2.0"
+source_execution_role_ref: "candidate-constructor@0.2.0--RT-20260730-011"
+summary: "P9-T04 constructs exact formal propagation and P7 operational-device traces in two physically interpreted source sectors. A common task-local equipment record gives zero sector residuals, while a split record gives the exact vector (1,1/2,1/4,1/4,1/4), proving that the current sources do not select the sector/role equipment and calibration law required for physical causal, local-inertial, or universal-free-fall recovery. The case is INCONCLUSIVE with secondary FORMAL_ANALOGY, zero target comparisons, zero passes, and no promotion."
+next_action: "Invoke the one governed checkpoint for AJ-RT-20260730-011-001. After that commit, use one fresh bounded Candidate Constructor packet for P9-T05 to execute the next distinct source-derived benchmark case while carrying the P9-T02 through P9-T04 INCONCLUSIVE dispositions and zero benchmark passes."
+current_claim_boundary: "CB-V21-P9-T04-CAUSAL-FREEFALL-SECTOR-NONSELECTION-001"
+loop_risk_route: "distinct_benchmark_case_after_local_freeze"
+p9_t02_outcome: "INCONCLUSIVE"
+p9_t03_outcome: "INCONCLUSIVE"
+p9_t04_outcome: "INCONCLUSIVE"
+p9_t04_secondary_label: "FORMAL_ANALOGY"
+p9_t04_executed: true
+p9_t05_executed: false
+
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260730-011"
+  latest_research_handoff_id: "handoff-0918"
+  latest_research_next_action: "Invoke the one governed checkpoint for AJ-RT-20260730-011-001. After that commit, use one fresh bounded Candidate Constructor packet for P9-T05 to execute the next distinct source-derived benchmark case while carrying the P9-T02 through P9-T04 INCONCLUSIVE dispositions and zero benchmark passes."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+
+claim_boundary:
+  allowed_next_scope: "One governed RT-011 checkpoint and then one separately claimed source-only P9-T05 benchmark case."
+  completed_task: "RT-20260730-011"
+  completed_completion_path: "research_control/tasks/RT-20260730-011/jobs/completions/AJC-AJ-RT-20260730-011-001.yaml"
+  completed_completion_sha256: "30f3b17f9314e23b81bd7adbfcaee30b1cce0bee92a7eae4106430d984c1430b"
+  source_handoff_id: "handoff-0917"
+  source_handoff_path: "research_control/handoffs/handoff-0917.yaml"
+  immutable_route_sha256: "41bbf97cd126df07fd97ddf65202a22c734ce44d20710ff96d170b0dfa4f742e"
+  route_blocker_fingerprint: "a1cfc01f302abe523cd299c02ef430102c9e86e656adfe0ab2547dc62c26453d"
+  source_artifact_path: "research_control/tasks/RT-20260730-011/artifacts/finite_two_sector_causal_freefall_nonselection_v1.tex"
+  source_artifact_sha256: "7f5ef217faba0b4005885bed7a88cf9941c39b495976530bc912c5c742bc5124"
+  case_path: "research_control/tasks/RT-20260730-011/artifacts/p9_t04_causal_freefall_case_v1.yaml"
+  case_sha256: "f3ee6d0d7c19f68daf9f6ed9a2e10cec964633694688cc62074edc9089f66255"
+  source_seal_path: "research_control/tasks/RT-20260730-011/artifacts/p9_t04_source_output_seal_v1.json"
+  source_seal_sha256: "852e029864b6ac3ee3d7f4803c7787049d9d23d2a9c5efc2bfdedbc324a3eb60"
+  obstruction_id: "OBST-P9T04-SECTOR-CAUSAL-FREEFALL-SELECTOR-ABSENT-001"
+  checkpoint_invocation_count_before_handoff: 0
+  checkpoint_committed_before_handoff: false
+  source_stage_executed: true
+  source_stage_firewall_passed: true
+  source_output_sealed: true
+  target_comparison_oracle_invoked: false
+  target_informed_rerun_count: 0
+  independent_reproduction_acquired: false
+  executed_case_count: 1
+  cumulative_executed_case_count: 3
+  cumulative_inconclusive_case_count: 3
+  passed_case_count: 0
+  physical_null_propagation_established: false
+  physical_local_inertial_behavior_established: false
+  physical_universal_freefall_established: false
+  equivalence_principle_established_or_refuted: false
+  effective_geometry_established: false
+  Gate_D_changed: false
+  Gate_E_verdict_issued: false
+  scientific_status_changed: true
+  scientific_status_change_scope: "exact finite two-sector operational-response counterfamily and precise current-source sector/role selector nonselection obstruction only"
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  ontology_adoption_authorized: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_performed: false
+  blocked_claims:
+    - "formal address-hop slope presented as physical propagation speed or a null cone"
+    - "source-token equality presented as local Lorentz invariance local-inertial behavior or the equivalence principle"
+    - "source endpoint response presented as a physical trajectory acceleration or universal free fall"
+    - "kernel direction asymmetry presented as a preferred-frame or birefringence result"
+    - "the common equipment record presented as a derived or adopted selector law"
+    - "same-context validation presented as independent reproduction"
+    - "P9-T04 presented as a benchmark pass"
+    - "Gate D or Gate E presented as changed"
+    - "P9-T05 presented as executed before the RT-011 checkpoint"
+    - "effective geometry Einstein equations exact-GR recovery benchmark promotion proof publication push or completed derivation"
+    - "scoped obstruction presented as global no-go or future impossibility"
+
+plan_result:
+  plan_task_id: "P9-T04"
+  next_plan_task_id: "P9-T05"
+  title: "Recover null propagation, local inertial behavior, and universal free fall"
+  result_status: "P9_T04_SECTOR_OPERATIONAL_SELECTOR_NONSELECTION_OBSTRUCTION_CASE_INCONCLUSIVE_READY_FOR_CHECKPOINT"
+  work_item_status: "completed"
+  two_sector_response_constructed: true
+  common_and_split_records_executed: true
+  exact_residual_counterfamily_constructed: true
+  source_output_sealed: true
+  case_outcome: "INCONCLUSIVE"
+  secondary_label: "FORMAL_ANALOGY"
+  physical_causal_local_inertial_freefall_recovery_established: false
+  benchmark_pass_count: 0
+  p9_t05_dependency_ready_after_checkpoint: true
+  p9_t05_dependency_ready_now: false
+  p9_t05_executed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+distance_to_gr:
+  changed: false
+  effect: "obstruction_recorded_no_physical_delta"
+  burden_id: "benchmark_promotion"
+  milestone: "benchmark_promotion"
+  ledger_row_updated: true
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "The row gains the exact P9-T04 two-sector selector nonselection obstruction and residual path, but remains blocked with zero physical benchmark passes."
+  downstream_unlocked:
+    - "none"
+  downstream_still_blocked:
+    - "physical null propagation and local inertial behavior"
+    - "universal free fall and equivalence principle"
+    - "effective geometry"
+    - "matter coupling"
+    - "Einstein equations"
+    - "exact-GR recovery"
+    - "benchmark promotion"
+
+required_next_packet:
+  task_type: "v21_p9_t05_source_derived_benchmark_case"
+  plan_task_id: "P9-T05"
+  objective: "Execute the next distinct source-derived benchmark case under the sealed protocol without reusing P9-T04 formal residuals as physical results."
+  output_requirement: "One sealed source-only case execution with declared corrections and model-to-world map, or one exact inconclusive or obstruction result."
+  dependency_qualification: "P9-T04 is finalized as an exact two-sector counterfamily plus INCONCLUSIVE physical case; the RT-011 checkpoint must commit first."
+  dependency_ready_after_checkpoint: true
+  dependency_ready_now: false
+  exact_human_authorization_required: false
+  p9_t02_outcome_carried_forward: "INCONCLUSIVE"
+  p9_t03_outcome_carried_forward: "INCONCLUSIVE"
+  p9_t04_outcome_carried_forward: "INCONCLUSIVE"
+  cumulative_benchmark_pass_count: 0
+  selector_obstruction_carried_forward: "OBST-P9T04-SECTOR-CAUSAL-FREEFALL-SELECTOR-ABSENT-001"
+  executed: false
+
+selected_next_route:
+  route_id: "v21_p9_t05_distinct_source_derived_benchmark_case_after_p9_t04_inconclusive"
+  route_label: "benchmark-recovery-packet"
+  role_family: "candidate-constructor@0.2.0"
+  worker_skill: "continue-research"
+  selected_next_packet_type: "source_only_remaining_benchmark_case"
+  task_type: "v21_p9_t05_source_derived_benchmark_case"
+  plan_task_id: "P9-T05"
+  target_derivation_milestone: "benchmark_promotion"
+  milestone_burden: "Execute the next distinct source-derived benchmark case under the sealed protocol and carried-forward inconclusive dispositions."
+  strategy_id: "construct_p9_t05_distinct_source_derived_benchmark_case_v1"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  p9_t02_outcome_carried_forward: "INCONCLUSIVE"
+  p9_t03_outcome_carried_forward: "INCONCLUSIVE"
+  p9_t04_outcome_carried_forward: "INCONCLUSIVE"
+  cumulative_benchmark_pass_count: 0
+  target_informed_source_repair_authorized: false
+  benchmark_result_preestablished: false
+  Gate_E_verdict_preestablished: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  executed: false
+  next_action: "Remain unexecuted until the RT-011 governed checkpoint commits."
+  source_handoff: "research_control/handoffs/handoff-0918.yaml"
+
+ordinary_route_guard:
+  schema_id: "ordinary_route_guard_evaluation_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  evaluation_id: "ORE-HANDOFF-0918"
+  ordinary_handoff_id: "handoff-0918"
+  threshold: 3
+  consecutive_project_system_tasks_before_selection: 0
+  ready_science_plan_task_ids:
+    - "P9-T05"
+    - "P14-T04"
+  selected_plan_task_id: "P9-T05"
+  selected_route_class: "physics_bearing"
+  selected_worker_skill: "continue-research"
+  outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  exception_receipt:
+    active: false
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+active_state_boundary:
+  active_task_id: "RT-20260730-011"
+  active_job_id: "AJ-RT-20260730-011-001"
+  current_status: "causal_freefall_sector_selector_precisely_obstructed_case_inconclusive_ready_for_checkpoint"
+  checkpoint_required: true
+  checkpoint_completed: false
+  checkpoint_invocation_count: 0
+  p9_t04_completed: true
+  p9_t04_outcome: "INCONCLUSIVE"
+  selected_next_plan_task_id: "P9-T05"
+  selected_next_worker_skill: "continue-research"
+  selected_next_role_family: "candidate-constructor@0.2.0"
+  selected_next_route_label: "benchmark-recovery-packet"
+  selected_next_strategy_id: "construct_p9_t05_distinct_source_derived_benchmark_case_v1"
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 179 route claim, repository binding, reasoning effort, clean manifest, and dependency checkpoint 29a277cd were validated."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Exact source hashes, kernel arithmetic, residual vectors, DAG, seal, exposure, parent-child, and no-fog checks pass."
+      - "Task-local validator passes 20 of 20 checks and scratch TeX compilation passes."
+  post_write:
+    status: "PENDING"
+    evidence:
+      - "Final repository-wide validation follows handoff, registry, and derivative synchronization."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "One governed RT-011 checkpoint remains uninvoked."
+  renderer:
+    status: "PENDING"
+    evidence:
+      - "Final render-and-check pass follows this handoff."
+  memory_bootstrap:
+    status: "PENDING"
+    evidence:
+      - "Final tracked memory synchronization and validate-only pass remain."
+  claim_language_linter:
+    status: "PENDING"
+    evidence:
+      - "Changed-source claim-language validation remains in the precheckpoint stack."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "none"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  publication_authorized: false
+  proof_authority: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  canonical_ontology_edit_authorized: false
+  ontology_selection_authorized: false
+  physical_interpretation_establishment_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required_no_nonblank_signals"
+  rationale: "The bounded P9-T04 physics packet emits no project-improvement signal."
+
+handoff_authority_boundary:
+  canonical_sources_unchanged: true
+  scientific_status_changed: true
+  scientific_status_change_scope: "task-local finite two-sector operational-response counterfamily and precise current-source sector/role selector nonselection obstruction only"
+  physical_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false

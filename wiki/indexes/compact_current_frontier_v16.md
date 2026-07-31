@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260730-010`
-- Latest handoff: `handoff-0917`
-- Current status: `weak_field_operational_coupling_nonselection_precisely_obstructed_case_inconclusive_ready_for_checkpoint`
+- Active task: `RT-20260730-011`
+- Latest handoff: `handoff-0918`
+- Current status: `causal_freefall_sector_selector_precisely_obstructed_case_inconclusive_ready_for_checkpoint`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260730-010`
-- Latest research handoff: `handoff-0917`
-- Latest research next action: Invoke the one governed checkpoint for AJ-RT-20260730-010-001. After that commit, use one fresh bounded Candidate Constructor packet for P9-T04 to execute the distinct source-only null-propagation, local-inertial, and universal-free-fall case while carrying the P9-T02 and P9-T03 INCONCLUSIVE dispositions and the operational-coupling obstruction.
+- Latest research task: `RT-20260730-011`
+- Latest research handoff: `handoff-0918`
+- Latest research next action: Invoke the one governed checkpoint for AJ-RT-20260730-011-001. After that commit, use one fresh bounded Candidate Constructor packet for P9-T05 to execute the next distinct source-derived benchmark case while carrying the P9-T02 through P9-T04 INCONCLUSIVE dispositions and zero benchmark passes.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p9_t04_causal_local_inertial_universal_freefall_source_only_case_after_p9_t03_inconclusive`
+- Route ID: `v21_p9_t05_distinct_source_derived_benchmark_case_after_p9_t04_inconclusive`
 - Role family: `candidate-constructor@0.2.0`
 - Target milestone: `benchmark_promotion`
-- Milestone burden: Test null propagation, local inertial behavior, and universal free fall from source dynamics and multiple physical source-matter sectors.
+- Milestone burden: Execute the next distinct source-derived benchmark case under the sealed protocol and carried-forward inconclusive dispositions.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `8b53105ba5153ddbf6b5432a6d3d51290004e61fb5a78729a711bd4c10f0f003`
-- JSON SHA-256: `5bd062c14d520b8af1a80b6788b2615f901025c6bd8f7c6fedc5548547fa54c9`
+- YAML SHA-256: `36141886c88fe8577f8b249f3301863d001033a5eec779fbccbc8eaa709aeb96`
+- JSON SHA-256: `e67768d464a83ac77a25cdf6a79a616fa69efff41b487d8e0436e2d547dc5f62`
 
 ## Authority Warning
 

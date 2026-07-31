@@ -1,0 +1,268 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,booktabs,array}
+\usepackage[margin=1in]{geometry}
+\usepackage[hidelinks]{hyperref}
+
+\title{Finite Two-Sector Causal and Free-Fall Nonselection\\
+\large P9-T04 source-only benchmark packet}
+\author{Candidate Constructor, RT-20260730-011}
+\date{2026-07-30}
+
+\newcommand{\Sec}{\operatorname{Sec}_{\rm src}}
+\newcommand{\Clock}{\mathrm{Clock}_{\rm src}}
+\newcommand{\Rod}{\mathrm{Rod}_{\rm src}}
+\newcommand{\Signal}{\mathrm{Signal}_{\rm src}}
+\newcommand{\FreeFall}{\mathrm{FreeFall}_{\rm src}}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This draft/control packet executes only P9-T04 of
+\emph{SourceDerivedBenchmarkProtocol\_v1}.  It constructs exact finite
+propagation, clock, rod, signal, and free-fall response traces in two
+physically interpreted P7 source sectors.  Two task-local equipment records
+are compatible with the current source package: one gives identical formal
+responses in both sectors, while the other gives sector-dependent responses.
+The current ontology therefore does not derive a selector from source sector
+and operational role to control, equipment, physical calibration, and a
+model-to-world map.  The result is a precise scoped obstruction.  The
+benchmark case is \texttt{INCONCLUSIVE}, with secondary label
+\texttt{FORMAL\_ANALOGY}; no target comparison is opened and no benchmark
+pass follows.
+\end{abstract}
+
+\section{Authority and claim boundary}
+
+The P7-T08 decision adopts the unchanged P7 finite matter, transition, and
+operational-device package as physical \emph{source-side} structure within its
+declared domain.  It does not identify a source update index with physical
+time, a source address with physical distance, a transition support with a
+null cone, or a device-token response with a target-spacetime observable.
+P9-T02 and P9-T03 are carried forward as \texttt{INCONCLUSIVE} with zero
+benchmark passes.
+
+The present construction may establish exact finite source arithmetic and a
+current-source nonselection result.  It does not establish physical
+propagation speed, a principal symbol, a causal cone, local Lorentz
+invariance, a local inertial frame, universal physical free fall, the
+equivalence principle, an effective metric, an Einstein equation, or
+exact-GR recovery.
+
+\section{Two physical source sectors}
+
+Use two explicit sectors already exhibited by the P7 finite source package:
+\[
+  \sigma_1=(1,[0]),\qquad \sigma_2=(2,[0]).
+\]
+The first is the P7 positive-control sector and the second is the P7
+interacting-control sector.  For the bounded comparison, each sector is
+represented on the same two-state carrier \(X=\{x_0,x_1\}\), with initial
+row-vector distribution \(\mu_0=(1,0)\).
+
+The exact forward-enabled and identity-only kernels are
+\[
+ U_{\rm mov}=
+ \begin{pmatrix}
+  \tfrac12&\tfrac12\\[2pt]
+  0&1
+ \end{pmatrix},
+ \qquad
+ U_{\rm id}=
+ \begin{pmatrix}
+  1&0\\[2pt]
+  0&1
+ \end{pmatrix}.
+\]
+These are row-vector conventions.  Hence
+\[
+ \mu_0 U_{\rm mov}^{\,n}
+   =\bigl(2^{-n},1-2^{-n}\bigr),\qquad
+ \mu_0 U_{\rm id}^{\,n}=(1,0).
+\]
+The endpoint-arrival functional is therefore
+\[
+ A_{\rm mov}(n)=1-2^{-n},\qquad A_{\rm id}(n)=0 .
+\]
+All displayed values are exact rational numbers; the arithmetic uncertainty
+is zero.
+
+\section{Formal source propagation}
+
+Define the first positive endpoint-response index
+\[
+ n_\star(U)=\inf\{n\in\mathbb N_{\geq 1}:A_U(n)>0\}
+\]
+and the bookkeeping slope
+\[
+ v_{\rm src}(U)=
+ \begin{cases}
+  1/n_\star(U),&n_\star(U)<\infty,\\
+  0,&n_\star(U)=\infty.
+ \end{cases}
+\]
+Then
+\[
+ n_\star(U_{\rm mov})=1,\quad v_{\rm src}(U_{\rm mov})=1,
+ \qquad
+ n_\star(U_{\rm id})=\infty,\quad v_{\rm src}(U_{\rm id})=0.
+\]
+The symbol \(v_{\rm src}\) is only address-hops per formal update index.  It
+has no physical units and is not a physical propagation speed.
+
+\section{Operational response functionals}
+
+Use the exact P7 operational forms on the forward-enabled control:
+\[
+\begin{aligned}
+ C(U)&:=\Clock\text{ tick response at horizon }2,\\
+ R(U)&:=\Rod\text{ endpoint response at horizon }2,\\
+ S(U)&:=\Signal\text{ arrival response at horizon }2,\\
+ F(U)&:=\FreeFall\text{ endpoint response at horizon }1.
+\end{aligned}
+\]
+For \(U_{\rm mov}\), the P7 traces give
+\[
+ C(U_{\rm mov})=R(U_{\rm mov})=S(U_{\rm mov})=\frac14,
+ \qquad F(U_{\rm mov})=\frac12.
+\]
+For \(U_{\rm id}\), the corresponding no-event forms give
+\[
+ C(U_{\rm id})=R(U_{\rm id})=S(U_{\rm id})=F(U_{\rm id})=0.
+\]
+These are source-token response probabilities.  They are not clock rates,
+rod lengths, signal velocities, trajectories, or accelerations in a physical
+spacetime.
+
+\section{Two admissible equipment records}
+
+The records below are task-local source-extension data used only to test
+nonselection.  Neither is adopted as a source law.
+
+\paragraph{Common record \(\mathcal E_{\rm com}\).}
+Equip both \(\sigma_1\) and \(\sigma_2\) with \(U_{\rm mov}\) and the same P7
+operational forms.  Both sectors then have
+\[
+ (v_{\rm src},F,C,R,S)
+   =\left(1,\frac12,\frac14,\frac14,\frac14\right).
+\]
+
+\paragraph{Split record \(\mathcal E_{\rm split}\).}
+Equip \(\sigma_1\) with \(U_{\rm mov}\) and equip \(\sigma_2\) with the
+P7-valid identity-only controls and no-event forms.  The sector records are
+\[
+\begin{aligned}
+ \sigma_1 &:\
+ \left(1,\frac12,\frac14,\frac14,\frac14\right),\\
+ \sigma_2 &:\
+ (0,0,0,0,0).
+\end{aligned}
+\]
+Both records are target-free.  P7 supplies both forward-enabled and
+identity-only valid controls, while the sector record does not choose a
+control/equipment family for each operational role.
+
+\section{Exact sector residuals}
+
+For an equipment record \(\mathcal E\), define
+\[
+ \Delta(\mathcal E)=
+ \left(
+ |v_1-v_2|,
+ |F_1-F_2|,
+ |C_1-C_2|,
+ |R_1-R_2|,
+ |S_1-S_2|
+ \right).
+\]
+Direct substitution gives
+\[
+ \boxed{\Delta(\mathcal E_{\rm com})=(0,0,0,0,0)}
+\]
+and
+\[
+ \boxed{\Delta(\mathcal E_{\rm split})=
+ \left(1,\frac12,\frac14,\frac14,\frac14\right)}.
+\]
+The movable kernel also has the formal direction-asymmetry diagnostic
+\[
+ \bigl|U_{\rm mov}(x_0,x_1)-U_{\rm mov}(x_1,x_0)\bigr|=\frac12.
+\]
+This is a support/kernel fact, not a preferred-frame or birefringence
+measurement.
+
+\section{Local-inertial and universality audit}
+
+The common record proves only that exact formal equality across two sectors
+is constructible.  A physical local-inertial claim would additionally need:
+\begin{enumerate}
+  \item reciprocal physical propagation support and a derived characteristic
+        problem;
+  \item a common physical time and length calibration;
+  \item a source-derived local transformation law;
+  \item a model-to-world map with units, uncertainty, and failure conditions;
+  \item a source law selecting the same physical equipment for every relevant
+        matter sector.
+\end{enumerate}
+None of these objects is supplied by the current source package.  The split
+record also shows that sector equality itself is not selected.  Consequently
+no local inertial approximation or universal physical free-fall law is
+constructed.
+
+\section{Nonselection theorem}
+
+\textbf{Theorem (sector causal/free-fall nonselection).}
+\nolinkurl{P9T04-THM-SECTOR-CAUSAL-FREEFALL-NONSELECTION-001}.
+Within the fixed P7 physical source-side package and the P9 source-stage
+firewall, the displayed two-sector data admit both
+\(\mathcal E_{\rm com}\) and \(\mathcal E_{\rm split}\).  Their exact residual
+vectors differ.  Therefore the current ontology does not derive a total
+selector
+\[
+ \Lambda_{\rm op}:
+ \bigl(\Sec,\text{ operational role}\bigr)
+ \longrightarrow
+ \bigl(\text{control},\text{equipment},
+       \text{physical calibration},\text{model-to-world map}\bigr)
+\]
+that fixes causal and free-fall responses across the two sectors.
+
+\textit{Proof.}
+The kernel powers and response values above give the two residual vectors by
+exact rational arithmetic.  The P7 source package admits the forward-enabled
+and identity-only controls but contains no total \(\Lambda_{\rm op}\) with
+the stated codomain.  Hence the same fixed source basis is compatible with
+two task-local equipment records that yield unequal residual vectors.
+\(\square\)
+
+\section{Disposition}
+
+The exact obstruction identifier is
+\[
+\texttt{OBST-P9T04-SECTOR-CAUSAL-FREEFALL-SELECTOR-ABSENT-001}.
+\]
+The source calculation is complete, but the physical codomain, selector,
+calibration, correction budget, uncertainty model, target equivalence
+relation, preregistered tolerance, and independent reproduction are absent.
+The target oracle therefore remains closed.  The case outcome is
+\texttt{INCONCLUSIVE}, with secondary label \texttt{FORMAL\_ANALOGY}, and
+the pass count is zero.
+
+The status is \texttt{blocked\_adoption\_open\_continuation}: current
+adoption is blocked while a conservative source-side selector or calibration
+law remains possible.  This local result is not a global no-go theorem and
+does not claim that future source extensions are impossible.
+
+\section{Freeze and next route}
+
+The unchanged P9-T04 inference branch is locally frozen against inferring
+physical null propagation, local inertial behavior, universal free fall, or
+benchmark promotion from the formal traces.  The freeze criterion also fires
+for an uncontrolled second formal cone or sector-dependent response, as
+represented by \(\mathcal E_{\rm split}\).  After a governed checkpoint,
+P9-T05 may execute as a distinct source-only benchmark case while carrying
+the three \texttt{INCONCLUSIVE} outcomes and zero benchmark passes.
+
+\end{document}

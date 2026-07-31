@@ -1,11 +1,91 @@
 mode: "director_led_research_control"
-active_task_id: "RT-20260730-010"
-latest_handoff_id: "handoff-0917"
-current_status: "weak_field_operational_coupling_nonselection_precisely_obstructed_case_inconclusive_ready_for_checkpoint"
-claim_boundary_summary: "RT-20260730-010 constructs an exact finite P9-T03 weak operational-response counterfamily and proves that the current source package does not select the device-coupling coefficients or physical model-to-world map. The case is INCONCLUSIVE with secondary FORMAL_ANALOGY, zero target comparisons, zero benchmark passes, and no physical, Distance-to-GR, Gate E, promotion, proof, publication, push, global-no-go, future-impossibility, or completed-derivation authority."
-next_plan_task_id: "P9-T04"
+active_task_id: "RT-20260730-011"
+latest_handoff_id: "handoff-0918"
+current_status: "causal_freefall_sector_selector_precisely_obstructed_case_inconclusive_ready_for_checkpoint"
+claim_boundary_summary: "RT-20260730-011 constructs exact finite P9-T04 propagation and operational traces in two physical source sectors and proves that the current source package does not select the sector/role equipment, physical calibration, or model-to-world map. The case is INCONCLUSIVE with secondary FORMAL_ANALOGY, zero target comparisons, zero benchmark passes, and no physical, Distance-to-GR, Gate E, promotion, proof, publication, push, global-no-go, future-impossibility, or completed-derivation authority."
+next_plan_task_id: "P9-T05"
 next_worker_skill: "continue-research"
-next_recommended_action: "Invoke the one governed checkpoint for AJ-RT-20260730-010-001. After that commit, use one fresh bounded Candidate Constructor packet for P9-T04 to execute the distinct source-only null-propagation, local-inertial, and universal-free-fall case while carrying the P9-T02 and P9-T03 INCONCLUSIVE dispositions and the operational-coupling obstruction."
+next_recommended_action: "Invoke the one governed checkpoint for AJ-RT-20260730-011-001. After that commit, use one fresh bounded Candidate Constructor packet for P9-T05 to execute the next distinct source-derived benchmark case while carrying the P9-T02 through P9-T04 INCONCLUSIVE dispositions and zero benchmark passes."
+
+p9_t04_causal_local_inertial_universal_freefall_source_only_case:
+  task_id: "RT-20260730-011"
+  parent_task_id: "RT-20260730-010"
+  parent_handoff_id: "handoff-0917"
+  plan_task_id: "P9-T04"
+  next_plan_task_id: "P9-T05"
+  claim_boundary_id: "CB-V21-P9-T04-CAUSAL-FREEFALL-SECTOR-NONSELECTION-001"
+  status: "P9_T04_SECTOR_OPERATIONAL_SELECTOR_NONSELECTION_OBSTRUCTION_CASE_INCONCLUSIVE_READY_FOR_CHECKPOINT"
+  work_item_status: "completed"
+  route_label: "benchmark-recovery-packet"
+  selected_role_family: "candidate-constructor@0.2.0"
+  selected_worker_skill: "continue-research"
+  selected_strategy_id: "construct_p9_t04_causal_local_inertial_universal_freefall_source_only_case_v1"
+  target_derivation_milestone: "benchmark_promotion"
+  milestone_burden: "Test null propagation, local inertial behavior, and universal free fall from source dynamics and multiple physical source-matter sectors."
+  dependency_checkpoint_commit: "29a277cd80154f5f34f784b659cc5880b9782ba3"
+  immutable_route_sha256: "41bbf97cd126df07fd97ddf65202a22c734ce44d20710ff96d170b0dfa4f742e"
+  route_blocker_fingerprint: "a1cfc01f302abe523cd299c02ef430102c9e86e656adfe0ab2547dc62c26453d"
+  source_artifact_path: "research_control/tasks/RT-20260730-011/artifacts/finite_two_sector_causal_freefall_nonselection_v1.tex"
+  source_artifact_sha256: "7f5ef217faba0b4005885bed7a88cf9941c39b495976530bc912c5c742bc5124"
+  source_case_path: "research_control/tasks/RT-20260730-011/artifacts/p9_t04_causal_freefall_case_v1.yaml"
+  source_case_sha256: "f3ee6d0d7c19f68daf9f6ed9a2e10cec964633694688cc62074edc9089f66255"
+  source_seal_path: "research_control/tasks/RT-20260730-011/artifacts/p9_t04_source_output_seal_v1.json"
+  source_seal_sha256: "852e029864b6ac3ee3d7f4803c7787049d9d23d2a9c5efc2bfdedbc324a3eb60"
+  provenance_dag_sha256: "bfa67fbe669ff42f13e9a18f6f95b6492d621bee861e569e02f20dec864e3fb4"
+  target_exposure_ledger_sha256: "421612292120ef16792972dacb3467c447627322d780c9e7a96ffb8368053fb6"
+  benchmark_case_receipt_sha256: "fe12f4fed9561cd2e282b3a26bdac357e6862af4a915f10961caa77a31ed86ec"
+  completion_path: "research_control/tasks/RT-20260730-011/jobs/completions/AJC-AJ-RT-20260730-011-001.yaml"
+  completion_sha256: "30f3b17f9314e23b81bd7adbfcaee30b1cce0bee92a7eae4106430d984c1430b"
+  handoff_id: "handoff-0918"
+  handoff_path: "research_control/handoffs/handoff-0918.yaml"
+  handoff_yaml_sha256: "a8bf10ea6f963823864db2486bbd36a1e6b8fa0fb314b92cdf6aeecc22b3201e"
+  handoff_markdown_sha256: "86c52f81d373f61c0bcb060aca8da5db8606d0de89fbd7ba66ae15d86d80b3cb"
+  obstruction_id: "OBST-P9T04-SECTOR-CAUSAL-FREEFALL-SELECTOR-ABSENT-001"
+  source_stage_executed: true
+  source_stage_firewall_passed: true
+  source_output_sealed: true
+  two_sector_response_constructed: true
+  common_and_split_records_executed: true
+  exact_residual_counterfamily_constructed: true
+  benchmark_case_outcome: "INCONCLUSIVE"
+  benchmark_case_secondary_label: "FORMAL_ANALOGY"
+  executed_case_count: 1
+  cumulative_executed_case_count: 3
+  inconclusive_case_count: 1
+  cumulative_inconclusive_case_count: 3
+  benchmark_pass_count: 0
+  target_comparison_oracle_invoked: false
+  target_informed_rerun_count: 0
+  physical_null_propagation_established: false
+  physical_local_inertial_behavior_established: false
+  physical_universal_freefall_established: false
+  equivalence_principle_established_or_refuted: false
+  preferred_frame_established_or_refuted: false
+  birefringence_established_or_refuted: false
+  effective_geometry_established: false
+  Gate_D_changed: false
+  Gate_E_verdict_issued: false
+  scientific_claims_changed: true
+  scientific_claim_change_scope: "task-local exact finite two-sector operational-response counterfamily and precise current-source sector/role selector nonselection obstruction only"
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  ontology_adoption_authorized: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  checkpoint_invocation_count: 0
+  checkpoint_committed: false
+  selected_next_work_item: "P9-T05"
+  selected_next_worker_skill: "continue-research"
+  selected_next_role_family: "candidate-constructor@0.2.0"
+  selected_next_packet_type: "source_only_remaining_benchmark_case"
+  selected_next_route_label: "benchmark-recovery-packet"
+  selected_next_strategy_id: "construct_p9_t05_distinct_source_derived_benchmark_case_v1"
+  selected_next_requires_human_gate: false
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
 
 p9_t03_weak_field_redshift_clock_source_only_case:
   task_id: "RT-20260730-010"
@@ -9244,9 +9324,9 @@ project_improvement_bridge:
   resolution_evidence_path: "research_control/tasks/RT-20260725-002/jobs/completions/AJC-AJ-RT-20260725-002-001.yaml"
 
 active_state_bifurcation:
-  latest_research_task_id: "RT-20260730-010"
-  latest_research_handoff_id: "handoff-0917"
-  latest_research_next_action: "Invoke the one governed checkpoint for AJ-RT-20260730-010-001. After that commit, use one fresh bounded Candidate Constructor packet for P9-T04 to execute the distinct source-only null-propagation, local-inertial, and universal-free-fall case while carrying the P9-T02 and P9-T03 INCONCLUSIVE dispositions and the operational-coupling obstruction."
+  latest_research_task_id: "RT-20260730-011"
+  latest_research_handoff_id: "handoff-0918"
+  latest_research_next_action: "Invoke the one governed checkpoint for AJ-RT-20260730-011-001. After that commit, use one fresh bounded Candidate Constructor packet for P9-T05 to execute the next distinct source-derived benchmark case while carrying the P9-T02 through P9-T04 INCONCLUSIVE dispositions and zero benchmark passes."
   latest_project_system_task_id: "none"
   latest_project_system_status: "none"
   latest_project_system_sidecar_task_id: "none"

@@ -1,0 +1,35 @@
+schema_id: "parent_child_conflict_review_v1"
+task_id: "RT-20260730-011"
+status: "resolved"
+resolution_rounds: 1
+unresolved_conflict_count: 0
+unresolved_conflicts: []
+conflicts:
+  - conflict_id: "P9T04-CONFLICT-PROPAGATION-001"
+    type: "scope_conflict"
+    severity: "blocking"
+    phys_math_position: "The first-arrival index defines an exact formal slope."
+    phys_phil_position: "The slope has no physical time or length calibration."
+    resolution: "Retain v_src as address-hops per formal update and forbid its interpretation as physical speed."
+  - conflict_id: "P9T04-CONFLICT-UNIVERSALITY-001"
+    type: "assumption_conflict"
+    severity: "blocking"
+    phys_math_position: "The common record gives exact equality across two sectors."
+    phys_phil_position: "The current source package does not select the common record over the split record."
+    resolution: "Use both records as a nonselection counterfamily and classify physical universality as INCONCLUSIVE."
+  - conflict_id: "P9T04-CONFLICT-ASYMMETRY-001"
+    type: "interpretation_conflict"
+    severity: "major"
+    phys_math_position: "The movable kernel has direction asymmetry 1/2."
+    phys_phil_position: "No physical frame, polarization, or propagation calibration exists."
+    resolution: "Record a formal kernel diagnostic only; infer neither preferred-frame behavior nor birefringence."
+  - conflict_id: "P9T04-CONFLICT-ROUTE-001"
+    type: "route_conflict"
+    severity: "major"
+    phys_math_position: "The exact selector obstruction completes the P9-T04 source attempt."
+    phys_phil_position: "A conservative selector or calibration law could reopen the case."
+    resolution: "Complete P9-T04 as INCONCLUSIVE with a local freeze and blocked_adoption_open_continuation."
+authority_limits:
+  conflict_resolution_is_physics_proof: false
+  benchmark_pass_established: false
+  physics_promotion_authorized: false

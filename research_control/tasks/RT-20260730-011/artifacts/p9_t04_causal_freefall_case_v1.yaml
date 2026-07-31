@@ -1,0 +1,246 @@
+schema_id: "p9_t04_causal_freefall_case_v1"
+artifact_id: "P9T04CausalFreeFallSourceOnlyCase_v1"
+task_id: "RT-20260730-011"
+job_id: "AJ-RT-20260730-011-001"
+case_id: "P9-BENCH-CAUSAL-FREEFALL-V1"
+downstream_plan_task_id: "P9-T04"
+protocol_id: "SourceDerivedBenchmarkProtocol_v1"
+firewall_id: "TargetImportFirewall_v1"
+status: "completed"
+candidate_status: "draft/control"
+candidate_constructor_result: "precise_obstruction"
+execution_status: "INCONCLUSIVE"
+secondary_label: "FORMAL_ANALOGY"
+source_execution_status: "COMPLETED"
+source_stage_firewall_status: "PASS"
+source_output_seal_status: "SEALED"
+target_comparison_status: "NOT_OPENED"
+independent_reproduction_status: "NOT_ACQUIRED"
+target_derivation_milestone: "benchmark_promotion"
+milestone_burden: "Test null propagation, local inertial behavior, and universal free fall from source dynamics and multiple physical source-matter sectors."
+benchmark_scope: "null propagation, local inertial behavior, and universal free fall"
+source_only_attempt_id: "FiniteTwoSectorCausalFreeFallNonselection_v1"
+theorem_id: "P9T04-THM-SECTOR-CAUSAL-FREEFALL-NONSELECTION-001"
+obstruction_id: "OBST-P9T04-SECTOR-CAUSAL-FREEFALL-SELECTOR-ABSENT-001"
+obstruction_scope: "current fixed P7 physical source-side package and P9 source-stage protocol"
+adoption_status: "blocked_adoption_open_continuation"
+
+source_inputs:
+  sectors:
+    - sector_id: "sigma_1"
+      sector_value: "(1,[0])"
+      provenance: "P7-T02 positive-control sector"
+      physical_status: "P7-T08 adopted source-side physical scope"
+    - sector_id: "sigma_2"
+      sector_value: "(2,[0])"
+      provenance: "P7-T02 interacting-control sector"
+      physical_status: "P7-T08 adopted source-side physical scope"
+  carrier: ["x_0", "x_1"]
+  initial_distribution: ["1", "0"]
+  kernels:
+    movable:
+      row_vector_matrix: [["1/2", "1/2"], ["0", "1"]]
+      endpoint_response: "1-2^(-n)"
+    identity_only:
+      row_vector_matrix: [["1", "0"], ["0", "1"]]
+      endpoint_response: "0"
+  operational_forms:
+    movable:
+      propagation_slope: "1"
+      freefall_horizon_1: "1/2"
+      clock_horizon_2: "1/4"
+      rod_horizon_2: "1/4"
+      signal_horizon_2: "1/4"
+    identity_only:
+      propagation_slope: "0"
+      freefall_horizon_1: "0"
+      clock_horizon_2: "0"
+      rod_horizon_2: "0"
+      signal_horizon_2: "0"
+
+equipment_records:
+  - record_id: "E_common"
+    status: "task-local source-extension data"
+    sector_1_control: "movable"
+    sector_2_control: "movable"
+    residual_vector: ["0", "0", "0", "0", "0"]
+  - record_id: "E_split"
+    status: "task-local source-extension data"
+    sector_1_control: "movable"
+    sector_2_control: "identity_only"
+    residual_vector: ["1", "1/2", "1/4", "1/4", "1/4"]
+
+residual_order:
+  - "formal_source_propagation"
+  - "FreeFall_src horizon-1 endpoint response"
+  - "Clock_src horizon-2 tick response"
+  - "Rod_src horizon-2 endpoint response"
+  - "Signal_src horizon-2 arrival response"
+arithmetic_uncertainty: "0"
+formal_direction_asymmetry: "1/2"
+
+source_stage_result:
+  exact_statement: "Two P7 physical source sectors admit a common formal response record and a split formal response record with distinct exact sector-residual vectors."
+  failed_object: "total source-derived operational selector Lambda_op from sector and role to control, equipment, physical calibration, and model-to-world map"
+  current_ontology_implication: "does_not_derive"
+  source_extension_implication: "new_primitive_required"
+  physical_interpretation_status: "NOT_ESTABLISHED"
+
+local_inertial_audit:
+  selected_cross_sector_equality_in_common_record: true
+  reciprocal_physical_propagation_support: "ABSENT"
+  common_physical_time_length_calibration: "ABSENT"
+  source_derived_local_transformation_law: "ABSENT"
+  model_to_world_map: "ABSENT"
+  split_record_sector_equality: false
+  disposition: "NO_LOCAL_INERTIAL_APPROXIMATION_CONSTRUCTED"
+
+model_to_world_map:
+  status: "MISSING"
+  source_domain: "finite two-state kernels and P7 source-device response tokens"
+  physical_codomain: "physical time length speed trajectory acceleration null propagation and free-fall observables ABSENT"
+  unit_and_scale_calibration: "ABSENT"
+  uncertainty_and_failure_model: "ABSENT_FOR_PHYSICAL_OBSERVABLES"
+  regime_of_validity: "exact finite source arithmetic only"
+  independent_reproduction_method: "ABSENT"
+
+target_observable:
+  identity: "target null propagation, local inertial behavior, and universal free fall"
+  stage: "comparison_only_after_seal"
+  oracle_opened: false
+  comparison_executed: false
+  reason: "The source selector, physical codomain, calibration, correction control, and model-to-world map are absent, so INCONCLUSIVE fires before target comparison."
+imported_assumptions: []
+
+approximation_order:
+  source_calculation: "exact finite rational arithmetic"
+  temporal_order: "formal integer update index only"
+  continuum_order: "UNSET"
+  physical_validity_domain: "NOT_ESTABLISHED"
+residual_corrections:
+  finite_arithmetic: "exact"
+  finite_size: "two-state controls; physical correction uncontrolled"
+  coarse_graining: "ABSENT"
+  continuum: "ABSENT"
+  calibration: "ABSENT"
+  stochastic: "NOT_APPLICABLE_TO_EXACT_BOOKKEEPING"
+  sector_equipment: "source selector absent"
+  physical_correction_control: "ABSENT"
+analytic_equivalence:
+  status: "UNSET"
+  equivalence_relation: "ABSENT_FOR_TARGET"
+  domain_and_regularities: "FINITE_SOURCE_ONLY"
+  units_or_dimensionless_status: "SOURCE_VALUES_DIMENSIONLESS_PHYSICAL_UNITS_ABSENT"
+  target_label_reuse_is_equivalence: false
+numerical_tolerance:
+  status: "UNSET"
+  norm_W: ""
+  sampling_domain: ""
+  threshold_tau: ""
+  threshold_units: ""
+  uncertainty_propagation: ""
+  calibration_source: ""
+  target_fit_used: false
+
+success_criteria:
+  status: "NOT_SATISFIED"
+  rule: "source-derived physical characteristics, local-inertial law, and sector-universal free-fall response with calibrated corrections, uncertainty, independent reproduction, and preregistered target comparison PASS"
+failure_criteria:
+  status: "NOT_TRIGGERED"
+  rule: "source invalidity, firewall breach, or decisive target deviation after lawful physical comparison"
+inconclusive_criteria:
+  status: "TRIGGERED"
+  triggered_items:
+    - "source law selecting sector and role equipment absent"
+    - "physical characteristic equation and speed calibration absent"
+    - "local transformation law absent"
+    - "physical free-fall trajectory and acceleration map absent"
+    - "physical corrections uncertainty and tolerance absent"
+    - "independent reproduction absent"
+
+source_hash_manifest:
+  - source_id: "SourceDerivedBenchmarkProtocol_v1"
+    path: "research_control/tasks/RT-20260729-012/artifacts/source_derived_benchmark_protocol_v1.tex"
+    sha256: "88ef097bf712ad115e9af62cc18a8b3eabb12f8545350f714ad065f702471007"
+  - source_id: "SourceDerivedBenchmarkCaseSchema_v1"
+    path: "research_control/tasks/RT-20260729-012/artifacts/source_derived_benchmark_case_schema_v1.yaml"
+    sha256: "5045de8fbaeb6c80b89ec88b71143a8aeaca1c892efadc4b7293cb438ee808d8"
+  - source_id: "TargetImportFirewall_v1"
+    path: "research_control/tasks/RT-20260729-012/artifacts/target_import_firewall_v1.yaml"
+    sha256: "ccb9297f817a9b4eeb886834a510e1f21d518a2668bc3fde9695b909d6884acf"
+  - source_id: "P7T01SourceMatterSectorTaxonomy_v1"
+    path: "research_control/tasks/RT-20260727-007/artifacts/source_matter_sector_charge_taxonomy_v1.yaml"
+    sha256: "0b7bb06a63b20469185badab4b2664eaa23d5b4e47752b953d51c2508f283c59"
+  - source_id: "P7T02FiniteTransitionKernel_v1"
+    path: "research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_candidate_v1.tex"
+    sha256: "65ac095f5cdf4c2e319365c8b0e024d031b19d9fc2b8102e59997afa1e8f9129"
+  - source_id: "P7T03SourceOperationalDeviceSuite_v1"
+    path: "research_control/tasks/RT-20260728-002/artifacts/source_operational_device_suite_candidate_v1.tex"
+    sha256: "d6c818ee29f1a7e659e2f454aec21431d680b3d2d4df048fcf36f4aba87ba22a"
+  - source_id: "P7T08PhysicalMatterAdoptionDecision_v1"
+    path: "research_control/tasks/RT-20260729-001/artifacts/p7_t08_gate_c_decision_v1.tex"
+    sha256: "85fbf32fb9b02aeae556149cbc5c6b51bd6fedf278a3bc401545c93e29fc4827"
+  - source_id: "P9T02VacuumMinkowskiCase_v1"
+    path: "research_control/tasks/RT-20260730-008/artifacts/p9_t02_vacuum_minkowski_case_v1.yaml"
+    sha256: "2fadb19c5849f1da5843c0e0599dbdc31790eab46587ce6718abbf4d3a0be79c"
+  - source_id: "P9T03WeakFieldClockCase_v1"
+    path: "research_control/tasks/RT-20260730-010/artifacts/p9_t03_weak_field_clock_case_v1.yaml"
+    sha256: "45b79d5e3e371b3a2bcdde3f26296dad8c6ff65306d17cdf672bf76383eeb864"
+
+provenance_dag:
+  path: "research_control/tasks/RT-20260730-011/artifacts/p9_t04_provenance_dag_v1.yaml"
+  source_graph_acyclic: true
+  forbidden_target_to_source_path_count: 0
+source_output_seal:
+  path: "research_control/tasks/RT-20260730-011/artifacts/p9_t04_source_output_seal_v1.json"
+  sealed_at: "2026-07-30T23:41:30Z"
+  mutation_after_seal_authorized: false
+independent_reproduction:
+  status: "NOT_ACQUIRED"
+  same_context_exact_validation_available: true
+  same_context_validation_counts_as_independent: false
+  fresh_executor_or_team: false
+  disposition: "INCONCLUSIVE"
+target_exposure_ledger:
+  path: "research_control/tasks/RT-20260730-011/artifacts/p9_t04_target_exposure_ledger_v1.yaml"
+  target_family_known: true
+  blindness_claimed: false
+  target_oracle_opened: false
+  target_informed_rerun_count: 0
+
+case_classification:
+  outcome: "INCONCLUSIVE"
+  secondary_label: "FORMAL_ANALOGY"
+  primary_reason: "current source package does not select cross-sector equipment or supply physical characteristics, calibration, and a model-to-world map"
+  firewall_failure: false
+  source_failure: false
+  target_comparison_executed: false
+  formal_analogy_present: true
+  benchmark_pass: false
+  cumulative_executed_case_count: 3
+  cumulative_pass_count: 0
+
+authority_limits:
+  source_law_adopted_or_rejected: false
+  canonical_ontology_modified: false
+  physical_propagation_speed_established: false
+  null_cone_established: false
+  local_Lorentz_invariance_established: false
+  local_inertial_behavior_established: false
+  physical_free_fall_established: false
+  equivalence_principle_established: false
+  preferred_frame_established: false
+  birefringence_established: false
+  effective_geometry_established: false
+  Einstein_equations_established: false
+  exact_GR_recovery_established: false
+  Gate_D_changed: false
+  Gate_E_verdict_issued: false
+  benchmark_pass_established: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
