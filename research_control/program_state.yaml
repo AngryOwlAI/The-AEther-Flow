@@ -1,11 +1,73 @@
 mode: "director_led_research_control"
-active_task_id: "RT-20260731-005"
-latest_handoff_id: "handoff-0927"
-current_status: "p14_t04_protected_congruence_status_completed_ready_for_checkpoint"
-claim_boundary_summary: "RT-20260731-005 consumes exact one-time protected P14-T04 authority and selects INTERPRETIVE_REPRESENTATIVE_TARGET_CONGRUENCE_ONLY. The target-side u is an admissible generally nonunique observer representative in the fixed exact-GR benchmark; it is not Phi_src, not dynamically selected by current source dynamics, not established pure gauge, and not an independent benchmark field. Representative independence applies to fixed-solution content under a fixed physical protocol while observer-relative quantities may differ. No canonical ontology edit, source bridge, physical field adoption, Distance-to-GR delta, promotion, proof, publication, or push occurs."
+active_task_id: "RT-20260731-006"
+latest_handoff_id: "handoff-0928"
+current_status: "handoff_0927_markdown_identity_recovery_pass_ready_for_checkpoint"
+claim_boundary_summary: "RT-20260731-006 inserts only the missing eight-byte literal handoff-0927 identity into the existing Markdown heading, proves every other target byte and protected P14-T04 record unchanged, and restores checkpoint eligibility. It creates no science, does not reexecute P14-T04, leaves P14-T06 unexecuted, and grants no ontology, source-law, source-bridge, congruence-status, Distance-to-GR, promotion, proof, publication, push, or completed-derivation authority."
 next_plan_task_id: "P14-T06"
 next_worker_skill: "improve-project-system"
-next_recommended_action: "Run one governed checkpoint for AJ-RT-20260731-005-001. After checkpoint, create one fresh bounded P14-T06 project-system AgentJob under its exact plan and write scope to align public status, glossary, and claim examples."
+next_recommended_action: "Run one governed checkpoint for AJ-RT-20260731-006-001. Only after it commits may one fresh bounded P14-T06 Documentation Curator packet align public status, glossary, and claim examples with the protected P14-T04 decision."
+
+p14_t04_handoff_0927_markdown_identity_checkpoint_recovery:
+  task_id: "RT-20260731-006"
+  parent_task_id: "RT-20260731-005"
+  parent_handoff_id: "handoff-0927"
+  source_task_id: "RT-20260731-005"
+  source_job_id: "AJ-RT-20260731-005-001"
+  source_handoff_id: "handoff-0927"
+  plan_task_id: "P14-T04"
+  recovery_for_plan_task_id: "P14-T04"
+  next_plan_task_id: "P14-T06"
+  claim_boundary_id: "CB-V21-P14-T04-HANDOFF-0927-IDENTITY-RECOVERY-001"
+  status: "HANDOFF_0927_MARKDOWN_IDENTITY_RECOVERY_PASS_READY_FOR_CHECKPOINT"
+  work_item_status: "completed"
+  route_label: "repair_handoff_0927_markdown_identity_and_checkpoint_v1"
+  selected_role_family: "process-integrity-auditor@0.1.0"
+  selected_worker_skill: "improve-project-system"
+  selected_strategy_id: "repair_handoff_0927_markdown_identity_and_checkpoint_v1"
+  target_derivation_milestone: "none"
+  milestone_burden: "Project-system handoff identity and checkpoint compatibility only; no derivation milestone advances."
+  source_head: "c34629620ef0d5513d2abf4f1c6c7ac3fb14da7a"
+  immutable_route_sha256: "a5151b8c5d6b1850086c691c894c58efcf93756c3f3e9c05288f9e41aa21cbd2"
+  route_blocker_fingerprint: "8a2ec96ddfb3d0a5717b7ad3e24fe67a523354fb500bc6d0dcabf1e4cd2ae4ee"
+  dirty_manifest_sha256: "f07eed77211371aa636379383a2cd5e3a5af1f01a7c3278939cc41b3a8ea6941"
+  failed_gate_evidence_sha256: "fbaecd9324bb1fa76dc0de81406ae24373222cd3788931491d21f89961080abf"
+  source_task_sha256: "1485b9ffd48ada691ab6a0761618c68d83dd173ad36095fc7fb83b61477c2010"
+  source_job_sha256: "2e983cbe9b17bf59e0b37327f9e7458d0fa1ea0482bc4c61f56e945811453d96"
+  source_completion_sha256: "9592bcac19a7095feb603d61b2be689468b2c19e3aad7f22b34360e6bd6c8df0"
+  source_handoff_yaml_sha256: "6ba67c71d3e8920cacc02215d69da0d91f7b1f1dd45fa9b28a3de28af50236ed"
+  source_handoff_markdown_before_sha256: "d25d4f490040375e5d727712e7eee3ec1478e728742ab73bb87d55cd30c8a358"
+  source_handoff_markdown_after_sha256: "2ae32cef59debe23a84fc344a06649c4776bc77977dd46960a51f6a0c99c7e13"
+  recovery_validator_path: "research_control/tasks/RT-20260731-006/artifacts/validate_handoff_0927_markdown_identity_recovery.py"
+  recovery_validator_sha256: "ff5870e5b551578fd3d3be27ecbbaac0a8a63acd35255cd8515eb6a82fa00a94"
+  recovery_receipt_path: "research_control/tasks/RT-20260731-006/artifacts/handoff_0927_markdown_identity_recovery_receipt.json"
+  recovery_receipt_sha256: "2095c6973241c4f0b514c9e49008daec4ed8c9dc2b451b7e5e4970e0ab1bd507"
+  completion_path: "research_control/tasks/RT-20260731-006/jobs/completions/AJC-AJ-RT-20260731-006-001.yaml"
+  completion_sha256: "f3271c03ede1b5c1711e6e855e17b17536e7f3f68e14475e586297ce4171b58d"
+  handoff_id: "handoff-0928"
+  handoff_path: "research_control/handoffs/handoff-0928.yaml"
+  exact_identity_insertion_byte_count: 8
+  every_other_target_byte_unchanged: true
+  protected_hash_mismatch_count: 0
+  p14_t04_payload_preserved: true
+  p14_t04_reexecuted: false
+  p14_t06_executed: false
+  scientific_claims_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  checkpoint_invocation_count: 0
+  checkpoint_committed: false
+  dependency_checkpoint_commit: "c34629620ef0d5513d2abf4f1c6c7ac3fb14da7a"
+  selected_next_work_item: "P14-T06"
+  selected_next_worker_skill: "improve-project-system"
+  selected_next_role_family: "documentation-curator@2.0.0"
+  selected_next_packet_type: "public_status_glossary_claim_examples_alignment"
+  selected_next_route_label: "ordinary-research-packet"
+  selected_next_strategy_id: "align_public_status_glossary_and_claim_examples_with_p14_t04_v1"
+  selected_next_requires_human_gate: false
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
 
 p14_t04_protected_congruence_status_decision:
   task_id: "RT-20260731-005"

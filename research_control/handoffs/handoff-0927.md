@@ -1,6 +1,6 @@
 <!-- authority: control -->
 
-# Handoff 0927
+# Handoff handoff-0927
 
 P14-T04 is complete under exact one-time protected authority. The controlling
 status is `INTERPRETIVE_REPRESENTATIVE_TARGET_CONGRUENCE_ONLY`.

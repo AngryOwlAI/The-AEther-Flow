@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260731-005`
-- Latest handoff: `handoff-0927`
-- Current status: `p14_t04_protected_congruence_status_completed_ready_for_checkpoint`
+- Active task: `RT-20260731-006`
+- Latest handoff: `handoff-0928`
+- Current status: `handoff_0927_markdown_identity_recovery_pass_ready_for_checkpoint`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260731-005`
-- Latest research handoff: `handoff-0927`
-- Latest research next action: Run one governed checkpoint for AJ-RT-20260731-005-001. After checkpoint, create one fresh bounded P14-T06 project-system AgentJob under its exact plan and write scope to align public status, glossary, and claim examples.
+- Latest research task: `RT-20260731-006`
+- Latest research handoff: `handoff-0928`
+- Latest research next action: Run one governed checkpoint for AJ-RT-20260731-006-001. Only after it commits may one fresh bounded P14-T06 Documentation Curator packet align public status, glossary, and claim examples with the protected P14-T04 decision.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `1787025b6eefab49e0a884c45bfbdad68a3c40db33744c65981abd153cdeb7cc`
-- JSON SHA-256: `a7b67d34fad4e0f60572b687dd18f878a2dcfe41b9c4f8182a49215b2721e63d`
+- YAML SHA-256: `b987ea22f50dc3c961e26a19ae7ef302231383312ee01629e607bb6ceab4623f`
+- JSON SHA-256: `bfbb1b91a8be511d0af548d9be7f6fce407d3da6b83f14294e1c92f402dd4982`
 
 ## Authority Warning
 

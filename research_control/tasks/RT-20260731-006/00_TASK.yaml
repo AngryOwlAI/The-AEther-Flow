@@ -1,0 +1,72 @@
+validation_status: "PASS"
+task_id: "RT-20260731-006"
+task_type: "project_system_p14_t04_handoff_identity_checkpoint_recovery"
+title: "Restore the canonical handoff-0927 Markdown identity"
+task_taxonomy:
+  schema_id: "v21_task_taxonomy_v1"
+  work_kind: "benchmark_or_recovery"
+  milestone: "not_applicable"
+  candidate_family: "handoff_markdown_identity_checkpoint_recovery"
+  result_kind: "completed_or_precisely_blocked"
+  authority: "project_control"
+  scope: "project_system"
+status: "completed"
+created_at: "2026-07-31T20:26:57Z"
+updated_at: "2026-07-31T20:36:31Z"
+closed_at: "2026-07-31T20:36:31Z"
+parent_task_id: "RT-20260731-005"
+parent_handoff_id: "handoff-0927"
+supersedes_active_routing_task_id: "RT-20260731-005"
+current_decision_id: "DDR-20260731-006"
+current_job_id: "AJ-RT-20260731-006-001"
+role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260731-006"
+requires_human_gate: false
+human_authorization_note: "Generation 192 of the immutable user-requested relay routes exactly one improve-project-system frame to repair the handoff-0927 Markdown identity and checkpoint the bounded recovery."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P14"
+  plan_task_id: "P14-T04"
+  recovery_for_plan_task_id: "P14-T04"
+  next_plan_task_id: "P14-T06"
+objective: "Insert only the literal handoff-0927 identity into the existing Handoff 0927 Markdown heading, prove every other handoff and P14-T04 source byte unchanged, synchronize ordinary control derivatives, and invoke one governed checkpoint before P14-T06."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system handoff identity and checkpoint compatibility only; no derivation milestone advances."
+route_label: "repair_handoff_0927_markdown_identity_and_checkpoint_v1"
+project_system_change_only: true
+dual_budget_category: "system_bearing"
+primary_budget: "project_system"
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+claim_boundary_id: "CB-V21-P14-T04-HANDOFF-0927-IDENTITY-RECOVERY-001"
+claim_boundary:
+  allowed_scope: "Insert the eight ASCII bytes handoff- before 0927 in the Markdown heading; create task-local preservation evidence and ordinary control closure; invoke one governed checkpoint."
+  immutable_predecessor_task: "RT-20260731-005"
+  immutable_predecessor_job: "AJ-RT-20260731-005-001"
+  immutable_predecessor_completion: "AJC-AJ-RT-20260731-005-001"
+  immutable_predecessor_handoff: "handoff-0927"
+  source_head: "c34629620ef0d5513d2abf4f1c6c7ac3fb14da7a"
+  immutable_route_sha256: "a5151b8c5d6b1850086c691c894c58efcf93756c3f3e9c05288f9e41aa21cbd2"
+  expected_insertion_byte_count: 8
+  handoff_yaml_changed: false
+  p14_t04_reexecuted: false
+  p14_t06_executed: false
+  scientific_claims_changed: false
+  physics_promotion_authorized: false
+documentation_impact_id: "DI-RT-20260731-006-001"
+completion_id: "AJC-AJ-RT-20260731-006-001"
+output_artifacts:
+  - "research_control/tasks/RT-20260731-006/artifacts/validate_handoff_0927_markdown_identity_recovery.py"
+  - "research_control/tasks/RT-20260731-006/artifacts/handoff_0927_markdown_identity_recovery_receipt.json"
+  - "research_control/tasks/RT-20260731-006/jobs/completions/AJC-AJ-RT-20260731-006-001.yaml"
+  - "research_control/handoffs/handoff-0928.yaml"
+  - "research_control/handoffs/handoff-0928.md"
+closure_status: "handoff_0927_markdown_identity_recovery_pass_ready_for_checkpoint"
+summary: "Generation 192 inserts only the missing eight-byte handoff-0927 identity literal, reconstructs the exact pre-repair Markdown hash, preserves the YAML handoff and every RT-20260731-005 source byte, and leaves P14-T06 unexecuted."
+next_recommended_action: "Complete and validate the exact identity recovery, then invoke one governed checkpoint for AJ-RT-20260731-006-001. Only after it commits may one fresh bounded P14-T06 Documentation Curator packet execute."
+project_improvement_signals: []
+notes: "No validator, schema, policy, scientific source, ontology, benchmark, Distance-to-GR status, promotion, publication, push, or protected authority changes."

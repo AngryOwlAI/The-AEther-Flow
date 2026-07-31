@@ -1,7 +1,7 @@
 schema_id: "compact_current_frontier_v16"
 generated_from:
   - "research_control/program_state.yaml"
-  - "research_control/handoffs/handoff-0927.yaml"
+  - "research_control/handoffs/handoff-0928.yaml"
   - "registries/DISTANCE_TO_GR_LEDGER.csv"
   - "registries/METRIC_USE_LEDGER.csv"
   - "research_control/current_frontier.md"
@@ -9,16 +9,16 @@ generated_from:
   - "research_control/design/accepted_status_calibration_v2.yaml"
   - "research_control/design/active_state_bifurcation_policy_v1.md"
 active_state:
-  active_task_id: "RT-20260731-005"
-  latest_handoff_id: "handoff-0927"
-  current_status: "p14_t04_protected_congruence_status_completed_ready_for_checkpoint"
+  active_task_id: "RT-20260731-006"
+  latest_handoff_id: "handoff-0928"
+  current_status: "handoff_0927_markdown_identity_recovery_pass_ready_for_checkpoint"
   v15_completed: false
   v16_completed: false
   v16_plan_registered: true
 active_state_bifurcation:
-  latest_research_task_id: "RT-20260731-005"
-  latest_research_handoff_id: "handoff-0927"
-  latest_research_next_action: "Run one governed checkpoint for AJ-RT-20260731-005-001. After checkpoint, create one fresh bounded P14-T06 project-system AgentJob under its exact plan and write scope to align public status, glossary, and claim examples."
+  latest_research_task_id: "RT-20260731-006"
+  latest_research_handoff_id: "handoff-0928"
+  latest_research_next_action: "Run one governed checkpoint for AJ-RT-20260731-006-001. Only after it commits may one fresh bounded P14-T06 Documentation Curator packet align public status, glossary, and claim examples with the protected P14-T04 decision."
   latest_project_system_task_id: "none"
   latest_project_system_status: "none"
   latest_project_system_sidecar_task_id: "none"
@@ -285,7 +285,7 @@ blocked_physical_targets:
       - "no_global_theory_rejection"
 distance_to_gr:
   delta:
-    effect: "no_distance_delta"
+    effect: "none_project_system_recovery"
     changed: false
     milestone: "source_ontology"
     burden_id: "source_ontology_primitives"
@@ -543,9 +543,25 @@ metric_use_ledger:
 validation:
   latest_required_status: "PASS"
   pending_layers:
+    - layer: "post_write"
+      status: "PENDING"
+      evidence:
+        - "Final repository-wide validation follows handoff and derivative synchronization."
     - layer: "post_checkpoint"
       status: "PENDING"
       evidence:
-        - "One governed checkpoint remains; P14-T06 has not executed."
+        - "One governed recovery checkpoint remains uninvoked."
+    - layer: "renderer"
+      status: "PENDING"
+      evidence:
+        - "Final render-and-check follows this handoff."
+    - layer: "memory_bootstrap"
+      status: "PENDING"
+      evidence:
+        - "Final tracked memory synchronization and validate-only pass remain."
+    - layer: "claim_language_linter"
+      status: "PENDING"
+      evidence:
+        - "Changed-source claim-language validation remains in the precheckpoint stack."
 authority_warning:
   snapshot_only_not_authority: true
