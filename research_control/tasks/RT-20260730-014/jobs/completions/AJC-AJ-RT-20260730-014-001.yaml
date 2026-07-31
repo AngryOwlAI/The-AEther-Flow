@@ -1,0 +1,343 @@
+final_repository_validation_status: "PASS_PRECHECKPOINT_RECOVERY_READY"
+job_id: "AJ-RT-20260730-014-001"
+completion_id: "AJC-AJ-RT-20260730-014-001"
+task_id: "RT-20260730-014"
+task_type: "project_system_p9_t06_handoff_identity_checkpoint_recovery"
+decision_id: "DDR-20260730-014"
+role_id: "process-integrity-auditor"
+source_role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260730-014"
+status: "completed"
+created_at: "2026-07-31T04:37:27Z"
+started_at: "2026-07-31T04:37:27Z"
+completed_at: "2026-07-31T04:41:09Z"
+objective: "Insert only the eight-byte literal handoff- before 0920 in the existing handoff-0920 Markdown heading, prove every other handoff and P9-T06 source byte unchanged, synchronize ordinary control derivatives, and invoke one governed checkpoint before P9-T07."
+completion_summary: "Generation 183 inserts only the missing literal handoff-0920 identity into the Markdown heading. The receipt reconstructs the exact pre-repair Markdown hash, preserves handoff-0920 YAML and every inspected RT-20260730-013 source hash, and confirms that the live continuation boundary accepts the repaired pair. P9-T06 is not reexecuted and P9-T07 remains unexecuted pending one governed checkpoint."
+objective_result: "handoff_0920_markdown_identity_recovery_pass_ready_for_checkpoint"
+
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P9"
+  plan_task_id: "P9-T06"
+  recovery_for_plan_task_id: "P9-T06"
+  implementation_status: "handoff_identity_recovery_implemented_checkpoint_ready"
+  protected_p9_t06_status: "radiative_case_complete_preserved"
+  completed_v21_tasks_added: []
+  next_dependency_ready_work_item: "P9-T07_after_checkpoint"
+  next_work_item_executed: false
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 183
+  passes_consumed: 166
+  route_work_item_id: "P9-T07"
+  route_worker_skill: "improve-project-system"
+  route_sha256: "92bbc9b51c6b523d8645a482aaae70efba66369c48c9134b81e1a3c63c376d39"
+  route_reason: "pre_execution_latest_handoff_markdown_identity_literal_required"
+  route_strategy_id: "repair_handoff_0920_markdown_identity_and_checkpoint_v1"
+  route_blocker_fingerprint: "15293295def7b10ebf7ffd864e0d497b658a8b0c636e0231c4c1cefdbe271e97"
+  route_before_fingerprint: "15293295def7b10ebf7ffd864e0d497b658a8b0c636e0231c4c1cefdbe271e97"
+  route_dirty_state_manifest_sha256: "4d7369faee5ba281c6dcfb37a4a4ed02e3dcbf7002a0a1ff7a88bc7419412f50"
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:183"
+  handoff_token: "90241ac4e9789d465f196db44336d1a43b4795e2f9cb1197"
+  relay_claim_token: "03cdff0782984d27bf27542b9e4a5d321d184c760fd715a1"
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+
+transaction_status: "ready_for_governed_checkpoint"
+result_disposition: "repair_implemented_and_validated"
+work_item_status: "completed"
+plan_task_id: "P9-T06"
+recovery_for_plan_task_id: "P9-T06"
+next_plan_task_id: "P9-T07"
+checkpoint_commit: "none_checkpoint_pending"
+checkpoint_invocation_count: 0
+checkpoint_staged: false
+dependency_checkpoint_commit: "8b2ebbae2de39669b4c95a9fa3485477430d6592"
+legacy_validation_used: false
+project_system_change_only: true
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS_PRECHECKPOINT_READY"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  observed_durable_outputs:
+    physics: []
+    project_system:
+      - "one exact eight-byte handoff-0920 identity insertion"
+      - "one task-local preservation validator and receipt"
+      - "one governed checkpoint"
+  accepted_criteria:
+    physics: []
+    project_system:
+      - "removing the inserted token reconstructs the sealed pre-repair Markdown hash"
+      - "handoff-0920 YAML and every RT-20260730-013 source byte remain unchanged"
+      - "the live continuation boundary accepts handoff-0920"
+      - "all required project-control gates pass"
+      - "one governed checkpoint commits"
+      - "P9-T07 remains unexecuted until checkpoint success"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: false
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+physics_payload_admission_result:
+  schema_id: "physics_payload_admission_result_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  status: "PASS"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  candidate_family: "not_applicable"
+  result_type: "project_system_identity_recovery"
+  process_receipt_substitution_detected: false
+  theorem_truth_inferred_from_validation: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+
+ordinary_route_guard_admission_result:
+  schema_id: "ordinary_route_guard_admission_result_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  status: "PASS"
+  source_handoff_id: "handoff-0920"
+  selected_plan_task_id: "P9-T07"
+  guard_outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  system_success_counts_as_physics: false
+  system_success_counts_as_distance_to_gr: false
+  scientific_status_changed: false
+  physics_promotion_authorized: false
+
+recovery_result:
+  status: "PASS"
+  strategy_id: "repair_handoff_0920_markdown_identity_and_checkpoint_v1"
+  source_task_id: "RT-20260730-013"
+  source_job_id: "AJ-RT-20260730-013-001"
+  source_handoff_id: "handoff-0920"
+  source_head: "8b2ebbae2de39669b4c95a9fa3485477430d6592"
+  route_sha256: "92bbc9b51c6b523d8645a482aaae70efba66369c48c9134b81e1a3c63c376d39"
+  dirty_state_manifest_sha256: "4d7369faee5ba281c6dcfb37a4a4ed02e3dcbf7002a0a1ff7a88bc7419412f50"
+  failed_gate_evidence_sha256: "1385b646fca4fd79a453811d4de22f97946c992e074b965db6641050bc603ca1"
+  source_completion_sha256: "0ebe9ab415b60e01b8daf8fb235d18314c8ca52b4db2a60c86e99c1abb10ed70"
+  source_handoff_yaml_sha256: "1dba29ed5bfa13291ce72449dba3bd6e30da65e493fd24b12a0711c97b52b4df"
+  source_handoff_markdown_before_sha256: "1385b646fca4fd79a453811d4de22f97946c992e074b965db6641050bc603ca1"
+  source_handoff_markdown_after_sha256: "4600c6cd5b15bec0628339ed83ed4779f8cccb60ee90ce22711c0629f5682b23"
+  recovery_validator_path: "research_control/tasks/RT-20260730-014/artifacts/validate_handoff_0920_markdown_identity_recovery.py"
+  recovery_validator_sha256: "758bdd82986c0872bbadf27a30594d38e995b81256d600da8334aa191a178d91"
+  recovery_receipt_path: "research_control/tasks/RT-20260730-014/artifacts/handoff_0920_markdown_identity_recovery_receipt.json"
+  recovery_receipt_sha256: "9fd34632975c988966b5e81ea89a3de527935396a75c0832bd89dc13a971290a"
+  target_path_count: 1
+  protected_predecessor_path_count: 4
+  protected_hash_mismatch_count: 0
+  exact_identity_insertion_byte_count: 8
+  every_other_target_byte_unchanged: true
+  handoff_yaml_preserved: true
+  p9_t06_science_payload_modified: false
+  p9_t06_reexecuted: false
+  p9_t07_executed: false
+
+artifacts:
+  - path: "research_control/tasks/RT-20260730-014/artifacts/validate_handoff_0920_markdown_identity_recovery.py"
+    sha256: "758bdd82986c0872bbadf27a30594d38e995b81256d600da8334aa191a178d91"
+  - path: "research_control/tasks/RT-20260730-014/artifacts/handoff_0920_markdown_identity_recovery_receipt.json"
+    sha256: "9fd34632975c988966b5e81ea89a3de527935396a75c0832bd89dc13a971290a"
+
+output_paths:
+  - "research_control/handoffs/handoff-0920.md"
+  - "research_control/tasks/RT-20260730-014/**"
+  - "research_control/handoffs/handoff-0921.yaml"
+  - "research_control/handoffs/handoff-0921.md"
+  - "research_control/program_state.yaml"
+
+command_results:
+  - command: ".venv/bin/python research_control/tasks/RT-20260730-014/artifacts/validate_handoff_0920_markdown_identity_recovery.py --write-report --json"
+    status: "PASS"
+    summary: "one exact eight-byte identity insertion, exact reconstructed pre-repair hash, and protected predecessor hashes"
+  - command: ".venv/bin/python research_control/tasks/RT-20260730-014/artifacts/validate_handoff_0920_markdown_identity_recovery.py --check --json"
+    status: "PASS"
+    summary: "the tracked receipt matches live recovery validation"
+  - command: ".venv/bin/python scripts/research_control/continue_research.py --summary"
+    status: "PASS"
+    summary: "the continuation boundary accepts handoff-0920 and requests the ordinary director decision"
+  - command: "project change classifier documentation-impact project-improvement-signal claim-language and integrated research-control gates"
+    status: "PASS"
+    summary: "the classifier receipt signal registry claim-language and integrated control gates pass"
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+    status: "PASS"
+    summary: "tracked memory registries and wiki derivatives synchronize with only cache-local warnings"
+  - command: "git diff --check"
+    status: "PASS"
+    summary: "working-tree whitespace validation passes"
+  - command: ".venv/bin/python -m unittest -v tests.test_research_control.ResearchControlTests.test_resolve_latest_handoff tests.test_research_control.ResearchControlTests.test_current_frontier_sync_accepts_synchronized_fixture tests.test_validate_research_control.ActiveStateSidecarValidatorTests.test_later_ordinary_research_handoff_is_accepted"
+    status: "PASS"
+    summary: "three focused handoff resolution frontier synchronization and active-state tests pass"
+
+validation_summary:
+  status: "PASS_PRECHECKPOINT_RECOVERY_READY"
+  task_local_error_count: 0
+  target_path_count: 1
+  protected_hash_mismatch_count: 0
+  exact_identity_insertion_byte_count: 8
+  checkpoint_invocation_count: 0
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 183 validated, atomically claimed, and consumed the exact immutable recovery route once."
+      - "The clean repository identity, route, lease, predecessor state, and manifest matched before writes."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The tracked receipt proves the exact eight-byte identity insertion and protected predecessor hashes."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Task-local preservation, documentation-impact, signal, claim-language, integrated control, focused-test, and whitespace gates pass."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "The one governed checkpoint is pending; P9-T07 remains unexecuted."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Current frontier, task index, and compact frontier render-and-check passes are fresh."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory synchronization and validate-only mode pass; local retrieval warnings are cache-only."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation reports no hard failure."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not authorized; project-system handoff-identity recovery only"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  publication_authorized: false
+  proof_authority: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  canonical_ontology_edit_authorized: false
+  ontology_selection_authorized: false
+  physical_interpretation_establishment_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+distance_to_gr_delta:
+  changed: false
+  effect: "none_project_system_recovery"
+  burden_id: "benchmark_promotion"
+  milestone: "benchmark_promotion"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "The inherited P9-T06 INCONCLUSIVE result and zero benchmark-pass count remain exact; this recovery contributes no physics movement."
+
+physics_progress_status:
+  status: "none_project_system_only"
+  new_mathematical_payload: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+
+selected_next_route:
+  route_id: "v21_p9_t07_nonlinear_conservation_compact_source_after_p9_t06_inconclusive"
+  route_label: "candidate-construction-packet"
+  role_family: "candidate-constructor@0.2.0"
+  worker_skill: "continue-research"
+  selected_next_packet_type: "distinct_source_derived_nonlinear_compact_case"
+  task_type: "v21_p9_t07_nonlinear_conservation_compact_source_case"
+  plan_task_id: "P9-T07"
+  target_derivation_milestone: "benchmark_promotion"
+  milestone_burden: "Move beyond linear and homogeneous controls."
+  strategy_id: "construct_p9_t07_distinct_source_derived_nonlinear_compact_case_v1"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  target_informed_source_repair_authorized: false
+  benchmark_result_preestablished: false
+  physics_promotion_authorized: false
+  executed: false
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required_no_nonblank_signals"
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1099
+    relationship_row_count: 5561
+    semantic_row_count: 1099
+    vault_row_count: 1099
+    local_cache_only_warning_count: 7
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-SKILL-IMPROVE-PROJECT-SYSTEM --json"
+      query_type: "lookup"
+      query_text: "MD-SKILL-IMPROVE-PROJECT-SYSTEM"
+      returned_object_ids:
+        - "MD-SKILL-IMPROVE-PROJECT-SYSTEM"
+  canonical_inspections:
+    - object_id: "MD-SKILL-IMPROVE-PROJECT-SYSTEM"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: ".codex/skills/improve-project-system/SKILL.md"
+      source_hash: "09396af30259f10892734eb12d00d89c1a68495f7ebfb01a67eb7f6af936e8f2"
+  authority_note: "Generated Obsidian wiki semantic relationship SQLite and .local surfaces are retrieval-only navigation layers and not authority; tracked canonical sources registries research-control state Git and validators govern this recovery."
+
+notes: "Generation 183 is project-system control work only. It changes no P9-T06 science and leaves P9-T07 unexecuted until the governed checkpoint commits."

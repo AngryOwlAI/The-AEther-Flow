@@ -1,6 +1,6 @@
 <!-- authority: control -->
 
-# Handoff 0920 — P9-T06 finite radiative case
+# Handoff handoff-0920 — P9-T06 finite radiative case
 
 ## Result first
 

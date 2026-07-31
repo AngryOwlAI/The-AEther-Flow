@@ -2,7 +2,7 @@
   "schema_id": "compact_current_frontier_v16",
   "generated_from": [
     "research_control/program_state.yaml",
-    "research_control/handoffs/handoff-0920.yaml",
+    "research_control/handoffs/handoff-0921.yaml",
     "registries/DISTANCE_TO_GR_LEDGER.csv",
     "registries/METRIC_USE_LEDGER.csv",
     "research_control/current_frontier.md",
@@ -11,17 +11,17 @@
     "research_control/design/active_state_bifurcation_policy_v1.md"
   ],
   "active_state": {
-    "active_task_id": "RT-20260730-013",
-    "latest_handoff_id": "handoff-0920",
-    "current_status": "radiative_dynamics_detector_nonselection_precisely_obstructed_case_inconclusive_ready_for_checkpoint",
+    "active_task_id": "RT-20260730-014",
+    "latest_handoff_id": "handoff-0921",
+    "current_status": "handoff_0920_markdown_identity_recovery_pass_ready_for_checkpoint",
     "v15_completed": false,
     "v16_completed": false,
     "v16_plan_registered": true
   },
   "active_state_bifurcation": {
-    "latest_research_task_id": "RT-20260730-013",
-    "latest_research_handoff_id": "handoff-0920",
-    "latest_research_next_action": "Invoke the one governed checkpoint for AJ-RT-20260730-013-001. After that commit, use one fresh bounded Candidate Constructor packet for P9-T07 to execute the distinct nonlinear conservation, constraint-closure, and compact-source benchmark case while carrying P9-T02 through P9-T06 INCONCLUSIVE dispositions and zero benchmark passes.",
+    "latest_research_task_id": "RT-20260730-014",
+    "latest_research_handoff_id": "handoff-0921",
+    "latest_research_next_action": "Run one governed checkpoint for AJ-RT-20260730-014-001. Only after it commits may one fresh bounded P9-T07 Candidate Constructor packet execute the distinct source-derived nonlinear compact-source case.",
     "latest_project_system_task_id": "none",
     "latest_project_system_status": "none",
     "latest_project_system_sidecar_task_id": "none",
@@ -330,7 +330,7 @@
   ],
   "distance_to_gr": {
     "delta": {
-      "effect": "obstruction_recorded_no_physical_delta",
+      "effect": "none_project_system_recovery",
       "changed": false,
       "milestone": "benchmark_promotion",
       "burden_id": "benchmark_promotion"
@@ -625,14 +625,35 @@
         "layer": "post_write",
         "status": "PENDING",
         "evidence": [
-          "Repository-wide render, registry, memory, documentation, claim-language, taxonomy, and research-control gates run before checkpoint."
+          "Final repository-wide validation follows handoff and derivative synchronization."
         ]
       },
       {
         "layer": "post_checkpoint",
         "status": "PENDING",
         "evidence": [
-          "Exactly one governed checkpoint remains."
+          "One governed recovery checkpoint remains uninvoked."
+        ]
+      },
+      {
+        "layer": "renderer",
+        "status": "PENDING",
+        "evidence": [
+          "Final render-and-check follows this handoff."
+        ]
+      },
+      {
+        "layer": "memory_bootstrap",
+        "status": "PENDING",
+        "evidence": [
+          "Final tracked memory synchronization and validate-only pass remain."
+        ]
+      },
+      {
+        "layer": "claim_language_linter",
+        "status": "PENDING",
+        "evidence": [
+          "Changed-source claim-language validation remains in the precheckpoint stack."
         ]
       }
     ]

@@ -1,0 +1,270 @@
+handoff_id: "handoff-0921"
+handoff_number: 921
+task_id: "RT-20260730-014"
+decision_id: "DDR-20260730-014"
+job_id: "AJ-RT-20260730-014-001"
+completion_id: "AJC-AJ-RT-20260730-014-001"
+completion_path: "research_control/tasks/RT-20260730-014/jobs/completions/AJC-AJ-RT-20260730-014-001.yaml"
+completion_sha256: "43e7f27e30ec2b15e8d7aa3a4a77d7a60f95b3122bc87217dc1ced7a8ced2091"
+status: "ready_after_checkpoint"
+created_at: "2026-07-31T04:41:09Z"
+parent_handoff_id: "handoff-0920"
+plan_task_id: "P9-T07"
+recovery_for_plan_task_id: "P9-T06"
+source_role_id: "process-integrity-auditor"
+source_role_version: "0.1.0"
+source_execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260730-014"
+summary: "Generation 183 inserts only the missing eight-byte literal handoff-0920 identity into the P9-T06 Markdown heading. The tracked receipt reconstructs the exact pre-repair Markdown hash, preserves handoff-0920 YAML and protected RT-20260730-013 records, and confirms that the live continuation boundary accepts the pair. P9-T06 was not reexecuted and P9-T07 remains unexecuted."
+next_action: "Run one governed checkpoint for AJ-RT-20260730-014-001. Only after it commits may one fresh bounded P9-T07 Candidate Constructor packet execute the distinct source-derived nonlinear compact-source case."
+current_claim_boundary: "CB-V21-P9-T06-HANDOFF-0920-IDENTITY-RECOVERY-001"
+loop_risk_route: "candidate-construction-packet"
+
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260730-014"
+  latest_research_handoff_id: "handoff-0921"
+  latest_research_next_action: "Run one governed checkpoint for AJ-RT-20260730-014-001. Only after it commits may one fresh bounded P9-T07 Candidate Constructor packet execute the distinct source-derived nonlinear compact-source case."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+
+claim_boundary:
+  allowed_next_scope: "One governed checkpoint for AJ-RT-20260730-014-001. After checkpoint only, one separately claimed P9-T07 source-derived nonlinear compact-source packet may execute."
+  completed_task: "RT-20260730-014"
+  completed_completion_path: "research_control/tasks/RT-20260730-014/jobs/completions/AJC-AJ-RT-20260730-014-001.yaml"
+  completed_completion_sha256: "43e7f27e30ec2b15e8d7aa3a4a77d7a60f95b3122bc87217dc1ced7a8ced2091"
+  source_handoff_id: "handoff-0920"
+  source_handoff_path: "research_control/handoffs/handoff-0920.yaml"
+  source_handoff_sha256: "1dba29ed5bfa13291ce72449dba3bd6e30da65e493fd24b12a0711c97b52b4df"
+  immutable_route_sha256: "92bbc9b51c6b523d8645a482aaae70efba66369c48c9134b81e1a3c63c376d39"
+  route_blocker_fingerprint: "15293295def7b10ebf7ffd864e0d497b658a8b0c636e0231c4c1cefdbe271e97"
+  dirty_state_manifest_sha256: "4d7369faee5ba281c6dcfb37a4a4ed02e3dcbf7002a0a1ff7a88bc7419412f50"
+  failed_gate_evidence_sha256: "1385b646fca4fd79a453811d4de22f97946c992e074b965db6641050bc603ca1"
+  recovery_receipt_path: "research_control/tasks/RT-20260730-014/artifacts/handoff_0920_markdown_identity_recovery_receipt.json"
+  recovery_receipt_sha256: "9fd34632975c988966b5e81ea89a3de527935396a75c0832bd89dc13a971290a"
+  recovery_validator_path: "research_control/tasks/RT-20260730-014/artifacts/validate_handoff_0920_markdown_identity_recovery.py"
+  recovery_validator_sha256: "758bdd82986c0872bbadf27a30594d38e995b81256d600da8334aa191a178d91"
+  handoff_markdown_before_sha256: "1385b646fca4fd79a453811d4de22f97946c992e074b965db6641050bc603ca1"
+  handoff_markdown_after_sha256: "4600c6cd5b15bec0628339ed83ed4779f8cccb60ee90ce22711c0629f5682b23"
+  target_path_count: 1
+  protected_predecessor_path_count: 4
+  protected_hash_mismatch_count: 0
+  exact_identity_insertion_byte_count: 8
+  checkpoint_invocation_count_before_handoff: 0
+  checkpoint_committed_before_handoff: false
+  p9_t06_payload_preserved: true
+  p9_t06_science_payload_modified_by_recovery: false
+  p9_t06_reexecuted: false
+  p9_t07_executed: false
+  benchmark_pass_count_changed: false
+  scientific_status_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  ontology_adoption_authorized: false
+  source_law_adoption_authorized: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_performed: false
+  blocked_claims:
+    - "project-system handoff identity recovery presented as scientific progress"
+    - "P9-T06 presented as reexecuted or scientifically modified"
+    - "P9-T07 presented as executed before checkpoint"
+    - "a benchmark pass or Gate E verdict inferred from recovery"
+    - "ontology source-law effective geometry Einstein-equation exact-GR promotion proof publication push or completed derivation"
+
+plan_result:
+  plan_task_id: "P9-T06"
+  recovery_for_plan_task_id: "P9-T06"
+  next_plan_task_id: "P9-T07"
+  title: "Repair the handoff-0920 Markdown identity and recover checkpoint eligibility"
+  result_status: "HANDOFF_0920_MARKDOWN_IDENTITY_RECOVERY_PASS"
+  work_item_status: "completed"
+  protected_p9_t06_case_complete: true
+  protected_p9_t06_payload_byte_preserved: true
+  exact_handoff_identity_repair_complete: true
+  p9_t07_dependency_ready_after_checkpoint: true
+  p9_t07_dependency_ready_now: false
+  p9_t07_executed: false
+  scientific_claims_changed_by_recovery: false
+  distance_to_gr_delta_changed_by_recovery: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+distance_to_gr:
+  changed: false
+  effect: "none_project_system_recovery"
+  burden_id: "benchmark_promotion"
+  milestone: "benchmark_promotion"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "The inherited P9-T06 INCONCLUSIVE result and zero benchmark-pass count remain exact; this recovery contributes no physics movement."
+  downstream_unlocked:
+    - "P9-T07 only after the governed recovery checkpoint"
+  downstream_still_blocked:
+    - "P9-T07 until the governed recovery checkpoint commits"
+    - "any benchmark promotion or Gate E verdict"
+    - "exact-GR recovery"
+
+required_next_packet:
+  task_type: "v21_p9_t07_nonlinear_conservation_compact_source_case"
+  plan_task_id: "P9-T07"
+  objective: "Construct and test one distinct source-derived nonlinear compact-source case that moves beyond the prior linear and homogeneous controls without target-informed repair."
+  output_requirement: "One sealed source-side construction, conservation analysis, nonlinear compact-source comparison, and honest PASS, FAIL, or INCONCLUSIVE result."
+  dependency_qualification: "P9-T06 supplies an INCONCLUSIVE radiative nonselection case and no benchmark pass; the recovery checkpoint must commit first."
+  dependency_ready_after_checkpoint: true
+  dependency_ready_now: false
+  exact_human_authorization_required: false
+  executed: false
+
+selected_next_route:
+  route_id: "v21_p9_t07_nonlinear_conservation_compact_source_after_p9_t06_inconclusive"
+  route_label: "candidate-construction-packet"
+  role_family: "candidate-constructor@0.2.0"
+  worker_skill: "continue-research"
+  selected_next_packet_type: "distinct_source_derived_nonlinear_compact_case"
+  task_type: "v21_p9_t07_nonlinear_conservation_compact_source_case"
+  plan_task_id: "P9-T07"
+  target_derivation_milestone: "benchmark_promotion"
+  milestone_burden: "Move beyond linear and homogeneous controls."
+  strategy_id: "construct_p9_t07_distinct_source_derived_nonlinear_compact_case_v1"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  target_atlas_assumed: false
+  target_metric_assumed: false
+  target_informed_source_repair_authorized: false
+  benchmark_result_preestablished: false
+  Gate_E_verdict_preestablished: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  executed: false
+  next_action: "Remain unexecuted until the generation-183 governed checkpoint commits."
+  source_handoff: "research_control/handoffs/handoff-0921.yaml"
+
+ordinary_route_guard:
+  schema_id: "ordinary_route_guard_evaluation_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  evaluation_id: "ORE-HANDOFF-0921"
+  ordinary_handoff_id: "handoff-0921"
+  threshold: 3
+  consecutive_project_system_tasks_before_selection: 1
+  ready_science_plan_task_ids:
+    - "P9-T07"
+    - "P14-T04"
+  selected_plan_task_id: "P9-T07"
+  selected_route_class: "physics_bearing"
+  selected_worker_skill: "continue-research"
+  outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  exception_receipt:
+    active: false
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+active_state_boundary:
+  active_task_id: "RT-20260730-014"
+  active_job_id: "AJ-RT-20260730-014-001"
+  current_status: "handoff_0920_markdown_identity_recovery_pass_ready_for_checkpoint"
+  checkpoint_required: true
+  checkpoint_completed: false
+  checkpoint_invocation_count: 0
+  dependency_checkpoint_commit: "8b2ebbae2de39669b4c95a9fa3485477430d6592"
+  project_system_recovery_completed: true
+  p9_t06_case_complete: true
+  p9_t06_payload_byte_preserved: true
+  selected_next_plan_task_id: "P9-T07"
+  selected_next_worker_skill: "continue-research"
+  selected_next_role_family: "candidate-constructor@0.2.0"
+  selected_next_route_label: "candidate-construction-packet"
+  selected_next_strategy_id: "construct_p9_t07_distinct_source_derived_nonlinear_compact_case_v1"
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 183 route, claim, lease, repository binding, and clean manifest validated."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The tracked receipt proves the exact identity insertion and protected predecessor hashes."
+  post_write:
+    status: "PENDING"
+    evidence:
+      - "Final repository-wide validation follows handoff and derivative synchronization."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "One governed recovery checkpoint remains uninvoked."
+  renderer:
+    status: "PENDING"
+    evidence:
+      - "Final render-and-check follows this handoff."
+  memory_bootstrap:
+    status: "PENDING"
+    evidence:
+      - "Final tracked memory synchronization and validate-only pass remain."
+  claim_language_linter:
+    status: "PENDING"
+    evidence:
+      - "Changed-source claim-language validation remains in the precheckpoint stack."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "project-system handoff-identity recovery only"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  publication_authorized: false
+  proof_authority: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  canonical_ontology_edit_authorized: false
+  ontology_selection_authorized: false
+  physical_interpretation_establishment_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required_no_nonblank_signals"
+  rationale: "The bounded identity recovery emits no new project-improvement signal."
+
+handoff_authority_boundary:
+  this_handoff_authorizes:
+    - "one governed checkpoint for AJ-RT-20260730-014-001"
+    - "after that checkpoint only one separately claimed P9-T07 source-derived nonlinear compact-source packet"
+  this_handoff_does_not_authorize:
+    - "P9-T06 reexecution or scientific-payload mutation"
+    - "P9-T07 execution before checkpoint"
+    - "target-informed source selection tuning or repair"
+    - "benchmark pass Gate E change ontology source-law effective geometry Einstein-equation exact-GR promotion proof publication push or completed derivation"
+
+next_plan_task_id: "P9-T07"
+next_worker_skill: "continue-research"
+next_role_family: "candidate-constructor@0.2.0"
+next_route_label: "candidate-construction-packet"
+next_strategy_id: "construct_p9_t07_distinct_source_derived_nonlinear_compact_case_v1"
+notes: "Generation 183 is project-system control work only. P9-T07 remains unexecuted until the governed checkpoint commits."

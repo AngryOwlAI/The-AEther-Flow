@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260730-013`
-- Latest handoff: `handoff-0920`
-- Current status: `radiative_dynamics_detector_nonselection_precisely_obstructed_case_inconclusive_ready_for_checkpoint`
+- Active task: `RT-20260730-014`
+- Latest handoff: `handoff-0921`
+- Current status: `handoff_0920_markdown_identity_recovery_pass_ready_for_checkpoint`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260730-013`
-- Latest research handoff: `handoff-0920`
-- Latest research next action: Invoke the one governed checkpoint for AJ-RT-20260730-013-001. After that commit, use one fresh bounded Candidate Constructor packet for P9-T07 to execute the distinct nonlinear conservation, constraint-closure, and compact-source benchmark case while carrying P9-T02 through P9-T06 INCONCLUSIVE dispositions and zero benchmark passes.
+- Latest research task: `RT-20260730-014`
+- Latest research handoff: `handoff-0921`
+- Latest research next action: Run one governed checkpoint for AJ-RT-20260730-014-001. Only after it commits may one fresh bounded P9-T07 Candidate Constructor packet execute the distinct source-derived nonlinear compact-source case.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `698ff60b3c43ae6fa953ebb79aa973e53cecae050cd96faba14f736a22364ba5`
-- JSON SHA-256: `7f093dc0affcb16fd7a3bd4c9059cd03f6b601868fb1f977218278e2ab75c901`
+- YAML SHA-256: `14d5d37cbf58a9d1829d5f45165083f5eb85b075c4dfcbdcad7efc7d2fb90be5`
+- JSON SHA-256: `1b2b2ede49e8420052a8b6e0cd6845233dd5ac82ddf95f698faa08cc8fce2e0f`
 
 ## Authority Warning
 

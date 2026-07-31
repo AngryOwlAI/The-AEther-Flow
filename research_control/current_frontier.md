@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260730-013` and `handoff-0920`.
+`RT-20260730-014` and `handoff-0921`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260730-013` |
-| Latest handoff ID | `handoff-0920` |
-| Current status | `radiative_dynamics_detector_nonselection_precisely_obstructed_case_inconclusive_ready_for_checkpoint` |
+| Active task ID | `RT-20260730-014` |
+| Latest handoff ID | `handoff-0921` |
+| Current status | `handoff_0920_markdown_identity_recovery_pass_ready_for_checkpoint` |
 | V16 completed | false |
-| Current route family | benchmark or recovery (scientific) |
+| Current route family | benchmark or recovery (project system) |
 | Target derivation milestone | `benchmark_promotion` |
 | Current burden | `benchmark_promotion` |
-| Required next authority | Invoke the one governed checkpoint for AJ-RT-20260730-013-001. After that commit, use one fresh bounded Candidate Constructor packet for P9-T07 to execute the distinct nonlinear conservation, constraint-closure, and compact-source benchmark case while carrying P9-T02 through P9-T06 INCONCLUSIVE dispositions and zero benchmark passes. |
-| Next recommended action | Invoke the one governed checkpoint for AJ-RT-20260730-013-001. After that commit, use one fresh bounded Candidate Constructor packet for P9-T07 to execute the distinct nonlinear conservation, constraint-closure, and compact-source benchmark case while carrying P9-T02 through P9-T06 INCONCLUSIVE dispositions and zero benchmark passes. |
+| Required next authority | One governed checkpoint for AJ-RT-20260730-014-001. After checkpoint only, one separately claimed P9-T07 source-derived nonlinear compact-source packet may execute. |
+| Next recommended action | Run one governed checkpoint for AJ-RT-20260730-014-001. Only after it commits may one fresh bounded P9-T07 Candidate Constructor packet execute the distinct source-derived nonlinear compact-source case. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260730-013` |
-| Latest research handoff ID | `handoff-0920` |
-| Latest research next action | Invoke the one governed checkpoint for AJ-RT-20260730-013-001. After that commit, use one fresh bounded Candidate Constructor packet for P9-T07 to execute the distinct nonlinear conservation, constraint-closure, and compact-source benchmark case while carrying P9-T02 through P9-T06 INCONCLUSIVE dispositions and zero benchmark passes. |
+| Latest research task ID | `RT-20260730-014` |
+| Latest research handoff ID | `handoff-0921` |
+| Latest research next action | Run one governed checkpoint for AJ-RT-20260730-014-001. Only after it commits may one fresh bounded P9-T07 Candidate Constructor packet execute the distinct source-derived nonlinear compact-source case. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260730-013/00_TASK.yaml`.
-- Active task objective: Derive the radiative sector, polarizations, speed, damping, dispersion, and detector coupling from source-derived equations, or return an exact obstruction without adopting target wave equations or using target content to select a source completion.
-- Latest handoff path: `research_control/handoffs/handoff-0920.yaml`.
-- Latest handoff summary: P9-T06 derives the exact C4 quotient spectrum {2,2,4}, two positive-kinetic proposal-only completions with the same stationary equation but incompatible modal roots and responses, commuting rank-two/rank-three projectors, and distinct linear readouts. The current source package selects no physical kinetic law, clock, length map, radiative projector, polarization semantics, or detector interaction. The case is INCONCLUSIVE with secondary FORMAL_ANALOGY, five cumulative inconclusive cases, zero passes, and no promotion.
-- Current route family: benchmark or recovery (scientific).
-- Next recommended action: Invoke the one governed checkpoint for AJ-RT-20260730-013-001. After that commit, use one fresh bounded Candidate Constructor packet for P9-T07 to execute the distinct nonlinear conservation, constraint-closure, and compact-source benchmark case while carrying P9-T02 through P9-T06 INCONCLUSIVE dispositions and zero benchmark passes.
+- Active task path: `research_control/tasks/RT-20260730-014/00_TASK.yaml`.
+- Active task objective: Insert only the literal handoff-0920 identity into the existing Handoff 0920 Markdown heading, prove every other handoff and P9-T06 source byte unchanged, synchronize ordinary control derivatives, and invoke one governed checkpoint before P9-T07.
+- Latest handoff path: `research_control/handoffs/handoff-0921.yaml`.
+- Latest handoff summary: Generation 183 inserts only the missing eight-byte literal handoff-0920 identity into the P9-T06 Markdown heading. The tracked receipt reconstructs the exact pre-repair Markdown hash, preserves handoff-0920 YAML and protected RT-20260730-013 records, and confirms that the live continuation boundary accepts the pair. P9-T06 was not reexecuted and P9-T07 remains unexecuted.
+- Current route family: benchmark or recovery (project system).
+- Next recommended action: Run one governed checkpoint for AJ-RT-20260730-014-001. Only after it commits may one fresh bounded P9-T07 Candidate Constructor packet execute the distinct source-derived nonlinear compact-source case.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -302,7 +302,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Invoke the one governed checkpoint for AJ-RT-20260730-013-001. After that commit, use one fresh bounded Candidate Constructor packet for P9-T07 to execute the distinct nonlinear conservation, constraint-closure, and compact-source benchmark case while carrying P9-T02 through P9-T06 INCONCLUSIVE dispositions and zero benchmark passes.
+Run one governed checkpoint for AJ-RT-20260730-014-001. Only after it commits may one fresh bounded P9-T07 Candidate Constructor packet execute the distinct source-derived nonlinear compact-source case.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -321,30 +321,39 @@ Layer status summary:
 | Status | Count | Meaning |
 | --- | --- | --- |
 | `PASS` | 2 | receipt complete |
-| `PENDING` | 2 | open item; evidence must explain why |
-| `NOT_ACQUIRED` | 1 | extension status; inspect evidence |
+| `PENDING` | 5 | open item; evidence must explain why |
 
 Validation layers:
 
 | Validation layer | Status | Meaning | Evidence |
 | --- | --- | --- | --- |
-| `pre_execution` | PASS | receipt complete | Generation 181 route, goal and global lease parity, repository root, main branch, checkpoint HEAD, clean-tree manifest, and max reasoning effort matched. |
-| `completion_internal` | PASS | receipt complete | Task-local validator passes 39 of 39 source-hash, C4 eigenpair, modal-root, response, seal, DAG, exposure, comparison, and parent-child checks.<br>Tectonic compiles the task-local TeX artifact to three pages. |
-| `post_write` | PENDING | open item; evidence must explain why | Repository-wide render, registry, memory, documentation, claim-language, taxonomy, and research-control gates run before checkpoint. |
-| `post_checkpoint` | PENDING | open item; evidence must explain why | Exactly one governed checkpoint remains. |
-| `independent_reproduction` | NOT_ACQUIRED | extension status; inspect evidence | All current calculation and validation occurred in the same execution context. |
+| `pre_execution` | PASS | receipt complete | Generation 183 route, claim, lease, repository binding, and clean manifest validated. |
+| `completion_internal` | PASS | receipt complete | The tracked receipt proves the exact identity insertion and protected predecessor hashes. |
+| `post_write` | PENDING | open item; evidence must explain why | Final repository-wide validation follows handoff and derivative synchronization. |
+| `post_checkpoint` | PENDING | open item; evidence must explain why | One governed recovery checkpoint remains uninvoked. |
+| `renderer` | PENDING | open item; evidence must explain why | Final render-and-check follows this handoff. |
+| `memory_bootstrap` | PENDING | open item; evidence must explain why | Final tracked memory synchronization and validate-only pass remain. |
+| `claim_language_linter` | PENDING | open item; evidence must explain why | Changed-source claim-language validation remains in the precheckpoint stack. |
 
 Authorization layers:
 
 | Authorization field | Value | Meaning |
 | --- | --- | --- |
 | `protected_scoped_gate_review_authorized` | false (not authorized) | scoped review authority only |
+| `protected_scoped_gate_review_scope` | project-system handoff-identity recovery only | exact scope of protected review authority |
+| `protected_scoped_gate_review_authority_source_path` | none | tracked source for scoped review authority |
 | `downstream_physics_promotion_authorized` | false (not authorized) | authorizes downstream physics promotion only when true |
+| `downstream_physics_promotion_authority_source_path` | none | tracked source for downstream promotion authority |
 | `benchmark_promotion_authorized` | false (not authorized) | authorizes benchmark promotion only when true |
+| `benchmark_promotion_authority_source_path` | none | tracked source for benchmark authority |
 | `completed_derivation_authorized` | false (not authorized) | authorizes completed-derivation claim only when true |
+| `completed_derivation_authority_source_path` | none | tracked source for completed-derivation authority |
 | `Gate_Chair_verdict_authorized` | False | extension authorization field |
 | `canonical_ontology_edit_authorized` | False | extension authorization field |
+| `external_outreach_authorized` | False | extension authorization field |
+| `external_publication_authorized` | False | extension authorization field |
 | `global_no_go_claim_authorized` | False | extension authorization field |
+| `ontology_selection_authorized` | False | extension authorization field |
 | `physical_interpretation_establishment_authorized` | False | extension authorization field |
 | `proof_authority` | False | extension authorization field |
 | `publication_authorized` | False | extension authorization field |
@@ -354,9 +363,9 @@ Authorization layers:
 
 Legacy compatibility records:
 
-- active task: `RT-20260730-013`;
-- latest handoff: `handoff-0920`;
-- current status: `radiative_dynamics_detector_nonselection_precisely_obstructed_case_inconclusive_ready_for_checkpoint`;
+- active task: `RT-20260730-014`;
+- latest handoff: `handoff-0921`;
+- current status: `handoff_0920_markdown_identity_recovery_pass_ready_for_checkpoint`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -366,8 +375,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0920.yaml`
-- `research_control/tasks/RT-20260730-013/00_TASK.yaml`
+- `research_control/handoffs/handoff-0921.yaml`
+- `research_control/tasks/RT-20260730-014/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -383,7 +392,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0920*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0921*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

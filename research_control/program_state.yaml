@@ -1,11 +1,71 @@
 mode: "director_led_research_control"
-active_task_id: "RT-20260730-013"
-latest_handoff_id: "handoff-0920"
-current_status: "radiative_dynamics_detector_nonselection_precisely_obstructed_case_inconclusive_ready_for_checkpoint"
-claim_boundary_summary: "RT-20260730-013 derives exact proposal-only C4 completion, modal, projector, and readout counterfamilies and proves that the current source package does not select a physical kinetic law, clock, length map, radiative projector, polarization semantics, propagation law, or detector interaction. The case is INCONCLUSIVE with secondary FORMAL_ANALOGY, five cumulative inconclusive cases, zero benchmark passes, and no physical, Distance-to-GR, Gate E, promotion, proof, publication, push, global-no-go, future-impossibility, or completed-derivation authority."
+active_task_id: "RT-20260730-014"
+latest_handoff_id: "handoff-0921"
+current_status: "handoff_0920_markdown_identity_recovery_pass_ready_for_checkpoint"
+claim_boundary_summary: "RT-20260730-014 inserts only the missing eight-byte literal handoff-0920 identity into the existing Markdown heading, proves every other target byte and the protected P9-T06 records unchanged, and restores checkpoint eligibility. It creates no science, does not reexecute P9-T06, leaves P9-T07 unexecuted, and grants no ontology, source-law, benchmark, Distance-to-GR, Gate E, promotion, proof, publication, push, or completed-derivation authority."
 next_plan_task_id: "P9-T07"
 next_worker_skill: "continue-research"
-next_recommended_action: "Invoke the one governed checkpoint for AJ-RT-20260730-013-001. After that commit, use one fresh bounded Candidate Constructor packet for P9-T07 to execute the distinct nonlinear conservation, constraint-closure, and compact-source benchmark case while carrying P9-T02 through P9-T06 INCONCLUSIVE dispositions and zero benchmark passes."
+next_recommended_action: "Run one governed checkpoint for AJ-RT-20260730-014-001. Only after it commits may one fresh bounded P9-T07 Candidate Constructor packet execute the distinct source-derived nonlinear compact-source case."
+
+p9_t06_handoff_0920_markdown_identity_checkpoint_recovery:
+  task_id: "RT-20260730-014"
+  parent_task_id: "RT-20260730-013"
+  parent_handoff_id: "handoff-0920"
+  source_task_id: "RT-20260730-013"
+  source_job_id: "AJ-RT-20260730-013-001"
+  source_handoff_id: "handoff-0920"
+  plan_task_id: "P9-T06"
+  recovery_for_plan_task_id: "P9-T06"
+  next_plan_task_id: "P9-T07"
+  claim_boundary_id: "CB-V21-P9-T06-HANDOFF-0920-IDENTITY-RECOVERY-001"
+  status: "HANDOFF_0920_MARKDOWN_IDENTITY_RECOVERY_PASS_READY_FOR_CHECKPOINT"
+  work_item_status: "completed"
+  route_label: "repair_handoff_0920_markdown_identity_and_checkpoint_v1"
+  selected_role_family: "process-integrity-auditor@0.1.0"
+  selected_worker_skill: "improve-project-system"
+  selected_strategy_id: "repair_handoff_0920_markdown_identity_and_checkpoint_v1"
+  target_derivation_milestone: "none"
+  milestone_burden: "Project-system handoff identity and checkpoint compatibility only; no derivation milestone advances."
+  source_head: "8b2ebbae2de39669b4c95a9fa3485477430d6592"
+  immutable_route_sha256: "92bbc9b51c6b523d8645a482aaae70efba66369c48c9134b81e1a3c63c376d39"
+  route_blocker_fingerprint: "15293295def7b10ebf7ffd864e0d497b658a8b0c636e0231c4c1cefdbe271e97"
+  dirty_manifest_sha256: "4d7369faee5ba281c6dcfb37a4a4ed02e3dcbf7002a0a1ff7a88bc7419412f50"
+  failed_gate_evidence_sha256: "1385b646fca4fd79a453811d4de22f97946c992e074b965db6641050bc603ca1"
+  source_completion_sha256: "0ebe9ab415b60e01b8daf8fb235d18314c8ca52b4db2a60c86e99c1abb10ed70"
+  source_handoff_yaml_sha256: "1dba29ed5bfa13291ce72449dba3bd6e30da65e493fd24b12a0711c97b52b4df"
+  source_handoff_markdown_before_sha256: "1385b646fca4fd79a453811d4de22f97946c992e074b965db6641050bc603ca1"
+  source_handoff_markdown_after_sha256: "4600c6cd5b15bec0628339ed83ed4779f8cccb60ee90ce22711c0629f5682b23"
+  recovery_validator_path: "research_control/tasks/RT-20260730-014/artifacts/validate_handoff_0920_markdown_identity_recovery.py"
+  recovery_validator_sha256: "758bdd82986c0872bbadf27a30594d38e995b81256d600da8334aa191a178d91"
+  recovery_receipt_path: "research_control/tasks/RT-20260730-014/artifacts/handoff_0920_markdown_identity_recovery_receipt.json"
+  recovery_receipt_sha256: "9fd34632975c988966b5e81ea89a3de527935396a75c0832bd89dc13a971290a"
+  completion_path: "research_control/tasks/RT-20260730-014/jobs/completions/AJC-AJ-RT-20260730-014-001.yaml"
+  completion_sha256: "43e7f27e30ec2b15e8d7aa3a4a77d7a60f95b3122bc87217dc1ced7a8ced2091"
+  handoff_id: "handoff-0921"
+  handoff_path: "research_control/handoffs/handoff-0921.yaml"
+  exact_identity_insertion_byte_count: 8
+  every_other_target_byte_unchanged: true
+  protected_hash_mismatch_count: 0
+  p9_t06_payload_preserved: true
+  p9_t06_reexecuted: false
+  p9_t07_executed: false
+  scientific_claims_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  checkpoint_invocation_count: 0
+  checkpoint_committed: false
+  dependency_checkpoint_commit: "8b2ebbae2de39669b4c95a9fa3485477430d6592"
+  selected_next_work_item: "P9-T07"
+  selected_next_worker_skill: "continue-research"
+  selected_next_role_family: "candidate-constructor@0.2.0"
+  selected_next_packet_type: "distinct_source_derived_nonlinear_compact_case"
+  selected_next_route_label: "candidate-construction-packet"
+  selected_next_strategy_id: "construct_p9_t07_distinct_source_derived_nonlinear_compact_case_v1"
+  selected_next_requires_human_gate: false
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
 
 p9_t06_finite_radiative_dynamics_detector_nonselection_case:
   task_id: "RT-20260730-013"
