@@ -113,6 +113,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-V21-P9-T06-PARENT-FUSION-RADIATIVE-NONSELECTION-V1` `research_control/tasks/RT-20260730-013/artifacts/parent_fusion_notes_p9_t06_radiative.md`
 - `MD-V21-P9-T07-PARENT-FUSION-NONLINEAR-COMPACT-V1` `research_control/tasks/RT-20260730-015/artifacts/parent_fusion_notes_p9_t07_nonlinear_compact.md`
 - `MD-V21-P9-T08-PARENT-FUSION-BENCHMARK-SUITE-AUDIT-V1` `research_control/tasks/RT-20260731-001/artifacts/parent_fusion_notes_p9_t08_benchmark_audit.md`
+- `MD-V21-P9-T09-PARENT-FUSION-GATE-E-REVIEW-V1` `research_control/tasks/RT-20260731-004/artifacts/parent_fusion_notes_p9_t09_gate_e_review.md`
 - `TEX-EQSRC-CLOSURE-SOURCE-LAW-SMUGGLING-AUDIT-V1` `research_control/tasks/RT-20260718-017/artifacts/eqsrc_closure_source_law_smuggling_audit_v1.tex`
 - `TEX-EQSRC-CLOSURE-SOURCE-LAW-V2-SMUGGLING-AUDIT` `research_control/tasks/RT-20260718-019/artifacts/eqsrc_closure_source_law_v2_smuggling_audit.tex`
 - `TEX-EQSRC-CLOSURE-SOURCE-LAW-V3-REFUTER-STRESS` `research_control/tasks/RT-20260718-022/artifacts/eqsrc_closure_source_law_v3_refuter_stress.tex`
@@ -541,6 +542,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V21-P9-T05-SOURCE-EXPANSION-DECODER-NONSELECTION-V1` `research_control/tasks/RT-20260730-012/artifacts/source_expansion_decoder_nonselection_v1.tex`
 - `TEX-V21-P9-T06-FINITE-RADIATIVE-COMPLETION-NONSELECTION-V1` `research_control/tasks/RT-20260730-013/artifacts/finite_radiative_completion_nonselection_v1.tex`
 - `TEX-V21-P9-T07-FINITE-NONLINEAR-COMPACT-SOURCE-NONSELECTION-V1` `research_control/tasks/RT-20260730-015/artifacts/finite_nonlinear_compact_source_nonselection_v1.tex`
+- `TEX-V21-P9-T09-PROTECTED-GATE-E-DECISION-V1` `research_control/tasks/RT-20260731-004/artifacts/p9_t09_gate_e_decision_v1.tex`
 
 ## explanatory_noncanonical
 
@@ -1265,6 +1267,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-V21-P9-T07-PARENT-FUSION-NONLINEAR-COMPACT-V1` `wiki/markdown/md-v21-p9-t07-parent-fusion-nonlinear-compact-v1.md`
 - `WIKI-MD-V21-P9-T08-BENCHMARK-SUITE-AUDIT-RECEIPT-V1` `wiki/markdown/md-v21-p9-t08-benchmark-suite-audit-receipt-v1.md`
 - `WIKI-MD-V21-P9-T08-PARENT-FUSION-BENCHMARK-SUITE-AUDIT-V1` `wiki/markdown/md-v21-p9-t08-parent-fusion-benchmark-suite-audit-v1.md`
+- `WIKI-MD-V21-P9-T09-PARENT-FUSION-GATE-E-REVIEW-V1` `wiki/markdown/md-v21-p9-t09-parent-fusion-gate-e-review-v1.md`
 - `WIKI-MD-VALIDATOR-OPERATOR-WORKFLOW-PUBLICATION-BRIEF` `wiki/markdown/md-validator-operator-workflow-publication-brief.md`
 - `WIKI-PDF-LEGACY-ONTOLOGY-AETHER-FLOW-CONSISTENCY` `wiki/pdf/pdf-legacy-ontology-aether-flow-consistency.md`
 - `WIKI-PDF-LEGACY-ONTOLOGY-AETHER-FLOW-DYNAMICS` `wiki/pdf/pdf-legacy-ontology-aether-flow-dynamics.md`
@@ -1726,6 +1729,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-V21-P9-T05-SOURCE-EXPANSION-DECODER-NONSELECTION-V1` `wiki/tex/tex-v21-p9-t05-source-expansion-decoder-nonselection-v1.md`
 - `WIKI-TEX-V21-P9-T06-FINITE-RADIATIVE-COMPLETION-NONSELECTION-V1` `wiki/tex/tex-v21-p9-t06-finite-radiative-completion-nonselection-v1.md`
 - `WIKI-TEX-V21-P9-T07-FINITE-NONLINEAR-COMPACT-SOURCE-NONSELECTION-V1` `wiki/tex/tex-v21-p9-t07-finite-nonlinear-compact-source-nonselection-v1.md`
+- `WIKI-TEX-V21-P9-T09-PROTECTED-GATE-E-DECISION-V1` `wiki/tex/tex-v21-p9-t09-protected-gate-e-decision-v1.md`
 
 ## project_control
 

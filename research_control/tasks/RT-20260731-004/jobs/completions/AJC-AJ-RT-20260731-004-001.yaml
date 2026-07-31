@@ -1,0 +1,628 @@
+validation_status: "PASS"
+final_repository_validation_status: "PASS_READY_FOR_CHECKPOINT"
+job_id: "AJ-RT-20260731-004-001"
+completion_id: "AJC-AJ-RT-20260731-004-001"
+task_id: "RT-20260731-004"
+task_type: "v21_p9_t09_protected_gate_e_benchmark_completed_derivation_review"
+decision_id: "DDR-20260731-004"
+role_id: "gate-chair"
+role_version: "0.1.0"
+execution_role_ref: "gate-chair@0.1.0--RT-20260731-004"
+status: "completed"
+created_at: "2026-07-31T14:16:53Z"
+started_at: "2026-07-31T14:16:53Z"
+completed_at: "2026-07-31T14:16:53Z"
+objective: "Execute only P9-T09 by issuing the protected evidence-bound Gate E verdict for the fixed P9-T01 through P9-T08 package, deciding benchmark promotion, exact or approximate GR recovery, and completed-derivation wording without repairing or promoting that package."
+completion_summary: "P9-T09 consumes the exact one-time protected review authority and issues NOT_READY_BENCHMARK_AND_COMPLETED_DERIVATION_REQUIREMENTS_UNMET. The source-derived suite remains six INCONCLUSIVE cases with zero passes, no qualifying independent replication, no source-derived physical recovery bridge, and an unchanged NOT READY Gate D. Benchmark promotion is denied; exact and controlled approximate GR recovery are not established; a completed first-principles derivation may not be claimed."
+objective_result: "protected_gate_e_not_ready_benchmark_and_completed_derivation_requirements_unmet"
+
+historical_relay_context:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  terminal_generation: 187
+  terminal_phase: "terminal_awaiting_human"
+  terminal_receipt_sha256: "fbd5447d3f93000555970f4d35a8fcdb95788a7257ca9ea5ebfe34667e27a77c"
+  generation_claimed_by_this_completion: false
+  relay_state_modified_by_this_completion: false
+  note: "The terminal relay is historical orchestration context only. This standalone continue-research transaction makes no relay-generation claim and does not replay the consumed P9-T08 recovery route."
+
+transaction_status: "ready_for_checkpoint"
+result_disposition: "PROTECTED_GATE_E_NOT_READY_READY_FOR_CHECKPOINT"
+work_item_status: "completed"
+milestone_disposition: "protected_negative_disposition_complete_benchmark_and_completed_derivation_burdens_unmet"
+adoption_status: "blocked_adoption_open_continuation"
+checkpoint_commit:
+  required: true
+  attempted: false
+  committed: false
+  commit_sha: ""
+  dependency_checkpoint_commit: "640c799d5e04d166f735dd4c35e838e854f27d25"
+  push_authorized: false
+  push_performed: false
+
+is_physics_task: true
+payload_class: "obstruction_record"
+has_new_mathematical_payload: true
+source_extension_classification_required: false
+external_red_team_finding_requires_integration: false
+physics_promotion_authorized: false
+proof_authority: false
+
+minimum_payload:
+  schema_id: "minimum_physics_payload_schema_v1"
+  payload_class: "obstruction_record"
+  payload_artifact_path: "research_control/tasks/RT-20260731-004/artifacts/p9_t09_gate_e_decision_v1.tex"
+  payload_summary: "The protected decision records the exact fixed-package Gate E obstruction and its local-freeze boundary without treating control validation as physics evidence."
+
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P9"
+  plan_task_id: "P9-T09"
+  work_kind: "protected_gate_review"
+  task_class: "science"
+  expected_result_kind: "protected_verdict_or_deferred_human_gate"
+  dependency_task_ids:
+    - "P9-T08"
+  dependency_completion_paths:
+    - "research_control/tasks/RT-20260731-001/jobs/completions/AJC-AJ-RT-20260731-001-001.yaml"
+  dependency_completion_sha256es:
+    - "29e12eca665ad418d9ac6d310eadc63b35fe199fca94dd06515abe7cc8267ab9"
+  controlling_handoff_id: "handoff-0925"
+  controlling_handoff_sha256: "82c243a8925214d880be811497089cba4411edd48fd5ed67572ab07d4906ff13"
+  dependency_checkpoint_commits:
+    - "640c799d5e04d166f735dd4c35e838e854f27d25"
+  work_item_status: "completed_protected_not_ready_ready_for_checkpoint"
+  recommendation_ids:
+    - "V21-R28"
+    - "V21-R29"
+    - "V21-R31"
+    - "V21-R33"
+    - "V21-R67"
+    - "V21-R68"
+    - "V21-R72"
+  recommendation_coverage_role: "protected_benchmark_and_completed_derivation_disposition"
+  scientific_claims_changed: true
+  scientific_claim_change_scope: "first protected Gate E verdict over the fixed package; NOT READY only"
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  distance_to_gr_delta_scope: "protected control disposition and evidence-path update only; no mathematical or physical distance reduction"
+  physics_promotion_authorized: false
+  proof_authority: false
+  next_dependency_work_item: "none_for_exact_unchanged_package_after_checkpoint"
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  observed_durable_outputs:
+    physics:
+      - "one protected Gate E decision"
+      - "one ten-criterion verdict matrix"
+      - "one scientific status and local-freeze boundary"
+    project_system:
+      - "one task-local deterministic validator and compact receipt"
+      - "one exact protected-authorization receipt"
+  accepted_criteria:
+    physics:
+      - "the verdict is uniquely evidence-bound and protected"
+      - "benchmark exact-recovery approximate-recovery and completed-derivation dispositions are separate"
+      - "every unmet Gate E burden remains visible"
+      - "the adopted exact-GR effective reference benchmark is not called a substrate derivation"
+      - "the local freeze and materially new reopening path are explicit"
+    project_system:
+      - "authorization source hashes and immutable evidence hashes validate"
+      - "parent-child synthesis and control registries validate"
+      - "one governed checkpoint records the transaction"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+physics_payload_admission_result:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "physics"
+  declared_payload_type: "route_decision"
+  realized_payload_type: "protected_gate_e_route_decision_and_fixed_package_obstruction"
+  candidate_family: "V21-P9-FIXED-SOURCE-DERIVED-BENCHMARK-SUITE-GATE-E-V1"
+  decision_identity: "NOT_READY_BENCHMARK_AND_COMPLETED_DERIVATION_REQUIREMENTS_UNMET"
+  result: "PASS"
+  material_payload_present: true
+  process_receipts_counted_as_payload: false
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed_by_admission: false
+  physics_promotion_authorized: false
+
+family_freeze_admission_result:
+  schema_id: "family_freeze_route_admission_v1"
+  policy_id: "family_freeze_reopening_policy_v1"
+  route_id: "v21_p9_t09_protected_gate_e_review"
+  family_id: "V21-P9-FIXED-SOURCE-DERIVED-BENCHMARK-SUITE-GATE-E-V1"
+  family_identity_sha256: "fb2ba0137bedbccd788ff5f6d8f2c888daa72fc9c7bf7706149c2617d0af7dea"
+  detected_match_basis: []
+  reopening_requested: false
+  result: "PASS_FIRST_PROTECTED_DECISION_DISTINCT_FROM_CANDIDATE_RECONSTRUCTION"
+  local_family_freeze_preserved: true
+  global_no_go_claimed: false
+  physics_promotion_authorized: false
+
+ordinary_route_guard_admission_result:
+  schema_id: "ordinary_route_guard_admission_result_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0925"
+  selected_plan_task_id: "P9-T09"
+  guard_outcome: "below_threshold"
+  result: "PASS"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  scientific_status_changed_by_guard: false
+  physics_promotion_authorized: false
+
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_execution_unit_count: 2
+  outer_agentjob_count: 1
+  child_agentjob_count: 0
+  subagent_count: 0
+
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260731-004/artifacts/child_phys_math_p9_t09_gate_e_review.yaml"
+      output_sha256: "4a75ec331fc9d75e99db6efa6921fec78f962fa0eeab49c4ec1e328032cab9d1"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260731-004/artifacts/child_phys_phil_p9_t09_gate_e_review.yaml"
+      output_sha256: "737191c1542ea8a59ae3836506244414f848b7dba5407f5716ea3a3a694e6fe4"
+      status: "completed"
+  conflict_review:
+    status: "resolved"
+    review_path: "research_control/tasks/RT-20260731-004/artifacts/parent_conflict_review_p9_t09_gate_e_review.yaml"
+    review_sha256: "74a3aeaac977a8c3830e58f2be695b1e200e108ee8bd676b08165da84d89078e"
+    resolution_rounds: 1
+    resolved_conflict_count: 5
+    unresolved_conflicts: []
+  fusion:
+    fused_output_path: "research_control/tasks/RT-20260731-004/artifacts/p9_t09_gate_e_decision_v1.tex"
+    fusion_notes_path: "research_control/tasks/RT-20260731-004/artifacts/parent_fusion_notes_p9_t09_gate_e_review.md"
+    shared_consensus_summary: "Protected authority is satisfied, but seven required Gate E criteria remain unmet; the only evidence-supported verdict is NOT READY."
+    unique_phys_math_contributions: "Exact ten-criterion truth table, six-case and replication counts, source-bridge deficits, and separate recovery dispositions."
+    unique_phys_phil_contributions: "Authority-versus-evidence separation, adopted-reference-versus-substrate-derivation distinction, calibrated claim wording, and local-versus-global freeze boundary."
+    novelty_preservation_summary: "Fusion records the first protected Gate E disposition for the fixed P9 package and exact reopening conditions."
+    claim_boundary_preservation_summary: "No reviewed-source or ontology edit, independent-review claim, adoption, promotion, recovery, proof, publication, push, global no-go, future impossibility, or completed derivation is authorized."
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+
+memory_preflight:
+  preflight_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1103
+    relationship_row_count: 5578
+    semantic_row_count: 1103
+    vault_row_count: 1103
+    local_cache_only_warning_count: 0
+    refresh_performed: true
+  refresh_needed: true
+  refresh_performed: true
+  refresh_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py"
+  before_local_retrieval_status: "WARN"
+  after_local_retrieval_status: "PASS"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"benchmark suite Gate E readiness completed derivation\" --limit 10 --json"
+      query_type: "search"
+      query_text: "benchmark suite Gate E readiness completed derivation"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-DESIGN-FRONTIER-THEOREM-INVENTORY"
+        - "MD-V21-P9-T01-PARENT-FUSION-BENCHMARK-PROTOCOL-V1"
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-FRONTIER-THEOREM-INVENTORY"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/frontier_theorem_inventory.md"
+      source_hash: "9b478e2e2985dfccb512cfb78b6e07088b0910b89ceb2fc08f94e0851e6b91b4"
+    - object_id: "MD-V21-P9-T01-PARENT-FUSION-BENCHMARK-PROTOCOL-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260729-012/artifacts/parent_fusion_notes_p9_t01_benchmark_protocol.md"
+      source_hash: "9ca58abe6eb1151614b4e5124df9a2e2aac4ecff301cea634dc4e7ad6cbcde03"
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  authority_note: "Generated Obsidian wiki notes semantic extracts SQLite memory PDFs and .local files are retrieval layers only and are not authority."
+
+Gate_E_result:
+  reviewed_object_id: "V21-P9-FIXED-SOURCE-DERIVED-BENCHMARK-SUITE-GATE-E-V1"
+  protected_review_authorized: true
+  approval_id: "approval-20260731-001"
+  approval_consumed_once: true
+  decision_code: "NOT_READY_BENCHMARK_AND_COMPLETED_DERIVATION_REQUIREMENTS_UNMET"
+  overall_readiness: "NOT_READY"
+  criterion_count: 10
+  pass_or_narrow_pass_count: 3
+  fail_or_not_established_count: 7
+  positive_verdict_issued: false
+  executed_case_count: 6
+  inconclusive_case_count: 6
+  benchmark_pass_count: 0
+  qualifying_independent_replication_count: 0
+  benchmark_promotion_status: "DENIED_NOT_READY"
+  exact_GR_recovery_status: "NOT_ESTABLISHED"
+  controlled_approximate_or_effective_GR_recovery_status: "NOT_ESTABLISHED"
+  completed_first_principles_derivation_status: "MAY_NOT_BE_CLAIMED"
+  effective_exact_GR_benchmark_status: "PRESERVED_AS_ADOPTED_REFERENCE_NOT_SUBSTRATE_DERIVATION"
+  adoption_status: "blocked_adoption_open_continuation"
+  local_freeze_active: true
+  global_no_go_claimed: false
+
+new_mathematical_payload:
+  - payload_id: "P9T09-PAYLOAD-GATE-E-DECISION-001"
+    payload_type: "dependency_map_update"
+    name: "Protected ten-criterion Gate E disposition"
+    summary: "Updates the Gate E map by satisfying only protected authority while retaining seven unmet benchmark and recovery burdens, yielding NOT READY with no promotion."
+  - payload_id: "P9T09-PAYLOAD-FIXED-PACKAGE-OBSTRUCTION-001"
+    payload_type: "obstruction"
+    name: "Fixed-package benchmark and recovery obstruction"
+    summary: "Records six INCONCLUSIVE cases, zero passes, no qualifying independent replication, no source-derived physical bridge, and unchanged Gate D nonreadiness as the exact obstruction to positive Gate E."
+
+mathematical_payload_manifest:
+  - payload_id: "P9T09-PAYLOAD-GATE-E-DECISION-001"
+    payload_type: "dependency_map_update"
+    object_name: "P9-T09 protected Gate E verdict matrix"
+    claim_status: "human-gated protected negative disposition"
+    source_path: "research_control/tasks/RT-20260731-004/artifacts/p9_t09_gate_e_verdict_matrix_v1.yaml"
+    burden_effect: "audits"
+    summary: "Records three narrow protocol-or-authority passes, seven unmet criteria, and the evidence-bound NOT READY verdict."
+  - payload_id: "P9T09-PAYLOAD-FIXED-PACKAGE-OBSTRUCTION-001"
+    payload_type: "obstruction"
+    object_name: "OBST-P9T09-FIXED-PACKAGE-GATE-E-NOT-READY-001"
+    claim_status: "human-gated protected scoped obstruction"
+    source_path: "research_control/tasks/RT-20260731-004/artifacts/p9_t09_gate_e_decision_v1.tex"
+    burden_effect: "freezes"
+    summary: "The exact unchanged P9 package cannot support positive Gate E, recovery, benchmark promotion, or completed-derivation wording on the fixed evidence."
+
+physics_progress_status:
+  status: "route_frozen"
+  target_derivation_milestone: "benchmark_promotion"
+  milestone_burden: "Make the final protected scientific verdict after the complete chain."
+  explanation: "The protected decision burden is completed, but no mathematical or physical recovery burden is reduced. The exact unchanged package is locally frozen against positive Gate E and promotion."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+loop_risk_decision:
+  category: "scoped_obstruction"
+  next_route: "gate_chair_closure_or_suspension_proposal"
+  rationale: "Repeating the unchanged package cannot supply a benchmark pass, qualifying independent replication, or a source-derived physical bridge; the protected closure is therefore a local negative suspension of that package."
+  obstruction_summary: "Seven Gate E criteria remain unmet, including every criterion needed for physical recovery and benchmark promotion."
+  repeated_burdens:
+    - "source-derived physical model-to-world bridge"
+    - "lawful physical benchmark pass"
+    - "qualifying independent replication"
+    - "exact or controlled approximate GR recovery"
+
+route_cycle_control:
+  cycle_family: "v21_p9_fixed_source_derived_benchmark_suite_gate_e"
+  current_cycle_step: "protected_gate_decision"
+  prior_related_tasks:
+    - "RT-20260729-011"
+    - "RT-20260731-001"
+    - "RT-20260731-003"
+  cycle_risk: "high_if_unchanged_package_replayed"
+  orbit_avoidance_reason: "This is the first protected Gate E verdict and it stops replay of the fixed package; any future route must add materially new scientific evidence and fresh protected authority."
+  next_role_consequence: "none_for_fixed_package"
+
+obstruction_record:
+  present: true
+  obstruction_id: "OBST-P9T09-FIXED-PACKAGE-GATE-E-NOT-READY-001"
+  scope: "benchmark_promotion"
+  failed_object: "the exact unchanged P9-T01 through P9-T08 package as a positive Gate E-ready exact or controlled approximate GR-recovery benchmark package"
+  exact_failure: "All six cases are INCONCLUSIVE, zero benchmark passes exist, qualifying independent replication is absent, Gate D remains NOT READY, and no source-derived effective metric, universal matter coupling, physical Einstein equation, calibrated physical regime, or controlled corrections exist."
+  minimal_counterexample_path: "research_control/tasks/RT-20260731-004/artifacts/p9_t09_gate_e_verdict_matrix_v1.yaml"
+  current_ontology_implication: "does_not_derive"
+  source_extension_implication: "repair_allowed"
+  consequence: "route_frozen"
+  forbidden_overread: "This fixed-package obstruction is not a global no-go theorem, does not reject future source-side extensions, and does not erase the adopted exact-GR effective reference benchmark."
+
+freeze_criteria_status:
+  repeated_burden: false
+  freeze_evaluation_required: true
+  active_freeze_label: "P9T09-FIXED-PACKAGE-POSITIVE-GATE-E-FREEZE"
+  candidate_freeze_label: "P9T09-FIXED-PACKAGE-POSITIVE-GATE-E-FREEZE"
+  prior_attempts_considered:
+    - "RT-20260729-011"
+    - "RT-20260731-001"
+  criteria_evaluated:
+    - "six decisive physical case outcomes"
+    - "at least one lawful preregistered physical benchmark pass"
+    - "qualifying independent replication"
+    - "source-derived exact or controlled approximate GR recovery bridge"
+    - "protected decision authority"
+  freeze_if:
+    - "Any required Gate E burden remains unmet in the exact unchanged package."
+  do_not_freeze_if:
+    - "Materially new source-derived physical bridge evidence, a lawful pass, qualifying independent replication, and fresh protected authority are supplied."
+  freeze_decision: "locally_frozen"
+  decision_reason: "Protected authority is present, but seven required Gate E burdens remain unmet and cannot be manufactured by replay or control validation."
+  rationale: "Freeze only the exact unchanged package against positive Gate E, recovery, benchmark promotion, and completed-derivation wording."
+  next_allowed_route: "none"
+  status_update_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_or_registry_update_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+
+distance_to_gr_delta:
+  changed: false
+  effect: "frozen_negative"
+  burden_id: "benchmark_promotion"
+  milestone: "benchmark_promotion"
+  old_status: "blocked by missing primitive"
+  new_status: "blocked by missing primitive"
+  ledger_row_updated: true
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "The latest evidence and control status advance to the protected NOT READY Gate E decision while mathematical physical and promotion statuses remain blocked."
+  downstream_unlocked:
+    - "none"
+  downstream_still_blocked:
+    - "source-derived physical model-to-world bridge"
+    - "universal calibrated physical source law"
+    - "effective metric"
+    - "universal matter coupling"
+    - "physical Einstein equation"
+    - "qualifying independent replication"
+    - "benchmark pass"
+    - "benchmark promotion"
+    - "exact or controlled approximate GR recovery"
+    - "completed first-principles derivation"
+  explanation: "The Gate Chair decision is scientifically material as a protected disposition but contributes no mathematical or physical Distance-to-GR reduction."
+
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "unchanged; no canonical ontology edit or source-law adoption"
+  - burden: "Source equivalence EqSrc"
+    status: "unchanged; general equivalence theorem remains missing"
+  - burden: "RetainH"
+    status: "unchanged"
+  - burden: "GenH"
+    status: "unchanged"
+  - burden: "ObsLoc_lc"
+    status: "unchanged"
+  - burden: "Resp_lc"
+    status: "unchanged"
+  - burden: "M_src"
+    status: "unchanged protected finite matter status"
+  - burden: "g_eff"
+    status: "unresolved; no operative physical effective metric is source-derived"
+  - burden: "matter coupling"
+    status: "unresolved; no universal physical matter coupling is source-derived"
+  - burden: "Einstein equations"
+    status: "protected Gate D remains NOT_READY_EINSTEIN_SECTOR_DERIVATION_REQUIREMENTS_UNMET"
+  - burden: "finite-variation robustness"
+    status: "selected finite identities survive only in proposal or formal-analogy scope"
+  - burden: "benchmark promotion"
+    status: "protected Gate E completed NOT READY; six INCONCLUSIVE cases zero passes and no qualifying independent replication"
+  - burden: "Gate Chair status"
+    status: "protected P9-T09 verdict completed: NOT_READY_BENCHMARK_AND_COMPLETED_DERIVATION_REQUIREMENTS_UNMET"
+  - burden: "current route freeze or hard-fail status"
+    status: "exact unchanged P9 package locally frozen against positive Gate E benchmark promotion recovery claims and completed-derivation wording; materially new evidence remains open"
+
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+  summary: "Protected review authority changes the control disposition only; it does not supply a physical benchmark result, recovery derivation, or broader scientific authority."
+  forbidden_conclusions:
+    - "protected authority as a missing mathematical physical benchmark or replication premise"
+    - "protocol integrity as a physical benchmark pass"
+    - "six INCONCLUSIVE cases as an aggregate positive result"
+    - "same-context method checks as qualifying independent replication"
+    - "the adopted exact-GR effective reference benchmark as a first-principles substrate derivation"
+    - "benchmark promotion"
+    - "exact or controlled approximate GR recovery"
+    - "completed first-principles derivation"
+    - "canonical ontology source-law metric coupling matter or Einstein-equation adoption"
+    - "proof publication push global no-go future impossibility or global theory rejection"
+
+selected_next_route:
+  route_id: "v21_p9_t09_fixed_package_locally_frozen"
+  route_label: "local-freeze"
+  role_family: "none"
+  worker_skill: "none"
+  plan_task_id: "P9-T09"
+  target_derivation_milestone: "benchmark_promotion"
+  milestone_burden: "The protected verdict is complete; the fixed package has no automatic continuation."
+  requires_human_gate: true
+  execution_ready_after_checkpoint: false
+  physics_promotion_authorized: false
+  next_action: "After checkpoint, preserve the local freeze. Reopening requires materially new source-derived physical bridge evidence, at least one lawful preregistered physical benchmark pass, qualifying independent replication, and fresh protected authority."
+
+claim_boundary:
+  boundary_id: "CB-V21-P9-T09-PROTECTED-GATE-E-NOT-READY-001"
+  allowed_scope: "One protected evidence-bound Gate E NOT READY verdict, separate benchmark and recovery dispositions, exact unmet burdens, local freeze, and materially new reopening conditions."
+  blocked_scope: "Reviewed-source or ontology edit external outreach independent-review claim source-law metric coupling matter or Einstein-equation adoption positive Gate E benchmark promotion exact or approximate recovery proof publication push completed derivation global no-go future impossibility or global theory rejection."
+  claim_boundary_preserved: true
+
+artifact_evidence:
+  approval:
+    path: "research_control/approvals/approval-20260731-001.yaml"
+    sha256: "23c90eec73f74fd096c064f441278d36f6831d000da6182579969d0bf2f694fa"
+  authorization:
+    path: "research_control/tasks/RT-20260731-004/artifacts/human_authorization_p9_t09_gate_e_review_v1.yaml"
+    sha256: "b248937b11448f7b1cd0fcb1a751ac643844107c9489a29b4e702779ab492646"
+  protected_decision:
+    path: "research_control/tasks/RT-20260731-004/artifacts/p9_t09_gate_e_decision_v1.tex"
+    sha256: "7f28103e40664f0a004af0134f3216932136f8efb160f0c7c59039efa5225b0b"
+  verdict_matrix:
+    path: "research_control/tasks/RT-20260731-004/artifacts/p9_t09_gate_e_verdict_matrix_v1.yaml"
+    sha256: "55143876d13008b4c96755e5d8d72d5d52af67bf4baab6eed16648fe5b126f0a"
+  scientific_status:
+    path: "research_control/tasks/RT-20260731-004/artifacts/p9_t09_scientific_status_v1.yaml"
+    sha256: "915145f649066d6092df7ef16d3fc01c411d6c939b35acd28287b2d4e6470556"
+  parent_fusion:
+    path: "research_control/tasks/RT-20260731-004/artifacts/parent_fusion_notes_p9_t09_gate_e_review.md"
+    sha256: "017495c488f8feaa82583822b0fde25725e18363f299741e0d38ce354b36de5b"
+  task_local_validation:
+    path: "research_control/tasks/RT-20260731-004/artifacts/p9_t09_gate_e_validation_v1.json"
+  compact_receipt:
+    path: "research_control/tasks/RT-20260731-004/artifacts/p9_t09_gate_e_compact_receipt_v1.json"
+
+output_paths:
+  - "research_control/approvals/approval-20260731-001.yaml"
+  - "research_control/tasks/RT-20260731-004/artifacts/human_authorization_p9_t09_gate_e_review_v1.yaml"
+  - "research_control/tasks/RT-20260731-004/artifacts/child_phys_math_p9_t09_gate_e_review.yaml"
+  - "research_control/tasks/RT-20260731-004/artifacts/child_phys_phil_p9_t09_gate_e_review.yaml"
+  - "research_control/tasks/RT-20260731-004/artifacts/parent_conflict_review_p9_t09_gate_e_review.yaml"
+  - "research_control/tasks/RT-20260731-004/artifacts/parent_fusion_notes_p9_t09_gate_e_review.md"
+  - "research_control/tasks/RT-20260731-004/artifacts/p9_t09_gate_e_decision_v1.tex"
+  - "research_control/tasks/RT-20260731-004/artifacts/p9_t09_gate_e_verdict_matrix_v1.yaml"
+  - "research_control/tasks/RT-20260731-004/artifacts/p9_t09_scientific_status_v1.yaml"
+  - "research_control/tasks/RT-20260731-004/artifacts/p9_t09_gate_e_compact_receipt_v1.json"
+  - "research_control/tasks/RT-20260731-004/artifacts/p9_t09_gate_e_validation_v1.json"
+  - "research_control/tasks/RT-20260731-004/artifacts/validate_p9_t09_gate_e_review.py"
+  - "research_control/tasks/RT-20260731-004/00_TASK.yaml"
+  - "research_control/tasks/RT-20260731-004/DDR-20260731-004.md"
+  - "research_control/tasks/RT-20260731-004/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260731-004/roles/gate-chair@0.1.0--RT-20260731-004.yaml"
+  - "research_control/tasks/RT-20260731-004/jobs/AJ-RT-20260731-004-001.yaml"
+  - "research_control/tasks/RT-20260731-004/jobs/completions/AJC-AJ-RT-20260731-004-001.yaml"
+  - "research_control/handoffs/handoff-0926.yaml"
+  - "research_control/handoffs/handoff-0926.md"
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: true
+  protected_scoped_gate_review_scope: "One evidence-bound P9-T09 Gate E verdict over the fixed checkpointed P9-T01 through P9-T08 package."
+  protected_scoped_gate_review_authority_source_path: "research_control/approvals/approval-20260731-001.yaml"
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  exact_or_approximate_GR_recovery_authorized: false
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  push_authorized: false
+  external_outreach_authorized: false
+  publication_authorized: false
+  source_law_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  effective_metric_adoption_authorized: false
+  matter_coupling_adoption_authorized: false
+  independent_replication_claim_authorized: false
+  Einstein_equation_derivation_authorized: false
+  Gate_Chair_verdict_authorized: true
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Checkpoint 640c799d5e04d166f735dd4c35e838e854f27d25 committed the controlling P9 evidence transaction before review."
+      - "The exact one-time approval names P9-T09 and handoff-0925 and was consumed only by this job."
+      - "The terminal recursive relay remained historical and unmodified."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The decision, ten-criterion matrix, scientific-status record, and resolved parent-child synthesis agree on NOT READY."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Task-local, claim-language, documentation-impact, research-control, memory, renderer, TeX, and whitespace checks pass."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "One governed checkpoint remains; the fixed package has no automatic continuation after it."
+  independent_reproduction:
+    status: "NOT_ACQUIRED"
+    evidence:
+      - "All prior selected checks were same-context; no external, blind, human, or institutionally independent replication was claimed."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Tracked frontier, task-index, graph, registry, and wiki derivatives are fresh."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory synchronization and validate-only checks pass."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation has no hard failure."
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required_no_nonblank_signals"
+  rationale: "The bounded protected decision emits no project-improvement signal."
+
+handoff_authority_boundary:
+  this_handoff_authorizes:
+    - "one governed checkpoint for AJ-RT-20260731-004-001"
+    - "preservation of the local fixed-package freeze"
+  this_handoff_does_not_authorize:
+    - "repair or modification of reviewed science or canonical ontology"
+    - "positive Gate E benchmark promotion exact or approximate GR recovery"
+    - "external outreach or independent-review claim"
+    - "source-law metric matter-coupling or Einstein-equation adoption"
+    - "proof publication push completed derivation global no-go future impossibility or global theory rejection"
+
+command_results:
+  - command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    status: "PASS"
+    summary: "Core and refreshed local retrieval status pass with 1103 source and semantic rows and 5578 relationship rows."
+  - command: ".venv/bin/python research_control/tasks/RT-20260731-004/artifacts/validate_p9_t09_gate_e_review.py"
+    status: "PASS"
+    summary: "Task-local authorization evidence-hash criterion synthesis registry ledger and handoff checks pass."
+  - command: "latex-compile auto-mode scratch build of p9_t09_gate_e_decision_v1.tex"
+    status: "PASS"
+    summary: "The protected decision compiles successfully in scratch space."
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+    status: "PASS"
+    summary: "Registered memory and wiki derivatives regenerate successfully."
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+    status: "PASS"
+    summary: "Tracked memory sources registries wiki derivatives and indexes are current."
+  - command: ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+    status: "PASS"
+    summary: "Documentation-impact receipt covers the bounded changed paths."
+  - command: ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+    status: "PASS"
+    summary: "Changed-source claim-language validation has no hard failures."
+  - command: ".venv/bin/python scripts/research_control/validate_research_control.py --json-summary"
+    status: "PASS"
+    summary: "Research-control schema authority routing and claim boundaries pass."
+  - command: "git diff --check"
+    status: "PASS"
+    summary: "No whitespace errors."

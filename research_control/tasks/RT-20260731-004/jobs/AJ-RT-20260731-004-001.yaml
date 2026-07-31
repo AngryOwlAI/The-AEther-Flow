@@ -1,0 +1,440 @@
+job_id: "AJ-RT-20260731-004-001"
+task_id: "RT-20260731-004"
+decision_id: "DDR-20260731-004"
+role_id: "gate-chair"
+role_version: "0.1.0"
+execution_role_ref: "gate-chair@0.1.0--RT-20260731-004"
+status: "completed"
+validation_status: "PASS"
+requires_human_gate: false
+human_authorization_id: "HUMAN-AUTH-P9-T09-GATE-E-REVIEW-2026-07-31-001"
+approval_id: "approval-20260731-001"
+created_at: "2026-07-31T14:16:53Z"
+started_at: "2026-07-31T14:16:53Z"
+completed_at: "2026-07-31T14:16:53Z"
+completion_path: "research_control/tasks/RT-20260731-004/jobs/completions/AJC-AJ-RT-20260731-004-001.yaml"
+objective: "Execute only P9-T09 by issuing the protected evidence-bound Gate E verdict for the fixed P9-T01 through P9-T08 package, deciding benchmark promotion, exact or approximate GR recovery, and completed-derivation wording without repairing or promoting that package."
+target_derivation_milestone: "benchmark_promotion"
+milestone_burden: "Make the final protected scientific verdict after the complete chain."
+route_label: "human-gated-benchmark-review"
+route_reason: "Checkpoint 640c799d5e04d166f735dd4c35e838e854f27d25 commits the P9-T08 evidence package, handoff-0925 selects P9-T09, and the user supplied exact protected one-time Gate Chair authority."
+dependency_checkpoint_commit: "640c799d5e04d166f735dd4c35e838e854f27d25"
+plan_task_id: "P9-T09"
+recommendation_ids:
+  - "V21-R28"
+  - "V21-R29"
+  - "V21-R31"
+  - "V21-R33"
+  - "V21-R67"
+  - "V21-R68"
+  - "V21-R72"
+physics_promotion_authorized: false
+proof_authority: false
+is_physics_task: true
+payload_class: "obstruction_record"
+has_new_mathematical_payload: true
+payload_artifact_path: "research_control/tasks/RT-20260731-004/artifacts/p9_t09_gate_e_decision_v1.tex"
+payload_summary: "The first protected Gate E decision records the exact fixed-package obstruction: six INCONCLUSIVE cases, zero passes, no qualifying independent replication, no source-derived physical recovery bridge, and an unchanged NOT READY Gate D."
+external_red_team_finding_requires_integration: false
+
+historical_relay_context:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  terminal_generation: 187
+  terminal_phase: "terminal_awaiting_human"
+  terminal_receipt_sha256: "fbd5447d3f93000555970f4d35a8fcdb95788a7257ca9ea5ebfe34667e27a77c"
+  generation_claimed_by_this_job: false
+  relay_state_modified_by_this_job: false
+  note: "The terminal relay is historical orchestration context only. Its deterministic recovery would clone the consumed P9-T08 project-system route, so this standalone continue-research packet makes no relay-generation claim."
+
+mathematical_decisiveness_contract:
+  contract_path: "research_control/design/mathematical_decisiveness_completion_contract.md"
+  schema_path: ".agents/schemas/PHYSICS_COMPLETION_DECISIVENESS_SCHEMA.md"
+  enforcement_mode: "hard_failure"
+  active_after: "2026-06-21T02:32:39Z"
+
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "physics"
+  payload_type: "route_decision"
+  candidate_family: "V21-P9-FIXED-SOURCE-DERIVED-BENCHMARK-SUITE-GATE-E-V1"
+  assumption_delta:
+    - "Hold the P9-T01 through P9-T08 claim-bearing evidence and statuses fixed."
+    - "Add exact protected decision authority without treating authority as mathematical physical benchmark or replication evidence."
+    - "Evaluate every recorded Gate E criterion and fail closed on any unmet burden."
+    - "Decide benchmark promotion exact recovery approximate recovery and completed-derivation wording separately."
+    - "Distinguish the adopted exact-GR effective reference benchmark from a completed substrate derivation."
+    - "Distinguish a local fixed-package freeze from a global impossibility claim."
+  materiality_basis: "No protected P9-T09 Gate E verdict previously existed. P9-T08 explicitly deferred the protected authority criterion, and approval-20260731-001 supplies that authority without changing the evidence."
+  payload_details:
+    resolves_new_route_decision: true
+    decision_identity: "NOT_READY_BENCHMARK_AND_COMPLETED_DERIVATION_REQUIREMENTS_UNMET"
+    not_already_encoded_evidence: "P9-T08 recorded readiness only, set Gate_E_verdict_issued=false, and deferred GE-10; the present protected review supplies the first Gate E verdict."
+  source_basis:
+    - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+    - "MD-RESEARCH-CONTROL-DESIGN-FRONTIER-THEOREM-INVENTORY"
+    - "MD-V21-P9-T01-PARENT-FUSION-BENCHMARK-PROTOCOL-V1"
+    - "research_control/tasks/RT-20260729-011/artifacts/p8_t07_gate_d_verdict_matrix_v1.yaml"
+    - "research_control/tasks/RT-20260731-001/artifacts/p9_t08_gate_e_readiness_matrix_v1.yaml"
+    - "research_control/tasks/RT-20260731-001/artifacts/p9_t08_independent_replication_status_v1.yaml"
+    - "research_control/tasks/RT-20260731-001/artifacts/p9_t08_benchmark_suite_red_team_review_v1.yaml"
+    - "research_control/approvals/approval-20260731-001.yaml"
+  expected_artifact_paths:
+    - "research_control/tasks/RT-20260731-004/artifacts/p9_t09_gate_e_decision_v1.tex"
+    - "research_control/tasks/RT-20260731-004/artifacts/p9_t09_gate_e_verdict_matrix_v1.yaml"
+    - "research_control/tasks/RT-20260731-004/artifacts/p9_t09_scientific_status_v1.yaml"
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+
+family_freeze_admission:
+  schema_id: "family_freeze_route_admission_v1"
+  policy_id: "family_freeze_reopening_policy_v1"
+  route_id: "v21_p9_t09_protected_gate_e_review"
+  family_id: "V21-P9-FIXED-SOURCE-DERIVED-BENCHMARK-SUITE-GATE-E-V1"
+  family_identity_sha256: "fb2ba0137bedbccd788ff5f6d8f2c888daa72fc9c7bf7706149c2617d0af7dea"
+  assumption_sha256es:
+    - "89e484d18aca681a9f79484331a38ee9b98478e5169af4bb9de2762c71e473a4"
+    - "2f2483dedb86f65d2b969959416b5bea0d4a39b0b26918107275c1784c253db8"
+    - "c3089818ea1ad682a7f246c3ec102d6eff34f80285265644de72c9fc9fff1dfc"
+    - "9d28acf5ba647801b12674b65772406700af28fc2229973b4a242d8b0a0c32b7"
+    - "c1be5c75415fea6321b3490bad45e1b4a83c6cda302a8e6683c1c4b1658082e2"
+  route_kind: "primitive_investigation"
+  detected_match_basis: []
+  reopening:
+    requested: false
+    class: "none"
+  distinct_branch:
+    branch_identity: "P9T09-PROTECTED-GATE-E-DECISION"
+    material_difference_basis: "This is the first protected verdict over the fixed P9 package; it does not reconstruct any candidate or benchmark case."
+    reconstructs_frozen_candidate: false
+    expected_artifact_paths:
+      - "research_control/tasks/RT-20260731-004/artifacts/p9_t09_gate_e_decision_v1.tex"
+      - "research_control/tasks/RT-20260731-004/artifacts/p9_t09_gate_e_verdict_matrix_v1.yaml"
+  authority_limits:
+    local_family_freeze_preserved: true
+    global_no_go_claimed: false
+    automatic_candidate_adoption: false
+    theorem_truth_inferred: false
+    ontology_modified: false
+    physics_promotion_authorized: false
+
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  expected_durable_outputs:
+    physics:
+      - "one protected Gate E decision"
+      - "one ten-criterion verdict matrix"
+      - "one scientific status and local-freeze boundary"
+    project_system:
+      - "one task-local deterministic validator and compact receipt"
+      - "one exact protected-authorization receipt"
+  acceptance_criteria:
+    physics:
+      - "the verdict is uniquely evidence-bound and protected"
+      - "benchmark exact-recovery approximate-recovery and completed-derivation dispositions are separate"
+      - "every unmet Gate E burden remains visible"
+      - "the local freeze and materially new reopening path are explicit"
+    project_system:
+      - "authorization source hashes and immutable evidence hashes validate"
+      - "parent-child synthesis and control registries validate"
+      - "one governed checkpoint records the transaction"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: false
+    exception_id: ""
+    evidence_path: ""
+    evidence_sha256: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0925"
+  source_handoff_path: "research_control/handoffs/handoff-0925.yaml"
+  source_handoff_sha256: "82c243a8925214d880be811497089cba4411edd48fd5ed67572ab07d4906ff13"
+  selected_plan_task_id: "P9-T09"
+  guard_outcome: "below_threshold"
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  parent:
+    execution_unit_id: "parent"
+    perspective: "physicist_mathematician_philosopher"
+    responsibilities:
+      - "verify exact human authority and fixed evidence hashes"
+      - "separate adopted effective benchmark from substrate derivation"
+      - "separate protocol integrity formal analogy physical recovery and benchmark promotion"
+      - "resolve every child conflict"
+      - "issue and bound the protected verdict"
+  children:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260731-004/artifacts/child_phys_math_p9_t09_gate_e_review.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260731-004/artifacts/child_phys_phil_p9_t09_gate_e_review.yaml"
+      status: "completed"
+  conflict_policy:
+    review_path: "research_control/tasks/RT-20260731-004/artifacts/parent_conflict_review_p9_t09_gate_e_review.yaml"
+    max_resolution_rounds: 2
+    require_parallel_child_revision: true
+    unresolved_conflict_status: "blocked"
+  fusion_policy:
+    fusion_notes_path: "research_control/tasks/RT-20260731-004/artifacts/parent_fusion_notes_p9_t09_gate_e_review.md"
+    fused_output_path: "research_control/tasks/RT-20260731-004/artifacts/p9_t09_gate_e_decision_v1.tex"
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+    final_output_replaces_old_single_role_artifact: true
+
+memory_preflight:
+  preflight_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1103
+    relationship_row_count: 5578
+    semantic_row_count: 1103
+    vault_row_count: 1103
+    local_cache_only_warning_count: 0
+    refresh_performed: true
+  refresh_needed: true
+  refresh_performed: true
+  refresh_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py"
+  before_local_retrieval_status: "WARN"
+  after_local_retrieval_status: "PASS"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"benchmark suite Gate E readiness completed derivation\" --limit 10 --json"
+      query_type: "search"
+      query_text: "benchmark suite Gate E readiness completed derivation"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-DESIGN-FRONTIER-THEOREM-INVENTORY"
+        - "MD-V21-P9-T01-PARENT-FUSION-BENCHMARK-PROTOCOL-V1"
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-FRONTIER-THEOREM-INVENTORY"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/frontier_theorem_inventory.md"
+      source_hash: "9b478e2e2985dfccb512cfb78b6e07088b0910b89ceb2fc08f94e0851e6b91b4"
+    - object_id: "MD-V21-P9-T01-PARENT-FUSION-BENCHMARK-PROTOCOL-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260729-012/artifacts/parent_fusion_notes_p9_t01_benchmark_protocol.md"
+      source_hash: "9ca58abe6eb1151614b4e5124df9a2e2aac4ecff301cea634dc4e7ad6cbcde03"
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  authority_note: "Generated Obsidian wiki notes semantic extracts SQLite memory PDFs and .local files are retrieval layers only and are not authority."
+
+allowed_read_paths:
+  - "SOUL.md"
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - ".agents/roles/physics/gate-chair.v0.1.0.md"
+  - ".agents/schemas/**"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  - "research_control/design/**"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0925.yaml"
+  - "research_control/handoffs/handoff-0925.md"
+  - "research_control/approvals/approval-20260731-001.yaml"
+  - "research_control/tasks/RT-20260729-011/**"
+  - "research_control/tasks/RT-20260729-012/**"
+  - "research_control/tasks/RT-20260730-008/**"
+  - "research_control/tasks/RT-20260730-010/**"
+  - "research_control/tasks/RT-20260730-011/**"
+  - "research_control/tasks/RT-20260730-012/**"
+  - "research_control/tasks/RT-20260730-013/**"
+  - "research_control/tasks/RT-20260730-015/**"
+  - "research_control/tasks/RT-20260731-001/**"
+  - "research_control/tasks/RT-20260731-002/**"
+  - "research_control/tasks/RT-20260731-003/**"
+  - "ontology/tex/aether_flow_dynamics.tex"
+  - "ontology/tex/aether_flow_relativistic_recovery.tex"
+  - "ontology/tex/aether_flow_consistency.tex"
+  - "registries/**"
+
+allowed_write_paths:
+  - "research_control/approvals/approval-20260731-001.yaml"
+  - "research_control/tasks/RT-20260731-004/**"
+  - "research_control/handoffs/handoff-0926.yaml"
+  - "research_control/handoffs/handoff-0926.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/design/frontier_theorem_inventory.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/PDF_DERIVATIVE_REGISTRY.csv"
+  - "registries/PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "registries/TEX_SOURCE_REGISTRY.csv"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/pdf/**"
+  - "wiki/tex/**"
+
+allowed_generated_paths:
+  - ".local/**"
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/pdf/**"
+  - "wiki/tex/**"
+
+forbidden_paths:
+  - "ontology/**"
+  - "manuscripts/**"
+  - "html/**"
+  - "implementations_plans/**"
+  - ".agents/roles/**"
+  - ".codex/skills/continue-research-goal/goals/**"
+  - "registries/METRIC_USE_LEDGER.csv"
+  - "research_control/tasks/RT-20260729-011/**"
+  - "research_control/tasks/RT-20260729-012/**"
+  - "research_control/tasks/RT-20260730-008/**"
+  - "research_control/tasks/RT-20260730-010/**"
+  - "research_control/tasks/RT-20260730-011/**"
+  - "research_control/tasks/RT-20260730-012/**"
+  - "research_control/tasks/RT-20260730-013/**"
+  - "research_control/tasks/RT-20260730-015/**"
+  - "research_control/tasks/RT-20260731-001/**"
+  - "research_control/tasks/RT-20260731-002/**"
+  - "research_control/tasks/RT-20260731-003/**"
+
+allowed_source_classes:
+  - "science_draft"
+  - "control_state"
+  - "registry"
+  - "canonical_ontology_read"
+  - "human_authorization"
+forbidden_source_classes:
+  - "canonical_ontology_write"
+  - "benchmark_source_write"
+  - "source_law_adoption"
+  - "candidate_reconstruction"
+  - "unapproved_benchmark_promotion"
+  - "unapproved_physics_claim_promotion"
+  - "completed_derivation_claim"
+  - "generated_derivative_authority"
+
+approved_commands:
+  - ".venv/bin/python research_control/tasks/RT-20260731-004/artifacts/validate_p9_t09_gate_e_review.py"
+  - "tectonic -X compile --outdir <scratch> research_control/tasks/RT-20260731-004/artifacts/p9_t09_gate_e_decision_v1.tex"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+  - ".venv/bin/python -m scripts.validation.cli plan --profile affected --paths <changed-paths> --explain"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py"
+  - "git diff --check"
+
+required_validators:
+  - "task_local_p9_t09_gate_e_review"
+  - "scratch_tex_compile"
+  - "memory_core"
+  - "documentation_impact"
+  - "project_improvement_signals"
+  - "research_control_diff"
+  - "claim_language_changed"
+  - "task_selected_test_shard"
+  - "git_diff_check"
+  - "checkpoint_transaction"
+
+expected_outputs:
+  - "research_control/tasks/RT-20260731-004/artifacts/human_authorization_p9_t09_gate_e_review_v1.yaml"
+  - "research_control/tasks/RT-20260731-004/artifacts/child_phys_math_p9_t09_gate_e_review.yaml"
+  - "research_control/tasks/RT-20260731-004/artifacts/child_phys_phil_p9_t09_gate_e_review.yaml"
+  - "research_control/tasks/RT-20260731-004/artifacts/parent_conflict_review_p9_t09_gate_e_review.yaml"
+  - "research_control/tasks/RT-20260731-004/artifacts/parent_fusion_notes_p9_t09_gate_e_review.md"
+  - "research_control/tasks/RT-20260731-004/artifacts/p9_t09_gate_e_decision_v1.tex"
+  - "research_control/tasks/RT-20260731-004/artifacts/p9_t09_gate_e_verdict_matrix_v1.yaml"
+  - "research_control/tasks/RT-20260731-004/artifacts/p9_t09_scientific_status_v1.yaml"
+  - "research_control/tasks/RT-20260731-004/artifacts/p9_t09_gate_e_compact_receipt_v1.json"
+  - "research_control/tasks/RT-20260731-004/artifacts/p9_t09_gate_e_validation_v1.json"
+  - "research_control/tasks/RT-20260731-004/jobs/completions/AJC-AJ-RT-20260731-004-001.yaml"
+
+claim_boundary:
+  allowed: "One protected evidence-bound Gate E NOT READY disposition over the fixed checkpointed P9 evidence, with separate benchmark exact-recovery approximate-recovery and completed-derivation decisions plus exact reopening conditions."
+  forbidden: "Reviewed-source or ontology edits; manufactured benchmark passes or independent replication; source-law metric coupling matter or Einstein-equation adoption; positive Gate E unsupported by evidence; benchmark promotion; exact or approximate recovery; proof; publication; push; global no-go; future impossibility; completed derivation."
+
+project_improvement_signals: []

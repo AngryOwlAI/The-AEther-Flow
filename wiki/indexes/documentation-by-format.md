@@ -649,6 +649,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-V21-P9-T07-PARENT-FUSION-NONLINEAR-COMPACT-V1` `research_control/tasks/RT-20260730-015/artifacts/parent_fusion_notes_p9_t07_nonlinear_compact.md`
 - `MD-V21-P9-T08-BENCHMARK-SUITE-AUDIT-RECEIPT-V1` `research_control/tasks/RT-20260731-001/artifacts/p9_t08_benchmark_audit_receipt.md`
 - `MD-V21-P9-T08-PARENT-FUSION-BENCHMARK-SUITE-AUDIT-V1` `research_control/tasks/RT-20260731-001/artifacts/parent_fusion_notes_p9_t08_benchmark_audit.md`
+- `MD-V21-P9-T09-PARENT-FUSION-GATE-E-REVIEW-V1` `research_control/tasks/RT-20260731-004/artifacts/parent_fusion_notes_p9_t09_gate_e_review.md`
 - `MD-VALIDATOR-OPERATOR-WORKFLOW-PUBLICATION-BRIEF` `markdown/publication-briefs/validator-operator-workflow.publication-brief.md`
 
 ## wiki_markdown
@@ -1295,4 +1296,5 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-V21-P9-T07-PARENT-FUSION-NONLINEAR-COMPACT-V1` `wiki/markdown/md-v21-p9-t07-parent-fusion-nonlinear-compact-v1.md`
 - `WIKI-MD-V21-P9-T08-BENCHMARK-SUITE-AUDIT-RECEIPT-V1` `wiki/markdown/md-v21-p9-t08-benchmark-suite-audit-receipt-v1.md`
 - `WIKI-MD-V21-P9-T08-PARENT-FUSION-BENCHMARK-SUITE-AUDIT-V1` `wiki/markdown/md-v21-p9-t08-parent-fusion-benchmark-suite-audit-v1.md`
+- `WIKI-MD-V21-P9-T09-PARENT-FUSION-GATE-E-REVIEW-V1` `wiki/markdown/md-v21-p9-t09-parent-fusion-gate-e-review-v1.md`
 - `WIKI-MD-VALIDATOR-OPERATOR-WORKFLOW-PUBLICATION-BRIEF` `wiki/markdown/md-validator-operator-workflow-publication-brief.md`

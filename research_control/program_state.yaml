@@ -1,11 +1,86 @@
 mode: "director_led_research_control"
-active_task_id: "RT-20260731-003"
-latest_handoff_id: "handoff-0925"
-current_status: "p9_t08_distance_ledger_checkpoint_allowlist_recovery_complete_p9_t09_human_gate_after_checkpoint"
-claim_boundary_summary: "RT-20260731-003 creates one fresh exact-manifest checkpoint contract whose AgentJob, execution-role source, AGENT_JOB registry row, and ROLE_EXECUTION registry row use the same ordered allowlist and include the unchanged Distance-to-GR ledger exactly once. Every predecessor and ledger byte is preserved. P9-T08 remains six INCONCLUSIVE cases with zero benchmark passes, no qualifying independent replication, and Gate E NOT READY. P9-T09 is unexecuted and requires nonblank exact protected human Gate Chair authority after checkpoint."
-next_plan_task_id: "P9-T09"
-next_worker_skill: "none_until_human_authorization"
-next_recommended_action: "Run the one governed cumulative checkpoint for AJ-RT-20260731-003-001. After it commits, do not execute P9-T09 without a nonblank exact protected human Gate Chair authorization; if authorization is absent, record deferred_human_gate and continue only dependency-independent included work or terminalize according to the relay scope."
+active_task_id: "RT-20260731-004"
+latest_handoff_id: "handoff-0926"
+current_status: "p9_t09_protected_gate_e_completed_not_ready_ready_for_checkpoint_fixed_package_locally_frozen"
+claim_boundary_summary: "RT-20260731-004 consumes exact one-time protected P9-T09 review authority and records NOT_READY_BENCHMARK_AND_COMPLETED_DERIVATION_REQUIREMENTS_UNMET. Six cases remain INCONCLUSIVE with zero passes, qualifying independent replication is absent, no source-derived physical recovery bridge exists, and Gate D remains NOT READY. Benchmark promotion is denied; exact and controlled approximate GR recovery are not established; completed first-principles derivation wording is prohibited for the fixed evidence. No publication, push, ontology modification, or broader scientific authority is granted."
+next_plan_task_id: ""
+next_worker_skill: "none"
+next_recommended_action: "Run one governed checkpoint for AJ-RT-20260731-004-001. After checkpoint, preserve the local fixed-package freeze. Do not select or execute another package from this handoff; any reopening requires materially new source-derived physical recovery evidence, at least one lawful preregistered physical benchmark pass, qualifying independent replication, and fresh protected authority."
+
+p9_t09_protected_gate_e_review:
+  task_id: "RT-20260731-004"
+  parent_task_id: "RT-20260731-003"
+  parent_handoff_id: "handoff-0925"
+  source_task_id: "RT-20260731-001"
+  source_job_id: "AJ-RT-20260731-001-001"
+  source_handoff_id: "handoff-0925"
+  plan_task_id: "P9-T09"
+  next_plan_task_id: ""
+  claim_boundary_id: "CB-V21-P9-T09-PROTECTED-GATE-E-NOT-READY-001"
+  status: "NOT_READY_BENCHMARK_AND_COMPLETED_DERIVATION_REQUIREMENTS_UNMET"
+  work_item_status: "completed"
+  route_label: "human-gated-benchmark-review"
+  selected_role_family: "gate-chair@0.1.0"
+  selected_worker_skill: "continue-research"
+  target_derivation_milestone: "benchmark_promotion"
+  milestone_burden: "Make the final protected scientific verdict after the complete chain."
+  dependency_checkpoint_commit: "640c799d5e04d166f735dd4c35e838e854f27d25"
+  approval_id: "approval-20260731-001"
+  approval_sha256: "23c90eec73f74fd096c064f441278d36f6831d000da6182579969d0bf2f694fa"
+  controlling_handoff_yaml_sha256: "82c243a8925214d880be811497089cba4411edd48fd5ed67572ab07d4906ff13"
+  controlling_handoff_markdown_sha256: "89658c0528ef75c1c65e96e49dba7dc6cab83f68fba3fbdb260d4c545e9b1a93"
+  decision_path: "research_control/tasks/RT-20260731-004/artifacts/p9_t09_gate_e_decision_v1.tex"
+  decision_sha256: "7f28103e40664f0a004af0134f3216932136f8efb160f0c7c59039efa5225b0b"
+  verdict_matrix_path: "research_control/tasks/RT-20260731-004/artifacts/p9_t09_gate_e_verdict_matrix_v1.yaml"
+  verdict_matrix_sha256: "55143876d13008b4c96755e5d8d72d5d52af67bf4baab6eed16648fe5b126f0a"
+  scientific_status_path: "research_control/tasks/RT-20260731-004/artifacts/p9_t09_scientific_status_v1.yaml"
+  scientific_status_sha256: "915145f649066d6092df7ef16d3fc01c411d6c939b35acd28287b2d4e6470556"
+  completion_path: "research_control/tasks/RT-20260731-004/jobs/completions/AJC-AJ-RT-20260731-004-001.yaml"
+  completion_sha256: "5c64250eea3f702051c1403b1ec9b2edd85f00d7937b2647965526f124ab3ee6"
+  handoff_id: "handoff-0926"
+  handoff_path: "research_control/handoffs/handoff-0926.yaml"
+  handoff_yaml_sha256: "d1d3b56b0a40417a87118f026ccdb5c1ce923e2759da2b24e1c3cff28c10db42"
+  handoff_markdown_sha256: "b1eec6e28b3ce863d1e67092edd6a2e0feb54788dffc62af9c0d7cc914b3f86f"
+  protected_gate_review_completed: true
+  authorization_consumed_once: true
+  positive_verdict_predetermined: false
+  criterion_count: 10
+  pass_or_narrow_pass_count: 3
+  fail_or_not_established_count: 7
+  executed_case_count: 6
+  inconclusive_case_count: 6
+  benchmark_pass_count: 0
+  qualifying_independent_replication_count: 0
+  gate_d_ready: false
+  benchmark_promotion: "DENIED_NOT_READY"
+  exact_GR_recovery: "NOT_ESTABLISHED"
+  controlled_approximate_or_effective_GR_recovery: "NOT_ESTABLISHED"
+  completed_first_principles_derivation: "MAY_NOT_BE_CLAIMED"
+  effective_exact_GR_benchmark_status: "PRESERVED_AS_ADOPTED_REFERENCE_NOT_SUBSTRATE_DERIVATION"
+  fixed_package_locally_frozen: true
+  scientific_claims_changed: true
+  scientific_claim_change_scope: "first protected Gate E negative disposition only"
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  ontology_adoption_authorized: false
+  source_law_adoption_authorized: false
+  benchmark_promotion_authorized: false
+  exact_or_approximate_recovery_authorized: false
+  completed_derivation_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false
+  checkpoint_invocation_count: 0
+  checkpoint_committed: false
+  selected_next_work_item: "none_for_exact_unchanged_package"
+  selected_next_worker_skill: "none"
+  selected_next_role_family: "none"
+  selected_next_route_label: "local-freeze"
+  selected_next_strategy_id: "preserve_fixed_package_local_freeze"
+  selected_next_requires_human_gate: true
+  selected_next_execution_ready_after_checkpoint: false
+  p15_t05_or_p16_t01_authorized_or_selected: false
 
 p9_t08_distance_ledger_checkpoint_allowlist_recovery:
   task_id: "RT-20260731-003"

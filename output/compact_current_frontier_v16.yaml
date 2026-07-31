@@ -1,7 +1,7 @@
 schema_id: "compact_current_frontier_v16"
 generated_from:
   - "research_control/program_state.yaml"
-  - "research_control/handoffs/handoff-0925.yaml"
+  - "research_control/handoffs/handoff-0926.yaml"
   - "registries/DISTANCE_TO_GR_LEDGER.csv"
   - "registries/METRIC_USE_LEDGER.csv"
   - "research_control/current_frontier.md"
@@ -9,16 +9,16 @@ generated_from:
   - "research_control/design/accepted_status_calibration_v2.yaml"
   - "research_control/design/active_state_bifurcation_policy_v1.md"
 active_state:
-  active_task_id: "RT-20260731-003"
-  latest_handoff_id: "handoff-0925"
-  current_status: "p9_t08_distance_ledger_checkpoint_allowlist_recovery_complete_p9_t09_human_gate_after_checkpoint"
+  active_task_id: "RT-20260731-004"
+  latest_handoff_id: "handoff-0926"
+  current_status: "p9_t09_protected_gate_e_completed_not_ready_ready_for_checkpoint_fixed_package_locally_frozen"
   v15_completed: false
   v16_completed: false
   v16_plan_registered: true
 active_state_bifurcation:
-  latest_research_task_id: "RT-20260731-003"
-  latest_research_handoff_id: "handoff-0925"
-  latest_research_next_action: "Run the one governed cumulative checkpoint for AJ-RT-20260731-003-001. After it commits, do not execute P9-T09 without a nonblank exact protected human Gate Chair authorization; if authorization is absent, record deferred_human_gate and continue only dependency-independent included work or terminalize according to the relay scope."
+  latest_research_task_id: "RT-20260731-004"
+  latest_research_handoff_id: "handoff-0926"
+  latest_research_next_action: "Run one governed checkpoint for AJ-RT-20260731-004-001. After checkpoint, preserve the local fixed-package freeze. Do not select or execute another package from this handoff; any reopening requires materially new source-derived physical recovery evidence, at least one lawful preregistered physical benchmark pass, qualifying independent replication, and fresh protected authority."
   latest_project_system_task_id: "none"
   latest_project_system_status: "none"
   latest_project_system_sidecar_task_id: "none"
@@ -26,10 +26,10 @@ active_state_bifurcation:
   sidecar_supersedes_research_handoff: false
   next_research_route_source: "latest_research_handoff"
 next_route:
-  route_id: "v21_p9_t09_human_gate_e_after_checkpoint"
-  role_family: "gate-chair"
+  route_id: "v21_p9_t09_fixed_package_locally_frozen"
+  role_family: "none"
   target_derivation_milestone: "benchmark_promotion"
-  milestone_burden: "Make the final protected scientific verdict after the complete chain."
+  milestone_burden: "The protected verdict is complete; the fixed package has no automatic continuation."
   requires_human_gate: true
 claim_boundary:
   physics_claim_authority: false
@@ -279,9 +279,13 @@ blocked_physical_targets:
       - "no_benchmark_promotion"
       - "no_benchmark_gate_chair_closure"
       - "no_completed_derivation"
+      - "no_einstein_equations"
+      - "no_matter_coupling_derivation"
+      - "no_future_source_extension_impossibility"
+      - "no_global_theory_rejection"
 distance_to_gr:
   delta:
-    effect: "none_project_system_recovery"
+    effect: "frozen_negative"
     changed: false
     milestone: "benchmark_promotion"
     burden_id: "benchmark_promotion"
@@ -489,7 +493,11 @@ distance_to_gr:
         - "no_benchmark_promotion"
         - "no_benchmark_gate_chair_closure"
         - "no_completed_derivation"
-      last_evidence_path: "research_control/tasks/RT-20260731-001/artifacts/p9_t08_benchmark_suite_red_team_review_v1.yaml"
+        - "no_einstein_equations"
+        - "no_matter_coupling_derivation"
+        - "no_future_source_extension_impossibility"
+        - "no_global_theory_rejection"
+      last_evidence_path: "research_control/tasks/RT-20260731-004/artifacts/p9_t09_gate_e_decision_v1.tex"
       high_risk_status_card:
         object_id: "benchmark_promotion"
         positive_status: "benchmark_promotion remains blocked by upstream derivation burdens and protected authority."
@@ -538,6 +546,6 @@ validation:
     - layer: "post_checkpoint"
       status: "PENDING"
       evidence:
-        - "The one governed cumulative checkpoint is pending."
+        - "One governed checkpoint remains; no next packet is authorized or selected."
 authority_warning:
   snapshot_only_not_authority: true

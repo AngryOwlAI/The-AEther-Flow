@@ -1,0 +1,121 @@
+schema_id: "p9_t09_gate_e_verdict_matrix_v1"
+artifact_id: "P9T09GateEVerdictMatrix_v1"
+task_id: "RT-20260731-004"
+plan_task_id: "P9-T09"
+status: "human-gated"
+decision_code: "NOT_READY_BENCHMARK_AND_COMPLETED_DERIVATION_REQUIREMENTS_UNMET"
+overall_readiness: "NOT_READY"
+reviewed_package_status: "fixed_checkpointed_p9_t01_through_p9_t08"
+
+fixed_evidence:
+  - path: "research_control/tasks/RT-20260729-011/artifacts/p8_t07_gate_d_verdict_matrix_v1.yaml"
+    sha256: "89e484d18aca681a9f79484331a38ee9b98478e5169af4bb9de2762c71e473a4"
+  - path: "research_control/tasks/RT-20260729-011/artifacts/p8_t07_scientific_status_v1.yaml"
+    sha256: "af2f291a03511116c51db1a78bcd62caedd3c1e1b161acc749b8bb371093ac2e"
+  - path: "research_control/tasks/RT-20260729-012/artifacts/parent_fusion_notes_p9_t01_benchmark_protocol.md"
+    sha256: "9ca58abe6eb1151614b4e5124df9a2e2aac4ecff301cea634dc4e7ad6cbcde03"
+  - path: "research_control/tasks/RT-20260731-001/artifacts/p9_t08_gate_e_readiness_matrix_v1.yaml"
+    sha256: "2f2483dedb86f65d2b969959416b5bea0d4a39b0b26918107275c1784c253db8"
+  - path: "research_control/tasks/RT-20260731-001/artifacts/p9_t08_independent_replication_status_v1.yaml"
+    sha256: "c3089818ea1ad682a7f246c3ec102d6eff34f80285265644de72c9fc9fff1dfc"
+  - path: "research_control/tasks/RT-20260731-001/artifacts/p9_t08_benchmark_suite_red_team_review_v1.yaml"
+    sha256: "9d28acf5ba647801b12674b65772406700af28fc2229973b4a242d8b0a0c32b7"
+  - path: "research_control/tasks/RT-20260731-001/artifacts/p9_t08_benchmark_smuggling_audit_v1.yaml"
+    sha256: "c5b05dad23261d479e624b9cf08a3d02c2773d05df4d15246793067525acd229"
+  - path: "research_control/tasks/RT-20260731-001/artifacts/p9_t08_cross_case_assumption_consistency_v1.yaml"
+    sha256: "c1be5c75415fea6321b3490bad45e1b4a83c6cda302a8e6683c1c4b1658082e2"
+  - path: "research_control/approvals/approval-20260731-001.yaml"
+    sha256: "23c90eec73f74fd096c064f441278d36f6831d000da6182579969d0bf2f694fa"
+
+criteria:
+  - criterion_id: "GE-01"
+    burden: "Versioned typed source-derived benchmark protocol exists."
+    status: "PASS_PROTOCOL_SCOPE"
+    evidence: "SourceDerivedBenchmarkProtocol_v1 and SourceDerivedBenchmarkCaseSchema_v1."
+    verdict_effect: "Necessary control only; not a benchmark pass."
+  - criterion_id: "GE-02"
+    burden: "Fail-closed target-import firewall separates source execution from post-seal target comparison."
+    status: "PASS_AUDITED_SCOPE"
+    evidence: "P9-T08 found no declared target import, target-informed rerun, or post-seal source mutation."
+    verdict_effect: "Necessary provenance control only."
+  - criterion_id: "GE-03"
+    burden: "Every planned benchmark case has a decisive physical outcome."
+    status: "FAIL_ALL_SIX_INCONCLUSIVE"
+    evidence: "P9-T02 through P9-T07 are all INCONCLUSIVE."
+    verdict_effect: "Blocks positive Gate E."
+  - criterion_id: "GE-04"
+    burden: "Source theory derives the physical carrier, dynamics, matter coupling, and observables required by the suite."
+    status: "FAIL_NOT_DERIVED"
+    evidence: "Gate D remains NOT READY and every case preserves a missing physical bridge."
+    verdict_effect: "Blocks physical and recovery claims."
+  - criterion_id: "GE-05"
+    burden: "At least one lawful physical benchmark comparison passes its preregistered criterion."
+    status: "FAIL_ZERO_PASSES"
+    evidence: "benchmark_pass_count=0."
+    verdict_effect: "Blocks benchmark promotion."
+  - criterion_id: "GE-06"
+    burden: "Every claimed result has qualifying independent reproduction."
+    status: "FAIL_NOT_ACQUIRED"
+    evidence: "qualifying_independent_replication_count=0."
+    verdict_effect: "Blocks positive Gate E and recovery claims."
+  - criterion_id: "GE-07"
+    burden: "Physical tolerances, equivalences, uncertainties, and correction controls are preregistered and independently justified."
+    status: "FAIL_PHYSICAL_CONTROLS_ABSENT"
+    evidence: "No complete physical comparison-control bundle exists."
+    verdict_effect: "Blocks controlled approximate recovery."
+  - criterion_id: "GE-08"
+    burden: "Cross-case calibration, holdout, target exposure, and failure handling support an integrated recovery suite."
+    status: "FAIL_NO_UNIVERSAL_CALIBRATION_OR_HOLDOUT"
+    evidence: "The controls are heterogeneous and proposal-only; no lawful calibration, validation, or holdout split exists."
+    verdict_effect: "Blocks integrated approximate or exact recovery."
+  - criterion_id: "GE-09"
+    burden: "Exact-GR recovery obligations are satisfied without reusing adopted GR dynamics."
+    status: "FAIL_NOT_ESTABLISHED"
+    evidence: "No effective metric, universal matter coupling, or Einstein equation is source-derived."
+    verdict_effect: "Blocks exact GR recovery and completed derivation."
+  - criterion_id: "GE-10"
+    burden: "Exact protected Gate E authority is present and consumed once."
+    status: "PASS_PROTECTED_AUTHORITY_CONSUMED"
+    evidence: "approval-20260731-001 and human_authorization_p9_t09_gate_e_review_v1.yaml."
+    verdict_effect: "Authorizes the decision, not a positive outcome."
+
+counts:
+  pass_or_narrow_pass: 3
+  fail_or_not_established: 7
+  deferred: 0
+  total: 10
+  executed_case_count: 6
+  inconclusive_case_count: 6
+  passed_case_count: 0
+  qualifying_independent_replication_count: 0
+
+decision_rule:
+  positive_verdict_requires_all_criteria: true
+  unmet_required_criterion_count: 7
+  result: "NOT_READY"
+
+protected_disposition:
+  benchmark_promotion: "DENIED_NOT_READY"
+  exact_GR_recovery: "NOT_ESTABLISHED"
+  controlled_approximate_or_effective_GR_recovery: "NOT_ESTABLISHED"
+  completed_first_principles_derivation: "MAY_NOT_BE_CLAIMED"
+  effective_exact_GR_benchmark: "PRESERVED_AS_ADOPTED_REFERENCE_NOT_SUBSTRATE_DERIVATION"
+  adoption_status: "blocked_adoption_open_continuation"
+  local_freeze: "the exact unchanged P9-T01 through P9-T08 package is frozen against positive Gate E and recovery or completed-derivation promotion"
+  open_continuation: "materially new source-derived physical bridge benchmark and independent evidence may return under fresh protected authority"
+
+authority_limits:
+  reviewed_science_modified: false
+  canonical_ontology_modified: false
+  source_law_metric_coupling_or_equation_adopted: false
+  external_outreach_performed: false
+  independent_review_claimed: false
+  physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  exact_or_approximate_recovery_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false
+  completed_derivation_claimed: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false

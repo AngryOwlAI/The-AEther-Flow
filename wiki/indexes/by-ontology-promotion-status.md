@@ -443,6 +443,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V21-P9-T05-SOURCE-EXPANSION-DECODER-NONSELECTION-V1` `research_control/tasks/RT-20260730-012/artifacts/source_expansion_decoder_nonselection_v1.tex`
 - `TEX-V21-P9-T06-FINITE-RADIATIVE-COMPLETION-NONSELECTION-V1` `research_control/tasks/RT-20260730-013/artifacts/finite_radiative_completion_nonselection_v1.tex`
 - `TEX-V21-P9-T07-FINITE-NONLINEAR-COMPACT-SOURCE-NONSELECTION-V1` `research_control/tasks/RT-20260730-015/artifacts/finite_nonlinear_compact_source_nonselection_v1.tex`
+- `TEX-V21-P9-T09-PROTECTED-GATE-E-DECISION-V1` `research_control/tasks/RT-20260731-004/artifacts/p9_t09_gate_e_decision_v1.tex`
 
 ## superseded
 

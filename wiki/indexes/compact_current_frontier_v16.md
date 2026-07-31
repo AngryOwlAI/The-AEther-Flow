@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260731-003`
-- Latest handoff: `handoff-0925`
-- Current status: `p9_t08_distance_ledger_checkpoint_allowlist_recovery_complete_p9_t09_human_gate_after_checkpoint`
+- Active task: `RT-20260731-004`
+- Latest handoff: `handoff-0926`
+- Current status: `p9_t09_protected_gate_e_completed_not_ready_ready_for_checkpoint_fixed_package_locally_frozen`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260731-003`
-- Latest research handoff: `handoff-0925`
-- Latest research next action: Run the one governed cumulative checkpoint for AJ-RT-20260731-003-001. After it commits, do not execute P9-T09 without a nonblank exact protected human Gate Chair authorization; if authorization is absent, record deferred_human_gate and continue only dependency-independent included work or terminalize according to the relay scope.
+- Latest research task: `RT-20260731-004`
+- Latest research handoff: `handoff-0926`
+- Latest research next action: Run one governed checkpoint for AJ-RT-20260731-004-001. After checkpoint, preserve the local fixed-package freeze. Do not select or execute another package from this handoff; any reopening requires materially new source-derived physical recovery evidence, at least one lawful preregistered physical benchmark pass, qualifying independent replication, and fresh protected authority.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p9_t09_human_gate_e_after_checkpoint`
-- Role family: `gate-chair`
+- Route ID: `v21_p9_t09_fixed_package_locally_frozen`
+- Role family: `none`
 - Target milestone: `benchmark_promotion`
-- Milestone burden: Make the final protected scientific verdict after the complete chain.
+- Milestone burden: The protected verdict is complete; the fixed package has no automatic continuation.
 - Requires human gate: `true`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `7a42aeed12888b9ad1fce7357daefc7e2a0a659935fbeb2417151b60ea6c3af9`
-- JSON SHA-256: `5d8c6b6feb9ce547c83281f09b2ef5b423e740d30c44933c617d3a76b316b69f`
+- YAML SHA-256: `d5eabb4c53fbb0d9c1838aa8021c1669ba72afb4cd8646fe6ba87c753b3710ed`
+- JSON SHA-256: `b1338a7d4e33e56757d61af5a21156b49d3c03ed561ab780625c04213eae5d85`
 
 ## Authority Warning
 

@@ -1,0 +1,93 @@
+schema_id: "p9_t09_scientific_status_v1"
+artifact_id: "P9T09ScientificStatus_v1"
+task_id: "RT-20260731-004"
+plan_task_id: "P9-T09"
+status: "human-gated"
+Gate_E_review_status: "completed"
+decision_code: "NOT_READY_BENCHMARK_AND_COMPLETED_DERIVATION_REQUIREMENTS_UNMET"
+decision_authority_path: "research_control/approvals/approval-20260731-001.yaml"
+
+package_status:
+  gate_d_ready: false
+  protocol_defined: true
+  target_import_firewall_audited: true
+  declared_target_import_detected: false
+  benchmark_cases_executed: 6
+  benchmark_cases_inconclusive: 6
+  benchmark_cases_passed: 0
+  qualifying_independent_replication_completed: false
+  universal_calibrated_source_law_established: false
+  physical_model_to_world_bridge_established: false
+  effective_metric_source_derived: false
+  universal_matter_coupling_source_derived: false
+  physical_einstein_equation_source_derived: false
+  exact_GR_recovery_established: false
+  controlled_approximate_GR_recovery_established: false
+  completed_first_principles_derivation_established: false
+
+scientific_disposition:
+  claim_status: "protected_negative_disposition"
+  adoption_status: "blocked_adoption_open_continuation"
+  physics_progress_status: "no_distance_delta"
+  distance_to_gr_changed: false
+  physical_status_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  benchmark_promotion: "denied_not_ready"
+  exact_GR_recovery: "not_established"
+  controlled_approximate_GR_recovery: "not_established"
+  completed_derivation_wording: "prohibited_for_fixed_evidence"
+  effective_exact_GR_benchmark_status: "preserved"
+  effective_exact_GR_benchmark_scope: "adopted reference theory only, not a completed substrate derivation"
+  not_a_global_no_go: true
+  future_material_repair_open: true
+
+exact_unmet_burdens:
+  - burden_id: "P9T09-UB-01"
+    burden: "decisive physical benchmark outcomes"
+    status: "six inconclusive zero pass"
+  - burden_id: "P9T09-UB-02"
+    burden: "source-derived physical carrier dynamics metric matter coupling observables and Einstein equation"
+    status: "not derived"
+  - burden_id: "P9T09-UB-03"
+    burden: "qualifying independent replication"
+    status: "not acquired"
+  - burden_id: "P9T09-UB-04"
+    burden: "physical tolerances uncertainties correction control calibration validation and holdout"
+    status: "not established"
+  - burden_id: "P9T09-UB-05"
+    burden: "exact GR recovery without importing adopted GR dynamics"
+    status: "not established"
+  - burden_id: "P9T09-UB-06"
+    burden: "controlled approximate or effective recovery with a valid regime and physical comparison"
+    status: "not established"
+  - burden_id: "P9T09-UB-07"
+    burden: "complete first-principles derivation chain"
+    status: "not established"
+
+freeze_boundary:
+  frozen_object: "exact unchanged P9-T01 through P9-T08 package"
+  frozen_against:
+    - "positive Gate E verdict"
+    - "benchmark promotion"
+    - "exact GR recovery claim"
+    - "controlled approximate or effective GR recovery claim"
+    - "completed first-principles derivation claim"
+  reopening_requires:
+    - "materially new source-derived physical bridge evidence"
+    - "controlled physical regime tolerances uncertainties and corrections"
+    - "at least one lawful preregistered physical benchmark pass"
+    - "qualifying independent replication"
+    - "fresh protected Gate E authority"
+
+authority_limits:
+  canonical_ontology_edit_authorized: false
+  source_law_adoption_authorized: false
+  metric_or_matter_coupling_adoption_authorized: false
+  Einstein_equation_derivation_authorized: false
+  exact_or_approximate_GR_recovery_authorized: false
+  benchmark_promotion_authorized: false
+  external_outreach_authorized: false
+  publication_authorized: false
+  push_authorized: false
+  completed_derivation_authorized: false

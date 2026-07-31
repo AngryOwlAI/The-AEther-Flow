@@ -1,0 +1,257 @@
+validation_status: "PASS"
+handoff_id: "handoff-0926"
+handoff_number: 926
+task_id: "RT-20260731-004"
+decision_id: "DDR-20260731-004"
+job_id: "AJ-RT-20260731-004-001"
+completion_id: "AJC-AJ-RT-20260731-004-001"
+completion_path: "research_control/tasks/RT-20260731-004/jobs/completions/AJC-AJ-RT-20260731-004-001.yaml"
+completion_sha256: "5c64250eea3f702051c1403b1ec9b2edd85f00d7937b2647965526f124ab3ee6"
+status: "ready_after_checkpoint"
+created_at: "2026-07-31T14:16:53Z"
+parent_handoff_id: "handoff-0925"
+plan_task_id: "P9-T09"
+source_role_id: "gate-chair"
+source_role_version: "0.1.0"
+source_execution_role_ref: "gate-chair@0.1.0--RT-20260731-004"
+summary: "P9-T09 consumes exact one-time protected review authority and issues NOT_READY_BENCHMARK_AND_COMPLETED_DERIVATION_REQUIREMENTS_UNMET for the fixed checkpointed P9-T01 through P9-T08 package. All six cases remain INCONCLUSIVE with zero passes, no qualifying independent replication, no source-derived physical recovery bridge, and unchanged Gate D nonreadiness. Benchmark promotion is denied; exact and controlled approximate GR recovery are not established; completed first-principles derivation wording is prohibited for the fixed evidence."
+next_action: "Run one governed checkpoint for AJ-RT-20260731-004-001. After checkpoint, preserve the local fixed-package freeze. Do not select or execute another package from this handoff; any reopening requires materially new source-derived physical recovery evidence, at least one lawful preregistered physical benchmark pass, qualifying independent replication, and fresh protected authority."
+current_claim_boundary: "CB-V21-P9-T09-PROTECTED-GATE-E-NOT-READY-001"
+loop_risk_route: "fixed_package_locally_frozen"
+
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260731-004"
+  latest_research_handoff_id: "handoff-0926"
+  latest_research_next_action: "Run one governed checkpoint for AJ-RT-20260731-004-001. After checkpoint, preserve the local fixed-package freeze. Do not select or execute another package from this handoff; any reopening requires materially new source-derived physical recovery evidence, at least one lawful preregistered physical benchmark pass, qualifying independent replication, and fresh protected authority."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+  project_improvement_sidecar_required: false
+  research_handoff_remains_authoritative: true
+
+claim_boundary:
+  allowed_next_scope: "One governed checkpoint for AJ-RT-20260731-004-001 followed by preservation of the exact fixed-package local freeze."
+  completed_task: "RT-20260731-004"
+  completed_completion_path: "research_control/tasks/RT-20260731-004/jobs/completions/AJC-AJ-RT-20260731-004-001.yaml"
+  completed_completion_sha256: "5c64250eea3f702051c1403b1ec9b2edd85f00d7937b2647965526f124ab3ee6"
+  source_handoff_id: "handoff-0925"
+  source_handoff_path: "research_control/handoffs/handoff-0925.yaml"
+  source_handoff_sha256: "82c243a8925214d880be811497089cba4411edd48fd5ed67572ab07d4906ff13"
+  dependency_checkpoint_commit: "640c799d5e04d166f735dd4c35e838e854f27d25"
+  approval_id: "approval-20260731-001"
+  approval_sha256: "23c90eec73f74fd096c064f441278d36f6831d000da6182579969d0bf2f694fa"
+  result_status: "NOT_READY_BENCHMARK_AND_COMPLETED_DERIVATION_REQUIREMENTS_UNMET"
+  decision_path: "research_control/tasks/RT-20260731-004/artifacts/p9_t09_gate_e_decision_v1.tex"
+  decision_sha256: "7f28103e40664f0a004af0134f3216932136f8efb160f0c7c59039efa5225b0b"
+  verdict_matrix_path: "research_control/tasks/RT-20260731-004/artifacts/p9_t09_gate_e_verdict_matrix_v1.yaml"
+  verdict_matrix_sha256: "55143876d13008b4c96755e5d8d72d5d52af67bf4baab6eed16648fe5b126f0a"
+  protected_gate_review_completed: true
+  positive_gate_e_verdict_issued: false
+  benchmark_promotion: "DENIED_NOT_READY"
+  exact_GR_recovery: "NOT_ESTABLISHED"
+  controlled_approximate_or_effective_GR_recovery: "NOT_ESTABLISHED"
+  completed_first_principles_derivation: "MAY_NOT_BE_CLAIMED"
+  effective_exact_GR_benchmark_preserved_as_reference: true
+  scientific_claims_changed: true
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  ontology_adoption_authorized: false
+  source_law_adoption_authorized: false
+  benchmark_promotion_authorized: false
+  exact_or_approximate_recovery_authorized: false
+  completed_derivation_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_performed: false
+  blocked_claims:
+    - "protected authority presented as new mathematical physical benchmark or replication evidence"
+    - "protocol integrity or finite formal analogy presented as a benchmark pass"
+    - "same-context method checks presented as qualifying independent replication"
+    - "the adopted exact-GR effective reference benchmark presented as a substrate derivation"
+    - "benchmark promotion exact or approximate recovery proof publication push or completed derivation"
+    - "the local freeze presented as a global no-go future impossibility or global theory rejection"
+
+plan_result:
+  plan_task_id: "P9-T09"
+  next_plan_task_id: ""
+  title: "Protected Gate E benchmark and completed-derivation review"
+  result_status: "NOT_READY_BENCHMARK_AND_COMPLETED_DERIVATION_REQUIREMENTS_UNMET"
+  work_item_status: "completed"
+  protected_gate_review_complete: true
+  criterion_count: 10
+  pass_or_narrow_pass_count: 3
+  fail_or_not_established_count: 7
+  executed_case_count: 6
+  inconclusive_case_count: 6
+  benchmark_pass_count: 0
+  qualifying_independent_replication_count: 0
+  positive_gate_e_ready: false
+  fixed_package_locally_frozen: true
+  p15_t05_dependency_may_become_eligible_after_checkpoint: true
+  p16_t01_dependency_may_become_eligible_after_checkpoint: true
+  p15_t05_or_p16_t01_authorized_or_selected_here: false
+  scientific_claims_changed: true
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+distance_to_gr:
+  changed: false
+  effect: "frozen_negative"
+  burden_id: "benchmark_promotion"
+  milestone: "benchmark_promotion"
+  ledger_row_updated: true
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "Latest protected evidence and control status update only; no mathematical or physical recovery burden is discharged."
+  downstream_unlocked:
+    - "none"
+  downstream_still_blocked:
+    - "source-derived physical model-to-world bridge"
+    - "effective metric universal matter coupling and physical Einstein equation"
+    - "qualifying independent replication"
+    - "lawful physical benchmark pass"
+    - "benchmark promotion"
+    - "exact or controlled approximate GR recovery"
+    - "completed first-principles derivation"
+
+selected_next_route:
+  route_id: "v21_p9_t09_fixed_package_locally_frozen"
+  route_label: "local-freeze"
+  role_family: "none"
+  worker_skill: "none"
+  selected_next_packet_type: "none_for_exact_unchanged_package"
+  plan_task_id: "P9-T09"
+  target_derivation_milestone: "benchmark_promotion"
+  milestone_burden: "The protected verdict is complete; the fixed package has no automatic continuation."
+  strategy_id: "preserve_fixed_package_local_freeze"
+  trigger_classification: "protected_negative_gate_e_scoped_obstruction"
+  adoption_status: "blocked_adoption_open_continuation"
+  requires_human_gate: true
+  dependency_ready_after_checkpoint: false
+  execution_ready_now: false
+  physics_promotion_authorized: false
+  next_action: "Preserve the local freeze after checkpoint; materially new evidence and fresh protected authority are required before reopening."
+  source_handoff: "research_control/handoffs/handoff-0926.yaml"
+
+ordinary_route_guard:
+  schema_id: "ordinary_route_guard_evaluation_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  evaluation_id: "ORE-HANDOFF-0926"
+  ordinary_handoff_id: "handoff-0926"
+  threshold: 3
+  consecutive_project_system_tasks_before_selection: 0
+  ready_science_plan_task_ids:
+    - "P14-T04"
+    - "P15-T05"
+  selected_plan_task_id: "P9-T09"
+  selected_route_class: "physics_bearing"
+  selected_worker_skill: "none_until_human_authorization"
+  outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  exception_receipt:
+    active: false
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+active_state_boundary:
+  active_task_id: "RT-20260731-004"
+  active_job_id: "AJ-RT-20260731-004-001"
+  current_status: "protected_gate_e_not_ready_ready_for_checkpoint"
+  checkpoint_required: true
+  checkpoint_completed: false
+  checkpoint_invocation_count: 0
+  protected_gate_review_completed: true
+  decision_code: "NOT_READY_BENCHMARK_AND_COMPLETED_DERIVATION_REQUIREMENTS_UNMET"
+  selected_next_plan_task_id: ""
+  selected_next_worker_skill: "none"
+  selected_next_role_family: "none"
+  selected_next_route_label: "local-freeze"
+  selected_next_strategy_id: "preserve_fixed_package_local_freeze"
+  selected_next_requires_human_gate: true
+  selected_next_execution_ready_after_checkpoint: false
+  selected_next_execution_ready_now: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Checkpoint 640c799d5e04d166f735dd4c35e838e854f27d25 committed the controlling evidence before review."
+      - "The exact one-time user approval names P9-T09 and handoff-0925 and was consumed only by this job."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The protected decision ten-criterion matrix scientific status compact receipt and parent-child synthesis agree on NOT READY."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Task-local documentation signal research-control memory renderer TeX claim-language and whitespace gates pass."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "One governed checkpoint remains; no next packet is authorized or selected."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Tracked frontier task-index graph registry and wiki derivatives are fresh."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory synchronization and validate-only checks pass."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation has no hard failure."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: true
+  protected_scoped_gate_review_scope: "One evidence-bound P9-T09 Gate E verdict over the fixed checkpointed P9-T01 through P9-T08 package."
+  protected_scoped_gate_review_authority_source_path: "research_control/approvals/approval-20260731-001.yaml"
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  exact_or_approximate_GR_recovery_authorized: false
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  push_authorized: false
+  external_outreach_authorized: false
+  publication_authorized: false
+  source_law_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  Gate_Chair_verdict_authorized: true
+  global_no_go_claim_authorized: false
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required_no_nonblank_signals"
+  rationale: "The protected Gate E decision emits no project-improvement signal."
+
+handoff_authority_boundary:
+  this_handoff_authorizes:
+    - "one governed checkpoint for AJ-RT-20260731-004-001"
+    - "preservation of the local fixed-package freeze"
+  this_handoff_does_not_authorize:
+    - "another science or project-system packet"
+    - "P15-T05 publication work or P16-T01 final coverage work"
+    - "reviewed-science or canonical-ontology modification"
+    - "positive Gate E benchmark promotion exact or approximate GR recovery"
+    - "external outreach or independent-review claim"
+    - "source-law metric matter-coupling or Einstein-equation adoption"
+    - "proof publication push completed derivation global no-go future impossibility or global theory rejection"
+
+next_plan_task_id: ""

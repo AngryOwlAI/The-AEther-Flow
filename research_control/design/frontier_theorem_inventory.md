@@ -2244,56 +2244,81 @@ promotion, Gate Chair benchmark closure, or completed derivation.
 - `frontier_item_class`: `missing_theorem;gate_decision`
 - `milestone`: `benchmark_promotion`
 - `object_type`: `missing_theorem;gate_decision`
-- `object_or_claim_name`: Exact-GR benchmark promotion blocked status.
+- `object_or_claim_name`: Protected Gate E NOT READY benchmark-promotion status.
 - `status_layer_summary`:
   - `control_status`: `blocked`
   - `mathematical_status`: `upstream_burdens_missing`
   - `physical_status`: `no_exact_gr_benchmark_promotion`
   - `promotion_status`: `none`
-  - `overread_guard`: `no_benchmark_promotion;no_benchmark_gate_chair_closure;no_completed_derivation`
+  - `overread_guard`: `no_benchmark_promotion;no_benchmark_gate_chair_closure;no_completed_derivation;no_einstein_equations;no_matter_coupling_derivation;no_future_source_extension_impossibility;no_global_theory_rejection`
 - `three_tier_classification`: `open_or_blocked_physical_target`.
 - `linter_status`: `PASS`; P7-T02 inventory population claim-language scan.
-- `overread_guard`: `no_benchmark_promotion;no_benchmark_gate_chair_closure;no_completed_derivation`
-- `source_artifact_path`: `registries/DISTANCE_TO_GR_LEDGER.csv` row
-  `benchmark_promotion`; `research_control/design/gr_derivation_burden_map.md`.
+- `overread_guard`: `no_benchmark_promotion;no_benchmark_gate_chair_closure;no_completed_derivation;no_einstein_equations;no_matter_coupling_derivation;no_future_source_extension_impossibility;no_global_theory_rejection`
+- `source_artifact_path`:
+  `research_control/tasks/RT-20260731-004/artifacts/p9_t09_gate_e_decision_v1.tex`;
+  `research_control/tasks/RT-20260731-004/artifacts/p9_t09_gate_e_verdict_matrix_v1.yaml`;
+  `registries/DISTANCE_TO_GR_LEDGER.csv` row `benchmark_promotion`;
+  `research_control/design/gr_derivation_burden_map.md`.
 - `authority_level`: `registry_row;registered_control_markdown;human_gated`
 - `source_authority_type`: `distance_to_gr_ledger_row;registered_markdown_control`
 - `assumptions`:
-  - Benchmark promotion requires all relevant upstream burdens plus protected
-    Gate Chair approval.
-  - Upstream matter semantics and Einstein equations are absent.
+  - Benchmark promotion requires all relevant upstream derivation burdens, at
+    least one lawful physical benchmark pass, qualifying independent
+    replication, and protected Gate Chair authority.
+  - P9-T09 holds the checkpointed P9-T01 through P9-T08 evidence fixed.
 - `definitions_used`: exact-GR benchmark; benchmark promotion; upstream
   burden chain.
-- `definitions_introduced`: `none`; the row records the benchmark-promotion block.
-- `theorem_like_claims`: Exact-GR benchmark promotion remains blocked by missing upstream burdens and protected authority.
-- `statement_or_decision`: Exact-GR benchmark promotion remains blocked by
-  missing upstream primitives and derivations.
-- `mathematical_conclusion`: none_supplied; no benchmark theorem or promotion
-  record is present.
-- `audits_passed`: `none` for promotion.
-- `stress_results`: `none` for promotion.
-- `gate_chair_results`: `none` for protected benchmark closure.
-- `fail_closed_branches`: Upstream scoped objects cannot be promoted to benchmark status.
-- `known_obstructions`: Matter semantics, Einstein equations, and protected benchmark review remain missing.
+- `definitions_introduced`: `none`; the protected decision records status and
+  does not introduce a source law, physical field, recovery map, or benchmark.
+- `theorem_like_claims`: The fixed evidence does not establish exact or
+  controlled approximate GR recovery and cannot support benchmark promotion.
+- `statement_or_decision`:
+  `NOT_READY_BENCHMARK_AND_COMPLETED_DERIVATION_REQUIREMENTS_UNMET`.
+- `mathematical_conclusion`: Three criteria pass only in protocol, audited
+  firewall, or authority scope; seven required Gate E criteria fail. No
+  Distance-to-GR reduction follows.
+- `audits_passed`: Typed protocol and no-declared-target-import audit only.
+- `stress_results`: All six cases remain `INCONCLUSIVE`; benchmark pass count
+  is zero and qualifying independent replication is absent.
+- `gate_chair_results`: P9-T09 denies benchmark promotion as NOT READY; exact
+  and controlled approximate GR recovery are not established and a completed
+  first-principles derivation may not be claimed.
+- `fail_closed_branches`: The exact unchanged P9-T01 through P9-T08 package is
+  locally frozen against positive Gate E, benchmark promotion, recovery
+  claims, and completed-derivation wording.
+- `known_obstructions`: Gate D remains NOT READY; no source-derived physical
+  bridge, effective metric, universal matter coupling, physical Einstein
+  equation, calibrated physical comparison regime, lawful benchmark pass, or
+  qualifying independent replication exists.
 - `physical_non_conclusions`:
   - No benchmark promotion.
-  - No benchmark Gate Chair closure.
+  - No exact or controlled approximate GR recovery.
   - No completed derivation.
-- `forbidden_overread`: Scoped source objects, route progress, or narrow approvals as exact-GR benchmark promotion.
+- `forbidden_overread`: Protocol integrity, finite formal analogies, protected
+  review authority, validation, or the adopted exact-GR effective reference
+  benchmark as source-derived recovery, benchmark promotion, or a completed
+  substrate derivation.
 - `downstream_blocked_targets`: Benchmark promotion and completed derivation.
-- `allowed_reuse`: Use as the explicit downstream promotion block.
-- `blocked_reuse`: Do not present exact-GR benchmark status as achieved from
-  scoped source objects, route progress, approvals for narrower gates, or
-  validation.
+- `allowed_reuse`: Use as the protected negative Gate E disposition and exact
+  reopening checklist for materially new evidence.
+- `blocked_reuse`: Do not present the fixed package as an exact or approximate
+  GR recovery, promoted benchmark, completed derivation, global no-go theorem,
+  or proof that future source-side extension is impossible.
 - `dependency_items`: `einstein_equations`; `matter_coupling_precondition_evidence`;
   `g_eff_gsc_cand`; `m_src_gsc`
-- `missing_theorem_or_primitive`: All upstream derivation burdens plus
-  protected benchmark Gate Chair approval.
-- `next_theorem_needed`: All upstream derivation burdens plus protected benchmark Gate Chair approval.
-- `candidate_next_task`: none from this inventory.
-- `overread_guard`: `no_benchmark_promotion;no_benchmark_gate_chair_closure;no_completed_derivation`
-- `external_review_notes`: The phrase "exact-GR benchmark" should remain
-  blocked unless a future protected record says otherwise.
+- `missing_theorem_or_primitive`: Source-derived physical recovery bridge,
+  effective metric, universal matter coupling, physical Einstein equation,
+  controlled comparison regime, lawful benchmark pass, and qualifying
+  independent replication.
+- `next_theorem_needed`: Materially new source-derived physical recovery
+  evidence and qualifying independent replication before any fresh protected
+  Gate E review.
+- `candidate_next_task`: none for the exact unchanged package; a future fresh
+  packet must first provide materially new evidence and authority.
+- `overread_guard`: `no_benchmark_promotion;no_benchmark_gate_chair_closure;no_completed_derivation;no_einstein_equations;no_matter_coupling_derivation;no_future_source_extension_impossibility;no_global_theory_rejection`
+- `external_review_notes`: Same-context AI checks remain internal review and
+  do not constitute external, blind, human, or institutionally independent
+  replication.
 
 ### Item 15: gate_chair_benchmark_closure
 
@@ -2301,55 +2326,73 @@ promotion, Gate Chair benchmark closure, or completed derivation.
 - `frontier_item_class`: `gate_decision;missing_theorem`
 - `milestone`: `benchmark_promotion`
 - `object_type`: `gate_decision;missing_theorem`
-- `object_or_claim_name`: Protected benchmark closure human-gated status.
+- `object_or_claim_name`: Protected positive benchmark closure remains human-gated after the negative Gate E review.
 - `status_layer_summary`:
   - `control_status`: `human_gated`
   - `mathematical_status`: `protected_verdict_missing`
   - `physical_status`: `no_benchmark_closure`
   - `promotion_status`: `human_gate_required`
-  - `overread_guard`: `no_benchmark_gate_chair_closure;no_benchmark_promotion;no_completed_derivation;no_future_source_extension_impossibility;no_global_theory_rejection`
+  - `overread_guard`: `no_benchmark_gate_chair_closure;no_benchmark_promotion;no_completed_derivation;no_einstein_equations;no_matter_coupling_derivation;no_future_source_extension_impossibility;no_global_theory_rejection`
 - `three_tier_classification`: `open_or_blocked_physical_target`.
 - `linter_status`: `PASS`; P7-T02 inventory population claim-language scan.
-- `overread_guard`: `no_benchmark_gate_chair_closure;no_benchmark_promotion;no_completed_derivation;no_future_source_extension_impossibility;no_global_theory_rejection`
-- `source_artifact_path`: `research_control/approvals/README.md`;
+- `overread_guard`: `no_benchmark_gate_chair_closure;no_benchmark_promotion;no_completed_derivation;no_einstein_equations;no_matter_coupling_derivation;no_future_source_extension_impossibility;no_global_theory_rejection`
+- `source_artifact_path`:
+  `research_control/approvals/approval-20260731-001.yaml`;
+  `research_control/tasks/RT-20260731-004/artifacts/p9_t09_gate_e_decision_v1.tex`;
+  `research_control/tasks/RT-20260731-004/artifacts/p9_t09_gate_e_verdict_matrix_v1.yaml`;
   `registries/DISTANCE_TO_GR_LEDGER.csv` row `gate_chair_status`.
 - `authority_level`: `registered_control_markdown;registry_row;human_gated`
 - `source_authority_type`: `registered_markdown_control;distance_to_gr_ledger_row`
 - `assumptions`:
   - Gate Chair benchmark closure is protected authority.
-  - Local user authorization for this v12 work does not itself create a
-    benchmark closure verdict; a tracked Gate Chair benchmark review would be
-    required.
+  - `approval-20260731-001` authorizes one evidence-bound P9-T09 review and
+    does not predetermine a positive verdict or supply missing evidence.
 - `definitions_used`: Gate Chair status; protected verdict authority; benchmark
   closure.
-- `definitions_introduced`: `none`; the row records protected benchmark closure authority.
-- `theorem_like_claims`: Protected benchmark closure verdict is missing.
-- `statement_or_decision`: Protected benchmark closure remains human-gated and
-  missing.
-- `mathematical_conclusion`: none_supplied; no benchmark closure verdict
-  exists.
-- `audits_passed`: `none` for benchmark closure.
-- `stress_results`: `none` for benchmark closure.
-- `gate_chair_results`: Protected benchmark closure missing; narrower approvals do not satisfy it.
-- `fail_closed_branches`: Local implementation authorization cannot become benchmark closure authority.
-- `known_obstructions`: Protected benchmark Gate Chair review and upstream burdens remain missing.
+- `definitions_introduced`: `none`; the row records the protected decision and
+  does not introduce scientific primitives or recovery evidence.
+- `theorem_like_claims`: The protected negative closure decision exists;
+  positive benchmark closure remains absent and fresh-human-gated because
+  authority satisfaction does not discharge the seven unmet Gate E burdens.
+- `statement_or_decision`:
+  `NOT_READY_BENCHMARK_AND_COMPLETED_DERIVATION_REQUIREMENTS_UNMET`.
+- `mathematical_conclusion`: The protected-authority criterion passes, but the
+  fixed package still has six `INCONCLUSIVE` cases, zero passes, no qualifying
+  independent replication, and no source-derived physical recovery bridge.
+- `audits_passed`: Exact one-time authorization and fixed-evidence review.
+- `stress_results`: No prior mathematical or physical status is promoted.
+- `gate_chair_results`: Protected Gate E is completed NOT READY; benchmark
+  promotion is denied, recovery is not established, and completed-derivation
+  wording is prohibited for the fixed evidence.
+- `fail_closed_branches`: The exact unchanged package has no automatic replay
+  or positive-closure route.
+- `known_obstructions`: Every upstream physical recovery, benchmark-pass, and
+  independent-replication burden remains unmet.
 - `physical_non_conclusions`:
-  - No benchmark Gate Chair closure.
+  - No positive benchmark Gate Chair closure.
   - No benchmark promotion.
+  - No exact or controlled approximate GR recovery.
   - No completed derivation.
-- `forbidden_overread`: Narrow scoped approvals, validation, or checkpoint commits as protected benchmark closure.
+- `forbidden_overread`: The existence of protected decision authority as a
+  positive verdict, scientific premise, benchmark pass, recovery derivation,
+  or broader scientific authority.
 - `downstream_blocked_targets`: Benchmark closure, benchmark promotion, completed derivation.
-- `allowed_reuse`: Use as a protected-authority reminder.
-- `blocked_reuse`: Do not treat approvals for narrower scoped packets,
-  validation, or checkpoint commits as protected benchmark closure.
+- `allowed_reuse`: Use as the exact protected negative closure and local-freeze
+  record for the fixed package.
+- `blocked_reuse`: Do not turn the negative verdict into benchmark promotion,
+  exact or approximate recovery, a completed derivation, a global no-go, or a
+  claim that future source-side extension is impossible.
 - `dependency_items`: `benchmark_promotion`
-- `missing_theorem_or_primitive`: Protected benchmark Gate Chair review and
-  verdict after upstream burdens are discharged.
-- `next_theorem_needed`: Protected benchmark Gate Chair review and verdict after upstream burdens are discharged.
-- `candidate_next_task`: none from this inventory.
-- `overread_guard`: `no_benchmark_gate_chair_closure;no_benchmark_promotion;no_completed_derivation;no_future_source_extension_impossibility;no_global_theory_rejection`
-- `external_review_notes`: This row prevents authority laundering from local
-  implementation authorization into benchmark closure.
+- `missing_theorem_or_primitive`: The Gate Chair decision is no longer missing;
+  upstream physical recovery, benchmark-pass, and qualifying independent-
+  replication evidence remain missing.
+- `next_theorem_needed`: Materially new source-derived physical recovery and
+  independent evidence before any fresh protected review.
+- `candidate_next_task`: none for the exact unchanged package.
+- `overread_guard`: `no_benchmark_gate_chair_closure;no_benchmark_promotion;no_completed_derivation;no_einstein_equations;no_matter_coupling_derivation;no_future_source_extension_impossibility;no_global_theory_rejection`
+- `external_review_notes`: The tracked user authorization establishes review
+  authority only. It does not make the same-context audit external, blind,
+  human, or independently replicated.
 
 ## Coverage Receipt
 
