@@ -1,0 +1,33 @@
+schema_id: "parent_child_perspective_output_v1"
+task_id: "RT-20260731-001"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+subagent_count: 0
+source_scope: "immutable P9-T01 protocol and P9-T02 through P9-T07 case package"
+
+checks:
+  source_hash_identity: "PASS"
+  protocol_and_firewall_identity: "PASS"
+  case_outcome_parity: "PASS_SIX_INCONCLUSIVE_ZERO_PASSES"
+  source_seal_and_mutation_parity: "PASS"
+  selected_independent_method_recomputation: "PASS_SAME_CONTEXT_ONLY"
+  qualifying_independent_replication: "NOT_ACQUIRED"
+
+findings:
+  - finding_id: "MATH-01"
+    severity: "high"
+    statement: "No declared target root reaches a source-stage result, and no target-informed rerun or post-seal mutation is recorded."
+  - finding_id: "MATH-02"
+    severity: "blocking"
+    statement: "All six cases terminate INCONCLUSIVE before a lawful independently reproduced physical comparison; zero benchmark passes exist."
+  - finding_id: "MATH-03"
+    severity: "high"
+    statement: "Selected arithmetic reproduces by a separate task-local method, but common context, data, and code provenance prevent an independence claim."
+  - finding_id: "MATH-04"
+    severity: "high"
+    statement: "The heterogeneous case controls do not instantiate one suite-global calibrated source law."
+
+recommendation: "Preserve every immutable outcome and obtain a fresh independent implementation and seal before any positive Gate E request."
+independent_replication_claimed: false
+physics_promotion_authorized: false

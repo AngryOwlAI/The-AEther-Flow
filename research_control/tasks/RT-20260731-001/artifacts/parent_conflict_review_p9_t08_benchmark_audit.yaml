@@ -1,0 +1,32 @@
+schema_id: "parent_conflict_review_v1"
+task_id: "RT-20260731-001"
+artifact_id: "P9T08BenchmarkAuditParentConflictRecord_v1"
+status: "resolved"
+resolution_rounds: 1
+resolved_conflict_count: 4
+unresolved_conflicts: []
+
+conflicts:
+  - conflict_id: "CR-01"
+    math_position: "The tracked provenance and seal hashes agree and selected finite results reproduce."
+    philosophy_position: "Internal agreement cannot establish external independence or physical reference."
+    resolution: "Record PASS only for immutable identity and same-context internal checks; keep independent replication NOT_ACQUIRED."
+  - conflict_id: "CR-02"
+    math_position: "No declared target-import path was found."
+    philosophy_position: "A complete DAG cannot prove absence of cognitive target exposure."
+    resolution: "Record no declared import detected while preserving every target-exposure ledger and blindness limitation."
+  - conflict_id: "CR-03"
+    math_position: "The six controls use a consistent protocol."
+    philosophy_position: "Their distinct proposal assumptions are not one universal law."
+    resolution: "Distinguish protocol consistency from heterogeneous source-law nonselection and prohibit suite aggregation."
+  - conflict_id: "CR-04"
+    math_position: "The audit satisfies the P9-T08 review task."
+    philosophy_position: "Task completion is not a Gate E verdict."
+    resolution: "Complete P9-T08 with Gate E NOT READY and defer P9-T09 to exact protected human authority."
+
+parent_disposition:
+  review_verdict: "external_expert_review_required"
+  target_import_audit: "NO_DECLARED_IMPORT_DETECTED"
+  qualifying_independent_replication: "NOT_ACQUIRED"
+  Gate_E_readiness: "NOT_READY_NO_BENCHMARK_PASS_NO_QUALIFYING_INDEPENDENT_REPLICATION"
+  physics_promotion_authorized: false

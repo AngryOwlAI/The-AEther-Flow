@@ -1,0 +1,90 @@
+{
+  "authority_limits": {
+    "distance_to_gr_changed": false,
+    "gate_e_verdict_authorized": false,
+    "ledger_changed_by_recovery": false,
+    "p9_t08_reexecuted": false,
+    "p9_t09_executed": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "publication_or_push_authorized": false,
+    "scientific_status_changed": false
+  },
+  "checks": {
+    "active_task_id": "RT-20260731-003",
+    "allowed_write_path_counts": {
+      "agent_job": 34,
+      "agent_job_registry": 34,
+      "execution_role": 34,
+      "role_execution_registry": 34
+    },
+    "allowed_write_paths_equal": true,
+    "blocker_fingerprint": "d87f7d0a1fb661acfe1d705f4bebc5ca3a865e0be75501d6f8cf4f3da099da31",
+    "changed_path_count": 82,
+    "dirty_manifest_sha256": "430966fe77b99ef0e396106b54bd03b8ea7c721a954ecae1e2b51300e2580921",
+    "disallowed_changed_paths": [],
+    "distance_to_gr_delta_changed": false,
+    "failure_evidence_sha256": "a27d4ffee08261b44ad0056d6ddb0d555c626c34fec9a506d511f61d04af5bd5",
+    "latest_handoff_id": "handoff-0925",
+    "ledger_changed_by_recovery": false,
+    "ledger_path_count": 1,
+    "next_worker_skill": "none_until_human_authorization",
+    "p9_t08_reexecuted": false,
+    "p9_t09_executed": false,
+    "protected_hashes": {
+      "registries/DISTANCE_TO_GR_LEDGER.csv": {
+        "expected_sha256": "1e081225cd047aa02a9fd0d53582c4625be5e4cd019df3f5cd6719502d1a241e",
+        "match": true,
+        "observed_sha256": "1e081225cd047aa02a9fd0d53582c4625be5e4cd019df3f5cd6719502d1a241e"
+      },
+      "research_control/handoffs/handoff-0924.md": {
+        "expected_sha256": "d2665c24013bc481621cb2d5e9a438580eb5b06ff85132c5fed4fa4e795db368",
+        "match": true,
+        "observed_sha256": "d2665c24013bc481621cb2d5e9a438580eb5b06ff85132c5fed4fa4e795db368"
+      },
+      "research_control/handoffs/handoff-0924.yaml": {
+        "expected_sha256": "bac3da3b29573721d1ab93a145a2aafbe55b5680c29306baee5813d4729b9758",
+        "match": true,
+        "observed_sha256": "bac3da3b29573721d1ab93a145a2aafbe55b5680c29306baee5813d4729b9758"
+      },
+      "research_control/tasks/RT-20260731-002/00_TASK.yaml": {
+        "expected_sha256": "3f9d30df57852fa420354d4d8cec3060c8cb1a07f0d229c352940c628e41cc50",
+        "match": true,
+        "observed_sha256": "3f9d30df57852fa420354d4d8cec3060c8cb1a07f0d229c352940c628e41cc50"
+      },
+      "research_control/tasks/RT-20260731-002/DDR-20260731-002.md": {
+        "expected_sha256": "bde6917253444416db1750ce9777724c2edf4b0d5c671b3e0debf3c0089b2f10",
+        "match": true,
+        "observed_sha256": "bde6917253444416db1750ce9777724c2edf4b0d5c671b3e0debf3c0089b2f10"
+      },
+      "research_control/tasks/RT-20260731-002/jobs/AJ-RT-20260731-002-001.yaml": {
+        "expected_sha256": "7fdffaca3677179e2d96383e788dafbe4b80c777854cfe25bed3fcb945a66f69",
+        "match": true,
+        "observed_sha256": "7fdffaca3677179e2d96383e788dafbe4b80c777854cfe25bed3fcb945a66f69"
+      },
+      "research_control/tasks/RT-20260731-002/jobs/completions/AJC-AJ-RT-20260731-002-001.yaml": {
+        "expected_sha256": "831568d91dc239c57f40b6d307606e218121759602bde060e73f2c31fe91d981",
+        "match": true,
+        "observed_sha256": "831568d91dc239c57f40b6d307606e218121759602bde060e73f2c31fe91d981"
+      },
+      "research_control/tasks/RT-20260731-002/roles/process-integrity-auditor@0.1.0--RT-20260731-002.yaml": {
+        "expected_sha256": "660e3f494aa3f2c2272630550224f80876137ee7905be9df7d0e9f5cc7922d1e",
+        "match": true,
+        "observed_sha256": "660e3f494aa3f2c2272630550224f80876137ee7905be9df7d0e9f5cc7922d1e"
+      }
+    },
+    "route_sha256": "c2a5a1437447e91263073904fe60604a1ee4a150102710e3bac20ddba7872dbc",
+    "scientific_claims_changed": false,
+    "source_job_ledger_path_count": 0,
+    "strategy_id": "repair_rt_20260731_002_distance_ledger_checkpoint_allowlist_v1"
+  },
+  "error_count": 0,
+  "errors": [],
+  "job_id": "AJ-RT-20260731-003-001",
+  "schema_id": "p9_t08_distance_ledger_checkpoint_allowlist_recovery_receipt_v1",
+  "source_job_id": "AJ-RT-20260731-002-001",
+  "source_task_id": "RT-20260731-002",
+  "strategy_id": "repair_rt_20260731_002_distance_ledger_checkpoint_allowlist_v1",
+  "task_id": "RT-20260731-003",
+  "validation_status": "PASS"
+}

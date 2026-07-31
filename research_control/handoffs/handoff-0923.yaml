@@ -1,0 +1,335 @@
+validation_status: "FAIL"
+handoff_id: "handoff-0923"
+handoff_number: 923
+task_id: "RT-20260731-001"
+decision_id: "DDR-20260731-001"
+job_id: "AJ-RT-20260731-001-001"
+completion_id: "AJC-AJ-RT-20260731-001-001"
+completion_path: "research_control/tasks/RT-20260731-001/jobs/completions/AJC-AJ-RT-20260731-001-001.yaml"
+completion_sha256: "29e12eca665ad418d9ac6d310eadc63b35fe199fca94dd06515abe7cc8267ab9"
+status: "blocked_validation"
+created_at: "2026-07-31T08:23:41Z"
+parent_handoff_id: "handoff-0922"
+plan_task_id: "P9-T08"
+completed_plan_task_id: "P9-T08"
+source_role_id: "external-red-team-reviewer"
+source_role_version: "0.1.0"
+source_execution_role_ref: "external-red-team-reviewer@0.1.0--RT-20260731-001"
+summary: "P9-T08 audits the immutable P9-T02 through P9-T07 suite and finds no declared target-import path, target-informed rerun, or post-seal source mutation. All six outcomes remain INCONCLUSIVE, benchmark pass count is zero, qualifying independent replication is absent, and Gate E is NOT READY. The generation's sole checkpoint then failed closed on fifteen blank-at-EOF findings; the index was restored and no commit was created."
+next_action: "Run one fresh bounded improve-project-system recovery that removes exactly one final blank logical line from the fifteen blocker paths, updates directly affected hash references and generated derivatives, preserves every scientific disposition, and invokes one future normal checkpoint without legacy validation. Do not execute P9-T09 first."
+current_claim_boundary: "CB-V21-P9-T08-BENCHMARK-SUITE-AUDIT-001"
+loop_risk_route: "repair_rt_20260731_001_blank_eof_and_checkpoint_v1"
+
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260731-001"
+  latest_research_handoff_id: "handoff-0923"
+  latest_research_next_action: "Run one fresh bounded improve-project-system recovery that removes exactly one final blank logical line from the fifteen blocker paths, updates directly affected hash references and generated derivatives, preserves every scientific disposition, and invokes one future normal checkpoint without legacy validation. Do not execute P9-T09 first."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+  project_improvement_sidecar_required: false
+  research_handoff_remains_authoritative: true
+
+claim_boundary:
+  allowed_next_scope: "One fresh bounded project-system recovery may remove exactly one final blank logical line from each of the fifteen blocker paths, update directly affected hashes and generated derivatives, and invoke one future normal checkpoint. It may not rerun P9-T08 science or execute P9-T09."
+  completed_task: "RT-20260731-001"
+  completed_completion_path: "research_control/tasks/RT-20260731-001/jobs/completions/AJC-AJ-RT-20260731-001-001.yaml"
+  completed_completion_sha256: "29e12eca665ad418d9ac6d310eadc63b35fe199fca94dd06515abe7cc8267ab9"
+  source_handoff_id: "handoff-0922"
+  source_handoff_path: "research_control/handoffs/handoff-0922.yaml"
+  source_handoff_sha256: "747c4c9f37cfc9fd715b15ef9b074574132408058e2803791e34d4575a5dd25a"
+  immutable_route_sha256: "c751dead41d942059e1118814bfbb6cbf7e31f41505debd235bcea5511884c4d"
+  dependency_checkpoint_commit: "536a7cf43a28923dea1a2ab4faed8822618326b3"
+  result_status: "P9_T08_AUDIT_COMPLETE_GATE_E_NOT_READY_CHECKPOINT_BLOCKED_BLANK_EOF"
+  review_path: "research_control/tasks/RT-20260731-001/artifacts/p9_t08_benchmark_suite_red_team_review_v1.yaml"
+  review_sha256: "9d28acf5ba647801b12674b65772406700af28fc2229973b4a242d8b0a0c32b7"
+  smuggling_audit_path: "research_control/tasks/RT-20260731-001/artifacts/p9_t08_benchmark_smuggling_audit_v1.yaml"
+  smuggling_audit_sha256: "c5b05dad23261d479e624b9cf08a3d02c2773d05df4d15246793067525acd229"
+  cross_case_consistency_path: "research_control/tasks/RT-20260731-001/artifacts/p9_t08_cross_case_assumption_consistency_v1.yaml"
+  cross_case_consistency_sha256: "c1be5c75415fea6321b3490bad45e1b4a83c6cda302a8e6683c1c4b1658082e2"
+  independent_replication_status_path: "research_control/tasks/RT-20260731-001/artifacts/p9_t08_independent_replication_status_v1.yaml"
+  independent_replication_status_sha256: "c3089818ea1ad682a7f246c3ec102d6eff34f80285265644de72c9fc9fff1dfc"
+  gate_e_matrix_path: "research_control/tasks/RT-20260731-001/artifacts/p9_t08_gate_e_readiness_matrix_v1.yaml"
+  gate_e_matrix_sha256: "2f2483dedb86f65d2b969959416b5bea0d4a39b0b26918107275c1784c253db8"
+  validation_path: "research_control/tasks/RT-20260731-001/artifacts/p9_t08_benchmark_audit_validation_v1.json"
+  validation_sha256: "ceeecb34b8afcd9a1eec7e5336380d139f284bdc5547f4eca485c82992a5dc76"
+  review_verdict: "external_expert_review_required"
+  review_context_classification: "same_context_role_review"
+  actual_external_human_review_completed: false
+  blind_review_completed: false
+  independent_replication_completed: false
+  selected_same_context_method_checks_completed: true
+  selected_same_context_method_checks_count_as_independent_replication: false
+  hidden_target_import_count: 0
+  firewall_failure_count: 0
+  target_informed_rerun_count: 0
+  source_mutation_after_target_comparison_count: 0
+  executed_case_count: 6
+  inconclusive_case_count: 6
+  benchmark_pass_count: 0
+  task_local_check_count: 85
+  task_local_failure_count: 0
+  result_status_label: "draft/control"
+  candidate_status: "proposal-only"
+  material_class: "cumulative source-derived benchmark audit data"
+  adoption_status: "blocked_adoption_open_continuation"
+  canonical_ontology_modified: false
+  source_law_adopted: false
+  candidate_adopted_or_rejected: false
+  physical_model_to_world_map_established: false
+  effective_metric_constructed: false
+  universal_matter_coupling_derived: false
+  Einstein_equations_derived: false
+  exact_GR_recovery_proved: false
+  Gate_E_verdict_issued: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+  blocked_claims:
+    - "same-context AI review or method variation as blind external human review or independent replication"
+    - "target-import cleanliness as positive source-derived GR evidence"
+    - "six heterogeneous proposal controls as one universal calibrated source law"
+    - "six INCONCLUSIVE outcomes as a weighted aggregate benchmark pass"
+    - "validator checkpoint registry role or route success as physics progress"
+    - "Gate E verdict benchmark promotion proof publication push or completed derivation"
+
+plan_result:
+  plan_task_id: "P9-T08"
+  next_plan_task_id: "P9-T08"
+  title: "Audit the full source-derived benchmark suite and replication readiness"
+  result_status: "P9_T08_AUDIT_COMPLETE_GATE_E_NOT_READY_CHECKPOINT_BLOCKED_BLANK_EOF"
+  work_item_status: "blocked"
+  expected_result_kind: "audit_verdict_or_precise_repair"
+  no_declared_target_import_detected: true
+  selected_same_context_method_checks_passed: true
+  independent_replication_completed: false
+  benchmark_pass_count: 0
+  gate_e_positive_readiness: false
+  checkpoint_invocation_count: 1
+  checkpoint_committed: false
+  p9_t09_dependency_ready_after_checkpoint: false
+  p9_t09_dependency_ready_now: false
+  p9_t09_requires_human_gate: true
+  p9_t09_exact_human_authorization_present: false
+  p9_t09_executed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+obstruction:
+  obstruction_id: "OBST-P9T08-BENCHMARK-EVIDENCE-PACKAGE-NOT-READY-001"
+  scope: "immutable P9-T02 through P9-T07 suite as a positive Gate E-ready independently reproduced exact-GR benchmark evidence package"
+  failed_premise: "All six cases are INCONCLUSIVE, zero benchmark passes exist, heterogeneous proposal controls do not form one universal calibrated physical source law, and qualifying independent replication is absent."
+  no_go_theorem_status: "not_proved"
+  same_milestone_continuation: "open_under_new_physical_evidence_independent_replication_and_exact_human_gate"
+
+distance_to_gr:
+  changed: false
+  effect: "obstruction_recorded"
+  burden_id: "benchmark_promotion"
+  milestone: "benchmark_promotion"
+  old_status: "blocked by missing primitive"
+  new_status: "blocked by missing primitive"
+  ledger_row_updated: true
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  layered_control_status: "blocked"
+  layered_mathematical_status: "upstream_burdens_missing"
+  layered_physical_status: "no_exact_gr_benchmark_promotion"
+  layered_promotion_status: "none"
+  downstream_unlocked:
+    - "none"
+  downstream_still_blocked:
+    - "physical model-to-world maps"
+    - "universal calibrated source law"
+    - "effective metric"
+    - "matter coupling"
+    - "Einstein equations"
+    - "qualifying independent replication"
+    - "benchmark pass"
+    - "protected Gate E verdict"
+    - "benchmark promotion"
+
+freeze_evaluation:
+  freeze_evaluation_required: true
+  repeated_burden: false
+  scoped_obstruction: true
+  freeze_decision: "human_gate_required"
+  active_freeze_label: "UNCHANGED_P9_SUITE_AS_POSITIVE_GATE_E_READY"
+  new_mathematical_payload: true
+  source_first_and_firewall_results_preserved: true
+  positive_readiness_of_unchanged_suite_blocked: true
+  materially_new_same_milestone_continuation_open: true
+  global_theory_rejection: false
+  future_source_extension_impossibility: false
+
+required_next_packet:
+  task_type: "project_system_p9_t08_blank_eof_checkpoint_recovery"
+  plan_task_id: "P9-T08"
+  objective: "Remove exactly one final blank logical line from each of the fifteen checkpoint-blocker paths, update directly affected hash references and generated derivatives, preserve every P9-T08 scientific disposition, and run one future normal checkpoint."
+  output_requirement: "One exact EOF repair receipt, updated control identities, passing staged blank-at-EOF proof, and one future normal checkpoint result."
+  dependency_ready_after_checkpoint: false
+  dependency_ready_now: false
+  exact_human_authorization_required: false
+  exact_human_authorization_present: false
+  positive_readiness_preconditions_satisfied: false
+  executed: false
+
+selected_next_route:
+  route_id: "repair_rt_20260731_001_blank_eof_and_checkpoint_v1"
+  route_label: "project-system-recovery"
+  role_family: "process-integrity-auditor@0.1.0"
+  worker_skill: "improve-project-system"
+  selected_next_packet_type: "exact_blank_eof_and_checkpoint_recovery"
+  task_type: "project_system_p9_t08_blank_eof_checkpoint_recovery"
+  plan_task_id: "P9-T08"
+  target_derivation_milestone: "none"
+  milestone_burden: "Project-system EOF-format and checkpoint compatibility only; no derivation milestone advances."
+  strategy_id: "repair_rt_20260731_001_blank_eof_and_checkpoint_v1"
+  adoption_status: "blocked_adoption_open_continuation"
+  requires_human_gate: false
+  exact_human_authorization_present: false
+  dependency_ready_after_checkpoint: false
+  execution_ready_now: false
+  execution_ready_after_checkpoint: false
+  benchmark_pass_precondition_satisfied: false
+  independent_replication_precondition_satisfied: false
+  physical_model_to_world_precondition_satisfied: false
+  target_atlas_assumed: false
+  target_metric_assumed: false
+  Einstein_equations_assumed: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  executed: false
+  next_action: "Remove exactly one final blank logical line from the fifteen blocker paths, update directly affected identities and generated derivatives, preserve all science, then invoke one future normal checkpoint."
+  source_blocker_path: "research_control/tasks/RT-20260731-001/artifacts/validation_blocker_checkpoint_p9_t08_blank_eof_v1.yaml"
+  source_blocker_sha256: "26c0d92e777824d5ab2ce3100947a0a84da99d121b0f9065f4dea8fb8ca8b575"
+  source_handoff: "research_control/handoffs/handoff-0923.yaml"
+
+ordinary_route_guard:
+  schema_id: "ordinary_route_guard_evaluation_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  evaluation_id: "ORE-HANDOFF-0923"
+  ordinary_handoff_id: "handoff-0923"
+  threshold: 3
+  consecutive_project_system_tasks_before_selection: 0
+  ready_science_plan_task_ids:
+    - "P9-T08"
+    - "P14-T04"
+  selected_plan_task_id: "P9-T08"
+  selected_route_class: "physics_bearing"
+  selected_worker_skill: "continue-research"
+  outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  exception_receipt:
+    active: false
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+checkpoint_failure:
+  blocker_path: "research_control/tasks/RT-20260731-001/artifacts/validation_blocker_checkpoint_p9_t08_blank_eof_v1.yaml"
+  blocker_sha256: "26c0d92e777824d5ab2ce3100947a0a84da99d121b0f9065f4dea8fb8ca8b575"
+  checkpoint_status: "FAIL_STAGED_GIT_DIFF_CHECK"
+  failed_stage: "staged_acceptance_git_diff_check"
+  failed_gate: "git_diff_check"
+  failure_class: "removable_blank_at_eof"
+  finding_count: 15
+  checkpoint_staged: false
+  checkpoint_committed: false
+  entry_index_restored: true
+  legacy_validation_used: false
+  retry_in_generation_185_authorized: false
+
+required_recovery:
+  strategy_id: "repair_rt_20260731_001_blank_eof_and_checkpoint_v1"
+  route_label: "project-system-recovery"
+  role_family: "process-integrity-auditor@0.1.0"
+  worker_skill: "improve-project-system"
+  work_item_id: "P9-T08"
+  blocker_path: "research_control/tasks/RT-20260731-001/artifacts/validation_blocker_checkpoint_p9_t08_blank_eof_v1.yaml"
+  blocker_sha256: "26c0d92e777824d5ab2ce3100947a0a84da99d121b0f9065f4dea8fb8ca8b575"
+  next_plan_item_after_recovery: "P9-T09"
+  next_plan_item_executed: false
+  required_controls:
+    - "Remove exactly one final blank logical line from each of the fifteen blocker paths."
+    - "Update every directly affected hash reference and generated derivative without changing scientific content."
+    - "Preserve six INCONCLUSIVE cases, zero benchmark passes, absent qualifying independent replication, and Gate E NOT READY."
+    - "Prove all fifteen repaired paths pass staged blank-at-EOF checking and unrelated whitespace policy remains unchanged."
+    - "Invoke at most one future normal governed checkpoint without legacy validation."
+
+active_state_boundary:
+  active_task_id: "RT-20260731-001"
+  active_job_id: "AJ-RT-20260731-001-001"
+  current_status: "p9_t08_audit_complete_checkpoint_blocked_blank_eof_recovery_required"
+  checkpoint_required: true
+  checkpoint_completed: false
+  checkpoint_invocation_count: 1
+  p9_t08_complete: true
+  selected_next_plan_task_id: "P9-T08"
+  selected_next_worker_skill: "improve-project-system"
+  selected_next_role_family: "process-integrity-auditor@0.1.0"
+  selected_next_route_label: "project-system-recovery"
+  selected_next_execution_ready_after_checkpoint: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 185 validated, was atomically claimed once, and consumed the immutable P9-T08 continue-research route once."
+      - "P9-T07 dependency checkpoint 536a7cf43a28923dea1a2ab4faed8822618326b3 is committed."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Hash, provenance, case-status, selected-mathematics, review-context, Gate E matrix, and authority checks pass."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Integrated control, documentation-impact, memory, renderer, claim-language, and selected test validation run before checkpoint."
+  post_checkpoint:
+    status: "FAIL"
+    evidence:
+      - "The sole governed checkpoint failed at staged Git diff checking on fifteen blank-at-EOF findings."
+      - "The entry index was restored, no path remains staged, and no commit was created."
+  independent_reproduction:
+    status: "NOT_ACQUIRED"
+    evidence:
+      - "Same-context selected method checks do not satisfy the protocol's independent-reproduction contract."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  publication_authorized: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  canonical_ontology_edit_authorized: false
+  independent_replication_claim_authorized: false
+  human_endorsement_claim_authorized: false
+  Einstein_equation_derivation_authorized: false
+  Gate_Chair_verdict_authorized: false
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  sidecar_required: false
+  sidecar_created: false
+  recursive_goal_recovery_required: true
+  route: "continue-goal recovery via improve-project-system"
+  blocker_path: "research_control/tasks/RT-20260731-001/artifacts/validation_blocker_checkpoint_p9_t08_blank_eof_v1.yaml"
+  blocker_sha256: "26c0d92e777824d5ab2ce3100947a0a84da99d121b0f9065f4dea8fb8ca8b575"
+  reason: "No project-improvement signal was emitted. The sole checkpoint exposed a distinct bounded EOF-format blocker that requires one fresh recursive-goal recovery generation."

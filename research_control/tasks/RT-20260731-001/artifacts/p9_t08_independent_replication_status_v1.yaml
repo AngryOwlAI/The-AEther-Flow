@@ -1,0 +1,76 @@
+schema_id: "p9_t08_independent_replication_status_v1"
+artifact_id: "P9T08IndependentReplicationStatus_v1"
+task_id: "RT-20260731-001"
+plan_task_id: "P9-T08"
+status: "NOT_ACQUIRED"
+qualifying_independent_replication_completed: false
+same_context_method_checks_completed: true
+same_context_method_checks_count_as_independent_replication: false
+
+required_dimensions:
+  fresh_executor_or_team:
+    required: true
+    satisfied: false
+    evidence: "The active task used the same task-facing AI execution lineage."
+  fresh_environment:
+    required: true
+    satisfied: false
+    evidence: "Checks ran in the same repository workspace and local environment."
+  independent_code_or_method_provenance:
+    required: true
+    satisfied: false
+    evidence: "A separate task-local method was written, but it is not independently authored or institutionally separated."
+  exact_immutable_source_hashes:
+    required: true
+    satisfied: true
+    evidence: "All protocol, case, DAG, seal, exposure-ledger, and receipt hashes were independently recomputed."
+  no_primary_intermediate_or_output_copy:
+    required: true
+    satisfied: false
+    evidence: "The audit read primary case outputs to compare the separately recomputed selected results."
+  independent_provenance_graph_reconstruction:
+    required: true
+    satisfied: false
+    evidence: "The active task audited tracked DAGs but did not obtain a separately authored full reconstruction."
+  reproduction_seal_before_target:
+    required: true
+    satisfied: false
+    evidence: "No qualifying reproduction source stage or independent seal exists."
+
+internal_checks:
+  method: "task-local exact rational and explicit eigenvector recomputation without trusting predecessor validator statuses"
+  checked_cases:
+    - "P9-T03 coefficient-record nonselection"
+    - "P9-T04 residual-vector distinction"
+    - "P9-T05 analytic amplitude and decoder identities"
+    - "P9-T06 C4 quotient spectrum"
+    - "P9-T07 nonlinear residual and quotient-Hessian eigenvalues"
+  result: "PASS_SAME_CONTEXT_INTERNAL_CHECKS"
+  independence_classification: "same_context_role_review"
+  external_review_completed: false
+  human_expert_review_completed: false
+  independent_replication_completed: false
+
+exact_human_action:
+  owner: "human research lead or explicitly authorized external-review coordinator"
+  actions:
+    - "Freeze the protocol, case, DAG, seal, target-exposure, and receipt hashes listed by P9-T08."
+    - "Prepare a blind packet that excludes primary intermediates, outputs, validator verdicts, checkpoint status, and persuasive prior summaries."
+    - "Assign a fresh executor or team with independently developed code or method and record model, prompt, data, institution, authorship, code-base, and method provenance."
+    - "Require source-stage reconstruction and an independent seal before any target oracle is opened."
+    - "Preserve every disagreement, failure, and INCONCLUSIVE outcome; do not repair source data from the target."
+    - "Return attributable replication evidence before requesting any positive protected Gate E verdict."
+  outreach_authorized_by_this_artifact: false
+
+disposition:
+  missing_reproduction_disposition: "INCONCLUSIVE"
+  Gate_E_readiness_effect: "BLOCKS_POSITIVE_VERDICT"
+  next_plan_task: "P9-T09 remains human-gated and not ready for a positive benchmark verdict"
+
+authority_limits:
+  external_outreach_authorized: false
+  independent_replication_claimed: false
+  human_endorsement_claimed: false
+  Gate_E_verdict_issued: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false

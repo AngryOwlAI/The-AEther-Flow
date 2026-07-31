@@ -1,0 +1,302 @@
+validation_status: "PASS"
+final_repository_validation_status: "PASS_PRECHECKPOINT_RECOVERY_READY"
+job_id: "AJ-RT-20260731-002-001"
+completion_id: "AJC-AJ-RT-20260731-002-001"
+task_id: "RT-20260731-002"
+task_type: "project_system_p9_t08_blank_eof_checkpoint_recovery"
+decision_id: "DDR-20260731-002"
+role_id: "process-integrity-auditor"
+source_role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260731-002"
+status: "completed"
+created_at: "2026-07-31T09:21:09Z"
+started_at: "2026-07-31T09:21:09Z"
+completed_at: "2026-07-31T09:35:24Z"
+objective: "Under the sealed generation-186 dirty-state manifest, preserve four already-normalized blocker paths, delete one extra final LF from each of the eleven paths that still fail the checkpoint Git whitespace gate, prove all fifteen original findings clean and all forty-seven non-finding paths exact at the repair boundary, update direct identities and derivatives, and invoke one governed cumulative checkpoint without legacy validation."
+completion_summary: "Generation 186 preserves four already-normalized original findings and removes exactly one extra final LF from each of the remaining eleven paths. The sealed receipt proves all fifteen paths clean, zero drift across forty-seven non-finding manifest paths at the repair boundary, and unchanged P9-T08 science: six INCONCLUSIVE cases, zero benchmark passes, no qualifying independent replication, and Gate E NOT READY. P9-T09 remains unexecuted and requires exact protected human authority after the cumulative checkpoint."
+objective_result: "p9_t08_eof_checkpoint_recovery_pass_ready_for_checkpoint"
+
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P9"
+  plan_task_id: "P9-T08"
+  recovery_for_plan_task_id: "P9-T08"
+  implementation_status: "eof_recovery_implemented_checkpoint_ready"
+  p9_t08_scientific_audit_status: "six_inconclusive_zero_passes_gate_e_not_ready_preserved"
+  completed_v21_tasks_added: []
+  next_dependency_ready_work_item: "P9-T09_human_gate_after_checkpoint"
+  next_work_item_executed: false
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 186
+  passes_consumed: 169
+  route_work_item_id: "P9-T08"
+  route_worker_skill: "improve-project-system"
+  route_sha256: "853cd2622d61fcb4b8ba3384d0c6613c9df49a9ca9a24e65377aafbb355d8e55"
+  route_reason: "checkpoint_staged_git_diff_blank_eof_repair_required"
+  route_strategy_id: "repair_rt_20260731_001_blank_eof_and_checkpoint_v1"
+  route_blocker_fingerprint: "bf037ea94009492633db59495ab1a7ef91a021b407d6f1def3899e17e71511cc"
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:186"
+  handoff_token: "dabd20144d4a655f51c1a5936a54182907a40d8571befe30"
+  relay_claim_token: "f34202ae609214555b8b8afc1e81e1f297c3a391034ed923"
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+
+transaction_status: "ready_for_governed_checkpoint"
+result_disposition: "repair_implemented_and_validated"
+work_item_status: "completed"
+plan_task_id: "P9-T08"
+recovery_for_plan_task_id: "P9-T08"
+next_plan_task_id: "P9-T09"
+checkpoint_commit: "none_checkpoint_pending"
+checkpoint_invocation_count: 0
+checkpoint_staged: false
+legacy_validation_used: false
+project_system_change_only: true
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS_PRECHECKPOINT_READY"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  observed_durable_outputs:
+    physics: []
+    project_system:
+      - "eleven exact extra-LF deletions and four already-normalized preservation checks"
+      - "sealed 62-path repair-preservation receipt"
+      - "direct identity and generated-derivative synchronization"
+      - "one governed cumulative checkpoint"
+  accepted_criteria:
+    physics: []
+    project_system:
+      - "all fifteen original finding paths pass the named Git whitespace check"
+      - "the eleven repaired paths differ from sealed bytes by exactly one deleted LF"
+      - "the four already-normalized finding paths and forty-seven non-finding manifest paths are preserved at the repair boundary"
+      - "direct identities and required generated derivatives are fresh"
+      - "one governed cumulative checkpoint commits without legacy validation"
+      - "P9-T09 remains unexecuted"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+physics_payload_admission_result:
+  status: "admitted"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+
+ordinary_route_guard_admission_result:
+  status: "PASS"
+  source_handoff_id: "handoff-0923"
+  source_handoff_sha256_at_intake: "64c2525892aa9cd26b9d35397a2391a73320457fdd79808bc4b1403ea8e77477"
+  selected_plan_task_id: "P9-T08"
+  guard_outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  system_success_counts_as_physics: false
+  system_success_counts_as_distance_to_gr: false
+  scientific_status_changed: false
+  physics_promotion_authorized: false
+
+recovery_result:
+  status: "PASS"
+  strategy_id: "repair_rt_20260731_001_blank_eof_and_checkpoint_v1"
+  source_task_id: "RT-20260731-001"
+  source_job_id: "AJ-RT-20260731-001-001"
+  source_handoff_id: "handoff-0923"
+  source_head: "536a7cf43a28923dea1a2ab4faed8822618326b3"
+  dirty_state_manifest_sha256: "09e9a26758752e70a8cbd22cf16b8fcd7f0dc01e3ea0da103e51fcda7a4f46c2"
+  blocker_path: "research_control/tasks/RT-20260731-001/artifacts/validation_blocker_checkpoint_p9_t08_blank_eof_v1.yaml"
+  blocker_sha256: "26c0d92e777824d5ab2ce3100947a0a84da99d121b0f9065f4dea8fb8ca8b575"
+  recovery_validator_path: "research_control/tasks/RT-20260731-002/artifacts/validate_p9_t08_eof_checkpoint_recovery.py"
+  recovery_validator_sha256: "5c921c60d52f499c7e629414b32dcbde47260ffde5b4c390c91d16c9b76b328b"
+  recovery_receipt_path: "research_control/tasks/RT-20260731-002/artifacts/p9_t08_eof_checkpoint_recovery_receipt.json"
+  recovery_receipt_sha256: "57a72deab6dd6289e639b0f4d6107782a54e572d393cb1870aac855d1f229cc3"
+  source_completion_sha256_after_identity_sync: "29e12eca665ad418d9ac6d310eadc63b35fe199fca94dd06515abe7cc8267ab9"
+  source_handoff_sha256_after_identity_sync: "5c9ab538adfb36107bb7248bcaa14b7859d8cf1bb1625dc5ff22130631685621"
+  manifest_path_count: 62
+  original_finding_path_count: 15
+  repaired_path_count: 11
+  already_normalized_path_count: 4
+  non_finding_path_count: 47
+  non_finding_hash_mismatch_count: 0
+  exact_terminal_lf_deletion_count: 11
+  p9_t08_reexecuted: false
+  p9_t09_executed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+
+artifacts:
+  - path: "research_control/tasks/RT-20260731-002/artifacts/validate_p9_t08_eof_checkpoint_recovery.py"
+    sha256: "5c921c60d52f499c7e629414b32dcbde47260ffde5b4c390c91d16c9b76b328b"
+  - path: "research_control/tasks/RT-20260731-002/artifacts/p9_t08_eof_checkpoint_recovery_receipt.json"
+    sha256: "57a72deab6dd6289e639b0f4d6107782a54e572d393cb1870aac855d1f229cc3"
+
+output_paths:
+  - "research_control/tasks/RT-20260731-001/artifacts/child_phys_math_p9_t08_benchmark_audit.yaml"
+  - "research_control/tasks/RT-20260731-001/artifacts/child_phys_phil_p9_t08_benchmark_audit.yaml"
+  - "research_control/tasks/RT-20260731-001/artifacts/p9_t08_benchmark_audit_compact_receipt_v1.json"
+  - "research_control/tasks/RT-20260731-001/artifacts/p9_t08_benchmark_audit_receipt.md"
+  - "research_control/tasks/RT-20260731-001/artifacts/p9_t08_benchmark_smuggling_audit_v1.yaml"
+  - "research_control/tasks/RT-20260731-001/artifacts/p9_t08_benchmark_suite_red_team_review_v1.yaml"
+  - "research_control/tasks/RT-20260731-001/artifacts/p9_t08_cross_case_assumption_consistency_v1.yaml"
+  - "research_control/tasks/RT-20260731-001/artifacts/p9_t08_gate_e_readiness_matrix_v1.yaml"
+  - "research_control/tasks/RT-20260731-001/artifacts/p9_t08_independent_replication_status_v1.yaml"
+  - "research_control/tasks/RT-20260731-001/artifacts/parent_conflict_review_p9_t08_benchmark_audit.yaml"
+  - "research_control/tasks/RT-20260731-001/artifacts/parent_fusion_notes_p9_t08_benchmark_audit.md"
+  - "research_control/tasks/RT-20260731-002/**"
+  - "research_control/handoffs/handoff-0924.yaml"
+  - "research_control/handoffs/handoff-0924.md"
+  - "research_control/program_state.yaml"
+
+command_results:
+  - command: ".venv/bin/python research_control/tasks/RT-20260731-002/artifacts/validate_p9_t08_eof_checkpoint_recovery.py --write-report --json"
+    status: "PASS"
+    summary: "eleven exact one-LF deletions, four preserved normalized findings, forty-seven preserved non-findings, and unchanged P9-T08 scientific boundaries"
+  - command: ".venv/bin/python research_control/tasks/RT-20260731-002/artifacts/validate_p9_t08_eof_checkpoint_recovery.py --check --json"
+    status: "PASS"
+    summary: "sealed receipt and all fifteen live EOF boundaries pass"
+  - command: ".venv/bin/python research_control/tasks/RT-20260731-001/artifacts/validate_p9_t08_benchmark_audit.py"
+    status: "PASS"
+    summary: "85 checks pass and preserve six INCONCLUSIVE cases, zero benchmark passes, absent qualifying independent replication, and Gate E NOT READY"
+  - command: "governed current-frontier, task-index, compact-frontier, dependency-graph, and claim-graph write/check validators"
+    status: "PASS"
+    summary: "all generated control projections are fresh and the claim graph validates"
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py and --validate-only"
+    status: "PASS_WITH_WARNINGS"
+    summary: "tracked memory and wiki derivatives synchronize; seven local-cache-only retrieval warnings remain non-authoritative"
+  - command: "project classifier, resolver, improvement-signal, documentation-impact, and changed-source claim-language gates"
+    status: "PASS"
+    summary: "project-system classification, zero emitted-signal errors, documentation coverage, and zero hard claim-language failures"
+  - command: ".venv/bin/python scripts/research_control/validate_research_control.py --json-summary"
+    status: "PENDING_STAGED_ACCEPTANCE"
+    summary: "all post-write errors are resolved except source_handoff_not_tracked, which is true until the cumulative checkpoint stages the predecessor handoff; its current synchronized hash already matches"
+  - command: "git diff --check"
+    status: "PASS"
+    summary: "working-tree whitespace validation passes after all eleven exact EOF deletions"
+
+validation_summary:
+  status: "PASS_PRECHECKPOINT_RECOVERY_READY"
+  task_local_error_count: 0
+  manifest_path_count: 62
+  original_finding_path_count: 15
+  repaired_path_count: 11
+  already_normalized_path_count: 4
+  non_finding_hash_mismatch_count: 0
+  checkpoint_invocation_count: 0
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 186 validated, atomically claimed, and consumed the exact immutable recovery route once."
+      - "The exact 62-path manifest, repository identity, lease, predecessor thread, route, and current reasoning effort matched before writes."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The sealed receipt proves eleven exact one-LF deletions, four preserved normalized findings, and zero drift across forty-seven non-finding manifest paths."
+      - "Six INCONCLUSIVE cases, zero passes, absent qualifying independent replication, and Gate E NOT READY remain fixed."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Task-local, source-audit, renderer, route-guard, documentation, signal, claim-language, and working-tree gates pass."
+      - "The only non-staged core diagnostic is source_handoff_not_tracked; the current synchronized source-handoff hash matches and the governed checkpoint resolves tracking by staging the cumulative transaction."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "The one governed cumulative checkpoint is pending and P9-T09 remains unexecuted."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Current frontier, task index, compact frontier, dependency graph, and claim graph write/check gates pass."
+  memory_bootstrap:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "Tracked memory synchronization and validate-only mode pass; seven local-cache-only retrieval warnings remain non-authoritative."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation reports zero hard failures; historical warnings remain nonblocking."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "ordinary project-system EOF normalization and checkpoint recovery only; P9-T09 is not authorized"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+
+distance_to_gr_delta:
+  changed: false
+  effect: "none_project_system_recovery"
+  milestone: "benchmark_promotion"
+  burden: "P9-T08 audit remains six INCONCLUSIVE cases with zero benchmark passes, no qualifying independent replication, and Gate E NOT READY."
+  ledger_row_updated: false
+
+project_improvement_signals: []
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1103
+    relationship_row_count: 5578
+    semantic_row_count: 1103
+    vault_row_count: 1103
+    local_cache_only_warning_count: 7
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-DESIGN-VALIDATION-OBLIGATION-RESOLUTION-POLICY-V1 --json"
+      query_type: "lookup"
+      query_text: "MD-RESEARCH-CONTROL-DESIGN-VALIDATION-OBLIGATION-RESOLUTION-POLICY-V1"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-DESIGN-VALIDATION-OBLIGATION-RESOLUTION-POLICY-V1"
+  canonical_inspections:
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-VALIDATION-OBLIGATION-RESOLUTION-POLICY-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/validation_obligation_resolution_policy_v1.md"
+      source_hash: "baea9d8b4b67c4c8bceb73da34dfbc562fe285c087992198295a177058c4cfc2"
+  authority_note: "Generated Obsidian, wiki, semantic, relationship, SQLite, and .local surfaces are retrieval-only navigation layers and not authority; tracked canonical sources, registries, and research-control state govern this recovery."
+
+documentation_impact_id: "DI-RT-20260731-002-001"
+claim_boundary_summary: "This completion proves only the exact P9-T08 EOF and checkpoint recovery. It creates no benchmark pass, qualifying independent replication, Gate E verdict, physics promotion, proof, publication, push, or completed-derivation authority."
+notes: "The cumulative checkpoint is the only remaining action in this AgentJob. P9-T09 requires exact protected human Gate Chair authority and was not executed."

@@ -1,0 +1,461 @@
+job_id: "AJ-RT-20260731-001-001"
+task_id: "RT-20260731-001"
+decision_id: "DDR-20260731-001"
+role_id: "external-red-team-reviewer"
+role_version: "0.1.0"
+execution_role_ref: "external-red-team-reviewer@0.1.0--RT-20260731-001"
+status: "completed"
+validation_status: "FAIL"
+requires_human_gate: false
+created_at: "2026-07-31T07:23:03Z"
+started_at: "2026-07-31T07:23:03Z"
+completed_at: "2026-07-31T08:23:41Z"
+completion_path: "research_control/tasks/RT-20260731-001/jobs/completions/AJC-AJ-RT-20260731-001-001.yaml"
+objective: "Execute only v21 P9-T08 by auditing the immutable P9-T01 protocol and P9-T02 through P9-T07 suite for target import, tuning, assumption inconsistency, shared-method error, scope overread, and actual independent-replication readiness; produce a Gate E matrix and exact human action without modifying reviewed science."
+target_derivation_milestone: "benchmark_promotion"
+milestone_burden: "Produce the evidence package required for any protected benchmark verdict."
+route_label: "external-review-packet"
+route_reason: "Checkpoint 536a7cf43a28923dea1a2ab4faed8822618326b3 committed P9-T07; handoff-0922, the v21 plan, and immutable generation 185 select exactly one P9-T08 External Red-Team Reviewer packet."
+immutable_route_sha256: "c751dead41d942059e1118814bfbb6cbf7e31f41505debd235bcea5511884c4d"
+dependency_checkpoint_commit: "536a7cf43a28923dea1a2ab4faed8822618326b3"
+plan_task_id: "P9-T08"
+recommendation_ids:
+  - "V21-R28"
+  - "V21-R29"
+  - "V21-R36"
+  - "V21-R37"
+  - "V21-R38"
+  - "V21-R55"
+  - "V21-R66"
+  - "V21-R68"
+source_extension_classification_required: false
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 185
+  passes_consumed: 168
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:185"
+  handoff_token: "63a53ca485b90739a4c021b6f09cd41100d4d36ed08bae6f"
+  relay_claim_token: "1bf58407f2ac13c54c2153ca5298e2454e411fe7b4a0cf2e"
+  route_work_item_id: "P9-T08"
+  route_worker_skill: "continue-research"
+  route_sha256: "c751dead41d942059e1118814bfbb6cbf7e31f41505debd235bcea5511884c4d"
+  route_reason: "dependency_ready_in_scope"
+  route_strategy_id: "continue_in_scope_generation_185"
+  route_blocker_fingerprint: "e89143a08aa51640838f26d3e6937720ed05c1896a5b95ea6e13e91f9b397bb0"
+  route_before_fingerprint: "e89143a08aa51640838f26d3e6937720ed05c1896a5b95ea6e13e91f9b397bb0"
+  route_evidence_sha256es:
+    - "74a139f46b4081e3c77968eff3237201d5db957deb63529d9a7adb09d4004129"
+    - "e89143a08aa51640838f26d3e6937720ed05c1896a5b95ea6e13e91f9b397bb0"
+  worker_skill: "continue-research"
+  worker_invocation_count: 1
+
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "physics"
+  payload_type: "precise_obstruction"
+  candidate_family: "P9-T02-THROUGH-P9-T07-SOURCE-DERIVED-BENCHMARK-SUITE"
+  assumption_delta:
+    - "Hold P9-T01 protocol and P9-T02 through P9-T07 case, DAG, seal, exposure, and receipt bytes fixed."
+    - "Disregard workflow, validator, checkpoint, registry, role, and routing success as scientific evidence."
+    - "Audit declared source-stage provenance and post-seal behavior case by case."
+    - "Recompute selected finite results by a separate task-local method without calling that method independent replication."
+    - "Distinguish common protocol consistency from a universal calibrated source law."
+    - "Preserve six INCONCLUSIVE outcomes, zero benchmark passes, and every proposal-only ancestry."
+  materiality_basis: "This is the first cumulative fixed-source audit of all six executed P9 cases. It adds one exact suite-level smuggling audit, cross-case assumption matrix, selected independent-method reproduction, structured replication deficit, and Gate E readiness matrix."
+  payload_details:
+    obstruction_id: "OBST-P9T08-BENCHMARK-EVIDENCE-PACKAGE-NOT-READY-001"
+    obstruction_scope: "the immutable P9-T02 through P9-T07 suite as a positive Gate E-ready independently reproduced exact-GR benchmark evidence package"
+    global_no_go_claimed: false
+  source_basis:
+    - "TEX-V21-P9-T01-SOURCE-DERIVED-BENCHMARK-PROTOCOL-V1"
+    - "research_control/tasks/RT-20260730-008/artifacts/p9_t02_vacuum_minkowski_case_v1.yaml"
+    - "research_control/tasks/RT-20260730-010/artifacts/p9_t03_weak_field_clock_case_v1.yaml"
+    - "research_control/tasks/RT-20260730-011/artifacts/p9_t04_causal_freefall_case_v1.yaml"
+    - "research_control/tasks/RT-20260730-012/artifacts/p9_t05_cosmology_case_v1.yaml"
+    - "research_control/tasks/RT-20260730-013/artifacts/p9_t06_radiative_case_v1.yaml"
+    - "research_control/tasks/RT-20260730-015/artifacts/p9_t07_nonlinear_compact_case_v1.yaml"
+  expected_artifact_paths:
+    - "research_control/tasks/RT-20260731-001/artifacts/p9_t08_benchmark_suite_red_team_review_v1.yaml"
+    - "research_control/tasks/RT-20260731-001/artifacts/p9_t08_benchmark_smuggling_audit_v1.yaml"
+    - "research_control/tasks/RT-20260731-001/artifacts/p9_t08_cross_case_assumption_consistency_v1.yaml"
+    - "research_control/tasks/RT-20260731-001/artifacts/p9_t08_independent_replication_status_v1.yaml"
+    - "research_control/tasks/RT-20260731-001/artifacts/p9_t08_gate_e_readiness_matrix_v1.yaml"
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+
+family_freeze_admission:
+  schema_id: "family_freeze_route_admission_v1"
+  policy_id: "family_freeze_reopening_policy_v1"
+  route_id: "v21_p9_t08_full_benchmark_suite_audit_v1"
+  family_id: "P9-T02-THROUGH-P9-T07-SOURCE-DERIVED-BENCHMARK-SUITE"
+  family_identity_sha256: "38e3a5b34463545f11f4f6daac5e9c2959a61dde9db7372f7a266d57fb3b79ef"
+  assumption_sha256es:
+    - "88ef097bf712ad115e9af62cc18a8b3eabb12f8545350f714ad065f702471007"
+    - "2fadb19c5849f1da5843c0e0599dbdc31790eab46587ce6718abbf4d3a0be79c"
+    - "45b79d5e3e371b3a2bcdde3f26296dad8c6ff65306d17cdf672bf76383eeb864"
+    - "f3ee6d0d7c19f68daf9f6ed9a2e10cec964633694688cc62074edc9089f66255"
+    - "bfe3f84f49b083c566486a9b2281ee1bfd3798f81832203ec9a10264afd1ba4f"
+    - "5fd283fa7d2fd0e76ad317270eb33cae33e9f0f5e42378dba846963f706de5dc"
+    - "d9f2af284c192a053623c3b8fed3755309e19957236d6da6fedad8787a61cb7d"
+  route_kind: "precise_obstruction"
+  detected_match_basis: []
+  reopening:
+    requested: false
+    class: "none"
+  distinct_branch:
+    branch_identity: "P9T08-CUMULATIVE-SUITE-AUDIT-AND-REPLICATION-CALIBRATION"
+    material_difference_basis: "The task audits the six immutable cases cumulatively and does not reconstruct or rerun any case candidate."
+    reconstructs_frozen_candidate: false
+    expected_artifact_paths:
+      - "research_control/tasks/RT-20260731-001/artifacts/p9_t08_benchmark_suite_red_team_review_v1.yaml"
+      - "research_control/tasks/RT-20260731-001/artifacts/p9_t08_gate_e_readiness_matrix_v1.yaml"
+  authority_limits:
+    local_family_freeze_preserved: true
+    global_no_go_claimed: false
+    automatic_candidate_adoption: false
+    theorem_truth_inferred: false
+    ontology_modified: false
+    physics_promotion_authorized: false
+
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  expected_durable_outputs:
+    physics:
+      - "one cumulative external-role source-derived benchmark-suite audit"
+      - "one cross-case assumption and selected independent-method reproduction record"
+      - "one independent-replication status packet and Gate E readiness matrix"
+    project_system:
+      - "one task-local deterministic validator and compact receipt"
+      - "one structured review-context provenance record"
+      - "standard control records and generated-memory synchronization"
+  acceptance_criteria:
+    physics:
+      - "all six immutable cases are checked for target import tuning mutation and scope overread"
+      - "protocol consistency is separated from universal source-law calibration"
+      - "same-context checks are not called independent replication"
+      - "all six INCONCLUSIVE outcomes and zero passes are preserved"
+    project_system:
+      - "source hashes external-review schema and parent-child synthesis pass"
+      - "claim-language documentation-impact and research-control gates pass"
+      - "one governed checkpoint records the bounded transaction"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: false
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0922"
+  source_handoff_path: "research_control/handoffs/handoff-0922.yaml"
+  source_handoff_sha256: "747c4c9f37cfc9fd715b15ef9b074574132408058e2803791e34d4575a5dd25a"
+  selected_plan_task_id: "P9-T08"
+  guard_outcome: "below_threshold"
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  parent:
+    execution_unit_id: "parent"
+    perspective: "physicist_mathematician_philosopher"
+    responsibilities:
+      - "hold protocol and all six case hashes fixed"
+      - "fuse provenance and mathematical audit with interpretation and review-status boundaries"
+      - "resolve protocol consistency versus universal-law calibration"
+      - "classify Gate E readiness without exercising protected authority"
+  children:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260731-001/artifacts/child_phys_math_p9_t08_benchmark_audit.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260731-001/artifacts/child_phys_phil_p9_t08_benchmark_audit.yaml"
+      status: "completed"
+  conflict_policy:
+    review_path: "research_control/tasks/RT-20260731-001/artifacts/parent_conflict_review_p9_t08_benchmark_audit.yaml"
+    max_resolution_rounds: 2
+    require_parallel_child_revision: true
+    unresolved_conflict_status: "blocked"
+  fusion_policy:
+    fusion_notes_path: "research_control/tasks/RT-20260731-001/artifacts/parent_fusion_notes_p9_t08_benchmark_audit.md"
+    fused_output_path: "research_control/tasks/RT-20260731-001/artifacts/p9_t08_benchmark_suite_red_team_review_v1.yaml"
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+    final_output_replaces_old_single_role_artifact: true
+  outer_agentjob_count: 1
+  child_agentjob_count: 0
+  subagent_count: 0
+  rationale: "Two internal analytical perspectives are recorded inside the one consumed worker invocation and one outer AgentJob. No child job or delegated subagent was created."
+
+memory_preflight:
+  preflight_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1101
+    relationship_row_count: 5570
+    semantic_row_count: 1101
+    vault_row_count: 1101
+    local_cache_only_warning_count: 0
+    refresh_performed: true
+  refresh_needed: true
+  refresh_performed: true
+  refresh_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search 'benchmark audit target import assumption consistency shared method independent replication' --limit 10 --json"
+      query_type: "search"
+      query_text: "benchmark audit target import assumption consistency shared method independent replication"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  authority_note: "Obsidian, wiki notes, semantic extracts, generated task indexes, and .local are retrieval layers only and not authority; registered source files and tracked control records were reopened."
+
+allowed_read_paths:
+  - "SOUL.md"
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".codex/skills/continue-research-continue-goal/SKILL.md"
+  - ".agents/roles/physics/external-red-team-reviewer.v0.1.0.md"
+  - ".agents/schemas/**"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  - "research_control/design/**"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0922.yaml"
+  - "research_control/handoffs/handoff-0922.md"
+  - "research_control/tasks/RT-20260729-012/**"
+  - "research_control/tasks/RT-20260730-008/**"
+  - "research_control/tasks/RT-20260730-010/**"
+  - "research_control/tasks/RT-20260730-011/**"
+  - "research_control/tasks/RT-20260730-012/**"
+  - "research_control/tasks/RT-20260730-013/**"
+  - "research_control/tasks/RT-20260730-015/**"
+  - "ontology/tex/aether_flow_dynamics.tex"
+  - "ontology/tex/aether_flow_relativistic_recovery.tex"
+  - "ontology/tex/aether_flow_consistency.tex"
+  - "registries/**"
+
+allowed_write_paths:
+  - "research_control/tasks/RT-20260731-001/**"
+  - "research_control/handoffs/handoff-0923.yaml"
+  - "research_control/handoffs/handoff-0923.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/PDF_DERIVATIVE_REGISTRY.csv"
+  - "registries/PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "registries/TEX_SOURCE_REGISTRY.csv"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/pdf/**"
+  - "wiki/tex/**"
+
+allowed_generated_paths:
+  - ".local/**"
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/pdf/**"
+  - "wiki/tex/**"
+
+forbidden_paths:
+  - "ontology/**"
+  - "manuscripts/**"
+  - "html/**"
+  - "implementations_plans/**"
+  - ".agents/roles/**"
+  - "research_control/tasks/RT-20260729-012/**"
+  - "research_control/tasks/RT-20260730-008/**"
+  - "research_control/tasks/RT-20260730-010/**"
+  - "research_control/tasks/RT-20260730-011/**"
+  - "research_control/tasks/RT-20260730-012/**"
+  - "research_control/tasks/RT-20260730-013/**"
+  - "research_control/tasks/RT-20260730-015/**"
+  - ".codex/skills/continue-research-goal/goals/**"
+
+allowed_source_classes:
+  - "science_draft_read_only"
+  - "scientific_gate_read_only"
+  - "canonical_ontology_read_only"
+  - "project_control"
+  - "registry"
+  - "role_contract"
+  - "task_local_review_output"
+  - "generated_memory_derivative"
+
+forbidden_source_classes:
+  - "canonical_ontology_write"
+  - "benchmark_promotion"
+  - "physics_claim_promotion"
+  - "source_law_adoption"
+  - "M_src_adoption"
+  - "candidate_reconstruction"
+  - "gate_chair_verdict"
+  - "completed_derivation_claim"
+  - "generated_derivative_authority"
+  - "target_benchmark_as_source_premise"
+  - "target_atlas_or_metric_as_source_premise"
+  - "reviewed_science_modification"
+  - "external_outreach"
+  - "human_expert_or_independent_replication_claim"
+  - "target_informed_source_repair"
+  - "effective_metric_matter_coupling_or_Einstein_equation_adoption"
+  - "exact_GR_recovery_proof"
+  - "publication_or_push"
+  - "global_theory_rejection"
+  - "future_source_extension_impossibility"
+
+approved_commands:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search 'benchmark audit target import assumption consistency shared method independent replication' --limit 10 --json"
+  - ".venv/bin/python research_control/tasks/RT-20260731-001/artifacts/validate_p9_t08_benchmark_audit.py --write-report --json"
+  - ".venv/bin/python research_control/tasks/RT-20260731-001/artifacts/validate_p9_t08_benchmark_audit.py --check --json"
+  - ".venv/bin/python scripts/research_control/validate_red_team_review_artifact.py research_control/tasks/RT-20260731-001/artifacts/p9_t08_benchmark_suite_red_team_review_v1.yaml --json"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+  - ".venv/bin/python scripts/research_control/task_taxonomy.py --validate-repository --json"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --json-summary"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --job-id AJ-RT-20260731-001-001 --json-summary"
+  - ".venv/bin/python scripts/research_control/run_full_research_control_validation.py --json --tail-chars 2500"
+  - "git diff --check"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260731-001-001"
+
+required_validators:
+  - "research_control/tasks/RT-20260731-001/artifacts/validate_p9_t08_benchmark_audit.py"
+  - "scripts/research_control/validate_red_team_review_artifact.py"
+  - "scripts/project_control/validate_claim_language.py"
+  - "scripts/project_control/validate_documentation_impact.py"
+  - "scripts/research_control/validate_research_control.py"
+  - "scripts/research_control/checkpoint_research_transaction.py"
+
+expected_outputs:
+  - "research_control/tasks/RT-20260731-001/artifacts/p9_t08_benchmark_suite_red_team_review_v1.yaml"
+  - "research_control/tasks/RT-20260731-001/artifacts/p9_t08_benchmark_smuggling_audit_v1.yaml"
+  - "research_control/tasks/RT-20260731-001/artifacts/p9_t08_cross_case_assumption_consistency_v1.yaml"
+  - "research_control/tasks/RT-20260731-001/artifacts/p9_t08_independent_replication_status_v1.yaml"
+  - "research_control/tasks/RT-20260731-001/artifacts/p9_t08_gate_e_readiness_matrix_v1.yaml"
+  - "research_control/tasks/RT-20260731-001/artifacts/p9_t08_benchmark_audit_compact_receipt_v1.json"
+  - "research_control/tasks/RT-20260731-001/artifacts/p9_t08_benchmark_audit_validation_v1.json"
+  - "research_control/tasks/RT-20260731-001/artifacts/p9_t08_benchmark_audit_receipt.md"
+  - "research_control/tasks/RT-20260731-001/artifacts/child_phys_math_p9_t08_benchmark_audit.yaml"
+  - "research_control/tasks/RT-20260731-001/artifacts/child_phys_phil_p9_t08_benchmark_audit.yaml"
+  - "research_control/tasks/RT-20260731-001/artifacts/parent_conflict_review_p9_t08_benchmark_audit.yaml"
+  - "research_control/tasks/RT-20260731-001/artifacts/parent_fusion_notes_p9_t08_benchmark_audit.md"
+  - "research_control/tasks/RT-20260731-001/artifacts/validation_blocker_checkpoint_p9_t08_blank_eof_v1.yaml"
+  - "research_control/tasks/RT-20260731-001/jobs/completions/AJC-AJ-RT-20260731-001-001.yaml"
+  - "research_control/handoffs/handoff-0923.yaml"
+  - "research_control/handoffs/handoff-0923.md"
+
+claim_boundary:
+  boundary_id: "CB-V21-P9-T08-BENCHMARK-SUITE-AUDIT-001"
+  allowed_scope:
+    - "read and critique immutable P9-T01 through P9-T07 sources"
+    - "hash provenance seal target-exposure and receipt audit"
+    - "selected same-context independent-method recomputation"
+    - "cross-case assumption and calibration audit"
+    - "structured review and independent-replication provenance calibration"
+    - "Gate E readiness matrix and exact human action without outreach"
+    - "standard control records registries generated derivatives and handoff"
+  blocked_scope:
+    - "reviewed science or canonical ontology edit"
+    - "external reviewer contact or outreach"
+    - "blind human external or independent review claim"
+    - "target-informed source repair rerun or tolerance change"
+    - "averaging INCONCLUSIVE cases into a benchmark pass"
+    - "source-law metric matter-coupling or Einstein-equation adoption"
+    - "Gate E benchmark promotion proof publication push completed derivation global no-go or future impossibility"
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false

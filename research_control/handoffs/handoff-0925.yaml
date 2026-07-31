@@ -1,0 +1,221 @@
+validation_status: "PASS"
+handoff_id: "handoff-0925"
+handoff_number: 925
+task_id: "RT-20260731-003"
+decision_id: "DDR-20260731-003"
+job_id: "AJ-RT-20260731-003-001"
+completion_id: "AJC-AJ-RT-20260731-003-001"
+completion_path: "research_control/tasks/RT-20260731-003/jobs/completions/AJC-AJ-RT-20260731-003-001.yaml"
+completion_sha256: "e8930478a2e44f96bb14e90f8898f49686f4252177450b098961156f3fb59f2a"
+status: "human_gate_required_after_checkpoint"
+created_at: "2026-07-31T10:31:14Z"
+parent_handoff_id: "handoff-0924"
+plan_task_id: "P9-T09"
+recovery_for_plan_task_id: "P9-T08"
+source_role_id: "process-integrity-auditor"
+source_role_version: "0.1.0"
+source_execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260731-003"
+summary: "Generation 187 restores one exact checkpoint-authority boundary: the fresh AgentJob, execution-role source, AGENT_JOB registry row, and ROLE_EXECUTION registry row use the same ordered allowlist and include the unchanged Distance-to-GR ledger path exactly once. The predecessor task, decision, job, completion, role, handoff, and ledger bytes remain exact. P9-T08 remains six INCONCLUSIVE cases with zero benchmark passes, no qualifying independent replication, and Gate E NOT READY. P9-T09 remains unexecuted."
+next_action: "Run the one governed cumulative checkpoint for AJ-RT-20260731-003-001. After it commits, do not execute P9-T09 without a nonblank exact protected human Gate Chair authorization; if authorization is absent, record deferred_human_gate and continue only dependency-independent included work or terminalize according to the relay scope."
+current_claim_boundary: "CB-V21-P9-T08-DISTANCE-LEDGER-CHECKPOINT-ALLOWLIST-RECOVERY-001"
+loop_risk_route: "human-gated-benchmark-review"
+
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260731-003"
+  latest_research_handoff_id: "handoff-0925"
+  latest_research_next_action: "Run the one governed cumulative checkpoint for AJ-RT-20260731-003-001. After it commits, do not execute P9-T09 without a nonblank exact protected human Gate Chair authorization; if authorization is absent, record deferred_human_gate and continue only dependency-independent included work or terminalize according to the relay scope."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+  project_improvement_sidecar_required: false
+  research_handoff_remains_authoritative: true
+
+claim_boundary:
+  allowed_next_scope: "After the governed cumulative checkpoint commits, P9-T09 may be executed only under a nonblank exact protected human Gate Chair authorization. Without it, the relay may only record deferred_human_gate and select dependency-independent included work or terminalize according to the fixed scope."
+  completed_task: "RT-20260731-003"
+  completed_completion_path: "research_control/tasks/RT-20260731-003/jobs/completions/AJC-AJ-RT-20260731-003-001.yaml"
+  completed_completion_sha256: "e8930478a2e44f96bb14e90f8898f49686f4252177450b098961156f3fb59f2a"
+  source_task_id: "RT-20260731-002"
+  source_job_id: "AJ-RT-20260731-002-001"
+  source_handoff_id: "handoff-0924"
+  source_handoff_path: "research_control/handoffs/handoff-0924.yaml"
+  source_handoff_sha256_at_intake: "bac3da3b29573721d1ab93a145a2aafbe55b5680c29306baee5813d4729b9758"
+  immutable_route_sha256: "c2a5a1437447e91263073904fe60604a1ee4a150102710e3bac20ddba7872dbc"
+  route_blocker_fingerprint: "d87f7d0a1fb661acfe1d705f4bebc5ca3a865e0be75501d6f8cf4f3da099da31"
+  result_status: "PASS_P9_T08_DISTANCE_LEDGER_CHECKPOINT_ALLOWLIST_RECOVERY_READY_FOR_CHECKPOINT"
+  dirty_state_manifest_sha256: "430966fe77b99ef0e396106b54bd03b8ea7c721a954ecae1e2b51300e2580921"
+  failed_gate_evidence_sha256: "a27d4ffee08261b44ad0056d6ddb0d555c626c34fec9a506d511f61d04af5bd5"
+  recovery_receipt_path: "research_control/tasks/RT-20260731-003/artifacts/p9_t08_distance_ledger_checkpoint_allowlist_recovery_receipt.json"
+  recovery_receipt_sha256: "4c1ff2e5c66ef5da63cffcaacc41f8ed4ae9431d2d753884c4a30dd52c7db0b8"
+  manifest_path_count: 72
+  fresh_allowlist_path_count: 34
+  ledger_allowlist_occurrence_count: 1
+  four_way_allowlist_identity: true
+  live_disallowed_path_count: 0
+  checkpoint_invocation_count_before_handoff: 0
+  checkpoint_committed_before_handoff: false
+  p9_t08_scientific_audit_preserved: true
+  p9_t08_reexecuted: false
+  p9_t09_executed: false
+  p9_t09_exact_human_authorization_present: false
+  scientific_status_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  ledger_changed_by_recovery: false
+  source_law_adopted: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_performed: false
+  blocked_claims:
+    - "allowlist correction or checkpoint success as scientific progress"
+    - "six INCONCLUSIVE cases as a benchmark pass or aggregate positive result"
+    - "same-context method checking as qualifying independent replication"
+    - "Gate E readiness verdict promotion proof publication push or completed derivation without exact protected human authority"
+
+plan_result:
+  plan_task_id: "P9-T09"
+  recovery_for_plan_task_id: "P9-T08"
+  next_plan_task_id: "P9-T09"
+  title: "Restore the P9-T08 Distance-to-GR ledger checkpoint allowlist"
+  result_status: "P9_T08_DISTANCE_LEDGER_CHECKPOINT_ALLOWLIST_RECOVERY_PASS"
+  work_item_status: "completed"
+  p9_t08_audit_complete: true
+  p9_t08_six_inconclusive_preserved: true
+  benchmark_pass_count: 0
+  qualifying_independent_replication_completed: false
+  gate_e_positive_readiness: false
+  exact_allowlist_recovery_complete: true
+  p9_t09_dependency_ready_after_checkpoint: true
+  p9_t09_dependency_ready_now: false
+  p9_t09_requires_human_gate: true
+  p9_t09_executed: false
+  scientific_claims_changed_by_recovery: false
+  distance_to_gr_delta_changed_by_recovery: false
+  ledger_changed_by_recovery: false
+  physics_promotion_authorized_by_recovery: false
+  proof_authority: false
+
+distance_to_gr:
+  changed: false
+  effect: "none_project_system_recovery"
+  burden_id: "benchmark_promotion"
+  milestone: "benchmark_promotion"
+  status: "blocked_positive_gate_e_no_benchmark_pass_no_qualifying_independent_replication"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "The recovery preserves the already-authorized P9-T08 ledger bytes exactly and contributes no physics movement."
+  downstream_unlocked:
+    - "P9-T09 dependency eligibility only after checkpoint and only for deferred_human_gate absent exact authority"
+  downstream_still_blocked:
+    - "positive Gate E verdict"
+    - "benchmark promotion"
+    - "exact or approximate GR recovery claim"
+    - "completed derivation claim"
+    - "publication or push"
+
+required_next_packet:
+  task_type: "v21_p9_t09_human_gate_e_benchmark_and_completed_derivation_review"
+  plan_task_id: "P9-T09"
+  route_label: "human-gated-benchmark-review"
+  role_family: "gate-chair"
+  worker_skill: "none_until_human_authorization"
+  objective: "Under nonblank exact protected human authority, decide benchmark promotion, exact or approximate GR recovery, and whether the project may claim a completed derivation."
+  dependency_qualification: "P9-T08 supplies only an audit with six INCONCLUSIVE cases, zero passes, absent qualifying independent replication, and Gate E NOT READY; this recovery supplies only exact checkpoint allowlist eligibility."
+  dependency_ready_after_checkpoint: true
+  dependency_ready_now: false
+  requires_human_gate: true
+  exact_human_authorization_present: false
+  absent_authorization_disposition: "deferred_human_gate"
+  executed: false
+
+selected_next_route:
+  route_id: "v21_p9_t09_human_gate_e_after_checkpoint"
+  plan_task_id: "P9-T09"
+  route_label: "human-gated-benchmark-review"
+  role_family: "gate-chair"
+  worker_skill: "none_until_human_authorization"
+  task_type: "v21_p9_t09_human_gate_e_benchmark_and_completed_derivation_review"
+  target_derivation_milestone: "benchmark_promotion"
+  milestone_burden: "Make the final protected scientific verdict after the complete chain."
+  requires_human_gate: true
+  exact_human_authorization_present: false
+  executed: false
+
+ordinary_route_guard:
+  schema_id: "ordinary_route_guard_evaluation_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  evaluation_id: "ORE-HANDOFF-0925"
+  ordinary_handoff_id: "handoff-0925"
+  threshold: 3
+  consecutive_project_system_tasks_before_selection: 2
+  ready_science_plan_task_ids:
+    - "P9-T09"
+    - "P14-T04"
+  selected_plan_task_id: "P9-T09"
+  selected_route_class: "physics_bearing"
+  selected_worker_skill: "none_until_human_authorization"
+  outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  exception_receipt:
+    active: false
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 187 atomically claimed and consumed the exact immutable improve-project-system route once."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The task-local receipt proves four-way ordered allowlist identity single ledger admission exact protected hashes and complete live-path coverage."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Task-local scientific-preservation renderer route-guard documentation signal claim-language and working-tree gates pass."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "The one governed cumulative checkpoint is pending."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Governed frontier task-index compact-frontier dependency-graph and claim-graph write/check gates pass."
+  memory_bootstrap:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "Tracked memory synchronization and validate-only checks pass with seven local-cache-only retrieval warnings."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation reports zero hard failures."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "ordinary project-system checkpoint allowlist recovery only; P9-T09 is not authorized"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+
+project_improvement_signals: []
+project_improvement_sidecar_required: false
+checkpoint_required_before_next_route: true
+checkpoint_job_id: "AJ-RT-20260731-003-001"
+legacy_validation_authorized: false
+notes: "P9-T09 is protected. This handoff does not fabricate infer or pre-authorize a Gate E verdict and does not create science promotion proof publication or push authority."

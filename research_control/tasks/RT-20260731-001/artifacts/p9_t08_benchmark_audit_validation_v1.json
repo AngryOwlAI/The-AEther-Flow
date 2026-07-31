@@ -1,0 +1,442 @@
+{
+  "authority_boundary": "validation_and_same_context_recomputation_only_no_proof_gate_or_promotion_authority",
+  "benchmark_pass_count": 0,
+  "check_count": 85,
+  "checks": [
+    {
+      "check": "hash:research_control/tasks/RT-20260729-012/artifacts/source_derived_benchmark_protocol_v1.tex",
+      "detail": "expected=88ef097bf712ad115e9af62cc18a8b3eabb12f8545350f714ad065f702471007 actual=88ef097bf712ad115e9af62cc18a8b3eabb12f8545350f714ad065f702471007",
+      "passed": true
+    },
+    {
+      "check": "hash:research_control/tasks/RT-20260729-012/artifacts/source_derived_benchmark_case_schema_v1.yaml",
+      "detail": "expected=5045de8fbaeb6c80b89ec88b71143a8aeaca1c892efadc4b7293cb438ee808d8 actual=5045de8fbaeb6c80b89ec88b71143a8aeaca1c892efadc4b7293cb438ee808d8",
+      "passed": true
+    },
+    {
+      "check": "hash:research_control/tasks/RT-20260729-012/artifacts/target_import_firewall_v1.yaml",
+      "detail": "expected=ccb9297f817a9b4eeb886834a510e1f21d518a2668bc3fde9695b909d6884acf actual=ccb9297f817a9b4eeb886834a510e1f21d518a2668bc3fde9695b909d6884acf",
+      "passed": true
+    },
+    {
+      "check": "hash:research_control/tasks/RT-20260729-012/artifacts/gate_e_readiness_checklist_v1.yaml",
+      "detail": "expected=a9cefe08cc6bc8b0653fdfc72144d24e54fb14e565f8a499be49093bc615bb76 actual=a9cefe08cc6bc8b0653fdfc72144d24e54fb14e565f8a499be49093bc615bb76",
+      "passed": true
+    },
+    {
+      "check": "hash:research_control/tasks/RT-20260730-008/artifacts/p9_t02_vacuum_minkowski_case_v1.yaml",
+      "detail": "expected=2fadb19c5849f1da5843c0e0599dbdc31790eab46587ce6718abbf4d3a0be79c actual=2fadb19c5849f1da5843c0e0599dbdc31790eab46587ce6718abbf4d3a0be79c",
+      "passed": true
+    },
+    {
+      "check": "hash:research_control/tasks/RT-20260730-008/artifacts/p9_t02_provenance_dag_v1.yaml",
+      "detail": "expected=163d9154e81a7249cdd145841e28c0313fd4ee7b4dccb9621f29bb6b61633e7e actual=163d9154e81a7249cdd145841e28c0313fd4ee7b4dccb9621f29bb6b61633e7e",
+      "passed": true
+    },
+    {
+      "check": "hash:research_control/tasks/RT-20260730-008/artifacts/p9_t02_source_output_seal_v1.json",
+      "detail": "expected=71b7dfb67b40d748867a5c49abf7b50c684f9e4a7f5962d8787a960a3dc541dd actual=71b7dfb67b40d748867a5c49abf7b50c684f9e4a7f5962d8787a960a3dc541dd",
+      "passed": true
+    },
+    {
+      "check": "hash:research_control/tasks/RT-20260730-008/artifacts/p9_t02_target_exposure_ledger_v1.yaml",
+      "detail": "expected=2bcb4a9c82508af58e680ea488e862e74a379ac82bc66253db4d120c71b3ac3b actual=2bcb4a9c82508af58e680ea488e862e74a379ac82bc66253db4d120c71b3ac3b",
+      "passed": true
+    },
+    {
+      "check": "hash:research_control/tasks/RT-20260730-008/artifacts/p9_t02_benchmark_case_receipt_v1.json",
+      "detail": "expected=49172f707fbaa243462788a2c22a63e19fcdd3ac0656142281fc1f013c8d884b actual=49172f707fbaa243462788a2c22a63e19fcdd3ac0656142281fc1f013c8d884b",
+      "passed": true
+    },
+    {
+      "check": "hash:research_control/tasks/RT-20260730-010/artifacts/p9_t03_weak_field_clock_case_v1.yaml",
+      "detail": "expected=45b79d5e3e371b3a2bcdde3f26296dad8c6ff65306d17cdf672bf76383eeb864 actual=45b79d5e3e371b3a2bcdde3f26296dad8c6ff65306d17cdf672bf76383eeb864",
+      "passed": true
+    },
+    {
+      "check": "hash:research_control/tasks/RT-20260730-010/artifacts/p9_t03_provenance_dag_v1.yaml",
+      "detail": "expected=59fea0af53cf4b1c7277b239937ce6f868df8ada20e4c1cd9e651282e5bcbfb4 actual=59fea0af53cf4b1c7277b239937ce6f868df8ada20e4c1cd9e651282e5bcbfb4",
+      "passed": true
+    },
+    {
+      "check": "hash:research_control/tasks/RT-20260730-010/artifacts/p9_t03_source_output_seal_v1.json",
+      "detail": "expected=a1b12e2a8277c94c6a626092a6dd9c5c7ab79399e420551dcd9e8ddae22194c0 actual=a1b12e2a8277c94c6a626092a6dd9c5c7ab79399e420551dcd9e8ddae22194c0",
+      "passed": true
+    },
+    {
+      "check": "hash:research_control/tasks/RT-20260730-010/artifacts/p9_t03_target_exposure_ledger_v1.yaml",
+      "detail": "expected=6b6661d96a01f87b7ef66deaefd1154b26420c8a242405ee661d00f92d9d6586 actual=6b6661d96a01f87b7ef66deaefd1154b26420c8a242405ee661d00f92d9d6586",
+      "passed": true
+    },
+    {
+      "check": "hash:research_control/tasks/RT-20260730-010/artifacts/p9_t03_weak_field_clock_receipt_v1.json",
+      "detail": "expected=2142b17e344c5877fc056aa8d757d88b27b1b5fd58f450ff79eff29a45e142da actual=2142b17e344c5877fc056aa8d757d88b27b1b5fd58f450ff79eff29a45e142da",
+      "passed": true
+    },
+    {
+      "check": "hash:research_control/tasks/RT-20260730-011/artifacts/p9_t04_causal_freefall_case_v1.yaml",
+      "detail": "expected=f3ee6d0d7c19f68daf9f6ed9a2e10cec964633694688cc62074edc9089f66255 actual=f3ee6d0d7c19f68daf9f6ed9a2e10cec964633694688cc62074edc9089f66255",
+      "passed": true
+    },
+    {
+      "check": "hash:research_control/tasks/RT-20260730-011/artifacts/p9_t04_provenance_dag_v1.yaml",
+      "detail": "expected=bfa67fbe669ff42f13e9a18f6f95b6492d621bee861e569e02f20dec864e3fb4 actual=bfa67fbe669ff42f13e9a18f6f95b6492d621bee861e569e02f20dec864e3fb4",
+      "passed": true
+    },
+    {
+      "check": "hash:research_control/tasks/RT-20260730-011/artifacts/p9_t04_source_output_seal_v1.json",
+      "detail": "expected=852e029864b6ac3ee3d7f4803c7787049d9d23d2a9c5efc2bfdedbc324a3eb60 actual=852e029864b6ac3ee3d7f4803c7787049d9d23d2a9c5efc2bfdedbc324a3eb60",
+      "passed": true
+    },
+    {
+      "check": "hash:research_control/tasks/RT-20260730-011/artifacts/p9_t04_target_exposure_ledger_v1.yaml",
+      "detail": "expected=421612292120ef16792972dacb3467c447627322d780c9e7a96ffb8368053fb6 actual=421612292120ef16792972dacb3467c447627322d780c9e7a96ffb8368053fb6",
+      "passed": true
+    },
+    {
+      "check": "hash:research_control/tasks/RT-20260730-011/artifacts/p9_t04_causal_freefall_receipt_v1.json",
+      "detail": "expected=fe12f4fed9561cd2e282b3a26bdac357e6862af4a915f10961caa77a31ed86ec actual=fe12f4fed9561cd2e282b3a26bdac357e6862af4a915f10961caa77a31ed86ec",
+      "passed": true
+    },
+    {
+      "check": "hash:research_control/tasks/RT-20260730-012/artifacts/p9_t05_cosmology_case_v1.yaml",
+      "detail": "expected=bfe3f84f49b083c566486a9b2281ee1bfd3798f81832203ec9a10264afd1ba4f actual=bfe3f84f49b083c566486a9b2281ee1bfd3798f81832203ec9a10264afd1ba4f",
+      "passed": true
+    },
+    {
+      "check": "hash:research_control/tasks/RT-20260730-012/artifacts/p9_t05_provenance_dag_v1.yaml",
+      "detail": "expected=03b14a1ed39206e79a4e4891580359b29e5b75e43acf6ce19256c9555dcf370a actual=03b14a1ed39206e79a4e4891580359b29e5b75e43acf6ce19256c9555dcf370a",
+      "passed": true
+    },
+    {
+      "check": "hash:research_control/tasks/RT-20260730-012/artifacts/p9_t05_source_output_seal_v1.json",
+      "detail": "expected=a76522a8e3598498bb5e946653ce235f8589bd860af1ab0c5bc4446072c3be86 actual=a76522a8e3598498bb5e946653ce235f8589bd860af1ab0c5bc4446072c3be86",
+      "passed": true
+    },
+    {
+      "check": "hash:research_control/tasks/RT-20260730-012/artifacts/p9_t05_target_exposure_ledger_v1.yaml",
+      "detail": "expected=cf9674a4f51743d8f2325099f358fabdd1e69969ac791f89df708ba05e105d5d actual=cf9674a4f51743d8f2325099f358fabdd1e69969ac791f89df708ba05e105d5d",
+      "passed": true
+    },
+    {
+      "check": "hash:research_control/tasks/RT-20260730-012/artifacts/p9_t05_cosmology_receipt_v1.json",
+      "detail": "expected=d7dbf50217b47a5e1dd2bbb7195cac769b9ecd2e616fe6789b5c1e877dd5698b actual=d7dbf50217b47a5e1dd2bbb7195cac769b9ecd2e616fe6789b5c1e877dd5698b",
+      "passed": true
+    },
+    {
+      "check": "hash:research_control/tasks/RT-20260730-013/artifacts/p9_t06_radiative_case_v1.yaml",
+      "detail": "expected=5fd283fa7d2fd0e76ad317270eb33cae33e9f0f5e42378dba846963f706de5dc actual=5fd283fa7d2fd0e76ad317270eb33cae33e9f0f5e42378dba846963f706de5dc",
+      "passed": true
+    },
+    {
+      "check": "hash:research_control/tasks/RT-20260730-013/artifacts/p9_t06_provenance_dag_v1.yaml",
+      "detail": "expected=f4b9b45bccbd6d768fa7de9b07cdc03638c3f742a54128a61273c65e9a83b929 actual=f4b9b45bccbd6d768fa7de9b07cdc03638c3f742a54128a61273c65e9a83b929",
+      "passed": true
+    },
+    {
+      "check": "hash:research_control/tasks/RT-20260730-013/artifacts/p9_t06_source_output_seal_v1.json",
+      "detail": "expected=75652be75e31376fad01ab5ed45f7685108609e57ad7a185b287443c5d2f00a6 actual=75652be75e31376fad01ab5ed45f7685108609e57ad7a185b287443c5d2f00a6",
+      "passed": true
+    },
+    {
+      "check": "hash:research_control/tasks/RT-20260730-013/artifacts/p9_t06_target_exposure_ledger_v1.yaml",
+      "detail": "expected=f24d62e6289ee6021555b8e7199fd9c13d6b0d6a93cf5015ad385a093d25352d actual=f24d62e6289ee6021555b8e7199fd9c13d6b0d6a93cf5015ad385a093d25352d",
+      "passed": true
+    },
+    {
+      "check": "hash:research_control/tasks/RT-20260730-013/artifacts/p9_t06_radiative_receipt_v1.json",
+      "detail": "expected=23cb0118404723f3151e70d2c96c17841a448118b31b1978dd0071ccd4343a6f actual=23cb0118404723f3151e70d2c96c17841a448118b31b1978dd0071ccd4343a6f",
+      "passed": true
+    },
+    {
+      "check": "hash:research_control/tasks/RT-20260730-015/artifacts/p9_t07_nonlinear_compact_case_v1.yaml",
+      "detail": "expected=d9f2af284c192a053623c3b8fed3755309e19957236d6da6fedad8787a61cb7d actual=d9f2af284c192a053623c3b8fed3755309e19957236d6da6fedad8787a61cb7d",
+      "passed": true
+    },
+    {
+      "check": "hash:research_control/tasks/RT-20260730-015/artifacts/p9_t07_provenance_dag_v1.yaml",
+      "detail": "expected=d503a8419b135edcddf77f86d7bca23bc3110aec48dabce4451116fcba25638c actual=d503a8419b135edcddf77f86d7bca23bc3110aec48dabce4451116fcba25638c",
+      "passed": true
+    },
+    {
+      "check": "hash:research_control/tasks/RT-20260730-015/artifacts/p9_t07_source_output_seal_v1.json",
+      "detail": "expected=762bba485a575df727bd2e69bd50d92e0d74fea32b191b0ffdfef955b541179c actual=762bba485a575df727bd2e69bd50d92e0d74fea32b191b0ffdfef955b541179c",
+      "passed": true
+    },
+    {
+      "check": "hash:research_control/tasks/RT-20260730-015/artifacts/p9_t07_target_exposure_ledger_v1.yaml",
+      "detail": "expected=1e2d6e12ed515a8184c15746daf721bb8951bfb86c8816d05d46f1205f704d8c actual=1e2d6e12ed515a8184c15746daf721bb8951bfb86c8816d05d46f1205f704d8c",
+      "passed": true
+    },
+    {
+      "check": "hash:research_control/tasks/RT-20260730-015/artifacts/p9_t07_nonlinear_compact_receipt_v1.json",
+      "detail": "expected=18c29dcbd6d3b8e8d9af880841b8a59e5afabd8e691b86e82aa96627bfb860e8 actual=18c29dcbd6d3b8e8d9af880841b8a59e5afabd8e691b86e82aa96627bfb860e8",
+      "passed": true
+    },
+    {
+      "check": "P9-T02:outcome",
+      "detail": "['INCONCLUSIVE']",
+      "passed": true
+    },
+    {
+      "check": "P9-T02:firewall",
+      "detail": "['PASS']",
+      "passed": true
+    },
+    {
+      "check": "P9-T02:independence",
+      "detail": "['NOT_ACQUIRED']",
+      "passed": true
+    },
+    {
+      "check": "P9-T02:mutation",
+      "detail": "counts=[] authorized=[False]",
+      "passed": true
+    },
+    {
+      "check": "P9-T02:rerun",
+      "detail": "[0]",
+      "passed": true
+    },
+    {
+      "check": "P9-T03:outcome",
+      "detail": "['INCONCLUSIVE']",
+      "passed": true
+    },
+    {
+      "check": "P9-T03:firewall",
+      "detail": "['PASS']",
+      "passed": true
+    },
+    {
+      "check": "P9-T03:independence",
+      "detail": "['NOT_ACQUIRED']",
+      "passed": true
+    },
+    {
+      "check": "P9-T03:mutation",
+      "detail": "counts=[] authorized=[False]",
+      "passed": true
+    },
+    {
+      "check": "P9-T03:rerun",
+      "detail": "[0]",
+      "passed": true
+    },
+    {
+      "check": "P9-T04:outcome",
+      "detail": "['INCONCLUSIVE']",
+      "passed": true
+    },
+    {
+      "check": "P9-T04:firewall",
+      "detail": "['PASS']",
+      "passed": true
+    },
+    {
+      "check": "P9-T04:independence",
+      "detail": "['NOT_ACQUIRED']",
+      "passed": true
+    },
+    {
+      "check": "P9-T04:mutation",
+      "detail": "counts=[] authorized=[False]",
+      "passed": true
+    },
+    {
+      "check": "P9-T04:rerun",
+      "detail": "[0]",
+      "passed": true
+    },
+    {
+      "check": "P9-T05:outcome",
+      "detail": "['INCONCLUSIVE']",
+      "passed": true
+    },
+    {
+      "check": "P9-T05:firewall",
+      "detail": "['PASS']",
+      "passed": true
+    },
+    {
+      "check": "P9-T05:independence",
+      "detail": "['NOT_ACQUIRED']",
+      "passed": true
+    },
+    {
+      "check": "P9-T05:mutation",
+      "detail": "counts=[] authorized=[False]",
+      "passed": true
+    },
+    {
+      "check": "P9-T05:rerun",
+      "detail": "[0, 0]",
+      "passed": true
+    },
+    {
+      "check": "P9-T06:outcome",
+      "detail": "['INCONCLUSIVE']",
+      "passed": true
+    },
+    {
+      "check": "P9-T06:firewall",
+      "detail": "['PASS']",
+      "passed": true
+    },
+    {
+      "check": "P9-T06:independence",
+      "detail": "['NOT_ACQUIRED']",
+      "passed": true
+    },
+    {
+      "check": "P9-T06:mutation",
+      "detail": "counts=[0] authorized=[]",
+      "passed": true
+    },
+    {
+      "check": "P9-T06:rerun",
+      "detail": "[0]",
+      "passed": true
+    },
+    {
+      "check": "P9-T07:outcome",
+      "detail": "['INCONCLUSIVE']",
+      "passed": true
+    },
+    {
+      "check": "P9-T07:firewall",
+      "detail": "['PASS']",
+      "passed": true
+    },
+    {
+      "check": "P9-T07:independence",
+      "detail": "['NOT_ACQUIRED']",
+      "passed": true
+    },
+    {
+      "check": "P9-T07:mutation",
+      "detail": "counts=[0] authorized=[]",
+      "passed": true
+    },
+    {
+      "check": "P9-T07:rerun",
+      "detail": "[0]",
+      "passed": true
+    },
+    {
+      "check": "review:verdict",
+      "detail": "external_expert_review_required",
+      "passed": true
+    },
+    {
+      "check": "review:context",
+      "detail": "same_context_role_review",
+      "passed": true
+    },
+    {
+      "check": "review:no_promotion",
+      "detail": "False",
+      "passed": true
+    },
+    {
+      "check": "smuggling:result",
+      "detail": "NO_DECLARED_TARGET_IMPORT_DETECTED_READINESS_STILL_BLOCKED",
+      "passed": true
+    },
+    {
+      "check": "smuggling:six_cases",
+      "detail": "6",
+      "passed": true
+    },
+    {
+      "check": "consistency:result",
+      "detail": "CONSISTENT_PROTOCOL_BOUNDARY_HETEROGENEOUS_SOURCE_CONTROLS_NO_UNIVERSAL_CALIBRATION",
+      "passed": true
+    },
+    {
+      "check": "replication:not_acquired",
+      "detail": "False",
+      "passed": true
+    },
+    {
+      "check": "replication:same_context_not_independent",
+      "detail": "False",
+      "passed": true
+    },
+    {
+      "check": "gate:not_ready",
+      "detail": "NOT_READY_NO_BENCHMARK_PASS_NO_QUALIFYING_INDEPENDENT_REPLICATION",
+      "passed": true
+    },
+    {
+      "check": "gate:criteria_count",
+      "detail": "expected 10",
+      "passed": true
+    },
+    {
+      "check": "compact:cases",
+      "detail": "{'artifact_id': 'P9T08BenchmarkAuditCompactReceipt_v1', 'authority_boundary': 'audit_and_routing_evidence_only_no_gate_or_promotion_authority', 'benchmark_pass_count': 0, 'case_hashes': {'P9-T02': '2fadb19c5849f1da5843c0e0599dbdc31790eab46587ce6718abbf4d3a0be79c', 'P9-T03': '45b79d5e3e371b3a2bcdde3f26296dad8c6ff65306d17cdf672bf76383eeb864', 'P9-T04': 'f3ee6d0d7c19f68daf9f6ed9a2e10cec964633694688cc62074edc9089f66255', 'P9-T05': 'bfe3f84f49b083c566486a9b2281ee1bfd3798f81832203ec9a10264afd1ba4f', 'P9-T06': '5fd283fa7d2fd0e76ad317270eb33cae33e9f0f5e42378dba846963f706de5dc', 'P9-T07': 'd9f2af284c192a053623c3b8fed3755309e19957236d6da6fedad8787a61cb7d'}, 'executed_case_count': 6, 'firewall_failure_count': 0, 'gate_e_readiness': 'NOT_READY_NO_BENCHMARK_PASS_NO_QUALIFYING_INDEPENDENT_REPLICATION', 'gate_e_verdict_issued': False, 'inconclusive_case_count': 6, 'independent_replication_count': 0, 'physics_promotion_authorized': False, 'plan_task_id': 'P9-T08', 'post_seal_source_mutation_count': 0, 'protocol_sha256': '88ef097bf712ad115e9af62cc18a8b3eabb12f8545350f714ad065f702471007', 'qualifying_independent_replication_completed': False, 'schema_id': 'p9_t08_benchmark_audit_compact_receipt_v1', 'status': 'PASS_AUDIT_NOT_READY_GATE_E', 'target_import_detected': False, 'target_informed_rerun_count': 0, 'task_id': 'RT-20260731-001'}",
+      "passed": true
+    },
+    {
+      "check": "compact:inconclusive",
+      "detail": "{'artifact_id': 'P9T08BenchmarkAuditCompactReceipt_v1', 'authority_boundary': 'audit_and_routing_evidence_only_no_gate_or_promotion_authority', 'benchmark_pass_count': 0, 'case_hashes': {'P9-T02': '2fadb19c5849f1da5843c0e0599dbdc31790eab46587ce6718abbf4d3a0be79c', 'P9-T03': '45b79d5e3e371b3a2bcdde3f26296dad8c6ff65306d17cdf672bf76383eeb864', 'P9-T04': 'f3ee6d0d7c19f68daf9f6ed9a2e10cec964633694688cc62074edc9089f66255', 'P9-T05': 'bfe3f84f49b083c566486a9b2281ee1bfd3798f81832203ec9a10264afd1ba4f', 'P9-T06': '5fd283fa7d2fd0e76ad317270eb33cae33e9f0f5e42378dba846963f706de5dc', 'P9-T07': 'd9f2af284c192a053623c3b8fed3755309e19957236d6da6fedad8787a61cb7d'}, 'executed_case_count': 6, 'firewall_failure_count': 0, 'gate_e_readiness': 'NOT_READY_NO_BENCHMARK_PASS_NO_QUALIFYING_INDEPENDENT_REPLICATION', 'gate_e_verdict_issued': False, 'inconclusive_case_count': 6, 'independent_replication_count': 0, 'physics_promotion_authorized': False, 'plan_task_id': 'P9-T08', 'post_seal_source_mutation_count': 0, 'protocol_sha256': '88ef097bf712ad115e9af62cc18a8b3eabb12f8545350f714ad065f702471007', 'qualifying_independent_replication_completed': False, 'schema_id': 'p9_t08_benchmark_audit_compact_receipt_v1', 'status': 'PASS_AUDIT_NOT_READY_GATE_E', 'target_import_detected': False, 'target_informed_rerun_count': 0, 'task_id': 'RT-20260731-001'}",
+      "passed": true
+    },
+    {
+      "check": "compact:passes",
+      "detail": "{'artifact_id': 'P9T08BenchmarkAuditCompactReceipt_v1', 'authority_boundary': 'audit_and_routing_evidence_only_no_gate_or_promotion_authority', 'benchmark_pass_count': 0, 'case_hashes': {'P9-T02': '2fadb19c5849f1da5843c0e0599dbdc31790eab46587ce6718abbf4d3a0be79c', 'P9-T03': '45b79d5e3e371b3a2bcdde3f26296dad8c6ff65306d17cdf672bf76383eeb864', 'P9-T04': 'f3ee6d0d7c19f68daf9f6ed9a2e10cec964633694688cc62074edc9089f66255', 'P9-T05': 'bfe3f84f49b083c566486a9b2281ee1bfd3798f81832203ec9a10264afd1ba4f', 'P9-T06': '5fd283fa7d2fd0e76ad317270eb33cae33e9f0f5e42378dba846963f706de5dc', 'P9-T07': 'd9f2af284c192a053623c3b8fed3755309e19957236d6da6fedad8787a61cb7d'}, 'executed_case_count': 6, 'firewall_failure_count': 0, 'gate_e_readiness': 'NOT_READY_NO_BENCHMARK_PASS_NO_QUALIFYING_INDEPENDENT_REPLICATION', 'gate_e_verdict_issued': False, 'inconclusive_case_count': 6, 'independent_replication_count': 0, 'physics_promotion_authorized': False, 'plan_task_id': 'P9-T08', 'post_seal_source_mutation_count': 0, 'protocol_sha256': '88ef097bf712ad115e9af62cc18a8b3eabb12f8545350f714ad065f702471007', 'qualifying_independent_replication_completed': False, 'schema_id': 'p9_t08_benchmark_audit_compact_receipt_v1', 'status': 'PASS_AUDIT_NOT_READY_GATE_E', 'target_import_detected': False, 'target_informed_rerun_count': 0, 'task_id': 'RT-20260731-001'}",
+      "passed": true
+    },
+    {
+      "check": "children:complete",
+      "detail": "two internal perspectives; no delegated subagents",
+      "passed": true
+    },
+    {
+      "check": "conflict:resolved",
+      "detail": "[]",
+      "passed": true
+    },
+    {
+      "check": "fusion:exists",
+      "detail": "parent fusion note",
+      "passed": true
+    },
+    {
+      "check": "math:P9-T03",
+      "detail": "coefficient records distinct",
+      "passed": true
+    },
+    {
+      "check": "math:P9-T04",
+      "detail": "E_split L1 sum=9/4",
+      "passed": true
+    },
+    {
+      "check": "math:P9-T05",
+      "detail": "dA/dlambda=-A^3 at A0=gamma=1",
+      "passed": true
+    },
+    {
+      "check": "math:P9-T06",
+      "detail": "C4 quotient eigenvalues 2,2,4",
+      "passed": true
+    },
+    {
+      "check": "math:P9-T07",
+      "detail": "nonlinear residual zero and quotient Hessian eigenvalues 2,4",
+      "passed": true
+    }
+  ],
+  "failed_check_count": 0,
+  "failures": [],
+  "gate_e_verdict_issued": false,
+  "physics_promotion_authorized": false,
+  "plan_task_id": "P9-T08",
+  "qualifying_independent_replication_completed": false,
+  "schema_id": "p9_t08_benchmark_audit_validation_v1",
+  "selected_method_recomputation_status": "PASS_SAME_CONTEXT_NOT_INDEPENDENT_REPLICATION",
+  "status": "PASS",
+  "task_id": "RT-20260731-001"
+}

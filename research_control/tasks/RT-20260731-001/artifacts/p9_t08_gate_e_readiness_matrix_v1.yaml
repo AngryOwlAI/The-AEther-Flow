@@ -1,0 +1,88 @@
+schema_id: "p9_t08_gate_e_readiness_matrix_v1"
+artifact_id: "P9T08GateEReadinessMatrix_v1"
+task_id: "RT-20260731-001"
+plan_task_id: "P9-T08"
+status: "draft/control"
+overall_readiness: "NOT_READY_NO_BENCHMARK_PASS_NO_QUALIFYING_INDEPENDENT_REPLICATION"
+
+criteria:
+  - criterion_id: "GE-01"
+    burden: "Versioned typed source-derived benchmark protocol exists."
+    status: "PASS_PROTOCOL_SCOPE"
+    evidence: "SourceDerivedBenchmarkProtocol_v1 and SourceDerivedBenchmarkCaseSchema_v1."
+  - criterion_id: "GE-02"
+    burden: "Fail-closed target-import firewall separates source execution from post-seal target comparison."
+    status: "PASS_AUDITED_SCOPE"
+    evidence: "All six immutable case records show PASS source-stage firewall status and no post-seal source mutation."
+  - criterion_id: "GE-03"
+    burden: "Every planned benchmark case is instantiated and executed with a decisive physical outcome."
+    status: "FAIL_ALL_SIX_INCONCLUSIVE"
+    evidence: "Six cases executed; all six lack required physical selectors or model-to-world maps."
+  - criterion_id: "GE-04"
+    burden: "Source theory derives physical carrier, dynamics, matter coupling, and observables required by the suite."
+    status: "FAIL_NOT_DERIVED"
+    evidence: "Every case preserves a distinct missing physical bridge; Gate D remains NOT READY."
+  - criterion_id: "GE-05"
+    burden: "At least one lawful physical benchmark comparison passes its preregistered criterion."
+    status: "FAIL_ZERO_PASSES"
+    evidence: "benchmark_pass_count=0."
+  - criterion_id: "GE-06"
+    burden: "Every claimed result has qualifying independent reproduction."
+    status: "FAIL_NOT_ACQUIRED"
+    evidence: "p9_t08_independent_replication_status_v1.yaml."
+  - criterion_id: "GE-07"
+    burden: "Physical tolerances, equivalences, uncertainties, and correction controls are preregistered and independently justified."
+    status: "FAIL_PHYSICAL_CONTROLS_ABSENT"
+    evidence: "Exact finite source checks exist, but no complete physical comparison-control bundle exists."
+  - criterion_id: "GE-08"
+    burden: "Cross-case calibration, holdout, target exposure, and failure handling support an integrated recovery suite."
+    status: "FAIL_NO_UNIVERSAL_CALIBRATION_OR_HOLDOUT"
+    evidence: "The cases are heterogeneous proposal controls and no lawful physical calibration/validation/holdout split exists."
+  - criterion_id: "GE-09"
+    burden: "Exact-GR recovery obligations are satisfied without reusing adopted GR dynamics."
+    status: "FAIL_NOT_ESTABLISHED"
+    evidence: "No effective metric, universal matter coupling, or Einstein equation is source-derived."
+  - criterion_id: "GE-10"
+    burden: "Exact protected Gate E or benchmark-promotion authority is present."
+    status: "DEFERRED_HUMAN_GATE_NOT_AUTHORIZED"
+    evidence: "P9-T08 is non-protected; P9-T09 requires exact human authority."
+
+counts:
+  pass: 2
+  fail_or_not_established: 7
+  deferred: 1
+  total: 10
+  executed_case_count: 6
+  inconclusive_case_count: 6
+  passed_case_count: 0
+  qualifying_independent_replication_count: 0
+
+case_outcomes:
+  P9-T02: "INCONCLUSIVE"
+  P9-T03: "INCONCLUSIVE"
+  P9-T04: "INCONCLUSIVE"
+  P9-T05: "INCONCLUSIVE"
+  P9-T06: "INCONCLUSIVE"
+  P9-T07: "INCONCLUSIVE"
+
+calibrated_disposition:
+  target_import_audit: "NO_DECLARED_IMPORT_DETECTED"
+  cross_case_assumption_status: "PROTOCOL_CONSISTENT_HETEROGENEOUS_SOURCE_CONTROLS"
+  shared_method_error_status: "NOT_ELIMINATED"
+  independent_replication: "NOT_ACQUIRED"
+  exact_GR_recovery: "NOT_ESTABLISHED"
+  positive_Gate_E_verdict_ready: false
+  protected_Gate_E_authority_present: false
+  next_action: "Obtain qualifying independent replication and exact protected human Gate Chair authority; otherwise P9-T09 may record only NOT READY."
+
+authority_limits:
+  readiness_matrix_is_Gate_E_verdict: false
+  protocol_or_firewall_pass_is_benchmark_pass: false
+  Gate_D_changed: false
+  Gate_E_verdict_issued: false
+  benchmark_result_established: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false

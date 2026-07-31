@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260730-015` and `handoff-0922`.
+`RT-20260731-003` and `handoff-0925`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260730-015` |
-| Latest handoff ID | `handoff-0922` |
-| Current status | `exact_nonlinear_source_solution_physical_compact_source_model_to_world_obstructed_case_inconclusive_ready_for_checkpoint` |
+| Active task ID | `RT-20260731-003` |
+| Latest handoff ID | `handoff-0925` |
+| Current status | `p9_t08_distance_ledger_checkpoint_allowlist_recovery_complete_p9_t09_human_gate_after_checkpoint` |
 | V16 completed | false |
-| Current route family | benchmark or recovery (scientific) |
+| Current route family | benchmark or recovery (project system) |
 | Target derivation milestone | `benchmark_promotion` |
-| Current burden | `benchmark_promotion` |
-| Required next authority | Invoke the one governed checkpoint for AJ-RT-20260730-015-001. After that commit, use one fresh bounded External Red Team Reviewer packet for P9-T08 to audit P9-T02 through P9-T07 for target import, assumption drift, shared-method errors, and actual independent-replication status while preserving all six INCONCLUSIVE dispositions and zero benchmark passes. |
-| Next recommended action | Invoke the one governed checkpoint for AJ-RT-20260730-015-001. After that commit, use one fresh bounded External Red Team Reviewer packet for P9-T08 to audit P9-T02 through P9-T07 for target import, assumption drift, shared-method errors, and actual independent-replication status while preserving all six INCONCLUSIVE dispositions and zero benchmark passes. |
+| Current burden | `benchmark_promotion`; status: blocked_positive_gate_e_no_benchmark_pass_no_qualifying_independent_replication |
+| Required next authority | After the governed cumulative checkpoint commits, P9-T09 may be executed only under a nonblank exact protected human Gate Chair authorization. Without it, the relay may only record deferred_human_gate and select dependency-independent included work or terminalize according to the fixed scope. |
+| Next recommended action | Run the one governed cumulative checkpoint for AJ-RT-20260731-003-001. After it commits, do not execute P9-T09 without a nonblank exact protected human Gate Chair authorization; if authorization is absent, record deferred_human_gate and continue only dependency-independent included work or terminalize according to the relay scope. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260730-015` |
-| Latest research handoff ID | `handoff-0922` |
-| Latest research next action | Invoke the one governed checkpoint for AJ-RT-20260730-015-001. After that commit, use one fresh bounded External Red Team Reviewer packet for P9-T08 to audit P9-T02 through P9-T07 for target import, assumption drift, shared-method errors, and actual independent-replication status while preserving all six INCONCLUSIVE dispositions and zero benchmark passes. |
+| Latest research task ID | `RT-20260731-003` |
+| Latest research handoff ID | `handoff-0925` |
+| Latest research next action | Run the one governed cumulative checkpoint for AJ-RT-20260731-003-001. After it commits, do not execute P9-T09 without a nonblank exact protected human Gate Chair authorization; if authorization is absent, record deferred_human_gate and continue only dependency-independent included work or terminalize according to the relay scope. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260730-015/00_TASK.yaml`.
-- Active task objective: Test nonlinear consistency through conservation, constraint propagation, and one nontrivial compact-source or strong-field solution, source-first and without importing a target compact-source ansatz.
-- Latest handoff path: `research_control/handoffs/handoff-0922.yaml`.
-- Latest handoff summary: P9-T07 constructs a uniform three-state finite carrier, one-address raw token, positive quartic edge action, exact unique nonlinear quotient solution, exact antisymmetric-flux conservation identity, and constraint-preserving relaxation. The current source package selects no physical matter, location, time, covariant constraint, tensor or metric exterior field, calibrated observable, singularity, or horizon map. The physical case is INCONCLUSIVE with secondary FORMAL_ANALOGY, six cumulative inconclusive cases, zero benchmark passes, and no promotion.
-- Current route family: benchmark or recovery (scientific).
-- Next recommended action: Invoke the one governed checkpoint for AJ-RT-20260730-015-001. After that commit, use one fresh bounded External Red Team Reviewer packet for P9-T08 to audit P9-T02 through P9-T07 for target import, assumption drift, shared-method errors, and actual independent-replication status while preserving all six INCONCLUSIVE dispositions and zero benchmark passes.
+- Active task path: `research_control/tasks/RT-20260731-003/00_TASK.yaml`.
+- Active task objective: Preserve the completed P9-T08 audit, EOF recovery, handoff, and DISTANCE_TO_GR ledger bytes; authorize the exact inherited 72-path transaction through one fresh Process Integrity Auditor AgentJob whose write contract includes the previously omitted ledger path; prove four-way allowlist identity and protected-byte preservation; then invoke one governed cumulative checkpoint while P9-T09 remains unexecuted and human-gated.
+- Latest handoff path: `research_control/handoffs/handoff-0925.yaml`.
+- Latest handoff summary: Generation 187 restores one exact checkpoint-authority boundary: the fresh AgentJob, execution-role source, AGENT_JOB registry row, and ROLE_EXECUTION registry row use the same ordered allowlist and include the unchanged Distance-to-GR ledger path exactly once. The predecessor task, decision, job, completion, role, handoff, and ledger bytes remain exact. P9-T08 remains six INCONCLUSIVE cases with zero benchmark passes, no qualifying independent replication, and Gate E NOT READY. P9-T09 remains unexecuted.
+- Current route family: benchmark or recovery (project system).
+- Next recommended action: Run the one governed cumulative checkpoint for AJ-RT-20260731-003-001. After it commits, do not execute P9-T09 without a nonblank exact protected human Gate Chair authorization; if authorization is absent, record deferred_human_gate and continue only dependency-independent included work or terminalize according to the relay scope.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -98,7 +98,7 @@ Open or blocked physical targets:
 | --- | --- | --- | --- | --- |
 | matter_coupling | accepted_as_scoped_evidence_precondition | The exact protected verdict is ADOPTED_AS_CANONICAL_PHYSICAL_MATTER_BY_EXPLICIT_HUMAN_POSTULATE for the unchanged P7-T01 through P7-T06 package within its declared finite domains and the current continuum-first source architecture. This discharges the protected constitutive decision burden but does not supply a first-principles derivation: OBST-P7T07-CROSS-LAYER-COMPOSITION-GAP-001 remains open_derivational_gap_after_constitutive_adoption, current ontology still does not derive the adopted meanings, and P6 Gate B supplies no effective-geometry input. | no_source_law_adoption<br>no_canonical_ontology_edit<br>no_metricdata_e_adoption<br>no_geff_scope_expansion<br>no_coupling_law_adoption<br>no_matter_coupling_derivation<br>no_matter_coupling_adoption<br>no_stress_energy_semantics<br>no_stress_energy_tensor<br>no_matter_action<br>no_detector_semantics<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation<br>no_future_source_extension_impossibility<br>no_global_theory_rejection | research_control/tasks/RT-20260729-001/artifacts/p7_t08_gate_c_decision_v1.tex |
 | einstein_equations | not_started | physical gravitational interpretation target field equations and Einstein-leading recovery | no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation<br>no_global_theory_rejection<br>no_future_source_extension_impossibility | research_control/tasks/RT-20260729-011/artifacts/p8_t07_gate_d_decision_v1.tex |
-| benchmark_promotion | blocked | all upstream derivation burdens | no_benchmark_promotion<br>no_benchmark_gate_chair_closure<br>no_completed_derivation | research_control/tasks/RT-20260730-015/artifacts/finite_nonlinear_compact_source_nonselection_v1.tex |
+| benchmark_promotion | blocked | all upstream derivation burdens | no_benchmark_promotion<br>no_benchmark_gate_chair_closure<br>no_completed_derivation | research_control/tasks/RT-20260731-001/artifacts/p9_t08_benchmark_suite_red_team_review_v1.yaml |
 
 Forbidden overreads:
 
@@ -293,7 +293,7 @@ preserves the raw ledger `current_status` field for continuity.
 | `matter_coupling` | `matter_coupling` | accepted only as scoped source-extension evidence/precondition | accepted | accepted_as_scoped_evidence_precondition | parameterized_finite_local_witness_precondition | not_matter_coupling_not_stress_energy_not_matter_action_not_detector_semantics | scoped_source_evidence_only | no_source_law_adoption<br>no_canonical_ontology_edit<br>no_metricdata_e_adoption<br>no_geff_scope_expansion<br>no_coupling_law_adoption<br>no_matter_coupling_derivation<br>no_matter_coupling_adoption<br>no_stress_energy_semantics<br>no_stress_energy_tensor<br>no_matter_action<br>no_detector_semantics<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation<br>no_future_source_extension_impossibility<br>no_global_theory_rejection | `research_control/tasks/RT-20260729-001/artifacts/p7_t08_gate_c_decision_v1.tex` |
 | `einstein_equations` | `einstein_equations` | not started; no positive derivation status | draft object exists | not_started | dynamics_action_or_variation_missing | no_field_equation_derivation | none | no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation<br>no_global_theory_rejection<br>no_future_source_extension_impossibility | `research_control/tasks/RT-20260729-011/artifacts/p8_t07_gate_d_decision_v1.tex` |
 | `finite_variation_robustness` | `source_equivalence_eqsrc` | Refuter stress passed | Refuter stress passed | refuter_stress_passed | conditional_theorem_candidate | downstream_gr_blocked | draft_control_only | no_source_law_adoption<br>no_matter_coupling_derivation<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/tasks/RT-20260614-101/artifacts/142_RESP_LC_M_SRC_GSC_FINITE_VARIATION_ROBUSTNESS_LAW_REFUTER_STRESS_TEST.tex` |
-| `benchmark_promotion` | `benchmark_promotion` | no benchmark promotion from scoped evidence/precondition alone | blocked by missing primitive | blocked | upstream_burdens_missing | no_exact_gr_benchmark_promotion | none | no_benchmark_promotion<br>no_benchmark_gate_chair_closure<br>no_completed_derivation | `research_control/tasks/RT-20260730-015/artifacts/finite_nonlinear_compact_source_nonselection_v1.tex` |
+| `benchmark_promotion` | `benchmark_promotion` | no benchmark promotion from scoped evidence/precondition alone | blocked by missing primitive | blocked | upstream_burdens_missing | no_exact_gr_benchmark_promotion | none | no_benchmark_promotion<br>no_benchmark_gate_chair_closure<br>no_completed_derivation | `research_control/tasks/RT-20260731-001/artifacts/p9_t08_benchmark_suite_red_team_review_v1.yaml` |
 | `gate_chair_status` | `benchmark_promotion` | human-gated verdict authority only | human-gated | human_gated | protected_verdict_missing | no_benchmark_closure | human_gate_required | no_benchmark_gate_chair_closure<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/approvals/README.md` |
 | `finite_toy_metric_response` | `finite_toy_metric_response` | frozen negative local toy route only | frozen negative | frozen_negative | tag_removal_obstruction | local_toy_route_frozen_not_global_theory_rejection | frozen_negative_no_promotion | no_geff_scope_expansion<br>no_matter_coupling_derivation<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation<br>no_global_theory_rejection<br>no_future_source_extension_impossibility | `research_control/tasks/RT-20260614-055/artifacts/96_RESP_LC_FINITE_TOY_METRIC_RESPONSE_MODEL_REFUTER_STRESS_TEST.tex` |
 
@@ -302,7 +302,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Invoke the one governed checkpoint for AJ-RT-20260730-015-001. After that commit, use one fresh bounded External Red Team Reviewer packet for P9-T08 to audit P9-T02 through P9-T07 for target import, assumption drift, shared-method errors, and actual independent-replication status while preserving all six INCONCLUSIVE dispositions and zero benchmark passes.
+Run the one governed cumulative checkpoint for AJ-RT-20260731-003-001. After it commits, do not execute P9-T09 without a nonblank exact protected human Gate Chair authorization; if authorization is absent, record deferred_human_gate and continue only dependency-independent included work or terminalize according to the relay scope.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -320,43 +320,41 @@ Layer status summary:
 
 | Status | Count | Meaning |
 | --- | --- | --- |
-| `PASS` | 2 | receipt complete |
-| `PENDING` | 2 | open item; evidence must explain why |
-| `NOT_ACQUIRED` | 1 | extension status; inspect evidence |
+| `PASS` | 5 | receipt complete |
+| `PASS_WITH_WARNINGS` | 1 | receipt complete with stated warnings |
+| `PENDING` | 1 | open item; evidence must explain why |
 
 Validation layers:
 
 | Validation layer | Status | Meaning | Evidence |
 | --- | --- | --- | --- |
-| `pre_execution` | PASS | receipt complete | Generation 184 route, goal and global lease parity, repository root, main branch, checkpoint HEAD, clean-tree manifest, and max reasoning effort matched. |
-| `completion_internal` | PASS | receipt complete | Task-local validator passes 42 of 42 source-hash, exact-rational nonlinear, Hessian, conservation, constraint, seal, DAG, exposure, comparison, and parent-child checks.<br>Tectonic compiles the task-local TeX artifact to three pages. |
-| `post_write` | PENDING | open item; evidence must explain why | Repository-wide render, registry, memory, documentation, claim-language, taxonomy, and research-control gates run before checkpoint. |
-| `post_checkpoint` | PENDING | open item; evidence must explain why | Exactly one governed checkpoint remains. |
-| `independent_reproduction` | NOT_ACQUIRED | extension status; inspect evidence | All current calculation and validation occurred in the same execution context. |
+| `pre_execution` | PASS | receipt complete | Generation 187 atomically claimed and consumed the exact immutable improve-project-system route once. |
+| `completion_internal` | PASS | receipt complete | The task-local receipt proves four-way ordered allowlist identity single ledger admission exact protected hashes and complete live-path coverage. |
+| `post_write` | PASS | receipt complete | Task-local scientific-preservation renderer route-guard documentation signal claim-language and working-tree gates pass. |
+| `post_checkpoint` | PENDING | open item; evidence must explain why | The one governed cumulative checkpoint is pending. |
+| `renderer` | PASS | receipt complete | Governed frontier task-index compact-frontier dependency-graph and claim-graph write/check gates pass. |
+| `memory_bootstrap` | PASS_WITH_WARNINGS | receipt complete with stated warnings | Tracked memory synchronization and validate-only checks pass with seven local-cache-only retrieval warnings. |
+| `claim_language_linter` | PASS | receipt complete | Changed-source claim-language validation reports zero hard failures. |
 
 Authorization layers:
 
 | Authorization field | Value | Meaning |
 | --- | --- | --- |
 | `protected_scoped_gate_review_authorized` | false (not authorized) | scoped review authority only |
+| `protected_scoped_gate_review_scope` | ordinary project-system checkpoint allowlist recovery only; P9-T09 is not authorized | exact scope of protected review authority |
+| `protected_scoped_gate_review_authority_source_path` | none | tracked source for scoped review authority |
 | `downstream_physics_promotion_authorized` | false (not authorized) | authorizes downstream physics promotion only when true |
+| `downstream_physics_promotion_authority_source_path` | none | tracked source for downstream promotion authority |
 | `benchmark_promotion_authorized` | false (not authorized) | authorizes benchmark promotion only when true |
+| `benchmark_promotion_authority_source_path` | none | tracked source for benchmark authority |
 | `completed_derivation_authorized` | false (not authorized) | authorizes completed-derivation claim only when true |
-| `Gate_Chair_verdict_authorized` | False | extension authorization field |
-| `canonical_ontology_edit_authorized` | False | extension authorization field |
-| `global_no_go_claim_authorized` | False | extension authorization field |
-| `physical_interpretation_establishment_authorized` | False | extension authorization field |
-| `proof_authority` | False | extension authorization field |
-| `publication_authorized` | False | extension authorization field |
-| `push_authorized` | False | extension authorization field |
-| `source_law_adoption_authorized` | False | extension authorization field |
-| `source_law_rejection_authorized` | False | extension authorization field |
+| `completed_derivation_authority_source_path` | none | tracked source for completed-derivation authority |
 
 Legacy compatibility records:
 
-- active task: `RT-20260730-015`;
-- latest handoff: `handoff-0922`;
-- current status: `exact_nonlinear_source_solution_physical_compact_source_model_to_world_obstructed_case_inconclusive_ready_for_checkpoint`;
+- active task: `RT-20260731-003`;
+- latest handoff: `handoff-0925`;
+- current status: `p9_t08_distance_ledger_checkpoint_allowlist_recovery_complete_p9_t09_human_gate_after_checkpoint`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -366,8 +364,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0922.yaml`
-- `research_control/tasks/RT-20260730-015/00_TASK.yaml`
+- `research_control/handoffs/handoff-0925.yaml`
+- `research_control/tasks/RT-20260731-003/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -383,7 +381,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0922*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0925*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

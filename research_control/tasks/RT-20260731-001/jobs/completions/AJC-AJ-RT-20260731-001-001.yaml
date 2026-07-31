@@ -1,0 +1,611 @@
+validation_status: "FAIL"
+final_repository_validation_status: "FAIL_CHECKPOINT_STAGED_GIT_DIFF_CHECK"
+job_id: "AJ-RT-20260731-001-001"
+completion_id: "AJC-AJ-RT-20260731-001-001"
+task_id: "RT-20260731-001"
+task_type: "v21_p9_t08_full_source_derived_benchmark_suite_audit"
+decision_id: "DDR-20260731-001"
+role_id: "external-red-team-reviewer"
+role_version: "0.1.0"
+execution_role_ref: "external-red-team-reviewer@0.1.0--RT-20260731-001"
+status: "completed"
+created_at: "2026-07-31T07:23:03Z"
+started_at: "2026-07-31T07:23:03Z"
+completed_at: "2026-07-31T08:23:41Z"
+objective: "Execute only v21 P9-T08 by auditing the immutable P9-T01 protocol and P9-T02 through P9-T07 suite for target import, tuning, assumption inconsistency, shared-method error, scope overread, and actual independent-replication readiness; produce a Gate E matrix and exact human action without modifying reviewed science."
+completion_summary: "P9-T08 finds no declared target-import path, target-informed rerun, or post-seal source mutation in the immutable six-case suite. All six remain INCONCLUSIVE, benchmark pass count is zero, qualifying independent replication is absent, and Gate E is NOT READY. The generation's sole checkpoint failed closed on fifteen blank-at-EOF findings; its index was restored and no commit was created."
+objective_result: "full_suite_audited_gate_e_not_ready_checkpoint_blocked_15_blank_eof_recovery_required"
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 185
+  passes_consumed: 168
+  route_work_item_id: "P9-T08"
+  route_worker_skill: "continue-research"
+  route_sha256: "c751dead41d942059e1118814bfbb6cbf7e31f41505debd235bcea5511884c4d"
+  route_reason: "dependency_ready_in_scope"
+  route_strategy_id: "continue_in_scope_generation_185"
+  route_blocker_fingerprint: "e89143a08aa51640838f26d3e6937720ed05c1896a5b95ea6e13e91f9b397bb0"
+  route_before_fingerprint: "e89143a08aa51640838f26d3e6937720ed05c1896a5b95ea6e13e91f9b397bb0"
+  route_evidence_sha256es:
+    - "74a139f46b4081e3c77968eff3237201d5db957deb63529d9a7adb09d4004129"
+    - "e89143a08aa51640838f26d3e6937720ed05c1896a5b95ea6e13e91f9b397bb0"
+  worker_skill: "continue-research"
+  worker_invocation_count: 1
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:185"
+  handoff_token: "63a53ca485b90739a4c021b6f09cd41100d4d36ed08bae6f"
+  relay_claim_token: "1bf58407f2ac13c54c2153ca5298e2454e411fe7b4a0cf2e"
+
+transaction_status: "blocked_checkpoint_blank_eof_recovery_required"
+result_disposition: "P9_T08_AUDIT_COMPLETE_GATE_E_NOT_READY_CHECKPOINT_BLOCKED_BLANK_EOF"
+milestone_disposition: "suite_provenance_audited_independent_replication_and_positive_gate_e_evidence_absent"
+adoption_status: "blocked_adoption_open_continuation"
+checkpoint_commit:
+  required: true
+  attempted: true
+  committed: false
+  commit_sha: ""
+  invocation_count: 1
+  failure_gate: "git_diff_check"
+  failure_status: "FAIL_15_BLANK_AT_EOF"
+  entry_index_restored: true
+  dependency_checkpoint_commit: "536a7cf43a28923dea1a2ab4faed8822618326b3"
+  push_authorized: false
+  push_performed: false
+
+checkpoint_failure:
+  blocker_path: "research_control/tasks/RT-20260731-001/artifacts/validation_blocker_checkpoint_p9_t08_blank_eof_v1.yaml"
+  blocker_sha256: "26c0d92e777824d5ab2ce3100947a0a84da99d121b0f9065f4dea8fb8ca8b575"
+  checkpoint_status: "FAIL_STAGED_GIT_DIFF_CHECK"
+  failed_stage: "staged_acceptance_git_diff_check"
+  failed_gate: "git_diff_check"
+  failure_class: "removable_blank_at_eof"
+  finding_count: 15
+  checkpoint_invocation_count: 1
+  checkpoint_staged: false
+  checkpoint_committed: false
+  entry_index_restored: true
+  legacy_validation_used: false
+  retry_in_this_generation_authorized: false
+  recovery_strategy_id: "repair_rt_20260731_001_blank_eof_and_checkpoint_v1"
+  recovery_worker_skill: "improve-project-system"
+  recovery_role_family: "process-integrity-auditor@0.1.0"
+  recovery_work_item_id: "P9-T08"
+  scientific_payload_changed_by_failure: false
+  p9_t09_executed: false
+
+is_physics_task: true
+payload_class: "audit_reproduction_and_precise_obstruction"
+has_new_mathematical_payload: true
+source_extension_classification_required: false
+external_red_team_finding_requires_integration: false
+physics_promotion_authorized: false
+proof_authority: false
+
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P9"
+  plan_task_id: "P9-T08"
+  work_kind: "audit_or_review"
+  task_class: "science"
+  expected_result_kind: "audit_verdict_or_precise_repair"
+  dependency_task_ids:
+    - "P9-T07"
+  dependency_completion_paths:
+    - "research_control/tasks/RT-20260730-015/jobs/completions/AJC-AJ-RT-20260730-015-001.yaml"
+  dependency_completion_sha256es:
+    - "d704eb08a0c2f12bebf04bf1bd33088d4f01e0a332789e3647b255e5ac941a51"
+  dependency_checkpoint_commits:
+    - "536a7cf43a28923dea1a2ab4faed8822618326b3"
+  work_item_status: "blocked_checkpoint_blank_eof_recovery_required"
+  recommendation_ids:
+    - "V21-R28"
+    - "V21-R29"
+    - "V21-R36"
+    - "V21-R37"
+    - "V21-R38"
+    - "V21-R55"
+    - "V21-R66"
+    - "V21-R68"
+  recommendation_coverage_role: "direct_implementation"
+  scientific_claims_changed: true
+  scientific_claim_change_scope: "task-local cumulative suite audit, selected same-context independent-method checks, and exact replication and Gate E readiness calibration"
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  next_dependency_work_item: "P9-T08_project_system_blank_eof_checkpoint_recovery_before_P9-T09"
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  observed_durable_outputs:
+    physics:
+      - "one cumulative external-role source-derived benchmark-suite audit"
+      - "one cross-case assumption and selected independent-method reproduction record"
+      - "one independent-replication status packet and Gate E readiness matrix"
+    project_system:
+      - "one task-local deterministic validator and compact receipt"
+      - "one structured review-context provenance record"
+      - "standard control records and generated-memory synchronization"
+  accepted_criteria:
+    physics:
+      - "all six immutable cases are checked for target import tuning mutation and scope overread"
+      - "protocol consistency is separated from universal source-law calibration"
+      - "same-context checks are not called independent replication"
+      - "all six INCONCLUSIVE outcomes and zero passes are preserved"
+    project_system:
+      - "source hashes external-review schema and parent-child synthesis pass"
+      - "claim-language documentation-impact and research-control gates pass"
+      - "one governed checkpoint records the bounded transaction"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: false
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+physics_payload_admission_result:
+  schema_id: "physics_payload_admission_result_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  status: "PASS"
+  admission_path: "physics"
+  payload_type: "precise_obstruction"
+  candidate_family: "P9-T02-THROUGH-P9-T07-SOURCE-DERIVED-BENCHMARK-SUITE"
+  candidate_identity_sha256: "38e3a5b34463545f11f4f6daac5e9c2959a61dde9db7372f7a266d57fb3b79ef"
+  result_type: "precise_obstruction"
+  process_receipt_substitution_detected: false
+  theorem_truth_inferred_from_validation: false
+  physics_promotion_authorized: false
+
+family_freeze_admission_result:
+  schema_id: "family_freeze_route_admission_result_v1"
+  policy_id: "family_freeze_reopening_policy_v1"
+  status: "PASS_DISTINCT_BRANCH"
+  family_id: "P9-T02-THROUGH-P9-T07-SOURCE-DERIVED-BENCHMARK-SUITE"
+  family_identity_sha256: "38e3a5b34463545f11f4f6daac5e9c2959a61dde9db7372f7a266d57fb3b79ef"
+  exact_family_match_detected: false
+  reopening_requested: false
+  distinct_branch_verified: true
+  local_family_freeze_preserved: true
+  global_no_go_claimed: false
+  physics_promotion_authorized: false
+
+ordinary_route_guard_admission_result:
+  schema_id: "ordinary_route_guard_admission_result_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  status: "PASS"
+  source_handoff_id: "handoff-0922"
+  selected_plan_task_id: "P9-T08"
+  guard_outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_execution_unit_count: 2
+  outer_agentjob_count: 1
+  child_agentjob_count: 0
+  subagent_count: 0
+
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260731-001/artifacts/child_phys_math_p9_t08_benchmark_audit.yaml"
+      output_sha256: "6cd0a7baea0f9ca8cfed220baed4d9008a168fce02b7a57a543edb4e00130305"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260731-001/artifacts/child_phys_phil_p9_t08_benchmark_audit.yaml"
+      output_sha256: "cff2fbd8d6328939f080be7788946099b2a12443822f9cd417ee8cc96690e798"
+      status: "completed"
+  conflict_review:
+    status: "resolved"
+    review_path: "research_control/tasks/RT-20260731-001/artifacts/parent_conflict_review_p9_t08_benchmark_audit.yaml"
+    review_sha256: "28b427169adb5f299d89df505553e52e1e6a04ddd32de8cb489835344f963725"
+    resolution_rounds: 1
+    resolved_conflict_count: 4
+    unresolved_conflicts: []
+  fusion:
+    fused_output_path: "research_control/tasks/RT-20260731-001/artifacts/p9_t08_benchmark_suite_red_team_review_v1.yaml"
+    fusion_notes_path: "research_control/tasks/RT-20260731-001/artifacts/parent_fusion_notes_p9_t08_benchmark_audit.md"
+    shared_consensus_summary: "The suite has no detected declared target import or post-seal mutation, but all six cases remain INCONCLUSIVE with zero passes and no qualifying independent replication."
+    unique_phys_math_contributions: "Exact input identities, case-status parity, selected coefficient residual analytic spectrum and nonlinear recomputations, and shared-method risk."
+    unique_phys_phil_contributions: "Protocol cleanliness versus derivational evidence, heterogeneous controls versus universal law, review-provenance calibration, and protected Gate E authority."
+    novelty_preservation_summary: "Fusion adds the first cumulative six-case target-import, assumption-consistency, selected-recomputation, and Gate E readiness audit."
+    claim_boundary_preservation_summary: "No reviewed-source or ontology edit, target-informed repair, external or independent-review claim, source-law or metric adoption, Einstein equation, Gate E verdict, benchmark promotion, proof, publication, push, global no-go, or completed derivation is authorized."
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+
+memory_preflight:
+  preflight_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1101
+    relationship_row_count: 5570
+    semantic_row_count: 1101
+    vault_row_count: 1101
+    local_cache_only_warning_count: 0
+    refresh_performed: true
+  refresh_needed: true
+  refresh_performed: true
+  refresh_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search 'benchmark audit target import assumption consistency shared method independent replication' --limit 10 --json"
+      query_type: "search"
+      query_text: "benchmark audit target import assumption consistency shared method independent replication"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  authority_note: "Obsidian, wiki notes, semantic extracts, generated task indexes, and .local are retrieval layers only and not authority; registered source files and tracked control records were reopened."
+
+benchmark_suite_audit_result:
+  protocol_id: "SourceDerivedBenchmarkProtocol_v1"
+  reviewed_plan_tasks:
+    - "P9-T02"
+    - "P9-T03"
+    - "P9-T04"
+    - "P9-T05"
+    - "P9-T06"
+    - "P9-T07"
+  target_import_detected: false
+  firewall_failure_count: 0
+  target_informed_rerun_count: 0
+  source_mutation_after_target_comparison_count: 0
+  inconsistent_protocol_or_hash_count: 0
+  selected_same_context_method_checks_completed: true
+  selected_same_context_method_checks_passed: true
+  selected_same_context_method_checks_count_as_independent_replication: false
+  shared_method_systematic_error_eliminated: false
+  qualifying_independent_reproduction_status: "NOT_ACQUIRED"
+  cumulative_executed_case_count: 6
+  cumulative_inconclusive_case_count: 6
+  benchmark_pass_count: 0
+  Gate_D_changed: false
+  Gate_E_readiness: "NOT_READY_NO_BENCHMARK_PASS_NO_QUALIFYING_INDEPENDENT_REPLICATION"
+  Gate_E_verdict_issued: false
+  benchmark_promotion_authorized: false
+
+new_mathematical_payload:
+  - payload_id: "NMP-RT-20260731-001-001"
+    payload_type: "dependency_map_update"
+    name: "Six-case source-derived benchmark assumption matrix"
+    summary: "Maps common protocol invariants, distinct source controls, missing physical selectors, target-stage status, replication status, and outcome across P9-T02 through P9-T07."
+  - payload_id: "NMP-RT-20260731-001-002"
+    payload_type: "explicit_witness"
+    name: "Selected independent-method finite recomputation"
+    summary: "Reproduces P9-T03 coefficients, P9-T04 residuals, P9-T05 analytic identity, P9-T06 C4 spectrum, and P9-T07 nonlinear residual and Hessian eigenvalues without treating the same-context method as independent replication."
+  - payload_id: "NMP-RT-20260731-001-003"
+    payload_type: "obstruction"
+    name: "Gate E evidence-package nonreadiness"
+    summary: "Records six INCONCLUSIVE cases, zero passes, heterogeneous proposal controls, no universal physical calibration, and no qualifying independent replication."
+
+minimum_physics_payload:
+  minimum_payload_schema_id: "minimum_physics_payload_schema_v1"
+  source_task_id: "RT-20260731-001"
+  source_job_id: "AJ-RT-20260731-001-001"
+  source_completion_path: "research_control/tasks/RT-20260731-001/jobs/completions/AJC-AJ-RT-20260731-001-001.yaml"
+  target_derivation_milestone: "benchmark_promotion"
+  milestone_burden: "Produce the evidence package required for any protected benchmark verdict."
+  payload_class: "precise_obstruction"
+  payload_status: "draft/control"
+  payload_artifact_path: "research_control/tasks/RT-20260731-001/artifacts/p9_t08_benchmark_suite_red_team_review_v1.yaml"
+  payload_summary: "Cumulative six-case provenance, assumption, selected-recomputation, independent-replication, and Gate E readiness audit."
+  payload_source_basis:
+    - "SourceDerivedBenchmarkProtocol_v1"
+    - "P9-T02 through P9-T07 immutable case packages"
+  process_receipts_excluded:
+    - "validator_status"
+    - "registry_row"
+    - "handoff_status"
+    - "generated_derivative"
+    - "checkpoint_status"
+  physics_promotion_authorized: false
+  proof_authority: false
+
+mathematical_payload_manifest:
+  - payload_id: "P9T08-PAYLOAD-SUITE-MATRIX-001"
+    payload_type: "dependency_map_update"
+    object_name: "P9T08CrossCaseAssumptionConsistency_v1"
+    claim_status: "draft/control cumulative audit"
+    source_path: "research_control/tasks/RT-20260731-001/artifacts/p9_t08_cross_case_assumption_consistency_v1.yaml"
+    burden_effect: "audits"
+    summary: "Separates common protocol invariants from heterogeneous source controls and missing physical selectors."
+  - payload_id: "P9T08-PAYLOAD-RECOMPUTATION-001"
+    payload_type: "explicit_witness"
+    object_name: "P9-T03 through P9-T07 selected independent-method recomputation"
+    claim_status: "draft/control same-context reproduction"
+    source_path: "research_control/tasks/RT-20260731-001/artifacts/p9_t08_cross_case_assumption_consistency_v1.yaml"
+    burden_effect: "audits"
+    summary: "Reproduces selected exact finite results while explicitly denying independent-replication status."
+  - payload_id: "P9T08-PAYLOAD-GATE-E-OBSTRUCTION-001"
+    payload_type: "obstruction"
+    object_name: "OBST-P9T08-BENCHMARK-EVIDENCE-PACKAGE-NOT-READY-001"
+    claim_status: "draft/control precise scoped obstruction"
+    source_path: "research_control/tasks/RT-20260731-001/artifacts/p9_t08_gate_e_readiness_matrix_v1.yaml"
+    burden_effect: "requires_human_gate"
+    summary: "Records six INCONCLUSIVE cases, zero passes, no universal physical calibration, and no qualifying independent replication."
+
+physics_progress_status:
+  status: "precise_obstruction_found"
+  target_derivation_milestone: "benchmark_promotion"
+  milestone_burden: "Produce the evidence package required for any protected benchmark verdict."
+  explanation: "The immutable suite passes a declared target-import audit and selected same-context mathematical checks, but no case passes, no qualifying independent replication exists, and the heterogeneous controls do not form one universal calibrated source law. Gate E is not ready."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+loop_risk_decision:
+  category: "scoped_obstruction"
+  next_route: "human_gate_required_after_independent_replication"
+  rationale: "Repeating same-context validators or averaging the six INCONCLUSIVE cases cannot discharge the missing independent evidence or protected authority."
+  obstruction_summary: "The fixed suite lacks any benchmark pass, qualifying independent replication, universal calibrated physical source law, and exact Gate E authority."
+  repeated_burdens:
+    - "physical model-to-world maps"
+    - "qualifying independent replication"
+    - "benchmark pass"
+    - "protected Gate E authority"
+
+obstruction_record:
+  present: true
+  obstruction_id: "OBST-P9T08-BENCHMARK-EVIDENCE-PACKAGE-NOT-READY-001"
+  scope: "benchmark_promotion"
+  failed_object: "the immutable P9-T02 through P9-T07 suite as a positive Gate E-ready independently reproduced exact-GR benchmark evidence package"
+  exact_failure: "All six cases are INCONCLUSIVE, zero benchmark passes exist, the heterogeneous proposal controls do not instantiate one universal calibrated physical source law, and no qualifying independent replication has been acquired."
+  minimal_counterexample_path: "research_control/tasks/RT-20260731-001/artifacts/p9_t08_cross_case_assumption_consistency_v1.yaml"
+  current_ontology_implication: "does_not_derive"
+  source_extension_implication: "new_primitive_required"
+  consequence: "human_gate_required"
+  forbidden_overread: "This scoped Gate E nonreadiness result does not detect target import, invalidate the finite source mathematics, reject the global theory, prove future source extension impossible, or issue a protected Gate E verdict."
+
+distance_to_gr_delta:
+  changed: false
+  effect: "obstruction_recorded"
+  burden_id: "benchmark_promotion"
+  milestone: "benchmark_promotion"
+  old_status: "blocked by missing primitive"
+  new_status: "blocked by missing primitive"
+  ledger_row_updated: true
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "The evidence path and notes advance from the final individual case to the cumulative P9-T08 audit while control, mathematical, physical, and promotion statuses remain blocked with zero passes and no qualifying independent replication."
+  downstream_unlocked:
+    - "none"
+  downstream_still_blocked:
+    - "physical model-to-world maps"
+    - "universal calibrated source law"
+    - "effective geometry"
+    - "matter coupling"
+    - "Einstein equations"
+    - "qualifying independent replication"
+    - "benchmark pass"
+    - "protected Gate E verdict"
+    - "benchmark promotion"
+  explanation: "The completion adds cumulative audit evidence and an exact readiness obstruction but no qualifying physical Distance-to-GR status change."
+
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "unchanged; no canonical ontology edit or source-law adoption"
+  - burden: "Source equivalence EqSrc"
+    status: "unchanged"
+  - burden: "RetainH"
+    status: "unchanged"
+  - burden: "GenH"
+    status: "unchanged"
+  - burden: "ObsLoc_lc"
+    status: "unchanged"
+  - burden: "Resp_lc"
+    status: "unchanged"
+  - burden: "M_src"
+    status: "unchanged protected finite matter status"
+  - burden: "g_eff"
+    status: "unresolved; no case derives an operative physical metric"
+  - burden: "matter coupling"
+    status: "unresolved; no universal physical source-matter coupling is derived"
+  - burden: "Einstein equations"
+    status: "not derived"
+  - burden: "finite-variation robustness"
+    status: "selected exact finite calculations reproduce in same-context audit only"
+  - burden: "benchmark promotion"
+    status: "blocked; six INCONCLUSIVE cases zero passes and no qualifying independent replication"
+  - burden: "Gate Chair status"
+    status: "P9-T09 protected authority absent and no verdict issued"
+  - burden: "current route freeze or hard-fail status"
+    status: "positive Gate E readiness of the unchanged suite is locally frozen pending new physical bridge evidence qualifying independent replication and exact human authority"
+
+freeze_criteria_status:
+  repeated_burden: false
+  freeze_evaluation_required: true
+  active_freeze_label: "P9T08-POSITIVE-GATE-E-READINESS-FREEZE"
+  decision: "locally_frozen"
+  scope: "positive Gate E readiness of the immutable P9-T02 through P9-T07 suite only"
+  reopening_conditions:
+    - "new source-derived physical model-to-world maps and universal calibration"
+    - "at least one lawful benchmark pass preserved under the protocol"
+    - "qualifying independent replication with fresh provenance and seal"
+    - "exact protected P9-T09 human authority"
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+
+forbidden_conclusion_summary:
+  - "No benchmark case passed."
+  - "No independent replication completed."
+  - "No physical model-to-world map, effective metric, universal matter coupling, or Einstein equation was derived."
+  - "No Gate E verdict or benchmark promotion is authorized."
+  - "No global no-go or future source-extension impossibility is established."
+
+artifact_hashes:
+  fused_review:
+    path: "research_control/tasks/RT-20260731-001/artifacts/p9_t08_benchmark_suite_red_team_review_v1.yaml"
+    sha256: "9d28acf5ba647801b12674b65772406700af28fc2229973b4a242d8b0a0c32b7"
+  smuggling_audit:
+    path: "research_control/tasks/RT-20260731-001/artifacts/p9_t08_benchmark_smuggling_audit_v1.yaml"
+    sha256: "c5b05dad23261d479e624b9cf08a3d02c2773d05df4d15246793067525acd229"
+  cross_case_consistency:
+    path: "research_control/tasks/RT-20260731-001/artifacts/p9_t08_cross_case_assumption_consistency_v1.yaml"
+    sha256: "c1be5c75415fea6321b3490bad45e1b4a83c6cda302a8e6683c1c4b1658082e2"
+  independent_replication_status:
+    path: "research_control/tasks/RT-20260731-001/artifacts/p9_t08_independent_replication_status_v1.yaml"
+    sha256: "c3089818ea1ad682a7f246c3ec102d6eff34f80285265644de72c9fc9fff1dfc"
+  gate_e_matrix:
+    path: "research_control/tasks/RT-20260731-001/artifacts/p9_t08_gate_e_readiness_matrix_v1.yaml"
+    sha256: "2f2483dedb86f65d2b969959416b5bea0d4a39b0b26918107275c1784c253db8"
+  compact_receipt:
+    path: "research_control/tasks/RT-20260731-001/artifacts/p9_t08_benchmark_audit_compact_receipt_v1.json"
+    sha256: "202b5c1f80c4d32f1d7ef774eda85ab67c38eec6be7276bc3be78d67cec6a662"
+  validation:
+    path: "research_control/tasks/RT-20260731-001/artifacts/p9_t08_benchmark_audit_validation_v1.json"
+    sha256: "ceeecb34b8afcd9a1eec7e5336380d139f284bdc5547f4eca485c82992a5dc76"
+  checkpoint_blocker:
+    path: "research_control/tasks/RT-20260731-001/artifacts/validation_blocker_checkpoint_p9_t08_blank_eof_v1.yaml"
+    sha256: "26c0d92e777824d5ab2ce3100947a0a84da99d121b0f9065f4dea8fb8ca8b575"
+
+output_paths:
+  - "research_control/tasks/RT-20260731-001/artifacts/p9_t08_benchmark_suite_red_team_review_v1.yaml"
+  - "research_control/tasks/RT-20260731-001/artifacts/p9_t08_benchmark_smuggling_audit_v1.yaml"
+  - "research_control/tasks/RT-20260731-001/artifacts/p9_t08_cross_case_assumption_consistency_v1.yaml"
+  - "research_control/tasks/RT-20260731-001/artifacts/p9_t08_independent_replication_status_v1.yaml"
+  - "research_control/tasks/RT-20260731-001/artifacts/p9_t08_gate_e_readiness_matrix_v1.yaml"
+  - "research_control/tasks/RT-20260731-001/artifacts/p9_t08_benchmark_audit_compact_receipt_v1.json"
+  - "research_control/tasks/RT-20260731-001/artifacts/p9_t08_benchmark_audit_validation_v1.json"
+  - "research_control/tasks/RT-20260731-001/artifacts/p9_t08_benchmark_audit_receipt.md"
+  - "research_control/tasks/RT-20260731-001/artifacts/child_phys_math_p9_t08_benchmark_audit.yaml"
+  - "research_control/tasks/RT-20260731-001/artifacts/child_phys_phil_p9_t08_benchmark_audit.yaml"
+  - "research_control/tasks/RT-20260731-001/artifacts/parent_conflict_review_p9_t08_benchmark_audit.yaml"
+  - "research_control/tasks/RT-20260731-001/artifacts/parent_fusion_notes_p9_t08_benchmark_audit.md"
+  - "research_control/tasks/RT-20260731-001/artifacts/validate_p9_t08_benchmark_audit.py"
+  - "research_control/tasks/RT-20260731-001/artifacts/validation_blocker_checkpoint_p9_t08_blank_eof_v1.yaml"
+
+validation_receipts:
+  local_validator_report: "research_control/tasks/RT-20260731-001/artifacts/p9_t08_benchmark_audit_validation_v1.json"
+  local_validator_report_hash: "ceeecb34b8afcd9a1eec7e5336380d139f284bdc5547f4eca485c82992a5dc76"
+  compact_receipt_hash: "202b5c1f80c4d32f1d7ef774eda85ab67c38eec6be7276bc3be78d67cec6a662"
+  fused_review_hash: "9d28acf5ba647801b12674b65772406700af28fc2229973b4a242d8b0a0c32b7"
+  smuggling_audit_hash: "c5b05dad23261d479e624b9cf08a3d02c2773d05df4d15246793067525acd229"
+  cross_case_consistency_hash: "c1be5c75415fea6321b3490bad45e1b4a83c6cda302a8e6683c1c4b1658082e2"
+  independent_replication_status_hash: "c3089818ea1ad682a7f246c3ec102d6eff34f80285265644de72c9fc9fff1dfc"
+  gate_e_matrix_hash: "2f2483dedb86f65d2b969959416b5bea0d4a39b0b26918107275c1784c253db8"
+  task_local_check_count: 85
+  task_local_failed_check_count: 0
+  external_red_team_schema_status: "PASS"
+  review_context_classification: "same_context_role_review"
+  validation_status: "PASS"
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "none"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  publication_authorized: false
+  protected_gate_e_authorized: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  canonical_ontology_edit_authorized: false
+  independent_replication_claim_authorized: false
+  human_endorsement_claim_authorized: false
+  effective_metric_adoption_authorized: false
+  matter_coupling_adoption_authorized: false
+  Einstein_equation_derivation_authorized: false
+  Gate_Chair_verdict_authorized: false
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  required: true
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "recursive_goal_recovery_required"
+  recursive_goal_recovery_required: true
+  route: "continue-goal recovery via improve-project-system"
+  blocker_path: "research_control/tasks/RT-20260731-001/artifacts/validation_blocker_checkpoint_p9_t08_blank_eof_v1.yaml"
+  blocker_sha256: "26c0d92e777824d5ab2ce3100947a0a84da99d121b0f9065f4dea8fb8ca8b575"
+  notes: "No nonblank project-improvement signal was emitted. The sole checkpoint nevertheless exposed a distinct bounded EOF-format blocker, so the recursive relay requires one fresh improve-project-system recovery generation."
+
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=true source_object_count=1101 relationship_row_count=5570 semantic_row_count=1101 vault_row_count=1101"
+  - ".venv/bin/python research_control/tasks/RT-20260731-001/artifacts/validate_p9_t08_benchmark_audit.py --write-report --json | exit_code=0 | status=PASS check_count=85 failure_count=0"
+  - ".venv/bin/python scripts/research_control/validate_red_team_review_artifact.py research_control/tasks/RT-20260731-001/artifacts/p9_t08_benchmark_suite_red_team_review_v1.yaml --json | exit_code=0 | status=PASS review_context_classification=same_context_role_review"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260731-001-001 | exit_code=1 | FAIL staged git diff check on fifteen blank-at-EOF findings; index restored; no commit"
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 185 validated, was atomically claimed once, and consumed the immutable P9-T08 continue-research route once."
+      - "Dependency checkpoint 536a7cf43a28923dea1a2ab4faed8822618326b3 committed before P9-T08 execution."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Task-local identity, outcome, source-stage, selected-mathematics, Gate E matrix, and parent-child validation passes 85 checks with zero failures."
+      - "External red-team artifact schema passes while classifying the review as same-context rather than external, human, blind, or independent."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Repository-wide control, claim-language, documentation-impact, renderer, graph, and memory checks pass before checkpoint."
+  post_checkpoint:
+    status: "FAIL"
+    evidence:
+      - "The sole governed checkpoint failed at staged Git diff checking on fifteen blank-at-EOF findings."
+      - "The entry index was restored, no path remains staged, and no commit was created."
+  independent_reproduction:
+    status: "NOT_ACQUIRED"
+    evidence:
+      - "All current audit and selected recomputation occurred in the same execution context and repository environment."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Current frontier, task index, compact frontier, dependency graph, and claim graph were regenerated from canonical control sources."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory synchronization and validate-only mode pass; local retrieval state remains non-authoritative."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation reports no hard failure."

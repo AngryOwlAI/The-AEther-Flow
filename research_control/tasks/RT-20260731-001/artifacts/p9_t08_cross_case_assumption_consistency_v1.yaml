@@ -1,0 +1,126 @@
+schema_id: "p9_t08_cross_case_assumption_consistency_v1"
+artifact_id: "P9T08CrossCaseAssumptionConsistency_v1"
+task_id: "RT-20260731-001"
+plan_task_id: "P9-T08"
+status: "draft/control"
+result: "CONSISTENT_PROTOCOL_BOUNDARY_HETEROGENEOUS_SOURCE_CONTROLS_NO_UNIVERSAL_CALIBRATION"
+
+suite_invariants:
+  protocol_id: "SourceDerivedBenchmarkProtocol_v1"
+  protocol_sha256: "88ef097bf712ad115e9af62cc18a8b3eabb12f8545350f714ad065f702471007"
+  case_schema_sha256: "5045de8fbaeb6c80b89ec88b71143a8aeaca1c892efadc4b7293cb438ee808d8"
+  target_import_firewall_sha256: "ccb9297f817a9b4eeb886834a510e1f21d518a2668bc3fde9695b909d6884acf"
+  source_first: true
+  seal_before_target: true
+  proposal_only_ancestry_propagated: true
+  physical_model_to_world_map_required: true
+  independent_reproduction_required_for_pass: true
+  local_pass_implies_promotion: false
+
+case_matrix:
+  - plan_task_id: "P9-T02"
+    source_control: "finite null-background carrier"
+    source_extension_status: "proposal-only or conditional source object"
+    physical_missing_selector: "lawful source-to-effective carrier and perturbative physical bridge"
+    target_opened: false
+    independent_reproduction: "NOT_ACQUIRED"
+    outcome: "INCONCLUSIVE"
+  - plan_task_id: "P9-T03"
+    source_control: "finite weak response with coefficient records A and B"
+    source_extension_status: "proposal-only operational-coupling coefficient family"
+    physical_missing_selector: "source law selecting clock signal and free-fall coefficients plus physical map"
+    target_opened: false
+    independent_reproduction: "NOT_ACQUIRED"
+    outcome: "INCONCLUSIVE"
+  - plan_task_id: "P9-T04"
+    source_control: "two-sector common and split equipment records"
+    source_extension_status: "task-local source-extension data"
+    physical_missing_selector: "cross-sector equipment selector and physical characteristic map"
+    target_opened: false
+    independent_reproduction: "NOT_ACQUIRED"
+    outcome: "INCONCLUSIVE"
+  - plan_task_id: "P9-T05"
+    source_control: "homogeneous amplitude and decoder exponent families"
+    source_extension_status: "proposal-only amplitude and decoder data"
+    physical_missing_selector: "unique clock scale volume density curvature and constant-term decoder"
+    target_opened: true
+    independent_reproduction: "NOT_ACQUIRED"
+    outcome: "INCONCLUSIVE"
+  - plan_task_id: "P9-T06"
+    source_control: "C4 static operator with completion projector and readout families"
+    source_extension_status: "proposal-only finite dynamical completion data"
+    physical_missing_selector: "physical dynamics polarization projector propagation and detector map"
+    target_opened: true
+    independent_reproduction: "NOT_ACQUIRED"
+    outcome: "INCONCLUSIVE"
+  - plan_task_id: "P9-T07"
+    source_control: "K3 compact token and positive quartic edge control"
+    source_extension_status: "proposal-only finite nonlinear source-extension data"
+    physical_missing_selector: "physical compact matter geometry conservation constraint and exterior observable map"
+    target_opened: true
+    independent_reproduction: "NOT_ACQUIRED"
+    outcome: "INCONCLUSIVE"
+
+consistency_findings:
+  - finding_id: "P9T08-CONS-01"
+    status: "CONSISTENT"
+    statement: "All six cases use one protocol, one case schema, one firewall identity, source-first execution, immutable seals, and fail-closed outcome semantics."
+  - finding_id: "P9T08-CONS-02"
+    status: "CONSISTENT"
+    statement: "Every proposal-only or task-local source extension remains noncanonical and propagates to the case classification."
+  - finding_id: "P9T08-CONS-03"
+    status: "CONSISTENT"
+    statement: "Every missing physical map or selector produces INCONCLUSIVE rather than a target-informed repair or PASS."
+  - finding_id: "P9T08-CONS-04"
+    status: "NOT_ESTABLISHED"
+    statement: "The suite has no common fitted parameter, universal source law, calibration set, validation set, or held-out physical benchmark set because every case stops before a lawful physical prediction."
+  - finding_id: "P9T08-CONS-05"
+    status: "HETEROGENEOUS_NOT_CONTRADICTORY"
+    statement: "The finite controls differ by construction. Their heterogeneity is not a cross-case parameter inconsistency because none is adopted as one universal law, but it prevents aggregation into a calibrated recovery suite."
+  - finding_id: "P9T08-CONS-06"
+    status: "UNRESOLVED"
+    statement: "Common repository ancestry and same-context construction leave correlated method or interpretation error uneliminated."
+
+selected_independent_method_recomputations:
+  qualification: "same_context_independent_method_checks_not_independent_replication"
+  P9_T03:
+    coefficient_record_A: ["0", "0", "0"]
+    coefficient_record_B: ["1/8", "1/16", "1/4"]
+    distinct_records: true
+  P9_T04:
+    E_common_residual: ["0", "0", "0", "0", "0"]
+    E_split_residual: ["1", "1/2", "1/4", "1/4", "1/4"]
+    E_split_l1_sum: "9/4"
+    distinct_records: true
+  P9_T05:
+    source_ode: "dA/dlambda=-gamma A^3"
+    exact_solution: "A=A0/sqrt(1+2 gamma A0^2 lambda)"
+    derivative_identity_reproduced: true
+    decoder_identity: "E_p=p gamma A^2"
+  P9_T06:
+    C4_full_spectrum: [0, 2, 2, 4]
+    C4_quotient_spectrum: [2, 2, 4]
+    explicit_eigenvector_check_reproduced: true
+  P9_T07:
+    balanced_source: ["4/3", "-2/3", "-2/3"]
+    exact_solution: ["2/3", "-1/3", "-1/3"]
+    exact_residual: ["0", "0", "0"]
+    hessian_quotient_eigenvalues: [4, 2]
+    residual_and_eigenvalue_checks_reproduced: true
+
+suite_counts:
+  executed_cases: 6
+  inconclusive_cases: 6
+  failed_firewall_cases: 0
+  failed_source_cases: 0
+  failed_comparison_cases: 0
+  passed_cases: 0
+  qualifying_independent_replications: 0
+
+authority_limits:
+  same_context_recomputation_counts_as_independent_replication: false
+  heterogeneous_controls_form_universal_source_law: false
+  suite_consistency_establishes_physical_recovery: false
+  Gate_E_verdict_issued: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false

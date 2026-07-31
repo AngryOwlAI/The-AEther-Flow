@@ -1,7 +1,7 @@
 schema_id: "compact_current_frontier_v16"
 generated_from:
   - "research_control/program_state.yaml"
-  - "research_control/handoffs/handoff-0922.yaml"
+  - "research_control/handoffs/handoff-0925.yaml"
   - "registries/DISTANCE_TO_GR_LEDGER.csv"
   - "registries/METRIC_USE_LEDGER.csv"
   - "research_control/current_frontier.md"
@@ -9,16 +9,16 @@ generated_from:
   - "research_control/design/accepted_status_calibration_v2.yaml"
   - "research_control/design/active_state_bifurcation_policy_v1.md"
 active_state:
-  active_task_id: "RT-20260730-015"
-  latest_handoff_id: "handoff-0922"
-  current_status: "exact_nonlinear_source_solution_physical_compact_source_model_to_world_obstructed_case_inconclusive_ready_for_checkpoint"
+  active_task_id: "RT-20260731-003"
+  latest_handoff_id: "handoff-0925"
+  current_status: "p9_t08_distance_ledger_checkpoint_allowlist_recovery_complete_p9_t09_human_gate_after_checkpoint"
   v15_completed: false
   v16_completed: false
   v16_plan_registered: true
 active_state_bifurcation:
-  latest_research_task_id: "RT-20260730-015"
-  latest_research_handoff_id: "handoff-0922"
-  latest_research_next_action: "Invoke the one governed checkpoint for AJ-RT-20260730-015-001. After that commit, use one fresh bounded External Red Team Reviewer packet for P9-T08 to audit P9-T02 through P9-T07 for target import, assumption drift, shared-method errors, and actual independent-replication status while preserving all six INCONCLUSIVE dispositions and zero benchmark passes."
+  latest_research_task_id: "RT-20260731-003"
+  latest_research_handoff_id: "handoff-0925"
+  latest_research_next_action: "Run the one governed cumulative checkpoint for AJ-RT-20260731-003-001. After it commits, do not execute P9-T09 without a nonblank exact protected human Gate Chair authorization; if authorization is absent, record deferred_human_gate and continue only dependency-independent included work or terminalize according to the relay scope."
   latest_project_system_task_id: "none"
   latest_project_system_status: "none"
   latest_project_system_sidecar_task_id: "none"
@@ -26,11 +26,11 @@ active_state_bifurcation:
   sidecar_supersedes_research_handoff: false
   next_research_route_source: "latest_research_handoff"
 next_route:
-  route_id: "v21_p9_t08_full_benchmark_audit_external_replication_after_p9_t07_inconclusive"
-  role_family: "external-red-team-reviewer@0.1.0"
+  route_id: "v21_p9_t09_human_gate_e_after_checkpoint"
+  role_family: "gate-chair"
   target_derivation_milestone: "benchmark_promotion"
-  milestone_burden: "Produce the evidence package required for any protected benchmark verdict."
-  requires_human_gate: false
+  milestone_burden: "Make the final protected scientific verdict after the complete chain."
+  requires_human_gate: true
 claim_boundary:
   physics_claim_authority: false
   proof_authority: false
@@ -281,7 +281,7 @@ blocked_physical_targets:
       - "no_completed_derivation"
 distance_to_gr:
   delta:
-    effect: "obstruction_recorded_no_physical_delta"
+    effect: "none_project_system_recovery"
     changed: false
     milestone: "benchmark_promotion"
     burden_id: "benchmark_promotion"
@@ -489,7 +489,7 @@ distance_to_gr:
         - "no_benchmark_promotion"
         - "no_benchmark_gate_chair_closure"
         - "no_completed_derivation"
-      last_evidence_path: "research_control/tasks/RT-20260730-015/artifacts/finite_nonlinear_compact_source_nonselection_v1.tex"
+      last_evidence_path: "research_control/tasks/RT-20260731-001/artifacts/p9_t08_benchmark_suite_red_team_review_v1.yaml"
       high_risk_status_card:
         object_id: "benchmark_promotion"
         positive_status: "benchmark_promotion remains blocked by upstream derivation burdens and protected authority."
@@ -535,13 +535,9 @@ metric_use_ledger:
 validation:
   latest_required_status: "PASS"
   pending_layers:
-    - layer: "post_write"
-      status: "PENDING"
-      evidence:
-        - "Repository-wide render, registry, memory, documentation, claim-language, taxonomy, and research-control gates run before checkpoint."
     - layer: "post_checkpoint"
       status: "PENDING"
       evidence:
-        - "Exactly one governed checkpoint remains."
+        - "The one governed cumulative checkpoint is pending."
 authority_warning:
   snapshot_only_not_authority: true

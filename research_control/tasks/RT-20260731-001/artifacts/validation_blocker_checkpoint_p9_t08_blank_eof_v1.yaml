@@ -1,0 +1,111 @@
+schema_id: "p9_t08_blank_eof_checkpoint_blocker_v1"
+task_id: "RT-20260731-001"
+job_id: "AJ-RT-20260731-001-001"
+plan_task_id: "P9-T08"
+observed_at: "2026-07-31T08:23:41Z"
+checkpoint_command: ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260731-001-001"
+checkpoint_status: "FAIL"
+checkpoint_committed: false
+checkpoint_mode: "planner_compare"
+failed_gate: "git_diff_check"
+failed_stage: "staged_acceptance_git_diff_check"
+failed_command: "git diff --cached --check"
+failed_command_exit_code: 2
+failure_summary: "The P9-T08 audit, working-tree control gates, allowlist check, and index-restoration check pass, but the generation's sole checkpoint stopped before commit because staged Git diff checking found one extra blank line at EOF in each of fifteen newly created files."
+findings:
+  - path: "research_control/handoffs/handoff-0923.md"
+    line: 60
+    finding: "new blank line at EOF"
+    sha256: "8d9c304bfb513bd8c04366ceb8781827e266ef8186a870a2eadff4fda4284709"
+  - path: "research_control/tasks/RT-20260731-001/00_TASK.yaml"
+    line: 72
+    finding: "new blank line at EOF"
+    sha256: "7467a7c14ae1c2d042d0d72d0b150d4035cae78afc36c3ba2a14119385c2b892"
+  - path: "research_control/tasks/RT-20260731-001/DDR-20260731-001.md"
+    line: 91
+    finding: "new blank line at EOF"
+    sha256: "ee40b68e97b6126e0aa6884abb8437a83de5ea1ce1f8161a7cd6b8e6756ccd80"
+  - path: "research_control/tasks/RT-20260731-001/artifacts/child_phys_math_p9_t08_benchmark_audit.yaml"
+    line: 34
+    finding: "new blank line at EOF"
+    sha256: "e2388c7c5974509060e78356286be0cae455415f0a24fecbf88a950c09cbb80a"
+  - path: "research_control/tasks/RT-20260731-001/artifacts/child_phys_phil_p9_t08_benchmark_audit.yaml"
+    line: 35
+    finding: "new blank line at EOF"
+    sha256: "dd8c9e91e66768e9e7ddad07f5128a955fb8419f3cd236f17f34a75551d410d0"
+  - path: "research_control/tasks/RT-20260731-001/artifacts/p9_t08_benchmark_audit_compact_receipt_v1.json"
+    line: 30
+    finding: "new blank line at EOF"
+    sha256: "a7ba961f3b02a59c04e04fabfb800657eb3e76fd7ea0565b714b402d644730d6"
+  - path: "research_control/tasks/RT-20260731-001/artifacts/p9_t08_benchmark_audit_receipt.md"
+    line: 24
+    finding: "new blank line at EOF"
+    sha256: "cdd91ce3a08f39bccd4d1fb6f78615cf5f357f02db33ada8e45513eff1ba5b13"
+  - path: "research_control/tasks/RT-20260731-001/artifacts/p9_t08_benchmark_smuggling_audit_v1.yaml"
+    line: 116
+    finding: "new blank line at EOF"
+    sha256: "03e7fd2b704402134c0d48bf96dbfe6a4a4b5c1db341350de2de7abe63504044"
+  - path: "research_control/tasks/RT-20260731-001/artifacts/p9_t08_benchmark_suite_red_team_review_v1.yaml"
+    line: 141
+    finding: "new blank line at EOF"
+    sha256: "1017d5fbcf3755859d2d61f3ddf841c4c79346988f3725d6e31563223f073723"
+  - path: "research_control/tasks/RT-20260731-001/artifacts/p9_t08_cross_case_assumption_consistency_v1.yaml"
+    line: 127
+    finding: "new blank line at EOF"
+    sha256: "6ce067fe422035ea8a7bd821c63780ab282120b34124d21fff379b409bb1979d"
+  - path: "research_control/tasks/RT-20260731-001/artifacts/p9_t08_gate_e_readiness_matrix_v1.yaml"
+    line: 89
+    finding: "new blank line at EOF"
+    sha256: "1c1cd3e8182b9d06c96e0e689249f11b1bcb6a2b1c0e645c71f644e319895393"
+  - path: "research_control/tasks/RT-20260731-001/artifacts/p9_t08_independent_replication_status_v1.yaml"
+    line: 77
+    finding: "new blank line at EOF"
+    sha256: "8691da471e246c64bb6f410b4315058770e3b89d74025cb15f4ea64e954d0fd1"
+  - path: "research_control/tasks/RT-20260731-001/artifacts/parent_conflict_review_p9_t08_benchmark_audit.yaml"
+    line: 33
+    finding: "new blank line at EOF"
+    sha256: "13894cbf855aa5963d4c46b6303c75775129386d8af6b1604a1b2e9c2fc7085e"
+  - path: "research_control/tasks/RT-20260731-001/artifacts/parent_fusion_notes_p9_t08_benchmark_audit.md"
+    line: 45
+    finding: "new blank line at EOF"
+    sha256: "76b9998197a2e829c4941ff622111242918084116af66bfdee46ae22a4dafd35"
+  - path: "research_control/tasks/RT-20260731-001/jobs/AJ-RT-20260731-001-001.yaml"
+    line: 461
+    finding: "new blank line at EOF"
+    sha256: "c7c3581a0878d12906604290be123ec29ed4170a7dc072f14dda1ed71abcb5a9"
+required_recovery:
+  strategy_id: "repair_rt_20260731_001_blank_eof_and_checkpoint_v1"
+  worker_skill: "improve-project-system"
+  role_family: "process-integrity-auditor@0.1.0"
+  work_item_id: "P9-T08"
+  exact_behavior_change: "Remove exactly one final blank logical line from each of the fifteen listed files, update every directly affected hash reference and generated derivative, preserve all scientific content and dispositions, and invoke one fresh normal governed checkpoint."
+  required_controls:
+    - "Do not rerun P9-T08 scientific work or modify its conclusions."
+    - "Change only the fifteen EOF boundaries plus directly required hash references, blocker-state records, generated derivatives, and checkpoint receipts."
+    - "Prove all fifteen paths pass staged blank-at-EOF checking and unrelated whitespace policy remains unchanged."
+    - "Preserve six INCONCLUSIVE cases, zero benchmark passes, absent qualifying independent replication, and Gate E NOT READY."
+    - "Run at most one fresh normal checkpoint without legacy validation."
+  next_plan_item_after_recovery: "P9-T09"
+  next_plan_item_executed: false
+validation_evidence:
+  task_local_audit_status: "PASS_85_OF_85"
+  external_red_team_schema_status: "PASS_SAME_CONTEXT_ROLE_REVIEW"
+  memory_validation_status: "PASS"
+  documentation_impact_status: "PASS"
+  claim_language_status: "PASS_ZERO_HARD_FAILURES"
+  task_taxonomy_status: "PASS"
+  research_control_core_status: "PASS_ZERO_ERRORS"
+  research_control_diff_status: "PASS_ZERO_ERRORS"
+  checkpoint_git_diff_check: "FAIL_15_BLANK_AT_EOF"
+  checkpoint_invocation_count: 1
+  entry_index_restored: true
+  staged_after_failure: false
+authority_boundary:
+  p9_t08_scientific_audit_complete: true
+  checkpoint_complete: false
+  p9_t09_execution_ready: false
+  scientific_claims_changed_by_failure: false
+  distance_to_gr_delta_changed_by_failure: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false

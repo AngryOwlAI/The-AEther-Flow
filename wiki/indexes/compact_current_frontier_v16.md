@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260730-015`
-- Latest handoff: `handoff-0922`
-- Current status: `exact_nonlinear_source_solution_physical_compact_source_model_to_world_obstructed_case_inconclusive_ready_for_checkpoint`
+- Active task: `RT-20260731-003`
+- Latest handoff: `handoff-0925`
+- Current status: `p9_t08_distance_ledger_checkpoint_allowlist_recovery_complete_p9_t09_human_gate_after_checkpoint`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260730-015`
-- Latest research handoff: `handoff-0922`
-- Latest research next action: Invoke the one governed checkpoint for AJ-RT-20260730-015-001. After that commit, use one fresh bounded External Red Team Reviewer packet for P9-T08 to audit P9-T02 through P9-T07 for target import, assumption drift, shared-method errors, and actual independent-replication status while preserving all six INCONCLUSIVE dispositions and zero benchmark passes.
+- Latest research task: `RT-20260731-003`
+- Latest research handoff: `handoff-0925`
+- Latest research next action: Run the one governed cumulative checkpoint for AJ-RT-20260731-003-001. After it commits, do not execute P9-T09 without a nonblank exact protected human Gate Chair authorization; if authorization is absent, record deferred_human_gate and continue only dependency-independent included work or terminalize according to the relay scope.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,11 +26,11 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p9_t08_full_benchmark_audit_external_replication_after_p9_t07_inconclusive`
-- Role family: `external-red-team-reviewer@0.1.0`
+- Route ID: `v21_p9_t09_human_gate_e_after_checkpoint`
+- Role family: `gate-chair`
 - Target milestone: `benchmark_promotion`
-- Milestone burden: Produce the evidence package required for any protected benchmark verdict.
-- Requires human gate: `false`
+- Milestone burden: Make the final protected scientific verdict after the complete chain.
+- Requires human gate: `true`
 
 ## High-Risk Rows
 
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `a605343d98bf007dbd68dae243ea376fe98a259bbe5e32ba2f8df10bfe9b7407`
-- JSON SHA-256: `d3154c2b16555022ae119ce2da3bc251525ed5b6636dc6e4804750c3e04e785a`
+- YAML SHA-256: `7a42aeed12888b9ad1fce7357daefc7e2a0a659935fbeb2417151b60ea6c3af9`
+- JSON SHA-256: `5d8c6b6feb9ce547c83281f09b2ef5b423e740d30c44933c617d3a76b316b69f`
 
 ## Authority Warning
 

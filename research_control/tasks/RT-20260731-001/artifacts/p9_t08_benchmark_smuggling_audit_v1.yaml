@@ -1,0 +1,115 @@
+schema_id: "p9_t08_benchmark_smuggling_audit_v1"
+artifact_id: "P9T08BenchmarkSmugglingAudit_v1"
+task_id: "RT-20260731-001"
+plan_task_id: "P9-T08"
+status: "draft/control"
+result: "NO_DECLARED_TARGET_IMPORT_DETECTED_READINESS_STILL_BLOCKED"
+
+protocol_basis:
+  protocol_path: "research_control/tasks/RT-20260729-012/artifacts/source_derived_benchmark_protocol_v1.tex"
+  protocol_sha256: "88ef097bf712ad115e9af62cc18a8b3eabb12f8545350f714ad065f702471007"
+  schema_path: "research_control/tasks/RT-20260729-012/artifacts/source_derived_benchmark_case_schema_v1.yaml"
+  schema_sha256: "5045de8fbaeb6c80b89ec88b71143a8aeaca1c892efadc4b7293cb438ee808d8"
+  firewall_path: "research_control/tasks/RT-20260729-012/artifacts/target_import_firewall_v1.yaml"
+  firewall_sha256: "ccb9297f817a9b4eeb886834a510e1f21d518a2668bc3fde9695b909d6884acf"
+
+case_audits:
+  - plan_task_id: "P9-T02"
+    case_path: "research_control/tasks/RT-20260730-008/artifacts/p9_t02_vacuum_minkowski_case_v1.yaml"
+    case_sha256: "2fadb19c5849f1da5843c0e0599dbdc31790eab46587ce6718abbf4d3a0be79c"
+    source_stage_firewall: "PASS"
+    target_stage: "NOT_OPENED"
+    target_import: "NONE_DETECTED"
+    tuning: "NONE"
+    source_mutation_after_target: 0
+    target_informed_reruns: 0
+    outcome: "INCONCLUSIVE"
+  - plan_task_id: "P9-T03"
+    case_path: "research_control/tasks/RT-20260730-010/artifacts/p9_t03_weak_field_clock_case_v1.yaml"
+    case_sha256: "45b79d5e3e371b3a2bcdde3f26296dad8c6ff65306d17cdf672bf76383eeb864"
+    source_stage_firewall: "PASS"
+    target_stage: "NOT_OPENED"
+    target_import: "NONE_DETECTED"
+    tuning: "NONE_COEFFICIENT_RECORDS_A_AND_B_PRESERVED_UNSELECTED"
+    source_mutation_after_target: 0
+    target_informed_reruns: 0
+    outcome: "INCONCLUSIVE"
+  - plan_task_id: "P9-T04"
+    case_path: "research_control/tasks/RT-20260730-011/artifacts/p9_t04_causal_freefall_case_v1.yaml"
+    case_sha256: "f3ee6d0d7c19f68daf9f6ed9a2e10cec964633694688cc62074edc9089f66255"
+    source_stage_firewall: "PASS"
+    target_stage: "NOT_OPENED"
+    target_import: "NONE_DETECTED"
+    tuning: "NONE_E_COMMON_AND_E_SPLIT_PRESERVED_UNSELECTED"
+    source_mutation_after_target: 0
+    target_informed_reruns: 0
+    outcome: "INCONCLUSIVE"
+  - plan_task_id: "P9-T05"
+    case_path: "research_control/tasks/RT-20260730-012/artifacts/p9_t05_cosmology_case_v1.yaml"
+    case_sha256: "bfe3f84f49b083c566486a9b2281ee1bfd3798f81832203ec9a10264afd1ba4f"
+    source_stage_firewall: "PASS"
+    target_stage: "OPENED_AFTER_SEAL_TYPED_BURDEN_ONLY"
+    target_import: "NONE_DETECTED"
+    tuning: "NONE_DECODER_EXPONENTS_P_AND_R_PRESERVED_UNSELECTED"
+    source_mutation_after_target: 0
+    target_informed_reruns: 0
+    outcome: "INCONCLUSIVE"
+  - plan_task_id: "P9-T06"
+    case_path: "research_control/tasks/RT-20260730-013/artifacts/p9_t06_radiative_case_v1.yaml"
+    case_sha256: "5fd283fa7d2fd0e76ad317270eb33cae33e9f0f5e42378dba846963f706de5dc"
+    source_stage_firewall: "PASS"
+    target_stage: "OPENED_AFTER_SEAL_TYPED_BURDEN_ONLY"
+    target_import: "NONE_DETECTED"
+    tuning: "NONE_COMPLETIONS_AND_PROJECTOR_RANKS_PRESERVED_UNSELECTED"
+    source_mutation_after_target: 0
+    target_informed_reruns: 0
+    outcome: "INCONCLUSIVE"
+  - plan_task_id: "P9-T07"
+    case_path: "research_control/tasks/RT-20260730-015/artifacts/p9_t07_nonlinear_compact_case_v1.yaml"
+    case_sha256: "d9f2af284c192a053623c3b8fed3755309e19957236d6da6fedad8787a61cb7d"
+    source_stage_firewall: "PASS"
+    target_stage: "OPENED_AFTER_SEAL_TYPED_BURDEN_ONLY"
+    target_import: "NONE_DETECTED"
+    tuning: "NONE_TOKEN_AND_QUARTIC_CONTROL_FIXED_BEFORE_TARGET"
+    source_mutation_after_target: 0
+    target_informed_reruns: 0
+    outcome: "INCONCLUSIVE"
+
+cross_case_dimensions:
+  target_atlas_metric_or_solution_as_source:
+    status: "PASS_NONE_DETECTED"
+    evidence: "No case admits a target atlas, metric, solution, field equation, or boundary datum into its source-stage roots."
+  comparison_feedback:
+    status: "PASS_NONE_DETECTED"
+    evidence: "No case changes a source value, branch, tolerance, stopping rule, or seal after target exposure."
+  target_tuned_tolerance:
+    status: "PASS_NONE_DETECTED"
+    evidence: "No physical target tolerance is used to create a pass; missing physical tolerances instead preserve INCONCLUSIVE."
+  process_authority_laundering:
+    status: "PASS_NONE_DETECTED"
+    evidence: "Checkpoint, registry, route, role, and validator success are excluded from scientific evidence."
+  cognitive_target_exposure:
+    status: "DISCLOSED_NOT_BLIND"
+    evidence: "Every case knows the target family and records that exposure; the DAG does not prove absence of human target knowledge."
+  shared_context_and_code_risk:
+    status: "UNRESOLVED"
+    evidence: "All primary construction and validation occurred in one repository lineage and same broader execution context; no qualifying independent implementation tested correlated error."
+
+conclusion:
+  hidden_target_imports_detected: 0
+  firewall_failures_detected: 0
+  post_seal_mutations_detected: 0
+  target_informed_reruns_detected: 0
+  benchmark_passes: 0
+  independent_replications: 0
+  Gate_E_readiness: "NOT_READY"
+
+authority_limits:
+  firewall_audit_is_benchmark_pass: false
+  reviewed_sources_modified: false
+  target_import_absence_proves_manifest_completeness: false
+  shared_systematic_error_eliminated: false
+  independent_replication_claimed: false
+  Gate_E_verdict_issued: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false

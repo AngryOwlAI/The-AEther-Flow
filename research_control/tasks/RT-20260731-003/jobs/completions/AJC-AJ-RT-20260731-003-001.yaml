@@ -1,0 +1,296 @@
+validation_status: "PASS"
+final_repository_validation_status: "PASS_PRECHECKPOINT_RECOVERY_READY"
+job_id: "AJ-RT-20260731-003-001"
+completion_id: "AJC-AJ-RT-20260731-003-001"
+task_id: "RT-20260731-003"
+task_type: "project_system_p9_t08_distance_ledger_checkpoint_allowlist_recovery"
+decision_id: "DDR-20260731-003"
+role_id: "process-integrity-auditor"
+source_role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260731-003"
+status: "completed"
+created_at: "2026-07-31T10:31:14Z"
+started_at: "2026-07-31T10:31:14Z"
+completed_at: "2026-07-31T10:31:14Z"
+objective: "Preserve the completed P9-T08 audit, EOF recovery, handoff, and Distance-to-GR ledger bytes; create one fresh exact-manifest checkpoint contract whose four allowlist representations include the one previously omitted ledger path; prove protected-byte preservation; and invoke one governed cumulative checkpoint while P9-T09 remains unexecuted and human-gated."
+completion_summary: "Generation 187 creates one fresh exact-manifest checkpoint contract. Its AgentJob, execution-role source, AGENT_JOB registry row, and ROLE_EXECUTION registry row carry the same ordered allowlist and include registries/DISTANCE_TO_GR_LEDGER.csv exactly once. The predecessor task, decision, job, completion, role, handoff, and ledger bytes remain exact. P9-T08 remains six INCONCLUSIVE cases with zero benchmark passes, no qualifying independent replication, and Gate E NOT READY; P9-T09 remains unexecuted and protected."
+objective_result: "p9_t08_distance_ledger_checkpoint_allowlist_recovery_pass_ready_for_checkpoint"
+
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P9"
+  plan_task_id: "P9-T09"
+  recovery_for_plan_task_id: "P9-T08"
+  implementation_status: "checkpoint_allowlist_recovery_implemented_checkpoint_ready"
+  p9_t08_scientific_audit_status: "six_inconclusive_zero_passes_gate_e_not_ready_preserved"
+  completed_v21_tasks_added: []
+  next_dependency_ready_work_item: "P9-T09_human_gate_after_checkpoint"
+  next_work_item_executed: false
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 187
+  passes_consumed: 170
+  route_work_item_id: "P9-T08"
+  route_worker_skill: "improve-project-system"
+  route_sha256: "c2a5a1437447e91263073904fe60604a1ee4a150102710e3bac20ddba7872dbc"
+  route_reason: "checkpoint_pre_stage_allowlist_distance_to_gr_ledger_repair_required"
+  route_strategy_id: "repair_rt_20260731_002_distance_ledger_checkpoint_allowlist_v1"
+  route_blocker_fingerprint: "d87f7d0a1fb661acfe1d705f4bebc5ca3a865e0be75501d6f8cf4f3da099da31"
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:187"
+  handoff_token: "80fac47d11bfcb79a398789211e437ad6f38f237acbc0795"
+  relay_claim_token: "26ce284947cd648b03c52930bbc69a7adcfe5f9089c81908"
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+
+transaction_status: "ready_for_governed_checkpoint"
+result_disposition: "repair_implemented_and_validated"
+work_item_status: "completed"
+plan_task_id: "P9-T09"
+recovery_for_plan_task_id: "P9-T08"
+next_plan_task_id: "P9-T09"
+checkpoint_commit: "none_checkpoint_pending"
+checkpoint_invocation_count: 0
+checkpoint_staged: false
+legacy_validation_used: false
+project_system_change_only: true
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+ledger_changed_by_recovery: false
+physics_promotion_authorized: false
+proof_authority: false
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS_PRECHECKPOINT_READY"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  observed_durable_outputs:
+    physics: []
+    project_system:
+      - "fresh four-way identical checkpoint allowlist containing the Distance-to-GR ledger exactly once"
+      - "protected-source and ledger byte-preservation receipt"
+      - "direct identity and generated-derivative synchronization"
+      - "one governed cumulative checkpoint"
+  accepted_criteria:
+    physics: []
+    project_system:
+      - "fresh job role and both registry allowlists are identical and include the ledger once"
+      - "all live changed paths are covered without altering the immutable predecessor job"
+      - "the protected predecessor task decision job completion role handoff and ledger hashes remain exact"
+      - "direct identities and required generated derivatives are fresh"
+      - "one governed cumulative checkpoint commits without legacy validation"
+      - "P9-T09 remains unexecuted"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+physics_payload_admission_result:
+  status: "admitted"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+
+ordinary_route_guard_admission_result:
+  status: "PASS"
+  source_handoff_id: "handoff-0924"
+  source_handoff_sha256_at_intake: "bac3da3b29573721d1ab93a145a2aafbe55b5680c29306baee5813d4729b9758"
+  selected_plan_task_id: "P9-T09"
+  guard_outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  system_success_counts_as_physics: false
+  system_success_counts_as_distance_to_gr: false
+  scientific_status_changed: false
+  physics_promotion_authorized: false
+
+recovery_result:
+  status: "PASS"
+  strategy_id: "repair_rt_20260731_002_distance_ledger_checkpoint_allowlist_v1"
+  source_task_id: "RT-20260731-002"
+  source_job_id: "AJ-RT-20260731-002-001"
+  source_handoff_id: "handoff-0924"
+  source_head: "536a7cf43a28923dea1a2ab4faed8822618326b3"
+  immutable_route_sha256: "c2a5a1437447e91263073904fe60604a1ee4a150102710e3bac20ddba7872dbc"
+  route_blocker_fingerprint: "d87f7d0a1fb661acfe1d705f4bebc5ca3a865e0be75501d6f8cf4f3da099da31"
+  dirty_state_manifest_sha256: "430966fe77b99ef0e396106b54bd03b8ea7c721a954ecae1e2b51300e2580921"
+  failed_gate_evidence_sha256: "a27d4ffee08261b44ad0056d6ddb0d555c626c34fec9a506d511f61d04af5bd5"
+  recovery_validator_path: "research_control/tasks/RT-20260731-003/artifacts/validate_p9_t08_distance_ledger_checkpoint_allowlist_recovery.py"
+  recovery_validator_sha256: "65fec0837569034c76560ab7551fe26198498bab10042b52c474bf260900dc26"
+  recovery_receipt_path: "research_control/tasks/RT-20260731-003/artifacts/p9_t08_distance_ledger_checkpoint_allowlist_recovery_receipt.json"
+  recovery_receipt_sha256: "4c1ff2e5c66ef5da63cffcaacc41f8ed4ae9431d2d753884c4a30dd52c7db0b8"
+  source_task_sha256: "3f9d30df57852fa420354d4d8cec3060c8cb1a07f0d229c352940c628e41cc50"
+  source_decision_sha256: "bde6917253444416db1750ce9777724c2edf4b0d5c671b3e0debf3c0089b2f10"
+  source_job_sha256: "7fdffaca3677179e2d96383e788dafbe4b80c777854cfe25bed3fcb945a66f69"
+  source_completion_sha256: "831568d91dc239c57f40b6d307606e218121759602bde060e73f2c31fe91d981"
+  source_role_sha256: "660e3f494aa3f2c2272630550224f80876137ee7905be9df7d0e9f5cc7922d1e"
+  source_handoff_yaml_sha256: "bac3da3b29573721d1ab93a145a2aafbe55b5680c29306baee5813d4729b9758"
+  source_handoff_markdown_sha256: "d2665c24013bc481621cb2d5e9a438580eb5b06ff85132c5fed4fa4e795db368"
+  source_distance_ledger_sha256: "1e081225cd047aa02a9fd0d53582c4625be5e4cd019df3f5cd6719502d1a241e"
+  manifest_path_count: 72
+  fresh_allowlist_path_count: 34
+  ledger_allowlist_occurrence_count: 1
+  four_way_allowlist_identity: true
+  live_disallowed_path_count: 0
+  p9_t08_reexecuted: false
+  p9_t09_executed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  ledger_changed_by_recovery: false
+
+artifacts:
+  - path: "research_control/tasks/RT-20260731-003/artifacts/validate_p9_t08_distance_ledger_checkpoint_allowlist_recovery.py"
+    sha256: "65fec0837569034c76560ab7551fe26198498bab10042b52c474bf260900dc26"
+  - path: "research_control/tasks/RT-20260731-003/artifacts/p9_t08_distance_ledger_checkpoint_allowlist_recovery_receipt.json"
+    sha256: "4c1ff2e5c66ef5da63cffcaacc41f8ed4ae9431d2d753884c4a30dd52c7db0b8"
+
+output_paths:
+  - "research_control/tasks/RT-20260731-003/artifacts/validate_p9_t08_distance_ledger_checkpoint_allowlist_recovery.py"
+  - "research_control/tasks/RT-20260731-003/artifacts/p9_t08_distance_ledger_checkpoint_allowlist_recovery_receipt.json"
+  - "research_control/tasks/RT-20260731-003/jobs/completions/AJC-AJ-RT-20260731-003-001.yaml"
+  - "research_control/handoffs/handoff-0925.yaml"
+  - "research_control/handoffs/handoff-0925.md"
+  - "research_control/program_state.yaml"
+
+command_results:
+  - command: ".venv/bin/python research_control/tasks/RT-20260731-003/artifacts/validate_p9_t08_distance_ledger_checkpoint_allowlist_recovery.py --write-report --json and --check --json"
+    status: "PASS"
+    summary: "four-way ordered allowlist identity ledger admission protected hashes and live changed-path coverage pass"
+  - command: "P9-T08 EOF-recovery and scientific-audit preservation validators"
+    status: "PASS"
+    summary: "the predecessor repair and six INCONCLUSIVE zero-pass Gate E NOT READY boundary remain valid"
+  - command: "governed current-frontier task-index compact-frontier dependency-graph and claim-graph write/check validators"
+    status: "PASS"
+    summary: "all generated control projections are fresh and the claim graph validates"
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py and --validate-only"
+    status: "PASS_WITH_WARNINGS"
+    summary: "tracked memory and wiki derivatives synchronize; seven local-cache-only retrieval warnings remain non-authoritative"
+  - command: "project classifier resolver improvement-signal documentation-impact and changed-source claim-language gates"
+    status: "PASS"
+    summary: "project-system classification zero emitted-signal errors documentation coverage and zero hard claim-language failures"
+  - command: ".venv/bin/python scripts/research_control/validate_research_control.py --json-summary and --check-diff"
+    status: "PENDING_STAGED_ACCEPTANCE"
+    summary: "All actionable errors are resolved; working-tree validation retains only source_handoff_not_tracked for handoffs 0923 and 0924, which the governed checkpoint resolves by staging the cumulative transaction before its exact job-scoped acceptance gate."
+  - command: "git diff --check"
+    status: "PASS"
+    summary: "working-tree whitespace validation passes"
+
+validation_summary:
+  status: "PASS_PRECHECKPOINT_RECOVERY_READY"
+  task_local_error_count: 0
+  manifest_path_count: 72
+  fresh_allowlist_path_count: 34
+  ledger_allowlist_occurrence_count: 1
+  live_disallowed_path_count: 0
+  checkpoint_invocation_count: 0
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 187 validated atomically claimed and consumed the exact immutable recovery route once."
+      - "The exact 72-path manifest repository identity lease predecessor thread route and current max reasoning effort matched before writes."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The task-local receipt proves four-way ordered allowlist identity and single ledger admission."
+      - "Every protected predecessor and ledger hash remains exact and every live changed path is covered."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Task-local scientific-preservation renderer route-guard documentation signal claim-language and working-tree gates pass."
+      - "Working-tree core validation retains only the two expected source_handoff_not_tracked diagnostics; staged acceptance is required to resolve them."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "The one governed cumulative checkpoint is pending and P9-T09 remains unexecuted."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Current frontier task index compact frontier dependency graph and claim graph write/check gates pass."
+  memory_bootstrap:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "Tracked memory synchronization and validate-only mode pass; seven local-cache-only retrieval warnings remain non-authoritative."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation reports zero hard failures."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "ordinary project-system checkpoint allowlist recovery only; P9-T09 is not authorized"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+
+distance_to_gr_delta:
+  changed: false
+  effect: "none_project_system_recovery"
+  milestone: "benchmark_promotion"
+  burden: "P9-T08 audit remains six INCONCLUSIVE cases with zero benchmark passes no qualifying independent replication and Gate E NOT READY."
+  ledger_row_updated: false
+
+project_improvement_signals: []
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1103
+    relationship_row_count: 5578
+    semantic_row_count: 1103
+    vault_row_count: 1103
+    local_cache_only_warning_count: 7
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-DESIGN-VALIDATION-OBLIGATION-RESOLUTION-POLICY-V1 --json"
+      query_type: "lookup"
+      query_text: "MD-RESEARCH-CONTROL-DESIGN-VALIDATION-OBLIGATION-RESOLUTION-POLICY-V1"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-DESIGN-VALIDATION-OBLIGATION-RESOLUTION-POLICY-V1"
+  canonical_inspections:
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-VALIDATION-OBLIGATION-RESOLUTION-POLICY-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/validation_obligation_resolution_policy_v1.md"
+      source_hash: "baea9d8b4b67c4c8bceb73da34dfbc562fe285c087992198295a177058c4cfc2"
+  authority_note: "Generated Obsidian wiki semantic relationship SQLite and .local surfaces are retrieval-only navigation layers and not authority; tracked canonical sources registries and research-control state govern this recovery."
+
+documentation_impact_id: "DI-RT-20260731-003-001"
+claim_boundary_summary: "This completion proves only exact checkpoint-allowlist recovery and protected-byte preservation. It creates no benchmark pass qualifying independent replication Gate E verdict physics promotion proof publication push or completed-derivation authority."
+notes: "The cumulative checkpoint is the only remaining action in this AgentJob. P9-T09 requires exact protected human Gate Chair authority and was not executed."
