@@ -1,0 +1,115 @@
+schema_id: "source_nonlinear_compact_control_v1"
+artifact_id: "FiniteNonlinearCompactControl_v1"
+task_id: "RT-20260730-015"
+job_id: "AJ-RT-20260730-015-001"
+candidate_status: "source-extension data"
+adoption_status: "blocked_adoption_open_continuation"
+source_stage_status: "completed_before_target_comparison"
+source_basis:
+  transition_kernel_object_id: "TEX-V21-P7-T02-SOURCE-MATTER-FINITE-TRANSITION-KERNEL-V1"
+  source_variational_object_id: "TEX-V21-P7-T06-SOURCE-KERNEL-VARIATIONAL-OBJECT-V1"
+  closure_object_id: "TEX-V21-P8-T03-FINITE-SOURCE-CLOSURE-CONSTRAINT-CANDIDATE-V1"
+  static_equation_object_id: "TEX-V21-P8-T04-FINITE-SOURCE-FIELD-EQUATION-IDENTITY-V1"
+  dynamics_stress_object_id: "TEX-V21-P8-T05-FINITE-CONSTRAINT-DYNAMICAL-VIABILITY-STRESS-V1"
+  benchmark_protocol_object_id: "TEX-V21-P9-T01-SOURCE-DERIVED-BENCHMARK-PROTOCOL-V1"
+assumption_delta:
+  - "Declare one three-address enabled-row network with identity and two moves per row."
+  - "Use the inherited uniform finite-row convention, giving P_ij=1/3."
+  - "Declare one dimensionless raw matter token m=(2,0,0) with one-address support."
+  - "Add a positive quartic edge term as proposal-only task-local source-extension data."
+  - "Use the component-shift quotient and a task-local gradient-flow relaxation."
+  - "Do not assign physical matter, distance, time, geometry, or observable semantics."
+finite_carrier:
+  name: "triangle_K3_uniform"
+  source_address_count: 3
+  state_addresses: ["x0", "x1", "x2"]
+  enabled_rows:
+    x0: ["identity_x0", "move_x0_x1", "move_x0_x2"]
+    x1: ["identity_x1", "move_x1_x0", "move_x1_x2"]
+    x2: ["identity_x2", "move_x2_x0", "move_x2_x1"]
+  transition_matrix:
+    - ["1/3", "1/3", "1/3"]
+    - ["1/3", "1/3", "1/3"]
+    - ["1/3", "1/3", "1/3"]
+  symmetric_edge_weights:
+    - ["1/3", "1/3", "1/3"]
+    - ["1/3", "1/3", "1/3"]
+    - ["1/3", "1/3", "1/3"]
+  laplacian:
+    - ["2/3", "-1/3", "-1/3"]
+    - ["-1/3", "2/3", "-1/3"]
+    - ["-1/3", "-1/3", "2/3"]
+  quotient_constraint: "h0+h1+h2=0"
+  quotient_dimension: 2
+  laplacian_quotient_eigenvalues: [1, 1]
+compact_source:
+  raw_matter_token: [2, 0, 0]
+  raw_support: ["x0"]
+  raw_support_cardinality: 1
+  balanced_source_definition: "rho=Lm"
+  balanced_source: ["4/3", "-2/3", "-2/3"]
+  balanced_source_sum: "0"
+  physical_matter_identified: false
+nonlinear_action:
+  status: "proposal-only"
+  equation: "S_NL=1/2 sum_{i<j} C_ij(h_i-h_j)^2 + 1/4 sum_{i<j} C_ij(h_i-h_j)^4 - rho^T h"
+  euler_residual: "E_i=sum_{j!=i} C_ij[(h_i-h_j)+(h_i-h_j)^3]-rho_i"
+  quartic_coefficient: "1"
+  target_selected_coefficient: false
+  canonical_source_law: false
+exact_solution:
+  h_star: ["2/3", "-1/3", "-1/3"]
+  quotient_sum: "0"
+  oriented_edge_differences:
+    h0_minus_h1: "1"
+    h0_minus_h2: "1"
+    h1_minus_h2: "0"
+  residual: ["0", "0", "0"]
+  hessian_quotient_eigenpairs:
+    - vector: [2, -1, -1]
+      eigenvalue: 4
+    - vector: [0, 1, -1]
+      eigenvalue: 2
+  uniqueness_basis: "strict convexity on the component-shift quotient"
+formal_exterior:
+  exterior_addresses: ["x1", "x2"]
+  values: ["-1/3", "-1/3"]
+  response_difference_from_supported_address: ["1", "1"]
+  physical_exterior_field_identified: false
+conservation:
+  edge_flux: "J_ij=C_ij[(h_i-h_j)+(h_i-h_j)^3]"
+  antisymmetric: true
+  off_shell_total_residual_sum: "0"
+  cut_identity_exact: true
+  physical_stress_energy_conservation_identified: false
+constraint_propagation:
+  relaxation_equation: "dh/dlambda=-E(h;m)"
+  relaxation_parameter_physical_time: false
+  zero_sum_derivative: "0"
+  lyapunov_identity: "dS_NL/dlambda=-||E||^2"
+  symmetry_reduced_equation: "dd/dlambda=2-d-d^3"
+  initial_d: "0"
+  exact_equilibrium_d: "1"
+  explicit_euler:
+    step: "1/20"
+    iterations: 200
+    final_d: "0.99999999999999999987666791480012585935095840400734"
+    absolute_error_upper_bound: "1.3e-19"
+    zero_sum_constraint_max_residual: "0"
+source_conclusions:
+  nonlinear_case_solved_exactly: true
+  finite_conservation_identity_exact: true
+  quotient_constraint_propagates: true
+  model_to_world_map_selected: false
+  physical_compact_source_selected: false
+  physical_exterior_geometry_selected: false
+  obstruction_id: "OBST-P9T07-NONLINEAR-COMPACT-SOURCE-MODEL-TO-WORLD-NONSELECTION-001"
+authority_limits:
+  canonical_ontology_modified: false
+  source_law_adopted_or_rejected: false
+  physical_matter_or_compact_object_established: false
+  target_equation_or_solution_used_as_source_premise: false
+  benchmark_pass_count: 0
+  physics_promotion_authorized: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false

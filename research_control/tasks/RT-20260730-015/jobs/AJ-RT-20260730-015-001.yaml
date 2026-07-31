@@ -1,0 +1,401 @@
+job_id: "AJ-RT-20260730-015-001"
+task_id: "RT-20260730-015"
+decision_id: "DDR-20260730-015"
+role_id: "candidate-constructor"
+role_version: "0.2.0"
+execution_role_ref: "candidate-constructor@0.2.0--RT-20260730-015"
+status: "completed"
+validation_status: "PASS"
+requires_human_gate: false
+created_at: "2026-07-31T06:09:14Z"
+started_at: "2026-07-31T06:09:14Z"
+completed_at: "2026-07-31T06:09:14Z"
+completion_path: "research_control/tasks/RT-20260730-015/jobs/completions/AJC-AJ-RT-20260730-015-001.yaml"
+objective: "Execute only v21 P9-T07 by constructing and solving one source-side nonlinear compact-token case, verifying conservation and constraint propagation, and returning a precise physical obstruction where no source-derived model-to-world map exists."
+target_derivation_milestone: "benchmark_promotion"
+milestone_burden: "Move beyond linear and homogeneous controls."
+route_label: "benchmark-recovery-packet"
+route_reason: "The checkpointed recovery predecessor 194b25d5, handoff-0921, v21 plan, and immutable generation 184 select exactly one P9-T07 Candidate Constructor packet."
+immutable_route_sha256: "dd89623e3a35394545b410ed5435cf2f4623d548ba831609560a55708c724205"
+dependency_checkpoint_commit: "194b25d517d5caac3b3e24278bd36fe6e826ca54"
+plan_task_id: "P9-T07"
+recommendation_ids:
+  - "V21-R25"
+  - "V21-R27"
+  - "V21-R28"
+  - "V21-R29"
+source_extension_classification_required: true
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 184
+  passes_consumed: 167
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:184"
+  handoff_token: "f29cf41c66d8743ece54f2453a7ab548a9c5f74e4534e1ac"
+  relay_claim_token: "486d1e09d7b4979af7985f6e611d8657b0b2fe5ba5aa07fc"
+  route_work_item_id: "P9-T07"
+  route_worker_skill: "continue-research"
+  route_sha256: "dd89623e3a35394545b410ed5435cf2f4623d548ba831609560a55708c724205"
+  route_reason: "resume_research_after_project_system_repair"
+  route_strategy_id: "continue_in_scope_generation_184"
+  route_blocker_fingerprint: "5ec5fa500434a0bc72fbb82088e1dc455cbed03a37a624062f7314f88d98034d"
+  route_before_fingerprint: "5ec5fa500434a0bc72fbb82088e1dc455cbed03a37a624062f7314f88d98034d"
+  route_evidence_sha256es:
+    - "5ec5fa500434a0bc72fbb82088e1dc455cbed03a37a624062f7314f88d98034d"
+    - "e80392f2871c6489709d3a6843502708df03d300685445ae64cb2813ab8d2fb8"
+    - "f6ac729e49ece89001e3bcebe4474d2b194a0abf8608d879d1c5572a1b56be92"
+  worker_skill: "continue-research"
+  worker_invocation_count: 1
+
+mathematical_decisiveness_contract:
+  contract_path: "research_control/design/mathematical_decisiveness_completion_contract.md"
+  schema_path: ".agents/schemas/PHYSICS_COMPLETION_DECISIVENESS_SCHEMA.md"
+  enforcement_mode: "hard_failure"
+  active_after: "2026-06-21T02:32:39Z"
+
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "physics"
+  payload_type: "candidate_construction"
+  candidate_family: "FiniteNonlinearCompactControl_v1"
+  assumption_delta:
+    - "Hold the P9-T01 protocol, P9-T02 through P9-T06 INCONCLUSIVE outcomes, and zero benchmark passes fixed."
+    - "Declare one three-address enabled-row network with identity and two moves per row under the inherited uniform-row convention."
+    - "Declare one dimensionless one-address raw token m=(2,0,0) and use rho=Lm as balanced forcing."
+    - "Add one positive quartic edge term solely as proposal-only task-local source-extension data."
+    - "Use the inherited component-shift quotient and a task-local gradient-flow relaxation without physical time semantics."
+    - "Admit no target equation, compact-source solution, metric ansatz, mass-radius relation, horizon condition, tolerance, or desired agreement as a source premise."
+  materiality_basis: "P9-T02 through P9-T06 tested null, weak-field, causal/free-fall, cosmology, and radiative burdens. This packet executes the distinct nonlinear conservation, constraint-propagation, and compact-source burden with a new exact quartic finite solution and proof."
+  payload_details:
+    candidate_id: "FiniteNonlinearCompactControl_v1"
+    candidate_kind: "finite_nonlinear_compact_token_quartic_edge_control"
+    result_type: "precise_obstruction"
+    theorem_id: "P9T07-THM-FINITE-NONLINEAR-COMPACT-CONTROL-001"
+    obstruction_id: "OBST-P9T07-NONLINEAR-COMPACT-SOURCE-MODEL-TO-WORLD-NONSELECTION-001"
+    benchmark_case_outcome: "INCONCLUSIVE"
+    secondary_label: "FORMAL_ANALOGY"
+  source_basis:
+    - "TEX-V21-P7-T02-SOURCE-MATTER-FINITE-TRANSITION-KERNEL-V1"
+    - "TEX-V21-P7-T06-SOURCE-KERNEL-VARIATIONAL-OBJECT-V1"
+    - "TEX-V21-P8-T03-FINITE-SOURCE-CLOSURE-CONSTRAINT-CANDIDATE-V1"
+    - "TEX-V21-P8-T04-FINITE-SOURCE-FIELD-EQUATION-IDENTITY-V1"
+    - "TEX-V21-P8-T05-FINITE-CONSTRAINT-DYNAMICAL-VIABILITY-STRESS-V1"
+    - "TEX-V21-P9-T01-SOURCE-DERIVED-BENCHMARK-PROTOCOL-V1"
+    - "research_control/tasks/RT-20260730-013/jobs/completions/AJC-AJ-RT-20260730-013-001.yaml"
+  expected_artifact_paths:
+    - "research_control/tasks/RT-20260730-015/artifacts/finite_nonlinear_compact_source_nonselection_v1.tex"
+    - "research_control/tasks/RT-20260730-015/artifacts/source_nonlinear_compact_control_v1.yaml"
+    - "research_control/tasks/RT-20260730-015/artifacts/p9_t07_nonlinear_compact_case_v1.yaml"
+    - "research_control/tasks/RT-20260730-015/artifacts/p9_t07_constraint_propagation_receipt_v1.json"
+    - "research_control/tasks/RT-20260730-015/artifacts/p9_t07_nonlinear_compact_receipt_v1.json"
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+
+family_freeze_admission:
+  schema_id: "family_freeze_route_admission_v1"
+  policy_id: "family_freeze_reopening_policy_v1"
+  route_id: "v21_p9_t07_finite_nonlinear_compact_control_v1"
+  family_id: "FiniteNonlinearCompactControl_v1"
+  family_identity_sha256: "8f66f7bb5ba422c378a2f8d7f5b74efbf02e6f3c626dbe716b2e509943572ec2"
+  assumption_sha256es:
+    - "88ef097bf712ad115e9af62cc18a8b3eabb12f8545350f714ad065f702471007"
+    - "65ac095f5cdf4c2e319365c8b0e024d031b19d9fc2b8102e59997afa1e8f9129"
+    - "386769e40167c35604625ef7250c027dc1712c82db4790e2895e0b31ac3cfbf7"
+    - "82dd10d8e91be3781ca4f21e7f9fbf2ce1a9108ae7191db22fed9dfe6086f2fa"
+    - "12a1cfae87cd673241aefe88144ab974b49fc3bad284a81baff90b2e806d5168"
+    - "ddd39764c3b6f86e86574458b885e90271a2b044d1d141ae931723e80599acb1"
+    - "0ebe9ab415b60e01b8daf8fb235d18314c8ca52b4db2a60c86e99c1abb10ed70"
+  route_kind: "candidate_construction"
+  detected_match_basis: []
+  reopening:
+    requested: false
+    class: "none"
+  distinct_branch:
+    branch_identity: "first_instantiated_finite_nonlinear_compact_token_quartic_edge_control"
+    material_difference_basis: "The packet executes nonlinear solution, conservation, constraint-propagation, and compact-source burdens rather than rerunning prior null, weak-field, causal/free-fall, cosmology, or radiative cases."
+    reconstructs_frozen_candidate: false
+    expected_artifact_paths:
+      - "research_control/tasks/RT-20260730-015/artifacts/finite_nonlinear_compact_source_nonselection_v1.tex"
+      - "research_control/tasks/RT-20260730-015/artifacts/p9_t07_nonlinear_compact_case_v1.yaml"
+  authority_limits:
+    local_family_freeze_preserved: true
+    global_no_go_claimed: false
+    automatic_candidate_adoption: false
+    theorem_truth_inferred: false
+    ontology_modified: false
+    physics_promotion_authorized: false
+
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  expected_durable_outputs:
+    physics:
+      - "one exact finite nonlinear compact-token source construction and solution"
+      - "one exact conservation and constraint-propagation receipt"
+      - "one precise INCONCLUSIVE physical compact-source case disposition"
+    project_system:
+      - "one task-local deterministic validator and compact receipt"
+      - "provenance, seal, exposure, comparison, and parent-child records"
+      - "standard control records and generated-memory synchronization"
+  acceptance_criteria:
+    physics:
+      - "the uniform carrier, balanced source, exact residual, and quotient Hessian reproduce"
+      - "antisymmetric flux conservation and zero-sum constraint propagation reproduce"
+      - "the relaxation converges under the stated reproducible method"
+      - "missing physical maps produce INCONCLUSIVE rather than inferred compact-source recovery"
+      - "zero target-informed reruns and benchmark passes"
+    project_system:
+      - "source-hash, math, DAG, seal, exposure, and parent-child checks pass"
+      - "claim-language and documentation-impact gates pass"
+      - "one governed checkpoint records the bounded transaction"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: false
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0921"
+  source_handoff_path: "research_control/handoffs/handoff-0921.yaml"
+  source_handoff_sha256: "e80392f2871c6489709d3a6843502708df03d300685445ae64cb2813ab8d2fb8"
+  selected_plan_task_id: "P9-T07"
+  guard_outcome: "below_threshold"
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  parent:
+    execution_unit_id: "parent"
+    perspective: "physicist_mathematician_philosopher"
+    responsibilities:
+      - "hold the protocol and prior case dispositions fixed"
+      - "fuse exact nonlinear finite mathematics with model-to-world boundaries"
+      - "resolve formal compactness and conservation versus physical semantics"
+      - "classify the case without target-informed repair"
+  children:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260730-015/artifacts/child_phys_math_p9_t07_nonlinear_compact.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260730-015/artifacts/child_phys_phil_p9_t07_nonlinear_compact.yaml"
+      status: "completed"
+  conflict_policy:
+    review_path: "research_control/tasks/RT-20260730-015/artifacts/parent_conflict_review_p9_t07_nonlinear_compact.yaml"
+    max_resolution_rounds: 2
+    require_parallel_child_revision: true
+    unresolved_conflict_status: "blocked"
+  fusion_policy:
+    fusion_notes_path: "research_control/tasks/RT-20260730-015/artifacts/parent_fusion_notes_p9_t07_nonlinear_compact.md"
+    fused_output_path: "research_control/tasks/RT-20260730-015/artifacts/finite_nonlinear_compact_source_nonselection_v1.tex"
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+    final_output_replaces_old_single_role_artifact: true
+  outer_agentjob_count: 1
+  child_agentjob_count: 0
+  subagent_count: 0
+  rationale: "The required physics decomposition is represented by two bounded internal perspectives under one outer AgentJob; no child AgentJob or delegated subagent was created."
+
+memory_preflight:
+  preflight_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1099
+    relationship_count: 5561
+    semantic_extract_count: 1099
+    vault_note_count: 1099
+  refresh_needed: true
+  refresh_performed: true
+  refresh_command: ".venv/bin/python .codex/skills/obsidian-wiki/scripts/sync_obsidian_vault.py"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search 'nonlinear consistency conservation constraint propagation compact source' --limit 10 --json"
+      query_type: "search"
+      query_text: "nonlinear consistency conservation constraint propagation compact source"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+    - object_id: "TEX-V21-P7-T02-SOURCE-MATTER-FINITE-TRANSITION-KERNEL-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_candidate_v1.tex"
+      source_hash: "65ac095f5cdf4c2e319365c8b0e024d031b19d9fc2b8102e59997afa1e8f9129"
+    - object_id: "TEX-V21-P7-T06-SOURCE-KERNEL-VARIATIONAL-OBJECT-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260728-005/artifacts/source_kernel_variational_object_candidate_v1.tex"
+      source_hash: "386769e40167c35604625ef7250c027dc1712c82db4790e2895e0b31ac3cfbf7"
+    - object_id: "TEX-V21-P8-T03-FINITE-SOURCE-CLOSURE-CONSTRAINT-CANDIDATE-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_constraint_candidate_v1.tex"
+      source_hash: "82dd10d8e91be3781ca4f21e7f9fbf2ce1a9108ae7191db22fed9dfe6086f2fa"
+    - object_id: "TEX-V21-P8-T04-FINITE-SOURCE-FIELD-EQUATION-IDENTITY-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260729-007/artifacts/finite_source_field_equation_identity_v1.tex"
+      source_hash: "12a1cfae87cd673241aefe88144ab974b49fc3bad284a81baff90b2e806d5168"
+    - object_id: "TEX-V21-P8-T05-FINITE-CONSTRAINT-DYNAMICAL-VIABILITY-STRESS-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260729-008/artifacts/finite_constraint_dynamical_viability_stress_v1.tex"
+      source_hash: "ddd39764c3b6f86e86574458b885e90271a2b044d1d141ae931723e80599acb1"
+    - object_id: "TEX-V21-P9-T01-SOURCE-DERIVED-BENCHMARK-PROTOCOL-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260729-012/artifacts/source_derived_benchmark_protocol_v1.tex"
+      source_hash: "88ef097bf712ad115e9af62cc18a8b3eabb12f8545350f714ad065f702471007"
+  authority_note: "Obsidian, wiki notes, semantic extracts, generated task indexes, and .local are retrieval layers only and not authority; registered source files and tracked control records were reopened."
+
+allowed_read_paths:
+  - "SOUL.md"
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".agents/roles/**"
+  - ".agents/schemas/**"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  - "ontology/tex/**"
+  - "registries/**"
+  - "research_control/**"
+allowed_write_paths:
+  - "research_control/tasks/RT-20260730-015/**"
+  - "research_control/handoffs/handoff-0922.yaml"
+  - "research_control/handoffs/handoff-0922.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "registries/**"
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/tex/**"
+allowed_generated_paths:
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/tex/**"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+forbidden_paths:
+  - "ontology/tex/**"
+  - "implementations_plans/**"
+  - ".codex/skills/**"
+  - ".agents/roles/**"
+allowed_source_classes:
+  - "registered canonical source"
+  - "registered draft/control source"
+  - "tracked research-control record"
+forbidden_source_classes:
+  - "benchmark_promotion"
+  - "candidate_reconstruction"
+  - "completed_derivation_claim"
+  - "gate_chair_verdict"
+  - "generated_derivative_authority"
+  - "global_theory_rejection"
+  - "canonical_ontology_write"
+  - "target_equation_compact_source_solution_metric_ansatz_mass_radius_horizon_or_desired_agreement_as_source_premise"
+  - "target_informed_source_carrier_token_coefficient_boundary_solution_tolerance_or_repair"
+  - "source_law_or_nonlinear_action_adoption_or_rejection"
+  - "physical_matter_location_radius_density_compactness_time_constraint_conservation_metric_tensor_horizon_or_observable_identification"
+  - "independent_reproduction_claim"
+  - "Gate_D_change"
+  - "Gate_E_verdict"
+  - "effective_geometry_Einstein_equations_or_exact_GR_recovery"
+  - "benchmark_pass_or_promotion"
+  - "global_no_go_or_future_extension_impossibility"
+  - "publication_push_or_completed_derivation"
+approved_commands:
+  - ".venv/bin/python research_control/tasks/RT-20260730-015/artifacts/validate_p9_t07_nonlinear_compact.py --check --json"
+  - "scratch TeX compilation"
+  - "standard render, memory bootstrap, affected validation, and governed checkpoint commands"
+required_validators:
+  - "p9_t07_task_local_validator"
+  - "tex_compile"
+  - "memory_core"
+  - "documentation_impact"
+  - "research_control_diff"
+  - "claim_language_changed"
+  - "task_taxonomy"
+  - "git_diff_check"
+expected_outputs:
+  - "research_control/tasks/RT-20260730-015/artifacts/finite_nonlinear_compact_source_nonselection_v1.tex"
+  - "research_control/tasks/RT-20260730-015/artifacts/p9_t07_nonlinear_compact_case_v1.yaml"
+  - "research_control/tasks/RT-20260730-015/artifacts/p9_t07_constraint_propagation_receipt_v1.json"
+  - "research_control/tasks/RT-20260730-015/artifacts/p9_t07_nonlinear_compact_receipt_v1.json"
+claim_boundary: "CB-V21-P9-T07-NONLINEAR-COMPACT-SOURCE-NONSELECTION-001"
+documentation_impact_id: "DI-RT-20260730-015-001"
+completion_id: "AJC-AJ-RT-20260730-015-001"
+checkpoint_outcome:
+  required: true
+  invocation_count: 0
+  committed: false
+  commit_sha: ""
+  push_performed: false
+stop_conditions:
+  - "repository, branch, dependency checkpoint, goal lease, route, or reasoning-effort mismatch"
+  - "unexpected dirty state or write-path conflict"
+  - "target-informed source selection or scientific source mutation after finalized comparison"
+  - "unresolved parent-child conflict"
+  - "validation or checkpoint failure"
+  - "protected authority expansion"

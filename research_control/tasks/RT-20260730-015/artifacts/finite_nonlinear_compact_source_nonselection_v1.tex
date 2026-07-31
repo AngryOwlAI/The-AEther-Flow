@@ -1,0 +1,207 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[T1]{fontenc}
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\newcommand{\one}{\mathbf 1}
+\newcommand{\Qspace}{\mathcal Q}
+
+\title{A Finite Nonlinear Compact-Source Control}
+\author{The \AE ther-Flow Research Project}
+\date{2026-07-30}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This draft/control source-stage note executes one bounded P9-T07 nonlinear
+case without importing a target compact-source solution.  A source-declared
+three-state transition kernel and a one-address matter token define a
+proposal-only quartic edge action.  The nonlinear Euler equation has an exact
+unique solution on the component-shift quotient.  Antisymmetric edge fluxes
+give exact finite conservation, and a task-local gradient-flow update
+propagates the zero-sum constraint while decreasing the action.  The formal
+exterior values are reproducible, but the current source package supplies no
+map from state addresses, matter tokens, quotient fields, or update parameter
+to physical matter, spacetime, exterior geometry, or observables.  The
+construction is source-extension data, not an adopted law or physical
+compact-source recovery.
+\end{abstract}
+
+\section{Source-declared finite carrier and compact token}
+
+Let \(X=\{x_0,x_1,x_2\}\) be three addresses in one fixed source sector.
+Every enabled row contains the identity record and the two moves to the other
+addresses.  The P7 uniform-row convention therefore gives
+\[
+ P=C=\frac13
+ \begin{pmatrix}
+ 1&1&1\\
+ 1&1&1\\
+ 1&1&1
+ \end{pmatrix},
+ \qquad
+ L=I-P=
+ \frac13
+ \begin{pmatrix}
+ 2&-1&-1\\
+ -1&2&-1\\
+ -1&-1&2
+ \end{pmatrix}.
+ \tag{1}
+\]
+This triangular enabled-row network is a task-local finite fixture.  Its
+selection is not derived by the current ontology.
+
+Define the raw matter token
+\[
+ m=(2,0,0)^{\mathsf T}.
+ \tag{2}
+\]
+Its support is the single address \(\{x_0\}\).  The component-shift quotient
+\(\Qspace=\mathbb R^3/\operatorname{span}\{\one\}\) uses the zero-sum
+representative, and the balanced source is
+\[
+ \rho=Lm=
+ \left(\frac43,-\frac23,-\frac23\right)^{\mathsf T},
+ \qquad \one^{\mathsf T}\rho=0.
+ \tag{3}
+\]
+Equations (1)--(3) are fixed before any target comparison.  The number \(2\)
+in (2) is a dimensionless exact fixture chosen to make nonlinear effects
+nonzero; it is not a mass, compactness, radius, or fitted target parameter.
+
+\begin{definition}[Proposal-only nonlinear edge action]
+For the zero-sum representative \(h\in\Qspace\), define
+\[
+ S_{\mathrm{NL}}(h;m)
+ =\frac12\sum_{i<j}C_{ij}(h_i-h_j)^2
+ +\frac14\sum_{i<j}C_{ij}(h_i-h_j)^4
+ -\rho^{\mathsf T}h .
+ \tag{4}
+\]
+Its Euler residual is
+\[
+ E_i(h;m)=
+ \sum_{j\ne i}C_{ij}
+ \bigl[(h_i-h_j)+(h_i-h_j)^3\bigr]-\rho_i .
+ \tag{5}
+\]
+The quartic term and the interpretation of (4) as a task-local source
+extension are stipulated for this bounded control.  They are not canonical
+ontology and are not adopted as a physical action.
+\end{definition}
+
+\section{Exact nonlinear solution}
+
+\begin{theorem}[Exact finite compact-token solution]
+\label{thm:exact-solution}
+For the source (2), equation \(E(h;m)=0\) has the exact zero-sum solution
+\[
+ h_\star=
+ \left(\frac23,-\frac13,-\frac13\right)^{\mathsf T}.
+ \tag{6}
+\]
+It is the unique solution in \(\Qspace\).
+\end{theorem}
+
+\begin{proof}
+At (6), the three oriented edge differences are
+\(h_0-h_1=1\), \(h_0-h_2=1\), and \(h_1-h_2=0\).  Hence (5) gives
+\[
+ E(h_\star;m)=
+ \left(\frac13(2+2)-\frac43,\,
+       -\frac13(2)+\frac23,\,
+       -\frac13(2)+\frac23\right)^{\mathsf T}=0.
+\]
+The Hessian is the weighted graph Laplacian whose edge weights are
+\[
+ C_{ij}\bigl[1+3(h_i-h_j)^2\bigr]>0 .
+\]
+It is positive definite on \(\Qspace\) for every \(h\), so (4) is strictly
+convex on \(\Qspace\).  At \(h_\star\), the quotient eigenvectors
+\((2,-1,-1)\) and \((0,1,-1)\) have Hessian eigenvalues \(4\) and \(2\),
+respectively.  Thus the stationary point is unique on the quotient.
+\end{proof}
+
+The formal exterior addresses \(x_1,x_2\) have
+\(h_\star=-1/3\), while their response difference from the supported address
+is \(1\).  These are exact finite source outputs.  They are not a physical
+exterior potential, metric coefficient, redshift, horizon, or observable.
+
+\section{Conservation and constraint propagation}
+
+Define the antisymmetric edge flux
+\[
+ J_{ij}(h)=C_{ij}
+ \bigl[(h_i-h_j)+(h_i-h_j)^3\bigr],
+ \qquad J_{ji}=-J_{ij}.
+ \tag{7}
+\]
+Then \(E_i=\sum_{j\ne i}J_{ij}-\rho_i\), and
+\[
+ \sum_iE_i=\sum_{i<j}(J_{ij}+J_{ji})-\sum_i\rho_i=0
+ \tag{8}
+\]
+off shell.  More generally, for any \(A\subseteq X\), summing (5) over
+\(A\) cancels all internal edges and leaves only the oriented cut flux minus
+the source in \(A\).  This is exact finite bookkeeping conservation.  It is
+not yet a physical stress-energy or covariant conservation law.
+
+For a reproducible solution method, introduce the task-local relaxation
+parameter \(\lambda\) and gradient flow
+\[
+ \frac{dh}{d\lambda}=-E(h;m).
+ \tag{9}
+\]
+Equation (8) implies
+\[
+ \frac{d}{d\lambda}\one^{\mathsf T}h=0,
+ \qquad
+ \frac{dS_{\mathrm{NL}}}{d\lambda}=-\lVert E\rVert^2\leq0.
+ \tag{10}
+\]
+Thus the zero-sum constraint propagates exactly and the action is a Lyapunov
+function.  In the symmetry-reduced sector
+\[
+ h(\lambda)=
+ \left(\frac{2d(\lambda)}3,-\frac{d(\lambda)}3,
+       -\frac{d(\lambda)}3\right)^{\mathsf T},
+\]
+equation (9) becomes
+\[
+ \frac{dd}{d\lambda}=2-d-d^3,\qquad d(0)=0.
+ \tag{11}
+\]
+For \(0\leq d<1\), the right-hand side is positive, and its only nonnegative
+zero is \(d=1\).  Therefore (11) converges monotonically to (6).  Explicit
+Euler with step \(1/20\) preserves the zero-sum representative and reaches
+\[
+ d_{200}=0.99999999999999999987666791480012585935095840400734,
+\]
+with absolute error below \(1.3\times10^{-19}\).  The update parameter
+\(\lambda\) is not physical time.
+
+\section{Exact scope of the result}
+
+The new mathematical payload is an exact nonlinear finite solution, a
+strict-convexity uniqueness result, an antisymmetric-flux identity, and a
+constraint-propagating relaxation.  The failed object is a total
+source-derived map from this record to physical matter density, physical
+distance and boundary conditions, a tensor or metric exterior field,
+covariant constraints, physical time evolution, and a calibrated compact
+source observable.  Its absence is recorded as
+\[
+\texttt{OBST-P9T07-NONLINEAR-COMPACT-SOURCE-MODEL-TO-WORLD-NONSELECTION-001}.
+\]
+This is a scoped current-source obstruction with
+\texttt{blocked\_adoption\_open\_continuation} status.  It does not say that a
+conservative source extension is impossible.  No canonical ontology or
+source law is adopted or rejected.  No physical compact object, exterior
+geometry, singularity, horizon, Einstein equation, exact-GR recovery,
+benchmark promotion, Gate E verdict, proof, publication, push, global no-go,
+future-extension impossibility, or completed derivation follows.
+
+\end{document}

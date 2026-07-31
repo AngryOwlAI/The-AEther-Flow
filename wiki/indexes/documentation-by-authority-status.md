@@ -92,6 +92,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-V21-P9-T04-PARENT-FUSION-CAUSAL-FREEFALL-V1` `research_control/tasks/RT-20260730-011/artifacts/parent_fusion_notes_p9_t04_causal_freefall.md`
 - `MD-V21-P9-T05-PARENT-FUSION-SOURCE-COSMOLOGY-V1` `research_control/tasks/RT-20260730-012/artifacts/parent_fusion_notes_p9_t05_cosmology.md`
 - `MD-V21-P9-T06-PARENT-FUSION-RADIATIVE-NONSELECTION-V1` `research_control/tasks/RT-20260730-013/artifacts/parent_fusion_notes_p9_t06_radiative.md`
+- `MD-V21-P9-T07-PARENT-FUSION-NONLINEAR-COMPACT-V1` `research_control/tasks/RT-20260730-015/artifacts/parent_fusion_notes_p9_t07_nonlinear_compact.md`
 
 ## explanatory_noncanonical
 
@@ -797,6 +798,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-V21-P9-T04-PARENT-FUSION-CAUSAL-FREEFALL-V1` `wiki/markdown/md-v21-p9-t04-parent-fusion-causal-freefall-v1.md`
 - `WIKI-MD-V21-P9-T05-PARENT-FUSION-SOURCE-COSMOLOGY-V1` `wiki/markdown/md-v21-p9-t05-parent-fusion-source-cosmology-v1.md`
 - `WIKI-MD-V21-P9-T06-PARENT-FUSION-RADIATIVE-NONSELECTION-V1` `wiki/markdown/md-v21-p9-t06-parent-fusion-radiative-nonselection-v1.md`
+- `WIKI-MD-V21-P9-T07-PARENT-FUSION-NONLINEAR-COMPACT-V1` `wiki/markdown/md-v21-p9-t07-parent-fusion-nonlinear-compact-v1.md`
 - `WIKI-MD-VALIDATOR-OPERATOR-WORKFLOW-PUBLICATION-BRIEF` `wiki/markdown/md-validator-operator-workflow-publication-brief.md`
 
 ## project_control

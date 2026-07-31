@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260730-014`
-- Latest handoff: `handoff-0921`
-- Current status: `handoff_0920_markdown_identity_recovery_pass_ready_for_checkpoint`
+- Active task: `RT-20260730-015`
+- Latest handoff: `handoff-0922`
+- Current status: `exact_nonlinear_source_solution_physical_compact_source_model_to_world_obstructed_case_inconclusive_ready_for_checkpoint`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260730-014`
-- Latest research handoff: `handoff-0921`
-- Latest research next action: Run one governed checkpoint for AJ-RT-20260730-014-001. Only after it commits may one fresh bounded P9-T07 Candidate Constructor packet execute the distinct source-derived nonlinear compact-source case.
+- Latest research task: `RT-20260730-015`
+- Latest research handoff: `handoff-0922`
+- Latest research next action: Invoke the one governed checkpoint for AJ-RT-20260730-015-001. After that commit, use one fresh bounded External Red Team Reviewer packet for P9-T08 to audit P9-T02 through P9-T07 for target import, assumption drift, shared-method errors, and actual independent-replication status while preserving all six INCONCLUSIVE dispositions and zero benchmark passes.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p9_t07_nonlinear_conservation_compact_source_after_p9_t06_inconclusive`
-- Role family: `candidate-constructor@0.2.0`
+- Route ID: `v21_p9_t08_full_benchmark_audit_external_replication_after_p9_t07_inconclusive`
+- Role family: `external-red-team-reviewer@0.1.0`
 - Target milestone: `benchmark_promotion`
-- Milestone burden: Move beyond linear and homogeneous controls.
+- Milestone burden: Produce the evidence package required for any protected benchmark verdict.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `14d5d37cbf58a9d1829d5f45165083f5eb85b075c4dfcbdcad7efc7d2fb90be5`
-- JSON SHA-256: `1b2b2ede49e8420052a8b6e0cd6845233dd5ac82ddf95f698faa08cc8fce2e0f`
+- YAML SHA-256: `a605343d98bf007dbd68dae243ea376fe98a259bbe5e32ba2f8df10bfe9b7407`
+- JSON SHA-256: `d3154c2b16555022ae119ce2da3bc251525ed5b6636dc6e4804750c3e04e785a`
 
 ## Authority Warning
 

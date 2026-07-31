@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-07-30T22:03:48Z`
-- Source fingerprint: `2d8c0ecf9c5b32be2c70bc4fab4c34303e4e423be5d4789f038173d277a52831`
-- Nodes: `23642`
-- Edges: `75049`
+- Generated from tracked state as of: `2026-07-31T06:09:14Z`
+- Source fingerprint: `fe8748a55d70093f74f6e21a5e996577b8c7647e48b175f87070bda9d64142e9`
+- Nodes: `23839`
+- Edges: `75312`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 1157 |
+| `completion_yaml` | 1162 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 917 |
+| `handoff_yaml` | 922 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,32 +33,32 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 9 |
-| `agent_job` | `support_only` | 1157 |
+| `agent_job` | `support_only` | 1162 |
 | `artifact` | `canonical_source` | 87 |
-| `artifact` | `support_only` | 12004 |
-| `blocked_burden` | `blocked` | 4810 |
-| `claim_boundary` | `support_only` | 1114 |
-| `draft_control_candidate` | `draft_control` | 785 |
+| `artifact` | `support_only` | 12107 |
+| `blocked_burden` | `blocked` | 4857 |
+| `claim_boundary` | `support_only` | 1119 |
+| `draft_control_candidate` | `draft_control` | 798 |
 | `draft_control_candidate` | `proposal_only` | 149 |
 | `draft_control_candidate` | `science_draft` | 90 |
-| `frozen_negative` | `frozen_negative` | 147 |
+| `frozen_negative` | `frozen_negative` | 148 |
 | `gate_chair_verdict` | `human_gated` | 34 |
-| `handoff` | `support_only` | 917 |
-| `human_gated_object` | `human_gated` | 572 |
+| `handoff` | `support_only` | 922 |
+| `human_gated_object` | `human_gated` | 577 |
 | `ledger_row` | `accepted_scoped` | 6 |
 | `ledger_row` | `blocked` | 3 |
 | `ledger_row` | `frozen_negative` | 1 |
 | `ledger_row` | `human_gated` | 1 |
 | `ledger_row` | `science_draft` | 4 |
-| `obstruction` | `blocked` | 100 |
+| `obstruction` | `blocked` | 104 |
 | `obstruction` | `rejected` | 4 |
 | `source_extension_evidence_precondition` | `source_extension_evidence` | 40 |
 | `source_ontology_object` | `canonical_source` | 27 |
 | `source_ontology_object` | `rejected` | 50 |
-| `source_ontology_object` | `support_only` | 374 |
+| `source_ontology_object` | `support_only` | 378 |
 | `task` | `human_gated` | 29 |
 | `task` | `science_draft` | 33 |
-| `task` | `support_only` | 1095 |
+| `task` | `support_only` | 1100 |
 
 ## Frontier Table
 
@@ -73,7 +73,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | SEI_src^{cand} | `object:sei_src_cand` | `draft_control_candidate` | `draft_control` | Required frontier object exposed in completion text: SEI_src^{cand}. |
 | matter-coupling burden | `object:matter_coupling_burden` | `ledger_row` | `accepted_scoped` | P7-T08 changes the exact package's project-level physical and interpretive status by explicit protected human constitutive postulate. The layer-status cells ret |
 | Einstein-equations burden | `object:einstein_equations_burden` | `blocked_burden` | `blocked` | P8-T07 consumes exact protected authority and issues NOT_READY_EINSTEIN_SECTOR_DERIVATION_REQUIREMENTS_UNMET; four criteria pass only in narrow finite or author |
-| benchmark-promotion burden | `object:benchmark_promotion_burden` | `human_gated_object` | `human_gated` | P9-T02 and P9-T03 execute two sealed source stages and both physical cases are INCONCLUSIVE with zero benchmark passes. P9-T03 proves an exact finite operationa |
+| benchmark-promotion burden | `object:benchmark_promotion_burden` | `human_gated_object` | `human_gated` | P9-T02 through P9-T07 execute six sealed source stages and all six physical cases are INCONCLUSIVE with zero benchmark passes. P9-T07 adds an exact nonlinear fi |
 | finite toy metric response frozen negative | `ledger:finite_toy_metric_response` | `ledger_row` | `frozen_negative` | explicit-tag-only finite toy route failed tag-removal stress and is frozen locally |
 
 ## Blocked Downstream Claims
@@ -81,6 +81,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Claim node | Summary | Source |
 | --- | --- | --- |
 | `blocked_claim:a4_a9_independent_review_or_gate_d_scientific_repair` | Blocked claim: A4 A9 independent-review or Gate D scientific repair | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:absence_of_source_constant_as_vanishing_physical_vacuum_term` | Blocked claim: absence of source constant as vanishing physical vacuum term | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:acceptance_main_use` | Blocked claim: acceptance main use | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:accepted_bridge_evidence_as_matter_coupling` | Blocked claim: accepted bridge evidence as matter coupling | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:accepted_evidence_as_adoption` | Blocked claim: accepted evidence as adoption | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
@@ -159,13 +160,12 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `blocked_claim:audit_pass_as_future_source_extension_impossibility` | Blocked claim: audit pass as future source-extension impossibility | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:audit_pass_as_g_eff_scope_change` | Blocked claim: audit pass as g_eff scope change | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:audit_pass_as_gate_chair_verdict` | Blocked claim: audit pass as Gate Chair verdict | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:audit_pass_as_global_theory_rejection` | Blocked claim: audit pass as global theory rejection | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 
 ## Route Continuity
 
-- Active task: `RT-20260730-010`
-- Latest handoff: `handoff-0917`
-- Handoff path: `research_control/handoffs/handoff-0917.yaml`
-- Next action: Invoke the one governed checkpoint for AJ-RT-20260730-010-001. After that commit, use one fresh bounded Candidate Constructor packet for P9-T04 to execute the distinct source-only null-propagation, local-inertial, and universal-free-fall case while carrying the P9-T02 and P9-T03 INCONCLUSIVE dispositions and the operational-coupling obstruction.
+- Active task: `RT-20260730-015`
+- Latest handoff: `handoff-0922`
+- Handoff path: `research_control/handoffs/handoff-0922.yaml`
+- Next action: Invoke the one governed checkpoint for AJ-RT-20260730-015-001. After that commit, use one fresh bounded External Red Team Reviewer packet for P9-T08 to audit P9-T02 through P9-T07 for target import, assumption drift, shared-method errors, and actual independent-replication status while preserving all six INCONCLUSIVE dispositions and zero benchmark passes.
 
 This graph is navigational support only; inspect the cited sources before using any claim.

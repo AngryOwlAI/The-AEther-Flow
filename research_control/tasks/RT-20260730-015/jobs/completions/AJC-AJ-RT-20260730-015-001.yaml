@@ -1,0 +1,773 @@
+validation_status: "PASS"
+final_repository_validation_status: "PASS_READY_FOR_CHECKPOINT"
+job_id: "AJ-RT-20260730-015-001"
+completion_id: "AJC-AJ-RT-20260730-015-001"
+task_id: "RT-20260730-015"
+task_type: "v21_p9_t07_nonlinear_conservation_constraint_compact_source_case"
+decision_id: "DDR-20260730-015"
+role_id: "candidate-constructor"
+role_version: "0.2.0"
+execution_role_ref: "candidate-constructor@0.2.0--RT-20260730-015"
+status: "completed"
+created_at: "2026-07-31T06:09:14Z"
+started_at: "2026-07-31T06:09:14Z"
+completed_at: "2026-07-31T06:09:14Z"
+objective: "Execute only v21 P9-T07 by constructing and solving one source-side nonlinear compact-token case, verifying conservation and constraint propagation, and returning a precise physical obstruction where no source-derived model-to-world map exists."
+completion_summary: "P9-T07 constructs a uniform three-state finite carrier, one-address raw token, positive quartic edge action, exact unique nonlinear quotient solution, exact antisymmetric-flux conservation identity, and constraint-preserving relaxation. The current source package selects no physical matter, location, time, covariant constraint, tensor or metric exterior field, calibrated observable, singularity, or horizon map. The physical case is INCONCLUSIVE with secondary FORMAL_ANALOGY, six cumulative inconclusive cases, zero benchmark passes, and no promotion authority."
+objective_result: "exact_nonlinear_source_solution_physical_compact_source_model_to_world_obstruction_case_inconclusive_ready_for_checkpoint"
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 184
+  passes_consumed: 167
+  route_work_item_id: "P9-T07"
+  route_worker_skill: "continue-research"
+  route_sha256: "dd89623e3a35394545b410ed5435cf2f4623d548ba831609560a55708c724205"
+  route_reason: "resume_research_after_project_system_repair"
+  route_strategy_id: "continue_in_scope_generation_184"
+  route_blocker_fingerprint: "5ec5fa500434a0bc72fbb82088e1dc455cbed03a37a624062f7314f88d98034d"
+  route_before_fingerprint: "5ec5fa500434a0bc72fbb82088e1dc455cbed03a37a624062f7314f88d98034d"
+  route_evidence_sha256es:
+    - "5ec5fa500434a0bc72fbb82088e1dc455cbed03a37a624062f7314f88d98034d"
+    - "e80392f2871c6489709d3a6843502708df03d300685445ae64cb2813ab8d2fb8"
+    - "f6ac729e49ece89001e3bcebe4474d2b194a0abf8608d879d1c5572a1b56be92"
+  worker_skill: "continue-research"
+  worker_invocation_count: 1
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:184"
+  handoff_token: "f29cf41c66d8743ece54f2453a7ab548a9c5f74e4534e1ac"
+  relay_claim_token: "486d1e09d7b4979af7985f6e611d8657b0b2fe5ba5aa07fc"
+
+transaction_status: "ready_for_checkpoint"
+result_disposition: "P9_T07_EXACT_NONLINEAR_SOURCE_SOLUTION_PHYSICAL_COMPACT_SOURCE_MODEL_TO_WORLD_OBSTRUCTION_CASE_INCONCLUSIVE_READY_FOR_CHECKPOINT"
+milestone_disposition: "finite_nonlinear_compact_token_control_executed_physical_recovery_open"
+adoption_status: "blocked_adoption_open_continuation"
+checkpoint_commit:
+  required: true
+  attempted: false
+  committed: false
+  commit_sha: ""
+  dependency_checkpoint_commit: "194b25d517d5caac3b3e24278bd36fe6e826ca54"
+  push_authorized: false
+  push_performed: false
+is_physics_task: true
+payload_class: "candidate_construction"
+has_new_mathematical_payload: true
+source_extension_classification_required: true
+external_red_team_finding_requires_integration: false
+physics_promotion_authorized: false
+proof_authority: false
+
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P9"
+  plan_task_id: "P9-T07"
+  work_kind: "benchmark_or_recovery"
+  task_class: "science"
+  expected_result_kind: "completed_or_precisely_blocked"
+  dependency_task_ids:
+    - "P9-T06"
+  dependency_completion_paths:
+    - "research_control/tasks/RT-20260730-013/jobs/completions/AJC-AJ-RT-20260730-013-001.yaml"
+  dependency_checkpoint_commits:
+    - "194b25d517d5caac3b3e24278bd36fe6e826ca54"
+  work_item_status: "completed_ready_for_checkpoint"
+  recommendation_ids:
+    - "V21-R25"
+    - "V21-R27"
+    - "V21-R28"
+    - "V21-R29"
+  recommendation_coverage_role: "direct_implementation"
+  scientific_claims_changed: true
+  scientific_claim_change_scope: "exact finite nonlinear source-extension construction, solution, conservation and constraint-propagation results, plus one precise current-source physical compact-source model-to-world nonselection obstruction"
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  next_dependency_work_item: "P9-T08_after_checkpoint"
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  observed_durable_outputs:
+    physics:
+      - "one exact finite nonlinear compact-token source construction and solution"
+      - "one exact conservation and constraint-propagation receipt"
+      - "one precise INCONCLUSIVE physical compact-source case disposition"
+    project_system:
+      - "one task-local deterministic validator and compact receipt"
+      - "provenance, seal, exposure, comparison, and parent-child records"
+      - "standard control records and generated-memory synchronization"
+  accepted_criteria:
+    physics:
+      - "the uniform carrier, balanced source, exact residual, and quotient Hessian reproduce"
+      - "antisymmetric flux conservation and zero-sum constraint propagation reproduce"
+      - "the relaxation converges under the stated reproducible method"
+      - "missing physical maps produce INCONCLUSIVE rather than inferred compact-source recovery"
+      - "zero target-informed reruns and benchmark passes"
+    project_system:
+      - "source-hash, math, DAG, seal, exposure, and parent-child checks pass"
+      - "claim-language and documentation-impact gates pass"
+      - "one governed checkpoint records the bounded transaction"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: false
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+physics_payload_admission_result:
+  schema_id: "physics_payload_admission_result_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  status: "PASS"
+  admission_path: "physics"
+  payload_type: "candidate_construction"
+  candidate_family: "FiniteNonlinearCompactControl_v1"
+  candidate_identity_sha256: "8f66f7bb5ba422c378a2f8d7f5b74efbf02e6f3c626dbe716b2e509943572ec2"
+  result_type: "precise_obstruction"
+  process_receipt_substitution_detected: false
+  theorem_truth_inferred_from_validation: false
+  physics_promotion_authorized: false
+
+family_freeze_admission_result:
+  schema_id: "family_freeze_route_admission_result_v1"
+  policy_id: "family_freeze_reopening_policy_v1"
+  status: "PASS_DISTINCT_BRANCH"
+  family_id: "FiniteNonlinearCompactControl_v1"
+  family_identity_sha256: "8f66f7bb5ba422c378a2f8d7f5b74efbf02e6f3c626dbe716b2e509943572ec2"
+  exact_family_match_detected: false
+  reopening_requested: false
+  distinct_branch_verified: true
+  local_family_freeze_preserved: true
+  global_no_go_claimed: false
+  physics_promotion_authorized: false
+
+ordinary_route_guard_admission_result:
+  schema_id: "ordinary_route_guard_admission_result_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  status: "PASS"
+  source_handoff_id: "handoff-0921"
+  selected_plan_task_id: "P9-T07"
+  guard_outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_execution_unit_count: 2
+  outer_agentjob_count: 1
+  child_agentjob_count: 0
+  subagent_count: 0
+
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260730-015/artifacts/child_phys_math_p9_t07_nonlinear_compact.yaml"
+      output_sha256: "dbb8211867775394a9c55ee26a721592e9489dd1f11690bf705bead97d1481ba"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260730-015/artifacts/child_phys_phil_p9_t07_nonlinear_compact.yaml"
+      output_sha256: "2649b4cf78066f2e348753081793b51cac856bf59a47d2824595b8415328fd22"
+      status: "completed"
+  conflict_review:
+    status: "resolved"
+    review_path: "research_control/tasks/RT-20260730-015/artifacts/parent_conflict_review_p9_t07_nonlinear_compact.yaml"
+    review_sha256: "43d61c82cae66eb29ac304abbb91be3fb739f5512ac0a2be079abaa12691bce2"
+    resolution_rounds: 1
+    resolved_conflict_count: 2
+    unresolved_conflicts: []
+  fusion:
+    fused_output_path: "research_control/tasks/RT-20260730-015/artifacts/finite_nonlinear_compact_source_nonselection_v1.tex"
+    fusion_notes_path: "research_control/tasks/RT-20260730-015/artifacts/parent_fusion_notes_p9_t07_nonlinear_compact.md"
+    shared_consensus_summary: "The finite carrier, compact token, quartic action, exact solution, conservation identity, and quotient-constraint propagation are exact formal source objects, but current sources do not select physical matter, geometry, covariant constraint, exterior observable, or breakdown semantics."
+    unique_phys_math_contributions: "Exact balanced source, nonlinear residual, strict convexity, quotient Hessian eigenvalues, antisymmetric flux identity, Lyapunov flow, and reproducible convergence."
+    unique_phys_phil_contributions: "Compact token versus physical object, graph quotient versus spacetime constraint, edge flux versus covariant conservation, relaxation versus physical time, and exterior token versus metric boundary."
+    novelty_preservation_summary: "Fusion preserves the first executed P9 nonlinear finite compact-token solution and its precise current-source model-to-world nonselection result."
+    claim_boundary_preservation_summary: "No physical matter, compact object, conservation law, metric, horizon, exterior observable, Einstein equation, benchmark pass, Gate E verdict, promotion, proof, publication, push, global no-go, or completed derivation is authorized."
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+
+memory_preflight:
+  preflight_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1099
+    relationship_count: 5561
+    semantic_extract_count: 1099
+    vault_note_count: 1099
+  refresh_needed: true
+  refresh_performed: true
+  refresh_command: ".venv/bin/python .codex/skills/obsidian-wiki/scripts/sync_obsidian_vault.py"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search 'nonlinear consistency conservation constraint propagation compact source' --limit 10 --json"
+      query_type: "search"
+      query_text: "nonlinear consistency conservation constraint propagation compact source"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+    - object_id: "TEX-V21-P7-T02-SOURCE-MATTER-FINITE-TRANSITION-KERNEL-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_candidate_v1.tex"
+      source_hash: "65ac095f5cdf4c2e319365c8b0e024d031b19d9fc2b8102e59997afa1e8f9129"
+    - object_id: "TEX-V21-P7-T06-SOURCE-KERNEL-VARIATIONAL-OBJECT-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260728-005/artifacts/source_kernel_variational_object_candidate_v1.tex"
+      source_hash: "386769e40167c35604625ef7250c027dc1712c82db4790e2895e0b31ac3cfbf7"
+    - object_id: "TEX-V21-P8-T03-FINITE-SOURCE-CLOSURE-CONSTRAINT-CANDIDATE-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_constraint_candidate_v1.tex"
+      source_hash: "82dd10d8e91be3781ca4f21e7f9fbf2ce1a9108ae7191db22fed9dfe6086f2fa"
+    - object_id: "TEX-V21-P8-T04-FINITE-SOURCE-FIELD-EQUATION-IDENTITY-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260729-007/artifacts/finite_source_field_equation_identity_v1.tex"
+      source_hash: "12a1cfae87cd673241aefe88144ab974b49fc3bad284a81baff90b2e806d5168"
+    - object_id: "TEX-V21-P8-T05-FINITE-CONSTRAINT-DYNAMICAL-VIABILITY-STRESS-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260729-008/artifacts/finite_constraint_dynamical_viability_stress_v1.tex"
+      source_hash: "ddd39764c3b6f86e86574458b885e90271a2b044d1d141ae931723e80599acb1"
+    - object_id: "TEX-V21-P9-T01-SOURCE-DERIVED-BENCHMARK-PROTOCOL-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260729-012/artifacts/source_derived_benchmark_protocol_v1.tex"
+      source_hash: "88ef097bf712ad115e9af62cc18a8b3eabb12f8545350f714ad065f702471007"
+  authority_note: "Obsidian, wiki notes, semantic extracts, generated task indexes, and .local are retrieval layers only and not authority; registered source files and tracked control records were reopened."
+
+benchmark_case_result:
+  protocol_id: "SourceDerivedBenchmarkProtocol_v1"
+  case_id: "P9-BENCH-NONLINEAR-COMPACT-V1"
+  candidate_id: "FiniteNonlinearCompactControl_v1"
+  outcome: "INCONCLUSIVE"
+  secondary_label: "FORMAL_ANALOGY"
+  source_execution_status: "COMPLETED"
+  source_stage_firewall_status: "PASS"
+  source_output_seal_status: "SEALED"
+  target_comparison_status: "OPENED_AFTER_SEAL_TYPED_BURDEN_ONLY"
+  independent_reproduction_status: "NOT_ACQUIRED"
+  executed_case_count: 1
+  cumulative_executed_case_count: 6
+  inconclusive_case_count: 1
+  cumulative_inconclusive_case_count: 6
+  benchmark_pass_count: 0
+  target_informed_rerun_count: 0
+  source_mutation_after_target_comparison_count: 0
+  Gate_E_verdict_issued: false
+
+new_mathematical_payload:
+  - payload_id: "NMP-RT-20260730-015-001"
+    payload_type: "finite_model"
+    name: "Uniform three-state compact-token carrier"
+    summary: "Defines one uniform three-state finite carrier with a one-address raw token and the exact balanced source rho=Lm."
+  - payload_id: "NMP-RT-20260730-015-002"
+    payload_type: "theorem"
+    name: "Exact unique nonlinear quotient solution"
+    summary: "Proves that the positive quadratic-plus-quartic edge action has the exact unique quotient solution h_star=(2/3,-1/3,-1/3)."
+  - payload_id: "NMP-RT-20260730-015-003"
+    payload_type: "theorem"
+    name: "Finite antisymmetric-flux conservation"
+    summary: "Proves an antisymmetric nonlinear edge-flux identity and the associated exact finite cut conservation theorem."
+  - payload_id: "NMP-RT-20260730-015-004"
+    payload_type: "theorem"
+    name: "Constraint-preserving relaxation"
+    summary: "Proves quotient-constraint preservation and a Lyapunov identity for the task-local gradient flow, with reproducible monotone convergence."
+  - payload_id: "NMP-RT-20260730-015-005"
+    payload_type: "obstruction"
+    name: "Physical compact-source model-to-world nonselection"
+    summary: "Records the precise current-source obstruction from the formal finite record to physical compact-source matter, geometry, covariant constraints, and exterior observables."
+
+minimum_physics_payload:
+  minimum_payload_schema_id: "minimum_physics_payload_schema_v1"
+  source_task_id: "RT-20260730-015"
+  source_job_id: "AJ-RT-20260730-015-001"
+  source_completion_path: "research_control/tasks/RT-20260730-015/jobs/completions/AJC-AJ-RT-20260730-015-001.yaml"
+  target_derivation_milestone: "benchmark_promotion"
+  milestone_burden: "Move beyond linear and homogeneous controls."
+  payload_class: "candidate_construction"
+  payload_status: "draft/control"
+  payload_artifact_path: "research_control/tasks/RT-20260730-015/artifacts/finite_nonlinear_compact_source_nonselection_v1.tex"
+  payload_summary: "Exact finite nonlinear compact-token solution, uniqueness theorem, conservation identity, constraint propagation, and a precise INCONCLUSIVE physical compact-source disposition."
+  payload_source_basis:
+    - "P7T02SourceMatterFiniteTransitionKernel_v1"
+    - "P7T06SourceKernelVariationalObject_v1"
+    - "P8T03FiniteSourceClosureConstraintCandidate_v1"
+    - "P8T04FiniteSourceFieldEquationIdentity_v1"
+    - "P8T05FiniteConstraintDynamicalViabilityStress_v1"
+    - "SourceDerivedBenchmarkProtocol_v1"
+  process_receipts_excluded:
+    - "validator_status"
+    - "registry_row"
+    - "handoff_status"
+    - "generated_derivative"
+    - "checkpoint_status"
+  physics_promotion_authorized: false
+  proof_authority: false
+
+mathematical_payload_manifest:
+  - payload_id: "PAYLOAD-P9T07-FINITE-NONLINEAR-CONTROL-001"
+    payload_type: "finite_model"
+    object_name: "FiniteNonlinearCompactControl_v1"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260730-015/artifacts/finite_nonlinear_compact_source_nonselection_v1.tex"
+    burden_effect: "narrows"
+    summary: "Defines one finite nonlinear compact-token source extension with a source-first sealed record."
+  - payload_id: "PAYLOAD-P9T07-EXACT-SOLUTION-001"
+    payload_type: "theorem"
+    object_name: "P9T07-THM-FINITE-NONLINEAR-COMPACT-CONTROL-001"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260730-015/artifacts/finite_nonlinear_compact_source_nonselection_v1.tex"
+    burden_effect: "narrows"
+    summary: "Proves the exact residual, quotient uniqueness, and positive Hessian eigenvalues for one nonlinear finite fixture."
+  - payload_id: "PAYLOAD-P9T07-CONSERVATION-CONSTRAINT-001"
+    payload_type: "theorem"
+    object_name: "finite antisymmetric-flux and quotient-constraint propagation identity"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260730-015/artifacts/p9_t07_constraint_propagation_receipt_v1.json"
+    burden_effect: "narrows"
+    summary: "Records exact finite conservation, a zero constraint residual, and reproducible relaxation convergence."
+  - payload_id: "PAYLOAD-P9T07-OBSTRUCTION-001"
+    payload_type: "obstruction"
+    object_name: "OBST-P9T07-NONLINEAR-COMPACT-SOURCE-MODEL-TO-WORLD-NONSELECTION-001"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260730-015/artifacts/p9_t07_nonlinear_compact_case_v1.yaml"
+    burden_effect: "obstructs"
+    summary: "The exact finite source solution does not select physical matter, geometry, covariant constraints, exterior observable, singularity, or horizon semantics."
+
+candidate_constructor_result:
+  result_type: "precise_obstruction"
+  constructed_candidate_path: ""
+  minimal_countermodel_path: "research_control/tasks/RT-20260730-015/artifacts/finite_nonlinear_compact_source_nonselection_v1.tex"
+  obstruction_id: "OBST-P9T07-NONLINEAR-COMPACT-SOURCE-MODEL-TO-WORLD-NONSELECTION-001"
+  formal_objects:
+    - "uniform triangle transition matrix and quotient Laplacian spectrum {1,1}"
+    - "one-address raw token m=(2,0,0) and balanced source rho=(4/3,-2/3,-2/3)"
+    - "positive quadratic-plus-quartic edge action"
+    - "exact unique solution h_star=(2/3,-1/3,-1/3)"
+    - "Hessian quotient eigenvalues 4 and 2"
+    - "antisymmetric nonlinear edge flux and finite cut identity"
+    - "constraint-preserving gradient flow d'=2-d-d^3"
+  maps:
+    - "(P,m) -> (L,rho)"
+    - "(C,rho) -> S_NL and Euler residual"
+    - "h -> antisymmetric edge flux and cut balance"
+    - "E -> task-local gradient-flow relaxation"
+    - "sealed missing-model-to-world record -> INCONCLUSIVE case classification"
+  proof_obligations:
+    - "derive the carrier and nonlinear coefficient from canonical source ontology"
+    - "derive physical matter, location, radius, density, compactness, and boundary semantics"
+    - "derive a physical tensor or metric exterior field and calibrated observable"
+    - "derive physical covariant conservation and constraint propagation under physical time"
+    - "derive typed singularity or horizon criteria where applicable"
+    - "supply corrections, uncertainty, tolerance, and independent reproduction for a benchmark verdict"
+  failed_components:
+    - "canonical nonlinear source law"
+    - "physical matter and compact-source map"
+    - "physical spatial and boundary map"
+    - "physical time and gauge-constraint map"
+    - "covariant stress-energy conservation map"
+    - "tensor or metric exterior observable"
+    - "physical singularity or horizon criterion"
+    - "independent reproduction"
+  next_required_role: "none"
+  no_fog_check: true
+  no_fog_explanation: "RT-20260730-015 exactly solves and validates one nonlinear finite compact-token source extension, but the source record contains no map to physical matter, spacetime, covariant constraints, tensor or metric exterior data, or observables, so the physical compact-source case is INCONCLUSIVE."
+  claim_boundary_preserved: true
+  claim_boundary_citation: "CB-V21-P9-T07-NONLINEAR-COMPACT-SOURCE-NONSELECTION-001"
+
+obstruction_record:
+  present: true
+  obstruction_id: "OBST-P9T07-NONLINEAR-COMPACT-SOURCE-MODEL-TO-WORLD-NONSELECTION-001"
+  scope: "current_ontology_only"
+  failed_object: "total source-derived physical compact-source map from the sealed nonlinear finite record to physical matter, covariant constraints and conservation, exterior geometry, observables, and breakdown behavior"
+  exact_failure: "The finite source extension has an exact nonlinear solution and formal exterior values, but the current source package supplies no physical codomain, tensor type, matter and boundary semantics, covariant derivative, physical time, metric decoder, or observable calibration."
+  minimal_counterexample_path: "research_control/tasks/RT-20260730-015/artifacts/finite_nonlinear_compact_source_nonselection_v1.tex"
+  current_ontology_implication: "does_not_derive"
+  source_extension_implication: "new_primitive_required"
+  consequence: "new_primitive_required"
+  forbidden_overread: "This scoped nonselection result does not show that no conservative future source extension can derive a physical compact-source solution and does not reject the ontology globally."
+
+physics_progress_status:
+  status: "precise_obstruction_found"
+  target_derivation_milestone: "benchmark_promotion"
+  milestone_burden: "Move beyond linear and homogeneous controls."
+  explanation: "The packet adds an exact nonlinear finite solution, conservation identity, and constraint-propagating relaxation while identifying the missing physical model-to-world maps; it does not establish a physical compact object, exterior geometry, covariant conservation, singularity, horizon, or benchmark pass."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr_delta:
+  effect: "obstruction_recorded"
+  changed: false
+  burden_id: "benchmark_promotion"
+  milestone: "benchmark_promotion"
+  old_status: "blocked by missing primitive"
+  new_status: "blocked by missing primitive"
+  ledger_row_updated: true
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  downstream_unlocked:
+    - "none"
+  downstream_still_blocked:
+    - "physical compact-source matter and boundary definition"
+    - "physical covariant conservation and constraint propagation"
+    - "physical tensor or metric exterior observable"
+    - "physical singularity or horizon analysis"
+    - "g_eff"
+    - "matter_coupling"
+    - "einstein_equations"
+    - "benchmark_promotion"
+  explanation: "The ledger gains a precise P9-T07 nonlinear compact-source model-to-world obstruction path but no physical or promotion status changes."
+
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "unchanged; no canonical ontology edit or source-law adoption"
+  - burden: "Source dynamics"
+    status: "task-local proposal-only nonlinear edge action and relaxation only; no physical dynamics selected"
+  - burden: "Source equivalence EqSrc"
+    status: "unchanged"
+  - burden: "RetainH"
+    status: "unchanged"
+  - burden: "GenH"
+    status: "unchanged"
+  - burden: "ObsLoc_lc"
+    status: "unchanged; formal exterior address values lack physical observer semantics"
+  - burden: "Resp_lc"
+    status: "unchanged; exact finite response only"
+  - burden: "M_src"
+    status: "unchanged; no physical location, boundary, time, or tensor map"
+  - burden: "g_eff"
+    status: "unresolved; quotient field and formal exterior values are not an effective metric"
+  - burden: "matter coupling"
+    status: "unresolved; one-address token support is not a physical matter coupling"
+  - burden: "Einstein equations"
+    status: "unresolved; no physical tensor field equation or covariant constraint propagation is derived"
+  - burden: "benchmark promotion"
+    status: "blocked; six source cases executed across P9-T02 through P9-T07, six INCONCLUSIVE outcomes, zero passes"
+  - burden: "Gate Chair status"
+    status: "Gate D protected NOT_READY unchanged; no Gate E verdict"
+  - burden: "finite-variation robustness"
+    status: "exact finite nonlinear fixture only; physical model-to-world robustness absent"
+  - burden: "current route freeze or hard-fail status"
+    status: "exact P9-T07 carrier/action inference locally frozen without new physical matter, geometry, covariant constraint, and observable maps; distinct P9-T08 audit remains open after checkpoint"
+
+freeze_criteria_status:
+  repeated_burden: true
+  scoped_obstruction: true
+  freeze_evaluation_required: true
+  active_freeze_label: "P9T07-UNCHANGED-FINITE-NONLINEAR-COMPACT-MODEL-TO-WORLD-MAP-ABSENT"
+  prior_attempts_considered:
+    - "RT-20260728-001"
+    - "RT-20260728-005"
+    - "RT-20260729-006"
+    - "RT-20260729-007"
+    - "RT-20260729-008"
+    - "RT-20260729-012"
+    - "RT-20260730-008"
+    - "RT-20260730-010"
+    - "RT-20260730-011"
+    - "RT-20260730-012"
+    - "RT-20260730-013"
+    - "RT-20260730-015"
+  freeze_if:
+    - "The same triangular carrier, token, quartic coefficient, or formal exterior values are rerun while assigning physical semantics from target expectations."
+    - "The zero-sum graph quotient is relabeled as a physical gauge constraint without a source-derived map."
+    - "Finite edge-flux bookkeeping is relabeled as covariant stress-energy conservation."
+  do_not_freeze_if:
+    - "A materially new source-derived physical matter, location, boundary, tensor, covariant constraint, time, or observable map is constructed with exact provenance and no target import."
+    - "P9-T08 audits all six cases for hidden target import, assumption drift, shared-method error, and actual independent replication status."
+  freeze_decision: "locally_frozen"
+  decision_reason: "The exact nonlinear solution closes physical inference from the unchanged finite fixture while conservative source-law construction and the distinct full-suite audit remain open."
+  next_allowed_route: "smuggling_auditor"
+  ledger_or_registry_update_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  status_update_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  global_theory_rejection: false
+  future_source_extension_impossibility: false
+
+loop_risk_decision:
+  category: "bridge_facing_candidate_path"
+  next_route: "audit_full_benchmark_suite"
+  rationale: "P9-T07 freezes physical inference from the unchanged finite nonlinear fixture. P9-T08 must audit all six cases rather than add another source construction."
+  repeated_burdens:
+    - "physical source-to-target observable map remains absent"
+    - "physical temporal, spatial, matter, and boundary units remain absent"
+    - "source-derived geometry and physical field equations remain absent"
+
+route_cycle_control:
+  cycle_family: "v21_p9_source_derived_benchmark_suite"
+  current_cycle_step: "P9-T07_finite_nonlinear_compact_source_nonselection_inconclusive"
+  cycle_risk: "A later packet could relabel finite compact support, zero-sum constraints, edge conservation, or exterior address values as physical compact-source recovery."
+  prior_related_tasks:
+    - "RT-20260729-012"
+    - "RT-20260730-008"
+    - "RT-20260730-010"
+    - "RT-20260730-011"
+    - "RT-20260730-012"
+    - "RT-20260730-013"
+    - "RT-20260730-015"
+  orbit_avoidance_reason: "P9-T07 adds a new exact nonlinear solution and conservation/constraint proof. P9-T08 changes work kind to a cumulative target-import, assumption-consistency, shared-method, and replication audit."
+  next_role_consequence: "external-red-team-reviewer@0.1.0 for v21 P9-T08 after checkpoint"
+
+source_extension_classification:
+  checklist_id: "source_extension_classification_checklist_v1"
+  item_id: "FiniteNonlinearCompactControl_v1"
+  item_source_path: "research_control/tasks/RT-20260730-015/artifacts/finite_nonlinear_compact_source_nonselection_v1.tex"
+  classification: "conservative_definitional_extension"
+  evidence_paths:
+    - "research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_candidate_v1.tex"
+    - "research_control/tasks/RT-20260728-005/artifacts/source_kernel_variational_object_candidate_v1.tex"
+    - "research_control/tasks/RT-20260729-006/artifacts/finite_source_closure_constraint_candidate_v1.tex"
+    - "research_control/tasks/RT-20260729-007/artifacts/finite_source_field_equation_identity_v1.tex"
+    - "research_control/tasks/RT-20260729-008/artifacts/finite_constraint_dynamical_viability_stress_v1.tex"
+    - "research_control/tasks/RT-20260729-012/artifacts/source_derived_benchmark_protocol_v1.tex"
+  relation_to_current_ontology: "conservative"
+  claim_boundary_id: "CB-V21-P9-T07-NONLINEAR-COMPACT-SOURCE-NONSELECTION-001"
+  protected_authority_required: true
+  physics_promotion_authorized: false
+  downstream_promotion_authorized: false
+  allowed_conclusion: "One exact proposal-only finite nonlinear compact-token solution, conservation identity, quotient-constraint propagation result, and current-source physical model-to-world nonselection obstruction are established; the physical case remains INCONCLUSIVE."
+  forbidden_overreads:
+    - "task-local triangular carrier or quartic action as canonical or adopted physical source law"
+    - "one-address token support as physical compact matter"
+    - "graph quotient as a physical spacetime gauge constraint"
+    - "edge-flux identity as covariant stress-energy conservation"
+    - "formal exterior values as physical potential metric horizon or observable"
+    - "relaxation parameter as physical time"
+    - "benchmark pass Gate E verdict or benchmark promotion"
+    - "effective geometry Einstein equations exact-GR recovery proof publication push global no-go future impossibility or completed derivation"
+  next_route_if_blocked: "P9-T08 full source-derived benchmark audit after checkpoint"
+
+bridge_attempt_status:
+  bridge_attempted: true
+  bridge_name: "sealed nonlinear finite compact-token source record to physical compact-source matter, conservation, constraints, exterior geometry, observable, and breakdown behavior"
+  bridge_result: "precise_obstruction"
+  candidate_map: "the finite carrier and raw token map exactly to a balanced source, quartic action, unique quotient solution, edge flux, and relaxation; no source-derived selector or model-to-world calibration reaches unique physical compact-source observables"
+  missing_primitive: "A source-derived physical matter and location map, boundary and units map, physical tensor or metric field, covariant conservation and gauge-constraint structure, physical time, observable calibration, breakdown criteria, corrections, uncertainty, tolerance, and independent reproduction remain absent."
+  preserves_blocks: true
+  blocked_outputs:
+    - "physical_compact_source"
+    - "physical_covariant_conservation"
+    - "physical_constraint_propagation"
+    - "physical_exterior_geometry_or_observable"
+    - "physical_singularity_or_horizon_analysis"
+    - "effective_geometry_or_metric"
+    - "Einstein_equations"
+    - "exact_GR_recovery"
+    - "benchmark_pass_or_promotion"
+    - "Gate_E_verdict"
+    - "proof_publication_push_or_completed_derivation"
+  explanation: "The source side supplies exact nonlinear finite mathematics, but its physical codomain, tensor type, units, boundary semantics, and calibration are not derived."
+
+selected_next_route:
+  route_id: "v21_p9_t08_full_benchmark_audit_external_replication_after_p9_t07_inconclusive"
+  route_label: "external-review-packet"
+  role_family: "external-red-team-reviewer@0.1.0"
+  worker_skill: "continue-research"
+  selected_next_packet_type: "full_source_derived_benchmark_audit_and_replication"
+  task_type: "v21_p9_t08_full_source_derived_benchmark_audit_external_replication"
+  plan_task_id: "P9-T08"
+  target_derivation_milestone: "benchmark_promotion"
+  milestone_burden: "Produce the evidence package required for any protected benchmark verdict."
+  strategy_id: "audit_p9_t02_through_p9_t07_benchmark_suite_v1"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  p9_t02_outcome_carried_forward: "INCONCLUSIVE"
+  p9_t03_outcome_carried_forward: "INCONCLUSIVE"
+  p9_t04_outcome_carried_forward: "INCONCLUSIVE"
+  p9_t05_outcome_carried_forward: "INCONCLUSIVE"
+  p9_t06_outcome_carried_forward: "INCONCLUSIVE"
+  p9_t07_outcome_carried_forward: "INCONCLUSIVE"
+  cumulative_benchmark_pass_count: 0
+  external_replication_preestablished: false
+  target_informed_source_repair_authorized: false
+  benchmark_result_preestablished: false
+  Gate_E_verdict_preestablished: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+claim_boundary:
+  allowed:
+    - "one exact proposal-only finite nonlinear compact-token construction and solution"
+    - "one exact finite conservation identity and quotient-constraint propagation receipt"
+    - "one source-sealed typed compact-source comparison"
+    - "one precise current-source physical model-to-world nonselection obstruction"
+    - "one P9-T08 route after checkpoint"
+  forbidden:
+    - "canonical ontology or source-law adoption or rejection"
+    - "physical matter compactness time constraint conservation geometry tensor horizon or observable identification"
+    - "target-derived ansatz coefficient boundary tolerance or rerun"
+    - "benchmark pass Gate E verdict promotion proof publication push global no-go future impossibility or completed derivation"
+
+forbidden_conclusion_summary:
+  forbidden_conclusions:
+    - "canonical ontology edit"
+    - "m_src adoption"
+    - "g_eff"
+    - "matter coupling"
+    - "source law or nonlinear action adoption"
+    - "physical compact matter or exterior geometry"
+    - "covariant conservation or physical gauge-constraint recovery"
+    - "Einstein-equation or exact-GR recovery"
+    - "benchmark pass or promotion"
+    - "Gate Chair or Gate E verdict"
+    - "proof publication or push"
+    - "completed derivation"
+    - "global theory rejection or future source-extension impossibility"
+  physics_promotion_authorized: false
+  summary: "Exact finite mathematics and validator PASS do not supply the absent physical maps or protected authority."
+
+no_target_import_audit:
+  status: "PASS"
+  target_family_known: true
+  blindness_claimed: false
+  source_stage_target_formula_count: 0
+  source_stage_target_value_count: 0
+  target_comparison_opened_before_seal: false
+  target_comparison_opened_after_seal: true
+  source_mutation_after_target_comparison_count: 0
+  target_selected_parameter_count: 0
+  target_selected_ansatz_or_boundary_count: 0
+  target_informed_rerun_count: 0
+  desired_agreement_used: false
+
+artifacts:
+  source_artifact: "research_control/tasks/RT-20260730-015/artifacts/finite_nonlinear_compact_source_nonselection_v1.tex"
+  source_record: "research_control/tasks/RT-20260730-015/artifacts/source_nonlinear_compact_control_v1.yaml"
+  case: "research_control/tasks/RT-20260730-015/artifacts/p9_t07_nonlinear_compact_case_v1.yaml"
+  comparison_matrix: "research_control/tasks/RT-20260730-015/artifacts/p9_t07_nonlinear_compact_comparison_matrix_v1.yaml"
+  provenance_dag: "research_control/tasks/RT-20260730-015/artifacts/p9_t07_provenance_dag_v1.yaml"
+  source_seal: "research_control/tasks/RT-20260730-015/artifacts/p9_t07_source_output_seal_v1.json"
+  target_exposure_ledger: "research_control/tasks/RT-20260730-015/artifacts/p9_t07_target_exposure_ledger_v1.yaml"
+  constraint_propagation_receipt: "research_control/tasks/RT-20260730-015/artifacts/p9_t07_constraint_propagation_receipt_v1.json"
+  receipt: "research_control/tasks/RT-20260730-015/artifacts/p9_t07_nonlinear_compact_receipt_v1.json"
+  validator: "research_control/tasks/RT-20260730-015/artifacts/validate_p9_t07_nonlinear_compact.py"
+  parent_fusion: "research_control/tasks/RT-20260730-015/artifacts/parent_fusion_notes_p9_t07_nonlinear_compact.md"
+
+output_paths:
+  - "research_control/tasks/RT-20260730-015/artifacts/finite_nonlinear_compact_source_nonselection_v1.tex"
+  - "research_control/tasks/RT-20260730-015/artifacts/source_nonlinear_compact_control_v1.yaml"
+  - "research_control/tasks/RT-20260730-015/artifacts/p9_t07_nonlinear_compact_case_v1.yaml"
+  - "research_control/tasks/RT-20260730-015/artifacts/p9_t07_nonlinear_compact_comparison_matrix_v1.yaml"
+  - "research_control/tasks/RT-20260730-015/artifacts/p9_t07_provenance_dag_v1.yaml"
+  - "research_control/tasks/RT-20260730-015/artifacts/p9_t07_source_output_seal_v1.json"
+  - "research_control/tasks/RT-20260730-015/artifacts/p9_t07_target_exposure_ledger_v1.yaml"
+  - "research_control/tasks/RT-20260730-015/artifacts/p9_t07_constraint_propagation_receipt_v1.json"
+  - "research_control/tasks/RT-20260730-015/artifacts/p9_t07_nonlinear_compact_receipt_v1.json"
+  - "research_control/tasks/RT-20260730-015/artifacts/validate_p9_t07_nonlinear_compact.py"
+  - "research_control/tasks/RT-20260730-015/artifacts/parent_fusion_notes_p9_t07_nonlinear_compact.md"
+  - "research_control/handoffs/handoff-0922.yaml"
+  - "research_control/handoffs/handoff-0922.md"
+
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | status=pass_after_refresh"
+  - ".venv/bin/python research_control/tasks/RT-20260730-015/artifacts/validate_p9_t07_nonlinear_compact.py --check --json | exit_code=0 | status=pass | checks=42"
+  - "scratch Tectonic compilation | exit_code=0 | status=pass | pages=3"
+  - "git diff --check | status=pending_final_precheckpoint_validation"
+
+validation_summary:
+  task_local_check_count: 42
+  task_local_failed_check_count: 0
+  source_hash_check_count: 6
+  source_hash_mismatch_count: 0
+  benchmark_pass_count: 0
+  target_informed_rerun_count: 0
+  independent_reproduction_count: 0
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 184 route claim, repository binding, reasoning effort, clean manifest, and dependency checkpoint 194b25d5 were validated."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Exact source hashes, rational nonlinear residual, Hessian eigenpairs, conservation, constraint propagation, DAG, seal, exposure, comparison, parent-child, and no-fog checks pass."
+      - "Task-local validator passes 42 of 42 checks."
+  post_write:
+    status: "PENDING"
+    evidence:
+      - "Final repository-wide validation follows handoff, registry, and derivative synchronization."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "One governed RT-015 checkpoint remains uninvoked."
+  renderer:
+    status: "PENDING"
+    evidence:
+      - "Final render-and-check pass follows this completion record."
+  memory_bootstrap:
+    status: "PENDING"
+    evidence:
+      - "Final tracked memory synchronization and validate-only pass remain."
+  claim_language_linter:
+    status: "PENDING"
+    evidence:
+      - "Changed-source claim-language validation remains in the precheckpoint stack."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "none"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  publication_authorized: false
+  proof_authority: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  canonical_ontology_edit_authorized: false
+  ontology_selection_authorized: false
+  physical_interpretation_establishment_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []

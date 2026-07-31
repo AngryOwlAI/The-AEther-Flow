@@ -1,0 +1,56 @@
+schema_id: "p9_t07_provenance_dag_v1"
+task_id: "RT-20260730-015"
+case_id: "P9-BENCH-NONLINEAR-COMPACT-V1"
+status: "sealed"
+nodes:
+  - id: "registered_finite_source_package"
+    stage: "source"
+    source_class: "registered draft/control source"
+  - id: "triangle_uniform_fixture"
+    stage: "source"
+    source_class: "task-local finite fixture"
+  - id: "compact_raw_token"
+    stage: "source"
+    source_class: "task-local finite fixture"
+  - id: "quartic_edge_action"
+    stage: "source"
+    source_class: "source-extension data"
+  - id: "exact_nonlinear_solution"
+    stage: "source"
+    source_class: "source-extension data"
+  - id: "conservation_constraint_receipt"
+    stage: "source"
+    source_class: "control receipt"
+  - id: "source_output_seal"
+    stage: "seal"
+    source_class: "control receipt"
+  - id: "target_compact_source_burden"
+    stage: "comparison"
+    source_class: "registered target benchmark"
+  - id: "case_disposition"
+    stage: "comparison"
+    source_class: "typed benchmark disposition"
+edges:
+  - ["registered_finite_source_package", "triangle_uniform_fixture"]
+  - ["triangle_uniform_fixture", "compact_raw_token"]
+  - ["compact_raw_token", "quartic_edge_action"]
+  - ["quartic_edge_action", "exact_nonlinear_solution"]
+  - ["exact_nonlinear_solution", "conservation_constraint_receipt"]
+  - ["conservation_constraint_receipt", "source_output_seal"]
+  - ["source_output_seal", "case_disposition"]
+  - ["target_compact_source_burden", "case_disposition"]
+target_comparison_opened_after_seal: true
+forbidden_reachability_result:
+  target_to_triangle_uniform_fixture: false
+  target_to_compact_raw_token: false
+  target_to_quartic_edge_action: false
+  target_to_exact_nonlinear_solution: false
+  target_to_conservation_constraint_receipt: false
+  target_to_source_output_seal: false
+  status: "PASS"
+known_target_family_disclosure: "The registered comparison family and burden names were known before execution. No target equation, compact-source solution, metric ansatz, mass-radius relation, horizon condition, desired agreement, branch, or tolerance selected the carrier, token, quartic coefficient, boundary representative, solution, or rerun."
+authority_limits:
+  target_as_source_premise: false
+  blindness_claimed: false
+  benchmark_pass_inferred: false
+  physics_promotion_authorized: false

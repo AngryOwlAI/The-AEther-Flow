@@ -1,0 +1,31 @@
+{
+  "schema_id": "p9_t07_constraint_propagation_receipt_v1",
+  "task_id": "RT-20260730-015",
+  "case_id": "P9-BENCH-NONLINEAR-COMPACT-V1",
+  "status": "PASS",
+  "arithmetic_mode": "exact rational except explicit Euler convergence fixture",
+  "finite_carrier": "triangle_K3_uniform",
+  "quotient_constraint": "h0+h1+h2=0",
+  "source_sum": "0",
+  "exact_solution_sum": "0",
+  "exact_euler_residual": ["0", "0", "0"],
+  "off_shell_total_residual_sum": "0",
+  "hessian_quotient_eigenvalues": [4, 2],
+  "edge_flux_antisymmetric": true,
+  "cut_identity_exact": true,
+  "relaxation_zero_sum_derivative": "0",
+  "lyapunov_identity": "dS_NL/dlambda=-||E||^2",
+  "symmetry_reduced_equation": "dd/dlambda=2-d-d^3",
+  "explicit_euler_step": "1/20",
+  "explicit_euler_iterations": 200,
+  "explicit_euler_final_d": "0.99999999999999999987666791480012585935095840400734",
+  "explicit_euler_absolute_error_upper_bound": "1.3e-19",
+  "constraint_residual_bound": "0",
+  "source_record_sha256": "bf8aa309e7f8c4cfa4beaa6289d363b0193ac956e1eabe212c01b3b73852f0a9",
+  "authority_limits": {
+    "physical_time_established": false,
+    "physical_gauge_constraint_established": false,
+    "covariant_conservation_established": false,
+    "physics_promotion_authorized": false
+  }
+}

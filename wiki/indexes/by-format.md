@@ -646,6 +646,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-V21-P9-T04-PARENT-FUSION-CAUSAL-FREEFALL-V1` `research_control/tasks/RT-20260730-011/artifacts/parent_fusion_notes_p9_t04_causal_freefall.md`
 - `MD-V21-P9-T05-PARENT-FUSION-SOURCE-COSMOLOGY-V1` `research_control/tasks/RT-20260730-012/artifacts/parent_fusion_notes_p9_t05_cosmology.md`
 - `MD-V21-P9-T06-PARENT-FUSION-RADIATIVE-NONSELECTION-V1` `research_control/tasks/RT-20260730-013/artifacts/parent_fusion_notes_p9_t06_radiative.md`
+- `MD-V21-P9-T07-PARENT-FUSION-NONLINEAR-COMPACT-V1` `research_control/tasks/RT-20260730-015/artifacts/parent_fusion_notes_p9_t07_nonlinear_compact.md`
 - `MD-VALIDATOR-OPERATOR-WORKFLOW-PUBLICATION-BRIEF` `markdown/publication-briefs/validator-operator-workflow.publication-brief.md`
 
 ## pdf
@@ -1112,6 +1113,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V21-P9-T04-FINITE-TWO-SECTOR-CAUSAL-FREEFALL-NONSELECTION-V1` `research_control/tasks/RT-20260730-011/artifacts/finite_two_sector_causal_freefall_nonselection_v1.tex`
 - `TEX-V21-P9-T05-SOURCE-EXPANSION-DECODER-NONSELECTION-V1` `research_control/tasks/RT-20260730-012/artifacts/source_expansion_decoder_nonselection_v1.tex`
 - `TEX-V21-P9-T06-FINITE-RADIATIVE-COMPLETION-NONSELECTION-V1` `research_control/tasks/RT-20260730-013/artifacts/finite_radiative_completion_nonselection_v1.tex`
+- `TEX-V21-P9-T07-FINITE-NONLINEAR-COMPACT-SOURCE-NONSELECTION-V1` `research_control/tasks/RT-20260730-015/artifacts/finite_nonlinear_compact_source_nonselection_v1.tex`
 
 ## wiki_markdown
 
@@ -1754,6 +1756,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-V21-P9-T04-PARENT-FUSION-CAUSAL-FREEFALL-V1` `wiki/markdown/md-v21-p9-t04-parent-fusion-causal-freefall-v1.md`
 - `WIKI-MD-V21-P9-T05-PARENT-FUSION-SOURCE-COSMOLOGY-V1` `wiki/markdown/md-v21-p9-t05-parent-fusion-source-cosmology-v1.md`
 - `WIKI-MD-V21-P9-T06-PARENT-FUSION-RADIATIVE-NONSELECTION-V1` `wiki/markdown/md-v21-p9-t06-parent-fusion-radiative-nonselection-v1.md`
+- `WIKI-MD-V21-P9-T07-PARENT-FUSION-NONLINEAR-COMPACT-V1` `wiki/markdown/md-v21-p9-t07-parent-fusion-nonlinear-compact-v1.md`
 - `WIKI-MD-VALIDATOR-OPERATOR-WORKFLOW-PUBLICATION-BRIEF` `wiki/markdown/md-validator-operator-workflow-publication-brief.md`
 - `WIKI-PDF-LEGACY-ONTOLOGY-AETHER-FLOW-CONSISTENCY` `wiki/pdf/pdf-legacy-ontology-aether-flow-consistency.md`
 - `WIKI-PDF-LEGACY-ONTOLOGY-AETHER-FLOW-DYNAMICS` `wiki/pdf/pdf-legacy-ontology-aether-flow-dynamics.md`
@@ -2214,3 +2217,4 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-V21-P9-T04-FINITE-TWO-SECTOR-CAUSAL-FREEFALL-NONSELECTION-V1` `wiki/tex/tex-v21-p9-t04-finite-two-sector-causal-freefall-nonselection-v1.md`
 - `WIKI-TEX-V21-P9-T05-SOURCE-EXPANSION-DECODER-NONSELECTION-V1` `wiki/tex/tex-v21-p9-t05-source-expansion-decoder-nonselection-v1.md`
 - `WIKI-TEX-V21-P9-T06-FINITE-RADIATIVE-COMPLETION-NONSELECTION-V1` `wiki/tex/tex-v21-p9-t06-finite-radiative-completion-nonselection-v1.md`
+- `WIKI-TEX-V21-P9-T07-FINITE-NONLINEAR-COMPACT-SOURCE-NONSELECTION-V1` `wiki/tex/tex-v21-p9-t07-finite-nonlinear-compact-source-nonselection-v1.md`
