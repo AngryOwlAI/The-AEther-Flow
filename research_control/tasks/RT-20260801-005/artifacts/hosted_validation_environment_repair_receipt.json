@@ -1,0 +1,69 @@
+{
+  "schema_id": "hosted_validation_environment_repair_receipt_v1",
+  "task_id": "RT-20260801-005",
+  "job_id": "AJ-RT-20260801-005-001",
+  "decision_id": "DDR-20260801-005",
+  "recorded_at": "2026-08-01T17:18:19Z",
+  "source_head": "36ee1acb6cbae2eb2c279b3c4567f81cdd6bb07f",
+  "failed_hosted_evidence": {
+    "workflow": "Project Control Validation",
+    "run_id": 30708297555,
+    "run_url": "https://github.com/AngryOwlAI/The-AEther-Flow/actions/runs/30708297555",
+    "head_sha": "36ee1acb6cbae2eb2c279b3c4567f81cdd6bb07f",
+    "status": "completed",
+    "conclusion": "failure",
+    "authoritative_job_id": 91391153858,
+    "authoritative_step_duration_seconds": 799,
+    "test_result": "1237 tests run with 3 errors",
+    "errors": [
+      "pinned source commit unavailable in shallow checkout",
+      "hypothesis missing from runtime-only installed environment",
+      "migration-readiness audit failed downstream of the pinned source error"
+    ]
+  },
+  "canonical_diagnosis": {
+    "pinned_commit": "0cfe0fe53f31ea2e1d3855d397ba30258dd4f444",
+    "pinned_path": "registries/RESEARCH_TASK_REGISTRY.csv",
+    "pinned_path_exists_in_history": true,
+    "hypothesis_lock": "research_control/tasks/RT-20260724-002/artifacts/quality-assurance-requirements.lock",
+    "hypothesis_version": "6.161.2",
+    "development_wrapper": "requirements-dev.txt"
+  },
+  "implementation": {
+    "workflow_path": ".github/workflows/project-control-validation.yml",
+    "job": "validate_project_control",
+    "checkout_fetch_depth": 0,
+    "dependency_input": "requirements-dev.txt",
+    "timeout_minutes": 45,
+    "timeout_changed": false,
+    "validator_or_test_skipped": false,
+    "dependency_lock_changed": false,
+    "validation_authority_changed": false,
+    "focused_regression": "tests.test_ci_validation_plan.CIValidationPlanTests.test_project_workflow_keeps_legacy_authority_and_stable_shards"
+  },
+  "local_evidence": {
+    "workflow_yaml_parse": "PASS",
+    "focused_workflow_contract": "PASS_1_TEST",
+    "previously_failed_or_downstream_tests": "PASS_32_TESTS_1_EXPECTED_SKIP",
+    "affected_validation_plan": "PASS_READY_13_GATES",
+    "closed_state_repository_suite": "PASS_1268_TESTS_397_402_SECONDS_1_EXPECTED_SKIP",
+    "closed_state_research_control": "PASS_ZERO_ERRORS",
+    "memory_validate_only": "PASS_9_LOCAL_CACHE_ONLY_WARNINGS",
+    "documentation_impact": "PASS",
+    "claim_language_changed": "PASS_ZERO_HARD_FAILURES",
+    "task_taxonomy": "PASS",
+    "project_improvement_signals": "PASS_ZERO_OPEN_HANDOFFS",
+    "git_diff_check": "PASS"
+  },
+  "disposition": {
+    "implementation_status": "PASS_READY_FOR_CHECKPOINT",
+    "checkpoint_status": "PENDING_ONE_GOVERNED_CHECKPOINT",
+    "hosted_project_control_validation": "PENDING_NEW_EXACT_HEAD",
+    "hosted_scheduled_full_validation": "PENDING_NEW_EXACT_HEAD",
+    "p13_t02_executed": false,
+    "scientific_claims_changed": false,
+    "distance_to_gr_changed": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false
+  }
+}

@@ -1,0 +1,243 @@
+completion_id: "AJC-AJ-RT-20260801-005-001"
+job_id: "AJ-RT-20260801-005-001"
+task_id: "RT-20260801-005"
+task_type: "project_system_p13_t01_hosted_validation_environment_repair"
+decision_id: "DDR-20260801-005"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260801-005"
+status: "completed"
+validation_status: "PASS"
+completed_at: "2026-08-01T17:18:19Z"
+objective_result: "hosted_validation_environment_repair_ready_for_checkpoint"
+verdict: "PASS_READY_FOR_CHECKPOINT_AND_HOSTED_VALIDATION"
+summary: "The authoritative Project Control job now fetches complete Git history and provisions the existing hash-locked development environment. Its timeout validation commands authority and dependency locks are unchanged. The focused contract, exact prior failure paths, complete 1,268-test suite, and required project-system gates pass."
+transaction_status: "ready_for_checkpoint"
+checkpoint_invocation_count: 0
+checkpoint_commit:
+  status: "PENDING"
+  commit: ""
+  invocation_count: 0
+
+result:
+  status: "PASS"
+  strategy_id: "repair_hosted_validation_environment_v1"
+  failed_hosted_run_id: 30708297555
+  failed_hosted_head: "36ee1acb6cbae2eb2c279b3c4567f81cdd6bb07f"
+  checkout_fetch_depth: 0
+  dependency_input: "requirements-dev.txt"
+  locked_hypothesis_version: "6.161.2"
+  focused_workflow_test_status: "PASS"
+  previously_failed_or_downstream_test_count: 32
+  previously_failed_or_downstream_test_status: "PASS"
+  repository_suite_final_status: "PASS"
+  repository_suite_final_test_count: 1268
+  repository_suite_final_runtime_seconds: 397.402
+  repository_suite_final_skip_count: 1
+  research_control_diff_status: "PASS_ZERO_ERRORS"
+  memory_validate_only_status: "PASS_9_LOCAL_CACHE_ONLY_WARNINGS"
+  documentation_impact_status: "PASS"
+  claim_language_changed_status: "PASS_ZERO_HARD_FAILURES"
+  task_taxonomy_status: "PASS"
+  validator_or_test_skipped: false
+  timeout_changed: false
+  dependency_lock_changed: false
+  checkpoint_status: "PENDING"
+  hosted_project_control_validation_status: "PENDING_NEW_EXACT_HEAD"
+  hosted_scheduled_full_validation_status: "PENDING_NEW_EXACT_HEAD"
+  p13_t02_executed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  receipt_path: "research_control/tasks/RT-20260801-005/artifacts/hosted_validation_environment_repair_receipt.json"
+
+command_results:
+  - command: ".venv/bin/python -c 'from pathlib import Path; import yaml; yaml.safe_load(Path(\".github/workflows/project-control-validation.yml\").read_text())'"
+    status: "PASS"
+    summary: "The changed hosted workflow parses as YAML."
+  - command: "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m unittest -v tests.test_ci_validation_plan.CIValidationPlanTests.test_project_workflow_keeps_legacy_authority_and_stable_shards"
+    status: "PASS"
+    summary: "The authoritative job contract requires full history and requirements-dev while retaining legacy authority."
+  - command: "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m unittest -v tests.test_event_store_pilot tests.test_p13_t05_assurance_properties tests.test_v21_p10_migration_readiness"
+    status: "PASS"
+    summary: "All 32 tests that previously errored or depended on the missing inputs pass locally with one expected property skip."
+  - command: ".venv/bin/python -m scripts.validation.cli plan --profile affected --paths .github/workflows/project-control-validation.yml tests/test_ci_validation_plan.py --explain"
+    status: "PASS"
+    summary: "The affected planner returns READY with 13 selected gates."
+  - command: "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m unittest discover -s tests --durations 20"
+    status: "PASS"
+    summary: "The corrected closed state passes all 1,268 tests in 397.402 seconds with one expected skip and zero failures or errors."
+  - command: ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --job-id AJ-RT-20260801-005-001 --json-summary"
+    status: "PASS"
+    summary: "Bounded research-control diff validation passes with zero errors."
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+    status: "PASS"
+    summary: "Tracked memory validates with nine local cache-only warnings."
+  - command: ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+    status: "PASS"
+    summary: "Documentation impact covers exact classifier reasons live paths and generated derivatives."
+  - command: ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+    status: "PASS"
+    summary: "Changed-scope claim language reports zero hard failures."
+  - command: ".venv/bin/python scripts/research_control/task_taxonomy.py --validate-repository --json"
+    status: "PASS"
+    summary: "Repository task taxonomy validates."
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1109
+    relationship_row_count: 5606
+    semantic_row_count: 1109
+    vault_row_count: 1109
+    local_cache_only_warning_count: 9
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-DESIGN-CI-VALIDATION-SHARD-POLICY-V1 --json"
+      query_type: "lookup"
+      query_text: "MD-RESEARCH-CONTROL-DESIGN-CI-VALIDATION-SHARD-POLICY-V1"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-DESIGN-CI-VALIDATION-SHARD-POLICY-V1"
+  canonical_inspections:
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-CI-VALIDATION-SHARD-POLICY-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/ci_validation_shard_policy_v1.md"
+      source_hash: "3b816dff633737042f0a13977871e72ac5f41d497111ac75e9a5f62985254bea"
+  authority_note: "Generated wiki Obsidian semantic relationship SQLite and .local surfaces are retrieval-only and not authority; tracked workflow lock test and control sources govern."
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  observed_durable_outputs:
+    physics: []
+    project_system:
+      - "authoritative hosted full-history checkout"
+      - "authoritative hosted hash-locked development test environment"
+      - "focused workflow-contract regression"
+      - "checkpoint-ready control evidence"
+  accepted_criteria:
+    physics: []
+    project_system:
+      - "pinned historical sources are available to the authoritative hosted suite"
+      - "the already locked hypothesis dependency is installed before the complete suite"
+      - "no timeout validator or test semantics are weakened"
+      - "focused and complete local suites pass"
+      - "P13-T02 remains unexecuted"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "measured"
+        value: 397.402
+        unit: "seconds"
+        basis: "final closed-state complete repository suite"
+      compute:
+        status: "measured"
+        value: 1268
+        unit: "tests"
+        basis: "final closed-state complete repository suite"
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+distance_to_gr_delta:
+  changed: false
+  effect: "none_project_system_repair"
+  milestone: "benchmark_promotion"
+  ledger_row_updated: false
+  ledger_update_rationale: "Hosted validation provisioning contributes no physics movement."
+
+physics_progress_status:
+  status: "documentation_or_control_only_no_physics_delta"
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+
+selected_next_route:
+  route_id: "p13_t01_repaired_exact_head_hosted_validation_evidence_v1"
+  route_label: "authorized-repaired-exact-head-hosted-validation-evidence"
+  role_family: "process-integrity-auditor@0.1.0"
+  worker_skill: "improve-project-system"
+  task_type: "validation_planner_equivalence_external_evidence"
+  plan_task_id: "P13-T01"
+  strategy_id: "obtain_repaired_exact_head_project_control_and_scheduled_full_pass_evidence_v1"
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  requires_human_gate: false
+  human_hosted_workflow_authorization_present: true
+  blocked_by_checkpoint: true
+  project_control_validation_pass_satisfied: false
+  scheduled_full_validation_pass_satisfied: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  executed: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "The bounded Validator Engineer job was created before workflow implementation."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "YAML focused contract and exact prior failure-path tests pass."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "The full suite and required project-system gates pass."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "Exactly one governed checkpoint remains authorized."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Current-frontier and task-index renderers are fresh."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Governed bootstrap and validate-only pass with local cache-only warnings."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-scope claim language has zero hard failures."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "none; hosted project-system validation provisioning only"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  push_authorized: true
+  push_scope: "one exact checkpoint commit to origin/main after every local gate passes"
+  publication_authorized: false
+  hosted_workflow_dispatch_authorized: true
+  hosted_workflow_scope: "Project Control Validation and Scheduled Full Validation for the exact new head only"
+  proof_authority: false
+  canonical_ontology_edit_authorized: false
+  source_law_adoption_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+notes: "Implementation completion does not satisfy the still-pending closed-state gates checkpoint or hosted evidence and no validation result counts as physics benchmark progress promotion proof publication Gate E revision or P13-T02 execution."

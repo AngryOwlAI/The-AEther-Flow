@@ -191,6 +191,8 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -204,7 +206,7 @@ jobs:
       - name: Install Python dependencies
         run: |
           .venv/bin/python -m pip install --upgrade pip
-          .venv/bin/python -m pip install --require-hashes -r requirements.txt
+          .venv/bin/python -m pip install --require-hashes -r requirements-dev.txt
 
       - name: Run project-control validation
         shell: bash

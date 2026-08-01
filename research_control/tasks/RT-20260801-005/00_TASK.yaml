@@ -1,0 +1,59 @@
+task_id: "RT-20260801-005"
+task_type: "project_system_p13_t01_hosted_validation_environment_repair"
+title: "Repair the authoritative hosted validation environment"
+task_taxonomy:
+  schema_id: "v21_task_taxonomy_v1"
+  work_kind: "benchmark_or_recovery"
+  milestone: "benchmark_promotion"
+  candidate_family: "p13_t01_hosted_validation_environment_repair"
+  result_kind: "completed_or_precisely_blocked"
+  authority: "project_control"
+  scope: "project_system"
+validation_status: "PASS"
+status: "completed"
+created_at: "2026-08-01T16:48:06Z"
+updated_at: "2026-08-01T17:18:19Z"
+closed_at: "2026-08-01T17:18:19Z"
+closure_status: "hosted_validation_environment_repair_pass_ready_for_checkpoint_and_hosted_evidence"
+parent_task_id: "RT-20260801-004"
+parent_handoff_id: "handoff-0934"
+supersedes_active_routing_task_id: ""
+current_decision_id: "DDR-20260801-005"
+current_job_id: "AJ-RT-20260801-005-001"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260801-005"
+requires_human_gate: false
+human_authorization_note: "The human explicitly authorized project-system diagnosis and repair, a new exact commit, the required push, and hosted Project Control Validation plus Scheduled Full Validation actions until both produce genuine completed PASS evidence for the repaired exact head."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P13"
+  plan_task_id: "P13-T01"
+  recovery_for_plan_task_id: "P13-T01"
+  next_plan_task_id: "P13-T01"
+  next_plan_task_execution_authorized: false
+objective: "Repair only the two hosted-environment defects directly proved by Project Control Validation run 30708297555: give the authoritative legacy job access to pinned Git history and install the existing hash-locked development test environment so the complete repository suite can execute without skipped or missing dependencies. Add a focused workflow-contract regression, validate locally, checkpoint once, push the exact new head, and obtain both named hosted PASS results while preserving P13-T02 and every scientific boundary."
+target_derivation_milestone: "none"
+milestone_burden: "Hosted project-system validation environment only; no derivation milestone advances."
+route_label: "repair_hosted_validation_environment_v1"
+project_system_change_only: true
+dual_budget_category: "system_bearing"
+primary_budget: "project_system"
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+claim_boundary_id: "CB-PS-P13-T01-HOSTED-VALIDATION-ENVIRONMENT-001"
+documentation_impact_id: "DI-RT-20260801-005-001"
+completion_id: "AJC-AJ-RT-20260801-005-001"
+planned_outputs:
+  - ".github/workflows/project-control-validation.yml"
+  - "tests/test_ci_validation_plan.py"
+  - "research_control/tasks/RT-20260801-005/artifacts/hosted_validation_environment_repair_receipt.json"
+  - "research_control/tasks/RT-20260801-005/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260801-005/jobs/completions/AJC-AJ-RT-20260801-005-001.yaml"
+summary: "The authoritative legacy job now fetches pinned history and installs the existing hash-locked development environment. The workflow regression, exact prior failure-path tests, full 1,268-test repository suite, memory, documentation, claim-language, taxonomy, and research-control gates pass."
+next_recommended_action: "Checkpoint once, push the exact head, and obtain both hosted PASS results before zero-worker relay recovery."
+project_improvement_signals: []
+notes: "The bounded job is complete and checkpoint-ready. The prior exact-head Project Control run is a genuine failure and remains non-PASS evidence."

@@ -774,6 +774,15 @@ class CIValidationPlanTests(unittest.TestCase):
             "  validate_memory_read_only:", 1
         )[0]
         self.assertNotIn("needs: validation_plan_shadow", project_job)
+        self.assertIn("fetch-depth: 0", project_job)
+        self.assertIn(
+            "pip install --require-hashes -r requirements-dev.txt",
+            project_job,
+        )
+        self.assertNotIn(
+            "pip install --require-hashes -r requirements.txt",
+            project_job,
+        )
         memory_job = text.split("  validate_memory_read_only:", 1)[1]
         self.assertIn("steps.memory_selection.outputs.mode == 'fallback'", memory_job)
         self.assertIn("steps.memory_selection.outputs.mode == 'reuse'", memory_job)
