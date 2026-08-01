@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260731-009`
-- Latest handoff: `handoff-0931`
-- Current status: `p14_t06_generation_194_record_alignment_recovery_pass_checkpoint_ready_p13_t02_hold_after_commit`
+- Active task: `RT-20260731-010`
+- Latest handoff: `handoff-0932`
+- Current status: `p15_t05_conditionally_not_required_gate_e_not_ready_no_manuscript_checkpoint_ready`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260731-009`
-- Latest research handoff: `handoff-0931`
-- Latest research next action: Run the one governed checkpoint for AJ-RT-20260731-009-001. After commit, stop without creating a P13-T02 AgentJob until the user explicitly authorizes publication of the exact checkpoint and matched current-head hosted CI plus scheduled-full evidence exists; P15-T05 separately remains human-gated.
+- Latest research task: `RT-20260731-010`
+- Latest research handoff: `handoff-0932`
+- Latest research next action: Run the one governed checkpoint for AJ-RT-20260731-010-001. After commit, create one fresh P13-T02 project-system frame limited to publishing exact commit 686c3021, collecting commit-matched hosted CI plus scheduled-full evidence, and making only the evidence-supported planner cutover; do not publish the newer P15-T05 checkpoint by implication.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,7 +26,7 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `hold_p13_t02_until_p13_t01_external_cutover_evidence_after_p14_t06_checkpoint_v1`
+- Route ID: `publish_checkpoint_686c3021_collect_matched_ci_and_execute_p13_t02_cutover_v1`
 - Role family: `validator-engineer@0.2.0`
 - Target milestone: `source_equivalence_eqsrc`
 - Milestone burden: Complete the v19 validation architecture transition.
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `9066be2b2c6d0979e879fae27eb6d1ee46af145433cf068db8d1b4eb5a065fb6`
-- JSON SHA-256: `5601cf4c004401cb38e7b353338439c163f0b37aaa52433811edd408bd245f7c`
+- YAML SHA-256: `63f0ae8273b72b92d98571d1e704cf32f30db70991961750b2ae381d600dfd81`
+- JSON SHA-256: `a1ca0fd7710bdb4d1bd2494568abec8a2db1969719cdb0e6162a609d0737ed98`
 
 ## Authority Warning
 

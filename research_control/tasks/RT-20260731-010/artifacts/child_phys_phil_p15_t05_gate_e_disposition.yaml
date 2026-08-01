@@ -1,0 +1,158 @@
+schema_id: "parent_child_execution_unit_v1"
+task_id: "RT-20260731-010"
+job_id: "AJ-RT-20260731-010-001"
+execution_unit_id: "child_phys_phil"
+perspective: "physicist_philosopher"
+status: "completed"
+blocking_conflict_present: false
+
+source_hash_verification:
+  algorithm: "sha256"
+  status: "PASS"
+  sources:
+    - source_kind: "canonical_plan_card"
+      path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      sha256: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+      binding_check: "matches the active AgentJob canonical-inspection hash and MARKDOWN_SOURCE_REGISTRY.csv"
+    - source_kind: "canonical_gate_e_decision"
+      path: "research_control/tasks/RT-20260731-004/artifacts/p9_t09_gate_e_decision_v1.tex"
+      sha256: "7f28103e40664f0a004af0134f3216932136f8efb160f0c7c59039efa5225b0b"
+      binding_check: "matches the active AgentJob canonical-inspection hash and TEX_SOURCE_REGISTRY.csv"
+    - source_kind: "canonical_gate_e_completion"
+      path: "research_control/tasks/RT-20260731-004/jobs/completions/AJC-AJ-RT-20260731-004-001.yaml"
+      sha256: "5c64250eea3f702051c1403b1ec9b2edd85f00d7937b2647965526f124ab3ee6"
+      binding_check: "matches the active AgentJob fixed-evidence assumption hash"
+    - source_kind: "protected_review_approval"
+      path: "research_control/approvals/approval-20260731-003.yaml"
+      sha256: "ddd1ed0c39e7a0e824c32189d9fe4e3c1a3894fadcce5fe2df1a7fffbd8e44e3"
+      binding_check: "approval identity, authorization identity, one-time consumption, and exact P15-T05 scope agree"
+    - source_kind: "base_role_boundary"
+      path: ".agents/roles/physics/gate-chair.v0.1.0.md"
+      sha256: "1da0c89d58b9459cefcd5e428723d862f5bed8548ed0adf47b1c27c46d91b680"
+      binding_check: "base Gate Chair authority remains human-gated and source-modification is forbidden"
+  conflict_count: 0
+  conflicts: []
+
+fixed_evidence:
+  gate_e_decision_code: "NOT_READY_BENCHMARK_AND_COMPLETED_DERIVATION_REQUIREMENTS_UNMET"
+  overall_readiness: "NOT_READY"
+  executed_case_count: 6
+  inconclusive_case_count: 6
+  benchmark_pass_count: 0
+  qualifying_independent_replication_count: 0
+  exact_GR_recovery_status: "NOT_ESTABLISHED"
+  controlled_approximate_or_effective_GR_recovery_status: "NOT_ESTABLISHED"
+  completed_first_principles_derivation_status: "MAY_NOT_BE_CLAIMED"
+  benchmark_promotion_status: "DENIED_NOT_READY"
+  fixed_package_local_freeze_active: true
+  global_no_go_claimed: false
+
+conditional_analysis:
+  operative_plan_condition: "A derivation manuscript is assembled if and only if Gate E authorizes that branch."
+  formalization:
+    manuscript_branch_symbol: "M"
+    positive_gate_e_authorization_symbol: "G_E_plus"
+    rule: "M iff G_E_plus"
+    fixed_truth_value: "G_E_plus = false"
+    consequence: "M = false"
+  reasoning:
+    - "P9-T09 is finalized and must remain fixed under this review."
+    - "Its NOT READY verdict denies benchmark promotion and does not establish exact or controlled approximate GR recovery."
+    - "Approval-20260731-003 supplies jurisdiction to evaluate and record the branch; it supplies no missing scientific premise."
+    - "The false Gate E condition therefore forbids manuscript preparation and selects the no-manuscript disposition."
+  lawful_result:
+    result_code: "CONDITIONALLY_NOT_REQUIRED_GATE_E_NOT_READY_NO_MANUSCRIPT"
+    work_item_status: "conditionally_not_required"
+    manuscript_branch_selected: false
+    manuscript_preparation_authorized: false
+    no_manuscript_record_required: true
+    protected_control_status_changed: true
+    protected_control_change: "P15-T05 advances from pending protected review to a fixed-package conditionally_not_required disposition."
+    gate_e_reopened: false
+    gate_e_verdict_changed: false
+    scientific_status_changed: false
+    distance_to_gr_changed: false
+    physics_progress_claimed: false
+
+authority_layer_distinctions:
+  role_fit:
+    plan_role_guidance: "ontology-formalizer@0.2.0"
+    selected_execution_role: "gate-chair@0.1.0--RT-20260731-010"
+    distinction: "The plan role would fit lawful manuscript formalization, but the false Gate E condition leaves no manuscript to formalize; the protected task overlay therefore lawfully limits execution to disposition review."
+  protected_review_authorization:
+    status: "AUTHORIZED_AND_CONSUMED_ONCE"
+    nature: "procedural jurisdiction to inspect fixed evidence and record one verdict-neutral P15-T05 conditional disposition"
+    source: "approval-20260731-003"
+    does_not_mean: "permission to choose a positive branch or authority to manufacture evidence"
+  scientific_verdict:
+    status: "FIXED_NOT_READY"
+    nature: "an evidence-bound P9-T09 disposition over the exact unchanged benchmark package"
+    controlled_by: "the canonical P9-T09 decision and completion, not the later review authorization"
+    changed_by_this_review: false
+  manuscript_authority:
+    status: "NOT_AUTHORIZED"
+    nature: "permission to prepare the source-derived GR derivation manuscript is conditional on a positive Gate E authorization"
+    reason: "the necessary and sufficient Gate E condition is false for the fixed package"
+  publication_authority:
+    status: "NOT_AUTHORIZED"
+    nature: "external release or submission is a distinct downstream action even when a manuscript exists"
+    reason: "approval-20260731-003 expressly excludes publication, submission, reviewer contact, and outreach"
+  push_authority:
+    status: "NOT_AUTHORIZED"
+    nature: "remote repository mutation is operational authority separate from review or scientific judgment"
+    reason: "approval-20260731-003 and the task overlay expressly exclude push authority"
+  completed_derivation_status:
+    status: "MAY_NOT_BE_CLAIMED"
+    nature: "an evidentiary scientific claim, not a status that procedural permission can confer"
+    reason: "P9-T09 records unmet benchmark, recovery, and independent-replication burdens"
+  benchmark_and_physics_promotion_authority:
+    status: "NOT_AUTHORIZED"
+    nature: "authority to elevate benchmark, recovery, ontology, or physical-claim status"
+    reason: "P9-T09 denies benchmark promotion and the P15-T05 overlay removes all promotion power"
+  proof_authority:
+    status: "NOT_AUTHORIZED"
+    reason: "the conditional-disposition logic proves only which control branch follows from fixed records; it proves no substrate derivation or physical theorem"
+
+claim_language_constraints:
+  permitted:
+    - "Under the fixed P9-T09 NOT READY verdict, P15-T05 is conditionally_not_required and no derivation manuscript is authorized."
+    - "Approval-20260731-003 authorizes one verdict-neutral review and record action only."
+    - "The adopted exact-GR effective reference benchmark is preserved, while a first-principles substrate derivation remains unestablished."
+    - "The exact unchanged P9 package is locally frozen; materially new evidence and fresh protected authority remain a possible reopening route."
+  required_qualifiers:
+    - "Bind every negative conclusion to the fixed P9-T01 through P9-T08 evidence package and finalized P9-T09 verdict."
+    - "Use conditionally_not_required rather than completed-manuscript language for P15-T05."
+    - "Separate effective-reference adoption from substrate derivation."
+    - "Separate authorization to review from evidence sufficient for a positive scientific disposition."
+  prohibited:
+    - "Gate E is ready or has been reversed."
+    - "The source ontology derives GR exactly or approximately."
+    - "A source-derived GR derivation manuscript was authorized, assembled, completed, submitted, or published."
+    - "The derivation is complete or benchmark promotion occurred."
+    - "The review approval supplies a benchmark pass, independent replication, proof, or scientific truth."
+    - "The fixed-package negative result is a global no-go theorem or establishes future impossibility."
+
+limitations:
+  - "This child review checks the conditional logic, epistemic categories, and authority boundaries; it does not re-audit the six underlying benchmark cases."
+  - "No new physical calculation, source-derived bridge, benchmark comparison, controlled correction regime, or independent replication is introduced."
+  - "The result is indexed to the exact verified source hashes and cannot be generalized to materially changed future evidence."
+  - "Validator, checkpoint, role-selection, and authorization success remain operational or procedural evidence only."
+  - "This artifact is a task-local review record, not a manuscript, publication artifact, proof, or scientific promotion."
+
+forbidden_overreads:
+  - "conditionally_not_required means the current conditional branch is false, not that a derivation manuscript is forever unnecessary"
+  - "review completion does not constitute physics progress or reduce Distance-to-GR"
+  - "negative Gate E does not reject the broader research program"
+  - "preserving the exact-GR benchmark does not derive it from substrate ontology"
+  - "authorization to record a no-manuscript disposition does not authorize publication or push"
+  - "a control proposition about fixed records is not a completed physical derivation"
+
+conflict_or_blocker:
+  conflict_present: false
+  blocker_present: false
+  blocking_conflict_count: 0
+  unresolved_conflicts: []
+  rationale: "The plan biconditional, fixed P9-T09 verdict, approval, active job, base role, and narrowing overlay are mutually consistent and determine a unique no-manuscript disposition."
+  future_reopening_boundary: "A future positive branch requires materially new source-derived bridge evidence, at least one lawful preregistered physical benchmark pass, qualifying independent replication, and fresh protected authority."
+
+fusion_ready: true

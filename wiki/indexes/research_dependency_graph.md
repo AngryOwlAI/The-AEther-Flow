@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-08-01T00:42:56Z`
-- Source fingerprint: `eac3206e14d72d42ef81e8073f13b4cd82c764cd30dc26e2977e15a4e2b12cd4`
-- Nodes: `24032`
-- Edges: `75612`
+- Generated from tracked state as of: `2026-08-01T03:22:23Z`
+- Source fingerprint: `a46bfc23f5132ce3bfaf7d5277e6315e776b2d6e62428c554ed1a979542f7eb8`
+- Nodes: `24084`
+- Edges: `75681`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 1170 |
+| `completion_yaml` | 1172 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 930 |
+| `handoff_yaml` | 932 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,18 +33,18 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 9 |
-| `agent_job` | `support_only` | 1170 |
+| `agent_job` | `support_only` | 1172 |
 | `artifact` | `canonical_source` | 87 |
-| `artifact` | `support_only` | 12188 |
-| `blocked_burden` | `blocked` | 4916 |
-| `claim_boundary` | `support_only` | 1127 |
-| `draft_control_candidate` | `draft_control` | 803 |
+| `artifact` | `support_only` | 12210 |
+| `blocked_burden` | `blocked` | 4931 |
+| `claim_boundary` | `support_only` | 1129 |
+| `draft_control_candidate` | `draft_control` | 805 |
 | `draft_control_candidate` | `proposal_only` | 149 |
 | `draft_control_candidate` | `science_draft` | 90 |
-| `frozen_negative` | `frozen_negative` | 150 |
-| `gate_chair_verdict` | `human_gated` | 36 |
-| `handoff` | `support_only` | 930 |
-| `human_gated_object` | `human_gated` | 585 |
+| `frozen_negative` | `frozen_negative` | 151 |
+| `gate_chair_verdict` | `human_gated` | 37 |
+| `handoff` | `support_only` | 932 |
+| `human_gated_object` | `human_gated` | 587 |
 | `ledger_row` | `accepted_scoped` | 6 |
 | `ledger_row` | `blocked` | 3 |
 | `ledger_row` | `frozen_negative` | 1 |
@@ -55,10 +55,10 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `source_extension_evidence_precondition` | `source_extension_evidence` | 40 |
 | `source_ontology_object` | `canonical_source` | 27 |
 | `source_ontology_object` | `rejected` | 50 |
-| `source_ontology_object` | `support_only` | 380 |
+| `source_ontology_object` | `support_only` | 381 |
 | `task` | `human_gated` | 29 |
 | `task` | `science_draft` | 33 |
-| `task` | `support_only` | 1108 |
+| `task` | `support_only` | 1110 |
 
 ## Frontier Table
 
@@ -163,9 +163,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 ## Route Continuity
 
-- Active task: `RT-20260731-008`
-- Latest handoff: `handoff-0930`
-- Handoff path: `research_control/handoffs/handoff-0930.yaml`
-- Next action: Run one distinct governed improve-project-system checkpoint-recovery AgentJob that validates the aligned generation-194 completion authority note and active-state next-action identity, preserves the validator regression and complete P14-T06 payload, and invokes one new checkpoint; only afterward stop at the P13-T02 external-evidence hold.
+- Active task: `RT-20260731-010`
+- Latest handoff: `handoff-0932`
+- Handoff path: `research_control/handoffs/handoff-0932.yaml`
+- Next action: Run the one governed checkpoint for AJ-RT-20260731-010-001. After commit, create one fresh P13-T02 project-system frame limited to publishing exact commit 686c3021, collecting commit-matched hosted CI plus scheduled-full evidence, and making only the evidence-supported planner cutover; do not publish the newer P15-T05 checkpoint by implication.
 
 This graph is navigational support only; inspect the cited sources before using any claim.

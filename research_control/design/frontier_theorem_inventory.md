@@ -2484,6 +2484,90 @@ promotion, Gate Chair benchmark closure, or completed derivation.
 - `external_review_notes`: Parent--child review is same-context internal
   synthesis and is not external or independently replicated.
 
+### Item 17: p15_t05_conditional_no_manuscript_disposition
+
+- `frontier_item_id`: `p15_t05_conditional_no_manuscript_disposition`
+- `frontier_item_class`: `gate_decision;theorem`
+- `milestone`: `benchmark_promotion`
+- `object_type`: `gate_decision;control_theorem`
+- `object_or_claim_name`: Protected P15-T05 fixed-evidence conditional
+  no-manuscript disposition.
+- `status_layer_summary`:
+  - `control_status`: `conditionally_not_required`
+  - `mathematical_status`: `fixed_record_conditional_proposition_recorded`
+  - `physical_status`: `no_distance_to_gr_delta`
+  - `promotion_status`: `none`
+  - `overread_guard`: `no_gate_e_reopening;no_derivation_manuscript;no_publication;no_push;no_benchmark_promotion;no_completed_derivation;no_future_source_extension_impossibility;no_global_theory_rejection`
+- `three_tier_classification`: `accepted_scoped_evidence`.
+- `linter_status`: `PASS`; P15-T05 task-local claim boundary.
+- `source_artifact_path`:
+  `research_control/tasks/RT-20260731-010/artifacts/p15_t05_gate_e_no_manuscript_disposition_v1.tex`;
+  `research_control/tasks/RT-20260731-010/artifacts/p15_t05_claim_to_evidence_map_v1.yaml`;
+  `research_control/tasks/RT-20260731-010/artifacts/p15_t05_reproducibility_manifest_v1.yaml`;
+  `research_control/approvals/approval-20260731-003.yaml`.
+- `authority_level`: `protected_gate_decision;draft_control_theorem`
+- `source_authority_type`: `registered_tex_artifact;gate_chair_artifact`
+- `assumptions`:
+  - The finalized P9-T09 evidence package and protected Gate E verdict remain
+    fixed and unchanged.
+  - P15-T05 permits manuscript preparation if and only if Gate E authorizes
+    that branch.
+  - The current authorization permits review and record creation but supplies
+    no missing scientific premise or positive verdict.
+- `definitions_used`: Gate E readiness; P15-T05 manuscript permission;
+  conditionally-not-required work-item disposition.
+- `definitions_introduced`: Task-local Boolean symbols for the fixed-evidence
+  control implication only; no scientific primitive or source law.
+- `theorem_like_claims`: From
+  `P_M(E_0) iff G_E(E_0)` and the finalized value `G_E(E_0)=false`, infer
+  `P_M(E_0)=false`; exact review authority then selects the plan-defined
+  conditionally-not-required no-manuscript record rather than a deferred
+  human gate.
+- `statement_or_decision`:
+  `CONDITIONALLY_NOT_REQUIRED_GATE_E_NOT_READY_NO_MANUSCRIPT`.
+- `burden_id`: `benchmark_promotion`
+- `object_or_theorem`:
+  `P15T05-PROP-FIXED-GATE-E-NO-MANUSCRIPT-V1`.
+- `status`: protected disposition completed for the exact fixed package.
+- `mathematical_conclusion`: The false Gate E condition excludes the
+  manuscript branch by direct substitution into the plan biconditional.
+- `audits_passed`: Exact authorization, route, fixed-source hashes,
+  claim-to-evidence mapping, and parent--child logic/authority review.
+- `stress_results`: No benchmark pass, qualifying independent replication,
+  Gate E reopening evidence, or positive manuscript premise entered the task.
+- `gate_chair_results`: P15-T05 is conditionally not required for the fixed
+  package and no derivation manuscript is created.
+- `fail_closed_branches`: Gate E reversal, manuscript drafting, publication,
+  push, submission, reviewer contact, benchmark promotion, and completed-
+  derivation wording remain outside this task.
+- `known_obstructions`: P9-T09 retains zero benchmark passes, no qualifying
+  independent replication, and every stated physical recovery burden.
+- `physical_non_conclusions`:
+  - No physical Distance-to-GR delta.
+  - No benchmark promotion or completed derivation.
+  - No manuscript, publication, submission, or push.
+- `forbidden_overread`: The control proposition or protected review authority
+  as a physical theorem, positive Gate E verdict, missing recovery evidence,
+  manuscript permission, or proof that future progress is impossible.
+- `downstream_blocked_targets`: Positive Gate E, benchmark promotion,
+  completed derivation, and source-derived GR manuscript.
+- `allowed_reuse`: Use as the controlling P15-T05 disposition for the exact
+  fixed P9 evidence package and its no-manuscript claim boundary.
+- `blocked_reuse`: Do not generalize the disposition to materially new future
+  evidence, global no-go language, or publication/push authority.
+- `dependency_items`: `benchmark_promotion`; `gate_chair_benchmark_closure`
+- `missing_theorem_or_primitive`: Materially new source-derived recovery,
+  benchmark-pass, and qualifying independent-replication evidence remain
+  missing for a future positive Gate E review.
+- `next_theorem_needed`: None for P15-T05 under the exact unchanged package;
+  a future positive branch first requires satisfying the P9-T09 reopening
+  conditions and fresh protected authority.
+- `candidate_next_task`: phase integration or final coverage audit; P15-T05
+  has no direct successor.
+- `overread_guard`: `no_gate_e_reopening;no_derivation_manuscript;no_publication;no_push;no_benchmark_promotion;no_completed_derivation;no_future_source_extension_impossibility;no_global_theory_rejection`
+- `external_review_notes`: Parent--child review is same-context internal
+  synthesis and is not external or independently replicated.
+
 ## Coverage Receipt
 
 P2-T03 minimum item coverage:

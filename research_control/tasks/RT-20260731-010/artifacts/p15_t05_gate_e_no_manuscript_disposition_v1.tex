@@ -1,0 +1,132 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs,longtable,enumitem}
+\usepackage[hidelinks]{hyperref}
+\urlstyle{tt}
+\emergencystretch=3em
+\newtheorem{definition}{Definition}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\title{V21 P15-T05: Protected Gate E Conditional No-Manuscript Disposition}
+\author{Gate Chair parent--child synthesis}
+\date{2026-07-31}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+\fbox{\parbox{0.93\linewidth}{\textbf{Protected disposition.}
+For the fixed P9 evidence package, Gate E is \texttt{NOT\_READY}.  P15-T05
+permits a source-derived GR manuscript if and only if Gate E authorizes that
+branch.  The manuscript branch is therefore inadmissible and P15-T05 is
+\texttt{CONDITIONALLY\_NOT\_REQUIRED\_GATE\_E\_NOT\_READY\_NO\_MANUSCRIPT}.
+No derivation manuscript is created.}}
+\end{center}
+
+\section{Authority and fixed evidence}
+
+Approval \texttt{approval-20260731-003} authorizes exactly one verdict-neutral
+P15-T05 review.  It supplies review authority, not a benchmark pass,
+independent replication, completed derivation, manuscript, publication, push,
+or positive scientific verdict.
+
+% fixed decision code: NOT_READY_BENCHMARK_AND_COMPLETED_DERIVATION_REQUIREMENTS_UNMET
+The evidence is held fixed at the canonical P9-T09 decision
+\path{NOT_READY_BENCHMARK_AND_COMPLETED_DERIVATION_REQUIREMENTS_UNMET}.
+That decision records six executed cases, six inconclusive outcomes, zero
+passes, no qualifying independent replication, no established exact GR
+recovery, no established controlled approximate recovery, and no lawful
+completed-derivation claim.  It freezes the unchanged package against a
+positive Gate E verdict unless materially new evidence and fresh protected
+authority satisfy its reopening rule.
+
+\section{Conditional-disposition proposition}
+
+\begin{definition}[Fixed-evidence readiness and manuscript permission]
+Let $G_E(E_0)\in\{0,1\}$ be the protected Gate E readiness value for the fixed
+evidence package $E_0$.  Let $P_M(E_0)\in\{0,1\}$ mean that P15-T05 permits
+preparation of the source-derived GR manuscript from that same package.  The
+P15-T05 plan condition is
+\[
+  P_M(E_0)\Longleftrightarrow G_E(E_0).
+\]
+Let $D_{\mathrm{cnr}}(E_0)$ denote the task disposition
+\texttt{conditionally\_not\_required} with no manuscript.
+\end{definition}
+
+\begin{proposition}[P15T05-PROP-FIXED-GATE-E-NO-MANUSCRIPT-V1]
+Assume:
+\begin{enumerate}[label=(H\arabic*)]
+  \item the fixed package $E_0$ is the package reviewed by P9-T09;
+  \item the protected P9-T09 decision gives $G_E(E_0)=0$;
+  \item P15-T05 permits manuscript preparation exactly when
+  $P_M(E_0)\Longleftrightarrow G_E(E_0)$;
+  \item no materially new reopening evidence or fresh Gate E reversal has
+  entered the package;
+  \item the current authorization is review authority only.
+\end{enumerate}
+Then $P_M(E_0)=0$, manuscript preparation is outside the lawful task scope,
+and $D_{\mathrm{cnr}}(E_0)$ is the unique plan-conforming disposition among
+the manuscript and no-manuscript branches.
+\end{proposition}
+
+\begin{proof}
+By (H2), $G_E(E_0)=0$.  Substitution into the biconditional in (H3) gives
+$P_M(E_0)=0$.  Therefore the manuscript branch is not permitted.  By (H4),
+the fixed-package result cannot be replaced by a positive Gate E value in this
+review.  By (H5), authorization cannot supply any missing scientific premise.
+The P15-T05 definition of done requires \texttt{conditionally\_not\_required}
+or a human-gated record when no manuscript is authorized.  Exact review
+authority is present, so the unresolved-human-gate branch is inapplicable and
+$D_{\mathrm{cnr}}(E_0)$ is the remaining plan-conforming disposition.
+\end{proof}
+
+\begin{corollary}[No manuscript or publication inference]
+The disposition creates no derivation manuscript, manuscript permission,
+publication permission, push authority, benchmark promotion, completed
+derivation, or proof authority.  A later manuscript branch would require the
+P9-T09 reopening conditions, a new qualifying Gate E decision, and the exact
+protected authority required at that time.
+\end{corollary}
+
+\section{Branch audit}
+
+\begin{longtable}{p{0.30\linewidth}p{0.20\linewidth}p{0.40\linewidth}}
+\toprule
+Branch & Disposition & Evidence boundary \\
+\midrule
+\endhead
+Prepare a source-derived GR manuscript & blocked & Gate E is not ready and
+P15-T05 makes Gate E authorization necessary. \\
+Defer for missing P15-T05 review authority & inapplicable & Exact narrow review
+authority is present and consumed once. \\
+Record a conditionally-not-required no-manuscript package & selected & This is
+the plan-defined disposition when the manuscript condition is false. \\
+Reopen or reverse Gate E & outside scope & No materially new evidence or fresh
+Gate E reversal authority is part of this task. \\
+\bottomrule
+\end{longtable}
+
+\section{Reproducibility and claim map}
+
+The task-local reproducibility manifest records the exact SHA-256 identities of
+the implementation plan, Gate E decision, P9 completion, approval, immutable
+generation-198 route, and source handoff.  The claim-to-evidence map binds each
+major conclusion to those sources.  No external source, manuscript file,
+reviewer contact, hosted workflow, publication, submission, or push is used.
+
+\section{Distance-to-GR and explicit nonconclusions}
+
+This packet closes the P15-T05 conditional work item but changes no physical
+Distance-to-GR burden.  It does not modify canonical ontology, derive a source
+law, construct $M_{\mathrm{src}}$ or $g_{\mathrm{eff}}$, establish matter
+coupling or Einstein equations, pass a benchmark, promote Gate E, prove a
+completed derivation, publish, push, reject the broader program, or prove that
+future materially new evidence is impossible.
+
+\end{document}

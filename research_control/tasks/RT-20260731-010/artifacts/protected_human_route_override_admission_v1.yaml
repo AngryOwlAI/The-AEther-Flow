@@ -1,0 +1,74 @@
+schema_id: "protected_human_route_override_admission_v1"
+policy_id: "ordinary_route_guard_policy_v1"
+status: "active"
+admission_purpose: "protected_execution"
+
+admitted_job:
+  job_id: "AJ-RT-20260731-010-001"
+  task_id: "RT-20260731-010"
+  decision_id: "DDR-20260731-010"
+  plan_task_id: "P15-T05"
+
+protected_job:
+  job_id: "AJ-RT-20260731-010-001"
+  task_id: "RT-20260731-010"
+  decision_id: "DDR-20260731-010"
+  plan_task_id: "P15-T05"
+
+source_handoff:
+  handoff_id: "handoff-0931"
+  path: "research_control/handoffs/handoff-0931.yaml"
+  sha256: "b0a72a9f55178ef71bf0bc529534711b35b4fe130b62286ddcb162d047fbb7b2"
+  selected_plan_task_id: "P13-T02"
+  guard_outcome: "all_ready_science_blocked_exception"
+
+approval:
+  approval_id: "approval-20260731-003"
+  path: "research_control/approvals/approval-20260731-003.yaml"
+  sha256: "ddd1ed0c39e7a0e824c32189d9fe4e3c1a3894fadcce5fe2df1a7fffbd8e44e3"
+
+director_decision:
+  path: "research_control/tasks/RT-20260731-010/DDR-20260731-010.md"
+  sha256: "7e1f33e33b199571cc657a1971fc88f1d8ba44b5df453742ef5f56a97f7dafe4"
+
+human_authorization:
+  path: "research_control/tasks/RT-20260731-010/artifacts/protected_human_route_authorization_v1.yaml"
+  sha256: "934451f7ee001c1f568dfd22e5db177e0b2abdaf56754319c642b9058dd4baff"
+
+protected_route:
+  evidence_path: "research_control/tasks/RT-20260731-010/artifacts/protected_recursive_goal_route_receipt_v1.yaml"
+  evidence_sha256: "221fee6bba5bbcb38ff238f9b4e00c483ec9bb4449fce2758b9bb2346f9014cd"
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  generation: 198
+  plan_task_id: "P15-T05"
+  worker_skill: "continue-research"
+  route_sha256: "a93a851265a073a15e3c91028bbc0890924ca083107d0a75a7adea4e8be06bc1"
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:198"
+
+admitted_route:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  generation: 198
+  plan_task_id: "P15-T05"
+  worker_skill: "continue-research"
+  route_sha256: "a93a851265a073a15e3c91028bbc0890924ca083107d0a75a7adea4e8be06bc1"
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:198"
+
+approval_consumption:
+  one_time_use: true
+  consumed: true
+  consumed_by: "AJ-RT-20260731-010-001"
+  reused_for_admitted_job: false
+
+authority_limits:
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  system_success_counts_as_physics: false
+  system_success_counts_as_distance_to_gr: false
+  scientific_status_changed: false
+  gate_e_reopening_authorized: false
+  derivation_manuscript_authorized: false
+  publication_authorized: false
+  push_authorized: false
+  physics_promotion_authorized: false
+
+authority_note: "This receipt admits only the exact generation-198 protected P15-T05 review route. It does not reverse Gate E or create manuscript, publication, push, completed-derivation, ontology, metric, coupling, or promotion authority."

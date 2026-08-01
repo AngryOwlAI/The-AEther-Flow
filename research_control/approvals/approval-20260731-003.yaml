@@ -1,0 +1,40 @@
+approval_id: "approval-20260731-003"
+human_authorization_id: "HUMAN-AUTH-P15-T05-CONDITIONAL-MANUSCRIPT-REVIEW-2026-07-31-001"
+decision_id: "DDR-20260731-010"
+approved_by: "user"
+approved_at: "2026-08-01T03:06:38Z"
+recorded_at: "2026-08-01T03:06:38Z"
+source_thread_id: "019fbad8-da69-7c32-bb63-ea758d65115a"
+source_message_text: "I authorize it all"
+source_message_sha256: "15029c7d9ad3d753722db20238c8e7a102a0425cb4b82fa671bc1c28dcb8b4cf"
+source_goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+source_goal_journal_sequence: 1504
+source_goal_journal_entry_sha256: "7b4640454127637f0b510bfbae3f673b1b691b3aa1fcd23a6c69569b3827cc99"
+context_interpretation: "The user's exact authorization is accepted only for the immediately preceding P15-T05 protected review path recorded in goal-journal entry 1504. The evidence, not authorization, determines the disposition."
+decision_code: "AUTHORIZED_SCOPED_P15_T05_GATE_E_CONDITIONAL_MANUSCRIPT_REVIEW_VERDICT_NEUTRAL"
+scope: "One bounded P15-T05 review may apply the already-finalized protected Gate E decision to the manuscript condition and record either an authorized manuscript branch or a conditionally-not-required no-manuscript branch. The fixed evidence determines which branch is lawful."
+protected_scope:
+  may_review:
+    - "the exact Gate E decision and its benchmark, derivation, and replication criteria"
+    - "the P15-T05 if-and-only-if manuscript condition"
+    - "whether the fixed evidence lawfully permits manuscript preparation"
+  may_record:
+    - "one protected P15-T05 conditional disposition"
+    - "one task-local control proposition formalizing the fixed-evidence implication"
+    - "one no-manuscript claim-to-evidence map and reproducibility manifest when Gate E is not ready"
+  must_preserve:
+    - "the P9-T09 decision NOT_READY_BENCHMARK_AND_COMPLETED_DERIVATION_REQUIREMENTS_UNMET"
+    - "zero qualifying Gate E benchmark passes and no qualifying independent replication"
+    - "the local fixed-package freeze and materially-new-evidence reopening rule"
+    - "the distinction between protected review authority and scientific or publication authority"
+  must_not_authorize:
+    - "a positive Gate E verdict or reversal without materially new evidence and fresh protected authority"
+    - "a source-derived GR manuscript when the Gate E condition is false"
+    - "canonical ontology modification source-law adoption metric matter coupling Einstein-equation or benchmark promotion"
+    - "completed derivation proof publication push external submission reviewer contact or outreach"
+expires_at: "AJ-RT-20260731-010-001"
+one_time_use: true
+status: "consumed"
+consumed_by: "AJ-RT-20260731-010-001"
+consumed_at: "2026-08-01T03:06:38Z"
+notes: "This approval supplies protected review authority only. It supplies no missing benchmark pass, replication, completed derivation, manuscript, publication, promotion, or push evidence."

@@ -1,0 +1,79 @@
+{
+  "schema_id": "v21_p15_t05_gate_e_no_manuscript_compact_receipt_v1",
+  "task_id": "RT-20260731-010",
+  "job_id": "AJ-RT-20260731-010-001",
+  "plan_task_id": "P15-T05",
+  "result_status": "PASS_CONDITIONALLY_NOT_REQUIRED_GATE_E_NOT_READY_NO_MANUSCRIPT",
+  "decision_code": "CONDITIONALLY_NOT_REQUIRED_GATE_E_NOT_READY_NO_MANUSCRIPT",
+  "authorization": {
+    "approval_id": "approval-20260731-003",
+    "approval_sha256": "ddd1ed0c39e7a0e824c32189d9fe4e3c1a3894fadcce5fe2df1a7fffbd8e44e3",
+    "exact_user_message_sha256": "15029c7d9ad3d753722db20238c8e7a102a0425cb4b82fa671bc1c28dcb8b4cf",
+    "goal_journal_sequence": 1504,
+    "goal_journal_entry_sha256": "7b4640454127637f0b510bfbae3f673b1b691b3aa1fcd23a6c69569b3827cc99",
+    "generation": 198,
+    "idempotency_key": "crg-20260720T161354Z-96bc2664ce31bfe0:198",
+    "consumed_once": true,
+    "verdict_predetermined": false
+  },
+  "source_hashes": {
+    "implementations_plans/recommendations_implementation_plan_continue_task-v21.md": "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087",
+    "research_control/design/v21_recommendation_backlog.yaml": "849a4e8dfe848e80bc0c8236252b924e636e5c95ac1a090478a69f7f5377559f",
+    "research_control/tasks/RT-20260731-004/artifacts/p9_t09_gate_e_decision_v1.tex": "7f28103e40664f0a004af0134f3216932136f8efb160f0c7c59039efa5225b0b",
+    "research_control/tasks/RT-20260731-004/jobs/completions/AJC-AJ-RT-20260731-004-001.yaml": "5c64250eea3f702051c1403b1ec9b2edd85f00d7937b2647965526f124ab3ee6",
+    "research_control/handoffs/handoff-0931.yaml": "b0a72a9f55178ef71bf0bc529534711b35b4fe130b62286ddcb162d047fbb7b2"
+  },
+  "artifact_receipts": {
+    "protected_recursive_goal_route_receipt_v1.yaml": "221fee6bba5bbcb38ff238f9b4e00c483ec9bb4449fce2758b9bb2346f9014cd",
+    "protected_human_route_override_admission_v1.yaml": "cf9785da7bfec40d3fd938f545fd98ab46a434f260efb02e03c29be53a1c961b",
+    "child_phys_math_p15_t05_gate_e_disposition.yaml": "3a9b0b7500bf3a9c93e18ee187754647a4a4595929eca73c5ef4288f7a3afbd2",
+    "child_phys_phil_p15_t05_gate_e_disposition.yaml": "f08b42280ef447de23d32a90c80701aeab910138a54fc71fba96430b20f82fdf",
+    "parent_conflict_review_p15_t05_gate_e_disposition.yaml": "1108bf8d8e9671820dfa791f38e6b69fefd0aaa734360a484d41833bffc4cdaa",
+    "parent_fusion_notes_p15_t05_gate_e_disposition.md": "db605bad2127096da9d525a4f1f23096491603d30cd809d23f6170e7a24f4002",
+    "p15_t05_gate_e_no_manuscript_disposition_v1.tex": "daa8533b40e82ee2a1bf5ef2e78b6bd5bd9cc1ffa4c0e27444188bed47e59a5d",
+    "p15_t05_claim_to_evidence_map_v1.yaml": "dfbce44f48f8bd04ad8b9657e63a8ef9767f4cab221d518fc2f5b0ebb9dfbef0",
+    "p15_t05_reproducibility_manifest_v1.yaml": "3c592c93af22b28e1a72be979e9512efeddd16b714e7472d837fa11cf492a22e"
+  },
+  "finding_counts": {
+    "fixed_source_hashes": 5,
+    "parallel_child_outputs": 2,
+    "resolved_scope_conflicts": 5,
+    "unresolved_conflicts": 0,
+    "benchmark_passes": 0,
+    "qualifying_independent_replications": 0,
+    "manuscript_artifacts": 0,
+    "external_sources": 0
+  },
+  "theorem_id": "P15T05-PROP-FIXED-GATE-E-NO-MANUSCRIPT-V1",
+  "validator_ids": [
+    "task_local_p15_t05_gate_e_no_manuscript",
+    "scratch_pdflatex_compile",
+    "memory_bootstrap",
+    "memory_validate_only",
+    "project_change_classifier",
+    "project_improvement_signals",
+    "documentation_impact",
+    "claim_language_changed",
+    "research_control_core",
+    "research_control_diff",
+    "physics_progress_metrics",
+    "renderer_freshness",
+    "claim_graph_validation",
+    "task_selected_test_shard",
+    "git_diff_check",
+    "checkpoint_transaction"
+  ],
+  "validation_report_path": "research_control/tasks/RT-20260731-010/artifacts/p15_t05_gate_e_no_manuscript_validation_v1.json",
+  "claim_boundary_summary": "The fixed P9-T09 Gate E package is NOT READY, so the P15-T05 if-and-only-if manuscript condition is false and the work item is conditionally_not_required. No manuscript is created. No Gate E reopening, ontology or source-law adoption, metric, coupling, Einstein-equation, benchmark, completed-derivation, physical Distance-to-GR, proof, publication, push, submission, reviewer-contact, or outreach authority follows.",
+  "authority": {
+    "gate_e_reopened": false,
+    "derivation_manuscript_created": false,
+    "canonical_ontology_modified": false,
+    "source_law_adopted": false,
+    "distance_to_gr_delta_changed": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "publication_authorized": false,
+    "push_authorized": false
+  }
+}

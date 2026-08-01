@@ -1,0 +1,55 @@
+schema_id: "p15_t05_reproducibility_manifest_v1"
+artifact_id: "P15T05-REPRODUCIBILITY-MANIFEST-V1"
+task_id: "RT-20260731-010"
+plan_task_id: "P15-T05"
+status: "draft_control"
+reproduction_target: "Verify the fixed-evidence conditional no-manuscript disposition without replaying Gate E or creating a manuscript."
+source_inputs:
+  - path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+    sha256: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+    purpose: "P15-T05 condition and completion rule"
+  - path: "research_control/design/v21_recommendation_backlog.yaml"
+    sha256: "849a4e8dfe848e80bc0c8236252b924e636e5c95ac1a090478a69f7f5377559f"
+    purpose: "machine-readable P15-T05 task card"
+  - path: "research_control/tasks/RT-20260731-004/artifacts/p9_t09_gate_e_decision_v1.tex"
+    sha256: "7f28103e40664f0a004af0134f3216932136f8efb160f0c7c59039efa5225b0b"
+    purpose: "canonical protected Gate E decision"
+  - path: "research_control/tasks/RT-20260731-004/jobs/completions/AJC-AJ-RT-20260731-004-001.yaml"
+    sha256: "5c64250eea3f702051c1403b1ec9b2edd85f00d7937b2647965526f124ab3ee6"
+    purpose: "finalized P9-T09 completion"
+  - path: "research_control/approvals/approval-20260731-003.yaml"
+    sha256: "ddd1ed0c39e7a0e824c32189d9fe4e3c1a3894fadcce5fe2df1a7fffbd8e44e3"
+    purpose: "exact one-time protected review authority"
+  - path: "research_control/tasks/RT-20260731-010/artifacts/protected_recursive_goal_route_receipt_v1.yaml"
+    sha256: "221fee6bba5bbcb38ff238f9b4e00c483ec9bb4449fce2758b9bb2346f9014cd"
+    purpose: "immutable generation-198 route and invocation identity"
+  - path: "research_control/handoffs/handoff-0931.yaml"
+    sha256: "b0a72a9f55178ef71bf0bc529534711b35b4fe130b62286ddcb162d047fbb7b2"
+    purpose: "immediately preceding ordinary-route authority"
+logical_method:
+  definition: "P_M(E_0) iff G_E(E_0)"
+  fixed_gate_e_value: false
+  derivation_steps:
+    - "Read the P15-T05 if-and-only-if condition from the registered plan."
+    - "Verify the P9-T09 protected decision and fixed package hashes."
+    - "Substitute G_E(E_0)=false into P_M(E_0) iff G_E(E_0)."
+    - "Conclude P_M(E_0)=false and select the plan-defined conditionally_not_required record."
+    - "Verify that authorization changes only review authority and not the fixed scientific inputs."
+commands:
+  - "shasum -a 256 <each source input>"
+  - ".venv/bin/python research_control/tasks/RT-20260731-010/artifacts/validate_p15_t05_gate_e_no_manuscript.py"
+  - "tectonic -X compile --outdir <scratch> research_control/tasks/RT-20260731-010/artifacts/p15_t05_gate_e_no_manuscript_disposition_v1.tex"
+expected_result:
+  disposition: "CONDITIONALLY_NOT_REQUIRED_GATE_E_NOT_READY_NO_MANUSCRIPT"
+  manuscript_artifact_count: 0
+  gate_e_reopened: false
+  external_source_count: 0
+  independent_replication_count_added: 0
+  benchmark_pass_count_added: 0
+  publication_or_push_performed: false
+  distance_to_gr_delta_changed: false
+external_tools_required_for_logic: false
+network_required: false
+external_source_count: 0
+manuscript_artifact_count: 0
+authority_note: "This manifest reproduces a control implication from fixed canonical records. It does not reproduce or prove a physical derivation."

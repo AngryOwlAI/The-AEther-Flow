@@ -1,0 +1,57 @@
+schema_id: "p15_t05_claim_to_evidence_map_v1"
+artifact_id: "P15T05-CLAIM-TO-EVIDENCE-MAP-V1"
+task_id: "RT-20260731-010"
+plan_task_id: "P15-T05"
+status: "draft_control"
+fixed_evidence_package: "P9-T09 finalized Gate E package"
+claims:
+  - claim_id: "P15T05-CLAIM-001"
+    claim: "P15-T05 permits a source-derived GR manuscript only if Gate E authorizes it."
+    evidence:
+      - path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+        sha256: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+        scope: "P15-T05 objective, implementation action, definition of done, and stop rule"
+    authority_effect: "plan_condition_only"
+  - claim_id: "P15T05-CLAIM-002"
+    claim: "Gate E is NOT READY for the fixed package; zero cases pass and no qualifying independent replication exists."
+    evidence:
+      - path: "research_control/tasks/RT-20260731-004/artifacts/p9_t09_gate_e_decision_v1.tex"
+        sha256: "7f28103e40664f0a004af0134f3216932136f8efb160f0c7c59039efa5225b0b"
+        scope: "protected verdict, fixed evidence, local freeze, and reopening conditions"
+      - path: "research_control/tasks/RT-20260731-004/jobs/completions/AJC-AJ-RT-20260731-004-001.yaml"
+        sha256: "5c64250eea3f702051c1403b1ec9b2edd85f00d7937b2647965526f124ab3ee6"
+        scope: "canonical completion and validation receipt"
+    authority_effect: "fixed_negative_gate_e_input"
+  - claim_id: "P15T05-CLAIM-003"
+    claim: "The user authorizes one verdict-neutral P15-T05 protected review path, not a positive verdict or manuscript independently of Gate E."
+    evidence:
+      - path: "research_control/approvals/approval-20260731-003.yaml"
+        sha256: "ddd1ed0c39e7a0e824c32189d9fe4e3c1a3894fadcce5fe2df1a7fffbd8e44e3"
+        scope: "one-time protected review authority and exact non-authorizations"
+      - path: "research_control/tasks/RT-20260731-010/artifacts/protected_recursive_goal_route_receipt_v1.yaml"
+        sha256: "221fee6bba5bbcb38ff238f9b4e00c483ec9bb4449fce2758b9bb2346f9014cd"
+        scope: "immutable generation-198 route identity and one consumed worker invocation"
+    authority_effect: "review_authority_only"
+  - claim_id: "P15T05-CLAIM-004"
+    claim: "The lawful fixed-evidence disposition is conditionally_not_required with no manuscript."
+    evidence:
+      - path: "research_control/tasks/RT-20260731-010/artifacts/p15_t05_gate_e_no_manuscript_disposition_v1.tex"
+        sha256: "daa8533b40e82ee2a1bf5ef2e78b6bd5bd9cc1ffa4c0e27444188bed47e59a5d"
+        scope: "P15T05-PROP-FIXED-GATE-E-NO-MANUSCRIPT-V1"
+    authority_effect: "task_local_protected_disposition"
+  - claim_id: "P15T05-CLAIM-005"
+    claim: "No physical Distance-to-GR, ontology, benchmark, completed-derivation, publication, or push authority changes."
+    evidence:
+      - path: "research_control/tasks/RT-20260731-010/artifacts/p15_t05_gate_e_no_manuscript_disposition_v1.tex"
+        sha256: "daa8533b40e82ee2a1bf5ef2e78b6bd5bd9cc1ffa4c0e27444188bed47e59a5d"
+        scope: "explicit nonconclusions"
+      - path: "research_control/approvals/approval-20260731-003.yaml"
+        sha256: "ddd1ed0c39e7a0e824c32189d9fe4e3c1a3894fadcce5fe2df1a7fffbd8e44e3"
+        scope: "exact non-authorizations"
+    authority_effect: "boundary_preservation"
+unmapped_major_claim_count: 0
+external_source_count: 0
+manuscript_artifact_count: 0
+publication_or_push_performed: false
+physics_promotion_authorized: false
+proof_authority: false

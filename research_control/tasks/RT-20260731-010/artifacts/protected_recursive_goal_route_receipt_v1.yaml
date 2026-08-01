@@ -1,0 +1,45 @@
+schema_id: "protected_recursive_goal_route_receipt_v1"
+receipt_id: "PRGRR-RT-20260731-010-GENERATION-198"
+task_id: "RT-20260731-010"
+job_id: "AJ-RT-20260731-010-001"
+decision_id: "DDR-20260731-010"
+goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+generation: 198
+passes_consumed: 178
+idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:198"
+handoff_token: "7a04018b48ac20e09761984d8a0deae2033254cc8542102c"
+relay_claim_token: "51c91208b516102a853c54a3c419d84241183e77fe646f3a"
+route_sha256: "a93a851265a073a15e3c91028bbc0890924ca083107d0a75a7adea4e8be06bc1"
+route_blocker_fingerprint: "1861274835207da812d0aff1abeea0f44c44503c3c30fd9a9db1091c0a596d25"
+route_work_item_id: "P15-T05"
+route_worker_skill: "continue-research"
+route_reason: "authorized_dependency_ready_p15_t05_verdict_neutral_review"
+route_strategy_id: "execute_authorized_p15_t05_gate_e_no_manuscript_disposition_v1"
+authorized_worker_invocation_count: 1
+consumed_worker_invocation_count: 1
+receipt_scope: "immutable_preexecution_route_and_consume_snapshot"
+worker_returned_at_receipt_creation: false
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  generation: 198
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:198"
+  route_sha256: "a93a851265a073a15e3c91028bbc0890924ca083107d0a75a7adea4e8be06bc1"
+  route_work_item_id: "P15-T05"
+  route_worker_skill: "continue-research"
+
+source_repository_root: "/Volumes/P-SSD/AngryOwl/The-AEther-Flow"
+source_branch: "main"
+source_head: "686c3021ba7d256390d5efdf78af4c251da6d975"
+source_handoff_id: "handoff-0931"
+source_handoff_path: "research_control/handoffs/handoff-0931.yaml"
+source_handoff_sha256: "b0a72a9f55178ef71bf0bc529534711b35b4fe130b62286ddcb162d047fbb7b2"
+authority_limits:
+  immutable_route_preserved: true
+  worker_invocation_replay_allowed: false
+  gate_e_reopening_authorized: false
+  manuscript_authorized_independently_of_gate_e: false
+  publication_authorized: false
+  push_authorized: false
+  physics_promotion_authorized: false

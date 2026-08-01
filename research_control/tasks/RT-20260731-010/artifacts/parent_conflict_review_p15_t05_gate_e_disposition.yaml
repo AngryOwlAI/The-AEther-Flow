@@ -1,0 +1,59 @@
+schema_id: "parent_child_conflict_review_v1"
+task_id: "RT-20260731-010"
+job_id: "AJ-RT-20260731-010-001"
+status: "resolved"
+reviewed_children:
+  - execution_unit_id: "child_phys_math"
+    path: "research_control/tasks/RT-20260731-010/artifacts/child_phys_math_p15_t05_gate_e_disposition.yaml"
+    sha256: "3a9b0b7500bf3a9c93e18ee187754647a4a4595929eca73c5ef4288f7a3afbd2"
+    status: "completed"
+    blocking_conflict_present: false
+  - execution_unit_id: "child_phys_phil"
+    path: "research_control/tasks/RT-20260731-010/artifacts/child_phys_phil_p15_t05_gate_e_disposition.yaml"
+    sha256: "f08b42280ef447de23d32a90c80701aeab910138a54fc71fba96430b20f82fdf"
+    status: "completed"
+    blocking_conflict_present: false
+shared_consensus:
+  - "P15-T05 makes Gate E authorization necessary and sufficient for the derivation-manuscript branch."
+  - "The finalized P9-T09 fixed package is NOT READY with zero benchmark passes and no qualifying independent replication."
+  - "Exact protected review authority is present and consumed once but supplies no positive scientific premise."
+  - "The manuscript branch is false and the lawful work-item status is conditionally_not_required."
+  - "No manuscript, publication, push, completed derivation, benchmark promotion, physical Distance-to-GR delta, or ontology change follows."
+resolved_conflicts:
+  - conflict_id: "PCR-P15T05-001"
+    topic: "result_code_normalization"
+    child_phys_math: "CONDITIONALLY_NOT_REQUIRED_GATE_E_NOT_READY_NO_MANUSCRIPT"
+    child_phys_phil: "CONDITIONALLY_NOT_REQUIRED_GATE_E_NOT_READY_NO_MANUSCRIPT"
+    resolution: "Use the exact canonical code CONDITIONALLY_NOT_REQUIRED_GATE_E_NOT_READY_NO_MANUSCRIPT in every final record."
+    resolution_basis: "Both final child artifacts agree after normalization."
+  - conflict_id: "PCR-P15T05-002"
+    topic: "proved_control_implication_vs_proof_authority"
+    child_phys_math: "The Boolean proposition is proved from fixed control premises."
+    child_phys_phil: "The proof establishes no substrate derivation or physical theorem authority."
+    resolution: "Record one task-local draft/control proposition with proof_status proved_from_fixed_control_premises while retaining proof_authority false."
+    resolution_basis: "A valid control implication does not promote a physical derivation claim."
+  - conflict_id: "PCR-P15T05-003"
+    topic: "local_disposition_vs_future_reopening"
+    child_phys_math: "The no-manuscript branch is uniquely plan conforming for the fixed package."
+    child_phys_phil: "Materially new evidence and fresh protected authority could support future reopening."
+    resolution: "Bind uniqueness to the exact fixed P9 package and preserve the P9-T09 reopening conditions without inferring future impossibility."
+    resolution_basis: "Local freeze and open materially-new-evidence continuation are compatible."
+  - conflict_id: "PCR-P15T05-004"
+    topic: "plan_role_guidance_vs_execution_role"
+    child_phys_math: "No manuscript formalization is lawful because the condition is false."
+    child_phys_phil: "A narrow Gate Chair overlay fits the protected disposition review."
+    resolution: "Retain ontology-formalizer as conditional plan guidance and use the one-job Gate Chair overlay only for applying the protected verdict."
+    resolution_basis: "The selected branch contains no manuscript or ontology formalization."
+  - conflict_id: "PCR-P15T05-005"
+    topic: "publication_authority_scope"
+    child_phys_math: "This task cannot publish or push."
+    child_phys_phil: "P15-T05 review authority is distinct from all external release authority."
+    resolution: "State that this task and approval create no derivation-manuscript publication, submission, reviewer-contact, or push authority; preserve any separately recorded checkpoint-publication authorization outside this task."
+    resolution_basis: "Authority is action-specific and may not be broadened or consumed by implication."
+resolution_rounds: 0
+resolved_conflict_count: 5
+unresolved_conflicts: []
+blocking_conflict_present: false
+parallel_child_revision_required: false
+fusion_ready: true
+claim_boundary_preserved: true
