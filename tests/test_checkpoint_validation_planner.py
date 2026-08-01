@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from copy import deepcopy
 import importlib.util
 import subprocess
 import sys
@@ -285,8 +286,12 @@ class CheckpointPlannerIntegrationTests(unittest.TestCase):
             ],
         )
 
-    def test_cli_defaults_to_compare_and_retains_explicit_legacy_fallback(self) -> None:
-        self.assertEqual(self.checkpoint.parse_args([]).validation_mode, "compare")
+    def test_cli_defaults_to_planner_and_retains_explicit_fallbacks(self) -> None:
+        self.assertEqual(self.checkpoint.parse_args([]).validation_mode, "planner")
+        self.assertEqual(
+            self.checkpoint.parse_args(["--planner-validation"]).validation_mode,
+            "planner",
+        )
         self.assertEqual(
             self.checkpoint.parse_args(["--legacy-validation"]).validation_mode,
             "legacy",
@@ -421,6 +426,9 @@ class CheckpointPlannerIntegrationTests(unittest.TestCase):
         manifest = self.checkpoint.load_manifest(
             self.checkpoint.VALIDATION_MANIFEST_PATH
         )
+        manifest = deepcopy(manifest)
+        manifest["migration_epoch"] = "shadow_planner"
+        manifest["execution_authority"] = "legacy"
         with mock.patch.object(
             self.checkpoint, "run_command", side_effect=passing_command
         ):
@@ -433,6 +441,7 @@ class CheckpointPlannerIntegrationTests(unittest.TestCase):
                 command_results=commands,
                 classifier=classification,
                 role_obligations=role_obligations,
+                compare_legacy=True,
             )
         return receipt, integration, commands
 
@@ -835,7 +844,9 @@ class CheckpointPlannerIntegrationTests(unittest.TestCase):
             ),
             mock.patch.object(self.checkpoint, "run_command", side_effect=fake_run),
         ):
-            result = self.checkpoint._checkpoint_impl("AJ-TEST")
+            result = self.checkpoint._checkpoint_impl(
+                "AJ-TEST", validation_mode="legacy"
+            )
 
         self.assertEqual(result["reason"], "git commit failed")
         self.assertIn(["git", "read-tree", "original-tree"], commands)

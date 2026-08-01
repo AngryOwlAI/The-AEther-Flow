@@ -28,6 +28,7 @@ COVERAGE_PATH = (
 )
 PROJECT_WORKFLOW_PATH = ROOT / ".github/workflows/project-control-validation.yml"
 SCHEDULED_WORKFLOW_PATH = ROOT / ".github/workflows/scheduled-full-validation.yml"
+MAKEFILE_PATH = ROOT / "Makefile"
 RUNNER_PATH = Path(__file__).resolve()
 MEMORY_SCRIPT_PATH = (
     ROOT
@@ -285,8 +286,8 @@ def build_memory_signal_selection(
         raise ValueError("unsupported validation plan")
     if plan.get("status") != "READY":
         raise ValueError("memory signal requires a READY plan")
-    if plan.get("execution_authority") != "legacy":
-        raise ValueError("memory signal requires legacy execution authority")
+    if plan.get("execution_authority") not in {"legacy", "manifest_planner"}:
+        raise ValueError("memory signal requires a recognized execution authority")
     if plan.get("manifest_hash") != manifest_hash():
         raise ValueError("validation plan manifest hash mismatch")
     selected_gate_ids = plan.get("selected_gate_ids")
@@ -521,8 +522,8 @@ def validate_plan_document(plan: dict[str, object]) -> None:
         loaded = load_plan(path)
     if loaded.status != "READY":
         raise ValueError(f"plan status is not READY: {loaded.status}")
-    if loaded.execution_authority != "legacy":
-        raise ValueError("shadow shards require legacy execution authority")
+    if loaded.execution_authority not in {"legacy", "manifest_planner"}:
+        raise ValueError("diagnostic shards require a recognized execution authority")
 
 
 def shard_owners() -> dict[str, tuple[str, ...]]:
@@ -624,8 +625,8 @@ def build_shard_receipt(
         },
         "authority": {
             "operational_validation_only": True,
-            "legacy_ci_authoritative": True,
-            "planner_authoritative": False,
+            "legacy_ci_authoritative": plan.get("execution_authority") == "legacy",
+            "planner_authoritative": plan.get("execution_authority") == "manifest_planner",
             "physics_claim_authority": False,
             "proof_authority": False,
         },
@@ -746,63 +747,56 @@ class CIValidationPlanTests(unittest.TestCase):
             )
         )
 
-    def test_project_workflow_keeps_legacy_authority_and_stable_shards(self) -> None:
+    def test_project_workflow_uses_one_planner_authoritative_validation_job(self) -> None:
         import yaml
 
         text = PROJECT_WORKFLOW_PATH.read_text(encoding="utf-8")
         self.assertIsNotNone(yaml.compose(text))
         for fragment in (
+            "validate_project_control:",
+            "Validate planner-authoritative project control",
+            "make PYTHON=.venv/bin/python validate-project-control",
+            "planner-project-control-${{ github.run_id }}-${{ github.run_attempt }}",
+            "actions/upload-artifact@v4",
+            "if: always()",
+        ):
+            self.assertIn(fragment, text)
+        for retired in (
             "validation_plan_shadow:",
             "validation_shards_shadow:",
-            "needs: validation_plan_shadow",
-            "continue-on-error: true",
-            "tests/test_ci_validation_plan.py run-shard",
-            "actions/download-artifact@v4",
-            "actions/upload-artifact@v4",
-            "validate_project_control:",
             "validate_memory_read_only:",
             "write-legacy-receipt",
             "prepare-memory-signal",
-            "finalize-memory-signal",
-            "if: always()",
-            "legacy-project-control-${{ github.run_id }}-${{ github.run_attempt }}",
+            "tests/test_ci_validation_plan.py run-shard",
         ):
-            self.assertIn(fragment, text)
-        for shard in SHARDS:
-            self.assertIn(f"- {shard}", text)
-        project_job = text.split("  validate_project_control:", 1)[1].split(
-            "  validate_memory_read_only:", 1
-        )[0]
-        self.assertNotIn("needs: validation_plan_shadow", project_job)
+            self.assertNotIn(retired, text)
+        project_job = text.split("  validate_project_control:", 1)[1]
         self.assertIn("fetch-depth: 0", project_job)
         self.assertIn(
             "pip install --require-hashes -r requirements-dev.txt",
             project_job,
         )
-        self.assertNotIn(
-            "pip install --require-hashes -r requirements.txt",
-            project_job,
-        )
-        memory_job = text.split("  validate_memory_read_only:", 1)[1]
-        self.assertIn("steps.memory_selection.outputs.mode == 'fallback'", memory_job)
-        self.assertIn("steps.memory_selection.outputs.mode == 'reuse'", memory_job)
-        self.assertIn("continue-on-error: true", memory_job)
 
-    def test_scheduled_workflow_is_unfiltered_and_cache_audit_capable(self) -> None:
+    def test_scheduled_workflow_runs_the_unfiltered_planner_full_profile(self) -> None:
         import yaml
 
         text = SCHEDULED_WORKFLOW_PATH.read_text(encoding="utf-8")
+        makefile = MAKEFILE_PATH.read_text(encoding="utf-8")
         self.assertIsNotNone(yaml.compose(text))
         self.assertIn("schedule:", text)
-        self.assertIn("--profile full", text)
-        self.assertIn("--scope repository", text)
-        self.assertIn("--profile doctor", text)
-        self.assertIn("VALIDATION_CACHE_MODE: audit", text)
-        self.assertIn("scheduled_validation_shards:", text)
+        self.assertIn("scheduled_full_validation:", text)
+        self.assertIn(
+            "make PYTHON=.venv/bin/python validate-project-control",
+            text,
+        )
+        self.assertIn(
+            "scripts.validation.cli run --profile full --paths",
+            makefile,
+        )
         self.assertNotIn("paths-ignore:", text)
         self.assertNotIn("branches-ignore:", text)
-        for shard in SHARDS:
-            self.assertIn(f"- {shard}", text)
+        self.assertNotIn("scheduled_validation_shards:", text)
+        self.assertNotIn("continue-on-error: true", text)
 
     def test_full_plus_doctor_plans_cover_every_scheduled_shard(self) -> None:
         from scripts.project_control.classify_project_changes import classify_paths

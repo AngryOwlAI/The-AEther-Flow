@@ -456,18 +456,19 @@ class ProjectChangeClassifierTests(unittest.TestCase):
         self.assertNotIn("unknown_governed_path", forward["reason_codes"])
 
     def test_validation_gate_manifest_has_stable_schema_family_tag(self) -> None:
-        path = "research_control/design/validation_gate_manifest_v1.yaml"
-        result = self.classifier.classify_paths([path])
+        paths = (
+            "research_control/design/validation_gate_manifest_v1.yaml",
+            "research_control/design/validation_obligation_catalog_v1.yaml",
+        )
+        result = self.classifier.classify_paths(paths)
 
         self.assertEqual(result["path_family_tags"], ["role_or_schema_contract"])
-        self.assertEqual(
-            result["path_family_details"][0]["tags"],
-            ["role_or_schema_contract"],
-        )
-        self.assertIn(
-            "path_rule:role_or_schema_contract",
-            result["path_family_details"][0]["reasons"],
-        )
+        for detail in result["path_family_details"]:
+            self.assertEqual(detail["tags"], ["role_or_schema_contract"])
+            self.assertIn(
+                "path_rule:role_or_schema_contract",
+                detail["reasons"],
+            )
         self.assertNotIn("unknown_governed_path", result["reason_codes"])
 
     def test_validation_adapter_bindings_are_exact_ci_orchestration(self) -> None:
@@ -489,6 +490,22 @@ class ProjectChangeClassifierTests(unittest.TestCase):
             unrelated["path_family_tags"],
             ["unknown_governed_path"],
         )
+
+    def test_claim_language_surfaces_select_the_stable_claim_tag(self) -> None:
+        for path in (
+            "README.md",
+            "research_control/design/validation_profile_policy_v1.md",
+            "research_control/tasks/RT-TEST/artifacts/result.tex",
+            "research_control/handoffs/handoff-9999.yaml",
+            "registries/RESEARCH_TASK_REGISTRY.csv",
+        ):
+            with self.subTest(path=path):
+                result = self.classifier.classify_paths([path])
+                self.assertIn("claim_language", result["path_family_tags"])
+                self.assertIn(
+                    "path_rule:claim_language",
+                    result["path_family_details"][0]["reasons"],
+                )
 
     def test_unknown_governed_path_selects_full_without_silent_skip(self) -> None:
         result = self.classifier.classify_paths(["governed/new-format.bin"])

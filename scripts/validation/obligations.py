@@ -122,8 +122,17 @@ def _catalog_parts(
         raise ObligationError("unsupported obligation catalog schema_version")
     if top["catalog_id"] != "validation-obligation-catalog-v1":
         raise ObligationError("unsupported obligation catalog_id")
-    if top["migration_epoch"] != "shadow_planner" or top["execution_authority"] != "legacy":
-        raise ObligationError("catalog cannot change shadow-planner legacy authority")
+    authority_pair = (top["migration_epoch"], top["execution_authority"])
+    if authority_pair not in {
+        ("shadow_planner", "legacy"),
+        ("planner_authoritative", "manifest_planner"),
+    }:
+        raise ObligationError("catalog has an unsupported migration authority pair")
+    if authority_pair != (
+        manifest.get("migration_epoch"),
+        manifest.get("execution_authority"),
+    ):
+        raise ObligationError("catalog and manifest migration authority differ")
     authority = _exact_fields(
         top["authority"],
         {

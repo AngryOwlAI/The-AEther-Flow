@@ -33,8 +33,8 @@ def shared_full_plan() -> dict:
         "requested_profile": "full",
         "effective_profile": "full",
         "manifest_hash": "manifest-hash",
-        "execution_authority": "legacy",
-        "planner_executes_commands": False,
+        "execution_authority": "manifest_planner",
+        "planner_executes_commands": True,
         "selected_gate_ids": [
             "research_control_core",
             "research_control_diff",
@@ -59,12 +59,12 @@ class MakeValidationProfileWrapperTests(unittest.TestCase):
         )
         return result.stdout
 
-    def test_five_public_targets_delegate_to_shared_cli_profiles(self) -> None:
+    def test_five_public_targets_delegate_to_shared_profile_surfaces(self) -> None:
         expectations = {
-            "validate-fast": "plan --profile fast --paths Makefile --explain",
-            "validate-affected": "plan --profile affected --paths Makefile --explain",
+            "validate-fast": "run --profile fast --paths Makefile",
+            "validate-affected": "run --profile affected --paths Makefile",
             "validate-checkpoint-plan": "plan --profile checkpoint --staged --explain",
-            "validate-full": "plan --profile full --paths --explain",
+            "validate-full": "run --profile full --paths",
             "validate-doctor": "plan --profile doctor --scope local_retrieval --explain",
         }
         for target, expected in expectations.items():
@@ -73,17 +73,24 @@ class MakeValidationProfileWrapperTests(unittest.TestCase):
                 self.assertIn("-m scripts.validation.cli", plan)
                 self.assertIn(expected, plan)
 
-    def test_compatibility_target_plans_once_then_runs_legacy_chain_once(self) -> None:
+    def test_project_control_target_runs_the_planner_full_profile_once(self) -> None:
         plan = self.make_plan("validate-project-control")
 
-        self.assertEqual(plan.count("plan --profile full --paths --explain"), 1)
+        self.assertEqual(plan.count("run --profile full --paths"), 1)
+        self.assertNotIn(
+            "scripts/research_control/validate_research_control.py --check-diff",
+            plan,
+        )
+        self.assertIn('"execution_authority":"manifest_planner"', plan)
+
+    def test_explicit_legacy_target_retains_the_rollback_chain(self) -> None:
+        plan = self.make_plan("validate-project-control-legacy")
+
         self.assertEqual(
             plan.count("scripts/research_control/validate_research_control.py --check-diff"),
             1,
         )
         self.assertEqual(plan.count("unittest discover -s tests"), 1)
-        self.assertIn('"compatibility_wrapper":true', plan)
-        self.assertIn('"execution_authority":"legacy"', plan)
 
 
 class LocalFullRunnerWrapperTests(unittest.TestCase):
@@ -111,7 +118,7 @@ class LocalFullRunnerWrapperTests(unittest.TestCase):
         self.assertEqual(run.call_args_list[1].args[0], self.runner.legacy_command())
         self.assertEqual(report["schema_id"], self.runner.REPORT_SCHEMA_ID)
         self.assertEqual(report["legacy_execution_status"], "PASS")
-        self.assertEqual(report["execution_authority"], "legacy")
+        self.assertEqual(report["execution_authority"], "manifest_planner")
         self.assertFalse(report["planner_executes_commands"])
         self.assertFalse(report["ci_equivalent"])
         self.assertTrue(report["compatibility_wrapper_deprecated"])

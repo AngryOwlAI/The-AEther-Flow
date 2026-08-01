@@ -1,0 +1,209 @@
+{
+  "authority": {
+    "benchmark_authority": false,
+    "distance_to_gr_changed": false,
+    "gate_chair_authority": false,
+    "hosted_workflow_dispatch_performed": false,
+    "ontology_authority": false,
+    "operational_validation_only": true,
+    "physics_claim_authority": false,
+    "proof_authority": false,
+    "publication_authorized": false,
+    "push_performed": false,
+    "scientific_claims_changed": false
+  },
+  "checks": [
+    {
+      "check_id": "live_authority_pair",
+      "evidence": {
+        "execution_authority": "manifest_planner",
+        "migration_epoch": "planner_authoritative"
+      },
+      "status": "PASS"
+    },
+    {
+      "check_id": "obligation_catalog_authority_pair",
+      "evidence": {
+        "execution_authority": "manifest_planner",
+        "migration_epoch": "planner_authoritative"
+      },
+      "status": "PASS"
+    },
+    {
+      "check_id": "adapter_binding_active",
+      "evidence": {
+        "adapter_count": 30,
+        "status": "active"
+      },
+      "status": "PASS"
+    },
+    {
+      "check_id": "unfiltered_full_blocking_coverage",
+      "evidence": {
+        "missing_gate_ids": [],
+        "required_blocking_gate_count": 27,
+        "selected_gate_count": 28
+      },
+      "status": "PASS"
+    },
+    {
+      "check_id": "selected_full_adapter_coverage",
+      "evidence": {
+        "missing_adapter_gate_ids": []
+      },
+      "status": "PASS"
+    },
+    {
+      "check_id": "affected_special_gate_coverage",
+      "evidence": {
+        "claim_language": {
+          "missing_adapter_gate_ids": [],
+          "path_tags": [
+            "claim_language",
+            "mermaid",
+            "registered_markdown"
+          ],
+          "paths": [
+            "README.md"
+          ],
+          "required_gate_id": "claim_language_changed",
+          "selected": true,
+          "unknown_paths": []
+        },
+        "mermaid": {
+          "missing_adapter_gate_ids": [],
+          "path_tags": [
+            "claim_language",
+            "mermaid",
+            "publication_spec",
+            "registered_markdown"
+          ],
+          "paths": [
+            "markdown/html-explainer-specs/project-overview-explainer.md",
+            "README.md"
+          ],
+          "required_gate_id": "mermaid_sources",
+          "selected": true,
+          "unknown_paths": []
+        },
+        "obligation_catalog": {
+          "missing_adapter_gate_ids": [],
+          "path_tags": [
+            "role_or_schema_contract"
+          ],
+          "paths": [
+            "research_control/design/validation_obligation_catalog_v1.yaml"
+          ],
+          "required_gate_id": "research_control_diff",
+          "selected": true,
+          "unknown_paths": []
+        },
+        "targeted_pdf": {
+          "missing_adapter_gate_ids": [],
+          "path_tags": [
+            "registered_tex",
+            "required_pdf"
+          ],
+          "paths": [
+            "legacy_ontology/tex/aether_flow_consistency.tex"
+          ],
+          "required_gate_id": "targeted_pdf_build",
+          "selected": true,
+          "unknown_paths": []
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "check_id": "targeted_pdf_contract_and_empty_set_safety",
+      "evidence": {
+        "declared_output_globs": [
+          "FOLDER_MAP.md",
+          "legacy_ontology/pdfs/**",
+          "manuscripts/pdfs/**",
+          "ontology/pdfs/**",
+          "output/research_dependency_graph.dot",
+          "output/research_dependency_graph.json",
+          "registries/**",
+          "research_control/tasks/TASK_INDEX.csv",
+          "research_control/tasks/TASK_INDEX.md",
+          "wiki/**"
+        ],
+        "empty_target_exit_code": 0,
+        "empty_target_stdout": "SKIP: no changed TeX paths require a targeted PDF build."
+      },
+      "status": "PASS"
+    },
+    {
+      "check_id": "make_authoritative_owner",
+      "evidence": {
+        "planner_full_execution_count": 1
+      },
+      "status": "PASS"
+    },
+    {
+      "check_id": "make_legacy_rollback",
+      "evidence": {
+        "target": "validate-project-control-legacy"
+      },
+      "status": "PASS"
+    },
+    {
+      "check_id": "project_workflow_single_owner",
+      "evidence": {
+        "job_ids": [
+          "quality_portability_matrix",
+          "validate_project_control"
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "check_id": "scheduled_unfiltered_full",
+      "evidence": {
+        "job_ids": [
+          "scheduled_assurance",
+          "scheduled_full_validation"
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "check_id": "skill_entrypoint_cutover",
+      "evidence": {
+        "failures": []
+      },
+      "status": "PASS"
+    },
+    {
+      "check_id": "checkpoint_default_and_rollbacks",
+      "evidence": {
+        "compare": "compare",
+        "default": "planner",
+        "legacy": "legacy"
+      },
+      "status": "PASS"
+    }
+  ],
+  "counts": {
+    "check_count": 13,
+    "fail_count": 0,
+    "pass_count": 13
+  },
+  "failed_check_ids": [],
+  "generated_at": "2026-08-01T21:40:52.345283Z",
+  "job_id": "AJ-RT-20260801-007-001",
+  "manifest_sha256": "a84904b1636216bf5b93c66debde34fcb76d220134913d32b91f810d41c90f69",
+  "schema_id": "p13_t02_planner_cutover_receipt_v1",
+  "source_commit": "8592427141063258560b372f219c0b944ab3ae39",
+  "source_hashes": {
+    ".github/workflows/project-control-validation.yml": "566617ad1304c77c4efee92ab988f90c888e35626a84fce7466cf1d03e98af14",
+    ".github/workflows/scheduled-full-validation.yml": "a55b16a83811f17a477563edbffd32235498d11ae83f2ff2834ede65e46aa08e",
+    "research_control/design/validation_adapter_bindings_v1.json": "a2d2e5c0f78ca16d1380b02e2f73c337a6226c0c0d00d035db1f7e2bd97490fa",
+    "research_control/design/validation_gate_manifest_v1.yaml": "25f0d9c0a41a4c5a531b59122a9873800baf494bc5dedc9603ed917b1de8a045",
+    "research_control/design/validation_obligation_catalog_v1.yaml": "6f3de81aa19126b481d00ec766cf3f49665823e7a98278c8a86271c71ec11f0e",
+    "scripts/research_control/checkpoint_research_transaction.py": "d5a7e2e6bf9ba26fb5c0e7c36b8af28df95afede02826837eb2bb59cb9d77a31"
+  },
+  "status": "PASS",
+  "task_id": "RT-20260801-007"
+}

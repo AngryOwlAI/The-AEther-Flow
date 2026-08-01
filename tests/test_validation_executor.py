@@ -12,6 +12,7 @@ from unittest import mock
 
 from scripts.validation.executor import (
     AdapterResult,
+    ExecutionContext,
     ExecutorError,
     SubprocessAdapter,
     execute_plan,
@@ -371,6 +372,106 @@ class ValidationExecutorTests(unittest.TestCase):
         self.assertEqual((outcome.status, outcome.exit_code), ("FAIL", 1))
         self.assertEqual(outcome.receipt["gate_results"][0]["reason"], "timeout")
 
+    def test_subprocess_adapter_expands_plan_path_placeholders_without_a_shell(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            stdout = root / "stdout"
+            stderr = root / "stderr"
+            context = ExecutionContext(
+                gate_id="process",
+                timeout_seconds=5,
+                stdout_path=stdout,
+                stderr_path=stderr,
+                cancellation=threading.Event(),
+                changed_paths=("tex/example.tex", "README.md"),
+                scopes=("working",),
+            )
+            adapter = SubprocessAdapter(
+                (
+                    sys.executable,
+                    "-c",
+                    "import sys; print('|'.join(sys.argv[1:]))",
+                    "{changed_paths}",
+                    "{changed_path_args}",
+                    "{changed_tex_paths}",
+                    "{claim_language_mode_args}",
+                )
+            )
+
+            result = adapter.run(context)
+
+            self.assertEqual(result.exit_code, 0)
+            self.assertEqual(
+                stdout.read_text(encoding="utf-8").strip(),
+                "tex/example.tex|README.md|--paths|tex/example.tex|README.md|tex/example.tex|--changed",
+            )
+
+    def test_changed_tex_placeholder_is_a_safe_no_op_for_an_empty_target_set(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            marker = root / "must-not-run"
+            stdout = root / "stdout"
+            stderr = root / "stderr"
+            adapter = SubprocessAdapter(
+                (
+                    sys.executable,
+                    "-c",
+                    "from pathlib import Path; Path(__import__('sys').argv[1]).write_text('ran')",
+                    str(marker),
+                    "{changed_tex_paths}",
+                )
+            )
+
+            result = adapter.run(
+                ExecutionContext(
+                    gate_id="targeted_pdf_build",
+                    timeout_seconds=5,
+                    stdout_path=stdout,
+                    stderr_path=stderr,
+                    cancellation=threading.Event(),
+                    changed_paths=(),
+                    scopes=("repository",),
+                )
+            )
+
+            self.assertEqual(result.exit_code, 0)
+            self.assertFalse(marker.exists())
+            self.assertIn("no changed TeX paths", stdout.read_text(encoding="utf-8"))
+            self.assertEqual(stderr.read_bytes(), b"")
+
+    def test_claim_language_placeholder_selects_staged_or_full_mode(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            adapter = SubprocessAdapter(
+                (
+                    sys.executable,
+                    "-c",
+                    "import sys; print('|'.join(sys.argv[1:]))",
+                    "{claim_language_mode_args}",
+                )
+            )
+            cases = (
+                (("README.md",), ("staged",), "--staged"),
+                ((), ("repository",), "--changed"),
+            )
+            for index, (changed_paths, scopes, expected) in enumerate(cases):
+                with self.subTest(scopes=scopes):
+                    stdout = root / f"stdout-{index}"
+                    stderr = root / f"stderr-{index}"
+                    result = adapter.run(
+                        ExecutionContext(
+                            gate_id="process",
+                            timeout_seconds=5,
+                            stdout_path=stdout,
+                            stderr_path=stderr,
+                            cancellation=threading.Event(),
+                            changed_paths=changed_paths,
+                            scopes=scopes,
+                        )
+                    )
+                    self.assertEqual(result.exit_code, 0)
+                    self.assertEqual(stdout.read_text(encoding="utf-8").strip(), expected)
+
     def test_loaded_plan_requires_exact_non_promotion_authority(self) -> None:
         document = manifest(gate("alpha"))
         planned = plan_for(document).to_dict()
@@ -391,6 +492,15 @@ class ValidationExecutorTests(unittest.TestCase):
         self.assertEqual((outcome.status, outcome.exit_code), ("PASS", 0))
         self.assertEqual(outcome.receipt["execution_authority"], "manifest_planner")
         self.assertEqual(outcome.receipt["migration_epoch"], "planner_authoritative")
+        self.assertEqual(
+            outcome.receipt["feature_switches"],
+            {
+                "planner_mode": "authoritative",
+                "cache_mode": "off",
+                "output_mode": "legacy",
+                "legacy_fallback": "enabled",
+            },
+        )
         self.assertTrue(outcome.receipt["authority"]["planner_result_authoritative"])
         self.assertFalse(outcome.receipt["authority"]["legacy_result_authoritative"])
 
@@ -420,6 +530,22 @@ class ValidationExecutorTests(unittest.TestCase):
             for gate_id in full.selected_gate_ids
             if by_id[gate_id]["adapter"] not in adapters
         ]
+        self.assertEqual(missing, [])
+
+        affected = build_plan(
+            document,
+            classify_paths(
+                ("research_control/design/validation_obligation_catalog_v1.yaml",)
+            ),
+            profile="affected",
+            scopes=("repository",),
+        )
+        missing = [
+            gate_id
+            for gate_id in affected.selected_gate_ids
+            if by_id[gate_id]["adapter"] not in adapters
+        ]
+        self.assertIn("route_signature_diagnostic", affected.selected_gate_ids)
         self.assertEqual(missing, [])
 
         drifted = json.loads(json.dumps(document))

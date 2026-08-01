@@ -1,0 +1,277 @@
+handoff_id: "handoff-0936"
+handoff_number: 936
+task_id: "RT-20260801-007"
+decision_id: "DDR-20260801-007"
+job_id: "AJ-RT-20260801-007-001"
+completion_id: "AJC-AJ-RT-20260801-007-001"
+completion_path: "research_control/tasks/RT-20260801-007/jobs/completions/AJC-AJ-RT-20260801-007-001.yaml"
+completion_sha256: "4d91e8b75dd0271669c824f299742714aa180a58d39f2cde152909e0cf4b058f"
+status: "ready_after_checkpoint"
+created_at: "2026-08-01T21:25:31Z"
+parent_handoff_id: "handoff-0935"
+plan_task_id: "P13-T02"
+source_role_id: "validator-engineer"
+source_role_version: "0.2.0"
+source_execution_role_ref: "validator-engineer@0.2.0--RT-20260801-007"
+summary: "Generation 205 completed the guarded P13-T02 cutover. The manifest planner is the live operational owner for shared local profiles, hosted validation workflows, and governed checkpoint acceptance. All 28 full-profile gates pass; exact mutation allowlists, final staged-tree checks, scheduled unfiltered full orchestration, complete receipts, and explicit legacy rollback remain."
+next_action: "Run the one governed checkpoint for AJ-RT-20260801-007-001. After it commits, route one fresh bounded P13-T07 improve-project-system packet to enforce generated-report source provenance and freshness; do not execute P13-T07 in this frame."
+current_claim_boundary: "CB-PS-P13-T02-VALIDATION-PLANNER-AUTHORITATIVE-CUTOVER-001"
+loop_risk_route: "ordinary-research-packet"
+p13_t02_work_item_status: "completed"
+p13_t07_executed: false
+
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260801-007"
+  latest_research_handoff_id: "handoff-0936"
+  latest_research_next_action: "Run the one governed checkpoint for AJ-RT-20260801-007-001. After it commits, route one fresh bounded P13-T07 improve-project-system packet to enforce generated-report source provenance and freshness; do not execute P13-T07 in this frame."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+  project_improvement_sidecar_required: false
+  research_handoff_remains_authoritative: true
+
+claim_boundary:
+  allowed_next_scope: "One governed checkpoint for AJ-RT-20260801-007-001. After that commit, one fresh bounded P13-T07 project-system packet may enforce generated-report provenance and freshness."
+  completed_task: "RT-20260801-007"
+  completed_completion_path: "research_control/tasks/RT-20260801-007/jobs/completions/AJC-AJ-RT-20260801-007-001.yaml"
+  completed_completion_sha256: "4d91e8b75dd0271669c824f299742714aa180a58d39f2cde152909e0cf4b058f"
+  source_task_id: "RT-20260801-006"
+  source_job_id: "AJ-RT-20260801-006-001"
+  source_handoff_id: "handoff-0935"
+  source_handoff_path: "research_control/handoffs/handoff-0935.yaml"
+  immutable_route_sha256: "d35b9eea590bf833d14bdc23d2cf3a61f099346ee753f171622d56a8d2fb736c"
+  route_blocker_fingerprint: "a1bb7920aa6ae712d9ce0bb46665734c1859fc34f2cb984e09b025cc890d1802"
+  result_status: "PASS_P13_T02_COMPLETED_P13_T07_DEPENDENCY_READY_AFTER_CHECKPOINT"
+  planner_execution_authority: "manifest_planner"
+  migration_epoch: "planner_authoritative"
+  full_run_id: "RUN-cb0f24a525fcc43f"
+  full_run_manifest_sha256: "a84904b1636216bf5b93c66debde34fcb76d220134913d32b91f810d41c90f69"
+  full_run_gate_count: 28
+  full_run_pass_count: 28
+  full_run_failure_count: 0
+  task_local_check_count: 13
+  task_local_failure_count: 0
+  legacy_make_fallback_retained: true
+  legacy_checkpoint_switch_retained: true
+  legacy_fallback_retired: false
+  scheduled_full_unfiltered: true
+  exact_agentjob_allowlists_retained: true
+  final_staged_tree_acceptance_retained: true
+  checkpoint_invocation_count_before_handoff: 0
+  checkpoint_committed_before_handoff: false
+  p13_t02_work_item_status: "completed"
+  p13_t07_dependency_ready_after_checkpoint: true
+  p13_t07_dependency_ready_now: false
+  p13_t07_executed: false
+  scientific_status_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  ontology_adoption_authorized: false
+  source_law_adoption_authorized: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_performed: false
+  hosted_workflow_dispatch_performed: false
+  blocked_claims:
+    - "validation PASS presented as scientific truth or physics progress"
+    - "P13-T02 operational authority presented as ontology source-law metric benchmark Gate E or proof authority"
+    - "legacy rollback presented as retired"
+    - "publication push hosted workflow dispatch or completed derivation"
+
+plan_result:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  phase_id: "P13"
+  plan_task_id: "P13-T02"
+  next_plan_task_id: "P13-T07"
+  title: "Validation planner authoritative cutover"
+  result_status: "P13_T02_PASS_PLANNER_AUTHORITATIVE_ROLLBACK_RETAINED"
+  work_item_status: "completed"
+  p13_t02_completed: true
+  p13_t07_dependency_ready_after_checkpoint: true
+  p13_t07_executed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  system_success_counts_as_physics: false
+  system_success_counts_as_distance_to_gr: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+distance_to_gr:
+  changed: false
+  effect: "none_project_system_validation_cutover"
+  burden_id: "source_equivalence_eqsrc"
+  milestone: "source_equivalence_eqsrc"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "P13-T02 operational validation orchestration contributes no physics movement."
+  downstream_unlocked: []
+  downstream_still_blocked:
+    - "Einstein equations"
+    - "exact-GR recovery"
+    - "benchmark promotion"
+
+required_next_packet:
+  task_type: "generated_report_provenance_and_freshness"
+  plan_task_id: "P13-T07"
+  route_label: "ordinary-research-packet"
+  role_family: "validator-engineer@0.2.0"
+  worker_skill: "improve-project-system"
+  objective: "Add exact source commit, source hashes, task count, generation time, and maximum-lag policy to authoritative-facing generated reports and fail validation on stale governed views."
+  dependency_qualification: "P10-T08 and P13-T02 have qualifying completed records."
+  dependency_ready_after_checkpoint: true
+  dependency_ready_now: false
+  blocked_by_protected_external_evidence: false
+  executed: false
+
+selected_next_route:
+  route_id: "p13_t07_generated_report_provenance_freshness_v1"
+  plan_task_id: "P13-T07"
+  route_label: "ordinary-research-packet"
+  role_family: "validator-engineer@0.2.0"
+  worker_skill: "improve-project-system"
+  selected_next_packet_type: "generated_report_provenance_and_freshness"
+  task_type: "generated_report_provenance_and_freshness"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Prevent stale metrics and frontier reports from misleading agents or readers."
+  strategy_id: "enforce_generated_report_provenance_and_freshness_after_planner_cutover_v1"
+  requires_human_gate: false
+  blocked_by_protected_external_evidence: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  p10_t08_completed: true
+  p13_t02_completed: true
+  p13_t07_executed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  next_action: "Checkpoint AJ-RT-20260801-007-001, then dispatch one fresh bounded P13-T07 improve-project-system frame."
+  source_handoff: "research_control/handoffs/handoff-0936.yaml"
+
+ordinary_route_guard:
+  schema_id: "ordinary_route_guard_evaluation_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  evaluation_id: "ORE-HANDOFF-0936"
+  ordinary_handoff_id: "handoff-0936"
+  threshold: 3
+  consecutive_project_system_tasks_before_selection: 7
+  ready_science_plan_task_ids: []
+  selected_plan_task_id: "P13-T07"
+  selected_route_class: "project_system"
+  selected_worker_skill: "improve-project-system"
+  outcome: "all_ready_science_blocked_exception"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  exception_receipt:
+    active: true
+    schema_id: "ordinary_route_exception_receipt_v1"
+    exception_id: "ORE-HANDOFF-0936-EXCEPTION-001"
+    exception_class: "all_ready_science_blocked"
+    ordinary_handoff_id: "handoff-0936"
+    ready_science_plan_task_ids: []
+    blocked_routes: []
+    authority_limits:
+      ordinary_research_handoff_authoritative: true
+      project_system_sidecar_supersedes: false
+      system_success_counts_as_physics: false
+      system_success_counts_as_distance_to_gr: false
+      scientific_status_changed: false
+      physics_promotion_authorized: false
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+active_state_boundary:
+  active_task_id: "RT-20260801-007"
+  active_job_id: "AJ-RT-20260801-007-001"
+  current_status: "p13_t02_planner_authoritative_cutover_completed_checkpoint_ready"
+  checkpoint_required: true
+  checkpoint_completed: false
+  checkpoint_invocation_count: 0
+  dependency_checkpoint_commit: "8592427141063258560b372f219c0b944ab3ae39"
+  selected_next_plan_task_id: "P13-T07"
+  selected_next_worker_skill: "improve-project-system"
+  selected_next_role_family: "validator-engineer@0.2.0"
+  selected_next_route_label: "ordinary-research-packet"
+  selected_next_strategy_id: "enforce_generated_report_provenance_and_freshness_after_planner_cutover_v1"
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
+  selected_next_blocker: "The P13-T02 transaction requires its governed checkpoint before a fresh P13-T07 frame."
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 205 route, repository, branch, head, clean entry, claim, and one immutable worker invocation were validated."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The task-local cutover receipt passes 13 of 13 checks."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "The authoritative planner full run passes all 28 selected gates; focused final-state validation passes."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "One governed checkpoint remains authorized and uninvoked."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Frontier, task-index, dependency-graph, claim-graph, registry, and wiki derivatives will be regenerated from this tracked completion and handoff before checkpoint."
+  memory_bootstrap:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "Tracked memory checks pass; local cache warnings are non-authoritative."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed claim-language validation has zero hard failures."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "project-system validation orchestration only"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  publication_authorized: false
+  push_authorized: false
+  hosted_workflow_dispatch_authorized: false
+  proof_authority: false
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+project_improvement_sidecar_required: false
+checkpoint_required_before_next_route: true
+checkpoint_job_id: "AJ-RT-20260801-007-001"
+legacy_validation_authorized: false
+
+handoff_authority_boundary:
+  this_handoff_authorizes:
+    - "one governed checkpoint for AJ-RT-20260801-007-001"
+    - "one fresh bounded P13-T07 improve-project-system packet after that checkpoint"
+  this_handoff_does_not_authorize:
+    - "P13-T02 replay or legacy fallback retirement"
+    - "P13-T07 execution inside generation 205"
+    - "push publication mutation or hosted workflow dispatch"
+    - "scientific ontology metric benchmark Gate E promotion proof or completed-derivation claims"
+
+next_plan_task_id: "P13-T07"
+next_worker_skill: "improve-project-system"
+next_role_family: "validator-engineer@0.2.0"
+next_route_label: "ordinary-research-packet"
+next_strategy_id: "enforce_generated_report_provenance_and_freshness_after_planner_cutover_v1"
+next_plan_task_execution_ready_after_checkpoint: true
+next_plan_task_executed: false
+notes: "P13-T02 validation success is operational project-system evidence only and creates no scientific, promotion, proof, publication, push, or completed-derivation authority."

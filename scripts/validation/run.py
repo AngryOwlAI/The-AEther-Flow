@@ -183,7 +183,7 @@ def load_adapters(
         or document["binding_id"] != "validation-adapter-bindings-v1"
         or document["manifest_id"] != manifest.get("manifest_id")
         or document["scope"] != "canonical_current_full_profile"
-        or document["status"] != "active_candidate"
+        or document["status"] not in {"active", "active_candidate"}
         or document["authority"] != BINDING_AUTHORITY
     ):
         raise ExecutorError("adapter binding document contract is invalid")

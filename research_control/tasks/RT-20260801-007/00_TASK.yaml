@@ -1,0 +1,56 @@
+task_id: "RT-20260801-007"
+task_type: "validation_planner_authoritative_cutover"
+title: "Make the validated planner authoritative with rollback safeguards"
+task_taxonomy:
+  schema_id: "v21_task_taxonomy_v1"
+  work_kind: "construction_or_implementation"
+  milestone: "not_applicable"
+  candidate_family: "not_applicable"
+  result_kind: "implemented_and_validated_or_precisely_blocked"
+  authority: "project_control"
+  scope: "project_system"
+validation_status: "PASS"
+status: "completed"
+created_at: "2026-08-01T19:02:24Z"
+updated_at: "2026-08-01T21:25:31Z"
+closed_at: "2026-08-01T21:25:31Z"
+parent_task_id: "RT-20260801-006"
+parent_handoff_id: "handoff-0935"
+supersedes_active_routing_task_id: "RT-20260801-006"
+current_decision_id: "DDR-20260801-007"
+current_job_id: "AJ-RT-20260801-007-001"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260801-007"
+requires_human_gate: false
+human_authorization_note: "Generation 205 of the user-authorized recursive relay immutably routes exactly one improve-project-system invocation to dependency-ready P13-T02 after the P13-T01 checkpoint."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P13"
+  plan_task_id: "P13-T02"
+  recommendation_ids:
+    - "V21-R54"
+    - "V21-R49"
+objective: "Make the validated manifest planner the single orchestration owner for Make, hosted CI, skills, and governed checkpoint acceptance while preserving every hard gate, exact AgentJob allowlists, final staged-tree integrity, scheduled unfiltered full validation, and an explicit tested legacy fallback."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system validation orchestration cutover only; no derivation milestone advances."
+route_label: "execute_guarded_validation_planner_cutover_after_p13_t01_pass_v1"
+project_system_change_only: true
+dual_budget_category: "system_bearing"
+primary_budget: "project_system"
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+claim_boundary_id: "CB-PS-P13-T02-VALIDATION-PLANNER-AUTHORITATIVE-CUTOVER-001"
+documentation_impact_id: "DI-RT-20260801-007-001"
+completion_id: "AJC-AJ-RT-20260801-007-001"
+output_artifacts:
+  - "research_control/tasks/RT-20260801-007/artifacts/p13_t02_planner_cutover_receipt.json"
+  - "research_control/tasks/RT-20260801-007/artifacts/validate_p13_t02_planner_cutover.py"
+  - "research_control/tasks/RT-20260801-007/jobs/completions/AJC-AJ-RT-20260801-007-001.yaml"
+summary: "P13-T02 completed the guarded planner-authoritative cutover with all 28 full-profile gates passing and explicit legacy rollback retained. The result is checkpoint-ready and changes project-system validation authority only."
+next_recommended_action: "Invoke the one governed checkpoint for AJ-RT-20260801-007-001. After it commits, route one fresh bounded P13-T07 improve-project-system packet for generated-report provenance and freshness."
+project_improvement_signals: []
+notes: "This task changes operational project-system authority only. Validation PASS cannot establish physics, ontology, proof, benchmark, Gate E, publication, push, or completed-derivation authority."

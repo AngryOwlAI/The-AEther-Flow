@@ -25,8 +25,8 @@ Select validation through the shared profile planner instead of copying a
 memory-specific acceptance chain into this skill:
 
 ```zsh
-.venv/bin/python -m scripts.validation.cli plan --profile <fast|affected|full> --paths <changed-path> --explain
-.venv/bin/python -m scripts.validation.cli plan --profile checkpoint --staged --explain
+.venv/bin/python -m scripts.validation.cli run --profile <fast|affected|full> --paths <changed-path>
+.venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id <agent-job-id>
 .venv/bin/python -m scripts.validation.cli plan --profile doctor --scope local_retrieval --explain
 ```
 
@@ -34,10 +34,12 @@ Use `fast` for the cheapest local edit loop, `affected` for bounded
 precheckpoint feedback, `checkpoint` only through the caller's governed final
 state-changing transaction, `full` only for explicit exhaustive or scheduled
 coverage, and `doctor` only for local retrieval or advisory diagnostics.
-During the `shadow_planner` epoch, planner output is selection-only
-(`planner_executes_commands=false`) and legacy execution remains authoritative.
-A profile plan is not validation evidence and never replaces source authority,
-a human gate, or final staged checkpoint acceptance.
+During the `planner_authoritative` epoch, `run` executes the manifest-selected
+gates and emits the authoritative operational receipt. The explicit
+`validate-project-control-legacy` Make target and checkpoint
+`--legacy-validation` switch remain rollback controls. A plan alone is not
+validation evidence, and no profile replaces source authority, a human gate,
+or final staged checkpoint acceptance.
 
 Memory synchronization, memory-core validation, local retrieval refresh, and
 canonical source inspection remain distinct operations selected by the plan or

@@ -1,0 +1,266 @@
+completion_id: "AJC-AJ-RT-20260801-007-001"
+job_id: "AJ-RT-20260801-007-001"
+task_id: "RT-20260801-007"
+task_type: "validation_planner_authoritative_cutover"
+decision_id: "DDR-20260801-007"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260801-007"
+status: "completed"
+validation_status: "PASS"
+completed_at: "2026-08-01T21:25:31Z"
+objective_result: "p13_t02_planner_authoritative_cutover_completed_with_legacy_rollback_retained"
+verdict: "PASS_P13_T02_COMPLETED_P13_T07_DEPENDENCY_READY_AFTER_CHECKPOINT"
+summary: "The validated manifest planner is now the single operational orchestration owner for shared local profiles, both hosted workflows, and governed checkpoint acceptance. All hard gates, exact AgentJob mutation allowlists, final staged-tree acceptance, scheduled unfiltered full orchestration, complete receipts, and explicit legacy rollback controls remain. This is project-system validation authority only."
+transaction_status: "ready_for_checkpoint"
+checkpoint_invocation_count: 0
+checkpoint_commit:
+  status: "PENDING"
+  commit: ""
+  invocation_count: 0
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 205
+  passes_consumed: 183
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:205"
+  handoff_token: "222b77acb989de5685d6295a93d73df7a877ae24dfa8bb4f"
+  relay_claim_token: "d5f645ff3d0faaf3300305924923e6fb1a5d81bc78c8078e"
+  route_work_item_id: "P13-T02"
+  route_worker_skill: "improve-project-system"
+  route_sha256: "d35b9eea590bf833d14bdc23d2cf3a61f099346ee753f171622d56a8d2fb736c"
+  route_strategy_id: "reroute_generation_204_p13_t02_to_improve_project_system_v1"
+  route_blocker_fingerprint: "a1bb7920aa6ae712d9ce0bb46665734c1859fc34f2cb984e09b025cc890d1802"
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+
+result:
+  status: "PASS"
+  strategy_id: "execute_guarded_validation_planner_cutover_after_p13_t01_pass_v1"
+  source_head: "8592427141063258560b372f219c0b944ab3ae39"
+  plan_task_id: "P13-T02"
+  p13_t02_work_item_status: "completed"
+  planner_execution_authority: "manifest_planner"
+  planner_migration_epoch: "planner_authoritative"
+  planner_single_orchestration_owner: true
+  hard_gates_retained: true
+  exact_agentjob_allowlists_retained: true
+  final_staged_tree_acceptance_retained: true
+  scheduled_full_unfiltered: true
+  legacy_make_fallback_retained: true
+  legacy_checkpoint_switch_retained: true
+  legacy_fallback_retired: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  publication_or_push_performed: false
+  hosted_workflow_dispatch_performed: false
+  receipt_path: "research_control/tasks/RT-20260801-007/artifacts/p13_t02_planner_cutover_receipt.json"
+  receipt_sha256: "baebb5c8b886f891dbe60013601f764805d6b17f7402d243f28d68e721b81222"
+  receipt_check_count: 13
+  receipt_failure_count: 0
+
+planner_validation_evidence:
+  manifest_sha256: "a84904b1636216bf5b93c66debde34fcb76d220134913d32b91f810d41c90f69"
+  run_id: "RUN-cb0f24a525fcc43f"
+  run_receipt_path: ".local/validation-receipts/a84904b1636216bf5b93c66debde34fcb76d220134913d32b91f810d41c90f69/RUN-cb0f24a525fcc43f/receipt.json"
+  run_log_path: "/tmp/rt007-planner-full4.log"
+  run_log_sha256: "ad00cc8f133080d7bdf36dedc7359542f46265a1aa80d3e8308cc1c118654097"
+  plan_sha256: "7fc6f1c0866dc49dc2b3bb51cdd072297aee57840313e14a3b205cfb2c45d8d7"
+  gate_count: 28
+  pass_count: 28
+  warning_count: 0
+  failure_count: 0
+  blocked_count: 0
+  repository_test_count: 1274
+  repository_test_skipped_count: 1
+  repository_test_failure_count: 0
+  cache_mode: "off"
+  output_mode: "legacy"
+  legacy_fallback: "enabled"
+
+legacy_rollback_evidence:
+  make_target: "validate-project-control-legacy"
+  result: "PASS"
+  log_path: "/tmp/rt007-legacy-full2.log"
+  log_sha256: "0390635213e591e264ae96905985ea6f98bcd92b9ebeb555a313052fc7d2adde"
+  observed_repository_test_count: 1272
+  observed_repository_test_skipped_count: 1
+  checkpoint_switch: "--legacy-validation"
+  current_tree_regression_coverage: "Focused planner, checkpoint, wrapper, workflow, manifest, executor, and change-matrix suites pass after the final compatibility changes."
+
+command_results:
+  - command: "make PYTHON=.venv/bin/python validate-project-control"
+    status: "PASS"
+    summary: "Authoritative full planner run passed all 28 selected gates with no warning, failure, block, or skip."
+  - command: "make PYTHON=.venv/bin/python validate-project-control-legacy"
+    status: "PASS"
+    summary: "The explicit legacy rollback target completed successfully before the final planner-only contract refinements."
+  - command: ".venv/bin/python -m unittest discover -s tests -p 'test_validation*.py'"
+    status: "PASS"
+    summary: "All 283 validation-focused tests pass on the final implementation state."
+  - command: ".venv/bin/python research_control/tasks/RT-20260801-007/artifacts/validate_p13_t02_planner_cutover.py --write-report"
+    status: "PASS"
+    summary: "The task-local cutover proof passes 13 of 13 checks."
+  - command: ".venv/bin/python scripts/project_control/validate_claim_language.py --json --changed"
+    status: "PASS"
+    summary: "Changed claim-bearing surfaces contain zero hard failures."
+  - command: ".venv/bin/python scripts/project_control/validate_documentation_impact.py"
+    status: "PASS"
+    summary: "Documentation-impact coverage passes before completion-state synchronization."
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+    status: "PASS"
+    summary: "Tracked memory and generated derivatives synchronize before completion-state synchronization."
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1109
+    relationship_row_count: 5606
+    semantic_row_count: 1109
+    vault_row_count: 1109
+    local_cache_only_warning_count: 9
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  authority_note: "Generated wiki, task-index, Obsidian, semantic, relationship, SQLite, and .local receipt surfaces are retrieval or operational evidence only and are not authority; canonical tracked sources and control state remain authoritative."
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  observed_durable_outputs:
+    physics: []
+    project_system:
+      - "planner-authoritative manifest, obligation, wrapper, workflow, skill, checkpoint, and regression changes"
+      - "P13-T02 cutover receipt and completion"
+      - "one governed checkpoint"
+  accepted_criteria:
+    physics: []
+    project_system:
+      - "planner is the live execution authority across the named orchestration surfaces"
+      - "all hard gates and exact staged transaction safeguards remain"
+      - "legacy Make and checkpoint rollback switches remain executable"
+      - "scheduled full remains unfiltered"
+      - "focused and full repository validation pass"
+      - "one governed checkpoint commits"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+distance_to_gr_delta:
+  changed: false
+  effect: "none_project_system_validation_cutover"
+  milestone: "source_equivalence_eqsrc"
+  ledger_row_updated: false
+  ledger_update_rationale: "P13-T02 changes operational validation orchestration only and contributes no physics movement."
+
+physics_progress_status:
+  status: "documentation_or_control_only_no_physics_delta"
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+
+selected_next_route:
+  route_id: "p13_t07_generated_report_provenance_freshness_v1"
+  route_label: "ordinary-research-packet"
+  role_family: "validator-engineer@0.2.0"
+  worker_skill: "improve-project-system"
+  task_type: "generated_report_provenance_and_freshness"
+  plan_task_id: "P13-T07"
+  strategy_id: "enforce_generated_report_provenance_and_freshness_after_planner_cutover_v1"
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  requires_human_gate: false
+  blocked_by_protected_external_evidence: false
+  p10_t08_completed: true
+  p13_t02_completed: true
+  physics_promotion_authorized: false
+  proof_authority: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 205 validated, atomically claimed, and consumed the immutable improve-project-system route exactly once."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The task-local receipt passes 13 of 13 cutover checks and binds the authoritative manifest hash."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "The authoritative 28-gate full run and focused final-state validation suites pass."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "The one authorized governed checkpoint is the next action."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Tracked memory, dependency graph, task index, claim graph, and wiki derivatives were stable before completion-state synchronization."
+  memory_bootstrap:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "Tracked memory gates pass; local retrieval warnings remain non-authoritative cache diagnostics."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed claim-language validation has zero hard failures."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "none; project-system validation orchestration only"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  push_authorized: false
+  publication_authorized: false
+  hosted_workflow_dispatch_authorized: false
+  proof_authority: false
+  canonical_ontology_edit_authorized: false
+  source_law_adoption_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+notes: "P13-T02 operational success does not count as physics, Distance-to-GR movement, ontology or source-law adoption, benchmark promotion, Gate E, proof, publication, push, hosted workflow execution, or completed derivation."

@@ -47,11 +47,11 @@ class ValidationPlannerTests(unittest.TestCase):
         right = self.plan_for(["README.md", "scripts/validation/plan.py"])
         self.assertEqual(left.canonical_json(), right.canonical_json())
 
-    def test_planner_executes_no_subprocesses(self) -> None:
+    def test_plan_construction_executes_no_subprocesses_and_declares_authority(self) -> None:
         classification = classify_paths(["scripts/validation/plan.py"])
         with mock.patch("subprocess.run", side_effect=AssertionError("command executed")):
             plan = build_plan(self.manifest, classification, profile="affected")
-        self.assertFalse(plan.to_dict()["planner_executes_commands"])
+        self.assertTrue(plan.to_dict()["planner_executes_commands"])
 
     def test_unknown_governed_path_falls_back_to_full(self) -> None:
         plan = self.plan_for(["future_governed_surface/example.rule"], profile="fast")
@@ -182,10 +182,10 @@ class ValidationPlannerTests(unittest.TestCase):
         self.assertEqual(entries["memory_status_diagnostic"]["status"], "skipped_not_applicable")
         self.assertIn("memory_status_diagnostic", plan.skipped_gate_ids)
 
-    def test_current_shadow_manifest_activates_no_supersedence(self) -> None:
+    def test_current_planner_manifest_activates_no_supersedence(self) -> None:
         plan = self.plan_for(["research_control/tasks/RT-TEST/00_TASK.yaml"])
         self.assertEqual(plan.superseded_gate_ids, ())
-        self.assertEqual(plan.execution_authority, "legacy")
+        self.assertEqual(plan.execution_authority, "manifest_planner")
 
     def test_planner_authoritative_manifest_authorizes_executor_only(self) -> None:
         manifest = deepcopy(self.manifest)
@@ -200,12 +200,13 @@ class ValidationPlannerTests(unittest.TestCase):
 
     def test_invalid_manifest_planner_epoch_pair_fails_closed(self) -> None:
         manifest = deepcopy(self.manifest)
-        manifest["execution_authority"] = "manifest_planner"
-        with self.assertRaisesRegex(PlannerError, "requires planner_authoritative"):
+        manifest["migration_epoch"] = "shadow_planner"
+        with self.assertRaisesRegex(PlannerError, "requires planner_authoritative or legacy_retired"):
             build_plan(manifest, classify_paths([]), profile="fast")
 
         manifest = deepcopy(self.manifest)
         manifest["migration_epoch"] = "legacy_retired"
+        manifest["execution_authority"] = "legacy"
         with self.assertRaisesRegex(PlannerError, "requires manifest_planner"):
             build_plan(manifest, classify_paths([]), profile="fast")
 
@@ -281,7 +282,7 @@ class ValidationPlannerTests(unittest.TestCase):
         self.assertEqual(outputs[0], outputs[1])
         payload = json.loads(outputs[0])
         self.assertEqual(payload["schema_id"], "validation_plan_v1")
-        self.assertFalse(payload["planner_executes_commands"])
+        self.assertTrue(payload["planner_executes_commands"])
 
     def test_cli_explain_is_concise_text(self) -> None:
         stream = io.StringIO()

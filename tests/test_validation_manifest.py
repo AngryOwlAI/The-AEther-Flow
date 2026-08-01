@@ -375,12 +375,13 @@ def populated_manifest(*gates: dict[str, object]) -> dict[str, object]:
 
 
 class ManifestContractTests(unittest.TestCase):
-    def test_canonical_manifest_is_populated_and_legacy_authoritative(self) -> None:
+    def test_canonical_manifest_is_populated_and_planner_authoritative(self) -> None:
         manifest = load_manifest()
         validate_manifest(manifest)
         self.assertEqual(len(manifest["gates"]), 37)
         self.assertEqual(manifest["population_status"], "populated")
-        self.assertEqual(manifest["execution_authority"], "legacy")
+        self.assertEqual(manifest["migration_epoch"], "planner_authoritative")
+        self.assertEqual(manifest["execution_authority"], "manifest_planner")
         self.assertTrue(all(gate["cache_policy"] == "ineligible" for gate in manifest["gates"]))
         self.assertTrue(
             all(
@@ -388,6 +389,31 @@ class ManifestContractTests(unittest.TestCase):
                 for gate in manifest["gates"]
                 for item in gate["supersedes"]
             )
+        )
+
+    def test_targeted_pdf_mutator_declares_pdf_and_embedded_memory_outputs(self) -> None:
+        manifest = load_manifest()
+        gate = next(
+            gate for gate in manifest["gates"] if gate["gate_id"] == "targeted_pdf_build"
+        )
+        self.assertEqual(
+            set(gate["input_globs"]),
+            {
+                "legacy_ontology/tex/**",
+                "manuscripts/tex/**",
+                "ontology/tex/**",
+                "registries/TEX_SOURCE_REGISTRY.csv",
+            },
+        )
+        self.assertTrue(
+            {
+                "legacy_ontology/pdfs/**",
+                "manuscripts/pdfs/**",
+                "ontology/pdfs/**",
+                "registries/**",
+                "wiki/**",
+            }
+            <= set(gate["output_globs"])
         )
 
     def test_canonical_serialization_and_hash_are_key_order_independent(self) -> None:

@@ -65,6 +65,8 @@ class ExecutionContext:
     stdout_path: Path
     stderr_path: Path
     cancellation: threading.Event
+    changed_paths: tuple[str, ...] = ()
+    scopes: tuple[str, ...] = ()
 
 
 class ValidationAdapter(Protocol):
@@ -173,9 +175,36 @@ class SubprocessAdapter:
 
     def run(self, context: ExecutionContext) -> AdapterResult:
         started = time.monotonic()
+        changed_tex_paths = tuple(
+            path for path in context.changed_paths if path.lower().endswith(".tex")
+        )
+        if "{changed_tex_paths}" in self.command and not changed_tex_paths:
+            context.stdout_path.write_text(
+                "SKIP: no changed TeX paths require a targeted PDF build.\n",
+                encoding="utf-8",
+            )
+            context.stderr_path.write_bytes(b"")
+            return AdapterResult()
+        command: list[str] = []
+        for value in self.command:
+            if value == "{changed_paths}":
+                command.extend(context.changed_paths)
+            elif value == "{changed_path_args}":
+                if context.changed_paths:
+                    command.append("--paths")
+                    command.extend(context.changed_paths)
+            elif value == "{changed_tex_paths}":
+                command.extend(changed_tex_paths)
+            elif value == "{claim_language_mode_args}":
+                if "staged" in context.scopes:
+                    command.append("--staged")
+                else:
+                    command.append("--changed")
+            else:
+                command.append(value)
         with context.stdout_path.open("wb") as stdout, context.stderr_path.open("wb") as stderr:
             process = subprocess.Popen(
-                self.command,
+                command,
                 cwd=self.cwd,
                 stdin=subprocess.DEVNULL,
                 stdout=stdout,
@@ -459,6 +488,8 @@ def _run_gate(
     ordinal: int,
     cancellation: threading.Event,
     attempt: int | None = None,
+    changed_paths: tuple[str, ...] = (),
+    scopes: tuple[str, ...] = (),
 ) -> dict[str, object]:
     attempt_suffix = f"-pass-{attempt:02d}" if attempt is not None else ""
     prefix = f"{ordinal:04d}-{gate_id}{attempt_suffix}"
@@ -472,6 +503,8 @@ def _run_gate(
         stdout_path=stdout_path,
         stderr_path=stderr_path,
         cancellation=cancellation,
+        changed_paths=changed_paths,
+        scopes=scopes,
     )
     started_at = datetime.now(timezone.utc)
     started = time.monotonic()
@@ -654,10 +687,20 @@ def _run_gate_cached(
     cancellation: threading.Event,
     cache_plan: _GateCachePlan,
     cache_lock: threading.Lock,
+    changed_paths: tuple[str, ...],
+    scopes: tuple[str, ...],
 ) -> dict[str, object]:
     if cache_plan.cache is None or cache_plan.key_material is None:
         result = _run_gate(
-            gate_id, gate, entry, adapter, log_directory, ordinal, cancellation
+            gate_id,
+            gate,
+            entry,
+            adapter,
+            log_directory,
+            ordinal,
+            cancellation,
+            changed_paths=changed_paths,
+            scopes=scopes,
         )
         result.update(
             {
@@ -695,7 +738,15 @@ def _run_gate_cached(
     else:
         cache_status = "MISS"
     result = _run_gate(
-        gate_id, gate, entry, adapter, log_directory, ordinal, cancellation
+        gate_id,
+        gate,
+        entry,
+        adapter,
+        log_directory,
+        ordinal,
+        cancellation,
+        changed_paths=changed_paths,
+        scopes=scopes,
     )
     result.update(
         {
@@ -904,6 +955,8 @@ def execute_plan(
                     ordinal,
                     cancellation,
                     attempt=pass_number,
+                    changed_paths=active_plan.changed_paths,
+                    scopes=active_plan.scopes,
                 )
                 after = _snapshot_mutation_tree(mutation_root, receipt_root)
                 delta = mutation_delta(before, after)
@@ -1113,6 +1166,8 @@ def execute_plan(
                     cancellation,
                     cache_plans[gate_id],
                     cache_lock,
+                    active_plan.changed_paths,
+                    active_plan.scopes,
                 )
                 for gate_id in batch
             }
@@ -1202,6 +1257,18 @@ def execute_plan(
         "cancelled": cancelled,
         "counts": counts,
         "cache": cache_summary,
+        "feature_switches": {
+            "planner_mode": (
+                "authoritative"
+                if active_plan.execution_authority == "manifest_planner"
+                else "off"
+            ),
+            "cache_mode": (
+                cache_context.cache.mode if cache_context is not None else "off"
+            ),
+            "output_mode": "legacy",
+            "legacy_fallback": "enabled",
+        },
         "gate_results": ordered_results,
         "mutator_barrier": barrier_receipt,
         "authority": {

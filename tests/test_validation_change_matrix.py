@@ -83,8 +83,8 @@ class ValidationChangeMatrixTests(unittest.TestCase):
     def test_fixture_schema_and_case_coverage(self) -> None:
         self.assertEqual(self.fixture["schema_id"], "validation_change_matrix_fixture_v1")
         self.assertEqual(self.fixture["plan_task_id"], "P5-T08")
-        self.assertEqual(self.fixture["migration_epoch"], "shadow_planner")
-        self.assertEqual(self.fixture["execution_authority"], "legacy")
+        self.assertEqual(self.fixture["migration_epoch"], "planner_authoritative")
+        self.assertEqual(self.fixture["execution_authority"], "manifest_planner")
         case_ids = [case["case_id"] for case in self.fixture["cases"]]
         self.assertEqual(len(case_ids), len(set(case_ids)))
         self.assertEqual(set(case_ids), REQUIRED_CASE_IDS)
@@ -165,7 +165,7 @@ class ValidationChangeMatrixTests(unittest.TestCase):
                     self.assertIn("reasons=", line)
                     self.assertIn("obligations=", line)
 
-    def test_every_selected_blocking_gate_has_legacy_shadow_evidence(self) -> None:
+    def test_every_selected_blocking_gate_retains_legacy_rollback_evidence(self) -> None:
         for case in self.fixture["cases"]:
             _, resolution, _, _, _ = self._evaluate(case)
             for gate_id in resolution.plan.selected_gate_ids:
@@ -233,6 +233,7 @@ class ValidationChangeMatrixTests(unittest.TestCase):
     def test_registered_matrix_document_cites_every_executable_case(self) -> None:
         text = MATRIX_PATH.read_text(encoding="utf-8")
         self.assertIn("Plan task: `P5-T08`", text)
+        self.assertIn("shadow planner explains obligations", text)
         self.assertIn("Legacy execution remains authoritative", text)
         for case in self.fixture["cases"]:
             self.assertIn(f"`{case['case_id']}`", text)

@@ -8,11 +8,11 @@
     "proof_authority": false,
     "source_authoritative": false
   },
-  "execution_authority": "legacy",
+  "execution_authority": "manifest_planner",
   "gates": [
     {
       "gate_id": "classify_changes",
-      "description": "Legacy-compatible declarative contract for project_change_classifier; execution remains under legacy authority.",
+      "description": "Planner-authoritative contract for project_change_classifier; legacy command compatibility is retained for rollback.",
       "owner_role": "project-control-maintainer@0.2.0",
       "adapter": "legacy:lvg-001",
       "command_compatibility": [
@@ -22,7 +22,7 @@
         "**"
       ],
       "output_globs": [],
-      "global_invariant_justification": "This legacy gate evaluates a repository-wide invariant; the broad input is audited and remains legacy-executed.",
+      "global_invariant_justification": "This planner-owned gate evaluates a repository-wide invariant; its broad input remains explicitly audited.",
       "scopes": [
         "working",
         "staged"
@@ -68,7 +68,7 @@
     },
     {
       "gate_id": "resolve_project_improvement",
-      "description": "Legacy-compatible declarative contract for project_improvement_resolver; execution remains under legacy authority.",
+      "description": "Planner-authoritative contract for project_improvement_resolver; legacy command compatibility is retained for rollback.",
       "owner_role": "project-control-maintainer@0.2.0",
       "adapter": "legacy:lvg-002",
       "command_compatibility": [
@@ -122,7 +122,7 @@
     },
     {
       "gate_id": "project_improvement_signals",
-      "description": "Legacy-compatible declarative contract for project_improvement_signal_parity; execution remains under legacy authority.",
+      "description": "Planner-authoritative contract for project_improvement_signal_parity; legacy command compatibility is retained for rollback.",
       "owner_role": "project-control-maintainer@0.2.0",
       "adapter": "legacy:lvg-003",
       "command_compatibility": [
@@ -177,7 +177,7 @@
     },
     {
       "gate_id": "documentation_impact",
-      "description": "Legacy-compatible declarative contract for documentation_impact; execution remains under legacy authority.",
+      "description": "Planner-authoritative contract for documentation_impact; legacy command compatibility is retained for rollback.",
       "owner_role": "documentation-curator@2.0.0",
       "adapter": "legacy:lvg-004",
       "command_compatibility": [
@@ -236,7 +236,7 @@
     },
     {
       "gate_id": "documentation_surface_audit",
-      "description": "Legacy-compatible declarative contract for documentation_surface_audit; execution remains under legacy authority.",
+      "description": "Planner-authoritative contract for documentation_surface_audit; legacy command compatibility is retained for rollback.",
       "owner_role": "documentation-curator@2.0.0",
       "adapter": "legacy:lvg-005",
       "command_compatibility": [
@@ -287,7 +287,7 @@
     },
     {
       "gate_id": "memory_sync",
-      "description": "Legacy-compatible declarative contract for memory_sync_and_validate; execution remains under legacy authority.",
+      "description": "Planner-authoritative contract for memory_sync_and_validate; legacy command compatibility is retained for rollback.",
       "owner_role": "memory-system-maintainer@0.2.0",
       "adapter": "legacy:lvg-006",
       "command_compatibility": [
@@ -352,7 +352,7 @@
     },
     {
       "gate_id": "memory_core",
-      "description": "Legacy-compatible declarative contract for memory_core_validate_only; execution remains under legacy authority.",
+      "description": "Planner-authoritative contract for memory_core_validate_only; legacy command compatibility is retained for rollback.",
       "owner_role": "memory-system-maintainer@0.2.0",
       "adapter": "legacy:lvg-007",
       "command_compatibility": [
@@ -416,7 +416,7 @@
     },
     {
       "gate_id": "local_retrieval_sync",
-      "description": "Legacy-compatible declarative contract for obsidian_vault_sync; execution remains under legacy authority.",
+      "description": "Planner-authoritative contract for obsidian_vault_sync; legacy command compatibility is retained for rollback.",
       "owner_role": "memory-system-maintainer@0.2.0",
       "adapter": "legacy:lvg-008",
       "command_compatibility": [
@@ -479,7 +479,7 @@
     },
     {
       "gate_id": "local_retrieval_lint",
-      "description": "Legacy-compatible declarative contract for obsidian_vault_lint; execution remains under legacy authority.",
+      "description": "Planner-authoritative contract for obsidian_vault_lint; legacy command compatibility is retained for rollback.",
       "owner_role": "memory-system-maintainer@0.2.0",
       "adapter": "legacy:lvg-009",
       "command_compatibility": [
@@ -539,7 +539,7 @@
     },
     {
       "gate_id": "memory_status_diagnostic",
-      "description": "Legacy-compatible declarative contract for memory_status; execution remains under legacy authority.",
+      "description": "Planner-authoritative contract for memory_status; legacy command compatibility is retained for rollback.",
       "owner_role": "memory-system-maintainer@0.2.0",
       "adapter": "legacy:lvg-010",
       "command_compatibility": [
@@ -589,7 +589,7 @@
     },
     {
       "gate_id": "memory_lookup_diagnostic",
-      "description": "Legacy-compatible declarative contract for memory_lookup; execution remains under legacy authority.",
+      "description": "Planner-authoritative contract for memory_lookup; legacy command compatibility is retained for rollback.",
       "owner_role": "memory-system-maintainer@0.2.0",
       "adapter": "legacy:lvg-011",
       "command_compatibility": [
@@ -639,7 +639,7 @@
     },
     {
       "gate_id": "memory_search_diagnostic",
-      "description": "Legacy-compatible declarative contract for memory_search; execution remains under legacy authority.",
+      "description": "Planner-authoritative contract for memory_search; legacy command compatibility is retained for rollback.",
       "owner_role": "memory-system-maintainer@0.2.0",
       "adapter": "legacy:lvg-012",
       "command_compatibility": [
@@ -689,7 +689,7 @@
     },
     {
       "gate_id": "spec_depth",
-      "description": "Legacy-compatible declarative contract for spec_depth_lint; execution remains under legacy authority.",
+      "description": "Planner-authoritative contract for spec_depth_lint; legacy command compatibility is retained for rollback.",
       "owner_role": "validator-engineer@0.2.0",
       "adapter": "legacy:lvg-013",
       "command_compatibility": [
@@ -740,7 +740,7 @@
     },
     {
       "gate_id": "publication_validation",
-      "description": "Legacy-compatible declarative contract for publication_process; execution remains under legacy authority.",
+      "description": "Planner-authoritative contract for publication_process; legacy command compatibility is retained for rollback.",
       "owner_role": "documentation-curator@2.0.0",
       "adapter": "legacy:lvg-014",
       "command_compatibility": [
@@ -800,7 +800,7 @@
     },
     {
       "gate_id": "research_control_core",
-      "description": "Legacy-compatible declarative contract for research_control_core; execution remains under legacy authority.",
+      "description": "Planner-authoritative contract for research_control_core; legacy command compatibility is retained for rollback.",
       "owner_role": "validator-engineer@0.2.0",
       "adapter": "legacy:lvg-015",
       "command_compatibility": [
@@ -850,7 +850,7 @@
     },
     {
       "gate_id": "research_control_diff",
-      "description": "Legacy-compatible declarative contract for research_control_diff; execution remains under legacy authority.",
+      "description": "Planner-authoritative contract for research_control_diff; legacy command compatibility is retained for rollback.",
       "owner_role": "validator-engineer@0.2.0",
       "adapter": "legacy:lvg-016",
       "command_compatibility": [
@@ -922,7 +922,7 @@
     },
     {
       "gate_id": "test_shard_repository",
-      "description": "Legacy-compatible declarative contract for repository_unittest_suite; execution remains under legacy authority.",
+      "description": "Planner-authoritative contract for repository_unittest_suite; legacy command compatibility is retained for rollback.",
       "owner_role": "validator-engineer@0.2.0",
       "adapter": "legacy:lvg-017",
       "command_compatibility": [
@@ -999,7 +999,7 @@
     },
     {
       "gate_id": "current_frontier_freshness",
-      "description": "Legacy-compatible declarative contract for current_frontier_freshness; execution remains under legacy authority.",
+      "description": "Planner-authoritative contract for current_frontier_freshness; legacy command compatibility is retained for rollback.",
       "owner_role": "validator-engineer@0.2.0",
       "adapter": "legacy:lvg-018",
       "command_compatibility": [
@@ -1052,7 +1052,7 @@
     },
     {
       "gate_id": "compact_frontier_freshness",
-      "description": "Legacy-compatible declarative contract for compact_frontier_validation; execution remains under legacy authority.",
+      "description": "Planner-authoritative contract for compact_frontier_validation; legacy command compatibility is retained for rollback.",
       "owner_role": "validator-engineer@0.2.0",
       "adapter": "legacy:lvg-019",
       "command_compatibility": [
@@ -1104,7 +1104,7 @@
     },
     {
       "gate_id": "dependency_graph_freshness",
-      "description": "Legacy-compatible declarative contract for dependency_graph_freshness; execution remains under legacy authority.",
+      "description": "Planner-authoritative contract for dependency_graph_freshness; legacy command compatibility is retained for rollback.",
       "owner_role": "validator-engineer@0.2.0",
       "adapter": "legacy:lvg-020",
       "command_compatibility": [
@@ -1179,7 +1179,7 @@
     },
     {
       "gate_id": "task_index_freshness",
-      "description": "Legacy-compatible declarative contract for task_index_validation; execution remains under legacy authority.",
+      "description": "Planner-authoritative contract for task_index_validation; legacy command compatibility is retained for rollback.",
       "owner_role": "validator-engineer@0.2.0",
       "adapter": "legacy:lvg-021",
       "command_compatibility": [
@@ -1238,7 +1238,7 @@
     },
     {
       "gate_id": "claim_graph_validation",
-      "description": "Legacy-compatible declarative contract for claim_graph_validation; execution remains under legacy authority.",
+      "description": "Planner-authoritative contract for claim_graph_validation; legacy command compatibility is retained for rollback.",
       "owner_role": "validator-engineer@0.2.0",
       "adapter": "legacy:lvg-022",
       "command_compatibility": [
@@ -1291,16 +1291,26 @@
     },
     {
       "gate_id": "claim_language_changed",
-      "description": "Legacy-compatible declarative contract for changed_claim_language; execution remains under legacy authority.",
+      "description": "Planner-authoritative contract for changed_claim_language; legacy command compatibility is retained for rollback.",
       "owner_role": "validator-engineer@0.2.0",
       "adapter": "legacy:lvg-023",
       "command_compatibility": [
         "validate_claim_language.py changed/staged mode"
       ],
       "input_globs": [
-        "tex/**",
-        "markdown/**",
-        "research_control/**"
+        "README.md",
+        "github-facing/*.md",
+        "github-facing/**/*.md",
+        "research_control/current_frontier.md",
+        "research_control/design/*.md",
+        "implementations_plans/*.md",
+        "markdown/publication-briefs/*.md",
+        "markdown/html-explainer-specs/*.md",
+        "research_control/tasks/**/*.md",
+        "research_control/tasks/**/*.tex",
+        "research_control/handoffs/*.md",
+        "research_control/handoffs/*.yaml",
+        "registries/*.csv"
       ],
       "output_globs": [],
       "global_invariant_justification": null,
@@ -1354,7 +1364,7 @@
     },
     {
       "gate_id": "route_signature_diagnostic",
-      "description": "Legacy-compatible direct route-signature diagnostic plus explicit local cache refresh and read-only freshness inspection; execution remains advisory under legacy authority.",
+      "description": "Planner-owned direct route-signature diagnostic plus explicit local cache refresh and read-only freshness inspection; execution remains advisory.",
       "owner_role": "process-integrity-auditor@0.1.0",
       "adapter": "legacy:lvg-024",
       "command_compatibility": [
@@ -1477,7 +1487,7 @@
     },
     {
       "gate_id": "git_diff_check",
-      "description": "Legacy-compatible declarative contract for whitespace_diff; execution remains under legacy authority.",
+      "description": "Planner-authoritative contract for whitespace_diff; legacy command compatibility is retained for rollback.",
       "owner_role": "process-integrity-auditor@0.1.0",
       "adapter": "legacy:lvg-026",
       "command_compatibility": [
@@ -1487,7 +1497,7 @@
         "**"
       ],
       "output_globs": [],
-      "global_invariant_justification": "This legacy gate evaluates a repository-wide invariant; the broad input is audited and remains legacy-executed.",
+      "global_invariant_justification": "This planner-owned gate evaluates a repository-wide invariant; its broad input remains explicitly audited.",
       "scopes": [
         "working",
         "staged"
@@ -1534,18 +1544,29 @@
     },
     {
       "gate_id": "targeted_pdf_build",
-      "description": "Legacy-compatible declarative contract for targeted_pdf_build; execution remains under legacy authority.",
+      "description": "Planner-authoritative contract for targeted_pdf_build; legacy command compatibility is retained for rollback.",
       "owner_role": "validator-engineer@0.2.0",
       "adapter": "legacy:lvg-027",
       "command_compatibility": [
         "build_pdf_derivatives.py <changed-required-tex>"
       ],
       "input_globs": [
-        "tex/**",
+        "legacy_ontology/tex/**",
+        "manuscripts/tex/**",
+        "ontology/tex/**",
         "registries/TEX_SOURCE_REGISTRY.csv"
       ],
       "output_globs": [
-        "pdf/**"
+        "FOLDER_MAP.md",
+        "legacy_ontology/pdfs/**",
+        "manuscripts/pdfs/**",
+        "ontology/pdfs/**",
+        "output/research_dependency_graph.dot",
+        "output/research_dependency_graph.json",
+        "registries/**",
+        "research_control/tasks/TASK_INDEX.csv",
+        "research_control/tasks/TASK_INDEX.md",
+        "wiki/**"
       ],
       "global_invariant_justification": null,
       "scopes": [
@@ -1597,7 +1618,7 @@
     },
     {
       "gate_id": "continue_memory_preflight",
-      "description": "Legacy-compatible declarative contract for continue_memory_preflight; execution remains under legacy authority.",
+      "description": "Planner-authoritative contract for continue_memory_preflight; legacy command compatibility is retained for rollback.",
       "owner_role": "memory-system-maintainer@0.2.0",
       "adapter": "legacy:lvg-028",
       "command_compatibility": [
@@ -1658,7 +1679,7 @@
     },
     {
       "gate_id": "continue_context_resolution",
-      "description": "Legacy-compatible declarative contract for continue_context_resolution; execution remains under legacy authority.",
+      "description": "Planner-authoritative contract for continue_context_resolution; legacy command compatibility is retained for rollback.",
       "owner_role": "project-control-maintainer@0.2.0",
       "adapter": "legacy:lvg-029",
       "command_compatibility": [
@@ -1708,7 +1729,7 @@
     },
     {
       "gate_id": "checkpoint_transaction",
-      "description": "Legacy-compatible declarative contract for checkpoint_transaction; execution remains under legacy authority.",
+      "description": "Planner-authoritative contract for checkpoint_transaction; legacy command compatibility is retained for rollback.",
       "owner_role": "process-integrity-auditor@0.1.0",
       "adapter": "legacy:lvg-030",
       "command_compatibility": [
@@ -1725,7 +1746,7 @@
         "output/research_dependency_graph.dot",
         "wiki/**"
       ],
-      "global_invariant_justification": "This legacy gate evaluates a repository-wide invariant; the broad input is audited and remains legacy-executed.",
+      "global_invariant_justification": "This planner-owned gate evaluates a repository-wide invariant; its broad input remains explicitly audited.",
       "scopes": [
         "commit"
       ],
@@ -1778,7 +1799,7 @@
     },
     {
       "gate_id": "profile_validate_project_control",
-      "description": "Legacy-compatible declarative contract for make_validate_project_control; execution remains under legacy authority.",
+      "description": "Planner-authoritative contract for make_validate_project_control; legacy command compatibility is retained for rollback.",
       "owner_role": "validator-engineer@0.2.0",
       "adapter": "legacy:lvg-031",
       "command_compatibility": [
@@ -1845,7 +1866,7 @@
     },
     {
       "gate_id": "profile_validate_memory",
-      "description": "Legacy-compatible declarative contract for make_validate_memory; execution remains under legacy authority.",
+      "description": "Planner-authoritative contract for make_validate_memory; legacy command compatibility is retained for rollback.",
       "owner_role": "memory-system-maintainer@0.2.0",
       "adapter": "legacy:lvg-032",
       "command_compatibility": [
@@ -1908,7 +1929,7 @@
     },
     {
       "gate_id": "profile_validate_html_explainers",
-      "description": "Legacy-compatible declarative contract for make_validate_html_explainers; execution remains under legacy authority.",
+      "description": "Planner-authoritative contract for make_validate_html_explainers; legacy command compatibility is retained for rollback.",
       "owner_role": "documentation-curator@2.0.0",
       "adapter": "legacy:lvg-033",
       "command_compatibility": [
@@ -1963,7 +1984,7 @@
     },
     {
       "gate_id": "profile_audit_documentation_surfaces",
-      "description": "Legacy-compatible declarative contract for make_audit_documentation_surfaces; execution remains under legacy authority.",
+      "description": "Planner-authoritative contract for make_audit_documentation_surfaces; legacy command compatibility is retained for rollback.",
       "owner_role": "documentation-curator@2.0.0",
       "adapter": "legacy:lvg-034",
       "command_compatibility": [
@@ -2017,7 +2038,7 @@
     },
     {
       "gate_id": "profile_full_research_control",
-      "description": "Legacy-compatible declarative contract for local_full_runner; execution remains under legacy authority.",
+      "description": "Planner-authoritative contract for local_full_runner; legacy command compatibility is retained for rollback.",
       "owner_role": "validator-engineer@0.2.0",
       "adapter": "legacy:lvg-035",
       "command_compatibility": [
@@ -2027,7 +2048,7 @@
         "**"
       ],
       "output_globs": [],
-      "global_invariant_justification": "This legacy gate evaluates a repository-wide invariant; the broad input is audited and remains legacy-executed.",
+      "global_invariant_justification": "This planner-owned gate evaluates a repository-wide invariant; its broad input remains explicitly audited.",
       "scopes": [
         "repository"
       ],
@@ -2071,7 +2092,7 @@
     },
     {
       "gate_id": "profile_ci_project_control",
-      "description": "Legacy-compatible declarative contract for github_actions_project_control_job; execution remains under legacy authority.",
+      "description": "Planner-authoritative contract for github_actions_project_control_job; legacy command compatibility is retained for rollback.",
       "owner_role": "validator-engineer@0.2.0",
       "adapter": "legacy:lvg-036",
       "command_compatibility": [
@@ -2081,7 +2102,7 @@
         "**"
       ],
       "output_globs": [],
-      "global_invariant_justification": "This legacy gate evaluates a repository-wide invariant; the broad input is audited and remains legacy-executed.",
+      "global_invariant_justification": "This planner-owned gate evaluates a repository-wide invariant; its broad input remains explicitly audited.",
       "scopes": [
         "repository"
       ],
@@ -2122,7 +2143,7 @@
     },
     {
       "gate_id": "mermaid_sources",
-      "description": "Legacy-compatible declarative contract for mermaid_source_validation; execution remains under legacy authority.",
+      "description": "Planner-authoritative contract for mermaid_source_validation; legacy command compatibility is retained for rollback.",
       "owner_role": "documentation-curator@2.0.0",
       "adapter": "legacy:lvg-037",
       "command_compatibility": [
@@ -2182,7 +2203,7 @@
     }
   ],
   "manifest_id": "validation-gate-manifest-v1",
-  "migration_epoch": "shadow_planner",
+  "migration_epoch": "planner_authoritative",
   "population_status": "populated",
   "schema_id": "validation_gate_manifest_v1",
   "schema_version": 1

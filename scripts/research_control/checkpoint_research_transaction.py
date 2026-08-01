@@ -73,7 +73,7 @@ GLOBAL_SYNC_ALLOWLIST = {
 MAX_STAGED_SYNC_PASSES = 3
 CLAIM_SUPERSEDENCE_PREDICATE_ID = "rc_diff_satisfies_claim_language_same_scope_v1"
 CLAIM_LANGUAGE_SCRIPT = "scripts/project_control/validate_claim_language.py"
-CHECKPOINT_VALIDATION_MODES = {"legacy", "compare"}
+CHECKPOINT_VALIDATION_MODES = {"legacy", "compare", "planner"}
 SUPPORTED_TRACKED_GENERATORS = {"memory_sync", "targeted_pdf_build"}
 REPOSITORY_TEST_CADENCE = 10
 REPOSITORY_TEST_CADENCE_ANCHOR_JOB_ID = "AJ-RT-20260726-011-001"
@@ -565,11 +565,16 @@ def plan_checkpoint_validation(
     changed_paths: Iterable[str],
     *,
     role_obligations: Iterable[str] = (),
+    shadow_compare: bool = False,
 ) -> CheckpointValidationPlan:
-    """Build the shadow checkpoint plan and identify checkpoint-owned generators."""
+    """Build the checkpoint plan and identify checkpoint-owned generators."""
 
     paths = tuple(sorted(set(changed_paths)))
     manifest = load_manifest(VALIDATION_MANIFEST_PATH)
+    if shadow_compare:
+        manifest = copy.deepcopy(manifest)
+        manifest["migration_epoch"] = "shadow_planner"
+        manifest["execution_authority"] = "legacy"
     classification = classify_paths(paths, registry_root=REPO_ROOT)
     resolution = resolve_profile(
         manifest,
@@ -577,17 +582,22 @@ def plan_checkpoint_validation(
         requested_profile="checkpoint",
         scopes=("staged",),
         role_obligations=role_obligations,
-        shadow=True,
+        shadow=shadow_compare,
     )
     plan = resolution.plan
+    safe_authority = (
+        plan.execution_authority == "legacy" and resolution.comparison_required
+        if shadow_compare
+        else plan.execution_authority == "manifest_planner"
+        and not resolution.comparison_required
+    )
     if (
         plan.status != "READY"
         or plan.blocked_paths
         or plan.unknown_paths
-        or plan.execution_authority != "legacy"
-        or not resolution.comparison_required
+        or not safe_authority
     ):
-        raise RuntimeError("checkpoint planner did not produce a safe shadow plan")
+        raise RuntimeError("checkpoint planner did not produce a safe authority plan")
 
     gates = {
         str(gate["gate_id"]): gate
@@ -727,8 +737,9 @@ def run_checkpoint_staged_acceptance(
     command_results: list[CommandResult],
     classifier: Callable[..., dict[str, object]] = classify_paths,
     role_obligations: Iterable[str] = (),
+    compare_legacy: bool = False,
 ) -> tuple[dict[str, object], dict[str, object]]:
-    """Execute planner-selected staged blockers once and compare legacy statuses."""
+    """Execute planner-selected staged blockers once on the exact index tree."""
 
     legacy_statuses: dict[str, str] = {}
     child_receipts: list[dict[str, str]] = []
@@ -816,6 +827,7 @@ def run_checkpoint_staged_acceptance(
         base_ref="HEAD",
         agent_job_id=agent_job_id,
         role_obligations=obligations,
+        compare_legacy=compare_legacy,
     )
     execution = receipt.get("execution", {})
     integration = {
@@ -1088,7 +1100,7 @@ def _checkpoint_impl(
     job_id: str | None = None,
     *,
     no_commit: bool = False,
-    validation_mode: str = "legacy",
+    validation_mode: str = "planner",
 ) -> dict[str, object]:
     if validation_mode not in CHECKPOINT_VALIDATION_MODES:
         raise RuntimeError(f"unsupported checkpoint validation mode: {validation_mode}")
@@ -1116,12 +1128,13 @@ def _checkpoint_impl(
 
     planner_plan: CheckpointValidationPlan | None = None
     planner_integration: dict[str, object] | None = None
-    if validation_mode == "compare":
+    if validation_mode in {"planner", "compare"}:
         try:
             planning_paths = checkpoint_planning_paths(preflight)
             planner_plan = plan_checkpoint_validation(
                 planning_paths,
                 role_obligations=cadence_obligations,
+                shadow_compare=validation_mode == "compare",
             )
             precheck = run_precheck(
                 REPO_ROOT,
@@ -1237,7 +1250,7 @@ def _checkpoint_impl(
             pdf_targets_processed = True
             if tex_targets:
                 if (
-                    validation_mode == "compare"
+                    validation_mode != "legacy"
                     and "targeted_pdf_build" not in planned_generators
                 ):
                     return rollback_block(
@@ -1253,7 +1266,7 @@ def _checkpoint_impl(
                 commands.append(pdf_build)
                 if pdf_build.returncode != 0:
                     return rollback_block("targeted PDF build failed", git_status_paths())
-                if validation_mode == "compare" and "memory_sync" not in planned_generators:
+                if validation_mode != "legacy" and "memory_sync" not in planned_generators:
                     return rollback_block(
                         "checkpoint planner omitted required post-PDF synchronization",
                         git_status_paths(),
@@ -1370,7 +1383,7 @@ def _checkpoint_impl(
             "committed": False,
         }
 
-    if validation_mode == "compare":
+    if validation_mode in {"planner", "compare"}:
         assert planner_plan is not None and planner_integration is not None
         staged_receipt, staged_integration = run_checkpoint_staged_acceptance(
             REPO_ROOT,
@@ -1380,6 +1393,7 @@ def _checkpoint_impl(
             agent_job_id=job_row["job_id"],
             command_results=commands,
             role_obligations=cadence_obligations,
+            compare_legacy=validation_mode == "compare",
         )
         planner_integration["staged_acceptance"] = staged_integration
         if staged_receipt.get("status") != "PASS":
@@ -1388,7 +1402,11 @@ def _checkpoint_impl(
                 str(finding.get("code", "")) if isinstance(finding, dict) else ""
             )
             return rollback_block(
-                "planner staged acceptance or legacy comparison failed",
+                (
+                    "planner staged acceptance or legacy comparison failed"
+                    if validation_mode == "compare"
+                    else "planner staged acceptance failed"
+                ),
                 final_changes,
                 [finding_code] if finding_code else [],
             )
@@ -1549,7 +1567,11 @@ def checkpoint(
     no_commit: bool = False,
     validation_mode: str = "legacy",
 ) -> dict[str, object]:
-    """Run a checkpoint and restore the exact entry index on helper exceptions."""
+    """Run the compatibility API and restore the exact entry index on exceptions.
+
+    The CLI passes its planner-authoritative default explicitly.  The library
+    default remains legacy for callers that predate the CLI cutover.
+    """
     entry_snapshot = run_command(["git", "write-tree"])
     if entry_snapshot.returncode != 0 or not entry_snapshot.stdout.strip():
         raise RuntimeError(entry_snapshot.stderr or "could not snapshot the entry Git index")
@@ -1575,6 +1597,13 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
     parser.add_argument("--no-commit", action="store_true", help="Stage validated changes but do not commit.")
     validation = parser.add_mutually_exclusive_group()
     validation.add_argument(
+        "--planner-validation",
+        dest="validation_mode",
+        action="store_const",
+        const="planner",
+        help="Use manifest-planner selection and authoritative staged acceptance.",
+    )
+    validation.add_argument(
         "--legacy-validation",
         dest="validation_mode",
         action="store_const",
@@ -1588,7 +1617,7 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
         const="compare",
         help="Use planner selection and fail-closed legacy status comparison.",
     )
-    parser.set_defaults(validation_mode="compare")
+    parser.set_defaults(validation_mode="planner")
     return parser.parse_args(argv)
 
 

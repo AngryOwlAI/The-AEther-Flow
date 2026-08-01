@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""Five validation-profile contracts for the v19 validation planner.
+"""Five validation-profile contracts for the shared validation planner.
 
-This module validates profile membership and wraps the pure planner.  It does
-not execute validators, mutate the repository, satisfy a human gate, or change
-execution authority.  The temporary ``shadow`` modifier requests a comparison
-receipt only; it never changes selected gate membership.
+This module validates profile membership and wraps the pure planner. It does
+not itself execute validators, mutate the repository, satisfy a human gate, or
+change execution authority. The temporary ``shadow`` modifier requests a
+comparison receipt only; it never changes selected gate membership.
 """
 
 from __future__ import annotations
@@ -91,8 +91,8 @@ PROFILE_DEFINITIONS = {
         name="fast",
         purpose="Run the lowest-cost local edit loop over changed operational surfaces.",
         command=(
-            ".venv/bin/python -m scripts.validation.cli plan --profile fast "
-            "--paths <changed-path> --explain"
+            ".venv/bin/python -m scripts.validation.cli run --profile fast "
+            "--paths <changed-path>"
         ),
         scope="working tree changed paths",
         cost="lowest",
@@ -111,8 +111,8 @@ PROFILE_DEFINITIONS = {
         name="affected",
         purpose="Run fast checks plus blocking validators and focused integration tests affected by the classified change.",
         command=(
-            ".venv/bin/python -m scripts.validation.cli plan --profile affected "
-            "--paths <changed-path> --explain"
+            ".venv/bin/python -m scripts.validation.cli run --profile affected "
+            "--paths <changed-path>"
         ),
         scope="working tree affected dependency closure",
         cost="bounded",
@@ -130,8 +130,8 @@ PROFILE_DEFINITIONS = {
         name="checkpoint",
         purpose="Generate governed derivatives and validate the final staged transaction before commit.",
         command=(
-            ".venv/bin/python -m scripts.validation.cli plan --profile checkpoint "
-            "--paths <staged-path> --explain"
+            ".venv/bin/python scripts/research_control/"
+            "checkpoint_research_transaction.py --job-id <agent-job-id>"
         ),
         scope="generated working state and final staged tree",
         cost="transactional",
@@ -152,8 +152,8 @@ PROFILE_DEFINITIONS = {
         name="full",
         purpose="Run every nontransactional blocking validation gate and every repository test shard without change-family filtering.",
         command=(
-            ".venv/bin/python -m scripts.validation.cli plan --profile full "
-            "--paths <changed-path> --explain"
+            ".venv/bin/python -m scripts.validation.cli run --profile full "
+            "--paths"
         ),
         scope="repository and scheduled exhaustive coverage",
         cost="highest",
@@ -618,7 +618,6 @@ def build_membership_audit(
         "plan_task_id": "P5-T07",
         "migration_epoch": manifest.get("migration_epoch"),
         "execution_authority": manifest.get("execution_authority"),
-        "legacy_execution_authority": manifest.get("execution_authority"),
         "manifest_sha256": canonical_manifest_sha256(manifest),
         "permanent_profiles": list(PERMANENT_PROFILES),
         "default_local_profile": DEFAULT_LOCAL_PROFILE,

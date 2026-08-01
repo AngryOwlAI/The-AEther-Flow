@@ -1,0 +1,248 @@
+completion_id: "AJC-AJ-RT-20260801-008-001"
+job_id: "AJ-RT-20260801-008-001"
+task_id: "RT-20260801-008"
+task_type: "project_system_p13_t02_folder_map_documentation_memory_checkpoint_recovery"
+decision_id: "DDR-20260801-008"
+role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260801-008"
+status: "completed"
+validation_status: "PASS"
+completed_at: "2026-08-01T22:03:27Z"
+objective_result: "generation_205_p13_t02_folder_map_documentation_memory_checkpoint_coverage_recovered"
+verdict: "PASS_GENERATION_205_P13_T02_FOLDER_MAP_DOCUMENTATION_MEMORY_RECOVERY"
+summary: "Generation 206 adds exactly one FOLDER_MAP.md item to each required generation-205 documentation-impact list and regenerates tracked memory only through the approved bootstrap. Protected P13-T02 implementation and handoff-0936 records remain byte-identical, P13-T02 was not replayed, P13-T07 remains unexecuted, and one distinct governed checkpoint is pending."
+transaction_status: "ready_for_checkpoint"
+checkpoint_invocation_count: 0
+checkpoint_commit:
+  status: "PENDING"
+  commit: ""
+  invocation_count: 0
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 206
+  passes_consumed: 184
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:206"
+  handoff_token: "a465ce8bfdab977acbd6b727816259a62542e70569807c99"
+  relay_claim_token: "861378857d55d4560605c3a533d233e2b553290cb16fdab5"
+  route_work_item_id: "P13-T02"
+  route_worker_skill: "improve-project-system"
+  route_sha256: "9232e362b0af098a666e2731ee2ed05f9eb575b6d6dd212d5c3ff0bc38d5adbb"
+  route_strategy_id: "recover_generation_205_p13_t02_folder_map_documentation_checkpoint_v1"
+  route_blocker_fingerprint: "2612a6d13915a12f74461bbf7dd7eafaaffb4cb3ce9e5aba9e51982a467f2e8e"
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+
+result:
+  status: "PASS"
+  strategy_id: "recover_generation_205_p13_t02_folder_map_documentation_checkpoint_v1"
+  source_job_id: "AJ-RT-20260801-007-001"
+  required_item_occurrence_count_per_list: 1
+  protected_hash_mismatch_count: 0
+  receipt_path: "research_control/tasks/RT-20260801-008/artifacts/folder_map_documentation_memory_checkpoint_recovery_receipt.json"
+  generation_205_job_reexecuted: false
+  generation_205_checkpoint_replayed: false
+  p13_t02_reexecuted: false
+  p13_t07_executed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  publication_or_push_authorized: false
+
+protected_evidence:
+  source_head: "8592427141063258560b372f219c0b944ab3ae39"
+  source_task_path: "research_control/tasks/RT-20260801-007/00_TASK.yaml"
+  source_task_sha256: "c0d11bcb8171f3f563f19186099047fbda0773a9be6cf1e97829613efb2fba54"
+  source_decision_path: "research_control/tasks/RT-20260801-007/DDR-20260801-007.md"
+  source_decision_sha256: "465a67ec4e2027f4f281de343e21003d63c6b124c2f47db893e53cb88b5a8a7d"
+  source_job_path: "research_control/tasks/RT-20260801-007/jobs/AJ-RT-20260801-007-001.yaml"
+  source_job_sha256: "ed257a9303335a336246c1c32922fde863f24cc379debc11ffe26521efb1ad07"
+  source_role_path: "research_control/tasks/RT-20260801-007/roles/validator-engineer@0.2.0--RT-20260801-007.yaml"
+  source_role_sha256: "9f96978110967f9f1aeb116d80a82c7456502001fafa5bc0a1f60158485a1610"
+  source_completion_path: "research_control/tasks/RT-20260801-007/jobs/completions/AJC-AJ-RT-20260801-007-001.yaml"
+  source_completion_sha256: "4d91e8b75dd0271669c824f299742714aa180a58d39f2cde152909e0cf4b058f"
+  source_handoff_path: "research_control/handoffs/handoff-0936.yaml"
+  source_handoff_yaml_sha256: "7e3c5a4b796121fdbbb8600d0a3614c11fd4e4edf6a8f5973c7b91f40ddba1ad"
+  source_handoff_markdown_sha256: "a7c3162a8f031896f1d7f0fd730b62dfd473deaecdb8cd19dd853909b8ad67ac"
+  source_program_state_sha256: "40edc672ffad0231aa67aa38e8a623d07b6c5c3f62899d03108d3302cefbebe0"
+  source_cutover_receipt_sha256: "baebb5c8b886f891dbe60013601f764805d6b17f7402d243f28d68e721b81222"
+  source_cutover_validator_sha256: "76dc297fa1e598b32c5ee7d5e02872ee646b1dd410e77aa447380c42e1b8e359"
+  source_documentation_impact_sha256_before: "8777e6c29a6ec5d20ef5f5eb637270c33532988e90e75f14075a5fb547ec2f1b"
+  source_documentation_impact_sha256_after: "f3e8a8e8e195d649fba011136a983b91d2aca65ba9af42d8c34f6f168473ff38"
+
+command_results:
+  - command: ".venv/bin/python research_control/tasks/RT-20260801-007/artifacts/validate_p13_t02_planner_cutover.py --json"
+    status: "PASS"
+    summary: "The completed P13-T02 cutover remains valid with all task-local checks passing."
+  - command: ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+    status: "PASS"
+    summary: "The cumulative documentation-impact records include the generated folder map."
+  - command: ".venv/bin/python -m unittest -v tests.test_project_change_classifier.ProjectChangeClassifierTests.test_documentation_impact_validator_accepts_current_record"
+    status: "PASS"
+    summary: "The focused documentation-impact regression passes."
+  - command: ".venv/bin/python -m scripts.validation.cli run --profile affected --paths <changed-paths>"
+    status: "PASS"
+    summary: "The manifest-selected affected profile passes before checkpoint."
+  - command: ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --job-id AJ-RT-20260801-008-001 --json-summary"
+    status: "PASS"
+    summary: "Integrated control and bounded diff validation pass before checkpoint."
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+    status: "PASS"
+    summary: "Tracked memory and generated derivatives validate; local retrieval warnings are nonblocking."
+  - command: "git diff --check"
+    status: "PASS"
+    summary: "No whitespace errors."
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1109
+    relationship_row_count: 5606
+    semantic_row_count: 1109
+    vault_row_count: 1109
+    local_cache_only_warning_count: 9
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  authority_note: "Generated wiki, Obsidian, semantic, relationship, SQLite, and .local surfaces are retrieval-only and not authority; immutable route data, tracked source records, registries, Git state, and validators govern this repair."
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  observed_durable_outputs:
+    physics: []
+    project_system:
+      - "exact generation-205 FOLDER_MAP.md documentation-impact coverage"
+      - "fresh governed FOLDER_MAP.md derivative"
+      - "task-local preservation and recovery receipt"
+      - "one distinct governed checkpoint"
+  accepted_criteria:
+    physics: []
+    project_system:
+      - "RT-20260801-007 changed_paths and generated_derivatives each include exactly one FOLDER_MAP.md item"
+      - "memory bootstrap and validate-only report tracked generated memory fresh"
+      - "P13-T02 implementation, completion, and handoff remain unchanged except the exact receipt repair"
+      - "all required working-tree gates pass"
+      - "one distinct governed checkpoint commits"
+      - "P13-T07 remains unexecuted during recovery"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+distance_to_gr_delta:
+  changed: false
+  effect: "none_project_system_recovery"
+  milestone: "source_equivalence_eqsrc"
+  ledger_row_updated: false
+  ledger_update_rationale: "The completed P13-T02 operational result and Distance-to-GR ledger remain unchanged; documentation and generated-memory recovery contributes no physics movement."
+
+physics_progress_status:
+  status: "documentation_or_control_only_no_physics_delta"
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+
+selected_next_route:
+  route_id: "p13_t07_generated_report_provenance_freshness_v1"
+  route_label: "ordinary-research-packet"
+  role_family: "validator-engineer@0.2.0"
+  worker_skill: "improve-project-system"
+  task_type: "generated_report_provenance_and_freshness"
+  plan_task_id: "P13-T07"
+  strategy_id: "enforce_generated_report_provenance_and_freshness_after_planner_cutover_v1"
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  requires_human_gate: false
+  blocked_by_protected_external_evidence: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  executed: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 206 validated, atomically claimed, and consumed the immutable recovery route exactly once."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The task-local receipt proves exact documentation-impact coverage, approved memory regeneration, and protected-byte preservation."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Documentation, signal, affected-profile, integrated control, diff, memory, continuation, and whitespace gates pass."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "The one distinct governed checkpoint is the next authorized action; P13-T07 remains unexecuted."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Tracked frontier, task-index, dependency-graph, claim-graph, registry, folder-map, and wiki derivatives are fresh."
+  memory_bootstrap:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "Tracked memory synchronization and validate-only pass; local retrieval warnings are cache-only."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language checks have no hard failure."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "none; project-system documentation and generated-memory recovery only"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  push_authorized: false
+  publication_authorized: false
+  hosted_workflow_dispatch_authorized: false
+  proof_authority: false
+  canonical_ontology_edit_authorized: false
+  source_law_adoption_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+notes: "Project-system recovery success does not count as physics, benchmark progress, Distance-to-GR movement, P13-T02 replay, or P13-T07 execution."

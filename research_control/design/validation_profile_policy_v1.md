@@ -6,32 +6,35 @@
 
 - Policy ID: `validation-profile-policy-v1`
 - Plan task: `P5-T07`
-- Migration epoch: `shadow_planner`
+- Migration epoch: `planner_authoritative`
 - Permanent profiles: `fast`, `affected`, `checkpoint`, `full`, `doctor`
 - Temporary modifier: `shadow`
 - Default local profile: `fast`
-- Execution authority: legacy commands remain authoritative
+- Execution authority: manifest planner
 - Ordinary research handoff preserved: `handoff-0740`
 - Scientific claims changed: `false`
 - Physics, proof, ontology, benchmark, or Gate Chair authority created: `false`
 
-This policy defines operational validation-profile semantics and the pure
-planner contract. A profile name selects obligations; it is not validation
-evidence and does not execute a command. Until a later authorized migration
-packet activates an executor, the existing legacy commands and governed
-checkpoint remain authoritative.
+This policy defines operational validation-profile semantics and the shared
+planner contract. A profile name selects obligations; selection alone is not
+validation evidence. The `run` command executes the selected gates through the
+tracked adapter binding and emits the authoritative operational receipt. The
+governed checkpoint remains the only profile with commit acceptance authority,
+and explicit legacy Make and checkpoint switches remain rollback controls.
 
 ## Permanent profiles
 
-Each permanent profile has exactly one purpose and one pure planner command.
-The commands below explain a plan; they do not run the selected gates.
+Each permanent profile has exactly one purpose and one canonical entry point.
+The `fast`, `affected`, and `full` commands execute selected gates; `checkpoint`
+delegates execution to the governed transaction; `doctor` remains a plan-first
+diagnostic surface.
 
 | Profile | Purpose | Scope | Relative cost | Default use | Planner command |
 | --- | --- | --- | --- | --- | --- |
-| `fast` | Run the lowest-cost local edit loop over changed operational surfaces. | Working-tree changed paths | Lowest | Default local development loop | `.venv/bin/python -m scripts.validation.cli plan --profile fast --paths <changed-path> --explain` |
-| `affected` | Run fast checks plus blocking validators and focused integration tests affected by the classified change. | Working-tree affected dependency closure | Bounded | Precheckpoint implementation acceptance | `.venv/bin/python -m scripts.validation.cli plan --profile affected --paths <changed-path> --explain` |
-| `checkpoint` | Generate governed derivatives and validate the final staged transaction before commit. | Generated working state and final staged tree | Transactional | One governed checkpoint transaction | `.venv/bin/python -m scripts.validation.cli plan --profile checkpoint --paths <staged-path> --explain` |
-| `full` | Run every nontransactional blocking validation gate and every repository test shard without change-family filtering. | Repository and scheduled exhaustive coverage | Highest | Scheduled full coverage and explicit exhaustive review | `.venv/bin/python -m scripts.validation.cli plan --profile full --paths <changed-path> --explain` |
+| `fast` | Run the lowest-cost local edit loop over changed operational surfaces. | Working-tree changed paths | Lowest | Default local development loop | `.venv/bin/python -m scripts.validation.cli run --profile fast --paths <changed-path>` |
+| `affected` | Run fast checks plus blocking validators and focused integration tests affected by the classified change. | Working-tree affected dependency closure | Bounded | Precheckpoint implementation acceptance | `.venv/bin/python -m scripts.validation.cli run --profile affected --paths <changed-path>` |
+| `checkpoint` | Generate governed derivatives and validate the final staged transaction before commit. | Generated working state and final staged tree | Transactional | One governed checkpoint transaction | `.venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id <agent-job-id>` |
+| `full` | Run every nontransactional blocking validation gate and every repository test shard without change-family filtering. | Repository and scheduled exhaustive coverage | Highest | Scheduled full coverage and explicit exhaustive review | `.venv/bin/python -m scripts.validation.cli run --profile full --paths` |
 | `doctor` | Inspect local retrieval, route, environment, and other non-authoritative operational health. | Local-only and advisory diagnostics | Diagnostic | Explicit troubleshooting only | `.venv/bin/python -m scripts.validation.cli plan --profile doctor --scope local_retrieval --explain` |
 
 `fast` owns classifier, syntax, changed-claim, whitespace, and affected-unit-test
@@ -93,6 +96,10 @@ parity evidence fails safe by selecting the repository shard.
 
 `full` is unfiltered across all nontransactional blocking validation gates and
 includes the repository test shard plus scheduled project-control coverage.
+Unfiltered means no gate family or scheduled workflow path filter is omitted;
+an individual diff validator such as claim-language still uses its governed
+`--changed` contract, matching the retained legacy full runner, while staged
+checkpoint acceptance uses `--staged`.
 The `checkpoint_transaction` gate is intentionally excluded from `full`: it is
 a commit-producing transaction, not an exhaustive validator. Exhaustive review
 does not authorize a commit.
@@ -122,15 +129,16 @@ fails safe to `full`; it does not treat the path as diagnostic-only.
 
 ## Temporary shadow modifier
 
-`shadow` is a modifier, not a sixth profile. It requests a legacy/planner
-comparison receipt for the same profile plan. Applying `shadow` must not change
+`shadow` is a modifier, not a sixth profile. It requests an explicit
+legacy/planner rollback-comparison receipt for the same profile plan. Applying
+`shadow` must not change
 the profile, gate membership, prerequisites, evidence identity, scope, tree
 state, exit status, or authority. An unexplained comparison mismatch is
 blocking and restores the legacy result as authoritative.
 
-The modifier is temporary. Removing it after an authorized migration changes
-comparison behavior only; it does not delete or rename the five permanent
-profiles.
+The modifier is retained only for explicit rollback diagnostics after the
+authorized migration. It does not delete or rename the five permanent profiles
+and is not part of the authoritative default path.
 
 ## Membership and evidence rules
 

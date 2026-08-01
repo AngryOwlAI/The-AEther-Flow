@@ -44,7 +44,10 @@ class ValidationProfileTests(unittest.TestCase):
         for name in PERMANENT_PROFILES:
             definition = profile_definition(name)
             self.assertTrue(definition.purpose)
-            self.assertIn(f"--profile {name}", definition.command)
+            if name == "checkpoint":
+                self.assertIn("checkpoint_research_transaction.py", definition.command)
+            else:
+                self.assertIn(f"--profile {name}", definition.command)
             purposes.add(definition.purpose)
             commands.add(definition.command)
         self.assertEqual(len(purposes), len(PERMANENT_PROFILES))
@@ -56,7 +59,8 @@ class ValidationProfileTests(unittest.TestCase):
         self.assertEqual(audit["permanent_profiles"], list(PERMANENT_PROFILES))
         self.assertFalse(audit["authority"]["physics_claim_authority"])
         self.assertFalse(audit["authority"]["proof_authority"])
-        self.assertEqual(audit["legacy_execution_authority"], "legacy")
+        self.assertFalse(audit["authority"]["legacy_execution_authoritative"])
+        self.assertTrue(audit["authority"]["planner_execution_authoritative"])
 
     def test_full_retains_every_nontransactional_blocking_gate(self) -> None:
         audit = build_membership_audit(self.manifest)
@@ -187,7 +191,7 @@ class ValidationProfileTests(unittest.TestCase):
         self.assertFalse(payload["authority"]["repository_acceptance_authority"])
         self.assertFalse(payload["authority"]["physics_claim_authority"])
 
-    def test_profile_resolution_executes_no_subprocesses(self) -> None:
+    def test_profile_resolution_performs_no_subprocess_while_declaring_authority(self) -> None:
         with mock.patch(
             "subprocess.run",
             side_effect=AssertionError("command executed"),
@@ -198,7 +202,7 @@ class ValidationProfileTests(unittest.TestCase):
                 requested_profile="affected",
                 shadow=True,
             )
-        self.assertFalse(resolution.to_dict()["profile_executes_commands"])
+        self.assertTrue(resolution.to_dict()["profile_executes_commands"])
 
     def test_planner_authoritative_profile_reports_executor_authority(self) -> None:
         manifest = deepcopy(self.manifest)

@@ -34,19 +34,17 @@ class MakeValidationOrchestrationTests(unittest.TestCase):
         )
         return [line.strip() for line in completed.stdout.splitlines() if line.strip()]
 
-    def test_validate_project_control_runs_one_research_control_spine(self) -> None:
-        research_control_commands = [
-            line.strip()
-            for line in self.make_plan("validate-project-control")
-            if "scripts/research_control/validate_research_control.py" in line
-        ]
+    def test_validate_project_control_runs_one_planner_full_profile(self) -> None:
+        plan = self.make_plan("validate-project-control")
 
         self.assertEqual(
-            research_control_commands,
+            [line for line in plan if "scripts.validation.cli run --profile full" in line],
             [
-                ".venv/bin/python scripts/research_control/validate_research_control.py "
-                "--check-diff"
+                ".venv/bin/python -m scripts.validation.cli run --profile full --paths"
             ],
+        )
+        self.assertFalse(
+            any("scripts/research_control/validate_research_control.py" in line for line in plan)
         )
 
     def test_validate_memory_is_core_plus_focused_shard_only(self) -> None:
@@ -147,7 +145,7 @@ class RunnerCheckpointValidationOrchestrationTests(unittest.TestCase):
         self.assertFalse(report["ci_equivalent"])
         self.assertEqual(
             report["ci_equivalence_status"],
-            "not_equivalent_until_v19_p11_centralization",
+            "explicit_legacy_rollback_not_ci_authoritative",
         )
 
     def test_checkpoint_keeps_one_working_diff_gate_and_a_distinct_staged_gate(self) -> None:
@@ -352,7 +350,9 @@ class RunnerCheckpointValidationOrchestrationTests(unittest.TestCase):
             mock.patch.object(self.checkpoint, "memory_sync", side_effect=fake_sync),
             mock.patch.object(self.checkpoint, "run_command", side_effect=fake_run),
         ):
-            result = self.checkpoint.checkpoint("AJ-TEST", no_commit=True)
+            result = self.checkpoint.checkpoint(
+                "AJ-TEST", no_commit=True, validation_mode="legacy"
+            )
 
         self.assertEqual(result["status"], "ready_to_commit")
         self.assertEqual(result["sync_passes"], 1)

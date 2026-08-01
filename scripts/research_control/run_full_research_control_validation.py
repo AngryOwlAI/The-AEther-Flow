@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
-"""Compatibility wrapper for the shared full validation profile.
+"""Explicit legacy rollback wrapper for full project-control validation.
 
-The shared planner owns gate selection. During the ``shadow_planner`` epoch,
-the legacy Make target remains execution-authoritative. This wrapper only
-coordinates those two surfaces and emits operational receipt evidence; it does
-not establish physics proof authority or change scientific claim status.
+The shared manifest planner owns ordinary gate selection and execution. This
+deprecated entry point first records the live full plan, then invokes the
+retained legacy Make target as an explicit rollback diagnostic. Its receipt is
+operational evidence only; it does not establish physics proof authority or
+change scientific claim status.
 """
 
 from __future__ import annotations
@@ -33,8 +34,8 @@ REPORT_SCHEMA_ID = "research_control_local_full_wrapper_report_v2"
 PLAN_SCHEMA_ID = "research_control_local_full_wrapper_plan_v2"
 CLAIM_SUPERSEDENCE_PREDICATE_ID = "rc_diff_satisfies_claim_language_same_scope_v1"
 DEPRECATION_MESSAGE = (
-    "DEPRECATED_COMPATIBILITY_WRAPPER: use the shared validation profile targets; "
-    "this entry point remains a shadow-planner compatibility surface."
+    "DEPRECATED_COMPATIBILITY_WRAPPER: use the planner-authoritative validation "
+    "profile targets; this entry point remains an explicit legacy rollback surface."
 )
 LEGACY_COMPATIBILITY_LABELS = {
     "research_control_diff": "research_control_diff_validation",
@@ -227,7 +228,7 @@ def command_plan(
                 "label": LEGACY_COMPATIBILITY_LABELS.get(str(gate_id), str(gate_id)),
                 "command": command,
                 "purpose": str(gate.get("description", "")),
-                "authority_level": "legacy-authoritative",
+                "authority_level": "legacy-rollback",
                 "required": str(gate.get("severity", "")) == "blocking",
                 "advisory": str(gate.get("severity", "")) in {"advisory", "local_only"},
                 "satisfies_obligations": list(gate.get("satisfies_obligations", [])),
@@ -359,7 +360,9 @@ def build_report(
         "effective_profile": (shared_plan or {}).get("effective_profile", ""),
         "manifest_hash": (shared_plan or {}).get("manifest_hash", ""),
         "selected_gate_ids": (shared_plan or {}).get("selected_gate_ids", []),
-        "execution_authority": (shared_plan or {}).get("execution_authority", "legacy"),
+        "execution_authority": (shared_plan or {}).get(
+            "execution_authority", "manifest_planner"
+        ),
         "planner_executes_commands": False,
         "plan_only": plan_only,
         "include_smoke_tests": include_smoke_tests,
@@ -368,13 +371,13 @@ def build_report(
         "deprecation_message": DEPRECATION_MESSAGE,
         "replacement_entry_points": [
             "make validate-full",
-            ".venv/bin/python -m scripts.validation.cli plan --profile full --paths --json",
+            ".venv/bin/python -m scripts.validation.cli run --profile full --paths",
         ],
         "legacy_execution_status": (
             "NOT_RUN" if legacy_result is None else legacy_result["status"]
         ),
         "ci_equivalent": False,
-        "ci_equivalence_status": "not_equivalent_until_v19_p11_centralization",
+        "ci_equivalence_status": "explicit_legacy_rollback_not_ci_authoritative",
         "operational_receipt_only": True,
         "no_physics_delta": True,
         "physics_proof_authority": False,
@@ -435,8 +438,8 @@ def main(argv: list[str] | None = None) -> int:
             repo_root=repo_root,
             tail_chars=args.tail_chars,
             label="legacy_validate_project_control",
-            purpose="Execute the existing full project-control chain under legacy shadow authority.",
-            authority_level="legacy-authoritative",
+            purpose="Execute the retained full project-control chain as an explicit rollback diagnostic.",
+            authority_level="legacy-rollback",
         )
     report = build_report(
         planner_result,

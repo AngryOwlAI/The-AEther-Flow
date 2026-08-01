@@ -279,23 +279,23 @@ validate-memory-full: memory-sync memory-doctor
 	@printf '%s\n' '{"target":"validate-memory-full","status":"PASS","profile":"full-memory-compatibility"}'
 
 validate-fast: validation-environment
-	$(PYTHON) -m scripts.validation.cli plan --profile fast --paths $(VALIDATION_PATHS) --explain
+	$(PYTHON) -m scripts.validation.cli run --profile fast --paths $(VALIDATION_PATHS)
 
 validate-affected: validation-environment
-	$(PYTHON) -m scripts.validation.cli plan --profile affected --paths $(VALIDATION_PATHS) --explain
+	$(PYTHON) -m scripts.validation.cli run --profile affected --paths $(VALIDATION_PATHS)
 
 validate-checkpoint-plan: validation-environment
 	$(PYTHON) -m scripts.validation.cli plan --profile checkpoint --staged --explain
 
 validate-full: validation-environment
-	$(PYTHON) -m scripts.validation.cli plan --profile full --paths --explain
+	$(PYTHON) -m scripts.validation.cli run --profile full --paths
 
 validate-doctor: validation-environment
 	@$(PYTHON) -m scripts.validation.cli plan --profile doctor --scope $(VALIDATION_DOCTOR_SCOPE) --explain >/dev/null
 	$(PYTHON) scripts/validation/doctor.py --scope $(VALIDATION_DOCTOR_SCOPE) $(VALIDATION_DOCTOR_FLAGS)
 
-validate-project-control: validate-full validate-project-control-legacy
-	@printf '%s\n' '{"target":"validate-project-control","status":"PASS","compatibility_wrapper":true,"deprecated":true,"planner_profile":"full","execution_authority":"legacy"}'
+validate-project-control: validate-full
+	@printf '%s\n' '{"target":"validate-project-control","status":"PASS","compatibility_wrapper":true,"planner_profile":"full","execution_authority":"manifest_planner"}'
 
 validate-project-control-legacy: validation-environment
 	$(PYTHON) scripts/project_control/classify_project_changes.py --json

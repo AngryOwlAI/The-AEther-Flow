@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260801-006`
-- Latest handoff: `handoff-0935`
-- Current status: `p13_t01_exact_head_hosted_pass_evidence_reconciled_cutover_authorized_checkpoint_ready`
+- Active task: `RT-20260801-007`
+- Latest handoff: `handoff-0936`
+- Current status: `p13_t02_planner_authoritative_cutover_completed_checkpoint_ready`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260801-006`
-- Latest research handoff: `handoff-0935`
-- Latest research next action: Run the one governed checkpoint for AJ-RT-20260801-006-001. After it commits, route one fresh bounded P13-T02 improve-project-system packet to perform the guarded planner cutover with rollback safeguards; do not execute P13-T02 in this frame.
+- Latest research task: `RT-20260801-007`
+- Latest research handoff: `handoff-0936`
+- Latest research next action: Run the one governed checkpoint for AJ-RT-20260801-007-001. After it commits, route one fresh bounded P13-T07 improve-project-system packet to enforce generated-report source provenance and freshness; do not execute P13-T07 in this frame.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `p13_t02_validation_planner_cutover_v1`
+- Route ID: `p13_t07_generated_report_provenance_freshness_v1`
 - Role family: `validator-engineer@0.2.0`
-- Target milestone: `none`
-- Milestone burden: Project-system validation orchestration cutover only; no derivation milestone advances.
+- Target milestone: `source_equivalence_eqsrc`
+- Milestone burden: Prevent stale metrics and frontier reports from misleading agents or readers.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `3792d6e93ff413d2d167b4fc4502a3734f957c8de0f0084a907e48122fca4e0c`
-- JSON SHA-256: `eb1a68f69579576dc75fb1a36b5854f4536dcc3666ab15afd985fcd8f4a664fe`
+- YAML SHA-256: `764f6a79ed720bb26c59b2e0e14cf372d39b5f48cc672d0fc4416451ccc6bd91`
+- JSON SHA-256: `08a74e759840da9e6ff55f1fdad433be8ef85b432a212e4801479f949fe901bf`
 
 ## Authority Warning
 

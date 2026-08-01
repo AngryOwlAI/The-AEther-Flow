@@ -1,11 +1,85 @@
 mode: "director_led_research_control"
-active_task_id: "RT-20260801-006"
-latest_handoff_id: "handoff-0935"
-current_status: "p13_t01_exact_head_hosted_pass_evidence_reconciled_cutover_authorized_checkpoint_ready"
-claim_boundary_summary: "RT-20260801-006 binds exact published head b1e01 to completed successful Project Control Validation and Scheduled Full Validation runs and combines them with the sealed zero-mismatch P13-T01 burn-in and passing rollback drill. P13-T01 is complete; P13-T02 becomes dependency-ready only after this packet's checkpoint and remains unexecuted. Live legacy execution authority remains unchanged, and no workflow dispatch, push, scientific, Distance-to-GR, ontology, benchmark, Gate E, publication, proof, or completed-derivation authority changes."
-next_plan_task_id: "P13-T02"
+active_task_id: "RT-20260801-007"
+latest_handoff_id: "handoff-0936"
+current_status: "p13_t02_planner_authoritative_cutover_completed_checkpoint_ready"
+claim_boundary_summary: "RT-20260801-007 completes the guarded P13-T02 cutover: the validated manifest planner is the live orchestration owner for shared local profiles, hosted validation workflows, and governed checkpoint acceptance. All 28 full-profile gates pass; exact AgentJob allowlists, final staged-tree acceptance, scheduled unfiltered full orchestration, complete receipts, and explicit legacy rollback remain. P13-T07 becomes execution-ready only after this packet's checkpoint and remains unexecuted. No workflow dispatch, push, scientific, Distance-to-GR, ontology, benchmark, Gate E, publication, proof, or completed-derivation authority changes."
+next_plan_task_id: "P13-T07"
 next_worker_skill: "improve-project-system"
-next_recommended_action: "Run the one governed checkpoint for AJ-RT-20260801-006-001. After it commits, route one fresh bounded P13-T02 improve-project-system packet to perform the guarded planner cutover with rollback safeguards; do not execute P13-T02 in this frame."
+next_recommended_action: "Run the one governed checkpoint for AJ-RT-20260801-007-001. After it commits, route one fresh bounded P13-T07 improve-project-system packet to enforce generated-report source provenance and freshness; do not execute P13-T07 in this frame."
+
+p13_t02_validation_planner_authoritative_cutover:
+  task_id: "RT-20260801-007"
+  parent_task_id: "RT-20260801-006"
+  parent_handoff_id: "handoff-0935"
+  source_task_id: "RT-20260801-006"
+  source_job_id: "AJ-RT-20260801-006-001"
+  source_handoff_id: "handoff-0935"
+  plan_task_id: "P13-T02"
+  next_plan_task_id: "P13-T07"
+  claim_boundary_id: "CB-PS-P13-T02-VALIDATION-PLANNER-AUTHORITATIVE-CUTOVER-001"
+  status: "P13_T02_PLANNER_AUTHORITATIVE_CUTOVER_COMPLETED_CHECKPOINT_READY"
+  work_item_status: "completed"
+  route_label: "execute_guarded_validation_planner_cutover_after_p13_t01_pass_v1"
+  selected_role_family: "validator-engineer@0.2.0"
+  selected_worker_skill: "improve-project-system"
+  selected_strategy_id: "execute_guarded_validation_planner_cutover_after_p13_t01_pass_v1"
+  target_derivation_milestone: "none"
+  milestone_burden: "Project-system validation orchestration cutover only; no derivation milestone advances."
+  source_head: "8592427141063258560b372f219c0b944ab3ae39"
+  immutable_route_sha256: "d35b9eea590bf833d14bdc23d2cf3a61f099346ee753f171622d56a8d2fb736c"
+  route_blocker_fingerprint: "a1bb7920aa6ae712d9ce0bb46665734c1859fc34f2cb984e09b025cc890d1802"
+  completion_path: "research_control/tasks/RT-20260801-007/jobs/completions/AJC-AJ-RT-20260801-007-001.yaml"
+  completion_sha256: "4d91e8b75dd0271669c824f299742714aa180a58d39f2cde152909e0cf4b058f"
+  handoff_id: "handoff-0936"
+  handoff_path: "research_control/handoffs/handoff-0936.yaml"
+  cutover_receipt_path: "research_control/tasks/RT-20260801-007/artifacts/p13_t02_planner_cutover_receipt.json"
+  cutover_receipt_sha256: "baebb5c8b886f891dbe60013601f764805d6b17f7402d243f28d68e721b81222"
+  planner_execution_authority: "manifest_planner"
+  migration_epoch: "planner_authoritative"
+  planner_single_orchestration_owner: true
+  full_run_id: "RUN-cb0f24a525fcc43f"
+  full_run_manifest_sha256: "a84904b1636216bf5b93c66debde34fcb76d220134913d32b91f810d41c90f69"
+  full_run_plan_sha256: "7fc6f1c0866dc49dc2b3bb51cdd072297aee57840313e14a3b205cfb2c45d8d7"
+  full_run_gate_count: 28
+  full_run_pass_count: 28
+  full_run_failure_count: 0
+  task_local_check_count: 13
+  task_local_failure_count: 0
+  scheduled_full_unfiltered: true
+  exact_agentjob_allowlists_retained: true
+  final_staged_tree_acceptance_retained: true
+  legacy_make_fallback_retained: true
+  legacy_checkpoint_switch_retained: true
+  legacy_fallback_retired: false
+  p13_t02_work_item_status: "completed"
+  p13_t07_dependency_ready_after_checkpoint: true
+  p13_t07_dependency_ready_now: false
+  p13_t07_executed: false
+  scientific_claims_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  ontology_adoption_authorized: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false
+  hosted_workflow_dispatch_authorized: false
+  hosted_workflow_dispatch_performed: false
+  checkpoint_invocation_count: 0
+  checkpoint_committed: false
+  checkpoint_staged: false
+  dependency_checkpoint_commit: "8592427141063258560b372f219c0b944ab3ae39"
+  selected_next_work_item: "P13-T07"
+  selected_next_worker_skill: "improve-project-system"
+  selected_next_role_family: "validator-engineer@0.2.0"
+  selected_next_route_label: "ordinary-research-packet"
+  selected_next_strategy_id: "enforce_generated_report_provenance_and_freshness_after_planner_cutover_v1"
+  selected_next_requires_human_gate: false
+  selected_next_blocked_by_protected_external_evidence: false
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
+  selected_next_blocker: "The P13-T02 transaction requires its governed checkpoint before a fresh P13-T07 frame."
 
 p13_t01_b1e01_hosted_validation_evidence_reconciliation:
   task_id: "RT-20260801-006"

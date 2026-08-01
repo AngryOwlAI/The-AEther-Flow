@@ -1,16 +1,17 @@
 #!/usr/bin/env python3
-"""Rollback-safe final staged-tree acceptance for the v19 shadow epoch.
+"""Rollback-safe final staged-tree acceptance for validation transactions.
 
-The caller supplies the already-authoritative legacy outcomes and a bounded
-executor for the selected non-mutating checkpoint gates.  This module stages
-one allowlisted transaction, binds every shadow result to the exact Git index
-tree, rejects residue or comparison drift, and restores the entry index.  It
-does not commit, run generators, or make planner output authoritative.
+The caller supplies a bounded executor for selected non-mutating checkpoint
+gates and may request a legacy comparison during rollback diagnostics.  This
+module stages one allowlisted transaction, binds every result to the exact Git
+index tree, rejects residue or comparison drift, and restores the entry index.
+It does not commit or run generators.
 """
 
 from __future__ import annotations
 
 from collections import Counter
+import copy
 from dataclasses import dataclass
 import fnmatch
 import hashlib
@@ -425,13 +426,25 @@ def run_staged_acceptance(
     base_ref: str = "HEAD",
     agent_job_id: str = "",
     role_obligations: Iterable[str] = (),
+    compare_legacy: bool | None = None,
 ) -> dict[str, object]:
-    """Run one rollback-safe shadow acceptance against an exact staged tree."""
+    """Run one rollback-safe acceptance against an exact staged tree."""
 
     repo_root = Path(repo_root).resolve()
     receipt = _base_receipt(base_ref, agent_job_id)
     entry_tree = ""
     error: StagedAcceptanceError | None = None
+    if compare_legacy is None:
+        # Preserve the direct helper's comparison-first compatibility contract.
+        # Authoritative checkpoint orchestration always passes False explicitly.
+        compare_legacy = True
+    if not isinstance(compare_legacy, bool):
+        raise TypeError("compare_legacy must be boolean or None")
+    planning_manifest = manifest
+    if compare_legacy:
+        planning_manifest = copy.deepcopy(manifest)
+        planning_manifest["migration_epoch"] = "shadow_planner"
+        planning_manifest["execution_authority"] = "legacy"
 
     try:
         if (
@@ -521,12 +534,12 @@ def run_staged_acceptance(
                 "classification_failed", "classifier did not return an object"
             )
         resolution = resolve_profile(
-            manifest,
+            planning_manifest,
             classification,
             requested_profile="checkpoint",
             scopes=("staged",),
             role_obligations=role_obligations,
-            shadow=True,
+            shadow=compare_legacy,
         )
         plan = resolution.plan
         if (
@@ -544,16 +557,32 @@ def run_staged_acceptance(
                     "unknown_paths": list(plan.unknown_paths),
                 },
             )
-        if plan.execution_authority != "legacy" or not resolution.comparison_required:
+        if compare_legacy:
+            if (
+                plan.execution_authority != "legacy"
+                or not resolution.comparison_required
+            ):
+                raise StagedAcceptanceError(
+                    "shadow_authority_changed",
+                    "legacy comparison requires legacy execution authority",
+                )
+        elif (
+            plan.execution_authority != "manifest_planner"
+            or resolution.comparison_required
+        ):
             raise StagedAcceptanceError(
-                "shadow_authority_changed",
-                "P6-T04 requires legacy authority and planner comparison",
+                "planner_authority_missing",
+                "authoritative staged acceptance requires manifest-planner authority",
             )
-        required, legacy_owned_mutators = _required_staged_gates(plan, manifest)
+        required, legacy_owned_mutators = _required_staged_gates(
+            plan, planning_manifest
+        )
         receipt["plans"] = {
             "working": _working_plan_record(working_plan),
             "staged": plan.to_dict(),
         }
+        receipt["authority"]["legacy_result_authoritative"] = compare_legacy  # type: ignore[index]
+        receipt["authority"]["planner_result_authoritative"] = not compare_legacy  # type: ignore[index]
         receipt["execution"]["required_gate_ids"] = list(required)  # type: ignore[index]
         receipt["execution"]["legacy_owned_mutating_gate_ids"] = list(  # type: ignore[index]
             legacy_owned_mutators
@@ -617,40 +646,47 @@ def run_staged_acceptance(
                 details={"paths": list(after_residue)},
             )
 
-        try:
-            legacy_statuses = dict(legacy_status_provider(required))
-        except Exception as comparison_error:
-            raise StagedAcceptanceError(
-                "legacy_shadow_comparison_failed", str(comparison_error)
-            ) from comparison_error
-        planner_statuses = {outcome.gate_id: outcome.status for outcome in outcomes}
-        missing = sorted(set(required) - set(legacy_statuses))
-        extras = sorted(set(legacy_statuses) - set(required))
-        if missing or extras:
-            raise StagedAcceptanceError(
-                "legacy_shadow_incomplete",
-                "legacy comparison does not cover the affected blocking gates exactly",
-                details={"missing": missing, "extras": extras},
-            )
-        mismatches = {
-            gate_id: {
-                "legacy": legacy_statuses[gate_id],
-                "planner": planner_statuses[gate_id],
+        if compare_legacy:
+            try:
+                legacy_statuses = dict(legacy_status_provider(required))
+            except Exception as comparison_error:
+                raise StagedAcceptanceError(
+                    "legacy_shadow_comparison_failed", str(comparison_error)
+                ) from comparison_error
+            planner_statuses = {outcome.gate_id: outcome.status for outcome in outcomes}
+            missing = sorted(set(required) - set(legacy_statuses))
+            extras = sorted(set(legacy_statuses) - set(required))
+            if missing or extras:
+                raise StagedAcceptanceError(
+                    "legacy_shadow_incomplete",
+                    "legacy comparison does not cover the affected blocking gates exactly",
+                    details={"missing": missing, "extras": extras},
+                )
+            mismatches = {
+                gate_id: {
+                    "legacy": legacy_statuses[gate_id],
+                    "planner": planner_statuses[gate_id],
+                }
+                for gate_id in required
+                if legacy_statuses[gate_id] != planner_statuses[gate_id]
             }
-            for gate_id in required
-            if legacy_statuses[gate_id] != planner_statuses[gate_id]
-        }
-        receipt["shadow_comparison"] = {
-            "status": "FAIL" if mismatches else "PASS",
-            "compared_gate_ids": list(required),
-            "mismatches": mismatches,
-        }
-        if mismatches:
-            raise StagedAcceptanceError(
-                "legacy_shadow_mismatch",
-                "legacy and planner outcomes differ for affected blocking gates",
-                details={"gate_ids": sorted(mismatches)},
-            )
+            receipt["shadow_comparison"] = {
+                "status": "FAIL" if mismatches else "PASS",
+                "compared_gate_ids": list(required),
+                "mismatches": mismatches,
+            }
+            if mismatches:
+                raise StagedAcceptanceError(
+                    "legacy_shadow_mismatch",
+                    "legacy and planner outcomes differ for affected blocking gates",
+                    details={"gate_ids": sorted(mismatches)},
+                )
+        else:
+            receipt["shadow_comparison"] = {
+                "status": "NOT_REQUESTED",
+                "compared_gate_ids": [],
+                "mismatches": {},
+            }
         if any(outcome.status not in PASS_STATUSES for outcome in outcomes):
             receipt["status"] = "FAIL"
             receipt["exit_code"] = 1

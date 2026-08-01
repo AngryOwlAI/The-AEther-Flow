@@ -10,7 +10,7 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 - Role: `skill_contract`
 - Authority status: `project_control`
 - Owner skill: `continue-research`
-- Source hash: `4ff16918097dd940bfed731f921acbe496b3e5a1d14f43a0fd352e74b7b0173f`
+- Source hash: `6f92a296d2d0edf065bfbf9c278dcbfb527f48297a41c9c7f7d79125e99063ea`
 
 ## Related Objects
 
@@ -19,4 +19,4 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 ## Validation
 
 - Validation status: `PASS`
-- Last validated at: `2026-07-27T03:04:15Z`
+- Last validated at: `2026-08-01T19:53:32Z`

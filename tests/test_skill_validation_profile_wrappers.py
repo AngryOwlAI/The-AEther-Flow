@@ -23,9 +23,9 @@ WORKFLOW_EXAMPLES = {
     "project_system": ".codex/skills/improve-project-system/SKILL.md",
     "user_modified": ".codex/skills/user-modified-project/SKILL.md",
 }
-PROFILE_PLAN_COMMANDS = (
-    ".venv/bin/python -m scripts.validation.cli plan --profile <fast|affected|full> --paths <changed-path> --explain",
-    ".venv/bin/python -m scripts.validation.cli plan --profile checkpoint --staged --explain",
+PROFILE_COMMANDS = (
+    ".venv/bin/python -m scripts.validation.cli run --profile <fast|affected|full> --paths <changed-path>",
+    ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id <agent-job-id>",
     ".venv/bin/python -m scripts.validation.cli plan --profile doctor --scope local_retrieval --explain",
 )
 
@@ -58,11 +58,12 @@ class SkillValidationProfileWrapperTests(unittest.TestCase):
             with self.subTest(skill=relative_path):
                 text = self.read_skill(relative_path)
                 self.assertEqual(text.count("## Validation Profile Wrapper"), 1)
-                self.assertIn("-m scripts.validation.cli plan", text)
+                self.assertIn("-m scripts.validation.cli run", text)
                 for profile in ("fast", "affected", "checkpoint", "full", "doctor"):
                     self.assertIn(f"`{profile}`", text)
-                self.assertIn("planner_executes_commands=false", text)
-                self.assertIn("legacy execution remains authoritative", text)
+                self.assertIn("planner_authoritative", text)
+                self.assertIn("authoritative operational receipt", text)
+                self.assertIn("rollback controls", text)
                 self.assertIn("final staged", text)
                 self.assertIn(
                     "research_control/design/agent_validation_output_consumption_policy_v1.md",
@@ -77,9 +78,10 @@ class SkillValidationProfileWrapperTests(unittest.TestCase):
                 observed = tuple(
                     line
                     for line in text.splitlines()
-                    if "-m scripts.validation.cli plan" in line
+                    if "-m scripts.validation.cli" in line
+                    or "checkpoint_research_transaction.py --job-id" in line
                 )
-                self.assertEqual(observed, PROFILE_PLAN_COMMANDS)
+                self.assertEqual(observed, PROFILE_COMMANDS)
 
     def test_no_skill_recreates_the_retired_precheckpoint_full_chain(self) -> None:
         retired_chain = (
@@ -97,7 +99,7 @@ class SkillValidationProfileWrapperTests(unittest.TestCase):
         self.assertNotIn("make PYTHON=.venv/bin/python validate-memory\n", memory_skill)
         self.assertNotIn("make PYTHON=.venv/bin/python validate-memory-full\n", memory_skill)
 
-    def test_research_project_system_and_user_modified_examples_are_plan_only(self) -> None:
+    def test_research_project_system_and_user_modified_plans_declare_planner_authority(self) -> None:
         for workflow, relative_path in WORKFLOW_EXAMPLES.items():
             with self.subTest(workflow=workflow):
                 plan = self.plan(
@@ -109,11 +111,11 @@ class SkillValidationProfileWrapperTests(unittest.TestCase):
                 self.assertEqual(plan["status"], "READY")
                 self.assertEqual(plan["requested_profile"], "affected")
                 self.assertEqual(plan["effective_profile"], "affected")
-                self.assertFalse(plan["planner_executes_commands"])
-                self.assertEqual(plan["execution_authority"], "legacy")
+                self.assertTrue(plan["planner_executes_commands"])
+                self.assertEqual(plan["execution_authority"], "manifest_planner")
                 self.assertNotIn("checkpoint_transaction", plan["selected_gate_ids"])
 
-    def test_checkpoint_profile_selects_but_does_not_execute_final_transaction(self) -> None:
+    def test_checkpoint_profile_selects_the_governed_final_transaction(self) -> None:
         plan = self.plan(
             "--profile",
             "checkpoint",
@@ -123,8 +125,8 @@ class SkillValidationProfileWrapperTests(unittest.TestCase):
             SKILL_PATHS[0],
         )
         self.assertEqual(plan["status"], "READY")
-        self.assertFalse(plan["planner_executes_commands"])
-        self.assertEqual(plan["execution_authority"], "legacy")
+        self.assertTrue(plan["planner_executes_commands"])
+        self.assertEqual(plan["execution_authority"], "manifest_planner")
         self.assertIn("checkpoint_transaction", plan["selected_gate_ids"])
 
     def test_doctor_profile_remains_local_and_nonblocking(self) -> None:
@@ -136,7 +138,7 @@ class SkillValidationProfileWrapperTests(unittest.TestCase):
             "--paths",
         )
         self.assertEqual(plan["status"], "READY")
-        self.assertFalse(plan["planner_executes_commands"])
+        self.assertTrue(plan["planner_executes_commands"])
         selected = set(plan["selected_gate_ids"])
         severities = {
             entry["gate_id"]: entry["severity"]

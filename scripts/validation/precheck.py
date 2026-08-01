@@ -548,8 +548,9 @@ def _shadow_comparison(
     mismatch.update(DIRECT_MANIFEST_GATES - set(selected))
     if resolution.effective_profile != "fast":
         mismatch.add(f"effective_profile:{resolution.effective_profile}")
-    if manifest.get("execution_authority") != "legacy":
-        mismatch.add("execution_authority:not_legacy")
+    execution_authority = str(manifest.get("execution_authority", ""))
+    if execution_authority not in {"legacy", "manifest_planner"}:
+        mismatch.add(f"execution_authority:{execution_authority or 'missing'}")
     return {
         "status": "PASS" if not mismatch else "BLOCKED_CONFIGURATION",
         "planner_gate_ids": sorted(selected),
@@ -565,7 +566,9 @@ def _shadow_comparison(
         ],
         "unexplained_mismatch_gate_ids": sorted(mismatch),
         "effective_profile": resolution.effective_profile,
-        "legacy_execution_authority": True,
+        "execution_authority": execution_authority,
+        "legacy_execution_authoritative": execution_authority == "legacy",
+        "planner_execution_authoritative": execution_authority == "manifest_planner",
     }
 
 

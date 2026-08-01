@@ -53,11 +53,10 @@ jobs:
       - name: Run bounded assurance gates
         run: make PYTHON=.venv/bin/python validate-assurance
 
-  validation_plan_shadow:
-    name: Plan validation shards (shadow)
-    continue-on-error: true
+  validate_project_control:
+    name: Validate planner-authoritative project control
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 45
     env:
       PYTHON: .venv/bin/python
     steps:
@@ -66,7 +65,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Set up Python
+      - name: Set up supported Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -75,271 +74,33 @@ jobs:
       - name: Create virtual environment
         run: python -m venv .venv
 
-      - name: Install Python dependencies
-        run: |
-          .venv/bin/python -m pip install --upgrade pip
-          .venv/bin/python -m pip install --require-hashes -r requirements.txt
-
-      - name: Determine changed paths
-        env:
-          EVENT_NAME: ${{ github.event_name }}
-          PR_BASE_SHA: ${{ github.event.pull_request.base.sha }}
-          PUSH_BEFORE_SHA: ${{ github.event.before }}
-        shell: bash
-        run: |
-          set -euo pipefail
-          mkdir -p validation-plan-artifacts
-          base_sha="$PUSH_BEFORE_SHA"
-          if [[ "$EVENT_NAME" == "pull_request" ]]; then
-            base_sha="$PR_BASE_SHA"
-          fi
-          if [[ -z "$base_sha" || "$base_sha" =~ ^0+$ ]] || ! git cat-file -e "$base_sha^{commit}" 2>/dev/null; then
-            base_sha="$(git rev-parse HEAD^ 2>/dev/null || git rev-parse HEAD)"
-          fi
-          git diff --name-only --diff-filter=ACDMRTUXB "$base_sha" HEAD |
-            LC_ALL=C sort -u > validation-plan-artifacts/changed-paths.txt
-          printf '%s\n' "$base_sha" > validation-plan-artifacts/base-sha.txt
-
-      - name: Validate manifest and emit affected plan
-        shell: bash
-        run: |
-          set -euo pipefail
-          mapfile -t changed_paths < validation-plan-artifacts/changed-paths.txt
-          .venv/bin/python -m scripts.validation.cli plan \
-            --profile affected \
-            --paths "${changed_paths[@]}" \
-            --json > validation-plan-artifacts/validation-plan.json
-
-      - name: Upload shadow validation plan
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: validation-plan-${{ github.run_id }}-${{ github.run_attempt }}
-          path: validation-plan-artifacts/
-          if-no-files-found: error
-          retention-days: 14
-
-  validation_shards_shadow:
-    name: Shadow validation shard / ${{ matrix.shard }}
-    needs: validation_plan_shadow
-    continue-on-error: true
-    runs-on: ubuntu-latest
-    timeout-minutes: 35
-    strategy:
-      fail-fast: false
-      matrix:
-        shard:
-          - policy-fast
-          - research-control-integration
-          - dependency-graph
-          - memory-core
-          - publication
-          - scientific-support
-          - local-retrieval
-          - orchestration-equivalence
-    env:
-      PYTHON: .venv/bin/python
-      VALIDATION_SHARD: ${{ matrix.shard }}
-    steps:
-      - name: Check out repository
-        uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-          cache: pip
-
-      - name: Create virtual environment
-        run: python -m venv .venv
-
-      - name: Install Python dependencies
-        run: |
-          .venv/bin/python -m pip install --upgrade pip
-          .venv/bin/python -m pip install --require-hashes -r requirements.txt
-
-      - name: Download validation plan
-        uses: actions/download-artifact@v4
-        with:
-          name: validation-plan-${{ github.run_id }}-${{ github.run_attempt }}
-          path: validation-plan-artifacts
-
-      - name: Run planner-selected shadow shard
-        shell: bash
-        run: |
-          set -euo pipefail
-          .venv/bin/python tests/test_ci_validation_plan.py run-shard \
-            --plan validation-plan-artifacts/validation-plan.json \
-            --shard "$VALIDATION_SHARD" \
-            --output-dir "validation-shard-artifacts/$VALIDATION_SHARD"
-
-      - name: Upload full shadow shard receipt
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: validation-shard-${{ matrix.shard }}-${{ github.run_id }}-${{ github.run_attempt }}
-          path: validation-shard-artifacts/${{ matrix.shard }}/
-          if-no-files-found: error
-          retention-days: 14
-
-  validate_project_control:
-    name: Validate project-control gates
-    runs-on: ubuntu-latest
-    timeout-minutes: 45
-    env:
-      PYTHON: .venv/bin/python
-    steps:
-      - name: Check out repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-          cache: pip
-
-      - name: Create virtual environment
-        run: python -m venv .venv
-
-      - name: Install Python dependencies
+      - name: Install exact validation dependencies
         run: |
           .venv/bin/python -m pip install --upgrade pip
           .venv/bin/python -m pip install --require-hashes -r requirements-dev.txt
 
-      - name: Run project-control validation
+      - name: Run the planner-authoritative full profile
         shell: bash
         run: |
           set +e
-          mkdir -p legacy-project-control-artifacts
-          started_at="$(date +%s)"
+          mkdir -p planner-project-control-artifacts
           make PYTHON=.venv/bin/python validate-project-control \
-            > legacy-project-control-artifacts/full-output.log 2>&1
+            > planner-project-control-artifacts/full-output.log 2>&1
           exit_code="$?"
-          finished_at="$(date +%s)"
-          duration_seconds="$((finished_at - started_at))"
-          .venv/bin/python tests/test_ci_validation_plan.py write-legacy-receipt \
-            --output-dir legacy-project-control-artifacts \
-            --full-output legacy-project-control-artifacts/full-output.log \
-            --exit-code "$exit_code" \
-            --duration-seconds "$duration_seconds"
-          receipt_exit="$?"
-          if [[ "$exit_code" -ne 0 ]]; then
-            tail -n 200 legacy-project-control-artifacts/full-output.log
+          receipt_path="$(find .local/validation-receipts -type f -name full.json -print 2>/dev/null | LC_ALL=C sort | tail -n 1)"
+          if [[ -n "$receipt_path" ]]; then
+            cp "$receipt_path" planner-project-control-artifacts/full.json
           fi
-          if [[ "$receipt_exit" -ne 0 ]]; then
-            exit "$receipt_exit"
+          if [[ "$exit_code" -ne 0 ]]; then
+            tail -n 200 planner-project-control-artifacts/full-output.log
           fi
           exit "$exit_code"
 
-      - name: Upload legacy project-control receipt
+      - name: Upload planner validation receipt
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: legacy-project-control-${{ github.run_id }}-${{ github.run_attempt }}
-          path: legacy-project-control-artifacts/
-          if-no-files-found: error
-          retention-days: 14
-
-  validate_memory_read_only:
-    name: Validate generated memory surfaces
-    needs:
-      - validation_plan_shadow
-      - validate_project_control
-    if: always()
-    runs-on: ubuntu-latest
-    timeout-minutes: 20
-    steps:
-      - name: Check out repository
-        uses: actions/checkout@v4
-
-      - name: Download validation plan
-        id: validation_plan
-        continue-on-error: true
-        uses: actions/download-artifact@v4
-        with:
-          name: validation-plan-${{ github.run_id }}-${{ github.run_attempt }}
-          path: validation-plan-artifacts
-
-      - name: Select memory signal mode without provisioning
-        id: memory_selection
-        run: |
-          python3 tests/test_ci_validation_plan.py prepare-memory-signal \
-            --plan validation-plan-artifacts/validation-plan.json \
-            --output-dir memory-signal-selection-artifacts
-
-      - name: Download same-run legacy project-control receipt
-        if: steps.memory_selection.outputs.mode == 'reuse'
-        uses: actions/download-artifact@v4
-        with:
-          name: legacy-project-control-${{ github.run_id }}-${{ github.run_attempt }}
-          path: legacy-project-control-artifacts
-
-      - name: Set up fallback Python
-        if: steps.memory_selection.outputs.mode == 'fallback'
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-          cache: pip
-
-      - name: Create fallback virtual environment
-        if: steps.memory_selection.outputs.mode == 'fallback'
-        run: python -m venv .venv
-
-      - name: Install fallback dependencies
-        if: steps.memory_selection.outputs.mode == 'fallback'
-        run: |
-          .venv/bin/python -m pip install --upgrade pip
-          .venv/bin/python -m pip install --require-hashes -r requirements.txt
-
-      - name: Run direct memory fallback
-        id: fallback_memory
-        if: steps.memory_selection.outputs.mode == 'fallback'
-        shell: bash
-        run: |
-          set +e
-          mkdir -p memory-signal-fallback-artifacts
-          .venv/bin/python \
-            .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py \
-            --validate-only \
-            > memory-signal-fallback-artifacts/full-output.log 2>&1
-          echo "exit_code=$?" >> "$GITHUB_OUTPUT"
-
-      - name: Finalize visible memory signal
-        shell: bash
-        env:
-          MEMORY_MODE: ${{ steps.memory_selection.outputs.mode }}
-          FALLBACK_EXIT_CODE: ${{ steps.fallback_memory.outputs.exit_code }}
-        run: |
-          set -euo pipefail
-          args=(
-            --selection memory-signal-selection-artifacts/memory-signal-selection.json
-            --output-dir memory-signal-artifacts
-          )
-          if [[ "$MEMORY_MODE" == "reuse" ]]; then
-            args+=(
-              --legacy-receipt
-              legacy-project-control-artifacts/legacy-project-control-receipt.json
-            )
-          elif [[ "$MEMORY_MODE" == "fallback" ]]; then
-            args+=(
-              --fallback-output
-              memory-signal-fallback-artifacts/full-output.log
-              --fallback-exit-code
-              "$FALLBACK_EXIT_CODE"
-            )
-          fi
-          python3 tests/test_ci_validation_plan.py finalize-memory-signal "${args[@]}"
-
-      - name: Upload visible memory signal receipt
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: memory-signal-${{ github.run_id }}-${{ github.run_attempt }}
-          path: |
-            memory-signal-selection-artifacts/
-            memory-signal-artifacts/
-            memory-signal-fallback-artifacts/
+          name: planner-project-control-${{ github.run_id }}-${{ github.run_attempt }}
+          path: planner-project-control-artifacts/
           if-no-files-found: error
           retention-days: 14

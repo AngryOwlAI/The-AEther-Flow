@@ -3,9 +3,9 @@
   "schema_version": 1,
   "binding_id": "validation-adapter-bindings-v1",
   "manifest_id": "validation-gate-manifest-v1",
-  "gate_catalog_sha256": "395b4b5a9ea0ffef04c6e3ffdfe8a0337c85a82190c969e49eeb5bd023d09a8f",
+  "gate_catalog_sha256": "f19c6906524ae658b25099b5820e8d3e77851060973c93bb5e5726c7cea3fa4b",
   "scope": "canonical_current_full_profile",
-  "status": "active_candidate",
+  "status": "active",
   "authority": {
     "operational_validation_only": true,
     "source_authoritative": false,
@@ -136,10 +136,38 @@
       "child_gate_ids": []
     },
     {
+      "gate_id": "claim_language_changed",
+      "adapter_id": "legacy:lvg-023",
+      "kind": "subprocess",
+      "command": [".venv/bin/python", "scripts/project_control/validate_claim_language.py", "--json", "{claim_language_mode_args}"],
+      "child_gate_ids": []
+    },
+    {
+      "gate_id": "route_signature_diagnostic",
+      "adapter_id": "legacy:lvg-024",
+      "kind": "subprocess",
+      "command": [".venv/bin/python", "scripts/research_control/render_route_diagnostics.py", "--refresh", "--summary"],
+      "child_gate_ids": []
+    },
+    {
+      "gate_id": "route_orbit_diagnostic",
+      "adapter_id": "legacy:lvg-025",
+      "kind": "subprocess",
+      "command": [".venv/bin/python", "scripts/research_control/validate_route_orbits.py", "--sample", "recent-matter-rr-e", "--advisory-only", "--summary"],
+      "child_gate_ids": []
+    },
+    {
       "gate_id": "git_diff_check",
       "adapter_id": "legacy:lvg-026",
       "kind": "subprocess",
       "command": ["git", "diff", "--check"],
+      "child_gate_ids": []
+    },
+    {
+      "gate_id": "targeted_pdf_build",
+      "adapter_id": "legacy:lvg-027",
+      "kind": "subprocess",
+      "command": [".venv/bin/python", ".codex/skills/project-memory-system/scripts/build_pdf_derivatives.py", "{changed_tex_paths}"],
       "child_gate_ids": []
     },
     {
@@ -190,6 +218,13 @@
       "kind": "dependency_aggregate",
       "command": [],
       "child_gate_ids": ["profile_validate_project_control"]
+    },
+    {
+      "gate_id": "mermaid_sources",
+      "adapter_id": "legacy:lvg-037",
+      "kind": "subprocess",
+      "command": [".venv/bin/python", ".codex/skills/visual-explainer/subskills/mermaid-documentation/scripts/validate_mermaid_sources.py", "--repo-root", ".", "--json"],
+      "child_gate_ids": []
     }
   ]
 }

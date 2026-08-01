@@ -2,7 +2,7 @@
   "schema_id": "compact_current_frontier_v16",
   "generated_from": [
     "research_control/program_state.yaml",
-    "research_control/handoffs/handoff-0935.yaml",
+    "research_control/handoffs/handoff-0936.yaml",
     "registries/DISTANCE_TO_GR_LEDGER.csv",
     "registries/METRIC_USE_LEDGER.csv",
     "research_control/current_frontier.md",
@@ -11,17 +11,17 @@
     "research_control/design/active_state_bifurcation_policy_v1.md"
   ],
   "active_state": {
-    "active_task_id": "RT-20260801-006",
-    "latest_handoff_id": "handoff-0935",
-    "current_status": "p13_t01_exact_head_hosted_pass_evidence_reconciled_cutover_authorized_checkpoint_ready",
+    "active_task_id": "RT-20260801-007",
+    "latest_handoff_id": "handoff-0936",
+    "current_status": "p13_t02_planner_authoritative_cutover_completed_checkpoint_ready",
     "v15_completed": false,
     "v16_completed": false,
     "v16_plan_registered": true
   },
   "active_state_bifurcation": {
-    "latest_research_task_id": "RT-20260801-006",
-    "latest_research_handoff_id": "handoff-0935",
-    "latest_research_next_action": "Run the one governed checkpoint for AJ-RT-20260801-006-001. After it commits, route one fresh bounded P13-T02 improve-project-system packet to perform the guarded planner cutover with rollback safeguards; do not execute P13-T02 in this frame.",
+    "latest_research_task_id": "RT-20260801-007",
+    "latest_research_handoff_id": "handoff-0936",
+    "latest_research_next_action": "Run the one governed checkpoint for AJ-RT-20260801-007-001. After it commits, route one fresh bounded P13-T07 improve-project-system packet to enforce generated-report source provenance and freshness; do not execute P13-T07 in this frame.",
     "latest_project_system_task_id": "none",
     "latest_project_system_status": "none",
     "latest_project_system_sidecar_task_id": "none",
@@ -30,10 +30,10 @@
     "next_research_route_source": "latest_research_handoff"
   },
   "next_route": {
-    "route_id": "p13_t02_validation_planner_cutover_v1",
+    "route_id": "p13_t07_generated_report_provenance_freshness_v1",
     "role_family": "validator-engineer@0.2.0",
-    "target_derivation_milestone": "none",
-    "milestone_burden": "Project-system validation orchestration cutover only; no derivation milestone advances.",
+    "target_derivation_milestone": "source_equivalence_eqsrc",
+    "milestone_burden": "Prevent stale metrics and frontier reports from misleading agents or readers.",
     "requires_human_gate": false
   },
   "claim_boundary": {
@@ -334,7 +334,7 @@
   ],
   "distance_to_gr": {
     "delta": {
-      "effect": "none_project_system_evidence_reconciliation",
+      "effect": "none_project_system_validation_cutover",
       "changed": false,
       "milestone": "source_equivalence_eqsrc",
       "burden_id": "source_equivalence_eqsrc"

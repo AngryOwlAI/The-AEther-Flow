@@ -134,8 +134,26 @@ DEPENDENCY_ENVIRONMENT_PATHS = {
     "requirements.txt",
     "requirements-dev.txt",
 }
+CLAIM_LANGUAGE_PATH_PATTERNS = (
+    "README.md",
+    "github-facing/*.md",
+    "github-facing/**/*.md",
+    "research_control/current_frontier.md",
+    "research_control/design/*.md",
+    "implementations_plans/*.md",
+    "markdown/publication-briefs/*.md",
+    "markdown/html-explainer-specs/*.md",
+    "research_control/tasks/**/*.md",
+    "research_control/tasks/**/*.tex",
+    "research_control/handoffs/*.md",
+    "research_control/handoffs/*.yaml",
+    "registries/*.csv",
+)
 VALIDATION_GATE_MANIFEST_PATH = (
     "research_control/design/validation_gate_manifest_v1.yaml"
+)
+VALIDATION_OBLIGATION_CATALOG_PATH = (
+    "research_control/design/validation_obligation_catalog_v1.yaml"
 )
 VALIDATION_ADAPTER_BINDINGS_PATH = (
     "research_control/design/validation_adapter_bindings_v1.json"
@@ -156,6 +174,7 @@ PATH_FAMILY_TAGS = (
     "dependency_graph_input",
     "task_index_input",
     "claim_graph_input",
+    "claim_language",
     "traceability",
     "scientific_checker",
     "local_retrieval",
@@ -535,12 +554,16 @@ def classify_path_family(path: str, registry: RegistryIndex) -> dict[str, object
     if is_control_state_path(path):
         tags.add("control_state")
         reasons.add("path_rule:control_state")
+    if path_matches(path, CLAIM_LANGUAGE_PATH_PATTERNS):
+        tags.add("claim_language")
+        reasons.add("path_rule:claim_language")
     if (
         path.startswith(".agents/roles/")
         or path.startswith(".agents/schemas/")
         or path_matches(path, [".codex/skills/*/SKILL.md"])
         or path.startswith(".codex/skills/continue-research-goal/scripts/")
         or path == VALIDATION_GATE_MANIFEST_PATH
+        or path == VALIDATION_OBLIGATION_CATALOG_PATH
         or any(source.role in {"control_schema", "control_policy"} for source in sources)
     ):
         tags.add("role_or_schema_contract")
