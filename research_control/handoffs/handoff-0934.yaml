@@ -1,0 +1,291 @@
+validation_status: "PASS"
+handoff_id: "handoff-0934"
+handoff_number: 934
+task_id: "RT-20260801-003"
+decision_id: "DDR-20260801-003"
+job_id: "AJ-RT-20260801-003-001"
+completion_id: "AJC-AJ-RT-20260801-003-001"
+completion_path: "research_control/tasks/RT-20260801-003/jobs/completions/AJC-AJ-RT-20260801-003-001.yaml"
+completion_sha256: "3dfdb5a6a206ce55c4a469e0c080e60e414d68233285bc6d083d5253c716b190"
+status: "human_gate_required_after_checkpoint"
+created_at: "2026-08-01T08:55:01Z"
+parent_handoff_id: "handoff-0933"
+plan_task_id: "P13-T02"
+recovery_for_plan_task_id: "P15-T05"
+source_role_id: "process-integrity-auditor"
+source_role_version: "0.1.0"
+source_execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260801-003"
+summary: "Generation 201 reconciles the committed generation-200 checkpoint and the retained P13-T01 evidence gate. Exact checkpoint 686c3021 is now origin/main. Its only matching Project Control Validation run completed with cancelled conclusion and no matching Scheduled Full Validation run exists. P13-T01 remains deferred and P13-T02 remains unexecuted."
+next_action: "Run the one governed checkpoint for AJ-RT-20260801-003-001. After it commits, do not create or execute P13-T01 or P13-T02 work until separate explicit hosted-workflow authority obtains completed PASS Project Control Validation and Scheduled Full Validation evidence for exact head 686c3021."
+current_claim_boundary: "CB-PS-GENERATION-200-CHECKPOINT-P13-T01-EVIDENCE-RECONCILIATION-001"
+loop_risk_route: "human-gated-external-validation-evidence"
+p13_t01_work_item_status: "deferred_human_gate"
+p13_t02_executed: false
+
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260801-003"
+  latest_research_handoff_id: "handoff-0934"
+  latest_research_next_action: "Run the one governed checkpoint for AJ-RT-20260801-003-001. After it commits, do not create or execute P13-T01 or P13-T02 work until separate explicit hosted-workflow authority obtains completed PASS Project Control Validation and Scheduled Full Validation evidence for exact head 686c3021."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+  project_improvement_sidecar_required: false
+  research_handoff_remains_authoritative: true
+
+claim_boundary:
+  allowed_next_scope: "One governed checkpoint for AJ-RT-20260801-003-001. After that commit, only separately authorized hosted validation evidence acquisition for exact head 686c3021 may unblock P13-T01; P13-T02 remains ineligible until both required matching validations pass."
+  completed_task: "RT-20260801-003"
+  completed_completion_path: "research_control/tasks/RT-20260801-003/jobs/completions/AJC-AJ-RT-20260801-003-001.yaml"
+  completed_completion_sha256: "3dfdb5a6a206ce55c4a469e0c080e60e414d68233285bc6d083d5253c716b190"
+  source_task_id: "RT-20260801-002"
+  source_job_id: "AJ-RT-20260801-002-001"
+  source_handoff_id: "handoff-0933"
+  source_handoff_path: "research_control/handoffs/handoff-0933.yaml"
+  source_handoff_sha256_at_intake: "9a63618eda6c1d125a3638c90fbd9923c7ac20e0334cec0c98274b8999d6de62"
+  immutable_route_sha256: "9793284a72335f1dd14142e5b4213b8b84ba6e9ec8d3914dd12012d4401235b6"
+  route_blocker_fingerprint: "2f71f3c7da5e637b7f02165a605888ba207e4ffddddc737f6e7f60220b7801e8"
+  result_status: "PASS_GENERATION_200_CHECKPOINT_RECONCILED_P13_T01_EXTERNAL_EVIDENCE_GATE_CHECKPOINT_READY"
+  dirty_state_manifest_sha256: "68c2d5c11f9586d24bc893e4c6b47dc60aa13e7f938e585c7c792ee36034cf4f"
+  failed_gate_evidence_sha256: "2f71f3c7da5e637b7f02165a605888ba207e4ffddddc737f6e7f60220b7801e8"
+  recovery_receipt_path: "research_control/tasks/RT-20260801-003/artifacts/generation_200_checkpoint_p13_t01_external_evidence_reconciliation_receipt.json"
+  recovery_receipt_sha256: "57a76e21929e635603b20075b5c1db78e73ada611cc46ef4bf2a456563c03e7f"
+  generation_200_checkpoint_commit: "4bf35d460fe9cb3e94984d961fe1c60eae9a6aaf"
+  p13_t01_prior_finalized_receipt_hash: "2c593f3e9bbf09f966a8a2b1932b4fb016c76076ce3bb871d526db990286b4ca"
+  authorized_checkpoint_commit: "686c3021ba7d256390d5efdf78af4c251da6d975"
+  origin_main: "686c3021ba7d256390d5efdf78af4c251da6d975"
+  project_control_validation_run_id: 30681574675
+  project_control_validation_conclusion: "cancelled"
+  project_control_validation_qualifies_as_pass: false
+  matching_scheduled_full_run_count: 0
+  checkpoint_invocation_count_before_handoff: 0
+  checkpoint_committed_before_handoff: false
+  generation_200_job_reexecuted: false
+  generation_200_checkpoint_replayed: false
+  p13_t01_reexecuted: false
+  p13_t02_executed: false
+  scientific_status_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  ontology_adoption_authorized: false
+  source_law_adoption_authorized: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_performed: false
+  hosted_workflow_dispatch_performed: false
+  blocked_claims:
+    - "generation-200 checkpoint success presented as P13-T01 evidence completion"
+    - "cancelled Project Control Validation presented as PASS"
+    - "absent Scheduled Full Validation presented as PASS"
+    - "P13-T01 presented as completed or P13-T02 presented as executed"
+    - "planner cutover scientific progress Distance-to-GR movement benchmark promotion proof publication push hosted-workflow success or completed derivation"
+
+plan_result:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  phase_id: "P13"
+  plan_task_id: "P13-T02"
+  recovery_for_plan_task_id: "P15-T05"
+  next_plan_task_id: "P13-T01"
+  title: "Reconcile generation-200 checkpoint and P13-T01 external evidence"
+  result_status: "GENERATION_200_CHECKPOINT_RECONCILIATION_PASS_P13_T01_DEFERRED"
+  work_item_status: "completed"
+  generation_200_checkpoint_reconciled: true
+  p13_t01_publication_subcondition_satisfied: true
+  p13_t01_project_control_validation_pass_satisfied: false
+  p13_t01_scheduled_full_validation_pass_satisfied: false
+  p13_t01_work_item_status: "deferred_human_gate"
+  p13_t02_dependency_ready_after_checkpoint: false
+  p13_t02_dependency_ready_now: false
+  p13_t02_executed: false
+  scientific_claims_changed_by_recovery: false
+  distance_to_gr_delta_changed_by_recovery: false
+  system_success_counts_as_physics: false
+  system_success_counts_as_distance_to_gr: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+distance_to_gr:
+  changed: false
+  effect: "none_project_system_recovery"
+  burden_id: "source_equivalence_eqsrc"
+  milestone: "source_equivalence_eqsrc"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "Checkpoint and external-validation evidence reconciliation contributes no physics movement."
+  downstream_unlocked: []
+  downstream_still_blocked:
+    - "P13-T01 completed equivalence and cutover disposition"
+    - "P13-T02 planner cutover"
+    - "Einstein equations"
+    - "exact-GR recovery"
+    - "benchmark promotion"
+
+required_next_packet:
+  task_type: "validation_planner_equivalence_external_evidence"
+  plan_task_id: "P13-T01"
+  route_label: "human-gated-external-validation-evidence"
+  role_family: "process-integrity-auditor@0.1.0"
+  worker_skill: "improve-project-system"
+  objective: "Obtain and inspect completed PASS Project Control Validation and Scheduled Full Validation evidence whose head SHA is exact published checkpoint 686c3021; then make only the evidence-supported P13-T01 disposition."
+  dependency_qualification: "Exact checkpoint publication is satisfied; both matching PASS validation subconditions remain unsatisfied."
+  dependency_ready_after_checkpoint: false
+  dependency_ready_now: false
+  blocked_by_protected_external_evidence: true
+  exact_hosted_workflow_authorization_present: false
+  absent_authorization_disposition: "deferred_human_gate"
+  executed: false
+
+selected_next_route:
+  route_id: "p13_t01_exact_head_validation_evidence_human_gate_v1"
+  plan_task_id: "P13-T01"
+  route_label: "human-gated-external-validation-evidence"
+  role_family: "process-integrity-auditor@0.1.0"
+  worker_skill: "improve-project-system"
+  selected_next_packet_type: "validation_planner_equivalence_external_evidence"
+  task_type: "validation_planner_equivalence_external_evidence"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Finish the shadow-to-authoritative migration without weakening safeguards."
+  strategy_id: "obtain_exact_686c3021_project_control_and_scheduled_full_pass_evidence_v1"
+  requires_human_gate: false
+  blocked_by_protected_external_evidence: true
+  dependency_ready_after_checkpoint: false
+  execution_ready_now: false
+  exact_hosted_workflow_authorization_present: false
+  authorized_checkpoint_commit: "686c3021ba7d256390d5efdf78af4c251da6d975"
+  exact_checkpoint_publication_satisfied: true
+  project_control_validation_pass_satisfied: false
+  scheduled_full_validation_pass_satisfied: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  executed: false
+  next_action: "Remain unexecuted until separate explicit hosted-workflow authority yields both required exact-head PASS results."
+  source_handoff: "research_control/handoffs/handoff-0934.yaml"
+
+ordinary_route_guard:
+  schema_id: "ordinary_route_guard_evaluation_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  evaluation_id: "ORE-HANDOFF-0934"
+  ordinary_handoff_id: "handoff-0934"
+  threshold: 3
+  consecutive_project_system_tasks_before_selection: 3
+  ready_science_plan_task_ids: []
+  selected_plan_task_id: "P13-T01"
+  selected_route_class: "project_system"
+  selected_worker_skill: "improve-project-system"
+  outcome: "all_ready_science_blocked_exception"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  exception_receipt:
+    active: true
+    schema_id: "ordinary_route_exception_receipt_v1"
+    exception_id: "ORE-HANDOFF-0934-EXCEPTION-001"
+    exception_class: "all_ready_science_blocked"
+    ordinary_handoff_id: "handoff-0934"
+    ready_science_plan_task_ids: []
+    blocked_routes: []
+    authority_limits:
+      ordinary_research_handoff_authoritative: true
+      project_system_sidecar_supersedes: false
+      system_success_counts_as_physics: false
+      system_success_counts_as_distance_to_gr: false
+      scientific_status_changed: false
+      physics_promotion_authorized: false
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+active_state_boundary:
+  active_task_id: "RT-20260801-003"
+  active_job_id: "AJ-RT-20260801-003-001"
+  current_status: "generation_200_checkpoint_reconciled_p13_t01_external_evidence_gate_checkpoint_ready"
+  checkpoint_required: true
+  checkpoint_completed: false
+  checkpoint_invocation_count: 0
+  dependency_checkpoint_commit: "4bf35d460fe9cb3e94984d961fe1c60eae9a6aaf"
+  selected_next_plan_task_id: "P13-T01"
+  selected_next_worker_skill: "improve-project-system"
+  selected_next_role_family: "process-integrity-auditor@0.1.0"
+  selected_next_route_label: "human-gated-external-validation-evidence"
+  selected_next_strategy_id: "obtain_exact_686c3021_project_control_and_scheduled_full_pass_evidence_v1"
+  selected_next_execution_ready_after_checkpoint: false
+  selected_next_execution_ready_now: false
+  selected_next_blocker: "completed PASS Project Control Validation and Scheduled Full Validation evidence for exact published head 686c3021 remains absent"
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 201 lease, route, repository, branch, HEAD, clean worktree, max effort, and predecessor completion validated before one claim and consume."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The task-local receipt binds generation-200 checkpoint identity, exact origin/main, exact matching run status, and predecessor hashes."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Task-local, registry, memory, claim-language, documentation-impact, research-control, continuation, and whitespace checks pass."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "One governed checkpoint remains authorized and uninvoked."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Governed frontier, task-index, compact-frontier, dependency-graph, and claim-graph write/check gates pass."
+  memory_bootstrap:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "Tracked memory synchronization and validate-only checks pass; local-cache-only retrieval warnings are nonblocking."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation reports zero hard failures."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "project-system checkpoint and read-only external-evidence reconciliation only"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  publication_authorized: false
+  push_authorized: false
+  hosted_workflow_dispatch_authorized: false
+  proof_authority: false
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+project_improvement_sidecar_required: false
+checkpoint_required_before_next_route: true
+checkpoint_job_id: "AJ-RT-20260801-003-001"
+legacy_validation_authorized: false
+
+handoff_authority_boundary:
+  this_handoff_authorizes:
+    - "one governed checkpoint for AJ-RT-20260801-003-001"
+    - "read-only inspection of exact-head hosted validation evidence after separate external action"
+  this_handoff_does_not_authorize:
+    - "generation-200 worker or checkpoint replay"
+    - "push publication mutation hosted workflow dispatch or rerun"
+    - "P13-T01 completion P13-T02 execution or planner cutover without both exact-head PASS results"
+    - "scientific ontology metric benchmark promotion proof publication or completed-derivation claims"
+
+next_plan_task_id: "P13-T01"
+next_worker_skill: "improve-project-system"
+next_role_family: "process-integrity-auditor@0.1.0"
+next_route_label: "human-gated-external-validation-evidence"
+next_strategy_id: "obtain_exact_686c3021_project_control_and_scheduled_full_pass_evidence_v1"
+next_plan_task_execution_ready_after_checkpoint: false
+next_plan_task_executed: false
+notes: "This reconciliation records external state without mutating it. Cancelled or absent validation evidence remains non-PASS."

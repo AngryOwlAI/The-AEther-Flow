@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260801-001`
-- Latest handoff: `handoff-0933`
-- Current status: `p15_t05_agentjob_registry_write_allowlist_parity_recovered_checkpoint_ready`
+- Active task: `RT-20260801-003`
+- Latest handoff: `handoff-0934`
+- Current status: `generation_200_checkpoint_reconciled_p13_t01_external_evidence_gate_checkpoint_ready`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260801-001`
-- Latest research handoff: `handoff-0933`
-- Latest research next action: Invoke the one governed checkpoint for AJ-RT-20260801-001-001. After that commit, use one fresh bounded P13-T02 project-system frame limited to publishing exact commit 686c3021, collecting commit-matched hosted CI plus scheduled-full evidence, and making only the evidence-supported planner cutover; do not publish the newer recovery checkpoint by implication.
+- Latest research task: `RT-20260801-003`
+- Latest research handoff: `handoff-0934`
+- Latest research next action: Run the one governed checkpoint for AJ-RT-20260801-003-001. After it commits, do not create or execute P13-T01 or P13-T02 work until separate explicit hosted-workflow authority obtains completed PASS Project Control Validation and Scheduled Full Validation evidence for exact head 686c3021.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `publish_checkpoint_686c3021_collect_matched_ci_and_execute_p13_t02_cutover_v1`
-- Role family: `validator-engineer@0.2.0`
+- Route ID: `p13_t01_exact_head_validation_evidence_human_gate_v1`
+- Role family: `process-integrity-auditor@0.1.0`
 - Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Complete the v19 validation architecture transition.
+- Milestone burden: Finish the shadow-to-authoritative migration without weakening safeguards.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `d171ca8e9bfc6427b85f7230f6a6fc053fc9631d1c63906f511f346587ad300f`
-- JSON SHA-256: `daa11981ad07bd30cf4afd96edbc2d48f3aa976efe02d6a210a44f7df5d6f17f`
+- YAML SHA-256: `6f7244eea76c7f218718c4df86e15f79f37a9e87b552037bdaa6b8f0e8136117`
+- JSON SHA-256: `a3cef954ee0891c57522e2ed51a621a141e0f1cf442aaedbf585f69c4f01be57`
 
 ## Authority Warning
 

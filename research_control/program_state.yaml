@@ -1,11 +1,79 @@
 mode: "director_led_research_control"
-active_task_id: "RT-20260801-001"
-latest_handoff_id: "handoff-0933"
-current_status: "p15_t05_agentjob_registry_write_allowlist_parity_recovered_checkpoint_ready"
-claim_boundary_summary: "RT-20260801-001 changes only the AJ-RT-20260731-010-001 AGENT_JOB registry allowed_write_paths representation to the exact ordered 30-item immutable AgentJob list. The P15-T05 AgentJob, role, completion, handoff-0932, and protected result artifacts remain byte-identical. P15-T05 was not replayed, P13-T02 remains unexecuted, and no scientific, Distance-to-GR, ontology, publication, push, hosted-workflow, or promotion authority changes."
-next_plan_task_id: "P13-T02"
+active_task_id: "RT-20260801-003"
+latest_handoff_id: "handoff-0934"
+current_status: "generation_200_checkpoint_reconciled_p13_t01_external_evidence_gate_checkpoint_ready"
+claim_boundary_summary: "RT-20260801-003 records that generation 200 committed at 4bf35d and that exact authorized checkpoint 686c3021 is now origin/main, while its only matching Project Control Validation run is cancelled and no matching Scheduled Full Validation run exists. Predecessor records remain byte-identical, P13-T01 remains deferred_human_gate, P13-T02 remains unexecuted, and no workflow dispatch, push, scientific, Distance-to-GR, ontology, publication, proof, or promotion authority changes."
+next_plan_task_id: "P13-T01"
 next_worker_skill: "improve-project-system"
-next_recommended_action: "Invoke the one governed checkpoint for AJ-RT-20260801-001-001. After that commit, use one fresh bounded P13-T02 project-system frame limited to publishing exact commit 686c3021, collecting commit-matched hosted CI plus scheduled-full evidence, and making only the evidence-supported planner cutover; do not publish the newer recovery checkpoint by implication."
+next_recommended_action: "Run the one governed checkpoint for AJ-RT-20260801-003-001. After it commits, do not create or execute P13-T01 or P13-T02 work until separate explicit hosted-workflow authority obtains completed PASS Project Control Validation and Scheduled Full Validation evidence for exact head 686c3021."
+
+generation_200_checkpoint_p13_t01_external_evidence_reconciliation:
+  task_id: "RT-20260801-003"
+  parent_task_id: "RT-20260801-002"
+  parent_handoff_id: "handoff-0933"
+  source_task_id: "RT-20260801-002"
+  source_job_id: "AJ-RT-20260801-002-001"
+  source_handoff_id: "handoff-0933"
+  plan_task_id: "P13-T02"
+  recovery_for_plan_task_id: "P15-T05"
+  next_plan_task_id: "P13-T01"
+  claim_boundary_id: "CB-PS-GENERATION-200-CHECKPOINT-P13-T01-EVIDENCE-RECONCILIATION-001"
+  status: "GENERATION_200_CHECKPOINT_RECONCILED_P13_T01_EXTERNAL_EVIDENCE_GATE_CHECKPOINT_READY"
+  work_item_status: "completed"
+  route_label: "reconcile_generation_200_checkpoint_and_p13_t01_human_gate_v1"
+  selected_role_family: "process-integrity-auditor@0.1.0"
+  selected_worker_skill: "improve-project-system"
+  selected_strategy_id: "reconcile_generation_200_checkpoint_and_p13_t01_human_gate_v1"
+  target_derivation_milestone: "none"
+  milestone_burden: "Project-system checkpoint and external-evidence reconciliation only; no derivation milestone advances."
+  source_head: "4bf35d460fe9cb3e94984d961fe1c60eae9a6aaf"
+  generation_200_checkpoint_commit: "4bf35d460fe9cb3e94984d961fe1c60eae9a6aaf"
+  immutable_route_sha256: "9793284a72335f1dd14142e5b4213b8b84ba6e9ec8d3914dd12012d4401235b6"
+  route_blocker_fingerprint: "2f71f3c7da5e637b7f02165a605888ba207e4ffddddc737f6e7f60220b7801e8"
+  source_completion_path: "research_control/tasks/RT-20260801-002/jobs/completions/AJC-AJ-RT-20260801-002-001.yaml"
+  source_completion_sha256: "2478207cf2e6fdfd81b732294846c4fdde1a40e04b33845f4880aa06da99b471"
+  source_recovery_receipt_path: "research_control/tasks/RT-20260801-002/artifacts/folder_map_documentation_memory_checkpoint_recovery_receipt.json"
+  source_recovery_receipt_sha256: "432a677e484378e3a6d00d81cd9dbaa178a73c74a38a46518dcfa014ade54bc1"
+  source_handoff_path: "research_control/handoffs/handoff-0933.yaml"
+  source_handoff_yaml_sha256: "9a63618eda6c1d125a3638c90fbd9923c7ac20e0334cec0c98274b8999d6de62"
+  source_handoff_markdown_sha256: "de7d890e47abcd77b1ae2f4a92b31304bc529fde94a2fd52f0552f1e618b0adf"
+  p13_t01_prior_goal_generation: 197
+  p13_t01_prior_finalized_receipt_hash: "2c593f3e9bbf09f966a8a2b1932b4fb016c76076ce3bb871d526db990286b4ca"
+  authorized_checkpoint_commit: "686c3021ba7d256390d5efdf78af4c251da6d975"
+  origin_main: "686c3021ba7d256390d5efdf78af4c251da6d975"
+  exact_checkpoint_publication_satisfied: true
+  project_control_validation_run_id: 30681574675
+  project_control_validation_conclusion: "cancelled"
+  project_control_validation_pass_satisfied: false
+  matching_scheduled_full_run_count: 0
+  scheduled_full_validation_pass_satisfied: false
+  p13_t01_work_item_status: "deferred_human_gate"
+  p13_t01_executed_by_reconciliation: false
+  p13_t02_dependency_ready: false
+  p13_t02_executed: false
+  scientific_claims_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false
+  hosted_workflow_dispatch_authorized: false
+  hosted_workflow_dispatch_performed: false
+  checkpoint_invocation_count: 0
+  checkpoint_committed: false
+  checkpoint_staged: false
+  dependency_checkpoint_commit: "4bf35d460fe9cb3e94984d961fe1c60eae9a6aaf"
+  selected_next_work_item: "P13-T01"
+  selected_next_worker_skill: "improve-project-system"
+  selected_next_role_family: "process-integrity-auditor@0.1.0"
+  selected_next_route_label: "human-gated-external-validation-evidence"
+  selected_next_strategy_id: "obtain_exact_686c3021_project_control_and_scheduled_full_pass_evidence_v1"
+  selected_next_requires_human_gate: false
+  selected_next_blocked_by_protected_external_evidence: true
+  selected_next_execution_ready_after_checkpoint: false
+  selected_next_execution_ready_now: false
+  selected_next_blocker: "Completed PASS Project Control Validation and Scheduled Full Validation evidence for exact published head 686c3021 is absent; separate explicit hosted-workflow authority is required for any external action."
 
 p15_t05_agentjob_registry_write_allowlist_parity_recovery:
   task_id: "RT-20260801-001"

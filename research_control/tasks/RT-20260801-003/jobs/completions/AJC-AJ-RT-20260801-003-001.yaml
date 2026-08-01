@@ -1,0 +1,249 @@
+completion_id: "AJC-AJ-RT-20260801-003-001"
+job_id: "AJ-RT-20260801-003-001"
+task_id: "RT-20260801-003"
+task_type: "project_system_generation_200_checkpoint_p13_t01_external_evidence_reconciliation"
+decision_id: "DDR-20260801-003"
+role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260801-003"
+status: "completed"
+validation_status: "PASS"
+completed_at: "2026-08-01T08:55:01Z"
+objective_result: "generation_200_checkpoint_reconciled_p13_t01_external_evidence_gate_preserved"
+verdict: "PASS_GENERATION_200_CHECKPOINT_RECONCILIATION_P13_T01_DEFERRED"
+summary: "Generation 201 records the committed generation-200 checkpoint and live external evidence: exact checkpoint 686c3021 is published on origin/main, its one matching Project Control Validation run is cancelled rather than PASS, and no matching Scheduled Full Validation run exists. P13-T01 remains deferred, P13-T02 remains unexecuted, and one distinct governed checkpoint is pending."
+transaction_status: "ready_for_checkpoint"
+checkpoint_invocation_count: 0
+checkpoint_commit:
+  status: "PENDING"
+  commit: ""
+  invocation_count: 0
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 201
+  passes_consumed: 181
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:201"
+  handoff_token: "249ab5fa16f66cb51764e8880e842c9b8bdbd44463407b3a"
+  relay_claim_token: "fb588c47f12fb3b83f3bc3f1654d2a2d68a642986c698b9f"
+  route_work_item_id: "P15-T05"
+  route_worker_skill: "improve-project-system"
+  route_sha256: "9793284a72335f1dd14142e5b4213b8b84ba6e9ec8d3914dd12012d4401235b6"
+  route_strategy_id: "reconcile_generation_200_checkpoint_and_p13_t01_human_gate_v1"
+  route_blocker_fingerprint: "2f71f3c7da5e637b7f02165a605888ba207e4ffddddc737f6e7f60220b7801e8"
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+
+result:
+  status: "PASS"
+  strategy_id: "reconcile_generation_200_checkpoint_and_p13_t01_human_gate_v1"
+  source_job_id: "AJ-RT-20260801-002-001"
+  source_checkpoint_commit: "4bf35d460fe9cb3e94984d961fe1c60eae9a6aaf"
+  authorized_publication_checkpoint: "686c3021ba7d256390d5efdf78af4c251da6d975"
+  origin_main_matches_authorized_checkpoint: true
+  matching_project_control_validation_conclusion: "cancelled"
+  matching_project_control_validation_qualifies: false
+  matching_scheduled_full_run_count: 0
+  p13_t01_work_item_status: "deferred_human_gate"
+  p13_t02_dependency_ready: false
+  p13_t02_executed: false
+  protected_hash_mismatch_count: 0
+  receipt_path: "research_control/tasks/RT-20260801-003/artifacts/generation_200_checkpoint_p13_t01_external_evidence_reconciliation_receipt.json"
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  publication_or_push_authorized: false
+
+protected_evidence:
+  source_head: "4bf35d460fe9cb3e94984d961fe1c60eae9a6aaf"
+  source_task_path: "research_control/tasks/RT-20260801-002/00_TASK.yaml"
+  source_task_sha256: "c94e60bf34e0eb34c2c6f2e879ea22b53c776d0a14773cf174a7effcae07e1d8"
+  source_job_path: "research_control/tasks/RT-20260801-002/jobs/AJ-RT-20260801-002-001.yaml"
+  source_job_sha256: "c7717b6ea1ea89ce275611695aa76d6908302a6df6f7c22ac7aed039d89999ea"
+  source_role_path: "research_control/tasks/RT-20260801-002/roles/process-integrity-auditor@0.1.0--RT-20260801-002.yaml"
+  source_role_sha256: "70164812b66d66d10997c863217366939dd18f0ce6adb8294e464a5373a43493"
+  source_completion_path: "research_control/tasks/RT-20260801-002/jobs/completions/AJC-AJ-RT-20260801-002-001.yaml"
+  source_completion_sha256: "2478207cf2e6fdfd81b732294846c4fdde1a40e04b33845f4880aa06da99b471"
+  source_handoff_path: "research_control/handoffs/handoff-0933.yaml"
+  source_handoff_yaml_sha256: "9a63618eda6c1d125a3638c90fbd9923c7ac20e0334cec0c98274b8999d6de62"
+  source_handoff_markdown_sha256: "de7d890e47abcd77b1ae2f4a92b31304bc529fde94a2fd52f0552f1e618b0adf"
+  source_recovery_receipt_sha256: "432a677e484378e3a6d00d81cd9dbaa178a73c74a38a46518dcfa014ade54bc1"
+  generation_197_finalized_receipt_hash: "2c593f3e9bbf09f966a8a2b1932b4fb016c76076ce3bb871d526db990286b4ca"
+
+command_results:
+  - command: "git ls-remote origin refs/heads/main"
+    status: "PASS"
+    summary: "origin/main is exact authorized checkpoint 686c3021."
+  - command: "gh run list --commit 686c3021ba7d256390d5efdf78af4c251da6d975 --limit 20 --json databaseId,name,event,status,conclusion,headSha,url,createdAt,updatedAt"
+    status: "PASS_READ_ONLY_EVIDENCE"
+    summary: "Exactly one matching run is Project Control Validation with cancelled conclusion; zero Scheduled Full Validation runs match."
+  - command: ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+    status: "PASS"
+    summary: "The cumulative documentation-impact receipt covers all source and generated paths."
+  - command: ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --job-id AJ-RT-20260801-003-001 --json-summary"
+    status: "PASS"
+    summary: "Integrated control and bounded diff validation pass before checkpoint."
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+    status: "PASS"
+    summary: "Tracked memory and generated derivatives validate; local retrieval warnings are nonblocking."
+  - command: "git diff --check"
+    status: "PASS"
+    summary: "No whitespace errors."
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1109
+    relationship_row_count: 5606
+    semantic_row_count: 1109
+    vault_row_count: 1109
+    local_cache_only_warning_count: 8
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  authority_note: "Generated wiki, Obsidian, semantic, relationship, SQLite, and .local surfaces are retrieval-only and not authority; immutable route data, tracked source records, Git state, live read-only external evidence, and validators govern this reconciliation."
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  observed_durable_outputs:
+    physics: []
+    project_system:
+      - "exact generation-200 checkpoint reconciliation receipt"
+      - "exact origin/main and commit-matched Actions evidence"
+      - "superseding P13-T01 protected-stop handoff and program state"
+      - "one distinct governed checkpoint"
+  accepted_criteria:
+    physics: []
+    project_system:
+      - "RT-20260801-002 and handoff-0933 remain byte-identical"
+      - "origin/main identity and matching Actions run status are recorded exactly"
+      - "cancelled and absent evidence are not promoted to PASS"
+      - "P13-T01 remains deferred and P13-T02 remains unexecuted"
+      - "all required working-tree gates pass"
+      - "one distinct governed checkpoint commits"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+distance_to_gr_delta:
+  changed: false
+  effect: "none_project_system_recovery"
+  milestone: "benchmark_promotion"
+  ledger_row_updated: false
+  ledger_update_rationale: "Checkpoint reconciliation and hosted-validation evidence contribute no physics movement."
+
+physics_progress_status:
+  status: "documentation_or_control_only_no_physics_delta"
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+
+selected_next_route:
+  route_id: "p13_t01_exact_head_validation_evidence_human_gate_v1"
+  route_label: "human-gated-external-validation-evidence"
+  role_family: "process-integrity-auditor@0.1.0"
+  worker_skill: "improve-project-system"
+  task_type: "validation_planner_equivalence_external_evidence"
+  plan_task_id: "P13-T01"
+  strategy_id: "obtain_exact_686c3021_project_control_and_scheduled_full_pass_evidence_v1"
+  dependency_ready_after_checkpoint: false
+  execution_ready_now: false
+  requires_human_gate: false
+  blocked_by_protected_external_evidence: true
+  exact_hosted_workflow_authorization_present: false
+  authorized_checkpoint_commit: "686c3021ba7d256390d5efdf78af4c251da6d975"
+  exact_checkpoint_publication_satisfied: true
+  project_control_validation_pass_satisfied: false
+  scheduled_full_validation_pass_satisfied: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  executed: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 201 validated, atomically claimed, and consumed the immutable recovery route exactly once."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The task-local receipt proves exact checkpoint and external-evidence identity plus protected-byte preservation."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Documentation, signal, integrated control, diff, memory, continuation, and whitespace gates pass."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "The one distinct governed checkpoint is the next authorized action; P13-T02 remains unexecuted."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Tracked frontier, task-index, dependency-graph, claim-graph, registry, folder-map, and wiki derivatives are fresh."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory synchronization and validate-only pass; local retrieval warnings are cache-only."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source and integrated claim-language checks have no hard failure."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "none; project-system checkpoint and external-evidence reconciliation only"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  push_authorized: false
+  publication_authorized: false
+  hosted_workflow_dispatch_authorized: false
+  proof_authority: false
+  canonical_ontology_edit_authorized: false
+  source_law_adoption_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+notes: "Project-system reconciliation success does not count as validation pass evidence, planner cutover, physics, benchmark progress, Distance-to-GR movement, publication authority, or P13-T02 execution."
