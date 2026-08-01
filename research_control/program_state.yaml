@@ -1,11 +1,80 @@
 mode: "director_led_research_control"
-active_task_id: "RT-20260731-010"
-latest_handoff_id: "handoff-0932"
-current_status: "p15_t05_conditionally_not_required_gate_e_not_ready_no_manuscript_checkpoint_ready"
-claim_boundary_summary: "RT-20260731-010 applies the finalized protected Gate E NOT READY result to the P15-T05 manuscript biconditional and closes the work item as conditionally_not_required with no manuscript. It records one fixed-evidence control proposition, claim map, reproducibility manifest, and conflict-free parent-child synthesis. No physical Distance-to-GR delta, Gate E reopening, benchmark promotion, completed derivation, publication, push, submission, external outreach, or ontology change occurs."
+active_task_id: "RT-20260801-001"
+latest_handoff_id: "handoff-0933"
+current_status: "p15_t05_agentjob_registry_write_allowlist_parity_recovered_checkpoint_ready"
+claim_boundary_summary: "RT-20260801-001 changes only the AJ-RT-20260731-010-001 AGENT_JOB registry allowed_write_paths representation to the exact ordered 30-item immutable AgentJob list. The P15-T05 AgentJob, role, completion, handoff-0932, and protected result artifacts remain byte-identical. P15-T05 was not replayed, P13-T02 remains unexecuted, and no scientific, Distance-to-GR, ontology, publication, push, hosted-workflow, or promotion authority changes."
 next_plan_task_id: "P13-T02"
 next_worker_skill: "improve-project-system"
-next_recommended_action: "Run the one governed checkpoint for AJ-RT-20260731-010-001. After commit, create one fresh P13-T02 project-system frame limited to publishing exact commit 686c3021, collecting commit-matched hosted CI plus scheduled-full evidence, and making only the evidence-supported planner cutover; do not publish the newer P15-T05 checkpoint by implication."
+next_recommended_action: "Invoke the one governed checkpoint for AJ-RT-20260801-001-001. After that commit, use one fresh bounded P13-T02 project-system frame limited to publishing exact commit 686c3021, collecting commit-matched hosted CI plus scheduled-full evidence, and making only the evidence-supported planner cutover; do not publish the newer recovery checkpoint by implication."
+
+p15_t05_agentjob_registry_write_allowlist_parity_recovery:
+  task_id: "RT-20260801-001"
+  parent_task_id: "RT-20260731-010"
+  parent_handoff_id: "handoff-0932"
+  source_task_id: "RT-20260731-010"
+  source_job_id: "AJ-RT-20260731-010-001"
+  source_handoff_id: "handoff-0932"
+  plan_task_id: "P13-T02"
+  recovery_for_plan_task_id: "P15-T05"
+  next_plan_task_id: "P13-T02"
+  claim_boundary_id: "CB-PS-P15-T05-AGENTJOB-REGISTRY-WRITE-ALLOWLIST-PARITY-001"
+  status: "P15_T05_AGENTJOB_REGISTRY_WRITE_ALLOWLIST_PARITY_RECOVERED_CHECKPOINT_READY"
+  work_item_status: "completed"
+  route_label: "repair_p15_t05_agentjob_registry_allowlist_parity_v1"
+  selected_role_family: "process-integrity-auditor@0.1.0"
+  selected_worker_skill: "improve-project-system"
+  selected_strategy_id: "repair_p15_t05_agentjob_registry_allowlist_parity_v1"
+  target_derivation_milestone: "none"
+  milestone_burden: "Project-system allowlist identity and checkpoint recovery only; no derivation milestone advances."
+  source_head: "68d136e88050321a325c157d23ed9259219985b1"
+  immutable_route_sha256: "281a733e9c734d8b41e97767bdd9ee47c862b280f5dbfdcd54fdb2049b628563"
+  route_blocker_fingerprint: "05b5d71234832a5adf68486cf00b4dba5034131208ce1727b7a182d69245b1e4"
+  source_job_path: "research_control/tasks/RT-20260731-010/jobs/AJ-RT-20260731-010-001.yaml"
+  source_job_sha256: "990e3316fca224499721921ea50e8bb85b153002fbf5f5b4d5407d22db1962a2"
+  source_role_path: "research_control/tasks/RT-20260731-010/roles/gate-chair@0.1.0--RT-20260731-010.yaml"
+  source_role_sha256: "b3081e8892d428ede1a6c66e157e2b6667e38b2403e656ba87f77c762d615670"
+  source_completion_path: "research_control/tasks/RT-20260731-010/jobs/completions/AJC-AJ-RT-20260731-010-001.yaml"
+  source_completion_sha256: "57e72816d69f68d8af72939286e07e1217de7c0907170b12b3939d36d62af313"
+  source_handoff_path: "research_control/handoffs/handoff-0932.yaml"
+  source_handoff_yaml_sha256: "6c2a19bd25c6f1be948ed39c8acfc69969e023cabd8a6b585682270e1dc1ca5e"
+  source_handoff_markdown_sha256: "388387928034ba577c7ecda4e5be53bdc683b126487c747467f8a87fbb9cdfd2"
+  recovery_receipt_path: "research_control/tasks/RT-20260801-001/artifacts/p15_t05_agentjob_registry_write_allowlist_parity_receipt.json"
+  recovery_validator_path: "research_control/tasks/RT-20260801-001/artifacts/validate_p15_t05_agentjob_registry_write_allowlist_parity.py"
+  completion_path: "research_control/tasks/RT-20260801-001/jobs/completions/AJC-AJ-RT-20260801-001-001.yaml"
+  completion_sha256: "a4bcd542796d062f6f32b1992e9078932fe716f76d25c368730ef4a8189fa429"
+  handoff_id: "handoff-0933"
+  handoff_path: "research_control/handoffs/handoff-0933.yaml"
+  handoff_yaml_sha256: "9a63618eda6c1d125a3638c90fbd9923c7ac20e0334cec0c98274b8999d6de62"
+  handoff_markdown_sha256: "de7d890e47abcd77b1ae2f4a92b31304bc529fde94a2fd52f0552f1e618b0adf"
+  expected_allowed_write_path_count: 30
+  ordered_representation_count: 4
+  protected_hash_mismatch_count: 0
+  p15_t05_payload_preserved: true
+  p15_t05_reexecuted: false
+  p13_t02_executed: false
+  scientific_claims_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false
+  hosted_workflow_dispatch_authorized: false
+  checkpoint_invocation_count: 0
+  checkpoint_committed: false
+  checkpoint_staged: false
+  dependency_checkpoint_commit: "68d136e88050321a325c157d23ed9259219985b1"
+  selected_next_work_item: "P13-T02"
+  selected_next_worker_skill: "improve-project-system"
+  selected_next_role_family: "validator-engineer@0.2.0"
+  selected_next_route_label: "ordinary-research-packet"
+  selected_next_strategy_id: "publish_checkpoint_686c3021_collect_matched_ci_and_execute_p13_t02_cutover_v1"
+  selected_next_requires_human_gate: false
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
+  selected_next_authorized_checkpoint_commit: "686c3021ba7d256390d5efdf78af4c251da6d975"
+  selected_next_exact_checkpoint_publication_only: true
+  selected_next_blocker: "The parity-recovery transaction requires its governed checkpoint before a fresh P13-T02 frame."
 
 p15_t05_gate_e_conditional_no_manuscript_disposition:
   task_id: "RT-20260731-010"

@@ -1,7 +1,7 @@
 schema_id: "compact_current_frontier_v16"
 generated_from:
   - "research_control/program_state.yaml"
-  - "research_control/handoffs/handoff-0932.yaml"
+  - "research_control/handoffs/handoff-0933.yaml"
   - "registries/DISTANCE_TO_GR_LEDGER.csv"
   - "registries/METRIC_USE_LEDGER.csv"
   - "research_control/current_frontier.md"
@@ -9,16 +9,16 @@ generated_from:
   - "research_control/design/accepted_status_calibration_v2.yaml"
   - "research_control/design/active_state_bifurcation_policy_v1.md"
 active_state:
-  active_task_id: "RT-20260731-010"
-  latest_handoff_id: "handoff-0932"
-  current_status: "p15_t05_conditionally_not_required_gate_e_not_ready_no_manuscript_checkpoint_ready"
+  active_task_id: "RT-20260801-001"
+  latest_handoff_id: "handoff-0933"
+  current_status: "p15_t05_agentjob_registry_write_allowlist_parity_recovered_checkpoint_ready"
   v15_completed: false
   v16_completed: false
   v16_plan_registered: true
 active_state_bifurcation:
-  latest_research_task_id: "RT-20260731-010"
-  latest_research_handoff_id: "handoff-0932"
-  latest_research_next_action: "Run the one governed checkpoint for AJ-RT-20260731-010-001. After commit, create one fresh P13-T02 project-system frame limited to publishing exact commit 686c3021, collecting commit-matched hosted CI plus scheduled-full evidence, and making only the evidence-supported planner cutover; do not publish the newer P15-T05 checkpoint by implication."
+  latest_research_task_id: "RT-20260801-001"
+  latest_research_handoff_id: "handoff-0933"
+  latest_research_next_action: "Invoke the one governed checkpoint for AJ-RT-20260801-001-001. After that commit, use one fresh bounded P13-T02 project-system frame limited to publishing exact commit 686c3021, collecting commit-matched hosted CI plus scheduled-full evidence, and making only the evidence-supported planner cutover; do not publish the newer recovery checkpoint by implication."
   latest_project_system_task_id: "none"
   latest_project_system_status: "none"
   latest_project_system_sidecar_task_id: "none"
@@ -285,10 +285,10 @@ blocked_physical_targets:
       - "no_global_theory_rejection"
 distance_to_gr:
   delta:
-    effect: "no_distance_delta"
+    effect: "none_project_system_recovery"
     changed: false
-    milestone: "matter_coupling"
-    burden_id: "none"
+    milestone: "source_equivalence_eqsrc"
+    burden_id: "source_equivalence_eqsrc"
   high_risk_rows:
     - burden_id: "m_src"
       reader_facing_status: "adopted only as scoped source-only M_src object"

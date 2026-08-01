@@ -1,0 +1,86 @@
+{
+  "authority_limits": {
+    "distance_to_gr_changed": false,
+    "p13_t02_executed": false,
+    "p15_t05_reexecuted": false,
+    "physics_promotion_authorized": false,
+    "publication_or_push_authorized": false,
+    "scientific_claims_changed": false
+  },
+  "checks": {
+    "active_task_id": "RT-20260801-001",
+    "agent_job_registry_matches_expected_order": true,
+    "agent_job_registry_path_count": 30,
+    "all_four_representations_equal": true,
+    "latest_handoff_id": "handoff-0933",
+    "next_plan_task_id": "P13-T02",
+    "next_worker_skill": "improve-project-system",
+    "ordered_representation_count": 4,
+    "protected_hashes": {
+      "research_control/handoffs/handoff-0932.md": {
+        "expected_sha256": "388387928034ba577c7ecda4e5be53bdc683b126487c747467f8a87fbb9cdfd2",
+        "match": true,
+        "observed_sha256": "388387928034ba577c7ecda4e5be53bdc683b126487c747467f8a87fbb9cdfd2"
+      },
+      "research_control/handoffs/handoff-0932.yaml": {
+        "expected_sha256": "6c2a19bd25c6f1be948ed39c8acfc69969e023cabd8a6b585682270e1dc1ca5e",
+        "match": true,
+        "observed_sha256": "6c2a19bd25c6f1be948ed39c8acfc69969e023cabd8a6b585682270e1dc1ca5e"
+      },
+      "research_control/tasks/RT-20260731-010/artifacts/p15_t05_claim_to_evidence_map_v1.yaml": {
+        "expected_sha256": "dfbce44f48f8bd04ad8b9657e63a8ef9767f4cab221d518fc2f5b0ebb9dfbef0",
+        "match": true,
+        "observed_sha256": "dfbce44f48f8bd04ad8b9657e63a8ef9767f4cab221d518fc2f5b0ebb9dfbef0"
+      },
+      "research_control/tasks/RT-20260731-010/artifacts/p15_t05_gate_e_no_manuscript_compact_receipt_v1.json": {
+        "expected_sha256": "1314d1a8e63b43e86e2c3825a326bd99b00b0400b23f86c74d07de3bd493c5b6",
+        "match": true,
+        "observed_sha256": "1314d1a8e63b43e86e2c3825a326bd99b00b0400b23f86c74d07de3bd493c5b6"
+      },
+      "research_control/tasks/RT-20260731-010/artifacts/p15_t05_gate_e_no_manuscript_disposition_v1.tex": {
+        "expected_sha256": "daa8533b40e82ee2a1bf5ef2e78b6bd5bd9cc1ffa4c0e27444188bed47e59a5d",
+        "match": true,
+        "observed_sha256": "daa8533b40e82ee2a1bf5ef2e78b6bd5bd9cc1ffa4c0e27444188bed47e59a5d"
+      },
+      "research_control/tasks/RT-20260731-010/artifacts/p15_t05_gate_e_no_manuscript_validation_v1.json": {
+        "expected_sha256": "c0340ba0c3bc25dc9e5f0eb43558f38f3b5f1139941c7b89eea1384c05e3a24b",
+        "match": true,
+        "observed_sha256": "c0340ba0c3bc25dc9e5f0eb43558f38f3b5f1139941c7b89eea1384c05e3a24b"
+      },
+      "research_control/tasks/RT-20260731-010/artifacts/p15_t05_reproducibility_manifest_v1.yaml": {
+        "expected_sha256": "3c592c93af22b28e1a72be979e9512efeddd16b714e7472d837fa11cf492a22e",
+        "match": true,
+        "observed_sha256": "3c592c93af22b28e1a72be979e9512efeddd16b714e7472d837fa11cf492a22e"
+      },
+      "research_control/tasks/RT-20260731-010/jobs/AJ-RT-20260731-010-001.yaml": {
+        "expected_sha256": "990e3316fca224499721921ea50e8bb85b153002fbf5f5b4d5407d22db1962a2",
+        "match": true,
+        "observed_sha256": "990e3316fca224499721921ea50e8bb85b153002fbf5f5b4d5407d22db1962a2"
+      },
+      "research_control/tasks/RT-20260731-010/jobs/completions/AJC-AJ-RT-20260731-010-001.yaml": {
+        "expected_sha256": "57e72816d69f68d8af72939286e07e1217de7c0907170b12b3939d36d62af313",
+        "match": true,
+        "observed_sha256": "57e72816d69f68d8af72939286e07e1217de7c0907170b12b3939d36d62af313"
+      },
+      "research_control/tasks/RT-20260731-010/roles/gate-chair@0.1.0--RT-20260731-010.yaml": {
+        "expected_sha256": "b3081e8892d428ede1a6c66e157e2b6667e38b2403e656ba87f77c762d615670",
+        "match": true,
+        "observed_sha256": "b3081e8892d428ede1a6c66e157e2b6667e38b2403e656ba87f77c762d615670"
+      }
+    },
+    "role_execution_registry_matches_expected_order": true,
+    "role_execution_registry_path_count": 30,
+    "source_agent_job_matches_expected_order": true,
+    "source_agent_job_path_count": 30,
+    "source_execution_role_matches_expected_order": true,
+    "source_execution_role_path_count": 30
+  },
+  "errors": [],
+  "expected_allowed_write_path_count": 30,
+  "job_id": "AJ-RT-20260801-001-001",
+  "schema_id": "p15_t05_agentjob_registry_write_allowlist_parity_receipt_v1",
+  "source_job_id": "AJ-RT-20260731-010-001",
+  "status": "PASS",
+  "strategy_id": "repair_p15_t05_agentjob_registry_allowlist_parity_v1",
+  "task_id": "RT-20260801-001"
+}

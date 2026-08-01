@@ -1,0 +1,244 @@
+completion_id: "AJC-AJ-RT-20260801-002-001"
+job_id: "AJ-RT-20260801-002-001"
+task_id: "RT-20260801-002"
+task_type: "project_system_p15_t05_folder_map_documentation_memory_checkpoint_recovery"
+decision_id: "DDR-20260801-002"
+role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260801-002"
+status: "completed"
+validation_status: "PASS"
+completed_at: "2026-08-01T06:45:17Z"
+objective_result: "generation_199_folder_map_documentation_memory_checkpoint_coverage_recovered"
+verdict: "PASS_GENERATION_199_FOLDER_MAP_DOCUMENTATION_MEMORY_RECOVERY"
+summary: "Generation 200 adds exactly one FOLDER_MAP.md item to each required generation-199 documentation-impact list and regenerates tracked memory only through the approved bootstrap. Protected P15-T05 and handoff-0933 records remain byte-identical, P15-T05 was not replayed, P13-T02 remains unexecuted, and one distinct governed checkpoint is pending."
+transaction_status: "ready_for_checkpoint"
+checkpoint_invocation_count: 0
+checkpoint_commit:
+  status: "PENDING"
+  commit: ""
+  invocation_count: 0
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 200
+  passes_consumed: 180
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:200"
+  handoff_token: "27654df3f918b1c39dfc1c6d56e41d3ffdc6ae0194a74568"
+  relay_claim_token: "1412995b68d5bcc7848beec73355b2b470037ac91523efda"
+  route_work_item_id: "P15-T05"
+  route_worker_skill: "improve-project-system"
+  route_sha256: "58048114d9efde7e86bac995596a43e079aac200abbe9b7f18e3e636c0184d5a"
+  route_strategy_id: "recover_generation_199_folder_map_documentation_memory_checkpoint_v1"
+  route_blocker_fingerprint: "bc8155a71088628333bea676104c42e76f4b0e087bff0160e8a938274155da61"
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+
+result:
+  status: "PASS"
+  strategy_id: "recover_generation_199_folder_map_documentation_memory_checkpoint_v1"
+  source_job_id: "AJ-RT-20260801-001-001"
+  required_item_occurrence_count_per_list: 1
+  protected_hash_mismatch_count: 0
+  receipt_path: "research_control/tasks/RT-20260801-002/artifacts/folder_map_documentation_memory_checkpoint_recovery_receipt.json"
+  generation_199_job_reexecuted: false
+  generation_199_checkpoint_replayed: false
+  p15_t05_reexecuted: false
+  p13_t02_executed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  publication_or_push_authorized: false
+
+protected_evidence:
+  source_head: "68d136e88050321a325c157d23ed9259219985b1"
+  source_task_path: "research_control/tasks/RT-20260801-001/00_TASK.yaml"
+  source_task_sha256: "e15f285fd58110d8bfec9b6273e0c511f93342a9edcadcbbcc7e520eb56d3538"
+  source_job_path: "research_control/tasks/RT-20260801-001/jobs/AJ-RT-20260801-001-001.yaml"
+  source_job_sha256: "da4c33345ad6c0d441c86066efb7720b660f4fa6b224f16aa6bfb5e8e83b17ac"
+  source_role_path: "research_control/tasks/RT-20260801-001/roles/process-integrity-auditor@0.1.0--RT-20260801-001.yaml"
+  source_role_sha256: "d520e8310eb86da15cd112d3367baa8adc40aeee170eeb6c2b004282ac8c3a58"
+  source_completion_path: "research_control/tasks/RT-20260801-001/jobs/completions/AJC-AJ-RT-20260801-001-001.yaml"
+  source_completion_sha256: "a4bcd542796d062f6f32b1992e9078932fe716f76d25c368730ef4a8189fa429"
+  source_handoff_path: "research_control/handoffs/handoff-0933.yaml"
+  source_handoff_yaml_sha256: "9a63618eda6c1d125a3638c90fbd9923c7ac20e0334cec0c98274b8999d6de62"
+  source_handoff_markdown_sha256: "de7d890e47abcd77b1ae2f4a92b31304bc529fde94a2fd52f0552f1e618b0adf"
+  source_parity_receipt_sha256: "5c900527e233459e14a2c34069e71efddace5fef08246ebee441a73f4d080b76"
+  source_parity_validator_sha256: "1e744d393078cd77d8ce543cff03b7e6185377c7a08339fe2e97ccbcd127a4c8"
+
+command_results:
+  - command: ".venv/bin/python research_control/tasks/RT-20260801-001/artifacts/validate_p15_t05_agentjob_registry_write_allowlist_parity.py --check --json"
+    status: "PASS"
+    summary: "Four exact ordered representations and all protected P15-T05 hashes match."
+  - command: ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+    status: "PASS"
+    summary: "The cumulative documentation-impact records include the generated folder map."
+  - command: ".venv/bin/python -m unittest -v tests.test_project_change_classifier.ProjectChangeClassifierTests.test_documentation_impact_validator_accepts_current_record"
+    status: "PASS"
+    summary: "The focused documentation-impact regression passes."
+  - command: ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --job-id AJ-RT-20260801-002-001 --json-summary"
+    status: "PASS"
+    summary: "Integrated control and bounded diff validation pass before checkpoint."
+  - command: ".venv/bin/python scripts/research_control/run_full_research_control_validation.py --json --tail-chars 2500"
+    status: "NOT_REQUIRED_BASELINE_FAIL"
+    summary: "The explicit deprecated full wrapper reports a committed baseline shard-inventory mismatch: expected 149 source tests and observed 150. The immutable recovery does not authorize test-inventory repair; the affected profile and task-selected regression govern this bounded checkpoint."
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+    status: "PASS"
+    summary: "Tracked memory and generated derivatives validate; local retrieval warnings are nonblocking."
+  - command: "git diff --check"
+    status: "PASS"
+    summary: "No whitespace errors."
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1109
+    relationship_row_count: 5606
+    semantic_row_count: 1109
+    vault_row_count: 1109
+    local_cache_only_warning_count: 8
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  authority_note: "Generated wiki, Obsidian, semantic, relationship, SQLite, and .local surfaces are retrieval-only and not authority; immutable route data, tracked source records, registries, Git state, and validators govern this repair."
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  observed_durable_outputs:
+    physics: []
+    project_system:
+      - "exact generation-199 FOLDER_MAP.md documentation-impact coverage"
+      - "fresh governed FOLDER_MAP.md derivative"
+      - "task-local preservation and recovery receipt"
+      - "one distinct governed checkpoint"
+  accepted_criteria:
+    physics: []
+    project_system:
+      - "RT-20260801-001 changed_paths and generated_derivatives each include exactly one FOLDER_MAP.md item"
+      - "memory bootstrap and validate-only report tracked generated memory fresh"
+      - "P15-T05 AgentJob role completion handoff and protected artifacts remain byte-identical"
+      - "all required working-tree gates pass"
+      - "one distinct governed checkpoint commits"
+      - "P13-T02 remains unexecuted during recovery"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+distance_to_gr_delta:
+  changed: false
+  effect: "none_project_system_recovery"
+  milestone: "benchmark_promotion"
+  ledger_row_updated: false
+  ledger_update_rationale: "The P15-T05 scientific disposition and Distance-to-GR ledger remain byte-preserved; documentation and generated-memory recovery contributes no physics movement."
+
+physics_progress_status:
+  status: "documentation_or_control_only_no_physics_delta"
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+
+selected_next_route:
+  route_id: "publish_checkpoint_686c3021_collect_matched_ci_and_execute_p13_t02_cutover_v1"
+  route_label: "ordinary-research-packet"
+  role_family: "validator-engineer@0.2.0"
+  worker_skill: "improve-project-system"
+  task_type: "validation_planner_cutover"
+  plan_task_id: "P13-T02"
+  strategy_id: "publish_checkpoint_686c3021_collect_matched_ci_and_execute_p13_t02_cutover_v1"
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  exact_user_authorization_present: true
+  authorized_checkpoint_commit: "686c3021ba7d256390d5efdf78af4c251da6d975"
+  exact_checkpoint_publication_only: true
+  physics_promotion_authorized: false
+  proof_authority: false
+  executed: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 200 validated, atomically claimed, and consumed the immutable recovery route exactly once."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The task-local receipt proves exact documentation-impact coverage, approved memory regeneration, and protected-byte preservation."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Documentation, signal, integrated control, diff, memory, continuation, and whitespace gates pass."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "The one distinct governed checkpoint is the next authorized action; P13-T02 remains unexecuted."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Tracked frontier, task-index, dependency-graph, claim-graph, registry, folder-map, and wiki derivatives are fresh."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory synchronization and validate-only pass; local retrieval warnings are cache-only."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source and integrated claim-language checks have no hard failure."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "none; project-system documentation and generated-memory recovery only"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  push_authorized: false
+  publication_authorized: false
+  hosted_workflow_dispatch_authorized: false
+  proof_authority: false
+  canonical_ontology_edit_authorized: false
+  source_law_adoption_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+notes: "Project-system recovery success does not count as physics, benchmark progress, Distance-to-GR movement, P15-T05 replay, or P13-T02 execution."

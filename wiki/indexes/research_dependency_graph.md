@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-08-01T03:22:23Z`
-- Source fingerprint: `a46bfc23f5132ce3bfaf7d5277e6315e776b2d6e62428c554ed1a979542f7eb8`
-- Nodes: `24084`
-- Edges: `75681`
+- Generated from tracked state as of: `2026-08-01T05:12:14Z`
+- Source fingerprint: `c3fb982d2c736f36827be6129d660c5efbb79237cafa1675acb16e229b4068d0`
+- Nodes: `24122`
+- Edges: `75734`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 1172 |
+| `completion_yaml` | 1174 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 932 |
+| `handoff_yaml` | 933 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,18 +33,18 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 9 |
-| `agent_job` | `support_only` | 1172 |
+| `agent_job` | `support_only` | 1174 |
 | `artifact` | `canonical_source` | 87 |
-| `artifact` | `support_only` | 12210 |
-| `blocked_burden` | `blocked` | 4931 |
-| `claim_boundary` | `support_only` | 1129 |
+| `artifact` | `support_only` | 12227 |
+| `blocked_burden` | `blocked` | 4944 |
+| `claim_boundary` | `support_only` | 1131 |
 | `draft_control_candidate` | `draft_control` | 805 |
 | `draft_control_candidate` | `proposal_only` | 149 |
 | `draft_control_candidate` | `science_draft` | 90 |
 | `frozen_negative` | `frozen_negative` | 151 |
 | `gate_chair_verdict` | `human_gated` | 37 |
-| `handoff` | `support_only` | 932 |
-| `human_gated_object` | `human_gated` | 587 |
+| `handoff` | `support_only` | 933 |
+| `human_gated_object` | `human_gated` | 588 |
 | `ledger_row` | `accepted_scoped` | 6 |
 | `ledger_row` | `blocked` | 3 |
 | `ledger_row` | `frozen_negative` | 1 |
@@ -58,7 +58,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `source_ontology_object` | `support_only` | 381 |
 | `task` | `human_gated` | 29 |
 | `task` | `science_draft` | 33 |
-| `task` | `support_only` | 1110 |
+| `task` | `support_only` | 1112 |
 
 ## Frontier Table
 
@@ -163,9 +163,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 ## Route Continuity
 
-- Active task: `RT-20260731-010`
-- Latest handoff: `handoff-0932`
-- Handoff path: `research_control/handoffs/handoff-0932.yaml`
-- Next action: Run the one governed checkpoint for AJ-RT-20260731-010-001. After commit, create one fresh P13-T02 project-system frame limited to publishing exact commit 686c3021, collecting commit-matched hosted CI plus scheduled-full evidence, and making only the evidence-supported planner cutover; do not publish the newer P15-T05 checkpoint by implication.
+- Active task: `RT-20260801-001`
+- Latest handoff: `handoff-0933`
+- Handoff path: `research_control/handoffs/handoff-0933.yaml`
+- Next action: Invoke the one governed checkpoint for AJ-RT-20260801-001-001. After that commit, use one fresh bounded P13-T02 project-system frame limited to publishing exact commit 686c3021, collecting commit-matched hosted CI plus scheduled-full evidence, and making only the evidence-supported planner cutover; do not publish the newer recovery checkpoint by implication.
 
 This graph is navigational support only; inspect the cited sources before using any claim.
