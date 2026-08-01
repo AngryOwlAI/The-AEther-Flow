@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260731-006`
-- Latest handoff: `handoff-0928`
-- Current status: `handoff_0927_markdown_identity_recovery_pass_ready_for_checkpoint`
+- Active task: `RT-20260731-009`
+- Latest handoff: `handoff-0931`
+- Current status: `p14_t06_generation_194_record_alignment_recovery_pass_checkpoint_ready_p13_t02_hold_after_commit`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260731-006`
-- Latest research handoff: `handoff-0928`
-- Latest research next action: Run one governed checkpoint for AJ-RT-20260731-006-001. Only after it commits may one fresh bounded P14-T06 Documentation Curator packet align public status, glossary, and claim examples with the protected P14-T04 decision.
+- Latest research task: `RT-20260731-009`
+- Latest research handoff: `handoff-0931`
+- Latest research next action: Run the one governed checkpoint for AJ-RT-20260731-009-001. After commit, stop without creating a P13-T02 AgentJob until the user explicitly authorizes publication of the exact checkpoint and matched current-head hosted CI plus scheduled-full evidence exists; P15-T05 separately remains human-gated.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p14_t06_public_status_alignment`
-- Role family: `documentation-curator@2.0.0`
-- Target milestone: `source_ontology`
-- Milestone burden: Make public explanations accurately reflect protected decisions and scientific status.
+- Route ID: `hold_p13_t02_until_p13_t01_external_cutover_evidence_after_p14_t06_checkpoint_v1`
+- Role family: `validator-engineer@0.2.0`
+- Target milestone: `source_equivalence_eqsrc`
+- Milestone burden: Complete the v19 validation architecture transition.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `b987ea22f50dc3c961e26a19ae7ef302231383312ee01629e607bb6ceab4623f`
-- JSON SHA-256: `bfbb1b91a8be511d0af548d9be7f6fce407d3da6b83f14294e1c92f402dd4982`
+- YAML SHA-256: `9066be2b2c6d0979e879fae27eb6d1ee46af145433cf068db8d1b4eb5a065fb6`
+- JSON SHA-256: `5601cf4c004401cb38e7b353338439c163f0b37aaa52433811edd408bd245f7c`
 
 ## Authority Warning
 

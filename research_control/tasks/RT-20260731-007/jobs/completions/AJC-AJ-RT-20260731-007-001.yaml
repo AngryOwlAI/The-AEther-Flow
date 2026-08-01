@@ -1,0 +1,379 @@
+validation_status: "FAIL"
+job_id: "AJ-RT-20260731-007-001"
+completion_id: "AJC-AJ-RT-20260731-007-001"
+task_id: "RT-20260731-007"
+task_type: "v21_p14_t06_public_status_glossary_claim_examples_alignment"
+decision_id: "DDR-20260731-007"
+role_id: "documentation-curator"
+source_role_id: "documentation-curator"
+role_version: "2.0.0"
+execution_role_ref: "documentation-curator@2.0.0--RT-20260731-007"
+status: "completed"
+final_repository_validation_status: "FAIL"
+created_at: "2026-07-31T21:43:17Z"
+started_at: "2026-07-31T21:43:17Z"
+completed_at: "2026-07-31T23:15:45Z"
+objective: "Align source-backed public status, glossary, claim examples, and three paired publication surfaces with the protected P14-T04 interpretive-representative target-congruence decision and all v21 category boundaries."
+completion_summary: "Generation 193 completed the P14-T06 publication payload: it distinguishes ontology adoption, exact target closure, formal equivalence, genuine emergence, operational meaning, and empirical novelty across the two control sources, README, three GitHub-facing explainers, paired source specs and briefs, and synchronized HTML derivatives. Eight claim examples and six desktop/mobile captures preserve the P14-T04 source-target and fixed-protocol boundaries. Required repository validation is nevertheless blocked because the public-status source is absent from the validator's mutable memory-preflight source set, producing eight paired errors in four immutable historical snapshots. The repair lies outside this AgentJob, no checkpoint ran, and no scientific status, Distance-to-GR entry, protected verdict, publication, or push authority changed."
+objective_result: "task_local_payload_complete_checkpoint_blocked"
+
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P14"
+  plan_task_id: "P14-T06"
+  work_kind: "integration_or_selection"
+  task_class: "project_system"
+  implementation_status: "validation_blocked"
+  recommendation_ids:
+    - "V21-R20"
+    - "V21-R38"
+    - "V21-R61"
+    - "V21-R62"
+    - "V21-R63"
+    - "V21-R64"
+    - "V21-R65"
+    - "V21-R70"
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 193
+  passes_consumed: 174
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:193"
+  handoff_token: "ba88b3e6f6975d78b0ce97bc2f21ef9d13680fc2dbbfadcd"
+  relay_claim_token: "a678804d061d2bc7e9958ae30687bd624e22e11e399c0365"
+  immutable_route_hash: "68204295cd7bc37bf56fca023620764eacf4a50c579e4db50e1da1ab5e7044dd"
+  route_blocker_fingerprint: "60f4d3b73b5539d8023ce47164382e2a68b635814421aef3c8468e1a5a3eef56"
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+
+transaction_status: "blocked_precheckpoint_project_system_repair_required"
+result_disposition: "project_system_payload_complete_control_checkpoint_blocked"
+work_item_status: "blocked"
+plan_task_id: "P14-T06"
+checkpoint_commit: "none_validation_failed"
+checkpoint_invocation_count: 0
+checkpoint_staged: false
+dependency_checkpoint_commit: "1442eb3b808b8aa9b00645de76c7e2e9cf9c5033"
+legacy_validation_used: false
+project_system_change_only: true
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+
+alignment_result:
+  status: "PASS"
+  protected_source_decision: "INTERPRETIVE_REPRESENTATIVE_TARGET_CONGRUENCE_ONLY"
+  distinct_success_label_count: 6
+  claim_example_count: 8
+  publication_family_count: 3
+  rendered_html_count: 3
+  desktop_visual_capture_count: 3
+  mobile_visual_capture_count: 3
+  source_target_type_distinction_preserved: true
+  representative_independence_fixed_protocol_scope_preserved: true
+  observer_relative_exception_preserved: true
+  finite_p7_matter_postulate_distinct_from_derivation: true
+  gate_d_ready: false
+  gate_e_ready: false
+  benchmark_case_count: 6
+  benchmark_pass_count: 0
+  source_bridge_claimed: false
+  source_selected_congruence_claimed: false
+  pure_gauge_claimed: false
+  independent_field_claimed: false
+  scientific_status_changed: false
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "FAIL_CHECKPOINT_BLOCKED"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  observed_durable_outputs:
+    physics: []
+    project_system:
+      - "aligned public status and epistemic glossary sources"
+      - "source-backed claim-language examples"
+      - "three synchronized paired publication surfaces"
+      - "one compact task-local receipt"
+  accepted_criteria:
+    physics: []
+    project_system:
+      - "six epistemic categories remain visibly distinct"
+      - "P14-T04 source-target and representative-independence boundaries are exact"
+      - "publication and claim-language validation pass"
+      - "generated pages carry fresh source-basis metadata"
+      - "one governed checkpoint commits"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "measured"
+        unit: "visual_captures"
+        value: 6
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+physics_payload_admission_result:
+  schema_id: "physics_payload_admission_result_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  status: "PASS"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  candidate_family: "not_applicable"
+  material_physics_payload_created: false
+  theorem_truth_inferred_from_validation: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+
+ordinary_route_guard_admission_result:
+  schema_id: "ordinary_route_guard_admission_result_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  status: "PASS"
+  source_handoff_id: "handoff-0928"
+  selected_plan_task_id: "P14-T06"
+  guard_outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  system_success_counts_as_physics: false
+  system_success_counts_as_distance_to_gr: false
+  scientific_status_changed: false
+  physics_promotion_authorized: false
+
+artifacts:
+  - path: "research_control/tasks/RT-20260731-007/artifacts/p14_t06_public_claim_language_examples_v1.yaml"
+    sha256: "5b5a1cd93e68c389f7e9440e0aa763b4cf8c845cfe06dc1a5d8160bae5790d5f"
+  - path: "research_control/tasks/RT-20260731-007/artifacts/p14_t06_public_status_alignment_receipt.md"
+    sha256: "53ef7115671d6504623253b43fa2b9d3347f406bf571472422e312a28973d0e0"
+  - path: "research_control/tasks/RT-20260731-007/artifacts/validation_blocker_public_status_mutable_memory_preflight_policy_v1.yaml"
+    sha256: "860c62b2c30099771269849eee6c4639950c94df8c4a857245b18eb69146521b"
+
+output_paths:
+  - "research_control/design/public_status_exists_does_not_exist_source_spec.md"
+  - "research_control/design/epistemic_category_glossary.md"
+  - "README.md"
+  - "github-facing/aether-flow-ontology-explainer.md"
+  - "github-facing/exact-gr-benchmark-boundary-explainer.md"
+  - "github-facing/claim-gates-explainer.md"
+  - "markdown/html-explainer-specs/aether-flow-ontology-explainer.md"
+  - "markdown/html-explainer-specs/exact-gr-benchmark-boundary-explainer.md"
+  - "markdown/html-explainer-specs/claim-gates-explainer.md"
+  - "markdown/publication-briefs/aether-flow-ontology.publication-brief.md"
+  - "markdown/publication-briefs/exact-gr-benchmark-boundary.publication-brief.md"
+  - "markdown/publication-briefs/claim-gates.publication-brief.md"
+  - "html/aether-flow-ontology-explainer.html"
+  - "html/exact-gr-benchmark-boundary-explainer.html"
+  - "html/claim-gates-explainer.html"
+  - "research_control/tasks/RT-20260731-007/artifacts/visual_qa/**"
+  - "research_control/tasks/RT-20260731-007/artifacts/validation_blocker_public_status_mutable_memory_preflight_policy_v1.yaml"
+  - "research_control/tasks/RT-20260731-007/**"
+  - "research_control/handoffs/handoff-0929.yaml"
+  - "research_control/handoffs/handoff-0929.md"
+  - "research_control/program_state.yaml"
+
+command_results:
+  - command: ".venv/bin/python scripts/validate_publication_process.py --root ."
+    status: "PASS_18_BRIEFS_19_HTML_18_MIGRATED"
+  - command: ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+    status: "PASS_WITH_HISTORICAL_GENERATED_REGISTRY_WARNINGS_ONLY"
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+    status: "PASS"
+  - command: "desktop and mobile loopback Playwright visual review"
+    status: "PASS_6_CAPTURES"
+  - command: "git diff --check"
+    status: "PASS"
+  - command: ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff"
+    status: "FAIL_8_HISTORICAL_MUTABLE_SOURCE_POLICY_ERRORS_ZERO_CURRENT_TASK_ERRORS"
+
+validation_summary:
+  status: "FAIL_PROJECT_SYSTEM_RECOVERY_REQUIRED"
+  task_local_error_count: 0
+  repository_error_count: 8
+  historical_mutable_source_error_count: 8
+  scientific_claim_change_count: 0
+  visual_capture_count: 6
+  checkpoint_invocation_count: 0
+  passing_gates:
+    - "canonical dependency and protected-decision inspection"
+    - "publication process validation"
+    - "changed-source claim-language validation"
+    - "desktop and mobile visual QA"
+    - "tracked memory synchronization"
+    - "whitespace validation"
+  failing_gates:
+    - "research-control diff validation: eight paired historical public-status mutable-source compatibility errors"
+  blocked_gates:
+    - "one governed checkpoint"
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 193 repository binding, route, lease, predecessor, and clean manifest matched before one claim and consume."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The compact receipt binds four dependency hashes, six labels, eight examples, three publication families, and exact claim boundaries."
+  post_write:
+    status: "FAIL"
+    evidence:
+      - "Publication, claim-language, memory-bootstrap, visual, and whitespace checks pass, but research-control diff validation reports eight historical mutable-source policy errors and zero current-task errors."
+  post_checkpoint:
+    status: "NOT_RUN"
+    evidence:
+      - "No governed checkpoint ran because required repository validation failed."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Current-frontier, task-index, compact-frontier, and dependency-graph derivatives were refreshed from tracked authority."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory registries and wiki derivatives synchronized; final validate-only remains in the checkpoint stack."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation reports no current hard failure."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "P14-T04 is immutable source input only"
+  protected_scoped_gate_review_authority_source_path: "research_control/tasks/RT-20260731-005/artifacts/p14_t04_congruence_status_decision_v1.tex"
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  push_authorized: false
+  publication_authorized: false
+  external_outreach_authorized: false
+  proof_authority: false
+  canonical_ontology_edit_authorized: false
+  source_law_adoption_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+distance_to_gr_delta:
+  changed: false
+  effect: "none_project_system_documentation_alignment"
+  burden_id: "source_ontology_primitives"
+  milestone: "source_ontology"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "P14-T06 communicates fixed scientific and protected status; it contributes no mathematical payload or burden movement."
+
+selected_next_route:
+  route_id: "register_public_status_source_as_mutable_memory_preflight_and_checkpoint_v1"
+  route_label: "project_system_validation_recovery"
+  role_family: "validator-engineer@0.2.0"
+  worker_skill: "improve-project-system"
+  plan_task_id: "P14-T06"
+  target_derivation_milestone: "source_ontology"
+  milestone_burden: "Make public explanations accurately reflect protected decisions and scientific status."
+  requires_human_gate: false
+  dependency_ready_now: true
+  blocked_by_protected_external_evidence: false
+  executed: false
+  blocker_path: "research_control/tasks/RT-20260731-007/artifacts/validation_blocker_public_status_mutable_memory_preflight_policy_v1.yaml"
+  next_action: "Run one governed improve-project-system recovery that adds the public-status object ID to the mutable memory-preflight set, adds the focused regression, revalidates the preserved P14-T06 transaction, and checkpoints it once; only afterward return to the P13-T02 external-evidence hold."
+
+remaining_work:
+  dependency_independent_included_work_item_count: 1
+  protected_or_external_evidence_blockers:
+    - "P13-T02 waits on the retained P13-T01 cutover condition: exact publication or push authority and matched current-head hosted-CI plus scheduled-full evidence."
+    - "P13-T07 waits on P13-T02; P13-T08 waits on P13-T07."
+    - "P15-T02 waits on P13-T08; P15-T06 waits on P15-T02; P15-T07 additionally requires action-specific human publication or outreach authority."
+    - "P16-T01 and its final audit chain wait on P13-T08 and P15-T07."
+  p15_t05_disposition: "conditionally_not_required_because_gate_e_did_not_authorize_a_source_derived_gr_manuscript"
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "recursive_goal_recovery_required"
+  recursive_goal_recovery_required: true
+  route: "continue-goal recovery via improve-project-system"
+  blocker_path: "research_control/tasks/RT-20260731-007/artifacts/validation_blocker_public_status_mutable_memory_preflight_policy_v1.yaml"
+  reason: "No project-improvement sidecar is authorized in this AgentJob. The recursive goal recovery helper must carry the validator-policy defect and exact dirty transaction."
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1107
+    relationship_row_count: 5594
+    semantic_row_count: 1107
+    vault_row_count: 1107
+  refresh_needed: true
+  refresh_deferred_until_bounded_write_complete: true
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v21.md --json"
+      query_type: "lookup"
+      query_text: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/design/public_status_exists_does_not_exist_source_spec.md --json"
+      query_type: "lookup"
+      query_text: "research_control/design/public_status_exists_does_not_exist_source_spec.md"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-DESIGN-PUBLIC-STATUS-EXISTS-DOES-NOT-EXIST-SOURCE-SPEC"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/design/epistemic_category_glossary.md --json"
+      query_type: "lookup"
+      query_text: "research_control/design/epistemic_category_glossary.md"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-DESIGN-EPISTEMIC-CATEGORY-GLOSSARY"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-V21-P14-T04-PROTECTED-CONGRUENCE-STATUS-DECISION-V1 --json"
+      query_type: "lookup"
+      query_text: "TEX-V21-P14-T04-PROTECTED-CONGRUENCE-STATUS-DECISION-V1"
+      returned_object_ids:
+        - "TEX-V21-P14-T04-PROTECTED-CONGRUENCE-STATUS-DECISION-V1"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-PUBLIC-STATUS-EXISTS-DOES-NOT-EXIST-SOURCE-SPEC"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/public_status_exists_does_not_exist_source_spec.md"
+      source_hash: "31fc54844daeae74b447e94990be26be78ee90ef30e59b7937e6d49893992c3b"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-EPISTEMIC-CATEGORY-GLOSSARY"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/epistemic_category_glossary.md"
+      source_hash: "7efefc897babf2a7082b6dd080aa3f029360dd70f04990caedbe8e476dd78c9c"
+    - object_id: "TEX-V21-P14-T04-PROTECTED-CONGRUENCE-STATUS-DECISION-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260731-005/artifacts/p14_t04_congruence_status_decision_v1.tex"
+      source_hash: "894d53ceffb182835e216ab2ad5722a8f6d60551d75fa48681397284e9060147"
+  authority_note: "Obsidian wiki notes, semantic extracts, SQLite memory index, and .local files are retrieval layers only and not authority; stale local mirrors are refreshed only after canonical writes."
+
+notes: "Generation 193 produced one bounded project-system documentation payload but cannot checkpoint until a distinct validator-policy recovery succeeds. This validation obstruction and any later protected stop are not scientific progress, publication, or completed derivation."

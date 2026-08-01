@@ -16,9 +16,12 @@ source_materials:
   - "research_control/design/gr_derivation_burden_map.md"
   - "research_control/design/public_status_exists_does_not_exist_source_spec.md"
   - "research_control/design/epistemic_category_glossary.md"
+  - "research_control/tasks/RT-20260731-005/artifacts/p14_t04_congruence_status_decision_v1.tex"
+  - "research_control/tasks/RT-20260729-001/artifacts/p7_t08_gate_c_decision_v1.tex"
+  - "research_control/tasks/RT-20260731-004/artifacts/p9_t09_gate_e_decision_v1.tex"
   - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
   - "registries/AGENT_ROLE_REGISTRY.csv"
-claim_boundary: "Human-only publication explainer for claim gates, negative results, and freeze criteria. It explains proposal, audit, refutation, stress-test, completion, handoff, freeze, and human-gate concepts without creating a claim boundary, issuing a Gate Chair verdict, promoting benchmark status, rejecting the global ontology, changing role authority, or treating validator pass state or generated public documentation as scientific evidence."
+claim_boundary: "Human-only publication explainer for claim gates, negative results, freeze criteria, and v21 claim-label separation. It explains proposal, audit, refutation, stress-test, completion, handoff, freeze, human-gate, interpretive-representative congruence, protected postulate, and not-ready decision concepts without creating a claim boundary, identifying u^mu with Phi_src, claiming source selection pure gauge or independent-field status, issuing a Gate Chair verdict, promoting benchmark status, rejecting the global ontology, changing role authority, or treating validator pass state or generated public documentation as scientific evidence."
 human_visual_only: true
 standalone_html: true
 no_external_runtime: true
@@ -53,8 +56,13 @@ ontology.
   scoped acceptance or scoped evidence/precondition status must not be overread
   as downstream physics promotion.
 - `research_control/design/epistemic_category_glossary.md` supplies the public
-  category distinctions that keep interpretation, model, evidence, adoption,
-  validator receipt, publication surface, and authority source separate.
+  category distinctions that keep ontology, exact closure, formal equivalence,
+  genuine emergence, operational meaning, empirical novelty, evidence,
+  adoption, validator receipt, publication surface, and authority source
+  separate.
+- The protected P14-T04, P7-T08, and P9-T09 artifacts supply exact examples of
+  interpretive-representative status, postulate-level adoption without source
+  derivation, and a `NOT_READY` gate disposition without promotion.
 - `research_control/design/status_card_v2_schema.md` and
   `research_control/design/accepted_status_calibration_v2.yaml` supply the
   compact public card order for positive status, exact scope, blocked
@@ -106,6 +114,12 @@ source-to-validation diagram or browser-side Mermaid.
 - States that Gate Chair decisions require human-gated authority.
 - Includes allowed and forbidden claim examples grounded in
   `registries/CLAIM_BOUNDARY_REGISTRY.csv`.
+- Includes allowed and forbidden `u^mu` claim examples, the fixed-protocol
+  representative-independence scope, and observer-relative exceptions.
+- Separates ontology, exact closure, formal equivalence, genuine emergence,
+  operational meaning, and empirical novelty.
+- Separates the protected finite P7 matter postulate from source derivation and
+  records Gate E as `NOT_READY`, not promoted.
 - Includes public-status gate examples grounded in
   `research_control/design/public_status_exists_does_not_exist_source_spec.md`
   and `research_control/design/epistemic_category_glossary.md`, including why

@@ -1,0 +1,74 @@
+schema_id: "public_status_mutable_memory_preflight_compatibility_receipt_v1"
+receipt_id: "PSMMPR-RT-20260731-008-001"
+task_id: "RT-20260731-008"
+job_id: "AJ-RT-20260731-008-001"
+status: "PASS_FOCUSED_REPAIR"
+created_at: "2026-08-01T00:10:23Z"
+strategy_id: "register_public_status_source_as_mutable_memory_preflight_and_checkpoint_v1"
+immutable_route_sha256: "97d459880728908f0747dba076a94ea8cd11dde1e0546949be11f249037f0004"
+dirty_state_manifest_sha256: "ab9d334fe5a6184ec2daf0d2e87d25285586fb0f3fda1345b9f63a1043970894"
+source_head: "1442eb3b808b8aa9b00645de76c7e2e9cf9c5033"
+
+repair_target:
+  object_id: "MD-RESEARCH-CONTROL-DESIGN-PUBLIC-STATUS-EXISTS-DOES-NOT-EXIST-SOURCE-SPEC"
+  canonical_path: "research_control/design/public_status_exists_does_not_exist_source_spec.md"
+  canonical_source_sha256: "31fc54844daeae74b447e94990be26be78ee90ef30e59b7937e6d49893992c3b"
+  registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  registry_source_sha256: "31fc54844daeae74b447e94990be26be78ee90ef30e59b7937e6d49893992c3b"
+  set_name: "MUTABLE_MEMORY_PREFLIGHT_SOURCE_OBJECT_IDS"
+  entry_addition_count: 1
+  broader_classification_change_count: 0
+
+code_change:
+  validator_path: "scripts/research_control/validate_research_control.py"
+  validator_before_sha256: "06a54df553eb2afcd3e8118c97934c71721ae1356c0343bc31322fe2c407ae21"
+  validator_after_sha256: "f8f7b4a4b6774ebabbf5dbdf8d6bcbfe63648fad2ea4c1e7834ae93e18e42ca8"
+  validator_added_line_count: 1
+  validator_removed_line_count: 0
+  test_path: "tests/test_research_control.py"
+  test_before_sha256: "5f33301b9eb25b47a0afe654e2cb33de91a7a796091a634f7d6268e1b509eab7"
+  test_after_sha256: "bee94e2e96b6ae968eb6f5e14ea600ffa4517665c4a8053ee6750619048324f9"
+  test_added_line_count: 39
+  test_removed_line_count: 0
+  focused_test: "tests.test_research_control.ResearchControlTests.test_public_status_memory_preflight_preserves_historical_only"
+
+focused_regression:
+  status: "PASS"
+  historical_public_status_hash_accepted: true
+  active_public_status_hash_must_be_current: true
+  immutable_historical_source_hash_must_be_current: true
+  exact_object_id_registered_mutable: true
+
+preserved_predecessor:
+  task_id: "RT-20260731-007"
+  job_id: "AJ-RT-20260731-007-001"
+  completion_id: "AJC-AJ-RT-20260731-007-001"
+  completion_sha256: "8cd4f8790475d46eaa9ea863a117639190be90eae323ab601286f9ea436318ac"
+  handoff_id: "handoff-0929"
+  handoff_sha256: "8d431f917642aae31d2d30ef069440a50337468e569afa6b988486da6b71e0c0"
+  blocker_path: "research_control/tasks/RT-20260731-007/artifacts/validation_blocker_public_status_mutable_memory_preflight_policy_v1.yaml"
+  blocker_sha256: "860c62b2c30099771269849eee6c4639950c94df8c4a857245b18eb69146521b"
+  predecessor_payload_changed_by_repair: false
+  historical_snapshot_rewrite_count: 0
+
+authority_boundary:
+  project_system_change_only: true
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false
+  p13_t02_executed: false
+  validator_or_checkpoint_success_counts_as_physics: false
+
+command_results:
+  - command: ".venv/bin/python -m py_compile scripts/research_control/validate_research_control.py"
+    status: "PASS"
+  - command: "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m unittest -v tests.test_research_control.ResearchControlTests.test_public_status_memory_preflight_preserves_historical_only"
+    status: "PASS"
+    tests_run: 1
+  - command: "git diff --check -- scripts/research_control/validate_research_control.py tests/test_research_control.py research_control/tasks/RT-20260731-008 registries/AGENT_JOB_REGISTRY.csv registries/CLAIM_BOUNDARY_REGISTRY.csv registries/DIRECTOR_DECISION_REGISTRY.csv registries/RESEARCH_TASK_REGISTRY.csv registries/ROLE_EXECUTION_REGISTRY.csv"
+    status: "PASS"
+
+notes: "The receipt proves only the exact validator compatibility behavior. Full repository validation and the single governed checkpoint remain required before transaction completion."

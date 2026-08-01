@@ -1,11 +1,220 @@
 mode: "director_led_research_control"
-active_task_id: "RT-20260731-006"
-latest_handoff_id: "handoff-0928"
-current_status: "handoff_0927_markdown_identity_recovery_pass_ready_for_checkpoint"
-claim_boundary_summary: "RT-20260731-006 inserts only the missing eight-byte literal handoff-0927 identity into the existing Markdown heading, proves every other target byte and protected P14-T04 record unchanged, and restores checkpoint eligibility. It creates no science, does not reexecute P14-T04, leaves P14-T06 unexecuted, and grants no ontology, source-law, source-bridge, congruence-status, Distance-to-GR, promotion, proof, publication, push, or completed-derivation authority."
-next_plan_task_id: "P14-T06"
+active_task_id: "RT-20260731-009"
+latest_handoff_id: "handoff-0931"
+current_status: "p14_t06_generation_194_record_alignment_recovery_pass_checkpoint_ready_p13_t02_hold_after_commit"
+claim_boundary_summary: "RT-20260731-009 validates the five aligned generation-194 task-local records, preserves the exact validator regression, complete P14-T06 payload, historical snapshots, and Distance-to-GR ledger, and prepares one distinct governed checkpoint. After commit, P13-T02 remains held until the user explicitly authorizes publication of the exact checkpoint and matched current-head hosted CI plus scheduled-full evidence exists; P15-T05 separately remains human-gated. No scientific, protected, publication, push, hosted-workflow, or completed-derivation authority changes."
+next_plan_task_id: "P13-T02"
 next_worker_skill: "improve-project-system"
-next_recommended_action: "Run one governed checkpoint for AJ-RT-20260731-006-001. Only after it commits may one fresh bounded P14-T06 Documentation Curator packet align public status, glossary, and claim examples with the protected P14-T04 decision."
+next_recommended_action: "Run the one governed checkpoint for AJ-RT-20260731-009-001. After commit, stop without creating a P13-T02 AgentJob until the user explicitly authorizes publication of the exact checkpoint and matched current-head hosted CI plus scheduled-full evidence exists; P15-T05 separately remains human-gated."
+
+p14_t06_generation_194_record_alignment_checkpoint_recovery:
+  task_id: "RT-20260731-009"
+  parent_task_id: "RT-20260731-008"
+  parent_handoff_id: "handoff-0930"
+  source_task_id: "RT-20260731-008"
+  source_job_id: "AJ-RT-20260731-008-001"
+  source_handoff_id: "handoff-0930"
+  plan_task_id: "P14-T06"
+  recovery_for_plan_task_id: "P14-T06"
+  next_plan_task_id: "P13-T02"
+  claim_boundary_id: "CB-P14-T06-GENERATION-194-RECORD-ALIGNMENT-CHECKPOINT-RECOVERY-001"
+  status: "GENERATION_194_RECORD_ALIGNMENT_RECOVERY_PASS_CHECKPOINT_READY_P13_T02_HOLD_AFTER_COMMIT"
+  work_item_status: "repair_completed_checkpoint_ready"
+  route_label: "checkpoint_preserved_p14_t06_after_generation_194_record_alignment_v1"
+  selected_role_family: "process-integrity-auditor@0.1.0"
+  selected_worker_skill: "improve-project-system"
+  selected_strategy_id: "checkpoint_preserved_p14_t06_after_generation_194_record_alignment_v1"
+  target_derivation_milestone: "none"
+  milestone_burden: "Project-system checkpoint recovery only; no derivation milestone advances."
+  source_head: "1442eb3b808b8aa9b00645de76c7e2e9cf9c5033"
+  immutable_route_sha256: "dd3d18ae854d3dfc9778a0239fa6c5865612a07cc0453b2db53305c471b34046"
+  route_blocker_fingerprint: "1cc8d31be281bb02d0f18c604ca78ffd8cf43d70eb712df1d744b1c070df00b2"
+  dirty_manifest_sha256: "09c324319e8509aaceffaf5096e84ff0bcab4034f5d2cd805b7b085ae52185e7"
+  inherited_changed_path_count: 91
+  source_blocker_path: "research_control/tasks/RT-20260731-008/artifacts/validation_blocker_generation_194_checkpoint_record_alignment_v1.yaml"
+  source_blocker_sha256: "29f93ba58e63a1399386fdd99e7f3159bfb15a6d90574f3a4d12825ef5d4743e"
+  source_completion_path: "research_control/tasks/RT-20260731-008/jobs/completions/AJC-AJ-RT-20260731-008-001.yaml"
+  source_completion_sha256: "06cf902367714f29255c7a99a83f6ba007ada0d7638fa815df561bbd60a70b51"
+  source_handoff_path: "research_control/handoffs/handoff-0930.yaml"
+  source_handoff_sha256: "9b03ceba7608dd9accdd19e61fa71566694d73bb3520ac6dce33dcb1f2c04b27"
+  recovery_receipt_path: "research_control/tasks/RT-20260731-009/artifacts/generation_194_record_alignment_checkpoint_recovery_receipt_v1.yaml"
+  recovery_receipt_sha256: "665a7b478579e99d105a3dd3a9edcf147dfad23aff963782996f949b6ce08c8a"
+  completion_path: "research_control/tasks/RT-20260731-009/jobs/completions/AJC-AJ-RT-20260731-009-001.yaml"
+  completion_sha256: "d015ecd750f63a301f070ac0c9513abd26209d9b943871714d82e0968e3f01d1"
+  handoff_id: "handoff-0931"
+  handoff_path: "research_control/handoffs/handoff-0931.yaml"
+  handoff_yaml_sha256: "b0a72a9f55178ef71bf0bc529534711b35b4fe130b62286ddcb162d047fbb7b2"
+  handoff_markdown_sha256: "eb465d3b2fca3e6bd9cb3212635d6228e2241ec2fde3124d5bc8642f37b5b610"
+  unresolved_alignment_finding_count: 0
+  historical_snapshot_rewrite_count: 0
+  code_or_test_changed_by_recovery: false
+  p14_t06_payload_complete: true
+  p14_t06_payload_changed_by_recovery: false
+  scientific_claims_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false
+  hosted_workflow_dispatch_authorized: false
+  checkpoint_invocation_count: 0
+  checkpoint_committed: false
+  checkpoint_staged: false
+  generation_194_checkpoint_invocation_count: 1
+  generation_194_second_checkpoint_authorized: false
+  dependency_checkpoint_commit: "1442eb3b808b8aa9b00645de76c7e2e9cf9c5033"
+  selected_next_work_item: "P13-T02"
+  selected_next_worker_skill: "improve-project-system"
+  selected_next_role_family: "validator-engineer@0.2.0"
+  selected_next_route_label: "ordinary-research-packet"
+  selected_next_strategy_id: "hold_p13_t02_until_p13_t01_external_cutover_evidence_after_p14_t06_checkpoint_v1"
+  selected_next_requires_human_gate: false
+  selected_next_execution_ready_after_checkpoint: false
+  selected_next_execution_ready_now: false
+  selected_next_blocker: "P13-T01 retains legacy authority until the user explicitly authorizes publication of the exact checkpoint and matched current-head hosted CI plus scheduled-full evidence exists; P15-T05 separately requires exact human-gated publication authority."
+
+p14_t06_public_status_mutable_memory_preflight_checkpoint_recovery:
+  task_id: "RT-20260731-008"
+  parent_task_id: "RT-20260731-007"
+  parent_handoff_id: "handoff-0929"
+  source_task_id: "RT-20260731-007"
+  source_job_id: "AJ-RT-20260731-007-001"
+  source_handoff_id: "handoff-0929"
+  plan_task_id: "P14-T06"
+  recovery_for_plan_task_id: "P14-T06"
+  next_plan_task_id: "P14-T06"
+  claim_boundary_id: "CB-P14-T06-PUBLIC-STATUS-MUTABLE-PREFLIGHT-RECOVERY-001"
+  status: "PUBLIC_STATUS_MUTABLE_MEMORY_PREFLIGHT_COMPATIBILITY_PASS_CHECKPOINT_BLOCKED_RECORD_ALIGNMENT"
+  work_item_status: "blocked"
+  route_label: "register_public_status_source_as_mutable_memory_preflight_and_checkpoint_v1"
+  selected_role_family: "validator-engineer@0.2.0"
+  selected_worker_skill: "improve-project-system"
+  selected_strategy_id: "register_public_status_source_as_mutable_memory_preflight_and_checkpoint_v1"
+  target_derivation_milestone: "none"
+  milestone_burden: "Project-system validator compatibility repair only; no derivation milestone advances."
+  source_head: "1442eb3b808b8aa9b00645de76c7e2e9cf9c5033"
+  immutable_route_sha256: "97d459880728908f0747dba076a94ea8cd11dde1e0546949be11f249037f0004"
+  route_blocker_fingerprint: "b04b6f937434b66e1ae17f4cfa7b7962cfdb42a8032990d24adc1e3e41695e87"
+  dirty_manifest_sha256: "ab9d334fe5a6184ec2daf0d2e87d25285586fb0f3fda1345b9f63a1043970894"
+  failed_gate_evidence_sha256: "2eb05f73f8809dee504292f8069d8fe0f20bb5f5ec2c2bc3e4e4ea2ecb306014"
+  blocker_path: "research_control/tasks/RT-20260731-007/artifacts/validation_blocker_public_status_mutable_memory_preflight_policy_v1.yaml"
+  blocker_sha256: "860c62b2c30099771269849eee6c4639950c94df8c4a857245b18eb69146521b"
+  mutable_object_id: "MD-RESEARCH-CONTROL-DESIGN-PUBLIC-STATUS-EXISTS-DOES-NOT-EXIST-SOURCE-SPEC"
+  canonical_source_sha256: "31fc54844daeae74b447e94990be26be78ee90ef30e59b7937e6d49893992c3b"
+  recovery_receipt_path: "research_control/tasks/RT-20260731-008/artifacts/public_status_mutable_memory_preflight_compatibility_receipt_v1.yaml"
+  recovery_receipt_sha256: "436606fdee1b356d18ad58c83696695bc5bc1fdaad7fd06953049cbda9813a92"
+  completion_path: "research_control/tasks/RT-20260731-008/jobs/completions/AJC-AJ-RT-20260731-008-001.yaml"
+  completion_sha256: "06cf902367714f29255c7a99a83f6ba007ada0d7638fa815df561bbd60a70b51"
+  handoff_id: "handoff-0930"
+  handoff_path: "research_control/handoffs/handoff-0930.yaml"
+  handoff_yaml_sha256: "9b03ceba7608dd9accdd19e61fa71566694d73bb3520ac6dce33dcb1f2c04b27"
+  handoff_markdown_sha256: "2620a675eb62ca9004851d0c35edaac627d0598fae5b2c21757262170c1e0ffc"
+  mutable_set_entry_addition_count: 1
+  focused_regression_test_count: 1
+  historical_public_status_hash_accepted: true
+  active_current_hash_requirement_preserved: true
+  immutable_source_hash_requirement_preserved: true
+  historical_snapshot_rewrite_count: 0
+  p14_t06_payload_preserved: true
+  p13_t02_executed: false
+  p15_t05_executed: false
+  scientific_claims_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false
+  checkpoint_invocation_count: 1
+  checkpoint_committed: false
+  checkpoint_staged: false
+  checkpoint_entry_index_restored: true
+  checkpoint_failure_class: "task_local_record_alignment"
+  checkpoint_failure_count: 5
+  checkpoint_blocker_path: "research_control/tasks/RT-20260731-008/artifacts/validation_blocker_generation_194_checkpoint_record_alignment_v1.yaml"
+  checkpoint_blocker_sha256: "29f93ba58e63a1399386fdd99e7f3159bfb15a6d90574f3a4d12825ef5d4743e"
+  checkpoint_receipt_path: ".local/validation-receipts/528658a2d6edc8398b2ed0909f94147fc3d7c2041a6c0943243cfa662bb6ba5b/RUN-CHECKPOINT-1d742f0cd013f53e/receipt.json"
+  checkpoint_receipt_sha256: "1419ac648ee21a512095b4edccd86fc799c975eab33794bcac88a20f9746e708"
+  dependency_checkpoint_commit: "1442eb3b808b8aa9b00645de76c7e2e9cf9c5033"
+  project_system_recovery_required: true
+  selected_next_work_item: "P14-T06"
+  selected_next_worker_skill: "improve-project-system"
+  selected_next_role_family: "process-integrity-auditor@0.1.0"
+  selected_next_route_label: "project-system-checkpoint-recovery"
+  selected_next_strategy_id: "checkpoint_preserved_p14_t06_after_generation_194_record_alignment_v1"
+  selected_next_requires_human_gate: false
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: true
+  selected_next_blocker: "Generation 194 exhausted its one-checkpoint authority after staged validation found five task-local record-alignment errors; a distinct AgentJob and new checkpoint are required before the P13-T02 hold resumes."
+
+p14_t06_public_status_alignment:
+  task_id: "RT-20260731-007"
+  parent_task_id: "RT-20260731-006"
+  parent_handoff_id: "handoff-0928"
+  plan_task_id: "P14-T06"
+  next_plan_task_id: "P14-T06"
+  claim_boundary_id: "CB-V21-P14-T06-PUBLIC-STATUS-ALIGNMENT-001"
+  status: "P14_T06_PAYLOAD_COMPLETE_CHECKPOINT_BLOCKED_PUBLIC_STATUS_MUTABLE_MEMORY_PREFLIGHT_POLICY_RECOVERY_REQUIRED"
+  work_item_status: "blocked"
+  route_label: "ordinary-research-packet"
+  selected_role_family: "documentation-curator@2.0.0"
+  selected_worker_skill: "improve-project-system"
+  selected_strategy_id: "align_public_status_glossary_and_claim_examples_with_p14_t04_v1"
+  target_derivation_milestone: "source_ontology"
+  milestone_burden: "Make public explanations accurately reflect protected decisions and scientific status."
+  dependency_checkpoint_commit: "1442eb3b808b8aa9b00645de76c7e2e9cf9c5033"
+  immutable_route_sha256: "68204295cd7bc37bf56fca023620764eacf4a50c579e4db50e1da1ab5e7044dd"
+  route_blocker_fingerprint: "60f4d3b73b5539d8023ce47164382e2a68b635814421aef3c8468e1a5a3eef56"
+  protected_p14_t04_decision: "INTERPRETIVE_REPRESENTATIVE_TARGET_CONGRUENCE_ONLY"
+  protected_p14_t04_source_sha256: "894d53ceffb182835e216ab2ad5722a8f6d60551d75fa48681397284e9060147"
+  claim_examples_path: "research_control/tasks/RT-20260731-007/artifacts/p14_t06_public_claim_language_examples_v1.yaml"
+  claim_examples_sha256: "5b5a1cd93e68c389f7e9440e0aa763b4cf8c845cfe06dc1a5d8160bae5790d5f"
+  compact_receipt_path: "research_control/tasks/RT-20260731-007/artifacts/p14_t06_public_status_alignment_receipt.md"
+  compact_receipt_sha256: "53ef7115671d6504623253b43fa2b9d3347f406bf571472422e312a28973d0e0"
+  validation_blocker_path: "research_control/tasks/RT-20260731-007/artifacts/validation_blocker_public_status_mutable_memory_preflight_policy_v1.yaml"
+  validation_blocker_sha256: "860c62b2c30099771269849eee6c4639950c94df8c4a857245b18eb69146521b"
+  completion_path: "research_control/tasks/RT-20260731-007/jobs/completions/AJC-AJ-RT-20260731-007-001.yaml"
+  completion_sha256: "8cd4f8790475d46eaa9ea863a117639190be90eae323ab601286f9ea436318ac"
+  handoff_id: "handoff-0929"
+  handoff_path: "research_control/handoffs/handoff-0929.yaml"
+  handoff_yaml_sha256: "8d431f917642aae31d2d30ef069440a50337468e569afa6b988486da6b71e0c0"
+  handoff_markdown_sha256: "d476cc165fe759fd52d7f598235407fe924e00bc50489da29e57737ba2368766"
+  distinct_success_label_count: 6
+  claim_example_count: 8
+  publication_family_count: 3
+  visual_capture_count: 6
+  publication_validation_status: "PASS"
+  changed_claim_validation_status: "PASS"
+  visual_qa_status: "PASS"
+  repository_validation_status: "FAIL"
+  repository_error_count: 8
+  current_task_error_count: 0
+  source_target_type_distinction_preserved: true
+  representative_independence_fixed_protocol_scope_preserved: true
+  observer_relative_exception_preserved: true
+  p14_t06_payload_complete: true
+  p14_t06_completed: false
+  scientific_claims_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false
+  checkpoint_invocation_count: 0
+  checkpoint_committed: false
+  project_system_recovery_required: true
+  recovery_worker_skill: "improve-project-system"
+  recovery_strategy_id: "register_public_status_source_as_mutable_memory_preflight_and_checkpoint_v1"
+  selected_next_work_item: "P14-T06"
+  selected_next_worker_skill: "improve-project-system"
+  selected_next_route_label: "project_system_validation_recovery"
+  selected_next_strategy_id: "register_public_status_source_as_mutable_memory_preflight_and_checkpoint_v1"
+  selected_next_requires_human_gate: false
+  selected_next_execution_ready_now: true
+  dependency_independent_included_work_item_count: 1
+  selected_next_blocker: "The preserved P14-T06 transaction cannot checkpoint until the public-status object ID is added to the mutable memory-preflight policy and the focused regression plus required validation pass."
 
 p14_t04_handoff_0927_markdown_identity_checkpoint_recovery:
   task_id: "RT-20260731-006"

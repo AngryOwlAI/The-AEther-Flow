@@ -1,0 +1,192 @@
+schema_id: "p14_t06_public_status_mutable_memory_preflight_policy_blocker_v1"
+blocker_id: "BLOCK-P14-T06-PUBLIC-STATUS-MUTABLE-PREFLIGHT-001"
+task_id: "RT-20260731-007"
+job_id: "AJ-RT-20260731-007-001"
+completion_id: "AJC-AJ-RT-20260731-007-001"
+plan_task_id: "P14-T06"
+observed_at: "2026-07-31T23:15:45Z"
+status: "blocked_precheckpoint_project_system_repair_required"
+failed_gate: "research_control_diff"
+failing_command: ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff"
+checkpoint:
+  attempted: false
+  invocation_count: 0
+  committed: false
+  commit: "none_validation_failed"
+validation_receipt:
+  path: ".local/validation-receipts/working-sha256-d0f3a61f9c58d7286530d9e3e088e27d3d8aa53ea25221f9c4faa8845697ff2f/RESEARCH-CONTROL-DIFF-D0F3A61F9C58D728/full.json"
+  sha256: "fea7cbdbf26b847b5eb97674f766400bd3340c4e3ebb354740ea30e5c297c189"
+  tracked_authority: false
+  status: "FAIL"
+  exit_code: 1
+  error_count: 8
+  warning_count: 1821
+  finding_count: 1829
+  run_id: "RESEARCH-CONTROL-DIFF-D0F3A61F9C58D728"
+error_partition:
+  current_task_or_active_state_error_count: 0
+  historical_mutable_source_error_count: 8
+  historical_stale_hash_error_count: 4
+  historical_registry_parity_error_count: 4
+  affected_historical_record_count: 4
+  affected_historical_task_count: 2
+historical_findings:
+  - finding_id: "RESEARCH-CONTROL-DIFF-ERROR-08307CB83DA1"
+    path: "research_control/tasks/RT-20260704-002/jobs/AJ-RT-20260704-002-001.yaml"
+    finding: "memory_preflight source_hash is stale for research_control/design/public_status_exists_does_not_exist_source_spec.md"
+  - finding_id: "RESEARCH-CONTROL-DIFF-ERROR-49E0B2463938"
+    path: "research_control/tasks/RT-20260704-003/jobs/AJ-RT-20260704-003-001.yaml"
+    finding: "memory_preflight source_hash does not match registry row for MD-RESEARCH-CONTROL-DESIGN-PUBLIC-STATUS-EXISTS-DOES-NOT-EXIST-SOURCE-SPEC"
+  - finding_id: "RESEARCH-CONTROL-DIFF-ERROR-536B5A278F15"
+    path: "research_control/tasks/RT-20260704-003/jobs/completions/AJC-AJ-RT-20260704-003-001.yaml"
+    finding: "memory_preflight source_hash does not match registry row for MD-RESEARCH-CONTROL-DESIGN-PUBLIC-STATUS-EXISTS-DOES-NOT-EXIST-SOURCE-SPEC"
+  - finding_id: "RESEARCH-CONTROL-DIFF-ERROR-719766AF84E7"
+    path: "research_control/tasks/RT-20260704-002/jobs/completions/AJC-AJ-RT-20260704-002-001.yaml"
+    finding: "memory_preflight source_hash does not match registry row for MD-RESEARCH-CONTROL-DESIGN-PUBLIC-STATUS-EXISTS-DOES-NOT-EXIST-SOURCE-SPEC"
+  - finding_id: "RESEARCH-CONTROL-DIFF-ERROR-726437614A41"
+    path: "research_control/tasks/RT-20260704-002/jobs/AJ-RT-20260704-002-001.yaml"
+    finding: "memory_preflight source_hash does not match registry row for MD-RESEARCH-CONTROL-DESIGN-PUBLIC-STATUS-EXISTS-DOES-NOT-EXIST-SOURCE-SPEC"
+  - finding_id: "RESEARCH-CONTROL-DIFF-ERROR-77AFA4DB358B"
+    path: "research_control/tasks/RT-20260704-002/jobs/completions/AJC-AJ-RT-20260704-002-001.yaml"
+    finding: "memory_preflight source_hash is stale for research_control/design/public_status_exists_does_not_exist_source_spec.md"
+  - finding_id: "RESEARCH-CONTROL-DIFF-ERROR-A41731BC035B"
+    path: "research_control/tasks/RT-20260704-003/jobs/AJ-RT-20260704-003-001.yaml"
+    finding: "memory_preflight source_hash is stale for research_control/design/public_status_exists_does_not_exist_source_spec.md"
+  - finding_id: "RESEARCH-CONTROL-DIFF-ERROR-AD76CA816848"
+    path: "research_control/tasks/RT-20260704-003/jobs/completions/AJC-AJ-RT-20260704-003-001.yaml"
+    finding: "memory_preflight source_hash is stale for research_control/design/public_status_exists_does_not_exist_source_spec.md"
+mutable_source:
+  object_id: "MD-RESEARCH-CONTROL-DESIGN-PUBLIC-STATUS-EXISTS-DOES-NOT-EXIST-SOURCE-SPEC"
+  canonical_path: "research_control/design/public_status_exists_does_not_exist_source_spec.md"
+  registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  current_source_sha256: "31fc54844daeae74b447e94990be26be78ee90ef30e59b7937e6d49893992c3b"
+  intentionally_mutable: true
+  mutation_authorized_by: "P14-T06 and AJ-RT-20260731-007-001"
+defect:
+  location: "scripts/research_control/validate_research_control.py"
+  symbol: "MUTABLE_MEMORY_PREFLIGHT_SOURCE_OBJECT_IDS"
+  missing_object_id: "MD-RESEARCH-CONTROL-DESIGN-PUBLIC-STATUS-EXISTS-DOES-NOT-EXIST-SOURCE-SPEC"
+  behavior: "The validator requires the current mutable public-status source hash in immutable historical job and completion memory-preflight snapshots, so one authorized registered-source update invalidates four historical receipts through two checks each."
+  current_active_hash_requirement_must_remain: true
+  immutable_nonmutable_source_hash_requirement_must_remain: true
+  historical_receipt_rewrite_authorized: false
+required_recovery:
+  route: "register_public_status_source_as_mutable_memory_preflight_and_checkpoint_v1"
+  worker_skill: "improve-project-system"
+  role_family: "validator-engineer@0.2.0"
+  exact_code_change: "Add only MD-RESEARCH-CONTROL-DESIGN-PUBLIC-STATUS-EXISTS-DOES-NOT-EXIST-SOURCE-SPEC to the established mutable memory-preflight source set."
+  focused_test_paths:
+    - "tests/test_research_control.py"
+  focused_regression: "Prove historical public-status snapshots remain valid while the active task must bind the current hash and immutable registered sources remain exact."
+  preserved_transaction: "Keep the complete RT-20260731-007 P14-T06 publication payload unchanged, rerun every required gate, refresh derivatives, and checkpoint the combined transaction once."
+  next_route_after_recovery: "Return to the preserved P13-T02 exact-publication-and-current-head-hosted-CI evidence hold."
+  next_route_executed: false
+dirty_transaction:
+  preserve_exactly: true
+  canonical_command: "git status --short --untracked-files=all"
+  path_count: 79
+  manifest_sha256: "ab9d334fe5a6184ec2daf0d2e87d25285586fb0f3fda1345b9f63a1043970894"
+  paths_recorded_below: true
+  entries:
+    - " M README.md"
+    - " M github-facing/aether-flow-ontology-explainer.md"
+    - " M github-facing/claim-gates-explainer.md"
+    - " M github-facing/exact-gr-benchmark-boundary-explainer.md"
+    - " M html/aether-flow-ontology-explainer.html"
+    - " M html/claim-gates-explainer.html"
+    - " M html/exact-gr-benchmark-boundary-explainer.html"
+    - " M markdown/html-explainer-specs/aether-flow-ontology-explainer.md"
+    - " M markdown/html-explainer-specs/claim-gates-explainer.md"
+    - " M markdown/html-explainer-specs/exact-gr-benchmark-boundary-explainer.md"
+    - " M markdown/publication-briefs/aether-flow-ontology.publication-brief.md"
+    - " M markdown/publication-briefs/claim-gates.publication-brief.md"
+    - " M markdown/publication-briefs/exact-gr-benchmark-boundary.publication-brief.md"
+    - " M output/compact_current_frontier_v16.json"
+    - " M output/compact_current_frontier_v16.yaml"
+    - " M output/research_dependency_graph.dot"
+    - " M output/research_dependency_graph.json"
+    - " M registries/AGENT_JOB_REGISTRY.csv"
+    - " M registries/CLAIM_BOUNDARY_REGISTRY.csv"
+    - " M registries/CONTENT_SEMANTIC_REGISTRY.csv"
+    - " M registries/CONTENT_SEMANTIC_REGISTRY.meta.json"
+    - " M registries/DIRECTOR_DECISION_REGISTRY.csv"
+    - " M registries/FILE_OBJECT_REGISTRY.csv"
+    - " M registries/FILE_OBJECT_REGISTRY.meta.json"
+    - " M registries/HTML_EXPLAINER_REGISTRY.csv"
+    - " M registries/MARKDOWN_SOURCE_REGISTRY.csv"
+    - " M registries/OBJECT_RELATIONSHIP_REGISTRY.csv"
+    - " M registries/OBJECT_RELATIONSHIP_REGISTRY.meta.json"
+    - " M registries/OBSIDIAN_VAULT_REGISTRY.csv"
+    - " M registries/OBSIDIAN_VAULT_REGISTRY.meta.json"
+    - " M registries/PUBLICATION_BRIEF_REGISTRY.csv"
+    - " M registries/RESEARCH_TASK_REGISTRY.csv"
+    - " M registries/ROLE_EXECUTION_REGISTRY.csv"
+    - " M registries/WIKI_ARTIFACT_REGISTRY.csv"
+    - " M registries/WIKI_ARTIFACT_REGISTRY.meta.json"
+    - " M research_control/current_frontier.md"
+    - " M research_control/design/epistemic_category_glossary.md"
+    - " M research_control/design/public_status_exists_does_not_exist_source_spec.md"
+    - " M research_control/program_state.yaml"
+    - " M research_control/tasks/TASK_INDEX.csv"
+    - " M research_control/tasks/TASK_INDEX.md"
+    - " M wiki/html/html-aether-flow-ontology-explainer.md"
+    - " M wiki/html/html-claim-gates-explainer.md"
+    - " M wiki/html/html-exact-gr-benchmark-boundary-explainer.md"
+    - " M wiki/indexes/compact_current_frontier_v16.md"
+    - " M wiki/indexes/research_control_task_index.md"
+    - " M wiki/indexes/research_dependency_graph.md"
+    - " M wiki/markdown/md-aether-flow-ontology-publication-brief.md"
+    - " M wiki/markdown/md-claim-gates-publication-brief.md"
+    - " M wiki/markdown/md-exact-gr-benchmark-boundary-publication-brief.md"
+    - " M wiki/markdown/md-github-facing-aether-flow-ontology-explainer.md"
+    - " M wiki/markdown/md-github-facing-claim-gates-explainer.md"
+    - " M wiki/markdown/md-github-facing-exact-gr-benchmark-boundary-explainer.md"
+    - " M wiki/markdown/md-html-spec-aether-flow-ontology-explainer.md"
+    - " M wiki/markdown/md-html-spec-claim-gates-explainer.md"
+    - " M wiki/markdown/md-html-spec-exact-gr-benchmark-boundary-explainer.md"
+    - " M wiki/markdown/md-readme.md"
+    - " M wiki/markdown/md-research-control-current-frontier.md"
+    - " M wiki/markdown/md-research-control-design-epistemic-category-glossary.md"
+    - " M wiki/markdown/md-research-control-design-public-status-exists-does-not-exist-source-spec.md"
+    - " M wiki/markdown/md-research-control-task-index.md"
+    - "?? research_control/handoffs/handoff-0929.md"
+    - "?? research_control/handoffs/handoff-0929.yaml"
+    - "?? research_control/tasks/RT-20260731-007/00_TASK.yaml"
+    - "?? research_control/tasks/RT-20260731-007/DDR-20260731-007.md"
+    - "?? research_control/tasks/RT-20260731-007/artifacts/p14_t06_local_ci_equivalent_report.json"
+    - "?? research_control/tasks/RT-20260731-007/artifacts/p14_t06_public_claim_language_examples_v1.yaml"
+    - "?? research_control/tasks/RT-20260731-007/artifacts/p14_t06_public_status_alignment_receipt.md"
+    - "?? research_control/tasks/RT-20260731-007/artifacts/validation_blocker_public_status_mutable_memory_preflight_policy_v1.yaml"
+    - "?? research_control/tasks/RT-20260731-007/artifacts/visual_qa/aether-flow-ontology-desktop.png"
+    - "?? research_control/tasks/RT-20260731-007/artifacts/visual_qa/aether-flow-ontology-mobile.png"
+    - "?? research_control/tasks/RT-20260731-007/artifacts/visual_qa/claim-gates-desktop.png"
+    - "?? research_control/tasks/RT-20260731-007/artifacts/visual_qa/claim-gates-mobile.png"
+    - "?? research_control/tasks/RT-20260731-007/artifacts/visual_qa/exact-gr-benchmark-boundary-desktop.png"
+    - "?? research_control/tasks/RT-20260731-007/artifacts/visual_qa/exact-gr-benchmark-boundary-mobile.png"
+    - "?? research_control/tasks/RT-20260731-007/documentation_impact.yaml"
+    - "?? research_control/tasks/RT-20260731-007/jobs/AJ-RT-20260731-007-001.yaml"
+    - "?? research_control/tasks/RT-20260731-007/jobs/completions/AJC-AJ-RT-20260731-007-001.yaml"
+    - "?? research_control/tasks/RT-20260731-007/roles/documentation-curator@2.0.0--RT-20260731-007.yaml"
+p14_t06_evidence:
+  payload_complete: true
+  publication_validation_status: "PASS"
+  claim_language_validation_status: "PASS"
+  visual_qa_status: "PASS"
+  distinct_success_label_count: 6
+  claim_example_count: 8
+  publication_family_count: 3
+  visual_capture_count: 6
+authority_boundary:
+  current_agent_job_may_edit_validator: false
+  current_agent_job_may_edit_tests: false
+  current_agent_job_may_edit_historical_task_snapshots: false
+  current_agent_job_may_checkpoint_with_failed_required_validation: false
+  p14_t06_payload_complete: true
+  p14_t06_checkpoint_complete: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false
+  historical_record_rewrite_authorized: false

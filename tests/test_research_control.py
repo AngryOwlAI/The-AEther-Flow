@@ -122,6 +122,45 @@ class ResearchControlTests(unittest.TestCase):
                     )
                 )
 
+    def test_public_status_memory_preflight_preserves_historical_only(self) -> None:
+        object_id = (
+            "MD-RESEARCH-CONTROL-DESIGN-PUBLIC-STATUS-EXISTS-DOES-NOT-EXIST-"
+            "SOURCE-SPEC"
+        )
+        self.assertIn(
+            object_id,
+            self.validator.MUTABLE_MEMORY_PREFLIGHT_SOURCE_OBJECT_IDS,
+        )
+        active_task_id = self.validator.active_program_task_id()
+        self.assertTrue(active_task_id)
+        self.assertTrue(
+            self.validator.memory_preflight_hash_must_be_current(
+                {"task_id": active_task_id},
+                object_id,
+            )
+        )
+        self.assertFalse(
+            self.validator.memory_preflight_hash_must_be_current(
+                {"task_id": "RT-HISTORICAL"},
+                object_id,
+            )
+        )
+        self.assertTrue(
+            self.validator.memory_preflight_hash_must_be_current(
+                {"task_id": "RT-HISTORICAL"},
+                "MD-IMMUTABLE-CONTROL-SOURCE",
+            )
+        )
+        root, receipt = self.memory_preflight_fixture(
+            stale_hash=True,
+            object_id=object_id,
+        )
+        with mock.patch.object(self.validator, "REPO_ROOT", root), mock.patch.object(
+            self.validator, "REGISTRY_DIR", root / "registries"
+        ):
+            report = self.validate_memory_preflight_fixture(receipt)
+        self.assertFalse(any("source_hash" in error for error in report.errors))
+
     def test_physics_progress_metrics_report_reads_tracked_completions(self) -> None:
         snapshot = self.live_metrics_snapshot()
         report = snapshot.materialize_report()

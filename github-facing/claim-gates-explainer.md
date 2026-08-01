@@ -78,11 +78,25 @@ promotion language.
 | "This packet preserves a scoped obstruction." | "The theory is globally rejected." |
 | "This source-extension datum is admissible only for its controlled continuation path." | "The datum canonically adopts ontology or downstream GR structure." |
 | "This bridge attempt names a missing primitive." | "`M_src`, `g_eff`, matter coupling, or Einstein equations are derived." |
+| "`u^mu` is a generally non-unique target-side interpretive representative." | "`u^mu` is `Phi_src`, source-selected, pure gauge, or an independent field." |
+| "Fixed-target, fixed-protocol predictions are representative independent." | "All congruence-explicit or observer-relative measurements are identical." |
+| "The exact finite P7 matter package was adopted by protected human postulate." | "The source ontology derived that package or supplied target stress-energy and Einstein equations." |
 | "A validator passed for a bounded transaction." | "Validator success is scientific evidence." |
 | "Gate Chair is a human-gated role." | "Generated docs or AgentJobs can issue a Gate Chair verdict." |
 
 Those examples are not new registry rules. They are reader-facing summaries of
 the existing boundary pattern.
+
+## Claim Labels That Require Separate Evidence
+
+| Label | Evidence burden | Common unsafe shortcut |
+| --- | --- | --- |
+| Ontology | Tracked source interpretation and architecture scope. | Treating a proposal as established physical reality. |
+| Exact closure | Canonical target-side adoption statement. | Treating target-side GR adoption as source derivation. |
+| Formal equivalence | Exact relation, assumptions, and object types. | Treating mathematical redescription as emergence. |
+| Genuine emergence | Provenance, dynamics, uniqueness or quotient status, operational meaning, and robustness. | Treating no-target purity or interpretive congruence as sufficient. |
+| Operational meaning | Exact observer, detector, protocol, calibration, or protected-semantic authority. | Treating meaning as source provenance or prediction. |
+| Empirical novelty | Distinct observable claim, comparison protocol, and evidence. | Treating ontology vocabulary or documentation as new physics. |
 
 ## Current Public Status Gate
 
@@ -101,10 +115,12 @@ order:
 | --- | --- | --- | --- | --- |
 | GR derivation | Open source-to-GR recovery burden. | No first-principles derivation from the source substrate is established. | No completed derivation, Einstein-equation result, or benchmark promotion follows from public documentation. | Discharge metric, matter-coupling, field-equation, and benchmark-review burdens through tracked sources. |
 | AEther-flow ontology | Proposed research ontology / explanatory frame. | Ontology vocabulary and interpretation lane only. | Not an established physical ontology. | Supply source-side mathematics and protected gates before stronger ontology or derivation claims. |
+| Target-side `u^mu` | Admissible, generally non-unique interpretive representative. | Target-side flow dictionary under a fixed adopted GR benchmark. | Not `Phi_src`, source-selected, established pure gauge, an independent field, or a completed bridge; observer-relative quantities may differ. | Supply separate source-backed evidence and protected authority before stronger status. |
 | `M_src` | Scoped source-only object. | Source-side prerequisite context under declared fail-closed scope. | Not a target manifold, metric, matter-coupling result, Einstein-equation result, benchmark promotion, or completed derivation. | Use only as source-side prerequisite context while deriving later bridges without target import. |
-| `g_eff` | Scoped source-extension object. | Declared source-extension context only. | Not an unscoped Lorentzian metric, matter-coupling result, Einstein-equation result, benchmark promotion, or completed derivation. | Show any later use without adopting `MetricData(E)`, an unscoped metric, matter coupling, or field equations. |
-| Matter sector | Scoped evidence/preconditions only. | Certificate-indexed, finite/local support for source-side coupling-law candidate work. | No matter semantics, detector semantics, coupling-law adoption, matter coupling, stress-energy semantics, matter action, Einstein equations, benchmark promotion, or completed derivation follows. | Construct, audit, or stress one source-side coupling-law candidate before any matter-coupling derivation or adoption claim. |
+| `ScopedMetricStructureRecord_src` | Exact scoped source-extension record; `g_eff^{GSC-cand}` is its legacy alias. | Ten-slot source-extension record only. | Not unscoped operational geometry, matter coupling, Einstein equations, benchmark promotion, or completed derivation. | Introduce materially new source evidence before reopening a stronger geometry route. |
+| Protected finite matter package | Adopted as physical matter by explicit protected human postulate. | Exact P7 package, finite declared domains, and current source architecture only. | Not a first-principles source derivation; no target stress-energy, `g_eff`, Einstein equations, benchmark promotion, or empirical novelty follows. | Close the cross-layer source-to-target composition gap. |
 | `RR_ETransportCompletenessOrInvarianceLaw_v1` | Certificate-indexed evidence/precondition only. | Scoped source-side support for later candidate work. | Not an adopted source law and not a positive matter theory. | Supply explicit source-law adoption authority before using it as law. |
+| Gate E | Protected `NOT_READY` decision with six inconclusive cases and zero passes. | Exact reviewed package only. | No benchmark promotion, qualifying independent replication, exact recovery, or completed derivation. | Supply materially repaired evidence and fresh protected authority. |
 
 ## Gate Chair And Human-Gated Decisions
 
@@ -142,6 +158,9 @@ The safe answer is usually narrower than the tempting summary.
 - AEther-Flow Project. (2026). `research_control/design/epistemic_category_glossary.md` [Epistemic category glossary].
 - AEther-Flow Project. (2026). `research_control/design/status_card_v2_schema.md` [Status-card v2 schema].
 - AEther-Flow Project. (2026). `research_control/design/accepted_status_calibration_v2.yaml` [Status-card v2 calibration data].
+- AEther-Flow Project. (2026). `research_control/tasks/RT-20260731-005/artifacts/p14_t04_congruence_status_decision_v1.tex` [Protected congruence status decision].
+- AEther-Flow Project. (2026). `research_control/tasks/RT-20260729-001/artifacts/p7_t08_gate_c_decision_v1.tex` [Protected finite matter postulate decision].
+- AEther-Flow Project. (2026). `research_control/tasks/RT-20260731-004/artifacts/p9_t09_gate_e_decision_v1.tex` [Protected Gate E not-ready decision].
 - AEther-Flow Project. (2026). `registries/CLAIM_BOUNDARY_REGISTRY.csv` [Claim boundary registry].
 - AEther-Flow Project. (2026). `registries/AGENT_ROLE_REGISTRY.csv` [Agent role registry].
 

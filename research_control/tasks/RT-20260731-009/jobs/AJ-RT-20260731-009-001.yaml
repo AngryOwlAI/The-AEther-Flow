@@ -1,0 +1,347 @@
+job_id: "AJ-RT-20260731-009-001"
+task_id: "RT-20260731-009"
+decision_id: "DDR-20260731-009"
+role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260731-009"
+status: "completed"
+validation_status: "PASS"
+created_at: "2026-08-01T01:16:50Z"
+started_at: "2026-08-01T01:16:50Z"
+completed_at: "2026-08-01T01:16:50Z"
+completion_path: "research_control/tasks/RT-20260731-009/jobs/completions/AJC-AJ-RT-20260731-009-001.yaml"
+requires_human_gate: false
+human_authorization_note: "Generation 195 is one user-authorized recursive project-system checkpoint-recovery frame. It may checkpoint once but cannot execute P13-T02 or P15-T05, publish, push, dispatch hosted workflows, or create protected scientific authority."
+objective: "Validate the already-aligned generation-194 completion authority note and active-state next-action identities, preserve the exact validator regression and complete P14-T06 payload, synchronize direct identities and generated derivatives, and invoke one fresh governed checkpoint before stopping at the P13-T02 external-evidence hold."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system checkpoint recovery only; no derivation milestone advances."
+route_label: "checkpoint_preserved_p14_t06_after_generation_194_record_alignment_v1"
+route_reason: "Generation 194 exhausted its sole checkpoint after five task-local record-alignment errors; the aligned preserved transaction requires one distinct AgentJob and checkpoint."
+strategy_id: "checkpoint_preserved_p14_t06_after_generation_194_record_alignment_v1"
+immutable_route_sha256: "dd3d18ae854d3dfc9778a0239fa6c5865612a07cc0453b2db53305c471b34046"
+plan_task_id: "P14-T06"
+recovery_for_plan_task_id: "P14-T06"
+next_plan_task_id: "P13-T02"
+next_plan_task_execution_authorized: false
+project_system_change_only: true
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 195
+  passes_consumed: 176
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:195"
+  handoff_token: "fdc01dda9f74163f432373836bc2dec99c6721fb2a5c6b2f"
+  relay_claim_token: "ec528e95540ac9b353d26d26cb9a7674a96963f0ec1b73ed"
+  route_work_item_id: "P14-T06"
+  route_worker_skill: "improve-project-system"
+  route_sha256: "dd3d18ae854d3dfc9778a0239fa6c5865612a07cc0453b2db53305c471b34046"
+  route_reason: "required_repository_checkpoint_failed_task_local_record_alignment"
+  route_strategy_id: "checkpoint_preserved_p14_t06_after_generation_194_record_alignment_v1"
+  route_blocker_fingerprint: "1cc8d31be281bb02d0f18c604ca78ffd8cf43d70eb712df1d744b1c070df00b2"
+  route_before_fingerprint: "1cc8d31be281bb02d0f18c604ca78ffd8cf43d70eb712df1d744b1c070df00b2"
+  route_dirty_state_manifest_sha256: "09c324319e8509aaceffaf5096e84ff0bcab4034f5d2cd805b7b085ae52185e7"
+  route_dirty_state_path_count: 91
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  candidate_family: "not_applicable"
+  assumption_delta:
+    - "No scientific assumption changes; the packet validates already-aligned control-record identities and checkpoints the preserved transaction."
+    - "The complete P14-T06 payload, historical snapshots, validator regression, and every scientific and promotion block remain unchanged."
+  materiality_basis: "Completes one required repository checkpoint after an evidence-unique task-local record alignment without changing scientific semantics or authority."
+  source_basis:
+    - "research_control/handoffs/handoff-0930.yaml"
+    - "research_control/tasks/RT-20260731-008/artifacts/validation_blocker_generation_194_checkpoint_record_alignment_v1.yaml"
+    - "research_control/tasks/RT-20260731-008/jobs/completions/AJC-AJ-RT-20260731-008-001.yaml"
+    - "research_control/design/validation_obligation_resolution_policy_v1.md"
+  expected_artifact_paths:
+    - "research_control/tasks/RT-20260731-009/artifacts/generation_194_record_alignment_checkpoint_recovery_receipt_v1.yaml"
+    - "research_control/handoffs/handoff-0931.yaml"
+  project_system_justification: "This is exact transaction-integrity and checkpoint recovery; it creates no physics payload or P13-T02 execution."
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  expected_durable_outputs:
+    physics: []
+    project_system:
+      - "one alignment-preservation receipt bound to the immutable generation-195 input manifest"
+      - "one distinct checkpoint-recovery control closure"
+      - "one governed checkpoint"
+  acceptance_criteria:
+    physics: []
+    project_system:
+      - "all five generation-194 task-local findings are aligned"
+      - "validator regression and P14-T06 payload hashes remain preserved"
+      - "all required project-control gates pass"
+      - "one governed checkpoint commits"
+      - "P13-T02 and P15-T05 remain unexecuted"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: false
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0930"
+  source_handoff_path: "research_control/handoffs/handoff-0930.yaml"
+  source_handoff_sha256: "9b03ceba7608dd9accdd19e61fa71566694d73bb3520ac6dce33dcb1f2c04b27"
+  selected_plan_task_id: "P14-T06"
+  guard_outcome: "all_ready_science_blocked_exception"
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1107
+    relationship_row_count: 5598
+    semantic_row_count: 1107
+    vault_row_count: 1107
+    local_cache_only_warning_count: 3
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-DESIGN-PUBLIC-STATUS-EXISTS-DOES-NOT-EXIST-SOURCE-SPEC --json"
+      query_type: "lookup"
+      query_text: "MD-RESEARCH-CONTROL-DESIGN-PUBLIC-STATUS-EXISTS-DOES-NOT-EXIST-SOURCE-SPEC"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-DESIGN-PUBLIC-STATUS-EXISTS-DOES-NOT-EXIST-SOURCE-SPEC"
+  canonical_inspections:
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-PUBLIC-STATUS-EXISTS-DOES-NOT-EXIST-SOURCE-SPEC"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/public_status_exists_does_not_exist_source_spec.md"
+      source_hash: "31fc54844daeae74b447e94990be26be78ee90ef30e59b7937e6d49893992c3b"
+  authority_note: "Obsidian, SQLite, semantic, wiki, and .local retrieval layers were navigation support only and are not authority; canonical source and registry rows were inspected directly."
+
+allowed_read_paths:
+  - "SOUL.md"
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research-goal/**"
+  - ".codex/skills/continue-research-continue-goal/**"
+  - ".codex/skills/improve-project-system/**"
+  - ".agents/roles/research_ops/project-system-director.v0.2.0.md"
+  - ".agents/roles/research_ops/process-integrity-auditor.v0.1.0.md"
+  - ".agents/schemas/**"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  - "research_control/design/**"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0930.yaml"
+  - "research_control/tasks/RT-20260731-007/**"
+  - "research_control/tasks/RT-20260731-008/**"
+  - "scripts/project_control/**"
+  - "scripts/research_control/**"
+  - "scripts/validation/**"
+  - "tests/**"
+  - "registries/**"
+
+allowed_write_paths:
+  - "README.md"
+  - "github-facing/**"
+  - "html/aether-flow-ontology-explainer.html"
+  - "html/claim-gates-explainer.html"
+  - "html/exact-gr-benchmark-boundary-explainer.html"
+  - "markdown/html-explainer-specs/**"
+  - "markdown/publication-briefs/**"
+  - "output/**"
+  - "registries/**"
+  - "research_control/current_frontier.md"
+  - "research_control/design/epistemic_category_glossary.md"
+  - "research_control/design/public_status_exists_does_not_exist_source_spec.md"
+  - "research_control/handoffs/handoff-0929.yaml"
+  - "research_control/handoffs/handoff-0929.md"
+  - "research_control/handoffs/handoff-0930.yaml"
+  - "research_control/handoffs/handoff-0930.md"
+  - "research_control/handoffs/handoff-0931.yaml"
+  - "research_control/handoffs/handoff-0931.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260731-007/**"
+  - "research_control/tasks/RT-20260731-008/**"
+  - "research_control/tasks/RT-20260731-009/**"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "scripts/research_control/validate_research_control.py"
+  - "tests/test_research_control.py"
+  - "FOLDER_MAP.md"
+  - "wiki/html/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/tex/**"
+
+allowed_generated_paths:
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "wiki/html/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/tex/**"
+
+forbidden_paths:
+  - ".agents/roles/**"
+  - ".codex/skills/**"
+  - "scripts/project_control/**"
+  - "scripts/validation/**"
+  - "implementations_plans/**"
+  - "ontology/**"
+  - "legacy_ontology/**"
+  - "manuscripts/**"
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - ".github/workflows/**"
+
+allowed_source_classes:
+  - "exact_task_local_record_alignment_validation"
+  - "checkpoint_recovery_control_records"
+  - "generated_control_and_memory_derivatives"
+  - "inherited_preserved_transaction"
+forbidden_source_classes:
+  - "scientific_source"
+  - "ontology_source"
+  - "distance_to_gr_status"
+  - "historical_snapshot_rewrite"
+  - "external_action"
+  - "protected_authority"
+
+approved_commands:
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-DESIGN-PUBLIC-STATUS-EXISTS-DOES-NOT-EXIST-SOURCE-SPEC --json"
+  - ".venv/bin/python -m py_compile scripts/research_control/validate_research_control.py"
+  - "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m unittest -v tests.test_research_control.ResearchControlTests.test_public_status_memory_preflight_preserves_historical_only"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+  - ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --check"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --check"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --write"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --check"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --job-id AJ-RT-20260731-009-001 --json-summary"
+  - ".venv/bin/python scripts/research_control/continue_research.py --summary"
+  - "git diff --check"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260731-009-001"
+
+required_validators:
+  - "immutable_route_dirty_manifest_parity"
+  - "generation_194_record_alignment"
+  - "focused_public_status_memory_preflight_regression"
+  - "project_change_classifier"
+  - "project_improvement_resolver"
+  - "project_improvement_signals"
+  - "documentation_impact"
+  - "claim_language_changed"
+  - "renderers"
+  - "memory_bootstrap"
+  - "memory_validate_only"
+  - "research_control_diff"
+  - "continue_research_resolution"
+  - "git_diff_check"
+  - "governed_checkpoint"
+
+expected_outputs:
+  - "research_control/tasks/RT-20260731-009/00_TASK.yaml"
+  - "research_control/tasks/RT-20260731-009/DDR-20260731-009.md"
+  - "research_control/tasks/RT-20260731-009/artifacts/generation_194_record_alignment_checkpoint_recovery_receipt_v1.yaml"
+  - "research_control/tasks/RT-20260731-009/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260731-009/jobs/completions/AJC-AJ-RT-20260731-009-001.yaml"
+  - "research_control/tasks/RT-20260731-009/roles/process-integrity-auditor@0.1.0--RT-20260731-009.yaml"
+  - "research_control/handoffs/handoff-0931.yaml"
+  - "research_control/handoffs/handoff-0931.md"
+
+claim_boundary:
+  claim_boundary_id: "CB-P14-T06-GENERATION-194-RECORD-ALIGNMENT-CHECKPOINT-RECOVERY-001"
+  allowed_claims:
+    - "the five generation-194 task-local findings are aligned"
+    - "the inherited validator regression and P14-T06 payload remain preserved"
+    - "the distinct recovery is checkpoint-ready after required gates pass"
+  forbidden_claims:
+    - "checkpoint or validator PASS as scientific progress"
+    - "P13-T02 or P15-T05 execution"
+    - "publication push hosted-CI evidence or protected authority"
+    - "ontology metric matter coupling Einstein equations benchmark promotion proof or completed derivation"
+  requires_gate_for:
+    - "any broader source mutation"
+    - "any external action"
+    - "any scientific or protected status change"
+
+documentation_impact_id: "DI-RT-20260731-009-001"
+completion_id: "AJC-AJ-RT-20260731-009-001"
+stop_conditions:
+  - "stop before any mutation outside the exact inherited transaction and new recovery records"
+  - "stop if any inherited dirty-manifest path or protected hash differs before recovery"
+  - "stop on any required validator failure"
+  - "stop after the single checkpoint invocation regardless of result"
+  - "stop before P13-T02 or P15-T05"
+notes: "This AgentJob consumes the one generation-195 worker invocation. It creates no authority to replay generation 194, invoke a second recovery checkpoint, publish, push, dispatch hosted workflows, or change scientific status."

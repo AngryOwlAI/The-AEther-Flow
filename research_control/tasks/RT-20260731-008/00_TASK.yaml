@@ -1,0 +1,74 @@
+validation_status: "FAIL"
+task_id: "RT-20260731-008"
+task_type: "project_system_public_status_mutable_memory_preflight_compatibility_recovery"
+title: "Repair public-status mutable memory-preflight compatibility"
+task_taxonomy:
+  schema_id: "v21_task_taxonomy_v1"
+  work_kind: "benchmark_or_recovery"
+  milestone: "source_ontology"
+  candidate_family: "public_status_mutable_memory_preflight_policy_recovery"
+  result_kind: "completed_or_precisely_blocked"
+  authority: "project_control"
+  scope: "project_system"
+status: "blocked"
+created_at: "2026-08-01T00:10:23Z"
+updated_at: "2026-08-01T00:42:56Z"
+closed_at: "2026-08-01T00:42:56Z"
+parent_task_id: "RT-20260731-007"
+parent_handoff_id: "handoff-0929"
+supersedes_active_routing_task_id: "RT-20260731-007"
+current_decision_id: "DDR-20260731-008"
+current_job_id: "AJ-RT-20260731-008-001"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260731-008"
+requires_human_gate: false
+human_authorization_note: "Generation 194 of the immutable user-requested relay routes exactly one improve-project-system frame to repair the public-status mutable memory-preflight compatibility blocker and checkpoint the preserved P14-T06 transaction once."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P14"
+  plan_task_id: "P14-T06"
+  recovery_for_plan_task_id: "P14-T06"
+  next_plan_task_id: "P14-T06"
+objective: "Add only the registered public-status source object ID to the established mutable memory-preflight set, prove historical compatibility while retaining active-task current-hash and immutable-source enforcement, preserve the complete RT-20260731-007 P14-T06 transaction, and checkpoint the combined transaction once before returning to the P13-T02 external-evidence hold."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system validator compatibility repair only; preserve the P14-T06 publication payload and every Distance-to-GR and scientific boundary unchanged."
+route_label: "register_public_status_source_as_mutable_memory_preflight_and_checkpoint_v1"
+project_system_change_only: true
+dual_budget_category: "system_bearing"
+primary_budget: "project_system"
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+claim_boundary_id: "CB-P14-T06-PUBLIC-STATUS-MUTABLE-PREFLIGHT-RECOVERY-001"
+claim_boundary:
+  allowed_scope: "One exact mutable-source classification entry, one focused active-versus-historical regression, new task-local recovery records, generated synchronization, and one atomic checkpoint of the preserved RT-20260731-007 transaction."
+  immutable_predecessor_task: "RT-20260731-007"
+  immutable_predecessor_job: "AJ-RT-20260731-007-001"
+  immutable_predecessor_completion: "AJC-AJ-RT-20260731-007-001"
+  immutable_predecessor_handoff: "handoff-0929"
+  source_head: "1442eb3b808b8aa9b00645de76c7e2e9cf9c5033"
+  immutable_route_sha256: "97d459880728908f0747dba076a94ea8cd11dde1e0546949be11f249037f0004"
+  public_status_source_object_id: "MD-RESEARCH-CONTROL-DESIGN-PUBLIC-STATUS-EXISTS-DOES-NOT-EXIST-SOURCE-SPEC"
+  predecessor_payload_changed: false
+  historical_snapshot_rewritten: false
+  p13_t02_executed: false
+  scientific_claims_changed: false
+  physics_promotion_authorized: false
+documentation_impact_id: "DI-RT-20260731-008-001"
+completion_id: "AJC-AJ-RT-20260731-008-001"
+planned_outputs:
+  - "scripts/research_control/validate_research_control.py"
+  - "tests/test_research_control.py"
+  - "research_control/tasks/RT-20260731-008/artifacts/public_status_mutable_memory_preflight_compatibility_receipt_v1.yaml"
+  - "research_control/tasks/RT-20260731-008/artifacts/validation_blocker_generation_194_checkpoint_record_alignment_v1.yaml"
+  - "research_control/tasks/RT-20260731-008/jobs/completions/AJC-AJ-RT-20260731-008-001.yaml"
+  - "research_control/handoffs/handoff-0930.yaml"
+  - "research_control/handoffs/handoff-0930.md"
+closure_status: "validator_compatibility_pass_checkpoint_blocked_record_alignment_distinct_recovery_required"
+summary: "Generation 194 adds exactly one registered public-status object ID and one focused active-versus-historical regression, preserving the P14-T06 payload and every historical snapshot. Its single governed checkpoint attempt restored the index and created no commit after staged validation found five task-local record-alignment errors; one distinct checkpoint recovery is required."
+next_recommended_action: "Run one distinct governed improve-project-system checkpoint-recovery AgentJob that validates the aligned generation-194 completion authority note and active-state next-action identity, preserves the validator regression and complete P14-T06 payload, and invokes one new checkpoint; only afterward stop at the P13-T02 external-evidence hold."
+project_improvement_signals: []
+notes: "The compatibility repair is complete, but the transaction is blocked after its sole generation-194 checkpoint attempt failed on task-local record alignment. No second checkpoint is authorized in this generation, and no public-status payload, historical snapshot, canonical ontology, physics TeX, Distance-to-GR ledger, protected verdict, publication, push, or completed-derivation authority changed."

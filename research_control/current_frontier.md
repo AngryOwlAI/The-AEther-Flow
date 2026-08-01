@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260731-006` and `handoff-0928`.
+`RT-20260731-009` and `handoff-0931`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260731-006` |
-| Latest handoff ID | `handoff-0928` |
-| Current status | `handoff_0927_markdown_identity_recovery_pass_ready_for_checkpoint` |
+| Active task ID | `RT-20260731-009` |
+| Latest handoff ID | `handoff-0931` |
+| Current status | `p14_t06_generation_194_record_alignment_recovery_pass_checkpoint_ready_p13_t02_hold_after_commit` |
 | V16 completed | false |
 | Current route family | benchmark or recovery (project system) |
-| Target derivation milestone | `source_ontology` |
-| Current burden | `source_ontology_primitives` |
-| Required next authority | One governed checkpoint for AJ-RT-20260731-006-001. After checkpoint only, one separately claimed P14-T06 public-status alignment packet may execute. |
-| Next recommended action | Run one governed checkpoint for AJ-RT-20260731-006-001. Only after it commits may one fresh bounded P14-T06 Documentation Curator packet align public status, glossary, and claim examples with the protected P14-T04 decision. |
+| Target derivation milestone | none; this is project-control tooling work |
+| Current burden | none for physics derivation; live control burden is validation planner cutover |
+| Required next authority | One governed checkpoint may commit the aligned and preserved P14-T06 transaction. After commit, no P13-T02 AgentJob may be created until exact user publication authority and matched current-head hosted CI plus scheduled-full evidence exist; P15-T05 separately retains its human gate. |
+| Next recommended action | Run the one governed checkpoint for AJ-RT-20260731-009-001. After commit, stop without creating a P13-T02 AgentJob until the user explicitly authorizes publication of the exact checkpoint and matched current-head hosted CI plus scheduled-full evidence exists; P15-T05 separately remains human-gated. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260731-006` |
-| Latest research handoff ID | `handoff-0928` |
-| Latest research next action | Run one governed checkpoint for AJ-RT-20260731-006-001. Only after it commits may one fresh bounded P14-T06 Documentation Curator packet align public status, glossary, and claim examples with the protected P14-T04 decision. |
+| Latest research task ID | `RT-20260731-009` |
+| Latest research handoff ID | `handoff-0931` |
+| Latest research next action | Run the one governed checkpoint for AJ-RT-20260731-009-001. After commit, stop without creating a P13-T02 AgentJob until the user explicitly authorizes publication of the exact checkpoint and matched current-head hosted CI plus scheduled-full evidence exists; P15-T05 separately remains human-gated. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260731-006/00_TASK.yaml`.
-- Active task objective: Insert only the literal handoff-0927 identity into the existing Handoff 0927 Markdown heading, prove every other handoff and P14-T04 source byte unchanged, synchronize ordinary control derivatives, and invoke one governed checkpoint before P14-T06.
-- Latest handoff path: `research_control/handoffs/handoff-0928.yaml`.
-- Latest handoff summary: Generation 192 inserts only the missing eight-byte literal handoff-0927 identity into the P14-T04 Markdown heading. The tracked receipt reconstructs the exact pre-repair Markdown hash, preserves handoff-0927 YAML and protected RT-20260731-005 records, and confirms that the live continuation boundary accepts the pair. P14-T04 was not reexecuted and P14-T06 remains unexecuted.
+- Active task path: `research_control/tasks/RT-20260731-009/00_TASK.yaml`.
+- Active task objective: Validate the already-aligned generation-194 completion authority note and active-state next-action identities, preserve the exact validator regression and complete P14-T06 payload, synchronize direct identities and generated derivatives, and invoke one fresh governed checkpoint before stopping at the P13-T02 external-evidence hold.
+- Latest handoff path: `research_control/handoffs/handoff-0931.yaml`.
+- Latest handoff summary: Generation 195 validates the five aligned generation-194 task-local records, preserves the exact public-status validator regression and complete P14-T06 transaction, binds the immutable 91-path input manifest with zero mismatch, and prepares one distinct governed checkpoint. It changes no scientific, Distance-to-GR, protected, publication, push, or hosted-workflow authority.
 - Current route family: benchmark or recovery (project system).
-- Next recommended action: Run one governed checkpoint for AJ-RT-20260731-006-001. Only after it commits may one fresh bounded P14-T06 Documentation Curator packet align public status, glossary, and claim examples with the protected P14-T04 decision.
+- Next recommended action: Run the one governed checkpoint for AJ-RT-20260731-009-001. After commit, stop without creating a P13-T02 AgentJob until the user explicitly authorizes publication of the exact checkpoint and matched current-head hosted CI plus scheduled-full evidence exists; P15-T05 separately remains human-gated.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -302,7 +302,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one governed checkpoint for AJ-RT-20260731-006-001. Only after it commits may one fresh bounded P14-T06 Documentation Curator packet align public status, glossary, and claim examples with the protected P14-T04 decision.
+Run the one governed checkpoint for AJ-RT-20260731-009-001. After commit, stop without creating a P13-T02 AgentJob until the user explicitly authorizes publication of the exact checkpoint and matched current-head hosted CI plus scheduled-full evidence exists; P15-T05 separately remains human-gated.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -320,27 +320,27 @@ Layer status summary:
 
 | Status | Count | Meaning |
 | --- | --- | --- |
-| `PASS` | 2 | receipt complete |
-| `PENDING` | 5 | open item; evidence must explain why |
+| `PASS` | 3 | receipt complete |
+| `PENDING` | 4 | open item; evidence must explain why |
 
 Validation layers:
 
 | Validation layer | Status | Meaning | Evidence |
 | --- | --- | --- | --- |
-| `pre_execution` | PASS | receipt complete | Generation 192 route, claim, lease, repository binding, and clean manifest validated. |
-| `completion_internal` | PASS | receipt complete | The tracked receipt proves the exact identity insertion and protected predecessor hashes. |
-| `post_write` | PENDING | open item; evidence must explain why | Final repository-wide validation follows handoff and derivative synchronization. |
-| `post_checkpoint` | PENDING | open item; evidence must explain why | One governed recovery checkpoint remains uninvoked. |
-| `renderer` | PENDING | open item; evidence must explain why | Final render-and-check follows this handoff. |
-| `memory_bootstrap` | PENDING | open item; evidence must explain why | Final tracked memory synchronization and validate-only pass remain. |
-| `claim_language_linter` | PENDING | open item; evidence must explain why | Changed-source claim-language validation remains in the precheckpoint stack. |
+| `pre_execution` | PASS | receipt complete | Generation 195 lease route repository branch predecessor and exact dirty manifest passed before one claim and consume. |
+| `completion_internal` | PASS | receipt complete | The receipt reports zero unresolved alignment findings and zero protected hash mismatches. |
+| `post_write` | PASS | receipt complete | Strict YAML focused regression and preservation checks pass for the bounded recovery records. |
+| `post_checkpoint` | PENDING | open item; evidence must explain why | One governed checkpoint remains authorized and uninvoked. |
+| `renderer` | PENDING | open item; evidence must explain why | Finalized current-frontier task-index compact and memory derivatives must be synchronized before checkpoint. |
+| `memory_bootstrap` | PENDING | open item; evidence must explain why | Memory bootstrap and validate-only remain required before checkpoint. |
+| `claim_language_linter` | PENDING | open item; evidence must explain why | Changed-source claim-language validation remains required before checkpoint. |
 
 Authorization layers:
 
 | Authorization field | Value | Meaning |
 | --- | --- | --- |
 | `protected_scoped_gate_review_authorized` | false (not authorized) | scoped review authority only |
-| `protected_scoped_gate_review_scope` | project-system handoff-identity recovery only | exact scope of protected review authority |
+| `protected_scoped_gate_review_scope` | not_applicable | exact scope of protected review authority |
 | `protected_scoped_gate_review_authority_source_path` | none | tracked source for scoped review authority |
 | `downstream_physics_promotion_authorized` | false (not authorized) | authorizes downstream physics promotion only when true |
 | `downstream_physics_promotion_authority_source_path` | none | tracked source for downstream promotion authority |
@@ -348,19 +348,15 @@ Authorization layers:
 | `benchmark_promotion_authority_source_path` | none | tracked source for benchmark authority |
 | `completed_derivation_authorized` | false (not authorized) | authorizes completed-derivation claim only when true |
 | `completed_derivation_authority_source_path` | none | tracked source for completed-derivation authority |
-| `Gate_Chair_verdict_authorized` | False | extension authorization field |
-| `canonical_ontology_edit_authorized` | False | extension authorization field |
-| `global_no_go_claim_authorized` | False | extension authorization field |
 | `proof_authority` | False | extension authorization field |
 | `publication_authorized` | False | extension authorization field |
 | `push_authorized` | False | extension authorization field |
-| `source_law_adoption_authorized` | False | extension authorization field |
 
 Legacy compatibility records:
 
-- active task: `RT-20260731-006`;
-- latest handoff: `handoff-0928`;
-- current status: `handoff_0927_markdown_identity_recovery_pass_ready_for_checkpoint`;
+- active task: `RT-20260731-009`;
+- latest handoff: `handoff-0931`;
+- current status: `p14_t06_generation_194_record_alignment_recovery_pass_checkpoint_ready_p13_t02_hold_after_commit`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -370,8 +366,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0928.yaml`
-- `research_control/tasks/RT-20260731-006/00_TASK.yaml`
+- `research_control/handoffs/handoff-0931.yaml`
+- `research_control/tasks/RT-20260731-009/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -387,7 +383,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0928*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0931*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

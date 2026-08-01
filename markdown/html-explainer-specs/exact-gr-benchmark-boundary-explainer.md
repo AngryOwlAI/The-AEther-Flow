@@ -19,7 +19,10 @@ source_materials:
   - "research_control/design/gr_derivation_burden_map.md"
   - "research_control/design/public_status_exists_does_not_exist_source_spec.md"
   - "research_control/design/epistemic_category_glossary.md"
-claim_boundary: "Human-only publication explainer for the exact-GR benchmark boundary. It distinguishes adoption, compatibility, derivation, and promotion without creating physics claims, benchmark promotion, Gate Chair approval, routing authority, validator authority, or generated-output authority."
+  - "research_control/tasks/RT-20260731-005/artifacts/p14_t04_congruence_status_decision_v1.tex"
+  - "research_control/tasks/RT-20260729-001/artifacts/p7_t08_gate_c_decision_v1.tex"
+  - "research_control/tasks/RT-20260731-004/artifacts/p9_t09_gate_e_decision_v1.tex"
+claim_boundary: "Human-only publication explainer for the exact-GR benchmark boundary. It distinguishes ontology, target-side exact closure, formal equivalence, genuine emergence, operational meaning, empirical novelty, adoption, compatibility, derivation, and promotion without creating source recovery, source-selected congruence, pure-gauge or independent-field status, physics claims, benchmark promotion, Gate Chair approval, routing authority, validator authority, or generated-output authority."
 human_visual_only: true
 standalone_html: true
 no_external_runtime: true
@@ -57,9 +60,17 @@ map, not a proof and not a claim gate.
   benchmark promotion, blocked Einstein equations, scoped `M_src`, scoped
   `g_eff`, and scoped matter-coupling evidence/preconditions.
 - `research_control/design/epistemic_category_glossary.md` supplies category
-  distinctions for interpretation, model, benchmark compatibility, derivation,
-  evidence/precondition, adoption, promotion, validator receipt, publication,
-  and authority source.
+  distinctions for interpretation, exact closure, formal equivalence, genuine
+  emergence, operational meaning, empirical novelty, evidence/precondition,
+  adoption, promotion, validator receipt, publication, and authority source.
+- `research_control/tasks/RT-20260731-005/artifacts/p14_t04_congruence_status_decision_v1.tex`
+  fixes the target-side interpretive-representative congruence boundary.
+- `research_control/tasks/RT-20260729-001/artifacts/p7_t08_gate_c_decision_v1.tex`
+  supplies the exact protected finite matter postulate boundary without source
+  derivation or downstream gravity.
+- `research_control/tasks/RT-20260731-004/artifacts/p9_t09_gate_e_decision_v1.tex`
+  records six inconclusive cases, zero passes, denied benchmark promotion, and
+  no completed-derivation authority.
 
 ## Required Reader Outcome
 
@@ -68,7 +79,8 @@ benchmark as a conservative operational boundary; it has not completed a
 first-principles substrate derivation; benchmark promotion remains a gated
 matter for source authority, not public derivative prose. The opening should
 teach adoption, compatibility, derivation, and promotion as separate statuses
-before authority metadata, while the full generated-noncanonical authority
+and keep the six epistemic labels separate before authority metadata, while
+the full generated-noncanonical authority
 paragraph belongs in the footer authority section.
 
 ## Reader Scope Footer Binding
@@ -102,6 +114,12 @@ generic documentation-flow diagram.
   burdens and protected authority.
 - Uses positive-first status-card wording for high-risk scoped rows:
   positive scoped status, exact scope, allowed use, then blocked overread.
+- Separates ontology, exact closure, formal equivalence, genuine emergence,
+  operational meaning, and empirical novelty.
+- States `u^mu` interpretive-representative status, fixed-protocol
+  representative independence, and observer-relative exceptions.
+- States the exact finite P7 protected matter adoption separately from source
+  derivation, and states the protected Gate E `NOT_READY` disposition.
 - Uses the bottom Reader Scope hook immediately above the marked authority
   footer in GitHub Markdown and tracked HTML.
 - Places the full generated-noncanonical authority paragraph only in the

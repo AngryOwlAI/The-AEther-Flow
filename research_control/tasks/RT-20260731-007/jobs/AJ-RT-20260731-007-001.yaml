@@ -1,0 +1,425 @@
+job_id: "AJ-RT-20260731-007-001"
+task_id: "RT-20260731-007"
+decision_id: "DDR-20260731-007"
+role_id: "documentation-curator"
+role_version: "2.0.0"
+execution_role_ref: "documentation-curator@2.0.0--RT-20260731-007"
+status: "completed"
+validation_status: "FAIL"
+created_at: "2026-07-31T21:43:17Z"
+started_at: "2026-07-31T21:43:17Z"
+completed_at: "2026-07-31T23:15:45Z"
+requires_human_gate: false
+human_authorization_note: "Generation 193 is one user-authorized recursive relay frame; this non-protected documentation packet cannot expand scientific or publication authority."
+objective: "Align source-backed public status, glossary, claim examples, and three paired explainer surfaces with the protected P14-T04 interpretive-representative target-congruence decision and all v21 category boundaries."
+target_derivation_milestone: "source_ontology"
+milestone_burden: "Make public explanations accurately reflect protected decisions and scientific status."
+route_label: "ordinary-research-packet"
+route_reason: "dependency_ready_planned_project_system_work"
+strategy_id: "align_public_status_glossary_and_claim_examples_with_p14_t04_v1"
+immutable_route_sha256: "68204295cd7bc37bf56fca023620764eacf4a50c579e4db50e1da1ab5e7044dd"
+plan_task_id: "P14-T06"
+project_system_change_only: true
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 193
+  passes_consumed: 174
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:193"
+  handoff_token: "ba88b3e6f6975d78b0ce97bc2f21ef9d13680fc2dbbfadcd"
+  relay_claim_token: "a678804d061d2bc7e9958ae30687bd624e22e11e399c0365"
+  route_work_item_id: "P14-T06"
+  route_worker_skill: "improve-project-system"
+  route_sha256: "68204295cd7bc37bf56fca023620764eacf4a50c579e4db50e1da1ab5e7044dd"
+  route_reason: "dependency_ready_planned_project_system_work"
+  route_strategy_id: "align_public_status_glossary_and_claim_examples_with_p14_t04_v1"
+  route_blocker_fingerprint: "60f4d3b73b5539d8023ce47164382e2a68b635814421aef3c8468e1a5a3eef56"
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  candidate_family: "not_applicable"
+  assumption_delta:
+    - "No scientific assumption changes; the packet communicates fixed canonical and protected status."
+    - "The protected P14-T04 decision and every stronger-status block remain unchanged."
+  materiality_basis: "Creates a source-backed public distinction layer and claim examples not yet aligned with the protected P14-T04 decision."
+  source_basis:
+    - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+    - "MD-RESEARCH-CONTROL-DESIGN-PUBLIC-STATUS-EXISTS-DOES-NOT-EXIST-SOURCE-SPEC"
+    - "MD-RESEARCH-CONTROL-DESIGN-EPISTEMIC-CATEGORY-GLOSSARY"
+    - "TEX-V21-P14-T04-PROTECTED-CONGRUENCE-STATUS-DECISION-V1"
+  expected_artifact_paths:
+    - "research_control/tasks/RT-20260731-007/artifacts/p14_t06_public_claim_language_examples_v1.yaml"
+    - "research_control/tasks/RT-20260731-007/artifacts/p14_t06_public_status_alignment_receipt.md"
+  project_system_justification: "P14-T06 is explicitly a project-system documentation alignment task and contributes no physics payload or Distance-to-GR movement."
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  expected_durable_outputs:
+    physics: []
+    project_system:
+      - "aligned public status and epistemic glossary sources"
+      - "source-backed claim-language examples"
+      - "three synchronized paired publication surfaces"
+      - "one compact task-local receipt"
+  acceptance_criteria:
+    physics: []
+    project_system:
+      - "six epistemic categories remain visibly distinct"
+      - "P14-T04 source-target and representative-independence boundaries are exact"
+      - "publication and claim-language validation pass"
+      - "generated pages carry fresh source-basis metadata"
+      - "one governed checkpoint commits"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: false
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0928"
+  source_handoff_path: "research_control/handoffs/handoff-0928.yaml"
+  source_handoff_sha256: "1d8dfb9fd99ee152a6b02e0733dd4e58e22e802f3c2c483e2701febe167a7c3d"
+  selected_plan_task_id: "P14-T06"
+  guard_outcome: "below_threshold"
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1107
+    relationship_row_count: 5594
+    semantic_row_count: 1107
+    vault_row_count: 1107
+  refresh_needed: true
+  refresh_deferred_until_bounded_write_complete: true
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v21.md --json"
+      query_type: "lookup"
+      query_text: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/design/public_status_exists_does_not_exist_source_spec.md --json"
+      query_type: "lookup"
+      query_text: "research_control/design/public_status_exists_does_not_exist_source_spec.md"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-DESIGN-PUBLIC-STATUS-EXISTS-DOES-NOT-EXIST-SOURCE-SPEC"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/design/epistemic_category_glossary.md --json"
+      query_type: "lookup"
+      query_text: "research_control/design/epistemic_category_glossary.md"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-DESIGN-EPISTEMIC-CATEGORY-GLOSSARY"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-V21-P14-T04-PROTECTED-CONGRUENCE-STATUS-DECISION-V1 --json"
+      query_type: "lookup"
+      query_text: "TEX-V21-P14-T04-PROTECTED-CONGRUENCE-STATUS-DECISION-V1"
+      returned_object_ids:
+        - "TEX-V21-P14-T04-PROTECTED-CONGRUENCE-STATUS-DECISION-V1"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-PUBLIC-STATUS-EXISTS-DOES-NOT-EXIST-SOURCE-SPEC"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/public_status_exists_does_not_exist_source_spec.md"
+      source_hash: "31fc54844daeae74b447e94990be26be78ee90ef30e59b7937e6d49893992c3b"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-EPISTEMIC-CATEGORY-GLOSSARY"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/epistemic_category_glossary.md"
+      source_hash: "7efefc897babf2a7082b6dd080aa3f029360dd70f04990caedbe8e476dd78c9c"
+    - object_id: "TEX-V21-P14-T04-PROTECTED-CONGRUENCE-STATUS-DECISION-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260731-005/artifacts/p14_t04_congruence_status_decision_v1.tex"
+      source_hash: "894d53ceffb182835e216ab2ad5722a8f6d60551d75fa48681397284e9060147"
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority; stale local mirrors are refreshed only after canonical writes."
+
+allowed_read_paths:
+  - "SOUL.md"
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research-goal/SKILL.md"
+  - ".codex/skills/continue-research-continue-goal/SKILL.md"
+  - ".codex/skills/improve-project-system/SKILL.md"
+  - ".codex/skills/html-visual-explainer/SKILL.md"
+  - ".agents/roles/research_ops/documentation-curator.v2.0.0.md"
+  - ".agents/schemas/AGENT_JOB_SCHEMA.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0928.yaml"
+  - "research_control/handoffs/handoff-0928.md"
+  - "research_control/design/**"
+  - "research_control/tasks/RT-20260722-018/**"
+  - "research_control/tasks/RT-20260722-019/**"
+  - "research_control/tasks/RT-20260731-005/**"
+  - "research_control/tasks/RT-20260722-020/**"
+  - "ontology/tex/aether_flow_foundations.tex"
+  - "ontology/tex/aether_flow_geometry.tex"
+  - "README.md"
+  - "github-facing/**"
+  - "html/**"
+  - "markdown/html-explainer-specs/**"
+  - "markdown/publication-briefs/**"
+  - "registries/**"
+  - "scripts/project_control/**"
+  - "scripts/research_control/**"
+  - "scripts/validation/**"
+  - "tests/**"
+
+allowed_write_paths:
+  - "research_control/design/public_status_exists_does_not_exist_source_spec.md"
+  - "research_control/design/epistemic_category_glossary.md"
+  - "README.md"
+  - "github-facing/aether-flow-ontology-explainer.md"
+  - "github-facing/exact-gr-benchmark-boundary-explainer.md"
+  - "github-facing/claim-gates-explainer.md"
+  - "markdown/html-explainer-specs/aether-flow-ontology-explainer.md"
+  - "markdown/html-explainer-specs/exact-gr-benchmark-boundary-explainer.md"
+  - "markdown/html-explainer-specs/claim-gates-explainer.md"
+  - "markdown/publication-briefs/aether-flow-ontology.publication-brief.md"
+  - "markdown/publication-briefs/exact-gr-benchmark-boundary.publication-brief.md"
+  - "markdown/publication-briefs/claim-gates.publication-brief.md"
+  - "html/aether-flow-ontology-explainer.html"
+  - "html/exact-gr-benchmark-boundary-explainer.html"
+  - "html/claim-gates-explainer.html"
+  - "research_control/tasks/RT-20260731-007/**"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "research_control/handoffs/handoff-0929.yaml"
+  - "research_control/handoffs/handoff-0929.md"
+  - "registries/**"
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/html/**"
+  - "wiki/markdown/**"
+  - "wiki/tex/**"
+
+allowed_generated_paths:
+  - "html/aether-flow-ontology-explainer.html"
+  - "html/exact-gr-benchmark-boundary-explainer.html"
+  - "html/claim-gates-explainer.html"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/HTML_EXPLAINER_REGISTRY.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/PUBLICATION_BRIEF_REGISTRY.csv"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/html/**"
+  - "wiki/markdown/**"
+  - "wiki/tex/**"
+
+forbidden_paths:
+  - ".agents/roles/**"
+  - ".codex/skills/**"
+  - "scripts/**"
+  - "tests/**"
+  - "implementations_plans/**"
+  - "ontology/**"
+  - "legacy_ontology/**"
+  - "manuscripts/**"
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "registries/TEX_SOURCE_REGISTRY.csv"
+
+allowed_source_classes:
+  - "public_status_control_source"
+  - "epistemic_glossary_control_source"
+  - "explanatory_markdown"
+  - "html_explainer_source_spec"
+  - "publication_brief"
+  - "generated_html_derivative"
+  - "task_control_record"
+  - "registry_metadata"
+  - "generated_memory_derivative"
+
+forbidden_source_classes:
+  - "canonical_ontology_write"
+  - "science_source_edit"
+  - "protected_decision_revision"
+  - "source_law_adoption"
+  - "source_to_congruence_bridge_claim"
+  - "source_selected_congruence_claim"
+  - "pure_gauge_claim"
+  - "independent_field_claim"
+  - "matter_semantics_adoption"
+  - "matter_coupling_derivation_or_adoption"
+  - "Einstein_equations"
+  - "benchmark_promotion"
+  - "gate_chair_verdict"
+  - "scientific_proof"
+  - "external_publication_or_outreach"
+  - "completed_derivation_claim"
+  - "global_no_go_or_future_impossibility"
+  - "generated_derivative_authority"
+
+approved_commands:
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v21.md --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/design/public_status_exists_does_not_exist_source_spec.md --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/design/epistemic_category_glossary.md --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-V21-P14-T04-PROTECTED-CONGRUENCE-STATUS-DECISION-V1 --json"
+  - ".venv/bin/python scripts/validate_publication_process.py --root ."
+  - ".venv/bin/python scripts/project_control/audit_documentation_surfaces.py --json"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --check"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --check"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --json output/research_dependency_graph.json --markdown wiki/indexes/research_dependency_graph.md --dot output/research_dependency_graph.dot"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --check"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+  - ".venv/bin/python scripts/research_control/run_full_research_control_validation.py --json --output research_control/tasks/RT-20260731-007/artifacts/p14_t06_local_ci_equivalent_report.json"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff"
+  - ".venv/bin/python -m unittest tests.test_publication_process"
+  - "git diff --check"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260731-007-001"
+
+required_validators:
+  - "memory_preflight"
+  - "dependency_completion_inspection"
+  - "publication_process_validation"
+  - "documentation_surface_audit"
+  - "claim_language_changed_lint"
+  - "classification_receipt"
+  - "project_improvement_signal_parity"
+  - "documentation_impact_validation"
+  - "current_frontier_freshness"
+  - "task_index_freshness"
+  - "dependency_graph_freshness"
+  - "memory_bootstrap_and_validate_only"
+  - "selected_publication_test_shard"
+  - "local_ci_equivalent"
+  - "research_control_validation"
+  - "research_control_check_diff"
+  - "git_diff_check"
+  - "governed_checkpoint"
+
+expected_outputs:
+  - "research_control/design/public_status_exists_does_not_exist_source_spec.md"
+  - "research_control/design/epistemic_category_glossary.md"
+  - "README.md"
+  - "github-facing/aether-flow-ontology-explainer.md"
+  - "github-facing/exact-gr-benchmark-boundary-explainer.md"
+  - "github-facing/claim-gates-explainer.md"
+  - "markdown/html-explainer-specs/aether-flow-ontology-explainer.md"
+  - "markdown/html-explainer-specs/exact-gr-benchmark-boundary-explainer.md"
+  - "markdown/html-explainer-specs/claim-gates-explainer.md"
+  - "markdown/publication-briefs/aether-flow-ontology.publication-brief.md"
+  - "markdown/publication-briefs/exact-gr-benchmark-boundary.publication-brief.md"
+  - "markdown/publication-briefs/claim-gates.publication-brief.md"
+  - "html/aether-flow-ontology-explainer.html"
+  - "html/exact-gr-benchmark-boundary-explainer.html"
+  - "html/claim-gates-explainer.html"
+  - "research_control/tasks/RT-20260731-007/artifacts/p14_t06_public_claim_language_examples_v1.yaml"
+  - "research_control/tasks/RT-20260731-007/artifacts/p14_t06_public_status_alignment_receipt.md"
+  - "research_control/tasks/RT-20260731-007/jobs/completions/AJC-AJ-RT-20260731-007-001.yaml"
+  - "research_control/handoffs/handoff-0929.yaml"
+  - "research_control/handoffs/handoff-0929.md"
+
+claim_boundary:
+  claim_boundary_id: "CB-V21-P14-T06-PUBLIC-STATUS-ALIGNMENT-001"
+  allowed_scope: "Public documentation alignment for the fixed P14-T02 through P14-T05 evidence chain only."
+  protected_status: "INTERPRETIVE_REPRESENTATIVE_TARGET_CONGRUENCE_ONLY"
+  allowed_claims:
+    - "target-side u^mu is an admissible generally non-unique interpretive representative in the adopted GR benchmark"
+    - "fixed target solutions base observables and fixed protocols are representative independent"
+    - "congruence-explicit and observer-relative quantities may differ"
+    - "ontology exact closure formal equivalence genuine emergence operational meaning and empirical novelty are separate statuses"
+  forbidden_claims:
+    - "u^mu is Phi_src or source-selected"
+    - "u^mu is established pure gauge or an independent physical field"
+    - "representative independence removes observer-relative measurement differences"
+    - "public documentation changes scientific status or creates proof promotion publication or push authority"
+  requires_gate_for:
+    - "canonical ontology change"
+    - "source-to-congruence bridge adoption"
+    - "pure-gauge or independent-field status"
+    - "benchmark promotion"
+    - "completed derivation"
+
+stop_conditions:
+  - "Any required P14 dependency is not canonically completed."
+  - "Any wording would revise or expand the protected P14-T04 decision."
+  - "Any requested edit falls outside the exact write allowlist."
+  - "Any validator failure cannot be resolved within this same bounded documentation strategy."
+  - "Any unexpected dirty state or repository-binding mismatch appears."

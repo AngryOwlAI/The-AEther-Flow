@@ -4,10 +4,11 @@
 
 ## Scope
 
-This source spec defines the simplified public status table required by v15
-P14-T01. It is a project-control documentation source for future public-facing
-surfaces. It is not a physics proof, not a generated derivative, not a
-Gate Chair verdict, and not authority to promote any scientific claim.
+This source spec defines the simplified public status table introduced by v15
+P14-T01 and aligned by v21 P14-T06 with the completed P14-T02 through P14-T05
+evidence chain. It is a project-control documentation source for public-facing
+surfaces. It is not a physics proof, not a generated derivative, not a Gate
+Chair verdict, and not authority to promote any scientific claim.
 
 The table answers two public questions:
 
@@ -24,10 +25,15 @@ governs in this order:
    high-risk claim wording.
 3. `research_control/design/distance_to_gr_status_aliases.yaml` for
    reader-facing aliases and object-specific blocked-overread language.
-4. Row-specific Gate Chair, task, or control artifacts listed in the table.
-5. `research_control/design/public_status_table_source_spec.md` as the older
+4. Row-specific protected decisions, Gate Chair artifacts, task completions,
+   or control artifacts listed in the table, including the P14-T04 congruence
+   decision.
+5. `research_control/design/epistemic_category_glossary.md` for distinctions
+   among ontology, exact closure, formal equivalence, genuine emergence,
+   operational meaning, and empirical novelty.
+6. `research_control/design/public_status_table_source_spec.md` as the older
    v14 layered public-status table contract.
-6. This source spec as the simplified exists / does-not-exist public table
+7. This source spec as the simplified exists / does-not-exist public table
    contract.
 
 Generated wiki notes, HTML, PDFs, Obsidian notes, semantic extracts, `.local`
@@ -42,13 +48,29 @@ same meaning, although headings may be adapted for layout.
 | Object or target | What exists | What does not exist | Source basis | Public-safe wording rule |
 | --- | --- | --- | --- | --- |
 | AEther-flow ontology | proposed research ontology / explanatory frame | established physical ontology | `AGENTS.md`; `registries/DISTANCE_TO_GR_LEDGER.csv` row `source_ontology_primitives`; `research_control/design/distance_to_gr_status_aliases.yaml` row alias `source_ontology_primitives` | Say the ontology is a proposed research frame with controlled draft primitives. Do not say it is an established physical ontology or completed foundation for deriving GR. |
+| Exact-GR operational closure | adopted target-side GR dynamics in the canonical exact-closure manuscript sequence | first-principles source derivation, benchmark promotion, or empirical novelty | `ontology/tex/aether_flow_foundations.tex`; `ontology/tex/aether_flow_geometry.tex`; `registries/DISTANCE_TO_GR_LEDGER.csv` rows `einstein_equations` and `benchmark_promotion`; `research_control/tasks/RT-20260731-004/artifacts/p9_t09_gate_e_decision_v1.tex` | Say the exact-closure theory adopts ordinary GR as its target-side operational law. State separately that Gate E found source recovery not ready, denied benchmark promotion, and forbids a completed-derivation claim. |
+| Target-side congruence `u^mu` | admissible, generally non-unique interpretive representative inside the adopted GR benchmark | `Phi_src`, a source-selected congruence, an established pure-gauge result, an independent dynamical field, or a source-to-target bridge | `ontology/tex/aether_flow_geometry.tex`; `research_control/tasks/RT-20260731-005/artifacts/p14_t04_congruence_status_decision_v1.tex`; `research_control/tasks/RT-20260731-005/artifacts/p14_t04_downstream_requirement_update_v1.yaml` | Say `u^mu` supplies a target-side interpretive dictionary only. Representative independence applies to a fixed target solution, fixed base observables, and fixed protocols; congruence-explicit or observer-relative quantities can still differ. |
 | `M_src` | scoped source-only object | target manifold, metric, GR derivation | `registries/DISTANCE_TO_GR_LEDGER.csv` row `m_src`; `research_control/tasks/RT-20260614-134/artifacts/165_M_SRC_GSC_INTEGRATED_SOURCE_ONLY_ADOPTION_THEOREM_GATE_CHAIR_REVIEW.tex`; `research_control/design/scoped_positive_claim_vocabulary.md` object-specific vocabulary | Say `M_src` exists only as a scoped source-side object under its tracked review. Do not present it as a target manifold, metric, or GR derivation. |
-| `g_eff` | scoped source-extension object | unscoped Lorentzian metric, matter coupling, Einstein equations | `registries/DISTANCE_TO_GR_LEDGER.csv` row `g_eff`; `research_control/tasks/RT-20260614-222/artifacts/251_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_GEFF_CANDIDATE_SCOPED_SOURCE_EXTENSION_ADOPTION_GATE_CHAIR_REVIEW.tex`; `research_control/design/scoped_positive_claim_vocabulary.md` object-specific vocabulary | Say `g_eff` exists only inside its declared source-extension scope. Do not present it as an unscoped Lorentzian metric, matter-coupling result, or Einstein-equation premise. |
-| Matter-sector evidence | scoped evidence/preconditions | matter semantics, detector semantics, coupling law, matter coupling | `registries/DISTANCE_TO_GR_LEDGER.csv` row `matter_coupling`; `research_control/design/scoped_positive_claim_vocabulary.md`; `research_control/design/distance_to_gr_status_aliases.yaml` row alias `matter_coupling`; `research_control/tasks/RT-20260702-064/artifacts/source_certificate_operation_laws_v1.tex` | Say current matter-sector material is scoped evidence/precondition support. Do not say matter semantics, detector semantics, a coupling law, or matter coupling has been adopted or derived. |
+| `ScopedMetricStructureRecord_src` (`g_eff^{GSC-cand}` legacy alias) | exact ten-slot scoped source-extension record | unscoped Lorentzian metric, operational geometry, matter coupling, Einstein equations | `registries/DISTANCE_TO_GR_LEDGER.csv` row `g_eff`; `research_control/tasks/RT-20260727-004/artifacts/p6_t08_gate_b_separating_certificate_v1.yaml`; `research_control/design/scoped_positive_claim_vocabulary.md` | Use the current record name and identify `g_eff^{GSC-cand}` only as its exact legacy alias. Do not shorten the scoped record to an unscoped physical metric or a lawful P7 geometry input. |
+| Protected finite matter package | exact P7 package adopted as canonical physical matter by explicit protected human postulate within its declared finite domains and current source architecture | first-principles source derivation of those meanings, target-side stress-energy, `g_eff`, equivalence-principle recovery, Einstein equations, or benchmark promotion | `research_control/tasks/RT-20260729-001/artifacts/p7_t08_gate_c_decision_v1.tex`; `research_control/tasks/RT-20260729-001/artifacts/p7_t08_constitutive_postulate_ledger_v1.yaml`; `research_control/program_state.yaml` block `p7_t08_physical_matter_adoption` | State the positive protected postulate-level adoption first and its exact finite scope. State separately that the current ontology does not derive the adopted meanings and that the cross-layer composition gap remains open. |
+| Matter-sector derivational evidence | parameterized finite/local witness preconditions supporting the protected package and later work | source-derived physical matter, target-side gravity, or a completed matter-coupling derivation | `registries/DISTANCE_TO_GR_LEDGER.csv` row `matter_coupling`; `research_control/tasks/RT-20260729-001/artifacts/p7_t08_gate_c_decision_v1.tex`; `research_control/tasks/RT-20260728-006/artifacts/matter_package_smuggling_audit_v1.tex` | Keep evidence/precondition status distinct from the separate protected postulate. Neither the evidence nor the postulate supplies a first-principles source derivation or downstream gravitational closure. |
 | `RR_E` transport/invariance evidence | certificate-indexed scoped evidence/precondition | source-law adoption, unrestricted theorem | `research_control/design/scoped_positive_claim_vocabulary.md`; `research_control/design/distance_to_gr_status_aliases.yaml` object alias `RR_ETransportCompletenessOrInvarianceLaw_v1`; `research_control/tasks/RT-20260701-030/artifacts/rr_e_transport_law_gate_chair_review_v1.tex`; `registries/DISTANCE_TO_GR_LEDGER.csv` row `matter_coupling` | Say `RR_E` transport/invariance material is certificate-indexed scoped evidence/precondition only. Do not say it is source-law adoption, object adoption, an unrestricted `RR_E` theorem, detector semantics, or matter coupling. |
-| Einstein equations | not started | field-equation derivation | `registries/DISTANCE_TO_GR_LEDGER.csv` row `einstein_equations`; `research_control/design/einstein_equation_route_moratorium_v1.md`; `research_control/program_state.yaml` | Say Einstein equations are not derived and direct EFE routing is blocked until prerequisites are established or lawfully routed. Do not describe scoped evidence/preconditions as a field-equation derivation. |
-| Benchmark promotion | blocked | exact-GR derivation or closure | `registries/DISTANCE_TO_GR_LEDGER.csv` row `benchmark_promotion`; `research_control/design/distance_to_gr_status_aliases.yaml` row alias `benchmark_promotion`; `research_control/design/public_status_table_source_spec.md` | Say exact-GR benchmark promotion remains blocked by upstream derivation burdens and protected authority. Do not claim benchmark closure, benchmark fit, exact-GR derivation, or completed derivation. |
-| Completed derivation | no | no completed derivation | `registries/DISTANCE_TO_GR_LEDGER.csv` rows `einstein_equations`, `benchmark_promotion`, and `gate_chair_status`; `research_control/current_frontier.md`; `implementations_plans/recommendations_implementation_plan_continue_task-v15.md` P14-T01 | Say the project has no completed GR derivation. Do not imply completion from scoped objects, scoped evidence/preconditions, validators, generated derivatives, or commits. |
+| Einstein equations | draft/control Einstein-sector artifacts and a protected Gate D `NOT_READY` decision | source-derived physical field equations | `registries/DISTANCE_TO_GR_LEDGER.csv` row `einstein_equations`; `research_control/tasks/RT-20260729-011/artifacts/p8_t07_gate_d_decision_v1.tex`; `research_control/program_state.yaml` | Say the protected review found the Einstein-sector derivation requirements unmet. Do not turn finite controls, adopted matter postulates, or target-side exact closure into a source-derived field-equation result. |
+| Benchmark promotion | a protected Gate E `NOT_READY` decision with six inconclusive cases and zero passes | exact or controlled-approximate GR recovery, benchmark promotion, independent replication, or completed derivation | `registries/DISTANCE_TO_GR_LEDGER.csv` row `benchmark_promotion`; `research_control/tasks/RT-20260731-004/artifacts/p9_t09_gate_e_decision_v1.tex`; `research_control/program_state.yaml` | Say benchmark promotion was denied as not ready. Do not turn the target-side exact-GR operational closure, a protected review, or documentation into source recovery or benchmark closure. |
+| Completed derivation | an explicit protected decision that it may not be claimed | completed first-principles derivation | `registries/DISTANCE_TO_GR_LEDGER.csv` rows `einstein_equations`, `benchmark_promotion`, and `gate_chair_status`; `research_control/tasks/RT-20260731-004/artifacts/p9_t09_gate_e_decision_v1.tex`; `research_control/current_frontier.md` | Say the project has no completed GR derivation. Do not imply completion from adopted target-side closure, protected postulates, scoped objects, evidence, validators, generated derivatives, or commits. |
+
+## Required Success-Label Separation
+
+Public explanations must keep these six labels visibly distinct:
+
+| Label | Minimum public meaning | Does not establish |
+| --- | --- | --- |
+| Ontology | What the proposed source interpretation says reality may be about. | Exact target dynamics, source derivation, or empirical truth. |
+| Exact closure | Ordinary GR is adopted as the target-side operational law of the exact-closure theory. | First-principles recovery from source variables or benchmark promotion. |
+| Formal equivalence | A declared mathematical relation, isomorphism, quotient, or target-side redescription under stated assumptions. | Positive source provenance, physical interpretation, or genuine emergence. |
+| Genuine emergence | A source-to-target result supported by provenance, dynamics, uniqueness or quotient status, operational meaning, and robustness. | It is not supplied merely by no-target purity, exact closure, or an interpretive representative. |
+| Operational meaning | A tracked link to observers, detectors, protocols, calibration, or physical semantics within exact scope. | Source derivation, representative uniqueness, or empirical novelty. |
+| Empirical novelty | A source-backed observable difference or independent prediction with an authorized comparison protocol. | It is not implied by interpretation, formal equivalence, exact closure, or current public documentation. |
 
 ## Rendering Rules
 
@@ -58,14 +80,18 @@ Public renderings of this table must:
 2. State that GR has not been derived.
 3. State that AEther-flow is a proposed research ontology or explanatory
    frame, not an established physical ontology.
-4. Preserve scoped wording for `M_src`, `g_eff`, matter-sector evidence, and
-   `RR_E` transport/invariance evidence.
-5. Preserve blocked wording for matter semantics, detector semantics, coupling
-   law, matter coupling, stress-energy semantics, matter action, variation
-   principle, Einstein equations, benchmark promotion, Gate Chair closure, and
-   completed derivation.
-6. Cite or link the source basis for each rendered row.
-7. Treat this table as a public documentation contract, not as authority to
+4. Preserve scoped wording for `M_src`, the current
+   `ScopedMetricStructureRecord_src`, matter-sector evidence, and `RR_E`
+   transport/invariance evidence.
+5. State the exact P7 protected matter adoption positively while separating
+   postulate-level adoption from source derivation and downstream gravity.
+6. State the target-side congruence status and the observer-relative exception
+   to fixed-protocol representative independence.
+7. Preserve blocked wording for source-derived matter coupling, target-side
+   stress-energy, Einstein equations, benchmark promotion, Gate Chair closure,
+   empirical novelty, and completed derivation.
+8. Cite or link the source basis for each rendered row.
+9. Treat this table as a public documentation contract, not as authority to
    edit the ledger, ontology, theorem inventory, Gate Chair artifacts, or
    canonical science sources.
 
@@ -77,12 +103,12 @@ source. It provides a shorter public table for surfaces where the reader needs
 the basic distinction between existing scoped project objects and non-existing
 downstream physical or derivational claims.
 
-## Deferred Public Updates
+## P14-T06 Propagation Boundary
 
-README, GitHub-facing pages, Markdown HTML-explainer source specs, publication
-briefs, and generated HTML updates are deferred to P14-T03 if the
-documentation-impact classifier or tracked handoff routes that work. This
-packet creates the source spec only.
+P14-T06 propagates this contract only to its bounded README and paired
+publication surfaces. That synchronization remains project-system work. It
+does not revise the ledger, the P14-T04 decision, canonical ontology, physics
+TeX, a protected Gate verdict, or any scientific claim status.
 
 ## Source Materials
 
@@ -101,7 +127,23 @@ The AEther-Flow Research Project. (2026, July 2). *Public status table source
 spec* [Internal control note].
 `research_control/design/public_status_table_source_spec.md`
 
-The AEther-Flow Research Project. (2026, July 3). *Recommendations
-implementation plan for `/continue-research`, v15* [Internal implementation
+The AEther-Flow Research Project. (2026, July 20). *Recommendations
+implementation plan for `/continue-research`, v21* [Internal implementation
 plan].
-`implementations_plans/recommendations_implementation_plan_continue_task-v15.md`
+`implementations_plans/recommendations_implementation_plan_continue_task-v21.md`
+
+The AEther-Flow Research Project. (2026, July 22). *Non-empirical ontology
+success criteria* [Draft/control scientific artifact].
+`research_control/tasks/RT-20260722-018/artifacts/non_empirical_ontology_success_criteria_v1.tex`
+
+The AEther-Flow Research Project. (2026, July 22). *No-target positive
+provenance sufficiency policy* [Draft/control scientific artifact].
+`research_control/tasks/RT-20260722-019/artifacts/no_target_positive_provenance_sufficiency_policy_v1.tex`
+
+The AEther-Flow Research Project. (2026, July 31). *Protected congruence status
+decision* [Protected task-local scientific gate artifact].
+`research_control/tasks/RT-20260731-005/artifacts/p14_t04_congruence_status_decision_v1.tex`
+
+The AEther-Flow Research Project. (2026, July 22). *Negative-result success
+pathway* [Draft/control scientific artifact].
+`research_control/tasks/RT-20260722-020/artifacts/negative_result_success_pathway_v1.tex`

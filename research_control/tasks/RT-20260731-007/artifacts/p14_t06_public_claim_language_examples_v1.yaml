@@ -1,0 +1,106 @@
+schema_id: "p14_t06_public_claim_language_examples_v1"
+artifact_id: "P14-T06-PUBLIC-CLAIM-LANGUAGE-EXAMPLES-V1"
+task_id: "RT-20260731-007"
+job_id: "AJ-RT-20260731-007-001"
+plan_task_id: "P14-T06"
+authority_status: "draft_control_artifact"
+validation_status: "PASS"
+created_at: "2026-07-31T21:43:17Z"
+purpose: "Bind reader-facing examples to the completed P14-T02 through P14-T05 evidence chain without creating scientific authority."
+
+source_basis:
+  - object_id: "TEX-V21-P14-T02-NON-EMPIRICAL-ONTOLOGY-SUCCESS-CRITERIA-V1"
+    path: "research_control/tasks/RT-20260722-018/artifacts/non_empirical_ontology_success_criteria_v1.tex"
+    sha256: "261877bd01d1b405dd6a4a811ad04bc3a458210523227eb94b5aabd0104a53f9"
+  - object_id: "TEX-V21-P14-T03-NO-TARGET-POSITIVE-SUFFICIENCY-POLICY-V1"
+    path: "research_control/tasks/RT-20260722-019/artifacts/no_target_positive_provenance_sufficiency_policy_v1.tex"
+    sha256: "52c30a55019d38dbc5cb697749189dba4a0bc17db9566dd4c505b21f7db2e456"
+  - object_id: "TEX-V21-P14-T04-PROTECTED-CONGRUENCE-STATUS-DECISION-V1"
+    path: "research_control/tasks/RT-20260731-005/artifacts/p14_t04_congruence_status_decision_v1.tex"
+    sha256: "894d53ceffb182835e216ab2ad5722a8f6d60551d75fa48681397284e9060147"
+  - object_id: "TEX-V21-P14-T05-NEGATIVE-RESULT-SUCCESS-PATHWAY-V1"
+    path: "research_control/tasks/RT-20260722-020/artifacts/negative_result_success_pathway_v1.tex"
+    sha256: "a5b59ddf497659097783e8e8dcd9c4de1726652265b0b53cab007da233f34aa3"
+
+required_labels:
+  - label: "ontology"
+    meaning: "proposed source interpretation and controlled research architecture"
+    not_equivalent_to:
+      - "established physical ontology"
+      - "exact target dynamics"
+      - "empirical truth"
+  - label: "exact_closure"
+    meaning: "ordinary GR adopted as the target-side operational law"
+    not_equivalent_to:
+      - "first-principles source recovery"
+      - "benchmark promotion"
+      - "empirical novelty"
+  - label: "formal_equivalence"
+    meaning: "declared mathematical relation or redescription under explicit assumptions"
+    not_equivalent_to:
+      - "positive source provenance"
+      - "physical interpretation"
+      - "genuine emergence"
+  - label: "genuine_emergence"
+    meaning: "source-to-target recovery with provenance dynamics uniqueness or quotient status operational meaning and robustness"
+    not_equivalent_to:
+      - "no-target purity alone"
+      - "target-side exact closure"
+      - "interpretive redescription"
+  - label: "operational_meaning"
+    meaning: "exact observer detector protocol calibration or protected-semantic linkage"
+    not_equivalent_to:
+      - "source derivation"
+      - "representative uniqueness"
+      - "empirical novelty"
+  - label: "empirical_novelty"
+    meaning: "distinct observable prediction with an authorized comparison protocol and evidence"
+    not_equivalent_to:
+      - "ontology vocabulary"
+      - "formal equivalence"
+      - "public documentation"
+
+claim_examples:
+  - example_id: "P14T06-EX-ONTOLOGY-001"
+    allowed: "AEther-flow is a proposed research ontology and explanatory frame."
+    forbidden: "AEther-flow is an established physical ontology that derives GR."
+    basis: "ontology versus derivation"
+  - example_id: "P14T06-EX-EXACT-CLOSURE-001"
+    allowed: "The exact-closure theory adopts ordinary GR as its target-side operational law."
+    forbidden: "Target-side exact closure proves first-principles recovery from source variables."
+    basis: "exact closure versus source recovery"
+  - example_id: "P14T06-EX-FORMAL-EMERGENCE-001"
+    allowed: "This source establishes the declared formal equivalence under its stated assumptions."
+    forbidden: "Formal equivalence alone establishes genuine emergence and physical meaning."
+    basis: "formal equivalence versus genuine emergence"
+  - example_id: "P14T06-EX-CONGRUENCE-001"
+    allowed: "The target-side u^mu is an admissible generally non-unique interpretive representative inside the adopted GR benchmark."
+    forbidden: "The target-side u^mu is Phi_src source-selected pure gauge or an independent physical field."
+    basis: "protected P14-T04 status"
+  - example_id: "P14T06-EX-REPRESENTATIVE-INDEPENDENCE-001"
+    allowed: "For a fixed target solution fixed base observables and fixed protocols the stated predictions are representative independent."
+    forbidden: "Representative independence makes every congruence-explicit or observer-relative measurement identical."
+    basis: "fixed-protocol theorem boundary"
+  - example_id: "P14T06-EX-MATTER-POSTULATE-001"
+    allowed: "The exact finite P7 matter package was adopted by explicit protected human postulate within its declared scope."
+    forbidden: "The current source ontology derived the protected P7 matter package or target-side stress energy."
+    basis: "postulate-level adoption versus source derivation"
+  - example_id: "P14T06-EX-GATE-E-001"
+    allowed: "The protected Gate E review found six inconclusive cases with zero passes and denied benchmark promotion as not ready."
+    forbidden: "Gate E established exact-GR recovery benchmark promotion or a completed derivation."
+    basis: "not-ready decision versus promotion"
+  - example_id: "P14T06-EX-VALIDATOR-001"
+    allowed: "The bounded documentation transaction passed its validators."
+    forbidden: "Validator success is scientific proof or promotion authority."
+    basis: "process receipt versus scientific evidence"
+
+authority_limits:
+  scientific_claims_changed: false
+  protected_decision_changed: false
+  ontology_modified: false
+  source_law_adopted: false
+  distance_to_gr_changed: false
+  benchmark_promoted: false
+  proof_authority: false
+  publication_authority: false
+  physics_promotion_authorized: false

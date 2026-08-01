@@ -134,21 +134,37 @@ Status-card v2 public reading:
 | Target | Positive status | Exact scope | Blocked overread | Next burden |
 | --- | --- | --- | --- | --- |
 | `Æther` / `Æther-flow` ontology | Proposed research ontology and explanatory frame. | Ontology vocabulary and interpretation lane only. | Not an established physical ontology and not a completed foundation for deriving GR. | Supply source-side mathematical laws or gates before stronger ontology or derivation claims. |
+| Exact-GR operational closure | Ordinary GR is adopted as the target-side effective law of the exact-closure theory. | One operative target metric, ordinary target-side matter coupling, and standard causal structure in the adopted GR benchmark. | Target-side adoption is not first-principles source recovery, Gate E benchmark promotion, or empirical novelty. | Construct and validate the missing source-to-target bridge before any recovery claim. |
+| Target-side congruence `u^mu` | Admissible, generally non-unique interpretive representative in the adopted GR benchmark. | Target-side flow dictionary only; fixed target solution, base observables, and fixed protocols are representative independent. | Not `Phi_src`, not source-selected, not established pure gauge, not an independent field, and not a completed bridge. Congruence-explicit or observer-relative quantities may differ. | Supply separate source-backed evidence and protected authority before any stronger status. |
 | GR derivation | Open research burden. | No first-principles source-to-GR bridge is established in the tracked state. | No completed derivation, Einstein-equation result, or benchmark promotion follows from public documentation. | Derive metric behavior, matter coupling, field equations, and protected benchmark review through tracked source artifacts. |
 | `M_src` | Scoped source-only object. | Source-side prerequisite context under the declared fail-closed scope. | Not a target manifold, metric, matter-coupling result, Einstein-equation result, benchmark promotion, or completed derivation. | Use only as source-side prerequisite context while deriving later metric or coupling bridges without target import. |
-| `g_eff` | Scoped source-extension object. | Declared source-extension context only. | Not an unscoped Lorentzian metric, matter-coupling result, Einstein-equation result, benchmark promotion, or completed derivation. | Show any later use without adopting `MetricData(E)`, an unscoped metric, matter coupling, or field equations. |
-| Matter sector | Scoped source-side evidence/preconditions for continuation. | Certificate-indexed, finite/local support for source-side coupling-law candidate work. | No source-law adoption, detector semantics, coupling-law adoption, matter coupling, stress-energy semantics, matter action, Einstein equations, benchmark promotion, or completed derivation follows. | Construct, audit, or stress one source-side coupling-law candidate before any matter-coupling derivation or adoption claim. |
-| Einstein equations and benchmark promotion | Blocked downstream targets. | No field-equation derivation, benchmark closure, fit claim, Gate Chair verdict, or completed derivation has been established. | Public pages cannot supply dynamics, action, variation, matter coupling, benchmark promotion, or Gate Chair authority. | Establish upstream dynamics/action/variation, matter coupling, and protected Gate Chair review before promotion claims. |
+| `ScopedMetricStructureRecord_src` | Adopted exact ten-slot scoped source-extension record; `g_eff^{GSC-cand}` is its legacy alias. | Declared source-extension record only. | Not an unscoped Lorentzian metric, operational geometry, matter-coupling result, Einstein-equation result, benchmark promotion, or completed derivation. | A materially new source law, theorem, variation class, or protected decision is needed before a stronger geometry route. |
+| Protected finite matter package | Adopted as canonical physical matter by explicit protected human postulate. | Exact unchanged P7 package, declared finite domains, and current continuum-first source architecture only. | The current ontology does not derive those meanings; no target stress-energy, `g_eff`, equivalence-principle recovery, Einstein equations, benchmark promotion, or empirical novelty follows. | Close the cross-layer composition gap with source-derived geometry and target-side gravitational structure. |
+| Einstein equations and benchmark promotion | Protected Gate D and Gate E decisions are `NOT_READY`; Gate E has six inconclusive cases and zero passes. | The decisions preserve exact failure scope and open continuation. | No source-derived field equations, exact or controlled-approximate GR recovery, qualifying independent replication, benchmark promotion, or completed derivation has been established. | Supply materially repaired source-derived bridge evidence and fresh protected authority. |
+
+Success labels stay separate:
+
+| Label | Current public meaning | Not enough for |
+| --- | --- | --- |
+| Ontology | Proposed source interpretation and controlled research architecture. | Physical truth or exact target dynamics. |
+| Exact closure | Ordinary GR adopted as the target-side operational law. | Source recovery or benchmark promotion. |
+| Formal equivalence | A declared mathematical redescription, quotient, or equivalence under stated assumptions. | Positive provenance, physical meaning, or emergence. |
+| Genuine emergence | Source-to-target recovery with provenance, dynamics, uniqueness or quotient status, operational meaning, and robustness. | Not established by current interpretive congruence status. |
+| Operational meaning | An exact link to observers, detectors, protocols, calibration, or protected physical semantics. | Source derivation or empirical novelty. |
+| Empirical novelty | A distinct observable prediction supported by an authorized comparison. | Not established by current public documentation or exact closure. |
 
 Compact public table:
 
 | Target | What exists | What does not exist |
 | --- | --- | --- |
 | `Æther` / `Æther-flow` ontology | Proposed research ontology / explanatory frame. | Established physical ontology or completed foundation for deriving GR. |
+| Exact-GR closure | Adopted target-side operational GR law. | First-principles source recovery, benchmark promotion, or empirical novelty. |
+| Target-side `u^mu` | Generally non-unique interpretive representative inside the adopted GR benchmark. | `Phi_src`, source selection, established pure gauge, independent field, or source-to-target bridge. |
 | GR derivation | Open research burden. | Completed first-principles derivation from the source substrate. |
 | `M_src` | Scoped source-only object. | Target manifold, metric, matter-coupling result, or GR derivation. |
-| `g_eff` | Scoped source-extension object. | Unscoped Lorentzian metric, matter coupling, Einstein equations, or benchmark promotion. |
-| Matter sector | Scoped evidence/preconditions. | Matter semantics, detector semantics, coupling law, matter coupling, stress-energy semantics, matter action, or variation principle. |
+| `ScopedMetricStructureRecord_src` | Exact scoped source-extension record; `g_eff^{GSC-cand}` is its legacy alias. | Unscoped physical metric, matter coupling, Einstein equations, or benchmark promotion. |
+| Protected finite matter package | Postulate-level physical adoption in its exact finite scope. | First-principles derivation, target stress-energy, `g_eff`, Einstein equations, or empirical novelty. |
+| Gate D / Gate E | Protected `NOT_READY` decisions. | Field-equation derivation, benchmark promotion, or completed derivation. |
 | Validator receipts and generated pages | Operational or reader-facing evidence about checked files. | Scientific proof, adoption authority, benchmark promotion, or completed derivation. |
 
 <p align="left">

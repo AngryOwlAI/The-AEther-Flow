@@ -18,6 +18,9 @@ source_basis:
   - "research_control/design/gr_derivation_burden_map.md"
   - "research_control/design/public_status_exists_does_not_exist_source_spec.md"
   - "research_control/design/epistemic_category_glossary.md"
+  - "research_control/tasks/RT-20260731-005/artifacts/p14_t04_congruence_status_decision_v1.tex"
+  - "research_control/tasks/RT-20260729-001/artifacts/p7_t08_gate_c_decision_v1.tex"
+  - "research_control/tasks/RT-20260731-004/artifacts/p9_t09_gate_e_decision_v1.tex"
   - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
   - "registries/AGENT_ROLE_REGISTRY.csv"
 authority_boundaries:
@@ -32,7 +35,9 @@ acceptance_criteria:
   - "Separates scoped obstruction and freeze language from broad rejection of the theory."
   - "States that Gate Chair decisions are human-gated and not auto-executed by validators or documentation."
   - "Includes allowed and forbidden claim examples grounded in the claim boundary registry."
-  - "Uses status-card v2 wording before broader gate examples for M_src, g_eff, and matter-sector evidence/preconditions."
+  - "Uses status-card v2 wording with a concise next burden before broader gate examples for M_src, g_eff, and matter-sector evidence/preconditions."
+  - "Separates ontology, exact closure, formal equivalence, genuine emergence, operational meaning, and empirical novelty."
+  - "Includes protected u^mu, finite matter-postulate, and Gate E not-ready claim examples without promoting their status."
   - "Includes page-specific before/after review and desktop/mobile screenshot evidence."
 forbidden_patterns:
   - "Gate Chair verdict or benchmark promotion."

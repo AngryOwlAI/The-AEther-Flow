@@ -1,0 +1,98 @@
+schema_id: "generation_194_checkpoint_record_alignment_blocker_v1"
+blocker_id: "BLOCK-G194-CHECKPOINT-RECORD-ALIGNMENT-001"
+task_id: "RT-20260731-008"
+job_id: "AJ-RT-20260731-008-001"
+completion_id: "AJC-AJ-RT-20260731-008-001"
+plan_task_id: "P14-T06"
+observed_at: "2026-08-01T00:42:56Z"
+status: "blocked_post_attempt_distinct_checkpoint_recovery_required"
+failed_gate: "research_control_diff_staged"
+failing_command: ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --staged-only --json --job-id AJ-RT-20260731-008-001"
+
+checkpoint:
+  attempted: true
+  invocation_count: 1
+  committed: false
+  commit: "none_staged_validation_failed"
+  index_restored: true
+  staged_after_return: false
+  elapsed_seconds: 713.029998
+  planner_status: "FAIL"
+  legacy_comparison_status: "PASS"
+  staged_tree_sha1: "1ae130785648f163ff3f17ce2554fe787f4518c2"
+
+validation_receipt:
+  path: ".local/validation-receipts/528658a2d6edc8398b2ed0909f94147fc3d7c2041a6c0943243cfa662bb6ba5b/RUN-CHECKPOINT-1d742f0cd013f53e/receipt.json"
+  sha256: "1419ac648ee21a512095b4edccd86fc799c975eab33794bcac88a20f9746e708"
+  tracked_authority: false
+  status: "FAIL"
+  research_control_error_count: 5
+  warning_count: 1536
+
+error_partition:
+  validator_compatibility_error_count: 0
+  current_completion_authority_note_error_count: 1
+  current_active_state_identity_error_count: 4
+  historical_snapshot_error_count: 0
+  predecessor_payload_error_count: 0
+
+findings:
+  - path: "research_control/tasks/RT-20260731-008/jobs/completions/AJC-AJ-RT-20260731-008-001.yaml"
+    field: "memory_preflight.authority_note"
+    finding: "The completion note omits the literal retrieval-only terms .local and not authority."
+  - path: "research_control/current_frontier.md"
+    field: "next_recommended_action"
+    finding: "The snapshot differs byte-for-byte from handoff-0930.next_action."
+  - path: "research_control/current_frontier.md"
+    field: "active_state_bifurcation.latest_research_next_action"
+    finding: "The snapshot differs byte-for-byte from handoff-0930.next_action."
+  - path: "research_control/handoffs/handoff-0930.yaml"
+    field: "active_state_bifurcation.latest_research_next_action"
+    finding: "The embedded value differs byte-for-byte from handoff-0930.next_action."
+  - path: "output/compact_current_frontier_v16.json"
+    field: "active_state_bifurcation.latest_research_next_action"
+    finding: "The generated compact snapshot inherits the mismatched handoff value."
+
+resolved_in_generation_194_record_closure:
+  completion_authority_note_terms_aligned: true
+  handoff_next_action_identity_aligned: true
+  program_state_next_action_identity_aligned: true
+  generated_frontier_refresh_required: true
+  second_checkpoint_invoked: false
+
+required_recovery:
+  route: "checkpoint_preserved_p14_t06_after_generation_194_record_alignment_v1"
+  worker_skill: "improve-project-system"
+  role_family: "process-integrity-auditor@0.1.0"
+  exact_scope: "Validate the already-aligned generation-194 authority note and next-action identities, preserve the code regression and full P14-T06 transaction, synchronize generated derivatives, and invoke one new governed checkpoint under a distinct AgentJob."
+  code_or_test_change_required: false
+  public_documentation_change_required: false
+  historical_snapshot_rewrite_authorized: false
+  p14_t06_content_reexecution_authorized: false
+  next_route_after_recovery: "Stop at the preserved P13-T02 exact-publication-and-current-head-hosted-CI evidence hold."
+  next_route_executed: false
+
+preserved_result:
+  mutable_object_id: "MD-RESEARCH-CONTROL-DESIGN-PUBLIC-STATUS-EXISTS-DOES-NOT-EXIST-SOURCE-SPEC"
+  mutable_set_entry_addition_count: 1
+  focused_regression_test_count: 1
+  focused_regression_status: "PASS"
+  historical_public_status_hash_accepted: true
+  active_current_hash_requirement_preserved: true
+  immutable_source_hash_requirement_preserved: true
+  p14_t06_payload_complete: true
+  p14_t06_payload_changed_by_recovery: false
+
+authority_boundary:
+  generation_194_second_checkpoint_authorized: false
+  distinct_successor_checkpoint_required: true
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false
+  p13_t02_executed: false
+  p15_t05_executed: false
+
+notes: "The failed checkpoint is project-system transaction evidence only. It does not negate the focused validator repair, and it does not create physics, publication, push, or protected authority."

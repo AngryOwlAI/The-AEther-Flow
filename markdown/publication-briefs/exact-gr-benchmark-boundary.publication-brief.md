@@ -20,6 +20,9 @@ source_basis:
   - "research_control/design/gr_derivation_burden_map.md"
   - "research_control/design/public_status_exists_does_not_exist_source_spec.md"
   - "research_control/design/epistemic_category_glossary.md"
+  - "research_control/tasks/RT-20260731-005/artifacts/p14_t04_congruence_status_decision_v1.tex"
+  - "research_control/tasks/RT-20260729-001/artifacts/p7_t08_gate_c_decision_v1.tex"
+  - "research_control/tasks/RT-20260731-004/artifacts/p9_t09_gate_e_decision_v1.tex"
 authority_boundaries:
   - "The page may explain the conservative exact-GR benchmark boundary but cannot certify benchmark status."
   - "The page must not imply a completed substrate derivation, benchmark promotion, Gate Chair verdict, or generated-output authority."
@@ -31,6 +34,8 @@ acceptance_criteria:
   - "Distinguishes adoption, compatibility, derivation, and promotion without blurring them."
   - "Names registered TeX and the claim boundary registry as authority surfaces."
   - "Uses positive-first scoped-status wording before blocked-overread language for M_src, g_eff, and matter-sector evidence/preconditions."
+  - "Separates ontology, exact closure, formal equivalence, genuine emergence, operational meaning, and empirical novelty."
+  - "States the protected target-side congruence, finite matter-postulate, and Gate E not-ready boundaries without source-recovery overread."
   - "Includes page-specific before/after review and desktop/mobile screenshot evidence."
 forbidden_patterns:
   - "Language implying first-principles GR derivation is complete."

@@ -16,8 +16,11 @@ source_materials:
   - "ontology/README.md"
   - "registries/TEX_SOURCE_REGISTRY.csv"
   - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "research_control/design/public_status_exists_does_not_exist_source_spec.md"
+  - "research_control/design/epistemic_category_glossary.md"
+  - "research_control/tasks/RT-20260731-005/artifacts/p14_t04_congruence_status_decision_v1.tex"
   - "AGENTS.md"
-claim_boundary: "Human-only publication explainer for AEther-Flow ontology vocabulary. It orients readers to AEther, AEther-flow, observed space, S-time, observed expansion, live versus legacy ontology sources, and the missing observer normal/readout source construction without promoting ontology, completing a derivation, changing benchmark status, or treating generated outputs as authority."
+claim_boundary: "Human-only publication explainer for AEther-Flow ontology vocabulary and the protected target-side interpretive-representative congruence boundary. It orients readers to AEther, AEther-flow, observed space, S-time, observed expansion, live versus legacy ontology sources, and the missing source-to-target construction without identifying u^mu with Phi_src, claiming source selection, pure-gauge status, an independent field, ontology promotion, completed derivation, benchmark promotion, empirical novelty, or generated-output authority."
 human_visual_only: true
 standalone_html: true
 no_external_runtime: true
@@ -51,6 +54,14 @@ derivation note.
 - `registries/CLAIM_BOUNDARY_REGISTRY.csv` records active claim boundaries
   against ontology promotion, benchmark promotion, completed-derivation
   claims, and generated-output authority.
+- `research_control/design/public_status_exists_does_not_exist_source_spec.md`
+  and `research_control/design/epistemic_category_glossary.md` keep ontology,
+  exact closure, formal equivalence, genuine emergence, operational meaning,
+  and empirical novelty visibly distinct.
+- `research_control/tasks/RT-20260731-005/artifacts/p14_t04_congruence_status_decision_v1.tex`
+  fixes `u^mu` as an admissible, generally non-unique target-side interpretive
+  representative, with fixed-protocol representative independence and explicit
+  observer-relative exceptions.
 - `research_control/design/status_card_v2_schema.md` and
   `research_control/design/accepted_status_calibration_v2.yaml` define the
   concise public order for status summaries that mention downstream burdens
@@ -66,7 +77,10 @@ overclaiming: AEther is the deeper four-dimensional substrate, AEther-flow is
 its intrinsic ordered motion, observed three-dimensional space is an
 observer-level slice, S-time is experienced order of change, and observed
 expansion is a three-dimensional appearance of deeper ordered motion. The
-reader should also know that this vocabulary does not by itself derive GR.
+reader should also know that this vocabulary does not by itself derive GR and
+that target-side `u^mu` is an interpretive representative rather than
+`Phi_src`, a source-selected congruence, an established pure-gauge object, an
+independent field, or a source-to-target bridge.
 The opening should teach vocabulary, source authority, mathematical burden,
 and empirical-prediction separation before authority metadata, while the full
 generated-noncanonical authority paragraph belongs in the footer authority
@@ -101,6 +115,10 @@ panel. Do not use a generic workflow diagram or browser-side Mermaid.
 - Names the missing observer normal/readout source construction as open work.
 - States ontology status in status-card v2 order: positive vocabulary status,
   exact ontology-lane scope, blocked overread, and next mathematical burden.
+- Separates ontology, exact closure, formal equivalence, genuine emergence,
+  operational meaning, and empirical novelty.
+- States the P14-T04 `u^mu` status, fixed-protocol representative-independence
+  scope, and congruence-explicit or observer-relative exception.
 - Avoids older three-dimensional aether, wind, river, or ordinary fluid
   overreadings.
 - Names source paths visibly in GitHub Markdown and HTML.

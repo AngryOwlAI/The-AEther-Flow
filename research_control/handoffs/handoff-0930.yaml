@@ -1,0 +1,339 @@
+validation_status: "FAIL"
+handoff_id: "handoff-0930"
+handoff_number: 930
+task_id: "RT-20260731-008"
+decision_id: "DDR-20260731-008"
+job_id: "AJ-RT-20260731-008-001"
+completion_id: "AJC-AJ-RT-20260731-008-001"
+completion_path: "research_control/tasks/RT-20260731-008/jobs/completions/AJC-AJ-RT-20260731-008-001.yaml"
+completion_sha256: "06cf902367714f29255c7a99a83f6ba007ada0d7638fa815df561bbd60a70b51"
+status: "blocked_validation"
+created_at: "2026-08-01T00:42:56Z"
+parent_handoff_id: "handoff-0929"
+plan_task_id: "P14-T06"
+source_role_id: "validator-engineer"
+source_role_version: "0.2.0"
+source_execution_role_ref: "validator-engineer@0.2.0--RT-20260731-008"
+summary: "Generation 194 repairs exactly the public-status mutable memory-preflight compatibility omission with one set entry and one focused regression. Historical public-status hashes remain valid, the active task still requires the current hash, immutable sources remain exact, and the complete P14-T06 payload is preserved. The sole checkpoint attempt restored the index and created no commit after staged validation found five task-local record-alignment errors; one distinct checkpoint recovery is required."
+next_action: "Run one distinct governed improve-project-system checkpoint-recovery AgentJob that validates the aligned generation-194 completion authority note and active-state next-action identity, preserves the validator regression and complete P14-T06 payload, and invokes one new checkpoint; only afterward stop at the P13-T02 external-evidence hold."
+current_claim_boundary: "CB-P14-T06-PUBLIC-STATUS-MUTABLE-PREFLIGHT-RECOVERY-001"
+loop_risk_route: "checkpoint_preserved_p14_t06_after_generation_194_record_alignment_v1"
+
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260731-008"
+  latest_research_handoff_id: "handoff-0930"
+  latest_research_next_action: "Run one distinct governed improve-project-system checkpoint-recovery AgentJob that validates the aligned generation-194 completion authority note and active-state next-action identity, preserves the validator regression and complete P14-T06 payload, and invokes one new checkpoint; only afterward stop at the P13-T02 external-evidence hold."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+  project_improvement_sidecar_required: false
+  research_handoff_remains_authoritative: true
+
+claim_boundary:
+  allowed_next_scope: "One fresh distinct improve-project-system process-integrity AgentJob may validate the aligned generation-194 records, preserve the exact compatibility regression and complete P14-T06 payload, synchronize direct identities and generated derivatives, and invoke one new governed checkpoint. It may not invoke a second checkpoint in generation 194 or execute P13-T02 or P15-T05."
+  completed_task: "RT-20260731-008"
+  completed_completion_path: "research_control/tasks/RT-20260731-008/jobs/completions/AJC-AJ-RT-20260731-008-001.yaml"
+  completed_completion_sha256: "06cf902367714f29255c7a99a83f6ba007ada0d7638fa815df561bbd60a70b51"
+  source_handoff_id: "handoff-0929"
+  source_handoff_path: "research_control/handoffs/handoff-0929.yaml"
+  source_handoff_sha256: "8d431f917642aae31d2d30ef069440a50337468e569afa6b988486da6b71e0c0"
+  immutable_route_sha256: "97d459880728908f0747dba076a94ea8cd11dde1e0546949be11f249037f0004"
+  route_blocker_fingerprint: "b04b6f937434b66e1ae17f4cfa7b7962cfdb42a8032990d24adc1e3e41695e87"
+  mutable_object_id: "MD-RESEARCH-CONTROL-DESIGN-PUBLIC-STATUS-EXISTS-DOES-NOT-EXIST-SOURCE-SPEC"
+  mutable_set_entry_addition_count: 1
+  focused_regression_test_count: 1
+  historical_public_status_hash_accepted: true
+  active_current_hash_requirement_preserved: true
+  immutable_source_hash_requirement_preserved: true
+  historical_snapshot_rewrite_count: 0
+  p14_t06_payload_complete: true
+  p14_t06_completed_after_checkpoint: false
+  p13_t02_executed: false
+  p15_t05_executed: false
+  checkpoint_invocation_count_before_handoff: 1
+  checkpoint_committed_before_handoff: false
+  scientific_status_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  ontology_adoption_authorized: false
+  source_law_adoption_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_performed: false
+  blocked_claims:
+    - "validator compatibility or checkpoint success presented as scientific progress"
+    - "historical memory snapshots rewritten instead of applying the established mutable-source policy"
+    - "P14-T06 public documentation presented as source-law metric or matter-coupling derivation"
+    - "P13-T02 executed before exact publication or push authority and matched current-head hosted-CI plus scheduled-full evidence"
+    - "P15-T05 executed without its exact human-gated publication authority"
+    - "ontology metric matter coupling Einstein equations benchmark promotion proof publication push or completed derivation"
+
+compatibility_repair:
+  task_id: "RT-20260731-008"
+  blocker_path: "research_control/tasks/RT-20260731-007/artifacts/validation_blocker_public_status_mutable_memory_preflight_policy_v1.yaml"
+  blocker_sha256: "860c62b2c30099771269849eee6c4639950c94df8c4a857245b18eb69146521b"
+  failed_gate_evidence_sha256: "2eb05f73f8809dee504292f8069d8fe0f20bb5f5ec2c2bc3e4e4ea2ecb306014"
+  mutable_object_id: "MD-RESEARCH-CONTROL-DESIGN-PUBLIC-STATUS-EXISTS-DOES-NOT-EXIST-SOURCE-SPEC"
+  canonical_path: "research_control/design/public_status_exists_does_not_exist_source_spec.md"
+  canonical_source_sha256: "31fc54844daeae74b447e94990be26be78ee90ef30e59b7937e6d49893992c3b"
+  receipt_path: "research_control/tasks/RT-20260731-008/artifacts/public_status_mutable_memory_preflight_compatibility_receipt_v1.yaml"
+  receipt_sha256: "436606fdee1b356d18ad58c83696695bc5bc1fdaad7fd06953049cbda9813a92"
+  historical_snapshot_compatibility: "PASS"
+  active_current_hash_requirement_preserved: true
+  immutable_source_hash_requirement_preserved: true
+  predecessor_payload_changed: false
+
+preserved_p14_t06_result:
+  task_id: "RT-20260731-007"
+  completion_path: "research_control/tasks/RT-20260731-007/jobs/completions/AJC-AJ-RT-20260731-007-001.yaml"
+  completion_sha256: "8cd4f8790475d46eaa9ea863a117639190be90eae323ab601286f9ea436318ac"
+  predecessor_handoff_path: "research_control/handoffs/handoff-0929.yaml"
+  predecessor_handoff_sha256: "8d431f917642aae31d2d30ef069440a50337468e569afa6b988486da6b71e0c0"
+  distinct_success_label_count: 6
+  claim_example_count: 8
+  publication_family_count: 3
+  visual_capture_count: 6
+  publication_validation_status: "PASS"
+  claim_language_validation_status: "PASS"
+  visual_qa_status: "PASS"
+  source_target_type_distinction_preserved: true
+  fixed_protocol_representative_independence_preserved: true
+  observer_relative_exception_preserved: true
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+plan_result:
+  plan_task_id: "P14-T06"
+  title: "Align public status, glossary, and claim examples with v21 semantics"
+  result_status: "P14_T06_PAYLOAD_COMPLETE_VALIDATOR_COMPATIBILITY_PASS_CHECKPOINT_BLOCKED_RECORD_ALIGNMENT"
+  work_item_status: "blocked"
+  recovery_status: "PASS"
+  payload_complete: true
+  repository_validation_status: "FAIL"
+  p13_t02_dependency_ready_after_checkpoint: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+distance_to_gr:
+  changed: false
+  effect: "none_project_system_validator_compatibility_recovery"
+  burden_id: "none"
+  milestone: "none"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "The repair changes validator compatibility and checkpoint readiness only and supplies no mathematical payload."
+  downstream_unlocked:
+    - "P14-T06 project-system completion after governed checkpoint only"
+  downstream_still_blocked:
+    - "P13-T02 until exact publication or push authority and matched current-head hosted-CI plus scheduled-full evidence"
+    - "P13-T07 and P13-T08 behind P13-T02"
+    - "P15-T05 until exact human-gated publication authority"
+    - "P15-T02 and P15-T06 behind P13-T08"
+    - "P15-T07 until P15-T06 and action-specific human publication or outreach authority"
+    - "P16-T01 through P16-T06 behind P13-T08 and P15-T07"
+
+required_next_packet:
+  task_type: "project_system_p14_t06_generation_194_record_alignment_checkpoint_recovery"
+  plan_task_id: "P14-T06"
+  objective: "Validate the aligned generation-194 completion authority note and active-state next-action identity, preserve the exact validator regression and complete P14-T06 payload, synchronize direct identities and generated derivatives, and invoke one fresh governed checkpoint."
+  dependency_ready_after_checkpoint: true
+  dependency_ready_now: true
+  exact_human_authorization_required: false
+  external_evidence_required: false
+  executed: false
+  held_reason: "Generation 194 exhausted its one-checkpoint authority; the preserved transaction requires a distinct AgentJob and fresh checkpoint authority."
+
+selected_next_route:
+  route_id: "checkpoint_preserved_p14_t06_after_generation_194_record_alignment_v1"
+  route_label: "project-system-checkpoint-recovery"
+  role_family: "process-integrity-auditor@0.1.0"
+  worker_skill: "improve-project-system"
+  selected_next_packet_type: "generation_194_record_alignment_checkpoint_recovery"
+  task_type: "project_system_p14_t06_generation_194_record_alignment_checkpoint_recovery"
+  plan_task_id: "P14-T06"
+  target_derivation_milestone: "none"
+  milestone_burden: "Project-system checkpoint recovery only; preserve P14-T06 and all scientific boundaries."
+  strategy_id: "checkpoint_preserved_p14_t06_after_generation_194_record_alignment_v1"
+  requires_human_gate: false
+  blocked_by_protected_external_evidence: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: true
+  physics_promotion_authorized: false
+  proof_authority: false
+  executed: false
+  next_action: "Run one distinct governed improve-project-system checkpoint-recovery AgentJob that validates the aligned generation-194 completion authority note and active-state next-action identity, preserves the validator regression and complete P14-T06 payload, and invokes one new checkpoint; only afterward stop at the P13-T02 external-evidence hold."
+  source_blocker_path: "research_control/tasks/RT-20260731-008/artifacts/validation_blocker_generation_194_checkpoint_record_alignment_v1.yaml"
+  source_blocker_sha256: "29f93ba58e63a1399386fdd99e7f3159bfb15a6d90574f3a4d12825ef5d4743e"
+  source_handoff: "research_control/handoffs/handoff-0930.yaml"
+
+ordinary_route_guard:
+  schema_id: "ordinary_route_guard_evaluation_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  evaluation_id: "ORE-HANDOFF-0930"
+  ordinary_handoff_id: "handoff-0930"
+  threshold: 3
+  consecutive_project_system_tasks_before_selection: 3
+  ready_science_plan_task_ids:
+    - "P15-T05"
+  selected_plan_task_id: "P14-T06"
+  selected_route_class: "project_system"
+  selected_worker_skill: "improve-project-system"
+  outcome: "all_ready_science_blocked_exception"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  exception_receipt:
+    active: true
+    schema_id: "ordinary_route_exception_receipt_v1"
+    exception_id: "ORE-HANDOFF-0930-EXCEPTION-001"
+    exception_class: "all_ready_science_blocked"
+    ordinary_handoff_id: "handoff-0930"
+    ready_science_plan_task_ids:
+      - "P15-T05"
+    blocked_routes:
+      - plan_task_id: "P15-T05"
+        failure_class: "human_gate_required"
+        evidence_path: "research_control/design/v21_recommendation_backlog.yaml"
+        evidence_sha256: "849a4e8dfe848e80bc0c8236252b924e636e5c95ac1a090478a69f7f5377559f"
+        reason: "P15-T05 requires exact human-gated publication authority that this relay does not possess."
+    authority_limits:
+      ordinary_research_handoff_authoritative: true
+      project_system_sidecar_supersedes: false
+      system_success_counts_as_physics: false
+      system_success_counts_as_distance_to_gr: false
+      scientific_status_changed: false
+      physics_promotion_authorized: false
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+active_state_boundary:
+  active_task_id: "RT-20260731-008"
+  active_job_id: "AJ-RT-20260731-008-001"
+  current_status: "p14_t06_validator_compatibility_pass_checkpoint_blocked_generation_194_record_alignment_recovery_required"
+  checkpoint_required: true
+  checkpoint_completed: false
+  checkpoint_invocation_count: 1
+  dependency_checkpoint_commit: "1442eb3b808b8aa9b00645de76c7e2e9cf9c5033"
+  p14_t06_payload_complete: true
+  p14_t06_validator_compatibility_repaired: true
+  p14_t06_completed_after_checkpoint: false
+  project_system_recovery_required: true
+  selected_next_plan_task_id: "P14-T06"
+  selected_next_worker_skill: "improve-project-system"
+  selected_next_role_family: "process-integrity-auditor@0.1.0"
+  selected_next_route_label: "project-system-checkpoint-recovery"
+  selected_next_strategy_id: "checkpoint_preserved_p14_t06_after_generation_194_record_alignment_v1"
+  selected_next_execution_ready_now: true
+  selected_next_blocked_by_external_authority_and_evidence: false
+  dependency_independent_included_work_item_count: 1
+
+checkpoint_failure:
+  blocker_path: "research_control/tasks/RT-20260731-008/artifacts/validation_blocker_generation_194_checkpoint_record_alignment_v1.yaml"
+  blocker_sha256: "29f93ba58e63a1399386fdd99e7f3159bfb15a6d90574f3a4d12825ef5d4743e"
+  checkpoint_status: "FAIL_STAGED_RESEARCH_CONTROL_DIFF"
+  failed_stage: "staged_acceptance_research_control_diff"
+  failed_gate: "research_control_diff_staged"
+  failure_class: "task_local_record_alignment"
+  finding_count: 5
+  validator_compatibility_error_count: 0
+  historical_snapshot_error_count: 0
+  checkpoint_staged: false
+  checkpoint_committed: false
+  entry_index_restored: true
+  legacy_validation_used: false
+  retry_in_generation_194_authorized: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 194 route claim lease repository binding predecessor evidence and exact 79-path manifest validated before writes."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The tracked receipt binds one exact mutable-source entry one focused regression and preserved predecessor hashes."
+  post_write:
+    status: "FAIL"
+    evidence:
+      - "Syntax focused regression project-control memory and whitespace gates pass, but staged research-control validation found five task-local record-alignment errors."
+  post_checkpoint:
+    status: "FAIL"
+    evidence:
+      - "The single authorized checkpoint restored the index and created no commit; a distinct recovery AgentJob and new checkpoint are required."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Current-frontier task-index compact-frontier dependency-graph and generated memory derivatives are fresh."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory synchronization and validate-only mode pass; local retrieval warnings are cache-only."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source validation has no hard claim-language failure."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not authorized; project-system validator compatibility recovery only"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  push_authorized: false
+  publication_authorized: false
+  external_outreach_authorized: false
+  workflow_dispatch_authorized: false
+  proof_authority: false
+  source_law_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"
+  recursive_goal_recovery_required: false
+  route: "distinct P14-T06 checkpoint recovery before the retained P13-T02 hold"
+  rationale: "The validator compatibility defect is resolved, but the single checkpoint failed on generation-local record alignment. This is a bounded checkpoint recovery, not a separate project-improvement signal or scientific route."
+
+handoff_authority_boundary:
+  this_handoff_authorizes:
+    - "one fresh distinct improve-project-system process-integrity AgentJob for the generation-194 record-alignment checkpoint blocker"
+    - "one new governed checkpoint under that distinct AgentJob after validation passes"
+    - "terminal preservation of the exact P13-T02 external-authority and hosted-evidence hold after the recovery checkpoint"
+  this_handoff_does_not_authorize:
+    - "a second checkpoint invocation in generation 194 or reuse of AJ-RT-20260731-008-001"
+    - "P13-T02 before exact publication or push authority and matched current-head hosted CI plus scheduled-full evidence"
+    - "P15-T05 without exact human-gated publication authority"
+    - "historical snapshot or RT-20260731-007 P14-T06 payload rewrites"
+    - "publication push hosted-workflow dispatch external submission reviewer contact or outreach"
+    - "canonical ontology reviewed-science source bridge field adoption stronger congruence status metric matter coupling Einstein equations benchmark promotion proof or completed derivation"
+
+next_plan_task_id: "P14-T06"
+next_worker_skill: "improve-project-system"
+next_role_family: "process-integrity-auditor@0.1.0"
+next_route_label: "project-system-checkpoint-recovery"
+next_strategy_id: "checkpoint_preserved_p14_t06_after_generation_194_record_alignment_v1"
+next_plan_task_execution_ready_after_checkpoint: true
+next_plan_task_executed: false
+notes: "Generation 194 repairs the public-status mutable memory-preflight compatibility omission, but its one checkpoint failed closed on five task-local record-alignment errors. The index was restored and no commit exists. One distinct recovery may validate and checkpoint the preserved transaction; only afterward does the exact P13-T02 protected external-evidence hold resume."

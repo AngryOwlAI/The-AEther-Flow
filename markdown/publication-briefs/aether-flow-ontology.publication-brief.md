@@ -18,6 +18,9 @@ source_basis:
   - "ontology/README.md"
   - "registries/TEX_SOURCE_REGISTRY.csv"
   - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "research_control/design/public_status_exists_does_not_exist_source_spec.md"
+  - "research_control/design/epistemic_category_glossary.md"
+  - "research_control/tasks/RT-20260731-005/artifacts/p14_t04_congruence_status_decision_v1.tex"
   - "AGENTS.md"
 authority_boundaries:
   - "The page may explain ontology vocabulary but cannot promote ontology, complete a GR derivation, or alter scientific source authority."
@@ -31,6 +34,8 @@ acceptance_criteria:
   - "Explains live ontology sources versus legacy archival snapshots."
   - "Names the observer normal/readout source construction as an open burden."
   - "States ontology status in status-card v2 order without promoting ontology or derivation status."
+  - "Separates ontology, exact closure, formal equivalence, genuine emergence, operational meaning, and empirical novelty."
+  - "States u^mu as a generally non-unique target-side interpretive representative with fixed-protocol representative independence and observer-relative exceptions."
   - "Includes page-specific before/after review and desktop/mobile screenshot evidence."
 forbidden_patterns:
   - "Ontology promotion."

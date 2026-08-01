@@ -1,0 +1,1080 @@
+{
+  "advisory_failure_labels": [],
+  "ci_equivalence_status": "not_equivalent_until_v19_p11_centralization",
+  "ci_equivalent": false,
+  "claim_language_obligation": {
+    "predicate_id": "rc_diff_satisfies_claim_language_same_scope_v1",
+    "same_scope_required": true,
+    "satisfied_by": "legacy_validate_project_control",
+    "summary": {
+      "finding_count": 0,
+      "finding_ids": [],
+      "hard_fail_count": 0,
+      "status": "UNAVAILABLE",
+      "warning_count": 0
+    }
+  },
+  "commands": [
+    {
+      "advisory": false,
+      "authority_level": "selection-only",
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "scripts.validation.cli",
+        "plan",
+        "--profile",
+        "full",
+        "--paths",
+        "--json"
+      ],
+      "label": "validation_plan_full",
+      "purpose": "Select the canonical full profile through the shared validation planner CLI.",
+      "required": true,
+      "returncode": 0,
+      "status": "PASS",
+      "stderr_tail": "",
+      "stdout_tail": "ipped_not_applicable\"},{\"gate_id\":\"checkpoint_transaction\",\"mutating\":true,\"reasons\":[\"selection_predicate_not_satisfied\"],\"satisfies_obligations\":[\"authority_validation\",\"checkpoint_transaction\",\"final_staged_allowlist\",\"residue_validation\",\"whitespace_validation\"],\"severity\":\"blocking\",\"status\":\"skipped_not_applicable\"},{\"gate_id\":\"profile_validate_project_control\",\"mutating\":false,\"reasons\":[\"condition:profile_selected\",\"prerequisite_for:profile_ci_project_control\",\"prerequisite_for:profile_full_research_control\"],\"satisfies_obligations\":[\"profile_validate_project_control\"],\"severity\":\"blocking\",\"status\":\"selected\"},{\"gate_id\":\"profile_validate_memory\",\"mutating\":true,\"reasons\":[\"condition:profile_selected\",\"prerequisite_for:profile_full_research_control\"],\"satisfies_obligations\":[\"profile_validate_memory\"],\"severity\":\"blocking\",\"status\":\"selected\"},{\"gate_id\":\"profile_validate_html_explainers\",\"mutating\":false,\"reasons\":[\"condition:profile_selected\",\"prerequisite_for:profile_full_research_control\"],\"satisfies_obligations\":[\"profile_validate_html_explainers\"],\"severity\":\"blocking\",\"status\":\"selected\"},{\"gate_id\":\"profile_audit_documentation_surfaces\",\"mutating\":false,\"reasons\":[\"condition:profile_selected\",\"prerequisite_for:profile_full_research_control\"],\"satisfies_obligations\":[\"profile_audit_documentation_surfaces\"],\"severity\":\"blocking\",\"status\":\"selected\"},{\"gate_id\":\"profile_full_research_control\",\"mutating\":false,\"reasons\":[\"condition:profile_selected\"],\"satisfies_obligations\":[\"profile_full_research_control\"],\"severity\":\"blocking\",\"status\":\"selected\"},{\"gate_id\":\"profile_ci_project_control\",\"mutating\":false,\"reasons\":[\"condition:profile_selected\"],\"satisfies_obligations\":[\"profile_ci_project_control\"],\"severity\":\"blocking\",\"status\":\"selected\"},{\"gate_id\":\"mermaid_sources\",\"mutating\":false,\"reasons\":[\"selection_predicate_not_satisfied\"],\"satisfies_obligations\":[\"mermaid_sources\"],\"severity\":\"blocking\",\"status\":\"skipped_not_applicable\"}],\"execution_authority\":\"legacy\",\"manifest_hash\":\"407a3dbc8a7b0ae5d43a48838c33817bec80afbb11f89b99f84f023cd00e5b41\",\"manifest_id\":\"validation-gate-manifest-v1\",\"ordered_gate_ids\":[\"memory_sync\",\"continue_memory_preflight\",\"profile_validate_memory\",\"classify_changes\",\"resolve_project_improvement\",\"project_improvement_signals\",\"documentation_impact\",\"documentation_surface_audit\",\"memory_core\",\"spec_depth\",\"publication_validation\",\"research_control_core\",\"research_control_diff\",\"test_shard_repository\",\"current_frontier_freshness\",\"compact_frontier_freshness\",\"dependency_graph_freshness\",\"task_index_freshness\",\"claim_graph_validation\",\"git_diff_check\",\"profile_validate_project_control\",\"profile_validate_html_explainers\",\"profile_audit_documentation_surfaces\",\"profile_full_research_control\",\"profile_ci_project_control\"],\"path_tags\":[],\"planner_executes_commands\":false,\"requested_profile\":\"full\",\"role_obligations\":[],\"schema_id\":\"validation_plan_v1\",\"scopes\":[],\"selected_gate_ids\":[\"classify_changes\",\"resolve_project_improvement\",\"project_improvement_signals\",\"documentation_impact\",\"documentation_surface_audit\",\"memory_sync\",\"memory_core\",\"spec_depth\",\"publication_validation\",\"research_control_core\",\"research_control_diff\",\"test_shard_repository\",\"current_frontier_freshness\",\"compact_frontier_freshness\",\"dependency_graph_freshness\",\"task_index_freshness\",\"claim_graph_validation\",\"git_diff_check\",\"continue_memory_preflight\",\"profile_validate_project_control\",\"profile_validate_memory\",\"profile_validate_html_explainers\",\"profile_audit_documentation_surfaces\",\"profile_full_research_control\",\"profile_ci_project_control\"],\"skipped_gate_ids\":[\"local_retrieval_sync\",\"local_retrieval_lint\",\"memory_status_diagnostic\",\"memory_lookup_diagnostic\",\"memory_search_diagnostic\",\"claim_language_changed\",\"route_signature_diagnostic\",\"route_orbit_diagnostic\",\"targeted_pdf_build\",\"continue_context_resolution\",\"checkpoint_transaction\",\"mermaid_sources\"],\"status\":\"READY\",\"superseded_gate_ids\":[],\"unknown_paths\":[]}\n"
+    },
+    {
+      "advisory": false,
+      "authority_level": "legacy-authoritative",
+      "command": [
+        "make",
+        "--no-print-directory",
+        "PYTHON=.venv/bin/python",
+        "validate-project-control-legacy"
+      ],
+      "label": "legacy_validate_project_control",
+      "purpose": "Execute the existing full project-control chain under legacy shadow authority.",
+      "required": true,
+      "returncode": 2,
+      "status": "FAIL",
+      "stderr_tail": "make: *** [validate-project-control-legacy] Error 1\n",
+      "stdout_tail": "_authority_footer_hooks: 19\n- checked_html_rows: 19\n- checked_markdown_rows: 626\n- checked_obsidian_vault_registry_rows: 1107\n- checked_pdf_rows: 16\n- checked_relationship_rows: 5598\n- checked_tex_rows: 446\n- checked_wiki_artifact_registry_rows: 1107\n- local_path_checks: skipped\n.venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only\nPASS gates=1 findings=2 receipt=/Volumes/P-SSD/AngryOwl/The-AEther-Flow/.local/validation-receipts/working-sha256-daa1082cb5a29bd4f2c0825597d5c27cfd3538aec8d21de976b01cb78a6a5b15/PROFILE-VALIDATE-MEMORY-DAA1082CB5A29BD4/full.json\n.venv/bin/python scripts/spec_depth_lint.py --root .\nDepth lint PASS\n.venv/bin/python scripts/validate_publication_process.py --root .\nPublication process validation PASS\n- checked_briefs: 18\n- checked_html_runtime: 19\n- checked_migrated_surfaces: 18\n.venv/bin/python scripts/research_control/validate_research_control.py --check-diff\nFAIL gates=1 errors=25 warnings=1821 findings=1846 more_findings=1836 receipt=/Volumes/P-SSD/AngryOwl/The-AEther-Flow/.local/validation-receipts/working-sha256-f8bdeae1b239c0fd40887c3c325f9212bd5f060ea93b6761610125d207c3052a/RESEARCH-CONTROL-DIFF-F8BDEAE1B239C0FD/full.json\nWARN_GROUP research_control_warning count=1821\nERROR research_control_diff RESEARCH-CONTROL-DIFF-ERROR-08307CB83DA1 research_control_error: research_control/tasks/RT-20260704-002/jobs/AJ-RT-20260704-002-001.yaml: memory_preflight source_hash is stale for research_control/design/public_status_exists_does_not_exist_source_spec.md\nERROR research_control_diff RESEARCH-CONTROL-DIFF-ERROR-0EDBF535587D research_control_error: research_control/handoffs/handoff-0929.yaml: active_state_bifurcation drift field=latest_research_next_action authoritative_value='Run one governed checkpoint for AJ-RT-20260731-007-001. After it commits, create no successor and stop the...\nERROR research_control_diff RESEARCH-CONTROL-DIFF-ERROR-24439511EA39 research_control_error: research_control/tasks/RT-20260731-007/roles/documentation-curator@2.0.0--RT-20260731-007.yaml: added_constraints does not match ROLE_EXECUTION_REGISTRY.csv\nERROR research_control_diff RESEARCH-CONTROL-DIFF-ERROR-2CC807E0AB5C research_control_error: research_control/tasks/RT-20260731-007/roles/documentation-curator@2.0.0--RT-20260731-007.yaml: justification does not match ROLE_EXECUTION_REGISTRY.csv\nERROR research_control_diff RESEARCH-CONTROL-DIFF-ERROR-425A91438406 research_control_error: research_control/tasks/RT-20260731-007/roles/documentation-curator@2.0.0--RT-20260731-007.yaml: expanded_permissions does not match ROLE_EXECUTION_REGISTRY.csv\nERROR research_control_diff RESEARCH-CONTROL-DIFF-ERROR-49E0B2463938 research_control_error: research_control/tasks/RT-20260704-003/jobs/AJ-RT-20260704-003-001.yaml: memory_preflight source_hash does not match registry row for MD-RESEARCH-CONTROL-DESIGN-PUBLIC-STATUS-EXISTS-DOES-NOT-EXIST-SOURCE-SPEC\nERROR research_control_diff RESEARCH-CONTROL-DIFF-ERROR-4B7D29DCB83C research_control_error: research_control/handoffs/handoff-0929.yaml: ordinary-route guard: exception_not_allowed_below_threshold\nERROR research_control_diff RESEARCH-CONTROL-DIFF-ERROR-50AC0683D34D research_control_error: research_control/tasks/RT-20260731-007/jobs/AJ-RT-20260731-007-001.yaml: line 106: unquoted scalars cannot contain ':'\nERROR research_control_diff RESEARCH-CONTROL-DIFF-ERROR-536B5A278F15 research_control_error: research_control/tasks/RT-20260704-003/jobs/completions/AJC-AJ-RT-20260704-003-001.yaml: memory_preflight source_hash does not match registry row for MD-RESEARCH-CONTROL-DESIGN-PUBLIC-STATUS-EXISTS-DOES-NOT-EXIST-SOURCE-SPEC\nERROR research_control_diff RESEARCH-CONTROL-DIFF-ERROR-67805A4195E6 research_control_error: output/compact_current_frontier_v16.json: active_state_bifurcation drift field=latest_research_next_action authoritative_value='Run one governed checkpoint, then stop at the exact publication-and-hosted-CI evidence hold with zero success...\n"
+    }
+  ],
+  "compatibility_command_projection": [
+    {
+      "advisory": false,
+      "authority_level": "legacy-authoritative",
+      "command": [
+        "scripts/project_control/classify_project_changes.py"
+      ],
+      "gate_id": "classify_changes",
+      "label": "classify_changes",
+      "purpose": "Legacy-compatible declarative contract for project_change_classifier; execution remains under legacy authority.",
+      "required": true,
+      "satisfies_obligations": [
+        "classify_changes"
+      ]
+    },
+    {
+      "advisory": true,
+      "authority_level": "legacy-authoritative",
+      "command": [
+        "scripts/project_control/resolve_project_improvement.py"
+      ],
+      "gate_id": "resolve_project_improvement",
+      "label": "resolve_project_improvement",
+      "purpose": "Legacy-compatible declarative contract for project_improvement_resolver; execution remains under legacy authority.",
+      "required": false,
+      "satisfies_obligations": [
+        "resolve_project_improvement"
+      ]
+    },
+    {
+      "advisory": false,
+      "authority_level": "legacy-authoritative",
+      "command": [
+        "scripts/project_control/collect_project_improvement_signals.py",
+        "--validate-emitted"
+      ],
+      "gate_id": "project_improvement_signals",
+      "label": "project_improvement_signals",
+      "purpose": "Legacy-compatible declarative contract for project_improvement_signal_parity; execution remains under legacy authority.",
+      "required": true,
+      "satisfies_obligations": [
+        "project_improvement_signals"
+      ]
+    },
+    {
+      "advisory": false,
+      "authority_level": "legacy-authoritative",
+      "command": [
+        "scripts/project_control/validate_documentation_impact.py"
+      ],
+      "gate_id": "documentation_impact",
+      "label": "documentation_impact",
+      "purpose": "Legacy-compatible declarative contract for documentation_impact; execution remains under legacy authority.",
+      "required": true,
+      "satisfies_obligations": [
+        "documentation_impact"
+      ]
+    },
+    {
+      "advisory": false,
+      "authority_level": "legacy-authoritative",
+      "command": [
+        "scripts/project_control/audit_documentation_surfaces.py"
+      ],
+      "gate_id": "documentation_surface_audit",
+      "label": "documentation_surface_audit",
+      "purpose": "Legacy-compatible declarative contract for documentation_surface_audit; execution remains under legacy authority.",
+      "required": true,
+      "satisfies_obligations": [
+        "documentation_surface_audit"
+      ]
+    },
+    {
+      "advisory": false,
+      "authority_level": "legacy-authoritative",
+      "command": [
+        "bootstrap_memory_system.py",
+        "default"
+      ],
+      "gate_id": "memory_sync",
+      "label": "memory_sync",
+      "purpose": "Legacy-compatible declarative contract for memory_sync_and_validate; execution remains under legacy authority.",
+      "required": true,
+      "satisfies_obligations": [
+        "memory_sync"
+      ]
+    },
+    {
+      "advisory": false,
+      "authority_level": "legacy-authoritative",
+      "command": [
+        "bootstrap_memory_system.py",
+        "--validate-only"
+      ],
+      "gate_id": "memory_core",
+      "label": "memory_core",
+      "purpose": "Legacy-compatible declarative contract for memory_core_validate_only; execution remains under legacy authority.",
+      "required": true,
+      "satisfies_obligations": [
+        "memory_core",
+        "memory_freshness"
+      ]
+    },
+    {
+      "advisory": false,
+      "authority_level": "legacy-authoritative",
+      "command": [
+        "scripts/spec_depth_lint.py",
+        "--root",
+        "."
+      ],
+      "gate_id": "spec_depth",
+      "label": "spec_depth",
+      "purpose": "Legacy-compatible declarative contract for spec_depth_lint; execution remains under legacy authority.",
+      "required": true,
+      "satisfies_obligations": [
+        "spec_depth"
+      ]
+    },
+    {
+      "advisory": false,
+      "authority_level": "legacy-authoritative",
+      "command": [
+        "scripts/validate_publication_process.py",
+        "--root",
+        "."
+      ],
+      "gate_id": "publication_validation",
+      "label": "publication_validation",
+      "purpose": "Legacy-compatible declarative contract for publication_process; execution remains under legacy authority.",
+      "required": true,
+      "satisfies_obligations": [
+        "publication_validation"
+      ]
+    },
+    {
+      "advisory": false,
+      "authority_level": "legacy-authoritative",
+      "command": [
+        "scripts/research_control/validate_research_control.py",
+        "--check-diff"
+      ],
+      "gate_id": "research_control_diff",
+      "label": "research_control_diff_validation",
+      "purpose": "Legacy-compatible declarative contract for research_control_diff; execution remains under legacy authority.",
+      "required": true,
+      "satisfies_obligations": [
+        "research_control_diff",
+        "changed_claim_validation",
+        "authority_validation",
+        "residue_validation"
+      ]
+    },
+    {
+      "advisory": false,
+      "authority_level": "legacy-authoritative",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests"
+      ],
+      "gate_id": "test_shard_repository",
+      "label": "test_shard_repository",
+      "purpose": "Legacy-compatible declarative contract for repository_unittest_suite; execution remains under legacy authority.",
+      "required": true,
+      "satisfies_obligations": [
+        "test_shard_repository",
+        "proof_normal_form_validation",
+        "metric_use_tex_validation",
+        "traceability_validation",
+        "scientific_checker_validation"
+      ]
+    },
+    {
+      "advisory": false,
+      "authority_level": "legacy-authoritative",
+      "command": [
+        "render_current_frontier.py",
+        "--check"
+      ],
+      "gate_id": "current_frontier_freshness",
+      "label": "current_frontier_freshness",
+      "purpose": "Legacy-compatible declarative contract for current_frontier_freshness; execution remains under legacy authority.",
+      "required": true,
+      "satisfies_obligations": [
+        "current_frontier_freshness"
+      ]
+    },
+    {
+      "advisory": false,
+      "authority_level": "legacy-authoritative",
+      "command": [
+        "validate_compact_current_frontier_v16.py",
+        "--json"
+      ],
+      "gate_id": "compact_frontier_freshness",
+      "label": "compact_frontier_freshness",
+      "purpose": "Legacy-compatible declarative contract for compact_frontier_validation; execution remains under legacy authority.",
+      "required": true,
+      "satisfies_obligations": [
+        "compact_frontier_freshness"
+      ]
+    },
+    {
+      "advisory": false,
+      "authority_level": "legacy-authoritative",
+      "command": [
+        "render_dependency_graph.py",
+        "--check"
+      ],
+      "gate_id": "dependency_graph_freshness",
+      "label": "dependency_graph_freshness",
+      "purpose": "Legacy-compatible declarative contract for dependency_graph_freshness; execution remains under legacy authority.",
+      "required": true,
+      "satisfies_obligations": [
+        "dependency_graph_freshness"
+      ]
+    },
+    {
+      "advisory": false,
+      "authority_level": "legacy-authoritative",
+      "command": [
+        "validate_task_index.py",
+        "--json"
+      ],
+      "gate_id": "task_index_freshness",
+      "label": "task_index_freshness",
+      "purpose": "Legacy-compatible declarative contract for task_index_validation; execution remains under legacy authority.",
+      "required": true,
+      "satisfies_obligations": [
+        "task_index_freshness"
+      ]
+    },
+    {
+      "advisory": false,
+      "authority_level": "legacy-authoritative",
+      "command": [
+        "validate_claim_graph_v1.py",
+        "--json"
+      ],
+      "gate_id": "claim_graph_validation",
+      "label": "claim_graph_validation",
+      "purpose": "Legacy-compatible declarative contract for claim_graph_validation; execution remains under legacy authority.",
+      "required": true,
+      "satisfies_obligations": [
+        "claim_graph_validation"
+      ]
+    },
+    {
+      "advisory": false,
+      "authority_level": "legacy-authoritative",
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "gate_id": "git_diff_check",
+      "label": "git_diff_check",
+      "purpose": "Legacy-compatible declarative contract for whitespace_diff; execution remains under legacy authority.",
+      "required": true,
+      "satisfies_obligations": [
+        "git_diff_check",
+        "whitespace_validation"
+      ]
+    },
+    {
+      "advisory": false,
+      "authority_level": "legacy-authoritative",
+      "command": [
+        "continue_research_memory_preflight.py",
+        "--json"
+      ],
+      "gate_id": "continue_memory_preflight",
+      "label": "continue_memory_preflight",
+      "purpose": "Legacy-compatible declarative contract for continue_memory_preflight; execution remains under legacy authority.",
+      "required": true,
+      "satisfies_obligations": [
+        "continue_memory_preflight"
+      ]
+    },
+    {
+      "advisory": false,
+      "authority_level": "legacy-authoritative",
+      "command": [
+        "make",
+        "validate-project-control"
+      ],
+      "gate_id": "profile_validate_project_control",
+      "label": "profile_validate_project_control",
+      "purpose": "Legacy-compatible declarative contract for make_validate_project_control; execution remains under legacy authority.",
+      "required": true,
+      "satisfies_obligations": [
+        "profile_validate_project_control"
+      ]
+    },
+    {
+      "advisory": false,
+      "authority_level": "legacy-authoritative",
+      "command": [
+        "make",
+        "validate-memory"
+      ],
+      "gate_id": "profile_validate_memory",
+      "label": "profile_validate_memory",
+      "purpose": "Legacy-compatible declarative contract for make_validate_memory; execution remains under legacy authority.",
+      "required": true,
+      "satisfies_obligations": [
+        "profile_validate_memory"
+      ]
+    },
+    {
+      "advisory": false,
+      "authority_level": "legacy-authoritative",
+      "command": [
+        "make",
+        "validate-html-explainers"
+      ],
+      "gate_id": "profile_validate_html_explainers",
+      "label": "profile_validate_html_explainers",
+      "purpose": "Legacy-compatible declarative contract for make_validate_html_explainers; execution remains under legacy authority.",
+      "required": true,
+      "satisfies_obligations": [
+        "profile_validate_html_explainers"
+      ]
+    },
+    {
+      "advisory": false,
+      "authority_level": "legacy-authoritative",
+      "command": [
+        "make",
+        "audit-documentation-surfaces"
+      ],
+      "gate_id": "profile_audit_documentation_surfaces",
+      "label": "profile_audit_documentation_surfaces",
+      "purpose": "Legacy-compatible declarative contract for make_audit_documentation_surfaces; execution remains under legacy authority.",
+      "required": true,
+      "satisfies_obligations": [
+        "profile_audit_documentation_surfaces"
+      ]
+    },
+    {
+      "advisory": false,
+      "authority_level": "legacy-authoritative",
+      "command": [
+        "run_full_research_control_validation.py"
+      ],
+      "gate_id": "profile_full_research_control",
+      "label": "profile_full_research_control",
+      "purpose": "Legacy-compatible declarative contract for local_full_runner; execution remains under legacy authority.",
+      "required": true,
+      "satisfies_obligations": [
+        "profile_full_research_control"
+      ]
+    },
+    {
+      "advisory": false,
+      "authority_level": "legacy-authoritative",
+      "command": [
+        "project-control-validation.yml",
+        "validate_project_control",
+        "job"
+      ],
+      "gate_id": "profile_ci_project_control",
+      "label": "profile_ci_project_control",
+      "purpose": "Legacy-compatible declarative contract for github_actions_project_control_job; execution remains under legacy authority.",
+      "required": true,
+      "satisfies_obligations": [
+        "profile_ci_project_control"
+      ]
+    }
+  ],
+  "compatibility_wrapper_deprecated": true,
+  "deprecation_message": "DEPRECATED_COMPATIBILITY_WRAPPER: use the shared validation profile targets; this entry point remains a shadow-planner compatibility surface.",
+  "distance_to_gr_delta": "none",
+  "effective_profile": "full",
+  "execution_authority": "legacy",
+  "generated_at": "2026-07-31T22:42:20.533943Z",
+  "include_smoke_tests": false,
+  "include_smoke_tests_compatibility": "accepted_no_op_full_profile_already_selects_repository_tests",
+  "legacy_execution_status": "FAIL",
+  "manifest_hash": "407a3dbc8a7b0ae5d43a48838c33817bec80afbb11f89b99f84f023cd00e5b41",
+  "no_physics_delta": true,
+  "operational_receipt_only": true,
+  "physics_proof_authority": false,
+  "plan_only": false,
+  "planner_executes_commands": false,
+  "replacement_entry_points": [
+    "make validate-full",
+    ".venv/bin/python -m scripts.validation.cli plan --profile full --paths --json"
+  ],
+  "repo_root": "/Volumes/P-SSD/AngryOwl/The-AEther-Flow",
+  "requested_profile": "full",
+  "required_check_coverage": {
+    "active_state_sidecar_validation": true,
+    "claim_graph_validation": true,
+    "claim_language_lint": true,
+    "compact_current_frontier_check": true,
+    "current_frontier_check": true,
+    "diff_allowlist_check": true,
+    "documentation_impact": true,
+    "generated_derivative_drift_check": true,
+    "no_bare_accepted_high_risk_rows": true,
+    "no_premature_efe_route": true,
+    "registry_referential_integrity": true,
+    "research_control_core_obligation": true,
+    "research_control_diff_obligation": true,
+    "research_control_validation": true,
+    "route_orbit_advisory": true,
+    "route_signature_extraction_if_implemented": true,
+    "task_index_validation": true,
+    "whitespace_diff_check": true
+  },
+  "required_failure_labels": [
+    "legacy_validate_project_control"
+  ],
+  "schema_id": "research_control_local_full_wrapper_report_v2",
+  "selected_gate_ids": [
+    "classify_changes",
+    "resolve_project_improvement",
+    "project_improvement_signals",
+    "documentation_impact",
+    "documentation_surface_audit",
+    "memory_sync",
+    "memory_core",
+    "spec_depth",
+    "publication_validation",
+    "research_control_core",
+    "research_control_diff",
+    "test_shard_repository",
+    "current_frontier_freshness",
+    "compact_frontier_freshness",
+    "dependency_graph_freshness",
+    "task_index_freshness",
+    "claim_graph_validation",
+    "git_diff_check",
+    "continue_memory_preflight",
+    "profile_validate_project_control",
+    "profile_validate_memory",
+    "profile_validate_html_explainers",
+    "profile_audit_documentation_surfaces",
+    "profile_full_research_control",
+    "profile_ci_project_control"
+  ],
+  "shared_plan": {
+    "authority": {
+      "benchmark_authority": false,
+      "gate_chair_authority": false,
+      "legacy_result_authoritative": true,
+      "ontology_authority": false,
+      "operational_validation_only": true,
+      "physics_claim_authority": false
+    },
+    "blocked_paths": [],
+    "changed_paths": [],
+    "effective_profile": "full",
+    "entries": [
+      {
+        "gate_id": "classify_changes",
+        "mutating": false,
+        "reasons": [
+          "condition:profile_selected",
+          "prerequisite_for:documentation_impact",
+          "prerequisite_for:profile_validate_project_control",
+          "prerequisite_for:project_improvement_signals",
+          "prerequisite_for:resolve_project_improvement"
+        ],
+        "satisfies_obligations": [
+          "classify_changes"
+        ],
+        "severity": "blocking",
+        "status": "selected"
+      },
+      {
+        "gate_id": "resolve_project_improvement",
+        "mutating": false,
+        "reasons": [
+          "condition:profile_selected"
+        ],
+        "satisfies_obligations": [
+          "resolve_project_improvement"
+        ],
+        "severity": "advisory",
+        "status": "selected"
+      },
+      {
+        "gate_id": "project_improvement_signals",
+        "mutating": false,
+        "reasons": [
+          "condition:profile_selected",
+          "prerequisite_for:profile_validate_project_control"
+        ],
+        "satisfies_obligations": [
+          "project_improvement_signals"
+        ],
+        "severity": "blocking",
+        "status": "selected"
+      },
+      {
+        "gate_id": "documentation_impact",
+        "mutating": false,
+        "reasons": [
+          "condition:profile_selected",
+          "prerequisite_for:profile_validate_project_control"
+        ],
+        "satisfies_obligations": [
+          "documentation_impact"
+        ],
+        "severity": "blocking",
+        "status": "selected"
+      },
+      {
+        "gate_id": "documentation_surface_audit",
+        "mutating": false,
+        "reasons": [
+          "condition:profile_selected",
+          "prerequisite_for:profile_audit_documentation_surfaces"
+        ],
+        "satisfies_obligations": [
+          "documentation_surface_audit"
+        ],
+        "severity": "blocking",
+        "status": "selected"
+      },
+      {
+        "gate_id": "memory_sync",
+        "mutating": true,
+        "reasons": [
+          "condition:profile_selected",
+          "prerequisite_for:profile_validate_memory"
+        ],
+        "satisfies_obligations": [
+          "memory_sync"
+        ],
+        "severity": "blocking",
+        "status": "selected"
+      },
+      {
+        "gate_id": "memory_core",
+        "mutating": false,
+        "reasons": [
+          "condition:profile_selected"
+        ],
+        "satisfies_obligations": [
+          "memory_core",
+          "memory_freshness"
+        ],
+        "severity": "blocking",
+        "status": "selected"
+      },
+      {
+        "gate_id": "local_retrieval_sync",
+        "mutating": true,
+        "reasons": [
+          "selection_predicate_not_satisfied"
+        ],
+        "satisfies_obligations": [
+          "local_retrieval_sync"
+        ],
+        "severity": "local_only",
+        "status": "skipped_not_applicable"
+      },
+      {
+        "gate_id": "local_retrieval_lint",
+        "mutating": false,
+        "reasons": [
+          "selection_predicate_not_satisfied"
+        ],
+        "satisfies_obligations": [
+          "local_retrieval_lint"
+        ],
+        "severity": "local_only",
+        "status": "skipped_not_applicable"
+      },
+      {
+        "gate_id": "memory_status_diagnostic",
+        "mutating": false,
+        "reasons": [
+          "selection_predicate_not_satisfied"
+        ],
+        "satisfies_obligations": [
+          "memory_status_diagnostic"
+        ],
+        "severity": "advisory",
+        "status": "skipped_not_applicable"
+      },
+      {
+        "gate_id": "memory_lookup_diagnostic",
+        "mutating": false,
+        "reasons": [
+          "selection_predicate_not_satisfied"
+        ],
+        "satisfies_obligations": [
+          "memory_lookup_diagnostic"
+        ],
+        "severity": "advisory",
+        "status": "skipped_not_applicable"
+      },
+      {
+        "gate_id": "memory_search_diagnostic",
+        "mutating": false,
+        "reasons": [
+          "selection_predicate_not_satisfied"
+        ],
+        "satisfies_obligations": [
+          "memory_search_diagnostic"
+        ],
+        "severity": "advisory",
+        "status": "skipped_not_applicable"
+      },
+      {
+        "gate_id": "spec_depth",
+        "mutating": false,
+        "reasons": [
+          "condition:profile_selected",
+          "prerequisite_for:profile_validate_html_explainers",
+          "prerequisite_for:profile_validate_project_control"
+        ],
+        "satisfies_obligations": [
+          "spec_depth"
+        ],
+        "severity": "blocking",
+        "status": "selected"
+      },
+      {
+        "gate_id": "publication_validation",
+        "mutating": false,
+        "reasons": [
+          "prerequisite_for:profile_validate_html_explainers",
+          "prerequisite_for:profile_validate_project_control"
+        ],
+        "satisfies_obligations": [
+          "publication_validation"
+        ],
+        "severity": "blocking",
+        "status": "selected"
+      },
+      {
+        "gate_id": "research_control_core",
+        "mutating": false,
+        "reasons": [
+          "condition:profile_selected",
+          "prerequisite_for:profile_validate_project_control"
+        ],
+        "satisfies_obligations": [
+          "research_control_core"
+        ],
+        "severity": "blocking",
+        "status": "selected"
+      },
+      {
+        "gate_id": "research_control_diff",
+        "mutating": false,
+        "reasons": [
+          "condition:profile_selected"
+        ],
+        "satisfies_obligations": [
+          "authority_validation",
+          "changed_claim_validation",
+          "research_control_diff",
+          "residue_validation"
+        ],
+        "severity": "blocking",
+        "status": "selected"
+      },
+      {
+        "gate_id": "test_shard_repository",
+        "mutating": false,
+        "reasons": [
+          "condition:profile_selected",
+          "prerequisite_for:profile_validate_project_control"
+        ],
+        "satisfies_obligations": [
+          "metric_use_tex_validation",
+          "proof_normal_form_validation",
+          "scientific_checker_validation",
+          "test_shard_repository",
+          "traceability_validation"
+        ],
+        "severity": "blocking",
+        "status": "selected"
+      },
+      {
+        "gate_id": "current_frontier_freshness",
+        "mutating": false,
+        "reasons": [
+          "condition:profile_selected",
+          "prerequisite_for:profile_validate_project_control"
+        ],
+        "satisfies_obligations": [
+          "current_frontier_freshness"
+        ],
+        "severity": "blocking",
+        "status": "selected"
+      },
+      {
+        "gate_id": "compact_frontier_freshness",
+        "mutating": false,
+        "reasons": [
+          "condition:profile_selected",
+          "prerequisite_for:profile_validate_project_control"
+        ],
+        "satisfies_obligations": [
+          "compact_frontier_freshness"
+        ],
+        "severity": "blocking",
+        "status": "selected"
+      },
+      {
+        "gate_id": "dependency_graph_freshness",
+        "mutating": false,
+        "reasons": [
+          "prerequisite_for:profile_validate_project_control"
+        ],
+        "satisfies_obligations": [
+          "dependency_graph_freshness"
+        ],
+        "severity": "blocking",
+        "status": "selected"
+      },
+      {
+        "gate_id": "task_index_freshness",
+        "mutating": false,
+        "reasons": [
+          "prerequisite_for:profile_validate_project_control"
+        ],
+        "satisfies_obligations": [
+          "task_index_freshness"
+        ],
+        "severity": "blocking",
+        "status": "selected"
+      },
+      {
+        "gate_id": "claim_graph_validation",
+        "mutating": false,
+        "reasons": [
+          "condition:profile_selected",
+          "prerequisite_for:profile_validate_project_control"
+        ],
+        "satisfies_obligations": [
+          "claim_graph_validation"
+        ],
+        "severity": "blocking",
+        "status": "selected"
+      },
+      {
+        "gate_id": "claim_language_changed",
+        "mutating": false,
+        "reasons": [
+          "selection_predicate_not_satisfied"
+        ],
+        "satisfies_obligations": [
+          "claim_language_changed"
+        ],
+        "severity": "blocking",
+        "status": "skipped_not_applicable"
+      },
+      {
+        "gate_id": "route_signature_diagnostic",
+        "mutating": false,
+        "reasons": [
+          "selection_predicate_not_satisfied"
+        ],
+        "satisfies_obligations": [
+          "route_diagnostic_cache_freshness",
+          "route_diagnostic_cache_regeneration",
+          "route_signature_diagnostic"
+        ],
+        "severity": "advisory",
+        "status": "skipped_not_applicable"
+      },
+      {
+        "gate_id": "route_orbit_diagnostic",
+        "mutating": false,
+        "reasons": [
+          "selection_predicate_not_satisfied"
+        ],
+        "satisfies_obligations": [
+          "route_orbit_diagnostic"
+        ],
+        "severity": "advisory",
+        "status": "skipped_not_applicable"
+      },
+      {
+        "gate_id": "git_diff_check",
+        "mutating": false,
+        "reasons": [
+          "condition:profile_selected",
+          "prerequisite_for:profile_validate_project_control"
+        ],
+        "satisfies_obligations": [
+          "git_diff_check",
+          "whitespace_validation"
+        ],
+        "severity": "blocking",
+        "status": "selected"
+      },
+      {
+        "gate_id": "targeted_pdf_build",
+        "mutating": true,
+        "reasons": [
+          "selection_predicate_not_satisfied"
+        ],
+        "satisfies_obligations": [
+          "targeted_pdf_build"
+        ],
+        "severity": "blocking",
+        "status": "skipped_not_applicable"
+      },
+      {
+        "gate_id": "continue_memory_preflight",
+        "mutating": true,
+        "reasons": [
+          "condition:profile_selected"
+        ],
+        "satisfies_obligations": [
+          "continue_memory_preflight"
+        ],
+        "severity": "blocking",
+        "status": "selected"
+      },
+      {
+        "gate_id": "continue_context_resolution",
+        "mutating": false,
+        "reasons": [
+          "selection_predicate_not_satisfied"
+        ],
+        "satisfies_obligations": [
+          "continue_context_resolution"
+        ],
+        "severity": "advisory",
+        "status": "skipped_not_applicable"
+      },
+      {
+        "gate_id": "checkpoint_transaction",
+        "mutating": true,
+        "reasons": [
+          "selection_predicate_not_satisfied"
+        ],
+        "satisfies_obligations": [
+          "authority_validation",
+          "checkpoint_transaction",
+          "final_staged_allowlist",
+          "residue_validation",
+          "whitespace_validation"
+        ],
+        "severity": "blocking",
+        "status": "skipped_not_applicable"
+      },
+      {
+        "gate_id": "profile_validate_project_control",
+        "mutating": false,
+        "reasons": [
+          "condition:profile_selected",
+          "prerequisite_for:profile_ci_project_control",
+          "prerequisite_for:profile_full_research_control"
+        ],
+        "satisfies_obligations": [
+          "profile_validate_project_control"
+        ],
+        "severity": "blocking",
+        "status": "selected"
+      },
+      {
+        "gate_id": "profile_validate_memory",
+        "mutating": true,
+        "reasons": [
+          "condition:profile_selected",
+          "prerequisite_for:profile_full_research_control"
+        ],
+        "satisfies_obligations": [
+          "profile_validate_memory"
+        ],
+        "severity": "blocking",
+        "status": "selected"
+      },
+      {
+        "gate_id": "profile_validate_html_explainers",
+        "mutating": false,
+        "reasons": [
+          "condition:profile_selected",
+          "prerequisite_for:profile_full_research_control"
+        ],
+        "satisfies_obligations": [
+          "profile_validate_html_explainers"
+        ],
+        "severity": "blocking",
+        "status": "selected"
+      },
+      {
+        "gate_id": "profile_audit_documentation_surfaces",
+        "mutating": false,
+        "reasons": [
+          "condition:profile_selected",
+          "prerequisite_for:profile_full_research_control"
+        ],
+        "satisfies_obligations": [
+          "profile_audit_documentation_surfaces"
+        ],
+        "severity": "blocking",
+        "status": "selected"
+      },
+      {
+        "gate_id": "profile_full_research_control",
+        "mutating": false,
+        "reasons": [
+          "condition:profile_selected"
+        ],
+        "satisfies_obligations": [
+          "profile_full_research_control"
+        ],
+        "severity": "blocking",
+        "status": "selected"
+      },
+      {
+        "gate_id": "profile_ci_project_control",
+        "mutating": false,
+        "reasons": [
+          "condition:profile_selected"
+        ],
+        "satisfies_obligations": [
+          "profile_ci_project_control"
+        ],
+        "severity": "blocking",
+        "status": "selected"
+      },
+      {
+        "gate_id": "mermaid_sources",
+        "mutating": false,
+        "reasons": [
+          "selection_predicate_not_satisfied"
+        ],
+        "satisfies_obligations": [
+          "mermaid_sources"
+        ],
+        "severity": "blocking",
+        "status": "skipped_not_applicable"
+      }
+    ],
+    "execution_authority": "legacy",
+    "manifest_hash": "407a3dbc8a7b0ae5d43a48838c33817bec80afbb11f89b99f84f023cd00e5b41",
+    "manifest_id": "validation-gate-manifest-v1",
+    "ordered_gate_ids": [
+      "memory_sync",
+      "continue_memory_preflight",
+      "profile_validate_memory",
+      "classify_changes",
+      "resolve_project_improvement",
+      "project_improvement_signals",
+      "documentation_impact",
+      "documentation_surface_audit",
+      "memory_core",
+      "spec_depth",
+      "publication_validation",
+      "research_control_core",
+      "research_control_diff",
+      "test_shard_repository",
+      "current_frontier_freshness",
+      "compact_frontier_freshness",
+      "dependency_graph_freshness",
+      "task_index_freshness",
+      "claim_graph_validation",
+      "git_diff_check",
+      "profile_validate_project_control",
+      "profile_validate_html_explainers",
+      "profile_audit_documentation_surfaces",
+      "profile_full_research_control",
+      "profile_ci_project_control"
+    ],
+    "path_tags": [],
+    "planner_executes_commands": false,
+    "requested_profile": "full",
+    "role_obligations": [],
+    "schema_id": "validation_plan_v1",
+    "scopes": [],
+    "selected_gate_ids": [
+      "classify_changes",
+      "resolve_project_improvement",
+      "project_improvement_signals",
+      "documentation_impact",
+      "documentation_surface_audit",
+      "memory_sync",
+      "memory_core",
+      "spec_depth",
+      "publication_validation",
+      "research_control_core",
+      "research_control_diff",
+      "test_shard_repository",
+      "current_frontier_freshness",
+      "compact_frontier_freshness",
+      "dependency_graph_freshness",
+      "task_index_freshness",
+      "claim_graph_validation",
+      "git_diff_check",
+      "continue_memory_preflight",
+      "profile_validate_project_control",
+      "profile_validate_memory",
+      "profile_validate_html_explainers",
+      "profile_audit_documentation_surfaces",
+      "profile_full_research_control",
+      "profile_ci_project_control"
+    ],
+    "skipped_gate_ids": [
+      "local_retrieval_sync",
+      "local_retrieval_lint",
+      "memory_status_diagnostic",
+      "memory_lookup_diagnostic",
+      "memory_search_diagnostic",
+      "claim_language_changed",
+      "route_signature_diagnostic",
+      "route_orbit_diagnostic",
+      "targeted_pdf_build",
+      "continue_context_resolution",
+      "checkpoint_transaction",
+      "mermaid_sources"
+    ],
+    "status": "READY",
+    "superseded_gate_ids": [],
+    "unknown_paths": []
+  },
+  "status": "FAIL"
+}
