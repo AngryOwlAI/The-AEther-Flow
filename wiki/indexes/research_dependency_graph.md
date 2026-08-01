@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-08-01T08:55:01Z`
-- Source fingerprint: `6c224c366f7e45e272f871db8c1ac98ccd22f58c20365d97a9a525abd2e5eb88`
-- Nodes: `24146`
-- Edges: `75764`
+- Generated from tracked state as of: `2026-08-01T18:12:07Z`
+- Source fingerprint: `2987f932ee2e16b473261a6bf543f8826b10a5dd799e17069d8ef2e3f2889ff3`
+- Nodes: `24193`
+- Edges: `75830`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 1175 |
+| `completion_yaml` | 1178 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 934 |
+| `handoff_yaml` | 935 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,18 +33,18 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 9 |
-| `agent_job` | `support_only` | 1175 |
+| `agent_job` | `support_only` | 1178 |
 | `artifact` | `canonical_source` | 87 |
-| `artifact` | `support_only` | 12237 |
-| `blocked_burden` | `blocked` | 4953 |
-| `claim_boundary` | `support_only` | 1132 |
+| `artifact` | `support_only` | 12255 |
+| `blocked_burden` | `blocked` | 4970 |
+| `claim_boundary` | `support_only` | 1135 |
 | `draft_control_candidate` | `draft_control` | 805 |
 | `draft_control_candidate` | `proposal_only` | 149 |
 | `draft_control_candidate` | `science_draft` | 90 |
 | `frozen_negative` | `frozen_negative` | 151 |
 | `gate_chair_verdict` | `human_gated` | 37 |
-| `handoff` | `support_only` | 934 |
-| `human_gated_object` | `human_gated` | 589 |
+| `handoff` | `support_only` | 935 |
+| `human_gated_object` | `human_gated` | 591 |
 | `ledger_row` | `accepted_scoped` | 6 |
 | `ledger_row` | `blocked` | 3 |
 | `ledger_row` | `frozen_negative` | 1 |
@@ -58,7 +58,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `source_ontology_object` | `support_only` | 381 |
 | `task` | `human_gated` | 29 |
 | `task` | `science_draft` | 33 |
-| `task` | `support_only` | 1113 |
+| `task` | `support_only` | 1116 |
 
 ## Frontier Table
 
@@ -125,6 +125,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `blocked_claim:approval_reuse_gate_chair_reexecution_or_p4_t06_execution` | Blocked permission: approval reuse Gate Chair reexecution or P4-T06 execution | `registries/ROLE_EXECUTION_REGISTRY.csv` |
 | `blocked_claim:approval_reuse_or_gate_chair_re_execution` | Blocked claim: approval reuse or Gate Chair re-execution | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:approval_reuse_or_gate_chair_reexecution` | Blocked claim: approval reuse or Gate Chair reexecution | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:arbitrary_dependency_policy_schema_or_science_change` | Blocked permission: arbitrary dependency policy schema or science change | `registries/ROLE_EXECUTION_REGISTRY.csv` |
 | `blocked_claim:arbitrary_encodability_as_explicit_target_import` | Blocked claim: arbitrary encodability as explicit target import | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:arbitrary_explanatory_rewriting` | Blocked permission: arbitrary explanatory rewriting | `registries/ROLE_EXECUTION_REGISTRY.csv` |
 | `blocked_claim:arbitrary_finite_dag_witness_theorem` | Blocked claim: arbitrary finite-DAG witness theorem | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
@@ -137,6 +138,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `blocked_claim:arbitrary_mutable_source_exemption` | Blocked claim: arbitrary mutable-source exemption | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:arbitrary_output_or_research_script_admission` | Blocked claim: arbitrary output or research-script admission | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:arbitrary_output_path_generated_classification` | Blocked claim: arbitrary output-path generated classification | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:arbitrary_policy_schema_or_science_change` | Blocked permission: arbitrary policy schema or science change | `registries/ROLE_EXECUTION_REGISTRY.csv` |
 | `blocked_claim:article_body_content_change` | Blocked claim: article body content change | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:artifact_body_scanning` | Blocked claim: artifact-body scanning | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:artifact_identity_policy_or_source_change` | Blocked claim: artifact identity policy or source change | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
@@ -158,14 +160,12 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `blocked_claim:audit_pass_as_derivation` | Blocked claim: audit pass as derivation | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:audit_pass_as_detector_semantics` | Blocked claim: audit pass as detector semantics | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:audit_pass_as_einstein_equations` | Blocked claim: audit pass as Einstein equations | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:audit_pass_as_future_source_extension_impossibility` | Blocked claim: audit pass as future source-extension impossibility | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:audit_pass_as_g_eff_scope_change` | Blocked claim: audit pass as g_eff scope change | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 
 ## Route Continuity
 
-- Active task: `RT-20260801-003`
-- Latest handoff: `handoff-0934`
-- Handoff path: `research_control/handoffs/handoff-0934.yaml`
-- Next action: Run the one governed checkpoint for AJ-RT-20260801-003-001. After it commits, do not create or execute P13-T01 or P13-T02 work until separate explicit hosted-workflow authority obtains completed PASS Project Control Validation and Scheduled Full Validation evidence for exact head 686c3021.
+- Active task: `RT-20260801-006`
+- Latest handoff: `handoff-0935`
+- Handoff path: `research_control/handoffs/handoff-0935.yaml`
+- Next action: Run the one governed checkpoint for AJ-RT-20260801-006-001. After it commits, route one fresh bounded P13-T02 improve-project-system packet to perform the guarded planner cutover with rollback safeguards; do not execute P13-T02 in this frame.
 
 This graph is navigational support only; inspect the cited sources before using any claim.

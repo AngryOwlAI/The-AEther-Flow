@@ -1,0 +1,60 @@
+task_id: "RT-20260801-006"
+task_type: "project_system_p13_t01_b1e01_hosted_validation_evidence_reconciliation"
+title: "Reconcile exact-head hosted PASS evidence and complete P13-T01"
+task_taxonomy:
+  schema_id: "v21_task_taxonomy_v1"
+  work_kind: "benchmark_or_recovery"
+  milestone: "benchmark_promotion"
+  candidate_family: "p13_t01_b1e01_hosted_validation_evidence_reconciliation"
+  result_kind: "completed_or_precisely_blocked"
+  authority: "project_control"
+  scope: "project_system"
+validation_status: "PASS"
+status: "completed"
+created_at: "2026-08-01T18:12:07Z"
+updated_at: "2026-08-01T18:12:07Z"
+closed_at: "2026-08-01T18:12:07Z"
+closure_status: "p13_t01_exact_head_hosted_pass_evidence_reconciled_cutover_authorized_checkpoint_ready"
+parent_task_id: "RT-20260801-005"
+parent_handoff_id: "handoff-0934"
+supersedes_active_routing_task_id: "RT-20260801-003"
+current_decision_id: "DDR-20260801-006"
+current_job_id: "AJ-RT-20260801-006-001"
+role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260801-006"
+requires_human_gate: false
+human_authorization_note: "Generation 203 of the user-authorized recursive relay immutably routes one improve-project-system frame to reconcile already-completed exact-head hosted PASS evidence into P13-T01. It authorizes no external mutation and no P13-T02 execution."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P13"
+  plan_task_id: "P13-T01"
+  recovery_for_plan_task_id: "P13-T01"
+  next_plan_task_id: "P13-T02"
+  next_plan_task_execution_authorized: false
+objective: "Bind exact head b1e01 to completed PASS Project Control Validation and Scheduled Full Validation runs, combine that external evidence with the preserved zero-mismatch P13-T01 local corpus, supersede the stale 686c3021 hold, authorize cutover only for a separate P13-T02 packet after checkpoint, and leave live legacy authority unchanged in this frame."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system P13-T01 evidence reconciliation only; no derivation milestone advances."
+route_label: "reconcile_b1e01_hosted_validation_pass_evidence_into_p13_t01_v1"
+route_sha256: "416697e6fab5a2e71140ef591099bcc498e1b12df567e4a88e45a11060a17327"
+project_system_change_only: true
+dual_budget_category: "system_bearing"
+primary_budget: "project_system"
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+claim_boundary_id: "CB-PS-P13-T01-B1E01-HOSTED-VALIDATION-EVIDENCE-RECONCILIATION-001"
+documentation_impact_id: "DI-RT-20260801-006-001"
+completion_id: "AJC-AJ-RT-20260801-006-001"
+output_artifacts:
+  - "research_control/tasks/RT-20260801-006/artifacts/p13_t01_b1e01_hosted_validation_evidence_reconciliation_receipt.json"
+  - "research_control/tasks/RT-20260801-006/artifacts/p13_t01_cutover_authorization_decision.md"
+  - "research_control/tasks/RT-20260801-006/jobs/completions/AJC-AJ-RT-20260801-006-001.yaml"
+  - "research_control/handoffs/handoff-0935.yaml"
+  - "research_control/handoffs/handoff-0935.md"
+summary: "Exact published head b1e01 has completed PASS Project Control Validation and Scheduled Full Validation evidence. Together with the preserved zero-mismatch local burn-in and passing rollback drill, the evidence completes P13-T01 and makes P13-T02 dependency-ready after this packet's checkpoint; no cutover occurs here."
+next_recommended_action: "Run the one governed checkpoint for AJ-RT-20260801-006-001. After it commits, route one fresh bounded P13-T02 improve-project-system packet to perform the guarded planner cutover; do not execute P13-T02 in this frame."
+project_improvement_signals: []
+notes: "This packet does not replay the prior burn-in, mutate hosted state, push, dispatch workflows, execute P13-T02, change science, or create benchmark, proof, publication, Gate E, or completed-derivation authority."

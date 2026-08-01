@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260801-003`
-- Latest handoff: `handoff-0934`
-- Current status: `generation_200_checkpoint_reconciled_p13_t01_external_evidence_gate_checkpoint_ready`
+- Active task: `RT-20260801-006`
+- Latest handoff: `handoff-0935`
+- Current status: `p13_t01_exact_head_hosted_pass_evidence_reconciled_cutover_authorized_checkpoint_ready`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260801-003`
-- Latest research handoff: `handoff-0934`
-- Latest research next action: Run the one governed checkpoint for AJ-RT-20260801-003-001. After it commits, do not create or execute P13-T01 or P13-T02 work until separate explicit hosted-workflow authority obtains completed PASS Project Control Validation and Scheduled Full Validation evidence for exact head 686c3021.
+- Latest research task: `RT-20260801-006`
+- Latest research handoff: `handoff-0935`
+- Latest research next action: Run the one governed checkpoint for AJ-RT-20260801-006-001. After it commits, route one fresh bounded P13-T02 improve-project-system packet to perform the guarded planner cutover with rollback safeguards; do not execute P13-T02 in this frame.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `p13_t01_exact_head_validation_evidence_human_gate_v1`
-- Role family: `process-integrity-auditor@0.1.0`
-- Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Finish the shadow-to-authoritative migration without weakening safeguards.
+- Route ID: `p13_t02_validation_planner_cutover_v1`
+- Role family: `validator-engineer@0.2.0`
+- Target milestone: `none`
+- Milestone burden: Project-system validation orchestration cutover only; no derivation milestone advances.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `6f7244eea76c7f218718c4df86e15f79f37a9e87b552037bdaa6b8f0e8136117`
-- JSON SHA-256: `a3cef954ee0891c57522e2ed51a621a141e0f1cf442aaedbf585f69c4f01be57`
+- YAML SHA-256: `3792d6e93ff413d2d167b4fc4502a3734f957c8de0f0084a907e48122fca4e0c`
+- JSON SHA-256: `eb1a68f69579576dc75fb1a36b5854f4536dcc3666ab15afd985fcd8f4a664fe`
 
 ## Authority Warning
 

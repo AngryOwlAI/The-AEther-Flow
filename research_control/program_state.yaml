@@ -1,11 +1,97 @@
 mode: "director_led_research_control"
-active_task_id: "RT-20260801-003"
-latest_handoff_id: "handoff-0934"
-current_status: "generation_200_checkpoint_reconciled_p13_t01_external_evidence_gate_checkpoint_ready"
-claim_boundary_summary: "RT-20260801-003 records that generation 200 committed at 4bf35d and that exact authorized checkpoint 686c3021 is now origin/main, while its only matching Project Control Validation run is cancelled and no matching Scheduled Full Validation run exists. Predecessor records remain byte-identical, P13-T01 remains deferred_human_gate, P13-T02 remains unexecuted, and no workflow dispatch, push, scientific, Distance-to-GR, ontology, publication, proof, or promotion authority changes."
-next_plan_task_id: "P13-T01"
+active_task_id: "RT-20260801-006"
+latest_handoff_id: "handoff-0935"
+current_status: "p13_t01_exact_head_hosted_pass_evidence_reconciled_cutover_authorized_checkpoint_ready"
+claim_boundary_summary: "RT-20260801-006 binds exact published head b1e01 to completed successful Project Control Validation and Scheduled Full Validation runs and combines them with the sealed zero-mismatch P13-T01 burn-in and passing rollback drill. P13-T01 is complete; P13-T02 becomes dependency-ready only after this packet's checkpoint and remains unexecuted. Live legacy execution authority remains unchanged, and no workflow dispatch, push, scientific, Distance-to-GR, ontology, benchmark, Gate E, publication, proof, or completed-derivation authority changes."
+next_plan_task_id: "P13-T02"
 next_worker_skill: "improve-project-system"
-next_recommended_action: "Run the one governed checkpoint for AJ-RT-20260801-003-001. After it commits, do not create or execute P13-T01 or P13-T02 work until separate explicit hosted-workflow authority obtains completed PASS Project Control Validation and Scheduled Full Validation evidence for exact head 686c3021."
+next_recommended_action: "Run the one governed checkpoint for AJ-RT-20260801-006-001. After it commits, route one fresh bounded P13-T02 improve-project-system packet to perform the guarded planner cutover with rollback safeguards; do not execute P13-T02 in this frame."
+
+p13_t01_b1e01_hosted_validation_evidence_reconciliation:
+  task_id: "RT-20260801-006"
+  parent_task_id: "RT-20260801-005"
+  parent_handoff_id: "handoff-0934"
+  source_task_id: "RT-20260801-005"
+  source_job_id: "AJ-RT-20260801-005-001"
+  source_handoff_id: "handoff-0934"
+  plan_task_id: "P13-T01"
+  next_plan_task_id: "P13-T02"
+  claim_boundary_id: "CB-PS-P13-T01-B1E01-HOSTED-VALIDATION-EVIDENCE-RECONCILIATION-001"
+  status: "P13_T01_EXACT_HEAD_HOSTED_PASS_EVIDENCE_RECONCILED_CUTOVER_AUTHORIZED_CHECKPOINT_READY"
+  work_item_status: "completed"
+  route_label: "reconcile_b1e01_hosted_validation_pass_evidence_into_p13_t01_v1"
+  selected_role_family: "process-integrity-auditor@0.1.0"
+  selected_worker_skill: "improve-project-system"
+  selected_strategy_id: "reconcile_b1e01_hosted_validation_pass_evidence_into_p13_t01_v1"
+  target_derivation_milestone: "none"
+  milestone_burden: "Project-system P13-T01 evidence reconciliation only; no derivation milestone advances."
+  source_head: "b1e01ea1248445c7788072d8488af07f3ac1d33d"
+  immutable_route_sha256: "416697e6fab5a2e71140ef591099bcc498e1b12df567e4a88e45a11060a17327"
+  route_blocker_fingerprint: "787f5c19d0497a288aef5db38d2b6de43e1df0ed0071c1589f14635dc8c5a086"
+  inherited_manifest_sha256: "cd45dfc24b9807cb50adec0b8a33454c0b2262955a2fba2a0d214ec544aec763"
+  source_completion_path: "research_control/tasks/RT-20260801-005/jobs/completions/AJC-AJ-RT-20260801-005-001.yaml"
+  source_completion_sha256: "4255fd0a222e48707217c4a6be7429122460d1af6276956c5b010a0dff8c5341"
+  source_handoff_path: "research_control/handoffs/handoff-0934.yaml"
+  source_handoff_yaml_sha256: "e812ae37692a57256c34503fd4949a8237e8980b158741878b30acce690a4f9b"
+  source_handoff_markdown_sha256: "fc9d708ea906da9a7fc2a2ac9957b963b90f010b4410ed8324052d14b8f042c7"
+  prior_p13_t01_completion_path: "research_control/tasks/RT-20260723-018/jobs/completions/AJC-AJ-RT-20260723-018-001.yaml"
+  prior_p13_t01_completion_sha256: "0a99a53f681dd965cc12117ebfc5e38815a777f365830fee31fc961960b46956"
+  prior_p13_t01_compact_receipt_sha256: "4cb9c8f25dec79b3254446af4fb8245bd8e219e57c34a37a478f0fb52be97149"
+  prior_p13_t01_cutover_decision_sha256: "2acce239f9c8a9d2b5e7df3d2f681afb64fd2db96e61e9cc456785e64e0f71b3"
+  reconciliation_receipt_path: "research_control/tasks/RT-20260801-006/artifacts/p13_t01_b1e01_hosted_validation_evidence_reconciliation_receipt.json"
+  reconciliation_receipt_sha256: "257cd87279faf7caa6ea4315fc8ade7f06e93c09e02994936c07582214dc6ec7"
+  cutover_decision_path: "research_control/tasks/RT-20260801-006/artifacts/p13_t01_cutover_authorization_decision.md"
+  cutover_decision_sha256: "b6324e32dced93756ca82b5f914ba5c5559e567c36c38609d0676fc032ace081"
+  completion_path: "research_control/tasks/RT-20260801-006/jobs/completions/AJC-AJ-RT-20260801-006-001.yaml"
+  completion_sha256: "0e7b486c2c0fb3dd2674697bb42c5576eceee7746f3df404f0d6ef4dc724e49d"
+  handoff_id: "handoff-0935"
+  handoff_path: "research_control/handoffs/handoff-0935.yaml"
+  exact_head: "b1e01ea1248445c7788072d8488af07f3ac1d33d"
+  origin_main: "b1e01ea1248445c7788072d8488af07f3ac1d33d"
+  origin_main_matches_exact_head: true
+  project_control_validation_run_id: 30710365781
+  project_control_validation_conclusion: "success"
+  project_control_validation_pass_satisfied: true
+  scheduled_full_validation_run_id: 30710369822
+  scheduled_full_validation_conclusion: "success"
+  scheduled_full_validation_pass_satisfied: true
+  local_fixed_fixture_count: 11
+  local_representative_family_count: 5
+  local_unexplained_hard_mismatch_count: 0
+  local_safety_failure_count: 0
+  local_rollback_drill_status: "PASS"
+  reopening_criteria_satisfied: true
+  p13_t01_work_item_status: "completed"
+  p13_t01_cutover_authorized: true
+  p13_t01_reexecuted: false
+  p13_t02_dependency_ready: true
+  p13_t02_dependency_ready_after_checkpoint: true
+  p13_t02_dependency_ready_now: false
+  p13_t02_executed: false
+  live_legacy_authority_retained: true
+  scientific_claims_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false
+  hosted_workflow_dispatch_authorized: false
+  hosted_workflow_dispatch_performed: false
+  checkpoint_invocation_count: 0
+  checkpoint_committed: false
+  checkpoint_staged: false
+  dependency_checkpoint_commit: "b1e01ea1248445c7788072d8488af07f3ac1d33d"
+  selected_next_work_item: "P13-T02"
+  selected_next_worker_skill: "improve-project-system"
+  selected_next_role_family: "validator-engineer@0.2.0"
+  selected_next_route_label: "ordinary-research-packet"
+  selected_next_strategy_id: "execute_guarded_validation_planner_cutover_after_p13_t01_pass_v1"
+  selected_next_requires_human_gate: false
+  selected_next_blocked_by_protected_external_evidence: false
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
+  selected_next_blocker: "This evidence-reconciliation transaction requires its governed checkpoint before a fresh P13-T02 frame."
 
 generation_200_checkpoint_p13_t01_external_evidence_reconciliation:
   task_id: "RT-20260801-003"

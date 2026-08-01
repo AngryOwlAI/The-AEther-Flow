@@ -1,0 +1,108 @@
+{
+  "schema_id": "p13_t01_b1e01_hosted_validation_evidence_reconciliation_receipt_v1",
+  "task_id": "RT-20260801-006",
+  "job_id": "AJ-RT-20260801-006-001",
+  "plan_task_id": "P13-T01",
+  "created_at": "2026-08-01T18:12:07Z",
+  "status": "PASS",
+  "result_status": "CUTOVER_AUTHORIZED_P13_T02_DEPENDENCY_READY",
+  "source_head": "b1e01ea1248445c7788072d8488af07f3ac1d33d",
+  "origin_main": "b1e01ea1248445c7788072d8488af07f3ac1d33d",
+  "origin_main_matches_source_head": true,
+  "local_equivalence_evidence": {
+    "source_task_id": "RT-20260723-018",
+    "completion_path": "research_control/tasks/RT-20260723-018/jobs/completions/AJC-AJ-RT-20260723-018-001.yaml",
+    "completion_sha256": "0a99a53f681dd965cc12117ebfc5e38815a777f365830fee31fc961960b46956",
+    "compact_receipt_path": "research_control/tasks/RT-20260723-018/artifacts/p13_t01_compact_receipt.json",
+    "compact_receipt_sha256": "4cb9c8f25dec79b3254446af4fb8245bd8e219e57c34a37a478f0fb52be97149",
+    "equivalence_corpus_path": "research_control/tasks/RT-20260723-018/artifacts/p13_t01_validation_planner_equivalence_corpus.json",
+    "equivalence_corpus_sha256": "0d0ea76d3f00d159fb34ddd4706d57c210e58e2ace4ac5a5610ff9f4e4f1a190",
+    "mismatch_ledger_path": "research_control/tasks/RT-20260723-018/artifacts/p13_t01_mismatch_disposition_ledger.json",
+    "mismatch_ledger_sha256": "e431b5bbe898c44d2834db2864f0c222161d4258610bdcbf9edac0b2fc992424",
+    "prior_cutover_decision_path": "research_control/tasks/RT-20260723-018/artifacts/p13_t01_cutover_decision.md",
+    "prior_cutover_decision_sha256": "2acce239f9c8a9d2b5e7df3d2f681afb64fd2db96e61e9cc456785e64e0f71b3",
+    "fixed_fixture_count": 11,
+    "representative_family_count": 5,
+    "unexplained_hard_mismatch_count": 0,
+    "safety_failure_count": 0,
+    "rollback_drill_status": "PASS",
+    "prior_result_status": "HOLD_LEGACY_REPAIR_REQUIRED"
+  },
+  "reopening_criteria": {
+    "exact_candidate_checkpoint_published_with_explicit_user_authority": true,
+    "matched_current_head_project_control_validation_pass": true,
+    "matched_current_head_scheduled_full_validation_pass": true,
+    "all_required_criteria_satisfied": true
+  },
+  "hosted_validation_evidence": [
+    {
+      "workflow_name": "Project Control Validation",
+      "run_id": 30710365781,
+      "event": "push",
+      "status": "completed",
+      "conclusion": "success",
+      "head_sha": "b1e01ea1248445c7788072d8488af07f3ac1d33d",
+      "created_at": "2026-08-01T17:27:25Z",
+      "updated_at": "2026-08-01T17:42:18Z",
+      "url": "https://github.com/AngryOwlAI/The-AEther-Flow/actions/runs/30710365781",
+      "canonical_json_sha256": "6b4df92f293910c4e53696f53ad9580a35459fb001e58b95a99e097e91579bdb",
+      "qualifies_as_pass": true
+    },
+    {
+      "workflow_name": "Scheduled Full Validation",
+      "run_id": 30710369822,
+      "event": "workflow_dispatch",
+      "status": "completed",
+      "conclusion": "success",
+      "head_sha": "b1e01ea1248445c7788072d8488af07f3ac1d33d",
+      "created_at": "2026-08-01T17:27:32Z",
+      "updated_at": "2026-08-01T17:29:39Z",
+      "url": "https://github.com/AngryOwlAI/The-AEther-Flow/actions/runs/30710369822",
+      "canonical_json_sha256": "157a6968e1727c49f8508bd6e41fc11b02c8c349f376caea19b2cd78b575bc21",
+      "qualifies_as_pass": true
+    }
+  ],
+  "human_recovery_authority": {
+    "source_task_id": "RT-20260801-004",
+    "decision_path": "research_control/tasks/RT-20260801-004/DDR-20260801-004.md",
+    "decision_sha256": "1cc1c63737c0291ebdbc651db0d20ea8e5719944dcb8363a8e1b54d7b755cb91",
+    "repair_task_id": "RT-20260801-005",
+    "repair_task_path": "research_control/tasks/RT-20260801-005/00_TASK.yaml",
+    "repair_task_sha256": "5f532ebb57944c5e4a3bf09996a1d5e950dda68866210f56bcbf39468bcf16cc",
+    "repair_completion_path": "research_control/tasks/RT-20260801-005/jobs/completions/AJC-AJ-RT-20260801-005-001.yaml",
+    "repair_completion_sha256": "4255fd0a222e48707217c4a6be7429122460d1af6276956c5b010a0dff8c5341",
+    "authority_note": "The human authorized the bounded validation repair, exact checkpoint publication, and both named hosted validations; generation 203 authorizes only read-only reconciliation of their completed evidence."
+  },
+  "relay_receipt": {
+    "goal_id": "crg-20260720T161354Z-96bc2664ce31bfe0",
+    "generation": 203,
+    "passes_consumed": 182,
+    "route_work_item_id": "P13-T01",
+    "route_worker_skill": "improve-project-system",
+    "route_sha256": "416697e6fab5a2e71140ef591099bcc498e1b12df567e4a88e45a11060a17327",
+    "route_strategy_id": "reconcile_b1e01_hosted_validation_pass_evidence_into_p13_t01_v1",
+    "route_blocker_fingerprint": "787f5c19d0497a288aef5db38d2b6de43e1df0ed0071c1589f14635dc8c5a086",
+    "dirty_state_manifest_sha256": "cd45dfc24b9807cb50adec0b8a33454c0b2262955a2fba2a0d214ec544aec763",
+    "worker_invocation_count": 1
+  },
+  "disposition": {
+    "p13_t01_work_item_status": "completed",
+    "p13_t01_cutover_decision": "AUTHORIZE_PLANNER_CUTOVER_IN_SEPARATE_P13_T02_PACKET",
+    "p13_t02_dependency_ready": true,
+    "p13_t02_executed": false,
+    "live_execution_authority_changed": false,
+    "live_legacy_authority_retained_until_p13_t02": true,
+    "checkpoint_required_before_p13_t02": true
+  },
+  "authority_limits": {
+    "scientific_claims_changed": false,
+    "distance_to_gr_changed": false,
+    "ontology_or_source_law_adopted": false,
+    "benchmark_promotion_authorized": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "publication_or_push_performed": false,
+    "hosted_workflow_dispatched_or_rerun": false,
+    "p13_t02_execution_authorized_in_this_job": false
+  }
+}
