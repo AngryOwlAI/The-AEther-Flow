@@ -1,0 +1,97 @@
+{
+  "schema_id": "validation_runtime_reliability_receipt_v1",
+  "task_id": "RT-20260801-004",
+  "job_id": "AJ-RT-20260801-004-001",
+  "decision_id": "DDR-20260801-004",
+  "recorded_at": "2026-08-01T16:06:19Z",
+  "source_head": "83f5cd495c9a92d0f72e6f2d455e433b5dfc6571",
+  "human_source": {
+    "path": "SOUL.md",
+    "sha256": "4991c1d84009bff7f39750a72ab648dafe491f5783b5cf927cd0c7d6bb8daa4b",
+    "preserved_exactly": true,
+    "integration_status": "READY_FOR_GOVERNED_BOOTSTRAP"
+  },
+  "reproduced_failures": {
+    "hosted_project_control_run_id": 30681574675,
+    "attempt_count": 2,
+    "attempt_conclusion": "cancelled_after_45_minute_timeout",
+    "wrapper_failed_module_count": 6,
+    "wrapper_failure": "sealed source inventory expected 149 tests but observed 150",
+    "observed_source_test_count": 150,
+    "observed_source_test_sha256": "9cc3deab867d563bf2d5c302d29d8984a339451395aef1290eb624245987a93e",
+    "observed_policy_shard_count": 107,
+    "uncached_live_validation_observation_seconds": 447,
+    "uncached_live_validation_completed": false,
+    "hot_path": "ordinary_route_guard repeatedly parsed unchanged tracked YAML during one validate_all invocation"
+  },
+  "implementation": {
+    "cache_scope": "one explicit validate_research_control.validate_all invocation",
+    "nested_scope_behavior": "reuse outer invocation cache",
+    "file_identity": [
+      "resolved_path",
+      "mtime_ns",
+      "ctime_ns",
+      "size"
+    ],
+    "teardown": "ContextVar reset in finally",
+    "cached_read_classes": [
+      "YAML mapping",
+      "YAML frontmatter",
+      "CSV registry",
+      "tracked path inventory",
+      "candidate path inventory",
+      "approval job-use scan"
+    ],
+    "validator_or_test_skipped": false,
+    "timeout_increased": false,
+    "semantic_policy_changed": false
+  },
+  "local_evidence": {
+    "focused_cache_regression": {
+      "status": "PASS",
+      "duration_seconds": 7.024,
+      "assertions": [
+        "unchanged file parses once within scope",
+        "changed file invalidates within scope",
+        "cache is discarded outside scope"
+      ]
+    },
+    "policy_shard": {
+      "status": "PASS",
+      "test_count": 107,
+      "duration_seconds": 0.711
+    },
+    "full_control_validator": {
+      "runtime_seconds": 56.22,
+      "implementation_error_count": 0,
+      "remaining_preclosure_error_class": "new AgentJob lifecycle and stale SOUL registry only"
+    },
+    "repository_suite_preclosure": {
+      "test_count": 1268,
+      "runtime_seconds": 375.360,
+      "skip_count": 1,
+      "implementation_failure_count": 0,
+      "remaining_nonpass_count": 8,
+      "remaining_nonpass_class": "new AgentJob completion missing and SOUL generated metadata stale"
+    },
+    "repository_suite_final": {
+      "status": "PASS",
+      "test_count": 1268,
+      "runtime_seconds": 417.054,
+      "skip_count": 1,
+      "failure_count": 0,
+      "error_count": 0
+    }
+  },
+  "disposition": {
+    "implementation_status": "PASS_READY_FOR_CHECKPOINT",
+    "checkpoint_status": "PENDING_ONE_GOVERNED_CHECKPOINT",
+    "hosted_project_control_validation": "PENDING_NEW_EXACT_HEAD",
+    "hosted_scheduled_full_validation": "PENDING_NEW_EXACT_HEAD",
+    "p13_t02_executed": false,
+    "scientific_claims_changed": false,
+    "distance_to_gr_changed": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false
+  }
+}

@@ -10,10 +10,10 @@ from tests import test_research_control
 from tests import test_validate_research_control
 
 
-EXPECTED_SOURCE_TEST_COUNT = 149
-EXPECTED_SOURCE_TEST_SHA256 = "368163a3e8cc797da6e7b8ff96da0cddc40c75d84ae5533cb19a28529499b38e"
+EXPECTED_SOURCE_TEST_COUNT = 150
+EXPECTED_SOURCE_TEST_SHA256 = "9cc3deab867d563bf2d5c302d29d8984a339451395aef1290eb624245987a93e"
 EXPECTED_SHARD_COUNTS = {
-    "policy": 106,
+    "policy": 107,
     "active_state": 11,
     "continuation": 7,
     "checkpoint": 12,

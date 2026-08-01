@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import copy
 import importlib.util
+import tempfile
 import unittest
 from pathlib import Path
 from unittest import mock
@@ -20,6 +21,7 @@ from scripts.research_control.ordinary_route_guard import (
     evaluate_research_handoff_guard,
     ordinary_route_guard_policy,
     policy_active,
+    route_guard_read_cache,
 )
 
 
@@ -130,6 +132,31 @@ class OrdinaryRouteGuardTests(unittest.TestCase):
     def test_activation_boundary_is_strictly_after_implementation_job(self) -> None:
         self.assertFalse(policy_active(REQUIRED_AFTER))
         self.assertTrue(policy_active("2026-07-22T19:00:54Z"))
+
+    def test_read_cache_is_bounded_and_invalidates_changed_files(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            path = Path(temp_dir) / "record.yaml"
+            path.write_text("value: 1\n", encoding="utf-8")
+            real_safe_load = ordinary_route_guard.yaml.safe_load
+            with mock.patch.object(
+                ordinary_route_guard.yaml,
+                "safe_load",
+                wraps=real_safe_load,
+            ) as safe_load:
+                with route_guard_read_cache():
+                    first = ordinary_route_guard._load_mapping(path)
+                    second = ordinary_route_guard._load_mapping(path)
+                    self.assertIs(first, second)
+                    self.assertEqual(safe_load.call_count, 1)
+
+                    path.write_text("value: 200\n", encoding="utf-8")
+                    changed = ordinary_route_guard._load_mapping(path)
+                    self.assertEqual(changed, {"value": 200})
+                    self.assertEqual(safe_load.call_count, 2)
+
+                outside = ordinary_route_guard._load_mapping(path)
+                self.assertEqual(outside, {"value": 200})
+                self.assertEqual(safe_load.call_count, 3)
 
     def test_fixture_suite(self) -> None:
         report = load_fixture_validator().build_validation_report()

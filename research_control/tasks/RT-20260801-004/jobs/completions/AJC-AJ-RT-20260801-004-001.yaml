@@ -1,0 +1,236 @@
+completion_id: "AJC-AJ-RT-20260801-004-001"
+job_id: "AJ-RT-20260801-004-001"
+task_id: "RT-20260801-004"
+task_type: "project_system_p13_t01_validation_runtime_reliability_and_soul_integration"
+decision_id: "DDR-20260801-004"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260801-004"
+status: "completed"
+validation_status: "PASS"
+completed_at: "2026-08-01T16:06:19Z"
+objective_result: "validation_runtime_repair_and_revised_soul_integration_ready_for_checkpoint"
+verdict: "PASS_IMPLEMENTATION_READY_FOR_CHECKPOINT_AND_HOSTED_VALIDATION"
+summary: "The exact human-authored SOUL.md revision is preserved, the measured route-control parse hot path is bounded by one per-invocation read cache, the 150-test wrapper inventory is resealed, focused and broad preclosure evidence show no implementation failures, and the transaction is ready for final local gates plus one checkpoint. Hosted evidence remains pending the new exact SHA."
+transaction_status: "ready_for_checkpoint"
+checkpoint_invocation_count: 0
+checkpoint_commit:
+  status: "PENDING"
+  commit: ""
+  invocation_count: 0
+
+result:
+  status: "PASS"
+  strategy_id: "repair_validation_runtime_and_integrate_revised_soul_v1"
+  human_soul_sha256: "4991c1d84009bff7f39750a72ab648dafe491f5783b5cf927cd0c7d6bb8daa4b"
+  human_soul_preserved_exactly: true
+  source_test_count: 150
+  source_test_sha256: "9cc3deab867d563bf2d5c302d29d8984a339451395aef1290eb624245987a93e"
+  policy_shard_count: 107
+  route_cache_scope: "one explicit full validation invocation"
+  full_control_validator_runtime_seconds: 56.22
+  repository_suite_preclosure_test_count: 1268
+  repository_suite_preclosure_runtime_seconds: 375.360
+  repository_suite_final_status: "PASS"
+  repository_suite_final_test_count: 1268
+  repository_suite_final_runtime_seconds: 417.054
+  repository_suite_final_skip_count: 1
+  implementation_failure_count: 0
+  validator_or_test_skipped: false
+  timeout_increased: false
+  checkpoint_status: "PENDING"
+  hosted_project_control_validation_status: "PENDING_NEW_EXACT_HEAD"
+  hosted_scheduled_full_validation_status: "PENDING_NEW_EXACT_HEAD"
+  p13_t02_executed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  receipt_path: "research_control/tasks/RT-20260801-004/artifacts/validation_runtime_reliability_receipt.json"
+
+command_results:
+  - command: ".venv/bin/python -m py_compile scripts/research_control/ordinary_route_guard.py scripts/research_control/validate_research_control.py tests/support/research_control_shards.py tests/test_ordinary_route_guard.py"
+    status: "PASS"
+    summary: "All changed Python modules compile."
+  - command: "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m unittest -v tests.test_ordinary_route_guard.OrdinaryRouteGuardTests.test_read_cache_is_bounded_and_invalidates_changed_files"
+    status: "PASS"
+    summary: "The cache reuses unchanged input, invalidates changed input, and is discarded after its explicit scope."
+  - command: "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m unittest -v tests.test_research_control_policy"
+    status: "PASS"
+    summary: "The resealed policy shard runs 107 tests successfully."
+  - command: "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m unittest discover -s tests --durations 20"
+    status: "PASS"
+    summary: "The final closed transaction passes all 1268 tests in 417.054 seconds with one expected skip and zero failures or errors."
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+    status: "PASS"
+    summary: "The revised soul registry and generated memory surfaces validate with only local cache warnings."
+  - command: ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+    status: "PASS"
+    summary: "The exact classifier reasons, changed paths, generated derivatives, and validator coverage are recorded."
+  - command: ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+    status: "PASS"
+    summary: "Changed-scope claim language has zero hard failures."
+  - command: ".venv/bin/python scripts/research_control/validate_research_control.py --json-summary"
+    status: "PASS"
+    summary: "Closed-state integrated research-control validation has zero errors and completes in about 60 seconds."
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1109
+    relationship_row_count: 5606
+    semantic_row_count: 1109
+    vault_row_count: 1109
+    local_cache_only_warning_count: 8
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup SOUL.md --json"
+      query_type: "lookup"
+      query_text: "SOUL.md"
+      returned_object_ids:
+        - "MD-SOUL"
+  canonical_inspections:
+    - object_id: "MD-SOUL"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "SOUL.md"
+      source_hash: "4991c1d84009bff7f39750a72ab648dafe491f5783b5cf927cd0c7d6bb8daa4b"
+  authority_note: "Generated wiki, Obsidian, semantic, relationship, SQLite, and .local surfaces are retrieval-only and not authority; the exact human-authored source and tracked registries govern."
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  observed_durable_outputs:
+    physics: []
+    project_system:
+      - "exact revised soul integration"
+      - "scoped validation read cache with focused regression"
+      - "sealed wrapper inventory repair"
+      - "checkpoint-ready runtime evidence and control records"
+  accepted_criteria:
+    physics: []
+    project_system:
+      - "SOUL.md remains byte-identical to the human-authored SHA-256"
+      - "every validator and test remains enabled"
+      - "cache lifetime is bounded and changed fixtures invalidate"
+      - "the complete local suite passes within hosted budget"
+      - "the transaction becomes ready for one governed checkpoint"
+      - "P13-T02 remains unexecuted"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "measured"
+        value: 417.054
+        unit: "seconds"
+        basis: "final closed-state complete repository suite"
+      compute:
+        status: "measured"
+        value: 1268
+        unit: "tests"
+        basis: "preclosure complete repository suite"
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+distance_to_gr_delta:
+  changed: false
+  effect: "none_project_system_repair"
+  milestone: "benchmark_promotion"
+  ledger_row_updated: false
+  ledger_update_rationale: "Validator runtime and project-control source integration contribute no physics movement."
+
+physics_progress_status:
+  status: "documentation_or_control_only_no_physics_delta"
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+
+selected_next_route:
+  route_id: "p13_t01_new_exact_head_hosted_validation_evidence_v1"
+  route_label: "authorized-exact-head-hosted-validation-evidence"
+  role_family: "process-integrity-auditor@0.1.0"
+  worker_skill: "improve-project-system"
+  task_type: "validation_planner_equivalence_external_evidence"
+  plan_task_id: "P13-T01"
+  strategy_id: "obtain_new_exact_head_project_control_and_scheduled_full_pass_evidence_v1"
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  requires_human_gate: false
+  human_hosted_workflow_authorization_present: true
+  blocked_by_checkpoint: true
+  project_control_validation_pass_satisfied: false
+  scheduled_full_validation_pass_satisfied: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  executed: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "The bounded Validator Engineer job was created before implementation and preserves the exact human source."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Focused cache, sealed inventory, and preclosure full-suite evidence isolate zero implementation failures."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "The complete closed-state repository suite and integrated control validation pass."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "Exactly one governed checkpoint remains authorized."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "The approved bootstrap refreshed the SOUL derivative and generated registries."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "The canonical SOUL registry and generated derivatives pass validate-only."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-scope claim-language validation reports zero hard failures."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "none; project-system validation reliability and source integration only"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  push_authorized: true
+  push_scope: "one exact checkpoint commit to origin/main after every local gate passes"
+  publication_authorized: false
+  hosted_workflow_dispatch_authorized: true
+  hosted_workflow_scope: "Project Control Validation and Scheduled Full Validation for the exact new head only"
+  proof_authority: false
+  canonical_ontology_edit_authorized: false
+  source_law_adoption_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+notes: "Implementation completion does not satisfy the still-pending checkpoint or hosted evidence, and no validation result counts as physics, benchmark progress, promotion, proof, publication, Gate E revision, or P13-T02 execution."

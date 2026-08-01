@@ -1,0 +1,62 @@
+task_id: "RT-20260801-004"
+task_type: "project_system_p13_t01_validation_runtime_reliability_and_soul_integration"
+title: "Repair hosted-validation runtime and integrate the revised project soul"
+task_taxonomy:
+  schema_id: "v21_task_taxonomy_v1"
+  work_kind: "benchmark_or_recovery"
+  milestone: "benchmark_promotion"
+  candidate_family: "p13_t01_validation_runtime_reliability_and_soul_integration"
+  result_kind: "completed_or_precisely_blocked"
+  authority: "project_control"
+  scope: "project_system"
+validation_status: "PASS"
+status: "completed"
+created_at: "2026-08-01T15:49:37Z"
+updated_at: "2026-08-01T16:06:19Z"
+closed_at: "2026-08-01T16:06:19Z"
+closure_status: "validation_repair_and_soul_integration_pass_ready_for_checkpoint_and_hosted_evidence"
+parent_task_id: "RT-20260801-003"
+parent_handoff_id: "handoff-0934"
+supersedes_active_routing_task_id: ""
+current_decision_id: "DDR-20260801-004"
+current_job_id: "AJ-RT-20260801-004-001"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260801-004"
+requires_human_gate: false
+human_authorization_note: "The human explicitly authorized validation-system repair, a new exact commit, one push needed to expose that commit to GitHub Actions, and hosted Project Control Validation plus Scheduled Full Validation runs limited to obtaining completed PASS evidence. The human also supplied the exact revised SOUL.md source and requested its governed integration."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P13"
+  plan_task_id: "P13-T01"
+  recovery_for_plan_task_id: "P13-T01"
+  next_plan_task_id: "P13-T01"
+  next_plan_task_execution_authorized: false
+objective: "Preserve and integrate the exact human-authored SOUL.md revision, remove the measured validation-runtime defect without skipping or weakening any check, reseal the research-control shard inventory for the already-added test, and produce one checkpoint-ready transaction while leaving the separately authorized exact-head hosted validations, P13-T02, and all scientific promotion outside this implementation completion."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system validation reliability and canonical control-document integration only; no derivation milestone advances."
+route_label: "repair_validation_runtime_and_integrate_revised_soul_v1"
+project_system_change_only: true
+dual_budget_category: "system_bearing"
+primary_budget: "project_system"
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+claim_boundary_id: "CB-PS-P13-T01-VALIDATION-RELIABILITY-SOUL-INTEGRATION-001"
+documentation_impact_id: "DI-RT-20260801-004-001"
+completion_id: "AJC-AJ-RT-20260801-004-001"
+planned_outputs:
+  - "SOUL.md"
+  - "scripts/research_control/ordinary_route_guard.py"
+  - "scripts/research_control/validate_research_control.py"
+  - "tests/support/research_control_shards.py"
+  - "tests/test_ordinary_route_guard.py"
+  - "research_control/tasks/RT-20260801-004/artifacts/validation_runtime_reliability_receipt.json"
+  - "research_control/tasks/RT-20260801-004/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260801-004/jobs/completions/AJC-AJ-RT-20260801-004-001.yaml"
+summary: "The exact human-authored SOUL.md revision is preserved, the validation parse hot path is bounded to one explicit invocation, the 150-test wrapper inventory is resealed, and focused plus broad evidence show no implementation failure. Final closed-state gates, one checkpoint, and both exact-head hosted PASS results remain."
+next_recommended_action: "Synchronize generated derivatives, pass every closed-state local gate, checkpoint once, push the exact new head, obtain both hosted PASS results, and then recover the terminal relay without replaying generation 201."
+project_improvement_signals: []
+notes: "The bounded implementation is complete and expires at checkpoint readiness. Validation PASS remains operational evidence and cannot imply scientific truth, publication, benchmark promotion, Gate E revision, proof, or completed derivation."

@@ -44,6 +44,7 @@ from scripts.research_control.dual_budget_policy import (  # noqa: E402
 from scripts.research_control.ordinary_route_guard import (  # noqa: E402
     evaluate_agent_job_route_admission,
     evaluate_research_handoff_guard,
+    route_guard_read_cache,
 )
 from scripts.validation.models import (  # noqa: E402
     ValidationFinding as CommonValidationFinding,
@@ -6403,7 +6404,7 @@ def validate_diff(
     validate_changed_claim_language(report, paths)
 
 
-def validate_all(
+def _validate_all(
     *,
     check_diff: bool = False,
     base_ref: str = "HEAD",
@@ -6469,6 +6470,22 @@ def validate_all(
     if check_diff:
         validate_diff(report, jobs, base_ref, staged_only, job_id)
     return report
+
+
+def validate_all(
+    *,
+    check_diff: bool = False,
+    base_ref: str = "HEAD",
+    staged_only: bool = False,
+    job_id: str | None = None,
+) -> ValidationReport:
+    with route_guard_read_cache():
+        return _validate_all(
+            check_diff=check_diff,
+            base_ref=base_ref,
+            staged_only=staged_only,
+            job_id=job_id,
+        )
 
 
 def parse_args(argv: list[str]) -> argparse.Namespace:

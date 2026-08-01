@@ -13,6 +13,9 @@ import hashlib
 import json
 import re
 import subprocess
+from collections.abc import Callable, Iterator
+from contextlib import contextmanager
+from contextvars import ContextVar
 from pathlib import Path
 from typing import Any
 
@@ -53,6 +56,43 @@ AUTHORITY_LIMITS = {
     "scientific_status_changed": False,
     "physics_promotion_authorized": False,
 }
+_READ_CACHE: ContextVar[dict[tuple[Any, ...], Any] | None] = ContextVar(
+    "ordinary_route_guard_read_cache",
+    default=None,
+)
+
+
+@contextmanager
+def route_guard_read_cache() -> Iterator[None]:
+    """Reuse immutable reads within one explicit validation invocation."""
+
+    if _READ_CACHE.get() is not None:
+        yield
+        return
+    token = _READ_CACHE.set({})
+    try:
+        yield
+    finally:
+        _READ_CACHE.reset(token)
+
+
+def _cached_read(
+    kind: str,
+    identity: tuple[Any, ...],
+    loader: Callable[[], Any],
+) -> Any:
+    cache = _READ_CACHE.get()
+    if cache is None:
+        return loader()
+    key = (kind, *identity)
+    if key not in cache:
+        cache[key] = loader()
+    return cache[key]
+
+
+def _file_identity(path: Path) -> tuple[str, int, int, int]:
+    stat = path.stat()
+    return (str(path.resolve()), stat.st_mtime_ns, stat.st_ctime_ns, stat.st_size)
 
 
 def _text(value: Any) -> str:
@@ -77,33 +117,48 @@ def _int_value(value: Any, default: int = -1) -> int:
 
 
 def _read_csv(repo_root: Path, rel_path: str) -> list[dict[str, str]]:
-    with (repo_root / rel_path).open(newline="", encoding="utf-8") as handle:
-        return [
-            {key: value or "" for key, value in row.items()}
-            for row in csv.DictReader(handle)
-        ]
+    path = repo_root / rel_path
+
+    def load() -> list[dict[str, str]]:
+        with path.open(newline="", encoding="utf-8") as handle:
+            return [
+                {key: value or "" for key, value in row.items()}
+                for row in csv.DictReader(handle)
+            ]
+
+    return _cached_read("csv", _file_identity(path), load)
 
 
 def _load_mapping(path: Path) -> dict[str, Any]:
-    value = yaml.safe_load(path.read_text(encoding="utf-8"))
-    if not isinstance(value, dict):
-        raise ValueError(f"{path} must contain a mapping")
-    return value
+    def load() -> dict[str, Any]:
+        value = yaml.safe_load(path.read_text(encoding="utf-8"))
+        if not isinstance(value, dict):
+            raise ValueError(f"{path} must contain a mapping")
+        return value
+
+    return _cached_read("mapping", _file_identity(path), load)
 
 
 def _load_frontmatter(path: Path) -> dict[str, Any]:
-    text = path.read_text(encoding="utf-8")
-    lines = text.splitlines()
-    if not lines or lines[0].strip() != "---":
-        raise ValueError(f"{path} must begin with YAML frontmatter")
-    try:
-        end = next(index for index, line in enumerate(lines[1:], 1) if line.strip() == "---")
-    except StopIteration as exc:
-        raise ValueError(f"{path} has unterminated YAML frontmatter") from exc
-    value = yaml.safe_load("\n".join(lines[1:end]))
-    if not isinstance(value, dict):
-        raise ValueError(f"{path} frontmatter must contain a mapping")
-    return value
+    def load() -> dict[str, Any]:
+        text = path.read_text(encoding="utf-8")
+        lines = text.splitlines()
+        if not lines or lines[0].strip() != "---":
+            raise ValueError(f"{path} must begin with YAML frontmatter")
+        try:
+            end = next(
+                index
+                for index, line in enumerate(lines[1:], 1)
+                if line.strip() == "---"
+            )
+        except StopIteration as exc:
+            raise ValueError(f"{path} has unterminated YAML frontmatter") from exc
+        value = yaml.safe_load("\n".join(lines[1:end]))
+        if not isinstance(value, dict):
+            raise ValueError(f"{path} frontmatter must contain a mapping")
+        return value
+
+    return _cached_read("frontmatter", _file_identity(path), load)
 
 
 def _sha256(path: Path) -> str:
@@ -126,37 +181,43 @@ def _safe_repo_path(repo_root: Path, rel_path: str) -> Path | None:
 
 
 def _tracked_paths(repo_root: Path) -> set[str]:
-    result = subprocess.run(
-        ["git", "ls-files", "-z"],
-        cwd=repo_root,
-        capture_output=True,
-        check=False,
-    )
-    if result.returncode != 0:
-        return set()
-    return {
-        item.decode("utf-8")
-        for item in result.stdout.split(b"\0")
-        if item
-    }
+    def load() -> set[str]:
+        result = subprocess.run(
+            ["git", "ls-files", "-z"],
+            cwd=repo_root,
+            capture_output=True,
+            check=False,
+        )
+        if result.returncode != 0:
+            return set()
+        return {
+            item.decode("utf-8")
+            for item in result.stdout.split(b"\0")
+            if item
+        }
+
+    return _cached_read("tracked_paths", (str(repo_root.resolve()),), load)
 
 
 def _repository_candidate_paths(repo_root: Path) -> set[str]:
     """Return tracked files plus non-ignored files pending in this transaction."""
 
-    result = subprocess.run(
-        ["git", "ls-files", "-z", "--cached", "--others", "--exclude-standard"],
-        cwd=repo_root,
-        capture_output=True,
-        check=False,
-    )
-    if result.returncode != 0:
-        return set()
-    return {
-        item.decode("utf-8")
-        for item in result.stdout.split(b"\0")
-        if item
-    }
+    def load() -> set[str]:
+        result = subprocess.run(
+            ["git", "ls-files", "-z", "--cached", "--others", "--exclude-standard"],
+            cwd=repo_root,
+            capture_output=True,
+            check=False,
+        )
+        if result.returncode != 0:
+            return set()
+        return {
+            item.decode("utf-8")
+            for item in result.stdout.split(b"\0")
+            if item
+        }
+
+    return _cached_read("repository_candidate_paths", (str(repo_root.resolve()),), load)
 
 
 def policy_active(created_at: Any) -> bool:
@@ -382,18 +443,25 @@ def _validate_declared_goal_route(
 
 
 def _approval_job_uses(repo_root: Path, approval_id: str) -> list[str]:
-    uses: list[str] = []
-    jobs_root = repo_root / "research_control" / "tasks"
-    for path in jobs_root.glob("RT-*/jobs/AJ-*.yaml"):
-        if path.is_symlink() or not path.is_file():
-            continue
-        try:
-            record = _load_mapping(path)
-        except (OSError, ValueError, yaml.YAMLError):
-            continue
-        if _text(record.get("approval_id")) == approval_id:
-            uses.append(_text(record.get("job_id")))
-    return sorted(value for value in uses if value)
+    def load() -> list[str]:
+        uses: list[str] = []
+        jobs_root = repo_root / "research_control" / "tasks"
+        for path in jobs_root.glob("RT-*/jobs/AJ-*.yaml"):
+            if path.is_symlink() or not path.is_file():
+                continue
+            try:
+                record = _load_mapping(path)
+            except (OSError, ValueError, yaml.YAMLError):
+                continue
+            if _text(record.get("approval_id")) == approval_id:
+                uses.append(_text(record.get("job_id")))
+        return sorted(value for value in uses if value)
+
+    return _cached_read(
+        "approval_job_uses",
+        (str(repo_root.resolve()), approval_id),
+        load,
+    )
 
 
 def _validate_protected_human_override(
@@ -1061,4 +1129,5 @@ __all__ = [
     "evaluate_research_handoff_guard",
     "ordinary_route_guard_policy",
     "policy_active",
+    "route_guard_read_cache",
 ]
