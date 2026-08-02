@@ -1,0 +1,49 @@
+{
+  "authority_boundary": {
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "scientific_status_changed": false
+  },
+  "baseline_comparison": {
+    "assurance_coverage_floor_percent": 85.0,
+    "assurance_coverage_observed_percent": 89.59537572254335,
+    "dependency_audit_known_vulnerability_count": 0,
+    "mutation_kill_percent": 100.0,
+    "mutation_killed": 101,
+    "mutation_total": 101,
+    "selected_non_regression_elapsed_seconds": 10.5,
+    "selected_non_regression_test_count": 120
+  },
+  "budget_result": {
+    "coverage_floor_met": true,
+    "dependency_security_budget_met": true,
+    "mutation_budget_met": true,
+    "output_schema_additive_only": true,
+    "performance_blocker_count": 0,
+    "status": "PASS"
+  },
+  "compatibility_result": {
+    "historical_cli_path_executed": true,
+    "historical_design_note_preserved": true,
+    "historical_id_emitted_as_legacy_compatibility_id": true,
+    "input_contract_changed": false,
+    "result_status_semantics_changed": false
+  },
+  "plan_task_id": "P13-T08",
+  "recommendation": "release_after_governed_checkpoint",
+  "rollback": {
+    "checkpoint_rollback_tests_status": "PASS",
+    "data_migration_required": false,
+    "historical_receipt_rewrite_required": false,
+    "procedure": [
+      "Before checkpoint, revert only the bounded checker and focused-test delta through a fresh authorized recovery if any final gate fails.",
+      "After checkpoint, use a distinct governed recovery task; do not replay generation 222.",
+      "Retain the historical module path and compatibility ID in either direction."
+    ],
+    "rollback_trigger_count": 0,
+    "status": "TESTED_NOT_REQUIRED"
+  },
+  "schema_id": "performance_rollback_evidence_v1",
+  "status": "PASS_PRECHECKPOINT",
+  "task_id": "RT-20260802-007"
+}

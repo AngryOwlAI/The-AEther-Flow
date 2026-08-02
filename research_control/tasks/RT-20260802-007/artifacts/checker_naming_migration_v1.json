@@ -1,0 +1,54 @@
+{
+  "authority": {
+    "benchmark_authority": false,
+    "physics_claim_authority": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "source_law_adoption_authority": false
+  },
+  "migration_policy": {
+    "current_human_facing_names_must_be_support_calibrated": true,
+    "historical_compatibility_identifiers_are_authority_names": false,
+    "historical_receipts_rewritten": false,
+    "proof_like_name_requires_formal_theorem_validation": true
+  },
+  "plan_task_id": "P13-T08",
+  "recommendation_id": "V21-R56",
+  "schema_id": "checker_naming_migration_v1",
+  "status": "PASS_IMPLEMENTED_PENDING_FINAL_NONREGRESSION",
+  "surfaces": [
+    {
+      "compatibility_action": "Retain the historical file path and module ID so prior commands and receipts remain executable.",
+      "current_display_name": "Finite source-cover structural support checker",
+      "current_id": "finite_source_cover_structural_support_checker",
+      "formal_theorem_verified": false,
+      "historical_ids": [
+        "finite_source_cover_model_checker"
+      ],
+      "path": "scripts/research_control/finite_source_cover_model_checker.py",
+      "proof_authority": false,
+      "support_only": true
+    },
+    {
+      "compatibility_action": "No rename required because the active docstring and output boundary already identify support-only finite-record tooling.",
+      "current_display_name": "Typed EqSrc orbit support-only checker",
+      "current_id": "typed_eqsrc_orbit_checker",
+      "formal_theorem_verified": false,
+      "historical_ids": [],
+      "path": "scripts/research_control/support_formalization/typed_eqsrc_orbit_checker.py",
+      "proof_authority": false,
+      "support_only": true
+    },
+    {
+      "compatibility_action": "No rename required because the active docstring and output boundary already identify support-only finite-record and text tooling.",
+      "current_display_name": "Detector-placeholder collapse support-only checker",
+      "current_id": "detector_placeholder_collapse_checker",
+      "formal_theorem_verified": false,
+      "historical_ids": [],
+      "path": "scripts/research_control/support_formalization/detector_placeholder_collapse_checker.py",
+      "proof_authority": false,
+      "support_only": true
+    }
+  ],
+  "task_id": "RT-20260802-007"
+}

@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
-"""Finite source-cover model checker for draft/control witness data.
+"""Finite source-cover structural support checker for draft/control witness data.
 
-This checker is deterministic tooling. A pass result is not proof, source-law
-adoption, M_src adoption, g_eff construction, or downstream GR authority.
+The historical ``finite_source_cover_model_checker.py`` path remains a stable
+compatibility interface. This deterministic checker validates explicit
+finite/local records only. A pass result is operational support evidence, not
+proof, source-law adoption, M_src adoption, g_eff construction, or downstream
+GR authority.
 """
 
 from __future__ import annotations
@@ -20,6 +23,20 @@ try:
 except ImportError:  # pragma: no cover - only used when imported from outside this dir.
     sys.path.insert(0, str(Path(__file__).resolve().parent))
     import strict_yaml
+
+
+CHECKER_ID = "finite_source_cover_structural_support_checker"
+CHECKER_DISPLAY_NAME = "Finite source-cover structural support checker"
+LEGACY_COMPATIBILITY_IDS = ("finite_source_cover_model_checker",)
+SUPPORT_ONLY = True
+PROOF_AUTHORITY = False
+BOUNDARY_STATEMENT = (
+    "This finite source-cover structural support checker validates explicit "
+    "finite/local draft-control records only. A pass result has "
+    "proof_authority=false and does not adopt a source law, adopt M_src, "
+    "construct g_eff, derive matter coupling or Einstein equations, promote a "
+    "benchmark, issue a Gate Chair verdict, or complete the derivation."
+)
 
 
 CONTROLLED_STATUSES = (
@@ -111,13 +128,25 @@ class CheckResult:
     m_src_adoption_authority: bool = False
     g_eff_authority: bool = False
     benchmark_promotion_authority: bool = False
+    checker_id: str = CHECKER_ID
+    checker_display_name: str = CHECKER_DISPLAY_NAME
+    legacy_compatibility_ids: tuple[str, ...] = LEGACY_COMPATIBILITY_IDS
+    support_only: bool = SUPPORT_ONLY
+    proof_authority: bool = PROOF_AUTHORITY
+    boundary_statement: str = BOUNDARY_STATEMENT
 
     def to_dict(self) -> dict[str, Any]:
         return {
+            "boundary_statement": self.boundary_statement,
+            "checker_display_name": self.checker_display_name,
+            "checker_id": self.checker_id,
             "status": self.status,
             "checked_objects": self.checked_objects,
             "failures": [failure.to_dict() for failure in self.failures],
             "bottom_demonstrations_checked": self.bottom_demonstrations_checked,
+            "legacy_compatibility_ids": list(self.legacy_compatibility_ids),
+            "proof_authority": self.proof_authority,
+            "support_only": self.support_only,
             "physics_claim_authority": self.physics_claim_authority,
             "source_law_adoption_authority": self.source_law_adoption_authority,
             "m_src_adoption_authority": self.m_src_adoption_authority,
@@ -831,6 +860,9 @@ def main(argv: Sequence[str] | None = None) -> int:
         print(
             json.dumps(
                 {
+                    "boundary_statement": BOUNDARY_STATEMENT,
+                    "checker_display_name": CHECKER_DISPLAY_NAME,
+                    "checker_id": CHECKER_ID,
                     "status": "not_applicable",
                     "checked_objects": [],
                     "failures": [
@@ -841,6 +873,9 @@ def main(argv: Sequence[str] | None = None) -> int:
                             "message": str(exc),
                         }
                     ],
+                    "legacy_compatibility_ids": list(LEGACY_COMPATIBILITY_IDS),
+                    "proof_authority": PROOF_AUTHORITY,
+                    "support_only": SUPPORT_ONLY,
                     "physics_claim_authority": False,
                 },
                 indent=2,

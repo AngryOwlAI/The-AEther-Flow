@@ -1,0 +1,86 @@
+{
+  "authority_boundary": {
+    "distance_to_gr_changed": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "scientific_status_changed": false,
+    "validator_pass_is_operational_evidence_only": true
+  },
+  "baseline_dependencies": {
+    "p13_t05_completion_sha256": "77e41842b1530fea579955d57f3fefe99b9800bac2aa9147cb8ca9b5443bd8ea",
+    "p13_t06_completion_sha256": "bc36815f27a56bcde5d757c730c557164755d786c248c3b21bdc8f8e4fbe237a",
+    "p13_t07_checkpoint_commit": "6afcd4b0660e95d1653e74ab9fa39a858aff1139",
+    "p13_t07_final_recovery_completion_sha256": "a590a1a101428b295500ea8ac328ac81a770fe58650e948549236621e793dae4"
+  },
+  "findings": {
+    "blocking_finding_count": 0,
+    "historical_interface_break_count": 0,
+    "unsupported_proof_name_count_after": 0,
+    "warning_count": 0
+  },
+  "migration_result": {
+    "current_display_name": "Finite source-cover structural support checker",
+    "current_id": "finite_source_cover_structural_support_checker",
+    "historical_design_note_sha256_preserved": "ea917f86b2f2d841d2b77a4360c02302f98ef6be21371b1f0d6e5323b4a70968",
+    "historical_id_retained": "finite_source_cover_model_checker",
+    "historical_module_path_retained": "scripts/research_control/finite_source_cover_model_checker.py",
+    "proof_authority": false,
+    "support_only": true
+  },
+  "plan_task_id": "P13-T08",
+  "recommendation_ids": [
+    "V21-R54",
+    "V21-R55",
+    "V21-R56",
+    "V21-R57",
+    "V21-R58",
+    "V21-R59",
+    "V21-R60"
+  ],
+  "recommendation": "release_after_governed_checkpoint",
+  "schema_id": "software_system_non_regression_report_v1",
+  "status": "PASS_PRECHECKPOINT",
+  "task_id": "RT-20260802-007",
+  "validation_results": [
+    {
+      "evidence": "source and test compile",
+      "gate_id": "python_compile",
+      "status": "PASS"
+    },
+    {
+      "evidence": "9 focused finite source-cover checker tests",
+      "gate_id": "checker_naming_and_legacy_cli",
+      "status": "PASS"
+    },
+    {
+      "evidence": "120 selected checker authority semantic-smuggling API portability CI checkpoint equivalence orchestration freshness and assurance-property tests",
+      "gate_id": "selected_non_regression_suite",
+      "status": "PASS"
+    },
+    {
+      "evidence": "Ruff mypy and 13 quality tests",
+      "gate_id": "quality_profile",
+      "status": "PASS"
+    },
+    {
+      "evidence": "89.59537572254335 percent coverage against 85 percent floor; 24 tests PASS and 1 generated case skipped; 10 semantic-smuggling tests PASS; zero high-severity Bandit findings",
+      "gate_id": "assurance_profile",
+      "status": "PASS"
+    },
+    {
+      "evidence": "51 installed distributions audited with zero known vulnerabilities",
+      "gate_id": "dependency_security_audit",
+      "status": "PASS"
+    },
+    {
+      "evidence": "101 of 101 measured mutants killed",
+      "gate_id": "mutation_audit",
+      "status": "PASS"
+    },
+    {
+      "evidence": "10 exact source hashes and 6 environment contract tests",
+      "gate_id": "reproducible_environment_definition",
+      "status": "PASS"
+    }
+  ]
+}

@@ -1,0 +1,211 @@
+handoff_id: "handoff-0940"
+handoff_number: 940
+handoff_kind: "ordinary_research"
+task_id: "RT-20260802-007"
+decision_id: "DDR-20260802-007"
+job_id: "AJ-RT-20260802-007-001"
+completion_id: "AJC-AJ-RT-20260802-007-001"
+completion_path: "research_control/tasks/RT-20260802-007/jobs/completions/AJC-AJ-RT-20260802-007-001.yaml"
+completion_sha256: "fddaf38076c5b4f691f75ac2d45568fc879db460de8136241de201a2aa8908b3"
+status: "ready_after_checkpoint"
+validation_status: "PASS_PRECHECKPOINT"
+created_at: "2026-08-02T12:02:16Z"
+parent_handoff_id: "handoff-0939"
+plan_task_id: "P13-T08"
+source_role_id: "process-integrity-auditor"
+source_role_version: "0.1.0"
+source_execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260802-007"
+summary: "P13-T08 calibrates the current finite source-cover runtime identity to structural support, exposes support_only true and proof_authority false, preserves the historical module path ID CLI registered design note and prior receipts, and passes the scoped software-system non-regression audit. Generated synchronization, the full profile, and one governed checkpoint remain before one fresh P15-T02 frame."
+next_action: "After final synchronization, full-profile PASS, and one governed checkpoint, run one fresh bounded P15-T02 continue-research methodology-publication packet."
+current_claim_boundary: "CB-PS-P13-T08-CHECKER-NAMING-NONREGRESSION-001"
+loop_risk_route: "ordinary-research-packet"
+
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260802-007"
+  latest_research_handoff_id: "handoff-0940"
+  latest_research_next_action: "After final synchronization, full-profile PASS, and one governed checkpoint, run one fresh bounded P15-T02 continue-research methodology-publication packet."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+  project_improvement_sidecar_required: false
+  research_handoff_remains_authoritative: true
+
+claim_boundary:
+  allowed_next_scope: "One fresh bounded P15-T02 methodology-publication packet may evaluate the AI research-operating-system architecture using the qualifying P12-T07 and P13-T08 results after this transaction checkpoints."
+  completed_task: "RT-20260802-007"
+  completed_completion_path: "research_control/tasks/RT-20260802-007/jobs/completions/AJC-AJ-RT-20260802-007-001.yaml"
+  completed_completion_sha256: "fddaf38076c5b4f691f75ac2d45568fc879db460de8136241de201a2aa8908b3"
+  source_handoff_id: "handoff-0939"
+  source_handoff_path: "research_control/handoffs/handoff-0939.yaml"
+  source_handoff_sha256: "c66df08b890b3dfc1f829202d27176d9b331070efc0cc42872a1c4f1fe8d44de"
+  immutable_route_sha256: "2dcb3469cc49b38214cc98cd6115e7e100dfb0cf592ae05093e7d487659dfbf6"
+  route_blocker_fingerprint: "d05863da6e1dbc3bff31f1aa15fce2b038d21e0d55c9a64ab65023e696867bf2"
+  result_status: "PASS_P13_T08_CHECKER_NAMING_AND_NON_REGRESSION_PRECHECKPOINT"
+  current_checker_id: "finite_source_cover_structural_support_checker"
+  legacy_checker_id_preserved: "finite_source_cover_model_checker"
+  historical_design_note_preserved: true
+  support_only: true
+  proof_authority: false
+  blocking_finding_count: 0
+  scientific_status_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  ontology_adoption_authorized: false
+  source_law_adoption_authorized: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  publication_authorized: false
+  push_performed: false
+  hosted_workflow_dispatch_performed: false
+  blocked_claims:
+    - "checker or validator PASS presented as theorem truth or physics proof"
+    - "software non-regression presented as scientific or Distance-to-GR movement"
+    - "publication push hosted workflow Gate Chair benchmark promotion or completed derivation"
+
+plan_result:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  phase_id: "P13"
+  plan_task_id: "P13-T08"
+  title: "Rename checkers and complete software-system non-regression audit"
+  result_status: "P13_T08_PASS_PRECHECKPOINT"
+  work_item_status: "completed"
+  recommendation_ids:
+    - "V21-R54"
+    - "V21-R55"
+    - "V21-R56"
+    - "V21-R57"
+    - "V21-R58"
+    - "V21-R59"
+    - "V21-R60"
+  p15_t02_dependency_ready_after_checkpoint: true
+  p15_t02_executed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  system_success_counts_as_physics: false
+  system_success_counts_as_distance_to_gr: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+dependency_evidence:
+  p12_t07:
+    completion_path: "research_control/tasks/RT-20260723-013/jobs/completions/AJC-AJ-RT-20260723-013-001.yaml"
+    completion_sha256: "616324cbd2103d9cdb59ac53cc7c450c59b5d91ece1b44889362866d449e27d3"
+    cumulative_checkpoint_commit: "80b0566d63f1d0b7ed0578f94ac0000f4e296502"
+    status: "qualifying_methodology_result_preserved_and_checkpointed"
+  p13_t08:
+    completion_path: "research_control/tasks/RT-20260802-007/jobs/completions/AJC-AJ-RT-20260802-007-001.yaml"
+    completion_sha256: "fddaf38076c5b4f691f75ac2d45568fc879db460de8136241de201a2aa8908b3"
+    checkpoint_status: "pending"
+    status: "qualifying_completion_after_checkpoint"
+
+selected_next_route:
+  route_id: "route_p15_t02_after_p13_t08_checkpoint_v1"
+  route_label: "methodology-publication-packet"
+  role_family: "external-red-team-reviewer@0.1.0"
+  worker_skill: "continue-research"
+  plan_task_id: "P15-T02"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Prepare an AI-science methodology contribution independent of physics success."
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  physics_promotion_authorized: false
+  executed: false
+  next_action: "After the P13-T08 checkpoint, prepare the AI research-operating-system methodology paper with experiments, data dictionary, limitations, exact source binding, and no physics overread."
+  source_handoff: "research_control/handoffs/handoff-0940.yaml"
+
+ordinary_route_guard:
+  schema_id: "ordinary_route_guard_evaluation_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  evaluation_id: "ORE-HANDOFF-0940"
+  ordinary_handoff_id: "handoff-0940"
+  threshold: 3
+  consecutive_project_system_tasks_before_selection: 17
+  ready_science_plan_task_ids:
+    - "P15-T02"
+  selected_plan_task_id: "P15-T02"
+  selected_route_class: "physics_bearing"
+  selected_worker_skill: "continue-research"
+  outcome: "physics_bearing_route_selected"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  exception_receipt:
+    active: false
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 222 was validated claimed and consumed exactly once before its one direct improve-project-system worker invocation."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Task-local receipts bind the calibrated runtime identity exact compatibility boundary and scoped non-regression evidence."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Focused checker quality assurance dependency mutation environment and selected cross-system tests pass."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "One governed checkpoint is authorized and has not yet been invoked."
+  renderer:
+    status: "PENDING"
+    evidence:
+      - "Task index current frontier compact frontier and dependency graph synchronization remain."
+  memory_bootstrap:
+    status: "PENDING"
+    evidence:
+      - "Tracked memory synchronization and validate-only remain."
+  claim_language_linter:
+    status: "PENDING"
+    evidence:
+      - "Changed-source claim-language validation remains."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  hosted_workflow_dispatch_authorized: false
+  hosted_workflow_dispatch_authority_source_path: ""
+  push_authorized: false
+  publication_authorized: false
+  proof_authority: false
+
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  sidecar_path: ""
+  signal_ids: []
+  recursive_goal_recovery_required: false
+  reason: "P13-T08 found no separate project-system repair signal; this ordinary handoff remains authoritative."
+
+handoff_authority_boundary:
+  this_handoff_authorizes: "After checkpoint, Director consideration of one fresh bounded P15-T02 continue-research methodology-publication packet."
+  this_handoff_does_not_authorize:
+    - "P15-T02 execution before P13-T08 checkpoint"
+    - "publication submission push or hosted workflow dispatch"
+    - "checker or validator PASS as theorem truth or physics evidence"
+    - "canonical ontology source-law scientific-ledger or Distance-to-GR edit"
+    - "physical interpretation establishment benchmark promotion Gate Chair authority or completed derivation"
+
+next_plan_task_id: "P15-T02"
+next_plan_task_execution_ready_after_checkpoint: true
+next_plan_task_executed: false
+notes: "P13-T08 closes P13's software-system audit boundary without scientific promotion. The historical checker interface remains compatibility-addressable."

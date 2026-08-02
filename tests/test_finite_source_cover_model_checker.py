@@ -115,11 +115,34 @@ class FiniteSourceCoverModelCheckerTests(unittest.TestCase):
     def test_no_false_promotion_flags(self) -> None:
         result = self.check(copy.deepcopy(self.fixture))
         output = result.to_dict()
+        self.assertEqual(
+            output["checker_id"],
+            "finite_source_cover_structural_support_checker",
+        )
+        self.assertEqual(
+            output["checker_display_name"],
+            "Finite source-cover structural support checker",
+        )
+        self.assertEqual(
+            output["legacy_compatibility_ids"],
+            ["finite_source_cover_model_checker"],
+        )
+        self.assertTrue(output["support_only"])
+        self.assertFalse(output["proof_authority"])
         self.assertFalse(output["physics_claim_authority"])
         self.assertFalse(output["source_law_adoption_authority"])
         self.assertFalse(output["m_src_adoption_authority"])
         self.assertFalse(output["g_eff_authority"])
         self.assertFalse(output["benchmark_promotion_authority"])
+        self.assertIn("proof_authority=false", output["boundary_statement"])
+
+    def test_human_facing_name_is_support_calibrated(self) -> None:
+        self.assertIn("structural support checker", self.checker.__doc__ or "")
+        self.assertNotIn("model checker for", self.checker.__doc__ or "")
+        self.assertEqual(
+            self.checker.LEGACY_COMPATIBILITY_IDS,
+            ("finite_source_cover_model_checker",),
+        )
 
 
 if __name__ == "__main__":

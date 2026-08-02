@@ -1,11 +1,75 @@
 mode: "director_led_research_control"
-active_task_id: "RT-20260802-005"
-latest_handoff_id: "handoff-0939"
-current_status: "generation_217_checkpoint_reconciled_p13_t08_dependency_ready_after_checkpoint"
-claim_boundary_summary: "Generation 219 records exact generation-217 checkpoint 6afcd4b and supersedes stale precheckpoint P13-T07 routing without rewriting predecessor records. P13-T05, P13-T06, and completed P13-T07 now qualify one fresh P13-T08 frame after this reconciliation checkpoints; P13-T08 remains unexecuted."
-next_plan_task_id: "P13-T08"
-next_worker_skill: "improve-project-system"
-next_recommended_action: "Run one fresh bounded P13-T08 improve-project-system packet to calibrate checker names and complete software-system non-regression validation."
+active_task_id: "RT-20260802-007"
+latest_handoff_id: "handoff-0940"
+current_status: "p13_t08_checker_naming_and_software_non_regression_pass_precheckpoint"
+claim_boundary_summary: "P13-T08 calibrates the current finite source-cover runtime identity to structural support with explicit support_only true and proof_authority false, preserves historical compatibility and the registered design note, and passes the scoped non-regression audit without physics or Distance-to-GR change."
+next_plan_task_id: "P15-T02"
+next_worker_skill: "continue-research"
+next_recommended_action: "After final synchronization, full-profile PASS, and one governed checkpoint, run one fresh bounded P15-T02 continue-research methodology-publication packet."
+
+p13_t08_checker_naming_and_software_non_regression_audit:
+  task_id: "RT-20260802-007"
+  parent_task_id: "RT-20260802-005"
+  parent_handoff_id: "handoff-0939"
+  plan_task_id: "P13-T08"
+  next_plan_task_id: "P15-T02"
+  claim_boundary_id: "CB-PS-P13-T08-CHECKER-NAMING-NONREGRESSION-001"
+  status: "PASS_PRECHECKPOINT"
+  work_item_status: "completed"
+  route_label: "rename_checkers_and_complete_software_system_non_regression_audit_v1"
+  selected_role_family: "process-integrity-auditor@0.1.0"
+  selected_worker_skill: "improve-project-system"
+  selected_strategy_id: "reroute_generation_221_p13_t08_to_improve_project_system_v1"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Close P13 with explicit operational authority boundaries."
+  source_head: "9279f291986e18012925a2379422d48160b76489"
+  immutable_route_sha256: "2dcb3469cc49b38214cc98cd6115e7e100dfb0cf592ae05093e7d487659dfbf6"
+  route_blocker_fingerprint: "d05863da6e1dbc3bff31f1aa15fce2b038d21e0d55c9a64ab65023e696867bf2"
+  completion_path: "research_control/tasks/RT-20260802-007/jobs/completions/AJC-AJ-RT-20260802-007-001.yaml"
+  completion_sha256: "fddaf38076c5b4f691f75ac2d45568fc879db460de8136241de201a2aa8908b3"
+  handoff_id: "handoff-0940"
+  handoff_path: "research_control/handoffs/handoff-0940.yaml"
+  checker_naming_migration_path: "research_control/tasks/RT-20260802-007/artifacts/checker_naming_migration_v1.json"
+  checker_naming_migration_sha256: "ca414c5a831ad371a09c3b859f2cada5d61a580bc6e99d0106bf68f40242a788"
+  software_non_regression_report_path: "research_control/tasks/RT-20260802-007/artifacts/software_system_non_regression_report_v1.json"
+  software_non_regression_report_sha256: "a901d81853bf9b549e46fbadacf6af64669295f7b64461f27c5c085de1d2592c"
+  performance_rollback_evidence_path: "research_control/tasks/RT-20260802-007/artifacts/performance_rollback_evidence_v1.json"
+  performance_rollback_evidence_sha256: "1dd307329d5152ed92d86c4e16e11da41cf0086a1d73397f8952753cd160c882"
+  compact_receipt_path: "research_control/tasks/RT-20260802-007/artifacts/p13_t08_compact_receipt.json"
+  compact_receipt_sha256: "b7c14d6f3a87f279e841eabef45dc44bde8d4652e02c6095c0bffa01d22c6fb1"
+  current_checker_id: "finite_source_cover_structural_support_checker"
+  legacy_checker_id: "finite_source_cover_model_checker"
+  legacy_module_path_preserved: true
+  historical_design_note_preserved: true
+  support_only: true
+  proof_authority: false
+  focused_checker_test_count: 9
+  selected_non_regression_test_count: 120
+  assurance_coverage_percent: 89.59537572254335
+  mutation_killed_count: 101
+  mutation_survived_count: 0
+  dependency_known_vulnerability_count: 0
+  blocking_finding_count: 0
+  p15_t02_dependency_ready_after_checkpoint: true
+  p15_t02_execution_ready_now: false
+  p15_t02_executed: false
+  selected_next_work_item: "P15-T02"
+  selected_next_worker_skill: "continue-research"
+  selected_next_role_family: "external-red-team-reviewer@0.1.0"
+  selected_next_route_label: "methodology-publication-packet"
+  selected_next_strategy_id: "route_p15_t02_after_p13_t08_checkpoint_v1"
+  selected_next_requires_human_gate: false
+  scientific_claims_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  ontology_adoption_authorized: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  publication_authorized: false
+  push_authorized: false
+  hosted_workflow_dispatch_authorized: false
+  checkpoint_invocation_count: 0
+  checkpoint_committed: false
 
 generation_217_checkpoint_p13_t08_dependency_reconciliation:
   task_id: "RT-20260802-005"
@@ -10803,9 +10867,9 @@ project_improvement_bridge:
   resolution_evidence_path: "research_control/tasks/RT-20260725-002/jobs/completions/AJC-AJ-RT-20260725-002-001.yaml"
 
 active_state_bifurcation:
-  latest_research_task_id: "RT-20260730-015"
-  latest_research_handoff_id: "handoff-0922"
-  latest_research_next_action: "Invoke the one governed checkpoint for AJ-RT-20260730-015-001. After that commit, use one fresh bounded External Red Team Reviewer packet for P9-T08 to audit P9-T02 through P9-T07 for target import, assumption drift, shared-method errors, and actual independent-replication status while preserving all six INCONCLUSIVE dispositions and zero benchmark passes."
+  latest_research_task_id: "RT-20260802-007"
+  latest_research_handoff_id: "handoff-0940"
+  latest_research_next_action: "After final synchronization, full-profile PASS, and one governed checkpoint, run one fresh bounded P15-T02 continue-research methodology-publication packet."
   latest_project_system_task_id: "none"
   latest_project_system_status: "none"
   latest_project_system_sidecar_task_id: "none"

@@ -7,50 +7,50 @@ generated_from:
   - "research_control/current_frontier.md"
   - "research_control/design/accepted_status_calibration_v2.yaml"
   - "research_control/design/active_state_bifurcation_policy_v1.md"
-  - "research_control/handoffs/handoff-0939.yaml"
+  - "research_control/handoffs/handoff-0940.yaml"
   - "research_control/program_state.yaml"
 report_provenance:
   schema_id: "generated_report_provenance_v1"
   policy_id: "p13_t07_live_generated_report_freshness_v1"
   report_class: "compact_current_frontier"
-  source_commit: "6afcd4b0660e95d1653e74ab9fa39a858aff1139"
+  source_commit: "9279f291986e18012925a2379422d48160b76489"
   source_hashes:
     - path: "registries/DISTANCE_TO_GR_LEDGER.csv"
       sha256: "6b81b42bc7ed83f74f8062f2ade26988e8b369aa2d23744fc9e392279e1de5d8"
     - path: "registries/RESEARCH_TASK_REGISTRY.csv"
-      sha256: "9840ad85e96fad907586fad1c14f783fa714933449a281a4302a057c9b80697a"
+      sha256: "199ade985f8e67fdf62fde7aaacfb45e52901c9cd40c88aa9ff0f13d3f4fe356"
     - path: "research_control/current_frontier.md"
-      sha256: "b088d767db1213892bc7d1460e84f2185d4fd79aae2d9355370d4d116f1abaa7"
-    - path: "research_control/handoffs/handoff-0939.yaml"
-      sha256: "c66df08b890b3dfc1f829202d27176d9b331070efc0cc42872a1c4f1fe8d44de"
+      sha256: "42ff6f784febfb15909e994b6b445cc9baa7d449b9888e706313d12d7e822775"
+    - path: "research_control/handoffs/handoff-0940.yaml"
+      sha256: "65e49f335c243008ac12c8462afafecc198e1b02265f44909df649c0725f4322"
     - path: "research_control/program_state.yaml"
-      sha256: "4471ecafe7277dd6a36b85c6c3ac63dd153cd9243590895857087ab3ca80af2d"
+      sha256: "c81889e00fc867eb6274a3ed88bef0c04b1e9b602c5b2fb23e57d763ad985e69"
     - path: "research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml"
       sha256: "dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3"
     - path: "scripts/research_control/generated_report_provenance.py"
       sha256: "af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c"
     - path: "scripts/research_control/render_compact_current_frontier_v16.py"
       sha256: "36fab56791487f690c7fd31ef036a1dba82d03a66beddefac5a21baf77ab10c2"
-  source_manifest_sha256: "5300014256f4e27f43a96266aa296fbc005d7937f21847c4c336fb97a8b2b587"
+  source_manifest_sha256: "de1688b3eedca64c6b840c3d169ab7b74eee8cfd567de50569e821c190c9b611"
   source_path_count: "12"
-  generation_time: "2026-08-02T09:54:19Z"
-  task_count: "1192"
+  generation_time: "2026-08-02T12:02:16Z"
+  task_count: "1193"
   maximum_commit_lag: "1"
   freshness_status: "fresh_at_generation"
   generated_view_is_authority: false
   physics_promotion_authorized: false
   proof_authority: false
 active_state:
-  active_task_id: "RT-20260802-005"
-  latest_handoff_id: "handoff-0939"
-  current_status: "generation_217_checkpoint_reconciled_p13_t08_dependency_ready_after_checkpoint"
+  active_task_id: "RT-20260802-007"
+  latest_handoff_id: "handoff-0940"
+  current_status: "p13_t08_checker_naming_and_software_non_regression_pass_precheckpoint"
   v15_completed: false
   v16_completed: false
   v16_plan_registered: true
 active_state_bifurcation:
-  latest_research_task_id: "RT-20260802-005"
-  latest_research_handoff_id: "handoff-0939"
-  latest_research_next_action: "Run one fresh bounded P13-T08 improve-project-system packet to calibrate checker names and complete software-system non-regression validation."
+  latest_research_task_id: "RT-20260802-007"
+  latest_research_handoff_id: "handoff-0940"
+  latest_research_next_action: "After final synchronization, full-profile PASS, and one governed checkpoint, run one fresh bounded P15-T02 continue-research methodology-publication packet."
   latest_project_system_task_id: "none"
   latest_project_system_status: "none"
   latest_project_system_sidecar_task_id: "none"
@@ -58,10 +58,10 @@ active_state_bifurcation:
   sidecar_supersedes_research_handoff: false
   next_research_route_source: "latest_research_handoff"
 next_route:
-  route_id: "p13_t08_checker_naming_non_regression_audit_v1"
-  role_family: "process-integrity-auditor@0.1.0"
+  route_id: "route_p15_t02_after_p13_t08_checkpoint_v1"
+  role_family: "external-red-team-reviewer@0.1.0"
   target_derivation_milestone: "source_equivalence_eqsrc"
-  milestone_burden: "Close P13 with explicit operational authority boundaries."
+  milestone_burden: "Prepare an AI-science methodology contribution independent of physics success."
   requires_human_gate: false
 claim_boundary:
   physics_claim_authority: false
@@ -317,10 +317,10 @@ blocked_physical_targets:
       - "no_global_theory_rejection"
 distance_to_gr:
   delta:
-    effect: "none_project_system_checkpoint_reconciliation"
+    effect: "no_distance_delta"
     changed: false
-    milestone: "source_equivalence_eqsrc"
-    burden_id: "source_equivalence_eqsrc"
+    milestone: "matter_coupling"
+    burden_id: "none"
   high_risk_rows:
     - burden_id: "m_src"
       reader_facing_status: "adopted only as scoped source-only M_src object"
@@ -573,11 +573,23 @@ metric_use_ledger:
     not_applicable: "19"
     scoped_obstruction: "6"
 validation:
-  latest_required_status: "PASS"
+  latest_required_status: "PASS_PRECHECKPOINT"
   pending_layers:
     - layer: "post_checkpoint"
       status: "PENDING"
       evidence:
-        - "One governed checkpoint remains authorized and uninvoked."
+        - "One governed checkpoint is authorized and has not yet been invoked."
+    - layer: "renderer"
+      status: "PENDING"
+      evidence:
+        - "Task index current frontier compact frontier and dependency graph synchronization remain."
+    - layer: "memory_bootstrap"
+      status: "PENDING"
+      evidence:
+        - "Tracked memory synchronization and validate-only remain."
+    - layer: "claim_language_linter"
+      status: "PENDING"
+      evidence:
+        - "Changed-source claim-language validation remains."
 authority_warning:
   snapshot_only_not_authority: true
