@@ -1,0 +1,362 @@
+completion_id: "AJC-AJ-RT-20260802-009-001"
+job_id: "AJ-RT-20260802-009-001"
+task_id: "RT-20260802-009"
+task_type: "v21_p15_t06_public_reproducibility_and_source_packages"
+decision_id: "DDR-20260802-009"
+role_id: "documentation-curator"
+role_version: "2.0.0"
+execution_role_ref: "documentation-curator@2.0.0--RT-20260802-009"
+status: "completed"
+validation_status: "PASS_PRECHECKPOINT"
+completed_at: "2026-08-02T14:32:33Z"
+objective_result: "four_source_backed_internal_release_candidate_packages_complete_ready_for_checkpoint"
+verdict: "PASS_FOUR_DETERMINISTIC_CLEAN_ROOM_REPRODUCIBILITY_PACKAGES"
+summary: "Generation 225 creates exactly four internal release-candidate source bundles for P15-T01 through P15-T04. The archives bind 160 tracked members to exact Git commits and SHA-256 values, preserve older source snapshots where live canonical files evolved, include environment license notice command expected-result and limitation records, and reproduce all four candidate validators from clean extraction. The P15-T06 checker passes 47 of 47 checks. No prior task or canonical science source changed and no external action or physics authority is created."
+transaction_status: "ready_for_checkpoint"
+checkpoint_invocation_count: 0
+checkpoint_commit:
+  status: "PENDING"
+  commit: ""
+  invocation_count: 0
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 225
+  passes_consumed: 201
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:225"
+  handoff_token: "3a59d357187797a522606c429f7dd92feb7696a7033da80f"
+  relay_claim_token: "b5c83d32a2340b085838ed2f3b63e3c52c41d95162452ab6"
+  route_source_generation: 224
+  route_work_item_id: "P15-T06"
+  route_worker_skill: "improve-project-system"
+  route_sha256: "96457a0854406def888295f5e8805726a131014085d879aff3016647779242c4"
+  route_strategy_id: "reroute_generation_224_p15_t06_to_improve_project_system_v1"
+  route_blocker_fingerprint: "0e3e6c487607272636f09152a83182db6ac785ad587bfdf772c4dd4196008fec"
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+plan_result:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  phase_id: "P15"
+  plan_task_id: "P15-T06"
+  title: "Build public reproducibility and source packages"
+  result_status: "PASS_FOUR_SOURCE_BACKED_INTERNAL_RELEASE_CANDIDATES_PRECHECKPOINT"
+  work_item_status: "completed"
+  recommendation_ids:
+    - "V21-R39"
+    - "V21-R49"
+    - "V21-R57"
+    - "V21-R60"
+    - "V21-R66"
+    - "V21-R68"
+  recommendation_coverage_role: "direct_implementation"
+  scientific_claims_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  next_dependency_work_item: "P15-T07_after_checkpoint_requires_exact_human_authorization"
+dependency_evidence:
+  - plan_task_id: "P15-T01"
+    task_id: "RT-20260723-002"
+    candidate_task_id: "RT-20260722-021"
+    completion_path: "research_control/tasks/RT-20260723-002/jobs/completions/AJC-AJ-RT-20260723-002-001.yaml"
+    completion_sha256: "af44b8f840f8f8beda1b688a5863de906d8e86d535b2507633c2682ddbd4b20c"
+    artifact_commit: "1d7e5d81cc75ddf903983dffec8b8a371476c738"
+    source_snapshot_commit: "ef41c569efd01f3a5182f114c20dd6edb3ee9973"
+    status: "qualifying_preserved_completion"
+  - plan_task_id: "P15-T02"
+    task_id: "RT-20260802-008"
+    completion_path: "research_control/tasks/RT-20260802-008/jobs/completions/AJC-AJ-RT-20260802-008-001.yaml"
+    completion_sha256: "bc7d22714d91f9745ac268904fef723287500c2913eadb65dcf9911c5465f06c"
+    artifact_commit: "9be11e9cc77a8ab30776fd5598b682b37c42a6e3"
+    source_snapshot_commit: "9be11e9cc77a8ab30776fd5598b682b37c42a6e3"
+    status: "qualifying_checkpointed_completion"
+  - plan_task_id: "P15-T03"
+    task_id: "RT-20260723-003"
+    completion_path: "research_control/tasks/RT-20260723-003/jobs/completions/AJC-AJ-RT-20260723-003-001.yaml"
+    completion_sha256: "c18ae55f4b4723a799ae081eb29b23c368af44f01e5d27ae7b2a7cd5873fb476"
+    artifact_commit: "1136e88b329fa9215017a20dd030607a98168503"
+    source_snapshot_commit: "1136e88b329fa9215017a20dd030607a98168503"
+    status: "qualifying_preserved_completion"
+  - plan_task_id: "P15-T04"
+    task_id: "RT-20260727-006"
+    completion_path: "research_control/tasks/RT-20260727-006/jobs/completions/AJC-AJ-RT-20260727-006-001.yaml"
+    completion_sha256: "95075d40d9f21f5c3ab14695a4c3def18c7241c6510319c8ffdf6b41d5ec0026"
+    artifact_commit: "832f9cf9ba98061df40cdda2799d5a46661260bc"
+    source_snapshot_commit: "832f9cf9ba98061df40cdda2799d5a46661260bc"
+    status: "qualifying_preserved_completion"
+reproducibility_package_result:
+  schema_id: "v21_p15_t06_reproducibility_package_result_v1"
+  status: "PASS_FOUR_SOURCE_BACKED_INTERNAL_RELEASE_CANDIDATES"
+  package_count: 4
+  manifest_entry_count: 160
+  clean_reproduction_pass_count: 4
+  check_count: 47
+  passed_check_count: 47
+  failed_check_count: 0
+  unsafe_archive_member_count: 0
+  source_hash_mismatch_count: 0
+  deterministic_output_mismatch_count: 0
+  license_and_notice_status: "PASS_SPLIT_LICENSE_AND_NOTICE_BOUND"
+  standalone_standard_license_texts_tracked_in_source_repository: false
+  license_text_limitation_recorded: true
+  third_party_payload_count: 0
+  external_primary_literature_copy_count: 0
+  historical_source_snapshot_substitution_count: 0
+  prior_task_modified_count: 0
+  canonical_science_modified: false
+  external_release_performed: false
+  publication_authorized: false
+  physics_promotion_authorized: false
+package_archives:
+  - plan_task_id: "P15-T01"
+    path: "research_control/tasks/RT-20260802-009/artifacts/p15_t01_exact_gr_interpretive_source_bundle_v1.tar"
+    sha256: "cdb3e01b113287380e587004e91ad0f7445b63d538bcdbfdce63155207d757d8"
+    source_snapshot_commit: "ef41c569efd01f3a5182f114c20dd6edb3ee9973"
+    clean_reproduction_status: "PASS"
+  - plan_task_id: "P15-T02"
+    path: "research_control/tasks/RT-20260802-009/artifacts/p15_t02_ai_methodology_source_bundle_v1.tar"
+    sha256: "056d81f87c1595b1f3b4bb40a1dc8b5e6ac895eff989ef6de0a2ae4f94718bbe"
+    source_snapshot_commit: "9be11e9cc77a8ab30776fd5598b682b37c42a6e3"
+    clean_reproduction_status: "PASS"
+  - plan_task_id: "P15-T03"
+    path: "research_control/tasks/RT-20260802-009/artifacts/p15_t03_selector_theorem_source_bundle_v1.tar"
+    sha256: "cea3d636d4a8e1dc3734a8fc1a8a3aee8861b6f88527c501498573411da352fc"
+    source_snapshot_commit: "1136e88b329fa9215017a20dd030607a98168503"
+    clean_reproduction_status: "PASS"
+  - plan_task_id: "P15-T04"
+    path: "research_control/tasks/RT-20260802-009/artifacts/p15_t04_source_dynamics_source_bundle_v1.tar"
+    sha256: "cedb2ca1f6a6a93fb3626a750759ec9463e607f2a1d8dab2dbfd972ee023f866"
+    source_snapshot_commit: "832f9cf9ba98061df40cdda2799d5a46661260bc"
+    clean_reproduction_status: "PASS"
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1112
+    relationship_row_count: 5619
+    semantic_row_count: 1112
+    vault_row_count: 1112
+    local_cache_only_warning_count: 0
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v21.md --json"
+      query_type: "lookup"
+      query_text: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  authority_note: "Generated wiki Obsidian semantic relationship SQLite and .local retrieval layers are navigation only and not authority; tracked sources exact Git objects completion hashes and validators govern this packet."
+physics_payload_admission_result:
+  schema_id: "physics_payload_result_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  status: "admitted"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  candidate_family: "not_applicable"
+  material_payload_created: false
+  material_payload_paths: []
+  project_system_outputs_created: true
+  process_receipts_excluded_from_physics_credit: true
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  observed_durable_outputs:
+    physics: []
+    project_system:
+      - "four deterministic archival source bundles"
+      - "one package catalog and exact source map"
+      - "one environment recipe and license notice audit"
+      - "one clean-room validator report and compact receipt"
+      - "one governed checkpoint-ready control record"
+  accepted_criteria:
+    physics: []
+    project_system:
+      - "each P15-T01 through P15-T04 publication candidate has exactly one package"
+      - "all tracked archive members resolve to exact Git commits and SHA-256 values"
+      - "each archive reproduces its candidate validator from an extracted clean directory"
+      - "licenses notices limitations and authority boundaries are explicit"
+      - "broad validation passes and one governed checkpoint records the transaction"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+ordinary_route_guard_result:
+  schema_id: "ordinary_route_guard_result_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0941"
+  selected_plan_task_id: "P15-T06"
+  outcome: "below_threshold"
+  route_wording: "project-system publication support; not physics evidence"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  system_success_counts_as_physics: false
+  system_success_counts_as_distance_to_gr: false
+  scientific_status_changed: false
+  physics_promotion_authorized: false
+distance_to_gr_delta:
+  changed: false
+  effect: "none_project_system_reproducibility_packaging"
+  milestone: "benchmark_promotion"
+  ledger_row_updated: false
+  ledger_update_rationale: "Source packaging and validator PASS contribute no physics movement or benchmark promotion."
+physics_progress_status:
+  status: "documentation_or_control_only_no_physics_delta"
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+command_results:
+  - command: ".venv/bin/python research_control/tasks/RT-20260722-021/artifacts/validate_exact_gr_interpretive_package.py --check --json"
+    status: "EXPECTED_LIVE_SOURCE_DRIFT"
+    summary: "The preserved candidate remains internally intact while three later canonical source hashes differ; the P15-T01 archive restores its declared source snapshot and passes clean-room validation."
+  - command: ".venv/bin/python research_control/tasks/RT-20260802-008/artifacts/build_p15_t02_methodology_publication.py --check && .venv/bin/python research_control/tasks/RT-20260802-008/artifacts/validate_p15_t02_methodology_publication.py"
+    status: "PASS"
+    summary: "The live P15-T02 deterministic builder and 26-check validator pass."
+  - command: ".venv/bin/python research_control/tasks/RT-20260723-003/artifacts/validate_selector_minimum_extension_manuscript.py --check --json"
+    status: "EXPECTED_LIVE_SOURCE_DRIFT"
+    summary: "The historical report and compact receipt are stale only against later source evolution; the exact transaction snapshot passes inside the P15-T03 archive."
+  - command: ".venv/bin/python research_control/tasks/RT-20260727-006/artifacts/validate_source_dynamics_reconstruction_report.py --check --json"
+    status: "PASS"
+    summary: "The live P15-T04 report validator passes 13 checks."
+  - command: ".venv/bin/python research_control/tasks/RT-20260802-009/artifacts/build_p15_t06_reproducibility_packages.py --check"
+    status: "PASS"
+    summary: "All eight deterministic builder outputs match exact bytes."
+  - command: ".venv/bin/python research_control/tasks/RT-20260802-009/artifacts/validate_p15_t06_reproducibility_packages.py --check --json"
+    status: "PASS"
+    summary: "All 47 checks and all four clean extracted reproductions pass."
+  - command: ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --job-id AJ-RT-20260802-009-001 --json-summary"
+    status: "PASS_PRECHECKPOINT"
+    summary: "Integrated control and bounded write-path validation pass before checkpoint."
+  - command: ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+    status: "PASS_PRECHECKPOINT"
+    summary: "Documentation-impact coverage matches the live classifier."
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+    status: "PASS_PRECHECKPOINT"
+    summary: "Tracked memory registries and generated derivatives validate."
+  - command: "git diff --check"
+    status: "PASS"
+    summary: "The bounded working transaction has no whitespace errors."
+artifacts:
+  - path: "research_control/tasks/RT-20260802-009/artifacts/build_p15_t06_reproducibility_packages.py"
+    sha256: "78f8c632348d87b4d84f4682c69a67a9f4c022aa9f9aef1687a429940e206d46"
+  - path: "research_control/tasks/RT-20260802-009/artifacts/validate_p15_t06_reproducibility_packages.py"
+    sha256: "e5fe2dca059c3693906c436b525f45ee45e2caa283594d22726b78841a9b2804"
+  - path: "research_control/tasks/RT-20260802-009/artifacts/p15_t01_exact_gr_interpretive_source_bundle_v1.tar"
+    sha256: "cdb3e01b113287380e587004e91ad0f7445b63d538bcdbfdce63155207d757d8"
+  - path: "research_control/tasks/RT-20260802-009/artifacts/p15_t02_ai_methodology_source_bundle_v1.tar"
+    sha256: "056d81f87c1595b1f3b4bb40a1dc8b5e6ac895eff989ef6de0a2ae4f94718bbe"
+  - path: "research_control/tasks/RT-20260802-009/artifacts/p15_t03_selector_theorem_source_bundle_v1.tar"
+    sha256: "cea3d636d4a8e1dc3734a8fc1a8a3aee8861b6f88527c501498573411da352fc"
+  - path: "research_control/tasks/RT-20260802-009/artifacts/p15_t04_source_dynamics_source_bundle_v1.tar"
+    sha256: "cedb2ca1f6a6a93fb3626a750759ec9463e607f2a1d8dab2dbfd972ee023f866"
+  - path: "research_control/tasks/RT-20260802-009/artifacts/p15_t06_package_catalog_v1.json"
+    sha256: "afe3cff48bd32fdf199faa2d2a93615f426c9a79888661adbcedc58aaf7ecd78"
+  - path: "research_control/tasks/RT-20260802-009/artifacts/p15_t06_source_map_v1.json"
+    sha256: "8fdc68ea59bd41d06d8286986bf114e0dbc061f4b17e01f7fe374447b81cc29c"
+  - path: "research_control/tasks/RT-20260802-009/artifacts/p15_t06_environment_recipes_v1.md"
+    sha256: "da3eaf4277a303c7278c39982147942c35b0d90defcb28c7e6bcb5b2a3ec58d7"
+  - path: "research_control/tasks/RT-20260802-009/artifacts/p15_t06_license_notice_audit_v1.json"
+    sha256: "bad40d93a902e5b89678a12bf4e245244d8f85bdfe32f644665c1cb8ef6554e3"
+  - path: "research_control/tasks/RT-20260802-009/artifacts/p15_t06_validation_v1.json"
+    sha256: "005c32dcbf7cb78e7caa4c12374df078b2f58d84e2552f6de8443375661d846f"
+  - path: "research_control/tasks/RT-20260802-009/artifacts/p15_t06_compact_receipt_v1.json"
+    sha256: "93c9ad18c4ba4ceec5e40c549abba61913830bef84b624b34d657e4a5bf4683f"
+selected_next_route:
+  route_id: "v21_p15_t07_human_authorization_for_external_actions"
+  worker_skill: "none_until_human_authorization"
+  plan_task_id: "P15-T07"
+  requires_human_gate: true
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  executed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  required_human_action: "Supply one exact manuscript-specific authorization naming each permitted submission public-release reviewer-contact or outreach action and any embargo authorship reviewer-identity or report-publication limits."
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 225 validated claimed and consumed the immutable improve-project-system route exactly once."
+      - "All four direct dependency completions and source snapshots resolved at exact hashes and commits."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The builder and validator bind four archives 160 tracked members and all authority flags."
+      - "Clean extraction reproduces all four candidate validation commands."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Task-local documentation signal memory registry affected-profile selected-test and integrated control checks pass before checkpoint."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "Exactly one governed checkpoint remains authorized."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Task-index current-frontier compact-frontier and dependency-graph outputs are synchronized."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Approved memory synchronization and validate-only checks pass."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed claim-bearing sources preserve operational and protected-authority limits."
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "none; P15-T06 project-system packaging only"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  external_release_authorized: false
+  external_reviewer_contact_authorized: false
+  outreach_authorized: false
+  push_authorized: false
+  publication_authorized: false
+  hosted_workflow_dispatch_authorized: false
+  proof_authority: false
+  canonical_ontology_edit_authorized: false
+  source_law_adoption_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+documentation_impact_id: "DI-RT-20260802-009-001"
+notes: "Package PASS is operational reproducibility evidence only. The archives are internal release candidates and do not create canonical source theorem physics benchmark publication push outreach reviewer-contact Gate Chair or completed-derivation authority."

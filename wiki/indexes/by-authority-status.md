@@ -1221,6 +1221,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-V21-P15-T04-PARENT-FUSION-SOURCE-DYNAMICS-RECONSTRUCTION-V1` `wiki/markdown/md-v21-p15-t04-parent-fusion-source-dynamics-reconstruction-v1.md`
 - `WIKI-MD-V21-P15-T04-SOURCE-DYNAMICS-RECONSTRUCTION-RECEIPT-V1` `wiki/markdown/md-v21-p15-t04-source-dynamics-reconstruction-receipt-v1.md`
 - `WIKI-MD-V21-P15-T05-PARENT-FUSION-GATE-E-NO-MANUSCRIPT-V1` `wiki/markdown/md-v21-p15-t05-parent-fusion-gate-e-no-manuscript-v1.md`
+- `WIKI-MD-V21-P15-T06-ENVIRONMENT-RECIPES-V1` `wiki/markdown/md-v21-p15-t06-environment-recipes-v1.md`
 - `WIKI-MD-V21-P4-T01-SOURCE-ASSUMPTION-AMBIGUITIES` `wiki/markdown/md-v21-p4-t01-source-assumption-ambiguities.md`
 - `WIKI-MD-V21-P4-T04-ONTOLOGY-REGIME-COMPARISON-REPORT-V1` `wiki/markdown/md-v21-p4-t04-ontology-regime-comparison-report-v1.md`
 - `WIKI-MD-V21-P4-T05-ONTOLOGY-REGIME-GATE-CHAIR-PARENT-FUSION-V1` `wiki/markdown/md-v21-p4-t05-ontology-regime-gate-chair-parent-fusion-v1.md`
@@ -2221,6 +2222,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-V21-P13-T04-VALIDATOR-API-CONTRACT-V1` `research_control/tasks/RT-20260723-020/artifacts/validator_api_contract_v1.md`
 - `MD-V21-P13-T05-SECURITY-SCAN-POLICY-V1` `research_control/tasks/RT-20260724-002/artifacts/security_scan_policy_v1.md`
 - `MD-V21-P15-T04-SOURCE-DYNAMICS-RECONSTRUCTION-RECEIPT-V1` `research_control/tasks/RT-20260727-006/artifacts/source_dynamics_reconstruction_receipt.md`
+- `MD-V21-P15-T06-ENVIRONMENT-RECIPES-V1` `research_control/tasks/RT-20260802-009/artifacts/p15_t06_environment_recipes_v1.md`
 - `MD-V21-P5-T07-SOURCE-DYNAMICS-AUDIT-RECEIPT-V1` `research_control/tasks/RT-20260725-014/artifacts/source_dynamics_audit_receipt.md`
 - `MD-V21-P5-T08-SOURCE-DYNAMICS-MILESTONE-RECEIPT-V1` `research_control/tasks/RT-20260726-001/artifacts/source_dynamics_milestone_receipt.md`
 - `MD-V21-P6-T01-CAUSAL-CHARACTERISTIC-TARGET-RECEIPT-V1` `research_control/tasks/RT-20260726-002/artifacts/causal_characteristic_target_receipt.md`

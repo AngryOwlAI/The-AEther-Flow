@@ -1,0 +1,250 @@
+handoff_id: "handoff-0942"
+handoff_number: 942
+handoff_kind: "ordinary_research"
+task_id: "RT-20260802-009"
+decision_id: "DDR-20260802-009"
+job_id: "AJ-RT-20260802-009-001"
+completion_id: "AJC-AJ-RT-20260802-009-001"
+completion_path: "research_control/tasks/RT-20260802-009/jobs/completions/AJC-AJ-RT-20260802-009-001.yaml"
+completion_sha256: "d5d0f32aaab3fe3ecfa9affa67a50128991b3004557da2dbcc612c84569b4806"
+status: "ready_after_checkpoint"
+validation_status: "PASS_PRECHECKPOINT"
+created_at: "2026-08-02T14:32:33Z"
+parent_handoff_id: "handoff-0941"
+plan_task_id: "P15-T06"
+source_role_id: "documentation-curator"
+source_role_version: "2.0.0"
+source_execution_role_ref: "documentation-curator@2.0.0--RT-20260802-009"
+summary: "P15-T06 creates exactly four deterministic internal release-candidate archives for the qualifying P15-T01 through P15-T04 candidates. The archives bind 160 tracked members to exact source commits and hashes, preserve historical source snapshots, include environments commands limitations licenses and notices, and reproduce all four candidate validators from clean extraction. No canonical science prior task external action or physics authority changes."
+next_action: "Run one governed checkpoint for AJ-RT-20260802-009-001. After checkpoint, stop at P15-T07 until the user supplies exact manuscript-specific authority for every requested submission public release reviewer contact or outreach action, including any embargo authorship identity or report-publication limits."
+current_claim_boundary: "CB-PS-V21-P15-T06-REPRODUCIBILITY-PACKAGES-001"
+loop_risk_route: "human-gated-publication-decision"
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260802-009"
+  latest_research_handoff_id: "handoff-0942"
+  latest_research_next_action: "Run one governed checkpoint for AJ-RT-20260802-009-001. After checkpoint, stop at P15-T07 until the user supplies exact manuscript-specific authority for every requested submission public release reviewer contact or outreach action, including any embargo authorship identity or report-publication limits."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+  project_improvement_sidecar_required: false
+  research_handoff_remains_authoritative: true
+claim_boundary:
+  allowed_next_scope: "One governed checkpoint for AJ-RT-20260802-009-001 followed only by presentation of the exact P15-T07 protected question to the user; no P15-T07 AgentJob or external action is authorized absent an exact human authorization record."
+  completed_task: "RT-20260802-009"
+  completed_completion_path: "research_control/tasks/RT-20260802-009/jobs/completions/AJC-AJ-RT-20260802-009-001.yaml"
+  completed_completion_sha256: "d5d0f32aaab3fe3ecfa9affa67a50128991b3004557da2dbcc612c84569b4806"
+  source_handoff_id: "handoff-0941"
+  source_handoff_path: "research_control/handoffs/handoff-0941.yaml"
+  source_handoff_sha256: "f1ec7751c6ab79c390ecd000f2f145438f0daa9050adaa9b3fb3e6ff0f145d0b"
+  immutable_route_sha256: "96457a0854406def888295f5e8805726a131014085d879aff3016647779242c4"
+  route_blocker_fingerprint: "0e3e6c487607272636f09152a83182db6ac785ad587bfdf772c4dd4196008fec"
+  result_status: "PASS_FOUR_SOURCE_BACKED_INTERNAL_RELEASE_CANDIDATES_PRECHECKPOINT"
+  package_catalog_path: "research_control/tasks/RT-20260802-009/artifacts/p15_t06_package_catalog_v1.json"
+  package_catalog_sha256: "afe3cff48bd32fdf199faa2d2a93615f426c9a79888661adbcedc58aaf7ecd78"
+  source_map_path: "research_control/tasks/RT-20260802-009/artifacts/p15_t06_source_map_v1.json"
+  source_map_sha256: "8fdc68ea59bd41d06d8286986bf114e0dbc061f4b17e01f7fe374447b81cc29c"
+  validation_path: "research_control/tasks/RT-20260802-009/artifacts/p15_t06_validation_v1.json"
+  validation_sha256: "005c32dcbf7cb78e7caa4c12374df078b2f58d84e2552f6de8443375661d846f"
+  compact_receipt_path: "research_control/tasks/RT-20260802-009/artifacts/p15_t06_compact_receipt_v1.json"
+  compact_receipt_sha256: "93c9ad18c4ba4ceec5e40c549abba61913830bef84b624b34d657e4a5bf4683f"
+  package_count: 4
+  manifest_entry_count: 160
+  clean_reproduction_pass_count: 4
+  validation_check_count: 47
+  validation_failed_check_count: 0
+  canonical_science_modified: false
+  historical_evidence_rewritten: false
+  scientific_claims_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  ontology_adoption_authorized: false
+  source_law_adoption_authorized: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  external_release_performed: false
+  reviewer_contact_performed: false
+  outreach_performed: false
+  push_performed: false
+  hosted_workflow_dispatch_performed: false
+  blocked_claims:
+    - "archive copy or generated manifest presented as canonical science authority"
+    - "validator PASS presented as theorem proof physics evidence benchmark promotion or completed derivation"
+    - "historical source snapshot silently replaced by later canonical bytes"
+    - "internal release candidate presented as approved public release"
+    - "submission reviewer contact outreach publication push or hosted workflow without exact human authority"
+plan_result:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  phase_id: "P15"
+  plan_task_id: "P15-T06"
+  title: "Build public reproducibility and source packages"
+  result_status: "P15_T06_PASS_PRECHECKPOINT"
+  work_item_status: "completed"
+  recommendation_ids:
+    - "V21-R39"
+    - "V21-R49"
+    - "V21-R57"
+    - "V21-R60"
+    - "V21-R66"
+    - "V21-R68"
+  p15_t07_dependency_ready_after_checkpoint: true
+  p15_t07_executed: false
+  p16_t03_dependency_satisfied_by_p15_t06_after_checkpoint: true
+  p16_t03_executable_now: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  system_success_counts_as_physics: false
+  system_success_counts_as_distance_to_gr: false
+  physics_promotion_authorized: false
+  proof_authority: false
+dependency_evidence:
+  p15_t01:
+    completion_path: "research_control/tasks/RT-20260723-002/jobs/completions/AJC-AJ-RT-20260723-002-001.yaml"
+    completion_sha256: "af44b8f840f8f8beda1b688a5863de906d8e86d535b2507633c2682ddbd4b20c"
+    source_snapshot_commit: "ef41c569efd01f3a5182f114c20dd6edb3ee9973"
+    status: "qualifying_preserved_completion"
+  p15_t02:
+    completion_path: "research_control/tasks/RT-20260802-008/jobs/completions/AJC-AJ-RT-20260802-008-001.yaml"
+    completion_sha256: "bc7d22714d91f9745ac268904fef723287500c2913eadb65dcf9911c5465f06c"
+    source_snapshot_commit: "9be11e9cc77a8ab30776fd5598b682b37c42a6e3"
+    status: "qualifying_checkpointed_completion"
+  p15_t03:
+    completion_path: "research_control/tasks/RT-20260723-003/jobs/completions/AJC-AJ-RT-20260723-003-001.yaml"
+    completion_sha256: "c18ae55f4b4723a799ae081eb29b23c368af44f01e5d27ae7b2a7cd5873fb476"
+    source_snapshot_commit: "1136e88b329fa9215017a20dd030607a98168503"
+    status: "qualifying_preserved_completion"
+  p15_t04:
+    completion_path: "research_control/tasks/RT-20260727-006/jobs/completions/AJC-AJ-RT-20260727-006-001.yaml"
+    completion_sha256: "95075d40d9f21f5c3ab14695a4c3def18c7241c6510319c8ffdf6b41d5ec0026"
+    source_snapshot_commit: "832f9cf9ba98061df40cdda2799d5a46661260bc"
+    status: "qualifying_preserved_completion"
+selected_next_route:
+  route_id: "v21_p15_t07_human_authorization_for_external_actions"
+  route_label: "human-gated-publication-decision"
+  role_family: "gate-chair@0.1.0"
+  worker_skill: "none_until_human_authorization"
+  plan_task_id: "P15-T07"
+  target_derivation_milestone: "benchmark_promotion"
+  milestone_burden: "Preserve human accountability for external communication and authorship."
+  strategy_id: "deferred_human_gate_absent_exact_p15_t07_authorization"
+  trigger_classification: "protected_external_action_authority_absent"
+  requires_human_gate: true
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  physics_promotion_authorized: false
+  next_action: "After checkpoint, request exact manuscript-specific human authorization and stop."
+  required_human_action: "For each manuscript or package, name whether submission public release reviewer contact or outreach is allowed; name the exact approved version and action; and state authorship embargo reviewer-identity and report-publication limits."
+  source_handoff: "research_control/handoffs/handoff-0942.yaml"
+ordinary_route_guard:
+  schema_id: "ordinary_route_guard_evaluation_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  evaluation_id: "ORE-HANDOFF-0942"
+  ordinary_handoff_id: "handoff-0942"
+  threshold: 3
+  consecutive_project_system_tasks_before_selection: 1
+  ready_science_plan_task_ids:
+    - "P15-T07"
+  selected_plan_task_id: "P15-T07"
+  selected_route_class: "physics_bearing"
+  selected_worker_skill: "none_until_human_authorization"
+  outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  exception_receipt:
+    active: false
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+active_state_boundary:
+  active_task_id: "RT-20260802-009"
+  active_job_id: "AJ-RT-20260802-009-001"
+  current_status: "p15_t06_four_source_backed_reproducibility_packages_complete_precheckpoint"
+  checkpoint_required: true
+  checkpoint_completed: false
+  checkpoint_invocation_count: 0
+  selected_next_plan_task_id: "P15-T07"
+  selected_next_worker_skill: "none_until_human_authorization"
+  selected_next_role_family: "gate-chair@0.1.0"
+  selected_next_route_label: "human-gated-publication-decision"
+  selected_next_strategy_id: "deferred_human_gate_absent_exact_p15_t07_authorization"
+  selected_next_requires_human_gate: true
+  selected_next_execution_ready_after_checkpoint: false
+  selected_next_execution_ready_now: false
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 225 validated claimed and consumed the immutable improve-project-system route exactly once."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The deterministic builder binds four archives and 160 tracked members."
+      - "All four candidate checks reproduce from clean extraction."
+  post_write:
+    status: "PASS_PRECHECKPOINT"
+    evidence:
+      - "Task-local documentation signal memory registry affected-profile selected-test and integrated control checks pass."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "One governed checkpoint is authorized and has not yet been invoked."
+  renderer:
+    status: "PASS_PRECHECKPOINT"
+    evidence:
+      - "Task index current frontier compact frontier and dependency graph are synchronized."
+  memory_bootstrap:
+    status: "PASS_PRECHECKPOINT"
+    evidence:
+      - "Tracked memory synchronization and validate-only pass."
+  claim_language_linter:
+    status: "PASS_PRECHECKPOINT"
+    evidence:
+      - "Changed-source claim language preserves operational and human-gate boundaries."
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "none; P15-T07 has not been authorized or executed"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  external_release_authorized: false
+  external_reviewer_contact_authorized: false
+  outreach_authorized: false
+  push_authorized: false
+  publication_authorized: false
+  hosted_workflow_dispatch_authorized: false
+  proof_authority: false
+  canonical_ontology_edit_authorized: false
+  source_law_adoption_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  sidecar_path: ""
+  signal_ids: []
+  recursive_goal_recovery_required: false
+  reason: "P15-T06 emits no separate project-system repair signal; this ordinary handoff remains authoritative."
+handoff_authority_boundary:
+  this_handoff_authorizes:
+    - "one governed checkpoint for AJ-RT-20260802-009-001"
+    - "presentation of the exact P15-T07 protected question to the user after checkpoint"
+  this_handoff_does_not_authorize:
+    - "a P15-T07 AgentJob absent exact human authorization"
+    - "submission public release reviewer contact outreach publication push or hosted workflow"
+    - "archive copies or generated manifests as canonical authority"
+    - "canonical ontology source-law scientific-ledger or Distance-to-GR edit"
+    - "benchmark promotion proof Gate Chair verdict or completed derivation"
+next_plan_task_id: "P15-T07"
+next_plan_task_execution_ready_after_checkpoint: false
+next_plan_task_executed: false
+notes: "P15-T06 closes the bounded packaging obligation. Every remaining included path to P16 depends on the protected P15-T07 decision, so the relay must stop for exact human authority after checkpoint."

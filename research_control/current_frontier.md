@@ -3,14 +3,14 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260802-008` and `handoff-0941`.
+`RT-20260802-009` and `handoff-0942`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
 handoff named by that file, or `registries/DISTANCE_TO_GR_LEDGER.csv`, those
 tracked authority files govern.
 
-<!-- generated-report-provenance: {"freshness_status":"fresh_at_generation","generated_view_is_authority":false,"generation_time":"2026-08-02T13:07:50Z","maximum_commit_lag":"1","physics_promotion_authorized":false,"policy_id":"p13_t07_live_generated_report_freshness_v1","proof_authority":false,"report_class":"current_frontier","schema_id":"generated_report_provenance_v1","source_commit":"f5a725469c54d66ca9dc639df30656bf73659b63","source_hashes":[{"path":"registries/DISTANCE_TO_GR_LEDGER.csv","sha256":"6b81b42bc7ed83f74f8062f2ade26988e8b369aa2d23744fc9e392279e1de5d8"},{"path":"registries/RESEARCH_TASK_REGISTRY.csv","sha256":"c92024e608c1a83a95ac17d8a21af93a38d9494fee56628f50335c86adea5f51"},{"path":"research_control/handoffs/handoff-0941.yaml","sha256":"f1ec7751c6ab79c390ecd000f2f145438f0daa9050adaa9b3fb3e6ff0f145d0b"},{"path":"research_control/program_state.yaml","sha256":"4fdf1082c898330180f3b94d04a3c72c00497c63c4afaeaa33bac77fe4d9e4ee"},{"path":"research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml","sha256":"dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3"},{"path":"scripts/research_control/generated_report_provenance.py","sha256":"af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c"},{"path":"scripts/research_control/render_current_frontier.py","sha256":"ebbeddc0d5b07bc5130ce093053891a376a264c1d029019cefa7de756697770d"}],"source_manifest_sha256":"fa0d7fe9d242446d31c0b8d80d8bab65a4ecfac70b6de183626567a47f43094c","source_path_count":"12","task_count":"1194"} -->
+<!-- generated-report-provenance: {"freshness_status":"fresh_at_generation","generated_view_is_authority":false,"generation_time":"2026-08-02T14:32:33Z","maximum_commit_lag":"1","physics_promotion_authorized":false,"policy_id":"p13_t07_live_generated_report_freshness_v1","proof_authority":false,"report_class":"current_frontier","schema_id":"generated_report_provenance_v1","source_commit":"9be11e9cc77a8ab30776fd5598b682b37c42a6e3","source_hashes":[{"path":"registries/DISTANCE_TO_GR_LEDGER.csv","sha256":"6b81b42bc7ed83f74f8062f2ade26988e8b369aa2d23744fc9e392279e1de5d8"},{"path":"registries/RESEARCH_TASK_REGISTRY.csv","sha256":"70f74a74148ef33ed58852305e397456453757639d4793bc23c255da7f3b28a8"},{"path":"research_control/handoffs/handoff-0942.yaml","sha256":"5ebd18adb42d8455456e3afa44c1d7961da5b775249253e551d3d44d56f004db"},{"path":"research_control/program_state.yaml","sha256":"7e3239baaa56f59f89e7e01e9f42894b4cb592c084608d89f207d6a218dfd79e"},{"path":"research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml","sha256":"dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3"},{"path":"scripts/research_control/generated_report_provenance.py","sha256":"af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c"},{"path":"scripts/research_control/render_current_frontier.py","sha256":"ebbeddc0d5b07bc5130ce093053891a376a264c1d029019cefa7de756697770d"}],"source_manifest_sha256":"54c0f8c57087d6af5427714fa6d459fc95a235c29ee94a0cc906672a323a0f0d","source_path_count":"12","task_count":"1195"} -->
 
 ## Generated-Report Provenance
 
@@ -19,11 +19,11 @@ tracked authority files govern.
 | Provenance schema | `generated_report_provenance_v1` |
 | Freshness policy | `p13_t07_live_generated_report_freshness_v1` |
 | Report class | `current_frontier` |
-| Source commit | `f5a725469c54d66ca9dc639df30656bf73659b63` |
-| Source-derived generation time | `2026-08-02T13:07:50Z` |
-| Tracked task count | 1194 |
+| Source commit | `9be11e9cc77a8ab30776fd5598b682b37c42a6e3` |
+| Source-derived generation time | `2026-08-02T14:32:33Z` |
+| Tracked task count | 1195 |
 | Exact source-path count | 12 |
-| Source manifest SHA-256 | `fa0d7fe9d242446d31c0b8d80d8bab65a4ecfac70b6de183626567a47f43094c` |
+| Source manifest SHA-256 | `54c0f8c57087d6af5427714fa6d459fc95a235c29ee94a0cc906672a323a0f0d` |
 | Maximum commit lag | 1 |
 | Freshness status at generation | `fresh_at_generation` |
 | Generated view is authority | `false` |
@@ -31,9 +31,9 @@ tracked authority files govern.
 Exact primary source hashes:
 
 - `registries/DISTANCE_TO_GR_LEDGER.csv`: `6b81b42bc7ed83f74f8062f2ade26988e8b369aa2d23744fc9e392279e1de5d8`
-- `registries/RESEARCH_TASK_REGISTRY.csv`: `c92024e608c1a83a95ac17d8a21af93a38d9494fee56628f50335c86adea5f51`
-- `research_control/handoffs/handoff-0941.yaml`: `f1ec7751c6ab79c390ecd000f2f145438f0daa9050adaa9b3fb3e6ff0f145d0b`
-- `research_control/program_state.yaml`: `4fdf1082c898330180f3b94d04a3c72c00497c63c4afaeaa33bac77fe4d9e4ee`
+- `registries/RESEARCH_TASK_REGISTRY.csv`: `70f74a74148ef33ed58852305e397456453757639d4793bc23c255da7f3b28a8`
+- `research_control/handoffs/handoff-0942.yaml`: `5ebd18adb42d8455456e3afa44c1d7961da5b775249253e551d3d44d56f004db`
+- `research_control/program_state.yaml`: `7e3239baaa56f59f89e7e01e9f42894b4cb592c084608d89f207d6a218dfd79e`
 - `research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml`: `dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3`
 - `scripts/research_control/generated_report_provenance.py`: `af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c`
 - `scripts/research_control/render_current_frontier.py`: `ebbeddc0d5b07bc5130ce093053891a376a264c1d029019cefa7de756697770d`
@@ -47,15 +47,15 @@ or claim-promotion authority.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260802-008` |
-| Latest handoff ID | `handoff-0941` |
-| Current status | `p15_t02_methodology_publication_packet_complete_bounded_noncausal_precheckpoint` |
+| Active task ID | `RT-20260802-009` |
+| Latest handoff ID | `handoff-0942` |
+| Current status | `p15_t06_four_source_backed_reproducibility_packages_complete_precheckpoint` |
 | V16 completed | false |
-| Current route family | publication preparation (scientific audit) |
+| Current route family | construction or implementation (project system) |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden follows the next action: After final synchronization, complete validation, and one governed checkpoint, resolve P15-T06 from the qualifying P15-T01 through P15-T04 dependency set and run it only in one fresh improve-project-system frame. |
-| Required next authority | After checkpoint, one fresh bounded P15-T06 project-system packet may build public reproducibility and source packages from qualifying P15-T01 through P15-T04 results without elevating generated derivatives. |
-| Next recommended action | After final synchronization, complete validation, and one governed checkpoint, resolve P15-T06 from the qualifying P15-T01 through P15-T04 dependency set and run it only in one fresh improve-project-system frame. |
+| Current burden | none for physics derivation; live control burden follows the next action: Run one governed checkpoint for AJ-RT-20260802-009-001. After checkpoint, stop at P15-T07 until the user supplies exact manuscript-specific authority for every requested submission public release reviewer contact or outreach action, including any embargo authorship identity or report-publication limits. |
+| Required next authority | One governed checkpoint for AJ-RT-20260802-009-001 followed only by presentation of the exact P15-T07 protected question to the user; no P15-T07 AgentJob or external action is authorized absent an exact human authorization record. |
+| Next recommended action | Run one governed checkpoint for AJ-RT-20260802-009-001. After checkpoint, stop at P15-T07 until the user supplies exact manuscript-specific authority for every requested submission public release reviewer contact or outreach action, including any embargo authorship identity or report-publication limits. |
 
 ## Active-State Bifurcation
 
@@ -66,9 +66,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260802-008` |
-| Latest research handoff ID | `handoff-0941` |
-| Latest research next action | After final synchronization, complete validation, and one governed checkpoint, resolve P15-T06 from the qualifying P15-T01 through P15-T04 dependency set and run it only in one fresh improve-project-system frame. |
+| Latest research task ID | `RT-20260802-009` |
+| Latest research handoff ID | `handoff-0942` |
+| Latest research next action | Run one governed checkpoint for AJ-RT-20260802-009-001. After checkpoint, stop at P15-T07 until the user supplies exact manuscript-specific authority for every requested submission public release reviewer contact or outreach action, including any embargo authorship identity or report-publication limits. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -101,12 +101,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260802-008/00_TASK.yaml`.
-- Active task objective: Evaluate and document role architecture, claim gates, negative-result memory, candidate cycles, lineage, attempt history, and v21 governance reforms with controlled baselines and ablations.
-- Latest handoff path: `research_control/handoffs/handoff-0941.yaml`.
-- Latest handoff summary: P15-T02 completes a deterministic internal AI research-operating-system methodology packet. Five requested workflow arms are classified and six bounded mechanism metrics have valid denominators; absent controls, cost, causal effects, independent review, and external-human review remain explicitly unmeasured. P13 evidence is operational only and no physics or protected authority changes.
-- Current route family: publication preparation (scientific audit).
-- Next recommended action: After final synchronization, complete validation, and one governed checkpoint, resolve P15-T06 from the qualifying P15-T01 through P15-T04 dependency set and run it only in one fresh improve-project-system frame.
+- Active task path: `research_control/tasks/RT-20260802-009/00_TASK.yaml`.
+- Active task objective: Create deterministic task-local reproducibility manifests, archival source bundles, environment recipes, source maps, license and notice evidence, clean-room checks, and a compact receipt for each qualifying P15-T01 through P15-T04 publication candidate without changing canonical science or authorizing external release.
+- Latest handoff path: `research_control/handoffs/handoff-0942.yaml`.
+- Latest handoff summary: P15-T06 creates exactly four deterministic internal release-candidate archives for the qualifying P15-T01 through P15-T04 candidates. The archives bind 160 tracked members to exact source commits and hashes, preserve historical source snapshots, include environments commands limitations licenses and notices, and reproduce all four candidate validators from clean extraction. No canonical science prior task external action or physics authority changes.
+- Current route family: construction or implementation (project system).
+- Next recommended action: Run one governed checkpoint for AJ-RT-20260802-009-001. After checkpoint, stop at P15-T07 until the user supplies exact manuscript-specific authority for every requested submission public release reviewer contact or outreach action, including any embargo authorship identity or report-publication limits.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -335,7 +335,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-After final synchronization, complete validation, and one governed checkpoint, resolve P15-T06 from the qualifying P15-T01 through P15-T04 dependency set and run it only in one fresh improve-project-system frame.
+Run one governed checkpoint for AJ-RT-20260802-009-001. After checkpoint, stop at P15-T07 until the user supplies exact manuscript-specific authority for every requested submission public release reviewer contact or outreach action, including any embargo authorship identity or report-publication limits.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -353,45 +353,50 @@ Layer status summary:
 
 | Status | Count | Meaning |
 | --- | --- | --- |
-| `PASS` | 3 | receipt complete |
-| `PENDING` | 4 | open item; evidence must explain why |
+| `PASS` | 2 | receipt complete |
+| `PENDING` | 1 | open item; evidence must explain why |
+| `PASS_PRECHECKPOINT` | 4 | extension status; inspect evidence |
 
 Validation layers:
 
 | Validation layer | Status | Meaning | Evidence |
 | --- | --- | --- | --- |
-| `pre_execution` | PASS | receipt complete | Generation 223 was validated claimed and consumed exactly once before its one direct continue-research worker invocation. |
-| `completion_internal` | PASS | receipt complete | The builder binds fourteen tracked sources and reproduces all five arm classifications six ratios and authority flags. |
-| `post_write` | PASS | receipt complete | Builder check mode reproduces nine outputs and the task-local checker passes 26 checks. |
+| `pre_execution` | PASS | receipt complete | Generation 225 validated claimed and consumed the immutable improve-project-system route exactly once. |
+| `completion_internal` | PASS | receipt complete | The deterministic builder binds four archives and 160 tracked members.<br>All four candidate checks reproduce from clean extraction. |
+| `post_write` | PASS_PRECHECKPOINT | extension status; inspect evidence | Task-local documentation signal memory registry affected-profile selected-test and integrated control checks pass. |
 | `post_checkpoint` | PENDING | open item; evidence must explain why | One governed checkpoint is authorized and has not yet been invoked. |
-| `renderer` | PENDING | open item; evidence must explain why | Task index current frontier compact frontier and dependency graph synchronization remain. |
-| `memory_bootstrap` | PENDING | open item; evidence must explain why | Tracked memory synchronization and validate-only remain. |
-| `claim_language_linter` | PENDING | open item; evidence must explain why | Changed-source claim-language validation remains. |
+| `renderer` | PASS_PRECHECKPOINT | extension status; inspect evidence | Task index current frontier compact frontier and dependency graph are synchronized. |
+| `memory_bootstrap` | PASS_PRECHECKPOINT | extension status; inspect evidence | Tracked memory synchronization and validate-only pass. |
+| `claim_language_linter` | PASS_PRECHECKPOINT | extension status; inspect evidence | Changed-source claim language preserves operational and human-gate boundaries. |
 
 Authorization layers:
 
 | Authorization field | Value | Meaning |
 | --- | --- | --- |
 | `protected_scoped_gate_review_authorized` | false (not authorized) | scoped review authority only |
-| `protected_scoped_gate_review_scope` | not_applicable | exact scope of protected review authority |
+| `protected_scoped_gate_review_scope` | none; P15-T07 has not been authorized or executed | exact scope of protected review authority |
 | `protected_scoped_gate_review_authority_source_path` | none | tracked source for scoped review authority |
 | `downstream_physics_promotion_authorized` | false (not authorized) | authorizes downstream physics promotion only when true |
 | `downstream_physics_promotion_authority_source_path` | none | tracked source for downstream promotion authority |
 | `benchmark_promotion_authorized` | false (not authorized) | authorizes benchmark promotion only when true |
-| `benchmark_promotion_authority_source_path` | none | tracked source for benchmark authority |
 | `completed_derivation_authorized` | false (not authorized) | authorizes completed-derivation claim only when true |
-| `completed_derivation_authority_source_path` | none | tracked source for completed-derivation authority |
-| `hosted_workflow_dispatch_authority_source_path` | none | extension authorization field |
+| `Gate_Chair_verdict_authorized` | False | extension authorization field |
+| `canonical_ontology_edit_authorized` | False | extension authorization field |
+| `external_release_authorized` | False | extension authorization field |
+| `external_reviewer_contact_authorized` | False | extension authorization field |
+| `global_no_go_claim_authorized` | False | extension authorization field |
 | `hosted_workflow_dispatch_authorized` | False | extension authorization field |
+| `outreach_authorized` | False | extension authorization field |
 | `proof_authority` | False | extension authorization field |
 | `publication_authorized` | False | extension authorization field |
 | `push_authorized` | False | extension authorization field |
+| `source_law_adoption_authorized` | False | extension authorization field |
 
 Legacy compatibility records:
 
-- active task: `RT-20260802-008`;
-- latest handoff: `handoff-0941`;
-- current status: `p15_t02_methodology_publication_packet_complete_bounded_noncausal_precheckpoint`;
+- active task: `RT-20260802-009`;
+- latest handoff: `handoff-0942`;
+- current status: `p15_t06_four_source_backed_reproducibility_packages_complete_precheckpoint`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -401,8 +406,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0941.yaml`
-- `research_control/tasks/RT-20260802-008/00_TASK.yaml`
+- `research_control/handoffs/handoff-0942.yaml`
+- `research_control/tasks/RT-20260802-009/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -418,7 +423,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0941*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0942*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations
