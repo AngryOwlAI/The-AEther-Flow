@@ -1,11 +1,77 @@
 mode: "director_led_research_control"
-active_task_id: "RT-20260801-007"
-latest_handoff_id: "handoff-0936"
-current_status: "p13_t02_planner_authoritative_cutover_completed_checkpoint_ready"
-claim_boundary_summary: "RT-20260801-007 completes the guarded P13-T02 cutover: the validated manifest planner is the live orchestration owner for shared local profiles, hosted validation workflows, and governed checkpoint acceptance. All 28 full-profile gates pass; exact AgentJob allowlists, final staged-tree acceptance, scheduled unfiltered full orchestration, complete receipts, and explicit legacy rollback remain. P13-T07 becomes execution-ready only after this packet's checkpoint and remains unexecuted. No workflow dispatch, push, scientific, Distance-to-GR, ontology, benchmark, Gate E, publication, proof, or completed-derivation authority changes."
+active_task_id: "RT-20260801-009"
+latest_handoff_id: "handoff-0937"
+current_status: "generation_206_checkpoint_reconciled_p13_t07_dependency_ready_after_checkpoint"
+claim_boundary_summary: "RT-20260801-009 records exact generation-206 checkpoint 105cb79, supersedes stale AJ-RT-20260801-007 checkpoint routing, and proves P10-T08 plus P13-T02 qualify one separate fresh P13-T07 packet after this reconciliation checkpoints. P13-T02 was not replayed and P13-T07 remains unexecuted. No validator implementation, workflow dispatch, push, scientific, Distance-to-GR, ontology, benchmark, Gate E, publication, proof, Gate Chair, or completed-derivation authority changes."
 next_plan_task_id: "P13-T07"
 next_worker_skill: "improve-project-system"
-next_recommended_action: "Run the one governed checkpoint for AJ-RT-20260801-007-001. After it commits, route one fresh bounded P13-T07 improve-project-system packet to enforce generated-report source provenance and freshness; do not execute P13-T07 in this frame."
+next_recommended_action: "Run one fresh bounded P13-T07 improve-project-system packet to enforce exact generated-report source provenance and maximum-lag freshness."
+
+generation_206_checkpoint_p13_t07_dependency_reconciliation:
+  task_id: "RT-20260801-009"
+  parent_task_id: "RT-20260801-008"
+  parent_handoff_id: "handoff-0936"
+  source_task_id: "RT-20260801-008"
+  source_job_id: "AJ-RT-20260801-008-001"
+  source_handoff_id: "handoff-0936"
+  plan_task_id: "P13-T07"
+  recovery_for_plan_task_id: "P13-T02"
+  next_plan_task_id: "P13-T07"
+  claim_boundary_id: "CB-PS-GENERATION-206-CHECKPOINT-P13-T07-DEPENDENCY-RECONCILIATION-001"
+  status: "GENERATION_206_CHECKPOINT_RECONCILED_P13_T07_DEPENDENCY_READY_AFTER_CHECKPOINT"
+  work_item_status: "repair_completed"
+  route_label: "reconcile_generation_206_checkpoint_and_p13_t07_dependency_v1"
+  selected_role_family: "process-integrity-auditor@0.1.0"
+  selected_worker_skill: "improve-project-system"
+  selected_strategy_id: "reconcile_generation_206_checkpoint_and_p13_t07_dependency_v1"
+  target_derivation_milestone: "none"
+  milestone_burden: "Project-system checkpoint and dependency reconciliation only; no derivation milestone advances."
+  source_head: "105cb79bf7413ce67c67b700d1b17e069b2b24c7"
+  source_checkpoint_parent: "8592427141063258560b372f219c0b944ab3ae39"
+  source_checkpoint_tree: "68d553d520420c730f6f87bcaf712e10f07e6ad9"
+  source_checkpoint_receipt_sha256: "538ebb9bb9eb3abf5ad7788dcd4b26c5253c63d41b0da3f2f9bf66c29bb65712"
+  immutable_route_sha256: "174995fef85f572a929367e7c7e45e0bbed94c4595ee3fc34afa91e2d23a0649"
+  route_blocker_fingerprint: "3ac88a21862fdf3d92b1a41973e5e777d9df949df0fe4cc4da640fbff5dfd7ab"
+  completion_path: "research_control/tasks/RT-20260801-009/jobs/completions/AJC-AJ-RT-20260801-009-001.yaml"
+  completion_sha256: "9b37c0861027864bf3caa56dcbf6ec4f03c776ead08ab53f15a67530c355ca32"
+  handoff_id: "handoff-0937"
+  handoff_path: "research_control/handoffs/handoff-0937.yaml"
+  reconciliation_receipt_path: "research_control/tasks/RT-20260801-009/artifacts/generation_206_checkpoint_p13_t07_dependency_reconciliation_receipt.json"
+  reconciliation_receipt_sha256: "3ad1e278057c2e24d01b06e11c60bd6fcb8686af166f5354ba03b07b733744a0"
+  p10_t08_completion_path: "research_control/tasks/RT-20260722-001/jobs/completions/AJC-AJ-RT-20260722-001-001.yaml"
+  p10_t08_completion_sha256: "e1743f1c5ddf2d4a401c90effda5493e34fc52021de76b3507ec8da884941e5f"
+  p10_t08_completed: true
+  p13_t02_completion_path: "research_control/tasks/RT-20260801-007/jobs/completions/AJC-AJ-RT-20260801-007-001.yaml"
+  p13_t02_completion_sha256: "4d91e8b75dd0271669c824f299742714aa180a58d39f2cde152909e0cf4b058f"
+  p13_t02_recovery_completion_path: "research_control/tasks/RT-20260801-008/jobs/completions/AJC-AJ-RT-20260801-008-001.yaml"
+  p13_t02_recovery_completion_sha256: "a1643e270a206d52d6cfcfc778e5e2bb901e69f3e8ce76842d00c77e3e6ef06c"
+  p13_t02_checkpoint_commit: "105cb79bf7413ce67c67b700d1b17e069b2b24c7"
+  p13_t02_checkpoint_committed: true
+  p13_t02_work_item_status: "completed"
+  p13_t02_reexecuted: false
+  p13_t07_dependency_ready_after_checkpoint: true
+  p13_t07_execution_ready_now: false
+  p13_t07_executed: false
+  protected_hash_mismatch_count: 0
+  selected_next_work_item: "P13-T07"
+  selected_next_worker_skill: "improve-project-system"
+  selected_next_role_family: "validator-engineer@0.2.0"
+  selected_next_route_label: "ordinary-research-packet"
+  selected_next_strategy_id: "enforce_generated_report_provenance_and_freshness_after_planner_cutover_v1"
+  selected_next_requires_human_gate: false
+  selected_next_blocked_by_protected_external_evidence: false
+  selected_next_execution_ready_after_checkpoint: true
+  scientific_claims_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  ontology_adoption_authorized: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false
+  hosted_workflow_dispatch_authorized: false
+  hosted_workflow_dispatch_performed: false
 
 p13_t02_validation_planner_authoritative_cutover:
   task_id: "RT-20260801-007"

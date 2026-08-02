@@ -1,0 +1,279 @@
+completion_id: "AJC-AJ-RT-20260801-009-001"
+job_id: "AJ-RT-20260801-009-001"
+task_id: "RT-20260801-009"
+task_type: "project_system_generation_206_checkpoint_p13_t07_dependency_reconciliation"
+decision_id: "DDR-20260801-009"
+role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260801-009"
+status: "completed"
+validation_status: "PASS"
+completed_at: "2026-08-01T22:46:50Z"
+objective_result: "generation_206_checkpoint_reconciled_p13_t07_dependency_ready"
+verdict: "PASS_GENERATION_206_CHECKPOINT_RECONCILIATION_P13_T07_READY"
+summary: "Generation 207 records exact generation-206 checkpoint 105cb79, supersedes stale AJ-RT-20260801-007 checkpoint routing, and proves P10-T08 plus P13-T02 qualify one later P13-T07 frame. All predecessor records remain byte-identical, P13-T02 was not replayed, P13-T07 remains unexecuted, and one governed checkpoint for this superseding transaction is pending."
+transaction_status: "ready_for_checkpoint"
+checkpoint_invocation_count: 0
+checkpoint_commit:
+  status: "PENDING"
+  commit: ""
+  invocation_count: 0
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 207
+  passes_consumed: 185
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:207"
+  handoff_token: "660e78ebe664f16798fdbe51f61d19f2cd6fd92408d624b1"
+  relay_claim_token: "f1b30c3097a0945d6b1d986e030dee7c1f0476e140ff5ed3"
+  route_work_item_id: "P13-T02"
+  route_worker_skill: "improve-project-system"
+  route_sha256: "174995fef85f572a929367e7c7e45e0bbed94c4595ee3fc34afa91e2d23a0649"
+  route_strategy_id: "reconcile_generation_206_checkpoint_and_p13_t07_dependency_v1"
+  route_blocker_fingerprint: "3ac88a21862fdf3d92b1a41973e5e777d9df949df0fe4cc4da640fbff5dfd7ab"
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+
+result:
+  status: "PASS"
+  strategy_id: "reconcile_generation_206_checkpoint_and_p13_t07_dependency_v1"
+  source_job_id: "AJ-RT-20260801-008-001"
+  source_checkpoint_commit: "105cb79bf7413ce67c67b700d1b17e069b2b24c7"
+  stale_active_job_id: "AJ-RT-20260801-007-001"
+  stale_checkpoint_instruction_superseded: true
+  p10_t08_completed: true
+  p13_t02_completed: true
+  p13_t02_reexecuted: false
+  p13_t07_dependency_ready: true
+  p13_t07_executed: false
+  protected_hash_mismatch_count: 0
+  receipt_path: "research_control/tasks/RT-20260801-009/artifacts/generation_206_checkpoint_p13_t07_dependency_reconciliation_receipt.json"
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  publication_or_external_action_authorized: false
+
+protected_evidence:
+  source_head: "105cb79bf7413ce67c67b700d1b17e069b2b24c7"
+  source_task_path: "research_control/tasks/RT-20260801-008/00_TASK.yaml"
+  source_task_sha256: "0f416275472de62f6e41d8fcbee035b0407e96665df298925732549b4ef35f91"
+  source_decision_path: "research_control/tasks/RT-20260801-008/DDR-20260801-008.md"
+  source_decision_sha256: "17bdd2004a387869ca895e93d5c55795a151d5e30da5afc41dcd56658f94d4f8"
+  source_job_path: "research_control/tasks/RT-20260801-008/jobs/AJ-RT-20260801-008-001.yaml"
+  source_job_sha256: "6f6feb8775730d02d21054605b4f7252ee4a10d300b9b16c956647499068837e"
+  source_role_path: "research_control/tasks/RT-20260801-008/roles/process-integrity-auditor@0.1.0--RT-20260801-008.yaml"
+  source_role_sha256: "0415b47dd91c4ee2d881aab7fce2502fc6e9d5d0b30a6af696a64bc0d2ae8400"
+  source_completion_path: "research_control/tasks/RT-20260801-008/jobs/completions/AJC-AJ-RT-20260801-008-001.yaml"
+  source_completion_sha256: "a1643e270a206d52d6cfcfc778e5e2bb901e69f3e8ce76842d00c77e3e6ef06c"
+  source_recovery_receipt_path: "research_control/tasks/RT-20260801-008/artifacts/folder_map_documentation_memory_checkpoint_recovery_receipt.json"
+  source_recovery_receipt_sha256: "87769371289781101edbe0bd4a9f06f73395ce5950ba70421c909b51669dc4cc"
+  source_handoff_path: "research_control/handoffs/handoff-0936.yaml"
+  source_handoff_yaml_sha256: "7e3c5a4b796121fdbbb8600d0a3614c11fd4e4edf6a8f5973c7b91f40ddba1ad"
+  source_handoff_markdown_sha256: "a7c3162a8f031896f1d7f0fd730b62dfd473deaecdb8cd19dd853909b8ad67ac"
+  source_program_state_sha256: "40edc672ffad0231aa67aa38e8a623d07b6c5c3f62899d03108d3302cefbebe0"
+  source_checkpoint_receipt_sha256: "538ebb9bb9eb3abf5ad7788dcd4b26c5253c63d41b0da3f2f9bf66c29bb65712"
+  p10_t08_completion_sha256: "e1743f1c5ddf2d4a401c90effda5493e34fc52021de76b3507ec8da884941e5f"
+  p10_t08_handoff_sha256: "96e75f4d1531ad15d41253ded0448850c24949e9e9b655758ce2bf4467f584a0"
+  p13_t02_completion_sha256: "4d91e8b75dd0271669c824f299742714aa180a58d39f2cde152909e0cf4b058f"
+
+command_results:
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+    status: "PASS"
+    summary: "Core memory freshness and local retrieval all pass."
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21 --json"
+    status: "PASS"
+    summary: "The canonical v21 implementation plan row and exact source hash resolve."
+  - command: ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+    status: "PASS_CLEAN_PREFLIGHT"
+    summary: "The consumed route began from an exact clean manifest."
+  - command: ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json"
+    status: "PASS_ADVISORY_NO_SIGNAL"
+    summary: "No open signal competes with the immutable relay recovery route."
+  - command: ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted"
+    status: "PASS"
+    summary: "Signal parity passes with no open signal."
+  - command: "git show -s 105cb79bf7413ce67c67b700d1b17e069b2b24c7"
+    status: "PASS"
+    summary: "Exact commit parent tree and subject match generation-206 checkpoint evidence."
+  - command: ".venv/bin/python scripts/research_control/task_taxonomy.py --validate-repository --json"
+    status: "PASS"
+    summary: "All 1185 tasks validate with zero explicit-required errors and no historical mutation."
+  - command: ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+    status: "PASS"
+    summary: "The task-local receipt covers the exact live 38-path transaction."
+  - command: ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+    status: "PASS"
+    summary: "Changed-source claim language remains inside the non-scientific boundary."
+  - command: ".venv/bin/python -m scripts.validation.cli run --profile affected --paths <changed-paths>"
+    status: "PASS_AFTER_BOUNDED_REPAIR"
+    summary: "The final affected profile passes all 15 gates after exact role-registry parity and dependency-graph freshness repairs."
+  - command: ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --job-id AJ-RT-20260801-009-001 --json-summary"
+    status: "PASS"
+    summary: "Integrated research-control validation reports zero errors; historical warnings remain nonblocking."
+  - command: ".venv/bin/python scripts/research_control/render_dependency_graph.py --check"
+    status: "PASS"
+    summary: "JSON Markdown and DOT dependency-graph derivatives are fresh after memory synchronization."
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+    status: "PASS"
+    summary: "Tracked memory and local retrieval validate after the full synchronization."
+  - command: ".venv/bin/python scripts/research_control/continue_research.py --summary"
+    status: "PASS"
+    summary: "Resolution is ready at director_decision_required with RT-009 handoff-0937 and P13-T07 next."
+  - command: "git diff --check"
+    status: "PASS"
+    summary: "The working transaction contains no whitespace errors."
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1109
+    relationship_row_count: 5606
+    semantic_row_count: 1109
+    vault_row_count: 1109
+    local_cache_only_warning_count: 0
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  authority_note: "Generated wiki Obsidian semantic relationship SQLite and .local surfaces are retrieval-only and not authority; tracked source records Git and validators govern this reconciliation."
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  observed_durable_outputs:
+    physics: []
+    project_system:
+      - "exact generation-206 checkpoint reconciliation receipt"
+      - "superseding P13-T07-ready handoff and program state"
+      - "protected predecessor hash evidence"
+      - "one governed checkpoint"
+  accepted_criteria:
+    physics: []
+    project_system:
+      - "commit 105cb79 exactly matches the generation-206 checkpoint evidence"
+      - "RT-20260801-007 RT-20260801-008 and handoff-0936 remain byte-identical"
+      - "P10-T08 and P13-T02 qualifying evidence is exact"
+      - "P13-T07 remains unexecuted"
+      - "all required working-tree gates pass"
+      - "one governed checkpoint commits the superseding routing transaction"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+distance_to_gr_delta:
+  changed: false
+  effect: "none_project_system_checkpoint_reconciliation"
+  milestone: "source_equivalence_eqsrc"
+  ledger_row_updated: false
+  ledger_update_rationale: "Checkpoint and dependency reconciliation contributes no physics movement."
+
+physics_progress_status:
+  status: "documentation_or_control_only_no_physics_delta"
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+
+selected_next_route:
+  route_id: "p13_t07_generated_report_provenance_freshness_v1"
+  route_label: "ordinary-research-packet"
+  role_family: "validator-engineer@0.2.0"
+  worker_skill: "improve-project-system"
+  task_type: "generated_report_provenance_and_freshness"
+  plan_task_id: "P13-T07"
+  strategy_id: "enforce_generated_report_provenance_and_freshness_after_planner_cutover_v1"
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  requires_human_gate: false
+  blocked_by_protected_external_evidence: false
+  p10_t08_completed: true
+  p13_t02_completed: true
+  physics_promotion_authorized: false
+  proof_authority: false
+  executed: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 207 validated claimed and consumed the immutable improve-project-system route exactly once."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The task-local receipt binds exact checkpoint dependency and protected-hash evidence."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "The final affected profile passes all 15 gates and integrated research-control validation reports zero errors."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "One governed checkpoint is authorized for this superseding transaction."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Current-frontier task-index compact-frontier dependency-graph and claim-graph checks all pass."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Full memory synchronization and validate-only freshness checks pass after the final source writes."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation passes within the project-system-only boundary."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "none; project-system checkpoint and dependency reconciliation only"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  push_authorized: false
+  publication_authorized: false
+  hosted_workflow_dispatch_authorized: false
+  proof_authority: false
+  canonical_ontology_edit_authorized: false
+  source_law_adoption_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+notes: "Project-system reconciliation success does not count as P13-T07 execution physics benchmark progress Distance-to-GR movement promotion proof publication push hosted workflow Gate Chair authority or completed derivation."

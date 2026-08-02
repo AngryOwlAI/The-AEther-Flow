@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260801-007`
-- Latest handoff: `handoff-0936`
-- Current status: `p13_t02_planner_authoritative_cutover_completed_checkpoint_ready`
+- Active task: `RT-20260801-009`
+- Latest handoff: `handoff-0937`
+- Current status: `generation_206_checkpoint_reconciled_p13_t07_dependency_ready_after_checkpoint`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260801-007`
-- Latest research handoff: `handoff-0936`
-- Latest research next action: Run the one governed checkpoint for AJ-RT-20260801-007-001. After it commits, route one fresh bounded P13-T07 improve-project-system packet to enforce generated-report source provenance and freshness; do not execute P13-T07 in this frame.
+- Latest research task: `RT-20260801-009`
+- Latest research handoff: `handoff-0937`
+- Latest research next action: Run one fresh bounded P13-T07 improve-project-system packet to enforce exact generated-report source provenance and maximum-lag freshness.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `764f6a79ed720bb26c59b2e0e14cf372d39b5f48cc672d0fc4416451ccc6bd91`
-- JSON SHA-256: `08a74e759840da9e6ff55f1fdad433be8ef85b432a212e4801479f949fe901bf`
+- YAML SHA-256: `52897b4c913602c0be263096bf814c11aec5250acfeb93c64ae398e227a0fd7e`
+- JSON SHA-256: `e561b80c00b5a08aec340a51607532a0db5bce2ecaf828eaed7fc2381526cb61`
 
 ## Authority Warning
 

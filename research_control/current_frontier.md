@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260801-007` and `handoff-0936`.
+`RT-20260801-009` and `handoff-0937`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260801-007` |
-| Latest handoff ID | `handoff-0936` |
-| Current status | `p13_t02_planner_authoritative_cutover_completed_checkpoint_ready` |
+| Active task ID | `RT-20260801-009` |
+| Latest handoff ID | `handoff-0937` |
+| Current status | `generation_206_checkpoint_reconciled_p13_t07_dependency_ready_after_checkpoint` |
 | V16 completed | false |
-| Current route family | construction or implementation (project system) |
+| Current route family | benchmark or recovery (project system) |
 | Target derivation milestone | `source_equivalence_eqsrc` |
 | Current burden | `source_equivalence_eqsrc` |
-| Required next authority | One governed checkpoint for AJ-RT-20260801-007-001. After that commit, one fresh bounded P13-T07 project-system packet may enforce generated-report provenance and freshness. |
-| Next recommended action | Run the one governed checkpoint for AJ-RT-20260801-007-001. After it commits, route one fresh bounded P13-T07 improve-project-system packet to enforce generated-report source provenance and freshness; do not execute P13-T07 in this frame. |
+| Required next authority | One fresh bounded P13-T07 project-system packet may add and enforce exact source commit hashes task count generation time and maximum-lag policy for governed generated reports. |
+| Next recommended action | Run one fresh bounded P13-T07 improve-project-system packet to enforce exact generated-report source provenance and maximum-lag freshness. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260801-007` |
-| Latest research handoff ID | `handoff-0936` |
-| Latest research next action | Run the one governed checkpoint for AJ-RT-20260801-007-001. After it commits, route one fresh bounded P13-T07 improve-project-system packet to enforce generated-report source provenance and freshness; do not execute P13-T07 in this frame. |
+| Latest research task ID | `RT-20260801-009` |
+| Latest research handoff ID | `handoff-0937` |
+| Latest research next action | Run one fresh bounded P13-T07 improve-project-system packet to enforce exact generated-report source provenance and maximum-lag freshness. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260801-007/00_TASK.yaml`.
-- Active task objective: Make the validated manifest planner the single orchestration owner for Make, hosted CI, skills, and governed checkpoint acceptance while preserving every hard gate, exact AgentJob allowlists, final staged-tree integrity, scheduled unfiltered full validation, and an explicit tested legacy fallback.
-- Latest handoff path: `research_control/handoffs/handoff-0936.yaml`.
-- Latest handoff summary: Generation 205 completed the guarded P13-T02 cutover. The manifest planner is the live operational owner for shared local profiles, hosted validation workflows, and governed checkpoint acceptance. All 28 full-profile gates pass; exact mutation allowlists, final staged-tree checks, scheduled unfiltered full orchestration, complete receipts, and explicit legacy rollback remain.
-- Current route family: construction or implementation (project system).
-- Next recommended action: Run the one governed checkpoint for AJ-RT-20260801-007-001. After it commits, route one fresh bounded P13-T07 improve-project-system packet to enforce generated-report source provenance and freshness; do not execute P13-T07 in this frame.
+- Active task path: `research_control/tasks/RT-20260801-009/00_TASK.yaml`.
+- Active task objective: Record generation 206's governed checkpoint commit 105cb79, supersede stale mutable AJ-RT-20260801-007 checkpoint routing without rewriting predecessor records, prove P10-T08 and P13-T02 dependency qualification, and expose one fresh bounded P13-T07 packet as the next route without executing it.
+- Latest handoff path: `research_control/handoffs/handoff-0937.yaml`.
+- Latest handoff summary: Generation 207 records exact generation-206 checkpoint 105cb79 and supersedes stale AJ-RT-20260801-007 checkpoint routing. P10-T08 and P13-T02 now qualify one fresh P13-T07 frame; P13-T02 was not replayed and P13-T07 remains unexecuted.
+- Current route family: benchmark or recovery (project system).
+- Next recommended action: Run one fresh bounded P13-T07 improve-project-system packet to enforce exact generated-report source provenance and maximum-lag freshness.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -302,7 +302,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run the one governed checkpoint for AJ-RT-20260801-007-001. After it commits, route one fresh bounded P13-T07 improve-project-system packet to enforce generated-report source provenance and freshness; do not execute P13-T07 in this frame.
+Run one fresh bounded P13-T07 improve-project-system packet to enforce exact generated-report source provenance and maximum-lag freshness.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -320,28 +320,27 @@ Layer status summary:
 
 | Status | Count | Meaning |
 | --- | --- | --- |
-| `PASS` | 5 | receipt complete |
-| `PASS_WITH_WARNINGS` | 1 | receipt complete with stated warnings |
+| `PASS` | 6 | receipt complete |
 | `PENDING` | 1 | open item; evidence must explain why |
 
 Validation layers:
 
 | Validation layer | Status | Meaning | Evidence |
 | --- | --- | --- | --- |
-| `pre_execution` | PASS | receipt complete | Generation 205 route, repository, branch, head, clean entry, claim, and one immutable worker invocation were validated. |
-| `completion_internal` | PASS | receipt complete | The task-local cutover receipt passes 13 of 13 checks. |
-| `post_write` | PASS | receipt complete | The authoritative planner full run passes all 28 selected gates; focused final-state validation passes. |
+| `pre_execution` | PASS | receipt complete | Generation 207 route identity clean manifest lease effort and one invocation were validated. |
+| `completion_internal` | PASS | receipt complete | The task-local receipt binds exact checkpoint dependency and protected-hash evidence. |
+| `post_write` | PASS | receipt complete | The final affected profile passes all 15 gates and integrated research-control validation reports zero errors. |
 | `post_checkpoint` | PENDING | open item; evidence must explain why | One governed checkpoint remains authorized and uninvoked. |
-| `renderer` | PASS | receipt complete | Frontier, task-index, dependency-graph, claim-graph, registry, and wiki derivatives will be regenerated from this tracked completion and handoff before checkpoint. |
-| `memory_bootstrap` | PASS_WITH_WARNINGS | receipt complete with stated warnings | Tracked memory checks pass; local cache warnings are non-authoritative. |
-| `claim_language_linter` | PASS | receipt complete | Changed claim-language validation has zero hard failures. |
+| `renderer` | PASS | receipt complete | Tracked current-frontier task-index compact-frontier dependency-graph and claim-graph derivatives are fresh. |
+| `memory_bootstrap` | PASS | receipt complete | Full tracked memory synchronization and validate-only freshness checks pass. |
+| `claim_language_linter` | PASS | receipt complete | Changed claim-language validation passes within the project-system-only boundary. |
 
 Authorization layers:
 
 | Authorization field | Value | Meaning |
 | --- | --- | --- |
 | `protected_scoped_gate_review_authorized` | false (not authorized) | scoped review authority only |
-| `protected_scoped_gate_review_scope` | project-system validation orchestration only | exact scope of protected review authority |
+| `protected_scoped_gate_review_scope` | project-system checkpoint and dependency reconciliation only | exact scope of protected review authority |
 | `protected_scoped_gate_review_authority_source_path` | none | tracked source for scoped review authority |
 | `downstream_physics_promotion_authorized` | false (not authorized) | authorizes downstream physics promotion only when true |
 | `downstream_physics_promotion_authority_source_path` | none | tracked source for downstream promotion authority |
@@ -356,9 +355,9 @@ Authorization layers:
 
 Legacy compatibility records:
 
-- active task: `RT-20260801-007`;
-- latest handoff: `handoff-0936`;
-- current status: `p13_t02_planner_authoritative_cutover_completed_checkpoint_ready`;
+- active task: `RT-20260801-009`;
+- latest handoff: `handoff-0937`;
+- current status: `generation_206_checkpoint_reconciled_p13_t07_dependency_ready_after_checkpoint`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -368,8 +367,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0936.yaml`
-- `research_control/tasks/RT-20260801-007/00_TASK.yaml`
+- `research_control/handoffs/handoff-0937.yaml`
+- `research_control/tasks/RT-20260801-009/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -385,7 +384,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0936*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0937*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

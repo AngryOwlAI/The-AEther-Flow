@@ -1,0 +1,270 @@
+handoff_id: "handoff-0937"
+handoff_number: 937
+task_id: "RT-20260801-009"
+decision_id: "DDR-20260801-009"
+job_id: "AJ-RT-20260801-009-001"
+completion_id: "AJC-AJ-RT-20260801-009-001"
+completion_path: "research_control/tasks/RT-20260801-009/jobs/completions/AJC-AJ-RT-20260801-009-001.yaml"
+completion_sha256: "9b37c0861027864bf3caa56dcbf6ec4f03c776ead08ab53f15a67530c355ca32"
+status: "ready_after_checkpoint"
+created_at: "2026-08-01T22:46:50Z"
+parent_handoff_id: "handoff-0936"
+plan_task_id: "P13-T07"
+recovery_for_plan_task_id: "P13-T02"
+source_role_id: "process-integrity-auditor"
+source_role_version: "0.1.0"
+source_execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260801-009"
+summary: "Generation 207 records exact generation-206 checkpoint 105cb79 and supersedes stale AJ-RT-20260801-007 checkpoint routing. P10-T08 and P13-T02 now qualify one fresh P13-T07 frame; P13-T02 was not replayed and P13-T07 remains unexecuted."
+next_action: "Run one fresh bounded P13-T07 improve-project-system packet to enforce exact generated-report source provenance and maximum-lag freshness."
+current_claim_boundary: "CB-PS-GENERATION-206-CHECKPOINT-P13-T07-DEPENDENCY-RECONCILIATION-001"
+loop_risk_route: "ordinary-research-packet"
+p13_t02_work_item_status: "completed"
+p13_t07_dependency_ready_after_checkpoint: true
+p13_t07_executed: false
+
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260801-009"
+  latest_research_handoff_id: "handoff-0937"
+  latest_research_next_action: "Run one fresh bounded P13-T07 improve-project-system packet to enforce exact generated-report source provenance and maximum-lag freshness."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+  project_improvement_sidecar_required: false
+  research_handoff_remains_authoritative: true
+
+claim_boundary:
+  allowed_next_scope: "One fresh bounded P13-T07 project-system packet may add and enforce exact source commit hashes task count generation time and maximum-lag policy for governed generated reports."
+  completed_task: "RT-20260801-009"
+  completed_completion_path: "research_control/tasks/RT-20260801-009/jobs/completions/AJC-AJ-RT-20260801-009-001.yaml"
+  completed_completion_sha256: "9b37c0861027864bf3caa56dcbf6ec4f03c776ead08ab53f15a67530c355ca32"
+  source_task_id: "RT-20260801-008"
+  source_job_id: "AJ-RT-20260801-008-001"
+  source_handoff_id: "handoff-0936"
+  source_handoff_path: "research_control/handoffs/handoff-0936.yaml"
+  immutable_route_sha256: "174995fef85f572a929367e7c7e45e0bbed94c4595ee3fc34afa91e2d23a0649"
+  route_blocker_fingerprint: "3ac88a21862fdf3d92b1a41973e5e777d9df949df0fe4cc4da640fbff5dfd7ab"
+  source_checkpoint_commit: "105cb79bf7413ce67c67b700d1b17e069b2b24c7"
+  source_checkpoint_tree: "68d553d520420c730f6f87bcaf712e10f07e6ad9"
+  source_checkpoint_receipt_sha256: "538ebb9bb9eb3abf5ad7788dcd4b26c5253c63d41b0da3f2f9bf66c29bb65712"
+  result_status: "PASS_GENERATION_206_CHECKPOINT_RECONCILED_P13_T07_READY_AFTER_CHECKPOINT"
+  p10_t08_completed: true
+  p13_t02_work_item_status: "completed"
+  p13_t02_checkpoint_committed: true
+  p13_t02_reexecuted: false
+  p13_t07_dependency_ready_after_checkpoint: true
+  p13_t07_execution_ready_now: false
+  p13_t07_executed: false
+  protected_hash_mismatch_count: 0
+  scientific_status_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  ontology_adoption_authorized: false
+  source_law_adoption_authorized: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_performed: false
+  hosted_workflow_dispatch_performed: false
+  blocked_claims:
+    - "checkpoint reconciliation presented as P13-T07 implementation or freshness validation"
+    - "project-system evidence presented as physics Distance-to-GR ontology benchmark Gate E or proof authority"
+    - "publication push hosted workflow dispatch Gate Chair or completed derivation"
+
+plan_result:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  phase_id: "P13"
+  plan_task_id: "P13-T07"
+  recovery_for_plan_task_id: "P13-T02"
+  title: "Generation-206 checkpoint and P13-T07 dependency reconciliation"
+  result_status: "P13_T02_CHECKPOINT_RECONCILED_P13_T07_READY_AFTER_CHECKPOINT"
+  work_item_status: "repair_completed"
+  p10_t08_completed: true
+  p13_t02_completed: true
+  p13_t07_dependency_ready_after_checkpoint: true
+  p13_t07_executed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  system_success_counts_as_physics: false
+  system_success_counts_as_distance_to_gr: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+distance_to_gr:
+  changed: false
+  effect: "none_project_system_checkpoint_reconciliation"
+  burden_id: "source_equivalence_eqsrc"
+  milestone: "source_equivalence_eqsrc"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "Checkpoint and dependency reconciliation contributes no physics movement."
+  downstream_unlocked: []
+  downstream_still_blocked:
+    - "Einstein equations"
+    - "exact-GR recovery"
+    - "benchmark promotion"
+
+required_next_packet:
+  task_type: "generated_report_provenance_and_freshness"
+  plan_task_id: "P13-T07"
+  route_label: "ordinary-research-packet"
+  role_family: "validator-engineer@0.2.0"
+  worker_skill: "improve-project-system"
+  objective: "Add exact source commit source hashes task count generation time and maximum-lag policy to authoritative-facing generated reports and fail validation on stale governed views."
+  dependency_qualification: "P10-T08 and P13-T02 have qualifying completed records and P13-T02 checkpoint 105cb79 is committed."
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  blocked_by_protected_external_evidence: false
+  executed: false
+
+selected_next_route:
+  route_id: "p13_t07_generated_report_provenance_freshness_v1"
+  plan_task_id: "P13-T07"
+  route_label: "ordinary-research-packet"
+  role_family: "validator-engineer@0.2.0"
+  worker_skill: "improve-project-system"
+  selected_next_packet_type: "generated_report_provenance_and_freshness"
+  task_type: "generated_report_provenance_and_freshness"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Prevent stale metrics and frontier reports from misleading agents or readers."
+  strategy_id: "enforce_generated_report_provenance_and_freshness_after_planner_cutover_v1"
+  requires_human_gate: false
+  blocked_by_protected_external_evidence: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  p10_t08_completed: true
+  p13_t02_completed: true
+  p13_t07_executed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  next_action: "After this reconciliation checkpoints create one fresh bounded P13-T07 improve-project-system frame."
+  source_handoff: "research_control/handoffs/handoff-0937.yaml"
+
+ordinary_route_guard:
+  schema_id: "ordinary_route_guard_evaluation_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  evaluation_id: "ORE-HANDOFF-0937"
+  ordinary_handoff_id: "handoff-0937"
+  threshold: 3
+  consecutive_project_system_tasks_before_selection: 9
+  ready_science_plan_task_ids: []
+  selected_plan_task_id: "P13-T07"
+  selected_route_class: "project_system"
+  selected_worker_skill: "improve-project-system"
+  outcome: "all_ready_science_blocked_exception"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  exception_receipt:
+    active: true
+    schema_id: "ordinary_route_exception_receipt_v1"
+    exception_id: "ORE-HANDOFF-0937-EXCEPTION-001"
+    exception_class: "all_ready_science_blocked"
+    ordinary_handoff_id: "handoff-0937"
+    ready_science_plan_task_ids: []
+    blocked_routes: []
+    authority_limits:
+      ordinary_research_handoff_authoritative: true
+      project_system_sidecar_supersedes: false
+      system_success_counts_as_physics: false
+      system_success_counts_as_distance_to_gr: false
+      scientific_status_changed: false
+      physics_promotion_authorized: false
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+active_state_boundary:
+  active_task_id: "RT-20260801-009"
+  active_job_id: "AJ-RT-20260801-009-001"
+  current_status: "generation_206_checkpoint_reconciled_p13_t07_dependency_ready_after_checkpoint"
+  source_checkpoint_commit: "105cb79bf7413ce67c67b700d1b17e069b2b24c7"
+  source_checkpoint_completed: true
+  checkpoint_required: true
+  checkpoint_completed: false
+  checkpoint_invocation_count: 0
+  selected_next_plan_task_id: "P13-T07"
+  selected_next_worker_skill: "improve-project-system"
+  selected_next_role_family: "validator-engineer@0.2.0"
+  selected_next_route_label: "ordinary-research-packet"
+  selected_next_strategy_id: "enforce_generated_report_provenance_and_freshness_after_planner_cutover_v1"
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
+  selected_next_blocker: "This superseding routing transaction requires its governed checkpoint before P13-T07 starts."
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 207 route identity clean manifest lease effort and one invocation were validated."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The task-local receipt binds exact checkpoint dependency and protected-hash evidence."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "The final affected profile passes all 15 gates and integrated research-control validation reports zero errors."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "One governed checkpoint remains authorized and uninvoked."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Tracked current-frontier task-index compact-frontier dependency-graph and claim-graph derivatives are fresh."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Full tracked memory synchronization and validate-only freshness checks pass."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed claim-language validation passes within the project-system-only boundary."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "project-system checkpoint and dependency reconciliation only"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  publication_authorized: false
+  push_authorized: false
+  hosted_workflow_dispatch_authorized: false
+  proof_authority: false
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+project_improvement_sidecar_required: false
+checkpoint_required_before_next_route: true
+checkpoint_job_id: "AJ-RT-20260801-009-001"
+legacy_validation_authorized: false
+
+handoff_authority_boundary:
+  this_handoff_authorizes:
+    - "one governed checkpoint for AJ-RT-20260801-009-001"
+    - "one fresh bounded P13-T07 improve-project-system packet after that checkpoint"
+  this_handoff_does_not_authorize:
+    - "P13-T02 replay or reinterpretation"
+    - "P13-T07 execution inside generation 207"
+    - "push publication mutation or hosted workflow dispatch"
+    - "scientific ontology metric benchmark Gate E promotion proof Gate Chair or completed derivation"
+
+next_plan_task_id: "P13-T07"
+next_worker_skill: "improve-project-system"
+next_role_family: "validator-engineer@0.2.0"
+next_route_label: "ordinary-research-packet"
+next_strategy_id: "enforce_generated_report_provenance_and_freshness_after_planner_cutover_v1"
+next_plan_task_execution_ready_after_checkpoint: true
+next_plan_task_executed: false
+notes: "Checkpoint reconciliation is operational project-system evidence only and creates no scientific promotion proof publication push or completed-derivation authority."

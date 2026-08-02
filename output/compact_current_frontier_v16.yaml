@@ -1,7 +1,7 @@
 schema_id: "compact_current_frontier_v16"
 generated_from:
   - "research_control/program_state.yaml"
-  - "research_control/handoffs/handoff-0936.yaml"
+  - "research_control/handoffs/handoff-0937.yaml"
   - "registries/DISTANCE_TO_GR_LEDGER.csv"
   - "registries/METRIC_USE_LEDGER.csv"
   - "research_control/current_frontier.md"
@@ -9,16 +9,16 @@ generated_from:
   - "research_control/design/accepted_status_calibration_v2.yaml"
   - "research_control/design/active_state_bifurcation_policy_v1.md"
 active_state:
-  active_task_id: "RT-20260801-007"
-  latest_handoff_id: "handoff-0936"
-  current_status: "p13_t02_planner_authoritative_cutover_completed_checkpoint_ready"
+  active_task_id: "RT-20260801-009"
+  latest_handoff_id: "handoff-0937"
+  current_status: "generation_206_checkpoint_reconciled_p13_t07_dependency_ready_after_checkpoint"
   v15_completed: false
   v16_completed: false
   v16_plan_registered: true
 active_state_bifurcation:
-  latest_research_task_id: "RT-20260801-007"
-  latest_research_handoff_id: "handoff-0936"
-  latest_research_next_action: "Run the one governed checkpoint for AJ-RT-20260801-007-001. After it commits, route one fresh bounded P13-T07 improve-project-system packet to enforce generated-report source provenance and freshness; do not execute P13-T07 in this frame."
+  latest_research_task_id: "RT-20260801-009"
+  latest_research_handoff_id: "handoff-0937"
+  latest_research_next_action: "Run one fresh bounded P13-T07 improve-project-system packet to enforce exact generated-report source provenance and maximum-lag freshness."
   latest_project_system_task_id: "none"
   latest_project_system_status: "none"
   latest_project_system_sidecar_task_id: "none"
@@ -285,7 +285,7 @@ blocked_physical_targets:
       - "no_global_theory_rejection"
 distance_to_gr:
   delta:
-    effect: "none_project_system_validation_cutover"
+    effect: "none_project_system_checkpoint_reconciliation"
     changed: false
     milestone: "source_equivalence_eqsrc"
     burden_id: "source_equivalence_eqsrc"
