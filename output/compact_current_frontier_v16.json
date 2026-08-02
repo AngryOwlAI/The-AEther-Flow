@@ -8,14 +8,14 @@
     "research_control/current_frontier.md",
     "research_control/design/accepted_status_calibration_v2.yaml",
     "research_control/design/active_state_bifurcation_policy_v1.md",
-    "research_control/handoffs/handoff-0938.yaml",
+    "research_control/handoffs/handoff-0939.yaml",
     "research_control/program_state.yaml"
   ],
   "report_provenance": {
     "schema_id": "generated_report_provenance_v1",
     "policy_id": "p13_t07_live_generated_report_freshness_v1",
     "report_class": "compact_current_frontier",
-    "source_commit": "1862241f210e27945fae7114fa471c6441030967",
+    "source_commit": "6afcd4b0660e95d1653e74ab9fa39a858aff1139",
     "source_hashes": [
       {
         "path": "registries/DISTANCE_TO_GR_LEDGER.csv",
@@ -23,19 +23,19 @@
       },
       {
         "path": "registries/RESEARCH_TASK_REGISTRY.csv",
-        "sha256": "26e90cc972e715e62ab28455d8bec55cb11e7e24d5724f7e328ff25896ce4c33"
+        "sha256": "9840ad85e96fad907586fad1c14f783fa714933449a281a4302a057c9b80697a"
       },
       {
         "path": "research_control/current_frontier.md",
-        "sha256": "99fb90babcbeef8df60b0e298d73f2b5b4bc8a70e39d7a46a6b08685468f72f7"
+        "sha256": "b088d767db1213892bc7d1460e84f2185d4fd79aae2d9355370d4d116f1abaa7"
       },
       {
-        "path": "research_control/handoffs/handoff-0938.yaml",
-        "sha256": "a7e9681afdb1f209d4e8d1c1c738002c04dfb51fcb314116c35037bfcf1de772"
+        "path": "research_control/handoffs/handoff-0939.yaml",
+        "sha256": "c66df08b890b3dfc1f829202d27176d9b331070efc0cc42872a1c4f1fe8d44de"
       },
       {
         "path": "research_control/program_state.yaml",
-        "sha256": "0df86e299cb7d9b8450d61171fd3697c12b9b5579552650fc64a5a30b1323f2c"
+        "sha256": "4471ecafe7277dd6a36b85c6c3ac63dd153cd9243590895857087ab3ca80af2d"
       },
       {
         "path": "research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml",
@@ -50,10 +50,10 @@
         "sha256": "36fab56791487f690c7fd31ef036a1dba82d03a66beddefac5a21baf77ab10c2"
       }
     ],
-    "source_manifest_sha256": "d4b013c1ca04d2932be31ad9bca32f2100be99cedd5aed28266b4a20df9f3ae8",
+    "source_manifest_sha256": "5300014256f4e27f43a96266aa296fbc005d7937f21847c4c336fb97a8b2b587",
     "source_path_count": "12",
-    "generation_time": "2026-08-02T01:44:43Z",
-    "task_count": "1190",
+    "generation_time": "2026-08-02T09:54:19Z",
+    "task_count": "1192",
     "maximum_commit_lag": "1",
     "freshness_status": "fresh_at_generation",
     "generated_view_is_authority": false,
@@ -61,17 +61,17 @@
     "proof_authority": false
   },
   "active_state": {
-    "active_task_id": "RT-20260801-011",
-    "latest_handoff_id": "handoff-0938",
-    "current_status": "p13_t07_documentation_registry_reason_repair_required",
+    "active_task_id": "RT-20260802-005",
+    "latest_handoff_id": "handoff-0939",
+    "current_status": "generation_217_checkpoint_reconciled_p13_t08_dependency_ready_after_checkpoint",
     "v15_completed": false,
     "v16_completed": false,
     "v16_plan_registered": true
   },
   "active_state_bifurcation": {
-    "latest_research_task_id": "RT-20260801-011",
-    "latest_research_handoff_id": "handoff-0938",
-    "latest_research_next_action": "Run one fresh bounded P13-T07 improve-project-system recovery that adds the exact missing documentation_registry_changed reason, preserves the implemented payload, regenerates governed derivatives, reruns affected validation, and invokes at most one checkpoint only after PASS.",
+    "latest_research_task_id": "RT-20260802-005",
+    "latest_research_handoff_id": "handoff-0939",
+    "latest_research_next_action": "Run one fresh bounded P13-T08 improve-project-system packet to calibrate checker names and complete software-system non-regression validation.",
     "latest_project_system_task_id": "none",
     "latest_project_system_status": "none",
     "latest_project_system_sidecar_task_id": "none",
@@ -80,10 +80,10 @@
     "next_research_route_source": "latest_research_handoff"
   },
   "next_route": {
-    "route_id": "p13_t07_documentation_registry_reason_recovery_v1",
+    "route_id": "p13_t08_checker_naming_non_regression_audit_v1",
     "role_family": "process-integrity-auditor@0.1.0",
     "target_derivation_milestone": "source_equivalence_eqsrc",
-    "milestone_burden": "Restore exact P13-T07 documentation-impact parity before checkpointing.",
+    "milestone_burden": "Close P13 with explicit operational authority boundaries.",
     "requires_human_gate": false
   },
   "claim_boundary": {
@@ -384,7 +384,7 @@
   ],
   "distance_to_gr": {
     "delta": {
-      "effect": "none_project_system_validation_repair",
+      "effect": "none_project_system_checkpoint_reconciliation",
       "changed": false,
       "milestone": "source_equivalence_eqsrc",
       "burden_id": "source_equivalence_eqsrc"
@@ -678,7 +678,15 @@
   },
   "validation": {
     "latest_required_status": "PASS",
-    "pending_layers": []
+    "pending_layers": [
+      {
+        "layer": "post_checkpoint",
+        "status": "PENDING",
+        "evidence": [
+          "One governed checkpoint remains authorized and uninvoked."
+        ]
+      }
+    ]
   },
   "authority_warning": {
     "snapshot_only_not_authority": true

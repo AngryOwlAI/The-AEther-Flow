@@ -1,11 +1,81 @@
 mode: "director_led_research_control"
-active_task_id: "RT-20260801-011"
-latest_handoff_id: "handoff-0938"
-current_status: "p13_t07_documentation_registry_reason_repair_required"
-claim_boundary_summary: "RT-20260801-011 implemented and locally verified P13-T07 generated-report provenance, but planner-authoritative affected validation escalated to full and failed documentation_impact because documentation_registry_changed was absent after memory synchronization changed MARKDOWN_SOURCE_REGISTRY.csv. Generation 210 stopped without checkpointing. One fresh bounded P13-T07 recovery is execution-ready; P13-T08 remains blocked."
-next_plan_task_id: "P13-T07"
+active_task_id: "RT-20260802-005"
+latest_handoff_id: "handoff-0939"
+current_status: "generation_217_checkpoint_reconciled_p13_t08_dependency_ready_after_checkpoint"
+claim_boundary_summary: "Generation 219 records exact generation-217 checkpoint 6afcd4b and supersedes stale precheckpoint P13-T07 routing without rewriting predecessor records. P13-T05, P13-T06, and completed P13-T07 now qualify one fresh P13-T08 frame after this reconciliation checkpoints; P13-T08 remains unexecuted."
+next_plan_task_id: "P13-T08"
 next_worker_skill: "improve-project-system"
-next_recommended_action: "Run one fresh bounded P13-T07 improve-project-system recovery that adds the exact missing documentation_registry_changed reason, preserves the implemented payload, regenerates governed derivatives, reruns affected validation, and invokes at most one checkpoint only after PASS."
+next_recommended_action: "Run one fresh bounded P13-T08 improve-project-system packet to calibrate checker names and complete software-system non-regression validation."
+
+generation_217_checkpoint_p13_t08_dependency_reconciliation:
+  task_id: "RT-20260802-005"
+  parent_task_id: "RT-20260802-004"
+  parent_handoff_id: "handoff-0938"
+  source_task_id: "RT-20260802-004"
+  source_job_id: "AJ-RT-20260802-004-001"
+  source_handoff_id: "handoff-0938"
+  plan_task_id: "P13-T07"
+  recovery_for_plan_task_id: "P13-T07"
+  next_plan_task_id: "P13-T08"
+  claim_boundary_id: "CB-PS-GENERATION-217-CHECKPOINT-P13-T08-DEPENDENCY-RECONCILIATION-001"
+  status: "GENERATION_217_CHECKPOINT_RECONCILED_P13_T08_DEPENDENCY_READY_AFTER_CHECKPOINT"
+  work_item_status: "repair_completed"
+  route_label: "reconcile_generation_217_checkpoint_and_p13_t08_dependency_v1"
+  selected_role_family: "process-integrity-auditor@0.1.0"
+  selected_worker_skill: "improve-project-system"
+  selected_strategy_id: "reconcile_generation_217_checkpoint_and_p13_t08_dependency_v1"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Project-system checkpoint and dependency reconciliation only; no derivation milestone advances."
+  source_head: "6afcd4b0660e95d1653e74ab9fa39a858aff1139"
+  source_checkpoint_parent: "1862241f210e27945fae7114fa471c6441030967"
+  source_checkpoint_tree: "8f3d90ff4daccaf40ad1b428ff029b4f0fbdd804"
+  source_checkpoint_receipt_sha256: "35a660de99e4a43ce6eb5538327b2052d7faed43de51baec9279c854a62c4703"
+  immutable_route_sha256: "8d5321a1adede6b459ee8dd983926ec49e6fad86f3ad240c4e7393967ea3b7ab"
+  route_blocker_fingerprint: "1b32f4dac3c7ec8ff5570525b4464df3eb115386978194c9d2a4162d89aa7de5"
+  completion_path: "research_control/tasks/RT-20260802-005/jobs/completions/AJC-AJ-RT-20260802-005-001.yaml"
+  completion_sha256: "4bf55f0613334bac621d109d6a91b597ff5c905712799e3a20b1dd2757a3faf6"
+  handoff_id: "handoff-0939"
+  handoff_path: "research_control/handoffs/handoff-0939.yaml"
+  reconciliation_receipt_path: "research_control/tasks/RT-20260802-005/artifacts/generation_217_checkpoint_p13_t08_dependency_reconciliation_receipt.json"
+  reconciliation_receipt_sha256: "1edf831091d68f878d0f9b335fab6a669b7ffb98b64b1a1162e71e0341e5bf5a"
+  p13_t05_completion_path: "research_control/tasks/RT-20260724-002/jobs/completions/AJC-AJ-RT-20260724-002-001.yaml"
+  p13_t05_completion_sha256: "77e41842b1530fea579955d57f3fefe99b9800bac2aa9147cb8ca9b5443bd8ea"
+  p13_t05_completed: true
+  p13_t06_completion_path: "research_control/tasks/RT-20260724-003/jobs/completions/AJC-AJ-RT-20260724-003-001.yaml"
+  p13_t06_completion_sha256: "bc36815f27a56bcde5d757c730c557164755d786c248c3b21bdc8f8e4fbe237a"
+  p13_t06_completed: true
+  p13_t07_original_completion_path: "research_control/tasks/RT-20260801-011/jobs/completions/AJC-AJ-RT-20260801-011-001.yaml"
+  p13_t07_original_completion_sha256: "73c309c9830078d2ef209861aad53ba2742c754c82c3748841918a2e4533404e"
+  p13_t07_final_recovery_completion_path: "research_control/tasks/RT-20260802-004/jobs/completions/AJC-AJ-RT-20260802-004-001.yaml"
+  p13_t07_final_recovery_completion_sha256: "a590a1a101428b295500ea8ac328ac81a770fe58650e948549236621e793dae4"
+  p13_t07_checkpoint_commit: "6afcd4b0660e95d1653e74ab9fa39a858aff1139"
+  p13_t07_checkpoint_committed: true
+  p13_t07_work_item_status: "completed"
+  generation_217_reexecuted: false
+  generation_217_checkpoint_replayed: false
+  p13_t08_dependency_ready_after_checkpoint: true
+  p13_t08_execution_ready_now: false
+  p13_t08_executed: false
+  protected_hash_mismatch_count: 0
+  selected_next_work_item: "P13-T08"
+  selected_next_worker_skill: "improve-project-system"
+  selected_next_role_family: "process-integrity-auditor@0.1.0"
+  selected_next_route_label: "ordinary-research-packet"
+  selected_next_strategy_id: "rename_checkers_and_complete_software_system_non_regression_audit_v1"
+  selected_next_requires_human_gate: false
+  selected_next_blocked_by_protected_external_evidence: false
+  selected_next_execution_ready_after_checkpoint: true
+  scientific_claims_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  ontology_adoption_authorized: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false
+  hosted_workflow_dispatch_authorized: false
+  hosted_workflow_dispatch_performed: false
 
 p13_t07_generated_report_provenance_and_freshness:
   task_id: "RT-20260801-011"

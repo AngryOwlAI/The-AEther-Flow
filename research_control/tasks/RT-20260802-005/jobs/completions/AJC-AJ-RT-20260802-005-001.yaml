@@ -1,0 +1,281 @@
+completion_id: "AJC-AJ-RT-20260802-005-001"
+job_id: "AJ-RT-20260802-005-001"
+task_id: "RT-20260802-005"
+task_type: "project_system_generation_217_checkpoint_p13_t08_dependency_reconciliation"
+decision_id: "DDR-20260802-005"
+role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260802-005"
+status: "completed"
+validation_status: "PASS"
+completed_at: "2026-08-02T09:54:19Z"
+objective_result: "generation_217_checkpoint_reconciled_p13_t08_dependency_ready"
+verdict: "PASS_GENERATION_217_CHECKPOINT_RECONCILIATION_P13_T08_READY"
+summary: "Generation 219 records exact generation-217 checkpoint 6afcd4b, supersedes stale precheckpoint P13-T07 routing, and proves P13-T05, P13-T06, and P13-T07 qualify one later P13-T08 frame. All predecessor records remain byte-identical, generation 217 was not replayed, P13-T08 remains unexecuted, and one governed checkpoint for this superseding transaction is pending."
+transaction_status: "ready_for_checkpoint"
+plan_task_id: "P13-T07"
+recovery_for_plan_task_id: "P13-T07"
+next_plan_task_id: "P13-T08"
+checkpoint_invocation_count: 0
+checkpoint_commit:
+  status: "PENDING"
+  commit: ""
+  invocation_count: 0
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 219
+  passes_consumed: 196
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:219"
+  handoff_token: "bed118203d5eb434aa9b63dd05d4c58c805aa85e981346a9"
+  relay_claim_token: "17954741c8e6621116f69d5239d1e6168a8c86dabdce8c25"
+  route_work_item_id: "P13-T07"
+  route_worker_skill: "improve-project-system"
+  route_sha256: "8d5321a1adede6b459ee8dd983926ec49e6fad86f3ad240c4e7393967ea3b7ab"
+  route_strategy_id: "reconcile_generation_217_checkpoint_and_p13_t08_dependency_v1"
+  route_blocker_fingerprint: "1b32f4dac3c7ec8ff5570525b4464df3eb115386978194c9d2a4162d89aa7de5"
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+
+result:
+  status: "PASS"
+  strategy_id: "reconcile_generation_217_checkpoint_and_p13_t08_dependency_v1"
+  source_job_id: "AJ-RT-20260802-004-001"
+  source_checkpoint_commit: "6afcd4b0660e95d1653e74ab9fa39a858aff1139"
+  stale_active_task_id: "RT-20260801-011"
+  stale_checkpoint_instruction_superseded: true
+  p13_t05_completed: true
+  p13_t06_completed: true
+  p13_t07_completed: true
+  generation_217_reexecuted: false
+  p13_t08_dependency_ready: true
+  p13_t08_executed: false
+  protected_hash_mismatch_count: 0
+  receipt_path: "research_control/tasks/RT-20260802-005/artifacts/generation_217_checkpoint_p13_t08_dependency_reconciliation_receipt.json"
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  publication_or_external_action_authorized: false
+
+protected_evidence:
+  source_head: "6afcd4b0660e95d1653e74ab9fa39a858aff1139"
+  source_task_path: "research_control/tasks/RT-20260802-004/00_TASK.yaml"
+  source_task_sha256: "f0c9a483c5dcc470735454053e7251e8aeb5b1e82ad1368c045fc4699ed282a5"
+  source_decision_path: "research_control/tasks/RT-20260802-004/DDR-20260802-004.md"
+  source_decision_sha256: "71d36ad3c8430017e3c9f9a82db25a5c67f1517d408695341c1b33b4b5606116"
+  source_job_path: "research_control/tasks/RT-20260802-004/jobs/AJ-RT-20260802-004-001.yaml"
+  source_job_sha256: "b63d2d23b6b73f18de991c5e8e84c4064fa306c3a62dd0d35ad5ad21b8aa3064"
+  source_role_path: "research_control/tasks/RT-20260802-004/roles/process-integrity-auditor@0.1.0--RT-20260802-004.yaml"
+  source_role_sha256: "a50e8d18b0ecb283acaa92425cbee0b6ed8854ad44ceffa58a02de093c8e1e35"
+  source_completion_path: "research_control/tasks/RT-20260802-004/jobs/completions/AJC-AJ-RT-20260802-004-001.yaml"
+  source_completion_sha256: "a590a1a101428b295500ea8ac328ac81a770fe58650e948549236621e793dae4"
+  source_recovery_receipt_path: "research_control/tasks/RT-20260802-004/artifacts/p13_t07_validation_layer_status_checkpoint_recovery_receipt.json"
+  source_recovery_receipt_sha256: "7d81d08d344a0e766610a1aa53ac65784abf9f469b87d70aa0cd3f44f17e70cc"
+  source_handoff_path: "research_control/handoffs/handoff-0938.yaml"
+  source_handoff_yaml_sha256: "a7e9681afdb1f209d4e8d1c1c738002c04dfb51fcb314116c35037bfcf1de772"
+  source_handoff_markdown_sha256: "d0a1c7eba6cd830b1f8dca3e761c8c17a01759131f2b917a2071e8824a6e5f1f"
+  source_program_state_sha256: "0df86e299cb7d9b8450d61171fd3697c12b9b5579552650fc64a5a30b1323f2c"
+  source_checkpoint_receipt_sha256: "35a660de99e4a43ce6eb5538327b2052d7faed43de51baec9279c854a62c4703"
+  p13_t05_completion_sha256: "77e41842b1530fea579955d57f3fefe99b9800bac2aa9147cb8ca9b5443bd8ea"
+  p13_t06_completion_sha256: "bc36815f27a56bcde5d757c730c557164755d786c248c3b21bdc8f8e4fbe237a"
+  p13_t07_original_completion_sha256: "73c309c9830078d2ef209861aad53ba2742c754c82c3748841918a2e4533404e"
+
+command_results:
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+    status: "PASS"
+    summary: "Core memory freshness and local retrieval all pass."
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup AJ-RT-20260802-004-001 --json"
+    status: "PASS"
+    summary: "Canonical generation-217 task decision role and AgentJob records resolve."
+  - command: ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+    status: "PASS_CLEAN_PREFLIGHT"
+    summary: "The consumed route began from an exact clean manifest."
+  - command: ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json"
+    status: "PASS_ADVISORY_NO_SIGNAL"
+    summary: "No open signal competes with the immutable relay recovery route."
+  - command: ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted"
+    status: "PASS"
+    summary: "Signal parity passes with no open signal."
+  - command: "git show -s 6afcd4b0660e95d1653e74ab9fa39a858aff1139"
+    status: "PASS"
+    summary: "Exact commit parent tree and subject match generation-217 checkpoint evidence."
+  - command: ".venv/bin/python scripts/research_control/task_taxonomy.py --validate-repository --json"
+    status: "PASS"
+    summary: "Repository task taxonomy validates without mutating historical records."
+  - command: ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+    status: "PASS"
+    summary: "The task-local receipt covers the exact live transaction."
+  - command: ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+    status: "PASS"
+    summary: "Changed-source claim language remains inside the non-scientific boundary."
+  - command: ".venv/bin/python -m scripts.validation.cli run --profile affected --paths <changed-paths>"
+    status: "PASS"
+    summary: "The affected profile passes for the bounded reconciliation transaction."
+  - command: ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --job-id AJ-RT-20260802-005-001 --json-summary"
+    status: "PASS"
+    summary: "Integrated research-control validation reports zero errors."
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+    status: "PASS"
+    summary: "Tracked memory and local retrieval validate after full synchronization."
+  - command: ".venv/bin/python scripts/research_control/continue_research.py --summary"
+    status: "PASS"
+    summary: "Resolution is ready at director_decision_required with RT-005, handoff-0939, and P13-T08 next."
+  - command: "git diff --check"
+    status: "PASS"
+    summary: "The working transaction contains no whitespace errors."
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1109
+    relationship_row_count: 5606
+    semantic_row_count: 1109
+    vault_row_count: 1109
+    local_cache_only_warning_count: 0
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  authority_note: "Generated wiki Obsidian semantic relationship SQLite and .local surfaces are retrieval-only and not authority; tracked source records Git and validators govern this reconciliation."
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  observed_durable_outputs:
+    physics: []
+    project_system:
+      - "exact generation-217 checkpoint reconciliation receipt"
+      - "superseding P13-T08-ready handoff and program state"
+      - "protected predecessor hash evidence"
+      - "one governed checkpoint"
+  accepted_criteria:
+    physics: []
+    project_system:
+      - "commit 6afcd4b exactly matches the generation-217 checkpoint evidence"
+      - "RT-20260802-004 and handoff-0938 remain byte-identical"
+      - "P13-T05 P13-T06 and P13-T07 qualifying evidence is exact"
+      - "P13-T08 remains unexecuted"
+      - "all required working-tree gates pass"
+      - "one governed checkpoint commits the superseding routing transaction"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+distance_to_gr_delta:
+  changed: false
+  effect: "none_project_system_checkpoint_reconciliation"
+  milestone: "source_equivalence_eqsrc"
+  ledger_row_updated: false
+  ledger_update_rationale: "Checkpoint and dependency reconciliation contributes no physics movement."
+
+physics_progress_status:
+  status: "documentation_or_control_only_no_physics_delta"
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+
+selected_next_route:
+  route_id: "p13_t08_checker_naming_non_regression_audit_v1"
+  route_label: "ordinary-research-packet"
+  role_family: "process-integrity-auditor@0.1.0"
+  worker_skill: "improve-project-system"
+  task_type: "rename_checkers_and_complete_software_system_non_regression_audit"
+  plan_task_id: "P13-T08"
+  strategy_id: "rename_checkers_and_complete_software_system_non_regression_audit_v1"
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  requires_human_gate: false
+  blocked_by_protected_external_evidence: false
+  p13_t05_completed: true
+  p13_t06_completed: true
+  p13_t07_completed: true
+  physics_promotion_authorized: false
+  proof_authority: false
+  executed: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 219 validated, claimed, and consumed the immutable improve-project-system route exactly once."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The task-local receipt binds exact checkpoint, dependency, and protected-hash evidence."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "The affected profile and integrated research-control validation pass."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "One governed checkpoint is authorized for this superseding transaction."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Current-frontier, task-index, compact-frontier, dependency-graph, and claim-graph checks pass."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Full memory synchronization and validate-only freshness checks pass after final source writes."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation passes within the project-system-only boundary."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "none; project-system checkpoint and dependency reconciliation only"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  push_authorized: false
+  publication_authorized: false
+  hosted_workflow_dispatch_authorized: false
+  proof_authority: false
+  canonical_ontology_edit_authorized: false
+  source_law_adoption_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+notes: "Project-system reconciliation success does not count as P13-T08 execution, physics or benchmark progress, Distance-to-GR movement, promotion, proof, publication, push, hosted workflow, Gate Chair authority, or completed derivation."
