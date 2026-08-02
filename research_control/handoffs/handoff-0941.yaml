@@ -1,0 +1,215 @@
+handoff_id: "handoff-0941"
+handoff_number: 941
+handoff_kind: "ordinary_research"
+task_id: "RT-20260802-008"
+decision_id: "DDR-20260802-008"
+job_id: "AJ-RT-20260802-008-001"
+completion_id: "AJC-AJ-RT-20260802-008-001"
+completion_path: "research_control/tasks/RT-20260802-008/jobs/completions/AJC-AJ-RT-20260802-008-001.yaml"
+completion_sha256: "bc7d22714d91f9745ac268904fef723287500c2913eadb65dcf9911c5465f06c"
+status: "ready_after_checkpoint"
+validation_status: "PASS_PRECHECKPOINT"
+created_at: "2026-08-02T13:07:50Z"
+parent_handoff_id: "handoff-0940"
+plan_task_id: "P15-T02"
+source_role_id: "external-red-team-reviewer"
+source_role_version: "0.1.0"
+source_execution_role_ref: "external-red-team-reviewer@0.1.0--RT-20260802-008"
+summary: "P15-T02 completes a deterministic internal AI research-operating-system methodology packet. Five requested workflow arms are classified and six bounded mechanism metrics have valid denominators; absent controls, cost, causal effects, independent review, and external-human review remain explicitly unmeasured. P13 evidence is operational only and no physics or protected authority changes."
+next_action: "After final synchronization, complete validation, and one governed checkpoint, resolve P15-T06 from the qualifying P15-T01 through P15-T04 dependency set and run it only in one fresh improve-project-system frame."
+current_claim_boundary: "CB-V21-P15-T02-METHODOLOGY-PUBLICATION-001"
+loop_risk_route: "ordinary-research-packet"
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260802-008"
+  latest_research_handoff_id: "handoff-0941"
+  latest_research_next_action: "After final synchronization, complete validation, and one governed checkpoint, resolve P15-T06 from the qualifying P15-T01 through P15-T04 dependency set and run it only in one fresh improve-project-system frame."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+  project_improvement_sidecar_required: false
+  research_handoff_remains_authoritative: true
+claim_boundary:
+  allowed_next_scope: "After checkpoint, one fresh bounded P15-T06 project-system packet may build public reproducibility and source packages from qualifying P15-T01 through P15-T04 results without elevating generated derivatives."
+  completed_task: "RT-20260802-008"
+  completed_completion_path: "research_control/tasks/RT-20260802-008/jobs/completions/AJC-AJ-RT-20260802-008-001.yaml"
+  completed_completion_sha256: "bc7d22714d91f9745ac268904fef723287500c2913eadb65dcf9911c5465f06c"
+  source_handoff_id: "handoff-0940"
+  source_handoff_path: "research_control/handoffs/handoff-0940.yaml"
+  source_handoff_sha256: "65e49f335c243008ac12c8462afafecc198e1b02265f44909df649c0725f4322"
+  immutable_route_sha256: "e3a58f44fffac3ce5300bc19bd45cf5d1c9832d565d6832bf648a740f788be64"
+  result_status: "PASS_P15_T02_BOUNDED_NONCAUSAL_METHODOLOGY_PUBLICATION_PRECHECKPOINT"
+  requested_arm_count: 5
+  observed_nonrandomized_or_partial_arm_count: 3
+  missing_control_arm_count: 2
+  mechanism_metric_count: 6
+  valid_denominator_metric_count: 6
+  causal_identification: "not_identified"
+  cost_status: "not_available"
+  external_human_review_completed: false
+  independent_replication_completed: false
+  scientific_status_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  ontology_adoption_authorized: false
+  source_law_adoption_authorized: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  publication_authorized: false
+  push_performed: false
+  hosted_workflow_dispatch_performed: false
+  blocked_claims:
+    - "causal workflow superiority or autonomous scientific capability"
+    - "same-model context review presented as independent or external-human review"
+    - "route validator checkpoint or software PASS presented as physics evidence"
+    - "ontology benchmark publication proof Gate E or completed-derivation promotion"
+plan_result:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  phase_id: "P15"
+  plan_task_id: "P15-T02"
+  title: "Prepare the AI research-operating-system methodology paper"
+  result_status: "P15_T02_PASS_PRECHECKPOINT"
+  work_item_status: "completed"
+  recommendation_ids:
+    - "V21-R36"
+    - "V21-R37"
+    - "V21-R38"
+    - "V21-R42"
+    - "V21-R43"
+    - "V21-R44"
+    - "V21-R45"
+    - "V21-R51"
+    - "V21-R52"
+    - "V21-R53"
+    - "V21-R65"
+    - "V21-R66"
+    - "V21-R69"
+  p15_t06_dependency_ready_after_checkpoint: true
+  p15_t06_executed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  system_success_counts_as_physics: false
+  system_success_counts_as_distance_to_gr: false
+  physics_promotion_authorized: false
+  proof_authority: false
+dependency_evidence:
+  p15_t01:
+    completion_path: "research_control/tasks/RT-20260723-002/jobs/completions/AJC-AJ-RT-20260723-002-001.yaml"
+    completion_sha256: "af44b8f840f8f8beda1b688a5863de906d8e86d535b2507633c2682ddbd4b20c"
+    status: "qualifying_preserved_completion"
+  p15_t02:
+    completion_path: "research_control/tasks/RT-20260802-008/jobs/completions/AJC-AJ-RT-20260802-008-001.yaml"
+    completion_sha256: "bc7d22714d91f9745ac268904fef723287500c2913eadb65dcf9911c5465f06c"
+    checkpoint_status: "pending"
+    status: "qualifying_after_checkpoint"
+  p15_t03:
+    completion_path: "research_control/tasks/RT-20260723-003/jobs/completions/AJC-AJ-RT-20260723-003-001.yaml"
+    completion_sha256: "c18ae55f4b4723a799ae081eb29b23c368af44f01e5d27ae7b2a7cd5873fb476"
+    status: "qualifying_preserved_completion"
+  p15_t04:
+    completion_path: "research_control/tasks/RT-20260727-006/jobs/completions/AJC-AJ-RT-20260727-006-001.yaml"
+    completion_sha256: "95075d40d9f21f5c3ab14695a4c3def18c7241c6510319c8ffdf6b41d5ec0026"
+    status: "qualifying_preserved_completion"
+selected_next_route:
+  route_id: "route_p15_t06_after_p15_t02_checkpoint_v1"
+  route_label: "ordinary-research-packet"
+  role_family: "documentation-curator@2.0.0"
+  worker_skill: "improve-project-system"
+  plan_task_id: "P15-T06"
+  target_derivation_milestone: "benchmark_promotion"
+  milestone_burden: "Make publishable work inspectable without elevating generated derivatives."
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  physics_promotion_authorized: false
+  executed: false
+  next_action: "After the P15-T02 checkpoint, build stable source-backed reproducibility packages with exact source commit hashes environments commands limitations licenses and generated-derivative boundaries."
+  source_handoff: "research_control/handoffs/handoff-0941.yaml"
+ordinary_route_guard:
+  schema_id: "ordinary_route_guard_evaluation_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  evaluation_id: "ORE-HANDOFF-0941"
+  ordinary_handoff_id: "handoff-0941"
+  threshold: 3
+  consecutive_project_system_tasks_before_selection: 0
+  ready_science_plan_task_ids: []
+  selected_plan_task_id: "P15-T06"
+  selected_route_class: "project_system"
+  selected_worker_skill: "improve-project-system"
+  outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  exception_receipt:
+    active: false
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 223 was validated claimed and consumed exactly once before its one direct continue-research worker invocation."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The builder binds fourteen tracked sources and reproduces all five arm classifications six ratios and authority flags."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Builder check mode reproduces nine outputs and the task-local checker passes 26 checks."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "One governed checkpoint is authorized and has not yet been invoked."
+  renderer:
+    status: "PENDING"
+    evidence:
+      - "Task index current frontier compact frontier and dependency graph synchronization remain."
+  memory_bootstrap:
+    status: "PENDING"
+    evidence:
+      - "Tracked memory synchronization and validate-only remain."
+  claim_language_linter:
+    status: "PENDING"
+    evidence:
+      - "Changed-source claim-language validation remains."
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  hosted_workflow_dispatch_authorized: false
+  hosted_workflow_dispatch_authority_source_path: ""
+  push_authorized: false
+  publication_authorized: false
+  proof_authority: false
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  sidecar_path: ""
+  signal_ids: []
+  recursive_goal_recovery_required: false
+  reason: "P15-T02 found no separate project-system repair signal; this ordinary handoff remains authoritative."
+handoff_authority_boundary:
+  this_handoff_authorizes: "After checkpoint, Director consideration of one fresh bounded P15-T06 improve-project-system reproducibility-package packet."
+  this_handoff_does_not_authorize:
+    - "P15-T06 execution before the P15-T02 checkpoint"
+    - "publication submission push hosted workflow or external distribution"
+    - "methodology or software PASS as theorem truth or physics evidence"
+    - "canonical ontology source-law scientific-ledger or Distance-to-GR edit"
+    - "benchmark promotion Gate Chair authority proof or completed derivation"
+next_plan_task_id: "P15-T06"
+next_plan_task_execution_ready_after_checkpoint: true
+next_plan_task_executed: false
+notes: "P15-T02 closes the bounded internal methodology-paper obligation without causal or external-review overclaim and without scientific promotion."

@@ -1,0 +1,3 @@
+# P15-T02 parent fusion notes
+
+The parent accepted the Physicist-Mathematician child's denominator discipline and the Physicist-Philosopher child's authority separation. Exact ratios are retained only as descriptive properties of their bounded matrices. Missing arms, costs, and denominators remain absent rather than zero-filled. Same-model context comparisons are labeled context diversity rather than reviewer independence. The fused manuscript preserves the P12 source-integrity limitation, uses P13 non-regression only as operational evidence, and makes no physics, ontology, publication, proof, or completed-derivation claim.

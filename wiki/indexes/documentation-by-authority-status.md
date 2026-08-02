@@ -61,6 +61,9 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-V21-P12-T07-METHODOLOGY-LIMITATIONS-NEXT-STUDY` `research_control/tasks/RT-20260723-013/artifacts/p12_t07_limitations_and_next_study.md`
 - `MD-V21-P14-T04-PARENT-FUSION-CONGRUENCE-STATUS-V1` `research_control/tasks/RT-20260731-005/artifacts/parent_fusion_notes_p14_t04_congruence_status.md`
 - `MD-V21-P15-T01-EXACT-GR-INTERPRETIVE-MANUSCRIPT-V1` `research_control/tasks/RT-20260722-021/artifacts/exact_gr_interpretive_manuscript_v1.md`
+- `MD-V21-P15-T02-AI-METHODOLOGY-MANUSCRIPT-V1` `research_control/tasks/RT-20260802-008/artifacts/p15_t02_methodology_manuscript.md`
+- `MD-V21-P15-T02-METHODOLOGY-LIMITATIONS-V1` `research_control/tasks/RT-20260802-008/artifacts/p15_t02_methodology_limitations.md`
+- `MD-V21-P15-T02-PARENT-FUSION-METHODOLOGY-PUBLICATION-V1` `research_control/tasks/RT-20260802-008/artifacts/parent_fusion_notes_methodology_publication.md`
 - `MD-V21-P15-T04-PARENT-FUSION-SOURCE-DYNAMICS-RECONSTRUCTION-V1` `research_control/tasks/RT-20260727-006/artifacts/parent_fusion_notes_p15_t04_report.md`
 - `MD-V21-P15-T05-PARENT-FUSION-GATE-E-NO-MANUSCRIPT-V1` `research_control/tasks/RT-20260731-010/artifacts/parent_fusion_notes_p15_t05_gate_e_disposition.md`
 - `MD-V21-P4-T01-SOURCE-ASSUMPTION-AMBIGUITIES` `research_control/tasks/RT-20260720-030/artifacts/source_assumption_unresolved_ambiguities_v1.md`
@@ -746,6 +749,9 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-V21-P13-T05-SECURITY-SCAN-POLICY-V1` `wiki/markdown/md-v21-p13-t05-security-scan-policy-v1.md`
 - `WIKI-MD-V21-P14-T04-PARENT-FUSION-CONGRUENCE-STATUS-V1` `wiki/markdown/md-v21-p14-t04-parent-fusion-congruence-status-v1.md`
 - `WIKI-MD-V21-P15-T01-EXACT-GR-INTERPRETIVE-MANUSCRIPT-V1` `wiki/markdown/md-v21-p15-t01-exact-gr-interpretive-manuscript-v1.md`
+- `WIKI-MD-V21-P15-T02-AI-METHODOLOGY-MANUSCRIPT-V1` `wiki/markdown/md-v21-p15-t02-ai-methodology-manuscript-v1.md`
+- `WIKI-MD-V21-P15-T02-METHODOLOGY-LIMITATIONS-V1` `wiki/markdown/md-v21-p15-t02-methodology-limitations-v1.md`
+- `WIKI-MD-V21-P15-T02-PARENT-FUSION-METHODOLOGY-PUBLICATION-V1` `wiki/markdown/md-v21-p15-t02-parent-fusion-methodology-publication-v1.md`
 - `WIKI-MD-V21-P15-T04-PARENT-FUSION-SOURCE-DYNAMICS-RECONSTRUCTION-V1` `wiki/markdown/md-v21-p15-t04-parent-fusion-source-dynamics-reconstruction-v1.md`
 - `WIKI-MD-V21-P15-T04-SOURCE-DYNAMICS-RECONSTRUCTION-RECEIPT-V1` `wiki/markdown/md-v21-p15-t04-source-dynamics-reconstruction-receipt-v1.md`
 - `WIKI-MD-V21-P15-T05-PARENT-FUSION-GATE-E-NO-MANUSCRIPT-V1` `wiki/markdown/md-v21-p15-t05-parent-fusion-gate-e-no-manuscript-v1.md`

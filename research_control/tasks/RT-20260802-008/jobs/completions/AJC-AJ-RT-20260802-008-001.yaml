@@ -1,0 +1,504 @@
+validation_status: "PASS"
+job_id: "AJ-RT-20260802-008-001"
+completion_id: "AJC-AJ-RT-20260802-008-001"
+task_id: "RT-20260802-008"
+task_type: "v21_p15_t02_ai_research_operating_system_methodology_publication"
+decision_id: "DDR-20260802-008"
+role_id: "external-red-team-reviewer"
+source_role_id: "external-red-team-reviewer"
+role_version: "0.1.0"
+execution_role_ref: "external-red-team-reviewer@0.1.0--RT-20260802-008"
+status: "completed"
+final_repository_validation_status: "PASS_PRECHECKPOINT"
+created_at: "2026-08-02T13:07:50Z"
+started_at: "2026-08-02T13:07:50Z"
+completed_at: "2026-08-02T13:07:50Z"
+objective: "Execute only v21 P15-T02 by preparing a reproducible internal AI research-operating-system methodology paper with controlled evidence, explicit missing arms, valid denominators, and no physics overread."
+completion_summary: "Generation 223 completes one deterministic P15-T02 internal methodology-publication packet with mandatory Physicist-Mathematician and Physicist-Philosopher synthesis. Five requested workflow arms are classified, but unstructured and normalized single-agent controls are absent, blind review is same-model only, and diverse review is context-diverse rather than independent. Six mechanism ratios have valid denominators; causal superiority, cost-normalized comparison, external human review, and independent replication remain unestablished. P13 evidence is used only for operational non-regression. No physics, ontology, Distance-to-GR, proof, publication, or promotion authority changes."
+objective_result: "p15_t02_methodology_publication_packet_complete_bounded_noncausal_ready_for_checkpoint"
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 223
+  passes_consumed: 200
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:223"
+  handoff_token: "b8821c169d5dd3f406a5b29a7867b00d577d14e26cd4d808"
+  relay_claim_token: "b0320ee99fefb4cc928eeed5e76e99c60c29af9ee5d6656f"
+  immutable_route_hash: "e3a58f44fffac3ce5300bc19bd45cf5d1c9832d565d6832bf648a740f788be64"
+  route_work_item_id: "P15-T02"
+  route_worker_skill: "continue-research"
+  worker_skill: "continue-research"
+  worker_invocation_count: 1
+transaction_status: "ready_for_checkpoint"
+result_disposition: "P15_T02_METHODOLOGY_PUBLICATION_COMPLETE_BOUNDED_NONCAUSAL_READY_FOR_CHECKPOINT"
+work_item_status: "completed_ready_for_checkpoint"
+plan_task_id: "P15-T02"
+recommendation_ids:
+  - "V21-R36"
+  - "V21-R37"
+  - "V21-R38"
+  - "V21-R42"
+  - "V21-R43"
+  - "V21-R44"
+  - "V21-R45"
+  - "V21-R51"
+  - "V21-R52"
+  - "V21-R53"
+  - "V21-R65"
+  - "V21-R66"
+  - "V21-R69"
+checkpoint_commit:
+  required: true
+  attempted: false
+  committed: false
+  commit_sha: ""
+  dependency_checkpoint_commit: "f5a725469c54d66ca9dc639df30656bf73659b63"
+  push_authorized: false
+  push_performed: false
+legacy_validation_used: false
+project_system_change_only: false
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P15"
+  plan_task_id: "P15-T02"
+  work_kind: "publication_preparation"
+  task_class: "science"
+  expected_result_kind: "completed_or_precisely_blocked"
+  dependency_task_ids:
+    - "P12-T07"
+    - "P13-T08"
+  work_item_status: "completed_ready_for_checkpoint"
+  recommendation_ids:
+    - "V21-R36"
+    - "V21-R37"
+    - "V21-R38"
+    - "V21-R42"
+    - "V21-R43"
+    - "V21-R44"
+    - "V21-R45"
+    - "V21-R51"
+    - "V21-R52"
+    - "V21-R53"
+    - "V21-R65"
+    - "V21-R66"
+    - "V21-R69"
+  recommendation_coverage_role: "direct_implementation"
+  scientific_claims_changed: false
+  scientific_claim_change_scope: "bounded methodology synthesis only"
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  next_dependency_work_item: "P15-T06_after_checkpoint_if_all_dependencies_remain_qualifying"
+dependency_evidence:
+  - plan_task_id: "P12-T07"
+    task_id: "RT-20260723-013"
+    completion_path: "research_control/tasks/RT-20260723-013/jobs/completions/AJC-AJ-RT-20260723-013-001.yaml"
+    completion_sha256: "616324cbd2103d9cdb59ac53cc7c450c59b5d91ece1b44889362866d449e27d3"
+    qualifying_checkpoint_commit: "80b0566d63f1d0b7ed0578f94ac0000f4e296502"
+    status: "qualifying_preserved_methodology_payload"
+  - plan_task_id: "P13-T08"
+    task_id: "RT-20260802-007"
+    completion_path: "research_control/tasks/RT-20260802-007/jobs/completions/AJC-AJ-RT-20260802-007-001.yaml"
+    completion_sha256: "fddaf38076c5b4f691f75ac2d45568fc879db460de8136241de201a2aa8908b3"
+    qualifying_checkpoint_commit: "f5a725469c54d66ca9dc639df30656bf73659b63"
+    status: "completed_and_checkpointed"
+methodology_publication_result:
+  schema_id: "v21_p15_t02_methodology_publication_result_v1"
+  status: "PASS_BOUNDED_NONCAUSAL_PUBLICATION_PACKET"
+  design: "retrospective_hash_bound_observational_synthesis"
+  causal_identification: "not_identified"
+  requested_arm_count: 5
+  unstructured_arm_status: "not_observed"
+  single_agent_arm_status: "not_observed_as_control_arm"
+  role_structured_arm_status: "observed_nonrandomized"
+  blind_review_arm_status: "observed_same_model_context_only"
+  diverse_review_arm_status: "partially_observed_context_diversity_only"
+  mechanism_metric_count: 6
+  valid_denominator_metric_count: 6
+  candidate_family_count: 5
+  candidate_count: 7
+  lineage_edge_count: 6
+  attempt_event_count: 8
+  represented_attempt_task_count: 7
+  reviewer_axis_comparison_count: 10
+  reviewer_disagreement_count: 3
+  different_model_review_count: 0
+  external_human_review_count: 0
+  independent_replication_count: 0
+  cost_status: "not_available"
+  abandonment_status: "not_measured"
+  review_ready_internal_draft: true
+  external_publication_ready: false
+  causal_superiority_established: false
+  methodology_evidence_is_physics_progress: false
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  observed_durable_outputs:
+    physics:
+      - "research_control/tasks/RT-20260802-008/artifacts/p15_t02_methodology_manuscript.md"
+      - "research_control/tasks/RT-20260802-008/artifacts/p15_t02_methodology_experiment_and_ablation_package.json"
+      - "research_control/tasks/RT-20260802-008/artifacts/p15_t02_methodology_data_dictionary.json"
+      - "research_control/tasks/RT-20260802-008/artifacts/p15_t02_methodology_limitations.md"
+    project_system:
+      - "research_control/tasks/RT-20260802-008/artifacts/build_p15_t02_methodology_publication.py"
+      - "research_control/tasks/RT-20260802-008/artifacts/validate_p15_t02_methodology_publication.py"
+      - "research_control/tasks/RT-20260802-008/artifacts/p15_t02_methodology_validation.json"
+  accepted_criteria:
+    physics:
+      - "all five requested workflow arms receive exact observation-status classifications"
+      - "all reported mechanism metrics preserve valid denominators and noncausal interpretations"
+      - "methodology and physics claims remain separate"
+    project_system:
+      - "the deterministic builder binds exact sources and reproduces outputs"
+      - "the task-local checker rejects missing arms, invalid ratios, stale hashes, and broadened authority"
+      - "one governed checkpoint records the bounded transaction"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+physics_payload_admission_result:
+  schema_id: "physics_payload_result_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  status: "admitted"
+  admission_path: "physics"
+  payload_type: "route_decision"
+  candidate_family: "V21-P15-AI-METHODOLOGY-PUBLICATION-V1"
+  material_payload_created: true
+  material_payload_paths:
+    - "research_control/tasks/RT-20260802-008/artifacts/p15_t02_methodology_manuscript.md"
+    - "research_control/tasks/RT-20260802-008/artifacts/p15_t02_methodology_experiment_and_ablation_package.json"
+    - "research_control/tasks/RT-20260802-008/artifacts/p15_t02_methodology_data_dictionary.json"
+    - "research_control/tasks/RT-20260802-008/artifacts/p15_t02_methodology_limitations.md"
+  process_receipts_excluded_from_physics_credit: true
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+family_freeze_result:
+  schema_id: "family_freeze_route_result_v1"
+  route_id: "v21_p15_t02_ai_methodology_publication"
+  family_id: "V21-P15-AI-METHODOLOGY-PUBLICATION-V1"
+  route_kind: "variation_class_investigation"
+  local_family_freeze_preserved: true
+  global_no_go_claimed: false
+  automatic_candidate_adoption: false
+  scientific_status_changed: false
+  physics_promotion_authorized: false
+ordinary_route_guard_result:
+  schema_id: "ordinary_route_guard_result_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0940"
+  selected_plan_task_id: "P15-T02"
+  outcome: "physics_bearing_route_selected"
+  route_wording: "physics-facing and plan-classified; not physics evidence"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  system_success_counts_as_physics: false
+  system_success_counts_as_distance_to_gr: false
+  scientific_status_changed: false
+  physics_promotion_authorized: false
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260802-008/artifacts/child_phys_math_methodology_publication.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260802-008/artifacts/child_phys_phil_methodology_publication.yaml"
+      status: "completed"
+  conflict_review:
+    status: "resolved"
+    review_path: "research_control/tasks/RT-20260802-008/artifacts/parent_conflict_review_methodology_publication.yaml"
+    resolution_rounds: 1
+    resolved_conflict_count: 2
+    unresolved_conflicts: []
+  fusion:
+    fused_output_path: "research_control/tasks/RT-20260802-008/artifacts/p15_t02_methodology_manuscript.md"
+    fusion_notes_path: "research_control/tasks/RT-20260802-008/artifacts/parent_fusion_notes_methodology_publication.md"
+    shared_consensus_summary: "The bounded corpus supports decision-hygiene and operational-conformance claims only; causal scientific superiority is unidentified."
+    unique_phys_math_contributions: "Exact arm classifications, units, numerators, denominators, ratios, source hashes, and reproducibility obligations."
+    unique_phys_phil_contributions: "Reviewer-independence, external-validity, authority, negative-result, and physics-methodology separation."
+    novelty_preservation_summary: "Fusion preserves the five-arm evidence-availability decision and six bounded mechanism metrics without manufacturing missing controls."
+    claim_boundary_preservation_summary: "No causal superiority, external review, physics, ontology, Distance-to-GR, proof, publication, promotion, or completed-derivation authority changed."
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+artifacts:
+  - path: "research_control/tasks/RT-20260802-008/artifacts/build_p15_t02_methodology_publication.py"
+    sha256: "02859f0d86bc4bcdaef647c075775b23a32a28b759d1622f22d255ef098af58a"
+  - path: "research_control/tasks/RT-20260802-008/artifacts/validate_p15_t02_methodology_publication.py"
+    sha256: "2ccd6d0ad0a07f7eed786547ae6799aa0d92c5a697a70643cc41aef2903b227b"
+  - path: "research_control/tasks/RT-20260802-008/artifacts/p15_t02_methodology_manuscript.md"
+    sha256: "05151b543111f1107a07f1b02afabc78d97ef07820d1eed824da38fdd8e441a3"
+  - path: "research_control/tasks/RT-20260802-008/artifacts/p15_t02_methodology_experiment_and_ablation_package.json"
+    sha256: "3bfbae8c5d4b43a580dbc022e7d92088c677e03c1a4ef7650cfd1f22b4251956"
+  - path: "research_control/tasks/RT-20260802-008/artifacts/p15_t02_methodology_data_dictionary.json"
+    sha256: "64dddc37b695cf065108f5da017e92978a9e9095a60a7990a5a38091797c4b97"
+  - path: "research_control/tasks/RT-20260802-008/artifacts/p15_t02_methodology_limitations.md"
+    sha256: "79946060217a19d41438390015264478c2ce19a8e06a3409d9c816079109142c"
+  - path: "research_control/tasks/RT-20260802-008/artifacts/p15_t02_methodology_compact_receipt.json"
+    sha256: "8b85b8f603f267ec04594f973c86da0f562ca49223af3f872900cfe04c8f653e"
+  - path: "research_control/tasks/RT-20260802-008/artifacts/p15_t02_methodology_validation.json"
+    sha256: "d898ce613109f2b552de77fd906d6a0f2b165716d65f9209d731d5b76a11d3ad"
+  - path: "research_control/tasks/RT-20260802-008/artifacts/child_phys_math_methodology_publication.yaml"
+    sha256: "61309215ae3dd1f8410906ea42b10eed32bb7581fbbb26ab94ee3cd9e6d708e6"
+  - path: "research_control/tasks/RT-20260802-008/artifacts/child_phys_phil_methodology_publication.yaml"
+    sha256: "14469e1233b420fe7df20b939098cc253844b60598c2fa42e71e2f22eedb0ec9"
+  - path: "research_control/tasks/RT-20260802-008/artifacts/parent_conflict_review_methodology_publication.yaml"
+    sha256: "febe57d9110767aed771512f6903f66c3c03c8c401f986fe499b6b947b1411f6"
+  - path: "research_control/tasks/RT-20260802-008/artifacts/parent_fusion_notes_methodology_publication.md"
+    sha256: "5abd543e28e4d5c857fdf3346e7ad7350053823c5933a104d6599e66c14e3086"
+output_paths:
+  - "research_control/tasks/RT-20260802-008/**"
+  - "research_control/tasks/RT-20260802-008/artifacts/p15_t02_methodology_manuscript.md"
+  - "research_control/handoffs/handoff-0941.yaml"
+  - "research_control/handoffs/handoff-0941.md"
+  - "research_control/program_state.yaml"
+validation_summary:
+  status: "PASS_PRECHECKPOINT"
+  passing_gates:
+    - "memory preflight and canonical source inspection"
+    - "deterministic builder write and check modes"
+    - "task-local checker with 26 passing checks"
+    - "five requested workflow arms classified"
+    - "six exact ratios with valid denominators"
+    - "two child analyses and resolved parent conflict review"
+    - "all scientific and protected authority flags false"
+  pending_gates:
+    - "generated control and memory synchronization"
+    - "affected research-control and selected repository validation"
+    - "one governed checkpoint"
+  failed_gates: []
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 223 repository identity, branch, HEAD, lease, predecessor, route, idempotency, and clean-manifest parity passed before one claim and consume."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The builder binds fourteen tracked source surfaces and computes five arm statuses and six mechanism ratios."
+      - "The parent-child synthesis resolves denominator-versus-overread and context-disagreement-versus-independence tensions."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Builder check mode reproduces nine outputs exactly and the task-local checker passes 26 checks."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "One governed checkpoint remains authorized after complete repository PASS."
+  renderer:
+    status: "PENDING"
+    evidence:
+      - "Task index and frontier renderers must be synchronized before checkpoint."
+  memory_bootstrap:
+    status: "PENDING"
+    evidence:
+      - "Tracked generated-memory derivatives must be synchronized and validated before checkpoint."
+  claim_language_linter:
+    status: "PENDING"
+    evidence:
+      - "Changed-source claim-language validation remains required before checkpoint."
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  push_authorized: false
+  publication_authorized: false
+  proof_authority: false
+three_tier_claim_summary:
+  adopted_objects: []
+  accepted_evidence_preconditions:
+    - "Fixed fixture matrices reproduce exact gate and freeze discrimination."
+    - "Same-model review-context comparison exposes three disagreements in ten eligible axes."
+    - "Lineage and attempt records preserve exact bounded counts and explicit absences."
+    - "P13-T08 operational non-regression evidence passes without scientific authority."
+  open_or_blocked_physical_targets:
+    - "source_ontology_derivation"
+    - "general_eqsrc"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+  forbidden_overread:
+    - "descriptive gate ratios as causal architecture effects"
+    - "same-model context review as independent or external-human confirmation"
+    - "route, validator, checkpoint, or software PASS as physics progress"
+    - "absent arms, costs, abandonment, or effects represented as zero"
+physics_progress_status:
+  status: "methodology_only_no_distance_delta"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Prepare an AI-science methodology contribution independent of physics success."
+  explanation: "The task prepares a methodology contribution and adds no derivation-critical mathematical or physical result."
+  downstream_promotion_reference: "authorization_layers.downstream_physics_promotion_authorized"
+distance_to_gr_delta:
+  effect: "no_distance_delta"
+  changed: false
+  burden_id: "source_equivalence_eqsrc"
+  milestone: "source_equivalence_eqsrc"
+  old_status: "open"
+  new_status: "open"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  downstream_unlocked:
+    - "P15-T02_methodology_publication_complete"
+  downstream_still_blocked:
+    - "source_ontology_derivation"
+    - "general_eqsrc"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+    - "benchmark_promotion"
+  explanation: "Methodology publication preparation does not discharge any GR derivation burden."
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "unchanged_open"
+  - burden: "Source equivalence EqSrc"
+    status: "unchanged_open"
+  - burden: "RetainH"
+    status: "unchanged_open"
+  - burden: "GenH"
+    status: "unchanged_open"
+  - burden: "ObsLoc_lc"
+    status: "unchanged_open"
+  - burden: "Resp_lc"
+    status: "unchanged_open"
+  - burden: "M_src"
+    status: "unchanged_open"
+  - burden: "g_eff"
+    status: "unchanged_open"
+  - burden: "matter coupling"
+    status: "unchanged_open"
+  - burden: "Einstein equations"
+    status: "unchanged_open"
+  - burden: "finite-variation robustness"
+    status: "unchanged_open"
+  - burden: "benchmark promotion"
+    status: "blocked"
+  - burden: "Gate Chair status"
+    status: "unchanged_human_gated"
+  - burden: "current route freeze or hard-fail status"
+    status: "none_created_by_p15_t02"
+new_mathematical_payload:
+  - payload_type: "bounded_methodology_ablation_matrix"
+    summary: "A five-arm evidence-availability matrix and six-mechanism denominator-bound descriptive synthesis with exact source hashes, missingness semantics, and causal-identification classification."
+freeze_criteria_status:
+  repeated_burden: false
+  freeze_evaluation_required: false
+  active_freeze_label: ""
+  prior_attempts_considered:
+    - "P12-T07"
+    - "P13-T08"
+  freeze_if: []
+  do_not_freeze_if:
+    - "P15-T02 is a one-time publication synthesis with a new arm-availability matrix and no repeated derivation burden."
+  decision_reason: "No candidate family or derivation route is repeated or frozen."
+  next_allowed_route: "P15-T06_after_checkpoint_if_all_dependencies_remain_qualifying"
+  status_update_path: ""
+  no_status_update_rationale: "No research-family freeze status changes."
+  candidate_freeze_label: ""
+  freeze_decision: "not_applicable"
+  criteria_evaluated:
+    - "new bounded methodology payload is present"
+    - "causal, review-independence, and authority limits are explicit"
+  rationale: "The result closes P15-T02 while preserving every physical target as open."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1109
+    relationship_row_count: 5606
+    local_cache_only_warning_count: 0
+  local_retrieval_refresh:
+    refresh_needed: false
+    refresh_performed: false
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search 'methodology publication packet' --json"
+      query_type: "search"
+      query_text: "methodology publication packet"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-DESIGN-MANUSCRIPT-SPLIT-BOUNDARY-CHECKLIST-V16"
+        - "MD-RESEARCH-CONTROL-TASKS-RT-20260705-025-AI-METHODOLOGY-MANUSCRIPT-STATUS-REFRESH-V16"
+  canonical_inspections:
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-MANUSCRIPT-SPLIT-BOUNDARY-CHECKLIST-V16"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/manuscript_split_boundary_checklist_v16.md"
+      source_hash: "3cda3d657dd79723b3807124a8125e53983752ba86ccb7bca9fb191af994e91d"
+    - object_id: "MD-RESEARCH-CONTROL-TASKS-RT-20260705-025-AI-METHODOLOGY-MANUSCRIPT-STATUS-REFRESH-V16"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260705-025/artifacts/ai_methodology_manuscript_status_refresh_v16.md"
+      source_hash: "e0be9f793e4c728253b060aeaa0d0f059dbf6cef7010791efb69bb9e594b08dd"
+  authority_note: "Obsidian wiki semantic relationship and .local layers are retrieval only and not authority; tracked canonical sources registries and research-control state govern this task."
+command_results:
+  - command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    status: "PASS_NO_REFRESH_REQUIRED"
+  - command: ".venv/bin/python research_control/tasks/RT-20260802-008/artifacts/build_p15_t02_methodology_publication.py"
+    status: "PASS_9_OUTPUTS_WRITTEN"
+  - command: ".venv/bin/python research_control/tasks/RT-20260802-008/artifacts/build_p15_t02_methodology_publication.py --check"
+    status: "PASS_9_OUTPUTS_EXACT"
+  - command: ".venv/bin/python research_control/tasks/RT-20260802-008/artifacts/validate_p15_t02_methodology_publication.py --write-report"
+    status: "PASS_26_CHECKS"
+  - command: "git diff --check"
+    status: "PENDING"
+next_work_item:
+  plan_task_id_after_checkpoint: "P15-T06"
+  title_after_checkpoint: "Build public reproducibility and source packages"
+  worker_skill_after_checkpoint: "improve-project-system"
+  role_family_after_checkpoint: "documentation-curator"
+  route_label_after_checkpoint: "ordinary-research-packet"
+  dependency_status: "eligible_only_if_P15_T01_T03_T04_remain_qualifying_at_canonical_postcheckpoint_resolution"
+  executed: false
+project_improvement_signals: []
+project_improvement_sidecar_created: false
+recursive_goal_recovery:
+  required: false
+  route: ""
+  worker_skill: ""
+  blocker_path: ""
+  blocker_sha256: ""
+forbidden_conclusion_summary: "P15-T02 does not establish causal workflow superiority, autonomous scientific capability, independent or external-human review, theorem truth, physics progress, ontology or source-law adoption, exact-GR derivation, Distance-to-GR movement, benchmark promotion, proof, publication, Gate Chair authority, or completed derivation. Missing arms, costs, abandonment, and effects are not zeros."
+verdict: "p15_t02_internal_methodology_manuscript_and_reproducible_packet_complete_bounded_noncausal_no_physics_delta"
+next_recommendation: "Run one governed checkpoint; then select P15-T06 only if canonical dependency resolution confirms P15-T01, P15-T03, and P15-T04 remain qualifying."

@@ -1,0 +1,115 @@
+{
+  "authority_boundary": {
+    "causal_superiority_established": false,
+    "distance_to_gr_changed": false,
+    "external_human_review_completed": false,
+    "independent_replication_completed": false,
+    "methodology_evidence_is_physics_evidence": false,
+    "ontology_or_source_law_adopted": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "publication_authorized": false,
+    "scientific_status_changed": false,
+    "theorem_truth_evaluated": false
+  },
+  "created_at": "2026-08-02T13:07:50Z",
+  "fields": [
+    {
+      "allowed": [
+        "not_observed",
+        "not_observed_as_control_arm",
+        "observed_nonrandomized",
+        "observed_same_model_context_only",
+        "partially_observed_context_diversity_only"
+      ],
+      "name": "observation_status",
+      "type": "controlled_vocabulary"
+    },
+    {
+      "name": "numerator",
+      "null_semantics": "not measured; never zero-filled",
+      "type": "nonnegative_integer_or_null"
+    },
+    {
+      "name": "denominator",
+      "null_semantics": "population not established",
+      "type": "positive_integer_or_null"
+    },
+    {
+      "derivation": "numerator / denominator only when both are valid",
+      "name": "value",
+      "type": "number_or_null"
+    },
+    {
+      "allowed": [
+        "not_available",
+        "not_recorded",
+        "measured"
+      ],
+      "name": "cost_status",
+      "type": "controlled_vocabulary"
+    },
+    {
+      "allowed": [
+        "not_identified"
+      ],
+      "name": "causal_identification",
+      "type": "controlled_vocabulary"
+    }
+  ],
+  "metrics": [
+    {
+      "causal_interpretation_allowed": false,
+      "denominator": 10,
+      "metric_id": "hard_rejection_share_in_fixed_fixture_matrix",
+      "numerator": 5,
+      "scope": "claim_gate_overclaim_control"
+    },
+    {
+      "causal_interpretation_allowed": false,
+      "denominator": 11,
+      "metric_id": "repeated_or_repackaged_case_suppression_share",
+      "numerator": 3,
+      "scope": "candidate_cycle_and_route_orbit_control"
+    },
+    {
+      "causal_interpretation_allowed": false,
+      "denominator": 12,
+      "metric_id": "malformed_allocation_rejection_share",
+      "numerator": 7,
+      "scope": "budget_and_route_separation"
+    },
+    {
+      "causal_interpretation_allowed": false,
+      "denominator": 10,
+      "metric_id": "cross_context_disagreement_share",
+      "numerator": 3,
+      "scope": "reviewer_disagreement_visibility"
+    },
+    {
+      "causal_interpretation_allowed": false,
+      "denominator": 8,
+      "metric_id": "repair_event_share_in_bounded_ledger",
+      "numerator": 2,
+      "scope": "negative_result_memory_and_rework_visibility"
+    },
+    {
+      "causal_interpretation_allowed": false,
+      "denominator": 8,
+      "metric_id": "measured_metric_share_at_p12_snapshot",
+      "numerator": 3,
+      "scope": "denominator_bound_quality_metrics"
+    }
+  ],
+  "missingness_policy": "Unknown denominators, costs, arms, abandonment rates, and outcome effects remain null or not_measured; numeric zero is prohibited.",
+  "plan_task_id": "P15-T02",
+  "privacy_policy": "Only tracked identifiers, typed counts, paths, and hashes are projected; prompts, credentials, and private free text are excluded.",
+  "record_granularity": {
+    "comparison_arm": "one requested workflow architecture or review configuration",
+    "mechanism_result": "one normalized governance mechanism with an explicit numerator and denominator",
+    "source_binding": "one tracked source at an exact SHA-256"
+  },
+  "schema_id": "v21_p15_t02_methodology_data_dictionary_v1",
+  "status": "PASS",
+  "task_id": "RT-20260802-008"
+}

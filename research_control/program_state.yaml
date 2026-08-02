@@ -1,11 +1,70 @@
 mode: "director_led_research_control"
-active_task_id: "RT-20260802-007"
-latest_handoff_id: "handoff-0940"
-current_status: "p13_t08_checker_naming_and_software_non_regression_pass_precheckpoint"
-claim_boundary_summary: "P13-T08 calibrates the current finite source-cover runtime identity to structural support with explicit support_only true and proof_authority false, preserves historical compatibility and the registered design note, and passes the scoped non-regression audit without physics or Distance-to-GR change."
-next_plan_task_id: "P15-T02"
-next_worker_skill: "continue-research"
-next_recommended_action: "After final synchronization, full-profile PASS, and one governed checkpoint, run one fresh bounded P15-T02 continue-research methodology-publication packet."
+active_task_id: "RT-20260802-008"
+latest_handoff_id: "handoff-0941"
+current_status: "p15_t02_methodology_publication_packet_complete_bounded_noncausal_precheckpoint"
+claim_boundary_summary: "P15-T02 produces a reproducible internal methodology paper with five explicit arm-availability classifications and six denominator-bound descriptive mechanism metrics while preserving causal nonidentification same-model review limits and zero physics or protected authority."
+next_plan_task_id: "P15-T06"
+next_worker_skill: "improve-project-system"
+next_recommended_action: "After final synchronization, complete validation, and one governed checkpoint, resolve P15-T06 from the qualifying P15-T01 through P15-T04 dependency set and run it only in one fresh improve-project-system frame."
+
+p15_t02_ai_research_operating_system_methodology_publication:
+  task_id: "RT-20260802-008"
+  parent_task_id: "RT-20260802-007"
+  parent_handoff_id: "handoff-0940"
+  plan_task_id: "P15-T02"
+  next_plan_task_id: "P15-T06"
+  claim_boundary_id: "CB-V21-P15-T02-METHODOLOGY-PUBLICATION-001"
+  status: "PASS_PRECHECKPOINT"
+  work_item_status: "completed"
+  route_label: "methodology-publication-packet"
+  selected_role_family: "external-red-team-reviewer@0.1.0"
+  selected_worker_skill: "continue-research"
+  selected_strategy_id: "continue_in_scope_generation_223"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Prepare an AI-science methodology contribution independent of physics success."
+  source_head: "f5a725469c54d66ca9dc639df30656bf73659b63"
+  immutable_route_sha256: "e3a58f44fffac3ce5300bc19bd45cf5d1c9832d565d6832bf648a740f788be64"
+  completion_path: "research_control/tasks/RT-20260802-008/jobs/completions/AJC-AJ-RT-20260802-008-001.yaml"
+  completion_sha256: "bc7d22714d91f9745ac268904fef723287500c2913eadb65dcf9911c5465f06c"
+  handoff_id: "handoff-0941"
+  handoff_path: "research_control/handoffs/handoff-0941.yaml"
+  manuscript_path: "research_control/tasks/RT-20260802-008/artifacts/p15_t02_methodology_manuscript.md"
+  manuscript_sha256: "05151b543111f1107a07f1b02afabc78d97ef07820d1eed824da38fdd8e441a3"
+  experiment_package_path: "research_control/tasks/RT-20260802-008/artifacts/p15_t02_methodology_experiment_and_ablation_package.json"
+  experiment_package_sha256: "3bfbae8c5d4b43a580dbc022e7d92088c677e03c1a4ef7650cfd1f22b4251956"
+  data_dictionary_path: "research_control/tasks/RT-20260802-008/artifacts/p15_t02_methodology_data_dictionary.json"
+  data_dictionary_sha256: "64dddc37b695cf065108f5da017e92978a9e9095a60a7990a5a38091797c4b97"
+  limitations_path: "research_control/tasks/RT-20260802-008/artifacts/p15_t02_methodology_limitations.md"
+  limitations_sha256: "79946060217a19d41438390015264478c2ce19a8e06a3409d9c816079109142c"
+  compact_receipt_path: "research_control/tasks/RT-20260802-008/artifacts/p15_t02_methodology_compact_receipt.json"
+  compact_receipt_sha256: "8b85b8f603f267ec04594f973c86da0f562ca49223af3f872900cfe04c8f653e"
+  requested_arm_count: 5
+  missing_control_arm_count: 2
+  mechanism_metric_count: 6
+  valid_denominator_metric_count: 6
+  causal_identification: "not_identified"
+  external_human_review_completed: false
+  independent_replication_completed: false
+  cost_status: "not_available"
+  selected_next_work_item: "P15-T06"
+  selected_next_worker_skill: "improve-project-system"
+  selected_next_role_family: "documentation-curator@2.0.0"
+  selected_next_route_label: "ordinary-research-packet"
+  selected_next_strategy_id: "route_p15_t06_after_p15_t02_checkpoint_v1"
+  selected_next_requires_human_gate: false
+  selected_next_execution_ready_after_checkpoint: true
+  scientific_claims_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  ontology_adoption_authorized: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false
+  hosted_workflow_dispatch_authorized: false
+  checkpoint_invocation_count: 0
+  checkpoint_committed: false
 
 p13_t08_checker_naming_and_software_non_regression_audit:
   task_id: "RT-20260802-007"
