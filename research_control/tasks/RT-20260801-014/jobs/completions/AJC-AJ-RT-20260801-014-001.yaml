@@ -1,0 +1,265 @@
+completion_id: "AJC-AJ-RT-20260801-014-001"
+job_id: "AJ-RT-20260801-014-001"
+task_id: "RT-20260801-014"
+task_type: "project_system_p13_t07_p10_t05_historical_renderer_binding_recovery"
+decision_id: "DDR-20260801-014"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260801-014"
+status: "completed"
+validation_status: "PASS"
+completed_at: "2026-08-02T05:03:00Z"
+objective_result: "p10_t05_and_p10_migration_historical_bindings_recovered_ready_for_checkpoint"
+verdict: "PASS_EXACT_SEALED_OBSERVATION_CURRENT_AUTHORITY_BINDING"
+summary: "Generation 213 preserves the sealed P10-T05 and P10 migration audit outputs byte-for-byte while binding their historical source observations to the exact authorized RT-20260801-011 renderer manifest through one immutable recovery receipt. Both direct gates and 32 focused tests pass; full governed validation passes after registration and approved derivative regeneration. P13-T08 remains unexecuted and one cumulative checkpoint is pending."
+transaction_status: "ready_for_checkpoint"
+checkpoint_invocation_count: 0
+checkpoint_commit:
+  status: "PENDING"
+  commit: ""
+  invocation_count: 0
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 213
+  passes_consumed: 191
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:213"
+  handoff_token: "16356ac79ea1a4cce1ffbfc6fc01b26c5a3f925c7b151089"
+  relay_claim_token: "cd821c3a3f57c51df843159b5d02be9492e139bd42c250c6"
+  route_work_item_id: "P13-T07"
+  route_worker_skill: "improve-project-system"
+  route_sha256: "385aa8d11f50fc44089eeb9af3b2881b4f4f874952e3bb82f6c47572a29d0694"
+  route_strategy_id: "recover_p13_t07_p10_t05_historical_renderer_bindings_before_checkpoint_v1"
+  route_blocker_fingerprint: "010d2058488f1ff73a9dd8a4b3e4a3c97c329e7cfa8b7737b8c2ef54c8cf4ad7"
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+
+result:
+  status: "PASS_READY_FOR_CHECKPOINT"
+  strategy_id: "recover_p13_t07_p10_t05_historical_renderer_bindings_before_checkpoint_v1"
+  historical_event_store_task_id: "RT-20260721-007"
+  historical_migration_task_id: "RT-20260722-003"
+  current_renderer_authority_task_id: "RT-20260801-011"
+  predecessor_blocker_task_id: "RT-20260801-013"
+  event_store_architecture_status: "PASS_NO_DRIFT"
+  p10_migration_readiness_status: "PASS_NO_DRIFT"
+  historical_outputs_modified: false
+  event_store_cutover_authorized: false
+  p13_t08_executed: false
+  checkpoint_invoked: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_push_or_hosted_workflow_authorized: false
+
+sealed_evidence:
+  event_store_contract_path: "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_contract.json"
+  event_store_contract_sha256: "d5fa22e7bbc1d92f29acd6c8418d06ce7d81a042589ade77c7ba4fdebb0eda44"
+  event_store_validation_path: "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_validation.json"
+  event_store_validation_sha256: "6358f829c9e07adc6095a471621664830b37e7797c10b321b562b3f894b68b23"
+  event_store_compact_receipt_path: "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_compact_receipt.json"
+  event_store_compact_receipt_sha256: "04cc34d38b1b0125fb77c38f639895bfc49e0864ad62bfc43aba78666bef72b3"
+  migration_validation_path: "research_control/tasks/RT-20260722-003/artifacts/v21_p10_migration_readiness_validation.json"
+  migration_validation_sha256: "cdcd907f4ad237118eab65f06f364263da08285456514605a0308bc203f7a6e6"
+  migration_compact_receipt_path: "research_control/tasks/RT-20260722-003/artifacts/v21_p10_migration_readiness_compact_receipt.json"
+  migration_compact_receipt_sha256: "db3410f2c166562a4cc8636011eeda15b7cb8f051c3917fea21b370e4da2ddb6"
+  recovery_receipt_path: "research_control/tasks/RT-20260801-014/artifacts/p10_t05_historical_renderer_binding_recovery_receipt.json"
+  recovery_receipt_sha256: "d32a02c466a2471316ccb372172b292c8fa23014917987d9ee58990697192d21"
+  renderer_manifest_path: "research_control/tasks/RT-20260801-011/artifacts/generated_report_renderer_update_manifest_v1.json"
+  renderer_manifest_sha256: "d92fd0f636510d07a86cc7112fcc2a5243d77fc69959a13dc209f9ea7c90329a"
+  renderer_completion_path: "research_control/tasks/RT-20260801-011/jobs/completions/AJC-AJ-RT-20260801-011-001.yaml"
+  renderer_completion_sha256: "73c309c9830078d2ef209861aad53ba2742c754c82c3748841918a2e4533404e"
+  predecessor_blocker_path: "research_control/tasks/RT-20260801-013/artifacts/p13_t07_protected_dual_budget_accounting_recovery_receipt.json"
+  predecessor_blocker_sha256: "fe764821a8a3d83d2efbfe0a32b646076147efc71bc8516eef07ce2116ebd4ff"
+  protected_hash_mismatch_count: 0
+
+implementation:
+  event_store_validator_path: "research_control/tasks/RT-20260721-007/artifacts/validate_v21_event_store_architecture.py"
+  event_store_validator_sha256: "53f284fc11eb55db4a99379e66043f5b328616af4825db770c82c6ca7b183a14"
+  migration_validator_path: "research_control/tasks/RT-20260722-003/artifacts/validate_v21_p10_migration_readiness.py"
+  migration_validator_sha256: "445638f84a68a2927c57d5fcb116ddca27b19526e277e18f6089b9ca907e7fec"
+  event_store_test_path: "tests/test_event_store_architecture.py"
+  event_store_test_sha256: "332a9fd1ac377528f8dcdebcdffd648196827bb40b5ed93f45221ad387f576f6"
+  migration_test_path: "tests/test_v21_p10_migration_readiness.py"
+  migration_test_sha256: "c8855d647baec898dfe13e7d6b01f9243d9f0c56c892ff3ec1d0da93ee2dda4a"
+  focused_test_count: 32
+  altered_historical_hash_rejected: true
+  altered_current_renderer_rejected: true
+  altered_recovery_receipt_rejected: true
+  altered_migration_source_hash_rejected: true
+
+command_results:
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+    status: "PASS_WITH_LOCAL_CACHE_WARNINGS"
+    summary: "Core validation passes; three .local retrieval-cache warnings are nonblocking and non-authoritative."
+  - command: ".venv/bin/python research_control/tasks/RT-20260721-007/artifacts/validate_v21_event_store_architecture.py --check --json"
+    status: "PASS"
+    summary: "P10-T05 returns PASS with no drift and preserves its sealed validation and compact receipt."
+  - command: ".venv/bin/python research_control/tasks/RT-20260722-003/artifacts/validate_v21_p10_migration_readiness.py --check --json"
+    status: "PASS"
+    summary: "P10 migration readiness returns PASS with no drift and preserves its two recorded lifecycle blockers and freeze disposition."
+  - command: ".venv/bin/python -m unittest -v tests.test_event_store_architecture tests.test_v21_p10_migration_readiness"
+    status: "PASS"
+    summary: "All 32 focused tests pass including exact current-authority and fail-closed drift regressions."
+  - command: ".venv/bin/python -m unittest discover -s tests"
+    status: "PASS_AFTER_GOVERNED_REGISTRATION_AND_REGENERATION"
+    summary: "The initial run exposed only missing generation-213 ownership and intentionally stale generated views; the final governed run passes after registration and approved regeneration."
+  - command: ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --job-id AJ-RT-20260801-014-001 --json-summary"
+    status: "PASS"
+    summary: "Integrated control and bounded write-path validation pass before checkpoint."
+  - command: ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+    status: "PASS"
+    summary: "Documentation-impact coverage matches the live project-system classifier."
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+    status: "PASS"
+    summary: "Tracked memory and generated derivatives validate; local retrieval warnings remain nonblocking."
+  - command: "git diff --check"
+    status: "PASS"
+    summary: "The cumulative working transaction contains no whitespace errors."
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1109
+    relationship_row_count: 5606
+    semantic_row_count: 1109
+    vault_row_count: 1109
+    blocking_warning_count: 0
+    local_cache_only_warning_count: 3
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  authority_note: "Generated wiki Obsidian semantic relationship SQLite and .local retrieval layers are navigation only and not authority; tracked sources exact hashes and validators govern this recovery."
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  observed_durable_outputs:
+    physics: []
+    project_system:
+      - "one exact historical-observation to current-authority recovery receipt"
+      - "two bounded validator compatibility surfaces"
+      - "focused fail-closed regression coverage"
+      - "one governed checkpoint-readiness record"
+  accepted_criteria:
+    physics: []
+    project_system:
+      - "sealed P10 contract validation receipt and migration-audit outputs remain byte-identical"
+      - "P10-T05 and P10 migration readiness both return PASS"
+      - "historical source current source receipt manifest completion and authority-boundary drift fail closed"
+      - "complete precheckpoint validation passes or one exact noncheckpointed blocker is recorded while P13-T08 remains unexecuted"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+distance_to_gr_delta:
+  changed: false
+  effect: "none_project_system_historical_binding_checkpoint_recovery"
+  milestone: "source_equivalence_eqsrc"
+  ledger_row_updated: false
+  ledger_update_rationale: "Exact historical validator compatibility contributes no physics movement."
+
+physics_progress_status:
+  status: "documentation_or_control_only_no_physics_delta"
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+
+selected_next_route:
+  route_id: "generation_213_checkpoint_reconciliation_before_p13_t08_v1"
+  worker_skill: "improve-project-system"
+  plan_task_id: "P13-T07"
+  dependency_ready_after_checkpoint: false
+  execution_ready_now: true
+  executed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 213 validated claimed and consumed the immutable route exactly once."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Both P10 gates pass with sealed outputs unchanged and exact current authority verified."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Focused broad documentation memory signal and integrated validation gates pass."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "Exactly one governed checkpoint remains authorized."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Task-index dependency-graph compact-frontier and live generated-report freshness checks pass after approved regeneration."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Approved synchronization and validate-only checks pass; .local retrieval warnings are nonblocking."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim validation reports no hard failures."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "none; exact project-system historical binding and checkpoint recovery only"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  push_authorized: false
+  publication_authorized: false
+  hosted_workflow_dispatch_authorized: false
+  proof_authority: false
+  canonical_ontology_edit_authorized: false
+  source_law_adoption_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+notes: "Compatibility PASS does not activate the event store authorize migration or cutover rewrite history count system success as physics execute P13-T08 or create Distance-to-GR promotion proof publication push hosted-workflow Gate Chair or completed-derivation authority."

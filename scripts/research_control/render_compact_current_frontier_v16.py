@@ -16,6 +16,7 @@ if str(SCRIPT_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPT_DIR))
 
 from strict_yaml import StrictYamlError, load as load_yaml, quote_scalar  # noqa: E402
+import generated_report_provenance as report_provenance  # noqa: E402
 
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
@@ -32,6 +33,9 @@ ACTIVE_STATE_BIFURCATION_POLICY_PATH = "research_control/design/active_state_bif
 DEFAULT_YAML_PATH = "output/compact_current_frontier_v16.yaml"
 DEFAULT_JSON_PATH = "output/compact_current_frontier_v16.json"
 DEFAULT_MARKDOWN_PATH = "wiki/indexes/compact_current_frontier_v16.md"
+TASK_REGISTRY_PATH = "registries/RESEARCH_TASK_REGISTRY.csv"
+RENDERER_PATH = "scripts/research_control/render_compact_current_frontier_v16.py"
+RENDERER_SHA256 = report_provenance.sha256_file(REPO_ROOT, RENDERER_PATH)
 V16_PLAN_OBJECT_ID = "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V16"
 HIGH_RISK_BURDEN_IDS = [
     "m_src",
@@ -61,6 +65,7 @@ REQUIRED_BLOCKED_CLAIMS = [
 YAML_FIELD_ORDER = [
     "schema_id",
     "generated_from",
+    "report_provenance",
     "active_state",
     "active_state_bifurcation",
     "next_route",
@@ -499,7 +504,12 @@ def active_state_bifurcation_state(
     }
 
 
-def build_snapshot(repo_root: Path) -> dict[str, Any]:
+def build_snapshot(
+    repo_root: Path,
+    *,
+    source_commit: str | None = None,
+    strict_provenance: bool | None = None,
+) -> dict[str, Any]:
     program_state = load_control_yaml(repo_root, PROGRAM_STATE_PATH)
     active_task_id = text_value(program_state.get("active_task_id"))
     latest_handoff_id = text_value(program_state.get("latest_handoff_id"))
@@ -511,6 +521,11 @@ def build_snapshot(repo_root: Path) -> dict[str, Any]:
     ledger_rows = read_csv_rows(repo_root, DISTANCE_LEDGER_PATH)
     metric_use_rows = read_csv_rows(repo_root, METRIC_USE_LEDGER_PATH)
     markdown_rows = read_csv_rows(repo_root, MARKDOWN_REGISTRY_PATH)
+    task_registry_rows = (
+        read_csv_rows(repo_root, TASK_REGISTRY_PATH)
+        if repo_path(repo_root, TASK_REGISTRY_PATH).is_file()
+        else []
+    )
     frontier_text = read_text_source(repo_root, CURRENT_FRONTIER_PATH)
     accepted_status_calibration_path = ""
     accepted_status_calibration = load_optional_control_yaml(repo_root, ACCEPTED_STATUS_CALIBRATION_V2_PATH)
@@ -554,9 +569,54 @@ def build_snapshot(repo_root: Path) -> dict[str, Any]:
     if repo_path(repo_root, ACTIVE_STATE_BIFURCATION_POLICY_PATH).exists():
         generated_from.append(ACTIVE_STATE_BIFURCATION_POLICY_PATH)
 
+    if repo_path(repo_root, TASK_REGISTRY_PATH).exists():
+        generated_from.append(TASK_REGISTRY_PATH)
+    generated_from = sorted(set(generated_from))
+    source_hashes = {
+        path: report_provenance.sha256_file(repo_root, path)
+        for path in generated_from
+    }
+    if source_commit is None:
+        existing = report_provenance.metadata_from_json_file(
+            repo_root, DEFAULT_JSON_PATH
+        )
+        source_commit = report_provenance.source_commit_from_metadata(
+            existing, report_provenance.git_head(repo_root)
+        )
+    strict = repo_root.resolve() == REPO_ROOT.resolve() if strict_provenance is None else strict_provenance
+    generation_time = text_value(latest_handoff.get("created_at")) or text_value(
+        latest_handoff.get("updated_at")
+    )
+    task_count = len(task_registry_rows)
+    if not task_count:
+        tasks_root = repo_path(repo_root, "research_control/tasks")
+        task_count = sum(
+            1 for path in tasks_root.glob("RT-*") if path.is_dir()
+        ) if tasks_root.exists() else 0
+    primary_source_paths = [
+        PROGRAM_STATE_PATH,
+        latest_handoff_path,
+        DISTANCE_LEDGER_PATH,
+        CURRENT_FRONTIER_PATH,
+    ]
+    if TASK_REGISTRY_PATH in source_hashes:
+        primary_source_paths.append(TASK_REGISTRY_PATH)
+    provenance = report_provenance.build_metadata(
+        report_class="compact_current_frontier",
+        source_commit=source_commit,
+        source_hashes=source_hashes,
+        primary_source_paths=primary_source_paths,
+        generation_time=generation_time,
+        task_count=task_count,
+        renderer_path=RENDERER_PATH,
+        renderer_sha256=RENDERER_SHA256,
+        strict=strict,
+    )
+
     return {
         "schema_id": SCHEMA_ID,
         "generated_from": generated_from,
+        "report_provenance": provenance,
         "active_state": {
             "active_task_id": active_task_id,
             "latest_handoff_id": latest_handoff_id,
@@ -605,6 +665,11 @@ def validate_snapshot(snapshot: dict[str, Any]) -> list[str]:
     errors: list[str] = []
     if snapshot.get("schema_id") != SCHEMA_ID:
         errors.append("schema_id mismatch")
+    provenance = snapshot.get("report_provenance")
+    if not isinstance(provenance, dict):
+        errors.append("report_provenance missing")
+    elif provenance.get("report_class") != "compact_current_frontier":
+        errors.append("report_provenance class mismatch")
     if snapshot.get("authority_warning", {}).get("snapshot_only_not_authority") is not True:
         errors.append("authority warning is missing or false")
     bifurcation = snapshot.get("active_state_bifurcation")
@@ -747,6 +812,9 @@ def render_markdown(snapshot: dict[str, Any], yaml_text: str, json_text: str) ->
             )
             + " |"
         )
+    provenance_text = "\n".join(
+        report_provenance.markdown_provenance_lines(snapshot["report_provenance"])
+    )
     return (
         "<!-- authority: generated -->\n\n"
         "# Compact Current Frontier v16\n\n"
@@ -754,6 +822,7 @@ def render_markdown(snapshot: dict[str, Any], yaml_text: str, json_text: str) ->
         "and `output/compact_current_frontier_v16.json`. It is a snapshot-only "
         "reader aid. If it differs from tracked control state, tracked control "
         "state governs.\n\n"
+        f"{provenance_text}\n"
         "## Active State\n\n"
         f"- Active task: `{active['active_task_id']}`\n"
         f"- Latest handoff: `{active['latest_handoff_id']}`\n"
@@ -814,18 +883,19 @@ def dump_compact_yaml(data: dict[str, Any]) -> str:
 
     def emit_mapping_item(key: str, value: Any, indent: int) -> None:
         prefix = " " * indent
+        rendered_key = key if key.replace("_", "").isalnum() else quote_scalar(key)
         if isinstance(value, dict):
-            lines.append(f"{prefix}{key}:")
+            lines.append(f"{prefix}{rendered_key}:")
             for child_key, child_value in value.items():
                 emit_mapping_item(child_key, child_value, indent + 2)
         elif isinstance(value, list):
             if not value:
-                lines.append(f"{prefix}{key}: []")
+                lines.append(f"{prefix}{rendered_key}: []")
                 return
-            lines.append(f"{prefix}{key}:")
+            lines.append(f"{prefix}{rendered_key}:")
             emit_list_items(value, indent + 2)
         else:
-            lines.append(f"{prefix}{key}: {quote_scalar(value)}")
+            lines.append(f"{prefix}{rendered_key}: {quote_scalar(value)}")
 
     def emit_list_items(values: list[Any], indent: int) -> None:
         prefix = " " * indent
@@ -902,6 +972,7 @@ def status_payload(snapshot: dict[str, Any], status: str, errors: list[str]) -> 
         ),
         "blocked_claim_count": len(snapshot["claim_boundary"]["blocked_claims"]),
         "snapshot_only_not_authority": snapshot["authority_warning"]["snapshot_only_not_authority"],
+        "report_provenance": snapshot["report_provenance"],
     }
 
 
@@ -915,26 +986,56 @@ def main(argv: list[str] | None = None) -> int:
     args = parser.parse_args(argv)
 
     repo_root = Path(args.repo_root).resolve()
+    existing_metadata = report_provenance.metadata_from_json_file(
+        repo_root, DEFAULT_JSON_PATH
+    )
+    source_commit = (
+        report_provenance.git_head(repo_root)
+        if args.write
+        else report_provenance.source_commit_from_metadata(
+            existing_metadata, report_provenance.git_head(repo_root)
+        )
+    )
     try:
-        snapshot = build_snapshot(repo_root)
-    except CompactFrontierError as exc:
+        snapshot = build_snapshot(repo_root, source_commit=source_commit)
+    except (CompactFrontierError, report_provenance.GeneratedReportProvenanceError) as exc:
         print(f"render_compact_current_frontier_v16: {exc}", file=sys.stderr)
         return 2
 
     errors = validate_snapshot(snapshot)
+    provenance_validation = report_provenance.validate_metadata(
+        repo_root=repo_root,
+        observed=existing_metadata or {},
+        expected=snapshot["report_provenance"],
+        strict=repo_root == REPO_ROOT,
+    )
     yaml_text, json_text, markdown_text = rendered_texts(snapshot)
     if args.write:
         if errors:
             print(json.dumps(status_payload(snapshot, "invalid", errors), indent=2, sort_keys=True))
             return 1
         write_outputs(repo_root, yaml_text, json_text, markdown_text)
-        print(json.dumps(status_payload(snapshot, "written", []), indent=2, sort_keys=True))
+        written_metadata = report_provenance.metadata_from_json_file(
+            repo_root, DEFAULT_JSON_PATH
+        ) or {}
+        provenance_validation = report_provenance.validate_metadata(
+            repo_root=repo_root,
+            observed=written_metadata,
+            expected=snapshot["report_provenance"],
+            strict=repo_root == REPO_ROOT,
+        )
+        payload = status_payload(snapshot, "written", [])
+        payload["provenance_validation"] = provenance_validation
+        print(json.dumps(payload, indent=2, sort_keys=True))
         return 0
     if args.check:
         current = check_outputs(repo_root, yaml_text, json_text, markdown_text)
-        status = "pass" if current and not errors else "stale" if not errors else "invalid"
-        print(json.dumps(status_payload(snapshot, status, errors), indent=2, sort_keys=True))
-        return 0 if current and not errors else 1
+        fresh = current and not errors and provenance_validation["status"] == "PASS"
+        status = "pass" if fresh else "stale" if not errors else "invalid"
+        payload = status_payload(snapshot, status, errors)
+        payload["provenance_validation"] = provenance_validation
+        print(json.dumps(payload, indent=2, sort_keys=True))
+        return 0 if fresh else 1
     print(json_text, end="")
     return 0 if not errors else 1
 

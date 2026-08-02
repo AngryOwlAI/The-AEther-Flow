@@ -1,0 +1,92 @@
+{
+  "schema_id": "p13_t07_compact_frontier_renderer_classifier_recovery_receipt_v1",
+  "status": "BLOCKED_CHECKPOINT_FOLDER_MAP_DOCUMENTATION_IMPACT_COVERAGE",
+  "task_id": "RT-20260802-002",
+  "job_id": "AJ-RT-20260802-002-001",
+  "goal_id": "crg-20260720T161354Z-96bc2664ce31bfe0",
+  "generation": 215,
+  "route_sha256": "4df1018df22b5b6b1c91b371e3acfb19909a3ada37d35faa02f8092c0d9e3d76",
+  "strategy_id": "recover_p13_t07_compact_frontier_renderer_classifier_before_checkpoint_v1",
+  "inherited_manifest_sha256": "3056be001f6cc3d5cfbc46025edd7f138485895571a858bfe5dd57310ce608bb",
+  "predecessor_completion_sha256": "dc20cb3c2a7e8dc9fd208f01340f692bd3476b1eaaee4c1e53a82e73c9c1ab45",
+  "predecessor_recovery_receipt_sha256": "200ca80ed72062ae553496152ffb917b6329c25a20c04f7e1913a2b18f24b630",
+  "implemented_exact_binding": {
+    "path": "scripts/research_control/render_compact_current_frontier_v16.py",
+    "path_family": "validator_code",
+    "unknown_governed_path": false
+  },
+  "preserved_exact_bindings": [
+    {
+      "path": "scripts/research_control/render_current_frontier.py",
+      "path_family": "validator_code",
+      "unknown_governed_path": false
+    },
+    {
+      "path": "scripts/research_control/render_task_index.py",
+      "path_family": "validator_code",
+      "unknown_governed_path": false
+    }
+  ],
+  "focused_validation": {
+    "status": "PASS",
+    "test_count": 22,
+    "classifier_sha256": "d20f61a6396c19cc92709c234e772e2bfdbc9b40314b62055dcaaaaa8ded91c4",
+    "test_sha256": "8c3f795b99c04f485cca7c30c22ff4e034367568906ffe98789041d83d370285",
+    "unrelated_renderer_glob_admitted": false,
+    "unknown_path_fallback_preserved": true
+  },
+  "cumulative_checkpoint_plan": {
+    "status": "READY_SAFE_AUTHORITY_PLAN",
+    "planner_status": "READY",
+    "execution_authority": "manifest_planner",
+    "blocked_paths": [],
+    "unknown_paths": [],
+    "safe_authority_plan_produced": true,
+    "checkpoint_invocation_count": 1,
+    "checkpoint_staged": false,
+    "checkpoint_committed": false
+  },
+  "generated_derivative_status": {
+    "compact_current_frontier": "STALE_AFTER_FINAL_FAILURE_RECORDS",
+    "research_task_index": "STALE_AFTER_FINAL_FAILURE_RECORDS",
+    "research_dependency_graph": "STALE_AFTER_FINAL_FAILURE_RECORDS",
+    "checkpoint_effect": "FOLDER_MAP_GENERATED_UNCOMMITTED_INDEX_RESTORED"
+  },
+  "preservation": {
+    "generation_214_replayed": false,
+    "generation_214_files_modified": false,
+    "p13_t08_executed": false,
+    "scientific_claims_changed": false,
+    "distance_to_gr_changed": false,
+    "physics_promotion_authorized": false,
+    "push_performed": false
+  },
+  "checkpoint_failure": {
+    "status": "FAIL_STAGED_ACCEPTANCE_DOCUMENTATION_IMPACT",
+    "invocation_count": 1,
+    "checkpoint_staged": false,
+    "checkpoint_committed": false,
+    "index_restored": true,
+    "generated_path": "FOLDER_MAP.md",
+    "missing_generated_derivative_records": [
+      "research_control/tasks/RT-20260801-014/documentation_impact.yaml",
+      "research_control/tasks/RT-20260802-001/documentation_impact.yaml",
+      "research_control/tasks/RT-20260802-002/documentation_impact.yaml"
+    ],
+    "child_receipt_path": ".local/validation-receipts/8afbc6d6c1cc892533a3e7f8e45a1e2fb8243d85d803a1dadc854fe5c9fbe844/RUN-CHECKPOINT-0bb7f40e18180e18/receipt.json",
+    "child_receipt_sha256": "77996b369264305c4e7222c60bf45460a64e70dd65d74e574b6dd886884dd468"
+  },
+  "required_recovery": {
+    "status": "DISTINCT_RECOVERY_REQUIRED",
+    "role_family": "process-integrity-auditor@0.1.0",
+    "worker_skill": "improve-project-system",
+    "strategy_id": "repair_p13_t07_folder_map_generated_derivative_coverage_before_checkpoint_v1",
+    "exact_documentation_impact_paths": [
+      "research_control/tasks/RT-20260801-014/documentation_impact.yaml",
+      "research_control/tasks/RT-20260802-001/documentation_impact.yaml",
+      "research_control/tasks/RT-20260802-002/documentation_impact.yaml"
+    ],
+    "checkpoint_ceiling": 1,
+    "p13_t08_execution_authorized": false
+  }
+}

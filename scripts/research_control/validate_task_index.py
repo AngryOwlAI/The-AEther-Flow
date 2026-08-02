@@ -186,6 +186,9 @@ class TaskIndexValidationReport:
             "checked_failure_modes": [
                 "required_header_equality",
                 "generated_output_freshness",
+                "generated_report_source_provenance",
+                "generated_report_source_commit_ancestry",
+                "generated_report_maximum_commit_lag",
                 "csv_rows_match_tracked_renderer",
                 "source_task_directory_existence",
                 "completion_path_existence_for_completed_jobs",
@@ -291,6 +294,35 @@ def validate_task_index(repo_root: Path = REPO_ROOT) -> TaskIndexValidationRepor
                 path=str(check["path"]),
                 value=str(check["status"]),
             )
+
+    provenance = render_task_index.report_provenance.metadata_from_markdown_file(
+        repo_root,
+        render_task_index.DEFAULT_MARKDOWN_PATH,
+    )
+    if provenance is None:
+        provenance_validation = {
+            "status": "FAIL",
+            "findings": [
+                {
+                    "finding_id": "generated_report_source_metadata_missing",
+                    "message": "Task index lacks embedded generated-report provenance.",
+                }
+            ],
+        }
+    else:
+        provenance_validation = render_task_index.report_provenance.validate_metadata(
+            repo_root=repo_root,
+            observed=provenance,
+            expected=index["report_provenance"],
+            strict=repo_root == REPO_ROOT,
+        )
+    report.checks["report_provenance"] = provenance_validation
+    for finding in provenance_validation["findings"]:
+        report.error(
+            finding["finding_id"],
+            finding["message"],
+            path=render_task_index.DEFAULT_MARKDOWN_PATH,
+        )
 
     actual_header, actual_rows = load_csv(repo_root / render_task_index.DEFAULT_CSV_PATH)
     actual_rows = row_signature(actual_rows)
@@ -554,7 +586,10 @@ def main(argv: list[str] | None = None) -> int:
     repo_root = Path(args.repo_root).resolve()
     try:
         report = validate_task_index(repo_root)
-    except render_task_index.TaskIndexError as exc:
+    except (
+        render_task_index.TaskIndexError,
+        render_task_index.report_provenance.GeneratedReportProvenanceError,
+    ) as exc:
         report = TaskIndexValidationReport(repo_root=repo_root)
         report.error("renderer_error", str(exc))
 

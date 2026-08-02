@@ -1,0 +1,82 @@
+{
+  "authority_boundary": {
+    "event_store_cutover_authorized": false,
+    "generated_views_are_authority": false,
+    "historical_artifacts_rewritten": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "scientific_claims_changed": false
+  },
+  "current_authority": {
+    "completion_path": "research_control/tasks/RT-20260801-011/jobs/completions/AJC-AJ-RT-20260801-011-001.yaml",
+    "completion_sha256": "73c309c9830078d2ef209861aad53ba2742c754c82c3748841918a2e4533404e",
+    "job_id": "AJ-RT-20260801-011-001",
+    "renderer_manifest_path": "research_control/tasks/RT-20260801-011/artifacts/generated_report_renderer_update_manifest_v1.json",
+    "renderer_manifest_sha256": "d92fd0f636510d07a86cc7112fcc2a5243d77fc69959a13dc209f9ea7c90329a",
+    "task_id": "RT-20260801-011"
+  },
+  "goal_receipt": {
+    "blocker_fingerprint": "010d2058488f1ff73a9dd8a4b3e4a3c97c329e7cfa8b7737b8c2ef54c8cf4ad7",
+    "claim_token": "cd821c3a3f57c51df843159b5d02be9492e139bd42c250c6",
+    "generation": 213,
+    "goal_id": "crg-20260720T161354Z-96bc2664ce31bfe0",
+    "idempotency_key": "crg-20260720T161354Z-96bc2664ce31bfe0:213",
+    "route_sha256": "385aa8d11f50fc44089eeb9af3b2881b4f4f874952e3bb82f6c47572a29d0694",
+    "strategy_id": "recover_p13_t07_p10_t05_historical_renderer_bindings_before_checkpoint_v1"
+  },
+  "historical_contract": {
+    "compact_receipt_path": "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_compact_receipt.json",
+    "compact_receipt_sha256": "04cc34d38b1b0125fb77c38f639895bfc49e0864ad62bfc43aba78666bef72b3",
+    "contract_path": "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_contract.json",
+    "contract_sha256": "d5fa22e7bbc1d92f29acd6c8418d06ce7d81a042589ade77c7ba4fdebb0eda44",
+    "task_id": "RT-20260721-007",
+    "validation_path": "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_validation.json",
+    "validation_sha256": "6358f829c9e07adc6095a471621664830b37e7797c10b321b562b3f894b68b23"
+  },
+  "job_id": "AJ-RT-20260801-014-001",
+  "migration_audit_source_bindings": [
+    {
+      "current_sha256": "d5fa22e7bbc1d92f29acd6c8418d06ce7d81a042589ade77c7ba4fdebb0eda44",
+      "current_validator": "event_store_architecture",
+      "historical_sha256": "e22bde41e45def27a32d99bdf4ca9e6517a2acedbf18393cac22e172b9423c51",
+      "path": "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_contract.json"
+    },
+    {
+      "current_sha256": "67b8053baa60db4b11ee20582633d6279523d40b2ee853a6c570e2fdc1d113f5",
+      "current_validator": "burden_status",
+      "historical_sha256": "2ca5990c40419f4d8838d2f2ffc94ab694bda7ad002fe930ae2cf2e56209c400",
+      "path": "research_control/tasks/RT-20260721-009/artifacts/v21_burden_definitions_v1.yaml"
+    },
+    {
+      "current_sha256": "321b470f2c03dcba402300b9d9e03bf387a3e8b4aa00d4272dda008965e6cccd",
+      "current_validator": "artifact_identity",
+      "historical_sha256": "a39babc489dbce361ab7cbfcc8a7cda6347a633d0bc9c820b40a97a2433a26d0",
+      "path": "research_control/tasks/RT-20260722-002/artifacts/artifact_refs.json"
+    }
+  ],
+  "plan_task_id": "P13-T07",
+  "predecessor_blocker": {
+    "evidence_path": "research_control/tasks/RT-20260801-013/artifacts/p13_t07_protected_dual_budget_accounting_recovery_receipt.json",
+    "evidence_sha256": "fe764821a8a3d83d2efbfe0a32b646076147efc71bc8516eef07ce2116ebd4ff",
+    "failed_gate_ids": [
+      "p10_t05_event_store_architecture",
+      "p10_migration_readiness"
+    ],
+    "task_id": "RT-20260801-013"
+  },
+  "renderer_bindings": [
+    {
+      "current_sha256": "ebbeddc0d5b07bc5130ce093053891a376a264c1d029019cefa7de756697770d",
+      "historical_sha256": "7f01e0e6267bcb43c96c087c7dfd06b8a10ed6450c194324232019485c95a6ca",
+      "path": "scripts/research_control/render_current_frontier.py"
+    },
+    {
+      "current_sha256": "7c28b13a1f9843a300ce16bff2c09801549209927a41872efc02a6d0bfc0a023",
+      "historical_sha256": "aa495487e6cb39d1b8b17718207b8ddea70959474115f4a79494919790f79152",
+      "path": "scripts/research_control/render_task_index.py"
+    }
+  ],
+  "schema_id": "p10_t05_historical_renderer_binding_recovery_v1",
+  "status": "PASS_EXACT_HISTORICAL_OBSERVATION_AND_CURRENT_AUTHORITY_BOUND",
+  "task_id": "RT-20260801-014"
+}

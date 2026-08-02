@@ -129,6 +129,11 @@ SCIENTIFIC_QUALITY_REPORT_SCRIPT_PATHS = {
     "scripts/research_control/report_physics_progress_metrics.py",
     "scripts/research_control/scientific_quality_metrics.py",
 }
+GENERATED_REPORT_RENDERER_SCRIPT_PATHS = {
+    "scripts/research_control/render_compact_current_frontier_v16.py",
+    "scripts/research_control/render_current_frontier.py",
+    "scripts/research_control/render_task_index.py",
+}
 DEPENDENCY_ENVIRONMENT_PATHS = {
     "pyproject.toml",
     "requirements.txt",
@@ -573,6 +578,7 @@ def classify_path_family(path: str, registry: RegistryIndex) -> dict[str, object
         or path.startswith("scripts/validation/")
         or (path.startswith("scripts/research_control/") and Path(path).name.startswith("validate"))
         or path in SCIENTIFIC_QUALITY_REPORT_SCRIPT_PATHS
+        or path in GENERATED_REPORT_RENDERER_SCRIPT_PATHS
         or path.startswith("tests/")
     ):
         tags.add("validator_code")

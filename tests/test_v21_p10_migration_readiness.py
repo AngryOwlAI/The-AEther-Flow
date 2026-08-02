@@ -287,6 +287,53 @@ class P10MigrationReadinessTests(unittest.TestCase):
             self.assertFalse(path.is_symlink())
             self.assertRegex(digest, re.compile(r"^[0-9a-f]{64}$"))
 
+    def test_sealed_source_bindings_preserve_historical_snapshot(self) -> None:
+        receipt = self.module.load_json(
+            self.module.HISTORICAL_BINDING_RECOVERY_RECEIPT
+        )
+        for binding in receipt["migration_audit_source_bindings"]:
+            relative = binding["path"]
+            with self.subTest(relative=relative):
+                self.assertEqual(
+                    self.validation["source_hashes"][relative],
+                    binding["historical_sha256"],
+                )
+                self.assertNotEqual(
+                    binding["historical_sha256"],
+                    self.module.sha256_path(relative),
+                )
+
+    def test_sealed_source_binding_rejects_unrecognized_current_hash(self) -> None:
+        target = (
+            "research_control/tasks/RT-20260721-007/artifacts/"
+            "v21_event_store_architecture_contract.json"
+        )
+        live_sha256_path = self.module.sha256_path
+        with patch.object(
+            self.module,
+            "sha256_path",
+            side_effect=lambda relative: (
+                "0" * 64 if relative == target else live_sha256_path(relative)
+            ),
+        ):
+            with self.assertRaisesRegex(
+                self.module.AuditError,
+                "historical migration source binding mismatch",
+            ):
+                self.module.sealed_source_hashes()
+
+    def test_sealed_source_binding_rejects_recovery_receipt_drift(self) -> None:
+        with patch.object(
+            self.module,
+            "HISTORICAL_BINDING_RECOVERY_RECEIPT_SHA256",
+            "0" * 64,
+        ):
+            with self.assertRaisesRegex(
+                self.module.AuditError,
+                "historical binding recovery receipt hash mismatch",
+            ):
+                self.module.sealed_source_hashes()
+
     def test_audit_changes_no_scientific_or_protected_authority(self) -> None:
         self.assertTrue(
             all(value is False for value in self.validation["authority_flags"].values())

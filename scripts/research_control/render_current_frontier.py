@@ -16,12 +16,16 @@ if str(SCRIPT_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPT_DIR))
 
 from strict_yaml import StrictYamlError, load as load_yaml  # noqa: E402
+import generated_report_provenance as report_provenance  # noqa: E402
 import task_taxonomy  # noqa: E402
 
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 SCHEMA_ID = "current_frontier_state_v1"
 DEFAULT_FRONTIER_PATH = "research_control/current_frontier.md"
+TASK_REGISTRY_PATH = "registries/RESEARCH_TASK_REGISTRY.csv"
+RENDERER_PATH = "scripts/research_control/render_current_frontier.py"
+RENDERER_SHA256 = report_provenance.sha256_file(REPO_ROOT, RENDERER_PATH)
 LEDGER_PATH = "registries/DISTANCE_TO_GR_LEDGER.csv"
 METRIC_USE_LEDGER_PATH = "registries/METRIC_USE_LEDGER.csv"
 STATUS_ALIAS_PATH = "research_control/design/distance_to_gr_status_aliases.yaml"
@@ -1042,6 +1046,11 @@ def build_state(repo_root: Path) -> dict[str, Any]:
     active_task = load_control_yaml(repo_root, active_task_path(active_task_id))
     ledger_rows = read_csv_rows(repo_root, LEDGER_PATH)
     metric_use_rows = read_csv_rows(repo_root, METRIC_USE_LEDGER_PATH)
+    task_registry_rows = (
+        read_csv_rows(repo_root, TASK_REGISTRY_PATH)
+        if repo_path(repo_root, TASK_REGISTRY_PATH).is_file()
+        else []
+    )
     status_aliases = load_optional_control_yaml(repo_root, STATUS_ALIAS_PATH)
     accepted_status_calibration_path = ""
     accepted_status_calibration = load_optional_control_yaml(repo_root, ACCEPTED_STATUS_CALIBRATION_V2_PATH)
@@ -1084,6 +1093,7 @@ def build_state(repo_root: Path) -> dict[str, Any]:
         "v16_completed": bool_value(latest_handoff.get("v16_completed")),
         "distance_to_gr_rows": ledger_rows,
         "metric_use_rows": metric_use_rows,
+        "task_registry_rows": task_registry_rows,
         "metric_use_ledger_summary": metric_use_ledger_summary(metric_use_rows),
         "status_aliases": status_aliases,
         "accepted_status_calibration": accepted_status_calibration,
@@ -1122,6 +1132,9 @@ def render_markdown(state: dict[str, Any]) -> str:
     validation_layers_summary_table = validation_status_summary_table(handoff)
     authorization_layers_table = authorization_layer_table(handoff)
     bifurcation = state["active_state_bifurcation"]
+    provenance_section = "\n".join(
+        report_provenance.markdown_provenance_lines(state["report_provenance"])
+    )
 
     body = f"""<!-- authority: control -->
 
@@ -1134,6 +1147,8 @@ snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
 handoff named by that file, or `registries/DISTANCE_TO_GR_LEDGER.csv`, those
 tracked authority files govern.
+
+{provenance_section}
 
 ## Active Research State
 
@@ -1324,9 +1339,13 @@ implementation plan continue task v14* [Internal implementation plan].
     return body.strip() + "\n"
 
 
-def render_payload(repo_root: Path) -> tuple[dict[str, Any], str]:
+def render_payload(
+    repo_root: Path,
+    *,
+    source_commit: str | None = None,
+    strict_provenance: bool | None = None,
+) -> tuple[dict[str, Any], str]:
     state = build_state(repo_root)
-    markdown = render_markdown(state)
     source_paths = [
         state["program_state_path"],
         state["latest_handoff_path"],
@@ -1340,6 +1359,49 @@ def render_payload(repo_root: Path) -> tuple[dict[str, Any], str]:
         source_paths.append(state["accepted_status_calibration_path"])
     if repo_path(repo_root, ACTIVE_STATE_BIFURCATION_POLICY_PATH).exists():
         source_paths.append(ACTIVE_STATE_BIFURCATION_POLICY_PATH)
+    if repo_path(repo_root, TASK_REGISTRY_PATH).exists():
+        source_paths.append(TASK_REGISTRY_PATH)
+    source_paths = sorted(set(source_paths))
+    source_hashes = {
+        path: report_provenance.sha256_file(repo_root, path)
+        for path in source_paths
+    }
+    strict = repo_root.resolve() == REPO_ROOT.resolve() if strict_provenance is None else strict_provenance
+    if source_commit is None:
+        existing = report_provenance.metadata_from_markdown_file(
+            repo_root, DEFAULT_FRONTIER_PATH
+        )
+        source_commit = report_provenance.source_commit_from_metadata(
+            existing, report_provenance.git_head(repo_root)
+        )
+    generation_time = text_value(state["latest_handoff"].get("created_at")) or text_value(
+        state["latest_handoff"].get("updated_at")
+    )
+    task_count = len(state["task_registry_rows"])
+    if not task_count:
+        tasks_root = repo_path(repo_root, "research_control/tasks")
+        task_count = sum(
+            1 for path in tasks_root.glob("RT-*") if path.is_dir()
+        ) if tasks_root.exists() else 0
+    primary_source_paths = [
+        state["program_state_path"],
+        state["latest_handoff_path"],
+        state["ledger_path"],
+    ]
+    if TASK_REGISTRY_PATH in source_hashes:
+        primary_source_paths.append(TASK_REGISTRY_PATH)
+    state["report_provenance"] = report_provenance.build_metadata(
+        report_class="current_frontier",
+        source_commit=source_commit,
+        source_hashes=source_hashes,
+        primary_source_paths=primary_source_paths,
+        generation_time=generation_time,
+        task_count=task_count,
+        renderer_path=RENDERER_PATH,
+        renderer_sha256=RENDERER_SHA256,
+        strict=strict,
+    )
+    markdown = render_markdown(state)
     payload = {
         "schema_id": SCHEMA_ID,
         "active_task_id": state["active_task_id"],
@@ -1353,6 +1415,7 @@ def render_payload(repo_root: Path) -> tuple[dict[str, Any], str]:
         "current_burden": state["current_burden"],
         "required_next_authority": state["required_next_authority"],
         "source_paths": source_paths,
+        "report_provenance": state["report_provenance"],
         "frontier_path": DEFAULT_FRONTIER_PATH,
         "rendered_hash": sha256_text(markdown),
         "distance_to_gr_row_count": len(state["distance_to_gr_rows"]),
@@ -1415,24 +1478,70 @@ def main(argv: list[str] | None = None) -> int:
     args = parser.parse_args(argv)
 
     repo_root = Path(args.repo_root).resolve()
+    existing_metadata = report_provenance.metadata_from_markdown_file(
+        repo_root, DEFAULT_FRONTIER_PATH
+    )
+    source_commit = (
+        report_provenance.git_head(repo_root)
+        if args.write
+        else report_provenance.source_commit_from_metadata(
+            existing_metadata, report_provenance.git_head(repo_root)
+        )
+    )
     try:
-        payload, markdown = render_payload(repo_root)
-    except FrontierRenderError as exc:
+        payload, markdown = render_payload(repo_root, source_commit=source_commit)
+    except (FrontierRenderError, report_provenance.GeneratedReportProvenanceError) as exc:
         print(f"render_current_frontier: {exc}", file=sys.stderr)
         return 2
+
+    observed_metadata = existing_metadata or {}
+    provenance_validation = report_provenance.validate_metadata(
+        repo_root=repo_root,
+        observed=observed_metadata,
+        expected=payload["report_provenance"],
+        strict=repo_root == REPO_ROOT,
+    )
 
     frontier_path = repo_path(repo_root, DEFAULT_FRONTIER_PATH)
     if args.write:
         frontier_path.parent.mkdir(parents=True, exist_ok=True)
         frontier_path.write_text(markdown, encoding="utf-8")
-        print(json.dumps({**payload, "status": "written"}, indent=2, sort_keys=True))
+        written_metadata = report_provenance.metadata_from_markdown_file(
+            repo_root, DEFAULT_FRONTIER_PATH
+        ) or {}
+        provenance_validation = report_provenance.validate_metadata(
+            repo_root=repo_root,
+            observed=written_metadata,
+            expected=payload["report_provenance"],
+            strict=repo_root == REPO_ROOT,
+        )
+        print(
+            json.dumps(
+                {**payload, "provenance_validation": provenance_validation, "status": "written"},
+                indent=2,
+                sort_keys=True,
+            )
+        )
         return 0
     if args.check:
         current = check_frontier(repo_root, markdown)
-        status = "pass" if current else "stale"
-        print(json.dumps({**payload, "status": status}, indent=2, sort_keys=True))
-        return 0 if current else 1
-    print(json.dumps({**payload, "status": "rendered"}, indent=2, sort_keys=True))
+        fresh = current and provenance_validation["status"] == "PASS"
+        status = "pass" if fresh else "stale"
+        print(
+            json.dumps(
+                {**payload, "provenance_validation": provenance_validation, "status": status},
+                indent=2,
+                sort_keys=True,
+            )
+        )
+        return 0 if fresh else 1
+    print(
+        json.dumps(
+            {**payload, "provenance_validation": provenance_validation, "status": "rendered"},
+            indent=2,
+            sort_keys=True,
+        )
+    )
     return 0
 
 

@@ -1,0 +1,97 @@
+{
+  "schema_id": "p13_t07_folder_map_documentation_impact_checkpoint_recovery_receipt_v1",
+  "status": "REPAIR_COMPLETED_BROAD_VALIDATION_BLOCKED_NO_CHECKPOINT",
+  "task_id": "RT-20260802-003",
+  "job_id": "AJ-RT-20260802-003-001",
+  "goal_id": "crg-20260720T161354Z-96bc2664ce31bfe0",
+  "goal_generation": 216,
+  "route_sha256": "ad845497417f3a3c7bc22bc8f9de310c53f241f7e95aa89eea62f9f83f673f68",
+  "route_manifest_sha256": "32b6b6f586aa7eca35ea604b2996b366248b79a6c908b314f2fad9b9efb95013",
+  "source_generation": 215,
+  "source_job_id": "AJ-RT-20260802-002-001",
+  "failed_checkpoint_receipt": {
+    "path": ".local/validation-receipts/8afbc6d6c1cc892533a3e7f8e45a1e2fb8243d85d803a1dadc854fe5c9fbe844/RUN-CHECKPOINT-0bb7f40e18180e18/receipt.json",
+    "sha256": "77996b369264305c4e7222c60bf45460a64e70dd65d74e574b6dd886884dd468",
+    "failed_gate": "staged_documentation_impact",
+    "failed_status": "FAIL_THREE_CUMULATIVE_RECEIPTS_MISSING_GENERATED_DERIVATIVE",
+    "finding_count": 3,
+    "required_generated_derivative": "FOLDER_MAP.md"
+  },
+  "repairs": [
+    {
+      "path": "research_control/tasks/RT-20260801-014/documentation_impact.yaml",
+      "sha256_before": "9c57ed529ea17e0392ecfbbe0613677900ff725be8355191e6e76821d1b4a904",
+      "sha256_after_direct_repair": "08f3f2c097b5bcc13b91aba4098a252159a47e41d566f34e0361cb374657036c",
+      "sha256_after_cumulative_receipt_sync": "4d1a015e85fd4d2092913171d5cf55b31a78399403d4701cbccca62849350b6d",
+      "generated_derivative": "FOLDER_MAP.md",
+      "occurrence_count": 1,
+      "status": "PASS_EXACT_ITEM_PRESENT"
+    },
+    {
+      "path": "research_control/tasks/RT-20260802-001/documentation_impact.yaml",
+      "sha256_before": "c21f91961ef2cf09dda291758783a2c41bfe42afd7e9806b52af2e4c57c742a2",
+      "sha256_after_direct_repair": "b785f57bed99de0cc1e79bd821b206c09a868678d68d6a75dcd80b7b3b28717f",
+      "sha256_after_cumulative_receipt_sync": "e419fc21dd7d1a5e4475db5784e107fc10c591431eb9daa5f0f9ac8bf98fcf01",
+      "generated_derivative": "FOLDER_MAP.md",
+      "occurrence_count": 1,
+      "status": "PASS_EXACT_ITEM_PRESENT"
+    },
+    {
+      "path": "research_control/tasks/RT-20260802-002/documentation_impact.yaml",
+      "sha256_before": "3086bbf9d3a4f9900f53abb9fa1c18413364e8dac29e0f57e5cc76acae7db262",
+      "sha256_after_direct_repair": "51908985fdb48806b1027fb9e20bc666e449ee6820b6c85a56d08b0e7d88c1e3",
+      "sha256_after_cumulative_receipt_sync": "11e7df71d809c464477751163b64864f7593ae2377f26e6a61602f98104c147c",
+      "generated_derivative": "FOLDER_MAP.md",
+      "occurrence_count": 1,
+      "status": "PASS_EXACT_ITEM_PRESENT"
+    }
+  ],
+  "protected_hashes": {
+    "source_completion_sha256": "9967aaf9b528883893456ef05a4ea10dd74952de521eb052dbca8e7fc127687a",
+    "source_recovery_receipt_sha256": "e705f146ad502a3eef4b4c7ddddb6ea7b3dc24849c7dfab623002d34e9d927a3",
+    "program_state_sha256": "0df86e299cb7d9b8450d61171fd3697c12b9b5579552650fc64a5a30b1323f2c",
+    "handoff_0938_yaml_sha256": "a7e9681afdb1f209d4e8d1c1c738002c04dfb51fcb314116c35037bfcf1de772",
+    "classifier_sha256": "d20f61a6396c19cc92709c234e772e2bfdbc9b40314b62055dcaaaaa8ded91c4",
+    "classifier_tests_sha256": "8c3f795b99c04f485cca7c30c22ff4e034367568906ffe98789041d83d370285"
+  },
+  "validation": {
+    "direct_documentation_impact_status": "PASS_ZERO_FINDINGS",
+    "protected_hash_mismatch_count": 0,
+    "checkpoint_invocation_count": 0,
+    "checkpoint_status": "NOT_INVOKED_BROAD_VALIDATION_FAILED",
+    "legacy_validation_used": false
+  },
+  "blocking_validation": {
+    "status": "FAIL_PROTECTED_PREDECESSOR_VALIDATION_LAYER_STATUS",
+    "source_path": "research_control/tasks/RT-20260802-002/jobs/completions/AJC-AJ-RT-20260802-002-001.yaml",
+    "source_sha256": "9967aaf9b528883893456ef05a4ea10dd74952de521eb052dbca8e7fc127687a",
+    "evidence_path": ".local/validation-receipts/working-sha256-cb868228e3cdd23d11aabaa874bb2c5e375bfcef96b292fa3265ae4a6111babf/RESEARCH-CONTROL-DIFF-CB868228E3CDD23D/full.json",
+    "evidence_sha256": "52097ca4c9f42df7c886d22af1e1b2150ccd6d6d778c9fd163d65e254cbb2079",
+    "finding_count": 2,
+    "findings": [
+      {
+        "layer": "claim_language_linter",
+        "invalid_status": "NOT_RUN_AFTER_CHECKPOINT_FAILURE",
+        "allowed_status_repair_required": true
+      },
+      {
+        "layer": "memory_bootstrap",
+        "invalid_status": "NOT_RUN_AFTER_CHECKPOINT_FAILURE",
+        "allowed_status_repair_required": true
+      }
+    ],
+    "protected_predecessor_bytes_preserved": true,
+    "requires_distinct_recovery": true
+  },
+  "authority_limits": {
+    "generation_215_reexecuted": false,
+    "renderer_or_classifier_semantics_changed": false,
+    "program_state_or_handoff_changed": false,
+    "p13_t08_executed": false,
+    "scientific_status_changed": false,
+    "distance_to_gr_changed": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "publication_or_push_authorized": false
+  }
+}

@@ -1,0 +1,374 @@
+completion_id: "AJC-AJ-RT-20260801-011-001"
+job_id: "AJ-RT-20260801-011-001"
+task_id: "RT-20260801-011"
+task_type: "v21_generated_report_provenance_and_freshness_enforcement"
+decision_id: "DDR-20260801-011"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260801-011"
+status: "blocked"
+validation_status: "FAIL"
+completed_at: "2026-08-02T02:10:35Z"
+objective_result: "p13_t07_payload_complete_documentation_registry_reason_repair_required"
+verdict: "REPAIR_REQUIRED_P13_T07_DOCUMENTATION_REGISTRY_REASON"
+summary: "P13-T07 implementation, four live-report checks, two negative fixtures, and 49 focused tests pass. Planner-authoritative affected validation conservatively escalated to full because of an unknown governed helper path; memory synchronization then changed MARKDOWN_SOURCE_REGISTRY.csv, and the documentation-impact gate failed because the task record omitted the resulting documentation_registry_changed reason. Generation 210 stopped with no checkpoint."
+transaction_status: "repair_required_no_checkpoint"
+checkpoint_invocation_count: 0
+checkpoint_commit:
+  status: "PENDING"
+  commit: ""
+  invocation_count: 0
+
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  phase_id: "P13"
+  plan_task_id: "P13-T07"
+  recommendation_ids:
+    - "V21-R47"
+    - "V21-R49"
+    - "V21-R50"
+  implementation_status: "repair_required"
+  next_dependency_ready_work_item: "P13-T07_documentation_registry_reason_recovery"
+  next_work_item_executed: false
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 210
+  passes_consumed: 188
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:210"
+  handoff_token: "287a48966e374e9b419c0bc495243d9d20c1bde1d43f8695"
+  relay_claim_token: "3c35003390b47fd650edd94e68cbb5ca8cb2e43ff0d5ded7"
+  route_work_item_id: "P13-T07"
+  route_worker_skill: "improve-project-system"
+  route_sha256: "0e936dbb09f930f8889bd0b0ad5b8b5e7cf2393af67240444fe1448e96374b4d"
+  route_strategy_id: "enforce_generated_report_provenance_and_freshness_after_planner_cutover_v1"
+  route_blocker_fingerprint: "958868ac19e1a4991432517ebbbd3a37f265b36f061b42c8f1f827b83f0d6df6"
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+
+result:
+  status: "REPAIR_REQUIRED"
+  report_class_count: 4
+  tracked_output_count: 10
+  maximum_commit_lag: 1
+  exact_source_byte_drift_fails_immediately: true
+  second_unrefreshed_commit_fails: true
+  source_commit_required: true
+  exact_source_hashes_required: true
+  full_source_manifest_hash_required: true
+  source_derived_generation_time_required: true
+  tracked_task_count_required: true
+  existing_blocking_planner_gate_count: 4
+  broad_validation_status: "FAIL"
+  broad_validation_failed_gate_id: "documentation_impact"
+  broad_validation_finding: "reason_codes missing classifier reason documentation_registry_changed"
+  checkpoint_invoked: false
+  workflow_files_changed: false
+  scientific_values_changed: false
+  report_authority_changed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+report_classes:
+  current_frontier:
+    output_count: 1
+    blocking_gate_id: "current_frontier_freshness"
+    maximum_commit_lag: 1
+  compact_current_frontier:
+    output_count: 3
+    blocking_gate_id: "compact_frontier_freshness"
+    maximum_commit_lag: 1
+  research_task_index:
+    output_count: 3
+    blocking_gate_id: "task_index_freshness"
+    maximum_commit_lag: 1
+  research_dependency_graph:
+    output_count: 3
+    blocking_gate_id: "dependency_graph_freshness"
+    maximum_commit_lag: 1
+
+artifacts:
+  metadata_schema:
+    path: "research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml"
+    sha256: "dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3"
+  renderer_update_manifest:
+    path: "research_control/tasks/RT-20260801-011/artifacts/generated_report_renderer_update_manifest_v1.json"
+    sha256: "d92fd0f636510d07a86cc7112fcc2a5243d77fc69959a13dc209f9ea7c90329a"
+  stale_fixture_spec:
+    path: "research_control/tasks/RT-20260801-011/artifacts/stale_generated_report_fixture_v1.json"
+    sha256: "85a787a6a8217ae45f7dffd896e294445f8512cdac524433e6249b0c7b24fcae"
+  shared_provenance_helper:
+    path: "scripts/research_control/generated_report_provenance.py"
+    sha256: "af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c"
+  cross_report_validator:
+    path: "scripts/research_control/validate_generated_report_freshness.py"
+    sha256: "895e848075baa19afb88cf9c01ab98873ebd2df206ea7b214a89eb8d71d2a140"
+  focused_test:
+    path: "tests/test_generated_report_freshness.py"
+    sha256: "6a11f0681dae3665064d4d658f1d98610c2a12363d9260a4664c365d95ba5d69"
+  compact_receipt:
+    path: "research_control/tasks/RT-20260801-011/artifacts/p13_t07_generated_report_freshness_receipt.json"
+    status: "PASS_LOCAL_BEFORE_BROAD_VALIDATION_NOT_FINAL_ACCEPTANCE"
+  affected_validation_blocker:
+    path: "research_control/tasks/RT-20260801-011/artifacts/p13_t07_affected_validation_blocker.yaml"
+    status: "active_blocking"
+
+fixture_results:
+  mutated_primary_source_hash:
+    expected_status: "FAIL"
+    observed_status: "FAIL"
+    expected_finding_id: "generated_report_source_metadata_stale"
+    expected_finding_observed: true
+  second_unrefreshed_commit:
+    expected_status: "FAIL"
+    observed_status: "FAIL"
+    expected_finding_id: "generated_report_commit_lag_exceeded"
+    observed_commit_lag: 2
+    maximum_commit_lag: 1
+    expected_finding_observed: true
+
+dependency_evidence:
+  p13_t05:
+    status: "qualifying_completed"
+    completion_path: "research_control/tasks/RT-20260724-002/jobs/completions/AJC-AJ-RT-20260724-002-001.yaml"
+    completion_sha256: "77e41842b1530fea579955d57f3fefe99b9800bac2aa9147cb8ca9b5443bd8ea"
+  p13_t06:
+    status: "qualifying_completed"
+    completion_path: "research_control/tasks/RT-20260724-003/jobs/completions/AJC-AJ-RT-20260724-003-001.yaml"
+    completion_sha256: "bc36815f27a56bcde5d757c730c557164755d786c248c3b21bdc8f8e4fbe237a"
+  p13_t07:
+    status: "repair_required_not_qualifying"
+    completion_path: "research_control/tasks/RT-20260801-011/jobs/completions/AJC-AJ-RT-20260801-011-001.yaml"
+  p13_t08_dependency_ready_after_checkpoint: false
+  p13_t08_execution_ready_now: false
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  observed_durable_outputs:
+    physics: []
+    project_system:
+      - "live generated-report freshness metadata schema and inventory"
+      - "four renderer integrations and deterministic stale-output validator"
+      - "focused stale-hash and commit-lag fixtures"
+      - "compact task-local validation receipt"
+      - "tracked broad-validation blocker and fresh recovery route"
+  accepted_criteria:
+    physics: []
+    project_system:
+      - "fresh render passes for every live report class"
+      - "mutated source-hash fixture fails closed"
+      - "a second unrefreshed commit exceeds maximum lag and fails closed"
+      - "existing planner-authoritative CI freshness selection observes the failure"
+      - "all source hashes resolve and generated views remain non-authoritative"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+validation_summary:
+  status: "REPAIR_REQUIRED"
+  passing_gates:
+    - "all four live reports match exact tracked source bytes"
+    - "all ten tracked outputs match deterministic renderer bytes"
+    - "all embedded source commits are ancestors within one commit"
+    - "mutated source-hash fixture fails closed"
+    - "second unrefreshed commit fixture fails closed"
+    - "focused renderer validator and dependency determinism regression"
+    - "pre-failure research-control diff"
+    - "project-improvement signal parity"
+    - "memory synchronization before the failing documentation-impact gate"
+    - "Git diff check"
+  failing_gates:
+    - "documentation_impact: reason_codes missing classifier reason documentation_registry_changed"
+  pending_gates: []
+  checkpoint:
+    invoked: false
+    invocation_count: 0
+    reason: "The broad validation stop condition fired before checkpoint authority could be exercised."
+  commit:
+    created: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 210 validated, claimed, and consumed the immutable P13-T07 route exactly once."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The compact receipt binds four live reports, ten outputs, exact source manifests, and both negative fixtures."
+  post_write:
+    status: "FAIL"
+    evidence:
+      - "Planner-authoritative affected validation escalated to full and failed documentation_impact with one exact finding."
+  post_checkpoint:
+    status: "NOT_RUN"
+    evidence:
+      - "Checkpoint invocation count remains zero because broad validation failed."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Current frontier, compact frontier, task index, and dependency graph are fresh with embedded provenance."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Approved tracked-memory synchronization and validate-only checks pass."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation retains the project-system-only authority boundary."
+
+assumption_delta:
+  changed: false
+  assumptions_added: []
+  assumptions_removed: []
+  assumptions_adopted: 0
+  exact_reason: "P13-T07 changes generated-report provenance and validation only."
+
+candidate_or_theorem_identities:
+  candidate_ids_created: []
+  candidate_ids_linked: []
+  theorem_ids_created: []
+  identity_note: "No scientific candidate or theorem identity is created or changed."
+
+physics_progress_status:
+  status: "documentation_or_control_only_no_physics_delta"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Prevent stale metrics and frontier reports from misleading agents or readers."
+  explanation: "P13-T07 enforces project-system report freshness only and adds no mathematical or physics payload."
+  physics_promotion_authorized: false
+
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "none"
+  milestone: "source_equivalence_eqsrc"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "Generated-report provenance and freshness enforcement contributes no physics movement."
+  downstream_unlocked:
+    - "P13-T07_documentation_registry_reason_recovery"
+  downstream_still_blocked:
+    - "P13-T08_until_recovery_checkpoint"
+    - "Einstein equations"
+    - "exact-GR recovery"
+    - "benchmark promotion"
+
+selected_next_route:
+  route_id: "p13_t07_documentation_registry_reason_recovery_v1"
+  worker_skill: "improve-project-system"
+  plan_task_id: "P13-T07"
+  route_label: "recover_p13_t07_documentation_registry_reason_and_checkpoint_v1"
+  role_family: "process-integrity-auditor@0.1.0"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Restore exact P13-T07 documentation-impact parity before checkpointing."
+  dependency_ready_after_checkpoint: false
+  execution_ready_now: true
+  executed: false
+  requires_human_gate: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1109
+    relationship_row_count: 5606
+    semantic_row_count: 1109
+    vault_row_count: 1109
+    local_cache_only_warning_count: 0
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  authority_note: "Generated wiki, Obsidian, semantic, relationship, SQLite, and .local retrieval state is not authority and is navigation only; canonical tracked sources and validators govern this packet."
+
+command_results:
+  - command: ".venv/bin/python -m unittest -v tests.test_generated_report_freshness tests.test_render_current_frontier tests.test_render_compact_current_frontier_v16 tests.test_validate_compact_current_frontier_v16 tests.test_task_index_renderer tests.test_render_dependency_graph tests.test_dependency_graph_determinism"
+    status: "PASS"
+    summary: "All 49 focused provenance, renderer, validator, and dependency-graph determinism tests pass."
+  - command: ".venv/bin/python scripts/research_control/validate_generated_report_freshness.py --json"
+    status: "PASS"
+    summary: "Four report classes and ten outputs match exact source manifests at commit lag zero."
+  - command: ".venv/bin/python research_control/tasks/RT-20260801-011/artifacts/validate_p13_t07_generated_report_freshness.py --check"
+    status: "PASS"
+    summary: "The compact receipt is fresh and both negative fixtures fail with their expected findings."
+  - command: ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+    status: "PASS"
+    summary: "The P13-T07 documentation-impact record covers every live changed source and generated output."
+  - command: ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted"
+    status: "PASS"
+    summary: "Project-improvement signal parity passes with no new signal."
+  - command: ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+    status: "PASS"
+    summary: "Changed claim-bearing sources have no hard claim-language failure."
+  - command: ".venv/bin/python -m scripts.validation.cli run --profile affected --paths <changed-paths>"
+    status: "FAIL"
+    summary: "The request escalates to full and stops at documentation_impact because documentation_registry_changed is missing from the task record."
+  - command: ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --job-id AJ-RT-20260801-011-001 --json-summary"
+    status: "PASS"
+    summary: "Integrated research-control diff validation reports zero errors."
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+    status: "PASS"
+    summary: "Tracked memory and generated derivatives validate."
+  - command: "git diff --check"
+    status: "PASS"
+    summary: "No whitespace errors."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "none; project-system freshness enforcement only"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  push_authorized: false
+  publication_authorized: false
+  hosted_workflow_dispatch_authorized: false
+  proof_authority: false
+  canonical_ontology_edit_authorized: false
+  source_law_adoption_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+notes: "Focused freshness PASS does not override the broad validation failure. No checkpoint, physics, Distance-to-GR movement, ontology, benchmark, Gate E, proof, publication, push, Gate Chair authority, or completed derivation was authorized or performed."

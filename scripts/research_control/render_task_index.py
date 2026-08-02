@@ -16,6 +16,7 @@ if str(SCRIPT_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPT_DIR))
 
 from strict_yaml import StrictYamlError, load as load_yaml  # noqa: E402
+import generated_report_provenance as report_provenance  # noqa: E402
 import task_taxonomy  # noqa: E402
 
 
@@ -30,6 +31,8 @@ AGENT_ROLE_REGISTRY_PATH = "registries/AGENT_ROLE_REGISTRY.csv"
 DEFAULT_CSV_PATH = "research_control/tasks/TASK_INDEX.csv"
 DEFAULT_MARKDOWN_PATH = "research_control/tasks/TASK_INDEX.md"
 DEFAULT_WIKI_MARKDOWN_PATH = "wiki/indexes/research_control_task_index.md"
+RENDERER_PATH = "scripts/research_control/render_task_index.py"
+RENDERER_SHA256 = report_provenance.sha256_file(REPO_ROOT, RENDERER_PATH)
 AUTHORITY_NOTICE = (
     "Generated navigation support only. This index is not task authority, "
     "physics proof authority, benchmark authority, Gate Chair authority, or "
@@ -252,7 +255,12 @@ def source_fingerprint(repo_root: Path, source_paths: list[str], rows: list[dict
     return sha256_text("\n".join(parts))
 
 
-def build_index(repo_root: Path) -> dict[str, Any]:
+def build_index(
+    repo_root: Path,
+    *,
+    source_commit: str | None = None,
+    strict_provenance: bool | None = None,
+) -> dict[str, Any]:
     if not repo_path(repo_root, SCHEMA_PATH).exists():
         raise TaskIndexError(f"missing task-index schema: {SCHEMA_PATH}")
 
@@ -390,11 +398,45 @@ def build_index(repo_root: Path) -> dict[str, Any]:
 
     rows.sort(key=lambda item: (item["created_at"], item["task_id"]), reverse=True)
     latest_timestamp = max((row["created_at"] for row in rows if row["created_at"]), default="")
+    source_paths = sorted(set(source_paths))
+    source_hashes = {
+        path: digest
+        for path in source_paths
+        if (digest := file_hash(repo_path(repo_root, path)))
+    }
+    if source_commit is None:
+        existing = report_provenance.metadata_from_markdown_file(
+            repo_root, DEFAULT_MARKDOWN_PATH
+        )
+        source_commit = report_provenance.source_commit_from_metadata(
+            existing, report_provenance.git_head(repo_root)
+        )
+    strict = repo_root.resolve() == REPO_ROOT.resolve() if strict_provenance is None else strict_provenance
+    provenance = report_provenance.build_metadata(
+        report_class="research_task_index",
+        source_commit=source_commit,
+        source_hashes=source_hashes,
+        primary_source_paths=[
+            SCHEMA_PATH,
+            task_taxonomy.POLICY_PATH,
+            task_taxonomy.BACKLOG_PATH,
+            RESEARCH_TASK_REGISTRY_PATH,
+            AGENT_JOB_REGISTRY_PATH,
+            DIRECTOR_DECISION_REGISTRY_PATH,
+            AGENT_ROLE_REGISTRY_PATH,
+        ],
+        generation_time=latest_timestamp,
+        task_count=len(rows),
+        renderer_path=RENDERER_PATH,
+        renderer_sha256=RENDERER_SHA256,
+        strict=strict,
+    )
     return {
         "schema_id": SCHEMA_ID,
         "generated_at": latest_timestamp,
-        "source_paths": sorted(set(source_paths)),
+        "source_paths": source_paths,
         "source_fingerprint": source_fingerprint(repo_root, source_paths, rows),
+        "report_provenance": provenance,
         "authority_notice": AUTHORITY_NOTICE,
         "header": HEADER,
         "row_count": len(rows),
@@ -439,9 +481,13 @@ def render_issue_table(issues: list[dict[str, str]]) -> str:
 
 
 def render_markdown(index: dict[str, Any], title: str = "Research-Control Task Index") -> str:
+    provenance = "\n".join(
+        report_provenance.markdown_provenance_lines(index["report_provenance"])
+    )
     return (
         f"# {title}\n\n"
         f"{AUTHORITY_NOTICE}\n\n"
+        f"{provenance}\n"
         "## Generation Receipt\n\n"
         f"- Schema: `{SCHEMA_ID}`\n"
         f"- Schema source: `{SCHEMA_PATH}`\n"
@@ -507,6 +553,7 @@ def status_payload(index: dict[str, Any], output_status: str, checks: dict[str, 
         "row_count": index["row_count"],
         "issue_count": index["issue_count"],
         "source_fingerprint": index["source_fingerprint"],
+        "report_provenance": index["report_provenance"],
         "authority_notice": AUTHORITY_NOTICE,
         "artifacts": checks,
     }
@@ -525,9 +572,19 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
 def main(argv: list[str] | None = None) -> int:
     args = parse_args(argv or sys.argv[1:])
     repo_root = Path(args.repo_root).resolve()
+    existing_metadata = report_provenance.metadata_from_markdown_file(
+        repo_root, DEFAULT_MARKDOWN_PATH
+    )
+    source_commit = (
+        report_provenance.git_head(repo_root)
+        if args.write
+        else report_provenance.source_commit_from_metadata(
+            existing_metadata, report_provenance.git_head(repo_root)
+        )
+    )
     try:
-        index = build_index(repo_root)
-    except TaskIndexError as exc:
+        index = build_index(repo_root, source_commit=source_commit)
+    except (TaskIndexError, report_provenance.GeneratedReportProvenanceError) as exc:
         print(f"render_task_index: {exc}", file=sys.stderr)
         return 2
 
@@ -541,6 +598,12 @@ def main(argv: list[str] | None = None) -> int:
         "markdown": compare_text(repo_root, DEFAULT_MARKDOWN_PATH, markdown_text),
         "wiki_markdown": compare_text(repo_root, DEFAULT_WIKI_MARKDOWN_PATH, wiki_markdown_text),
     }
+    provenance_validation = report_provenance.validate_metadata(
+        repo_root=repo_root,
+        observed=existing_metadata or {},
+        expected=index["report_provenance"],
+        strict=repo_root == REPO_ROOT,
+    )
 
     if args.write:
         write_text(repo_root, DEFAULT_CSV_PATH, csv_text)
@@ -551,11 +614,27 @@ def main(argv: list[str] | None = None) -> int:
             "markdown": compare_text(repo_root, DEFAULT_MARKDOWN_PATH, markdown_text),
             "wiki_markdown": compare_text(repo_root, DEFAULT_WIKI_MARKDOWN_PATH, wiki_markdown_text),
         }
-        print(json.dumps(status_payload(index, "written", checks), indent=2, sort_keys=True))
+        written_metadata = report_provenance.metadata_from_markdown_file(
+            repo_root, DEFAULT_MARKDOWN_PATH
+        ) or {}
+        provenance_validation = report_provenance.validate_metadata(
+            repo_root=repo_root,
+            observed=written_metadata,
+            expected=index["report_provenance"],
+            strict=repo_root == REPO_ROOT,
+        )
+        payload = status_payload(index, "written", checks)
+        payload["provenance_validation"] = provenance_validation
+        print(json.dumps(payload, indent=2, sort_keys=True))
         return 0
 
-    fresh = all(item["fresh"] for item in checks.values())
-    print(json.dumps(status_payload(index, "pass" if fresh else "stale", checks), indent=2, sort_keys=True))
+    fresh = (
+        all(item["fresh"] for item in checks.values())
+        and provenance_validation["status"] == "PASS"
+    )
+    payload = status_payload(index, "pass" if fresh else "stale", checks)
+    payload["provenance_validation"] = provenance_validation
+    print(json.dumps(payload, indent=2, sort_keys=True))
     return 0 if fresh else 1
 
 

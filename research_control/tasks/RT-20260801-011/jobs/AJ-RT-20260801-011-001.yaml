@@ -1,0 +1,339 @@
+job_id: "AJ-RT-20260801-011-001"
+task_id: "RT-20260801-011"
+decision_id: "DDR-20260801-011"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260801-011"
+status: "blocked"
+validation_status: "FAIL"
+created_at: "2026-08-02T01:13:32Z"
+started_at: "2026-08-02T01:13:32Z"
+completed_at: "2026-08-02T02:10:35Z"
+completion_path: "research_control/tasks/RT-20260801-011/jobs/completions/AJC-AJ-RT-20260801-011-001.yaml"
+requires_human_gate: false
+human_authorization_note: "Generation 210 authorizes exactly one improve-project-system worker invocation for P13-T07 and at most one governed checkpoint."
+objective: "Implement deterministic live generated-report provenance and one-commit maximum-lag enforcement without changing the scientific values represented by any report."
+target_derivation_milestone: "source_equivalence_eqsrc"
+milestone_burden: "Prevent stale metrics and frontier reports from misleading agents or readers."
+route_label: "enforce_generated_report_provenance_and_freshness_after_planner_cutover_v1"
+route_reason: "Generation 209 reconciled P13-T02 completion and canonical handoff-0937 selects one fresh bounded P13-T07 improve-project-system packet."
+immutable_route_sha256: "0e936dbb09f930f8889bd0b0ad5b8b5e7cf2393af67240444fe1448e96374b4d"
+route_blocker_fingerprint: "958868ac19e1a4991432517ebbbd3a37f265b36f061b42c8f1f827b83f0d6df6"
+plan_task_id: "P13-T07"
+recommendation_ids:
+  - "V21-R47"
+  - "V21-R49"
+  - "V21-R50"
+project_system_change_only: true
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 210
+  passes_consumed: 188
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:210"
+  handoff_token: "287a48966e374e9b419c0bc495243d9d20c1bde1d43f8695"
+  relay_claim_token: "3c35003390b47fd650edd94e68cbb5ca8cb2e43ff0d5ded7"
+  route_work_item_id: "P13-T07"
+  route_worker_skill: "improve-project-system"
+  route_sha256: "0e936dbb09f930f8889bd0b0ad5b8b5e7cf2393af67240444fe1448e96374b4d"
+  route_reason: "generation_209_default_continuation_route_mismatch_canonical_p13_t07_requires_improve_project_system"
+  route_strategy_id: "enforce_generated_report_provenance_and_freshness_after_planner_cutover_v1"
+  route_blocker_fingerprint: "958868ac19e1a4991432517ebbbd3a37f265b36f061b42c8f1f827b83f0d6df6"
+  route_dirty_state_manifest:
+    owning_task_id: "RT-20260801-010"
+    owning_agent_job_id: "AJ-RT-20260801-010-001"
+    head: "1862241f210e27945fae7114fa471c6441030967"
+    porcelain: ""
+    changed_paths: []
+    failed_gates:
+      - gate_id: "canonical_next_worker_route_parity"
+        status: "FAIL_DEFAULT_CONTINUATION_ROUTE_CONTINUE_RESEARCH_CANONICAL_P13_T07_REQUIRES_IMPROVE_PROJECT_SYSTEM"
+        evidence_sha256: "958868ac19e1a4991432517ebbbd3a37f265b36f061b42c8f1f827b83f0d6df6"
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+
+dependency_evidence:
+  p10_t08:
+    status: "qualifying_completed"
+    completion_path: "research_control/tasks/RT-20260722-001/jobs/completions/AJC-AJ-RT-20260722-001-001.yaml"
+    completion_sha256: "e1743f1c5ddf2d4a401c90effda5493e34fc52021de76b3507ec8da884941e5f"
+  p13_t02:
+    status: "qualifying_completed_and_checkpointed"
+    completion_path: "research_control/tasks/RT-20260801-007/jobs/completions/AJC-AJ-RT-20260801-007-001.yaml"
+    completion_sha256: "4d91e8b75dd0271669c824f299742714aa180a58d39f2cde152909e0cf4b058f"
+    recovery_completion_path: "research_control/tasks/RT-20260801-008/jobs/completions/AJC-AJ-RT-20260801-008-001.yaml"
+    recovery_completion_sha256: "a1643e270a206d52d6cfcfc778e5e2bb901e69f3e8ce76842d00c77e3e6ef06c"
+    checkpoint_commit: "105cb79bf7413ce67c67b700d1b17e069b2b24c7"
+    current_head_descendant: "1862241f210e27945fae7114fa471c6441030967"
+
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  candidate_family: "not_applicable"
+  assumption_delta:
+    - "No scientific assumption changes; the packet changes generated-report provenance and validation only."
+    - "Renderer values remain derived from the same canonical tracked sources."
+  materiality_basis: "Implements the dependency-ready P13-T07 operational freshness invariant after planner-authoritative cutover."
+  source_basis:
+    - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+    - "research_control/handoffs/handoff-0937.yaml"
+    - "research_control/tasks/RT-20260721-007/artifacts/v21_generated_view_contract.md"
+  expected_artifact_paths:
+    - "research_control/tasks/RT-20260801-011/artifacts/p13_t07_generated_report_freshness_receipt.json"
+  project_system_justification: "The packet implements renderer metadata, a deterministic stale-output validator, focused fixtures, tests, and CI-visible gate behavior only."
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  expected_durable_outputs:
+    physics: []
+    project_system:
+      - "live generated-report freshness metadata schema and inventory"
+      - "four renderer integrations and deterministic stale-output validator"
+      - "focused stale-hash and commit-lag fixtures"
+      - "one governed checkpoint"
+  acceptance_criteria:
+    physics: []
+    project_system:
+      - "fresh render passes for every live report class"
+      - "mutated source-hash fixture fails closed"
+      - "a second unrefreshed commit exceeds maximum lag and fails closed"
+      - "existing planner-authoritative CI freshness selection observes the failure"
+      - "all source hashes resolve and generated views remain non-authoritative"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: false
+    exception_id: ""
+    evidence_path: ""
+    evidence_sha256: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0937"
+  source_handoff_path: "research_control/handoffs/handoff-0937.yaml"
+  source_handoff_sha256: "7c7a42def3222cff17da8cbc8215eed78794d80180cc3b4cfabe8a007728a64f"
+  selected_plan_task_id: "P13-T07"
+  guard_outcome: "all_ready_science_blocked_exception"
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1109
+    relationship_row_count: 5606
+    semantic_row_count: 1109
+    vault_row_count: 1109
+    local_cache_only_warning_count: 0
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  authority_note: "Generated wiki, Obsidian, semantic, relationship, SQLite, and .local retrieval state is not authority and is navigation only; canonical tracked sources and validators govern this packet."
+
+allowed_read_paths:
+  - "SOUL.md"
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research-goal/**"
+  - ".codex/skills/continue-research-continue-goal/**"
+  - ".codex/skills/continue-research/**"
+  - ".codex/skills/improve-project-system/**"
+  - ".codex/skills/project-memory-system/**"
+  - ".agents/roles/research_ops/**"
+  - ".agents/schemas/**"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  - ".github/workflows/project-control-validation.yml"
+  - ".github/workflows/scheduled-full-validation.yml"
+  - "pyproject.toml"
+  - "requirements.txt"
+  - "requirements-dev.txt"
+  - "research_control/design/**"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0937.yaml"
+  - "research_control/handoffs/handoff-0937.md"
+  - "research_control/tasks/RT-20260721-007/**"
+  - "research_control/tasks/RT-20260721-009/**"
+  - "research_control/tasks/RT-20260722-001/**"
+  - "research_control/tasks/RT-20260801-007/**"
+  - "research_control/tasks/RT-20260801-008/**"
+  - "research_control/tasks/RT-20260801-009/**"
+  - "research_control/tasks/RT-20260801-010/**"
+  - "scripts/project_control/**"
+  - "scripts/research_control/**"
+  - "scripts/validation/**"
+  - "tests/**"
+  - "registries/**"
+  - ".local/validation-receipts/**"
+
+allowed_write_paths:
+  - "scripts/research_control/generated_report_provenance.py"
+  - "scripts/research_control/validate_generated_report_freshness.py"
+  - "scripts/research_control/render_current_frontier.py"
+  - "scripts/research_control/render_compact_current_frontier_v16.py"
+  - "scripts/research_control/validate_compact_current_frontier_v16.py"
+  - "scripts/research_control/render_task_index.py"
+  - "scripts/research_control/validate_task_index.py"
+  - "scripts/research_control/render_dependency_graph.py"
+  - "tests/test_generated_report_freshness.py"
+  - "tests/test_render_current_frontier.py"
+  - "tests/test_render_compact_current_frontier_v16.py"
+  - "tests/test_validate_compact_current_frontier_v16.py"
+  - "tests/test_task_index_renderer.py"
+  - "tests/test_render_dependency_graph.py"
+  - "research_control/tasks/RT-20260801-011/**"
+  - "research_control/handoffs/handoff-0938.yaml"
+  - "research_control/handoffs/handoff-0938.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+
+allowed_generated_paths:
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "FOLDER_MAP.md"
+
+forbidden_paths:
+  - ".agents/**"
+  - ".codex/skills/**"
+  - ".github/**"
+  - "ontology/**"
+  - "legacy_ontology/**"
+  - "manuscripts/**"
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "registries/METRIC_USE_LEDGER.csv"
+  - "research_control/tasks/RT-20260721-007/**"
+  - "research_control/tasks/RT-20260721-009/**"
+  - "research_control/tasks/RT-20260722-001/**"
+  - "research_control/tasks/RT-20260801-007/**"
+  - "research_control/tasks/RT-20260801-008/**"
+  - "research_control/tasks/RT-20260801-009/**"
+  - "research_control/tasks/RT-20260801-010/**"
+
+allowed_source_classes:
+  - "validator"
+  - "test"
+  - "project_control_renderer"
+  - "task_control_record"
+  - "project_control_receipt"
+  - "registry"
+  - "generated_noncanonical_derivative"
+
+forbidden_source_classes:
+  - "canonical_ontology"
+  - "benchmark_source"
+  - "science_draft"
+  - "scientific_ledger"
+  - "physics_claim_promotion"
+  - "Gate_Chair_verdict"
+  - "proof_publication_push_or_completed_derivation_authority"
+
+approved_commands:
+  - ".venv/bin/python -m unittest -v tests.test_generated_report_freshness"
+  - ".venv/bin/python scripts/research_control/validate_generated_report_freshness.py --json"
+  - ".venv/bin/python -m scripts.validation.cli run --profile affected --paths <changed-paths>"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260801-011-001"
+  - "git diff --check"
+
+stop_conditions:
+  - "Any renderer changes a scientific value rather than reflecting the same canonical source."
+  - "Any write path falls outside the exact AgentJob allowlist."
+  - "A stale source-hash or over-lag fixture is accepted."
+  - "Affected validation or the sole governed checkpoint fails."
+  - "The implementation would require a human policy decision or protected authority."

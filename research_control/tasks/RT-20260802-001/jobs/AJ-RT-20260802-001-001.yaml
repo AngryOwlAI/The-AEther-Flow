@@ -1,0 +1,344 @@
+job_id: "AJ-RT-20260802-001-001"
+task_id: "RT-20260802-001"
+decision_id: "DDR-20260802-001"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260802-001"
+status: "completed"
+validation_status: "FAIL"
+created_at: "2026-08-02T06:13:01Z"
+started_at: "2026-08-02T06:13:01Z"
+completed_at: "2026-08-02T06:21:31Z"
+completion_path: "research_control/tasks/RT-20260802-001/jobs/completions/AJC-AJ-RT-20260802-001-001.yaml"
+requires_human_gate: false
+human_authorization_note: "Generation 214 authorizes exactly one improve-project-system invocation for the exact checkpoint-planner safe-authority-plan recovery route and at most one fresh governed checkpoint. It authorizes no P13-T08 execution, push, publication, workflow dispatch, or scientific promotion."
+objective: "Recognize exactly two existing governed P13-T07 renderer sources through validator_code, preserve fail-closed unknown-path behavior, prove the exact cumulative manifest planner-safe, rerun required validation, and invoke at most one fresh cumulative checkpoint."
+target_derivation_milestone: "source_equivalence_eqsrc"
+milestone_burden: "Project-system classifier and checkpoint recovery only; no scientific derivation burden advances."
+route_label: "recover_p13_t07_checkpoint_planner_safe_authority_plan_preflight_v1"
+route_reason: "generation_213_checkpoint_planner_safe_authority_plan_recovery_required"
+immutable_route_sha256: "5bf54c3589257d89e859bd03167110fb5084e139e3537c38b3226d8eaf5cc91e"
+route_blocker_fingerprint: "393f7d38551848dc53b69f8be77d3be7929756cc0f047404f68b2d611cda3a54"
+inherited_manifest_sha256: "6037e9b92106f65ad5186436ff30c7e1e9187827a0a0a31c5f85b629852288e4"
+predecessor_completion_sha256: "1c2904f6f76ecafce66993bc8b34a09380ab5030e8902a8f4af29399be79ed2b"
+predecessor_recovery_receipt_sha256: "d32a02c466a2471316ccb372172b292c8fa23014917987d9ee58990697192d21"
+predecessor_full_validation_receipt_sha256: "e3d951e022415602eee160abeeb9fad7614278f2883be9cc8992a2f0567ee923"
+plan_task_id: "P13-T07"
+recovery_for_plan_task_id: "P13-T07"
+next_plan_task_id: "P13-T08"
+next_plan_task_execution_authorized: false
+project_system_change_only: true
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 214
+  passes_consumed: 192
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:214"
+  handoff_token: "7af312525acbdf9501045aaf334913c7810ef3153d874ed5"
+  relay_claim_token: "892fb42a8c88b227734ea0407d59fe71a5517ab9e1a8bf4a"
+  route_work_item_id: "P13-T07"
+  route_worker_skill: "improve-project-system"
+  route_sha256: "5bf54c3589257d89e859bd03167110fb5084e139e3537c38b3226d8eaf5cc91e"
+  route_reason: "generation_213_checkpoint_planner_safe_authority_plan_recovery_required"
+  route_strategy_id: "recover_p13_t07_checkpoint_planner_safe_authority_plan_preflight_v1"
+  route_blocker_fingerprint: "393f7d38551848dc53b69f8be77d3be7929756cc0f047404f68b2d611cda3a54"
+  route_dirty_state_manifest_sha256: "6037e9b92106f65ad5186436ff30c7e1e9187827a0a0a31c5f85b629852288e4"
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  candidate_family: "not_applicable"
+  assumption_delta:
+    - "No scientific assumption changes; this packet repairs only deterministic project-control path classification."
+    - "The P13-T07 generated-report payload and all generation-213 historical bindings remain fixed."
+  materiality_basis: "Restores checkpoint planner authority for two exact known renderer paths without weakening fail-closed behavior."
+  source_basis:
+    - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+    - "scripts/project_control/classify_project_changes.py"
+    - "research_control/tasks/RT-20260801-011/artifacts/generated_report_renderer_update_manifest_v1.json"
+    - "research_control/tasks/RT-20260801-014/jobs/completions/AJC-AJ-RT-20260801-014-001.yaml"
+  expected_artifact_paths:
+    - "research_control/tasks/RT-20260802-001/artifacts/p13_t07_checkpoint_planner_renderer_classifier_recovery_receipt.json"
+  project_system_justification: "This is deterministic classifier and checkpoint-planner recovery with no physics payload."
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  expected_durable_outputs:
+    physics: []
+    project_system:
+      - "two exact renderer validator_code bindings"
+      - "focused fail-closed classifier and planner regression coverage"
+      - "one task-local recovery receipt"
+      - "one governed checkpoint outcome"
+  acceptance_criteria:
+    physics: []
+    project_system:
+      - "the two exact renderer paths no longer use unknown_governed_path"
+      - "an unrelated unrecognized renderer remains unknown_governed_path and selects full validation"
+      - "the exact cumulative transaction produces a safe checkpoint authority plan"
+      - "all required precheckpoint validation passes before the sole checkpoint attempt"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: false
+    exception_id: ""
+    evidence_path: ""
+    evidence_sha256: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0937"
+  source_handoff_path: "research_control/handoffs/handoff-0937.yaml"
+  source_handoff_sha256: "7c7a42def3222cff17da8cbc8215eed78794d80180cc3b4cfabe8a007728a64f"
+  selected_plan_task_id: "P13-T07"
+  guard_outcome: "all_ready_science_blocked_exception"
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1109
+    relationship_row_count: 5606
+    semantic_row_count: 1109
+    vault_row_count: 1109
+    blocking_warning_count: 0
+    local_cache_only_warning_count: 3
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  authority_note: "Generated wiki Obsidian semantic relationship SQLite and .local retrieval surfaces are navigation only and not authority; tracked sources exact hashes and validators govern this recovery."
+
+allowed_read_paths:
+  - "SOUL.md"
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research-continue-goal/SKILL.md"
+  - ".codex/skills/improve-project-system/SKILL.md"
+  - ".agents/roles/research_ops/project-system-director.v0.2.0.md"
+  - ".agents/roles/research_ops/validator-engineer.v0.2.0.md"
+  - ".agents/schemas/**"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  - "research_control/handoffs/**"
+  - "research_control/tasks/RT-20260801-011/**"
+  - "research_control/tasks/RT-20260801-012/**"
+  - "research_control/tasks/RT-20260801-013/**"
+  - "research_control/tasks/RT-20260801-014/**"
+  - "research_control/tasks/RT-20260802-001/**"
+  - "scripts/project_control/**"
+  - "scripts/research_control/**"
+  - "scripts/validation/**"
+  - "tests/**"
+  - "registries/**"
+
+allowed_write_paths:
+  - "scripts/project_control/classify_project_changes.py"
+  - "tests/test_project_change_classifier.py"
+  - "research_control/tasks/RT-20260801-011/**"
+  - "research_control/tasks/RT-20260801-012/**"
+  - "research_control/tasks/RT-20260801-013/**"
+  - "research_control/tasks/RT-20260801-014/**"
+  - "research_control/tasks/RT-20260802-001/**"
+  - "research_control/handoffs/handoff-0938.yaml"
+  - "research_control/handoffs/handoff-0938.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "registries/**"
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "research_control/tasks/RT-20260721-007/artifacts/validate_v21_event_store_architecture.py"
+  - "research_control/tasks/RT-20260722-003/artifacts/validate_v21_p10_migration_readiness.py"
+  - "scripts/research_control/generated_report_provenance.py"
+  - "scripts/research_control/render_compact_current_frontier_v16.py"
+  - "scripts/research_control/render_current_frontier.py"
+  - "scripts/research_control/render_dependency_graph.py"
+  - "scripts/research_control/render_task_index.py"
+  - "scripts/research_control/validate_compact_current_frontier_v16.py"
+  - "scripts/research_control/validate_generated_report_freshness.py"
+  - "scripts/research_control/validate_research_control.py"
+  - "scripts/research_control/validate_task_index.py"
+  - "tests/support/research_control_shards.py"
+  - "tests/test_event_store_architecture.py"
+  - "tests/test_generated_report_freshness.py"
+  - "tests/test_research_control.py"
+  - "tests/test_v21_p10_migration_readiness.py"
+
+allowed_generated_paths:
+  - "FOLDER_MAP.md"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "registries/CONTENT_SEMANTIC_REGISTRY.csv"
+  - "registries/CONTENT_SEMANTIC_REGISTRY.meta.json"
+  - "registries/FILE_OBJECT_REGISTRY.csv"
+  - "registries/FILE_OBJECT_REGISTRY.meta.json"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY.csv"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY.meta.json"
+  - "registries/OBSIDIAN_VAULT_REGISTRY.csv"
+  - "registries/OBSIDIAN_VAULT_REGISTRY.meta.json"
+  - "registries/WIKI_ARTIFACT_REGISTRY.csv"
+  - "registries/WIKI_ARTIFACT_REGISTRY.meta.json"
+
+forbidden_paths:
+  - "ontology/**"
+  - "legacy_ontology/**"
+  - "manuscripts/**"
+  - "tex/**"
+  - "html/**"
+  - ".codex/skills/**"
+  - ".agents/**"
+  - ".github/**"
+  - "Makefile"
+  - "research_control/handoffs/handoff-0937.yaml"
+  - "research_control/handoffs/handoff-0937.md"
+  - "research_control/design/gr_derivation_burden_map.md"
+
+forbidden_source_classes:
+  - "canonical_ontology_write"
+  - "science_draft_write"
+  - "source_law_adoption"
+  - "physics_claim_promotion"
+  - "benchmark_promotion"
+  - "gate_chair_verdict"
+  - "completed_derivation_claim"
+  - "generated_derivative_authority"
+  - "renderer_semantic_change"
+
+allowed_source_classes:
+  - "project_control_validator"
+  - "test"
+  - "task_control_record"
+  - "registry"
+  - "generated_memory_derivative"
+  - "prior_authorized_transaction_checkpoint"
+
+approved_commands:
+  - ".venv/bin/python -m py_compile scripts/project_control/classify_project_changes.py"
+  - ".venv/bin/python -m unittest -v tests.test_project_change_classifier tests.test_checkpoint_validation_planner"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json --paths scripts/research_control/render_current_frontier.py scripts/research_control/render_task_index.py"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+  - ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --job-id AJ-RT-20260802-001-001 --json-summary"
+  - ".venv/bin/python scripts/research_control/task_taxonomy.py --validate-repository --json"
+  - ".venv/bin/python scripts/research_control/validate_generated_report_freshness.py --json"
+  - ".venv/bin/python -m scripts.validation.cli run --profile full --paths <changed-paths>"
+  - ".venv/bin/python -m unittest discover -s tests"
+  - "git diff --check"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260802-001-001"
+
+required_validators:
+  - "classifier_syntax"
+  - "focused_renderer_classifier_regression"
+  - "checkpoint_planner_regression"
+  - "exact_renderer_classification"
+  - "unrelated_unknown_path_negative_control"
+  - "current_tree_classification"
+  - "safe_checkpoint_plan_preflight"
+  - "project_improvement_signals"
+  - "documentation_impact"
+  - "claim_language_changed"
+  - "research_control_diff"
+  - "task_taxonomy_repository"
+  - "generated_report_freshness"
+  - "memory_sync"
+  - "memory_core"
+  - "full_validation_profile"
+  - "repository_test_suite"
+  - "git_diff_check"
+  - "checkpoint_transaction"
+
+expected_outputs:
+  - "scripts/project_control/classify_project_changes.py"
+  - "tests/test_project_change_classifier.py"
+  - "research_control/tasks/RT-20260802-001/00_TASK.yaml"
+  - "research_control/tasks/RT-20260802-001/DDR-20260802-001.md"
+  - "research_control/tasks/RT-20260802-001/artifacts/p13_t07_checkpoint_planner_renderer_classifier_recovery_receipt.json"
+  - "research_control/tasks/RT-20260802-001/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260802-001/roles/validator-engineer@0.2.0--RT-20260802-001.yaml"
+  - "research_control/tasks/RT-20260802-001/jobs/completions/AJC-AJ-RT-20260802-001-001.yaml"
+
+claim_boundary: "CB-PS-P13-T07-CHECKPOINT-PLANNER-RENDERER-CLASSIFIER-RECOVERY-001"
+resolves_signal_routing: false
+documentation_impact_id: "DI-RT-20260802-001-001"
+completion_id: "AJC-AJ-RT-20260802-001-001"

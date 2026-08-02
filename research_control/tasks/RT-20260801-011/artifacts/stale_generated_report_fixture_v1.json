@@ -1,0 +1,19 @@
+{
+  "schema_id": "stale_generated_report_fixture_v1",
+  "plan_task_id": "P13-T07",
+  "fixtures": [
+    {
+      "fixture_id": "mutated_primary_source_hash",
+      "mutation": "replace one embedded SHA-256 with 64 zeroes",
+      "expected_finding_id": "generated_report_source_metadata_stale",
+      "expected_status": "FAIL"
+    },
+    {
+      "fixture_id": "second_unrefreshed_commit",
+      "mutation": "advance HEAD to two commits after the embedded source commit without refreshing metadata",
+      "expected_finding_id": "generated_report_commit_lag_exceeded",
+      "expected_status": "FAIL"
+    }
+  ],
+  "authority_boundary": "Fixtures test operational stale-view rejection only; they do not alter or evaluate scientific claims."
+}

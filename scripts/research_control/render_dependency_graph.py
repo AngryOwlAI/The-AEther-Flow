@@ -23,6 +23,7 @@ from dependency_graph_model import (  # noqa: E402
     GraphInstrumentation,
     load_graph_input_snapshot,
 )
+import generated_report_provenance as report_provenance  # noqa: E402
 
 
 SCHEMA_ID = "research_dependency_graph_v1"
@@ -35,6 +36,12 @@ AUTHORITY_NOTICE = (
 DEFAULT_JSON_PATH = "output/research_dependency_graph.json"
 DEFAULT_MARKDOWN_PATH = "wiki/indexes/research_dependency_graph.md"
 DEFAULT_DOT_PATH = "output/research_dependency_graph.dot"
+RENDERER_PATH = "scripts/research_control/render_dependency_graph.py"
+RENDERER_SHA256 = report_provenance.sha256_file(REPO_ROOT, RENDERER_PATH)
+DEFAULT_SOURCE_COMMIT = report_provenance.source_commit_from_metadata(
+    report_provenance.metadata_from_json_file(REPO_ROOT, DEFAULT_JSON_PATH),
+    report_provenance.git_head(REPO_ROOT),
+)
 
 NODE_CLASSES = {
     "accepted_scoped_object",
@@ -174,6 +181,33 @@ ROLE_EDGE = {
 
 class GraphError(RuntimeError):
     """Raised when the extracted graph violates its schema contract."""
+
+
+class DependencyGraph(dict[str, Any]):
+    """Graph mapping with render-only provenance outside the v1 graph schema."""
+
+    def __init__(self, value: dict[str, Any]) -> None:
+        super().__init__(value)
+        self.report_provenance: dict[str, Any] = {}
+
+    def serialized(self) -> dict[str, Any]:
+        return {**self, "report_provenance": self.report_provenance}
+
+    def __eq__(self, other: object) -> bool:
+        if isinstance(other, DependencyGraph):
+            return self.serialized() == other.serialized()
+        if isinstance(other, dict):
+            return self.serialized() == other
+        return False
+
+
+def graph_report_provenance(graph: dict[str, Any]) -> dict[str, Any]:
+    if isinstance(graph, DependencyGraph):
+        return graph.report_provenance
+    value = graph.get("report_provenance")
+    if isinstance(value, dict):
+        return value
+    raise GraphError("dependency graph lacks generated-report provenance")
 
 
 def repo_path(path_text: str) -> Path:
@@ -1447,6 +1481,8 @@ def build_graph(
     *,
     snapshot: GraphInputSnapshot | None = None,
     instrumentation: GraphInstrumentation | None = None,
+    source_commit: str | None = None,
+    strict_provenance: bool | None = None,
 ) -> dict[str, Any]:
     snapshot = snapshot or load_graph_input_snapshot(
         repo_root,
@@ -1475,7 +1511,7 @@ def build_graph(
     )
     add_completions(builder, jobs_by_id, snapshot)
     latest_handoff = add_handoffs(builder, snapshot)
-    graph = builder.graph()
+    graph = DependencyGraph(builder.graph())
     program_state = snapshot.yaml_payload("research_control/program_state.yaml")
     graph["route_continuity"] = {
         "program_state_path": "research_control/program_state.yaml",
@@ -1483,6 +1519,28 @@ def build_graph(
         "latest_handoff": latest_handoff,
         "authority_note": AUTHORITY_NOTICE,
     }
+    source_hashes = {
+        item["path"]: item["source_hash"]
+        for item in graph["sources"]
+        if item["source_hash"]
+    }
+    strict = repo_root.resolve() == REPO_ROOT.resolve() if strict_provenance is None else strict_provenance
+    graph.report_provenance = report_provenance.build_metadata(
+        report_class="research_dependency_graph",
+        source_commit=source_commit or DEFAULT_SOURCE_COMMIT,
+        source_hashes=source_hashes,
+        primary_source_paths=[
+            "research_control/program_state.yaml",
+            "registries/DISTANCE_TO_GR_LEDGER.csv",
+            "registries/RESEARCH_TASK_REGISTRY.csv",
+            "registries/AGENT_JOB_REGISTRY.csv",
+        ],
+        generation_time=graph["generated_at"],
+        task_count=len(registries["RESEARCH_TASK_REGISTRY.csv"]),
+        renderer_path=RENDERER_PATH,
+        renderer_sha256=RENDERER_SHA256,
+        strict=strict,
+    )
     return graph
 
 
@@ -1500,6 +1558,9 @@ def render_markdown(
     edges = graph["edges"]
     source_counts = Counter(source["source_kind"] for source in graph["sources"])
     node_counts = Counter((node["node_class"], node["state_label"]) for node in nodes)
+    provenance_lines = report_provenance.markdown_provenance_lines(
+        graph_report_provenance(graph)
+    )
     lines = [
         "<!-- generated: research_dependency_graph -->",
         "<!-- authority: generated_noncanonical -->",
@@ -1514,6 +1575,7 @@ def render_markdown(
         f"- Nodes: `{len(nodes)}`",
         f"- Edges: `{len(edges)}`",
         "",
+        *provenance_lines,
         "## Source Counts",
         "",
         "| Source kind | Count |",
@@ -1627,6 +1689,7 @@ def render_dot(
     if instrumentation is not None:
         instrumentation.record_render("dot")
     lines = [
+        report_provenance.metadata_comment(graph_report_provenance(graph)),
         "digraph research_dependency_graph {",
         "  graph [label=\"navigational_support_only\", labelloc=\"t\"];",
         "  node [shape=box];",
@@ -1655,7 +1718,8 @@ def render_json(
 ) -> str:
     if instrumentation is not None:
         instrumentation.record_render("json")
-    return json.dumps(graph, indent=2, sort_keys=True) + "\n"
+    payload = graph.serialized() if isinstance(graph, DependencyGraph) else graph
+    return json.dumps(payload, indent=2, sort_keys=True) + "\n"
 
 
 def text_sha256(text: str) -> str:
@@ -1708,18 +1772,36 @@ def check_graph_artifacts(
     dot_path: str = DEFAULT_DOT_PATH,
     instrumentation: GraphInstrumentation | None = None,
 ) -> dict[str, Any]:
+    existing_metadata = report_provenance.metadata_from_json_file(
+        REPO_ROOT, json_path
+    )
+    source_commit = report_provenance.source_commit_from_metadata(
+        existing_metadata, DEFAULT_SOURCE_COMMIT
+    )
     snapshot = load_graph_input_snapshot(
         REPO_ROOT,
         registry_paths=(f"registries/{name}" for name in REGISTRY_SPECS),
         instrumentation=instrumentation,
     )
-    graph = build_graph(REPO_ROOT, snapshot=snapshot, instrumentation=instrumentation)
+    graph = build_graph(
+        REPO_ROOT,
+        snapshot=snapshot,
+        instrumentation=instrumentation,
+        source_commit=source_commit,
+    )
     artifact_checks = {
         "json": compare_expected_text(json_path, render_json(graph, instrumentation)),
         "markdown": compare_expected_text(markdown_path, render_markdown(graph, instrumentation)),
         "dot": compare_expected_text(dot_path, render_dot(graph, instrumentation)),
     }
     fresh = all(item["fresh"] for item in artifact_checks.values())
+    provenance_validation = report_provenance.validate_metadata(
+        repo_root=REPO_ROOT,
+        observed=existing_metadata or {},
+        expected=graph_report_provenance(graph),
+        strict=True,
+    )
+    fresh = fresh and provenance_validation["status"] == "PASS"
     return {
         "status": "PASS" if fresh else "FAIL",
         "fresh": fresh,
@@ -1730,6 +1812,8 @@ def check_graph_artifacts(
         "edge_count": len(graph["edges"]),
         "artifacts": artifact_checks,
         "authority_notice": AUTHORITY_NOTICE,
+        "report_provenance": graph_report_provenance(graph),
+        "provenance_validation": provenance_validation,
     }
 
 
@@ -1758,7 +1842,7 @@ def main(argv: list[str] | None = None) -> int:
                 dot_path=args.dot_path or DEFAULT_DOT_PATH,
                 instrumentation=instrumentation,
             )
-        except GraphError as exc:
+        except (GraphError, report_provenance.GeneratedReportProvenanceError) as exc:
             print(f"dependency graph freshness check failed: {exc}", file=sys.stderr)
             return 1
         if args.stdout:
@@ -1777,8 +1861,24 @@ def main(argv: list[str] | None = None) -> int:
             registry_paths=(f"registries/{name}" for name in REGISTRY_SPECS),
             instrumentation=instrumentation,
         )
-        graph = build_graph(REPO_ROOT, snapshot=snapshot, instrumentation=instrumentation)
-    except GraphError as exc:
+        is_write = bool(args.json_path or args.markdown_path or args.dot_path)
+        existing_metadata = report_provenance.metadata_from_json_file(
+            REPO_ROOT, args.json_path or DEFAULT_JSON_PATH
+        )
+        source_commit = (
+            report_provenance.git_head(REPO_ROOT)
+            if is_write
+            else report_provenance.source_commit_from_metadata(
+                existing_metadata, DEFAULT_SOURCE_COMMIT
+            )
+        )
+        graph = build_graph(
+            REPO_ROOT,
+            snapshot=snapshot,
+            instrumentation=instrumentation,
+            source_commit=source_commit,
+        )
+    except (GraphError, report_provenance.GeneratedReportProvenanceError) as exc:
         print(f"dependency graph extraction failed: {exc}", file=sys.stderr)
         return 1
     if args.json_path:

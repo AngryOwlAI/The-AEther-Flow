@@ -40,6 +40,9 @@ CHECKED_FAILURE_MODES = [
     "authority_warning_missing",
     "yaml_json_mismatch",
     "live_snapshot_mismatch",
+    "generated_report_source_metadata_stale",
+    "generated_report_source_commit_invalid",
+    "generated_report_commit_lag_exceeded",
 ]
 
 
@@ -428,7 +431,10 @@ def build_report(
     live_snapshot: dict[str, Any] | None = None
     try:
         live_snapshot = renderer.build_snapshot(repo_root)
-    except renderer.CompactFrontierError as exc:
+    except (
+        renderer.CompactFrontierError,
+        renderer.report_provenance.GeneratedReportProvenanceError,
+    ) as exc:
         append_error(errors, "live_snapshot_error", f"could not build live compact snapshot: {exc}")
 
     primary_payload = json_payload if json_payload is not None else yaml_payload
@@ -459,11 +465,37 @@ def build_report(
     if primary_payload is not None and live_snapshot is not None:
         compare_active_state(primary_payload, live_snapshot, errors)
         compare_next_route(primary_payload, live_snapshot, errors)
+        provenance = primary_payload.get("report_provenance")
+        if not isinstance(provenance, dict):
+            provenance_validation = {
+                "status": "FAIL",
+                "findings": [
+                    {
+                        "finding_id": "generated_report_source_metadata_missing",
+                        "message": "Compact frontier lacks embedded generated-report provenance.",
+                    }
+                ],
+            }
+        else:
+            provenance_validation = renderer.report_provenance.validate_metadata(
+                repo_root=repo_root,
+                observed=provenance,
+                expected=live_snapshot["report_provenance"],
+                strict=repo_root == REPO_ROOT,
+            )
+        for finding in provenance_validation["findings"]:
+            append_error(errors, finding["finding_id"], finding["message"])
         expected_yaml, expected_json, _ = renderer.rendered_texts(live_snapshot)
         if yaml_path.exists() and yaml_path.read_text(encoding="utf-8") != expected_yaml:
             append_error(errors, "yaml_live_mismatch", "compact YAML output is stale relative to tracked state")
         if json_path.exists() and json_path.read_text(encoding="utf-8") != expected_json:
             append_error(errors, "json_live_mismatch", "compact JSON output is stale relative to tracked state")
+
+    if primary_payload is None or live_snapshot is None:
+        provenance_validation = {
+            "status": "FAIL",
+            "findings": [],
+        }
 
     status = "PASS" if not errors else "FAIL"
     return {
@@ -474,6 +506,7 @@ def build_report(
         "checked_failure_modes": CHECKED_FAILURE_MODES,
         "yaml_path": yaml_rel_path,
         "json_path": json_rel_path,
+        "provenance_validation": provenance_validation,
         "snapshot_only_not_authority": bool(
             primary_payload
             and isinstance(primary_payload.get("authority_warning"), dict)

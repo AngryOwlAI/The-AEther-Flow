@@ -1,0 +1,56 @@
+schema_id: "project_control_validation_blocker_v1"
+blocker_id: "BLOCKER-RT-20260801-011-AFFECTED-DOCUMENTATION-REGISTRY-001"
+task_id: "RT-20260801-011"
+job_id: "AJ-RT-20260801-011-001"
+plan_task_id: "P13-T07"
+status: "active_blocking"
+failure_class: "validation_failure"
+created_at: "2026-08-02T02:10:35Z"
+failed_command: ".venv/bin/python -m scripts.validation.cli run --profile affected"
+requested_profile: "affected"
+effective_profile: "full"
+profile_escalation_reason: "The new shared provenance helper was classified as unknown_governed_path, so planner-authoritative affected validation conservatively escalated to full."
+exit_code: 1
+failed_gate_id: "documentation_impact"
+failed_gate_status: "FAIL"
+finding_count: 1
+finding:
+  code: "documentation_impact_error"
+  record_path: "research_control/tasks/RT-20260801-011/documentation_impact.yaml"
+  message: "reason_codes missing classifier reason documentation_registry_changed"
+root_cause: "The planner memory_sync gate updated registries/MARKDOWN_SOURCE_REGISTRY.csv before documentation-impact validation, legitimately adding documentation_registry_changed to the live classifier result after the pre-run task record had been validated."
+implementation_state:
+  four_live_report_local_validation_before_broad_profile: "PASS"
+  negative_fixture_count: 2
+  negative_fixture_status: "PASS_EXPECTED_FAILURES_OBSERVED"
+  focused_test_count: 49
+  focused_test_status: "PASS"
+  affected_or_full_acceptance_status: "FAIL"
+  checkpoint_invoked: false
+  checkpoint_invocation_count: 0
+local_diagnostic_receipts:
+  authority: "diagnostic_only_not_tracked_transaction_evidence"
+  planner_receipt_path: ".local/validation-receipts/a84904b1636216bf5b93c66debde34fcb76d220134913d32b91f810d41c90f69/RUN-2b9cbf5b4ba15198/receipt.json"
+  planner_receipt_sha256: "3dae53ec7d1209e981bc5eef4b62cb7629e5fb3f83f7bb3e49bbaf6b78d2f8ef"
+  gate_stdout_path: ".local/validation-receipts/a84904b1636216bf5b93c66debde34fcb76d220134913d32b91f810d41c90f69/RUN-2b9cbf5b4ba15198/gates/0003-documentation_impact.stdout"
+  gate_stdout_sha256: "e01ac4116f3e0016b40b391a6734890d7927bda17ce1c8fc00c27ed7af15bb2d"
+required_recovery:
+  strategy_id: "recover_p13_t07_documentation_registry_reason_and_checkpoint_v1"
+  worker_skill: "improve-project-system"
+  work_item_id: "P13-T07"
+  objective: "In one fresh generation, add the exact missing documentation_registry_changed reason to the P13-T07 documentation-impact record, preserve the implemented renderer payload, regenerate governed derivatives, rerun affected validation, and invoke at most one checkpoint only after PASS."
+  materially_distinct_from_generation_210: true
+  forbidden_actions:
+    - "replay generation 210 worker invocation"
+    - "weaken or skip the documentation-impact gate"
+    - "invoke the generation 210 checkpoint"
+    - "execute P13-T08 before a successful P13-T07 recovery checkpoint"
+authority_limits:
+  scientific_claims_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false
+  hosted_workflow_dispatch_authorized: false
+  checkpoint_or_validator_pass_is_scientific_proof: false

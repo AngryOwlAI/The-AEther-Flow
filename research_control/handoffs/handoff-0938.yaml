@@ -1,0 +1,277 @@
+handoff_id: "handoff-0938"
+handoff_number: 938
+task_id: "RT-20260801-011"
+decision_id: "DDR-20260801-011"
+job_id: "AJ-RT-20260801-011-001"
+completion_id: "AJC-AJ-RT-20260801-011-001"
+completion_path: "research_control/tasks/RT-20260801-011/jobs/completions/AJC-AJ-RT-20260801-011-001.yaml"
+completion_sha256: "73c309c9830078d2ef209861aad53ba2742c754c82c3748841918a2e4533404e"
+status: "repair_required"
+created_at: "2026-08-02T01:44:43Z"
+parent_handoff_id: "handoff-0937"
+plan_task_id: "P13-T07"
+source_role_id: "validator-engineer"
+source_role_version: "0.2.0"
+source_execution_role_ref: "validator-engineer@0.2.0--RT-20260801-011"
+summary: "P13-T07 implementation, four live-report checks, two negative fixtures, and 49 focused tests pass, but planner-authoritative affected validation conservatively escalated to full and failed documentation_impact because documentation_registry_changed was absent after memory synchronization changed MARKDOWN_SOURCE_REGISTRY.csv. Generation 210 stopped with no checkpoint."
+next_action: "Run one fresh bounded P13-T07 improve-project-system recovery that adds the exact missing documentation_registry_changed reason, preserves the implemented payload, regenerates governed derivatives, reruns affected validation, and invokes at most one checkpoint only after PASS."
+current_claim_boundary: "CB-PS-P13-T07-GENERATED-REPORT-FRESHNESS-001"
+loop_risk_route: "ordinary-research-packet"
+p13_t07_work_item_status: "repair_required"
+p13_t08_dependency_ready_after_checkpoint: false
+p13_t08_execution_ready_now: false
+p13_t08_executed: false
+
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260801-011"
+  latest_research_handoff_id: "handoff-0938"
+  latest_research_next_action: "Run one fresh bounded P13-T07 improve-project-system recovery that adds the exact missing documentation_registry_changed reason, preserves the implemented payload, regenerates governed derivatives, reruns affected validation, and invokes at most one checkpoint only after PASS."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+  project_improvement_sidecar_required: false
+  research_handoff_remains_authoritative: true
+
+claim_boundary:
+  allowed_next_scope: "One fresh bounded P13-T07 improve-project-system recovery may add the exact missing documentation_registry_changed reason, preserve the implemented renderer payload, regenerate governed derivatives, rerun affected validation, and invoke at most one checkpoint only after PASS."
+  completed_task: "RT-20260801-011"
+  completed_completion_path: "research_control/tasks/RT-20260801-011/jobs/completions/AJC-AJ-RT-20260801-011-001.yaml"
+  completed_completion_sha256: "73c309c9830078d2ef209861aad53ba2742c754c82c3748841918a2e4533404e"
+  source_task_id: "RT-20260801-009"
+  source_handoff_id: "handoff-0937"
+  source_handoff_path: "research_control/handoffs/handoff-0937.yaml"
+  source_handoff_sha256: "7c7a42def3222cff17da8cbc8215eed78794d80180cc3b4cfabe8a007728a64f"
+  immutable_route_sha256: "0e936dbb09f930f8889bd0b0ad5b8b5e7cf2393af67240444fe1448e96374b4d"
+  route_blocker_fingerprint: "958868ac19e1a4991432517ebbbd3a37f265b36f061b42c8f1f827b83f0d6df6"
+  result_status: "REPAIR_REQUIRED_P13_T07_DOCUMENTATION_REGISTRY_REASON"
+  failed_gate_id: "documentation_impact"
+  failed_finding: "reason_codes missing classifier reason documentation_registry_changed"
+  report_class_count: 4
+  tracked_output_count: 10
+  maximum_commit_lag: 1
+  mutated_source_fixture_rejected: true
+  second_unrefreshed_commit_rejected: true
+  p13_t05_completed: true
+  p13_t06_completed: true
+  p13_t07_completed: false
+  p13_t08_dependency_ready_after_checkpoint: false
+  p13_t08_execution_ready_now: false
+  p13_t08_executed: false
+  checkpoint_invoked: false
+  checkpoint_invocation_count: 0
+  scientific_status_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  ontology_adoption_authorized: false
+  source_law_adoption_authorized: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_performed: false
+  hosted_workflow_dispatch_performed: false
+  blocked_claims:
+    - "focused or local PASS presented as broad transaction acceptance"
+    - "generated-report freshness PASS presented as scientific evidence proof or claim authority"
+    - "P13-T08 execution before a successful P13-T07 recovery checkpoint"
+    - "publication push hosted workflow dispatch or Gate Chair authority"
+
+plan_result:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  phase_id: "P13"
+  plan_task_id: "P13-T07"
+  title: "Enforce generated-report provenance and freshness"
+  result_status: "P13_T07_DOCUMENTATION_REGISTRY_REASON_REPAIR_REQUIRED"
+  work_item_status: "repair_required"
+  recommendation_ids:
+    - "V21-R47"
+    - "V21-R49"
+    - "V21-R50"
+  p13_t08_dependency_ready_after_checkpoint: false
+  p13_t08_executed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  system_success_counts_as_physics: false
+  system_success_counts_as_distance_to_gr: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+distance_to_gr:
+  changed: false
+  effect: "none_project_system_validation_repair"
+  burden_id: "source_equivalence_eqsrc"
+  milestone: "source_equivalence_eqsrc"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "The P13-T07 validation failure and recovery route contribute no physics movement."
+  downstream_unlocked:
+    - "P13-T07_documentation_registry_reason_recovery"
+  downstream_still_blocked:
+    - "P13-T08_until_recovery_checkpoint"
+    - "Einstein equations"
+    - "exact-GR recovery"
+    - "benchmark promotion"
+
+required_next_packet:
+  task_type: "p13_t07_documentation_registry_reason_recovery"
+  plan_task_id: "P13-T07"
+  route_label: "ordinary-research-packet"
+  role_family: "process-integrity-auditor@0.1.0"
+  worker_skill: "improve-project-system"
+  strategy_id: "recover_p13_t07_documentation_registry_reason_and_checkpoint_v1"
+  objective: "Add the exact missing documentation_registry_changed reason, preserve the implemented report-provenance payload, regenerate governed derivatives, rerun affected validation, and invoke at most one checkpoint only after PASS."
+  dependency_qualification: "The P13-T07 payload is implemented and locally verified, but broad acceptance remains blocked by the exact documentation-impact reason mismatch."
+  dependency_ready_after_checkpoint: false
+  execution_ready_now: true
+  blocked_by_protected_external_evidence: false
+  executed: false
+
+selected_next_route:
+  route_id: "p13_t07_documentation_registry_reason_recovery_v1"
+  plan_task_id: "P13-T07"
+  route_label: "ordinary-research-packet"
+  role_family: "process-integrity-auditor@0.1.0"
+  worker_skill: "improve-project-system"
+  selected_next_packet_type: "p13_t07_documentation_registry_reason_recovery"
+  task_type: "p13_t07_documentation_registry_reason_recovery"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Restore exact P13-T07 documentation-impact parity before checkpointing."
+  strategy_id: "recover_p13_t07_documentation_registry_reason_and_checkpoint_v1"
+  requires_human_gate: false
+  blocked_by_protected_external_evidence: false
+  dependency_ready_after_checkpoint: false
+  execution_ready_now: true
+  p13_t05_completed: true
+  p13_t06_completed: true
+  p13_t07_completed: false
+  p13_t08_executed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  next_action: "Create one fresh bounded P13-T07 improve-project-system recovery frame."
+  source_handoff: "research_control/handoffs/handoff-0938.yaml"
+
+ordinary_route_guard:
+  schema_id: "ordinary_route_guard_evaluation_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  evaluation_id: "ORE-HANDOFF-0938"
+  ordinary_handoff_id: "handoff-0938"
+  threshold: 3
+  consecutive_project_system_tasks_before_selection: 10
+  ready_science_plan_task_ids: []
+  selected_plan_task_id: "P13-T07"
+  selected_route_class: "project_system"
+  selected_worker_skill: "improve-project-system"
+  outcome: "all_ready_science_blocked_exception"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  exception_receipt:
+    active: true
+    schema_id: "ordinary_route_exception_receipt_v1"
+    exception_id: "ORE-HANDOFF-0938-EXCEPTION-001"
+    exception_class: "all_ready_science_blocked"
+    ordinary_handoff_id: "handoff-0938"
+    ready_science_plan_task_ids: []
+    blocked_routes: []
+    authority_limits:
+      ordinary_research_handoff_authoritative: true
+      project_system_sidecar_supersedes: false
+      system_success_counts_as_physics: false
+      system_success_counts_as_distance_to_gr: false
+      scientific_status_changed: false
+      physics_promotion_authorized: false
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+active_state_boundary:
+  active_task_id: "RT-20260801-011"
+  active_job_id: "AJ-RT-20260801-011-001"
+  current_status: "p13_t07_documentation_registry_reason_repair_required"
+  source_head: "1862241f210e27945fae7114fa471c6441030967"
+  checkpoint_required: false
+  checkpoint_completed: false
+  checkpoint_invocation_count: 0
+  selected_next_plan_task_id: "P13-T07"
+  selected_next_worker_skill: "improve-project-system"
+  selected_next_role_family: "process-integrity-auditor@0.1.0"
+  selected_next_route_label: "ordinary-research-packet"
+  selected_next_strategy_id: "recover_p13_t07_documentation_registry_reason_and_checkpoint_v1"
+  selected_next_execution_ready_after_checkpoint: false
+  selected_next_execution_ready_now: true
+  selected_next_blocker: "Generation 210 failed broad documentation-impact validation and may not checkpoint; the fresh recovery must repair and revalidate first."
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 210 route identity, clean manifest, lease, effort, and one invocation validated."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The task-local receipt binds exact report manifests and both negative fixtures before broad validation."
+  post_write:
+    status: "FAIL"
+    evidence:
+      - "Planner-authoritative affected validation escalated to full and failed documentation_impact with one exact finding."
+  post_checkpoint:
+    status: "NOT_RUN"
+    evidence:
+      - "Checkpoint invocation count remains zero because the broad validation stop condition fired."
+  renderer:
+    status: "PASS_LOCAL_BEFORE_BROAD_VALIDATION"
+    evidence:
+      - "All four live report classes and ten outputs passed their focused freshness checks before the broad failure."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory synchronization completed before the downstream documentation-impact failure."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed claim-language validation preserves non-authority wording."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "project-system validation recovery only"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  publication_authorized: false
+  push_authorized: false
+  hosted_workflow_dispatch_authorized: false
+  proof_authority: false
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+project_improvement_sidecar_required: false
+checkpoint_required_before_next_route: false
+checkpoint_job_id: "none"
+legacy_validation_authorized: false
+
+handoff_authority_boundary:
+  this_handoff_authorizes:
+    - "one fresh bounded P13-T07 improve-project-system recovery packet"
+    - "at most one checkpoint in that recovery only after broad validation PASS"
+  this_handoff_does_not_authorize:
+    - "checkpointing generation 210"
+    - "replaying generation 210 worker invocation"
+    - "weakening or skipping the documentation-impact gate"
+    - "P13-T08 execution before a successful P13-T07 recovery checkpoint"
+    - "push publication mutation hosted workflow dispatch or scientific promotion"
+
+next_plan_task_id: "P13-T07"
+next_worker_skill: "improve-project-system"
+next_role_family: "process-integrity-auditor@0.1.0"
+next_route_label: "ordinary-research-packet"
+next_strategy_id: "recover_p13_t07_documentation_registry_reason_and_checkpoint_v1"
+next_plan_task_execution_ready_after_checkpoint: false
+next_plan_task_execution_ready_now: true
+next_plan_task_executed: false
+notes: "Focused freshness checks do not override the broad validation failure. Neither repair nor eventual checkpoint PASS creates scientific promotion, proof, publication, push, or completed-derivation authority."

@@ -1,0 +1,77 @@
+{
+  "schema_id": "p13_t07_checkpoint_planner_renderer_classifier_recovery_receipt_v1",
+  "status": "BLOCKED_DISTINCT_COMPACT_RENDERER_CLASSIFICATION",
+  "task_id": "RT-20260802-001",
+  "job_id": "AJ-RT-20260802-001-001",
+  "goal_id": "crg-20260720T161354Z-96bc2664ce31bfe0",
+  "generation": 214,
+  "route_sha256": "5bf54c3589257d89e859bd03167110fb5084e139e3537c38b3226d8eaf5cc91e",
+  "strategy_id": "recover_p13_t07_checkpoint_planner_safe_authority_plan_preflight_v1",
+  "inherited_manifest_sha256": "6037e9b92106f65ad5186436ff30c7e1e9187827a0a0a31c5f85b629852288e4",
+  "predecessor_completion_sha256": "1c2904f6f76ecafce66993bc8b34a09380ab5030e8902a8f4af29399be79ed2b",
+  "predecessor_recovery_receipt_sha256": "d32a02c466a2471316ccb372172b292c8fa23014917987d9ee58990697192d21",
+  "implemented_exact_bindings": [
+    {
+      "path": "scripts/research_control/render_current_frontier.py",
+      "path_family": "validator_code",
+      "unknown_governed_path": false
+    },
+    {
+      "path": "scripts/research_control/render_task_index.py",
+      "path_family": "validator_code",
+      "unknown_governed_path": false
+    }
+  ],
+  "focused_validation": {
+    "status": "PASS",
+    "test_count": 22,
+    "classifier_sha256": "72d7d8310af4216c08ee0c4593563991af37586ba54b167c5b523fe7d0a32ae7",
+    "test_sha256": "5c0d9a9edaead5a2640c1b9622f438e1e8714112a4de0d3246d80cd9e5de4b8d",
+    "unrelated_renderer_glob_admitted": false,
+    "unknown_path_fallback_preserved": true
+  },
+  "cumulative_checkpoint_plan": {
+    "status": "UNSAFE_UNKNOWN_PATH_PRESENT",
+    "planner_status": "READY",
+    "execution_authority": "manifest_planner",
+    "blocked_paths": [],
+    "unknown_paths": [
+      "scripts/research_control/render_compact_current_frontier_v16.py"
+    ],
+    "safe_authority_plan_produced": false,
+    "checkpoint_invocation_count": 0,
+    "checkpoint_staged": false,
+    "checkpoint_committed": false
+  },
+  "distinct_blocker": {
+    "failed_gate": "checkpoint_planner_preflight",
+    "failure_status": "FAIL_SAFE_AUTHORITY_PLAN_NOT_PRODUCED",
+    "failed_path": "scripts/research_control/render_compact_current_frontier_v16.py",
+    "reason": "The exact cumulative working-tree classification exposes a third P13-T07 renderer path only after preceding research-control tooling paths establish the shared reason code. The active generation-214 AgentJob permits only the two named renderer bindings, so adding the third binding would exceed its immutable authority boundary."
+  },
+  "generated_derivative_status": {
+    "compact_current_frontier": "PASS_REFRESHED",
+    "research_task_index": "STALE_AFTER_FINAL_BLOCKED_TASK_RECORDS",
+    "research_dependency_graph": "STALE_AFTER_FINAL_BLOCKED_TASK_RECORDS",
+    "checkpoint_effect": "none_not_invoked"
+  },
+  "preservation": {
+    "generation_213_replayed": false,
+    "generation_213_files_modified": false,
+    "p13_t08_executed": false,
+    "scientific_claims_changed": false,
+    "distance_to_gr_changed": false,
+    "physics_promotion_authorized": false,
+    "push_performed": false
+  },
+  "required_recovery": {
+    "worker_skill": "improve-project-system",
+    "role_family": "validator-engineer@0.2.0",
+    "strategy_id": "recover_p13_t07_compact_frontier_renderer_classifier_before_checkpoint_v1",
+    "exact_path": "scripts/research_control/render_compact_current_frontier_v16.py",
+    "preserve_generation_214_bindings": true,
+    "checkpoint_ceiling": 1,
+    "refresh_final_generated_control_views": true,
+    "p13_t08_execution_authorized": false
+  }
+}

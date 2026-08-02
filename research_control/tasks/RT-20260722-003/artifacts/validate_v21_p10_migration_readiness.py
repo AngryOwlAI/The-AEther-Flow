@@ -23,6 +23,21 @@ TASK_ID = "RT-20260722-003"
 JOB_ID = "AJ-RT-20260722-003-001"
 PLAN_TASK_ID = "P10-T09"
 CLAIM_BOUNDARY_ID = "CB-V21-P10-T09-MIGRATION-READINESS-AUDIT-001"
+HISTORICAL_BINDING_RECOVERY_RECEIPT = (
+    "research_control/tasks/RT-20260801-014/artifacts/"
+    "p10_t05_historical_renderer_binding_recovery_receipt.json"
+)
+HISTORICAL_BINDING_RECOVERY_RECEIPT_SHA256 = (
+    "d32a02c466a2471316ccb372172b292c8fa23014917987d9ee58990697192d21"
+)
+HISTORICAL_MIGRATION_SOURCE_VALIDATORS = {
+    "research_control/tasks/RT-20260721-007/artifacts/"
+    "v21_event_store_architecture_contract.json": "event_store_architecture",
+    "research_control/tasks/RT-20260721-009/artifacts/"
+    "v21_burden_definitions_v1.yaml": "burden_status",
+    "research_control/tasks/RT-20260722-002/artifacts/"
+    "artifact_refs.json": "artifact_identity",
+}
 
 RECOMMENDATION_IDS = [
     "V21-R31",
@@ -123,6 +138,65 @@ def load_json(relative: str) -> dict[str, Any]:
     if not isinstance(value, dict):
         raise AuditError(f"JSON source is not an object: {relative}")
     return value
+
+
+def sealed_source_hashes() -> dict[str, str]:
+    """Preserve the closed audit snapshot while checking current authority."""
+
+    receipt_path = REPO_ROOT / HISTORICAL_BINDING_RECOVERY_RECEIPT
+    if not receipt_path.is_file() or receipt_path.is_symlink():
+        raise AuditError("historical binding recovery receipt is missing or not regular")
+    if hashlib.sha256(receipt_path.read_bytes()).hexdigest() != (
+        HISTORICAL_BINDING_RECOVERY_RECEIPT_SHA256
+    ):
+        raise AuditError("historical binding recovery receipt hash mismatch")
+    receipt = load_json(HISTORICAL_BINDING_RECOVERY_RECEIPT)
+    if (
+        receipt.get("schema_id")
+        != "p10_t05_historical_renderer_binding_recovery_v1"
+        or receipt.get("status")
+        != "PASS_EXACT_HISTORICAL_OBSERVATION_AND_CURRENT_AUTHORITY_BOUND"
+        or receipt.get("task_id") != "RT-20260801-014"
+        or receipt.get("job_id") != "AJ-RT-20260801-014-001"
+        or receipt.get("plan_task_id") != "P13-T07"
+    ):
+        raise AuditError("historical binding recovery receipt identity mismatch")
+    boundary = receipt.get("authority_boundary")
+    if not isinstance(boundary, dict) or any(value is not False for value in boundary.values()):
+        raise AuditError("historical binding recovery authority boundary mismatch")
+
+    raw_bindings = receipt.get("migration_audit_source_bindings")
+    if not isinstance(raw_bindings, list):
+        raise AuditError("historical migration source bindings are missing")
+    bindings = {
+        str(item.get("path", "")): item
+        for item in raw_bindings
+        if isinstance(item, dict)
+    }
+    if set(bindings) != set(HISTORICAL_MIGRATION_SOURCE_VALIDATORS):
+        raise AuditError("historical migration source binding path set mismatch")
+
+    source_hashes: dict[str, str] = {}
+    for relative in SOURCE_PATHS:
+        current_sha256 = sha256_path(relative)
+        binding = bindings.get(relative)
+        if binding is None:
+            source_hashes[relative] = current_sha256
+            continue
+        historical_sha256 = binding.get("historical_sha256")
+        expected_current_sha256 = binding.get("current_sha256")
+        if (
+            binding.get("current_validator")
+            != HISTORICAL_MIGRATION_SOURCE_VALIDATORS[relative]
+            or not isinstance(historical_sha256, str)
+            or re.fullmatch(r"[0-9a-f]{64}", historical_sha256) is None
+            or not isinstance(expected_current_sha256, str)
+            or re.fullmatch(r"[0-9a-f]{64}", expected_current_sha256) is None
+            or current_sha256 != expected_current_sha256
+        ):
+            raise AuditError(f"historical migration source binding mismatch: {relative}")
+        source_hashes[relative] = historical_sha256
+    return source_hashes
 
 
 def run_json_command(command: list[str]) -> tuple[int, dict[str, Any]]:
@@ -335,7 +409,7 @@ def require_pass(
 
 
 def build_audit() -> tuple[dict[str, Any], dict[str, Any]]:
-    source_hashes = {relative: sha256_path(relative) for relative in SOURCE_PATHS}
+    source_hashes = sealed_source_hashes()
 
     status_assumption = require_pass(
         "P10-T01", "status_assumption", "status"

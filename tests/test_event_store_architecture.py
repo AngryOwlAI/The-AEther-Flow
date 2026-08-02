@@ -6,6 +6,7 @@ import shutil
 import tempfile
 import unittest
 from pathlib import Path
+from unittest import mock
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -79,6 +80,73 @@ class EventStoreArchitectureTests(unittest.TestCase):
                         repo_root=repo_root,
                     )
                 ),
+            )
+
+    def test_historical_renderer_bindings_use_exact_current_authority(self) -> None:
+        failed = self.failed_names(MODULE.validate_source_bindings(self.contract))
+        for relative, historical_sha256 in MODULE.HISTORICAL_RENDERER_SOURCE_BINDINGS.items():
+            with self.subTest(relative=relative):
+                self.assertNotEqual(historical_sha256, MODULE.sha256_file(REPO_ROOT / relative))
+                self.assertNotIn(f"source_hash::{relative}", failed)
+
+    def test_historical_renderer_binding_rejects_changed_observation(self) -> None:
+        mutated = copy.deepcopy(self.contract)
+        relative = "scripts/research_control/render_current_frontier.py"
+        binding = next(item for item in mutated["source_bindings"] if item["path"] == relative)
+        binding["sha256"] = "0" * 64
+
+        self.assertIn(
+            f"source_hash::{relative}",
+            self.failed_names(MODULE.validate_source_bindings(mutated)),
+        )
+
+    def test_historical_renderer_binding_rejects_current_source_drift(self) -> None:
+        relative = "scripts/research_control/render_current_frontier.py"
+        required_paths = (
+            MODULE.HISTORICAL_RENDERER_BINDING_RECOVERY_RECEIPT.as_posix(),
+            relative,
+            "research_control/tasks/RT-20260721-007/artifacts/"
+            "v21_event_store_architecture_contract.json",
+            "research_control/tasks/RT-20260721-007/artifacts/"
+            "v21_event_store_architecture_validation.json",
+            "research_control/tasks/RT-20260721-007/artifacts/"
+            "v21_event_store_architecture_compact_receipt.json",
+            "research_control/tasks/RT-20260801-011/artifacts/"
+            "generated_report_renderer_update_manifest_v1.json",
+            "research_control/tasks/RT-20260801-011/jobs/completions/"
+            "AJC-AJ-RT-20260801-011-001.yaml",
+            "research_control/tasks/RT-20260801-013/artifacts/"
+            "p13_t07_protected_dual_budget_accounting_recovery_receipt.json",
+        )
+        with tempfile.TemporaryDirectory() as tempdir:
+            repo_root = Path(tempdir)
+            for source_relative in required_paths:
+                destination = repo_root / source_relative
+                destination.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copy2(REPO_ROOT / source_relative, destination)
+            renderer = repo_root / relative
+            renderer.write_text(
+                renderer.read_text(encoding="utf-8") + "\n# unauthorized drift\n",
+                encoding="utf-8",
+            )
+
+            self.assertIn(
+                f"source_hash::{relative}",
+                self.failed_names(
+                    MODULE.validate_source_bindings(self.contract, repo_root=repo_root)
+                ),
+            )
+
+    def test_historical_renderer_binding_rejects_recovery_receipt_drift(self) -> None:
+        relative = "scripts/research_control/render_task_index.py"
+        with mock.patch.object(
+            MODULE,
+            "HISTORICAL_RENDERER_BINDING_RECOVERY_RECEIPT_SHA256",
+            "0" * 64,
+        ):
+            self.assertIn(
+                f"source_hash::{relative}",
+                self.failed_names(MODULE.validate_source_bindings(self.contract)),
             )
 
     def test_architecture_selection_is_exclusive(self) -> None:

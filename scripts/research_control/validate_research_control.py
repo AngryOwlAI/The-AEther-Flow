@@ -287,6 +287,31 @@ IMMUTABLE_HISTORICAL_ORDINARY_ROUTE_GUARD_COMPATIBILITY = {
     },
 }
 
+IMMUTABLE_HISTORICAL_DUAL_BUDGET_COMPLETION_COMPATIBILITY = {
+    (
+        "research_control/tasks/RT-20260801-011/jobs/completions/"
+        "AJC-AJ-RT-20260801-011-001.yaml"
+    ): {
+        "completion_sha256": "73c309c9830078d2ef209861aad53ba2742c754c82c3748841918a2e4533404e",
+        "job_path": (
+            "research_control/tasks/RT-20260801-011/jobs/"
+            "AJ-RT-20260801-011-001.yaml"
+        ),
+        "job_sha256": "9e49f04839f2dd9fb5e4f59ed08ac1eb5a524d7ef6008e6c117176c3e4f6f523",
+        "recovery_receipt_path": (
+            "research_control/tasks/RT-20260801-012/artifacts/"
+            "p13_t07_documentation_registry_reason_checkpoint_recovery_receipt.json"
+        ),
+        "recovery_receipt_sha256": (
+            "b6e65d1e296102355284e50ff2ea5999f5a971b8fb29ba4c769239170e4f5eaa"
+        ),
+        "errors": (
+            "completion missing project_system durable outputs: "
+            "['one governed checkpoint']",
+        ),
+    },
+}
+
 PHYSICS_PAYLOAD_RATIO_POLICY_ID = "physics_payload_ratio_policy_v1"
 PHYSICS_PAYLOAD_RATIO_THRESHOLD_DEFAULT = 3
 PHYSICS_PAYLOAD_RATIO_REQUIRED_TASK_TYPES = {
@@ -3716,6 +3741,91 @@ def validate_execution_roles(
     return executions
 
 
+def immutable_historical_dual_budget_completion_is_compatible(
+    path: Path,
+    job_path_text: str,
+    completion: dict[str, Any],
+    errors: list[str],
+) -> bool:
+    """Preserve one exact blocked completion without accepting its missing output."""
+
+    try:
+        relative_path = path.relative_to(REPO_ROOT).as_posix()
+    except ValueError:
+        return False
+    compatibility = IMMUTABLE_HISTORICAL_DUAL_BUDGET_COMPLETION_COMPATIBILITY.get(
+        relative_path
+    )
+    if not compatibility:
+        return False
+    if path.is_symlink() or not path.is_file():
+        return False
+    if sha256_file(path) != compatibility["completion_sha256"]:
+        return False
+    if tuple(errors) != compatibility["errors"]:
+        return False
+    if job_path_text != compatibility["job_path"]:
+        return False
+    job_path = repo_path(job_path_text)
+    if job_path.is_symlink() or not job_path.is_file():
+        return False
+    if sha256_file(job_path) != compatibility["job_sha256"]:
+        return False
+
+    if completion.get("completion_id") != "AJC-AJ-RT-20260801-011-001":
+        return False
+    if completion.get("job_id") != "AJ-RT-20260801-011-001":
+        return False
+    if completion.get("status") != "blocked":
+        return False
+    if completion.get("validation_status") != "FAIL":
+        return False
+    if str(completion.get("checkpoint_invocation_count", "")).strip() != "0":
+        return False
+    result = completion.get("result")
+    if not isinstance(result, dict) or result.get("checkpoint_invoked") is not False:
+        return False
+
+    receipt_path_text = str(compatibility["recovery_receipt_path"])
+    receipt_path = repo_path(receipt_path_text)
+    if receipt_path.is_symlink() or not receipt_path.is_file():
+        return False
+    if sha256_file(receipt_path) != compatibility["recovery_receipt_sha256"]:
+        return False
+    try:
+        receipt = json.loads(receipt_path.read_text(encoding="utf-8"))
+    except (OSError, UnicodeDecodeError, json.JSONDecodeError):
+        return False
+    if not isinstance(receipt, dict):
+        return False
+    protected_hashes = receipt.get("protected_hashes")
+    blocking_error = receipt.get("blocking_error")
+    if not isinstance(protected_hashes, dict) or not isinstance(blocking_error, dict):
+        return False
+    return (
+        receipt.get("schema_id")
+        == "p13_t07_documentation_registry_reason_checkpoint_recovery_receipt_v1"
+        and receipt.get("status") == "REPAIR_REQUIRED_NO_CHECKPOINT"
+        and receipt.get("task_id") == "RT-20260801-012"
+        and receipt.get("job_id") == "AJ-RT-20260801-012-001"
+        and receipt.get("goal_generation") == 211
+        and receipt.get("source_job_id") == "AJ-RT-20260801-011-001"
+        and receipt.get("checkpoint_invocation_count") == 0
+        and receipt.get("checkpoint_status") == "NOT_INVOKED_BROAD_VALIDATION_FAILED"
+        and receipt.get("generation_210_job_reexecuted") is False
+        and receipt.get("generation_210_payload_modified") is False
+        and receipt.get("p13_t08_executed") is False
+        and protected_hashes.get("rt011_job_sha256") == compatibility["job_sha256"]
+        and protected_hashes.get("rt011_completion_sha256")
+        == compatibility["completion_sha256"]
+        and blocking_error.get("path") == relative_path
+        and blocking_error.get("message")
+        == "dual-budget completion missing project_system durable output one governed checkpoint"
+        and blocking_error.get("protected_predecessor_bytes_preserved") is True
+        and blocking_error.get("requires_distinct_recovery") is True
+    )
+
+
 def validate_completion(report: ValidationReport, job_row: dict[str, str], path: Path) -> None:
     try:
         completion = load_yaml(path)
@@ -3752,10 +3862,23 @@ def validate_completion(report: ValidationReport, job_row: dict[str, str], path:
         completion,
         created_at=job_row.get("created_at", ""),
     )
-    for error in dual_budget["errors"]:
-        report.error(
-            f"{path.relative_to(REPO_ROOT).as_posix()}: dual-budget completion: {error}"
+    dual_budget_errors = [str(error) for error in dual_budget["errors"]]
+    if immutable_historical_dual_budget_completion_is_compatible(
+        path,
+        job_path_text,
+        completion,
+        dual_budget_errors,
+    ):
+        report.warn(
+            f"{path.relative_to(REPO_ROOT).as_posix()}: dual-budget completion: "
+            "immutable blocked completion remains nonqualifying; exact recovery "
+            "receipt preserves the truthful zero-checkpoint outcome"
         )
+    else:
+        for error in dual_budget_errors:
+            report.error(
+                f"{path.relative_to(REPO_ROOT).as_posix()}: dual-budget completion: {error}"
+            )
     validate_parent_child_completion(report, job_row, job_contract, completion, path)
     validate_loop_control_completion(report, job_row, job_contract, completion, path)
     validate_mathematical_decisiveness_completion(

@@ -1,0 +1,81 @@
+schema_id: "generated_report_freshness_metadata_schema_v1"
+policy_id: "p13_t07_live_generated_report_freshness_v1"
+status: "active"
+authority: "project_control"
+plan_task_id: "P13-T07"
+recommendation_ids:
+  - "V21-R47"
+  - "V21-R49"
+  - "V21-R50"
+purpose: "Bind every live authoritative-facing generated report to exact tracked source bytes, a source commit, a source-derived generation time, the tracked task count, and a fail-closed maximum commit lag."
+metadata_schema:
+  required_fields:
+    - "schema_id"
+    - "policy_id"
+    - "report_class"
+    - "source_commit"
+    - "source_hashes"
+    - "source_manifest_sha256"
+    - "source_path_count"
+    - "generation_time"
+    - "task_count"
+    - "maximum_commit_lag"
+    - "freshness_status"
+    - "generated_view_is_authority"
+    - "physics_promotion_authorized"
+    - "proof_authority"
+  source_commit_format: "full_lowercase_git_sha1"
+  source_hash_format: "full_lowercase_sha256"
+  source_manifest_rule: "sha256 over UTF-8 lines sorted as repo-relative-path=sha256 with one terminal newline"
+  generation_time_rule: "latest tracked source timestamp already consumed by the report renderer; never wall clock"
+  task_count_rule: "count of tracked research-task registry rows represented by the live transaction"
+  freshness_status_at_render: "fresh_at_generation"
+source_freshness_rule: "Any mismatch between embedded exact source hashes or source-manifest hash and current tracked bytes is stale immediately, independent of commit lag."
+commit_lag_rule: "The embedded source commit must be an ancestor of HEAD. Lag is git rev-list --count source_commit..HEAD and must not exceed the report-class maximum."
+checkpoint_lag_rationale: "A governed report is rendered against the pre-checkpoint parent and first becomes visible in the checkpoint commit, so one commit is the smallest nonzero post-checkpoint allowance."
+report_classes:
+  current_frontier:
+    live_authoritative_facing: true
+    maximum_commit_lag: 1
+    output_paths:
+      - "research_control/current_frontier.md"
+    blocking_gate: "current_frontier_freshness"
+  compact_current_frontier:
+    live_authoritative_facing: true
+    maximum_commit_lag: 1
+    output_paths:
+      - "output/compact_current_frontier_v16.yaml"
+      - "output/compact_current_frontier_v16.json"
+      - "wiki/indexes/compact_current_frontier_v16.md"
+    blocking_gate: "compact_frontier_freshness"
+  research_task_index:
+    live_authoritative_facing: true
+    maximum_commit_lag: 1
+    output_paths:
+      - "research_control/tasks/TASK_INDEX.csv"
+      - "research_control/tasks/TASK_INDEX.md"
+      - "wiki/indexes/research_control_task_index.md"
+    blocking_gate: "task_index_freshness"
+  research_dependency_graph:
+    live_authoritative_facing: true
+    maximum_commit_lag: 1
+    output_paths:
+      - "output/research_dependency_graph.json"
+      - "output/research_dependency_graph.dot"
+      - "wiki/indexes/research_dependency_graph.md"
+    blocking_gate: "dependency_graph_freshness"
+excluded_surfaces:
+  claim_graph_v1:
+    reason: "Historical P12 pilot projection with fixed historical source scope; its existing source-hash and byte-drift gate remains authoritative for that pilot."
+  p10_t08_task_local_current_burden_status:
+    reason: "Immutable task-local transaction evidence rather than the live current-state surface; current frontier and compact frontier are the live consumers."
+  local_caches:
+    path_prefix: ".local/"
+    reason: "Disposable retrieval and validation state is never tracked report authority."
+authority_limits:
+  generated_view_is_authority: false
+  scientific_claims_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  validator_pass_is_scientific_proof: false

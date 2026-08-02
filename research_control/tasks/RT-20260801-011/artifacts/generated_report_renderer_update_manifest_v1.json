@@ -1,0 +1,95 @@
+{
+  "schema_id": "generated_report_renderer_update_manifest_v1",
+  "status": "implemented_pending_final_validation",
+  "task_id": "RT-20260801-011",
+  "job_id": "AJ-RT-20260801-011-001",
+  "plan_task_id": "P13-T07",
+  "policy_path": "research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml",
+  "policy_sha256": "dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3",
+  "maximum_commit_lag": 1,
+  "exact_source_byte_drift_fails_immediately": true,
+  "report_classes": [
+    {
+      "report_class": "current_frontier",
+      "renderer_path": "scripts/research_control/render_current_frontier.py",
+      "renderer_sha256": "ebbeddc0d5b07bc5130ce093053891a376a264c1d029019cefa7de756697770d",
+      "output_paths": [
+        "research_control/current_frontier.md"
+      ],
+      "blocking_gate_id": "current_frontier_freshness",
+      "blocking_command": "render_current_frontier.py --check"
+    },
+    {
+      "report_class": "compact_current_frontier",
+      "renderer_path": "scripts/research_control/render_compact_current_frontier_v16.py",
+      "renderer_sha256": "36fab56791487f690c7fd31ef036a1dba82d03a66beddefac5a21baf77ab10c2",
+      "output_paths": [
+        "output/compact_current_frontier_v16.yaml",
+        "output/compact_current_frontier_v16.json",
+        "wiki/indexes/compact_current_frontier_v16.md"
+      ],
+      "blocking_gate_id": "compact_frontier_freshness",
+      "blocking_command": "validate_compact_current_frontier_v16.py --json"
+    },
+    {
+      "report_class": "research_task_index",
+      "renderer_path": "scripts/research_control/render_task_index.py",
+      "renderer_sha256": "7c28b13a1f9843a300ce16bff2c09801549209927a41872efc02a6d0bfc0a023",
+      "output_paths": [
+        "research_control/tasks/TASK_INDEX.csv",
+        "research_control/tasks/TASK_INDEX.md",
+        "wiki/indexes/research_control_task_index.md"
+      ],
+      "blocking_gate_id": "task_index_freshness",
+      "blocking_command": "validate_task_index.py --json"
+    },
+    {
+      "report_class": "research_dependency_graph",
+      "renderer_path": "scripts/research_control/render_dependency_graph.py",
+      "renderer_sha256": "6fdbe02623855697110263a90bbfbbd9a223ff636f320df497593fce3f9bef39",
+      "output_paths": [
+        "output/research_dependency_graph.json",
+        "output/research_dependency_graph.dot",
+        "wiki/indexes/research_dependency_graph.md"
+      ],
+      "blocking_gate_id": "dependency_graph_freshness",
+      "blocking_command": "render_dependency_graph.py --check"
+    }
+  ],
+  "shared_implementation": {
+    "provenance_helper_path": "scripts/research_control/generated_report_provenance.py",
+    "provenance_helper_sha256": "af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c",
+    "cross_report_validator_path": "scripts/research_control/validate_generated_report_freshness.py",
+    "cross_report_validator_sha256": "895e848075baa19afb88cf9c01ab98873ebd2df206ea7b214a89eb8d71d2a140",
+    "task_validator_path": "research_control/tasks/RT-20260801-011/artifacts/validate_p13_t07_generated_report_freshness.py",
+    "task_validator_sha256": "19284200c7344962140cc711683987a83e2a3736bfc6db492ca47ecd48288c86",
+    "fixture_path": "research_control/tasks/RT-20260801-011/artifacts/stale_generated_report_fixture_v1.json",
+    "fixture_sha256": "85a787a6a8217ae45f7dffd896e294445f8512cdac524433e6249b0c7b24fcae",
+    "focused_test_path": "tests/test_generated_report_freshness.py",
+    "focused_test_sha256": "6a11f0681dae3665064d4d658f1d98610c2a12363d9260a4664c365d95ba5d69"
+  },
+  "planner_binding": {
+    "manifest_path": "research_control/design/validation_gate_manifest_v1.yaml",
+    "manifest_sha256": "25f0d9c0a41a4c5a531b59122a9873800baf494bc5dedc9603ed917b1de8a045",
+    "execution_authority": "manifest_planner",
+    "gate_count": 4,
+    "all_gates_blocking": true,
+    "all_gates_selected_by_full_profile": true,
+    "current_and_compact_selected_by_affected_profile": true,
+    "task_and_dependency_gates_selected_by_affected_input_conditions": true,
+    "workflow_files_changed": false
+  },
+  "excluded_surfaces": {
+    "claim_graph_v1": "Historical fixed-scope P12 pilot retains its existing source-hash gate.",
+    "p10_t08_task_local_current_burden_status": "Immutable task-local transaction evidence, not the live current-state view.",
+    ".local/": "Disposable cache and retrieval state is never tracked report authority."
+  },
+  "authority_boundary": {
+    "generated_views_are_authority": false,
+    "scientific_claims_changed": false,
+    "distance_to_gr_changed": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "validator_or_checkpoint_pass_is_scientific_proof": false
+  }
+}

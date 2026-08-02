@@ -1,0 +1,75 @@
+{
+  "schema_id": "p13_t07_validation_layer_status_checkpoint_recovery_receipt_v1",
+  "status": "PASS_EXACT_TWO_SCALAR_REPAIR_READY_FOR_CHECKPOINT",
+  "task_id": "RT-20260802-004",
+  "job_id": "AJ-RT-20260802-004-001",
+  "goal_id": "crg-20260720T161354Z-96bc2664ce31bfe0",
+  "goal_generation": 217,
+  "route_sha256": "a80b8a1e70fcc745f9a48740c7e19d179057e5317583371059ebd6922c1ffb92",
+  "route_manifest_sha256": "f8fb365e25090cbecb470db49c5c80882cf48a8a1e3f989a316e7cf80d9a7c72",
+  "source_generation": 216,
+  "source_job_id": "AJ-RT-20260802-003-001",
+  "failed_gate": {
+    "receipt_path": ".local/validation-receipts/working-sha256-cb868228e3cdd23d11aabaa874bb2c5e375bfcef96b292fa3265ae4a6111babf/RESEARCH-CONTROL-DIFF-CB868228E3CDD23D/full.json",
+    "receipt_sha256": "52097ca4c9f42df7c886d22af1e1b2150ccd6d6d778c9fd163d65e254cbb2079",
+    "gate_id": "research_control_diff",
+    "failed_status": "FAIL_PROTECTED_PREDECESSOR_VALIDATION_LAYER_STATUS",
+    "finding_count": 2
+  },
+  "target": {
+    "path": "research_control/tasks/RT-20260802-002/jobs/completions/AJC-AJ-RT-20260802-002-001.yaml",
+    "sha256_before": "9967aaf9b528883893456ef05a4ea10dd74952de521eb052dbca8e7fc127687a",
+    "sha256_after": "20be6a00fd62541b839d0e2a86498610c5d3c48f29e4f37e83d302ac8ea89dfd",
+    "reconstructed_preimage_sha256": "9967aaf9b528883893456ef05a4ea10dd74952de521eb052dbca8e7fc127687a",
+    "target_field_count": 2,
+    "all_other_target_bytes_preserved": true
+  },
+  "repairs": [
+    {
+      "field_path": "validation_layers.memory_bootstrap.status",
+      "value_before": "NOT_RUN_AFTER_CHECKPOINT_FAILURE",
+      "value_after": "NOT_RUN",
+      "status": "PASS_SCHEMA_VALUE"
+    },
+    {
+      "field_path": "validation_layers.claim_language_linter.status",
+      "value_before": "NOT_RUN_AFTER_CHECKPOINT_FAILURE",
+      "value_after": "NOT_RUN",
+      "status": "PASS_SCHEMA_VALUE"
+    }
+  ],
+  "validator_contract": {
+    "path": "scripts/research_control/validate_research_control.py",
+    "sha256": "802516ada42b54b5e40fb52952e4f1f1975d23782eb2abe1cb8a24e210e354ca",
+    "allowed_value": "NOT_RUN",
+    "validator_behavior_changed": false
+  },
+  "preserved_hashes": {
+    "predecessor_completion_sha256": "667ae9aff81e6213dfb3077bc42477c04b8d420c5cf7d51505f908cc76fd0554",
+    "program_state_sha256": "0df86e299cb7d9b8450d61171fd3697c12b9b5579552650fc64a5a30b1323f2c",
+    "handoff_0938_yaml_sha256": "a7e9681afdb1f209d4e8d1c1c738002c04dfb51fcb314116c35037bfcf1de772",
+    "handoff_0938_md_sha256": "d0a1c7eba6cd830b1f8dca3e761c8c17a01759131f2b917a2071e8824a6e5f1f",
+    "classifier_sha256": "d20f61a6396c19cc92709c234e772e2bfdbc9b40314b62055dcaaaaa8ded91c4",
+    "classifier_tests_sha256": "8c3f795b99c04f485cca7c30c22ff4e034367568906ffe98789041d83d370285"
+  },
+  "initial_validation": {
+    "task_taxonomy": "PASS",
+    "documentation_impact": "PASS",
+    "project_improvement_signals": "PASS",
+    "yaml_and_csv_structure": "PASS",
+    "target_preimage_reconstruction": "PASS",
+    "whitespace": "PASS",
+    "final_stack": "PENDING",
+    "checkpoint": "PENDING_NOT_INVOKED"
+  },
+  "authority_limits": {
+    "generation_215_reexecuted": false,
+    "p13_t08_executed": false,
+    "scientific_status_changed": false,
+    "distance_to_gr_changed": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "publication_authorized": false,
+    "push_authorized": false
+  }
+}

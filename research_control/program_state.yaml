@@ -1,11 +1,82 @@
 mode: "director_led_research_control"
-active_task_id: "RT-20260801-009"
-latest_handoff_id: "handoff-0937"
-current_status: "generation_206_checkpoint_reconciled_p13_t07_dependency_ready_after_checkpoint"
-claim_boundary_summary: "RT-20260801-009 records exact generation-206 checkpoint 105cb79, supersedes stale AJ-RT-20260801-007 checkpoint routing, and proves P10-T08 plus P13-T02 qualify one separate fresh P13-T07 packet after this reconciliation checkpoints. P13-T02 was not replayed and P13-T07 remains unexecuted. No validator implementation, workflow dispatch, push, scientific, Distance-to-GR, ontology, benchmark, Gate E, publication, proof, Gate Chair, or completed-derivation authority changes."
+active_task_id: "RT-20260801-011"
+latest_handoff_id: "handoff-0938"
+current_status: "p13_t07_documentation_registry_reason_repair_required"
+claim_boundary_summary: "RT-20260801-011 implemented and locally verified P13-T07 generated-report provenance, but planner-authoritative affected validation escalated to full and failed documentation_impact because documentation_registry_changed was absent after memory synchronization changed MARKDOWN_SOURCE_REGISTRY.csv. Generation 210 stopped without checkpointing. One fresh bounded P13-T07 recovery is execution-ready; P13-T08 remains blocked."
 next_plan_task_id: "P13-T07"
 next_worker_skill: "improve-project-system"
-next_recommended_action: "Run one fresh bounded P13-T07 improve-project-system packet to enforce exact generated-report source provenance and maximum-lag freshness."
+next_recommended_action: "Run one fresh bounded P13-T07 improve-project-system recovery that adds the exact missing documentation_registry_changed reason, preserves the implemented payload, regenerates governed derivatives, reruns affected validation, and invokes at most one checkpoint only after PASS."
+
+p13_t07_generated_report_provenance_and_freshness:
+  task_id: "RT-20260801-011"
+  parent_task_id: "RT-20260801-009"
+  parent_handoff_id: "handoff-0937"
+  source_task_id: "RT-20260801-009"
+  source_job_id: "AJ-RT-20260801-009-001"
+  source_handoff_id: "handoff-0937"
+  plan_task_id: "P13-T07"
+  next_plan_task_id: "P13-T07"
+  claim_boundary_id: "CB-PS-P13-T07-GENERATED-REPORT-FRESHNESS-001"
+  status: "P13_T07_DOCUMENTATION_REGISTRY_REASON_REPAIR_REQUIRED"
+  work_item_status: "repair_required"
+  route_label: "enforce_generated_report_provenance_and_freshness_after_planner_cutover_v1"
+  selected_role_family: "validator-engineer@0.2.0"
+  selected_worker_skill: "improve-project-system"
+  selected_strategy_id: "enforce_generated_report_provenance_and_freshness_after_planner_cutover_v1"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Prevent stale metrics and frontier reports from misleading agents or readers."
+  source_head: "1862241f210e27945fae7114fa471c6441030967"
+  immutable_route_sha256: "0e936dbb09f930f8889bd0b0ad5b8b5e7cf2393af67240444fe1448e96374b4d"
+  route_blocker_fingerprint: "958868ac19e1a4991432517ebbbd3a37f265b36f061b42c8f1f827b83f0d6df6"
+  completion_path: "research_control/tasks/RT-20260801-011/jobs/completions/AJC-AJ-RT-20260801-011-001.yaml"
+  completion_sha256: "73c309c9830078d2ef209861aad53ba2742c754c82c3748841918a2e4533404e"
+  handoff_id: "handoff-0938"
+  handoff_path: "research_control/handoffs/handoff-0938.yaml"
+  handoff_sha256: "a7e9681afdb1f209d4e8d1c1c738002c04dfb51fcb314116c35037bfcf1de772"
+  report_class_count: 4
+  tracked_output_count: 10
+  maximum_commit_lag: 1
+  exact_source_byte_drift_fails_immediately: true
+  mutated_source_fixture_rejected: true
+  second_unrefreshed_commit_rejected: true
+  existing_blocking_planner_gate_count: 4
+  p13_t05_completion_path: "research_control/tasks/RT-20260724-002/jobs/completions/AJC-AJ-RT-20260724-002-001.yaml"
+  p13_t05_completion_sha256: "77e41842b1530fea579955d57f3fefe99b9800bac2aa9147cb8ca9b5443bd8ea"
+  p13_t05_completed: true
+  p13_t06_completion_path: "research_control/tasks/RT-20260724-003/jobs/completions/AJC-AJ-RT-20260724-003-001.yaml"
+  p13_t06_completion_sha256: "bc36815f27a56bcde5d757c730c557164755d786c248c3b21bdc8f8e4fbe237a"
+  p13_t06_completed: true
+  p13_t07_completed: false
+  p13_t08_dependency_ready_after_checkpoint: false
+  p13_t08_execution_ready_now: false
+  p13_t08_executed: false
+  selected_next_work_item: "P13-T07"
+  selected_next_worker_skill: "improve-project-system"
+  selected_next_role_family: "process-integrity-auditor@0.1.0"
+  selected_next_route_label: "ordinary-research-packet"
+  selected_next_strategy_id: "recover_p13_t07_documentation_registry_reason_and_checkpoint_v1"
+  selected_next_requires_human_gate: false
+  selected_next_blocked_by_protected_external_evidence: false
+  selected_next_execution_ready_after_checkpoint: false
+  selected_next_execution_ready_now: true
+  scientific_claims_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  ontology_adoption_authorized: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false
+  hosted_workflow_dispatch_authorized: false
+  hosted_workflow_dispatch_performed: false
+  broad_validation_status: "FAIL"
+  broad_validation_failed_gate_id: "documentation_impact"
+  broad_validation_finding: "reason_codes missing classifier reason documentation_registry_changed"
+  affected_validation_blocker_path: "research_control/tasks/RT-20260801-011/artifacts/p13_t07_affected_validation_blocker.yaml"
+  affected_validation_blocker_sha256: "ffb710867c45f0ca6d4b2dc8c83c20d9ceefa2de52012929f3dd71c2c137f5d5"
+  checkpoint_invocation_count: 0
+  checkpoint_committed: false
 
 generation_206_checkpoint_p13_t07_dependency_reconciliation:
   task_id: "RT-20260801-009"

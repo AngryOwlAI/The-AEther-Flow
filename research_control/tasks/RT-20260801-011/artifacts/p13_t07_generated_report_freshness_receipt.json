@@ -1,0 +1,124 @@
+{
+  "checkpoint_or_validator_pass_is_scientific_proof": false,
+  "claim_boundary_id": "CB-PS-P13-T07-GENERATED-REPORT-FRESHNESS-001",
+  "distance_to_gr_changed": false,
+  "fixture_spec_schema_id": "stale_generated_report_fixture_v1",
+  "goal_receipt": {
+    "claim_token": "3c35003390b47fd650edd94e68cbb5ca8cb2e43ff0d5ded7",
+    "generation": 210,
+    "goal_id": "crg-20260720T161354Z-96bc2664ce31bfe0",
+    "idempotency_key": "crg-20260720T161354Z-96bc2664ce31bfe0:210",
+    "pass_index": 188
+  },
+  "job_id": "AJ-RT-20260801-011-001",
+  "live_validation": {
+    "failure_count": 0,
+    "report_count": 4,
+    "reports": [
+      {
+        "artifact_sha256": {
+          "markdown": "1d7e1c60e6f92e304fc675bdf14264782e19955119407ed3786f52f87649bce3"
+        },
+        "generation_time": "2026-08-02T01:44:43Z",
+        "maximum_commit_lag": "1",
+        "output_count": 1,
+        "report_class": "current_frontier",
+        "source_commit": "1862241f210e27945fae7114fa471c6441030967",
+        "source_manifest_sha256": "9b41978de3f38ec3f50d8d7d6dad2f84720738b1826158e08aed52085f298c9f",
+        "source_path_count": "12",
+        "status": "PASS",
+        "task_count": "1185"
+      },
+      {
+        "artifact_sha256": {
+          "json": "488acdb59f19d0bcd55ab5bc215c0ffda35e4945f604e543f6ad060e5f221af8",
+          "markdown": "8d3a245b22ec34982304514e61f85b65b9101bea5ec9fbd92012f371441fa6ae",
+          "yaml": "718ca6e2865750e4ca90689224cf8fd6ab308d49e71595c63d1831b50dd662a2"
+        },
+        "generation_time": "2026-08-02T01:44:43Z",
+        "maximum_commit_lag": "1",
+        "output_count": 3,
+        "report_class": "compact_current_frontier",
+        "source_commit": "1862241f210e27945fae7114fa471c6441030967",
+        "source_manifest_sha256": "077d73f230dd7dd4e71c905ecaff076cd9fb9ba1d861cc83393680e33ef7b80f",
+        "source_path_count": "12",
+        "status": "PASS",
+        "task_count": "1185"
+      },
+      {
+        "artifact_sha256": {
+          "csv": "0f8f2ed720065aa5674763bd800b744f03eca694c8691540bee7adf7be0dadb7",
+          "markdown": "c0ab254fb3849193c487213dc471a5b94e0670a5dbaa4e20b55fb6c8dced1810",
+          "wiki_markdown": "c0ab254fb3849193c487213dc471a5b94e0670a5dbaa4e20b55fb6c8dced1810"
+        },
+        "generation_time": "2026-08-02T03:56:18Z",
+        "maximum_commit_lag": "1",
+        "output_count": 3,
+        "report_class": "research_task_index",
+        "source_commit": "1862241f210e27945fae7114fa471c6441030967",
+        "source_manifest_sha256": "d02b2732a00a7eba17757ecf8a0017ac1f029c0510fad07635856e86e33d2b23",
+        "source_path_count": "4750",
+        "status": "PASS",
+        "task_count": "1189"
+      },
+      {
+        "artifact_sha256": {
+          "dot": "d701a0d66ee7a285bbadc43a95daf0a8430622e57e41a5574e4a5829824c0316",
+          "json": "3f39ec28d3911463179b7c027247abff317f9d5fe010a5c8a8cd5b2ced2bb749",
+          "markdown": "9f214a7b5308f6cdf055313e7817c09cae895d0ab4c9f45c8e6426d146466a3d"
+        },
+        "generation_time": "2026-08-02T01:44:43Z",
+        "maximum_commit_lag": "1",
+        "output_count": 3,
+        "report_class": "research_dependency_graph",
+        "source_commit": "1862241f210e27945fae7114fa471c6441030967",
+        "source_manifest_sha256": "1c80ae7c3ee5d7cc0d760f31b7acecb4698a9b5485e6f8377a6a0b56acb6bcc8",
+        "source_path_count": "2136",
+        "status": "PASS",
+        "task_count": "1185"
+      }
+    ],
+    "status": "PASS"
+  },
+  "negative_fixtures": [
+    {
+      "expected_finding_observed": true,
+      "finding_ids": [
+        "generated_report_source_metadata_stale"
+      ],
+      "fixture_id": "mutated_primary_source_hash",
+      "status": "FAIL"
+    },
+    {
+      "expected_finding_observed": true,
+      "finding_ids": [
+        "generated_report_commit_lag_exceeded"
+      ],
+      "fixture_id": "second_unrefreshed_commit",
+      "maximum_commit_lag": 1,
+      "observed_commit_lag": 2,
+      "status": "FAIL"
+    }
+  ],
+  "physics_promotion_authorized": false,
+  "plan_task_id": "P13-T07",
+  "policy_id": "p13_t07_live_generated_report_freshness_v1",
+  "proof_authority": false,
+  "schema_id": "p13_t07_generated_report_freshness_validation_receipt_v1",
+  "scientific_claims_changed": false,
+  "source_hashes": {
+    "research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml": "dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3",
+    "research_control/tasks/RT-20260801-011/artifacts/stale_generated_report_fixture_v1.json": "85a787a6a8217ae45f7dffd896e294445f8512cdac524433e6249b0c7b24fcae",
+    "research_control/tasks/RT-20260801-011/artifacts/validate_p13_t07_generated_report_freshness.py": "19284200c7344962140cc711683987a83e2a3736bfc6db492ca47ecd48288c86",
+    "scripts/research_control/generated_report_provenance.py": "af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c",
+    "scripts/research_control/render_compact_current_frontier_v16.py": "36fab56791487f690c7fd31ef036a1dba82d03a66beddefac5a21baf77ab10c2",
+    "scripts/research_control/render_current_frontier.py": "ebbeddc0d5b07bc5130ce093053891a376a264c1d029019cefa7de756697770d",
+    "scripts/research_control/render_dependency_graph.py": "6fdbe02623855697110263a90bbfbbd9a223ff636f320df497593fce3f9bef39",
+    "scripts/research_control/render_task_index.py": "7c28b13a1f9843a300ce16bff2c09801549209927a41872efc02a6d0bfc0a023",
+    "scripts/research_control/validate_compact_current_frontier_v16.py": "ab5dd286b14afaa28862db9e544693e6e8bb994bad090e247656f6e4c7c8f0fb",
+    "scripts/research_control/validate_generated_report_freshness.py": "895e848075baa19afb88cf9c01ab98873ebd2df206ea7b214a89eb8d71d2a140",
+    "scripts/research_control/validate_task_index.py": "8b7dcefa9922ec558116d32227ae7d6fe593e810d14c03ec2b389d2ddb843dc6"
+  },
+  "status": "PASS",
+  "task_id": "RT-20260801-011"
+}

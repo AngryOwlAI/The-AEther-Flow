@@ -1,0 +1,96 @@
+{
+  "schema_id": "p13_t07_protected_dual_budget_accounting_recovery_receipt_v1",
+  "status": "BLOCKED_PRECHECKPOINT_VALIDATION",
+  "task_id": "RT-20260801-013",
+  "job_id": "AJ-RT-20260801-013-001",
+  "decision_id": "DDR-20260801-013",
+  "goal_id": "crg-20260720T161354Z-96bc2664ce31bfe0",
+  "goal_generation": 212,
+  "goal_route_sha256": "7e17493f5d5ed17c164a121244c06bb1833eba79c5efc1000838218c776890cd",
+  "route_blocker_fingerprint": "698a3ad4a0ea7f40c2e329bbc617da637ecfd56f6265811c4f140070ad359fb2",
+  "inherited_manifest_sha256": "c1245e61ae91a7b8f527eff8049bfb174103d75b2e8a7fea543d1f4ed6f8552c",
+  "source_head": "1862241f210e27945fae7114fa471c6441030967",
+  "protected_records": {
+    "job_path": "research_control/tasks/RT-20260801-011/jobs/AJ-RT-20260801-011-001.yaml",
+    "job_sha256": "9e49f04839f2dd9fb5e4f59ed08ac1eb5a524d7ef6008e6c117176c3e4f6f523",
+    "completion_path": "research_control/tasks/RT-20260801-011/jobs/completions/AJC-AJ-RT-20260801-011-001.yaml",
+    "completion_sha256": "73c309c9830078d2ef209861aad53ba2742c754c82c3748841918a2e4533404e",
+    "recovery_receipt_path": "research_control/tasks/RT-20260801-012/artifacts/p13_t07_documentation_registry_reason_checkpoint_recovery_receipt.json",
+    "recovery_receipt_sha256": "b6e65d1e296102355284e50ff2ea5999f5a971b8fb29ba4c769239170e4f5eaa",
+    "hash_mismatch_count": 0
+  },
+  "accounting_result": {
+    "canonical_evaluator_status": "rejected",
+    "canonical_evaluator_errors": [
+      "completion missing project_system durable outputs: ['one governed checkpoint']"
+    ],
+    "protected_completion_status": "blocked",
+    "protected_completion_validation_status": "FAIL",
+    "protected_completion_checkpoint_invocation_count": 0,
+    "checkpoint_output_counted_as_observed": false,
+    "completion_counted_as_accepted": false,
+    "general_exception_created": false
+  },
+  "compatibility_binding": {
+    "validator_path": "scripts/research_control/validate_research_control.py",
+    "validator_sha256": "802516ada42b54b5e40fb52952e4f1f1975d23782eb2abe1cb8a24e210e354ca",
+    "test_path": "tests/test_research_control.py",
+    "test_sha256": "1a3ee6d3a2680369d940d4ad7cf0ad018e6ca3e4154ba4472ffd748a6e5cf155",
+    "shard_inventory_path": "tests/support/research_control_shards.py",
+    "shard_inventory_sha256": "df74f0f5c705f34831d4fee32db2e70b1e8f18cb8fb020c602d7d70c20b04408",
+    "shard_source_test_count": 152,
+    "policy_shard_test_count": 109,
+    "binding_dimensions": [
+      "completion path and SHA-256",
+      "job path and SHA-256",
+      "exact sole evaluator error",
+      "blocked and FAIL status",
+      "truthful zero-checkpoint fields",
+      "recovery receipt path SHA-256 schema identity and authority limits"
+    ],
+    "integrated_outcome": "PASS_WITH_ONE_NONQUALIFYING_COMPATIBILITY_WARNING",
+    "warning_text": "immutable blocked completion remains nonqualifying; exact recovery receipt preserves the truthful zero-checkpoint outcome"
+  },
+  "regression_results": {
+    "exact_sealed_record_compatible": true,
+    "additional_error_rejected": true,
+    "completed_status_rejected": true,
+    "unsealed_record_rejected": true,
+    "shard_inventory_synchronized": true,
+    "dual_budget_and_research_control_test_count": 150,
+    "dual_budget_and_research_control_failure_count": 0,
+    "repository_test_status": "FAIL_P10_T05_RENDERER_BINDINGS",
+    "research_control_status": "PASS",
+    "documentation_impact_status": "PASS",
+    "affected_validation_status": "NOT_RUN_AFTER_DISTINCT_PRECHECKPOINT_BLOCKER",
+    "memory_validation_status": "PASS_WITH_NONBLOCKING_LOCAL_CACHE_WARNINGS",
+    "git_diff_check": "PASS"
+  },
+  "precheckpoint_blocker": {
+    "validator_path": "research_control/tasks/RT-20260721-007/artifacts/validate_v21_event_store_architecture.py",
+    "validator_status": "FAIL",
+    "failed_source_bindings": [
+      {
+        "path": "scripts/research_control/render_current_frontier.py",
+        "historical_expected_sha256": "7f01e0e6267bcb43c96c087c7dfd06b8a10ed6450c194324232019485c95a6ca",
+        "current_sha256": "ebbeddc0d5b07bc5130ce093053891a376a264c1d029019cefa7de756697770d"
+      },
+      {
+        "path": "scripts/research_control/render_task_index.py",
+        "historical_expected_sha256": "aa495487e6cb39d1b8b17718207b8ddea70959474115f4a79494919790f79152",
+        "current_sha256": "7c28b13a1f9843a300ce16bff2c09801549209927a41872efc02a6d0bfc0a023"
+      }
+    ],
+    "downstream_failure": "P10-T05 validator is not PASS in v21 P10 migration readiness",
+    "distinct_recovery_route": "p13_t07_event_store_renderer_binding_recovery_v1",
+    "checkpoint_invoked": false
+  },
+  "checkpoint_invocation_count": 0,
+  "checkpoint_status": "BLOCKED_NOT_INVOKED",
+  "p13_t08_executed": false,
+  "scientific_claims_changed": false,
+  "distance_to_gr_delta_changed": false,
+  "physics_promotion_authorized": false,
+  "proof_authority": false,
+  "publication_push_or_hosted_workflow_authorized": false
+}

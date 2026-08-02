@@ -1,0 +1,272 @@
+completion_id: "AJC-AJ-RT-20260801-012-001"
+job_id: "AJ-RT-20260801-012-001"
+task_id: "RT-20260801-012"
+task_type: "project_system_p13_t07_documentation_registry_reason_checkpoint_recovery"
+decision_id: "DDR-20260801-012"
+role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260801-012"
+status: "blocked"
+validation_status: "FAIL"
+completed_at: "2026-08-02T03:21:33Z"
+objective_result: "p13_t07_documentation_impact_repaired_checkpoint_blocked_by_predecessor_dual_budget_accounting"
+verdict: "REPAIR_REQUIRED_P13_T07_DUAL_BUDGET_CHECKPOINT_ACCOUNTING"
+summary: "Generation 211 adds the exact documentation_registry_changed reason and failure-created blocker path to RT-20260801-011 documentation-impact coverage while preserving every inherited P13-T07 implementation and routing byte. Focused, memory, and documentation gates pass, but broad validation exposes one protected predecessor completion-accounting mismatch: RT-20260801-011 expected one governed checkpoint yet correctly recorded none after its failure. No checkpoint is invoked and P13-T08 remains unexecuted."
+transaction_status: "repair_required_no_checkpoint"
+checkpoint_invocation_count: 0
+checkpoint_commit:
+  status: "PENDING"
+  commit: ""
+  invocation_count: 0
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 211
+  passes_consumed: 189
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:211"
+  handoff_token: "e719e7f8f014b60e0df86a3f3ea5ac615c2deb638cbce1e8"
+  relay_claim_token: "7bc216d7444aff3f321b9acb4ef4bae5046edee52bc2600b"
+  route_work_item_id: "P13-T07"
+  route_worker_skill: "improve-project-system"
+  route_sha256: "ab015ee1f23bf1936042bf0e7f71827f1b4fe653087285160e77ae8771ff9932"
+  route_strategy_id: "recover_p13_t07_documentation_registry_reason_and_checkpoint_v1"
+  route_blocker_fingerprint: "949c88921e6238f8b620e8ad5e1bcb4f5b510393d149adf3344a3320aa92188b"
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+
+result:
+  status: "REPAIR_REQUIRED"
+  strategy_id: "recover_p13_t07_documentation_registry_reason_and_checkpoint_v1"
+  source_task_id: "RT-20260801-011"
+  source_job_id: "AJ-RT-20260801-011-001"
+  source_head: "1862241f210e27945fae7114fa471c6441030967"
+  target_path: "research_control/tasks/RT-20260801-011/documentation_impact.yaml"
+  documentation_registry_changed_count: 1
+  blocker_artifact_changed_path_count: 1
+  direct_documentation_impact_validation: "PASS"
+  generation_210_job_reexecuted: false
+  generation_210_payload_modified: false
+  p13_t08_executed: false
+  protected_hash_mismatch_count: 0
+  blocking_gate_id: "research_control_diff"
+  blocking_finding_id: "RESEARCH-CONTROL-DIFF-ERROR-BF21A64C5AFD"
+  blocking_finding: "RT-20260801-011 completion missing expected project_system durable output one governed checkpoint"
+  receipt_path: "research_control/tasks/RT-20260801-012/artifacts/p13_t07_documentation_registry_reason_checkpoint_recovery_receipt.json"
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  publication_or_external_action_authorized: false
+
+protected_evidence:
+  source_head: "1862241f210e27945fae7114fa471c6441030967"
+  source_task_sha256: "8794960cd5563a872cdff8022888a6a862e98a3d6012b087a90a6b8a1494f7b3"
+  source_decision_sha256: "15bf280f422c40ced281ffd7519503cec240059979dc9261d93bf5e92101b5ea"
+  source_job_sha256: "9e49f04839f2dd9fb5e4f59ed08ac1eb5a524d7ef6008e6c117176c3e4f6f523"
+  source_completion_sha256: "73c309c9830078d2ef209861aad53ba2742c754c82c3748841918a2e4533404e"
+  source_role_sha256: "84c14f912f9b04e00716575384c949e493799be545e836b5951b143b64fb13c3"
+  source_freshness_receipt_sha256_before_refresh: "ddd945ec7207495bfed3d9564a977a1beaf73759f76f2d20abb0a5c866db0fba"
+  source_blocker_sha256: "ffb710867c45f0ca6d4b2dc8c83c20d9ceefa2de52012929f3dd71c2c137f5d5"
+  source_handoff_yaml_sha256: "a7e9681afdb1f209d4e8d1c1c738002c04dfb51fcb314116c35037bfcf1de772"
+  source_handoff_markdown_sha256: "d0a1c7eba6cd830b1f8dca3e761c8c17a01759131f2b917a2071e8824a6e5f1f"
+  source_program_state_sha256: "0df86e299cb7d9b8450d61171fd3697c12b9b5579552650fc64a5a30b1323f2c"
+  documentation_impact_sha256_before: "4dfc79b90ff8ab66e2a833251a15263464a1d34a52dcebe1ae4f7a7a416e542d"
+  documentation_impact_sha256_after_direct_repair: "a5ed70fe0d89d5b8e421ba543e09832261c1e9f029408a266f87b6cdbc0c3731"
+
+command_results:
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+    status: "PASS_WITH_LOCAL_CACHE_WARNINGS"
+    summary: "Core validation passes; three .local retrieval-cache warnings are nonblocking and non-authoritative."
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21 --json"
+    status: "PASS"
+    summary: "The registered v21 plan and exact canonical source hash resolve."
+  - command: ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+    status: "PASS"
+    summary: "The inherited transaction is project-system and documentation-impact affected; the full profile is required."
+  - command: ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json"
+    status: "PASS"
+    summary: "One bounded project-system AgentJob is required; no open signal competes with the immutable route."
+  - command: ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted"
+    status: "PASS"
+    summary: "Signal parity passes."
+  - command: ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+    status: "PASS_AFTER_EXACT_REPAIR"
+    summary: "The direct RT-20260801-011 repair covers the required classifier reason and blocker path exactly once."
+  - command: ".venv/bin/python scripts/research_control/validate_generated_report_freshness.py --json"
+    status: "PASS"
+    summary: "All four live generated-report classes pass source and commit-lag checks."
+  - command: ".venv/bin/python research_control/tasks/RT-20260801-011/artifacts/validate_p13_t07_generated_report_freshness.py --check"
+    status: "PASS"
+    summary: "The P13-T07 receipt and both negative fixtures remain valid."
+  - command: ".venv/bin/python research_control/tasks/RT-20260801-011/artifacts/validate_p13_t07_generated_report_freshness.py --write"
+    status: "PASS"
+    summary: "The content-addressed P13-T07 validation receipt was refreshed from the regenerated live reports; both negative fixtures still fail closed."
+  - command: ".venv/bin/python -m unittest -v tests.test_generated_report_freshness"
+    status: "PASS"
+    summary: "Focused P13-T07 regression tests pass."
+  - command: ".venv/bin/python scripts/research_control/task_taxonomy.py --validate-repository --json"
+    status: "PASS"
+    summary: "Repository task taxonomy passes."
+  - command: ".venv/bin/python -m scripts.validation.cli run --profile affected --paths <changed-paths>"
+    status: "FAIL"
+    summary: "The full profile passes 21 gates and fails research_control_core plus research_control_diff on the protected RT-20260801-011 dual-budget checkpoint-accounting mismatch."
+  - command: ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --job-id AJ-RT-20260801-012-001 --json-summary"
+    status: "FAIL"
+    summary: "After RT-20260801-012 packet parity repair, integrated validation reports exactly one blocking error: RT-20260801-011 completion is missing its expected one governed checkpoint durable output."
+  - command: ".venv/bin/python scripts/research_control/render_task_index.py --check"
+    status: "PASS"
+    summary: "CSV, Markdown, and wiki task-index derivatives are fresh."
+  - command: ".venv/bin/python scripts/research_control/render_dependency_graph.py --check"
+    status: "PASS"
+    summary: "JSON, Markdown, and DOT dependency-graph derivatives are fresh."
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+    status: "PASS"
+    summary: "Tracked memory validates after approved synchronization; local-cache findings remain nonblocking."
+  - command: "git diff --check"
+    status: "PASS"
+    summary: "The cumulative working transaction contains no whitespace errors."
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1109
+    relationship_row_count: 5606
+    semantic_row_count: 1109
+    vault_row_count: 1109
+    blocking_warning_count: 0
+    local_cache_only_warning_count: 3
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  authority_note: "Generated wiki, Obsidian, semantic, relationship, SQLite, and .local retrieval layers are not authority; tracked sources and validators govern this recovery."
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  observed_durable_outputs:
+    physics: []
+    project_system:
+      - "exact RT-20260801-011 documentation-impact parity repair"
+      - "task-local preservation receipt"
+      - "one governed checkpoint or exact broad-validation blocker"
+  accepted_criteria:
+    physics: []
+    project_system:
+      - "exactly one documentation_registry_changed reason and blocker path exist in the predecessor receipt"
+      - "all inherited P13-T07 implementation and routing bytes remain unchanged"
+      - "live and negative freshness checks, focused tests, governed memory, and broad validation pass or exact protected obstruction"
+      - "P13-T08 remains unexecuted"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+distance_to_gr_delta:
+  changed: false
+  effect: "none_project_system_documentation_checkpoint_recovery"
+  milestone: "source_equivalence_eqsrc"
+  ledger_row_updated: false
+  ledger_update_rationale: "Documentation-impact, validation, and checkpoint recovery contribute no physics movement."
+
+physics_progress_status:
+  status: "documentation_or_control_only_no_physics_delta"
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+
+selected_next_route:
+  route_id: "p13_t07_dual_budget_checkpoint_accounting_recovery_v1"
+  worker_skill: "improve-project-system"
+  plan_task_id: "P13-T07"
+  dependency_ready_after_checkpoint: false
+  execution_ready_now: false
+  executed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 211 validated, claimed, and consumed the immutable route exactly once."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The direct documentation-impact repair passes with exact reason and blocker-path parity."
+  post_write:
+    status: "FAIL"
+    evidence:
+      - "The final affected profile stops on research_control_core and research_control_diff."
+      - "After current-packet parity fixes, integrated validation isolates exactly one protected predecessor checkpoint-accounting mismatch."
+  post_checkpoint:
+    status: "NOT_RUN"
+    evidence:
+      - "Checkpoint authority was not exercised because broad validation did not pass."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "All four live freshness checks plus task-index and dependency-graph checks pass."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Approved synchronization and validate-only checks pass; .local warnings are nonblocking."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim validation preserves non-authority wording."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "none; project-system documentation checkpoint recovery only"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  push_authorized: false
+  publication_authorized: false
+  hosted_workflow_dispatch_authorized: false
+  proof_authority: false
+  canonical_ontology_edit_authorized: false
+  source_law_adoption_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+notes: "The documentation-impact repair succeeds but the cumulative transaction remains precisely blocked. This does not count as new P13-T07 implementation, P13-T08 execution, physics or Distance-to-GR progress, promotion, proof, publication, push, hosted workflow, Gate Chair authority, or completed derivation."

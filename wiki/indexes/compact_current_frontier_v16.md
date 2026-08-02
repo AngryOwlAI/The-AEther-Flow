@@ -4,19 +4,52 @@
 
 This generated index mirrors `output/compact_current_frontier_v16.yaml` and `output/compact_current_frontier_v16.json`. It is a snapshot-only reader aid. If it differs from tracked control state, tracked control state governs.
 
+<!-- generated-report-provenance: {"freshness_status":"fresh_at_generation","generated_view_is_authority":false,"generation_time":"2026-08-02T01:44:43Z","maximum_commit_lag":"1","physics_promotion_authorized":false,"policy_id":"p13_t07_live_generated_report_freshness_v1","proof_authority":false,"report_class":"compact_current_frontier","schema_id":"generated_report_provenance_v1","source_commit":"1862241f210e27945fae7114fa471c6441030967","source_hashes":[{"path":"registries/DISTANCE_TO_GR_LEDGER.csv","sha256":"6b81b42bc7ed83f74f8062f2ade26988e8b369aa2d23744fc9e392279e1de5d8"},{"path":"registries/RESEARCH_TASK_REGISTRY.csv","sha256":"26e90cc972e715e62ab28455d8bec55cb11e7e24d5724f7e328ff25896ce4c33"},{"path":"research_control/current_frontier.md","sha256":"99fb90babcbeef8df60b0e298d73f2b5b4bc8a70e39d7a46a6b08685468f72f7"},{"path":"research_control/handoffs/handoff-0938.yaml","sha256":"a7e9681afdb1f209d4e8d1c1c738002c04dfb51fcb314116c35037bfcf1de772"},{"path":"research_control/program_state.yaml","sha256":"0df86e299cb7d9b8450d61171fd3697c12b9b5579552650fc64a5a30b1323f2c"},{"path":"research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml","sha256":"dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3"},{"path":"scripts/research_control/generated_report_provenance.py","sha256":"af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c"},{"path":"scripts/research_control/render_compact_current_frontier_v16.py","sha256":"36fab56791487f690c7fd31ef036a1dba82d03a66beddefac5a21baf77ab10c2"}],"source_manifest_sha256":"d4b013c1ca04d2932be31ad9bca32f2100be99cedd5aed28266b4a20df9f3ae8","source_path_count":"12","task_count":"1190"} -->
+
+## Generated-Report Provenance
+
+| Field | Value |
+| --- | --- |
+| Provenance schema | `generated_report_provenance_v1` |
+| Freshness policy | `p13_t07_live_generated_report_freshness_v1` |
+| Report class | `compact_current_frontier` |
+| Source commit | `1862241f210e27945fae7114fa471c6441030967` |
+| Source-derived generation time | `2026-08-02T01:44:43Z` |
+| Tracked task count | 1190 |
+| Exact source-path count | 12 |
+| Source manifest SHA-256 | `d4b013c1ca04d2932be31ad9bca32f2100be99cedd5aed28266b4a20df9f3ae8` |
+| Maximum commit lag | 1 |
+| Freshness status at generation | `fresh_at_generation` |
+| Generated view is authority | `false` |
+
+Exact primary source hashes:
+
+- `registries/DISTANCE_TO_GR_LEDGER.csv`: `6b81b42bc7ed83f74f8062f2ade26988e8b369aa2d23744fc9e392279e1de5d8`
+- `registries/RESEARCH_TASK_REGISTRY.csv`: `26e90cc972e715e62ab28455d8bec55cb11e7e24d5724f7e328ff25896ce4c33`
+- `research_control/current_frontier.md`: `99fb90babcbeef8df60b0e298d73f2b5b4bc8a70e39d7a46a6b08685468f72f7`
+- `research_control/handoffs/handoff-0938.yaml`: `a7e9681afdb1f209d4e8d1c1c738002c04dfb51fcb314116c35037bfcf1de772`
+- `research_control/program_state.yaml`: `0df86e299cb7d9b8450d61171fd3697c12b9b5579552650fc64a5a30b1323f2c`
+- `research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml`: `dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3`
+- `scripts/research_control/generated_report_provenance.py`: `af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c`
+- `scripts/research_control/render_compact_current_frontier_v16.py`: `36fab56791487f690c7fd31ef036a1dba82d03a66beddefac5a21baf77ab10c2`
+
+Live validation recomputes the full source manifest and commit lag.
+Freshness PASS is operational evidence only; it is not physics proof
+or claim-promotion authority.
+
 ## Active State
 
-- Active task: `RT-20260801-009`
-- Latest handoff: `handoff-0937`
-- Current status: `generation_206_checkpoint_reconciled_p13_t07_dependency_ready_after_checkpoint`
+- Active task: `RT-20260801-011`
+- Latest handoff: `handoff-0938`
+- Current status: `p13_t07_documentation_registry_reason_repair_required`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260801-009`
-- Latest research handoff: `handoff-0937`
-- Latest research next action: Run one fresh bounded P13-T07 improve-project-system packet to enforce exact generated-report source provenance and maximum-lag freshness.
+- Latest research task: `RT-20260801-011`
+- Latest research handoff: `handoff-0938`
+- Latest research next action: Run one fresh bounded P13-T07 improve-project-system recovery that adds the exact missing documentation_registry_changed reason, preserves the implemented payload, regenerates governed derivatives, reruns affected validation, and invokes at most one checkpoint only after PASS.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +59,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `p13_t07_generated_report_provenance_freshness_v1`
-- Role family: `validator-engineer@0.2.0`
+- Route ID: `p13_t07_documentation_registry_reason_recovery_v1`
+- Role family: `process-integrity-auditor@0.1.0`
 - Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Prevent stale metrics and frontier reports from misleading agents or readers.
+- Milestone burden: Restore exact P13-T07 documentation-impact parity before checkpointing.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +97,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `52897b4c913602c0be263096bf814c11aec5250acfeb93c64ae398e227a0fd7e`
-- JSON SHA-256: `e561b80c00b5a08aec340a51607532a0db5bce2ecaf828eaed7fc2381526cb61`
+- YAML SHA-256: `9026d9b3296bdaac9752ff1fd6f232b212c98b1fdb6161a0002b6c965c9bb9ba`
+- JSON SHA-256: `635dd29a9189f833d45a4415193c11ad696e57109ac47037f17c136279728010`
 
 ## Authority Warning
 

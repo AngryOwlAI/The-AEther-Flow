@@ -95,6 +95,86 @@ class ResearchControlTests(unittest.TestCase):
         report = self.validator.validate_all()
         self.assertEqual(report.errors, [])
 
+    def test_exact_blocked_dual_budget_completion_compatibility_is_fail_closed(self) -> None:
+        completion_path = (
+            REPO_ROOT
+            / "research_control/tasks/RT-20260801-011/jobs/completions/"
+            "AJC-AJ-RT-20260801-011-001.yaml"
+        )
+        job_path_text = (
+            "research_control/tasks/RT-20260801-011/jobs/"
+            "AJ-RT-20260801-011-001.yaml"
+        )
+        completion = self.strict_yaml.load(completion_path)
+        exact_errors = [
+            "completion missing project_system durable outputs: "
+            "['one governed checkpoint']"
+        ]
+
+        self.assertTrue(
+            self.validator.immutable_historical_dual_budget_completion_is_compatible(
+                completion_path,
+                job_path_text,
+                completion,
+                exact_errors,
+            )
+        )
+        self.assertFalse(
+            self.validator.immutable_historical_dual_budget_completion_is_compatible(
+                completion_path,
+                job_path_text,
+                completion,
+                exact_errors + ["unexpected additional accounting error"],
+            )
+        )
+
+        promoted_completion = dict(completion)
+        promoted_completion["status"] = "completed"
+        self.assertFalse(
+            self.validator.immutable_historical_dual_budget_completion_is_compatible(
+                completion_path,
+                job_path_text,
+                promoted_completion,
+                exact_errors,
+            )
+        )
+
+    def test_blocked_dual_budget_completion_compatibility_rejects_unsealed_record(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            completion_path = (
+                root
+                / "research_control/tasks/RT-20260801-011/jobs/completions/"
+                "AJC-AJ-RT-20260801-011-001.yaml"
+            )
+            completion_path.parent.mkdir(parents=True, exist_ok=True)
+            completion_path.write_text(
+                'completion_id: "AJC-AJ-RT-20260801-011-001"\n'
+                'job_id: "AJ-RT-20260801-011-001"\n'
+                'status: "blocked"\n'
+                'validation_status: "FAIL"\n'
+                "checkpoint_invocation_count: 0\n"
+                "result:\n"
+                "  checkpoint_invoked: false\n",
+                encoding="utf-8",
+            )
+            completion = self.strict_yaml.load(completion_path)
+            with mock.patch.object(self.validator, "REPO_ROOT", root):
+                self.assertFalse(
+                    self.validator.immutable_historical_dual_budget_completion_is_compatible(
+                        completion_path,
+                        (
+                            "research_control/tasks/RT-20260801-011/jobs/"
+                            "AJ-RT-20260801-011-001.yaml"
+                        ),
+                        completion,
+                        [
+                            "completion missing project_system durable outputs: "
+                            "['one governed checkpoint']"
+                        ],
+                    )
+                )
+
     def test_validation_policy_preflights_preserve_historical_hashes(self) -> None:
         object_ids = {
             "MD-RESEARCH-CONTROL-DESIGN-CI-VALIDATION-SHARD-POLICY-V1",

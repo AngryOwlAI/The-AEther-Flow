@@ -1,0 +1,61 @@
+task_id: "RT-20260801-012"
+task_type: "project_system_p13_t07_documentation_registry_reason_checkpoint_recovery"
+title: "Restore P13-T07 documentation-impact parity"
+task_taxonomy:
+  schema_id: "v21_task_taxonomy_v1"
+  work_kind: "benchmark_or_recovery"
+  milestone: "source_equivalence_eqsrc"
+  candidate_family: "p13_t07_documentation_registry_reason_checkpoint_recovery"
+  result_kind: "completed_or_precisely_blocked"
+  authority: "project_control"
+  scope: "project_system"
+validation_status: "FAIL"
+status: "blocked"
+created_at: "2026-08-02T02:44:11Z"
+updated_at: "2026-08-02T03:21:33Z"
+closed_at: "2026-08-02T03:21:33Z"
+closure_status: "p13_t07_documentation_impact_repaired_checkpoint_blocked_by_predecessor_dual_budget_accounting"
+parent_task_id: "RT-20260801-011"
+parent_handoff_id: "handoff-0938"
+supersedes_active_routing_task_id: ""
+current_decision_id: "DDR-20260801-012"
+current_job_id: "AJ-RT-20260801-012-001"
+role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260801-012"
+requires_human_gate: false
+human_authorization_note: "Generation 211 of the user-authorized recursive relay immutably routes one improve-project-system frame to repair generation 210's P13-T07 documentation-impact parity failure. It does not replay generation 210, alter its implemented payload, execute P13-T08, or authorize external action."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P13"
+  plan_task_id: "P13-T07"
+  recovery_for_plan_task_id: "P13-T07"
+  recommendation_ids:
+    - "V21-R47"
+    - "V21-R49"
+    - "V21-R50"
+  next_plan_task_id: "P13-T08"
+  next_plan_task_execution_authorized: false
+objective: "Preserve the exact inherited generation-210 P13-T07 implementation transaction; add the missing documentation_registry_changed reason and the failure-created blocker path to RT-20260801-011 documentation-impact coverage; regenerate governed reports and their content-addressed task-local validation receipt; rerun broad validation; and invoke at most one distinct governed checkpoint only after PASS."
+target_derivation_milestone: "source_equivalence_eqsrc"
+milestone_burden: "Restore exact P13-T07 documentation-impact parity before checkpointing; no scientific derivation burden advances."
+route_label: "recover_p13_t07_documentation_registry_reason_and_checkpoint_v1"
+route_sha256: "ab015ee1f23bf1936042bf0e7f71827f1b4fe653087285160e77ae8771ff9932"
+project_system_change_only: true
+dual_budget_category: "system_bearing"
+primary_budget: "project_system"
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+claim_boundary_id: "CB-PS-P13-T07-DOCUMENTATION-REGISTRY-REASON-CHECKPOINT-RECOVERY-001"
+documentation_impact_id: "DI-RT-20260801-012-001"
+completion_id: "AJC-AJ-RT-20260801-012-001"
+output_artifacts:
+  - "research_control/tasks/RT-20260801-012/artifacts/p13_t07_documentation_registry_reason_checkpoint_recovery_receipt.json"
+  - "research_control/tasks/RT-20260801-012/jobs/completions/AJC-AJ-RT-20260801-012-001.yaml"
+summary: "Generation 211 restores exact P13-T07 documentation-impact parity while preserving the implemented report-provenance payload and predecessor routing bytes. Broad validation then stops on one protected RT-20260801-011 dual-budget checkpoint-accounting mismatch, so no checkpoint is invoked and P13-T08 remains unexecuted."
+next_recommended_action: "Run one fresh bounded P13-T07 project-system recovery for the exact protected predecessor dual-budget checkpoint-accounting mismatch before any checkpoint or P13-T08 execution."
+project_improvement_signals: []
+notes: "The exact documentation-impact repair and generated-report checks pass, but checkpoint is withheld because broad validation rejects the protected predecessor completion's missing expected checkpoint output. This recovery changes no renderer, validator, fixture, test, workflow, policy, scientific source, Distance-to-GR value, promotion status, proof status, publication state, push state, hosted workflow, Gate Chair verdict, or completed-derivation authority."
