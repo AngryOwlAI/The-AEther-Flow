@@ -1,0 +1,201 @@
+handoff_id: "handoff-0945"
+handoff_number: 945
+handoff_kind: "ordinary_research"
+task_id: "RT-20260803-003"
+decision_id: "DDR-20260803-003"
+job_id: "AJ-RT-20260803-003-001"
+completion_id: "AJC-AJ-RT-20260803-003-001"
+completion_path: "research_control/tasks/RT-20260803-003/jobs/completions/AJC-AJ-RT-20260803-003-001.yaml"
+completion_sha256: "99aca5806525200bb9d08db5e25765a1d7f3603e5fb49a79a20b4f9d0075c4ac"
+status: "ready_after_checkpoint"
+validation_status: "PASS_PRECHECKPOINT"
+created_at: "2026-08-03T05:08:32Z"
+parent_handoff_id: "handoff-0944"
+plan_task_id: "P16-T02"
+source_role_id: "external-red-team-reviewer"
+source_role_version: "0.1.0"
+source_execution_role_ref: "external-red-team-reviewer@0.1.0--RT-20260803-003"
+summary: "P16-T02 finds the canonical Gate A-E decisions scientifically compatible under typed dependency edges but records one blocking current-status defect: Gate C's exact source-side human-postulate adoption is denied or collapsed by ledger alias renderer and validator fields. The audit result is REPAIR_REQUIRED, not plan closure."
+next_action: "Run one governed checkpoint for AJ-RT-20260803-003-001. Then consume PIS-RT-20260803-003-001 through exactly one bounded improve-project-system status-taxonomy repair; do not execute P16-T03 or P16-T04."
+current_claim_boundary: "CB-V21-P16-T02-GATE-AUTHORITY-CONSISTENCY-001"
+loop_risk_route: "project-system-repair-packet"
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260803-003"
+  latest_research_handoff_id: "handoff-0945"
+  latest_research_next_action: "Run one governed checkpoint for AJ-RT-20260803-003-001. Then consume PIS-RT-20260803-003-001 through exactly one bounded improve-project-system status-taxonomy repair; do not execute P16-T03 or P16-T04."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+  project_improvement_sidecar_required: true
+  research_handoff_remains_authoritative: true
+claim_boundary:
+  allowed_next_scope: "One governed P16-T02 audit checkpoint followed by one project-system status-layer repair that preserves all exact Gate decisions."
+  completed_task: "RT-20260803-003"
+  completed_completion_path: "research_control/tasks/RT-20260803-003/jobs/completions/AJC-AJ-RT-20260803-003-001.yaml"
+  completed_completion_sha256: "99aca5806525200bb9d08db5e25765a1d7f3603e5fb49a79a20b4f9d0075c4ac"
+  source_handoff_id: "handoff-0944"
+  source_handoff_path: "research_control/handoffs/handoff-0944.yaml"
+  source_handoff_sha256: "0e35b85993731d9e7ba7a26d58a2038527850017ea5fe0e744dd94720c737d60"
+  result_status: "REPAIR_REQUIRED_STATUS_LAYER_DRIFT"
+  audit_path: "research_control/tasks/RT-20260803-003/artifacts/v21_p16_t02_gate_consistency_audit.md"
+  audit_sha256: "5daa24b57b805af51633f85e176b8da5699aaca8000794f57eb5ff4a3ddfde8c"
+  authority_map_path: "research_control/tasks/RT-20260803-003/artifacts/v21_p16_t02_authority_path_map.yaml"
+  authority_map_sha256: "c74551dd8fe9cfc64f5a66e410813fc0f16fe55c26723a42c098444ea913df3e"
+  findings_path: "research_control/tasks/RT-20260803-003/artifacts/v21_p16_t02_overread_findings.yaml"
+  findings_sha256: "f4f434fb0a8b0cd90809eb5cf40df9f8ac57d7aab1605b94dc79e914ab0dc08c"
+  validation_path: "research_control/tasks/RT-20260803-003/artifacts/v21_p16_t02_validation.json"
+  validation_sha256: "d12496fb50fc6b153c3349e87a1c352cd7641c31e139eddeb3c9cfc9dad3b758"
+  gate_count: 5
+  canonical_gate_decision_conflict_count: 0
+  blocking_scientific_conflict_count: 0
+  blocking_project_system_finding_count: 1
+  primary_finding_id: "P16T02-STATUS-C-GEFF-CUTSET-001"
+  scientific_claims_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  external_action_authorized: false
+  blocked_claims:
+    - "Gate C source-side postulate adoption as first-principles or target-side matter-coupling derivation"
+    - "ScopedMetricStructureRecord_src as bare g_eff"
+    - "finite Gate D algebra as Einstein equations"
+    - "protocol validator checkpoint or coverage PASS as benchmark recovery"
+    - "internal AI review as external human review or independent replication"
+    - "negative Gate E verdict as global no-go or future impossibility"
+plan_result:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  phase_id: "P16"
+  plan_task_id: "P16-T02"
+  work_item_status: "repair_required"
+  result_status: "REPAIR_REQUIRED_STATUS_LAYER_DRIFT"
+  recommendation_ids:
+    - "V21-R31"
+    - "V21-R33"
+    - "V21-R63"
+    - "V21-R67"
+    - "V21-R68"
+    - "V21-R72"
+  next_plan_task_id: "P16-T02"
+  P16_T03_dependency_ready_but_not_selected: true
+  P16_T04_blocked_by:
+    - "P16-T02"
+    - "P16-T03"
+dependency_evidence:
+  - plan_task_id: "P16-T01"
+    task_id: "RT-20260803-002"
+    completion_path: "research_control/tasks/RT-20260803-002/jobs/completions/AJC-AJ-RT-20260803-002-001.yaml"
+    completion_sha256: "4e59a0ae6d0740677ef0b4331f753138f32b76b27981435f5933aaab1a78fd66"
+    status: "qualifying_checkpointed"
+  - plan_task_id: "P16-T02"
+    task_id: "RT-20260803-003"
+    status: "repair_required_pending_checkpoint"
+  - work_item_id: "P16-T02-status-layer-repair"
+    depends_on:
+      - "RT-20260803-003 checkpoint"
+    status: "dependency_ready_after_checkpoint"
+selected_next_route:
+  route_id: "v21_p16_t02_gate_authority_consistency_reaudit_after_status_repair"
+  route_label: "external-review-packet"
+  role_family: "external-red-team-reviewer@0.1.0"
+  worker_skill: "continue-research"
+  plan_task_id: "P16-T02"
+  work_item_id: "P16-T02"
+  target_derivation_milestone: "benchmark_promotion"
+  milestone_burden: "Prevent downstream status laundering at plan closure."
+  strategy_id: "reaudit_p16_t02_after_status_layer_repair_v1"
+  trigger_classification: "post_repair_canonical_alignment_audit"
+  required_predecessor_signal_id: "PIS-RT-20260803-003-001"
+  required_predecessor_sidecar_id: "improve-project-handoff_20260803_003"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: false
+  execution_ready_now: false
+  physics_promotion_authorized: false
+  next_action: "After the separate project-system status-layer repair, re-audit P16-T02 against canonical shared status surfaces before P16-T03 or P16-T04."
+ordinary_route_guard:
+  schema_id: "ordinary_route_guard_evaluation_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  evaluation_id: "ORE-HANDOFF-0945"
+  ordinary_handoff_id: "handoff-0945"
+  threshold: 3
+  consecutive_project_system_tasks_before_selection: 0
+  ready_science_plan_task_ids: []
+  selected_plan_task_id: "P16-T02"
+  selected_route_class: "physics_bearing"
+  selected_worker_skill: "continue-research"
+  outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  exception_receipt:
+    active: false
+    source_signal_id: "PIS-RT-20260803-003-001"
+    reason: "Below-threshold guard path; the non-superseding project-improvement sidecar separately carries the required repair."
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+validation_layers:
+  memory_preflight:
+    status: "PASS"
+    evidence:
+      - "Fresh retrieval resolved the V21 plan and canonical sources were inspected directly."
+  task_local_validation:
+    status: "PASS"
+    evidence:
+      - "Eighteen of eighteen deterministic checks pass while preserving one open project-system finding."
+  parent_child_synthesis:
+    status: "PASS_REPAIR_FINDING_PRESERVED"
+    evidence:
+      - "Both internal perspectives independently identify the same status-layer defect."
+  repository_precheckpoint:
+    status: "PENDING"
+    evidence:
+      - "Governed synchronization exact-job validation and affected profile remain."
+  checkpoint:
+    status: "PENDING"
+    evidence:
+      - "Exactly one governed checkpoint remains."
+authorization_layers:
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  submission_authorized: false
+  public_release_authorized: false
+  reviewer_contact_authorized: false
+  protected_scoped_gate_review_authorized: false
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  source_law_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+project_improvement_signals:
+  - signal_id: "PIS-RT-20260803-003-001"
+    signal_type: "control_contract_drift"
+    severity: "high"
+    status: "open"
+    evidence_path: "research_control/tasks/RT-20260803-003/artifacts/v21_p16_t02_overread_findings.yaml"
+    recommended_skill: "improve-project-system"
+    recommended_role: "project-control-maintainer"
+    notes: "Synchronize Gate C source-side adoption versus derivational coupling status, Gate E negative-versus-future-positive authority wording, Gate A registry validation state, and affected aliases renderers and validators without editing canonical science."
+project_improvement_bridge:
+  required: true
+  improvement_handoff_path: "research_control/project_improvement_handoffs/improve-project-handoff_20260803_003.yaml"
+  signal_ids:
+    - "PIS-RT-20260803-003-001"
+  bridge_status: "generated"
+  notes: "Generated by scripts/project_control/generate_project_improvement_handoff.py; the regular research handoff remains authoritative and the sidecar does not supersede it."
+handoff_authority_boundary: "This handoff records a negative consistency audit and selects a bounded project-system repair. It changes no science Gate status benchmark publication external-review outward-action or completed-derivation authority."
+next_plan_task_id: "P16-T02"
+next_plan_task_execution_ready_after_checkpoint: false
+next_plan_task_executed: false
+notes: "Checkpoint locally without push. P16-T03 remains dependency-ready but unexecuted; P16-T04 remains blocked by unresolved P16-T02 and unexecuted P16-T03."

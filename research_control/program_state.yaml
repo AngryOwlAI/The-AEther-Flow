@@ -1,11 +1,87 @@
 mode: "director_led_research_control"
-active_task_id: "RT-20260803-002"
-latest_handoff_id: "handoff-0944"
-current_status: "p16_t01_qualifying_finalized_recommendation_coverage_complete_precheckpoint"
-claim_boundary_summary: "P16-T01 verifies qualifying tracked pre-P16 direct and validation evidence for all 72 V21 recommendations while preserving 35 P16-T02 through P16-T05 mappings as unexecuted downstream integration. Coverage creates no scientific proof Gate promotion benchmark publication or external-action authority."
+active_task_id: "RT-20260803-003"
+latest_handoff_id: "handoff-0945"
+current_status: "p16_t02_repair_required_status_layer_drift_precheckpoint"
+claim_boundary_summary: "P16-T02 preserves every exact Gate A-E decision and adds a typed dependency certificate but finds one blocking control-contract drift: current status surfaces deny or collapse Gate C source-side postulate adoption versus still-open g_eff-dependent matter coupling. No physics promotion follows."
 next_plan_task_id: "P16-T02"
-next_worker_skill: "continue-research"
-next_recommended_action: "Run one governed checkpoint for AJ-RT-20260803-002-001. After checkpoint, route exactly one bounded P16-T02 external-review packet to audit Gate A-E dependency and authority consistency; do not execute P16-T03 through P16-T06 in that worker."
+next_worker_skill: "improve-project-system"
+next_recommended_action: "Run one governed checkpoint for AJ-RT-20260803-003-001. Then consume PIS-RT-20260803-003-001 through exactly one bounded improve-project-system status-taxonomy repair; do not execute P16-T03 or P16-T04."
+
+p16_t02_gate_authority_consistency_audit:
+  task_id: "RT-20260803-003"
+  parent_task_id: "RT-20260803-002"
+  parent_handoff_id: "handoff-0944"
+  plan_task_id: "P16-T02"
+  next_plan_task_id: "P16-T02"
+  claim_boundary_id: "CB-V21-P16-T02-GATE-AUTHORITY-CONSISTENCY-001"
+  status: "PASS_PRECHECKPOINT"
+  work_item_status: "repair_required"
+  result_status: "REPAIR_REQUIRED_STATUS_LAYER_DRIFT"
+  route_label: "external-review-packet"
+  selected_role_family: "external-red-team-reviewer@0.1.0"
+  selected_worker_skill: "continue-research"
+  selected_strategy_id: "continue_in_scope_generation_229"
+  target_derivation_milestone: "benchmark_promotion"
+  milestone_burden: "Prevent downstream status laundering at plan closure."
+  source_head: "506df561a80aa8b1a45a57aef76ea82f65fce90f"
+  completion_path: "research_control/tasks/RT-20260803-003/jobs/completions/AJC-AJ-RT-20260803-003-001.yaml"
+  completion_sha256: "99aca5806525200bb9d08db5e25765a1d7f3603e5fb49a79a20b4f9d0075c4ac"
+  handoff_id: "handoff-0945"
+  handoff_path: "research_control/handoffs/handoff-0945.yaml"
+  handoff_sha256: "fcf800fe995731180f71bdf85e8b25b9d91cca3463e5d004fc288af014f8d906"
+  audit_path: "research_control/tasks/RT-20260803-003/artifacts/v21_p16_t02_gate_consistency_audit.md"
+  audit_sha256: "5daa24b57b805af51633f85e176b8da5699aaca8000794f57eb5ff4a3ddfde8c"
+  authority_map_path: "research_control/tasks/RT-20260803-003/artifacts/v21_p16_t02_authority_path_map.yaml"
+  authority_map_sha256: "c74551dd8fe9cfc64f5a66e410813fc0f16fe55c26723a42c098444ea913df3e"
+  findings_path: "research_control/tasks/RT-20260803-003/artifacts/v21_p16_t02_overread_findings.yaml"
+  findings_sha256: "f4f434fb0a8b0cd90809eb5cf40df9f8ac57d7aab1605b94dc79e914ab0dc08c"
+  validation_path: "research_control/tasks/RT-20260803-003/artifacts/v21_p16_t02_validation.json"
+  validation_sha256: "d12496fb50fc6b153c3349e87a1c352cd7641c31e139eddeb3c9cfc9dad3b758"
+  compact_receipt_path: "research_control/tasks/RT-20260803-003/artifacts/v21_p16_t02_compact_receipt.json"
+  compact_receipt_sha256: "2e2377a5a357fe43e3b18333c0994732a2e0d6cff7717de68bbfd1c8396db577"
+  typed_dependency_certificate_id: "GateChainTypedRefinementCertificate_v1"
+  gate_count: 5
+  typed_dependency_edge_count: 7
+  canonical_gate_decision_conflict_count: 0
+  blocking_scientific_conflict_count: 0
+  blocking_project_system_finding_count: 1
+  nonblocking_finding_count: 3
+  primary_finding_id: "P16T02-STATUS-C-GEFF-CUTSET-001"
+  Gate_A_status_preserved: "SELECT_CONTINUUM_FIRST_WITH_NARROW_PREMETRIC_BOUNDARY"
+  Gate_B_status_preserved: "NOT_READY_EIGHT_OF_EIGHT_CRITERIA_UNMET"
+  Gate_C_status_preserved: "ADOPTED_BY_PROTECTED_HUMAN_CONSTITUTIVE_POSTULATE_DERIVATIONAL_GAP_OPEN"
+  Gate_D_status_preserved: "NOT_READY_EINSTEIN_SECTOR_DERIVATION_REQUIREMENTS_UNMET"
+  Gate_E_status_preserved: "NOT_READY_BENCHMARK_AND_COMPLETED_DERIVATION_REQUIREMENTS_UNMET"
+  canonical_science_modified: false
+  scientific_claims_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  external_review_completed: false
+  independent_replication_completed: false
+  publication_authorized: false
+  external_action_authorized: false
+  project_improvement_signal_id: "PIS-RT-20260803-003-001"
+  project_improvement_sidecar_id: "improve-project-handoff_20260803_003"
+  project_improvement_sidecar_path: "research_control/project_improvement_handoffs/improve-project-handoff_20260803_003.yaml"
+  project_improvement_sidecar_sha256: "1c2e18cf29c6448f38898ca7d9e9bffcc6f8f48a5a41f821fd1e183b1ea4a04b"
+  selected_next_work_item: "P16-T02-status-layer-repair"
+  selected_next_worker_skill: "improve-project-system"
+  selected_next_role_family: "project-control-maintainer"
+  selected_next_route_label: "project-system-repair-packet"
+  selected_next_strategy_id: "repair_p16_t02_gate_status_layer_contract_v1"
+  selected_next_requires_human_gate: false
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
+  p16_t03_dependency_ready_but_not_selected: true
+  p16_t03_executed: false
+  p16_t04_executed: false
+  p16_t05_executed: false
+  p16_t06_executed: false
+  checkpoint_invocation_count: 0
+  checkpoint_committed: false
 
 p16_t01_final_recommendation_coverage_audit:
   task_id: "RT-20260803-002"
@@ -11108,6 +11184,15 @@ mutable_frontier_inventory_preflight_compatibility_recovery:
   physics_promotion_authorized: false
 
 project_improvement_signals:
+  - signal_id: "PIS-RT-20260803-003-001"
+    signal_type: "control_contract_drift"
+    severity: "high"
+    status: "open"
+    evidence_path: "research_control/tasks/RT-20260803-003/artifacts/v21_p16_t02_overread_findings.yaml"
+    recommended_skill: "improve-project-system"
+    recommended_role: "project-control-maintainer"
+    resolution_evidence_path: ""
+    resolved_at: ""
   - signal_id: "PIS-RT-20260723-013-001"
     signal_type: "generated_artifact_drift"
     severity: "high"
@@ -11119,29 +11204,32 @@ project_improvement_signals:
     resolution_evidence_path: "research_control/tasks/RT-20260723-017/jobs/completions/AJC-AJ-RT-20260723-017-001.yaml"
     resolved_at: "2026-07-24T02:00:31Z"
 project_improvement_bridge:
-  required: false
-  recursive_goal_recovery_required: false
-  checkpoint_recovery_precedes_sidecar: false
-  route: "none"
-  blocker_path: ""
-  blocker_sha256: ""
-  signal_ids: []
+  required: true
+  recursive_goal_recovery_required: true
+  checkpoint_recovery_precedes_sidecar: true
+  route: "improve-project-system"
+  blocker_path: "research_control/tasks/RT-20260803-003/artifacts/v21_p16_t02_overread_findings.yaml"
+  blocker_sha256: "f4f434fb0a8b0cd90809eb5cf40df9f8ac57d7aab1605b94dc79e914ab0dc08c"
+  signal_ids:
+    - "PIS-RT-20260803-003-001"
   sidecar_supersedes_research_handoff: false
-  status: "not_required"
-  resolution_job_id: "AJ-RT-20260725-002-001"
-  resolution_evidence_path: "research_control/tasks/RT-20260725-002/jobs/completions/AJC-AJ-RT-20260725-002-001.yaml"
+  status: "open_after_checkpoint"
+  sidecar_id: "improve-project-handoff_20260803_003"
+  sidecar_path: "research_control/project_improvement_handoffs/improve-project-handoff_20260803_003.yaml"
+  resolution_job_id: ""
+  resolution_evidence_path: ""
 
 active_state_bifurcation:
-  latest_research_task_id: "RT-20260803-002"
-  latest_research_handoff_id: "handoff-0944"
-  latest_research_next_action: "Run one governed checkpoint for AJ-RT-20260803-002-001. After checkpoint, route exactly one bounded P16-T02 external-review packet to audit Gate A-E dependency and authority consistency; do not execute P16-T03 through P16-T06 in that worker."
+  latest_research_task_id: "RT-20260803-003"
+  latest_research_handoff_id: "handoff-0945"
+  latest_research_next_action: "Run one governed checkpoint for AJ-RT-20260803-003-001. Then consume PIS-RT-20260803-003-001 through exactly one bounded improve-project-system status-taxonomy repair; do not execute P16-T03 or P16-T04."
   latest_project_system_task_id: "none"
   latest_project_system_status: "none"
   latest_project_system_sidecar_task_id: "none"
   latest_project_system_sidecar_status: "none"
   next_research_route_source: "latest_research_handoff"
   sidecar_supersedes_research_handoff: false
-  project_improvement_sidecar_required: false
+  project_improvement_sidecar_required: true
   research_handoff_remains_authoritative: true
 
 source_assumption_ledger:

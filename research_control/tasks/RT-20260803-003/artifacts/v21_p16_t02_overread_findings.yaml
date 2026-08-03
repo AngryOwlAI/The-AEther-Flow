@@ -1,0 +1,74 @@
+schema_id: "v21_p16_t02_overread_findings_v1"
+task_id: "RT-20260803-003"
+plan_task_id: "P16-T02"
+result_status: "REPAIR_REQUIRED_STATUS_LAYER_DRIFT"
+blocking_finding_count: 1
+nonblocking_finding_count: 3
+findings:
+  - finding_id: "P16T02-STATUS-C-GEFF-CUTSET-001"
+    severity: "blocking"
+    class: "cross_layer_status_underclaim_and_type_collapse"
+    statement: "The protected Gate C record adopts exact source-side matter, detector, coupling, action, stress-energy-input, and conservation meanings, while current ledger, alias, renderer, and validator surfaces still prohibit those adoptions without a source-side qualifier."
+    canonical_authority_paths:
+      - "research_control/tasks/RT-20260729-001/artifacts/human_authorization_p7_t08_physical_matter_adoption_v1.yaml"
+      - "research_control/tasks/RT-20260729-001/artifacts/p7_t08_gate_c_decision_v1.tex"
+      - "research_control/tasks/RT-20260729-001/artifacts/p7_t08_scientific_status_v1.yaml"
+    drifting_surfaces:
+      - "registries/DISTANCE_TO_GR_LEDGER.csv#matter_coupling"
+      - "research_control/design/distance_to_gr_status_aliases.yaml#matter_coupling"
+      - "research_control/current_frontier.md#Matter-Coupling-Boundary"
+      - "output/compact_current_frontier_v16.yaml"
+      - "output/compact_current_frontier_v16.json"
+    exact_type_split:
+      adopted: "exact finite source-side P7 package by protected constitutive postulate"
+      not_derived_or_adopted: "unscoped target-side matter coupling through a source-derived g_eff"
+    consequence: "Public and internal status fields do not agree, and either source-side adoption erasure or full-milestone laundering is possible."
+    repair_route: "one bounded improve-project-system status-taxonomy alias renderer and validator repair"
+    science_change_required: false
+    status: "open_repair_required"
+  - finding_id: "P16T02-GATE-E-AUTHORITY-LABEL-001"
+    severity: "medium"
+    class: "protected_verdict_state_ambiguity"
+    statement: "The generic gate_chair_status layer says protected_verdict_missing although P9-T09 completed and consumed an exact protected negative Gate E verdict; only future positive closure authority remains missing."
+    repair_route: "calibrate aliases and renderer wording without changing the negative verdict or future positive human gate"
+    status: "covered_by_same_bounded_repair"
+  - finding_id: "P16T02-GATE-A-REGISTRY-VALIDATION-001"
+    severity: "low"
+    class: "source_registry_validation_state_drift"
+    statement: "The Gate A TeX source registry row remains PENDING although the decision was later committed and canonically integrated."
+    repair_route: "synchronize current registry validation status while preserving immutable historical failure receipts"
+    status: "covered_by_same_bounded_repair"
+  - finding_id: "P16T02-INTERNAL-REVIEW-LABEL-001"
+    severity: "low"
+    class: "review_provenance_overread_risk"
+    statement: "The external-red-team-reviewer role name can be overread as external human or independent review."
+    current_guard: "All reviewed Gate B and P16-T02 artifacts explicitly classify same-context internal AI review and deny external or replication standing."
+    repair_route: "retain exact provenance wording in all final synthesis surfaces"
+    status: "guarded_nonblocking"
+required_guard_wording:
+  - "P7SourceMatterPackage_v1 is adopted by protected human constitutive postulate only within its exact finite source-side scope."
+  - "The adoption includes the explicitly authorized source-side matter, detector, coupling, action, stress-energy-input, and conservation meanings; it is not first-principles derivation, target T_mu_nu, coupling through a derived g_eff, or an equivalence-principle result."
+  - "Gate B remains not ready; ScopedMetricStructureRecord_src is not bare g_eff or an unscoped physical Lorentzian metric."
+  - "P9-T09 completed one protected negative Gate E review; only future positive benchmark closure remains evidence-dependent and human-gated."
+  - "Role separation and internal AI review are not external human review or independent replication."
+publication_external_action_check:
+  decision_path: "research_control/tasks/RT-20260802-010/artifacts/p15_t07_submission_claim_venue_decisions_v1.yaml"
+  decision_sha256: "e97374f766a1c078d261632e98bd16673eb531ef1a11e2b3ba41321d1cfbf5b8"
+  authorization_cell_count: 16
+  denied_cell_count: 16
+  authorized_cell_count: 0
+  external_action_performed_count: 0
+  status: "aligned"
+project_improvement_signal:
+  signal_id: "PIS-RT-20260803-003-001"
+  signal_type: "control_contract_drift"
+  severity: "high"
+  recommended_skill: "improve-project-system"
+  recommended_role: "project-control-maintainer"
+authority_limits:
+  physics_promotion_authorized: false
+  proof_authority: false
+  canonical_science_edit_authorized: false
+  protected_gate_change_authorized: false
+  benchmark_promotion_authorized: false
+  outward_action_authorized: false

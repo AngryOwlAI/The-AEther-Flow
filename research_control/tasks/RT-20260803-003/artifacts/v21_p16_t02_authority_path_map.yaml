@@ -1,0 +1,124 @@
+schema_id: "v21_p16_t02_authority_path_map_v1"
+task_id: "RT-20260803-003"
+plan_task_id: "P16-T02"
+result_status: "REPAIR_REQUIRED_STATUS_LAYER_DRIFT"
+review_context:
+  classification: "same_context_internal_ai_review"
+  external_human_review_completed: false
+  independent_replication_completed: false
+  workflow_success_disregarded_as_science: true
+  validator_success_disregarded_as_science: true
+typed_dependency_certificate:
+  certificate_id: "GateChainTypedRefinementCertificate_v1"
+  payload_kind: "dependency_map_update_and_cutset_certificate"
+  edge_types:
+    D: "derivational prerequisite"
+    H: "exact protected human authority"
+    C: "control or evidentiary provenance"
+  ready_definition: "Ready(v) iff every D predecessor is derived at the required type and every H predecessor has exact scope-matching authority; C edges cannot coerce to D or H."
+  gate_c_refinement:
+    source_adoption_node: "C_src=AdoptedSourceMatterByPostulate(P7SourceMatterPackage_v1)"
+    derivational_node: "C_geom=DerivedUniversalCoupling(P7SourceMatterPackage_v1,g_eff)"
+    cut_set:
+      - "lawful unscoped Gate B effective geometry"
+      - "source-derived geometry-coupling commutative square"
+    result: "No lawful C_src-to-C_geom dependency morphism exists with the current evidence."
+    scope: "typed dependency obstruction only; not a global no-go and not a revision of Gate C"
+gates:
+  - gate_id: "Gate_A"
+    decision_status: "SELECT_CONTINUUM_FIRST_WITH_NARROW_PREMETRIC_BOUNDARY"
+    authorization_id: "approval-20260724-001"
+    authorization_path: "research_control/tasks/RT-20260724-004/artifacts/human_authorization_p4_t05_continuum_first_v1.yaml"
+    authorization_sha256: "3421808c71a64279ef5ba62df5376ab4999d2c67978d4f7ceabbeb0ae9b2bde6"
+    decision_path: "research_control/tasks/RT-20260724-004/artifacts/ontology_regime_gate_chair_decision_v1.tex"
+    decision_sha256: "20ea795bbe93333b489e4f13601fd6bb1623f318b7847f9d2d24402c7490c934"
+    dependency_effect: "selects research architecture only; no downstream derivational edge is discharged"
+  - gate_id: "Gate_B"
+    decision_status: "NOT_READY_EIGHT_OF_EIGHT_CRITERIA_UNMET"
+    decision_path: "research_control/tasks/RT-20260727-004/artifacts/p6_t08_gate_b_separating_certificate_v1.yaml"
+    decision_sha256: "f3080ed6a6ba1d6847a3b7ed43c7a11ad7f7dae4deccd25486913ea9547f221b"
+    review_path: "research_control/tasks/RT-20260727-004/artifacts/p6_t08_gate_b_external_red_team_review_v1.yaml"
+    review_sha256: "77779a4db679492b47ebd0652cd67c2a3f17e69aa7ee06917ab8089bcdabafae"
+    dependency_effect: "bare g_eff and lawful unscoped geometry input remain absent"
+  - gate_id: "Gate_C"
+    decision_status: "ADOPTED_AS_CANONICAL_PHYSICAL_MATTER_BY_EXPLICIT_HUMAN_POSTULATE"
+    derivational_status: "open_derivational_gap_after_constitutive_adoption"
+    authorization_id: "approval-20260729-001"
+    authorization_path: "research_control/tasks/RT-20260729-001/artifacts/human_authorization_p7_t08_physical_matter_adoption_v1.yaml"
+    authorization_sha256: "9da90540e60a9bc1b624689a4b694460c77ac5d99306319dcedefb291be9a6f2"
+    decision_path: "research_control/tasks/RT-20260729-001/artifacts/p7_t08_gate_c_decision_v1.tex"
+    decision_sha256: "85fbf32fb9b02aeae556149cbc5c6b51bd6fedf278a3bc401545c93e29fc4827"
+    status_path: "research_control/tasks/RT-20260729-001/artifacts/p7_t08_scientific_status_v1.yaml"
+    status_sha256: "5f84e9c0495514632e7b6c25a809e4e6c1044c69f159ce0e1e38900fc5229d73"
+    dependency_effect: "establishes exact scoped source-side postulate adoption but not the g_eff-dependent derivational matter-coupling node"
+  - gate_id: "Gate_D"
+    decision_status: "NOT_READY_EINSTEIN_SECTOR_DERIVATION_REQUIREMENTS_UNMET"
+    authorization_id: "approval-20260729-002"
+    authorization_path: "research_control/tasks/RT-20260729-011/artifacts/human_authorization_p8_t07_gate_d_review_v1.yaml"
+    authorization_sha256: "c1de70d4431e432a9f9b0f092cf4469b4f514ba6154a35976c62cfe44636d56d"
+    decision_path: "research_control/tasks/RT-20260729-011/artifacts/p8_t07_gate_d_decision_v1.tex"
+    decision_sha256: "035ea88a612d861a00d0703ec2bd1094e01194c113d7ff2588e3a4ad8bf47d63"
+    dependency_effect: "Einstein equations and GR field sector remain unestablished"
+  - gate_id: "Gate_E"
+    decision_status: "NOT_READY_BENCHMARK_AND_COMPLETED_DERIVATION_REQUIREMENTS_UNMET"
+    authorization_id: "approval-20260731-001"
+    authorization_path: "research_control/tasks/RT-20260731-004/artifacts/human_authorization_p9_t09_gate_e_review_v1.yaml"
+    authorization_sha256: "b248937b11448f7b1cd0fcb1a751ac643844107c9489a29b4e702779ab492646"
+    decision_path: "research_control/tasks/RT-20260731-004/artifacts/p9_t09_gate_e_decision_v1.tex"
+    decision_sha256: "7f28103e40664f0a004af0134f3216932136f8efb160f0c7c59039efa5225b0b"
+    dependency_effect: "benchmark promotion and completed-derivation language remain denied"
+dependency_edges:
+  - edge_id: "A_to_B"
+    edge_type: "D"
+    status: "not_discharged_by_gate_a_selection"
+  - edge_id: "B_to_C_geom"
+    edge_type: "D"
+    status: "unsatisfied_gate_b_not_ready"
+  - edge_id: "GateC_authority_to_C_src"
+    edge_type: "H"
+    status: "satisfied_exact_scope"
+  - edge_id: "C_src_to_C_geom"
+    edge_type: "D"
+    status: "undefined_without_geometry_and_coupling_bridge"
+  - edge_id: "C_geom_to_D"
+    edge_type: "D"
+    status: "unsatisfied"
+  - edge_id: "D_to_E"
+    edge_type: "D"
+    status: "unsatisfied_gate_d_not_ready"
+  - edge_id: "GateE_authority_to_E"
+    edge_type: "H"
+    status: "satisfied_for_negative_review_only"
+forbidden_shortcut_attempt:
+  attempted: true
+  expression: "GateA + ScopedMetricStructureRecord_src + GateC + finite_GateD_algebra + protocol_PASS => completed_GR_derivation"
+  result: "rejected_type_error"
+  failed_boundaries:
+    - "research architecture is not physical spacetime or source dynamics"
+    - "scoped source-extension metric record is not unscoped g_eff"
+    - "source-side postulate adoption is not coupling through derived g_eff"
+    - "source stress-energy input is not target T_mu_nu"
+    - "finite quotient identity is not Einstein's tensor equation"
+    - "protocol or validator PASS is not physical benchmark PASS"
+source_snapshots:
+  plan:
+    path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+    sha256: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  backlog:
+    path: "research_control/design/v21_recommendation_backlog.yaml"
+    sha256: "849a4e8dfe848e80bc0c8236252b924e636e5c95ac1a090478a69f7f5377559f"
+  source_handoff:
+    path: "research_control/handoffs/handoff-0944.yaml"
+    sha256: "0e35b85993731d9e7ba7a26d58a2038527850017ea5fe0e744dd94720c737d60"
+  p16_t01_completion:
+    path: "research_control/tasks/RT-20260803-002/jobs/completions/AJC-AJ-RT-20260803-002-001.yaml"
+    sha256: "4e59a0ae6d0740677ef0b4331f753138f32b76b27981435f5933aaab1a78fd66"
+authority_limits:
+  canonical_science_modified: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  benchmark_promotion_authorized: false
+  external_review_completed: false
+  independent_replication_completed: false

@@ -1,0 +1,57 @@
+{
+  "schema_id": "v21_p16_t02_compact_receipt_v1",
+  "receipt_id": "RCP-V21-P16-T02-GATE-CONSISTENCY-001",
+  "task_id": "RT-20260803-003",
+  "job_id": "AJ-RT-20260803-003-001",
+  "plan_task_id": "P16-T02",
+  "result_status": "REPAIR_REQUIRED_STATUS_LAYER_DRIFT",
+  "source_hashes": {
+    "plan": "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087",
+    "source_handoff": "0e35b85993731d9e7ba7a26d58a2038527850017ea5fe0e744dd94720c737d60",
+    "distance_to_gr_ledger": "6b81b42bc7ed83f74f8062f2ade26988e8b369aa2d23744fc9e392279e1de5d8",
+    "distance_to_gr_aliases": "952c091d1ea26b3cca641b005977c9ec300c3e879868dc32086197c5304f7f52",
+    "gate_a_decision": "20ea795bbe93333b489e4f13601fd6bb1623f318b7847f9d2d24402c7490c934",
+    "gate_b_certificate": "f3080ed6a6ba1d6847a3b7ed43c7a11ad7f7dae4deccd25486913ea9547f221b",
+    "gate_c_decision": "85fbf32fb9b02aeae556149cbc5c6b51bd6fedf278a3bc401545c93e29fc4827",
+    "gate_d_decision": "035ea88a612d861a00d0703ec2bd1094e01194c113d7ff2588e3a4ad8bf47d63",
+    "gate_e_decision": "7f28103e40664f0a004af0134f3216932136f8efb160f0c7c59039efa5225b0b"
+  },
+  "artifact_hashes": {
+    "gate_consistency_audit": "5daa24b57b805af51633f85e176b8da5699aaca8000794f57eb5ff4a3ddfde8c",
+    "authority_path_map": "c74551dd8fe9cfc64f5a66e410813fc0f16fe55c26723a42c098444ea913df3e",
+    "overread_findings": "f4f434fb0a8b0cd90809eb5cf40df9f8ac57d7aab1605b94dc79e914ab0dc08c",
+    "child_phys_math": "d614cc3f4aa556dbd11797884e9b42bb170d188b05113aff896c5f35ea8b1138",
+    "child_phys_phil": "ccfdb9967068a147e02a95f9abf22e10de7e1387d7b8304af0cdbebcc4214cb5",
+    "parent_conflict_review": "bb3c6b2c2a938f4b32835328fd3e03bfd75bbad286a154c29bea638f8a9342d9",
+    "parent_fusion_notes": "98a50d65b464b24641247d0185b953f217020378de5deeba09d3e660cfba8ba4",
+    "validation_report": "d12496fb50fc6b153c3349e87a1c352cd7641c31e139eddeb3c9cfc9dad3b758"
+  },
+  "gate_count": 5,
+  "typed_dependency_edge_count": 7,
+  "forbidden_shortcut_attempt_count": 1,
+  "forbidden_shortcut_rejected_count": 1,
+  "blocking_scientific_conflict_count": 0,
+  "blocking_project_system_finding_count": 1,
+  "nonblocking_finding_count": 3,
+  "validator": {
+    "validator_id": "VAL-V21-P16-T02-GATE-CONSISTENCY-001",
+    "status": "PASS",
+    "check_count": 18,
+    "passed_check_count": 18,
+    "failed_check_count": 0
+  },
+  "new_mathematical_payload": {
+    "payload_id": "GateChainTypedRefinementCertificate_v1",
+    "payload_kind": "dependency_map_update_and_cutset_certificate",
+    "result": "C_src does not discharge C_geom without lawful Gate B geometry and a source-derived coupling bridge"
+  },
+  "project_improvement_signal_id": "PIS-RT-20260803-003-001",
+  "selected_repair_worker_skill": "improve-project-system",
+  "claim_boundary_summary": "The audit preserves every exact Gate A-E decision, records one blocking status-layer drift, and authorizes only a bounded project-system repair; it creates no physics promotion, proof, external review, independent replication, benchmark, publication, push, or completed-derivation authority.",
+  "physics_promotion_authorized": false,
+  "proof_authority": false,
+  "external_review_completed": false,
+  "independent_replication_completed": false,
+  "benchmark_promotion_authorized": false,
+  "outward_action_authorized": false
+}

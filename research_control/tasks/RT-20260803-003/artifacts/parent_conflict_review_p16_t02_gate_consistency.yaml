@@ -1,0 +1,38 @@
+schema_id: "v21_p16_t02_parent_conflict_review_v1"
+task_id: "RT-20260803-003"
+status: "resolved_with_blocking_shared_finding"
+child_outputs:
+  - execution_unit_id: "child_phys_math"
+    path: "research_control/tasks/RT-20260803-003/artifacts/child_phys_math_p16_t02_gate_consistency.yaml"
+    verdict: "repair_required_typed_gate_c_cutset"
+  - execution_unit_id: "child_phys_phil"
+    path: "research_control/tasks/RT-20260803-003/artifacts/child_phys_phil_p16_t02_gate_consistency.yaml"
+    verdict: "repair_required_status_layer_drift"
+shared_consensus:
+  - "The canonical Gate A-E scientific decisions preserve all downstream promotion barriers."
+  - "Gate C source-side human-postulate adoption and full g_eff-dependent matter-coupling derivation are different typed statuses."
+  - "Current ledger alias renderer and validator surfaces deny or collapse the exact source-side adoption and therefore fail public/internal status alignment."
+  - "Gate D and Gate E remain not ready; no benchmark promotion completed derivation external review or independent replication follows."
+  - "One bounded project-system repair is required before P16-T02 can close."
+preserved_differences:
+  - difference_id: "DIFF-01"
+    topic: "primary_failure_language"
+    child_phys_math: "typed cut-set and missing dependency morphism"
+    child_phys_phil: "cross-layer underclaim and status taxonomy collapse"
+    parent_disposition: "preserve_both"
+    rationale: "The mathematical type error explains why the status drift is dangerous; the philosophical taxonomy finding identifies the repair surface."
+  - difference_id: "DIFF-02"
+    topic: "secondary_drift_scope"
+    child_phys_math: "focus on Gate C and g_eff cut-set"
+    child_phys_phil: "also calibrate Gate E authority and Gate A registry validation labels"
+    parent_disposition: "include_as_one_bounded_control_contract_repair"
+    rationale: "All secondary items are current status-surface synchronization under the same exact Gate authority sources and require no science edit."
+resolution_rounds: 1
+unresolved_child_conflicts: []
+unresolved_blocking_scientific_conflicts: []
+open_project_system_finding_ids:
+  - "P16T02-STATUS-C-GEFF-CUTSET-001"
+final_verdict: "REPAIR_REQUIRED_STATUS_LAYER_DRIFT"
+selected_next_worker_skill: "improve-project-system"
+physics_promotion_authorized: false
+proof_authority: false

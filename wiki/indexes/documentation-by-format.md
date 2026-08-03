@@ -600,6 +600,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-V21-P15-T07-PARENT-FUSION-NO-EXTERNAL-ACTION-V1` `research_control/tasks/RT-20260802-010/artifacts/parent_fusion_notes_p15_t07_external_action_decision.md`
 - `MD-V21-P16-T01-FINAL-RECOMMENDATION-COVERAGE-AUDIT` `research_control/tasks/RT-20260803-002/artifacts/v21_recommendation_coverage_audit.md`
 - `MD-V21-P16-T01-PARENT-FUSION-RECOMMENDATION-COVERAGE-V1` `research_control/tasks/RT-20260803-002/artifacts/parent_fusion_notes_p16_t01_coverage_audit.md`
+- `MD-V21-P16-T02-GATE-A-E-CONSISTENCY-AUDIT` `research_control/tasks/RT-20260803-003/artifacts/v21_p16_t02_gate_consistency_audit.md`
+- `MD-V21-P16-T02-PARENT-FUSION-GATE-CONSISTENCY-V1` `research_control/tasks/RT-20260803-003/artifacts/parent_fusion_notes_p16_t02_gate_consistency.md`
 - `MD-V21-P4-T01-SOURCE-ASSUMPTION-AMBIGUITIES` `research_control/tasks/RT-20260720-030/artifacts/source_assumption_unresolved_ambiguities_v1.md`
 - `MD-V21-P4-T04-ONTOLOGY-REGIME-COMPARISON-REPORT-V1` `research_control/tasks/RT-20260721-002/artifacts/ontology_regime_comparison_report_v1.md`
 - `MD-V21-P4-T05-ONTOLOGY-REGIME-GATE-CHAIR-PARENT-FUSION-V1` `research_control/tasks/RT-20260724-004/artifacts/parent_fusion_notes_ontology_regime_gate_chair_review.md`
@@ -1256,6 +1258,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-V21-P15-T07-PARENT-FUSION-NO-EXTERNAL-ACTION-V1` `wiki/markdown/md-v21-p15-t07-parent-fusion-no-external-action-v1.md`
 - `WIKI-MD-V21-P16-T01-FINAL-RECOMMENDATION-COVERAGE-AUDIT` `wiki/markdown/md-v21-p16-t01-final-recommendation-coverage-audit.md`
 - `WIKI-MD-V21-P16-T01-PARENT-FUSION-RECOMMENDATION-COVERAGE-V1` `wiki/markdown/md-v21-p16-t01-parent-fusion-recommendation-coverage-v1.md`
+- `WIKI-MD-V21-P16-T02-GATE-A-E-CONSISTENCY-AUDIT` `wiki/markdown/md-v21-p16-t02-gate-a-e-consistency-audit.md`
+- `WIKI-MD-V21-P16-T02-PARENT-FUSION-GATE-CONSISTENCY-V1` `wiki/markdown/md-v21-p16-t02-parent-fusion-gate-consistency-v1.md`
 - `WIKI-MD-V21-P4-T01-SOURCE-ASSUMPTION-AMBIGUITIES` `wiki/markdown/md-v21-p4-t01-source-assumption-ambiguities.md`
 - `WIKI-MD-V21-P4-T04-ONTOLOGY-REGIME-COMPARISON-REPORT-V1` `wiki/markdown/md-v21-p4-t04-ontology-regime-comparison-report-v1.md`
 - `WIKI-MD-V21-P4-T05-ONTOLOGY-REGIME-GATE-CHAIR-PARENT-FUSION-V1` `wiki/markdown/md-v21-p4-t05-ontology-regime-gate-chair-parent-fusion-v1.md`

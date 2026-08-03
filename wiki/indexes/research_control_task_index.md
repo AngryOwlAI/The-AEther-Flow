@@ -2,7 +2,7 @@
 
 Generated navigation support only. This index is not task authority, physics proof authority, benchmark authority, Gate Chair authority, or completed-derivation evidence.
 
-<!-- generated-report-provenance: {"freshness_status":"fresh_at_generation","generated_view_is_authority":false,"generation_time":"2026-08-03T03:41:17Z","maximum_commit_lag":"1","physics_promotion_authorized":false,"policy_id":"p13_t07_live_generated_report_freshness_v1","proof_authority":false,"report_class":"research_task_index","schema_id":"generated_report_provenance_v1","source_commit":"b32e07c390936488e6c69224c91714b48d3308b5","source_hashes":[{"path":"registries/AGENT_JOB_REGISTRY.csv","sha256":"9590273e88e71d7d24ab44cef4de0c8dcead010ebeafe48de5f89e854d1d5782"},{"path":"registries/AGENT_ROLE_REGISTRY.csv","sha256":"a0b3e3a4ab41f29c1c755f9229603705134be2985c122d3f88545fecedf966f6"},{"path":"registries/DIRECTOR_DECISION_REGISTRY.csv","sha256":"61de105434170fc95d2db8be82a102db40e225d4aa1182d3f47455979ed65140"},{"path":"registries/RESEARCH_TASK_REGISTRY.csv","sha256":"937db4f678608476f5bbbf0f96b0fb44916cea22732e17b6c490a15904e4e12f"},{"path":"research_control/design/task_index_schema_v2.md","sha256":"4bc422ddf7b13318c82d093d896748d289ac38ad4608ddd9e89068d00302125f"},{"path":"research_control/design/v21_recommendation_backlog.yaml","sha256":"849a4e8dfe848e80bc0c8236252b924e636e5c95ac1a090478a69f7f5377559f"},{"path":"research_control/design/v21_task_taxonomy_policy.md","sha256":"7460702270a26079f39f64ced2b5934e6a67a721983d913e4d3d114917ecca0b"},{"path":"research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml","sha256":"dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3"},{"path":"scripts/research_control/generated_report_provenance.py","sha256":"af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c"},{"path":"scripts/research_control/render_task_index.py","sha256":"7c28b13a1f9843a300ce16bff2c09801549209927a41872efc02a6d0bfc0a023"}],"source_manifest_sha256":"1851be6f87cdf802cf0b7f4b69bf2a9517d0600f61bc7705de66f233be811a68","source_path_count":"4802","task_count":"1202"} -->
+<!-- generated-report-provenance: {"freshness_status":"fresh_at_generation","generated_view_is_authority":false,"generation_time":"2026-08-03T05:08:32Z","maximum_commit_lag":"1","physics_promotion_authorized":false,"policy_id":"p13_t07_live_generated_report_freshness_v1","proof_authority":false,"report_class":"research_task_index","schema_id":"generated_report_provenance_v1","source_commit":"506df561a80aa8b1a45a57aef76ea82f65fce90f","source_hashes":[{"path":"registries/AGENT_JOB_REGISTRY.csv","sha256":"ce9a7401a88105f9be21e624755709e53a7656d36e48667d3ca5079d8b7046fb"},{"path":"registries/AGENT_ROLE_REGISTRY.csv","sha256":"a0b3e3a4ab41f29c1c755f9229603705134be2985c122d3f88545fecedf966f6"},{"path":"registries/DIRECTOR_DECISION_REGISTRY.csv","sha256":"b063e15a32a1f22dfa775cae2e8f28042a6aad2868caf82962202c2ea231d6b3"},{"path":"registries/RESEARCH_TASK_REGISTRY.csv","sha256":"65bcaa8252c62471ff6a5600fa306ad5f813d077af1befb376e5b833b70039bd"},{"path":"research_control/design/task_index_schema_v2.md","sha256":"4bc422ddf7b13318c82d093d896748d289ac38ad4608ddd9e89068d00302125f"},{"path":"research_control/design/v21_recommendation_backlog.yaml","sha256":"849a4e8dfe848e80bc0c8236252b924e636e5c95ac1a090478a69f7f5377559f"},{"path":"research_control/design/v21_task_taxonomy_policy.md","sha256":"7460702270a26079f39f64ced2b5934e6a67a721983d913e4d3d114917ecca0b"},{"path":"research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml","sha256":"dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3"},{"path":"scripts/research_control/generated_report_provenance.py","sha256":"af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c"},{"path":"scripts/research_control/render_task_index.py","sha256":"7c28b13a1f9843a300ce16bff2c09801549209927a41872efc02a6d0bfc0a023"}],"source_manifest_sha256":"fb815807b1be6bcd81cf24eb1373781fa9c686c707cacd5867e5ce3d0ac6f3f8","source_path_count":"4806","task_count":"1203"} -->
 
 ## Generated-Report Provenance
 
@@ -11,21 +11,21 @@ Generated navigation support only. This index is not task authority, physics pro
 | Provenance schema | `generated_report_provenance_v1` |
 | Freshness policy | `p13_t07_live_generated_report_freshness_v1` |
 | Report class | `research_task_index` |
-| Source commit | `b32e07c390936488e6c69224c91714b48d3308b5` |
-| Source-derived generation time | `2026-08-03T03:41:17Z` |
-| Tracked task count | 1202 |
-| Exact source-path count | 4802 |
-| Source manifest SHA-256 | `1851be6f87cdf802cf0b7f4b69bf2a9517d0600f61bc7705de66f233be811a68` |
+| Source commit | `506df561a80aa8b1a45a57aef76ea82f65fce90f` |
+| Source-derived generation time | `2026-08-03T05:08:32Z` |
+| Tracked task count | 1203 |
+| Exact source-path count | 4806 |
+| Source manifest SHA-256 | `fb815807b1be6bcd81cf24eb1373781fa9c686c707cacd5867e5ce3d0ac6f3f8` |
 | Maximum commit lag | 1 |
 | Freshness status at generation | `fresh_at_generation` |
 | Generated view is authority | `false` |
 
 Exact primary source hashes:
 
-- `registries/AGENT_JOB_REGISTRY.csv`: `9590273e88e71d7d24ab44cef4de0c8dcead010ebeafe48de5f89e854d1d5782`
+- `registries/AGENT_JOB_REGISTRY.csv`: `ce9a7401a88105f9be21e624755709e53a7656d36e48667d3ca5079d8b7046fb`
 - `registries/AGENT_ROLE_REGISTRY.csv`: `a0b3e3a4ab41f29c1c755f9229603705134be2985c122d3f88545fecedf966f6`
-- `registries/DIRECTOR_DECISION_REGISTRY.csv`: `61de105434170fc95d2db8be82a102db40e225d4aa1182d3f47455979ed65140`
-- `registries/RESEARCH_TASK_REGISTRY.csv`: `937db4f678608476f5bbbf0f96b0fb44916cea22732e17b6c490a15904e4e12f`
+- `registries/DIRECTOR_DECISION_REGISTRY.csv`: `b063e15a32a1f22dfa775cae2e8f28042a6aad2868caf82962202c2ea231d6b3`
+- `registries/RESEARCH_TASK_REGISTRY.csv`: `65bcaa8252c62471ff6a5600fa306ad5f813d077af1befb376e5b833b70039bd`
 - `research_control/design/task_index_schema_v2.md`: `4bc422ddf7b13318c82d093d896748d289ac38ad4608ddd9e89068d00302125f`
 - `research_control/design/v21_recommendation_backlog.yaml`: `849a4e8dfe848e80bc0c8236252b924e636e5c95ac1a090478a69f7f5377559f`
 - `research_control/design/v21_task_taxonomy_policy.md`: `7460702270a26079f39f64ced2b5934e6a67a721983d913e4d3d114917ecca0b`
@@ -41,9 +41,9 @@ or claim-promotion authority.
 
 - Schema: `research_control_task_index_v2`
 - Schema source: `research_control/design/task_index_schema_v2.md`
-- Source fingerprint: `4f3360ce75d32d8a37f0888f0258a14dfe163d9140c53666a78e555c5813da68`
-- Generated-at source timestamp: `2026-08-03T03:41:17Z`
-- Row count: `1202`
+- Source fingerprint: `937784ca0cddaed328497c263170595d3586b36ab80693bc522b30a28eb54e4e`
+- Generated-at source timestamp: `2026-08-03T05:08:32Z`
+- Row count: `1203`
 - Issue count: `297`
 - CSV output: `research_control/tasks/TASK_INDEX.csv`
 
@@ -51,6 +51,7 @@ or claim-promotion authority.
 
 |task_id|parent_task_id|created_at|closed_at|title|task_type|work_kind|milestone|candidate_family|result_kind|authority|scope|taxonomy_source|taxonomy_confidence|status|target_derivation_milestone|milestone_burden|role_family|physics_delta|ledger_rows_changed|artifact_count|next_recommended_action|validation_status|completion_path|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|RT-20260803-003|RT-20260803-002|2026-08-03T05:08:32Z|2026-08-03T05:08:32Z|Audit Gate A through Gate E dependency and authority consistency|v21_p16_t02_gate_authority_consistency_audit|audit_or_review|benchmark_promotion|gate_authority_chain|audit_verdict_or_precise_repair|project_control|scientific|explicit|high|completed|benchmark_promotion|Prevent downstream status laundering at plan closure.|external-red-team-reviewer@0.1.0|false|false|10|Complete governed synchronization and one checkpoint; then consume PIS-RT-20260803-003-001 through one bounded improve-project-system status-taxonomy repair. Do not execute P16-T03 or P16-T04.|PASS_PRECHECKPOINT|research_control/tasks/RT-20260803-003/jobs/completions/AJC-AJ-RT-20260803-003-001.yaml|
 |RT-20260803-002|RT-20260802-010|2026-08-03T03:41:17Z|2026-08-03T03:53:14Z|Audit complete V21 recommendation-to-task coverage|v21_p16_t01_final_recommendation_coverage_audit|audit_or_review|benchmark_promotion|v21_recommendation_coverage|audit_verdict_or_precise_repair|project_control|scientific|explicit|high|completed|benchmark_promotion|Prove plan coverage without treating coverage as scientific success.|process-integrity-auditor@0.1.0|false|false|11|Complete governed synchronization and checkpoint this packet; then route one separately bounded P16-T02 external-review packet.|PASS_PRECHECKPOINT|research_control/tasks/RT-20260803-002/jobs/completions/AJC-AJ-RT-20260803-002-001.yaml|
 |RT-20260803-001|RT-20260802-010|2026-08-03T02:41:52Z|2026-08-03T02:41:52Z|Preserve eleven P15-T07 hashes through exact-path whitespace policy|project_system_p15_t07_hash_bound_blank_eof_checkpoint_recovery|benchmark_or_recovery|benchmark_promotion|p15_t07_exact_path_whitespace_policy|implemented_and_validated_or_precisely_blocked|project_control|project_system|explicit|high|completed|benchmark_promotion|Checkpoint the exact P15-T07 no-external-action decision without altering any protected hash, external-action denial, or scientific authority boundary.|process-integrity-auditor@0.1.0|false|false|3|Run the final governed validation stack and exactly one fresh checkpoint for AJ-RT-20260803-001-001; do not replay the failed AJ-RT-20260802-010-001 checkpoint or execute P16-T01 in this worker.|PASS_PRECHECKPOINT|research_control/tasks/RT-20260803-001/jobs/completions/AJC-AJ-RT-20260803-001-001.yaml|
 |RT-20260802-010|RT-20260802-009|2026-08-02T21:10:21Z|2026-08-02T21:10:21Z|Record exact human denial of all external actions for four P15 packages|v21_p15_t07_protected_no_external_action_decision|protected_gate_review|benchmark_promotion|v21_p15_t07_no_external_action_decision|protected_verdict_or_deferred_human_gate|human_gated|scientific|explicit|high|completed|benchmark_promotion|Preserve human accountability for external communication and authorship.|gate-chair@0.1.0|false|false|14|Complete and checkpoint this P15-T07 transaction, then reconcile the file-backed goal terminal without replay before routing dependency-ready P16-T01.|PASS_PRECHECKPOINT|research_control/tasks/RT-20260802-010/jobs/completions/AJC-AJ-RT-20260802-010-001.yaml|

@@ -1,0 +1,106 @@
+{
+  "audit_result": "REPAIR_REQUIRED_STATUS_LAYER_DRIFT",
+  "authority_note": "PASS validates exact detection and routing of the blocking drift; it is not a physics proof, repair completion, Gate promotion, or external-review credential.",
+  "blocking_project_system_finding_count": 1,
+  "blocking_scientific_conflict_count": 0,
+  "check_count": 18,
+  "checks": [
+    {
+      "check_id": "GATE_SOURCE_HASHES",
+      "detail": "all exact Gate and route source hashes match",
+      "status": "PASS"
+    },
+    {
+      "check_id": "FIVE_GATE_PATHS",
+      "detail": "gate_ids=['Gate_A', 'Gate_B', 'Gate_C', 'Gate_D', 'Gate_E']",
+      "status": "PASS"
+    },
+    {
+      "check_id": "GATE_B_NOT_READY",
+      "detail": "Gate B remains not ready",
+      "status": "PASS"
+    },
+    {
+      "check_id": "GATE_D_NOT_READY",
+      "detail": "Gate D remains not ready",
+      "status": "PASS"
+    },
+    {
+      "check_id": "GATE_E_NOT_READY",
+      "detail": "Gate E remains not ready",
+      "status": "PASS"
+    },
+    {
+      "check_id": "GATE_C_EXACT_ADOPTION",
+      "detail": "protected source-side adoption and open derivational gap are both present",
+      "status": "PASS"
+    },
+    {
+      "check_id": "MATTER_LEDGER_DRIFT_DETECTED",
+      "detail": "current ledger denies the exact source-side adoption without a layer qualifier",
+      "status": "PASS"
+    },
+    {
+      "check_id": "MATTER_ALIAS_DRIFT_DETECTED",
+      "detail": "current alias surface retains stale adoption denials",
+      "status": "PASS"
+    },
+    {
+      "check_id": "GATE_E_AUTHORITY_LABEL_DRIFT_DETECTED",
+      "detail": "negative protected verdict exists while only future positive closure remains missing",
+      "status": "PASS"
+    },
+    {
+      "check_id": "GATE_A_REGISTRY_DRIFT_DETECTED",
+      "detail": "current registry row remains PENDING after canonical integration",
+      "status": "PASS"
+    },
+    {
+      "check_id": "ONE_BLOCKING_FINDING",
+      "detail": "blocking_finding_count=1",
+      "status": "PASS"
+    },
+    {
+      "check_id": "PRIMARY_FINDING_PRESERVED",
+      "detail": "finding_ids=['P16T02-STATUS-C-GEFF-CUTSET-001', 'P16T02-GATE-E-AUTHORITY-LABEL-001', 'P16T02-GATE-A-REGISTRY-VALIDATION-001', 'P16T02-INTERNAL-REVIEW-LABEL-001']",
+      "status": "PASS"
+    },
+    {
+      "check_id": "FORBIDDEN_SHORTCUT_REJECTED",
+      "detail": "strongest forbidden Gate composition rejected",
+      "status": "PASS"
+    },
+    {
+      "check_id": "NEW_MATHEMATICAL_PAYLOAD",
+      "detail": "typed Gate C cut-set certificate present",
+      "status": "PASS"
+    },
+    {
+      "check_id": "PARALLEL_CHILDREN_COMPLETE",
+      "detail": "both required internal perspectives completed",
+      "status": "PASS"
+    },
+    {
+      "check_id": "PARENT_CONFLICT_REVIEW",
+      "detail": "child differences resolved without hiding the open project-system finding",
+      "status": "PASS"
+    },
+    {
+      "check_id": "CLAIM_BOUNDARY_EXPLICIT",
+      "detail": "audit preserves review derivation repair and closure limits",
+      "status": "PASS"
+    },
+    {
+      "check_id": "BOUNDED_REPAIR_ROUTE",
+      "detail": "one bounded project-system repair selected",
+      "status": "PASS"
+    }
+  ],
+  "failed_check_count": 0,
+  "passed_check_count": 18,
+  "plan_task_id": "P16-T02",
+  "schema_id": "v21_p16_t02_validation_report_v1",
+  "status": "PASS",
+  "task_id": "RT-20260803-003",
+  "validator_id": "VAL-V21-P16-T02-GATE-CONSISTENCY-001"
+}
