@@ -1,0 +1,337 @@
+job_id: "AJ-RT-20260803-010-001"
+task_id: "RT-20260803-010"
+decision_id: "DDR-20260803-010"
+role_id: "external-red-team-reviewer"
+role_version: "0.1.0"
+execution_role_ref: "external-red-team-reviewer@0.1.0--RT-20260803-010"
+status: "completed"
+validation_status: "PASS_PRECHECKPOINT"
+created_at: "2026-08-03T15:43:23Z"
+started_at: "2026-08-03T15:43:23Z"
+completed_at: "2026-08-03T15:43:23Z"
+completion_path: "research_control/tasks/RT-20260803-010/jobs/completions/AJC-AJ-RT-20260803-010-001.yaml"
+requires_human_gate: false
+objective: "Execute only the fresh V21 P16-T02 re-audit by tracing Gate A-E derivational and protected-authority edges, retesting forbidden stronger compositions, and producing a precise repair when any current public/internal status or validator object identity still disagrees."
+target_derivation_milestone: "benchmark_promotion"
+milestone_burden: "Prevent downstream status laundering at plan closure."
+route_label: "external-review-packet"
+route_reason: "resume_research_after_project_system_repair"
+immutable_route_sha256: "079cb009caeabacd17d4f7e95b92996b794e27fa268daa8fb6c967aeb2bab13e"
+route_blocker_fingerprint: "a7470f9e0b8d05eb841ce7fec2fa45d37f8736f240ae174deb762967805e4a58"
+source_head: "b186ce6f7e15ff40093bd76ae1737d19987479ce"
+plan_task_id: "P16-T02"
+recommendation_ids:
+  - "V21-R31"
+  - "V21-R33"
+  - "V21-R63"
+  - "V21-R67"
+  - "V21-R68"
+  - "V21-R72"
+next_plan_task_ids:
+  - "P16-T04"
+physics_promotion_authorized: false
+proof_authority: false
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 239
+  passes_consumed: 212
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:239"
+  handoff_token: "a306d35c7edbeea5b8090bb054e3f3003df59cb4a85b6e24"
+  relay_claim_token: "f16616066128793cb886ad2514116c23231193c4e85a9c0b"
+  route_source_generation: 238
+  route_work_item_id: "P16-T02"
+  route_worker_skill: "continue-research"
+  route_sha256: "079cb009caeabacd17d4f7e95b92996b794e27fa268daa8fb6c967aeb2bab13e"
+  route_reason: "resume_research_after_project_system_repair"
+  route_strategy_id: "continue_in_scope_generation_239"
+  route_blocker_fingerprint: "a7470f9e0b8d05eb841ce7fec2fa45d37f8736f240ae174deb762967805e4a58"
+  worker_skill: "continue-research"
+  worker_invocation_count: 1
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "physics"
+  payload_type: "precise_obstruction"
+  candidate_family: "V21-P16-T02-GATE-CHAIN-CURRENT-ALIGNMENT-REAUDIT-V1"
+  assumption_delta:
+    - "Treat the checkpointed status-layer repairs as hypotheses to be revalidated against canonical Gate decisions, not as proof of alignment."
+    - "Require object-identity parity: a validator claim about Gate A must inspect the Gate A decision registry row rather than a different ontology object."
+    - "Preserve the typed C_src versus C_geom split established by the original audit."
+  materiality_basis: "P16-T02 remains unfinished until one fresh current-state audit verifies every repaired surface; a false validator target can conceal unresolved public/internal disagreement."
+  payload_details:
+    resolves_new_route_decision: true
+    decision_identity: "GateChainCurrentAlignmentReaudit_v1"
+    not_already_encoded_evidence: "The prior audit predates the status-layer repair sequence; this job evaluates the checkpointed current tree and exact validator target identity."
+    obstruction_scope: "Any remaining mismatch is a current project-system control obstruction, not a scientific no-go."
+    global_no_go_claimed: false
+  source_basis:
+    - "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+    - "research_control/handoffs/handoff-0950.yaml"
+    - "registries/DISTANCE_TO_GR_LEDGER.csv"
+    - "research_control/design/distance_to_gr_status_aliases.yaml"
+    - "all exact Gate A-E authorization and decision artifacts named in the authority path re-audit"
+  expected_artifact_paths:
+    - "research_control/tasks/RT-20260803-010/artifacts/v21_p16_t02_authority_path_reaudit.yaml"
+    - "research_control/tasks/RT-20260803-010/artifacts/v21_p16_t02_gate_consistency_reaudit.md"
+    - "research_control/tasks/RT-20260803-010/artifacts/v21_p16_t02_reaudit_findings.yaml"
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+family_freeze_admission:
+  schema_id: "family_freeze_route_admission_v1"
+  policy_id: "family_freeze_reopening_policy_v1"
+  route_id: "v21_p16_t02_gate_authority_consistency_reaudit"
+  family_id: "V21-P16-T02-GATE-CHAIN-CURRENT-ALIGNMENT-REAUDIT-V1"
+  family_identity_sha256: "079cb009caeabacd17d4f7e95b92996b794e27fa268daa8fb6c967aeb2bab13e"
+  assumption_sha256es:
+    - "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+    - "1a3a4bc7d23e43a33a42639f6e4eef284d67fbf8b8f270b68ba6ff2dca4adc72"
+  route_kind: "theorem_investigation"
+  detected_match_basis: []
+  reopening:
+    requested: false
+    class: "none"
+  distinct_branch:
+    branch_identity: "P16-T02-GATE-CHAIN-CURRENT-ALIGNMENT-REAUDIT-BRANCH"
+    material_difference_basis: "This branch re-audits the checkpointed current status layer and exact validator-object identity; it does not reconstruct or rename a frozen physics candidate."
+    reconstructs_frozen_candidate: false
+    expected_artifact_paths:
+      - "research_control/tasks/RT-20260803-010/artifacts/v21_p16_t02_authority_path_reaudit.yaml"
+      - "research_control/tasks/RT-20260803-010/artifacts/v21_p16_t02_gate_consistency_reaudit.md"
+  authority_limits:
+    local_family_freeze_preserved: true
+    global_no_go_claimed: false
+    automatic_candidate_adoption: false
+    theorem_truth_inferred: false
+    ontology_modified: false
+    physics_promotion_authorized: false
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  expected_durable_outputs:
+    physics:
+      - "one fresh exact Gate A-E authority path re-audit"
+      - "one forbidden-shortcut attack on the checkpointed current tree"
+    project_system:
+      - "one precise current-object status or validator-identity finding if present"
+      - "at most one project-improvement signal and sidecar"
+      - "one deterministic task-local validation receipt"
+  acceptance_criteria:
+    physics:
+      - "every Gate authority path resolves and every downstream promotion remains blocked"
+      - "the exact-object readiness refinement rejects cross-object validator substitution"
+      - "no internal review or process result gains external scientific standing"
+    project_system:
+      - "the current Gate A identity drift is preserved with exact evidence and a bounded repair route"
+      - "the emitted signal and sidecar validate"
+      - "one governed checkpoint records the negative audit without implementing the repair"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: false
+    exception_id: ""
+    evidence_path: ""
+    evidence_sha256: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0950"
+  source_handoff_path: "research_control/handoffs/handoff-0950.yaml"
+  source_handoff_sha256: "1a3a4bc7d23e43a33a42639f6e4eef284d67fbf8b8f270b68ba6ff2dca4adc72"
+  selected_plan_task_id: "P16-T02"
+  guard_outcome: "physics_bearing_route_selected"
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  parent:
+    execution_unit_id: "parent"
+    perspective: "physicist_mathematician_philosopher"
+    responsibilities:
+      - "revalidate every Gate dependency and authority edge"
+      - "attempt forbidden stronger compositions"
+      - "resolve child differences without hiding blocking findings"
+      - "route exact repair without scientific promotion"
+  children:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260803-010/artifacts/child_phys_math_p16_t02_gate_consistency_reaudit.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260803-010/artifacts/child_phys_phil_p16_t02_gate_consistency_reaudit.yaml"
+      status: "completed"
+  conflict_policy:
+    review_path: "research_control/tasks/RT-20260803-010/artifacts/parent_conflict_review_p16_t02_gate_consistency_reaudit.yaml"
+    max_resolution_rounds: 2
+    require_parallel_child_revision: true
+    unresolved_conflict_status: "blocked"
+  fusion_policy:
+    fusion_notes_path: "research_control/tasks/RT-20260803-010/artifacts/parent_fusion_notes_p16_t02_gate_consistency_reaudit.md"
+    fused_output_path: "research_control/tasks/RT-20260803-010/artifacts/v21_p16_t02_gate_consistency_reaudit.md"
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+    final_output_replaces_old_single_role_artifact: true
+memory_preflight:
+  preflight_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1119
+    relationship_row_count: 5648
+    semantic_row_count: 1119
+    vault_row_count: 1119
+    local_cache_only_warning_count: 0
+  refresh_needed: false
+  refresh_performed: false
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  authority_note: "Generated wiki Obsidian semantic relationship PDF and .local surfaces are retrieval-only navigation and are not authority; registered canonical sources and tracked control state govern."
+source_snapshot:
+  plan_sha256: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  backlog_sha256: "849a4e8dfe848e80bc0c8236252b924e636e5c95ac1a090478a69f7f5377559f"
+  program_state_sha256: "4703274797d59579bf8c1b9b709ca7aeffa4d60a16b11dfa95be4d1ff8514498"
+  current_frontier_sha256: "0edfda0354f16dbd3cc8753f49b824f13aba082623ee5e377e0c8c60ea191829"
+  source_handoff_sha256: "1a3a4bc7d23e43a33a42639f6e4eef284d67fbf8b8f270b68ba6ff2dca4adc72"
+  distance_to_gr_ledger_sha256: "8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642"
+  p16_t01_completion_sha256: "4e59a0ae6d0740677ef0b4331f753138f32b76b27981435f5933aaab1a78fd66"
+allowed_read_paths:
+  - "SOUL.md"
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".agents/roles/physics/external-red-team-reviewer.v0.1.0.md"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  - "research_control/design/**"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/**"
+  - "research_control/tasks/**"
+  - "research_control/approvals/**"
+  - "registries/**"
+  - "ontology/**"
+allowed_write_paths:
+  - "research_control/tasks/RT-20260803-010/**"
+  - "research_control/handoffs/handoff-0951.yaml"
+  - "research_control/handoffs/handoff-0951.md"
+  - "research_control/project_improvement_handoffs/improve-project-handoff_20260803_004.yaml"
+  - "research_control/project_improvement_handoffs/improve-project-handoff_20260803_004.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "registries/**"
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/tex/**"
+forbidden_paths:
+  - "ontology/**"
+  - "research_control/tasks/RT-20260724-004/**"
+  - "research_control/tasks/RT-20260727-004/**"
+  - "research_control/tasks/RT-20260729-001/**"
+  - "research_control/tasks/RT-20260729-011/**"
+  - "research_control/tasks/RT-20260731-004/**"
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "registries/TEX_SOURCE_REGISTRY.csv"
+  - "research_control/design/distance_to_gr_status_aliases.yaml"
+  - "scripts/**"
+  - "tests/**"
+forbidden_source_classes:
+  - "generated memory derivative as authority"
+  - "validator checkpoint or registry PASS as physics evidence"
+  - "target exact-GR metric as source derivation premise"
+  - "internal AI review as external human review or independent replication"
+  - "human-postulate adoption as first-principles derivation"
+  - "status or validator repair implementation inside this research AgentJob"
+approved_commands:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --job-id AJ-RT-20260803-010-001 --json-summary"
+  - ".venv/bin/python -m scripts.validation.cli run --profile affected"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260803-010-001"
+  - "git diff --check"
+required_validators:
+  - "task-local Gate consistency re-audit validator"
+  - "project-improvement signal and sidecar validation when emitted"
+  - "documentation-impact validation"
+  - "claim-language and source-authority validation"
+  - "affected research-control profile"
+  - "staged governed checkpoint"
+expected_outputs:
+  - "research_control/tasks/RT-20260803-010/artifacts/v21_p16_t02_gate_consistency_reaudit.md"
+  - "research_control/tasks/RT-20260803-010/**"
+  - "research_control/handoffs/handoff-0951.yaml"
+  - "research_control/handoffs/handoff-0951.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "applicable registry rows and generated derivatives"
+checkpoint_invocation_limit: 1
+legacy_validation_allowed: false
+success_criteria:
+  - "all five Gate authority paths and hashes resolve"
+  - "the typed Gate C cut-set and forbidden-shortcut rejection remain explicit"
+  - "every current status claim is bound to the exact object inspected"
+  - "any remaining drift is preserved with one bounded repair route"
+  - "no canonical science protected Gate status benchmark or outward authority changes"
+  - "one governed checkpoint succeeds without push"

@@ -1,0 +1,38 @@
+{
+  "schema_id": "v21_p16_t02_reaudit_compact_receipt_v1",
+  "task_id": "RT-20260803-010",
+  "job_id": "AJ-RT-20260803-010-001",
+  "plan_task_id": "P16-T02",
+  "source_head": "b186ce6f7e15ff40093bd76ae1737d19987479ce",
+  "result_status": "REPAIR_REQUIRED_GATE_A_REGISTRY_VALIDATOR_IDENTITY_DRIFT",
+  "finding_counts": {
+    "canonical_gate_decision_conflicts": 0,
+    "blocking_scientific_findings": 0,
+    "blocking_project_system_findings": 1,
+    "improperly_discharged_scientific_edges": 0,
+    "forbidden_shortcut_attempts": 1,
+    "forbidden_shortcuts_rejected": 1
+  },
+  "source_hashes": {
+    "plan": "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087",
+    "backlog": "849a4e8dfe848e80bc0c8236252b924e636e5c95ac1a090478a69f7f5377559f",
+    "source_handoff": "1a3a4bc7d23e43a33a42639f6e4eef284d67fbf8b8f270b68ba6ff2dca4adc72",
+    "distance_to_gr_ledger": "8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642",
+    "tex_source_registry": "ac0257d42fd4e4dcfc94aad790048a4fd35c67e15ae4729d30d591e73cd86fee",
+    "historical_repair_validator": "9ba655982225774beef866ec43f0a8fd116182f8987088afab78736fec5ac5e7",
+    "historical_repair_report": "330c35edb94d153553f33e449bfa94b2a3e88c435cb6ce99e95f7a89d56fc401",
+    "child_phys_math": "8eda68cebd7105027adb428b02a7fbe01f3ac029b9f631ee4465556d0223e4a1",
+    "child_phys_phil": "a98ab78a1d5ba858ad4b68c378ef828ee67f6fbdcc2c0b412f317c69e010f66e"
+  },
+  "primary_finding_id": "P16T02-GATE-A-REGISTRY-VALIDATOR-IDENTITY-001",
+  "next_worker_skill": "improve-project-system",
+  "next_strategy_id": "repair_p16_t02_gate_a_registry_validator_identity_parity_v1",
+  "claim_boundary_summary": "Canonical Gate A-E science remains unchanged and downstream promotions remain blocked; P16-T02 stays repair-required solely because a Gate A PASS receipt is bound to the foundations object while the exact Gate A row remains PENDING.",
+  "authority_limits": {
+    "scientific_status_changed": false,
+    "distance_to_gr_delta_changed": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "publication_or_push_authorized": false
+  }
+}

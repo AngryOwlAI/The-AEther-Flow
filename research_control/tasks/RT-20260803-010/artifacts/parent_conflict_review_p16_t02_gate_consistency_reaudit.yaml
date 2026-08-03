@@ -1,0 +1,37 @@
+schema_id: "parent_child_conflict_review_v1"
+task_id: "RT-20260803-010"
+job_id: "AJ-RT-20260803-010-001"
+review_id: "P16-T02-GATE-CONSISTENCY-REAUDIT-CONFLICT-001"
+status: "resolved"
+resolution_rounds: 0
+child_outputs:
+  - execution_unit_id: "child_phys_math"
+    path: "research_control/tasks/RT-20260803-010/artifacts/child_phys_math_p16_t02_gate_consistency_reaudit.yaml"
+    sha256: "8eda68cebd7105027adb428b02a7fbe01f3ac029b9f631ee4465556d0223e4a1"
+  - execution_unit_id: "child_phys_phil"
+    path: "research_control/tasks/RT-20260803-010/artifacts/child_phys_phil_p16_t02_gate_consistency_reaudit.yaml"
+    sha256: "a98ab78a1d5ba858ad4b68c378ef828ee67f6fbdcc2c0b412f317c69e010f66e"
+shared_consensus:
+  - "All eleven protected Gate A-E source hashes are unchanged."
+  - "The typed scientific dependency chain has zero improperly discharged edges."
+  - "Gate C and Gate E current reader-facing status layers now preserve their exact narrow meanings."
+  - "The RT-20260803-005 Gate A PASS assertion is bound to the foundations ontology object while the exact Gate A decision registry row remains PENDING."
+  - "The cross-object false positive blocks P16-T02 public/internal alignment but creates no scientific or protected-authority defect."
+  - "Disposition is REPAIR_REQUIRED followed by one fresh audit."
+differences_reviewed:
+  - difference_id: "finding_identifier_wording"
+    child_a: "P16T02-GATE-A-VALIDATOR-OBJECT-IDENTITY-001"
+    child_b: "P16T02-GATE-A-REGISTRY-VALIDATOR-IDENTITY-001"
+    resolution: "Use P16T02-GATE-A-REGISTRY-VALIDATOR-IDENTITY-001 because the defect jointly comprises the exact row's PENDING state and the validator's cross-object query."
+  - difference_id: "repair_target_wording"
+    child_a: "repair the exact Gate A row and task-local validator target"
+    child_b: "synchronize exact row parity without rewriting historical receipts"
+    resolution: "Preserve sealed RT-20260803-005 bytes; add a fresh exact-object validator and governed current-row synchronization with regression coverage."
+unresolved_conflicts: []
+blocking_conflict_count: 0
+fusion_decision: "Preserve the shared REPAIR_REQUIRED verdict, the mathematical ReportValid exact-object rule, and the authority-layer reference-failure analysis."
+authority_limits:
+  scientific_status_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false

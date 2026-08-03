@@ -1,0 +1,56 @@
+schema_id: "v21_p16_t02_reaudit_findings_v1"
+task_id: "RT-20260803-010"
+plan_task_id: "P16-T02"
+result_status: "REPAIR_REQUIRED_GATE_A_REGISTRY_VALIDATOR_IDENTITY_DRIFT"
+finding_counts:
+  canonical_gate_decision_conflicts: 0
+  blocking_scientific_findings: 0
+  blocking_project_system_findings: 1
+  nonblocking_findings: 0
+findings:
+  - finding_id: "P16T02-GATE-A-REGISTRY-VALIDATOR-IDENTITY-001"
+    status: "open_repair_required"
+    severity: "high"
+    classification: "cross_object_validator_false_positive_and_internal_status_disagreement"
+    statement: "The prior repair claims current PASS for the Gate A TeX decision row, but its validator inspects TEX-ONTOLOGY-AETHER-FLOW-FOUNDATIONS while the exact TEX-V21-P4-T05-ONTOLOGY-REGIME-GATE-CHAIR-DECISION-V1 row remains PENDING."
+    why_blocking: "P16-T02 explicitly requires public and internal status agreement and exact authority-path resolution; a PASS about a different object satisfies neither."
+    evidence:
+      exact_registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      exact_registry_sha256: "ac0257d42fd4e4dcfc94aad790048a4fd35c67e15ae4729d30d591e73cd86fee"
+      exact_gate_a_object_id: "TEX-V21-P4-T05-ONTOLOGY-REGIME-GATE-CHAIR-DECISION-V1"
+      exact_gate_a_validation_status: "PENDING"
+      exact_gate_a_last_validated_at: "2026-07-24T14:39:10Z"
+      historical_validator_path: "research_control/tasks/RT-20260803-005/artifacts/validate_p16_t02_gate_status_layer_contract.py"
+      historical_validator_sha256: "9ba655982225774beef866ec43f0a8fd116182f8987088afab78736fec5ac5e7"
+      historical_validator_queried_object_id: "TEX-ONTOLOGY-AETHER-FLOW-FOUNDATIONS"
+      historical_validator_queried_validation_status: "PASS"
+      historical_validation_report_path: "research_control/tasks/RT-20260803-005/artifacts/p16_t02_gate_status_layer_contract_validation.json"
+      historical_validation_report_sha256: "330c35edb94d153553f33e449bfa94b2a3e88c435cb6ce99e95f7a89d56fc401"
+      historical_completion_path: "research_control/tasks/RT-20260803-005/jobs/completions/AJC-AJ-RT-20260803-005-001.yaml"
+      historical_completion_sha256: "ae897b05c79ade3d78d13de26591708ecf27ba2e809f05437f90ecb45d19c8e8"
+    scientific_effect: "none_project_system_control_obstruction_only"
+    canonical_science_change_required: false
+    scientific_status_change_required: false
+    repair_route:
+      worker_skill: "improve-project-system"
+      role_family: "project-control-maintainer@0.2.0"
+      strategy_id: "repair_p16_t02_gate_a_registry_validator_identity_parity_v1"
+      work_item_id: "P16-T02-gate-a-registry-validator-parity-repair"
+      allowed_scope:
+        - "preserve every sealed RT-20260803-005 artifact and historical receipt byte"
+        - "synchronize the exact current Gate A TeX decision row through governed registry maintenance"
+        - "add a fresh fail-closed current validator bound to the exact Gate A object ID source path and source hash"
+        - "add regression coverage proving a different PASS row cannot satisfy Gate A"
+        - "regenerate affected registry and memory derivatives and checkpoint once"
+        - "route a fresh P16-T02 re-audit after the repair checkpoint"
+      forbidden_scope:
+        - "rewrite historical RT-20260803-005 evidence"
+        - "change canonical Gate A-E science or protected authorizations"
+        - "treat registry validator test or checkpoint PASS as physics"
+        - "broaden Gate A architecture selection or Gate C source-side adoption"
+        - "promote g_eff target matter coupling Einstein equations benchmark proof publication push or completed derivation"
+authority_limits:
+  scientific_status_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
