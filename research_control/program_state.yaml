@@ -1,11 +1,85 @@
 mode: "director_led_research_control"
-active_task_id: "RT-20260802-009"
-latest_handoff_id: "handoff-0942"
-current_status: "p15_t06_four_source_backed_reproducibility_packages_complete_precheckpoint"
-claim_boundary_summary: "P15-T06 packages four exact publication-candidate snapshots with deterministic archives source maps environment recipes license notices and clean-room checks while preserving canonical-source authority historical evidence and zero external-action or physics authority."
-next_plan_task_id: "P15-T07"
-next_worker_skill: "none_until_human_authorization"
-next_recommended_action: "Run one governed checkpoint for AJ-RT-20260802-009-001. After checkpoint, stop at P15-T07 until the user supplies exact manuscript-specific authority for every requested submission public release reviewer contact or outreach action, including any embargo authorship identity or report-publication limits."
+active_task_id: "RT-20260802-010"
+latest_handoff_id: "handoff-0943"
+current_status: "p15_t07_exact_four_package_no_external_action_decision_complete_precheckpoint"
+claim_boundary_summary: "P15-T07 consumes one exact human approval and denies all sixteen submission public-release reviewer-contact and outreach cells for four immutable current packages. No external action occurs and no scientific or physics status changes."
+next_plan_task_id: "P16-T01"
+next_worker_skill: "continue-research"
+next_recommended_action: "Run one governed checkpoint for AJ-RT-20260802-010-001. After checkpoint, reconcile the terminal file-backed relay without replay and route dependency-ready P16-T01 through continue-research for the complete recommendation-coverage audit."
+
+p15_t07_exact_four_package_no_external_action_decision:
+  task_id: "RT-20260802-010"
+  parent_task_id: "RT-20260802-009"
+  parent_handoff_id: "handoff-0942"
+  plan_task_id: "P15-T07"
+  next_plan_task_id: "P16-T01"
+  claim_boundary_id: "CB-V21-P15-T07-NO-EXTERNAL-ACTION-001"
+  status: "PASS_PRECHECKPOINT"
+  work_item_status: "completed"
+  route_label: "human-gated-publication-decision"
+  selected_role_family: "gate-chair@0.1.0"
+  selected_worker_skill: "continue-research"
+  selected_strategy_id: "execute_exact_human_approved_p15_t07_no_external_action_matrix_v1"
+  target_derivation_milestone: "benchmark_promotion"
+  milestone_burden: "Preserve human accountability for external communication and authorship."
+  source_head: "efbf0e490f9994af1a22cc2ebf2ae13d699b5b79"
+  completion_path: "research_control/tasks/RT-20260802-010/jobs/completions/AJC-AJ-RT-20260802-010-001.yaml"
+  completion_sha256: "1a0220b0d08fd74af0ba12eb76479e6eee7a571eeb5362418d3b5c38dd1728fb"
+  handoff_id: "handoff-0943"
+  handoff_path: "research_control/handoffs/handoff-0943.yaml"
+  handoff_sha256: "1ce2e68c38b2939adf6a4a8392c26011fa857cb919cdb8db53c1e666e3a7bbfb"
+  approval_id: "approval-20260802-001"
+  approval_path: "research_control/approvals/approval-20260802-001.yaml"
+  approval_sha256: "c0176cb6fb924616d9324bd622d7b68d5f4fcc30fb00c9b2a55601a10d7503e3"
+  human_authorization_id: "HUMAN-AUTH-P15-T07-NO-EXTERNAL-ACTION-2026-08-02-001"
+  decision_matrix_path: "research_control/tasks/RT-20260802-010/artifacts/p15_t07_submission_claim_venue_decisions_v1.yaml"
+  decision_matrix_sha256: "e97374f766a1c078d261632e98bd16673eb531ef1a11e2b3ba41321d1cfbf5b8"
+  external_action_log_path: "research_control/tasks/RT-20260802-010/artifacts/p15_t07_external_action_log_v1.yaml"
+  external_action_log_sha256: "4971c55a8a70b68d2749af3fa5499b08bd17e7db165f50a2aaf23323acea02e5"
+  control_proposition_path: "research_control/tasks/RT-20260802-010/artifacts/p15_t07_external_action_decision_v1.tex"
+  control_proposition_sha256: "054db567ce5bbd15a4796f6e85dcf012cc563c51a36d58692c7dea1d7db6cf22"
+  validation_path: "research_control/tasks/RT-20260802-010/artifacts/p15_t07_no_external_action_validation_v1.json"
+  validation_sha256: "4e9e38b887de9d0a0f9c91e373b6bad8dbc012b2ed3d4f6d2b5137bed4b8d3c3"
+  compact_receipt_path: "research_control/tasks/RT-20260802-010/artifacts/p15_t07_no_external_action_compact_receipt_v1.json"
+  compact_receipt_sha256: "67f9a5d21045b0506bf0a410196d6dd25aed0282b8b96f08b0b5233482ec8d17"
+  package_count: 4
+  action_type_count: 4
+  authorization_cell_count: 16
+  authorized_cell_count: 0
+  denied_cell_count: 16
+  external_action_performed_count: 0
+  p15_t01_internal_disposition: "future_reviewer_contact_candidate"
+  p15_t02_internal_disposition: "revision_before_any_release"
+  p15_t03_internal_disposition: "future_reviewer_contact_candidate"
+  p15_t04_internal_disposition: "revision_before_any_release"
+  authorship_assignment_status: "unassigned"
+  external_human_review_completed: false
+  independent_replication_completed: false
+  canonical_science_modified: false
+  scientific_claims_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  submission_authorized: false
+  public_release_authorized: false
+  reviewer_contact_authorized: false
+  outreach_authorized: false
+  push_authorized: false
+  hosted_workflow_dispatch_authorized: false
+  terminal_goal_generation_replayed: false
+  terminal_goal_reconciliation_required_after_checkpoint: true
+  selected_next_work_item: "P16-T01"
+  selected_next_worker_skill: "continue-research"
+  selected_next_role_family: "process-integrity-auditor@0.1.0"
+  selected_next_route_label: "integration-audit-packet"
+  selected_next_strategy_id: "route_p16_t01_after_p15_t07_checkpoint_and_relay_reconciliation_v1"
+  selected_next_requires_human_gate: false
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
+  checkpoint_invocation_count: 0
+  checkpoint_committed: false
 
 p15_t06_public_reproducibility_and_source_packages:
   task_id: "RT-20260802-009"

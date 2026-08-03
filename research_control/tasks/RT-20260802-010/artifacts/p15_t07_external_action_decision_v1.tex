@@ -1,0 +1,111 @@
+% authority: science-draft
+% status: draft/control
+% plan_task: P15-T07
+% decision_result: exact_four_package_no_external_action
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{longtable}
+
+\newtheorem{proposition}{Proposition}
+\newcommand{\Packages}{\mathcal{P}}
+\newcommand{\Actions}{\mathcal{A}}
+\newcommand{\Auth}{H}
+
+\title{P15-T07 Exact Four-Package No-External-Action Decision v1}
+\author{Human-gated control record RT-20260802-010}
+\date{2026-08-02}
+
+\begin{document}
+\maketitle
+
+\section{Status and authority}
+
+This is a draft/control record of one protected human decision. It is not a
+physics theorem, external review report, publication, submission, public
+release, authorship assignment, or scientific promotion. The decision source
+is \texttt{approval-20260802-001}; an internal AI advisory review supplies
+decision support but no protected authority.
+
+The decision applies only to the exact primary-artifact and archive hashes
+listed below. No outward action is performed by this transaction.
+
+\section{Finite decision domain}
+
+Let
+\[
+\Packages=\{p_1,p_2,p_3,p_4\}
+\quad\text{and}\quad
+\Actions=\{s,r,c,o\},
+\]
+where $s$ is submission, $r$ is public release, $c$ is reviewer contact, and
+$o$ is outreach. Define the authorization function
+\[
+\Auth:\Packages\times\Actions\longrightarrow\{0,1\}.
+\]
+A proposed external action is lawful under this record only if its exact
+package hash, action type, and contextual limits match a cell assigned value
+$1$.
+
+\begin{longtable}{p{0.20\linewidth}p{0.18\linewidth}p{0.50\linewidth}}
+\toprule
+Package & Internal disposition & Exact SHA-256 identities \\
+\midrule
+$p_1$ (P15-T01) & future reviewer-contact candidate & primary
+\texttt{17d215509eb3f0ee4544c2f25eed56462d346106f41bc520fc27441c09c0add9};
+archive \texttt{cdb3e01b113287380e587004e91ad0f7445b63d538bcdbfdce63155207d757d8} \\
+$p_2$ (P15-T02) & revision before any release & primary
+\texttt{05151b543111f1107a07f1b02afabc78d97ef07820d1eed824da38fdd8e441a3};
+archive \texttt{056d81f87c1595b1f3b4bb40a1dc8b5e6ac895eff989ef6de0a2ae4f94718bbe} \\
+$p_3$ (P15-T03) & future reviewer-contact candidate & primary
+\texttt{348fba00dc68f7791ffec4fb3edb8d70bc7db18cfd405f052572a639c51b62fa};
+archive \texttt{cea3d636d4a8e1dc3734a8fc1a8a3aee8861b6f88527c501498573411da352fc} \\
+$p_4$ (P15-T04) & revision before any release & primary
+\texttt{5724a07c2181f87d517b80d7878f437b47d8802045596cd16d3e62929dfe5cff};
+archive \texttt{cedb2ca1f6a6a93fb3626a750759ec9463e607f2a1d8dab2dbfd972ee023f866} \\
+\bottomrule
+\end{longtable}
+
+The exact matrix is
+\[
+\begin{array}{c|cccc}
+\Auth & s & r & c & o\\\hline
+p_1 & 0&0&0&0\\
+p_2 & 0&0&0&0\\
+p_3 & 0&0&0&0\\
+p_4 & 0&0&0&0
+\end{array}.
+\]
+
+\begin{proposition}[Exact four-package no-action proposition]
+No submission, public release, reviewer contact, or outreach action is
+authorized for any package version in $\Packages$.
+\end{proposition}
+
+\begin{proof}
+The human authorization enumerates every element of $\Packages$ and assigns
+false to each of the four action fields in $\Actions$. Thus all sixteen values
+$\Auth(p,a)$ are zero. The lawful-action rule requires a matching value of one,
+so no proposed outward action satisfies the rule.
+\end{proof}
+
+\section{Non-action and disclosure constraints}
+
+Authorship is unassigned. Public attribution, embargoed distribution,
+reviewer-identity publication, reviewer-report publication, and private
+reviewer contact are all unauthorized. The external-action log contains zero
+entries. A future reviewer-contact candidate label does not change any matrix
+cell and grants no contact authority.
+
+\section{Claim boundary}
+
+The proposition is exhaustive control logic over a finite approval record. It
+does not establish manuscript correctness, external human review, independent
+replication, ontology or source-law adoption, metric or matter-coupling
+derivation, Einstein-equation recovery, benchmark promotion, Distance-to-GR
+progress, Gate E success, or a completed derivation. A later artifact version
+or outward action requires fresh exact human authority.
+
+\end{document}
+

@@ -1,0 +1,69 @@
+schema_id: "p15_t07_hash_bound_blank_eof_checkpoint_blocker_v1"
+task_id: "RT-20260803-001"
+source_task_id: "RT-20260802-010"
+source_job_id: "AJ-RT-20260802-010-001"
+source_handoff_id: "handoff-0943"
+plan_task_id: "P15-T07"
+observed_at: "2026-08-03T02:41:52Z"
+checkpoint_status: "FAIL"
+checkpoint_committed: false
+checkpoint_staged: false
+failed_gate: "git_diff_check"
+failure_status: "FAIL_11_HASH_BOUND_BLANK_AT_EOF_FINDINGS_CHECKPOINT_ABORTED"
+finding_count: 11
+checkpoint_receipt:
+  path: ".local/validation-receipts/8afbc6d6c1cc892533a3e7f8e45a1e2fb8243d85d803a1dadc854fe5c9fbe844/RUN-CHECKPOINT-18eab97204b5dadb/receipt.json"
+  sha256: "ac94d93be6c573bad0187179315b5938f33e2dbf018311d36817d559ae6b3725"
+  entry_index_restored: true
+  staged_after_failure: false
+failed_gate_output:
+  path: ".local/validation-receipts/8afbc6d6c1cc892533a3e7f8e45a1e2fb8243d85d803a1dadc854fe5c9fbe844/RUN-CHECKPOINT-18eab97204b5dadb/gates/0006-git_diff_check.stdout"
+  sha256: "18aac0f75f77eab2b937fc8811ededcdb06ac5b1c3fa78ef8645ae130fc2f62a"
+protected_files:
+  - path: "research_control/tasks/RT-20260802-010/artifacts/child_phys_math_p15_t07_external_action_decision.yaml"
+    sha256: "6c6a3b75cec86d219f94899caea830bcf7c3df5a219f13eaa2b0d1369a45fbfc"
+    finding_line: 43
+  - path: "research_control/tasks/RT-20260802-010/artifacts/child_phys_phil_p15_t07_external_action_decision.yaml"
+    sha256: "6db9e21254b0c3f2926a10784e02fd3fa1219cd8b509258923b95a0ed89795dd"
+    finding_line: 50
+  - path: "research_control/tasks/RT-20260802-010/artifacts/p15_t07_claim_to_evidence_map_v1.yaml"
+    sha256: "7e8f24bce39d5a8120dae43f7f8b8412468a0dcd1fca3aaa50f05ffe8c7c68b5"
+    finding_line: 60
+  - path: "research_control/tasks/RT-20260802-010/artifacts/p15_t07_external_action_decision_v1.tex"
+    sha256: "054db567ce5bbd15a4796f6e85dcf012cc563c51a36d58692c7dea1d7db6cf22"
+    finding_line: 111
+  - path: "research_control/tasks/RT-20260802-010/artifacts/p15_t07_external_action_log_v1.yaml"
+    sha256: "4971c55a8a70b68d2749af3fa5499b08bd17e7db165f50a2aaf23323acea02e5"
+    finding_line: 35
+  - path: "research_control/tasks/RT-20260802-010/artifacts/p15_t07_internal_ai_advisory_review_v1.yaml"
+    sha256: "d3d48c80125f7a9cc635c74c8c156a4fd5c9e9c344e25247341290ae39b4ead5"
+    finding_line: 101
+  - path: "research_control/tasks/RT-20260802-010/artifacts/p15_t07_reproducibility_manifest_v1.yaml"
+    sha256: "3d260aa8cc53ea2698f0f4723027514e57f0ab798895ee2a94468bca5c0dafa5"
+    finding_line: 70
+  - path: "research_control/tasks/RT-20260802-010/artifacts/p15_t07_submission_claim_venue_decisions_v1.yaml"
+    sha256: "e97374f766a1c078d261632e98bd16673eb531ef1a11e2b3ba41321d1cfbf5b8"
+    finding_line: 178
+  - path: "research_control/tasks/RT-20260802-010/artifacts/parent_conflict_review_p15_t07_external_action_decision.yaml"
+    sha256: "c0987d389100cbcb0f9c7dc53826046a320bec561a4c6652164308c1cc12cb7d"
+    finding_line: 35
+  - path: "research_control/tasks/RT-20260802-010/artifacts/parent_fusion_notes_p15_t07_external_action_decision.md"
+    sha256: "90dbdf0a27755e1ea5f409a06f9c00d3af6c1156d207c42f8caaff80ae86a182"
+    finding_line: 58
+  - path: "research_control/tasks/RT-20260802-010/artifacts/validate_p15_t07_no_external_action.py"
+    sha256: "e3e29c403042594c9bca25b06f36453cdc8301f89484f95c75de92900918007f"
+    finding_line: 489
+required_recovery:
+  strategy_id: "reroute_generation_226_p15_t07_blank_eof_checkpoint_repair_v1"
+  worker_skill: "improve-project-system"
+  role_family: "process-integrity-auditor@0.1.0"
+  exact_behavior_change: "Add only eleven literal repository-relative whitespace classifications, preserve all protected bytes, prove an unrelated control remains protected, and invoke one fresh governed checkpoint."
+  fallback_forbidden: "Do not normalize any protected file, add a wildcard, weaken Git validation globally, replay generation 226, retry its failed checkpoint, execute P16-T01, or perform an external action."
+authority_boundary:
+  p15_t07_payload_changed: false
+  p16_t01_executed: false
+  external_action_performed: false
+  scientific_claims_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false

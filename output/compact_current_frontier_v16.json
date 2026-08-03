@@ -8,14 +8,14 @@
     "research_control/current_frontier.md",
     "research_control/design/accepted_status_calibration_v2.yaml",
     "research_control/design/active_state_bifurcation_policy_v1.md",
-    "research_control/handoffs/handoff-0942.yaml",
+    "research_control/handoffs/handoff-0943.yaml",
     "research_control/program_state.yaml"
   ],
   "report_provenance": {
     "schema_id": "generated_report_provenance_v1",
     "policy_id": "p13_t07_live_generated_report_freshness_v1",
     "report_class": "compact_current_frontier",
-    "source_commit": "9be11e9cc77a8ab30776fd5598b682b37c42a6e3",
+    "source_commit": "efbf0e490f9994af1a22cc2ebf2ae13d699b5b79",
     "source_hashes": [
       {
         "path": "registries/DISTANCE_TO_GR_LEDGER.csv",
@@ -23,19 +23,19 @@
       },
       {
         "path": "registries/RESEARCH_TASK_REGISTRY.csv",
-        "sha256": "70f74a74148ef33ed58852305e397456453757639d4793bc23c255da7f3b28a8"
+        "sha256": "f998998dbc50e6eb1c70018b2cc34957db207189f6562bce2c78768f2315876a"
       },
       {
         "path": "research_control/current_frontier.md",
-        "sha256": "be5487f0c2ec194b16c73d9dedec5bb2fe3fb30ce4e2e8d152874b971d8f79e0"
+        "sha256": "bd356eea8e4762ce48e2498c04d2b675727cf7b8ee76e51b91d51caae3e851e4"
       },
       {
-        "path": "research_control/handoffs/handoff-0942.yaml",
-        "sha256": "5ebd18adb42d8455456e3afa44c1d7961da5b775249253e551d3d44d56f004db"
+        "path": "research_control/handoffs/handoff-0943.yaml",
+        "sha256": "1ce2e68c38b2939adf6a4a8392c26011fa857cb919cdb8db53c1e666e3a7bbfb"
       },
       {
         "path": "research_control/program_state.yaml",
-        "sha256": "7e3239baaa56f59f89e7e01e9f42894b4cb592c084608d89f207d6a218dfd79e"
+        "sha256": "219c8044390f5478f407ca55037d6e02de71230f4642a5277bce57ef41e2fa44"
       },
       {
         "path": "research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml",
@@ -50,10 +50,10 @@
         "sha256": "36fab56791487f690c7fd31ef036a1dba82d03a66beddefac5a21baf77ab10c2"
       }
     ],
-    "source_manifest_sha256": "9d5aad47c2b41d1d6ec25ab1501ce66f013aa104076c375c58c22f849fc5105b",
+    "source_manifest_sha256": "8e2aedb2166d6fceb027b9ce5030aab7bbaa01ee88f5a07c5a175b7eedd33c71",
     "source_path_count": "12",
-    "generation_time": "2026-08-02T14:32:33Z",
-    "task_count": "1195",
+    "generation_time": "2026-08-02T21:10:21Z",
+    "task_count": "1197",
     "maximum_commit_lag": "1",
     "freshness_status": "fresh_at_generation",
     "generated_view_is_authority": false,
@@ -61,17 +61,17 @@
     "proof_authority": false
   },
   "active_state": {
-    "active_task_id": "RT-20260802-009",
-    "latest_handoff_id": "handoff-0942",
-    "current_status": "p15_t06_four_source_backed_reproducibility_packages_complete_precheckpoint",
+    "active_task_id": "RT-20260802-010",
+    "latest_handoff_id": "handoff-0943",
+    "current_status": "p15_t07_exact_four_package_no_external_action_decision_complete_precheckpoint",
     "v15_completed": false,
     "v16_completed": false,
     "v16_plan_registered": true
   },
   "active_state_bifurcation": {
-    "latest_research_task_id": "RT-20260802-009",
-    "latest_research_handoff_id": "handoff-0942",
-    "latest_research_next_action": "Run one governed checkpoint for AJ-RT-20260802-009-001. After checkpoint, stop at P15-T07 until the user supplies exact manuscript-specific authority for every requested submission public release reviewer contact or outreach action, including any embargo authorship identity or report-publication limits.",
+    "latest_research_task_id": "RT-20260802-010",
+    "latest_research_handoff_id": "handoff-0943",
+    "latest_research_next_action": "Run one governed checkpoint for AJ-RT-20260802-010-001. After checkpoint, reconcile the terminal file-backed relay without replay and route dependency-ready P16-T01 through continue-research for the complete recommendation-coverage audit.",
     "latest_project_system_task_id": "none",
     "latest_project_system_status": "none",
     "latest_project_system_sidecar_task_id": "none",
@@ -80,11 +80,11 @@
     "next_research_route_source": "latest_research_handoff"
   },
   "next_route": {
-    "route_id": "v21_p15_t07_human_authorization_for_external_actions",
-    "role_family": "gate-chair@0.1.0",
+    "route_id": "v21_p16_t01_complete_recommendation_coverage_audit",
+    "role_family": "process-integrity-auditor@0.1.0",
     "target_derivation_milestone": "benchmark_promotion",
-    "milestone_burden": "Preserve human accountability for external communication and authorship.",
-    "requires_human_gate": true
+    "milestone_burden": "Prove plan coverage without treating coverage as scientific success.",
+    "requires_human_gate": false
   },
   "claim_boundary": {
     "physics_claim_authority": false,
@@ -680,10 +680,10 @@
     "latest_required_status": "PASS_PRECHECKPOINT",
     "pending_layers": [
       {
-        "layer": "post_checkpoint",
+        "layer": "checkpoint",
         "status": "PENDING",
         "evidence": [
-          "One governed checkpoint is authorized and has not yet been invoked."
+          "Exactly one governed checkpoint remains."
         ]
       }
     ]

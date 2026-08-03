@@ -1,0 +1,178 @@
+schema_id: "p15_t07_submission_claim_venue_decisions_v1"
+artifact_id: "P15T07SubmissionClaimVenueDecisions_v1"
+task_id: "RT-20260802-010"
+job_id: "AJ-RT-20260802-010-001"
+decision_id: "DDR-20260802-010"
+approval_id: "approval-20260802-001"
+human_authorization_id: "HUMAN-AUTH-P15-T07-NO-EXTERNAL-ACTION-2026-08-02-001"
+status: "completed"
+decision_result: "DENY_ALL_EXTERNAL_ACTIONS_FOR_ALL_FOUR_CURRENT_VERSIONS"
+package_count: 4
+action_type_count: 4
+authorization_cell_count: 16
+authorized_cell_count: 0
+denied_cell_count: 16
+action_types:
+  - "submission"
+  - "public_release"
+  - "reviewer_contact"
+  - "outreach"
+package_decisions:
+  - package_id: "P15-T01-EXACT-GR-INTERPRETIVE"
+    plan_task_id: "P15-T01"
+    primary_artifact_path: "research_control/tasks/RT-20260722-021/artifacts/exact_gr_interpretive_manuscript_v1.md"
+    primary_artifact_sha256: "17d215509eb3f0ee4544c2f25eed56462d346106f41bc520fc27441c09c0add9"
+    archive_path: "research_control/tasks/RT-20260802-009/artifacts/p15_t01_exact_gr_interpretive_source_bundle_v1.tar"
+    archive_sha256: "cdb3e01b113287380e587004e91ad0f7445b63d538bcdbfdce63155207d757d8"
+    source_snapshot_commit: "ef41c569efd01f3a5182f114c20dd6edb3ee9973"
+    internal_disposition: "future_reviewer_contact_candidate"
+    submission:
+      authorized: false
+      venue: null
+      permitted_claims: []
+      reason: "No current submission or venue authority."
+    public_release:
+      authorized: false
+      release_files: []
+      license: null
+      embargo: "not_applicable_no_release"
+      reason: "Not public-preprint-ready and no release authority."
+    reviewer_contact:
+      authorized: false
+      reviewer_or_venue: null
+      channel: null
+      identity_publication_authorized: false
+      report_publication_authorized: false
+      reason: "Candidate status requires a later exact reviewer-specific human decision."
+    outreach:
+      authorized: false
+      audience: null
+      channel: null
+      message_scope: null
+      reason: "No outreach authority."
+  - package_id: "P15-T02-AI-METHODOLOGY"
+    plan_task_id: "P15-T02"
+    primary_artifact_path: "research_control/tasks/RT-20260802-008/artifacts/p15_t02_methodology_manuscript.md"
+    primary_artifact_sha256: "05151b543111f1107a07f1b02afabc78d97ef07820d1eed824da38fdd8e441a3"
+    archive_path: "research_control/tasks/RT-20260802-009/artifacts/p15_t02_ai_methodology_source_bundle_v1.tar"
+    archive_sha256: "056d81f87c1595b1f3b4bb40a1dc8b5e6ac895eff989ef6de0a2ae4f94718bbe"
+    source_snapshot_commit: "9be11e9cc77a8ab30776fd5598b682b37c42a6e3"
+    internal_disposition: "revision_before_any_release"
+    submission:
+      authorized: false
+      venue: null
+      permitted_claims: []
+      reason: "Methodology limitations require internal revision before any submission question."
+    public_release:
+      authorized: false
+      release_files: []
+      license: null
+      embargo: "not_applicable_no_release"
+      reason: "Revision is required and no release authority exists."
+    reviewer_contact:
+      authorized: false
+      reviewer_or_venue: null
+      channel: null
+      identity_publication_authorized: false
+      report_publication_authorized: false
+      reason: "No exact reviewer-specific authority."
+    outreach:
+      authorized: false
+      audience: null
+      channel: null
+      message_scope: null
+      reason: "No outreach authority."
+  - package_id: "P15-T03-SELECTOR-THEOREM"
+    plan_task_id: "P15-T03"
+    primary_artifact_path: "research_control/tasks/RT-20260723-003/artifacts/selector_minimum_extension_theorem_manuscript_v1.tex"
+    primary_artifact_sha256: "348fba00dc68f7791ffec4fb3edb8d70bc7db18cfd405f052572a639c51b62fa"
+    archive_path: "research_control/tasks/RT-20260802-009/artifacts/p15_t03_selector_theorem_source_bundle_v1.tar"
+    archive_sha256: "cea3d636d4a8e1dc3734a8fc1a8a3aee8861b6f88527c501498573411da352fc"
+    source_snapshot_commit: "1136e88b329fa9215017a20dd030607a98168503"
+    internal_disposition: "future_reviewer_contact_candidate"
+    submission:
+      authorized: false
+      venue: null
+      permitted_claims: []
+      reason: "Specialist review and a fresh submission decision are required."
+    public_release:
+      authorized: false
+      release_files: []
+      license: null
+      embargo: "not_applicable_no_release"
+      reason: "Not public-preprint-ready and no release authority."
+    reviewer_contact:
+      authorized: false
+      reviewer_or_venue: null
+      channel: null
+      identity_publication_authorized: false
+      report_publication_authorized: false
+      reason: "Candidate status requires a later exact reviewer-specific human decision."
+    outreach:
+      authorized: false
+      audience: null
+      channel: null
+      message_scope: null
+      reason: "No outreach authority."
+  - package_id: "P15-T04-SOURCE-DYNAMICS"
+    plan_task_id: "P15-T04"
+    primary_artifact_path: "research_control/tasks/RT-20260727-006/artifacts/source_dynamics_reconstruction_technical_report_v1.tex"
+    primary_artifact_sha256: "5724a07c2181f87d517b80d7878f437b47d8802045596cd16d3e62929dfe5cff"
+    archive_path: "research_control/tasks/RT-20260802-009/artifacts/p15_t04_source_dynamics_source_bundle_v1.tar"
+    archive_sha256: "cedb2ca1f6a6a93fb3626a750759ec9463e607f2a1d8dab2dbfd972ee023f866"
+    source_snapshot_commit: "832f9cf9ba98061df40cdda2799d5a46661260bc"
+    internal_disposition: "revision_before_any_release"
+    submission:
+      authorized: false
+      venue: null
+      permitted_claims: []
+      reason: "Mathematical scope and literature framing require internal revision."
+    public_release:
+      authorized: false
+      release_files: []
+      license: null
+      embargo: "not_applicable_no_release"
+      reason: "Revision is required and no release authority exists."
+    reviewer_contact:
+      authorized: false
+      reviewer_or_venue: null
+      channel: null
+      identity_publication_authorized: false
+      report_publication_authorized: false
+      reason: "No exact reviewer-specific authority."
+    outreach:
+      authorized: false
+      audience: null
+      channel: null
+      message_scope: null
+      reason: "No outreach authority."
+action_matrix:
+  - {cell_id: "P15-T01:submission", package_id: "P15-T01-EXACT-GR-INTERPRETIVE", action: "submission", authorized: false}
+  - {cell_id: "P15-T01:public_release", package_id: "P15-T01-EXACT-GR-INTERPRETIVE", action: "public_release", authorized: false}
+  - {cell_id: "P15-T01:reviewer_contact", package_id: "P15-T01-EXACT-GR-INTERPRETIVE", action: "reviewer_contact", authorized: false}
+  - {cell_id: "P15-T01:outreach", package_id: "P15-T01-EXACT-GR-INTERPRETIVE", action: "outreach", authorized: false}
+  - {cell_id: "P15-T02:submission", package_id: "P15-T02-AI-METHODOLOGY", action: "submission", authorized: false}
+  - {cell_id: "P15-T02:public_release", package_id: "P15-T02-AI-METHODOLOGY", action: "public_release", authorized: false}
+  - {cell_id: "P15-T02:reviewer_contact", package_id: "P15-T02-AI-METHODOLOGY", action: "reviewer_contact", authorized: false}
+  - {cell_id: "P15-T02:outreach", package_id: "P15-T02-AI-METHODOLOGY", action: "outreach", authorized: false}
+  - {cell_id: "P15-T03:submission", package_id: "P15-T03-SELECTOR-THEOREM", action: "submission", authorized: false}
+  - {cell_id: "P15-T03:public_release", package_id: "P15-T03-SELECTOR-THEOREM", action: "public_release", authorized: false}
+  - {cell_id: "P15-T03:reviewer_contact", package_id: "P15-T03-SELECTOR-THEOREM", action: "reviewer_contact", authorized: false}
+  - {cell_id: "P15-T03:outreach", package_id: "P15-T03-SELECTOR-THEOREM", action: "outreach", authorized: false}
+  - {cell_id: "P15-T04:submission", package_id: "P15-T04-SOURCE-DYNAMICS", action: "submission", authorized: false}
+  - {cell_id: "P15-T04:public_release", package_id: "P15-T04-SOURCE-DYNAMICS", action: "public_release", authorized: false}
+  - {cell_id: "P15-T04:reviewer_contact", package_id: "P15-T04-SOURCE-DYNAMICS", action: "reviewer_contact", authorized: false}
+  - {cell_id: "P15-T04:outreach", package_id: "P15-T04-SOURCE-DYNAMICS", action: "outreach", authorized: false}
+global_limits:
+  authorship_assignment_status: "unassigned"
+  public_authorship_authorized: false
+  attribution_claim_authorized: false
+  embargoed_distribution_authorized: false
+  reviewer_identity_publication_authorized: false
+  reviewer_report_publication_authorized: false
+  external_human_review_completed: false
+  independent_replication_completed: false
+  external_action_performed_count: 0
+  fresh_human_authority_required_for_later_version_or_action: true
+authority_note: "This exact negative matrix is the P15-T07 protected result. It creates no permission to perform an outward action."
+

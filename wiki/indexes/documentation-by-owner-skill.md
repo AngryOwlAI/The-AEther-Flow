@@ -168,6 +168,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-SKILL-MARKDOWN-WIKI` `.codex/skills/markdown-wiki/SKILL.md`
 - `MD-SOURCE-AUTHORITY-PUBLICATION-BRIEF` `markdown/publication-briefs/source-authority.publication-brief.md`
 - `MD-TECHNICAL-REQUIREMENTS-PUBLICATION-BRIEF` `markdown/publication-briefs/technical-requirements.publication-brief.md`
+- `MD-V21-P15-T07-PARENT-FUSION-NO-EXTERNAL-ACTION-V1` `research_control/tasks/RT-20260802-010/artifacts/parent_fusion_notes_p15_t07_external_action_decision.md`
 - `MD-VALIDATOR-OPERATOR-WORKFLOW-PUBLICATION-BRIEF` `markdown/publication-briefs/validator-operator-workflow.publication-brief.md`
 - `WIKI-HTML-AETHER-FLOW-ONTOLOGY-EXPLAINER` `wiki/html/html-aether-flow-ontology-explainer.md`
 - `WIKI-HTML-AETHER-FLOW-PHYSICS-PROGRAM-EXPLAINER` `wiki/html/html-aether-flow-physics-program-explainer.md`
@@ -759,6 +760,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-V21-P15-T04-SOURCE-DYNAMICS-RECONSTRUCTION-RECEIPT-V1` `wiki/markdown/md-v21-p15-t04-source-dynamics-reconstruction-receipt-v1.md`
 - `WIKI-MD-V21-P15-T05-PARENT-FUSION-GATE-E-NO-MANUSCRIPT-V1` `wiki/markdown/md-v21-p15-t05-parent-fusion-gate-e-no-manuscript-v1.md`
 - `WIKI-MD-V21-P15-T06-ENVIRONMENT-RECIPES-V1` `wiki/markdown/md-v21-p15-t06-environment-recipes-v1.md`
+- `WIKI-MD-V21-P15-T07-PARENT-FUSION-NO-EXTERNAL-ACTION-V1` `wiki/markdown/md-v21-p15-t07-parent-fusion-no-external-action-v1.md`
 - `WIKI-MD-V21-P4-T01-SOURCE-ASSUMPTION-AMBIGUITIES` `wiki/markdown/md-v21-p4-t01-source-assumption-ambiguities.md`
 - `WIKI-MD-V21-P4-T04-ONTOLOGY-REGIME-COMPARISON-REPORT-V1` `wiki/markdown/md-v21-p4-t04-ontology-regime-comparison-report-v1.md`
 - `WIKI-MD-V21-P4-T05-ONTOLOGY-REGIME-GATE-CHAIR-PARENT-FUSION-V1` `wiki/markdown/md-v21-p4-t05-ontology-regime-gate-chair-parent-fusion-v1.md`

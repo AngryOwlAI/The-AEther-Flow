@@ -1,0 +1,421 @@
+job_id: "AJ-RT-20260802-010-001"
+task_id: "RT-20260802-010"
+decision_id: "DDR-20260802-010"
+role_id: "gate-chair"
+role_version: "0.1.0"
+execution_role_ref: "gate-chair@0.1.0--RT-20260802-010"
+status: "completed"
+validation_status: "PASS_PRECHECKPOINT"
+requires_human_gate: false
+human_authorization_id: "HUMAN-AUTH-P15-T07-NO-EXTERNAL-ACTION-2026-08-02-001"
+approval_id: "approval-20260802-001"
+created_at: "2026-08-02T21:10:21Z"
+started_at: "2026-08-02T21:10:21Z"
+completed_at: "2026-08-02T21:10:21Z"
+completion_path: "research_control/tasks/RT-20260802-010/jobs/completions/AJC-AJ-RT-20260802-010-001.yaml"
+objective: "Execute only P15-T07 by recording the user's exact all-denied external-action matrix for the four current package versions and performing no external action."
+target_derivation_milestone: "benchmark_promotion"
+milestone_burden: "Preserve human accountability for external communication and authorship."
+route_label: "human-gated-publication-decision"
+route_reason: "Handoff-0942 blocks P15-T07 until exact human authority; approval-20260802-001 now supplies an exact four-version all-denied matrix."
+dependency_checkpoint_commit: "efbf0e490f9994af1a22cc2ebf2ae13d699b5b79"
+plan_task_id: "P15-T07"
+recommendation_ids:
+  - "V21-R38"
+  - "V21-R65"
+  - "V21-R66"
+  - "V21-R68"
+  - "V21-R70"
+  - "V21-R71"
+  - "V21-R72"
+physics_promotion_authorized: false
+proof_authority: false
+is_physics_task: true
+payload_class: "theorem"
+has_new_mathematical_payload: true
+payload_artifact_path: "research_control/tasks/RT-20260802-010/artifacts/p15_t07_external_action_decision_v1.tex"
+payload_summary: "A finite sixteen-cell authorization matrix and no-action proposition prove only that no outward action is authorized for the exact four listed versions."
+external_red_team_finding_requires_integration: false
+goal_context:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_file_sha256: "9b991c4f587a67b3c1e746837dff1c29623e43c88b9b2ecf886f23917b9227ee"
+  validated_revision: 1512
+  current_generation: 225
+  phase: "terminal_awaiting_human"
+  human_intervention_summary_sha256: "8c47ebee1cf949e62f29e3367466aa716338ac1ee30cc753d743022b6bb12770"
+  generation_claim_performed: false
+  relay_worker_invocation_count: 0
+  explanation: "The relay stopped lawfully before P15-T07. This ordinary tracked AgentJob is selected by the authoritative handoff only after direct exact user approval; it does not replay generation 225."
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "physics"
+  payload_type: "route_decision"
+  candidate_family: "V21-P15-T07-NO-EXTERNAL-ACTION-DECISION-V1"
+  assumption_delta:
+    - "Hold the four P15-T06 package and primary-artifact hashes fixed."
+    - "Treat the user's exact approval as authority to record denials only."
+    - "Set submission, release, reviewer-contact, and outreach authorization false for every package."
+    - "Require fresh exact human authority for any later version or outward action."
+  materiality_basis: "P15-T07 is the final unresolved P15 human gate. The first exact four-version decision resolves it negatively without any external action."
+  payload_details:
+    resolves_new_route_decision: true
+    decision_identity: "P15T07-EXACT-FOUR-PACKAGE-NO-EXTERNAL-ACTION-V1"
+    not_already_encoded_evidence: "P15-T06 preserves four internal candidates but records external authority false; no prior protected P15-T07 record binds the user's exact all-denied decision."
+  source_basis:
+    - "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+    - "research_control/handoffs/handoff-0942.yaml"
+    - "research_control/tasks/RT-20260802-009/artifacts/p15_t06_package_catalog_v1.json"
+    - "research_control/tasks/RT-20260802-009/artifacts/p15_t06_source_map_v1.json"
+    - "research_control/approvals/approval-20260802-001.yaml"
+  expected_artifact_paths:
+    - "research_control/tasks/RT-20260802-010/artifacts/p15_t07_external_action_decision_v1.tex"
+    - "research_control/tasks/RT-20260802-010/artifacts/p15_t07_submission_claim_venue_decisions_v1.yaml"
+    - "research_control/tasks/RT-20260802-010/artifacts/p15_t07_external_action_log_v1.yaml"
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+family_freeze_admission:
+  schema_id: "family_freeze_route_admission_v1"
+  policy_id: "family_freeze_reopening_policy_v1"
+  route_id: "v21_p15_t07_exact_no_external_action_decision"
+  family_id: "V21-P15-T07-EXACT-FOUR-PACKAGE-NO-EXTERNAL-ACTION-V1"
+  family_identity_sha256: "65a69ec8cc9e135446d94dec238e2e1aaf8357c5172d84892e0e02c7eabc2f21"
+  assumption_sha256es:
+    - "0db60c953f94457839e02a1666594283e7467cc33e83868e52e16545cf7d6f3c"
+  route_kind: "theorem_investigation"
+  detected_match_basis: []
+  reopening:
+    requested: false
+    class: "none"
+  distinct_branch:
+    branch_identity: "P15-T07-EXACT-HUMAN-NO-EXTERNAL-ACTION-DECISION"
+    material_difference_basis: "This protected decision closes a communication-accountability gate for exact package hashes and does not reconstruct any frozen physics candidate."
+    reconstructs_frozen_candidate: false
+    expected_artifact_paths:
+      - "research_control/tasks/RT-20260802-010/artifacts/p15_t07_external_action_decision_v1.tex"
+      - "research_control/tasks/RT-20260802-010/artifacts/p15_t07_submission_claim_venue_decisions_v1.yaml"
+  authority_limits:
+    local_family_freeze_preserved: true
+    global_no_go_claimed: false
+    automatic_candidate_adoption: false
+    theorem_truth_inferred: false
+    ontology_modified: false
+    physics_promotion_authorized: false
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  expected_durable_outputs:
+    physics:
+      - "research_control/tasks/RT-20260802-010/artifacts/p15_t07_external_action_decision_v1.tex"
+      - "research_control/tasks/RT-20260802-010/artifacts/p15_t07_submission_claim_venue_decisions_v1.yaml"
+      - "research_control/tasks/RT-20260802-010/artifacts/p15_t07_internal_ai_advisory_review_v1.yaml"
+    project_system:
+      - "research_control/tasks/RT-20260802-010/artifacts/validate_p15_t07_no_external_action.py"
+      - "research_control/tasks/RT-20260802-010/artifacts/p15_t07_no_external_action_validation_v1.json"
+      - "research_control/tasks/RT-20260802-010/artifacts/p15_t07_no_external_action_compact_receipt_v1.json"
+  acceptance_criteria:
+    physics:
+      - "all four exact primary and archive hashes are bound to the protected decision"
+      - "all sixteen submission release reviewer-contact and outreach cells are denied"
+      - "the internal package dispositions and non-scientific authority limits remain explicit"
+    project_system:
+      - "the task-local checker verifies all exact hashes matrix cells and zero-action records"
+      - "authorship embargo identity report and later-version boundaries fail closed"
+      - "one governed checkpoint records the bounded transaction"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: false
+    exception_id: ""
+    evidence_path: ""
+    evidence_sha256: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0942"
+  source_handoff_path: "research_control/handoffs/handoff-0942.yaml"
+  source_handoff_sha256: "5ebd18adb42d8455456e3afa44c1d7961da5b775249253e551d3d44d56f004db"
+  selected_plan_task_id: "P15-T07"
+  guard_outcome: "below_threshold"
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  parent:
+    execution_unit_id: "parent"
+    perspective: "physicist_mathematician_philosopher"
+    responsibilities:
+      - "verify exact authorization package identities and source hashes"
+      - "formalize the sixteen-cell no-action matrix"
+      - "separate internal advisory review from external authority"
+      - "resolve all child conflicts and issue the bounded disposition"
+  children:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260802-010/artifacts/child_phys_math_p15_t07_external_action_decision.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260802-010/artifacts/child_phys_phil_p15_t07_external_action_decision.yaml"
+      status: "completed"
+  conflict_policy:
+    review_path: "research_control/tasks/RT-20260802-010/artifacts/parent_conflict_review_p15_t07_external_action_decision.yaml"
+    max_resolution_rounds: 2
+    require_parallel_child_revision: true
+    unresolved_conflict_status: "blocked"
+  fusion_policy:
+    fusion_notes_path: "research_control/tasks/RT-20260802-010/artifacts/parent_fusion_notes_p15_t07_external_action_decision.md"
+    fused_output_path: "research_control/tasks/RT-20260802-010/artifacts/p15_t07_external_action_decision_v1.tex"
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+    final_output_replaces_old_single_role_artifact: true
+memory_preflight:
+  preflight_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1113
+    relationship_row_count: 5624
+    semantic_row_count: 1113
+    vault_row_count: 1113
+    local_cache_only_warning_count: 0
+  refresh_needed: false
+  refresh_performed: false
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search 'human approval external action' --limit 10 --json"
+      query_type: "search"
+      query_text: "human approval external action"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  authority_note: "Generated Obsidian notes semantic extracts SQLite memory PDFs and .local files are retrieval layers only and are not authority."
+allowed_read_paths:
+  - "SOUL.md"
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - ".agents/roles/physics/gate-chair.v0.1.0.md"
+  - ".agents/roles/physics/external-red-team-reviewer.v0.1.0.md"
+  - ".agents/schemas/**"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  - "research_control/design/**"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0942.yaml"
+  - "research_control/handoffs/handoff-0942.md"
+  - "research_control/approvals/approval-20260802-001.yaml"
+  - "research_control/tasks/RT-20260802-009/**"
+  - "research_control/tasks/RT-20260722-021/**"
+  - "research_control/tasks/RT-20260802-008/**"
+  - "research_control/tasks/RT-20260723-003/**"
+  - "research_control/tasks/RT-20260727-006/**"
+  - "registries/**"
+allowed_write_paths:
+  - "research_control/approvals/approval-20260802-001.yaml"
+  - "research_control/tasks/RT-20260802-010/**"
+  - "research_control/handoffs/handoff-0943.yaml"
+  - "research_control/handoffs/handoff-0943.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "registries/TEX_SOURCE_REGISTRY.csv"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/tex/**"
+checkpoint_invocation_limit: 1
+allowed_generated_paths:
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "research_control/current_frontier.md"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/TEX_SOURCE_REGISTRY.csv"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/tex/**"
+forbidden_paths:
+  - "ontology/**"
+  - "tex/**"
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "registries/METRIC_USE_LEDGER.csv"
+  - "research_control/tasks/RT-20260802-009/**"
+  - ".agents/roles/**"
+  - ".agents/schemas/**"
+  - ".codex/skills/**"
+  - "scripts/**"
+  - "tests/**"
+allowed_source_classes:
+  - "registered_control_markdown"
+  - "tracked_research_control_records"
+  - "tracked_task_local_science_drafts_read_only"
+  - "tracked_task_local_machine_evidence"
+  - "registered_canonical_science_read_only"
+  - "direct_human_authorization"
+forbidden_source_classes:
+  - "canonical_science_write"
+  - "external_human_review_inference"
+  - "independent_replication_inference"
+  - "reviewer_contact_without_fresh_exact_authority"
+  - "authorship_assignment"
+  - "publication_submission_or_release"
+  - "benchmark_or_physics_promotion"
+  - "validator_or_checkpoint_as_scientific_authority"
+approved_commands:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  - ".venv/bin/python research_control/tasks/RT-20260802-010/artifacts/validate_p15_t07_no_external_action.py --write-report --json"
+  - ".venv/bin/python research_control/tasks/RT-20260802-010/artifacts/validate_p15_t07_no_external_action.py --check --json"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --check"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --check"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --write"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --check"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --write"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --check"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+  - ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+  - ".venv/bin/python -m scripts.validation.cli run --profile affected --paths <changed-paths>"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --job-id AJ-RT-20260802-010-001 --json-summary"
+  - ".venv/bin/python -m unittest tests.test_publication_process_validation tests.test_research_control tests.test_physics_payload_admission tests.test_family_freeze_admission tests.test_dual_budget_policy tests.test_ordinary_route_guard"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260802-010-001"
+  - "git diff --check"
+required_validators:
+  - "p15_t07_exact_hash_and_matrix_checker"
+  - "parent_child_synthesis"
+  - "human_authorization_one_time_consumption"
+  - "zero_external_action_log"
+  - "family_freeze_admission"
+  - "physics_payload_admission"
+  - "dual_budget_policy"
+  - "ordinary_route_guard"
+  - "documentation_impact"
+  - "project_improvement_signal_parity"
+  - "changed_claim_language"
+  - "research_control_diff"
+  - "memory_bootstrap"
+  - "selected_repository_tests"
+expected_outputs:
+  - "research_control/approvals/approval-20260802-001.yaml"
+  - "research_control/tasks/RT-20260802-010/00_TASK.yaml"
+  - "research_control/tasks/RT-20260802-010/DDR-20260802-010.md"
+  - "research_control/tasks/RT-20260802-010/roles/gate-chair@0.1.0--RT-20260802-010.yaml"
+  - "research_control/tasks/RT-20260802-010/jobs/completions/AJC-AJ-RT-20260802-010-001.yaml"
+  - "research_control/tasks/RT-20260802-010/artifacts/p15_t07_external_action_decision_v1.tex"
+  - "research_control/tasks/RT-20260802-010/artifacts/p15_t07_submission_claim_venue_decisions_v1.yaml"
+  - "research_control/tasks/RT-20260802-010/artifacts/p15_t07_external_action_log_v1.yaml"
+  - "research_control/tasks/RT-20260802-010/artifacts/p15_t07_internal_ai_advisory_review_v1.yaml"
+  - "research_control/tasks/RT-20260802-010/artifacts/p15_t07_no_external_action_validation_v1.json"
+  - "research_control/tasks/RT-20260802-010/artifacts/p15_t07_no_external_action_compact_receipt_v1.json"
+  - "research_control/tasks/RT-20260802-010/documentation_impact.yaml"
+  - "research_control/handoffs/handoff-0943.yaml"
+  - "research_control/handoffs/handoff-0943.md"
+  - "research_control/program_state.yaml"
+claim_boundary:
+  allowed_claims:
+    - "the exact user approval is consumed once for the four listed hashes"
+    - "all sixteen external-action cells are denied"
+    - "P15-T01 and P15-T03 are future reviewer-contact candidates only"
+    - "P15-T02 and P15-T04 require revision before any release"
+    - "zero external actions occurred and fresh authority is required for later action"
+  forbidden_claims:
+    - "reviewer-contact candidate as reviewer-contact permission"
+    - "internal AI advisory as external human review independent replication or peer review"
+    - "denial as scientific rejection or theorem refutation"
+    - "authorship assignment embargoed distribution identity disclosure or report publication"
+    - "validator route checkpoint or role success as physics evidence"
+    - "ontology source-law benchmark Gate E proof publication or completed-derivation promotion"
+  stop_conditions:
+    - "package or archive hash drift"
+    - "any authorization cell becomes true"
+    - "any external action log entry appears"
+    - "approval reuse or broadened scope"
+    - "unresolved parent-child conflict"
+    - "repository validation or checkpoint failure"
+  authority_flags:
+    scientific_status_changed: false
+    ontology_adoption_authorized: false
+    benchmark_promotion_authorized: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+    publication_authorized: false
+    proof_authority: false

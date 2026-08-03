@@ -1,0 +1,273 @@
+{
+  "action_type_count": 4,
+  "authorization_cell_count": 16,
+  "authorized_cell_count": 0,
+  "check_count": 50,
+  "checks": [
+    {
+      "check_id": "approval_exact_identity",
+      "detail": "Approval and human-authorization identifiers match the one-time record.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "approval_exact_message",
+      "detail": "Exact user message and SHA-256 are preserved.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "approval_consumed_once",
+      "detail": "Approval is one-time and consumed only by this job.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "approval_decision_code",
+      "detail": "Approval authorizes recording the exact all-denied matrix only.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "human_matrix_cardinality",
+      "detail": "Human authorization records four packages four actions and sixteen denials.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "human_nondelegated_limits",
+      "detail": "Authorship embargo identity and report permissions remain closed.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "package_sets_exact",
+      "detail": "All decision surfaces contain exactly the four approved package identities.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "p15-t01_primary_exists",
+      "detail": "Primary artifact exists: research_control/tasks/RT-20260722-021/artifacts/exact_gr_interpretive_manuscript_v1.md",
+      "status": "PASS"
+    },
+    {
+      "check_id": "p15-t01_primary_hash",
+      "detail": "Primary artifact matches 17d215509eb3f0ee4544c2f25eed56462d346106f41bc520fc27441c09c0add9.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "p15-t01_archive_exists",
+      "detail": "Archive exists: research_control/tasks/RT-20260802-009/artifacts/p15_t01_exact_gr_interpretive_source_bundle_v1.tar",
+      "status": "PASS"
+    },
+    {
+      "check_id": "p15-t01_archive_hash",
+      "detail": "Archive matches cdb3e01b113287380e587004e91ad0f7445b63d538bcdbfdce63155207d757d8.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "p15-t01_identity_bound_everywhere",
+      "detail": "Approval human authorization and decision record agree on both exact hashes.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "p15-t01_all_actions_denied",
+      "detail": "Submission release reviewer contact and outreach are all false.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "p15-t01_internal_disposition",
+      "detail": "Internal disposition is future_reviewer_contact_candidate on both surfaces.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "p15-t02_primary_exists",
+      "detail": "Primary artifact exists: research_control/tasks/RT-20260802-008/artifacts/p15_t02_methodology_manuscript.md",
+      "status": "PASS"
+    },
+    {
+      "check_id": "p15-t02_primary_hash",
+      "detail": "Primary artifact matches 05151b543111f1107a07f1b02afabc78d97ef07820d1eed824da38fdd8e441a3.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "p15-t02_archive_exists",
+      "detail": "Archive exists: research_control/tasks/RT-20260802-009/artifacts/p15_t02_ai_methodology_source_bundle_v1.tar",
+      "status": "PASS"
+    },
+    {
+      "check_id": "p15-t02_archive_hash",
+      "detail": "Archive matches 056d81f87c1595b1f3b4bb40a1dc8b5e6ac895eff989ef6de0a2ae4f94718bbe.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "p15-t02_identity_bound_everywhere",
+      "detail": "Approval human authorization and decision record agree on both exact hashes.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "p15-t02_all_actions_denied",
+      "detail": "Submission release reviewer contact and outreach are all false.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "p15-t02_internal_disposition",
+      "detail": "Internal disposition is revision_before_any_release on both surfaces.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "p15-t03_primary_exists",
+      "detail": "Primary artifact exists: research_control/tasks/RT-20260723-003/artifacts/selector_minimum_extension_theorem_manuscript_v1.tex",
+      "status": "PASS"
+    },
+    {
+      "check_id": "p15-t03_primary_hash",
+      "detail": "Primary artifact matches 348fba00dc68f7791ffec4fb3edb8d70bc7db18cfd405f052572a639c51b62fa.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "p15-t03_archive_exists",
+      "detail": "Archive exists: research_control/tasks/RT-20260802-009/artifacts/p15_t03_selector_theorem_source_bundle_v1.tar",
+      "status": "PASS"
+    },
+    {
+      "check_id": "p15-t03_archive_hash",
+      "detail": "Archive matches cea3d636d4a8e1dc3734a8fc1a8a3aee8861b6f88527c501498573411da352fc.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "p15-t03_identity_bound_everywhere",
+      "detail": "Approval human authorization and decision record agree on both exact hashes.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "p15-t03_all_actions_denied",
+      "detail": "Submission release reviewer contact and outreach are all false.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "p15-t03_internal_disposition",
+      "detail": "Internal disposition is future_reviewer_contact_candidate on both surfaces.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "p15-t04_primary_exists",
+      "detail": "Primary artifact exists: research_control/tasks/RT-20260727-006/artifacts/source_dynamics_reconstruction_technical_report_v1.tex",
+      "status": "PASS"
+    },
+    {
+      "check_id": "p15-t04_primary_hash",
+      "detail": "Primary artifact matches 5724a07c2181f87d517b80d7878f437b47d8802045596cd16d3e62929dfe5cff.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "p15-t04_archive_exists",
+      "detail": "Archive exists: research_control/tasks/RT-20260802-009/artifacts/p15_t04_source_dynamics_source_bundle_v1.tar",
+      "status": "PASS"
+    },
+    {
+      "check_id": "p15-t04_archive_hash",
+      "detail": "Archive matches cedb2ca1f6a6a93fb3626a750759ec9463e607f2a1d8dab2dbfd972ee023f866.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "p15-t04_identity_bound_everywhere",
+      "detail": "Approval human authorization and decision record agree on both exact hashes.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "p15-t04_all_actions_denied",
+      "detail": "Submission release reviewer contact and outreach are all false.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "p15-t04_internal_disposition",
+      "detail": "Internal disposition is revision_before_any_release on both surfaces.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "matrix_exact_cartesian_domain",
+      "detail": "The matrix enumerates each package-action pair exactly once.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "matrix_all_false",
+      "detail": "All sixteen explicit matrix cells are false.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "decision_summary_counts",
+      "detail": "Decision summary agrees with the explicit matrix.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "decision_global_limits_closed",
+      "detail": "All attribution distribution disclosure and future-version boundaries fail closed.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "action_log_zero_entries",
+      "detail": "The external-action log contains no entries.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "action_log_all_flags_false",
+      "detail": "Every performed-action flag is false.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "action_log_external_collections_empty",
+      "detail": "All external-person system venue URL disclosure and authorship collections are empty.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "advisory_not_external_authority",
+      "detail": "Internal AI review is not promoted to external human or scientific authority.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "parent_child_outputs_complete",
+      "detail": "Both child perspectives completed and the parent has no unresolved conflict.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "child_math_exact_denial",
+      "detail": "Mathematical child records exhaustive denial and zero actions.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "child_phil_accountability",
+      "detail": "Philosophy child preserves the non-substitution accountability boundary.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex_control_proposition_present",
+      "detail": "Canonical task-local TeX contains the scoped control proposition and authority header.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex_all_hashes_present",
+      "detail": "The TeX decision binds all eight exact SHA-256 values.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "manifest_required_artifacts_exist",
+      "detail": "Every task artifact required by the reproducibility manifest exists.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "manifest_fixed_invariants",
+      "detail": "Reproducibility invariants preserve zero action and zero physics delta.",
+      "status": "PASS"
+    }
+  ],
+  "denied_cell_count": 16,
+  "distance_to_gr_delta_changed": false,
+  "external_action_performed_count": 0,
+  "failed_check_count": 0,
+  "generated_at": "2026-08-02T21:10:21Z",
+  "job_id": "AJ-RT-20260802-010-001",
+  "package_count": 4,
+  "passed_check_count": 50,
+  "physics_promotion_authorized": false,
+  "plan_task_id": "P15-T07",
+  "result": "PASS_EXACT_FOUR_PACKAGE_NO_EXTERNAL_ACTION_DECISION",
+  "schema_id": "p15_t07_no_external_action_validation_v1",
+  "scientific_claims_changed": false,
+  "status": "PASS",
+  "task_id": "RT-20260802-010"
+}

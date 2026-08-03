@@ -397,6 +397,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V21-P15-T03-SELECTOR-MINIMUM-EXTENSION-THEOREM-MANUSCRIPT-V1` `research_control/tasks/RT-20260723-003/artifacts/selector_minimum_extension_theorem_manuscript_v1.tex`
 - `TEX-V21-P15-T04-SOURCE-DYNAMICS-RECONSTRUCTION-TECHNICAL-REPORT-V1` `research_control/tasks/RT-20260727-006/artifacts/source_dynamics_reconstruction_technical_report_v1.tex`
 - `TEX-V21-P15-T05-PROTECTED-GATE-E-NO-MANUSCRIPT-DISPOSITION-V1` `research_control/tasks/RT-20260731-010/artifacts/p15_t05_gate_e_no_manuscript_disposition_v1.tex`
+- `TEX-V21-P15-T07-NO-EXTERNAL-ACTION-DECISION-V1` `research_control/tasks/RT-20260802-010/artifacts/p15_t07_external_action_decision_v1.tex`
 - `TEX-V21-P2-T01-EQSRC-SOURCE-CATEGORY-DEFINITION` `research_control/tasks/RT-20260720-014/artifacts/eqsrc_source_category_definition_v1.tex`
 - `TEX-V21-P2-T02-EQSRC-NATURAL-SELECTOR-FIXED-POINT-CONDITION` `research_control/tasks/RT-20260720-015/artifacts/eqsrc_natural_selector_fixed_point_condition_v1.tex`
 - `TEX-V21-P2-T03-EQSRC-NO-SELECTOR-NONUNIQUENESS-THEOREM` `research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_theorem_v1.tex`

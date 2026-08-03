@@ -2,7 +2,7 @@
 
 Generated navigation support only. This index is not task authority, physics proof authority, benchmark authority, Gate Chair authority, or completed-derivation evidence.
 
-<!-- generated-report-provenance: {"freshness_status":"fresh_at_generation","generated_view_is_authority":false,"generation_time":"2026-08-02T14:32:33Z","maximum_commit_lag":"1","physics_promotion_authorized":false,"policy_id":"p13_t07_live_generated_report_freshness_v1","proof_authority":false,"report_class":"research_task_index","schema_id":"generated_report_provenance_v1","source_commit":"9be11e9cc77a8ab30776fd5598b682b37c42a6e3","source_hashes":[{"path":"registries/AGENT_JOB_REGISTRY.csv","sha256":"bf23e61da8555fee7878432a7841f33b70450e058eae379f018559da23c9199b"},{"path":"registries/AGENT_ROLE_REGISTRY.csv","sha256":"a0b3e3a4ab41f29c1c755f9229603705134be2985c122d3f88545fecedf966f6"},{"path":"registries/DIRECTOR_DECISION_REGISTRY.csv","sha256":"50e8f5efcfe40b4221f6b05fb20904583f34226daa8085efcaef17b08113fb56"},{"path":"registries/RESEARCH_TASK_REGISTRY.csv","sha256":"70f74a74148ef33ed58852305e397456453757639d4793bc23c255da7f3b28a8"},{"path":"research_control/design/task_index_schema_v2.md","sha256":"4bc422ddf7b13318c82d093d896748d289ac38ad4608ddd9e89068d00302125f"},{"path":"research_control/design/v21_recommendation_backlog.yaml","sha256":"849a4e8dfe848e80bc0c8236252b924e636e5c95ac1a090478a69f7f5377559f"},{"path":"research_control/design/v21_task_taxonomy_policy.md","sha256":"7460702270a26079f39f64ced2b5934e6a67a721983d913e4d3d114917ecca0b"},{"path":"research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml","sha256":"dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3"},{"path":"scripts/research_control/generated_report_provenance.py","sha256":"af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c"},{"path":"scripts/research_control/render_task_index.py","sha256":"7c28b13a1f9843a300ce16bff2c09801549209927a41872efc02a6d0bfc0a023"}],"source_manifest_sha256":"0c57728f2f18a38756344bc253231f41d2452db00239dbade51ddf80967ab77d","source_path_count":"4790","task_count":"1199"} -->
+<!-- generated-report-provenance: {"freshness_status":"fresh_at_generation","generated_view_is_authority":false,"generation_time":"2026-08-03T02:41:52Z","maximum_commit_lag":"1","physics_promotion_authorized":false,"policy_id":"p13_t07_live_generated_report_freshness_v1","proof_authority":false,"report_class":"research_task_index","schema_id":"generated_report_provenance_v1","source_commit":"efbf0e490f9994af1a22cc2ebf2ae13d699b5b79","source_hashes":[{"path":"registries/AGENT_JOB_REGISTRY.csv","sha256":"8814363c48fecb972b1d760ec8fa86217d220c998943d463ce438d4e911d4d69"},{"path":"registries/AGENT_ROLE_REGISTRY.csv","sha256":"a0b3e3a4ab41f29c1c755f9229603705134be2985c122d3f88545fecedf966f6"},{"path":"registries/DIRECTOR_DECISION_REGISTRY.csv","sha256":"1bc1547f66b803952423a76b9ca50ef8c8fd815d93473a6bf01de01ab569a838"},{"path":"registries/RESEARCH_TASK_REGISTRY.csv","sha256":"f998998dbc50e6eb1c70018b2cc34957db207189f6562bce2c78768f2315876a"},{"path":"research_control/design/task_index_schema_v2.md","sha256":"4bc422ddf7b13318c82d093d896748d289ac38ad4608ddd9e89068d00302125f"},{"path":"research_control/design/v21_recommendation_backlog.yaml","sha256":"849a4e8dfe848e80bc0c8236252b924e636e5c95ac1a090478a69f7f5377559f"},{"path":"research_control/design/v21_task_taxonomy_policy.md","sha256":"7460702270a26079f39f64ced2b5934e6a67a721983d913e4d3d114917ecca0b"},{"path":"research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml","sha256":"dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3"},{"path":"scripts/research_control/generated_report_provenance.py","sha256":"af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c"},{"path":"scripts/research_control/render_task_index.py","sha256":"7c28b13a1f9843a300ce16bff2c09801549209927a41872efc02a6d0bfc0a023"}],"source_manifest_sha256":"5f147f70492f2fcde515b256955359283f0012a670b94bdba753ae7ad5e8aacd","source_path_count":"4798","task_count":"1201"} -->
 
 ## Generated-Report Provenance
 
@@ -11,21 +11,21 @@ Generated navigation support only. This index is not task authority, physics pro
 | Provenance schema | `generated_report_provenance_v1` |
 | Freshness policy | `p13_t07_live_generated_report_freshness_v1` |
 | Report class | `research_task_index` |
-| Source commit | `9be11e9cc77a8ab30776fd5598b682b37c42a6e3` |
-| Source-derived generation time | `2026-08-02T14:32:33Z` |
-| Tracked task count | 1199 |
-| Exact source-path count | 4790 |
-| Source manifest SHA-256 | `0c57728f2f18a38756344bc253231f41d2452db00239dbade51ddf80967ab77d` |
+| Source commit | `efbf0e490f9994af1a22cc2ebf2ae13d699b5b79` |
+| Source-derived generation time | `2026-08-03T02:41:52Z` |
+| Tracked task count | 1201 |
+| Exact source-path count | 4798 |
+| Source manifest SHA-256 | `5f147f70492f2fcde515b256955359283f0012a670b94bdba753ae7ad5e8aacd` |
 | Maximum commit lag | 1 |
 | Freshness status at generation | `fresh_at_generation` |
 | Generated view is authority | `false` |
 
 Exact primary source hashes:
 
-- `registries/AGENT_JOB_REGISTRY.csv`: `bf23e61da8555fee7878432a7841f33b70450e058eae379f018559da23c9199b`
+- `registries/AGENT_JOB_REGISTRY.csv`: `8814363c48fecb972b1d760ec8fa86217d220c998943d463ce438d4e911d4d69`
 - `registries/AGENT_ROLE_REGISTRY.csv`: `a0b3e3a4ab41f29c1c755f9229603705134be2985c122d3f88545fecedf966f6`
-- `registries/DIRECTOR_DECISION_REGISTRY.csv`: `50e8f5efcfe40b4221f6b05fb20904583f34226daa8085efcaef17b08113fb56`
-- `registries/RESEARCH_TASK_REGISTRY.csv`: `70f74a74148ef33ed58852305e397456453757639d4793bc23c255da7f3b28a8`
+- `registries/DIRECTOR_DECISION_REGISTRY.csv`: `1bc1547f66b803952423a76b9ca50ef8c8fd815d93473a6bf01de01ab569a838`
+- `registries/RESEARCH_TASK_REGISTRY.csv`: `f998998dbc50e6eb1c70018b2cc34957db207189f6562bce2c78768f2315876a`
 - `research_control/design/task_index_schema_v2.md`: `4bc422ddf7b13318c82d093d896748d289ac38ad4608ddd9e89068d00302125f`
 - `research_control/design/v21_recommendation_backlog.yaml`: `849a4e8dfe848e80bc0c8236252b924e636e5c95ac1a090478a69f7f5377559f`
 - `research_control/design/v21_task_taxonomy_policy.md`: `7460702270a26079f39f64ced2b5934e6a67a721983d913e4d3d114917ecca0b`
@@ -41,9 +41,9 @@ or claim-promotion authority.
 
 - Schema: `research_control_task_index_v2`
 - Schema source: `research_control/design/task_index_schema_v2.md`
-- Source fingerprint: `419403ffa3270914ae84db3e16b5b80d089dd6a522ebec1926956ae7786f26ba`
-- Generated-at source timestamp: `2026-08-02T14:32:33Z`
-- Row count: `1199`
+- Source fingerprint: `e668eadf0705b795807e217ece70e588000ccf80356e75e790afee24ea16964b`
+- Generated-at source timestamp: `2026-08-03T02:41:52Z`
+- Row count: `1201`
 - Issue count: `297`
 - CSV output: `research_control/tasks/TASK_INDEX.csv`
 
@@ -51,6 +51,8 @@ or claim-promotion authority.
 
 |task_id|parent_task_id|created_at|closed_at|title|task_type|work_kind|milestone|candidate_family|result_kind|authority|scope|taxonomy_source|taxonomy_confidence|status|target_derivation_milestone|milestone_burden|role_family|physics_delta|ledger_rows_changed|artifact_count|next_recommended_action|validation_status|completion_path|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|RT-20260803-001|RT-20260802-010|2026-08-03T02:41:52Z|2026-08-03T02:41:52Z|Preserve eleven P15-T07 hashes through exact-path whitespace policy|project_system_p15_t07_hash_bound_blank_eof_checkpoint_recovery|benchmark_or_recovery|benchmark_promotion|p15_t07_exact_path_whitespace_policy|implemented_and_validated_or_precisely_blocked|project_control|project_system|explicit|high|completed|benchmark_promotion|Checkpoint the exact P15-T07 no-external-action decision without altering any protected hash, external-action denial, or scientific authority boundary.|process-integrity-auditor@0.1.0|false|false|3|Run the final governed validation stack and exactly one fresh checkpoint for AJ-RT-20260803-001-001; do not replay the failed AJ-RT-20260802-010-001 checkpoint or execute P16-T01 in this worker.|PASS_PRECHECKPOINT|research_control/tasks/RT-20260803-001/jobs/completions/AJC-AJ-RT-20260803-001-001.yaml|
+|RT-20260802-010|RT-20260802-009|2026-08-02T21:10:21Z|2026-08-02T21:10:21Z|Record exact human denial of all external actions for four P15 packages|v21_p15_t07_protected_no_external_action_decision|protected_gate_review|benchmark_promotion|v21_p15_t07_no_external_action_decision|protected_verdict_or_deferred_human_gate|human_gated|scientific|explicit|high|completed|benchmark_promotion|Preserve human accountability for external communication and authorship.|gate-chair@0.1.0|false|false|14|Complete and checkpoint this P15-T07 transaction, then reconcile the file-backed goal terminal without replay before routing dependency-ready P16-T01.|PASS_PRECHECKPOINT|research_control/tasks/RT-20260802-010/jobs/completions/AJC-AJ-RT-20260802-010-001.yaml|
 |RT-20260802-009|RT-20260802-008|2026-08-02T14:32:33Z|2026-08-02T14:32:33Z|Build public reproducibility and source packages|v21_p15_t06_public_reproducibility_and_source_packages|construction_or_implementation|benchmark_promotion|v21_p15_t06_public_reproducibility_packages|implemented_and_validated_or_precisely_blocked|project_control|project_system|explicit|high|completed|benchmark_promotion|Make publishable work inspectable without elevating generated derivatives.|documentation-curator@2.0.0|false|false|13|Run one governed checkpoint for AJ-RT-20260802-009-001. After checkpoint, stop at P15-T07 until the user supplies exact manuscript-specific authority for every requested submission public release reviewer contact or outreach action, including any embargo authorship identity or report-publication limits.|PASS_PRECHECKPOINT|research_control/tasks/RT-20260802-009/jobs/completions/AJC-AJ-RT-20260802-009-001.yaml|
 |RT-20260802-008|RT-20260802-007|2026-08-02T13:07:50Z|2026-08-02T13:07:50Z|Prepare the AI research-operating-system methodology paper|v21_p15_t02_ai_research_operating_system_methodology_publication|publication_preparation|source_equivalence_eqsrc|v21_ai_methodology_publication|completed_or_precisely_blocked|science_draft|scientific_audit|explicit|high|completed|source_equivalence_eqsrc|Prepare an AI-science methodology contribution independent of physics success.|external-red-team-reviewer@0.1.0|false|false|14|Run the governed checkpoint once. After a qualifying checkpoint, continue only with the dependency-ready plan item selected by the canonical Director state.|PASS|research_control/tasks/RT-20260802-008/jobs/completions/AJC-AJ-RT-20260802-008-001.yaml|
 |RT-20260802-007|RT-20260802-005|2026-08-02T11:46:42Z|2026-08-02T12:02:16Z|Calibrate scientific checker naming and complete the P13 software non-regression audit|project_system_p13_t08_checker_naming_and_non_regression_audit|audit_or_review|source_equivalence_eqsrc|p13_t08_checker_naming_and_non_regression_audit|implemented_and_validated_or_precisely_blocked|project_control|project_system|explicit|high|completed|source_equivalence_eqsrc|Close P13 with explicit operational authority boundaries.|process-integrity-auditor@0.1.0|false|false|4|Finish generated synchronization and full validation, checkpoint this one bounded transaction only on complete PASS, then route P15-T02 in a separate frame.|PASS|research_control/tasks/RT-20260802-007/jobs/completions/AJC-AJ-RT-20260802-007-001.yaml|

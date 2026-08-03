@@ -1,0 +1,330 @@
+job_id: "AJ-RT-20260803-001-001"
+task_id: "RT-20260803-001"
+decision_id: "DDR-20260803-001"
+role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260803-001"
+status: "completed"
+validation_status: "PASS_PRECHECKPOINT"
+created_at: "2026-08-03T02:41:52Z"
+started_at: "2026-08-03T02:41:52Z"
+completed_at: "2026-08-03T02:41:52Z"
+completion_path: "research_control/tasks/RT-20260803-001/jobs/completions/AJC-AJ-RT-20260803-001-001.yaml"
+requires_human_gate: false
+human_authorization_note: "Generation 227 authorizes exactly one improve-project-system invocation for the immutable eleven-path P15-T07 checkpoint recovery and at most one fresh checkpoint. It authorizes no P16-T01 execution, external action, push, publication, hosted workflow, or scientific promotion."
+objective: "Preserve eleven immutable P15-T07 file hashes while adding only their literal Git whitespace classifications, prove unrelated paths remain protected by blank-at-EOF, and invoke one fresh governed checkpoint without replay before P16-T01."
+target_derivation_milestone: "benchmark_promotion"
+milestone_burden: "Checkpoint the exact P15-T07 no-external-action decision without altering any protected hash, denial, or scientific authority boundary."
+route_label: "reroute_generation_226_p15_t07_blank_eof_checkpoint_repair_v1"
+route_reason: "generation_226_stale_p15_t06_manifest_live_p15_t07_checkpoint_repair_required"
+immutable_route_sha256: "7c630db9b2820020b6a660c57948d98c4a3a810e5cc6ec488e6477008a0f8b47"
+route_blocker_fingerprint: "7727e5df3040fa70bdb436b0297043173c3d8e034336db329917bdcb97df0bf2"
+failed_gate_evidence_sha256: "18aac0f75f77eab2b937fc8811ededcdb06ac5b1c3fa78ef8645ae130fc2f62a"
+failed_checkpoint_receipt_sha256: "ac94d93be6c573bad0187179315b5938f33e2dbf018311d36817d559ae6b3725"
+source_head: "efbf0e490f9994af1a22cc2ebf2ae13d699b5b79"
+source_porcelain_sha256: "806156c3c7927ab948ad87f505a2c25825171d8155af41dc726345d5664ac8a1"
+source_porcelain_entry_count: 44
+source_changed_path_count: 63
+predecessor_completion_sha256: "1a0220b0d08fd74af0ba12eb76479e6eee7a571eeb5362418d3b5c38dd1728fb"
+predecessor_handoff_sha256: "1ce2e68c38b2939adf6a4a8392c26011fa857cb919cdb8db53c1e666e3a7bbfb"
+plan_task_id: "P15-T07"
+recovery_for_plan_task_id: "P15-T07"
+next_plan_task_id: "P16-T01"
+next_plan_task_execution_authorized: false
+project_system_change_only: true
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+resolves_signal_routing: false
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 227
+  passes_consumed: 202
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:227"
+  handoff_token: "f57e5a033821dcdb2c16167c619f14c85e612f24f68cd95c"
+  relay_claim_token: "7b921119e0e7e72634d10cabf6fad0bc3aad0fe630f50be4"
+  route_work_item_id: "P15-T07"
+  route_worker_skill: "improve-project-system"
+  route_sha256: "7c630db9b2820020b6a660c57948d98c4a3a810e5cc6ec488e6477008a0f8b47"
+  route_reason: "generation_226_stale_p15_t06_manifest_live_p15_t07_checkpoint_repair_required"
+  route_strategy_id: "reroute_generation_226_p15_t07_blank_eof_checkpoint_repair_v1"
+  route_blocker_fingerprint: "7727e5df3040fa70bdb436b0297043173c3d8e034336db329917bdcb97df0bf2"
+  route_source_generation: 226
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  candidate_family: "not_applicable"
+  assumption_delta:
+    - "No scientific assumption changes; eleven immutable existing files receive exact-path Git whitespace classifications only."
+    - "The P15-T07 all-denied external-action matrix, package identities, scientific boundaries, and P16-T01 route remain byte-preserved."
+  materiality_basis: "Restores fresh staged-checkpoint compatibility without changing a hash-bound P15-T07 byte or reducing blank-at-EOF protection on unrelated paths."
+  source_basis:
+    - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+    - "research_control/handoffs/handoff-0943.yaml"
+    - "research_control/tasks/RT-20260802-010/jobs/completions/AJC-AJ-RT-20260802-010-001.yaml"
+    - "research_control/tasks/RT-20260803-001/artifacts/validation_blocker_p15_t07_hash_bound_blank_eof_v1.yaml"
+  expected_artifact_paths:
+    - ".gitattributes"
+    - "research_control/tasks/RT-20260803-001/artifacts/validate_p15_t07_exact_path_whitespace_policy.py"
+    - "research_control/tasks/RT-20260803-001/artifacts/p15_t07_exact_path_whitespace_policy_receipt.json"
+  project_system_justification: "The packet changes Git path classification and control evidence only; it creates no physics result or P16-T01 execution."
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  expected_durable_outputs:
+    physics: []
+    project_system:
+      - "eleven exact-path .gitattributes classifications"
+      - "one task-local preservation and isolated-control receipt"
+      - "one fresh governed checkpoint outcome"
+  acceptance_criteria:
+    physics: []
+    project_system:
+      - "all eleven protected P15-T07 files retain their blocker-recorded SHA-256 identities"
+      - "git check-attr reports -blank-at-eof only for the eleven new literal intended paths"
+      - "an unrelated control remains unclassified and fails blank-at-EOF in an isolated Git proof"
+      - "the approval, protected completion, and handoff retain exact hashes"
+      - "one fresh governed checkpoint commits without replay or legacy validation"
+      - "P16-T01 remains unexecuted in this worker"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: false
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0942"
+  source_handoff_path: "research_control/handoffs/handoff-0942.yaml"
+  source_handoff_sha256: "5ebd18adb42d8455456e3afa44c1d7961da5b775249253e551d3d44d56f004db"
+  selected_plan_task_id: "P15-T07"
+  guard_outcome: "below_threshold"
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1115
+    relationship_row_count: 5632
+    semantic_row_count: 1115
+    vault_row_count: 1115
+    local_cache_only_warning_count: 0
+  refresh_needed: false
+  refresh_performed: false
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v21.md --json"
+      query_type: "lookup"
+      query_text: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  authority_note: "Generated memory, wiki, semantic, relationship, Obsidian, PDF, and .local retrieval surfaces are retrieval-only and not authority; registered canonical sources and control state govern."
+
+allowed_read_paths:
+  - "SOUL.md"
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research-goal/**"
+  - ".codex/skills/continue-research-continue-goal/**"
+  - ".codex/skills/continue-research/**"
+  - ".codex/skills/improve-project-system/**"
+  - ".agents/roles/research_ops/**"
+  - ".agents/schemas/**"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  - "research_control/design/**"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0942.yaml"
+  - "research_control/handoffs/handoff-0943.yaml"
+  - "research_control/handoffs/handoff-0943.md"
+  - "research_control/approvals/approval-20260802-001.yaml"
+  - "research_control/tasks/RT-20260802-010/**"
+  - "research_control/tasks/RT-20260724-006/**"
+  - "scripts/project_control/**"
+  - "scripts/research_control/**"
+  - "scripts/validation/**"
+  - "tests/**"
+  - "registries/**"
+  - ".gitattributes"
+  - ".local/validation-receipts/**"
+
+allowed_write_paths:
+  - ".gitattributes"
+  - "research_control/approvals/approval-20260802-001.yaml"
+  - "research_control/tasks/RT-20260802-010/**"
+  - "research_control/tasks/RT-20260803-001/**"
+  - "research_control/handoffs/handoff-0943.yaml"
+  - "research_control/handoffs/handoff-0943.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "registries/**"
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/tex/**"
+
+allowed_generated_paths:
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/TEX_SOURCE_REGISTRY.csv"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/tex/**"
+
+forbidden_paths:
+  - ".agents/**"
+  - ".codex/**"
+  - "implementations_plans/**"
+  - "ontology/**"
+  - "legacy_ontology/**"
+  - "manuscripts/**"
+  - "markdown/publication-briefs/**"
+  - "markdown/html-explainer-specs/**"
+  - "github-facing/**"
+  - "html/**"
+  - "pdf/**"
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "registries/METRIC_USE_LEDGER.csv"
+
+allowed_source_classes:
+  - "git_attribute_policy"
+  - "task_control_record"
+  - "project_control_registry"
+  - "generated_memory_derivative"
+  - "prior_authorized_transaction_checkpoint"
+
+forbidden_source_classes:
+  - "protected_p15_t07_payload_mutation"
+  - "wildcard_or_global_whitespace_exemption"
+  - "validator_or_checkpoint_behavior_change"
+  - "generation_226_replay_or_failed_checkpoint_retry"
+  - "P16_T01_execution"
+  - "external_action"
+  - "canonical_ontology_write"
+  - "scientific_claim_or_benchmark_promotion"
+  - "publication_push_or_completed_derivation_authority"
+
+approved_commands:
+  - ".venv/bin/python research_control/tasks/RT-20260803-001/artifacts/validate_p15_t07_exact_path_whitespace_policy.py --write-report --json"
+  - "git check-attr whitespace -- <eleven intended paths plus unrelated control>"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+  - ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+  - ".venv/bin/python scripts/research_control/task_taxonomy.py --validate-repository --json"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --job-id AJ-RT-20260803-001-001 --json-summary"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+  - ".venv/bin/python -m scripts.validation.cli run --profile affected"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260803-001-001 --compare-validation"
+  - "git diff --check"
+
+required_validators:
+  - "task_local_exact_path_policy"
+  - "task_taxonomy"
+  - "documentation_impact"
+  - "project_improvement_signal_integrity"
+  - "research_control_exact_job_diff"
+  - "claim_language"
+  - "memory_bootstrap"
+  - "affected_validation_profile"
+  - "whitespace"
+  - "checkpoint"
+
+checkpoint_invocation_limit: 1
+legacy_validation_allowed: false
+success_criteria:
+  - "the exact eleven new literal rules occur once and no wildcard is introduced"
+  - "all protected and preserved hashes match"
+  - "the failed checkpoint receipt and exact eleven-line output match their route-bound identities"
+  - "the intended paths pass isolated git diff --check while the unrelated control fails"
+  - "all precheckpoint governance and validation gates pass"
+  - "one fresh governed checkpoint commits the cumulative P15-T07 transaction"
+  - "P16-T01 remains unexecuted and no external action occurs"
+output_paths:
+  - ".gitattributes"
+  - "research_control/tasks/RT-20260803-001/**"
+completion_contract:
+  completion_id: "AJC-AJ-RT-20260803-001-001"
+  completion_path: "research_control/tasks/RT-20260803-001/jobs/completions/AJC-AJ-RT-20260803-001-001.yaml"
+  required_status: "completed"
+  require_validation_status: true
+  require_checkpoint_outcome: true
+  authority_limit: "A successful project-system checkpoint does not imply scientific truth, benchmark promotion, external-action authority, publication, push, or completed derivation."

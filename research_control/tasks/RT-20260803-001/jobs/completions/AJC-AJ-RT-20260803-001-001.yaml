@@ -1,0 +1,306 @@
+completion_id: "AJC-AJ-RT-20260803-001-001"
+job_id: "AJ-RT-20260803-001-001"
+task_id: "RT-20260803-001"
+task_type: "project_system_p15_t07_hash_bound_blank_eof_checkpoint_recovery"
+decision_id: "DDR-20260803-001"
+role_id: "process-integrity-auditor"
+source_role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260803-001"
+status: "completed"
+validation_status: "PASS_PRECHECKPOINT"
+created_at: "2026-08-03T02:41:52Z"
+started_at: "2026-08-03T02:41:52Z"
+completed_at: "2026-08-03T02:41:52Z"
+objective: "Preserve eleven immutable P15-T07 file hashes while adding only their literal Git whitespace classifications, prove unrelated paths remain protected by blank-at-EOF, and invoke one fresh governed checkpoint without replay before P16-T01."
+completion_summary: "Eleven literal P15-T07 path classifications preserve all protected bytes and exact hashes. The intended paths pass an isolated Git proof while an unrelated control retains blank-at-EOF enforcement. The ordinary P16-T01 handoff remains unchanged and unexecuted."
+objective_result: "PASS_EXACT_ELEVEN_PATH_POLICY_READY_FOR_FRESH_CHECKPOINT"
+
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P15"
+  plan_task_id: "P15-T07"
+  recovery_for_plan_task_id: "P15-T07"
+  implementation_status: "project_system_recovery_complete"
+  protected_p15_t07_status: "implemented_transaction_preserved"
+  completed_v21_tasks_added: []
+  next_dependency_ready_work_item: "P16-T01"
+  next_work_item_executed: false
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 227
+  passes_consumed: 202
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:227"
+  handoff_token: "f57e5a033821dcdb2c16167c619f14c85e612f24f68cd95c"
+  relay_claim_token: "7b921119e0e7e72634d10cabf6fad0bc3aad0fe630f50be4"
+  immutable_route_hash: "7c630db9b2820020b6a660c57948d98c4a3a810e5cc6ec488e6477008a0f8b47"
+  route_work_item_id: "P15-T07"
+  route_worker_skill: "improve-project-system"
+  route_reason: "generation_226_stale_p15_t06_manifest_live_p15_t07_checkpoint_repair_required"
+  route_strategy_id: "reroute_generation_226_p15_t07_blank_eof_checkpoint_repair_v1"
+  route_blocker_fingerprint: "7727e5df3040fa70bdb436b0297043173c3d8e034336db329917bdcb97df0bf2"
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+
+transaction_status: "ready_for_checkpoint"
+result_disposition: "P15_T07_EXACT_PATH_POLICY_PASS_READY_FOR_FRESH_CHECKPOINT"
+work_item_status: "completed"
+plan_task_id: "P15-T07"
+recovery_for_plan_task_id: "P15-T07"
+next_plan_task_id: "P16-T01"
+next_plan_task_execution_authorized: false
+checkpoint_commit: "none_checkpoint_pending"
+checkpoint_invocation_count: 0
+checkpoint_staged: false
+legacy_validation_used: false
+project_system_change_only: true
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "completed"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  observed_durable_outputs:
+    physics: []
+    project_system:
+      - "eleven exact-path .gitattributes classifications"
+      - "one task-local preservation and isolated-control receipt"
+      - "one fresh governed checkpoint outcome"
+  accepted_criteria:
+    physics: []
+    project_system:
+      - "all eleven protected P15-T07 files retain their blocker-recorded SHA-256 identities"
+      - "git check-attr reports -blank-at-eof only for the eleven new literal intended paths"
+      - "an unrelated control remains unclassified and fails blank-at-EOF in an isolated Git proof"
+      - "the approval, protected completion, and handoff retain exact hashes"
+      - "one fresh governed checkpoint commits without replay or legacy validation"
+      - "P16-T01 remains unexecuted in this worker"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+physics_payload_admission_result:
+  status: "PASS_PROJECT_SYSTEM_NOT_APPLICABLE"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+
+ordinary_route_guard_admission_result:
+  status: "PASS"
+  source_handoff_id: "handoff-0942"
+  selected_plan_task_id: "P15-T07"
+  guard_outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  system_success_counts_as_physics: false
+  system_success_counts_as_distance_to_gr: false
+  scientific_status_changed: false
+  physics_promotion_authorized: false
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1115
+    relationship_row_count: 5632
+    semantic_row_count: 1115
+    vault_row_count: 1115
+    local_cache_only_warning_count: 0
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v21.md --json"
+      query_type: "lookup"
+      query_text: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  authority_note: "Generated memory, wiki, semantic, relationship, Obsidian, PDF, and .local retrieval surfaces are retrieval-only and not authority."
+
+artifacts:
+  - ".gitattributes"
+  - "research_control/tasks/RT-20260803-001/artifacts/validation_blocker_p15_t07_hash_bound_blank_eof_v1.yaml"
+  - "research_control/tasks/RT-20260803-001/artifacts/validate_p15_t07_exact_path_whitespace_policy.py"
+  - "research_control/tasks/RT-20260803-001/artifacts/p15_t07_exact_path_whitespace_policy_receipt.json"
+output_paths:
+  - ".gitattributes"
+  - "research_control/tasks/RT-20260803-001/**"
+
+exact_path_policy_result:
+  status: "PASS_EXACT_ELEVEN_LITERAL_PATHS"
+  strategy_id: "reroute_generation_226_p15_t07_blank_eof_checkpoint_repair_v1"
+  source_task_id: "RT-20260802-010"
+  source_job_id: "AJ-RT-20260802-010-001"
+  source_handoff_id: "handoff-0943"
+  route_sha256: "7c630db9b2820020b6a660c57948d98c4a3a810e5cc6ec488e6477008a0f8b47"
+  route_blocker_fingerprint: "7727e5df3040fa70bdb436b0297043173c3d8e034336db329917bdcb97df0bf2"
+  failed_gate_evidence_sha256: "18aac0f75f77eab2b937fc8811ededcdb06ac5b1c3fa78ef8645ae130fc2f62a"
+  failed_checkpoint_receipt_sha256: "ac94d93be6c573bad0187179315b5938f33e2dbf018311d36817d559ae6b3725"
+  new_exact_path_rule_count: 11
+  total_literal_whitespace_rule_count: 21
+  wildcard_rule_count: 0
+  protected_hash_mismatch_count: 0
+  preserved_anchor_hash_mismatch_count: 0
+  intended_isolated_git_diff_check_passed: true
+  unrelated_control_attribute: "unspecified"
+  unrelated_control_blank_at_eof_failed_as_required: true
+  p15_t07_payload_changed: false
+  p16_t01_executed: false
+  external_action_performed: false
+
+preserved_hashes:
+  approval_sha256: "c0176cb6fb924616d9324bd622d7b68d5f4fcc30fb00c9b2a55601a10d7503e3"
+  predecessor_completion_sha256: "1a0220b0d08fd74af0ba12eb76479e6eee7a571eeb5362418d3b5c38dd1728fb"
+  handoff_0943_yaml_sha256: "1ce2e68c38b2939adf6a4a8392c26011fa857cb919cdb8db53c1e666e3a7bbfb"
+  failed_gate_output_sha256: "18aac0f75f77eab2b937fc8811ededcdb06ac5b1c3fa78ef8645ae130fc2f62a"
+  failed_checkpoint_receipt_sha256: "ac94d93be6c573bad0187179315b5938f33e2dbf018311d36817d559ae6b3725"
+
+command_results:
+  - command: ".venv/bin/python research_control/tasks/RT-20260803-001/artifacts/validate_p15_t07_exact_path_whitespace_policy.py --write-report --json"
+    status: "PASS"
+    summary: "All eleven exact hashes, twenty-one total literal rules, failed-checkpoint identities, and the isolated unrelated control pass."
+  - command: ".venv/bin/python scripts/research_control/task_taxonomy.py --validate-repository --json"
+    status: "PASS"
+    summary: "Repository task taxonomy reports no blocking error."
+  - command: ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+    status: "PASS"
+    summary: "Documentation-impact coverage accepts the live cumulative transaction."
+  - command: ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json"
+    status: "PASS"
+    summary: "Signal types, signals, sidecars, and handoff routing validate with no open routed signal."
+  - command: "git diff --check"
+    status: "PASS"
+    summary: "Working-tree whitespace validation passes under the exact-path policy."
+
+validation_summary:
+  status: "PASS_SCOPED_READY_FOR_FINAL_STACK"
+  protected_file_count: 11
+  exact_rule_count: 11
+  protected_hash_mismatch_count: 0
+  preserved_anchor_hash_mismatch_count: 0
+  checkpoint_invocation_count: 0
+  blocking_finding_count: 0
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 227 lease parity repository identity maximum reasoning effort exact dirty manifest predecessor inactivity immutable route and one-time consumption were verified before one worker invocation."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Eleven literal rules preserve every protected hash and exempt no wildcard or unrelated path."
+      - "The isolated intended paths pass while the unrelated control retains the expected blank-at-EOF failure."
+  post_write:
+    status: "PENDING"
+    evidence:
+      - "Final research-control affected-profile documentation-impact signal claim-language and whitespace validation follows completed-packet synchronization."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "One fresh governed cumulative checkpoint is authorized and has not yet been invoked."
+  renderer:
+    status: "PENDING"
+    evidence:
+      - "Final task-index frontier compact-frontier and dependency-graph checks follow synchronization."
+  memory_bootstrap:
+    status: "PENDING"
+    evidence:
+      - "Final tracked memory synchronization and validate-only pass follow packet completion."
+  claim_language_linter:
+    status: "PENDING"
+    evidence:
+      - "Changed-path claim-language validation will run before checkpoint."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "project-system exact-path checkpoint compatibility only"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  hosted_workflow_dispatch_authorized: false
+  hosted_workflow_dispatch_authority_source_path: ""
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  publication_authorized: false
+  proof_authority: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  canonical_ontology_edit_authorized: false
+  ontology_selection_authorized: false
+  physical_interpretation_establishment_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+  submission_authorized: false
+  public_release_authorized: false
+  reviewer_contact_authorized: false
+  outreach_authorized: false
+
+distance_to_gr_delta:
+  changed: false
+  effect: "none_project_system_only"
+  burden_id: "benchmark_promotion"
+  milestone: "benchmark_promotion"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "Exact-path Git classification creates no scientific evidence or Distance-to-GR movement."
+
+physics_progress_status:
+  status: "NOT_APPLICABLE_PROJECT_SYSTEM_ONLY"
+  new_mathematical_payload: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"
+
+next_recommendation: "Run the final validation stack and exactly one fresh governed checkpoint; execute no P16-T01 work unless that checkpoint succeeds and a fresh relay generation routes it."
