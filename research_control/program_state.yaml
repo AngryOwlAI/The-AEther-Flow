@@ -1,11 +1,83 @@
 mode: "director_led_research_control"
-active_task_id: "RT-20260802-010"
-latest_handoff_id: "handoff-0943"
-current_status: "p15_t07_exact_four_package_no_external_action_decision_complete_precheckpoint"
-claim_boundary_summary: "P15-T07 consumes one exact human approval and denies all sixteen submission public-release reviewer-contact and outreach cells for four immutable current packages. No external action occurs and no scientific or physics status changes."
-next_plan_task_id: "P16-T01"
+active_task_id: "RT-20260803-002"
+latest_handoff_id: "handoff-0944"
+current_status: "p16_t01_qualifying_finalized_recommendation_coverage_complete_precheckpoint"
+claim_boundary_summary: "P16-T01 verifies qualifying tracked pre-P16 direct and validation evidence for all 72 V21 recommendations while preserving 35 P16-T02 through P16-T05 mappings as unexecuted downstream integration. Coverage creates no scientific proof Gate promotion benchmark publication or external-action authority."
+next_plan_task_id: "P16-T02"
 next_worker_skill: "continue-research"
-next_recommended_action: "Run one governed checkpoint for AJ-RT-20260802-010-001. After checkpoint, reconcile the terminal file-backed relay without replay and route dependency-ready P16-T01 through continue-research for the complete recommendation-coverage audit."
+next_recommended_action: "Run one governed checkpoint for AJ-RT-20260803-002-001. After checkpoint, route exactly one bounded P16-T02 external-review packet to audit Gate A-E dependency and authority consistency; do not execute P16-T03 through P16-T06 in that worker."
+
+p16_t01_final_recommendation_coverage_audit:
+  task_id: "RT-20260803-002"
+  parent_task_id: "RT-20260802-010"
+  parent_handoff_id: "handoff-0943"
+  plan_task_id: "P16-T01"
+  next_plan_task_id: "P16-T02"
+  also_eligible_plan_task_ids:
+    - "P16-T03"
+  claim_boundary_id: "CB-V21-P16-T01-RECOMMENDATION-COVERAGE-AUDIT-001"
+  status: "PASS_PRECHECKPOINT"
+  work_item_status: "completed"
+  result_status: "QUALIFYING_FINALIZED_COVERAGE"
+  route_label: "integration-audit-packet"
+  selected_role_family: "process-integrity-auditor@0.1.0"
+  selected_worker_skill: "continue-research"
+  selected_strategy_id: "continue_in_scope_generation_228"
+  target_derivation_milestone: "benchmark_promotion"
+  milestone_burden: "Prove plan coverage without treating coverage as scientific success."
+  source_head: "b32e07c390936488e6c69224c91714b48d3308b5"
+  completion_path: "research_control/tasks/RT-20260803-002/jobs/completions/AJC-AJ-RT-20260803-002-001.yaml"
+  completion_sha256: "4e59a0ae6d0740677ef0b4331f753138f32b76b27981435f5933aaab1a78fd66"
+  handoff_id: "handoff-0944"
+  handoff_path: "research_control/handoffs/handoff-0944.yaml"
+  handoff_sha256: "0e35b85993731d9e7ba7a26d58a2038527850017ea5fe0e744dd94720c737d60"
+  matrix_path: "research_control/tasks/RT-20260803-002/artifacts/v21_final_recommendation_coverage_matrix.json"
+  matrix_sha256: "aa91bfa96257d3d1e9d6ae6bf68d025b4c3e7ed451c8d4f11012cc69cdbc9e95"
+  audit_path: "research_control/tasks/RT-20260803-002/artifacts/v21_recommendation_coverage_audit.md"
+  audit_sha256: "653f8205a160cf7d94ac5a462590cb88284566f3bee6454a606f28edd8d9eab0"
+  findings_path: "research_control/tasks/RT-20260803-002/artifacts/v21_missing_partial_coverage_findings.yaml"
+  findings_sha256: "5ae2523a652fe4d00fafa6c3ee3021cf7d9987f1e071508ae836fe228f658bf6"
+  route_path: "research_control/tasks/RT-20260803-002/artifacts/v21_coverage_route_v1.yaml"
+  route_sha256: "869de834f1ea8b189ad99d25b0e42e766d6a7f0d9b5d56d99a80aef2527dee10"
+  validation_path: "research_control/tasks/RT-20260803-002/artifacts/v21_p16_t01_validation.json"
+  validation_sha256: "dccad077a930e9ec082f1f107dbb7441ffc5722b730b9af81087abd1f6c38229"
+  recommendation_count: 72
+  direct_mapping_edge_count: 633
+  verified_pre_p16_mapping_edge_count: 598
+  pending_downstream_p16_mapping_edge_count: 35
+  unique_verified_pre_p16_task_count: 116
+  recommendations_with_downstream_p16_work: 29
+  blocking_missing_recommendation_count: 0
+  blocking_missing_task_evidence_count: 0
+  Gate_A_status_preserved: "SELECT_CONTINUUM_FIRST_WITH_NARROW_PREMETRIC_BOUNDARY"
+  Gate_B_status_preserved: "NOT_READY_EIGHT_OF_EIGHT_CRITERIA_UNMET"
+  Gate_C_status_preserved: "ADOPTED_BY_PROTECTED_HUMAN_CONSTITUTIVE_POSTULATE_DERIVATIONAL_GAP_OPEN"
+  Gate_D_status_preserved: "NOT_READY_EINSTEIN_SECTOR_DERIVATION_REQUIREMENTS_UNMET"
+  Gate_E_status_preserved: "NOT_READY_BENCHMARK_AND_COMPLETED_DERIVATION_REQUIREMENTS_UNMET"
+  canonical_science_modified: false
+  scientific_claims_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  external_action_authorized: false
+  selected_next_work_item: "P16-T02"
+  selected_next_worker_skill: "continue-research"
+  selected_next_role_family: "external-red-team-reviewer@0.1.0"
+  selected_next_route_label: "external-review-packet"
+  selected_next_strategy_id: "audit_gate_a_through_e_dependency_and_authority_consistency_v1"
+  selected_next_requires_human_gate: false
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
+  p16_t03_dependency_ready_after_checkpoint: true
+  p16_t03_executed: false
+  p16_t04_executed: false
+  p16_t05_executed: false
+  p16_t06_executed: false
+  checkpoint_invocation_count: 0
+  checkpoint_committed: false
 
 p15_t07_exact_four_package_no_external_action_decision:
   task_id: "RT-20260802-010"
@@ -11060,15 +11132,17 @@ project_improvement_bridge:
   resolution_evidence_path: "research_control/tasks/RT-20260725-002/jobs/completions/AJC-AJ-RT-20260725-002-001.yaml"
 
 active_state_bifurcation:
-  latest_research_task_id: "RT-20260802-007"
-  latest_research_handoff_id: "handoff-0940"
-  latest_research_next_action: "After final synchronization, full-profile PASS, and one governed checkpoint, run one fresh bounded P15-T02 continue-research methodology-publication packet."
+  latest_research_task_id: "RT-20260803-002"
+  latest_research_handoff_id: "handoff-0944"
+  latest_research_next_action: "Run one governed checkpoint for AJ-RT-20260803-002-001. After checkpoint, route exactly one bounded P16-T02 external-review packet to audit Gate A-E dependency and authority consistency; do not execute P16-T03 through P16-T06 in that worker."
   latest_project_system_task_id: "none"
   latest_project_system_status: "none"
   latest_project_system_sidecar_task_id: "none"
   latest_project_system_sidecar_status: "none"
   next_research_route_source: "latest_research_handoff"
   sidecar_supersedes_research_handoff: false
+  project_improvement_sidecar_required: false
+  research_handoff_remains_authoritative: true
 
 source_assumption_ledger:
   task_id: "RT-20260720-030"

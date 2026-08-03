@@ -1,0 +1,18 @@
+schema_id: v21_p16_t01_missing_partial_coverage_findings_v1
+status: PASS_NO_MISSING_RECOMMENDATION
+blocking_missing_recommendation_count: 0
+blocking_missing_task_evidence_count: 0
+blocking_missing_recommendation_ids: []
+blocking_missing_task_ids: []
+bounded_downstream_integration_task_ids:
+- P16-T02
+- P16-T03
+- P16-T04
+- P16-T05
+bounded_downstream_recommendation_count: 29
+classification_note: P16-T02 through P16-T05 are downstream integration tasks by dependency
+  design. Their unexecuted state is not counted as missing pre-P16 recommendation
+  evidence.
+failed_attempt_policy: Failed or superseded attempts remain historical evidence; only
+  a qualifying tracked disposition is selected for coverage.
+authority_note: No finding in this audit changes a scientific or protected-gate verdict.

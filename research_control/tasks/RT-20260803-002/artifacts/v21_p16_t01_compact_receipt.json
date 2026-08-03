@@ -1,0 +1,24 @@
+{
+  "schema_id": "v21_p16_t01_compact_receipt_v1",
+  "status": "PASS",
+  "audit_result": "QUALIFYING_FINALIZED_COVERAGE",
+  "source_hashes": {
+    "plan": "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087",
+    "backlog": "849a4e8dfe848e80bc0c8236252b924e636e5c95ac1a090478a69f7f5377559f",
+    "program_state_at_audit": "219c8044390f5478f407ca55037d6e02de71230f4642a5277bce57ef41e2fa44",
+    "handoff_0943": "1ce2e68c38b2939adf6a4a8392c26011fa857cb919cdb8db53c1e666e3a7bbfb"
+  },
+  "finding_counts": {
+    "recommendation_count": 72,
+    "direct_mapping_edge_count": 633,
+    "verified_pre_p16_mapping_edge_count": 598,
+    "pending_downstream_p16_mapping_edge_count": 35,
+    "unique_verified_pre_p16_task_count": 116,
+    "recommendations_with_downstream_p16_work": 29,
+    "blocking_missing_recommendation_count": 0,
+    "blocking_missing_task_evidence_count": 0
+  },
+  "validator_id": "v21_p16_t01_recommendation_coverage_validation_v1",
+  "selected_next_plan_task_id": "P16-T02",
+  "claim_boundary_summary": "All 72 recommendations have tracked pre-P16 coverage if status is PASS; this operational result creates no scientific, Gate, derivation, publication, or promotion authority."
+}

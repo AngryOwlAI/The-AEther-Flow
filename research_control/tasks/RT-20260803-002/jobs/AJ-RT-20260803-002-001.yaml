@@ -1,0 +1,378 @@
+job_id: "AJ-RT-20260803-002-001"
+task_id: "RT-20260803-002"
+decision_id: "DDR-20260803-002"
+role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260803-002"
+status: "completed"
+validation_status: "PASS_PRECHECKPOINT"
+created_at: "2026-08-03T03:41:17Z"
+started_at: "2026-08-03T03:41:17Z"
+completed_at: "2026-08-03T03:53:14Z"
+completion_path: "research_control/tasks/RT-20260803-002/jobs/completions/AJC-AJ-RT-20260803-002-001.yaml"
+requires_human_gate: false
+objective: "Execute only V21 P16-T01 by producing a final source-bound recommendation coverage matrix, precise missing or partial findings, and a bounded closure or repair route without changing scientific authority."
+target_derivation_milestone: "benchmark_promotion"
+milestone_burden: "Prove plan coverage without treating coverage as scientific success."
+route_label: "integration-audit-packet"
+route_reason: "resume_research_after_project_system_repair"
+immutable_route_sha256: "b1a6374f708b76a79d73fa2c780d6b42cc37c0a2631229b2377b9d045e85ec54"
+route_blocker_fingerprint: "6db2968dfe4c158f379a36ce0f9d01237846c487a36e0b295ca464e1e53f3a9b"
+source_head: "b32e07c390936488e6c69224c91714b48d3308b5"
+plan_task_id: "P16-T01"
+recommendation_range: "V21-R01..V21-R72"
+next_plan_task_ids:
+  - "P16-T02"
+  - "P16-T03"
+physics_promotion_authorized: false
+proof_authority: false
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 228
+  passes_consumed: 203
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:228"
+  handoff_token: "8dc7a60fe72c4e02210c229312c8fb3750453e8fdb73df6b"
+  relay_claim_token: "36fc9dd2370611088fdded3e53cb7a24d70e85f45d6f9ac0"
+  route_source_generation: 227
+  route_work_item_id: "P16-T01"
+  route_worker_skill: "continue-research"
+  route_sha256: "b1a6374f708b76a79d73fa2c780d6b42cc37c0a2631229b2377b9d045e85ec54"
+  route_strategy_id: "continue_in_scope_generation_228"
+  route_blocker_fingerprint: "6db2968dfe4c158f379a36ce0f9d01237846c487a36e0b295ca464e1e53f3a9b"
+  worker_skill: "continue-research"
+  worker_invocation_count: 1
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "physics"
+  payload_type: "route_decision"
+  candidate_family: "V21-P16-T01-RECOMMENDATION-COVERAGE-V1"
+  assumption_delta:
+    - "Treat tracked pre-P16 task and completion evidence as the qualifying coverage basis for V21-R01 through V21-R72."
+    - "Keep every P16-T02 through P16-T05 contribution explicit but unexecuted."
+    - "Preserve every scientific Gate Distance-to-GR publication and external-action status."
+  materiality_basis: "The first final V21 recommendation audit resolves whether P16 closure work may proceed and selects the next bounded dependency-ready audit without strengthening any scientific claim."
+  payload_details:
+    resolves_new_route_decision: true
+    decision_identity: "P16T01-FINAL-RECOMMENDATION-COVERAGE-ROUTE-V1"
+    not_already_encoded_evidence: "The V21 plan and backlog contain planned mappings, but no prior final P16-T01 artifact resolves all 72 recommendations against tracked finalized pre-P16 evidence."
+  source_basis:
+    - "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+    - "research_control/design/v21_recommendation_backlog.yaml"
+    - "research_control/handoffs/handoff-0943.yaml"
+    - "registries/RESEARCH_TASK_REGISTRY.csv"
+    - "registries/AGENT_JOB_REGISTRY.csv"
+  expected_artifact_paths:
+    - "research_control/tasks/RT-20260803-002/artifacts/v21_final_recommendation_coverage_matrix.json"
+    - "research_control/tasks/RT-20260803-002/artifacts/v21_recommendation_coverage_audit.md"
+    - "research_control/tasks/RT-20260803-002/artifacts/v21_coverage_route_v1.yaml"
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+family_freeze_admission:
+  schema_id: "family_freeze_route_admission_v1"
+  policy_id: "family_freeze_reopening_policy_v1"
+  route_id: "v21_p16_t01_final_recommendation_coverage"
+  family_id: "V21-P16-T01-RECOMMENDATION-COVERAGE-V1"
+  family_identity_sha256: "b1a6374f708b76a79d73fa2c780d6b42cc37c0a2631229b2377b9d045e85ec54"
+  assumption_sha256es:
+    - "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+    - "849a4e8dfe848e80bc0c8236252b924e636e5c95ac1a090478a69f7f5377559f"
+  route_kind: "theorem_investigation"
+  detected_match_basis: []
+  reopening:
+    requested: false
+    class: "none"
+  distinct_branch:
+    branch_identity: "P16-T01-FINAL-COVERAGE-AUDIT-BRANCH"
+    material_difference_basis: "This branch audits final recommendation coverage and successor eligibility; it does not reconstruct or rename any frozen physics candidate."
+    reconstructs_frozen_candidate: false
+    expected_artifact_paths:
+      - "research_control/tasks/RT-20260803-002/artifacts/v21_final_recommendation_coverage_matrix.json"
+      - "research_control/tasks/RT-20260803-002/artifacts/v21_recommendation_coverage_audit.md"
+  authority_limits:
+    local_family_freeze_preserved: true
+    global_no_go_claimed: false
+    automatic_candidate_adoption: false
+    theorem_truth_inferred: false
+    ontology_modified: false
+    physics_promotion_authorized: false
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  expected_durable_outputs:
+    physics:
+      - "one exact 72-row recommendation coverage matrix"
+      - "one bounded missing or partial findings record"
+      - "one dependency-safe successor route"
+    project_system:
+      - "one deterministic task-local coverage validator"
+      - "one compact validation receipt"
+      - "one synchronized documentation-impact receipt"
+  acceptance_criteria:
+    physics:
+      - "every recommendation has qualifying pre-P16 direct and validation evidence"
+      - "future P16 work remains unexecuted and explicit"
+      - "all scientific and protected statuses remain unchanged"
+    project_system:
+      - "the task-local validator passes all twelve deterministic checks"
+      - "generated control and memory views are synchronized"
+      - "one governed checkpoint records the bounded transaction"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: false
+    exception_id: ""
+    evidence_path: ""
+    evidence_sha256: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0943"
+  source_handoff_path: "research_control/handoffs/handoff-0943.yaml"
+  source_handoff_sha256: "1ce2e68c38b2939adf6a4a8392c26011fa857cb919cdb8db53c1e666e3a7bbfb"
+  selected_plan_task_id: "P16-T01"
+  guard_outcome: "below_threshold"
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  parent:
+    execution_unit_id: "parent"
+    perspective: "physicist_mathematician_philosopher"
+    responsibilities:
+      - "bind recommendation semantics to exact tracked evidence"
+      - "resolve failed superseded conditional blocked and protected dispositions"
+      - "preserve scientific and authority limits during fusion"
+  children:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260803-002/artifacts/child_phys_math_p16_t01_coverage_audit.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260803-002/artifacts/child_phys_phil_p16_t01_coverage_audit.yaml"
+      status: "completed"
+  conflict_policy:
+    review_path: "research_control/tasks/RT-20260803-002/artifacts/parent_conflict_review_p16_t01_coverage_audit.yaml"
+    max_resolution_rounds: 2
+    require_parallel_child_revision: true
+    unresolved_conflict_status: "blocked"
+  fusion_policy:
+    fusion_notes_path: "research_control/tasks/RT-20260803-002/artifacts/parent_fusion_notes_p16_t01_coverage_audit.md"
+    fused_output_path: "research_control/tasks/RT-20260803-002/artifacts/v21_recommendation_coverage_audit.md"
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+    final_output_replaces_old_single_role_artifact: true
+memory_preflight:
+  preflight_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1115
+    relationship_row_count: 5632
+    semantic_row_count: 1115
+    vault_row_count: 1115
+    local_cache_only_warning_count: 0
+  refresh_needed: false
+  refresh_performed: false
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search 'recommendation coverage audit' --limit 10 --json"
+      query_type: "search"
+      query_text: "recommendation coverage audit"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-TASKS-RT-20260709-006-V18-RECOMMENDATION-COVERAGE-AUDIT"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v21.md --json"
+      query_type: "lookup"
+      query_text: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RESEARCH-CONTROL-TASKS-RT-20260709-006-V18-RECOMMENDATION-COVERAGE-AUDIT"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260709-006/artifacts/v18_recommendation_coverage_audit.md"
+      source_hash: "9f10a687c7c56fc62f43804bbe38eac433ed9687533336b50395cac8cabb3440"
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  authority_note: "Generated memory wiki semantic relationship Obsidian PDF and .local surfaces are retrieval-only navigation and are not authority; registered canonical sources and tracked control state govern."
+source_snapshot:
+  plan_sha256: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  backlog_sha256: "849a4e8dfe848e80bc0c8236252b924e636e5c95ac1a090478a69f7f5377559f"
+  program_state_sha256: "219c8044390f5478f407ca55037d6e02de71230f4642a5277bce57ef41e2fa44"
+  current_frontier_sha256: "bd356eea8e4762ce48e2498c04d2b675727cf7b8ee76e51b91d51caae3e851e4"
+  handoff_yaml_sha256: "1ce2e68c38b2939adf6a4a8392c26011fa857cb919cdb8db53c1e666e3a7bbfb"
+  handoff_md_sha256: "f0ffe41c6847b5924e545c49217daa8a7b63734399473681677f4e293af74ede"
+  distance_ledger_sha256: "6b81b42bc7ed83f74f8062f2ade26988e8b369aa2d23744fc9e392279e1de5d8"
+  predecessor_completion_sha256: "9c7886ca78a9f1b0fa7eef4683fd6cf2e6f34ae4b4f6ec8e601ad4699102b6ba"
+allowed_read_paths:
+  - "SOUL.md"
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/**"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - ".agents/roles/research_ops/process-integrity-auditor.v0.1.0.md"
+  - ".agents/schemas/**"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  - "research_control/design/**"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/**"
+  - "research_control/tasks/**"
+  - "registries/**"
+  - "scripts/project_control/**"
+  - "scripts/research_control/**"
+  - "scripts/validation/**"
+  - "tests/**"
+allowed_write_paths:
+  - "research_control/tasks/RT-20260803-002/**"
+  - "research_control/handoffs/handoff-0944.yaml"
+  - "research_control/handoffs/handoff-0944.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "registries/**"
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/tex/**"
+allowed_generated_paths:
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/tex/**"
+forbidden_paths:
+  - "ontology/**"
+  - "legacy_ontology/**"
+  - "manuscripts/**"
+  - "tex/**"
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "registries/METRIC_USE_LEDGER.csv"
+  - ".agents/**"
+  - ".codex/**"
+  - "implementations_plans/**"
+  - "research_control/tasks/RT-20260803-001/**"
+forbidden_source_classes:
+  - "generated_derivative_as_authority"
+  - "static_backlog_status_as_live_completion"
+  - "validator_pass_as_scientific_proof"
+  - "planned_future_task_as_completed_evidence"
+  - "canonical_ontology_write"
+  - "benchmark_gate_or_publication_promotion"
+approved_commands:
+  - ".venv/bin/python research_control/tasks/RT-20260803-002/artifacts/validate_p16_t01_recommendation_coverage.py --write-report --json"
+  - ".venv/bin/python research_control/tasks/RT-20260803-002/artifacts/validate_p16_t01_recommendation_coverage.py --check --json"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --json output/research_dependency_graph.json --markdown wiki/indexes/research_dependency_graph.md --dot output/research_dependency_graph.dot"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --write"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+  - ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+  - ".venv/bin/python scripts/research_control/task_taxonomy.py --validate-repository --json"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --job-id AJ-RT-20260803-002-001 --json-summary"
+  - ".venv/bin/python -m scripts.validation.cli run --profile affected"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260803-002-001 --compare-validation"
+  - "git diff --check"
+required_validators:
+  - "p16_t01_recommendation_coverage"
+  - "parent_child_synthesis"
+  - "task_taxonomy"
+  - "documentation_impact"
+  - "project_improvement_signal_parity"
+  - "claim_language"
+  - "research_control_exact_job_diff"
+  - "memory_bootstrap"
+  - "affected_validation_profile"
+  - "whitespace"
+  - "checkpoint"
+expected_outputs:
+  - "research_control/tasks/RT-20260803-002/artifacts/child_phys_math_p16_t01_coverage_audit.yaml"
+  - "research_control/tasks/RT-20260803-002/artifacts/child_phys_phil_p16_t01_coverage_audit.yaml"
+  - "research_control/tasks/RT-20260803-002/artifacts/parent_conflict_review_p16_t01_coverage_audit.yaml"
+  - "research_control/tasks/RT-20260803-002/artifacts/parent_fusion_notes_p16_t01_coverage_audit.md"
+  - "research_control/tasks/RT-20260803-002/artifacts/v21_final_recommendation_coverage_matrix.json"
+  - "research_control/tasks/RT-20260803-002/artifacts/v21_recommendation_coverage_audit.md"
+  - "research_control/tasks/RT-20260803-002/artifacts/v21_missing_partial_coverage_findings.yaml"
+  - "research_control/tasks/RT-20260803-002/artifacts/v21_coverage_route_v1.yaml"
+  - "research_control/tasks/RT-20260803-002/artifacts/v21_p16_t01_compact_receipt.json"
+  - "research_control/tasks/RT-20260803-002/artifacts/v21_p16_t01_validation.json"
+  - "research_control/tasks/RT-20260803-002/jobs/completions/AJC-AJ-RT-20260803-002-001.yaml"
+  - "research_control/handoffs/handoff-0944.yaml"
+  - "research_control/handoffs/handoff-0944.md"
+checkpoint_invocation_limit: 1
+legacy_validation_allowed: false
+success_criteria:
+  - "all 72 recommendation IDs appear exactly once in the primary matrix"
+  - "every recommendation has at least one qualifying pre-P16 direct implementation and validation evidence"
+  - "all selected task and completion paths exist and their recorded current hashes resolve"
+  - "failed superseded and protected dispositions are classified without false completion"
+  - "future P16-T02 through P16-T05 contributions remain explicit and unexecuted"
+  - "coverage does not imply derivation completion Gate promotion or publication authority"
+  - "one governed checkpoint records the bounded audit"

@@ -1,0 +1,32 @@
+{
+  "schema_id": "v21_p16_t01_recommendation_coverage_validation_v1",
+  "status": "PASS",
+  "check_count": 12,
+  "passed_check_count": 12,
+  "failed_check_count": 0,
+  "failed_checks": [],
+  "checks": {
+    "plan_hash_matches": true,
+    "backlog_hash_matches": true,
+    "handoff_hash_matches": true,
+    "recommendation_count_is_72": true,
+    "recommendation_ids_unique": true,
+    "no_missing_recommendations": true,
+    "no_missing_pre_p16_task_evidence": true,
+    "all_recommendations_have_selected_evidence": true,
+    "all_selected_paths_are_tracked": true,
+    "all_gate_evidence_present": true,
+    "future_tasks_not_counted_as_verified": true,
+    "authority_limits_fail_closed": true
+  },
+  "metrics": {
+    "recommendation_count": 72,
+    "direct_mapping_edge_count": 633,
+    "verified_pre_p16_mapping_edge_count": 598,
+    "pending_downstream_p16_mapping_edge_count": 35,
+    "unique_verified_pre_p16_task_count": 116,
+    "recommendations_with_downstream_p16_work": 29,
+    "blocking_missing_recommendation_count": 0,
+    "blocking_missing_task_evidence_count": 0
+  }
+}

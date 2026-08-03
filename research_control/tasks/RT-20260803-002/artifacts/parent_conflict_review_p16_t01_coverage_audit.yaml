@@ -1,0 +1,15 @@
+schema_id: "v21_p16_t01_parent_conflict_review_v1"
+status: "resolved"
+resolution_rounds: 0
+unresolved_conflicts: []
+reviewed_outputs:
+  - "research_control/tasks/RT-20260803-002/artifacts/child_phys_math_p16_t01_coverage_audit.yaml"
+  - "research_control/tasks/RT-20260803-002/artifacts/child_phys_phil_p16_t01_coverage_audit.yaml"
+potential_tensions:
+  - issue: "Whether 35 mappings to P16-T02 through P16-T05 make P16-T01 incomplete."
+    resolution: "No. P16-T02 and P16-T03 depend on P16-T01, and P16-T04 and P16-T05 depend downstream. The P16-T01 objective requires direct evidence per recommendation, and each recommendation already has at least four verified pre-P16 direct tasks. The 35 mappings remain explicit future integration rather than falsely completed evidence."
+  - issue: "Whether a protected negative, conditional, or human-postulate disposition counts as final coverage."
+    resolution: "Yes for process coverage when it is the plan-permitted final status and has tracked evidence; no as a positive scientific derivation or promotion result."
+  - issue: "Whether recovery completions may stand in for scientific evidence."
+    resolution: "Recovery records may establish transaction integrity and checkpoint completion, but the underlying scientific or protected disposition remains controlling and is not upgraded."
+consensus: "The coverage matrix passes with no missing recommendation and no authority change."

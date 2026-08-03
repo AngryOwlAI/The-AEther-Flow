@@ -1,0 +1,22 @@
+schema_id: v21_p16_t01_coverage_route_v1
+audit_result: QUALIFYING_FINALIZED_COVERAGE
+completed_plan_task_id: P16-T01
+eligible_after_checkpoint:
+- P16-T02
+- P16-T03
+selected_next_plan_task_id: P16-T02
+selected_next_worker_skill: continue-research
+selected_next_route_label: external-review-packet
+selection_reason: P16-T02 is the first dependency-ready Gate A-E authority-consistency
+  audit; P16-T03 remains independently eligible for a later generation.
+not_executed_in_this_task:
+- P16-T02
+- P16-T03
+- P16-T04
+- P16-T05
+- P16-T06
+authority_limits:
+  gate_status_changed: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false

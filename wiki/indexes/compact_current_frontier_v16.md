@@ -4,7 +4,7 @@
 
 This generated index mirrors `output/compact_current_frontier_v16.yaml` and `output/compact_current_frontier_v16.json`. It is a snapshot-only reader aid. If it differs from tracked control state, tracked control state governs.
 
-<!-- generated-report-provenance: {"freshness_status":"fresh_at_generation","generated_view_is_authority":false,"generation_time":"2026-08-02T21:10:21Z","maximum_commit_lag":"1","physics_promotion_authorized":false,"policy_id":"p13_t07_live_generated_report_freshness_v1","proof_authority":false,"report_class":"compact_current_frontier","schema_id":"generated_report_provenance_v1","source_commit":"efbf0e490f9994af1a22cc2ebf2ae13d699b5b79","source_hashes":[{"path":"registries/DISTANCE_TO_GR_LEDGER.csv","sha256":"6b81b42bc7ed83f74f8062f2ade26988e8b369aa2d23744fc9e392279e1de5d8"},{"path":"registries/RESEARCH_TASK_REGISTRY.csv","sha256":"f998998dbc50e6eb1c70018b2cc34957db207189f6562bce2c78768f2315876a"},{"path":"research_control/current_frontier.md","sha256":"bd356eea8e4762ce48e2498c04d2b675727cf7b8ee76e51b91d51caae3e851e4"},{"path":"research_control/handoffs/handoff-0943.yaml","sha256":"1ce2e68c38b2939adf6a4a8392c26011fa857cb919cdb8db53c1e666e3a7bbfb"},{"path":"research_control/program_state.yaml","sha256":"219c8044390f5478f407ca55037d6e02de71230f4642a5277bce57ef41e2fa44"},{"path":"research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml","sha256":"dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3"},{"path":"scripts/research_control/generated_report_provenance.py","sha256":"af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c"},{"path":"scripts/research_control/render_compact_current_frontier_v16.py","sha256":"36fab56791487f690c7fd31ef036a1dba82d03a66beddefac5a21baf77ab10c2"}],"source_manifest_sha256":"8e2aedb2166d6fceb027b9ce5030aab7bbaa01ee88f5a07c5a175b7eedd33c71","source_path_count":"12","task_count":"1197"} -->
+<!-- generated-report-provenance: {"freshness_status":"fresh_at_generation","generated_view_is_authority":false,"generation_time":"2026-08-03T03:53:14Z","maximum_commit_lag":"1","physics_promotion_authorized":false,"policy_id":"p13_t07_live_generated_report_freshness_v1","proof_authority":false,"report_class":"compact_current_frontier","schema_id":"generated_report_provenance_v1","source_commit":"b32e07c390936488e6c69224c91714b48d3308b5","source_hashes":[{"path":"registries/DISTANCE_TO_GR_LEDGER.csv","sha256":"6b81b42bc7ed83f74f8062f2ade26988e8b369aa2d23744fc9e392279e1de5d8"},{"path":"registries/RESEARCH_TASK_REGISTRY.csv","sha256":"937db4f678608476f5bbbf0f96b0fb44916cea22732e17b6c490a15904e4e12f"},{"path":"research_control/current_frontier.md","sha256":"11552bc4f94eb47c557182e261f5ade094182886490bc4007e1d44e75ba1d5d0"},{"path":"research_control/handoffs/handoff-0944.yaml","sha256":"0e35b85993731d9e7ba7a26d58a2038527850017ea5fe0e744dd94720c737d60"},{"path":"research_control/program_state.yaml","sha256":"b069b21799a6cda8d6f45f84282cfc6bdc2345fe5928bf29def3fba747e217ed"},{"path":"research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml","sha256":"dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3"},{"path":"scripts/research_control/generated_report_provenance.py","sha256":"af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c"},{"path":"scripts/research_control/render_compact_current_frontier_v16.py","sha256":"36fab56791487f690c7fd31ef036a1dba82d03a66beddefac5a21baf77ab10c2"}],"source_manifest_sha256":"9363f33ed6696831b49135dc7633411cb1f1172cf46208ae5db2931321750d3d","source_path_count":"12","task_count":"1198"} -->
 
 ## Generated-Report Provenance
 
@@ -13,11 +13,11 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 | Provenance schema | `generated_report_provenance_v1` |
 | Freshness policy | `p13_t07_live_generated_report_freshness_v1` |
 | Report class | `compact_current_frontier` |
-| Source commit | `efbf0e490f9994af1a22cc2ebf2ae13d699b5b79` |
-| Source-derived generation time | `2026-08-02T21:10:21Z` |
-| Tracked task count | 1197 |
+| Source commit | `b32e07c390936488e6c69224c91714b48d3308b5` |
+| Source-derived generation time | `2026-08-03T03:53:14Z` |
+| Tracked task count | 1198 |
 | Exact source-path count | 12 |
-| Source manifest SHA-256 | `8e2aedb2166d6fceb027b9ce5030aab7bbaa01ee88f5a07c5a175b7eedd33c71` |
+| Source manifest SHA-256 | `9363f33ed6696831b49135dc7633411cb1f1172cf46208ae5db2931321750d3d` |
 | Maximum commit lag | 1 |
 | Freshness status at generation | `fresh_at_generation` |
 | Generated view is authority | `false` |
@@ -25,10 +25,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 Exact primary source hashes:
 
 - `registries/DISTANCE_TO_GR_LEDGER.csv`: `6b81b42bc7ed83f74f8062f2ade26988e8b369aa2d23744fc9e392279e1de5d8`
-- `registries/RESEARCH_TASK_REGISTRY.csv`: `f998998dbc50e6eb1c70018b2cc34957db207189f6562bce2c78768f2315876a`
-- `research_control/current_frontier.md`: `bd356eea8e4762ce48e2498c04d2b675727cf7b8ee76e51b91d51caae3e851e4`
-- `research_control/handoffs/handoff-0943.yaml`: `1ce2e68c38b2939adf6a4a8392c26011fa857cb919cdb8db53c1e666e3a7bbfb`
-- `research_control/program_state.yaml`: `219c8044390f5478f407ca55037d6e02de71230f4642a5277bce57ef41e2fa44`
+- `registries/RESEARCH_TASK_REGISTRY.csv`: `937db4f678608476f5bbbf0f96b0fb44916cea22732e17b6c490a15904e4e12f`
+- `research_control/current_frontier.md`: `11552bc4f94eb47c557182e261f5ade094182886490bc4007e1d44e75ba1d5d0`
+- `research_control/handoffs/handoff-0944.yaml`: `0e35b85993731d9e7ba7a26d58a2038527850017ea5fe0e744dd94720c737d60`
+- `research_control/program_state.yaml`: `b069b21799a6cda8d6f45f84282cfc6bdc2345fe5928bf29def3fba747e217ed`
 - `research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml`: `dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3`
 - `scripts/research_control/generated_report_provenance.py`: `af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c`
 - `scripts/research_control/render_compact_current_frontier_v16.py`: `36fab56791487f690c7fd31ef036a1dba82d03a66beddefac5a21baf77ab10c2`
@@ -39,17 +39,17 @@ or claim-promotion authority.
 
 ## Active State
 
-- Active task: `RT-20260802-010`
-- Latest handoff: `handoff-0943`
-- Current status: `p15_t07_exact_four_package_no_external_action_decision_complete_precheckpoint`
+- Active task: `RT-20260803-002`
+- Latest handoff: `handoff-0944`
+- Current status: `p16_t01_qualifying_finalized_recommendation_coverage_complete_precheckpoint`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260802-010`
-- Latest research handoff: `handoff-0943`
-- Latest research next action: Run one governed checkpoint for AJ-RT-20260802-010-001. After checkpoint, reconcile the terminal file-backed relay without replay and route dependency-ready P16-T01 through continue-research for the complete recommendation-coverage audit.
+- Latest research task: `RT-20260803-002`
+- Latest research handoff: `handoff-0944`
+- Latest research next action: Run one governed checkpoint for AJ-RT-20260803-002-001. After checkpoint, route exactly one bounded P16-T02 external-review packet to audit Gate A-E dependency and authority consistency; do not execute P16-T03 through P16-T06 in that worker.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -59,10 +59,10 @@ or claim-promotion authority.
 
 ## Next Route
 
-- Route ID: `v21_p16_t01_complete_recommendation_coverage_audit`
-- Role family: `process-integrity-auditor@0.1.0`
+- Route ID: `v21_p16_t02_gate_authority_consistency_audit`
+- Role family: `external-red-team-reviewer@0.1.0`
 - Target milestone: `benchmark_promotion`
-- Milestone burden: Prove plan coverage without treating coverage as scientific success.
+- Milestone burden: Prevent downstream status laundering at plan closure.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -97,8 +97,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `d32eb18b5149db01bf9453c32b0856bb54e9bca0abf09eb018fd5089650f52d3`
-- JSON SHA-256: `75e68728fc2196f7744b5046f018793c2642761ba597847100336e777ceee467`
+- YAML SHA-256: `00df91db8dd12e6bd36d22cae1697214492bb4af8fbf9af95d7a2c2cb17fe2ad`
+- JSON SHA-256: `94892223a4e50a75b061846d4b13ccd259d74a9ea21110ef22d757da3a911395`
 
 ## Authority Warning
 
