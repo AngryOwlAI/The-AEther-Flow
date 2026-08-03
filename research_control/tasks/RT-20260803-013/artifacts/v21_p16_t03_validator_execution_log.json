@@ -1,0 +1,146 @@
+{
+  "authority_note": "Command exits and output hashes are operational evidence only; same-context recomputation is not independent replication or scientific proof.",
+  "failed_validator_count": 0,
+  "job_id": "AJ-RT-20260803-013-001",
+  "passed_validator_count": 15,
+  "schema_id": "v21_p16_t03_validator_execution_log_v1",
+  "task_id": "RT-20260803-013",
+  "validator_count": 15,
+  "validators": [
+    {
+      "command": ".venv/bin/python research_control/tasks/RT-20260721-005/artifacts/validate_v21_candidate_lineage.py --check --json",
+      "exit_code": 0,
+      "outcome": "PASS",
+      "passed": true,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "8d895627c3c8203c0ebad5683341f575477f7a7a08b07fb354c53cb50d00058d",
+      "validator_id": "candidate_lineage"
+    },
+    {
+      "command": ".venv/bin/python research_control/tasks/RT-20260721-006/artifacts/validate_v21_attempt_ledger.py --check --json",
+      "exit_code": 0,
+      "outcome": "PASS",
+      "passed": true,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "5811312c51511544cd97cf23785f75e6bd8e603416b4e590fbc78590414c0087",
+      "validator_id": "attempt_ledger"
+    },
+    {
+      "command": ".venv/bin/python research_control/tasks/RT-20260721-007/artifacts/validate_v21_event_store_architecture.py --check --json",
+      "exit_code": 0,
+      "outcome": "PASS",
+      "passed": true,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "cc91e84a691b9b4c77ef19c0797baab0c4e0ae914543e00ff18c8bafe157d440",
+      "validator_id": "event_store_architecture"
+    },
+    {
+      "command": ".venv/bin/python research_control/tasks/RT-20260721-008/artifacts/v21_event_store_pilot.py --check --json",
+      "exit_code": 0,
+      "outcome": "PASS",
+      "passed": true,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "3cc6a3cfa3d5eec543eef41cc3700784bed9efe03a040819269983135d46c20d",
+      "validator_id": "event_store_pilot"
+    },
+    {
+      "command": ".venv/bin/python research_control/tasks/RT-20260720-018/artifacts/validate_eqsrc_selector_formal_proof.py --json",
+      "exit_code": 0,
+      "outcome": "PASS",
+      "passed": true,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "9628e6ca789aff6df0da5039f51f3661ce50cab0461927650fe4b49f5aec9932",
+      "validator_id": "formal_proof"
+    },
+    {
+      "command": ".venv/bin/python scripts/research_control/validate_proof_normal_form_registry.py --json",
+      "exit_code": 0,
+      "outcome": "PASS",
+      "passed": true,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "1fa9b9e4db0e7e7b8d076567d14ce42ebdc92a0a062f7b098e3613b1a8f37c74",
+      "validator_id": "proof_normal_form_registry"
+    },
+    {
+      "command": ".venv/bin/python research_control/tasks/RT-20260802-009/artifacts/validate_p15_t06_reproducibility_packages.py --check --json",
+      "exit_code": 0,
+      "outcome": "PASS",
+      "passed": true,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "43bbf5df874c85ba5dcfe2104cd986b6a9bb09d2aa4f4102effa4daa0dfec8bc",
+      "validator_id": "reproducibility_packages"
+    },
+    {
+      "command": ".venv/bin/python research_control/tasks/RT-20260802-010/artifacts/validate_p15_t07_no_external_action.py --check --json",
+      "exit_code": 0,
+      "outcome": "PASS",
+      "passed": true,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "8040923be74103a4bad51c6e86c0b3043b4c8e69ee6a7ce07d5c25b9116a2c51",
+      "validator_id": "external_action_boundary"
+    },
+    {
+      "command": ".venv/bin/python research_control/tasks/RT-20260730-008/artifacts/validate_p9_t02_vacuum_minkowski_case.py --check --json",
+      "exit_code": 0,
+      "outcome": "PASS",
+      "passed": true,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "80593070d175a116e7952fac1bba008b60c54541be0db388ee4ecc1074975c5f",
+      "validator_id": "benchmark_p9_t02"
+    },
+    {
+      "command": ".venv/bin/python research_control/tasks/RT-20260730-010/artifacts/validate_p9_t03_weak_field_clock.py --check --json",
+      "exit_code": 0,
+      "outcome": "PASS",
+      "passed": true,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "41e6214b33bac7b9e51cfe53825e57b0e2072e66038e513f6dd60fab9d3bc7d0",
+      "validator_id": "benchmark_p9_t03"
+    },
+    {
+      "command": ".venv/bin/python research_control/tasks/RT-20260730-011/artifacts/validate_p9_t04_causal_freefall.py --check --json",
+      "exit_code": 0,
+      "outcome": "PASS",
+      "passed": true,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "e6f176c5e59f435f2c537d9cb6a66e3c34615734c9d41339432e4b449df11eea",
+      "validator_id": "benchmark_p9_t04"
+    },
+    {
+      "command": ".venv/bin/python research_control/tasks/RT-20260730-012/artifacts/validate_p9_t05_cosmology.py --check --json",
+      "exit_code": 0,
+      "outcome": "PASS",
+      "passed": true,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "136a0399333c6c563ac2119f2ca8bd7942e57abe49c2b773a43134ed7f4503bf",
+      "validator_id": "benchmark_p9_t05"
+    },
+    {
+      "command": ".venv/bin/python research_control/tasks/RT-20260730-013/artifacts/validate_p9_t06_radiative.py --check --json",
+      "exit_code": 0,
+      "outcome": "PASS",
+      "passed": true,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "1307ec61ed4d0b217dcb0726365a18eadbb34cd0ab51c084ae0cdc674d922936",
+      "validator_id": "benchmark_p9_t06"
+    },
+    {
+      "command": ".venv/bin/python research_control/tasks/RT-20260730-015/artifacts/validate_p9_t07_nonlinear_compact.py --check --json",
+      "exit_code": 0,
+      "outcome": "PASS",
+      "passed": true,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "2e50c737c4a8e4f6a413e3addb83fd6866bcfa14a21e94d10529db9061c5dba4",
+      "validator_id": "benchmark_p9_t07"
+    },
+    {
+      "command": ".venv/bin/python research_control/tasks/RT-20260731-001/artifacts/validate_p9_t08_benchmark_audit.py --check --json",
+      "exit_code": 0,
+      "outcome": "PASS",
+      "passed": true,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "ceeecb34b8afcd9a1eec7e5336380d139f284bdc5547f4eca485c82992a5dc76",
+      "validator_id": "benchmark_p9_t08"
+    }
+  ]
+}

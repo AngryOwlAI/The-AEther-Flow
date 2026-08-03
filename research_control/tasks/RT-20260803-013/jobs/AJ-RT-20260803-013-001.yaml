@@ -1,0 +1,326 @@
+job_id: "AJ-RT-20260803-013-001"
+task_id: "RT-20260803-013"
+decision_id: "DDR-20260803-013"
+role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260803-013"
+status: "completed"
+validation_status: "PASS_PRECHECKPOINT"
+created_at: "2026-08-03T19:12:38Z"
+started_at: "2026-08-03T19:12:38Z"
+completed_at: "2026-08-03T19:27:25Z"
+completion_path: "research_control/tasks/RT-20260803-013/jobs/completions/AJC-AJ-RT-20260803-013-001.yaml"
+requires_human_gate: false
+objective: "Execute only V21 P16-T03 by producing a final source-bound provenance audit, freshness report, broken-reference repair list, and reproducibility receipt without changing scientific authority."
+target_derivation_milestone: "benchmark_promotion"
+milestone_burden: "Ensure the final evidence graph is reproducible and non-stale."
+route_label: "ordinary-research-packet"
+route_reason: "generation_242_worker_route_mismatch_canonical_p16_t03_improve_project_system"
+immutable_route_sha256: "3f7a3313527af5a20cd6d3423c7d19aa765b58b8b95f919e946a30b53b7cd5cb"
+route_blocker_fingerprint: "24d993e3bf13fc2222fa92e4cb940a564e1d54a5720b4a32b1b9859fb4d5a3a1"
+source_head: "ba3b0d969d465dad233c84716ad5254eddba2439"
+plan_task_id: "P16-T03"
+recommendation_ids:
+  - "V21-R41"
+  - "V21-R42"
+  - "V21-R46"
+  - "V21-R47"
+  - "V21-R48"
+  - "V21-R49"
+  - "V21-R50"
+  - "V21-R52"
+  - "V21-R53"
+  - "V21-R66"
+project_system_change_only: true
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 243
+  passes_consumed: 215
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:243"
+  handoff_token: "dba5a4058a04c0cd84482e0ece62c2caf2b1861b402a33d9"
+  relay_claim_token: "256cb4c542aea3f2920fb8a23a1efd76e7795932c326df67"
+  route_source_generation: 242
+  route_work_item_id: "P16-T03"
+  route_worker_skill: "improve-project-system"
+  route_sha256: "3f7a3313527af5a20cd6d3423c7d19aa765b58b8b95f919e946a30b53b7cd5cb"
+  route_strategy_id: "reroute_generation_242_p16_t03_to_improve_project_system_v1"
+  route_blocker_fingerprint: "24d993e3bf13fc2222fa92e4cb940a564e1d54a5720b4a32b1b9859fb4d5a3a1"
+  route_dirty_state_manifest_sha256: "a70fb39aabbfe97ace992cfcce9f06657800a7d927bcfbff7e2bae914ee15f7e"
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+dependency_evidence:
+  p16_t01:
+    status: "qualifying_completed_and_checkpointed"
+    completion_path: "research_control/tasks/RT-20260803-002/jobs/completions/AJC-AJ-RT-20260803-002-001.yaml"
+    completion_sha256: "4e59a0ae6d0740677ef0b4331f753138f32b76b27981435f5933aaab1a78fd66"
+    checkpoint_commit: "506df561a80aa8b1a45a57aef76ea82f65fce90f"
+  p10_t09:
+    status: "qualifying_completed"
+    completion_path: "research_control/tasks/RT-20260722-003/jobs/completions/AJC-AJ-RT-20260722-003-001.yaml"
+    completion_sha256: "d381a8fd8f8867cbd5789c46c38f0967d69c0fd83a67e6592bf2d21c37b40715"
+  p13_t08:
+    status: "qualifying_completed_and_checkpointed"
+    completion_path: "research_control/tasks/RT-20260802-007/jobs/completions/AJC-AJ-RT-20260802-007-001.yaml"
+    completion_sha256: "fddaf38076c5b4f691f75ac2d45568fc879db460de8136241de201a2aa8908b3"
+  p15_t06:
+    status: "qualifying_completed_and_checkpointed"
+    completion_path: "research_control/tasks/RT-20260802-009/jobs/completions/AJC-AJ-RT-20260802-009-001.yaml"
+    completion_sha256: "d5d0f32aaab3fe3ecfa9affa67a50128991b3004557da2dbcc612c84569b4806"
+  p16_t02_predecessor:
+    status: "qualifying_completed_and_checkpointed"
+    completion_path: "research_control/tasks/RT-20260803-012/jobs/completions/AJC-AJ-RT-20260803-012-001.yaml"
+    completion_sha256: "32490ac7e5a57138f6de7a884825532ee17389d36634dbb9fc7f7cc076c0bf8d"
+    checkpoint_commit: "ba3b0d969d465dad233c84716ad5254eddba2439"
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  candidate_family: "not_applicable"
+  assumption_delta:
+    - "No scientific assumption changes; the packet audits evidence provenance and generated derivatives only."
+  materiality_basis: "Implements the dependency-ready P16-T03 final evidence audit and one exact generated validation refresh."
+  source_basis:
+    - "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+    - "research_control/handoffs/handoff-0953.yaml"
+    - "research_control/tasks/RT-20260803-002/artifacts/v21_final_recommendation_coverage_matrix.json"
+  expected_artifact_paths:
+    - "research_control/tasks/RT-20260803-013/artifacts/v21_p16_t03_final_provenance_audit.md"
+    - "research_control/tasks/RT-20260803-013/artifacts/v21_p16_t03_freshness_report.json"
+    - "research_control/tasks/RT-20260803-013/artifacts/v21_p16_t03_broken_reference_repair_list.yaml"
+  project_system_justification: "The packet audits and repairs operational evidence only."
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  expected_durable_outputs:
+    physics: []
+    project_system:
+      - "final provenance audit"
+      - "freshness report"
+      - "broken-reference repair list"
+      - "validator execution log and compact receipt"
+  acceptance_criteria:
+    physics: []
+    project_system:
+      - "critical hashes and identities resolve"
+      - "candidate, attempt, and event chains pass"
+      - "proof, benchmark, and package reproduction passes"
+      - "goal state is excluded and all authority flags remain false"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: false
+    exception_id: ""
+    evidence_path: ""
+    evidence_sha256: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0953"
+  source_handoff_path: "research_control/handoffs/handoff-0953.yaml"
+  source_handoff_sha256: "fdfb989b8f154f0b3a7773b8104a3e8f745e24b291b7c3a2093506fb85108ccd"
+  selected_plan_task_id: "P16-T03"
+  guard_outcome: "below_threshold"
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+memory_preflight:
+  preflight_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1123
+    relationship_row_count: 5664
+    semantic_row_count: 1123
+    vault_row_count: 1123
+    local_cache_only_warning_count: 0
+  refresh_needed: false
+  refresh_performed: false
+  canonical_inspections:
+    - object_id: "MD-V21-P16-T01-FINAL-RECOMMENDATION-COVERAGE-AUDIT"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260803-002/artifacts/v21_recommendation_coverage_audit.md"
+      source_hash: "653f8205a160cf7d94ac5a462590cb88284566f3bee6454a606f28edd8d9eab0"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-V21-P16-T01-FINAL-RECOMMENDATION-COVERAGE-AUDIT --json"
+      query_type: "lookup"
+      query_text: "MD-V21-P16-T01-FINAL-RECOMMENDATION-COVERAGE-AUDIT"
+      returned_object_ids:
+        - "MD-V21-P16-T01-FINAL-RECOMMENDATION-COVERAGE-AUDIT"
+  authority_note: "Generated wiki Obsidian semantic relationship PDF and .local surfaces are retrieval-only navigation and are not authority; registered canonical sources and tracked control state govern."
+  preflight_note: "An initial hyphenated FTS query failed because the tokenizer interpreted T03 as a column; the safe plain-term query above succeeded."
+source_snapshot:
+  plan_sha256: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  program_state_sha256: "0870aa7e97f466bffa8dd78c9c9d59b09aa09619101ab69cc88a6e72a36f408c"
+  current_frontier_sha256: "b78231fdc82fdbda1e231b9d74704dce5330ac112dbcc0a4bea449eb13cf87b1"
+  source_handoff_sha256: "fdfb989b8f154f0b3a7773b8104a3e8f745e24b291b7c3a2093506fb85108ccd"
+  p16_t01_matrix_sha256: "aa91bfa96257d3d1e9d6ae6bf68d025b4c3e7ed451c8d4f11012cc69cdbc9e95"
+allowed_read_paths:
+  - "SOUL.md"
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research-continue-goal/**"
+  - ".codex/skills/improve-project-system/**"
+  - ".agents/roles/research_ops/process-integrity-auditor.v0.1.0.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  - "research_control/design/**"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/**"
+  - "research_control/tasks/**"
+  - "registries/**"
+  - "scripts/**"
+  - "tests/**"
+allowed_write_paths:
+  - "research_control/tasks/RT-20260721-006/artifacts/v21_attempt_history_validation.json"
+  - "research_control/tasks/RT-20260803-013/**"
+  - "research_control/handoffs/handoff-0954.yaml"
+  - "research_control/handoffs/handoff-0954.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "registries/**"
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+forbidden_paths:
+  - "ontology/**"
+  - "legacy_ontology/**"
+  - "manuscripts/**"
+  - "tex/**"
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "registries/METRIC_USE_LEDGER.csv"
+  - ".agents/**"
+  - ".codex/**"
+  - "implementations_plans/**"
+  - "research_control/tasks/RT-20260721-006/artifacts/v21_research_attempt_ledger.json"
+expected_output_paths:
+  - "research_control/tasks/RT-20260803-013/artifacts/v21_p16_t03_final_provenance_audit.md"
+  - "research_control/tasks/RT-20260803-013/artifacts/v21_p16_t03_freshness_report.json"
+  - "research_control/tasks/RT-20260803-013/artifacts/v21_p16_t03_broken_reference_repair_list.yaml"
+  - "research_control/tasks/RT-20260803-013/artifacts/v21_p16_t03_validator_execution_log.json"
+  - "research_control/tasks/RT-20260803-013/artifacts/v21_p16_t03_compact_receipt.json"
+  - "research_control/tasks/RT-20260803-013/artifacts/v21_p16_t03_validation.json"
+  - "research_control/tasks/RT-20260803-013/jobs/completions/AJC-AJ-RT-20260803-013-001.yaml"
+  - "research_control/handoffs/handoff-0954.yaml"
+checkpoint:
+  invoked: false
+  invocation_count: 0
+  status: "PENDING"
+push_authorized: false
+external_action_authorized: false
+notes: "This is the one authorized outer AgentJob and direct worker invocation for generation 243."
+result:
+  result_status: "PASS_P16_T03_EVIDENCE_GRAPH_REPRODUCIBLE"
+  immutable_reference_count: 1182
+  mutable_snapshot_reference_count: 7
+  registered_content_address_count: 1088
+  v21_completion_identity_count: 130
+  validator_pass_count: 15
+  package_clean_reproduction_count: 4
+  repaired_finding_count: 1
+  resolved_historical_transition_count: 1
+  unresolved_finding_count: 0
+  goal_state_member_count: 0
+  physics_promotion_authorized: false
+  proof_authority: false
+output_paths:
+  - "research_control/tasks/RT-20260721-006/artifacts/v21_attempt_history_validation.json"
+  - "research_control/tasks/RT-20260803-013/artifacts/validate_p16_t03_final_evidence_provenance.py"
+  - "research_control/tasks/RT-20260803-013/artifacts/v21_p16_t03_final_provenance_audit.md"
+  - "research_control/tasks/RT-20260803-013/artifacts/v21_p16_t03_freshness_report.json"
+  - "research_control/tasks/RT-20260803-013/artifacts/v21_p16_t03_broken_reference_repair_list.yaml"
+  - "research_control/tasks/RT-20260803-013/artifacts/v21_p16_t03_validator_execution_log.json"
+  - "research_control/tasks/RT-20260803-013/artifacts/v21_p16_t03_compact_receipt.json"
+  - "research_control/tasks/RT-20260803-013/artifacts/v21_p16_t03_validation.json"
+  - "research_control/tasks/RT-20260803-013/jobs/completions/AJC-AJ-RT-20260803-013-001.yaml"
+  - "research_control/handoffs/handoff-0954.yaml"
+  - "research_control/handoffs/handoff-0954.md"
+command_results:
+  - ".venv/bin/python research_control/tasks/RT-20260803-013/artifacts/validate_p16_t03_final_evidence_provenance.py --write-report --json | PASS"
+  - ".venv/bin/python research_control/tasks/RT-20260803-013/artifacts/validate_p16_t03_final_evidence_provenance.py --check --json | PASS"
+  - ".venv/bin/python research_control/tasks/RT-20260721-006/artifacts/validate_v21_attempt_ledger.py --check --json | PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 243 route and one-time invocation consumption validated."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Task-local audit and 15 selected validators pass with zero unresolved findings."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Task-local, signal-parity, documentation-impact, claim-language, taxonomy, and research-control checks pass on the finalized write set."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "One governed checkpoint remains."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Final governed frontier, task-index, graph, registry, and wiki derivatives are synchronized."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Memory bootstrap and validate-only checks pass after source registration."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed claim-bearing surfaces pass the changed-path linter."

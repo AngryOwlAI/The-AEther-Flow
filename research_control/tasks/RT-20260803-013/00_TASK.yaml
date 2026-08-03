@@ -1,0 +1,67 @@
+validation_status: "PASS_PRECHECKPOINT"
+task_id: "RT-20260803-013"
+task_type: "project_system_v21_p16_t03_source_hash_lineage_freshness_reproducibility_audit"
+title: "Audit V21 source hashes, lineage, freshness, and reproducibility"
+task_taxonomy:
+  schema_id: "v21_task_taxonomy_v1"
+  work_kind: "audit_or_review"
+  milestone: "benchmark_promotion"
+  candidate_family: "v21_p16_t03_final_evidence_provenance"
+  result_kind: "implemented_and_validated_or_precisely_blocked"
+  authority: "project_control"
+  scope: "project_system"
+status: "completed"
+created_at: "2026-08-03T19:12:38Z"
+updated_at: "2026-08-03T19:27:25Z"
+closed_at: "2026-08-03T19:27:25Z"
+closure_status: "p16_t03_evidence_graph_reproducible_zero_unresolved_findings_precheckpoint"
+parent_task_id: "RT-20260803-012"
+parent_handoff_id: "handoff-0953"
+current_decision_id: "DDR-20260803-013"
+current_job_id: "AJ-RT-20260803-013-001"
+role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260803-013"
+requires_human_gate: false
+human_authorization_note: "Generation 243 of the user-authorized recursive relay immutably routes exactly one improve-project-system invocation to dependency-ready P16-T03."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P16"
+  plan_task_id: "P16-T03"
+  recommendation_ids:
+    - "V21-R41"
+    - "V21-R42"
+    - "V21-R46"
+    - "V21-R47"
+    - "V21-R48"
+    - "V21-R49"
+    - "V21-R50"
+    - "V21-R52"
+    - "V21-R53"
+    - "V21-R66"
+objective: "Verify final V21 source paths, content hashes, candidate and attempt identities, event chains, generated-view freshness, proof objects, benchmark receipts, publication packages, and reproducibility boundaries; repair only a uniquely determined generated validation derivative if the audit exposes one."
+target_derivation_milestone: "benchmark_promotion"
+milestone_burden: "Ensure the final evidence graph is reproducible and non-stale."
+route_label: "ordinary-research-packet"
+route_sha256: "3f7a3313527af5a20cd6d3423c7d19aa765b58b8b95f919e946a30b53b7cd5cb"
+project_system_change_only: true
+scientific_claims_changed: false
+physical_status_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+claim_boundary_id: "CB-PS-V21-P16-T03-FINAL-EVIDENCE-PROVENANCE-001"
+documentation_impact_id: "DI-RT-20260803-013-001"
+completion_id: "AJC-AJ-RT-20260803-013-001"
+output_artifacts:
+  - "research_control/tasks/RT-20260803-013/artifacts/v21_p16_t03_final_provenance_audit.md"
+  - "research_control/tasks/RT-20260803-013/artifacts/v21_p16_t03_freshness_report.json"
+  - "research_control/tasks/RT-20260803-013/artifacts/v21_p16_t03_broken_reference_repair_list.yaml"
+  - "research_control/tasks/RT-20260803-013/artifacts/v21_p16_t03_validator_execution_log.json"
+  - "research_control/tasks/RT-20260803-013/artifacts/v21_p16_t03_compact_receipt.json"
+  - "research_control/tasks/RT-20260803-013/artifacts/v21_p16_t03_validation.json"
+summary: "P16-T03 verifies the final evidence graph with 1,182 immutable references exact, seven mutable selectors preserved, 15 validators passing, four clean package reproductions, one exact generated derivative repair, one resolved historical transition, and zero unresolved findings. No science authority changes."
+next_recommended_action: "Complete final synchronization and validation, run one governed checkpoint, then route P16-T04 separately through continue-research."
+project_improvement_signals: []
+notes: "The P16-T01 program-state hashes are author-time snapshots of an explicitly mutable file. Historical content-address changes are acceptable only when an exact tracked recovery receipt explains the transition."

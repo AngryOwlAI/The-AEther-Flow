@@ -1,0 +1,130 @@
+{
+  "authority_limits": {
+    "distance_to_gr_changed": false,
+    "independent_replication_claimed": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "publication_or_external_action_authorized": false,
+    "scientific_status_changed": false,
+    "validator_pass_is_science": false
+  },
+  "checks": {
+    "coverage_matrix": {
+      "direct_mapping_edge_count": 633,
+      "immutable_reference_count": 1182,
+      "matrix_sha256": "aa91bfa96257d3d1e9d6ae6bf68d025b4c3e7ed451c8d4f11012cc69cdbc9e95",
+      "mutable_reference_count": 7,
+      "mutable_selector_checks": {
+        "program_state:$.eqsrc_family_freeze_inventory_result": true,
+        "program_state:$.p10_t08_current_burden_status_generation": true
+      },
+      "pending_downstream_p16_mapping_edge_count": 35,
+      "recommendation_count": 72,
+      "unique_evidence_path_count": 225,
+      "unique_verified_pre_p16_task_count": 116,
+      "verified_pre_p16_mapping_edge_count": 598
+    },
+    "dependencies": {
+      "checks": {
+        "research_control/tasks/RT-20260722-003/jobs/completions/AJC-AJ-RT-20260722-003-001.yaml": {
+          "expected": "d381a8fd8f8867cbd5789c46c38f0967d69c0fd83a67e6592bf2d21c37b40715",
+          "match": true,
+          "observed": "d381a8fd8f8867cbd5789c46c38f0967d69c0fd83a67e6592bf2d21c37b40715"
+        },
+        "research_control/tasks/RT-20260802-007/jobs/completions/AJC-AJ-RT-20260802-007-001.yaml": {
+          "expected": "fddaf38076c5b4f691f75ac2d45568fc879db460de8136241de201a2aa8908b3",
+          "match": true,
+          "observed": "fddaf38076c5b4f691f75ac2d45568fc879db460de8136241de201a2aa8908b3"
+        },
+        "research_control/tasks/RT-20260802-009/jobs/completions/AJC-AJ-RT-20260802-009-001.yaml": {
+          "expected": "d5d0f32aaab3fe3ecfa9affa67a50128991b3004557da2dbcc612c84569b4806",
+          "match": true,
+          "observed": "d5d0f32aaab3fe3ecfa9affa67a50128991b3004557da2dbcc612c84569b4806"
+        },
+        "research_control/tasks/RT-20260803-002/jobs/completions/AJC-AJ-RT-20260803-002-001.yaml": {
+          "expected": "4e59a0ae6d0740677ef0b4331f753138f32b76b27981435f5933aaab1a78fd66",
+          "match": true,
+          "observed": "4e59a0ae6d0740677ef0b4331f753138f32b76b27981435f5933aaab1a78fd66"
+        },
+        "research_control/tasks/RT-20260803-012/jobs/completions/AJC-AJ-RT-20260803-012-001.yaml": {
+          "expected": "32490ac7e5a57138f6de7a884825532ee17389d36634dbb9fc7f7cc076c0bf8d",
+          "match": true,
+          "observed": "32490ac7e5a57138f6de7a884825532ee17389d36634dbb9fc7f7cc076c0bf8d"
+        }
+      },
+      "completion_count": 5
+    },
+    "generated_validation_repair": {
+      "append_only_ledger_modified": false,
+      "expected_postimage_sha256": "a2e8e6731e38f11c24cec8e40dd59e5da5177866516e8f5d1c7d471fbf753fa6",
+      "head_prefix_count": 8,
+      "path": "research_control/tasks/RT-20260721-006/artifacts/v21_attempt_history_validation.json",
+      "postimage_sha256": "a2e8e6731e38f11c24cec8e40dd59e5da5177866516e8f5d1c7d471fbf753fa6",
+      "preimage_sha256": "316d52625fe2698cec2bee138dd952b366ca080a00f0f52068b0500cd1f641da"
+    },
+    "packages": {
+      "catalog_sha256": "afe3cff48bd32fdf199faa2d2a93615f426c9a79888661adbcedc58aaf7ecd78",
+      "external_release_authorized": false,
+      "goal_state_member_count": 0,
+      "package_count": 4,
+      "packages": [
+        {
+          "archive_hash_match": true,
+          "archive_sha256": "cdb3e01b113287380e587004e91ad0f7445b63d538bcdbfdce63155207d757d8",
+          "entry_count": 44,
+          "goal_state_member_count": 0,
+          "package_id": "P15-T01-EXACT-GR-INTERPRETIVE",
+          "source_snapshot_commit_exists": true
+        },
+        {
+          "archive_hash_match": true,
+          "archive_sha256": "056d81f87c1595b1f3b4bb40a1dc8b5e6ac895eff989ef6de0a2ae4f94718bbe",
+          "entry_count": 42,
+          "goal_state_member_count": 0,
+          "package_id": "P15-T02-AI-METHODOLOGY",
+          "source_snapshot_commit_exists": true
+        },
+        {
+          "archive_hash_match": true,
+          "archive_sha256": "cea3d636d4a8e1dc3734a8fc1a8a3aee8861b6f88527c501498573411da352fc",
+          "entry_count": 37,
+          "goal_state_member_count": 0,
+          "package_id": "P15-T03-SELECTOR-THEOREM",
+          "source_snapshot_commit_exists": true
+        },
+        {
+          "archive_hash_match": true,
+          "archive_sha256": "cedb2ca1f6a6a93fb3626a750759ec9463e607f2a1d8dab2dbfd972ee023f866",
+          "entry_count": 45,
+          "goal_state_member_count": 0,
+          "package_id": "P15-T04-SOURCE-DYNAMICS",
+          "source_snapshot_commit_exists": true
+        }
+      ],
+      "publication_authorized": false
+    },
+    "registered_sources": {
+      "content_address_count": 1088,
+      "mismatch_count": 0
+    },
+    "v21_control_records": {
+      "handoff_current_hash_mismatch_count": 1,
+      "handoff_record_count": 134,
+      "resolved_historical_transition_count": 1,
+      "unresolved_control_record_count": 0,
+      "v21_completion_identity_count": 130,
+      "v21_task_record_count": 130
+    },
+    "validator_pass_count": {
+      "expected": 15,
+      "match": true,
+      "observed": 15
+    }
+  },
+  "error_count": 0,
+  "errors": [],
+  "job_id": "AJ-RT-20260803-013-001",
+  "result_status": "PASS_P16_T03_EVIDENCE_GRAPH_REPRODUCIBLE",
+  "schema_id": "v21_p16_t03_final_evidence_provenance_validation_v1",
+  "task_id": "RT-20260803-013"
+}

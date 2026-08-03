@@ -1,0 +1,33 @@
+schema_id: v21_p16_t03_broken_reference_repair_list_v1
+task_id: RT-20260803-013
+status: PASS_NO_UNRESOLVED_BROKEN_REFERENCE
+finding_count: 2
+repaired_finding_count: 1
+resolved_historical_transition_count: 1
+unresolved_finding_count: 0
+findings:
+- finding_id: BR-P16T03-001
+  classification: stale_generated_validation_derivative
+  status: repaired_in_scope
+  path: research_control/tasks/RT-20260721-006/artifacts/v21_attempt_history_validation.json
+  preimage_sha256: 316d52625fe2698cec2bee138dd952b366ca080a00f0f52068b0500cd1f641da
+  postimage_sha256: a2e8e6731e38f11c24cec8e40dd59e5da5177866516e8f5d1c7d471fbf753fa6
+  expected_postimage_sha256: a2e8e6731e38f11c24cec8e40dd59e5da5177866516e8f5d1c7d471fbf753fa6
+  head_prefix_count: 8
+  append_only_ledger_modified: false
+  repair: Refresh generated head_prefix_count from 0 to current exact HEAD-prefix
+    count 8; preserve the ledger byte-for-byte.
+- finding_id: BR-P16T03-002
+  classification: historical_author_time_content_address_transition
+  status: resolved_by_tracked_recovery
+  path: research_control/handoffs/handoff-0864.yaml
+  author_time_completion_sha256: ff6ef8b39030b1bc64e3d977de6f9644f551c80a9315fec98c62caba6f9c6d72
+  current_completion_sha256: 7e671b29d93cfe89a4ce4118dde3b8c40fe0c3bb29c6e797f504439286b49f2a
+  recovery_completion_path: research_control/tasks/RT-20260725-005/jobs/completions/AJC-AJ-RT-20260725-005-001.yaml
+  interpretation: The immutable handoff preserves its author-time hash; the later
+    exact transition is tracked, so no historical rewrite is permitted or required.
+errors: []
+authority_limits:
+  historical_handoff_rewrite_authorized: false
+  append_only_ledger_rewrite_authorized: false
+  scientific_status_changed: false

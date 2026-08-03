@@ -1,0 +1,28 @@
+{
+  "audit_head": "ba3b0d969d465dad233c84716ad5254eddba2439",
+  "coverage_matrix_mutable_snapshot_semantics": {
+    "audit_start_program_state_sha256": "0870aa7e97f466bffa8dd78c9c9d59b09aa09619101ab69cc88a6e72a36f408c",
+    "author_time_program_state_sha256": "219c8044390f5478f407ca55037d6e02de71230f4642a5277bce57ef41e2fa44",
+    "classification": "expected_mutable_state_evolution_not_broken_content_address",
+    "reference_count": 7,
+    "selector_identity_preserved": true
+  },
+  "generated_views_are_authority": false,
+  "physics_promotion_authorized": false,
+  "post_write_requirement": "Regenerate governed views and rerun live freshness validation after final control writes.",
+  "pre_task_generated_report_gate": {
+    "failed_report_count": 0,
+    "maximum_commit_lag": 1,
+    "observed_commit_lag": 1,
+    "report_count": 4,
+    "source_commit": "efcaec7df6b355681eea25ddb5b625de77e665ba",
+    "status": "PASS",
+    "validator": "scripts/research_control/validate_generated_report_freshness.py --json"
+  },
+  "registered_content_addresses": {
+    "content_address_count": 1088,
+    "mismatch_count": 0
+  },
+  "schema_id": "v21_p16_t03_freshness_report_v1",
+  "task_id": "RT-20260803-013"
+}

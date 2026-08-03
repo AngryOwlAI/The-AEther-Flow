@@ -1236,6 +1236,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-V21-P16-T02-PARENT-FUSION-GATE-CONSISTENCY-REAUDIT-V1` `wiki/markdown/md-v21-p16-t02-parent-fusion-gate-consistency-reaudit-v1.md`
 - `WIKI-MD-V21-P16-T02-PARENT-FUSION-GATE-CONSISTENCY-V1` `wiki/markdown/md-v21-p16-t02-parent-fusion-gate-consistency-v1.md`
 - `WIKI-MD-V21-P16-T02-PARENT-FUSION-POST-REPAIR-GATE-CONSISTENCY-REAUDIT-V1` `wiki/markdown/md-v21-p16-t02-parent-fusion-post-repair-gate-consistency-reaudit-v1.md`
+- `WIKI-MD-V21-P16-T03-FINAL-EVIDENCE-PROVENANCE-AUDIT` `wiki/markdown/md-v21-p16-t03-final-evidence-provenance-audit.md`
 - `WIKI-MD-V21-P4-T01-SOURCE-ASSUMPTION-AMBIGUITIES` `wiki/markdown/md-v21-p4-t01-source-assumption-ambiguities.md`
 - `WIKI-MD-V21-P4-T04-ONTOLOGY-REGIME-COMPARISON-REPORT-V1` `wiki/markdown/md-v21-p4-t04-ontology-regime-comparison-report-v1.md`
 - `WIKI-MD-V21-P4-T05-ONTOLOGY-REGIME-GATE-CHAIR-PARENT-FUSION-V1` `wiki/markdown/md-v21-p4-t05-ontology-regime-gate-chair-parent-fusion-v1.md`
@@ -2243,6 +2244,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-V21-P16-T02-GATE-A-E-CONSISTENCY-AUDIT` `research_control/tasks/RT-20260803-003/artifacts/v21_p16_t02_gate_consistency_audit.md`
 - `MD-V21-P16-T02-GATE-A-E-CONSISTENCY-REAUDIT` `research_control/tasks/RT-20260803-010/artifacts/v21_p16_t02_gate_consistency_reaudit.md`
 - `MD-V21-P16-T02-GATE-A-E-POST-REPAIR-CONSISTENCY-REAUDIT` `research_control/tasks/RT-20260803-012/artifacts/v21_p16_t02_post_repair_gate_consistency_reaudit.md`
+- `MD-V21-P16-T03-FINAL-EVIDENCE-PROVENANCE-AUDIT` `research_control/tasks/RT-20260803-013/artifacts/v21_p16_t03_final_provenance_audit.md`
 - `MD-V21-P5-T07-SOURCE-DYNAMICS-AUDIT-RECEIPT-V1` `research_control/tasks/RT-20260725-014/artifacts/source_dynamics_audit_receipt.md`
 - `MD-V21-P5-T08-SOURCE-DYNAMICS-MILESTONE-RECEIPT-V1` `research_control/tasks/RT-20260726-001/artifacts/source_dynamics_milestone_receipt.md`
 - `MD-V21-P6-T01-CAUSAL-CHARACTERISTIC-TARGET-RECEIPT-V1` `research_control/tasks/RT-20260726-002/artifacts/causal_characteristic_target_receipt.md`
