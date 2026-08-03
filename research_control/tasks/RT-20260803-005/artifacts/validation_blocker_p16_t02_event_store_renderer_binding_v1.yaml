@@ -1,0 +1,100 @@
+schema_id: "p16_t02_event_store_renderer_binding_precheckpoint_blocker_v1"
+status: "BLOCKED_PRECHECKPOINT"
+task_id: "RT-20260803-005"
+job_id: "AJ-RT-20260803-005-001"
+plan_task_id: "P16-T02"
+generation: 233
+recorded_at: "2026-08-03T08:22:38Z"
+source_head: "334987d240390c3a7cd9522e92e9b283f4a2b7f9"
+
+implemented_payload:
+  status: "PASS_TASK_LOCAL"
+  validator_path: "research_control/tasks/RT-20260803-005/artifacts/validate_p16_t02_gate_status_layer_contract.py"
+  receipt_path: "research_control/tasks/RT-20260803-005/artifacts/p16_t02_gate_status_layer_contract_validation.json"
+  protected_hash_mismatch_count: 0
+  focused_test_status: "PASS"
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+failed_precheckpoint_gate:
+  profile: "affected"
+  gate_id: "test_shard_repository"
+  receipt_path: ".local/validation-receipts/a84904b1636216bf5b93c66debde34fcb76d220134913d32b91f810d41c90f69/RUN-549bd94a9388d14c/receipt.json"
+  receipt_sha256: "300661bf9da3007bd9172da9e378d375515d0ad154802153fa88c60a056813c4"
+  repository_test_count: 1275
+  repository_failure_count: 2
+  repository_error_count: 1
+  repository_skip_count: 1
+  direct_failure:
+    test_id: "tests.test_event_store_architecture.EventStoreArchitectureTests.test_historical_renderer_bindings_use_exact_current_authority"
+    source_binding: "source_hash::scripts/research_control/render_current_frontier.py"
+    reason: "The exact sealed P10-T05 recovery binds the prior current renderer hash, while the P16-T02 repair necessarily changes those renderer bytes."
+  aggregate_failure:
+    test_id: "tests.test_event_store_architecture.EventStoreArchitectureTests.test_live_contract_sources_and_documents_pass"
+    reason: "The event-store architecture report fails downstream of the renderer binding."
+  downstream_error:
+    test_id: "tests.test_v21_p10_migration_readiness.P10MigrationReadinessTests.setUpClass"
+    reason: "P10 migration readiness requires the event-store architecture validator to PASS."
+
+exact_binding_evidence:
+  validator_path: "research_control/tasks/RT-20260721-007/artifacts/validate_v21_event_store_architecture.py"
+  validator_sha256: "53f284fc11eb55db4a99379e66043f5b328616af4825db770c82c6ca7b183a14"
+  historical_recovery_receipt_path: "research_control/tasks/RT-20260801-014/artifacts/p10_t05_historical_renderer_binding_recovery_receipt.json"
+  historical_recovery_receipt_sha256: "d32a02c466a2471316ccb372172b292c8fa23014917987d9ee58990697192d21"
+  protected_renderer_manifest_path: "research_control/tasks/RT-20260801-011/artifacts/generated_report_renderer_update_manifest_v1.json"
+  protected_renderer_manifest_sha256: "d92fd0f636510d07a86cc7112fcc2a5243d77fc69959a13dc209f9ea7c90329a"
+  protected_renderer_completion_path: "research_control/tasks/RT-20260801-011/jobs/completions/AJC-AJ-RT-20260801-011-001.yaml"
+  protected_renderer_completion_sha256: "73c309c9830078d2ef209861aad53ba2742c754c82c3748841918a2e4533404e"
+  predecessor_blocker_path: "research_control/tasks/RT-20260801-013/artifacts/p13_t07_protected_dual_budget_accounting_recovery_receipt.json"
+  predecessor_blocker_sha256: "fe764821a8a3d83d2efbfe0a32b646076147efc71bc8516eef07ce2116ebd4ff"
+  renderer_path: "scripts/research_control/render_current_frontier.py"
+  historical_observation_sha256: "7f01e0e6267bcb43c96c087c7dfd06b8a10ed6450c194324232019485c95a6ca"
+  prior_approved_current_sha256: "ebbeddc0d5b07bc5130ce093053891a376a264c1d029019cefa7de756697770d"
+  implemented_current_sha256: "62ed4741bcafe652c03f742a022a2f2fa47e3f132f97f0dd8fdb065e5e2e5ba6"
+  unchanged_task_index_renderer_sha256: "7c28b13a1f9843a300ce16bff2c09801549209927a41872efc02a6d0bfc0a023"
+
+scope_analysis:
+  reverting_renderer_is_valid: false
+  reverting_renderer_reason: "The prior renderer unconditionally denies source-side coupling-law adoption and source detector stress-energy and action meanings, recreating the P16-T02 Gate C status contradiction."
+  current_job_can_repair_binding: false
+  required_out_of_scope_paths:
+    - "research_control/tasks/RT-20260721-007/artifacts/validate_v21_event_store_architecture.py"
+    - "tests/test_event_store_architecture.py"
+  forbidden_actions_preserved:
+    - "no historical recovery receipt rewrite"
+    - "no protected renderer manifest rewrite"
+    - "no source hash spoofing or digest collision construction"
+    - "no AgentJob allowlist broadening"
+    - "no second worker invocation"
+    - "no checkpoint while a hard validator fails"
+
+checkpoint_outcome:
+  invocation_count: 0
+  invoked: false
+  committed: false
+  reason: "The affected-profile repository shard is a hard precheckpoint validator failure."
+
+distinct_recovery_route:
+  strategy_id: "recover_p16_t02_event_store_renderer_current_authority_binding_v1"
+  worker_skill: "improve-project-system"
+  plan_task_id: "P16-T02"
+  work_item_id: "P16-T02"
+  route_label: "project-system-checkpoint-recovery"
+  objective: "Preserve the exact P16-T02 status-layer payload and all sealed historical evidence; add one exact chained current-renderer authority binding to the P10-T05 validator with fail-closed tests; restore P10 migration readiness; resolve the signal only after full validation; and invoke one fresh governed checkpoint."
+  materially_distinct_from_generation_233: true
+  execution_ready_now: true
+  executed: false
+  requires_human_gate: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+authority_boundary:
+  historical_artifacts_rewritten: false
+  generated_views_are_authority: false
+  scientific_claims_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_or_push_authorized: false

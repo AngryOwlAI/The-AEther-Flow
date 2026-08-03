@@ -66,6 +66,13 @@ HISTORICAL_RENDERER_BINDING_RECOVERY_RECEIPT = Path(
 HISTORICAL_RENDERER_BINDING_RECOVERY_RECEIPT_SHA256 = (
     "d32a02c466a2471316ccb372172b292c8fa23014917987d9ee58990697192d21"
 )
+CURRENT_RENDERER_AUTHORITY_BINDING_RECEIPT = Path(
+    "research_control/tasks/RT-20260803-006/artifacts/"
+    "p16_t02_current_renderer_authority_binding_recovery_receipt.json"
+)
+CURRENT_RENDERER_AUTHORITY_BINDING_RECEIPT_SHA256 = (
+    "a98d0c3948687b87b09e00691c7fa766ce9c65e9f3cb14c50dc3198b833e2c9e"
+)
 DISTANCE_TO_GR_LEDGER_COLUMNS = (
     "burden_id",
     "milestone",
@@ -162,6 +169,154 @@ def validate_current_distance_to_gr_authority(
     return True, f"current_sha256={sha256_file(path)} rows={len(rows)}"
 
 
+def validate_current_renderer_authority_chain(
+    source_path: str,
+    historical_sha256: str,
+    prior_current_sha256: str,
+    repo_root: Path = REPO_ROOT,
+) -> tuple[bool, str]:
+    """Validate one exact current-renderer transition without rewriting history."""
+
+    receipt_path = repo_root / CURRENT_RENDERER_AUTHORITY_BINDING_RECEIPT
+    if not receipt_path.is_file():
+        return False, "current renderer authority binding receipt is missing"
+    if sha256_file(receipt_path) != CURRENT_RENDERER_AUTHORITY_BINDING_RECEIPT_SHA256:
+        return False, "current renderer authority binding receipt hash mismatch"
+    try:
+        receipt = json.loads(receipt_path.read_text(encoding="utf-8"))
+    except (OSError, ValueError) as exc:
+        return False, f"current renderer authority binding receipt is invalid: {exc}"
+    if not isinstance(receipt, dict):
+        return False, "current renderer authority binding receipt must be an object"
+
+    if (
+        receipt.get("schema_id")
+        != "p16_t02_current_renderer_authority_binding_recovery_v1"
+        or receipt.get("status")
+        != "PASS_EXACT_CURRENT_RENDERER_AUTHORITY_CHAIN_BOUND"
+        or receipt.get("task_id") != "RT-20260803-006"
+        or receipt.get("job_id") != "AJ-RT-20260803-006-001"
+        or receipt.get("plan_task_id") != "P16-T02"
+        or receipt.get("strategy_id")
+        != "recover_p16_t02_event_store_renderer_current_authority_binding_v1"
+    ):
+        return False, "current renderer authority binding receipt identity mismatch"
+
+    authority_boundary = receipt.get("authority_boundary")
+    if not isinstance(authority_boundary, dict) or any(
+        authority_boundary.get(key) is not False
+        for key in (
+            "event_store_cutover_authorized",
+            "generated_views_are_authority",
+            "historical_artifacts_rewritten",
+            "physics_promotion_authorized",
+            "proof_authority",
+            "scientific_claims_changed",
+            "status_payload_reinterpreted",
+        )
+    ):
+        return False, "current renderer authority binding authority boundary mismatch"
+
+    previous = receipt.get("previous_authority")
+    if not isinstance(previous, dict) or previous != {
+        "historical_recovery_receipt_path": (
+            HISTORICAL_RENDERER_BINDING_RECOVERY_RECEIPT.as_posix()
+        ),
+        "historical_recovery_receipt_sha256": (
+            HISTORICAL_RENDERER_BINDING_RECOVERY_RECEIPT_SHA256
+        ),
+        "renderer_manifest_path": (
+            "research_control/tasks/RT-20260801-011/artifacts/"
+            "generated_report_renderer_update_manifest_v1.json"
+        ),
+        "renderer_manifest_sha256": (
+            "d92fd0f636510d07a86cc7112fcc2a5243d77fc69959a13dc209f9ea7c90329a"
+        ),
+    }:
+        return False, "current renderer predecessor authority mismatch"
+
+    triggering = receipt.get("triggering_change")
+    if not isinstance(triggering, dict) or any(
+        triggering.get(key) != value
+        for key, value in {
+            "source_task_id": "RT-20260803-005",
+            "source_job_id": "AJ-RT-20260803-005-001",
+            "source_head": "334987d240390c3a7cd9522e92e9b283f4a2b7f9",
+            "blocker_path": (
+                "research_control/tasks/RT-20260803-005/artifacts/"
+                "validation_blocker_p16_t02_event_store_renderer_binding_v1.yaml"
+            ),
+            "completion_path": (
+                "research_control/tasks/RT-20260803-005/jobs/completions/"
+                "AJC-AJ-RT-20260803-005-001.yaml"
+            ),
+            "status_contract_receipt_path": (
+                "research_control/tasks/RT-20260803-005/artifacts/"
+                "p16_t02_gate_status_layer_contract_validation.json"
+            ),
+            "status_contract_validator_path": (
+                "research_control/tasks/RT-20260803-005/artifacts/"
+                "validate_p16_t02_gate_status_layer_contract.py"
+            ),
+        }.items()
+    ):
+        return False, "current renderer triggering change identity mismatch"
+
+    exact_bound_files = {
+        previous["historical_recovery_receipt_path"]: previous[
+            "historical_recovery_receipt_sha256"
+        ],
+        previous["renderer_manifest_path"]: previous["renderer_manifest_sha256"],
+        triggering["blocker_path"]: triggering.get("blocker_sha256"),
+        triggering["completion_path"]: triggering.get("completion_sha256"),
+        triggering["status_contract_receipt_path"]: triggering.get(
+            "status_contract_receipt_sha256"
+        ),
+        triggering["status_contract_validator_path"]: triggering.get(
+            "status_contract_validator_sha256"
+        ),
+    }
+    for relative, expected_sha256 in exact_bound_files.items():
+        path = repo_root / relative
+        if (
+            not isinstance(expected_sha256, str)
+            or re.fullmatch(r"[0-9a-f]{64}", expected_sha256) is None
+            or not path.is_file()
+            or sha256_file(path) != expected_sha256
+        ):
+            return False, f"current renderer authority chain mismatch: {relative}"
+
+    transitions = receipt.get("renderer_transitions")
+    if not isinstance(transitions, list):
+        return False, "current renderer transitions are missing"
+    transition_by_path = {
+        str(item.get("path", "")): item
+        for item in transitions
+        if isinstance(item, dict)
+    }
+    if set(transition_by_path) != set(HISTORICAL_RENDERER_SOURCE_BINDINGS):
+        return False, "current renderer transition path set mismatch"
+    transition = transition_by_path[source_path]
+    current_sha256 = transition.get("current_sha256")
+    expected_kind = (
+        "unchanged_current_source"
+        if current_sha256 == prior_current_sha256
+        else "authorized_current_source_update"
+    )
+    source = repo_root / source_path
+    if (
+        transition.get("historical_sha256") != historical_sha256
+        or transition.get("prior_approved_current_sha256") != prior_current_sha256
+        or transition.get("transition_kind") != expected_kind
+        or not isinstance(current_sha256, str)
+        or re.fullmatch(r"[0-9a-f]{64}", current_sha256) is None
+        or not source.is_file()
+        or sha256_file(source) != current_sha256
+    ):
+        return False, "current renderer transition binding mismatch"
+    return True, f"current_sha256={current_sha256} exact_authority_chain=PASS"
+
+
 def validate_historical_renderer_authority(
     source_path: str,
     historical_sha256: str,
@@ -222,15 +377,12 @@ def validate_historical_renderer_authority(
     binding = binding_by_path[source_path]
     if binding.get("historical_sha256") != historical_sha256:
         return False, "renderer binding recovery historical hash mismatch"
-    current_sha256 = binding.get("current_sha256")
-    source = repo_root / source_path
+    prior_current_sha256 = binding.get("current_sha256")
     if (
-        not isinstance(current_sha256, str)
-        or re.fullmatch(r"[0-9a-f]{64}", current_sha256) is None
-        or not source.is_file()
-        or sha256_file(source) != current_sha256
+        not isinstance(prior_current_sha256, str)
+        or re.fullmatch(r"[0-9a-f]{64}", prior_current_sha256) is None
     ):
-        return False, "current renderer bytes do not match recovery authority"
+        return False, "prior current renderer authority is invalid"
 
     exact_bound_files = {
         "research_control/tasks/RT-20260721-007/artifacts/"
@@ -293,8 +445,8 @@ def validate_historical_renderer_authority(
         for item in report_classes
         if isinstance(item, dict)
     }
-    if manifest_bindings.get(source_path) != current_sha256:
-        return False, "current renderer manifest binding mismatch"
+    if manifest_bindings.get(source_path) != prior_current_sha256:
+        return False, "prior current renderer manifest binding mismatch"
     manifest_boundary = manifest.get("authority_boundary")
     if not isinstance(manifest_boundary, dict) or any(
         manifest_boundary.get(key) is not False
@@ -308,7 +460,15 @@ def validate_historical_renderer_authority(
         )
     ):
         return False, "current renderer manifest authority boundary mismatch"
-    return True, f"current_sha256={current_sha256} exact_recovery_binding=PASS"
+    current_valid, current_evidence = validate_current_renderer_authority_chain(
+        source_path,
+        historical_sha256,
+        prior_current_sha256,
+        repo_root,
+    )
+    if not current_valid:
+        return False, current_evidence
+    return True, current_evidence
 
 
 def validate_contract_data(contract: dict[str, Any]) -> list[dict[str, str]]:

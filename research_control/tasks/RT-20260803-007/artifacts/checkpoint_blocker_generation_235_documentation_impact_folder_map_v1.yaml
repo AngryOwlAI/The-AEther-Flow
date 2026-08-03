@@ -1,0 +1,59 @@
+schema_id: "generation_235_checkpoint_documentation_impact_blocker_v1"
+status: "BLOCKED_CHECKPOINT_STAGED_DOCUMENTATION_IMPACT"
+task_id: "RT-20260803-007"
+job_id: "AJ-RT-20260803-007-001"
+goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+generation: 235
+source_head: "334987d240390c3a7cd9522e92e9b283f4a2b7f9"
+checkpoint_command: ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260803-007-001"
+checkpoint_invocation_count: 1
+checkpoint_staged: false
+checkpoint_committed: false
+checkpoint_commit: ""
+failure_reason: "planner staged acceptance failed"
+failed_gate_id: "documentation_impact"
+failed_command: ".venv/bin/python scripts/project_control/validate_documentation_impact.py --staged"
+failed_command_returncode: 1
+failed_findings:
+  - finding_id: "DOCUMENTATION-IMPACT-ERROR-02E4520E426C"
+    path: "research_control/tasks/RT-20260803-005/documentation_impact.yaml"
+    issue: "generated_derivatives missing live generated change FOLDER_MAP.md"
+  - finding_id: "DOCUMENTATION-IMPACT-ERROR-2F226A44EB00"
+    path: "research_control/tasks/RT-20260803-006/documentation_impact.yaml"
+    issue: "generated_derivatives missing live generated change FOLDER_MAP.md"
+memory_sync:
+  status: "PASS"
+  changed_paths:
+    - "FOLDER_MAP.md"
+  mutation_count: 1
+staged_acceptance:
+  status: "FAIL"
+  tree_sha1: "f8dca2878ecb156f722a42895ac6567762895c65"
+  gate_count: 7
+  pass_count: 4
+  fail_count: 1
+  skipped_count: 2
+  warn_count: 0
+index_restoration:
+  status: "PASS"
+  entry_tree: "f8dca2878ecb156f722a42895ac6567762895c65"
+  final_staged_tree: "f8dca2878ecb156f722a42895ac6567762895c65"
+  post_execution_tree: "f8dca2878ecb156f722a42895ac6567762895c65"
+  restored_tree: "f8dca2878ecb156f722a42895ac6567762895c65"
+  restored: true
+operational_receipt:
+  path: ".local/validation-receipts/8afbc6d6c1cc892533a3e7f8e45a1e2fb8243d85d803a1dadc854fe5c9fbe844/RUN-CHECKPOINT-29980ec0989713d3/receipt.json"
+  sha256: "44b543430ecb4caa685a470dc298f27f94423a2da8e419559b36a8edad15c611"
+  tracked_authority: false
+recovery:
+  required: true
+  suggested_role: "process-integrity-auditor@0.1.0"
+  worker_skill: "improve-project-system"
+  strategy_id: "recover_generation_235_checkpoint_documentation_impact_folder_map_coverage_v1"
+  objective: "Add this generation-235 blocker artifact to changed_paths and FOLDER_MAP.md to generated_derivatives in the exact cumulative RT-20260803-005 and RT-20260803-006 documentation-impact receipts, regenerate affected views, revalidate staged acceptance, and invoke at most one fresh governed checkpoint without executing P16-T03 payload work."
+checkpoint_retry_in_this_job_authorized: false
+protected_contract_hashes:
+  accepted_status_calibration_v1: "0a14357adc7793fe28c97743cb1a5df788e4fb8738cd5ff1af1e9202ef8a4b51"
+  accepted_status_calibration_v2: "cfc0f83001e74dad94cae326238d81cad9e97b50ae7c9703260ee1e6e0bb64e1"
+  distance_to_gr_status_aliases: "cad6dcc8142f74f280d0c408c5ff290f6750dba4bc23e8adb9a03c94dd83c927"
+authority_note: "This blocker receipt is project-system checkpoint evidence only. It does not change scientific status, Distance-to-GR burden, Gate authority, proof authority, benchmark status, publication authority, or completed-derivation status."

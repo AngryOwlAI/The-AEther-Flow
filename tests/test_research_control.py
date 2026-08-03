@@ -3501,14 +3501,14 @@ class ResearchControlTests(unittest.TestCase):
             for row in rows:
                 if row["burden_id"] == "matter_coupling":
                     tokens = row["overread_guard"].split(";")
-                    tokens.remove("no_stress_energy_tensor")
+                    tokens.remove("no_target_stress_energy_tensor")
                     row["overread_guard"] = ";".join(tokens)
                     break
 
         report = self.distance_to_gr_ledger_fixture_report(remove_stress_energy_guard)
         joined = "\n".join(report.errors)
         self.assertIn("matter_coupling missing overread_guard tokens", joined)
-        self.assertIn("no_stress_energy_tensor", joined)
+        self.assertIn("no_target_stress_energy_tensor", joined)
 
     def test_distance_to_gr_ledger_rejects_matter_coupling_physical_overread(self) -> None:
         def overread_matter_coupling(rows):

@@ -4,7 +4,7 @@
 
 This generated index mirrors `output/compact_current_frontier_v16.yaml` and `output/compact_current_frontier_v16.json`. It is a snapshot-only reader aid. If it differs from tracked control state, tracked control state governs.
 
-<!-- generated-report-provenance: {"freshness_status":"fresh_at_generation","generated_view_is_authority":false,"generation_time":"2026-08-03T06:32:26Z","maximum_commit_lag":"1","physics_promotion_authorized":false,"policy_id":"p13_t07_live_generated_report_freshness_v1","proof_authority":false,"report_class":"compact_current_frontier","schema_id":"generated_report_provenance_v1","source_commit":"56f9fd4d0ccec150200d80f6f1e1137a22553b15","source_hashes":[{"path":"registries/DISTANCE_TO_GR_LEDGER.csv","sha256":"6b81b42bc7ed83f74f8062f2ade26988e8b369aa2d23744fc9e392279e1de5d8"},{"path":"registries/RESEARCH_TASK_REGISTRY.csv","sha256":"5963277c6d6e6003a0c844f8e77069acaaab1312088b5bc575127b6336b9ef01"},{"path":"research_control/current_frontier.md","sha256":"4538c813127cc4b8bd5ec4c8d713f9f165b27f0890a5c4ae2862677f4b8dc105"},{"path":"research_control/handoffs/handoff-0946.yaml","sha256":"e86989a4014b01fc04ec4e6e2dcab8eb3a97d1fd1d77c02ab24357c20cff27bc"},{"path":"research_control/program_state.yaml","sha256":"2fdb2d6682e515e24e353982f1b6e8d7c36339b112035f5f12b00581ad9f51ec"},{"path":"research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml","sha256":"dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3"},{"path":"scripts/research_control/generated_report_provenance.py","sha256":"af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c"},{"path":"scripts/research_control/render_compact_current_frontier_v16.py","sha256":"36fab56791487f690c7fd31ef036a1dba82d03a66beddefac5a21baf77ab10c2"}],"source_manifest_sha256":"3d185f858ab281281987e6dc9f42e2d7b46b550e82b52f7186b47444f2e147f2","source_path_count":"12","task_count":"1200"} -->
+<!-- generated-report-provenance: {"freshness_status":"fresh_at_generation","generated_view_is_authority":false,"generation_time":"2026-08-03T11:34:22Z","maximum_commit_lag":"1","physics_promotion_authorized":false,"policy_id":"p13_t07_live_generated_report_freshness_v1","proof_authority":false,"report_class":"compact_current_frontier","schema_id":"generated_report_provenance_v1","source_commit":"334987d240390c3a7cd9522e92e9b283f4a2b7f9","source_hashes":[{"path":"registries/DISTANCE_TO_GR_LEDGER.csv","sha256":"8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642"},{"path":"registries/RESEARCH_TASK_REGISTRY.csv","sha256":"af5fe78979b86e2880fd6c19da457730a587a0fd568dffc6d5623ed49b1819e6"},{"path":"research_control/current_frontier.md","sha256":"4f14110211669da106cb0feff0b341466a7ff1addf976ca8ea6e7031f1e2a79c"},{"path":"research_control/handoffs/handoff-0949.yaml","sha256":"dcfa19917488e50951e6042274e90c29345664ba5714d7be1a5ecf8c960ad905"},{"path":"research_control/program_state.yaml","sha256":"464b98bcd14aeee06ab1a8f7c9edd285ebef5ef3b98fe6c5640e56fb79bdd2ea"},{"path":"research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml","sha256":"dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3"},{"path":"scripts/research_control/generated_report_provenance.py","sha256":"af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c"},{"path":"scripts/research_control/render_compact_current_frontier_v16.py","sha256":"3700556e8fe203bb8bfb1c2caf15b7fbfc95b25f608169209e1b9930677e3564"}],"source_manifest_sha256":"24dd5300f3ca852393a7196d605f92221132669ed90fa825ebcae6bb064a6436","source_path_count":"12","task_count":"1204"} -->
 
 ## Generated-Report Provenance
 
@@ -13,25 +13,25 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 | Provenance schema | `generated_report_provenance_v1` |
 | Freshness policy | `p13_t07_live_generated_report_freshness_v1` |
 | Report class | `compact_current_frontier` |
-| Source commit | `56f9fd4d0ccec150200d80f6f1e1137a22553b15` |
-| Source-derived generation time | `2026-08-03T06:32:26Z` |
-| Tracked task count | 1200 |
+| Source commit | `334987d240390c3a7cd9522e92e9b283f4a2b7f9` |
+| Source-derived generation time | `2026-08-03T11:34:22Z` |
+| Tracked task count | 1204 |
 | Exact source-path count | 12 |
-| Source manifest SHA-256 | `3d185f858ab281281987e6dc9f42e2d7b46b550e82b52f7186b47444f2e147f2` |
+| Source manifest SHA-256 | `24dd5300f3ca852393a7196d605f92221132669ed90fa825ebcae6bb064a6436` |
 | Maximum commit lag | 1 |
 | Freshness status at generation | `fresh_at_generation` |
 | Generated view is authority | `false` |
 
 Exact primary source hashes:
 
-- `registries/DISTANCE_TO_GR_LEDGER.csv`: `6b81b42bc7ed83f74f8062f2ade26988e8b369aa2d23744fc9e392279e1de5d8`
-- `registries/RESEARCH_TASK_REGISTRY.csv`: `5963277c6d6e6003a0c844f8e77069acaaab1312088b5bc575127b6336b9ef01`
-- `research_control/current_frontier.md`: `4538c813127cc4b8bd5ec4c8d713f9f165b27f0890a5c4ae2862677f4b8dc105`
-- `research_control/handoffs/handoff-0946.yaml`: `e86989a4014b01fc04ec4e6e2dcab8eb3a97d1fd1d77c02ab24357c20cff27bc`
-- `research_control/program_state.yaml`: `2fdb2d6682e515e24e353982f1b6e8d7c36339b112035f5f12b00581ad9f51ec`
+- `registries/DISTANCE_TO_GR_LEDGER.csv`: `8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642`
+- `registries/RESEARCH_TASK_REGISTRY.csv`: `af5fe78979b86e2880fd6c19da457730a587a0fd568dffc6d5623ed49b1819e6`
+- `research_control/current_frontier.md`: `4f14110211669da106cb0feff0b341466a7ff1addf976ca8ea6e7031f1e2a79c`
+- `research_control/handoffs/handoff-0949.yaml`: `dcfa19917488e50951e6042274e90c29345664ba5714d7be1a5ecf8c960ad905`
+- `research_control/program_state.yaml`: `464b98bcd14aeee06ab1a8f7c9edd285ebef5ef3b98fe6c5640e56fb79bdd2ea`
 - `research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml`: `dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3`
 - `scripts/research_control/generated_report_provenance.py`: `af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c`
-- `scripts/research_control/render_compact_current_frontier_v16.py`: `36fab56791487f690c7fd31ef036a1dba82d03a66beddefac5a21baf77ab10c2`
+- `scripts/research_control/render_compact_current_frontier_v16.py`: `3700556e8fe203bb8bfb1c2caf15b7fbfc95b25f608169209e1b9930677e3564`
 
 Live validation recomputes the full source manifest and commit lag.
 Freshness PASS is operational evidence only; it is not physics proof
@@ -39,17 +39,17 @@ or claim-promotion authority.
 
 ## Active State
 
-- Active task: `RT-20260803-004`
-- Latest handoff: `handoff-0946`
-- Current status: `p16_t02_allowlist_parity_recovery_pass_ready_for_checkpoint`
+- Active task: `RT-20260803-007`
+- Latest handoff: `handoff-0949`
+- Current status: `p16_t02_status_calibration_path_classifier_recovered_checkpoint_blocked_documentation_impact_folder_map_coverage`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260803-004`
-- Latest research handoff: `handoff-0946`
-- Latest research next action: Run one governed checkpoint for AJ-RT-20260803-004-001. After it commits, consume PIS-RT-20260803-003-001 through exactly one fresh bounded improve-project-system status-taxonomy repair; do not reexecute P16-T02 or execute P16-T03 or P16-T04.
+- Latest research task: `RT-20260803-007`
+- Latest research handoff: `handoff-0949`
+- Latest research next action: Run one distinct improve-project-system recovery that adds the generation-235 blocker artifact to changed_paths and FOLDER_MAP.md to generated_derivatives in the exact RT-20260803-005 and RT-20260803-006 documentation-impact receipts, regenerates and revalidates the cumulative transaction, and invokes at most one fresh governed checkpoint without executing P16-T03 payload work.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -59,10 +59,10 @@ or claim-promotion authority.
 
 ## Next Route
 
-- Route ID: `v21_p16_t02_gate_authority_consistency_reaudit_after_status_repair`
-- Role family: `external-red-team-reviewer@0.1.0`
-- Target milestone: `benchmark_promotion`
-- Milestone burden: Prevent downstream status laundering at plan closure.
+- Route ID: `generation_235_checkpoint_documentation_impact_folder_map_coverage_recovery`
+- Role family: `process-integrity-auditor@0.1.0`
+- Target milestone: `none`
+- Milestone burden: Project-system cumulative documentation-impact coverage and checkpoint recovery only; no P16-T03 audit payload or derivation burden advances.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -71,7 +71,7 @@ or claim-promotion authority.
 | --- | --- | --- | --- | --- |
 | `m_src` | adopted only as scoped source-only M_src object | gate_review_completed | not_target_manifold_not_metric_not_gr_derivation | scoped_source_object_only |
 | `g_eff` | ScopedMetricStructureRecord_src adopted as the scoped source-extension record; g_eff^{GSC-cand} retained as exact legacy alias | gate_review_completed | not_unscoped_lorentzian_metric_not_matter_coupling_not_einstein_equations | scoped_source_object_only |
-| `matter_coupling` | accepted only as scoped source-extension evidence/precondition | accepted_as_scoped_evidence_precondition | not_matter_coupling_not_stress_energy_not_matter_action_not_detector_semantics | scoped_source_evidence_only |
+| `matter_coupling` | open target matter-coupling derivation after protected source-side postulate adoption | accepted_as_scoped_evidence_precondition | not_matter_coupling_not_stress_energy_not_matter_action_not_detector_semantics | scoped_source_evidence_only |
 | `einstein_equations` | not started; no positive derivation status | not_started | no_field_equation_derivation | none |
 | `benchmark_promotion` | no benchmark promotion from scoped evidence/precondition alone | blocked | no_exact_gr_benchmark_promotion | none |
 
@@ -83,7 +83,7 @@ These cards render high-risk rows in the required order: positive status, exact 
 | --- | --- | --- | --- | --- | --- |
 | `m_src` | M_src is adopted only as a scoped source-only M_src object. | The adoption applies only under the declared source-only GSC candidate scope and fail-closed boundary. | Later bounded packets may use it as source-side prerequisite context. | not a target manifold<br>not a metric<br>not MetricData(E) scope expansion<br>not g_eff scope expansion<br>not matter coupling<br>not Einstein equations<br>not benchmark promotion<br>not completed derivation | Use scoped M_src only as source-side prerequisite context while deriving any later metric or coupling bridge without target-manifold or target-metric import. |
 | `g_eff` | ScopedMetricStructureRecord_src is the primary name for the adopted scoped source-extension record; g_eff^{GSC-cand} is its exact legacy alias. | The adoption applies only to the exact declared source-extension candidate scope reviewed in RT-20260614-222. | Later bounded packets may use ScopedMetricStructureRecord_src as scoped source-extension context and may use g_eff^{GSC-cand} only as its explicit exact legacy alias. | bare g_eff remains an unresolved burden<br>not an unscoped Lorentzian metric<br>not MetricData(E) adoption<br>not unscoped g_eff<br>not matter coupling<br>not Einstein equations<br>not benchmark promotion<br>not completed derivation | Independently review the full Gate B package while using ScopedMetricStructureRecord_src as the scoped record and keeping bare g_eff unresolved. |
-| `matter_coupling` | matter_coupling has accepted scoped evidence/precondition only for continuation. | The support is certificate-indexed, source-side, and finite/local only. | Later bounded packets may use it to construct, audit, or stress one source-side coupling-law candidate. | not source-law adoption<br>not detector semantics<br>not coupling-law adoption<br>not matter-coupling derivation<br>not stress-energy semantics<br>not matter action<br>not Einstein equations<br>not benchmark promotion<br>not completed derivation | Construct, audit, or stress one source-side coupling-law candidate from the scoped evidence/preconditions before any matter-coupling derivation or adoption claim. |
+| `matter_coupling` | The unchanged finite P7SourceMatterPackage_v1 is adopted as canonical physical source matter by explicit protected human postulate. | The adoption is limited to the exact P7-T01 through P7-T06 source-side package, its declared finite domains, and the current continuum-first source architecture. | Later bounded packets may use the exact adopted source-matter meanings as scoped P8 input while independently constructing or obstructing g_eff-dependent target coupling. | not source-law adoption<br>not target matter semantics<br>not target detector semantics<br>not unscoped or target coupling-law adoption<br>not matter-coupling derivation<br>not target matter-coupling adoption<br>not target stress-energy semantics or tensor<br>not target matter action<br>not coupling through a derived g_eff<br>not Einstein equations<br>not benchmark promotion<br>not completed derivation | Derive or precisely obstruct the g_eff-dependent source-to-target coupling bridge without treating the protected source-side postulate as a derivation. |
 | `einstein_equations` | einstein_equations remains blocked with open continuation and no positive derivation status. | No Einstein-equation premise, derivation, benchmark closure, or completed derivation has been established. | Later bounded packets may use this row only as a visible downstream burden and claim-boundary guard. | not field equations derived<br>not dynamics or action established<br>not matter coupling established<br>not benchmark closure<br>not completed derivation | Derive lawful dynamics/action/variation and matter coupling under protected gates before any Einstein-equation derivation claim. |
 | `benchmark_promotion` | benchmark_promotion remains blocked by upstream derivation burdens and protected authority. | No exact-GR benchmark promotion, benchmark closure, fit claim, Gate Chair verdict, or completed derivation follows from scoped evidence/preconditions. | Later bounded packets may use this row only as a protected downstream authority boundary. | not benchmark promoted<br>not exact-GR derivation complete<br>not benchmark fit accepted<br>not Gate Chair verdict<br>not completed derivation | Complete upstream derivation burdens and protected Gate Chair benchmark review before any benchmark promotion or completed-derivation claim. |
 
@@ -97,8 +97,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `90234d5dfa278db16472d3cdf86d6fb8159db74b5349f4985ff5bd560d3b5bb7`
-- JSON SHA-256: `c7be934837a95fc6c92011e402e29eac8bdcadd31e39b4217e62fee59febfeb9`
+- YAML SHA-256: `4d53530847b08c58ea572dd5b5ab732d154ecd34fb86fdbc3a5e1daf12b95156`
+- JSON SHA-256: `913ff843431b47cb72d38600e8978a5ead7c2c314f13082eaecdf97de556889c`
 
 ## Authority Warning
 

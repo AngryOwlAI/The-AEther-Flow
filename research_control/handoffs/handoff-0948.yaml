@@ -1,0 +1,261 @@
+validation_status: "PASS_PRECHECKPOINT"
+handoff_id: "handoff-0948"
+handoff_number: 948
+handoff_kind: "project_system_recovery"
+task_id: "RT-20260803-006"
+decision_id: "DDR-20260803-006"
+job_id: "AJ-RT-20260803-006-001"
+completion_id: "AJC-AJ-RT-20260803-006-001"
+completion_path: "research_control/tasks/RT-20260803-006/jobs/completions/AJC-AJ-RT-20260803-006-001.yaml"
+completion_sha256: "b8b203104006dc28ce1e87987eec839d3c90d93df09d793490b4d7c3b2e56f31"
+status: "ready_after_checkpoint"
+created_at: "2026-08-03T10:00:44Z"
+parent_handoff_id: "handoff-0947"
+plan_task_id: "P16-T02"
+recovery_for_plan_task_id: "P16-T02"
+source_role_id: "validator-engineer"
+source_role_version: "0.2.0"
+source_execution_role_ref: "validator-engineer@0.2.0--RT-20260803-006"
+summary: "Generation 234 preserves the sealed P10-T05 recovery receipt renderer manifest and implemented P16-T02 status payload; adds one exact fail-closed chain from historical observation through predecessor-current authority to the implemented renderer bytes; restores P10-T05 and P10 migration readiness; and resolves PIS-RT-20260803-003-001 against a PASS_PRECHECKPOINT completion. One governed checkpoint remains before the fresh P16-T02 canonical alignment re-audit."
+next_action: "Run one governed checkpoint for AJ-RT-20260803-006-001. After it commits, run one fresh bounded P16-T02 Gate A-E canonical alignment re-audit before P16-T03 or P16-T04."
+current_claim_boundary: "CB-V21-P16-T02-CURRENT-RENDERER-AUTHORITY-BINDING-RECOVERY-001"
+loop_risk_route: "reaudit_p16_t02_after_status_layer_repair_v1"
+
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260803-006"
+  latest_research_handoff_id: "handoff-0948"
+  latest_research_next_action: "Run one governed checkpoint for AJ-RT-20260803-006-001. After it commits, run one fresh bounded P16-T02 Gate A-E canonical alignment re-audit before P16-T03 or P16-T04."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+  project_improvement_sidecar_required: false
+  research_handoff_remains_authoritative: true
+
+claim_boundary:
+  allowed_next_scope: "One governed RT-20260803-006 checkpoint followed by one fresh bounded P16-T02 canonical Gate A-E alignment re-audit that preserves every Gate decision and tests whether the repaired status layers now agree."
+  completed_task: "RT-20260803-006"
+  completed_completion_path: "research_control/tasks/RT-20260803-006/jobs/completions/AJC-AJ-RT-20260803-006-001.yaml"
+  completed_completion_sha256: "b8b203104006dc28ce1e87987eec839d3c90d93df09d793490b4d7c3b2e56f31"
+  source_handoff_id: "handoff-0947"
+  source_handoff_path: "research_control/handoffs/handoff-0947.yaml"
+  source_handoff_sha256: "a31312bea72d3fcb88d86d7ae2bb9835ef587f1c61faa1d3251993913bbf5fb8"
+  immutable_route_sha256: "d952f738bd2d74e2b6b370fef24d2cbc49ecc1e688d508361ec9f20e537464c6"
+  route_blocker_fingerprint: "4d2a1d14d91270583e4144c433ec201cf4498061655e260dba4ef313c6eef682"
+  result_status: "PASS_CURRENT_RENDERER_AUTHORITY_CHAIN_READY_FOR_CHECKPOINT"
+  historical_recovery_receipt_path: "research_control/tasks/RT-20260801-014/artifacts/p10_t05_historical_renderer_binding_recovery_receipt.json"
+  historical_recovery_receipt_sha256: "d32a02c466a2471316ccb372172b292c8fa23014917987d9ee58990697192d21"
+  renderer_manifest_path: "research_control/tasks/RT-20260801-011/artifacts/generated_report_renderer_update_manifest_v1.json"
+  renderer_manifest_sha256: "d92fd0f636510d07a86cc7112fcc2a5243d77fc69959a13dc209f9ea7c90329a"
+  recovery_receipt_path: "research_control/tasks/RT-20260803-006/artifacts/p16_t02_current_renderer_authority_binding_recovery_receipt.json"
+  recovery_receipt_sha256: "a98d0c3948687b87b09e00691c7fa766ce9c65e9f3cb14c50dc3198b833e2c9e"
+  event_store_validator_path: "research_control/tasks/RT-20260721-007/artifacts/validate_v21_event_store_architecture.py"
+  event_store_validator_sha256: "e1ff3b1798aee346e870b0ed741226dcb9554ebc9e80813ca41f0246f885afef"
+  event_store_test_path: "tests/test_event_store_architecture.py"
+  event_store_test_sha256: "14b9d2fc850259f1e91f5475ec2f28b91b5d372cec7b5752e4b7aefa046480e1"
+  focused_test_count: 34
+  protected_hash_mismatch_count: 0
+  checkpoint_invocation_count_before_handoff: 0
+  checkpoint_committed_before_handoff: false
+  source_status_taxonomy_signal_id: "PIS-RT-20260803-003-001"
+  source_status_taxonomy_signal_status: "resolved"
+  p16_t02_science_payload_modified_by_recovery: false
+  p16_t02_reaudit_executed: false
+  p16_t03_executed: false
+  p16_t04_executed: false
+  scientific_status_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  ontology_adoption_authorized: false
+  source_law_adoption_authorized: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  external_action_authorized: false
+  push_performed: false
+  blocked_claims:
+    - "project-system renderer compatibility presented as scientific progress"
+    - "historical evidence presented as rewritten or mutable"
+    - "P16-T02 presented as closed before the fresh canonical re-audit"
+    - "P16-T03 or P16-T04 presented as executed before the re-audit"
+    - "Gate change target matter coupling Einstein equations benchmark promotion proof external review publication push or completed derivation"
+
+plan_result:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  phase_id: "P16"
+  plan_task_id: "P16-T02"
+  recovery_for_plan_task_id: "P16-T02"
+  title: "Restore the P16-T02 current-renderer authority chain"
+  result_status: "P16_T02_CURRENT_RENDERER_AUTHORITY_CHAIN_RECOVERY_PASS"
+  work_item_status: "repair_completed"
+  protected_p16_t02_payload_byte_preserved: true
+  sealed_p10_evidence_byte_preserved: true
+  current_renderer_authority_chain_complete: true
+  p10_t05_status: "PASS"
+  p10_migration_readiness_status: "PASS"
+  project_improvement_signal_status: "resolved"
+  p16_t02_reaudit_dependency_ready_after_checkpoint: true
+  p16_t02_reaudit_dependency_ready_now: false
+  p16_t02_reaudit_executed: false
+  p16_t03_executed: false
+  p16_t04_executed: false
+  scientific_claims_changed_by_recovery: false
+  distance_to_gr_delta_changed_by_recovery: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+distance_to_gr:
+  changed: false
+  effect: "none_project_system_renderer_binding_recovery"
+  burden_id: "benchmark_promotion"
+  milestone: "benchmark_promotion"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "The implemented P16-T02 control payload and its benchmark-promotion burden are preserved; this validator recovery contributes no physics movement."
+  downstream_unlocked:
+    - "fresh P16-T02 canonical alignment re-audit after the governed checkpoint"
+  downstream_still_blocked:
+    - "P16-T02 re-audit until checkpoint"
+    - "P16-T03 and P16-T04 until the re-audit"
+    - "benchmark promotion proof publication external action or completed derivation"
+
+required_next_packet:
+  task_type: "v21_p16_t02_gate_authority_consistency_reaudit"
+  plan_task_id: "P16-T02"
+  work_item_id: "P16-T02"
+  objective: "Freshly audit the repaired Gate A-E status layers against exact canonical authority and determine whether P16-T02 is now aligned or whether one precise remaining obstruction exists."
+  dependency_ready_after_checkpoint: true
+  dependency_ready_now: false
+  exact_human_authorization_required: false
+  executed: false
+
+selected_next_route:
+  route_id: "v21_p16_t02_gate_authority_consistency_reaudit_after_status_repair"
+  route_label: "external-review-packet"
+  role_family: "external-red-team-reviewer@0.1.0"
+  worker_skill: "continue-research"
+  selected_next_packet_type: "post_repair_canonical_alignment_audit"
+  task_type: "v21_p16_t02_gate_authority_consistency_reaudit"
+  plan_task_id: "P16-T02"
+  work_item_id: "P16-T02"
+  target_derivation_milestone: "benchmark_promotion"
+  milestone_burden: "Prevent downstream status laundering at plan closure."
+  strategy_id: "reaudit_p16_t02_after_status_layer_repair_v1"
+  required_predecessor_signal_id: "PIS-RT-20260803-003-001"
+  required_predecessor_sidecar_id: "improve-project-handoff_20260803_003"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  physics_promotion_authorized: false
+  executed: false
+  next_action: "Remain unexecuted until the RT-20260803-006 checkpoint commits."
+  source_handoff: "research_control/handoffs/handoff-0948.yaml"
+
+ordinary_route_guard:
+  schema_id: "ordinary_route_guard_evaluation_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  evaluation_id: "ORE-HANDOFF-0948"
+  ordinary_handoff_id: "handoff-0948"
+  threshold: 3
+  consecutive_project_system_tasks_before_selection: 2
+  ready_science_plan_task_ids: []
+  selected_plan_task_id: "P16-T02"
+  selected_route_class: "physics_bearing"
+  selected_worker_skill: "continue-research"
+  outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  exception_receipt:
+    active: false
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+active_state_boundary:
+  active_task_id: "RT-20260803-006"
+  active_job_id: "AJ-RT-20260803-006-001"
+  current_status: "p16_t02_current_renderer_binding_recovered_ready_for_checkpoint"
+  checkpoint_required: true
+  checkpoint_completed: false
+  checkpoint_invocation_count: 0
+  project_system_recovery_completed: true
+  p16_t02_payload_byte_preserved: true
+  source_status_taxonomy_signal_status: "resolved"
+  selected_next_plan_task_id: "P16-T02"
+  selected_next_worker_skill: "continue-research"
+  selected_next_role_family: "external-red-team-reviewer@0.1.0"
+  selected_next_route_label: "external-review-packet"
+  selected_next_strategy_id: "reaudit_p16_t02_after_status_layer_repair_v1"
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 234 validated atomically claimed and consumed its exact immutable recovery route once."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The tracked recovery receipt proves the exact two-renderer predecessor-to-current chain and preserves all sealed evidence."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Focused P10 affected documentation signal research-control memory and whitespace gates pass."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "One governed checkpoint remains; the fresh P16-T02 re-audit is not executed before it."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Tracked frontier task-index graph registry and wiki derivatives are fresh."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory synchronization and validate-only pass."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Integrated research-control validation has no hard claim-language error."
+
+authorization_layers:
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  submission_authorized: false
+  public_release_authorized: false
+  reviewer_contact_authorized: false
+  protected_scoped_gate_review_authorized: false
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  source_law_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+project_improvement_signals: []
+open_project_improvement_signal_ids: []
+resolved_project_improvement_signals:
+  - "PIS-RT-20260803-003-001"
+project_improvement_bridge:
+  required: true
+  improvement_handoff_path: "research_control/project_improvement_handoffs/improve-project-handoff_20260803_003.yaml"
+  signal_ids:
+    - "PIS-RT-20260803-003-001"
+  bridge_status: "resolved_pass_precheckpoint"
+  sidecar_supersedes_research_handoff: false
+  notes: "The sidecar is resolved against AJ-RT-20260803-006-001 and does not supersede this ordinary research handoff."
+handoff_authority_boundary: "This project-system handoff records exact renderer source lineage and selects no scientific result. It changes no Gate status science benchmark publication external-review outward-action or completed-derivation authority."
+next_plan_task_id: "P16-T02"
+next_plan_task_execution_ready_after_checkpoint: true
+next_plan_task_executed: false
+notes: "Checkpoint locally without push. After the checkpoint run only the fresh P16-T02 canonical alignment re-audit; P16-T03 and P16-T04 remain unexecuted."

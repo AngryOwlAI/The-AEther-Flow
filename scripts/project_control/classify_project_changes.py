@@ -154,6 +154,11 @@ CLAIM_LANGUAGE_PATH_PATTERNS = (
     "research_control/handoffs/*.yaml",
     "registries/*.csv",
 )
+STATUS_CALIBRATION_CONTROL_PATHS = {
+    "research_control/design/accepted_status_calibration_v1.yaml",
+    "research_control/design/accepted_status_calibration_v2.yaml",
+    "research_control/design/distance_to_gr_status_aliases.yaml",
+}
 VALIDATION_GATE_MANIFEST_PATH = (
     "research_control/design/validation_gate_manifest_v1.yaml"
 )
@@ -559,7 +564,10 @@ def classify_path_family(path: str, registry: RegistryIndex) -> dict[str, object
     if is_control_state_path(path):
         tags.add("control_state")
         reasons.add("path_rule:control_state")
-    if path_matches(path, CLAIM_LANGUAGE_PATH_PATTERNS):
+    if (
+        path in STATUS_CALIBRATION_CONTROL_PATHS
+        or path_matches(path, CLAIM_LANGUAGE_PATH_PATTERNS)
+    ):
         tags.add("claim_language")
         reasons.add("path_rule:claim_language")
     if (
@@ -567,6 +575,7 @@ def classify_path_family(path: str, registry: RegistryIndex) -> dict[str, object
         or path.startswith(".agents/schemas/")
         or path_matches(path, [".codex/skills/*/SKILL.md"])
         or path.startswith(".codex/skills/continue-research-goal/scripts/")
+        or path in STATUS_CALIBRATION_CONTROL_PATHS
         or path == VALIDATION_GATE_MANIFEST_PATH
         or path == VALIDATION_OBLIGATION_CATALOG_PATH
         or any(source.role in {"control_schema", "control_policy"} for source in sources)

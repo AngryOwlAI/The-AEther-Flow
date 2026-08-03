@@ -1,0 +1,61 @@
+{
+  "authority_boundary": {
+    "event_store_cutover_authorized": false,
+    "generated_views_are_authority": false,
+    "historical_artifacts_rewritten": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "scientific_claims_changed": false,
+    "status_payload_reinterpreted": false
+  },
+  "goal_receipt": {
+    "blocker_fingerprint": "4d2a1d14d91270583e4144c433ec201cf4498061655e260dba4ef313c6eef682",
+    "claim_token": "7dfc936a2e93dac423b3e23f0e62cfa53686b50c75e66b86",
+    "generation": 234,
+    "goal_id": "crg-20260720T161354Z-96bc2664ce31bfe0",
+    "idempotency_key": "crg-20260720T161354Z-96bc2664ce31bfe0:234",
+    "route_sha256": "d952f738bd2d74e2b6b370fef24d2cbc49ecc1e688d508361ec9f20e537464c6",
+    "strategy_id": "recover_p16_t02_event_store_renderer_current_authority_binding_v1"
+  },
+  "job_id": "AJ-RT-20260803-006-001",
+  "plan_task_id": "P16-T02",
+  "previous_authority": {
+    "historical_recovery_receipt_path": "research_control/tasks/RT-20260801-014/artifacts/p10_t05_historical_renderer_binding_recovery_receipt.json",
+    "historical_recovery_receipt_sha256": "d32a02c466a2471316ccb372172b292c8fa23014917987d9ee58990697192d21",
+    "renderer_manifest_path": "research_control/tasks/RT-20260801-011/artifacts/generated_report_renderer_update_manifest_v1.json",
+    "renderer_manifest_sha256": "d92fd0f636510d07a86cc7112fcc2a5243d77fc69959a13dc209f9ea7c90329a"
+  },
+  "renderer_transitions": [
+    {
+      "current_sha256": "62ed4741bcafe652c03f742a022a2f2fa47e3f132f97f0dd8fdb065e5e2e5ba6",
+      "historical_sha256": "7f01e0e6267bcb43c96c087c7dfd06b8a10ed6450c194324232019485c95a6ca",
+      "path": "scripts/research_control/render_current_frontier.py",
+      "prior_approved_current_sha256": "ebbeddc0d5b07bc5130ce093053891a376a264c1d029019cefa7de756697770d",
+      "transition_kind": "authorized_current_source_update"
+    },
+    {
+      "current_sha256": "7c28b13a1f9843a300ce16bff2c09801549209927a41872efc02a6d0bfc0a023",
+      "historical_sha256": "aa495487e6cb39d1b8b17718207b8ddea70959474115f4a79494919790f79152",
+      "path": "scripts/research_control/render_task_index.py",
+      "prior_approved_current_sha256": "7c28b13a1f9843a300ce16bff2c09801549209927a41872efc02a6d0bfc0a023",
+      "transition_kind": "unchanged_current_source"
+    }
+  ],
+  "schema_id": "p16_t02_current_renderer_authority_binding_recovery_v1",
+  "status": "PASS_EXACT_CURRENT_RENDERER_AUTHORITY_CHAIN_BOUND",
+  "strategy_id": "recover_p16_t02_event_store_renderer_current_authority_binding_v1",
+  "task_id": "RT-20260803-006",
+  "triggering_change": {
+    "blocker_path": "research_control/tasks/RT-20260803-005/artifacts/validation_blocker_p16_t02_event_store_renderer_binding_v1.yaml",
+    "blocker_sha256": "c2ccc5e9407ead8883cc68ba488b2645a4458ab7a1cd4e88c92ec6300c9ec05f",
+    "completion_path": "research_control/tasks/RT-20260803-005/jobs/completions/AJC-AJ-RT-20260803-005-001.yaml",
+    "completion_sha256": "ae897b05c79ade3d78d13de26591708ecf27ba2e809f05437f90ecb45d19c8e8",
+    "source_head": "334987d240390c3a7cd9522e92e9b283f4a2b7f9",
+    "source_job_id": "AJ-RT-20260803-005-001",
+    "source_task_id": "RT-20260803-005",
+    "status_contract_receipt_path": "research_control/tasks/RT-20260803-005/artifacts/p16_t02_gate_status_layer_contract_validation.json",
+    "status_contract_receipt_sha256": "330c35edb94d153553f33e449bfa94b2a3e88c435cb6ce99e95f7a89d56fc401",
+    "status_contract_validator_path": "research_control/tasks/RT-20260803-005/artifacts/validate_p16_t02_gate_status_layer_contract.py",
+    "status_contract_validator_sha256": "9ba655982225774beef866ec43f0a8fd116182f8987088afab78736fec5ac5e7"
+  }
+}

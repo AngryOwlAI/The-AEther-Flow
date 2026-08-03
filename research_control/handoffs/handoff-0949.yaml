@@ -1,0 +1,257 @@
+validation_status: "FAIL"
+handoff_id: "handoff-0949"
+handoff_number: 949
+handoff_kind: "project_system_recovery"
+task_id: "RT-20260803-007"
+decision_id: "DDR-20260803-007"
+job_id: "AJ-RT-20260803-007-001"
+completion_id: "AJC-AJ-RT-20260803-007-001"
+completion_path: "research_control/tasks/RT-20260803-007/jobs/completions/AJC-AJ-RT-20260803-007-001.yaml"
+completion_sha256: "61ad6677e338dae7b1946a8eb757fb28ce1c65686d7850db2207ba7640017b1a"
+status: "blocked_checkpoint"
+created_at: "2026-08-03T11:34:22Z"
+parent_handoff_id: "handoff-0948"
+plan_task_id: "P16-T03"
+recovery_for_plan_task_id: "P16-T02"
+source_role_id: "validator-engineer"
+source_role_version: "0.2.0"
+source_execution_role_ref: "validator-engineer@0.2.0--RT-20260803-007"
+summary: "Generation 235 classifies exactly three P16-T02 status-calibration YAML control contracts through stable claim-language and role-or-schema tags while preserving their bytes and unrelated-path fallback. All precheckpoint gates pass, but the sole checkpoint attempt fails staged documentation-impact acceptance because the cumulative RT-005 and RT-006 receipts omit FOLDER_MAP.md after memory synchronization. The index restores and no commit occurs."
+next_action: "Run one distinct improve-project-system recovery that adds the generation-235 blocker artifact to changed_paths and FOLDER_MAP.md to generated_derivatives in the exact RT-20260803-005 and RT-20260803-006 documentation-impact receipts, regenerates and revalidates the cumulative transaction, and invokes at most one fresh governed checkpoint without executing P16-T03 payload work."
+current_claim_boundary: "CB-V21-P16-T02-STATUS-CALIBRATION-DESIGN-PATH-CLASSIFIER-RECOVERY-001"
+loop_risk_route: "recover_generation_235_checkpoint_documentation_impact_folder_map_coverage_v1"
+
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260803-007"
+  latest_research_handoff_id: "handoff-0949"
+  latest_research_next_action: "Run one distinct improve-project-system recovery that adds the generation-235 blocker artifact to changed_paths and FOLDER_MAP.md to generated_derivatives in the exact RT-20260803-005 and RT-20260803-006 documentation-impact receipts, regenerates and revalidates the cumulative transaction, and invokes at most one fresh governed checkpoint without executing P16-T03 payload work."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+  project_improvement_sidecar_required: false
+  research_handoff_remains_authoritative: true
+
+claim_boundary:
+  allowed_next_scope: "One distinct improve-project-system recovery may add only the generation-235 blocker artifact to changed_paths and FOLDER_MAP.md to generated_derivatives in the exact cumulative RT-20260803-005 and RT-20260803-006 documentation-impact receipts, regenerate and revalidate the transaction, and invoke at most one fresh governed checkpoint without executing P16-T03 payload work."
+  completed_task: "RT-20260803-007"
+  completed_completion_path: "research_control/tasks/RT-20260803-007/jobs/completions/AJC-AJ-RT-20260803-007-001.yaml"
+  completed_completion_sha256: "61ad6677e338dae7b1946a8eb757fb28ce1c65686d7850db2207ba7640017b1a"
+  source_handoff_id: "handoff-0948"
+  source_handoff_path: "research_control/handoffs/handoff-0948.yaml"
+  source_handoff_sha256: "54700bd0a8ebcca9230da70d612792803f8b3af4b6799c051280dc5f6b402819"
+  immutable_route_sha256: "63ac7f16b6e6ab340ea8a4eca91664252468ea5f2eec4025f63f6121793e58f4"
+  route_blocker_fingerprint: "01c38f0b0767a8afa8cae561b25a734b8f9a55a8c5de21ab5f64ee68005f8948"
+  result_status: "BLOCKED_CHECKPOINT_STAGED_DOCUMENTATION_IMPACT_FOLDER_MAP_COVERAGE"
+  recovery_receipt_path: "research_control/tasks/RT-20260803-007/artifacts/p16_t02_status_calibration_design_path_classifier_recovery_receipt.json"
+  recovery_receipt_sha256: "2ae81308115dded3915008320cb6da877c911c529090c93f9c422e0cf39ab05c"
+  checkpoint_blocker_path: "research_control/tasks/RT-20260803-007/artifacts/checkpoint_blocker_generation_235_documentation_impact_folder_map_v1.yaml"
+  checkpoint_blocker_sha256: "9364483cbc3d3c1afb3b062f8a342d044aacce18fac7f449bdff6ae9628f0868"
+  classifier_path: "scripts/project_control/classify_project_changes.py"
+  classifier_sha256: "785a1a8b312fd2537a60b3e4931bd4b1b93ed569ce05a2075c93929c36953465"
+  test_path: "tests/test_project_change_classifier.py"
+  test_sha256: "fe1e91c71983e269fdd7403e7e473d6fc4958ccae6749079c86ec00de63218b9"
+  exact_path_count: 3
+  exact_tag_count: 2
+  focused_test_count: 22
+  protected_hash_mismatch_count: 0
+  cumulative_unknown_path_count: 0
+  cumulative_blocked_path_count: 0
+  checkpoint_invocation_count_before_handoff: 1
+  checkpoint_committed_before_handoff: false
+  p16_t02_status_contracts_modified_by_recovery: false
+  p16_t02_reaudit_executed: false
+  p16_t03_payload_executed: false
+  p16_t04_executed: false
+  scientific_status_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  ontology_adoption_authorized: false
+  source_law_adoption_authorized: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  external_action_authorized: false
+  push_performed: false
+  blocked_claims:
+    - "project-system path classification presented as scientific progress"
+    - "status-calibration contract semantics presented as changed"
+    - "P16-T02 presented as closed before the fresh canonical re-audit"
+    - "P16-T03 payload presented as executed by checkpoint reconciliation"
+    - "Gate change target matter coupling Einstein equations benchmark promotion proof publication push or completed derivation"
+
+plan_result:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  phase_id: "P16"
+  plan_task_id: "P16-T02"
+  recovery_for_plan_task_id: "P16-T02"
+  title: "Restore P16-T02 status-calibration checkpoint classification"
+  result_status: "P16_T02_STATUS_CALIBRATION_PATH_CLASSIFIER_RECOVERY_PASS_CHECKPOINT_BLOCKED_DOCUMENTATION_IMPACT"
+  work_item_status: "blocked_checkpoint_recovery_required"
+  protected_p16_t02_payload_byte_preserved: true
+  protected_status_contract_bytes_preserved: true
+  exact_classifier_binding_complete: true
+  p16_t02_reaudit_dependency_ready_after_checkpoint_reconciliation: true
+  p16_t02_reaudit_dependency_ready_now: false
+  p16_t02_reaudit_executed: false
+  p16_t03_payload_executed: false
+  p16_t04_executed: false
+  scientific_claims_changed_by_recovery: false
+  distance_to_gr_delta_changed_by_recovery: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+distance_to_gr:
+  changed: false
+  effect: "none_project_system_status_calibration_path_classifier_recovery"
+  burden_id: "benchmark_promotion"
+  milestone: "benchmark_promotion"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "The implemented P16-T02 status payload and benchmark-promotion burden are preserved; path classification contributes no physics movement."
+  downstream_unlocked:
+    - "checkpoint reconciliation after the governed checkpoint"
+  downstream_still_blocked:
+    - "fresh P16-T02 re-audit until checkpoint reconciliation"
+    - "P16-T03 payload and P16-T04 until the re-audit"
+    - "benchmark promotion proof publication external action or completed derivation"
+
+required_next_packet:
+  task_type: "project_system_generation_235_checkpoint_documentation_impact_folder_map_coverage_recovery"
+  plan_task_id: "P16-T03"
+  recovery_for_plan_task_id: "P16-T02"
+  work_item_id: "P16-T02"
+  objective: "Add the generation-235 blocker artifact to changed_paths and FOLDER_MAP.md to generated_derivatives in the exact cumulative RT-005 and RT-006 documentation-impact receipts, regenerate and revalidate, and invoke at most one fresh governed checkpoint without executing P16-T03 payload work."
+  dependency_ready_after_checkpoint: false
+  dependency_ready_now: true
+  exact_human_authorization_required: false
+  executed: false
+
+selected_next_route:
+  route_id: "generation_235_checkpoint_documentation_impact_folder_map_coverage_recovery"
+  route_label: "project-system-checkpoint-recovery"
+  role_family: "process-integrity-auditor@0.1.0"
+  worker_skill: "improve-project-system"
+  selected_next_packet_type: "documentation_impact_folder_map_coverage_checkpoint_recovery"
+  task_type: "project_system_generation_235_checkpoint_documentation_impact_folder_map_coverage_recovery"
+  plan_task_id: "P16-T03"
+  work_item_id: "P16-T02"
+  target_derivation_milestone: "none"
+  milestone_burden: "Project-system cumulative documentation-impact coverage and checkpoint recovery only; no P16-T03 audit payload or derivation burden advances."
+  strategy_id: "recover_generation_235_checkpoint_documentation_impact_folder_map_coverage_v1"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: false
+  execution_ready_now: true
+  physics_promotion_authorized: false
+  executed: false
+  p16_t03_payload_execution_authorized: false
+  next_action: "Repair only the exact blocker-artifact changed_paths and FOLDER_MAP.md generated_derivatives omissions in the two cumulative receipts, regenerate and revalidate, and invoke at most one fresh checkpoint; do not execute P16-T03 payload work."
+  source_handoff: "research_control/handoffs/handoff-0949.yaml"
+
+ordinary_route_guard:
+  schema_id: "ordinary_route_guard_evaluation_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  evaluation_id: "ORE-HANDOFF-0949"
+  ordinary_handoff_id: "handoff-0949"
+  threshold: 3
+  consecutive_project_system_tasks_before_selection: 2
+  ready_science_plan_task_ids: []
+  selected_plan_task_id: "P16-T03"
+  selected_route_class: "project_system"
+  selected_worker_skill: "improve-project-system"
+  outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  exception_receipt:
+    active: false
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+active_state_boundary:
+  active_task_id: "RT-20260803-007"
+  active_job_id: "AJ-RT-20260803-007-001"
+  current_status: "p16_t02_status_calibration_path_classifier_recovered_checkpoint_blocked_documentation_impact_folder_map_coverage"
+  checkpoint_required: true
+  checkpoint_completed: false
+  checkpoint_invocation_count: 1
+  project_system_recovery_completed: true
+  p16_t02_payload_byte_preserved: true
+  selected_next_plan_task_id: "P16-T03"
+  selected_next_worker_skill: "improve-project-system"
+  selected_next_role_family: "process-integrity-auditor@0.1.0"
+  selected_next_route_label: "project-system-checkpoint-recovery"
+  selected_next_strategy_id: "recover_generation_235_checkpoint_documentation_impact_folder_map_coverage_v1"
+  selected_next_execution_ready_after_checkpoint: false
+  selected_next_execution_ready_now: true
+  p16_t03_payload_execution_authorized: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 235 atomically claimed and consumed its exact immutable recovery route once."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The tracked receipt proves exact three-path classification and byte preservation."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Focused, control-spine, documentation-impact, whitespace, and 1,293-test repository-wide precheckpoint gates pass."
+  post_checkpoint:
+    status: "FAIL"
+    evidence:
+      - "The sole checkpoint attempt failed staged documentation-impact acceptance on the two exact FOLDER_MAP.md omissions; the index restored and no commit occurred."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Tracked frontier, task-index, dependency-graph, registry, wiki, and live-report derivatives are fresh."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory synchronization and validate-only checks pass."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation reports no hard failure."
+
+authorization_layers:
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  submission_authorized: false
+  public_release_authorized: false
+  reviewer_contact_authorized: false
+  protected_scoped_gate_review_authorized: false
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  source_law_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+project_improvement_signals: []
+open_project_improvement_signal_ids: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"
+  sidecar_supersedes_research_handoff: false
+  notes: "The classifier recovery originated from immutable checkpoint evidence rather than a new open sidecar signal."
+handoff_authority_boundary: "This project-system handoff records deterministic path classification, one failed checkpoint, and one exact documentation-impact recovery route only. It changes no Gate science benchmark publication external-review outward-action or completed-derivation authority."
+next_plan_task_id: "P16-T03"
+next_plan_task_execution_ready_after_checkpoint: false
+next_plan_task_execution_ready_now: true
+next_plan_task_executed: false
+notes: "Do not retry the failed checkpoint in AJ-RT-20260803-007-001. The next distinct project-system recovery may add only the generation-235 blocker artifact to changed_paths and FOLDER_MAP.md to generated_derivatives in both exact cumulative receipts, regenerate and revalidate, and invoke at most one fresh governed checkpoint. P16-T03 payload work remains unauthorized and the fresh P16-T02 re-audit remains required afterward."

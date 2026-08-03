@@ -1,0 +1,103 @@
+{
+  "schema_id": "generation_235_documentation_impact_folder_map_coverage_recovery_receipt_v1",
+  "status": "PASS_PRECHECKPOINT",
+  "task_id": "RT-20260803-008",
+  "job_id": "AJ-RT-20260803-008-001",
+  "goal_id": "crg-20260720T161354Z-96bc2664ce31bfe0",
+  "goal_generation": 236,
+  "source_head": "334987d240390c3a7cd9522e92e9b283f4a2b7f9",
+  "strategy_id": "recover_generation_235_checkpoint_documentation_impact_folder_map_coverage_v1",
+  "source_task_id": "RT-20260803-007",
+  "source_job_id": "AJ-RT-20260803-007-001",
+  "source_handoff_id": "handoff-0949",
+  "checkpoint_invocation_count": 0,
+  "checkpoint_status": "PENDING_ONE_DISTINCT_INVOCATION",
+  "repair": {
+    "status": "PASS",
+    "blocker_path": "research_control/tasks/RT-20260803-007/artifacts/checkpoint_blocker_generation_235_documentation_impact_folder_map_v1.yaml",
+    "folder_map_path": "FOLDER_MAP.md",
+    "target_receipts": [
+      {
+        "path": "research_control/tasks/RT-20260803-005/documentation_impact.yaml",
+        "sha256_before": "a01203d6adc7472850beae0a3ec3919a94e480cd29a2a18ef6de7bbb765c7294",
+        "sha256_after_direct_repair": "82d3f8e52374e584da719e37589c76d4a88494676d94c4ea13ed34af88806cc4",
+        "blocker_changed_paths_count": 1,
+        "folder_map_generated_derivatives_count": 1
+      },
+      {
+        "path": "research_control/tasks/RT-20260803-006/documentation_impact.yaml",
+        "sha256_before": "ec27cc3fbf25abffda126b92e6c1a0d89993522a48ceaec5443af5577c2f78b5",
+        "sha256_after_direct_repair": "a5a5d686ea5076537f41b86ac6297e3d84de8a435e5a015a25ad40530dc2dde8",
+        "blocker_changed_paths_count": 1,
+        "folder_map_generated_derivatives_count": 1
+      }
+    ],
+    "direct_documentation_impact_validation": "PASS",
+    "total_blocker_changed_paths_count": 2,
+    "total_folder_map_generated_derivatives_count": 2
+  },
+  "immutable_route": {
+    "worker_skill": "improve-project-system",
+    "work_item_id": "P16-T02",
+    "plan_task_id": "P16-T02",
+    "recovery_for_plan_task_id": "P16-T02",
+    "route_sha256": "f861f21960a383631fe53688b91fd7f6655e9661f0828d961f00b6a46f034e07",
+    "route_blocker_fingerprint": "41cda949e9682555e7e8a0b67fd38a3e9c6c4e10daefcec93d6302047e4c2e65",
+    "route_dirty_state_manifest_sha256": "78500f06b8e76dd867864257560f19df0dfa1bf09352885a7b6c3f07c59e4e2a",
+    "failed_operational_receipt_sha256": "44b543430ecb4caa685a470dc298f27f94423a2da8e419559b36a8edad15c611",
+    "tracked_blocker_sha256": "9364483cbc3d3c1afb3b062f8a342d044aacce18fac7f449bdff6ae9628f0868"
+  },
+  "protected_evidence": {
+    "source_handoff_yaml_sha256": "dcfa19917488e50951e6042274e90c29345664ba5714d7be1a5ecf8c960ad905",
+    "source_handoff_markdown_sha256": "1f8e80e2a8c9f8f8ad5eb16765fc70c0ad2ccaa1dc60b15a5852a79ed12b2436",
+    "source_program_state_sha256": "464b98bcd14aeee06ab1a8f7c9edd285ebef5ef3b98fe6c5640e56fb79bdd2ea",
+    "source_task_sha256": "2ec272d53c3fc8e46a2e774fa187bd252b65a0301eb90fc657aad2c3e5ec90c6",
+    "source_decision_sha256": "f8e284d9e86b65f2d2c363437325fdef219a7720efb9bb0529f2fe53cdbb77a4",
+    "source_job_sha256": "aa470802d99411f816f1a234e5a5417502ca99e85012208bc638d8a2fad63e6b",
+    "source_completion_sha256": "61ad6677e338dae7b1946a8eb757fb28ce1c65686d7850db2207ba7640017b1a",
+    "source_role_sha256": "f6356e78e31943ed76df891624c1650c5128dd2d3d34f4d776f8a85aa2a7880f",
+    "source_recovery_receipt_sha256": "2ae81308115dded3915008320cb6da877c911c529090c93f9c422e0cf39ab05c",
+    "source_checkpoint_blocker_sha256": "9364483cbc3d3c1afb3b062f8a342d044aacce18fac7f449bdff6ae9628f0868",
+    "accepted_status_calibration_v1_sha256": "0a14357adc7793fe28c97743cb1a5df788e4fb8738cd5ff1af1e9202ef8a4b51",
+    "accepted_status_calibration_v2_sha256": "cfc0f83001e74dad94cae326238d81cad9e97b50ae7c9703260ee1e6e0bb64e1",
+    "distance_to_gr_status_aliases_sha256": "cad6dcc8142f74f280d0c408c5ff290f6750dba4bc23e8adb9a03c94dd83c927",
+    "protected_hash_mismatch_count": 0
+  },
+  "preservation": {
+    "generation_235_job_reexecuted": false,
+    "generation_235_checkpoint_replayed": false,
+    "generation_235_payload_modified": false,
+    "status_calibration_contracts_modified": false,
+    "p16_t02_reaudit_executed": false,
+    "p16_t03_payload_executed": false,
+    "p16_t04_executed": false,
+    "handoff_modified": false,
+    "program_state_modified": false,
+    "validator_behavior_modified": false,
+    "scientific_claims_changed": false,
+    "distance_to_gr_delta_changed": false,
+    "physics_promotion_authorized": false,
+    "publication_or_external_action_authorized": false
+  },
+  "memory_preflight": {
+    "core_validation_status": "PASS",
+    "freshness_status": "WARN",
+    "local_retrieval_status": "WARN",
+    "source_object_count": 1119,
+    "relationship_row_count": 5648,
+    "semantic_row_count": 1119,
+    "vault_row_count": 1119,
+    "blocking_warning_count": 0,
+    "local_cache_only_warning_count": 3,
+    "canonical_plan_object_id": "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21",
+    "canonical_plan_source_sha256": "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  },
+  "validation": {
+    "exact_receipt_coverage": "PASS",
+    "direct_documentation_impact": "PASS",
+    "protected_hash_preservation": "PASS",
+    "cumulative_validation": "PENDING_FINAL_SYNC",
+    "governed_checkpoint": "PENDING"
+  },
+  "authority_note": "This receipt proves project-system documentation-impact parity and preservation only. It creates no scientific status, Distance-to-GR, Gate, benchmark, proof, publication, push, external-action, ontology, source-law, or completed-derivation authority."
+}

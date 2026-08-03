@@ -1,0 +1,268 @@
+completion_id: "AJC-AJ-RT-20260803-008-001"
+job_id: "AJ-RT-20260803-008-001"
+task_id: "RT-20260803-008"
+task_type: "project_system_generation_235_checkpoint_documentation_impact_folder_map_coverage_recovery"
+decision_id: "DDR-20260803-008"
+role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260803-008"
+status: "completed"
+validation_status: "PASS"
+completed_at: "2026-08-03T13:20:27Z"
+objective_result: "generation_235_documentation_impact_folder_map_coverage_recovered_ready_for_checkpoint"
+verdict: "PASS_GENERATION_235_DOCUMENTATION_IMPACT_FOLDER_MAP_CHECKPOINT_RECOVERY"
+summary: "Generation 236 adds exactly the tracked generation-235 blocker to changed_paths and FOLDER_MAP.md to generated_derivatives in both required cumulative receipts while preserving every other protected predecessor and routing byte. Governed synchronization and cumulative validation are checkpoint-ready, the fresh P16-T02 re-audit and P16-T03 payload remain unexecuted, and one distinct checkpoint is pending."
+transaction_status: "ready_for_checkpoint"
+checkpoint_invocation_count: 0
+checkpoint_commit:
+  status: "PENDING"
+  commit: ""
+  invocation_count: 0
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 236
+  passes_consumed: 210
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:236"
+  handoff_token: "5e12497bd90a081d7e6d86d00a0ddf7f6c6dc6efe92c88e6"
+  relay_claim_token: "95eade7caecbe34e6303a9ac2747d24c1337917bb5a848df"
+  route_work_item_id: "P16-T02"
+  route_worker_skill: "improve-project-system"
+  route_sha256: "f861f21960a383631fe53688b91fd7f6655e9661f0828d961f00b6a46f034e07"
+  route_strategy_id: "recover_generation_235_checkpoint_documentation_impact_folder_map_coverage_v1"
+  route_blocker_fingerprint: "41cda949e9682555e7e8a0b67fd38a3e9c6c4e10daefcec93d6302047e4c2e65"
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+
+result:
+  status: "PASS"
+  strategy_id: "recover_generation_235_checkpoint_documentation_impact_folder_map_coverage_v1"
+  source_task_id: "RT-20260803-007"
+  source_job_id: "AJ-RT-20260803-007-001"
+  source_head: "334987d240390c3a7cd9522e92e9b283f4a2b7f9"
+  target_paths:
+    - "research_control/tasks/RT-20260803-005/documentation_impact.yaml"
+    - "research_control/tasks/RT-20260803-006/documentation_impact.yaml"
+  blocker_changed_paths_count: 2
+  folder_map_generated_derivatives_count: 2
+  direct_documentation_impact_validation: "PASS"
+  generation_235_job_reexecuted: false
+  generation_235_checkpoint_replayed: false
+  p16_t02_reaudit_executed: false
+  p16_t03_payload_executed: false
+  protected_hash_mismatch_count: 0
+  receipt_path: "research_control/tasks/RT-20260803-008/artifacts/generation_235_documentation_impact_folder_map_coverage_recovery_receipt.json"
+  receipt_sha256: "2cdaee9c86786f394fc597b3d116b9804cd1819bdab4b1f16926ac64ead4201b"
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  publication_or_external_action_authorized: false
+
+protected_evidence:
+  source_head: "334987d240390c3a7cd9522e92e9b283f4a2b7f9"
+  source_handoff_yaml_sha256: "dcfa19917488e50951e6042274e90c29345664ba5714d7be1a5ecf8c960ad905"
+  source_handoff_markdown_sha256: "1f8e80e2a8c9f8f8ad5eb16765fc70c0ad2ccaa1dc60b15a5852a79ed12b2436"
+  source_program_state_sha256: "464b98bcd14aeee06ab1a8f7c9edd285ebef5ef3b98fe6c5640e56fb79bdd2ea"
+  source_task_sha256: "2ec272d53c3fc8e46a2e774fa187bd252b65a0301eb90fc657aad2c3e5ec90c6"
+  source_decision_sha256: "f8e284d9e86b65f2d2c363437325fdef219a7720efb9bb0529f2fe53cdbb77a4"
+  source_job_sha256: "aa470802d99411f816f1a234e5a5417502ca99e85012208bc638d8a2fad63e6b"
+  source_completion_sha256: "61ad6677e338dae7b1946a8eb757fb28ce1c65686d7850db2207ba7640017b1a"
+  source_role_sha256: "f6356e78e31943ed76df891624c1650c5128dd2d3d34f4d776f8a85aa2a7880f"
+  source_recovery_receipt_sha256: "2ae81308115dded3915008320cb6da877c911c529090c93f9c422e0cf39ab05c"
+  source_checkpoint_blocker_sha256: "9364483cbc3d3c1afb3b062f8a342d044aacce18fac7f449bdff6ae9628f0868"
+  documentation_impact_rt005_sha256_before: "a01203d6adc7472850beae0a3ec3919a94e480cd29a2a18ef6de7bbb765c7294"
+  documentation_impact_rt005_sha256_after_direct_repair: "82d3f8e52374e584da719e37589c76d4a88494676d94c4ea13ed34af88806cc4"
+  documentation_impact_rt006_sha256_before: "ec27cc3fbf25abffda126b92e6c1a0d89993522a48ceaec5443af5577c2f78b5"
+  documentation_impact_rt006_sha256_after_direct_repair: "a5a5d686ea5076537f41b86ac6297e3d84de8a435e5a015a25ad40530dc2dde8"
+  accepted_status_calibration_v1_sha256: "0a14357adc7793fe28c97743cb1a5df788e4fb8738cd5ff1af1e9202ef8a4b51"
+  accepted_status_calibration_v2_sha256: "cfc0f83001e74dad94cae326238d81cad9e97b50ae7c9703260ee1e6e0bb64e1"
+  distance_to_gr_status_aliases_sha256: "cad6dcc8142f74f280d0c408c5ff290f6750dba4bc23e8adb9a03c94dd83c927"
+  protected_hash_mismatch_count: 0
+
+command_results:
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+    status: "PASS_WITH_LOCAL_CACHE_WARNINGS"
+    summary: "Core tracked memory passes; three local-cache-only freshness warnings do not affect canonical authority."
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21 --json"
+    status: "PASS"
+    summary: "The registered v21 plan and exact canonical source hash resolve."
+  - command: ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+    status: "PASS_AFTER_EXACT_REPAIR"
+    summary: "Both cumulative receipts cover the blocker and FOLDER_MAP.md exactly once in the required locations."
+  - command: ".venv/bin/python scripts/research_control/task_taxonomy.py --validate-repository --json"
+    status: "PASS"
+    summary: "The repository task taxonomy validates."
+  - command: ".venv/bin/python -m scripts.validation.cli run --profile full --scope working"
+    status: "PASS"
+    summary: "The final working-tree full profile passes before checkpoint."
+  - command: ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --job-id AJ-RT-20260803-008-001 --json-summary"
+    status: "PASS"
+    summary: "Integrated research-control validation reports no hard error."
+  - command: ".venv/bin/python -m unittest discover -s tests"
+    status: "PASS"
+    summary: "The repository unit suite passes."
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+    status: "PASS"
+    summary: "Tracked memory validates after approved synchronization."
+  - command: "git diff --check"
+    status: "PASS"
+    summary: "The cumulative working transaction contains no whitespace errors."
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1119
+    relationship_row_count: 5648
+    semantic_row_count: 1119
+    vault_row_count: 1119
+    blocking_warning_count: 0
+    local_cache_only_warning_count: 3
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  authority_note: "Generated wiki Obsidian semantic relationship SQLite and .local retrieval layers are navigation only and not authority; tracked sources exact hashes and validators govern this recovery."
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  observed_durable_outputs:
+    physics: []
+    project_system:
+      - "exact RT-20260803-005 and RT-20260803-006 cumulative receipt repair"
+      - "task-local preservation receipt"
+      - "one governed checkpoint"
+  accepted_criteria:
+    physics: []
+    project_system:
+      - "exactly one tracked blocker entry and one FOLDER_MAP.md entry exist in each required receipt location"
+      - "all other predecessor and routing bytes remain unchanged"
+      - "governed memory and cumulative validation pass"
+      - "the fresh P16-T02 re-audit and P16-T03 payload remain unexecuted"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+distance_to_gr_delta:
+  changed: false
+  effect: "none_project_system_documentation_impact_checkpoint_recovery"
+  milestone: "not_applicable"
+  ledger_row_updated: false
+  ledger_update_rationale: "Documentation-impact and checkpoint recovery contributes no physics movement."
+
+physics_progress_status:
+  status: "documentation_or_control_only_no_physics_delta"
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+
+selected_next_route:
+  route_id: "p16_t02_fresh_canonical_alignment_reaudit_after_checkpoint_v1"
+  worker_skill: "continue-research"
+  plan_task_id: "P16-T02"
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  executed: false
+  p16_t03_payload_executed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 236 validated, claimed, and consumed its immutable recovery route exactly once."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Both direct receipt repairs have exact one-item blocker and FOLDER_MAP.md parity."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "The final full profile and integrated research-control validation pass before checkpoint."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "One distinct governed checkpoint is authorized and has not yet been invoked."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Task-index frontier compact-frontier dependency-graph and claim-graph freshness checks pass."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Approved synchronization and validate-only checks pass; remaining warnings are local-cache-only."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim validation passes with no hard failure."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "none; project-system documentation-impact checkpoint recovery only"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  source_law_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+  push_authorized: false
+  publication_authorized: false
+  hosted_workflow_dispatch_authorized: false
+  proof_authority: false
+
+output_paths:
+  - "research_control/tasks/RT-20260803-005/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260803-006/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260803-008/00_TASK.yaml"
+  - "research_control/tasks/RT-20260803-008/DDR-20260803-008.md"
+  - "research_control/tasks/RT-20260803-008/artifacts/generation_235_documentation_impact_folder_map_coverage_recovery_receipt.json"
+  - "research_control/tasks/RT-20260803-008/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260803-008/jobs/AJ-RT-20260803-008-001.yaml"
+  - "research_control/tasks/RT-20260803-008/jobs/completions/AJC-AJ-RT-20260803-008-001.yaml"
+  - "research_control/tasks/RT-20260803-008/roles/process-integrity-auditor@0.1.0--RT-20260803-008.yaml"
+
+project_improvement_signals: []
+open_project_improvement_signal_ids: []
+validation_status: "PASS"

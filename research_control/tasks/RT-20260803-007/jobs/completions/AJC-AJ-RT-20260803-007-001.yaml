@@ -1,0 +1,363 @@
+completion_id: "AJC-AJ-RT-20260803-007-001"
+job_id: "AJ-RT-20260803-007-001"
+task_id: "RT-20260803-007"
+task_type: "project_system_p16_t02_status_calibration_design_path_classifier_recovery"
+decision_id: "DDR-20260803-007"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260803-007"
+status: "blocked"
+created_at: "2026-08-03T11:26:24Z"
+started_at: "2026-08-03T11:26:24Z"
+completed_at: "2026-08-03T11:34:22Z"
+validation_status: "FAIL"
+final_repository_validation_status: "BLOCKED_CHECKPOINT_STAGED_DOCUMENTATION_IMPACT_FOLDER_MAP_COVERAGE"
+objective: "Recognize exactly three P16-T02 status-calibration YAML control contracts through stable claim_language and role_or_schema_contract tags while preserving unrelated-path fail-closed behavior and every inherited payload byte."
+objective_result: "exact_three_path_classifier_recovery_validated_checkpoint_blocked_documentation_impact_folder_map_coverage"
+verdict: "BLOCKED_CHECKPOINT_STAGED_DOCUMENTATION_IMPACT_FOLDER_MAP_COVERAGE"
+completion_summary: "Generation 235 binds exactly three P16-T02 status-calibration control paths through stable claim-language and role-or-schema tags, preserves every protected contract byte and unrelated-path fail-closed behavior, and passes all precheckpoint gates including the 29-gate full profile and 1,293-test repository suite. Its sole checkpoint attempt then failed closed because memory_sync changed FOLDER_MAP.md while the cumulative RT-20260803-005 and RT-20260803-006 documentation-impact receipts omit that live generated derivative. The index was restored, no commit occurred, and one materially distinct documentation-impact checkpoint recovery is required."
+transaction_status: "blocked_checkpoint"
+result_disposition: "classifier_recovery_validated_checkpoint_blocked_recovery_required"
+work_item_status: "blocked_checkpoint_recovery_required"
+plan_task_id: "P16-T02"
+recovery_for_plan_task_id: "P16-T02"
+next_plan_task_id: "P16-T02"
+checkpoint_invocation_count: 1
+checkpoint_commit:
+  status: "BLOCKED"
+  commit: ""
+  invocation_count: 1
+checkpoint_staged: false
+legacy_validation_used: false
+project_system_change_only: true
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 235
+  passes_consumed: 209
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:235"
+  handoff_token: "31cf756e02fe1f4883796c6803bacca496b767eb4506d6ce"
+  relay_claim_token: "dba17336d83ecb89b1a86bbbfa6ec617e8c71b552ed65d08"
+  route_work_item_id: "P16-T02"
+  route_worker_skill: "improve-project-system"
+  route_sha256: "63ac7f16b6e6ab340ea8a4eca91664252468ea5f2eec4025f63f6121793e58f4"
+  route_reason: "checkpoint_planner_unknown_status_calibration_design_paths"
+  route_strategy_id: "recover_checkpoint_planner_status_calibration_path_classification_v1"
+  route_blocker_fingerprint: "01c38f0b0767a8afa8cae561b25a734b8f9a55a8c5de21ab5f64ee68005f8948"
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+
+result:
+  status: "BLOCKED_CHECKPOINT_STAGED_DOCUMENTATION_IMPACT"
+  strategy_id: "recover_checkpoint_planner_status_calibration_path_classification_v1"
+  exact_new_binding_count: 3
+  assigned_path_family_tag_count: 2
+  focused_test_count: 22
+  current_transaction_unknown_path_count: 0
+  current_transaction_blocked_path_count: 0
+  safe_authority_plan_produced: true
+  checkpoint_invoked: true
+  checkpoint_staged: false
+  checkpoint_committed: false
+  p16_t02_reaudit_executed: false
+  p16_t03_executed: false
+  p16_t04_executed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_push_or_hosted_workflow_authorized: false
+
+implementation:
+  classifier_path: "scripts/project_control/classify_project_changes.py"
+  classifier_sha256_before: "d20f61a6396c19cc92709c234e772e2bfdbc9b40314b62055dcaaaaa8ded91c4"
+  classifier_sha256_after: "785a1a8b312fd2537a60b3e4931bd4b1b93ed569ce05a2075c93929c36953465"
+  test_path: "tests/test_project_change_classifier.py"
+  test_sha256_before: "8c3f795b99c04f485cca7c30c22ff4e034367568906ffe98789041d83d370285"
+  test_sha256_after: "fe1e91c71983e269fdd7403e7e473d6fc4958ccae6749079c86ec00de63218b9"
+  implemented_paths:
+    - "research_control/design/accepted_status_calibration_v1.yaml"
+    - "research_control/design/accepted_status_calibration_v2.yaml"
+    - "research_control/design/distance_to_gr_status_aliases.yaml"
+  implemented_tags:
+    - "claim_language"
+    - "role_or_schema_contract"
+  broad_design_yaml_glob_added: false
+  unrelated_unknown_path_fallback_preserved: true
+  inherited_payload_modified: false
+
+protected_contract_hashes:
+  accepted_status_calibration_v1: "0a14357adc7793fe28c97743cb1a5df788e4fb8738cd5ff1af1e9202ef8a4b51"
+  accepted_status_calibration_v2: "cfc0f83001e74dad94cae326238d81cad9e97b50ae7c9703260ee1e6e0bb64e1"
+  distance_to_gr_status_aliases: "cad6dcc8142f74f280d0c408c5ff290f6750dba4bc23e8adb9a03c94dd83c927"
+  protected_hash_mismatch_count: 0
+
+repair_result:
+  schema_id: "p16_t02_status_calibration_design_path_classifier_recovery_result_v1"
+  status: "PASS_CLASSIFIER_RECOVERY_CHECKPOINT_BLOCKED_DOCUMENTATION_IMPACT"
+  receipt_path: "research_control/tasks/RT-20260803-007/artifacts/p16_t02_status_calibration_design_path_classifier_recovery_receipt.json"
+  receipt_sha256: "2ae81308115dded3915008320cb6da877c911c529090c93f9c422e0cf39ab05c"
+  exact_control_contract_path_count: 3
+  focused_validation_status: "PASS_22_TESTS"
+  cumulative_plan_status: "READY_SAFE_AUTHORITY_PLAN"
+  cumulative_unknown_path_count: 0
+  checkpoint_invocation_count: 1
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1119
+    relationship_row_count: 5648
+    semantic_row_count: 1119
+    vault_row_count: 1119
+    blocking_warning_count: 0
+    local_cache_only_warning_count: 0
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  authority_note: "Generated wiki Obsidian semantic relationship SQLite and .local retrieval layers are navigation only and not authority; tracked sources exact hashes and validators govern this recovery."
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "FAIL_CHECKPOINT_STAGED_DOCUMENTATION_IMPACT"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  observed_durable_outputs:
+    physics: []
+    project_system:
+      - "one exact three-path status-calibration classifier binding"
+      - "preserved unrelated-path fail-closed fallback"
+      - "one task-local recovery receipt"
+      - "one governed checkpoint-readiness record"
+  accepted_criteria:
+    physics: []
+    project_system:
+      - "all three exact YAML paths classify as claim_language and role_or_schema_contract"
+      - "an unrelated design YAML remains unknown_governed_path and selects full validation"
+      - "the cumulative transaction contains zero unknown paths and produces a safe checkpoint plan"
+      - "all required precheckpoint validation passes before the sole checkpoint attempt"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+physics_payload_admission_result:
+  status: "admitted"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+
+ordinary_route_guard_admission_result:
+  status: "PASS"
+  source_handoff_id: "handoff-0946"
+  selected_plan_task_id: "P16-T02"
+  guard_outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  system_success_counts_as_physics: false
+  system_success_counts_as_distance_to_gr: false
+  scientific_status_changed: false
+  physics_promotion_authorized: false
+
+distance_to_gr_delta:
+  changed: false
+  effect: "none_project_system_status_calibration_path_classifier_recovery"
+  burden_id: "benchmark_promotion"
+  milestone: "benchmark_promotion"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "Exact project-control path classification contributes no physics movement and does not change the existing P16 status payload."
+  downstream_unlocked:
+    - "fresh P16-T02 canonical alignment re-audit after checkpoint"
+  downstream_still_blocked:
+    - "P16-T02 re-audit until the governed checkpoint commits"
+    - "P16-T03 and P16-T04 until the re-audit"
+    - "target matter coupling Einstein equations benchmark promotion proof publication external action or completed derivation"
+
+physics_progress_status:
+  status: "none_project_system_only"
+  new_mathematical_payload: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+
+selected_next_route:
+  route_id: "generation_235_checkpoint_documentation_impact_folder_map_coverage_recovery"
+  route_label: "project-system-checkpoint-recovery"
+  role_family: "process-integrity-auditor@0.1.0"
+  worker_skill: "improve-project-system"
+  selected_next_packet_type: "documentation_impact_folder_map_coverage_checkpoint_recovery"
+  task_type: "project_system_generation_235_checkpoint_documentation_impact_folder_map_coverage_recovery"
+  plan_task_id: "P16-T03"
+  work_item_id: "P16-T02"
+  target_derivation_milestone: "none"
+  milestone_burden: "Project-system cumulative documentation-impact coverage and checkpoint recovery only; no P16-T03 audit payload or derivation burden advances."
+  strategy_id: "recover_generation_235_checkpoint_documentation_impact_folder_map_coverage_v1"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: false
+  execution_ready_now: true
+  physics_promotion_authorized: false
+  executed: false
+  p16_t03_payload_execution_authorized: false
+  next_action: "Add the generation-235 blocker artifact to changed_paths and FOLDER_MAP.md to generated_derivatives in the exact RT-005 and RT-006 cumulative receipts, regenerate and revalidate, and invoke at most one fresh governed checkpoint without executing P16-T03 payload work."
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 235 validated and consumed its exact immutable recovery route once against the byte-identical 65-path manifest."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "All three exact paths receive both stable tags and all three protected control-contract hashes remain exact."
+      - "Twenty-two focused tests pass including the unrelated design-YAML negative control."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "The cumulative classifier, safe checkpoint plan, control-spine diff validation, documentation-impact gate, whitespace check, focused tests, and 1,293-test repository-wide suite pass."
+  post_checkpoint:
+    status: "FAIL"
+    evidence:
+      - "The sole checkpoint attempt failed staged documentation-impact acceptance on two missing FOLDER_MAP.md generated-derivative entries; the index restored and no commit occurred."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Current-frontier, compact-frontier, task-index, dependency-graph, and live generated-report freshness checks pass after governed regeneration."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory synchronization and validate-only checks pass; local retrieval findings remain nonblocking navigation state."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-path claim-language validation reports zero hard failures."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "none; exact project-system path classification and checkpoint recovery only"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  publication_authorized: false
+  hosted_workflow_dispatch_authorized: false
+  proof_authority: false
+  canonical_ontology_edit_authorized: false
+  source_law_adoption_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+command_results:
+  - command: ".venv/bin/python -m py_compile scripts/project_control/classify_project_changes.py"
+    status: "PASS"
+    summary: "Classifier syntax is valid."
+  - command: ".venv/bin/python -m unittest -v tests.test_project_change_classifier.ProjectChangeClassifierTests.test_status_calibration_design_paths_have_stable_control_contract_tags tests.test_project_change_classifier.ProjectChangeClassifierTests.test_unknown_governed_path_selects_full_without_silent_skip tests.test_checkpoint_validation_planner"
+    status: "PASS_22_TESTS"
+    summary: "Focused exact-tag negative-control and checkpoint-planner tests pass."
+  - command: ".venv/bin/python scripts/project_control/classify_project_changes.py --json --paths research_control/design/accepted_status_calibration_v1.yaml research_control/design/accepted_status_calibration_v2.yaml research_control/design/distance_to_gr_status_aliases.yaml"
+    status: "PASS_THREE_PATHS_TWO_TAGS_ZERO_UNKNOWN"
+    summary: "All three exact paths classify through claim_language and role_or_schema_contract."
+  - command: ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+    status: "PASS_ZERO_UNKNOWN_ZERO_BLOCKED"
+    summary: "The cumulative transaction has no unknown or blocked path."
+  - command: ".venv/bin/python -m scripts.validation.cli plan --profile checkpoint --scope working --json"
+    status: "READY_SAFE_AUTHORITY_PLAN"
+    summary: "The manifest planner selects the bounded checkpoint profile with zero unknown paths."
+  - command: ".venv/bin/python scripts/project_control/validate_documentation_impact.py"
+    status: "PASS"
+    summary: "The cumulative documentation-impact receipt is complete and consistent."
+  - command: ".venv/bin/python scripts/research_control/validate_research_control.py --summary --check-diff --job-id AJ-RT-20260803-007-001"
+    status: "PASS"
+    summary: "The full tracked research-control spine and current transaction diff pass with no hard errors."
+  - command: ".venv/bin/python scripts/research_control/validate_generated_report_freshness.py"
+    status: "PASS_FOUR_REPORTS"
+    summary: "All four registered live generated reports are fresh against exact tracked sources."
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+    status: "PASS"
+    summary: "Tracked memory and derivative validation passes."
+  - command: ".venv/bin/python scripts/project_control/validate_claim_language.py --json --changed"
+    status: "PASS_ZERO_HARD_FAILURES"
+    summary: "Changed-path claim-language validation has no hard failure."
+  - command: ".venv/bin/python -m unittest discover -s tests"
+    status: "PASS_1293_TESTS_1_SKIPPED"
+    summary: "The complete repository-wide unit suite passes after the exact Markdown handoff identifier repair."
+  - command: "git diff --check"
+    status: "PASS"
+    summary: "The cumulative working transaction contains no whitespace error."
+  - command: ".venv/bin/python -m scripts.validation.cli run --profile full --scope working"
+    status: "PASS_29_GATES"
+    summary: "The final working-tree full profile passes all 29 selected gates with zero warnings failures or blocks."
+  - command: ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260803-007-001"
+    status: "FAIL_STAGED_DOCUMENTATION_IMPACT"
+    summary: "The sole checkpoint attempt failed because RT-20260803-005 and RT-20260803-006 documentation-impact receipts omit the FOLDER_MAP.md derivative created by memory_sync; the index restored and no commit occurred."
+
+output_paths:
+  - "scripts/project_control/classify_project_changes.py"
+  - "tests/test_project_change_classifier.py"
+  - "research_control/tasks/RT-20260803-007/artifacts/p16_t02_status_calibration_design_path_classifier_recovery_receipt.json"
+  - "research_control/tasks/RT-20260803-007/artifacts/checkpoint_blocker_generation_235_documentation_impact_folder_map_v1.yaml"
+  - "research_control/tasks/RT-20260803-007/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260803-007/jobs/completions/AJC-AJ-RT-20260803-007-001.yaml"
+  - "research_control/handoffs/handoff-0949.yaml"
+  - "research_control/handoffs/handoff-0949.md"
+  - "research_control/program_state.yaml"
+
+extra_read_paths:
+  - "research_control/handoffs/handoff-0946.yaml"
+  - "research_control/handoffs/handoff-0948.yaml"
+  - "research_control/tasks/RT-20260803-006/jobs/completions/AJC-AJ-RT-20260803-006-001.yaml"
+  - "research_control/design/accepted_status_calibration_v1.yaml"
+  - "research_control/design/accepted_status_calibration_v2.yaml"
+  - "research_control/design/distance_to_gr_status_aliases.yaml"
+
+project_improvement_signals: []
+open_project_improvement_signal_ids: []
+resolved_project_improvement_signals: []
+coherent_resolution_summary: "The checkpoint-planner path classification defect is repaired without changing any status-calibration contract or scientific status."
+next_recommendation: "Run one distinct improve-project-system recovery that adds the generation-235 blocker artifact to changed_paths and FOLDER_MAP.md to generated_derivatives in the exact RT-005 and RT-006 cumulative receipts, then revalidate and invoke at most one fresh governed checkpoint without executing P16-T03 payload work."

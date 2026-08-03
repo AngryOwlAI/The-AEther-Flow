@@ -1,0 +1,82 @@
+task_id: "RT-20260803-006"
+task_type: "project_system_p16_t02_event_store_renderer_binding_checkpoint_recovery"
+title: "Restore the P16-T02 current-renderer authority chain"
+task_taxonomy:
+  schema_id: "v21_task_taxonomy_v1"
+  work_kind: "benchmark_or_recovery"
+  milestone: "benchmark_promotion"
+  candidate_family: "p16_t02_event_store_renderer_binding_checkpoint_recovery"
+  result_kind: "implemented_and_validated_or_precisely_blocked"
+  authority: "project_control"
+  scope: "project_system"
+validation_status: "PASS_PRECHECKPOINT"
+status: "completed"
+created_at: "2026-08-03T10:00:44Z"
+updated_at: "2026-08-03T10:00:44Z"
+closed_at: "2026-08-03T10:00:44Z"
+parent_task_id: "RT-20260803-005"
+parent_handoff_id: "handoff-0947"
+supersedes_active_routing_task_id: "RT-20260803-005"
+current_decision_id: "DDR-20260803-006"
+current_job_id: "AJ-RT-20260803-006-001"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260803-006"
+requires_human_gate: false
+human_authorization_note: "Generation 234 of the immutable user-requested relay routes exactly one improve-project-system recovery for the P16-T02 current-renderer authority binding and one governed checkpoint. It authorizes no sealed-history rewrite, P16-T02 science re-audit, P16-T03 or P16-T04 execution, push, publication, or scientific promotion."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P16"
+  plan_task_id: "P16-T02"
+  recovery_for_plan_task_id: "P16-T02"
+  next_plan_task_id: "P16-T02"
+  next_plan_task_execution_authorized: false
+objective: "Preserve the sealed P10-T05 recovery receipt and renderer manifest; bind their prior approved current renderer hashes to the exact P16-T02 renderer bytes through one new fail-closed chained receipt; restore event-store architecture and P10 migration readiness; close PIS-RT-20260803-003-001 only after PASS; and invoke one governed checkpoint before the separate P16-T02 canonical alignment re-audit."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system historical-observation to current-renderer authority binding and checkpoint recovery only; no scientific derivation burden advances."
+route_label: "project-system-checkpoint-recovery"
+project_system_change_only: true
+dual_budget_category: "system_bearing"
+primary_budget: "project_system"
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+claim_boundary_id: "CB-V21-P16-T02-CURRENT-RENDERER-AUTHORITY-BINDING-RECOVERY-001"
+claim_boundary:
+  allowed_scope: "Preserve all sealed P10 and P16 evidence; add one exact current-renderer transition receipt; update only the event-store validator and focused tests needed to verify that chain; resolve the existing signal after complete PASS; synchronize governed control derivatives; and invoke one governed checkpoint."
+  immutable_predecessor_task: "RT-20260803-005"
+  immutable_predecessor_job: "AJ-RT-20260803-005-001"
+  immutable_predecessor_handoff: "handoff-0947"
+  source_head: "334987d240390c3a7cd9522e92e9b283f4a2b7f9"
+  source_completion_sha256: "ae897b05c79ade3d78d13de26591708ecf27ba2e809f05437f90ecb45d19c8e8"
+  source_blocker_sha256: "c2ccc5e9407ead8883cc68ba488b2645a4458ab7a1cd4e88c92ec6300c9ec05f"
+  sealed_historical_receipt_sha256: "d32a02c466a2471316ccb372172b292c8fa23014917987d9ee58990697192d21"
+  sealed_renderer_manifest_sha256: "d92fd0f636510d07a86cc7112fcc2a5243d77fc69959a13dc209f9ea7c90329a"
+  immutable_route_sha256: "d952f738bd2d74e2b6b370fef24d2cbc49ecc1e688d508361ec9f20e537464c6"
+  route_blocker_fingerprint: "4d2a1d14d91270583e4144c433ec201cf4498061655e260dba4ef313c6eef682"
+  p16_t02_reaudit_executed: false
+  p16_t03_executed: false
+  p16_t04_executed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+documentation_impact_id: "DI-RT-20260803-006-001"
+completion_id: "AJC-AJ-RT-20260803-006-001"
+output_artifacts:
+  - "research_control/tasks/RT-20260721-007/artifacts/validate_v21_event_store_architecture.py"
+  - "tests/test_event_store_architecture.py"
+  - "research_control/tasks/RT-20260803-006/artifacts/p16_t02_current_renderer_authority_binding_recovery_receipt.json"
+  - "research_control/tasks/RT-20260803-006/resolver_snapshots/AJ-RT-20260803-006-001-before.json"
+  - "research_control/tasks/RT-20260803-006/resolver_snapshots/AJ-RT-20260803-006-001-after.json"
+  - "research_control/tasks/RT-20260803-006/jobs/completions/AJC-AJ-RT-20260803-006-001.yaml"
+  - "research_control/handoffs/handoff-0948.yaml"
+  - "research_control/handoffs/handoff-0948.md"
+closure_status: "p16_t02_current_renderer_binding_recovered_ready_for_checkpoint"
+summary: "Generation 234 preserves sealed P10 and P16 evidence, adds one exact fail-closed current-renderer authority chain, restores both P10 gates, and leaves the fresh P16-T02 canonical alignment re-audit separate until after checkpoint."
+next_recommended_action: "Invoke one governed checkpoint for AJ-RT-20260803-006-001. After it commits, run one fresh bounded P16-T02 Gate A-E canonical alignment re-audit before P16-T03 or P16-T04."
+project_improvement_signals:
+  - "PIS-RT-20260803-003-001"
+notes: "This recovery is deterministic validator compatibility only. It creates no canonical science change, Gate change, ontology action, metric, matter-coupling derivation, Einstein equation, benchmark, proof, publication, push, external action, or completed-derivation authority."

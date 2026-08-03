@@ -101,13 +101,13 @@ BLOCKED_CLAIMS = [
     "source-law adoption",
     "`MetricData(E)` adoption",
     "`g_eff` adoption or scope expansion",
-    "coupling-law adoption",
+    "unscoped or target coupling-law adoption",
     "matter-coupling derivation",
-    "matter-coupling adoption",
-    "stress-energy semantics",
-    "stress-energy tensor",
-    "matter action",
-    "detector semantics",
+    "target matter-coupling adoption",
+    "target stress-energy semantics",
+    "target stress-energy tensor",
+    "target matter action",
+    "target detector semantics",
     "Einstein equations",
     "exact-GR benchmark promotion",
     "benchmark closure without protected authority",
@@ -720,8 +720,9 @@ def default_adopted_objects(rows: list[dict[str, str]], aliases: dict[str, dict[
     display_names = {
         "m_src": "M_src",
         "g_eff": "g_eff",
+        "matter_coupling": "P7SourceMatterPackage_v1",
     }
-    for burden_id in ["m_src", "g_eff"]:
+    for burden_id in ["m_src", "g_eff", "matter_coupling"]:
         row = row_by_burden(rows, burden_id)
         if not row:
             continue
@@ -737,6 +738,7 @@ def default_adopted_objects(rows: list[dict[str, str]], aliases: dict[str, dict[
                     "none",
                     "scoped_source_object_only",
                     "scoped_source_evidence_only",
+                    "scoped_source_postulate_adoption_only",
                 },
             }
         )
@@ -749,10 +751,10 @@ def default_evidence_preconditions(rows: list[dict[str, str]], aliases: dict[str
         return []
     return [
         {
-            "object": "matter_coupling burden evidence/preconditions",
-            "status": reader_facing_status(row, aliases),
+            "object": "g_eff-dependent matter-coupling derivational burden",
+            "status": "open after protected source-side postulate adoption",
             "authority_path": row.get("last_evidence_path", ""),
-            "supports_target": "matter-semantics and matter-coupling continuation only",
+            "supports_target": "construction or precise obstruction of a source-to-target coupling bridge through derived g_eff",
             "does_not_establish": split_tokens(row.get("overread_guard", "")),
         }
     ]
@@ -1028,10 +1030,15 @@ def matter_coupling_boundary(rows: list[dict[str, str]]) -> str:
         f"mathematical status `{mathematical_status}`, physical status "
         f"`{physical_status}`, and promotion status `{promotion_status}`. Its "
         f"blocking burden is: {burden}. The last evidence path is `{evidence}`.\n\n"
-        "This ledger status must not be read as coupling-law adoption, universal "
-        "matter-coupling derivation, matter-coupling adoption, stress-energy "
-        "semantics, stress-energy tensor, matter action, detector semantics, "
-        "Einstein equations, benchmark promotion, or completed derivation."
+        "The exact finite `P7SourceMatterPackage_v1` is adopted within its declared "
+        "source-side scope by protected human constitutive postulate. That adoption "
+        "includes the specifically authorized source-matter meanings, operational "
+        "detector semantics, equipped-domain universal source coupling, source "
+        "matter action, and source stress-energy input. It must not be read as a "
+        "first-principles derivation, target-side matter coupling, target "
+        "stress-energy tensor, coupling through a derived `g_eff`, an "
+        "equivalence-principle result, Einstein equations, benchmark promotion, "
+        "or completed derivation."
     )
 
 

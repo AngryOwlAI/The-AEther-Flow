@@ -104,7 +104,7 @@ class RenderCompactCurrentFrontierV16Tests(unittest.TestCase):
                     "| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |",
                     "| `m_src` | `source_manifold_m_src` | adopted only as scoped source-only M_src object | accepted | gate_review_completed | scoped_source_only_adopted_object | not_target_manifold_not_metric_not_gr_derivation | scoped_source_object_only | no_matter_coupling_derivation<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/program_state.yaml` |",
                     "| `g_eff` | `effective_metric_g_eff` | adopted only as scoped source-extension g_eff object | accepted | gate_review_completed | scoped_source_extension_geff_object | not_unscoped_lorentzian_metric_not_matter_coupling_not_einstein_equations | scoped_source_object_only | no_unscoped_geff_adoption<br>no_matter_coupling_derivation<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/program_state.yaml` |",
-                    "| `matter_coupling` | `matter_coupling` | accepted only as scoped source-extension evidence/precondition | accepted | accepted_as_scoped_evidence_precondition | parameterized_finite_local_witness_precondition | not_matter_coupling_not_stress_energy_not_matter_action_not_detector_semantics | scoped_source_evidence_only | no_source_law_adoption<br>no_coupling_law_adoption<br>no_matter_coupling_derivation<br>no_stress_energy_semantics<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/program_state.yaml` |",
+                    "| `matter_coupling` | `matter_coupling` | fixed P7 source-matter package adopted only as scoped source-side matter by protected human postulate; g_eff-dependent derivational coupling remains open | accepted | gate_review_completed | parameterized_finite_local_witness_precondition | not_target_matter_coupling_source_side_postulate_adoption_only | scoped_source_postulate_adoption_only | no_source_law_adoption<br>no_unscoped_or_target_coupling_law_adoption<br>no_matter_coupling_derivation<br>no_target_stress_energy_semantics<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/program_state.yaml` |",
                     "| `einstein_equations` | `einstein_equations` | not started; no positive derivation status | not started | not_started | dynamics_action_or_variation_missing | no_field_equation_derivation | none | no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation | `research_control/program_state.yaml` |",
                     "| `benchmark_promotion` | `benchmark_promotion` | no benchmark promotion from scoped evidence/precondition alone | blocked by missing primitive | blocked | upstream_burdens_missing | no_exact_gr_benchmark_promotion | none | no_benchmark_promotion<br>no_benchmark_gate_chair_closure<br>no_completed_derivation | `research_control/program_state.yaml` |",
                     "",
@@ -118,7 +118,7 @@ class RenderCompactCurrentFrontierV16Tests(unittest.TestCase):
                     "burden_id,milestone,required_object,current_status,blocking_burden,accept_criteria,failure_or_freeze_criteria,last_evidence_path,updated_at,notes,control_status,mathematical_status,physical_status,promotion_status,overread_guard",
                     "m_src,source_manifold_m_src,M_src,accepted,scoped source-only object,accept,freeze,research_control/program_state.yaml,2026-07-05T00:00:00Z,fixture,gate_review_completed,scoped_source_only_adopted_object,not_target_manifold_not_metric_not_gr_derivation,scoped_source_object_only,no_matter_coupling_derivation;no_einstein_equations;no_benchmark_promotion;no_completed_derivation",
                     "g_eff,effective_metric_g_eff,g_eff,accepted,scoped source-extension object,accept,freeze,research_control/program_state.yaml,2026-07-05T00:00:00Z,fixture,gate_review_completed,scoped_source_extension_geff_object,not_unscoped_lorentzian_metric_not_matter_coupling_not_einstein_equations,scoped_source_object_only,no_unscoped_geff_adoption;no_matter_coupling_derivation;no_einstein_equations;no_benchmark_promotion;no_completed_derivation",
-                    "matter_coupling,matter_coupling,universal coupling,accepted,source evidence only,accept,freeze,research_control/program_state.yaml,2026-07-05T00:00:00Z,fixture,accepted_as_scoped_evidence_precondition,parameterized_finite_local_witness_precondition,not_matter_coupling_not_stress_energy_not_matter_action_not_detector_semantics,scoped_source_evidence_only,no_source_law_adoption;no_coupling_law_adoption;no_matter_coupling_derivation;no_stress_energy_semantics;no_einstein_equations;no_benchmark_promotion;no_completed_derivation",
+                    "matter_coupling,matter_coupling,universal coupling,accepted,source evidence only,accept,freeze,research_control/program_state.yaml,2026-07-05T00:00:00Z,fixture,gate_review_completed,parameterized_finite_local_witness_precondition,not_target_matter_coupling_source_side_postulate_adoption_only,scoped_source_postulate_adoption_only,no_source_law_adoption;no_unscoped_or_target_coupling_law_adoption;no_matter_coupling_derivation;no_target_stress_energy_semantics;no_einstein_equations;no_benchmark_promotion;no_completed_derivation",
                     "einstein_equations,einstein_equations,field equations,not started,dynamics action or variation,accept,freeze,research_control/program_state.yaml,2026-07-05T00:00:00Z,fixture,not_started,dynamics_action_or_variation_missing,no_field_equation_derivation,none,no_einstein_equations;no_benchmark_promotion;no_completed_derivation",
                     "benchmark_promotion,benchmark_promotion,exact-GR benchmark,blocked by missing primitive,all upstream derivation burdens,accept,freeze,research_control/program_state.yaml,2026-07-05T00:00:00Z,fixture,blocked,upstream_burdens_missing,no_exact_gr_benchmark_promotion,none,no_benchmark_promotion;no_benchmark_gate_chair_closure;no_completed_derivation",
                     "",
@@ -197,7 +197,7 @@ class RenderCompactCurrentFrontierV16Tests(unittest.TestCase):
             matter_card = next(card for card in cards if card["object_id"] == "matter_coupling")
             self.assertEqual(
                 matter_card["positive_status"],
-                "accepted only as scoped source-extension evidence/precondition",
+                "fixed P7 source-matter package adopted only as scoped source-side matter by protected human postulate; g_eff-dependent derivational coupling remains open",
             )
             self.assertIn("exact_scope", matter_card)
             self.assertIn("allowed_use", matter_card)
@@ -208,7 +208,20 @@ class RenderCompactCurrentFrontierV16Tests(unittest.TestCase):
             self.assertIn("public_summary", matter_card)
             self.assertIn("full_control_non_conclusions", matter_card)
             self.assertIn("no_matter_coupling_derivation", matter_card["full_control_non_conclusions"])
-            self.assertIn("coupling law adoption", " ".join(matter_card["blocked_overread"]))
+            self.assertIn("unscoped or target coupling law adoption", " ".join(matter_card["blocked_overread"]))
+            matter_row = next(row for row in rows if row["burden_id"] == "matter_coupling")
+            self.assertEqual(
+                matter_row["reader_facing_status"],
+                "open target matter-coupling derivation after protected source-side postulate adoption",
+            )
+            self.assertEqual(
+                matter_row["source_side_postulate_status"]["promotion_status"],
+                "scoped_source_postulate_adoption_only",
+            )
+            self.assertEqual(
+                matter_row["promotion_status"],
+                "scoped_source_evidence_only",
+            )
             for row in rows:
                 self.assertIn("high_risk_status_card", row)
                 self.assertEqual(row["high_risk_status_card"]["object_id"], row["burden_id"])

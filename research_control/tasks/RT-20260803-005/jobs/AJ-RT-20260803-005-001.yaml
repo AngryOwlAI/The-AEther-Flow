@@ -1,0 +1,387 @@
+job_id: "AJ-RT-20260803-005-001"
+task_id: "RT-20260803-005"
+decision_id: "DDR-20260803-005"
+role_id: "project-control-maintainer"
+role_version: "0.2.0"
+execution_role_ref: "project-control-maintainer@0.2.0--RT-20260803-005"
+status: "blocked"
+validation_status: "FAIL"
+created_at: "2026-08-03T07:38:47Z"
+started_at: "2026-08-03T08:22:38Z"
+completed_at: "2026-08-03T08:22:38Z"
+completion_path: "research_control/tasks/RT-20260803-005/jobs/completions/AJC-AJ-RT-20260803-005-001.yaml"
+requires_human_gate: false
+human_authorization_note: "Generation 232 carries the user-authorized recursive improve-project-system route. The Project-System Director selected this job without executing it; one later bounded improve-project-system frame may execute this exact contract."
+objective: "Resolve PIS-RT-20260803-003-001 by synchronizing current project-control status layers with the already-authoritative Gate C source-side postulate adoption, still-open g_eff-dependent matter-coupling derivation, completed negative Gate E verdict and future positive-closure gate, and current Gate A source-validation state, without editing canonical science or changing any Gate decision."
+resolves_signal_routing: false
+target_derivation_milestone: "none"
+milestone_burden: "Project-system status-layer consistency only; no scientific derivation burden is discharged."
+route_label: "project-system-repair-packet"
+route_reason: "p16_t02_gate_c_source_vs_geometry_status_contract_drift"
+route_strategy_id: "repair_p16_t02_gate_status_layer_contract_v1"
+immutable_route_sha256: "02e2953905593387367b37f40b049b833a690d02c8926613721d00bd6cd26268"
+route_blocker_fingerprint: "00cf283ff29c5b1019f107471de9f02929f6f635034124bd869248d90d131e8f"
+plan_task_id: "P16-T02"
+recovery_for_plan_task_id: "P16-T02"
+next_plan_task_id: "P16-T02"
+next_plan_task_execution_authorized: false
+project_system_change_only: true
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 232
+  passes_consumed: 206
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:232"
+  handoff_token: "230151dbe88580de3e4d88a84344072620b9c2526ab151ea"
+  relay_claim_token: "5be2e1efe352f26a9ca9e43769d1283fe9b17d78991fa253"
+  route_work_item_id: "P16-T02"
+  route_worker_skill: "improve-project-system"
+  route_sha256: "02e2953905593387367b37f40b049b833a690d02c8926613721d00bd6cd26268"
+  route_reason: "p16_t02_gate_c_source_vs_geometry_status_contract_drift"
+  route_strategy_id: "repair_p16_t02_gate_status_layer_contract_v1"
+  route_blocker_fingerprint: "00cf283ff29c5b1019f107471de9f02929f6f635034124bd869248d90d131e8f"
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+  outer_agentjob_invocation_count_in_director_frame: 0
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1119
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"status taxonomy Gate C\" --limit 10 --json"
+      query_type: "search"
+      query_text: "status taxonomy Gate C"
+      returned_object_ids:
+        - "MD-V21-P16-T02-GATE-A-E-CONSISTENCY-AUDIT"
+  canonical_inspections:
+    - object_id: "MD-V21-P16-T02-GATE-A-E-CONSISTENCY-AUDIT"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260803-003/artifacts/v21_p16_t02_gate_consistency_audit.md"
+      source_hash: "5daa24b57b805af51633f85e176b8da5699aaca8000794f57eb5ff4a3ddfde8c"
+  authority_note: "Obsidian, wiki notes, semantic extracts, and .local are retrieval layers only and not authority."
+
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  candidate_family: "not_applicable"
+  assumption_delta:
+    - "No scientific assumption changes; the job aligns control status fields to exact pre-existing Gate authority while preserving every derivational gap."
+  materiality_basis: "The durable output is a machine-checked control-contract repair that prevents both erasure of scoped Gate C adoption and laundering into the open g_eff-dependent matter-coupling milestone."
+  source_basis:
+    - "MD-V21-P16-T02-GATE-A-E-CONSISTENCY-AUDIT"
+    - "research_control/tasks/RT-20260803-003/artifacts/v21_p16_t02_overread_findings.yaml"
+    - "research_control/tasks/RT-20260803-003/artifacts/v21_p16_t02_authority_path_map.yaml"
+    - "research_control/project_improvement_handoffs/improve-project-handoff_20260803_003.yaml"
+  expected_artifact_paths:
+    - "research_control/tasks/RT-20260803-005/artifacts/validate_p16_t02_gate_status_layer_contract.py"
+    - "research_control/tasks/RT-20260803-005/artifacts/p16_t02_gate_status_layer_contract_validation.json"
+  project_system_justification: "This job repairs project-control taxonomy, validators, registry state, renderers, and generated views. It creates no physics payload or Distance-to-GR scientific delta."
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  expected_durable_outputs:
+    physics: []
+    project_system:
+      - "type-qualified Gate C source-adoption versus geometry-coupling status contract"
+      - "Gate E negative-verdict versus future-positive-closure calibration"
+      - "current Gate A source-registry validation synchronization"
+      - "task-local status-contract validator and receipt"
+  acceptance_criteria:
+    physics: []
+    project_system:
+      - "all protected Gate A-E and P16-T02 science-bearing source hashes remain exact"
+      - "source-side Gate C adoption is explicit and full g_eff-dependent derivation remains explicitly open"
+      - "Gate E records the existing negative verdict and preserves the human gate for future positive closure"
+      - "the Gate A TeX source row reports current PASS without rewriting historical failure evidence"
+      - "aliases calibrations renderers validators focused tests and generated views agree"
+      - "PIS-RT-20260803-003-001 closes only against one PASS completion"
+      - "one governed checkpoint commits the cumulative transaction"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: false
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0946"
+  source_handoff_path: "research_control/handoffs/handoff-0946.yaml"
+  source_handoff_sha256: "e86989a4014b01fc04ec4e6e2dcab8eb3a97d1fd1d77c02ab24357c20cff27bc"
+  selected_plan_task_id: "P16-T02"
+  guard_outcome: "below_threshold"
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+allowed_read_paths:
+  - "SOUL.md"
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/improve-project-system/SKILL.md"
+  - ".agents/roles/research_ops/project-system-director.v0.2.0.md"
+  - ".agents/roles/research_ops/project-control-maintainer.v0.2.0.md"
+  - ".agents/schemas/**"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  - "research_control/design/**"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0945.yaml"
+  - "research_control/handoffs/handoff-0946.yaml"
+  - "research_control/project_improvement_handoffs/improve-project-handoff_20260803_003.yaml"
+  - "research_control/project_improvement_handoffs/improve-project-handoff_20260803_003.md"
+  - "research_control/tasks/RT-20260724-004/artifacts/**"
+  - "research_control/tasks/RT-20260727-004/artifacts/**"
+  - "research_control/tasks/RT-20260729-001/artifacts/**"
+  - "research_control/tasks/RT-20260729-011/artifacts/**"
+  - "research_control/tasks/RT-20260731-004/artifacts/**"
+  - "research_control/tasks/RT-20260803-003/**"
+  - "scripts/project_control/**"
+  - "scripts/research_control/**"
+  - "scripts/validation/**"
+  - "tests/**"
+  - "registries/**"
+  - ".local/validation-receipts/**"
+
+allowed_write_paths:
+  - "research_control/tasks/RT-20260803-005/**"
+  - "research_control/project_improvement_handoffs/improve-project-handoff_20260803_003.yaml"
+  - "research_control/project_improvement_handoffs/improve-project-handoff_20260803_003.md"
+  - "research_control/handoffs/handoff-0947.yaml"
+  - "research_control/handoffs/handoff-0947.md"
+  - "research_control/program_state.yaml"
+  - "research_control/design/distance_to_gr_status_aliases.yaml"
+  - "research_control/design/accepted_status_calibration_v1.yaml"
+  - "research_control/design/accepted_status_calibration_v2.yaml"
+  - "scripts/research_control/validate_research_control.py"
+  - "scripts/research_control/render_current_frontier.py"
+  - "scripts/research_control/render_compact_current_frontier_v16.py"
+  - "tests/test_research_control.py"
+  - "tests/test_render_current_frontier.py"
+  - "tests/test_render_compact_current_frontier_v16.py"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/PDF_DERIVATIVE_REGISTRY.csv"
+  - "registries/PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "registries/TEX_SOURCE_REGISTRY.csv"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/pdf/**"
+  - "wiki/tex/**"
+
+allowed_generated_paths:
+  - "research_control/tasks/RT-20260803-005/artifacts/p16_t02_gate_status_layer_contract_validation.json"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/pdf/**"
+  - "wiki/tex/**"
+
+forbidden_paths:
+  - "research_control/tasks/RT-20260803-003/**"
+  - "research_control/handoffs/handoff-0945.yaml"
+  - "research_control/handoffs/handoff-0945.md"
+  - "research_control/handoffs/handoff-0946.yaml"
+  - "research_control/handoffs/handoff-0946.md"
+  - "research_control/tasks/RT-20260724-004/artifacts/**"
+  - "research_control/tasks/RT-20260727-004/artifacts/**"
+  - "research_control/tasks/RT-20260729-001/artifacts/**"
+  - "research_control/tasks/RT-20260729-011/artifacts/**"
+  - "research_control/tasks/RT-20260731-004/artifacts/**"
+  - ".agents/roles/**"
+  - ".agents/schemas/**"
+  - ".codex/skills/**"
+  - "implementations_plans/**"
+  - "ontology/**"
+  - "legacy_ontology/**"
+  - "manuscripts/**"
+  - "markdown/publication-briefs/**"
+  - "markdown/html-explainer-specs/**"
+
+forbidden_source_classes:
+  - "canonical_ontology_write"
+  - "canonical_gate_decision_or_authorization_write"
+  - "science_source_or_benchmark_source_write"
+  - "scientific_status_or_physical_status_change"
+  - "unqualified_source_adoption_or_full_matter_coupling_collapse"
+  - "source_law_or_ontology_adoption"
+  - "matter_coupling_derivation"
+  - "Einstein_equation_construction"
+  - "benchmark_promotion"
+  - "physics_claim_promotion"
+  - "gate_chair_verdict"
+  - "external_review_publication_push_or_completed_derivation_authority"
+  - "generated_derivative_hand_edit"
+
+allowed_source_classes:
+  - "project_control"
+  - "control_registry"
+  - "control_status_taxonomy"
+  - "validator"
+  - "renderer"
+  - "focused_test"
+  - "task_control_record"
+  - "project_improvement_sidecar"
+  - "generated_memory_derivative_via_approved_generator"
+
+approved_commands:
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"status taxonomy Gate C\" --limit 10 --json"
+  - ".venv/bin/python research_control/tasks/RT-20260803-005/artifacts/validate_p16_t02_gate_status_layer_contract.py --write-report --json"
+  - ".venv/bin/python research_control/tasks/RT-20260803-005/artifacts/validate_p16_t02_gate_status_layer_contract.py --check --json"
+  - ".venv/bin/python -m scripts.validation.cli run --profile affected --paths research_control/tasks/RT-20260803-005 research_control/project_improvement_handoffs/improve-project-handoff_20260803_003.yaml research_control/design/distance_to_gr_status_aliases.yaml research_control/design/accepted_status_calibration_v1.yaml research_control/design/accepted_status_calibration_v2.yaml scripts/research_control/validate_research_control.py scripts/research_control/render_current_frontier.py scripts/research_control/render_compact_current_frontier_v16.py tests/test_research_control.py tests/test_render_current_frontier.py tests/test_render_compact_current_frontier_v16.py registries/DISTANCE_TO_GR_LEDGER.csv registries/TEX_SOURCE_REGISTRY.csv"
+  - ".venv/bin/python -m unittest tests.test_research_control tests.test_render_current_frontier tests.test_render_compact_current_frontier_v16"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+  - ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --write"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --job-id AJ-RT-20260803-005-001 --json-summary"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+  - ".venv/bin/python scripts/research_control/continue_research.py --summary"
+  - "git diff --check"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260803-005-001"
+
+required_validators:
+  - "memory_preflight"
+  - "physics_payload_admission"
+  - "dual_budget_allocation"
+  - "ordinary_route_guard_admission"
+  - "immutable_gate_and_p16_t02_source_hashes"
+  - "p16_t02_gate_status_layer_contract"
+  - "focused_renderer_and_research_control_tests"
+  - "project_change_classifier"
+  - "project_improvement_resolver"
+  - "project_improvement_signals"
+  - "documentation_impact"
+  - "claim_language_changed"
+  - "research_control_diff"
+  - "memory_sync"
+  - "memory_core"
+  - "git_diff_check"
+  - "checkpoint_transaction"
+
+expected_outputs:
+  - "research_control/tasks/RT-20260803-005/00_TASK.yaml"
+  - "research_control/tasks/RT-20260803-005/DDR-20260803-005.md"
+  - "research_control/tasks/RT-20260803-005/roles/project-control-maintainer@0.2.0--RT-20260803-005.yaml"
+  - "research_control/tasks/RT-20260803-005/artifacts/validate_p16_t02_gate_status_layer_contract.py"
+  - "research_control/tasks/RT-20260803-005/artifacts/p16_t02_gate_status_layer_contract_validation.json"
+  - "research_control/tasks/RT-20260803-005/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260803-005/jobs/completions/AJC-AJ-RT-20260803-005-001.yaml"
+  - "research_control/project_improvement_handoffs/improve-project-handoff_20260803_003.yaml"
+  - "research_control/project_improvement_handoffs/improve-project-handoff_20260803_003.md"
+  - "research_control/handoffs/handoff-0947.yaml"
+  - "research_control/handoffs/handoff-0947.md"
+  - "research_control/program_state.yaml"
+  - "research_control/design/distance_to_gr_status_aliases.yaml"
+  - "research_control/design/accepted_status_calibration_v1.yaml"
+  - "research_control/design/accepted_status_calibration_v2.yaml"
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "registries/TEX_SOURCE_REGISTRY.csv"
+  - "scripts/research_control/validate_research_control.py"
+  - "tests/test_research_control.py"
+  - "tests/test_render_current_frontier.py"
+  - "tests/test_render_compact_current_frontier_v16.py"
+
+claim_boundary:
+  claim_boundary_id: "CB-V21-P16-T02-GATE-STATUS-LAYER-CONTRACT-REPAIR-001"
+  allowed_claims:
+    - "current control status fields match exact pre-existing Gate A Gate C and Gate E authority"
+    - "exact finite source-side Gate C adoption is explicit and type-qualified"
+    - "full target-side g_eff-dependent matter coupling remains unestablished"
+    - "generated views follow the repaired canonical control sources"
+    - "PIS-RT-20260803-003-001 is resolved only after PASS completion and checkpoint"
+  forbidden_claims:
+    - "new or broadened Gate C adoption"
+    - "first-principles source derivation or target-side matter coupling"
+    - "target T_mu_nu equivalence-principle result or Einstein equations"
+    - "new Gate Chair verdict benchmark promotion publication push external review or completed derivation"
+  requires_gate_for:
+    - "any canonical ontology science source Gate decision benchmark publication external-action or physics-promotion change"
+  authority_source_paths:
+    - "research_control/tasks/RT-20260803-003/artifacts/v21_p16_t02_gate_consistency_audit.md"
+    - "research_control/tasks/RT-20260803-003/artifacts/v21_p16_t02_overread_findings.yaml"
+    - "research_control/project_improvement_handoffs/improve-project-handoff_20260803_003.yaml"

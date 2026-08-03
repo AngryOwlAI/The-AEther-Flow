@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import copy
 import importlib.util
+import json
 import shutil
 import tempfile
 import unittest
@@ -27,6 +28,34 @@ class EventStoreArchitectureTests(unittest.TestCase):
     @staticmethod
     def failed_names(checks: list[dict[str, str]]) -> set[str]:
         return {item["name"] for item in checks if item["status"] != "PASS"}
+
+    @staticmethod
+    def renderer_authority_required_paths(relative: str) -> tuple[str, ...]:
+        return (
+            MODULE.HISTORICAL_RENDERER_BINDING_RECOVERY_RECEIPT.as_posix(),
+            MODULE.CURRENT_RENDERER_AUTHORITY_BINDING_RECEIPT.as_posix(),
+            relative,
+            "research_control/tasks/RT-20260721-007/artifacts/"
+            "v21_event_store_architecture_contract.json",
+            "research_control/tasks/RT-20260721-007/artifacts/"
+            "v21_event_store_architecture_validation.json",
+            "research_control/tasks/RT-20260721-007/artifacts/"
+            "v21_event_store_architecture_compact_receipt.json",
+            "research_control/tasks/RT-20260801-011/artifacts/"
+            "generated_report_renderer_update_manifest_v1.json",
+            "research_control/tasks/RT-20260801-011/jobs/completions/"
+            "AJC-AJ-RT-20260801-011-001.yaml",
+            "research_control/tasks/RT-20260801-013/artifacts/"
+            "p13_t07_protected_dual_budget_accounting_recovery_receipt.json",
+            "research_control/tasks/RT-20260803-005/artifacts/"
+            "validation_blocker_p16_t02_event_store_renderer_binding_v1.yaml",
+            "research_control/tasks/RT-20260803-005/jobs/completions/"
+            "AJC-AJ-RT-20260803-005-001.yaml",
+            "research_control/tasks/RT-20260803-005/artifacts/"
+            "p16_t02_gate_status_layer_contract_validation.json",
+            "research_control/tasks/RT-20260803-005/artifacts/"
+            "validate_p16_t02_gate_status_layer_contract.py",
+        )
 
     def test_live_contract_sources_and_documents_pass(self) -> None:
         report, receipt = MODULE.build_outputs(self.contract)
@@ -102,22 +131,7 @@ class EventStoreArchitectureTests(unittest.TestCase):
 
     def test_historical_renderer_binding_rejects_current_source_drift(self) -> None:
         relative = "scripts/research_control/render_current_frontier.py"
-        required_paths = (
-            MODULE.HISTORICAL_RENDERER_BINDING_RECOVERY_RECEIPT.as_posix(),
-            relative,
-            "research_control/tasks/RT-20260721-007/artifacts/"
-            "v21_event_store_architecture_contract.json",
-            "research_control/tasks/RT-20260721-007/artifacts/"
-            "v21_event_store_architecture_validation.json",
-            "research_control/tasks/RT-20260721-007/artifacts/"
-            "v21_event_store_architecture_compact_receipt.json",
-            "research_control/tasks/RT-20260801-011/artifacts/"
-            "generated_report_renderer_update_manifest_v1.json",
-            "research_control/tasks/RT-20260801-011/jobs/completions/"
-            "AJC-AJ-RT-20260801-011-001.yaml",
-            "research_control/tasks/RT-20260801-013/artifacts/"
-            "p13_t07_protected_dual_budget_accounting_recovery_receipt.json",
-        )
+        required_paths = self.renderer_authority_required_paths(relative)
         with tempfile.TemporaryDirectory() as tempdir:
             repo_root = Path(tempdir)
             for source_relative in required_paths:
@@ -148,6 +162,49 @@ class EventStoreArchitectureTests(unittest.TestCase):
                 f"source_hash::{relative}",
                 self.failed_names(MODULE.validate_source_bindings(self.contract)),
             )
+
+    def test_historical_renderer_binding_rejects_current_chain_receipt_drift(self) -> None:
+        relative = "scripts/research_control/render_current_frontier.py"
+        with mock.patch.object(
+            MODULE,
+            "CURRENT_RENDERER_AUTHORITY_BINDING_RECEIPT_SHA256",
+            "0" * 64,
+        ):
+            self.assertIn(
+                f"source_hash::{relative}",
+                self.failed_names(MODULE.validate_source_bindings(self.contract)),
+            )
+
+    def test_historical_renderer_binding_rejects_predecessor_chain_mismatch(self) -> None:
+        relative = "scripts/research_control/render_current_frontier.py"
+        with tempfile.TemporaryDirectory() as tempdir:
+            repo_root = Path(tempdir)
+            for source_relative in self.renderer_authority_required_paths(relative):
+                destination = repo_root / source_relative
+                destination.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copy2(REPO_ROOT / source_relative, destination)
+
+            chain_path = repo_root / MODULE.CURRENT_RENDERER_AUTHORITY_BINDING_RECEIPT
+            chain = json.loads(chain_path.read_text(encoding="utf-8"))
+            chain["previous_authority"]["historical_recovery_receipt_sha256"] = "0" * 64
+            chain_path.write_text(
+                json.dumps(chain, indent=2, sort_keys=True) + "\n",
+                encoding="utf-8",
+            )
+            with mock.patch.object(
+                MODULE,
+                "CURRENT_RENDERER_AUTHORITY_BINDING_RECEIPT_SHA256",
+                MODULE.sha256_file(chain_path),
+            ):
+                self.assertIn(
+                    f"source_hash::{relative}",
+                    self.failed_names(
+                        MODULE.validate_source_bindings(
+                            self.contract,
+                            repo_root=repo_root,
+                        )
+                    ),
+                )
 
     def test_architecture_selection_is_exclusive(self) -> None:
         mutated = copy.deepcopy(self.contract)

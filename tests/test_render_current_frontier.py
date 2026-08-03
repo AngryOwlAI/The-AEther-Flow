@@ -66,9 +66,9 @@ class RenderCurrentFrontierTests(unittest.TestCase):
                     "  high_risk_rows_must_not_render_bare_accepted: true",
                     "row_aliases:",
                     "  matter_coupling:",
-                    '    display_status: "accepted only as scoped source-extension evidence/precondition"',
-                    '    required_qualifier: "Matter coupling remains not derived and not adopted."',
-                    '    required_blocked_phrase: "No matter coupling or Einstein equations follow from this row."',
+                    '    display_status: "fixed P7 source-matter package adopted only as scoped source-side matter by protected human postulate; g_eff-dependent derivational coupling remains open"',
+                    '    required_qualifier: "The exact source-side package is adopted; target coupling remains open."',
+                    '    required_blocked_phrase: "No target matter coupling or Einstein equations follow from this row."',
                     "    object_aliases:",
                     "      PositiveMSProfile_v1:",
                     '        display_status: "accepted only as scoped positive source-semantics evidence/precondition"',
@@ -174,7 +174,7 @@ class RenderCurrentFrontierTests(unittest.TestCase):
             "\n".join(
                 [
                     "burden_id,milestone,required_object,current_status,blocking_burden,accept_criteria,failure_or_freeze_criteria,last_evidence_path,updated_at,notes,control_status,mathematical_status,physical_status,promotion_status,overread_guard",
-                    "matter_coupling,matter_coupling,universal coupling,accepted,scoped evidence only,accept,fail,research_control/program_state.yaml,2026-06-28T00:00:00Z,fixture,accepted_as_scoped_evidence_precondition,parameterized_finite_local_witness_precondition,not_matter_coupling_not_stress_energy_not_matter_action_not_detector_semantics,scoped_source_evidence_only,no_coupling_law_adoption;no_matter_coupling_derivation;no_stress_energy_semantics;no_einstein_equations;no_benchmark_promotion;no_completed_derivation",
+                    "matter_coupling,matter_coupling,universal coupling,accepted,scoped evidence only,accept,fail,research_control/program_state.yaml,2026-06-28T00:00:00Z,fixture,gate_review_completed,parameterized_finite_local_witness_precondition,not_target_matter_coupling_source_side_postulate_adoption_only,scoped_source_postulate_adoption_only,no_unscoped_or_target_coupling_law_adoption;no_matter_coupling_derivation;no_target_stress_energy_semantics;no_einstein_equations;no_benchmark_promotion;no_completed_derivation",
                     "g_eff,effective_metric_g_eff,effective metric,accepted,scoped source-extension object only,accept,fail,research_control/program_state.yaml,2026-06-28T00:00:00Z,fixture,gate_review_completed,scoped_source_extension_geff_object,not_unscoped_lorentzian_metric_not_matter_coupling_not_einstein_equations,scoped_source_object_only,no_unscoped_geff_adoption;no_matter_coupling_derivation;no_einstein_equations;no_benchmark_promotion;no_completed_derivation",
                     "einstein_equations,einstein_equations,field equations,not started,dynamics action or variation,accept,fail,research_control/program_state.yaml,2026-06-28T00:00:00Z,fixture,not_started,dynamics_action_or_variation_missing,no_field_equation_derivation,none,no_einstein_equations;no_benchmark_promotion;no_completed_derivation",
                     "benchmark_promotion,benchmark_promotion,exact-GR benchmark,blocked by missing primitive,all upstream derivation burdens,accept,fail,research_control/program_state.yaml,2026-06-28T00:00:00Z,fixture,blocked,upstream_burdens_missing,no_exact_gr_benchmark_promotion,none,no_benchmark_promotion;no_benchmark_gate_chair_closure;no_completed_derivation",
@@ -342,20 +342,27 @@ class RenderCurrentFrontierTests(unittest.TestCase):
             self.assertIn("Layered Distance-To-GR Boundary Notes", markdown)
             self.assertIn("| Burden ID | Milestone | Reader-facing status | Legacy status | Control status | Mathematical status | Physical status | Promotion status | Overread guard | Last evidence |", markdown)
             self.assertIn("Scoped-Positive Alias Pilot", markdown)
-            self.assertIn("accepted only as scoped source-extension evidence/precondition", markdown)
+            self.assertIn(
+                "fixed P7 source-matter package adopted only as scoped source-side matter by protected human postulate",
+                markdown,
+            )
             self.assertIn("PositiveMSProfile_v1", markdown)
             self.assertIn("RR_ETransportCompletenessOrInvarianceLaw_v1", markdown)
-            self.assertIn("accepted_as_scoped_evidence_precondition", markdown)
-            self.assertIn("not_matter_coupling_not_stress_energy_not_matter_action_not_detector_semantics", markdown)
+            self.assertIn("gate_review_completed", markdown)
+            self.assertIn("not_target_matter_coupling_source_side_postulate_adoption_only", markdown)
+            self.assertIn("scoped_source_postulate_adoption_only", markdown)
             self.assertIn("no_matter_coupling_derivation", markdown)
             self.assertIn("Positive-First Status Cards", markdown)
             self.assertIn("Metric-Use Ledger Warning", markdown)
             self.assertIn("Forbidden/import guard rows", markdown)
             self.assertIn("project-control guard ledger", markdown)
-            self.assertIn("**Positive status:** accepted only as scoped source-extension evidence/precondition", markdown)
-            self.assertIn("**Scope:** The status is limited to control status accepted_as_scoped_evidence_precondition", markdown)
+            self.assertIn(
+                "**Positive status:** fixed P7 source-matter package adopted only as scoped source-side matter by protected human postulate",
+                markdown,
+            )
+            self.assertIn("**Scope:** The status is limited to control status gate_review_completed", markdown)
             self.assertIn("**Allowed use:** Later bounded packets may use this row only under the listed scope and overread guards.", markdown)
-            self.assertIn("**Blocked overread:** No coupling law adoption follows from this row.", markdown)
+            self.assertIn("**Blocked overread:** No unscoped or target coupling law adoption follows from this row.", markdown)
             self.assertIn("**Next burden:** Address the current blocking burden before any downstream promotion: scoped evidence only.", markdown)
             self.assertIn("not_unscoped_lorentzian_metric_not_matter_coupling_not_einstein_equations", markdown)
             self.assertIn("no_unscoped_geff_adoption", markdown)

@@ -1,0 +1,72 @@
+{
+  "schema_id": "p16_t02_status_calibration_design_path_classifier_recovery_receipt_v1",
+  "receipt_id": "P16-T02-STATUS-CALIBRATION-DESIGN-PATH-CLASSIFIER-RECOVERY-001",
+  "task_id": "RT-20260803-007",
+  "job_id": "AJ-RT-20260803-007-001",
+  "generation": 235,
+  "strategy_id": "recover_checkpoint_planner_status_calibration_path_classification_v1",
+  "status": "PASS_IMPLEMENTATION_READY_FOR_CONTROL_SYNC",
+  "route": {
+    "immutable_route_sha256": "63ac7f16b6e6ab340ea8a4eca91664252468ea5f2eec4025f63f6121793e58f4",
+    "route_blocker_fingerprint": "01c38f0b0767a8afa8cae561b25a734b8f9a55a8c5de21ab5f64ee68005f8948",
+    "dirty_state_manifest_sha256": "b29d711b9209de134e7e801b689f9b0a0040032891f9d520f7612a303f8efe6c",
+    "failed_gate_id": "checkpoint_planner_safe_authority_plan",
+    "failed_gate_status": "BLOCKED_UNKNOWN_STATUS_CALIBRATION_DESIGN_PATHS",
+    "failed_gate_evidence_sha256": "f826f4740e2cd871f0aa64f15bfff285ce3fcbaef5d97685a4bb33b07bb67bc8"
+  },
+  "implementation": {
+    "classifier_path": "scripts/project_control/classify_project_changes.py",
+    "classifier_sha256_before": "d20f61a6396c19cc92709c234e772e2bfdbc9b40314b62055dcaaaaa8ded91c4",
+    "classifier_sha256_after": "785a1a8b312fd2537a60b3e4931bd4b1b93ed569ce05a2075c93929c36953465",
+    "test_path": "tests/test_project_change_classifier.py",
+    "test_sha256_before": "8c3f795b99c04f485cca7c30c22ff4e034367568906ffe98789041d83d370285",
+    "test_sha256_after": "fe1e91c71983e269fdd7403e7e473d6fc4958ccae6749079c86ec00de63218b9",
+    "exact_path_count": 3,
+    "assigned_tags": [
+      "claim_language",
+      "role_or_schema_contract"
+    ],
+    "broad_design_yaml_glob_added": false,
+    "unknown_path_fallback_weakened": false
+  },
+  "protected_contracts": [
+    {
+      "path": "research_control/design/accepted_status_calibration_v1.yaml",
+      "sha256_before": "0a14357adc7793fe28c97743cb1a5df788e4fb8738cd5ff1af1e9202ef8a4b51",
+      "sha256_after": "0a14357adc7793fe28c97743cb1a5df788e4fb8738cd5ff1af1e9202ef8a4b51",
+      "byte_preserved": true
+    },
+    {
+      "path": "research_control/design/accepted_status_calibration_v2.yaml",
+      "sha256_before": "cfc0f83001e74dad94cae326238d81cad9e97b50ae7c9703260ee1e6e0bb64e1",
+      "sha256_after": "cfc0f83001e74dad94cae326238d81cad9e97b50ae7c9703260ee1e6e0bb64e1",
+      "byte_preserved": true
+    },
+    {
+      "path": "research_control/design/distance_to_gr_status_aliases.yaml",
+      "sha256_before": "cad6dcc8142f74f280d0c408c5ff290f6750dba4bc23e8adb9a03c94dd83c927",
+      "sha256_after": "cad6dcc8142f74f280d0c408c5ff290f6750dba4bc23e8adb9a03c94dd83c927",
+      "byte_preserved": true
+    }
+  ],
+  "validation": {
+    "focused_test_count": 22,
+    "focused_test_status": "PASS",
+    "exact_path_classification_status": "PASS_THREE_PATHS_TWO_TAGS_ZERO_UNKNOWN",
+    "unrelated_design_yaml_negative_control_status": "PASS_UNKNOWN_GOVERNED_PATH_FULL_PROFILE",
+    "cumulative_classifier_status": "PASS_ZERO_UNKNOWN_ZERO_BLOCKED",
+    "checkpoint_plan_status": "READY_SAFE_AUTHORITY_PLAN",
+    "checkpoint_plan_manifest_hash": "a84904b1636216bf5b93c66debde34fcb76d220134913d32b91f810d41c90f69"
+  },
+  "authority_limits": {
+    "project_system_change_only": true,
+    "scientific_claims_changed": false,
+    "distance_to_gr_delta_changed": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "p16_t02_reaudit_executed": false,
+    "p16_t03_executed": false,
+    "p16_t04_executed": false,
+    "publication_push_or_external_action_authorized": false
+  }
+}

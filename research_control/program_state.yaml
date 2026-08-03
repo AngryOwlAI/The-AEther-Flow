@@ -1,11 +1,195 @@
 mode: "director_led_research_control"
-active_task_id: "RT-20260803-004"
-latest_handoff_id: "handoff-0946"
-current_status: "p16_t02_allowlist_parity_recovery_pass_ready_for_checkpoint"
-claim_boundary_summary: "Generation 231 preserves the completed P16-T02 science transaction byte-for-byte and restores exact ordered 26-item allowlist identity across its AgentJob, expired execution role, and two control registries. The separate status-taxonomy signal remains open; no Gate or physics authority changes."
-next_plan_task_id: "P16-T02"
+active_task_id: "RT-20260803-007"
+latest_handoff_id: "handoff-0949"
+current_status: "p16_t02_status_calibration_path_classifier_recovered_checkpoint_blocked_documentation_impact_folder_map_coverage"
+claim_boundary_summary: "Generation 235 classifies exactly three existing status-calibration YAML control contracts through stable claim-language and role-or-schema tags while preserving their bytes and every inherited P16-T02 payload. All precheckpoint gates pass, but the sole checkpoint attempt fails staged documentation-impact acceptance on two cumulative FOLDER_MAP.md omissions; no commit occurs and one distinct project-system recovery is required."
+next_plan_task_id: "P16-T03"
 next_worker_skill: "improve-project-system"
-next_recommended_action: "Run one governed checkpoint for AJ-RT-20260803-004-001. After it commits, consume PIS-RT-20260803-003-001 through exactly one fresh bounded improve-project-system status-taxonomy repair; do not reexecute P16-T02 or execute P16-T03 or P16-T04."
+next_recommended_action: "Run one distinct improve-project-system recovery that adds the generation-235 blocker artifact to changed_paths and FOLDER_MAP.md to generated_derivatives in the exact RT-20260803-005 and RT-20260803-006 documentation-impact receipts, regenerates and revalidates the cumulative transaction, and invokes at most one fresh governed checkpoint without executing P16-T03 payload work."
+
+p16_t02_status_calibration_design_path_classifier_recovery:
+  task_id: "RT-20260803-007"
+  parent_task_id: "RT-20260803-006"
+  parent_handoff_id: "handoff-0948"
+  plan_task_id: "P16-T02"
+  recovery_for_plan_task_id: "P16-T02"
+  next_plan_task_id: "P16-T03"
+  claim_boundary_id: "CB-V21-P16-T02-STATUS-CALIBRATION-DESIGN-PATH-CLASSIFIER-RECOVERY-001"
+  status: "BLOCKED_CHECKPOINT"
+  work_item_status: "blocked_checkpoint_recovery_required"
+  result_status: "BLOCKED_CHECKPOINT_STAGED_DOCUMENTATION_IMPACT_FOLDER_MAP_COVERAGE"
+  route_label: "project-system-checkpoint-recovery"
+  selected_role_family: "validator-engineer@0.2.0"
+  selected_worker_skill: "improve-project-system"
+  selected_strategy_id: "recover_checkpoint_planner_status_calibration_path_classification_v1"
+  source_head: "334987d240390c3a7cd9522e92e9b283f4a2b7f9"
+  immutable_route_sha256: "63ac7f16b6e6ab340ea8a4eca91664252468ea5f2eec4025f63f6121793e58f4"
+  route_blocker_fingerprint: "01c38f0b0767a8afa8cae561b25a734b8f9a55a8c5de21ab5f64ee68005f8948"
+  inherited_dirty_state_manifest_sha256: "b29d711b9209de134e7e801b689f9b0a0040032891f9d520f7612a303f8efe6c"
+  agent_job_id: "AJ-RT-20260803-007-001"
+  decision_id: "DDR-20260803-007"
+  execution_role_ref: "validator-engineer@0.2.0--RT-20260803-007"
+  source_task_id: "RT-20260803-006"
+  source_completion_path: "research_control/tasks/RT-20260803-006/jobs/completions/AJC-AJ-RT-20260803-006-001.yaml"
+  source_completion_sha256: "b8b203104006dc28ce1e87987eec839d3c90d93df09d793490b4d7c3b2e56f31"
+  recovery_receipt_path: "research_control/tasks/RT-20260803-007/artifacts/p16_t02_status_calibration_design_path_classifier_recovery_receipt.json"
+  recovery_receipt_sha256: "2ae81308115dded3915008320cb6da877c911c529090c93f9c422e0cf39ab05c"
+  classifier_path: "scripts/project_control/classify_project_changes.py"
+  classifier_sha256: "785a1a8b312fd2537a60b3e4931bd4b1b93ed569ce05a2075c93929c36953465"
+  test_path: "tests/test_project_change_classifier.py"
+  test_sha256: "fe1e91c71983e269fdd7403e7e473d6fc4958ccae6749079c86ec00de63218b9"
+  exact_path_count: 3
+  exact_tag_count: 2
+  focused_test_count: 22
+  cumulative_unknown_path_count: 0
+  cumulative_blocked_path_count: 0
+  protected_hash_mismatch_count: 0
+  implementation_agent_job_invocation_count: 1
+  implementation_executed: true
+  p16_t02_reaudit_executed: false
+  p16_t03_payload_executed: false
+  p16_t04_executed: false
+  canonical_science_modified: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  completion_path: "research_control/tasks/RT-20260803-007/jobs/completions/AJC-AJ-RT-20260803-007-001.yaml"
+  completion_sha256: "61ad6677e338dae7b1946a8eb757fb28ce1c65686d7850db2207ba7640017b1a"
+  handoff_id: "handoff-0949"
+  handoff_path: "research_control/handoffs/handoff-0949.yaml"
+  handoff_sha256: "dcfa19917488e50951e6042274e90c29345664ba5714d7be1a5ecf8c960ad905"
+  checkpoint_invocation_count: 1
+  checkpoint_committed: false
+  checkpoint_blocker_path: "research_control/tasks/RT-20260803-007/artifacts/checkpoint_blocker_generation_235_documentation_impact_folder_map_v1.yaml"
+  checkpoint_blocker_sha256: "9364483cbc3d3c1afb3b062f8a342d044aacce18fac7f449bdff6ae9628f0868"
+  selected_reconciliation_strategy_id: "recover_generation_235_checkpoint_documentation_impact_folder_map_coverage_v1"
+  selected_reconciliation_execution_ready_after_checkpoint: false
+  selected_reconciliation_execution_ready_now: true
+  selected_reconciliation_p16_t03_payload_authorized: false
+
+p16_t02_current_renderer_binding_recovery:
+  task_id: "RT-20260803-006"
+  parent_task_id: "RT-20260803-005"
+  parent_handoff_id: "handoff-0947"
+  plan_task_id: "P16-T02"
+  recovery_for_plan_task_id: "P16-T02"
+  next_plan_task_id: "P16-T02"
+  claim_boundary_id: "CB-V21-P16-T02-CURRENT-RENDERER-AUTHORITY-BINDING-RECOVERY-001"
+  status: "PASS_PRECHECKPOINT"
+  work_item_status: "repair_completed"
+  result_status: "PASS_CURRENT_RENDERER_AUTHORITY_CHAIN_READY_FOR_CHECKPOINT"
+  route_label: "project-system-checkpoint-recovery"
+  selected_role_family: "validator-engineer@0.2.0"
+  selected_worker_skill: "improve-project-system"
+  selected_strategy_id: "recover_p16_t02_event_store_renderer_current_authority_binding_v1"
+  source_head: "334987d240390c3a7cd9522e92e9b283f4a2b7f9"
+  immutable_route_sha256: "d952f738bd2d74e2b6b370fef24d2cbc49ecc1e688d508361ec9f20e537464c6"
+  route_blocker_fingerprint: "4d2a1d14d91270583e4144c433ec201cf4498061655e260dba4ef313c6eef682"
+  agent_job_id: "AJ-RT-20260803-006-001"
+  decision_id: "DDR-20260803-006"
+  execution_role_ref: "validator-engineer@0.2.0--RT-20260803-006"
+  source_task_id: "RT-20260803-005"
+  source_completion_path: "research_control/tasks/RT-20260803-005/jobs/completions/AJC-AJ-RT-20260803-005-001.yaml"
+  source_completion_sha256: "ae897b05c79ade3d78d13de26591708ecf27ba2e809f05437f90ecb45d19c8e8"
+  source_blocker_path: "research_control/tasks/RT-20260803-005/artifacts/validation_blocker_p16_t02_event_store_renderer_binding_v1.yaml"
+  source_blocker_sha256: "c2ccc5e9407ead8883cc68ba488b2645a4458ab7a1cd4e88c92ec6300c9ec05f"
+  historical_recovery_receipt_path: "research_control/tasks/RT-20260801-014/artifacts/p10_t05_historical_renderer_binding_recovery_receipt.json"
+  historical_recovery_receipt_sha256: "d32a02c466a2471316ccb372172b292c8fa23014917987d9ee58990697192d21"
+  renderer_manifest_path: "research_control/tasks/RT-20260801-011/artifacts/generated_report_renderer_update_manifest_v1.json"
+  renderer_manifest_sha256: "d92fd0f636510d07a86cc7112fcc2a5243d77fc69959a13dc209f9ea7c90329a"
+  recovery_receipt_path: "research_control/tasks/RT-20260803-006/artifacts/p16_t02_current_renderer_authority_binding_recovery_receipt.json"
+  recovery_receipt_sha256: "a98d0c3948687b87b09e00691c7fa766ce9c65e9f3cb14c50dc3198b833e2c9e"
+  event_store_validator_path: "research_control/tasks/RT-20260721-007/artifacts/validate_v21_event_store_architecture.py"
+  event_store_validator_sha256: "e1ff3b1798aee346e870b0ed741226dcb9554ebc9e80813ca41f0246f885afef"
+  focused_test_count: 34
+  event_store_architecture_status: "PASS"
+  p10_migration_readiness_status: "PASS"
+  project_improvement_signal_id: "PIS-RT-20260803-003-001"
+  project_improvement_signal_status: "resolved"
+  project_improvement_sidecar_id: "improve-project-handoff_20260803_003"
+  project_improvement_sidecar_status: "resolved"
+  project_improvement_solution_plan_status: "completed_pending_governed_checkpoint"
+  implementation_agent_job_invocation_count: 1
+  implementation_executed: true
+  p16_t02_reaudit_executed: false
+  p16_t03_executed: false
+  p16_t04_executed: false
+  canonical_science_modified: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  completion_path: "research_control/tasks/RT-20260803-006/jobs/completions/AJC-AJ-RT-20260803-006-001.yaml"
+  completion_sha256: "b8b203104006dc28ce1e87987eec839d3c90d93df09d793490b4d7c3b2e56f31"
+  handoff_id: "handoff-0948"
+  handoff_path: "research_control/handoffs/handoff-0948.yaml"
+  checkpoint_invocation_count: 0
+  checkpoint_committed: false
+
+p16_t02_gate_status_layer_contract_repair:
+  task_id: "RT-20260803-005"
+  parent_task_id: "RT-20260803-003"
+  parent_handoff_id: "handoff-0946"
+  plan_task_id: "P16-T02"
+  recovery_for_plan_task_id: "P16-T02"
+  next_plan_task_id: "P16-T02"
+  claim_boundary_id: "CB-V21-P16-T02-GATE-STATUS-LAYER-CONTRACT-REPAIR-001"
+  status: "FAIL"
+  work_item_status: "blocked_precheckpoint_recovery_required"
+  result_status: "BLOCKED_PRECHECKPOINT_P10_T05_CURRENT_RENDERER_BINDING"
+  route_label: "project-system-repair-packet"
+  selected_role_family: "project-control-maintainer@0.2.0"
+  selected_worker_skill: "improve-project-system"
+  selected_strategy_id: "repair_p16_t02_gate_status_layer_contract_v1"
+  source_head: "334987d240390c3a7cd9522e92e9b283f4a2b7f9"
+  immutable_route_sha256: "02e2953905593387367b37f40b049b833a690d02c8926613721d00bd6cd26268"
+  route_blocker_fingerprint: "00cf283ff29c5b1019f107471de9f02929f6f635034124bd869248d90d131e8f"
+  agent_job_id: "AJ-RT-20260803-005-001"
+  decision_id: "DDR-20260803-005"
+  execution_role_ref: "project-control-maintainer@0.2.0--RT-20260803-005"
+  project_improvement_signal_id: "PIS-RT-20260803-003-001"
+  project_improvement_signal_status: "resolved"
+  project_improvement_sidecar_id: "improve-project-handoff_20260803_003"
+  project_improvement_sidecar_status: "resolved"
+  project_improvement_solution_plan_status: "completed_pending_governed_checkpoint"
+  source_audit_path: "research_control/tasks/RT-20260803-003/artifacts/v21_p16_t02_gate_consistency_audit.md"
+  source_audit_sha256: "5daa24b57b805af51633f85e176b8da5699aaca8000794f57eb5ff4a3ddfde8c"
+  source_validation_path: "research_control/tasks/RT-20260803-003/artifacts/v21_p16_t02_validation.json"
+  source_validation_sha256: "d12496fb50fc6b153c3349e87a1c352cd7641c31e139eddeb3c9cfc9dad3b758"
+  source_handoff_path: "research_control/handoffs/handoff-0946.yaml"
+  source_handoff_sha256: "e86989a4014b01fc04ec4e6e2dcab8eb3a97d1fd1d77c02ab24357c20cff27bc"
+  source_improvement_sidecar_sha256_before_selection: "1c2e18cf29c6448f38898ca7d9e9bffcc6f8f48a5a41f821fd1e183b1ea4a04b"
+  project_system_director_step_completed: true
+  implementation_agent_job_invocation_count: 1
+  implementation_executed: true
+  precheckpoint_blocker_path: "research_control/tasks/RT-20260803-005/artifacts/validation_blocker_p16_t02_event_store_renderer_binding_v1.yaml"
+  failed_gate_id: "test_shard_repository"
+  failed_source_binding: "source_hash::scripts/research_control/render_current_frontier.py"
+  current_job_can_repair_binding: false
+  selected_recovery_worker_skill: "improve-project-system"
+  selected_recovery_strategy_id: "recover_p16_t02_event_store_renderer_current_authority_binding_v1"
+  selected_recovery_execution_ready_now: false
+  selected_recovery_completed: true
+  selected_recovery_task_id: "RT-20260803-006"
+  selected_recovery_job_id: "AJ-RT-20260803-006-001"
+  p16_t02_reaudit_executed: false
+  p16_t03_executed: false
+  p16_t04_executed: false
+  canonical_science_modified: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  completion_path: "research_control/tasks/RT-20260803-005/jobs/completions/AJC-AJ-RT-20260803-005-001.yaml"
+  completion_sha256: "ae897b05c79ade3d78d13de26591708ecf27ba2e809f05437f90ecb45d19c8e8"
+  handoff_id: "handoff-0947"
+  handoff_path: "research_control/handoffs/handoff-0947.yaml"
+  checkpoint_invocation_count: 0
+  checkpoint_committed: false
 
 p16_t02_allowlist_parity_recovery:
   task_id: "RT-20260803-004"
@@ -11270,16 +11454,16 @@ project_improvement_bridge:
   resolution_evidence_path: ""
 
 active_state_bifurcation:
-  latest_research_task_id: "RT-20260803-004"
-  latest_research_handoff_id: "handoff-0946"
-  latest_research_next_action: "Run one governed checkpoint for AJ-RT-20260803-004-001. After it commits, consume PIS-RT-20260803-003-001 through exactly one fresh bounded improve-project-system status-taxonomy repair; do not reexecute P16-T02 or execute P16-T03 or P16-T04."
+  latest_research_task_id: "RT-20260803-007"
+  latest_research_handoff_id: "handoff-0949"
+  latest_research_next_action: "Run one distinct improve-project-system recovery that adds the generation-235 blocker artifact to changed_paths and FOLDER_MAP.md to generated_derivatives in the exact RT-20260803-005 and RT-20260803-006 documentation-impact receipts, regenerates and revalidates the cumulative transaction, and invokes at most one fresh governed checkpoint without executing P16-T03 payload work."
   latest_project_system_task_id: "none"
   latest_project_system_status: "none"
   latest_project_system_sidecar_task_id: "none"
   latest_project_system_sidecar_status: "none"
   next_research_route_source: "latest_research_handoff"
   sidecar_supersedes_research_handoff: false
-  project_improvement_sidecar_required: true
+  project_improvement_sidecar_required: false
   research_handoff_remains_authoritative: true
 
 source_assumption_ledger:

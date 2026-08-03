@@ -503,6 +503,41 @@ class ProjectChangeClassifierTests(unittest.TestCase):
             )
         self.assertNotIn("unknown_governed_path", result["reason_codes"])
 
+    def test_status_calibration_design_paths_have_stable_control_contract_tags(self) -> None:
+        paths = (
+            "research_control/design/accepted_status_calibration_v1.yaml",
+            "research_control/design/accepted_status_calibration_v2.yaml",
+            "research_control/design/distance_to_gr_status_aliases.yaml",
+        )
+        result = self.classifier.classify_paths(paths)
+
+        self.assertEqual(
+            result["path_family_tags"],
+            ["claim_language", "role_or_schema_contract"],
+        )
+        for detail in result["path_family_details"]:
+            self.assertEqual(
+                detail["tags"],
+                ["claim_language", "role_or_schema_contract"],
+            )
+            self.assertEqual(
+                detail["reasons"],
+                ["path_rule:claim_language", "path_rule:role_or_schema_contract"],
+            )
+        self.assertNotIn("unknown_governed_path", result["reason_codes"])
+
+        unrelated_path = "research_control/design/future_status_calibration.yaml"
+        unrelated = self.classifier.classify_paths([*paths, unrelated_path])
+        unrelated_details = {
+            item["path"]: item for item in unrelated["path_family_details"]
+        }
+        self.assertEqual(
+            unrelated_details[unrelated_path]["tags"],
+            ["unknown_governed_path"],
+        )
+        self.assertEqual(unrelated["recommended_validation_profile"], "full")
+        self.assertIn("unknown_governed_path", unrelated["reason_codes"])
+
     def test_validation_adapter_bindings_are_exact_ci_orchestration(self) -> None:
         path = "research_control/design/validation_adapter_bindings_v1.json"
         result = self.classifier.classify_paths([path])

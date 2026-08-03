@@ -49,13 +49,13 @@ REQUIRED_BLOCKED_CLAIMS = [
     "source-law adoption",
     "RR_ETransportCompletenessOrInvarianceLaw_v1 adoption",
     "unrestricted RR_E theorem status",
-    "matter-semantics adoption",
-    "detector-semantics adoption",
-    "coupling-law adoption",
-    "matter-coupling derivation or adoption",
-    "stress-energy semantics",
-    "stress-energy tensor",
-    "matter action",
+    "target matter-semantics adoption",
+    "target detector-semantics adoption",
+    "unscoped or target coupling-law adoption",
+    "matter-coupling derivation or target adoption",
+    "target stress-energy semantics",
+    "target stress-energy tensor",
+    "target matter action",
     "Einstein equations",
     "benchmark promotion",
     "Gate Chair verdict or closure",
@@ -373,7 +373,7 @@ def high_risk_row(
     frontier_text: str,
     calibration: dict[str, dict[str, Any]],
 ) -> dict[str, Any]:
-    return {
+    output = {
         "burden_id": row.get("burden_id", ""),
         "reader_facing_status": guarded_reader_status(row, frontier_text),
         "legacy_status": row.get("current_status", ""),
@@ -385,11 +385,28 @@ def high_risk_row(
         "last_evidence_path": row.get("last_evidence_path", ""),
         "high_risk_status_card": status_card_for_row(row, frontier_text, calibration),
     }
+    if row.get("burden_id") == "matter_coupling":
+        output["source_side_postulate_status"] = {
+            "reader_facing_status": guarded_reader_status(row, frontier_text),
+            "control_status": row.get("control_status", ""),
+            "mathematical_status": row.get("mathematical_status", ""),
+            "physical_status": row.get("physical_status", ""),
+            "promotion_status": row.get("promotion_status", ""),
+        }
+        output.update(
+            {
+                "reader_facing_status": "open target matter-coupling derivation after protected source-side postulate adoption",
+                "control_status": "accepted_as_scoped_evidence_precondition",
+                "physical_status": "not_matter_coupling_not_stress_energy_not_matter_action_not_detector_semantics",
+                "promotion_status": "scoped_source_evidence_only",
+            }
+        )
+    return output
 
 
 def scoped_positive_objects(rows: list[dict[str, str]], frontier_text: str) -> list[dict[str, Any]]:
     output: list[dict[str, Any]] = []
-    for burden_id in ["m_src", "g_eff"]:
+    for burden_id in ["m_src", "g_eff", "matter_coupling"]:
         row = row_by_burden(rows, burden_id)
         if not row:
             continue
@@ -412,9 +429,9 @@ def scoped_evidence_preconditions(rows: list[dict[str, str]], frontier_text: str
     return [
         {
             "object_id": "matter_coupling",
-            "reader_facing_status": guarded_reader_status(row, frontier_text),
+            "reader_facing_status": "open after protected source-side postulate adoption",
             "authority_path": row.get("last_evidence_path", ""),
-            "supports_target": "matter-semantics and matter-coupling continuation only",
+            "supports_target": "construction or precise obstruction of a source-to-target coupling bridge through derived g_eff",
             "does_not_establish": split_tokens(row.get("overread_guard", "")),
         }
     ]
@@ -422,19 +439,42 @@ def scoped_evidence_preconditions(rows: list[dict[str, str]], frontier_text: str
 
 def blocked_physical_targets(rows: list[dict[str, str]], frontier_text: str) -> list[dict[str, Any]]:
     output: list[dict[str, Any]] = []
-    for burden_id in ["matter_coupling", "einstein_equations", "benchmark_promotion"]:
+    for burden_id in [
+        "matter_coupling",
+        "einstein_equations",
+        "benchmark_promotion",
+        "gate_chair_status",
+    ]:
         row = row_by_burden(rows, burden_id)
         if not row:
             continue
-        output.append(
-            {
-                "target_id": burden_id,
-                "reader_facing_status": guarded_reader_status(row, frontier_text),
-                "control_status": row.get("control_status", ""),
-                "blocking_burden": row.get("blocking_burden", ""),
-                "overread_guard": split_tokens(row.get("overread_guard", "")),
+        target = {
+            "target_id": burden_id,
+            "reader_facing_status": guarded_reader_status(row, frontier_text),
+            "control_status": row.get("control_status", ""),
+            "mathematical_status": row.get("mathematical_status", ""),
+            "physical_status": row.get("physical_status", ""),
+            "promotion_status": row.get("promotion_status", ""),
+            "blocking_burden": row.get("blocking_burden", ""),
+            "overread_guard": split_tokens(row.get("overread_guard", "")),
+        }
+        if burden_id == "matter_coupling":
+            target["source_side_postulate_status"] = {
+                "reader_facing_status": target["reader_facing_status"],
+                "control_status": target["control_status"],
+                "mathematical_status": target["mathematical_status"],
+                "physical_status": target["physical_status"],
+                "promotion_status": target["promotion_status"],
             }
-        )
+            target.update(
+                {
+                    "reader_facing_status": "open target matter-coupling derivation after protected source-side postulate adoption",
+                    "control_status": "accepted_as_scoped_evidence_precondition",
+                    "physical_status": "not_matter_coupling_not_stress_energy_not_matter_action_not_detector_semantics",
+                    "promotion_status": "scoped_source_evidence_only",
+                }
+            )
+        output.append(target)
     return output
 
 

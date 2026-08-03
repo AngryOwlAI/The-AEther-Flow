@@ -1,0 +1,28 @@
+{
+  "boundary": "project_system_improvement_required",
+  "change_classification": {
+    "docs_impact_required": true,
+    "project_system_improvement_required": true,
+    "recommended_role": "validator-engineer",
+    "recommended_skill": "improve-project-system"
+  },
+  "checkpoint_gate_source": "validators",
+  "hard_checkpoint_gate": false,
+  "open_signals": [
+    {
+      "severity": "high",
+      "signal_id": "PIS-RT-20260803-003-001",
+      "signal_type": "control_contract_drift",
+      "status": "open"
+    }
+  ],
+  "reason": "The implemented P16-T02 status payload remains checkpoint-blocked by one exact P10-T05 current-renderer authority binding.",
+  "resolver_is_advisory": true,
+  "selected_signal": {
+    "recommended_role": "validator-engineer",
+    "recommended_skill": "improve-project-system",
+    "signal_id": "PIS-RT-20260803-003-001",
+    "status": "open"
+  },
+  "status": "ready"
+}

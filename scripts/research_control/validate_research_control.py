@@ -605,6 +605,7 @@ DISTANCE_TO_GR_MATHEMATICAL_STATUS_VALUES = {
     "parameterized_finite_local_witness_precondition",
     "parameterized_witness_precondition",
     "primitive_missing",
+    "protected_negative_verdict_recorded_positive_closure_missing",
     "protected_verdict_missing",
     "scoped_obstruction",
     "scoped_source_extension_geff_object",
@@ -628,12 +629,14 @@ DISTANCE_TO_GR_PHYSICAL_STATUS_VALUES = {
     "no_field_equation_derivation",
     "no_generator_law_adoption",
     "no_physical_interpretation_authorized",
+    "no_positive_benchmark_closure",
     "no_retention_law_adoption",
     "not_benchmark_promotion",
     "not_detector_semantics_not_matter_coupling",
     "not_einstein_equations",
     "not_matter_coupling",
     "not_matter_coupling_not_stress_energy_not_matter_action_not_detector_semantics",
+    "not_target_matter_coupling_source_side_postulate_adoption_only",
     "not_stress_energy",
     "not_target_manifold_not_metric_not_gr_derivation",
     "not_unscoped_lorentzian_metric_not_matter_coupling_not_einstein_equations",
@@ -647,6 +650,7 @@ DISTANCE_TO_GR_PROMOTION_STATUS_VALUES = {
     "none",
     "scoped_source_evidence_only",
     "scoped_source_object_only",
+    "scoped_source_postulate_adoption_only",
 }
 
 DISTANCE_TO_GR_OVERREAD_GUARD_VALUES = {
@@ -667,7 +671,14 @@ DISTANCE_TO_GR_OVERREAD_GUARD_VALUES = {
     "no_source_law_adoption",
     "no_stress_energy_semantics",
     "no_stress_energy_tensor",
+    "no_target_detector_semantics",
+    "no_target_matter_action",
+    "no_target_matter_coupling_adoption",
+    "no_target_matter_semantics_adoption",
+    "no_target_stress_energy_semantics",
+    "no_target_stress_energy_tensor",
     "no_unscoped_geff_adoption",
+    "no_unscoped_or_target_coupling_law_adoption",
 }
 
 COUNTERMODEL_OBLIGATION_POLICY_ACTIVE_AFTER = "2026-07-08T00:22:57Z"
@@ -765,6 +776,7 @@ DISTANCE_TO_GR_ACCEPTED_CONTROL_STATUS_VALUES = {
 DISTANCE_TO_GR_SCOPED_PROMOTION_STATUS_VALUES = {
     "scoped_source_evidence_only",
     "scoped_source_object_only",
+    "scoped_source_postulate_adoption_only",
 }
 
 DISTANCE_TO_GR_GENERATED_STATUS_AUTHORITY_PATHS = {
@@ -807,13 +819,13 @@ DISTANCE_TO_GR_REQUIRED_GUARD_TOKENS = {
         "no_source_law_adoption",
         "no_metricdata_e_adoption",
         "no_geff_scope_expansion",
-        "no_coupling_law_adoption",
+        "no_unscoped_or_target_coupling_law_adoption",
         "no_matter_coupling_derivation",
-        "no_matter_coupling_adoption",
-        "no_stress_energy_semantics",
-        "no_stress_energy_tensor",
-        "no_matter_action",
-        "no_detector_semantics",
+        "no_target_matter_coupling_adoption",
+        "no_target_stress_energy_semantics",
+        "no_target_stress_energy_tensor",
+        "no_target_matter_action",
+        "no_target_detector_semantics",
         "no_einstein_equations",
         "no_benchmark_promotion",
         "no_completed_derivation",
@@ -893,10 +905,30 @@ FRONTIER_INVENTORY_GENERATED_SOURCE_PREFIXES = (
     "wiki/",
 )
 FRONTIER_INVENTORY_HIGH_RISK_GUARDS = {
-    "matter": {"no_matter_coupling_derivation", "no_matter_coupling_adoption"},
-    "coupling": {"no_matter_coupling_derivation", "no_matter_coupling_adoption"},
-    "stress-energy": {"no_stress_energy_semantics", "no_stress_energy_tensor"},
-    "stress_energy": {"no_stress_energy_semantics", "no_stress_energy_tensor"},
+    "matter": {
+        "no_matter_coupling_derivation",
+        "no_matter_coupling_adoption",
+        "no_target_matter_coupling_adoption",
+        "no_target_matter_semantics_adoption",
+    },
+    "coupling": {
+        "no_matter_coupling_derivation",
+        "no_matter_coupling_adoption",
+        "no_target_matter_coupling_adoption",
+        "no_unscoped_or_target_coupling_law_adoption",
+    },
+    "stress-energy": {
+        "no_stress_energy_semantics",
+        "no_stress_energy_tensor",
+        "no_target_stress_energy_semantics",
+        "no_target_stress_energy_tensor",
+    },
+    "stress_energy": {
+        "no_stress_energy_semantics",
+        "no_stress_energy_tensor",
+        "no_target_stress_energy_semantics",
+        "no_target_stress_energy_tensor",
+    },
     "einstein": {"no_einstein_equations"},
     "benchmark": {"no_benchmark_promotion"},
     "g_eff": {"no_geff_scope_expansion", "no_unscoped_geff_adoption"},
@@ -927,10 +959,10 @@ DISTANCE_TO_GR_EXPECTED_LAYER_VALUES = {
         "promotion_status": "scoped_source_object_only",
     },
     "matter_coupling": {
-        "control_status": "accepted_as_scoped_evidence_precondition",
+        "control_status": "gate_review_completed",
         "mathematical_status": "parameterized_finite_local_witness_precondition",
-        "physical_status": "not_matter_coupling_not_stress_energy_not_matter_action_not_detector_semantics",
-        "promotion_status": "scoped_source_evidence_only",
+        "physical_status": "not_target_matter_coupling_source_side_postulate_adoption_only",
+        "promotion_status": "scoped_source_postulate_adoption_only",
     },
     "einstein_equations": {
         "control_status": "not_started",
@@ -945,9 +977,9 @@ DISTANCE_TO_GR_EXPECTED_LAYER_VALUES = {
         "promotion_status": "none",
     },
     "gate_chair_status": {
-        "control_status": "human_gated",
-        "mathematical_status": "protected_verdict_missing",
-        "physical_status": "no_benchmark_closure",
+        "control_status": "gate_review_completed",
+        "mathematical_status": "protected_negative_verdict_recorded_positive_closure_missing",
+        "physical_status": "no_positive_benchmark_closure",
         "promotion_status": "human_gate_required",
     },
     "finite_toy_metric_response": {
