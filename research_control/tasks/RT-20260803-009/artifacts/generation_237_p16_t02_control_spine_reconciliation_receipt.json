@@ -1,0 +1,85 @@
+{
+  "schema_id": "generation_237_p16_t02_control_spine_reconciliation_receipt_v1",
+  "status": "PASS_PRECHECKPOINT",
+  "task_id": "RT-20260803-009",
+  "job_id": "AJ-RT-20260803-009-001",
+  "goal_id": "crg-20260720T161354Z-96bc2664ce31bfe0",
+  "goal_generation": 238,
+  "strategy_id": "reroute_generation_237_p16_t02_control_spine_reconciliation_v1",
+  "source_head": "7b44585d51a5a86a08264ce9f44a4f9ce6149190",
+  "source_checkpoint": {
+    "commit": "7b44585d51a5a86a08264ce9f44a4f9ce6149190",
+    "parent": "334987d240390c3a7cd9522e92e9b283f4a2b7f9",
+    "tree": "fca3781a14bdb37c3255186ba21ad72b11b09350",
+    "subject": "Research control: RT-20260803-008 process-integrity-auditor@0.1.0--RT-20260803-008 completion",
+    "ancestor_of_current_head": true,
+    "worktree_before_reconciliation": "clean"
+  },
+  "immutable_route": {
+    "worker_skill": "improve-project-system",
+    "work_item_id": "P16-T02",
+    "route_sha256": "10b19b57af0aec9711cbed288bc77bfd3558dbde383f1054f8cd1920c9d53d89",
+    "route_blocker_fingerprint": "d5c57bb03ed008445cd4ff8c04e2b852ce52ea5b3a84e6ebbbd4a517b07af31a",
+    "route_dirty_state_manifest_sha256": "da25d010b6d1f27d740c9aaa233753d3660dd345afe42ef728e708a23793dd87",
+    "failed_gate_evidence_sha256": "5019e72892d5af01a68759404c491e22693ed91c321ab8e8fc4944cf6ad57176"
+  },
+  "protected_source_sha256": {
+    "rt008_task": "8af7185323ece3d28223a7362bdfae41b0e207ab61da916d6621731b4cd70ebc",
+    "rt008_job": "e8566746cff665e2d92cb25096d928faf1b558a566793b27e25bdf3e1ccdd77c",
+    "rt008_completion": "32112f29682a778a8135f957da5057e394e30706fc7a1406bff45bb0c837d6a1",
+    "handoff_0949_yaml": "dcfa19917488e50951e6042274e90c29345664ba5714d7be1a5ecf8c960ad905",
+    "handoff_0949_markdown": "1f8e80e2a8c9f8f8ad5eb16765fc70c0ad2ccaa1dc60b15a5852a79ed12b2436",
+    "program_state_before_reconciliation": "464b98bcd14aeee06ab1a8f7c9edd285ebef5ef3b98fe6c5640e56fb79bdd2ea",
+    "v21_plan": "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  },
+  "prospective_reaudit_activation": {
+    "schema_id": "ordinary_route_guard_plan_reaudit_activation_v1",
+    "status": "required",
+    "plan_task_id": "P16-T02",
+    "activated_by_task_id": "RT-20260803-009",
+    "source_task_id": "RT-20260803-008",
+    "source_completion_path": "research_control/tasks/RT-20260803-008/jobs/completions/AJC-AJ-RT-20260803-008-001.yaml",
+    "source_completion_sha256": "32112f29682a778a8135f957da5057e394e30706fc7a1406bff45bb0c837d6a1",
+    "source_checkpoint_commit": "7b44585d51a5a86a08264ce9f44a4f9ce6149190",
+    "historical_handoff_evaluation_change_count": 0,
+    "expected_ready_science_plan_task_ids_after_activation": [
+      "P16-T02"
+    ],
+    "expected_trailing_project_system_task_count": 4,
+    "expected_guard_outcome": "physics_bearing_route_selected",
+    "closes_after": "later qualifying completed task with plan_task_id P16-T02 and task_taxonomy.scope scientific",
+    "repair_required_scientific_completion_closes_activation": false
+  },
+  "implemented_sha256": {
+    "ordinary_route_guard": "4549c7e26285ae5dfea4fda9ded66ca369fc3c7e66a077cddc0b8e09b9e81928",
+    "ordinary_route_guard_tests": "b8057d3dc01a8bbcd15bf22ccafa1176242460c524f490e8be82a9d90d6483ed",
+    "task": "2c49c680606795271f66201cbfc06a9020b82f1e0ed0e47c15ea593e1fdb0c88",
+    "decision": "fc6c33263d126cb92d320314a291d7ea54cc0d24f2efec78912d1ff1a5fda504",
+    "job": "aab3cb75a998af306137dd1d58c30ea29204c85a8a2b4efd09e98b90746e2e20",
+    "role": "d77fc5234d8642132a44a51043b803380d4fd6facc02c49449fcdd1d5b7a3201"
+  },
+  "focused_validation": {
+    "command": ".venv/bin/python -m unittest tests.test_ordinary_route_guard",
+    "status": "PASS",
+    "test_count": 22,
+    "failure_count": 0,
+    "error_count": 0
+  },
+  "preservation": {
+    "generation_233_through_236_replayed": false,
+    "historical_handoffs_modified": false,
+    "historical_handoffs_reinterpreted": false,
+    "canonical_plan_or_backlog_modified": false,
+    "p16_t02_reaudit_executed": false,
+    "p16_t03_payload_executed": false,
+    "p16_t04_executed": false,
+    "scientific_claims_changed": false,
+    "distance_to_gr_delta_changed": false,
+    "physics_promotion_authorized": false,
+    "publication_or_external_action_authorized": false,
+    "push_performed": false
+  },
+  "checkpoint_invocation_count": 0,
+  "checkpoint_status": "PENDING_ONE_DISTINCT_INVOCATION",
+  "authority_note": "This receipt proves deterministic control-spine and ready-route reconciliation only. It creates no scientific status, Gate, Distance-to-GR, benchmark, proof, publication, push, ontology, source-law, external-action, or completed-derivation authority."
+}

@@ -1,0 +1,71 @@
+validation_status: "PASS"
+task_id: "RT-20260803-009"
+task_type: "project_system_generation_237_p16_t02_control_spine_reconciliation"
+title: "Reconcile the post-checkpoint P16-T02 control spine"
+task_taxonomy:
+  schema_id: "v21_task_taxonomy_v1"
+  work_kind: "benchmark_or_recovery"
+  milestone: "not_applicable"
+  candidate_family: "generation_237_p16_t02_control_spine_reconciliation"
+  result_kind: "completed_or_precisely_blocked"
+  authority: "project_control"
+  scope: "project_system"
+status: "completed"
+created_at: "2026-08-03T14:42:26Z"
+updated_at: "2026-08-03T14:42:26Z"
+closed_at: "2026-08-03T14:42:26Z"
+closure_status: "post_checkpoint_control_spine_reconciled_fresh_p16_t02_reaudit_ready_after_checkpoint"
+parent_task_id: "RT-20260803-008"
+parent_handoff_id: "handoff-0949"
+supersedes_active_routing_task_id: "RT-20260803-007"
+current_decision_id: "DDR-20260803-009"
+current_job_id: "AJ-RT-20260803-009-001"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260803-009"
+requires_human_gate: false
+human_authorization_note: "Generation 238 of the user-authorized recursive relay immutably routes one improve-project-system frame to reconcile the stale post-generation-236 control spine, recognize the already-required fresh P16-T02 re-audit prospectively, and invoke at most one governed checkpoint. It authorizes no P16-T02 science execution, P16-T03 payload, replay, push, publication, or promotion."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P16"
+  plan_task_id: "P16-T02"
+  recovery_for_plan_task_id: "P16-T02"
+  next_plan_task_id: "P16-T02"
+  next_plan_task_execution_authorized: false
+objective: "Bind the completed RT-20260803-008 transaction and checkpoint 7b44585d51a5a86a08264ce9f44a4f9ce6149190 into mutable program state and a superseding ordinary handoff, make the explicitly required fresh P16-T02 science re-audit visible to the route guard without changing historical handoff evaluations, and restore one fresh continue-research boundary without executing that audit."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system post-checkpoint routing reconciliation only; the P16-T02 benchmark-promotion burden does not advance."
+route_label: "reroute_generation_237_p16_t02_control_spine_reconciliation_v1"
+route_sha256: "10b19b57af0aec9711cbed288bc77bfd3558dbde383f1054f8cd1920c9d53d89"
+route_blocker_fingerprint: "d5c57bb03ed008445cd4ff8c04e2b852ce52ea5b3a84e6ebbbd4a517b07af31a"
+project_system_change_only: true
+dual_budget_category: "system_bearing"
+primary_budget: "project_system"
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+claim_boundary_id: "CB-PS-P16-T02-POST-CHECKPOINT-CONTROL-SPINE-RECONCILIATION-001"
+ordinary_route_guard_plan_reaudit_activation:
+  schema_id: "ordinary_route_guard_plan_reaudit_activation_v1"
+  status: "required"
+  plan_task_id: "P16-T02"
+  activated_by_task_id: "RT-20260803-009"
+  source_task_id: "RT-20260803-008"
+  source_completion_path: "research_control/tasks/RT-20260803-008/jobs/completions/AJC-AJ-RT-20260803-008-001.yaml"
+  source_completion_sha256: "32112f29682a778a8135f957da5057e394e30706fc7a1406bff45bb0c837d6a1"
+  source_checkpoint_commit: "7b44585d51a5a86a08264ce9f44a4f9ce6149190"
+  historical_handoffs_reinterpreted: false
+  closes_after_later_qualifying_scientific_completion: true
+documentation_impact_id: "DI-RT-20260803-009-001"
+completion_id: "AJC-AJ-RT-20260803-009-001"
+output_artifacts:
+  - "research_control/tasks/RT-20260803-009/artifacts/generation_237_p16_t02_control_spine_reconciliation_receipt.json"
+  - "research_control/tasks/RT-20260803-009/jobs/completions/AJC-AJ-RT-20260803-009-001.yaml"
+  - "research_control/handoffs/handoff-0950.yaml"
+  - "research_control/handoffs/handoff-0950.md"
+summary: "Generation 238 binds the clean generation-236 checkpoint into current control state and adds a hash-bound prospective re-audit activation so the ordinary route guard can select the still-unexecuted P16-T02 science audit without retroactively changing historical handoffs. P16-T03 and all protected actions remain unexecuted."
+next_recommended_action: "Invoke the one governed checkpoint for AJ-RT-20260803-009-001. After it commits, run one fresh bounded continue-research P16-T02 Gate A-E canonical alignment re-audit before P16-T03 or P16-T04."
+project_improvement_signals: []
+notes: "This reconciliation changes routing classification and mutable control state only. It creates no scientific evidence, Gate verdict, Distance-to-GR movement, benchmark promotion, proof, publication, push, or completed-derivation authority."

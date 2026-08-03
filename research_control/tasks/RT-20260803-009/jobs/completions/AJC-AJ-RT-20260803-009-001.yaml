@@ -1,0 +1,248 @@
+completion_id: "AJC-AJ-RT-20260803-009-001"
+job_id: "AJ-RT-20260803-009-001"
+task_id: "RT-20260803-009"
+task_type: "project_system_generation_237_p16_t02_control_spine_reconciliation"
+decision_id: "DDR-20260803-009"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260803-009"
+status: "completed"
+validation_status: "PASS"
+completed_at: "2026-08-03T14:42:26Z"
+objective_result: "post_checkpoint_control_spine_reconciled_fresh_p16_t02_reaudit_ready_after_checkpoint"
+verdict: "PASS_POST_CHECKPOINT_P16_T02_CONTROL_SPINE_RECONCILIATION"
+summary: "Generation 238 binds the completed RT-20260803-008 transaction and checkpoint 7b44585d into current control state, adds one hash-bound prospective activation that exposes the already-required P16-T02 re-audit without changing historical handoffs, and restores a fresh continue-research boundary. The re-audit and P16-T03 remain unexecuted, and one checkpoint is pending."
+transaction_status: "ready_for_checkpoint"
+checkpoint_invocation_count: 0
+checkpoint_commit:
+  status: "PENDING"
+  commit: ""
+  invocation_count: 0
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 238
+  passes_consumed: 211
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:238"
+  handoff_token: "54621556320cd38532087d257bbe1e0b937c2084a332eef0"
+  relay_claim_token: "4051207e0d3ac989b9c0cd9e230312132d467bbe3487db6d"
+  route_work_item_id: "P16-T02"
+  route_worker_skill: "improve-project-system"
+  route_sha256: "10b19b57af0aec9711cbed288bc77bfd3558dbde383f1054f8cd1920c9d53d89"
+  route_strategy_id: "reroute_generation_237_p16_t02_control_spine_reconciliation_v1"
+  route_blocker_fingerprint: "d5c57bb03ed008445cd4ff8c04e2b852ce52ea5b3a84e6ebbbd4a517b07af31a"
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+
+result:
+  status: "PASS"
+  strategy_id: "reroute_generation_237_p16_t02_control_spine_reconciliation_v1"
+  source_task_id: "RT-20260803-008"
+  source_job_id: "AJ-RT-20260803-008-001"
+  source_head: "7b44585d51a5a86a08264ce9f44a4f9ce6149190"
+  source_completion_sha256: "32112f29682a778a8135f957da5057e394e30706fc7a1406bff45bb0c837d6a1"
+  source_handoff_id: "handoff-0949"
+  source_handoff_sha256: "dcfa19917488e50951e6042274e90c29345664ba5714d7be1a5ecf8c960ad905"
+  source_program_state_sha256: "464b98bcd14aeee06ab1a8f7c9edd285ebef5ef3b98fe6c5640e56fb79bdd2ea"
+  checkpoint_identity_status: "PASS_EXACT_COMMIT_PARENT_TREE_SUBJECT"
+  plan_reaudit_activation_status: "PASS_HASH_BOUND_PROSPECTIVE"
+  historical_handoff_evaluation_change_count: 0
+  trailing_project_system_task_count: 4
+  ready_science_plan_task_ids:
+    - "P16-T02"
+  selected_next_worker_skill: "continue-research"
+  p16_t02_reaudit_executed: false
+  p16_t03_payload_executed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  receipt_path: "research_control/tasks/RT-20260803-009/artifacts/generation_237_p16_t02_control_spine_reconciliation_receipt.json"
+  receipt_sha256: "4e4cd867daa9fcb414b0639cc634fd91e2f0b5360fd444af70fa2795a17d8092"
+
+command_results:
+  - command: ".venv/bin/python -m unittest tests.test_ordinary_route_guard"
+    status: "PASS"
+    summary: "All 22 ordinary-route tests pass including prospective activation and automatic closure."
+  - command: ".venv/bin/python -m scripts.validation.cli run --profile affected --paths scripts/research_control/ordinary_route_guard.py tests/test_ordinary_route_guard.py research_control/program_state.yaml research_control/handoffs/handoff-0950.yaml"
+    status: "PASS"
+    summary: "The affected project-system profile passes before checkpoint."
+  - command: ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --job-id AJ-RT-20260803-009-001 --json-summary"
+    status: "PASS"
+    summary: "Integrated research-control validation reports no hard error."
+  - command: ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+    status: "PASS"
+    summary: "The documentation-impact receipt covers the live transaction and generated derivatives."
+  - command: ".venv/bin/python -m unittest discover -s tests"
+    status: "PASS"
+    summary: "The repository unit suite passes."
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+    status: "PASS"
+    summary: "Tracked memory validates after approved synchronization."
+  - command: "git diff --check"
+    status: "PASS"
+    summary: "The working transaction contains no whitespace errors."
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1119
+    relationship_row_count: 5648
+    semantic_row_count: 1119
+    vault_row_count: 1119
+    blocking_warning_count: 0
+    local_cache_only_warning_count: 0
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  authority_note: "Generated wiki Obsidian semantic relationship SQLite and .local retrieval layers are navigation only and not authority; registered sources, direct Git evidence, and tracked control state govern this result."
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  observed_durable_outputs:
+    physics: []
+    project_system:
+      - "prospective hash-bound P16-T02 re-audit activation"
+      - "reconciled program state and superseding handoff"
+      - "one governed checkpoint"
+  accepted_criteria:
+    physics: []
+    project_system:
+      - "checkpoint 7b44585d and RT-20260803-008 hashes remain exact"
+      - "historical handoff evaluations remain unchanged"
+      - "the new handoff derives P16-T02 as the exact ready science route"
+      - "a later qualifying P16-T02 scientific completion closes the activation"
+      - "P16-T02 re-audit and P16-T03 payload remain unexecuted"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+distance_to_gr_delta:
+  changed: false
+  effect: "none_project_system_post_checkpoint_control_spine_reconciliation"
+  milestone: "not_applicable"
+  ledger_row_updated: false
+  ledger_update_rationale: "Control-state and route-classifier reconciliation contributes no mathematical or scientific evidence."
+
+physics_progress_status:
+  status: "documentation_or_control_only_no_physics_delta"
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+
+selected_next_route:
+  route_id: "p16_t02_fresh_canonical_alignment_reaudit_after_control_spine_checkpoint_v1"
+  worker_skill: "continue-research"
+  plan_task_id: "P16-T02"
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  executed: false
+  p16_t03_payload_executed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 238 validated claimed and consumed its immutable project-system route exactly once."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Direct checkpoint hashes and the task-local receipt prove the prospective re-audit activation and protected-boundary preservation."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Focused affected-profile and integrated research-control validation pass before checkpoint."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "One governed checkpoint is authorized and has not yet been invoked."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Task-index frontier compact-frontier dependency-graph and claim-graph freshness checks pass."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Approved synchronization and validate-only checks pass."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim validation passes with no hard failure."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "none; project-system post-checkpoint routing reconciliation only"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  source_law_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+  push_authorized: false
+  publication_authorized: false
+  hosted_workflow_dispatch_authorized: false
+  proof_authority: false
+
+output_paths:
+  - "scripts/research_control/ordinary_route_guard.py"
+  - "tests/test_ordinary_route_guard.py"
+  - "research_control/tasks/RT-20260803-009/00_TASK.yaml"
+  - "research_control/tasks/RT-20260803-009/DDR-20260803-009.md"
+  - "research_control/tasks/RT-20260803-009/artifacts/generation_237_p16_t02_control_spine_reconciliation_receipt.json"
+  - "research_control/tasks/RT-20260803-009/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260803-009/jobs/AJ-RT-20260803-009-001.yaml"
+  - "research_control/tasks/RT-20260803-009/jobs/completions/AJC-AJ-RT-20260803-009-001.yaml"
+  - "research_control/tasks/RT-20260803-009/roles/validator-engineer@0.2.0--RT-20260803-009.yaml"
+  - "research_control/handoffs/handoff-0950.yaml"
+  - "research_control/handoffs/handoff-0950.md"
+  - "research_control/program_state.yaml"
+
+project_improvement_signals: []
+open_project_improvement_signal_ids: []
+resolved_project_improvement_signals: []
+validation_status: "PASS"

@@ -8,14 +8,14 @@
     "research_control/current_frontier.md",
     "research_control/design/accepted_status_calibration_v2.yaml",
     "research_control/design/active_state_bifurcation_policy_v1.md",
-    "research_control/handoffs/handoff-0949.yaml",
+    "research_control/handoffs/handoff-0950.yaml",
     "research_control/program_state.yaml"
   ],
   "report_provenance": {
     "schema_id": "generated_report_provenance_v1",
     "policy_id": "p13_t07_live_generated_report_freshness_v1",
     "report_class": "compact_current_frontier",
-    "source_commit": "334987d240390c3a7cd9522e92e9b283f4a2b7f9",
+    "source_commit": "7b44585d51a5a86a08264ce9f44a4f9ce6149190",
     "source_hashes": [
       {
         "path": "registries/DISTANCE_TO_GR_LEDGER.csv",
@@ -23,19 +23,19 @@
       },
       {
         "path": "registries/RESEARCH_TASK_REGISTRY.csv",
-        "sha256": "af5fe78979b86e2880fd6c19da457730a587a0fd568dffc6d5623ed49b1819e6"
+        "sha256": "41a38b96df2e4e931d52fa7ac105f1d8650ae99e252fccbd536eb99216ad619b"
       },
       {
         "path": "research_control/current_frontier.md",
-        "sha256": "4f14110211669da106cb0feff0b341466a7ff1addf976ca8ea6e7031f1e2a79c"
+        "sha256": "0edfda0354f16dbd3cc8753f49b824f13aba082623ee5e377e0c8c60ea191829"
       },
       {
-        "path": "research_control/handoffs/handoff-0949.yaml",
-        "sha256": "dcfa19917488e50951e6042274e90c29345664ba5714d7be1a5ecf8c960ad905"
+        "path": "research_control/handoffs/handoff-0950.yaml",
+        "sha256": "1a3a4bc7d23e43a33a42639f6e4eef284d67fbf8b8f270b68ba6ff2dca4adc72"
       },
       {
         "path": "research_control/program_state.yaml",
-        "sha256": "464b98bcd14aeee06ab1a8f7c9edd285ebef5ef3b98fe6c5640e56fb79bdd2ea"
+        "sha256": "4703274797d59579bf8c1b9b709ca7aeffa4d60a16b11dfa95be4d1ff8514498"
       },
       {
         "path": "research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml",
@@ -50,10 +50,10 @@
         "sha256": "3700556e8fe203bb8bfb1c2caf15b7fbfc95b25f608169209e1b9930677e3564"
       }
     ],
-    "source_manifest_sha256": "24dd5300f3ca852393a7196d605f92221132669ed90fa825ebcae6bb064a6436",
+    "source_manifest_sha256": "b20d459f9698fd1f83232bba3102c462b2bb195286194be6542436ce6b918427",
     "source_path_count": "12",
-    "generation_time": "2026-08-03T11:34:22Z",
-    "task_count": "1204",
+    "generation_time": "2026-08-03T14:42:26Z",
+    "task_count": "1205",
     "maximum_commit_lag": "1",
     "freshness_status": "fresh_at_generation",
     "generated_view_is_authority": false,
@@ -61,17 +61,17 @@
     "proof_authority": false
   },
   "active_state": {
-    "active_task_id": "RT-20260803-007",
-    "latest_handoff_id": "handoff-0949",
-    "current_status": "p16_t02_status_calibration_path_classifier_recovered_checkpoint_blocked_documentation_impact_folder_map_coverage",
+    "active_task_id": "RT-20260803-009",
+    "latest_handoff_id": "handoff-0950",
+    "current_status": "post_checkpoint_control_spine_reconciled_fresh_p16_t02_reaudit_ready_after_checkpoint",
     "v15_completed": false,
     "v16_completed": false,
     "v16_plan_registered": true
   },
   "active_state_bifurcation": {
-    "latest_research_task_id": "RT-20260803-007",
-    "latest_research_handoff_id": "handoff-0949",
-    "latest_research_next_action": "Run one distinct improve-project-system recovery that adds the generation-235 blocker artifact to changed_paths and FOLDER_MAP.md to generated_derivatives in the exact RT-20260803-005 and RT-20260803-006 documentation-impact receipts, regenerates and revalidates the cumulative transaction, and invokes at most one fresh governed checkpoint without executing P16-T03 payload work.",
+    "latest_research_task_id": "RT-20260803-009",
+    "latest_research_handoff_id": "handoff-0950",
+    "latest_research_next_action": "Invoke the one governed checkpoint for AJ-RT-20260803-009-001. After it commits, run one fresh bounded continue-research P16-T02 canonical Gate A-E alignment re-audit before P16-T03 or P16-T04.",
     "latest_project_system_task_id": "none",
     "latest_project_system_status": "none",
     "latest_project_system_sidecar_task_id": "none",
@@ -80,10 +80,10 @@
     "next_research_route_source": "latest_research_handoff"
   },
   "next_route": {
-    "route_id": "generation_235_checkpoint_documentation_impact_folder_map_coverage_recovery",
-    "role_family": "process-integrity-auditor@0.1.0",
-    "target_derivation_milestone": "none",
-    "milestone_burden": "Project-system cumulative documentation-impact coverage and checkpoint recovery only; no P16-T03 audit payload or derivation burden advances.",
+    "route_id": "p16_t02_fresh_canonical_alignment_reaudit_after_control_spine_checkpoint_v1",
+    "role_family": "external-red-team-reviewer@0.1.0",
+    "target_derivation_milestone": "benchmark_promotion",
+    "milestone_burden": "Prevent downstream status laundering at plan closure.",
     "requires_human_gate": false
   },
   "claim_boundary": {
@@ -445,9 +445,9 @@
   ],
   "distance_to_gr": {
     "delta": {
-      "effect": "none_project_system_status_calibration_path_classifier_recovery",
+      "effect": "none_project_system_post_checkpoint_control_spine_reconciliation",
       "changed": false,
-      "milestone": "benchmark_promotion",
+      "milestone": "none",
       "burden_id": "benchmark_promotion"
     },
     "high_risk_rows": [
@@ -748,8 +748,16 @@
     }
   },
   "validation": {
-    "latest_required_status": "FAIL",
-    "pending_layers": []
+    "latest_required_status": "PASS",
+    "pending_layers": [
+      {
+        "layer": "post_checkpoint",
+        "status": "PENDING",
+        "evidence": [
+          "One governed RT-20260803-009 checkpoint remains uninvoked."
+        ]
+      }
+    ]
   },
   "authority_warning": {
     "snapshot_only_not_authority": true

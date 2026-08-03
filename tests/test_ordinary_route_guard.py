@@ -11,6 +11,7 @@ import yaml
 
 import scripts.research_control.ordinary_route_guard as ordinary_route_guard
 from scripts.research_control.ordinary_route_guard import (
+    PLAN_REAUDIT_ACTIVATION_SCHEMA_ID,
     POLICY_ID,
     PROTECTED_HUMAN_OVERRIDE_SCHEMA_ID,
     REQUIRED_AFTER,
@@ -386,6 +387,136 @@ class OrdinaryRouteGuardTests(unittest.TestCase):
         )
         self.assertTrue(routes[0]["requires_human_gate"])
         self.assertFalse(routes[1]["requires_human_gate"])
+
+    def test_hash_bound_reaudit_activation_is_prospective_and_resolvable(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            repo_root = Path(temp_dir)
+            task_root = repo_root / "research_control/tasks"
+            source_completion = (
+                task_root
+                / "RT-20260803-008/jobs/completions/AJC-AJ-RT-20260803-008-001.yaml"
+            )
+            source_completion.parent.mkdir(parents=True)
+            source_completion.write_text(
+                "task_id: RT-20260803-008\n"
+                "selected_next_route:\n"
+                "  plan_task_id: P16-T02\n",
+                encoding="utf-8",
+            )
+            source_hash = ordinary_route_guard._sha256(source_completion)
+
+            audit_path = task_root / "RT-20260803-003"
+            audit_path.mkdir(parents=True)
+            (audit_path / "00_TASK.yaml").write_text(
+                "task_id: RT-20260803-003\n"
+                "task_type: v21_p16_t02_gate_authority_consistency_audit\n"
+                "closure_status: repair_required_status_layer_drift\n"
+                "task_taxonomy:\n"
+                "  scope: scientific\n"
+                "implementation_plan:\n"
+                "  plan_id: recommendations_implementation_plan_continue_task-v21\n"
+                "  plan_task_id: P16-T02\n",
+                encoding="utf-8",
+            )
+            activation_path = task_root / "RT-20260803-009"
+            activation_path.mkdir(parents=True)
+            (activation_path / "00_TASK.yaml").write_text(
+                "task_id: RT-20260803-009\n"
+                "task_type: project_system_p16_t02_control_spine_reconciliation\n"
+                "task_taxonomy:\n"
+                "  scope: project_system\n"
+                "implementation_plan:\n"
+                "  plan_id: recommendations_implementation_plan_continue_task-v21\n"
+                "  plan_task_id: P16-T02\n"
+                "ordinary_route_guard_plan_reaudit_activation:\n"
+                f"  schema_id: {PLAN_REAUDIT_ACTIVATION_SCHEMA_ID}\n"
+                "  status: required\n"
+                "  plan_task_id: P16-T02\n"
+                "  activated_by_task_id: RT-20260803-009\n"
+                "  source_task_id: RT-20260803-008\n"
+                "  source_completion_path: research_control/tasks/RT-20260803-008/jobs/completions/AJC-AJ-RT-20260803-008-001.yaml\n"
+                f"  source_completion_sha256: {source_hash}\n",
+                encoding="utf-8",
+            )
+
+            rows = [
+                {
+                    "task_id": "RT-20260803-003",
+                    "task_path": "research_control/tasks/RT-20260803-003",
+                    "status": "completed",
+                    "closed_at": "2026-08-03T05:08:32Z",
+                },
+                {
+                    "task_id": "RT-20260803-009",
+                    "task_path": "research_control/tasks/RT-20260803-009",
+                    "status": "completed",
+                    "closed_at": "2026-08-03T14:42:26Z",
+                },
+            ]
+            with mock.patch.object(
+                ordinary_route_guard,
+                "_read_csv",
+                return_value=rows,
+            ), mock.patch.object(
+                ordinary_route_guard,
+                "_load_backlog",
+                return_value=[
+                    {
+                        "plan_task_id": "P16-T02",
+                        "task_class": "science",
+                        "depends_on": [],
+                    }
+                ],
+            ):
+                before = ordinary_route_guard.completed_plan_task_ids(
+                    repo_root, "2026-08-03T14:42:25Z"
+                )
+                reopened = ordinary_route_guard.completed_plan_task_ids(
+                    repo_root, "2026-08-03T14:42:26Z"
+                )
+            self.assertIn("P16-T02", before)
+            self.assertNotIn("P16-T02", reopened)
+
+            resolved_path = task_root / "RT-20260803-010"
+            resolved_path.mkdir(parents=True)
+            (resolved_path / "00_TASK.yaml").write_text(
+                "task_id: RT-20260803-010\n"
+                "task_type: v21_p16_t02_gate_authority_consistency_reaudit\n"
+                "closure_status: qualifying_finalized_gate_alignment\n"
+                "task_taxonomy:\n"
+                "  scope: scientific\n"
+                "implementation_plan:\n"
+                "  plan_id: recommendations_implementation_plan_continue_task-v21\n"
+                "  plan_task_id: P16-T02\n",
+                encoding="utf-8",
+            )
+            rows.append(
+                {
+                    "task_id": "RT-20260803-010",
+                    "task_path": "research_control/tasks/RT-20260803-010",
+                    "status": "completed",
+                    "closed_at": "2026-08-03T15:00:00Z",
+                }
+            )
+            with mock.patch.object(
+                ordinary_route_guard,
+                "_read_csv",
+                return_value=rows,
+            ), mock.patch.object(
+                ordinary_route_guard,
+                "_load_backlog",
+                return_value=[
+                    {
+                        "plan_task_id": "P16-T02",
+                        "task_class": "science",
+                        "depends_on": [],
+                    }
+                ],
+            ):
+                resolved = ordinary_route_guard.completed_plan_task_ids(
+                    repo_root, "2026-08-03T15:00:00Z"
+                )
+            self.assertIn("P16-T02", resolved)
 
 
 if __name__ == "__main__":

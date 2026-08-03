@@ -26,6 +26,9 @@ REPO_ROOT = Path(__file__).resolve().parents[2]
 POLICY_ID = "ordinary_route_guard_policy_v1"
 EVALUATION_SCHEMA_ID = "ordinary_route_guard_evaluation_v1"
 ADMISSION_SCHEMA_ID = "ordinary_route_guard_admission_v1"
+PLAN_REAUDIT_ACTIVATION_SCHEMA_ID = (
+    "ordinary_route_guard_plan_reaudit_activation_v1"
+)
 PROTECTED_HUMAN_OVERRIDE_SCHEMA_ID = (
     "protected_human_route_override_admission_v1"
 )
@@ -289,7 +292,89 @@ def completed_plan_task_ids(repo_root: Path, as_of: str) -> set[str]:
             if dependency_id and dependency_id not in completed:
                 completed.add(dependency_id)
                 pending.append(dependency_id)
+    completed.difference_update(_active_plan_reaudit_ids(repo_root, as_of))
     return completed
+
+
+def _active_plan_reaudit_ids(repo_root: Path, as_of: str) -> set[str]:
+    """Return hash-bound plan items reopened for a fresh science re-audit.
+
+    A project-system recovery can finish while its source scientific audit
+    remains REPAIR_REQUIRED.  The activation record makes that distinction
+    prospective: historical handoffs keep their original as-of view, and a
+    later qualifying scientific completion automatically closes the re-audit.
+    Invalid or stale activation records are ignored, which keeps route
+    selection fail-closed because the requested science route will not appear
+    in the independently derived ready set.
+    """
+
+    task_events: list[tuple[str, str, dict[str, Any]]] = []
+    for row in _read_csv(repo_root, TASK_REGISTRY_PATH):
+        closed_at = _text(row.get("closed_at"))
+        if row.get("status") != "completed" or not closed_at or closed_at > as_of:
+            continue
+        task = _task_record(repo_root, row.get("task_path", ""))
+        task_events.append((closed_at, _text(row.get("task_id")), task))
+
+    activations: dict[str, tuple[str, str]] = {}
+    for closed_at, task_id, task in task_events:
+        marker = _dict(task.get("ordinary_route_guard_plan_reaudit_activation"))
+        plan_task_id = _text(marker.get("plan_task_id"))
+        source_path_text = _text(marker.get("source_completion_path"))
+        source_path = _safe_repo_path(repo_root, source_path_text)
+        if (
+            marker.get("schema_id") != PLAN_REAUDIT_ACTIVATION_SCHEMA_ID
+            or marker.get("status") != "required"
+            or not plan_task_id
+            or _text(marker.get("activated_by_task_id")) != task_id
+            or source_path is None
+            or not source_path.is_file()
+            or source_path.is_symlink()
+            or not SHA256_RE.fullmatch(_text(marker.get("source_completion_sha256")))
+            or _sha256(source_path) != _text(marker.get("source_completion_sha256"))
+        ):
+            continue
+        source_completion = _load_mapping(source_path)
+        if (
+            _text(source_completion.get("task_id"))
+            != _text(marker.get("source_task_id"))
+            or _text(
+                _dict(source_completion.get("selected_next_route")).get(
+                    "plan_task_id"
+                )
+            )
+            != plan_task_id
+        ):
+            continue
+        activation_key = (closed_at, task_id)
+        if plan_task_id not in activations or activations[plan_task_id] < activation_key:
+            activations[plan_task_id] = activation_key
+
+    active: set[str] = set()
+    for plan_task_id, activation_key in activations.items():
+        later_science_results: list[tuple[tuple[str, str], str]] = []
+        for closed_at, task_id, task in task_events:
+            plan = _dict(task.get("implementation_plan"))
+            observed_plan_task_id = _text(
+                plan.get("plan_task_id") or task.get("plan_task_id")
+            )
+            scope = _text(_dict(task.get("task_taxonomy")).get("scope"))
+            event_key = (closed_at, task_id)
+            if (
+                event_key > activation_key
+                and observed_plan_task_id == plan_task_id
+                and scope == "scientific"
+            ):
+                later_science_results.append(
+                    (event_key, _text(task.get("closure_status")))
+                )
+        if not later_science_results:
+            active.add(plan_task_id)
+            continue
+        _, latest_closure = max(later_science_results)
+        if latest_closure.startswith("repair_required"):
+            active.add(plan_task_id)
+    return active
 
 
 def _load_backlog(repo_root: Path) -> list[dict[str, Any]]:
@@ -1123,6 +1208,7 @@ __all__ = [
     "canonical_json_hash",
     "completed_plan_task_ids",
     "derive_consecutive_project_system_tasks",
+    "PLAN_REAUDIT_ACTIVATION_SCHEMA_ID",
     "discover_ready_science_routes",
     "evaluate_agent_job_route_admission",
     "evaluate_guard_record",
