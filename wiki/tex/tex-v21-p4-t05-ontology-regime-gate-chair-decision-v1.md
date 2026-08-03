@@ -19,5 +19,5 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 
 ## Validation
 
-- Validation status: `PENDING`
-- Last validated at: `2026-07-24T14:39:10Z`
+- Validation status: `PASS`
+- Last validated at: `2026-08-03T16:47:10Z`

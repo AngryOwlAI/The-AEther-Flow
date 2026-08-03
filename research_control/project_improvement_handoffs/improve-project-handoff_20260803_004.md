@@ -57,17 +57,22 @@ Recommended next step: Run /improve-project-system to process this signal as one
 
 ## Solution Plan
 
-Status: absent.
+Status: completed pending governed checkpoint.
 
-If no executable plan is present, Project-System Director should convert this
-issue inventory into one bounded AgentJob or reject the signal with explicit
-evidence.
+Project-System Director converted the issue into one bounded
+`AJ-RT-20260803-011-001` Project-Control Maintainer job. The job verified the
+exact Gate A object ID, path, and immutable source hash; synchronized only its
+operational registry-validation status; added a fresh exact-object validator;
+and added six fail-closed regressions that reject cross-object substitution.
 
 ## Resolution
 
-- Resolved by job: none.
-- Resolution evidence: none.
-- Resolved at: none.
+- Resolved by job: `AJ-RT-20260803-011-001`.
+- Resolution evidence: `research_control/tasks/RT-20260803-011/jobs/completions/AJC-AJ-RT-20260803-011-001.yaml`.
+- Resolved at: `2026-08-03T16:47:10Z`.
+
+One governed checkpoint remains. After it, the research lane must run a fresh
+P16-T02 canonical Gate A-E consistency re-audit before P16-T03 or P16-T04.
 
 ## Notes
 

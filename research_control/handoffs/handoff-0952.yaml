@@ -1,0 +1,248 @@
+validation_status: "PASS_PRECHECKPOINT"
+handoff_id: "handoff-0952"
+handoff_number: 952
+handoff_kind: "project_system_repair"
+task_id: "RT-20260803-011"
+decision_id: "DDR-20260803-011"
+job_id: "AJ-RT-20260803-011-001"
+completion_id: "AJC-AJ-RT-20260803-011-001"
+completion_path: "research_control/tasks/RT-20260803-011/jobs/completions/AJC-AJ-RT-20260803-011-001.yaml"
+completion_sha256: "20b08b8f3988b71828467475d8437ae6ff7801b064c6eb816143b5c595214031"
+status: "ready_after_checkpoint"
+created_at: "2026-08-03T16:47:10Z"
+parent_handoff_id: "handoff-0951"
+plan_task_id: "P16-T02"
+recovery_for_plan_task_id: "P16-T02"
+source_role_id: "project-control-maintainer"
+source_role_version: "0.2.0"
+source_execution_role_ref: "project-control-maintainer@0.2.0--RT-20260803-011"
+summary: "Generation 240 repairs the sole P16-T02 Gate A exact-object control defect: the exact decision object ID, path, source hash, and operational PASS row now agree, the sealed RT-20260803-005 evidence is unchanged, and six regressions prove that another PASS object cannot substitute. The repair creates no science or Gate verdict; a fresh P16-T02 re-audit is required after checkpoint."
+next_action: "Run the single governed checkpoint for AJ-RT-20260803-011-001, then execute one fresh P16-T02 canonical Gate A-E consistency re-audit through continue-research before P16-T03 or P16-T04."
+current_claim_boundary: "CB-PS-P16-T02-GATE-A-EXACT-OBJECT-REGISTRY-VALIDATOR-PARITY-001"
+loop_risk_route: "p16-t02-fresh-gate-consistency-reaudit-after-exact-object-repair"
+
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260803-011"
+  latest_research_handoff_id: "handoff-0952"
+  latest_research_next_action: "Run the single governed checkpoint for AJ-RT-20260803-011-001, then execute one fresh P16-T02 canonical Gate A-E consistency re-audit through continue-research before P16-T03 or P16-T04."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+  project_improvement_sidecar_required: true
+  research_handoff_remains_authoritative: true
+
+claim_boundary:
+  allowed_next_scope: "One governed checkpoint followed by one fresh P16-T02 canonical Gate A-E consistency re-audit; P16-T03 and P16-T04 remain unexecuted."
+  completed_task: "RT-20260803-011"
+  completed_completion_path: "research_control/tasks/RT-20260803-011/jobs/completions/AJC-AJ-RT-20260803-011-001.yaml"
+  completed_completion_sha256: "20b08b8f3988b71828467475d8437ae6ff7801b064c6eb816143b5c595214031"
+  source_handoff_id: "handoff-0951"
+  source_handoff_path: "research_control/handoffs/handoff-0951.yaml"
+  source_handoff_sha256: "83e4b34722a92475c1cf413f59f63d66dd448a35f104deb416f2ca483e2a22f1"
+  result_status: "PASS_EXACT_OBJECT_REGISTRY_VALIDATOR_IDENTITY_PARITY"
+  exact_object_id: "TEX-V21-P4-T05-ONTOLOGY-REGIME-GATE-CHAIR-DECISION-V1"
+  exact_object_path: "research_control/tasks/RT-20260724-004/artifacts/ontology_regime_gate_chair_decision_v1.tex"
+  exact_object_sha256: "20ea795bbe93333b489e4f13601fd6bb1623f318b7847f9d2d24402c7490c934"
+  exact_object_registry_validation_status: "PASS"
+  foundations_pass_can_substitute: false
+  validator_path: "research_control/tasks/RT-20260803-011/artifacts/validate_p16_t02_gate_a_registry_validator_identity_parity.py"
+  validator_sha256: "b75f243a293c652b99a0d7c9e1972511b26b83e746232e497bd456b974dd8190"
+  validation_path: "research_control/tasks/RT-20260803-011/artifacts/p16_t02_gate_a_registry_validator_identity_parity_validation.json"
+  validation_sha256: "e94b5dcb5b54754a25a2f48ffb040c0e4040783b8aff19634be8610187f116d9"
+  receipt_path: "research_control/tasks/RT-20260803-011/artifacts/p16_t02_gate_a_registry_validator_identity_parity_receipt.json"
+  receipt_sha256: "0fd2cf483b7db6cc4e220d57365faba2eec9d8388fd0fbc2d52925887138adaf"
+  sealed_rt005_validator_sha256: "9ba655982225774beef866ec43f0a8fd116182f8987088afab78736fec5ac5e7"
+  sealed_rt005_report_sha256: "330c35edb94d153553f33e449bfa94b2a3e88c435cb6ce99e95f7a89d56fc401"
+  p16_t02_reaudit_executed: false
+  p16_t03_executed: false
+  p16_t04_executed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  external_action_authorized: false
+  blocked_claims:
+    - "registry validation PASS as a new Gate A scientific verdict"
+    - "foundations ontology row PASS as a substitute for the exact Gate A decision object"
+    - "Gate A architecture as physical spacetime metric or source dynamics"
+    - "Gate C source-side postulate adoption as first-principles or target-side coupling derivation"
+    - "finite Gate D algebra as Einstein equations"
+    - "protocol validator or checkpoint PASS as benchmark recovery"
+    - "internal review as external human review or independent replication"
+
+plan_result:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  phase_id: "P16"
+  plan_task_id: "P16-T02"
+  recovery_for_plan_task_id: "P16-T02"
+  title: "Repair Gate A exact-object registry-validator identity parity"
+  result_status: "REPAIR_PASS_FRESH_P16_T02_REAUDIT_REQUIRED"
+  work_item_status: "repair_completed_pending_checkpoint"
+  project_improvement_signal_id: "PIS-RT-20260803-010-001"
+  project_improvement_signal_status: "resolved"
+  p16_t02_reaudit_executed: false
+  p16_t03_dependency_ready_but_not_selected: true
+  p16_t04_blocked_by:
+    - "fresh P16-T02 re-audit"
+    - "P16-T03"
+  scientific_claims_changed_by_repair: false
+  distance_to_gr_delta_changed_by_repair: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+distance_to_gr:
+  changed: false
+  effect: "no_distance_delta_project_system_exact_object_identity_repair"
+  burden_id: "matter_coupling"
+  milestone: "matter_coupling"
+  ledger_row_updated: false
+  ledger_update_rationale: "Exact-object control validation supplies no mathematical or scientific evidence."
+  downstream_unlocked:
+    - "fresh P16-T02 canonical Gate A-E consistency re-audit after checkpoint"
+  downstream_still_blocked:
+    - "P16-T02 closure until the fresh re-audit"
+    - "P16-T04 until P16-T02 and P16-T03 complete"
+    - "target matter coupling Einstein equations benchmark promotion proof publication external action or completed derivation"
+
+required_next_packet:
+  task_type: "research_p16_t02_fresh_gate_consistency_reaudit"
+  plan_task_id: "P16-T02"
+  work_item_id: "P16-T02"
+  objective: "Re-run the canonical Gate A-E consistency audit against the checkpointed exact-object registry-validator repair and preserve every scientific authority boundary."
+  dependency_ready_after_checkpoint: true
+  dependency_ready_now: false
+  exact_human_authorization_required: false
+  executed: false
+
+selected_next_route:
+  route_id: "p16_t02_fresh_canonical_gate_consistency_reaudit_after_gate_a_identity_checkpoint_v1"
+  route_label: "fresh-canonical-alignment-reaudit"
+  role_family: "external-red-team-reviewer@0.1.0"
+  worker_skill: "continue-research"
+  selected_next_packet_type: "p16_t02_gate_a_e_consistency_reaudit"
+  task_type: "research_p16_t02_fresh_gate_consistency_reaudit"
+  plan_task_id: "P16-T02"
+  work_item_id: "P16-T02"
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "Re-audit the exact scientific Gate chain after the project-system identity repair without treating control PASS as scientific promotion."
+  strategy_id: "reaudit_p16_t02_after_gate_a_exact_object_registry_validator_parity_v1"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  physics_promotion_authorized: false
+  executed: false
+  next_action: "Checkpoint this repair once, then route one fresh continue-research P16-T02 re-audit."
+  source_handoff: "research_control/handoffs/handoff-0952.yaml"
+
+ordinary_route_guard:
+  schema_id: "ordinary_route_guard_evaluation_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  evaluation_id: "ORE-HANDOFF-0952"
+  ordinary_handoff_id: "handoff-0952"
+  threshold: 3
+  consecutive_project_system_tasks_before_selection: 1
+  ready_science_plan_task_ids:
+    - "P16-T02"
+  selected_plan_task_id: "P16-T02"
+  selected_route_class: "physics_bearing"
+  selected_worker_skill: "continue-research"
+  outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  exception_receipt:
+    active: false
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+active_state_boundary:
+  active_task_id: "RT-20260803-011"
+  active_job_id: "AJ-RT-20260803-011-001"
+  current_status: "gate_a_exact_object_registry_validator_identity_repair_completed_pending_checkpoint"
+  checkpoint_required: true
+  checkpoint_completed: false
+  checkpoint_invocation_count: 0
+  project_system_repair_completed: true
+  project_improvement_signal_status: "resolved"
+  selected_next_plan_task_id: "P16-T02"
+  selected_next_worker_skill: "continue-research"
+  selected_next_role_family: "external-red-team-reviewer@0.1.0"
+  selected_next_route_label: "fresh-canonical-alignment-reaudit"
+  selected_next_strategy_id: "reaudit_p16_t02_after_gate_a_exact_object_registry_validator_parity_v1"
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 240 validated, atomically claimed, and consumed its immutable improve-project-system route exactly once."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The exact Gate A ID, path, source hash, and operational PASS row match; six regressions reject cross-object substitution."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Focused, affected-profile, research-control, documentation, claim-language, signal, and memory checks pass."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "Exactly one governed checkpoint remains."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Tracked frontier, task-index, graph, registry, and wiki derivatives are fresh."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory synchronization and validate-only pass."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed language preserves operational control scope and every science boundary."
+
+authorization_layers:
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  submission_authorized: false
+  public_release_authorized: false
+  reviewer_contact_authorized: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "none; project-system exact-object registry-validation repair only"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  source_law_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+project_improvement_signals: []
+open_project_improvement_signal_ids: []
+resolved_project_improvement_signals:
+  - "PIS-RT-20260803-010-001"
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: "research_control/project_improvement_handoffs/improve-project-handoff_20260803_004.yaml"
+  signal_ids:
+    - "PIS-RT-20260803-010-001"
+  bridge_status: "resolved_by_AJ-RT-20260803-011-001_pending_checkpoint"
+  sidecar_supersedes_research_handoff: false
+  notes: "The sidecar is resolved by exact matching completion evidence and never replaces ordinary research authority."
+handoff_authority_boundary: "This project-system handoff proves only exact-object registry-validator identity parity. It changes no canonical science, Gate verdict, derivational burden, benchmark, publication, external-review, outward-action, or completed-derivation authority."
+next_plan_task_id: "P16-T02"
+next_plan_task_execution_ready_after_checkpoint: true
+next_plan_task_execution_ready_now: false
+next_plan_task_executed: false
+notes: "Checkpoint locally without push. Then run the fresh P16-T02 canonical consistency audit; P16-T03 and P16-T04 remain unexecuted."

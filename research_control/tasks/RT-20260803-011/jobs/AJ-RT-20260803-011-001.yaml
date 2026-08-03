@@ -1,0 +1,346 @@
+job_id: "AJ-RT-20260803-011-001"
+task_id: "RT-20260803-011"
+decision_id: "DDR-20260803-011"
+role_id: "project-control-maintainer"
+role_version: "0.2.0"
+execution_role_ref: "project-control-maintainer@0.2.0--RT-20260803-011"
+status: "completed"
+validation_status: "PASS"
+created_at: "2026-08-03T16:47:10Z"
+started_at: "2026-08-03T16:47:10Z"
+completed_at: "2026-08-03T16:47:10Z"
+completion_path: "research_control/tasks/RT-20260803-011/jobs/completions/AJC-AJ-RT-20260803-011-001.yaml"
+requires_human_gate: false
+human_authorization_note: "Generation 240 authorizes exactly one improve-project-system AgentJob for route repair_p16_t02_gate_a_registry_validator_identity_parity_v1 and at most one governed checkpoint."
+objective: "Resolve PIS-RT-20260803-010-001 by preserving sealed RT-20260803-005 evidence, synchronizing the exact Gate A TeX row's operational validation status, adding a fresh exact-ID/path/hash validator with cross-object regressions, closing the signal with PASS evidence, and checkpointing once."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system exact-object registry-validator parity only; no derivation milestone advances."
+route_label: "repair_p16_t02_gate_a_registry_validator_identity_parity_v1"
+route_reason: "p16_t02_gate_a_exact_object_registry_validator_identity"
+immutable_route_sha256: "0994d4a4ce92b34fb7b5ce310c679038fd5cdec8887fc4a6c2d35dc5999aa36c"
+route_blocker_fingerprint: "f4367d80b3521f710bda6b9f2f6ef32eb7c6accf976237c58eae2c104c5478ba"
+failed_gate_evidence_sha256: "6fb39222c4900b4b6b2f3ef9553fcffe17704149aa6756e73416752e775930ec"
+inherited_manifest_sha256: "e13d2ddd17ca7214ac3d96a40802f7b0ae864ecd75aca18d5432107bd55f2dc6"
+source_head: "7f9252fa263728cee4a54c4b666f4cb94c4beb57"
+source_handoff_sha256: "83e4b34722a92475c1cf413f59f63d66dd448a35f104deb416f2ca483e2a22f1"
+source_completion_sha256: "e244f8d22bc1001b7783f865957a0256605a3c7d2ab9536cf217b2f5d8c8e7d8"
+source_sidecar_sha256: "aeaf7ed69be824d486b4c061e00505d7cfffcbd5fc150cefe6d914fca5f21fc4"
+plan_task_id: "P16-T02"
+recovery_for_plan_task_id: "P16-T02"
+next_plan_task_id: "P16-T02"
+next_plan_task_execution_authorized: false
+p16_t02_reaudit_execution_authorized: false
+p16_t03_payload_execution_authorized: false
+project_improvement_signal_id: "PIS-RT-20260803-010-001"
+project_system_change_only: true
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+resolves_signal_routing: false
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 240
+  passes_consumed: 213
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:240"
+  handoff_token: "b332d45a64fbca8b08e59256383d5355ee9cfbfad542718d"
+  relay_claim_token: "ab3c70ab9eb67d70293e3d7c2b33d92285e6510806712497"
+  route_work_item_id: "P16-T02"
+  route_worker_skill: "improve-project-system"
+  route_sha256: "0994d4a4ce92b34fb7b5ce310c679038fd5cdec8887fc4a6c2d35dc5999aa36c"
+  route_strategy_id: "repair_p16_t02_gate_a_registry_validator_identity_parity_v1"
+  route_blocker_fingerprint: "f4367d80b3521f710bda6b9f2f6ef32eb7c6accf976237c58eae2c104c5478ba"
+  route_dirty_state_manifest_sha256: "e13d2ddd17ca7214ac3d96a40802f7b0ae864ecd75aca18d5432107bd55f2dc6"
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  candidate_family: "not_applicable"
+  assumption_delta:
+    - "No scientific assumption changes; the packet corrects only exact-object operational validation identity and evidence."
+    - "The Gate A protected decision source and every Gate A-E scientific status remain unchanged."
+  materiality_basis: "Eliminates a cross-object false-positive path in the current project-control validation chain."
+  source_basis:
+    - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+    - "MD-V21-P16-T02-GATE-A-E-CONSISTENCY-REAUDIT"
+    - "research_control/handoffs/handoff-0951.yaml"
+    - "research_control/project_improvement_handoffs/improve-project-handoff_20260803_004.yaml"
+  expected_artifact_paths:
+    - "research_control/tasks/RT-20260803-011/artifacts/validate_p16_t02_gate_a_registry_validator_identity_parity.py"
+    - "research_control/tasks/RT-20260803-011/artifacts/p16_t02_gate_a_registry_validator_identity_parity_validation.json"
+    - "research_control/tasks/RT-20260803-011/artifacts/p16_t02_gate_a_registry_validator_identity_parity_receipt.json"
+    - "tests/test_p16_t02_gate_a_registry_validator_identity.py"
+  project_system_justification: "The packet repairs a control registry and validator identity contract and cannot count as physics progress."
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  expected_durable_outputs:
+    physics: []
+    project_system:
+      - "exact Gate A operational registry-validation parity"
+      - "fresh exact-object validator and fail-closed regression suite"
+      - "resolved project-improvement signal and sidecar"
+      - "one governed checkpoint"
+  acceptance_criteria:
+    physics: []
+    project_system:
+      - "the exact Gate A object ID path and source hash agree"
+      - "a PASS row for the foundations object cannot substitute for the exact Gate A row"
+      - "sealed RT-20260803-005 validator and report hashes remain unchanged"
+      - "PIS-RT-20260803-010-001 closes only against this job's PASS completion"
+      - "P16-T02 re-audit P16-T03 and P16-T04 remain unexecuted"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: true
+    exception_id: "BLOCK-P16-T02-GATE-A-EXACT-OBJECT-IDENTITY-001"
+    evidence_path: "research_control/tasks/RT-20260803-010/artifacts/v21_p16_t02_reaudit_findings.yaml"
+    evidence_sha256: "6fb39222c4900b4b6b2f3ef9553fcffe17704149aa6756e73416752e775930ec"
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0951"
+  source_handoff_path: "research_control/handoffs/handoff-0951.yaml"
+  source_handoff_sha256: "83e4b34722a92475c1cf413f59f63d66dd448a35f104deb416f2ca483e2a22f1"
+  selected_plan_task_id: "P16-T02"
+  guard_outcome: "below_threshold"
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1121
+    relationship_row_count: 5656
+    semantic_row_count: 1121
+    vault_row_count: 1121
+    blocking_warning_count: 0
+    local_cache_only_warning_count: 0
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search 'P16 T02 Gate A exact object registry validator identity' --limit 10 --json"
+      query_type: "search"
+      query_text: "P16 T02 Gate A exact object registry validator identity"
+      returned_object_ids:
+        - "MD-V21-P16-T02-GATE-A-E-CONSISTENCY-REAUDIT"
+        - "MD-V21-P16-T02-PARENT-FUSION-GATE-CONSISTENCY-REAUDIT-V1"
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-V21-P16-T02-GATE-A-E-CONSISTENCY-REAUDIT"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260803-010/artifacts/v21_p16_t02_gate_consistency_reaudit.md"
+      source_hash: "23595d1b22d94e32e346a21718ba1b6d13dccea071952550265ac7099bea3adb"
+    - object_id: "MD-V21-P16-T02-PARENT-FUSION-GATE-CONSISTENCY-REAUDIT-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260803-010/artifacts/parent_fusion_notes_p16_t02_gate_consistency_reaudit.md"
+      source_hash: "bdbea6a5f0dfcffa666b26607b73a998af43669a9afb76f6f5af32e46e4748a4"
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  authority_note: "Generated wiki Obsidian semantic relationship SQLite and .local retrieval layers are navigation only and not authority; registered canonical sources tracked control state Git and the immutable relay route govern this repair."
+
+allowed_read_paths:
+  - "SOUL.md"
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research-goal/**"
+  - ".codex/skills/continue-research-continue-goal/**"
+  - ".codex/skills/continue-research/**"
+  - ".codex/skills/improve-project-system/**"
+  - ".agents/roles/research_ops/project-system-director.v0.2.0.md"
+  - ".agents/roles/research_ops/project-control-maintainer.v0.2.0.md"
+  - ".agents/schemas/**"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  - "research_control/design/**"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0951.yaml"
+  - "research_control/project_improvement_handoffs/improve-project-handoff_20260803_004.yaml"
+  - "research_control/tasks/RT-20260724-004/**"
+  - "research_control/tasks/RT-20260803-005/**"
+  - "research_control/tasks/RT-20260803-010/**"
+  - "registries/**"
+  - "scripts/**"
+  - "tests/**"
+allowed_write_paths:
+  - "registries/TEX_SOURCE_REGISTRY.csv"
+  - "registries/PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv"
+  - "tests/test_p16_t02_gate_a_registry_validator_identity.py"
+  - "research_control/tasks/RT-20260803-011/**"
+  - "research_control/handoffs/handoff-0952.yaml"
+  - "research_control/handoffs/handoff-0952.md"
+  - "research_control/project_improvement_handoffs/improve-project-handoff_20260803_004.yaml"
+  - "research_control/project_improvement_handoffs/improve-project-handoff_20260803_004.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "registries/**"
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/pdf/**"
+  - "wiki/tex/**"
+allowed_generated_paths:
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/pdf/**"
+  - "wiki/tex/**"
+forbidden_paths:
+  - ".agents/**"
+  - ".codex/skills/**"
+  - ".github/**"
+  - "implementations_plans/**"
+  - "ontology/**"
+  - "legacy_ontology/**"
+  - "manuscripts/**"
+  - "research_control/tasks/RT-20260803-005/**"
+  - "research_control/tasks/RT-20260724-004/artifacts/ontology_regime_gate_chair_decision_v1.tex"
+forbidden_source_classes:
+  - "historical_validator_receipt_or_completion_rewrite"
+  - "canonical_plan_or_backlog_edit"
+  - "canonical_ontology_or_science_source_write"
+  - "p16_t02_reaudit_p16_t03_or_p16_t04_execution"
+  - "physics_claim_benchmark_or_gate_promotion"
+  - "gate_chair_proof_publication_push_or_external_action"
+allowed_source_classes:
+  - "control_registry_operational_validation_status"
+  - "task_local_exact_object_validator"
+  - "focused_fail_closed_regression"
+  - "task_control_record"
+  - "project_improvement_signal_and_sidecar_resolution"
+  - "registry"
+  - "generated_memory_derivative"
+approved_commands:
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search 'P16 T02 Gate A exact object registry validator identity' --limit 10 --json"
+  - ".venv/bin/python research_control/tasks/RT-20260803-011/artifacts/validate_p16_t02_gate_a_registry_validator_identity_parity.py --write-report --json"
+  - ".venv/bin/python research_control/tasks/RT-20260803-011/artifacts/validate_p16_t02_gate_a_registry_validator_identity_parity.py --check --json"
+  - ".venv/bin/python -m unittest -v tests.test_p16_t02_gate_a_registry_validator_identity"
+  - ".venv/bin/python -m scripts.validation.cli run --profile affected --paths registries/TEX_SOURCE_REGISTRY.csv tests/test_p16_t02_gate_a_registry_validator_identity.py research_control/tasks/RT-20260803-011 research_control/program_state.yaml research_control/handoffs/handoff-0952.yaml"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --job-id AJ-RT-20260803-011-001 --json-summary"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+  - ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --write"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --json output/research_dependency_graph.json --markdown wiki/indexes/research_dependency_graph.md --dot output/research_dependency_graph.dot"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+  - ".venv/bin/python scripts/research_control/continue_research.py --summary"
+  - "git diff --check"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260803-011-001"
+required_validators:
+  - "memory_preflight"
+  - "physics_payload_admission"
+  - "dual_budget_allocation"
+  - "ordinary_route_guard_admission"
+  - "exact_gate_a_object_identity"
+  - "sealed_rt005_hash_preservation"
+  - "cross_object_substitution_regressions"
+  - "project_change_classifier"
+  - "project_improvement_resolver"
+  - "project_improvement_signals"
+  - "documentation_impact"
+  - "claim_language_changed"
+  - "affected_validation_profile"
+  - "research_control_diff"
+  - "generated_report_freshness"
+  - "repository_tests"
+  - "continue_research_resolution"
+  - "memory_sync"
+  - "memory_core"
+  - "git_diff_check"
+  - "checkpoint_transaction"
+expected_outputs:
+  - "registries/TEX_SOURCE_REGISTRY.csv"
+  - "tests/test_p16_t02_gate_a_registry_validator_identity.py"
+  - "research_control/tasks/RT-20260803-011/00_TASK.yaml"
+  - "research_control/tasks/RT-20260803-011/DDR-20260803-011.md"
+  - "research_control/tasks/RT-20260803-011/artifacts/validate_p16_t02_gate_a_registry_validator_identity_parity.py"
+  - "research_control/tasks/RT-20260803-011/artifacts/p16_t02_gate_a_registry_validator_identity_parity_validation.json"
+  - "research_control/tasks/RT-20260803-011/artifacts/p16_t02_gate_a_registry_validator_identity_parity_receipt.json"
+  - "research_control/tasks/RT-20260803-011/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260803-011/jobs/completions/AJC-AJ-RT-20260803-011-001.yaml"
+  - "research_control/tasks/RT-20260803-011/roles/project-control-maintainer@0.2.0--RT-20260803-011.yaml"
+  - "research_control/handoffs/handoff-0952.yaml"
+  - "research_control/handoffs/handoff-0952.md"
+  - "research_control/project_improvement_handoffs/improve-project-handoff_20260803_004.yaml"
+  - "research_control/program_state.yaml"
+claim_boundary: "CB-PS-P16-T02-GATE-A-EXACT-OBJECT-REGISTRY-VALIDATOR-PARITY-001"
+documentation_impact_id: "DI-RT-20260803-011-001"
+completion_id: "AJC-AJ-RT-20260803-011-001"
