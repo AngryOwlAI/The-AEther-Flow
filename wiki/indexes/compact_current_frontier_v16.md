@@ -4,7 +4,7 @@
 
 This generated index mirrors `output/compact_current_frontier_v16.yaml` and `output/compact_current_frontier_v16.json`. It is a snapshot-only reader aid. If it differs from tracked control state, tracked control state governs.
 
-<!-- generated-report-provenance: {"freshness_status":"fresh_at_generation","generated_view_is_authority":false,"generation_time":"2026-08-03T05:08:32Z","maximum_commit_lag":"1","physics_promotion_authorized":false,"policy_id":"p13_t07_live_generated_report_freshness_v1","proof_authority":false,"report_class":"compact_current_frontier","schema_id":"generated_report_provenance_v1","source_commit":"506df561a80aa8b1a45a57aef76ea82f65fce90f","source_hashes":[{"path":"registries/DISTANCE_TO_GR_LEDGER.csv","sha256":"6b81b42bc7ed83f74f8062f2ade26988e8b369aa2d23744fc9e392279e1de5d8"},{"path":"registries/RESEARCH_TASK_REGISTRY.csv","sha256":"65bcaa8252c62471ff6a5600fa306ad5f813d077af1befb376e5b833b70039bd"},{"path":"research_control/current_frontier.md","sha256":"6f146d9406f3ad6a9b4ae2d49a568dc04588c878472ad352069a628dd934c14c"},{"path":"research_control/handoffs/handoff-0945.yaml","sha256":"fcf800fe995731180f71bdf85e8b25b9d91cca3463e5d004fc288af014f8d906"},{"path":"research_control/program_state.yaml","sha256":"a46e8008f69ee9d3fe99cc986dc9733caf9c4a4b539c62ea8e81f7e04d708fc0"},{"path":"research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml","sha256":"dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3"},{"path":"scripts/research_control/generated_report_provenance.py","sha256":"af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c"},{"path":"scripts/research_control/render_compact_current_frontier_v16.py","sha256":"36fab56791487f690c7fd31ef036a1dba82d03a66beddefac5a21baf77ab10c2"}],"source_manifest_sha256":"0da7279660e3e29abdf6f6e528fd8746422b5531ac6972c72255a640124be914","source_path_count":"12","task_count":"1199"} -->
+<!-- generated-report-provenance: {"freshness_status":"fresh_at_generation","generated_view_is_authority":false,"generation_time":"2026-08-03T06:32:26Z","maximum_commit_lag":"1","physics_promotion_authorized":false,"policy_id":"p13_t07_live_generated_report_freshness_v1","proof_authority":false,"report_class":"compact_current_frontier","schema_id":"generated_report_provenance_v1","source_commit":"56f9fd4d0ccec150200d80f6f1e1137a22553b15","source_hashes":[{"path":"registries/DISTANCE_TO_GR_LEDGER.csv","sha256":"6b81b42bc7ed83f74f8062f2ade26988e8b369aa2d23744fc9e392279e1de5d8"},{"path":"registries/RESEARCH_TASK_REGISTRY.csv","sha256":"5963277c6d6e6003a0c844f8e77069acaaab1312088b5bc575127b6336b9ef01"},{"path":"research_control/current_frontier.md","sha256":"4538c813127cc4b8bd5ec4c8d713f9f165b27f0890a5c4ae2862677f4b8dc105"},{"path":"research_control/handoffs/handoff-0946.yaml","sha256":"e86989a4014b01fc04ec4e6e2dcab8eb3a97d1fd1d77c02ab24357c20cff27bc"},{"path":"research_control/program_state.yaml","sha256":"2fdb2d6682e515e24e353982f1b6e8d7c36339b112035f5f12b00581ad9f51ec"},{"path":"research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml","sha256":"dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3"},{"path":"scripts/research_control/generated_report_provenance.py","sha256":"af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c"},{"path":"scripts/research_control/render_compact_current_frontier_v16.py","sha256":"36fab56791487f690c7fd31ef036a1dba82d03a66beddefac5a21baf77ab10c2"}],"source_manifest_sha256":"3d185f858ab281281987e6dc9f42e2d7b46b550e82b52f7186b47444f2e147f2","source_path_count":"12","task_count":"1200"} -->
 
 ## Generated-Report Provenance
 
@@ -13,11 +13,11 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 | Provenance schema | `generated_report_provenance_v1` |
 | Freshness policy | `p13_t07_live_generated_report_freshness_v1` |
 | Report class | `compact_current_frontier` |
-| Source commit | `506df561a80aa8b1a45a57aef76ea82f65fce90f` |
-| Source-derived generation time | `2026-08-03T05:08:32Z` |
-| Tracked task count | 1199 |
+| Source commit | `56f9fd4d0ccec150200d80f6f1e1137a22553b15` |
+| Source-derived generation time | `2026-08-03T06:32:26Z` |
+| Tracked task count | 1200 |
 | Exact source-path count | 12 |
-| Source manifest SHA-256 | `0da7279660e3e29abdf6f6e528fd8746422b5531ac6972c72255a640124be914` |
+| Source manifest SHA-256 | `3d185f858ab281281987e6dc9f42e2d7b46b550e82b52f7186b47444f2e147f2` |
 | Maximum commit lag | 1 |
 | Freshness status at generation | `fresh_at_generation` |
 | Generated view is authority | `false` |
@@ -25,10 +25,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 Exact primary source hashes:
 
 - `registries/DISTANCE_TO_GR_LEDGER.csv`: `6b81b42bc7ed83f74f8062f2ade26988e8b369aa2d23744fc9e392279e1de5d8`
-- `registries/RESEARCH_TASK_REGISTRY.csv`: `65bcaa8252c62471ff6a5600fa306ad5f813d077af1befb376e5b833b70039bd`
-- `research_control/current_frontier.md`: `6f146d9406f3ad6a9b4ae2d49a568dc04588c878472ad352069a628dd934c14c`
-- `research_control/handoffs/handoff-0945.yaml`: `fcf800fe995731180f71bdf85e8b25b9d91cca3463e5d004fc288af014f8d906`
-- `research_control/program_state.yaml`: `a46e8008f69ee9d3fe99cc986dc9733caf9c4a4b539c62ea8e81f7e04d708fc0`
+- `registries/RESEARCH_TASK_REGISTRY.csv`: `5963277c6d6e6003a0c844f8e77069acaaab1312088b5bc575127b6336b9ef01`
+- `research_control/current_frontier.md`: `4538c813127cc4b8bd5ec4c8d713f9f165b27f0890a5c4ae2862677f4b8dc105`
+- `research_control/handoffs/handoff-0946.yaml`: `e86989a4014b01fc04ec4e6e2dcab8eb3a97d1fd1d77c02ab24357c20cff27bc`
+- `research_control/program_state.yaml`: `2fdb2d6682e515e24e353982f1b6e8d7c36339b112035f5f12b00581ad9f51ec`
 - `research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml`: `dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3`
 - `scripts/research_control/generated_report_provenance.py`: `af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c`
 - `scripts/research_control/render_compact_current_frontier_v16.py`: `36fab56791487f690c7fd31ef036a1dba82d03a66beddefac5a21baf77ab10c2`
@@ -39,17 +39,17 @@ or claim-promotion authority.
 
 ## Active State
 
-- Active task: `RT-20260803-003`
-- Latest handoff: `handoff-0945`
-- Current status: `p16_t02_repair_required_status_layer_drift_precheckpoint`
+- Active task: `RT-20260803-004`
+- Latest handoff: `handoff-0946`
+- Current status: `p16_t02_allowlist_parity_recovery_pass_ready_for_checkpoint`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260803-003`
-- Latest research handoff: `handoff-0945`
-- Latest research next action: Run one governed checkpoint for AJ-RT-20260803-003-001. Then consume PIS-RT-20260803-003-001 through exactly one bounded improve-project-system status-taxonomy repair; do not execute P16-T03 or P16-T04.
+- Latest research task: `RT-20260803-004`
+- Latest research handoff: `handoff-0946`
+- Latest research next action: Run one governed checkpoint for AJ-RT-20260803-004-001. After it commits, consume PIS-RT-20260803-003-001 through exactly one fresh bounded improve-project-system status-taxonomy repair; do not reexecute P16-T02 or execute P16-T03 or P16-T04.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -97,8 +97,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `22ef8deccb02596614c2186ca84d9a85807ede23bd778c49ca7a8a655c4554b1`
-- JSON SHA-256: `60ec62d8c22c593fa8320b9413881a4d82a59cfeb3aa79fb95885d84782c7af7`
+- YAML SHA-256: `90234d5dfa278db16472d3cdf86d6fb8159db74b5349f4985ff5bd560d3b5bb7`
+- JSON SHA-256: `c7be934837a95fc6c92011e402e29eac8bdcadd31e39b4217e62fee59febfeb9`
 
 ## Authority Warning
 

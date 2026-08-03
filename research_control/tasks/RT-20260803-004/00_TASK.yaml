@@ -1,0 +1,81 @@
+task_id: "RT-20260803-004"
+task_type: "project_system_p16_t02_allowlist_parity_checkpoint_recovery"
+title: "Restore P16-T02 ordered allowlist identity and checkpoint eligibility"
+task_taxonomy:
+  schema_id: "v21_task_taxonomy_v1"
+  work_kind: "benchmark_or_recovery"
+  milestone: "benchmark_promotion"
+  candidate_family: "p16_t02_allowlist_parity_checkpoint_recovery"
+  result_kind: "implemented_and_validated_or_precisely_blocked"
+  authority: "project_control"
+  scope: "project_system"
+validation_status: "PASS_PRECHECKPOINT"
+status: "completed"
+created_at: "2026-08-03T06:32:26Z"
+updated_at: "2026-08-03T06:32:26Z"
+closed_at: "2026-08-03T06:32:26Z"
+parent_task_id: "RT-20260803-003"
+parent_handoff_id: "handoff-0945"
+supersedes_active_routing_task_id: "RT-20260803-003"
+current_decision_id: "DDR-20260803-004"
+current_job_id: "AJ-RT-20260803-004-001"
+role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260803-004"
+requires_human_gate: false
+human_authorization_note: "Generation 231 of the immutable user-requested relay routes exactly one improve-project-system frame to repair the completed P16-T02 AgentJob, registry, and execution-role ordered write-allowlist mismatch. It does not execute the status-taxonomy repair, reexecute P16-T02, or execute P16-T03 or P16-T04."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P16"
+  plan_task_id: "P16-T02"
+  recovery_for_plan_task_id: "P16-T02"
+  next_plan_task_id: "P16-T02"
+  next_plan_task_execution_authorized: false
+objective: "Preserve AJ-RT-20260803-003-001 byte-for-byte; align its expired execution-role overlay and both registry representations to the AgentJob's exact ordered 26-item write-path contract; prove four-way parity and protected P16-T02 byte preservation; then invoke one governed checkpoint before the separate P16-T02 status-taxonomy repair."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system allowlist identity and checkpoint recovery only; the P16-T02 benchmark-promotion authority audit and status-taxonomy repair remain unchanged and incomplete."
+route_label: "reroute_generation_230_p16_t02_allowlist_parity_repair_v1"
+project_system_change_only: true
+dual_budget_category: "system_bearing"
+primary_budget: "project_system"
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+claim_boundary_id: "CB-V21-P16-T02-ALLOWLIST-PARITY-CHECKPOINT-RECOVERY-001"
+claim_boundary:
+  allowed_scope: "Preserve the completed P16-T02 AgentJob, completion, handoff, sidecar, and science-bearing artifacts; make only its expired execution-role and two control-registry allowlists equal the immutable AgentJob's exact ordered 26-item list; create bounded recovery evidence and normal control records; and invoke one governed checkpoint."
+  immutable_predecessor_task: "RT-20260803-003"
+  immutable_predecessor_job: "AJ-RT-20260803-003-001"
+  immutable_predecessor_handoff: "handoff-0945"
+  source_head: "56f9fd4d0ccec150200d80f6f1e1137a22553b15"
+  source_job_sha256: "9205f277f7e057e367ab8648820d3032a84743c515751d83ac205697149505d0"
+  source_role_sha256_before_repair: "920710252f24a80c8798d453f65df80998c63e782ff2f497b4be7e38976466eb"
+  source_completion_sha256: "99aca5806525200bb9d08db5e25765a1d7f3603e5fb49a79a20b4f9d0075c4ac"
+  source_handoff_sha256: "fcf800fe995731180f71bdf85e8b25b9d91cca3463e5d004fc288af014f8d906"
+  source_improvement_sidecar_sha256: "1c2e18cf29c6448f38898ca7d9e9bffcc6f8f48a5a41f821fd1e183b1ea4a04b"
+  immutable_route_sha256: "f0821c13d91c2576860678136b9b337f67c832972a013890c9452c841ac217e6"
+  route_blocker_fingerprint: "a3548c0cacfc5181f2acaa657a1cfb9eddd00ada7d2c54d138c7a07b964a430d"
+  required_allowed_write_path_count: 26
+  p16_t02_reexecuted: false
+  p16_t02_status_taxonomy_repair_executed: false
+  p16_t03_executed: false
+  p16_t04_executed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+documentation_impact_id: "DI-RT-20260803-004-001"
+completion_id: "AJC-AJ-RT-20260803-004-001"
+output_artifacts:
+  - "research_control/tasks/RT-20260803-004/artifacts/validate_p16_t02_allowlist_parity_recovery.py"
+  - "research_control/tasks/RT-20260803-004/artifacts/p16_t02_allowlist_parity_recovery_receipt.json"
+  - "research_control/tasks/RT-20260803-004/jobs/completions/AJC-AJ-RT-20260803-004-001.yaml"
+  - "research_control/handoffs/handoff-0946.yaml"
+  - "research_control/handoffs/handoff-0946.md"
+closure_status: "p16_t02_allowlist_parity_recovery_pass_ready_for_checkpoint"
+summary: "Generation 231 preserves the completed P16-T02 transaction and restores exact ordered allowlist identity before the separate status-taxonomy repair."
+next_recommended_action: "Invoke the one governed checkpoint for AJ-RT-20260803-004-001. After it commits, consume PIS-RT-20260803-003-001 through one fresh bounded improve-project-system status-taxonomy repair before P16-T03 or P16-T04."
+project_improvement_signals: []
+notes: "This packet creates no canonical science change, Gate change, ontology action, metric, matter-coupling, Einstein-equation, benchmark, proof, publication, push, external-action, or completed-derivation authority."
