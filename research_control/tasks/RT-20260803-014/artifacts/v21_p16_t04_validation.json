@@ -1,0 +1,363 @@
+{
+  "artifact_hashes": {
+    "research_control/tasks/RT-20260803-014/artifacts/child_phys_math_p16_t04_final_red_team.yaml": "7b3f3e44c5ca693759d5ae550c1ef94bd41397437001b7a095077febca28f5cc",
+    "research_control/tasks/RT-20260803-014/artifacts/child_phys_phil_p16_t04_final_red_team.yaml": "6575265c1a74378a6713d3a36c468f4d8f7e6d8e4880e86ef6d3231da350374c",
+    "research_control/tasks/RT-20260803-014/artifacts/parent_conflict_review_p16_t04_final_red_team.yaml": "2115efbcb729bbe00a2746ea1a1656899eb733af0530e00cc74a30ba4ba0fdc9",
+    "research_control/tasks/RT-20260803-014/artifacts/parent_fusion_notes_p16_t04_final_red_team.md": "5729636218375cc549a9bb9562c6c120a378c5a9a4a0b69c62083b6872945ace",
+    "research_control/tasks/RT-20260803-014/artifacts/v21_p16_t04_final_red_team_report.md": "84e8d459aad80a05a23a1eb9842716479b1f26ac551dec6a886ed0fa24d9c41d",
+    "research_control/tasks/RT-20260803-014/artifacts/v21_p16_t04_public_claim_verdict.yaml": "6690d2d3e974bfba3d18f237cac23f0859b191aa76ec0497d7b46211517838c8",
+    "research_control/tasks/RT-20260803-014/artifacts/v21_p16_t04_severity_repair_matrix.yaml": "0a953126e9844a21e623b96bc1bfbfb6c11dcd30f7393798c70d4c84f3ed5911",
+    "research_control/tasks/RT-20260803-014/artifacts/validate_p16_t04_final_red_team.py": "e257f27e592d3439b06e4d25a703eadbca16d1f3f652049386e135b1869458a4"
+  },
+  "artifact_structure": {
+    "exact_checks": {
+      "completion_identity": true,
+      "completion_result": true,
+      "handoff_identity": true,
+      "handoff_result": true,
+      "job_identity": true,
+      "job_route": true,
+      "math_child_result": true,
+      "matrix_result": true,
+      "parent_conflict_resolved": true,
+      "phil_child_result": true,
+      "role_identity": true,
+      "role_internal_provenance": true,
+      "task_closure": true,
+      "task_identity": true,
+      "task_plan": true,
+      "verdict_result": true
+    },
+    "finding_count": 9,
+    "matrix_checks": {
+      "finding_total": true,
+      "no_undisposed_high_guard": true,
+      "one_blocking_project_finding": true,
+      "one_exact_open_repair": true,
+      "one_exact_signal": true,
+      "zero_blocking_science": true
+    },
+    "open_repair_count": 1,
+    "public_authority_flags": {
+      "benchmark_promotion_authorized": false,
+      "external_review_completed": false,
+      "human_expert_review_completed": false,
+      "independent_replication_completed": false,
+      "physics_promotion_authorized": false,
+      "proof_authority": false,
+      "public_release_authorized": false,
+      "publication_authorized": false
+    },
+    "typed_claim_checks": {
+      "claim_rules_satisfied": true,
+      "negative_atoms": true,
+      "not_global_no_go": true,
+      "positive_atoms": true,
+      "typed_nonentailment": true
+    }
+  },
+  "audit_snapshot_sources": {
+    "audit_head": "2c4c012c5b30425a2bd43f170f865a9a7033a10d",
+    "immutable_dependencies": {
+      "research_control/handoffs/handoff-0954.yaml": {
+        "expected_sha256": "fab7eaff90a4d8d22a039661e8bea73c4e2f2f95e73c01b5f750c7b5212ac099",
+        "match": true,
+        "observed_sha256": "fab7eaff90a4d8d22a039661e8bea73c4e2f2f95e73c01b5f750c7b5212ac099"
+      },
+      "research_control/tasks/RT-20260803-012/jobs/completions/AJC-AJ-RT-20260803-012-001.yaml": {
+        "expected_sha256": "32490ac7e5a57138f6de7a884825532ee17389d36634dbb9fc7f7cc076c0bf8d",
+        "match": true,
+        "observed_sha256": "32490ac7e5a57138f6de7a884825532ee17389d36634dbb9fc7f7cc076c0bf8d"
+      },
+      "research_control/tasks/RT-20260803-013/jobs/completions/AJC-AJ-RT-20260803-013-001.yaml": {
+        "expected_sha256": "a0bd4691e276e5e0d97b45b734491f697deeb57ca0dc99b015bd7ea7d734fe91",
+        "match": true,
+        "observed_sha256": "a0bd4691e276e5e0d97b45b734491f697deeb57ca0dc99b015bd7ea7d734fe91"
+      }
+    },
+    "immutable_dependency_count": 3,
+    "source_binding_count": 30,
+    "source_bindings": {
+      ".agents/roles/physics/external-red-team-reviewer.v0.1.0.md": {
+        "expected_sha256": "b49de89caa4cb4f98f959e0ba7168a8223797679e5d0ab3c4700c14a5de9ace7",
+        "match": true,
+        "snapshot_sha256": "b49de89caa4cb4f98f959e0ba7168a8223797679e5d0ab3c4700c14a5de9ace7"
+      },
+      ".agents/schemas/EXTERNAL_RED_TEAM_REVIEW_ARTIFACT_SCHEMA.md": {
+        "expected_sha256": "0466b3f03bb9dbe27723c196fce4856a0352a4cd92e6ae00faa58fdc36d7c6b8",
+        "match": true,
+        "snapshot_sha256": "0466b3f03bb9dbe27723c196fce4856a0352a4cd92e6ae00faa58fdc36d7c6b8"
+      },
+      "README.md": {
+        "expected_sha256": "d5abcba0ce6b2586a7d1e1a72c435cafabb4c7e2d021ffee74ec097a8627ffdd",
+        "match": true,
+        "snapshot_sha256": "d5abcba0ce6b2586a7d1e1a72c435cafabb4c7e2d021ffee74ec097a8627ffdd"
+      },
+      "github-facing/claim-gates-explainer.md": {
+        "expected_sha256": "acd9dc067b35dbf659127d5c893bcd783a280869827467762b3ae895d0d1ec76",
+        "match": true,
+        "snapshot_sha256": "acd9dc067b35dbf659127d5c893bcd783a280869827467762b3ae895d0d1ec76"
+      },
+      "github-facing/project-overview-explainer.md": {
+        "expected_sha256": "e2e8d214e8be50a85d629dd07d09d47a3c690b1f1780c683b499ae051a8e99aa",
+        "match": true,
+        "snapshot_sha256": "e2e8d214e8be50a85d629dd07d09d47a3c690b1f1780c683b499ae051a8e99aa"
+      },
+      "implementations_plans/recommendations_implementation_plan_continue_task-v21.md": {
+        "expected_sha256": "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087",
+        "match": true,
+        "snapshot_sha256": "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+      },
+      "markdown/publication-briefs/aether-flow-physics-program.publication-brief.md": {
+        "expected_sha256": "88bc84765d409845edfe375cc7856895476304769aabc720e7fe111a3c944fe9",
+        "match": true,
+        "snapshot_sha256": "88bc84765d409845edfe375cc7856895476304769aabc720e7fe111a3c944fe9"
+      },
+      "markdown/publication-briefs/proof-state-dashboard.publication-brief.md": {
+        "expected_sha256": "c5d57e51dc2295c899bca9e6d63f0eb48c3574047158cac72373889c53352584",
+        "match": true,
+        "snapshot_sha256": "c5d57e51dc2295c899bca9e6d63f0eb48c3574047158cac72373889c53352584"
+      },
+      "ontology/aether-and-aether-flow.md": {
+        "expected_sha256": "b8e17df2354ab0fe3cae04e43940f787dd187dd67f0f40e978de080983ac6edc",
+        "match": true,
+        "snapshot_sha256": "b8e17df2354ab0fe3cae04e43940f787dd187dd67f0f40e978de080983ac6edc"
+      },
+      "ontology/aether_flow_interpretation-lemen.md": {
+        "expected_sha256": "4ee8f4e889ad433f7d167442e25a47db061743c4b6ccf4528230f6db919d8e23",
+        "match": true,
+        "snapshot_sha256": "4ee8f4e889ad433f7d167442e25a47db061743c4b6ccf4528230f6db919d8e23"
+      },
+      "ontology/tex/aether_flow_consistency.tex": {
+        "expected_sha256": "d965519639ee8764a5c5a63798d15e8a9a380d7e208dffc43a0be02b6f245ba1",
+        "match": true,
+        "snapshot_sha256": "d965519639ee8764a5c5a63798d15e8a9a380d7e208dffc43a0be02b6f245ba1"
+      },
+      "ontology/tex/aether_flow_dynamics.tex": {
+        "expected_sha256": "fd6e579e71ef7f2ac4c9668ceede051ad57033ee52357b2552a9e3a5a53939c7",
+        "match": true,
+        "snapshot_sha256": "fd6e579e71ef7f2ac4c9668ceede051ad57033ee52357b2552a9e3a5a53939c7"
+      },
+      "ontology/tex/aether_flow_exact_closure_flagship_article.tex": {
+        "expected_sha256": "900c799cb0c3d8f790c836196c136b3cec6944e46d41b89e511b85123fd30e40",
+        "match": true,
+        "snapshot_sha256": "900c799cb0c3d8f790c836196c136b3cec6944e46d41b89e511b85123fd30e40"
+      },
+      "ontology/tex/aether_flow_exact_closure_note.tex": {
+        "expected_sha256": "c4a4e956ad5a10e6b3f4e661351bdeda2145b01e6e85d9df849e765c765eca35",
+        "match": true,
+        "snapshot_sha256": "c4a4e956ad5a10e6b3f4e661351bdeda2145b01e6e85d9df849e765c765eca35"
+      },
+      "ontology/tex/aether_flow_exact_closure_sequence_overview.tex": {
+        "expected_sha256": "356a5f65b0931914fdf9362ba544c2868bad7d33b828754b91c029bed96f86b1",
+        "match": true,
+        "snapshot_sha256": "356a5f65b0931914fdf9362ba544c2868bad7d33b828754b91c029bed96f86b1"
+      },
+      "ontology/tex/aether_flow_foundations.tex": {
+        "expected_sha256": "4749d9e8b6858a43230e99029cccc3274b55fc2ae2a2cdf45a983a60c98e5b59",
+        "match": true,
+        "snapshot_sha256": "4749d9e8b6858a43230e99029cccc3274b55fc2ae2a2cdf45a983a60c98e5b59"
+      },
+      "ontology/tex/aether_flow_geometry.tex": {
+        "expected_sha256": "f60a81b63f814b03cca7190b3ac6285842a55317f4aed058cc6e75154cc0b4d7",
+        "match": true,
+        "snapshot_sha256": "f60a81b63f814b03cca7190b3ac6285842a55317f4aed058cc6e75154cc0b4d7"
+      },
+      "ontology/tex/aether_flow_relativistic_recovery.tex": {
+        "expected_sha256": "77d5c2db56f122870343834f853bf2f375a912116a347d7c5710405c8707d69c",
+        "match": true,
+        "snapshot_sha256": "77d5c2db56f122870343834f853bf2f375a912116a347d7c5710405c8707d69c"
+      },
+      "research_control/current_frontier.md": {
+        "expected_sha256": "56e431a884e1adfa07fcf4d836f0ffd632f5f056675000774f0c8cf9080d92fa",
+        "match": true,
+        "snapshot_sha256": "56e431a884e1adfa07fcf4d836f0ffd632f5f056675000774f0c8cf9080d92fa"
+      },
+      "research_control/tasks/RT-20260722-005/artifacts/review_claim_language_rules.md": {
+        "expected_sha256": "3d8d597d47e6cdffea38a6248fd44f389c3eca77c6b9a722561529e14427bfe8",
+        "match": true,
+        "snapshot_sha256": "3d8d597d47e6cdffea38a6248fd44f389c3eca77c6b9a722561529e14427bfe8"
+      },
+      "research_control/tasks/RT-20260722-005/artifacts/review_independence_taxonomy.md": {
+        "expected_sha256": "6167db6a8c1d67f96bd14aaf52f18fb3666cca1c78b0a42ddc614bc7b56f4ce7",
+        "match": true,
+        "snapshot_sha256": "6167db6a8c1d67f96bd14aaf52f18fb3666cca1c78b0a42ddc614bc7b56f4ce7"
+      },
+      "research_control/tasks/RT-20260722-010/jobs/completions/AJC-AJ-RT-20260722-010-001.yaml": {
+        "expected_sha256": "09b6fdca28128bd37908cb5e0dbc2c81b0b9af569db0490fed1fb7e32c6b2e46",
+        "match": true,
+        "snapshot_sha256": "09b6fdca28128bd37908cb5e0dbc2c81b0b9af569db0490fed1fb7e32c6b2e46"
+      },
+      "research_control/tasks/RT-20260722-019/artifacts/no_target_positive_provenance_sufficiency_policy_v1.tex": {
+        "expected_sha256": "52c30a55019d38dbc5cb697749189dba4a0bc17db9566dd4c505b21f7db2e456",
+        "match": true,
+        "snapshot_sha256": "52c30a55019d38dbc5cb697749189dba4a0bc17db9566dd4c505b21f7db2e456"
+      },
+      "research_control/tasks/RT-20260727-004/artifacts/p6_t08_gate_b_external_red_team_review_v1.yaml": {
+        "expected_sha256": "77779a4db679492b47ebd0652cd67c2a3f17e69aa7ee06917ab8089bcdabafae",
+        "match": true,
+        "snapshot_sha256": "77779a4db679492b47ebd0652cd67c2a3f17e69aa7ee06917ab8089bcdabafae"
+      },
+      "research_control/tasks/RT-20260729-012/artifacts/source_derived_benchmark_protocol_v1.tex": {
+        "expected_sha256": "88ef097bf712ad115e9af62cc18a8b3eabb12f8545350f714ad065f702471007",
+        "match": true,
+        "snapshot_sha256": "88ef097bf712ad115e9af62cc18a8b3eabb12f8545350f714ad065f702471007"
+      },
+      "research_control/tasks/RT-20260730-010/artifacts/p9_t03_target_exposure_ledger_v1.yaml": {
+        "expected_sha256": "6b6661d96a01f87b7ef66deaefd1154b26420c8a242405ee661d00f92d9d6586",
+        "match": true,
+        "snapshot_sha256": "6b6661d96a01f87b7ef66deaefd1154b26420c8a242405ee661d00f92d9d6586"
+      },
+      "research_control/tasks/RT-20260730-010/artifacts/weak_field_operational_coupling_nonuniqueness_v1.tex": {
+        "expected_sha256": "1764daa847a7d19479e89ead7105da96c8c503948aa59794d0b3973018c16fd3",
+        "match": true,
+        "snapshot_sha256": "1764daa847a7d19479e89ead7105da96c8c503948aa59794d0b3973018c16fd3"
+      },
+      "research_control/tasks/RT-20260731-001/artifacts/p9_t08_benchmark_smuggling_audit_v1.yaml": {
+        "expected_sha256": "c5b05dad23261d479e624b9cf08a3d02c2773d05df4d15246793067525acd229",
+        "match": true,
+        "snapshot_sha256": "c5b05dad23261d479e624b9cf08a3d02c2773d05df4d15246793067525acd229"
+      },
+      "research_control/tasks/RT-20260802-008/artifacts/p15_t02_methodology_manuscript.md": {
+        "expected_sha256": "05151b543111f1107a07f1b02afabc78d97ef07820d1eed824da38fdd8e441a3",
+        "match": true,
+        "snapshot_sha256": "05151b543111f1107a07f1b02afabc78d97ef07820d1eed824da38fdd8e441a3"
+      },
+      "research_control/tasks/RT-20260803-012/artifacts/child_phys_phil_p16_t02_post_repair_reaudit.yaml": {
+        "expected_sha256": "235dbbf40cd87e4b19fcc569ea480c5d76ec105d21b3fb845a6dcdad3053dae1",
+        "match": true,
+        "snapshot_sha256": "235dbbf40cd87e4b19fcc569ea480c5d76ec105d21b3fb845a6dcdad3053dae1"
+      }
+    }
+  },
+  "authority_boundary": {
+    "benchmark_promotion_authorized": false,
+    "distance_to_gr_changed": false,
+    "external_review_completed": false,
+    "human_expert_review_completed": false,
+    "independent_replication_completed": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "public_release_authorized": false,
+    "publication_authorized": false,
+    "scientific_status_changed": false
+  },
+  "control_records": {
+    "handoff_current_hash_mismatch_count": 1,
+    "resolved_historical_transition_count": 1,
+    "unsupported_positive_review_claim_count": 0,
+    "unsupported_positive_review_claims": [],
+    "v21_completion_identity_count": 132,
+    "v21_handoff_record_count": 136,
+    "v21_task_record_count": 132
+  },
+  "error_count": 0,
+  "errors": [],
+  "external_validator_pass_count": 4,
+  "external_validators": [
+    {
+      "command": ".venv/bin/python research_control/tasks/RT-20260722-006/artifacts/validate_p11_t04_semantic_smuggling_suite.py --check --json",
+      "command_id": "semantic_smuggling_suite",
+      "exit_code": 0,
+      "outcome": "PASS",
+      "passed": true,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "ab33c9e3898c607cc3419b18e179d510520c9c6e92156d5e4db9fb390348e4d9",
+      "summary": {
+        "attack_fixture_count": 13,
+        "benign_fixture_count": 6,
+        "check_count": 22,
+        "failed_check_count": 0,
+        "fixture_count": 19,
+        "status": "PASS"
+      }
+    },
+    {
+      "command": ".venv/bin/python research_control/tasks/RT-20260802-008/artifacts/build_p15_t02_methodology_publication.py --check",
+      "command_id": "methodology_determinism",
+      "exit_code": 0,
+      "outcome": "PASS",
+      "passed": true,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "f87e4a076a4369b763b232b34f0f4adce9de10d5dae365b7b688fc5843789052",
+      "summary": {
+        "checked_output_count": 9,
+        "status": "PASS"
+      }
+    },
+    {
+      "command": ".venv/bin/python research_control/tasks/RT-20260802-008/artifacts/validate_p15_t02_methodology_publication.py",
+      "command_id": "methodology_boundary",
+      "exit_code": 0,
+      "outcome": "PASS",
+      "passed": true,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "d898ce613109f2b552de77fd906d6a0f2b165716d65f9209d731d5b76a11d3ad",
+      "summary": {
+        "check_count": 26,
+        "status": "PASS"
+      }
+    },
+    {
+      "command": ".venv/bin/python scripts/project_control/validate_claim_language.py --json --paths README.md ontology/aether-and-aether-flow.md ontology/aether_flow_interpretation-lemen.md ontology/tex/aether_flow_foundations.tex ontology/tex/aether_flow_dynamics.tex ontology/tex/aether_flow_consistency.tex ontology/tex/aether_flow_relativistic_recovery.tex ontology/tex/aether_flow_geometry.tex ontology/tex/aether_flow_exact_closure_note.tex ontology/tex/aether_flow_exact_closure_sequence_overview.tex ontology/tex/aether_flow_exact_closure_flagship_article.tex",
+      "command_id": "explicit_ontology_and_public_claim_language",
+      "exit_code": 0,
+      "outcome": "PASS",
+      "passed": true,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "9169ef71cbe254408a53bd085434233a85d0fb09af7e85655baacca0f558e5a3",
+      "summary": {
+        "finding_count": 0,
+        "hard_fail_count": 0,
+        "scanned_path_count": 11,
+        "status": "PASS",
+        "warning_count": 0
+      }
+    }
+  ],
+  "firewall_and_methodology_boundary": {
+    "case_count": 6,
+    "checks": {
+      "firewall_complete_edge_hypothesis": true,
+      "firewall_human_knowledge_limit": true,
+      "firewall_manifest_completeness_limit": true,
+      "firewall_training_prior_limit": true,
+      "manifest_not_proved": true,
+      "shared_error_not_eliminated": true,
+      "six_cases": true,
+      "six_inconclusive": true,
+      "zero_benchmark_passes": true,
+      "zero_independent_replications": true
+    }
+  },
+  "job_id": "AJ-RT-20260803-014-001",
+  "plan_task_id": "P16-T04",
+  "registered_sources": {
+    "content_address_count": 1091,
+    "mismatch_count": 0
+  },
+  "result_status": "REPAIR_REQUIRED_P16_T04_INTERNAL_EXTERNAL_REVIEW_LABEL_CONTRACT_DRIFT",
+  "review_contract": {
+    "historical_pilot_checks": {
+      "external_false": true,
+      "four_internal_reviews": true,
+      "historical_task_type_risky": true,
+      "human_false": true,
+      "independent_false": true,
+      "two_blind_same_model": true,
+      "two_same_context": true
+    },
+    "role_contract_checks": {
+      "base_role_hash_bound": true,
+      "base_role_kind_external": true,
+      "base_role_name_external": true,
+      "language_role_name_not_provenance": true,
+      "r38_internal_label_requirement": true,
+      "taxonomy_evidence_not_title": true,
+      "taxonomy_independent_positive_evidence": true
+    }
+  },
+  "schema_id": "v21_p16_t04_validation_v1",
+  "status": "PASS_REPAIR_REQUIRED_FINDING_PRESERVED",
+  "task_id": "RT-20260803-014"
+}

@@ -1,0 +1,66 @@
+improvement_handoff_id: "improve-project-handoff_20260803_005"
+created_at: "2026-08-03T20:39:26Z"
+status: "open"
+source:
+  source_kind: "research_completion_and_handoff"
+  task_id: "RT-20260803-014"
+  decision_id: "DDR-20260803-014"
+  job_id: "AJ-RT-20260803-014-001"
+  completion_path: "research_control/tasks/RT-20260803-014/jobs/completions/AJC-AJ-RT-20260803-014-001.yaml"
+  regular_handoff_id: "handoff-0955"
+  regular_handoff_yaml_path: "research_control/handoffs/handoff-0955.yaml"
+  regular_handoff_markdown_path: "research_control/handoffs/handoff-0955.md"
+normal_research_continuation:
+  regular_handoff_created: true
+  continue_research_next_action: "Run one governed checkpoint for AJ-RT-20260803-014-001. Then consume PIS-RT-20260803-014-001 through exactly one bounded improve-project-system internal-versus-external review-label contract repair; re-audit P16-T04 after repair and do not execute P16-T05 first."
+  sidecar_does_not_replace_regular_handoff: true
+project_boundary:
+  recommended_skill: "improve-project-system"
+  project_system_only: true
+  physics_claim_promotion_authorized: false
+  canonical_science_source_edits_authorized: false
+  generated_derivative_hand_edits_authorized: false
+  requires_human_gate: false
+signal_summary:
+  signal_ids:
+    - "PIS-RT-20260803-014-001"
+  signal_count: 1
+  highest_severity: "high"
+  selected_signal_id: "PIS-RT-20260803-014-001"
+  routing_basis: "highest_severity_then_created_at_then_signal_id"
+issues:
+  - issue_id: "IPH-ISSUE-001"
+    signal_id: "PIS-RT-20260803-014-001"
+    signal_type: "control_contract_drift"
+    severity: "high"
+    title: "Control Contract Drift: PIS-RT-20260803-014-001"
+    description: "Align the current internal skeptical-review contract and current display projections with the review-independence taxonomy while preserving historical IDs and artifacts; add fail-closed regression coverage before a fresh P16-T04 re-audit."
+    evidence:
+      - evidence_path: "research_control/tasks/RT-20260803-014/artifacts/v21_p16_t04_severity_repair_matrix.yaml"
+        evidence_summary: "Align the current internal skeptical-review contract and current display projections with the review-independence taxonomy while preserving historical IDs and artifacts; add fail-closed regression coverage before a fresh P16-T04 re-audit."
+    impact: "Project-system follow-up is required under the improvement workflow."
+    recommended_skill: "improve-project-system"
+    recommended_role: "project-control-maintainer"
+    recommended_next_step: "Run /improve-project-system to process this signal as one bounded project-system AgentJob."
+solution_plan:
+  present: false
+  status: "absent"
+  plan_owner_role: "project-system-director"
+  implementation_role: ""
+  objective: ""
+  allowed_write_paths_hint:
+    - ""
+  required_validators:
+    - "collect_project_improvement_signals --validate-emitted"
+    - "validate_documentation_impact"
+    - "validate_research_control"
+  plan_steps:
+    - step_id: "PLAN-001"
+      action: "Project-System Director converts the issue inventory into one bounded AgentJob when no executable plan is present."
+      expected_output: "One AgentJob with allowlisted paths and validators."
+      stop_condition: "No role fits without authority expansion."
+resolution:
+  resolved_by_job_id: ""
+  resolution_evidence_path: ""
+  resolved_at: ""
+notes: ""
