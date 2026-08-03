@@ -1,0 +1,115 @@
+schema_id: "v21_p16_t02_post_repair_authority_path_reaudit_v1"
+task_id: "RT-20260803-012"
+job_id: "AJ-RT-20260803-012-001"
+plan_task_id: "P16-T02"
+created_at: "2026-08-03T17:50:17Z"
+review_context: "same_context_internal_ai_reaudit_not_external_review_or_independent_replication"
+typed_graph_model:
+  vertices: "identity-indexed scientific claims, protected decisions, and control assertions"
+  edge_types:
+    D: "derivational implication supported by mathematical or physical evidence"
+    H: "exact-scope protected human authorization or decision"
+    C: "control, provenance, registry, validation, or checkpoint relation"
+  coercion_rule: "No implicit C-to-D, C-to-H, H-to-D, or D-to-H coercion is permitted."
+  control_report_definition: "ReportValid(s,o) iff the reporter inspects exact object o and the observed status, path, and source hash all belong to o."
+  post_repair_projection_result: "Replacing the invalid cross-object Gate A C edge with a valid same-object C edge changes only the C projection. With no explicit coercion rule it creates no D edge, no H edge, and no scientific path closure."
+gates:
+  - gate_id: "Gate_A"
+    decision_status: "SELECT_CONTINUUM_FIRST_WITH_NARROW_PREMETRIC_BOUNDARY"
+    authorization_id: "approval-20260724-001"
+    authorization_path: "research_control/tasks/RT-20260724-004/artifacts/human_authorization_p4_t05_continuum_first_v1.yaml"
+    authorization_sha256: "3421808c71a64279ef5ba62df5376ab4999d2c67978d4f7ceabbeb0ae9b2bde6"
+    decision_path: "research_control/tasks/RT-20260724-004/artifacts/ontology_regime_gate_chair_decision_v1.tex"
+    decision_sha256: "20ea795bbe93333b489e4f13601fd6bb1623f318b7847f9d2d24402c7490c934"
+    dependency_effect: "architecture selection only; no metric, dynamics, matter, Einstein equation, or benchmark edge is discharged"
+  - gate_id: "Gate_B"
+    decision_status: "NOT_READY_EIGHT_OF_EIGHT_CRITERIA_UNMET"
+    decision_path: "research_control/tasks/RT-20260727-004/artifacts/p6_t08_gate_b_separating_certificate_v1.yaml"
+    decision_sha256: "f3080ed6a6ba1d6847a3b7ed43c7a11ad7f7dae4deccd25486913ea9547f221b"
+    review_path: "research_control/tasks/RT-20260727-004/artifacts/p6_t08_gate_b_external_red_team_review_v1.yaml"
+    review_sha256: "77779a4db679492b47ebd0652cd67c2a3f17e69aa7ee06917ab8089bcdabafae"
+    dependency_effect: "lawful unscoped effective geometry remains absent"
+  - gate_id: "Gate_C"
+    decision_status: "ADOPTED_AS_CANONICAL_PHYSICAL_MATTER_BY_EXPLICIT_HUMAN_POSTULATE"
+    derivational_status: "open_derivational_gap_after_constitutive_adoption"
+    authorization_id: "approval-20260729-001"
+    authorization_path: "research_control/tasks/RT-20260729-001/artifacts/human_authorization_p7_t08_physical_matter_adoption_v1.yaml"
+    authorization_sha256: "9da90540e60a9bc1b624689a4b694460c77ac5d99306319dcedefb291be9a6f2"
+    decision_path: "research_control/tasks/RT-20260729-001/artifacts/p7_t08_gate_c_decision_v1.tex"
+    decision_sha256: "85fbf32fb9b02aeae556149cbc5c6b51bd6fedf278a3bc401545c93e29fc4827"
+    status_path: "research_control/tasks/RT-20260729-001/artifacts/p7_t08_scientific_status_v1.yaml"
+    status_sha256: "5f84e9c0495514632e7b6c25a809e4e6c1044c69f159ce0e1e38900fc5229d73"
+    dependency_effect: "exact source-side postulate adoption only; no derived geometry-mediated target coupling"
+  - gate_id: "Gate_D"
+    decision_status: "NOT_READY_EINSTEIN_SECTOR_DERIVATION_REQUIREMENTS_UNMET"
+    authorization_id: "approval-20260729-002"
+    authorization_path: "research_control/tasks/RT-20260729-011/artifacts/human_authorization_p8_t07_gate_d_review_v1.yaml"
+    authorization_sha256: "c1de70d4431e432a9f9b0f092cf4469b4f514ba6154a35976c62cfe44636d56d"
+    decision_path: "research_control/tasks/RT-20260729-011/artifacts/p8_t07_gate_d_decision_v1.tex"
+    decision_sha256: "035ea88a612d861a00d0703ec2bd1094e01194c113d7ff2588e3a4ad8bf47d63"
+    dependency_effect: "Einstein equations and the GR field sector remain unestablished"
+  - gate_id: "Gate_E"
+    decision_status: "NOT_READY_BENCHMARK_AND_COMPLETED_DERIVATION_REQUIREMENTS_UNMET"
+    authorization_id: "approval-20260731-001"
+    authorization_path: "research_control/tasks/RT-20260731-004/artifacts/human_authorization_p9_t09_gate_e_review_v1.yaml"
+    authorization_sha256: "b248937b11448f7b1cd0fcb1a751ac643844107c9489a29b4e702779ab492646"
+    decision_path: "research_control/tasks/RT-20260731-004/artifacts/p9_t09_gate_e_decision_v1.tex"
+    decision_sha256: "7f28103e40664f0a004af0134f3216932136f8efb160f0c7c59039efa5225b0b"
+    dependency_effect: "benchmark promotion and completed-derivation language remain denied"
+dependency_edges:
+  - {edge_id: "A_to_B", edge_type: "D", status: "unsatisfied"}
+  - {edge_id: "B_to_C_geom", edge_type: "D", status: "unsatisfied_gate_b_not_ready"}
+  - {edge_id: "GateC_authority_to_C_src", edge_type: "H", status: "satisfied_exact_scope"}
+  - {edge_id: "C_src_to_C_geom", edge_type: "D", status: "undefined_without_required_cut_set"}
+  - {edge_id: "C_geom_to_D", edge_type: "D", status: "unsatisfied"}
+  - {edge_id: "D_to_E", edge_type: "D", status: "unsatisfied_gate_d_not_ready"}
+  - {edge_id: "GateE_authority_to_negative_E_review", edge_type: "H", status: "satisfied_for_negative_review_only"}
+  - {edge_id: "GateA_registry_exact_object_parity", edge_type: "C", status: "satisfied_exact_object_after_repair"}
+current_status_alignment:
+  gate_a: "PASS_EXACT_OBJECT_CONTROL_ALIGNMENT"
+  gate_a_object_id: "TEX-V21-P4-T05-ONTOLOGY-REGIME-GATE-CHAIR-DECISION-V1"
+  gate_a_object_path: "research_control/tasks/RT-20260724-004/artifacts/ontology_regime_gate_chair_decision_v1.tex"
+  gate_a_object_sha256: "20ea795bbe93333b489e4f13601fd6bb1623f318b7847f9d2d24402c7490c934"
+  gate_a_registry_validation_status: "PASS"
+  gate_a_registry_last_validated_at: "2026-08-03T16:47:10Z"
+  repair_validator_path: "research_control/tasks/RT-20260803-011/artifacts/validate_p16_t02_gate_a_registry_validator_identity_parity.py"
+  repair_validator_sha256: "b75f243a293c652b99a0d7c9e1972511b26b83e746232e497bd456b974dd8190"
+  repair_validation_sha256: "e94b5dcb5b54754a25a2f48ffb040c0e4040783b8aff19634be8610187f116d9"
+  repair_receipt_sha256: "0fd2cf483b7db6cc4e220d57365faba2eec9d8388fd0fbc2d52925887138adaf"
+  repair_completion_sha256: "20b08b8f3988b71828467475d8437ae6ff7801b064c6eb816143b5c595214031"
+  sealed_rt005_validator_sha256: "9ba655982225774beef866ec43f0a8fd116182f8987088afab78736fec5ac5e7"
+  sealed_rt005_report_sha256: "330c35edb94d153553f33e449bfa94b2a3e88c435cb6ce99e95f7a89d56fc401"
+  gate_c: "PASS_TYPED_ALIGNMENT"
+  gate_e: "PASS_TYPED_ALIGNMENT"
+  result: "ReportValid(PASS,Gate_A_decision_row)=true_as_control_only"
+forbidden_shortcut_attempt:
+  attempted: true
+  expression: "exact_GateA_registry_PASS + GateA + scoped_metric_record + GateC + finite_GateD_algebra + protocol_PASS => completed_GR_derivation"
+  result: "rejected_type_error"
+  failed_boundaries:
+    - "exact-object registry PASS is a C edge and cannot coerce to D or H"
+    - "Gate A selects research architecture but supplies no physical spacetime metric or source dynamics"
+    - "a scoped source-extension metric record is not an unscoped lawful g_eff"
+    - "Gate C source-side postulate adoption is not geometry-mediated target coupling"
+    - "source stress-energy input is not a derived target T_mu_nu"
+    - "finite quotient algebra is not Einstein's tensor equation"
+    - "protocol, validator, or checkpoint PASS is not benchmark recovery"
+mathematical_result:
+  statement: "Let pi_D, pi_H, and pi_C be type projections of the authority graph. The Gate A repair replaces e_C(o_foundations,o_gateA) with e_C(o_gateA,o_gateA). Therefore pi_C changes from invalid to valid exact-object alignment, while pi_D and pi_H are invariant. Since the Gate B, C_geom, D, and E positive paths each contain an unsatisfied D edge, their transitive closure remains open."
+  proof_status: "task_local_typed_graph_result"
+  scientific_effect: "none"
+  global_no_go_claimed: false
+source_snapshots:
+  plan: {path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md", sha256: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"}
+  backlog: {path: "research_control/design/v21_recommendation_backlog.yaml", sha256: "849a4e8dfe848e80bc0c8236252b924e636e5c95ac1a090478a69f7f5377559f"}
+  source_handoff: {path: "research_control/handoffs/handoff-0952.yaml", sha256: "2406ac89d2f52c4e21e57831f59bd90ac0053bb94d12055960dd50ae72bb8e58"}
+  p16_t01_completion: {path: "research_control/tasks/RT-20260803-002/jobs/completions/AJC-AJ-RT-20260803-002-001.yaml", sha256: "4e59a0ae6d0740677ef0b4331f753138f32b76b27981435f5933aaab1a78fd66"}
+authority_limits:
+  canonical_science_modified: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  benchmark_promotion_authorized: false
+  external_review_completed: false
+  independent_replication_completed: false

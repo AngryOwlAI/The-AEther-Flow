@@ -1,0 +1,253 @@
+validation_status: "PASS_PRECHECKPOINT"
+handoff_id: "handoff-0953"
+handoff_number: 953
+handoff_kind: "regular_research"
+task_id: "RT-20260803-012"
+decision_id: "DDR-20260803-012"
+job_id: "AJ-RT-20260803-012-001"
+completion_id: "AJC-AJ-RT-20260803-012-001"
+completion_path: "research_control/tasks/RT-20260803-012/jobs/completions/AJC-AJ-RT-20260803-012-001.yaml"
+completion_sha256: "32490ac7e5a57138f6de7a884825532ee17389d36634dbb9fc7f7cc076c0bf8d"
+status: "ready_after_checkpoint"
+created_at: "2026-08-03T18:07:55Z"
+parent_handoff_id: "handoff-0952"
+plan_task_id: "P16-T02"
+source_role_id: "external-red-team-reviewer"
+source_role_version: "0.1.0"
+source_execution_role_ref: "external-red-team-reviewer@0.1.0--RT-20260803-012"
+summary: "Generation 241 completes the fresh post-repair P16-T02 Gate A-E audit. All eleven protected hashes match, exact Gate A control identity now aligns, the repair induces no D or H closure, the forbidden stronger composition remains invalid, and there are zero blocking findings. P16-T02 closes without any science or Distance-to-GR promotion."
+next_action: "Run the single governed checkpoint for AJ-RT-20260803-012-001, then execute P16-T03 source-hash lineage freshness and reproducibility work through one bounded improve-project-system packet. Do not execute P16-T04 first."
+current_claim_boundary: "CB-V21-P16-T02-POST-REPAIR-GATE-AUTHORITY-REAUDIT-001"
+loop_risk_route: "p16-t03-final-evidence-provenance-audit-after-p16-t02-alignment"
+
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260803-012"
+  latest_research_handoff_id: "handoff-0953"
+  latest_research_next_action: "Run the single governed checkpoint for AJ-RT-20260803-012-001, then execute P16-T03 source-hash lineage freshness and reproducibility work through one bounded improve-project-system packet. Do not execute P16-T04 first."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+  project_improvement_sidecar_required: false
+  research_handoff_remains_authoritative: true
+
+claim_boundary:
+  allowed_next_scope: "One governed checkpoint followed by one bounded P16-T03 provenance freshness lineage and reproducibility audit; P16-T04 remains unexecuted."
+  completed_task: "RT-20260803-012"
+  completed_completion_path: "research_control/tasks/RT-20260803-012/jobs/completions/AJC-AJ-RT-20260803-012-001.yaml"
+  completed_completion_sha256: "32490ac7e5a57138f6de7a884825532ee17389d36634dbb9fc7f7cc076c0bf8d"
+  source_handoff_id: "handoff-0952"
+  source_handoff_path: "research_control/handoffs/handoff-0952.yaml"
+  source_handoff_sha256: "2406ac89d2f52c4e21e57831f59bd90ac0053bb94d12055960dd50ae72bb8e58"
+  result_status: "PASS_P16_T02_GATE_CHAIN_CURRENT_ALIGNMENT"
+  exact_object_id: "TEX-V21-P4-T05-ONTOLOGY-REGIME-GATE-CHAIR-DECISION-V1"
+  exact_object_path: "research_control/tasks/RT-20260724-004/artifacts/ontology_regime_gate_chair_decision_v1.tex"
+  exact_object_sha256: "20ea795bbe93333b489e4f13601fd6bb1623f318b7847f9d2d24402c7490c934"
+  exact_object_registry_validation_status: "PASS"
+  protected_source_hash_match_count: 11
+  canonical_gate_decision_conflict_count: 0
+  improperly_discharged_scientific_edge_count: 0
+  blocking_scientific_finding_count: 0
+  blocking_project_system_finding_count: 0
+  repaired_c_edge_induces_d_closure: false
+  repaired_c_edge_induces_h_closure: false
+  forbidden_shortcut_rejected: true
+  audit_path: "research_control/tasks/RT-20260803-012/artifacts/v21_p16_t02_post_repair_gate_consistency_reaudit.md"
+  audit_sha256: "a8afd3cecf381198e018f9b9c0f03891f95435bc5edea4fe1a7f74d392735ae5"
+  validator_path: "research_control/tasks/RT-20260803-012/artifacts/validate_p16_t02_post_repair_gate_consistency_reaudit.py"
+  validator_sha256: "7bbde2f98e1508d60f8c17bcaa318075ac4aa94dc365a1a399b19071dae050b2"
+  validation_path: "research_control/tasks/RT-20260803-012/artifacts/v21_p16_t02_post_repair_reaudit_validation.json"
+  validation_sha256: "dd39a9b5e3ce3b8b24f2d9aad8d879ead1b68e2597a70b6ed6065f63dcbaf56f"
+  p16_t02_executed: true
+  p16_t02_qualifying_finalized: true
+  p16_t03_executed: false
+  p16_t04_executed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  external_action_authorized: false
+  blocked_claims:
+    - "registry validator or checkpoint PASS as a scientific Gate verdict"
+    - "Gate A architecture as physical spacetime metric or source dynamics"
+    - "Gate C source-side adoption as target coupling derivation"
+    - "finite Gate D algebra as Einstein equations"
+    - "P16-T02 audit closure as benchmark or completed-derivation promotion"
+    - "same-context internal AI review as external review or independent replication"
+
+plan_result:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  phase_id: "P16"
+  plan_task_id: "P16-T02"
+  title: "Audit Gate A through Gate E dependency and authority consistency"
+  result_status: "PASS_P16_T02_GATE_CHAIN_CURRENT_ALIGNMENT"
+  work_item_status: "completed"
+  recommendation_ids:
+    - "V21-R31"
+    - "V21-R33"
+    - "V21-R63"
+    - "V21-R67"
+    - "V21-R68"
+    - "V21-R72"
+  project_improvement_signal_count: 0
+  p16_t03_dependency_ready_but_not_executed: true
+  p16_t04_blocked_by:
+    - "P16-T03"
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+distance_to_gr:
+  changed: false
+  effect: "no_distance_delta_post_repair_control_alignment_and_typed_noninduction_only"
+  burden_id: "benchmark_promotion"
+  milestone: "benchmark_promotion"
+  ledger_row_updated: false
+  ledger_update_rationale: "P16-T02 supplies no metric coupling field-equation recovery or benchmark evidence."
+  downstream_unlocked:
+    - "P16-T03 provenance freshness lineage and reproducibility audit"
+  downstream_still_blocked:
+    - "P16-T04 until P16-T03 completion"
+    - "benchmark promotion"
+    - "completed derivation"
+    - "publication"
+    - "external action"
+
+required_next_packet:
+  task_type: "project_system_v21_p16_t03_source_hash_lineage_freshness_reproducibility_audit"
+  plan_task_id: "P16-T03"
+  work_item_id: "P16-T03"
+  objective: "Verify all final source paths hashes candidate identities event chains generated-view freshness proof objects benchmark receipts publication packages and reproducibility boundaries."
+  dependency_ready_after_checkpoint: true
+  dependency_ready_now: false
+  exact_human_authorization_required: false
+  executed: false
+
+selected_next_route:
+  route_id: "p16_t03_final_evidence_provenance_freshness_reproducibility_audit_v1"
+  route_label: "ordinary-research-packet"
+  role_family: "process-integrity-auditor@0.1.0"
+  worker_skill: "improve-project-system"
+  selected_next_packet_type: "final_evidence_provenance_audit"
+  task_type: "project_system_v21_p16_t03_source_hash_lineage_freshness_reproducibility_audit"
+  plan_task_id: "P16-T03"
+  work_item_id: "P16-T03"
+  target_derivation_milestone: "benchmark_promotion"
+  milestone_burden: "Ensure the final evidence graph is reproducible and non-stale."
+  strategy_id: "audit_p16_t03_final_evidence_provenance_freshness_reproducibility_v1"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  physics_promotion_authorized: false
+  executed: false
+  next_action: "Checkpoint P16-T02 once, then route one bounded improve-project-system P16-T03 audit."
+  source_handoff: "research_control/handoffs/handoff-0953.yaml"
+
+ordinary_route_guard:
+  schema_id: "ordinary_route_guard_evaluation_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  evaluation_id: "ORE-HANDOFF-0953"
+  ordinary_handoff_id: "handoff-0953"
+  threshold: 3
+  consecutive_project_system_tasks_before_selection: 0
+  ready_science_plan_task_ids: []
+  ready_project_system_plan_task_ids:
+    - "P16-T03"
+  selected_plan_task_id: "P16-T03"
+  selected_route_class: "project_system"
+  selected_worker_skill: "improve-project-system"
+  outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  exception_receipt:
+    active: false
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+active_state_boundary:
+  active_task_id: "RT-20260803-012"
+  active_job_id: "AJ-RT-20260803-012-001"
+  current_status: "p16_t02_completed_post_repair_gate_chain_current_alignment_pending_checkpoint"
+  checkpoint_required: true
+  checkpoint_completed: false
+  checkpoint_invocation_count: 0
+  selected_next_plan_task_id: "P16-T03"
+  selected_next_worker_skill: "improve-project-system"
+  selected_next_role_family: "process-integrity-auditor@0.1.0"
+  selected_next_route_label: "ordinary-research-packet"
+  selected_next_strategy_id: "audit_p16_t03_final_evidence_provenance_freshness_reproducibility_v1"
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 241 validated claimed and consumed its immutable continue-research route exactly once."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Two child perspectives and parent fusion agree with zero blocking conflicts."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Task-local signal documentation claim-language research-control affected-profile and generated-freshness checks pass."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "Exactly one governed checkpoint remains."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Frontier task-index graph registry compact-frontier and wiki derivatives are fresh."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory synchronization and validate-only checks pass."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed claim-bearing surfaces pass with no errors; repository-wide warnings are historical."
+
+authorization_layers:
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  submission_authorized: false
+  public_release_authorized: false
+  reviewer_contact_authorized: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "none; post-repair internal consistency audit only"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  source_law_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+project_improvement_signals: []
+open_project_improvement_signal_ids: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required_no_project_improvement_signal_emitted"
+  sidecar_supersedes_research_handoff: false
+  notes: "P16-T03 is an explicit included plan task selected by the ordinary research handoff, not a repair signal from P16-T02."
+handoff_authority_boundary: "This handoff proves only current Gate-chain control alignment and typed noninduction. It changes no canonical science Gate verdict Distance-to-GR burden benchmark publication external-review outward-action or completed-derivation authority."
+next_plan_task_id: "P16-T03"
+next_plan_task_execution_ready_after_checkpoint: true
+next_plan_task_execution_ready_now: false
+next_plan_task_executed: false
+notes: "Checkpoint locally without push. Then run P16-T03 through improve-project-system; P16-T04 remains unexecuted."

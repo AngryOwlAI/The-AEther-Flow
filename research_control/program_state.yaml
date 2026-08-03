@@ -1,11 +1,97 @@
 mode: "director_led_research_control"
-active_task_id: "RT-20260803-011"
-latest_handoff_id: "handoff-0952"
-current_status: "gate_a_exact_object_registry_validator_identity_parity_repaired_ready_for_checkpoint"
-claim_boundary_summary: "RT-20260803-011 resolves the exact P16-T02 Gate A control defect: the exact decision object ID, path, immutable source hash, and operational PASS row agree, sealed RT-20260803-005 evidence remains exact, and six regressions reject cross-object substitution. One checkpoint and a fresh P16-T02 re-audit remain; no science Gate or Distance-to-GR status changes."
-next_plan_task_id: "P16-T02"
-next_worker_skill: "continue-research"
-next_recommended_action: "Run the single governed checkpoint for AJ-RT-20260803-011-001, then execute one fresh P16-T02 canonical Gate A-E consistency re-audit through continue-research before P16-T03 or P16-T04."
+active_task_id: "RT-20260803-012"
+latest_handoff_id: "handoff-0953"
+current_status: "p16_t02_completed_post_repair_gate_chain_current_alignment_ready_for_checkpoint"
+claim_boundary_summary: "RT-20260803-012 closes P16-T02 after a fresh post-repair audit: all eleven protected Gate hashes match, exact Gate A control identity aligns, the repaired C edge induces neither D nor H closure, the forbidden stronger composition remains invalid, and zero blocking findings remain. No science Gate or Distance-to-GR status changes."
+next_plan_task_id: "P16-T03"
+next_worker_skill: "improve-project-system"
+next_recommended_action: "Run the single governed checkpoint for AJ-RT-20260803-012-001, then execute P16-T03 source-hash lineage freshness and reproducibility work through one bounded improve-project-system packet. Do not execute P16-T04 first."
+
+p16_t02_post_repair_gate_authority_consistency_reaudit:
+  task_id: "RT-20260803-012"
+  parent_task_id: "RT-20260803-011"
+  parent_handoff_id: "handoff-0952"
+  plan_task_id: "P16-T02"
+  route_work_item_id: "P16-T02"
+  next_plan_task_id: "P16-T03"
+  claim_boundary_id: "CB-V21-P16-T02-POST-REPAIR-GATE-AUTHORITY-REAUDIT-001"
+  status: "PASS_P16_T02_GATE_CHAIN_CURRENT_ALIGNMENT_READY_FOR_CHECKPOINT"
+  work_item_status: "completed"
+  route_label: "fresh-canonical-alignment-reaudit"
+  selected_role_family: "external-red-team-reviewer@0.1.0"
+  selected_worker_skill: "continue-research"
+  selected_strategy_id: "continue_in_scope_generation_241"
+  target_derivation_milestone: "benchmark_promotion"
+  milestone_burden: "Prevent downstream status laundering at plan closure."
+  source_head: "efcaec7df6b355681eea25ddb5b625de77e665ba"
+  immutable_route_sha256: "04564dacad49fb4c0056ee81a75df0615afa0e0fba96874802233867c2483fc1"
+  route_blocker_fingerprint: "883dd4cc1ae92eee375b84b023bdeb5503d360b25b5d64a407686dcf2066fff3"
+  agent_job_id: "AJ-RT-20260803-012-001"
+  decision_id: "DDR-20260803-012"
+  execution_role_ref: "external-red-team-reviewer@0.1.0--RT-20260803-012"
+  dependency_task_id: "RT-20260803-011"
+  dependency_completion_path: "research_control/tasks/RT-20260803-011/jobs/completions/AJC-AJ-RT-20260803-011-001.yaml"
+  dependency_completion_sha256: "20b08b8f3988b71828467475d8437ae6ff7801b064c6eb816143b5c595214031"
+  source_handoff_id: "handoff-0952"
+  source_handoff_path: "research_control/handoffs/handoff-0952.yaml"
+  source_handoff_sha256: "2406ac89d2f52c4e21e57831f59bd90ac0053bb94d12055960dd50ae72bb8e58"
+  completion_path: "research_control/tasks/RT-20260803-012/jobs/completions/AJC-AJ-RT-20260803-012-001.yaml"
+  completion_sha256: "32490ac7e5a57138f6de7a884825532ee17389d36634dbb9fc7f7cc076c0bf8d"
+  handoff_id: "handoff-0953"
+  handoff_path: "research_control/handoffs/handoff-0953.yaml"
+  handoff_sha256: "fdfb989b8f154f0b3a7773b8104a3e8f745e24b291b7c3a2093506fb85108ccd"
+  gate_count: 5
+  protected_source_hash_match_count: 11
+  canonical_gate_decision_conflict_count: 0
+  improperly_discharged_scientific_edge_count: 0
+  blocking_scientific_finding_count: 0
+  blocking_project_system_finding_count: 0
+  nonblocking_finding_count: 1
+  gate_a_current_status_alignment: "PASS_EXACT_OBJECT_CONTROL_ALIGNMENT"
+  gate_c_current_status_alignment: "PASS_TYPED_ALIGNMENT"
+  gate_e_current_status_alignment: "PASS_TYPED_ALIGNMENT"
+  repaired_c_edge_induces_d_closure: false
+  repaired_c_edge_induces_h_closure: false
+  forbidden_shortcut_rejected: true
+  audit_path: "research_control/tasks/RT-20260803-012/artifacts/v21_p16_t02_post_repair_gate_consistency_reaudit.md"
+  audit_sha256: "a8afd3cecf381198e018f9b9c0f03891f95435bc5edea4fe1a7f74d392735ae5"
+  authority_map_path: "research_control/tasks/RT-20260803-012/artifacts/v21_p16_t02_post_repair_authority_path_reaudit.yaml"
+  authority_map_sha256: "62550baa2e7ff31f4280d39b0a273b64e878e42d34d67986fe281758f92f89c0"
+  findings_path: "research_control/tasks/RT-20260803-012/artifacts/v21_p16_t02_post_repair_reaudit_findings.yaml"
+  findings_sha256: "15f5c3b8fea0bf1f4f4634c674524d77ecf53a0bda1842314aa2d1210aac385e"
+  validator_path: "research_control/tasks/RT-20260803-012/artifacts/validate_p16_t02_post_repair_gate_consistency_reaudit.py"
+  validator_sha256: "7bbde2f98e1508d60f8c17bcaa318075ac4aa94dc365a1a399b19071dae050b2"
+  validation_path: "research_control/tasks/RT-20260803-012/artifacts/v21_p16_t02_post_repair_reaudit_validation.json"
+  validation_sha256: "dd39a9b5e3ce3b8b24f2d9aad8d879ead1b68e2597a70b6ed6065f63dcbaf56f"
+  child_phys_math_sha256: "ac443423a5ee86b19a7cc34e6d28de346bd93e80b529c56a1ac9809f9b300250"
+  child_phys_phil_sha256: "235dbbf40cd87e4b19fcc569ea480c5d76ec105d21b3fb845a6dcdad3053dae1"
+  parent_conflict_review_sha256: "c37ba2addbf04a77f1c705b1de8c17f0c2f06bc1fb053c37d18f6e51ef55fa39"
+  parent_fusion_notes_sha256: "64ea64a4b3961aa6fc59aba3a2317277e87a31f10a43ac4ff6898e64f0dbcc5a"
+  mathematical_payload_id: "V21-P16-T02-POST-REPAIR-C-PROJECTION-NONINDUCTION-V1"
+  p16_t02_reaudit_executed: true
+  p16_t02_qualifying_finalized: true
+  p16_t03_executed: false
+  p16_t04_executed: false
+  canonical_science_modified: false
+  scientific_claims_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  checkpoint_invocation_count: 0
+  checkpoint_committed: false
+  selected_next_work_item: "P16-T03"
+  selected_next_worker_skill: "improve-project-system"
+  selected_next_role_family: "process-integrity-auditor@0.1.0"
+  selected_next_packet_type: "final_evidence_provenance_audit"
+  selected_next_route_label: "ordinary-research-packet"
+  selected_next_strategy_id: "audit_p16_t03_final_evidence_provenance_freshness_reproducibility_v1"
+  selected_next_target_derivation_milestone: "benchmark_promotion"
+  selected_next_milestone_burden: "Ensure the final evidence graph is reproducible and non-stale."
+  selected_next_requires_human_gate: false
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
 
 p16_t02_gate_a_registry_validator_identity_parity_repair:
   task_id: "RT-20260803-011"

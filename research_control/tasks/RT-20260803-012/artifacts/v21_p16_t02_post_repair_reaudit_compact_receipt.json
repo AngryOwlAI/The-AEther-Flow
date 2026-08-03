@@ -1,0 +1,41 @@
+{
+  "schema_id": "v21_p16_t02_post_repair_reaudit_compact_receipt_v1",
+  "task_id": "RT-20260803-012",
+  "job_id": "AJ-RT-20260803-012-001",
+  "plan_task_id": "P16-T02",
+  "result_status": "PASS_P16_T02_GATE_CHAIN_CURRENT_ALIGNMENT",
+  "gate_count": 5,
+  "protected_source_hash_match_count": 11,
+  "canonical_gate_decision_conflict_count": 0,
+  "improperly_discharged_scientific_edge_count": 0,
+  "blocking_scientific_finding_count": 0,
+  "blocking_project_system_finding_count": 0,
+  "nonblocking_finding_count": 1,
+  "forbidden_shortcut_attempt_count": 1,
+  "forbidden_shortcut_rejected_count": 1,
+  "gate_a_exact_object_control_alignment": "PASS_CONTROL_ONLY",
+  "repaired_c_edge_induces_d_closure": false,
+  "repaired_c_edge_induces_h_closure": false,
+  "scientific_status_changed": false,
+  "distance_to_gr_delta_changed": false,
+  "physics_promotion_authorized": false,
+  "proof_authority": false,
+  "claim_boundary_id": "CB-V21-P16-T02-POST-REPAIR-GATE-AUTHORITY-REAUDIT-001",
+  "artifact_hashes": {
+    "child_phys_math": "ac443423a5ee86b19a7cc34e6d28de346bd93e80b529c56a1ac9809f9b300250",
+    "child_phys_phil": "235dbbf40cd87e4b19fcc569ea480c5d76ec105d21b3fb845a6dcdad3053dae1",
+    "parent_conflict_review": "c37ba2addbf04a77f1c705b1de8c17f0c2f06bc1fb053c37d18f6e51ef55fa39",
+    "parent_fusion_notes": "64ea64a4b3961aa6fc59aba3a2317277e87a31f10a43ac4ff6898e64f0dbcc5a",
+    "authority_path_reaudit": "62550baa2e7ff31f4280d39b0a273b64e878e42d34d67986fe281758f92f89c0",
+    "fused_audit": "a8afd3cecf381198e018f9b9c0f03891f95435bc5edea4fe1a7f74d392735ae5",
+    "findings": "15f5c3b8fea0bf1f4f4634c674524d77ecf53a0bda1842314aa2d1210aac385e",
+    "validator": "7bbde2f98e1508d60f8c17bcaa318075ac4aa94dc365a1a399b19071dae050b2"
+  },
+  "next_route": {
+    "plan_task_id": "P16-T03",
+    "worker_skill": "improve-project-system",
+    "role_family": "process-integrity-auditor@0.1.0",
+    "route_label": "ordinary-research-packet"
+  },
+  "authority_note": "This receipt records control alignment and typed noninduction only. It is not a Gate verdict, scientific proof, external review, benchmark promotion, or completed derivation."
+}

@@ -1,0 +1,382 @@
+schema_id: "v21_p16_t02_child_phys_phil_post_repair_reaudit_v1"
+task_id: "RT-20260803-012"
+job_id: "AJ-RT-20260803-012-001"
+execution_unit_id: "child_phys_phil"
+perspective: "physicist_philosopher"
+status: "completed"
+source_head: "efcaec7df6b355681eea25ddb5b625de77e665ba"
+
+review_context:
+  classification: "same_context_internal_ai_read_only"
+  reviewer_role: "external-red-team-reviewer@0.1.0 task overlay"
+  external_human_review_completed: false
+  human_expert_review_completed: false
+  independent_replication_completed: false
+  workflow_success_disregarded_as_science: true
+  validator_success_disregarded_as_science: true
+  registry_pass_disregarded_as_science: true
+  checkpoint_pass_disregarded_as_science: true
+  review_scope: "Post-repair Gate A-E identity, scope, dependency, authority, status-layer, and overread consistency only."
+
+object_under_attack:
+  object_id: "V21-P16-T02-POST-REPAIR-GATE-CHAIN-ALIGNMENT-REAUDIT-V1"
+  target_artifact_paths:
+    - "research_control/tasks/RT-20260803-010/artifacts/v21_p16_t02_authority_path_reaudit.yaml"
+    - "research_control/tasks/RT-20260803-011/artifacts/p16_t02_gate_a_registry_validator_identity_parity_receipt.json"
+    - "registries/TEX_SOURCE_REGISTRY.csv"
+    - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  target_claims:
+    - "The exact Gate A object repair restores current control identity parity."
+    - "The repair changes no derivational or protected-authority edge."
+    - "The canonical Gate A-E chain remains conservatively aligned without science promotion."
+    - "No lawful composition of repaired control evidence and existing Gate decisions yields completed GR derivation."
+
+inspected_source_manifest:
+  governance_and_scope:
+    - path: "SOUL.md"
+      sha256: "4991c1d84009bff7f39750a72ab648dafe491f5783b5cf927cd0c7d6bb8daa4b"
+    - path: "AGENTS.md"
+      sha256: "3a987a7ae1fb0bc4f91dbcbe0e1432eeecacf7febc1256e8498860016f4baf29"
+    - path: "research_control/AGENTS.md"
+      sha256: "c93e14bb2cc6e7bbc5c299085f8843ca84d714cdaef99b2b78a46715b5b310ae"
+    - path: ".codex/skills/continue-research/SKILL.md"
+      sha256: "6f92a296d2d0edf065bfbf9c278dcbfb527f48297a41c9c7f7d79125e99063ea"
+    - path: ".agents/roles/physics/external-red-team-reviewer.v0.1.0.md"
+      sha256: "b49de89caa4cb4f98f959e0ba7168a8223797679e5d0ab3c4700c14a5de9ace7"
+    - path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      sha256: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+    - path: "research_control/tasks/RT-20260803-012/00_TASK.yaml"
+      sha256: "60c87fa23aa94e9bfc3986475823adf6592d727791e7351fcdf8484827d30e23"
+    - path: "research_control/tasks/RT-20260803-012/DDR-20260803-012.md"
+      sha256: "3d04024adf593e320c9dc70823491d160f650e58552eba2b7dfbeeb685cdc656"
+    - path: "research_control/tasks/RT-20260803-012/jobs/AJ-RT-20260803-012-001.yaml"
+      sha256: "505da8e96d375e42557e7b0bc279e485de1aa06120c44a642cd8c532eaa3f0ca"
+    - path: "research_control/tasks/RT-20260803-012/roles/external-red-team-reviewer@0.1.0--RT-20260803-012.yaml"
+      sha256: "927d0fa3bcef5c4ec17bdfb2bf056d5f97952cb16fcfd7fac5b0f98a6f03113e"
+    - path: "research_control/tasks/RT-20260803-010/artifacts/v21_p16_t02_authority_path_reaudit.yaml"
+      sha256: "6d19ca1f4dbfdcf5445a456018c29b5a29ba2d45517a4be652c72adde0ace990"
+  gate_a:
+    - path: "research_control/tasks/RT-20260724-004/artifacts/human_authorization_p4_t05_continuum_first_v1.yaml"
+      sha256: "3421808c71a64279ef5ba62df5376ab4999d2c67978d4f7ceabbeb0ae9b2bde6"
+    - path: "research_control/tasks/RT-20260724-004/artifacts/ontology_regime_gate_chair_decision_v1.tex"
+      sha256: "20ea795bbe93333b489e4f13601fd6bb1623f318b7847f9d2d24402c7490c934"
+  gate_b:
+    - path: "research_control/tasks/RT-20260727-004/artifacts/p6_t08_gate_b_separating_certificate_v1.yaml"
+      sha256: "f3080ed6a6ba1d6847a3b7ed43c7a11ad7f7dae4deccd25486913ea9547f221b"
+    - path: "research_control/tasks/RT-20260727-004/artifacts/p6_t08_gate_b_external_red_team_review_v1.yaml"
+      sha256: "77779a4db679492b47ebd0652cd67c2a3f17e69aa7ee06917ab8089bcdabafae"
+  gate_c:
+    - path: "research_control/tasks/RT-20260729-001/artifacts/human_authorization_p7_t08_physical_matter_adoption_v1.yaml"
+      sha256: "9da90540e60a9bc1b624689a4b694460c77ac5d99306319dcedefb291be9a6f2"
+    - path: "research_control/tasks/RT-20260729-001/artifacts/p7_t08_gate_c_decision_v1.tex"
+      sha256: "85fbf32fb9b02aeae556149cbc5c6b51bd6fedf278a3bc401545c93e29fc4827"
+    - path: "research_control/tasks/RT-20260729-001/artifacts/p7_t08_scientific_status_v1.yaml"
+      sha256: "5f84e9c0495514632e7b6c25a809e4e6c1044c69f159ce0e1e38900fc5229d73"
+  gate_d:
+    - path: "research_control/tasks/RT-20260729-011/artifacts/human_authorization_p8_t07_gate_d_review_v1.yaml"
+      sha256: "c1de70d4431e432a9f9b0f092cf4469b4f514ba6154a35976c62cfe44636d56d"
+    - path: "research_control/tasks/RT-20260729-011/artifacts/p8_t07_gate_d_decision_v1.tex"
+      sha256: "035ea88a612d861a00d0703ec2bd1094e01194c113d7ff2588e3a4ad8bf47d63"
+    - path: "research_control/tasks/RT-20260729-011/artifacts/p8_t07_scientific_status_v1.yaml"
+      sha256: "af2f291a03511116c51db1a78bcd62caedd3c1e1b161acc749b8bb371093ac2e"
+  gate_e_and_review_standing:
+    - path: "research_control/tasks/RT-20260731-004/artifacts/human_authorization_p9_t09_gate_e_review_v1.yaml"
+      sha256: "b248937b11448f7b1cd0fcb1a751ac643844107c9489a29b4e702779ab492646"
+    - path: "research_control/tasks/RT-20260731-004/artifacts/p9_t09_gate_e_decision_v1.tex"
+      sha256: "7f28103e40664f0a004af0134f3216932136f8efb160f0c7c59039efa5225b0b"
+    - path: "research_control/tasks/RT-20260731-004/artifacts/p9_t09_scientific_status_v1.yaml"
+      sha256: "915145f649066d6092df7ef16d3fc01c411d6c939b35acd28287b2d4e6470556"
+    - path: "research_control/tasks/RT-20260731-001/artifacts/p9_t08_independent_replication_status_v1.yaml"
+      sha256: "c3089818ea1ad682a7f246c3ec102d6eff34f80285265644de72c9fc9fff1dfc"
+  repair_and_current_status:
+    - path: "research_control/tasks/RT-20260803-011/jobs/completions/AJC-AJ-RT-20260803-011-001.yaml"
+      sha256: "20b08b8f3988b71828467475d8437ae6ff7801b064c6eb816143b5c595214031"
+    - path: "research_control/tasks/RT-20260803-011/artifacts/p16_t02_gate_a_registry_validator_identity_parity_receipt.json"
+      sha256: "0fd2cf483b7db6cc4e220d57365faba2eec9d8388fd0fbc2d52925887138adaf"
+    - path: "research_control/tasks/RT-20260803-011/artifacts/p16_t02_gate_a_registry_validator_identity_parity_validation.json"
+      sha256: "e94b5dcb5b54754a25a2f48ffb040c0e4040783b8aff19634be8610187f116d9"
+    - path: "research_control/handoffs/handoff-0952.yaml"
+      sha256: "2406ac89d2f52c4e21e57831f59bd90ac0053bb94d12055960dd50ae72bb8e58"
+    - path: "research_control/program_state.yaml"
+      sha256: "62491a3a90865b1e97475984409db495ded070ccc4ec1c1eacfba037598d1bbe"
+    - path: "research_control/current_frontier.md"
+      sha256: "cbe56fdbee7cf473cf7e3da708369aeee86403a54b01982e2fc1cf3f1915e6d6"
+    - path: "registries/TEX_SOURCE_REGISTRY.csv"
+      sha256: "0d92e00dc3102e33d2935e3e4bc0137c4539693c720b4efc13f505299df3f2e7"
+    - path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+      sha256: "8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642"
+    - path: "research_control/design/distance_to_gr_status_aliases.yaml"
+      sha256: "cad6dcc8142f74f280d0c408c5ff290f6750dba4bc23e8adb9a03c94dd83c927"
+    - path: "output/compact_current_frontier_v16.json"
+      sha256: "6b9e2c7776b88115b0495bf94946915cfe56942a0e4e09c2ee5ae94d03412a93"
+
+category_separation:
+  ontology:
+    current_status: "unchanged_by_repair_and_reaudit"
+    exact_boundary: "Gate A selects continuum-first only as the mainline research architecture and retains a smooth four-dimensional source manifold as explicit primitive debt. It neither identifies that source arena with physical spacetime nor supplies a source law, metric, dynamics, matter sector, or empirical truth claim."
+    forbidden_overread: "Architecture selection, primitive source structure, or a registry PASS is not a derivation or empirical confirmation of the ontology."
+  source_model:
+    current_status: "scoped_constitutive_source_package_adopted_derivational_gap_open"
+    exact_boundary: "Gate C adopts the exact unchanged finite P7SourceMatterPackage_v1 and its expressly listed source-side physical meanings by protected human constitutive postulate within declared domains. The postulate supplies project-level interpretive status, not deeper derivation, uniqueness, source-law adoption, or target-spacetime semantics."
+    forbidden_overread: "The words physical matter, detector, universal coupling, action, stress-energy input, and conservation remain source-side and scope-qualified; they do not entail their target-GR counterparts."
+  target_or_effective_geometry:
+    current_status: "unscoped_g_eff_and_source_to_target_bridge_absent"
+    exact_boundary: "Gate B remains NOT_READY with all eight criteria unmet. ScopedMetricStructureRecord_src is only scoped source-extension data; no lawful unscoped effective metric, target metric, source-to-target geometry map, calibrated rods or clocks, or universal coupling through a derived g_eff is established."
+    forbidden_overread: "A source manifold, one-ray geometry record, exact-GR target reference, or familiar metric notation cannot substitute for a source-derived effective geometry."
+  empirical_evidence:
+    current_status: "untested_or_inconclusive_no_qualifying_pass"
+    exact_boundary: "Gate C records empirical status untested. Gate E records six executed benchmark cases, six INCONCLUSIVE outcomes, zero passes, no calibrated model-to-world bridge, and no qualifying independent replication."
+    forbidden_overread: "Operational protocols, validators, finite calculations, target-import firewalls, or an adopted exact-GR reference benchmark are not empirical confirmation of a substrate derivation."
+  protected_human_authority:
+    current_status: "exact_scopes_consumed_and_unchanged"
+    exact_boundary: "Gate A authority selects a research architecture; Gate C authority adopts the exact source-side package by postulate; Gate D and Gate E authorities permit evidence-bound reviews that returned negative NOT_READY verdicts. Authority supplies the right to decide within scope, not missing scientific premises or positive truth values."
+    forbidden_overread: "No protected decision composes into a broader Gate Chair, benchmark, completed-derivation, publication, or outward-action authority."
+  control_and_provenance:
+    current_status: "gate_a_exact_object_identity_parity_repaired"
+    exact_boundary: "The exact Gate A TeX row now uniquely matches object ID, path, immutable source hash, and operational PASS status; the foundations object is explicitly non-substitutable. This repairs one C-type report-validity edge and changes no D-type derivation or H-type protected authority edge."
+    forbidden_overread: "Registry, validator, task, role, handoff, renderer, checkpoint, or hash agreement is operational evidence only."
+  external_review_standing:
+    current_status: "same_context_internal_ai_only"
+    exact_boundary: "The Gate B review, the present child review, and prior role-separated checks use the same project and AI execution context. The role label external-red-team-reviewer describes an adversarial method, not external human or institutional provenance."
+    forbidden_overread: "Role separation and same-context recomputation do not satisfy external human review, blind review, or independent replication."
+
+canonical_gate_chain:
+  edge_types:
+    D: "source-derived mathematical or physical prerequisite"
+    H: "exact protected human authority with fixed scope"
+    C: "control, validation, identity, or provenance evidence"
+  no_coercion_rule: "No C edge or H edge becomes a D edge, and no C edge creates H authority, absent an explicit authorized rule of the required type."
+  Gate_A:
+    decision_status: "SELECT_CONTINUUM_FIRST_WITH_NARROW_PREMETRIC_BOUNDARY"
+    h_edge_status: "satisfied_exact_architecture_scope"
+    c_edge_status: "satisfied_exact_same_object_registry_identity_after_RT_20260803_011"
+    d_edge_effect: "none; effective geometry and source dynamics remain underived"
+    exact_meaning: "The research architecture is selected; physical spacetime, a metric, source dynamics, and downstream GR structure are not."
+  Gate_B:
+    decision_status: "NOT_READY_EIGHT_OF_EIGHT_CRITERIA_UNMET"
+    d_edge_status: "unsatisfied"
+    exact_meaning: "The unchanged P6 package does not establish a unique, source-natural, robust, operationally calibrated unscoped geometry."
+  Gate_C:
+    decision_status: "ADOPTED_AS_CANONICAL_PHYSICAL_MATTER_BY_EXPLICIT_HUMAN_POSTULATE"
+    h_edge_to_C_src: "satisfied_exact_source_side_scope"
+    C_src: "AdoptedSourceMatterByPostulate(P7SourceMatterPackage_v1)"
+    C_geom: "DerivedUniversalTargetCoupling(P7SourceMatterPackage_v1,g_eff)"
+    d_edge_C_src_to_C_geom: "absent"
+    derivational_status: "open_derivational_gap_after_constitutive_adoption"
+    missing_cut_set:
+      - "lawful unscoped Gate B effective geometry"
+      - "source-derived source-to-target geometry and coupling bridge"
+      - "target stress-energy and universality theorem of the required type"
+    exact_meaning: "Source adoption is real within its exact protected scope, but target coupling through a derived g_eff is not derived or adopted."
+  Gate_D:
+    decision_status: "NOT_READY_EINSTEIN_SECTOR_DERIVATION_REQUIREMENTS_UNMET"
+    h_edge_status: "satisfied_for_one_evidence_bound_negative_review_only"
+    d_edge_status: "unsatisfied"
+    scientific_status: "blocked_adoption_open_continuation"
+    exact_meaning: "Finite quotient algebra is credible only in proposal scope; no physical carrier, target tensor source, covariance, dynamics, controlled corrections, or Einstein-leading theorem is derived."
+  Gate_E:
+    decision_status: "NOT_READY_BENCHMARK_AND_COMPLETED_DERIVATION_REQUIREMENTS_UNMET"
+    h_edge_status: "satisfied_for_one_evidence_bound_negative_review_only"
+    d_edge_status: "unsatisfied_from_Gate_D_and_benchmark_burdens"
+    scientific_status: "protected_negative_disposition_blocked_adoption_open_continuation"
+    exact_meaning: "Benchmark promotion is denied, exact and controlled approximate GR recovery are not established, and completed first-principles derivation wording remains prohibited for the fixed evidence."
+
+gate_a_exact_object_repair_assessment:
+  exact_object_id: "TEX-V21-P4-T05-ONTOLOGY-REGIME-GATE-CHAIR-DECISION-V1"
+  exact_object_path: "research_control/tasks/RT-20260724-004/artifacts/ontology_regime_gate_chair_decision_v1.tex"
+  exact_object_sha256: "20ea795bbe93333b489e4f13601fd6bb1623f318b7847f9d2d24402c7490c934"
+  exact_registry_row_count: 1
+  live_registry_validation_status: "PASS"
+  live_registry_last_validated_at: "2026-08-03T16:47:10Z"
+  repair_result: "PASS_EXACT_OBJECT_REGISTRY_VALIDATOR_IDENTITY_PARITY"
+  cross_object_substitution_rejected: true
+  non_substitutable_object_id: "TEX-ONTOLOGY-AETHER-FLOW-FOUNDATIONS"
+  report_validity_statement: "ReportValid(PASS,Gate_A_decision_row) is supported as a control predicate because the reporter now binds the exact object ID, path, row, and source hash."
+  graph_effect: "Only the C projection is repaired. The Gate A decision content and H scope are unchanged, and the set of satisfied D edges is unchanged."
+  scientific_effect: "none"
+  empirical_effect: "none"
+  protected_authority_effect: "none"
+  distance_to_gr_effect: "none"
+  pass_is_not_science: "The PASS establishes operational identity parity only. It does not establish the truth, fundamentality, uniqueness, empirical adequacy, or derivational completeness of continuum-first architecture."
+
+current_status_surface_alignment:
+  exact_gate_a_control_identity:
+    registry: "PASS for exact ID/path/hash"
+    repair_completion: "PASS_EXACT_OBJECT_REGISTRY_VALIDATOR_IDENTITY_PARITY"
+    repair_receipt: "same exact ID/path/hash and cross-object substitution rejected"
+    program_state_and_handoff: "repair recorded with no science or Distance-to-GR delta and fresh re-audit required"
+    result: "aligned_control_only"
+  gate_c_source_target_separation:
+    ledger_control_status: "gate_review_completed"
+    ledger_mathematical_status: "parameterized_finite_local_witness_precondition"
+    ledger_physical_status: "not_target_matter_coupling_source_side_postulate_adoption_only"
+    ledger_promotion_status: "scoped_source_postulate_adoption_only"
+    frontier_and_alias_result: "The current frontier, status aliases, and compact frontier preserve the exact finite source-side postulate and keep g_eff-dependent target coupling open."
+    result: "aligned"
+  gate_d_negative_status:
+    protected_gate_review_status: "completed_with_NOT_READY_verdict"
+    positive_derivation_control_status: "not_started"
+    ledger_mathematical_status: "dynamics_action_or_variation_missing"
+    ledger_physical_status: "no_field_equation_derivation"
+    ledger_promotion_status: "none"
+    result: "aligned_with_protected_NOT_READY_verdict"
+  gate_e_negative_status:
+    protected_gate_review_status: "completed_with_NOT_READY_verdict"
+    benchmark_control_status: "blocked"
+    benchmark_mathematical_status: "upstream_burdens_missing"
+    benchmark_physical_status: "no_exact_gr_benchmark_promotion"
+    benchmark_promotion_status: "none"
+    gate_chair_control_status: "gate_review_completed"
+    gate_chair_mathematical_status: "protected_negative_verdict_recorded_positive_closure_missing"
+    gate_chair_physical_status: "no_positive_benchmark_closure"
+    gate_chair_promotion_status: "human_gate_required"
+    result: "aligned_with_protected_NOT_READY_verdict_and_future_positive_human_gate"
+  parent_corrected_task_local_provenance_issue:
+    issue: "The initially authored AgentJob source_snapshot carried a mistyped current_frontier hash."
+    resolution: "The parent corrected the AgentJob field before this child completed; the final inspected AgentJob value, live file, HEAD file, and Markdown registry all use cbe56fdbee7cf473cf7e3da708369aeee86403a54b01982e2fc1cf3f1915e6d6."
+    current_status: "resolved"
+    scientific_effect: "none"
+    blocking_effect: "none_after_correction"
+
+forbidden_stronger_composition_check:
+  attempted: true
+  expression: "exact_Gate_A_registry_PASS[C] + Gate_A_architecture_selection[H] + Gate_C_source_postulate[H] + finite_Gate_D_algebra[D_scoped] + Gate_D_NOT_READY[H] + Gate_E_NOT_READY[H] + workflow_PASS[C] => completed_first_principles_GR_derivation[D_and_H_positive]"
+  result: "rejected_type_scope_and_polarity_error"
+  reasons:
+    - "The repaired Gate A PASS is a valid C edge for the exact object, but C has no coercion into D or H."
+    - "Gate A selects only a research architecture and explicitly supplies no metric, source dynamics, or physical spacetime identity."
+    - "Gate C supplies an exact H edge to C_src, not a D edge from C_src to g_eff-dependent C_geom."
+    - "The finite Gate D equation has proposal-scope algebraic meaning and lacks the physical carrier, target tensor, covariance, dynamical, and correction hypotheses required for Einstein equations."
+    - "Gate D and Gate E authorities terminate in negative NOT_READY verdicts; their polarity cannot be inverted into positive closure."
+    - "Six inconclusive benchmark cases and zero qualifying independent replications cannot compose into a benchmark pass."
+    - "Workflow, validator, renderer, registry, role, handoff, or checkpoint PASS is control evidence and not a physical premise."
+  minimal_countermodel: "Hold every D and H edge fixed while changing the Gate A registry report from invalid cross-object attribution to valid same-object attribution. Control report validity changes from false to true, while Gate B remains not ready, C_src-to-C_geom remains absent, Gate D remains not ready, and Gate E remains not ready. Therefore the stronger implication is false."
+  global_no_go_claimed: false
+
+findings:
+  - finding_id: "P16T02-PP-POST-REPAIR-C-EDGE-001"
+    severity: "informational"
+    classification: "exact_object_control_identity_repaired"
+    result: "PASS_CONTROL_ONLY"
+    evidence: "The exact Gate A ID, path, source hash, unique row, and operational PASS agree; the foundations PASS cannot substitute."
+    science_effect: "none"
+  - finding_id: "P16T02-PP-GATE-C-SEPARATION-001"
+    severity: "high_overread_guard"
+    classification: "source_adoption_target_coupling_type_separation_preserved"
+    result: "PASS_GUARD_PRESERVED"
+    evidence: "Gate C authorizes the exact source-side package by postulate while the ledger, aliases, current frontier, compact frontier, and decision leave g_eff-dependent target coupling open."
+    science_effect: "no_new_derivation"
+  - finding_id: "P16T02-PP-GATE-D-E-NEGATIVE-001"
+    severity: "high_overread_guard"
+    classification: "protected_negative_status_preserved"
+    result: "PASS_GUARD_PRESERVED"
+    evidence: "Gate D and Gate E retain their exact NOT_READY decisions, local freezes, open-continuation language, and prohibition on Einstein, recovery, benchmark, and completed-derivation claims."
+    science_effect: "no_distance_delta"
+  - finding_id: "P16T02-PP-FORBIDDEN-COMPOSITION-001"
+    severity: "critical_overread_guard"
+    classification: "type_scope_and_polarity_error"
+    result: "STRONGER_COMPOSITION_REJECTED"
+    evidence: "Repairing one C edge cannot discharge any unsatisfied D edge or invert negative H verdicts."
+    science_effect: "none"
+  - finding_id: "P16T02-PP-REVIEW-STANDING-001"
+    severity: "high_overread_guard"
+    classification: "same_context_internal_review_not_external"
+    result: "LIMITATION_PRESERVED"
+    evidence: "The tracked review-context and replication-status records explicitly deny external human review and qualifying independent replication."
+    science_effect: "independent_review_burden_remains_open"
+  - finding_id: "P16T02-PP-SNAPSHOT-HASH-001"
+    severity: "informational_resolved"
+    classification: "task_local_source_snapshot_authoring_typo"
+    result: "RESOLVED_BEFORE_CHILD_COMPLETION"
+    evidence: "The final active AgentJob, live and HEAD current_frontier.md, and Markdown registry now carry the same cbe56fdbee7c... hash."
+    science_effect: "none"
+
+overread_risks:
+  - risk_id: "OVERREAD-CONTROL-PASS-AS-SCIENCE"
+    severity: "critical"
+    forbidden_reading: "Exact-object PASS proves continuum-first, validates Gate A physics, or advances Distance-to-GR."
+    guard: "PASS is limited to control identity parity."
+  - risk_id: "OVERREAD-SOURCE-ARENA-AS-TARGET-SPACETIME"
+    severity: "high"
+    forbidden_reading: "The primitive smooth source manifold is physical spacetime or already carries target metric structure."
+    guard: "Gate A marks the source arena as primitive debt and explicitly withholds target identity and metric structure."
+  - risk_id: "OVERREAD-SOURCE-MATTER-AS-TARGET-COUPLING"
+    severity: "critical"
+    forbidden_reading: "Gate C source-side postulate derives or adopts target matter coupling, target detector semantics, target T_mu_nu, or coupling through a derived g_eff."
+    guard: "Keep C_src and C_geom as distinct typed nodes and retain the open cut set."
+  - risk_id: "OVERREAD-FINITE-ALGEBRA-AS-EINSTEIN-EQUATIONS"
+    severity: "critical"
+    forbidden_reading: "The finite quotient Euler equation is an Einstein equation or establishes an Einstein-leading regime."
+    guard: "Gate D remains NOT_READY with physical carrier, target, covariance, dynamics, and correction burdens open."
+  - risk_id: "OVERREAD-NEGATIVE-VERDICT-AS-GLOBAL-NO-GO"
+    severity: "high"
+    forbidden_reading: "Gate B, D, or E proves the broader program impossible or forbids future source extension."
+    guard: "Each disposition is local to a fixed package and records blocked adoption with open continuation."
+  - risk_id: "OVERREAD-ROLE-NAME-AS-EXTERNAL-REVIEW"
+    severity: "high"
+    forbidden_reading: "An external-red-team role name establishes external human review, blindness, or independent replication."
+    guard: "Report same-context internal AI review explicitly and preserve the independent-review burden."
+  - risk_id: "OVERREAD-REFERENCE-BENCHMARK-AS-DERIVED-RECOVERY"
+    severity: "critical"
+    forbidden_reading: "The adopted exact-GR effective reference benchmark is recovered from the substrate or promotes the candidate."
+    guard: "Gate E preserves reference-benchmark scope while denying exact or controlled recovery and completed derivation."
+  - risk_id: "OVERREAD-P16-T02-CLOSURE-AS-PHYSICS-PROMOTION"
+    severity: "critical"
+    forbidden_reading: "Closing this audit closes a scientific Gate, proves the theory, or authorizes P16-T04 conclusions in advance."
+    guard: "Any P16-T02 closure is control-level confirmation of a conservative typed chain only; P16-T03 and P16-T04 remain separate tasks."
+
+result:
+  result_status: "PASS_CHILD_POST_REPAIR_TYPED_ALIGNMENT_NO_PROMOTION"
+  canonical_gate_count: 5
+  canonical_gate_decision_conflict_count: 0
+  improperly_discharged_scientific_edge_count: 0
+  blocking_scientific_finding_count: 0
+  blocking_control_finding_count: 0
+  resolved_task_local_provenance_finding_count: 1
+  gate_a_exact_object_control_alignment: "PASS_CONTROL_ONLY"
+  gate_c_source_target_type_separation: "PASS_PRESERVED"
+  gate_d_negative_status: "PASS_PRESERVED_NOT_READY"
+  gate_e_negative_status: "PASS_PRESERVED_NOT_READY"
+  forbidden_stronger_composition: "REJECTED"
+  same_context_internal_review_limitation: "PRESERVED"
+  external_human_review_status: "NOT_COMPLETED"
+  independent_replication_status: "NOT_ACQUIRED"
+  scientific_status_changed: false
+  physical_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+  child_conclusion: "The exact-object repair restores correct control predication for Gate A and nothing stronger. The canonical chain remains internally conservative: Gate C source adoption is not target coupling, Gate D and Gate E remain negative, empirical and independent-review burdens remain open, and no control or protected edge can replace a missing derivational edge."
+
+recommended_disposition: "ELIGIBLE_FOR_PARENT_FUSION_AS_NON_PROMOTIONAL_P16_T02_ALIGNMENT_PASS_IF_THE_SIBLING_AND_PARENT_FIND_NO_BLOCKING_CONFLICT"
+
+limitations:
+  - "This is same-context internal AI analysis over the same repository, model family, prompt context, and tracked evidence. It is not external human review, blind review, or independent replication."
+  - "The child performed read-only source inspection and live SHA-256 comparison. It did not independently reproduce the underlying mathematical constructions, benchmark cases, empirical tests, or physical model-to-world mapping."
+  - "No task-local validator, test suite, checkpoint, registry mutation, state mutation, script edit, or canonical-source edit was executed by this child."
+  - "The child may recommend parent fusion but cannot itself close P16-T02, execute P16-T03 or P16-T04, issue a Gate Chair verdict, or promote any claim."
+
+authority_limits:
+  canonical_science_modified: false
+  canonical_ontology_modified: false
+  source_law_adopted: false
+  protected_gate_status_changed: false
+  protected_human_authority_created: false
+  scientific_status_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  metric_or_geff_adopted_or_expanded: false
+  target_matter_coupling_derived_or_adopted: false
+  target_stress_energy_semantics_imported: false
+  target_detector_semantics_imported: false
+  target_matter_action_imported: false
+  einstein_equations_derived: false
+  exact_or_approximate_gr_recovery_established: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+  external_review_completed: false
+  independent_replication_completed: false
+  publication_or_push_authorized: false
+  outward_action_authorized: false

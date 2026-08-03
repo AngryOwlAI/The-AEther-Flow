@@ -1,0 +1,50 @@
+schema_id: "parent_child_conflict_review_v1"
+task_id: "RT-20260803-012"
+job_id: "AJ-RT-20260803-012-001"
+review_id: "P16-T02-POST-REPAIR-GATE-CONSISTENCY-CONFLICT-001"
+status: "resolved"
+resolution_rounds: 0
+child_outputs:
+  - execution_unit_id: "child_phys_math"
+    path: "research_control/tasks/RT-20260803-012/artifacts/child_phys_math_p16_t02_post_repair_reaudit.yaml"
+    sha256: "ac443423a5ee86b19a7cc34e6d28de346bd93e80b529c56a1ac9809f9b300250"
+    result: "PASS_POST_REPAIR_EXACT_OBJECT_C_ALIGNMENT_NO_D_OR_H_CLOSURE"
+  - execution_unit_id: "child_phys_phil"
+    path: "research_control/tasks/RT-20260803-012/artifacts/child_phys_phil_p16_t02_post_repair_reaudit.yaml"
+    sha256: "235dbbf40cd87e4b19fcc569ea480c5d76ec105d21b3fb845a6dcdad3053dae1"
+    result: "PASS_CHILD_POST_REPAIR_TYPED_ALIGNMENT_NO_PROMOTION"
+shared_consensus:
+  - "All eleven protected Gate A-E source hashes match."
+  - "The exact Gate A ID path hash and operational PASS row now agree at the control layer."
+  - "Replacing the invalid cross-object C edge with a valid same-object C edge induces neither D nor H closure."
+  - "Gate C source-side postulate adoption remains distinct from target geometry-mediated coupling."
+  - "Gate D and Gate E remain NOT_READY in their exact protected scopes."
+  - "The forbidden completed-GR composition remains ill-typed after repair."
+  - "There are zero blocking scientific findings and zero blocking project-system findings."
+  - "Same-context internal AI review is not external human review or independent replication."
+differences_reviewed:
+  - difference_id: "result_label_granularity"
+    child_a: "PASS_POST_REPAIR_EXACT_OBJECT_C_ALIGNMENT_NO_D_OR_H_CLOSURE"
+    child_b: "PASS_CHILD_POST_REPAIR_TYPED_ALIGNMENT_NO_PROMOTION"
+    resolution: "Normalize the fused task result to PASS_P16_T02_GATE_CHAIN_CURRENT_ALIGNMENT and retain both narrower child labels."
+  - difference_id: "resolved_task_local_snapshot_typo_emphasis"
+    child_a: "not material to the typed proof"
+    child_b: "records parent-corrected frontier snapshot typo as informational and resolved"
+    resolution: "Preserve it only as resolved task-local provenance; it is not a canonical control or science finding and does not block closure."
+unique_contributions_preserved:
+  child_phys_math:
+    - "formal pi_D pi_H pi_C projection-invariance argument"
+    - "post-repair forbidden-composition attack with independent type failures"
+  child_phys_phil:
+    - "ontology source-model target-geometry evidence authority and review-standing separation"
+    - "explicit overread-risk catalog and same-context provenance boundary"
+unresolved_conflicts: []
+blocking_conflict_count: 0
+fusion_decision: "Close P16-T02 as a non-promotional current-alignment PASS; route separate P16-T03 provenance and reproducibility work next."
+authority_limits:
+  scientific_status_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  external_review_completed: false
+  independent_replication_completed: false

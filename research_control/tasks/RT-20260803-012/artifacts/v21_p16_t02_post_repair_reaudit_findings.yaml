@@ -1,0 +1,62 @@
+schema_id: "v21_p16_t02_post_repair_reaudit_findings_v1"
+task_id: "RT-20260803-012"
+job_id: "AJ-RT-20260803-012-001"
+plan_task_id: "P16-T02"
+result_status: "PASS_P16_T02_GATE_CHAIN_CURRENT_ALIGNMENT"
+finding_counts:
+  canonical_gate_decision_conflicts: 0
+  improperly_discharged_scientific_edges: 0
+  blocking_scientific_findings: 0
+  blocking_project_system_findings: 0
+  nonblocking_findings: 1
+findings:
+  - finding_id: "P16T02-SAME-CONTEXT-INTERNAL-REVIEW-LIMIT-001"
+    status: "preserved_nonblocking_authority_limit"
+    severity: "informational"
+    classification: "review_provenance_boundary"
+    statement: "The two child perspectives and parent fusion are same-context internal AI critique; they are not external human review or independent replication."
+    why_nonblocking: "P16-T02 requires an internal authority-consistency audit and explicit provenance. It does not authorize an external-review standing claim."
+    scientific_effect: "none"
+    canonical_science_change_required: false
+    scientific_status_change_required: false
+resolved_precondition:
+  finding_id: "P16T02-GATE-A-REGISTRY-VALIDATOR-IDENTITY-001"
+  source_task_id: "RT-20260803-010"
+  repair_task_id: "RT-20260803-011"
+  resolution_status: "resolved_exact_object_control_alignment"
+  exact_object_id: "TEX-V21-P4-T05-ONTOLOGY-REGIME-GATE-CHAIR-DECISION-V1"
+  exact_object_path: "research_control/tasks/RT-20260724-004/artifacts/ontology_regime_gate_chair_decision_v1.tex"
+  exact_object_sha256: "20ea795bbe93333b489e4f13601fd6bb1623f318b7847f9d2d24402c7490c934"
+  exact_object_registry_validation_status: "PASS"
+  repair_completion_sha256: "20b08b8f3988b71828467475d8437ae6ff7801b064c6eb816143b5c595214031"
+  scientific_effect: "none_control_identity_only"
+typed_result:
+  repaired_edge_type: "C"
+  derivational_projection_changed: false
+  protected_authority_projection_changed: false
+  control_projection_changed: true
+  remaining_unsatisfied_derivational_edges:
+    - "A_to_B"
+    - "B_to_C_geom"
+    - "C_src_to_C_geom"
+    - "C_geom_to_D"
+    - "D_to_E"
+  forbidden_shortcut_rejected: true
+  global_no_go_claimed: false
+project_improvement_signals: []
+next_route:
+  plan_task_id: "P16-T03"
+  worker_skill: "improve-project-system"
+  role_family: "process-integrity-auditor@0.1.0"
+  route_label: "ordinary-research-packet"
+  target_derivation_milestone: "benchmark_promotion"
+  milestone_burden: "Ensure the final evidence graph is reproducible and non-stale."
+  physics_promotion_authorized: false
+authority_limits:
+  scientific_status_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  benchmark_promotion_authorized: false
+  external_review_completed: false
+  independent_replication_completed: false
