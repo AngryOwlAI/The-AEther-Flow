@@ -613,6 +613,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-V21-P16-T04-POST-REPAIR-PARENT-FUSION-FINAL-REAUDIT-V1` `research_control/tasks/RT-20260804-001/artifacts/parent_fusion_notes_p16_t04_post_repair_reaudit.md`
 - `MD-V21-P16-T05-FINAL-SCIENTIFIC-AND-RESEARCH-SYSTEM-STATUS-SYNTHESIS` `research_control/tasks/RT-20260804-003/artifacts/v21_p16_t05_final_status_synthesis.md`
 - `MD-V21-P16-T05-PARENT-FUSION-FINAL-STATUS-SYNTHESIS-V1` `research_control/tasks/RT-20260804-003/artifacts/parent_fusion_notes_p16_t05_final_status_synthesis.md`
+- `MD-V21-P16-T06-GOAL-COMPLETION-CANDIDATE` `research_control/tasks/RT-20260804-004/artifacts/v21_p16_t06_goal_completion_candidate.md`
+- `MD-V21-P16-T06-PARENT-FUSION-GOAL-RELAY-CLOSURE-V1` `research_control/tasks/RT-20260804-004/artifacts/parent_fusion_notes_p16_t06_goal_relay_closure.md`
 - `MD-V21-P4-T01-SOURCE-ASSUMPTION-AMBIGUITIES` `research_control/tasks/RT-20260720-030/artifacts/source_assumption_unresolved_ambiguities_v1.md`
 - `MD-V21-P4-T04-ONTOLOGY-REGIME-COMPARISON-REPORT-V1` `research_control/tasks/RT-20260721-002/artifacts/ontology_regime_comparison_report_v1.md`
 - `MD-V21-P4-T05-ONTOLOGY-REGIME-GATE-CHAIR-PARENT-FUSION-V1` `research_control/tasks/RT-20260724-004/artifacts/parent_fusion_notes_ontology_regime_gate_chair_review.md`
@@ -1752,6 +1754,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-V21-P16-T04-POST-REPAIR-PARENT-FUSION-FINAL-REAUDIT-V1` `wiki/markdown/md-v21-p16-t04-post-repair-parent-fusion-final-reaudit-v1.md`
 - `WIKI-MD-V21-P16-T05-FINAL-SCIENTIFIC-AND-RESEARCH-SYSTEM-STATUS-SYNTHESIS` `wiki/markdown/md-v21-p16-t05-final-scientific-and-research-system-status-synthesis.md`
 - `WIKI-MD-V21-P16-T05-PARENT-FUSION-FINAL-STATUS-SYNTHESIS-V1` `wiki/markdown/md-v21-p16-t05-parent-fusion-final-status-synthesis-v1.md`
+- `WIKI-MD-V21-P16-T06-GOAL-COMPLETION-CANDIDATE` `wiki/markdown/md-v21-p16-t06-goal-completion-candidate.md`
+- `WIKI-MD-V21-P16-T06-PARENT-FUSION-GOAL-RELAY-CLOSURE-V1` `wiki/markdown/md-v21-p16-t06-parent-fusion-goal-relay-closure-v1.md`
 - `WIKI-MD-V21-P4-T01-SOURCE-ASSUMPTION-AMBIGUITIES` `wiki/markdown/md-v21-p4-t01-source-assumption-ambiguities.md`
 - `WIKI-MD-V21-P4-T04-ONTOLOGY-REGIME-COMPARISON-REPORT-V1` `wiki/markdown/md-v21-p4-t04-ontology-regime-comparison-report-v1.md`
 - `WIKI-MD-V21-P4-T05-ONTOLOGY-REGIME-GATE-CHAIR-PARENT-FUSION-V1` `wiki/markdown/md-v21-p4-t05-ontology-regime-gate-chair-parent-fusion-v1.md`

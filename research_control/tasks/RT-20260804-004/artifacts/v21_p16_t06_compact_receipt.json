@@ -1,0 +1,47 @@
+{
+  "schema_id": "v21_p16_t06_compact_receipt_v1",
+  "status": "PASS",
+  "result_status": "PASS_TERMINAL_COMPLETE_RECOMMENDED_AFTER_CHECKPOINT",
+  "source_hashes": {
+    "plan": "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087",
+    "backlog": "849a4e8dfe848e80bc0c8236252b924e636e5c95ac1a090478a69f7f5377559f",
+    "coverage_matrix": "aa91bfa96257d3d1e9d6ae6bf68d025b4c3e7ed451c8d4f11012cc69cdbc9e95",
+    "gate_consistency_audit": "a8afd3cecf381198e018f9b9c0f03891f95435bc5edea4fe1a7f74d392735ae5",
+    "provenance_audit": "72316ad40fdab3b5d88c88602c1832de99045616421eba244143e436ec87ca59",
+    "claim_audit": "20bbc6082b3b55fad3a7401dc4e4b84295c2baa376f9a2f3ea03286f17da0d30",
+    "status_synthesis": "28db911bef81a26609b0993c8ff1545bda1ca1eb2ba6f9db8b1ece7a814ee4eb",
+    "source_handoff_0964": "f0c4e66441c3af955febfe9ee31f430ed02291dbca0aca896e5e3218185fde2c",
+    "job_contract": "0ad170ca0ad8c653ac91ea955bbb1d881f26ba78ee26309ebaca67a33b3f5718",
+    "child_phys_math": "f7a4f803dc7f7c60b1f72794edcd8a63c805303ca9e1e3129bc7eaa4a816dfe0",
+    "child_phys_phil": "c2e2b31391e58f44e4be707e5bd4f49c0ade82e910fdc46e4379caa957515f51",
+    "parent_conflict_review": "f0b214bba195657cd8287feeb0c2c0217b700d7d7e8247599a77f594a82cca0c",
+    "parent_fusion_notes": "04e470f3f9655c8bfd59905fb18794954436b6489a969d4c048fb3fcc45f7325",
+    "goal_completion_candidate": "074431cb608c30a5677c2dfe296b4927b321c9b892b19230a506c60e2cdb55a4"
+  },
+  "finding_counts": {
+    "work_item_count": 122,
+    "precheckpoint_finalized_work_item_count": 121,
+    "conditional_completion_candidate_count": 1,
+    "projected_postcheckpoint_finalized_work_item_count": 122,
+    "pre_p16_work_item_count": 116,
+    "p16_work_item_count": 6,
+    "recommendation_count": 72,
+    "missing_recommendation_count": 0,
+    "gate_count": 5,
+    "unresolved_parent_conflict_count": 0,
+    "unresolved_required_human_action_count": 0
+  },
+  "recommended_outer_decision": "terminal_complete",
+  "validator_ids": [
+    "v21_p16_t06_fixed_source_hashes",
+    "v21_p16_t06_122_item_totality",
+    "v21_p16_t06_72_recommendation_parity",
+    "v21_p16_t06_gate_status_preservation",
+    "v21_p16_t06_parent_child_synthesis",
+    "v21_p16_t06_terminal_semantics",
+    "v21_p16_t06_authority_nonpromotion"
+  ],
+  "claim_boundary_summary": "Before checkpoint, 121 V21 work items are canonically final and P16-T06 is the unique conditional completion candidate; a qualifying governed checkpoint permits the outer launcher to verify totality across all 122. All 72 recommendations have qualifying direct evidence. This does not complete a first-principles GR derivation or create Gate, benchmark, review, publication, push, proof, or physics-promotion authority.",
+  "physics_promotion_authorized": false,
+  "proof_authority": false
+}

@@ -1,0 +1,240 @@
+validation_status: "PASS_PRECHECKPOINT"
+handoff_id: "handoff-0965"
+handoff_number: 965
+handoff_kind: "research_completion"
+task_id: "RT-20260804-004"
+decision_id: "DDR-20260804-004"
+job_id: "AJ-RT-20260804-004-001"
+completion_id: "AJC-AJ-RT-20260804-004-001"
+completion_path: "research_control/tasks/RT-20260804-004/jobs/completions/AJC-AJ-RT-20260804-004-001.yaml"
+completion_sha256: "87fcc94de6e0f60dfa8f9e10adddbc7d12f4bbaf378e10c831c28691f793685e"
+status: "ready_after_checkpoint"
+created_at: "2026-08-04T10:07:43Z"
+parent_handoff_id: "handoff-0964"
+plan_task_id: "P16-T06"
+source_role_id: "director-of-research"
+source_role_version: "0.3.0"
+source_execution_role_ref: "director-of-research@0.3.0--RT-20260804-004"
+summary: "P16-T06 passes its conditional closure audit: 121 included work items are canonically final before checkpoint, P16-T06 is the unique conditional 122nd item, all 72 recommendations retain qualifying evidence, all Gate and Distance-to-GR limits remain unchanged, and zero unresolved goal-required human actions or successors remain. One qualifying governed checkpoint is the sole remaining condition for the outer launcher to verify terminal_complete."
+next_action: "Run the single governed checkpoint for AJ-RT-20260804-004-001. After it commits, return control to the outer v4 launcher for exact returned, repository-fingerprint, lease, successor-absence, and terminal_complete verification; do not create a successor."
+current_claim_boundary: "CB-V21-P16-T06-GOAL-RELAY-CLOSURE-001"
+loop_risk_route: "outer-launcher-terminal-verification"
+
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260804-004"
+  latest_research_handoff_id: "handoff-0965"
+  latest_research_next_action: "Run the single governed checkpoint for AJ-RT-20260804-004-001. After it commits, return control to the outer v4 launcher for exact returned, repository-fingerprint, lease, successor-absence, and terminal_complete verification; do not create a successor."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+  project_improvement_sidecar_required: false
+  research_handoff_remains_authoritative: true
+
+claim_boundary:
+  allowed_next_scope: "One governed checkpoint followed only by the outer v4 launcher's returned, exact repository-fingerprint, lease, successor-absence, and terminal_complete verification operations."
+  completed_task: "RT-20260804-004"
+  completed_completion_path: "research_control/tasks/RT-20260804-004/jobs/completions/AJC-AJ-RT-20260804-004-001.yaml"
+  completed_completion_sha256: "87fcc94de6e0f60dfa8f9e10adddbc7d12f4bbaf378e10c831c28691f793685e"
+  source_handoff_id: "handoff-0964"
+  source_handoff_path: "research_control/handoffs/handoff-0964.yaml"
+  source_handoff_sha256: "f0c4e66441c3af955febfe9ee31f430ed02291dbca0aca896e5e3218185fde2c"
+  immutable_route_sha256: "0fc5bc1101b26e17d5d36eac3856a470ed0b9decb09b0a75db0044c0b5d16ad1"
+  route_blocker_fingerprint: "6e0a8c5803bff886dcabacf1c7809072d4a281fbce276d8023d00ea7428aa4f0"
+  result_status: "PASS_P16_T06_CONDITIONAL_TERMINAL_COMPLETE_CANDIDATE"
+  goal_completion_candidate_path: "research_control/tasks/RT-20260804-004/artifacts/v21_p16_t06_goal_completion_candidate.md"
+  goal_completion_candidate_sha256: "074431cb608c30a5677c2dfe296b4927b321c9b892b19230a506c60e2cdb55a4"
+  final_work_item_status_ledger_path: "research_control/tasks/RT-20260804-004/artifacts/v21_p16_t06_final_work_item_status_ledger.json"
+  final_work_item_status_ledger_sha256: "4ed8d9c0ee4f6f79feed5d009199d17dad53544cb267c101e3dcd71c4c8d2fb1"
+  relay_terminal_receipt_path: "research_control/tasks/RT-20260804-004/artifacts/v21_p16_t06_relay_terminal_receipt.json"
+  relay_terminal_receipt_sha256: "5775553dd85edc276f9bf01ede6ab0f64fbe20782033ec963598b24efe936f7a"
+  precheckpoint_finalized_work_item_count: 121
+  conditional_completion_candidate_count: 1
+  projected_postcheckpoint_finalized_work_item_count: 122
+  recommendation_count: 72
+  missing_recommendation_count: 0
+  unresolved_required_human_action_count: 0
+  successor_requested: false
+  p16_t06_executed: true
+  p16_t06_qualifying_finalized_pending_checkpoint: true
+  p16_t06_canonical_final_after_checkpoint: false
+  outer_terminal_decision_executed: false
+  scientific_claims_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  external_action_authorized: false
+  blocked_claims:
+    - "precheckpoint conditional totality as already canonical"
+    - "control-goal completion as first-principles GR derivation or benchmark promotion"
+    - "protected negative conditional or postulated dispositions as positive derivation"
+    - "six inconclusive benchmark cases as passage"
+    - "same-context internal review as external review or independent replication"
+    - "task-local obstruction as a global no-go or future impossibility"
+
+plan_result:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  phase_id: "P16"
+  plan_task_id: "P16-T06"
+  title: "Close, defer, or terminalize the v21 continue-research-goal relay"
+  work_item_status: "completed_pending_checkpoint"
+  result_status: "PASS_P16_T06_CONDITIONAL_TERMINAL_COMPLETE_CANDIDATE"
+  precheckpoint_finalized_work_item_count: 121
+  conditional_completion_candidate_count: 1
+  projected_postcheckpoint_finalized_work_item_count: 122
+  recommendation_count: 72
+  missing_recommendation_count: 0
+  unresolved_required_human_action_count: 0
+  successor_requested: false
+  next_plan_task_id: ""
+  p16_t06_executed: true
+  p16_t06_qualifying_finalized_pending_checkpoint: true
+  p16_t06_canonical_final_after_checkpoint: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+distance_to_gr:
+  changed: false
+  effect: "no_distance_delta_control_goal_closure_only"
+  burden_id: "benchmark_promotion"
+  milestone: "benchmark_promotion"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_sha256: "8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642"
+  ledger_update_rationale: "Finite control-goal closure supplies no source law, effective metric, coupling, field equation, benchmark pass, protected Gate evidence, external review, or independent replication."
+  downstream_unlocked: []
+  downstream_still_blocked:
+    - "first-principles effective metric derivation"
+    - "universal matter-coupling derivation"
+    - "Einstein-equation derivation"
+    - "lawful benchmark pass and promotion"
+    - "completed first-principles GR derivation"
+
+selected_next_route:
+  route_id: "v21_p16_t06_outer_terminal_verification"
+  plan_task_id: "P16-T06"
+  work_item_id: "P16-T06"
+  route_label: "goal-relay-closure"
+  role_family: "director-of-research@0.3.0"
+  worker_skill: "continue-research"
+  selected_next_packet_type: "none_outer_launcher_verification_only"
+  task_type: "v21_p16_t06_goal_relay_closure"
+  target_derivation_milestone: "benchmark_promotion"
+  milestone_burden: "Apply v4 base-case and protected-stop semantics to the finished plan."
+  strategy_id: "outer_verify_and_terminal_complete_after_checkpoint"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  physics_promotion_authorized: false
+  executed: true
+  successor_requested: false
+  next_action: "No new AgentJob or successor; the outer launcher performs terminal verification after checkpoint."
+
+ordinary_route_guard:
+  schema_id: "ordinary_route_guard_evaluation_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  evaluation_id: "ORE-HANDOFF-0965"
+  ordinary_handoff_id: "handoff-0965"
+  threshold: 3
+  consecutive_project_system_tasks_before_selection: 0
+  ready_science_plan_task_ids: []
+  selected_plan_task_id: "P16-T06"
+  selected_route_class: "physics_bearing"
+  selected_worker_skill: "continue-research"
+  outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  exception_receipt:
+    active: false
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+active_state_boundary:
+  active_task_id: "RT-20260804-004"
+  active_job_id: "AJ-RT-20260804-004-001"
+  current_status: "p16_t06_conditional_terminal_complete_candidate_pending_checkpoint"
+  checkpoint_required: true
+  checkpoint_completed: false
+  checkpoint_invocation_count: 0
+  p16_t06_executed: true
+  p16_t06_qualifying_finalized_pending_checkpoint: true
+  p16_t06_canonical_final_after_checkpoint: false
+  selected_next_plan_task_id: "P16-T06"
+  selected_next_worker_skill: "continue-research"
+  selected_next_role_family: "director-of-research@0.3.0"
+  selected_next_route_label: "goal-relay-closure"
+  selected_next_strategy_id: "outer_verify_and_terminal_complete_after_checkpoint"
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
+  successor_requested: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 256 validated, claimed, and consumed the exact immutable continue-research route once."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Two required independent child perspectives and the parent fusion agree on conditional terminal closure with no unresolved conflict."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Task-local closure validation passes 35 checks and all control receipts are internally consistent."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "Exactly one governed checkpoint remains before canonical totality and outer terminal verification."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Approved generated frontier, task-index, dependency-graph, claim-graph, and wiki projections are synchronized."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory synchronization and validate-only checks pass."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation reports no hard failures."
+
+authorization_layers:
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  submission_authorized: false
+  public_release_authorized: false
+  reviewer_contact_authorized: false
+  protected_scoped_gate_review_authorized: false
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  source_law_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+project_improvement_signals: []
+open_project_improvement_signal_ids: []
+project_improvement_sidecar_required: false
+checkpoint_required_before_outer_terminal_verification: true
+checkpoint_job_id: "AJ-RT-20260804-004-001"
+handoff_authority_boundary: "This handoff records a conditional finite control-goal closure result only. It does not itself checkpoint or terminalize the relay and creates no scientific, Gate, benchmark, review, replication, publication, push, outward-action, or completed-derivation authority."
+next_plan_task_id: ""
+next_plan_task_execution_ready_after_checkpoint: false
+next_plan_task_execution_ready_now: false
+next_plan_task_executed: false
+successor_requested: false
+notes: "Checkpoint locally without push. The outer v4 launcher exclusively owns returned, repository-fingerprint verification, terminal decision, lease release, and deterministic terminal summary."

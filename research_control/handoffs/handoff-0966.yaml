@@ -1,0 +1,234 @@
+validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+handoff_id: "handoff-0966"
+handoff_number: 966
+handoff_kind: "project_system_repair"
+task_id: "RT-20260804-005"
+decision_id: "DDR-20260804-005"
+job_id: "AJ-RT-20260804-005-001"
+completion_id: "AJC-AJ-RT-20260804-005-001"
+completion_path: "research_control/tasks/RT-20260804-005/jobs/completions/AJC-AJ-RT-20260804-005-001.yaml"
+completion_sha256: "051ba1adc94e0b5b0d22ca5df54c54d813d34072e942c5ca22eb738c4e0164ef"
+status: "ready_after_checkpoint"
+created_at: "2026-08-04T11:04:43Z"
+parent_handoff_id: "handoff-0965"
+plan_task_id: "P16-T06"
+recovery_for_plan_task_id: "P16-T06"
+source_role_id: "project-control-maintainer"
+source_role_version: "0.2.0"
+source_execution_role_ref: "project-control-maintainer@0.2.0--RT-20260804-005"
+summary: "Generation 257 eliminates the ten sealed generation-256 P16-T06 completion-contract and role-registry projection findings, preserves every P16-T06 scientific artifact byte-for-byte, and prepares one fresh cumulative checkpoint. One inherited source-handoff trackedness finding is reserved for lawful checkpoint staging. No successor is requested."
+next_action: "Run the single fresh cumulative checkpoint for AJ-RT-20260804-005-001. After it commits, return control to the outer v4 launcher for exact returned, repository-fingerprint, lease, successor-absence, and terminal_complete verification; do not create a successor."
+current_claim_boundary: "CB-PS-P16-T06-GENERATION-256-COMPLETION-CONTRACT-ROLE-PARITY-RECOVERY-001"
+loop_risk_route: "outer-launcher-terminal-verification"
+
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260804-005"
+  latest_research_handoff_id: "handoff-0966"
+  latest_research_next_action: "Run the single fresh cumulative checkpoint for AJ-RT-20260804-005-001. After it commits, return control to the outer v4 launcher for exact returned, repository-fingerprint, lease, successor-absence, and terminal_complete verification; do not create a successor."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+  project_improvement_sidecar_required: false
+  research_handoff_remains_authoritative: true
+
+claim_boundary:
+  allowed_next_scope: "One fresh cumulative checkpoint followed only by the outer v4 launcher's returned, exact repository-fingerprint, lease, successor-absence, and terminal_complete verification operations."
+  completed_task: "RT-20260804-005"
+  completed_completion_path: "research_control/tasks/RT-20260804-005/jobs/completions/AJC-AJ-RT-20260804-005-001.yaml"
+  completed_completion_sha256: "051ba1adc94e0b5b0d22ca5df54c54d813d34072e942c5ca22eb738c4e0164ef"
+  source_handoff_id: "handoff-0965"
+  source_handoff_path: "research_control/handoffs/handoff-0965.yaml"
+  source_handoff_sha256: "8520761d1f90bbf197b61d4ec018414e29765e401b1e37d12c4315702da1749a"
+  immutable_route_sha256: "06323abcc5f0c179ec22281f991c9a033609b5ada9bb512729bff593dc14292c"
+  route_blocker_fingerprint: "86a1b6f2198770ec0aa7924bcf0cf4fbd82bdc509349cea45a93fcc9181349d4"
+  result_status: "PASS_GENERATION_256_P16_T06_COMPLETION_CONTRACT_ROLE_PARITY_RECOVERY"
+  recovery_receipt_path: "research_control/tasks/RT-20260804-005/artifacts/generation_257_p16_t06_completion_role_parity_recovery_receipt.json"
+  recovery_receipt_sha256: "b87ab31b8f8c6075aca85305a2e8b02984aeaaa7f1c161788325c6fa3db4dc34"
+  source_completion_sha256_before: "64d404ba61ea31b783c8a1d1c70d5d0d447e7473ebc23e6b91bc90c42526d4b4"
+  source_completion_sha256_after: "87fcc94de6e0f60dfa8f9e10adddbc7d12f4bbaf378e10c831c28691f793685e"
+  sealed_error_count_before: 10
+  sealed_error_count_after: 0
+  prestage_provenance_error_count: 1
+  p16_t06_task_local_check_count: 35
+  p16_t06_task_local_failed_check_count: 0
+  scientific_artifact_count_preserved: 10
+  unresolved_required_human_action_count: 0
+  successor_requested: false
+  generation_256_worker_replayed: false
+  generation_256_checkpoint_replayed: false
+  scientific_claims_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  external_action_authorized: false
+  blocked_claims:
+    - "contract repair presented as new P16-T06 scientific payload"
+    - "fresh checkpoint success presented before the governed outcome"
+    - "control-goal completion as first-principles GR derivation or benchmark promotion"
+    - "same-context internal review as external review or independent replication"
+    - "project-system repair as proof publication push outward action or completed derivation"
+
+plan_result:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  phase_id: "P16"
+  plan_task_id: "P16-T06"
+  recovery_for_plan_task_id: "P16-T06"
+  title: "Reconcile generation-256 P16-T06 completion and role parity"
+  work_item_status: "recovery_completed_checkpoint_pending"
+  result_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+  sealed_error_count_before: 10
+  sealed_error_count_after: 0
+  prestage_provenance_error_count: 1
+  p16_t06_scientific_artifacts_preserved: true
+  p16_t06_scientific_status_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  successor_requested: false
+  next_plan_task_id: ""
+
+distance_to_gr:
+  changed: false
+  effect: "none_project_system_completion_contract_role_parity_recovery"
+  burden_id: "benchmark_promotion"
+  milestone: "none"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "Completion-contract and role-registry parity recovery supplies no source law, metric, coupling, field equation, benchmark pass, protected Gate evidence, external review, or independent replication."
+  downstream_unlocked:
+    - "outer terminal verification after one fresh cumulative checkpoint"
+  downstream_still_blocked:
+    - "first-principles effective metric derivation"
+    - "universal matter-coupling derivation"
+    - "Einstein-equation derivation"
+    - "lawful benchmark pass and promotion"
+    - "completed first-principles GR derivation"
+
+selected_next_route:
+  route_id: "v21_p16_t06_outer_terminal_verification_after_generation_257_checkpoint"
+  plan_task_id: "P16-T06"
+  work_item_id: "P16-T06"
+  route_label: "goal-relay-closure"
+  role_family: "none"
+  worker_skill: "none"
+  selected_next_packet_type: "none_outer_launcher_verification_only"
+  task_type: "v21_p16_t06_goal_relay_closure"
+  target_derivation_milestone: "benchmark_promotion"
+  milestone_burden: "Apply v4 base-case and protected-stop semantics to the finished plan."
+  strategy_id: "outer_verify_and_terminal_complete_after_checkpoint"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  physics_promotion_authorized: false
+  executed: true
+  successor_requested: false
+  next_action: "No new AgentJob or successor; the outer launcher performs terminal verification after checkpoint."
+
+ordinary_route_guard:
+  schema_id: "ordinary_route_guard_evaluation_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  evaluation_id: "ORE-HANDOFF-0966"
+  ordinary_handoff_id: "handoff-0966"
+  threshold: 3
+  consecutive_project_system_tasks_before_selection: 1
+  ready_science_plan_task_ids: []
+  selected_plan_task_id: "P16-T06"
+  selected_route_class: "physics_bearing"
+  selected_worker_skill: "continue-research"
+  outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  exception_receipt:
+    active: false
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+active_state_boundary:
+  active_task_id: "RT-20260804-005"
+  active_job_id: "AJ-RT-20260804-005-001"
+  current_status: "generation_256_p16_t06_completion_contract_role_parity_reconciled_pending_checkpoint"
+  checkpoint_required: true
+  checkpoint_completed: false
+  checkpoint_invocation_count: 0
+  project_system_recovery_completed: true
+  p16_t06_executed: true
+  p16_t06_scientific_status_changed: false
+  selected_next_plan_task_id: "P16-T06"
+  selected_next_worker_skill: "none"
+  selected_next_role_family: "none"
+  selected_next_route_label: "goal-relay-closure"
+  selected_next_strategy_id: "outer_verify_and_terminal_complete_after_checkpoint"
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
+  successor_requested: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 257 validated, claimed, and consumed the exact immutable recovery route once."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "All ten sealed completion-contract and role-registry findings are mapped to exact repairs."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "The P16-T06 task-local validator passes 35 of 35 checks and all ten scientific artifacts remain byte-identical."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "Exactly one fresh cumulative checkpoint remains and owns the inherited source-handoff trackedness check."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Task index, current frontier, compact frontier, dependency graph, claim graph, and generated-report freshness checks pass before checkpoint."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory synchronization and the subsequent validate-only check pass before checkpoint."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation passes with zero hard failures before checkpoint."
+
+authorization_layers:
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  submission_authorized: false
+  public_release_authorized: false
+  reviewer_contact_authorized: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "Project-system completion-contract and role-registry parity recovery only; no protected Gate review is authorized."
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  source_law_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+project_improvement_signals: []
+open_project_improvement_signal_ids: []
+project_improvement_sidecar_required: false
+checkpoint_required_before_outer_terminal_verification: true
+checkpoint_job_id: "AJ-RT-20260804-005-001"
+handoff_authority_boundary: "This handoff records exact project-system contract and parity recovery only. It does not itself checkpoint or terminalize the relay and creates no scientific, Gate, benchmark, review, replication, publication, push, outward-action, or completed-derivation authority."
+next_plan_task_id: ""
+next_plan_task_execution_ready_after_checkpoint: false
+next_plan_task_execution_ready_now: false
+next_plan_task_executed: false
+successor_requested: false
+notes: "Checkpoint locally without push. The outer v4 launcher exclusively owns returned, repository-fingerprint verification, terminal decision, lease release, and deterministic terminal summary."

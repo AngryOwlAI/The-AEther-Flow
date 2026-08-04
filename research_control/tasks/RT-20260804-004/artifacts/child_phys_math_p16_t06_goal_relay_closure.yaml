@@ -1,0 +1,94 @@
+schema_id: "v21_p16_t06_child_phys_math_goal_relay_closure_v1"
+task_id: "RT-20260804-004"
+job_id: "AJ-RT-20260804-004-001"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+verdict: "PASS_FINITE_CLOSURE_SUPPORTED"
+verdict_scope: "P16-T06 qualifies for terminal_complete only after its governed checkpoint and the outer v4 verification. Precheckpoint totality is conditional, not self-certifying."
+
+metrics:
+  work_item_count: 122
+  precheckpoint_finalized_work_item_count: 121
+  conditional_completion_candidate_count: 1
+  projected_postcheckpoint_finalized_work_item_count: 122
+  pre_p16_work_item_count: 116
+  completed_p16_predecessor_count: 5
+  recommendation_count: 72
+  verified_pre_p16_recommendation_edge_count: 598
+  bounded_p16_t02_through_t05_edge_count: 35
+  minimum_pre_p16_evidence_records_per_recommendation: 4
+  maximum_pre_p16_evidence_records_per_recommendation: 19
+  dependency_cycle_count: 0
+  unknown_dependency_count: 0
+  self_dependency_count: 0
+  p16_t06_successor_count: 0
+
+closure_proof:
+  payload_id: "FinalWorkItemDispositionTotalityAndNonPromotion_v1"
+  claim_status: "draft/control conditional proof step"
+  finite_set: "W is the 122-element set of included V21 plan work items."
+  precheckpoint_statement: "The canonical final-disposition relation is single-valued on 121 elements of W; P16-T06 is the unique remaining conditional completion candidate."
+  checkpoint_implication: "If the task-local and repository validators pass and the governed checkpoint for AJ-RT-20260804-004-001 commits, then P16-T06 becomes the canonical 122nd final disposition and dom(delta)=W."
+  recommendation_statement: "Every one of the 72 recommendation IDs has qualifying direct evidence before P16-T06; P16-T06 is the sole final_goal_disposition task for every recommendation."
+  successor_statement: "P16-T06 has no plan successor; a successful outer terminal decision creates no successor."
+  nonpromotion_statement: "No admissible authority-preserving implication maps terminal control closure to metric coupling Einstein-equation benchmark replication publication or completed-derivation promotion."
+
+special_evidence_cases:
+  - plan_task_id: "P0-T01"
+    reason: "Part of the 116 P0-P15 items but absent from matrix.rows selected evidence."
+    completion_path: "research_control/tasks/RT-20260720-003/jobs/completions/AJC-AJ-RT-20260720-003-001.yaml"
+    completion_sha256: "55683b6f6f13408f2200b765f2c9e193fb7cfce0ac6e5131fc6c6de44cdb674d"
+  - plan_task_id: "P0-T02"
+    reason: "Part of the 116 P0-P15 items but absent from matrix.rows selected evidence."
+    completion_path: "research_control/tasks/RT-20260720-005/jobs/completions/AJC-AJ-RT-20260720-005-001.yaml"
+    completion_sha256: "3cd5e142f88cefa473255beff7620b2274d755210d69f335b05af9e5771b2bf1"
+  - plan_task_id: "P3-T07"
+    reason: "Uses an author-time program-state selector whose historical identity was validated by P16-T03; its old hash must not be compared to live mutable program_state bytes."
+    historical_program_state_sha256: "219c8044390f5478f407ca55037d6e02de71230f4642a5277bce57ef41e2fa44"
+  - plan_task_id: "P10-T08"
+    reason: "Uses an author-time program-state selector whose historical identity was validated by P16-T03; its old hash must not be compared to live mutable program_state bytes."
+    historical_program_state_sha256: "219c8044390f5478f407ca55037d6e02de71230f4642a5277bce57ef41e2fa44"
+
+primary_evidence:
+  - path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+    sha256: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  - path: "research_control/design/v21_recommendation_backlog.yaml"
+    sha256: "849a4e8dfe848e80bc0c8236252b924e636e5c95ac1a090478a69f7f5377559f"
+  - path: "research_control/tasks/RT-20260803-002/artifacts/v21_final_recommendation_coverage_matrix.json"
+    sha256: "aa91bfa96257d3d1e9d6ae6bf68d025b4c3e7ed451c8d4f11012cc69cdbc9e95"
+  - path: "research_control/tasks/RT-20260803-002/artifacts/v21_recommendation_coverage_audit.md"
+    sha256: "653f8205a160cf7d94ac5a462590cb88284566f3bee6454a606f28edd8d9eab0"
+  - path: "research_control/tasks/RT-20260803-012/artifacts/v21_p16_t02_post_repair_gate_consistency_reaudit.md"
+    sha256: "a8afd3cecf381198e018f9b9c0f03891f95435bc5edea4fe1a7f74d392735ae5"
+  - path: "research_control/tasks/RT-20260803-013/artifacts/v21_p16_t03_final_provenance_audit.md"
+    sha256: "72316ad40fdab3b5d88c88602c1832de99045616421eba244143e436ec87ca59"
+  - path: "research_control/tasks/RT-20260804-001/artifacts/v21_p16_t04_post_repair_final_reaudit_report.md"
+    sha256: "20bbc6082b3b55fad3a7401dc4e4b84295c2baa376f9a2f3ea03286f17da0d30"
+  - path: "research_control/tasks/RT-20260804-003/artifacts/v21_p16_t05_final_status_synthesis.md"
+    sha256: "28db911bef81a26609b0993c8ff1545bda1ca1eb2ba6f9db8b1ece7a814ee4eb"
+  - path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+    sha256: "8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642"
+
+gate_preservation:
+  Gate_A: "narrow continuum-first research architecture only"
+  Gate_B: "NOT_READY with zero of eight criteria met"
+  Gate_C: "source-matter package adopted by protected constitutive postulate with the derivational gap open"
+  Gate_D: "Einstein-sector derivation NOT_READY"
+  Gate_E: "benchmark and completed derivation NOT_READY with six inconclusive cases zero passes and zero qualifying replications"
+
+human_gate_conclusion:
+  unresolved_goal_required_human_action_count: 0
+  future_positive_reopening_authority_is_current_goal_blocker: false
+  explanation: "Fresh authority for future positive Gate E reopening or outward action is outside the completed negative and conditional dispositions required by this goal."
+
+authority_limits:
+  scientific_derivation_complete: false
+  physics_promotion_authorized: false
+  benchmark_promoted: false
+  independent_replication_complete: false
+  publication_authorized: false
+  proof_authority: false
+  global_no_go_claimed: false
+files_changed_by_child: []
+checkpoint_invoked_by_child: false

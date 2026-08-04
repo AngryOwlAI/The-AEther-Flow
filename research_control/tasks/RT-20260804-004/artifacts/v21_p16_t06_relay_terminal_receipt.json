@@ -1,0 +1,80 @@
+{
+  "schema_id": "v21_p16_t06_relay_terminal_receipt_v1",
+  "status": "PASS_TERMINAL_COMPLETE_RECOMMENDED_AFTER_CHECKPOINT",
+  "goal_id": "crg-20260720T161354Z-96bc2664ce31bfe0",
+  "generation": 256,
+  "work_item_id": "P16-T06",
+  "recommended_outer_decision": "terminal_complete",
+  "decision_precondition": "one qualifying governed checkpoint for AJ-RT-20260804-004-001 followed by outer returned and verify-step operations",
+  "task_local_terminalization_performed": false,
+  "successor_requested": false,
+  "unresolved_required_human_action_count": 0,
+  "unresolved_required_human_actions": [],
+  "work_item_count": 122,
+  "precheckpoint_finalized_work_item_count": 121,
+  "conditional_completion_candidate_count": 1,
+  "projected_postcheckpoint_finalized_work_item_count": 122,
+  "recommendation_count": 72,
+  "missing_recommendation_count": 0,
+  "gate_statuses": [
+    {
+      "gate": "Gate A",
+      "status": "ADOPTED_NARROW_RESEARCH_ARCHITECTURE",
+      "evidence_path": "research_control/tasks/RT-20260724-004/artifacts/ontology_regime_gate_chair_decision_v1.tex",
+      "evidence_sha256": "20ea795bbe93333b489e4f13601fd6bb1623f318b7847f9d2d24402c7490c934",
+      "changed_by_p16_t06": false
+    },
+    {
+      "gate": "Gate B",
+      "status": "NOT_READY",
+      "evidence_path": "research_control/tasks/RT-20260727-004/artifacts/p6_t08_gate_b_separating_certificate_v1.yaml",
+      "evidence_sha256": "f3080ed6a6ba1d6847a3b7ed43c7a11ad7f7dae4deccd25486913ea9547f221b",
+      "changed_by_p16_t06": false
+    },
+    {
+      "gate": "Gate C",
+      "status": "PROTECTED_SOURCE_MATTER_PACKAGE_ADOPTED_BY_POSTULATE",
+      "evidence_path": "research_control/tasks/RT-20260729-001/artifacts/p7_t08_gate_c_decision_v1.tex",
+      "evidence_sha256": "85fbf32fb9b02aeae556149cbc5c6b51bd6fedf278a3bc401545c93e29fc4827",
+      "changed_by_p16_t06": false
+    },
+    {
+      "gate": "Gate D",
+      "status": "NOT_READY",
+      "evidence_path": "research_control/tasks/RT-20260729-011/artifacts/p8_t07_gate_d_decision_v1.tex",
+      "evidence_sha256": "035ea88a612d861a00d0703ec2bd1094e01194c113d7ff2588e3a4ad8bf47d63",
+      "changed_by_p16_t06": false
+    },
+    {
+      "gate": "Gate E",
+      "status": "NOT_READY",
+      "evidence_path": "research_control/tasks/RT-20260731-004/artifacts/p9_t09_gate_e_decision_v1.tex",
+      "evidence_sha256": "7f28103e40664f0a004af0134f3216932136f8efb160f0c7c59039efa5225b0b",
+      "changed_by_p16_t06": false
+    }
+  ],
+  "science_status_preserved": {
+    "exact_gr_reference_status": "MAINTAINED_AS_TARGET_SIDE_BENCHMARK",
+    "first_principles_gr_derivation_status": "OPEN_NOT_COMPLETED",
+    "source_derived_benchmark_status": "NOT_READY",
+    "benchmark_case_count": 6,
+    "benchmark_pass_count": 0,
+    "benchmark_inconclusive_count": 6,
+    "independent_replication_count": 0
+  },
+  "future_or_separately_authorized_scientific_work": [
+    "derive missing source-side primitives for RetainH and GenH",
+    "derive an unscoped effective geometry and universal matter coupling",
+    "derive and independently review the Einstein sector",
+    "obtain a lawful benchmark pass and qualifying independent replication before any Gate E reconsideration"
+  ],
+  "authority_limits": {
+    "control_goal_completion_is_scientific_derivation": false,
+    "gate_status_changed": false,
+    "distance_to_gr_changed": false,
+    "benchmark_promoted": false,
+    "proof_authority": false,
+    "physics_promotion_authorized": false
+  },
+  "task_local_validation_status": "PASS"
+}

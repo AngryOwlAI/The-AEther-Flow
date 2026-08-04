@@ -1,0 +1,140 @@
+{
+  "schema_id": "generation_257_p16_t06_completion_role_parity_recovery_receipt_v1",
+  "status": "PASS_PRECHECKPOINT_STAGING_REQUIRED",
+  "task_id": "RT-20260804-005",
+  "job_id": "AJ-RT-20260804-005-001",
+  "generation": 257,
+  "route_strategy_id": "recover_generation_256_p16_t06_completion_contract_and_role_registry_parity_v1",
+  "immutable_route_sha256": "06323abcc5f0c179ec22281f991c9a033609b5ada9bb512729bff593dc14292c",
+  "route_blocker_fingerprint": "86a1b6f2198770ec0aa7924bcf0cf4fbd82bdc509349cea45a93fcc9181349d4",
+  "source_head": "bfa30324101c0dd70338e58b443953922c1c322f",
+  "source_dirty_manifest_sha256": "4669bc62c106edae88bcddb908fdcf25d39947334abdc6b853273d42962d918b",
+  "failed_gate": {
+    "gate_id": "research_control_diff_staged",
+    "evidence_path": ".local/validation-receipts/8afbc6d6c1cc892533a3e7f8e45a1e2fb8243d85d803a1dadc854fe5c9fbe844/RUN-CHECKPOINT-afd80c2f1d9a7374/gates/0004-research_control_diff.stdout",
+    "evidence_sha256": "a6c33ed523da04e08664343dc7dd64ad4260935ad11acc5c71df96c347623d8b",
+    "source_checkpoint_receipt_sha256": "8c11970442fda6703490dcac3e30c302502f2e3965cdfd00a2fed7464183e733",
+    "source_checkpoint_commit": null,
+    "source_checkpoint_invocation_count": 1,
+    "index_restored": true,
+    "sealed_error_count": 10
+  },
+  "source_records": {
+    "completion_path": "research_control/tasks/RT-20260804-004/jobs/completions/AJC-AJ-RT-20260804-004-001.yaml",
+    "completion_sha256_before": "64d404ba61ea31b783c8a1d1c70d5d0d447e7473ebc23e6b91bc90c42526d4b4",
+    "completion_sha256_after": "87fcc94de6e0f60dfa8f9e10adddbc7d12f4bbaf378e10c831c28691f793685e",
+    "role_path": "research_control/tasks/RT-20260804-004/roles/director-of-research@0.3.0--RT-20260804-004.yaml",
+    "role_sha256_before": "84dfc3910f00b881ed40bd75cbeebdc9147fb91ca960fe27bc5963084d4f6748",
+    "role_sha256_after": "517386f36e91ed8aa09bd5f05c35abd74531be694052363f8480bcb9177d430e",
+    "source_handoff_path": "research_control/handoffs/handoff-0965.yaml",
+    "source_handoff_sha256_after_hash_reconciliation": "8520761d1f90bbf197b61d4ec018414e29765e401b1e37d12c4315702da1749a"
+  },
+  "repair_map": [
+    {
+      "finding": "completion_command_results_missing",
+      "repair": "added source-backed command_results including the explicit precheckpoint checkpoint state"
+    },
+    {
+      "finding": "memory_preflight_status_summary_not_map",
+      "repair": "projected the admitted status_summary map exactly from the AgentJob"
+    },
+    {
+      "finding": "memory_preflight_queries_missing",
+      "repair": "projected both admitted canonical memory queries"
+    },
+    {
+      "finding": "memory_preflight_canonical_inspections_missing",
+      "repair": "projected the canonical plan inspection and exact source hash"
+    },
+    {
+      "finding": "validation_layers_missing",
+      "repair": "added source-backed pre-execution completion post-write post-checkpoint synthesis renderer memory and claim-language layers"
+    },
+    {
+      "finding": "protected_scoped_gate_review_scope_missing",
+      "repair": "added an explicit nonauthorization scope limited to bounded control-closure evidence and contract repair"
+    },
+    {
+      "finding": "dual_budget_observed_durable_outputs_not_exact",
+      "repair": "added the two exact admitted physics durable-output strings without removing the calibrated detailed strings"
+    },
+    {
+      "finding": "dual_budget_accepted_criterion_not_exact",
+      "repair": "added the exact single-valued final-disposition acceptance criterion"
+    },
+    {
+      "finding": "parent_child_synthesis_missing",
+      "repair": "added the two hash-bound child outputs conflict review fusion notes and fused output"
+    },
+    {
+      "finding": "execution_role_justification_registry_parity",
+      "repair": "made the task-local role justification byte-equal to the registered projection"
+    }
+  ],
+  "scientific_artifact_preservation": {
+    "status": "PASS_BYTE_IDENTICAL",
+    "artifacts": [
+      {
+        "path": "research_control/tasks/RT-20260804-004/artifacts/child_phys_math_p16_t06_goal_relay_closure.yaml",
+        "sha256": "f7a4f803dc7f7c60b1f72794edcd8a63c805303ca9e1e3129bc7eaa4a816dfe0"
+      },
+      {
+        "path": "research_control/tasks/RT-20260804-004/artifacts/child_phys_phil_p16_t06_goal_relay_closure.yaml",
+        "sha256": "c2e2b31391e58f44e4be707e5bd4f49c0ade82e910fdc46e4379caa957515f51"
+      },
+      {
+        "path": "research_control/tasks/RT-20260804-004/artifacts/parent_conflict_review_p16_t06_goal_relay_closure.yaml",
+        "sha256": "f0b214bba195657cd8287feeb0c2c0217b700d7d7e8247599a77f594a82cca0c"
+      },
+      {
+        "path": "research_control/tasks/RT-20260804-004/artifacts/parent_fusion_notes_p16_t06_goal_relay_closure.md",
+        "sha256": "04e470f3f9655c8bfd59905fb18794954436b6489a969d4c048fb3fcc45f7325"
+      },
+      {
+        "path": "research_control/tasks/RT-20260804-004/artifacts/v21_p16_t06_final_work_item_status_ledger.json",
+        "sha256": "4ed8d9c0ee4f6f79feed5d009199d17dad53544cb267c101e3dcd71c4c8d2fb1"
+      },
+      {
+        "path": "research_control/tasks/RT-20260804-004/artifacts/v21_p16_t06_goal_completion_candidate.md",
+        "sha256": "074431cb608c30a5677c2dfe296b4927b321c9b892b19230a506c60e2cdb55a4"
+      },
+      {
+        "path": "research_control/tasks/RT-20260804-004/artifacts/v21_p16_t06_relay_terminal_receipt.json",
+        "sha256": "5775553dd85edc276f9bf01ede6ab0f64fbe20782033ec963598b24efe936f7a"
+      },
+      {
+        "path": "research_control/tasks/RT-20260804-004/artifacts/v21_p16_t06_compact_receipt.json",
+        "sha256": "8c0de414651e81055ea67d92474c8345e092aa1d2a89922b583de79087ba5373"
+      },
+      {
+        "path": "research_control/tasks/RT-20260804-004/artifacts/v21_p16_t06_validation.json",
+        "sha256": "00e82721028d45eea498a30447f0c0d6db26d0aa1bad7851ade08e64bb823edd"
+      },
+      {
+        "path": "research_control/tasks/RT-20260804-004/artifacts/validate_p16_t06_goal_relay_closure.py",
+        "sha256": "785d5330a374c91a3d45138020682ce4e21570a68ea66abae621644f7799fa5e"
+      }
+    ]
+  },
+  "validation": {
+    "p16_t06_task_local": "PASS_35_OF_35",
+    "sealed_finding_count_before": 10,
+    "sealed_finding_count_after": 0,
+    "prestage_provenance_findings_remaining": 1,
+    "prestage_provenance_reason": "handoff-0965 is part of the inherited untracked transaction and becomes tracked only through the fresh cumulative checkpoint",
+    "checkpoint_invocation_count": 0,
+    "checkpoint_status": "PENDING"
+  },
+  "authority_limits": {
+    "generation_256_worker_replayed": false,
+    "generation_256_checkpoint_replayed": false,
+    "scientific_claims_changed": false,
+    "distance_to_gr_changed": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "publication_authorized": false,
+    "external_action_authorized": false,
+    "push_performed": false
+  },
+  "created_at": "2026-08-04T10:49:18Z"
+}
