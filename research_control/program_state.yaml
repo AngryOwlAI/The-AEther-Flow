@@ -1,12 +1,90 @@
 mode: "director_led_research_control"
-active_task_id: "RT-20260804-002"
-active_agent_job_id: "AJ-RT-20260804-002-001"
-latest_handoff_id: "handoff-0963"
-current_status: "generation_253_task_contract_and_frontier_alignment_reconciled_pending_checkpoint"
-claim_boundary_summary: "RT-20260804-002 reconciles only the fourteen exact generation-253 task-contract mismatches, preserves the completed P16-T04 science and review artifact hashes, and prepares one distinct governed checkpoint after approved generated synchronization. P16-T05 is not executed, and no science Gate benchmark proof publication push external action external-review independent-replication or completed-derivation authority is created."
-next_plan_task_id: "P16-T05"
+active_task_id: "RT-20260804-003"
+active_agent_job_id: "AJ-RT-20260804-003-001"
+latest_handoff_id: "handoff-0964"
+current_status: "p16_t05_qualifying_final_status_synthesis_pending_checkpoint"
+claim_boundary_summary: "RT-20260804-003 qualifying-finalizes an answer-first scientific status and a separate research-system status. Exact GR remains a target reference rather than a first-principles derivation; Gate B Gate D and Gate E remain NOT_READY; all six benchmark cases remain inconclusive with zero passes; internal system traceability supplies no physics or Distance-to-GR credit. P16-T06 is not executed, and no Gate benchmark proof publication push external action external-review independent-replication or completed-derivation authority is created."
+next_plan_task_id: "P16-T06"
 next_worker_skill: "continue-research"
-next_recommended_action: "Run the single distinct governed checkpoint for AJ-RT-20260804-002-001. After it commits, execute P16-T05 only through one separately claimed continue-research integration-synthesis packet."
+next_recommended_action: "Run the single governed checkpoint for AJ-RT-20260804-003-001. After it commits, execute P16-T06 only through one separately claimed continue-research goal-relay-closure packet."
+
+p16_t05_final_scientific_and_research_system_status_synthesis:
+  task_id: "RT-20260804-003"
+  parent_task_id: "RT-20260804-002"
+  parent_handoff_id: "handoff-0963"
+  plan_task_id: "P16-T05"
+  route_work_item_id: "P16-T05"
+  next_plan_task_id: "P16-T06"
+  claim_boundary_id: "CB-V21-P16-T05-FINAL-SCIENCE-SYSTEM-SYNTHESIS-001"
+  status: "PASS_P16_T05_FINAL_STATUS_SYNTHESIS_CALIBRATED"
+  work_item_status: "completed"
+  route_label: "integration-synthesis-packet"
+  selected_role_family: "director-of-research@0.3.0"
+  selected_worker_skill: "continue-research"
+  selected_strategy_id: "continue_in_scope_generation_255"
+  target_derivation_milestone: "benchmark_promotion"
+  milestone_burden: "Create a calibrated final handoff without inventing completion."
+  source_head: "1181a85077cd266fe023282a5944059d2ea4c136"
+  source_tree: "8a0fdbd7ac5144b9a580a85e644841992ea89888"
+  immutable_route_sha256: "60163219224ecc8a6a7f1c5862ce06d589d6a0148d89bfd747bb24175db7a926"
+  route_blocker_fingerprint: "8ee8e92349d5138207617a151a9932eb670e675c989f270db81a2c1eb03218f7"
+  agent_job_id: "AJ-RT-20260804-003-001"
+  decision_id: "DDR-20260804-003"
+  execution_role_ref: "director-of-research@0.3.0--RT-20260804-003"
+  source_handoff_id: "handoff-0963"
+  source_handoff_path: "research_control/handoffs/handoff-0963.yaml"
+  source_handoff_sha256: "32b69cfa5a4e90a4a074d10c9e7ed911c499364f0f5e2fe7c1a1e3156301fc1d"
+  p16_t01_completion_sha256: "4e59a0ae6d0740677ef0b4331f753138f32b76b27981435f5933aaab1a78fd66"
+  p16_t02_completion_sha256: "32490ac7e5a57138f6de7a884825532ee17389d36634dbb9fc7f7cc076c0bf8d"
+  p16_t03_completion_sha256: "a0bd4691e276e5e0d97b45b734491f697deeb57ca0dc99b015bd7ea7d734fe91"
+  p16_t04_completion_sha256: "1dc975715f9e8f2554408348ea6dc9d2191f370d1f1cf724e23801b128c4ce4d"
+  synthesis_path: "research_control/tasks/RT-20260804-003/artifacts/v21_p16_t05_final_status_synthesis.md"
+  synthesis_sha256: "28db911bef81a26609b0993c8ff1545bda1ca1eb2ba6f9db8b1ece7a814ee4eb"
+  science_scorecard_path: "research_control/tasks/RT-20260804-003/artifacts/v21_p16_t05_science_scorecard.yaml"
+  science_scorecard_sha256: "654101f8dafa11b268f657ff5943f79d0d7bf4c19668f934bb5ebb419b6cabbd"
+  system_scorecard_path: "research_control/tasks/RT-20260804-003/artifacts/v21_p16_t05_system_scorecard.yaml"
+  system_scorecard_sha256: "a1c38071b28d81ab2998cbb6e998b0dbff1824d1fcd57cf9286732f8b246aa73"
+  completion_path: "research_control/tasks/RT-20260804-003/jobs/completions/AJC-AJ-RT-20260804-003-001.yaml"
+  completion_sha256: "7df3e9aa13f6449ce6bd0e4fa19d08837888f19e70ea774d83c4c99367ff8aa0"
+  handoff_id: "handoff-0964"
+  handoff_path: "research_control/handoffs/handoff-0964.yaml"
+  handoff_sha256: "f0c4e66441c3af955febfe9ee31f430ed02291dbca0aca896e5e3218185fde2c"
+  mathematical_payload_id: "FinalStatusLayerNonPromotion_v1"
+  recommendation_count: 72
+  missing_recommendation_count: 0
+  benchmark_case_count: 6
+  benchmark_pass_count: 0
+  benchmark_inconclusive_count: 6
+  qualifying_independent_replication_count: 0
+  blocking_scientific_finding_count: 0
+  blocking_project_system_finding_count: 0
+  blocking_parent_conflict_count: 0
+  p16_t05_executed: true
+  p16_t05_qualifying_finalized: true
+  p16_t06_executed: false
+  canonical_science_modified: false
+  scientific_claims_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  external_action_authorized: false
+  checkpoint_invocation_count: 0
+  checkpoint_committed: false
+  selected_next_work_item: "P16-T06"
+  selected_next_plan_task_id: "P16-T06"
+  selected_next_worker_skill: "continue-research"
+  selected_next_role_family: "director-of-research@0.3.0"
+  selected_next_packet_type: "goal_relay_closure"
+  selected_next_route_label: "goal-relay-closure"
+  selected_next_strategy_id: "close_defer_or_terminalize_v21_relay_v1"
+  selected_next_target_derivation_milestone: "benchmark_promotion"
+  selected_next_milestone_burden: "Apply v4 base-case and protected-stop semantics to the finished plan."
+  selected_next_requires_human_gate: false
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
 
 p16_t04_generation_253_task_contract_and_frontier_alignment_recovery:
   task_id: "RT-20260804-002"

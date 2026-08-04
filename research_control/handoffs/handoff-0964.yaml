@@ -1,0 +1,246 @@
+validation_status: "PASS_PRECHECKPOINT"
+handoff_id: "handoff-0964"
+handoff_number: 964
+handoff_kind: "research_completion"
+task_id: "RT-20260804-003"
+decision_id: "DDR-20260804-003"
+job_id: "AJ-RT-20260804-003-001"
+completion_id: "AJC-AJ-RT-20260804-003-001"
+completion_path: "research_control/tasks/RT-20260804-003/jobs/completions/AJC-AJ-RT-20260804-003-001.yaml"
+completion_sha256: "7df3e9aa13f6449ce6bd0e4fa19d08837888f19e70ea774d83c4c99367ff8aa0"
+status: "ready_after_checkpoint"
+created_at: "2026-08-04T08:52:38Z"
+parent_handoff_id: "handoff-0963"
+plan_task_id: "P16-T06"
+source_role_id: "director-of-research"
+source_role_version: "0.3.0"
+source_execution_role_ref: "director-of-research@0.3.0--RT-20260804-003"
+summary: "P16-T05 qualifying-finalizes an answer-first scientific status and a separate research-system status. Exact GR remains a target reference rather than a first-principles derivation; Gate B Gate D and Gate E remain NOT_READY; all six benchmark cases remain inconclusive with zero passes; the internally traceable system status supplies no physics or Distance-to-GR credit."
+next_action: "Run the single governed checkpoint for AJ-RT-20260804-003-001. After it commits, execute P16-T06 only through one separately claimed continue-research goal-relay-closure packet."
+current_claim_boundary: "CB-V21-P16-T05-FINAL-SCIENCE-SYSTEM-SYNTHESIS-001"
+loop_risk_route: "close_defer_or_terminalize_v21_relay_v1"
+
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260804-003"
+  latest_research_handoff_id: "handoff-0964"
+  latest_research_next_action: "Run the single governed checkpoint for AJ-RT-20260804-003-001. After it commits, execute P16-T06 only through one separately claimed continue-research goal-relay-closure packet."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+  project_improvement_sidecar_required: false
+  research_handoff_remains_authoritative: true
+
+claim_boundary:
+  allowed_next_scope: "One governed checkpoint followed by one separately claimed P16-T06 goal-relay-closure packet."
+  completed_task: "RT-20260804-003"
+  completed_completion_path: "research_control/tasks/RT-20260804-003/jobs/completions/AJC-AJ-RT-20260804-003-001.yaml"
+  completed_completion_sha256: "7df3e9aa13f6449ce6bd0e4fa19d08837888f19e70ea774d83c4c99367ff8aa0"
+  source_handoff_id: "handoff-0963"
+  source_handoff_path: "research_control/handoffs/handoff-0963.yaml"
+  source_handoff_sha256: "32b69cfa5a4e90a4a074d10c9e7ed911c499364f0f5e2fe7c1a1e3156301fc1d"
+  immutable_route_sha256: "60163219224ecc8a6a7f1c5862ce06d589d6a0148d89bfd747bb24175db7a926"
+  route_blocker_fingerprint: "8ee8e92349d5138207617a151a9932eb670e675c989f270db81a2c1eb03218f7"
+  result_status: "PASS_P16_T05_FINAL_STATUS_SYNTHESIS_CALIBRATED"
+  science_scorecard_path: "research_control/tasks/RT-20260804-003/artifacts/v21_p16_t05_science_scorecard.yaml"
+  science_scorecard_sha256: "654101f8dafa11b268f657ff5943f79d0d7bf4c19668f934bb5ebb419b6cabbd"
+  system_scorecard_path: "research_control/tasks/RT-20260804-003/artifacts/v21_p16_t05_system_scorecard.yaml"
+  system_scorecard_sha256: "a1c38071b28d81ab2998cbb6e998b0dbff1824d1fcd57cf9286732f8b246aa73"
+  synthesis_path: "research_control/tasks/RT-20260804-003/artifacts/v21_p16_t05_final_status_synthesis.md"
+  synthesis_sha256: "28db911bef81a26609b0993c8ff1545bda1ca1eb2ba6f9db8b1ece7a814ee4eb"
+  benchmark_case_count: 6
+  benchmark_pass_count: 0
+  qualifying_independent_replication_count: 0
+  p16_t05_executed: true
+  p16_t05_qualifying_finalized: true
+  p16_t06_executed: false
+  scientific_claims_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  external_action_authorized: false
+  blocked_claims:
+    - "system traceability validator PASS or checkpoint PASS as physics evidence"
+    - "target-side exact-GR adoption as first-principles substrate derivation"
+    - "same-context internal AI critique as external review or independent replication"
+    - "six inconclusive benchmark cases as benchmark passage"
+    - "task-local non-derivability as external falsity or global no-go"
+    - "P16-T05 completion as P16-T06 execution or relay terminalization"
+
+plan_result:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  phase_id: "P16"
+  plan_task_id: "P16-T05"
+  title: "Issue final scientific and research-system status synthesis"
+  work_item_status: "completed"
+  result_status: "PASS_P16_T05_FINAL_STATUS_SYNTHESIS_CALIBRATED"
+  next_plan_task_id: "P16-T06"
+  p16_t05_executed: true
+  p16_t05_qualifying_finalized: true
+  p16_t06_dependency_ready_after_checkpoint: true
+  p16_t06_executed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+distance_to_gr:
+  changed: false
+  effect: "no_distance_delta_status_synthesis_only"
+  burden_id: "benchmark_promotion"
+  milestone: "benchmark_promotion"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_sha256: "8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642"
+  ledger_update_rationale: "Status integration supplies no source law metric coupling field equation benchmark pass or protected Gate evidence."
+  downstream_unlocked:
+    - "P16-T06 after checkpoint"
+  downstream_still_blocked:
+    - "first-principles GR derivation"
+    - "benchmark promotion"
+    - "completed derivation"
+    - "external review and independent replication"
+    - "publication and public release"
+
+required_next_packet:
+  task_type: "v21_p16_t06_goal_relay_closure"
+  plan_task_id: "P16-T06"
+  work_item_id: "P16-T06"
+  objective: "Use canonical evidence to close defer or terminalize the v21 continue-research-goal relay under v4 base-case and protected-stop semantics."
+  output_requirement: "One goal completion or human-intervention summary, final work-item status ledger, relay terminal receipt, and compact receipt."
+  dependency_qualification: "RT-20260804-003 must first commit through its single governed checkpoint."
+  dependency_ready_after_checkpoint: true
+  dependency_ready_now: false
+  exact_human_authorization_required: false
+  executed: false
+
+selected_next_route:
+  route_id: "v21_p16_t06_goal_relay_closure"
+  route_label: "goal-relay-closure"
+  role_family: "director-of-research@0.3.0"
+  worker_skill: "continue-research"
+  selected_next_packet_type: "goal_relay_closure"
+  task_type: "v21_p16_t06_goal_relay_closure"
+  plan_task_id: "P16-T06"
+  work_item_id: "P16-T06"
+  target_derivation_milestone: "benchmark_promotion"
+  milestone_burden: "Apply v4 base-case and protected-stop semantics to the finished plan."
+  strategy_id: "close_defer_or_terminalize_v21_relay_v1"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  physics_promotion_authorized: false
+  executed: false
+  next_action: "Checkpoint AJ-RT-20260804-003-001 once; then execute P16-T06 only in a separate claimed frame."
+
+ordinary_route_guard:
+  schema_id: "ordinary_route_guard_evaluation_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  evaluation_id: "ORE-HANDOFF-0964"
+  ordinary_handoff_id: "handoff-0964"
+  threshold: 3
+  consecutive_project_system_tasks_before_selection: 0
+  ready_science_plan_task_ids:
+    - "P16-T06"
+  ready_project_system_plan_task_ids: []
+  selected_plan_task_id: "P16-T06"
+  selected_route_class: "physics_bearing"
+  selected_worker_skill: "continue-research"
+  outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  exception_receipt:
+    active: false
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+active_state_boundary:
+  active_task_id: "RT-20260804-003"
+  active_job_id: "AJ-RT-20260804-003-001"
+  current_status: "p16_t05_qualifying_final_status_synthesis_pending_checkpoint"
+  checkpoint_required: true
+  checkpoint_completed: false
+  checkpoint_invocation_count: 0
+  p16_t05_executed: true
+  p16_t05_qualifying_finalized: true
+  p16_t06_executed: false
+  selected_next_plan_task_id: "P16-T06"
+  selected_next_worker_skill: "continue-research"
+  selected_next_role_family: "director-of-research@0.3.0"
+  selected_next_route_label: "goal-relay-closure"
+  selected_next_strategy_id: "close_defer_or_terminalize_v21_relay_v1"
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 255 validated claimed and consumed the exact route once."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Two required child perspectives and the parent fusion agree on the calibrated result."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Task-local status proof scorecards synthesis and compact receipt are internally consistent."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "Exactly one governed checkpoint remains."
+  renderer:
+    status: "PENDING"
+    evidence:
+      - "Approved generated projections remain to synchronize."
+  memory_bootstrap:
+    status: "PENDING"
+    evidence:
+      - "Tracked memory bootstrap remains to synchronize."
+  claim_language_linter:
+    status: "PENDING"
+    evidence:
+      - "Changed-source claim-language validation remains."
+
+authorization_layers:
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  submission_authorized: false
+  public_release_authorized: false
+  reviewer_contact_authorized: false
+  protected_scoped_gate_review_authorized: false
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  source_law_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+project_improvement_signals: []
+open_project_improvement_signal_ids: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required_no_new_signal_emitted"
+  sidecar_supersedes_research_handoff: false
+
+handoff_authority_boundary: "This handoff records a calibrated status synthesis only. It changes no science, Gate, benchmark, review, replication, publication, outward-action, or completed-derivation authority."
+next_plan_task_id: "P16-T06"
+next_plan_task_execution_ready_after_checkpoint: true
+next_plan_task_execution_ready_now: false
+next_plan_task_executed: false
+notes: "Checkpoint locally without push. P16-T06 requires a separate generation claim after checkpoint."

@@ -1,0 +1,478 @@
+job_id: "AJ-RT-20260804-003-001"
+task_id: "RT-20260804-003"
+decision_id: "DDR-20260804-003"
+role_id: "director-of-research"
+role_version: "0.3.0"
+execution_role_ref: "director-of-research@0.3.0--RT-20260804-003"
+status: "completed"
+validation_status: "PASS_PRECHECKPOINT"
+created_at: "2026-08-04T08:39:12Z"
+started_at: "2026-08-04T08:39:12Z"
+completed_at: "2026-08-04T08:52:38Z"
+completion_path: "research_control/tasks/RT-20260804-003/jobs/completions/AJC-AJ-RT-20260804-003-001.yaml"
+requires_human_gate: false
+objective: "Execute only V21 P16-T05 by producing a final answer-first scientific status, a separate research-system status, typed scorecards, and a compact evidence receipt without changing scientific authority."
+target_derivation_milestone: "benchmark_promotion"
+milestone_burden: "Create a calibrated final handoff without inventing completion."
+route_label: "integration-synthesis-packet"
+route_reason: "resume_research_after_project_system_repair"
+immutable_route_sha256: "60163219224ecc8a6a7f1c5862ce06d589d6a0148d89bfd747bb24175db7a926"
+route_blocker_fingerprint: "8ee8e92349d5138207617a151a9932eb670e675c989f270db81a2c1eb03218f7"
+route_evidence_sha256es:
+  - "8ee8e92349d5138207617a151a9932eb670e675c989f270db81a2c1eb03218f7"
+  - "a07c000eb284373057d553145bce07fdeaaeb22b98847ec034c8a15e11033bfd"
+source_head: "1181a85077cd266fe023282a5944059d2ea4c136"
+source_tree: "8a0fdbd7ac5144b9a580a85e644841992ea89888"
+plan_task_id: "P16-T05"
+recommendation_ids:
+  - "V21-R30"
+  - "V21-R43"
+  - "V21-R44"
+  - "V21-R61"
+  - "V21-R62"
+  - "V21-R65"
+  - "V21-R67"
+  - "V21-R69"
+  - "V21-R72"
+next_plan_task_ids:
+  - "P16-T06"
+physics_promotion_authorized: false
+proof_authority: false
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 255
+  passes_consumed: 226
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:255"
+  handoff_token: "a6e5f211346dbf9127eb26f131fff03a7243110b9ded89f7"
+  relay_claim_token: "2c5094c4c047cbf11a6d381d5cf0c5c41e0c1fa0f7fee378"
+  route_source_generation: 254
+  route_work_item_id: "P16-T05"
+  route_worker_skill: "continue-research"
+  route_sha256: "60163219224ecc8a6a7f1c5862ce06d589d6a0148d89bfd747bb24175db7a926"
+  route_reason: "resume_research_after_project_system_repair"
+  route_strategy_id: "continue_in_scope_generation_255"
+  route_blocker_fingerprint: "8ee8e92349d5138207617a151a9932eb670e675c989f270db81a2c1eb03218f7"
+  worker_skill: "continue-research"
+  worker_invocation_count: 1
+
+dependency_evidence:
+  - plan_task_id: "P16-T01"
+    task_id: "RT-20260803-002"
+    completion_path: "research_control/tasks/RT-20260803-002/jobs/completions/AJC-AJ-RT-20260803-002-001.yaml"
+    completion_sha256: "4e59a0ae6d0740677ef0b4331f753138f32b76b27981435f5933aaab1a78fd66"
+    status: "qualifying_checkpointed"
+  - plan_task_id: "P16-T02"
+    task_id: "RT-20260803-012"
+    completion_path: "research_control/tasks/RT-20260803-012/jobs/completions/AJC-AJ-RT-20260803-012-001.yaml"
+    completion_sha256: "32490ac7e5a57138f6de7a884825532ee17389d36634dbb9fc7f7cc076c0bf8d"
+    status: "qualifying_checkpointed"
+  - plan_task_id: "P16-T03"
+    task_id: "RT-20260803-013"
+    completion_path: "research_control/tasks/RT-20260803-013/jobs/completions/AJC-AJ-RT-20260803-013-001.yaml"
+    completion_sha256: "a0bd4691e276e5e0d97b45b734491f697deeb57ca0dc99b015bd7ea7d734fe91"
+    status: "qualifying_checkpointed"
+  - plan_task_id: "P16-T04"
+    task_id: "RT-20260804-001"
+    completion_path: "research_control/tasks/RT-20260804-001/jobs/completions/AJC-AJ-RT-20260804-001-001.yaml"
+    completion_sha256: "1dc975715f9e8f2554408348ea6dc9d2191f370d1f1cf724e23801b128c4ce4d"
+    checkpoint_commit: "1181a85077cd266fe023282a5944059d2ea4c136"
+    status: "qualifying_checkpointed"
+
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "physics"
+  payload_type: "proof_step"
+  candidate_family: "V21-P16-T05-FINAL-STATUS-LAYER-PROJECTION-V1"
+  assumption_delta:
+    - "Freeze the current P16-T01 through P16-T04 evidence set at its registered paths and hashes."
+    - "Partition status into scientific source, formal-equivalence, emergence, empirical, review-provenance, project-system control, target-reference/adoption, and protected-authority layers."
+    - "Admit only type-preserving projection into the synthesis and forbid direct or multi-step cross-layer coercions into source derivation, benchmark passage, independent replication, or completed GR derivation."
+  materiality_basis: "P16-T05 must turn a large, internally validated evidence graph into a compact final status without allowing control closure, target-side exact-GR adoption, or same-context review to masquerade as physics completion."
+  payload_details:
+    resolves_new_route_decision: true
+    decision_identity: "FinalStatusLayerNonPromotion_v1"
+    not_already_encoded_evidence: "This is the first final V21 integration proof over the qualifying P16-T01 through P16-T04 evidence set."
+    mathematical_payload: "Let E be the disjoint union of source, equivalence, emergence, empirical, review, control, target-reference/adoption, and protected-authority evidence types; let A_current be the current hash-bound evidence atoms and R_current the exact admissible inference rules. Under the type-preserving projection pi, the reflexive-transitive closure Cl_R_current(A_current) has empty intersection with the promotion-goal set {completed source derivation, positive benchmark passage, qualifying independent replication, publication authority}. This is current non-derivability, not a claim that the goals are externally false or impossible under future evidence."
+    obstruction_scope: "Task-local non-promotion result for the current hash-bound evidence graph; not a no-go theorem against future derivation, source extension, external review, replication, or benchmark evidence."
+    global_no_go_claimed: false
+  source_basis:
+    - "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+    - "research_control/tasks/RT-20260803-002/artifacts/v21_recommendation_coverage_audit.md"
+    - "research_control/tasks/RT-20260803-012/artifacts/v21_p16_t02_post_repair_gate_consistency_reaudit.md"
+    - "research_control/tasks/RT-20260803-013/artifacts/v21_p16_t03_final_provenance_audit.md"
+    - "research_control/tasks/RT-20260804-001/artifacts/v21_p16_t04_post_repair_final_reaudit_report.md"
+    - "canonical Gate A through Gate E decision artifacts and the Distance-to-GR ledger"
+  expected_artifact_paths:
+    - "research_control/tasks/RT-20260804-003/artifacts/child_phys_math_p16_t05_final_status_synthesis.yaml"
+    - "research_control/tasks/RT-20260804-003/artifacts/v21_p16_t05_final_status_synthesis.md"
+    - "research_control/tasks/RT-20260804-003/artifacts/v21_p16_t05_science_scorecard.yaml"
+    - "research_control/tasks/RT-20260804-003/artifacts/v21_p16_t05_system_scorecard.yaml"
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+    - "memory_sync_pass"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+
+family_freeze_admission:
+  schema_id: "family_freeze_route_admission_v1"
+  policy_id: "family_freeze_reopening_policy_v1"
+  route_id: "v21_p16_t05_final_status_synthesis"
+  family_id: "V21-P16-T05-FINAL-STATUS-LAYER-PROJECTION-V1"
+  family_identity_sha256: "60163219224ecc8a6a7f1c5862ce06d589d6a0148d89bfd747bb24175db7a926"
+  assumption_sha256es:
+    - "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+    - "a8afd3cecf381198e018f9b9c0f03891f95435bc5edea4fe1a7f74d392735ae5"
+    - "20bbc6082b3b55fad3a7401dc4e4b84295c2baa376f9a2f3ea03286f17da0d30"
+  route_kind: "theorem_investigation"
+  detected_match_basis: []
+  reopening:
+    requested: false
+    class: "none"
+  distinct_branch:
+    branch_identity: "P16-T05-FINAL-STATUS-LAYER-SYNTHESIS-BRANCH"
+    material_difference_basis: "This branch integrates the final P16 evidence through a typed non-promotion projection; it neither reconstructs a frozen physics candidate nor repeats an earlier Gate audit."
+    reconstructs_frozen_candidate: false
+    expected_artifact_paths:
+      - "research_control/tasks/RT-20260804-003/artifacts/v21_p16_t05_final_status_synthesis.md"
+      - "research_control/tasks/RT-20260804-003/artifacts/v21_p16_t05_science_scorecard.yaml"
+      - "research_control/tasks/RT-20260804-003/artifacts/v21_p16_t05_system_scorecard.yaml"
+  authority_limits:
+    local_family_freeze_preserved: true
+    global_no_go_claimed: false
+    automatic_candidate_adoption: false
+    theorem_truth_inferred: false
+    ontology_modified: false
+    physics_promotion_authorized: false
+
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "physics_bearing"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  expected_durable_outputs:
+    physics:
+      - "one answer-first final scientific status synthesis"
+      - "one typed status-layer non-promotion proof step"
+      - "one science scorecard and one separately labeled research-system scorecard"
+    project_system: []
+  acceptance_criteria:
+    physics:
+      - "every P16-T01 through P16-T04 dependency is hash-bound"
+      - "science and research-system status remain separate"
+      - "all Gate benchmark review replication methodology and Distance-to-GR limitations remain explicit"
+      - "the next route is selected without executing it"
+    project_system: []
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: false
+    exception_id: ""
+    evidence_path: ""
+    evidence_sha256: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0963"
+  source_handoff_path: "research_control/handoffs/handoff-0963.yaml"
+  source_handoff_sha256: "32b69cfa5a4e90a4a074d10c9e7ed911c499364f0f5e2fe7c1a1e3156301fc1d"
+  selected_plan_task_id: "P16-T05"
+  guard_outcome: "below_threshold"
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  parent:
+    execution_unit_id: "parent"
+    perspective: "physicist_mathematician_philosopher"
+    responsibilities:
+      - "bind each status statement to canonical evidence and type"
+      - "resolve science-versus-system and adoption-versus-derivation distinctions"
+      - "preserve child disagreement and unresolved limitations"
+      - "select but do not execute the next bounded route"
+  children:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260804-003/artifacts/child_phys_math_p16_t05_final_status_synthesis.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260804-003/artifacts/child_phys_phil_p16_t05_final_status_synthesis.yaml"
+      status: "completed"
+  conflict_policy:
+    review_path: "research_control/tasks/RT-20260804-003/artifacts/parent_conflict_review_p16_t05_final_status_synthesis.yaml"
+    max_resolution_rounds: 2
+    require_parallel_child_revision: true
+    unresolved_conflict_status: "blocked"
+  fusion_policy:
+    fusion_notes_path: "research_control/tasks/RT-20260804-003/artifacts/parent_fusion_notes_p16_t05_final_status_synthesis.md"
+    fused_output_path: "research_control/tasks/RT-20260804-003/artifacts/v21_p16_t05_final_status_synthesis.md"
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+    final_output_replaces_old_single_role_artifact: true
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  preflight_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1128
+    relationship_row_count: 5684
+    semantic_row_count: 1128
+    vault_row_count: 1128
+    local_cache_only_warning_count: 0
+  refresh_needed: false
+  refresh_performed: false
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search 'final scientific and research system status synthesis' --json"
+      query_type: "search"
+      query_text: "final scientific and research system status synthesis"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v21.md --json"
+      query_type: "lookup"
+      query_text: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  authority_note: "Generated wiki Obsidian semantic relationship PDF and .local surfaces are retrieval-only navigation and are not authority; registered canonical sources and tracked control state govern."
+
+source_snapshot:
+  plan_sha256: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  backlog_sha256: "849a4e8dfe848e80bc0c8236252b924e636e5c95ac1a090478a69f7f5377559f"
+  program_state_sha256: "0e20be264916d384bca4d9df490dba07f4d8c9206ddb22063488e9c70ea874e4"
+  current_frontier_sha256: "e24e211b0143d21ae0f04fe4f8abbc26605f902b0de40fe5e20476057b03b2f0"
+  source_handoff_sha256: "32b69cfa5a4e90a4a074d10c9e7ed911c499364f0f5e2fe7c1a1e3156301fc1d"
+  distance_to_gr_ledger_sha256: "8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642"
+  p16_t01_completion_sha256: "4e59a0ae6d0740677ef0b4331f753138f32b76b27981435f5933aaab1a78fd66"
+  p16_t02_completion_sha256: "32490ac7e5a57138f6de7a884825532ee17389d36634dbb9fc7f7cc076c0bf8d"
+  p16_t03_completion_sha256: "a0bd4691e276e5e0d97b45b734491f697deeb57ca0dc99b015bd7ea7d734fe91"
+  p16_t04_completion_sha256: "1dc975715f9e8f2554408348ea6dc9d2191f370d1f1cf724e23801b128c4ce4d"
+
+allowed_read_paths:
+  - "SOUL.md"
+  - "AGENTS.md"
+  - "README.md"
+  - "research_control/AGENTS.md"
+  - ".agents/roles/**"
+  - ".agents/schemas/**"
+  - ".codex/skills/continue-research/SKILL.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  - "research_control/design/**"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/**"
+  - "research_control/tasks/**"
+  - "research_control/approvals/**"
+  - "registries/**"
+  - "ontology/**"
+  - "markdown/**"
+  - "github-facing/**"
+allowed_write_paths:
+  - "research_control/tasks/RT-20260804-003/**"
+  - "research_control/handoffs/handoff-0964.yaml"
+  - "research_control/handoffs/handoff-0964.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/tex/**"
+allowed_generated_paths:
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/tex/**"
+forbidden_paths:
+  - ".agents/**"
+  - ".codex/**"
+  - "ontology/**"
+  - "legacy_ontology/**"
+  - "manuscripts/**"
+  - "tex/**"
+  - "implementations_plans/**"
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "registries/METRIC_USE_LEDGER.csv"
+  - "research_control/design/**"
+  - "scripts/**"
+  - "tests/**"
+  - "research_control/tasks/RT-20260803-002/**"
+  - "research_control/tasks/RT-20260803-012/**"
+  - "research_control/tasks/RT-20260803-013/**"
+  - "research_control/tasks/RT-20260804-001/**"
+forbidden_source_classes:
+  - "generated derivative as authority"
+  - "validator checkpoint registry route or role PASS as physics evidence"
+  - "target-side exact-GR adoption as first-principles source derivation"
+  - "system closure as scientific completion or Distance-to-GR progress"
+  - "same-context internal AI review as external human review or independent replication"
+  - "descriptive methodology evidence as causal workflow or physics superiority"
+  - "inconclusive benchmark execution as benchmark passage"
+  - "scoped obstruction as global no-go or future source-extension impossibility"
+  - "project-system repair implementation inside this research AgentJob"
+approved_commands:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  - ".venv/bin/python research_control/tasks/RT-20260804-003/artifacts/validate_p16_t05_final_status_synthesis.py --write-report --json"
+  - ".venv/bin/python research_control/tasks/RT-20260804-003/artifacts/validate_p16_t05_final_status_synthesis.py --check --json"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+  - ".venv/bin/python scripts/research_control/task_taxonomy.py --validate-repository --json"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --write"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --json output/research_dependency_graph.json --markdown wiki/indexes/research_dependency_graph.md --dot output/research_dependency_graph.dot"
+  - ".venv/bin/python scripts/research_control/generate_claim_graph_v1.py"
+  - ".venv/bin/python scripts/research_control/validate_generated_report_freshness.py --json"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --job-id AJ-RT-20260804-003-001 --json-summary"
+  - ".venv/bin/python -m scripts.validation.cli run --profile affected --paths research_control/tasks/RT-20260804-003 research_control/program_state.yaml research_control/handoffs/handoff-0964.yaml registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260804-003-001"
+  - "git diff --check"
+required_validators:
+  - "p16_t05_final_status_synthesis"
+  - "parent_child_synthesis"
+  - "task_taxonomy"
+  - "documentation_impact"
+  - "project_improvement_signal_parity"
+  - "claim_language"
+  - "research_control_exact_job_diff"
+  - "memory_bootstrap"
+  - "affected_validation_profile"
+  - "whitespace"
+  - "checkpoint"
+expected_outputs:
+  - "research_control/tasks/RT-20260804-003/artifacts/child_phys_math_p16_t05_final_status_synthesis.yaml"
+  - "research_control/tasks/RT-20260804-003/artifacts/child_phys_phil_p16_t05_final_status_synthesis.yaml"
+  - "research_control/tasks/RT-20260804-003/artifacts/parent_conflict_review_p16_t05_final_status_synthesis.yaml"
+  - "research_control/tasks/RT-20260804-003/artifacts/parent_fusion_notes_p16_t05_final_status_synthesis.md"
+  - "research_control/tasks/RT-20260804-003/artifacts/v21_p16_t05_final_status_synthesis.md"
+  - "research_control/tasks/RT-20260804-003/artifacts/v21_p16_t05_science_scorecard.yaml"
+  - "research_control/tasks/RT-20260804-003/artifacts/v21_p16_t05_system_scorecard.yaml"
+  - "research_control/tasks/RT-20260804-003/artifacts/v21_p16_t05_compact_receipt.json"
+  - "research_control/tasks/RT-20260804-003/artifacts/v21_p16_t05_validation.json"
+  - "research_control/tasks/RT-20260804-003/jobs/completions/AJC-AJ-RT-20260804-003-001.yaml"
+  - "research_control/handoffs/handoff-0964.yaml"
+  - "research_control/handoffs/handoff-0964.md"
+checkpoint_invocation_limit: 1
+legacy_validation_allowed: false
+success_criteria:
+  - "the final synthesis leads with the scientific answer and keeps research-system status separate"
+  - "P16-T01 through P16-T04 evidence paths and hashes resolve"
+  - "the status-layer projection preserves evidence types and proves no current promotion edge"
+  - "Gate B Gate D Gate E benchmark review replication methodology and publication limits remain explicit"
+  - "system success counts as neither physics nor Distance-to-GR progress"
+  - "P16-T06 is selected but not executed"
+  - "one governed checkpoint records the bounded synthesis without push"
+result:
+  result_status: "PASS_P16_T05_FINAL_STATUS_SYNTHESIS_CALIBRATED"
+  recommendation_count: 72
+  missing_recommendation_count: 0
+  benchmark_case_count: 6
+  benchmark_pass_count: 0
+  benchmark_inconclusive_count: 6
+  qualifying_independent_replication_count: 0
+  blocking_scientific_finding_count: 0
+  blocking_project_system_finding_count: 0
+  blocking_parent_conflict_count: 0
+  science_and_system_scorecards_separated: true
+  status_layer_nonpromotion_proof_recorded: true
+  p16_t05_qualifying_finalized: true
+  p16_t06_executed: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+selected_next_route:
+  route_id: "v21_p16_t06_goal_relay_closure"
+  route_label: "goal-relay-closure"
+  worker_skill: "continue-research"
+  role_family: "director-of-research@0.3.0"
+  plan_task_id: "P16-T06"
+  work_item_id: "P16-T06"
+  strategy_id: "close_defer_or_terminalize_v21_relay_v1"
+  target_derivation_milestone: "benchmark_promotion"
+  milestone_burden: "Apply v4 base-case and protected-stop semantics to the finished plan."
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  physics_promotion_authorized: false
+  executed: false
+notes: "P16-T05 is qualifying-finalized precheckpoint. P16-T06 remains outside this AgentJob and requires a separate claimed relay frame after checkpoint."

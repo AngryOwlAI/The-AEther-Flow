@@ -1,0 +1,50 @@
+schema_id: "parent_child_conflict_review_v1"
+task_id: "RT-20260804-003"
+job_id: "AJ-RT-20260804-003-001"
+review_id: "P16-T05-FINAL-STATUS-SYNTHESIS-CONFLICT-001"
+status: "resolved"
+resolution_rounds: 0
+child_outputs:
+  - execution_unit_id: "child_phys_math"
+    path: "research_control/tasks/RT-20260804-003/artifacts/child_phys_math_p16_t05_final_status_synthesis.yaml"
+    result: "QUALIFY_WITH_REFINED_CLOSURE_NONENTAILMENT"
+  - execution_unit_id: "child_phys_phil"
+    path: "research_control/tasks/RT-20260804-003/artifacts/child_phys_phil_p16_t05_final_status_synthesis.yaml"
+    result: "PASS_P16_T05_FINAL_STATUS_SYNTHESIS_CALIBRATED"
+shared_consensus:
+  - "P16-T05 can qualify as a bounded non-promotional synthesis."
+  - "Exact GR is maintained as a target reference but is not derived from substrate primitives."
+  - "Gate B Gate D and Gate E remain NOT_READY; Gate C is protected constitutive adoption rather than derivation."
+  - "All six benchmark cases are inconclusive with zero passes and zero qualifying independent replications."
+  - "Recommendation coverage and system reproducibility are strong internal control results but supply no physics or Distance-to-GR credit."
+  - "Same-context AI critique is not external human review or independent replication."
+  - "P16-T06 becomes eligible only after checkpoint and is not executed here."
+differences_reviewed:
+  - difference_id: "direct_edge_language_versus_closure_nonmembership"
+    child_a: "Required the proof to range over reflexive-transitive closure and use current non-membership rather than external falsity."
+    child_b: "Accepted the non-promotional conclusion through epistemic category separation."
+    resolution: "Adopt the stricter closure formulation and interpret it through the sibling's category separation."
+  - difference_id: "evidence_partition_granularity"
+    child_a: "Required target-reference/adoption and protected-human authority to be separate from source evidence."
+    child_b: "Distinguished interpretive formal emergence empirical review methodology and publication categories."
+    resolution: "Use eight disjoint formal evidence layers and retain the richer epistemic categories in prose and scorecards."
+unique_contributions_preserved:
+  child_phys_math:
+    - "reflexive-transitive closure non-membership formulation"
+    - "separate source target-reference and protected-authority evidence types"
+    - "explicit unresolved mathematical burden list"
+  child_phys_phil:
+    - "recommendation provenance review methodology and publication-accountability metrics"
+    - "public-claim-safe wording"
+    - "checkpoint-source reconciliation for handoff-0963"
+unresolved_conflicts: []
+blocking_conflict_count: 0
+fusion_decision: "PASS_P16_T05_FINAL_STATUS_SYNTHESIS_CALIBRATED"
+authority_limits:
+  scientific_status_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  external_review_completed: false
+  independent_replication_completed: false
+  p16_t06_executed: false

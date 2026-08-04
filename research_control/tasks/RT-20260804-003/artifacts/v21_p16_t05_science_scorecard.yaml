@@ -1,0 +1,146 @@
+schema_id: "v21_p16_t05_science_scorecard_v1"
+task_id: "RT-20260804-003"
+job_id: "AJ-RT-20260804-003-001"
+plan_task_id: "P16-T05"
+status: "CALIBRATED_OPEN_SCIENCE_STATUS"
+source_head: "1181a85077cd266fe023282a5944059d2ea4c136"
+target_derivation_milestone: "benchmark_promotion"
+milestone_burden: "Create a calibrated final handoff without inventing completion."
+
+answer_first:
+  exact_gr_reference_status: "MAINTAINED_AS_TARGET_SIDE_BENCHMARK"
+  first_principles_gr_derivation_status: "OPEN_NOT_COMPLETED"
+  source_derived_benchmark_status: "NOT_READY"
+  benchmark_case_count: 6
+  benchmark_pass_count: 0
+  benchmark_inconclusive_count: 6
+  independent_replication_count: 0
+  completed_derivation_authorized: false
+  physics_promotion_authorized: false
+
+status_layers:
+  interpretive:
+    status: "ACTIVE_BOUNDED_INTERPRETATION"
+    evidence: "The project maintains an exact-GR interpretive benchmark and a narrow continuum-first premetric research architecture."
+    limitation: "Interpretive coherence and a selected research architecture do not establish a physical spacetime ontology or source dynamics."
+  formal_equivalence:
+    status: "PARTIAL_TARGET_SIDE_EXACTNESS_SOURCE_SIDE_OPEN"
+    evidence: "The exact target-side GR reference and protected Gate C source matter package are recorded."
+    limitation: "Target-side adoption and a human-postulated matter package are not a first-principles derivation of effective geometry, universal coupling, or Einstein dynamics."
+  emergence:
+    status: "NOT_DERIVED"
+    evidence: "Scoped source objects, local witnesses, and conditional source-extension records exist."
+    limitation: "No admitted chain derives an unscoped effective metric, RetainH, GenH, or the Einstein sector from substrate primitives."
+  empirical_novelty:
+    status: "NO_PROMOTED_EMPIRICAL_RESULT"
+    evidence: "Six benchmark manifests were audited."
+    limitation: "All six cases remain INCONCLUSIVE, zero pass, with no qualifying independent replication or externally validated novel prediction."
+
+gate_status:
+  Gate_A:
+    status: "ADOPTED_NARROW_RESEARCH_ARCHITECTURE"
+    evidence_path: "research_control/tasks/RT-20260724-004/artifacts/ontology_regime_gate_chair_decision_v1.tex"
+    evidence_sha256: "20ea795bbe93333b489e4f13601fd6bb1623f318b7847f9d2d24402c7490c934"
+    meaning: "Continuum-first narrow premetric research architecture only; not physical spacetime or dynamics."
+  Gate_B:
+    status: "NOT_READY"
+    evidence_path: "research_control/tasks/RT-20260727-004/artifacts/p6_t08_gate_b_separating_certificate_v1.yaml"
+    evidence_sha256: "f3080ed6a6ba1d6847a3b7ed43c7a11ad7f7dae4deccd25486913ea9547f221b"
+    unmet_requirement_count: 8
+    meaning: "The current package does not establish an unscoped effective geometry; continuation remains open."
+  Gate_C:
+    status: "PROTECTED_SOURCE_MATTER_PACKAGE_ADOPTED_BY_POSTULATE"
+    evidence_path: "research_control/tasks/RT-20260729-001/artifacts/p7_t08_gate_c_decision_v1.tex"
+    evidence_sha256: "85fbf32fb9b02aeae556149cbc5c6b51bd6fedf278a3bc401545c93e29fc4827"
+    meaning: "An exact source matter package is adopted by protected human postulate; target coupling derivation remains open."
+  Gate_D:
+    status: "NOT_READY"
+    evidence_path: "research_control/tasks/RT-20260729-011/artifacts/p8_t07_gate_d_decision_v1.tex"
+    evidence_sha256: "035ea88a612d861a00d0703ec2bd1094e01194c113d7ff2588e3a4ad8bf47d63"
+    meaning: "Einstein-sector derivation requirements remain unmet."
+  Gate_E:
+    status: "NOT_READY"
+    evidence_path: "research_control/tasks/RT-20260731-004/artifacts/p9_t09_gate_e_decision_v1.tex"
+    evidence_sha256: "7f28103e40664f0a004af0134f3216932136f8efb160f0c7c59039efa5225b0b"
+    meaning: "Benchmark promotion and completed-derivation claims remain denied."
+
+distance_to_gr_status:
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_sha256: "8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642"
+  ledger_changed_by_task: false
+  burdens:
+    - burden: "Source ontology primitives"
+      status: "accepted"
+      task_effect: "unchanged_scoped_source_extension_status"
+    - burden: "Source equivalence EqSrc"
+      status: "draft object exists"
+      task_effect: "unchanged"
+    - burden: "RetainH"
+      status: "blocked by missing primitive"
+      task_effect: "unchanged"
+    - burden: "GenH"
+      status: "blocked by missing primitive"
+      task_effect: "unchanged"
+    - burden: "ObsLoc_lc"
+      status: "constructive witness exists"
+      task_effect: "unchanged_local_exact_branch_only"
+    - burden: "Resp_lc"
+      status: "accepted"
+      task_effect: "unchanged_source_extension_data_only"
+    - burden: "M_src"
+      status: "accepted"
+      task_effect: "unchanged_scoped_source_only"
+    - burden: "g_eff"
+      status: "accepted scoped record"
+      task_effect: "bare_metric_derivation_unresolved"
+    - burden: "matter coupling"
+      status: "accepted explicit constitutive postulate"
+      task_effect: "not_a_derivation"
+    - burden: "Einstein equations"
+      status: "draft object exists"
+      task_effect: "unchanged_not_ready"
+    - burden: "finite-variation robustness"
+      status: "Refuter stress passed"
+      task_effect: "unchanged_conditional_source_extension"
+    - burden: "benchmark promotion"
+      status: "blocked by missing primitive"
+      task_effect: "unchanged_not_ready_zero_passes"
+    - burden: "Gate Chair status"
+      status: "human-gated"
+      task_effect: "unchanged_prior_negative_verdict_fresh_authority_required"
+    - burden: "current route freeze or hard-fail status"
+      status: "not started"
+      task_effect: "no_new_freeze_or_hard_fail_existing_local_freezes_preserved"
+
+new_mathematical_payload:
+  payload_id: "FinalStatusLayerNonPromotion_v1"
+  payload_kind: "typed_evidence_projection_nonpromotion_proof_step"
+  claim_status: "draft/control"
+  statement: "Let the typed evidence universe be the disjoint union of source, equivalence, emergence, empirical, review, control, target-reference/adoption, and protected-authority layers. Under the exact current admissible rules, the reflexive-transitive closure of the hash-bound current evidence atoms has empty intersection with the promotion-goal set containing completed source derivation, positive benchmark passage, qualifying independent replication, and publication authority."
+  result: "CURRENT_STATUS_SYNTHESIS_DOES_NOT_PROMOTE_PHYSICS"
+  scope: "Current hash-bound repository evidence and rule relation only; a non-derivability result, not an assertion that the goals are externally false, a physics theorem, a global no-go, or a claim about future source extensions."
+  proof_authority: false
+  global_no_go_claimed: false
+
+theorem_inventory:
+  canonical_inventory_updated: false
+  rationale: "The new payload is a task-local control-layer proof step that changes no derivational theorem status or Distance-to-GR burden."
+
+open_scientific_actions:
+  - "Derive or lawfully adopt the missing source-side primitives required for RetainH and GenH."
+  - "Derive an unscoped effective geometry and universal matter coupling from the admitted source package."
+  - "Derive the Einstein sector under explicit assumptions and discharge Gate D."
+  - "Produce positive source-derived benchmark evidence with qualifying independent replication before any Gate E reconsideration."
+
+authority_limits:
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  ontology_modified: false
+  source_law_adopted: false
+  proof_authority: false
+  benchmark_promoted: false
+  external_review_completed: false
+  independent_replication_completed: false
+  publication_authorized: false
+  public_release_authorized: false
+  physics_promotion_authorized: false

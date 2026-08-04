@@ -1,0 +1,105 @@
+schema_id: "v21_p16_t05_research_system_scorecard_v1"
+task_id: "RT-20260804-003"
+job_id: "AJ-RT-20260804-003-001"
+plan_task_id: "P16-T05"
+status: "INTERNALLY_TRACEABLE_AND_CLAIM_CALIBRATED_PRECHECKPOINT"
+source_head: "1181a85077cd266fe023282a5944059d2ea4c136"
+
+answer_first:
+  internal_control_status: "QUALIFYING"
+  scientific_completion_inferred: false
+  external_validation_inferred: false
+  publication_readiness_inferred: false
+  current_task_checkpoint_status: "PENDING_SINGLE_GOVERNED_CHECKPOINT"
+
+dimensions:
+  recommendation_coverage:
+    status: "PASS"
+    recommendation_count: 72
+    recommendation_with_qualifying_coverage_count: 72
+    planned_mapping_edge_count: 633
+    verified_pre_p16_edge_count: 598
+    downstream_p16_edge_count_at_p16_t01: 35
+    missing_recommendation_count: 0
+    source_path: "research_control/tasks/RT-20260803-002/artifacts/v21_recommendation_coverage_audit.md"
+    source_sha256: "653f8205a160cf7d94ac5a462590cb88284566f3bee6454a606f28edd8d9eab0"
+    limitation: "Coverage proves traceable plan execution, not truth or scientific success."
+  gate_and_status_consistency:
+    status: "PASS"
+    gate_chain_aligned: true
+    blocking_scientific_finding_count: 0
+    blocking_project_system_finding_count: 0
+    source_path: "research_control/tasks/RT-20260803-012/artifacts/v21_p16_t02_post_repair_gate_consistency_reaudit.md"
+    source_sha256: "a8afd3cecf381198e018f9b9c0f03891f95435bc5edea4fe1a7f74d392735ae5"
+    limitation: "Consistency preserves the non-promotional Gate outcomes; it does not upgrade them."
+  provenance_and_reproducibility:
+    status: "PASS_INTERNAL_REPOSITORY_EVIDENCE_GRAPH"
+    immutable_reference_count: 1182
+    registered_content_address_count: 1088
+    selected_validator_count: 15
+    reproduced_scientific_package_count: 4
+    source_path: "research_control/tasks/RT-20260803-013/artifacts/v21_p16_t03_final_provenance_audit.md"
+    source_sha256: "72316ad40fdab3b5d88c88602c1832de99045616421eba244143e436ec87ca59"
+    limitation: "Repository reproducibility is not independent scientific replication or external review."
+  final_claim_boundary:
+    status: "PASS_INTERNAL_NO_BLOCKING_OVERCLAIM"
+    terminal_task_completion_identity_count_through_p16_t04: 139
+    plan_bearing_handoff_count_through_handoff_0962: 143
+    blocking_scientific_finding_count: 0
+    blocking_project_system_finding_count: 0
+    undisposed_critical_or_high_finding_count: 0
+    source_path: "research_control/tasks/RT-20260804-001/artifacts/v21_p16_t04_post_repair_final_reaudit_report.md"
+    source_sha256: "20bbc6082b3b55fad3a7401dc4e4b84295c2baa376f9a2f3ea03286f17da0d30"
+    limitation: "The review is same-context internal AI critique, not external human review or independent replication."
+  methodology:
+    status: "DESCRIPTIVE_NONCAUSAL"
+    causal_superiority_established: false
+    physics_superiority_established: false
+    publication_or_release_authorized: false
+  publication_controls:
+    status: "NO_OUTWARD_ACTION_AUTHORIZED"
+    reproducibility_package_count: 4
+    clean_reproduction_pass_count: 4
+    external_action_decision_cell_count: 16
+    authorized_cell_count: 0
+    denied_cell_count: 16
+    external_action_performed_count: 0
+  current_synthesis:
+    status: "PENDING_GOVERNED_CHECKPOINT"
+    science_and_system_scorecards_separated: true
+    status_layer_nonpromotion_proof_recorded: true
+    project_improvement_signal_count: 0
+    p16_t06_executed: false
+
+closed_system_questions:
+  - "Every V21 recommendation has qualifying tracked coverage."
+  - "The current Gate A through Gate E status chain is internally consistent and non-promotional."
+  - "The selected repository evidence graph is content-addressed and reproducible under the audited validators."
+  - "The final same-context internal overclaim audit has no blocking finding."
+
+questions_not_closed_by_system_evidence:
+  - "Whether the source ontology is physically true."
+  - "Whether the substrate derives effective geometry, universal coupling, or Einstein dynamics."
+  - "Whether any benchmark case passes under qualifying independent replication."
+  - "Whether external experts endorse the work."
+  - "Whether the work is ready or authorized for submission, publication, or public release."
+
+dual_budget_result:
+  category: "physics_bearing"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  system_success_counts_as_physics: false
+  system_success_counts_as_distance_to_gr: false
+  validator_pass_counts_as_physics: false
+
+authority_limits:
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  external_review_completed: false
+  human_expert_review_completed: false
+  independent_replication_completed: false
+  publication_authorized: false
+  public_release_authorized: false
+  push_authorized: false
+  physics_promotion_authorized: false
