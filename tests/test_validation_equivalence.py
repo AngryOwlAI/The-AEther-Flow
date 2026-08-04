@@ -1113,8 +1113,8 @@ class ValidationEquivalenceTests(unittest.TestCase):
 
     def test_taxonomy_and_severity_classifications_are_exhaustively_audited(self) -> None:
         taxonomy = taxonomy_classification_audit()
-        self.assertEqual(taxonomy["active_class_count"], 42)
-        self.assertEqual(taxonomy["legacy_covered_class_count"], 42)
+        self.assertEqual(taxonomy["active_class_count"], 43)
+        self.assertEqual(taxonomy["legacy_covered_class_count"], 43)
         self.assertEqual(taxonomy["legacy_missing_class_ids"], [])
         self.assertEqual(taxonomy["consolidated_missing_class_ids"], [])
         self.assertEqual(taxonomy["authority_mismatch_class_ids"], [])
@@ -1160,7 +1160,7 @@ class ValidationEquivalenceTests(unittest.TestCase):
         self.assertEqual(report["counts"]["semantic_mismatch_fixture_count"], 0)
         self.assertEqual(report["counts"]["hard_finding_disappearance_count"], 0)
         self.assertEqual(report["counts"]["warning_finding_disappearance_count"], 0)
-        self.assertEqual(report["counts"]["taxonomy_class_count"], 42)
+        self.assertEqual(report["counts"]["taxonomy_class_count"], 43)
         self.assertEqual(report["counts"]["taxonomy_class_finding_disappearance_count"], 0)
         self.assertEqual(report["counts"]["taxonomy_authority_mismatch_class_count"], 0)
         self.assertTrue(report["authority_boundary"]["p1_t04_unlocked"])

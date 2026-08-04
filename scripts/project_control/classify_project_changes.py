@@ -159,6 +159,9 @@ STATUS_CALIBRATION_CONTROL_PATHS = {
     "research_control/design/accepted_status_calibration_v2.yaml",
     "research_control/design/distance_to_gr_status_aliases.yaml",
 }
+RED_TEAM_REVIEW_CONTROL_TEMPLATE_PATHS = {
+    "research_control/templates/RED_TEAM_REVIEW_ARTIFACT_TEMPLATE.yaml",
+}
 VALIDATION_GATE_MANIFEST_PATH = (
     "research_control/design/validation_gate_manifest_v1.yaml"
 )
@@ -566,6 +569,7 @@ def classify_path_family(path: str, registry: RegistryIndex) -> dict[str, object
         reasons.add("path_rule:control_state")
     if (
         path in STATUS_CALIBRATION_CONTROL_PATHS
+        or path in RED_TEAM_REVIEW_CONTROL_TEMPLATE_PATHS
         or path_matches(path, CLAIM_LANGUAGE_PATH_PATTERNS)
     ):
         tags.add("claim_language")
@@ -576,6 +580,7 @@ def classify_path_family(path: str, registry: RegistryIndex) -> dict[str, object
         or path_matches(path, [".codex/skills/*/SKILL.md"])
         or path.startswith(".codex/skills/continue-research-goal/scripts/")
         or path in STATUS_CALIBRATION_CONTROL_PATHS
+        or path in RED_TEAM_REVIEW_CONTROL_TEMPLATE_PATHS
         or path == VALIDATION_GATE_MANIFEST_PATH
         or path == VALIDATION_OBLIGATION_CATALOG_PATH
         or any(source.role in {"control_schema", "control_policy"} for source in sources)

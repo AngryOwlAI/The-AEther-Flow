@@ -1,0 +1,117 @@
+{
+  "schema_id": "generation_251_cumulative_documentation_impact_recovery_receipt_v1",
+  "task_id": "RT-20260803-019",
+  "job_id": "AJ-RT-20260803-019-001",
+  "decision_id": "DDR-20260803-019",
+  "goal_id": "crg-20260720T161354Z-96bc2664ce31bfe0",
+  "goal_generation": 251,
+  "goal_route_sha256": "7d14e21f7d55f18aa191ddf1f00a2fac9f1f09d754ac99a8717a54b0d3793c4f",
+  "source_generation": 250,
+  "source_task_id": "RT-20260803-018",
+  "source_job_id": "AJ-RT-20260803-018-001",
+  "source_head": "2cc682251201d8d034dcd447fde006a49f3db650",
+  "route_blocker_fingerprint": "c0e334b568a13a65bf4930878c28d21cef525c0428a27f67c24bfe3be5055734",
+  "failed_gate_id": "documentation_impact",
+  "failed_gate_status": "FAIL_35_CUMULATIVE_RECEIPT_COVERAGE_OMISSIONS",
+  "failed_gate_evidence_path": "research_control/tasks/RT-20260803-018/artifacts/precheckpoint_blocker_generation_250_documentation_receipt_coverage_v1.yaml",
+  "failed_gate_evidence_sha256": "5040806fd5129a97127d19124fce6399121610e95cf93bd0b3104cd296a09931",
+  "inherited_manifest_sha256": "f1ef46f8a33221dea438b2a1651674f6da09eca2be33d863ce190575bc63c642",
+  "repair_strategy_id": "recover_generation_250_cumulative_documentation_impact_coverage_v1",
+  "before_error_count": 35,
+  "after_error_count": 0,
+  "after_warning_count": 0,
+  "cumulative_changed_path_count": 113,
+  "targets": [
+    {
+      "path": "research_control/tasks/RT-20260803-015/documentation_impact.yaml",
+      "sha256_before": "0bb5440c02f9993dff78b9e3311d9268a1928d46b5fc452a381dc6e366876e17",
+      "sha256_after": "1839e3dccbe9a6acd1fa626ee869ff3d1aaa069a7fb5507ab5a64ec546a690ed",
+      "missing_path_count_before": 12,
+      "folder_map_generated_derivative_count_after": 1
+    },
+    {
+      "path": "research_control/tasks/RT-20260803-016/documentation_impact.yaml",
+      "sha256_before": "d50430cdc14d2af94887f6a055488af88d1988838929d0a252e42d6e76ba8adc",
+      "sha256_after": "3c69ee3a32958fe88bcc4121be86464143bef555ad032448506975b075e058bf",
+      "missing_path_count_before": 12,
+      "folder_map_generated_derivative_count_after": 1
+    },
+    {
+      "path": "research_control/tasks/RT-20260803-017/documentation_impact.yaml",
+      "sha256_before": "5802c90e8f1aa95f66e553f4be6a39fd58481177d44a1ba12db94940d14c4101",
+      "sha256_after": "5ef0f94d5ade3a5ad204e4914f0361471a3ed57d7d14f7b0df65f4be6b437551",
+      "missing_path_count_before": 11,
+      "folder_map_generated_derivative_count_after": 1
+    },
+    {
+      "path": "research_control/tasks/RT-20260803-018/documentation_impact.yaml",
+      "sha256_before": "50b0accda2790343b0af507fb052aa703a3d7f52ef89fc2a86d551f0b0c3eaff",
+      "sha256_after": "439f8607c2333cd0f8b603492dc3d6193d6feac2f907b0c7da13a95e4690ce6f",
+      "missing_path_count_before": 0,
+      "folder_map_generated_derivative_count_after": 1
+    },
+    {
+      "path": "research_control/tasks/RT-20260803-019/documentation_impact.yaml",
+      "sha256_before": null,
+      "sha256_after": "b19c3109afded7775f628087ace990283b41095fcbb171b9155c8d8225cc4e08",
+      "missing_path_count_before": 0,
+      "folder_map_generated_derivative_count_after": 1
+    }
+  ],
+  "protected_hashes": {
+    "handoff_0959_yaml_sha256": "b7e9ca5eefc211fd1a01acbfc2bd9370321165362633a674a82467218ec83b74",
+    "rt018_completion_sha256": "e0466a6c03b71e778bb9a773585164308aeaa9a932d0f9c3262a6a29e99bf8e8",
+    "generation_248_blocker_sha256": "a6215a79cf70cfd7d2221c191e7f96c06a8288a639eadfd162b25558287d5785",
+    "generation_250_blocker_sha256": "5040806fd5129a97127d19124fce6399121610e95cf93bd0b3104cd296a09931"
+  },
+  "protected_hash_mismatch_count": 0,
+  "checkpoint_blocker": {
+    "path": "research_control/tasks/RT-20260803-019/artifacts/checkpoint_blocker_generation_251_staged_whitespace_and_control_contracts_v1.yaml",
+    "sha256": "8c8bffe692a84541059016ac1dfd7b5ffdbf884c890f0a77c072379adbe18cc9",
+    "status": "active_blocking",
+    "failed_gate_id": "git_diff_check",
+    "failed_path": "research_control/tasks/RT-20260803-019/documentation_impact.yaml",
+    "failed_line": 225,
+    "failed_issue": "new blank line at EOF",
+    "operational_receipt_path": ".local/validation-receipts/8afbc6d6c1cc892533a3e7f8e45a1e2fb8243d85d803a1dadc854fe5c9fbe844/RUN-CHECKPOINT-d6c313824a1d24a9/receipt.json",
+    "operational_receipt_sha256": "459e84a63d2a969e65317e90324aa5d22f5eb40ad21d6419dc26f8664d3026ee",
+    "head_unchanged": true,
+    "preexisting_index_restored": true,
+    "retry_authorized_for_this_job": false
+  },
+  "prospective_reaudit_activation": {
+    "schema_id": "ordinary_route_guard_plan_reaudit_activation_v1",
+    "status": "required",
+    "plan_task_id": "P16-T04",
+    "activated_by_task_id": "RT-20260803-019",
+    "source_task_id": "RT-20260803-015",
+    "source_completion_path": "research_control/tasks/RT-20260803-015/jobs/completions/AJC-AJ-RT-20260803-015-001.yaml",
+    "source_completion_sha256": "bfec266a4824df117db6c8b4275f79df333e1294871d1b8ed769521639e6a690",
+    "historical_handoff_evaluation_change_count": 0,
+    "expected_ready_science_plan_task_ids_after_activation": [
+      "P16-T04"
+    ],
+    "closes_after_later_qualifying_scientific_completion": true
+  },
+  "validation_results": {
+    "documentation_impact": "PASS_ZERO_ERRORS_ZERO_WARNINGS",
+    "exact_rt015_folder_map_generated_derivative": "PASS_ONE_OF_ONE",
+    "inherited_non_receipt_payload_preservation": "PASS",
+    "prospective_p16_t04_reaudit_activation": "PASS_HASH_BOUND_PROSPECTIVE",
+    "checkpoint": "BLOCKED_SINGLE_FRESH_GOVERNED_INVOCATION_FAILED_SAFELY"
+  },
+  "checkpoint_invocation_count": 1,
+  "checkpoint_status": "BLOCKED_STAGED_GIT_DIFF_CHECK_NO_COMMIT",
+  "generation_247_job_replayed": false,
+  "generation_247_checkpoint_replayed": false,
+  "generation_248_job_replayed": false,
+  "generation_248_checkpoint_replayed": false,
+  "generation_250_job_replayed": false,
+  "p16_t04_reaudit_executed": false,
+  "p16_t05_executed": false,
+  "scientific_claims_changed": false,
+  "distance_to_gr_delta_changed": false,
+  "physics_promotion_authorized": false,
+  "proof_authority": false,
+  "publication_or_push_authorized": false
+}

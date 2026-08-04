@@ -1,0 +1,227 @@
+validation_status: "PASS_PRECHECKPOINT"
+handoff_id: "handoff-0956"
+handoff_number: 956
+handoff_kind: "project_system_repair"
+task_id: "RT-20260803-015"
+decision_id: "DDR-20260803-015"
+job_id: "AJ-RT-20260803-015-001"
+completion_id: "AJC-AJ-RT-20260803-015-001"
+completion_path: "research_control/tasks/RT-20260803-015/jobs/completions/AJC-AJ-RT-20260803-015-001.yaml"
+completion_sha256: "bfec266a4824df117db6c8b4275f79df333e1294871d1b8ed769521639e6a690"
+status: "ready_after_checkpoint"
+created_at: "2026-08-03T22:21:45Z"
+parent_handoff_id: "handoff-0955"
+plan_task_id: "P16-T04"
+recovery_for_plan_task_id: "P16-T04"
+source_role_id: "project-control-maintainer"
+source_role_version: "0.2.0"
+source_execution_role_ref: "project-control-maintainer@0.2.0--RT-20260803-015"
+summary: "Generation 246 makes the current stable skeptical-review role and task display unambiguously internal, preserves the legacy role ID and every recorded P16-T04 historical hash, reserves external human review and independent replication for taxonomy-qualified evidence, adds fail-closed role schema artifact claim-linter and renderer regressions, and resolves PIS-RT-20260803-014-001 against a PASS completion. One governed checkpoint remains before a distinct fresh P16-T04 re-audit."
+next_action: "Run one governed checkpoint for AJ-RT-20260803-015-001. After it commits, run one fresh bounded P16-T04 final claim-boundary re-audit through continue-research; do not execute P16-T05 first."
+current_claim_boundary: "CB-PS-P16-T04-INTERNAL-REVIEW-LABEL-CONTRACT-REPAIR-001"
+loop_risk_route: "reaudit_p16_t04_after_internal_review_label_contract_repair_v1"
+
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260803-015"
+  latest_research_handoff_id: "handoff-0956"
+  latest_research_next_action: "Run one governed checkpoint for AJ-RT-20260803-015-001. After it commits, run one fresh bounded P16-T04 final claim-boundary re-audit through continue-research; do not execute P16-T05 first."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+  project_improvement_sidecar_required: false
+  research_handoff_remains_authoritative: true
+
+claim_boundary:
+  allowed_next_scope: "One governed RT-20260803-015 checkpoint followed by one fresh bounded P16-T04 claim-boundary re-audit under the current internal skeptical-review contract; P16-T05 remains unexecuted."
+  completed_task: "RT-20260803-015"
+  completed_completion_path: "research_control/tasks/RT-20260803-015/jobs/completions/AJC-AJ-RT-20260803-015-001.yaml"
+  completed_completion_sha256: "bfec266a4824df117db6c8b4275f79df333e1294871d1b8ed769521639e6a690"
+  source_handoff_id: "handoff-0955"
+  source_handoff_path: "research_control/handoffs/handoff-0955.yaml"
+  source_handoff_sha256: "184822449446d4df679dd47f59b31e494499e27092cb75c5ecae09c72a654507"
+  immutable_route_sha256: "3c643ee0cb66925c0648378e303f08400f0867d8d7851b6ba306f7e2dd664cc8"
+  route_blocker_fingerprint: "62fc53d51e15d125a0b37e78b21086f14a6c1f609630caecdda52a5fdd07f0ca"
+  result_status: "PASS_P16_T04_INTERNAL_REVIEW_LABEL_CONTRACT_REPAIR"
+  validation_path: "research_control/tasks/RT-20260803-015/artifacts/p16_t04_internal_review_label_contract_validation.json"
+  validation_sha256: "97edc8ab306c30ce453f978442226c9cae3fa012acf1efe842343266fb37f629"
+  source_completion_path: "research_control/tasks/RT-20260803-014/jobs/completions/AJC-AJ-RT-20260803-014-001.yaml"
+  source_completion_sha256: "cf403db773c3aacc33bc127c067abf12218e56bb43f0e6dbe8de0790b31bd6a2"
+  source_report_path: "research_control/tasks/RT-20260803-014/artifacts/v21_p16_t04_final_red_team_report.md"
+  source_report_sha256: "84e8d459aad80a05a23a1eb9842716479b1f26ac551dec6a886ed0fa24d9c41d"
+  source_severity_matrix_path: "research_control/tasks/RT-20260803-014/artifacts/v21_p16_t04_severity_repair_matrix.yaml"
+  source_severity_matrix_sha256: "0a953126e9844a21e623b96bc1bfbfb6c11dcd30f7393798c70d4c84f3ed5911"
+  current_role_id: "external-red-team-reviewer"
+  current_role_name: "Internal Skeptical Reviewer"
+  current_role_kind: "scientific_adversarial_internal_review"
+  project_improvement_signal_id: "PIS-RT-20260803-014-001"
+  project_improvement_signal_status: "resolved"
+  focused_test_count: 73
+  focused_test_pass_count: 73
+  checkpoint_invocation_count_before_handoff: 0
+  checkpoint_committed_before_handoff: false
+  p16_t04_reaudit_executed: false
+  p16_t05_executed: false
+  scientific_claims_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  external_action_authorized: false
+  push_performed: false
+  blocked_claims:
+    - "legacy role ID or skeptical stance as external provenance"
+    - "same-context blind-same-model or different-model AI critique as external human review"
+    - "review execution as independent replication without independent data code and method evidence"
+    - "project-system repair or validator PASS as science benchmark Gate proof or completed derivation"
+
+plan_result:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  phase_id: "P16"
+  plan_task_id: "P16-T04"
+  recovery_for_plan_task_id: "P16-T04"
+  title: "Repair the current internal skeptical-review label contract"
+  result_status: "P16_T04_INTERNAL_REVIEW_LABEL_CONTRACT_REPAIR_PASS"
+  work_item_status: "repair_completed_reaudit_pending"
+  stable_legacy_role_id_preserved: true
+  current_internal_display_contract_complete: true
+  external_and_independent_vocabulary_evidence_qualified: true
+  historical_hashes_preserved: true
+  project_improvement_signal_status: "resolved"
+  p16_t04_reaudit_dependency_ready_after_checkpoint: true
+  p16_t04_reaudit_dependency_ready_now: false
+  p16_t04_reaudit_executed: false
+  p16_t05_executed: false
+  scientific_claims_changed_by_repair: false
+  distance_to_gr_delta_changed_by_repair: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+distance_to_gr:
+  changed: false
+  effect: "none_project_system_internal_review_label_contract_repair"
+  burden_id: "none"
+  milestone: "none"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "Reviewer labels provenance checks and task-display projection supply no physics evidence."
+  downstream_unlocked:
+    - "fresh P16-T04 claim-boundary re-audit after checkpoint"
+  downstream_still_blocked:
+    - "P16-T04 final disposition until the re-audit"
+    - "P16-T05 until P16-T04 completion"
+    - "benchmark promotion proof publication external action or completed derivation"
+
+required_next_packet:
+  task_type: "v21_p16_t04_final_claim_boundary_internal_skeptical_reaudit"
+  plan_task_id: "P16-T04"
+  work_item_id: "P16-T04"
+  objective: "Freshly re-audit the final project state under the corrected internal skeptical-review contract and determine whether P16-T04 is qualifying-finalized or one precise obstruction remains."
+  dependency_ready_after_checkpoint: true
+  dependency_ready_now: false
+  exact_human_authorization_required: false
+  executed: false
+
+selected_next_route:
+  route_id: "v21_p16_t04_fresh_claim_boundary_reaudit_after_internal_label_repair"
+  route_label: "internal-skeptical-review-packet"
+  role_family: "external-red-team-reviewer@0.1.0"
+  role_display_name: "Internal Skeptical Reviewer"
+  worker_skill: "continue-research"
+  selected_next_packet_type: "post_repair_final_claim_boundary_reaudit"
+  task_type: "v21_p16_t04_final_claim_boundary_internal_skeptical_reaudit"
+  plan_task_id: "P16-T04"
+  work_item_id: "P16-T04"
+  target_derivation_milestone: "benchmark_promotion"
+  milestone_burden: "Provide the last adversarial claim-boundary check without provenance overread."
+  strategy_id: "reaudit_p16_t04_after_internal_review_label_contract_repair_v1"
+  required_predecessor_signal_id: "PIS-RT-20260803-014-001"
+  required_predecessor_sidecar_id: "improve-project-handoff_20260803_005"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  p16_t05_authorized: false
+  physics_promotion_authorized: false
+  executed: false
+  next_action: "Run one governed checkpoint for AJ-RT-20260803-015-001. After it commits, run one fresh bounded P16-T04 final claim-boundary re-audit through continue-research; do not execute P16-T05 first."
+
+ordinary_route_guard:
+  schema_id: "ordinary_route_guard_evaluation_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  evaluation_id: "ORE-HANDOFF-0956"
+  ordinary_handoff_id: "handoff-0956"
+  threshold: 3
+  consecutive_project_system_tasks_before_selection: 1
+  ready_science_plan_task_ids:
+    - "P16-T05"
+  ready_project_system_plan_task_ids: []
+  selected_plan_task_id: "P16-T04"
+  selected_route_class: "physics_bearing"
+  selected_worker_skill: "continue-research"
+  outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  exception_receipt:
+    active: false
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+  completion_internal:
+    status: "PASS"
+  repository_precheckpoint:
+    status: "PASS"
+  checkpoint:
+    status: "PENDING"
+  renderer:
+    status: "PASS"
+  memory_bootstrap:
+    status: "PASS"
+  claim_language_linter:
+    status: "PASS"
+
+authorization_layers:
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  submission_authorized: false
+  public_release_authorized: false
+  reviewer_contact_authorized: false
+  protected_scoped_gate_review_authorized: false
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  source_law_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+project_improvement_signals: []
+open_project_improvement_signal_ids: []
+resolved_project_improvement_signals:
+  - "PIS-RT-20260803-014-001"
+project_improvement_bridge:
+  required: true
+  improvement_handoff_path: "research_control/project_improvement_handoffs/improve-project-handoff_20260803_005.yaml"
+  signal_ids:
+    - "PIS-RT-20260803-014-001"
+  bridge_status: "resolved_pass_precheckpoint"
+  sidecar_supersedes_research_handoff: false
+  notes: "The resolved sidecar does not replace ordinary research authority and creates no scientific authority."
+handoff_authority_boundary: "This handoff proves only current project-system label and provenance-contract alignment. It does not establish external human review, independent replication, scientific correctness, Gate authority, benchmark promotion, proof, publication readiness, outward action, or completed derivation."
+next_plan_task_id: "P16-T04"
+next_plan_task_execution_ready_after_checkpoint: true
+next_plan_task_execution_ready_now: false
+next_plan_task_executed: false
+notes: "Checkpoint locally without push. Then run the fresh P16-T04 re-audit through continue-research; P16-T05 remains unexecuted."

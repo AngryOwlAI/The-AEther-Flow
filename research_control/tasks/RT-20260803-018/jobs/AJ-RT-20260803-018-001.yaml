@@ -1,0 +1,359 @@
+job_id: "AJ-RT-20260803-018-001"
+task_id: "RT-20260803-018"
+decision_id: "DDR-20260803-018"
+role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260803-018"
+status: "completed"
+validation_status: "FAIL"
+created_at: "2026-08-04T02:50:31Z"
+started_at: "2026-08-04T02:50:31Z"
+completed_at: "2026-08-04T02:50:31Z"
+completion_path: "research_control/tasks/RT-20260803-018/jobs/completions/AJC-AJ-RT-20260803-018-001.yaml"
+requires_human_gate: false
+human_authorization_note: "Generation 250 authorizes exactly one improve-project-system worker and one outer AgentJob for RT-017 ordered allowlist parity only."
+objective: "Preserve AJ-RT-20260803-017-001 byte-for-byte; make only its expired execution-role source and ROLE_EXECUTION registry allowed_write_paths equal the immutable job's exact ordered 61-path list; prove protected bytes and four-way parity; and stop before the distinct documentation-receipt recovery or checkpoint."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system allowlist identity recovery only; no scientific burden is discharged."
+route_label: "project-system-allowlist-parity-recovery"
+route_reason: "generation_249_preexecution_rt017_job_role_allowlist_parity_failure"
+route_strategy_id: "repair_p16_t04_rt017_agentjob_execution_role_allowlist_parity_v1"
+immutable_route_sha256: "257bde39d376fbdc14e8ae45467ef3156d75370a6e9c8f6ba132ff504e9ff006"
+route_blocker_fingerprint: "be2362ac2ade10716fbb6b1131c44faf4f809b8b39951810993a73c8822448f1"
+inherited_manifest_sha256: "50532942922b1584c181deaa9e7c157cc687d369196457787aad323e1c639f90"
+source_head: "2cc682251201d8d034dcd447fde006a49f3db650"
+source_job_sha256: "5a94fdd4fa9fcd80ae44588cb2ba3eacdc707b3235caba2af301c1881a949adc"
+source_role_sha256_before_repair: "cf6a4e167765a35bb6cccfe314dbe2207f36849b8c0db4942bfbdc6dd5dbc83b"
+source_agent_job_registry_sha256: "3b441303723e6e44009cfa6bad6088388079a56ea1d1ee3420fe586957ca48cd"
+source_role_execution_registry_sha256: "c93437b614cbd39ad2c73621d12114e03eb41016c694904b82705273cc537c9b"
+plan_task_id: "P16-T03"
+recovery_for_plan_task_id: "P16-T04"
+next_plan_task_id: "P16-T03"
+next_plan_task_execution_authorized: false
+p16_t04_reaudit_execution_authorized: false
+p16_t05_payload_execution_authorized: false
+project_system_change_only: true
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 250
+  passes_consumed: 221
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:250"
+  handoff_token: "13fd4cb1765d5f7a4ccc4a97131354b66c38e6a09274cbfd"
+  relay_claim_token: "cb246a4d21571277686b254a6cd5fc9018894bcf049465d5"
+  route_work_item_id: "P16-T04"
+  route_worker_skill: "improve-project-system"
+  route_sha256: "257bde39d376fbdc14e8ae45467ef3156d75370a6e9c8f6ba132ff504e9ff006"
+  route_reason: "generation_249_preexecution_rt017_job_role_allowlist_parity_failure"
+  route_strategy_id: "repair_p16_t04_rt017_agentjob_execution_role_allowlist_parity_v1"
+  route_blocker_fingerprint: "be2362ac2ade10716fbb6b1131c44faf4f809b8b39951810993a73c8822448f1"
+  route_dirty_state_manifest_sha256: "50532942922b1584c181deaa9e7c157cc687d369196457787aad323e1c639f90"
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+  outer_agentjob_invocation_count: 1
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1126
+    relationship_row_count: 5676
+    semantic_row_count: 1126
+    vault_row_count: 1126
+    blocking_warning_count: 0
+    local_cache_only_warning_count: 3
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  authority_note: "Generated task indexes, wiki semantic relationship data, Obsidian, SQLite, and .local validation receipts are retrieval or execution evidence only and are not authority; tracked sources, exact hashes, and validators govern this recovery."
+
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  candidate_family: "not_applicable"
+  assumption_delta:
+    - "No scientific assumption changes; the packet repairs one exact project-control identity mismatch."
+    - "The RT-017 classifier recovery and sealed P16-T04 science artifacts remain unchanged while the documentation-receipt recovery, checkpoint, P16-T04 re-audit, and P16-T05 remain unexecuted."
+  materiality_basis: "Restores exact ordered job-to-role execution authority identity without changing the immutable job or any science-bearing payload."
+  source_basis:
+    - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+    - "research_control/handoffs/handoff-0958.yaml"
+    - "research_control/tasks/RT-20260803-017/jobs/AJ-RT-20260803-017-001.yaml"
+  expected_artifact_paths:
+    - "research_control/tasks/RT-20260803-017/roles/process-integrity-auditor@0.1.0--RT-20260803-017.yaml"
+    - "registries/ROLE_EXECUTION_REGISTRY.csv"
+    - "research_control/tasks/RT-20260803-018/artifacts/p16_t04_rt017_allowlist_parity_recovery_receipt.json"
+  project_system_justification: "This is a uniquely determined control-state parity repair and precheckpoint stop; it creates no physics payload."
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  expected_durable_outputs:
+    physics: []
+    project_system:
+      - "exact RT-017 four-way ordered 61-path allowlist identity"
+      - "task-local protected-byte and parity receipt"
+      - "explicit precheckpoint preservation of the distinct documentation blocker"
+  acceptance_criteria:
+    physics: []
+    project_system:
+      - "AJ-RT-20260803-017-001 remains byte-identical"
+      - "all four RT-017 allowlist representations equal the exact ordered 61-item AgentJob list"
+      - "all non-allowlist role and registry fields remain unchanged"
+      - "the existing documentation blocker remains exact and pending"
+      - "no checkpoint is invoked and no P16-T04 re-audit or P16-T05 work occurs"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: true
+    exception_id: "BLOCK-P16-T04-CHECKPOINT-DOCUMENTATION-RECEIPT-COVERAGE-001"
+    evidence_path: "research_control/tasks/RT-20260803-017/artifacts/checkpoint_blocker_generation_248_rt015_folder_map_coverage_v1.yaml"
+    evidence_sha256: "a6215a79cf70cfd7d2221c191e7f96c06a8288a639eadfd162b25558287d5785"
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0958"
+  source_handoff_path: "research_control/handoffs/handoff-0958.yaml"
+  source_handoff_sha256: "295bc8a3f881c9dc03312468b5427c156bcdd895a9812055cbf4adf673b19f24"
+  selected_plan_task_id: "P16-T03"
+  guard_outcome: "below_threshold"
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+allowed_read_paths:
+  - "SOUL.md"
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research-goal/**"
+  - ".codex/skills/continue-research-continue-goal/**"
+  - ".codex/skills/continue-research/**"
+  - ".codex/skills/improve-project-system/**"
+  - ".agents/roles/research_ops/**"
+  - ".agents/schemas/**"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  - "research_control/**"
+  - "scripts/**"
+  - "tests/**"
+  - "registries/**"
+  - ".local/validation-receipts/**"
+
+allowed_write_paths:
+  - "research_control/tasks/RT-20260803-017/roles/process-integrity-auditor@0.1.0--RT-20260803-017.yaml"
+  - "research_control/tasks/RT-20260803-018/**"
+  - "research_control/handoffs/handoff-0959.yaml"
+  - "research_control/handoffs/handoff-0959.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/AGENT_ROLE_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/PDF_DERIVATIVE_REGISTRY.csv"
+  - "registries/PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "registries/TEX_SOURCE_REGISTRY.csv"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/pdf/**"
+  - "wiki/tex/**"
+
+allowed_generated_paths:
+  - "research_control/tasks/RT-20260803-018/artifacts/p16_t04_rt017_allowlist_parity_recovery_receipt.json"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/pdf/**"
+  - "wiki/tex/**"
+
+forbidden_paths:
+  - "research_control/tasks/RT-20260803-017/00_TASK.yaml"
+  - "research_control/tasks/RT-20260803-017/DDR-20260803-017.md"
+  - "research_control/tasks/RT-20260803-017/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260803-017/jobs/AJ-RT-20260803-017-001.yaml"
+  - "research_control/tasks/RT-20260803-017/jobs/completions/AJC-AJ-RT-20260803-017-001.yaml"
+  - "research_control/tasks/RT-20260803-017/artifacts/**"
+  - "research_control/tasks/RT-20260803-015/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260803-016/documentation_impact.yaml"
+  - "research_control/handoffs/handoff-0958.yaml"
+  - "research_control/handoffs/handoff-0958.md"
+  - ".agents/roles/**"
+  - ".agents/schemas/**"
+  - ".codex/skills/**"
+  - "scripts/**"
+  - "tests/**"
+  - "implementations_plans/**"
+  - "ontology/**"
+  - "legacy_ontology/**"
+  - "manuscripts/**"
+
+forbidden_source_classes:
+  - "rt017_agentjob_completion_handoff_blocker_receipt_or_classifier_rewrite"
+  - "rt015_or_rt016_documentation_receipt_repair"
+  - "validator_test_schema_skill_or_base_role_semantics_change"
+  - "write_path_broadening_beyond_immutable_job_target"
+  - "generation_248_checkpoint_retry_or_replay"
+  - "P16_T04_reaudit_or_P16_T05_execution"
+  - "canonical_ontology_write"
+  - "science_source_gate_benchmark_or_protected_authority_mutation"
+  - "physics_claim_promotion"
+  - "proof_external_review_publication_push_or_completed_derivation_authority"
+
+allowed_source_classes:
+  - "control_state"
+  - "registry"
+  - "execution_role_contract"
+  - "task_control_record"
+  - "active_routing_supersession"
+  - "generated_memory_derivative"
+
+approved_commands:
+  - ".venv/bin/python research_control/tasks/RT-20260803-018/artifacts/validate_p16_t04_rt017_allowlist_parity_recovery.py --write-report --json"
+  - ".venv/bin/python research_control/tasks/RT-20260803-018/artifacts/validate_p16_t04_rt017_allowlist_parity_recovery.py --check --json"
+  - ".venv/bin/python -m scripts.validation.cli run --profile affected --paths research_control/tasks/RT-20260803-017/roles/process-integrity-auditor@0.1.0--RT-20260803-017.yaml registries/AGENT_JOB_REGISTRY.csv registries/ROLE_EXECUTION_REGISTRY.csv research_control/tasks/RT-20260803-018"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+  - ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+  - ".venv/bin/python scripts/research_control/task_taxonomy.py --validate-repository --json"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --write"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --json output/research_dependency_graph.json --markdown wiki/indexes/research_dependency_graph.md --dot output/research_dependency_graph.dot"
+  - ".venv/bin/python scripts/research_control/generate_claim_graph_v1.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --job-id AJ-RT-20260803-018-001 --json-summary"
+  - ".venv/bin/python scripts/research_control/continue_research.py --summary"
+  - "git diff --check"
+
+required_validators:
+  - "memory_preflight"
+  - "physics_payload_admission"
+  - "dual_budget_allocation"
+  - "ordinary_route_guard_admission"
+  - "p16_t04_rt017_allowlist_parity_recovery"
+  - "immutable_hash_preservation"
+  - "project_change_classifier"
+  - "project_improvement_resolver"
+  - "project_improvement_signals"
+  - "task_taxonomy_repository"
+  - "documentation_impact"
+  - "claim_language_changed"
+  - "affected_validation_profile"
+  - "research_control_diff"
+  - "current_frontier_renderer"
+  - "task_index_renderer"
+  - "compact_current_frontier_renderer"
+  - "dependency_graph"
+  - "claim_graph"
+  - "memory_sync"
+  - "memory_core"
+  - "git_diff_check"
+  - "checkpoint_transaction"
+
+expected_outputs:
+  - "research_control/tasks/RT-20260803-017/roles/process-integrity-auditor@0.1.0--RT-20260803-017.yaml"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "research_control/tasks/RT-20260803-018/00_TASK.yaml"
+  - "research_control/tasks/RT-20260803-018/DDR-20260803-018.md"
+  - "research_control/tasks/RT-20260803-018/artifacts/validate_p16_t04_rt017_allowlist_parity_recovery.py"
+  - "research_control/tasks/RT-20260803-018/artifacts/p16_t04_rt017_allowlist_parity_recovery_receipt.json"
+  - "research_control/tasks/RT-20260803-018/artifacts/precheckpoint_blocker_generation_250_documentation_receipt_coverage_v1.yaml"
+  - "research_control/tasks/RT-20260803-018/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260803-018/jobs/completions/AJC-AJ-RT-20260803-018-001.yaml"
+  - "research_control/tasks/RT-20260803-018/roles/process-integrity-auditor@0.1.0--RT-20260803-018.yaml"
+  - "research_control/handoffs/handoff-0959.yaml"
+  - "research_control/handoffs/handoff-0959.md"
+
+claim_boundary: "CB-PS-P16-T04-RT017-ALLOWLIST-PARITY-RECOVERY-001"
+documentation_impact_id: "DI-RT-20260803-018-001"
+completion_id: "AJC-AJ-RT-20260803-018-001"

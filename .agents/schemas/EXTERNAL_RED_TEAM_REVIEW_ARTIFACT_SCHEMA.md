@@ -4,11 +4,17 @@ version: "0.1.0"
 status: "active"
 ---
 
-# External Red-Team Review Artifact Schema
+# Internal Skeptical Review Artifact Schema
+
+The schema ID and path retain their historical `EXTERNAL_RED_TEAM` spelling so
+existing artifacts remain resolvable. That legacy identifier is not evidence
+of external human review or independent replication.
 
 ## Purpose
 
-This schema defines the P7 red-team review artifact contract. It is
+This schema defines the P7 skeptical-review artifact contract. The current
+role display is `Internal Skeptical Reviewer` and the current role kind is
+`scientific_adversarial_internal_review`. It is
 project-control validation for critique and routing evidence only. It does not
 create proof authority, Gate Chair authority, source-law adoption, benchmark
 promotion, or completed-derivation status.
@@ -20,8 +26,8 @@ promotion, or completed-derivation status.
 - `reviewed_source_paths`: nonempty list of repo-relative canonical source
   paths inspected by the reviewer. `.local/`, generated wiki notes, absolute
   paths, and parent-directory escapes are invalid here.
-- `claim_under_review`: nonempty statement of the claim being externally
-  pressured.
+- `claim_under_review`: nonempty statement of the claim under skeptical
+  pressure.
 - `assumptions_read`: list of assumptions inspected.
 - `definitions_read`: list of definitions inspected.
 - `proof_steps_checked`: list of theorem or proof-skeleton steps checked.
@@ -32,8 +38,9 @@ promotion, or completed-derivation status.
   `[]`.
 - `minimal_countermodel_attempt`: map describing whether a countermodel was
   attempted, the result, and a summary.
-- `external_mathematical_pressure_points`: list of external skeptic pressure
-  points, or `[]`.
+- `external_mathematical_pressure_points`: legacy field name for skeptical
+  mathematical pressure points, or `[]`; the field name does not establish
+  external provenance.
 - `verdict`: one of the allowed verdict values below.
 - `recommended_next_route`: nonempty route recommendation.
 - `physics_promotion_authorized`: exactly `false`.
@@ -52,9 +59,13 @@ promotion, or completed-derivation status.
 
 ## Additive review-context contract
 
-New review artifacts include a `review_context` map. Artifacts created before
-this additive contract remain valid and are reported by the validator as
-`legacy_unclassified`; they are not retroactively relabeled.
+Current review artifacts include the exact top-level label fields
+`reviewer_display_name: "Internal Skeptical Reviewer"` and
+`reviewer_role_kind: "scientific_adversarial_internal_review"`, together with
+a `review_context` map. If either label field is present, both must be present
+and exact. Artifacts created before this additive contract remain valid and are
+reported by the validator as `legacy_unclassified`; they are not rewritten or
+retroactively assigned new provenance.
 
 The map has these fields:
 
@@ -81,6 +92,9 @@ The map has these fields:
   `independent_replication_completed`.
 
 Different roles or model configurations are not automatically independent.
+`same_context_role_review`, `blind_same_model_review`, and
+`different_model_review` are internal skeptical-review classes, not external
+human review.
 `human_expert_review` requires human provenance and evidence.
 `independent_replication` requires an executed replication plus independent
 data-access, code-base, and method evidence. Missing evidence fails closed to
@@ -101,7 +115,8 @@ invalid unless the structured class and evidence support it.
 
 The deterministic validator is
 `scripts/research_control/validate_red_team_review_artifact.py`. It validates
-one or more strict-YAML red-team review artifacts and emits a JSON receipt.
+the current role/schema/template label contract plus one or more strict-YAML
+skeptical-review artifacts and emits a JSON receipt.
 
 ## Boundary
 

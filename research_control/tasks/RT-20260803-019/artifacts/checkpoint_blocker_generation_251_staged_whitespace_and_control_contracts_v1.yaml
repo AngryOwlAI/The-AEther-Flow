@@ -1,0 +1,119 @@
+schema_id: "ordinary_route_control_failure_v1"
+blocker_schema_id: "generation_251_checkpoint_staged_whitespace_and_control_contracts_blocker_v1"
+failure_id: "OCF-P16-T04-GENERATION-251-CHECKPOINT-STAGED-GIT-DIFF-AND-CONTROL-CONTRACTS-001"
+plan_task_id: "P16-T04"
+failure_class: "failing_ci"
+status: "active_blocking"
+blocks_scientific_execution: true
+blocker_status: "BLOCKED_CHECKPOINT_STAGED_GIT_DIFF_CHECK"
+task_id: "RT-20260803-019"
+job_id: "AJ-RT-20260803-019-001"
+goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+generation: 251
+created_at: "2026-08-04T04:24:33Z"
+observed_at: "2026-08-04T04:24:33Z"
+source_head: "2cc682251201d8d034dcd447fde006a49f3db650"
+failure_summary: "The generation-251 cumulative receipt recovery passed its working-tree checks, but its sole governed checkpoint stopped before commit when staged git diff checking found one blank line at EOF; a prospective staged research-control audit also exposed bounded RT-019 role-registry and dual-budget control-contract findings that must be rederived in a distinct recovery."
+remediation_route: "Run one separately governed improve-project-system recovery under recover_generation_251_checkpoint_staged_whitespace_and_control_contracts_v1; do not retry this job or execute P16-T04 or P16-T05."
+
+checkpoint_attempt:
+  command: ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260803-019-001"
+  invocation_count: 1
+  result: "BLOCKED"
+  reason: "staged git_diff_check failed"
+  staged_acceptance_attempted: true
+  committed: false
+  commit: ""
+  retry_authorized_for_this_job: false
+
+failed_gate:
+  gate_id: "git_diff_check"
+  status: "FAIL"
+  returncode: 2
+  finding_count: 1
+  findings:
+    - path: "research_control/tasks/RT-20260803-019/documentation_impact.yaml"
+      line: 225
+      issue: "new blank line at EOF"
+
+staged_acceptance:
+  status: "FAIL"
+  run_id: "RUN-CHECKPOINT-d6c313824a1d24a9"
+  manifest_sha256: "8afbc6d6c1cc892533a3e7f8e45a1e2fb8243d85d803a1dadc854fe5c9fbe844"
+  plan_sha256: "4a5944e3ddce17a16fb2167dbca20a95d75df677d323f43b784591fc408a280b"
+  gate_count: 7
+  executed_pass_count: 2
+  fail_count: 1
+  skipped_count: 4
+  warn_count: 0
+  research_control_diff_executed: false
+
+index_restoration:
+  status: "PASS"
+  entry_tree: "a5302a9cfdcf92e0e0c7e3dcb2fa7932091260d4"
+  final_tree: "a5302a9cfdcf92e0e0c7e3dcb2fa7932091260d4"
+  restored: true
+  preserved_preexisting_staged_path_count: 2
+  head_unchanged: true
+
+operational_receipt:
+  path: ".local/validation-receipts/8afbc6d6c1cc892533a3e7f8e45a1e2fb8243d85d803a1dadc854fe5c9fbe844/RUN-CHECKPOINT-d6c313824a1d24a9/receipt.json"
+  sha256: "459e84a63d2a969e65317e90324aa5d22f5eb40ad21d6419dc26f8664d3026ee"
+  tracked_authority: false
+
+precheckpoint_staged_audit_observation:
+  status: "FAIL_11_CONTROL_ERRORS"
+  receipt_path: ".local/validation-receipts/working-sha256-c85aa5b3c3ecdcbb3bcdf4f1dd727fe5cd62832bf32ab4f6743245deb21373cd/RESEARCH-CONTROL-DIFF-C85AA5B3C3ECDCBB/full.json"
+  receipt_sha256: "6c7dbeed8e61ba59214c4d2b4a488defcf3cb88a02dea763969a4ebe58fb8e7e"
+  tracked_authority: false
+  error_count: 11
+  warning_count: 1829
+  bounded_error_families:
+    - "RT-019 execution-role overlay versus ROLE_EXECUTION_REGISTRY justification and authority-delta parity"
+    - "RT-019 completion dual-budget durable-output coverage for the checkpoint outcome"
+    - "prospective staged tracking of handoffs 0957 through 0960 and their AgentJob admissions"
+    - "prospective staged P16-T04 re-audit activation and ordinary-route ready-set parity"
+    - "prospective staged compact-current-frontier freshness"
+  note: "Several findings were observed before the final live activation and renderer convergence; the distinct recovery must rederive the staged set rather than assume any finding remains or has cleared."
+
+terminalized_live_audit:
+  status: "FAIL_6_CONTROL_ERRORS"
+  receipt_path: ".local/validation-receipts/working-sha256-64256d696016c90f94e50682cb01ab40d190147ed72151f5c9dbdf077fef3181/RESEARCH-CONTROL-DIFF-64256D696016C90F/full.json"
+  receipt_sha256: "b5087ec0ac119358ffeafc0db56852142d111a704b47c727986484162f2fcaa7"
+  tracked_authority: false
+  error_count: 6
+  warning_count: 1829
+  live_recovery_findings:
+    - "RT-019 execution-role overlay versus ROLE_EXECUTION_REGISTRY justification parity"
+    - "RT-019 execution-role overlay versus ROLE_EXECUTION_REGISTRY authority-delta parity"
+  staging_expected_to_clear:
+    - "handoff-0960 ordinary-route control-failure evidence is not tracked before staging"
+    - "handoffs 0957 through 0960 remain prospective source-handoff provenance until staging"
+  cleared_during_terminalization:
+    - "dual-budget durable-output coverage now records one fresh governed checkpoint outcome"
+    - "current-frontier and compact-frontier projections are synchronized"
+  note: "Generation 252 must rederive the staged set; the four provenance findings are expected to clear only after lawful staging, while the two live RT-019 role-registry parity findings require bounded repair."
+
+recovery:
+  required: true
+  suggested_role: "validator-engineer@0.2.0"
+  worker_skill: "improve-project-system"
+  route_label: "project-system-checkpoint-recovery"
+  strategy_id: "recover_generation_251_checkpoint_staged_whitespace_and_control_contracts_v1"
+  task_type: "project_system_generation_251_checkpoint_staged_whitespace_and_control_contract_recovery"
+  packet_type: "staged_whitespace_and_control_contract_checkpoint_recovery"
+  work_item_id: "P16-T04"
+  objective: "Remove the exact RT-019 documentation-receipt blank EOF; add this blocker to all live cumulative documentation-impact receipts; reconcile only live RT-019 execution-role registry parity and dual-budget checkpoint-outcome coverage that the prospective staged audit still reproduces; preserve the hash-bound P16-T04 re-audit activation; regenerate and validate all staged generated views and route admissions; and invoke at most one fresh governed checkpoint without executing the P16-T04 re-audit or P16-T05."
+
+authority_boundary:
+  checkpoint_success_claimed: false
+  p16_t04_reaudit_executed: false
+  p16_t05_executed: false
+  scientific_claims_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_push_or_external_action_authorized: false
+
+authority_note: "This blocker is project-system checkpoint evidence only. It does not change scientific status, Distance-to-GR burden, review disposition, Gate authority, benchmark status, proof authority, publication authority, or completed-derivation status."

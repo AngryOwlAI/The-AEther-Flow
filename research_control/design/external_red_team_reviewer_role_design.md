@@ -8,15 +8,30 @@ This design artifact was created for P7-T01 of
 `implementations_plans/recommendations_implementation_plan_continue_task-v12.md`
 and reconciled by v14 P9-T01 of
 `implementations_plans/recommendations_implementation_plan_continue_task-v14.md`.
-It records the `external-red-team-reviewer@0.1.0` role contract and the review
-artifact template for red-team packets.
+It records the stable `external-red-team-reviewer@0.1.0` role identifier and
+the review artifact template for skeptical-review packets.
 
-The role exists to add an adversarial outside-reader review mode. It does not
-create proof authority or physics promotion authority.
+The role exists to add an internal adversarial outside-reader perspective. It
+does not create external provenance, proof authority, or physics promotion
+authority.
+
+## Current V21 Label Contract
+
+The current display name is `Internal Skeptical Reviewer` and the current role
+kind is `scientific_adversarial_internal_review`. The older
+`external-red-team-reviewer@0.1.0` spelling is a stable legacy identifier only;
+it remains unchanged so historical task IDs, artifacts, completions, registry
+references, and hashes remain resolvable.
+
+A same-context AI review is internal. A blind packet or different model may
+change the structured review-context classification, but neither establishes
+external human review or independent replication. Those labels are reserved
+for the evidence-qualified `human_expert_review` and
+`independent_replication` classes defined by the review-context contract.
 
 ## Boundary Statement
 
-The external red-team reviewer has `may_promote_claims=false`. It is critique
+The internal skeptical reviewer has `may_promote_claims=false`. It is critique
 and routing authority only. It is not Gate Chair authority, not Smuggling
 Auditor replacement, not Refuter replacement, not canonical ontology adoption,
 not source-law adoption, not source-extension data adoption, not `MetricData(E)`
@@ -72,14 +87,14 @@ subject to the owning AgentJob's allowlist.
 
 ## Complementarity
 
-The External Red-Team Reviewer complements existing adversarial roles:
+The Internal Skeptical Reviewer complements existing adversarial roles:
 
 - Smuggling Auditor checks whether a candidate imports forbidden target
   structure.
 - Refuter stress-tests a candidate under defined failure modes.
-- External Red-Team Reviewer challenges whether the object itself would be
-  legible and defensible to an outside skeptical reader even after internal
-  workflow success.
+- Internal Skeptical Reviewer challenges whether the object itself would be
+  legible and defensible from a skeptical perspective even after internal
+  workflow success. This perspective does not establish external provenance.
 - Gate Chair remains the only human-gated promotion, closure, or suspension
   authority.
 
@@ -90,13 +105,15 @@ external review.
 
 ## Review Artifact Template
 
-The task adds:
+The historical task added:
 
 ```text
 research_control/templates/RED_TEAM_REVIEW_ARTIFACT_TEMPLATE.yaml
 ```
 
-The template requires the future reviewer to state that workflow and validator
+The current template carries the internal display name and role kind while
+retaining its legacy path and schema identifier. It requires the future
+reviewer to state that workflow and validator
 success were disregarded as evidence; enumerate findings; classify
 countermodels or not-enough-assumptions results when available; recommend a
 repair or review route; and preserve all claim-promotion blocks.
@@ -116,6 +133,12 @@ P7-T01 and v14 P9-T01 acceptance criteria are met when:
 
 - the role contract exists and has `may_promote_claims: false`;
 - the role is registered in `registries/AGENT_ROLE_REGISTRY.csv`;
+- the current role name and kind identify internal skeptical review while the
+  stable legacy role ID remains unchanged;
+- current task-index projection displays the internal name alongside the
+  legacy ID rather than presenting the ID as external provenance;
+- external human review and independent replication remain available only
+  through taxonomy-qualified evidence;
 - the role states that it does not duplicate Gate Chair authority;
 - the role states that it complements, but does not replace, Smuggling Auditor
   and Refuter authority;

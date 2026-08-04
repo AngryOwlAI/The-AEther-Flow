@@ -1,0 +1,291 @@
+validation_status: "FAIL"
+handoff_id: "handoff-0960"
+handoff_number: 960
+task_id: "RT-20260803-019"
+decision_id: "DDR-20260803-019"
+job_id: "AJ-RT-20260803-019-001"
+completion_id: "AJC-AJ-RT-20260803-019-001"
+completion_path: "research_control/tasks/RT-20260803-019/jobs/completions/AJC-AJ-RT-20260803-019-001.yaml"
+completion_sha256: "48bc184e7dc7f1b3c704e00be081864fb639184ded292eb14ef14f754e0643c9"
+status: "blocked_checkpoint"
+created_at: "2026-08-04T04:24:33Z"
+parent_handoff_id: "handoff-0959"
+plan_task_id: "P16-T04"
+recovery_for_plan_task_id: "P16-T04"
+source_role_id: "process-integrity-auditor"
+source_role_version: "0.1.0"
+source_execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260803-019"
+summary: "Generation 251 restores cumulative documentation-impact coverage across five live receipts, including exactly one RT-015 FOLDER_MAP.md generated derivative, then invokes its sole governed checkpoint. The checkpoint fails safely on one staged-only blank EOF, restores the preexisting index, leaves HEAD unchanged, and creates no commit; a bounded prospective staged control-contract audit is preserved for one distinct recovery. P16-T04 and P16-T05 remain unexecuted."
+next_action: "Run one distinct improve-project-system recovery under recover_generation_251_checkpoint_staged_whitespace_and_control_contracts_v1. Remove only the exact staged EOF defect, rederive and reconcile only live RT-019 role-registry and dual-budget findings, preserve or renew the P16-T04 re-audit activation, regenerate and validate the staged transaction, and invoke at most one fresh checkpoint without executing P16-T04 or P16-T05."
+current_claim_boundary: "CB-PS-P16-T04-CUMULATIVE-DOCUMENTATION-IMPACT-CHECKPOINT-RECOVERY-001"
+loop_risk_route: "recover_generation_251_checkpoint_staged_whitespace_and_control_contracts_v1"
+
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260803-019"
+  latest_research_handoff_id: "handoff-0960"
+  latest_research_next_action: "Run one distinct improve-project-system recovery under recover_generation_251_checkpoint_staged_whitespace_and_control_contracts_v1. Remove only the exact staged EOF defect, rederive and reconcile only live RT-019 role-registry and dual-budget findings, preserve or renew the P16-T04 re-audit activation, regenerate and validate the staged transaction, and invoke at most one fresh checkpoint without executing P16-T04 or P16-T05."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+
+claim_boundary:
+  allowed_next_scope: "One distinct improve-project-system recovery may remove only the exact staged EOF defect, rederive and reconcile only live RT-019 role-registry and dual-budget findings, preserve or renew the prospective P16-T04 activation, regenerate and validate the staged transaction, and invoke at most one fresh checkpoint without retrying AJ-RT-20260803-019-001 or executing P16-T04 or P16-T05."
+  completed_task: "RT-20260803-019"
+  completed_completion_path: "research_control/tasks/RT-20260803-019/jobs/completions/AJC-AJ-RT-20260803-019-001.yaml"
+  completed_completion_sha256: "48bc184e7dc7f1b3c704e00be081864fb639184ded292eb14ef14f754e0643c9"
+  source_handoff_id: "handoff-0959"
+  source_handoff_path: "research_control/handoffs/handoff-0959.yaml"
+  source_handoff_sha256: "b7e9ca5eefc211fd1a01acbfc2bd9370321165362633a674a82467218ec83b74"
+  immutable_route_sha256: "7d14e21f7d55f18aa191ddf1f00a2fac9f1f09d754ac99a8717a54b0d3793c4f"
+  route_blocker_fingerprint: "c0e334b568a13a65bf4930878c28d21cef525c0428a27f67c24bfe3be5055734"
+  inherited_manifest_sha256: "f1ef46f8a33221dea438b2a1651674f6da09eca2be33d863ce190575bc63c642"
+  result_status: "BLOCKED_CHECKPOINT_STAGED_GIT_DIFF_AND_CONTROL_CONTRACT_RECOVERY_REQUIRED"
+  recovery_receipt_path: "research_control/tasks/RT-20260803-019/artifacts/generation_251_cumulative_documentation_impact_recovery_receipt.json"
+  recovery_receipt_sha256: "e03da51ad6d158fe1f7a5d84a774a08d55834ebb65fbf6adb31044b6b9a66bfa"
+  checkpoint_blocker_path: "research_control/tasks/RT-20260803-019/artifacts/checkpoint_blocker_generation_251_staged_whitespace_and_control_contracts_v1.yaml"
+  checkpoint_blocker_sha256: "8c8bffe692a84541059016ac1dfd7b5ffdbf884c890f0a77c072379adbe18cc9"
+  ordinary_route_guard_plan_reaudit_activation_schema_id: "ordinary_route_guard_plan_reaudit_activation_v1"
+  plan_reaudit_activation_source_task_id: "RT-20260803-015"
+  plan_reaudit_activation_source_completion_sha256: "bfec266a4824df117db6c8b4275f79df333e1294871d1b8ed769521639e6a690"
+  historical_handoff_evaluation_change_count: 0
+  documentation_impact_error_count_before: 35
+  documentation_impact_error_count_after: 0
+  documentation_impact_warning_count_after: 0
+  cumulative_receipt_count: 5
+  cumulative_changed_path_count: 113
+  rt015_folder_map_generated_derivative_count: 1
+  protected_hash_mismatch_count: 0
+  checkpoint_invocation_count_before_handoff: 1
+  checkpoint_committed_before_handoff: false
+  generation_248_checkpoint_replayed: false
+  generation_250_job_replayed: false
+  p16_t04_reaudit_executed: false
+  p16_t05_executed: false
+  scientific_claims_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  external_action_authorized: false
+  push_performed: false
+  blocked_claims:
+    - "documentation-impact PASS presented as scientific evidence"
+    - "same-context AI skeptical review presented as external human review or independent replication"
+    - "checkpoint success presented before the governed checkpoint outcome"
+    - "project-system recovery presented as Gate benchmark proof publication or completed derivation"
+
+plan_result:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  phase_id: "P16"
+  plan_task_id: "P16-T03"
+  recovery_for_plan_task_id: "P16-T04"
+  next_plan_task_id: "P16-T03"
+  title: "Restore cumulative documentation-impact coverage and record the fail-closed checkpoint outcome"
+  result_status: "BLOCKED_CHECKPOINT_STAGED_GIT_DIFF_AND_CONTROL_CONTRACT_RECOVERY_REQUIRED"
+  work_item_status: "blocked_checkpoint_recovery_required"
+  cumulative_receipt_recovery_complete: true
+  inherited_transaction_preserved: true
+  prospective_reaudit_activation_complete: true
+  p16_t04_reaudit_dependency_ready_after_checkpoint: false
+  p16_t04_reaudit_dependency_ready_now: false
+  p16_t04_reaudit_executed: false
+  p16_t05_executed: false
+  scientific_claims_changed_by_repair: false
+  distance_to_gr_delta_changed_by_repair: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+distance_to_gr:
+  changed: false
+  effect: "none_project_system_documentation_impact_recovery"
+  burden_id: "benchmark_promotion"
+  milestone: "none"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "Exact documentation-impact coverage recovery supplies no physics evidence."
+  downstream_unlocked:
+    - "one distinct project-system checkpoint recovery"
+  downstream_still_blocked:
+    - "P16-T04 until the distinct recovery checkpoint commits"
+    - "P16-T05 until P16-T04 completes"
+    - "benchmark promotion proof publication external action or completed derivation"
+
+required_next_packet:
+  task_type: "project_system_generation_251_checkpoint_staged_whitespace_and_control_contract_recovery"
+  plan_task_id: "P16-T03"
+  recovery_for_plan_task_id: "P16-T04"
+  work_item_id: "P16-T04"
+  objective: "Remove only the exact staged EOF defect, rederive and reconcile only live RT-019 role-registry and dual-budget findings, preserve or renew the prospective P16-T04 activation, regenerate and validate the staged transaction, and invoke at most one fresh checkpoint without executing P16-T04 or P16-T05."
+  output_requirement: "One distinct recovery task, exact blocker and parity receipts, converged staged validation evidence, and at most one fresh governed checkpoint outcome."
+  dependency_qualification: "The tracked generation-251 blocker is active and AJ-RT-20260803-019-001 must not be retried."
+  dependency_ready_after_checkpoint: false
+  dependency_ready_now: true
+  exact_human_authorization_required: false
+  executed: false
+
+selected_next_route:
+  route_id: "generation_251_checkpoint_staged_whitespace_and_control_contract_recovery"
+  route_label: "project-system-checkpoint-recovery"
+  role_family: "validator-engineer@0.2.0"
+  role_display_name: "Validator Engineer"
+  worker_skill: "improve-project-system"
+  selected_next_packet_type: "staged_whitespace_and_control_contract_checkpoint_recovery"
+  task_type: "project_system_generation_251_checkpoint_staged_whitespace_and_control_contract_recovery"
+  plan_task_id: "P16-T03"
+  work_item_id: "P16-T04"
+  target_derivation_milestone: "none"
+  milestone_burden: "Project-system staged whitespace, role-registry parity, dual-budget, generated-view, and checkpoint recovery only; no P16-T04 or scientific burden advances."
+  strategy_id: "recover_generation_251_checkpoint_staged_whitespace_and_control_contracts_v1"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: false
+  execution_ready_now: true
+  physics_promotion_authorized: false
+  proof_authority: false
+  executed: false
+  next_action: "Run one distinct improve-project-system recovery; do not retry AJ-RT-20260803-019-001 and do not execute P16-T04 or P16-T05."
+  source_handoff: "research_control/handoffs/handoff-0960.yaml"
+
+ordinary_route_guard:
+  schema_id: "ordinary_route_guard_evaluation_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  evaluation_id: "ORE-HANDOFF-0960"
+  ordinary_handoff_id: "handoff-0960"
+  threshold: 3
+  consecutive_project_system_tasks_before_selection: 3
+  ready_science_plan_task_ids:
+    - "P16-T04"
+  ready_project_system_plan_task_ids:
+    - "P16-T03"
+  selected_plan_task_id: "P16-T03"
+  selected_route_class: "project_system"
+  selected_worker_skill: "improve-project-system"
+  outcome: "all_ready_science_blocked_exception"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  exception_receipt:
+    active: true
+    schema_id: "ordinary_route_exception_receipt_v1"
+    exception_id: "ORE-HANDOFF-0960-GENERATION-251-CHECKPOINT-BLOCKED-001"
+    exception_class: "all_ready_science_blocked"
+    ordinary_handoff_id: "handoff-0960"
+    ready_science_plan_task_ids:
+      - "P16-T04"
+    blocked_routes:
+      - plan_task_id: "P16-T04"
+        failure_class: "failing_ci"
+        evidence_path: "research_control/tasks/RT-20260803-019/artifacts/checkpoint_blocker_generation_251_staged_whitespace_and_control_contracts_v1.yaml"
+        evidence_sha256: "8c8bffe692a84541059016ac1dfd7b5ffdbf884c890f0a77c072379adbe18cc9"
+    authority_limits:
+      ordinary_research_handoff_authoritative: true
+      project_system_sidecar_supersedes: false
+      system_success_counts_as_physics: false
+      system_success_counts_as_distance_to_gr: false
+      scientific_status_changed: false
+      physics_promotion_authorized: false
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+active_state_boundary:
+  active_task_id: "RT-20260803-019"
+  active_job_id: "AJ-RT-20260803-019-001"
+  current_status: "cumulative_documentation_impact_coverage_repaired_checkpoint_blocked_staged_git_diff_and_control_contract_recovery_required"
+  checkpoint_required: true
+  checkpoint_completed: false
+  checkpoint_invocation_count: 1
+  project_system_recovery_completed: false
+  p16_t04_reaudit_executed: false
+  p16_t05_executed: false
+  selected_next_plan_task_id: "P16-T03"
+  selected_next_worker_skill: "improve-project-system"
+  selected_next_role_family: "validator-engineer@0.2.0"
+  selected_next_route_label: "project-system-checkpoint-recovery"
+  selected_next_strategy_id: "recover_generation_251_checkpoint_staged_whitespace_and_control_contracts_v1"
+  selected_next_execution_ready_after_checkpoint: false
+  selected_next_execution_ready_now: true
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 251 validated, claimed, and consumed its immutable receipt-recovery route exactly once."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The task-local receipt records the exact 35-to-zero coverage delta and one RT-015 FOLDER_MAP.md generated derivative."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Documentation-impact, taxonomy, signal, claim-language, research-control, generated-view, memory, and whitespace gates pass."
+  post_checkpoint:
+    status: "FAIL"
+    evidence:
+      - "The sole RT-019 checkpoint fails staged git diff checking on one blank EOF, restores the preexisting index, leaves HEAD unchanged, and creates no commit."
+      - "The prospective staged audit preserves bounded RT-019 control-contract findings for rederivation in one distinct recovery."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Current frontier, task index, compact frontier, dependency graph, and claim graph are refreshed from tracked authority."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory synchronization and validate-only complete; local-cache freshness warnings remain non-authoritative."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation has no hard failure."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "project-system cumulative documentation-impact coverage only"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  source_law_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  publication_authorized: false
+  proof_authority: false
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required_no_nonblank_signals"
+  rationale: "The bounded receipt recovery emits no new project-improvement signal."
+
+handoff_authority_boundary:
+  canonical_sources_unchanged: true
+  scientific_status_changed: false
+  physical_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false
+  P16_T04_executed: false
+  P16_T05_executed: false
+next_plan_task_id: "P16-T03"
+next_plan_task_execution_ready_after_checkpoint: false
+next_plan_task_execution_ready_now: true
+next_plan_task_executed: false
+notes: "Do not retry AJ-RT-20260803-019-001. The next distinct recovery is limited to the exact staged EOF defect, rederived live RT-019 role-registry and dual-budget findings, preserved or renewed P16-T04 activation, governed regeneration and validation, and at most one fresh checkpoint. P16-T04 and P16-T05 remain unexecuted."

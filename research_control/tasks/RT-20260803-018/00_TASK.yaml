@@ -1,0 +1,59 @@
+task_id: "RT-20260803-018"
+task_type: "project_system_p16_t04_rt017_allowlist_parity_recovery"
+title: "Restore RT-017 ordered write-allowlist parity"
+task_taxonomy:
+  schema_id: "v21_task_taxonomy_v1"
+  work_kind: "benchmark_or_recovery"
+  milestone: "benchmark_promotion"
+  candidate_family: "p16_t04_rt017_allowlist_parity_recovery"
+  result_kind: "implemented_and_validated_or_precisely_blocked"
+  authority: "project_control"
+  scope: "project_system"
+validation_status: "FAIL"
+status: "completed"
+created_at: "2026-08-04T02:50:31Z"
+updated_at: "2026-08-04T02:50:31Z"
+closed_at: "2026-08-04T02:50:31Z"
+closure_status: "rt017_allowlist_parity_recovered_checkpoint_deferred_existing_documentation_receipt_blocker"
+parent_task_id: "RT-20260803-017"
+parent_handoff_id: "handoff-0958"
+supersedes_active_routing_task_id: "RT-20260803-017"
+current_decision_id: "DDR-20260803-018"
+current_job_id: "AJ-RT-20260803-018-001"
+role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260803-018"
+requires_human_gate: false
+human_authorization_note: "Generation 250 of the immutable user-requested relay authorizes exactly one improve-project-system invocation to restore RT-20260803-017 four-way ordered write-allowlist parity. It does not authorize the pending RT-20260803-015 or RT-20260803-016 documentation-receipt recovery, checkpoint replay, P16-T04 re-audit, P16-T05 execution, push, publication, or scientific promotion."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P16"
+  plan_task_id: "P16-T03"
+  recovery_for_plan_task_id: "P16-T04"
+  next_plan_task_id: "P16-T03"
+  next_plan_task_execution_authorized: false
+objective: "Preserve AJ-RT-20260803-017-001 byte-for-byte; replace only the stale ordered allowlist in its expired execution-role source and ROLE_EXECUTION registry row with the immutable AgentJob's exact 61-path list; prove four-way identity and protected-byte preservation; and stop before the distinct documentation-receipt recovery or any checkpoint."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system allowlist identity recovery only; no P16-T04 re-audit or scientific derivation burden advances."
+route_label: "project-system-allowlist-parity-recovery"
+route_sha256: "257bde39d376fbdc14e8ae45467ef3156d75370a6e9c8f6ba132ff504e9ff006"
+project_system_change_only: true
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+claim_boundary_id: "CB-PS-P16-T04-RT017-ALLOWLIST-PARITY-RECOVERY-001"
+documentation_impact_id: "DI-RT-20260803-018-001"
+completion_id: "AJC-AJ-RT-20260803-018-001"
+output_artifacts:
+  - "research_control/tasks/RT-20260803-018/artifacts/validate_p16_t04_rt017_allowlist_parity_recovery.py"
+  - "research_control/tasks/RT-20260803-018/artifacts/p16_t04_rt017_allowlist_parity_recovery_receipt.json"
+  - "research_control/tasks/RT-20260803-018/artifacts/precheckpoint_blocker_generation_250_documentation_receipt_coverage_v1.yaml"
+  - "research_control/tasks/RT-20260803-018/jobs/completions/AJC-AJ-RT-20260803-018-001.yaml"
+  - "research_control/handoffs/handoff-0959.yaml"
+  - "research_control/handoffs/handoff-0959.md"
+summary: "Generation 250 restores exact ordered 61-path identity across the immutable RT-017 AgentJob, its expired execution role, and both registry representations. The previously recorded RT-015/RT-016 documentation-receipt blocker remains distinct, so no checkpoint is invoked."
+next_recommended_action: "Run one distinct improve-project-system recovery that adds the generation-248 blocker artifact to changed_paths in the exact RT-20260803-015 and RT-20260803-016 receipts, adds FOLDER_MAP.md to generated_derivatives in the exact RT-20260803-015 receipt, regenerates and revalidates, and invokes at most one fresh checkpoint without executing the P16-T04 re-audit or P16-T05."
+project_improvement_signals: []
+notes: "The repair changes no RT-017 AgentJob, completion, handoff, classifier, review result, canonical science, ontology, benchmark, Gate, proof, publication, push, external action, or completed-derivation authority."

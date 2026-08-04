@@ -1,0 +1,327 @@
+completion_id: "AJC-AJ-RT-20260803-018-001"
+job_id: "AJ-RT-20260803-018-001"
+task_id: "RT-20260803-018"
+task_type: "project_system_p16_t04_rt017_allowlist_parity_recovery"
+decision_id: "DDR-20260803-018"
+role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260803-018"
+status: "completed"
+validation_status: "FAIL"
+completed_at: "2026-08-04T02:50:31Z"
+final_repository_validation_status: "BLOCKED_PRECHECKPOINT_DOCUMENTATION_IMPACT_CUMULATIVE_RECEIPT_COVERAGE"
+objective_result: "rt017_exact_ordered_allowlist_parity_recovered_precheckpoint_blocked_inherited_documentation_receipts"
+verdict: "PASS_SCOPED_ALLOWLIST_PARITY_BLOCKED_PRECHECKPOINT_DOCUMENTATION_IMPACT"
+summary: "Generation 250 preserves AJ-RT-20260803-017-001 byte-for-byte and restores exact ordered 61-path identity across its expired execution role and both registry representations. All protected RT-017 hashes and every non-allowlist role or registry field remain exact. The inherited cumulative documentation-impact receipts remain incomplete, so no checkpoint is invoked and one materially distinct receipt-coverage recovery is required."
+transaction_status: "blocked_precheckpoint"
+checkpoint_invocation_count: 0
+checkpoint_staged: false
+checkpoint_commit:
+  status: "NOT_RUN"
+  commit: ""
+  invocation_count: 0
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 250
+  passes_consumed: 221
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:250"
+  handoff_token: "13fd4cb1765d5f7a4ccc4a97131354b66c38e6a09274cbfd"
+  relay_claim_token: "cb246a4d21571277686b254a6cd5fc9018894bcf049465d5"
+  route_work_item_id: "P16-T04"
+  route_worker_skill: "improve-project-system"
+  route_sha256: "257bde39d376fbdc14e8ae45467ef3156d75370a6e9c8f6ba132ff504e9ff006"
+  route_strategy_id: "repair_p16_t04_rt017_agentjob_execution_role_allowlist_parity_v1"
+  route_blocker_fingerprint: "be2362ac2ade10716fbb6b1131c44faf4f809b8b39951810993a73c8822448f1"
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+  outer_agentjob_invocation_count: 1
+
+result:
+  status: "PASS_ALLOWLIST_PARITY_PRECHECKPOINT_BLOCKED_DOCUMENTATION_IMPACT"
+  strategy_id: "repair_p16_t04_rt017_agentjob_execution_role_allowlist_parity_v1"
+  source_task_id: "RT-20260803-017"
+  source_job_id: "AJ-RT-20260803-017-001"
+  source_head: "2cc682251201d8d034dcd447fde006a49f3db650"
+  source_job_path: "research_control/tasks/RT-20260803-017/jobs/AJ-RT-20260803-017-001.yaml"
+  source_job_sha256: "5a94fdd4fa9fcd80ae44588cb2ba3eacdc707b3235caba2af301c1881a949adc"
+  repaired_role_path: "research_control/tasks/RT-20260803-017/roles/process-integrity-auditor@0.1.0--RT-20260803-017.yaml"
+  repaired_role_sha256: "5f0c077fe4d9374e3e4243a9bcbcdb78451b7b078c7f840b05de3c8f385b96d0"
+  representation_count: 4
+  allowed_write_path_count: 61
+  ordered_representation_sha256: "17abbaf5f675fa1bfb30d103697d0bf87d08f2a9bb6b3b3fe30e1f0905e44a18"
+  all_four_ordered_representations_equal: true
+  non_allowlist_field_drift_count: 0
+  protected_hash_mismatch_count: 0
+  recovery_receipt_path: "research_control/tasks/RT-20260803-018/artifacts/p16_t04_rt017_allowlist_parity_recovery_receipt.json"
+  recovery_receipt_sha256: "51f25c5eb2028d559942e2ec66e1d377067b81784b47e4f58f232c8afa832448"
+  precheckpoint_blocker_path: "research_control/tasks/RT-20260803-018/artifacts/precheckpoint_blocker_generation_250_documentation_receipt_coverage_v1.yaml"
+  precheckpoint_blocker_sha256: "5040806fd5129a97127d19124fce6399121610e95cf93bd0b3104cd296a09931"
+  rt015_rt016_documentation_receipts_modified: false
+  generation_248_checkpoint_replayed: false
+  checkpoint_invoked: false
+  checkpoint_staged: false
+  checkpoint_committed: false
+  p16_t04_reaudit_executed: false
+  p16_t05_executed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  publication_or_external_action_authorized: false
+
+protected_evidence:
+  inherited_manifest_sha256: "50532942922b1584c181deaa9e7c157cc687d369196457787aad323e1c639f90"
+  source_task_sha256: "1646ed4f7a06cf79c472872cff6f8e3a6fa6a740beda8694268e847d3e07c252"
+  source_decision_sha256: "dd3fb4169bd5026190d29193ad23f792c8aedd542020f90f1bcd132553daef4e"
+  source_job_sha256: "5a94fdd4fa9fcd80ae44588cb2ba3eacdc707b3235caba2af301c1881a949adc"
+  source_completion_sha256: "ba5502b980e5868eab6f004f85583f555b8d31056f916b2af5e7318a355af9db"
+  source_handoff_yaml_sha256: "295bc8a3f881c9dc03312468b5427c156bcdd895a9812055cbf4adf673b19f24"
+  source_handoff_markdown_sha256: "bd005b5ff32da57f589d5a7da0a1434f862b96564dee50bed822d0374faff606"
+  source_checkpoint_blocker_sha256: "a6215a79cf70cfd7d2221c191e7f96c06a8288a639eadfd162b25558287d5785"
+  source_classifier_receipt_sha256: "1cfd469287f13b086c75247c2817b28b6fffa3d7761ac9b369f998bc063c4bd8"
+  protected_hash_mismatch_count: 0
+
+artifact_receipts:
+  - path: "research_control/tasks/RT-20260803-018/jobs/AJ-RT-20260803-018-001.yaml"
+    sha256: "6e77fb81df2b4d83e22bd46eb56d380f62f772c0c927f8d25f288237d25b6367"
+  - path: "research_control/tasks/RT-20260803-018/artifacts/validate_p16_t04_rt017_allowlist_parity_recovery.py"
+    sha256: "72cf8a3099ddea2e8a40d6031c24577e7e06e2bbc6ed30fb369954e40fbd3d5c"
+  - path: "research_control/tasks/RT-20260803-018/artifacts/p16_t04_rt017_allowlist_parity_recovery_receipt.json"
+    sha256: "51f25c5eb2028d559942e2ec66e1d377067b81784b47e4f58f232c8afa832448"
+  - path: "research_control/tasks/RT-20260803-018/artifacts/precheckpoint_blocker_generation_250_documentation_receipt_coverage_v1.yaml"
+    sha256: "5040806fd5129a97127d19124fce6399121610e95cf93bd0b3104cd296a09931"
+
+command_results:
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+    status: "PASS_WITH_LOCAL_CACHE_WARNINGS"
+    summary: "Core tracked memory passes; three local-cache-only freshness warnings do not affect canonical authority."
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21 --json"
+    status: "PASS"
+    summary: "The registered v21 plan and exact canonical source hash resolve."
+  - command: ".venv/bin/python research_control/tasks/RT-20260803-018/artifacts/validate_p16_t04_rt017_allowlist_parity_recovery.py --write-report --json"
+    status: "PASS"
+    summary: "All four RT-017 ordered representations equal 61 paths, protected hashes match, and non-allowlist fields are unchanged."
+  - command: ".venv/bin/python research_control/tasks/RT-20260803-018/artifacts/validate_p16_t04_rt017_allowlist_parity_recovery.py --check --json"
+    status: "PASS"
+    summary: "The task-local receipt is fresh and exact."
+  - command: ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+    status: "PASS_PROJECT_SYSTEM_DOCUMENTATION_IMPACT_REQUIRED"
+    summary: "The cumulative transaction remains project-system work with required documentation-impact accounting."
+  - command: ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json"
+    status: "PASS_READY_ADVISORY_ONLY"
+    summary: "Resolver output remains advisory; the immutable generation-250 Process Integrity Auditor route governs this invocation."
+  - command: ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted"
+    status: "PASS"
+    summary: "Signal registry and emitted-sidecar validation pass; this packet emits no new signal."
+  - command: ".venv/bin/python scripts/research_control/task_taxonomy.py --validate-repository --json"
+    status: "PASS"
+    summary: "All 1,218 tasks parse and every explicit required task has normalized taxonomy fields."
+  - command: ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+    status: "PASS_ZERO_HARD_FAILURES"
+    summary: "Changed-source claim validation has no hard failure; historical warnings remain nonblocking."
+  - command: ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+    status: "FAIL_INHERITED_CUMULATIVE_RECEIPT_COVERAGE"
+    summary: "The RT-018 receipt covers the live cumulative path set, while inherited RT-015, RT-016, and RT-017 receipts still omit exact current paths outside this route."
+  - command: "git diff --check"
+    status: "PASS"
+    summary: "The cumulative working transaction contains no whitespace errors."
+  - command: ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260803-018-001"
+    status: "NOT_RUN_PRECHECKPOINT_BLOCKER"
+    summary: "No checkpoint is invoked because the inherited documentation-impact gate remains failing and the immutable route forbids checkpoint replay."
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1126
+    relationship_row_count: 5676
+    semantic_row_count: 1126
+    vault_row_count: 1126
+    blocking_warning_count: 0
+    local_cache_only_warning_count: 3
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  authority_note: "Generated task indexes, wiki semantic relationship data, Obsidian, SQLite, and .local validation receipts are retrieval or execution evidence only and are not authority; tracked sources, exact hashes, and validators govern this recovery."
+
+physics_payload_admission_result:
+  status: "admitted"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+
+ordinary_route_guard_admission_result:
+  status: "PASS"
+  source_handoff_id: "handoff-0958"
+  selected_plan_task_id: "P16-T03"
+  guard_outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  system_success_counts_as_physics: false
+  system_success_counts_as_distance_to_gr: false
+  scientific_status_changed: false
+  physics_promotion_authorized: false
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS_SCOPED_OUTPUT_BLOCKED_PRECHECKPOINT"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  observed_durable_outputs:
+    physics: []
+    project_system:
+      - "exact RT-017 four-way ordered 61-path allowlist identity"
+      - "task-local protected-byte and parity receipt"
+      - "explicit precheckpoint preservation of the distinct documentation blocker"
+  accepted_criteria:
+    physics: []
+    project_system:
+      - "AJ-RT-20260803-017-001 remains byte-identical"
+      - "all four RT-017 allowlist representations equal the exact ordered 61-item AgentJob list"
+      - "all non-allowlist role and registry fields remain unchanged"
+      - "the existing documentation blocker remains exact and pending"
+      - "no checkpoint is invoked and no P16-T04 re-audit or P16-T05 work occurs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+distance_to_gr_delta:
+  changed: false
+  effect: "none_project_system_allowlist_parity_recovery"
+  milestone: "not_applicable"
+  ledger_row_updated: false
+  ledger_update_rationale: "Exact control-contract identity repair contributes no physics movement."
+
+physics_progress_status:
+  status: "documentation_or_control_only_no_physics_delta"
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+
+selected_next_route:
+  route_id: "generation_250_cumulative_documentation_impact_coverage_recovery"
+  route_label: "project-system-checkpoint-recovery"
+  worker_skill: "improve-project-system"
+  plan_task_id: "P16-T03"
+  work_item_id: "P16-T04"
+  task_type: "project_system_generation_250_cumulative_documentation_impact_coverage_recovery"
+  role_family: "process-integrity-auditor@0.1.0"
+  selected_next_packet_type: "cumulative_documentation_impact_coverage_checkpoint_recovery"
+  target_derivation_milestone: "none"
+  milestone_burden: "Project-system cumulative documentation-impact receipt coverage and checkpoint recovery only; no P16-T04 re-audit or scientific derivation burden advances."
+  strategy_id: "recover_generation_250_cumulative_documentation_impact_coverage_v1"
+  dependency_ready_after_checkpoint: false
+  execution_ready_now: true
+  executed: false
+  p16_t05_payload_executed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  next_action: "Repair only the exact cumulative RT-015, RT-016, and RT-017 documentation-impact receipt omissions, including FOLDER_MAP.md generated-derivative coverage and all tracked blocker and RT-018 paths; regenerate, revalidate, and invoke at most one fresh checkpoint without executing the P16-T04 re-audit or P16-T05."
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 250 validated, claimed, and consumed its immutable parity route exactly once."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The task-local receipt proves exact four-way ordered parity and protected-byte preservation."
+  post_write:
+    status: "FAIL"
+    evidence:
+      - "The admitted parity repair, taxonomy, signal, claim-language, and whitespace gates pass."
+      - "The inherited cumulative documentation-impact receipts remain incomplete outside generation 250's route."
+  post_checkpoint:
+    status: "NOT_RUN"
+    evidence:
+      - "No checkpoint was invoked because the precheckpoint documentation-impact gate failed."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Approved generated derivatives are synchronized after canonical RT-018 control records are complete."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Approved synchronization and validate-only checks run after canonical RT-018 control records are complete."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim validation passes with no hard failure."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "none; project-system allowlist identity recovery only"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  source_law_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+  push_authorized: false
+  publication_authorized: false
+  hosted_workflow_dispatch_authorized: false
+  proof_authority: false
+
+output_paths:
+  - "research_control/tasks/RT-20260803-017/roles/process-integrity-auditor@0.1.0--RT-20260803-017.yaml"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "research_control/tasks/RT-20260803-018/00_TASK.yaml"
+  - "research_control/tasks/RT-20260803-018/DDR-20260803-018.md"
+  - "research_control/tasks/RT-20260803-018/artifacts/validate_p16_t04_rt017_allowlist_parity_recovery.py"
+  - "research_control/tasks/RT-20260803-018/artifacts/p16_t04_rt017_allowlist_parity_recovery_receipt.json"
+  - "research_control/tasks/RT-20260803-018/artifacts/precheckpoint_blocker_generation_250_documentation_receipt_coverage_v1.yaml"
+  - "research_control/tasks/RT-20260803-018/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260803-018/jobs/AJ-RT-20260803-018-001.yaml"
+  - "research_control/tasks/RT-20260803-018/jobs/completions/AJC-AJ-RT-20260803-018-001.yaml"
+  - "research_control/tasks/RT-20260803-018/roles/process-integrity-auditor@0.1.0--RT-20260803-018.yaml"
+  - "research_control/handoffs/handoff-0959.yaml"
+  - "research_control/handoffs/handoff-0959.md"
+
+project_improvement_signals: []
+open_project_improvement_signal_ids: []
+validation_status: "FAIL"

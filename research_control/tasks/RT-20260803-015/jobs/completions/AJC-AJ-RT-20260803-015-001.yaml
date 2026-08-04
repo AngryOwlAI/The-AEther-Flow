@@ -1,0 +1,370 @@
+validation_status: "PASS"
+final_repository_validation_status: "PASS_PRECHECKPOINT"
+completion_id: "AJC-AJ-RT-20260803-015-001"
+job_id: "AJ-RT-20260803-015-001"
+task_id: "RT-20260803-015"
+task_type: "project_system_p16_t04_internal_review_label_contract_repair"
+decision_id: "DDR-20260803-015"
+role_id: "project-control-maintainer"
+source_role_id: "project-control-maintainer"
+role_version: "0.2.0"
+execution_role_ref: "project-control-maintainer@0.2.0--RT-20260803-015"
+status: "completed"
+created_at: "2026-08-03T21:34:55Z"
+started_at: "2026-08-03T22:06:27Z"
+completed_at: "2026-08-03T22:21:45Z"
+objective: "Resolve PIS-RT-20260803-014-001 by making the current skeptical-review contract and current role/task display projection unambiguously internal; reserving external human review and independent replication language for taxonomy-qualified evidence; preserving every historical task review artifact completion identity and hash; adding fail-closed contract and projection regressions; closing the signal with PASS evidence; and checkpointing once before a fresh P16-T04 re-audit."
+objective_result: "p16_t04_internal_skeptical_review_label_contract_repaired_ready_for_checkpoint"
+verdict: "PASS_CURRENT_INTERNAL_REVIEW_LABEL_AND_PROVENANCE_CONTRACT"
+completion_summary: "The current stable reviewer role ID now displays as Internal Skeptical Reviewer with role kind scientific_adversarial_internal_review; current schema template artifact validation claim-language linting and task-index projection enforce that same-context AI critique is internal while external human review and independent replication require taxonomy-qualified evidence. The P16-T04 completion report and severity-matrix hashes remain exact, 73 focused regressions pass, PIS-RT-20260803-014-001 resolves only against this PASS completion, and the fresh P16-T04 re-audit remains separate until one governed checkpoint."
+transaction_status: "ready_for_checkpoint"
+result_disposition: "internal_review_label_contract_repaired_ready_for_checkpoint"
+work_item_status: "repair_completed"
+plan_task_id: "P16-T04"
+recovery_for_plan_task_id: "P16-T04"
+next_plan_task_id: "P16-T04"
+checkpoint_invocation_count: 0
+checkpoint_commit:
+  status: "PENDING"
+  commit: ""
+  invocation_count: 0
+checkpoint_staged: false
+legacy_validation_used: false
+project_system_change_only: true
+scientific_claims_changed: false
+physical_status_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 246
+  passes_consumed: 218
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:246"
+  handoff_token: "7400db08982fb32ce0d12f7ba8f6411ed62e37884f86bdd4"
+  relay_claim_token: "62699b87ba98bc93ce1a13e9a1faab14d79b0dd4f5c0eae2"
+  route_work_item_id: "P16-T04"
+  route_worker_skill: "improve-project-system"
+  route_sha256: "3c643ee0cb66925c0648378e303f08400f0867d8d7851b6ba306f7e2dd664cc8"
+  route_reason: "p16_t04_selected_maintainer_job_pending_generator_freshness"
+  route_strategy_id: "execute_selected_p16_t04_internal_review_label_contract_agentjob_v1"
+  route_blocker_fingerprint: "62fc53d51e15d125a0b37e78b21086f14a6c1f609630caecdda52a5fdd07f0ca"
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1126
+    relationship_row_count: 5676
+    semantic_row_count: 1126
+    vault_row_count: 1126
+    blocking_warning_count: 0
+    local_cache_only_warning_count: 0
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search 'V21 R38 review independence taxonomy' --limit 10 --json"
+      query_type: "search"
+      query_text: "V21 R38 review independence taxonomy"
+      returned_object_ids:
+        - "MD-V21-P16-T04-FINAL-CLAIM-BOUNDARY-RED-TEAM"
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-V21-P16-T04-FINAL-CLAIM-BOUNDARY-RED-TEAM"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260803-014/artifacts/v21_p16_t04_final_red_team_report.md"
+      source_hash: "84e8d459aad80a05a23a1eb9842716479b1f26ac551dec6a886ed0fa24d9c41d"
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  direct_canonical_inspections:
+    - path: ".agents/roles/physics/external-red-team-reviewer.v0.1.0.md"
+      source_hash: "652176faf604825f8084aa3584200e32331b8f6493bda038376bf7737995a6d7"
+    - path: ".agents/schemas/EXTERNAL_RED_TEAM_REVIEW_ARTIFACT_SCHEMA.md"
+      source_hash: "f341828d74c15632944b2d25be4bf5e0506d60476bea90cf974d7ababcd5d840"
+    - path: "research_control/design/external_red_team_reviewer_role_design.md"
+      source_hash: "3c574cc9830b1c1a4045f45fb621b31f0b33e516754d07a3929b1832ab4c744d"
+  authority_note: "Generated wiki Obsidian semantic relationship SQLite and .local retrieval layers are navigation only and not authority; registered canonical sources tracked control state Git and the immutable relay route govern this repair."
+
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  phase_id: "P16"
+  plan_task_id: "P16-T04"
+  work_item_status: "repair_completed_reaudit_pending"
+  target_derivation_milestone: "none"
+  milestone_burden: "Project-system internal-versus-external review-label contract parity only; no scientific derivation burden is discharged."
+  result_status: "PASS_P16_T04_INTERNAL_REVIEW_LABEL_CONTRACT_REPAIR"
+  p16_t04_reaudit_executed: false
+  p16_t05_executed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+result:
+  status: "PASS_READY_FOR_CHECKPOINT"
+  strategy_id: "execute_selected_p16_t04_internal_review_label_contract_agentjob_v1"
+  stable_role_id: "external-red-team-reviewer"
+  stable_role_version: "0.1.0"
+  current_role_name: "Internal Skeptical Reviewer"
+  current_role_kind: "scientific_adversarial_internal_review"
+  same_context_ai_review_status: "internal_skeptical_review"
+  external_human_review_evidence_required: true
+  independent_replication_evidence_required: true
+  role_id_changed: false
+  historical_artifacts_modified: false
+  focused_test_count: 73
+  focused_test_pass_count: 73
+  p16_t04_reaudit_executed: false
+  p16_t05_executed: false
+  checkpoint_invoked: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_push_or_external_action_authorized: false
+
+historical_hash_preservation:
+  source_completion_path: "research_control/tasks/RT-20260803-014/jobs/completions/AJC-AJ-RT-20260803-014-001.yaml"
+  source_completion_sha256: "cf403db773c3aacc33bc127c067abf12218e56bb43f0e6dbe8de0790b31bd6a2"
+  source_report_path: "research_control/tasks/RT-20260803-014/artifacts/v21_p16_t04_final_red_team_report.md"
+  source_report_sha256: "84e8d459aad80a05a23a1eb9842716479b1f26ac551dec6a886ed0fa24d9c41d"
+  source_severity_matrix_path: "research_control/tasks/RT-20260803-014/artifacts/v21_p16_t04_severity_repair_matrix.yaml"
+  source_severity_matrix_sha256: "0a953126e9844a21e623b96bc1bfbfb6c11dcd30f7393798c70d4c84f3ed5911"
+  all_exact: true
+
+artifact_receipts:
+  - path: "research_control/tasks/RT-20260803-015/artifacts/p16_t04_internal_review_label_contract_validation.json"
+    sha256: "97edc8ab306c30ce453f978442226c9cae3fa012acf1efe842343266fb37f629"
+
+command_results:
+  - command: ".venv/bin/python -m unittest -v tests.test_validate_claim_language tests.test_red_team_review_artifact_validator tests.test_task_index_renderer tests.test_research_control.ResearchControlTests.test_current_reviewer_role_rejects_external_label_even_with_registry_parity"
+    status: "PASS"
+    summary: "All 73 focused role-name schema-language artifact-provenance claim-linter and task-display tests pass, including fail-closed drift cases."
+  - command: ".venv/bin/python -m unittest -v tests.test_validate_claim_language tests.test_red_team_review_artifact_validator tests.test_research_control tests.test_task_index_renderer"
+    status: "PASS_AFTER_COMPLETION_STATE_SYNC"
+    summary: "The selected four-module repository shard passes after completion, handoff, registry, and generated-state synchronization."
+  - command: ".venv/bin/python -m scripts.validation.cli run --profile affected --paths <AgentJob-selected paths>"
+    status: "PASS_PRECHECKPOINT"
+    summary: "The affected validation profile passes on the finalized project-system write set."
+  - command: ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --job-id AJ-RT-20260803-015-001 --json-summary"
+    status: "PASS_PRECHECKPOINT"
+    summary: "Integrated research-control and exact write-path validation pass before checkpoint."
+  - command: ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+    status: "PASS"
+    summary: "Changed claim-bearing surfaces contain no hard overclaim finding."
+  - command: ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted"
+    status: "PASS"
+    summary: "The resolved signal remains structurally represented and no unregistered signal is emitted."
+  - command: ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+    status: "PASS"
+    summary: "Documentation-impact coverage matches the final classified write set."
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+    status: "PASS"
+    summary: "Canonical memory registries and generated derivatives validate after synchronization."
+  - command: "git diff --check"
+    status: "PASS"
+    summary: "The cumulative transaction contains no whitespace errors."
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  observed_durable_outputs:
+    physics: []
+    project_system:
+      - "current internal skeptical-review role-contract parity"
+      - "current role and task display projection parity"
+      - "evidence-qualified external-review and independent-replication language"
+      - "fail-closed role schema renderer and claim-language regressions"
+      - "resolved project-improvement signal and one governed checkpoint"
+  accepted_criteria:
+    physics: []
+    project_system:
+      - "historical role IDs task IDs review artifacts completions and hashes remain unchanged"
+      - "the current same-context AI skeptical role and current display projection are unambiguously internal"
+      - "external human review and independent replication labels require taxonomy-qualified evidence"
+      - "role-name task-display schema-language artifact-validation and claim-linter regressions fail closed"
+      - "PIS-RT-20260803-014-001 closes only against this job's PASS completion"
+      - "P16-T04 re-audit and P16-T05 remain unexecuted"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+physics_payload_admission_result:
+  status: "admitted"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+
+ordinary_route_guard_admission_result:
+  status: "PASS"
+  source_handoff_id: "handoff-0955"
+  selected_plan_task_id: "P16-T04"
+  guard_outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  system_success_counts_as_physics: false
+  system_success_counts_as_distance_to_gr: false
+  scientific_status_changed: false
+  physics_promotion_authorized: false
+
+distance_to_gr_delta:
+  changed: false
+  effect: "none_project_system_internal_review_label_contract_repair_only"
+  burden_id: "none"
+  milestone: "none"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "Current reviewer metadata and provenance guards contribute no metric coupling field-equation benchmark or other physics evidence."
+  downstream_unlocked:
+    - "fresh P16-T04 claim-boundary re-audit after checkpoint"
+  downstream_still_blocked:
+    - "P16-T04 final disposition until the fresh re-audit"
+    - "P16-T05 until P16-T04 completion"
+    - "benchmark promotion proof publication external action or completed derivation"
+
+physics_progress_status:
+  status: "none_project_system_only"
+  new_mathematical_payload: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+
+selected_next_route:
+  route_id: "v21_p16_t04_fresh_claim_boundary_reaudit_after_internal_label_repair"
+  route_label: "internal-skeptical-review-packet"
+  role_family: "external-red-team-reviewer@0.1.0"
+  role_display_name: "Internal Skeptical Reviewer"
+  worker_skill: "continue-research"
+  selected_next_packet_type: "post_repair_final_claim_boundary_reaudit"
+  task_type: "v21_p16_t04_final_claim_boundary_internal_skeptical_reaudit"
+  plan_task_id: "P16-T04"
+  work_item_id: "P16-T04"
+  target_derivation_milestone: "benchmark_promotion"
+  milestone_burden: "Provide the last adversarial claim-boundary check without provenance overread."
+  strategy_id: "reaudit_p16_t04_after_internal_review_label_contract_repair_v1"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  p16_t05_authorized: false
+  scientific_status_changed: false
+  physics_promotion_authorized: false
+  executed: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 246 validated, atomically claimed, and consumed the exact immutable improve-project-system route once."
+      - "Repository identity, source HEAD, dirty manifest, historical hashes, predecessor terminal state, and lease parity matched before execution."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The task-local receipt preserves the three protected P16-T04 hashes and validates the exact current internal label contract."
+      - "All 73 focused fail-closed regressions pass."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Focused affected documentation signal claim-language research-control memory and whitespace gates pass."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "Exactly one governed checkpoint remains authorized before the separate fresh P16-T04 re-audit."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Current-frontier task-index compact-frontier dependency-graph registry and wiki derivatives are synchronized after final control writes."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Approved synchronization and validate-only checks pass."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim validation rejects unqualified external-review and independent-replication completion language."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "none; project-system internal-review label and provenance contract only"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  publication_authorized: false
+  proof_authority: false
+  canonical_ontology_edit_authorized: false
+  source_law_adoption_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+output_paths:
+  - ".agents/roles/physics/external-red-team-reviewer.v0.1.0.md"
+  - ".agents/schemas/EXTERNAL_RED_TEAM_REVIEW_ARTIFACT_SCHEMA.md"
+  - "research_control/design/external_red_team_reviewer_role_design.md"
+  - "research_control/templates/RED_TEAM_REVIEW_ARTIFACT_TEMPLATE.yaml"
+  - "scripts/project_control/validate_claim_language.py"
+  - "scripts/research_control/validate_red_team_review_artifact.py"
+  - "scripts/research_control/validate_research_control.py"
+  - "scripts/research_control/render_task_index.py"
+  - "tests/test_validate_claim_language.py"
+  - "tests/test_red_team_review_artifact_validator.py"
+  - "tests/test_research_control.py"
+  - "tests/test_task_index_renderer.py"
+  - "research_control/tasks/RT-20260803-015/artifacts/p16_t04_internal_review_label_contract_validation.json"
+  - "research_control/tasks/RT-20260803-015/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260803-015/jobs/completions/AJC-AJ-RT-20260803-015-001.yaml"
+  - "research_control/project_improvement_handoffs/improve-project-handoff_20260803_005.yaml"
+  - "research_control/project_improvement_handoffs/improve-project-handoff_20260803_005.md"
+  - "research_control/handoffs/handoff-0956.yaml"
+  - "research_control/handoffs/handoff-0956.md"
+  - "research_control/program_state.yaml"
+
+project_improvement_signals: []
+open_project_improvement_signal_ids: []
+resolved_project_improvement_signals:
+  - "PIS-RT-20260803-014-001"
+project_improvement_bridge:
+  required: true
+  improvement_handoff_path: "research_control/project_improvement_handoffs/improve-project-handoff_20260803_005.yaml"
+  signal_ids:
+    - "PIS-RT-20260803-014-001"
+  bridge_status: "resolved_pass_precheckpoint"
+  sidecar_supersedes_research_handoff: false
+coherent_resolution_summary: "The current reviewer role, registry, schema, template, artifact validator, claim-language linter, and task-index projection now agree that same-context AI skeptical review is internal while taxonomy-qualified external human review and independent replication remain separate evidence classes. This resolves only the project-system control-contract signal and changes no science."
+routing_delta_summary: "Closed one current control-contract drift signal with matching PASS completion evidence; preserved the ordinary research handoff as authority and selected a distinct fresh P16-T04 re-audit only after checkpoint."
+notes: "This PASS does not establish external human review independent replication scientific validation a Gate verdict benchmark proof publication readiness push external action or completed derivation."

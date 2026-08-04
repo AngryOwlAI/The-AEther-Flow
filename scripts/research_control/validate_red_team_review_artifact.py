@@ -1,4 +1,4 @@
-"""Validate external red-team review artifacts.
+"""Validate skeptical-review artifacts and their current internal label contract.
 
 The validator is project-control tooling for P7 red-team review outputs. A
 passing artifact is review/routing evidence only; it is not proof authority and
@@ -23,6 +23,17 @@ from scripts.research_control import strict_yaml
 
 SCHEMA_ID = "external_red_team_review_artifact_schema_v1"
 SCHEMA_PATH = ".agents/schemas/EXTERNAL_RED_TEAM_REVIEW_ARTIFACT_SCHEMA.md"
+CURRENT_ROLE_PATH = ".agents/roles/physics/external-red-team-reviewer.v0.1.0.md"
+CURRENT_TEMPLATE_PATH = "research_control/templates/RED_TEAM_REVIEW_ARTIFACT_TEMPLATE.yaml"
+CURRENT_DESIGN_PATH = "research_control/design/external_red_team_reviewer_role_design.md"
+CURRENT_ROLE_ID = "external-red-team-reviewer"
+CURRENT_ROLE_VERSION = "0.1.0"
+CURRENT_REVIEWER_DISPLAY_NAME = "Internal Skeptical Reviewer"
+CURRENT_REVIEWER_ROLE_KIND = "scientific_adversarial_internal_review"
+CURRENT_LABEL_FIELDS: tuple[str, ...] = (
+    "reviewer_display_name",
+    "reviewer_role_kind",
+)
 REQUIRED_FIELDS: tuple[str, ...] = (
     "reviewed_object_id",
     "reviewed_source_paths",
@@ -164,6 +175,128 @@ def _validate_relative_source_path(path_text: str) -> str | None:
 def _append_type_issue(issues: list[ValidationIssue], data: dict[str, Any], field: str) -> None:
     if field not in data:
         issues.append(ValidationIssue(field, "missing required field"))
+
+
+def _validate_current_label_fields(
+    data: dict[str, Any], issues: list[ValidationIssue]
+) -> str:
+    present = {field for field in CURRENT_LABEL_FIELDS if field in data}
+    if not present:
+        return "legacy_identifier_only"
+    for field in CURRENT_LABEL_FIELDS:
+        if field not in data:
+            issues.append(
+                ValidationIssue(
+                    field,
+                    "must be present when either current reviewer label field is present",
+                )
+            )
+    expected = {
+        "reviewer_display_name": CURRENT_REVIEWER_DISPLAY_NAME,
+        "reviewer_role_kind": CURRENT_REVIEWER_ROLE_KIND,
+    }
+    for field, expected_value in expected.items():
+        if field in data and data.get(field) != expected_value:
+            issues.append(ValidationIssue(field, f"must be exactly {expected_value}"))
+    return "current_internal" if len(present) == len(CURRENT_LABEL_FIELDS) else "invalid"
+
+
+def validate_current_contract(repo_root: Path = REPO_ROOT) -> dict[str, Any]:
+    """Fail closed when the live role, schema, design, or template drifts externally."""
+
+    issues: list[ValidationIssue] = []
+    role_path = repo_root / CURRENT_ROLE_PATH
+    try:
+        frontmatter, role_body = strict_yaml.load_frontmatter(role_path)
+    except (OSError, strict_yaml.StrictYamlError) as exc:
+        issues.append(ValidationIssue(CURRENT_ROLE_PATH, str(exc)))
+        frontmatter, role_body = {}, ""
+
+    expected_frontmatter = {
+        "role_id": CURRENT_ROLE_ID,
+        "version": CURRENT_ROLE_VERSION,
+        "role_name": CURRENT_REVIEWER_DISPLAY_NAME,
+        "role_kind": CURRENT_REVIEWER_ROLE_KIND,
+    }
+    for field, expected_value in expected_frontmatter.items():
+        if frontmatter.get(field) != expected_value:
+            issues.append(
+                ValidationIssue(
+                    f"{CURRENT_ROLE_PATH}:{field}",
+                    f"must be exactly {expected_value}",
+                )
+            )
+    for marker in (
+        "stable role identifier",
+        "legacy identifier",
+        "same-context AI is internal review",
+        "cannot claim that it performed external",
+        "independent replication",
+    ):
+        if marker.lower() not in role_body.lower():
+            issues.append(
+                ValidationIssue(CURRENT_ROLE_PATH, f"missing internal-label marker: {marker}")
+            )
+
+    schema_path = repo_root / SCHEMA_PATH
+    design_path = repo_root / CURRENT_DESIGN_PATH
+    for path_text, markers in {
+        SCHEMA_PATH: (
+            "# Internal Skeptical Review Artifact Schema",
+            'reviewer_display_name: "Internal Skeptical Reviewer"',
+            'reviewer_role_kind: "scientific_adversarial_internal_review"',
+            "internal skeptical-review classes",
+            "not external",
+        ),
+        CURRENT_DESIGN_PATH: (
+            "## Current V21 Label Contract",
+            "same-context AI review is internal",
+            "stable legacy identifier only",
+        ),
+    }.items():
+        path = schema_path if path_text == SCHEMA_PATH else design_path
+        try:
+            text = path.read_text(encoding="utf-8")
+        except OSError as exc:
+            issues.append(ValidationIssue(path_text, str(exc)))
+            continue
+        for marker in markers:
+            if marker.lower() not in text.lower():
+                issues.append(
+                    ValidationIssue(path_text, f"missing internal-label marker: {marker}")
+                )
+
+    template_path = repo_root / CURRENT_TEMPLATE_PATH
+    try:
+        template = strict_yaml.load(template_path)
+    except (OSError, strict_yaml.StrictYamlError) as exc:
+        issues.append(ValidationIssue(CURRENT_TEMPLATE_PATH, str(exc)))
+        template = {}
+    for field, expected_value in {
+        "reviewer_role_id": CURRENT_ROLE_ID,
+        "reviewer_role_version": CURRENT_ROLE_VERSION,
+        "reviewer_display_name": CURRENT_REVIEWER_DISPLAY_NAME,
+        "reviewer_role_kind": CURRENT_REVIEWER_ROLE_KIND,
+    }.items():
+        if template.get(field) != expected_value:
+            issues.append(
+                ValidationIssue(
+                    f"{CURRENT_TEMPLATE_PATH}:{field}",
+                    f"must be exactly {expected_value}",
+                )
+            )
+
+    if issues:
+        raise RedTeamReviewValidationError(schema_path, issues)
+    return {
+        "status": "PASS",
+        "role_id": CURRENT_ROLE_ID,
+        "role_version": CURRENT_ROLE_VERSION,
+        "reviewer_display_name": CURRENT_REVIEWER_DISPLAY_NAME,
+        "reviewer_role_kind": CURRENT_REVIEWER_ROLE_KIND,
+        "legacy_identifier_preserved": True,
+        "external_provenance_inferred": False,
+    }
 
 
 def _validate_review_context(
@@ -553,6 +686,7 @@ def validate_review_data(data: dict[str, Any], path: Path) -> dict[str, Any]:
                     )
                 )
 
+    reviewer_label_contract = _validate_current_label_fields(data, issues)
     review_context_summary = _validate_review_context(data, issues)
 
     if issues:
@@ -565,6 +699,7 @@ def validate_review_data(data: dict[str, Any], path: Path) -> dict[str, Any]:
         "verdict": data["verdict"],
         "recommended_next_route": data["recommended_next_route"],
         "physics_promotion_authorized": False,
+        "reviewer_label_contract": reviewer_label_contract,
         **review_context_summary,
     }
 
@@ -574,7 +709,8 @@ def validate_review_file(path: Path) -> dict[str, Any]:
     return validate_review_data(data, path)
 
 
-def validate_files(paths: list[Path]) -> dict[str, Any]:
+def validate_files(paths: list[Path], *, repo_root: Path = REPO_ROOT) -> dict[str, Any]:
+    current_contract = validate_current_contract(repo_root)
     checked = [validate_review_file(path) for path in paths]
     context_counts: dict[str, int] = {}
     for item in checked:
@@ -586,6 +722,7 @@ def validate_files(paths: list[Path]) -> dict[str, Any]:
         "status": "PASS",
         "checked_artifact_count": len(checked),
         "checked_artifacts": checked,
+        "current_contract": current_contract,
         "review_context_classification_counts": dict(sorted(context_counts.items())),
         "physics_promotion_authorized": False,
         "authority_boundary": (
@@ -596,7 +733,7 @@ def validate_files(paths: list[Path]) -> dict[str, Any]:
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(
-        description="Validate strict-YAML external red-team review artifacts."
+        description="Validate strict-YAML skeptical-review artifacts and current internal labels."
     )
     parser.add_argument("artifacts", nargs="+", help="Review artifact YAML path(s).")
     parser.add_argument("--json", action="store_true", help="Emit JSON receipt.")

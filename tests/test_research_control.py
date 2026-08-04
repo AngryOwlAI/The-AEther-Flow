@@ -570,6 +570,45 @@ class ResearchControlTests(unittest.TestCase):
         self.validator.validate_registry_values(report, rows_by_registry)
         self.assertEqual(report.errors, [])
 
+    def test_current_reviewer_role_rejects_external_label_even_with_registry_parity(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            role_rel = ".agents/roles/physics/external-red-team-reviewer.v0.1.0.md"
+            role_path = root / role_rel
+            role_path.parent.mkdir(parents=True, exist_ok=True)
+            role_text = (REPO_ROOT / role_rel).read_text(encoding="utf-8")
+            role_path.write_text(
+                role_text.replace(
+                    'role_name: "Internal Skeptical Reviewer"',
+                    'role_name: "External Red-Team Reviewer"',
+                ).replace(
+                    'role_kind: "scientific_adversarial_internal_review"',
+                    'role_kind: "scientific_adversarial_external_review"',
+                ),
+                encoding="utf-8",
+            )
+            with (REPO_ROOT / "registries/AGENT_ROLE_REGISTRY.csv").open(
+                newline="", encoding="utf-8"
+            ) as handle:
+                row = next(
+                    item
+                    for item in csv.DictReader(handle)
+                    if item["role_id"] == "external-red-team-reviewer"
+                    and item["version"] == "0.1.0"
+                )
+            row["role_name"] = "External Red-Team Reviewer"
+            row["role_kind"] = "scientific_adversarial_external_review"
+            report = self.validator.ValidationReport()
+            with mock.patch.object(self.validator, "REPO_ROOT", root):
+                self.validator.validate_roles(report, [row])
+
+        self.assertTrue(
+            any("current reviewer role_name must be Internal Skeptical Reviewer" in error for error in report.errors)
+        )
+        self.assertTrue(
+            any("current reviewer role_kind must be scientific_adversarial_internal_review" in error for error in report.errors)
+        )
+
     def test_resolve_latest_handoff(self) -> None:
         program_state = self.strict_yaml.loads(
             (REPO_ROOT / "research_control" / "program_state.yaml").read_text(
@@ -1156,8 +1195,12 @@ class ResearchControlTests(unittest.TestCase):
             "MD-SKILL-PROJECT-MEMORY-SYSTEM",
             "MD-README-TESTS",
             "MD-CONTRIBUTING",
+            "MD-EXTERNAL-RED-TEAM-REVIEW-ARTIFACT-SCHEMA",
+            "MD-RESEARCH-CONTROL-DESIGN-EXTERNAL-RED-TEAM-REVIEWER-ROLE-DESIGN",
             "MD-RESEARCH-CONTROL-DESIGN-FRONTIER-THEOREM-INVENTORY",
             "MD-RESEARCH-CONTROL-DESIGN-GR-DERIVATION-BURDEN-MAP",
+            "MD-ROLE-AGENTS-ROLES-PHYSICS-EXTERNAL-RED-TEAM-REVIEWER-V0-1-0-MD",
+            "MD-SCHEMA-EXTERNAL-RED-TEAM-REVIEW-ARTIFACT-SCHEMA",
         ]:
             with self.subTest(object_id=object_id):
                 root, receipt = self.memory_preflight_fixture(

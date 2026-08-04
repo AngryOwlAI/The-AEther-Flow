@@ -538,6 +538,44 @@ class ProjectChangeClassifierTests(unittest.TestCase):
         self.assertEqual(unrelated["recommended_validation_profile"], "full")
         self.assertIn("unknown_governed_path", unrelated["reason_codes"])
 
+    def test_red_team_review_template_has_exact_control_contract_tags(self) -> None:
+        path = "research_control/templates/RED_TEAM_REVIEW_ARTIFACT_TEMPLATE.yaml"
+        result = self.classifier.classify_paths([path])
+
+        self.assertEqual(
+            result["path_family_tags"],
+            ["claim_language", "role_or_schema_contract"],
+        )
+        self.assertEqual(
+            result["path_family_details"][0]["tags"],
+            ["claim_language", "role_or_schema_contract"],
+        )
+        self.assertEqual(
+            result["path_family_details"][0]["reasons"],
+            ["path_rule:claim_language", "path_rule:role_or_schema_contract"],
+        )
+        self.assertNotIn("unknown_governed_path", result["reason_codes"])
+
+        unrelated_path = (
+            "research_control/templates/FUTURE_RED_TEAM_REVIEW_ARTIFACT_TEMPLATE.yaml"
+        )
+        unrelated = self.classifier.classify_paths(
+            ["research_control/program_state.yaml", unrelated_path]
+        )
+        unrelated_details = {
+            item["path"]: item for item in unrelated["path_family_details"]
+        }
+        self.assertEqual(
+            unrelated_details[unrelated_path]["tags"],
+            ["unknown_governed_path"],
+        )
+        self.assertEqual(
+            unrelated_details[unrelated_path]["reasons"],
+            ["fallback:unknown_governed_path"],
+        )
+        self.assertEqual(unrelated["recommended_validation_profile"], "full")
+        self.assertIn("unknown_governed_path", unrelated["reason_codes"])
+
     def test_validation_adapter_bindings_are_exact_ci_orchestration(self) -> None:
         path = "research_control/design/validation_adapter_bindings_v1.json"
         result = self.classifier.classify_paths([path])

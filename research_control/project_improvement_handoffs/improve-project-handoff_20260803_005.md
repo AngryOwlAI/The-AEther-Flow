@@ -57,19 +57,35 @@ Recommended next step: Run /improve-project-system to process this signal as one
 
 ## Solution Plan
 
-Status: absent.
+Status: completed through `AJ-RT-20260803-015-001`; one governed checkpoint
+remains before the separate fresh P16-T04 re-audit.
 
-If no executable plan is present, Project-System Director should convert this
-issue inventory into one bounded AgentJob or reject the signal with explicit
-evidence.
+The Project-System Director selected one task-scoped
+`project-control-maintainer@0.2.0` job. It must preserve all historical role
+IDs, task IDs, review artifacts, completions, and hashes while making the
+current same-context AI skeptical-review contract and current role/task
+display projection unambiguously internal. External human review and
+independent replication language remains reserved for evidence satisfying the
+registered taxonomy.
+
+The implementation must add fail-closed role-name, task-display,
+schema-language, red-team-artifact, and claim-linter regressions; regenerate
+only approved derivatives; resolve the signal only on PASS; checkpoint once;
+and route a fresh P16-T04 re-audit. It may not execute that re-audit or P16-T05
+inside the repair job.
 
 ## Resolution
 
-- Resolved by job: none.
-- Resolution evidence: none.
-- Resolved at: none.
+- Resolved by job: `AJ-RT-20260803-015-001`.
+- Resolution evidence: `research_control/tasks/RT-20260803-015/jobs/completions/AJC-AJ-RT-20260803-015-001.yaml`.
+- Resolved at: `2026-08-03T22:21:45Z`.
 
 ## Notes
 
-This Markdown mirror is operator-facing. The YAML sidecar remains the
-machine-readable control artifact.
+Generation 246 executed the selected implementation once. The current display
+name and role kind identify internal skeptical review, every recorded P16-T04
+historical hash remains exact, and all 73 focused fail-closed regressions pass.
+This Markdown mirror is operator-facing; the YAML sidecar remains the
+machine-readable control artifact. The repair creates no external human review,
+independence, replication, science, Gate, benchmark, proof, publication, push,
+or completed-derivation authority.

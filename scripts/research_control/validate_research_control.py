@@ -100,6 +100,11 @@ ROLE_COLUMNS = [
     "notes",
 ]
 
+CURRENT_INTERNAL_REVIEW_ROLE_ID = "external-red-team-reviewer"
+CURRENT_INTERNAL_REVIEW_ROLE_VERSION = "0.1.0"
+CURRENT_INTERNAL_REVIEW_ROLE_NAME = "Internal Skeptical Reviewer"
+CURRENT_INTERNAL_REVIEW_ROLE_KIND = "scientific_adversarial_internal_review"
+
 DECISION_COLUMNS = [
     "decision_id",
     "task_id",
@@ -480,6 +485,7 @@ MUTABLE_MEMORY_PREFLIGHT_SOURCE_OBJECT_IDS = {
     "MD-CLAIM-GATES-PUBLICATION-BRIEF",
     "MD-CONTRIBUTING",
     "MD-EXACT-GR-BENCHMARK-BOUNDARY-PUBLICATION-BRIEF",
+    "MD-EXTERNAL-RED-TEAM-REVIEW-ARTIFACT-SCHEMA",
     "MD-GITHUB-FACING-AETHER-FLOW-PHYSICS-PROGRAM-EXPLAINER",
     "MD-GITHUB-FACING-AETHER-FLOW-ONTOLOGY-EXPLAINER",
     "MD-GITHUB-FACING-CLAIM-GATES-EXPLAINER",
@@ -508,12 +514,15 @@ MUTABLE_MEMORY_PREFLIGHT_SOURCE_OBJECT_IDS = {
     "MD-RESEARCH-CONTROL-DESIGN-FRONTIER-THEOREM-INVENTORY",
     "MD-RESEARCH-CONTROL-DESIGN-GR-DERIVATION-BURDEN-MAP",
     "MD-RESEARCH-CONTROL-DESIGN-EPISTEMIC-CATEGORY-GLOSSARY",
+    "MD-RESEARCH-CONTROL-DESIGN-EXTERNAL-RED-TEAM-REVIEWER-ROLE-DESIGN",
     "MD-RESEARCH-CONTROL-DESIGN-PUBLIC-STATUS-EXISTS-DOES-NOT-EXIST-SOURCE-SPEC",
     "MD-RESEARCH-CONTROL-DESIGN-CI-VALIDATION-SHARD-POLICY-V1",
     "MD-RESEARCH-CONTROL-DESIGN-VALIDATION-COMMAND-INVENTORY-V16",
     "MD-RESEARCH-CONTROL-DESIGN-VALIDATION-PROFILE-POLICY-V1",
     "MD-RESEARCH-CONTROL-TASKS-RT-20260722-015-ORDINARY-ROUTE-GUARD-POLICY-V1",
     "MD-SCHEMA-AGENT-JOB-SCHEMA",
+    "MD-SCHEMA-EXTERNAL-RED-TEAM-REVIEW-ARTIFACT-SCHEMA",
+    "MD-ROLE-AGENTS-ROLES-PHYSICS-EXTERNAL-RED-TEAM-REVIEWER-V0-1-0-MD",
     "MD-SKILL-CONTINUE-RESEARCH",
     "MD-SKILL-CONTINUE-RESEARCH-CONTINUE-GOAL",
     "MD-SKILL-CONTINUE-RESEARCH-GOAL",
@@ -2381,13 +2390,14 @@ def validate_roles(report: ValidationReport, role_rows: list[dict[str, str]]) ->
             report.error(f"{role_row_key(row)}: missing role contract {path_text}")
             continue
         try:
-            frontmatter, _ = load_frontmatter(path)
+            frontmatter, body = load_frontmatter(path)
         except StrictYamlError as exc:
             report.error(f"{path_text}: {exc}")
             continue
         for field_name in [
             "role_id",
             "version",
+            "role_name",
             "role_kind",
             "authority_level",
             "status",
@@ -2403,6 +2413,31 @@ def validate_roles(report: ValidationReport, role_rows: list[dict[str, str]]) ->
                 report.error(
                     f"{path_text}: frontmatter {field_name} does not match AGENT_ROLE_REGISTRY.csv"
                 )
+        if (
+            row.get("role_id") == CURRENT_INTERNAL_REVIEW_ROLE_ID
+            and row.get("version") == CURRENT_INTERNAL_REVIEW_ROLE_VERSION
+        ):
+            if row.get("role_name") != CURRENT_INTERNAL_REVIEW_ROLE_NAME:
+                report.error(
+                    f"{path_text}: current reviewer role_name must be "
+                    f"{CURRENT_INTERNAL_REVIEW_ROLE_NAME}"
+                )
+            if row.get("role_kind") != CURRENT_INTERNAL_REVIEW_ROLE_KIND:
+                report.error(
+                    f"{path_text}: current reviewer role_kind must be "
+                    f"{CURRENT_INTERNAL_REVIEW_ROLE_KIND}"
+                )
+            lowered_body = body.lower()
+            for marker in (
+                "legacy identifier",
+                "same-context ai is internal review",
+                "external human review",
+                "independent replication",
+            ):
+                if marker not in lowered_body:
+                    report.error(
+                        f"{path_text}: current internal reviewer contract missing marker {marker}"
+                    )
     return roles
 
 

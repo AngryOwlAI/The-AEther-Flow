@@ -172,6 +172,47 @@ COUNTERMODEL_OVERREAD_PHRASE_CLASS = {
     ),
 }
 
+REVIEW_PROVENANCE_OVERREAD_PHRASE_CLASS = {
+    "class_id": "review_provenance_overread",
+    "plan_required_class_number": "P16-T04",
+    "title": "Internal skeptical review mislabeled as external or independent",
+    "default_severity": "hard_fail_current_public",
+    "control_severity": "hard_fail_current_control",
+    "historical_severity": "warn_historical",
+    "detection_kind": "exact_or_regex_phrase",
+    "forbidden_patterns": [
+        {
+            "pattern": (
+                r"\bexternal(?:\s+human)?\s+review\s+"
+                r"(?:is\s+|was\s+)?(?:complete|completed|passed|validated|established)\b"
+            )
+        },
+        {
+            "pattern": (
+                r"\bindependent\s+replication\s+"
+                r"(?:is\s+|was\s+)?(?:complete|completed|passed|validated|"
+                r"established|achieved)\b"
+            )
+        },
+        {
+            "pattern": (
+                r"\b(?:this|the)\s+(?:red[- ]team|skeptical)\s+review\s+"
+                r"(?:is|was|counts\s+as)\s+(?:an?\s+)?external\b"
+            )
+        },
+    ],
+    "bad_phrases": [
+        "external review completed",
+        "independent replication established",
+        "this skeptical review counts as external",
+    ],
+    "corrective_language": (
+        "Label same-context AI critique as internal skeptical review. Reserve external "
+        "human review and independent replication for structured taxonomy-qualified "
+        "provenance and execution evidence."
+    ),
+}
+
 
 @dataclass(frozen=True)
 class Finding:
@@ -218,8 +259,15 @@ def load_taxonomy(path: Path = DEFAULT_TAXONOMY_PATH) -> dict[str, Any]:
         raise StrictYamlError(f"{path}: unsupported claim-language taxonomy schema")
     phrase_classes = _as_list(data.get("phrase_classes"))
     class_ids = {_text(item.get("class_id")) for item in phrase_classes if isinstance(item, dict)}
-    if COUNTERMODEL_OVERREAD_PHRASE_CLASS["class_id"] not in class_ids:
-        data["phrase_classes"] = phrase_classes + [COUNTERMODEL_OVERREAD_PHRASE_CLASS]
+    supplemental_classes = (
+        COUNTERMODEL_OVERREAD_PHRASE_CLASS,
+        REVIEW_PROVENANCE_OVERREAD_PHRASE_CLASS,
+    )
+    for supplemental in supplemental_classes:
+        if supplemental["class_id"] not in class_ids:
+            phrase_classes.append(supplemental)
+            class_ids.add(supplemental["class_id"])
+    data["phrase_classes"] = phrase_classes
     return data
 
 

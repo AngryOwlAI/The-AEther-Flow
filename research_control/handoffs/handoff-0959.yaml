@@ -1,0 +1,224 @@
+validation_status: "FAIL"
+handoff_id: "handoff-0959"
+task_id: "RT-20260803-018"
+job_id: "AJ-RT-20260803-018-001"
+completion_id: "AJC-AJ-RT-20260803-018-001"
+completion_path: "research_control/tasks/RT-20260803-018/jobs/completions/AJC-AJ-RT-20260803-018-001.yaml"
+completion_sha256: "e0466a6c03b71e778bb9a773585164308aeaa9a932d0f9c3262a6a29e99bf8e8"
+status: "blocked_precheckpoint"
+created_at: "2026-08-04T02:50:31Z"
+parent_handoff_id: "handoff-0958"
+plan_task_id: "P16-T03"
+recovery_for_plan_task_id: "P16-T04"
+source_role_id: "process-integrity-auditor"
+source_role_version: "0.1.0"
+source_execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260803-018"
+summary: "Generation 250 preserves AJ-RT-20260803-017-001 byte-for-byte and restores exact ordered 61-path identity across its expired execution role and both registry representations. Protected RT-017 hashes and all non-allowlist fields remain exact. The inherited cumulative documentation-impact receipts remain incomplete, so no checkpoint is invoked and P16-T04 re-audit plus P16-T05 remain unexecuted."
+next_action: "Run one distinct improve-project-system recovery that repairs only the exact cumulative RT-20260803-015, RT-20260803-016, and RT-20260803-017 documentation-impact receipt omissions, including FOLDER_MAP.md generated-derivative coverage and every tracked blocker and RT-20260803-018 path; regenerate, revalidate, and invoke at most one fresh checkpoint without executing the P16-T04 re-audit or P16-T05."
+current_claim_boundary: "CB-PS-P16-T04-RT017-ALLOWLIST-PARITY-RECOVERY-001"
+loop_risk_route: "project-system-checkpoint-recovery"
+
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260803-018"
+  latest_research_handoff_id: "handoff-0959"
+  latest_research_next_action: "Run one distinct improve-project-system recovery that repairs only the exact cumulative RT-20260803-015, RT-20260803-016, and RT-20260803-017 documentation-impact receipt omissions, including FOLDER_MAP.md generated-derivative coverage and every tracked blocker and RT-20260803-018 path; regenerate, revalidate, and invoke at most one fresh checkpoint without executing the P16-T04 re-audit or P16-T05."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+
+claim_boundary:
+  allowed_next_scope: "One fresh bounded project-system recovery may repair only the exact cumulative documentation-impact receipt omissions in RT-20260803-015, RT-20260803-016, and RT-20260803-017, including FOLDER_MAP.md generated-derivative coverage and every tracked blocker and RT-20260803-018 path; regenerate, revalidate, and invoke at most one fresh checkpoint."
+  completed_task: "RT-20260803-018"
+  completed_completion_path: "research_control/tasks/RT-20260803-018/jobs/completions/AJC-AJ-RT-20260803-018-001.yaml"
+  completed_completion_sha256: "e0466a6c03b71e778bb9a773585164308aeaa9a932d0f9c3262a6a29e99bf8e8"
+  source_handoff_id: "handoff-0958"
+  source_handoff_path: "research_control/handoffs/handoff-0958.yaml"
+  source_handoff_sha256: "295bc8a3f881c9dc03312468b5427c156bcdd895a9812055cbf4adf673b19f24"
+  immutable_route_sha256: "257bde39d376fbdc14e8ae45467ef3156d75370a6e9c8f6ba132ff504e9ff006"
+  route_blocker_fingerprint: "be2362ac2ade10716fbb6b1131c44faf4f809b8b39951810993a73c8822448f1"
+  inherited_manifest_sha256: "50532942922b1584c181deaa9e7c157cc687d369196457787aad323e1c639f90"
+  result_status: "PASS_RT017_ALLOWLIST_PARITY_PRECHECKPOINT_BLOCKED_DOCUMENTATION_IMPACT"
+  source_job_path: "research_control/tasks/RT-20260803-017/jobs/AJ-RT-20260803-017-001.yaml"
+  source_job_sha256: "5a94fdd4fa9fcd80ae44588cb2ba3eacdc707b3235caba2af301c1881a949adc"
+  repaired_role_path: "research_control/tasks/RT-20260803-017/roles/process-integrity-auditor@0.1.0--RT-20260803-017.yaml"
+  repaired_role_sha256: "5f0c077fe4d9374e3e4243a9bcbcdb78451b7b078c7f840b05de3c8f385b96d0"
+  recovery_receipt_path: "research_control/tasks/RT-20260803-018/artifacts/p16_t04_rt017_allowlist_parity_recovery_receipt.json"
+  recovery_receipt_sha256: "51f25c5eb2028d559942e2ec66e1d377067b81784b47e4f58f232c8afa832448"
+  precheckpoint_blocker_path: "research_control/tasks/RT-20260803-018/artifacts/precheckpoint_blocker_generation_250_documentation_receipt_coverage_v1.yaml"
+  precheckpoint_blocker_sha256: "5040806fd5129a97127d19124fce6399121610e95cf93bd0b3104cd296a09931"
+  allowed_write_path_count: 61
+  representation_count: 4
+  all_four_ordered_representations_equal: true
+  protected_hash_mismatch_count: 0
+  non_allowlist_field_drift_count: 0
+  rt017_agent_job_modified: false
+  rt015_rt016_documentation_receipts_modified: false
+  checkpoint_invocation_count_before_handoff: 0
+  checkpoint_committed_before_handoff: false
+  generation_248_checkpoint_replayed: false
+  p16_t04_reaudit_executed: false
+  p16_t05_executed: false
+  scientific_claims_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  external_action_authorized: false
+  push_performed: false
+  blocked_claims:
+    - "allowlist parity PASS presented as scientific evidence or checkpoint success"
+    - "same-context AI skeptical review presented as external human review"
+    - "project-system recovery presented as Gate benchmark proof publication or completed derivation"
+
+plan_result:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  phase_id: "P16"
+  plan_task_id: "P16-T04"
+  recovery_for_plan_task_id: "P16-T04"
+  title: "Restore RT-017 ordered allowlist identity before cumulative checkpoint recovery"
+  result_status: "P16_T04_RT017_ALLOWLIST_PARITY_PASS_PRECHECKPOINT_BLOCKED_DOCUMENTATION_IMPACT"
+  work_item_status: "blocked_checkpoint_recovery_required"
+  rt017_allowlist_parity_complete: true
+  inherited_classifier_recovery_preserved: true
+  sealed_science_artifacts_preserved: true
+  p16_t04_reaudit_dependency_ready_after_checkpoint_reconciliation: true
+  p16_t04_reaudit_dependency_ready_now: false
+  p16_t04_reaudit_executed: false
+  p16_t05_executed: false
+  scientific_claims_changed_by_repair: false
+  distance_to_gr_delta_changed_by_repair: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+distance_to_gr:
+  changed: false
+  effect: "none_project_system_allowlist_parity_recovery"
+  burden_id: "none"
+  milestone: "none"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "Exact control-contract identity recovery supplies no physics evidence."
+  downstream_unlocked:
+    - "cumulative documentation-impact receipt recovery"
+  downstream_still_blocked:
+    - "fresh P16-T04 claim-boundary re-audit until checkpoint reconciliation"
+    - "P16-T05 until P16-T04 completion"
+    - "benchmark promotion proof publication external action or completed derivation"
+
+required_next_packet:
+  task_type: "project_system_generation_250_cumulative_documentation_impact_coverage_recovery"
+  plan_task_id: "P16-T03"
+  recovery_for_plan_task_id: "P16-T04"
+  work_item_id: "P16-T04"
+  objective: "Repair only the exact cumulative RT-015, RT-016, and RT-017 documentation-impact receipt omissions, including FOLDER_MAP.md generated-derivative coverage and every tracked blocker and RT-018 path; regenerate, revalidate, and invoke at most one fresh checkpoint."
+  dependency_ready_after_checkpoint: false
+  dependency_ready_now: true
+  exact_human_authorization_required: false
+  executed: false
+
+selected_next_route:
+  route_id: "generation_250_cumulative_documentation_impact_coverage_recovery"
+  route_label: "project-system-checkpoint-recovery"
+  role_family: "process-integrity-auditor@0.1.0"
+  role_display_name: "Process Integrity Auditor"
+  worker_skill: "improve-project-system"
+  selected_next_packet_type: "cumulative_documentation_impact_coverage_checkpoint_recovery"
+  task_type: "project_system_generation_250_cumulative_documentation_impact_coverage_recovery"
+  plan_task_id: "P16-T03"
+  work_item_id: "P16-T04"
+  target_derivation_milestone: "none"
+  milestone_burden: "Project-system cumulative documentation-impact receipt coverage and checkpoint recovery only; no P16-T04 re-audit or scientific derivation burden advances."
+  strategy_id: "recover_generation_250_cumulative_documentation_impact_coverage_v1"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: false
+  execution_ready_now: true
+  p16_t04_reaudit_authorized: false
+  p16_t05_authorized: false
+  physics_promotion_authorized: false
+  executed: false
+  next_action: "Repair only the exact cumulative receipt omissions, regenerate, revalidate, and invoke at most one fresh checkpoint; do not execute the P16-T04 re-audit or P16-T05."
+  source_handoff: "research_control/handoffs/handoff-0959.yaml"
+
+ordinary_route_guard:
+  schema_id: "ordinary_route_guard_evaluation_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  evaluation_id: "ORE-HANDOFF-0959"
+  ordinary_handoff_id: "handoff-0959"
+  threshold: 3
+  consecutive_project_system_tasks_before_selection: 2
+  ready_science_plan_task_ids:
+    - "P16-T05"
+  ready_project_system_plan_task_ids:
+    - "P16-T03"
+  selected_plan_task_id: "P16-T03"
+  selected_route_class: "project_system"
+  selected_worker_skill: "improve-project-system"
+  outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  exception_receipt:
+    active: false
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 250 validated, claimed, and consumed its immutable parity route exactly once."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The task-local receipt proves exact four-way ordered parity and protected-byte preservation."
+  post_write:
+    status: "FAIL"
+    evidence:
+      - "The admitted parity repair and narrow control gates pass."
+      - "Inherited cumulative documentation-impact receipt omissions remain outside this route."
+  post_checkpoint:
+    status: "NOT_RUN"
+    evidence:
+      - "No checkpoint was invoked because the precheckpoint documentation-impact gate failed."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Current frontier, task index, compact frontier, dependency graph, and claim graph were refreshed from tracked authority."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory synchronization and validate-only completed; local-cache freshness warnings remain non-authoritative."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation has no hard failure."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "none; project-system allowlist identity recovery only"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  source_law_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+  push_authorized: false
+  publication_authorized: false
+  hosted_workflow_dispatch_authorized: false
+  proof_authority: false
+
+project_improvement_signals: []

@@ -14,6 +14,8 @@ import sys
 from pathlib import Path
 from typing import Any
 
+import yaml
+
 
 REPO_ROOT = Path(__file__).resolve().parents[4]
 ARTIFACT_DIR = Path(__file__).resolve().parent
@@ -38,6 +40,19 @@ HISTORICAL_MIGRATION_SOURCE_VALIDATORS = {
     "research_control/tasks/RT-20260722-002/artifacts/"
     "artifact_refs.json": "artifact_identity",
 }
+ATTEMPT_VALIDATION_REPAIR_RECEIPT = (
+    "research_control/tasks/RT-20260803-013/artifacts/"
+    "v21_p16_t03_broken_reference_repair_list.yaml"
+)
+ATTEMPT_VALIDATION_REPAIR_RECEIPT_SHA256 = (
+    "3ff1c9cdc217dcb55c2280cdba223d3c7b7d3a94c9d44f6f039138c22ac15aaa"
+)
+ATTEMPT_VALIDATION_PREIMAGE_SHA256 = (
+    "316d52625fe2698cec2bee138dd952b366ca080a00f0f52068b0500cd1f641da"
+)
+ATTEMPT_VALIDATION_POSTIMAGE_SHA256 = (
+    "a2e8e6731e38f11c24cec8e40dd59e5da5177866516e8f5d1c7d471fbf753fa6"
+)
 
 RECOMMENDATION_IDS = [
     "V21-R31",
@@ -251,10 +266,19 @@ def diagnose_attempt_history() -> dict[str, Any]:
         "generated output stale: research_control/tasks/RT-20260721-006/"
         "artifacts/v21_attempt_history_validation.json"
     )
-    if return_code != 1 or command_result.get("status") != "FAIL":
-        raise AuditError("P10-T04 no longer exposes the bounded expected drift")
-    if command_result.get("error") != expected_error:
-        raise AuditError("P10-T04 failed for an unrecognized reason")
+    historical_drift_live = (
+        return_code == 1
+        and command_result.get("status") == "FAIL"
+        and command_result.get("error") == expected_error
+    )
+    repaired_derivative_live = (
+        return_code == 0
+        and command_result.get("status") == "PASS"
+        and command_result.get("event_count") == 8
+        and command_result.get("head_prefix_count") == 8
+    )
+    if not historical_drift_live and not repaired_derivative_live:
+        raise AuditError("P10-T04 live state is neither the bounded drift nor its exact repair")
 
     module = import_attempt_validator()
     ledger = module.load_json(module.LEDGER_PATH)
@@ -264,6 +288,57 @@ def diagnose_attempt_history() -> dict[str, Any]:
         "v21_attempt_history_validation.json"
     )
     committed_prefix = committed.get("metrics", {}).get("head_prefix_count")
+    if repaired_derivative_live:
+        repair_path = REPO_ROOT / ATTEMPT_VALIDATION_REPAIR_RECEIPT
+        if (
+            not repair_path.is_file()
+            or repair_path.is_symlink()
+            or hashlib.sha256(repair_path.read_bytes()).hexdigest()
+            != ATTEMPT_VALIDATION_REPAIR_RECEIPT_SHA256
+        ):
+            raise AuditError("P10-T04 generated-derivative repair receipt mismatch")
+        repair = yaml.safe_load(repair_path.read_text(encoding="utf-8"))
+        findings = repair.get("findings", []) if isinstance(repair, dict) else []
+        finding = next(
+            (
+                item
+                for item in findings
+                if isinstance(item, dict)
+                and item.get("finding_id") == "BR-P16T03-001"
+            ),
+            None,
+        )
+        validation_path = REPO_ROOT / (
+            "research_control/tasks/RT-20260721-006/artifacts/"
+            "v21_attempt_history_validation.json"
+        )
+        current_validation_sha256 = hashlib.sha256(
+            validation_path.read_bytes()
+        ).hexdigest()
+        if (
+            repair.get("schema_id")
+            != "v21_p16_t03_broken_reference_repair_list_v1"
+            or repair.get("task_id") != "RT-20260803-013"
+            or repair.get("status") != "PASS_NO_UNRESOLVED_BROKEN_REFERENCE"
+            or not isinstance(finding, dict)
+            or finding.get("classification")
+            != "stale_generated_validation_derivative"
+            or finding.get("status") != "repaired_in_scope"
+            or finding.get("preimage_sha256")
+            != ATTEMPT_VALIDATION_PREIMAGE_SHA256
+            or finding.get("postimage_sha256")
+            != ATTEMPT_VALIDATION_POSTIMAGE_SHA256
+            or finding.get("expected_postimage_sha256")
+            != ATTEMPT_VALIDATION_POSTIMAGE_SHA256
+            or finding.get("head_prefix_count") != 8
+            or finding.get("append_only_ledger_modified") is not False
+            or current_validation_sha256 != ATTEMPT_VALIDATION_POSTIMAGE_SHA256
+        ):
+            raise AuditError("P10-T04 generated-derivative repair identity mismatch")
+        # The sealed P10 audit records the exact pre-repair observation. The
+        # P16-T03 receipt binds the later generated-derivative transition, so
+        # the historical finding remains 0 -> 8 without requiring live drift.
+        committed_prefix = 0
     live_prefix = metrics.get("head_prefix_count")
     event_count = metrics.get("event_count")
     if committed_prefix != 0 or live_prefix != event_count or event_count != 8:

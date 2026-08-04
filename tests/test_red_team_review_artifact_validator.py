@@ -1,8 +1,10 @@
 from __future__ import annotations
 
 import json
+import shutil
 import subprocess
 import sys
+import tempfile
 import unittest
 from pathlib import Path
 
@@ -15,6 +17,56 @@ FIXTURE_DIR = REPO_ROOT / "tests" / "fixtures" / "research_control" / "red_team_
 
 
 class RedTeamReviewArtifactValidatorTests(unittest.TestCase):
+    def test_current_internal_contract_passes(self) -> None:
+        receipt = validator.validate_current_contract(REPO_ROOT)
+        self.assertEqual(receipt["status"], "PASS")
+        self.assertEqual(receipt["reviewer_display_name"], "Internal Skeptical Reviewer")
+        self.assertEqual(
+            receipt["reviewer_role_kind"],
+            "scientific_adversarial_internal_review",
+        )
+        self.assertTrue(receipt["legacy_identifier_preserved"])
+        self.assertFalse(receipt["external_provenance_inferred"])
+
+    def test_current_contract_rejects_external_role_label(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            for rel_path in (
+                validator.CURRENT_ROLE_PATH,
+                validator.SCHEMA_PATH,
+                validator.CURRENT_DESIGN_PATH,
+                validator.CURRENT_TEMPLATE_PATH,
+            ):
+                target = root / rel_path
+                target.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copyfile(REPO_ROOT / rel_path, target)
+            role_path = root / validator.CURRENT_ROLE_PATH
+            role_path.write_text(
+                role_path.read_text(encoding="utf-8").replace(
+                    'role_name: "Internal Skeptical Reviewer"',
+                    'role_name: "External Red-Team Reviewer"',
+                ),
+                encoding="utf-8",
+            )
+
+            with self.assertRaises(validator.RedTeamReviewValidationError) as context:
+                validator.validate_current_contract(root)
+
+        self.assertIn("role_name", str(context.exception))
+        self.assertIn("Internal Skeptical Reviewer", str(context.exception))
+
+    def test_current_artifact_label_fields_are_exact_and_additive(self) -> None:
+        data = validator.strict_yaml.load(FIXTURE_DIR / "valid_review_context.yaml")
+        data["reviewer_display_name"] = validator.CURRENT_REVIEWER_DISPLAY_NAME
+        data["reviewer_role_kind"] = validator.CURRENT_REVIEWER_ROLE_KIND
+        receipt = validator.validate_review_data(data, Path("current-review.yaml"))
+        self.assertEqual(receipt["reviewer_label_contract"], "current_internal")
+
+        data["reviewer_display_name"] = "External Red-Team Reviewer"
+        with self.assertRaises(validator.RedTeamReviewValidationError) as context:
+            validator.validate_review_data(data, Path("current-review.yaml"))
+        self.assertIn("reviewer_display_name", str(context.exception))
+
     def test_minimal_fixture_passes(self) -> None:
         receipt = validator.validate_review_file(FIXTURE_DIR / "valid_minimal.yaml")
         self.assertEqual(receipt["verdict"], "no_blocking_defect_found_as_written")
@@ -23,6 +75,7 @@ class RedTeamReviewArtifactValidatorTests(unittest.TestCase):
         self.assertEqual(
             receipt["review_context_classification"], "legacy_unclassified"
         )
+        self.assertEqual(receipt["reviewer_label_contract"], "legacy_identifier_only")
 
     def test_review_context_fixture_passes(self) -> None:
         receipt = validator.validate_review_file(

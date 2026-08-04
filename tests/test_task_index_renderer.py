@@ -318,6 +318,49 @@ class TaskIndexRendererTests(unittest.TestCase):
         self.assertEqual(row["scope"], "project_system")
         self.assertEqual(row["taxonomy_source"], "explicit")
 
+    def test_current_reviewer_projection_is_internal_and_fails_closed(self) -> None:
+        job = {
+            "role_id": self.renderer.CURRENT_INTERNAL_REVIEW_ROLE_ID,
+            "role_version": self.renderer.CURRENT_INTERNAL_REVIEW_ROLE_VERSION,
+        }
+        current_registry_row = {
+            "role_name": self.renderer.CURRENT_INTERNAL_REVIEW_ROLE_NAME,
+            "role_kind": self.renderer.CURRENT_INTERNAL_REVIEW_ROLE_KIND,
+        }
+        issues: list[dict[str, str]] = []
+        display = self.renderer.role_family(
+            job,
+            {},
+            {},
+            current_registry_row,
+            issues=issues,
+            task_id="RT-TEST",
+        )
+        self.assertEqual(
+            display,
+            "Internal Skeptical Reviewer "
+            "[external-red-team-reviewer@0.1.0; legacy identifier]",
+        )
+        self.assertEqual(issues, [])
+
+        bad_issues: list[dict[str, str]] = []
+        bad_display = self.renderer.role_family(
+            job,
+            {},
+            {},
+            {
+                "role_name": "External Red-Team Reviewer",
+                "role_kind": "scientific_adversarial_external_review",
+            },
+            issues=bad_issues,
+            task_id="RT-TEST",
+        )
+        self.assertIn("INTERNAL REVIEW LABEL CONTRACT INVALID", bad_display)
+        self.assertEqual(
+            bad_issues[0]["issue_kind"],
+            "current_review_role_projection_invalid",
+        )
+
     def test_common_adapter_preserves_297_warnings_and_pass_semantics(self) -> None:
         report = self.validator.TaskIndexValidationReport(repo_root=REPO_ROOT)
         for index in range(297):

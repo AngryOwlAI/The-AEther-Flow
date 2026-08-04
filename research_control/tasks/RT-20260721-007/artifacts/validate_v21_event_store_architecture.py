@@ -73,6 +73,13 @@ CURRENT_RENDERER_AUTHORITY_BINDING_RECEIPT = Path(
 CURRENT_RENDERER_AUTHORITY_BINDING_RECEIPT_SHA256 = (
     "a98d0c3948687b87b09e00691c7fa766ce9c65e9f3cb14c50dc3198b833e2c9e"
 )
+LATEST_CURRENT_RENDERER_AUTHORITY_BINDING_RECEIPT = Path(
+    "research_control/tasks/RT-20260803-016/artifacts/"
+    "p16_t04_internal_review_label_renderer_authority_binding_receipt.json"
+)
+LATEST_CURRENT_RENDERER_AUTHORITY_BINDING_RECEIPT_SHA256 = (
+    "6800a2456af413130aa9f0514bf376a34ac4d4da32b61e13be43b5713366e5f3"
+)
 DISTANCE_TO_GR_LEDGER_COLUMNS = (
     "burden_id",
     "milestone",
@@ -303,6 +310,178 @@ def validate_current_renderer_authority_chain(
         if current_sha256 == prior_current_sha256
         else "authorized_current_source_update"
     )
+    if (
+        transition.get("historical_sha256") != historical_sha256
+        or transition.get("prior_approved_current_sha256") != prior_current_sha256
+        or transition.get("transition_kind") != expected_kind
+        or not isinstance(current_sha256, str)
+        or re.fullmatch(r"[0-9a-f]{64}", current_sha256) is None
+    ):
+        return False, "current renderer transition binding mismatch"
+    return validate_latest_current_renderer_authority_chain(
+        source_path,
+        historical_sha256,
+        current_sha256,
+        repo_root,
+    )
+
+
+def validate_latest_current_renderer_authority_chain(
+    source_path: str,
+    historical_sha256: str,
+    prior_current_sha256: str,
+    repo_root: Path = REPO_ROOT,
+) -> tuple[bool, str]:
+    """Validate the P16-T04 internal-label renderer hop and live bytes."""
+
+    receipt_path = repo_root / LATEST_CURRENT_RENDERER_AUTHORITY_BINDING_RECEIPT
+    if not receipt_path.is_file():
+        return False, "latest current renderer authority binding receipt is missing"
+    if (
+        sha256_file(receipt_path)
+        != LATEST_CURRENT_RENDERER_AUTHORITY_BINDING_RECEIPT_SHA256
+    ):
+        return False, "latest current renderer authority binding receipt hash mismatch"
+    try:
+        receipt = json.loads(receipt_path.read_text(encoding="utf-8"))
+    except (OSError, ValueError) as exc:
+        return False, f"latest current renderer authority binding receipt is invalid: {exc}"
+    if not isinstance(receipt, dict):
+        return False, "latest current renderer authority binding receipt must be an object"
+
+    if (
+        receipt.get("schema_id")
+        != "p16_t04_internal_review_label_renderer_authority_binding_v1"
+        or receipt.get("status")
+        != "PASS_EXACT_INTERNAL_REVIEW_LABEL_RENDERER_AUTHORITY_CHAIN_BOUND"
+        or receipt.get("task_id") != "RT-20260803-016"
+        or receipt.get("job_id") != "AJ-RT-20260803-016-001"
+        or receipt.get("plan_task_id") != "P16-T04"
+        or receipt.get("strategy_id")
+        != (
+            "reconcile_p16_t04_internal_review_label_repair_authority_chain_"
+            "and_historical_compatibility_v1"
+        )
+    ):
+        return False, "latest current renderer authority binding identity mismatch"
+
+    authority_boundary = receipt.get("authority_boundary")
+    if not isinstance(authority_boundary, dict) or any(
+        authority_boundary.get(key) is not False
+        for key in (
+            "event_store_cutover_authorized",
+            "generated_views_are_authority",
+            "historical_artifacts_rewritten",
+            "internal_review_label_reinterpreted",
+            "physics_promotion_authorized",
+            "proof_authority",
+            "scientific_claims_changed",
+        )
+    ):
+        return False, "latest current renderer authority boundary mismatch"
+
+    previous = receipt.get("previous_authority")
+    if not isinstance(previous, dict) or previous != {
+        "current_renderer_receipt_path": (
+            CURRENT_RENDERER_AUTHORITY_BINDING_RECEIPT.as_posix()
+        ),
+        "current_renderer_receipt_sha256": (
+            CURRENT_RENDERER_AUTHORITY_BINDING_RECEIPT_SHA256
+        ),
+    }:
+        return False, "latest current renderer predecessor authority mismatch"
+
+    triggering = receipt.get("triggering_change")
+    expected_triggering = {
+        "completion_path": (
+            "research_control/tasks/RT-20260803-015/jobs/completions/"
+            "AJC-AJ-RT-20260803-015-001.yaml"
+        ),
+        "completion_sha256": (
+            "bfec266a4824df117db6c8b4275f79df333e1294871d1b8ed769521639e6a690"
+        ),
+        "label_contract_validation_path": (
+            "research_control/tasks/RT-20260803-015/artifacts/"
+            "p16_t04_internal_review_label_contract_validation.json"
+        ),
+        "label_contract_validation_sha256": (
+            "97edc8ab306c30ce453f978442226c9cae3fa012acf1efe842343266fb37f629"
+        ),
+        "source_head": "2cc682251201d8d034dcd447fde006a49f3db650",
+        "source_job_id": "AJ-RT-20260803-015-001",
+        "source_task_id": "RT-20260803-015",
+    }
+    if not isinstance(triggering, dict) or triggering != expected_triggering:
+        return False, "latest current renderer triggering change identity mismatch"
+
+    exact_bound_files = {
+        previous["current_renderer_receipt_path"]: previous[
+            "current_renderer_receipt_sha256"
+        ],
+        triggering["completion_path"]: triggering["completion_sha256"],
+        triggering["label_contract_validation_path"]: triggering[
+            "label_contract_validation_sha256"
+        ],
+    }
+    for relative, expected_sha256 in exact_bound_files.items():
+        path = repo_root / relative
+        if not path.is_file() or sha256_file(path) != expected_sha256:
+            return False, f"latest current renderer authority chain mismatch: {relative}"
+
+    try:
+        label_validation = json.loads(
+            (repo_root / triggering["label_contract_validation_path"]).read_text(
+                encoding="utf-8"
+            )
+        )
+    except (OSError, ValueError) as exc:
+        return False, f"internal-review label validation is invalid: {exc}"
+    label_result = label_validation.get("result", {})
+    if (
+        label_validation.get("schema_id")
+        != "p16_t04_internal_review_label_contract_validation_v1"
+        or label_validation.get("task_id") != "RT-20260803-015"
+        or label_validation.get("job_id") != "AJ-RT-20260803-015-001"
+        or label_validation.get("plan_task_id") != "P16-T04"
+        or label_validation.get("status") != "PASS_PRECHECKPOINT"
+        or not isinstance(label_result, dict)
+        or label_result.get("current_role_display_name")
+        != "Internal Skeptical Reviewer"
+        or label_result.get("current_role_kind")
+        != "scientific_adversarial_internal_review"
+        or label_result.get("legacy_identifier_preserved") is not True
+        or any(
+            label_result.get(key) is not False
+            for key in (
+                "historical_artifacts_rewritten",
+                "p16_t04_reaudit_executed",
+                "p16_t05_executed",
+                "scientific_claims_changed",
+                "distance_to_gr_delta_changed",
+                "physics_promotion_authorized",
+                "proof_authority",
+            )
+        )
+    ):
+        return False, "internal-review label validation contract mismatch"
+
+    transitions = receipt.get("renderer_transitions")
+    if not isinstance(transitions, list):
+        return False, "latest current renderer transitions are missing"
+    transition_by_path = {
+        str(item.get("path", "")): item
+        for item in transitions
+        if isinstance(item, dict)
+    }
+    if set(transition_by_path) != set(HISTORICAL_RENDERER_SOURCE_BINDINGS):
+        return False, "latest current renderer transition path set mismatch"
+    transition = transition_by_path[source_path]
+    current_sha256 = transition.get("current_sha256")
+    expected_kind = (
+        "unchanged_current_source"
+        if current_sha256 == prior_current_sha256
+        else "authorized_current_source_update"
+    )
     source = repo_root / source_path
     if (
         transition.get("historical_sha256") != historical_sha256
@@ -313,7 +492,7 @@ def validate_current_renderer_authority_chain(
         or not source.is_file()
         or sha256_file(source) != current_sha256
     ):
-        return False, "current renderer transition binding mismatch"
+        return False, "latest current renderer transition binding mismatch"
     return True, f"current_sha256={current_sha256} exact_authority_chain=PASS"
 
 

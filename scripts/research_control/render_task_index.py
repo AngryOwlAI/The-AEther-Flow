@@ -65,6 +65,10 @@ HEADER = [
     "completion_path",
 ]
 STATUS_VALUES = {"pending", "active", "completed", "blocked", "human_gated", "superseded"}
+CURRENT_INTERNAL_REVIEW_ROLE_ID = "external-red-team-reviewer"
+CURRENT_INTERNAL_REVIEW_ROLE_VERSION = "0.1.0"
+CURRENT_INTERNAL_REVIEW_ROLE_NAME = "Internal Skeptical Reviewer"
+CURRENT_INTERNAL_REVIEW_ROLE_KIND = "scientific_adversarial_internal_review"
 
 
 class TaskIndexError(RuntimeError):
@@ -219,11 +223,41 @@ def physics_delta(completion: dict[str, Any], task: dict[str, Any]) -> str:
     return bool_text(task.get("scientific_claims_changed") or task.get("physics_delta"), "false")
 
 
-def role_family(job: dict[str, Any], job_registry: dict[str, str], task: dict[str, Any]) -> str:
+def role_family(
+    job: dict[str, Any],
+    job_registry: dict[str, str],
+    task: dict[str, Any],
+    role_registry_row: dict[str, str] | None = None,
+    *,
+    issues: list[dict[str, str]] | None = None,
+    task_id: str = "",
+    source_path: str = AGENT_ROLE_REGISTRY_PATH,
+) -> str:
     role_id = first_text(job.get("role_id"), job_registry.get("role_id"), task.get("role_id"))
     role_version = first_text(job.get("role_version"), job_registry.get("role_version"), task.get("role_version"))
     if role_id and role_version:
-        return f"{role_id}@{role_version}"
+        stable_ref = f"{role_id}@{role_version}"
+        if (
+            role_id == CURRENT_INTERNAL_REVIEW_ROLE_ID
+            and role_version == CURRENT_INTERNAL_REVIEW_ROLE_VERSION
+        ):
+            registry_row = role_registry_row or {}
+            if (
+                text_value(registry_row.get("role_name")) != CURRENT_INTERNAL_REVIEW_ROLE_NAME
+                or text_value(registry_row.get("role_kind")) != CURRENT_INTERNAL_REVIEW_ROLE_KIND
+            ):
+                if issues is not None:
+                    issues.append(
+                        issue(
+                            "current_review_role_projection_invalid",
+                            source_path,
+                            task_id,
+                            "stable reviewer role ID lacks the exact internal display name and kind",
+                        )
+                    )
+                return f"INTERNAL REVIEW LABEL CONTRACT INVALID [{stable_ref}]"
+            return f"{CURRENT_INTERNAL_REVIEW_ROLE_NAME} [{stable_ref}; legacy identifier]"
+        return stable_ref
     return role_id
 
 
@@ -372,7 +406,14 @@ def build_index(
                 job.get("milestone_burden"),
                 completion.get("milestone_burden"),
             ),
-            "role_family": role_family(job, job_registry, task),
+            "role_family": role_family(
+                job,
+                job_registry,
+                task,
+                role_registry.get((role_id, role_version), {}),
+                issues=issues,
+                task_id=task_id,
+            ),
             "physics_delta": physics_delta(completion, task),
             "ledger_rows_changed": ledger_rows_changed(completion),
             "artifact_count": str(artifact_count(repo_root, task_id)),

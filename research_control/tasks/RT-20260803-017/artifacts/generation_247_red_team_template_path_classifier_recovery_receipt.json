@@ -1,0 +1,74 @@
+{
+  "schema_id": "generation_247_red_team_template_path_classifier_recovery_receipt_v1",
+  "task_id": "RT-20260803-017",
+  "job_id": "AJ-RT-20260803-017-001",
+  "goal_id": "crg-20260720T161354Z-96bc2664ce31bfe0",
+  "generation": 248,
+  "created_at": "2026-08-04T01:27:29Z",
+  "status": "PASS_READY_FOR_CHECKPOINT",
+  "strategy_id": "recover_generation_247_checkpoint_red_team_template_path_classification_v1",
+  "source_head": "2cc682251201d8d034dcd447fde006a49f3db650",
+  "inherited_manifest_sha256": "0929290fee8c9e833411e0b3669a5e082c90d0c96e0c7f73884fceae459dd29f",
+  "target": {
+    "path": "research_control/templates/RED_TEAM_REVIEW_ARTIFACT_TEMPLATE.yaml",
+    "path_sha256": "d021d204205b648bbf179e47afbcb632bdc93f393e50dd559dab30d02785eca8",
+    "tags": [
+      "claim_language",
+      "role_or_schema_contract"
+    ],
+    "reasons": [
+      "path_rule:claim_language",
+      "path_rule:role_or_schema_contract"
+    ],
+    "unknown_governed_path_present": false,
+    "template_bytes_changed": false
+  },
+  "negative_control": {
+    "baseline_path": "research_control/program_state.yaml",
+    "unrelated_yaml_path": "research_control/templates/FUTURE_RED_TEAM_REVIEW_ARTIFACT_TEMPLATE.yaml",
+    "unrelated_path_exists": false,
+    "tags": [
+      "unknown_governed_path"
+    ],
+    "reasons": [
+      "fallback:unknown_governed_path"
+    ],
+    "recommended_validation_profile": "full",
+    "fail_closed": true
+  },
+  "implementation": {
+    "classifier_path": "scripts/project_control/classify_project_changes.py",
+    "classifier_sha256": "a398b694f699e5cd6c14c5edbc6fed0147b7da0d265b4774912225ce29fbcba8",
+    "test_path": "tests/test_project_change_classifier.py",
+    "test_sha256": "bf1b3e69937b1435038fb7b71d59201631a322d2e342302a8fd49f53f2548924",
+    "exact_path_constant_count": 1,
+    "governing_predicate_membership_count": 2,
+    "broad_yaml_pattern_added": false,
+    "unknown_path_fallback_changed": false,
+    "focused_test_count": 69,
+    "focused_test_pass_count": 69
+  },
+  "protected_evidence": {
+    "source_completion_path": "research_control/tasks/RT-20260803-016/jobs/completions/AJC-AJ-RT-20260803-016-001.yaml",
+    "source_completion_sha256": "62f35ac93f1efac6714651ba3278d31d3cdf11ffca27500c43bd38b2fb6ed1f6",
+    "source_handoff_path": "research_control/handoffs/handoff-0957.yaml",
+    "source_handoff_sha256": "b835edec63eaae691a1b68b262084f86ee0a53cdf654d762a5196a50303f924d",
+    "source_checkpoint_blocker_path": "research_control/tasks/RT-20260803-016/artifacts/checkpoint_blocker_generation_247_red_team_template_path_classification_v1.yaml",
+    "source_checkpoint_blocker_sha256": "ea724825a83a8e032b4d5efe7a63cc6e2f66db4e946c0f1423820ed34da4134e",
+    "source_validation_path": "research_control/tasks/RT-20260803-015/artifacts/p16_t04_internal_review_label_contract_validation.json",
+    "source_validation_sha256": "97edc8ab306c30ce453f978442226c9cae3fa012acf1efe842343266fb37f629",
+    "protected_hash_mismatch_count": 0
+  },
+  "authority_boundary": {
+    "generation_247_checkpoint_retried": false,
+    "p16_t04_reaudit_executed": false,
+    "p16_t05_executed": false,
+    "scientific_claims_changed": false,
+    "physical_status_changed": false,
+    "distance_to_gr_delta_changed": false,
+    "benchmark_promotion_authorized": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "publication_push_or_external_action_authorized": false
+  }
+}

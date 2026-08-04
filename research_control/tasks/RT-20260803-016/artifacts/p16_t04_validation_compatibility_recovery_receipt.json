@@ -1,0 +1,95 @@
+{
+  "authority_boundary": {
+    "checkpoint_authorized_after_complete_pass": true,
+    "generated_views_are_authority": false,
+    "historical_p10_negative_result_preserved": true,
+    "historical_science_artifacts_rewritten": false,
+    "internal_review_label_contract_reopened": false,
+    "p16_t04_reaudit_executed": false,
+    "p16_t05_executed": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "scientific_claims_changed": false
+  },
+  "compatibility_families": [
+    {
+      "family": "current_renderer_authority_chain",
+      "result": "PASS_EXACT_SECOND_HOP_BOUND",
+      "source_path": "research_control/tasks/RT-20260721-007/artifacts/validate_v21_event_store_architecture.py",
+      "source_sha256": "86bc1d77c7c1841ac6ecb140a4c49cde1286e7f998c4ceb973f16426d4a60b36",
+      "test_path": "tests/test_event_store_architecture.py",
+      "test_sha256": "bd69e5c0135ed4ef632a46f92a9f59bcbbb584e6d1f6aecfeb60ca06c4ac0432"
+    },
+    {
+      "family": "p10_historical_audit_compatibility",
+      "result": "PASS_HISTORICAL_DRIFT_AND_EXACT_REPAIR_BOTH_FAIL_CLOSED",
+      "source_path": "research_control/tasks/RT-20260722-003/artifacts/validate_v21_p10_migration_readiness.py",
+      "source_sha256": "898b78799614d24c92600da47ce7a524eb2373388a5f9770a6d14696b5aa199f"
+    },
+    {
+      "family": "test_shard_inventory",
+      "result": "PASS_153_ASSIGNED_110_POLICY_ZERO_DUPLICATE_ZERO_MISSING",
+      "source_path": "tests/support/research_control_shards.py",
+      "source_sha256": "bf69421c6214381d3681e636995e2003c2c55b9eda7e33278cc205174583ffbb"
+    },
+    {
+      "family": "validation_equivalence_taxonomy",
+      "result": "PASS_43_TAXONOMY_ROWS",
+      "source_path": "tests/test_validation_equivalence.py",
+      "source_sha256": "fdfc36c59e89fecd6a6ff937760c20b7f60495559bcec1d9b8c02e92d5b11f21"
+    },
+    {
+      "family": "semantic_smuggling_determinism",
+      "result": "PASS_GENERATOR_OWNED_EVIDENCE_REFRESHED",
+      "artifact_hashes": {
+        "research_control/tasks/RT-20260722-006/artifacts/semantic_smuggling_checker_comparison.json": "7beddfa7a3c7ff65296a4a66fbc6f406743b77a21328e2ccb9f4ef8389da6f81",
+        "research_control/tasks/RT-20260722-006/artifacts/semantic_smuggling_compact_receipt.json": "0b45182d58a9016c3ad6422a8d4bfab6a38b0031e5a24c658b84b660dd1e09e3",
+        "research_control/tasks/RT-20260722-006/artifacts/semantic_smuggling_validation.json": "56561e3df47c9bed59c09f90986d86295efba405eb757f0c43e956cb9c47d859"
+      }
+    },
+    {
+      "family": "reviewer_agreement_determinism",
+      "result": "PASS_GENERATOR_OWNED_EVIDENCE_REFRESHED",
+      "artifact_hashes": {
+        "research_control/tasks/RT-20260722-008/artifacts/reviewer_agreement_calibration_report.json": "b87a41c69b42dbdea91d167cc9373e59fb4802f91bf78931595e886f6c7d51b2",
+        "research_control/tasks/RT-20260722-008/artifacts/reviewer_agreement_compact_receipt.json": "4c60e0c7d352f61ddc685193b0ed248ea18598f6fdf61cd6efb04ef3550bc32a"
+      }
+    }
+  ],
+  "failed_validation_receipt": {
+    "path": ".local/validation-receipts/a84904b1636216bf5b93c66debde34fcb76d220134913d32b91f810d41c90f69/RUN-fa13c197024d5f1d/receipt.json",
+    "sha256": "c1c69446bc7612f62ac68bf4c1968570b3db629c4c3f677a1ff0bca6753a1912"
+  },
+  "focused_validation": {
+    "failed_test_count": 0,
+    "passed_test_count": 67,
+    "status": "PASS"
+  },
+  "goal_receipt": {
+    "blocker_fingerprint": "cc63c0b1626602b70ef66767d44231f6059fdfa3c60386caadb16c81f742cc9e",
+    "claim_token": "de64fa090966f7b7498f235b94e8583c4b5390f2de90282f",
+    "generation": 247,
+    "goal_id": "crg-20260720T161354Z-96bc2664ce31bfe0",
+    "idempotency_key": "crg-20260720T161354Z-96bc2664ce31bfe0:247",
+    "route_sha256": "1fef2bea70b688a9db1831de4654e60d8e0c3b1ac7b25417f7d3eefa4be7bf7c",
+    "strategy_id": "reconcile_p16_t04_internal_review_label_repair_authority_chain_and_historical_compatibility_v1"
+  },
+  "inherited_transaction": {
+    "manifest_sha256": "28f6b41fa30382bd08bf7b2d9b92c4a7d5bbe45775b1f2c1a64a21567250fceb",
+    "source_completion_path": "research_control/tasks/RT-20260803-015/jobs/completions/AJC-AJ-RT-20260803-015-001.yaml",
+    "source_completion_sha256": "bfec266a4824df117db6c8b4275f79df333e1294871d1b8ed769521639e6a690",
+    "source_head": "2cc682251201d8d034dcd447fde006a49f3db650",
+    "source_validation_path": "research_control/tasks/RT-20260803-015/artifacts/p16_t04_internal_review_label_contract_validation.json",
+    "source_validation_sha256": "97edc8ab306c30ce453f978442226c9cae3fa012acf1efe842343266fb37f629"
+  },
+  "job_id": "AJ-RT-20260803-016-001",
+  "plan_task_id": "P16-T04",
+  "renderer_authority_receipt": {
+    "path": "research_control/tasks/RT-20260803-016/artifacts/p16_t04_internal_review_label_renderer_authority_binding_receipt.json",
+    "sha256": "6800a2456af413130aa9f0514bf376a34ac4d4da32b61e13be43b5713366e5f3"
+  },
+  "schema_id": "p16_t04_validation_compatibility_recovery_receipt_v1",
+  "status": "PASS_BOUNDED_COMPATIBILITY_RECOVERY_READY_FOR_REPOSITORY_VALIDATION_AND_CHECKPOINT",
+  "strategy_id": "reconcile_p16_t04_internal_review_label_repair_authority_chain_and_historical_compatibility_v1",
+  "task_id": "RT-20260803-016"
+}

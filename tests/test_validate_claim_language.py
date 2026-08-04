@@ -303,6 +303,34 @@ class ClaimLanguageLinterTests(unittest.TestCase):
         self.assertEqual(report["status"], "PASS")
         self.assertEqual(report["finding_count"], 0)
 
+    def test_internal_review_mislabeled_external_fails(self) -> None:
+        report = self.scan_one(
+            "research_control/current_frontier.md",
+            "The same-context AI external review completed successfully.\n",
+        )
+        self.assertEqual(report["status"], "FAIL")
+        self.assertEqual(report["hard_fail_count"], 1)
+        self.assertEqual(report["findings"][0]["class_id"], "review_provenance_overread")
+
+    def test_unqualified_independent_replication_claim_fails(self) -> None:
+        report = self.scan_one(
+            "research_control/current_frontier.md",
+            "Independent replication was established by the routed reviewer.\n",
+        )
+        self.assertEqual(report["status"], "FAIL")
+        self.assertEqual(report["findings"][0]["class_id"], "review_provenance_overread")
+
+    def test_internal_review_provenance_boundary_passes(self) -> None:
+        report = self.scan_one(
+            "research_control/current_frontier.md",
+            (
+                "Same-context AI critique is internal skeptical review, not external "
+                "human review or independent replication.\n"
+            ),
+        )
+        self.assertEqual(report["status"], "PASS")
+        self.assertEqual(report["finding_count"], 0)
+
     def test_no_target_certificate_overread_fails(self) -> None:
         report = self.scan_one(
             "research_control/current_frontier.md",

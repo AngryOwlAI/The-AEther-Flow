@@ -1,0 +1,318 @@
+validation_status: "FAIL"
+final_repository_validation_status: "BLOCKED_CHECKPOINT_PLANNER_UNKNOWN_RED_TEAM_TEMPLATE_PATH_CLASSIFICATION"
+completion_id: "AJC-AJ-RT-20260803-016-001"
+job_id: "AJ-RT-20260803-016-001"
+task_id: "RT-20260803-016"
+task_type: "project_system_p16_t04_validation_compatibility_checkpoint_recovery"
+decision_id: "DDR-20260803-016"
+role_id: "validator-engineer"
+source_role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260803-016"
+status: "blocked"
+created_at: "2026-08-03T23:33:53Z"
+started_at: "2026-08-03T23:33:53Z"
+completed_at: "2026-08-04T00:36:42Z"
+objective: "Preserve the exact generation-246 internal-review label repair; add one fail-closed current-renderer authority hop; reconcile only the six exhaustive-suite compatibility families; pass complete repository validation; and checkpoint the cumulative transaction once before a fresh P16-T04 re-audit."
+objective_result: "p16_t04_validation_compatibility_recovered_full_validation_passed_checkpoint_planner_blocked_unknown_template_path"
+verdict: "BLOCKED_CHECKPOINT_PLANNER_UNKNOWN_RED_TEAM_TEMPLATE_PATH_CLASSIFICATION"
+completion_summary: "Generation 247 preserves the generation-246 internal-review label contract and sealed science artifacts, completes all six bounded compatibility repairs, passes all 29 validation gates and the 1,309-test repository suite, and then stops safely when its sole checkpoint attempt fails before staging because the governed red-team review template is an unknown classifier path. No checkpoint subprocess ran, no commit occurred, and one materially distinct exact-path classifier recovery is required before the P16-T04 re-audit or P16-T05."
+transaction_status: "blocked_checkpoint"
+result_disposition: "validation_compatibility_recovered_checkpoint_planner_blocked_recovery_required"
+work_item_status: "blocked_checkpoint_recovery_required"
+plan_task_id: "P16-T04"
+recovery_for_plan_task_id: "P16-T04"
+next_plan_task_id: "P16-T04"
+checkpoint_invocation_count: 1
+checkpoint_commit:
+  status: "BLOCKED"
+  commit: ""
+  invocation_count: 1
+checkpoint_staged: false
+legacy_validation_used: false
+project_system_change_only: true
+scientific_claims_changed: false
+physical_status_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 247
+  passes_consumed: 219
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:247"
+  handoff_token: "4ee7634843b92cb06591e2c49e74e7829e1db1ca8c664c20"
+  relay_claim_token: "de64fa090966f7b7498f235b94e8583c4b5390f2de90282f"
+  route_work_item_id: "P16-T04"
+  route_worker_skill: "improve-project-system"
+  route_sha256: "1fef2bea70b688a9db1831de4654e60d8e0c3b1ac7b25417f7d3eefa4be7bf7c"
+  route_reason: "generation_246_scope_contract_and_repository_validation_failure"
+  route_strategy_id: "reconcile_p16_t04_internal_review_label_repair_authority_chain_and_historical_compatibility_v1"
+  route_blocker_fingerprint: "cc63c0b1626602b70ef66767d44231f6059fdfa3c60386caadb16c81f742cc9e"
+  route_dirty_state_manifest_sha256: "28f6b41fa30382bd08bf7b2d9b92c4a7d5bbe45775b1f2c1a64a21567250fceb"
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+  outer_agentjob_invocation_count: 1
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1126
+    relationship_row_count: 5676
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"reviewer agreement taxonomy equivalence renderer authority shard inventory\" --limit 10 --json"
+      query_type: "search"
+      query_text: "reviewer agreement taxonomy equivalence renderer authority shard inventory"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  authority_note: "Generated task indexes wiki semantic relationship Obsidian and .local validation receipts are retrieval navigation or execution evidence only and are not authority; tracked source files exact hashes and validators remain authority."
+
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  phase_id: "P16"
+  plan_task_id: "P16-T04"
+  work_item_status: "blocked_checkpoint_recovery_required"
+  target_derivation_milestone: "none"
+  milestone_burden: "Project-system validation compatibility and checkpoint recovery only; no scientific derivation burden is discharged."
+  result_status: "PASS_P16_T04_VALIDATION_COMPATIBILITY_RECOVERY_CHECKPOINT_BLOCKED_PATH_CLASSIFICATION"
+  p16_t04_reaudit_executed: false
+  p16_t05_executed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+result:
+  status: "BLOCKED_CHECKPOINT_PLANNER_UNKNOWN_GOVERNED_PATH"
+  strategy_id: "reconcile_p16_t04_internal_review_label_repair_authority_chain_and_historical_compatibility_v1"
+  inherited_transaction_preserved: true
+  renderer_authority_chain_bound: true
+  compatibility_family_count: 6
+  compatibility_family_pass_count: 6
+  historical_p10_negative_result_preserved: true
+  shard_assigned_test_count: 153
+  shard_policy_test_count: 110
+  validation_taxonomy_row_count: 43
+  focused_test_count: 67
+  focused_test_pass_count: 67
+  p16_t04_reaudit_executed: false
+  p16_t05_executed: false
+  checkpoint_invoked: true
+  checkpoint_staged: false
+  checkpoint_committed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_push_or_external_action_authorized: false
+
+inherited_transaction_preservation:
+  inherited_manifest_sha256: "28f6b41fa30382bd08bf7b2d9b92c4a7d5bbe45775b1f2c1a64a21567250fceb"
+  source_head: "2cc682251201d8d034dcd447fde006a49f3db650"
+  source_completion_path: "research_control/tasks/RT-20260803-015/jobs/completions/AJC-AJ-RT-20260803-015-001.yaml"
+  source_completion_sha256: "bfec266a4824df117db6c8b4275f79df333e1294871d1b8ed769521639e6a690"
+  source_validation_path: "research_control/tasks/RT-20260803-015/artifacts/p16_t04_internal_review_label_contract_validation.json"
+  source_validation_sha256: "97edc8ab306c30ce453f978442226c9cae3fa012acf1efe842343266fb37f629"
+  all_exact: true
+
+artifact_receipts:
+  - path: "research_control/tasks/RT-20260803-016/artifacts/p16_t04_internal_review_label_renderer_authority_binding_receipt.json"
+    sha256: "6800a2456af413130aa9f0514bf376a34ac4d4da32b61e13be43b5713366e5f3"
+  - path: "research_control/tasks/RT-20260803-016/artifacts/p16_t04_validation_compatibility_recovery_receipt.json"
+    sha256: "ddb7f69924164c10769520c76e1ca34466acad2b9910f3dfd507e4d8cc65290f"
+  - path: "research_control/tasks/RT-20260803-016/artifacts/checkpoint_blocker_generation_247_red_team_template_path_classification_v1.yaml"
+    sha256: "ea724825a83a8e032b4d5efe7a63cc6e2f66db4e946c0f1423820ed34da4134e"
+
+command_results:
+  - command: ".venv/bin/python -m unittest tests.test_event_store_architecture tests.test_v21_p10_migration_readiness tests.test_reviewer_agreement_metrics tests.test_semantic_smuggling_adversarial_suite tests.test_validation_equivalence"
+    status: "PASS"
+    summary: "All 67 focused fail-closed compatibility regressions pass."
+  - command: ".venv/bin/python -m unittest discover -s tests"
+    status: "PASS_PRECHECKPOINT"
+    summary: "The complete 1309-test repository suite passes with one expected skip after final control and generated-state synchronization."
+  - command: ".venv/bin/python -m scripts.validation.cli run --profile affected --paths <AgentJob-selected paths>"
+    status: "PASS_PRECHECKPOINT"
+    summary: "The affected validation profile passes on the finalized cumulative write set."
+  - command: ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --job-id AJ-RT-20260803-016-001 --json-summary"
+    status: "PASS_PRECHECKPOINT"
+    summary: "Integrated research-control validation and exact write-path enforcement pass."
+  - command: ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+    status: "PASS"
+    summary: "Documentation-impact coverage matches the final classified write set."
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+    status: "PASS"
+    summary: "Canonical memory registries and generated derivatives validate after synchronization."
+  - command: "git diff --check"
+    status: "PASS"
+    summary: "The cumulative transaction contains no whitespace errors."
+  - command: ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260803-016-001"
+    status: "BLOCKED"
+    summary: "The sole authorized checkpoint invocation failed closed during planner preflight before any subprocess, staging, or commit because research_control/templates/RED_TEAM_REVIEW_ARTIFACT_TEMPLATE.yaml is an unknown governed path. This job must not retry the checkpoint."
+  - command: ".venv/bin/python -m scripts.validation.cli plan --profile checkpoint --scope staged --paths <cumulative transaction paths>"
+    status: "READY_BUT_UNSAFE_FOR_CHECKPOINT_AUTHORITY"
+    summary: "Read-only diagnosis selected the full profile with manifest-planner authority, zero blocked paths, and exactly one unknown governed path: research_control/templates/RED_TEAM_REVIEW_ARTIFACT_TEMPLATE.yaml."
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "FAIL_CHECKPOINT_PLANNER_UNKNOWN_RED_TEAM_TEMPLATE_PATH_CLASSIFICATION"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  observed_durable_outputs:
+    physics: []
+    project_system:
+      - "one exact second-hop renderer authority receipt"
+      - "six bounded compatibility repairs with fail-closed regression evidence"
+      - "one complete validation and checkpoint record"
+      - "one exact checkpoint-planner blocker receipt"
+  accepted_criteria:
+    physics: []
+    project_system:
+      - "the 57-path inherited transaction and sealed P16-T04 science artifacts remain exact"
+      - "the repository test shard and affected profile pass"
+      - "renderer receipt or source drift fails closed"
+      - "one cumulative checkpoint commits before the fresh P16-T04 re-audit"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+physics_payload_admission_result:
+  status: "admitted"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+
+ordinary_route_guard_admission_result:
+  status: "PASS"
+  source_handoff_id: "handoff-0956"
+  selected_plan_task_id: "P16-T04"
+  guard_outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  system_success_counts_as_physics: false
+  system_success_counts_as_distance_to_gr: false
+  scientific_status_changed: false
+  physics_promotion_authorized: false
+
+distance_to_gr_delta:
+  changed: false
+  effect: "none_project_system_validation_compatibility_recovery_only"
+  burden_id: "none"
+  milestone: "none"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "Validator compatibility renderer lineage shard inventory and deterministic generated-evidence refresh supply no metric coupling field-equation benchmark or other physics evidence."
+  downstream_unlocked:
+    - "fresh P16-T04 claim-boundary re-audit after checkpoint"
+  downstream_still_blocked:
+    - "P16-T04 final disposition until the fresh re-audit"
+    - "P16-T05 until P16-T04 completion"
+    - "benchmark promotion proof publication external action or completed derivation"
+
+physics_progress_status:
+  status: "none_project_system_only"
+  new_mathematical_payload: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+
+selected_next_route:
+  route_id: "generation_247_checkpoint_red_team_template_path_classifier_recovery"
+  route_label: "project-system-checkpoint-recovery"
+  role_family: "process-integrity-auditor@0.1.0"
+  role_display_name: "Process Integrity Auditor"
+  worker_skill: "improve-project-system"
+  selected_next_packet_type: "red_team_template_path_classifier_checkpoint_recovery"
+  task_type: "project_system_generation_247_checkpoint_red_team_template_path_classifier_recovery"
+  plan_task_id: "P16-T03"
+  work_item_id: "P16-T04"
+  target_derivation_milestone: "none"
+  milestone_burden: "Project-system exact-path classification and checkpoint recovery only; no P16-T04 re-audit or derivation burden advances."
+  strategy_id: "recover_generation_247_checkpoint_red_team_template_path_classification_v1"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: false
+  execution_ready_now: true
+  p16_t05_authorized: false
+  scientific_status_changed: false
+  physics_promotion_authorized: false
+  executed: false
+  next_action: "Add one stable exact-path classifier rule for research_control/templates/RED_TEAM_REVIEW_ARTIFACT_TEMPLATE.yaml with the governing claim-language and role-or-schema contract tags, preserve unrelated YAML fail-closed behavior with regression coverage, regenerate and revalidate, and invoke at most one fresh checkpoint without executing the P16-T04 re-audit or P16-T05."
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 247 validated claimed and consumed the exact immutable improve-project-system route once."
+      - "Repository identity source HEAD inherited manifest handoff token route hash blocker fingerprint and continuation lease matched before execution."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The two task-local receipts bind the exact current renderer authority chain and all six compatibility families."
+      - "All 67 focused fail-closed regressions pass."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "The complete repository suite affected profile documentation signal claim-language research-control memory and whitespace gates pass before checkpoint."
+  post_checkpoint:
+    status: "FAIL"
+    evidence:
+      - "The sole authorized checkpoint attempt failed closed at planner preflight before any subprocess, staging, or commit because the red-team review template is an unknown governed path."
+      - "This job must not retry; one materially distinct exact-path classifier recovery is required."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Current-frontier task-index compact-frontier dependency-graph registry and wiki derivatives are synchronized after final control writes."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Approved synchronization and validate-only checks pass."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim validation preserves internal-review and non-promotional authority boundaries."
+
+authorization_layers:
+  protected_scoped_gate_review_scope: "none_project_system_validation_compatibility_recovery_only"
+  protected_scoped_gate_review_authorized: false
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+
+project_improvement_signals: []
+open_project_improvement_signal_ids: []
+handoff_authority_boundary: "This completion proves bounded project-system validation compatibility and records one failed checkpoint preflight only. It does not establish checkpoint success external human review independent replication scientific correctness Gate authority benchmark promotion proof publication readiness outward action or completed derivation."
+notes: "Do not retry the failed checkpoint in AJ-RT-20260803-016-001. Route one distinct exact-path classifier recovery, regenerate and revalidate, and invoke at most one fresh checkpoint; the P16-T04 re-audit and P16-T05 remain unexecuted."

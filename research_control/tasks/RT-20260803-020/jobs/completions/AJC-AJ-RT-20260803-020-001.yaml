@@ -1,0 +1,287 @@
+validation_status: "PASS_PRECHECKPOINT"
+final_repository_validation_status: "PASS_PRECHECKPOINT_STAGED_ACCEPTANCE_PENDING"
+job_id: "AJ-RT-20260803-020-001"
+completion_id: "AJC-AJ-RT-20260803-020-001"
+task_id: "RT-20260803-020"
+task_type: "project_system_generation_251_checkpoint_staged_whitespace_and_control_contract_recovery"
+decision_id: "DDR-20260803-020"
+role_id: "validator-engineer"
+source_role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260803-020"
+status: "completed"
+created_at: "2026-08-04T05:18:15Z"
+started_at: "2026-08-04T05:18:15Z"
+completed_at: "2026-08-04T05:18:15Z"
+objective: "Re-derive the generation-251 staged findings; preserve the already-normalized RT-019 documentation receipt and cleared dual-budget and generated-view findings; reconcile the two live RT-019 execution-role registry parity fields; lawfully stage the inherited transaction so source-handoff and blocker provenance can validate; and invoke at most one fresh governed checkpoint without executing P16-T04 or P16-T05."
+completion_summary: "Generation 252 re-derives the generation-251 staged set. The live RT-019 receipt already ends normally, dual-budget and generated-view findings remain cleared, and the two reproduced RT-019 role-registry parity fields are synchronized from the task-local role source. Six current provenance-only findings, four inherited and two introduced by this task-local ordinary-route admission, require lawful staging by the single pending checkpoint. P16-T04 and P16-T05 remain unexecuted."
+objective_result: "staged_checkpoint_contracts_reconciled_ready_for_governed_checkpoint"
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 252
+  passes_consumed: 223
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:252"
+  handoff_token: "70f8657446274264a2bdc6e577511905661e7c12e8afb7a6"
+  relay_claim_token: "8239f4ce1e1040b9c1b077c1270bd031ebcf561ec2d8ff49"
+  route_work_item_id: "P16-T04"
+  route_worker_skill: "improve-project-system"
+  route_sha256: "1e3a6be9809980af4fe03222a06ce9172138ab17b05bef3e2afae23400570bb8"
+  route_reason: "checkpoint_staged_whitespace_and_control_contract_failure"
+  route_strategy_id: "recover_generation_251_checkpoint_staged_whitespace_and_control_contracts_v1"
+  route_blocker_fingerprint: "f81891da93b63431783face36a50f011b6e7af36d6757a108767fc0a442d5e6e"
+  route_recovery_ledger_sequence: 120
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+  outer_agentjob_invocation_count: 1
+transaction_status: "completed_ready_for_governed_checkpoint"
+result_disposition: "repair_implemented_and_validated_precheckpoint"
+work_item_status: "completed_precheckpoint"
+plan_task_id: "P16-T03"
+recovery_for_plan_task_id: "P16-T04"
+next_plan_task_id: "P16-T04"
+checkpoint_commit:
+  status: "PENDING"
+  commit: ""
+  job_id: "AJ-RT-20260803-020-001"
+checkpoint_invocation_count: 0
+checkpoint_staged: false
+legacy_validation_used: false
+project_system_change_only: true
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+result:
+  status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+  strategy_id: "recover_generation_251_checkpoint_staged_whitespace_and_control_contracts_v1"
+  source_task_id: "RT-20260803-019"
+  source_job_id: "AJ-RT-20260803-019-001"
+  source_handoff_id: "handoff-0960"
+  source_head: "2cc682251201d8d034dcd447fde006a49f3db650"
+  immutable_route_sha256: "1e3a6be9809980af4fe03222a06ce9172138ab17b05bef3e2afae23400570bb8"
+  route_blocker_fingerprint: "f81891da93b63431783face36a50f011b6e7af36d6757a108767fc0a442d5e6e"
+  source_blocker_sha256: "8c8bffe692a84541059016ac1dfd7b5ffdbf884c890f0a77c072379adbe18cc9"
+  terminal_live_error_count_before: 6
+  role_registry_parity_error_count_before: 2
+  role_registry_parity_error_count_after: 0
+  prestage_provenance_error_count: 6
+  blank_eof_reproduced: false
+  dual_budget_finding_reproduced: false
+  generated_view_finding_reproduced: false
+  p16_t04_reaudit_executed: false
+  p16_t05_executed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+artifact_receipts:
+  - path: "research_control/tasks/RT-20260803-020/jobs/AJ-RT-20260803-020-001.yaml"
+    sha256: "b873c62bd7a7d943a56531c78f6297fb495029b9c5d4eb1460875c52af3697d6"
+  - path: "research_control/tasks/RT-20260803-020/artifacts/generation_252_staged_checkpoint_contract_recovery_receipt.json"
+    sha256: "aad54c29807498130e64eb330e40eb8b5a54f8173d28bae8f981149146faff5d"
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1126
+    relationship_row_count: 5676
+    semantic_row_count: 1126
+    vault_row_count: 1126
+    blocking_warning_count: 0
+    local_cache_only_warning_count: 3
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  authority_note: "Generated task indexes, wiki semantic relationship data, Obsidian, SQLite, and .local validation receipts are retrieval or execution evidence only and are not authority; tracked sources, exact hashes, and validators govern this recovery."
+physics_payload_admission_result:
+  status: "admitted"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+ordinary_route_guard_admission_result:
+  status: "PASS"
+  source_handoff_id: "handoff-0960"
+  source_handoff_sha256_at_intake: "29a0f87d478d1dfa2bdbb7a2f6b42121881e5db01ea9ae78150aebee67283508"
+  selected_plan_task_id: "P16-T03"
+  guard_outcome: "all_ready_science_blocked_exception"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  system_success_counts_as_physics: false
+  system_success_counts_as_distance_to_gr: false
+  scientific_status_changed: false
+  physics_promotion_authorized: false
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS_PRECHECKPOINT_READY"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  observed_durable_outputs:
+    physics: []
+    project_system:
+      - "exact RT-019 role-registry parity"
+      - "task-local staged-finding recovery receipt"
+      - "lawfully staged source-handoff and blocker provenance"
+      - "one fresh governed checkpoint outcome"
+  accepted_criteria:
+    physics: []
+    project_system:
+      - "the RT-019 receipt has no blank EOF and no synthetic whitespace mutation"
+      - "the two live RT-019 role-registry parity findings are eliminated"
+      - "dual-budget and generated-view findings remain cleared"
+      - "staged provenance findings clear through the governed checkpoint"
+      - "no earlier AgentJob or checkpoint is replayed"
+      - "P16-T04 and P16-T05 remain unexecuted"
+      - "at most one fresh governed checkpoint is invoked"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+command_results:
+  - command: "memory status and canonical v21 lookup"
+    status: "PASS_WITH_LOCAL_CACHE_WARNINGS"
+    summary: "Tracked memory authority passes; three local-cache-only warnings remain non-authoritative."
+  - command: "live generation-251 research-control diff rederivation"
+    status: "PASS_SCOPED_FINDINGS_REDERIVED"
+    summary: "Six live errors reproduce: two exact RT-019 role-registry parity fields and four provenance-only findings that require staging."
+  - command: "RT-019 receipt byte-ending and dual-budget rederivation"
+    status: "PASS"
+    summary: "No live blank EOF or dual-budget error reproduces; the terminalized record ends in one LF."
+  - command: "project classifier resolver and emitted-signal validation"
+    status: "PASS"
+    summary: "One project-system Validator Engineer job is ready; no signal-routing mutation is required."
+  - command: ".venv/bin/python -m unittest discover -s tests"
+    status: "EXPECTED_PRESTAGE_FAIL"
+    summary: "The 1310-test run passed 1304 tests with one skip and exposed the missing handoff-0961 Markdown identity plus staging-dependent provenance failures. The identity defect is corrected; the remaining repository-wide failures require the governed staging step."
+  - command: "generated views documentation impact claim language memory and research-control acceptance"
+    status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+    summary: "All non-staging gates pass. The final affected profile passes 14 of 15 gates; only research_control_diff remains, with exactly six current source-handoff or blocker paths that require governed staging."
+  - command: "governed cumulative checkpoint AJ-RT-20260803-020-001"
+    status: "PENDING"
+    summary: "Exactly one fresh invocation remains authorized."
+validation_summary:
+  status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+  terminal_live_error_count_before: 6
+  role_registry_parity_error_count_after: 0
+  prestage_provenance_error_count: 6
+  blank_eof_reproduced: false
+  dual_budget_finding_reproduced: false
+  checkpoint_invocation_count: 0
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 252 validated claimed and consumed the exact immutable recovery route once."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The task-local receipt records exact rederivation and the two-field role-registry reconciliation."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "All non-staged source and control findings are reconciled; provenance-only findings are reserved for checkpoint staging."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "Exactly one fresh governed checkpoint remains."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Current-frontier, task-index, compact-frontier, dependency-graph, and claim-graph projections are fresh after final source synchronization."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory bootstrap and validate-only checks pass after final source synchronization."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation passes without new blocking findings."
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "project-system staged checkpoint-contract recovery only"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  source_law_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+distance_to_gr_delta:
+  changed: false
+  effect: "none_project_system_checkpoint_contract_recovery"
+  milestone: "benchmark_promotion"
+  burden: "P16-T04 remains unexecuted until a valid checkpoint."
+  ledger_row_updated: false
+physics_progress_status:
+  status: "documentation_or_control_only_no_physics_delta"
+  physics_promotion_authorized: false
+  proof_authority: false
+selected_next_route:
+  work_item_id: "P16-T04"
+  plan_task_id: "P16-T04"
+  worker_skill: "continue-research"
+  role_family: "external-red-team-reviewer@0.1.0"
+  route_label: "external-review-packet"
+  strategy_id: "execute_p16_t04_post_repair_final_claim_boundary_reaudit_v1"
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  p16_t05_executed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+output_paths:
+  - "research_control/tasks/RT-20260803-020/artifacts/generation_252_staged_checkpoint_contract_recovery_receipt.json"
+  - "research_control/tasks/RT-20260803-020/jobs/completions/AJC-AJ-RT-20260803-020-001.yaml"
+  - "research_control/handoffs/handoff-0961.yaml"
+  - "research_control/handoffs/handoff-0961.md"
+  - "research_control/program_state.yaml"
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  status: "not_required_no_project_improvement_signal_emitted"
+  sidecar_created: false
+out_of_scope_remaining_work:
+  - "The one fresh governed checkpoint remains pending."
+  - "P16-T04 must be separately claimed after a valid checkpoint."
+  - "P16-T05 and later synthesis remain unexecuted."
+  - "Science ontology Gate benchmark proof external review independent replication publication push external action and completed-derivation authority remain unavailable."
+forbidden_conclusion_summary: "Project-system parity or checkpoint success is not scientific evidence, a Gate verdict, external review, independent replication, proof, publication authority, or completed derivation."
+verdict: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+next_recommendation: "Invoke exactly one governed checkpoint for AJ-RT-20260803-020-001; after a valid commit, route P16-T04 separately through continue-research and do not execute P16-T05 first."

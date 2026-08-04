@@ -1,0 +1,385 @@
+job_id: "AJ-RT-20260803-017-001"
+task_id: "RT-20260803-017"
+decision_id: "DDR-20260803-017"
+role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260803-017"
+status: "blocked"
+validation_status: "FAIL"
+created_at: "2026-08-04T01:19:10Z"
+started_at: "2026-08-04T01:19:10Z"
+completed_at: "2026-08-04T02:03:22Z"
+completion_path: "research_control/tasks/RT-20260803-017/jobs/completions/AJC-AJ-RT-20260803-017-001.yaml"
+requires_human_gate: false
+human_authorization_note: "Generation 248 authorizes exactly one improve-project-system worker and one outer AgentJob for the exact red-team template classifier and distinct checkpoint recovery."
+objective: "Preserve the exact 78-path generation-247 transaction; add one exact red-team review template classifier rule and an unrelated-YAML negative-control regression; regenerate and revalidate; and invoke at most one fresh checkpoint before any P16-T04 re-audit or P16-T05 work."
+resolves_signal_routing: false
+target_derivation_milestone: "none"
+milestone_burden: "Project-system exact-path classification and checkpoint recovery only; no scientific burden is discharged."
+route_label: "project-system-checkpoint-recovery"
+route_reason: "generation_247_checkpoint_red_team_template_path_classification_failure"
+route_strategy_id: "recover_generation_247_checkpoint_red_team_template_path_classification_v1"
+immutable_route_sha256: "7476df9a7496b467b192594b80e24c282d11b6874d6e7a985a714ca895ac3429"
+route_blocker_fingerprint: "8426310e7a3cab5d99670754e4f63cb39aed8c943760fa945a2b54355ae336ec"
+inherited_manifest_sha256: "0929290fee8c9e833411e0b3669a5e082c90d0c96e0c7f73884fceae459dd29f"
+source_head: "2cc682251201d8d034dcd447fde006a49f3db650"
+source_handoff_sha256: "b835edec63eaae691a1b68b262084f86ee0a53cdf654d762a5196a50303f924d"
+source_completion_sha256: "62f35ac93f1efac6714651ba3278d31d3cdf11ffca27500c43bd38b2fb6ed1f6"
+source_checkpoint_blocker_sha256: "ea724825a83a8e032b4d5efe7a63cc6e2f66db4e946c0f1423820ed34da4134e"
+source_validation_sha256: "97edc8ab306c30ce453f978442226c9cae3fa012acf1efe842343266fb37f629"
+plan_task_id: "P16-T03"
+recovery_for_plan_task_id: "P16-T04"
+next_plan_task_id: "P16-T04"
+next_plan_task_execution_authorized: false
+p16_t04_reaudit_execution_authorized: false
+p16_t05_payload_execution_authorized: false
+project_system_change_only: true
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 248
+  passes_consumed: 220
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:248"
+  handoff_token: "50ecbaa5cb0ff25f82f25e5a32c186043868008d1acc584d"
+  relay_claim_token: "fe29bf3171649a442b28b614cadca8221d5b6f16f45854bd"
+  route_work_item_id: "P16-T04"
+  route_worker_skill: "improve-project-system"
+  route_sha256: "7476df9a7496b467b192594b80e24c282d11b6874d6e7a985a714ca895ac3429"
+  route_reason: "generation_247_checkpoint_red_team_template_path_classification_failure"
+  route_strategy_id: "recover_generation_247_checkpoint_red_team_template_path_classification_v1"
+  route_blocker_fingerprint: "8426310e7a3cab5d99670754e4f63cb39aed8c943760fa945a2b54355ae336ec"
+  route_dirty_state_manifest_sha256: "0929290fee8c9e833411e0b3669a5e082c90d0c96e0c7f73884fceae459dd29f"
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+  outer_agentjob_invocation_count: 1
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1126
+    relationship_row_count: 5676
+    semantic_row_count: 1126
+    vault_row_count: 1126
+    blocking_warning_count: 0
+    local_cache_only_warning_count: 3
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  authority_note: "Generated task indexes, wiki semantic relationship data, Obsidian, SQLite, and .local validation receipts are retrieval or execution evidence only and are not authority; tracked sources, exact hashes, and validators govern this recovery."
+
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  candidate_family: "not_applicable"
+  assumption_delta:
+    - "No scientific assumption changes; the packet repairs one exact classifier omission and proves unrelated YAML remains fail-closed."
+    - "The generation-247 validation recovery and sealed P16-T04 science artifacts remain unchanged while P16-T04 re-audit and P16-T05 remain unexecuted."
+  materiality_basis: "Restores safe checkpoint planning for the exact governed red-team template without weakening the unknown-path fallback."
+  source_basis:
+    - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+    - "research_control/handoffs/handoff-0957.yaml"
+    - "research_control/tasks/RT-20260803-016/artifacts/checkpoint_blocker_generation_247_red_team_template_path_classification_v1.yaml"
+  expected_artifact_paths:
+    - "scripts/project_control/classify_project_changes.py"
+    - "tests/test_project_change_classifier.py"
+    - "research_control/tasks/RT-20260803-017/artifacts/generation_247_red_team_template_path_classifier_recovery_receipt.json"
+  project_system_justification: "The job repairs deterministic classifier and checkpoint authority only; it creates no physics payload."
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  expected_durable_outputs:
+    physics: []
+    project_system:
+      - "one exact red-team template classifier contract"
+      - "one unrelated-YAML fail-closed regression"
+      - "one governed checkpoint"
+  acceptance_criteria:
+    physics: []
+    project_system:
+      - "the exact red-team template has claim-language and role-or-schema contract tags and reasons"
+      - "an unrelated YAML template remains unknown and selects the full profile"
+      - "the inherited transaction and sealed science artifacts remain preserved"
+      - "governed validation passes and one fresh checkpoint commits"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: true
+    exception_id: "BLOCK-P16-T04-CHECKPOINT-RED-TEAM-TEMPLATE-PATH-CLASSIFICATION-001"
+    evidence_path: "research_control/tasks/RT-20260803-016/artifacts/checkpoint_blocker_generation_247_red_team_template_path_classification_v1.yaml"
+    evidence_sha256: "ea724825a83a8e032b4d5efe7a63cc6e2f66db4e946c0f1423820ed34da4134e"
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0957"
+  source_handoff_path: "research_control/handoffs/handoff-0957.yaml"
+  source_handoff_sha256: "b835edec63eaae691a1b68b262084f86ee0a53cdf654d762a5196a50303f924d"
+  selected_plan_task_id: "P16-T03"
+  guard_outcome: "below_threshold"
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+allowed_read_paths:
+  - "SOUL.md"
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research-goal/**"
+  - ".codex/skills/continue-research-continue-goal/**"
+  - ".codex/skills/continue-research/**"
+  - ".codex/skills/improve-project-system/**"
+  - ".agents/roles/research_ops/**"
+  - ".agents/schemas/**"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  - "research_control/**"
+  - "scripts/**"
+  - "tests/**"
+  - "registries/**"
+  - ".local/validation-receipts/**"
+allowed_write_paths:
+  - ".agents/roles/physics/external-red-team-reviewer.v0.1.0.md"
+  - ".agents/schemas/EXTERNAL_RED_TEAM_REVIEW_ARTIFACT_SCHEMA.md"
+  - "research_control/design/external_red_team_reviewer_role_design.md"
+  - "research_control/templates/RED_TEAM_REVIEW_ARTIFACT_TEMPLATE.yaml"
+  - "scripts/project_control/validate_claim_language.py"
+  - "scripts/research_control/render_task_index.py"
+  - "scripts/research_control/validate_red_team_review_artifact.py"
+  - "scripts/research_control/validate_research_control.py"
+  - "tests/test_validate_claim_language.py"
+  - "tests/test_red_team_review_artifact_validator.py"
+  - "tests/test_research_control.py"
+  - "tests/test_task_index_renderer.py"
+  - "research_control/tasks/RT-20260721-007/artifacts/validate_v21_event_store_architecture.py"
+  - "tests/test_event_store_architecture.py"
+  - "research_control/tasks/RT-20260722-003/artifacts/validate_v21_p10_migration_readiness.py"
+  - "tests/test_v21_p10_migration_readiness.py"
+  - "tests/support/research_control_shards.py"
+  - "tests/test_validation_equivalence.py"
+  - "research_control/tasks/RT-20260722-006/artifacts/semantic_smuggling_fixture_catalog.json"
+  - "research_control/tasks/RT-20260722-006/artifacts/semantic_smuggling_checker_comparison.json"
+  - "research_control/tasks/RT-20260722-006/artifacts/semantic_smuggling_checker_comparison.md"
+  - "research_control/tasks/RT-20260722-006/artifacts/semantic_smuggling_validation.json"
+  - "research_control/tasks/RT-20260722-006/artifacts/semantic_smuggling_compact_receipt.json"
+  - "research_control/tasks/RT-20260722-008/artifacts/reviewer_agreement_calibration_report.json"
+  - "research_control/tasks/RT-20260722-008/artifacts/reviewer_agreement_compact_receipt.json"
+  - "research_control/tasks/RT-20260803-015/**"
+  - "research_control/tasks/RT-20260803-016/**"
+  - "research_control/tasks/RT-20260803-017/**"
+  - "research_control/handoffs/handoff-0956.yaml"
+  - "research_control/handoffs/handoff-0956.md"
+  - "research_control/handoffs/handoff-0957.yaml"
+  - "research_control/handoffs/handoff-0957.md"
+  - "research_control/handoffs/handoff-0958.yaml"
+  - "research_control/handoffs/handoff-0958.md"
+  - "research_control/project_improvement_handoffs/improve-project-handoff_20260803_005.yaml"
+  - "research_control/project_improvement_handoffs/improve-project-handoff_20260803_005.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "scripts/project_control/classify_project_changes.py"
+  - "tests/test_project_change_classifier.py"
+  - "registries/AGENT_ROLE_REGISTRY.csv"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/PDF_DERIVATIVE_REGISTRY.csv"
+  - "registries/PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/tex/**"
+allowed_generated_paths:
+  - "research_control/tasks/RT-20260722-006/artifacts/semantic_smuggling_fixture_catalog.json"
+  - "research_control/tasks/RT-20260722-006/artifacts/semantic_smuggling_checker_comparison.json"
+  - "research_control/tasks/RT-20260722-006/artifacts/semantic_smuggling_checker_comparison.md"
+  - "research_control/tasks/RT-20260722-006/artifacts/semantic_smuggling_validation.json"
+  - "research_control/tasks/RT-20260722-006/artifacts/semantic_smuggling_compact_receipt.json"
+  - "research_control/tasks/RT-20260722-008/artifacts/reviewer_agreement_calibration_report.json"
+  - "research_control/tasks/RT-20260722-008/artifacts/reviewer_agreement_compact_receipt.json"
+  - "research_control/tasks/RT-20260803-017/artifacts/generation_247_red_team_template_path_classifier_recovery_receipt.json"
+  - "research_control/tasks/RT-20260803-017/artifacts/checkpoint_blocker_generation_248_rt015_folder_map_coverage_v1.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "registries/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/tex/**"
+forbidden_paths:
+  - "implementations_plans/**"
+  - "ontology/**"
+  - "legacy_ontology/**"
+  - "manuscripts/**"
+  - "research_control/approvals/**"
+  - "research_control/tasks/RT-20260803-014/**"
+  - "research_control/tasks/RT-20260721-006/artifacts/v21_research_attempt_ledger.json"
+  - "research_control/tasks/RT-20260721-006/artifacts/v21_attempt_history_validation.json"
+  - "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_contract.json"
+  - "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_validation.json"
+  - "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_compact_receipt.json"
+  - "research_control/tasks/RT-20260722-003/artifacts/v21_p10_migration_readiness_validation.json"
+  - "research_control/tasks/RT-20260722-003/artifacts/v21_p10_migration_readiness_compact_receipt.json"
+forbidden_source_classes:
+  - "broad_yaml_path_classification_or_unknown_path_fallback_weakening"
+  - "red_team_template_role_schema_or_predecessor_evidence_rewrite"
+  - "generation_247_job_or_checkpoint_replay"
+  - "canonical_plan_ontology_or_science_source_write"
+  - "p16_t04_reaudit_or_p16_t05_execution"
+  - "external_review_independence_benchmark_gate_or_physics_promotion"
+  - "proof_publication_push_external_action_or_completed_derivation"
+allowed_source_classes:
+  - "exact_red_team_template_classifier_contract"
+  - "unrelated_yaml_fail_closed_regression"
+  - "inherited_payload_preservation"
+  - "task_control_record"
+  - "project_control_receipt"
+  - "registry"
+  - "generated_memory_derivative"
+approved_commands:
+  - ".venv/bin/python -m unittest tests.test_project_change_classifier"
+  - ".venv/bin/python -m unittest discover -s tests"
+  - ".venv/bin/python -m scripts.validation.cli run --profile affected --paths scripts/project_control/classify_project_changes.py tests/test_project_change_classifier.py research_control/templates/RED_TEAM_REVIEW_ARTIFACT_TEMPLATE.yaml"
+  - ".venv/bin/python -m scripts.validation.cli run --profile full --scope working"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --job-id AJ-RT-20260803-017-001 --json-summary"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+  - ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+  - ".venv/bin/python scripts/research_control/task_taxonomy.py --validate-repository --json"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --check"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --write"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --check"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --check"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --json output/research_dependency_graph.json --markdown wiki/indexes/research_dependency_graph.md --dot output/research_dependency_graph.dot"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --check"
+  - ".venv/bin/python scripts/research_control/generate_claim_graph_v1.py"
+  - ".venv/bin/python scripts/research_control/generate_claim_graph_v1.py --check"
+  - ".venv/bin/python scripts/research_control/validate_claim_graph_v1.py --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+  - ".venv/bin/python scripts/research_control/continue_research.py --summary"
+  - "git diff --check"
+  - "git diff --cached --check"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260803-017-001"
+required_validators:
+  - "memory_preflight"
+  - "physics_payload_admission"
+  - "dual_budget_allocation"
+  - "ordinary_route_guard_admission"
+  - "inherited_manifest_preservation"
+  - "exact_red_team_template_path_classification"
+  - "unrelated_yaml_negative_control"
+  - "project_change_classifier"
+  - "project_improvement_resolver"
+  - "project_improvement_signals"
+  - "task_taxonomy_repository"
+  - "documentation_impact"
+  - "claim_language_changed"
+  - "focused_classifier_tests"
+  - "repository_tests"
+  - "affected_validation_profile"
+  - "full_validation_profile"
+  - "research_control_diff"
+  - "current_frontier_renderer"
+  - "task_index_renderer"
+  - "compact_current_frontier_renderer"
+  - "dependency_graph"
+  - "claim_graph"
+  - "memory_sync"
+  - "memory_core"
+  - "git_diff_check"
+  - "checkpoint_transaction"
+expected_outputs:
+  - "scripts/project_control/classify_project_changes.py"
+  - "tests/test_project_change_classifier.py"
+  - "research_control/tasks/RT-20260803-017/00_TASK.yaml"
+  - "research_control/tasks/RT-20260803-017/DDR-20260803-017.md"
+  - "research_control/tasks/RT-20260803-017/artifacts/generation_247_red_team_template_path_classifier_recovery_receipt.json"
+  - "research_control/tasks/RT-20260803-017/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260803-017/jobs/completions/AJC-AJ-RT-20260803-017-001.yaml"
+  - "research_control/tasks/RT-20260803-017/roles/process-integrity-auditor@0.1.0--RT-20260803-017.yaml"
+  - "research_control/handoffs/handoff-0958.yaml"
+  - "research_control/handoffs/handoff-0958.md"
+claim_boundary: "CB-PS-P16-T04-RED-TEAM-TEMPLATE-PATH-CLASSIFIER-RECOVERY-001"
+documentation_impact_id: "DI-RT-20260803-017-001"
+completion_id: "AJC-AJ-RT-20260803-017-001"

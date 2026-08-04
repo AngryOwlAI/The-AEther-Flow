@@ -1,0 +1,70 @@
+schema_id: "checkpoint_blocker_generation_247_red_team_template_path_classification_v1"
+task_id: "RT-20260803-016"
+job_id: "AJ-RT-20260803-016-001"
+goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+generation: 247
+created_at: "2026-08-04T00:36:42Z"
+status: "BLOCKED_CHECKPOINT_PLANNER_UNKNOWN_GOVERNED_PATH"
+
+checkpoint_attempt:
+  command: ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260803-016-001"
+  invocation_count: 1
+  result: "BLOCKED"
+  reason: "checkpoint planner preflight failed"
+  subprocess_count: 0
+  staged: false
+  committed: false
+  commit: ""
+  retry_authorized_for_this_job: false
+
+planner_diagnosis:
+  command: ".venv/bin/python -m scripts.validation.cli plan --profile checkpoint --scope staged --paths <cumulative transaction paths>"
+  status: "READY"
+  requested_profile: "checkpoint"
+  effective_profile: "full"
+  execution_authority: "manifest_planner"
+  safe_authority_plan_produced: false
+  blocked_path_count: 0
+  blocked_paths: []
+  unknown_path_count: 1
+  unknown_paths:
+    - "research_control/templates/RED_TEAM_REVIEW_ARTIFACT_TEMPLATE.yaml"
+  unknown_path_tags:
+    - "unknown_governed_path"
+  diagnosis: "The planner can select the full profile, but checkpoint authority fails closed because the governed red-team review template has no stable exact-path classifier rule."
+
+preserved_validation_evidence:
+  affected_profile_status: "PASS"
+  gate_count: 29
+  gate_pass_count: 29
+  gate_warn_count: 0
+  gate_fail_count: 0
+  gate_block_count: 0
+  repository_test_count: 1309
+  repository_test_pass_count: 1309
+  repository_test_skip_count: 1
+  focused_test_count: 67
+  focused_test_pass_count: 67
+  checkpoint_preflight_subprocess_count: 0
+
+authority_boundary:
+  implementation_and_precheckpoint_validation_preserved: true
+  checkpoint_success_claimed: false
+  p16_t04_reaudit_executed: false
+  p16_t05_executed: false
+  scientific_claims_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_push_or_external_action_authorized: false
+
+required_distinct_recovery:
+  worker_skill: "improve-project-system"
+  route_label: "project-system-checkpoint-recovery"
+  role_family: "process-integrity-auditor@0.1.0"
+  strategy_id: "recover_generation_247_checkpoint_red_team_template_path_classification_v1"
+  task_type: "project_system_generation_247_checkpoint_red_team_template_path_classifier_recovery"
+  packet_type: "red_team_template_path_classifier_checkpoint_recovery"
+  work_item_id: "P16-T04"
+  next_action: "Add one stable exact-path classifier rule for research_control/templates/RED_TEAM_REVIEW_ARTIFACT_TEMPLATE.yaml with the governing claim-language and role-or-schema contract tags, preserve unrelated YAML fail-closed behavior with regression coverage, regenerate and revalidate the cumulative transaction, and invoke at most one fresh checkpoint without executing the P16-T04 re-audit or P16-T05."

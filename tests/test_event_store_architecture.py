@@ -34,6 +34,7 @@ class EventStoreArchitectureTests(unittest.TestCase):
         return (
             MODULE.HISTORICAL_RENDERER_BINDING_RECOVERY_RECEIPT.as_posix(),
             MODULE.CURRENT_RENDERER_AUTHORITY_BINDING_RECEIPT.as_posix(),
+            MODULE.LATEST_CURRENT_RENDERER_AUTHORITY_BINDING_RECEIPT.as_posix(),
             relative,
             "research_control/tasks/RT-20260721-007/artifacts/"
             "v21_event_store_architecture_contract.json",
@@ -55,6 +56,10 @@ class EventStoreArchitectureTests(unittest.TestCase):
             "p16_t02_gate_status_layer_contract_validation.json",
             "research_control/tasks/RT-20260803-005/artifacts/"
             "validate_p16_t02_gate_status_layer_contract.py",
+            "research_control/tasks/RT-20260803-015/jobs/completions/"
+            "AJC-AJ-RT-20260803-015-001.yaml",
+            "research_control/tasks/RT-20260803-015/artifacts/"
+            "p16_t04_internal_review_label_contract_validation.json",
         )
 
     def test_live_contract_sources_and_documents_pass(self) -> None:
@@ -168,6 +173,18 @@ class EventStoreArchitectureTests(unittest.TestCase):
         with mock.patch.object(
             MODULE,
             "CURRENT_RENDERER_AUTHORITY_BINDING_RECEIPT_SHA256",
+            "0" * 64,
+        ):
+            self.assertIn(
+                f"source_hash::{relative}",
+                self.failed_names(MODULE.validate_source_bindings(self.contract)),
+            )
+
+    def test_historical_renderer_binding_rejects_latest_chain_receipt_drift(self) -> None:
+        relative = "scripts/research_control/render_task_index.py"
+        with mock.patch.object(
+            MODULE,
+            "LATEST_CURRENT_RENDERER_AUTHORITY_BINDING_RECEIPT_SHA256",
             "0" * 64,
         ):
             self.assertIn(
