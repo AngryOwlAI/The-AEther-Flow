@@ -1,0 +1,383 @@
+{
+  "artifact_hashes": {
+    "research_control/tasks/RT-20260804-001/artifacts/child_phys_math_p16_t04_post_repair_reaudit.yaml": "192fc3614ef9b52f0fcb0641db54d664071362e9292705f1837a70cc76e1c4bd",
+    "research_control/tasks/RT-20260804-001/artifacts/child_phys_phil_p16_t04_post_repair_reaudit.yaml": "080ead153e4cd337abbfe3d15816e43e25910ba27c274ba33c57ed86e8451a27",
+    "research_control/tasks/RT-20260804-001/artifacts/p16_t04_post_repair_internal_skeptical_review.yaml": "c1ce80b6c68f027361ea2729af44eb542a6dd8cecc8ca14c0cadbeb30eff46d8",
+    "research_control/tasks/RT-20260804-001/artifacts/parent_conflict_review_p16_t04_post_repair_reaudit.yaml": "ea181e88642eb2b999f31caee697f5e7aef1a5d7e722bb45f3d5f825d06b73d7",
+    "research_control/tasks/RT-20260804-001/artifacts/parent_fusion_notes_p16_t04_post_repair_reaudit.md": "53c68caadeabafcb80e3a0965a920af3e6b0496a5201eb9a355e9e9fc92508fb",
+    "research_control/tasks/RT-20260804-001/artifacts/v21_p16_t04_post_repair_final_reaudit_report.md": "20bbc6082b3b55fad3a7401dc4e4b84295c2baa376f9a2f3ea03286f17da0d30",
+    "research_control/tasks/RT-20260804-001/artifacts/v21_p16_t04_post_repair_public_claim_verdict.yaml": "fb57e2ca1149f9900e12ffff96937071794dfdfcb1d5d9ca7d739bdb40ae89e3",
+    "research_control/tasks/RT-20260804-001/artifacts/v21_p16_t04_post_repair_severity_matrix.yaml": "0d4f156cd940e0e871dea6505b0789e9c9dba7f848543aa933bb97a80a262d7b",
+    "research_control/tasks/RT-20260804-001/artifacts/validate_p16_t04_post_repair_final_reaudit.py": "4412b3675e023ba372d8cf7371b1bb424a5c388b14ea1e32d795431b1f8e589c"
+  },
+  "artifact_structure": {
+    "exact_checks": {
+      "completion_identity": true,
+      "completion_result": true,
+      "handoff_identity": true,
+      "handoff_result": true,
+      "job_identity": true,
+      "job_route": true,
+      "math_child_result": true,
+      "matrix_result": true,
+      "parent_conflict_resolved": true,
+      "phil_child_result": true,
+      "role_identity": true,
+      "strict_review_internal": true,
+      "strict_review_verdict": true,
+      "task_closure": true,
+      "task_completed": true,
+      "task_identity": true,
+      "task_plan": true,
+      "verdict_result": true
+    },
+    "finding_count": 9,
+    "matrix_checks": {
+      "finding_total": true,
+      "no_project_signal": true,
+      "prior_blocker_resolved": true,
+      "zero_blocking_project": true,
+      "zero_blocking_science": true,
+      "zero_undisposed_high": true
+    },
+    "public_authority_flags": {
+      "benchmark_promotion_authorized": false,
+      "external_review_completed": false,
+      "human_expert_review_completed": false,
+      "independent_replication_completed": false,
+      "physics_promotion_authorized": false,
+      "proof_authority": false,
+      "public_release_authorized": false,
+      "publication_authorized": false
+    },
+    "typed_claim_checks": {
+      "countervaluation": true,
+      "negative_atoms": true,
+      "not_global_no_go": true,
+      "positive_atoms": true,
+      "typed_result": true,
+      "typed_schema": true
+    }
+  },
+  "authority_boundary": {
+    "benchmark_promotion_authorized": false,
+    "distance_to_gr_changed": false,
+    "external_review_completed": false,
+    "human_expert_review_completed": false,
+    "independent_replication_completed": false,
+    "p16_t05_executed": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "public_release_authorized": false,
+    "publication_authorized": false,
+    "scientific_status_changed": false
+  },
+  "control_inventory": {
+    "unsupported_positive_review_claim_count": 0,
+    "unsupported_positive_review_claims": [],
+    "v21_completion_identity_count": 139,
+    "v21_handoff_record_count": 143,
+    "v21_task_record_count": 139
+  },
+  "current_reviewer_contract": {
+    "checks": {
+      "design_current_internal": true,
+      "role_kind_internal": true,
+      "role_legacy_not_provenance": true,
+      "role_name_internal": true,
+      "schema_legacy_not_provenance": true,
+      "schema_title_internal": true,
+      "template_kind_internal": true,
+      "template_name_internal": true
+    }
+  },
+  "error_count": 0,
+  "errors": [],
+  "external_validator_pass_count": 5,
+  "external_validators": [
+    {
+      "command": ".venv/bin/python research_control/tasks/RT-20260722-006/artifacts/validate_p11_t04_semantic_smuggling_suite.py --check --json",
+      "command_id": "semantic_smuggling_suite",
+      "exit_code": 0,
+      "passed": true,
+      "reported_status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "ab33c9e3898c607cc3419b18e179d510520c9c6e92156d5e4db9fb390348e4d9"
+    },
+    {
+      "command": ".venv/bin/python research_control/tasks/RT-20260802-008/artifacts/build_p15_t02_methodology_publication.py --check",
+      "command_id": "methodology_determinism",
+      "exit_code": 0,
+      "passed": true,
+      "reported_status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "f87e4a076a4369b763b232b34f0f4adce9de10d5dae365b7b688fc5843789052"
+    },
+    {
+      "command": ".venv/bin/python research_control/tasks/RT-20260802-008/artifacts/validate_p15_t02_methodology_publication.py",
+      "command_id": "methodology_boundary",
+      "exit_code": 0,
+      "passed": true,
+      "reported_status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "d898ce613109f2b552de77fd906d6a0f2b165716d65f9209d731d5b76a11d3ad"
+    },
+    {
+      "command": ".venv/bin/python scripts/project_control/validate_claim_language.py --json --paths README.md ontology/aether-and-aether-flow.md ontology/aether_flow_interpretation-lemen.md ontology/tex/aether_flow_foundations.tex ontology/tex/aether_flow_dynamics.tex ontology/tex/aether_flow_consistency.tex ontology/tex/aether_flow_relativistic_recovery.tex ontology/tex/aether_flow_geometry.tex ontology/tex/aether_flow_exact_closure_note.tex ontology/tex/aether_flow_exact_closure_sequence_overview.tex ontology/tex/aether_flow_exact_closure_flagship_article.tex",
+      "command_id": "explicit_ontology_and_public_claim_language",
+      "exit_code": 0,
+      "passed": true,
+      "reported_status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "9169ef71cbe254408a53bd085434233a85d0fb09af7e85655baacca0f558e5a3"
+    },
+    {
+      "command": ".venv/bin/python scripts/research_control/validate_red_team_review_artifact.py research_control/tasks/RT-20260804-001/artifacts/p16_t04_post_repair_internal_skeptical_review.yaml --json",
+      "command_id": "strict_internal_skeptical_review",
+      "exit_code": 0,
+      "passed": true,
+      "reported_status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "f836f5f35e11809d788d3dbb8637d8f4a8563a509c0200e9fcca0b7bdbbd1600"
+    }
+  ],
+  "firewall_boundary": {
+    "case_count": 6,
+    "checks": {
+      "complete_edges_hypothesis": true,
+      "human_knowledge_limit": true,
+      "manifest_completeness_limit": true,
+      "manifest_not_proved": true,
+      "six_cases": true,
+      "six_inconclusive": true,
+      "training_prior_limit": true,
+      "zero_benchmark_passes": true,
+      "zero_independent_replications": true
+    }
+  },
+  "job_id": "AJ-RT-20260804-001-001",
+  "plan_task_id": "P16-T04",
+  "registered_sources": {
+    "content_address_count": 1093,
+    "mismatch_count": 0
+  },
+  "result_status": "PASS_P16_T04_POST_REPAIR_FINAL_CLAIM_BOUNDARY_REAUDIT_NO_BLOCKING_OVERCLAIM",
+  "schema_id": "v21_p16_t04_post_repair_validation_v1",
+  "source_hash_bindings": {
+    "binding_count": 42,
+    "bindings": {
+      ".agents/roles/physics/external-red-team-reviewer.v0.1.0.md": {
+        "expected_sha256": "652176faf604825f8084aa3584200e32331b8f6493bda038376bf7737995a6d7",
+        "match": true,
+        "observed_sha256": "652176faf604825f8084aa3584200e32331b8f6493bda038376bf7737995a6d7"
+      },
+      ".agents/schemas/EXTERNAL_RED_TEAM_REVIEW_ARTIFACT_SCHEMA.md": {
+        "expected_sha256": "f341828d74c15632944b2d25be4bf5e0506d60476bea90cf974d7ababcd5d840",
+        "match": true,
+        "observed_sha256": "f341828d74c15632944b2d25be4bf5e0506d60476bea90cf974d7ababcd5d840"
+      },
+      "README.md": {
+        "expected_sha256": "d5abcba0ce6b2586a7d1e1a72c435cafabb4c7e2d021ffee74ec097a8627ffdd",
+        "match": true,
+        "observed_sha256": "d5abcba0ce6b2586a7d1e1a72c435cafabb4c7e2d021ffee74ec097a8627ffdd"
+      },
+      "github-facing/claim-gates-explainer.md": {
+        "expected_sha256": "acd9dc067b35dbf659127d5c893bcd783a280869827467762b3ae895d0d1ec76",
+        "match": true,
+        "observed_sha256": "acd9dc067b35dbf659127d5c893bcd783a280869827467762b3ae895d0d1ec76"
+      },
+      "github-facing/project-overview-explainer.md": {
+        "expected_sha256": "e2e8d214e8be50a85d629dd07d09d47a3c690b1f1780c683b499ae051a8e99aa",
+        "match": true,
+        "observed_sha256": "e2e8d214e8be50a85d629dd07d09d47a3c690b1f1780c683b499ae051a8e99aa"
+      },
+      "implementations_plans/recommendations_implementation_plan_continue_task-v21.md": {
+        "expected_sha256": "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087",
+        "match": true,
+        "observed_sha256": "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+      },
+      "markdown/publication-briefs/aether-flow-physics-program.publication-brief.md": {
+        "expected_sha256": "88bc84765d409845edfe375cc7856895476304769aabc720e7fe111a3c944fe9",
+        "match": true,
+        "observed_sha256": "88bc84765d409845edfe375cc7856895476304769aabc720e7fe111a3c944fe9"
+      },
+      "markdown/publication-briefs/proof-state-dashboard.publication-brief.md": {
+        "expected_sha256": "c5d57e51dc2295c899bca9e6d63f0eb48c3574047158cac72373889c53352584",
+        "match": true,
+        "observed_sha256": "c5d57e51dc2295c899bca9e6d63f0eb48c3574047158cac72373889c53352584"
+      },
+      "ontology/aether-and-aether-flow.md": {
+        "expected_sha256": "b8e17df2354ab0fe3cae04e43940f787dd187dd67f0f40e978de080983ac6edc",
+        "match": true,
+        "observed_sha256": "b8e17df2354ab0fe3cae04e43940f787dd187dd67f0f40e978de080983ac6edc"
+      },
+      "ontology/aether_flow_interpretation-lemen.md": {
+        "expected_sha256": "4ee8f4e889ad433f7d167442e25a47db061743c4b6ccf4528230f6db919d8e23",
+        "match": true,
+        "observed_sha256": "4ee8f4e889ad433f7d167442e25a47db061743c4b6ccf4528230f6db919d8e23"
+      },
+      "ontology/tex/aether_flow_consistency.tex": {
+        "expected_sha256": "d965519639ee8764a5c5a63798d15e8a9a380d7e208dffc43a0be02b6f245ba1",
+        "match": true,
+        "observed_sha256": "d965519639ee8764a5c5a63798d15e8a9a380d7e208dffc43a0be02b6f245ba1"
+      },
+      "ontology/tex/aether_flow_dynamics.tex": {
+        "expected_sha256": "fd6e579e71ef7f2ac4c9668ceede051ad57033ee52357b2552a9e3a5a53939c7",
+        "match": true,
+        "observed_sha256": "fd6e579e71ef7f2ac4c9668ceede051ad57033ee52357b2552a9e3a5a53939c7"
+      },
+      "ontology/tex/aether_flow_exact_closure_flagship_article.tex": {
+        "expected_sha256": "900c799cb0c3d8f790c836196c136b3cec6944e46d41b89e511b85123fd30e40",
+        "match": true,
+        "observed_sha256": "900c799cb0c3d8f790c836196c136b3cec6944e46d41b89e511b85123fd30e40"
+      },
+      "ontology/tex/aether_flow_exact_closure_note.tex": {
+        "expected_sha256": "c4a4e956ad5a10e6b3f4e661351bdeda2145b01e6e85d9df849e765c765eca35",
+        "match": true,
+        "observed_sha256": "c4a4e956ad5a10e6b3f4e661351bdeda2145b01e6e85d9df849e765c765eca35"
+      },
+      "ontology/tex/aether_flow_exact_closure_sequence_overview.tex": {
+        "expected_sha256": "356a5f65b0931914fdf9362ba544c2868bad7d33b828754b91c029bed96f86b1",
+        "match": true,
+        "observed_sha256": "356a5f65b0931914fdf9362ba544c2868bad7d33b828754b91c029bed96f86b1"
+      },
+      "ontology/tex/aether_flow_foundations.tex": {
+        "expected_sha256": "4749d9e8b6858a43230e99029cccc3274b55fc2ae2a2cdf45a983a60c98e5b59",
+        "match": true,
+        "observed_sha256": "4749d9e8b6858a43230e99029cccc3274b55fc2ae2a2cdf45a983a60c98e5b59"
+      },
+      "ontology/tex/aether_flow_geometry.tex": {
+        "expected_sha256": "f60a81b63f814b03cca7190b3ac6285842a55317f4aed058cc6e75154cc0b4d7",
+        "match": true,
+        "observed_sha256": "f60a81b63f814b03cca7190b3ac6285842a55317f4aed058cc6e75154cc0b4d7"
+      },
+      "ontology/tex/aether_flow_relativistic_recovery.tex": {
+        "expected_sha256": "77d5c2db56f122870343834f853bf2f375a912116a347d7c5710405c8707d69c",
+        "match": true,
+        "observed_sha256": "77d5c2db56f122870343834f853bf2f375a912116a347d7c5710405c8707d69c"
+      },
+      "research_control/design/external_red_team_reviewer_role_design.md": {
+        "expected_sha256": "3c574cc9830b1c1a4045f45fb621b31f0b33e516754d07a3929b1832ab4c744d",
+        "match": true,
+        "observed_sha256": "3c574cc9830b1c1a4045f45fb621b31f0b33e516754d07a3929b1832ab4c744d"
+      },
+      "research_control/handoffs/handoff-0961.yaml": {
+        "expected_sha256": "462cb60c3553fe5e373b4ce30f4780e6714c2fb740fe622eb229b5d6295e908e",
+        "match": true,
+        "observed_sha256": "462cb60c3553fe5e373b4ce30f4780e6714c2fb740fe622eb229b5d6295e908e"
+      },
+      "research_control/tasks/RT-20260722-005/artifacts/review_claim_language_rules.md": {
+        "expected_sha256": "3d8d597d47e6cdffea38a6248fd44f389c3eca77c6b9a722561529e14427bfe8",
+        "match": true,
+        "observed_sha256": "3d8d597d47e6cdffea38a6248fd44f389c3eca77c6b9a722561529e14427bfe8"
+      },
+      "research_control/tasks/RT-20260722-005/artifacts/review_independence_taxonomy.md": {
+        "expected_sha256": "6167db6a8c1d67f96bd14aaf52f18fb3666cca1c78b0a42ddc614bc7b56f4ce7",
+        "match": true,
+        "observed_sha256": "6167db6a8c1d67f96bd14aaf52f18fb3666cca1c78b0a42ddc614bc7b56f4ce7"
+      },
+      "research_control/tasks/RT-20260722-010/jobs/completions/AJC-AJ-RT-20260722-010-001.yaml": {
+        "expected_sha256": "09b6fdca28128bd37908cb5e0dbc2c81b0b9af569db0490fed1fb7e32c6b2e46",
+        "match": true,
+        "observed_sha256": "09b6fdca28128bd37908cb5e0dbc2c81b0b9af569db0490fed1fb7e32c6b2e46"
+      },
+      "research_control/tasks/RT-20260724-004/artifacts/ontology_regime_gate_chair_decision_v1.tex": {
+        "expected_sha256": "20ea795bbe93333b489e4f13601fd6bb1623f318b7847f9d2d24402c7490c934",
+        "match": true,
+        "observed_sha256": "20ea795bbe93333b489e4f13601fd6bb1623f318b7847f9d2d24402c7490c934"
+      },
+      "research_control/tasks/RT-20260727-004/artifacts/p6_t08_gate_b_separating_certificate_v1.yaml": {
+        "expected_sha256": "f3080ed6a6ba1d6847a3b7ed43c7a11ad7f7dae4deccd25486913ea9547f221b",
+        "match": true,
+        "observed_sha256": "f3080ed6a6ba1d6847a3b7ed43c7a11ad7f7dae4deccd25486913ea9547f221b"
+      },
+      "research_control/tasks/RT-20260729-001/artifacts/p7_t08_gate_c_decision_v1.tex": {
+        "expected_sha256": "85fbf32fb9b02aeae556149cbc5c6b51bd6fedf278a3bc401545c93e29fc4827",
+        "match": true,
+        "observed_sha256": "85fbf32fb9b02aeae556149cbc5c6b51bd6fedf278a3bc401545c93e29fc4827"
+      },
+      "research_control/tasks/RT-20260729-011/artifacts/p8_t07_gate_d_decision_v1.tex": {
+        "expected_sha256": "035ea88a612d861a00d0703ec2bd1094e01194c113d7ff2588e3a4ad8bf47d63",
+        "match": true,
+        "observed_sha256": "035ea88a612d861a00d0703ec2bd1094e01194c113d7ff2588e3a4ad8bf47d63"
+      },
+      "research_control/tasks/RT-20260729-012/artifacts/source_derived_benchmark_protocol_v1.tex": {
+        "expected_sha256": "88ef097bf712ad115e9af62cc18a8b3eabb12f8545350f714ad065f702471007",
+        "match": true,
+        "observed_sha256": "88ef097bf712ad115e9af62cc18a8b3eabb12f8545350f714ad065f702471007"
+      },
+      "research_control/tasks/RT-20260731-001/artifacts/p9_t08_benchmark_smuggling_audit_v1.yaml": {
+        "expected_sha256": "c5b05dad23261d479e624b9cf08a3d02c2773d05df4d15246793067525acd229",
+        "match": true,
+        "observed_sha256": "c5b05dad23261d479e624b9cf08a3d02c2773d05df4d15246793067525acd229"
+      },
+      "research_control/tasks/RT-20260731-004/artifacts/p9_t09_gate_e_decision_v1.tex": {
+        "expected_sha256": "7f28103e40664f0a004af0134f3216932136f8efb160f0c7c59039efa5225b0b",
+        "match": true,
+        "observed_sha256": "7f28103e40664f0a004af0134f3216932136f8efb160f0c7c59039efa5225b0b"
+      },
+      "research_control/tasks/RT-20260802-008/artifacts/p15_t02_methodology_manuscript.md": {
+        "expected_sha256": "05151b543111f1107a07f1b02afabc78d97ef07820d1eed824da38fdd8e441a3",
+        "match": true,
+        "observed_sha256": "05151b543111f1107a07f1b02afabc78d97ef07820d1eed824da38fdd8e441a3"
+      },
+      "research_control/tasks/RT-20260803-012/jobs/completions/AJC-AJ-RT-20260803-012-001.yaml": {
+        "expected_sha256": "32490ac7e5a57138f6de7a884825532ee17389d36634dbb9fc7f7cc076c0bf8d",
+        "match": true,
+        "observed_sha256": "32490ac7e5a57138f6de7a884825532ee17389d36634dbb9fc7f7cc076c0bf8d"
+      },
+      "research_control/tasks/RT-20260803-013/jobs/completions/AJC-AJ-RT-20260803-013-001.yaml": {
+        "expected_sha256": "a0bd4691e276e5e0d97b45b734491f697deeb57ca0dc99b015bd7ea7d734fe91",
+        "match": true,
+        "observed_sha256": "a0bd4691e276e5e0d97b45b734491f697deeb57ca0dc99b015bd7ea7d734fe91"
+      },
+      "research_control/tasks/RT-20260803-014/artifacts/v21_p16_t04_final_red_team_report.md": {
+        "expected_sha256": "84e8d459aad80a05a23a1eb9842716479b1f26ac551dec6a886ed0fa24d9c41d",
+        "match": true,
+        "observed_sha256": "84e8d459aad80a05a23a1eb9842716479b1f26ac551dec6a886ed0fa24d9c41d"
+      },
+      "research_control/tasks/RT-20260803-014/artifacts/v21_p16_t04_severity_repair_matrix.yaml": {
+        "expected_sha256": "0a953126e9844a21e623b96bc1bfbfb6c11dcd30f7393798c70d4c84f3ed5911",
+        "match": true,
+        "observed_sha256": "0a953126e9844a21e623b96bc1bfbfb6c11dcd30f7393798c70d4c84f3ed5911"
+      },
+      "research_control/tasks/RT-20260803-014/jobs/completions/AJC-AJ-RT-20260803-014-001.yaml": {
+        "expected_sha256": "cf403db773c3aacc33bc127c067abf12218e56bb43f0e6dbe8de0790b31bd6a2",
+        "match": true,
+        "observed_sha256": "cf403db773c3aacc33bc127c067abf12218e56bb43f0e6dbe8de0790b31bd6a2"
+      },
+      "research_control/tasks/RT-20260803-015/artifacts/p16_t04_internal_review_label_contract_validation.json": {
+        "expected_sha256": "97edc8ab306c30ce453f978442226c9cae3fa012acf1efe842343266fb37f629",
+        "match": true,
+        "observed_sha256": "97edc8ab306c30ce453f978442226c9cae3fa012acf1efe842343266fb37f629"
+      },
+      "research_control/tasks/RT-20260803-015/jobs/completions/AJC-AJ-RT-20260803-015-001.yaml": {
+        "expected_sha256": "bfec266a4824df117db6c8b4275f79df333e1294871d1b8ed769521639e6a690",
+        "match": true,
+        "observed_sha256": "bfec266a4824df117db6c8b4275f79df333e1294871d1b8ed769521639e6a690"
+      },
+      "research_control/tasks/RT-20260803-016/artifacts/p16_t04_internal_review_label_renderer_authority_binding_receipt.json": {
+        "expected_sha256": "6800a2456af413130aa9f0514bf376a34ac4d4da32b61e13be43b5713366e5f3",
+        "match": true,
+        "observed_sha256": "6800a2456af413130aa9f0514bf376a34ac4d4da32b61e13be43b5713366e5f3"
+      },
+      "research_control/tasks/RT-20260803-016/artifacts/p16_t04_validation_compatibility_recovery_receipt.json": {
+        "expected_sha256": "ddb7f69924164c10769520c76e1ca34466acad2b9910f3dfd507e4d8cc65290f",
+        "match": true,
+        "observed_sha256": "ddb7f69924164c10769520c76e1ca34466acad2b9910f3dfd507e4d8cc65290f"
+      },
+      "research_control/tasks/RT-20260803-020/jobs/completions/AJC-AJ-RT-20260803-020-001.yaml": {
+        "expected_sha256": "95a7529a7a0c946f065b360b61d64a98a83f8dffc5f26f10375c8ce60fce2c97",
+        "match": true,
+        "observed_sha256": "95a7529a7a0c946f065b360b61d64a98a83f8dffc5f26f10375c8ce60fce2c97"
+      },
+      "research_control/templates/RED_TEAM_REVIEW_ARTIFACT_TEMPLATE.yaml": {
+        "expected_sha256": "d021d204205b648bbf179e47afbcb632bdc93f393e50dd559dab30d02785eca8",
+        "match": true,
+        "observed_sha256": "d021d204205b648bbf179e47afbcb632bdc93f393e50dd559dab30d02785eca8"
+      }
+    }
+  },
+  "status": "PASS_POST_REPAIR_QUALIFYING_FINAL_REAUDIT",
+  "task_id": "RT-20260804-001"
+}

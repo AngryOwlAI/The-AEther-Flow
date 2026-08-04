@@ -1,0 +1,462 @@
+job_id: "AJ-RT-20260804-001-001"
+task_id: "RT-20260804-001"
+decision_id: "DDR-20260804-001"
+role_id: "external-red-team-reviewer"
+role_version: "0.1.0"
+execution_role_ref: "external-red-team-reviewer@0.1.0--RT-20260804-001"
+status: "completed"
+validation_status: "PASS_PRECHECKPOINT"
+created_at: "2026-08-04T06:46:36Z"
+started_at: "2026-08-04T06:46:36Z"
+completed_at: "2026-08-04T06:46:36Z"
+completion_path: "research_control/tasks/RT-20260804-001/jobs/completions/AJC-AJ-RT-20260804-001-001.yaml"
+requires_human_gate: false
+objective: "Execute only V21 P16-T04 as a fresh post-repair internal skeptical re-audit; test the repaired current role contract and every final overclaim boundary, then qualifying-finalize only if no exact blocker remains."
+target_derivation_milestone: "benchmark_promotion"
+milestone_burden: "Provide the final adversarial claim-boundary check without provenance overread."
+route_label: "internal-skeptical-review-packet"
+route_reason: "resume_research_after_project_system_repair"
+immutable_route_sha256: "4691f9b1e070f2f6d42ed7d606d4af5f72d14e4fe8b14d0d3916ec138b47a56a"
+route_blocker_fingerprint: "f143cbec0e3ce790ffa263a3e545da85cbed032ac36dec05f6efa896949d9033"
+route_evidence_sha256es:
+  - "5572decb89562dc7b657ee1baecead6c94b1cb9d9ded55aeae4f2e7f3a9cfbbf"
+  - "f143cbec0e3ce790ffa263a3e545da85cbed032ac36dec05f6efa896949d9033"
+source_head: "a9132efc1c5dc514bf82f359acff0fe1b4cae4af"
+source_tree: "f9c425d29ad352914948b92ff9877b61fb04b58d"
+plan_task_id: "P16-T04"
+recommendation_ids:
+  - "V21-R29"
+  - "V21-R30"
+  - "V21-R36"
+  - "V21-R37"
+  - "V21-R38"
+  - "V21-R51"
+  - "V21-R56"
+  - "V21-R61"
+  - "V21-R63"
+  - "V21-R68"
+next_plan_task_ids:
+  - "P16-T05"
+physics_promotion_authorized: false
+proof_authority: false
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 253
+  passes_consumed: 224
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:253"
+  handoff_token: "fd60fdb1f43a71eccdd64ac552ad75243cc04600aeb4ba27"
+  relay_claim_token: "073b8161a5c0afa097b38d61dcbffc6eee28124f42e15bfd"
+  route_source_generation: 252
+  route_work_item_id: "P16-T04"
+  route_worker_skill: "continue-research"
+  route_sha256: "4691f9b1e070f2f6d42ed7d606d4af5f72d14e4fe8b14d0d3916ec138b47a56a"
+  route_reason: "resume_research_after_project_system_repair"
+  route_strategy_id: "continue_in_scope_generation_253"
+  route_blocker_fingerprint: "f143cbec0e3ce790ffa263a3e545da85cbed032ac36dec05f6efa896949d9033"
+  worker_skill: "continue-research"
+  worker_invocation_count: 1
+
+dependency_evidence:
+  - plan_task_id: "P16-T02"
+    task_id: "RT-20260803-012"
+    completion_path: "research_control/tasks/RT-20260803-012/jobs/completions/AJC-AJ-RT-20260803-012-001.yaml"
+    completion_sha256: "32490ac7e5a57138f6de7a884825532ee17389d36634dbb9fc7f7cc076c0bf8d"
+    status: "qualifying_checkpointed"
+  - plan_task_id: "P16-T03"
+    task_id: "RT-20260803-013"
+    completion_path: "research_control/tasks/RT-20260803-013/jobs/completions/AJC-AJ-RT-20260803-013-001.yaml"
+    completion_sha256: "a0bd4691e276e5e0d97b45b734491f697deeb57ca0dc99b015bd7ea7d734fe91"
+    status: "qualifying_checkpointed"
+  - work_item_id: "P16-T04-internal-review-label-contract-repair"
+    task_id: "RT-20260803-015"
+    completion_path: "research_control/tasks/RT-20260803-015/jobs/completions/AJC-AJ-RT-20260803-015-001.yaml"
+    completion_sha256: "bfec266a4824df117db6c8b4275f79df333e1294871d1b8ed769521639e6a690"
+    status: "repair_checkpointed_with_compatibility_chain"
+  - plan_task_id: "P16-T04"
+    task_id: "RT-20260803-020"
+    completion_path: "research_control/tasks/RT-20260803-020/jobs/completions/AJC-AJ-RT-20260803-020-001.yaml"
+    completion_sha256: "95a7529a7a0c946f065b360b61d64a98a83f8dffc5f26f10375c8ce60fce2c97"
+    checkpoint_commit: "a9132efc1c5dc514bf82f359acff0fe1b4cae4af"
+    status: "final_repair_chain_checkpointed"
+
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "physics"
+  payload_type: "proof_step"
+  candidate_family: "V21-P16-T04-POST-REPAIR-CLAIM-BOUNDARY-NONENTAILMENT-V1"
+  assumption_delta:
+    - "Add R as the exact project-control atom stating that the current reviewer-label contract is repaired to internal while its legacy ID remains stable."
+    - "Add B as positive source-derived benchmark promotion, distinct from target-side exact-GR adoption A."
+    - "Admit only explicit source-backed implication edges and forbid workflow title filename registry proximity or cross-document conjunction as coercions."
+  materiality_basis: "The prior P16-T04 audit stopped on a live control-contract blocker. The post-repair frame must prove that resolving that blocker does not compose with other positive control facts into external independence, source derivation, benchmark promotion, or global impossibility."
+  payload_details:
+    resolves_new_route_decision: true
+    decision_identity: "PostRepairClaimBoundaryNonEntailment_v1"
+    not_already_encoded_evidence: "This is the first P16-T04 all-surface composition proof after the reviewer-contract repair chain was committed."
+    mathematical_payload: "Let Gamma contain only the explicit typed claim implications over S V I M A N R E D B and G. The valuation S=V=I=M=A=N=R=true and E=D=B=G=false satisfies Gamma because no registered coercion maps manifest cleanliness control PASS internal review descriptive methodology target-side adoption scoped obstruction or label repair to external independence source derivation benchmark promotion or global no-go."
+    obstruction_scope: "Task-local non-entailment in the current hash-bound registered claim system; not a theorem that future source extensions or external review are impossible."
+    global_no_go_claimed: false
+  source_basis:
+    - "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+    - "research_control/handoffs/handoff-0961.yaml"
+    - "research_control/tasks/RT-20260803-014/artifacts/v21_p16_t04_final_red_team_report.md"
+    - "research_control/tasks/RT-20260803-015/artifacts/p16_t04_internal_review_label_contract_validation.json"
+    - "the current role schema design template review taxonomy Gate sources benchmark sources methodology sources ontology and public claim surfaces"
+  expected_artifact_paths:
+    - "research_control/tasks/RT-20260804-001/artifacts/child_phys_math_p16_t04_post_repair_reaudit.yaml"
+    - "research_control/tasks/RT-20260804-001/artifacts/v21_p16_t04_post_repair_final_reaudit_report.md"
+    - "research_control/tasks/RT-20260804-001/artifacts/v21_p16_t04_post_repair_severity_matrix.yaml"
+    - "research_control/tasks/RT-20260804-001/artifacts/v21_p16_t04_post_repair_public_claim_verdict.yaml"
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+    - "reviewer_label_repair_pass"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+
+family_freeze_admission:
+  schema_id: "family_freeze_route_admission_v1"
+  policy_id: "family_freeze_reopening_policy_v1"
+  route_id: "v21_p16_t04_post_repair_final_claim_boundary_reaudit"
+  family_id: "V21-P16-T04-POST-REPAIR-CLAIM-BOUNDARY-NONENTAILMENT-V1"
+  family_identity_sha256: "4691f9b1e070f2f6d42ed7d606d4af5f72d14e4fe8b14d0d3916ec138b47a56a"
+  assumption_sha256es:
+    - "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+    - "462cb60c3553fe5e373b4ce30f4780e6714c2fb740fe622eb229b5d6295e908e"
+    - "bfec266a4824df117db6c8b4275f79df333e1294871d1b8ed769521639e6a690"
+  route_kind: "theorem_investigation"
+  detected_match_basis: []
+  reopening:
+    requested: false
+    class: "none"
+  distinct_branch:
+    branch_identity: "P16-T04-POST-REPAIR-CLAIM-BOUNDARY-REAUDIT-BRANCH"
+    material_difference_basis: "The branch binds the committed repaired reviewer contract and tests its composition with the already-audited science facts; it neither reconstructs a frozen physics candidate nor repeats the pre-repair blocker."
+    reconstructs_frozen_candidate: false
+    expected_artifact_paths:
+      - "research_control/tasks/RT-20260804-001/artifacts/v21_p16_t04_post_repair_final_reaudit_report.md"
+      - "research_control/tasks/RT-20260804-001/artifacts/v21_p16_t04_post_repair_severity_matrix.yaml"
+  authority_limits:
+    local_family_freeze_preserved: true
+    global_no_go_claimed: false
+    automatic_candidate_adoption: false
+    theorem_truth_inferred: false
+    ontology_modified: false
+    physics_promotion_authorized: false
+
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "physics_bearing"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  expected_durable_outputs:
+    physics:
+      - "one post-repair all-surface final claim-boundary report"
+      - "one typed post-repair cross-document non-entailment proof"
+      - "one severity matrix public-claim verdict and strict internal review artifact"
+    project_system: []
+  acceptance_criteria:
+    physics:
+      - "the prior current-role blocker is resolved without provenance inflation"
+      - "all high-severity claim attacks have explicit dispositions"
+      - "semantic smuggling methodology and ontology claim scans pass"
+      - "no blocking scientific or project-system finding remains"
+    project_system: []
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: false
+    exception_id: ""
+    evidence_path: ""
+    evidence_sha256: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0961"
+  source_handoff_path: "research_control/handoffs/handoff-0961.yaml"
+  source_handoff_sha256: "462cb60c3553fe5e373b4ce30f4780e6714c2fb740fe622eb229b5d6295e908e"
+  selected_plan_task_id: "P16-T04"
+  guard_outcome: "physics_bearing_route_selected"
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  parent:
+    execution_unit_id: "parent"
+    perspective: "physicist_mathematician_philosopher"
+    responsibilities:
+      - "inspect current contract and all source classes"
+      - "run the strongest post-repair semantic composition attack"
+      - "distinguish current internal labeling from external independence"
+      - "resolve child disagreement without softening blocking findings"
+  children:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260804-001/artifacts/child_phys_math_p16_t04_post_repair_reaudit.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260804-001/artifacts/child_phys_phil_p16_t04_post_repair_reaudit.yaml"
+      status: "completed"
+  conflict_policy:
+    review_path: "research_control/tasks/RT-20260804-001/artifacts/parent_conflict_review_p16_t04_post_repair_reaudit.yaml"
+    max_resolution_rounds: 2
+    require_parallel_child_revision: true
+    unresolved_conflict_status: "blocked"
+  fusion_policy:
+    fusion_notes_path: "research_control/tasks/RT-20260804-001/artifacts/parent_fusion_notes_p16_t04_post_repair_reaudit.md"
+    fused_output_path: "research_control/tasks/RT-20260804-001/artifacts/v21_p16_t04_post_repair_final_reaudit_report.md"
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+    final_output_replaces_old_single_role_artifact: true
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  refresh_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py"
+  initial_status:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    local_cache_only_warning_count: 3
+  refresh_needed: true
+  refresh_performed: true
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1126
+    relationship_row_count: 5676
+    semantic_row_count: 1126
+    vault_row_count: 1126
+    local_cache_only_warning_count: 0
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search 'P16 T04 internal skeptical reviewer' --json"
+      query_type: "search"
+      query_text: "P16 T04 internal skeptical reviewer"
+      returned_object_ids:
+        - "MD-V21-P16-T04-PARENT-FUSION-FINAL-CLAIM-BOUNDARY-RED-TEAM-V1"
+        - "MD-V21-P16-T04-FINAL-CLAIM-BOUNDARY-RED-TEAM"
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-V21-P16-T04-PARENT-FUSION-FINAL-CLAIM-BOUNDARY-RED-TEAM-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260803-014/artifacts/parent_fusion_notes_p16_t04_final_red_team.md"
+      source_hash: "5729636218375cc549a9bb9562c6c120a378c5a9a4a0b69c62083b6872945ace"
+    - object_id: "MD-V21-P16-T04-FINAL-CLAIM-BOUNDARY-RED-TEAM"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260803-014/artifacts/v21_p16_t04_final_red_team_report.md"
+      source_hash: "84e8d459aad80a05a23a1eb9842716479b1f26ac551dec6a886ed0fa24d9c41d"
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  authority_note: "Generated wiki Obsidian semantic relationship PDF and .local surfaces are retrieval-only navigation and are not authority; registered canonical sources and tracked control state govern."
+
+source_snapshot:
+  plan_sha256: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  backlog_sha256: "849a4e8dfe848e80bc0c8236252b924e636e5c95ac1a090478a69f7f5377559f"
+  program_state_sha256: "d6988171456915ffeab79ab66788892d946ec79d8686895e0e107dc9cfa6831c"
+  current_frontier_sha256: "0722132dff379365dabd9ab6859d8f2d2ed5c5a64805ac4b81b07111b8b94fa3"
+  source_handoff_sha256: "462cb60c3553fe5e373b4ce30f4780e6714c2fb740fe622eb229b5d6295e908e"
+  distance_to_gr_ledger_sha256: "8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642"
+  current_role_sha256: "652176faf604825f8084aa3584200e32331b8f6493bda038376bf7737995a6d7"
+  current_schema_sha256: "f341828d74c15632944b2d25be4bf5e0506d60476bea90cf974d7ababcd5d840"
+  p16_t02_completion_sha256: "32490ac7e5a57138f6de7a884825532ee17389d36634dbb9fc7f7cc076c0bf8d"
+  p16_t03_completion_sha256: "a0bd4691e276e5e0d97b45b734491f697deeb57ca0dc99b015bd7ea7d734fe91"
+  prior_p16_t04_completion_sha256: "cf403db773c3aacc33bc127c067abf12218e56bb43f0e6dbe8de0790b31bd6a2"
+  label_repair_completion_sha256: "bfec266a4824df117db6c8b4275f79df333e1294871d1b8ed769521639e6a690"
+  final_repair_chain_completion_sha256: "95a7529a7a0c946f065b360b61d64a98a83f8dffc5f26f10375c8ce60fce2c97"
+
+allowed_read_paths:
+  - "SOUL.md"
+  - "AGENTS.md"
+  - "README.md"
+  - "research_control/AGENTS.md"
+  - ".agents/roles/**"
+  - ".agents/schemas/**"
+  - ".codex/skills/continue-research/SKILL.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  - "research_control/design/**"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/**"
+  - "research_control/tasks/**"
+  - "research_control/approvals/**"
+  - "registries/**"
+  - "ontology/**"
+  - "markdown/**"
+  - "github-facing/**"
+allowed_write_paths:
+  - "research_control/tasks/RT-20260804-001/**"
+  - "research_control/handoffs/handoff-0962.yaml"
+  - "research_control/handoffs/handoff-0962.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/tex/**"
+forbidden_paths:
+  - ".agents/**"
+  - "ontology/**"
+  - "research_control/tasks/RT-20260803-014/**"
+  - "research_control/tasks/RT-20260803-015/**"
+  - "research_control/tasks/RT-20260803-020/**"
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "registries/TEX_SOURCE_REGISTRY.csv"
+  - "research_control/design/**"
+  - "scripts/**"
+  - "tests/**"
+forbidden_source_classes:
+  - "generated memory derivative as authority"
+  - "validator checkpoint registry role or route PASS as physics evidence"
+  - "declared-manifest purity as exhaustive absence of target influence"
+  - "internal AI review or repaired role label as external human review or independent replication"
+  - "human-postulate adoption as first-principles derivation"
+  - "descriptive methodology evidence as causal workflow or physics superiority"
+  - "scoped obstruction as global no-go or future source-extension impossibility"
+  - "project-system repair implementation inside this research AgentJob"
+approved_commands:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  - ".venv/bin/python research_control/tasks/RT-20260722-006/artifacts/validate_p11_t04_semantic_smuggling_suite.py --check --json"
+  - ".venv/bin/python research_control/tasks/RT-20260802-008/artifacts/build_p15_t02_methodology_publication.py --check"
+  - ".venv/bin/python research_control/tasks/RT-20260802-008/artifacts/validate_p15_t02_methodology_publication.py"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --json --paths README.md ontology/aether-and-aether-flow.md ontology/aether_flow_interpretation-lemen.md ontology/tex/aether_flow_foundations.tex ontology/tex/aether_flow_dynamics.tex ontology/tex/aether_flow_consistency.tex ontology/tex/aether_flow_relativistic_recovery.tex ontology/tex/aether_flow_geometry.tex ontology/tex/aether_flow_exact_closure_note.tex ontology/tex/aether_flow_exact_closure_sequence_overview.tex ontology/tex/aether_flow_exact_closure_flagship_article.tex"
+  - ".venv/bin/python scripts/research_control/validate_red_team_review_artifact.py research_control/tasks/RT-20260804-001/artifacts/p16_t04_post_repair_internal_skeptical_review.yaml --json"
+  - ".venv/bin/python research_control/tasks/RT-20260804-001/artifacts/validate_p16_t04_post_repair_final_reaudit.py --write-report --json"
+  - ".venv/bin/python research_control/tasks/RT-20260804-001/artifacts/validate_p16_t04_post_repair_final_reaudit.py --check --json"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --job-id AJ-RT-20260804-001-001 --json-summary"
+  - ".venv/bin/python -m scripts.validation.cli run --profile affected --paths research_control/tasks/RT-20260804-001 research_control/program_state.yaml research_control/handoffs/handoff-0962.yaml registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260804-001-001"
+  - "git diff --check"
+required_validators:
+  - "task-local post-repair final re-audit validator"
+  - "strict current internal skeptical-review artifact validator"
+  - "semantic-smuggling and explicit ontology claim-language scans"
+  - "methodology publication validator"
+  - "project-improvement signal parity"
+  - "documentation-impact validation"
+  - "affected research-control profile"
+  - "memory synchronization and core validation"
+  - "staged governed checkpoint"
+expected_outputs:
+  - "research_control/tasks/RT-20260804-001/**"
+  - "research_control/tasks/RT-20260804-001/artifacts/v21_p16_t04_post_repair_final_reaudit_report.md"
+  - "research_control/handoffs/handoff-0962.yaml"
+  - "research_control/handoffs/handoff-0962.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "applicable registry rows and generated derivatives"
+checkpoint_invocation_limit: 1
+legacy_validation_allowed: false
+success_criteria:
+  - "the live current reviewer contract is internal and historical IDs remain preserved"
+  - "all high-severity attacks receive explicit dispositions"
+  - "source-purity conclusions remain manifest-bounded"
+  - "same-context internal review is not labeled external or independent"
+  - "methodology target-side adoption and label repair do not compose into source derivation or benchmark promotion"
+  - "scoped obstructions remain local and continuation stays open"
+  - "zero blocking scientific and project-system findings remain"
+  - "one governed checkpoint succeeds without push"
+result:
+  result_status: "PASS_P16_T04_POST_REPAIR_FINAL_CLAIM_BOUNDARY_REAUDIT_NO_BLOCKING_OVERCLAIM"
+  v21_task_completion_identity_count_before_current_task: 138
+  v21_handoff_record_count_before_current_handoff: 142
+  total_finding_count: 9
+  blocking_scientific_finding_count: 0
+  blocking_project_system_finding_count: 0
+  undisposed_critical_or_high_finding_count: 0
+  prior_current_role_label_blocker_resolved: true
+  external_review_completed: false
+  human_expert_review_completed: false
+  independent_replication_completed: false
+  benchmark_pass_count: 0
+  stronger_claim_composition_rejected: true
+  p16_t04_qualifying_finalized: true
+  p16_t05_executed: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+selected_next_route:
+  route_id: "v21_p16_t05_final_scientific_and_research_system_status_synthesis"
+  route_label: "integration-synthesis-packet"
+  worker_skill: "continue-research"
+  role_family: "director-of-research@0.3.0"
+  plan_task_id: "P16-T05"
+  work_item_id: "P16-T05"
+  strategy_id: "execute_p16_t05_final_status_synthesis_v1"
+  target_derivation_milestone: "benchmark_promotion"
+  milestone_burden: "Create a calibrated final handoff without inventing completion."
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  physics_promotion_authorized: false
+  executed: false
+notes: "P16-T04 is qualifying-finalized precheckpoint. P16-T05 remains outside this AgentJob and requires a separate claimed relay frame after checkpoint."

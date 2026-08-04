@@ -1,0 +1,179 @@
+schema_id: "external_red_team_review_artifact_schema_v1"
+schema_path: ".agents/schemas/EXTERNAL_RED_TEAM_REVIEW_ARTIFACT_SCHEMA.md"
+review_id: "ISR-REVIEW-20260804-001"
+reviewer_role_id: "external-red-team-reviewer"
+reviewer_role_version: "0.1.0"
+reviewer_display_name: "Internal Skeptical Reviewer"
+reviewer_role_kind: "scientific_adversarial_internal_review"
+task_id: "RT-20260804-001"
+job_id: "AJ-RT-20260804-001-001"
+created_at: "2026-08-04T06:46:36Z"
+object_under_attack:
+  object_id: "V21-P16-T04-POST-REPAIR-FINAL-CLAIM-BOUNDARY"
+  object_label: "Post-repair final project claim boundary"
+  object_type: "cross_surface_claim_system"
+  status_under_attack: "qualifying P16-T04 finalization"
+reviewed_object_id: "V21-P16-T04-POST-REPAIR-FINAL-CLAIM-BOUNDARY"
+source_files_reviewed:
+  - path: ".agents/roles/physics/external-red-team-reviewer.v0.1.0.md"
+    authority_status: "project_control_role_contract"
+    reason_reviewed: "current internal reviewer label and legacy-ID boundary"
+  - path: "research_control/tasks/RT-20260803-014/artifacts/v21_p16_t04_final_red_team_report.md"
+    authority_status: "project_control_task_artifact"
+    reason_reviewed: "prior blocker and bounded science result"
+  - path: "research_control/tasks/RT-20260731-004/artifacts/p9_t09_gate_e_decision_v1.tex"
+    authority_status: "protected_gate_source"
+    reason_reviewed: "benchmark and completed-derivation status"
+reviewed_source_paths:
+  - ".agents/roles/physics/external-red-team-reviewer.v0.1.0.md"
+  - ".agents/schemas/EXTERNAL_RED_TEAM_REVIEW_ARTIFACT_SCHEMA.md"
+  - "research_control/design/external_red_team_reviewer_role_design.md"
+  - "research_control/templates/RED_TEAM_REVIEW_ARTIFACT_TEMPLATE.yaml"
+  - "research_control/tasks/RT-20260803-014/artifacts/v21_p16_t04_final_red_team_report.md"
+  - "research_control/tasks/RT-20260803-015/artifacts/p16_t04_internal_review_label_contract_validation.json"
+  - "research_control/tasks/RT-20260722-005/artifacts/review_independence_taxonomy.md"
+  - "research_control/tasks/RT-20260729-012/artifacts/source_derived_benchmark_protocol_v1.tex"
+  - "research_control/tasks/RT-20260731-001/artifacts/p9_t08_benchmark_smuggling_audit_v1.yaml"
+  - "research_control/tasks/RT-20260729-011/artifacts/p8_t07_gate_d_decision_v1.tex"
+  - "research_control/tasks/RT-20260731-004/artifacts/p9_t09_gate_e_decision_v1.tex"
+  - "research_control/tasks/RT-20260802-008/artifacts/p15_t02_methodology_manuscript.md"
+  - "ontology/tex/aether_flow_relativistic_recovery.tex"
+status_being_tested:
+  control_status: "current internal reviewer contract repaired and committed"
+  mathematical_status: "task-local post-repair non-entailment candidate"
+  physical_status: "source derivation and benchmark recovery not established"
+  promotion_status: "no promotion authorized"
+  overread_guard: "control repair does not create externality independence derivation benchmark promotion or global no-go"
+claim_under_review: "The current post-repair repository can qualifying-finalize P16-T04 as a bounded internal audit without entailing external independence, exhaustive source purity, source derivation, benchmark promotion, methodology-as-physics, or a global no-go."
+review_context:
+  schema_id: "v21_review_context_v1"
+  classification: "same_context_role_review"
+  reviewer_kind: "ai"
+  blind_packet_received: false
+  prior_context_access: "same_context"
+  review_executed: true
+  replication_executed: false
+  dimensions:
+    model_family:
+      relationship: "same"
+      evidence: "The review was executed by an AI unit in the same parent task context."
+    prompt_context:
+      relationship: "same"
+      evidence: "The reviewer inherited the parent task scope and relevant source context."
+    data_access:
+      relationship: "same"
+      evidence: "The reviewer used the same repository checkout and source corpus."
+    institution:
+      relationship: "unknown"
+      evidence: "No independent institutional provenance was supplied."
+    human_authorship:
+      relationship: "not_applicable"
+      evidence: "The review was AI-authored and no human expert executed it."
+    code_base:
+      relationship: "same"
+      evidence: "The review used the same repository code and validators."
+    method:
+      relationship: "same"
+      evidence: "The review used the same project review taxonomy and claim-boundary method."
+  evidence_paths:
+    - ".agents/roles/physics/external-red-team-reviewer.v0.1.0.md"
+    - "research_control/tasks/RT-20260722-005/artifacts/review_independence_taxonomy.md"
+    - "research_control/tasks/RT-20260803-014/artifacts/v21_p16_t04_final_red_team_report.md"
+  limitations:
+    - "Same-context AI review supplies no external human or independent provenance."
+    - "No independent data code base method or physical replication was used."
+  claims:
+    external_review_completed: false
+    human_expert_review_completed: false
+    independent_replication_completed: false
+workflow_success_disregarded_as_evidence: true
+validator_success_disregarded_as_evidence: true
+assumptions_read:
+  - "Target-import firewall conclusions are conditional on manifest completeness and absent side channels."
+  - "Role titles and stable identifiers are not review provenance."
+  - "Target-side exact-GR adoption is distinct from substrate derivation and source-derived benchmark promotion."
+  - "Methodology ratios are descriptive and noncausal."
+  - "Fixed-package obstructions remain scoped."
+definitions_attacked:
+  - definition: "external or independent review"
+    source_path: "research_control/tasks/RT-20260722-005/artifacts/review_independence_taxonomy.md"
+    attack_question: "Does any current structured evidence satisfy the positive provenance requirements?"
+  - definition: "source-derived benchmark promotion"
+    source_path: "research_control/tasks/RT-20260731-004/artifacts/p9_t09_gate_e_decision_v1.tex"
+    attack_question: "Does any control repair close the missing derivational or independent-replication burdens?"
+definitions_read:
+  - "same_context_role_review"
+  - "independent_replication"
+  - "manifest-bounded no-declared-target-import"
+  - "target-side exact-GR adoption"
+  - "source-derived benchmark promotion"
+proof_steps_checked:
+  - "Current role name kind schema design template and projections agree on internal review."
+  - "The explicit claim system contains no coercion from S V I M A N or R to E D B or G."
+  - "The countervaluation sets every available positive control atom true and each stronger claim false."
+  - "The public and Gate sources retain their conservative status."
+hidden_target_imports:
+  findings: []
+  sources_checked:
+    - "research_control/tasks/RT-20260729-012/artifacts/source_derived_benchmark_protocol_v1.tex"
+    - "research_control/tasks/RT-20260731-001/artifacts/p9_t08_benchmark_smuggling_audit_v1.yaml"
+no_target_certificate_overread:
+  findings: []
+  overread_guard: "No declared target path in audited manifests does not prove exhaustive target freedom or absent prior influence."
+circularity_checks:
+  findings: []
+circularity_findings: []
+process_authority_checks:
+  workflow_success_disregarded_as_evidence: true
+  validator_success_disregarded_as_evidence: true
+  findings: []
+evidence_as_adoption_checks:
+  findings: []
+rr_e_collapse_checks:
+  findings: []
+overclaim_checks:
+  findings: []
+hidden_import_findings: []
+notation_overload_findings: []
+unproven_equivalence_findings: []
+minimal_countermodel_attempt:
+  attempted: true
+  result: "no_countermodel_found_under_scope"
+  summary: "The strongest attempted overclaim is refuted by PostRepairClaimBoundaryNonEntailment_v1. No countermodel to the bounded P16-T04 disposition was found within the audited current claim system."
+  artifact_path: "research_control/tasks/RT-20260804-001/artifacts/child_phys_math_p16_t04_post_repair_reaudit.yaml"
+finite_counterexamples:
+  attempted: true
+  examples:
+    - "S V I M A N and R can all hold while E D B and G remain false."
+comparison_to_known_constraints:
+  external_literature_authorized: false
+  constraints_checked:
+    - "review-independence taxonomy"
+    - "source-import firewall limitations"
+    - "Gate D and Gate E not-ready verdicts"
+external_mathematical_pressure_points:
+  - "Manifest completeness remains an explicit unproved hypothesis."
+  - "No source-backed coercion closes source derivation or benchmark promotion."
+  - "Current contract repair cannot create epistemic independence."
+verdict: "no_blocking_defect_found_as_written"
+recommendation:
+  summary: "Qualifying-finalize P16-T04 as a bounded internal audit and route P16-T05 only after a separate checkpoint and relay claim."
+  next_route: "p16_t05_final_synthesis_after_separate_checkpoint_and_claim"
+  allowed_recommendations:
+    - "no_action"
+    - "selector"
+recommended_next_route: "p16_t05_final_synthesis_after_separate_checkpoint_and_claim"
+physics_promotion_authorized: false
+gate_chair_authority_created: false
+source_law_adopted: false
+metric_data_adopted: false
+geff_adopted_or_expanded: false
+coupling_law_adopted: false
+matter_coupling_derived_or_adopted: false
+stress_energy_semantics_imported: false
+detector_semantics_imported: false
+matter_action_imported: false
+einstein_equations_derived: false
+benchmark_promoted: false
+completed_derivation_claimed: false
+non_authority_statement: "This review is same-context internal critique and routing evidence only. It is not proof authority, external review, source-law adoption, benchmark promotion, publication authority, or completed derivation."

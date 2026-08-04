@@ -1,0 +1,84 @@
+schema_id: "v21_p16_t04_post_repair_public_claim_verdict_v1"
+task_id: "RT-20260804-001"
+job_id: "AJ-RT-20260804-001-001"
+plan_task_id: "P16-T04"
+status: "PASS_BOUNDED_PUBLIC_CLAIMS_POST_REPAIR"
+verdict: "BOUNDED_PUBLIC_CLAIMS_SOURCE_BACKED_CURRENT_REVIEW_CONTRACT_INTERNAL_EXTERNAL_INDEPENDENCE_NOT_ACQUIRED"
+public_claims:
+  reviewer_contract:
+    allowed: "The current stable-ID role is displayed and typed as Internal Skeptical Reviewer; historical IDs remain resolvable."
+    blocked: "The stable legacy ID proves external human review or epistemic independence."
+    status: "current_internal_contract_repaired"
+  exact_gr_benchmark:
+    allowed: "The operative reference model is exactly GR at observable scale by target-side adoption."
+    blocked: "The benchmark has been derived from the substrate or positively promoted by Gate E."
+    status: "target_side_adoption_source_derivation_open"
+  substrate_derivation:
+    allowed: "First-principles source-to-GR derivation remains open."
+    blocked: "A completed derivation or Einstein-sector derivation has been established."
+    status: "open_not_established"
+  source_purity:
+    allowed: "No declared target-to-source path was detected in the audited benchmark manifests."
+    blocked: "All hidden target influence, prior knowledge, training influence, or shared error has been excluded."
+    status: "manifest_bounded"
+  review_and_replication:
+    allowed: "Same-context internal AI skeptical critique has been executed."
+    blocked: "External human review, epistemic independence, or independent replication has been completed."
+    status: "external_and_independent_not_acquired"
+  methodology:
+    allowed: "The internal methodology packet reports descriptive mechanism ratios with explicit missing arms and limitations."
+    blocked: "The workflow is causally superior or operational success is physics evidence."
+    status: "descriptive_noncausal_internal"
+  negative_results:
+    allowed: "Named routes have scoped obstructions or freezes under exact premises."
+    blocked: "The broader program is impossible or future conservative source extension cannot work."
+    status: "scoped_open_continuation"
+  publication:
+    allowed: "Internal publication-preparation artifacts exist under their recorded scope."
+    blocked: "Submission, public release, reviewer contact, endorsement, or publication is authorized."
+    status: "not_authorized"
+source_paths:
+  - path: "README.md"
+    source_sha256: "d5abcba0ce6b2586a7d1e1a72c435cafabb4c7e2d021ffee74ec097a8627ffdd"
+  - path: "ontology/aether-and-aether-flow.md"
+    source_sha256: "b8e17df2354ab0fe3cae04e43940f787dd187dd67f0f40e978de080983ac6edc"
+  - path: "ontology/aether_flow_interpretation-lemen.md"
+    source_sha256: "4ee8f4e889ad433f7d167442e25a47db061743c4b6ccf4528230f6db919d8e23"
+  - path: "ontology/tex/aether_flow_foundations.tex"
+    source_sha256: "4749d9e8b6858a43230e99029cccc3274b55fc2ae2a2cdf45a983a60c98e5b59"
+  - path: "ontology/tex/aether_flow_dynamics.tex"
+    source_sha256: "fd6e579e71ef7f2ac4c9668ceede051ad57033ee52357b2552a9e3a5a53939c7"
+  - path: "ontology/tex/aether_flow_consistency.tex"
+    source_sha256: "d965519639ee8764a5c5a63798d15e8a9a380d7e208dffc43a0be02b6f245ba1"
+  - path: "ontology/tex/aether_flow_relativistic_recovery.tex"
+    source_sha256: "77d5c2db56f122870343834f853bf2f375a912116a347d7c5710405c8707d69c"
+  - path: "ontology/tex/aether_flow_geometry.tex"
+    source_sha256: "f60a81b63f814b03cca7190b3ac6285842a55317f4aed058cc6e75154cc0b4d7"
+  - path: "ontology/tex/aether_flow_exact_closure_note.tex"
+    source_sha256: "c4a4e956ad5a10e6b3f4e661351bdeda2145b01e6e85d9df849e765c765eca35"
+  - path: "ontology/tex/aether_flow_exact_closure_sequence_overview.tex"
+    source_sha256: "356a5f65b0931914fdf9362ba544c2868bad7d33b828754b91c029bed96f86b1"
+  - path: "ontology/tex/aether_flow_exact_closure_flagship_article.tex"
+    source_sha256: "900c799cb0c3d8f790c836196c136b3cec6944e46d41b89e511b85123fd30e40"
+  - path: "github-facing/project-overview-explainer.md"
+    source_sha256: "e2e8d214e8be50a85d629dd07d09d47a3c690b1f1780c683b499ae051a8e99aa"
+  - path: "github-facing/claim-gates-explainer.md"
+    source_sha256: "acd9dc067b35dbf659127d5c893bcd783a280869827467762b3ae895d0d1ec76"
+  - path: "markdown/publication-briefs/aether-flow-physics-program.publication-brief.md"
+    source_sha256: "88bc84765d409845edfe375cc7856895476304769aabc720e7fe111a3c944fe9"
+  - path: "markdown/publication-briefs/proof-state-dashboard.publication-brief.md"
+    source_sha256: "c5d57e51dc2295c899bca9e6d63f0eb48c3574047158cac72373889c53352584"
+claim_path_count: 15
+prior_blocking_control_finding:
+  finding_id: "P16T04-ROLE-LABEL-CONTRACT-001"
+  current_status: "resolved_current_contract"
+  current_effect: "No blocking effect; the repaired label remains control evidence only."
+external_review_completed: false
+human_expert_review_completed: false
+independent_replication_completed: false
+benchmark_promotion_authorized: false
+publication_authorized: false
+public_release_authorized: false
+physics_promotion_authorized: false
+proof_authority: false
+p16_t05_executed: false

@@ -8,14 +8,14 @@
     "research_control/current_frontier.md",
     "research_control/design/accepted_status_calibration_v2.yaml",
     "research_control/design/active_state_bifurcation_policy_v1.md",
-    "research_control/handoffs/handoff-0961.yaml",
+    "research_control/handoffs/handoff-0963.yaml",
     "research_control/program_state.yaml"
   ],
   "report_provenance": {
     "schema_id": "generated_report_provenance_v1",
     "policy_id": "p13_t07_live_generated_report_freshness_v1",
     "report_class": "compact_current_frontier",
-    "source_commit": "2cc682251201d8d034dcd447fde006a49f3db650",
+    "source_commit": "a9132efc1c5dc514bf82f359acff0fe1b4cae4af",
     "source_hashes": [
       {
         "path": "registries/DISTANCE_TO_GR_LEDGER.csv",
@@ -23,19 +23,19 @@
       },
       {
         "path": "registries/RESEARCH_TASK_REGISTRY.csv",
-        "sha256": "26bad5e313611909db7cf54ff305b25f1239445de88ac5f31f044838ae6af48b"
+        "sha256": "26501f3ed6b03c55be4e5c546ca05556b1b9c2cc9fcd7b474c9486cd8fb6968b"
       },
       {
         "path": "research_control/current_frontier.md",
-        "sha256": "0722132dff379365dabd9ab6859d8f2d2ed5c5a64805ac4b81b07111b8b94fa3"
+        "sha256": "e24e211b0143d21ae0f04fe4f8abbc26605f902b0de40fe5e20476057b03b2f0"
       },
       {
-        "path": "research_control/handoffs/handoff-0961.yaml",
-        "sha256": "462cb60c3553fe5e373b4ce30f4780e6714c2fb740fe622eb229b5d6295e908e"
+        "path": "research_control/handoffs/handoff-0963.yaml",
+        "sha256": "32b69cfa5a4e90a4a074d10c9e7ed911c499364f0f5e2fe7c1a1e3156301fc1d"
       },
       {
         "path": "research_control/program_state.yaml",
-        "sha256": "d6988171456915ffeab79ab66788892d946ec79d8686895e0e107dc9cfa6831c"
+        "sha256": "0e20be264916d384bca4d9df490dba07f4d8c9206ddb22063488e9c70ea874e4"
       },
       {
         "path": "research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml",
@@ -50,10 +50,10 @@
         "sha256": "3700556e8fe203bb8bfb1c2caf15b7fbfc95b25f608169209e1b9930677e3564"
       }
     ],
-    "source_manifest_sha256": "b0d2a9157db937bf40a70ad56599afc673a2dcbe35295cb352668abb100aafe2",
+    "source_manifest_sha256": "21f08df90c5f029a269209b2563ff5e4bd70f00a1662f31fff42aa9430506ef7",
     "source_path_count": "12",
-    "generation_time": "2026-08-04T05:18:15Z",
-    "task_count": "1216",
+    "generation_time": "2026-08-04T07:47:22Z",
+    "task_count": "1218",
     "maximum_commit_lag": "1",
     "freshness_status": "fresh_at_generation",
     "generated_view_is_authority": false,
@@ -61,17 +61,17 @@
     "proof_authority": false
   },
   "active_state": {
-    "active_task_id": "RT-20260803-020",
-    "latest_handoff_id": "handoff-0961",
-    "current_status": "p16_t04_generation_251_staged_checkpoint_contracts_reconciled_pending_checkpoint",
+    "active_task_id": "RT-20260804-002",
+    "latest_handoff_id": "handoff-0963",
+    "current_status": "generation_253_task_contract_and_frontier_alignment_reconciled_pending_checkpoint",
     "v15_completed": false,
     "v16_completed": false,
     "v16_plan_registered": true
   },
   "active_state_bifurcation": {
-    "latest_research_task_id": "RT-20260803-020",
-    "latest_research_handoff_id": "handoff-0961",
-    "latest_research_next_action": "Run the single governed checkpoint for AJ-RT-20260803-020-001. After it commits, run one fresh bounded P16-T04 final claim-boundary re-audit through continue-research; do not execute P16-T05 first.",
+    "latest_research_task_id": "RT-20260804-002",
+    "latest_research_handoff_id": "handoff-0963",
+    "latest_research_next_action": "Run the single distinct governed checkpoint for AJ-RT-20260804-002-001. After it commits, execute P16-T05 only through one separately claimed continue-research integration-synthesis packet.",
     "latest_project_system_task_id": "none",
     "latest_project_system_status": "none",
     "latest_project_system_sidecar_task_id": "none",
@@ -80,10 +80,10 @@
     "next_research_route_source": "latest_research_handoff"
   },
   "next_route": {
-    "route_id": "v21_p16_t04_fresh_claim_boundary_reaudit_after_generation_252_checkpoint",
-    "role_family": "external-red-team-reviewer@0.1.0",
+    "route_id": "v21_p16_t05_final_scientific_and_research_system_status_synthesis",
+    "role_family": "director-of-research@0.3.0",
     "target_derivation_milestone": "benchmark_promotion",
-    "milestone_burden": "Provide the final adversarial claim-boundary check without provenance overread.",
+    "milestone_burden": "Create a calibrated final handoff without inventing completion.",
     "requires_human_gate": false
   },
   "claim_boundary": {
@@ -445,9 +445,9 @@
   ],
   "distance_to_gr": {
     "delta": {
-      "effect": "none_project_system_checkpoint_contract_recovery",
+      "effect": "no_distance_delta_project_system_recovery_only",
       "changed": false,
-      "milestone": "none",
+      "milestone": "benchmark_promotion",
       "burden_id": "benchmark_promotion"
     },
     "high_risk_rows": [
@@ -754,28 +754,28 @@
         "layer": "post_checkpoint",
         "status": "PENDING",
         "evidence": [
-          "Exactly one governed checkpoint remains."
+          "Exactly one distinct governed checkpoint remains."
         ]
       },
       {
         "layer": "renderer",
         "status": "PENDING",
         "evidence": [
-          "Approved projections are refreshed before checkpoint."
+          "Approved generated projections remain to synchronize."
         ]
       },
       {
         "layer": "memory_bootstrap",
         "status": "PENDING",
         "evidence": [
-          "Tracked memory synchronization runs before checkpoint."
+          "Tracked memory bootstrap remains to synchronize."
         ]
       },
       {
         "layer": "claim_language_linter",
         "status": "PENDING",
         "evidence": [
-          "Changed-source claim-language validation runs before checkpoint."
+          "Changed-source claim-language validation remains."
         ]
       }
     ]

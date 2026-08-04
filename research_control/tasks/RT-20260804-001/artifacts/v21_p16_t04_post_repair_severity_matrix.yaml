@@ -1,0 +1,77 @@
+schema_id: "v21_p16_t04_post_repair_severity_matrix_v1"
+task_id: "RT-20260804-001"
+job_id: "AJ-RT-20260804-001-001"
+plan_task_id: "P16-T04"
+result_status: "PASS_P16_T04_POST_REPAIR_FINAL_CLAIM_BOUNDARY_REAUDIT_NO_BLOCKING_OVERCLAIM"
+finding_counts:
+  total_findings: 9
+  critical_or_high_guard_findings: 5
+  blocking_scientific_findings: 0
+  blocking_project_system_findings: 0
+  resolved_prior_blockers: 1
+  nonblocking_limitations: 6
+  informational_findings: 2
+  undisposed_critical_or_high_findings: 0
+findings:
+  - finding_id: "P16T04-POSTREPAIR-ROLE-LABEL-CONTRACT-001"
+    severity: "resolved_prior_blocker"
+    status: "resolved_current_contract"
+    classification: "internal_review_label_contract"
+    statement: "The stable legacy role ID remains resolvable while the live role name kind schema design template and projections classify same-context AI critique as internal."
+    prior_evidence_path: "research_control/tasks/RT-20260803-014/artifacts/v21_p16_t04_severity_repair_matrix.yaml"
+    repair_evidence_path: "research_control/tasks/RT-20260803-015/artifacts/p16_t04_internal_review_label_contract_validation.json"
+    scientific_effect: "none_project_system_contract_only"
+    blocking_now: false
+  - finding_id: "P16T04-POSTREPAIR-SOURCE-PURITY-EXHAUSTIVENESS-001"
+    severity: "critical_guard"
+    status: "disposed_by_bounded_verdict"
+    classification: "manifest_bounded_target_firewall"
+    statement: "No declared target import was detected, but manifest completeness, human prior knowledge, training influence, and shared systematic error are not proved absent."
+    forbidden_claim: "Exhaustive target-free derivation or categorical absence of hidden target influence."
+    allowed_claim: "No declared target-to-source path was detected in the audited manifests; all six cases remain inconclusive."
+  - finding_id: "P16T04-POSTREPAIR-REVIEW-INDEPENDENCE-001"
+    severity: "critical_guard"
+    status: "disposed_by_explicit_negative_status"
+    classification: "same_context_internal_review_only"
+    statement: "The repaired internal label and this audit supply no external human review or independent replication."
+  - finding_id: "P16T04-POSTREPAIR-ADOPTION-DERIVATION-BENCHMARK-001"
+    severity: "critical_guard"
+    status: "disposed_by_typed_source_boundary"
+    classification: "exact_gr_adoption_not_source_derivation_or_promotion"
+    statement: "Target-side exact-GR adoption neither derives the Einstein sector from the substrate nor supplies positive Gate E benchmark promotion."
+  - finding_id: "P16T04-POSTREPAIR-SCOPED-NOGO-001"
+    severity: "high_guard"
+    status: "disposed_by_scope_and_open_continuation"
+    classification: "fixed_line_obstruction_not_global_no_go"
+    statement: "Named obstructions and freezes retain their exact premises and leave materially new source-side continuation open."
+  - finding_id: "P16T04-POSTREPAIR-METHODOLOGY-PHYSICS-001"
+    severity: "high_guard"
+    status: "disposed_by_noncausal_methodology_boundary"
+    classification: "methodology_not_physics"
+    statement: "P15-T02 mechanism ratios are descriptive and do not establish causal workflow superiority or physics truth."
+  - finding_id: "P16T04-POSTREPAIR-HISTORICAL-LABEL-001"
+    severity: "medium"
+    status: "preserved_and_contextualized_nonblocking"
+    classification: "historical_label_overread_surface"
+    statement: "Historical external or independent wording remains sealed while its structured records deny external human and independent status; current projections are internal."
+  - finding_id: "P16T04-POSTREPAIR-PUBLICATION-AUTHORITY-001"
+    severity: "medium"
+    status: "disposed_by_category_separation"
+    classification: "internal_artifact_not_publication_authority"
+    statement: "Internal review and publication-preparation artifacts create no submission, public release, reviewer contact, endorsement, or publication authority."
+  - finding_id: "P16T04-POSTREPAIR-SEMANTIC-SUITE-FINITENESS-001"
+    severity: "low"
+    status: "limitation_preserved"
+    classification: "finite_semantic_coverage"
+    statement: "The inherited finite semantic suite is a bounded control test rather than a completeness or scientific-truth proof."
+project_improvement_signals: []
+authority_limits:
+  canonical_science_change_required: false
+  scientific_status_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  external_review_completed: false
+  independent_replication_completed: false
+  benchmark_promotion_authorized: false
+  p16_t05_executed: false

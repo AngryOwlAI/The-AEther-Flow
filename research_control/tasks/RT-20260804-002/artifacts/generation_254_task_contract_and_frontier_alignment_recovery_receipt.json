@@ -1,0 +1,50 @@
+{
+  "schema_id": "generation_254_task_contract_and_frontier_alignment_recovery_receipt_v1",
+  "status": "PASS_SOURCE_RECONCILED_FRONTIER_SYNC_PENDING",
+  "task_id": "RT-20260804-002",
+  "job_id": "AJ-RT-20260804-002-001",
+  "goal_id": "crg-20260720T161354Z-96bc2664ce31bfe0",
+  "generation": 254,
+  "strategy_id": "recover_generation_253_task_contract_and_frontier_alignment_v1",
+  "immutable_route_sha256": "c03b0ce012b4adc07c63f4388e7f60773dbfa0dce7d6f6a3595453d0e379358f",
+  "route_blocker_fingerprint": "464809a7056476bc1fe41d3853779cf0f0c77937e01e623320c77d82de51bd0a",
+  "source_head": "a9132efc1c5dc514bf82f359acff0fe1b4cae4af",
+  "inherited_manifest_sha256": "2fa28768f05bc80e3553a188e02e4736247dd2fffef12929511dd8dd9d56ecea",
+  "source_task_id": "RT-20260804-001",
+  "source_job_id": "AJ-RT-20260804-001-001",
+  "source_handoff_id": "handoff-0962",
+  "source_handoff_sha256": "673b3531346e252f149880bccf91837a5abd8e642063cb7f210f94a58d07ffe1",
+  "source_blocker_path": "research_control/tasks/RT-20260804-001/artifacts/checkpoint_blocker_generation_253_contract_and_frontier_alignment_v1.yaml",
+  "source_blocker_sha256": "fc095af112b3fd084981dce3b0e24d0c871bc278721191512d2af1e1b3d0638f",
+  "source_checkpoint_operational_receipt_sha256": "79141a2e2a1ffc104ebccbc16f2cd4919f27b578d416016a1164a59ea87207cd",
+  "failed_gate_evidence_sha256": "fc095af112b3fd084981dce3b0e24d0c871bc278721191512d2af1e1b3d0638f",
+  "reconciliation": {
+    "task_local_contract_error_count_before": 14,
+    "task_local_contract_error_count_after": 0,
+    "generated_frontier_error_count_before": 20,
+    "approved_generator_sync_required": true,
+    "p16_t04_task_local_validator_status": "PASS_POST_REPAIR_QUALIFYING_FINAL_REAUDIT",
+    "strict_internal_review_validator_status": "PASS",
+    "p16_t04_science_artifact_hash_mismatch_count": 0,
+    "shared_validator_or_schema_semantics_changed": false
+  },
+  "protected_boundaries": {
+    "generation_253_job_replayed": false,
+    "generation_253_checkpoint_replayed": false,
+    "p16_t04_science_replayed": false,
+    "p16_t05_executed": false,
+    "scientific_claims_changed": false,
+    "physical_status_changed": false,
+    "distance_to_gr_delta_changed": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "publication_push_or_external_action_authorized": false
+  },
+  "checkpoint": {
+    "fresh_job_id": "AJ-RT-20260804-002-001",
+    "invocation_count_before_checkpoint": 0,
+    "maximum_authorized_invocation_count": 1,
+    "status": "PENDING"
+  },
+  "authority_note": "This receipt is project-system validation and checkpoint evidence only. It does not establish science, a Gate or benchmark result, proof, external review, independent replication, publication authority, or completed derivation."
+}

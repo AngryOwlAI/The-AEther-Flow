@@ -1,0 +1,242 @@
+validation_status: "PASS_PRECHECKPOINT"
+handoff_id: "handoff-0963"
+handoff_number: 963
+handoff_kind: "project_system_repair"
+task_id: "RT-20260804-002"
+decision_id: "DDR-20260804-002"
+job_id: "AJ-RT-20260804-002-001"
+completion_id: "AJC-AJ-RT-20260804-002-001"
+completion_path: "research_control/tasks/RT-20260804-002/jobs/completions/AJC-AJ-RT-20260804-002-001.yaml"
+completion_sha256: "e3086e31fd2af1665d9ae1105cf921ffe750d9e940072f65ef3f9a954ef213e5"
+status: "ready_after_checkpoint"
+created_at: "2026-08-04T07:47:22Z"
+parent_handoff_id: "handoff-0962"
+plan_task_id: "P16-T05"
+recovery_for_plan_task_id: "P16-T04"
+source_role_id: "process-integrity-auditor"
+source_role_version: "0.1.0"
+source_execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260804-002"
+summary: "Generation 254 reconciles the fourteen exact generation-253 task-contract mismatches, preserves every completed P16-T04 science and review artifact hash, and prepares one distinct governed checkpoint after approved frontier and memory synchronization. P16-T05 remains unexecuted."
+next_action: "Run the single distinct governed checkpoint for AJ-RT-20260804-002-001. After it commits, execute P16-T05 only through one separately claimed continue-research integration-synthesis packet."
+current_claim_boundary: "CB-PS-P16-T04-GENERATION-253-CONTRACT-AND-FRONTIER-ALIGNMENT-RECOVERY-001"
+loop_risk_route: "execute_p16_t05_final_status_synthesis_v1"
+
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260804-002"
+  latest_research_handoff_id: "handoff-0963"
+  latest_research_next_action: "Run the single distinct governed checkpoint for AJ-RT-20260804-002-001. After it commits, execute P16-T05 only through one separately claimed continue-research integration-synthesis packet."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+  project_improvement_sidecar_required: false
+  research_handoff_remains_authoritative: true
+
+claim_boundary:
+  allowed_next_scope: "One distinct governed recovery checkpoint followed by one separately claimed P16-T05 final scientific and research-system status synthesis."
+  completed_task: "RT-20260804-002"
+  completed_completion_path: "research_control/tasks/RT-20260804-002/jobs/completions/AJC-AJ-RT-20260804-002-001.yaml"
+  completed_completion_sha256: "e3086e31fd2af1665d9ae1105cf921ffe750d9e940072f65ef3f9a954ef213e5"
+  source_handoff_id: "handoff-0962"
+  source_handoff_path: "research_control/handoffs/handoff-0962.yaml"
+  source_handoff_sha256: "673b3531346e252f149880bccf91837a5abd8e642063cb7f210f94a58d07ffe1"
+  immutable_route_sha256: "c03b0ce012b4adc07c63f4388e7f60773dbfa0dce7d6f6a3595453d0e379358f"
+  route_blocker_fingerprint: "464809a7056476bc1fe41d3853779cf0f0c77937e01e623320c77d82de51bd0a"
+  inherited_manifest_sha256: "2fa28768f05bc80e3553a188e02e4736247dd2fffef12929511dd8dd9d56ecea"
+  result_status: "PASS_SOURCE_RECONCILED_FRONTIER_SYNC_PENDING"
+  recovery_receipt_path: "research_control/tasks/RT-20260804-002/artifacts/generation_254_task_contract_and_frontier_alignment_recovery_receipt.json"
+  recovery_receipt_sha256: "8aca9e03c12a5b0551e8c15db2350a1a2f0755edf37cf686bf458b4542199e56"
+  task_local_contract_error_count_before: 14
+  task_local_contract_error_count_after: 0
+  p16_t04_science_artifact_hash_mismatch_count: 0
+  generation_253_job_replayed: false
+  generation_253_checkpoint_replayed: false
+  p16_t04_science_replayed: false
+  p16_t05_executed: false
+  scientific_claims_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  external_action_authorized: false
+  blocked_claims:
+    - "project-system validation or checkpoint PASS as physics evidence"
+    - "P16-T04 qualifying completion as benchmark promotion or completed derivation"
+    - "same-context internal AI critique as external review or independent replication"
+    - "task-contract recovery as authority to execute P16-T05 in this frame"
+
+plan_result:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  phase_id: "P16"
+  plan_task_id: "P16-T05"
+  title: "Produce the final scientific and research-system status synthesis"
+  work_item_status: "not_executed_recovery_checkpoint_pending"
+  result_status: "P16_T05_READY_AFTER_DISTINCT_RECOVERY_CHECKPOINT"
+  recovery_for_plan_task_id: "P16-T04"
+  next_plan_task_id: "P16-T05"
+  p16_t04_executed: true
+  p16_t04_qualifying_finalized: true
+  p16_t05_dependency_ready_after_checkpoint: true
+  p16_t05_executed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+distance_to_gr:
+  changed: false
+  effect: "no_distance_delta_project_system_recovery_only"
+  burden_id: "benchmark_promotion"
+  milestone: "benchmark_promotion"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "Task-contract and generated-frontier recovery supplies no metric coupling field-equation benchmark or protected Gate evidence."
+  downstream_unlocked:
+    - "P16-T05 after checkpoint"
+  downstream_still_blocked:
+    - "benchmark promotion"
+    - "completed derivation"
+    - "publication"
+    - "external action"
+
+required_next_packet:
+  task_type: "v21_p16_t05_final_scientific_and_research_system_status_synthesis"
+  plan_task_id: "P16-T05"
+  work_item_id: "P16-T05"
+  objective: "Produce an answer-first synthesis of what was proved adopted obstructed improved human-gated or left open across science and the research operating system."
+  output_requirement: "One calibrated final synthesis with separate science and system scorecards and no invented completion."
+  dependency_qualification: "RT-20260804-002 must first commit through its single distinct governed checkpoint."
+  dependency_ready_after_checkpoint: true
+  dependency_ready_now: false
+  exact_human_authorization_required: false
+  executed: false
+
+selected_next_route:
+  route_id: "v21_p16_t05_final_scientific_and_research_system_status_synthesis"
+  route_label: "integration-synthesis-packet"
+  role_family: "director-of-research@0.3.0"
+  worker_skill: "continue-research"
+  selected_next_packet_type: "final_scientific_and_research_system_status_synthesis"
+  task_type: "v21_p16_t05_final_scientific_and_research_system_status_synthesis"
+  plan_task_id: "P16-T05"
+  work_item_id: "P16-T05"
+  target_derivation_milestone: "benchmark_promotion"
+  milestone_burden: "Create a calibrated final handoff without inventing completion."
+  strategy_id: "execute_p16_t05_final_status_synthesis_v1"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  physics_promotion_authorized: false
+  executed: false
+  next_action: "Run the single distinct governed checkpoint for AJ-RT-20260804-002-001. After it commits, execute P16-T05 only through one separately claimed continue-research frame."
+
+ordinary_route_guard:
+  schema_id: "ordinary_route_guard_evaluation_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  evaluation_id: "ORE-HANDOFF-0963"
+  ordinary_handoff_id: "handoff-0963"
+  threshold: 3
+  consecutive_project_system_tasks_before_selection: 1
+  ready_science_plan_task_ids:
+    - "P16-T05"
+  ready_project_system_plan_task_ids: []
+  selected_plan_task_id: "P16-T05"
+  selected_route_class: "physics_bearing"
+  selected_worker_skill: "continue-research"
+  outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  exception_receipt:
+    active: false
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+active_state_boundary:
+  active_task_id: "RT-20260804-002"
+  active_job_id: "AJ-RT-20260804-002-001"
+  current_status: "generation_253_task_contract_and_frontier_alignment_reconciled_pending_checkpoint"
+  checkpoint_required: true
+  checkpoint_completed: false
+  checkpoint_invocation_count: 0
+  p16_t04_executed: true
+  p16_t04_qualifying_finalized: true
+  p16_t05_executed: false
+  selected_next_plan_task_id: "P16-T05"
+  selected_next_worker_skill: "continue-research"
+  selected_next_role_family: "director-of-research@0.3.0"
+  selected_next_route_label: "integration-synthesis-packet"
+  selected_next_strategy_id: "execute_p16_t05_final_status_synthesis_v1"
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 254 validated claimed and consumed the exact route once."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The exact source contract fields are reconciled and P16-T04 science hashes remain unchanged."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Approved generated synchronization remains before checkpoint."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "Exactly one distinct governed checkpoint remains."
+  renderer:
+    status: "PENDING"
+    evidence:
+      - "Approved generated projections remain to synchronize."
+  memory_bootstrap:
+    status: "PENDING"
+    evidence:
+      - "Tracked memory bootstrap remains to synchronize."
+  claim_language_linter:
+    status: "PENDING"
+    evidence:
+      - "Changed-source claim-language validation remains."
+
+authorization_layers:
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  submission_authorized: false
+  public_release_authorized: false
+  reviewer_contact_authorized: false
+  protected_scoped_gate_review_authorized: false
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  source_law_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+project_improvement_signals: []
+open_project_improvement_signal_ids: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required_no_new_signal_emitted"
+  sidecar_supersedes_research_handoff: false
+
+handoff_authority_boundary: "This handoff records bounded project-system task-contract and frontier recovery only. It changes no science, Gate, benchmark, publication, external-review, independent-replication, outward-action, or completed-derivation authority."
+next_plan_task_id: "P16-T05"
+next_plan_task_execution_ready_after_checkpoint: true
+next_plan_task_execution_ready_now: false
+next_plan_task_executed: false
+notes: "Checkpoint locally without push. P16-T05 requires a separate generation claim after checkpoint."

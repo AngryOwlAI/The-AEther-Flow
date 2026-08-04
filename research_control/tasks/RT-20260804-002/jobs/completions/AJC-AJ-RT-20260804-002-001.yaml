@@ -1,0 +1,288 @@
+validation_status: "PASS_PRECHECKPOINT"
+final_repository_validation_status: "PASS_PRECHECKPOINT_STAGED_ACCEPTANCE_PENDING"
+job_id: "AJ-RT-20260804-002-001"
+completion_id: "AJC-AJ-RT-20260804-002-001"
+task_id: "RT-20260804-002"
+task_type: "project_system_generation_253_task_contract_and_frontier_alignment_recovery"
+decision_id: "DDR-20260804-002"
+role_id: "process-integrity-auditor"
+source_role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260804-002"
+status: "completed"
+created_at: "2026-08-04T07:47:22Z"
+started_at: "2026-08-04T07:47:22Z"
+completed_at: "2026-08-04T07:47:22Z"
+objective: "Correct only the fourteen deterministic RT-001 task-contract mismatches identified by the failed generation-253 checkpoint, preserve the P16-T04 science artifacts byte-for-byte, regenerate approved frontier and memory derivatives, and invoke at most one distinct governed checkpoint."
+completion_summary: "Generation 254 reconciles the fourteen exact RT-001 task-contract mismatches, preserves the completed P16-T04 science and review artifact hashes, and reserves generated-frontier and memory synchronization for the approved generators and the one distinct checkpoint. P16-T05 remains unexecuted."
+objective_result: "generation_253_task_contract_and_frontier_alignment_reconciled_ready_for_governed_checkpoint"
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 254
+  passes_consumed: 225
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:254"
+  handoff_token: "ae033ac1fd65a9a22617f3948ad03a2f0e12600ad5395c75"
+  relay_claim_token: "356c897401d6bf542c3746f43dcd46580f042d25c9dedb31"
+  route_work_item_id: "P16-T04"
+  route_worker_skill: "improve-project-system"
+  route_sha256: "c03b0ce012b4adc07c63f4388e7f60773dbfa0dce7d6f6a3595453d0e379358f"
+  route_reason: "checkpoint_staged_research_control_diff_contract_and_frontier_alignment"
+  route_strategy_id: "recover_generation_253_task_contract_and_frontier_alignment_v1"
+  route_blocker_fingerprint: "464809a7056476bc1fe41d3853779cf0f0c77937e01e623320c77d82de51bd0a"
+  route_recovery_ledger_sequence: 121
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+  outer_agentjob_invocation_count: 1
+transaction_status: "completed_ready_for_governed_checkpoint"
+result_disposition: "repair_implemented_and_validated_precheckpoint"
+work_item_status: "completed_precheckpoint"
+plan_task_id: "P16-T05"
+recovery_for_plan_task_id: "P16-T04"
+next_plan_task_id: "P16-T05"
+checkpoint_commit:
+  status: "PENDING"
+  commit: ""
+  job_id: "AJ-RT-20260804-002-001"
+checkpoint_invocation_count: 0
+checkpoint_staged: false
+legacy_validation_used: false
+project_system_change_only: true
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+result:
+  status: "PASS_SOURCE_RECONCILED_FRONTIER_SYNC_PENDING"
+  strategy_id: "recover_generation_253_task_contract_and_frontier_alignment_v1"
+  source_task_id: "RT-20260804-001"
+  source_job_id: "AJ-RT-20260804-001-001"
+  source_handoff_id: "handoff-0962"
+  source_head: "a9132efc1c5dc514bf82f359acff0fe1b4cae4af"
+  inherited_manifest_sha256: "2fa28768f05bc80e3553a188e02e4736247dd2fffef12929511dd8dd9d56ecea"
+  immutable_route_sha256: "c03b0ce012b4adc07c63f4388e7f60773dbfa0dce7d6f6a3595453d0e379358f"
+  route_blocker_fingerprint: "464809a7056476bc1fe41d3853779cf0f0c77937e01e623320c77d82de51bd0a"
+  source_blocker_sha256: "fc095af112b3fd084981dce3b0e24d0c871bc278721191512d2af1e1b3d0638f"
+  task_local_contract_error_count_before: 14
+  task_local_contract_error_count_after: 0
+  generated_frontier_error_count_before: 20
+  p16_t04_science_artifact_hash_mismatch_count: 0
+  generation_253_job_replayed: false
+  generation_253_checkpoint_replayed: false
+  p16_t04_science_replayed: false
+  p16_t05_executed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+artifact_receipts:
+  - path: "research_control/tasks/RT-20260804-002/jobs/AJ-RT-20260804-002-001.yaml"
+    sha256: "d6d30dd9fa23f153fc53f4203dda69ced9cb9094cf8e83941707bcfc403dcc67"
+  - path: "research_control/tasks/RT-20260804-002/artifacts/generation_254_task_contract_and_frontier_alignment_recovery_receipt.json"
+    sha256: "8aca9e03c12a5b0551e8c15db2350a1a2f0755edf37cf686bf458b4542199e56"
+  - path: "research_control/tasks/RT-20260804-001/DDR-20260804-001.md"
+    sha256: "0674a0446f6a7cc3dc1eea3eca8b9990114666b01b08941ae2fcc5f841a507f9"
+  - path: "research_control/tasks/RT-20260804-001/jobs/AJ-RT-20260804-001-001.yaml"
+    sha256: "7347924192ee48b23f78713bc647f505e2e01d938536acad3fce845f4aeda5d7"
+  - path: "research_control/tasks/RT-20260804-001/jobs/completions/AJC-AJ-RT-20260804-001-001.yaml"
+    sha256: "1dc975715f9e8f2554408348ea6dc9d2191f370d1f1cf724e23801b128c4ce4d"
+  - path: "research_control/tasks/RT-20260804-001/roles/external-red-team-reviewer@0.1.0--RT-20260804-001.yaml"
+    sha256: "9a2641bea0e3d4d7ad6c7ade64933abc746ec8eb19d756ad81cfb202750f6f98"
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1128
+    relationship_row_count: 5684
+    semantic_row_count: 1128
+    vault_row_count: 1128
+    blocking_warning_count: 0
+    local_cache_only_warning_count: 3
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  authority_note: "Obsidian and .local are retrieval layers only and not authority; registered canonical sources and tracked control state govern."
+physics_payload_admission_result:
+  status: "admitted"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+ordinary_route_guard_admission_result:
+  status: "PASS"
+  source_handoff_id: "handoff-0962"
+  source_handoff_sha256_at_intake: "673b3531346e252f149880bccf91837a5abd8e642063cb7f210f94a58d07ffe1"
+  selected_plan_task_id: "P16-T05"
+  guard_outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  system_success_counts_as_physics: false
+  system_success_counts_as_distance_to_gr: false
+  scientific_status_changed: false
+  physics_promotion_authorized: false
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS_PRECHECKPOINT_READY"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  observed_durable_outputs:
+    physics: []
+    project_system:
+      - "exact RT-001 task-contract reconciliation"
+      - "preserved P16-T04 science artifact hashes"
+      - "generated frontier and memory alignment"
+      - "one distinct governed checkpoint outcome"
+  accepted_criteria:
+    physics: []
+    project_system:
+      - "all fourteen named RT-001 task-contract findings are eliminated"
+      - "all P16-T04 science and review artifacts remain byte-for-byte unchanged"
+      - "generated frontier and memory derivatives are synchronized by approved generators"
+      - "no generation-253 AgentJob or checkpoint is replayed"
+      - "P16-T05 remains unexecuted"
+      - "at most one distinct governed checkpoint is invoked"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+command_results:
+  - command: "memory status and canonical V21 lookup"
+    status: "PASS_WITH_LOCAL_CACHE_WARNINGS"
+    summary: "Tracked memory authority passes; local cache freshness warnings remain non-authoritative."
+  - command: "P16-T04 task-local and strict internal review validators"
+    status: "PASS"
+    summary: "The completed P16-T04 scientific and review artifacts remain valid and hash-stable."
+  - command: "generation-253 task-contract rederivation"
+    status: "PASS_SCOPED_FINDINGS_RECONCILED"
+    summary: "All fourteen exact task-local contract mismatches are corrected without changing scientific artifacts."
+  - command: "generated views documentation impact claim language memory and research-control acceptance"
+    status: "PENDING_APPROVED_SYNC"
+    summary: "Approved renderer and memory synchronization follows this source packet before the one distinct checkpoint."
+  - command: "governed cumulative checkpoint AJ-RT-20260804-002-001"
+    status: "PENDING_SINGLE_INVOCATION"
+    summary: "Exactly one distinct invocation remains authorized."
+validation_summary:
+  status: "PASS_SOURCE_RECONCILED_FRONTIER_SYNC_PENDING"
+  task_local_contract_error_count_before: 14
+  task_local_contract_error_count_after: 0
+  p16_t04_science_artifact_hash_mismatch_count: 0
+  checkpoint_invocation_count: 0
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 254 validated, claimed, and consumed the exact immutable recovery route once."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The task-local receipt records exact contract reconciliation and science-payload hash preservation."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "The fourteen source contract findings are reconciled; approved generated synchronization remains."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "Exactly one distinct governed checkpoint remains."
+  renderer:
+    status: "PENDING"
+    evidence:
+      - "Approved current-frontier, task-index, compact-frontier, dependency-graph, and claim-graph synchronization remains."
+  memory_bootstrap:
+    status: "PENDING"
+    evidence:
+      - "Tracked memory bootstrap and validate-only checks remain after final source synchronization."
+  claim_language_linter:
+    status: "PENDING"
+    evidence:
+      - "Changed-source claim-language validation remains before checkpoint."
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "project-system task-contract and frontier alignment only"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  source_law_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+distance_to_gr_delta:
+  changed: false
+  effect: "none_project_system_task_contract_and_frontier_recovery"
+  milestone: "benchmark_promotion"
+  burden: "P16-T04 is already qualifying-finalized; P16-T05 remains separately unexecuted."
+  ledger_row_updated: false
+physics_progress_status:
+  status: "documentation_or_control_only_no_physics_delta"
+  physics_promotion_authorized: false
+  proof_authority: false
+selected_next_route:
+  work_item_id: "P16-T05"
+  plan_task_id: "P16-T05"
+  worker_skill: "continue-research"
+  role_family: "director-of-research@0.3.0"
+  route_label: "integration-synthesis-packet"
+  strategy_id: "execute_p16_t05_final_status_synthesis_v1"
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  p16_t05_executed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+output_paths:
+  - "research_control/tasks/RT-20260804-002/artifacts/generation_254_task_contract_and_frontier_alignment_recovery_receipt.json"
+  - "research_control/tasks/RT-20260804-002/jobs/completions/AJC-AJ-RT-20260804-002-001.yaml"
+  - "research_control/handoffs/handoff-0963.yaml"
+  - "research_control/handoffs/handoff-0963.md"
+  - "research_control/program_state.yaml"
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  status: "not_required_no_project_improvement_signal_emitted"
+  sidecar_created: false
+out_of_scope_remaining_work:
+  - "The one distinct governed checkpoint remains pending."
+  - "P16-T05 must be separately claimed after a valid checkpoint."
+  - "Science ontology Gate benchmark proof external review independent replication publication push external action and completed-derivation authority remain unavailable."
+forbidden_conclusion_summary: "Project-system contract or checkpoint success is not scientific evidence, a Gate verdict, external review, independent replication, proof, publication authority, or completed derivation."
+verdict: "PASS_SOURCE_RECONCILED_FRONTIER_SYNC_PENDING"
+documentation_impact_id: "DI-RT-20260804-002-001"
+handoff_id: "handoff-0963"
+handoff_path: "research_control/handoffs/handoff-0963.yaml"
+next_recommendation: "Synchronize approved generated state, invoke exactly one distinct governed checkpoint for AJ-RT-20260804-002-001, then route P16-T05 separately through continue-research."

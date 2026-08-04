@@ -1,0 +1,187 @@
+schema_id: "v21_p16_t04_child_phys_math_post_repair_final_reaudit_v1"
+task_id: "RT-20260804-001"
+job_id: "AJ-RT-20260804-001-001"
+plan_task_id: "P16-T04"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+review_mode: "same_context_internal_ai_read_only"
+reviewer_display_name: "Internal Skeptical Reviewer"
+reviewer_role_kind: "scientific_adversarial_internal_review"
+source_head: "a9132efc1c5dc514bf82f359acff0fe1b4cae4af"
+target_derivation_milestone: "benchmark_promotion"
+milestone_burden: "Provide the final adversarial claim-boundary check without provenance overread."
+
+review_context:
+  schema_id: "v21_review_context_v1"
+  classification: "same_context_role_review"
+  reviewer_kind: "ai"
+  blind_packet_received: false
+  prior_context_access: "same_context"
+  review_executed: true
+  replication_executed: false
+  claims:
+    external_review_completed: false
+    human_expert_review_completed: false
+    independent_replication_completed: false
+
+scope:
+  question: "After repair of the reviewer-label contract, do current source-purity, Gate, benchmark, methodology, and tracked-state records entail external independence, first-principles Einstein-sector derivation, benchmark promotion, or a global no-go?"
+  workflow_success_disregarded_as_science: true
+  validator_success_disregarded_as_science: true
+  role_or_registry_success_disregarded_as_science: true
+  external_literature_used: false
+  canonical_science_read_only: true
+  file_edits_made: false
+  checkpoint_invoked_by_child: false
+  p16_t05_executed: false
+
+inspected_sources:
+  - path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+    sha256: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+    purpose: "P16-T04 scope and review requirements"
+  - path: ".agents/roles/physics/external-red-team-reviewer.v0.1.0.md"
+    sha256: "652176faf604825f8084aa3584200e32331b8f6493bda038376bf7737995a6d7"
+    purpose: "repaired current internal reviewer contract"
+  - path: ".agents/schemas/EXTERNAL_RED_TEAM_REVIEW_ARTIFACT_SCHEMA.md"
+    sha256: "f341828d74c15632944b2d25be4bf5e0506d60476bea90cf974d7ababcd5d840"
+    purpose: "internal provenance and fail-closed review schema"
+  - path: "research_control/design/external_red_team_reviewer_role_design.md"
+    sha256: "3c574cc9830b1c1a4045f45fb621b31f0b33e516754d07a3929b1832ab4c744d"
+    purpose: "legacy-ID versus current display boundary"
+  - path: "research_control/templates/RED_TEAM_REVIEW_ARTIFACT_TEMPLATE.yaml"
+    sha256: "d021d204205b648bbf179e47afbcb632bdc93f393e50dd559dab30d02785eca8"
+    purpose: "internal label and false authority defaults"
+  - path: "research_control/tasks/RT-20260803-015/artifacts/p16_t04_internal_review_label_contract_validation.json"
+    sha256: "97edc8ab306c30ce453f978442226c9cae3fa012acf1efe842343266fb37f629"
+    purpose: "repair receipt used only as control evidence"
+  - path: "research_control/tasks/RT-20260803-014/artifacts/v21_p16_t04_final_red_team_report.md"
+    sha256: "84e8d459aad80a05a23a1eb9842716479b1f26ac551dec6a886ed0fa24d9c41d"
+    purpose: "prior bounded result and exact repair boundary"
+  - path: "research_control/tasks/RT-20260803-012/jobs/completions/AJC-AJ-RT-20260803-012-001.yaml"
+    sha256: "32490ac7e5a57138f6de7a884825532ee17389d36634dbb9fc7f7cc076c0bf8d"
+    purpose: "qualifying P16-T02 dependency"
+  - path: "research_control/tasks/RT-20260803-013/jobs/completions/AJC-AJ-RT-20260803-013-001.yaml"
+    sha256: "a0bd4691e276e5e0d97b45b734491f697deeb57ca0dc99b015bd7ea7d734fe91"
+    purpose: "qualifying P16-T03 dependency"
+  - path: "research_control/tasks/RT-20260729-012/artifacts/source_derived_benchmark_protocol_v1.tex"
+    sha256: "88ef097bf712ad115e9af62cc18a8b3eabb12f8545350f714ad065f702471007"
+    purpose: "conditional target-import firewall"
+  - path: "research_control/tasks/RT-20260731-001/artifacts/p9_t08_benchmark_smuggling_audit_v1.yaml"
+    sha256: "c5b05dad23261d479e624b9cf08a3d02c2773d05df4d15246793067525acd229"
+    purpose: "six-case manifest-bounded audit"
+  - path: "research_control/tasks/RT-20260727-004/artifacts/p6_t08_gate_b_separating_certificate_v1.yaml"
+    sha256: "f3080ed6a6ba1d6847a3b7ed43c7a11ad7f7dae4deccd25486913ea9547f221b"
+    purpose: "scoped obstruction with open continuation"
+  - path: "research_control/tasks/RT-20260729-011/artifacts/p8_t07_gate_d_decision_v1.tex"
+    sha256: "035ea88a612d861a00d0703ec2bd1094e01194c113d7ff2588e3a4ad8bf47d63"
+    purpose: "Einstein-sector derivation remains not ready"
+  - path: "research_control/tasks/RT-20260731-004/artifacts/p9_t09_gate_e_decision_v1.tex"
+    sha256: "7f28103e40664f0a004af0134f3216932136f8efb160f0c7c59039efa5225b0b"
+    purpose: "benchmark promotion remains denied"
+  - path: "ontology/tex/aether_flow_relativistic_recovery.tex"
+    sha256: "77d5c2db56f122870343834f853bf2f375a912116a347d7c5710405c8707d69c"
+    purpose: "target-side exact-GR adoption versus source derivation"
+  - path: "research_control/tasks/RT-20260802-008/artifacts/p15_t02_methodology_manuscript.md"
+    sha256: "05151b543111f1107a07f1b02afabc78d97ef07820d1eed824da38fdd8e441a3"
+    purpose: "descriptive noncausal methodology boundary"
+
+reviewer_contract_repair_result:
+  current_display_name: "Internal Skeptical Reviewer"
+  current_role_kind: "scientific_adversarial_internal_review"
+  stable_legacy_identifier_preserved: "external-red-team-reviewer@0.1.0"
+  legacy_identifier_counts_as_external_provenance: false
+  current_contract_unambiguously_internal: true
+  historical_artifacts_rewritten: false
+  scientific_effect: "none_control_contract_only"
+  result: "RESOLVED_CURRENT_REVIEW_LABEL_CONTRACT"
+
+source_purity_result:
+  audited_case_count: 6
+  declared_target_import_count: 0
+  inconclusive_case_count: 6
+  benchmark_pass_count: 0
+  qualifying_independent_replication_count: 0
+  manifest_completeness_proved: false
+  undeclared_side_channels_eliminated: false
+  allowed_conclusion: "No declared target-to-source path was detected in the six audited manifests; every case remains INCONCLUSIVE."
+  forbidden_conclusion: "The derivation is exhaustively target-free or the controls establish benchmark recovery."
+
+typed_claim_composition:
+  schema_id: "PostRepairClaimBoundaryNonEntailment_v1"
+  atoms:
+    S: "no declared target path detected in audited manifests"
+    V: "control validation and checkpoint consistency"
+    I: "same-context internal AI critique completed"
+    M: "descriptive noncausal methodology evidence"
+    A: "target-side exact-GR reference adopted"
+    N: "scoped obstruction on a fixed line"
+    R: "current reviewer-label contract repaired"
+    E: "qualifying external independence"
+    D: "first-principles source derivation of the Einstein sector"
+    B: "positive source-derived benchmark promotion"
+    G: "global no-go or future-extension impossibility"
+  true_atoms: ["S", "V", "I", "M", "A", "N", "R"]
+  false_atoms: ["E", "D", "B", "G"]
+  explicit_non_coercions:
+    - "S does not imply D or B."
+    - "V does not imply E D B or G."
+    - "I does not imply E."
+    - "M does not imply D B or physics superiority."
+    - "A does not imply D or B."
+    - "N does not imply G."
+    - "R does not imply E D B or G."
+  countervaluation:
+    valuation: "S=V=I=M=A=N=R=true; E=D=B=G=false"
+    satisfies_explicit_claim_boundaries: true
+  result: "STRONGER_POST_REPAIR_CROSS_DOCUMENT_CLAIM_NOT_ENTAILED"
+  result_scope: "current hash-bound repository claim system only"
+  global_no_go_claimed: false
+
+findings:
+  - finding_id: "P16T04-POSTREPAIR-PM-REVIEW-CONTRACT-001"
+    severity: "resolved_prior_blocker"
+    status: "RESOLVED_CURRENT_CONTRACT"
+    statement: "Every current role, schema, template, design, and registry projection inspected identifies the execution as internal skeptical review."
+  - finding_id: "P16T04-POSTREPAIR-PM-SOURCE-PURITY-001"
+    severity: "critical_overread_guard"
+    status: "LIMITATION_PRESERVED"
+    statement: "The firewall excludes declared target paths only under completeness and no-side-channel hypotheses."
+  - finding_id: "P16T04-POSTREPAIR-PM-REVIEW-INDEPENDENCE-001"
+    severity: "critical_overread_guard"
+    status: "LIMITATION_PRESERVED"
+    statement: "Neither this analysis nor the repaired role label supplies external human provenance or independent reconstruction."
+  - finding_id: "P16T04-POSTREPAIR-PM-ADOPTION-DERIVATION-001"
+    severity: "critical_overread_guard"
+    status: "PASS_GUARD_PRESERVED"
+    statement: "Target-side exact-GR adoption coexists with absent source derivation and denied benchmark promotion."
+  - finding_id: "P16T04-POSTREPAIR-PM-SCOPED-NOGO-001"
+    severity: "high_overread_guard"
+    status: "PASS_GUARD_PRESERVED"
+    statement: "The fixed-package obstruction leaves materially new source-side continuation open."
+  - finding_id: "P16T04-POSTREPAIR-PM-METHODOLOGY-001"
+    severity: "high_overread_guard"
+    status: "PASS_GUARD_PRESERVED"
+    statement: "Methodology evidence is descriptive rather than causal or physical."
+
+result:
+  result_status: "PASS_CHILD_POST_REPAIR_BOUNDED_CLAIM_NONENTAILMENT"
+  blocking_scientific_finding_count: 0
+  blocking_project_system_finding_count_identified_by_child: 0
+  unresolved_high_or_critical_finding_count: 0
+  stronger_claim_composition_rejected: true
+  external_review_completed: false
+  independent_replication_completed: false
+  benchmark_promoted: false
+  global_no_go_established: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  p16_t05_executed: false
+  recommended_disposition: "Support qualifying P16-T04 finalization if the sibling and parent find no distinct current defect."
+
+limitations:
+  - "This is same-context internal AI analysis, not external review or independent replication."
+  - "The source-purity conclusion is limited to declared manifest edges and stated firewall hypotheses."
+  - "The child did not independently reproduce the six benchmark calculations."
+  - "No external literature or empirical evidence was acquired."
+  - "No edits, helper mutations, checkpoint calls, commits, pushes, or relay calls were made."

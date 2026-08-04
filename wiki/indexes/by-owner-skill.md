@@ -180,6 +180,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-V21-P16-T03-FINAL-EVIDENCE-PROVENANCE-AUDIT` `research_control/tasks/RT-20260803-013/artifacts/v21_p16_t03_final_provenance_audit.md`
 - `MD-V21-P16-T04-FINAL-CLAIM-BOUNDARY-RED-TEAM` `research_control/tasks/RT-20260803-014/artifacts/v21_p16_t04_final_red_team_report.md`
 - `MD-V21-P16-T04-PARENT-FUSION-FINAL-CLAIM-BOUNDARY-RED-TEAM-V1` `research_control/tasks/RT-20260803-014/artifacts/parent_fusion_notes_p16_t04_final_red_team.md`
+- `MD-V21-P16-T04-POST-REPAIR-FINAL-CLAIM-BOUNDARY-REAUDIT` `research_control/tasks/RT-20260804-001/artifacts/v21_p16_t04_post_repair_final_reaudit_report.md`
+- `MD-V21-P16-T04-POST-REPAIR-PARENT-FUSION-FINAL-REAUDIT-V1` `research_control/tasks/RT-20260804-001/artifacts/parent_fusion_notes_p16_t04_post_repair_reaudit.md`
 - `MD-VALIDATOR-OPERATOR-WORKFLOW-PUBLICATION-BRIEF` `markdown/publication-briefs/validator-operator-workflow.publication-brief.md`
 - `WIKI-HTML-AETHER-FLOW-ONTOLOGY-EXPLAINER` `wiki/html/html-aether-flow-ontology-explainer.md`
 - `WIKI-HTML-AETHER-FLOW-PHYSICS-PROGRAM-EXPLAINER` `wiki/html/html-aether-flow-physics-program-explainer.md`
@@ -783,6 +785,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-V21-P16-T03-FINAL-EVIDENCE-PROVENANCE-AUDIT` `wiki/markdown/md-v21-p16-t03-final-evidence-provenance-audit.md`
 - `WIKI-MD-V21-P16-T04-FINAL-CLAIM-BOUNDARY-RED-TEAM` `wiki/markdown/md-v21-p16-t04-final-claim-boundary-red-team.md`
 - `WIKI-MD-V21-P16-T04-PARENT-FUSION-FINAL-CLAIM-BOUNDARY-RED-TEAM-V1` `wiki/markdown/md-v21-p16-t04-parent-fusion-final-claim-boundary-red-team-v1.md`
+- `WIKI-MD-V21-P16-T04-POST-REPAIR-FINAL-CLAIM-BOUNDARY-REAUDIT` `wiki/markdown/md-v21-p16-t04-post-repair-final-claim-boundary-reaudit.md`
+- `WIKI-MD-V21-P16-T04-POST-REPAIR-PARENT-FUSION-FINAL-REAUDIT-V1` `wiki/markdown/md-v21-p16-t04-post-repair-parent-fusion-final-reaudit-v1.md`
 - `WIKI-MD-V21-P4-T01-SOURCE-ASSUMPTION-AMBIGUITIES` `wiki/markdown/md-v21-p4-t01-source-assumption-ambiguities.md`
 - `WIKI-MD-V21-P4-T04-ONTOLOGY-REGIME-COMPARISON-REPORT-V1` `wiki/markdown/md-v21-p4-t04-ontology-regime-comparison-report-v1.md`
 - `WIKI-MD-V21-P4-T05-ONTOLOGY-REGIME-GATE-CHAIR-PARENT-FUSION-V1` `wiki/markdown/md-v21-p4-t05-ontology-regime-gate-chair-parent-fusion-v1.md`
