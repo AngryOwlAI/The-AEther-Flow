@@ -7,50 +7,50 @@ generated_from:
   - "research_control/current_frontier.md"
   - "research_control/design/accepted_status_calibration_v2.yaml"
   - "research_control/design/active_state_bifurcation_policy_v1.md"
-  - "research_control/handoffs/handoff-0966.yaml"
+  - "research_control/handoffs/handoff-0967.yaml"
   - "research_control/program_state.yaml"
 report_provenance:
   schema_id: "generated_report_provenance_v1"
   policy_id: "p13_t07_live_generated_report_freshness_v1"
   report_class: "compact_current_frontier"
-  source_commit: "bfa30324101c0dd70338e58b443953922c1c322f"
+  source_commit: "233e5dd7024fc068032d0afe86d85dc25e2246e9"
   source_hashes:
     - path: "registries/DISTANCE_TO_GR_LEDGER.csv"
       sha256: "8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642"
     - path: "registries/RESEARCH_TASK_REGISTRY.csv"
-      sha256: "362bf21decf00c99ab82c59811ce23acd251f1f3744b10b9ef05c5eee1f764a2"
+      sha256: "815b378db63ec808b5e89214ce7ef6cac321cbbd2985369bca48f31c09cab5ab"
     - path: "research_control/current_frontier.md"
-      sha256: "3053e69499b8cf45037d5894498041a218086837852d4f8908d58481701c4be1"
-    - path: "research_control/handoffs/handoff-0966.yaml"
-      sha256: "72e65c6af55c56f11fef6744e7b396158b8d163ab75557482a14b0dba5a8e5a0"
+      sha256: "38b71644a6a72fff663a2b4c4cb518e5a5d61f0eda92ad8a1066c2b228f5c5b5"
+    - path: "research_control/handoffs/handoff-0967.yaml"
+      sha256: "7c84ec6d1fac46c20ca7cc4d18e2db85b2f64c00396c733c71ebb92df8ea3e0d"
     - path: "research_control/program_state.yaml"
-      sha256: "796c61df2bacbcd971555fef6be40336e14be06cb0c71dcc8deeb2979d24f3a0"
+      sha256: "e18a2932936449e5b63fe1f684f7e2ccd848a34851c1ae510956af57e67abad4"
     - path: "research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml"
       sha256: "dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3"
     - path: "scripts/research_control/generated_report_provenance.py"
       sha256: "af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c"
     - path: "scripts/research_control/render_compact_current_frontier_v16.py"
       sha256: "3700556e8fe203bb8bfb1c2caf15b7fbfc95b25f608169209e1b9930677e3564"
-  source_manifest_sha256: "8abfc52c5bee4ff48db6f0719d353e5e17ef38d92696babb1224530b49f17ef6"
+  source_manifest_sha256: "8479eab95c9f2235ea5053309e5c77aaa51d8f846cdd54f5de82fc44d4a1e31b"
   source_path_count: "12"
-  generation_time: "2026-08-04T11:04:43Z"
-  task_count: "1221"
+  generation_time: "2026-08-08T20:51:16Z"
+  task_count: "1222"
   maximum_commit_lag: "1"
   freshness_status: "fresh_at_generation"
   generated_view_is_authority: false
   physics_promotion_authorized: false
   proof_authority: false
 active_state:
-  active_task_id: "RT-20260804-005"
-  latest_handoff_id: "handoff-0966"
-  current_status: "generation_256_p16_t06_completion_contract_role_parity_reconciled_pending_checkpoint"
+  active_task_id: "RT-20260808-001"
+  latest_handoff_id: "handoff-0967"
+  current_status: "v21_terminal_state_reconciled_v22_p0_t02_intake_selected_checkpoint_pending"
   v15_completed: false
   v16_completed: false
   v16_plan_registered: true
 active_state_bifurcation:
-  latest_research_task_id: "RT-20260804-005"
-  latest_research_handoff_id: "handoff-0966"
-  latest_research_next_action: "Run the single fresh cumulative checkpoint for AJ-RT-20260804-005-001. After it commits, return control to the outer v4 launcher for exact returned, repository-fingerprint, lease, successor-absence, and terminal_complete verification; do not create a successor."
+  latest_research_task_id: "RT-20260808-001"
+  latest_research_handoff_id: "handoff-0967"
+  latest_research_next_action: "After the governed checkpoint for AJ-RT-20260808-001-001, execute exactly one bounded V22 P0-T02 baseline-release packaging AgentJob; do not create a tag or public release."
   latest_project_system_task_id: "none"
   latest_project_system_status: "none"
   latest_project_system_sidecar_task_id: "none"
@@ -58,10 +58,10 @@ active_state_bifurcation:
   sidecar_supersedes_research_handoff: false
   next_research_route_source: "latest_research_handoff"
 next_route:
-  route_id: "v21_p16_t06_outer_terminal_verification_after_generation_257_checkpoint"
-  role_family: "none"
-  target_derivation_milestone: "benchmark_promotion"
-  milestone_burden: "Apply v4 base-case and protected-stop semantics to the finished plan."
+  route_id: "v22_p0_t02_internal_v21_baseline_release_package"
+  role_family: "process-integrity-auditor@0.1.0"
+  target_derivation_milestone: "none"
+  milestone_burden: "Release-control packaging only; no scientific burden advances."
   requires_human_gate: false
 claim_boundary:
   physics_claim_authority: false
@@ -371,10 +371,10 @@ blocked_physical_targets:
       - "no_global_theory_rejection"
 distance_to_gr:
   delta:
-    effect: "none_project_system_completion_contract_role_parity_recovery"
+    effect: "none_project_system_terminal_state_reconciliation"
     changed: false
     milestone: "none"
-    burden_id: "benchmark_promotion"
+    burden_id: "none"
   high_risk_rows:
     - burden_id: "m_src"
       reader_facing_status: "adopted only as scoped source-only M_src object"
@@ -638,9 +638,11 @@ metric_use_ledger:
 validation:
   latest_required_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
   pending_layers:
+    - layer: "checkpoint"
+      status: "PENDING"
+      evidence: []
     - layer: "post_checkpoint"
       status: "PENDING"
-      evidence:
-        - "Exactly one fresh cumulative checkpoint remains and owns the inherited source-handoff trackedness check."
+      evidence: []
 authority_warning:
   snapshot_only_not_authority: true

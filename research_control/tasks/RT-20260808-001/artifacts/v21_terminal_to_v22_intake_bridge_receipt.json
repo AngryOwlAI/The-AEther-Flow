@@ -1,0 +1,99 @@
+{
+  "schema_id": "v21_terminal_to_v22_intake_bridge_receipt_v1",
+  "status": "PASS_V21_TERMINAL_RECONCILED_V22_P0_T02_SELECTED",
+  "task_id": "RT-20260808-001",
+  "job_id": "AJ-RT-20260808-001-001",
+  "decision_id": "DDR-20260808-001",
+  "created_at": "2026-08-08T20:51:16Z",
+  "source_handoff": {
+    "handoff_id": "handoff-0966",
+    "path": "research_control/handoffs/handoff-0966.yaml",
+    "sha256": "72e65c6af55c56f11fef6744e7b396158b8d163ab75557482a14b0dba5a8e5a0",
+    "selected_plan_task_id": "P16-T06",
+    "guard_outcome": "below_threshold"
+  },
+  "source_completion": {
+    "path": "research_control/tasks/RT-20260804-005/jobs/completions/AJC-AJ-RT-20260804-005-001.yaml",
+    "sha256": "051ba1adc94e0b5b0d22ca5df54c54d813d34072e942c5ca22eb738c4e0164ef",
+    "status": "completed"
+  },
+  "source_program_state": {
+    "path": "research_control/program_state.yaml",
+    "sha256": "796c61df2bacbcd971555fef6be40336e14be06cb0c71dcc8deeb2979d24f3a0",
+    "projected_status_before_reconciliation": "generation_256_p16_t06_completion_contract_role_parity_reconciled_pending_checkpoint"
+  },
+  "goal_state": {
+    "goal_id": "crg-20260720T161354Z-96bc2664ce31bfe0",
+    "goal_file": ".codex/skills/continue-research-goal/goals/goal-crg-20260720T161354Z-96bc2664ce31bfe0.md",
+    "goal_file_sha256": "a222b7f7d65bec6c785c620014dd8a0427181633c792cd7d01c37081ca3cd6a3",
+    "helper_command": ".venv/bin/python .codex/skills/continue-research-goal/scripts/goal_state.py --goals-dir .codex/skills/continue-research-goal/goals validate --goal-file .codex/skills/continue-research-goal/goals/goal-crg-20260720T161354Z-96bc2664ce31bfe0.md --require-lease-parity",
+    "helper_status": "PASS",
+    "relay_state": "terminal_complete",
+    "goal_evaluation": "met",
+    "closing_statement": "That goal was reached.",
+    "generation": 257,
+    "passes_consumed": 228,
+    "active_lease": null,
+    "global_lease_present": false,
+    "successor_thread_id": null,
+    "successor_generation": null,
+    "final_fingerprint": "f513b6995a1c9c1e408541ef52f78e5d4c5155a2079ec200eca2ff54ac62a9f6"
+  },
+  "repository_identity": {
+    "root": "/Volumes/P-SSD/AngryOwl/The-AEther-Flow",
+    "branch": "main",
+    "head": "233e5dd7024fc068032d0afe86d85dc25e2246e9",
+    "tree": "a7d9c9448de8e204643b093878ba4d84bd58f020",
+    "origin_main": "233e5dd7024fc068032d0afe86d85dc25e2246e9",
+    "source_worktree_porcelain": "",
+    "source_worktree_clean": true,
+    "checkpoint_commit": "233e5dd7024fc068032d0afe86d85dc25e2246e9",
+    "checkpoint_replayed": false,
+    "worker_replayed": false
+  },
+  "v21_terminal_coverage": {
+    "finalized_work_item_count": 122,
+    "covered_recommendation_count": 72,
+    "unresolved_required_human_action_count": 0,
+    "successor_count_after_generation_257": 0,
+    "scientific_status_promoted_by_terminalization": false
+  },
+  "reconciliation": {
+    "reason": "The outer relay terminalized after the tracked checkpoint commit, while the committed program-state projection necessarily remained pre-terminal. A new V22 AgentJob cannot lawfully bypass handoff-0966 route admission.",
+    "superseded_surface": "active routing projection only",
+    "historical_records_rewritten": false,
+    "source_handoff_rewritten": false,
+    "v21_transaction_replayed": false,
+    "v22_plan_registered": false,
+    "v22_p0_t02_executed": false
+  },
+  "selected_next_route": {
+    "plan_id": "recommendations_implementation_plan_continue_task-v22",
+    "plan_task_id": "P0-T02",
+    "worker_skill": "continue-research",
+    "route_label": "shared-release-control",
+    "execution_ready_after_checkpoint": true,
+    "requires_human_gate": false,
+    "tag_creation_authorized": false,
+    "public_release_authorized": false
+  },
+  "distance_to_gr": {
+    "changed": false,
+    "effect": "none_project_system_terminal_state_reconciliation",
+    "ledger_updated": false
+  },
+  "authority_limits": {
+    "scientific_status_changed": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "benchmark_promotion_authorized": false,
+    "external_review_completed": false,
+    "independent_replication_completed": false,
+    "tag_creation_authorized": false,
+    "public_release_authorized": false,
+    "publication_authorized": false,
+    "push_authorized": false,
+    "external_action_authorized": false,
+    "completed_derivation_authorized": false
+  }
+}

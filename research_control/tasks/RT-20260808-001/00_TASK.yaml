@@ -1,0 +1,75 @@
+task_id: "RT-20260808-001"
+task_type: "project_system_v21_terminal_state_to_v22_intake_bridge"
+title: "Reconcile terminal V21 state and open the V22 P0-T02 intake route"
+task_taxonomy:
+  schema_id: "v21_task_taxonomy_v1"
+  work_kind: "benchmark_or_recovery"
+  milestone: "benchmark_promotion"
+  candidate_family: "v21_terminal_state_to_v22_intake_bridge"
+  result_kind: "implemented_and_validated_or_precisely_blocked"
+  authority: "project_control"
+  scope: "project_system"
+validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+status: "completed"
+created_at: "2026-08-08T20:49:28Z"
+updated_at: "2026-08-08T20:51:16Z"
+closed_at: "2026-08-08T20:51:16Z"
+parent_task_id: "RT-20260804-005"
+parent_handoff_id: "handoff-0966"
+supersedes_active_routing_task_id: "RT-20260804-005"
+current_decision_id: "DDR-20260808-001"
+current_job_id: "AJ-RT-20260808-001-001"
+role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260808-001"
+requires_human_gate: false
+human_authorization_note: "The user's explicit V22 implementation goal authorizes a new non-promotional program intake after exact read-only V21 terminal verification. It does not authorize tag creation, release publication, reviewer contact, science mutation, or protected claim promotion."
+implementation_plan:
+  source_plan_id: "recommendations_implementation_plan_continue_task-v21"
+  source_plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  source_plan_phase_id: "P16"
+  source_plan_task_id: "P16-T06"
+  recovery_for_plan_task_id: "P16-T06"
+  intake_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  intake_plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  next_plan_task_id: "P0-T02"
+  next_plan_task_execution_authorized: true
+objective: "Reconcile the already-completed V21 outer-relay result with the tracked research-control spine, preserve the exact terminal commit tree and fingerprint, and create one ordinary handoff selecting only V22 P0-T02 without executing it."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system terminal-state reconciliation only; no scientific or Distance-to-GR burden advances."
+route_label: "project-system-terminal-state-reconciliation"
+route_strategy_id: "reconcile_v21_terminal_state_and_open_v22_p0_t02_intake_v1"
+source_head: "233e5dd7024fc068032d0afe86d85dc25e2246e9"
+source_tree: "a7d9c9448de8e204643b093878ba4d84bd58f020"
+source_terminal_fingerprint: "f513b6995a1c9c1e408541ef52f78e5d4c5155a2079ec200eca2ff54ac62a9f6"
+project_system_change_only: true
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+claim_boundary_id: "CB-PS-V21-TERMINAL-TO-V22-INTAKE-BRIDGE-001"
+claim_boundary:
+  allowed_scope: "Record exact read-only V21 terminal evidence, supersede only the stale tracked active-routing snapshot, create one V22 intake handoff to P0-T02, refresh approved generated projections, and invoke one governed checkpoint."
+  source_task_id: "RT-20260804-005"
+  source_job_id: "AJ-RT-20260804-005-001"
+  source_handoff_id: "handoff-0966"
+  v21_worker_replayed: false
+  v21_checkpoint_replayed: false
+  v22_p0_t02_executed: false
+  v22_plan_registered: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+documentation_impact_id: "DI-RT-20260808-001-001"
+completion_id: "AJC-AJ-RT-20260808-001-001"
+output_artifacts:
+  - "research_control/tasks/RT-20260808-001/artifacts/v21_terminal_to_v22_intake_bridge_receipt.json"
+  - "research_control/tasks/RT-20260808-001/jobs/completions/AJC-AJ-RT-20260808-001-001.yaml"
+  - "research_control/handoffs/handoff-0967.yaml"
+  - "research_control/handoffs/handoff-0967.md"
+closure_status: "v21_terminal_state_reconciled_v22_p0_t02_intake_selected_checkpoint_pending"
+summary: "Exact V21 goal-helper validation, terminal commit/tree/fingerprint, released leases, successor absence, and clean repository identity are preserved in one tracked bridge receipt. V22 P0-T02 is selected but not executed."
+next_recommended_action: "After the governed checkpoint, execute exactly one bounded V22 P0-T02 baseline-release packaging AgentJob; do not create a tag or public release."
+project_improvement_signals: []
+notes: "This bridge is a control-spine prerequisite created because prospective route admission cannot lawfully jump from handoff-0966 P16-T06 directly into an unregistered V22 P0-T02 job. It creates no science, publication, external-review, independent-replication, tag, release, push, or completed-derivation authority."

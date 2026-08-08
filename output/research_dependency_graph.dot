@@ -1,4 +1,4 @@
-<!-- generated-report-provenance: {"freshness_status":"fresh_at_generation","generated_view_is_authority":false,"generation_time":"2026-08-04T11:04:43Z","maximum_commit_lag":"1","physics_promotion_authorized":false,"policy_id":"p13_t07_live_generated_report_freshness_v1","proof_authority":false,"report_class":"research_dependency_graph","schema_id":"generated_report_provenance_v1","source_commit":"bfa30324101c0dd70338e58b443953922c1c322f","source_hashes":[{"path":"registries/AGENT_JOB_REGISTRY.csv","sha256":"2beab0ee32e1225e51af65ec5a55a0f71b2e52f331fadc719df05cdad6e63cf8"},{"path":"registries/DISTANCE_TO_GR_LEDGER.csv","sha256":"8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642"},{"path":"registries/RESEARCH_TASK_REGISTRY.csv","sha256":"362bf21decf00c99ab82c59811ce23acd251f1f3744b10b9ef05c5eee1f764a2"},{"path":"research_control/program_state.yaml","sha256":"796c61df2bacbcd971555fef6be40336e14be06cb0c71dcc8deeb2979d24f3a0"},{"path":"research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml","sha256":"dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3"},{"path":"scripts/research_control/generated_report_provenance.py","sha256":"af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c"},{"path":"scripts/research_control/render_dependency_graph.py","sha256":"6fdbe02623855697110263a90bbfbbd9a223ff636f320df497593fce3f9bef39"}],"source_manifest_sha256":"695211a85dbe13b5388c6aa342ba5005ddfbdda70e4b73add9077bed0ff09e61","source_path_count":"2200","task_count":"1221"} -->
+<!-- generated-report-provenance: {"freshness_status":"fresh_at_generation","generated_view_is_authority":false,"generation_time":"2026-08-08T20:51:16Z","maximum_commit_lag":"1","physics_promotion_authorized":false,"policy_id":"p13_t07_live_generated_report_freshness_v1","proof_authority":false,"report_class":"research_dependency_graph","schema_id":"generated_report_provenance_v1","source_commit":"233e5dd7024fc068032d0afe86d85dc25e2246e9","source_hashes":[{"path":"registries/AGENT_JOB_REGISTRY.csv","sha256":"8e8d363b25d5a31dac446d9f5ea876b596b3d5728ca13d4a2840ec5726284080"},{"path":"registries/DISTANCE_TO_GR_LEDGER.csv","sha256":"8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642"},{"path":"registries/RESEARCH_TASK_REGISTRY.csv","sha256":"815b378db63ec808b5e89214ce7ef6cac321cbbd2985369bca48f31c09cab5ab"},{"path":"research_control/program_state.yaml","sha256":"e18a2932936449e5b63fe1f684f7e2ccd848a34851c1ae510956af57e67abad4"},{"path":"research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml","sha256":"dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3"},{"path":"scripts/research_control/generated_report_provenance.py","sha256":"af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c"},{"path":"scripts/research_control/render_dependency_graph.py","sha256":"6fdbe02623855697110263a90bbfbbd9a223ff636f320df497593fce3f9bef39"}],"source_manifest_sha256":"0207b9d87df261c6e1c5f7cd0dc80c5f0691bc7159919cac978d256fa42ee099","source_path_count":"2202","task_count":"1222"} -->
 digraph research_dependency_graph {
   graph [label="navigational_support_only", labelloc="t"];
   node [shape=box];
@@ -2395,6 +2395,7 @@ digraph research_dependency_graph {
   "artifact:ddr_20260804_003" [label="DDR-20260804-003\\nartifact\\nsupport_only", node_class="artifact", state_label="support_only"];
   "artifact:ddr_20260804_004" [label="DDR-20260804-004\\nartifact\\nsupport_only", node_class="artifact", state_label="support_only"];
   "artifact:ddr_20260804_005" [label="DDR-20260804-005\\nartifact\\nsupport_only", node_class="artifact", state_label="support_only"];
+  "artifact:ddr_20260808_001" [label="DDR-20260808-001\\nartifact\\nsupport_only", node_class="artifact", state_label="support_only"];
   "artifact:docs_github_facing_md" [label="docs/github-facing/*.md\\nartifact\\nsupport_only", node_class="artifact", state_label="support_only"];
   "artifact:external_review_packets_eqsrc_family_closure_review_packet_v1_md" [label="external_review_packets/eqsrc_family_closure_review_packet_v1.md\\nartifact\\nsupport_only", node_class="artifact", state_label="support_only"];
   "artifact:folder_map_md" [label="FOLDER_MAP.md\\nartifact\\nsupport_only", node_class="artifact", state_label="support_only"];
@@ -4440,6 +4441,8 @@ digraph research_dependency_graph {
   "artifact:research_control_handoffs_handoff_0965_yaml" [label="research_control/handoffs/handoff-0965.yaml\\nartifact\\nsupport_only", node_class="artifact", state_label="support_only"];
   "artifact:research_control_handoffs_handoff_0966_md" [label="research_control/handoffs/handoff-0966.md\\nartifact\\nsupport_only", node_class="artifact", state_label="support_only"];
   "artifact:research_control_handoffs_handoff_0966_yaml" [label="research_control/handoffs/handoff-0966.yaml\\nartifact\\nsupport_only", node_class="artifact", state_label="support_only"];
+  "artifact:research_control_handoffs_handoff_0967_md" [label="research_control/handoffs/handoff-0967.md\\nartifact\\nsupport_only", node_class="artifact", state_label="support_only"];
+  "artifact:research_control_handoffs_handoff_0967_yaml" [label="research_control/handoffs/handoff-0967.yaml\\nartifact\\nsupport_only", node_class="artifact", state_label="support_only"];
   "artifact:research_control_handoffs_readme_md" [label="research_control/handoffs/README.md\\nartifact\\nsupport_only", node_class="artifact", state_label="support_only"];
   "artifact:research_control_missing_laws_missing_source_law_inventory_md" [label="research_control/missing_laws/missing_source_law_inventory.md\\nartifact\\nsupport_only", node_class="artifact", state_label="support_only"];
   "artifact:research_control_missing_laws_missing_source_law_inventory_yaml" [label="research_control/missing_laws/missing_source_law_inventory.yaml\\nartifact\\nsupport_only", node_class="artifact", state_label="support_only"];
@@ -12353,6 +12356,8 @@ digraph research_dependency_graph {
   "artifact:research_control_tasks_rt_20260804_004_roles_director_of_research_0_3_0_rt_20260804_004_yaml" [label="research_control/tasks/RT-20260804-004/roles/director-of-research@0.3.0--RT-20260804-004.yaml\\nartifact\\nsupport_only", node_class="artifact", state_label="support_only"];
   "artifact:research_control_tasks_rt_20260804_005_artifacts_generation_257_p16_t06_completion_role_parity_recovery_receipt_json" [label="research_control/tasks/RT-20260804-005/artifacts/generation_257_p16_t06_completion_role_parity_recovery_receipt.json\\nartifact\\nsupport_only", node_class="artifact", state_label="support_only"];
   "artifact:research_control_tasks_rt_20260804_005_jobs_completions_ajc_aj_rt_20260804_005_001_yaml" [label="research_control/tasks/RT-20260804-005/jobs/completions/AJC-AJ-RT-20260804-005-001.yaml\\nartifact\\nsupport_only", node_class="artifact", state_label="support_only"];
+  "artifact:research_control_tasks_rt_20260808_001_artifacts_v21_terminal_to_v22_intake_bridge_receipt_json" [label="research_control/tasks/RT-20260808-001/artifacts/v21_terminal_to_v22_intake_bridge_receipt.json\\nartifact\\nsupport_only", node_class="artifact", state_label="support_only"];
+  "artifact:research_control_tasks_rt_20260808_001_jobs_completions_ajc_aj_rt_20260808_001_001_yaml" [label="research_control/tasks/RT-20260808-001/jobs/completions/AJC-AJ-RT-20260808-001-001.yaml\\nartifact\\nsupport_only", node_class="artifact", state_label="support_only"];
   "artifact:research_control_tasks_rt_jobs" [label="research_control/tasks/RT-*/jobs/**\\nartifact\\nsupport_only", node_class="artifact", state_label="support_only"];
   "artifact:research_control_tasks_task_index_csv" [label="research_control/tasks/TASK_INDEX.csv\\nartifact\\nsupport_only", node_class="artifact", state_label="support_only"];
   "artifact:research_control_tasks_task_index_md" [label="research_control/tasks/TASK_INDEX.md\\nartifact\\nsupport_only", node_class="artifact", state_label="support_only"];
@@ -12849,6 +12854,7 @@ digraph research_dependency_graph {
   "blocked_claim:any_scientific_distance_to_gr_ontology_source_law_physical_interpretation_metric_downstream_gr_promotion_proof_publication_push_global_no_go_or_completed_derivation_change" [label="Human-gated claim: any scientific Distance-to-GR ontology source-law physical-interpretation metric downstream GR promotion proof publication push global no-go or completed-derivation change\\nhuman_gated_object\\nhuman_gated", node_class="human_gated_object", state_label="human_gated"];
   "blocked_claim:any_scientific_distance_to_gr_ontology_source_law_physical_interpretation_target_geometry_downstream_gr_promotion_proof_publication_push_global_no_go_or_completed_derivation_change" [label="Human-gated claim: any scientific Distance-to-GR ontology source-law physical-interpretation target-geometry downstream-GR promotion proof publication push global-no-go or completed-derivation change\\nhuman_gated_object\\nhuman_gated", node_class="human_gated_object", state_label="human_gated"];
   "blocked_claim:any_scientific_ontology_benchmark_proof_publication_push_route_or_completed_derivation_change" [label="Human-gated claim: any scientific ontology benchmark proof publication push route or completed-derivation change\\nhuman_gated_object\\nhuman_gated", node_class="human_gated_object", state_label="human_gated"];
+  "blocked_claim:any_scientific_ontology_gate_benchmark_proof_review_replication_tag_release_publication_external_action_or_completed_derivation_change" [label="Human-gated claim: any scientific ontology Gate benchmark proof review replication tag release publication external action or completed-derivation change\\nhuman_gated_object\\nhuman_gated", node_class="human_gated_object", state_label="human_gated"];
   "blocked_claim:any_scientific_ontology_source_law_gate_benchmark_publication_external_action_external_review_promotion_proof_or_completed_derivation_change" [label="Human-gated claim: any scientific ontology source-law Gate benchmark publication external-action external-review promotion proof or completed-derivation change\\nhuman_gated_object\\nhuman_gated", node_class="human_gated_object", state_label="human_gated"];
   "blocked_claim:any_scientific_ontology_source_law_metric_benchmark_gate_d_gate_e_einstein_equation_exact_gr_promotion_proof_publication_push_global_no_go_or_completed_derivation_change" [label="Human-gated claim: any scientific ontology source-law metric benchmark Gate D Gate E Einstein-equation exact-GR promotion proof publication push global-no-go or completed-derivation change\\nhuman_gated_object\\nhuman_gated", node_class="human_gated_object", state_label="human_gated"];
   "blocked_claim:any_scientific_ontology_source_law_metric_benchmark_gate_d_gate_e_proof_publication_push_hosted_workflow_or_completed_derivation_change" [label="Human-gated claim: any scientific ontology source-law metric benchmark Gate D Gate E proof publication push hosted-workflow or completed-derivation change\\nhuman_gated_object\\nhuman_gated", node_class="human_gated_object", state_label="human_gated"];
@@ -17429,8 +17435,10 @@ digraph research_dependency_graph {
   "blocked_claim:science_draft_mutation" [label="Human-gated claim: science draft mutation\\nhuman_gated_object\\nhuman_gated", node_class="human_gated_object", state_label="human_gated"];
   "blocked_claim:science_draft_promotion" [label="Blocked claim: science draft promotion\\nblocked_burden\\nblocked", node_class="blocked_burden", state_label="blocked"];
   "blocked_claim:science_gate_benchmark_proof_publication_push_external_action_or_promotion" [label="Blocked claim: science Gate benchmark proof publication push external action or promotion\\nblocked_burden\\nblocked", node_class="blocked_burden", state_label="blocked"];
+  "blocked_claim:science_gate_benchmark_proof_review_replication_tag_release_publication_push_external_action_or_completed_derivation" [label="Blocked claim: science Gate benchmark proof review replication tag release publication push external action or completed derivation\\nblocked_burden\\nblocked", node_class="blocked_burden", state_label="blocked"];
   "blocked_claim:science_ledger_mutation" [label="Blocked claim: science-ledger mutation\\nblocked_burden\\nblocked", node_class="blocked_burden", state_label="blocked"];
   "blocked_claim:science_ontology_benchmark_gate_e_proof_promotion_or_completed_derivation" [label="Blocked permission: science ontology benchmark Gate E proof promotion or completed derivation\\nblocked_burden\\nblocked", node_class="blocked_burden", state_label="blocked"];
+  "blocked_claim:science_ontology_gate_benchmark_proof_review_replication_tag_release_publication_push_or_external_action" [label="Blocked permission: science ontology Gate benchmark proof review replication tag release publication push or external action\\nblocked_burden\\nblocked", node_class="blocked_burden", state_label="blocked"];
   "blocked_claim:science_source_edit_outside_task_local_review_artifact" [label="Blocked permission: science source edit outside task-local review artifact\\nblocked_burden\\nblocked", node_class="blocked_burden", state_label="blocked"];
   "blocked_claim:science_source_edit_outside_task_local_review_artifacts" [label="Blocked permission: science source edit outside task-local review artifacts\\nblocked_burden\\nblocked", node_class="blocked_burden", state_label="blocked"];
   "blocked_claim:science_source_ledger_ontology_or_source_law_mutation" [label="Blocked permission: science source ledger ontology or source-law mutation\\nblocked_burden\\nblocked", node_class="blocked_burden", state_label="blocked"];
@@ -18224,6 +18232,10 @@ digraph research_dependency_graph {
   "blocked_claim:v1_test_conversion" [label="Blocked claim: v1 test conversion\\nblocked_burden\\nblocked", node_class="blocked_burden", state_label="blocked"];
   "blocked_claim:v21_plan_edit" [label="Blocked claim: v21 plan edit\\nblocked_burden\\nblocked", node_class="blocked_burden", state_label="blocked"];
   "blocked_claim:v21_plan_or_backlog_mutation" [label="Blocked permission: v21 plan or backlog mutation\\nblocked_burden\\nblocked", node_class="blocked_burden", state_label="blocked"];
+  "blocked_claim:v21_replay" [label="Blocked claim: V21 replay\\nblocked_burden\\nblocked", node_class="blocked_burden", state_label="blocked"];
+  "blocked_claim:v21_worker_checkpoint_generation_or_successor_replay" [label="Blocked permission: V21 worker checkpoint generation or successor replay\\nblocked_burden\\nblocked", node_class="blocked_burden", state_label="blocked"];
+  "blocked_claim:v22_p0_t02_execution" [label="Blocked claim: V22 P0-T02 execution\\nblocked_burden\\nblocked", node_class="blocked_burden", state_label="blocked"];
+  "blocked_claim:v22_registration" [label="Blocked permission: V22 registration\\nblocked_burden\\nblocked", node_class="blocked_burden", state_label="blocked"];
   "blocked_claim:valid_source_certificates_as_source_law_adoption" [label="Blocked claim: valid source certificates as source-law adoption\\nblocked_burden\\nblocked", node_class="blocked_burden", state_label="blocked"];
   "blocked_claim:validation_artifact_as_benchmark_promotion" [label="Blocked claim: validation artifact as benchmark promotion\\nblocked_burden\\nblocked", node_class="blocked_burden", state_label="blocked"];
   "blocked_claim:validation_artifact_as_completed_derivation" [label="Blocked claim: validation artifact as completed derivation\\nblocked_burden\\nblocked", node_class="blocked_burden", state_label="blocked"];
@@ -18371,6 +18383,7 @@ digraph research_dependency_graph {
   "blocked_claim:validator_policy_or_behavior_change" [label="Blocked claim: validator policy or behavior change\\nblocked_burden\\nblocked", node_class="blocked_burden", state_label="blocked"];
   "blocked_claim:validator_policy_schema_or_activation_edit" [label="Blocked claim: validator policy schema or activation edit\\nblocked_burden\\nblocked", node_class="blocked_burden", state_label="blocked"];
   "blocked_claim:validator_policy_schema_or_test_behavior_changes" [label="Blocked permission: validator policy schema or test behavior changes\\nblocked_burden\\nblocked", node_class="blocked_burden", state_label="blocked"];
+  "blocked_claim:validator_policy_schema_or_test_change" [label="Blocked permission: validator policy schema or test change\\nblocked_burden\\nblocked", node_class="blocked_burden", state_label="blocked"];
   "blocked_claim:validator_policy_schema_skill_or_base_role_edit" [label="Blocked permission: validator policy schema skill or base-role edit\\nblocked_burden\\nblocked", node_class="blocked_burden", state_label="blocked"];
   "blocked_claim:validator_policy_schema_skill_test_workflow_or_base_role_edit" [label="Blocked permission: validator policy schema skill test workflow or base-role edit\\nblocked_burden\\nblocked", node_class="blocked_burden", state_label="blocked"];
   "blocked_claim:validator_receipt_as_scientific_proof" [label="Blocked claim: validator receipt as scientific proof\\nblocked_burden\\nblocked", node_class="blocked_burden", state_label="blocked"];
@@ -18960,6 +18973,7 @@ digraph research_dependency_graph {
   "claim_boundary:CB-PS-REPOSITORY-TEST-CADENCE-001" [label="CB-PS-REPOSITORY-TEST-CADENCE-001\\nclaim_boundary\\nsupport_only", node_class="claim_boundary", state_label="support_only"];
   "claim_boundary:CB-PS-V21-P15-T06-REPRODUCIBILITY-PACKAGES-001" [label="CB-PS-V21-P15-T06-REPRODUCIBILITY-PACKAGES-001\\nclaim_boundary\\nsupport_only", node_class="claim_boundary", state_label="support_only"];
   "claim_boundary:CB-PS-V21-P16-T03-FINAL-EVIDENCE-PROVENANCE-001" [label="CB-PS-V21-P16-T03-FINAL-EVIDENCE-PROVENANCE-001\\nclaim_boundary\\nsupport_only", node_class="claim_boundary", state_label="support_only"];
+  "claim_boundary:CB-PS-V21-TERMINAL-TO-V22-INTAKE-BRIDGE-001" [label="CB-PS-V21-TERMINAL-TO-V22-INTAKE-BRIDGE-001\\nclaim_boundary\\nsupport_only", node_class="claim_boundary", state_label="support_only"];
   "claim_boundary:CB-RESP-LC-CURRENT-ONTOLOGY-ATLAS-GLUE-DERIVATION-001" [label="CB-RESP-LC-CURRENT-ONTOLOGY-ATLAS-GLUE-DERIVATION-001\\nclaim_boundary\\nsupport_only", node_class="claim_boundary", state_label="support_only"];
   "claim_boundary:CB-RESP-LC-FINITE-TOY-METRIC-RESPONSE-MODEL-001" [label="CB-RESP-LC-FINITE-TOY-METRIC-RESPONSE-MODEL-001\\nclaim_boundary\\nsupport_only", node_class="claim_boundary", state_label="support_only"];
   "claim_boundary:CB-RESP-LC-FINITE-TOY-METRIC-RESPONSE-MODEL-REFUTER-STRESS-001" [label="CB-RESP-LC-FINITE-TOY-METRIC-RESPONSE-MODEL-REFUTER-STRESS-001\\nclaim_boundary\\nsupport_only", node_class="claim_boundary", state_label="support_only"];
@@ -20825,6 +20839,7 @@ digraph research_dependency_graph {
   "handoff:handoff-0964" [label="handoff-0964\\nhandoff\\nsupport_only", node_class="handoff", state_label="support_only"];
   "handoff:handoff-0965" [label="handoff-0965\\nhandoff\\nsupport_only", node_class="handoff", state_label="support_only"];
   "handoff:handoff-0966" [label="handoff-0966\\nhandoff\\nsupport_only", node_class="handoff", state_label="support_only"];
+  "handoff:handoff-0967" [label="handoff-0967\\nhandoff\\nsupport_only", node_class="handoff", state_label="support_only"];
   "job:AJ-RT-20260608-001-001" [label="AJ-RT-20260608-001-001\\nagent_job\\nsupport_only", node_class="agent_job", state_label="support_only"];
   "job:AJ-RT-20260608-002-001" [label="AJ-RT-20260608-002-001\\nagent_job\\nsupport_only", node_class="agent_job", state_label="support_only"];
   "job:AJ-RT-20260608-003-001" [label="AJ-RT-20260608-003-001\\nagent_job\\nsupport_only", node_class="agent_job", state_label="support_only"];
@@ -22046,6 +22061,7 @@ digraph research_dependency_graph {
   "job:AJ-RT-20260804-003-001" [label="AJ-RT-20260804-003-001\\nagent_job\\nsupport_only", node_class="agent_job", state_label="support_only"];
   "job:AJ-RT-20260804-004-001" [label="AJ-RT-20260804-004-001\\nagent_job\\nsupport_only", node_class="agent_job", state_label="support_only"];
   "job:AJ-RT-20260804-005-001" [label="AJ-RT-20260804-005-001\\nagent_job\\nsupport_only", node_class="agent_job", state_label="support_only"];
+  "job:AJ-RT-20260808-001-001" [label="AJ-RT-20260808-001-001\\nagent_job\\nsupport_only", node_class="agent_job", state_label="support_only"];
   "ledger:benchmark_promotion" [label="benchmark_promotion\\nledger_row\\nblocked", node_class="ledger_row", state_label="blocked"];
   "ledger:einstein_equations" [label="einstein_equations\\nledger_row\\nscience_draft", node_class="ledger_row", state_label="science_draft"];
   "ledger:finite_toy_metric_response" [label="finite_toy_metric_response\\nledger_row\\nfrozen_negative", node_class="ledger_row", state_label="frozen_negative"];
@@ -24993,6 +25009,7 @@ digraph research_dependency_graph {
   "task:RT-20260804-003" [label="RT-20260804-003\\ntask\\nsupport_only", node_class="task", state_label="support_only"];
   "task:RT-20260804-004" [label="RT-20260804-004\\ntask\\nsupport_only", node_class="task", state_label="support_only"];
   "task:RT-20260804-005" [label="RT-20260804-005\\ntask\\nsupport_only", node_class="task", state_label="support_only"];
+  "task:RT-20260808-001" [label="RT-20260808-001\\ntask\\nsupport_only", node_class="task", state_label="support_only"];
   "artifact:ddr_20260608_001" -> "job:AJ-RT-20260608-001-001" [label="selects_next", edge_class="selects_next"];
   "artifact:ddr_20260608_001" -> "task:RT-20260608-001" [label="selects_next", edge_class="selects_next"];
   "artifact:ddr_20260608_002" -> "job:AJ-RT-20260608-002-001" [label="selects_next", edge_class="selects_next"];
@@ -27435,6 +27452,8 @@ digraph research_dependency_graph {
   "artifact:ddr_20260804_004" -> "task:RT-20260804-004" [label="selects_next", edge_class="selects_next"];
   "artifact:ddr_20260804_005" -> "job:AJ-RT-20260804-005-001" [label="selects_next", edge_class="selects_next"];
   "artifact:ddr_20260804_005" -> "task:RT-20260804-005" [label="selects_next", edge_class="selects_next"];
+  "artifact:ddr_20260808_001" -> "job:AJ-RT-20260808-001-001" [label="selects_next", edge_class="selects_next"];
+  "artifact:ddr_20260808_001" -> "task:RT-20260808-001" [label="selects_next", edge_class="selects_next"];
   "artifact:research_control_program_state_yaml" -> "ledger:gen_h" [label="updates_ledger", edge_class="updates_ledger"];
   "artifact:research_control_program_state_yaml" -> "ledger:retain_h" [label="updates_ledger", edge_class="updates_ledger"];
   "artifact:research_control_program_state_yaml" -> "ledger:source_equivalence_eqsrc" [label="updates_ledger", edge_class="updates_ledger"];
@@ -41329,6 +41348,10 @@ digraph research_dependency_graph {
   "claim_boundary:CB-PS-V21-P16-T03-FINAL-EVIDENCE-PROVENANCE-001" -> "blocked_claim:project_system_audit_as_gate_benchmark_publication_or_completed_derivation" [label="forbids_overread", edge_class="forbids_overread"];
   "claim_boundary:CB-PS-V21-P16-T03-FINAL-EVIDENCE-PROVENANCE-001" -> "blocked_claim:validator_or_clean_reproduction_pass_as_scientific_proof_or_independent_replication" [label="forbids_overread", edge_class="forbids_overread"];
   "claim_boundary:CB-PS-V21-P16-T03-FINAL-EVIDENCE-PROVENANCE-001" -> "blocked_claim:any_canonical_science_ontology_gate_benchmark_proof_publication_external_action_independent_replication_or_completed_derivation_change" [label="requires_human_gate", edge_class="requires_human_gate"];
+  "claim_boundary:CB-PS-V21-TERMINAL-TO-V22-INTAKE-BRIDGE-001" -> "blocked_claim:science_gate_benchmark_proof_review_replication_tag_release_publication_push_external_action_or_completed_derivation" [label="forbids_overread", edge_class="forbids_overread"];
+  "claim_boundary:CB-PS-V21-TERMINAL-TO-V22-INTAKE-BRIDGE-001" -> "blocked_claim:v21_replay" [label="forbids_overread", edge_class="forbids_overread"];
+  "claim_boundary:CB-PS-V21-TERMINAL-TO-V22-INTAKE-BRIDGE-001" -> "blocked_claim:v22_p0_t02_execution" [label="forbids_overread", edge_class="forbids_overread"];
+  "claim_boundary:CB-PS-V21-TERMINAL-TO-V22-INTAKE-BRIDGE-001" -> "blocked_claim:any_scientific_ontology_gate_benchmark_proof_review_replication_tag_release_publication_external_action_or_completed_derivation_change" [label="requires_human_gate", edge_class="requires_human_gate"];
   "claim_boundary:CB-RESP-LC-CURRENT-ONTOLOGY-ATLAS-GLUE-DERIVATION-001" -> "blocked_claim:atlasglue_src_plus_adoption" [label="forbids_overread", edge_class="forbids_overread"];
   "claim_boundary:CB-RESP-LC-CURRENT-ONTOLOGY-ATLAS-GLUE-DERIVATION-001" -> "blocked_claim:atlasgluedisc_src_plus_adoption" [label="forbids_overread", edge_class="forbids_overread"];
   "claim_boundary:CB-RESP-LC-CURRENT-ONTOLOGY-ATLAS-GLUE-DERIVATION-001" -> "blocked_claim:benchmark_promotion" [label="forbids_overread", edge_class="forbids_overread"];
@@ -62603,6 +62626,7 @@ digraph research_dependency_graph {
   "handoff:handoff-0964" -> "object:v21_p16_t06_goal_relay_closure" [label="selects_next", edge_class="selects_next"];
   "handoff:handoff-0965" -> "task:RT-20260804-004" [label="depends_on", edge_class="depends_on"];
   "handoff:handoff-0966" -> "task:RT-20260804-005" [label="depends_on", edge_class="depends_on"];
+  "handoff:handoff-0967" -> "task:RT-20260808-001" [label="depends_on", edge_class="depends_on"];
   "job:AJ-RT-20260608-001-001" -> "artifact:agents" [label="constructs", edge_class="constructs"];
   "job:AJ-RT-20260608-001-001" -> "artifact:codex_skills_continue_research" [label="constructs", edge_class="constructs"];
   "job:AJ-RT-20260608-001-001" -> "artifact:research_control" [label="constructs", edge_class="constructs"];
@@ -99303,6 +99327,20 @@ digraph research_dependency_graph {
   "job:AJ-RT-20260804-005-001" -> "blocked_claim:historical_scientific_result_reinterpretation" [label="forbids_overread", edge_class="forbids_overread"];
   "job:AJ-RT-20260804-005-001" -> "blocked_claim:validator_test_schema_skill_policy_or_base_role_semantics_change" [label="forbids_overread", edge_class="forbids_overread"];
   "job:AJ-RT-20260804-005-001" -> "handoff:handoff-0966" [label="handoffs_to", edge_class="handoffs_to"];
+  "job:AJ-RT-20260808-001-001" -> "artifact:research_control_handoffs_handoff_0967_md" [label="audits", edge_class="audits"];
+  "job:AJ-RT-20260808-001-001" -> "artifact:research_control_handoffs_handoff_0967_yaml" [label="audits", edge_class="audits"];
+  "job:AJ-RT-20260808-001-001" -> "artifact:research_control_program_state_yaml" [label="audits", edge_class="audits"];
+  "job:AJ-RT-20260808-001-001" -> "artifact:research_control_tasks_rt_20260808_001_artifacts_v21_terminal_to_v22_intake_bridge_receipt_json" [label="audits", edge_class="audits"];
+  "job:AJ-RT-20260808-001-001" -> "artifact:research_control_tasks_rt_20260808_001_jobs_completions_ajc_aj_rt_20260808_001_001_yaml" [label="audits", edge_class="audits"];
+  "job:AJ-RT-20260808-001-001" -> "task:RT-20260808-001" [label="depends_on", edge_class="depends_on"];
+  "job:AJ-RT-20260808-001-001" -> "blocked_claim:benchmark_promotion" [label="forbids_overread", edge_class="forbids_overread"];
+  "job:AJ-RT-20260808-001-001" -> "blocked_claim:completed_derivation" [label="forbids_overread", edge_class="forbids_overread"];
+  "job:AJ-RT-20260808-001-001" -> "blocked_claim:science_ontology_gate_benchmark_proof_review_replication_tag_release_publication_push_or_external_action" [label="forbids_overread", edge_class="forbids_overread"];
+  "job:AJ-RT-20260808-001-001" -> "blocked_claim:v21_worker_checkpoint_generation_or_successor_replay" [label="forbids_overread", edge_class="forbids_overread"];
+  "job:AJ-RT-20260808-001-001" -> "blocked_claim:v22_p0_t02_execution" [label="forbids_overread", edge_class="forbids_overread"];
+  "job:AJ-RT-20260808-001-001" -> "blocked_claim:v22_registration" [label="forbids_overread", edge_class="forbids_overread"];
+  "job:AJ-RT-20260808-001-001" -> "blocked_claim:validator_policy_schema_or_test_change" [label="forbids_overread", edge_class="forbids_overread"];
+  "job:AJ-RT-20260808-001-001" -> "handoff:handoff-0967" [label="handoffs_to", edge_class="handoffs_to"];
   "ledger:benchmark_promotion" -> "blocked_claim:benchmark_promotion" [label="blocks", edge_class="blocks"];
   "ledger:benchmark_promotion" -> "blocked_claim:completed_derivation" [label="blocks", edge_class="blocks"];
   "ledger:benchmark_promotion" -> "object:exact_gr_benchmark" [label="requires", edge_class="requires"];
@@ -101969,4 +102007,6 @@ digraph research_dependency_graph {
   "task:RT-20260804-004" -> "job:AJ-RT-20260804-004-001" [label="depends_on", edge_class="depends_on"];
   "task:RT-20260804-004" -> "task:RT-20260804-005" [label="handoffs_to", edge_class="handoffs_to"];
   "task:RT-20260804-005" -> "job:AJ-RT-20260804-005-001" [label="depends_on", edge_class="depends_on"];
+  "task:RT-20260804-005" -> "task:RT-20260808-001" [label="handoffs_to", edge_class="handoffs_to"];
+  "task:RT-20260808-001" -> "job:AJ-RT-20260808-001-001" [label="depends_on", edge_class="depends_on"];
 }

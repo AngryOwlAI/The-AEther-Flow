@@ -1,0 +1,335 @@
+validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+final_repository_validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+job_id: "AJ-RT-20260808-001-001"
+completion_id: "AJC-AJ-RT-20260808-001-001"
+task_id: "RT-20260808-001"
+task_type: "project_system_v21_terminal_state_to_v22_intake_bridge"
+decision_id: "DDR-20260808-001"
+role_id: "process-integrity-auditor"
+source_role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260808-001"
+status: "completed"
+created_at: "2026-08-08T20:49:28Z"
+started_at: "2026-08-08T20:49:28Z"
+completed_at: "2026-08-08T20:51:16Z"
+objective: "Reconcile the already-completed V21 outer-relay result with the tracked research-control spine, preserve the exact terminal commit tree and fingerprint, and create one ordinary handoff selecting only V22 P0-T02 without executing it."
+completion_summary: "Exact goal-helper lease-parity validation, V21 terminal commit/tree/fingerprint identity, released leases, successor absence, and clean source worktree are captured in one tracked bridge receipt. The stale preterminal active-state projection is superseded without rewriting V21 evidence, and V22 P0-T02 is selected but not executed."
+objective_result: "v21_terminal_state_reconciled_v22_p0_t02_intake_selected_checkpoint_pending"
+transaction_status: "completed_ready_for_governed_checkpoint"
+result_disposition: "repair_implemented_and_validated_precheckpoint"
+work_item_status: "control_bridge_completed_precheckpoint"
+plan_task_id: "P16-T06"
+recovery_for_plan_task_id: "P16-T06"
+next_plan_task_id: "P0-T02"
+next_plan_id: "recommendations_implementation_plan_continue_task-v22"
+checkpoint_commit:
+  status: "PENDING"
+  commit: ""
+  job_id: "AJ-RT-20260808-001-001"
+checkpoint_invocation_count: 0
+checkpoint_staged: false
+legacy_validation_used: false
+project_system_change_only: true
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+result:
+  status: "PASS_V21_TERMINAL_RECONCILED_V22_P0_T02_SELECTED"
+  strategy_id: "reconcile_v21_terminal_state_and_open_v22_p0_t02_intake_v1"
+  source_task_id: "RT-20260804-005"
+  source_job_id: "AJ-RT-20260804-005-001"
+  source_handoff_id: "handoff-0966"
+  source_handoff_sha256: "72e65c6af55c56f11fef6744e7b396158b8d163ab75557482a14b0dba5a8e5a0"
+  source_completion_sha256: "051ba1adc94e0b5b0d22ca5df54c54d813d34072e942c5ca22eb738c4e0164ef"
+  source_program_state_sha256: "796c61df2bacbcd971555fef6be40336e14be06cb0c71dcc8deeb2979d24f3a0"
+  source_head: "233e5dd7024fc068032d0afe86d85dc25e2246e9"
+  source_tree: "a7d9c9448de8e204643b093878ba4d84bd58f020"
+  terminal_fingerprint: "f513b6995a1c9c1e408541ef52f78e5d4c5155a2079ec200eca2ff54ac62a9f6"
+  terminal_generation: 257
+  final_work_item_count: 122
+  covered_recommendation_count: 72
+  unresolved_required_human_action_count: 0
+  successor_count: 0
+  active_lease_count: 0
+  v21_worker_replayed: false
+  v21_checkpoint_replayed: false
+  v22_p0_t02_executed: false
+  v22_plan_registered: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+artifact_receipts:
+  - path: "research_control/tasks/RT-20260808-001/jobs/AJ-RT-20260808-001-001.yaml"
+    sha256: "27558f586956a161905c0604442e3f99a09bcd05c33af4760448d8acdecc80b2"
+  - path: "research_control/tasks/RT-20260808-001/artifacts/v21_terminal_to_v22_intake_bridge_receipt.json"
+    sha256: "6120e330766493d4c07ed0ae9b7966327b60cbd522a43f0f4200a8e604e53a84"
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  preflight_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1132
+    relationship_row_count: 5700
+    semantic_row_count: 1132
+    vault_row_count: 1132
+    blocking_warning_count: 0
+    local_cache_only_warning_count: 0
+  refresh_needed: false
+  refresh_performed: false
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v21.md --json"
+      query_type: "lookup"
+      query_text: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  authority_note: "Generated indexes wiki SQLite Obsidian and .local relay state are retrieval layers only and are not authority; tracked sources exact hashes and validators govern the bridge."
+physics_payload_admission_result:
+  status: "admitted"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+ordinary_route_guard_admission_result:
+  status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+  source_handoff_id: "handoff-0966"
+  source_handoff_sha256_at_intake: "72e65c6af55c56f11fef6744e7b396158b8d163ab75557482a14b0dba5a8e5a0"
+  selected_plan_task_id: "P16-T06"
+  guard_outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  system_success_counts_as_physics: false
+  system_success_counts_as_distance_to_gr: false
+  scientific_status_changed: false
+  physics_promotion_authorized: false
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  observed_durable_outputs:
+    physics: []
+    project_system:
+      - "exact V21 terminal-state bridge receipt"
+      - "tracked active-state reconciliation"
+      - "one V22 P0-T02 intake handoff"
+      - "one governed checkpoint outcome"
+  accepted_criteria:
+    physics: []
+    project_system:
+      - "goal helper passes with lease parity and terminal_complete state"
+      - "terminal commit tree and fingerprint match the clean repository"
+      - "no V21 worker checkpoint or successor is replayed"
+      - "V22 P0-T02 is selected but not executed"
+      - "at most one governed checkpoint is invoked"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+assumption_delta:
+  - "No scientific assumption changes."
+  - "V21 terminal evidence is observed and preserved; it is not reconstructed or promoted."
+  - "The unregistered V22 draft is read only and P0-T02 remains unexecuted."
+mathematical_payload:
+  status: "not_applicable_project_system"
+  identity: "none"
+evidence:
+  - "The exact goal helper passes validation with required lease parity."
+  - "The V21 goal is terminal_complete at generation 257 with final fingerprint f513b6995a1c9c1e408541ef52f78e5d4c5155a2079ec200eca2ff54ac62a9f6."
+  - "HEAD and origin/main equal 233e5dd7024fc068032d0afe86d85dc25e2246e9 and the tree equals a7d9c9448de8e204643b093878ba4d84bd58f020."
+  - "The source worktree was clean before this bridge transaction."
+  - "The goal records 122 finalized work items 72 covered recommendations zero unresolved required human actions no active lease and no successor."
+counterevidence:
+  - "The committed program_state.yaml and handoff-0966 necessarily retain a preterminal checkpoint projection because outer relay terminalization occurred after the checkpoint commit."
+limitations:
+  - "The bridge does not reproduce or approve the V21 scientific baseline release package."
+  - "The V22 plan remains ignored and unregistered until P0-T03."
+  - "Tag creation public release reviewer contact publication push and external action remain unauthorized."
+recommendation_ids_covered: []
+sequence_step_ids_covered: []
+distance_to_gr_delta:
+  changed: false
+  effect: "none_project_system_terminal_state_reconciliation"
+  ledger_updated: false
+  rationale: "The bridge supplies no source law metric coupling Einstein equation benchmark pass Gate evidence external review or independent replication."
+validation_tier: "fast_project_system_with_terminal_identity_checks"
+validation_checks:
+  - "continue-research memory preflight"
+  - "exact V21 goal helper validation with lease parity"
+  - "Git HEAD tree origin and clean-source identity"
+  - "ordinary-route admission"
+  - "task taxonomy"
+  - "documentation impact"
+  - "claim language"
+  - "affected research-control validation"
+  - "generated projection freshness"
+  - "memory bootstrap and validate-only"
+  - "git diff check"
+  - "one governed checkpoint"
+external_review_class: "none_internal_control_reconciliation"
+replication_class: "none_not_a_scientific_replication"
+protected_authority:
+  scientific_status_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  benchmark_promotion_authorized: false
+  external_review_completed: false
+  independent_replication_completed: false
+  tag_creation_authorized: false
+  public_release_authorized: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false
+  completed_derivation_authorized: false
+blocked_conclusions:
+  - "control-state reconciliation as new V21 scientific payload"
+  - "terminal goal status as a source-derived GR result"
+  - "V22 P0-T02 selection as P0-T02 execution or release approval"
+  - "validator or checkpoint PASS as scientific truth"
+  - "same-context work as external review or independent replication"
+  - "tag release publication push or outward action without separate human authority"
+command_results:
+  - command: "continue-research memory preflight and canonical V21 lookup"
+    status: "PASS"
+    summary: "Live memory authority and the canonical V21 plan row resolve without blocking findings."
+  - command: "V21 goal helper validate --require-lease-parity"
+    status: "PASS"
+    summary: "Goal is terminal_complete with released leases no successor and exact final fingerprint."
+  - command: "Git repository identity inspection"
+    status: "PASS"
+    summary: "Source HEAD tree origin/main and clean worktree match the terminal receipt."
+  - command: "ordinary-route admission inspection"
+    status: "PASS"
+    summary: "This reconciliation job remains bound to handoff-0966 selected P16-T06; no protected override is claimed."
+  - command: "V22 route selection audit"
+    status: "PASS"
+    summary: "The new handoff selects only P0-T02 after checkpoint and records P0-T02 as unexecuted."
+validator_results:
+  - name: "memory_preflight"
+    outcome: "PASS"
+  - name: "goal_state_lease_parity"
+    outcome: "PASS_TERMINAL_COMPLETE_GENERATION_257"
+  - name: "terminal_repository_identity"
+    outcome: "PASS_HEAD_TREE_ORIGIN_AND_SOURCE_CLEAN"
+  - name: "ordinary_route_guard_admission"
+    outcome: "PASS_HANDOFF_0966_P16_T06_BELOW_THRESHOLD"
+  - name: "checkpoint_transaction"
+    outcome: "PENDING_SINGLE_INVOCATION"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Memory preflight and exact source inspection passed."
+      - "The goal helper validated terminal_complete state with lease parity."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The bridge receipt binds the exact source handoff completion program state goal file commit tree and final fingerprint."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Only task-local control state registry and approved generated-projection changes are present."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "Exactly one governed checkpoint remains authorized."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Current frontier compact frontier task index dependency graph and claim graph will be regenerated before checkpoint."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory synchronization and validate-only checks will run before checkpoint."
+  claim_language_linter:
+    status: "PENDING"
+    evidence:
+      - "Changed-source claim-language validation will run before checkpoint."
+authorization_layers:
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  submission_authorized: false
+  public_release_authorized: false
+  reviewer_contact_authorized: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "Project-system terminal-state reconciliation only; no protected Gate review is authorized."
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  source_law_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+project_improvement_signals: []
+project_improvement_signal_status: "none"
+documentation_impact_path: "research_control/tasks/RT-20260808-001/documentation_impact.yaml"
+completion_evidence:
+  primary_artifact: "research_control/tasks/RT-20260808-001/artifacts/v21_terminal_to_v22_intake_bridge_receipt.json"
+  handoff_path: "research_control/handoffs/handoff-0967.yaml"
+  program_state_path: "research_control/program_state.yaml"
+parent_child_synthesis:
+  required: false
+  rationale: "Project-system reconciliation job; physics parent-child decomposition is not applicable."
+out_of_scope_remaining_work:
+  - "V22 P0-T02 must build and validate the immutable internal V21 baseline release package in a separate AgentJob."
+  - "V22 P0-T03 must register the corrected plan and machine-readable backlog only after P0-T02 completes."
+  - "Tag creation public release reviewer contact publication push and every scientific or protected promotion remain separately gated."
+progress_summary: "One bounded project-system bridge reconciles exact V21 terminal evidence into tracked active state and selects V22 P0-T02 without executing it."
+remaining_work: "Execute V22 P0-T02 in the next separately admitted continue-research invocation; do not create a tag or public release."
+forbidden_conclusion_summary: "Terminal reconciliation and route selection are not science proof benchmark promotion external review independent replication release execution publication or completed derivation."
+coherent_resolution_summary: "The immutable V21 terminal result is preserved, the stale tracked routing projection is superseded, and one exact V22 P0-T02 intake route is prepared for checkpointed continuation."
+next_recommendation: "After the single governed checkpoint, execute exactly one bounded V22 P0-T02 baseline-release packaging job."
+authority_limits:
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  source_law_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  Gate_Chair_verdict_authorized: false
+  benchmark_promotion_authorized: false
+  external_review_completed: false
+  independent_replication_completed: false
+  public_release_authorized: false
+  reviewer_contact_authorized: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false
+  completed_derivation_authorized: false

@@ -1,12 +1,81 @@
 mode: "director_led_research_control"
-active_task_id: "RT-20260804-005"
-active_agent_job_id: "AJ-RT-20260804-005-001"
-latest_handoff_id: "handoff-0966"
-current_status: "generation_256_p16_t06_completion_contract_role_parity_reconciled_pending_checkpoint"
-claim_boundary_summary: "RT-20260804-005 eliminates the ten sealed generation-256 P16-T06 completion-contract and role-registry projections while preserving every scientific artifact and protected boundary. One fresh cumulative checkpoint and outer v4 terminal verification remain."
-next_plan_task_id: ""
-next_worker_skill: "none"
-next_recommended_action: "Run the single fresh cumulative checkpoint for AJ-RT-20260804-005-001. After it commits, return control to the outer v4 launcher for exact returned, repository-fingerprint, lease, successor-absence, and terminal_complete verification; do not create a successor."
+active_task_id: "RT-20260808-001"
+active_agent_job_id: "AJ-RT-20260808-001-001"
+latest_handoff_id: "handoff-0967"
+current_status: "v21_terminal_state_reconciled_v22_p0_t02_intake_selected_checkpoint_pending"
+claim_boundary_summary: "RT-20260808-001 preserves exact terminal V21 commit tree fingerprint lease and successor evidence, supersedes only the stale tracked active-state projection, and selects V22 P0-T02 without executing it. No scientific or release authority changes."
+next_plan_task_id: "P0-T02"
+next_worker_skill: "continue-research"
+next_recommended_action: "After the governed checkpoint for AJ-RT-20260808-001-001, execute exactly one bounded V22 P0-T02 baseline-release packaging AgentJob; do not create a tag or public release."
+
+v21_terminal_to_v22_intake_bridge:
+  task_id: "RT-20260808-001"
+  parent_task_id: "RT-20260804-005"
+  parent_handoff_id: "handoff-0966"
+  source_plan_id: "recommendations_implementation_plan_continue_task-v21"
+  source_plan_task_id: "P16-T06"
+  recovery_for_plan_task_id: "P16-T06"
+  intake_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  next_plan_task_id: "P0-T02"
+  claim_boundary_id: "CB-PS-V21-TERMINAL-TO-V22-INTAKE-BRIDGE-001"
+  status: "PASS_V21_TERMINAL_RECONCILED_V22_P0_T02_SELECTED"
+  work_item_status: "control_bridge_completed_checkpoint_pending"
+  route_label: "project-system-terminal-state-reconciliation"
+  selected_role_family: "process-integrity-auditor@0.1.0"
+  selected_worker_skill: "continue-research"
+  selected_strategy_id: "reconcile_v21_terminal_state_and_open_v22_p0_t02_intake_v1"
+  target_derivation_milestone: "none"
+  milestone_burden: "Project-system terminal-state reconciliation only; no scientific or Distance-to-GR burden advances."
+  source_head: "233e5dd7024fc068032d0afe86d85dc25e2246e9"
+  source_tree: "a7d9c9448de8e204643b093878ba4d84bd58f020"
+  source_terminal_fingerprint: "f513b6995a1c9c1e408541ef52f78e5d4c5155a2079ec200eca2ff54ac62a9f6"
+  agent_job_id: "AJ-RT-20260808-001-001"
+  decision_id: "DDR-20260808-001"
+  execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260808-001"
+  source_handoff_id: "handoff-0966"
+  source_handoff_path: "research_control/handoffs/handoff-0966.yaml"
+  source_handoff_sha256: "72e65c6af55c56f11fef6744e7b396158b8d163ab75557482a14b0dba5a8e5a0"
+  source_completion_path: "research_control/tasks/RT-20260804-005/jobs/completions/AJC-AJ-RT-20260804-005-001.yaml"
+  source_completion_sha256: "051ba1adc94e0b5b0d22ca5df54c54d813d34072e942c5ca22eb738c4e0164ef"
+  bridge_receipt_path: "research_control/tasks/RT-20260808-001/artifacts/v21_terminal_to_v22_intake_bridge_receipt.json"
+  bridge_receipt_sha256: "6120e330766493d4c07ed0ae9b7966327b60cbd522a43f0f4200a8e604e53a84"
+  completion_path: "research_control/tasks/RT-20260808-001/jobs/completions/AJC-AJ-RT-20260808-001-001.yaml"
+  completion_sha256: "eb17d2bb97a1400dc12f69f7219aedd1565c29d3fca4fdb38d3a7727a926a37b"
+  handoff_id: "handoff-0967"
+  handoff_path: "research_control/handoffs/handoff-0967.yaml"
+  handoff_sha256: "7c84ec6d1fac46c20ca7cc4d18e2db85b2f64c00396c733c71ebb92df8ea3e0d"
+  final_work_item_count: 122
+  covered_v21_recommendation_count: 72
+  unresolved_required_human_action_count: 0
+  active_lease_count: 0
+  successor_count: 0
+  v21_worker_replayed: false
+  v21_checkpoint_replayed: false
+  v22_p0_t02_executed: false
+  v22_plan_registered: false
+  canonical_science_modified: false
+  scientific_claims_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  tag_creation_authorized: false
+  public_release_authorized: false
+  publication_authorized: false
+  external_action_authorized: false
+  checkpoint_invocation_count: 0
+  checkpoint_committed: false
+  selected_next_work_item: "P0-T02"
+  selected_next_plan_task_id: "P0-T02"
+  selected_next_worker_skill: "continue-research"
+  selected_next_role_family: "process-integrity-auditor@0.1.0"
+  selected_next_packet_type: "internal_baseline_release_package"
+  selected_next_route_label: "shared-release-control"
+  selected_next_strategy_id: "build_v21_terminal_baseline_release_package_v1"
+  selected_next_requires_human_gate: false
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
 
 p16_t06_completion_contract_role_parity_recovery:
   task_id: "RT-20260804-005"

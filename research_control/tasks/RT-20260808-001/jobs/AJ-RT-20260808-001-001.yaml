@@ -1,0 +1,293 @@
+job_id: "AJ-RT-20260808-001-001"
+task_id: "RT-20260808-001"
+decision_id: "DDR-20260808-001"
+role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260808-001"
+status: "completed"
+validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+created_at: "2026-08-08T20:49:28Z"
+started_at: "2026-08-08T20:49:28Z"
+completed_at: "2026-08-08T20:51:16Z"
+completion_path: "research_control/tasks/RT-20260808-001/jobs/completions/AJC-AJ-RT-20260808-001-001.yaml"
+requires_human_gate: false
+human_authorization_note: "The explicit V22 implementation goal authorizes a new program intake after read-only V21 terminal verification. It grants no protected science tag release publication push reviewer-contact or external-action authority."
+objective: "Reconcile the already-completed V21 outer-relay result with the tracked research-control spine, preserve the exact terminal commit tree and fingerprint, and create one ordinary handoff selecting only V22 P0-T02 without executing it."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system terminal-state reconciliation only; no scientific or Distance-to-GR burden advances."
+route_label: "project-system-terminal-state-reconciliation"
+route_reason: "terminal_goal_state_validated_tracked_projection_requires_reconciliation"
+route_strategy_id: "reconcile_v21_terminal_state_and_open_v22_p0_t02_intake_v1"
+source_head: "233e5dd7024fc068032d0afe86d85dc25e2246e9"
+source_tree: "a7d9c9448de8e204643b093878ba4d84bd58f020"
+plan_task_id: "P16-T06"
+recovery_for_plan_task_id: "P16-T06"
+next_plan_task_ids:
+  - "P0-T02"
+next_plan_task_execution_authorized: false
+v21_worker_replay_authorized: false
+v21_checkpoint_replay_authorized: false
+project_system_change_only: true
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  preflight_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1132
+    relationship_row_count: 5700
+    semantic_row_count: 1132
+    vault_row_count: 1132
+    blocking_warning_count: 0
+    local_cache_only_warning_count: 0
+  refresh_needed: false
+  refresh_performed: false
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v21.md --json"
+      query_type: "lookup"
+      query_text: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  additional_canonical_inspections:
+    - canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+      source_hash_status: "ignored_unregistered_draft_inspected_read_only"
+  authority_note: "Tracked sources registries handoffs completions and exact Git identity govern; generated wiki SQLite Obsidian and .local caches are retrieval layers only and are not authority."
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  candidate_family: "not_applicable"
+  assumption_delta:
+    - "No scientific assumption changes; the packet reconciles only terminal-state control projections."
+    - "The V21 terminal commit tree fingerprint completion and negative scientific status remain immutable."
+  materiality_basis: "A tracked bridge is required before the next V22 AgentJob can satisfy exact prospective route admission."
+  source_basis:
+    - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+    - "research_control/handoffs/handoff-0966.yaml"
+    - "research_control/tasks/RT-20260804-005/jobs/completions/AJC-AJ-RT-20260804-005-001.yaml"
+    - ".codex/skills/continue-research-goal/goals/goal-crg-20260720T161354Z-96bc2664ce31bfe0.md"
+  expected_artifact_paths:
+    - "research_control/tasks/RT-20260808-001/artifacts/v21_terminal_to_v22_intake_bridge_receipt.json"
+  project_system_justification: "This is a uniquely determined active-state reconciliation and next-route intake; it creates no physics payload."
+  process_receipts_excluded_from_payload:
+    - "goal_helper_pass"
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  expected_durable_outputs:
+    physics: []
+    project_system:
+      - "exact V21 terminal-state bridge receipt"
+      - "tracked active-state reconciliation"
+      - "one V22 P0-T02 intake handoff"
+      - "one governed checkpoint outcome"
+  acceptance_criteria:
+    physics: []
+    project_system:
+      - "goal helper passes with lease parity and terminal_complete state"
+      - "terminal commit tree and fingerprint match the clean repository"
+      - "no V21 worker checkpoint or successor is replayed"
+      - "V22 P0-T02 is selected but not executed"
+      - "at most one governed checkpoint is invoked"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: false
+    exception_id: ""
+    evidence_path: ""
+    evidence_sha256: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0966"
+  source_handoff_path: "research_control/handoffs/handoff-0966.yaml"
+  source_handoff_sha256: "72e65c6af55c56f11fef6744e7b396158b8d163ab75557482a14b0dba5a8e5a0"
+  selected_plan_task_id: "P16-T06"
+  guard_outcome: "below_threshold"
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+allowed_read_paths:
+  - "SOUL.md"
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/**"
+  - ".codex/skills/continue-research-goal/**"
+  - ".agents/roles/research_ops/**"
+  - ".agents/schemas/**"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  - "research_control/**"
+  - "scripts/**"
+  - "registries/**"
+allowed_write_paths:
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0967.md"
+  - "research_control/handoffs/handoff-0967.yaml"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260808-001/**"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/tex/**"
+allowed_generated_paths:
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/tex/**"
+forbidden_paths:
+  - "ontology/**"
+  - "legacy_ontology/**"
+  - "manuscripts/**"
+  - "tex/**"
+  - "html/**"
+  - "pdf/**"
+  - "research_control/design/**"
+  - "scripts/**"
+  - "tests/**"
+  - ".codex/skills/**"
+  - ".agents/roles/**"
+  - ".agents/schemas/**"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+forbidden_source_classes:
+  - "canonical_ontology_write"
+  - "scientific_source_mutation"
+  - "source_law_adoption"
+  - "benchmark_promotion"
+  - "physics_claim_promotion"
+  - "gate_chair_verdict"
+  - "proof_authority"
+  - "completed_derivation_claim"
+  - "v21_worker_or_checkpoint_replay"
+  - "v22_p0_t02_execution"
+  - "tag_or_release_creation"
+  - "external_system_mutation"
+approved_commands:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v21.md --json"
+  - ".venv/bin/python .codex/skills/continue-research-goal/scripts/goal_state.py --goals-dir .codex/skills/continue-research-goal/goals validate --goal-file .codex/skills/continue-research-goal/goals/goal-crg-20260720T161354Z-96bc2664ce31bfe0.md --require-lease-parity"
+  - ".venv/bin/python scripts/research_control/task_taxonomy.py --validate-repository --json"
+  - ".venv/bin/python -m scripts.validation.cli run --profile affected --paths research_control/tasks/RT-20260808-001 research_control/handoffs/handoff-0967.yaml research_control/program_state.yaml --explain"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --job-id AJ-RT-20260808-001-001 --json-summary"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --write"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --json output/research_dependency_graph.json --markdown wiki/indexes/research_dependency_graph.md --dot output/research_dependency_graph.dot"
+  - ".venv/bin/python scripts/research_control/generate_claim_graph_v1.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+  - ".venv/bin/python scripts/research_control/validate_generated_report_freshness.py --json"
+  - "git diff --check"
+  - "git diff --cached --check"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260808-001-001"
+required_validators:
+  - "memory_preflight"
+  - "goal_state_lease_parity"
+  - "terminal_repository_identity"
+  - "task_taxonomy"
+  - "project_change_classifier"
+  - "project_improvement_signals"
+  - "documentation_impact"
+  - "claim_language_changed"
+  - "research_control_diff"
+  - "generated_report_freshness"
+  - "memory_sync"
+  - "memory_core"
+  - "git_diff_check"
+  - "checkpoint_transaction"
+expected_outputs:
+  - "research_control/tasks/RT-20260808-001/artifacts/v21_terminal_to_v22_intake_bridge_receipt.json"
+  - "research_control/tasks/RT-20260808-001/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260808-001/jobs/completions/AJC-AJ-RT-20260808-001-001.yaml"
+  - "research_control/handoffs/handoff-0967.yaml"
+  - "research_control/handoffs/handoff-0967.md"
+  - "research_control/program_state.yaml"
+claim_boundary: "CB-PS-V21-TERMINAL-TO-V22-INTAKE-BRIDGE-001"
+resolves_signal_routing: false
+documentation_impact_id: "DI-RT-20260808-001-001"
+completion_id: "AJC-AJ-RT-20260808-001-001"
+notes: "This job is the single bounded tracked-state bridge required by route admission. It does not execute P0-T02 and creates no tag release publication push or scientific authority."
