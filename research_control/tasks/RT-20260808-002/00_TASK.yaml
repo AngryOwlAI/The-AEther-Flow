@@ -1,0 +1,79 @@
+task_id: "RT-20260808-002"
+task_type: "project_system_v22_p0_t02_internal_v21_baseline_release"
+title: "Build the immutable internal V21 scientific baseline release candidate"
+task_taxonomy:
+  schema_id: "v21_task_taxonomy_v1"
+  work_kind: "benchmark_or_recovery"
+  milestone: "benchmark_promotion"
+  candidate_family: "v21_terminal_scientific_baseline_release"
+  result_kind: "implemented_and_validated_or_precisely_blocked"
+  authority: "project_control"
+  scope: "project_system"
+validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+status: "completed"
+created_at: "2026-08-08T21:32:43Z"
+updated_at: "2026-08-08T22:03:48Z"
+closed_at: "2026-08-08T22:03:48Z"
+parent_task_id: "RT-20260808-001"
+parent_handoff_id: "handoff-0967"
+current_decision_id: "DDR-20260808-002"
+current_job_id: "AJ-RT-20260808-002-001"
+role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260808-002"
+requires_human_gate: false
+human_authorization_note: "The user requested implementation of the complete V22 plan. P0-T02 itself explicitly authorizes preparation of an internal baseline release candidate while withholding actual tag creation and public release for a later separate human check."
+implementation_plan:
+  source_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  source_plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  source_plan_hash: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+  source_phase_id: "P0"
+  source_plan_task_id: "P0-T02"
+  next_plan_task_id: "P0-T03"
+objective: "Pin the exact terminal V21 commit and tree; create a complete hash-resolving canonical/derivative manifest, deterministic internal release-candidate archive, selected clean-environment reproduction receipt, freeze policy, proposed tag record, and calibrated release notes; validate the package without creating a tag or performing any outward release action."
+target_derivation_milestone: "none"
+milestone_burden: "Release-control packaging and reproducibility audit only; no scientific or Distance-to-GR burden advances."
+route_label: "shared-release-control"
+route_strategy_id: "build_v21_terminal_baseline_release_package_v1"
+baseline_commit: "233e5dd7024fc068032d0afe86d85dc25e2246e9"
+baseline_tree: "a7d9c9448de8e204643b093878ba4d84bd58f020"
+baseline_terminal_fingerprint: "f513b6995a1c9c1e408541ef52f78e5d4c5155a2079ec200eca2ff54ac62a9f6"
+proposed_tag_name: "v21-scientific-baseline-233e5dd7"
+project_system_change_only: true
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+tag_creation_authorized: false
+public_release_authorized: false
+claim_boundary_id: "CB-PS-V22-P0-T02-V21-BASELINE-RELEASE-001"
+claim_boundary:
+  allowed_scope: "Package and audit exact terminal V21 bytes and existing evidence; write only task-local release-control artifacts, control records, registries, approved generated projections, one P0-T03 handoff, and one governed checkpoint."
+  baseline_commit: "233e5dd7024fc068032d0afe86d85dc25e2246e9"
+  baseline_tree: "a7d9c9448de8e204643b093878ba4d84bd58f020"
+  canonical_science_modified: false
+  baseline_history_rewritten: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  tag_creation_authorized: false
+  public_release_authorized: false
+documentation_impact_id: "DI-RT-20260808-002-001"
+completion_id: "AJC-AJ-RT-20260808-002-001"
+output_artifacts:
+  - "research_control/tasks/RT-20260808-002/artifacts/v21_terminal_baseline_release_manifest_v1.json"
+  - "research_control/tasks/RT-20260808-002/artifacts/v21_terminal_baseline_canonical_derivative_partition_v1.json"
+  - "research_control/tasks/RT-20260808-002/artifacts/v21_terminal_baseline_reproduction_receipt_v1.json"
+  - "research_control/tasks/RT-20260808-002/artifacts/v21_terminal_baseline_freeze_policy_v1.md"
+  - "research_control/tasks/RT-20260808-002/artifacts/v21_terminal_baseline_release_notes_v1.md"
+  - "research_control/tasks/RT-20260808-002/artifacts/v21_terminal_baseline_proposed_tag_v1.yaml"
+  - "research_control/tasks/RT-20260808-002/artifacts/v21_terminal_scientific_baseline_release_candidate_v1.tar"
+  - "research_control/tasks/RT-20260808-002/artifacts/v21_terminal_baseline_release_catalog_v1.json"
+  - "research_control/tasks/RT-20260808-002/artifacts/v22_p0_t02_baseline_release_validation_v1.json"
+  - "research_control/tasks/RT-20260808-002/artifacts/v22_p0_t02_compact_receipt_v1.json"
+closure_status: "v22_p0_t02_internal_v21_baseline_release_candidate_complete_checkpoint_pending"
+summary: "P0-T02 pins the terminal V21 commit and tree in a deterministic 2427-member internal release candidate. All 1097 registered canonical sources and 1169 derivatives close by hash; five selected reproduction profiles and 33 release checks pass; tag creation and public release remain unauthorized."
+next_recommended_action: "Run the one governed checkpoint, then execute exactly one bounded V22 P0-T03 registration and backlog-materialization job without creating a tag or public release."
+project_improvement_signals: []
+notes: "The package preserves exact negative V21 scientific status. Reproduction PASS is operational evidence only and cannot imply theorem truth, external validation, independent replication, publication readiness, or source-derived GR."

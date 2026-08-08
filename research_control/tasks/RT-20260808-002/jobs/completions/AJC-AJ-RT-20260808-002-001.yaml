@@ -1,0 +1,352 @@
+validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+final_repository_validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+job_id: "AJ-RT-20260808-002-001"
+completion_id: "AJC-AJ-RT-20260808-002-001"
+task_id: "RT-20260808-002"
+task_type: "project_system_v22_p0_t02_internal_v21_baseline_release"
+decision_id: "DDR-20260808-002"
+role_id: "process-integrity-auditor"
+source_role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260808-002"
+status: "completed"
+created_at: "2026-08-08T21:32:43Z"
+started_at: "2026-08-08T21:32:43Z"
+completed_at: "2026-08-08T22:03:48Z"
+objective: "Create and validate an immutable internal V21 baseline release candidate bound to the exact terminal commit and tree, with complete registered-source closure, derivative traceability, selected external-directory reproduction, calibrated negative release notes, freeze policy, and proposed-tag metadata."
+completion_summary: "The exact terminal V21 commit and tree are packaged into a deterministic 2427-member internal release-candidate archive. All 1097 registered canonical TeX and Markdown sources and 1169 generated derivatives resolve and trace by hash. The selector theorem, Lean proof object, TeX manuscript, Python source-dynamics model, and P9 benchmark audit reproduce in external ephemeral source trees. Thirty-three independent task-local release checks pass."
+objective_result: "v22_p0_t02_internal_v21_baseline_release_candidate_complete_checkpoint_pending"
+transaction_status: "completed_ready_for_governed_checkpoint"
+result_disposition: "implemented_and_validated_precheckpoint"
+work_item_status: "completed_precheckpoint"
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P0-T02"
+next_plan_task_id: "P0-T03"
+checkpoint_commit:
+  status: "PENDING"
+  commit: ""
+  job_id: "AJ-RT-20260808-002-001"
+checkpoint_invocation_count: 0
+checkpoint_staged: false
+legacy_validation_used: false
+project_system_change_only: true
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+distance_to_gr_delta:
+  changed: false
+  effect: "none_project_system_release_packaging"
+  summary: "The internal release package changes no source law metric coupling Einstein equation benchmark Gate or completed-derivation status."
+physics_promotion_authorized: false
+proof_authority: false
+tag_creation_authorized: false
+public_release_authorized: false
+result:
+  status: "PASS_IMMUTABLE_INTERNAL_V21_BASELINE_RELEASE_CANDIDATE"
+  strategy_id: "build_v21_terminal_baseline_release_package_v1"
+  source_handoff_id: "handoff-0967"
+  source_handoff_sha256: "7c84ec6d1fac46c20ca7cc4d18e2db85b2f64c00396c733c71ebb92df8ea3e0d"
+  baseline_commit: "233e5dd7024fc068032d0afe86d85dc25e2246e9"
+  baseline_tree: "a7d9c9448de8e204643b093878ba4d84bd58f020"
+  terminal_fingerprint: "f513b6995a1c9c1e408541ef52f78e5d4c5155a2079ec200eca2ff54ac62a9f6"
+  canonical_source_count: 1097
+  canonical_tex_source_count: 448
+  canonical_markdown_source_count: 649
+  derivative_count: 1169
+  pdf_derivative_count: 16
+  html_derivative_count: 19
+  wiki_derivative_count: 1132
+  declared_control_report_derivative_count: 2
+  archive_member_count: 2427
+  archive_sha256: "b55e1fd1709197f2da3b8a0812acbb35f572897ea6e3c641fc35a1fc0c9d9fb0"
+  archive_bytes: 57477120
+  reproduction_profile_count: 5
+  reproduction_pass_count: 5
+  release_validation_check_count: 33
+  release_validation_failed_check_count: 0
+  proposed_tag_name: "v21-scientific-baseline-233e5dd7"
+  proposed_tag_exists: false
+  tag_created: false
+  public_release_created: false
+  Gate_B_status: "NOT_READY"
+  Gate_D_status: "NOT_READY"
+  Gate_E_status: "NOT_READY"
+  benchmark_case_count: 6
+  benchmark_inconclusive_count: 6
+  benchmark_pass_count: 0
+  independent_replication_count: 0
+  first_principles_gr_derivation_status: "OPEN_NOT_COMPLETED"
+  gr_source_derived: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+artifact_receipts:
+  - path: "research_control/tasks/RT-20260808-002/jobs/AJ-RT-20260808-002-001.yaml"
+    sha256: "574be9bc888d647aad48e5762088e0fca214e17d1c16b91d1c930495af2943f3"
+  - path: "research_control/tasks/RT-20260808-002/artifacts/build_v22_p0_t02_baseline_release.py"
+    sha256: "3aa9c09ad7840927a63dce81f6ef50e26945f90a607843b9d72cb2b34477ce21"
+  - path: "research_control/tasks/RT-20260808-002/artifacts/v21_terminal_baseline_release_manifest_v1.json"
+    sha256: "cd4b3fa94e6b1fe3cd5eb576953d3e918b683e3628c0fe63887d9135281d4043"
+  - path: "research_control/tasks/RT-20260808-002/artifacts/v21_terminal_baseline_canonical_derivative_partition_v1.json"
+    sha256: "d7bcaa2a85be61323f26b3e4c44e5ba0a770f642d03709086f2ead1827cad98c"
+  - path: "research_control/tasks/RT-20260808-002/artifacts/v21_terminal_baseline_reproduction_receipt_v1.json"
+    sha256: "3b924fe0eef7634c1043c24f6ef8ad9e6fb8b2f9d90a7c216d62f8ab71447007"
+  - path: "research_control/tasks/RT-20260808-002/artifacts/v21_terminal_baseline_freeze_policy_v1.md"
+    sha256: "311a0e7553a4f8b75dde012ed751c7a3da515379b8b3b5a02c11638e927d60bf"
+  - path: "research_control/tasks/RT-20260808-002/artifacts/v21_terminal_baseline_release_notes_v1.md"
+    sha256: "ec1feec207cdda1a89242748dd3a911cb04502c5f968168350bbd6c78e583f51"
+  - path: "research_control/tasks/RT-20260808-002/artifacts/v21_terminal_baseline_proposed_tag_v1.yaml"
+    sha256: "f6bf4669b72e7683a8a996fe45d9d74371f6de3a3447b2cd3c72a8e7aafac022"
+  - path: "research_control/tasks/RT-20260808-002/artifacts/v21_terminal_scientific_baseline_release_candidate_v1.tar"
+    sha256: "b55e1fd1709197f2da3b8a0812acbb35f572897ea6e3c641fc35a1fc0c9d9fb0"
+  - path: "research_control/tasks/RT-20260808-002/artifacts/v21_terminal_baseline_release_catalog_v1.json"
+    sha256: "880f99ae27c731dc779035c0f0e14fb6f11767a6de3dc00c7f31f8da4d00ebc3"
+  - path: "research_control/tasks/RT-20260808-002/artifacts/validate_v22_p0_t02_baseline_release.py"
+    sha256: "e788c1eb8c681ca654f8a8082355bbc3b6a8663bf285517027f0dda71d45f0b6"
+  - path: "research_control/tasks/RT-20260808-002/artifacts/v22_p0_t02_baseline_release_validation_v1.json"
+    sha256: "ed0411ac72633d8ec518b9e09604c19c381c2d923fcf26522125a2ceb8d3817c"
+  - path: "research_control/tasks/RT-20260808-002/artifacts/v22_p0_t02_compact_receipt_v1.json"
+    sha256: "ed335b19c8f1a064cf0209ccee3df3bb45690f788d92092771577b140e968bb7"
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  preflight_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1132
+    relationship_row_count: 5700
+    semantic_row_count: 1132
+    vault_row_count: 1132
+    blocking_warning_count: 0
+    local_cache_only_warning_count: 0
+  refresh_needed: true
+  refresh_performed: true
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v21.md --json"
+      query_type: "lookup"
+      query_text: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  additional_canonical_inspections:
+    - canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+      source_hash: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+      source_hash_status: "ignored_unregistered_draft_inspected_read_only"
+  authority_note: "Tracked terminal Git objects canonical source registries Gate records scorecards and receipts govern. Generated wiki semantic Obsidian SQLite and .local state are retrieval or execution layers only and are not authority."
+physics_payload_admission_result:
+  status: "admitted"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+ordinary_route_guard_admission_result:
+  status: "PASS"
+  source_handoff_id: "handoff-0967"
+  source_handoff_sha256_at_intake: "7c84ec6d1fac46c20ca7cc4d18e2db85b2f64c00396c733c71ebb92df8ea3e0d"
+  selected_plan_task_id: "P0-T02"
+  guard_outcome: "below_threshold"
+  warning: "ordinary_route_guard_threshold_next"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  system_success_counts_as_physics: false
+  system_success_counts_as_distance_to_gr: false
+  scientific_status_changed: false
+  physics_promotion_authorized: false
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  observed_durable_outputs:
+    physics: []
+    project_system:
+      - "complete terminal V21 canonical-source and derivative hash closure"
+      - "deterministic safe internal release-candidate archive"
+      - "five-profile selected clean-source reproduction receipt"
+      - "freeze policy proposed-tag record and calibrated release notes"
+      - "one P0-T03 handoff and one governed checkpoint outcome"
+  accepted_criteria:
+    physics: []
+    project_system:
+      - "every terminal registered TeX and Markdown source resolves with its registered hash"
+      - "every declared PDF HTML wiki and report derivative resolves and traces to a canonical source"
+      - "selected theorem Lean TeX Python and benchmark reproduction profiles pass or exact failures are disclosed"
+      - "release notes preserve Gate B D E NOT_READY six inconclusive zero pass zero independent replication and GR not source-derived"
+      - "the proposed tag is absent and no tag public release push or external action occurs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+external_review_class: "same_context_internal_release_control_not_external_review"
+replication_class: "selected_same_context_reproduction_not_independent_scientific_replication"
+protected_authority:
+  scientific_status_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  benchmark_promotion_authorized: false
+  external_review_completed: false
+  independent_replication_completed: false
+  tag_creation_authorized: false
+  public_release_authorized: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false
+  completed_derivation_authorized: false
+blocked_conclusions:
+  - "release packaging or validator PASS as scientific truth"
+  - "same-context reproduction as external review or independent replication"
+  - "Gate A research architecture as physical spacetime or dynamics"
+  - "Gate C protected postulate as source derivation"
+  - "the six inconclusive benchmarks as a pass"
+  - "terminal V21 closure as source-derived or completed GR"
+  - "proposed-tag metadata as tag release publication push or outward-action authority"
+command_results:
+  - command: "prospective physics-payload dual-budget and ordinary-route admission"
+    status: "PASS"
+    summary: "The job is a project-system packet bound to handoff-0967 P0-T02; the next route reaches the ordinary-route threshold and requires an exact exception receipt."
+  - command: "build_v22_p0_t02_baseline_release.py --write"
+    status: "PASS"
+    summary: "The deterministic internal baseline release candidate and all release-control components were written."
+  - command: "build_v22_p0_t02_baseline_release.py --check"
+    status: "PASS"
+    summary: "A fresh five-profile reproduction and archive rebuild is byte-for-byte identical."
+  - command: "validate_v22_p0_t02_baseline_release.py --check --json"
+    status: "PASS"
+    summary: "Thirty-three source closure derivative trace archive reproduction claim and release-authority checks pass."
+validator_results:
+  - name: "terminal_registered_source_hash_closure"
+    outcome: "PASS_1097_REGISTERED_CANONICAL_SOURCES"
+  - name: "canonical_derivative_partition"
+    outcome: "PASS_1169_DERIVATIVES_ALL_SOURCE_TRACED"
+  - name: "selected_clean_source_reproduction"
+    outcome: "PASS_5_OF_5"
+  - name: "deterministic_archive_closure"
+    outcome: "PASS_2427_MEMBERS_BYTE_IDENTICAL_REBUILD"
+  - name: "negative_release_claim_language"
+    outcome: "PASS_GATE_B_D_E_NOT_READY_SIX_INCONCLUSIVE_ZERO_PASS_ZERO_REPLICATION_GR_NOT_SOURCE_DERIVED"
+  - name: "tag_absence_and_authority"
+    outcome: "PASS_PROPOSED_NOT_CREATED_NO_PUBLIC_RELEASE"
+  - name: "checkpoint_transaction"
+    outcome: "PENDING_SINGLE_INVOCATION"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Memory preflight and registered V21 source inspection passed."
+      - "Physics-payload dual-budget and handoff-0967 route admission passed."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "All registered source and derivative hashes close against the terminal commit."
+      - "Five selected reproduction profiles pass in external ephemeral source trees."
+      - "The deterministic release archive rebuilds byte-for-byte."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Thirty-three task-local release checks pass."
+      - "No canonical science source or registered derivative was edited."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "Exactly one governed checkpoint remains authorized."
+  renderer:
+    status: "PENDING"
+    evidence:
+      - "Governed frontier task index compact frontier dependency graph and claim graph will be regenerated before checkpoint."
+  memory_bootstrap:
+    status: "PENDING"
+    evidence:
+      - "Tracked memory wiki and registry derivatives will be regenerated and validated before checkpoint."
+  claim_language_linter:
+    status: "PENDING"
+    evidence:
+      - "Changed-source claim-language validation will run before checkpoint."
+authorization_layers:
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  submission_authorized: false
+  public_release_authorized: false
+  reviewer_contact_authorized: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "Internal P0-T02 packaging and reproduction only; no protected Gate review is authorized."
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  source_law_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+project_improvement_signals: []
+project_improvement_signal_status: "none"
+documentation_impact_path: "research_control/tasks/RT-20260808-002/documentation_impact.yaml"
+completion_evidence:
+  primary_artifact: "research_control/tasks/RT-20260808-002/artifacts/v22_p0_t02_compact_receipt_v1.json"
+  release_manifest_path: "research_control/tasks/RT-20260808-002/artifacts/v21_terminal_baseline_release_manifest_v1.json"
+  archive_path: "research_control/tasks/RT-20260808-002/artifacts/v21_terminal_scientific_baseline_release_candidate_v1.tar"
+  reproduction_path: "research_control/tasks/RT-20260808-002/artifacts/v21_terminal_baseline_reproduction_receipt_v1.json"
+  validation_path: "research_control/tasks/RT-20260808-002/artifacts/v22_p0_t02_baseline_release_validation_v1.json"
+  handoff_path: "research_control/handoffs/handoff-0968.yaml"
+  program_state_path: "research_control/program_state.yaml"
+parent_child_synthesis:
+  required: false
+  rationale: "Project-system release packaging job; physics parent-child decomposition is not applicable."
+out_of_scope_remaining_work:
+  - "V22 P0-T03 must register the V22 draft and materialize its 40-package backlog in a separate AgentJob."
+  - "The proposed Git tag remains uncreated and any tag or public release requires separate explicit human authority."
+  - "External review independent replication benchmark promotion and every scientific or protected promotion remain unresolved or unauthorized."
+progress_summary: "V22 P0-T02 is complete precheckpoint: immutable terminal source closure deterministic archive selected reproduction freeze policy proposed tag metadata and calibrated release notes all pass."
+remaining_work: "Run the single governed checkpoint, then execute V22 P0-T03 as a separately admitted bounded job; do not create a tag or public release."
+forbidden_conclusion_summary: "Internal release packaging and reproduction do not establish theorem truth external review independent replication benchmark pass publication readiness source-derived GR or completed derivation."
+coherent_resolution_summary: "The exact V21 terminal scientific and control evidence is frozen in an internally reproducible release candidate while every negative scientific status and outward-action boundary is preserved."
+next_recommendation: "After checkpoint, execute exactly one bounded V22 P0-T03 plan-registration and backlog-materialization job."
+authority_limits:
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  source_law_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  Gate_Chair_verdict_authorized: false
+  benchmark_promotion_authorized: false
+  external_review_completed: false
+  independent_replication_completed: false
+  tag_creation_authorized: false
+  public_release_authorized: false
+  reviewer_contact_authorized: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false
+  completed_derivation_authorized: false

@@ -1,12 +1,106 @@
 mode: "director_led_research_control"
-active_task_id: "RT-20260808-001"
-active_agent_job_id: "AJ-RT-20260808-001-001"
-latest_handoff_id: "handoff-0967"
-current_status: "v21_terminal_state_reconciled_v22_p0_t02_intake_selected_checkpoint_pending"
-claim_boundary_summary: "RT-20260808-001 preserves exact terminal V21 commit tree fingerprint lease and successor evidence, supersedes only the stale tracked active-state projection, and selects V22 P0-T02 without executing it. No scientific or release authority changes."
-next_plan_task_id: "P0-T02"
+active_task_id: "RT-20260808-002"
+active_agent_job_id: "AJ-RT-20260808-002-001"
+latest_handoff_id: "handoff-0968"
+current_status: "v22_p0_t02_internal_v21_baseline_release_candidate_complete_checkpoint_pending"
+claim_boundary_summary: "RT-20260808-002 freezes the exact terminal V21 commit and tree in an internally reproducible release candidate and selects V22 P0-T03 without executing it. No scientific status, tag, public release, publication, push, or external-action authority changes."
+next_plan_task_id: "P0-T03"
 next_worker_skill: "continue-research"
-next_recommended_action: "After the governed checkpoint for AJ-RT-20260808-001-001, execute exactly one bounded V22 P0-T02 baseline-release packaging AgentJob; do not create a tag or public release."
+next_recommended_action: "After the governed checkpoint for AJ-RT-20260808-002-001, execute exactly one bounded V22 P0-T03 plan-registration and backlog-materialization AgentJob; do not create a tag, public release, publication, push, or external action."
+
+v22_p0_t02_internal_v21_baseline_release:
+  task_id: "RT-20260808-002"
+  parent_task_id: "RT-20260808-001"
+  parent_handoff_id: "handoff-0967"
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  plan_task_id: "P0-T02"
+  next_plan_task_id: "P0-T03"
+  claim_boundary_id: "CB-PS-V22-P0-T02-V21-BASELINE-RELEASE-001"
+  status: "PASS_IMMUTABLE_INTERNAL_V21_BASELINE_RELEASE_CANDIDATE"
+  work_item_status: "completed_checkpoint_pending"
+  route_label: "shared-release-control"
+  selected_role_family: "process-integrity-auditor@0.1.0"
+  selected_worker_skill: "continue-research"
+  selected_strategy_id: "build_v21_terminal_baseline_release_package_v1"
+  target_derivation_milestone: "none"
+  milestone_burden: "Release-control packaging and reproducibility audit only; no scientific or Distance-to-GR burden advances."
+  baseline_commit: "233e5dd7024fc068032d0afe86d85dc25e2246e9"
+  baseline_tree: "a7d9c9448de8e204643b093878ba4d84bd58f020"
+  terminal_fingerprint: "f513b6995a1c9c1e408541ef52f78e5d4c5155a2079ec200eca2ff54ac62a9f6"
+  agent_job_id: "AJ-RT-20260808-002-001"
+  decision_id: "DDR-20260808-002"
+  execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260808-002"
+  source_handoff_id: "handoff-0967"
+  source_handoff_path: "research_control/handoffs/handoff-0967.yaml"
+  source_handoff_sha256: "7c84ec6d1fac46c20ca7cc4d18e2db85b2f64c00396c733c71ebb92df8ea3e0d"
+  release_manifest_path: "research_control/tasks/RT-20260808-002/artifacts/v21_terminal_baseline_release_manifest_v1.json"
+  release_manifest_sha256: "cd4b3fa94e6b1fe3cd5eb576953d3e918b683e3628c0fe63887d9135281d4043"
+  canonical_derivative_partition_path: "research_control/tasks/RT-20260808-002/artifacts/v21_terminal_baseline_canonical_derivative_partition_v1.json"
+  canonical_derivative_partition_sha256: "d7bcaa2a85be61323f26b3e4c44e5ba0a770f642d03709086f2ead1827cad98c"
+  reproduction_receipt_path: "research_control/tasks/RT-20260808-002/artifacts/v21_terminal_baseline_reproduction_receipt_v1.json"
+  reproduction_receipt_sha256: "3b924fe0eef7634c1043c24f6ef8ad9e6fb8b2f9d90a7c216d62f8ab71447007"
+  freeze_policy_path: "research_control/tasks/RT-20260808-002/artifacts/v21_terminal_baseline_freeze_policy_v1.md"
+  freeze_policy_sha256: "311a0e7553a4f8b75dde012ed751c7a3da515379b8b3b5a02c11638e927d60bf"
+  proposed_tag_record_path: "research_control/tasks/RT-20260808-002/artifacts/v21_terminal_baseline_proposed_tag_v1.yaml"
+  proposed_tag_record_sha256: "f6bf4669b72e7683a8a996fe45d9d74371f6de3a3447b2cd3c72a8e7aafac022"
+  release_notes_path: "research_control/tasks/RT-20260808-002/artifacts/v21_terminal_baseline_release_notes_v1.md"
+  release_notes_sha256: "ec1feec207cdda1a89242748dd3a911cb04502c5f968168350bbd6c78e583f51"
+  release_archive_path: "research_control/tasks/RT-20260808-002/artifacts/v21_terminal_scientific_baseline_release_candidate_v1.tar"
+  release_archive_sha256: "b55e1fd1709197f2da3b8a0812acbb35f572897ea6e3c641fc35a1fc0c9d9fb0"
+  release_archive_bytes: 57477120
+  release_catalog_path: "research_control/tasks/RT-20260808-002/artifacts/v21_terminal_baseline_release_catalog_v1.json"
+  release_catalog_sha256: "880f99ae27c731dc779035c0f0e14fb6f11767a6de3dc00c7f31f8da4d00ebc3"
+  validation_path: "research_control/tasks/RT-20260808-002/artifacts/v22_p0_t02_baseline_release_validation_v1.json"
+  validation_sha256: "ed0411ac72633d8ec518b9e09604c19c381c2d923fcf26522125a2ceb8d3817c"
+  compact_receipt_path: "research_control/tasks/RT-20260808-002/artifacts/v22_p0_t02_compact_receipt_v1.json"
+  compact_receipt_sha256: "ed335b19c8f1a064cf0209ccee3df3bb45690f788d92092771577b140e968bb7"
+  completion_path: "research_control/tasks/RT-20260808-002/jobs/completions/AJC-AJ-RT-20260808-002-001.yaml"
+  completion_sha256: "392c54ac9659e243c10b748b7a98073aabf6ac179d2b0b0912046b5f024cf0e3"
+  handoff_id: "handoff-0968"
+  handoff_path: "research_control/handoffs/handoff-0968.yaml"
+  handoff_sha256: "3c9b19e1845bb445365123155cd2dbb7b9a247e84e363c2dc88532f33a4aa149"
+  canonical_source_count: 1097
+  canonical_tex_source_count: 448
+  canonical_markdown_source_count: 649
+  derivative_count: 1169
+  pdf_derivative_count: 16
+  html_derivative_count: 19
+  wiki_derivative_count: 1132
+  declared_control_report_derivative_count: 2
+  archive_member_count: 2427
+  reproduction_profile_count: 5
+  reproduction_pass_count: 5
+  release_validation_check_count: 33
+  release_validation_failed_check_count: 0
+  proposed_tag_name: "v21-scientific-baseline-233e5dd7"
+  proposed_tag_exists: false
+  tag_created: false
+  public_release_created: false
+  canonical_science_modified: false
+  scientific_claims_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  tag_creation_authorized: false
+  public_release_authorized: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false
+  checkpoint_invocation_count: 0
+  checkpoint_committed: false
+  selected_next_work_item: "P0-T03"
+  selected_next_plan_task_id: "P0-T03"
+  selected_next_worker_skill: "continue-research"
+  selected_next_role_family: "project-control-maintainer@0.2.0"
+  selected_next_packet_type: "compact_plan_registration_and_backlog_materialization"
+  selected_next_route_label: "shared-project-control"
+  selected_next_strategy_id: "register_v22_compact_decision_program_v1"
+  selected_next_requires_human_gate: false
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
+  successor_requested: false
 
 v21_terminal_to_v22_intake_bridge:
   task_id: "RT-20260808-001"

@@ -1,0 +1,248 @@
+validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+handoff_id: "handoff-0968"
+handoff_number: 968
+handoff_kind: "project_system_internal_baseline_release"
+task_id: "RT-20260808-002"
+decision_id: "DDR-20260808-002"
+job_id: "AJ-RT-20260808-002-001"
+completion_id: "AJC-AJ-RT-20260808-002-001"
+completion_path: "research_control/tasks/RT-20260808-002/jobs/completions/AJC-AJ-RT-20260808-002-001.yaml"
+completion_sha256: "392c54ac9659e243c10b748b7a98073aabf6ac179d2b0b0912046b5f024cf0e3"
+status: "ready_after_checkpoint"
+created_at: "2026-08-08T22:03:48Z"
+parent_handoff_id: "handoff-0967"
+plan_task_id: "P0-T02"
+source_role_id: "process-integrity-auditor"
+source_role_version: "0.1.0"
+source_execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260808-002"
+summary: "V22 P0-T02 completes an immutable internal release candidate for the exact terminal V21 commit and tree. All 1097 registered canonical sources and 1169 derivatives close by hash, five selected external-directory reproduction profiles pass, and a deterministic 2427-member archive rebuilds byte-for-byte. V22 P0-T03 is selected but remains unexecuted; no tag or public release was created."
+next_action: "After the governed checkpoint for AJ-RT-20260808-002-001, execute exactly one bounded V22 P0-T03 plan-registration and backlog-materialization AgentJob; do not create a tag, public release, publication, push, or external action."
+current_claim_boundary: "CB-PS-V22-P0-T02-V21-BASELINE-RELEASE-001"
+loop_risk_route: "v22_p0_t03_compact_plan_registration"
+
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260808-002"
+  latest_research_handoff_id: "handoff-0968"
+  latest_research_next_action: "After the governed checkpoint for AJ-RT-20260808-002-001, execute exactly one bounded V22 P0-T03 plan-registration and backlog-materialization AgentJob; do not create a tag, public release, publication, push, or external action."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+  project_improvement_sidecar_required: false
+  research_handoff_remains_authoritative: true
+
+claim_boundary:
+  allowed_next_scope: "One separately admitted V22 P0-T03 AgentJob may register the 40-package V22 draft/control plan and materialize its backlog and dependency graph after this checkpoint. It may not launch a later package or create a tag or public release."
+  completed_task: "RT-20260808-002"
+  completed_completion_path: "research_control/tasks/RT-20260808-002/jobs/completions/AJC-AJ-RT-20260808-002-001.yaml"
+  completed_completion_sha256: "392c54ac9659e243c10b748b7a98073aabf6ac179d2b0b0912046b5f024cf0e3"
+  source_handoff_id: "handoff-0967"
+  source_handoff_path: "research_control/handoffs/handoff-0967.yaml"
+  source_handoff_sha256: "7c84ec6d1fac46c20ca7cc4d18e2db85b2f64c00396c733c71ebb92df8ea3e0d"
+  release_manifest_path: "research_control/tasks/RT-20260808-002/artifacts/v21_terminal_baseline_release_manifest_v1.json"
+  release_manifest_sha256: "cd4b3fa94e6b1fe3cd5eb576953d3e918b683e3628c0fe63887d9135281d4043"
+  release_archive_path: "research_control/tasks/RT-20260808-002/artifacts/v21_terminal_scientific_baseline_release_candidate_v1.tar"
+  release_archive_sha256: "b55e1fd1709197f2da3b8a0812acbb35f572897ea6e3c641fc35a1fc0c9d9fb0"
+  reproduction_receipt_path: "research_control/tasks/RT-20260808-002/artifacts/v21_terminal_baseline_reproduction_receipt_v1.json"
+  reproduction_receipt_sha256: "3b924fe0eef7634c1043c24f6ef8ad9e6fb8b2f9d90a7c216d62f8ab71447007"
+  freeze_policy_path: "research_control/tasks/RT-20260808-002/artifacts/v21_terminal_baseline_freeze_policy_v1.md"
+  freeze_policy_sha256: "311a0e7553a4f8b75dde012ed751c7a3da515379b8b3b5a02c11638e927d60bf"
+  proposed_tag_record_path: "research_control/tasks/RT-20260808-002/artifacts/v21_terminal_baseline_proposed_tag_v1.yaml"
+  proposed_tag_record_sha256: "f6bf4669b72e7683a8a996fe45d9d74371f6de3a3447b2cd3c72a8e7aafac022"
+  baseline_commit: "233e5dd7024fc068032d0afe86d85dc25e2246e9"
+  baseline_tree: "a7d9c9448de8e204643b093878ba4d84bd58f020"
+  terminal_fingerprint: "f513b6995a1c9c1e408541ef52f78e5d4c5155a2079ec200eca2ff54ac62a9f6"
+  canonical_source_count: 1097
+  derivative_count: 1169
+  archive_member_count: 2427
+  reproduction_profile_count: 5
+  reproduction_pass_count: 5
+  validation_check_count: 33
+  validation_failed_check_count: 0
+  proposed_tag_name: "v21-scientific-baseline-233e5dd7"
+  proposed_tag_exists: false
+  tag_created: false
+  public_release_created: false
+  v22_p0_t03_executed: false
+  scientific_claims_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  tag_creation_authorized: false
+  public_release_authorized: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false
+  blocked_claims:
+    - "internal packaging or same-context reproduction presented as scientific truth external review or independent replication"
+    - "the six inconclusive benchmarks presented as passes"
+    - "Gate B Gate D or Gate E presented as ready"
+    - "terminal V21 presented as source-derived or completed GR"
+    - "proposed-tag metadata presented as a created tag public release publication push or external-action authority"
+
+plan_result:
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  phase_id: "P0"
+  plan_task_id: "P0-T02"
+  next_plan_task_id: "P0-T03"
+  title: "Build the immutable internal V21 scientific baseline release candidate"
+  result_status: "PASS_IMMUTABLE_INTERNAL_V21_BASELINE_RELEASE_CANDIDATE"
+  work_item_status: "completed_checkpoint_pending"
+  v21_terminal_baseline_frozen_internally: true
+  v22_p0_t03_dependency_ready_after_checkpoint: true
+  v22_p0_t03_dependency_ready_now: false
+  v22_p0_t03_executed: false
+  tag_or_public_release_required_for_p0_t03: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  system_success_counts_as_physics: false
+  system_success_counts_as_distance_to_gr: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+distance_to_gr:
+  changed: false
+  effect: "none_project_system_release_packaging"
+  burden_id: "none"
+  milestone: "none"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "Release packaging and reproducibility evidence add no source law metric coupling Einstein equation benchmark pass Gate evidence external review or independent replication."
+  downstream_unlocked:
+    - "V22 P0-T03 compact plan registration after checkpoint"
+  downstream_still_blocked:
+    - "tag creation and public release"
+    - "source-derived effective metric"
+    - "universal matter coupling"
+    - "Einstein-equation derivation"
+    - "lawful benchmark pass and promotion"
+    - "completed first-principles GR derivation"
+
+selected_next_route:
+  route_id: "v22_p0_t03_compact_plan_registration_and_backlog_materialization"
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  plan_task_id: "P0-T03"
+  work_item_id: "P0-T03"
+  route_label: "shared-project-control"
+  role_family: "project-control-maintainer@0.2.0"
+  worker_skill: "continue-research"
+  selected_next_packet_type: "compact_plan_registration_and_backlog_materialization"
+  task_type: "project_system_v22_p0_t03_plan_registration"
+  target_derivation_milestone: "none"
+  milestone_burden: "Register the compact draft/control program without altering science or launching any later package."
+  strategy_id: "register_v22_compact_decision_program_v1"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  physics_promotion_authorized: false
+  executed: false
+  successor_requested: false
+  tag_creation_authorized: false
+  public_release_authorized: false
+  next_action: "Register the plan and materialize exactly 40 work packages with complete recommendation coverage and an acyclic dependency graph; do not launch P1 or any parallel package."
+
+ordinary_route_guard:
+  schema_id: "ordinary_route_guard_evaluation_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  evaluation_id: "ORE-HANDOFF-0968"
+  ordinary_handoff_id: "handoff-0968"
+  threshold: 3
+  consecutive_project_system_tasks_before_selection: 3
+  ready_science_plan_task_ids: []
+  selected_plan_task_id: "P0-T03"
+  selected_route_class: "project_system"
+  selected_worker_skill: "continue-research"
+  outcome: "all_ready_science_blocked_exception"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  exception_receipt:
+    active: true
+    schema_id: "ordinary_route_exception_receipt_v1"
+    exception_id: "ORE-HANDOFF-0968-EXCEPTION-001"
+    exception_class: "all_ready_science_blocked"
+    ordinary_handoff_id: "handoff-0968"
+    ready_science_plan_task_ids: []
+    blocked_routes: []
+    authority_limits:
+      ordinary_research_handoff_authoritative: true
+      project_system_sidecar_supersedes: false
+      system_success_counts_as_physics: false
+      system_success_counts_as_distance_to_gr: false
+      scientific_status_changed: false
+      physics_promotion_authorized: false
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+active_state_boundary:
+  active_task_id: "RT-20260808-002"
+  active_job_id: "AJ-RT-20260808-002-001"
+  current_status: "v22_p0_t02_internal_v21_baseline_release_candidate_complete_checkpoint_pending"
+  checkpoint_required: true
+  checkpoint_completed: false
+  checkpoint_invocation_count: 0
+  selected_next_plan_task_id: "P0-T03"
+  selected_next_worker_skill: "continue-research"
+  selected_next_role_family: "project-control-maintainer@0.2.0"
+  selected_next_route_label: "shared-project-control"
+  selected_next_strategy_id: "register_v22_compact_decision_program_v1"
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
+  successor_requested: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Memory preflight and canonical V21 source inspection passed."
+      - "Physics-payload dual-budget and handoff-0967 route admission passed."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "All 1097 registered canonical sources and 1169 declared derivatives close by hash."
+      - "Five selected reproduction profiles pass in external ephemeral source trees."
+      - "The deterministic 2427-member archive rebuilds byte-for-byte."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Thirty-three task-local release checks pass."
+      - "No canonical science source or registered source derivative was edited."
+  pre_checkpoint:
+    status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+    evidence:
+      - "Task job role completion handoff program state registries and generated projections are prepared for one governed checkpoint."
+  checkpoint:
+    status: "PENDING"
+    invocation_count: 0
+  post_checkpoint:
+    status: "PENDING"
+
+project_improvement_signals: []
+project_improvement_signal_count: 0
+project_improvement_sidecar_required: false
+authority_limits:
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  source_law_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  Gate_Chair_verdict_authorized: false
+  benchmark_promotion_authorized: false
+  external_review_completed: false
+  independent_replication_completed: false
+  tag_creation_authorized: false
+  public_release_authorized: false
+  reviewer_contact_authorized: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false
+  completed_derivation_authorized: false

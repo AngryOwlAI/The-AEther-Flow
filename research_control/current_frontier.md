@@ -3,14 +3,14 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260808-001` and `handoff-0967`.
+`RT-20260808-002` and `handoff-0968`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
 handoff named by that file, or `registries/DISTANCE_TO_GR_LEDGER.csv`, those
 tracked authority files govern.
 
-<!-- generated-report-provenance: {"freshness_status":"fresh_at_generation","generated_view_is_authority":false,"generation_time":"2026-08-08T20:51:16Z","maximum_commit_lag":"1","physics_promotion_authorized":false,"policy_id":"p13_t07_live_generated_report_freshness_v1","proof_authority":false,"report_class":"current_frontier","schema_id":"generated_report_provenance_v1","source_commit":"233e5dd7024fc068032d0afe86d85dc25e2246e9","source_hashes":[{"path":"registries/DISTANCE_TO_GR_LEDGER.csv","sha256":"8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642"},{"path":"registries/RESEARCH_TASK_REGISTRY.csv","sha256":"815b378db63ec808b5e89214ce7ef6cac321cbbd2985369bca48f31c09cab5ab"},{"path":"research_control/handoffs/handoff-0967.yaml","sha256":"7c84ec6d1fac46c20ca7cc4d18e2db85b2f64c00396c733c71ebb92df8ea3e0d"},{"path":"research_control/program_state.yaml","sha256":"e18a2932936449e5b63fe1f684f7e2ccd848a34851c1ae510956af57e67abad4"},{"path":"research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml","sha256":"dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3"},{"path":"scripts/research_control/generated_report_provenance.py","sha256":"af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c"},{"path":"scripts/research_control/render_current_frontier.py","sha256":"62ed4741bcafe652c03f742a022a2f2fa47e3f132f97f0dd8fdb065e5e2e5ba6"}],"source_manifest_sha256":"a73ef92b0adefcc9068410f7f4662f9bb690ebf623724076658937fc429fc283","source_path_count":"12","task_count":"1222"} -->
+<!-- generated-report-provenance: {"freshness_status":"fresh_at_generation","generated_view_is_authority":false,"generation_time":"2026-08-08T22:03:48Z","maximum_commit_lag":"1","physics_promotion_authorized":false,"policy_id":"p13_t07_live_generated_report_freshness_v1","proof_authority":false,"report_class":"current_frontier","schema_id":"generated_report_provenance_v1","source_commit":"bdde326629fd8b1f20e7d32e4c26b1c0f32e8c9a","source_hashes":[{"path":"registries/DISTANCE_TO_GR_LEDGER.csv","sha256":"8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642"},{"path":"registries/RESEARCH_TASK_REGISTRY.csv","sha256":"88256a3fa15af5803fde7304a20b51deb809ce4bb7a9738967ae258d4a72f62a"},{"path":"research_control/handoffs/handoff-0968.yaml","sha256":"3c9b19e1845bb445365123155cd2dbb7b9a247e84e363c2dc88532f33a4aa149"},{"path":"research_control/program_state.yaml","sha256":"02e98e398a1fd6c350efe7f58ce263045ce5ac4a708be2b2a3ead8ba66c4f9ae"},{"path":"research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml","sha256":"dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3"},{"path":"scripts/research_control/generated_report_provenance.py","sha256":"af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c"},{"path":"scripts/research_control/render_current_frontier.py","sha256":"62ed4741bcafe652c03f742a022a2f2fa47e3f132f97f0dd8fdb065e5e2e5ba6"}],"source_manifest_sha256":"987aae9513ac9ed3147c03259c6bc321706414e05dc58f68e466cf27723d1e56","source_path_count":"12","task_count":"1223"} -->
 
 ## Generated-Report Provenance
 
@@ -19,11 +19,11 @@ tracked authority files govern.
 | Provenance schema | `generated_report_provenance_v1` |
 | Freshness policy | `p13_t07_live_generated_report_freshness_v1` |
 | Report class | `current_frontier` |
-| Source commit | `233e5dd7024fc068032d0afe86d85dc25e2246e9` |
-| Source-derived generation time | `2026-08-08T20:51:16Z` |
-| Tracked task count | 1222 |
+| Source commit | `bdde326629fd8b1f20e7d32e4c26b1c0f32e8c9a` |
+| Source-derived generation time | `2026-08-08T22:03:48Z` |
+| Tracked task count | 1223 |
 | Exact source-path count | 12 |
-| Source manifest SHA-256 | `a73ef92b0adefcc9068410f7f4662f9bb690ebf623724076658937fc429fc283` |
+| Source manifest SHA-256 | `987aae9513ac9ed3147c03259c6bc321706414e05dc58f68e466cf27723d1e56` |
 | Maximum commit lag | 1 |
 | Freshness status at generation | `fresh_at_generation` |
 | Generated view is authority | `false` |
@@ -31,9 +31,9 @@ tracked authority files govern.
 Exact primary source hashes:
 
 - `registries/DISTANCE_TO_GR_LEDGER.csv`: `8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642`
-- `registries/RESEARCH_TASK_REGISTRY.csv`: `815b378db63ec808b5e89214ce7ef6cac321cbbd2985369bca48f31c09cab5ab`
-- `research_control/handoffs/handoff-0967.yaml`: `7c84ec6d1fac46c20ca7cc4d18e2db85b2f64c00396c733c71ebb92df8ea3e0d`
-- `research_control/program_state.yaml`: `e18a2932936449e5b63fe1f684f7e2ccd848a34851c1ae510956af57e67abad4`
+- `registries/RESEARCH_TASK_REGISTRY.csv`: `88256a3fa15af5803fde7304a20b51deb809ce4bb7a9738967ae258d4a72f62a`
+- `research_control/handoffs/handoff-0968.yaml`: `3c9b19e1845bb445365123155cd2dbb7b9a247e84e363c2dc88532f33a4aa149`
+- `research_control/program_state.yaml`: `02e98e398a1fd6c350efe7f58ce263045ce5ac4a708be2b2a3ead8ba66c4f9ae`
 - `research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml`: `dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3`
 - `scripts/research_control/generated_report_provenance.py`: `af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c`
 - `scripts/research_control/render_current_frontier.py`: `62ed4741bcafe652c03f742a022a2f2fa47e3f132f97f0dd8fdb065e5e2e5ba6`
@@ -47,15 +47,15 @@ or claim-promotion authority.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260808-001` |
-| Latest handoff ID | `handoff-0967` |
-| Current status | `v21_terminal_state_reconciled_v22_p0_t02_intake_selected_checkpoint_pending` |
+| Active task ID | `RT-20260808-002` |
+| Latest handoff ID | `handoff-0968` |
+| Current status | `v22_p0_t02_internal_v21_baseline_release_candidate_complete_checkpoint_pending` |
 | V16 completed | false |
 | Current route family | benchmark or recovery (project system) |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden follows the next action: After the governed checkpoint for AJ-RT-20260808-001-001, execute exactly one bounded V22 P0-T02 baseline-release packaging AgentJob; do not create a tag or public release. |
-| Required next authority | One separately admitted V22 P0-T02 AgentJob may build and validate the immutable internal V21 baseline release package after this bridge checkpoint. Tag creation and public release remain unauthorized. |
-| Next recommended action | After the governed checkpoint for AJ-RT-20260808-001-001, execute exactly one bounded V22 P0-T02 baseline-release packaging AgentJob; do not create a tag or public release. |
+| Current burden | none for physics derivation; live control burden follows the next action: After the governed checkpoint for AJ-RT-20260808-002-001, execute exactly one bounded V22 P0-T03 plan-registration and backlog-materialization AgentJob; do not create a tag, public release, publication, push, or external action. |
+| Required next authority | One separately admitted V22 P0-T03 AgentJob may register the 40-package V22 draft/control plan and materialize its backlog and dependency graph after this checkpoint. It may not launch a later package or create a tag or public release. |
+| Next recommended action | After the governed checkpoint for AJ-RT-20260808-002-001, execute exactly one bounded V22 P0-T03 plan-registration and backlog-materialization AgentJob; do not create a tag, public release, publication, push, or external action. |
 
 ## Active-State Bifurcation
 
@@ -66,9 +66,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260808-001` |
-| Latest research handoff ID | `handoff-0967` |
-| Latest research next action | After the governed checkpoint for AJ-RT-20260808-001-001, execute exactly one bounded V22 P0-T02 baseline-release packaging AgentJob; do not create a tag or public release. |
+| Latest research task ID | `RT-20260808-002` |
+| Latest research handoff ID | `handoff-0968` |
+| Latest research next action | After the governed checkpoint for AJ-RT-20260808-002-001, execute exactly one bounded V22 P0-T03 plan-registration and backlog-materialization AgentJob; do not create a tag, public release, publication, push, or external action. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -101,12 +101,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260808-001/00_TASK.yaml`.
-- Active task objective: Reconcile the already-completed V21 outer-relay result with the tracked research-control spine, preserve the exact terminal commit tree and fingerprint, and create one ordinary handoff selecting only V22 P0-T02 without executing it.
-- Latest handoff path: `research_control/handoffs/handoff-0967.yaml`.
-- Latest handoff summary: Exact read-only V21 terminal evidence is reconciled into the tracked active-state projection without replay or scientific change. V22 P0-T02 is selected for one separately checkpoint-admitted baseline-release packaging job and remains unexecuted.
+- Active task path: `research_control/tasks/RT-20260808-002/00_TASK.yaml`.
+- Active task objective: Pin the exact terminal V21 commit and tree; create a complete hash-resolving canonical/derivative manifest, deterministic internal release-candidate archive, selected clean-environment reproduction receipt, freeze policy, proposed tag record, and calibrated release notes; validate the package without creating a tag or performing any outward release action.
+- Latest handoff path: `research_control/handoffs/handoff-0968.yaml`.
+- Latest handoff summary: V22 P0-T02 completes an immutable internal release candidate for the exact terminal V21 commit and tree. All 1097 registered canonical sources and 1169 derivatives close by hash, five selected external-directory reproduction profiles pass, and a deterministic 2427-member archive rebuilds byte-for-byte. V22 P0-T03 is selected but remains unexecuted; no tag or public release was created.
 - Current route family: benchmark or recovery (project system).
-- Next recommended action: After the governed checkpoint for AJ-RT-20260808-001-001, execute exactly one bounded V22 P0-T02 baseline-release packaging AgentJob; do not create a tag or public release.
+- Next recommended action: After the governed checkpoint for AJ-RT-20260808-002-001, execute exactly one bounded V22 P0-T03 plan-registration and backlog-materialization AgentJob; do not create a tag, public release, publication, push, or external action.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -336,7 +336,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-After the governed checkpoint for AJ-RT-20260808-001-001, execute exactly one bounded V22 P0-T02 baseline-release packaging AgentJob; do not create a tag or public release.
+After the governed checkpoint for AJ-RT-20260808-002-001, execute exactly one bounded V22 P0-T03 plan-registration and backlog-materialization AgentJob; do not create a tag, public release, publication, push, or external action.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -354,7 +354,7 @@ Layer status summary:
 
 | Status | Count | Meaning |
 | --- | --- | --- |
-| `PASS` | 2 | receipt complete |
+| `PASS` | 3 | receipt complete |
 | `PENDING` | 2 | open item; evidence must explain why |
 | `PASS_PRECHECKPOINT_STAGING_REQUIRED` | 1 | extension status; inspect evidence |
 
@@ -362,11 +362,12 @@ Validation layers:
 
 | Validation layer | Status | Meaning | Evidence |
 | --- | --- | --- | --- |
-| `pre_execution` | PASS | receipt complete | Memory preflight and canonical V21 lookup passed.<br>The exact goal helper passed with required lease parity.<br>Source HEAD tree origin/main and clean worktree matched the terminal fingerprint.<br>The source handoff selected P16-T06 and this bridge job preserved that admission. |
+| `pre_execution` | PASS | receipt complete | Memory preflight and canonical V21 source inspection passed.<br>Physics-payload dual-budget and handoff-0967 route admission passed. |
+| `completion_internal` | PASS | receipt complete | All 1097 registered canonical sources and 1169 declared derivatives close by hash.<br>Five selected reproduction profiles pass in external ephemeral source trees.<br>The deterministic 2427-member archive rebuilds byte-for-byte. |
+| `post_write` | PASS | receipt complete | Thirty-three task-local release checks pass.<br>No canonical science source or registered source derivative was edited. |
 | `post_checkpoint` | PENDING | open item; evidence must explain why | none |
 | `checkpoint` | PENDING | open item; evidence must explain why | none |
-| `execution` | PASS | receipt complete | One terminal bridge receipt was created without replaying V21.<br>V22 P0-T02 was selected but not executed.<br>No canonical science V22 plan tag release or external system was mutated. |
-| `pre_checkpoint` | PASS_PRECHECKPOINT_STAGING_REQUIRED | extension status; inspect evidence | Task job role completion handoff program state and registries are prepared for affected validation and one checkpoint. |
+| `pre_checkpoint` | PASS_PRECHECKPOINT_STAGING_REQUIRED | extension status; inspect evidence | Task job role completion handoff program state registries and generated projections are prepared for one governed checkpoint. |
 
 Authorization layers:
 
@@ -374,9 +375,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260808-001`;
-- latest handoff: `handoff-0967`;
-- current status: `v21_terminal_state_reconciled_v22_p0_t02_intake_selected_checkpoint_pending`;
+- active task: `RT-20260808-002`;
+- latest handoff: `handoff-0968`;
+- current status: `v22_p0_t02_internal_v21_baseline_release_candidate_complete_checkpoint_pending`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -386,8 +387,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0967.yaml`
-- `research_control/tasks/RT-20260808-001/00_TASK.yaml`
+- `research_control/handoffs/handoff-0968.yaml`
+- `research_control/tasks/RT-20260808-002/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -403,7 +404,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0967*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0968*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

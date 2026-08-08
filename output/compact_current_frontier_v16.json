@@ -8,14 +8,14 @@
     "research_control/current_frontier.md",
     "research_control/design/accepted_status_calibration_v2.yaml",
     "research_control/design/active_state_bifurcation_policy_v1.md",
-    "research_control/handoffs/handoff-0967.yaml",
+    "research_control/handoffs/handoff-0968.yaml",
     "research_control/program_state.yaml"
   ],
   "report_provenance": {
     "schema_id": "generated_report_provenance_v1",
     "policy_id": "p13_t07_live_generated_report_freshness_v1",
     "report_class": "compact_current_frontier",
-    "source_commit": "233e5dd7024fc068032d0afe86d85dc25e2246e9",
+    "source_commit": "bdde326629fd8b1f20e7d32e4c26b1c0f32e8c9a",
     "source_hashes": [
       {
         "path": "registries/DISTANCE_TO_GR_LEDGER.csv",
@@ -23,19 +23,19 @@
       },
       {
         "path": "registries/RESEARCH_TASK_REGISTRY.csv",
-        "sha256": "815b378db63ec808b5e89214ce7ef6cac321cbbd2985369bca48f31c09cab5ab"
+        "sha256": "88256a3fa15af5803fde7304a20b51deb809ce4bb7a9738967ae258d4a72f62a"
       },
       {
         "path": "research_control/current_frontier.md",
-        "sha256": "38b71644a6a72fff663a2b4c4cb518e5a5d61f0eda92ad8a1066c2b228f5c5b5"
+        "sha256": "796345cbfd8e846134c64094e547c53159321d94f5b741b182db5dce572e5de7"
       },
       {
-        "path": "research_control/handoffs/handoff-0967.yaml",
-        "sha256": "7c84ec6d1fac46c20ca7cc4d18e2db85b2f64c00396c733c71ebb92df8ea3e0d"
+        "path": "research_control/handoffs/handoff-0968.yaml",
+        "sha256": "3c9b19e1845bb445365123155cd2dbb7b9a247e84e363c2dc88532f33a4aa149"
       },
       {
         "path": "research_control/program_state.yaml",
-        "sha256": "e18a2932936449e5b63fe1f684f7e2ccd848a34851c1ae510956af57e67abad4"
+        "sha256": "02e98e398a1fd6c350efe7f58ce263045ce5ac4a708be2b2a3ead8ba66c4f9ae"
       },
       {
         "path": "research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml",
@@ -50,10 +50,10 @@
         "sha256": "3700556e8fe203bb8bfb1c2caf15b7fbfc95b25f608169209e1b9930677e3564"
       }
     ],
-    "source_manifest_sha256": "8479eab95c9f2235ea5053309e5c77aaa51d8f846cdd54f5de82fc44d4a1e31b",
+    "source_manifest_sha256": "59220da8df858c6fee8073ff1659625e5e044d6945ff94b7a30e8e11b8ba58fc",
     "source_path_count": "12",
-    "generation_time": "2026-08-08T20:51:16Z",
-    "task_count": "1222",
+    "generation_time": "2026-08-08T22:03:48Z",
+    "task_count": "1223",
     "maximum_commit_lag": "1",
     "freshness_status": "fresh_at_generation",
     "generated_view_is_authority": false,
@@ -61,17 +61,17 @@
     "proof_authority": false
   },
   "active_state": {
-    "active_task_id": "RT-20260808-001",
-    "latest_handoff_id": "handoff-0967",
-    "current_status": "v21_terminal_state_reconciled_v22_p0_t02_intake_selected_checkpoint_pending",
+    "active_task_id": "RT-20260808-002",
+    "latest_handoff_id": "handoff-0968",
+    "current_status": "v22_p0_t02_internal_v21_baseline_release_candidate_complete_checkpoint_pending",
     "v15_completed": false,
     "v16_completed": false,
     "v16_plan_registered": true
   },
   "active_state_bifurcation": {
-    "latest_research_task_id": "RT-20260808-001",
-    "latest_research_handoff_id": "handoff-0967",
-    "latest_research_next_action": "After the governed checkpoint for AJ-RT-20260808-001-001, execute exactly one bounded V22 P0-T02 baseline-release packaging AgentJob; do not create a tag or public release.",
+    "latest_research_task_id": "RT-20260808-002",
+    "latest_research_handoff_id": "handoff-0968",
+    "latest_research_next_action": "After the governed checkpoint for AJ-RT-20260808-002-001, execute exactly one bounded V22 P0-T03 plan-registration and backlog-materialization AgentJob; do not create a tag, public release, publication, push, or external action.",
     "latest_project_system_task_id": "none",
     "latest_project_system_status": "none",
     "latest_project_system_sidecar_task_id": "none",
@@ -80,10 +80,10 @@
     "next_research_route_source": "latest_research_handoff"
   },
   "next_route": {
-    "route_id": "v22_p0_t02_internal_v21_baseline_release_package",
-    "role_family": "process-integrity-auditor@0.1.0",
+    "route_id": "v22_p0_t03_compact_plan_registration_and_backlog_materialization",
+    "role_family": "project-control-maintainer@0.2.0",
     "target_derivation_milestone": "none",
-    "milestone_burden": "Release-control packaging only; no scientific burden advances.",
+    "milestone_burden": "Register the compact draft/control program without altering science or launching any later package.",
     "requires_human_gate": false
   },
   "claim_boundary": {
@@ -445,7 +445,7 @@
   ],
   "distance_to_gr": {
     "delta": {
-      "effect": "none_project_system_terminal_state_reconciliation",
+      "effect": "none_project_system_release_packaging",
       "changed": false,
       "milestone": "none",
       "burden_id": "none"
