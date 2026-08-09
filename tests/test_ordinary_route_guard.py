@@ -11,11 +11,15 @@ import yaml
 
 import scripts.research_control.ordinary_route_guard as ordinary_route_guard
 from scripts.research_control.ordinary_route_guard import (
+    AUTHORITY_LIMITS,
+    CHECKPOINT_RECOVERY_SCHEMA_ID,
+    DEFAULT_PLAN_ID,
     PLAN_REAUDIT_ACTIVATION_SCHEMA_ID,
     POLICY_ID,
     PROTECTED_HUMAN_OVERRIDE_SCHEMA_ID,
     REQUIRED_AFTER,
     THRESHOLD,
+    completed_plan_task_identities,
     derive_consecutive_project_system_tasks,
     discover_ready_science_routes,
     evaluate_agent_job_route_admission,
@@ -387,6 +391,246 @@ class OrdinaryRouteGuardTests(unittest.TestCase):
         )
         self.assertTrue(routes[0]["requires_human_gate"])
         self.assertFalse(routes[1]["requires_human_gate"])
+
+    def test_v22_handoff_resolves_colliding_p1_t01_in_selected_plan(self) -> None:
+        v22_plan_id = "recommendations_implementation_plan_continue_task-v22"
+        with tempfile.TemporaryDirectory() as temp_dir:
+            repo_root = Path(temp_dir)
+            backlog_root = repo_root / "research_control/design"
+            backlog_root.mkdir(parents=True)
+            (backlog_root / "v22_recommendation_backlog.yaml").write_text(
+                "source_plan:\n"
+                f"  plan_id: {v22_plan_id}\n"
+                "items:\n"
+                "  - plan_task_id: P1-T01\n"
+                "    task_class: project_system\n"
+                "    worker_skill: improve-project-system\n"
+                "    requires_human_gate: false\n"
+                "    depends_on: [P0-T03]\n",
+                encoding="utf-8",
+            )
+            record = {
+                "schema_id": ordinary_route_guard.EVALUATION_SCHEMA_ID,
+                "policy_id": POLICY_ID,
+                "ordinary_handoff_id": "handoff-9900",
+                "threshold": THRESHOLD,
+                "consecutive_project_system_tasks_before_selection": 4,
+                "selected_plan_id": v22_plan_id,
+                "selected_plan_task_id": "P1-T01",
+                "selected_route_class": "project_system",
+                "selected_worker_skill": "improve-project-system",
+                "ready_science_plan_task_ids": [],
+                "ready_science_plan_task_refs": [],
+                "outcome": "all_ready_science_blocked_exception",
+                "ordinary_research_handoff_authoritative": True,
+                "project_system_sidecar_supersedes": False,
+                "exception_receipt": {
+                    "active": True,
+                    "schema_id": ordinary_route_guard.EXCEPTION_SCHEMA_ID,
+                    "exception_class": "all_ready_science_blocked",
+                    "ordinary_handoff_id": "handoff-9900",
+                    "ready_science_plan_task_ids": [],
+                    "ready_science_plan_task_refs": [],
+                    "blocked_routes": [],
+                    "authority_limits": dict(AUTHORITY_LIMITS),
+                },
+                "authority_limits": dict(AUTHORITY_LIMITS),
+            }
+            handoff = {
+                "created_at": "2026-08-08T23:00:00Z",
+                "handoff_id": "handoff-9900",
+                "selected_next_route": {
+                    "plan_id": v22_plan_id,
+                    "plan_task_id": "P1-T01",
+                },
+                "ordinary_route_guard": record,
+            }
+            with mock.patch.object(
+                ordinary_route_guard,
+                "discover_ready_science_routes",
+                return_value=[],
+            ), mock.patch.object(
+                ordinary_route_guard,
+                "derive_consecutive_project_system_tasks",
+                return_value=4,
+            ):
+                result = evaluate_research_handoff_guard(handoff, repo_root)
+
+            self.assertEqual(result["status"], "PASS")
+            self.assertEqual(result["selected_plan_id"], v22_plan_id)
+            self.assertEqual(result["selected_plan_task_id"], "P1-T01")
+
+    def test_legacy_v22_intake_handoffs_retain_v21_guard_interpretation(self) -> None:
+        for handoff_id in ("handoff-0967", "handoff-0968"):
+            path = ROOT / f"research_control/handoffs/{handoff_id}.yaml"
+            handoff = yaml.safe_load(path.read_text(encoding="utf-8"))
+            result = evaluate_research_handoff_guard(handoff, ROOT)
+            self.assertIn(result["status"], {"PASS", "WARN"}, result)
+            self.assertEqual(result["errors"], [], result)
+            self.assertEqual(result["selected_plan_id"], DEFAULT_PLAN_ID)
+
+    def test_completed_work_item_identity_does_not_cross_plan_namespace(self) -> None:
+        v22_plan_id = "recommendations_implementation_plan_continue_task-v22"
+        with tempfile.TemporaryDirectory() as temp_dir:
+            repo_root = Path(temp_dir)
+            backlog_root = repo_root / "research_control/design"
+            backlog_root.mkdir(parents=True)
+            for version, plan_id in (("v21", DEFAULT_PLAN_ID), ("v22", v22_plan_id)):
+                (backlog_root / f"{version}_recommendation_backlog.yaml").write_text(
+                    "source_plan:\n"
+                    f"  plan_id: {plan_id}\n"
+                    "items:\n"
+                    "  - plan_task_id: P0-T03\n"
+                    "    depends_on: []\n"
+                    "  - plan_task_id: P1-T01\n"
+                    "    depends_on: [P0-T03]\n",
+                    encoding="utf-8",
+                )
+
+            task_root = repo_root / "research_control/tasks"
+            v21_task = task_root / "RT-V21"
+            v21_task.mkdir(parents=True)
+            (v21_task / "00_TASK.yaml").write_text(
+                "task_id: RT-V21\n"
+                "closure_status: qualifying_complete\n"
+                "implementation_plan:\n"
+                f"  plan_id: {DEFAULT_PLAN_ID}\n"
+                "  plan_task_id: P1-T01\n",
+                encoding="utf-8",
+            )
+            v22_task = task_root / "RT-V22"
+            v22_task.mkdir(parents=True)
+            (v22_task / "00_TASK.yaml").write_text(
+                "task_id: RT-V22\n"
+                "closure_status: qualifying_complete\n"
+                "implementation_plan:\n"
+                f"  plan_id: {v22_plan_id}\n"
+                "  plan_task_id: P0-T03\n",
+                encoding="utf-8",
+            )
+            rows = [
+                {
+                    "task_id": "RT-V21",
+                    "task_path": "research_control/tasks/RT-V21",
+                    "status": "completed",
+                    "closed_at": "2026-08-08T22:00:00Z",
+                },
+                {
+                    "task_id": "RT-V22",
+                    "task_path": "research_control/tasks/RT-V22",
+                    "status": "completed",
+                    "closed_at": "2026-08-08T22:00:01Z",
+                },
+            ]
+            with mock.patch.object(ordinary_route_guard, "_read_csv", return_value=rows):
+                identities = completed_plan_task_identities(
+                    repo_root,
+                    "2026-08-08T23:00:00Z",
+                )
+
+            self.assertIn((DEFAULT_PLAN_ID, "P1-T01"), identities)
+            self.assertIn((v22_plan_id, "P0-T03"), identities)
+            self.assertNotIn((v22_plan_id, "P1-T01"), identities)
+
+    def test_untracked_handoff_requires_exact_atomic_checkpoint_recovery(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            repo_root = Path(temp_dir)
+            handoff_path = repo_root / "research_control/handoffs/handoff-9901.yaml"
+            blocker_path = repo_root / "research_control/tasks/RT-OLD/artifacts/blocker.yaml"
+            completion_path = (
+                repo_root
+                / "research_control/tasks/RT-OLD/jobs/completions/AJC-AJ-OLD.yaml"
+            )
+            for path in (handoff_path, blocker_path, completion_path):
+                path.parent.mkdir(parents=True, exist_ok=True)
+            handoff_path.write_text(
+                "handoff_id: handoff-9901\n"
+                "task_id: RT-OLD\n"
+                "job_id: AJ-OLD\n"
+                "selected_next_route:\n"
+                f"  plan_id: {DEFAULT_PLAN_ID}\n"
+                "  plan_task_id: P12-T04\n"
+                "ordinary_route_guard:\n"
+                "  outcome: all_ready_science_blocked_exception\n",
+                encoding="utf-8",
+            )
+            blocker_path.write_text(
+                "status: active_blocking\njob_id: AJ-OLD\n",
+                encoding="utf-8",
+            )
+            completion_path.write_text(
+                "job_id: AJ-OLD\ncheckpoint_commit:\n  status: PENDING\n",
+                encoding="utf-8",
+            )
+            registry_path = repo_root / ordinary_route_guard.JOB_REGISTRY_PATH
+            registry_path.parent.mkdir(parents=True, exist_ok=True)
+            registry_path.write_text(
+                "job_id,status,completion_path\n"
+                "AJ-OLD,completed,research_control/tasks/RT-OLD/jobs/completions/AJC-AJ-OLD.yaml\n",
+                encoding="utf-8",
+            )
+            source_path = handoff_path.relative_to(repo_root).as_posix()
+            source_hash = ordinary_route_guard._sha256(handoff_path)
+            blocker_rel = blocker_path.relative_to(repo_root).as_posix()
+            completion_rel = completion_path.relative_to(repo_root).as_posix()
+            job = {
+                "plan_id": DEFAULT_PLAN_ID,
+                "plan_task_id": "P12-T04",
+                "allowed_write_paths": [source_path, blocker_rel, completion_rel],
+                "ordinary_route_guard_admission": {
+                    "schema_id": ordinary_route_guard.ADMISSION_SCHEMA_ID,
+                    "policy_id": POLICY_ID,
+                    "source_handoff_id": "handoff-9901",
+                    "source_handoff_path": source_path,
+                    "source_handoff_sha256": source_hash,
+                    "selected_plan_id": DEFAULT_PLAN_ID,
+                    "selected_plan_task_id": "P12-T04",
+                    "selected_plan_task_ref": f"{DEFAULT_PLAN_ID}:P12-T04",
+                    "guard_outcome": "all_ready_science_blocked_exception",
+                    "authority_limits": dict(AUTHORITY_LIMITS),
+                },
+                "checkpoint_recovery": {
+                    "schema_id": CHECKPOINT_RECOVERY_SCHEMA_ID,
+                    "status": "active",
+                    "atomic_checkpoint_required": True,
+                    "source_handoff_id": "handoff-9901",
+                    "source_handoff_path": source_path,
+                    "source_handoff_sha256": source_hash,
+                    "prior_job_id": "AJ-OLD",
+                    "prior_task_id": "RT-OLD",
+                    "blocker_path": blocker_rel,
+                    "blocker_sha256": ordinary_route_guard._sha256(blocker_path),
+                },
+            }
+            candidates = {source_path, blocker_rel, completion_rel}
+            with mock.patch.object(
+                ordinary_route_guard,
+                "_tracked_paths",
+                return_value=set(),
+            ), mock.patch.object(
+                ordinary_route_guard,
+                "_repository_candidate_paths",
+                return_value=candidates,
+            ), mock.patch.object(
+                ordinary_route_guard,
+                "evaluate_research_handoff_guard",
+                return_value={"status": "PASS", "errors": [], "warnings": []},
+            ):
+                result = evaluate_agent_job_route_admission(
+                    job,
+                    created_at="2026-08-08T23:00:00Z",
+                    repo_root=repo_root,
+                )
+                missing_recovery = copy.deepcopy(job)
+                missing_recovery.pop("checkpoint_recovery")
+                rejected = evaluate_agent_job_route_admission(
+                    missing_recovery,
+                    created_at="2026-08-08T23:00:00Z",
+                    repo_root=repo_root,
+                )
+
+            self.assertEqual(result["status"], "PASS")
+            self.assertIn("source_handoff_not_tracked", rejected["errors"])
 
     def test_hash_bound_reaudit_activation_is_prospective_and_resolvable(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:

@@ -283,9 +283,11 @@ remain readable without this block.
 
 The admission binds the job to the immediately preceding ordinary research
 handoff. That handoff must contain a passing `ordinary_route_guard` evaluation
-whose selected v21 plan task is the job's `plan_task_id`. The handoff must be a
-tracked regular YAML file at its exact SHA-256. A project-improvement sidecar
-cannot replace or supersede it.
+whose selected plan ID and plan task match the job's `plan_id` and
+`plan_task_id`. Historical V21 records may omit `plan_id` and default only to
+the registered V21 plan. The handoff must normally be a tracked regular YAML
+file at its exact SHA-256. A project-improvement sidecar cannot replace or
+supersede it.
 
 ```yaml
 ordinary_route_guard_admission:
@@ -294,7 +296,9 @@ ordinary_route_guard_admission:
   source_handoff_id: "handoff-0000"
   source_handoff_path: "research_control/handoffs/handoff-0000.yaml"
   source_handoff_sha256: "lowercase sha256"
+  selected_plan_id: "recommendations_implementation_plan_continue_task-v22"
   selected_plan_task_id: "P0-T00"
+  selected_plan_task_ref: "recommendations_implementation_plan_continue_task-v22:P0-T00"
   guard_outcome: "physics_bearing_route_selected"
   authority_limits:
     ordinary_research_handoff_authoritative: true
@@ -304,6 +308,32 @@ ordinary_route_guard_admission:
     scientific_status_changed: false
     physics_promotion_authorized: false
 ```
+
+When a completed prior transaction cannot be checkpointed because a validator
+or checkpoint-planner defect leaves its ordinary handoff untracked, one
+separately admitted project-system repair may bind that exact repository
+candidate through:
+
+```yaml
+checkpoint_recovery:
+  schema_id: "ordinary_route_checkpoint_recovery_v1"
+  status: "active"
+  atomic_checkpoint_required: true
+  source_handoff_id: "handoff-0000"
+  source_handoff_path: "research_control/handoffs/handoff-0000.yaml"
+  source_handoff_sha256: "lowercase sha256"
+  prior_job_id: "AJ-RT-YYYYMMDD-NNN-001"
+  prior_task_id: "RT-YYYYMMDD-NNN"
+  blocker_path: "research_control/tasks/<prior-task>/artifacts/blocker.yaml"
+  blocker_sha256: "lowercase sha256"
+```
+
+The prior AgentJob must be registered completed, its completion must retain a
+pending checkpoint, and the exact source handoff, completion, and blocker must
+be non-ignored repository candidates covered by the repair job's write
+allowlist. This branch authorizes only one atomic recovery checkpoint. It does
+not permit a plan/task mismatch, make an untracked handoff normal routing
+authority, reuse a protected approval, or create scientific authority.
 
 An exact protected human-route override is the only admission branch that may
 permit a job's `plan_task_id` to differ from the source handoff selection. It
@@ -360,11 +390,11 @@ ordinary_route_guard_admission:
 ```
 
 After three consecutive completed project-system tasks, the ordinary handoff
-must select a dependency-ready physics-bearing v21 task. A project-system task
+must select a dependency-ready physics-bearing task in its selected plan. A project-system task
 may instead be selected only with an `ordinary_route_exception_receipt_v1`
 that accounts for every dependency-ready science task and binds each active
 blocking control failure to a tracked exact hash. `human_gate_required` is
-verified directly against the registered v21 backlog. Other allowed failure
+verified directly against the registered selected-plan backlog. Other allowed failure
 classes require an `ordinary_route_control_failure_v1` evidence record.
 
 The guard emits an advisory warning at two consecutive project-system tasks

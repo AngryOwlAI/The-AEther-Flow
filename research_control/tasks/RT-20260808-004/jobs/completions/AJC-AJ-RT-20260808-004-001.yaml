@@ -1,0 +1,367 @@
+validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+final_repository_validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+job_id: "AJ-RT-20260808-004-001"
+completion_id: "AJC-AJ-RT-20260808-004-001"
+task_id: "RT-20260808-004"
+task_type: "project_system_v22_p0_t03_plan_namespace_guard_repair"
+decision_id: "DDR-20260808-004"
+role_id: "project-control-maintainer"
+source_role_id: "project-control-maintainer"
+role_version: "0.2.0"
+execution_role_ref: "project-control-maintainer@0.2.0--RT-20260808-004"
+status: "completed"
+created_at: "2026-08-08T23:35:15Z"
+started_at: "2026-08-08T23:35:15Z"
+completed_at: "2026-08-08T23:48:18Z"
+objective: "Repair V21/V22 plan namespace collisions in ordinary-route selection and completed dependency identity, add exact classifier recognition and V22 P1-T01 runtime metadata, revalidate P0-T03, and atomically checkpoint the inherited P0-T03 transaction with this repair."
+completion_summary: "The ordinary-route guard now selects registered V21 or V22 backlogs by explicit plan ID, completed dependency identity is plan-qualified, V21 compatibility is preserved, the exact atomic recovery branch admits the uncheckpointed handoff-0969 transaction, and the first V22 successor carries an explicit runtime route. V22 P0-T03 is qualifying-complete; P1-T01 is selected but remains unexecuted pending this transaction's governed checkpoint."
+objective_result: "implemented_and_validated_plan_qualified_route_guard_v22_p0_t03_qualifying_complete"
+transaction_status: "completed_ready_for_atomic_governed_checkpoint"
+result_disposition: "completed_precheckpoint"
+work_item_status: "completed_checkpoint_pending"
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P0-T03"
+repair_route_plan_id: "recommendations_implementation_plan_continue_task-v21"
+repair_route_plan_task_id: "P12-T04"
+repair_work_item_id: "V22-P0-T03-PLAN-NAMESPACE-GUARD-REPAIR"
+next_plan_id: "recommendations_implementation_plan_continue_task-v22"
+next_plan_task_id: "P1-T01"
+checkpoint_commit:
+  status: "PENDING"
+  commit: ""
+  job_id: "AJ-RT-20260808-004-001"
+checkpoint_invocation_count: 0
+checkpoint_staged: false
+legacy_validation_used: false
+project_system_change_only: true
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+distance_to_gr_delta:
+  changed: false
+  effect: "none_project_system_route_contract_repair"
+  summary: "Plan-qualified routing and checkpoint recovery add no source law metric coupling Einstein equation benchmark Gate external-review replication or completed-derivation evidence."
+physics_promotion_authorized: false
+proof_authority: false
+tag_creation_authorized: false
+public_release_authorized: false
+publication_authorized: false
+push_authorized: false
+external_action_authorized: false
+result:
+  status: "PASS_PLAN_QUALIFIED_ROUTE_GUARD_V22_P0_T03_QUALIFYING_COMPLETE"
+  strategy_id: "repair_v22_plan_qualified_route_guard_resolution_v1"
+  source_handoff_id: "handoff-0969"
+  source_handoff_sha256: "e18d9ad8454c27a75034a35e727a35738e540e616fd58dcf4954510da4f1ff95"
+  source_blocker_path: "research_control/tasks/RT-20260808-003/artifacts/v22_p0_t03_runtime_route_collision_blocker.yaml"
+  source_blocker_sha256: "15c98d0a1a9ef4ec3c8cad493c0cdd7319d34274c5d04e4846c6e199dbd5f974"
+  registered_plan_count: 2
+  plan_local_collision_id: "P1-T01"
+  v21_collision_task_class: "science"
+  v21_collision_worker_skill: "continue-research"
+  v22_collision_task_class: "project_system"
+  v22_collision_worker_skill: "improve-project-system"
+  plan_qualified_completion_identity: true
+  cross_plan_dependency_satisfaction_blocked: true
+  legacy_v21_compatibility_preserved: true
+  unknown_plan_fail_closed: true
+  atomic_checkpoint_recovery_admitted: true
+  exact_classifier_paths_admitted: true
+  v22_p0_t03_qualifying_complete: true
+  v22_runtime_backlog_admitted: true
+  v22_p1_t01_selected: true
+  v22_p1_t01_executed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+artifact_receipts:
+  - path: "research_control/tasks/RT-20260808-004/jobs/AJ-RT-20260808-004-001.yaml"
+    sha256: "de66245a4944c0fdb89dafb732c56c821bb3d794f26bdedf6d3f9baad256db3b"
+  - path: "scripts/research_control/ordinary_route_guard.py"
+    sha256: "7487051d0b4ddd564fd67d809e3ac55f20967990a7546398c9e82589cb064173"
+  - path: "scripts/project_control/classify_project_changes.py"
+    sha256: "37bd183299ff0ac1c3ed94cb19e9e27dfca4edcbd4499c0d832ea291164023dc"
+  - path: "tests/test_ordinary_route_guard.py"
+    sha256: "523d20f1bea6c071f87df7341e947da52f9613c38412b9c36670917d66c4c7af"
+  - path: "tests/test_project_change_classifier.py"
+    sha256: "0d179a8429354318593e637e1dc7cc643380f1a3c07813cb2a0ae1bc75cd6c4f"
+  - path: "tests/test_checkpoint_validation_planner.py"
+    sha256: "c521cefaa01b0d4da6cce71bb7a8fb4283584dadfad2eafcd2897bd3f93b1f9d"
+  - path: ".agents/schemas/AGENT_JOB_SCHEMA.md"
+    sha256: "d804e9e2138eb24ddfd3c8ee3ab7fc829094d1073b82efe3e32dbe017ed92d75"
+  - path: "research_control/tasks/RT-20260722-015/artifacts/ordinary_route_guard_policy_v1.md"
+    sha256: "00f34722e9e9f50182acccf9143cc295f4cdf8439321820e41f25b5b0bfbc0c8"
+  - path: "research_control/tasks/RT-20260722-015/artifacts/ordinary_route_exception_schema_v1.md"
+    sha256: "1f39db8b1efce9828bfc6226794f6d7b102910f7bc03d2cfde19cf5e628f8e16"
+  - path: "research_control/design/v22_recommendation_backlog.yaml"
+    sha256: "b2c9c01a29a701b92e23023496e2d901275ccc96777740a086ded86c7374ed6f"
+  - path: "research_control/design/v22_recommendation_backlog_schema.md"
+    sha256: "f7bd3b52220d0d5ffe374a06676fd8b1c012e297932f9b363ff89161c127c30c"
+  - path: "research_control/tasks/RT-20260808-004/artifacts/validate_v22_plan_namespace_guard_repair.py"
+    sha256: "80a241cc5273d9b72d88013cc847ccd9dd6eb9b003ab46e368c2326baae6b56e"
+  - path: "research_control/tasks/RT-20260808-004/artifacts/v22_plan_namespace_guard_repair_validation.json"
+    sha256: "2f33116e0314f1017fdbd597e44d0b06be18d488016fd2bbb853e3594513fdff"
+  - path: "research_control/tasks/RT-20260808-004/artifacts/v22_plan_namespace_guard_repair_compact_receipt.json"
+    sha256: "c42e7d0028a92fc4e091433ac85b3478687baeccb053cad44925ffaa56d9d6b7"
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  preflight_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1134
+    relationship_row_count: 5709
+    semantic_row_count: 1134
+    vault_row_count: 1134
+    blocking_warning_count: 0
+    local_cache_only_warning_count: 0
+  refresh_needed: false
+  refresh_performed: false
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v22.md --json"
+      query_type: "lookup"
+      query_text: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/tasks/RT-20260722-015/artifacts/ordinary_route_guard_policy_v1.md --json"
+      query_type: "lookup"
+      query_text: "research_control/tasks/RT-20260722-015/artifacts/ordinary_route_guard_policy_v1.md"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-TASKS-RT-20260722-015-ORDINARY-ROUTE-GUARD-POLICY-V1"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+      source_hash: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+    - object_id: "MD-RESEARCH-CONTROL-TASKS-RT-20260722-015-ORDINARY-ROUTE-GUARD-POLICY-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260722-015/artifacts/ordinary_route_guard_policy_v1.md"
+      source_hash: "00f34722e9e9f50182acccf9143cc295f4cdf8439321820e41f25b5b0bfbc0c8"
+  authority_note: "Tracked sources and exact control hashes govern. Generated wiki semantic Obsidian SQLite and .local retrieval outputs are navigation only and are not authority."
+physics_payload_admission_result:
+  status: "admitted"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+ordinary_route_guard_admission_result:
+  status: "PASS"
+  source_handoff_id: "handoff-0969"
+  source_handoff_sha256_at_intake: "e18d9ad8454c27a75034a35e727a35738e540e616fd58dcf4954510da4f1ff95"
+  selected_plan_id: "recommendations_implementation_plan_continue_task-v21"
+  selected_plan_task_id: "P12-T04"
+  selected_plan_task_ref: "recommendations_implementation_plan_continue_task-v21:P12-T04"
+  guard_outcome: "all_ready_science_blocked_exception"
+  atomic_checkpoint_recovery: true
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  system_success_counts_as_physics: false
+  system_success_counts_as_distance_to_gr: false
+  scientific_status_changed: false
+  physics_promotion_authorized: false
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  observed_durable_outputs:
+    physics: []
+    project_system:
+      - "one plan-qualified V21/V22 route and completion identity contract"
+      - "one exact atomic checkpoint-recovery admission branch"
+      - "one exact classifier repair for .gitignore and versioned recommendation backlogs"
+      - "one V22 P1-T01 runtime route overlay"
+      - "one focused validation and regression receipt set"
+  accepted_criteria:
+    physics: []
+    project_system:
+      - "V21 P1-T01 remains science while V22 P1-T01 resolves as project_system"
+      - "completed local IDs cannot cross plan namespaces"
+      - "handoff-0969 and repair AgentJob route admission pass"
+      - "the inherited and repair transactions can be checkpointed atomically"
+      - "no scientific or external-action status changes"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+external_review_class: "none_project_control_repair"
+replication_class: "none_project_control_repair"
+protected_authority:
+  scientific_status_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  benchmark_promotion_authorized: false
+  external_review_completed: false
+  independent_replication_completed: false
+  tag_creation_authorized: false
+  public_release_authorized: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false
+  completed_derivation_authorized: false
+blocked_conclusions:
+  - "plan-aware route validation as scientific truth or Distance-to-GR progress"
+  - "P1-T01 selection as P1-T01 execution"
+  - "atomic checkpoint eligibility as a completed checkpoint before the command succeeds"
+  - "runtime backlog admission as source-law metric matter Einstein-equation Gate or benchmark evidence"
+  - "project-system PASS as publication release push reviewer-contact or external-action authority"
+command_results:
+  - command: "validate_v22_plan_namespace_guard_repair.py --write --json"
+    status: "PASS"
+    summary: "Exact source handoff blocker plan map collision completion-identity route-admission classifier and non-authority checks pass and deterministic receipts are written."
+  - command: "validate_v22_plan_namespace_guard_repair.py --json"
+    status: "PASS"
+    summary: "The validation report and compact receipt reproduce byte-for-byte."
+  - command: "python -m unittest -v tests.test_ordinary_route_guard tests.test_project_change_classifier tests.test_checkpoint_validation_planner"
+    status: "PASS"
+    summary: "All 117 focused route-guard classifier and checkpoint-planner tests pass."
+  - command: "bootstrap_memory_system.py; sync_obsidian_vault.py; bootstrap_memory_system.py --validate-only"
+    status: "PASS"
+    summary: "Tracked memory derivatives regenerated and validate with 1134 source, semantic, and vault rows plus 5709 relationship rows and zero blocking findings."
+  - command: "validate_claim_language.py --changed --json"
+    status: "PASS"
+    summary: "Changed-surface claim-language validation reports zero errors; 1537 historical warnings remain nonblocking."
+  - command: "python -m scripts.validation.cli run --profile affected --paths <transaction paths>"
+    status: "FAIL_INHERITED_TASK_TAXONOMY_BASELINE_ONLY"
+    summary: "Fifteen of sixteen affected gates pass. The sole failure is the pre-existing RT-20260804-001 result_kind vocabulary value qualifying_bounded_audit_verdict; no RT-20260808-003 or RT-20260808-004 finding remains."
+  - command: "validate_generated_report_freshness.py --json"
+    status: "PASS"
+    summary: "Current-frontier, compact-frontier, task-index, and research-dependency-graph reports all match live source state."
+  - command: "validate_research_control.py --check-diff --job-id AJ-RT-20260808-004-001 --json-summary"
+    status: "PASS"
+    summary: "Repository-wide diff validation reports zero current errors and 1831 historical warnings."
+validator_results:
+  - name: "v21_v22_plan_namespace_collision_fixture"
+    outcome: "PASS_V21_SCIENCE_V22_PROJECT_SYSTEM"
+  - name: "plan_qualified_completed_identity"
+    outcome: "PASS_NO_CROSS_PLAN_DEPENDENCY_SATISFACTION"
+  - name: "source_handoff_guard"
+    outcome: "PASS_HANDOFF_0969_EXACT_HASH"
+  - name: "atomic_checkpoint_recovery_admission"
+    outcome: "PASS_EXACT_HANDOFF_BLOCKER_PRIOR_COMPLETION_AND_ALLOWLIST"
+  - name: "classifier_exact_paths"
+    outcome: "PASS_GITIGNORE_AND_VERSIONED_RECOMMENDATION_BACKLOG"
+  - name: "focused_regression_suite"
+    outcome: "PASS_117_TESTS"
+  - name: "checkpoint_transaction"
+    outcome: "PENDING_SINGLE_INVOCATION"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Memory preflight and exact V22 plan and route-policy inspection passed."
+      - "Physics-payload dual-budget and handoff-0969 route admission passed."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Plan-local P1-T01 collision resolves to different V21 and V22 routes."
+      - "Plan-qualified completed identity contains V22 P0-T03 and excludes V22 P1-T01."
+      - "Task-local receipts reproduce with zero findings."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "All 117 focused tests pass."
+      - "No canonical science Gate benchmark or Distance-to-GR source was edited."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Current-frontier, task-index, compact-frontier, dependency-graph, and claim-graph projections were regenerated from the final source transaction."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Memory bootstrap, Obsidian synchronization, and validate-only pass with 1134 source rows, 5709 relationship rows, 1134 semantic rows, and 1134 vault rows."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation passes with zero errors; historical warnings do not change this transaction's authority."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "Exactly one governed checkpoint remains authorized."
+authorization_layers:
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  submission_authorized: false
+  public_release_authorized: false
+  reviewer_contact_authorized: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "Project-system route repair only; no protected Gate review is authorized."
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  source_law_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+project_improvement_signals: []
+project_improvement_signal_status: "none"
+documentation_impact_path: "research_control/tasks/RT-20260808-004/documentation_impact.yaml"
+completion_evidence:
+  primary_artifact: "research_control/tasks/RT-20260808-004/artifacts/v22_plan_namespace_guard_repair_compact_receipt.json"
+  validation_path: "research_control/tasks/RT-20260808-004/artifacts/v22_plan_namespace_guard_repair_validation.json"
+  backlog_path: "research_control/design/v22_recommendation_backlog.yaml"
+  source_blocker_path: "research_control/tasks/RT-20260808-003/artifacts/v22_p0_t03_runtime_route_collision_blocker.yaml"
+  handoff_path: "research_control/handoffs/handoff-0970.yaml"
+  program_state_path: "research_control/program_state.yaml"
+parent_child_synthesis:
+  required: false
+  rationale: "Project-system route repair; physics parent-child decomposition is not applicable."
+out_of_scope_remaining_work:
+  - "V22 P1-T01 requires a separate bounded AgentJob after this checkpoint."
+  - "The remaining 36 later V22 packages stay pending or conditionally locked."
+  - "Each later V22 package must receive explicit runtime routing metadata before selection."
+  - "Tag release publication reviewer contact push and every other external action remain separately unauthorized."
+  - "Scientific Gates benchmark promotion external review replication and first-principles GR derivation remain unchanged."
+progress_summary: "The V22 runtime route namespace is repaired and P0-T03 is qualifying-complete; P1-T01 is selected but not executed."
+remaining_work: "Run one atomic governed checkpoint and continue in a later goal turn with one separately admitted V22 P1-T01 AgentJob."
+forbidden_conclusion_summary: "This project-system repair does not establish scientific truth source-derived geometry Einstein dynamics benchmark success publication readiness or completed derivation."
+coherent_resolution_summary: "The exact blocker is resolved without cross-plan identity leakage, the inherited transaction is recoverable atomically, and all scientific and protected-authority boundaries remain unchanged."
+next_recommendation: "After checkpoint execute exactly one bounded V22 P1-T01 three-track charter and separated-scorecard AgentJob."
+authority_limits:
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  source_law_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  Gate_Chair_verdict_authorized: false
+  benchmark_promotion_authorized: false
+  external_review_completed: false
+  independent_replication_completed: false
+  tag_creation_authorized: false
+  public_release_authorized: false
+  reviewer_contact_authorized: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false
+  completed_derivation_authorized: false

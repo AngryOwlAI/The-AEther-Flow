@@ -1,0 +1,73 @@
+task_id: "RT-20260808-003"
+task_type: "project_system_v22_p0_t03_plan_registration_and_backlog_materialization"
+title: "Register the compact V22 decision program and materialize its backlog"
+task_taxonomy:
+  schema_id: "v21_task_taxonomy_v1"
+  work_kind: "construction_or_implementation"
+  milestone: "not_applicable"
+  candidate_family: "not_applicable"
+  result_kind: "implemented_and_validated_or_precisely_blocked"
+  authority: "project_control"
+  scope: "project_system"
+validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+status: "completed"
+closure_status: "repair_required_v22_runtime_plan_namespace_collision"
+created_at: "2026-08-08T22:37:10Z"
+updated_at: "2026-08-08T22:49:31Z"
+closed_at: "2026-08-08T22:49:31Z"
+parent_task_id: "RT-20260808-002"
+parent_handoff_id: "handoff-0968"
+current_decision_id: "DDR-20260808-003"
+current_job_id: "AJ-RT-20260808-003-001"
+role_id: "project-control-maintainer"
+role_version: "0.2.0"
+execution_role_ref: "project-control-maintainer@0.2.0--RT-20260808-003"
+requires_human_gate: false
+human_authorization_note: "The user explicitly requested implementation of the complete V22 plan. P0-T03 is the currently selected non-human-gated registration package; it authorizes no later package or external action."
+implementation_plan:
+  source_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  source_plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  source_plan_hash: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+  source_phase_id: "P0"
+  source_plan_task_id: "P0-T03"
+  blocked_next_plan_task_id: "P1-T01"
+  next_repair_plan_task_id: "P12-T04"
+  next_repair_work_item_id: "V22-P0-T03-PLAN-NAMESPACE-GUARD-REPAIR"
+objective: "Register the byte-identical reviewed V22 draft/control plan; bind it to V21 and the immutable V21 terminal baseline; materialize and validate exactly 40 work packages with 19 recommendations 12 sequence steps 10 cross-cutting directives and an acyclic dependency graph; refresh approved derivatives; and stop before P1-T01."
+target_derivation_milestone: "none"
+milestone_burden: "Project-control plan registration and traceability materialization only; no scientific or Distance-to-GR burden advances."
+route_label: "shared-project-control"
+route_strategy_id: "register_v22_compact_decision_program_v1"
+project_system_change_only: true
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+tag_creation_authorized: false
+public_release_authorized: false
+publication_authorized: false
+push_authorized: false
+external_action_authorized: false
+claim_boundary_id: "CB-PS-V22-P0-T03-PLAN-REGISTRATION-001"
+claim_boundary:
+  allowed_scope: "Register the exact V22 draft/control plan and one source-registry row; create its schema backlog dependency graph coverage and hash receipts; synchronize approved generated projections; select but do not execute P1-T01; invoke at most one governed checkpoint."
+  forbidden_scope: "Canonical science ontology benchmark or Distance-to-GR mutation; scientific Gate review replication proof or promotion; P1-T01 or later package execution; tag release publication push reviewer contact or external action; hand editing generated derivatives."
+  authority_source: "research_control/handoffs/handoff-0968.yaml"
+  boundary_status: "repair_required_precheckpoint"
+completion_contract:
+  required_counts:
+    recommendations: 19
+    sequence_steps: 12
+    cross_cutting_directives: 10
+    phases: 11
+    work_packages: 40
+    dependency_edges: 61
+    cycles: 0
+    orphans: 0
+  blocked_next_plan_task_id: "P1-T01"
+  required_repair_plan_task_id: "P12-T04"
+  required_repair_work_item_id: "V22-P0-T03-PLAN-NAMESPACE-GUARD-REPAIR"
+  next_task_execution_authorized: false
+  scientific_status_must_remain_unchanged: true
+  checkpoint_invocation_limit: 1
+notes: "P0-T03 preserves exact registration and traceability outputs but is not qualifying-complete: the shared ordinary-route guard resolves V22 P1-T01 against the colliding V21 task ID. One separately admitted project-system repair is required before revalidation or V22 launch."

@@ -9,6 +9,7 @@ physics, ontology, promotion, proof, or publication authority.
 from __future__ import annotations
 
 import csv
+import fnmatch
 import hashlib
 import json
 import re
@@ -35,9 +36,18 @@ PROTECTED_HUMAN_OVERRIDE_SCHEMA_ID = (
 PROTECTED_HUMAN_OVERRIDE_HASH_REQUIRED_AFTER = "2026-07-24T16:00:00Z"
 EXCEPTION_SCHEMA_ID = "ordinary_route_exception_receipt_v1"
 CONTROL_FAILURE_SCHEMA_ID = "ordinary_route_control_failure_v1"
+CHECKPOINT_RECOVERY_SCHEMA_ID = "ordinary_route_checkpoint_recovery_v1"
 REQUIRED_AFTER = "2026-07-22T19:00:53Z"
 THRESHOLD = 3
-BACKLOG_PATH = "research_control/design/v21_recommendation_backlog.yaml"
+DEFAULT_PLAN_ID = "recommendations_implementation_plan_continue_task-v21"
+PLAN_BACKLOG_PATHS = {
+    DEFAULT_PLAN_ID: "research_control/design/v21_recommendation_backlog.yaml",
+    "recommendations_implementation_plan_continue_task-v22": (
+        "research_control/design/v22_recommendation_backlog.yaml"
+    ),
+}
+# Backward-compatible alias for the original V21-only policy and fixtures.
+BACKLOG_PATH = PLAN_BACKLOG_PATHS[DEFAULT_PLAN_ID]
 TASK_REGISTRY_PATH = "registries/RESEARCH_TASK_REGISTRY.csv"
 JOB_REGISTRY_PATH = "registries/AGENT_JOB_REGISTRY.csv"
 HANDOFF_PATH_RE = re.compile(r"^research_control/handoffs/handoff-\d{4}\.yaml$")
@@ -223,6 +233,40 @@ def _repository_candidate_paths(repo_root: Path) -> set[str]:
     return _cached_read("repository_candidate_paths", (str(repo_root.resolve()),), load)
 
 
+def _plan_id(value: Any) -> str:
+    """Return an explicit plan identity, defaulting legacy records to V21."""
+
+    return _text(value) or DEFAULT_PLAN_ID
+
+
+def backlog_path_for_plan_id(plan_id: Any) -> str:
+    """Resolve one registered recommendation backlog without ID-only fallback."""
+
+    resolved = _plan_id(plan_id)
+    path = PLAN_BACKLOG_PATHS.get(resolved)
+    if not path:
+        raise ValueError(f"unregistered recommendation plan: {resolved}")
+    return path
+
+
+def _task_plan_identity(task: dict[str, Any]) -> tuple[str, str]:
+    """Extract the plan-qualified work-item identity from a task record."""
+
+    plan = _dict(task.get("implementation_plan"))
+    plan_task_id = _text(
+        plan.get("plan_task_id")
+        or plan.get("source_plan_task_id")
+        or task.get("plan_task_id")
+    )
+    plan_id = _text(plan.get("plan_id") or plan.get("source_plan_id"))
+    if not plan_id and (
+        _text(task.get("task_type")).startswith("v21_")
+        or _text(task.get("claim_boundary_id")).startswith("CB-V21-")
+    ):
+        plan_id = DEFAULT_PLAN_ID
+    return plan_id, plan_task_id
+
+
 def policy_active(created_at: Any) -> bool:
     """The implementation AgentJob at the exact activation instant is exempt."""
 
@@ -262,38 +306,75 @@ def _job_record(repo_root: Path, job_path: str) -> dict[str, Any]:
         return {}
 
 
-def completed_plan_task_ids(repo_root: Path, as_of: str) -> set[str]:
-    completed: set[str] = set()
+def completed_plan_task_identities(
+    repo_root: Path,
+    as_of: str,
+) -> set[tuple[str, str]]:
+    """Return completed work items as ``(plan_id, plan_task_id)`` pairs.
+
+    Work-package IDs are local to a recommendation plan.  Keeping the plan ID
+    in the identity prevents a completion from V21 from satisfying the same
+    local dependency name in V22.  Historical V21 records retain their
+    existing inference rules; newer plans fail closed on repair-required
+    records until a qualifying superseding task records the work item.
+    """
+
+    completed: set[tuple[str, str]] = set()
     for row in _read_csv(repo_root, TASK_REGISTRY_PATH):
         closed_at = _text(row.get("closed_at"))
         if row.get("status") != "completed" or not closed_at or closed_at > as_of:
             continue
         task = _task_record(repo_root, row.get("task_path", ""))
-        plan = _dict(task.get("implementation_plan"))
-        plan_task_id = _text(plan.get("plan_task_id") or task.get("plan_task_id"))
-        v21_identity = (
-            _text(plan.get("plan_id"))
-            == "recommendations_implementation_plan_continue_task-v21"
-            or _text(task.get("task_type")).startswith("v21_")
-            or _text(task.get("claim_boundary_id")).startswith("CB-V21-")
-        )
-        if plan_task_id and v21_identity:
-            completed.add(plan_task_id)
-    backlog_by_id = {
-        _text(item.get("plan_task_id")): item
-        for item in _load_backlog(repo_root)
-        if _text(item.get("plan_task_id"))
-    }
-    pending = list(completed)
-    while pending:
-        item = backlog_by_id.get(pending.pop(), {})
-        for dependency in _list(item.get("depends_on")):
-            dependency_id = _text(dependency)
-            if dependency_id and dependency_id not in completed:
-                completed.add(dependency_id)
-                pending.append(dependency_id)
-    completed.difference_update(_active_plan_reaudit_ids(repo_root, as_of))
+        plan_id, plan_task_id = _task_plan_identity(task)
+        if not plan_id or not plan_task_id or plan_id not in PLAN_BACKLOG_PATHS:
+            continue
+        if (
+            plan_id != DEFAULT_PLAN_ID
+            and _text(task.get("closure_status")).startswith("repair_required")
+        ):
+            continue
+        completed.add((plan_id, plan_task_id))
+
+    for plan_id in sorted({identity[0] for identity in completed}):
+        backlog_by_id = {
+            _text(item.get("plan_task_id")): item
+            for item in _load_backlog(repo_root, plan_id)
+            if _text(item.get("plan_task_id"))
+        }
+        pending = [task_id for item_plan, task_id in completed if item_plan == plan_id]
+        while pending:
+            item = backlog_by_id.get(pending.pop(), {})
+            for dependency in _list(item.get("depends_on")):
+                dependency_id = _text(dependency)
+                identity = (plan_id, dependency_id)
+                if dependency_id and identity not in completed:
+                    completed.add(identity)
+                    pending.append(dependency_id)
+
+    completed.difference_update(
+        (DEFAULT_PLAN_ID, task_id)
+        for task_id in _active_plan_reaudit_ids(repo_root, as_of)
+    )
     return completed
+
+
+def completed_plan_task_ids(
+    repo_root: Path,
+    as_of: str,
+    plan_id: str = DEFAULT_PLAN_ID,
+) -> set[str]:
+    """Return local completed IDs for one explicit plan.
+
+    The optional argument preserves the original V21 call surface while the
+    internal completion model remains plan-qualified.
+    """
+
+    resolved_plan_id = _plan_id(plan_id)
+    return {
+        task_id
+        for item_plan_id, task_id in completed_plan_task_identities(repo_root, as_of)
+        if item_plan_id == resolved_plan_id
+    }
 
 
 def _active_plan_reaudit_ids(repo_root: Path, as_of: str) -> set[str]:
@@ -377,17 +458,34 @@ def _active_plan_reaudit_ids(repo_root: Path, as_of: str) -> set[str]:
     return active
 
 
-def _load_backlog(repo_root: Path) -> list[dict[str, Any]]:
-    value = _load_mapping(repo_root / BACKLOG_PATH)
+def _load_backlog(
+    repo_root: Path,
+    plan_id: str = DEFAULT_PLAN_ID,
+) -> list[dict[str, Any]]:
+    resolved_plan_id = _plan_id(plan_id)
+    path = backlog_path_for_plan_id(resolved_plan_id)
+    value = _load_mapping(repo_root / path)
+    source_plan = _dict(value.get("source_plan"))
+    observed_plan_id = _text(source_plan.get("plan_id"))
+    if observed_plan_id and observed_plan_id != resolved_plan_id:
+        raise ValueError(
+            f"recommendation backlog {path} identifies {observed_plan_id}, "
+            f"expected {resolved_plan_id}"
+        )
     return [item for item in _list(value.get("items")) if isinstance(item, dict)]
 
 
-def discover_ready_science_routes(repo_root: Path, as_of: str) -> list[dict[str, Any]]:
-    """Return dependency-ready, incomplete v21 science routes as of a handoff."""
+def discover_ready_science_routes(
+    repo_root: Path,
+    as_of: str,
+    plan_id: str = DEFAULT_PLAN_ID,
+) -> list[dict[str, Any]]:
+    """Return dependency-ready, incomplete science routes for one plan."""
 
-    completed = completed_plan_task_ids(repo_root, as_of)
+    resolved_plan_id = _plan_id(plan_id)
+    completed = completed_plan_task_ids(repo_root, as_of, resolved_plan_id)
     ready: list[dict[str, Any]] = []
-    for item in _load_backlog(repo_root):
+    for item in _load_backlog(repo_root, resolved_plan_id):
         plan_task_id = _text(item.get("plan_task_id"))
         if not plan_task_id or plan_task_id in completed:
             continue
@@ -398,6 +496,7 @@ def discover_ready_science_routes(repo_root: Path, as_of: str) -> list[dict[str,
             continue
         ready.append(
             {
+                "plan_id": resolved_plan_id,
                 "plan_task_id": plan_task_id,
                 "work_kind": _text(item.get("work_kind")),
                 "route_label": _text(item.get("route_label")),
@@ -893,6 +992,8 @@ def _validate_evidence(
     repo_root: Path,
     tracked_paths: set[str],
     errors: list[str],
+    *,
+    backlog_path: str = BACKLOG_PATH,
 ) -> None:
     plan_task_id = _text(ready_route.get("plan_task_id"))
     prefix = f"blocked_route_{plan_task_id}"
@@ -912,7 +1013,7 @@ def _validate_evidence(
         errors.append(f"{prefix}_evidence_hash_mismatch")
         return
     if failure_class == "human_gate_required":
-        if evidence_path != BACKLOG_PATH or ready_route.get("requires_human_gate") is not True:
+        if evidence_path != backlog_path or ready_route.get("requires_human_gate") is not True:
             errors.append(f"{prefix}_human_gate_not_authorized_by_backlog")
         return
     try:
@@ -939,6 +1040,9 @@ def _validate_exception(
     repo_root: Path,
     tracked_paths: set[str],
     errors: list[str],
+    *,
+    plan_id: str = DEFAULT_PLAN_ID,
+    backlog_path: str = BACKLOG_PATH,
 ) -> None:
     if not isinstance(receipt, dict) or receipt.get("active") is not True:
         errors.append("active_exception_receipt_required")
@@ -953,6 +1057,14 @@ def _validate_exception(
     declared_ids = [_text(item) for item in _list(receipt.get("ready_science_plan_task_ids"))]
     if declared_ids != expected_ids:
         errors.append("exception_ready_science_ids_mismatch")
+    expected_refs = [f"{plan_id}:{plan_task_id}" for plan_task_id in expected_ids]
+    declared_refs = [
+        _text(item)
+        for item in _list(receipt.get("ready_science_plan_task_refs"))
+    ]
+    if plan_id != DEFAULT_PLAN_ID or declared_refs:
+        if declared_refs != expected_refs:
+            errors.append("exception_ready_science_refs_mismatch")
     blocked = [item for item in _list(receipt.get("blocked_routes")) if isinstance(item, dict)]
     by_id: dict[str, dict[str, Any]] = {}
     for item in blocked:
@@ -972,6 +1084,7 @@ def _validate_exception(
                 repo_root,
                 tracked_paths,
                 errors,
+                backlog_path=backlog_path,
             )
     _validate_authority_limits(receipt, errors)
 
@@ -986,6 +1099,8 @@ def evaluate_guard_record(
     observed_run_length: int,
     repo_root: Path,
     tracked_paths: set[str] | None = None,
+    selected_plan_id: str = DEFAULT_PLAN_ID,
+    backlog_path: str = BACKLOG_PATH,
 ) -> dict[str, Any]:
     errors: list[str] = []
     warnings: list[str] = []
@@ -1001,6 +1116,11 @@ def evaluate_guard_record(
         errors.append("policy_id_invalid")
     if _text(record.get("ordinary_handoff_id")) != handoff_id:
         errors.append("ordinary_handoff_id_mismatch")
+    resolved_plan_id = _plan_id(selected_plan_id)
+    declared_plan_id = _text(record.get("selected_plan_id"))
+    if resolved_plan_id != DEFAULT_PLAN_ID or declared_plan_id:
+        if declared_plan_id != resolved_plan_id:
+            errors.append("selected_plan_id_mismatch")
     if _int_value(record.get("threshold")) != THRESHOLD:
         errors.append("threshold_mismatch")
     if (
@@ -1012,6 +1132,17 @@ def evaluate_guard_record(
     declared_ready_ids = [_text(item) for item in _list(record.get("ready_science_plan_task_ids"))]
     if declared_ready_ids != expected_ready_ids:
         errors.append("ready_science_plan_task_ids_mismatch")
+    expected_ready_refs = [
+        f"{resolved_plan_id}:{plan_task_id}"
+        for plan_task_id in expected_ready_ids
+    ]
+    declared_ready_refs = [
+        _text(item)
+        for item in _list(record.get("ready_science_plan_task_refs"))
+    ]
+    if resolved_plan_id != DEFAULT_PLAN_ID or declared_ready_refs:
+        if declared_ready_refs != expected_ready_refs:
+            errors.append("ready_science_plan_task_refs_mismatch")
     if _text(record.get("selected_plan_task_id")) != selected_plan_task_id:
         errors.append("selected_plan_task_id_mismatch")
     selected_is_science = _text(selected_plan_item.get("task_class")) == "science"
@@ -1052,6 +1183,8 @@ def evaluate_guard_record(
             repo_root,
             tracked_paths if tracked_paths is not None else _tracked_paths(repo_root),
             errors,
+            plan_id=resolved_plan_id,
+            backlog_path=backlog_path,
         )
     if _text(record.get("outcome")) != expected_outcome:
         errors.append("outcome_mismatch")
@@ -1061,6 +1194,8 @@ def evaluate_guard_record(
         "warnings": warnings,
         "observed_run_length": observed_run_length,
         "ready_science_plan_task_ids": expected_ready_ids,
+        "ready_science_plan_task_refs": expected_ready_refs,
+        "selected_plan_id": resolved_plan_id,
         "selected_plan_task_id": selected_plan_task_id,
         "expected_outcome": expected_outcome,
     }
@@ -1082,8 +1217,24 @@ def evaluate_research_handoff_guard(
         }
     handoff_id = _text(handoff.get("handoff_id"))
     selected = _dict(handoff.get("selected_next_route"))
+    guard_record = _dict(handoff.get("ordinary_route_guard"))
+    declared_guard_plan_id = _text(guard_record.get("selected_plan_id"))
+    # Historical intake handoffs could name a future plan in their route while
+    # the guard still intentionally evaluated the only registered runtime
+    # backlog (V21).  Explicit selected_plan_id opts into the plan-qualified
+    # contract; absence retains the legacy V21 interpretation.
+    selected_plan_id = _plan_id(declared_guard_plan_id)
     selected_plan_task_id = _text(selected.get("plan_task_id"))
-    backlog = _load_backlog(repo_root)
+    try:
+        backlog_path = backlog_path_for_plan_id(selected_plan_id)
+        backlog = _load_backlog(repo_root, selected_plan_id)
+    except (OSError, ValueError, yaml.YAMLError):
+        return {
+            "status": "FAIL",
+            "errors": ["selected_plan_id_not_registered"],
+            "warnings": [],
+            "policy_required": True,
+        }
     selected_item = next(
         (item for item in backlog if _text(item.get("plan_task_id")) == selected_plan_task_id),
         {},
@@ -1091,21 +1242,145 @@ def evaluate_research_handoff_guard(
     if not selected_item:
         return {
             "status": "FAIL",
-            "errors": ["selected_plan_task_not_in_v21_backlog"],
+            "errors": ["selected_plan_task_not_in_selected_backlog"],
             "warnings": [],
             "policy_required": True,
         }
     result = evaluate_guard_record(
         handoff.get("ordinary_route_guard"),
         handoff_id=handoff_id,
+        selected_plan_id=selected_plan_id,
         selected_plan_task_id=selected_plan_task_id,
         selected_plan_item=selected_item,
-        ready_science_routes=discover_ready_science_routes(repo_root, created_at),
+        ready_science_routes=discover_ready_science_routes(
+            repo_root,
+            created_at,
+            selected_plan_id,
+        ),
         observed_run_length=derive_consecutive_project_system_tasks(repo_root, created_at),
         repo_root=repo_root,
+        backlog_path=backlog_path,
     )
+    route_plan_id = _text(selected.get("plan_id"))
+    if (
+        declared_guard_plan_id
+        and route_plan_id
+        and route_plan_id != selected_plan_id
+    ):
+        result.setdefault("errors", []).append("selected_route_plan_id_mismatch")
+        result["status"] = "FAIL"
     result["policy_required"] = True
     return result
+
+
+def _path_is_allowlisted(path: str, patterns: list[str]) -> bool:
+    return any(path == pattern or fnmatch.fnmatch(path, pattern) for pattern in patterns)
+
+
+def _validate_untracked_checkpoint_recovery(
+    *,
+    job: dict[str, Any],
+    admission: dict[str, Any],
+    handoff: dict[str, Any],
+    source_path: str,
+    source_sha256: str,
+    repo_root: Path,
+    errors: list[str],
+) -> bool:
+    """Validate the narrow atomic-recovery branch for an uncheckpointed handoff.
+
+    Normal AgentJobs still require a tracked source handoff.  This branch is
+    available only when a prior valid transaction could not be checkpointed,
+    the exact handoff and blocker are hash-bound, and the recovery job
+    allowlists the entire prior transaction for one atomic checkpoint.
+    """
+
+    recovery = _dict(job.get("checkpoint_recovery"))
+    if recovery.get("schema_id") != CHECKPOINT_RECOVERY_SCHEMA_ID:
+        errors.append("source_handoff_not_tracked")
+        errors.append("checkpoint_recovery_schema_id_invalid")
+        return False
+    if recovery.get("atomic_checkpoint_required") is not True:
+        errors.append("checkpoint_recovery_atomic_checkpoint_required")
+    if _text(recovery.get("status")) != "active":
+        errors.append("checkpoint_recovery_status_not_active")
+
+    for field_name, expected in (
+        ("source_handoff_id", _text(handoff.get("handoff_id"))),
+        ("source_handoff_path", source_path),
+        ("source_handoff_sha256", source_sha256),
+        ("prior_job_id", _text(handoff.get("job_id"))),
+        ("prior_task_id", _text(handoff.get("task_id"))),
+    ):
+        if _text(recovery.get(field_name)) != expected:
+            errors.append(f"checkpoint_recovery_{field_name}_mismatch")
+
+    candidate_paths = _repository_candidate_paths(repo_root)
+    if source_path not in candidate_paths:
+        errors.append("checkpoint_recovery_source_handoff_not_candidate")
+
+    blocker_path_text = _text(recovery.get("blocker_path"))
+    blocker_sha256 = _text(recovery.get("blocker_sha256"))
+    blocker_path = _safe_repo_path(repo_root, blocker_path_text)
+    blocker: dict[str, Any] = {}
+    if (
+        blocker_path is None
+        or blocker_path.is_symlink()
+        or not blocker_path.is_file()
+        or blocker_path_text not in candidate_paths
+    ):
+        errors.append("checkpoint_recovery_blocker_path_invalid")
+    elif not SHA256_RE.fullmatch(blocker_sha256) or _sha256(blocker_path) != blocker_sha256:
+        errors.append("checkpoint_recovery_blocker_hash_mismatch")
+    else:
+        try:
+            blocker = _load_mapping(blocker_path)
+        except (OSError, ValueError, yaml.YAMLError):
+            errors.append("checkpoint_recovery_blocker_unreadable")
+    if blocker:
+        if _text(blocker.get("status")) != "active_blocking":
+            errors.append("checkpoint_recovery_blocker_not_active")
+        if _text(blocker.get("job_id")) != _text(handoff.get("job_id")):
+            errors.append("checkpoint_recovery_blocker_job_id_mismatch")
+
+    prior_job_id = _text(handoff.get("job_id"))
+    prior_rows = [
+        row
+        for row in _read_csv(repo_root, JOB_REGISTRY_PATH)
+        if _text(row.get("job_id")) == prior_job_id
+    ]
+    if len(prior_rows) != 1 or _text(prior_rows[0].get("status")) != "completed":
+        errors.append("checkpoint_recovery_prior_job_not_completed")
+        completion_path_text = ""
+    else:
+        completion_path_text = _text(prior_rows[0].get("completion_path"))
+    completion_path = _safe_repo_path(repo_root, completion_path_text)
+    completion: dict[str, Any] = {}
+    if (
+        completion_path is None
+        or completion_path.is_symlink()
+        or not completion_path.is_file()
+        or completion_path_text not in candidate_paths
+    ):
+        errors.append("checkpoint_recovery_prior_completion_invalid")
+    else:
+        try:
+            completion = _load_mapping(completion_path)
+        except (OSError, ValueError, yaml.YAMLError):
+            errors.append("checkpoint_recovery_prior_completion_unreadable")
+    if completion:
+        checkpoint = _dict(completion.get("checkpoint_commit"))
+        if _text(completion.get("job_id")) != prior_job_id:
+            errors.append("checkpoint_recovery_prior_completion_job_mismatch")
+        if _text(checkpoint.get("status")) != "PENDING":
+            errors.append("checkpoint_recovery_prior_checkpoint_not_pending")
+
+    allowlist = [_text(item) for item in _list(job.get("allowed_write_paths"))]
+    for required_path in (source_path, blocker_path_text, completion_path_text):
+        if required_path and not _path_is_allowlisted(required_path, allowlist):
+            errors.append("checkpoint_recovery_prior_path_not_allowlisted")
+
+    return not any(error.startswith("checkpoint_recovery_") for error in errors)
 
 
 def evaluate_agent_job_route_admission(
@@ -1142,8 +1417,6 @@ def evaluate_agent_job_route_admission(
     if not HANDOFF_PATH_RE.fullmatch(source_path) or path is None or not path.is_file() or path.is_symlink():
         errors.append("source_handoff_path_invalid")
         return {"status": "FAIL", "errors": errors, "warnings": [], "policy_required": True}
-    if source_path not in _tracked_paths(repo_root):
-        errors.append("source_handoff_not_tracked")
     if not SHA256_RE.fullmatch(source_sha256) or _sha256(path) != source_sha256:
         errors.append("source_handoff_hash_mismatch")
         return {"status": "FAIL", "errors": errors, "warnings": [], "policy_required": True}
@@ -1152,12 +1425,27 @@ def evaluate_agent_job_route_admission(
     except (OSError, ValueError, yaml.YAMLError):
         errors.append("source_handoff_unreadable")
         return {"status": "FAIL", "errors": errors, "warnings": [], "policy_required": True}
+    if source_path not in _tracked_paths(repo_root):
+        _validate_untracked_checkpoint_recovery(
+            job=job,
+            admission=admission,
+            handoff=handoff,
+            source_path=source_path,
+            source_sha256=source_sha256,
+            repo_root=repo_root,
+            errors=errors,
+        )
     handoff_result = evaluate_research_handoff_guard(handoff, repo_root)
     errors.extend(f"source_handoff:{error}" for error in handoff_result.get("errors", []))
     if _text(admission.get("source_handoff_id")) != _text(handoff.get("handoff_id")):
         errors.append("source_handoff_id_mismatch")
     plan_task_id = _text(job.get("plan_task_id"))
-    selected_plan_task_id = _text(_dict(handoff.get("selected_next_route")).get("plan_task_id"))
+    selected_route = _dict(handoff.get("selected_next_route"))
+    selected_plan_id = _plan_id(handoff_result.get("selected_plan_id"))
+    selected_plan_task_id = _text(selected_route.get("plan_task_id"))
+    job_plan_id = _plan_id(job.get("plan_id"))
+    if job_plan_id != selected_plan_id:
+        errors.append("job_plan_id_not_selected_by_handoff")
     override_evaluated = False
     if plan_task_id and plan_task_id != selected_plan_task_id:
         override_evaluated = _validate_protected_human_override(
@@ -1174,6 +1462,15 @@ def evaluate_agent_job_route_admission(
         errors.append("job_plan_task_id_not_selected_by_handoff")
     if _text(admission.get("selected_plan_task_id")) != selected_plan_task_id:
         errors.append("admission_selected_plan_task_id_mismatch")
+    admission_plan_id = _text(admission.get("selected_plan_id"))
+    if selected_plan_id != DEFAULT_PLAN_ID or admission_plan_id:
+        if admission_plan_id != selected_plan_id:
+            errors.append("admission_selected_plan_id_mismatch")
+    admission_plan_task_ref = _text(admission.get("selected_plan_task_ref"))
+    expected_plan_task_ref = f"{selected_plan_id}:{selected_plan_task_id}"
+    if selected_plan_id != DEFAULT_PLAN_ID or admission_plan_task_ref:
+        if admission_plan_task_ref != expected_plan_task_ref:
+            errors.append("admission_selected_plan_task_ref_mismatch")
     if _text(admission.get("guard_outcome")) != _text(
         _dict(handoff.get("ordinary_route_guard")).get("outcome")
     ):
@@ -1196,16 +1493,21 @@ __all__ = [
     "ADMISSION_SCHEMA_ID",
     "AUTHORITY_LIMITS",
     "BACKLOG_PATH",
+    "CHECKPOINT_RECOVERY_SCHEMA_ID",
     "CONTROL_FAILURE_SCHEMA_ID",
+    "DEFAULT_PLAN_ID",
     "EVALUATION_SCHEMA_ID",
     "EXCEPTION_SCHEMA_ID",
     "FAILURE_CLASSES",
     "POLICY_ID",
+    "PLAN_BACKLOG_PATHS",
     "PROTECTED_HUMAN_OVERRIDE_HASH_REQUIRED_AFTER",
     "PROTECTED_HUMAN_OVERRIDE_SCHEMA_ID",
     "REQUIRED_AFTER",
     "THRESHOLD",
     "canonical_json_hash",
+    "backlog_path_for_plan_id",
+    "completed_plan_task_identities",
     "completed_plan_task_ids",
     "derive_consecutive_project_system_tasks",
     "PLAN_REAUDIT_ACTIVATION_SCHEMA_ID",

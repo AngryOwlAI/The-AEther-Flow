@@ -1,0 +1,56 @@
+schema_id: "v22_p0_t03_runtime_route_collision_blocker_v1"
+status: "active_blocking"
+task_id: "RT-20260808-003"
+job_id: "AJ-RT-20260808-003-001"
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P0-T03"
+blocked_next_plan_task_id: "P1-T01"
+created_at: "2026-08-08T22:49:31Z"
+failure_class: "control_contract_drift"
+stop_condition: "ID collision"
+failure_summary: "The registered V22 backlog uses plan-local work-package IDs, but the ordinary-route guard resolves selected plan_task_id values only against the V21 backlog. Selecting V22 P1-T01 therefore resolves the unrelated V21 science task P1-T01 and fails closed."
+observed_contract:
+  validator_command: ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --job-id AJ-RT-20260808-003-001 --json-summary"
+  ordinary_route_guard_path: "scripts/research_control/ordinary_route_guard.py"
+  hard_coded_backlog_path: "research_control/design/v21_recommendation_backlog.yaml"
+  selected_v22_plan_task_id: "P1-T01"
+  colliding_v21_plan_task_id: "P1-T01"
+  v22_expected_task_class: "project_system"
+  v21_observed_task_class: "science"
+  exact_findings:
+    - "ordinary-route guard: selected_route_class_mismatch"
+    - "ordinary-route guard: selected_physics_route_not_dependency_ready"
+    - "ordinary-route guard: exception_not_allowed_when_physics_route_selected"
+    - "ordinary-route guard: outcome_mismatch"
+impact:
+  v22_plan_source_registered: true
+  v22_traceability_artifacts_materialized: true
+  v22_runtime_backlog_admitted: false
+  v22_p0_t03_qualifying_complete: false
+  v22_p1_t01_execution_ready: false
+  scientific_claims_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+required_repair:
+  plan_task_id: "P12-T04"
+  work_item_id: "V22-P0-T03-PLAN-NAMESPACE-GUARD-REPAIR"
+  worker_skill: "improve-project-system"
+  role_family: "project-control-maintainer@0.2.0"
+  objective: "Make ordinary-route selection plan-version aware, namespace completed work-package identities by plan ID, add the V22 runtime routing fields and regression fixtures, preserve V21 compatibility, then revalidate P0-T03 before P1-T01."
+  allowed_scope:
+    - "registered backlog resolution keyed by selected_next_route.plan_id"
+    - "plan-qualified completed-work-item identity"
+    - "V22 route metadata and fail-closed regression tests"
+    - "fresh P0-T03 integration validation"
+  forbidden_scope:
+    - "V22 P1-T01 execution"
+    - "canonical science or historical evidence mutation"
+    - "scientific Gate benchmark proof review replication or promotion"
+    - "tag release publication push reviewer contact or other external action"
+repair_acceptance:
+  - "V21 handoffs retain their existing route-guard result."
+  - "A V22 P1-T01 fixture resolves the V22 project-system item rather than the V21 science item."
+  - "Completed plan-task identities cannot cross-satisfy dependencies between V21 and V22."
+  - "The broad research-control diff validator passes for a revalidated V22 P0-T03 handoff."
+authority_note: "This blocker is project-system integration evidence only. It is not scientific evidence, a global no-go result, or authority to execute the repair or any V22 successor before a fresh bounded AgentJob."

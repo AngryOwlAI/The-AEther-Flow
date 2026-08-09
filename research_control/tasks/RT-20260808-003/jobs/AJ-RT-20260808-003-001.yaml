@@ -1,0 +1,330 @@
+job_id: "AJ-RT-20260808-003-001"
+task_id: "RT-20260808-003"
+decision_id: "DDR-20260808-003"
+role_id: "project-control-maintainer"
+role_version: "0.2.0"
+status: "completed"
+validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+created_at: "2026-08-08T22:37:10Z"
+started_at: "2026-08-08T22:37:10Z"
+completed_at: "2026-08-08T22:49:31Z"
+completion_path: "research_control/tasks/RT-20260808-003/jobs/completions/AJC-AJ-RT-20260808-003-001.yaml"
+requires_human_gate: false
+human_authorization_note: "The user's complete V22 implementation goal authorizes the currently selected P0-T03 registration package. The job stops before P1-T01 and reserves every protected or external action."
+objective: "Register and validate the byte-identical V22 draft/control plan; bind it to V21 and the terminal V21 baseline; materialize its compact backlog dependency graph coverage seed and hash receipts; synchronize only approved projections; and select but do not execute P1-T01."
+target_derivation_milestone: "none"
+milestone_burden: "Project-control plan registration and traceability materialization only; no scientific or Distance-to-GR burden advances."
+route_label: "shared-project-control"
+route_reason: "handoff_0968_selects_v22_p0_t03_after_checkpointed_internal_v21_baseline"
+route_strategy_id: "register_v22_compact_decision_program_v1"
+source_head: "eabec137d96ccdc5b7907e8a5d99f8f94a992780"
+source_tree: "6afdda68f0ced7bd81a265006610308563204f52"
+assembly_parent_head: "eabec137d96ccdc5b7907e8a5d99f8f94a992780"
+plan_task_id: "P0-T03"
+next_plan_task_ids:
+  - "P1-T01"
+next_plan_task_execution_authorized: false
+project_system_change_only: true
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+tag_creation_authorized: false
+public_release_authorized: false
+publication_authorized: false
+push_authorized: false
+external_action_authorized: false
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0968"
+  source_handoff_path: "research_control/handoffs/handoff-0968.yaml"
+  source_handoff_sha256: "3c9b19e1845bb445365123155cd2dbb7b9a247e84e363c2dc88532f33a4aa149"
+  selected_plan_task_id: "P0-T03"
+  guard_outcome: "all_ready_science_blocked_exception"
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  preflight_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1132
+    relationship_row_count: 5700
+    semantic_row_count: 1132
+    vault_row_count: 1132
+    blocking_warning_count: 0
+    local_cache_only_warning_count: 0
+  refresh_needed: true
+  refresh_performed: true
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v21.md --json"
+      query_type: "lookup"
+      query_text: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  additional_canonical_inspections:
+    - canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+      source_hash: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+      source_hash_status: "ignored_unregistered_draft_inspected_read_only_before_job_activation"
+    - canonical_path: "research_control/tasks/RT-20260808-002/artifacts/v21_terminal_baseline_release_manifest_v1.json"
+      source_hash: "cd4b3fa94e6b1fe3cd5eb576953d3e918b683e3628c0fe63887d9135281d4043"
+      source_hash_status: "tracked_terminal_baseline_evidence_inspected_read_only"
+  authority_note: "Tracked Git objects source registries tasks handoffs baseline receipts and protected decisions govern. Generated wiki semantic Obsidian SQLite and .local state are retrieval or execution layers only and are not authority."
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  candidate_family: "not_applicable"
+  assumption_delta:
+    - "No scientific assumption changes; the package registers a pre-existing reviewed control plan."
+    - "No Gate benchmark review replication publication or first-principles GR status changes."
+  materiality_basis: "P0-T03 adds the first registered V22 plan identity and a deterministic compact 40-package runtime traceability representation."
+  source_basis:
+    - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+    - "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+    - "research_control/handoffs/handoff-0968.yaml"
+    - "research_control/tasks/RT-20260808-002/artifacts/v21_terminal_baseline_release_manifest_v1.json"
+  expected_artifact_paths:
+    - "research_control/design/v22_recommendation_backlog.yaml"
+    - "research_control/tasks/RT-20260808-003/artifacts/v22_backlog_dependency_graph.json"
+    - "research_control/tasks/RT-20260808-003/artifacts/v22_recommendation_coverage_seed.json"
+    - "research_control/tasks/RT-20260808-003/artifacts/v22_p0_t03_plan_registration_validation.json"
+  project_system_justification: "The job creates control registration and routing data only; it contains no scientific result."
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+    - "coverage_and_dependency_traceability"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  expected_durable_outputs:
+    physics: []
+    project_system:
+      - "one byte-identical registered V22 plan and source row"
+      - "one compact 40-package backlog and 61-edge acyclic dependency graph"
+      - "one 19-recommendation 12-sequence-step 10-directive coverage seed"
+      - "one exact source-hash registration and validation receipt set"
+      - "one P1-T01 handoff and one governed checkpoint outcome"
+  acceptance_criteria:
+    physics: []
+    project_system:
+      - "review and plan source hashes match the exact intake"
+      - "19 recommendations 12 sequence steps 10 directives 11 phases and 40 packages resolve"
+      - "every dependency resolves and the graph has 61 edges zero cycles and zero orphans"
+      - "generated derivatives are refreshed only by approved scripts"
+      - "no scientific Gate benchmark publication release or external-action status changes"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: false
+    exception_id: ""
+    evidence_path: ""
+    evidence_sha256: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+allowed_read_paths:
+  - "SOUL.md"
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/**"
+  - ".agents/roles/research_ops/**"
+  - ".agents/schemas/**"
+  - "/Users/alex.omegapy/.codex/attachments/64bf115e-0b54-4458-8db0-bb95b4a620ac/pasted-text-1.txt"
+  - "/Users/alex.omegapy/.codex/visualizations/2026/08/08/019fe2f1-1efd-74f0-9ad6-c0a8d7880d9e/recommendations_implementation_plan_continue_task-v22.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  - "research_control/**"
+  - "scripts/**"
+  - "registries/**"
+allowed_write_paths:
+  - ".gitignore"
+  - "FOLDER_MAP.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  - "output/**"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "research_control/current_frontier.md"
+  - "research_control/design/v22_recommendation_backlog.yaml"
+  - "research_control/design/v22_recommendation_backlog_schema.md"
+  - "research_control/handoffs/handoff-0969.md"
+  - "research_control/handoffs/handoff-0969.yaml"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260808-003/**"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/tex/**"
+allowed_generated_paths:
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/tex/**"
+forbidden_paths:
+  - "ontology/**"
+  - "legacy_ontology/**"
+  - "manuscripts/**"
+  - "tex/**"
+  - "markdown/**"
+  - "html/**"
+  - "pdf/**"
+  - "scripts/**"
+  - "tests/**"
+  - ".codex/skills/**"
+  - ".agents/roles/**"
+  - ".agents/schemas/**"
+allowed_source_classes:
+  - "project_control"
+  - "registry"
+  - "role_contract"
+  - "schema_contract"
+  - "control_markdown"
+  - "task_local_validator"
+  - "approved_generated_projection"
+forbidden_source_classes:
+  - "canonical_ontology_write"
+  - "scientific_source_mutation"
+  - "source_law_adoption"
+  - "metric_or_matter_adoption"
+  - "benchmark_promotion"
+  - "physics_claim_promotion"
+  - "gate_chair_verdict"
+  - "proof_authority"
+  - "external_review_or_replication_claim"
+  - "completed_derivation_claim"
+  - "generated_derivative_authority"
+  - "external_system_mutation"
+approved_commands:
+  - ".venv/bin/python research_control/tasks/RT-20260808-003/artifacts/validate_v22_plan_registration.py --write --json"
+  - ".venv/bin/python research_control/tasks/RT-20260808-003/artifacts/validate_v22_plan_registration.py --json"
+  - ".venv/bin/python scripts/research_control/task_taxonomy.py --validate-repository --json"
+  - ".venv/bin/python -m scripts.validation.cli run --profile affected --paths .gitignore implementations_plans/recommendations_implementation_plan_continue_task-v22.md research_control/design/v22_recommendation_backlog.yaml research_control/design/v22_recommendation_backlog_schema.md research_control/tasks/RT-20260808-003 research_control/handoffs/handoff-0969.yaml research_control/program_state.yaml registries/MARKDOWN_SOURCE_REGISTRY.csv --explain"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --job-id AJ-RT-20260808-003-001 --json-summary"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --write"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --json output/research_dependency_graph.json --markdown wiki/indexes/research_dependency_graph.md --dot output/research_dependency_graph.dot"
+  - ".venv/bin/python scripts/research_control/generate_claim_graph_v1.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+  - ".venv/bin/python scripts/research_control/validate_generated_report_freshness.py --json"
+  - "git diff --check"
+  - "git diff --cached --check"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260808-003-001"
+required_validators:
+  - "memory_preflight"
+  - "ordinary_route_guard_admission"
+  - "v22_review_source_identity"
+  - "v22_plan_copy_identity"
+  - "v22_markdown_source_registration"
+  - "v21_terminal_baseline_dependency"
+  - "v22_recommendation_sequence_directive_coverage"
+  - "v22_backlog_schema_and_dependency_graph"
+  - "v22_conditional_gate_locks"
+  - "v22_non_authority_boundary"
+  - "task_taxonomy"
+  - "project_change_classifier"
+  - "project_improvement_signals"
+  - "documentation_impact"
+  - "claim_language_changed"
+  - "research_control_diff"
+  - "generated_report_freshness"
+  - "memory_sync"
+  - "memory_core"
+  - "git_diff_check"
+  - "checkpoint_transaction"
+expected_outputs:
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  - "research_control/design/v22_recommendation_backlog.yaml"
+  - "research_control/design/v22_recommendation_backlog_schema.md"
+  - "research_control/tasks/RT-20260808-003/artifacts/validate_v22_plan_registration.py"
+  - "research_control/tasks/RT-20260808-003/artifacts/v22_backlog_dependency_graph.json"
+  - "research_control/tasks/RT-20260808-003/artifacts/v22_recommendation_coverage_seed.json"
+  - "research_control/tasks/RT-20260808-003/artifacts/v22_plan_source_hash_receipt.json"
+  - "research_control/tasks/RT-20260808-003/artifacts/v22_plan_registration_report.json"
+  - "research_control/tasks/RT-20260808-003/artifacts/v22_p0_t03_plan_registration_validation.json"
+  - "research_control/tasks/RT-20260808-003/artifacts/v22_p0_t03_compact_receipt.json"
+  - "research_control/tasks/RT-20260808-003/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260808-003/jobs/completions/AJC-AJ-RT-20260808-003-001.yaml"
+  - "research_control/handoffs/handoff-0969.yaml"
+  - "research_control/handoffs/handoff-0969.md"
+  - "research_control/program_state.yaml"
+claim_boundary: "CB-PS-V22-P0-T03-PLAN-REGISTRATION-001"
+resolves_signal_routing: false
+documentation_impact_id: "DI-RT-20260808-003-001"
+completion_id: "AJC-AJ-RT-20260808-003-001"
+notes: "This immutable AgentJob authorizes one bounded P0-T03 registration and one checkpoint. It does not authorize P1-T01 execution science promotion or any external action."

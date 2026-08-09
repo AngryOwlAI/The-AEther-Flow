@@ -1,12 +1,197 @@
 mode: "director_led_research_control"
-active_task_id: "RT-20260808-002"
-active_agent_job_id: "AJ-RT-20260808-002-001"
-latest_handoff_id: "handoff-0968"
-current_status: "v22_p0_t02_internal_v21_baseline_release_candidate_complete_checkpoint_pending"
-claim_boundary_summary: "RT-20260808-002 freezes the exact terminal V21 commit and tree in an internally reproducible release candidate and selects V22 P0-T03 without executing it. No scientific status, tag, public release, publication, push, or external-action authority changes."
-next_plan_task_id: "P0-T03"
-next_worker_skill: "continue-research"
-next_recommended_action: "After the governed checkpoint for AJ-RT-20260808-002-001, execute exactly one bounded V22 P0-T03 plan-registration and backlog-materialization AgentJob; do not create a tag, public release, publication, push, or external action."
+active_task_id: "RT-20260808-004"
+active_agent_job_id: "AJ-RT-20260808-004-001"
+latest_handoff_id: "handoff-0970"
+current_status: "v22_p0_t03_qualifying_complete_p1_t01_selected_atomic_checkpoint_pending"
+claim_boundary_summary: "RT-20260808-004 repairs plan-qualified ordinary routing and atomic checkpoint recovery. V22 P0-T03 is qualifying-complete and P1-T01 is selected but unexecuted. No science or external-action authority changes."
+next_plan_task_id: "P1-T01"
+next_worker_skill: "improve-project-system"
+next_recommended_action: "After the single atomic governed checkpoint for AJ-RT-20260808-004-001 execute exactly one separately admitted V22 P1-T01 improve-project-system AgentJob for the three-track charter and separated scorecards; perform no external action."
+
+v22_p0_t03_plan_namespace_guard_repair:
+  task_id: "RT-20260808-004"
+  parent_task_id: "RT-20260808-003"
+  parent_handoff_id: "handoff-0969"
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  plan_task_id: "P0-T03"
+  repair_route_plan_id: "recommendations_implementation_plan_continue_task-v21"
+  repair_route_plan_task_id: "P12-T04"
+  repair_work_item_id: "V22-P0-T03-PLAN-NAMESPACE-GUARD-REPAIR"
+  next_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  next_plan_task_id: "P1-T01"
+  claim_boundary_id: "CB-PS-V22-P0-T03-PLAN-NAMESPACE-CHECKPOINT-REPAIR-001"
+  status: "PASS_PLAN_QUALIFIED_ROUTE_GUARD_V22_P0_T03_QUALIFYING_COMPLETE"
+  work_item_status: "completed_checkpoint_pending"
+  route_label: "ordinary-research-packet"
+  selected_role_family: "project-control-maintainer@0.2.0"
+  selected_worker_skill: "improve-project-system"
+  selected_strategy_id: "repair_v22_plan_qualified_route_guard_resolution_v1"
+  target_derivation_milestone: "none"
+  milestone_burden: "Project-system route-contract repair only; no scientific or Distance-to-GR burden advances."
+  source_head: "eabec137d96ccdc5b7907e8a5d99f8f94a992780"
+  source_tree: "6afdda68f0ced7bd81a265006610308563204f52"
+  agent_job_id: "AJ-RT-20260808-004-001"
+  decision_id: "DDR-20260808-004"
+  execution_role_ref: "project-control-maintainer@0.2.0--RT-20260808-004"
+  source_handoff_id: "handoff-0969"
+  source_handoff_path: "research_control/handoffs/handoff-0969.yaml"
+  source_handoff_sha256: "e18d9ad8454c27a75034a35e727a35738e540e616fd58dcf4954510da4f1ff95"
+  source_blocker_path: "research_control/tasks/RT-20260808-003/artifacts/v22_p0_t03_runtime_route_collision_blocker.yaml"
+  source_blocker_sha256: "15c98d0a1a9ef4ec3c8cad493c0cdd7319d34274c5d04e4846c6e199dbd5f974"
+  registered_plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  registered_plan_sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+  registered_plan_object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+  backlog_path: "research_control/design/v22_recommendation_backlog.yaml"
+  backlog_sha256: "b2c9c01a29a701b92e23023496e2d901275ccc96777740a086ded86c7374ed6f"
+  backlog_schema_path: "research_control/design/v22_recommendation_backlog_schema.md"
+  backlog_schema_sha256: "f7bd3b52220d0d5ffe374a06676fd8b1c012e297932f9b363ff89161c127c30c"
+  validation_path: "research_control/tasks/RT-20260808-004/artifacts/v22_plan_namespace_guard_repair_validation.json"
+  validation_sha256: "2f33116e0314f1017fdbd597e44d0b06be18d488016fd2bbb853e3594513fdff"
+  compact_receipt_path: "research_control/tasks/RT-20260808-004/artifacts/v22_plan_namespace_guard_repair_compact_receipt.json"
+  compact_receipt_sha256: "c42e7d0028a92fc4e091433ac85b3478687baeccb053cad44925ffaa56d9d6b7"
+  completion_path: "research_control/tasks/RT-20260808-004/jobs/completions/AJC-AJ-RT-20260808-004-001.yaml"
+  completion_sha256: "5ac13c0e4910c95e5c099ab71b07fbeeea487c4dddc957dade7bdd316578bd6e"
+  handoff_id: "handoff-0970"
+  handoff_path: "research_control/handoffs/handoff-0970.yaml"
+  handoff_sha256: "deb9d494bd3add5c973cf82135c95f51251d98eb7f676da84807d599dc3d49c4"
+  registered_plan_count: 2
+  local_collision_id: "P1-T01"
+  v21_collision_task_class: "science"
+  v21_collision_worker_skill: "continue-research"
+  v22_collision_task_class: "project_system"
+  v22_collision_worker_skill: "improve-project-system"
+  plan_qualified_completion_identity: true
+  cross_plan_dependency_satisfaction_blocked: true
+  legacy_v21_compatibility_preserved: true
+  unknown_plan_fail_closed: true
+  atomic_checkpoint_recovery_admitted: true
+  exact_classifier_paths_admitted: true
+  v22_plan_registered: true
+  v22_backlog_materialized: true
+  v22_runtime_backlog_admitted: true
+  v22_p0_t03_qualifying_complete: true
+  v22_p1_t01_selected: true
+  v22_p1_t01_executed: false
+  canonical_science_modified: false
+  scientific_claims_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  tag_creation_authorized: false
+  public_release_authorized: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false
+  checkpoint_invocation_count: 0
+  checkpoint_committed: false
+  selected_next_work_item: "P1-T01"
+  selected_next_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  selected_next_plan_task_id: "P1-T01"
+  selected_next_worker_skill: "improve-project-system"
+  selected_next_role_family: "project-control-maintainer@0.2.0"
+  selected_next_packet_type: "three_track_charter_and_separated_scorecards"
+  selected_next_route_label: "ordinary-research-packet"
+  selected_next_strategy_id: "implement_v22_p1_t01_three_track_charter_v1"
+  selected_next_requires_human_gate: false
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
+  successor_requested: false
+
+v22_p0_t03_plan_registration:
+  task_id: "RT-20260808-003"
+  parent_task_id: "RT-20260808-002"
+  parent_handoff_id: "handoff-0968"
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  plan_task_id: "P0-T03"
+  blocked_next_v22_plan_task_id: "P1-T01"
+  next_repair_plan_task_id: "P12-T04"
+  next_repair_work_item_id: "V22-P0-T03-PLAN-NAMESPACE-GUARD-REPAIR"
+  claim_boundary_id: "CB-PS-V22-P0-T03-PLAN-REGISTRATION-001"
+  status: "REPAIR_REQUIRED_V22_RUNTIME_PLAN_NAMESPACE_COLLISION"
+  work_item_status: "repair_required_checkpoint_pending"
+  route_label: "shared-project-control"
+  selected_role_family: "project-control-maintainer@0.2.0"
+  selected_worker_skill: "continue-research"
+  selected_strategy_id: "register_v22_compact_decision_program_v1"
+  target_derivation_milestone: "none"
+  milestone_burden: "Project-control plan registration and traceability materialization only; no scientific or Distance-to-GR burden advances."
+  source_head: "eabec137d96ccdc5b7907e8a5d99f8f94a992780"
+  source_tree: "6afdda68f0ced7bd81a265006610308563204f52"
+  agent_job_id: "AJ-RT-20260808-003-001"
+  decision_id: "DDR-20260808-003"
+  execution_role_ref: "project-control-maintainer@0.2.0--RT-20260808-003"
+  source_handoff_id: "handoff-0968"
+  source_handoff_path: "research_control/handoffs/handoff-0968.yaml"
+  source_handoff_sha256: "3c9b19e1845bb445365123155cd2dbb7b9a247e84e363c2dc88532f33a4aa149"
+  review_path: "/Users/alex.omegapy/.codex/attachments/64bf115e-0b54-4458-8db0-bb95b4a620ac/pasted-text-1.txt"
+  review_line_count: 1683
+  review_sha256: "1a0d36e14770c4591717cc4f317691f5efcb8ea6f5b300cb8fe63ba001d1eadd"
+  registered_plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  registered_plan_sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+  registered_plan_object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+  backlog_path: "research_control/design/v22_recommendation_backlog.yaml"
+  backlog_sha256: "0108b7ab871751947fec13b31b0610aa135a0281269aa6c568a838bd787bec14"
+  backlog_schema_path: "research_control/design/v22_recommendation_backlog_schema.md"
+  backlog_schema_sha256: "4aa46f0041018ae3e23fc31f749e095eaf7e18870aee5fb4f48066fa3a746c6f"
+  dependency_graph_path: "research_control/tasks/RT-20260808-003/artifacts/v22_backlog_dependency_graph.json"
+  dependency_graph_sha256: "e4af5479a30f6387c1dd09fa3754d404aa4f139d122777ae3fdd69292956ec94"
+  coverage_seed_path: "research_control/tasks/RT-20260808-003/artifacts/v22_recommendation_coverage_seed.json"
+  coverage_seed_sha256: "4c71adbb8198a40991c0e141813b62f0071b201078d2aba8c4065693d0050067"
+  validation_path: "research_control/tasks/RT-20260808-003/artifacts/v22_p0_t03_plan_registration_validation.json"
+  validation_sha256: "678ad6a474b2c285853c87b12937a4f589e131013c19f36a17f266aa993c60ce"
+  compact_receipt_path: "research_control/tasks/RT-20260808-003/artifacts/v22_p0_t03_compact_receipt.json"
+  compact_receipt_sha256: "80a5e92341c15c0636fa7c1deb2b4f0c746254850c1655bfc109c8c226592f53"
+  runtime_route_collision_blocker_path: "research_control/tasks/RT-20260808-003/artifacts/v22_p0_t03_runtime_route_collision_blocker.yaml"
+  runtime_route_collision_blocker_sha256: "15c98d0a1a9ef4ec3c8cad493c0cdd7319d34274c5d04e4846c6e199dbd5f974"
+  completion_path: "research_control/tasks/RT-20260808-003/jobs/completions/AJC-AJ-RT-20260808-003-001.yaml"
+  completion_sha256: "24be4a14c8100469aab0dcc976c7faade084544b4ddba0e7811a54502e471141"
+  handoff_id: "handoff-0969"
+  handoff_path: "research_control/handoffs/handoff-0969.yaml"
+  handoff_sha256: "e18d9ad8454c27a75034a35e727a35738e540e616fd58dcf4954510da4f1ff95"
+  recommendation_count: 19
+  sequence_step_count: 12
+  cross_cutting_directive_count: 10
+  phase_count: 11
+  work_package_count: 40
+  dependency_edge_count: 61
+  dependency_cycle_count: 0
+  dangling_dependency_count: 0
+  unreachable_package_count: 0
+  coverage_orphan_count: 0
+  memory_source_object_count_after: 1134
+  memory_relationship_row_count_after: 5709
+  v22_plan_registered: true
+  v22_backlog_materialized: true
+  v22_runtime_backlog_admitted: false
+  v22_p0_t03_qualifying_complete: false
+  v22_p1_t01_executed: false
+  canonical_science_modified: false
+  scientific_claims_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  tag_creation_authorized: false
+  public_release_authorized: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false
+  checkpoint_invocation_count: 0
+  checkpoint_committed: false
+  selected_next_work_item: "V22-P0-T03-PLAN-NAMESPACE-GUARD-REPAIR"
+  selected_next_plan_task_id: "P12-T04"
+  selected_next_worker_skill: "improve-project-system"
+  selected_next_role_family: "project-control-maintainer@0.2.0"
+  selected_next_packet_type: "plan_version_namespace_guard_repair"
+  selected_next_route_label: "project-system-repair-packet"
+  selected_next_strategy_id: "repair_v22_plan_qualified_route_guard_resolution_v1"
+  selected_next_requires_human_gate: false
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
+  successor_requested: false
 
 v22_p0_t02_internal_v21_baseline_release:
   task_id: "RT-20260808-002"

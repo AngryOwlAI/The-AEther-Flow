@@ -1,0 +1,135 @@
+{
+  "authority_limits": {
+    "distance_to_gr_changed": false,
+    "external_action_authorized": false,
+    "p1_t01_execution_authorized": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "scientific_status_changed": false
+  },
+  "classifier": {
+    "path_family_tags": [
+      "ci_orchestration",
+      "control_state",
+      "role_or_schema_contract"
+    ],
+    "reason_codes": [
+      "research_control_state_changed"
+    ],
+    "recommended_validation_profile": "affected"
+  },
+  "completed_identity_checks": {
+    "v22_p0_t03_qualifying_complete": true,
+    "v22_p1_t01_complete": false
+  },
+  "created_at": "2026-08-08T23:48:18Z",
+  "finding_count": 0,
+  "findings": [],
+  "job_id": "AJ-RT-20260808-004-001",
+  "plan_local_collision_fixture": {
+    "local_plan_task_id": "P1-T01",
+    "v21_task_class": "science",
+    "v21_worker_skill": "continue-research",
+    "v22_task_class": "project_system",
+    "v22_worker_skill": "improve-project-system"
+  },
+  "registered_plan_backlogs": {
+    "recommendations_implementation_plan_continue_task-v21": "research_control/design/v21_recommendation_backlog.yaml",
+    "recommendations_implementation_plan_continue_task-v22": "research_control/design/v22_recommendation_backlog.yaml"
+  },
+  "repair_agentjob_admission": {
+    "errors": [],
+    "policy_required": true,
+    "status": "PASS",
+    "warnings": []
+  },
+  "schema_id": "v22_plan_namespace_guard_repair_validation_v1",
+  "source_blocker": {
+    "path": "research_control/tasks/RT-20260808-003/artifacts/v22_p0_t03_runtime_route_collision_blocker.yaml",
+    "sha256": "15c98d0a1a9ef4ec3c8cad493c0cdd7319d34274c5d04e4846c6e199dbd5f974"
+  },
+  "source_handoff": {
+    "guard_result": {
+      "errors": [],
+      "expected_outcome": "all_ready_science_blocked_exception",
+      "observed_run_length": 4,
+      "policy_required": true,
+      "ready_science_plan_task_ids": [],
+      "ready_science_plan_task_refs": [],
+      "selected_plan_id": "recommendations_implementation_plan_continue_task-v21",
+      "selected_plan_task_id": "P12-T04",
+      "status": "PASS",
+      "warnings": []
+    },
+    "handoff_id": "handoff-0969",
+    "path": "research_control/handoffs/handoff-0969.yaml",
+    "sha256": "e18d9ad8454c27a75034a35e727a35738e540e616fd58dcf4954510da4f1ff95"
+  },
+  "source_hashes": {
+    ".agents/schemas/AGENT_JOB_SCHEMA.md": "d804e9e2138eb24ddfd3c8ee3ab7fc829094d1073b82efe3e32dbe017ed92d75",
+    "research_control/design/v22_recommendation_backlog.yaml": "b2c9c01a29a701b92e23023496e2d901275ccc96777740a086ded86c7374ed6f",
+    "research_control/design/v22_recommendation_backlog_schema.md": "f7bd3b52220d0d5ffe374a06676fd8b1c012e297932f9b363ff89161c127c30c",
+    "research_control/tasks/RT-20260722-015/artifacts/ordinary_route_exception_schema_v1.md": "1f39db8b1efce9828bfc6226794f6d7b102910f7bc03d2cfde19cf5e628f8e16",
+    "research_control/tasks/RT-20260722-015/artifacts/ordinary_route_guard_policy_v1.md": "00f34722e9e9f50182acccf9143cc295f4cdf8439321820e41f25b5b0bfbc0c8",
+    "scripts/project_control/classify_project_changes.py": "37bd183299ff0ac1c3ed94cb19e9e27dfca4edcbd4499c0d832ea291164023dc",
+    "scripts/research_control/ordinary_route_guard.py": "7487051d0b4ddd564fd67d809e3ac55f20967990a7546398c9e82589cb064173"
+  },
+  "status": "PASS",
+  "synthetic_v22_p1_t01_guard": {
+    "record": {
+      "authority_limits": {
+        "ordinary_research_handoff_authoritative": true,
+        "physics_promotion_authorized": false,
+        "project_system_sidecar_supersedes": false,
+        "scientific_status_changed": false,
+        "system_success_counts_as_distance_to_gr": false,
+        "system_success_counts_as_physics": false
+      },
+      "consecutive_project_system_tasks_before_selection": 5,
+      "evaluation_id": "ORE-V22-P1-T01-SYNTHETIC",
+      "exception_receipt": {
+        "active": true,
+        "authority_limits": {
+          "ordinary_research_handoff_authoritative": true,
+          "physics_promotion_authorized": false,
+          "project_system_sidecar_supersedes": false,
+          "scientific_status_changed": false,
+          "system_success_counts_as_distance_to_gr": false,
+          "system_success_counts_as_physics": false
+        },
+        "blocked_routes": [],
+        "exception_class": "all_ready_science_blocked",
+        "exception_id": "ORE-V22-P1-T01-SYNTHETIC-EXCEPTION-001",
+        "ordinary_handoff_id": "handoff-v22-p1-t01-synthetic",
+        "ready_science_plan_task_ids": [],
+        "ready_science_plan_task_refs": [],
+        "schema_id": "ordinary_route_exception_receipt_v1"
+      },
+      "ordinary_handoff_id": "handoff-v22-p1-t01-synthetic",
+      "ordinary_research_handoff_authoritative": true,
+      "outcome": "all_ready_science_blocked_exception",
+      "policy_id": "ordinary_route_guard_policy_v1",
+      "project_system_sidecar_supersedes": false,
+      "ready_science_plan_task_ids": [],
+      "ready_science_plan_task_refs": [],
+      "schema_id": "ordinary_route_guard_evaluation_v1",
+      "selected_plan_id": "recommendations_implementation_plan_continue_task-v22",
+      "selected_plan_task_id": "P1-T01",
+      "selected_route_class": "project_system",
+      "selected_worker_skill": "improve-project-system",
+      "threshold": 3
+    },
+    "result": {
+      "errors": [],
+      "expected_outcome": "all_ready_science_blocked_exception",
+      "observed_run_length": 5,
+      "ready_science_plan_task_ids": [],
+      "ready_science_plan_task_refs": [],
+      "selected_plan_id": "recommendations_implementation_plan_continue_task-v22",
+      "selected_plan_task_id": "P1-T01",
+      "status": "PASS",
+      "warnings": []
+    }
+  },
+  "task_id": "RT-20260808-004"
+}

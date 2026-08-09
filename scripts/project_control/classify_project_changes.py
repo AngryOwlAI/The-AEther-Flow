@@ -171,6 +171,9 @@ VALIDATION_OBLIGATION_CATALOG_PATH = (
 VALIDATION_ADAPTER_BINDINGS_PATH = (
     "research_control/design/validation_adapter_bindings_v1.json"
 )
+RECOMMENDATION_BACKLOG_PATH_RE = re.compile(
+    r"^research_control/design/v[0-9]+_recommendation_backlog\.yaml$"
+)
 AUTHORITY_MARKER_RE = re.compile(r"<!--\s*authority:\s*(explanatory|control)\s*-->")
 HUNK_RE = re.compile(r"@@ -\d+(?:,\d+)? \+(\d+)(?:,(\d+))? @@")
 PATH_FAMILY_TAGS = (
@@ -471,6 +474,7 @@ def load_registry_index(root: Path = REPO_ROOT) -> RegistryIndex:
 def is_control_state_path(path: str) -> bool:
     return (
         path == "research_control/program_state.yaml"
+        or RECOMMENDATION_BACKLOG_PATH_RE.fullmatch(path) is not None
         or path.startswith("research_control/tasks/")
         or path.startswith("research_control/handoffs/")
         or path.startswith("research_control/project_improvement_handoffs/")
@@ -583,6 +587,7 @@ def classify_path_family(path: str, registry: RegistryIndex) -> dict[str, object
         or path in RED_TEAM_REVIEW_CONTROL_TEMPLATE_PATHS
         or path == VALIDATION_GATE_MANIFEST_PATH
         or path == VALIDATION_OBLIGATION_CATALOG_PATH
+        or RECOMMENDATION_BACKLOG_PATH_RE.fullmatch(path) is not None
         or any(source.role in {"control_schema", "control_policy"} for source in sources)
     ):
         tags.add("role_or_schema_contract")
@@ -628,6 +633,7 @@ def classify_path_family(path: str, registry: RegistryIndex) -> dict[str, object
         reasons.add("path_rule:scientific_checker")
     if (
         path.startswith(".github/workflows/")
+        or path == ".gitignore"
         or path == ".gitattributes"
         or path == "Makefile"
         or path == VALIDATION_ADAPTER_BINDINGS_PATH

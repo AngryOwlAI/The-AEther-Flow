@@ -41,17 +41,21 @@ physics.
 
 At two consecutive project-system tasks the evaluator emits the advisory
 `ordinary_route_guard_threshold_next`. At three or more, the ordinary
-handoff must select a dependency-ready v21 science task.
+handoff must select a dependency-ready science task from the recommendation
+plan named by `selected_next_route.plan_id`.
 
 ## Dependency-ready science set
 
-The evaluator reads the registered v21 backlog and the research task registry
-as of the handoff timestamp. It recognizes v21 task identity from the exact
-v21 plan ID, a `v21_` task type, or a `CB-V21-` claim boundary. A completed
-v21 task also establishes its transitive plan dependencies; this preserves a
-qualifying recovered transaction without mutating its earlier blocked task
-record. A science item is ready only when every plan dependency is satisfied
-and the item is not already completed.
+The evaluator resolves the registered backlog from the explicit plan ID and
+reads the research task registry as of the handoff timestamp. Completed work
+items are represented as `(plan_id, plan_task_id)` pairs, because package IDs
+are local to each recommendation plan. A V21 completion therefore cannot
+satisfy a colliding V22 dependency. Historical V21 records retain their exact
+V21 inference rules; newer plans require an explicit plan identity and treat a
+`repair_required` task as incomplete until a qualifying superseding task is
+recorded. A completed work item also establishes transitive dependencies only
+inside the same plan. A science item is ready only when every same-plan
+dependency is satisfied and the item is not already completed.
 
 The handoff records the exact ordered ready-science list. The validator derives
 that list independently at the handoff timestamp and rejects omissions,
@@ -69,7 +73,10 @@ ordinary_route_guard:
   ordinary_handoff_id: "handoff-0000"
   threshold: 3
   consecutive_project_system_tasks_before_selection: 3
+  selected_plan_id: "recommendations_implementation_plan_continue_task-v22"
   ready_science_plan_task_ids: ["P0-T00"]
+  ready_science_plan_task_refs:
+    - "recommendations_implementation_plan_continue_task-v22:P0-T00"
   selected_plan_task_id: "P0-T00"
   selected_route_class: "physics_bearing"
   selected_worker_skill: "continue-research"
@@ -87,10 +94,11 @@ ordinary_route_guard:
     physics_promotion_authorized: false
 ```
 
-The selected plan task and worker skill must match the v21 backlog and the
-handoff's `selected_next_route`. A human-gated science task is not executable
-without the protected authority and cannot be used as a nominal physics route
-to evade the guard.
+The selected plan ID, plan task, and worker skill must match the backlog
+resolved from the handoff's `selected_next_route`. V21 records that predate
+plan namespaces default to the registered V21 plan for compatibility. A
+human-gated science task is not executable without the protected authority and
+cannot be used as a nominal physics route to evade the guard.
 
 ## Lawful exception
 
@@ -106,7 +114,7 @@ Each route must have exactly one active blocking class:
 
 The evidence path must be repository-relative, regular, tracked, outside
 `.local/`, and bound to its exact SHA-256. `human_gate_required` is checked
-directly against the v21 backlog and its exact hash. Other classes require an
+directly against the selected plan's backlog and its exact hash. Other classes require an
 active `ordinary_route_control_failure_v1` record matching the same plan task
 and failure class. Partial, stale, untracked, malformed, or duplicate evidence
 hard-fails.
@@ -118,9 +126,19 @@ modify ontology, create Gate Chair authority, or promote any claim.
 ## Admission and authority
 
 Each later AgentJob binds to the tracked regular ordinary handoff at its exact
-hash through `ordinary_route_guard_admission_v1`. The job's plan task must be
-the handoff selection. Project-improvement handoff sidecars remain separate
-signal-routing artifacts and cannot supersede the ordinary research handoff.
+hash through `ordinary_route_guard_admission_v1`. The job's plan ID and plan
+task must be the handoff selection. Project-improvement handoff sidecars remain
+separate signal-routing artifacts and cannot supersede the ordinary research
+handoff.
+
+One fail-closed atomic checkpoint-recovery branch may consume an immediately
+preceding untracked handoff only when the prior transaction was completed but
+could not be staged, the handoff, pending completion, and active blocker are
+all repository candidates bound to exact identities and hashes, and the repair
+job allowlists those prior paths for the same governed checkpoint. That branch
+uses `ordinary_route_checkpoint_recovery_v1`; it does not permit a plan or task
+mismatch and does not weaken the ordinary tracked-handoff rule for normal
+jobs.
 
 The sole mismatch branch is
 `protected_human_route_override_admission_v1`. It requires a deterministic

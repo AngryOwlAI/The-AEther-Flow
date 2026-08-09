@@ -20,6 +20,8 @@ exception_class: "all_ready_science_blocked"
 ordinary_handoff_id: "handoff-0000"
 ready_science_plan_task_ids:
   - "P0-T00"
+ready_science_plan_task_refs:
+  - "recommendations_implementation_plan_continue_task-v22:P0-T00"
 blocked_routes:
   - plan_task_id: "P0-T00"
     failure_class: "claim_boundary_hard_failure"
@@ -35,9 +37,12 @@ authority_limits:
 ```
 
 `ready_science_plan_task_ids` must equal the independently derived complete
-ordered ready-science set. `blocked_routes` must contain exactly one matching
-entry for each ID and no other entries. An empty ready set may support an
-exception, but it does not create physics credit.
+ordered ready-science set. For any non-V21 plan,
+`ready_science_plan_task_refs` must carry the same ordered set as
+`plan_id:plan_task_id` identities. Legacy V21 records may omit that second
+field. `blocked_routes` must contain exactly one matching entry for each ID and
+no other entries. An empty ready set may support an exception, but it does not
+create physics credit.
 
 ## Non-human control-failure evidence
 
@@ -65,10 +70,10 @@ handoff cannot reuse it.
 
 ## Human-gate evidence
 
-For `human_gate_required`, the evidence path is exactly
-`research_control/design/v21_recommendation_backlog.yaml` at its current
-tracked SHA-256, and the named ready item must set `requires_human_gate: true`.
-The relay cannot fabricate or infer human authorization.
+For `human_gate_required`, the evidence path is exactly the registered backlog
+resolved from the selected plan ID at its current tracked SHA-256, and the
+named ready item must set `requires_human_gate: true`. The relay cannot
+fabricate or infer human authorization.
 
 ## Rejection rules
 

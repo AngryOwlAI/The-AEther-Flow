@@ -347,6 +347,28 @@ class CheckpointPlannerIntegrationTests(unittest.TestCase):
         )
         self.assertIn("route_signature_diagnostic", plan.selected_gate_ids)
 
+    def test_v22_registration_paths_have_safe_checkpoint_plan(self) -> None:
+        plan = self.checkpoint.plan_checkpoint_validation(
+            [
+                ".gitignore",
+                "research_control/design/v22_recommendation_backlog.yaml",
+            ]
+        )
+        details = {
+            item["path"]: item for item in plan.classification["path_family_details"]
+        }
+
+        self.assertEqual(details[".gitignore"]["tags"], ["ci_orchestration"])
+        self.assertEqual(
+            details["research_control/design/v22_recommendation_backlog.yaml"]["tags"],
+            ["control_state", "role_or_schema_contract"],
+        )
+        self.assertNotIn(
+            "unknown_governed_path",
+            plan.classification["path_family_tags"],
+        )
+        self.assertIn("checkpoint_transaction", plan.selected_gate_ids)
+
     def test_p12_t05_dirty_manifest_has_safe_shadow_plan(self) -> None:
         self.assertEqual(len(P12_T05_DIRTY_MANIFEST_PATHS), 61)
         plan = self.checkpoint.plan_checkpoint_validation(

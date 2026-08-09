@@ -1,0 +1,262 @@
+validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+handoff_id: "handoff-0970"
+handoff_number: 970
+handoff_kind: "project_system_v22_plan_namespace_guard_repair"
+task_id: "RT-20260808-004"
+decision_id: "DDR-20260808-004"
+job_id: "AJ-RT-20260808-004-001"
+completion_id: "AJC-AJ-RT-20260808-004-001"
+completion_path: "research_control/tasks/RT-20260808-004/jobs/completions/AJC-AJ-RT-20260808-004-001.yaml"
+completion_sha256: "5ac13c0e4910c95e5c099ab71b07fbeeea487c4dddc957dade7bdd316578bd6e"
+status: "ready_for_v22_p1_t01_after_checkpoint"
+created_at: "2026-08-08T23:48:18Z"
+parent_handoff_id: "handoff-0969"
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P0-T03"
+repair_route_plan_id: "recommendations_implementation_plan_continue_task-v21"
+repair_route_plan_task_id: "P12-T04"
+source_role_id: "project-control-maintainer"
+source_role_version: "0.2.0"
+source_execution_role_ref: "project-control-maintainer@0.2.0--RT-20260808-004"
+summary: "The plan-namespace guard repair passes: registered V21 and V22 backlogs resolve by explicit plan ID, completed dependencies are plan-qualified, exact checkpoint recovery is admitted, and V22 P1-T01 carries an explicit project-system route. P0-T03 is qualifying-complete; P1-T01 remains selected and unexecuted."
+next_action: "After the single atomic governed checkpoint for AJ-RT-20260808-004-001 execute exactly one separately admitted V22 P1-T01 improve-project-system AgentJob for the three-track charter and separated scorecards; perform no external action."
+current_claim_boundary: "CB-PS-V22-P0-T03-PLAN-NAMESPACE-CHECKPOINT-REPAIR-001"
+loop_risk_route: "v22_p1_t01_three_track_charter"
+
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260808-004"
+  latest_research_handoff_id: "handoff-0970"
+  latest_research_next_action: "After the single atomic governed checkpoint for AJ-RT-20260808-004-001 execute exactly one separately admitted V22 P1-T01 improve-project-system AgentJob for the three-track charter and separated scorecards; perform no external action."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+  project_improvement_sidecar_required: false
+  research_handoff_remains_authoritative: true
+
+claim_boundary:
+  allowed_next_scope: "One separately admitted V22 P1-T01 improve-project-system AgentJob may create the three-track charter, authority matrix, separated scorecard schemas, budget allocation, cross-track non-promotion fixtures, and repository-separation decision criteria."
+  completed_task: "RT-20260808-004"
+  completed_completion_path: "research_control/tasks/RT-20260808-004/jobs/completions/AJC-AJ-RT-20260808-004-001.yaml"
+  completed_completion_sha256: "5ac13c0e4910c95e5c099ab71b07fbeeea487c4dddc957dade7bdd316578bd6e"
+  source_handoff_id: "handoff-0969"
+  source_handoff_path: "research_control/handoffs/handoff-0969.yaml"
+  source_handoff_sha256: "e18d9ad8454c27a75034a35e727a35738e540e616fd58dcf4954510da4f1ff95"
+  source_blocker_path: "research_control/tasks/RT-20260808-003/artifacts/v22_p0_t03_runtime_route_collision_blocker.yaml"
+  source_blocker_sha256: "15c98d0a1a9ef4ec3c8cad493c0cdd7319d34274c5d04e4846c6e199dbd5f974"
+  registered_plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  registered_plan_sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+  registered_plan_object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+  backlog_path: "research_control/design/v22_recommendation_backlog.yaml"
+  backlog_sha256: "b2c9c01a29a701b92e23023496e2d901275ccc96777740a086ded86c7374ed6f"
+  validation_path: "research_control/tasks/RT-20260808-004/artifacts/v22_plan_namespace_guard_repair_validation.json"
+  validation_sha256: "2f33116e0314f1017fdbd597e44d0b06be18d488016fd2bbb853e3594513fdff"
+  compact_receipt_path: "research_control/tasks/RT-20260808-004/artifacts/v22_plan_namespace_guard_repair_compact_receipt.json"
+  compact_receipt_sha256: "c42e7d0028a92fc4e091433ac85b3478687baeccb053cad44925ffaa56d9d6b7"
+  registered_plan_count: 2
+  local_collision_id: "P1-T01"
+  v21_collision_task_class: "science"
+  v22_collision_task_class: "project_system"
+  plan_qualified_completion_identity: true
+  v22_p0_t03_executed: true
+  v22_p0_t03_qualifying_complete: true
+  v22_runtime_backlog_admitted: true
+  v22_p1_t01_selected: true
+  v22_p1_t01_executed: false
+  scientific_claims_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  tag_creation_authorized: false
+  public_release_authorized: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false
+  blocked_claims:
+    - "plan-aware route validation presented as scientific truth or Distance-to-GR progress"
+    - "P1-T01 selection presented as execution"
+    - "runtime backlog admission presented as source-derived geometry Einstein dynamics or benchmark success"
+    - "generated wiki memory semantic or registry projections presented as independent authority"
+    - "checkpoint eligibility presented as a completed checkpoint before the command succeeds"
+    - "repair completion presented as tag release publication push reviewer contact or external-action authority"
+
+plan_result:
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  phase_id: "P0"
+  plan_task_id: "P0-T03"
+  repair_route_plan_id: "recommendations_implementation_plan_continue_task-v21"
+  repair_route_plan_task_id: "P12-T04"
+  repair_work_item_id: "V22-P0-T03-PLAN-NAMESPACE-GUARD-REPAIR"
+  next_plan_task_id: "P1-T01"
+  title: "Register and admit the compact V22 decision program after V21 freezes"
+  result_status: "PASS_PLAN_QUALIFIED_ROUTE_GUARD_V22_P0_T03_QUALIFYING_COMPLETE"
+  work_item_status: "completed_checkpoint_pending"
+  v22_plan_registered: true
+  v22_backlog_materialized: true
+  v22_runtime_backlog_admitted: true
+  v22_p0_t03_qualifying_complete: true
+  v22_p1_t01_selected: true
+  v22_p1_t01_executed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  system_success_counts_as_physics: false
+  system_success_counts_as_distance_to_gr: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+distance_to_gr:
+  changed: false
+  effect: "none_project_system_route_contract_repair"
+  burden_id: "none"
+  milestone: "none"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "Plan namespace and checkpoint recovery add no source law metric coupling Einstein equation benchmark Gate external review independent replication or completed-derivation evidence."
+  downstream_unlocked:
+    - "one separately admitted V22 P1-T01 project-system AgentJob after checkpoint"
+  downstream_still_blocked:
+    - "P1-T02 and later packages until P1-T01 completes and their exact dependencies and runtime routes are admitted"
+    - "all Track B physics packages until required governance and scientific dependencies"
+    - "Gate B Gate D and physical benchmark execution"
+    - "tag public release publication push reviewer contact and external action"
+    - "completed first-principles GR derivation"
+
+selected_next_route:
+  route_id: "v22_p1_t01_three_track_charter"
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  plan_task_id: "P1-T01"
+  work_item_id: "P1-T01"
+  route_label: "ordinary-research-packet"
+  role_family: "project-control-maintainer@0.2.0"
+  worker_skill: "improve-project-system"
+  selected_next_packet_type: "three_track_charter_and_separated_scorecards"
+  task_type: "project_system_v22_p1_t01_three_track_charter_and_separated_scorecards"
+  target_derivation_milestone: "none"
+  milestone_burden: "Project-system charter and scorecard separation only; no scientific or Distance-to-GR burden advances."
+  strategy_id: "implement_v22_p1_t01_three_track_charter_v1"
+  source_plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  source_plan_sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  physics_promotion_authorized: false
+  executed: false
+  successor_requested: false
+  external_action_authorized: false
+  next_action: "Create the three-track charter and separated scorecards with explicit authority and non-promotion boundaries in one later bounded AgentJob."
+
+ordinary_route_guard:
+  schema_id: "ordinary_route_guard_evaluation_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  evaluation_id: "ORE-HANDOFF-0970"
+  ordinary_handoff_id: "handoff-0970"
+  selected_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  threshold: 3
+  consecutive_project_system_tasks_before_selection: 5
+  ready_science_plan_task_ids: []
+  ready_science_plan_task_refs: []
+  selected_plan_task_id: "P1-T01"
+  selected_route_class: "project_system"
+  selected_worker_skill: "improve-project-system"
+  outcome: "all_ready_science_blocked_exception"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  exception_receipt:
+    active: true
+    schema_id: "ordinary_route_exception_receipt_v1"
+    exception_id: "ORE-HANDOFF-0970-EXCEPTION-001"
+    exception_class: "all_ready_science_blocked"
+    ordinary_handoff_id: "handoff-0970"
+    ready_science_plan_task_ids: []
+    ready_science_plan_task_refs: []
+    blocked_routes: []
+    authority_limits:
+      ordinary_research_handoff_authoritative: true
+      project_system_sidecar_supersedes: false
+      system_success_counts_as_physics: false
+      system_success_counts_as_distance_to_gr: false
+      scientific_status_changed: false
+      physics_promotion_authorized: false
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+active_state_boundary:
+  active_task_id: "RT-20260808-004"
+  active_job_id: "AJ-RT-20260808-004-001"
+  current_status: "v22_p0_t03_qualifying_complete_p1_t01_selected_checkpoint_pending"
+  checkpoint_required: true
+  checkpoint_completed: false
+  checkpoint_invocation_count: 0
+  selected_next_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  selected_next_plan_task_id: "P1-T01"
+  selected_next_work_item_id: "P1-T01"
+  selected_next_worker_skill: "improve-project-system"
+  selected_next_role_family: "project-control-maintainer@0.2.0"
+  selected_next_route_label: "ordinary-research-packet"
+  selected_next_strategy_id: "implement_v22_p1_t01_three_track_charter_v1"
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
+  successor_requested: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Memory preflight and exact V22 plan and route-policy inspection passed."
+      - "Physics-payload dual-budget and handoff-0969 route admission passed."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "V21/V22 collision completion-identity and atomic-recovery fixtures pass."
+      - "Task-local validation reports zero findings and all 117 focused tests pass."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Exact code policy schema backlog classifier and test hashes are recorded."
+      - "No canonical science Gate benchmark or Distance-to-GR source was edited."
+  pre_checkpoint:
+    status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+    evidence:
+      - "Task job role completion handoff program state registries and generated projections are prepared for one atomic checkpoint."
+  checkpoint:
+    status: "PENDING"
+    invocation_count: 0
+  post_checkpoint:
+    status: "PENDING"
+
+project_improvement_signals: []
+project_improvement_signal_count: 0
+project_improvement_sidecar_required: false
+authority_limits:
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  source_law_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  Gate_Chair_verdict_authorized: false
+  benchmark_promotion_authorized: false
+  external_review_completed: false
+  independent_replication_completed: false
+  tag_creation_authorized: false
+  public_release_authorized: false
+  reviewer_contact_authorized: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false
+  completed_derivation_authorized: false
+
+next_plan_task_id: "P1-T01"
+next_work_item_id: "P1-T01"
+next_plan_task_execution_ready_after_checkpoint: true
+next_plan_task_executed: false
+handoff_authority_boundary: "This handoff records only the exact route repair and selects V22 P1-T01 for a separate AgentJob after checkpoint. It creates no P1 execution science Gate benchmark review replication release publication push or external-action authority."

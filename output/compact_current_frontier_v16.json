@@ -8,14 +8,14 @@
     "research_control/current_frontier.md",
     "research_control/design/accepted_status_calibration_v2.yaml",
     "research_control/design/active_state_bifurcation_policy_v1.md",
-    "research_control/handoffs/handoff-0968.yaml",
+    "research_control/handoffs/handoff-0970.yaml",
     "research_control/program_state.yaml"
   ],
   "report_provenance": {
     "schema_id": "generated_report_provenance_v1",
     "policy_id": "p13_t07_live_generated_report_freshness_v1",
     "report_class": "compact_current_frontier",
-    "source_commit": "bdde326629fd8b1f20e7d32e4c26b1c0f32e8c9a",
+    "source_commit": "eabec137d96ccdc5b7907e8a5d99f8f94a992780",
     "source_hashes": [
       {
         "path": "registries/DISTANCE_TO_GR_LEDGER.csv",
@@ -23,19 +23,19 @@
       },
       {
         "path": "registries/RESEARCH_TASK_REGISTRY.csv",
-        "sha256": "88256a3fa15af5803fde7304a20b51deb809ce4bb7a9738967ae258d4a72f62a"
+        "sha256": "e6a6f4705701f799b69eabf468c6d9856002b58f4e6431cbf9ca54366984c382"
       },
       {
         "path": "research_control/current_frontier.md",
-        "sha256": "796345cbfd8e846134c64094e547c53159321d94f5b741b182db5dce572e5de7"
+        "sha256": "065d1cabdfc6f9275627fdf1a3c29a0fc71bb65f1ae5a78f1509ebd25d24b0f5"
       },
       {
-        "path": "research_control/handoffs/handoff-0968.yaml",
-        "sha256": "3c9b19e1845bb445365123155cd2dbb7b9a247e84e363c2dc88532f33a4aa149"
+        "path": "research_control/handoffs/handoff-0970.yaml",
+        "sha256": "deb9d494bd3add5c973cf82135c95f51251d98eb7f676da84807d599dc3d49c4"
       },
       {
         "path": "research_control/program_state.yaml",
-        "sha256": "02e98e398a1fd6c350efe7f58ce263045ce5ac4a708be2b2a3ead8ba66c4f9ae"
+        "sha256": "56c964c9770ec2e13ab557723570262dc7f20a4824ac946e257daf3db9e707e9"
       },
       {
         "path": "research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml",
@@ -50,10 +50,10 @@
         "sha256": "3700556e8fe203bb8bfb1c2caf15b7fbfc95b25f608169209e1b9930677e3564"
       }
     ],
-    "source_manifest_sha256": "59220da8df858c6fee8073ff1659625e5e044d6945ff94b7a30e8e11b8ba58fc",
+    "source_manifest_sha256": "43d683d58297c8f902b0317802249af8e2b1d431090267df54e25ada5c80444b",
     "source_path_count": "12",
-    "generation_time": "2026-08-08T22:03:48Z",
-    "task_count": "1223",
+    "generation_time": "2026-08-08T23:48:18Z",
+    "task_count": "1225",
     "maximum_commit_lag": "1",
     "freshness_status": "fresh_at_generation",
     "generated_view_is_authority": false,
@@ -61,17 +61,17 @@
     "proof_authority": false
   },
   "active_state": {
-    "active_task_id": "RT-20260808-002",
-    "latest_handoff_id": "handoff-0968",
-    "current_status": "v22_p0_t02_internal_v21_baseline_release_candidate_complete_checkpoint_pending",
+    "active_task_id": "RT-20260808-004",
+    "latest_handoff_id": "handoff-0970",
+    "current_status": "v22_p0_t03_qualifying_complete_p1_t01_selected_atomic_checkpoint_pending",
     "v15_completed": false,
     "v16_completed": false,
     "v16_plan_registered": true
   },
   "active_state_bifurcation": {
-    "latest_research_task_id": "RT-20260808-002",
-    "latest_research_handoff_id": "handoff-0968",
-    "latest_research_next_action": "After the governed checkpoint for AJ-RT-20260808-002-001, execute exactly one bounded V22 P0-T03 plan-registration and backlog-materialization AgentJob; do not create a tag, public release, publication, push, or external action.",
+    "latest_research_task_id": "RT-20260808-004",
+    "latest_research_handoff_id": "handoff-0970",
+    "latest_research_next_action": "After the single atomic governed checkpoint for AJ-RT-20260808-004-001 execute exactly one separately admitted V22 P1-T01 improve-project-system AgentJob for the three-track charter and separated scorecards; perform no external action.",
     "latest_project_system_task_id": "none",
     "latest_project_system_status": "none",
     "latest_project_system_sidecar_task_id": "none",
@@ -80,10 +80,10 @@
     "next_research_route_source": "latest_research_handoff"
   },
   "next_route": {
-    "route_id": "v22_p0_t03_compact_plan_registration_and_backlog_materialization",
+    "route_id": "v22_p1_t01_three_track_charter",
     "role_family": "project-control-maintainer@0.2.0",
     "target_derivation_milestone": "none",
-    "milestone_burden": "Register the compact draft/control program without altering science or launching any later package.",
+    "milestone_burden": "Project-system charter and scorecard separation only; no scientific or Distance-to-GR burden advances.",
     "requires_human_gate": false
   },
   "claim_boundary": {
@@ -445,7 +445,7 @@
   ],
   "distance_to_gr": {
     "delta": {
-      "effect": "none_project_system_release_packaging",
+      "effect": "none_project_system_route_contract_repair",
       "changed": false,
       "milestone": "none",
       "burden_id": "none"

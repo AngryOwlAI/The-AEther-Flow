@@ -1,0 +1,264 @@
+validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+handoff_id: "handoff-0969"
+handoff_number: 969
+handoff_kind: "project_system_v22_plan_registration"
+task_id: "RT-20260808-003"
+decision_id: "DDR-20260808-003"
+job_id: "AJ-RT-20260808-003-001"
+completion_id: "AJC-AJ-RT-20260808-003-001"
+completion_path: "research_control/tasks/RT-20260808-003/jobs/completions/AJC-AJ-RT-20260808-003-001.yaml"
+completion_sha256: "24be4a14c8100469aab0dcc976c7faade084544b4ddba0e7811a54502e471141"
+status: "repair_required_after_checkpoint"
+created_at: "2026-08-08T22:49:31Z"
+parent_handoff_id: "handoff-0968"
+plan_task_id: "P0-T03"
+source_role_id: "project-control-maintainer"
+source_role_version: "0.2.0"
+source_execution_role_ref: "project-control-maintainer@0.2.0--RT-20260808-003"
+summary: "V22 P0-T03 preserves the exact reviewed plan and deterministic 40-package traceability artifacts, but qualifying closure stops on a runtime plan-namespace collision: the ordinary-route guard resolves V22 P1-T01 as the unrelated V21 science item. P1-T01 remains blocked and unexecuted."
+next_action: "After the governed checkpoint for AJ-RT-20260808-003-001 execute exactly one bounded P12-T04 improve-project-system plan-namespace guard repair; revalidate P0-T03 before V22 P1-T01 and perform no external action."
+current_claim_boundary: "CB-PS-V22-P0-T03-PLAN-REGISTRATION-001"
+loop_risk_route: "v22_p0_t03_plan_namespace_guard_repair"
+
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260808-003"
+  latest_research_handoff_id: "handoff-0969"
+  latest_research_next_action: "After the governed checkpoint for AJ-RT-20260808-003-001 execute exactly one bounded P12-T04 improve-project-system plan-namespace guard repair; revalidate P0-T03 before V22 P1-T01 and perform no external action."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+  project_improvement_sidecar_required: false
+  research_handoff_remains_authoritative: true
+
+claim_boundary:
+  allowed_next_scope: "One separately admitted P12-T04 improve-project-system AgentJob may make ordinary-route backlog resolution plan-version aware, namespace completed work-item identity, add V22 routing fixtures, and revalidate P0-T03. It may not execute V22 P1-T01 or change science."
+  completed_task: "RT-20260808-003"
+  completed_completion_path: "research_control/tasks/RT-20260808-003/jobs/completions/AJC-AJ-RT-20260808-003-001.yaml"
+  completed_completion_sha256: "24be4a14c8100469aab0dcc976c7faade084544b4ddba0e7811a54502e471141"
+  source_handoff_id: "handoff-0968"
+  source_handoff_path: "research_control/handoffs/handoff-0968.yaml"
+  source_handoff_sha256: "3c9b19e1845bb445365123155cd2dbb7b9a247e84e363c2dc88532f33a4aa149"
+  registered_plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  registered_plan_sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+  registered_plan_object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+  backlog_path: "research_control/design/v22_recommendation_backlog.yaml"
+  backlog_sha256: "0108b7ab871751947fec13b31b0610aa135a0281269aa6c568a838bd787bec14"
+  dependency_graph_path: "research_control/tasks/RT-20260808-003/artifacts/v22_backlog_dependency_graph.json"
+  dependency_graph_sha256: "e4af5479a30f6387c1dd09fa3754d404aa4f139d122777ae3fdd69292956ec94"
+  coverage_seed_path: "research_control/tasks/RT-20260808-003/artifacts/v22_recommendation_coverage_seed.json"
+  coverage_seed_sha256: "4c71adbb8198a40991c0e141813b62f0071b201078d2aba8c4065693d0050067"
+  validation_path: "research_control/tasks/RT-20260808-003/artifacts/v22_p0_t03_plan_registration_validation.json"
+  validation_sha256: "678ad6a474b2c285853c87b12937a4f589e131013c19f36a17f266aa993c60ce"
+  runtime_route_collision_blocker_path: "research_control/tasks/RT-20260808-003/artifacts/v22_p0_t03_runtime_route_collision_blocker.yaml"
+  runtime_route_collision_blocker_sha256: "15c98d0a1a9ef4ec3c8cad493c0cdd7319d34274c5d04e4846c6e199dbd5f974"
+  recommendation_count: 19
+  sequence_step_count: 12
+  cross_cutting_directive_count: 10
+  phase_count: 11
+  work_package_count: 40
+  dependency_edge_count: 61
+  dependency_cycle_count: 0
+  orphan_count: 0
+  v22_p0_t03_executed: true
+  v22_p0_t03_qualifying_complete: false
+  v22_runtime_backlog_admitted: false
+  v22_p1_t01_executed: false
+  scientific_claims_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  tag_creation_authorized: false
+  public_release_authorized: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false
+  blocked_claims:
+    - "plan registration or complete traceability presented as implementation of pending packages"
+    - "project-system PASS presented as scientific truth or Distance-to-GR progress"
+    - "registered draft/control plan presented as source-derived geometry Einstein dynamics or benchmark success"
+    - "generated wiki memory semantic or registry projections presented as independent authority"
+    - "P1-T01 selection presented as execution"
+    - "task-local traceability PASS presented as runtime admission despite the plan-namespace collision"
+    - "registration presented as tag release publication push reviewer contact or external-action authority"
+
+plan_result:
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  phase_id: "P0"
+  plan_task_id: "P0-T03"
+  blocked_next_plan_task_id: "P1-T01"
+  next_repair_plan_task_id: "P12-T04"
+  next_repair_work_item_id: "V22-P0-T03-PLAN-NAMESPACE-GUARD-REPAIR"
+  title: "Register the compact V22 decision program after V21 freezes"
+  result_status: "REPAIR_REQUIRED_V22_RUNTIME_PLAN_NAMESPACE_COLLISION"
+  work_item_status: "repair_required_checkpoint_pending"
+  v22_plan_registered: true
+  v22_backlog_materialized: true
+  v22_dependency_graph_acyclic: true
+  v22_coverage_orphans: 0
+  v22_runtime_backlog_admitted: false
+  v22_p0_t03_qualifying_complete: false
+  v22_p1_t01_executed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  system_success_counts_as_physics: false
+  system_success_counts_as_distance_to_gr: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+distance_to_gr:
+  changed: false
+  effect: "none_project_system_plan_registration"
+  burden_id: "none"
+  milestone: "none"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "Registration and traceability add no source law metric coupling Einstein equation benchmark Gate external review independent replication or completed-derivation evidence."
+  downstream_unlocked:
+    - "one P12-T04 plan-namespace guard repair after checkpoint"
+  downstream_still_blocked:
+    - "V22 P1-T01 until the guard repair and fresh qualifying P0-T03 revalidation"
+    - "P1-T02 through P1-T04 until their dependencies and separate AgentJobs"
+    - "all Track B physics packages until required governance and exact dependencies"
+    - "Gate B Gate D and physical benchmark execution"
+    - "tag public release publication push reviewer contact and external action"
+    - "completed first-principles GR derivation"
+
+selected_next_route:
+  route_id: "v22_p0_t03_plan_namespace_guard_repair"
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_task_id: "P12-T04"
+  work_item_id: "V22-P0-T03-PLAN-NAMESPACE-GUARD-REPAIR"
+  route_label: "project-system-repair-packet"
+  role_family: "project-control-maintainer@0.2.0"
+  worker_skill: "improve-project-system"
+  selected_next_packet_type: "plan_version_namespace_guard_repair"
+  task_type: "project_system_v22_runtime_backlog_route_guard_namespace_repair"
+  target_derivation_milestone: "none"
+  milestone_burden: "Project-system route resolution only; no V22 science package or Distance-to-GR burden advances."
+  strategy_id: "repair_v22_plan_qualified_route_guard_resolution_v1"
+  source_failure_path: "research_control/tasks/RT-20260808-003/artifacts/v22_p0_t03_runtime_route_collision_blocker.yaml"
+  source_failure_sha256: "15c98d0a1a9ef4ec3c8cad493c0cdd7319d34274c5d04e4846c6e199dbd5f974"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  physics_promotion_authorized: false
+  executed: false
+  successor_requested: false
+  external_action_authorized: false
+  next_action: "Make route selection plan-version aware, namespace completed work-item identity, add V22 runtime metadata and regression fixtures, and revalidate P0-T03 without executing P1-T01."
+
+ordinary_route_guard:
+  schema_id: "ordinary_route_guard_evaluation_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  evaluation_id: "ORE-HANDOFF-0969"
+  ordinary_handoff_id: "handoff-0969"
+  threshold: 3
+  consecutive_project_system_tasks_before_selection: 4
+  ready_science_plan_task_ids: []
+  selected_plan_task_id: "P12-T04"
+  selected_route_class: "project_system"
+  selected_worker_skill: "improve-project-system"
+  outcome: "all_ready_science_blocked_exception"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  exception_receipt:
+    active: true
+    schema_id: "ordinary_route_exception_receipt_v1"
+    exception_id: "ORE-HANDOFF-0969-EXCEPTION-001"
+    exception_class: "all_ready_science_blocked"
+    ordinary_handoff_id: "handoff-0969"
+    ready_science_plan_task_ids: []
+    blocked_routes: []
+    authority_limits:
+      ordinary_research_handoff_authoritative: true
+      project_system_sidecar_supersedes: false
+      system_success_counts_as_physics: false
+      system_success_counts_as_distance_to_gr: false
+      scientific_status_changed: false
+      physics_promotion_authorized: false
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+active_state_boundary:
+  active_task_id: "RT-20260808-003"
+  active_job_id: "AJ-RT-20260808-003-001"
+  current_status: "repair_required_v22_runtime_plan_namespace_collision_checkpoint_pending"
+  checkpoint_required: true
+  checkpoint_completed: false
+  checkpoint_invocation_count: 0
+  selected_next_plan_task_id: "P12-T04"
+  selected_next_work_item_id: "V22-P0-T03-PLAN-NAMESPACE-GUARD-REPAIR"
+  blocked_next_v22_plan_task_id: "P1-T01"
+  selected_next_worker_skill: "improve-project-system"
+  selected_next_role_family: "project-control-maintainer@0.2.0"
+  selected_next_route_label: "project-system-repair-packet"
+  selected_next_strategy_id: "repair_v22_plan_qualified_route_guard_resolution_v1"
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
+  successor_requested: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Memory preflight and canonical V21 inspection passed."
+      - "Physics-payload dual-budget and handoff-0968 route admission passed."
+  completion_internal:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "Exact review plan predecessor and terminal-baseline identities pass."
+      - "All coverage and dependency counts pass with zero cycles or orphans."
+      - "The runtime route integration fails closed on the V21/V22 P1-T01 identity collision."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Deterministic outputs reproduce byte-for-byte."
+      - "No canonical science Gate benchmark or Distance-to-GR source was edited."
+  pre_checkpoint:
+    status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+    evidence:
+      - "Task job role completion handoff program state registries and generated projections are prepared for one governed checkpoint."
+  checkpoint:
+    status: "PENDING"
+    invocation_count: 0
+  post_checkpoint:
+    status: "PENDING"
+
+project_improvement_signals: []
+project_improvement_signal_count: 0
+project_improvement_sidecar_required: false
+authority_limits:
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  source_law_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  Gate_Chair_verdict_authorized: false
+  benchmark_promotion_authorized: false
+  external_review_completed: false
+  independent_replication_completed: false
+  tag_creation_authorized: false
+  public_release_authorized: false
+  reviewer_contact_authorized: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false
+  completed_derivation_authorized: false
+
+next_plan_task_id: "P12-T04"
+next_work_item_id: "V22-P0-T03-PLAN-NAMESPACE-GUARD-REPAIR"
+blocked_v22_plan_task_id: "P1-T01"
+next_plan_task_execution_ready_after_checkpoint: true
+next_plan_task_executed: false
+handoff_authority_boundary: "This handoff preserves exact V22 registration evidence and selects only one plan-namespace guard repair. It creates no V22 runtime admission, science, Gate, benchmark, review, replication, release, publication, push, or external-action authority."

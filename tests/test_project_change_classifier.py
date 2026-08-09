@@ -503,6 +503,29 @@ class ProjectChangeClassifierTests(unittest.TestCase):
             )
         self.assertNotIn("unknown_governed_path", result["reason_codes"])
 
+    def test_plan_backlogs_and_gitignore_have_exact_governed_path_families(self) -> None:
+        paths = (
+            ".gitignore",
+            "research_control/design/v21_recommendation_backlog.yaml",
+            "research_control/design/v22_recommendation_backlog.yaml",
+        )
+        result = self.classifier.classify_paths(paths)
+        details = {item["path"]: item for item in result["path_family_details"]}
+
+        self.assertEqual(details[".gitignore"]["tags"], ["ci_orchestration"])
+        for path in paths[1:]:
+            self.assertEqual(
+                details[path]["tags"],
+                ["control_state", "role_or_schema_contract"],
+            )
+        self.assertNotIn("unknown_governed_path", result["reason_codes"])
+        self.assertNotIn("unknown_governed_path", result["path_family_tags"])
+
+        unrelated = self.classifier.classify_paths(
+            ["governed/future_recommendation_backlog.yaml"]
+        )
+        self.assertIn("unknown_governed_path", unrelated["reason_codes"])
+
     def test_status_calibration_design_paths_have_stable_control_contract_tags(self) -> None:
         paths = (
             "research_control/design/accepted_status_calibration_v1.yaml",

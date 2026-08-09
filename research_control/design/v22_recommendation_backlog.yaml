@@ -1,0 +1,2335 @@
+schema_id: v22_recommendation_backlog_v1
+authority: project_control
+status: draft_control_backlog
+created_at: '2026-08-08T22:37:10Z'
+source_plan:
+  plan_id: recommendations_implementation_plan_continue_task-v22
+  plan_path: implementations_plans/recommendations_implementation_plan_continue_task-v22.md
+  object_id: MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22
+  source_hash: 04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65
+  git_blob_sha1: aef5acc7b6b72d577fd73c78f006dad1125956ba
+  predecessor_object_id: MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21
+  predecessor_hash: 4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087
+  review_basis_sha256: 1a0d36e14770c4591717cc4f317691f5efcb8ea6f5b300cb8fe63ba001d1eadd
+source_evidence:
+  handoff:
+    path: research_control/handoffs/handoff-0968.yaml
+    sha256: 3c9b19e1845bb445365123155cd2dbb7b9a247e84e363c2dc88532f33a4aa149
+  p0_t02_completion:
+    path: research_control/tasks/RT-20260808-002/jobs/completions/AJC-AJ-RT-20260808-002-001.yaml
+    sha256: 392c54ac9659e243c10b748b7a98073aabf6ac179d2b0b0912046b5f024cf0e3
+  baseline_manifest:
+    path: research_control/tasks/RT-20260808-002/artifacts/v21_terminal_baseline_release_manifest_v1.json
+    sha256: cd4b3fa94e6b1fe3cd5eb576953d3e918b683e3628c0fe63887d9135281d4043
+  reproduction_receipt:
+    path: research_control/tasks/RT-20260808-002/artifacts/v21_terminal_baseline_reproduction_receipt_v1.json
+    sha256: 3b924fe0eef7634c1043c24f6ef8ad9e6fb8b2f9d90a7c216d62f8ab71447007
+  freeze_policy:
+    path: research_control/tasks/RT-20260808-002/artifacts/v21_terminal_baseline_freeze_policy_v1.md
+    sha256: 311a0e7553a4f8b75dde012ed751c7a3da515379b8b3b5a02c11638e927d60bf
+scope:
+  plan_task_id: P0-T03
+  phase_count: 11
+  work_package_count: 40
+  dependency_edge_count: 61
+  execution_model: one_bounded_agentjob_per_continue_research_invocation
+  automatic_program_launch: false
+coverage_rules:
+  expected_recommendation_ids:
+  - V22-R01
+  - V22-R02
+  - V22-R03
+  - V22-R04
+  - V22-R05
+  - V22-R06
+  - V22-R07
+  - V22-R08
+  - V22-R09
+  - V22-R10
+  - V22-R11
+  - V22-R12
+  - V22-R13
+  - V22-R14
+  - V22-R15
+  - V22-R16
+  - V22-R17
+  - V22-R18
+  - V22-R19
+  expected_sequence_step_ids:
+  - S1
+  - S2
+  - S3
+  - S4
+  - S5
+  - S6
+  - S7
+  - S8
+  - S9
+  - S10
+  - S11
+  - S12
+  expected_cross_cutting_directive_ids:
+  - V22-X01
+  - V22-X02
+  - V22-X03
+  - V22-X04
+  - V22-X05
+  - V22-X06
+  - V22-X07
+  - V22-X08
+  - V22-X09
+  - V22-X10
+  every_package_requires_traceability: true
+coverage_summary:
+  recommendations: 19
+  sequence_steps: 12
+  cross_cutting_directives: 10
+  work_packages: 40
+  orphans: 0
+conditional_rules:
+  P5: Every P5 package requires a genuinely positive P4-T05 Gate B verdict.
+  P6-T02: Requires a genuinely positive P5-T03 Gate D verdict.
+  P6-T03: On the positive path it consumes P6-T02; on a terminal-failure path it consumes
+    the frozen P4 or P5 verdict and issues the scoped final disposition.
+  source_candidate_concurrency: At most one active source-extension family.
+dependency_graph:
+  root: P0-T01
+  node_count: 40
+  edge_count: 61
+  edges:
+  - from: P0-T01
+    to: P0-T02
+  - from: P0-T02
+    to: P0-T03
+  - from: P0-T03
+    to: P1-T01
+  - from: P1-T01
+    to: P1-T02
+  - from: P1-T02
+    to: P1-T03
+  - from: P1-T02
+    to: P1-T04
+  - from: P1-T03
+    to: P1-T04
+  - from: P1-T02
+    to: P2-T01
+  - from: P1-T04
+    to: P2-T01
+  - from: P2-T01
+    to: P2-T02
+  - from: P2-T01
+    to: P2-T03
+  - from: P1-T03
+    to: P2-T04
+  - from: P2-T01
+    to: P2-T04
+  - from: P2-T03
+    to: P2-T04
+  - from: P2-T04
+    to: P3-T01
+  - from: P3-T01
+    to: P3-T02
+  - from: P3-T01
+    to: P3-T03
+  - from: P3-T02
+    to: P3-T03
+  - from: P3-T02
+    to: P3-T04
+  - from: P3-T03
+    to: P3-T04
+  - from: P3-T04
+    to: P4-T01
+  - from: P4-T01
+    to: P4-T02
+  - from: P4-T02
+    to: P4-T03
+  - from: P4-T03
+    to: P4-T04
+  - from: P4-T01
+    to: P4-T05
+  - from: P4-T02
+    to: P4-T05
+  - from: P4-T03
+    to: P4-T05
+  - from: P4-T04
+    to: P4-T05
+  - from: P4-T05
+    to: P5-T01
+  - from: P5-T01
+    to: P5-T02
+  - from: P5-T02
+    to: P5-T03
+  - from: P1-T04
+    to: P6-T01
+  - from: P5-T03
+    to: P6-T02
+  - from: P6-T01
+    to: P6-T02
+  - from: P4-T05
+    to: P6-T03
+  - from: P6-T01
+    to: P6-T03
+  - from: P0-T03
+    to: P7-T01
+  - from: P1-T01
+    to: P7-T01
+  - from: P7-T01
+    to: P7-T02
+  - from: P7-T02
+    to: P7-T03
+  - from: P0-T03
+    to: P8-T01
+  - from: P1-T01
+    to: P8-T01
+  - from: P8-T01
+    to: P8-T02
+  - from: P8-T02
+    to: P8-T03
+  - from: P8-T01
+    to: P8-T04
+  - from: P8-T03
+    to: P8-T04
+  - from: P1-T01
+    to: P9-T01
+  - from: P1-T02
+    to: P9-T01
+  - from: P1-T03
+    to: P9-T01
+  - from: P1-T04
+    to: P9-T01
+  - from: P1-T01
+    to: P9-T02
+  - from: P2-T02
+    to: P9-T03
+  - from: P9-T01
+    to: P9-T03
+  - from: P9-T02
+    to: P9-T03
+  - from: P9-T03
+    to: P9-T04
+  - from: P6-T03
+    to: P10-T01
+  - from: P7-T03
+    to: P10-T01
+  - from: P8-T04
+    to: P10-T01
+  - from: P9-T04
+    to: P10-T01
+  - from: P10-T01
+    to: P10-T02
+  - from: P10-T02
+    to: P10-T03
+  topological_order:
+  - P0-T01
+  - P0-T02
+  - P0-T03
+  - P1-T01
+  - P1-T02
+  - P7-T01
+  - P8-T01
+  - P9-T02
+  - P1-T03
+  - P7-T02
+  - P8-T02
+  - P1-T04
+  - P7-T03
+  - P8-T03
+  - P2-T01
+  - P6-T01
+  - P9-T01
+  - P8-T04
+  - P2-T02
+  - P2-T03
+  - P9-T03
+  - P2-T04
+  - P9-T04
+  - P3-T01
+  - P3-T02
+  - P3-T03
+  - P3-T04
+  - P4-T01
+  - P4-T02
+  - P4-T03
+  - P4-T04
+  - P4-T05
+  - P5-T01
+  - P6-T03
+  - P5-T02
+  - P10-T01
+  - P5-T03
+  - P10-T02
+  - P6-T02
+  - P10-T03
+  dependencies_acyclic: true
+  dangling_dependencies: []
+  reachable_from_root:
+  - P0-T01
+  - P0-T02
+  - P0-T03
+  - P1-T01
+  - P1-T02
+  - P1-T03
+  - P1-T04
+  - P2-T01
+  - P2-T02
+  - P2-T03
+  - P2-T04
+  - P3-T01
+  - P3-T02
+  - P3-T03
+  - P3-T04
+  - P4-T01
+  - P4-T02
+  - P4-T03
+  - P4-T04
+  - P4-T05
+  - P5-T01
+  - P5-T02
+  - P5-T03
+  - P6-T01
+  - P6-T02
+  - P6-T03
+  - P7-T01
+  - P7-T02
+  - P7-T03
+  - P8-T01
+  - P8-T02
+  - P8-T03
+  - P8-T04
+  - P9-T01
+  - P9-T02
+  - P9-T03
+  - P9-T04
+  - P10-T01
+  - P10-T02
+  - P10-T03
+  unreachable_from_root: []
+items:
+- plan_task_id: P0-T01
+  phase_id: P0
+  title: Revalidate and complete the existing V21 terminal boundary
+  track: shared control
+  owner: Director of Research plus the existing outer relay; no new worker
+  declared_coverage_ids:
+  - V22-R01
+  - S1
+  recommendation_ids:
+  - V22-R01
+  sequence_step_ids:
+  - S1
+  cross_cutting_directive_ids: []
+  depends_on: []
+  objective: Finish only the already-routed V21 checkpoint and outer terminal verification,
+    without using this V22 plan to mutate or replay V21.
+  actions: Reopen the live goal record, lease, repository binding, branch, HEAD, tree,
+    manifest, active handoff, completion, and checkpoint status. If the record is
+    still pending, follow its immutable route exactly once. Verify the returned receipt,
+    canonical after-fingerprint, 122 final dispositions, 72 covered V21 recommendations,
+    zero unresolved required human actions, zero successor, and released lease. If
+    the state is already terminal, record that fact read-only. If any identity differs,
+    stop and use the live V21 recovery route; do not infer a repair from this plan.
+  outputs: Canonical terminal receipt or a precise existing-relay blocker; read-only
+    V21 terminal-state snapshot for the V22 intake.
+  acceptance: V21 is `terminal_complete`, no successor exists, leases are released,
+    repository state matches the terminal fingerprint, and no scientific status was
+    promoted by closure.
+  verification: Use the exact V21 goal helper and live control validators. This package
+    does not create a new AgentJob, plan task, or repository change.
+  stop_conditions: Lease ambiguity, stale handoff, dirty-manifest mismatch, consumed-generation
+    replay risk, checkpoint failure, or any request to broaden the terminal transaction.
+  implementation_status: completed
+  requires_separate_agentjob: true
+  max_outer_agentjobs_per_invocation: 1
+  automatic_execution_authorized: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+- plan_task_id: P0-T02
+  phase_id: P0
+  title: Build and approve the immutable V21 scientific baseline release
+  track: shared release control
+  owner: Director of Research, process-integrity auditor, and documentation curator
+  declared_coverage_ids:
+  - V22-R01
+  - V22-R12
+  - V22-R19
+  - S1
+  recommendation_ids:
+  - V22-R01
+  - V22-R19
+  - V22-R12
+  sequence_step_ids:
+  - S1
+  cross_cutting_directive_ids: []
+  depends_on:
+  - P0-T01
+  objective: Package V21 as an immutable, internally reproducible baseline without
+    implying publication, external validation, or a positive derivation.
+  actions: 'Pin the terminal commit and tree. Construct a machine-readable manifest
+    containing every canonical source and hash, the final Distance-to-GR ledger, Gates
+    A-E, selector theorem/proof archive, P5/P6 negative results, P7 postulate ledger,
+    P8/P9 obstruction and benchmark records, P16 science/system scorecards, validation
+    environment, and provenance receipts. Reproduce selected theorem, Lean, TeX, Python,
+    and benchmark packages in a clean environment. Verify that generated PDFs, HTML,
+    wiki, and large reports are derivative release artifacts. Prepare, but do not
+    create, a Git tag and release until separately authorized. Define the freeze exception
+    process: only demonstrated security or reproducibility defects, repaired through
+    a superseding record, may alter the baseline lineage.'
+  outputs: Release manifest, canonical/derivative partition, reproduction receipt,
+    freeze policy, proposed tag name, and release notes with the exact negative scientific
+    status.
+  acceptance: Every required baseline artifact resolves by hash; generated artifacts
+    trace to canonical sources; clean reproduction is either successful or exact failures
+    are disclosed; release text says Gates B/D/E are not ready, benchmarks are six
+    inconclusive/zero pass/zero independent replication, and GR is not source-derived.
+  verification: Release-tier validation, clean-environment reproduction, hash closure,
+    source/derivative audit, claim-language review, and a human check before tag/release
+    execution.
+  stop_conditions: Missing canonical object, unverifiable hash, nonreproducible proof
+    or build without disclosure, public-release overclaim, or absent explicit tag/release
+    authority.
+  implementation_status: completed
+  requires_separate_agentjob: true
+  max_outer_agentjobs_per_invocation: 1
+  automatic_execution_authorized: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+- plan_task_id: P0-T03
+  phase_id: P0
+  title: Register the compact V22 decision program after V21 freezes
+  track: shared project control
+  owner: project-control maintainer and project-memory system
+  declared_coverage_ids:
+  - V22-R01
+  - V22-R02
+  - V22-R17
+  recommendation_ids:
+  - V22-R01
+  - V22-R17
+  - V22-R02
+  sequence_step_ids: []
+  cross_cutting_directive_ids: []
+  depends_on:
+  - P0-T02
+  objective: Register this 40-package V22 plan as draft/control without copying V21's
+    122-item implementation structure or altering science.
+  actions: Revalidate the repository and review-source hash. Copy this draft to the
+    recommended repository path. Add one Markdown source-registry row linked to V21
+    and the V21 terminal baseline. Materialize a machine-readable V22 backlog and
+    acyclic dependency graph. Run the repository classifier, required documentation-impact
+    handling, memory bootstrap, affected validation, and `git diff --check`. Check
+    that generated wiki/registry derivatives are created only by approved scripts.
+    Do not launch the program, create external action, or edit canonical science in
+    this package.
+  outputs: Registered plan, V22 backlog, dependency graph, source hash, coverage seed,
+    documentation-impact receipt, and validation receipt.
+  acceptance: Exactly 19 review recommendations, 12 sequence steps, 11 phases, and
+    40 unique work packages are represented; every dependency resolves; no cycle or
+    orphan exists; plan registration changes no scientific, Gate, benchmark, or publication
+    status.
+  verification: Project-memory bootstrap plus validate-only, affected profile, recommendation/backlog
+    validator, classifier, documentation-impact validator, and final diff review.
+  stop_conditions: 'V21 not terminal, live checkout drift, ID collision, missing recommendation,
+    generated-file hand edit, or a plan field that implies scientific authority. ##
+    P1. Charter, primitive debt, matter position, and gate locks'
+  implementation_status: completed_checkpoint_pending
+  requires_separate_agentjob: true
+  max_outer_agentjobs_per_invocation: 1
+  automatic_execution_authorized: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+- plan_task_id: P1-T01
+  phase_id: P1
+  work_kind: construction_or_implementation
+  task_class: project_system
+  title: Establish the three-track charter and separated scorecards
+  track: shared governance
+  owner: Director of Research and project-system director
+  role_family: project-control-maintainer@0.2.0
+  controlling_launcher: continue-research-goal@v4
+  worker_skill: improve-project-system
+  route_label: ordinary-research-packet
+  target_derivation_milestone: none
+  milestone_burden: Project-system charter and scorecard separation only; no scientific or Distance-to-GR burden advances.
+  declared_coverage_ids:
+  - V22-R02
+  recommendation_ids:
+  - V22-R02
+  - V22-R17
+  sequence_step_ids: []
+  cross_cutting_directive_ids:
+  - V22-X01
+  depends_on:
+  - P0-T03
+  objective: Make the interpretation, reconstruction, and AI-methodology programs
+    independently accountable.
+  actions: Create one charter per track with purpose, allowed claims, success/failure
+    measures, budget, dashboard, publication lane, and authority owner. Define cross-track
+    references as typed links rather than evidence promotion. Allocate task-count,
+    elapsed-effort, compute, and financial-cost fields separately. Define repository
+    separation decision criteria based on coupling, release cadence, access, and maintenance
+    cost; do not split repositories merely for appearance.
+  outputs: Three-track charter, authority matrix, separate scorecard schemas, budget
+    allocation, and optional future repository-split decision record.
+  acceptance: Every task can be assigned to exactly one primary track or a declared
+    shared-control class; Track A/C success cannot change Distance-to-GR; Track B
+    cannot cite interpretive coherence or workflow PASS as Gate evidence.
+  verification: Schema fixtures for prohibited cross-track promotion, dashboard separation
+    tests, and independent process-integrity review.
+  stop_conditions: Shared metric with ambiguous authority, double-counted budget,
+    or publication language that blends the three programs.
+  implementation_status: pending
+  expected_result_kind: implemented_and_validated_or_precisely_blocked
+  requires_human_gate: false
+  dependency_independent_after_other_human_gates: true
+  allow_scope_expansion: false
+  requires_separate_agentjob: true
+  max_outer_agentjobs_per_invocation: 1
+  automatic_execution_authorized: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+- plan_task_id: P1-T02
+  phase_id: P1
+  title: Rewrite the scientific objective and complete the primitive-debt audit
+  track: B
+  owner: ontology formalizer with smuggling auditor
+  declared_coverage_ids:
+  - V22-R03
+  - S2
+  recommendation_ids:
+  - V22-R03
+  sequence_step_ids:
+  - S2
+  cross_cutting_directive_ids: []
+  depends_on:
+  - P1-T01
+  objective: State exactly what the program assumes and what it still seeks to derive.
+  actions: Inventory the live source manifold, dimension, topology, smoothness, charts,
+    differentiability, locality, measure, derivative, connection, matter, dynamics,
+    symmetry, scale, operational, and metric-equivalent assumptions. Classify each
+    as canonical primitive, protected postulate, proposal-only extension, derived,
+    unresolved, or forbidden target import. Adopt the exact objective in Section 6.1
+    on control and public planning surfaces. Assign an assumption-cost entry, rationale,
+    downstream use, and removal/derivation criterion. Create a metric-equivalence
+    decision test for coframes, constitutive tensors, quadratic forms, principal polynomials,
+    and volume structures.
+  outputs: Primitive-debt ledger, exact objective source, assumption-cost schema and
+    populated baseline, metric-equivalent classification checklist, and smuggling-audit
+    report.
+  acceptance: Every symbol proposed for the local source theory has a source type
+    and debt status; the objective does not claim pregeometry; metric-equivalent inputs
+    cannot be labeled emergence; unresolved debt remains visible.
+  verification: Canonical-source and registry inspection, no-target audit, independent
+    assumption-ledger cross-check, and adversarial classification fixtures.
+  stop_conditions: Hidden target atlas/metric, untyped derivative or measure, or any
+    attempt to discharge debt through terminology alone.
+  implementation_status: pending
+  requires_separate_agentjob: true
+  max_outer_agentjobs_per_invocation: 1
+  automatic_execution_authorized: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+- plan_task_id: P1-T03
+  phase_id: P1
+  title: Adopt Position A for matter and codify the no-postulate gate rule
+  track: B
+  owner: Director of Research; protected human authority only where required
+  declared_coverage_ids:
+  - V22-R09
+  - V22-R14
+  recommendation_ids:
+  - V22-R08
+  - V22-R09
+  - V22-R14
+  sequence_step_ids: []
+  cross_cutting_directive_ids:
+  - V22-X05
+  depends_on:
+  - P1-T02
+  objective: Freeze matter as a transparent conditional input for the next geometry
+    cycle while preventing postulates from laundering Gate B or D.
+  actions: 'Restate the exact P7 protected finite matter package and its limits. Declare
+    Position A: a fixed matter theory is input to geometry reconstruction. List what
+    P7 does not supply: realistic continuum matter, Standard Model sectors, quantum
+    statistics, Hilbert/algebraic state structure, microcausality, target stress tensor,
+    or derived universal target coupling. Define the conditions that would open a
+    separate Position B emergence program. Add a fail-closed rule: no protected human
+    decision may turn absent source-to-geometry or source-to-Einstein evidence into
+    a positive derivation gate; humans may select only among evidence-supported candidates.'
+  outputs: Matter-position decision, P7 conditional-input contract, Position-B reopening
+    criteria, and no-postulate Gate B/D policy.
+  acceptance: Later matter-first tasks can use P7 only within its exact source-side
+    scope; every Gate B/D evaluator rejects postulate-only passage; realistic matter
+    emergence is explicitly out of scope for this cycle.
+  verification: Gate-decision fixtures covering allowed selection versus forbidden
+    truth-value alteration, plus claim-language and authority review.
+  stop_conditions: Expansion of P7 to target coupling by implication, postulated metric/Einstein
+    action, or ambiguity about who may change scientific status.
+  implementation_status: pending
+  requires_separate_agentjob: true
+  max_outer_agentjobs_per_invocation: 1
+  automatic_execution_authorized: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+- plan_task_id: P1-T04
+  phase_id: P1
+  title: Make Gate B the sole active physics gate and park downstream work
+  track: B
+  owner: Director of Research
+  declared_coverage_ids:
+  - V22-R04
+  - V22-R11
+  - V22-R12
+  - V22-R14
+  recommendation_ids:
+  - V22-R04
+  - V22-R11
+  - V22-R12
+  - V22-R14
+  sequence_step_ids: []
+  cross_cutting_directive_ids:
+  - V22-X03
+  - V22-X04
+  - V22-X06
+  depends_on:
+  - P1-T02
+  - P1-T03
+  objective: Enforce the upstream dependency chain before any new gravity or benchmark
+    task is admitted.
+  actions: Set the active milestone to `effective_metric_g_eff` or its live successor
+    burden. Mark new Gate C, D, E, Einstein-route, and benchmark-execution packages
+    ineligible until their prerequisites. Admit physics tasks only when they prove
+    a Gate B necessary condition, construct a candidate, prove a scoped obstruction,
+    compare minimal extensions, or test robustness/uniqueness. Add a physical-typing
+    gate that rejects untyped `clock`, `signal`, `free-fall`, `gravity`, `metric`,
+    or `compact source` labels. Preserve all old P8/P9 outputs as historical negative/control
+    evidence.
+  outputs: Gate-lock policy, physics-admission matrix, parked-route registry, physical-type
+    checklist, and historical-obstruction index.
+  acceptance: No eligible route bypasses Gate B; existing Gate C status is preserved
+    but not rerun; no P5/P6 conditional package below can execute early; the Director
+    can explain each eligible task's direct Gate B burden.
+  verification: Dependency and route-selection fixtures, claim-language tests, and
+    an independent process-integrity audit.
+  stop_conditions: 'Any downstream task admitted from convenience, a finite token
+    treated as physical typing, or a protected decision substituted for new evidence.
+    ## P2. Source-adequacy theorem, extension budget, and candidate selection'
+  implementation_status: pending
+  requires_separate_agentjob: true
+  max_outer_agentjobs_per_invocation: 1
+  automatic_execution_authorized: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+- plan_task_id: P2-T01
+  phase_id: P2
+  title: Prove the local source information-capacity theorem
+  track: B
+  owner: ontology formalizer and mathematical refuter
+  declared_coverage_ids:
+  - V22-R06
+  - V22-R19
+  - S3
+  recommendation_ids:
+  - V22-R06
+  - V22-R19
+  sequence_step_ids:
+  - S3
+  cross_cutting_directive_ids: []
+  depends_on:
+  - P1-T02
+  - P1-T04
+  objective: Generalize the factor-through-amplitude obstruction into a coordinate-
+    and gauge-aware adequacy test for local geometry reconstruction.
+  actions: 'Define the source jet bundle or finite-order local state space, candidate
+    geometry space, physically derived equivalence relation, and reconstruction map.
+    Select a finite independent family of operationally distinguishable perturbations:
+    cone deformation, anisotropic tidal response, polarization response, clock-rate
+    shift, volume/shear variation, and suitable curvature observables. Prove a rank
+    or information lower bound after quotienting gauge and coordinate redundancy.
+    Recover the P5 scalar theorem as a corollary. Test deterministic, stochastic,
+    quotient-observable, partial-domain, and marked domain cases so the scope does
+    not overreach.'
+  outputs: Theorem manuscript, definitions, proof/countermodel archive, source-adequacy
+    checklist, machine-readable test cases, and optional proof-assistant kernel for
+    a bounded core.
+  acceptance: The theorem states domains, regularity, equivalence, rank notion, and
+    physical-distinguishability assumptions; it does not rely on “ten metric components”;
+    known escape routes are classified rather than denied; every candidate in P2-T04
+    can be tested against it.
+  verification: Formal derivation review, explicit counterexamples, finite model checks,
+    proof-assistant build where used, and same-context internal audit clearly labeled
+    nonexternal.
+  stop_conditions: Gauge-dependent rank count, unstated quotient, representative selection
+    assumed, or a local theorem promoted to global ontology impossibility.
+  implementation_status: pending
+  requires_separate_agentjob: true
+  max_outer_agentjobs_per_invocation: 1
+  automatic_execution_authorized: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+- plan_task_id: P2-T02
+  phase_id: P2
+  title: Obtain external mathematical review of the selector and adequacy results
+  track: B and publication support
+  owner: external category theorist; packet preparation by documentation curator
+  declared_coverage_ids:
+  - V22-R06
+  - V22-R15
+  - V22-R19
+  - S3
+  recommendation_ids:
+  - V22-R06
+  - V22-R15
+  - V22-R19
+  sequence_step_ids:
+  - S3
+  cross_cutting_directive_ids:
+  - V22-X09
+  depends_on:
+  - P2-T01
+  objective: Establish actual specialist review of novelty, scope, and proof fidelity
+    before publication or use as a hard candidate filter.
+  actions: Prepare a conclusion-blinded, hash-bound packet containing the selector
+    theorem, fixed-point classification, equalizer/generalization claims, stochastic
+    and quotient alternatives, Lean finite kernel, the generalized adequacy theorem,
+    countermodels, and exact novelty questions. Record conflicts, reviewer expertise,
+    environment, source hashes, and independent reproduction. Keep reviewer outputs
+    separate until submission. Reconcile findings in a response matrix without rewriting
+    negative results.
+  outputs: External review packet, reviewer provenance, independent build receipt,
+    comments, response matrix, revised-or-frozen theorem status, and publication-readiness
+    verdict.
+  acceptance: At least one real external mathematical specialist completes the review;
+    internal agent roles are not counted; every major objection is resolved, accepted
+    as limitation, or blocks publication; novelty wording is externally defensible.
+  verification: Hash and environment validation, reviewer-independence classification,
+    response-closure audit, and separate human publication authority.
+  stop_conditions: No reviewer-contact authority, same-model review labeled external,
+    shared primary intermediate answers, or unresolved correctness objection.
+  implementation_status: pending
+  requires_separate_agentjob: true
+  max_outer_agentjobs_per_invocation: 1
+  automatic_execution_authorized: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+- plan_task_id: P2-T03
+  phase_id: P2
+  title: Pre-register the source-extension budget and hard-fail protocol
+  track: B
+  owner: Director of Research, refuter, and smuggling auditor
+  declared_coverage_ids:
+  - V22-R13
+  - S4
+  recommendation_ids:
+  - V22-R13
+  sequence_step_ids:
+  - S4
+  cross_cutting_directive_ids:
+  - V22-X02
+  depends_on:
+  - P2-T01
+  objective: Prevent indefinite extension and define what counts as a scoped failure
+    before candidate results are known.
+  actions: 'Define a maximum of three materially distinct families: local multi-field
+    continuum dynamics, matter-principal-polynomial reconstruction, and controlled
+    discrete-to-continuum refinement, while allowing overlap only when one concrete
+    candidate lawfully combines them. Define family identity, reopening evidence,
+    sequential execution, and nonrepackaging tests. Bind all eight Gate B criteria
+    and all hard-fail triggers in Section 6. Define how a primary candidate ends,
+    how a fallback is activated, when a third slot may be allocated, and when the
+    current ontology is declared insufficient. Pre-register the exact scoped final
+    wording.'
+  outputs: Extension-budget protocol, candidate-family registry, hard-fail matrix,
+    sequential activation rule, freeze/reopening criteria, and final-verdict templates.
+  acceptance: Only one family can be active; failures cannot be erased; metric import
+    and target-fitting fail closed; the budget cannot grow without a new explicit
+    program decision; terminal wording is scoped to the tested ontology family.
+  verification: Adversarial fixtures for renamed/repackaged candidates, target imports,
+    unstable models, and ambiguous equivalence classes; independent process and scientific
+    review.
+  stop_conditions: Unlimited fallback language, a family defined only after seeing
+    results, or global no-go wording unsupported by theorem.
+  implementation_status: pending
+  requires_separate_agentjob: true
+  max_outer_agentjobs_per_invocation: 1
+  automatic_execution_authorized: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+- plan_task_id: P2-T04
+  phase_id: P2
+  title: Select one primary local matter-first candidate and one fallback
+  track: B
+  owner: theoretical-continuation selector followed by protected human selection only
+    if required
+  declared_coverage_ids:
+  - V22-R05
+  - V22-R08
+  - V22-R09
+  - V22-R13
+  - S4
+  recommendation_ids:
+  - V22-R05
+  - V22-R08
+  - V22-R09
+  - V22-R13
+  sequence_step_ids:
+  - S4
+  cross_cutting_directive_ids:
+  - V22-X03
+  depends_on:
+  - P1-T03
+  - P2-T01
+  - P2-T03
+  objective: Choose the smallest source extension with a plausible path to a principal
+    polynomial and operational geometry, without running candidates in parallel.
+  actions: Solicit bounded candidate packets that specify fields, locality, symmetry,
+    dynamics, observables, continuum/refinement behavior, assumption cost, and expected
+    principal structure. Score information capacity, hidden metric debt, universality,
+    calculability, falsifiability, continuum control, and difference from frozen routes.
+    Prefer a local multi-field matter-first continuum candidate. Select one primary,
+    preregister one fallback, leave the third budget slot unallocated, and freeze
+    the scalar-amplitude and unchanged finite graph-decoder routes. Record why the
+    selected candidate is minimally sufficient rather than merely familiar.
+  outputs: Candidate comparison, source-adequacy results, primary/fallback selection,
+    assumption delta, family identities, frozen-route map, and activation handoff
+    to P3.
+  acceptance: One and only one primary is active; it passes the theorem's minimum
+    adequacy screen; no metric-equivalent primitive or GR target fit is present; fallback
+    activation has objective criteria; frozen routes remain historical negatives.
+  verification: Smuggling audit, refuter stress, family-identity comparison, assumption-cost
+    review, and Director dependency check.
+  stop_conditions: 'No candidate clears adequacy, selection depends on target agreement
+    rather than source merit, candidates run concurrently, or selection requires canonical
+    ontology adoption without protected authority. ## P3. Build the local matter-first
+    source theory and continuum control'
+  implementation_status: pending
+  requires_separate_agentjob: true
+  max_outer_agentjobs_per_invocation: 1
+  automatic_execution_authorized: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+- plan_task_id: P3-T01
+  phase_id: P3
+  title: Define the local multi-field source state and operational syntax
+  track: B
+  owner: candidate constructor and ontology formalizer
+  declared_coverage_ids:
+  - V22-R05
+  - V22-R08
+  - V22-R09
+  recommendation_ids:
+  - V22-R03
+  - V22-R05
+  - V22-R08
+  - V22-R09
+  sequence_step_ids: []
+  cross_cutting_directive_ids:
+  - V22-X05
+  depends_on:
+  - P2-T04
+  objective: Replace the information-deficient scalar channel with an exact, source-native
+    local state model that is rich enough to attempt geometry reconstruction.
+  actions: Define fields `q^A(x)` and their domains, codomains, regularity, local
+    sections, restriction maps, gluing rules, admissible variations, boundary data,
+    and source symmetry actions. State whether the model uses a bundle, sheaf, cosheaf,
+    algebra, chain complex, or another local structure and why. Define source-native
+    observables and distinguish them from target clocks, signals, positions, or geometry.
+    Embed the adopted P7 package only as a conditional matter probe with an explicit
+    continuum/refinement interface. Populate the assumption-cost ledger for each new
+    primitive and demonstrate that no local atlas datum has been silently treated
+    as a target atlas or metric.
+  outputs: Local-state specification, type and domain table, restriction and gluing
+    laws, variation space, symmetry and equivalence definitions, observable catalog,
+    P7 interface contract, and updated assumption ledger.
+  acceptance: Every field and operation is well typed; local restriction and gluing
+    are testable; source equivalence is explicit; observables are source native; the
+    model carries more than one independent local response direction; no target metric,
+    coframe, clock, rod, or prediction is assumed.
+  verification: Type/domain audit, local compatibility examples and failure cases,
+    source-equivalence/naturality checks, smuggling audit, and adequacy- theorem evaluation
+    from P2-T01.
+  stop_conditions: Untyped locality, gluing by target coordinates, insufficient information
+    capacity, hidden metric-equivalent structure, or realistic matter claims inherited
+    from finite P7.
+  implementation_status: pending
+  requires_separate_agentjob: true
+  max_outer_agentjobs_per_invocation: 1
+  automatic_execution_authorized: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+- plan_task_id: P3-T02
+  phase_id: P3
+  title: Define source dynamics and matter equations without hidden geometry
+  track: B
+  owner: candidate constructor with mathematical refuter
+  declared_coverage_ids:
+  - V22-R05
+  - V22-R08
+  recommendation_ids:
+  - V22-R03
+  - V22-R05
+  - V22-R08
+  sequence_step_ids: []
+  cross_cutting_directive_ids:
+  - V22-X05
+  depends_on:
+  - P3-T01
+  objective: Supply a concrete local law whose linearization can generate a source-derived
+    principal structure.
+  actions: Choose and justify deterministic, stochastic, Hamiltonian, or variational
+    dynamics. If using an action, define the integration density, derivatives, connection
+    or derivative substitute, boundary terms, units, and symmetry transformations
+    without borrowing the target metric. Derive the Euler-Lagrange, Hamiltonian, transition,
+    or generator equations. Establish initial/boundary data, constraints, local composition,
+    admissible solution class, conserved or balance identities, and well-posedness
+    questions. Define the continuum matter equations or refined matter update that
+    will act as the primary geometric probe. Identify all free coefficients and their
+    source-side selection rules; target GR values are prohibited inputs.
+  outputs: Source dynamics manuscript, executable/symbolic model where practical,
+    matter equations, constraint and identity ledger, coefficient provenance table,
+    units/debt analysis, and well-posedness plan.
+  acceptance: Equations follow from declared source structures; every coefficient
+    and differential operation has provenance; target predictions are not used for
+    selection; the law supports a nontrivial admissible background and linearization;
+    conditional conservation is not mislabeled as an independent physical law.
+  verification: Symbolic derivation, dimensional and symmetry checks, explicit solution
+    or numerical witness, counterexamples, boundary analysis, and independent source-purity
+    audit.
+  stop_conditions: Measure or derivative requires an unexplained metric, coefficient
+    fitting to GR, no admissible solution/background, ill-posed law without a controlled
+    repair, or dynamics that collapses back to one amplitude.
+  implementation_status: pending
+  requires_separate_agentjob: true
+  max_outer_agentjobs_per_invocation: 1
+  automatic_execution_authorized: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+- plan_task_id: P3-T03
+  phase_id: P3
+  title: Construct and verify the controlled refinement or continuum limit
+  track: B
+  owner: candidate constructor, refuter, and validator engineer for computational
+    evidence
+  declared_coverage_ids:
+  - V22-R10
+  - V22-R13
+  recommendation_ids:
+  - V22-R08
+  - V22-R10
+  - V22-R13
+  sequence_step_ids: []
+  cross_cutting_directive_ids: []
+  depends_on:
+  - P3-T01
+  - P3-T02
+  objective: Establish that finite or discretized evidence approaches a defined continuum
+    object with controlled error and preserves the properties needed for geometry.
+  actions: Define a family `K_n`, the refinement/scaling parameter, embeddings or
+    comparison maps, observables at each level, and a target source-side limit object.
+    Select a convergence topology or norm. Specify boundary treatment, finite-size
+    error, truncation error, stability, and universality with respect to irrelevant
+    microscopic choices. Derive or numerically support convergence of the evolution
+    operator and later principal symbols. State which mathematical tool applies—spectral
+    convergence, graph-to-manifold limits, homogenization, Gamma-convergence, renormalization/coarse-graining,
+    or local sheaf/cosheaf compatibility. Add explicit tests for causal-cone and signature
+    preservation; do not infer a continuum statement from a zero finite remainder.
+  outputs: Refinement-family specification, convergence theorem or bounded conjecture,
+    error estimates, boundary protocol, universality tests, limiting operator definition,
+    computational reproduction package, and failure criteria.
+  acceptance: The scaling parameter and comparison maps are unambiguous; errors decrease
+    under declared conditions; the limit is not defined by target GR agreement; convergence
+    and property preservation have explicit evidence or a precise unresolved status;
+    absence of a limit ends the candidate.
+  verification: Multi-resolution runs, analytic bounds where available, manufactured
+    solutions or controls, sensitivity to boundary/microscopic choices, independent
+    implementation of selected tests, and refuter stress.
+  stop_conditions: Undefined continuum object, nonconvergent observables, uncontrolled
+    boundary effects, causal/signature loss, or finite evidence promoted beyond its
+    limit theorem.
+  implementation_status: pending
+  requires_separate_agentjob: true
+  max_outer_agentjobs_per_invocation: 1
+  automatic_execution_authorized: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+- plan_task_id: P3-T04
+  phase_id: P3
+  title: Establish backgrounds, linear response, and pre-principal-symbol readiness
+  track: B
+  owner: candidate constructor with smuggling auditor and refuter
+  declared_coverage_ids:
+  - V22-R05
+  - V22-R07
+  - V22-R08
+  - V22-R10
+  - V22-R13
+  recommendation_ids:
+  - V22-R05
+  - V22-R07
+  - V22-R10
+  - V22-R08
+  - V22-R13
+  sequence_step_ids: []
+  cross_cutting_directive_ids:
+  - V22-X03
+  depends_on:
+  - P3-T02
+  - P3-T03
+  objective: Produce the exact admissible background and linearized operator needed
+    for a lawful principal-symbol calculation.
+  actions: Classify background solutions and choose one using source-side criteria.
+    Derive tangent/linearized equations, constraint linearization, gauge or source-equivalence
+    generators, physical perturbation quotient, and response operator. Establish regularity
+    and coefficient dependence. Compare finite and continuum linearizations and bind
+    their error. Apply the P2 adequacy theorem to the physical perturbation space.
+    Attempt explicit counterfamilies that preserve the background data while changing
+    cross-response, propagation, or cone structure. Freeze the candidate if the same
+    source data leave physically inequivalent principal structures unselected.
+  outputs: Background classification, selected background rationale, linearization
+    derivation, constraint/gauge reduction plan, response operator, finite-to-continuum
+    parity receipt, adequacy result, and countermodel report.
+  acceptance: A nontrivial background is source-selected; the linearized operator
+    is explicit and differentiable to the required order; gauge and constraint directions
+    are identified; the physical response space clears the adequacy floor; continuum
+    errors are bounded for the principal analysis.
+  verification: Independent linearization, symbolic/numerical comparison, gauge-null
+    tests, constraint propagation checks, countermodel search, and source-purity audit.
+  stop_conditions: 'Background chosen from target convenience, unresolved gauge degeneracy
+    that makes the principal polynomial meaningless, inadequate rank, unbounded refinement
+    error, or nonunique physical response with no derived quotient. ## P4. Derive
+    principal structure, reconstruct operational geometry, and perform Gate B'
+  implementation_status: pending
+  requires_separate_agentjob: true
+  max_outer_agentjobs_per_invocation: 1
+  automatic_execution_authorized: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+- plan_task_id: P4-T01
+  phase_id: P4
+  title: Derive the gauge-reduced principal symbol and polynomial
+  track: B
+  owner: ontology formalizer/candidate constructor with hyperbolic-PDE consultation
+  declared_coverage_ids:
+  - V22-R07
+  - V22-R08
+  - S5
+  recommendation_ids:
+  - V22-R07
+  - V22-R08
+  sequence_step_ids:
+  - S5
+  cross_cutting_directive_ids:
+  - V22-X04
+  depends_on:
+  - P3-T04
+  objective: Determine the candidate's actual characteristic structure from its source
+    equations.
+  actions: Extract the highest-derivative operator from the continuum linearization.
+    Separate evolution equations, constraints, gauge directions, and algebraic redundancies.
+    Construct the reduced principal symbol `sigma_L(x,k)` on physical perturbations
+    and define the principal polynomial with multiplicities and density weight stated.
+    Prove coordinate/source- presentation covariance appropriate to the source model.
+    Compute factorization and characteristic sets without inserting a quadratic metric
+    form. Reconcile analytic and numerical symbolic calculations and track all branch/degeneracy
+    conditions.
+  outputs: Principal-symbol derivation, reduced physical state space, principal polynomial,
+    factorization/branch report, executable symbolic checks, and source-provenance
+    manifest.
+  acceptance: Gauge and constraints are removed lawfully; the polynomial is nontrivial,
+    covariantly defined, and source-derived; repeated factors and degenerate branches
+    are explicit; independent calculation reproduces the result.
+  verification: Hand derivation, computer algebra or numerical symbol checks, gauge-choice
+    invariance tests, limiting-case checks, dimensional/weight audit, and external-ready
+    reproduction instructions.
+  stop_conditions: Determinant of an unreduced gauge system used as the physical polynomial,
+    metric factor inserted by premise, branch suppressed without reason, or irreproducible
+    calculation.
+  implementation_status: pending
+  requires_separate_agentjob: true
+  max_outer_agentjobs_per_invocation: 1
+  automatic_execution_authorized: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+- plan_task_id: P4-T02
+  phase_id: P4
+  title: Apply the hyperbolicity, universality, robustness, and hard-fail screen
+  track: B
+  owner: refuter and hyperbolic-PDE specialist; Director issues the candidate disposition
+  declared_coverage_ids:
+  - V22-R07
+  - V22-R08
+  - V22-R13
+  - S5
+  recommendation_ids:
+  - V22-R07
+  - V22-R08
+  - V22-R10
+  - V22-R13
+  sequence_step_ids:
+  - S5
+  cross_cutting_directive_ids:
+  - V22-X02
+  - V22-X04
+  depends_on:
+  - P4-T01
+  objective: Fail early unless the principal structure can support one stable physical
+    causal geometry for all declared matter sectors.
+  actions: Test hyperbolicity and hyperbolicity-cone existence, strong or symmetric
+    hyperbolicity as appropriate, stable time orientation, nondegeneracy, multiplicity
+    changes, birefringence/multirefringence, sector compatibility, and finite-variation
+    conditioning. Seek admissible perturbations that change signature, destroy the
+    cone, or split sectors. Determine whether one common quadratic cone or a physically
+    justified generalized causal structure exists. Apply the hidden-metric and target-fit
+    checks. Compare the candidate against all preregistered hard-fail triggers and
+    the extension budget.
+  outputs: Hyperbolicity certificate or obstruction, common-cone analysis, sector-universality
+    matrix, robustness/conditioning report, adversarial countermodels, and candidate
+    continue/fallback/fail verdict.
+  acceptance: Continuation requires a stable common physical cone, declared time orientation,
+    controlled degeneracies, universal declared matter compatibility, and no hidden
+    target import. A failure is recorded immediately and activates only the preregistered
+    fallback or scoped insufficiency route.
+  verification: Analytic cone criteria, perturbation sweeps, independent PDE review,
+    adversarial sector comparison, and refinement-level convergence of the principal
+    structure.
+  stop_conditions: Nonhyperbolicity, instability, inequivalent unselected cones, signature
+    loss, sector-dependent propagation without a physical quotient, hidden metric
+    primitive, or repeated frozen route.
+  implementation_status: pending
+  requires_separate_agentjob: true
+  max_outer_agentjobs_per_invocation: 1
+  automatic_execution_authorized: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+- plan_task_id: P4-T03
+  phase_id: P4
+  title: Reconstruct the conformal structure and time orientation
+  track: B
+  owner: ontology formalizer with mathematical relativist review
+  declared_coverage_ids:
+  - V22-R07
+  - V22-R08
+  - S6
+  recommendation_ids:
+  - V22-R07
+  - V22-R08
+  sequence_step_ids:
+  - S6
+  cross_cutting_directive_ids:
+  - V22-X04
+  depends_on:
+  - P4-T02
+  objective: Recover causal/conformal geometry before introducing physical scale.
+  actions: Prove that the common characteristic set determines a unique Lorentzian
+    conformal class or a physically derived equivalence class. If the principal polynomial
+    factors as a power of a quadratic form, show that the factor is reconstructed
+    from source coefficients rather than assumed. If it does not, state precisely
+    whether a generalized geometry is compatible with the project's Lorentzian target.
+    Derive time orientation from source dynamics. Construct actual source-derived
+    signal and free-fall structures before using EPS-style compatibility reasoning.
+    Prove local covariance and invariance under source presentation/equivalence.
+  outputs: Conformal reconstruction theorem or obstruction, time-orientation derivation,
+    signal/free-fall operational precursor definitions, EPS compatibility analysis
+    where applicable, and uniqueness/equivalence proof.
+  acceptance: The conformal class is source-derived, unique to the declared physical
+    equivalence, Lorentzian, nondegenerate, and common to all declared matter sectors;
+    physical signal/free-fall semantics have lawful source maps; scale claims remain
+    explicitly deferred.
+  verification: Tensorial/covariance checks, equivalence-class stress tests, separating
+    witnesses for nonuniqueness, comparison with principal data, and external mathematical-relativity
+    review.
+  stop_conditions: A ray or linear hyperplane relabeled as a cone, multiple nonconformal
+    forms left unselected, EPS structures named but not derived, or conformal result
+    promoted to a full metric.
+  implementation_status: pending
+  requires_separate_agentjob: true
+  max_outer_agentjobs_per_invocation: 1
+  automatic_execution_authorized: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+- plan_task_id: P4-T04
+  phase_id: P4
+  title: Derive physical scale, clocks, rods, gluing, and global robustness
+  track: B
+  owner: candidate constructor, ontology formalizer, and refuter
+  declared_coverage_ids:
+  - V22-R07
+  - V22-R08
+  - V22-R10
+  - S6
+  recommendation_ids:
+  - V22-R07
+  - V22-R08
+  - V22-R10
+  sequence_step_ids:
+  - S6
+  cross_cutting_directive_ids:
+  - V22-X04
+  depends_on:
+  - P4-T03
+  objective: Turn the conformal result into an operative Lorentzian metric that calibrates
+    physical measurement and survives local-to-global assembly.
+  actions: Select and derive a scale mechanism from source-native clock functionals,
+    volume density, mass scale, action normalization, rod response, or detector calibration.
+    Derive proper-time and length functionals and show common matter coupling to them.
+    Prove tensorial transformation, overlap consistency, cocycle/gluing conditions,
+    regularity, signature preservation, global time orientation where required, and
+    absence of a second-clock effect. Quantify conditioning under source variation
+    and coarse-graining. Establish the model- to-world map, physical units, domain
+    of validity, and uncertainty/error budget.
+  outputs: Scale/calibration derivation, operative metric candidate, clock/rod/detector
+    protocols, gluing theorem, second-clock analysis, robustness/conditioning bounds,
+    units ledger, and operational map.
+  acceptance: 'The candidate performs all physical metric functions: causal classification,
+    propagation, proper time/length, universal matter response, consistent gluing,
+    Lorentzian nondegeneracy, and stable coarse-grained behavior. No scale is selected
+    from GR target values.'
+  verification: Local and overlap examples, coordinate-transformation tests, clock-comparison
+    loops, perturbation/refinement sweeps, sector-universality tests, dimensional
+    calibration, and independent reconstruction.
+  stop_conditions: Scale by fiat, density/phase token renamed as rods/clocks, second-clock
+    effect without resolution, failed gluing, unstable signature, unknown units, or
+    target calibration.
+  implementation_status: pending
+  requires_separate_agentjob: true
+  max_outer_agentjobs_per_invocation: 1
+  automatic_execution_authorized: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+- plan_task_id: P4-T05
+  phase_id: P4
+  title: Conduct actual external specialist review and perform Gate B
+  track: B
+  owner: real external geometry/PDE and matter specialists; protected Gate Chair for
+    the final verdict
+  declared_coverage_ids:
+  - V22-R04
+  - V22-R07
+  - V22-R08
+  - V22-R13
+  - V22-R14
+  - V22-R15
+  - S7
+  recommendation_ids:
+  - V22-R04
+  - V22-R07
+  - V22-R08
+  - V22-R13
+  - V22-R14
+  - V22-R15
+  sequence_step_ids:
+  - S7
+  cross_cutting_directive_ids:
+  - V22-X04
+  - V22-X09
+  depends_on:
+  - P4-T01
+  - P4-T02
+  - P4-T03
+  - P4-T04
+  objective: Decide whether new source evidence genuinely establishes an operative
+    geometry, without postulate-based passage.
+  actions: 'Freeze and hash-bind the candidate, assumptions, calculations, code, continuum
+    evidence, countermodels, and eight-criterion Gate B matrix. Distribute blinded
+    packets to at least one mathematical relativist or hyperbolic-PDE specialist and
+    one matter/QFT or mathematical-physics specialist in independent environments.
+    Require independent principal-symbol and selected geometry reconstruction. Reconcile
+    reviews without sharing primary outputs before collection. Run the internal smuggling/refuter
+    audits separately. The Gate Chair selects one evidence-grounded verdict: positive,
+    repair-required, candidate-insufficient/fallback, or ontology-family-insufficient.
+    Human authority cannot replace a failed criterion with a postulate.'
+  outputs: External review records, independent reproduction receipts, response matrix,
+    final Gate B evidence matrix, protected decision, updated Distance-to-GR status,
+    candidate freeze/continuation route, and public-safe summary.
+  acceptance: A positive verdict requires all eight criteria, no unresolved critical
+    external objection, no metric-equivalent import, and qualifying independent reconstruction.
+    Otherwise the candidate is repaired once within scope, replaced by the preregistered
+    fallback, or terminalized under the budget.
+  verification: Reviewer provenance and conflict checks, environment hashes, independent
+    calculation comparison, Gate/ledger consistency audit, claim- language review,
+    and scientific validation tier.
+  stop_conditions: 'Internal role mislabeled external, reviewer outputs cross-contaminated,
+    unresolved critical objection, any Gate criterion passed by postulate, or protected
+    authority absent. ## P5. Conditional Einstein recovery and Gate D All P5 packages
+    are **conditionally ineligible** unless P4-T05 records a genuinely positive Gate
+    B result. Preparing route criteria is allowed; deriving or promoting Einstein-sector
+    physics is not.'
+  implementation_status: pending
+  requires_separate_agentjob: true
+  max_outer_agentjobs_per_invocation: 1
+  automatic_execution_authorized: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+- plan_task_id: P5-T01
+  phase_id: P5
+  title: Select exactly one Einstein-recovery mechanism
+  track: B
+  owner: theoretical-continuation selector, external GR/EFT adviser, and Director
+    of Research
+  declared_coverage_ids:
+  - V22-R11
+  - S8
+  recommendation_ids:
+  - V22-R11
+  sequence_step_ids:
+  - S8
+  cross_cutting_directive_ids: []
+  depends_on:
+  - P4-T05
+  objective: Choose the recovery route that matches the geometry and matter structures
+    actually derived, rather than forcing a preferred formalism.
+  actions: 'Verify primary literature and source-native prerequisites for five routes:
+    matter gravitational closure; Weinberg soft-graviton plus Deser self-coupling
+    or another massless spin-2 consistency route; Hojman-Kuchar- Teitelboim-style
+    canonical constraint algebra; local covariant/Lovelock-type classification; and
+    Jacobson-style thermodynamic reconstruction. Evaluate common Cauchy evolution,
+    canonical variables, helicity-2 modes, locality, positive energy, covariance,
+    foliation/path independence, derivative order, dimensions, and source-native thermodynamics
+    as applicable. Rank routes using the review''s default order but change the ranking
+    only when new Gate B evidence justifies it. Select one route and freeze alternatives
+    for the cycle.'
+  outputs: Route-prerequisite matrix, primary-source review with APA 7 citations,
+    selection decision, assumption delta, rejected-route rationale, and one bounded
+    P5-T02 contract.
+  acceptance: Every selected prerequisite is already derived or explicitly declared
+    as new debt; the route does not reinsert the metric/coupling it is supposed to
+    explain; exactly one route is active.
+  verification: External GR/EFT review, assumption-smuggling audit, dependency trace
+    to Gate B evidence, and refuter comparison with alternatives.
+  stop_conditions: Gate B not positive, route selected by familiarity alone, missing
+    prerequisite treated as implicit, or multiple routes executed in parallel.
+  implementation_status: conditionally_locked
+  requires_separate_agentjob: true
+  max_outer_agentjobs_per_invocation: 1
+  automatic_execution_authorized: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+- plan_task_id: P5-T02
+  phase_id: P5
+  title: Derive the effective action, equations, modes, and corrections
+  track: B
+  owner: candidate constructor/ontology formalizer with refuter
+  declared_coverage_ids:
+  - V22-R11
+  - V22-R14
+  - S9
+  recommendation_ids:
+  - V22-R11
+  - V22-R14
+  sequence_step_ids:
+  - S9
+  cross_cutting_directive_ids:
+  - V22-X06
+  depends_on:
+  - P5-T01
+  objective: Produce a covariant, dynamically complete gravitational sector from the
+    selected route and already-derived geometry/matter inputs.
+  actions: Derive the effective action, canonical constraints, or closure equations
+    as dictated by the selected route. Establish tensor type, diffeomorphism/constraint
+    structure, variational principle, source and target units, stress-energy or matter
+    source, conservation/Ward identities, initial value formulation, physical degrees
+    of freedom, ghost/tachyon analysis, hyperbolicity, propagation speed, and nonlinear
+    consistency. Derive the Einstein-leading limit and enumerate higher-order or non-GR
+    corrections with coefficients and validity regime. Prohibit target fitting and
+    postulated Einstein-Hilbert structure. Compare finite/refined and continuum dynamics.
+  outputs: Effective action/constraint manuscript, field equations, conservation derivation,
+    degrees-of-freedom count, stability/hyperbolicity analysis, correction catalog,
+    coefficient provenance, executable checks, and assumption ledger update.
+  acceptance: Equations follow from the selected route; matter coupling is universal
+    within scope; constraints close and propagate; modes are physical and stable;
+    Einstein-leading behavior and corrections are explicit; no protected postulate
+    supplies missing derivation.
+  verification: Independent variation/constraint calculation, dimensional checks,
+    mode decomposition, background and perturbation tests, conservation identity verification,
+    counterexamples, and continuum convergence.
+  stop_conditions: Einstein action inserted by hand, unidentified tensor or units,
+    nonclosing constraints, ghosts/instability, target-selected coefficients, or missing
+    universal coupling.
+  implementation_status: conditionally_locked
+  requires_separate_agentjob: true
+  max_outer_agentjobs_per_invocation: 1
+  automatic_execution_authorized: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+- plan_task_id: P5-T03
+  phase_id: P5
+  title: Obtain external GR/EFT review and perform Gate D
+  track: B
+  owner: real external gravitational theorist and protected Gate Chair
+  declared_coverage_ids:
+  - V22-R11
+  - V22-R14
+  - V22-R15
+  - S10
+  recommendation_ids:
+  - V22-R11
+  - V22-R14
+  - V22-R15
+  sequence_step_ids:
+  - S10
+  cross_cutting_directive_ids: []
+  depends_on:
+  - P5-T02
+  objective: Decide whether the source-derived gravitational package qualifies as
+    Einstein-leading dynamics.
+  actions: Freeze a blind, hash-bound package covering geometry inputs, matter coupling,
+    route assumptions, action/equations, degrees of freedom, constraints, stability,
+    corrections, and all negative tests. Obtain independent external derivation of
+    selected equations and mode counts. Reconcile comments. Evaluate the live Gate
+    D criteria and issue a protected evidence-bound verdict. No human postulate may
+    repair a missing action, equation, mode, or stability result.
+  outputs: External review, independent calculation, response matrix, Gate D matrix
+    and verdict, updated ledger, correction/limitation statement, and the eligibility
+    decision for P6.
+  acceptance: Positive Gate D requires complete tensorial dynamics, universal coupling,
+    conservation, stable physical degrees, controlled corrections, and no critical
+    external objection. Failure freezes or repairs the route under the extension budget
+    and keeps benchmarks closed.
+  verification: Reviewer-independence audit, equation and mode reproduction, Gate/ledger
+    consistency, claim-boundary validation, and scientific tier.
+  stop_conditions: 'Missing external review authority, same-context review mislabeling,
+    postulate-based passage, unresolved instability, or Gate B evidence drift. ##
+    P6. Conditional benchmark ladder, independent replication, and scientific verdict'
+  implementation_status: conditionally_locked
+  requires_separate_agentjob: true
+  max_outer_agentjobs_per_invocation: 1
+  automatic_execution_authorized: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+- plan_task_id: P6-T01
+  phase_id: P6
+  title: Preserve the historical cases and preregister the new benchmark ladder
+  track: B
+  owner: Director of Research, validator engineer, and external methods adviser
+  declared_coverage_ids:
+  - V22-R12
+  - V22-R13
+  - V22-R19
+  - S11
+  recommendation_ids:
+  - V22-R12
+  - V22-R19
+  - V22-R13
+  sequence_step_ids:
+  - S11
+  cross_cutting_directive_ids:
+  - V22-X06
+  depends_on:
+  - P1-T04
+  objective: Replace ad hoc downstream traversal with a readiness-gated, observable
+    benchmark protocol.
+  actions: 'Seal the six V21 cases as historical obstruction records. Define independent
+    source-stage and target-comparison implementations, source seals, target-import
+    firewall, calibrated tolerances, uncertainties, failure classes, and replication
+    requirements. Preregister the levels: - **Level 0 — Type and consistency:** domains/codomains,
+    units, symmetries, conservation identities, equivalence/gauge, and well-posedness.
+    - **Level 1 — Geometry:** Lorentzian signature, common cone, time orientation,
+    clock/rod calibration, and perturbative stability. - **Level 2 — Flat and weak
+    field:** lawful Minkowski background, linearized modes, Newtonian potential, Poisson
+    limit, redshift, and slow free fall. - **Level 3 — Equivalence principle/PPN:**
+    common sector free fall, common clock/signal geometry, PPN-type observables, tolerances,
+    and uncertainty. - **Level 4 — Radiation:** physical modes, polarization count,
+    speed, dispersion/damping, detector coupling, and energy flux. - **Level 5 — Cosmology:**
+    physical homogeneity/isotropy, scale factor, cosmic time, matter evolution, perturbations,
+    and constant-term interpretation. - **Level 6 — Nonlinear/compact:** nonlinear
+    equations, constraint propagation, exterior solutions, horizons or absence, compactness,
+    and strong-field observables.'
+  outputs: Historical-case manifest, benchmark protocol, level dependency matrix,
+    preregistration, tolerance/uncertainty policy, independent-implementation contract,
+    and readiness-failure vocabulary.
+  acceptance: Every observable has physical type, units, source derivation, comparison
+    target, uncertainty, and pass/fail/inconclusive rule; a missing bridge terminates
+    readiness before target comparison; old cases cannot be reinterpreted as passes.
+  verification: Protocol red team, target-import attack fixtures, synthetic positive/negative
+    controls, source-seal checks, and external review.
+  stop_conditions: Benchmark execution before positive Gate D, tolerance chosen after
+    results, target data used in source selection, or historical obstruction overwritten.
+  implementation_status: pending
+  requires_separate_agentjob: true
+  max_outer_agentjobs_per_invocation: 1
+  automatic_execution_authorized: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+- plan_task_id: P6-T02
+  phase_id: P6
+  title: Execute Levels 0–6 sequentially with independent implementations
+  track: B
+  owner: candidate constructor, independent replication teams, and refuter
+  declared_coverage_ids:
+  - V22-R12
+  - S11
+  recommendation_ids:
+  - V22-R12
+  sequence_step_ids:
+  - S11
+  cross_cutting_directive_ids: []
+  depends_on:
+  - P5-T03
+  - P6-T01
+  objective: Test the source-derived theory only as far downstream as prior levels
+    warrant.
+  actions: Execute Level 0 first. A failed or untyped requirement ends the run as
+    readiness failure. Advance one level at a time only after preregistered acceptance.
+    Keep source calculations sealed from target comparison and use a separate implementation
+    team for replication. At every level record model domain, units, numerical/symbolic
+    error, parameter provenance, uncertainty, negative controls, and deviation/correction
+    terms. Preserve `FAIL`, `INCONCLUSIVE`, and obstruction outcomes. Do not average
+    heterogeneous cases into a pass.
+  outputs: Per-level source outputs, target comparisons, independent implementation
+    results, error/uncertainty receipts, countermodels, and a dependency-aware suite
+    report.
+  acceptance: Every executed level has qualifying primary and independent results;
+    no skipped level; no post-seal retuning; pass status follows only the preregistered
+    rule; later levels remain unexecuted when an earlier readiness gate fails.
+  verification: Reproducible environments, cross-implementation comparison, target-import
+    firewall, source hash checks, numerical convergence, and external domain review.
+  stop_conditions: Missing physical type or units, source retuning after target access,
+    disagreement outside tolerance, upstream Gate drift, or a failed earlier level.
+  implementation_status: conditionally_locked
+  requires_separate_agentjob: true
+  max_outer_agentjobs_per_invocation: 1
+  automatic_execution_authorized: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+- plan_task_id: P6-T03
+  phase_id: P6
+  title: Complete independent replication and issue the final scientific verdict
+  track: B
+  owner: external replicators, specialty reviewers, protected Gate Chair, and Director
+    of Research
+  declared_coverage_ids:
+  - V22-R12
+  - V22-R13
+  - V22-R15
+  - V22-R19
+  - S12
+  recommendation_ids:
+  - V22-R12
+  - V22-R13
+  - V22-R15
+  - V22-R19
+  sequence_step_ids:
+  - S12
+  cross_cutting_directive_ids:
+  - V22-X02
+  depends_on:
+  - P4-T05
+  - P6-T01
+  objective: End the bounded cycle with one precise, evidence-supported scientific
+    disposition.
+  actions: Aggregate without conflating external review, independent reconstruction,
+    and benchmark replication. Require actual independent environments and reviewers.
+    Audit all extension-budget uses and hard-fail triggers. Select one of the four
+    terminal outcomes in Section 6.2. If benchmarks qualify, perform protected Gate
+    E review; otherwise record why Gate E is ineligible or not ready. State the exact
+    domain, assumptions, errors, corrections, and remaining debt. Preserve exact-GR
+    interpretation separately.
+  outputs: Independent replication dossier, external-review synthesis, extension-budget
+    ledger, Gate E decision when eligible, final scientific verdict, updated Distance-to-GR
+    ledger, and public-safe limitations.
+  acceptance: The verdict matches the evidence; ontology insufficiency is scoped;
+    approximate recovery includes quantified validity and corrections; positive derivation
+    requires positive B/D and qualifying replicated benchmarks; no publication or
+    global no-go authority is inferred.
+  verification: Independent process-integrity audit, Gate dependency audit, source/provenance
+    closure, claim-language stress, and release-tier scientific reproduction.
+  stop_conditions: 'No qualifying independent replication, reviewer conflict not disclosed,
+    extension budget silently expanded, or verdict language exceeds the tested scope.
+    ## P7. Run the prospective comparative AI-science experiment This is Track C work.
+    It may run in parallel after the V21 freeze, but it has a separate budget and
+    cannot block, promote, or receive credit from Track B.'
+  implementation_status: conditionally_locked
+  requires_separate_agentjob: true
+  max_outer_agentjobs_per_invocation: 1
+  automatic_execution_authorized: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+- plan_task_id: P7-T01
+  phase_id: P7
+  title: Preregister the matched experimental design and adjudication protocol
+  track: C
+  owner: methodology lead, statistician or experimental-design reviewer, and human
+    expert adjudication lead
+  declared_coverage_ids:
+  - V22-R02
+  - V22-R16
+  recommendation_ids:
+  - V22-R02
+  - V22-R16
+  sequence_step_ids: []
+  cross_cutting_directive_ids:
+  - V22-X08
+  depends_on:
+  - P0-T03
+  - P1-T01
+  objective: Convert the retrospective descriptive V21 methodology record into a prospective
+    causal study with valid comparison arms and cost measures.
+  actions: 'Define the unit of analysis, task population, inclusion/exclusion rules,
+    domain strata, assignment mechanism, contamination controls, sample-size or precision
+    target, stopping rule, and analysis plan. Use carefully matched or randomized
+    tasks with frozen prompts, sources, tools, model/effort settings, time limits,
+    and outcome rubrics. Define six arms: unstructured single agent; structured single
+    agent with claim gates; role-structured same model; role-structured different-model
+    reviewer; human expert; and hybrid AI plus human adjudication. Blind expert adjudicators
+    to arm where practical. Define missing-data, protocol-deviation, and model-update
+    handling. Record privacy, security, and human-reviewer consent requirements.'
+  outputs: Preregistration, task corpus specification, randomization/matching plan,
+    arm contracts, adjudication rubric, sample-size/precision analysis, telemetry
+    schema, contamination plan, and immutable analysis code skeleton.
+  acceptance: Estimands and primary/secondary outcomes are fixed before runs; arms
+    differ only in declared mechanisms; human and model review classes are explicit;
+    cost and repair-cycle telemetry is collectible; causal claims are bounded to the
+    design.
+  verification: Independent design review, dry-run assignment, blinded-rubric reliability
+    pilot, leakage audit, and preregistration hash seal.
+  stop_conditions: Post-outcome metric selection, absent control arm, noncomparable
+    tasks, hidden context leakage, no cost measurement, or no human adjudication authority.
+  implementation_status: pending
+  requires_separate_agentjob: true
+  max_outer_agentjobs_per_invocation: 1
+  automatic_execution_authorized: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+- plan_task_id: P7-T02
+  phase_id: P7
+  title: Execute the six arms and seven mechanism ablations
+  track: C
+  owner: methodology execution team with separate data custodian
+  declared_coverage_ids:
+  - V22-R16
+  recommendation_ids:
+  - V22-R16
+  sequence_step_ids: []
+  cross_cutting_directive_ids:
+  - V22-X08
+  depends_on:
+  - P7-T01
+  objective: Collect prospective outcome and resource data without changing the protocol
+    after observing results.
+  actions: Execute all six arms under pinned model/tool/environment versions. Run
+    predefined ablations for claim gates, negative-result memory, child roles, target-import
+    firewall, family freeze, checkpointing, and formal proof. Record mathematical
+    correctness, invalid-claim rate, calibration, counterexample discovery, source
+    accuracy, defect-detection recall, false-positive objections, elapsed time, tokens,
+    compute, financial cost, repair cycles, expert rating, and reproducibility. Preserve
+    failures and abandonment with closed denominators. Keep operational validator
+    scores separate from expert scientific judgments. Monitor protocol deviations
+    without unblinding adjudicators.
+  outputs: Sealed run manifests, raw and derived datasets, telemetry, protocol-deviation
+    log, adjudication records, ablation results, reproducibility packages, and data-quality
+    report.
+  acceptance: Every planned arm has the preregistered minimum evidence or an explicit
+    missingness reason; source/version identities resolve; adjudication is blind as
+    declared; denominators are closed; unknown cost is not recorded as zero; no physics
+    claim is inferred from software conformance.
+  verification: Randomization/matching checks, data-quality validation, double-scored
+    adjudication subset, environment replay, telemetry reconciliation, and privacy/security
+    review.
+  stop_conditions: Arm contamination, model/version drift without protocol handling,
+    missing primary outcomes, unblinded outcome manipulation, or irreconcilable telemetry.
+  implementation_status: pending
+  requires_separate_agentjob: true
+  max_outer_agentjobs_per_invocation: 1
+  automatic_execution_authorized: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+- plan_task_id: P7-T03
+  phase_id: P7
+  title: Analyze causal effects, limitations, and publication eligibility
+  track: C
+  owner: independent analyst and external methodology reviewer
+  declared_coverage_ids:
+  - V22-R02
+  - V22-R16
+  - V22-R19
+  recommendation_ids:
+  - V22-R02
+  - V22-R16
+  - V22-R19
+  sequence_step_ids: []
+  cross_cutting_directive_ids:
+  - V22-X08
+  - V22-X09
+  depends_on:
+  - P7-T02
+  objective: Determine which governance mechanisms improve measured research quality
+    per unit cost, with uncertainty and design limitations stated.
+  actions: Execute the sealed analysis. Estimate preregistered arm contrasts and ablation
+    effects with confidence/credible intervals and multiplicity handling. Report calibration,
+    correctness, defect discovery, overclaim, false-positive, time, token, cost, repair,
+    and reproducibility outcomes. Analyze heterogeneity by task/domain and sensitivity
+    to missingness or deviations. Separate causal estimates from descriptive mechanism
+    behavior. Obtain external methods and human-expert review. Decide whether Paper
+    C remains a descriptive case study or qualifies as a causal methodology paper.
+  outputs: Analysis report, tables/figures, uncertainty and sensitivity results, external
+    review, reproducible notebook/code, limitations statement, and publication-status
+    decision.
+  acceptance: Every claim traces to a preregistered estimand or is labeled exploratory;
+    effect sizes include uncertainty and cost; no result is generalized beyond the
+    sampled tasks/models; Track C outcomes change no physics or Distance-to-GR status.
+  verification: Independent rerun, statistical code review, data-to-figure hash audit,
+    robustness analysis, and claim-language review.
+  stop_conditions: 'Failed preregistration integrity, unsupported causal language,
+    pooled heterogeneous scores without justification, or missing independent analysis.
+    ## P8. Simplify the research-control architecture and cap control cost This is
+    project-system work. It is implemented through the governed project-system route,
+    not through physics continuation, and must preserve all scientific authority and
+    negative-result history.'
+  implementation_status: pending
+  requires_separate_agentjob: true
+  max_outer_agentjobs_per_invocation: 1
+  automatic_execution_authorized: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+- plan_task_id: P8-T01
+  phase_id: P8
+  title: Measure the control-cost baseline and enforce dual progress accounting
+  track: shared project system
+  owner: project-system director and process-integrity auditor
+  declared_coverage_ids:
+  - V22-R02
+  - V22-R17
+  recommendation_ids:
+  - V22-R02
+  - V22-R17
+  sequence_step_ids: []
+  cross_cutting_directive_ids:
+  - V22-X10
+  depends_on:
+  - P0-T03
+  - P1-T01
+  objective: Quantify how much effort is spent on governance and keep system activity
+    visibly separate from scientific burden reduction.
+  actions: 'Define the denominator and measurement window for total research effort.
+    Compute control cost from task count, elapsed effort, tokens/compute, financial
+    cost, and durable outputs, preserving `not_measured`. Audit historical records
+    for missing telemetry and report coverage rather than imputing. Set a prospective
+    ordinary-phase ceiling of 25–35 percent, choosing the exact value through a recorded
+    decision. Define higher exceptions for protected gates, security, and releases
+    with evidence and expiry. Require two counters on every task: scientific burden
+    reduced and project-system work completed.'
+  outputs: Control-cost definition, baseline dashboard, telemetry-coverage report,
+    selected ceiling, exception policy, dual-counter schema, and alert rules.
+  acceptance: The ratio is reproducible; system work cannot increment the physics
+    counter or ledger; missing values remain visible; over-budget periods trigger
+    a route review rather than automatic validator weakening.
+  verification: Historical sample reconciliation, malformed-allocation fixtures, independent
+    metric review, and dashboard/source parity checks.
+  stop_conditions: Task count used as sole denominator, missing cost coerced to zero,
+    system work counted as physics, or ceiling used to skip scientific assurance.
+  implementation_status: pending
+  requires_separate_agentjob: true
+  max_outer_agentjobs_per_invocation: 1
+  automatic_execution_authorized: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+- plan_task_id: P8-T02
+  phase_id: P8
+  title: Advance the existing event-store pilot through staged parity and cutover
+    decisions
+  track: project system
+  owner: project-control maintainer, validator engineer, and process-integrity auditor
+  declared_coverage_ids:
+  - V22-R17
+  recommendation_ids:
+  - V22-R17
+  sequence_step_ids: []
+  cross_cutting_directive_ids:
+  - V22-X10
+  depends_on:
+  - P8-T01
+  objective: Consolidate project-control facts into one append-only tracked JSONL
+    event stream with generated views, without a big-bang migration or loss of historical
+    readability.
+  actions: 'Revalidate the selected hybrid architecture and shadow-pilot parity. Ensure
+    the canonical event vocabulary covers task creation, route decision, claim boundary,
+    completion, Gate decision, checkpoint, supersession, and publication status in
+    addition to candidate, validation, authority, and handoff facts. Execute separate
+    authorized stages: bounded historical backfill and dual read; compatibility projection
+    parity; reader cutover; writer cutover; legacy write freeze and retention. Keep
+    SQLite disposable and untracked. Use canonical serialization, content identities,
+    source links, a one-writer compare-and-swap transaction, hash chain, manifest,
+    deterministic reducers, and Git checkpoint. Generate task, decision, AgentJob,
+    claim, validation, handoff, candidate-lineage, and status views. At every stage
+    retain rollback to the last-known-good legacy authority and forbid raw segment
+    merges.'
+  outputs: Versioned event schemas/reducers, backfill manifests, parity receipts,
+    cutover decisions, generated views, rollback drills, historical- readability evidence,
+    and legacy-retention policy.
+  acceptance: Every migrated field has exact mapping or explicit exclusion; rebuilds
+    are deterministic; scientific source and Gate authority are unchanged; no reader
+    sees mixed event/view heads; SQLite deletion loses no authority; cutover occurs
+    only through explicit stage-specific approval.
+  verification: Event-chain/identity validation, byte/semantic parity, source-hash
+    resolution, concurrency and stale-writer fixtures, clean rebuild, rollback drill,
+    and affected/full validation according to stage.
+  stop_conditions: Unmapped authority field, nondeterministic projection, partial
+    transaction visibility, science stored as replaceable control event, SQLite treated
+    as authority, or rollback failure.
+  implementation_status: pending
+  requires_separate_agentjob: true
+  max_outer_agentjobs_per_invocation: 1
+  automatic_execution_authorized: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+- plan_task_id: P8-T03
+  phase_id: P8
+  title: Reduce per-task canonical files and generate secondary views
+  track: project system
+  owner: project-control maintainer and documentation curator
+  declared_coverage_ids:
+  - V22-R17
+  recommendation_ids:
+  - V22-R17
+  sequence_step_ids: []
+  cross_cutting_directive_ids:
+  - V22-X10
+  depends_on:
+  - P8-T02
+  objective: Preserve safeguards while reducing the sidecar and identity surface that
+    caused repeated closure repairs.
+  actions: 'Inventory task files by function, authority, read frequency, failure history,
+    and derivability. Define the default task bundle: one event or task record; one
+    claim-bearing scientific artifact; one machine result/receipt; one completion
+    event; and a source manifest only when needed. Reserve extra sidecars for protected
+    gates, external review, publication, and high-risk releases. Convert redundant
+    Markdown/CSV/YAML dashboards and handoffs to deterministic views. Preserve immutable
+    historical records and aliases; do not rewrite prior V21 task directories. Pilot
+    on new V22 tasks and compare review clarity, validator complexity, and control
+    cost.'
+  outputs: Canonical-minimum contract, artifact classification inventory, generated-view
+    map, V22 pilot task bundles, compatibility aliases, retention policy, and before/after
+    cost/error report.
+  acceptance: New ordinary tasks stay within the default bundle unless an exception
+    is justified; no authoritative fact is lost; historical checkouts remain readable;
+    generated files are script-owned; review and recovery are simpler by measured
+    criteria.
+  verification: Source-to-view lineage audit, fixture reconstruction, old/new reader
+    parity, path/identity validation, and rollback to legacy task bundle.
+  stop_conditions: Deletion or rewriting of history, loss of protected authority,
+    generated view promoted to science, or file reduction that increases ambiguity
+    or recovery risk.
+  implementation_status: pending
+  requires_separate_agentjob: true
+  max_outer_agentjobs_per_invocation: 1
+  automatic_execution_authorized: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+- plan_task_id: P8-T04
+  phase_id: P8
+  title: Map fast, scientific, and release validation to proportionate profiles
+  track: project system
+  owner: validator engineer and project-system director
+  declared_coverage_ids:
+  - V22-R17
+  recommendation_ids:
+  - V22-R17
+  sequence_step_ids: []
+  cross_cutting_directive_ids:
+  - V22-X10
+  depends_on:
+  - P8-T01
+  - P8-T03
+  objective: Reduce validation overhead while preserving fail-closed checks at the
+    risk boundary that needs them.
+  actions: Map the review's fast/scientific/release tiers to the live profile planner
+    and gate manifest. Define change-family and risk classifiers, mandatory gates,
+    escalation conditions, cache/freshness rules, receipt fields, and false-negative
+    monitoring. Use fast checks for local loops, scientific checks for physics packages,
+    and release checks only for protected gates, releases, migrations, or scheduled
+    assurance. Measure time, compute, cache benefit, defect catch, false positive,
+    and missed-defect rates. Keep legacy/full rollback controls until parity is demonstrated.
+  outputs: Tier-to-profile policy, change matrix, selected gate manifests, performance/safety
+    budget, parity and mutation/fixture results, escalation rules, and rollback decision.
+  acceptance: Low-risk tasks do not routinely run release-grade validation; science
+    still receives domain reproduction and claim checks; security and protected gates
+    retain full assurance; no observed material false-negative regression; control
+    cost moves toward the selected ceiling.
+  verification: Planner equivalence, seeded-fault and mutation tests, timing benchmarks,
+    cache invalidation, selected full-suite comparisons, and audit of consumed receipts.
+  stop_conditions: 'A reduced tier misses a seeded critical defect, cache staleness,
+    classification ambiguity, or performance optimization weakens authority/claim
+    checks. ## P9. Public status, external-review program, and selective publication
+    P9 is a standing cross-track communication and review workstream. It prepares
+    grounded artifacts but performs no external action without separate human authorization.'
+  implementation_status: pending
+  requires_separate_agentjob: true
+  max_outer_agentjobs_per_invocation: 1
+  automatic_execution_authorized: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+- plan_task_id: P9-T01
+  phase_id: P9
+  title: Implement the four-statement public status architecture
+  track: A plus shared public control
+  owner: documentation curator with scientific-status audit
+  declared_coverage_ids:
+  - V22-R02
+  - V22-R18
+  recommendation_ids:
+  - V22-R02
+  - V22-R18
+  sequence_step_ids: []
+  cross_cutting_directive_ids:
+  - V22-X01
+  - V22-X07
+  depends_on:
+  - P1-T01
+  - P1-T02
+  - P1-T03
+  - P1-T04
+  objective: Let a reader understand the project in four unambiguous statements before
+    encountering control detail.
+  actions: 'Ground and synchronize the front page and relevant publication sources
+    with these statements: 1. **Effective theory:** “The operational theory is exactly
+    GR with universal matter coupling.” 2. **Interpretation:** “Æther-flow is currently
+    a target-side interpretive framework using standard congruence kinematics.” 3.
+    **Source program:** “The source ontology is a primitive smooth four-dimensional
+    manifold plus unresolved source structure and selected finite or proposal-only
+    source-side candidates.” 4. **Derivation status:** “A physical source-derived
+    metric, Einstein equations, and successful GR benchmark have not been obtained.”
+    Use the live ledger and existing public-status source specs, preserve the positive
+    P7 postulate scope, state six inconclusive/zero-pass/zero-independent- replication
+    status when current, and link details rather than duplicating large control tables.
+    Classify documentation impact before edits and regenerate derived HTML/wiki only
+    from registered sources.'
+  outputs: Updated source specs/front page, source-evidence map, plain-language glossary,
+    derivative artifacts, and public claim audit.
+  acceptance: All four statements are visible and mutually distinct; effective GR
+    is not presented as source derivation; the congruence is not a source-selected
+    field; the P7 postulate is positive but bounded; status matches the live ledger
+    and gates.
+  verification: Source-to-render parity, claim-language checks, documentation- impact
+    gate, accessibility/reader review, and derivative freshness validation.
+  stop_conditions: Live status drift, target/source conflation, direct HTML edit,
+    or public wording that implies completed derivation or external review.
+  implementation_status: pending
+  requires_separate_agentjob: true
+  max_outer_agentjobs_per_invocation: 1
+  automatic_execution_authorized: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+- plan_task_id: P9-T02
+  phase_id: P9
+  title: Operate a five-specialty external-review program
+  track: A, B, and C with separate packets
+  owner: external-review coordinator and human project owner
+  declared_coverage_ids:
+  - V22-R15
+  recommendation_ids:
+  - V22-R15
+  sequence_step_ids: []
+  cross_cutting_directive_ids:
+  - V22-X09
+  depends_on:
+  - P1-T01
+  objective: Replace internal role labels with actual independent specialty review
+    at the stage where each discipline can change a decision.
+  actions: 'Establish reviewer-selection, conflict, disclosure, compensation, blind-packet,
+    environment, identity, data-sharing, response, and archival protocols. Maintain
+    five queues: mathematics; geometry/PDE; GR/EFT; matter/QFT; philosophy of physics.
+    Route the selector/adequacy package to mathematics, Gate B candidates to geometry/PDE
+    and matter/QFT, Gate D candidates to GR/EFT, and Track A claims to philosophy
+    and GR interpretation review. Keep primary reviewer outputs isolated until collection.
+    Label expert comment, independent reproduction, and benchmark replication separately.'
+  outputs: External-review policy, reviewer roster/provenance under appropriate privacy
+    controls, packet manifests, independent-environment receipts, response matrices,
+    unresolved-objection ledger, and review-class dashboard.
+  acceptance: Every claimed external review corresponds to a real external person
+    and preserved scope; specialty matches the question; blinded and independent procedures
+    are followed or limitations are explicit; unresolved critical objections block
+    affected promotion/publication.
+  verification: Process-integrity audit, packet/source hash checks, conflict review,
+    environment reproduction, and claim-label validation.
+  stop_conditions: No reviewer-contact authority, identity/privacy breach, same-model
+    role counted as external, shared primary outputs, or inappropriate specialty used
+    as broad endorsement.
+  implementation_status: pending
+  requires_separate_agentjob: true
+  max_outer_agentjobs_per_invocation: 1
+  automatic_execution_authorized: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+- plan_task_id: P9-T03
+  phase_id: P9
+  title: Maintain a selective publication-readiness matrix for Papers A–E
+  track: A, B, and C separately
+  owner: documentation curator and relevant scientific leads
+  declared_coverage_ids:
+  - V22-R15
+  - V22-R19
+  recommendation_ids:
+  - V22-R19
+  - V22-R15
+  sequence_step_ids: []
+  cross_cutting_directive_ids:
+  - V22-X07
+  - V22-X08
+  depends_on:
+  - P2-T02
+  - P9-T01
+  - P9-T02
+  objective: Package publishable results by claim class without blending them into
+    a false GR-derivation narrative.
+  actions: 'Create one row and source manifest for each potential paper: - **A — Natural
+    selector classification:** require external mathematical novelty/correctness review
+    and Lean fidelity. - **B — Source-dynamics information obstruction:** include
+    the one-mode flow, tangent response/cocycle, factor-through-amplitude result,
+    generalized adequacy theorem, reconstruction implications, and externally reviewed
+    scope. - **C — AI governance:** permit a descriptive case study from V21; require
+    P7-T03 for causal superiority claims. - **D — Exact-GR interpretation:** frame
+    as interpretation/philosophy of GR, with congruence and empirical-equivalence
+    limits. - **E — Negative reconstruction report:** preserve finite-model failures,
+    typing gaps, and lessons without global no-go language. For each row record target
+    venue class, audience, exact claims, excluded claims, sources, external reviews,
+    reproduction, authorship, conflicts, limitations, and missing prerequisites. Maintain
+    a hard-disabled source-derived GR-paper row until Gates B and D are positive.'
+  outputs: Publication-readiness matrix, five separate package manifests, claim/exclusion
+    tables, review requirements, reproducibility links, and blocked GR-paper record.
+  acceptance: No paper combines incompatible authority layers; A/B/E are scoped mathematical/negative
+    results; C is causal only with prospective evidence; D claims no new law; source-derived
+    GR remains disabled absent B/D.
+  verification: Source manifest and citation audit, manuscript-split boundary review,
+    external-review requirement checks, and no-overclaim red team.
+  stop_conditions: Grand unified derivation framing, absent external review for A/B
+    novelty, causal claim from retrospective data, or exact-GR interpretation presented
+    as source confirmation.
+  implementation_status: pending
+  requires_separate_agentjob: true
+  max_outer_agentjobs_per_invocation: 1
+  automatic_execution_authorized: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+- plan_task_id: P9-T04
+  phase_id: P9
+  title: Separate package preparation from submission, release, and outreach authority
+  track: shared publication control
+  owner: human project owner/Gate Chair for each exact external action
+  declared_coverage_ids:
+  - V22-R01
+  - V22-R15
+  - V22-R19
+  recommendation_ids:
+  - V22-R01
+  - V22-R19
+  - V22-R15
+  sequence_step_ids: []
+  cross_cutting_directive_ids: []
+  depends_on:
+  - P9-T03
+  objective: Ensure that a ready package does not silently cause external contact,
+    publication, push, or release.
+  actions: Define independent decision cells for reviewer contact, preprint, journal
+    submission, conference submission, public release, repository push, press/social
+    outreach, and authorship approval. Bind each cell to an artifact hash, claim scope,
+    reviewer status, reproduction status, conflict disclosure, and named human authority.
+    Require a final current-state refresh before action. Record denials and deferrals
+    without treating them as scientific failures.
+  outputs: External-action decision matrix, authorization template, preflight checklist,
+    action receipts only when separately approved, and audit log.
+  acceptance: Default is denied; preparation alone never triggers action; authorization
+    is exact and time/artifact scoped; no plan or internal role can approve its own
+    publication.
+  verification: Fail-closed fixtures, artifact-hash binding, human-authority check,
+    action/no-action reconciliation, and post-action receipt audit when applicable.
+  stop_conditions: 'Ambiguous “authorize all,” stale artifact, missing authorship/conflict
+    decision, or any external action inferred from this plan. ## P10. Coverage audit,
+    integrated verdict, and program closure'
+  implementation_status: pending
+  requires_separate_agentjob: true
+  max_outer_agentjobs_per_invocation: 1
+  automatic_execution_authorized: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+- plan_task_id: P10-T01
+  phase_id: P10
+  title: Perform the bidirectional recommendation and sequence coverage audit
+  track: shared audit
+  owner: process-integrity auditor independent of package authors
+  declared_coverage_ids:
+  - V22-R01
+  - V22-R19
+  - S1
+  - S12
+  - V22-R02
+  - V22-R03
+  - V22-R04
+  - V22-R05
+  - V22-R06
+  - V22-R07
+  - V22-R08
+  - V22-R09
+  - V22-R10
+  - V22-R11
+  - V22-R12
+  - V22-R13
+  - V22-R14
+  - V22-R15
+  - V22-R16
+  - V22-R17
+  - V22-R18
+  - S2
+  - S3
+  - S4
+  - S5
+  - S6
+  - S7
+  - S8
+  - S9
+  - S10
+  - S11
+  recommendation_ids:
+  - V22-R01
+  - V22-R02
+  - V22-R03
+  - V22-R04
+  - V22-R05
+  - V22-R06
+  - V22-R07
+  - V22-R08
+  - V22-R09
+  - V22-R10
+  - V22-R11
+  - V22-R12
+  - V22-R13
+  - V22-R14
+  - V22-R15
+  - V22-R16
+  - V22-R17
+  - V22-R18
+  - V22-R19
+  sequence_step_ids:
+  - S1
+  - S12
+  - S2
+  - S3
+  - S4
+  - S5
+  - S6
+  - S7
+  - S8
+  - S9
+  - S10
+  - S11
+  cross_cutting_directive_ids: []
+  depends_on:
+  - P6-T03
+  - P7-T03
+  - P8-T04
+  - P9-T04
+  objective: Prove that every review recommendation was implemented or precisely disposed
+    and that no executed package is orphaned from the review.
+  actions: For each recommendation and sequence step, map planned package, activated
+    task, completion, artifact, validator, external review class, final status, and
+    limitations. Reject a plan-only mapping as evidence. Verify every atomic obligation
+    in Section 2, including all Gate B criteria, benchmark levels, hard-fail triggers,
+    external specialties, experimental arms/metrics/ablations, control simplifications,
+    four public statements, and five publication lanes. Run the reverse check from
+    all 40 packages to at least one recommendation or sequence step. Classify conditional
+    ineligibility separately from completion.
+  outputs: Final coverage matrix, missing/partial list, orphan-package list, evidence
+    hashes, repair list if bounded, and closure recommendation.
+  acceptance: 19/19 recommendations, 10/10 cross-cutting directives, and 12/12 sequence
+    steps have qualifying evidence/disposition; 40/40 packages are unique and review-grounded;
+    no planned task is counted as completed; negative and ineligible outcomes retain
+    their meaning.
+  verification: Machine manifest validation, manual atomic-obligation audit, artifact
+    hash resolution, independent sample replay, and claim-boundary review.
+  stop_conditions: Missing recommendation, orphan package, unverifiable evidence,
+    false completion, or coverage used as scientific success.
+  implementation_status: pending
+  requires_separate_agentjob: true
+  max_outer_agentjobs_per_invocation: 1
+  automatic_execution_authorized: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+- plan_task_id: P10-T02
+  phase_id: P10
+  title: Issue separate Track A, B, C, and project-system scorecards
+  track: shared synthesis
+  owner: Director of Research with independent process audit
+  declared_coverage_ids:
+  - V22-R02
+  - V22-R13
+  - V22-R16
+  - V22-R17
+  - V22-R18
+  - V22-R19
+  - S12
+  recommendation_ids:
+  - V22-R02
+  - V22-R13
+  - V22-R18
+  - V22-R16
+  - V22-R17
+  - V22-R19
+  sequence_step_ids:
+  - S12
+  cross_cutting_directive_ids:
+  - V22-X01
+  - V22-X02
+  - V22-X09
+  - V22-X10
+  depends_on:
+  - P10-T01
+  objective: State the final program result without allowing one track's success to
+    launder another track's failure.
+  actions: Produce four answer-first scorecards. Track A reports interpretive coherence
+    and review. Track B selects one of the four scientific outcomes and records Gates
+    B/D/E, extension-budget use, benchmark/replication status, and Distance-to-GR
+    delta. Track C reports causal or descriptive methodology results and costs. The
+    project-system scorecard reports control-cost, event-store, artifact-reduction,
+    and validation-tier results. Cross-check public status and publication readiness
+    against these scorecards.
+  outputs: Four scorecards, integrated nonpromotion proof, final scientific verdict,
+    system/methodology results, public status update, and next-authority matrix.
+  acceptance: System or methodology PASS supplies zero physics credit; interpretive
+    exactness is not emergence; a scoped insufficiency result is not a global no-go;
+    positive derivation requires qualifying B/D/benchmarks and replication; outward
+    actions remain separately authorized.
+  verification: Gate/ledger/status consistency audit, independent synthesis review,
+    public-source parity, and final claim-language stress.
+  stop_conditions: Blended score, missing limitation, Gate status mismatch, or completion
+    language unsupported by canonical evidence.
+  implementation_status: pending
+  requires_separate_agentjob: true
+  max_outer_agentjobs_per_invocation: 1
+  automatic_execution_authorized: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+- plan_task_id: P10-T03
+  phase_id: P10
+  title: Close the V22 plan without automatic continuation
+  track: shared control
+  owner: Director of Research and outer goal launcher if a recursive relay is separately
+    authorized
+  declared_coverage_ids:
+  - V22-R01
+  - V22-R02
+  - V22-R13
+  - V22-R17
+  - V22-R19
+  recommendation_ids:
+  - V22-R01
+  - V22-R02
+  - V22-R13
+  - V22-R17
+  - V22-R19
+  sequence_step_ids: []
+  cross_cutting_directive_ids: []
+  depends_on:
+  - P10-T02
+  objective: Terminalize the finite plan and preserve its result as the next scientific
+    baseline.
+  actions: Verify all package dispositions, leases, repository identity, checkpoints,
+    manifests, coverage, human-gated actions, and successor absence. Create a final
+    immutable manifest and archive generated views as release artifacts. Select terminal
+    completion when the implementation/disposition goal is met, even if Track B's
+    correct result is a scoped hard failure. Create no automatic V23. A later research
+    program requires a new review, explicit goal, and materially new evidence.
+  outputs: Terminal receipt, final plan manifest, archive/release candidate, lease
+    release, no-successor record, and concise final summary.
+  acceptance: All 40 packages have one qualifying disposition; 19/19 and 12/12 coverage
+    is verified; no unresolved action is silently dropped; the terminal message distinguishes
+    plan completion from GR derivation.
+  verification: Final repository fingerprint, coverage validator, release- tier provenance
+    closure, checkpoint audit, and exact terminal-state check.
+  stop_conditions: Ambiguous human action, missing checkpoint, successor already created,
+    dirty-state mismatch, or any conclusion beyond the evidence.
+  implementation_status: pending
+  requires_separate_agentjob: true
+  max_outer_agentjobs_per_invocation: 1
+  automatic_execution_authorized: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+authority_limits:
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  source_law_adoption_authorized: false
+  metric_adoption_authorized: false
+  matter_coupling_adoption_authorized: false
+  einstein_equation_adoption_authorized: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  gate_chair_verdict_authorized: false
+  external_action_authorized: false

@@ -296,6 +296,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19` `wiki/markdown/md-recommendations-implementation-plan-continue-task-v19.md`
 - `WIKI-MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V20` `wiki/markdown/md-recommendations-implementation-plan-continue-task-v20.md`
 - `WIKI-MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21` `wiki/markdown/md-recommendations-implementation-plan-continue-task-v21.md`
+- `WIKI-MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22` `wiki/markdown/md-recommendations-implementation-plan-continue-task-v22.md`
 - `WIKI-MD-RESEARCH-AGENT-WORKFLOW-PUBLICATION-BRIEF` `wiki/markdown/md-research-agent-workflow-publication-brief.md`
 - `WIKI-MD-RESEARCH-CONTROL-CURRENT-FRONTIER` `wiki/markdown/md-research-control-current-frontier.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-ACCEPTED-STATUS-CALIBRATION-POLICY-V1` `wiki/markdown/md-research-control-design-accepted-status-calibration-policy-v1.md`
@@ -391,6 +392,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-V21-RECOMMENDATION-BACKLOG-SCHEMA` `wiki/markdown/md-research-control-design-v21-recommendation-backlog-schema.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-V21-SCIENTIFIC-STATUS-SCHEMA` `wiki/markdown/md-research-control-design-v21-scientific-status-schema.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-V21-TASK-TAXONOMY-POLICY` `wiki/markdown/md-research-control-design-v21-task-taxonomy-policy.md`
+- `WIKI-MD-RESEARCH-CONTROL-DESIGN-V22-RECOMMENDATION-BACKLOG-SCHEMA` `wiki/markdown/md-research-control-design-v22-recommendation-backlog-schema.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-VALIDATION-ASSURANCE-POLICY-V1` `wiki/markdown/md-research-control-design-validation-assurance-policy-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-VALIDATION-CACHE-CONTRACT-V1` `wiki/markdown/md-research-control-design-validation-cache-contract-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-VALIDATION-CHANGE-FAMILY-TAXONOMY-V1` `wiki/markdown/md-research-control-design-validation-change-family-taxonomy-v1.md`
@@ -868,6 +870,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19` `implementations_plans/recommendations_implementation_plan_continue_task-v19.md`
 - `MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V20` `implementations_plans/recommendations_implementation_plan_continue_task-v20.md`
 - `MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21` `implementations_plans/recommendations_implementation_plan_continue_task-v21.md`
+- `MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22` `implementations_plans/recommendations_implementation_plan_continue_task-v22.md`
 - `MD-RESEARCH-CONTROL-CURRENT-FRONTIER` `research_control/current_frontier.md`
 - `MD-RESEARCH-CONTROL-DESIGN-ACCEPTED-STATUS-CALIBRATION-POLICY-V1` `research_control/design/accepted_status_calibration_policy_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-ACCEPTED-STATUS-CALIBRATION-SCHEMA-V1` `research_control/design/accepted_status_calibration_schema_v1.md`
@@ -962,6 +965,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-DESIGN-V21-RECOMMENDATION-BACKLOG-SCHEMA` `research_control/design/v21_recommendation_backlog_schema.md`
 - `MD-RESEARCH-CONTROL-DESIGN-V21-SCIENTIFIC-STATUS-SCHEMA` `research_control/design/v21_scientific_status_schema.md`
 - `MD-RESEARCH-CONTROL-DESIGN-V21-TASK-TAXONOMY-POLICY` `research_control/design/v21_task_taxonomy_policy.md`
+- `MD-RESEARCH-CONTROL-DESIGN-V22-RECOMMENDATION-BACKLOG-SCHEMA` `research_control/design/v22_recommendation_backlog_schema.md`
 - `MD-RESEARCH-CONTROL-DESIGN-VALIDATION-ASSURANCE-POLICY-V1` `research_control/design/validation_assurance_policy_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-VALIDATION-CACHE-CONTRACT-V1` `research_control/design/validation_cache_contract_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-VALIDATION-CHANGE-FAMILY-TAXONOMY-V1` `research_control/design/validation_change_family_taxonomy_v1.md`
