@@ -1,0 +1,390 @@
+job_id: "AJ-RT-20260809-010-001"
+task_id: "RT-20260809-010"
+decision_id: "DDR-20260809-010"
+role_id: "candidate-constructor"
+role_version: "0.2.0"
+execution_role_ref: "candidate-constructor@0.2.0--RT-20260809-010"
+status: "completed"
+validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+created_at: "2026-08-09T11:07:13Z"
+started_at: "2026-08-09T11:07:13Z"
+completed_at: "2026-08-09T11:14:31Z"
+completion_path: "research_control/tasks/RT-20260809-010/jobs/completions/AJC-AJ-RT-20260809-010-001.yaml"
+requires_human_gate: false
+human_authorization_note: "The active complete-V22 goal, committed RT-20260809-009 checkpoint, and handoff-0979 authorize this one P3-T01 construction/activation packet and one checkpoint. No canonical adoption, target geometry, protected Gate review, reviewer contact, or external action is authorized."
+objective: "Implement V22 P3-T01 by constructing and typing the exact sealed B1 proposal-only local source state, executing only the ACTIVATE_PRIMARY research-eligibility transition, proving testable restriction/gluing/naturality and two independent response directions, defining a conditional P7 refinement interface, and routing P3-T02 without ontology adoption or target import."
+target_derivation_milestone: "effective_metric_g_eff"
+milestone_burden: "Define the exact selected B1 source-native local state, restriction and gluing laws, variations, boundary data, symmetry and equivalence, observables, and conditional P7 interface without target geometry."
+route_label: "ordinary-research-packet"
+route_reason: "handoff_0979_selects_dependency_ready_v22_p3_t01_after_the_committed_rt009_checkpoint"
+route_strategy_id: "construct_v22_p3_t01_b1_local_state_and_operational_syntax_v1"
+immutable_route_sha256: "8cf1a9a5f17ba985c7200ad13223752ac7d7ff1e140f41c747d7ae808ed91957"
+source_head: "f97ecc4c4889df82d688b5892b88f8f0a171fd84"
+source_tree: "59a045a5750d85ab0dd566fd22b8534027af24a0"
+assembly_parent_head: "f97ecc4c4889df82d688b5892b88f8f0a171fd84"
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P3-T01"
+recommendation_ids:
+  - "V22-R03"
+  - "V22-R05"
+  - "V22-R08"
+  - "V22-R09"
+declared_coverage_ids:
+  - "V22-R05"
+  - "V22-R08"
+  - "V22-R09"
+sequence_step_ids: []
+cross_cutting_directive_ids:
+  - "V22-X05"
+next_plan_id: "recommendations_implementation_plan_continue_task-v22"
+next_plan_task_ids:
+  - "P3-T02"
+next_plan_task_execution_authorized: false
+source_extension_classification_required: true
+project_system_change_only: false
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+tag_creation_authorized: false
+public_release_authorized: false
+publication_authorized: false
+push_authorized: false
+external_action_authorized: false
+
+mathematical_decisiveness_contract:
+  contract_path: "research_control/design/mathematical_decisiveness_completion_contract.md"
+  schema_path: ".agents/schemas/PHYSICS_COMPLETION_DECISIVENESS_SCHEMA.md"
+  enforcement_mode: "hard_failure"
+  active_after: "2026-06-21T02:32:39Z"
+
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0979"
+  source_handoff_path: "research_control/handoffs/handoff-0979.yaml"
+  source_handoff_sha256: "8cf1a9a5f17ba985c7200ad13223752ac7d7ff1e140f41c747d7ae808ed91957"
+  selected_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  selected_plan_task_id: "P3-T01"
+  selected_plan_task_ref: "recommendations_implementation_plan_continue_task-v22:P3-T01"
+  guard_outcome: "below_threshold"
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  preflight_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  refresh_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1148
+    relationship_row_count: 5780
+    semantic_row_count: 1148
+    vault_row_count: 1148
+    blocking_warning_count: 0
+    local_cache_only_warning_count: 0
+  refresh_needed: false
+  refresh_performed: false
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v22.md --json"
+      query_type: "lookup"
+      query_text: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+      query_status: "completed"
+    - command: '.venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search "P3 T01 local multi field source state" --limit 10 --json'
+      query_type: "search"
+      query_text: "P3 T01 local multi field source state"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+      query_status: "completed"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+      source_hash: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+    - object_id: "TEX-V22-P2-T04-PRIMARY-FALLBACK-SELECTION-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260809-009/artifacts/v22_p2_t04_primary_fallback_selection_v1.tex"
+      source_hash: "401d61983df0032bb1da92f786941f089f92da280180bff25409161864e8b031"
+  additional_control_inspections:
+    - object_id: "HANDOFF-0979"
+      control_path: "research_control/handoffs/handoff-0979.yaml"
+      source_hash: "8cf1a9a5f17ba985c7200ad13223752ac7d7ff1e140f41c747d7ae808ed91957"
+    - object_id: "CAND-V22-B1-LOCAL-SIX-FIELD-RESPONSE-SEED-V1"
+      control_path: "research_control/tasks/RT-20260809-009/artifacts/v22_p2_t04_primary_local_multifield_candidate_v1.yaml"
+      source_hash: "5d8a332c6aa05d85260a14af777a1d3f43015ba48980493acfa4c584bec75132"
+    - object_id: "V22-P1-T03-P7-CONDITIONAL-INPUT-CONTRACT-V1"
+      control_path: "research_control/tasks/RT-20260809-003/artifacts/v22_p1_t03_p7_conditional_input_contract_v1.yaml"
+      source_hash: "e1acd64ea434f3dc6a0607c17f69162f0e242bc92d5490eb84ff3d3afd92a3c4"
+    - object_id: "V22-P2-T01-SOURCE-ADEQUACY-CHECKLIST-V1"
+      control_path: "research_control/tasks/RT-20260809-005/artifacts/v22_p2_t01_source_adequacy_checklist_v1.yaml"
+      source_hash: "a9b59df7b5b2d1203fef53cf23817400c6d1511836e97ff1ae21b819dc064e68"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-GR-DERIVATION-BURDEN-MAP"
+      control_path: "research_control/design/gr_derivation_burden_map.md"
+      source_hash: "8e9d44e3a18ecc8a2430a9c42497da3eb9911c2cf6cd714c1525c5d91551835e"
+    - object_id: "DISTANCE-TO-GR-LEDGER"
+      control_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+      source_hash: "8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642"
+  authority_note: "Tracked registered source and control records govern. Generated wiki semantic Obsidian SQLite and .local layers are retrieval or operational evidence only and are not authority."
+
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "physics"
+  payload_type: "candidate_construction"
+  candidate_family: "FAM-V22-B1-LOCAL-MULTIFIELD-CONTINUUM"
+  assumption_delta:
+    - "The sealed proposal-only rank-six source-scalar bundle is instantiated as a C2 section sheaf with exact restriction and componentwise gluing."
+    - "A regular operational locus, source-boundary trace class, passive chart equivalence, and two explicit vertical response directions are added without a metric or coframe."
+    - "A finite pointed source-sampling interface consumes the exact protected P7 tokens with restriction and persistent-label refinement consistency but no continuum convergence claim."
+    - "Nine multidimensional assumption-cost entries expose source arena, regularity, units, boundary, operational, and refinement debt without scalar ranking."
+  materiality_basis: "P2-T04 selected and sealed B1 but explicitly left P3-T01 unexecuted. This packet newly constructs all local state objects, maps, gluing laws, variation witnesses, boundary traces, equivalence, P7 interface, and research-activation state required for P3-T02."
+  payload_details:
+    construction_identity: "V22-P3-T01-B1-LOCAL-STATE-V1"
+    not_already_encoded_evidence: "The P2-T04 descriptor named a prospective bundle and rank certificate but did not define a section sheaf, exact gluing, variations, boundary traces, passive naturality, refinement functor, failure cases, or ACTIVATE_PRIMARY execution."
+    response_rank: 2
+    source_extension_adopted: false
+    global_no_go_claimed: false
+  source_basis:
+    - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+    - "TEX-V22-P2-T04-PRIMARY-FALLBACK-SELECTION-V1"
+    - "CAND-V22-B1-LOCAL-SIX-FIELD-RESPONSE-SEED-V1"
+    - "V22-P1-T03-P7-CONDITIONAL-INPUT-CONTRACT-V1"
+    - "V22-P2-T01-SOURCE-ADEQUACY-CHECKLIST-V1"
+  expected_artifact_paths:
+    - "research_control/tasks/RT-20260809-010/artifacts/v22_p3_t01_local_multifield_source_state_v1.tex"
+    - "research_control/tasks/RT-20260809-010/artifacts/v22_p3_t01_local_state_specification_v1.yaml"
+    - "research_control/tasks/RT-20260809-010/artifacts/v22_p3_t01_p7_refinement_interface_v1.yaml"
+    - "research_control/tasks/RT-20260809-010/artifacts/v22_p3_t01_assumption_cost_ledger_v1.yaml"
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+    - "internal_child_review"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+
+family_freeze_admission:
+  schema_id: "family_freeze_route_admission_v1"
+  policy_id: "family_freeze_reopening_policy_v1"
+  route_id: "v22_p3_t01_b1_local_state_construction"
+  family_id: "FAM-V22-B1-LOCAL-MULTIFIELD-CONTINUUM"
+  family_identity_sha256: "32110632f8832091d69ca52e96dfdf99c26087bfc75575b77a466631eca9d051"
+  assumption_sha256es:
+    - "f17cbd0db74f65fe2da5de1782e1dcb016716656b570d2c094834f2dd25bae8a"
+    - "53ee7e2b1c4c2c7463063178e848140242220d25f1afc397fe6ae68bd40f356b"
+    - "8cab0276e9a7a0025800a9be694d1151571fb8d86c7fec5fc49085a49df0ffad"
+    - "ec30b6969e7ec34d2021eec9e8d73973f414d8454ccced17b5818cee2bfe2a59"
+  route_kind: "candidate_construction"
+  detected_match_basis: []
+  reopening:
+    requested: false
+    class: "none"
+  authority_limits:
+    local_family_freeze_preserved: true
+    global_no_go_claimed: false
+    automatic_candidate_adoption: false
+    theorem_truth_inferred: false
+    ontology_modified: false
+    physics_promotion_authorized: false
+
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  expected_durable_outputs:
+    physics:
+      - "one registered B1 local-state construction manuscript with exact definitions propositions and response witness"
+      - "one machine-readable local-state specification P7 interface and assumption ledger"
+    project_system:
+      - "one twenty-four-case adversarial fixture set and deterministic validation receipt"
+      - "parent-child synthesis standard control records and one governed checkpoint"
+  acceptance_criteria:
+    physics:
+      - "every field operation restriction gluing variation trace symmetry observable and interface map is typed"
+      - "the exact B1 packet has two independent local response directions but makes no geometry sufficiency claim"
+      - "no target atlas metric coframe connection measure clock rod detector physical position or GR fit is imported"
+      - "activation is proposal-only research eligibility and not adoption"
+    project_system:
+      - "all source identity type domain fixture synthesis and scope checks pass"
+      - "registered source hashes and generated derivatives synchronize"
+      - "one governed checkpoint records the bounded transaction"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: false
+    exception_id: ""
+    evidence_path: ""
+    evidence_sha256: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  parent:
+    execution_unit_id: "parent"
+    perspective: "physicist_mathematician_philosopher"
+    responsibilities:
+      - "derive bounded child questions from the selected execution role"
+      - "enforce exact P3-T01 scope and the sealed B1 identity"
+      - "separate source syntax from target geometry and adoption"
+      - "review and resolve child conflicts"
+      - "fuse the exact local-state construction and limitations"
+  children:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260809-010/artifacts/child_phys_math_p3_t01_local_state.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260809-010/artifacts/child_phys_phil_p3_t01_source_target_audit.yaml"
+      status: "completed"
+  conflict_policy:
+    review_path: "research_control/tasks/RT-20260809-010/artifacts/parent_conflict_review_p3_t01_local_state.yaml"
+    max_resolution_rounds: 2
+    require_parallel_child_revision: true
+    unresolved_conflict_status: "blocked"
+  fusion_policy:
+    fusion_notes_path: "research_control/tasks/RT-20260809-010/artifacts/parent_fusion_notes_p3_t01_local_state.md"
+    fused_output_path: "research_control/tasks/RT-20260809-010/artifacts/v22_p3_t01_local_multifield_source_state_v1.tex"
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+    final_output_replaces_old_single_role_artifact: true
+
+allowed_write_paths:
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "registries/**"
+  - "research_control/current_frontier.md"
+  - "research_control/design/v22_recommendation_backlog.yaml"
+  - "research_control/handoffs/handoff-0980.yaml"
+  - "research_control/handoffs/handoff-0980.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260809-010/**"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/tex/**"
+forbidden_paths:
+  - "canonical ontology TeX"
+  - "benchmark source TeX"
+  - "historical task artifacts"
+  - ".agents/roles/**"
+  - ".agents/schemas/**"
+  - "scripts/**"
+  - "tests/**"
+allowed_source_classes:
+  - "registered canonical TeX and Markdown sources"
+  - "tracked research-control state and immutable prior task artifacts"
+  - "task-local draft/control candidate and internal review artifacts"
+forbidden_source_classes:
+  - "canonical_ontology_write"
+  - "benchmark_promotion"
+  - "physics_claim_promotion"
+  - "source_law_adoption"
+  - "M_src_or_g_eff_adoption"
+  - "candidate_reconstruction_or_activation_beyond_sealed_B1_research_packet"
+  - "candidate_reconstruction"
+  - "gate_chair_verdict"
+  - "completed_derivation_claim"
+  - "global_theory_rejection"
+  - "generated_derivative_authority"
+  - "target_atlas_or_metric_import"
+  - "target_fit_as_source_merit"
+  - "P7_token_as_target_detector_or_realistic_matter"
+  - "frozen_route_repackaging"
+  - "concurrent_candidate_execution"
+  - "automatic_fallback_activation"
+  - "third_slot_allocation"
+validators:
+  - "source_identity_hashes"
+  - "local_state_type_domain_audit"
+  - "restriction_gluing_examples_and_failures"
+  - "variation_rank_witness"
+  - "source_equivalence_naturality"
+  - "p7_interface_contract"
+  - "assumption_cost_audit"
+  - "source_extension_classification"
+  - "smuggling_audit"
+  - "parent_child_synthesis"
+  - "latex_compile"
+  - "memory_bootstrap"
+  - "memory_validate_only"
+  - "renderers"
+  - "graph_freshness"
+  - "classify_project_changes"
+  - "documentation_impact"
+  - "research_control_validation"
+  - "claim_language"
+  - "affected_validation"
+  - "git_diff_check"
+  - "checkpoint_research_transaction"
+expected_outputs:
+  - "research_control/tasks/RT-20260809-010/**"
+  - "research_control/tasks/RT-20260809-010/artifacts/v22_p3_t01_local_multifield_source_state_v1.tex"
+  - "research_control/tasks/RT-20260809-010/artifacts/v22_p3_t01_local_state_specification_v1.yaml"
+  - "research_control/tasks/RT-20260809-010/artifacts/v22_p3_t01_p7_refinement_interface_v1.yaml"
+  - "research_control/tasks/RT-20260809-010/artifacts/v22_p3_t01_assumption_cost_ledger_v1.yaml"
+  - "research_control/handoffs/handoff-0980.yaml"
+  - "research_control/handoffs/handoff-0980.md"
+  - "research_control/program_state.yaml"
+claim_boundary: "CB-V22-P3-T01-B1-LOCAL-STATE-001"
+resolves_signal_routing: false
+documentation_impact_id: "DI-RT-20260809-010-001"
+completion_id: "AJC-AJ-RT-20260809-010-001"
+stop_conditions:
+  - "requires_human_gate=true"
+  - "the sealed B1 identity would change"
+  - "typing or gluing requires target coordinates or metric-equivalent structure"
+  - "the response rank falls below two on every admissible regular patch"
+  - "P7 tokens would acquire realistic target-matter or detector semantics"
+  - "canonical ontology or source-law adoption would be required"
+  - "validation fails"
+  - "authority expansion required"
+  - "job would touch paths outside allowlist"
+memory_preflight_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"

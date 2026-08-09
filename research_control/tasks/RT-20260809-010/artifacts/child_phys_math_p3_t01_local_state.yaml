@@ -1,0 +1,23 @@
+schema_id: "parent_child_execution_unit_output_v1"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+shared_claim_boundary: "CB-V22-P3-T01-B1-LOCAL-STATE-001"
+contributions:
+  - "Defined Q_B1(U)=C2(U,R6) as a sheaf of sections with exact restrictions and componentwise gluing."
+  - "Defined Q_reg by q6 nonzero and d rho1 wedge d rho2 nonzero and proved restriction/gluing stability."
+  - "Defined boundary-preserving vertical variations and constructed two independent response directions."
+  - "Proved passive source-chart and observable naturality without a target atlas."
+  - "Defined persistent-label P7 sampling refinement with exact marginal consistency and no convergence overread."
+checks:
+  field_and_operation_typing: "PASS"
+  restriction_and_gluing: "PASS"
+  variation_rank_witness: "PASS_RANK_2_NECESSARY_ONLY"
+  source_naturality: "PASS"
+  p7_interface_typing: "PASS_CONDITIONAL_FINITE_ONLY"
+limitations:
+  - "No dynamics coefficients K or F are constructed."
+  - "No hyperbolicity principal reduction causal cone scale or effective metric is established."
+  - "No global convergence topology or error bound is established."
+external_review_completed: false
+physics_promotion_authorized: false

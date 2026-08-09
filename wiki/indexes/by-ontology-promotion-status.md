@@ -453,6 +453,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V22-P2-T01-LOCAL-SOURCE-INFORMATION-CAPACITY-THEOREM-V1` `research_control/tasks/RT-20260809-005/artifacts/v22_p2_t01_local_source_information_capacity_theorem_v1.tex`
 - `TEX-V22-P2-T03-SOURCE-EXTENSION-BUDGET-HARD-FAIL-PROTOCOL-V1` `research_control/tasks/RT-20260809-008/artifacts/v22_p2_t03_source_extension_budget_hard_fail_protocol_v1.tex`
 - `TEX-V22-P2-T04-PRIMARY-FALLBACK-SELECTION-V1` `research_control/tasks/RT-20260809-009/artifacts/v22_p2_t04_primary_fallback_selection_v1.tex`
+- `TEX-V22-P3-T01-B1-LOCAL-MULTIFIELD-SOURCE-STATE-V1` `research_control/tasks/RT-20260809-010/artifacts/v22_p3_t01_local_multifield_source_state_v1.tex`
 
 ## superseded
 

@@ -114,6 +114,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-V22-P2-T01-PARENT-FUSION-CAPACITY-V1` `research_control/tasks/RT-20260809-005/artifacts/parent_fusion_notes_p2_t01_capacity.md`
 - `MD-V22-P2-T03-PARENT-FUSION-PROTOCOL-V1` `research_control/tasks/RT-20260809-008/artifacts/parent_fusion_notes_p2_t03_protocol.md`
 - `MD-V22-P2-T04-PARENT-FUSION-SELECTION-V1` `research_control/tasks/RT-20260809-009/artifacts/parent_fusion_notes_p2_t04_selection.md`
+- `MD-V22-P3-T01-PARENT-FUSION-LOCAL-STATE-V1` `research_control/tasks/RT-20260809-010/artifacts/parent_fusion_notes_p3_t01_local_state.md`
 
 ## explanatory_noncanonical
 
@@ -857,6 +858,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-V22-P2-T01-PARENT-FUSION-CAPACITY-V1` `wiki/markdown/md-v22-p2-t01-parent-fusion-capacity-v1.md`
 - `WIKI-MD-V22-P2-T03-PARENT-FUSION-PROTOCOL-V1` `wiki/markdown/md-v22-p2-t03-parent-fusion-protocol-v1.md`
 - `WIKI-MD-V22-P2-T04-PARENT-FUSION-SELECTION-V1` `wiki/markdown/md-v22-p2-t04-parent-fusion-selection-v1.md`
+- `WIKI-MD-V22-P3-T01-PARENT-FUSION-LOCAL-STATE-V1` `wiki/markdown/md-v22-p3-t01-parent-fusion-local-state-v1.md`
 - `WIKI-MD-VALIDATOR-OPERATOR-WORKFLOW-PUBLICATION-BRIEF` `wiki/markdown/md-validator-operator-workflow-publication-brief.md`
 
 ## project_control

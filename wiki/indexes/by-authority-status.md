@@ -133,6 +133,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-V22-P2-T01-PARENT-FUSION-CAPACITY-V1` `research_control/tasks/RT-20260809-005/artifacts/parent_fusion_notes_p2_t01_capacity.md`
 - `MD-V22-P2-T03-PARENT-FUSION-PROTOCOL-V1` `research_control/tasks/RT-20260809-008/artifacts/parent_fusion_notes_p2_t03_protocol.md`
 - `MD-V22-P2-T04-PARENT-FUSION-SELECTION-V1` `research_control/tasks/RT-20260809-009/artifacts/parent_fusion_notes_p2_t04_selection.md`
+- `MD-V22-P3-T01-PARENT-FUSION-LOCAL-STATE-V1` `research_control/tasks/RT-20260809-010/artifacts/parent_fusion_notes_p3_t01_local_state.md`
 - `TEX-EQSRC-CLOSURE-SOURCE-LAW-SMUGGLING-AUDIT-V1` `research_control/tasks/RT-20260718-017/artifacts/eqsrc_closure_source_law_smuggling_audit_v1.tex`
 - `TEX-EQSRC-CLOSURE-SOURCE-LAW-V2-SMUGGLING-AUDIT` `research_control/tasks/RT-20260718-019/artifacts/eqsrc_closure_source_law_v2_smuggling_audit.tex`
 - `TEX-EQSRC-CLOSURE-SOURCE-LAW-V3-REFUTER-STRESS` `research_control/tasks/RT-20260718-022/artifacts/eqsrc_closure_source_law_v3_refuter_stress.tex`
@@ -571,6 +572,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V22-P2-T01-LOCAL-SOURCE-INFORMATION-CAPACITY-THEOREM-V1` `research_control/tasks/RT-20260809-005/artifacts/v22_p2_t01_local_source_information_capacity_theorem_v1.tex`
 - `TEX-V22-P2-T03-SOURCE-EXTENSION-BUDGET-HARD-FAIL-PROTOCOL-V1` `research_control/tasks/RT-20260809-008/artifacts/v22_p2_t03_source_extension_budget_hard_fail_protocol_v1.tex`
 - `TEX-V22-P2-T04-PRIMARY-FALLBACK-SELECTION-V1` `research_control/tasks/RT-20260809-009/artifacts/v22_p2_t04_primary_fallback_selection_v1.tex`
+- `TEX-V22-P3-T01-B1-LOCAL-MULTIFIELD-SOURCE-STATE-V1` `research_control/tasks/RT-20260809-010/artifacts/v22_p3_t01_local_multifield_source_state_v1.tex`
 
 ## explanatory_noncanonical
 
@@ -1330,6 +1332,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-V22-P2-T01-PARENT-FUSION-CAPACITY-V1` `wiki/markdown/md-v22-p2-t01-parent-fusion-capacity-v1.md`
 - `WIKI-MD-V22-P2-T03-PARENT-FUSION-PROTOCOL-V1` `wiki/markdown/md-v22-p2-t03-parent-fusion-protocol-v1.md`
 - `WIKI-MD-V22-P2-T04-PARENT-FUSION-SELECTION-V1` `wiki/markdown/md-v22-p2-t04-parent-fusion-selection-v1.md`
+- `WIKI-MD-V22-P3-T01-PARENT-FUSION-LOCAL-STATE-V1` `wiki/markdown/md-v22-p3-t01-parent-fusion-local-state-v1.md`
 - `WIKI-MD-VALIDATOR-OPERATOR-WORKFLOW-PUBLICATION-BRIEF` `wiki/markdown/md-validator-operator-workflow-publication-brief.md`
 - `WIKI-PDF-LEGACY-ONTOLOGY-AETHER-FLOW-CONSISTENCY` `wiki/pdf/pdf-legacy-ontology-aether-flow-consistency.md`
 - `WIKI-PDF-LEGACY-ONTOLOGY-AETHER-FLOW-DYNAMICS` `wiki/pdf/pdf-legacy-ontology-aether-flow-dynamics.md`
@@ -1801,6 +1804,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-V22-P2-T01-LOCAL-SOURCE-INFORMATION-CAPACITY-THEOREM-V1` `wiki/tex/tex-v22-p2-t01-local-source-information-capacity-theorem-v1.md`
 - `WIKI-TEX-V22-P2-T03-SOURCE-EXTENSION-BUDGET-HARD-FAIL-PROTOCOL-V1` `wiki/tex/tex-v22-p2-t03-source-extension-budget-hard-fail-protocol-v1.md`
 - `WIKI-TEX-V22-P2-T04-PRIMARY-FALLBACK-SELECTION-V1` `wiki/tex/tex-v22-p2-t04-primary-fallback-selection-v1.md`
+- `WIKI-TEX-V22-P3-T01-B1-LOCAL-MULTIFIELD-SOURCE-STATE-V1` `wiki/tex/tex-v22-p3-t01-b1-local-multifield-source-state-v1.md`
 
 ## project_control
 

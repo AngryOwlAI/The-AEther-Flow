@@ -1,0 +1,106 @@
+schema_id: "research_checkpoint_blocker_v1"
+blocker_id: "BLOCK-V22-P3-T01-TEN-EOF-CHECKPOINT-001"
+status: "active_blocking"
+job_id: "AJ-RT-20260809-010-001"
+task_id: "RT-20260809-010"
+created_at: "2026-08-09T12:19:02Z"
+source_head: "f97ecc4c4889df82d688b5892b88f8f0a171fd84"
+source_tree: "59a045a5750d85ab0dd566fd22b8534027af24a0"
+checkpoint:
+  run_id: "RUN-CHECKPOINT-4340d0e85f29ac8f"
+  invocation_count: 1
+  consumed: true
+  committed: false
+  staged: false
+  entry_index_restored: true
+  gate_count: 7
+  pass_count: 2
+  failure_count: 1
+  skipped_count: 4
+  failed_gate: "git_diff_check"
+  failed_gate_returncode: 2
+  test_shard_executed: false
+  receipt:
+    path: ".local/validation-receipts/8afbc6d6c1cc892533a3e7f8e45a1e2fb8243d85d803a1dadc854fe5c9fbe844/RUN-CHECKPOINT-4340d0e85f29ac8f/receipt.json"
+    sha256: "a0293bc18ca70fc87d9d3428bfa2d60210858a941a969b0b40da987c54b23b93"
+  failed_gate_output:
+    path: ".local/validation-receipts/8afbc6d6c1cc892533a3e7f8e45a1e2fb8243d85d803a1dadc854fe5c9fbe844/RUN-CHECKPOINT-4340d0e85f29ac8f/gates/0006-git_diff_check.stdout"
+    sha256: "6e9274c3191ebb082e54db91ee1aac45e982494f01e232bcb31dae43f3973af4"
+sole_failure_class:
+  kind: "ten_new_blank_lines_at_eof"
+  finding_count: 10
+  semantic_content_error: false
+  validator_or_policy_error: false
+targets:
+  - path: "research_control/handoffs/handoff-0980.md"
+    finding_line: 33
+    document_kind: "markdown"
+    preimage_sha256: "fcd35813f683190c3c35418d663e03ace743bb67bf2ca2b752c05943ed0aa6b7"
+    required_postimage_sha256: "d1ef8e4a6016624ff53ceb768e72eae108240b255edacc7c8fa8a5badf966181"
+  - path: "research_control/tasks/RT-20260809-010/00_TASK.yaml"
+    finding_line: 84
+    document_kind: "yaml"
+    preimage_sha256: "423ffa40e9a20637cf42e9165863b2cd768fa379daa5080c0a9f417cddeda69b"
+    required_postimage_sha256: "57f8963614d4a023e7b6e9c1105ffed4a3c734211c889a1396960ef15ec5614a"
+  - path: "research_control/tasks/RT-20260809-010/artifacts/child_phys_math_p3_t01_local_state.yaml"
+    finding_line: 24
+    document_kind: "yaml"
+    preimage_sha256: "3f74b646320882ad1aa539dd3da6729657db24df675808d0ee73362bd8fb4da9"
+    required_postimage_sha256: "e0826b28bc563534c9c9d26b6284cb342ada3898f8ba5948aed1166e6b26dc40"
+  - path: "research_control/tasks/RT-20260809-010/artifacts/child_phys_phil_p3_t01_source_target_audit.yaml"
+    finding_line: 25
+    document_kind: "yaml"
+    preimage_sha256: "c7276d5ce51fb036b30b91314eb5cf6066f3267797b423159612f7796a301928"
+    required_postimage_sha256: "dc0c34ff71d1c5298ddaccc045370ec14ce27b9616c4aff76af6800226ec2e96"
+  - path: "research_control/tasks/RT-20260809-010/artifacts/fixtures/v22_p3_t01_local_state_cases.yaml"
+    finding_line: 28
+    document_kind: "yaml"
+    preimage_sha256: "d4ae48a735ecf97e94dcc72615f44606120d966c2cbe970f9fbc9e0d493b2d3c"
+    required_postimage_sha256: "9906c1cb2657f5dcdfce51fd253cb399129f77da9491166e225c42687f638fba"
+  - path: "research_control/tasks/RT-20260809-010/artifacts/parent_conflict_review_p3_t01_local_state.yaml"
+    finding_line: 24
+    document_kind: "yaml"
+    preimage_sha256: "dfaf379b53c43721f653cbc2edb42ace0c425214ec2c8a01aa7260ad96bf05bb"
+    required_postimage_sha256: "e0311b8bcd95496cb79e3e7fd90c4c5715674b44066d2efae68be26d82b23e6c"
+  - path: "research_control/tasks/RT-20260809-010/artifacts/parent_fusion_notes_p3_t01_local_state.md"
+    finding_line: 29
+    document_kind: "markdown"
+    preimage_sha256: "e512a4db19a108223ed2b55a0de5dea6ade6a2b49015da1654b0d9708275c034"
+    required_postimage_sha256: "faee0f28e891ff85b09aca811f7a889e7cb79a96cad615af260415c665d192c6"
+  - path: "research_control/tasks/RT-20260809-010/artifacts/v22_p3_t01_assumption_cost_ledger_v1.yaml"
+    finding_line: 92
+    document_kind: "yaml"
+    preimage_sha256: "ab7039f9ca859a7aea0f1e7b03220fe37d69a544b8c7047e04b31cf8e375d436"
+    required_postimage_sha256: "a67a007421866fd4b7676a35193bcf48636e7b530b1fda34d378c9bfdc379b08"
+  - path: "research_control/tasks/RT-20260809-010/artifacts/v22_p3_t01_p7_refinement_interface_v1.yaml"
+    finding_line: 72
+    document_kind: "yaml"
+    preimage_sha256: "81982c5caaecdf6a014aa9c6e162808368f28238eafc2d326968f26223bf8a73"
+    required_postimage_sha256: "cfda8abd1905d04d3ec806c4178ad7c2f620f82a736ed6316e0768c17c143baa"
+  - path: "research_control/tasks/RT-20260809-010/documentation_impact.yaml"
+    finding_line: 190
+    document_kind: "yaml"
+    preimage_sha256: "bbfb3e5afea82e3c99080f0ac7e8620e9a25e185cc1260e4ea53f2a7825b9768"
+    required_postimage_sha256: "528ed0ced32d32f815268dca0423f95e65ee816977b1e3728aefd0d82afbaeed"
+recovery:
+  task_id: "RT-20260809-011"
+  job_id: "AJ-RT-20260809-011-001"
+  route_strategy_id: "repair_v22_p3_t01_ten_eof_blank_lines_and_checkpoint_v1"
+  immutable_route_sha256: "28f579c56ace1669d4a808f30ed8fd57ad325f6565281ce08a2732b106a74abd"
+  route_blocker_fingerprint: "ecb02644dcb9611d61f89853eff2bce3497679bed4afdda4b5131f16d2c50a6c"
+  inherited_manifest_path: "research_control/tasks/RT-20260809-011/artifacts/inherited_dirty_manifest_v22_p3_t01_ten_eof_checkpoint.txt"
+  inherited_manifest_sha256: "1b894544f1d4a47925c6a9cd2976661ff4ba6134e8e2b1befaeea34b4ddf70ab"
+  prior_job_replay_authorized: false
+  fresh_checkpoint_invocation_limit: 1
+authority_limits:
+  semantic_payload_changed: false
+  p3_t01_replayed: false
+  p3_t02_executed: false
+  p2_t02_external_action_taken: false
+  scientific_claims_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_or_push_authorized: false
+  external_action_authorized: false
+notes: "This blocker binds local operational checkpoint evidence only. It authorizes exactly ten one-byte terminal-newline deletions and one fresh checkpoint; it supplies no scientific or protected authority."

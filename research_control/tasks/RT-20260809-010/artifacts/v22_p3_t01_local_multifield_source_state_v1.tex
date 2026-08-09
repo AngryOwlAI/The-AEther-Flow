@@ -1,0 +1,256 @@
+% authority: science_draft
+% claim_status: draft/control
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,longtable,array,enumitem,hyperref}
+\hypersetup{hidelinks}
+\setlist{nosep}
+\newtheorem{definition}{Definition}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newcommand{\A}{\mathcal A}
+\newcommand{\Q}{\mathcal Q_{\mathrm{B1}}}
+\newcommand{\Qreg}{\mathcal Q_{\mathrm{B1,reg}}}
+\newcommand{\E}{E_{\mathrm{B1}}}
+\newcommand{\R}{\mathcal R_{\mathrm{B1}}}
+\newcommand{\sigm}{\operatorname{logistic}}
+
+\title{V22 P3-T01 Local Multi-Field Source State v1\\
+\large Exact local syntax for the sealed B1 research candidate}
+\author{Candidate Constructor with Ontology-Formalizer perspective}
+\date{2026-08-09}
+
+\begin{document}
+\sloppy
+\maketitle
+
+\begin{center}
+\fbox{\parbox{0.92\textwidth}{
+\textbf{Status and authority.} This is a proposal-only draft/control
+construction. It activates the sealed B1 packet only as the sole research
+candidate eligible for P3-T02. It does not adopt the bundle or a source law,
+modify canonical ontology, interpret the source arena as physical spacetime,
+construct a causal cone or effective metric, establish realistic matter or
+universal coupling, pass Gate B, or complete a GR derivation.
+}}
+\end{center}
+
+\section{Exact object and source/target boundary}
+
+Let $\A$ be the already-assumed smooth four-dimensional \emph{source} arena.
+Its smoothness, dimension, topology, open sets, and charts are primitive debt.
+They are not derived, and no source chart is a target atlas, physical position
+system, clock reading, or distance assignment.  P3-T01 constructs the sealed
+B1 candidate
+\[
+   \E=\A\times\mathbb R^6,\qquad \pi:\E\to\A,
+\]
+as a proposal-only trivial rank-six real vector bundle.  No metric, coframe,
+connection, orientation, volume form, causal order, or preferred chart is part
+of $\E$.
+
+\begin{definition}[B1 local-state sheaf]
+For each source-open $U\subseteq\A$, define
+\[
+  \Q(U)=\Gamma_{C^2}(U,\E|_U)=C^2(U,\mathbb R^6),
+  \qquad q=(q^1,\ldots,q^6).
+\]
+For $V\subseteq U$, the restriction is
+$\operatorname{res}_{UV}(q)=q|_V$ componentwise.  The six components are
+source scalars.  The selected structure is a sheaf because P3-T01 needs exact
+restriction, overlap agreement, and unique local-to-global gluing.  A cosheaf
+or chain complex would not express those obligations without additional
+structure.
+\end{definition}
+
+The components $q^1,q^2,q^6$ share a declared source unit so the ratios below
+are dimensionless.  The other component units remain declared source units;
+none is a target length, duration, mass, or charge.  $C^2$ regularity supplies
+the first jets required by the sealed B1 identity and one additional derivative
+for stable local variation tests.  It is not evidence for dynamics.
+
+\section{Restriction, gluing, and regular operational locus}
+
+The restriction laws are
+\[
+ \operatorname{res}_{UU}=\mathrm{id},\qquad
+ \operatorname{res}_{VW}\circ\operatorname{res}_{UV}
+ =\operatorname{res}_{UW}\quad(W\subseteq V\subseteq U).
+\]
+For an open cover $U=\bigcup_i U_i$, compatible sections satisfy
+\[
+ q_i|_{U_i\cap U_j}=q_j|_{U_i\cap U_j}
+ \quad\text{componentwise for all }i,j.
+\]
+Ordinary smooth-function gluing produces one and only one $q\in\Q(U)$ with
+$q|_{U_i}=q_i$.  The fiber transition is the identity in the fixed
+$\mathbb R^6$ fiber.  Source-chart representatives transform as six scalars;
+they are not glued with target coordinates.
+
+On the denominator locus $q^6\ne0$, set
+\[
+  \rho_1=\frac{q^1}{q^6},\qquad
+  \rho_2=\frac{q^2}{q^6},\qquad
+  p_i=\sigm(\rho_i)=\frac{1}{1+e^{-\rho_i}}.
+\]
+The regular operational subdomain is
+\[
+ \Qreg(U)=\{q\in\Q(U):q^6(x)\ne0,
+   (d\rho_1\wedge d\rho_2)(x)\ne0\ \text{for every }x\in U\}.
+\]
+This pointwise condition is stable under restriction and under compatible
+gluing by a regular cover.  Sections can still exist where $q^6=0$ or
+$d\rho_1\wedge d\rho_2=0$, but the two-channel interface is respectively
+undefined or rank deficient there.  No silent regularization is allowed.
+
+\begin{proposition}[Sheaf and observable naturality]
+The assignments $\Q$, $\rho_i$, $p_i$, and $d\rho_i$ commute with source-open
+restriction on their declared domains.  Compatible regular local sections
+glue uniquely to a regular section.
+\end{proposition}
+\begin{proof}
+The sheaf axioms are the componentwise $C^2$ function axioms.  Division by a
+nowhere-zero scalar, smooth logistic composition, and exterior differentiation
+are local operations, so each commutes with restriction.  Compatibility makes
+the local ratios and their exterior derivatives equal on overlaps.  Their
+pointwise nonvanishing conditions therefore pass to the unique glued section.
+\end{proof}
+
+Three fail-closed controls distinguish the claims.  A component mismatch on
+an overlap admits no glued base section.  Compatible base sections whose
+glued $q^6$ vanishes do glue in $\Q$ but not in $\Qreg$.  A rule that
+uses target-coordinate Jacobians, a coframe, or a metric to glue the six
+scalars is not this candidate.
+
+\section{Variations and boundary data}
+
+For a declared source pair $(U,B)$, let $i_B:B\hookrightarrow\overline U$ be
+an embedded closed source hypersurface or patch-boundary stratum.  The
+available boundary data are the value trace $i_B^*q$ and tangential first-jet
+trace $i_B^*(dq)$.  Neither a unit normal, normal derivative, induced metric,
+boundary measure, nor causal-boundary meaning is defined.
+
+Boundary-preserving variations are compactly supported $C^2$ vertical
+sections $\delta q$ satisfying
+\[
+ i_B^*(\delta q)=0,\qquad i_B^*(d\delta q)=0.
+\]
+For each relatively compact $V\Subset U$ and $q\in\Qreg(U)$,
+sufficiently small $C^1$ variations keep the two nonvanishing conditions on
+$V$.  This is an ordinary open-condition statement in local source charts;
+it assumes no metric norm on $\A$.
+
+\begin{proposition}[Two independent local response directions]
+At every $x_0\in U$ and $q\in\Qreg(U)$, the vertical differential of
+\[
+ \R(q)=(p_1,p_2)
+\]
+has rank at least two on admissible compactly supported variations.
+\end{proposition}
+\begin{proof}
+Choose a $C^2$ bump function $\chi$ supported away from $B$ with
+$\chi(x_0)=1$.  Let $\delta_1q^1=\chi q^6$ with all other components zero,
+and let $\delta_2q^2=\chi q^6$ with all other components zero.  At $x_0$,
+\[
+ \delta_1(\rho_1,\rho_2)=(1,0),\qquad
+ \delta_2(\rho_1,\rho_2)=(0,1).
+\]
+Because $\sigm'(z)=\sigm(z)(1-\sigm(z))>0$ for finite $z$, the corresponding
+response vectors are linearly independent.  Thus the local response rank is
+two.  This clears only the P2-T01 necessary information-capacity screen; it is
+not a metric, cone, scale, or Gate-B sufficiency result.
+\end{proof}
+
+\section{Source representation equivalence}
+
+The source-chart transition pseudogroup acts passively.  If $\phi$ changes a
+source representation, a local scalar representative acts by pullback
+$q\mapsto\phi^*q$.  The ratios and token parameters are scalars, while
+$d\rho_i$ and $d\rho_1\wedge d\rho_2$ transform by the corresponding tensor
+pullback.  Restriction commutes with this action.  Two chart records are
+equivalent exactly when they represent the same abstract section and natural
+tensors on the common source domain.
+
+No internal $GL(6)$ gauge is declared: it would generally change the selected
+ratio channels.  No active dynamical source symmetry is inferred before
+P3-T02 supplies a law.  Passive source representation equivalence is not a
+target diffeomorphism claim or an assertion of physical gauge redundancy.
+
+\section{Source-native observables and protected P7 interface}
+
+The exact catalog consists of the dimensionless source scalars $\rho_1$ and
+$\rho_2$, their ordered token-parameter pair $(p_1,p_2)$, and the source
+two-form $d\rho_1\wedge d\rho_2$ used only as a regularity/rank witness.  None
+is a physical position, clock, rod, signal, detector, causal cone, metric
+volume, shear, curvature, or polarization observable.
+
+The P7 package is consumed without modification as a protected conditional
+input.  For a finite pointed sampling object $S=(J,a)$ with finite label set
+$J$ and source-anchor map $a:J\to U$, define two conditional Bernoulli slots
+by
+\[
+ \Pr(Y_{ji}=1\mid q,S)=p_i(q)(a(j)),\qquad i=1,2.
+\]
+The labels and anchors are source-side bookkeeping, not target detector
+locations.  Restriction retains only anchors in the smaller source domain.
+A refinement $r:J'\twoheadrightarrow J$ preserves declared persistent anchors
+and copies their parameters exactly; new labels evaluate the same $p_i$.
+Marginalization/reindexing onto persistent labels gives the parent kernel.
+
+This interface contains no metric interpolation, nearest-neighbor rule,
+volume average, convergence topology, error bound, or evolution law.  P3-T03
+must construct those objects if P3-T02 first supplies viable dynamics.  Finite
+P7 identities therefore remain finite protected postulates, not realistic
+continuum matter or target coupling.
+
+\section{Assumption cost and no-import audit}
+
+The construction records nine non-scalar assumption-cost entries: the
+existing source-arena debt; the rank-six bundle; the $C^2$ sheaf; compatible
+units for the ratio channels; the regular-locus restriction; passive chart
+naturality; source-boundary traces; two conditional logistic token bridges;
+and the pointed-sampling/refinement interface.  Exactly one is the inherited
+arena debt.  Every new object remains proposal-only, and the bundle remains a
+new-ontology-primitive candidate rather than an adopted primitive.  The
+metric-equivalent input count, target-atlas input count, and GR-target-fit
+count are all zero.
+
+All formulas are coordinate-free combinations of source scalars, restriction,
+pullback, and exterior differentiation.  Local coordinates may display these
+objects but supply no physical target meaning.  The construction uses no
+target atlas, target metric, quadratic form, coframe, connection, volume form,
+time orientation, causal cone, clock, rod, target detector, target matter
+action, or benchmark prediction.
+
+\section{Distance-to-GR and decisive result}
+
+\begin{longtable}{p{0.28\textwidth}p{0.60\textwidth}}
+\toprule
+Burden & P3-T01 status \\
+\midrule
+Source ontology primitives & B1 bundle/sheaf is a proposal-only candidate; canonical ontology unchanged \\
+Source equivalence $\mathrm{EqSrc}$ & passive chart naturality is exact locally; no adopted physical equivalence law \\
+$\mathrm{RetainH}$ and $\mathrm{GenH}$ & unchanged and not used \\
+$\mathrm{ObsLoc}_{\rm lc}$ & two source-token parameters are locally typed; no physical localization witness \\
+$\mathrm{Resp}_{\rm lc}$ & two independent vertical response directions constructed; necessary only \\
+$M_{\rm src}$ & unchanged; $\A$ is primitive source arena, not reconstructed spacetime \\
+$g_{\rm eff}$ & active milestone remains blocked by absent source dynamics and reduced principal geometry \\
+Matter coupling & P7 remains conditional finite input, not target coupling \\
+Einstein equations & blocked; no action or target field equation \\
+Finite-variation robustness & local small-variation rank stability only; dynamics/global robustness open \\
+Benchmark promotion and Gate Chair & blocked and human-gated \\
+Route freeze & scalar and graph routes remain frozen; exact B1 packet advances to P3-T02 only \\
+\bottomrule
+\end{longtable}
+
+The decisive result is a constructed candidate: the exact sealed B1
+bundle/sheaf, its domains, restrictions, gluing, regular locus, admissible
+variations, boundary traces, source-representation equivalence, observables,
+rank-two witness, P7 pointed-sampling interface, and assumption ledger.  The
+construction discharges P3-T01's syntax burden and activates this packet only
+for research execution.  It does not discharge the metric law.  P3-T02 must
+construct or precisely fail a source-native dynamical law; its mathematical
+refuter perspective must reject any hidden measure, derivative contraction,
+connection, coefficient fit, or collapse to one response amplitude.
+
+\end{document}

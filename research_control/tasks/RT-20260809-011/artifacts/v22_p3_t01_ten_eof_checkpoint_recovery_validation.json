@@ -1,0 +1,200 @@
+{
+  "authority_limits": {
+    "distance_to_gr_changed": false,
+    "external_action_authorized": false,
+    "p2_t02_external_action_taken": false,
+    "p3_t01_replayed": false,
+    "p3_t02_executed": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "publication_or_push_authorized": false,
+    "scientific_claims_changed": false,
+    "semantic_payload_changed": false
+  },
+  "error_count": 0,
+  "errors": [],
+  "git_index_clean": true,
+  "inherited_manifest_sha256": "1b894544f1d4a47925c6a9cd2976661ff4ba6134e8e2b1befaeea34b4ddf70ab",
+  "job_id": "AJ-RT-20260809-011-001",
+  "plan_state": {
+    "p2_t02_external_review_completed": false,
+    "p3_t01_executed": true,
+    "p3_t01_replayed": false,
+    "p3_t02_executed": false,
+    "p3_t02_selected": true
+  },
+  "prior_checkpoint": {
+    "consumed": true,
+    "finding_count": 10,
+    "job_id": "AJ-RT-20260809-010-001",
+    "replayed": false,
+    "run_id": "RUN-CHECKPOINT-4340d0e85f29ac8f",
+    "sole_failure_gate": "git_diff_check"
+  },
+  "protected_check_count": 13,
+  "protected_checks": {
+    "implementations_plans/recommendations_implementation_plan_continue_task-v22.md": {
+      "expected_sha256": "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65",
+      "match": true,
+      "observed_sha256": "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+    },
+    "research_control/design/v22_recommendation_backlog.yaml": {
+      "expected_sha256": "9ab9161e6ffb90c971e0cca5dafb1dec140376a91307850e125702d5bcfe3e7c",
+      "match": true,
+      "observed_sha256": "9ab9161e6ffb90c971e0cca5dafb1dec140376a91307850e125702d5bcfe3e7c"
+    },
+    "research_control/handoffs/handoff-0979.yaml": {
+      "expected_sha256": "8cf1a9a5f17ba985c7200ad13223752ac7d7ff1e140f41c747d7ae808ed91957",
+      "match": true,
+      "observed_sha256": "8cf1a9a5f17ba985c7200ad13223752ac7d7ff1e140f41c747d7ae808ed91957"
+    },
+    "research_control/handoffs/handoff-0980.yaml": {
+      "expected_sha256": "6a372a42b26d4538f5ed995099fd66e3c7dd11a4f174bc4fc81df99d98b47e8f",
+      "match": true,
+      "observed_sha256": "6a372a42b26d4538f5ed995099fd66e3c7dd11a4f174bc4fc81df99d98b47e8f"
+    },
+    "research_control/tasks/RT-20260809-009/artifacts/v22_p2_t04_primary_local_multifield_candidate_v1.yaml": {
+      "expected_sha256": "5d8a332c6aa05d85260a14af777a1d3f43015ba48980493acfa4c584bec75132",
+      "match": true,
+      "observed_sha256": "5d8a332c6aa05d85260a14af777a1d3f43015ba48980493acfa4c584bec75132"
+    },
+    "research_control/tasks/RT-20260809-009/jobs/completions/AJC-AJ-RT-20260809-009-001.yaml": {
+      "expected_sha256": "7be3d3930f24aa6ba35f0131bf792fbdb386a5475e843883df999c1fc1845fae",
+      "match": true,
+      "observed_sha256": "7be3d3930f24aa6ba35f0131bf792fbdb386a5475e843883df999c1fc1845fae"
+    },
+    "research_control/tasks/RT-20260809-010/artifacts/v22_p3_t01_compact_receipt.json": {
+      "expected_sha256": "0e04dbfcb76b3af3e581397de474940f9461b0c74a6b84a5a5a6f48aa82fd07e",
+      "match": true,
+      "observed_sha256": "0e04dbfcb76b3af3e581397de474940f9461b0c74a6b84a5a5a6f48aa82fd07e"
+    },
+    "research_control/tasks/RT-20260809-010/artifacts/v22_p3_t01_local_multifield_source_state_v1.tex": {
+      "expected_sha256": "ce1b852b7ea178dd5d42a204e9cc63fb2c11e9987e8ac0fc733267eb04dbb6db",
+      "match": true,
+      "observed_sha256": "ce1b852b7ea178dd5d42a204e9cc63fb2c11e9987e8ac0fc733267eb04dbb6db"
+    },
+    "research_control/tasks/RT-20260809-010/artifacts/v22_p3_t01_local_state_specification_v1.yaml": {
+      "expected_sha256": "961636349d8bfe73f5f13d33953f92d2a07d7d567f836e8f217dfeef7bb30813",
+      "match": true,
+      "observed_sha256": "961636349d8bfe73f5f13d33953f92d2a07d7d567f836e8f217dfeef7bb30813"
+    },
+    "research_control/tasks/RT-20260809-010/artifacts/v22_p3_t01_local_state_validation.json": {
+      "expected_sha256": "4ed4ddc5f3cf0b6d441fd1001ca3e7c79af12bd09731b8e6f0ed7d282624c7bc",
+      "match": true,
+      "observed_sha256": "4ed4ddc5f3cf0b6d441fd1001ca3e7c79af12bd09731b8e6f0ed7d282624c7bc"
+    },
+    "research_control/tasks/RT-20260809-010/artifacts/validate_v22_p3_t01_local_state.py": {
+      "expected_sha256": "cf6cf0a88de923a2b6e5ebf536f3418ef2782763272151e1e53fa3b94d9ceb61",
+      "match": true,
+      "observed_sha256": "cf6cf0a88de923a2b6e5ebf536f3418ef2782763272151e1e53fa3b94d9ceb61"
+    },
+    "research_control/tasks/RT-20260809-010/jobs/AJ-RT-20260809-010-001.yaml": {
+      "expected_sha256": "e3c7202bcfa1b52b686d395c3e2e28a570efb743d5a32b934c8cf018210acba3",
+      "match": true,
+      "observed_sha256": "e3c7202bcfa1b52b686d395c3e2e28a570efb743d5a32b934c8cf018210acba3"
+    },
+    "research_control/tasks/RT-20260809-010/jobs/completions/AJC-AJ-RT-20260809-010-001.yaml": {
+      "expected_sha256": "c28457f2bfb37f1e19a681d3e0084b5c9d76d4c4963ec8fd0f5d3cd1e609abe0",
+      "match": true,
+      "observed_sha256": "c28457f2bfb37f1e19a681d3e0084b5c9d76d4c4963ec8fd0f5d3cd1e609abe0"
+    }
+  },
+  "schema_id": "v22_p3_t01_ten_eof_checkpoint_recovery_validation_v1",
+  "sealed_receipt_sha256": "1aacc6f6b7b702becb02214b64e0915dd9ec06352687613d18cc85c2362c51e2",
+  "source_head": "f97ecc4c4889df82d688b5892b88f8f0a171fd84",
+  "status": "PASS",
+  "target_check_count": 10,
+  "target_checks": {
+    "research_control/handoffs/handoff-0980.md": {
+      "document_parses": true,
+      "expected_repair_boundary_sha256": "d1ef8e4a6016624ff53ceb768e72eae108240b255edacc7c8fa8a5badf966181",
+      "match": true,
+      "missing_recovery_documentation_paths": [],
+      "observed_sha256": "d1ef8e4a6016624ff53ceb768e72eae108240b255edacc7c8fa8a5badf966181",
+      "post_boundary_cumulative_documentation_coverage": false,
+      "sealed_after_sha256": "d1ef8e4a6016624ff53ceb768e72eae108240b255edacc7c8fa8a5badf966181"
+    },
+    "research_control/tasks/RT-20260809-010/00_TASK.yaml": {
+      "document_parses": true,
+      "expected_repair_boundary_sha256": "57f8963614d4a023e7b6e9c1105ffed4a3c734211c889a1396960ef15ec5614a",
+      "match": true,
+      "missing_recovery_documentation_paths": [],
+      "observed_sha256": "57f8963614d4a023e7b6e9c1105ffed4a3c734211c889a1396960ef15ec5614a",
+      "post_boundary_cumulative_documentation_coverage": false,
+      "sealed_after_sha256": "57f8963614d4a023e7b6e9c1105ffed4a3c734211c889a1396960ef15ec5614a"
+    },
+    "research_control/tasks/RT-20260809-010/artifacts/child_phys_math_p3_t01_local_state.yaml": {
+      "document_parses": true,
+      "expected_repair_boundary_sha256": "e0826b28bc563534c9c9d26b6284cb342ada3898f8ba5948aed1166e6b26dc40",
+      "match": true,
+      "missing_recovery_documentation_paths": [],
+      "observed_sha256": "e0826b28bc563534c9c9d26b6284cb342ada3898f8ba5948aed1166e6b26dc40",
+      "post_boundary_cumulative_documentation_coverage": false,
+      "sealed_after_sha256": "e0826b28bc563534c9c9d26b6284cb342ada3898f8ba5948aed1166e6b26dc40"
+    },
+    "research_control/tasks/RT-20260809-010/artifacts/child_phys_phil_p3_t01_source_target_audit.yaml": {
+      "document_parses": true,
+      "expected_repair_boundary_sha256": "dc0c34ff71d1c5298ddaccc045370ec14ce27b9616c4aff76af6800226ec2e96",
+      "match": true,
+      "missing_recovery_documentation_paths": [],
+      "observed_sha256": "dc0c34ff71d1c5298ddaccc045370ec14ce27b9616c4aff76af6800226ec2e96",
+      "post_boundary_cumulative_documentation_coverage": false,
+      "sealed_after_sha256": "dc0c34ff71d1c5298ddaccc045370ec14ce27b9616c4aff76af6800226ec2e96"
+    },
+    "research_control/tasks/RT-20260809-010/artifacts/fixtures/v22_p3_t01_local_state_cases.yaml": {
+      "document_parses": true,
+      "expected_repair_boundary_sha256": "9906c1cb2657f5dcdfce51fd253cb399129f77da9491166e225c42687f638fba",
+      "match": true,
+      "missing_recovery_documentation_paths": [],
+      "observed_sha256": "9906c1cb2657f5dcdfce51fd253cb399129f77da9491166e225c42687f638fba",
+      "post_boundary_cumulative_documentation_coverage": false,
+      "sealed_after_sha256": "9906c1cb2657f5dcdfce51fd253cb399129f77da9491166e225c42687f638fba"
+    },
+    "research_control/tasks/RT-20260809-010/artifacts/parent_conflict_review_p3_t01_local_state.yaml": {
+      "document_parses": true,
+      "expected_repair_boundary_sha256": "e0311b8bcd95496cb79e3e7fd90c4c5715674b44066d2efae68be26d82b23e6c",
+      "match": true,
+      "missing_recovery_documentation_paths": [],
+      "observed_sha256": "e0311b8bcd95496cb79e3e7fd90c4c5715674b44066d2efae68be26d82b23e6c",
+      "post_boundary_cumulative_documentation_coverage": false,
+      "sealed_after_sha256": "e0311b8bcd95496cb79e3e7fd90c4c5715674b44066d2efae68be26d82b23e6c"
+    },
+    "research_control/tasks/RT-20260809-010/artifacts/parent_fusion_notes_p3_t01_local_state.md": {
+      "document_parses": true,
+      "expected_repair_boundary_sha256": "faee0f28e891ff85b09aca811f7a889e7cb79a96cad615af260415c665d192c6",
+      "match": true,
+      "missing_recovery_documentation_paths": [],
+      "observed_sha256": "faee0f28e891ff85b09aca811f7a889e7cb79a96cad615af260415c665d192c6",
+      "post_boundary_cumulative_documentation_coverage": false,
+      "sealed_after_sha256": "faee0f28e891ff85b09aca811f7a889e7cb79a96cad615af260415c665d192c6"
+    },
+    "research_control/tasks/RT-20260809-010/artifacts/v22_p3_t01_assumption_cost_ledger_v1.yaml": {
+      "document_parses": true,
+      "expected_repair_boundary_sha256": "a67a007421866fd4b7676a35193bcf48636e7b530b1fda34d378c9bfdc379b08",
+      "match": true,
+      "missing_recovery_documentation_paths": [],
+      "observed_sha256": "a67a007421866fd4b7676a35193bcf48636e7b530b1fda34d378c9bfdc379b08",
+      "post_boundary_cumulative_documentation_coverage": false,
+      "sealed_after_sha256": "a67a007421866fd4b7676a35193bcf48636e7b530b1fda34d378c9bfdc379b08"
+    },
+    "research_control/tasks/RT-20260809-010/artifacts/v22_p3_t01_p7_refinement_interface_v1.yaml": {
+      "document_parses": true,
+      "expected_repair_boundary_sha256": "cfda8abd1905d04d3ec806c4178ad7c2f620f82a736ed6316e0768c17c143baa",
+      "match": true,
+      "missing_recovery_documentation_paths": [],
+      "observed_sha256": "cfda8abd1905d04d3ec806c4178ad7c2f620f82a736ed6316e0768c17c143baa",
+      "post_boundary_cumulative_documentation_coverage": false,
+      "sealed_after_sha256": "cfda8abd1905d04d3ec806c4178ad7c2f620f82a736ed6316e0768c17c143baa"
+    },
+    "research_control/tasks/RT-20260809-010/documentation_impact.yaml": {
+      "document_parses": true,
+      "expected_repair_boundary_sha256": "528ed0ced32d32f815268dca0423f95e65ee816977b1e3728aefd0d82afbaeed",
+      "match": true,
+      "missing_recovery_documentation_paths": [],
+      "observed_sha256": "b8eb60ea30a58aad92a68f5cd0ad70ff73c0f9bdac7727e176ae3755f5a59c3b",
+      "post_boundary_cumulative_documentation_coverage": true,
+      "sealed_after_sha256": "528ed0ced32d32f815268dca0423f95e65ee816977b1e3728aefd0d82afbaeed"
+    }
+  },
+  "task_id": "RT-20260809-011"
+}

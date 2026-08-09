@@ -1,0 +1,71 @@
+schema_id: "v22_p3_t01_p7_refinement_interface_v1"
+status: "draft/control"
+authority: "science_draft"
+contract_id: "P7-B1-POINTED-SAMPLING-INTERFACE-V1"
+consumed_contract_id: "P7-CONDITIONAL-INPUT-CONTRACT-V1"
+candidate_id: "CAND-V22-B1-LOCAL-SIX-FIELD-RESPONSE-SEED-V1"
+source_package_status: "protected_conditional_input_adopted_not_derived"
+interface_kind: "finite pointed source-sampling functor"
+
+objects:
+  source_domain: "U in Open(A)"
+  sampling_object: "S=(J,a) with J a finite label set and a:J->U a declared source-anchor map"
+  field_input: "q in Q_reg(U)"
+  token_output: "for each j in J, an ordered pair of Bernoulli token slots (Y_j1,Y_j2)"
+
+kernel:
+  formula: "Pr(Y_ji=1 | q,S)=p_i(q)(a(j))=sigma(rho_i(q)(a(j))), i=1,2"
+  channel_dependence: "conditionally independent given q and S; no undeclared source-dependent latent channel"
+  source_independent_postprocessing_after_statistic: true
+  exact_token_role: "P7 finite success/failure response records only"
+  realistic_matter_claimed: false
+  target_detector_claimed: false
+
+restriction:
+  domain_inclusion: "For V subset U, retain only labels j with a(j) in V and evaluate q|V."
+  naturality: "K_(S|V)(q|V) equals the marginal/reindexing of K_S(q) on retained labels."
+
+refinement:
+  morphism: "r:(J',a')->(J,a) is a surjective parent map r:J'->J whose persistent labels satisfy a'(j')=a(r(j')) when declared persistent"
+  preservation_rule: "Every persistent parent token parameter is copied exactly; new labels add only evaluations of the same p_i."
+  no_interpolation_rule: "No metric distance nearest-neighbor rule volume average connection or target coordinate interpolation is defined."
+  comparison_map: "marginalize or reindex the refined product kernel onto persistent parent labels"
+  exact_consistency: "comparison_map(K_S'(q))=K_S(q) on persistent labels"
+  convergence_status: "not_claimed; topology error control and continuum convergence belong to P3-T03"
+
+typing_annotations:
+  - "conditional_input"
+  - "finite_scope"
+  - "protected_postulate"
+  - "adopted_not_derived"
+  - "no_gate_credit"
+
+failure_cases:
+  - failure_id: "P7I-F01-DENOMINATOR"
+    trigger: "q6(a(j))=0"
+    result: "interface undefined at j"
+  - failure_id: "P7I-F02-UNDECLARED-ANCHOR"
+    trigger: "a is missing or treated as a physical target position"
+    result: "typing failure and target-import stop"
+  - failure_id: "P7I-F03-REFINEMENT-DRIFT"
+    trigger: "a persistent label changes its parameter under refinement"
+    result: "naturality failure"
+  - failure_id: "P7I-F04-REALISTIC-MATTER-OVERREAD"
+    trigger: "finite P7 tokens are called continuum realistic matter target detectors clocks or rods"
+    result: "claim-boundary failure"
+
+excluded_outputs:
+  - "realistic continuum matter"
+  - "target spacetime sampling"
+  - "clock rod detector or signal semantics"
+  - "target stress tensor or target matter action"
+  - "universal target coupling"
+  - "g_eff or a causal cone"
+  - "Einstein equations or Gate B evidence"
+
+authority_limits:
+  conditional_interface_is_derivation: false
+  p7_package_modified: false
+  source_extension_adopted: false
+  convergence_established: false
+  physics_promotion_authorized: false

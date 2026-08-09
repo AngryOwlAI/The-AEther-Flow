@@ -1,0 +1,226 @@
+schema_id: "v22_p3_t01_local_state_specification_v1"
+status: "draft/control"
+authority: "science_draft"
+task_id: "RT-20260809-010"
+plan_task_id: "P3-T01"
+candidate_id: "CAND-V22-B1-LOCAL-SIX-FIELD-RESPONSE-SEED-V1"
+candidate_identity_sha256: "32110632f8832091d69ca52e96dfdf99c26087bfc75575b77a466631eca9d051"
+activation_status: "active_research_packet_proposal_only"
+program_route_active: true
+scientific_candidate_activation_count: 1
+source_extension_adopted: false
+canonical_ontology_modified: false
+
+source_arena:
+  symbol: "A"
+  type: "smooth four-dimensional source manifold"
+  status: "existing primitive debt; not physical spacetime"
+  admissible_domains: "Open(A), the category of source-open subsets with inclusions"
+  source_chart_use: "passive representation of source-smooth objects only"
+  target_atlas_identification: false
+
+local_structure:
+  selected_kind: "sheaf of C2 sections of a trivial rank-six real vector bundle"
+  justification: "A sheaf expresses the exact locality, restriction, overlap agreement, and unique gluing obligations of P3-T01; the bundle fixes the fiber type without adding target geometry."
+  bundle_symbol: "E_B1 = A x R^6"
+  bundle_status: "proposal-only new ontology primitive candidate"
+  projection: "pi:E_B1->A"
+  sheaf_symbol: "Q_B1"
+  section_assignment: "Q_B1(U)=Gamma_C2(U,E_B1|U)=C2(U,R^6)"
+  field_symbol: "q=(q^1,...,q^6)"
+  component_type: "source scalar"
+  finite_jet_order_available: 1
+  dynamics_defined_here: false
+
+type_and_domain_table:
+  - object: "U"
+    domain: "object of Open(A)"
+    codomain: "source-open subset of A"
+    regularity: "open"
+    status: "source domain only"
+  - object: "E_B1|U"
+    domain: "U"
+    codomain: "U x R^6"
+    regularity: "smooth trivial bundle"
+    status: "proposal-only"
+  - object: "q"
+    domain: "U"
+    codomain: "R^6"
+    regularity: "C2"
+    status: "local section"
+  - object: "rho_i=q^i/q^6, i=1,2"
+    domain: "U_reg(q)"
+    codomain: "R"
+    regularity: "C2"
+    status: "source-native ratio observable"
+  - object: "d rho_i"
+    domain: "U_reg(q)"
+    codomain: "T*A|U_reg(q)"
+    regularity: "C1 source one-form"
+    status: "source response covector; not a signal covector"
+  - object: "p_i=sigma(rho_i)"
+    domain: "U_reg(q)"
+    codomain: "(0,1)"
+    regularity: "C2"
+    status: "conditional P7 token parameter"
+  - object: "R_B1(q)=(p_1,p_2)"
+    domain: "Q_reg(U) modulo passive chart representation"
+    codomain: "C2(U,(0,1)^2)"
+    regularity: "C1 as a local map of section spaces"
+    status: "source-response map; not geometry"
+
+restriction_law:
+  map_symbol: "res_UV:Q_B1(U)->Q_B1(V)"
+  condition: "V subset U"
+  formula: "res_UV(q)=q|V componentwise"
+  identity: "res_UU=id"
+  composition: "res_VW o res_UV = res_UW for W subset V subset U"
+  observable_naturality: "rho_i(q)|V=rho_i(q|V), p_i(q)|V=p_i(q|V) wherever q6 is nonzero"
+
+gluing_law:
+  cover: "U=union_i U_i by source-open sets"
+  compatibility: "q_i|U_i_intersect_U_j=q_j|U_i_intersect_U_j componentwise for every i,j"
+  result: "there is a unique q in Q_B1(U) with q|U_i=q_i"
+  transition_rule: "identity in the fixed R6 fiber; source-chart coordinate representatives transform as six scalars"
+  cocycle: "identity transition maps obey g_ii=id and g_ij g_jk=g_ik"
+  target_coordinate_use: false
+  regular_subdomain_gluing: "If every q_i has q_i^6 nonzero and d rho_1 wedge d rho_2 nonzero, compatibility gives a unique glued section with the same pointwise regularity."
+
+regular_operational_subdomain:
+  symbol: "Q_reg(U)"
+  definition: "sections q in Q_B1(U) with q6(x) nonzero and (d rho1 wedge d rho2)(x) nonzero for every x in U"
+  restriction_stable: true
+  gluing_stable_under_compatible_regular_cover: true
+  singular_strata:
+    - "S_den={x:q6(x)=0}"
+    - "S_rank={x:d rho1 wedge d rho2=0}"
+  disposition: "Base sections may exist on singular strata, but the two-channel operational map is undefined or rank-deficient there; no regularization is inferred."
+
+admissible_variations:
+  tangent_symbol: "V_q(U;B)=Gamma_C2,c(U,E_B1) with declared boundary trace conditions"
+  variation: "delta q=(delta q1,...,delta q6)"
+  support: "compact in the interior of the chosen source patch unless boundary data are explicitly released"
+  boundary_preserving_conditions:
+    - "i_B^*(delta q)=0"
+    - "i_B^*(d delta q)=0"
+  regularity_preservation: "For each relatively compact V subset U_reg(q), sufficiently small C1 variations remain in Q_reg(V)."
+  no_metric_norm_claimed: true
+  independent_response_witnesses:
+    - witness_id: "VAR-B1-01"
+      definition: "delta_1 q1=chi q6 and all other components zero"
+      condition: "chi is C2 compactly supported with chi(x0)=1"
+      response_at_x0: "delta_1(rho1,rho2)=(1,0)"
+    - witness_id: "VAR-B1-02"
+      definition: "delta_2 q2=chi q6 and all other components zero"
+      condition: "the same type of C2 compactly supported chi has chi(x0)=1"
+      response_at_x0: "delta_2(rho1,rho2)=(0,1)"
+  response_rank: 2
+
+boundary_data:
+  source_pair: "(U,B) with B embedded as a declared closed source hypersurface or patch-boundary stratum and inclusion i_B:B->closure(U)"
+  dirichlet_trace: "i_B^*q"
+  first_jet_trace: "i_B^*(dq), containing tangential source derivatives only"
+  compatibility_on_overlaps: "boundary traces agree wherever boundary charts overlap"
+  excluded_imports:
+    - "unit normal"
+    - "normal derivative"
+    - "induced metric"
+    - "boundary measure"
+    - "causal boundary"
+  dynamics_role: "P3-T02 must decide which declared traces are actually admissible for a source law."
+
+source_symmetry_and_equivalence:
+  passive_groupoid: "the source-chart transition pseudogroup of A"
+  action: "For a source reparametrization phi, local scalar representatives act by pullback q -> phi^*q; rho_i, p_i, and d rho_i act by the corresponding pullback."
+  equivalence: "Two chart records are equivalent exactly when they represent the same abstract section q and its natural tensors on their common source domain."
+  restriction_naturality: "res(phi^*q)=phi^*(res(q)) on every common restricted domain"
+  internal_gauge_assumed: false
+  active_dynamical_symmetry_assumed: false
+  target_diffeomorphism_or_target_gauge_claimed: false
+
+source_native_observables:
+  - observable_id: "OBS-B1-RHO1"
+    expression: "rho1=q1/q6"
+    type: "dimensionless source scalar"
+    domain: "q6 nonzero"
+    invariant_under: "passive source-chart representation"
+    falsifier: "q6 vanishes or the ratio fails scalar naturality"
+  - observable_id: "OBS-B1-RHO2"
+    expression: "rho2=q2/q6"
+    type: "dimensionless source scalar"
+    domain: "q6 nonzero"
+    invariant_under: "passive source-chart representation"
+    falsifier: "q6 vanishes or the ratio fails scalar naturality"
+  - observable_id: "OBS-B1-P12"
+    expression: "(sigma(rho1),sigma(rho2))"
+    type: "ordered pair of conditional token parameters"
+    domain: "Q_reg(U)"
+    invariant_under: "passive source-chart representation and restriction"
+    falsifier: "either channel is not the declared Bernoulli parameter or the response differential has rank below two"
+  - observable_id: "OBS-B1-RANK"
+    expression: "d rho1 wedge d rho2"
+    type: "source two-form regularity witness"
+    domain: "q6 nonzero"
+    invariant_under: "source pullback"
+    falsifier: "the two-form vanishes on the claimed regular patch"
+target_semantics_excluded:
+  - "physical position"
+  - "clock or clock rate"
+  - "rod or distance"
+  - "signal or causal cone"
+  - "detector in target spacetime"
+  - "metric volume shear curvature or polarization"
+
+response_certificate:
+  reconstruction_map: "R_B1:q -> (sigma(q1/q6),sigma(q2/q6))"
+  quotient_scope: "passive source-chart representations only"
+  factor_statistic: "I_B1=(rho1,rho2)"
+  analytic_jacobian_on_vertical_variations: "diag(sigma'(rho1),sigma'(rho2))"
+  logistic_derivatives_positive: true
+  computed_capacity_rank: 2
+  required_response_rank: 2
+  verdict: "necessary_condition_met_not_sufficient"
+  geometry_sufficiency_claimed: false
+  gate_b_credit_claimed: false
+
+no_target_import_audit:
+  premises_used:
+    - "existing primitive smooth four-dimensional source arena A"
+    - "proposal-only trivial rank-six source-scalar bundle"
+    - "C2 local sections and exterior derivative on source scalars"
+    - "passive source-chart transitions"
+    - "protected conditional P7 token meanings"
+  forbidden_premises_absent:
+    - "target atlas"
+    - "target metric"
+    - "coframe or quadratic form"
+    - "connection or volume form"
+    - "time orientation or causal cone"
+    - "clock rod target detector or physical position"
+    - "GR prediction or benchmark fit"
+  audit_result: "PASS_SOURCE_NATIVE_SYNTAX_ONLY"
+  local_atlas_debt_statement: "Source charts are inherited primitive debt used only to represent abstract source-smooth objects. No chart coordinate is interpreted as a physical target coordinate, distance, duration, or observation."
+
+activation_boundary:
+  transition_id: "ACTIVATE_PRIMARY"
+  executed: true
+  activated_object: "the exact sealed B1 local-state research packet"
+  activation_meaning: "eligible for the separately admitted P3-T02 source-dynamics construction"
+  activation_is_adoption: false
+  activation_is_physics_truth: false
+  fallback_activated: false
+  third_slot_allocated: false
+  source_law_defined: false
+  effective_metric_defined: false
+
+authority_limits:
+  scientific_claims_changed: false
+  physical_status_changed: false
+  distance_to_gr_changed: false
+  source_extension_adopted: false
+  source_law_adopted: false
+  effective_metric_constructed_or_adopted: false
+  matter_coupling_constructed_or_adopted: false
+  gate_b_verdict_issued: false
+  physics_promotion_authorized: false
+  proof_authority: false

@@ -1,0 +1,345 @@
+job_id: "AJ-RT-20260809-011-001"
+task_id: "RT-20260809-011"
+decision_id: "DDR-20260809-011"
+role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260809-011"
+status: "completed"
+validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+created_at: "2026-08-09T12:19:02Z"
+started_at: "2026-08-09T12:19:02Z"
+completed_at: "2026-08-09T12:26:15Z"
+completion_path: "research_control/tasks/RT-20260809-011/jobs/completions/AJC-AJ-RT-20260809-011-001.yaml"
+requires_human_gate: false
+human_authorization_note: "The active complete-V22 goal authorizes one materially distinct project-system recovery after the consumed AJ-RT-20260809-010-001 checkpoint. No checkpoint replay, P3-T01 reexecution, P3-T02 execution, P2-T02 external action, science mutation, promotion, publication, push, or external action is authorized."
+objective: "Remove exactly one terminal newline from each of ten checkpoint-named P3-T01 files, seal zero non-target repair-boundary drift, synchronize approved control and generated state, and invoke at most one fresh checkpoint."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system EOF normalization and checkpoint eligibility only; no scientific milestone burden advances."
+route_label: "project-system-checkpoint-recovery"
+route_reason: "p3_t01_checkpoint_blocked_only_by_ten_new_blank_lines_at_eof"
+route_strategy_id: "repair_v22_p3_t01_ten_eof_blank_lines_and_checkpoint_v1"
+immutable_route_sha256: "28f579c56ace1669d4a808f30ed8fd57ad325f6565281ce08a2732b106a74abd"
+route_blocker_fingerprint: "ecb02644dcb9611d61f89853eff2bce3497679bed4afdda4b5131f16d2c50a6c"
+source_head: "f97ecc4c4889df82d688b5892b88f8f0a171fd84"
+source_tree: "59a045a5750d85ab0dd566fd22b8534027af24a0"
+inherited_manifest_path: "research_control/tasks/RT-20260809-011/artifacts/inherited_dirty_manifest_v22_p3_t01_ten_eof_checkpoint.txt"
+inherited_manifest_sha256: "1b894544f1d4a47925c6a9cd2976661ff4ba6134e8e2b1befaeea34b4ddf70ab"
+failed_job_id: "AJ-RT-20260809-010-001"
+failed_checkpoint_run_id: "RUN-CHECKPOINT-4340d0e85f29ac8f"
+failed_checkpoint_gate_count: 7
+failed_checkpoint_failure_count: 1
+failed_checkpoint_skipped_count: 4
+failed_checkpoint_test_shard_executed: false
+failed_checkpoint_consumed: true
+failed_checkpoint_replayed: false
+failed_gate_id: "git_diff_check"
+failed_gate_returncode: 2
+failed_finding_count: 10
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+recovery_plan_id: "project_system_recovery_for_recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P3-T02"
+recovery_for_plan_task_id: "P3-T01"
+next_plan_task_id: "P3-T02"
+next_plan_task_execution_authorized: false
+p3_t01_science_execution_authorized: false
+p2_t02_external_action_authorized: false
+p3_t02_payload_execution_authorized: false
+project_system_change_only: true
+semantic_payload_changed: false
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+tag_creation_authorized: false
+public_release_authorized: false
+publication_authorized: false
+push_authorized: false
+external_action_authorized: false
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  preflight_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  refresh_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1150
+    relationship_row_count: 5789
+    semantic_row_count: 1150
+    vault_row_count: 1150
+    blocking_warning_count: 0
+    local_cache_only_warning_count: 0
+  refresh_needed: true
+  refresh_performed: true
+  queries:
+    - command: '.venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search "checkpoint failed blank line EOF recovery process integrity auditor" --limit 10 --json'
+      query_type: "search"
+      query_text: "checkpoint failed blank line EOF recovery process integrity auditor"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-TASK-INDEX"
+  canonical_inspections:
+    - object_id: "MD-RESEARCH-CONTROL-TASK-INDEX"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/TASK_INDEX.md"
+      source_hash: "481fe8c140a1e02a363a14563ed810401593a57f694f22951ed2b6ab4c983b02"
+  additional_control_inspections:
+    - object_id: "RT-20260809-007"
+      control_path: "research_control/tasks/RT-20260809-007/00_TASK.yaml"
+      source_hash: "99be0995404ff13bb9cd722a067050f1bf43f94782dae587f49274f653e8e9ea"
+    - object_id: "CHECKPOINT-RT010-FAILURE-RECEIPT"
+      control_path: ".local/validation-receipts/8afbc6d6c1cc892533a3e7f8e45a1e2fb8243d85d803a1dadc854fe5c9fbe844/RUN-CHECKPOINT-4340d0e85f29ac8f/receipt.json"
+      source_hash: "a0293bc18ca70fc87d9d3428bfa2d60210858a941a969b0b40da987c54b23b93"
+  authority_note: "Tracked canonical source and control records govern. Generated wiki, semantic, Obsidian, SQLite, and .local layers are retrieval or operational evidence only and are not authority."
+
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  candidate_family: "not_applicable"
+  assumption_delta:
+    - "No scientific assumption or semantic document value changes."
+    - "Exactly ten terminal newlines are deleted from named P3-T01 files."
+    - "The P3-T01 manuscript, specification, validation, compact receipt, completion, controlling handoffs, and backlog retain their scientific state."
+  materiality_basis: "Restores checkpoint eligibility through ten exact one-byte formatting repairs without creating physics payload."
+  source_basis:
+    - "RT-20260809-007"
+    - "AJ-RT-20260809-010-001"
+    - "HANDOFF-0980"
+  expected_artifact_paths:
+    - "research_control/tasks/RT-20260809-011/artifacts/v22_p3_t01_ten_eof_checkpoint_recovery_receipt.json"
+  project_system_justification: "The existing staged Git check and exact preimages uniquely determine ten terminal-newline deletions."
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  expected_durable_outputs:
+    physics: []
+    project_system:
+      - "ten exact one-byte EOF normalizations with preimage reconstruction"
+      - "sealed 62-path repair-boundary receipt with zero drift on 52 non-target paths"
+      - "updated recovery control records and approved generated projections"
+      - "one fresh governed checkpoint outcome"
+  acceptance_criteria:
+    physics: []
+    project_system:
+      - "each target postimage reconstructs its exact preimage by appending one newline at the sealed repair boundary"
+      - "all ten documents parse or decode and end in exactly one newline"
+      - "all 52 non-target inherited paths match at the sealed repair boundary"
+      - "the P3-T01 scientific manuscript specification validation compact receipt completion handoffs and backlog retain their scientific state and the only post-seal predecessor change is cumulative documentation-impact coverage"
+      - "the consumed AJ-RT-20260809-010-001 checkpoint is not replayed"
+      - "P3-T02 remains unexecuted and P2-T02 remains externally gated"
+      - "at most one fresh governed checkpoint is invoked"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: true
+    exception_id: "BLOCK-V22-P3-T01-TEN-EOF-CHECKPOINT-001"
+    evidence_path: "research_control/tasks/RT-20260809-011/artifacts/v22_p3_t01_ten_eof_checkpoint_recovery_receipt.json"
+    evidence_sha256: "1aacc6f6b7b702becb02214b64e0915dd9ec06352687613d18cc85c2362c51e2"
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0980"
+  source_handoff_path: "research_control/handoffs/handoff-0980.yaml"
+  source_handoff_sha256: "6a372a42b26d4538f5ed995099fd66e3c7dd11a4f174bc4fc81df99d98b47e8f"
+  selected_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  selected_plan_task_id: "P3-T02"
+  selected_plan_task_ref: "recommendations_implementation_plan_continue_task-v22:P3-T02"
+  guard_outcome: "below_threshold"
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+checkpoint_recovery:
+  schema_id: "ordinary_route_checkpoint_recovery_v1"
+  status: "active"
+  atomic_checkpoint_required: true
+  source_handoff_id: "handoff-0980"
+  source_handoff_path: "research_control/handoffs/handoff-0980.yaml"
+  source_handoff_sha256: "6a372a42b26d4538f5ed995099fd66e3c7dd11a4f174bc4fc81df99d98b47e8f"
+  prior_job_id: "AJ-RT-20260809-010-001"
+  prior_task_id: "RT-20260809-010"
+  blocker_path: "research_control/tasks/RT-20260809-011/artifacts/p3_t01_ten_eof_checkpoint_blocker.yaml"
+  blocker_sha256: "be6d00ebf91142dcee35f38eb3fbfe20678b4d85b3b91d8d3a5967754f1f9582"
+  prior_completion_checkpoint_status: "PENDING"
+  recovery_job_id: "AJ-RT-20260809-011-001"
+
+allowed_read_paths:
+  - "SOUL.md"
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/**"
+  - ".codex/skills/improve-project-system/**"
+  - ".agents/roles/research_ops/**"
+  - ".agents/schemas/**"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  - "research_control/**"
+  - "scripts/**"
+  - "tests/**"
+  - "registries/**"
+  - ".local/validation-receipts/**"
+allowed_write_paths:
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "registries/**"
+  - "research_control/current_frontier.md"
+  - "research_control/design/v22_recommendation_backlog.yaml"
+  - "research_control/handoffs/handoff-0980.md"
+  - "research_control/handoffs/handoff-0980.yaml"
+  - "research_control/handoffs/handoff-0981.yaml"
+  - "research_control/handoffs/handoff-0981.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260809-010/**"
+  - "research_control/tasks/RT-20260809-011/**"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/tex/**"
+allowed_generated_paths:
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/tex/**"
+forbidden_paths:
+  - ".codex/skills/**"
+  - ".agents/roles/**"
+  - "implementations_plans/**"
+  - "ontology/**"
+  - "legacy_ontology/**"
+  - "manuscripts/**"
+  - "markdown/publication-briefs/**"
+  - "markdown/html-explainer-specs/**"
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "registries/METRIC_USE_LEDGER.csv"
+  - "research_control/design/**"
+  - "scripts/**"
+  - "tests/**"
+forbidden_source_classes:
+  - "validator test schema policy skill base-role or workflow semantics change"
+  - "any semantic predecessor content change other than the exact post-seal cumulative documentation-impact coverage list"
+  - "any other P3-T01 artifact mutation"
+  - "AJ-RT-20260809-010-001 or its checkpoint replay"
+  - "P3-T01 scientific computation review or payload replay"
+  - "P3-T02 execution or P2-T02 external action"
+  - "canonical ontology science source or scientific ledger mutation"
+  - "physics claim metric coupling Einstein Gate benchmark proof publication release push external action or completed derivation"
+approved_commands:
+  - ".venv/bin/python research_control/tasks/RT-20260809-011/artifacts/validate_v22_p3_t01_ten_eof_checkpoint_recovery.py --write-boundary --json"
+  - ".venv/bin/python research_control/tasks/RT-20260809-011/artifacts/validate_v22_p3_t01_ten_eof_checkpoint_recovery.py --write --json"
+  - ".venv/bin/python research_control/tasks/RT-20260809-011/artifacts/validate_v22_p3_t01_ten_eof_checkpoint_recovery.py --json"
+  - ".venv/bin/python -m py_compile research_control/tasks/RT-20260809-011/artifacts/validate_v22_p3_t01_ten_eof_checkpoint_recovery.py"
+  - ".venv/bin/python research_control/tasks/RT-20260809-010/artifacts/validate_v22_p3_t01_local_state.py --json"
+  - ".venv/bin/python scripts/research_control/task_taxonomy.py --validate-repository --json"
+  - ".venv/bin/python -m unittest tests.test_task_taxonomy"
+  - ".venv/bin/python -m scripts.validation.cli run --profile affected --paths <recovery affected paths>"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+  - ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --job-id AJ-RT-20260809-011-001 --json-summary"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --write"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --json output/research_dependency_graph.json --markdown wiki/indexes/research_dependency_graph.md --dot output/research_dependency_graph.dot"
+  - ".venv/bin/python scripts/research_control/generate_claim_graph_v1.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+  - "git diff --check"
+  - "git diff --cached --check"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260809-011-001"
+required_validators:
+  - "memory preflight"
+  - "physics payload admission"
+  - "dual-budget allocation"
+  - "ordinary route guard admission"
+  - "sealed ten-file EOF preimage and 52-path repair-boundary preservation"
+  - "P3-T01 focused validator"
+  - "task taxonomy repository and targeted unit test"
+  - "affected validation profile"
+  - "project classifier resolver and signal validation"
+  - "documentation impact and claim language"
+  - "bounded research-control diff"
+  - "generated frontier task index graphs and memory synchronization"
+  - "Git diff checks"
+  - "one fresh governed checkpoint"
+expected_outputs:
+  - "research_control/tasks/RT-20260809-011/00_TASK.yaml"
+  - "research_control/tasks/RT-20260809-011/DDR-20260809-011.md"
+  - "research_control/tasks/RT-20260809-011/artifacts/inherited_dirty_manifest_v22_p3_t01_ten_eof_checkpoint.txt"
+  - "research_control/tasks/RT-20260809-011/artifacts/p3_t01_ten_eof_checkpoint_blocker.yaml"
+  - "research_control/tasks/RT-20260809-011/artifacts/validate_v22_p3_t01_ten_eof_checkpoint_recovery.py"
+  - "research_control/tasks/RT-20260809-011/artifacts/v22_p3_t01_ten_eof_checkpoint_recovery_receipt.json"
+  - "research_control/tasks/RT-20260809-011/artifacts/v22_p3_t01_ten_eof_checkpoint_recovery_validation.json"
+  - "research_control/tasks/RT-20260809-011/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260809-011/jobs/completions/AJC-AJ-RT-20260809-011-001.yaml"
+  - "research_control/tasks/RT-20260809-011/roles/process-integrity-auditor@0.1.0--RT-20260809-011.yaml"
+  - "research_control/handoffs/handoff-0981.yaml"
+  - "research_control/handoffs/handoff-0981.md"
+  - "research_control/program_state.yaml"
+claim_boundary: "Delete exactly one final newline from each of ten named P3-T01 files, prove exact preimage reconstruction and zero non-target repair-boundary drift, extend only the predecessor documentation-impact changed_paths list with recovery records after sealing, preserve the scientific transaction, synchronize approved derivatives, and invoke one fresh checkpoint. No consumed-checkpoint replay, P3-T01 reexecution, P3-T02 execution, P2-T02 external action, science, ontology, metric, coupling, Einstein, Gate, benchmark, proof, publication, release, push, external action, or completed-derivation authority."
+documentation_impact_id: "DI-RT-20260809-011-001"
+completion_id: "AJC-AJ-RT-20260809-011-001"
+checkpoint_invocation_limit: 1
+legacy_validation_allowed: false
+resolves_signal_routing: false
